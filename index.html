@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjNDYzNDRFIi8+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDYiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTQsMjUwLDI0NywuMykiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0gMjYgNjQgTCA3MCA2NCIgc3Ryb2tlPSIjRkFFRDI2IiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0gMjYgNjQgQSAyOCAyOCAwIDAgMSA2NiA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkFFRDI2IiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjcxIiBjeT0iMzYiIHI9IjgiIGZpbGw9IiNGQUVEMjYiLz48L3N2Zz4=">
+<title>Cycle for Change — 7,500 miles in 2027 for queer communities.</title>
+<meta name="description" content="7,500 miles across 2027 — swim, bike, run — raising money and visibility for queer organizations. Pledge a mile, follow every ride.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ground:#46344E; --ground2:#3A2C42; --slate:#5A5560;
+    --ivory:#FEFAF7; --taupe:#B7A08B; --yellow:#FAED26; --ink:#241B29;
+    --dim:rgba(254,250,247,.7); --line:rgba(254,250,247,.16);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;background:#46344E!important}
+  html,body{background-color:#46344E!important}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{color:var(--ivory);font-family:'DM Sans',system-ui,sans-serif;font-size:17.5px;line-height:1.62;-webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(rgba(250,237,38,.04) 1px,transparent 1px);background-size:30px 30px;}
+  ::selection{background:var(--yellow);color:var(--ink)}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .anton{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.01em;font-weight:400}
+  .mono{font-family:'JetBrains Mono',monospace}
+
+  .ticker{background:var(--ground2);font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:10px 0;border-bottom:1px solid var(--line);color:var(--dim);white-space:nowrap;overflow:hidden}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 22px}
+  .nav .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .nav .brand .nm{font-family:'Anton';font-size:20px;letter-spacing:.04em;text-transform:uppercase}
+  .nav nav{display:flex;gap:22px}
+  .nav nav a{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+  .nav nav a:hover{color:var(--yellow)}
+  @media (max-width:720px){.nav nav{display:none}}
+
+  section{padding:clamp(40px,6vw,72px) 0 10px}
+  .eyebrow{font-family:'JetBrains Mono';color:var(--yellow);font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px}
+  h1.hero{font-size:clamp(40px,8vw,104px);line-height:.92;max-width:14ch;margin-bottom:8px}
+  h1.hero .y{color:var(--yellow)}
+
+  .bignum{font-family:'Anton';font-size:clamp(64px,15vw,180px);line-height:.85;margin-top:8px}
+  .bignum .of{color:var(--taupe);font-size:.34em}
+  .bignum .mi{font-family:'JetBrains Mono';color:var(--yellow);font-size:.11em;letter-spacing:.14em;margin-left:.5em;vertical-align:middle}
+  .substat{font-family:'JetBrains Mono';color:var(--dim);font-size:13px;margin-top:6px}
+  .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+  .btn{font-family:'Anton';font-size:18px;text-transform:uppercase;text-decoration:none;padding:16px 30px;border-radius:2px;display:inline-block;transition:transform .12s}
+  .btn:hover{transform:translateY(-1px)}
+  .btn.solid{background:var(--yellow);color:var(--ink)}
+  .btn.ghost{border:2px solid var(--line);color:var(--ivory);padding:14px 28px}
+
+  .sechead{border-top:2px solid var(--line);padding-top:14px;margin-bottom:24px}
+  .sechead .l{font-family:'JetBrains Mono';color:var(--yellow);font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px}
+  .sechead h2{font-family:'Anton';font-size:clamp(34px,6vw,72px);line-height:.92;max-width:16ch}
+  .sechead h2 .y{color:var(--yellow)}
+  .lede{color:var(--dim);max-width:54ch;font-size:18px;margin-bottom:30px}
+
+  .boardgrid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+  @media (max-width:760px){.boardgrid{grid-template-columns:1fr}}
+  .join{border:2px solid var(--yellow);border-radius:4px;padding:26px;background:rgba(250,237,38,.04)}
+  .join .k{font-family:'JetBrains Mono';color:var(--yellow);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px}
+  .join input{width:100%;font-family:'DM Sans';font-size:17px;padding:14px 16px;background:var(--ground2);border:1px solid var(--line);color:var(--ivory);border-radius:3px;margin-bottom:14px}
+  .join input::placeholder{color:rgba(254,250,247,.4)}
+  .join button{width:100%;font-family:'Anton';font-size:18px;text-transform:uppercase;padding:15px;border:0;border-radius:3px;background:var(--yellow);color:var(--ink);cursor:pointer}
+  .join .fine{font-family:'JetBrains Mono';color:rgba(254,250,247,.45);font-size:11px;margin-top:14px;line-height:1.6}
+  .join .ok{font-family:'JetBrains Mono';color:var(--yellow);font-size:13px;margin-top:14px;display:none}
+  .crewhead{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+  .crewhead .k{font-family:'JetBrains Mono';color:var(--dim);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+  .crewhead .c{font-family:'Anton';color:var(--yellow);font-size:28px;line-height:1}
+  .crewhead .c span{font-family:'JetBrains Mono';font-size:11px;color:var(--dim);margin-left:8px;letter-spacing:.1em}
+  .roster{border:1px solid var(--line);border-radius:4px;max-height:340px;overflow-y:auto}
+  .roster .r{display:flex;justify-content:space-between;align-items:center;padding:13px 18px;border-bottom:1px solid rgba(254,250,247,.08);font-size:16px}
+  .roster .r:last-child{border-bottom:0}
+  .roster .empty{padding:24px;color:var(--dim);font-size:15px}
+
+  .feed,.funds{border:1px solid var(--line);border-radius:4px}
+  .feed .row{display:grid;grid-template-columns:90px 1fr auto;gap:18px;padding:18px 20px;border-bottom:1px solid rgba(254,250,247,.1);align-items:center}
+  .feed .row:last-child{border-bottom:0}
+  .feed .tag{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.12em;color:var(--yellow)}
+  .feed .t{font-size:17px;font-weight:500}.feed .note{font-size:14px;color:var(--dim);margin-top:3px}
+  .feed .mi{font-family:'Anton';font-size:22px}.feed .mi span{font-size:12px;color:var(--dim)}
+
+  .ben{display:flex;justify-content:space-between;align-items:center;text-decoration:none;border:2px solid var(--yellow);border-radius:4px;padding:22px 24px;background:rgba(250,237,38,.05);margin-bottom:28px}
+  .ben .n{font-family:'Anton';font-size:30px;color:var(--yellow)}
+  .ben .d{font-size:14px;color:var(--dim);margin-top:4px}
+  .ben .tag{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow)}
+  .fund{display:grid;grid-template-columns:140px 1fr auto;gap:18px;padding:18px 20px;border-bottom:1px solid rgba(254,250,247,.1);align-items:center;text-decoration:none}
+  .funds .fund:last-child{border-bottom:0}
+  .fund:hover{background:rgba(250,237,38,.05)}
+  .fund .when{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow)}
+  .fund .n{font-family:'Anton';font-size:22px}.fund .sub{font-size:14px;color:var(--dim);margin-top:3px}
+  .fund .arr{font-family:'JetBrains Mono';color:var(--yellow);font-size:16px}
+
+  footer{background:var(--ground2);margin-top:70px;border-top:3px solid var(--yellow)}
+  .foot{max-width:1080px;margin:0 auto;padding:50px 22px 36px}
+  .foot .line{font-family:'Anton';font-size:clamp(26px,4.5vw,46px);max-width:20ch;line-height:.95}
+  .foot .line .y{color:var(--yellow)}
+  .foot .links{display:flex;gap:24px;flex-wrap:wrap;margin-top:32px;font-family:'JetBrains Mono';font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+  .foot .links a{text-decoration:none}.foot .links a:hover{color:var(--yellow)}
+  .foot .base{font-family:'JetBrains Mono';margin-top:28px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(254,250,247,.4)}
+</style>
+</head>
+<body>
+
+<div class="ticker"><div class="wrap">7,500 MILES IN 2027 · SWIM · BIKE · RUN · TRAINING STARTS JULY 1 · EVERY MILE FOR QUEER COMMUNITIES · <span style="color:var(--yellow)">PLEDGE A MILE ↓</span></div></div>
+
+<div class="wrap nav">
+  <a class="brand" href="#tally"><svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="rgba(254,250,247,.25)" stroke-width="2"/><path d="M 26 64 L 70 64" stroke="#FAED26" stroke-width="7" stroke-linecap="round"/><path d="M 26 64 A 28 28 0 0 1 66 40" fill="none" stroke="#FAED26" stroke-width="7" stroke-linecap="round"/><circle cx="71" cy="36" r="8" fill="#FAED26"/></svg><span class="nm">Cycle for Change</span></a>
+  <nav><a href="#tally">Tally</a><a href="#board">The Board</a><a href="#rides">Rides</a><a href="#cause">Cause</a></nav>
+</div>
+
+<section id="tally" class="wrap">
+  <p class="eyebrow">● The Tally · 2027 · Swim · Bike · Run</p>
+  <h1 class="anton hero">7,500 miles,<br>every one for <span class="y">queer communities.</span></h1>
+  <div style="margin:30px 0 8px">
+    <svg viewBox="0 0 1080 90" width="100%" height="90" preserveAspectRatio="none" style="overflow:visible" id="routeSvg">
+      <path id="routeBg" fill="none" stroke="rgba(254,250,247,.18)" stroke-width="2" stroke-dasharray="3 6"/>
+      <path id="routeFg" fill="none" stroke="#FAED26" stroke-width="3" style="filter:drop-shadow(0 0 6px rgba(250,237,38,.5));transition:stroke-dashoffset 1.4s cubic-bezier(.2,.7,.2,1)"/>
+      <g id="routeNodes"></g>
+    </svg>
+  </div>
+  <div class="bignum anton"><span data-cur>0</span><span class="of"> / 7,500</span><span class="mi">MILES</span></div>
+  <p class="substat"><span data-pct>0.0%</span> of the year · training starts July 1 · fed by Strava + Garmin</p>
+  <div class="ctas">
+    <a href="#board" class="btn solid">Pledge a Mile →</a>
+    <a href="#rides" class="btn ghost">The Ride Feed</a>
+  </div>
+</section>
+
+<section id="board" class="wrap">
+  <div class="sechead"><p class="l">Pledge a mile</p><h2 class="anton">Get on <span class="y">the board.</span></h2></div>
+  <p class="lede">Add your name and you're in — part of the crew backing all 7,500 miles. No amount, no card here. When the year closes, pledgers give directly to the queer orgs we choose by vote.</p>
+  <div class="boardgrid">
+    <div class="join">
+      <p class="k">Add your name</p>
+      <form name="pledges" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="pledgeForm">
+        <input type="hidden" name="form-name" value="pledges">
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <input type="text" name="name" id="pname" placeholder="Your name or handle" maxlength="40" required>
+        <button type="submit">I'm in →</button>
+      </form>
+      <p class="ok" id="okmsg">✓ You're on the board. Thank you for backing the miles.</p>
+      <p class="fine">Names are public on this board. Give happens at year-end, directly to the orgs.</p>
+    </div>
+    <div>
+      <div class="crewhead"><p class="k">The Crew</p><p class="c"><span data-count>0</span><span>PLEDGED</span></p></div>
+      <div class="roster" id="roster"><p class="empty">Be the first name on the board.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BASE-YEAR SECTION ===== -->
+<section style="background:var(--ground);padding:clamp(3rem,7vw,6rem) 0;">
+  <div class="wrap">
+    <p class="mono" style="color:var(--yellow);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:1.1rem;">2026 · base year</p>
+    <h2 class="anton" style="font-size:clamp(2.6rem,8vw,5rem);line-height:.95;margin-bottom:1.4rem;">The base year</h2>
+    <p style="font-size:clamp(1.05rem,2.4vw,1.3rem);line-height:1.55;max-width:54ch;margin-bottom:.9rem;">2026 is the build. Before the 7,500 miles, there's the part nobody posts — the early mornings, the long rides, the swim sets, the slow work of a base. That's this year.</p>
+    <p style="font-size:clamp(1.05rem,2.4vw,1.3rem);line-height:1.55;max-width:54ch;color:var(--dim);">You get to watch it happen. Better yet, come do some of it with me. <strong style="color:var(--yellow);font-weight:inherit;">Every mile now is a mile toward the line.</strong></p>
+    <div style="display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2rem;">
+      <a class="mono" href="#rides" style="background:var(--yellow);color:var(--ink);padding:.85rem 1.5rem;text-decoration:none;font-size:.95rem;border-radius:2px;">Join a ride</a>
+      <a class="mono" href="#board" style="border:1px solid var(--taupe);color:var(--ivory);padding:.85rem 1.5rem;text-decoration:none;font-size:.95rem;border-radius:2px;">Get on the list</a>
+    </div>
+  </div>
+</section>
+
+<section id="rides" class="wrap">
+  <div class="sechead"><p class="l">The Ride Feed</p><h2 class="anton">Every mile, <span class="y">logged.</span></h2></div>
+  <p class="lede">Swim, bike, run — the training and the events as they happen, all building toward a triathlon in 2027. The feed fills up once the miles start.</p>
+  <div class="feed">
+    <div class="row"><span class="tag">BIKE</span><div><p class="t">Long ride · South Mountain loop</p><p class="note">Building the engine. First logged miles land here.</p></div><span class="mi">0<span> mi</span></span></div>
+  </div>
+  <p class="mono" style="color:rgba(254,250,247,.45);font-size:12px;margin-top:14px">The live feed connects to Strava + Garmin once the season opens.</p>
+</section>
+
+<!-- ===== INSTAGRAM FEED SECTION ===== -->
+<section style="background:var(--ground2);padding:clamp(3rem,7vw,6rem) 0;">
+  <div class="wrap">
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:2rem;">
+      <div>
+        <p class="mono" style="color:var(--taupe);font-size:.8rem;letter-spacing:.18em;margin-bottom:.3rem;">@cycl_eforchage</p>
+        <h2 class="anton" style="font-size:clamp(2rem,5vw,3.2rem);line-height:.95;">From the feed</h2>
+        <p style="margin-top:.4rem;max-width:42ch;color:var(--dim);">The daily texture — rides, builds, fundraising. Follow along.</p>
+      </div>
+      <a class="mono" href="https://instagram.com/cycl_eforchage" target="_blank" rel="noopener" style="background:var(--yellow);color:var(--ink);padding:.7rem 1.25rem;text-decoration:none;font-size:.9rem;border-radius:2px;white-space:nowrap;">Follow on Instagram</a>
+    </div>
+    <behold-widget feed-id="FEED_ID_HERE"></behold-widget>
+  </div>
+</section>
+<script type="module" src="https://w.behold.so/v2.js"></script>
+
+<section id="cause" class="wrap">
+  <div class="sechead"><p class="l">2027 Rides &amp; The Cause</p><h2 class="anton">Where the miles <span class="y">go to work.</span></h2></div>
+  <p class="lede">The fundraisers I'm riding in 2027 — tap any to go straight to it. This year's named beneficiary:</p>
+  <a class="ben" href="https://onenten.org" target="_blank" rel="noopener">
+    <div><p class="n">one·n·ten</p><p class="d">LGBTQ youth, ages 14–24 · Phoenix</p></div>
+    <span class="tag">2027 Beneficiary ↗</span>
+  </a>
+  <div class="funds" id="funds"></div>
+  <p class="lede" style="margin-top:20px;font-size:15px">Beyond the bike, I volunteer with queer-serving orgs around Phoenix. Final 2027 beneficiaries are chosen by community vote — then pledgers give directly.</p>
+</section>
+
+<footer>
+  <div class="foot">
+    <p class="line anton">The miles are <span class="y">the message.</span></p>
+    <div class="links">
+      <a href="#board">Pledge</a><a href="#rides">Ride Feed</a><a href="#cause">The Cause</a>
+      <a href="https://instagram.com/cycl_eforchange" target="_blank" rel="noopener">Instagram ↗</a>
+    </div>
+    <p class="base">© 2026 Cycle for Change · Phoenix, AZ → Everywhere</p>
+  </div>
+</footer>
+
+<script>
+const GOAL=7500;
+const FUNDRAISERS=[
+  {name:"Tour de Palm Springs",when:"Feb 6, 2027",det:"Coachella Valley · up to 102 mi",url:"https://tourdepalmsprings.com",who:"150+ local nonprofits"},
+  {name:"Center Ride Out",when:"April 2027",det:"LA → San Diego · 3 days",url:"https://lalgbtcenter.org",who:"LA LGBT Center"},
+  {name:"Cycle to Zero",when:"May 2027",det:"3-day ride",url:"https://www.sfaf.org",who:"SF AIDS Foundation"},
+  {name:"Seattle to Portland",when:"July 2027",det:"STP · 206 mi · 2 days",url:"https://cascade.org/rides-events/seattle-portland-2026",who:"Cascade Bicycle Club"},
+  {name:"Recovery Ride",when:"Sept 2027",det:"Sausalito ↔ Guerneville",url:"https://castrocountryclub.org",who:"Castro Country Club"},
+  {name:"El Tour de Tucson",when:"Nov 2027",det:"Arizona classic",url:"https://www.eltourdetucson.org",who:"Perimeter Bicycling"},
+];
+document.getElementById('funds').innerHTML=FUNDRAISERS.map(f=>
+  `<a class="fund" href="${f.url}" target="_blank" rel="noopener"><span class="when">${f.when}</span><div><p class="n anton">${f.name}</p><p class="sub">${f.det} · ${f.who}</p></div><span class="arr">↗</span></a>`).join('');
+
+// route line
+(function(){
+  const pts=[[20,70],[160,52],[300,64],[440,40],[600,58],[760,30],[920,46],[1060,24]];
+  const d=pts.map((p,i)=>`${i?'L':'M'} ${p[0]} ${p[1]}`).join(' ');
+  document.getElementById('routeBg').setAttribute('d',d);
+  const fg=document.getElementById('routeFg'); fg.setAttribute('d',d);
+  fg.style.strokeDasharray=1600; fg.style.strokeDashoffset=1600;
+  const ns=document.getElementById('routeNodes');
+  pts.forEach((p,i)=>{ns.innerHTML+=`<circle cx="${p[0]}" cy="${p[1]}" r="4" fill="#46344E" stroke="#FAED26" stroke-width="2"/>`;});
+  window.__route={pts,fg};
+})();
+
+function paint(miles){
+  const pct=Math.min(100,(miles/GOAL)*100);
+  document.querySelector('[data-cur]').textContent=Math.round(miles).toLocaleString();
+  document.querySelector('[data-pct]').textContent=pct.toFixed(1)+'%';
+  const r=window.__route; if(r){ r.fg.style.strokeDashoffset=1600-(1600*pct/100);
+    const idx=Math.min(r.pts.length-1,Math.floor((pct/100)*(r.pts.length-1)));
+    [...document.getElementById('routeNodes').children].forEach((c,i)=>{
+      c.setAttribute('fill', i<=idx?'#FAED26':'#46344E');
+      c.setAttribute('r', i===idx?7:4);
+    });
+  }
+}
+
+// live mileage
+fetch('/.netlify/functions/mileage').then(r=>r.json()).then(d=>{paint(typeof d.miles==='number'?d.miles:0);}).catch(()=>paint(0));
+
+// load the saved roster (server-side, via Netlify Forms API)
+fetch('/.netlify/functions/pledges').then(r=>r.json()).then(d=>{
+  const list=(d&&d.names)||[];
+  document.querySelector('[data-count]').textContent=list.length;
+  const el=document.getElementById('roster');
+  if(list.length){ el.innerHTML=list.map(n=>`<div class="r"><span>${esc(n.name)}</span><span class="mono" style="font-size:11px;color:rgba(254,250,247,.4)">${n.ago||''}</span></div>`).join(''); }
+}).catch(()=>{});
+
+// submit pledge via AJAX so the page doesn't navigate away
+const form=document.getElementById('pledgeForm');
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  const data=new FormData(form);
+  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(data).toString()})
+    .then(()=>{
+      document.getElementById('okmsg').style.display='block';
+      const nm=document.getElementById('pname').value.trim();
+      const el=document.getElementById('roster');
+      if(el.querySelector('.empty')) el.innerHTML='';
+      el.insertAdjacentHTML('afterbegin',`<div class="r"><span>${esc(nm)}</span><span class="mono" style="font-size:11px;color:rgba(254,250,247,.4)">just now</span></div>`);
+      const c=document.querySelector('[data-count]'); c.textContent=(parseInt(c.textContent||'0')+1);
+      form.reset();
+    })
+    .catch(()=>{document.getElementById('okmsg').textContent='Hmm — try again in a moment.';document.getElementById('okmsg').style.display='block';});
+});
+function esc(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+</script>
+</body>
+</html>
