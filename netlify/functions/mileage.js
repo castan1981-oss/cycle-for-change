@@ -1,12 +1,13 @@
 // netlify/functions/mileage.js
-// TEST MODE: counts activities from the last 7 days so the counter shows real
-// miles now. Switch START_MODE back to "year" before the 2027 launch.
+// Base year: counts activities from BASE_START onward. Switch START_MODE to
+// "year" before the 2027 launch.
 
 const PLEDGE_GOAL = 7500;
 const METERS_PER_MILE = 1609.34;
 
-// "week" = last 7 days (test).  "year" = Jan 1 of PLEDGE_YEAR onward (launch).
-const START_MODE = "week";
+// "base" = from BASE_START onward.  "year" = Jan 1 of PLEDGE_YEAR onward (launch).
+const START_MODE = "base";
+const BASE_START = "2026-06-01";
 
 let cache = { ts: 0, miles: 0 };
 const CACHE_MS = 15 * 60 * 1000;
@@ -46,8 +47,8 @@ exports.handler = async () => {
 
     // window start
     let after, before;
-    if (START_MODE === "week") {
-      after = Math.floor((Date.now() - 7 * 24 * 3600 * 1000) / 1000);
+    if (START_MODE === "base") {
+      after = Math.floor(new Date(`${BASE_START}T00:00:00Z`).getTime() / 1000);
       before = Math.floor(Date.now() / 1000);
     } else {
       after = Math.floor(new Date(`${YEAR}-01-01T00:00:00Z`).getTime() / 1000);
