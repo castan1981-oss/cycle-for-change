@@ -4,17 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjNDYzNDRFIi8+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDYiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTQsMjUwLDI0NywuMykiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0gMjYgNjQgTCA3MCA2NCIgc3Ryb2tlPSIjRkFFRDI2IiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0gMjYgNjQgQSAyOCAyOCAwIDAgMSA2NiA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkFFRDI2IiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjcxIiBjeT0iMzYiIHI9IjgiIGZpbGw9IiNGQUVEMjYiLz48L3N2Zz4=">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="manifest" href="/site.webmanifest">
 <title>Cycle for Change — 7,500 miles in 2027 for queer communities.</title>
 <meta name="description" content="7,500 miles across 2027 — swim, bike, run — raising money and visibility for queer organizations. Pledge a mile, follow every ride.">
+<meta property="og:title" content="Cycle for Change — 7,500 miles in 2027 for queer communities.">
+<meta property="og:description" content="7,500 miles across 2027 — swim, bike, run — raising money and visibility for queer organizations. Pledge a mile, follow every ride.">
+<meta property="og:image" content="https://cycleforchange.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cycleforchange.org/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
+    --cfc-plum:#2D2536; --cfc-ink:#241D30; --cfc-yellow:#ECE84A; --cfc-off-white:#F3F0E9; --cfc-muted:#8B8295; --cfc-gold:#A1906B;
     --ground:#46344E; --ground2:#3A2C42; --slate:#5A5560;
-    --ivory:#FEFAF7; --taupe:#B7A08B; --yellow:#FAED26; --ink:#241B29;
-    --dim:rgba(254,250,247,.7); --line:rgba(254,250,247,.16);
+    --ivory:var(--cfc-off-white); --taupe:var(--cfc-gold); --yellow:var(--cfc-yellow); --ink:var(--cfc-ink);
+    --dim:rgba(243,240,233,.7); --line:rgba(243,240,233,.16);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;background:#46344E!important}
@@ -32,11 +44,19 @@
   .ticker{background:var(--ground2);font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:10px 0;border-bottom:1px solid var(--line);color:var(--dim);white-space:nowrap;overflow:hidden}
   .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 22px}
   .nav .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-  .nav .brand .nm{font-family:'Anton';font-size:20px;letter-spacing:.04em;text-transform:uppercase}
+  .nav .brand .logo-lockup{display:block;height:40px;width:auto}
+  .nav .brand .logo-mark{display:none;height:36px;width:36px}
+  .nav .brand .logo-lockup--light,.nav .brand .logo-mark--light{display:none}
   .nav nav{display:flex;gap:22px}
   .nav nav a{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
   .nav nav a:hover{color:var(--yellow)}
-  @media (max-width:720px){.nav nav{display:none}}
+  @media (max-width:720px){.nav nav{display:none}.nav .brand .logo-lockup{display:none}.nav .brand .logo-mark--dark,.nav .brand .logo-mark--light{display:block}}
+  @media (max-width:720px){.nav .brand .logo-mark--light{display:none}}
+  .theme-light .nav .brand .logo-lockup--dark,.theme-light .nav .brand .logo-mark--dark{display:none}
+  .theme-light .nav .brand .logo-lockup--light{display:block}
+  .theme-light .foot-brand .mark--dark{display:none}
+  .theme-light .foot-brand .mark--light{display:block}
+  @media (max-width:720px){.theme-light .nav .brand .logo-lockup--light{display:none}.theme-light .nav .brand .logo-mark--light{display:block}}
 
   section{padding:clamp(40px,6vw,72px) 0 10px}
   .eyebrow{font-family:'JetBrains Mono';color:var(--yellow);font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px}
@@ -97,6 +117,11 @@
 
   footer{background:var(--ground2);margin-top:70px;border-top:3px solid var(--yellow)}
   .foot{max-width:1080px;margin:0 auto;padding:50px 22px 36px}
+  .foot-brand{margin-bottom:28px}
+  .foot-brand a{display:inline-flex;align-items:center;gap:12px;text-decoration:none}
+  .foot-brand img{display:block;height:28px;width:28px}
+  .foot-brand .wordmark{font-family:'Anton';font-size:18px;letter-spacing:.04em;text-transform:uppercase;line-height:1}
+  .foot-brand .mark--light{display:none}
   .foot .line{font-family:'Anton';font-size:clamp(26px,4.5vw,46px);max-width:20ch;line-height:.95}
   .foot .line .y{color:var(--yellow)}
   .foot .links{display:flex;gap:24px;flex-wrap:wrap;margin-top:32px;font-family:'JetBrains Mono';font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
@@ -126,7 +151,12 @@
 <div class="ticker"><div class="wrap">7,500 MILES IN 2027 · SWIM · BIKE · RUN · TRAINING STARTS JULY 1 · EVERY MILE FOR QUEER COMMUNITIES · <span style="color:var(--yellow)">PLEDGE A MILE ↓</span></div></div>
 
 <div class="wrap nav">
-  <a class="brand" href="#tally"><svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="rgba(254,250,247,.25)" stroke-width="2"/><path d="M 26 64 L 70 64" stroke="#FAED26" stroke-width="7" stroke-linecap="round"/><path d="M 26 64 A 28 28 0 0 1 66 40" fill="none" stroke="#FAED26" stroke-width="7" stroke-linecap="round"/><circle cx="71" cy="36" r="8" fill="#FAED26"/></svg><span class="nm">Cycle for Change</span></a>
+  <a class="brand" href="/" aria-label="Cycle for Change">
+    <img class="logo-lockup logo-lockup--dark" src="/cfc-lockup.svg" alt="Cycle for Change" height="40" decoding="async">
+    <img class="logo-lockup logo-lockup--light" src="/cfc-lockup-dark.svg" alt="Cycle for Change" height="40" decoding="async">
+    <img class="logo-mark logo-mark--dark" src="/cfc-mark-yellow.svg" alt="" height="36" width="36" decoding="async">
+    <img class="logo-mark logo-mark--light" src="/cfc-mark-plum.svg" alt="" height="36" width="36" decoding="async">
+  </a>
   <nav><a href="#tally">Tally</a><a href="#board">The Board</a><a href="#rides">Rides</a><a href="#cause">Cause</a></nav>
 </div>
 
@@ -238,6 +268,13 @@
 
 <footer>
   <div class="foot">
+    <div class="foot-brand">
+      <a href="/" aria-label="Cycle for Change">
+        <img class="mark--dark" src="/cfc-mark-yellow.svg" alt="" height="28" width="28" decoding="async">
+        <img class="mark--light" src="/cfc-mark-plum.svg" alt="" height="28" width="28" decoding="async">
+        <span class="wordmark">Cycle for Change</span>
+      </a>
+    </div>
     <p class="line anton">The miles are <span class="y">the message.</span></p>
     <div class="links">
       <a href="#board">Pledge</a><a href="#rides">Ride Feed</a><a href="#cause">The Cause</a>
