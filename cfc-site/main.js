@@ -214,10 +214,10 @@
         return `<article class="org-card${voted ? " voted" : ""}" data-id="${esc(o.id)}">
           <div class="org-top">
             <div>
-              <h3 class="serif">${esc(o.name)}</h3>
+              <h3 class="serif"><a href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">${esc(o.name)}</a></h3>
               <p>${esc(o.desc)}</p>
+              <a class="org-visit" href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">Visit site →</a>
             </div>
-            <a class="org-link" href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">Visit ↗</a>
           </div>
           <div class="org-bar-wrap" aria-hidden="true">
             <div class="org-bar" style="width:${o.pct || 0}%"></div>

@@ -601,17 +601,15 @@ section { padding: clamp(56px, 8vw, 96px) 0; }
   border: 1px solid var(--hairline);
 }
 
-.disc-photo {
+.disc-gfx {
   aspect-ratio: 4 / 3;
-  background: linear-gradient(145deg, var(--cream-2), var(--lavender-band));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Space Mono", monospace;
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--mute);
+  overflow: hidden;
+}
+
+.disc-gfx svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .disc-body { padding: 22px; }
@@ -635,10 +633,10 @@ section { padding: clamp(56px, 8vw, 96px) 0; }
   margin-bottom: 6px;
 }
 
-.disc-miles {
-  font-family: "Space Mono", monospace;
-  font-size: 12px;
+.disc-desc {
+  font-size: 14px;
   color: var(--mute);
+  line-height: 1.6;
 }
 
 @media (max-width: 900px) {
@@ -744,15 +742,31 @@ section { padding: clamp(56px, 8vw, 96px) 0; }
   margin-bottom: 4px;
 }
 
+.org-card h3 a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid var(--yellow);
+}
+
+.org-card h3 a:hover { color: var(--mute); }
+
 .org-card p { font-size: 14px; color: var(--mute); }
 
-.org-card a.org-link {
+.org-visit {
   font-family: "Space Mono", monospace;
-  font-size: 10px;
-  letter-spacing: 0.08em;
+  font-size: 11px;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--plum);
+  color: var(--yellow-deep);
   text-decoration: none;
+  border-bottom: 1px solid var(--yellow-deep);
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.org-visit:hover {
+  color: var(--plum);
+  border-color: var(--plum);
 }
 
 .org-bar-wrap {
