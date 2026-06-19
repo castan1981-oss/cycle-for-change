@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="7,500 miles across 2027 — swim, bike, run — raising money and visibility for queer organizations. Pledge a mile, follow every ride.">
+  <title>Cycle for Change — 7,500 miles in 2027 for queer communities.</title>
+  <meta property="og:title" content="Cycle for Change — 7,500 miles in 2027 for queer communities.">
+  <meta property="og:description" content="Endurance as activism. Every mile for queer communities. Pledge a mile, vote on where the funds go.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Hidden duplicate so Netlify detects the pledges form at deploy time. -->
+<form name="pledges" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="name">
+</form>
+
+<div id="top" class="ticker" aria-label="Site announcement">
+  <div class="ticker-inner">
+    <p class="ticker-track">7,500 miles in 2027 · swim · bike · run · training starts july 1 · every mile for queer communities · <span class="accent">pledge a mile ↓</span> · 7,500 miles in 2027 · swim · bike · run · training starts july 1 · every mile for queer communities · <span class="accent">pledge a mile ↓</span> ·</p>
+    <p class="ticker-track" aria-hidden="true">7,500 miles in 2027 · swim · bike · run · training starts july 1 · every mile for queer communities · <span class="accent">pledge a mile ↓</span> · 7,500 miles in 2027 · swim · bike · run · training starts july 1 · every mile for queer communities · <span class="accent">pledge a mile ↓</span> ·</p>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="Cycle for Change">
+      <svg viewBox="0 0 48 48" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M8 38 L22 10" fill="none" stroke="#A99CB0" stroke-width="5" stroke-linecap="round"/>
+        <path d="M18 38 L32 10" fill="none" stroke="#E9E224" stroke-width="5" stroke-linecap="round"/>
+        <path d="M28 38 L42 10" fill="none" stroke="#F2EFE6" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">Cycle for Change</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#board">The Board</a>
+      <a href="#feed">Ride Feed</a>
+      <a href="#how">How It Works</a>
+      <a href="#orgs">Vote</a>
+      <a href="#story">Story</a>
+    </nav>
+    <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile" aria-hidden="true">
+    <a href="#board">The Board</a>
+    <a href="#feed">Ride Feed</a>
+    <a href="#how">How It Works</a>
+    <a href="#orgs">Vote</a>
+    <a href="#story">Story</a>
+    <a href="#join">Join</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero wrap" aria-labelledby="hero-heading">
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1a1520"/>
+            <stop offset="60%" stop-color="#372C3C"/>
+            <stop offset="100%" stop-color="#2A2130"/>
+          </linearGradient>
+        </defs>
+        <rect width="1200" height="600" fill="url(#sky)"/>
+        <path d="M0 420 Q300 380 600 400 T1200 380 L1200 600 L0 600 Z" fill="#2A2130" opacity="0.9"/>
+        <path d="M0 460 Q400 430 800 450 T1200 440 L1200 600 L0 600 Z" fill="#3F3349" opacity="0.6"/>
+        <line x1="0" y1="400" x2="1200" y2="395" stroke="#E9E224" stroke-width="1" opacity="0.15"/>
+        <circle cx="980" cy="120" r="40" fill="#E9E224" opacity="0.08"/>
+      </svg>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content reveal">
+      <p class="eyebrow"><span data-mark="12"></span> Endurance as activism · 2027</p>
+      <h1 id="hero-heading">7,500 miles,<br>every one for <span class="y">queer communities.</span></h1>
+      <div class="tally-chart" aria-hidden="true">
+        <svg viewBox="0 0 1080 90" preserveAspectRatio="none">
+          <path id="routeBg" fill="none" stroke="rgba(242,239,230,.18)" stroke-width="2" stroke-dasharray="3 6"/>
+          <path id="routeFg" fill="none" stroke="#E9E224" stroke-width="3" style="filter:drop-shadow(0 0 6px rgba(233,226,36,.45))"/>
+          <g id="routeNodes"></g>
+        </svg>
+      </div>
+      <p class="bignum"><span data-cur>211</span><span class="of"> / 7,500</span><span class="unit">MILES</span></p>
+      <p class="substat"><span data-pct>2.8%</span> of the year · training starts July 1 · fed by Strava + Garmin</p>
+      <div class="ctas">
+        <a href="#board" class="btn btn-solid">Pledge a Mile →</a>
+        <a href="#feed" class="btn btn-ghost">The Ride Feed</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="board" class="wrap reveal" aria-labelledby="board-heading">
+    <div class="sec-head">
+      <p class="label">Pledge a mile</p>
+      <h2 id="board-heading">Get on <span class="y">the board.</span></h2>
+    </div>
+    <p class="lede">Add your name and you're in — part of the crew backing all 7,500 miles. No amount, no card here. When the year closes, pledgers give directly to the queer orgs we choose by vote.</p>
+    <div class="board-grid">
+      <div class="join-card">
+        <p class="k">Add your name</p>
+        <form name="pledges" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="pledgeForm">
+          <input type="hidden" name="form-name" value="pledges">
+          <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+          <label for="pname" class="visually-hidden">Your name</label>
+          <input type="text" name="name" id="pname" placeholder="Your name or handle" maxlength="40" required autocomplete="name">
+          <button type="submit">I'm in →</button>
+        </form>
+        <p class="ok" id="okmsg">✓ You're on the board. Thank you for backing the miles.</p>
+        <p class="fine">Names are public on this board. Giving happens at year-end, directly to the orgs.</p>
+        <div class="name-chips" id="nameChips" aria-live="polite"></div>
+      </div>
+      <div>
+        <div class="crew-head">
+          <p class="k">The Crew</p>
+          <p class="count"><span id="boardCount">0</span><span>pledged</span></p>
+        </div>
+        <div class="roster" id="roster" aria-live="polite">
+          <p class="roster-empty">Be the first name on the board.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="feed" class="section-alt reveal" aria-labelledby="feed-heading">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">The ride feed</p>
+        <h2 id="feed-heading">Every mile, <span class="y">logged.</span></h2>
+      </div>
+      <p class="lede">Swim, bike, run — the training and the events as they happen, all building toward a triathlon year in 2027.</p>
+      <div class="feed" id="feedList">
+        <div class="feed-row">
+          <span class="feed-tag bike">Bike</span>
+          <div>
+            <p class="feed-title">Long ride · South Mountain loop</p>
+            <p class="feed-note">Building the engine. Dawn desert miles.</p>
+          </div>
+          <span class="feed-mi">62<span> mi</span></span>
+        </div>
+        <div class="feed-row">
+          <span class="feed-tag run">Run</span>
+          <div>
+            <p class="feed-title">Tempo · Papago Park</p>
+            <p class="feed-note">Heat training. Legs remember.</p>
+          </div>
+          <span class="feed-mi">8<span> mi</span></span>
+        </div>
+        <div class="feed-row">
+          <span class="feed-tag swim">Swim</span>
+          <div>
+            <p class="feed-title">Pool set · 3,000 yds</p>
+            <p class="feed-note">Base building. The quiet discipline.</p>
+          </div>
+          <span class="feed-mi">1.7<span> mi</span></span>
+        </div>
+      </div>
+      <p class="feed-note-bottom">The live feed connects to Strava + Garmin once the season opens.</p>
+    </div>
+  </section>
+
+  <section id="how" class="wrap reveal" aria-labelledby="how-heading">
+    <div class="sec-head">
+      <p class="label">How it works</p>
+      <h2 id="how-heading">Miles, names, <span class="y">votes.</span></h2>
+    </div>
+    <p class="lede">Endurance as activism — a full year of swim, bike, and run with a community behind every mile.</p>
+    <div class="steps">
+      <article class="step-card">
+        <p class="step-num">01</p>
+        <h3>Ride the miles</h3>
+        <p>7,500 miles across 2027 — every swim, bike, and run logged and public. Training starts July 1.</p>
+      </article>
+      <article class="step-card">
+        <p class="step-num">02</p>
+        <h3>Get on the board</h3>
+        <p>Pledge your name. No payment now — you're backing the effort and joining the crew that decides where funds go.</p>
+      </article>
+      <article class="step-card">
+        <p class="step-num">03</p>
+        <h3>Vote &amp; give</h3>
+        <p>At year-end, board members vote on queer-serving orgs. Then pledgers give directly — no middleman.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="orgs" class="section-alt reveal" aria-labelledby="orgs-heading">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Community vote</p>
+        <h2 id="orgs-heading">Where the miles <span class="y">go to work.</span></h2>
+      </div>
+      <p class="lede">Example partners for the year-end vote. Board members pick the final list — then everyone gives directly.</p>
+      <div class="orgs-list" id="orgsList"></div>
+      <p class="vote-msg" id="voteMsg" hidden></p>
+    </div>
+  </section>
+
+  <section id="story" class="wrap reveal" aria-labelledby="story-heading">
+    <div class="sec-head">
+      <p class="label">The story</p>
+      <h2 id="story-heading">The miles are <span class="y">the message.</span></h2>
+    </div>
+    <div class="story-grid">
+      <div class="story-body">
+        <p>Cycle for Change is one person, one year, three disciplines — and a community that shows up. <strong>7,500 miles</strong> isn't a stunt. It's a sustained act of visibility for queer communities, routed through the orgs doing the work on the ground.</p>
+        <p>Phoenix to everywhere. Cold dawn rides, long pool sets, desert heat. The board grows with every name. The vote decides where the giving lands. <strong>Endurance as activism</strong> — not a slogan, a calendar.</p>
+      </div>
+      <div class="story-stats">
+        <div class="stat-box">
+          <p class="v">7,500</p>
+          <p class="l">Miles in 2027</p>
+        </div>
+        <div class="stat-box">
+          <p class="v">3</p>
+          <p class="l">Disciplines</p>
+        </div>
+        <div class="stat-box">
+          <p class="v">1</p>
+          <p class="l">Year of riding</p>
+        </div>
+        <div class="stat-box">
+          <p class="v">∞</p>
+          <p class="l">Queer communities</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" class="section-alt join-cta reveal" aria-labelledby="join-heading">
+    <div class="wrap">
+      <h2 id="join-heading" class="display">Join <span class="y">the board.</span></h2>
+      <p>Your name on the list. Your vote at year-end. Every mile, logged in public.</p>
+      <a href="#board" class="btn btn-solid">Pledge a Mile →</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="foot-inner">
+    <a class="foot-brand" href="/" aria-label="Cycle for Change">
+      <svg viewBox="0 0 48 48" height="28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M8 38 L22 10" fill="none" stroke="#A99CB0" stroke-width="5" stroke-linecap="round"/>
+        <path d="M18 38 L32 10" fill="none" stroke="#E9E224" stroke-width="5" stroke-linecap="round"/>
+        <path d="M28 38 L42 10" fill="none" stroke="#F2EFE6" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">Cycle for Change</span>
+    </a>
+    <p class="foot-tagline display">The miles are <span class="y">the message.</span></p>
+    <form class="email-signup" id="emailForm" aria-label="Email signup">
+      <label for="email" class="visually-hidden">Email address</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required autocomplete="email">
+      <button type="submit">Stay in touch</button>
+    </form>
+    <p class="email-ok" id="emailOk"></p>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="#board">Pledge</a>
+      <a href="#feed">Ride Feed</a>
+      <a href="#orgs">Vote</a>
+      <a href="#story">Story</a>
+      <a href="https://instagram.com/cycl_eforchange" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+    </nav>
+    <p class="foot-base">© 2026 Cycle for Change · Phoenix, AZ → Everywhere</p>
+  </div>
+</footer>
+
+<div class="sticky-bar" id="stickyBar" role="region" aria-label="Quick pledge">
+  <div class="sticky-inner">
+    <p class="sticky-text"><strong><span id="stickyMiles">211</span> / 7,500</strong> miles logged · join the board</p>
+    <a href="#board" class="btn btn-solid">Pledge a Mile →</a>
+  </div>
+</div>
+
+<style>
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+
+<script src="main.js" defer></script>
+</body>
+</html>

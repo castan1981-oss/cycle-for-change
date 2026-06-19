@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CFC · Strava Setup (one time)</title>
+<style>
+  body{font-family:'JetBrains Mono',ui-monospace,monospace;background:#2A2F5A;color:#ECE4D4;line-height:1.6;max-width:720px;margin:0 auto;padding:40px 22px}
+  h1{font-size:26px;margin-bottom:8px}
+  h2{font-size:16px;color:#E88A72;margin:30px 0 8px;letter-spacing:.05em}
+  code{background:rgba(236,228,212,.12);padding:2px 6px;border-radius:4px;word-break:break-all}
+  .box{border:1px solid rgba(236,228,212,.25);border-radius:10px;padding:18px;margin:14px 0}
+  input{font-family:inherit;font-size:14px;padding:10px;width:100%;border:1px solid rgba(236,228,212,.3);border-radius:6px;background:#232850;color:#ECE4D4;margin:6px 0}
+  button{font-family:inherit;font-weight:700;font-size:14px;padding:12px 20px;border:0;border-radius:999px;background:#E88A72;color:#2A2F5A;cursor:pointer;margin-top:8px}
+  a{color:#E88A72}
+  .out{background:#232850;border:1px solid #E88A72;border-radius:8px;padding:14px;margin-top:12px;white-space:pre-wrap;word-break:break-all;display:none}
+  ol{padding-left:22px}li{margin-bottom:10px}
+</style>
+</head>
+<body>
+  <h1>Strava Setup — do this once</h1>
+  <p>This page trades a temporary code for the permanent <b>refresh token</b> the website needs. You only run it one time. Nothing here is saved or sent anywhere except Strava.</p>
+
+  <h2>Step 1 · Create your Strava app</h2>
+  <ol>
+    <li>Go to <a href="https://www.strava.com/settings/api" target="_blank">strava.com/settings/api</a> and create an application.</li>
+    <li>Set <b>Authorization Callback Domain</b> to <code>localhost</code></li>
+    <li>Copy your <b>Client ID</b> and <b>Client Secret</b> below.</li>
+  </ol>
+  <div class="box">
+    <input id="cid" placeholder="Client ID">
+    <input id="secret" placeholder="Client Secret">
+    <button onclick="auth()">Step 2 · Authorize with Strava →</button>
+  </div>
+
+  <h2>Step 3 · Paste the code Strava gives back</h2>
+  <p>After you authorize, Strava sends you to a <code>localhost</code> page that won't load — that's fine. Copy the <code>code=</code> value from that page's address bar and paste it here.</p>
+  <div class="box">
+    <input id="code" placeholder="the code from the redirect URL">
+    <button onclick="exchange()">Get my refresh token →</button>
+    <div class="out" id="out"></div>
+  </div>
+
+<script>
+function auth(){
+  const cid = document.getElementById('cid').value.trim();
+  localStorage.setItem('cid', cid);
+  localStorage.setItem('secret', document.getElementById('secret').value.trim());
+  const url = `https://www.strava.com/oauth/authorize?client_id=${cid}&response_type=code&redirect_uri=http://localhost&approval_prompt=force&scope=read,activity:read_all`;
+  window.open(url, '_blank');
+}
+async function exchange(){
+  const out = document.getElementById('out');
+  out.style.display = 'block';
+  out.textContent = 'Working…';
+  try{
+    const res = await fetch('https://www.strava.com/oauth/token', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        client_id: localStorage.getItem('cid'),
+        client_secret: localStorage.getItem('secret'),
+        code: document.getElementById('code').value.trim(),
+        grant_type:'authorization_code'
+      })
+    });
+    const d = await res.json();
+    if(!d.refresh_token){ out.textContent = 'Error: '+JSON.stringify(d,null,2); return; }
+    out.textContent =
+      'SUCCESS — paste these three into Netlify → Environment variables:\n\n' +
+      'STRAVA_CLIENT_ID = ' + localStorage.getItem('cid') + '\n' +
+      'STRAVA_CLIENT_SECRET = ' + localStorage.getItem('secret') + '\n' +
+      'STRAVA_REFRESH_TOKEN = ' + d.refresh_token;
+  }catch(e){ out.textContent = 'Error: '+e.message; }
+}
+</script>
+</body>
+</html>

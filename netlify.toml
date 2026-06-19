@@ -1,9 +1,9 @@
 [build]
-  publish = "."
+  publish = "cfc-site"
   functions = "netlify/functions"
 
 [dev]
-  publish = "."
+  publish = "cfc-site"
   functions = "netlify/functions"
   port = 8888
 
