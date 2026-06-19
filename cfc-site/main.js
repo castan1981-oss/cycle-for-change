@@ -325,38 +325,6 @@
   }
 
   /* —— Instagram —— */
-  function renderIgEmpty(handle) {
-    const grid = document.getElementById("igGrid");
-    const empty = document.getElementById("igFeed");
-    if (grid) {
-      grid.hidden = true;
-      grid.innerHTML = "";
-    }
-    if (empty) {
-      empty.hidden = false;
-      empty.textContent = `Live posts from ${handle || INSTAGRAM_HANDLE} load here`;
-    }
-  }
-
-  function renderIgPosts(posts) {
-    const grid = document.getElementById("igGrid");
-    const empty = document.getElementById("igFeed");
-    if (!grid || !posts || !posts.length) {
-      renderIgEmpty();
-      return;
-    }
-    if (empty) empty.hidden = true;
-    grid.hidden = false;
-    grid.innerHTML = posts
-      .map(
-        (p) => `<a class="igtile rv in" href="${esc(p.permalink || INSTAGRAM_URL)}" target="_blank" rel="noopener noreferrer">
-              <img src="${esc(p.url)}" alt="" loading="lazy" width="400" height="400">
-              <span class="ov">view</span>
-            </a>`
-      )
-      .join("");
-  }
-
   function wireInstagram(profileUrl, handle) {
     const url = profileUrl || INSTAGRAM_URL;
     const label = handle || INSTAGRAM_HANDLE;
@@ -375,12 +343,9 @@
   fetch("/.netlify/functions/instagram")
     .then((r) => r.json())
     .then((d) => {
-      const handle = d.handle || INSTAGRAM_HANDLE;
-      wireInstagram(d.profileUrl || INSTAGRAM_URL, handle);
-      if (d.posts && d.posts.length) renderIgPosts(d.posts);
-      else renderIgEmpty(handle);
+      wireInstagram(d.profileUrl || INSTAGRAM_URL, d.handle || INSTAGRAM_HANDLE);
     })
-    .catch(() => renderIgEmpty());
+    .catch(() => {});
 
   /* —— Email signup —— */
   const emailForm = document.getElementById("emailForm");

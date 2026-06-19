@@ -810,6 +810,35 @@ section { padding: 96px 0; }
   margin-top: 30px;
 }
 
+.ig-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.ig-strip img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+  border: 1px solid var(--line);
+}
+
+.ig-caption {
+  margin-top: 18px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.02rem;
+  color: #46394e;
+  max-width: 52ch;
+}
+
+.photo-grade {
+  filter: sepia(0.1) saturate(0.92) hue-rotate(318deg) brightness(1.03) contrast(0.98);
+}
+
 .igtile {
   position: relative;
   aspect-ratio: 1 / 1;
@@ -864,6 +893,20 @@ section { padding: 96px 0; }
   grid-template-columns: 1fr 1fr;
   gap: 56px;
   align-items: center;
+}
+
+.story-photo {
+  aspect-ratio: 4 / 5;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.story-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .story h2 {
@@ -1005,7 +1048,7 @@ footer {
   .hero-grid, .split, .story-grid { grid-template-columns: 1fr; gap: 36px; }
   .stats { grid-template-columns: 1fr 1fr; }
   .prog-grid, .feed-grid, .orgs, .rides-grid { grid-template-columns: 1fr; }
-  .ig-grid { grid-template-columns: repeat(3, 1fr); }
+  .ig-grid, .ig-strip { grid-template-columns: repeat(3, 1fr); }
   section { padding: 72px 0; }
   .pull { padding: 84px 0; }
   .util .wrap { justify-content: center; }
