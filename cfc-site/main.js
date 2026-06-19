@@ -1,6 +1,8 @@
 (function () {
   "use strict";
 
+  document.documentElement.classList.add("js");
+
   const GOAL = 7500;
   const INSTAGRAM_URL = "https://www.instagram.com/cycle_forchange";
   const INSTAGRAM_HANDLE = "@cycle_forchange";
@@ -204,9 +206,51 @@
   }
 
   /* —— Voting —— */
+  getFingerprint();
+
   const orgsList = document.getElementById("orgsList");
   const voteMsg = document.getElementById("voteMsg");
   const vtotal = document.getElementById("vtotal");
+
+  const SEED_VOTES = { onenten: 412, tqp: 268, saaf: 223, trevor: 301 };
+  const SEED_ORGS = [
+    {
+      id: "onenten",
+      name: "one·n·ten",
+      desc: "Phoenix nonprofit for LGBTQ+ youth ages 11–24 — safe spaces, housing, leadership.",
+      url: "https://onenten.org",
+    },
+    {
+      id: "tqp",
+      name: "Trans Queer Pueblo",
+      desc: "Phoenix LGBTQ+ migrant community of color — mutual aid and healing justice.",
+      url: "https://www.tqpueblo.org",
+    },
+    {
+      id: "saaf",
+      name: "Southern Arizona AIDS Foundation",
+      desc: "Tucson — HIV services and LGBTQ+ health across southern Arizona.",
+      url: "https://saaf.org",
+    },
+    {
+      id: "trevor",
+      name: "The Trevor Project",
+      desc: "Crisis intervention and suicide prevention for LGBTQ+ young people.",
+      url: "https://www.thetrevorproject.org",
+    },
+  ];
+
+  function buildSeedResponse() {
+    const total = Object.values(SEED_VOTES).reduce((s, n) => s + n, 0) || 1;
+    return {
+      orgs: SEED_ORGS.map((o) => ({
+        ...o,
+        votes: SEED_VOTES[o.id] || 0,
+        pct: Math.round(((SEED_VOTES[o.id] || 0) / total) * 1000) / 10,
+      })),
+      totalVotes: total,
+    };
+  }
 
   function renderOrgs(data) {
     if (!orgsList || !data || !data.orgs) return;
@@ -232,6 +276,8 @@
       })
       .join("");
   }
+
+  renderOrgs(buildSeedResponse());
 
   fetch("/.netlify/functions/votes")
     .then((r) => r.json())
@@ -277,14 +323,6 @@
         });
     });
   }
-
-  getFingerprint();
-  fetch("/.netlify/functions/votes")
-    .then((r) => r.json())
-    .then((d) => {
-      if (votedOrgId) renderOrgs(d);
-    })
-    .catch(() => {});
 
   /* —— Field notes —— */
   const notesGrid = document.getElementById("notesGrid");
