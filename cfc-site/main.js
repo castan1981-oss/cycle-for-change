@@ -2,16 +2,19 @@
   "use strict";
 
   const GOAL = 7500;
-  const STATIC_MILES = 211;
+  const INSTAGRAM_URL = "https://instagram.com/cycl_eforchange";
+  const INSTAGRAM_HANDLE = "@cycl_eforchange";
 
-  const ORGS = [
-    { id: "onenten", name: "one·n·ten", desc: "LGBTQ youth, ages 14–24 · Phoenix", votes: 42 },
-    { id: "lalgbt", name: "LA LGBT Center", desc: "Health, housing, advocacy · Los Angeles", votes: 38 },
-    { id: "sfaf", name: "SF AIDS Foundation", desc: "Health equity · San Francisco", votes: 31 },
-    { id: "trevor", name: "The Trevor Project", desc: "Crisis support for LGBTQ youth · National", votes: 27 },
+  const STATIC_FEED = [
+    { discipline: "bike", title: "South Mountain loop", note: "Building the engine.", miles: 62 },
+    { discipline: "run", title: "Papago tempo", note: "Heat training.", miles: 8 },
+    { discipline: "swim", title: "3,000 yd pool set", note: "The quiet discipline.", miles: 1.7 },
   ];
 
+  const STATIC_IG_TILES = 6;
+
   let votedOrgId = null;
+  let voteFingerprint = null;
 
   function esc(s) {
     return String(s || "").replace(/[&<>"]/g, (c) =>
@@ -23,18 +26,27 @@
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
 
-  /* —— Three-slash mark SVG —— */
-  function markSvg(h) {
-    return `<span class="mark" aria-hidden="true"><svg viewBox="0 0 48 48" height="${h}" xmlns="http://www.w3.org/2000/svg"><path d="M8 38 L22 10" fill="none" stroke="#A99CB0" stroke-width="5" stroke-linecap="round"/><path d="M18 38 L32 10" fill="none" stroke="#E9E224" stroke-width="5" stroke-linecap="round"/><path d="M28 38 L42 10" fill="none" stroke="#F2EFE6" stroke-width="5" stroke-linecap="round"/></svg></span>`;
+  function getFingerprint() {
+    if (voteFingerprint) return voteFingerprint;
+    try {
+      voteFingerprint = localStorage.getItem("cfc-vote-fp");
+      if (!voteFingerprint) {
+        voteFingerprint = "fp_" + Math.random().toString(36).slice(2) + Date.now().toString(36);
+        localStorage.setItem("cfc-vote-fp", voteFingerprint);
+      }
+    } catch (_) {
+      voteFingerprint = "session_" + Date.now();
+    }
+    try {
+      votedOrgId = localStorage.getItem("cfc-voted-org");
+    } catch (_) {
+      /* ignore */
+    }
+    return voteFingerprint;
   }
-
-  document.querySelectorAll("[data-mark]").forEach((el) => {
-    el.innerHTML = markSvg(el.dataset.mark || "14");
-  });
 
   /* —— Scroll reveals —— */
   if (!prefersReducedMotion()) {
-    const reveals = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -44,9 +56,9 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -32px 0px" }
     );
-    reveals.forEach((el) => io.observe(el));
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
   } else {
     document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in"));
   }
@@ -70,133 +82,96 @@
     });
   }
 
-  /* —— Sticky pledge bar —— */
-  const stickyBar = document.getElementById("stickyBar");
-  const boardSection = document.getElementById("board");
-  if (stickyBar && boardSection) {
-    const stickyIo = new IntersectionObserver(
-      ([entry]) => {
-        stickyBar.classList.toggle("visible", !entry.isIntersecting && window.scrollY > 200);
-      },
-      { threshold: 0, rootMargin: "0px" }
-    );
-    stickyIo.observe(boardSection);
+  /* —— Tally + chart —— */
+  function paintTally(miles, pct) {
+    const m = Math.max(0, miles);
+    const p = pct != null ? pct : Math.min(100, (m / GOAL) * 100);
+    const rounded = Math.round(m);
+
+    document.querySelectorAll("[data-cur]").forEach((el) => {
+      el.textContent = rounded.toLocaleString();
+    });
+    document.querySelectorAll("[data-pct]").forEach((el) => {
+      el.textContent = p.toFixed(1) + "%";
+    });
+    const ticker = document.querySelector("[data-ticker-miles]");
+    if (ticker) ticker.textContent = rounded.toLocaleString();
   }
 
-  /* —— Route chart —— */
-  const chartPts = [
-    [20, 70], [160, 52], [300, 64], [440, 40], [600, 58], [760, 30], [920, 46], [1060, 24],
-  ];
+  function renderChart(points) {
+    const svg = document.getElementById("tallyChart");
+    const loading = document.getElementById("chartLoading");
+    if (!svg || !points || !points.length) return;
 
-  function initChart() {
-    const bg = document.getElementById("routeBg");
-    const fg = document.getElementById("routeFg");
-    const nodes = document.getElementById("routeNodes");
-    if (!bg || !fg || !nodes) return;
+    if (loading) loading.hidden = true;
+    svg.hidden = false;
 
-    const d = chartPts.map((p, i) => `${i ? "L" : "M"} ${p[0]} ${p[1]}`).join(" ");
-    bg.setAttribute("d", d);
-    fg.setAttribute("d", d);
+    const w = 400;
+    const h = 120;
+    const pad = { t: 12, r: 8, b: 8, l: 8 };
+    const maxY = Math.max(GOAL, ...points.map((p) => p.y)) * 1.05;
 
-    const len = 1600;
-    fg.style.strokeDasharray = len;
-    fg.style.strokeDashoffset = len;
+    const toX = (x) => pad.l + (x / 100) * (w - pad.l - pad.r);
+    const toY = (y) => pad.t + (1 - y / maxY) * (h - pad.t - pad.b);
 
-    nodes.innerHTML = chartPts
+    const lineD = "M " + points.map((p) => `${toX(p.x)} ${toY(p.y)}`).join(" L ");
+    document.getElementById("chartArea").setAttribute("d", areaD);
+    document.getElementById("chartLine").setAttribute("d", lineD);
+    document.getElementById("chartLineAccent").setAttribute("d", lineD);
+  }
+
+  function renderFeed(recent) {
+    const list = document.getElementById("feedList");
+    if (!list) return;
+    const items = recent && recent.length ? recent : STATIC_FEED;
+    list.innerHTML = items
       .map(
-        (p) =>
-          `<circle cx="${p[0]}" cy="${p[1]}" r="4" fill="var(--plum)" stroke="var(--yellow)" stroke-width="2"/>`
+        (a) => `<article class="feed-card">
+          <span class="feed-tag ${esc(a.discipline)}">${esc(a.discipline)}</span>
+          <div>
+            <p class="feed-title">${esc(a.title)}</p>
+            ${a.note ? `<p class="feed-note">${esc(a.note)}</p>` : ""}
+          </div>
+          <span class="feed-mi">${Number(a.miles).toFixed(1)}<span> mi</span></span>
+        </article>`
       )
       .join("");
-
-    window.__route = { pts: chartPts, fg, len };
   }
 
-  function paintTally(miles) {
-    const m = Math.max(0, miles);
-    const pct = Math.min(100, (m / GOAL) * 100);
-
-    const curEl = document.querySelector("[data-cur]");
-    const pctEl = document.querySelector("[data-pct]");
-    if (curEl) {
-      if (prefersReducedMotion()) {
-        curEl.textContent = Math.round(m).toLocaleString();
-      } else {
-        animateCount(curEl, 0, m, 1200);
-      }
-    }
-    if (pctEl) pctEl.textContent = pct.toFixed(1) + "%";
-
-    const r = window.__route;
-    if (r) {
-      r.fg.style.strokeDashoffset = r.len - (r.len * pct) / 100;
-      const idx = Math.min(r.pts.length - 1, Math.floor((pct / 100) * (r.pts.length - 1)));
-      [...document.getElementById("routeNodes").children].forEach((c, i) => {
-        c.setAttribute("fill", i <= idx ? "var(--yellow)" : "var(--plum)");
-        c.setAttribute("r", i === idx ? "7" : "4");
-      });
-    }
-
-    const stickyCount = document.getElementById("stickyMiles");
-    if (stickyCount) stickyCount.textContent = Math.round(m).toLocaleString();
+  function setStravaLink(url) {
+    if (!url) return;
+    ["stravaLink", "footStrava"].forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) el.href = url;
+    });
   }
 
-  function animateCount(el, from, to, dur) {
-    const start = performance.now();
-    function tick(now) {
-      const t = Math.min(1, (now - start) / dur);
-      const eased = 1 - Math.pow(1 - t, 3);
-      el.textContent = Math.round(from + (to - from) * eased).toLocaleString();
-      if (t < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  }
-
-  initChart();
-  paintTally(STATIC_MILES);
-
-  fetch("/.netlify/functions/mileage")
+  fetch("/.netlify/functions/strava")
     .then((r) => r.json())
     .then((d) => {
-      if (typeof d.miles === "number" && d.configured) paintTally(d.miles);
+      const miles = d.totalMiles ?? d.miles ?? 0;
+      paintTally(miles, d.pct);
+      if (d.chartPoints) renderChart(d.chartPoints);
+      if (d.recent && d.recent.length) renderFeed(d.recent);
+      if (d.profileUrl) setStravaLink(d.profileUrl);
+      const loading = document.getElementById("chartLoading");
+      if (loading && d.chartPoints) loading.hidden = true;
     })
-    .catch(() => {});
+    .catch(() => {
+      paintTally(0, 0);
+      renderFeed(STATIC_FEED);
+    });
 
   /* —— Board / pledges —— */
   const form = document.getElementById("pledgeForm");
   const okMsg = document.getElementById("okmsg");
-  const roster = document.getElementById("roster");
   const boardCount = document.getElementById("boardCount");
-  const chips = document.getElementById("nameChips");
-
-  function renderRoster(names) {
-    if (!roster) return;
-    if (!names.length) {
-      roster.innerHTML = '<p class="roster-empty">Be the first name on the board.</p>';
-      return;
-    }
-    roster.innerHTML = names
-      .map(
-        (n) =>
-          `<div class="roster-row"><span>${esc(n.name)}</span><span class="roster-chip">${esc(n.ago || "")}</span></div>`
-      )
-      .join("");
-  }
-
-  function addChip(name) {
-    if (!chips) return;
-    const chip = document.createElement("span");
-    chip.className = "name-chip";
-    chip.textContent = name;
-    chips.prepend(chip);
-  }
 
   fetch("/.netlify/functions/pledges")
     .then((r) => r.json())
     .then((d) => {
-      const list = (d && d.names) || [];
-      if (boardCount) boardCount.textContent = list.length;
-      renderRoster(list);
+      const n = (d && d.names && d.names.length) || 0;
+      if (boardCount) boardCount.textContent = String(n);
     })
     .catch(() => {});
 
@@ -207,23 +182,18 @@
       const name = String(data.get("name") || "").trim().slice(0, 40);
       if (!name) return;
 
+      const prev = boardCount ? parseInt(boardCount.textContent || "0", 10) : 0;
+      if (boardCount) boardCount.textContent = String(prev + 1);
+      if (okMsg) okMsg.style.display = "block";
+
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(data).toString(),
       })
-        .then(() => {
-          if (okMsg) okMsg.style.display = "block";
-          if (roster.querySelector(".roster-empty")) roster.innerHTML = "";
-          roster.insertAdjacentHTML(
-            "afterbegin",
-            `<div class="roster-row"><span>${esc(name)}</span><span class="roster-chip">just now</span></div>`
-          );
-          addChip(name);
-          if (boardCount) boardCount.textContent = String(parseInt(boardCount.textContent || "0", 10) + 1);
-          form.reset();
-        })
+        .then(() => form.reset())
         .catch(() => {
+          if (boardCount) boardCount.textContent = String(prev);
           if (okMsg) {
             okMsg.textContent = "Hmm — try again in a moment.";
             okMsg.style.display = "block";
@@ -232,48 +202,179 @@
     });
   }
 
-  /* —— Orgs voting —— */
+  /* —— Voting —— */
   const orgsList = document.getElementById("orgsList");
   const voteMsg = document.getElementById("voteMsg");
 
-  function renderOrgs() {
-    if (!orgsList) return;
-    orgsList.innerHTML = ORGS.map((o) => {
-      const voted = votedOrgId === o.id;
-      return `<article class="org-card${voted ? " voted" : ""}" data-id="${esc(o.id)}">
-        <div class="org-info">
-          <h3>${esc(o.name)}</h3>
-          <p>${esc(o.desc)}</p>
-        </div>
-        <div class="org-votes">
-          <p class="n" data-votes="${esc(o.id)}">${o.votes}</p>
-          <p class="l">votes</p>
-          <button type="button" class="vote-btn" data-vote="${esc(o.id)}" ${votedOrgId ? "disabled" : ""}>${voted ? "Your pick ✓" : "Vote"}</button>
-        </div>
-      </article>`;
-    }).join("");
+  function renderOrgs(data) {
+    if (!orgsList || !data || !data.orgs) return;
+    orgsList.innerHTML = data.orgs
+      .map((o) => {
+        const voted = votedOrgId === o.id;
+        return `<article class="org-card${voted ? " voted" : ""}" data-id="${esc(o.id)}">
+          <div class="org-top">
+            <div>
+              <h3 class="serif">${esc(o.name)}</h3>
+              <p>${esc(o.desc)}</p>
+            </div>
+            <a class="org-link" href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">Visit ↗</a>
+          </div>
+          <div class="org-bar-wrap" aria-hidden="true">
+            <div class="org-bar" style="width:${o.pct || 0}%"></div>
+          </div>
+          <div class="org-actions">
+            <span class="org-pct">${o.pct || 0}% · ${o.votes} votes</span>
+            <button type="button" class="vote-btn" data-vote="${esc(o.id)}" ${votedOrgId ? "disabled" : ""}>
+              ${voted ? "Your pick ✓" : "Vote"}
+            </button>
+          </div>
+        </article>`;
+      })
+      .join("");
   }
 
-  renderOrgs();
+  fetch("/.netlify/functions/votes")
+    .then((r) => r.json())
+    .then((d) => renderOrgs(d))
+    .catch(() => {});
 
   if (orgsList) {
     orgsList.addEventListener("click", (e) => {
       const btn = e.target.closest("[data-vote]");
       if (!btn || votedOrgId) return;
-      const id = btn.dataset.vote;
-      const org = ORGS.find((o) => o.id === id);
-      if (!org) return;
-      org.votes += 1;
-      votedOrgId = id;
-      renderOrgs();
-      if (voteMsg) {
-        voteMsg.textContent = `You voted for ${org.name}. Final tally closes at year-end.`;
-        voteMsg.hidden = false;
-      }
+      const orgId = btn.dataset.vote;
+      btn.disabled = true;
+
+      fetch("/.netlify/functions/votes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ orgId, fingerprint: getFingerprint() }),
+      })
+        .then((r) => r.json())
+        .then((d) => {
+          if (d.error && d.error === "already voted") {
+            votedOrgId = d.votedFor;
+            try {
+              localStorage.setItem("cfc-voted-org", votedOrgId);
+            } catch (_) {}
+          } else if (!d.error) {
+            votedOrgId = orgId;
+            try {
+              localStorage.setItem("cfc-voted-org", orgId);
+            } catch (_) {}
+            if (voteMsg) {
+              const org = (d.orgs || []).find((o) => o.id === orgId);
+              voteMsg.textContent = org
+                ? `You voted for ${org.name}. Final tally closes at year-end.`
+                : "Vote recorded.";
+              voteMsg.hidden = false;
+            }
+          }
+          renderOrgs(d);
+        })
+        .catch(() => {
+          btn.disabled = false;
+        });
     });
   }
 
-  /* —— Email signup (front-end only) —— */
+  getFingerprint();
+  fetch("/.netlify/functions/votes")
+    .then((r) => r.json())
+    .then((d) => {
+      if (votedOrgId) renderOrgs(d);
+    })
+    .catch(() => {});
+
+  /* —— Field notes —— */
+  const notesGrid = document.getElementById("notesGrid");
+  fetch("/content/field-notes.json")
+    .then((r) => r.json())
+    .then((posts) => {
+      if (!notesGrid || !Array.isArray(posts)) return;
+      notesGrid.innerHTML = posts
+        .slice(0, 3)
+        .map(
+          (p) => `<a class="note-card" href="#notes/${esc(p.slug)}">
+            <div class="note-photo" aria-hidden="true">Photo</div>
+            <div class="note-body">
+              <p class="note-meta">${esc(p.category)} · ${esc(p.date)}</p>
+              <h3 class="serif">${esc(p.title)}</h3>
+              <p>${esc(p.excerpt)}</p>
+              <span class="note-read">Read →</span>
+            </div>
+          </a>`
+        )
+        .join("");
+    })
+    .catch(() => {});
+
+  /* —— Instagram —— */
+  function renderStaticIg() {
+    const grid = document.getElementById("igGrid");
+    if (!grid) return;
+    grid.innerHTML = Array.from({ length: STATIC_IG_TILES }, (_, i) =>
+      `<a class="ig-tile" href="${INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer" aria-label="Instagram post ${i + 1}">
+        <div class="ig-placeholder"></div>
+        <span class="overlay">View</span>
+      </a>`
+    ).join("");
+  }
+
+  function wireInstagram(profileUrl, handle) {
+    const url = profileUrl || INSTAGRAM_URL;
+    const label = handle || INSTAGRAM_HANDLE;
+    ["navInstagram", "mobileInstagram", "igFollowBtn", "igFollowLink", "footInstagram"].forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.href = url;
+      if (id === "navInstagram" || id === "igHandle") el.textContent = label;
+    });
+    const handleEl = document.getElementById("igHandle");
+    if (handleEl) handleEl.textContent = label;
+  }
+
+  wireInstagram(INSTAGRAM_URL, INSTAGRAM_HANDLE);
+
+  fetch("/.netlify/functions/instagram")
+    .then((r) => r.json())
+    .then((d) => {
+      wireInstagram(d.profileUrl || INSTAGRAM_URL, d.handle || INSTAGRAM_HANDLE);
+
+      if (d.source === "behold" && d.beholdFeedId) {
+        const mount = document.getElementById("beholdMount");
+        const grid = document.getElementById("igGrid");
+        if (mount && grid) {
+          grid.hidden = true;
+          mount.hidden = false;
+          mount.innerHTML = `<behold-widget feed-id="${esc(d.beholdFeedId)}"></behold-widget>`;
+          const s = document.createElement("script");
+          s.type = "module";
+          s.src = "https://w.behold.so/v2.js";
+          document.body.appendChild(s);
+        }
+        return;
+      }
+
+      if (d.posts && d.posts.length) {
+        const grid = document.getElementById("igGrid");
+        if (!grid) return;
+        grid.innerHTML = d.posts
+          .map(
+            (p) => `<a class="ig-tile" href="${esc(p.permalink || INSTAGRAM_URL)}" target="_blank" rel="noopener noreferrer">
+              <img src="${esc(p.url)}" alt="" loading="lazy" width="400" height="400">
+              <span class="overlay">View</span>
+            </a>`
+          )
+          .join("");
+        return;
+      }
+
+      renderStaticIg();
+    })
+    .catch(() => renderStaticIg());
+
+  /* —— Email signup —— */
   const emailForm = document.getElementById("emailForm");
   const emailOk = document.getElementById("emailOk");
   if (emailForm) {
