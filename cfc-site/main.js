@@ -2,16 +2,16 @@
   "use strict";
 
   const GOAL = 7500;
-  const INSTAGRAM_URL = "https://instagram.com/cycl_eforchange";
-  const INSTAGRAM_HANDLE = "@cycl_eforchange";
+  const INSTAGRAM_URL = "https://www.instagram.com/cycle_forchange";
+  const INSTAGRAM_HANDLE = "@cycle_forchange";
 
   const STATIC_FEED = [
-    { discipline: "bike", title: "South Mountain loop", note: "Building the engine.", miles: 62 },
-    { discipline: "run", title: "Papago tempo", note: "Heat training.", miles: 8 },
-    { discipline: "swim", title: "3,000 yd pool set", note: "The quiet discipline.", miles: 1.7 },
+    { discipline: "bike", title: "Long ride · South Mountain loop", note: "Building the engine. Dawn desert miles.", miles: 62 },
+    { discipline: "run", title: "Tempo · Papago Park", note: "Heat training. Legs remember.", miles: 8 },
+    { discipline: "swim", title: "Pool set · 3,000 yds", note: "Base building. The quiet discipline.", miles: 1.7 },
   ];
 
-  const STATIC_IG_TILES = 6;
+  const STATIC_IG_CAPS = ["dawn miles", "pool set", "the crew", "race day", "rest day", "trailhead"];
 
   let votedOrgId = null;
   let voteFingerprint = null;
@@ -58,26 +58,23 @@
       },
       { threshold: 0.1, rootMargin: "0px 0px -32px 0px" }
     );
-    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    document.querySelectorAll(".rv").forEach((el) => io.observe(el));
   } else {
-    document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in"));
+    document.querySelectorAll(".rv").forEach((el) => el.classList.add("in"));
   }
 
   /* —— Mobile menu —— */
-  const menuToggle = document.getElementById("menuToggle");
-  const mobileNav = document.getElementById("mobileNav");
-  if (menuToggle && mobileNav) {
-    menuToggle.addEventListener("click", () => {
-      const open = mobileNav.getAttribute("aria-hidden") === "false";
-      mobileNav.setAttribute("aria-hidden", open ? "true" : "false");
-      menuToggle.setAttribute("aria-expanded", open ? "false" : "true");
-      menuToggle.textContent = open ? "Menu" : "Close";
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      const open = mobileMenu.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
     });
-    mobileNav.querySelectorAll("a").forEach((a) => {
+    mobileMenu.querySelectorAll("a").forEach((a) => {
       a.addEventListener("click", () => {
-        mobileNav.setAttribute("aria-hidden", "true");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.textContent = "Menu";
+        mobileMenu.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
       });
     });
   }
@@ -115,6 +112,10 @@
     const toY = (y) => pad.t + (1 - y / maxY) * (h - pad.t - pad.b);
 
     const lineD = "M " + points.map((p) => `${toX(p.x)} ${toY(p.y)}`).join(" L ");
+    const areaD =
+      lineD +
+      ` L ${toX(points[points.length - 1].x)} ${toY(0)} L ${toX(points[0].x)} ${toY(0)} Z`;
+
     document.getElementById("chartArea").setAttribute("d", areaD);
     document.getElementById("chartLine").setAttribute("d", lineD);
     document.getElementById("chartLineAccent").setAttribute("d", lineD);
@@ -126,13 +127,13 @@
     const items = recent && recent.length ? recent : STATIC_FEED;
     list.innerHTML = items
       .map(
-        (a) => `<article class="feed-card">
-          <span class="feed-tag ${esc(a.discipline)}">${esc(a.discipline)}</span>
-          <div>
-            <p class="feed-title">${esc(a.title)}</p>
-            ${a.note ? `<p class="feed-note">${esc(a.note)}</p>` : ""}
+        (a) => `<article class="ride ${esc(a.discipline)} rv in">
+          <div class="ride-top">
+            <span class="ride-disc">${esc(a.discipline)}</span>
+            <span class="ride-mi">${Number(a.miles).toFixed(1)} mi</span>
           </div>
-          <span class="feed-mi">${Number(a.miles).toFixed(1)}<span> mi</span></span>
+          <h3>${esc(a.title)}</h3>
+          ${a.note ? `<p>${esc(a.note)}</p>` : ""}
         </article>`
       )
       .join("");
@@ -171,7 +172,7 @@
     .then((r) => r.json())
     .then((d) => {
       const n = (d && d.names && d.names.length) || 0;
-      if (boardCount) boardCount.textContent = String(n);
+      if (boardCount) boardCount.textContent = n.toLocaleString("en-US");
     })
     .catch(() => {});
 
@@ -182,8 +183,8 @@
       const name = String(data.get("name") || "").trim().slice(0, 40);
       if (!name) return;
 
-      const prev = boardCount ? parseInt(boardCount.textContent || "0", 10) : 0;
-      if (boardCount) boardCount.textContent = String(prev + 1);
+      const prev = boardCount ? parseInt(boardCount.textContent.replace(/,/g, "") || "0", 10) : 0;
+      if (boardCount) boardCount.textContent = (prev + 1).toLocaleString("en-US");
       if (okMsg) okMsg.style.display = "block";
 
       fetch("/", {
@@ -193,7 +194,7 @@
       })
         .then(() => form.reset())
         .catch(() => {
-          if (boardCount) boardCount.textContent = String(prev);
+          if (boardCount) boardCount.textContent = prev.toLocaleString("en-US");
           if (okMsg) {
             okMsg.textContent = "Hmm — try again in a moment.";
             okMsg.style.display = "block";
@@ -205,30 +206,29 @@
   /* —— Voting —— */
   const orgsList = document.getElementById("orgsList");
   const voteMsg = document.getElementById("voteMsg");
+  const vtotal = document.getElementById("vtotal");
 
   function renderOrgs(data) {
     if (!orgsList || !data || !data.orgs) return;
+
+    if (vtotal) {
+      const total = data.totalVotes || data.orgs.reduce((s, o) => s + (o.votes || 0), 0);
+      vtotal.textContent = total.toLocaleString("en-US");
+    }
+
     orgsList.innerHTML = data.orgs
-      .map((o) => {
+      .map((o, i) => {
         const voted = votedOrgId === o.id;
-        return `<article class="org-card${voted ? " voted" : ""}" data-id="${esc(o.id)}">
-          <div class="org-top">
-            <div>
-              <h3 class="serif"><a href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">${esc(o.name)}</a></h3>
-              <p>${esc(o.desc)}</p>
-              <a class="org-visit" href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">Visit site →</a>
-            </div>
-          </div>
-          <div class="org-bar-wrap" aria-hidden="true">
-            <div class="org-bar" style="width:${o.pct || 0}%"></div>
-          </div>
-          <div class="org-actions">
-            <span class="org-pct">${o.pct || 0}% · ${o.votes} votes</span>
-            <button type="button" class="vote-btn" data-vote="${esc(o.id)}" ${votedOrgId ? "disabled" : ""}>
-              ${voted ? "Your pick ✓" : "Vote"}
-            </button>
-          </div>
-        </article>`;
+        const pct = Math.round(o.pct || 0);
+        return `<div class="org rv in${voted ? " voted" : ""}" data-id="${esc(o.id)}">
+          <h3><a href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">${esc(o.name)}</a></h3>
+          <div class="ods">${esc(o.desc)}</div>
+          <div class="bwrap"><div class="bar2"><i id="b${i}" style="width:${pct}%"></i></div><span class="pct">${pct}%</span></div>
+          <a class="org-visit" href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">Visit site →</a>
+          <button class="btn votebtn" type="button" data-vote="${esc(o.id)}" ${votedOrgId ? "disabled" : ""}>
+            ${voted ? "Your pick ✓" : "Vote"}
+          </button>
+        </div>`;
       })
       .join("");
   }
@@ -295,13 +295,13 @@
       notesGrid.innerHTML = posts
         .slice(0, 3)
         .map(
-          (p) => `<a class="note-card" href="#notes/${esc(p.slug)}">
-            <div class="note-photo" aria-hidden="true">Photo</div>
-            <div class="note-body">
-              <p class="note-meta">${esc(p.category)} · ${esc(p.date)}</p>
-              <h3 class="serif">${esc(p.title)}</h3>
+          (p) => `<a class="post rv in" href="#notes/${esc(p.slug)}">
+            <div class="ph"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3.2"/></svg><span class="pcap">Photo: ${esc(p.title.toLowerCase())}</span></div>
+            <div class="body">
+              <div class="meta">${esc(p.category)} · ${esc(p.date)}</div>
+              <h3>${esc(p.title)}</h3>
               <p>${esc(p.excerpt)}</p>
-              <span class="note-read">Read →</span>
+              <span class="more">Read →</span>
             </div>
           </a>`
         )
@@ -313,22 +313,23 @@
   function renderStaticIg() {
     const grid = document.getElementById("igGrid");
     if (!grid) return;
-    grid.innerHTML = Array.from({ length: STATIC_IG_TILES }, (_, i) =>
-      `<a class="ig-tile" href="${INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer" aria-label="Instagram post ${i + 1}">
-        <div class="ig-placeholder"></div>
-        <span class="overlay">View</span>
-      </a>`
+    grid.innerHTML = STATIC_IG_CAPS.map(
+      (cap, i) =>
+        `<a class="igtile rv in" href="${INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer" aria-label="Instagram: ${esc(cap)}">
+          <span class="cap">${esc(cap)}</span>
+          <span class="ov">view</span>
+        </a>`
     ).join("");
   }
 
   function wireInstagram(profileUrl, handle) {
     const url = profileUrl || INSTAGRAM_URL;
     const label = handle || INSTAGRAM_HANDLE;
-    ["navInstagram", "mobileInstagram", "igFollowBtn", "igFollowLink", "footInstagram"].forEach((id) => {
+    ["navInstagram", "mobileInstagram", "igFollowBtn", "footInstagram"].forEach((id) => {
       const el = document.getElementById(id);
       if (!el) return;
       el.href = url;
-      if (id === "navInstagram" || id === "igHandle") el.textContent = label;
+      if (id === "navInstagram") el.textContent = label;
     });
     const handleEl = document.getElementById("igHandle");
     if (handleEl) handleEl.textContent = label;
@@ -361,9 +362,9 @@
         if (!grid) return;
         grid.innerHTML = d.posts
           .map(
-            (p) => `<a class="ig-tile" href="${esc(p.permalink || INSTAGRAM_URL)}" target="_blank" rel="noopener noreferrer">
+            (p) => `<a class="igtile rv in" href="${esc(p.permalink || INSTAGRAM_URL)}" target="_blank" rel="noopener noreferrer">
               <img src="${esc(p.url)}" alt="" loading="lazy" width="400" height="400">
-              <span class="overlay">View</span>
+              <span class="ov">view</span>
             </a>`
           )
           .join("");
