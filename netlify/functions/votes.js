@@ -5,42 +5,30 @@ const ORGS = [
   {
     id: "onenten",
     name: "one·n·ten",
-    desc: "LGBTQ+ youth, ages 11–24 · Phoenix",
+    desc: "Phoenix nonprofit for LGBTQ+ youth ages 11–24 — safe spaces, housing, leadership.",
     url: "https://onenten.org",
   },
   {
-    id: "lalgbt",
-    name: "LA LGBT Center",
-    desc: "Health, housing, advocacy · Los Angeles",
-    url: "https://lalgbtcenter.org",
+    id: "tqp",
+    name: "Trans Queer Pueblo",
+    desc: "Phoenix LGBTQ+ migrant community of color — mutual aid and healing justice.",
+    url: "https://www.tqpueblo.org",
   },
   {
-    id: "sfaf",
-    name: "SF AIDS Foundation",
-    desc: "Health equity · San Francisco",
-    url: "https://www.sfaf.org",
+    id: "saaf",
+    name: "Southern Arizona AIDS Foundation",
+    desc: "Tucson — HIV services and LGBTQ+ health across southern Arizona.",
+    url: "https://saaf.org",
   },
   {
-    id: "cascade",
-    name: "Cascade Bicycle Club",
-    desc: "Community cycling · Pacific Northwest",
-    url: "https://cascade.org",
-  },
-  {
-    id: "castro",
-    name: "Castro Country Club",
-    desc: "Sober community · San Francisco",
-    url: "https://castrocountryclub.org",
-  },
-  {
-    id: "perimeter",
-    name: "Perimeter Bicycling",
-    desc: "El Tour de Tucson · Arizona",
-    url: "https://www.perimeterbicycling.com",
+    id: "trevor",
+    name: "The Trevor Project",
+    desc: "Crisis intervention and suicide prevention for LGBTQ+ young people.",
+    url: "https://www.thetrevorproject.org",
   },
 ];
 
-const SEED = { onenten: 42, lalgbt: 38, sfaf: 31, cascade: 24, castro: 19, perimeter: 16 };
+const SEED = { onenten: 412, tqp: 268, saaf: 223, trevor: 301 };
 
 let store = null;
 
