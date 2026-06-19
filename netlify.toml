@@ -1,6 +1,7 @@
 [build]
   publish = "cfc-site"
   functions = "netlify/functions"
+  command = "npm install"
 
 [dev]
   publish = "cfc-site"
@@ -9,3 +10,18 @@
 
 [functions]
   node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/strava"
+  to = "/.netlify/functions/strava"
+  status = 200
+
+[[redirects]]
+  from = "/api/votes"
+  to = "/.netlify/functions/votes"
+  status = 200
+
+[[redirects]]
+  from = "/api/instagram"
+  to = "/.netlify/functions/instagram"
+  status = 200
