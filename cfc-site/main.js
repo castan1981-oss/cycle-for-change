@@ -14,8 +14,6 @@
     { discipline: "swim", title: "Pool set · 3,000 yds", note: "Base building. The quiet discipline.", miles: 1.7 },
   ];
 
-  const STATIC_IG_CAPS = ["dawn miles", "pool set", "the crew", "race day", "rest day", "trailhead"];
-
   let votedOrgId = null;
   let voteFingerprint = null;
 
@@ -326,40 +324,37 @@
     });
   }
 
-  /* —— Field notes —— */
-  const notesGrid = document.getElementById("notesGrid");
-  fetch("/content/field-notes.json")
-    .then((r) => r.json())
-    .then((posts) => {
-      if (!notesGrid || !Array.isArray(posts)) return;
-      notesGrid.innerHTML = posts
-        .slice(0, 3)
-        .map(
-          (p) => `<a class="post rv in" href="#notes/${esc(p.slug)}">
-            <div class="ph"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3.2"/></svg><span class="pcap">Photo: ${esc(p.title.toLowerCase())}</span></div>
-            <div class="body">
-              <div class="meta">${esc(p.category)} · ${esc(p.date)}</div>
-              <h3>${esc(p.title)}</h3>
-              <p>${esc(p.excerpt)}</p>
-              <span class="more">Read →</span>
-            </div>
-          </a>`
-        )
-        .join("");
-    })
-    .catch(() => {});
-
   /* —— Instagram —— */
-  function renderStaticIg() {
+  function renderIgEmpty(handle) {
     const grid = document.getElementById("igGrid");
-    if (!grid) return;
-    grid.innerHTML = STATIC_IG_CAPS.map(
-      (cap, i) =>
-        `<a class="igtile rv in" href="${INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer" aria-label="Instagram: ${esc(cap)}">
-          <span class="cap">${esc(cap)}</span>
-          <span class="ov">view</span>
-        </a>`
-    ).join("");
+    const empty = document.getElementById("igFeed");
+    if (grid) {
+      grid.hidden = true;
+      grid.innerHTML = "";
+    }
+    if (empty) {
+      empty.hidden = false;
+      empty.textContent = `Live posts from ${handle || INSTAGRAM_HANDLE} load here`;
+    }
+  }
+
+  function renderIgPosts(posts) {
+    const grid = document.getElementById("igGrid");
+    const empty = document.getElementById("igFeed");
+    if (!grid || !posts || !posts.length) {
+      renderIgEmpty();
+      return;
+    }
+    if (empty) empty.hidden = true;
+    grid.hidden = false;
+    grid.innerHTML = posts
+      .map(
+        (p) => `<a class="igtile rv in" href="${esc(p.permalink || INSTAGRAM_URL)}" target="_blank" rel="noopener noreferrer">
+              <img src="${esc(p.url)}" alt="" loading="lazy" width="400" height="400">
+              <span class="ov">view</span>
+            </a>`
+      )
+      .join("");
   }
 
   function wireInstagram(profileUrl, handle) {
@@ -380,40 +375,12 @@
   fetch("/.netlify/functions/instagram")
     .then((r) => r.json())
     .then((d) => {
-      wireInstagram(d.profileUrl || INSTAGRAM_URL, d.handle || INSTAGRAM_HANDLE);
-
-      if (d.source === "behold" && d.beholdFeedId) {
-        const mount = document.getElementById("beholdMount");
-        const grid = document.getElementById("igGrid");
-        if (mount && grid) {
-          grid.hidden = true;
-          mount.hidden = false;
-          mount.innerHTML = `<behold-widget feed-id="${esc(d.beholdFeedId)}"></behold-widget>`;
-          const s = document.createElement("script");
-          s.type = "module";
-          s.src = "https://w.behold.so/v2.js";
-          document.body.appendChild(s);
-        }
-        return;
-      }
-
-      if (d.posts && d.posts.length) {
-        const grid = document.getElementById("igGrid");
-        if (!grid) return;
-        grid.innerHTML = d.posts
-          .map(
-            (p) => `<a class="igtile rv in" href="${esc(p.permalink || INSTAGRAM_URL)}" target="_blank" rel="noopener noreferrer">
-              <img src="${esc(p.url)}" alt="" loading="lazy" width="400" height="400">
-              <span class="ov">view</span>
-            </a>`
-          )
-          .join("");
-        return;
-      }
-
-      renderStaticIg();
+      const handle = d.handle || INSTAGRAM_HANDLE;
+      wireInstagram(d.profileUrl || INSTAGRAM_URL, handle);
+      if (d.posts && d.posts.length) renderIgPosts(d.posts);
+      else renderIgEmpty(handle);
     })
-    .catch(() => renderStaticIg());
+    .catch(() => renderIgEmpty());
 
   /* —— Email signup —— */
   const emailForm = document.getElementById("emailForm");

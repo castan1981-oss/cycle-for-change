@@ -128,17 +128,6 @@
   .foot .links a{text-decoration:none}.foot .links a:hover{color:var(--yellow)}
   .foot .base{font-family:'JetBrains Mono';margin-top:28px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(254,250,247,.4)}
 
-  .bloggrid{display:grid;gap:14px}
-  .blogcard{display:block;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:20px 22px;background:rgba(254,250,247,.02);transition:background .12s,border-color .12s}
-  .blogcard:hover{background:rgba(250,237,38,.05);border-color:rgba(250,237,38,.35)}
-  .blogcard .dt{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe);margin-bottom:8px}
-  .blogcard .ttl{font-family:'Anton';font-size:clamp(22px,4vw,30px);line-height:.95;margin-bottom:8px}
-  .blogcard .exc{color:var(--dim);font-size:16px;line-height:1.5;max-width:52ch}
-  .blogpost{border:1px solid var(--yellow);border-radius:4px;padding:clamp(22px,4vw,32px);background:rgba(250,237,38,.04)}
-  .blogpost[hidden]{display:none}
-  .blogpost .back{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:none;border:0;color:var(--yellow);cursor:pointer;padding:0;margin-bottom:16px}
-  .blogpost .body p{color:var(--dim);max-width:58ch;margin-bottom:14px;font-size:17px;line-height:1.62}
-  .blogpost .body p:last-child{margin-bottom:0}
 </style>
 </head>
 <body>
@@ -211,22 +200,6 @@
       <a class="mono" href="#rides" style="background:var(--yellow);color:var(--ink);padding:.85rem 1.5rem;text-decoration:none;font-size:.95rem;border-radius:2px;">Join a ride</a>
       <a class="mono" href="#board" style="border:1px solid var(--taupe);color:var(--ivory);padding:.85rem 1.5rem;text-decoration:none;font-size:.95rem;border-radius:2px;">Get on the list</a>
     </div>
-  </div>
-</section>
-
-<!-- ===== FIELD NOTES SECTION ===== -->
-<section id="notes" style="background:var(--ground2);padding:clamp(3rem,7vw,6rem) 0;">
-  <div class="wrap">
-    <p class="mono" style="color:var(--taupe);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:1.1rem;">2026 · field notes</p>
-    <h2 class="anton" style="font-size:clamp(2rem,5vw,3.2rem);line-height:.95;margin-bottom:1rem;">Field notes</h2>
-    <p style="max-width:48ch;color:var(--dim);margin-bottom:2rem;font-size:clamp(1.05rem,2.4vw,1.2rem);line-height:1.55;">Recaps, reflections, and the occasional long ride story.</p>
-    <div class="bloggrid" id="blogList"></div>
-    <article class="blogpost" id="blogPost" hidden>
-      <button type="button" class="back" id="blogBack">← All notes</button>
-      <p class="mono dt" id="blogPostDate" style="color:var(--taupe);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.6rem;"></p>
-      <h3 class="anton" id="blogPostTitle" style="font-size:clamp(1.8rem,4vw,2.6rem);line-height:.95;margin-bottom:1.2rem;"></h3>
-      <div class="body" id="blogPostBody"></div>
-    </article>
   </div>
 </section>
 
@@ -351,56 +324,6 @@ form.addEventListener('submit',function(e){
     .catch(()=>{document.getElementById('okmsg').textContent='Hmm — try again in a moment.';document.getElementById('okmsg').style.display='block';});
 });
 function esc(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
-
-const POSTS=[
-  {slug:"el-tour-recap",date:"Nov 21, 2026",title:"El Tour de Tucson, done",excerpt:"One line that makes someone click.",body:["First paragraph.","Second paragraph."]}
-];
-(function(){
-  const list=document.getElementById('blogList');
-  const post=document.getElementById('blogPost');
-  const back=document.getElementById('blogBack');
-  if(!list||!post||!back) return;
-
-  function showList(){
-    post.hidden=true;
-    list.hidden=false;
-    if(location.hash.startsWith('#notes/')) location.hash='notes';
-  }
-
-  function showPost(slug){
-    const p=POSTS.find(x=>x.slug===slug);
-    if(!p) return showList();
-    document.getElementById('blogPostDate').textContent=p.date;
-    document.getElementById('blogPostTitle').textContent=p.title;
-    document.getElementById('blogPostBody').innerHTML=p.body.map(par=>`<p>${esc(par)}</p>`).join('');
-    list.hidden=true;
-    post.hidden=false;
-    location.hash='notes/'+slug;
-  }
-
-  list.innerHTML=POSTS.map(p=>`
-    <button type="button" class="blogcard" data-slug="${esc(p.slug)}">
-      <p class="dt">${esc(p.date)}</p>
-      <p class="ttl">${esc(p.title)}</p>
-      <p class="exc">${esc(p.excerpt)}</p>
-    </button>`).join('');
-
-  list.addEventListener('click',e=>{
-    const btn=e.target.closest('[data-slug]');
-    if(btn) showPost(btn.dataset.slug);
-  });
-  back.addEventListener('click',showList);
-
-  const m=location.hash.match(/^#notes\/?([^/?]+)?/);
-  if(m&&m[1]) showPost(m[1]);
-  else showList();
-
-  window.addEventListener('hashchange',()=>{
-    if(!location.hash.startsWith('#notes')) return;
-    const m=location.hash.match(/^#notes\/?([^/?]+)?/);
-    m&&m[1]?showPost(m[1]):showList();
-  });
-})();
 </script>
 </body>
 </html>
