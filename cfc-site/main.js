@@ -1,6 +1,7 @@
 (function () {
   "use strict";
 
+  window.__cfcReady = true;
   document.documentElement.classList.add("js");
 
   const GOAL = 7500;
@@ -48,7 +49,12 @@
   }
 
   /* —— Scroll reveals —— */
-  if (!prefersReducedMotion()) {
+  function bootReveals() {
+    const els = document.querySelectorAll(".rv");
+    if (prefersReducedMotion()) {
+      els.forEach((el) => el.classList.add("in"));
+      return;
+    }
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -60,10 +66,11 @@
       },
       { threshold: 0.1, rootMargin: "0px 0px -32px 0px" }
     );
-    document.querySelectorAll(".rv").forEach((el) => io.observe(el));
-  } else {
-    document.querySelectorAll(".rv").forEach((el) => el.classList.add("in"));
+    els.forEach((el) => {
+      if (!el.classList.contains("in")) io.observe(el);
+    });
   }
+  bootReveals();
 
   /* —— Mobile menu —— */
   const menuBtn = document.getElementById("menuBtn");
@@ -78,6 +85,126 @@
         mobileMenu.classList.remove("open");
         menuBtn.setAttribute("aria-expanded", "false");
       });
+    });
+  }
+
+  /* —— Voting (seed before API so the section is never empty) —— */
+  getFingerprint();
+
+  const orgsList = document.getElementById("orgsList");
+  const voteMsg = document.getElementById("voteMsg");
+  const vtotal = document.getElementById("vtotal");
+
+  const SEED_VOTES = { onenten: 412, tqp: 268, saaf: 223, trevor: 301 };
+  const SEED_ORGS = [
+    {
+      id: "onenten",
+      name: "one·n·ten",
+      desc: "Phoenix nonprofit for LGBTQ+ youth ages 11–24 — safe spaces, housing, leadership.",
+      url: "https://onenten.org",
+    },
+    {
+      id: "tqp",
+      name: "Trans Queer Pueblo",
+      desc: "Phoenix LGBTQ+ migrant community of color — mutual aid and healing justice.",
+      url: "https://www.tqpueblo.org",
+    },
+    {
+      id: "saaf",
+      name: "Southern Arizona AIDS Foundation",
+      desc: "Tucson — HIV services and LGBTQ+ health across southern Arizona.",
+      url: "https://saaf.org",
+    },
+    {
+      id: "trevor",
+      name: "The Trevor Project",
+      desc: "Crisis intervention and suicide prevention for LGBTQ+ young people.",
+      url: "https://www.thetrevorproject.org",
+    },
+  ];
+
+  function buildSeedResponse() {
+    const total = Object.values(SEED_VOTES).reduce((s, n) => s + n, 0) || 1;
+    return {
+      orgs: SEED_ORGS.map((o) => ({
+        ...o,
+        votes: SEED_VOTES[o.id] || 0,
+        pct: Math.round(((SEED_VOTES[o.id] || 0) / total) * 1000) / 10,
+      })),
+      totalVotes: total,
+    };
+  }
+
+  function renderOrgs(data) {
+    if (!orgsList || !data || !data.orgs) return;
+
+    if (vtotal) {
+      const total = data.totalVotes || data.orgs.reduce((s, o) => s + (o.votes || 0), 0);
+      vtotal.textContent = total.toLocaleString("en-US");
+    }
+
+    orgsList.innerHTML = data.orgs
+      .map((o, i) => {
+        const voted = votedOrgId === o.id;
+        const pct = Math.round(o.pct || 0);
+        return `<div class="org rv in${voted ? " voted" : ""}" data-id="${esc(o.id)}">
+          <h3><a href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">${esc(o.name)}</a></h3>
+          <div class="ods">${esc(o.desc)}</div>
+          <div class="bwrap"><div class="bar2"><i id="b${i}" style="width:${pct}%"></i></div><span class="pct">${pct}%</span></div>
+          <a class="org-visit" href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">Visit site →</a>
+          <button class="btn votebtn" type="button" data-vote="${esc(o.id)}" ${votedOrgId ? "disabled" : ""}>
+            ${voted ? "Your pick ✓" : "Vote"}
+          </button>
+        </div>`;
+      })
+      .join("");
+    bootReveals();
+  }
+
+  renderOrgs(buildSeedResponse());
+
+  fetch("/.netlify/functions/votes")
+    .then((r) => r.json())
+    .then((d) => renderOrgs(d))
+    .catch(() => {});
+
+  if (orgsList) {
+    orgsList.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-vote]");
+      if (!btn || votedOrgId) return;
+      const orgId = btn.dataset.vote;
+      btn.disabled = true;
+
+      fetch("/.netlify/functions/votes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ orgId, fingerprint: getFingerprint() }),
+      })
+        .then((r) => r.json())
+        .then((d) => {
+          if (d.error && d.error === "already voted") {
+            votedOrgId = d.votedFor;
+            try {
+              localStorage.setItem("cfc-voted-org", votedOrgId);
+            } catch (_) {}
+          } else if (!d.error) {
+            votedOrgId = orgId;
+            try {
+              localStorage.setItem("cfc-voted-org", orgId);
+            } catch (_) {}
+            if (voteMsg) {
+              const org = (d.orgs || []).find((o) => o.id === orgId);
+              voteMsg.textContent = org
+                ? `You voted for ${org.name}. Final tally closes at year-end.`
+                : "Vote recorded.";
+              voteMsg.hidden = false;
+            }
+          }
+          renderOrgs(d);
+        })
+        .catch(() => {
+          btn.disabled = false;
+        });
     });
   }
 
@@ -201,125 +328,6 @@
             okMsg.textContent = "Hmm — try again in a moment.";
             okMsg.style.display = "block";
           }
-        });
-    });
-  }
-
-  /* —— Voting —— */
-  getFingerprint();
-
-  const orgsList = document.getElementById("orgsList");
-  const voteMsg = document.getElementById("voteMsg");
-  const vtotal = document.getElementById("vtotal");
-
-  const SEED_VOTES = { onenten: 412, tqp: 268, saaf: 223, trevor: 301 };
-  const SEED_ORGS = [
-    {
-      id: "onenten",
-      name: "one·n·ten",
-      desc: "Phoenix nonprofit for LGBTQ+ youth ages 11–24 — safe spaces, housing, leadership.",
-      url: "https://onenten.org",
-    },
-    {
-      id: "tqp",
-      name: "Trans Queer Pueblo",
-      desc: "Phoenix LGBTQ+ migrant community of color — mutual aid and healing justice.",
-      url: "https://www.tqpueblo.org",
-    },
-    {
-      id: "saaf",
-      name: "Southern Arizona AIDS Foundation",
-      desc: "Tucson — HIV services and LGBTQ+ health across southern Arizona.",
-      url: "https://saaf.org",
-    },
-    {
-      id: "trevor",
-      name: "The Trevor Project",
-      desc: "Crisis intervention and suicide prevention for LGBTQ+ young people.",
-      url: "https://www.thetrevorproject.org",
-    },
-  ];
-
-  function buildSeedResponse() {
-    const total = Object.values(SEED_VOTES).reduce((s, n) => s + n, 0) || 1;
-    return {
-      orgs: SEED_ORGS.map((o) => ({
-        ...o,
-        votes: SEED_VOTES[o.id] || 0,
-        pct: Math.round(((SEED_VOTES[o.id] || 0) / total) * 1000) / 10,
-      })),
-      totalVotes: total,
-    };
-  }
-
-  function renderOrgs(data) {
-    if (!orgsList || !data || !data.orgs) return;
-
-    if (vtotal) {
-      const total = data.totalVotes || data.orgs.reduce((s, o) => s + (o.votes || 0), 0);
-      vtotal.textContent = total.toLocaleString("en-US");
-    }
-
-    orgsList.innerHTML = data.orgs
-      .map((o, i) => {
-        const voted = votedOrgId === o.id;
-        const pct = Math.round(o.pct || 0);
-        return `<div class="org rv in${voted ? " voted" : ""}" data-id="${esc(o.id)}">
-          <h3><a href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">${esc(o.name)}</a></h3>
-          <div class="ods">${esc(o.desc)}</div>
-          <div class="bwrap"><div class="bar2"><i id="b${i}" style="width:${pct}%"></i></div><span class="pct">${pct}%</span></div>
-          <a class="org-visit" href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">Visit site →</a>
-          <button class="btn votebtn" type="button" data-vote="${esc(o.id)}" ${votedOrgId ? "disabled" : ""}>
-            ${voted ? "Your pick ✓" : "Vote"}
-          </button>
-        </div>`;
-      })
-      .join("");
-  }
-
-  renderOrgs(buildSeedResponse());
-
-  fetch("/.netlify/functions/votes")
-    .then((r) => r.json())
-    .then((d) => renderOrgs(d))
-    .catch(() => {});
-
-  if (orgsList) {
-    orgsList.addEventListener("click", (e) => {
-      const btn = e.target.closest("[data-vote]");
-      if (!btn || votedOrgId) return;
-      const orgId = btn.dataset.vote;
-      btn.disabled = true;
-
-      fetch("/.netlify/functions/votes", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ orgId, fingerprint: getFingerprint() }),
-      })
-        .then((r) => r.json())
-        .then((d) => {
-          if (d.error && d.error === "already voted") {
-            votedOrgId = d.votedFor;
-            try {
-              localStorage.setItem("cfc-voted-org", votedOrgId);
-            } catch (_) {}
-          } else if (!d.error) {
-            votedOrgId = orgId;
-            try {
-              localStorage.setItem("cfc-voted-org", orgId);
-            } catch (_) {}
-            if (voteMsg) {
-              const org = (d.orgs || []).find((o) => o.id === orgId);
-              voteMsg.textContent = org
-                ? `You voted for ${org.name}. Final tally closes at year-end.`
-                : "Vote recorded.";
-              voteMsg.hidden = false;
-            }
-          }
-          renderOrgs(d);
-        })
-        .catch(() => {
-          btn.disabled = false;
         });
     });
   }
