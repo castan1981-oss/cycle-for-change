@@ -564,6 +564,57 @@ section { padding: 96px 0; }
   text-transform: uppercase;
 }
 
+/* rides & fundraisers */
+.rides-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.fund-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--yellow);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(46, 36, 51, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.fund-org {
+  font-family: var(--m);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin-bottom: 10px;
+}
+
+.fund-card h3 {
+  font-size: 1.55rem;
+  margin: 0 0 8px;
+}
+
+.fund-meta {
+  font-family: var(--m);
+  font-size: 0.78rem;
+  color: var(--yellow-deep);
+  margin: 0 0 14px;
+}
+
+.fund-blurb {
+  color: var(--mute);
+  font-size: 0.93rem;
+  margin: 0 0 22px;
+  flex: 1;
+}
+
+.fund-card .btn-y {
+  align-self: flex-start;
+}
+
 /* orgs */
 .orgs {
   display: grid;
@@ -998,7 +1049,7 @@ footer {
   .menu-btn { display: block; }
   .hero-grid, .split, .story-grid { grid-template-columns: 1fr; gap: 36px; }
   .stats { grid-template-columns: 1fr 1fr; }
-  .prog-grid, .feed-grid, .blog-grid, .orgs { grid-template-columns: 1fr; }
+  .prog-grid, .feed-grid, .blog-grid, .orgs, .rides-grid { grid-template-columns: 1fr; }
   .ig-grid { grid-template-columns: repeat(3, 1fr); }
   section { padding: 72px 0; }
   .pull { padding: 84px 0; }

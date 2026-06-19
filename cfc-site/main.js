@@ -95,7 +95,7 @@
   const voteMsg = document.getElementById("voteMsg");
   const vtotal = document.getElementById("vtotal");
 
-  const SEED_VOTES = { onenten: 412, tqp: 268, saaf: 223, trevor: 301 };
+  const SEED_VOTES = { onenten: 318, lalgbtcenter: 305, sfaf: 289 };
   const SEED_ORGS = [
     {
       id: "onenten",
@@ -104,22 +104,16 @@
       url: "https://onenten.org",
     },
     {
-      id: "tqp",
-      name: "Trans Queer Pueblo",
-      desc: "Phoenix LGBTQ+ migrant community of color — mutual aid and healing justice.",
-      url: "https://www.tqpueblo.org",
+      id: "lalgbtcenter",
+      name: "Los Angeles LGBT Center",
+      desc: "Health, housing and advocacy for LGBTQ+ people — the Center Ride Out beneficiary.",
+      url: "https://www.lalgbtcenter.org",
     },
     {
-      id: "saaf",
-      name: "Southern Arizona AIDS Foundation",
-      desc: "Tucson — HIV services and LGBTQ+ health across southern Arizona.",
-      url: "https://saaf.org",
-    },
-    {
-      id: "trevor",
-      name: "The Trevor Project",
-      desc: "Crisis intervention and suicide prevention for LGBTQ+ young people.",
-      url: "https://www.thetrevorproject.org",
+      id: "sfaf",
+      name: "San Francisco AIDS Foundation",
+      desc: "No-cost HIV, harm-reduction and LGBTQ+ health services — the Cycle to Zero beneficiary.",
+      url: "https://www.sfaf.org",
     },
   ];
 

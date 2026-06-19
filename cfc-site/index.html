@@ -59,6 +59,7 @@
       <a href="#tally">The tally</a>
       <a href="#disciplines">Disciplines</a>
       <a href="#feed">The feed</a>
+      <a href="#rides">Rides</a>
       <a href="#notes">Field notes</a>
       <a href="#vote">Vote</a>
     </nav>
@@ -72,6 +73,7 @@
     <a href="#tally">The tally</a>
     <a href="#disciplines">Disciplines</a>
     <a href="#feed">The ride feed</a>
+    <a href="#rides">Rides</a>
     <a href="#notes">Field notes</a>
     <a href="#vote">Vote</a>
     <a href="#board">Pledge a mile</a>
@@ -208,45 +210,64 @@
     </div>
   </section>
 
+  <section id="rides" style="background:var(--cream-2);">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">the fundraisers</span>
+        <h2>The rides that count.</h2>
+        <p>Real charity rides on the 2027 calendar. Every mile rolls into the tally — and the orgs they support are on your ballot.</p>
+      </div>
+      <div class="rides-grid">
+        <article class="fund-card rv">
+          <span class="fund-org">Los Angeles LGBT Center</span>
+          <h3>Center Ride Out</h3>
+          <p class="fund-meta">Apr 23–25, 2027 · LA → San Diego · ~285 mi</p>
+          <p class="fund-blurb">Three days down the SoCal coast for the Center's life-saving programs — the AIDS/LifeCycle legacy, carried forward.</p>
+          <a href="https://www.lalgbtcenter.org/centerrideout" class="btn btn-y" target="_blank" rel="noopener">Ride or donate →</a>
+        </article>
+        <article class="fund-card rv">
+          <span class="fund-org">San Francisco AIDS Foundation</span>
+          <h3>Cycle to Zero</h3>
+          <p class="fund-meta">Spring 2027 · Sausalito ↔ Sonoma County · 3 days</p>
+          <p class="fund-blurb">Through the wine country for SFAF's no-cost HIV, harm-reduction and LGBTQ+ health services.</p>
+          <a href="https://www.sfaf.org" class="btn btn-y" target="_blank" rel="noopener">Ride or donate →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="vote" style="background:var(--cream-2);">
     <div class="wrap">
       <div class="sec-head rv">
         <span class="eyebrow">where it goes — you pick</span>
         <h2>Pledgers choose the cause.</h2>
-        <p>Throw a name a vote and watch the split move. Example partners for now — the real list is up to whoever pledges.</p>
+        <p>These are the orgs my rides support. Throw one a vote and watch the split move — the final call is up to whoever pledges.</p>
       </div>
       <div class="orgs" id="orgsList" aria-live="polite">
         <div class="org" data-id="onenten">
           <h3><a href="https://onenten.org" target="_blank" rel="noopener noreferrer">one·n·ten</a></h3>
           <div class="ods">Phoenix nonprofit for LGBTQ+ youth ages 11–24 — safe spaces, housing, leadership.</div>
-          <div class="bwrap"><div class="bar2"><i style="width:34%"></i></div><span class="pct">34%</span></div>
+          <div class="bwrap"><div class="bar2"><i style="width:35%"></i></div><span class="pct">35%</span></div>
           <a class="org-visit" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Visit site →</a>
           <button class="btn votebtn" type="button" data-vote="onenten">Vote</button>
         </div>
-        <div class="org" data-id="tqp">
-          <h3><a href="https://www.tqpueblo.org" target="_blank" rel="noopener noreferrer">Trans Queer Pueblo</a></h3>
-          <div class="ods">Phoenix LGBTQ+ migrant community of color — mutual aid and healing justice.</div>
-          <div class="bwrap"><div class="bar2"><i style="width:22%"></i></div><span class="pct">22%</span></div>
-          <a class="org-visit" href="https://www.tqpueblo.org" target="_blank" rel="noopener noreferrer">Visit site →</a>
-          <button class="btn votebtn" type="button" data-vote="tqp">Vote</button>
+        <div class="org" data-id="lalgbtcenter">
+          <h3><a href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Los Angeles LGBT Center</a></h3>
+          <div class="ods">Health, housing and advocacy for LGBTQ+ people — the Center Ride Out beneficiary.</div>
+          <div class="bwrap"><div class="bar2"><i style="width:33%"></i></div><span class="pct">33%</span></div>
+          <a class="org-visit" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Visit site →</a>
+          <button class="btn votebtn" type="button" data-vote="lalgbtcenter">Vote</button>
         </div>
-        <div class="org" data-id="saaf">
-          <h3><a href="https://saaf.org" target="_blank" rel="noopener noreferrer">Southern Arizona AIDS Foundation</a></h3>
-          <div class="ods">Tucson — HIV services and LGBTQ+ health across southern Arizona.</div>
-          <div class="bwrap"><div class="bar2"><i style="width:19%"></i></div><span class="pct">19%</span></div>
-          <a class="org-visit" href="https://saaf.org" target="_blank" rel="noopener noreferrer">Visit site →</a>
-          <button class="btn votebtn" type="button" data-vote="saaf">Vote</button>
-        </div>
-        <div class="org" data-id="trevor">
-          <h3><a href="https://www.thetrevorproject.org" target="_blank" rel="noopener noreferrer">The Trevor Project</a></h3>
-          <div class="ods">Crisis intervention and suicide prevention for LGBTQ+ young people.</div>
-          <div class="bwrap"><div class="bar2"><i style="width:25%"></i></div><span class="pct">25%</span></div>
-          <a class="org-visit" href="https://www.thetrevorproject.org" target="_blank" rel="noopener noreferrer">Visit site →</a>
-          <button class="btn votebtn" type="button" data-vote="trevor">Vote</button>
+        <div class="org" data-id="sfaf">
+          <h3><a href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">San Francisco AIDS Foundation</a></h3>
+          <div class="ods">No-cost HIV, harm-reduction and LGBTQ+ health services — the Cycle to Zero beneficiary.</div>
+          <div class="bwrap"><div class="bar2"><i style="width:32%"></i></div><span class="pct">32%</span></div>
+          <a class="org-visit" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Visit site →</a>
+          <button class="btn votebtn" type="button" data-vote="sfaf">Vote</button>
         </div>
       </div>
       <p class="vote-msg" id="voteMsg" hidden></p>
-      <div class="votes-total rv">total votes · <b id="vtotal">1,204</b></div>
+      <div class="votes-total rv">total votes · <b id="vtotal">912</b></div>
     </div>
   </section>
 
@@ -308,7 +329,7 @@
         </a>
         <p style="color:#cabcd0; font-size:.92rem; max-width:30ch;">I do the miles. You do the deciding. Every one for queer communities.</p>
       </div>
-      <div class="foot"><h4>the project</h4><ul><li><a href="#tally">The tally</a></li><li><a href="#board">Pledge a mile</a></li><li><a href="#feed">The ride feed</a></li><li><a href="#vote">The orgs</a></li></ul></div>
+      <div class="foot"><h4>the project</h4><ul><li><a href="#tally">The tally</a></li><li><a href="#board">Pledge a mile</a></li><li><a href="#feed">The ride feed</a></li><li><a href="#rides">Rides & fundraisers</a></li><li><a href="#vote">The orgs</a></li></ul></div>
       <div class="foot"><h4>read</h4><ul><li><a href="#notes">Field notes</a></li><li><a href="#story">The story</a></li><li><a href="https://www.instagram.com/cycle_forchange" target="_blank" rel="noopener noreferrer" id="footInstagram">Instagram</a></li><li><a href="#" target="_blank" rel="noopener noreferrer" id="footStrava">Strava</a></li></ul></div>
       <div class="foot"><h4>roll with us</h4>
         <form class="signup-row" id="emailForm" aria-label="Email signup">
