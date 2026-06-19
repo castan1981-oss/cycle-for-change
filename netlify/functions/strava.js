@@ -3,7 +3,7 @@
 
 const GOAL = 7500;
 const METERS_TO_MILES = 0.000621371;
-const SEASON_START = "2027-07-01";
+const SEASON_START = "2026-06-01";
 const CACHE_MS = 30 * 60 * 1000;
 const MAX_PAGES = 20;
 
