@@ -13,7 +13,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Space+Grotesk:wght@400;500&family=Space+Mono&family=Anton&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script>document.documentElement.classList.add("js");</script>
+  <script>
+    document.documentElement.classList.add("js");
+    (function () {
+      function revealInView() {
+        document.querySelectorAll(".rv").forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          if (r.top < window.innerHeight && r.bottom > 0) el.classList.add("in");
+        });
+      }
+      document.addEventListener("DOMContentLoaded", revealInView);
+      window.addEventListener("load", revealInView);
+      setTimeout(function () {
+        if (!window.__cfcReady) {
+          document.querySelectorAll(".rv").forEach(function (el) {
+            el.classList.add("in");
+          });
+        }
+      }, 2500);
+    })();
+  </script>
 </head>
 <body id="top">
 
@@ -196,9 +215,38 @@
         <h2>Pledgers choose the cause.</h2>
         <p>Throw a name a vote and watch the split move. Example partners for now — the real list is up to whoever pledges.</p>
       </div>
-      <div class="orgs" id="orgsList" aria-live="polite"></div>
+      <div class="orgs" id="orgsList" aria-live="polite">
+        <div class="org" data-id="onenten">
+          <h3><a href="https://onenten.org" target="_blank" rel="noopener noreferrer">one·n·ten</a></h3>
+          <div class="ods">Phoenix nonprofit for LGBTQ+ youth ages 11–24 — safe spaces, housing, leadership.</div>
+          <div class="bwrap"><div class="bar2"><i style="width:34%"></i></div><span class="pct">34%</span></div>
+          <a class="org-visit" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Visit site →</a>
+          <button class="btn votebtn" type="button" data-vote="onenten">Vote</button>
+        </div>
+        <div class="org" data-id="tqp">
+          <h3><a href="https://www.tqpueblo.org" target="_blank" rel="noopener noreferrer">Trans Queer Pueblo</a></h3>
+          <div class="ods">Phoenix LGBTQ+ migrant community of color — mutual aid and healing justice.</div>
+          <div class="bwrap"><div class="bar2"><i style="width:22%"></i></div><span class="pct">22%</span></div>
+          <a class="org-visit" href="https://www.tqpueblo.org" target="_blank" rel="noopener noreferrer">Visit site →</a>
+          <button class="btn votebtn" type="button" data-vote="tqp">Vote</button>
+        </div>
+        <div class="org" data-id="saaf">
+          <h3><a href="https://saaf.org" target="_blank" rel="noopener noreferrer">Southern Arizona AIDS Foundation</a></h3>
+          <div class="ods">Tucson — HIV services and LGBTQ+ health across southern Arizona.</div>
+          <div class="bwrap"><div class="bar2"><i style="width:19%"></i></div><span class="pct">19%</span></div>
+          <a class="org-visit" href="https://saaf.org" target="_blank" rel="noopener noreferrer">Visit site →</a>
+          <button class="btn votebtn" type="button" data-vote="saaf">Vote</button>
+        </div>
+        <div class="org" data-id="trevor">
+          <h3><a href="https://www.thetrevorproject.org" target="_blank" rel="noopener noreferrer">The Trevor Project</a></h3>
+          <div class="ods">Crisis intervention and suicide prevention for LGBTQ+ young people.</div>
+          <div class="bwrap"><div class="bar2"><i style="width:25%"></i></div><span class="pct">25%</span></div>
+          <a class="org-visit" href="https://www.thetrevorproject.org" target="_blank" rel="noopener noreferrer">Visit site →</a>
+          <button class="btn votebtn" type="button" data-vote="trevor">Vote</button>
+        </div>
+      </div>
       <p class="vote-msg" id="voteMsg" hidden></p>
-      <div class="votes-total rv">total votes · <b id="vtotal">0</b></div>
+      <div class="votes-total rv">total votes · <b id="vtotal">1,204</b></div>
     </div>
   </section>
 
