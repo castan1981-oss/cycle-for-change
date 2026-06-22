@@ -1,0 +1,69 @@
+/* Cycle for Change — shared styles for standalone guide & note pages.
+   Brand tokens mirror index.html so generated pages stay on-brand. */
+:root{
+  --cfc-plum:#2D2536; --cfc-ink:#241D30; --cfc-yellow:#ECE84A; --cfc-off-white:#F3F0E9; --cfc-muted:#8B8295; --cfc-gold:#A1906B;
+  --ground:#46344E; --ground2:#3A2C42; --slate:#5A5560;
+  --ivory:var(--cfc-off-white); --taupe:var(--cfc-gold); --yellow:var(--cfc-yellow); --ink:var(--cfc-ink);
+  --dim:rgba(243,240,233,.7); --line:rgba(243,240,233,.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;background:#46344E!important}
+html,body{background-color:#46344E!important}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{color:var(--ivory);font-family:'DM Sans',system-ui,sans-serif;font-size:17.5px;line-height:1.62;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(rgba(250,237,38,.04) 1px,transparent 1px);background-size:30px 30px;}
+::selection{background:var(--yellow);color:var(--ink)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+.anton{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.01em;font-weight:400}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* ticker + nav, matching the homepage */
+.ticker{background:var(--ground2);font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:10px 0;border-bottom:1px solid var(--line);color:var(--dim);white-space:nowrap;overflow:hidden}
+.ticker .y{color:var(--yellow)}
+.nav{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:18px 22px}
+.nav .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav .brand img{display:block;height:40px;width:auto}
+.nav nav{display:flex;gap:22px}
+.nav nav a{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.nav nav a:hover{color:var(--yellow)}
+@media (max-width:720px){.nav nav{display:none}}
+
+/* article */
+main{padding:clamp(34px,6vw,64px) 0 10px}
+.eyebrow{font-family:'JetBrains Mono';color:var(--yellow);font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}
+.pubdate{font-family:'JetBrains Mono';color:var(--taupe);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+h1.title{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(34px,7vw,68px);line-height:.94;max-width:18ch;margin-bottom:6px}
+h1.title .y{color:var(--yellow)}
+.geo-hook{border-left:3px solid var(--yellow);background:rgba(236,232,74,.05);padding:18px 22px;border-radius:0 4px 4px 0;margin:26px 0 34px;color:var(--ivory);font-size:18px;line-height:1.55}
+article h2{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.01em;font-weight:400;font-size:clamp(24px,4.4vw,38px);line-height:.98;margin:40px 0 14px}
+article h3{font-family:'DM Sans';font-weight:700;font-size:21px;margin:28px 0 10px}
+article p{color:var(--dim);max-width:64ch;margin-bottom:16px;font-size:17.5px;line-height:1.64}
+article a{color:var(--yellow);text-underline-offset:3px}
+article ul,article ol{color:var(--dim);max-width:64ch;margin:0 0 16px 1.2em;line-height:1.64}
+article li{margin-bottom:8px}
+article img{max-width:100%;height:auto;border-radius:4px;border:1px solid var(--line);margin:18px 0}
+article blockquote{border-left:3px solid var(--line);padding-left:18px;margin:18px 0;color:var(--ivory);font-style:italic}
+.hr{border:0;border-top:2px solid var(--line);margin:40px 0}
+
+/* crisis block (mental-health pages) */
+.crisis{border:1px solid var(--yellow);background:rgba(236,232,74,.06);border-radius:4px;padding:20px 22px;margin:30px 0;font-size:16px;line-height:1.6}
+.crisis strong{color:var(--yellow)}
+
+/* pledge CTA */
+.cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:34px 0 8px}
+.btn{font-family:'Anton';font-size:18px;text-transform:uppercase;text-decoration:none;padding:15px 28px;border-radius:2px;display:inline-block;transition:transform .12s}
+.btn:hover{transform:translateY(-1px)}
+.btn.solid{background:var(--yellow);color:var(--ink)}
+.btn.ghost{border:2px solid var(--line);color:var(--ivory)}
+
+/* footer, matching the homepage */
+footer{background:var(--ground2);margin-top:70px;border-top:3px solid var(--yellow)}
+.foot{max-width:1080px;margin:0 auto;padding:50px 22px 36px}
+.foot-brand a{display:inline-flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px}
+.foot-brand img{display:block;height:28px;width:28px}
+.foot-brand .wordmark{font-family:'Anton';font-size:18px;letter-spacing:.04em;text-transform:uppercase;line-height:1}
+.foot .links{display:flex;gap:24px;flex-wrap:wrap;margin-top:6px;font-family:'JetBrains Mono';font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.foot .links a{text-decoration:none}.foot .links a:hover{color:var(--yellow)}
+.foot .base{font-family:'JetBrains Mono';margin-top:26px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(243,240,233,.4)}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- SEO: one target query, in <title>, <h1>, and an <h2>. -->
+<title>{{TITLE}} — Cycle for Change</title>
+<meta name="description" content="{{META_DESCRIPTION}}">
+<link rel="canonical" href="https://cycleforchange.org/{{TYPE_DIR}}/{{SLUG}}/">
+
+<!-- Social -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{META_DESCRIPTION}}">
+<meta property="og:url" content="https://cycleforchange.org/{{TYPE_DIR}}/{{SLUG}}/">
+<meta property="og:image" content="https://cycleforchange.org/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cycleforchange.org/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/guides/guides.css">
+
+<!-- GEO: Article schema so AI assistants can attribute & cite. Fill every field. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{TITLE}}",
+  "description": "{{META_DESCRIPTION}}",
+  "datePublished": "{{DATE_ISO}}",
+  "url": "https://cycleforchange.org/{{TYPE_DIR}}/{{SLUG}}/",
+  "author": { "@type": "Person", "name": "Robert Castan" },
+  "publisher": { "@type": "Organization", "name": "Cycle for Change" },
+  "image": "https://cycleforchange.org/og-image.png"
+}
+</script>
+</head>
+<body>
+
+<div class="ticker"><div class="wrap" style="max-width:1080px">7,500 MILES IN 2027 · SWIM · BIKE · RUN · EVERY MILE FOR QUEER COMMUNITIES · <a href="/#board" class="y" style="text-decoration:none">PLEDGE A MILE ↓</a></div></div>
+
+<div class="nav">
+  <a class="brand" href="/" aria-label="Cycle for Change">
+    <img src="/cfc-lockup.svg" alt="Cycle for Change" height="40" decoding="async">
+  </a>
+  <nav><a href="/#tally">Tally</a><a href="/#board">Pledge</a><a href="/#rides">Rides</a><a href="/#cause">Cause</a></nav>
+</div>
+
+<main class="wrap">
+  <article>
+    <p class="eyebrow">● {{EYEBROW}}</p>
+    <p class="pubdate">{{DATE_HUMAN}}</p>
+
+    <!-- H1 contains the target query. Use <span class="y"> for the accent half. -->
+    <h1 class="title">{{H1_HEADLINE}}</h1>
+
+    <!-- GEO hook: 2–3 sentence quotable answer, right at the top. -->
+    <div class="geo-hook">{{GEO_HOOK}}</div>
+
+    <!-- H2 contains the target query verbatim. -->
+    <h2>{{H2_WITH_TARGET_QUERY}}</h2>
+    <p>{{BODY}}</p>
+
+    <h2>{{RELATED_H2}}</h2>
+    <p>{{BODY}}</p>
+
+    <!-- CRISIS BLOCK — keep ONLY on mental-health pages; delete otherwise. -->
+    <div class="crisis">
+      <strong>If you're struggling:</strong> call or text <strong>988</strong>
+      (Suicide &amp; Crisis Lifeline). LGBTQ youth can reach the Trevor Project at
+      <strong>1-866-488-7386</strong>.
+    </div>
+
+    <hr class="hr">
+
+    <!-- Required: at least one internal link to the pledge (the #board form). -->
+    <div class="cta">
+      <a class="btn solid" href="/#board">Pledge your miles →</a>
+      <a class="btn ghost" href="/#cause">See the cause</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="foot">
+    <div class="foot-brand">
+      <a href="/" aria-label="Cycle for Change">
+        <img src="/cfc-mark-yellow.svg" alt="" height="28" width="28" decoding="async">
+        <span class="wordmark">Cycle for Change</span>
+      </a>
+    </div>
+    <div class="links">
+      <a href="/#board">Pledge</a><a href="/#rides">Ride Feed</a><a href="/#cause">The Cause</a>
+      <a href="https://instagram.com/cycl_eforchange" target="_blank" rel="noopener">Instagram ↗</a>
+    </div>
+    <p class="base">© 2026 Cycle for Change · Phoenix, AZ → Everywhere</p>
+  </div>
+</footer>
+
+</body>
+</html>
