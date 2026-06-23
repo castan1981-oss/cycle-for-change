@@ -1,8 +1,19 @@
 {
-  "shipped": [],
+  "shipped": [
+    {
+      "slug": "cycling-and-anxiety",
+      "title": "Is Cycling Good for Anxiety? What the Road Actually Does",
+      "target_query": "is cycling good for anxiety",
+      "type": "Mind + Miles",
+      "path": "cfc-site/field-notes/cycling-and-anxiety/index.html",
+      "status": "drafted",
+      "date": "2026-06-23"
+    }
+  ],
   "do_not_repeat": [
     "recovery is endurance (held draft — reserved for Robert)",
-    "south mountain climb guide (held draft — reserved for Robert)"
+    "south mountain climb (held draft — reserved for Robert)",
+    "is cycling good for anxiety"
   ],
   "reserved_drafts": [
     {
@@ -27,7 +38,8 @@
     {
       "idea": "what a long ride does for anxiety",
       "target_query": "is cycling good for anxiety",
-      "mission_fit": "high"
+      "mission_fit": "high",
+      "note": "shipped 2026-06-23 — do not repeat"
     }
   ]
 }
