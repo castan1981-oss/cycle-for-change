@@ -1,15 +1,22 @@
 {
-  "shipped": [],
-  "do_not_repeat": [],
+  "shipped": [
+    {
+      "slug": "cycling-for-anxiety",
+      "title": "Is Cycling Good for Anxiety?",
+      "target_query": "is cycling good for anxiety",
+      "type": "guide",
+      "path": "guides/cycling-for-anxiety/index.html",
+      "status": "drafted",
+      "date": "2026-06-23"
+    }
+  ],
+  "do_not_repeat": [
+    "is cycling good for anxiety"
+  ],
   "backlog": [
     {
       "idea": "training for a charity ride when you've never raced",
       "target_query": "how to train for a charity bike ride",
-      "mission_fit": "high"
-    },
-    {
-      "idea": "what a long ride does for anxiety",
-      "target_query": "is cycling good for anxiety",
       "mission_fit": "high"
     }
   ]
