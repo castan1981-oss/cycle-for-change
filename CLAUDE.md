@@ -3,20 +3,36 @@
 You write content for cycleforchange.org. Follow these rules on every run.
 
 ## Stack (read this — it determines WHERE pages go)
-- This is a **hand-written static site**. No framework, no build step. Netlify
-  publishes the repo root as-is (`netlify.toml` → `publish = "."`).
-- The homepage is `index.html`. Do NOT touch it, its inline CSS, or its inline
-  JavaScript (the Field Notes `POSTS` array, the route line, the pledge form).
+- This is a **hand-written static site**. No framework, no markdown rendering,
+  no SSG. The only build command is `npm install` (for the serverless functions);
+  there is no step that turns markdown/data into pages.
+- **Netlify publishes the `cfc-site/` directory**, NOT the repo root
+  (`netlify.toml` → `publish = "cfc-site"`). Anything outside `cfc-site/` is not
+  served. **Put every new page inside `cfc-site/`** or it will not deploy.
+  - Legacy note: the repo-root `index.html` and the `/guides/` folder (with
+    `guides.css`) are an older tree that is **not published**. Do not build there.
+- The homepage is `cfc-site/index.html`. Do NOT touch it, `cfc-site/main.js`
+  (pledge form, votes, Strava/Instagram wiring), or anything under
+  `netlify/functions/`. Styling is external in `cfc-site/styles.css` (no inline
+  `<style>` block to edit).
 - New content pages are **self-contained HTML files**, not markdown. There is no
   `/content` folder and nothing renders markdown.
-  - Guides:  `/guides/<slug>/index.html`  → lives at `cycleforchange.org/guides/<slug>/`
-  - Notes:   `/notes/<slug>/index.html`   → lives at `cycleforchange.org/notes/<slug>/`
+  - Field Notes: `cfc-site/field-notes/<slug>/index.html`
+    → lives at `cycleforchange.org/field-notes/<slug>/`
+  - The Field Notes index is `cfc-site/field-notes/index.html` (`/field-notes/`).
   - Directory-style (`<slug>/index.html`) gives a clean URL with no build step.
-- Start every new page from `/guides/_template.html`. Keep the `<head>`, the nav,
-  the footer, and the `<link rel="stylesheet" href="/guides/guides.css">` exactly
-  as the template has them. Fill in the page-specific parts only.
-- Every page links its stylesheet at `/guides/guides.css` (absolute path) so it
+- Start every new post from `cfc-site/field-notes/_template.html`. Keep the
+  `<head>`, the nav, the footer, the JSON-LD block, and the
+  `<link rel="stylesheet" href="/styles.css">` exactly as the template has them.
+  Fill in the page-specific parts only.
+- Publishing a post = three edits, all by hand (no loader): create the
+  `<slug>/index.html`, add one row to `cfc-site/field-notes/index.html` (newest
+  first), and add the URL to `cfc-site/sitemap.xml`.
+- Every page links the shared stylesheet at `/styles.css` (absolute path) so it
   inherits the brand. Do not inline a different stylesheet.
+- The live mileage counter is fed by `/.netlify/functions/strava`. Reuse it via
+  the `[data-cur]` / `[data-pct]` / `[data-line]` attributes and
+  `/field-notes/field-notes.js` — do NOT fork the mileage logic.
 
 ## Voice
 - Short sentences. Anti-polish. Plain.
@@ -30,6 +46,12 @@ You write content for cycleforchange.org. Follow these rules on every run.
 - Robert's age
 - Robert's recovery or queer identity framed as a credential. It can lightly
   inform a piece. It never headlines.
+- **Continuous sober-time, in any form.** "in recovery" / "18 years in
+  recovery" is allowed; "X years sober" / "sober since" / anything implying
+  unbroken sobriety is forbidden. Never reference or hint at a relapse.
+- Banned words anywhere (meta, alt text, nav labels, copy): leverage, synergy,
+  "journey" (as a buzzword), "passionate about," "thrilled to announce,"
+  "excited to share."
 
 ## Mission first
 - Every page ties back to the pledge (7,500 miles; swim/bike/run, 2027) and the cause.
@@ -49,14 +71,24 @@ You write content for cycleforchange.org. Follow these rules on every run.
 - One target query per page, in the `<title>`, the `<h1>`, and an `<h2>`.
 - Real `<meta name="description">`, a `<link rel="canonical">`, clean heading
   hierarchy, descriptive `alt` text on any image.
-- Put a short, quotable answer near the top (the `.geo-hook` block in the
-  template) so AI assistants can cite it.
-- Keep the JSON-LD `Article` block in the template and fill its fields to match
-  the page (headline, description, datePublished, url).
+- Put a short, quotable answer near the top (the `.fn-lede` paragraph) so AI
+  assistants can cite it.
+- Keep the JSON-LD `BlogPosting` block in the template and fill its fields to
+  match the page (headline, description, datePublished, url, author "Robert
+  Castan", publisher Cycle for Change).
+- Cross-link 2 related posts at the bottom of each post (same tag where
+  possible), and link every post from the index. Add new URLs to `sitemap.xml`.
 
-## Brand (for any visual) — real tokens from index.html
-- Ground/background plum #46344E, card plum #2D2536 / #3A2C42, ink #241D30.
-- Acid yellow #ECE84A. Off-white text #F3F0E9. Gold/taupe accent #A1906B.
-- Fonts already loaded by the template: Anton (display/wordmark),
-  DM Sans (body), JetBrains Mono (labels), Space Mono. Use those — do not add
-  Fraunces or Space Grotesk; they are not used on this site.
+## Brand (for any visual) — real tokens from cfc-site/styles.css
+- Background cream `--cream` #F1EBDD, deeper band `--cream-2` #E7DFCE,
+  card `--card` #FBF7EE, ink `--ink` #2E2433.
+- Plum `--plum` #372C3C / `--plum-2` #2A2130 (dark panels, footer, CTA).
+- Acid yellow `--yellow` #E9E224 (deep variant `--yellow-deep` #B9A800).
+- Lavender `--lav` #A99CB0 / `--lav-band` #E7DEEA, muted text `--mute` #7E7388.
+- Fonts already loaded by the template: **Fraunces** (`--serif`, headings),
+  **Space Grotesk** (`--g`, body), **Space Mono** (`--m`, labels/numbers),
+  **Anton** (`--disp`, wordmark). Use the CSS variables — do not hardcode hexes
+  and do not add new fonts (no DM Sans / JetBrains Mono — those are the legacy
+  un-published tree).
+- Field Notes adds its own classes (`.fn-*`) appended to `styles.css`. Reuse
+  those; don't introduce a parallel stylesheet.

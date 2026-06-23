@@ -21,12 +21,16 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          claude_args: '--model claude-sonnet-4-6 --max-turns 30 --allowedTools "Read,Write,Edit,Bash(git:*),Bash(gh:*)"'
+          claude_args: '--model claude-sonnet-4-6 --max-turns 30 --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh:*),Bash(cp:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*)"'
           prompt: |
             You are running one turn of the Cycle for Change content loop.
             Follow CLAUDE.md at all times. This is a hand-written STATIC site:
-            new pages are self-contained HTML files, NOT markdown, and nothing
-            renders a /content folder. Do not touch index.html or its inline JS.
+            Netlify publishes the `cfc-site/` directory, so EVERY new page lives
+            inside `cfc-site/`. Field Notes posts are self-contained HTML files,
+            NOT markdown — nothing renders markdown or a /content folder.
+            Do NOT touch the homepage `cfc-site/index.html`, `cfc-site/main.js`,
+            or anything under `netlify/functions/`. The repo-root `index.html`
+            and `/guides/` folder are an unpublished legacy tree — ignore them.
 
             GOAL: grow organic traffic to cycleforchange.org around
             cycling/endurance, queer mental health, and the 7,500-mile pledge.
@@ -39,29 +43,41 @@ jobs:
                Tag each with topic, type, and rough value.
             3. DECIDE: score by (search demand x mission fit x freshness) / effort.
                Pick ONE. Show the math briefly.
-            4. DRAFT: copy /guides/_template.html to the new page path and fill in
-               every {{PLACEHOLDER}}:
-                 - guide -> /guides/<slug>/index.html
-                 - short note -> /notes/<slug>/index.html
-               The <slug> is kebab-case. The page must keep the shared stylesheet
-               link (/guides/guides.css), the nav, and the footer unchanged.
-               Set the canonical URL, og:url, and JSON-LD url to
-               https://cycleforchange.org/<guides|notes>/<slug>/ .
-               Robert's voice — short sentences, anti-polish, no buzzwords.
-               If the page is NOT about mental health, delete the crisis block.
-            5. VERIFY: run the full checklist from CLAUDE.md (voice, blocklist,
-               YMYL safety + crisis line where relevant, SEO: target query in
-               <title>/<h1>/<h2> + meta description + canonical, GEO: filled
-               .geo-hook + JSON-LD, brand, at least one internal link to /#board).
-               Confirm no {{PLACEHOLDER}} tokens remain. Show pass/fail per item.
-               If anything fails and you can't fix it in one pass, open the PR as
-               a DRAFT explaining why.
-            6. UPDATE /loop-state.json: append the new item to "shipped" with
+            4. DRAFT: copy `cfc-site/field-notes/_template.html` to
+               `cfc-site/field-notes/<slug>/index.html` (<slug> is kebab-case) and
+               fill in every {{PLACEHOLDER}}. Follow the instructions in the
+               template's top comment exactly:
+                 - Tag is exactly "Place + Miles" (chip class `place`) or
+                   "Mind + Miles" (chip class `mind`).
+                 - Mind + Miles posts MUST keep the crisis-line block.
+                 - Keep the `<link rel="stylesheet" href="/styles.css">`, the nav,
+                   the footer, and the JSON-LD BlogPosting block as the template
+                   has them. Fill the JSON-LD fields to match the page.
+                 - Set canonical, og:url, and the JSON-LD url to
+                   https://cycleforchange.org/field-notes/<slug>/ .
+               WRITE the full body copy yourself in Robert's voice — short
+               sentences, anti-polish, no buzzwords. Do NOT leave a .fn-todo
+               placeholder; the post must be complete and ready to read.
+            5. WIRE IT IN:
+                 - Add one row to `cfc-site/field-notes/index.html` (newest first).
+                 - Add the new URL to `cfc-site/sitemap.xml`.
+                 - Cross-link 2 related posts at the bottom (same tag where
+                   possible) in the `.fn-related` block.
+            6. VERIFY: run the full checklist from CLAUDE.md (voice, banned-word
+               blocklist, the "never use" list incl. continuous sober-time, YMYL
+               safety + crisis line on Mind + Miles, SEO: target query in
+               <title>/<h1>/<h2> + meta description + canonical, GEO: quotable
+               .fn-lede + filled JSON-LD, brand tokens, at least one internal link
+               to /#board). Confirm NO {{PLACEHOLDER}} tokens and no .fn-todo
+               remain. Show pass/fail per item. If anything fails and you can't fix
+               it in one pass, open the PR as a DRAFT explaining why.
+            7. UPDATE /loop-state.json: append the new item to "shipped" with
                status "drafted" (include slug, title, target_query, type, and the
                page path), and add its target_query to "do_not_repeat".
-            7. Create a new branch, commit your changes, and open a pull request
+            8. Create a new branch, commit your changes, and open a pull request
                with `gh pr create`. Do NOT push to main. Do NOT merge. The PR body
                must include the verify checklist results, the live URL the page
-               will have after merge, and the 3 decisions Robert owns:
-               (a) voice pass y/n, (b) publish y/n, (c) which org to spotlight this
-               cycle (LA LGBT Center / SF AIDS Foundation / one·n·ten).
+               will have after merge (https://cycleforchange.org/field-notes/<slug>/),
+               and the 3 decisions Robert owns: (a) voice pass y/n, (b) publish
+               y/n, (c) which org to spotlight this cycle (LA LGBT Center /
+               SF AIDS Foundation / one·n·ten).

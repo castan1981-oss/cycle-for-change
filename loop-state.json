@@ -1,6 +1,23 @@
 {
   "shipped": [],
-  "do_not_repeat": [],
+  "do_not_repeat": [
+    "recovery is endurance (held draft — reserved for Robert)",
+    "south mountain climb guide (held draft — reserved for Robert)"
+  ],
+  "reserved_drafts": [
+    {
+      "slug": "recovery-is-endurance",
+      "tag": "Mind + Miles",
+      "status": "held_offline_pending_copy",
+      "path": "cfc-site/field-notes/recovery-is-endurance/index.html"
+    },
+    {
+      "slug": "south-mountain-climb",
+      "tag": "Place + Miles",
+      "status": "held_offline_pending_copy",
+      "path": "cfc-site/field-notes/south-mountain-climb/index.html"
+    }
+  ],
   "backlog": [
     {
       "idea": "training for a charity ride when you've never raced",
