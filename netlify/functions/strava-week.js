@@ -169,8 +169,9 @@ function round1(n) {
 
 function formatDuration(seconds) {
   if (!seconds) return "0m";
-  const h = Math.floor(seconds / 3600);
-  const m = Math.round((seconds % 3600) / 60);
+  let h = Math.floor(seconds / 3600);
+  let m = Math.round((seconds % 3600) / 60);
+  if (m === 60) { h += 1; m = 0; } // carry the rounded minute into the hour
   return h ? `${h}h ${m}m` : `${m}m`;
 }
 

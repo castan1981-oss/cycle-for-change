@@ -1,0 +1,86 @@
+name: CfC Ride Recap
+
+on:
+  schedule:
+    - cron: "0 14 * * 1"     # Mondays 7am Phoenix (UTC-7) — recap the week just ended
+  workflow_dispatch: {}        # manual "Run workflow" button
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  ride-recap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          claude_args: '--model claude-sonnet-4-6 --max-turns 30 --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh:*),Bash(cp:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Bash(curl:*)"'
+          prompt: |
+            You are running one turn of the Cycle for Change WEEKLY RIDE RECAP.
+            Follow CLAUDE.md at all times. This is a hand-written STATIC site:
+            Netlify publishes `cfc-site/`, so the new page lives inside `cfc-site/`.
+            Field Notes posts are self-contained HTML files, NOT markdown. Do NOT
+            touch the homepage `cfc-site/index.html`, `cfc-site/main.js`, or
+            anything under `netlify/functions/`. Ignore the repo-root `index.html`
+            and `/guides/` legacy tree.
+
+            GOAL: turn the past week's real training into one honest "Week in
+            Miles" Field Notes post — rides + weather — that ties back to the
+            7,500-mile pledge. Mission first.
+
+            1. FETCH the data:
+                 curl -s https://cycleforchange.org/.netlify/functions/strava-week
+               Parse the JSON. Fields: weekStart, weekEnd, totals (count, miles,
+               movingTime, elevationFt), and rides[] (title, date, discipline,
+               miles, movingTime, avgSpeedMph, elevationFt, avgWatts, weather{
+               tempHighF, tempLowF, windMph, precipIn, conditions }).
+            2. GUARD: if "configured" is false, or totals.count is 0, or "error"
+               is true, do NOT invent data and do NOT create a post. Open NOTHING,
+               or open a DRAFT PR titled "Ride recap: no rides this week" that
+               explains the empty week. Stop there.
+            3. SLUG: use `week-in-miles-<weekEnd>` (e.g. week-in-miles-2026-06-23).
+               This is date-stamped, so it is never a "do_not_repeat" duplicate.
+               If that slug already exists in cfc-site/field-notes/, stop (already
+               recapped this week).
+            4. DRAFT: copy `cfc-site/field-notes/_template.html` to
+               `cfc-site/field-notes/<slug>/index.html` and fill every
+               {{PLACEHOLDER}} per the template's top-comment instructions:
+                 - Tag is exactly "Place + Miles" (chip class `place`).
+                 - Keep the stylesheet link, nav, footer, and JSON-LD BlogPosting
+                   block as the template has them; fill JSON-LD to match.
+                 - Set canonical, og:url, JSON-LD url to
+                   https://cycleforchange.org/field-notes/<slug>/ .
+               Write the body in Robert's voice — short sentences, anti-polish, no
+               buzzwords. Include: a one-line .fn-lede summary (miles + rides this
+               week), a simple per-ride list or table (date, title, miles, time,
+               avg speed, climb, and that day's weather), and 2-3 short paragraphs
+               of honest synopsis (what the weather did, standout ride, how the
+               week built). Use ONLY numbers from the JSON — never fabricate.
+               Do NOT leave any .fn-todo placeholder.
+            5. WIRE IT IN:
+                 - Add one row to `cfc-site/field-notes/index.html` (newest first).
+                 - Add the new URL to `cfc-site/sitemap.xml`.
+                 - Cross-link 2 related posts at the bottom (.fn-related), prefer
+                   other "Place + Miles" posts.
+            6. VERIFY against CLAUDE.md: voice, banned-word blocklist, the "never
+               use" list (incl. continuous sober-time), SEO (target query in
+               <title>/<h1>/<h2> + meta description + canonical), GEO (quotable
+               .fn-lede + filled JSON-LD), brand, at least one internal link to
+               /#board. Confirm NO {{PLACEHOLDER}} and no .fn-todo remain. Show
+               pass/fail per item. If something fails you can't fix in one pass,
+               open the PR as a DRAFT explaining why.
+            7. UPDATE /loop-state.json: append to "shipped" with status "drafted"
+               (slug, title, type "recap", page path, weekEnd). Do NOT add the
+               recap to "do_not_repeat" (recaps recur weekly by design).
+            8. Create a new branch, commit, and open a pull request with
+               `gh pr create`. Do NOT push to main. Do NOT merge. The PR body must
+               include the verify results, the live URL the page will have
+               (https://cycleforchange.org/field-notes/<slug>/), and a one-line
+               note of the week's totals (miles, rides, climbing).
