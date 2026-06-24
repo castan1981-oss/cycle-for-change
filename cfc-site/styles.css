@@ -1396,6 +1396,37 @@ footer {
 .fn-back a { border-bottom: 1px solid var(--mute); }
 .fn-back a:hover { color: var(--ink); }
 
+.fn-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--m);
+  font-size: 0.82rem;
+  margin: 24px 0;
+  color: var(--ink);
+}
+.fn-table th {
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 2px solid var(--plum);
+  color: var(--mute);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.68rem;
+}
+.fn-table td {
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--cream-2);
+  vertical-align: middle;
+}
+.fn-table tfoot td {
+  border-top: 2px solid var(--plum);
+  border-bottom: none;
+}
+@media (max-width: 640px) {
+  .fn-table { font-size: 0.76rem; }
+  .fn-table th, .fn-table td { padding: 5px 6px; }
+}
+
 @media (max-width: 640px) {
   .fn-row { grid-template-columns: 1fr; }
   .fn-row .fn-rdate { grid-column: 1; grid-row: auto; text-align: left; }
