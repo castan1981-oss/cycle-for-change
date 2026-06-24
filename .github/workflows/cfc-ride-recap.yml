@@ -21,7 +21,7 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          claude_args: '--model claude-sonnet-4-6 --max-turns 30 --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh:*),Bash(cp:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Bash(curl:*)"'
+          claude_args: '--model claude-sonnet-4-6 --max-turns 45 --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh:*),Bash(cp:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Bash(curl:*),Bash(jq:*)"'
           prompt: |
             You are running one turn of the Cycle for Change WEEKLY RIDE RECAP.
             Follow CLAUDE.md at all times. This is a hand-written STATIC site:
@@ -79,8 +79,11 @@ jobs:
             7. UPDATE /loop-state.json: append to "shipped" with status "drafted"
                (slug, title, type "recap", page path, weekEnd). Do NOT add the
                recap to "do_not_repeat" (recaps recur weekly by design).
-            8. Create a new branch, commit, and open a pull request with
-               `gh pr create`. Do NOT push to main. Do NOT merge. The PR body must
-               include the verify results, the live URL the page will have
+            8. Create a new branch and commit. Then OPEN THE PULL REQUEST with
+               `gh pr create --base main --head <branch>` — this is the single
+               most important step; do it immediately after pushing, before any
+               optional polish, and confirm it returned a PR URL. Do NOT push to
+               main. Do NOT merge. The PR body must include the verify results,
+               the live URL the page will have
                (https://cycleforchange.org/field-notes/<slug>/), and a one-line
                note of the week's totals (miles, rides, climbing).
