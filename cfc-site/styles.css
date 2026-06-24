@@ -1396,8 +1396,101 @@ footer {
 .fn-back a { border-bottom: 1px solid var(--mute); }
 .fn-back a:hover { color: var(--ink); }
 
+/* —— pillar / hub (type: pillar) —— */
+.fn-pillar { padding: 0 0 90px; }
+
+.fn-pillar-head {
+  background: var(--lav-band);
+  padding: 78px 0 60px;
+}
+
+.fn-pillar-head .eyebrow { color: #5a4f6a; }
+
+.fn-pillar-head h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.3rem, 5.2vw, 3.6rem);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  max-width: 18ch;
+  margin: 14px 0 0;
+}
+
+.fn-pillar-intro {
+  font-size: 1.2rem;
+  line-height: 1.55;
+  color: #46394e;
+  max-width: 56ch;
+  margin: 22px 0 0;
+}
+
+/* spoke grid — cards down to the route guides ("the whole point of the pillar") */
+.fn-spokes-wrap { padding-top: 52px; }
+
+.fn-spokes-head {
+  font-family: var(--m);
+  font-weight: 400;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin: 0 0 22px;
+}
+
+.fn-spokes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+  gap: 18px;
+}
+
+.fn-spoke {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 26px 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  color: inherit;
+  transition: border-color 0.16s ease, transform 0.16s ease;
+}
+
+.fn-spoke:hover { border-color: var(--yellow-deep); transform: translateY(-2px); }
+
+.fn-spoke .fn-spoke-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.14;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.fn-spoke .fn-spoke-dek {
+  color: var(--mute);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.fn-spoke .fn-spoke-more {
+  margin-top: auto;
+  font-family: var(--m);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--yellow-deep);
+}
+
+/* the pillar reuses the same .fn-cta end-block as posts */
+.fn-pillar .fn-cta { margin-top: 56px; }
+
 @media (max-width: 640px) {
   .fn-row { grid-template-columns: 1fr; }
   .fn-row .fn-rdate { grid-column: 1; grid-row: auto; text-align: left; }
   .fn-cta, .fn-related { border-radius: 0; }
+  .fn-pillar-head { padding: 60px 0 46px; }
 }

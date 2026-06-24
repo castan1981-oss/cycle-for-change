@@ -1,19 +1,34 @@
 <!DOCTYPE html>
+<!--
+  FIELD NOTES — PILLAR (HUB) TEMPLATE
+  A pillar is a hub, not an article. It introduces a place/theme and links
+  DOWN to the route guides (its "spokes"); each spoke links back UP here.
+  To publish a pillar:
+    1. Copy this file to  /field-notes/<slug>/index.html
+    2. Replace every {{...}} field below.
+    3. Add one <a class="fn-spoke"> card per spoke (a route-guide slug). Pull
+       the spoke's own title + dek so the card matches the post it links to.
+    4. Add a row to /field-notes/index.html (newest first) and update sitemap.xml.
+    5. Make sure each spoke post links back up to this pillar in its .fn-related.
+  Guardrails: no medical claims; never imply continuous sober-time or relapse;
+  banned words (leverage, synergy, "journey", "passionate about", etc.).
+  Intro copy comes from Robert — leave a .fn-todo block if it isn't ready.
+-->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>South Mountain, Climbed Slow — Field Notes — Cycle for Change</title>
-  <meta name="description" content="A rider's guide to the South Mountain loop in Phoenix — the climb, the dawn light, and how it fits into 7,500 miles for queer communities.">
-  <link rel="canonical" href="https://cycleforchange.org/field-notes/south-mountain-climb/">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="South Mountain, Climbed Slow — Cycle for Change">
-  <meta property="og:description" content="A rider's guide to the South Mountain loop in Phoenix — the climb, the dawn light, and how it fits into 7,500 miles for queer communities.">
-  <meta property="og:url" content="https://cycleforchange.org/field-notes/south-mountain-climb/">
+  <title>{{TITLE}} — Field Notes — Cycle for Change</title>
+  <meta name="description" content="{{SEO_DESCRIPTION}}">
+  <link rel="canonical" href="https://cycleforchange.org/field-notes/{{SLUG}}/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{TITLE}} — Cycle for Change">
+  <meta property="og:description" content="{{SEO_DESCRIPTION}}">
+  <meta property="og:url" content="https://cycleforchange.org/field-notes/{{SLUG}}/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="South Mountain, Climbed Slow — Cycle for Change">
-  <meta name="twitter:description" content="A rider's guide to the South Mountain loop in Phoenix — the climb, the dawn light, and how it fits into 7,500 miles for queer communities.">
+  <meta name="twitter:title" content="{{TITLE}} — Cycle for Change">
+  <meta name="twitter:description" content="{{SEO_DESCRIPTION}}">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,18 +37,16 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "South Mountain, Climbed Slow",
-    "description": "A rider's guide to the South Mountain loop in Phoenix — the climb, the dawn light, and how it fits into 7,500 miles for queer communities.",
-    "datePublished": "2026-06-09",
-    "url": "https://cycleforchange.org/field-notes/south-mountain-climb/",
+    "@type": "CollectionPage",
+    "name": "{{TITLE}}",
+    "description": "{{SEO_DESCRIPTION}}",
+    "url": "https://cycleforchange.org/field-notes/{{SLUG}}/",
     "author": { "@type": "Person", "name": "Robert Castan" },
     "publisher": {
       "@type": "Organization",
       "name": "Cycle for Change",
       "url": "https://cycleforchange.org/"
-    },
-    "mainEntityOfPage": "https://cycleforchange.org/field-notes/south-mountain-climb/"
+    }
   }
   </script>
 </head>
@@ -65,34 +78,41 @@
   </div>
 </header>
 
-<main class="fn-post">
-  <article class="fn-article">
-    <p class="fn-meta">
-      <span class="fn-chip place">Place + Miles</span>
-      <span class="dot">·</span>
-      <time datetime="2026-06-09">Jun 9, 2026</time>
-      <span class="dot">·</span>
-      <span>TODO min read</span>
-    </p>
+<main class="fn-pillar">
+  <article>
+    <header class="fn-pillar-head">
+      <div class="wrap">
+        <span class="eyebrow">{{KICKER}}</span>
+        <h1>{{TITLE}}</h1>
+        <p class="fn-pillar-intro">
+          <!-- TODO: short intro from Robert — what this hub gathers and why. -->
+          {{INTRO}}
+        </p>
+        <!-- "the line is the log" — same route line as the index masthead. -->
+        <div class="fn-line" aria-hidden="true"><i data-line></i></div>
+      </div>
+    </header>
 
-    <h1>South Mountain, Climbed Slow</h1>
+    <section class="fn-spokes-wrap">
+      <div class="wrap">
+        <h2 class="fn-spokes-head">The route guides</h2>
+        <div class="fn-spokes">
 
-    <p class="fn-lede">TODO — lede paragraph from Robert. One larger opening line that sets the ride: the South Mountain loop, before the heat, on the way to 7,500.</p>
+          <!-- One card per spoke slug. Pull the spoke post's title + dek. -->
+          <a class="fn-spoke" href="/field-notes/{{SPOKE_1_SLUG}}/">
+            <span class="fn-spoke-title">{{SPOKE_1_TITLE}}</span>
+            <p class="fn-spoke-dek">{{SPOKE_1_DEK}}</p>
+            <span class="fn-spoke-more">Read the guide →</span>
+          </a>
 
-    <div class="fn-body">
-      <!-- TODO: body copy from Robert. Use <h2> for sections (the approach,
-           the climb, the descent), <blockquote> for the signature pull-quote.
-           Don't invent the ride — leave this until the copy lands. -->
-      <p class="fn-todo">TODO — body copy pending from Robert (the South Mountain climb guide). Render headings as &lt;h2&gt; and the pull-quote as &lt;blockquote&gt;. No crisis line on a Place + Miles post.</p>
-    </div>
+          <!-- Repeat the .fn-spoke block for each remaining spoke. -->
+
+        </div>
+      </div>
+    </section>
   </article>
 
-  <nav class="fn-related" aria-label="Related Field Notes">
-    <h2>Keep reading</h2>
-    <a href="/field-notes/phoenix/">Phoenix — all the route guides</a>
-    <a href="/field-notes/">All Field Notes →</a>
-  </nav>
-
+  <!-- The funnel. Non-negotiable: follow-the-number + give. Same as posts. -->
   <section class="fn-cta" aria-label="Follow the miles and give">
     <p class="fn-cta-num"><span data-cur>—</span><span class="of"> / 7,500 mi</span></p>
     <p>Every mile is logged live as I ride it. <a href="/#tally" style="color:var(--yellow);border-bottom:1px solid var(--yellow);">Follow the number →</a></p>

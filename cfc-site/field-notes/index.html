@@ -62,10 +62,24 @@
   <section style="padding-top:54px;">
     <div class="wrap">
       <div class="fn-list">
-        <!-- Newest first. To publish a post: copy _template.html into a new
-             /field-notes/<slug>/ folder, fill it in, then add one row here. -->
+        <!-- Newest first by date. To publish a POST: copy _template.html into a
+             new /field-notes/<slug>/ folder, fill it, then add one row here.
+             To publish a PILLAR (hub): copy _pillar-template.html the same way.
+             Each row is the whole link: chip · title · dek · date. -->
 
-        <p class="fn-dek" style="opacity:.7;">First notes are on the way — written from the road as the miles add up. Meanwhile, <a href="/#board">pledge a mile →</a></p>
+        <a class="fn-row" href="/field-notes/phoenix/">
+          <span class="fn-chip place">Place + Miles</span>
+          <span class="fn-title">Phoenix</span>
+          <p class="fn-dek">TODO — pillar dek from Robert: the Phoenix riding hub and its route guides.</p>
+          <span class="fn-rdate">Hub</span>
+        </a>
+
+        <a class="fn-row" href="/field-notes/south-mountain-climb/">
+          <span class="fn-chip place">Place + Miles</span>
+          <span class="fn-title">South Mountain, Climbed Slow</span>
+          <p class="fn-dek">TODO — one-line dek from Robert: the South Mountain loop, climbed slow before the heat.</p>
+          <span class="fn-rdate">Jun 9, 2026</span>
+        </a>
 
       </div>
     </div>
