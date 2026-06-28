@@ -1494,3 +1494,116 @@ footer {
   .fn-cta, .fn-related { border-radius: 0; }
   .fn-pillar-head { padding: 60px 0 46px; }
 }
+
+/* ============================================================
+   RESOURCES — mental-health portal (/resources/)
+   The hub reuses the pillar shell (.fn-pillar*, .fn-spokes).
+   Segment pages add the publication-style resource card below.
+   Tokens only — no new colours, no new fonts.
+   ============================================================ */
+
+/* life-stage label on a hub spoke card (Teens / Young adults / Adults) */
+.fn-spoke .fn-spoke-kicker {
+  font-family: var(--m);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+/* short "who this is for" line under a segment masthead */
+.res-intro-note {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #46394e;
+  max-width: 58ch;
+  margin: 20px 0 0;
+}
+
+/* card grid on each segment page */
+.res-wrap { padding-top: 50px; }
+
+.res-head {
+  font-family: var(--m);
+  font-weight: 400;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin: 0 0 22px;
+}
+
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: 18px;
+}
+
+/* publication-style card — a headline + plain-language note + how to reach it.
+   Deliberately NOT a bare directory link. */
+.res-card {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 28px 26px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.res-card .res-cat {
+  font-family: var(--m);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--yellow-deep);
+}
+
+.res-card h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.38rem;
+  line-height: 1.14;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0;
+}
+
+.res-card h3 a { color: inherit; border-bottom: 2px solid transparent; }
+.res-card h3 a:hover { border-bottom-color: var(--yellow); }
+
+.res-card .res-desc {
+  color: #51475a;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.res-foot {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-top: 6px;
+}
+
+.res-foot .res-contact {
+  font-family: var(--m);
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.res-foot .res-contact a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--yellow-deep);
+}
+.res-foot .res-contact a:hover { color: var(--mute); }
+
+.res-foot .res-out {
+  font-family: var(--m);
+  font-size: 0.71rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--yellow-deep);
+}
