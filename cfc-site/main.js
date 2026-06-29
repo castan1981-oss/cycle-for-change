@@ -5,8 +5,8 @@
   document.documentElement.classList.add("js");
 
   const GOAL = 7500;
-  const INSTAGRAM_URL = "https://www.instagram.com/cycle_forchange";
-  const INSTAGRAM_HANDLE = "@cycle_forchange";
+  const INSTAGRAM_URL = "https://www.instagram.com/cycl_eforchange";
+  const INSTAGRAM_HANDLE = "@cycl_eforchange";
 
   const STATIC_FEED = [
     { discipline: "bike", title: "Long ride · South Mountain loop", note: "Building the engine. Dawn desert miles.", miles: 62 },
