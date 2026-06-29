@@ -1,8 +1,19 @@
 {
-  "shipped": [],
+  "shipped": [
+    {
+      "slug": "cycling-and-anxiety",
+      "title": "Is Cycling Good for Anxiety?",
+      "target_query": "is cycling good for anxiety",
+      "type": "Mind + Miles",
+      "path": "cfc-site/field-notes/cycling-and-anxiety/index.html",
+      "status": "drafted",
+      "date": "2026-06-29"
+    }
+  ],
   "do_not_repeat": [
     "recovery is endurance (held draft — reserved for Robert)",
-    "south mountain climb guide (held draft — reserved for Robert)"
+    "south mountain climb guide (held draft — reserved for Robert)",
+    "is cycling good for anxiety"
   ],
   "reserved_drafts": [
     {
@@ -22,11 +33,6 @@
     {
       "idea": "training for a charity ride when you've never raced",
       "target_query": "how to train for a charity bike ride",
-      "mission_fit": "high"
-    },
-    {
-      "idea": "what a long ride does for anxiety",
-      "target_query": "is cycling good for anxiety",
       "mission_fit": "high"
     }
   ]
