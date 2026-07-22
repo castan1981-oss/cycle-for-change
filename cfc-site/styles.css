@@ -177,6 +177,7 @@ header {
   letter-spacing: 0.05em;
   font-size: 1.18rem;
   color: var(--ink);
+  white-space: nowrap;
 }
 
 .links {
@@ -254,6 +255,13 @@ section { padding: 96px 0; }
 }
 
 .hero h1 em { font-style: italic; color: var(--ink); }
+
+/* blockletter hero headline */
+.bl-head { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; margin: 2px 0 6px; }
+.bl { font-family: var(--disp); text-transform: uppercase; line-height: 1.02; padding: 3px 15px; letter-spacing: 0.02em; }
+.bl1 { font-size: clamp(2.4rem, 5.4vw, 4rem); background: var(--yellow); color: var(--plum); }
+.bl2 { font-size: clamp(1.2rem, 2.6vw, 1.9rem); background: var(--plum); color: var(--cream); margin-left: 6px; }
+.bl-serif { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: clamp(1.8rem, 3.6vw, 2.7rem); color: var(--ink); margin: 4px 0 0; letter-spacing: -0.01em; max-width: 13ch; }
 
 .hero p.lead {
   font-size: 1.14rem;
@@ -1044,6 +1052,7 @@ footer {
   .nav { grid-template-columns: auto auto; }
   .links { display: none; }
   .nav-right .btn-dark { display: none; }
+  .ig-link { display: none; }
   .menu-btn { display: block; }
   .hero-grid, .split, .story-grid { grid-template-columns: 1fr; gap: 36px; }
   .stats { grid-template-columns: 1fr 1fr; }
