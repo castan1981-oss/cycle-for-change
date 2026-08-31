@@ -1,8 +1,11 @@
 name: CfC Ride Recap
 
 on:
-  schedule:
-    - cron: "0 14 * * 1"     # Mondays 7am Phoenix (UTC-7) — recap the week just ended
+  # PAUSED until December 2026 — the public site is a coming-soon page,
+  # so this ride recap would open PRs into a tree nothing publishes.
+  # Uncomment the schedule when the site comes back.
+  # schedule:
+  #   - cron: "0 14 * * 1"     # Mondays 7am Phoenix (UTC-7) — recap the week just ended
   workflow_dispatch: {}        # manual "Run workflow" button
 
 permissions:

@@ -1,8 +1,11 @@
 name: CfC Content Loop
 
 on:
-  schedule:
-    - cron: "0 16 * * 1"     # Mondays 9am Phoenix (UTC-7, no DST)
+  # PAUSED until December 2026 — the public site is a coming-soon page,
+  # so this content loop would open PRs into a tree nothing publishes.
+  # Uncomment the schedule when the site comes back.
+  # schedule:
+  #   - cron: "0 16 * * 1"     # Mondays 9am Phoenix (UTC-7, no DST)
   workflow_dispatch: {}        # manual "Run workflow" button for testing
 
 permissions:
