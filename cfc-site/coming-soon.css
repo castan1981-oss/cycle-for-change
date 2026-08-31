@@ -1,0 +1,300 @@
+/* Cycle for Change — coming-soon page only.
+   Loaded by cfc-site/index.html and nothing else.
+   The old /styles.css is untouched; it still dresses the pages we bring back in December. */
+
+:root{
+  --bone:#E8DFD0;
+  --dust:#C4B7A2;
+  --creosote:#5C6B4A;
+  --asphalt:#2A2E28;
+
+  --display:"Outfit",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --body:"Space Grotesk",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --mono:"Space Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --pad:clamp(20px,4vw,56px);
+  --maxw:1240px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+
+html{-webkit-text-size-adjust:100%}
+
+body{
+  margin:0;
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  background:var(--bone);
+  color:var(--asphalt);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{max-width:100%;display:block}
+
+a{color:inherit}
+
+:focus-visible{
+  outline:2px solid var(--creosote);
+  outline-offset:3px;
+}
+
+.skip{
+  position:absolute;
+  left:-9999px;
+  top:0;
+  background:var(--asphalt);
+  color:var(--bone);
+  font-family:var(--mono);
+  font-size:12px;
+  padding:10px 14px;
+  z-index:10;
+}
+.skip:focus{left:0}
+
+/* —— wordmark —— */
+
+.site-head{
+  padding:var(--pad) var(--pad) 0;
+  width:100%;
+  max-width:var(--maxw);
+  margin:0 auto;
+}
+
+.mark{
+  display:inline-flex;
+  align-items:center;
+  gap:clamp(10px,1.2vw,14px);
+  text-decoration:none;
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(13px,1.5vw,16px);
+  line-height:.9;
+  letter-spacing:.01em;
+  text-transform:uppercase;
+}
+.mark-glyph{
+  flex:0 0 auto;
+  width:clamp(34px,3.6vw,44px);
+  height:auto;
+}
+.mark-type{display:block}
+.mark-l{display:block}
+.mark-for{color:var(--creosote)}
+
+/* —— hero —— */
+
+main{
+  flex:1 0 auto;
+  width:100%;
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:0 var(--pad);
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:clamp(28px,5vw,72px);
+  align-items:center;
+  padding:clamp(24px,4vh,52px) 0 clamp(24px,4vh,44px);
+}
+
+.eyebrow{
+  margin:0;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--creosote);
+}
+
+.year-one{
+  margin:.18em 0 0;
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(84px,15.5vw,236px);
+  line-height:.8;
+  letter-spacing:-.035em;
+  color:var(--asphalt);
+  font-variant-numeric:lining-nums tabular-nums;
+}
+
+.line{
+  margin:clamp(18px,2.6vw,30px) 0 0;
+  max-width:24ch;
+  font-size:clamp(17px,1.7vw,21px);
+  line-height:1.35;
+}
+
+.rule{
+  border:0;
+  border-top:1px solid var(--dust);
+  margin:clamp(22px,3.2vw,36px) 0 0;
+  max-width:34ch;
+}
+
+.tally{
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+.tally-num{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:clamp(30px,3.6vw,46px);
+  line-height:1;
+  letter-spacing:-.02em;
+  font-variant-numeric:lining-nums tabular-nums;
+}
+.tally-label{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--creosote);
+}
+
+.hero-photo{
+  background:var(--dust);
+  overflow:hidden;
+}
+.hero-photo img{
+  width:100%;
+  height:auto;
+  aspect-ratio:4/5;
+  max-height:min(62svh,560px);
+  object-fit:cover;
+  object-position:50% 56%;
+  filter:saturate(.6) contrast(1.06) brightness(.97);
+}
+
+/* —— waitlist —— */
+
+.waitlist{
+  border-top:1px solid var(--dust);
+  padding:clamp(22px,3vw,32px) 0 clamp(24px,4vw,40px);
+}
+
+.wl-form{
+  display:flex;
+  align-items:flex-end;
+  gap:clamp(16px,2.4vw,28px);
+  flex-wrap:wrap;
+  margin-top:18px;
+  max-width:520px;
+}
+
+.wl-field{
+  flex:1 1 240px;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.wl-label{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--creosote);
+}
+
+.wl-input{
+  width:100%;
+  margin:0;
+  background:transparent;
+  border:0;
+  border-bottom:1px solid var(--asphalt);
+  border-radius:0;
+  padding:0 0 7px;
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.4;
+  color:var(--asphalt);
+  appearance:none;
+}
+.wl-input:focus{outline:0;border-bottom-color:var(--creosote)}
+.wl-input:focus-visible{outline:0}
+
+.wl-btn{
+  flex:0 0 auto;
+  margin:0;
+  background:transparent;
+  border:0;
+  border-bottom:1px solid var(--asphalt);
+  border-radius:0;
+  padding:0 0 7px;
+  font-family:var(--mono);
+  font-size:11px;
+  line-height:1.4;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--asphalt);
+  cursor:pointer;
+}
+.wl-btn:hover{color:var(--creosote);border-bottom-color:var(--creosote)}
+.wl-btn[disabled]{opacity:.5;cursor:default}
+
+.wl-msg{
+  flex:1 0 100%;
+  margin:4px 0 0;
+  min-height:1.2em;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--creosote);
+}
+
+.hp{position:absolute;left:-9999px}
+
+/* —— footer —— */
+
+.site-foot{
+  flex:0 0 auto;
+  width:100%;
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:0 var(--pad) var(--pad);
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+  border-top:1px solid var(--dust);
+  padding-top:18px;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--creosote);
+}
+
+/* —— mobile: photo first, then the number —— */
+
+@media (max-width:760px){
+  .hero{
+    grid-template-columns:1fr;
+    padding-top:clamp(24px,4vh,36px);
+  }
+  .hero-photo{order:-1}
+  .hero-photo img{aspect-ratio:4/3;object-position:50% 58%}
+  .line{max-width:30ch}
+  .rule{max-width:none}
+  .wl-form{max-width:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+}

@@ -1,5 +1,17 @@
 # Cycle for Change — project context for automated content
 
+> **PAUSED — the public site is a coming-soon page until December 2026.**
+> `cfc-site/index.html` is now the single public page (new brand: Creosote
+> palette, stacked wordmark, 10000 as year one for 2027). Every other public
+> URL 302s home via `netlify.toml`; the old pages are still in the repo for the
+> December rebuild, they just aren't reachable. **Do not ship Field Notes,
+> guides, resources or journal pages in the meantime** — they would not be
+> published, and the content loop workflows are paused for the same reason. If
+> you are asked to write content now, write it into the repo only after the
+> site comes back, or say the site is down and stop. Do not edit
+> `cfc-site/index.html`, `coming-soon.css`, `coming-soon.js`, or the redirect
+> block in `netlify.toml` as part of a content run.
+
 You write content for cycleforchange.org. Follow these rules on every run.
 
 ## Stack (read this — it determines WHERE pages go)

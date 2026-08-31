@@ -4,355 +4,92 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="7,500 miles, all on the bike — every mile for queer communities. Pledge a mile, follow every ride.">
-  <title>Cycle for Change — 7,500 miles, every one for queer communities.</title>
-  <meta property="og:title" content="Cycle for Change — 7,500 miles, every one for queer communities.">
-  <meta property="og:description" content="7,500 miles, all on the bike — every mile for queer communities. Pledge a mile, vote where it goes.">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/favicon-180.png">
+  <title>Cycle for Change — 10000, 2027, all on the bike</title>
+  <meta name="description" content="Cycle for Change. 10000 miles in 2027, all on the bike. Live miles since June 1. Site in December.">
+  <link rel="canonical" href="https://cycleforchange.org/">
+  <meta name="robots" content="index, follow">
+
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cycleforchange.org/">
-  <meta property="og:image" content="https://cycleforchange.org/og-image.png">
+  <meta property="og:title" content="Cycle for Change — 10000, 2027, all on the bike">
+  <meta property="og:description" content="10000 miles in 2027, all on the bike. Live miles since June 1. Site in December.">
+  <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://cycleforchange.org/og-image.png">
+  <meta name="twitter:image" content="https://cycleforchange.org/og-cfc.png">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-180.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Space+Grotesk:wght@400;500&family=Space+Mono&family=Anton&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script>
-    document.documentElement.classList.add("js");
-    (function () {
-      function revealInView() {
-        document.querySelectorAll(".rv").forEach(function (el) {
-          var r = el.getBoundingClientRect();
-          if (r.top < window.innerHeight && r.bottom > 0) el.classList.add("in");
-        });
-      }
-      document.addEventListener("DOMContentLoaded", revealInView);
-      window.addEventListener("load", revealInView);
-      setTimeout(function () {
-        if (!window.__cfcReady) {
-          document.querySelectorAll(".rv").forEach(function (el) {
-            el.classList.add("in");
-          });
-        }
-      }, 2500);
-    })();
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Space+Grotesk:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/coming-soon.css">
 </head>
-<body id="top">
+<body>
 
-<form name="pledges" netlify netlify-honeypot="bot-field" hidden>
-  <input type="text" name="name">
-  <input type="email" name="email">
-  <input type="checkbox" name="ok-text">
-</form>
+<a class="skip" href="#main">Skip to content</a>
 
-<div class="util">
-  <div class="wrap">
-    <span><b><span data-ticker-miles>—</span> / 7,500</b> miles logged · training starts June 1</span>
-    <span>every mile for queer communities</span>
-  </div>
-</div>
-
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Cycle for Change home">
-      <svg width="32" height="32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M98.45 71.03 A40.00 40.00 0 0 1 50.32 98.81" stroke="#372C3C" stroke-width="12" stroke-linecap="round"/><path d="M31.23 87.79 A40.00 40.00 0 0 1 31.23 32.21" stroke="#E9E224" stroke-width="12" stroke-linecap="round"/><path d="M50.32 21.19 A40.00 40.00 0 0 1 98.45 48.97" stroke="#A99CB0" stroke-width="12" stroke-linecap="round"/><circle cx="60.00" cy="60.00" r="6.00" fill="#372C3C"/></svg>
-      <span class="word">Cycle for Change</span>
-    </a>
-    <nav class="links" aria-label="Primary">
-      <a href="#tally">The tally</a>
-      <a href="#disciplines">The riding</a>
-      <a href="/guides/">Guides</a>
-      <a href="#feed">The feed</a>
-      <a href="#rides">Rides</a>
-      <a href="#vote">Vote</a>
-      <a href="/resources/">Resources</a>
-    </nav>
-    <div class="nav-right">
-      <a class="ig-link" id="navInstagram" href="https://www.instagram.com/cycl_eforchange" target="_blank" rel="noopener noreferrer">@cycl_eforchange</a>
-      <a href="#board" class="btn btn-dark">Pledge a mile →</a>
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false">≡</button>
-    </div>
-  </div>
-  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
-    <a href="#tally">The tally</a>
-    <a href="#disciplines">The riding</a>
-    <a href="/guides/">Guides</a>
-    <a href="#feed">The ride feed</a>
-    <a href="#rides">Rides</a>
-    <a href="#vote">Vote</a>
-    <a href="/resources/">Resources</a>
-    <a href="#board">Pledge a mile</a>
-    <a id="mobileInstagram" href="https://www.instagram.com/cycl_eforchange" target="_blank" rel="noopener noreferrer">Instagram</a>
-  </nav>
+<header class="site-head">
+  <a class="mark" href="/" aria-label="Cycle for Change home">
+    <svg class="mark-glyph" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+      <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="#2A2E28" stroke-width="12" stroke-linecap="round"/>
+      <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
+      <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
+      <circle cx="60" cy="60" r="6" fill="#2A2E28"/>
+    </svg>
+    <span class="mark-type">
+      <span class="mark-l">Cycle</span><span class="mark-l mark-for">For</span><span class="mark-l">Change</span>
+    </span>
+  </a>
 </header>
 
-<main>
-  <section class="hero">
-    <video class="hero-vid" autoplay muted loop playsinline poster="hero-poster.jpg" aria-hidden="true"><source src="hero-loop.mp4" type="video/mp4"></video>
-    <div class="hero-scrim" aria-hidden="true"></div>
-    <div class="wrap hero-grid">
-      <div class="rv">
-        <span class="eyebrow">every mile for queer communities</span>
-        <div class="bl-head">
-          <span class="bl bl1">7,500 MILES</span>
-          <span class="bl bl2">EVERY ONE FOR</span>
-          <h1 class="bl-serif">queer communities.</h1>
-        </div>
-        <p class="lead">Next year I'm riding 7,500 miles — every one on the bike. You put up a few cents a mile. When it's done, you decide where the money goes.</p>
-        <div class="cta">
-          <a href="#board" class="btn btn-y">Pledge a mile →</a>
-          <a href="#how" class="btn-link">See how it works</a>
-        </div>
+<main id="main">
+
+  <section class="hero" aria-labelledby="year-one">
+    <div class="hero-copy">
+      <p class="eyebrow">10000 &middot; 2027 &middot; All on the bike</p>
+
+      <h1 class="year-one" id="year-one">10000</h1>
+
+      <p class="line">I do the miles. You decide who they&rsquo;re for.</p>
+
+      <hr class="rule">
+
+      <div class="tally">
+        <span class="tally-num" data-cur>2,396</span>
+        <span class="tally-label">miles since June 1</span>
       </div>
-      <div class="card rv" id="board">
-        <h3>Get on the board.</h3>
-        <p class="sub">Free to join. No card, no amount today.</p>
-        <form name="pledges" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="pledgeForm">
-          <input type="hidden" name="form-name" value="pledges">
-          <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
-          <label for="pname" class="visually-hidden">Your name</label>
-          <input class="field" name="name" id="pname" type="text" placeholder="Your name" maxlength="40" required autocomplete="name">
-          <label for="pemail" class="visually-hidden">Email (optional)</label>
-          <input class="field" name="email" id="pemail" type="email" placeholder="Email (optional)" autocomplete="email">
-          <label class="check">
-            <input type="checkbox" name="ok-text" id="poktext">
-            <span>OK to text me the occasional mile update</span>
-          </label>
-          <button class="btn btn-y full" type="submit">Get on it →</button>
-        </form>
-        <p class="ok" id="okmsg" role="status">You're on the board. See you out there.</p>
-        <p class="micro"><b id="boardCount">0</b> already on the board · you give at year-end, by vote</p>
-      </div>
+    </div>
+
+    <div class="hero-photo">
+      <img src="/hero-poster.jpg" alt="Riding view over the handlebars, desert road ahead, low sun on the horizon." width="1080" height="1920" decoding="async" fetchpriority="high">
     </div>
   </section>
 
-  <div class="reassure">
-    <div class="wrap">
-      <span>Free to join</span><span class="sep">·</span><span>No card today</span><span class="sep">·</span><span>You vote where it goes</span><span class="sep">·</span><span>100% to queer-community orgs</span>
-    </div>
-  </div>
+  <section class="waitlist" aria-labelledby="waitlist-head">
+    <p class="eyebrow" id="waitlist-head">Site in December. Year starts January 1.</p>
 
-  <section class="pull">
-    <div class="wrap rv">
-      <p>"I do the miles. You decide who they're for."</p>
-      <div class="by">Robert · founder · Cycle for Change</div>
-    </div>
+    <form class="wl-form" name="waitlist" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="waitlistForm">
+      <input type="hidden" name="form-name" value="waitlist">
+      <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="wl-field">
+        <label class="wl-label" for="wl-email">Email</label>
+        <input class="wl-input" id="wl-email" name="email" type="email" required autocomplete="email" inputmode="email">
+      </div>
+      <button class="wl-btn" type="submit">Notify me</button>
+      <p class="wl-msg" id="wlMsg" role="status" aria-live="polite"></p>
+    </form>
   </section>
 
-  <section id="tally" style="background:var(--cream-2);">
-    <div class="wrap split">
-      <div class="rv">
-        <span class="eyebrow">the tally</span>
-        <h2>Every mile, logged. Live.</h2>
-        <p>Training rides and charity events, all of it counted as it happens. The number only goes one way.</p>
-        <a href="#feed" class="btn btn-dark">See the ride feed →</a>
-      </div>
-      <div class="chart-card rv" aria-live="polite">
-        <div class="chart-loading" id="chartLoading">Loading miles…</div>
-        <svg class="chart" viewBox="0 0 400 120" id="tallyChart" aria-hidden="true" hidden>
-          <path id="chartArea" fill="rgba(233,226,36,0.12)"/>
-          <path id="chartLine" fill="none" stroke="#372C3C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path id="chartLineAccent" fill="none" stroke="#E9E224" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-        </svg>
-        <div class="chart-stat">
-          <span class="big"><span data-cur>—</span><span class="of"> / 7,500</span></span>
-          <span class="meta"><span data-pct>—</span> of the year · fed by <a id="stravaLink" href="#" target="_blank" rel="noopener noreferrer">strava</a></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="how">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <span class="eyebrow">how it works</span>
-        <h2>From your name to the finish line.</h2>
-        <p>Four steps. No middleman, no overhead cut, no card today.</p>
-      </div>
-      <div class="stats rv" style="margin-top:40px;">
-        <div class="stat"><div class="n">01</div><div class="l"><b>Pledge a mile.</b> Add your name. You're on the board — no amount, no card.</div></div>
-        <div class="stat"><div class="n">02</div><div class="l"><b>I do the miles.</b> 7,500, all on the bike. Tracked live, fed by Strava.</div></div>
-        <div class="stat"><div class="n">03</div><div class="l"><b>We vote.</b> When the year closes, pledgers pick which queer-community orgs get it.</div></div>
-        <div class="stat"><div class="n">04</div><div class="l"><b>You give direct.</b> Straight to the orgs we chose. Where you voted is where it lands.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="disciplines" style="background:var(--cream-2);">
-    <div class="wrap">
-      <div class="split" style="align-items:flex-start; margin-bottom:8px;">
-        <div class="rv">
-          <span class="eyebrow">the riding</span>
-          <h2>One bike. One year. One number.</h2>
-          <p>7,500 miles on the road — training rides, charity rides, long desert days. The mix follows the season, not a spreadsheet.</p>
-          <a href="#tally" class="btn-link">See the live tally</a>
-        </div>
-        <div class="prog-grid" style="margin-top:0;">
-          <article class="prog rv">
-            <div class="gfx" aria-hidden="true"><img src="/photos/ride-lavender.jpg" alt="" loading="lazy"></div>
-            <div class="body"><div class="disc">training</div><h3>The daily work.</h3><p>Dawn miles before the heat. Base building, week after week — the part nobody sees.</p></div>
-          </article>
-          <article class="prog rv">
-            <div class="gfx" aria-hidden="true"><img src="/photos/haus-road.jpg" alt="" loading="lazy"></div>
-            <div class="body"><div class="disc">charity rides</div><h3>The big days.</h3><p>Organized rides for the orgs on the ballot — the miles with a crowd around them.</p></div>
-          </article>
-          <article class="prog rv">
-            <div class="gfx" aria-hidden="true"><img src="/photos/vest-ride.jpg" alt="" loading="lazy"></div>
-            <div class="body"><div class="disc">the long haul</div><h3>The far side of far.</h3><p>Century days across the desert. Most of the work, most of the year.</p></div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="feed">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <span class="eyebrow">the ride feed</span>
-        <h2>Every mile, logged.</h2>
-        <p>The training and the events as they happen — all of it on the bike, all of it counted.</p>
-      </div>
-      <div class="feed-grid" id="feedList" aria-live="polite">
-        <article class="ride bike rv"><div class="ride-top"><span class="ride-disc">bike</span><span class="ride-mi">62 mi</span></div><h3>Long ride · South Mountain loop</h3><p>Building the engine. Dawn desert miles.</p></article>
-        <article class="ride bike rv"><div class="ride-top"><span class="ride-disc">bike</span><span class="ride-mi">22 mi</span></div><h3>Climb repeats · Mummy Mountain</h3><p>Strength work. The hill gives it back.</p></article>
-        <article class="ride bike rv"><div class="ride-top"><span class="ride-disc">bike</span><span class="ride-mi">15 mi</span></div><h3>Recovery spin · canal path</h3><p>Base building. The quiet discipline, on wheels.</p></article>
-      </div>
-      <p class="feed-foot rv"><span class="strava-dot"></span>The live feed connects to Strava once the season opens.</p>
-    </div>
-  </section>
-
-  <section id="rides" style="background:var(--cream-2);">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <span class="eyebrow">the fundraisers</span>
-        <h2>The rides that count.</h2>
-        <p>Real charity rides on the 2027 calendar. Every mile rolls into the tally — and the orgs they support are on your ballot.</p>
-      </div>
-      <div class="rides-grid">
-        <article class="fund-card rv">
-          <span class="fund-org">Los Angeles LGBT Center</span>
-          <h3>Center Ride Out</h3>
-          <p class="fund-meta">Apr 23–25, 2027 · LA → San Diego · ~285 mi</p>
-          <p class="fund-blurb">Three days down the SoCal coast for the Center's life-saving programs — the AIDS/LifeCycle legacy, carried forward.</p>
-          <a href="https://www.lalgbtcenter.org/centerrideout" class="btn btn-y" target="_blank" rel="noopener">Ride or donate →</a>
-        </article>
-        <article class="fund-card rv">
-          <span class="fund-org">San Francisco AIDS Foundation</span>
-          <h3>Cycle to Zero</h3>
-          <p class="fund-meta">Spring 2027 · Sausalito ↔ Sonoma County · 3 days</p>
-          <p class="fund-blurb">Through the wine country for SFAF's no-cost HIV, harm-reduction and LGBTQ+ health services.</p>
-          <a href="https://www.sfaf.org" class="btn btn-y" target="_blank" rel="noopener">Ride or donate →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="vote" style="background:var(--cream-2);">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <span class="eyebrow">where it goes — you pick</span>
-        <h2>Pledgers choose the cause.</h2>
-        <p>These are the orgs my rides support. Throw one a vote and watch the split move — the final call is up to whoever pledges.</p>
-      </div>
-      <div class="orgs" id="orgsList" aria-live="polite">
-        <div class="org" data-id="onenten">
-          <h3><a href="https://onenten.org" target="_blank" rel="noopener noreferrer">one·n·ten</a></h3>
-          <div class="ods">Phoenix nonprofit for LGBTQ+ youth ages 11–24 — safe spaces, housing, leadership.</div>
-          <div class="bwrap"><div class="bar2"><i style="width:35%"></i></div><span class="pct">35%</span></div>
-          <a class="org-visit" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Visit site →</a>
-          <button class="btn votebtn" type="button" data-vote="onenten">Vote</button>
-        </div>
-        <div class="org" data-id="lalgbtcenter">
-          <h3><a href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Los Angeles LGBT Center</a></h3>
-          <div class="ods">Health, housing and advocacy for LGBTQ+ people — the Center Ride Out beneficiary.</div>
-          <div class="bwrap"><div class="bar2"><i style="width:33%"></i></div><span class="pct">33%</span></div>
-          <a class="org-visit" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Visit site →</a>
-          <button class="btn votebtn" type="button" data-vote="lalgbtcenter">Vote</button>
-        </div>
-        <div class="org" data-id="sfaf">
-          <h3><a href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">San Francisco AIDS Foundation</a></h3>
-          <div class="ods">No-cost HIV, harm-reduction and LGBTQ+ health services — the Cycle to Zero beneficiary.</div>
-          <div class="bwrap"><div class="bar2"><i style="width:32%"></i></div><span class="pct">32%</span></div>
-          <a class="org-visit" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Visit site →</a>
-          <button class="btn votebtn" type="button" data-vote="sfaf">Vote</button>
-        </div>
-      </div>
-      <p class="vote-msg" id="voteMsg" hidden></p>
-      <div class="votes-total rv">total votes · <b id="vtotal">912</b></div>
-    </div>
-  </section>
-
-  <section class="ig" id="instagram">
-    <div class="wrap">
-      <div class="ig-head rv">
-        <div>
-          <span class="eyebrow" id="igHandle">@cycl_eforchange</span>
-          <h2 style="font-size:clamp(2rem,4.4vw,3rem);">Follow the miles.</h2>
-        </div>
-        <a href="https://www.instagram.com/cycl_eforchange" target="_blank" rel="noopener noreferrer" class="btn btn-dark" id="igFollowBtn">Follow on Instagram →</a>
-      </div>
-      <div class="ig-strip rv" id="igStrip" aria-label="Photos from the road">
-        <img src="/photos/crew-haus.jpg" alt="Group ride selfie in matching kit" width="600" height="600" loading="lazy">
-        <img src="/photos/bike-detail.jpg" alt="Race bike leaning on a block wall" width="600" height="600" loading="lazy">
-        <img src="/photos/finish-line.jpg" alt="Riders celebrating at the charity ride finish line" width="600" height="600" loading="lazy">
-      </div>
-      <p class="ig-caption rv">Lately, from the road — follow @cycl_eforchange for the live feed.</p>
-    </div>
-  </section>
-
-  <section class="story" id="story">
-    <div class="wrap story-grid">
-      <div class="story-photo rv">
-        <img class="photo-grade" src="/photos/portrait.jpg" alt="Robert by the river" width="800" height="1000" loading="lazy">
-      </div>
-      <div class="rv">
-        <span class="eyebrow">the story</span>
-        <h2>Queer in the field. Putting the miles where my mouth is.</h2>
-        <p>I came back from a place a lot of people don't. Queer in a field that didn't always leave room for it — I stayed anyway. Now the miles go to the communities that kept people like me alive.</p>
-        <div class="sig">Robert — Cycle for Change</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-band">
-    <div class="wrap rv">
-      <h2>So — <em>you in?</em></h2>
-      <p>7,500 miles. Add your name and get on the board.</p>
-      <a href="#board" class="btn btn-y">Pledge a mile →</a>
-    </div>
-  </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <div class="foot-top">
-      <div class="foot">
-        <a class="brand" href="#top" aria-label="Cycle for Change home" style="margin-bottom:14px;">
-          <svg width="32" height="32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M98.45 71.03 A40.00 40.00 0 0 1 50.32 98.81" stroke="#F2EFE6" stroke-width="12" stroke-linecap="round"/><path d="M31.23 87.79 A40.00 40.00 0 0 1 31.23 32.21" stroke="#E9E224" stroke-width="12" stroke-linecap="round"/><path d="M50.32 21.19 A40.00 40.00 0 0 1 98.45 48.97" stroke="#A99CB0" stroke-width="12" stroke-linecap="round"/><circle cx="60.00" cy="60.00" r="6.00" fill="#F2EFE6"/></svg>
-          <span class="word">Cycle for Change</span>
-        </a>
-        <p style="color:#cabcd0; font-size:.92rem; max-width:30ch;">I do the miles. You do the deciding. Every one for queer communities.</p>
-      </div>
-      <div class="foot"><h4>the project</h4><ul><li><a href="#tally">The tally</a></li><li><a href="#board">Pledge a mile</a></li><li><a href="#feed">The ride feed</a></li><li><a href="#rides">Rides & fundraisers</a></li><li><a href="#vote">The orgs</a></li></ul></div>
-      <div class="foot"><h4>read</h4><ul><li><a href="/guides/">Guides</a></li><li><a href="#story">The story</a></li><li><a href="https://www.instagram.com/cycl_eforchange" target="_blank" rel="noopener noreferrer" id="footInstagram">Instagram</a></li><li><a href="#" target="_blank" rel="noopener noreferrer" id="footStrava">Strava</a></li></ul></div>
-      <div class="foot"><h4>roll with us</h4>
-        <form class="signup-row" id="emailForm" aria-label="Email signup">
-          <label for="email" class="visually-hidden">Email</label>
-          <input class="field" id="email" type="email" name="email" placeholder="your email" required autocomplete="email">
-          <button class="btn btn-y" type="submit">Join</button>
-        </form>
-        <p class="email-ok" id="emailOk"></p>
-      </div>
-    </div>
-    <div class="foot-base"><span>Cycle for Change™</span><span>every mile for queer communities</span></div>
-  </div>
+<footer class="site-foot">
+  <span>Cycle for Change</span>
+  <span>Phoenix &middot; bike only</span>
 </footer>
 
-<script src="main.js" defer></script>
+<script src="/coming-soon.js" defer></script>
 </body>
 </html>

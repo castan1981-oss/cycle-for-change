@@ -1,4 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#372C3C"/>
-  <path d="M26.09 18.89 A10.50 10.50 0 0 1 13.46 26.19" stroke="#F2EFE6" stroke-width="3.4" stroke-linecap="round"/><path d="M8.45 23.29 A10.50 10.50 0 0 1 8.45 8.71" stroke="#E9E224" stroke-width="3.4" stroke-linecap="round"/><path d="M13.46 5.81 A10.50 10.50 0 0 1 26.09 13.11" stroke="#A99CB0" stroke-width="3.4" stroke-linecap="round"/><circle cx="16.00" cy="16.00" r="1.70" fill="#F2EFE6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cycle for Change">
+  <rect width="64" height="64" rx="10" fill="#2A2E28"/>
+  <g transform="translate(32 32) scale(0.4) translate(-60 -60)">
+    <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="#E8DFD0" stroke-width="15" stroke-linecap="round"/>
+    <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="15" stroke-linecap="round"/>
+    <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#E8DFD0" stroke-width="15" stroke-linecap="round"/>
+  </g>
 </svg>
