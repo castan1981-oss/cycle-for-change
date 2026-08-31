@@ -45,14 +45,36 @@
   if (window.fetch) fetchMiles(0);
 
   /* —— the feed interrupt ——
-     Sits still for 2.5s, then a stolen broadcast: hard opacity cuts, the page
-     visible underneath on every OFF, the bed gated to match, and one dump back
-     to quiet when the picture ends. One sequence. It never replays. */
+     Sits still for 2.5s, then a stolen broadcast: hard cuts, the designed page
+     visible underneath on every OFF, the bed gated to match, one dump back to
+     quiet when the picture ends. One sequence. It never replays.
+
+     The three 10000 punches are hard cuts *between* footage, not a fallback —
+     the colour hits are part of the sequence, so they fire whether or not the
+     feed file is there. */
 
   var SLAM = 2500;
-  var CUTS = [280, 70, 180, 90, 420, 60, 140, 80, 500, 70]; // ON, OFF, ON, ...
-  var NO_VIDEO_MS = 4870;  // matches the cut we ship, for the CSS-only path
+  var TAIL_TRIM = 0.23;    // seconds trimmed off the tail so the training-load
+                           // overlay at the end of the cut never lands on screen
+  var NO_VIDEO_MS = 4640;  // matches the trimmed picture, for the CSS-only path
   var BED_VOLUME = 0.55;
+
+  // "hit" = footage, "punch" = full-frame 10000, "off" = the page, untouched.
+  var BEATS = [
+    { k: "hit",   ms: 280 },
+    { k: "off",   ms: 70 },
+    { k: "punch", ms: 180 },
+    { k: "off",   ms: 90 },
+    { k: "hit",   ms: 420 },
+    { k: "off",   ms: 60 },
+    { k: "punch", ms: 140 },
+    { k: "off",   ms: 80 },
+    { k: "hit",   ms: 500 },
+    { k: "off",   ms: 70 },
+    { k: "punch", ms: 120 },
+    { k: "off",   ms: 60 },
+    { k: "hit",   ms: null }  // runs until the picture ends
+  ];
 
   var reduce = window.matchMedia &&
                window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -81,26 +103,32 @@
     punchIdx++;
   }
 
-  function setOn(on) {
+  function setBeat(k) {
     if (done) return;
-    if (on) {
-      if (mode === "video") blast.classList.add("video-mode");
-      else showPunch();
+    if (k === "off") {
+      blast.classList.remove("on");
+      blast.classList.remove("video-mode");
+      hidePunches();
+    } else if (k === "punch" || mode !== "video") {
+      blast.classList.remove("video-mode");
+      showPunch();
       blast.classList.add("on");
     } else {
-      blast.classList.remove("on");
-      if (mode !== "video") hidePunches();
+      hidePunches();
+      blast.classList.add("video-mode");
+      blast.classList.add("on");
     }
-    if (bedOn && bed) bed.muted = !on;
+    if (bedOn && bed) bed.muted = (k === "off");
   }
 
-  function runCuts() {
+  function runBeats() {
     var i = 0;
     (function step() {
-      if (done) return;
-      if (i >= CUTS.length) { setOn(true); return; } // final ON, until it ends
-      setOn(i % 2 === 0);
-      later(function () { i++; step(); }, CUTS[i]);
+      if (done || i >= BEATS.length) return;
+      var b = BEATS[i];
+      setBeat(b.k);
+      if (b.ms == null) return; // the last hit holds until finish()
+      later(function () { i++; step(); }, b.ms);
     })();
   }
 
@@ -115,7 +143,7 @@
         bed.pause();
         bedOn = false;
       }
-    }, 20); // 10 × 20ms = 200ms
+    }, 20); // 10 x 20ms = 200ms
   }
 
   function finish() {
@@ -151,19 +179,20 @@
       mode = (vid && vid.readyState >= 2) ? "video" : "punch";
 
       if (mode === "video") {
-        vid.addEventListener("ended", finish);
+        var dur = (vid.duration && isFinite(vid.duration)) ? vid.duration : NO_VIDEO_MS / 1000;
+        var endAt = Math.max(0.5, dur - TAIL_TRIM);
+        vid.addEventListener("ended", finish); // backstop; the timer lands first
         var p = vid.play();
         if (p && p.catch) {
           p.catch(function () { mode = "punch"; }); // fall back mid-run
         }
-        var dur = (vid.duration && isFinite(vid.duration)) ? vid.duration * 1000 : NO_VIDEO_MS;
-        later(finish, dur + 600); // belt and braces if "ended" never lands
+        later(finish, endAt * 1000);
       } else {
         later(finish, NO_VIDEO_MS);
       }
 
       startBed();
-      runCuts();
+      runBeats();
     }, SLAM);
   }
 
