@@ -12,6 +12,47 @@
 > `cfc-site/index.html`, `coming-soon.css`, `coming-soon.js`, or the redirect
 > block in `netlify.toml` as part of a content run.
 
+
+## 10K kit — PRODUCTION LOCK (Sep 2026)
+If kit mockups, lookbooks, or maker files conflict with older chat, **"sand"** palette notes, slash logos, or the cream/plum/yellow Field Notes tokens below: **the kit lock wins.**
+
+### Marks (do not mix)
+| Mark | Role |
+|------|------|
+| **10K** | Wearable on kit (Outfit ExtraBold 800). Crop on jersey / vest back. Tiny on bibs, cap, socks, stem. Favicon uses 10K. |
+| **10000** | Year / story. Coming-soon site hero. Off-bike tee back only if used. **Never on bike kit.** |
+| **CYCLE / FOR / CHANGE** | Stack — hem / gripper / hangtag / site. FOR in creosote. Not a chest graphic. |
+| **CFC** | Later merch left chest only. Not on bib straps. |
+| Icons / `///` / wheel-C / graffiti | **Dead.** Do not revive. If they still appear on the live site, remove them — do not bend the kit toward them. |
+
+`10000` (site/story) and `10K` (wearable) are one hierarchy, not two brands.
+
+### Colors — Creosote house (not "sand")
+- Bone `#E8DFD0`
+- Creosote `#5C6B4A`
+- Asphalt `#2A2E28`
+- Volt `#C6FF00` (collar whip only; PMS 802 C)
+- Dust `#C4B7A2`
+
+**"Sand" is outdated naming.** Do not audit the kit or coming-soon page against a sand / black / volt-only palette. Cream / plum / acid yellow / Anton below are **paused Field Notes tokens only** — never use them to critique or redesign the kit.
+
+### Locked product (do not redesign)
+- **Jersey:** black short-sleeve **pullover, no zipper**. Bone 10K crops off edges. One volt whip at left collar (printed). Three unmarked rear pockets. House woven patch at hem only.
+- **Bibs:** quiet creosote; blank black mesh straps; tiny bone 10K + gripper patch only. No large leg type.
+- **Cap:** creosote cotton, tiny centered bone 10K. Not corduroy, not 10000, not stack, not CFC.
+- Vest / socks / bidon / stem follow the same hierarchy.
+
+### Packs
+See `kit-handoff/` (local): `KIT-LOCK.md`, `CFC-10K-CLAUDE-DESIGN.zip`, `CFC-10K-CLAUDE-FACTORY.zip`. Inside the factory zip, `maker-pack/00-LOCKED.md` is the law if anything conflicts.
+
+### Allowed next work
+1. Kill leftover `///` / sand / old cream-plum-yellow on anything still public.
+2. Men's M jersey + bibs sample / maker email from the factory pack.
+3. Real conflicts between locked kit and **live** coming-soon only — do not reopen the kit to match the holding page.
+4. No store required for the sample. Coming-soon stays until December.
+
+---
+
 You write content for cycleforchange.org. Follow these rules on every run.
 
 ## Stack (read this — it determines WHERE pages go)
@@ -91,7 +132,8 @@ You write content for cycleforchange.org. Follow these rules on every run.
 - Cross-link 2 related posts at the bottom of each post (same tag where
   possible), and link every post from the index. Add new URLs to `sitemap.xml`.
 
-## Brand (for any visual) — real tokens from cfc-site/styles.css
+## Brand (paused Field Notes only) — tokens from cfc-site/styles.css
+> Not the kit. Not the coming-soon Creosote house. Use only if Field Notes pages return after December.
 - Background cream `--cream` #F1EBDD, deeper band `--cream-2` #E7DFCE,
   card `--card` #FBF7EE, ink `--ink` #2E2433.
 - Plum `--plum` #372C3C / `--plum-2` #2A2130 (dark panels, footer, CTA).
