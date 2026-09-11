@@ -36,6 +36,9 @@
           paint("—");
           return;
         }
+        // zero miles with no rides behind it is a dead feed, not a number —
+        // keep the static count in the HTML rather than print 0 on the cover
+        if (miles === 0 && (!d.recent || !d.recent.length)) return;
         paint(Math.round(miles).toLocaleString("en-US"));
       })
       .catch(function () {
@@ -138,6 +141,17 @@
     } catch (e) { /* not seekable — the cut just runs on */ }
   }
 
+  // play() rejects with AbortError when a cue() pauses it mid-start — that's
+  // the cut working, not a block. Only NotAllowedError means no picture.
+  function playVid() {
+    var p = vid.play();
+    if (p && p.catch) {
+      p.catch(function (err) {
+        if (err && err.name === "NotAllowedError") mode = "punch";
+      });
+    }
+  }
+
   function nextHitAt(i) {
     for (var j = i + 1; j < BEATS.length; j++) {
       if (BEATS[j].k === "hit") return BEATS[j].at;
@@ -160,10 +174,7 @@
       if (k === "punch") cue(nextHitAt(i));
     } else {
       hidePunches();
-      if (vid.paused) {
-        var p = vid.play();
-        if (p && p.catch) p.catch(function () { /* fine */ });
-      }
+      if (vid.paused) playVid();
       blast.classList.add("video-mode");
       blast.classList.add("on");
     }
@@ -224,21 +235,32 @@
     }
   }
 
+  var FEED_GRACE = 1500; // on a cold load, wait this long past SLAM for the feed
+
+  function go() {
+    mode = (vid && vid.readyState >= 2) ? "video" : "punch";
+
+    if (mode === "video") {
+      vid.addEventListener("ended", finish); // backstop; the beats land first
+      cue(BEATS[0].at);
+      playVid();
+    }
+
+    startBed();
+    runBeats();
+  }
+
   if (!reduce && blast) {
     later(function () {
-      mode = (vid && vid.readyState >= 2) ? "video" : "punch";
-
-      if (mode === "video") {
-        vid.addEventListener("ended", finish); // backstop; the beats land first
-        cue(BEATS[0].at);
-        var p = vid.play();
-        if (p && p.catch) {
-          p.catch(function () { mode = "punch"; }); // fall back mid-run
-        }
+      if (vid && vid.readyState < 2 && vid.networkState === 2) {
+        // still downloading — give it a moment, then run with whatever we have
+        var went = false;
+        var once = function () { if (!went) { went = true; go(); } };
+        vid.addEventListener("canplay", once, { once: true });
+        later(once, FEED_GRACE);
+      } else {
+        go();
       }
-
-      startBed();
-      runBeats();
     }, SLAM);
   }
 
