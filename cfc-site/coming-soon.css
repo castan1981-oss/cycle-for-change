@@ -1,6 +1,9 @@
 /* Cycle for Change — coming-soon page only.
    Loaded by cfc-site/index.html and nothing else.
-   The old /styles.css is untouched; it still dresses the pages we bring back in December. */
+   The old /styles.css is untouched; it still dresses the pages we bring back in December.
+
+   Palette: bone ground, asphalt type. Creosote appears once — on FOR.
+   Nothing else on the page is green. Hairlines are dust. */
 
 :root{
   --bone:#E8DFD0;
@@ -12,8 +15,9 @@
   --body:"Space Grotesk",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
   --mono:"Space Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
 
-  --pad:clamp(20px,4vw,56px);
-  --maxw:1240px;
+  --pad:clamp(14px,2vw,28px);
+  --maxw:1480px;
+  --gutter:clamp(18px,3.4vw,52px);
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -23,13 +27,11 @@ html{-webkit-text-size-adjust:100%}
 body{
   margin:0;
   min-height:100svh;
-  display:flex;
-  flex-direction:column;
   background:var(--bone);
   color:var(--asphalt);
   font-family:var(--body);
   font-size:16px;
-  line-height:1.5;
+  line-height:1.4;
   -webkit-font-smoothing:antialiased;
 }
 
@@ -38,7 +40,7 @@ img{max-width:100%;display:block}
 a{color:inherit}
 
 :focus-visible{
-  outline:2px solid var(--creosote);
+  outline:2px solid var(--asphalt);
   outline-offset:3px;
 }
 
@@ -55,143 +57,197 @@ a{color:inherit}
 }
 .skip:focus{left:0}
 
-/* —— wordmark —— */
+/* —— the cover ——
+   One screen. Head at the top, the masthead number at the bottom, the
+   waitlist as the colophon. Nothing scrolls unless the viewport is short. */
 
-.site-head{
-  padding:var(--pad) var(--pad) 0;
+.cover{
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
   width:100%;
   max-width:var(--maxw);
   margin:0 auto;
+  padding:var(--pad);
+}
+
+.site-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
 }
 
 .mark{
   display:inline-flex;
   align-items:center;
-  gap:clamp(10px,1.2vw,14px);
   text-decoration:none;
-  font-family:var(--display);
-  font-weight:800;
-  font-size:clamp(13px,1.5vw,16px);
-  line-height:.9;
-  letter-spacing:.01em;
-  text-transform:uppercase;
 }
 .mark-glyph{
   flex:0 0 auto;
-  width:clamp(34px,3.6vw,44px);
+  width:clamp(28px,2.8vw,38px);
   height:auto;
 }
-.mark-type{display:block}
-.mark-l{display:block}
-.mark-for{color:var(--creosote)}
 
-/* —— hero —— */
-
-main{
-  flex:1 0 auto;
-  width:100%;
-  max-width:var(--maxw);
-  margin:0 auto;
-  padding:0 var(--pad);
-}
-
-.hero{
-  display:grid;
-  grid-template-columns:1.08fr .92fr;
-  gap:clamp(28px,5vw,72px);
-  align-items:center;
-  padding:clamp(24px,4vh,52px) 0 clamp(24px,4vh,44px);
-}
-
-.eyebrow{
+.meta{
   margin:0;
   font-family:var(--mono);
   font-size:11px;
   letter-spacing:.2em;
   text-transform:uppercase;
-  color:var(--creosote);
+  text-align:right;
 }
 
-.year-one{
-  margin:.18em 0 0;
+main{
+  flex:1 0 auto;
+  display:flex;
+  flex-direction:column;
+}
+
+/* —— hero grid ——
+   stack | photo
+   line  | photo
+   10000 across the whole width, clipped at the rule. */
+
+.hero{
+  flex:1 0 auto;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(260px,37%);
+  grid-template-rows:auto minmax(0,1fr) auto;
+  column-gap:var(--gutter);
+  padding-top:clamp(12px,1.8vh,24px);
+}
+
+.stack{
+  grid-column:1;
+  grid-row:1;
+  margin:0;
   font-family:var(--display);
   font-weight:800;
-  font-size:clamp(84px,15.5vw,236px);
-  line-height:.8;
-  letter-spacing:-.035em;
-  color:var(--asphalt);
-  font-variant-numeric:lining-nums tabular-nums;
+  font-size:clamp(52px,min(8.4vw,10.2svh),136px);
+  line-height:.84;
+  letter-spacing:-.03em;
+  text-transform:uppercase;
+}
+.stack span{display:block}
+.stack-for{color:var(--creosote)}
+
+/* the photo takes the height the type gives it — it never sets the row */
+.hero-photo{
+  grid-column:2;
+  grid-row:1 / span 2;
+  position:relative;
+  margin:0;
+  min-height:0;
+  overflow:hidden;
+  background:var(--bone);
+}
+.hero-photo img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:50% 62%;
+  /* black on bone: the photo prints like ink on the ground */
+  filter:grayscale(1) contrast(1.12) brightness(1.02);
+  mix-blend-mode:multiply;
+}
+
+.hero-foot{
+  grid-column:1;
+  grid-row:2;
+  align-self:end;
+  display:flex;
+  flex-direction:column;
+  gap:clamp(12px,1.8vh,20px);
+  padding:clamp(16px,2.4vh,28px) 0 clamp(4px,1vh,10px);
 }
 
 .line{
-  margin:clamp(18px,2.6vw,30px) 0 0;
-  max-width:24ch;
-  font-size:clamp(17px,1.7vw,21px);
-  line-height:1.35;
-}
-
-.rule{
-  border:0;
-  border-top:1px solid var(--dust);
-  margin:clamp(22px,3.2vw,36px) 0 0;
-  max-width:34ch;
+  margin:0;
+  max-width:22ch;
+  font-size:clamp(19px,1.9vw,27px);
+  line-height:1.22;
+  letter-spacing:-.005em;
 }
 
 .tally{
   display:flex;
   align-items:baseline;
-  gap:12px;
+  gap:14px;
   flex-wrap:wrap;
-  margin-top:14px;
+  margin:0;
 }
 .tally-num{
   font-family:var(--display);
-  font-weight:700;
-  font-size:clamp(30px,3.6vw,46px);
+  font-weight:800;
+  font-size:clamp(40px,min(5vw,6.4svh),72px);
   line-height:1;
-  letter-spacing:-.02em;
+  letter-spacing:-.025em;
   font-variant-numeric:lining-nums tabular-nums;
 }
 .tally-label{
   font-family:var(--mono);
   font-size:11px;
-  letter-spacing:.16em;
+  letter-spacing:.18em;
   text-transform:uppercase;
-  color:var(--creosote);
 }
 
-.hero-photo{
-  background:var(--dust);
+/* the year, printed to the edge: the digits sit on the rule and the
+   bottom of them is cut by it. Cropped, not floating. */
+.year-wrap{
+  grid-column:1 / -1;
+  grid-row:3;
   overflow:hidden;
+  border-bottom:1px solid var(--asphalt);
+  margin-top:clamp(8px,1.6vh,18px);
 }
-.hero-photo img{
-  width:100%;
-  height:auto;
-  aspect-ratio:4/5;
-  max-height:min(62svh,560px);
-  object-fit:cover;
-  object-position:50% 56%;
-  filter:saturate(.6) contrast(1.06) brightness(.97);
+.year-one{
+  margin:0 0 -.075em -.04em;
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(104px,min(23.5vw,25svh),372px);
+  line-height:.8;
+  letter-spacing:-.045em;
+  font-variant-numeric:lining-nums tabular-nums;
+  white-space:nowrap;
 }
 
-/* —— waitlist —— */
+/* —— waitlist (the colophon) —— */
 
 .waitlist{
-  border-top:1px solid var(--dust);
-  padding:clamp(22px,3vw,32px) 0 clamp(24px,4vw,40px);
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:end;
+  column-gap:var(--gutter);
+  row-gap:10px;
+  padding:clamp(12px,1.8vh,22px) 0 0;
+}
+
+.eyebrow{
+  grid-column:2;
+  grid-row:1;
+  margin:0 0 9px;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  text-align:right;
 }
 
 .wl-form{
+  grid-column:1;
+  grid-row:1;
   display:flex;
   align-items:flex-end;
-  gap:clamp(16px,2.4vw,28px);
+  gap:clamp(14px,2vw,26px);
   flex-wrap:wrap;
-  margin-top:18px;
-  max-width:520px;
+  max-width:560px;
 }
 
 .wl-field{
-  flex:1 1 240px;
+  flex:1 1 220px;
   min-width:0;
   display:flex;
   flex-direction:column;
@@ -201,9 +257,8 @@ main{
 .wl-label{
   font-family:var(--mono);
   font-size:11px;
-  letter-spacing:.16em;
+  letter-spacing:.18em;
   text-transform:uppercase;
-  color:var(--creosote);
 }
 
 .wl-input{
@@ -215,12 +270,12 @@ main{
   border-radius:0;
   padding:0 0 7px;
   font-family:var(--body);
-  font-size:17px;
-  line-height:1.4;
+  font-size:18px;
+  line-height:1.3;
   color:var(--asphalt);
   appearance:none;
 }
-.wl-input:focus{outline:0;border-bottom-color:var(--creosote)}
+.wl-input:focus{outline:0;border-bottom-width:2px;padding-bottom:6px}
 .wl-input:focus-visible{outline:0}
 
 .wl-btn{
@@ -233,24 +288,23 @@ main{
   padding:0 0 7px;
   font-family:var(--mono);
   font-size:11px;
-  line-height:1.4;
+  line-height:1.3;
   letter-spacing:.18em;
   text-transform:uppercase;
   color:var(--asphalt);
   cursor:pointer;
 }
-.wl-btn:hover{color:var(--creosote);border-bottom-color:var(--creosote)}
-.wl-btn[disabled]{opacity:.5;cursor:default}
+.wl-btn:hover{border-bottom-width:2px;padding-bottom:6px}
+.wl-btn[disabled]{opacity:.45;cursor:default}
 
 .wl-msg{
   flex:1 0 100%;
-  margin:4px 0 0;
+  margin:2px 0 0;
   min-height:1.2em;
   font-family:var(--mono);
   font-size:11px;
   letter-spacing:.14em;
   text-transform:uppercase;
-  color:var(--creosote);
 }
 
 .hp{position:absolute;left:-9999px}
@@ -258,36 +312,62 @@ main{
 /* —— footer —— */
 
 .site-foot{
-  flex:0 0 auto;
-  width:100%;
-  max-width:var(--maxw);
-  margin:0 auto;
-  padding:0 var(--pad) var(--pad);
   display:flex;
   justify-content:space-between;
   gap:16px;
   flex-wrap:wrap;
+  margin-top:clamp(12px,1.6vh,20px);
+  padding-top:11px;
   border-top:1px solid var(--dust);
-  padding-top:18px;
   font-family:var(--mono);
   font-size:11px;
   letter-spacing:.14em;
   text-transform:uppercase;
-  color:var(--creosote);
 }
 
-/* —— mobile: photo first, then the number —— */
+/* —— tall screens: let the type take the room —— */
+
+@media (min-height:900px) and (min-width:761px){
+  .stack{font-size:clamp(52px,min(8.4vw,11svh),160px)}
+  .year-one{font-size:clamp(104px,min(23.5vw,27svh),400px)}
+}
+
+/* —— narrow: one column, photo between the name and the number —— */
 
 @media (max-width:760px){
+  .cover{padding:14px 16px 16px}
   .hero{
     grid-template-columns:1fr;
-    padding-top:clamp(24px,4vh,36px);
+    grid-template-rows:auto auto auto auto;
+    padding-top:12px;
   }
-  .hero-photo{order:-1}
-  .hero-photo img{aspect-ratio:4/3;object-position:50% 58%}
-  .line{max-width:30ch}
-  .rule{max-width:none}
-  .wl-form{max-width:none}
+  .stack{
+    grid-row:1;
+    font-size:clamp(58px,17.5vw,96px);
+  }
+  .hero-photo{
+    grid-column:1;
+    grid-row:2;
+    margin-top:14px;
+    max-height:36svh;
+    aspect-ratio:4/3;
+  }
+  .hero-foot{
+    grid-column:1;
+    grid-row:3;
+    padding:18px 0 8px;
+  }
+  .line{max-width:26ch;font-size:19px}
+  .year-wrap{grid-row:4;margin-top:4px}
+  .year-one{font-size:clamp(96px,31vw,150px);margin-left:-.03em}
+
+  .waitlist{
+    grid-template-columns:1fr;
+    row-gap:14px;
+    padding-top:16px;
+  }
+  .eyebrow{grid-column:1;grid-row:1;text-align:left;margin:0}
+  .wl-form{grid-row:2;max-width:none}
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -323,7 +403,9 @@ main{
   height:100%;
   object-fit:cover;
   opacity:0;
-  filter:contrast(1.35) saturate(.5) brightness(.92);
+  /* pushed in a touch so nothing printed at the frame edge survives the cut */
+  transform:scale(1.08);
+  filter:contrast(1.4) saturate(.35) brightness(.9);
 }
 /* only when a real feed file is present and playing */
 .blast.video-mode .blast-vid{opacity:1}
@@ -356,7 +438,7 @@ main{
 .blast-grain{
   position:absolute;
   inset:0;
-  opacity:.22;
+  opacity:.26;
   mix-blend-mode:overlay;
   pointer-events:none;
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/></filter><rect width='160' height='160' filter='url(%23n)' opacity='0.6'/></svg>");

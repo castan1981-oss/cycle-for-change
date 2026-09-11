@@ -31,6 +31,8 @@
 
 <a class="skip" href="#main">Skip to content</a>
 
+<div class="cover">
+
 <header class="site-head">
   <a class="mark" href="/" aria-label="Cycle for Change home">
     <svg class="mark-glyph" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
@@ -39,37 +41,38 @@
       <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
       <circle cx="60" cy="60" r="6" fill="#2A2E28"/>
     </svg>
-    <span class="mark-type">
-      <span class="mark-l">Cycle</span><span class="mark-l mark-for">For</span><span class="mark-l">Change</span>
-    </span>
   </a>
+  <p class="meta">10000 &middot; 2027 &middot; All on the bike</p>
 </header>
 
 <main id="main">
 
-  <section class="hero" aria-labelledby="year-one">
-    <div class="hero-copy">
-      <p class="eyebrow">10000 &middot; 2027 &middot; All on the bike</p>
+  <section class="hero" aria-labelledby="stack">
+    <h1 class="stack" id="stack">
+      <span>Cycle</span>
+      <span class="stack-for">For</span>
+      <span>Change</span>
+    </h1>
 
-      <h1 class="year-one" id="year-one">10000</h1>
+    <figure class="hero-photo">
+      <img src="/hero-poster.jpg" alt="Riding view over the handlebars, desert road ahead, low sun on the horizon." width="1080" height="1920" decoding="async" fetchpriority="high">
+    </figure>
 
+    <div class="hero-foot">
       <p class="line">I do the miles. You decide who they&rsquo;re for.</p>
-
-      <hr class="rule">
-
-      <div class="tally">
+      <p class="tally">
         <span class="tally-num" data-cur>2,396</span>
         <span class="tally-label">miles since June 1</span>
-      </div>
+      </p>
     </div>
 
-    <div class="hero-photo">
-      <img src="/hero-poster.jpg" alt="Riding view over the handlebars, desert road ahead, low sun on the horizon." width="1080" height="1920" decoding="async" fetchpriority="high">
+    <div class="year-wrap">
+      <p class="year-one" aria-label="10000">10000</p>
     </div>
   </section>
 
   <section class="waitlist" aria-labelledby="waitlist-head">
-    <p class="eyebrow" id="waitlist-head">Site in December. Year starts January 1.</p>
+    <p class="eyebrow" id="waitlist-head">Site in December. Year starts January&nbsp;1.</p>
 
     <form class="wl-form" name="waitlist" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="waitlistForm">
       <input type="hidden" name="form-name" value="waitlist">
@@ -89,6 +92,8 @@
   <span>Cycle for Change</span>
   <span>Phoenix &middot; bike only</span>
 </footer>
+
+</div>
 
 <div class="blast" id="blast" aria-hidden="true">
   <video id="blastVid" class="blast-vid" muted playsinline preload="auto" disablepictureinpicture>
