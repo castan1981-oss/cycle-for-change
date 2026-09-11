@@ -14,6 +14,15 @@
 
 
 ## 10K kit — PRODUCTION LOCK (Sep 2026)
+> **Update 2026-09-10 (after this lock was written): the lock was reopened.** The maker-pack
+> specs and both lookbooks no longer match the direction. New direction: the kit adopts the
+> live coming-soon site's identity — bone body, Outfit as the mark face, creosote back in
+> (bibs, collar, pocket panel), asphalt 10K, volt as a single slash never adjacent to
+> creosote, wheel logo kept. Surviving from the explored all-black direction: the crop,
+> off-register volt, and "YOU DECIDE" as the back-hem line. Cap treatment undecided. Maker
+> email on hold until the pack is rebuilt. Treat the locked specs below as the *previous*
+> state until the pack is rebuilt and this section is rewritten.
+
 If kit mockups, lookbooks, or maker files conflict with older chat, **"sand"** palette notes, slash logos, or the cream/plum/yellow Field Notes tokens below: **the kit lock wins.**
 
 ### Marks (do not mix)
@@ -107,7 +116,8 @@ You write content for cycleforchange.org. Follow these rules on every run.
   "excited to share."
 
 ## Mission first
-- Every page ties back to the pledge (7,500 miles; swim/bike/run, 2027) and the cause.
+- Every page ties back to the pledge (10,000 miles, all on the bike, 2027) and the cause.
+  The old 7,500-mile swim/bike/run framing is retired — never write it.
 - At least one internal link toward the pledge. The pledge form is the `#board`
   section of the homepage, so the canonical internal link is `/#board`
   (there is no `/pledge` page on this site).
