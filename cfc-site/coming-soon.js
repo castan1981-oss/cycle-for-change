@@ -12,7 +12,13 @@
 
   var ENDPOINTS = ["/api/strava", "/.netlify/functions/strava"];
 
-  /* —— live miles since June 1 —— */
+  /* —— live miles since June 1 ——
+     Painted on load, then re-checked every minute while the tab is visible
+     and whenever it comes back into view. A ride that lands on Strava is on
+     the cover within about a minute of the upload. */
+
+  var POLL_MS = 60 * 1000;
+  var polling = false;
 
   function paint(text) {
     var els = document.querySelectorAll("[data-cur]");
@@ -20,33 +26,39 @@
   }
 
   function fetchMiles(i) {
-    if (i >= ENDPOINTS.length) return; // leave the static fallback in the HTML
-    fetch(ENDPOINTS[i], { headers: { Accept: "application/json" } })
+    if (i >= ENDPOINTS.length) return Promise.resolve(); // leave the static fallback in the HTML
+    return fetch(ENDPOINTS[i], { headers: { Accept: "application/json" }, cache: "no-store" })
       .then(function (res) {
         if (!res.ok) throw new Error("bad status");
         return res.json();
       })
       .then(function (d) {
-        if (!d || d.configured === false) {
-          paint("—"); // a dash, not a broken layout
-          return;
-        }
+        if (!d || d.configured === false) return;   // keep the static count
+        if (d.error) return;                          // a broken feed is not 0 miles
         var miles = typeof d.miles === "number" ? d.miles : d.totalMiles;
-        if (typeof miles !== "number" || !isFinite(miles)) {
-          paint("—");
-          return;
-        }
-        // zero miles with no rides behind it is a dead feed, not a number —
-        // keep the static count in the HTML rather than print 0 on the cover
+        if (typeof miles !== "number" || !isFinite(miles)) return;
+        // zero miles with no rides behind it is a dead feed, not a number
         if (miles === 0 && (!d.recent || !d.recent.length)) return;
         paint(Math.round(miles).toLocaleString("en-US"));
       })
       .catch(function () {
-        fetchMiles(i + 1);
+        return fetchMiles(i + 1);
       });
   }
 
-  if (window.fetch) fetchMiles(0);
+  function refreshMiles() {
+    if (polling || document.hidden) return;
+    polling = true;
+    fetchMiles(0).then(function () { polling = false; }, function () { polling = false; });
+  }
+
+  if (window.fetch) {
+    refreshMiles();
+    setInterval(refreshMiles, POLL_MS);
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden) refreshMiles();
+    });
+  }
 
   /* —— the feed interrupt ——
      Sits still for 2.5s, then a stolen broadcast: jump cuts, dropouts, the

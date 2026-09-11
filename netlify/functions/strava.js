@@ -1,41 +1,102 @@
-// GET /.netlify/functions/strava
-// Returns live mileage tally, chart points, and recent activity feed from Strava.
+// GET /.netlify/functions/strava  (also /api/strava)
+// Live mileage tally, chart points and recent activity feed from Strava.
+//
+// How it stays current without hammering Strava:
+//   - The computed tally lives in a Netlify Blob ("cfc-strava" / "tally"), so
+//     every function instance sees the same number.
+//   - The Strava webhook (strava-webhook.js) marks that blob dirty the moment
+//     a ride is created, updated or deleted. Nothing is fetched there.
+//   - The next read of this function recomputes when the blob is dirty or
+//     older than FRESH_MS, then writes it back. The page polls every minute,
+//     so an uploaded ride lands on the site within about a minute.
+//   - Errors are surfaced (reason) and backed off, never reported as 0 miles.
 
-const GOAL = 7500;
+const GOAL = 7500; // legacy field; the coming-soon page ignores goal and pct
 const METERS_TO_MILES = 0.000621371;
 const SEASON_START = "2026-06-01";
-const CACHE_MS = 30 * 60 * 1000;
+const FRESH_MS = 20 * 60 * 1000;      // recompute anyway if the blob is older than this
+const ERROR_BACKOFF_MS = 5 * 60 * 1000; // after a Strava error, don't retry for this long
 const MAX_PAGES = 20;
+
+const STORE = "cfc-strava";
+const KEY = "tally";
 
 const BIKE = new Set(["Ride", "VirtualRide", "GravelRide", "MountainBikeRide"]);
 const RUN = new Set(["Run", "TrailRun"]);
 const SWIM = new Set(["Swim", "OpenWaterSwim"]);
 
-let cache = { ts: 0, data: null };
+// in-memory copy for the life of this instance; the blob is the truth
+let memo = null;
 
 exports.bustCache = () => {
-  cache = { ts: 0, data: null };
+  memo = null;
 };
+
+async function readBlob() {
+  try {
+    const { getStore } = require("@netlify/blobs");
+    const raw = await getStore(STORE).get(KEY, { type: "json" });
+    return raw && typeof raw === "object" ? raw : null;
+  } catch (_) {
+    return null;
+  }
+}
+
+async function writeBlob(record) {
+  memo = record;
+  try {
+    const { getStore } = require("@netlify/blobs");
+    await getStore(STORE).setJSON(KEY, record);
+  } catch (_) {
+    /* in-memory only when blobs are unavailable */
+  }
+}
 
 exports.handler = async (event) => {
   const headers = {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
-    "Cache-Control": "public, max-age=900",
+    // browsers always revalidate; the edge holds it for 30s so a page poll
+    // from many visitors is one function call, not many
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Netlify-CDN-Cache-Control": "public, s-maxage=30, stale-while-revalidate=30",
   };
 
   if (event.httpMethod === "OPTIONS") {
     return { statusCode: 204, headers, body: "" };
   }
 
-  if (Date.now() - cache.ts < CACHE_MS && cache.data) {
-    return { statusCode: 200, headers, body: JSON.stringify({ ...cache.data, cached: true }) };
-  }
+  const now = Date.now();
+  const record = (await readBlob()) || memo;
+  const have = record && record.data;
+
+  const fresh =
+    have &&
+    !record.dirty &&
+    now - (record.ts || 0) < FRESH_MS;
+  // after a failure, hold off even when there is no data yet — a dead token
+  // must not turn every page poll into a Strava call
+  const backingOff =
+    record &&
+    record.errorTs &&
+    now - record.errorTs < ERROR_BACKOFF_MS;
 
   const { STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, STRAVA_REFRESH_TOKEN } = process.env;
   const BONUS = parseFloat(process.env.MANUAL_BONUS_MILES || "0");
+  const fallback = have ? record.data : staticFallback(BONUS);
 
-  const fallback = cache.data || staticFallback(BONUS);
+  if (fresh || backingOff) {
+    return {
+      statusCode: 200,
+      headers,
+      body: JSON.stringify({
+        ...fallback,
+        configured: true,
+        cached: true,
+        ...(record.error ? { error: true, reason: record.error } : {}),
+      }),
+    };
+  }
 
   if (!STRAVA_CLIENT_ID || !STRAVA_CLIENT_SECRET || !STRAVA_REFRESH_TOKEN) {
     return {
@@ -46,80 +107,104 @@ exports.handler = async (event) => {
   }
 
   try {
-    const token = await refreshAccessToken(
-      STRAVA_CLIENT_ID,
-      STRAVA_CLIENT_SECRET,
-      STRAVA_REFRESH_TOKEN
+    const data = await compute(
+      { STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, STRAVA_REFRESH_TOKEN },
+      BONUS
     );
-    if (!token.access_token) throw new Error("no access token");
-
-    const after = Math.floor(new Date(`${SEASON_START}T00:00:00Z`).getTime() / 1000);
-    const activities = await fetchAllActivities(token.access_token, after);
-    const mapped = activities
-      .map((a) => {
-        const discipline = mapDiscipline(a);
-        if (!discipline) return null;
-        const miles = (a.distance || 0) * METERS_TO_MILES;
-        return {
-          id: a.id,
-          discipline,
-          title: a.name || "Untitled",
-          miles: Math.round(miles * 10) / 10,
-          note: a.description || "",
-          date: a.start_date || a.start_date_local,
-          start: new Date(a.start_date || a.start_date_local).getTime(),
-        };
-      })
-      .filter(Boolean);
-
-    mapped.sort((a, b) => b.start - a.start);
-
-    const totalMiles = mapped.reduce((s, a) => s + a.miles, 0) + BONUS;
-    const pct = Math.min(100, Math.round((totalMiles / GOAL) * 1000) / 10);
-    const chartPoints = buildChartPoints(mapped, BONUS);
-    const recent = mapped.slice(0, 6).map(({ discipline, title, miles, note, date }) => ({
-      discipline,
-      title,
-      miles,
-      note,
-      date,
-    }));
-
-    let profileUrl = null;
-    try {
-      const athleteRes = await fetch("https://www.strava.com/api/v3/athlete", {
-        headers: { Authorization: `Bearer ${token.access_token}` },
-      });
-      if (athleteRes.ok) {
-        const athlete = await athleteRes.json();
-        if (athlete.id) profileUrl = `https://www.strava.com/athletes/${athlete.id}`;
-      }
-    } catch (_) {
-      /* optional */
-    }
-
-    const data = {
-      totalMiles: Math.round(totalMiles),
-      miles: Math.round(totalMiles * 10) / 10,
-      goal: GOAL,
-      pct,
-      chartPoints,
-      recent,
-      profileUrl,
-      configured: true,
-      updated: new Date().toISOString(),
-    };
-
-    cache = { ts: Date.now(), data };
+    await writeBlob({ ts: now, dirty: false, data });
     return { statusCode: 200, headers, body: JSON.stringify(data) };
   } catch (err) {
+    const reason = (err && err.message) || "strava error";
+    // keep whatever we had, remember the failure, back off
+    await writeBlob({
+      ts: record && record.ts ? record.ts : 0,
+      dirty: true,
+      data: have ? record.data : null,
+      error: reason,
+      errorTs: now,
+    });
     return {
       statusCode: 200,
       headers,
-      body: JSON.stringify({ ...fallback, configured: true, error: true }),
+      body: JSON.stringify({ ...fallback, configured: true, error: true, reason }),
     };
   }
 };
+
+// exported so the webhook can nudge without importing the whole handler
+exports.markDirty = async (why) => {
+  const record = (await readBlob()) || memo || {};
+  await writeBlob({ ...record, dirty: true, dirtyAt: Date.now(), dirtyWhy: why || "" });
+};
+
+async function compute(env, bonus) {
+  const token = await refreshAccessToken(
+    env.STRAVA_CLIENT_ID,
+    env.STRAVA_CLIENT_SECRET,
+    env.STRAVA_REFRESH_TOKEN
+  );
+  if (!token.access_token) {
+    throw new Error("token refresh failed" + (token.message ? `: ${token.message}` : ""));
+  }
+
+  const after = Math.floor(new Date(`${SEASON_START}T00:00:00Z`).getTime() / 1000);
+  const activities = await fetchAllActivities(token.access_token, after);
+  const mapped = activities
+    .map((a) => {
+      const discipline = mapDiscipline(a);
+      if (!discipline) return null;
+      const miles = (a.distance || 0) * METERS_TO_MILES;
+      return {
+        id: a.id,
+        discipline,
+        title: a.name || "Untitled",
+        miles: Math.round(miles * 10) / 10,
+        note: a.description || "",
+        date: a.start_date || a.start_date_local,
+        start: new Date(a.start_date || a.start_date_local).getTime(),
+      };
+    })
+    .filter(Boolean);
+
+  mapped.sort((a, b) => b.start - a.start);
+
+  const totalMiles = mapped.reduce((s, a) => s + a.miles, 0) + bonus;
+  const pct = Math.min(100, Math.round((totalMiles / GOAL) * 1000) / 10);
+  const chartPoints = buildChartPoints(mapped, bonus);
+  const recent = mapped.slice(0, 6).map(({ discipline, title, miles, note, date }) => ({
+    discipline,
+    title,
+    miles,
+    note,
+    date,
+  }));
+
+  let profileUrl = null;
+  try {
+    const athleteRes = await fetch("https://www.strava.com/api/v3/athlete", {
+      headers: { Authorization: `Bearer ${token.access_token}` },
+    });
+    if (athleteRes.ok) {
+      const athlete = await athleteRes.json();
+      if (athlete.id) profileUrl = `https://www.strava.com/athletes/${athlete.id}`;
+    }
+  } catch (_) {
+    /* optional */
+  }
+
+  return {
+    totalMiles: Math.round(totalMiles),
+    miles: Math.round(totalMiles * 10) / 10,
+    goal: GOAL,
+    pct,
+    chartPoints,
+    recent,
+    rides: mapped.length,
+    profileUrl,
+    configured: true,
+    updated: new Date().toISOString(),
+  };
+}
 
 async function refreshAccessToken(clientId, clientSecret, refreshToken) {
   const res = await fetch("https://www.strava.com/oauth/token", {
@@ -140,7 +225,11 @@ async function fetchAllActivities(accessToken, after) {
   for (let page = 1; page <= MAX_PAGES; page++) {
     const url = `https://www.strava.com/api/v3/athlete/activities?after=${after}&per_page=200&page=${page}`;
     const res = await fetch(url, { headers: { Authorization: `Bearer ${accessToken}` } });
-    if (!res.ok) break;
+    if (!res.ok) {
+      // 403 here means the token was issued without activity:read_all —
+      // re-authorise with that scope and update STRAVA_REFRESH_TOKEN
+      throw new Error(`strava activities ${res.status}`);
+    }
     const acts = await res.json();
     if (!Array.isArray(acts) || acts.length === 0) break;
     all.push(...acts);
@@ -196,6 +285,7 @@ function staticFallback(bonus) {
       { x: 100, y: bonus },
     ],
     recent: [],
+    rides: 0,
     profileUrl: null,
     configured: false,
     updated: new Date().toISOString(),
