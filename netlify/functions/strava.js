@@ -84,10 +84,14 @@ exports.handler = async (event) => {
   const BONUS = parseFloat(process.env.MANUAL_BONUS_MILES || "0");
   const fallback = have ? record.data : staticFallback(BONUS);
 
+  // never let an error answer sit in the edge cache: the moment the feed
+  // recovers, the next poll should see it
+  const noEdge = { ...headers, "Netlify-CDN-Cache-Control": "no-store" };
+
   if (fresh || backingOff) {
     return {
       statusCode: 200,
-      headers,
+      headers: record.error ? noEdge : headers,
       body: JSON.stringify({
         ...fallback,
         configured: true,
@@ -121,7 +125,7 @@ exports.handler = async (event) => {
     });
     return {
       statusCode: 200,
-      headers,
+      headers: noEdge,
       body: JSON.stringify({ ...fallback, configured: true, error: true, reason }),
     };
   }
