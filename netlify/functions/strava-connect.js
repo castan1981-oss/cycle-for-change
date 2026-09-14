@@ -38,11 +38,10 @@ exports.handler = async (event) => {
   if (q.code || q.error) {
     if (q.error) return page(400, `Strava said: ${escapeHtml(q.error)}. Nothing changed.`);
 
-    const state = await readState();
-    if (!state || !q.state || q.state !== state.nonce || Date.now() - state.ts > STATE_TTL_MS) {
+    const state = await takeState(q.state);
+    if (!state) {
       return page(400, "That link has expired. Start again from /.netlify/functions/strava-connect.");
     }
-    await clearState();
 
     const granted = String(q.scope || "");
     if (!/activity:read_all/.test(granted)) {
@@ -99,7 +98,7 @@ exports.handler = async (event) => {
   if (q.token && !gated) return page(403, "Bad token.");
 
   const nonce = randomId();
-  await writeState({ nonce, ts: Date.now(), gated });
+  await putState(nonce, { ts: Date.now(), gated });
 
   const url =
     "https://www.strava.com/oauth/authorize" +
@@ -127,29 +126,41 @@ async function currentAthleteId() {
   }
 }
 
-async function readState() {
+// Pending nonces live in one blob as a small map, so a second request for the
+// start URL (a prefetch, a double click) can't wipe out the first one's state.
+async function loadStates() {
   try {
-    const { getStore } = require("@netlify/blobs");
-    return await getStore(STORE).get(STATE_KEY, { type: "json" });
+    const raw = await auth.store().get(STATE_KEY, { type: "json" });
+    return raw && typeof raw === "object" ? raw : {};
   } catch (_) {
-    return null;
+    return {};
   }
 }
-async function writeState(s) {
+async function saveStates(map) {
   try {
-    const { getStore } = require("@netlify/blobs");
-    await getStore(STORE).setJSON(STATE_KEY, s);
+    await auth.store().setJSON(STATE_KEY, map);
   } catch (_) {
     /* without blobs the callback can't verify state; it will refuse */
   }
 }
-async function clearState() {
-  try {
-    const { getStore } = require("@netlify/blobs");
-    await getStore(STORE).delete(STATE_KEY);
-  } catch (_) {
-    /* fine */
+async function putState(nonce, s) {
+  const map = await loadStates();
+  const now = Date.now();
+  for (const k of Object.keys(map)) {
+    if (!map[k] || now - map[k].ts > STATE_TTL_MS) delete map[k];
   }
+  map[nonce] = s;
+  await saveStates(map);
+}
+// one-shot: returns the state for this nonce and removes it
+async function takeState(nonce) {
+  if (!nonce) return null;
+  const map = await loadStates();
+  const s = map[nonce];
+  if (!s || Date.now() - s.ts > STATE_TTL_MS) return null;
+  delete map[nonce];
+  await saveStates(map);
+  return s;
 }
 
 function randomId() {
