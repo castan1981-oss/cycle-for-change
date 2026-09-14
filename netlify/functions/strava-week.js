@@ -8,6 +8,8 @@ const METERS_TO_FEET = 3.28084;
 const MS_TO_MPH = 2.23694;
 const WINDOW_DAYS = 7;
 
+const auth = require("./lib/strava-auth");
+
 const BIKE = new Set(["Ride", "VirtualRide", "GravelRide", "MountainBikeRide"]);
 const RUN = new Set(["Run", "TrailRun"]);
 const SWIM = new Set(["Swim", "OpenWaterSwim"]);
@@ -22,17 +24,15 @@ exports.handler = async (event) => {
     return { statusCode: 204, headers, body: "" };
   }
 
-  const { STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, STRAVA_REFRESH_TOKEN } = process.env;
-  if (!STRAVA_CLIENT_ID || !STRAVA_CLIENT_SECRET || !STRAVA_REFRESH_TOKEN) {
+  if (!auth.configured()) {
     return { statusCode: 200, headers, body: JSON.stringify({ configured: false, rides: [] }) };
   }
 
   try {
-    const token = await refreshAccessToken(STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, STRAVA_REFRESH_TOKEN);
-    if (!token.access_token) throw new Error("no access token");
+    const accessToken = await auth.getAccessToken();
 
     const after = Math.floor(Date.now() / 1000) - WINDOW_DAYS * 24 * 3600;
-    const activities = await fetchActivities(token.access_token, after);
+    const activities = await fetchActivities(accessToken, after);
 
     const rides = [];
     for (const a of activities) {
@@ -113,19 +113,6 @@ exports.handler = async (event) => {
   }
 };
 
-async function refreshAccessToken(clientId, clientSecret, refreshToken) {
-  const res = await fetch("https://www.strava.com/oauth/token", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      client_id: clientId,
-      client_secret: clientSecret,
-      grant_type: "refresh_token",
-      refresh_token: refreshToken,
-    }),
-  });
-  return res.json();
-}
 
 async function fetchActivities(accessToken, after) {
   const url = `https://www.strava.com/api/v3/athlete/activities?after=${after}&per_page=100&page=1`;

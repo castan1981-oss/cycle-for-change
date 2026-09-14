@@ -21,6 +21,8 @@ const MAX_PAGES = 20;
 const STORE = "cfc-strava";
 const KEY = "tally";
 
+const auth = require("./lib/strava-auth");
+
 const BIKE = new Set(["Ride", "VirtualRide", "GravelRide", "MountainBikeRide"]);
 const RUN = new Set(["Run", "TrailRun"]);
 const SWIM = new Set(["Swim", "OpenWaterSwim"]);
@@ -81,7 +83,6 @@ exports.handler = async (event) => {
     record.errorTs &&
     now - record.errorTs < ERROR_BACKOFF_MS;
 
-  const { STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, STRAVA_REFRESH_TOKEN } = process.env;
   const BONUS = parseFloat(process.env.MANUAL_BONUS_MILES || "0");
   const fallback = have ? record.data : staticFallback(BONUS);
 
@@ -98,7 +99,7 @@ exports.handler = async (event) => {
     };
   }
 
-  if (!STRAVA_CLIENT_ID || !STRAVA_CLIENT_SECRET || !STRAVA_REFRESH_TOKEN) {
+  if (!auth.configured()) {
     return {
       statusCode: 200,
       headers,
@@ -107,10 +108,7 @@ exports.handler = async (event) => {
   }
 
   try {
-    const data = await compute(
-      { STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, STRAVA_REFRESH_TOKEN },
-      BONUS
-    );
+    const data = await compute(BONUS);
     await writeBlob({ ts: now, dirty: false, data });
     return { statusCode: 200, headers, body: JSON.stringify(data) };
   } catch (err) {
@@ -137,18 +135,11 @@ exports.markDirty = async (why) => {
   await writeBlob({ ...record, dirty: true, dirtyAt: Date.now(), dirtyWhy: why || "" });
 };
 
-async function compute(env, bonus) {
-  const token = await refreshAccessToken(
-    env.STRAVA_CLIENT_ID,
-    env.STRAVA_CLIENT_SECRET,
-    env.STRAVA_REFRESH_TOKEN
-  );
-  if (!token.access_token) {
-    throw new Error("token refresh failed" + (token.message ? `: ${token.message}` : ""));
-  }
+async function compute(bonus) {
+  const accessToken = await auth.getAccessToken();
 
   const after = Math.floor(new Date(`${SEASON_START}T00:00:00Z`).getTime() / 1000);
-  const activities = await fetchAllActivities(token.access_token, after);
+  const activities = await fetchAllActivities(accessToken, after);
   const mapped = activities
     .map((a) => {
       const discipline = mapDiscipline(a);
@@ -182,7 +173,7 @@ async function compute(env, bonus) {
   let profileUrl = null;
   try {
     const athleteRes = await fetch("https://www.strava.com/api/v3/athlete", {
-      headers: { Authorization: `Bearer ${token.access_token}` },
+      headers: { Authorization: `Bearer ${accessToken}` },
     });
     if (athleteRes.ok) {
       const athlete = await athleteRes.json();
@@ -206,20 +197,6 @@ async function compute(env, bonus) {
   };
 }
 
-async function refreshAccessToken(clientId, clientSecret, refreshToken) {
-  const res = await fetch("https://www.strava.com/oauth/token", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      client_id: clientId,
-      client_secret: clientSecret,
-      grant_type: "refresh_token",
-      refresh_token: refreshToken,
-    }),
-  });
-  return res.json();
-}
-
 async function fetchAllActivities(accessToken, after) {
   const all = [];
   for (let page = 1; page <= MAX_PAGES; page++) {
@@ -227,7 +204,7 @@ async function fetchAllActivities(accessToken, after) {
     const res = await fetch(url, { headers: { Authorization: `Bearer ${accessToken}` } });
     if (!res.ok) {
       // 403 here means the token was issued without activity:read_all —
-      // re-authorise with that scope and update STRAVA_REFRESH_TOKEN
+      // re-authorise with that scope via /.netlify/functions/strava-connect
       throw new Error(`strava activities ${res.status}`);
     }
     const acts = await res.json();
