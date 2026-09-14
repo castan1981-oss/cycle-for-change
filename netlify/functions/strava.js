@@ -36,8 +36,7 @@ exports.bustCache = () => {
 
 async function readBlob() {
   try {
-    const { getStore } = require("@netlify/blobs");
-    const raw = await getStore(STORE).get(KEY, { type: "json" });
+    const raw = await auth.store().get(KEY, { type: "json" });
     return raw && typeof raw === "object" ? raw : null;
   } catch (_) {
     return null;
@@ -47,8 +46,7 @@ async function readBlob() {
 async function writeBlob(record) {
   memo = record;
   try {
-    const { getStore } = require("@netlify/blobs");
-    await getStore(STORE).setJSON(KEY, record);
+    await auth.store().setJSON(KEY, record);
   } catch (_) {
     /* in-memory only when blobs are unavailable */
   }

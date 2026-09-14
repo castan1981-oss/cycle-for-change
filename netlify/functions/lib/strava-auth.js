@@ -12,10 +12,16 @@ const KEY = "auth";
 
 let memo = null;
 
+// Blobs are eventually consistent by default; every read here must see the
+// write that just happened on another instance, so ask for strong reads.
+function store() {
+  const { getStore } = require("@netlify/blobs");
+  return getStore({ name: STORE, consistency: "strong" });
+}
+
 async function readAuth() {
   try {
-    const { getStore } = require("@netlify/blobs");
-    const raw = await getStore(STORE).get(KEY, { type: "json" });
+    const raw = await store().get(KEY, { type: "json" });
     if (raw && raw.refresh_token) {
       memo = raw;
       return raw;
@@ -29,8 +35,7 @@ async function readAuth() {
 async function saveAuth(auth) {
   memo = auth;
   try {
-    const { getStore } = require("@netlify/blobs");
-    await getStore(STORE).setJSON(KEY, auth);
+    await store().setJSON(KEY, auth);
   } catch (_) {
     /* memory only */
   }
@@ -103,4 +108,4 @@ async function exchangeCode(code) {
   return res.json();
 }
 
-module.exports = { readAuth, saveAuth, getAccessToken, exchangeCode, configured, env };
+module.exports = { readAuth, saveAuth, getAccessToken, exchangeCode, configured, env, store };
