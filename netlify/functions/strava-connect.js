@@ -54,16 +54,10 @@ exports.handler = async (event) => {
     }
     const athlete = token.athlete || {};
 
-    // the account must be the one already wired up, unless the caller proved
-    // themselves with the verify token at step 1 because nothing works any more
-    if (!state.gated) {
-      const currentId = await currentAthleteId();
-      if (currentId == null) {
-        return page(403, "Couldn't confirm the current Strava account, so this connection was refused. Start again with ?token=<STRAVA_VERIFY_TOKEN>.");
-      }
-      if (String(currentId) !== String(athlete.id)) {
-        return page(403, "That is a different Strava account from the one connected to this site. Nothing changed.");
-      }
+    // the account must be the one that was wired up when the flow started,
+    // unless the caller proved themselves with the verify token at step 1
+    if (!state.gated && String(state.athleteId) !== String(athlete.id)) {
+      return page(403, "That is a different Strava account from the one connected to this site. Nothing changed.");
     }
 
     await auth.saveAuth({
@@ -97,7 +91,14 @@ exports.handler = async (event) => {
   const gated = Boolean(q.token) && verify !== DEFAULT_VERIFY && q.token === verify;
   if (q.token && !gated) return page(403, "Bad token.");
 
-  const nonce = signState({ ts: Date.now(), gated, n: randomId().slice(0, 8) });
+  // Who is connected right now? Strava issues fresh tokens on re-authorisation
+  // and the old ones stop working, so the identity check has to happen here,
+  // before the exchange — it rides along inside the signed state.
+  const athleteId = gated ? null : await currentAthleteId();
+  if (!gated && athleteId == null) {
+    return page(403, "Couldn't reach the currently connected Strava account, so a new connection can't be verified. Start again with ?token=<STRAVA_VERIFY_TOKEN>.");
+  }
+  const nonce = signState({ ts: Date.now(), gated, a: athleteId, n: randomId().slice(0, 8) });
 
   const url =
     "https://www.strava.com/oauth/authorize" +
@@ -143,7 +144,7 @@ function verifyState(state) {
     }
     const payload = JSON.parse(Buffer.from(body, "base64url").toString("utf8"));
     if (!payload.ts || Date.now() - payload.ts > STATE_TTL_MS) return { ok: false, why: "too old" };
-    return { ok: true, gated: Boolean(payload.gated) };
+    return { ok: true, gated: Boolean(payload.gated), athleteId: payload.a == null ? null : payload.a };
   } catch (_) {
     return { ok: false, why: "unreadable" };
   }
