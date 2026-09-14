@@ -201,9 +201,12 @@ async function fetchAllActivities(accessToken, after) {
     const url = `https://www.strava.com/api/v3/athlete/activities?after=${after}&per_page=200&page=${page}`;
     const res = await fetch(url, { headers: { Authorization: `Bearer ${accessToken}` } });
     if (!res.ok) {
-      // 403 here means the token was issued without activity:read_all —
-      // re-authorise with that scope via /.netlify/functions/strava-connect
-      throw new Error(`strava activities ${res.status}`);
+      // 403 with "activity:read_permission missing" = token issued without
+      // activity:read_all — re-authorise via /.netlify/functions/strava-connect.
+      // Anything else in the body is Strava's own reason; keep it visible.
+      let detail = "";
+      try { detail = (await res.text()).replace(/\s+/g, " ").slice(0, 160); } catch (_) { /* none */ }
+      throw new Error(`strava activities ${res.status}${detail ? ` ${detail}` : ""}`);
     }
     const acts = await res.json();
     if (!Array.isArray(acts) || acts.length === 0) break;

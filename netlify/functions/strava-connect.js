@@ -21,7 +21,7 @@
 
 const auth = require("./lib/strava-auth");
 
-const VERSION = "3";
+const VERSION = "4";
 const STATE_TTL_MS = 10 * 60 * 1000;
 const DEFAULT_VERIFY = "cfc-strava-verify";
 const SCOPE = "read,activity:read_all";
@@ -94,9 +94,10 @@ exports.handler = async (event) => {
   // Who is connected right now? Strava issues fresh tokens on re-authorisation
   // and the old ones stop working, so the identity check has to happen here,
   // before the exchange — it rides along inside the signed state.
-  const athleteId = gated ? null : await currentAthleteId();
+  const who = gated ? { id: null } : await currentAthlete();
+  const athleteId = who.id;
   if (!gated && athleteId == null) {
-    return page(403, "Couldn't reach the currently connected Strava account, so a new connection can't be verified. Start again with ?token=<STRAVA_VERIFY_TOKEN>.");
+    return page(403, `Couldn't reach the currently connected Strava account (${escapeHtml(who.why || "unknown")}), so a new connection can't be verified. Start again with ?token=<STRAVA_VERIFY_TOKEN>.`);
   }
   const nonce = signState({ ts: Date.now(), gated, a: athleteId, n: randomId().slice(0, 8) });
 
@@ -112,17 +113,21 @@ exports.handler = async (event) => {
   return { statusCode: 302, headers: { Location: url, "Cache-Control": "no-store", "X-CFC-Connect": VERSION }, body: "" };
 };
 
-async function currentAthleteId() {
+async function currentAthlete() {
   try {
     const access = await auth.getAccessToken();
     const res = await fetch("https://www.strava.com/api/v3/athlete", {
       headers: { Authorization: `Bearer ${access}` },
     });
-    if (!res.ok) return null;
+    if (!res.ok) {
+      let detail = "";
+      try { detail = (await res.text()).replace(/\s+/g, " ").slice(0, 160); } catch (_) { /* none */ }
+      return { id: null, why: `athlete ${res.status} ${detail}`.trim() };
+    }
     const a = await res.json();
-    return a && a.id != null ? a.id : null;
-  } catch (_) {
-    return null;
+    return a && a.id != null ? { id: a.id } : { id: null, why: "athlete has no id" };
+  } catch (err) {
+    return { id: null, why: (err && err.message) || "error" };
   }
 }
 
