@@ -78,7 +78,7 @@
      the colour hits are part of the sequence, so they fire whether or not the
      feed file is there. */
 
-  var SLAM = 2500;
+  var SLAM = 2500;        // the page sits still this long before the slam
   var BED_VOLUME = 0.55;
 
   // "hit" = footage from `at` seconds, "punch" = full-frame 10000, "off" = the page, untouched.
@@ -123,14 +123,22 @@
   var vid = document.getElementById("blastVid");
   var bed = document.getElementById("bed");
   var punches = blast ? blast.querySelectorAll("[data-punch]") : [];
+  var yearEl = document.querySelector(".year-one");
 
   var mode = "punch";       // "video" once we know a feed file is really there
   var bedOn = false;
+  var running = false;
   var done = false;
   var punchIdx = 0;
   var timers = [];
+  var endedHooked = false;
 
   function later(fn, ms) { var t = setTimeout(fn, ms); timers.push(t); return t; }
+
+  function clearTimers() {
+    for (var i = 0; i < timers.length; i++) clearTimeout(timers[i]);
+    timers = [];
+  }
 
   function hidePunches() {
     for (var i = 0; i < punches.length; i++) punches[i].classList.remove("live");
@@ -222,7 +230,8 @@
   function finish() {
     if (done) return;
     done = true;
-    for (var i = 0; i < timers.length; i++) clearTimeout(timers[i]);
+    running = false;
+    clearTimers();
     blast.classList.remove("on");
     blast.classList.remove("video-mode");
     hidePunches();
@@ -237,6 +246,7 @@
     try {
       bed.volume = BED_VOLUME;
       bed.muted = false;
+      bed.currentTime = 0;
       var p = bed.play();
       bedOn = true;
       if (p && p.catch) {
@@ -247,13 +257,35 @@
     }
   }
 
-  var FEED_GRACE = 1500; // on a cold load, wait this long past SLAM for the feed
+  var FEED_GRACE = 2500; // how long past the slam we'll wait for the feed file
+
+  // Make sure the feed is actually loading, then call back once a frame is
+  // decodable (or when the grace runs out). Phones fetch nothing for a video
+  // until play() is called — a muted, playsinline play() is allowed everywhere,
+  // and the picture stays hidden until the first HIT anyway.
+  function armFeed(cb) {
+    if (!vid || vid.readyState >= 2) { cb(); return; }
+    var fired = false;
+    function fin() { if (fired) return; fired = true; cb(); }
+    vid.addEventListener("loadeddata", fin, { once: true });
+    vid.addEventListener("canplay", fin, { once: true });
+    try {
+      if (vid.networkState === 0 || vid.networkState === 3) vid.load();
+    } catch (e) { /* fine */ }
+    var p = vid.play();
+    if (p && p.catch) p.catch(function () { /* blocked: punch mode below */ });
+    later(fin, FEED_GRACE);
+  }
 
   function go() {
+    if (done) return;
     mode = (vid && vid.readyState >= 2) ? "video" : "punch";
 
     if (mode === "video") {
-      vid.addEventListener("ended", finish); // backstop; the beats land first
+      if (!endedHooked) {
+        vid.addEventListener("ended", finish); // backstop; the beats land first
+        endedHooked = true;
+      }
       cue(BEATS[0].at);
       playVid();
     }
@@ -262,18 +294,22 @@
     runBeats();
   }
 
-  if (!reduce && blast) {
-    later(function () {
-      if (vid && vid.readyState < 2 && vid.networkState === 2) {
-        // still downloading — give it a moment, then run with whatever we have
-        var went = false;
-        var once = function () { if (!went) { went = true; go(); } };
-        vid.addEventListener("canplay", once, { once: true });
-        later(once, FEED_GRACE);
-      } else {
-        go();
-      }
-    }, SLAM);
+  function start(delay) {
+    if (reduce || !blast || running) return;
+    running = true;
+    done = false;
+    punchIdx = 0;
+    clearTimers();
+    later(function () { armFeed(go); }, delay);
+  }
+
+  start(SLAM);
+
+  // The sequence runs once. Tapping the year runs it again — and the tap is
+  // the user gesture that lets the bed play out loud on browsers that muted it
+  // the first time.
+  if (yearEl) {
+    yearEl.addEventListener("click", function () { start(120); });
   }
 
   /* —— waitlist —— */

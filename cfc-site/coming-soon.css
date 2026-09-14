@@ -212,6 +212,9 @@ main{
   letter-spacing:-.045em;
   font-variant-numeric:lining-nums tabular-nums;
   white-space:nowrap;
+  user-select:none;
+  -webkit-user-select:none;
+  -webkit-tap-highlight-color:transparent;
 }
 
 /* —— waitlist (the colophon) —— */
