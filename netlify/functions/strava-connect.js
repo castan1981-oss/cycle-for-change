@@ -13,15 +13,15 @@
 //      dirty and shows the fresh count.
 //
 // Nobody else can hijack the feed: authorising a different Strava account is
-// refused, and the OAuth state is a one-shot nonce kept server-side.
+// refused, and the OAuth state is signed with the client secret, so it can't
+// be forged and needs no storage (Strava codes are single-use anyway).
 //
 // Strava app setting required once: Authorization Callback Domain =
 // cycleforchange.org (https://www.strava.com/settings/api).
 
 const auth = require("./lib/strava-auth");
 
-const STORE = "cfc-strava";
-const STATE_KEY = "connect-state";
+const VERSION = "3";
 const STATE_TTL_MS = 10 * 60 * 1000;
 const DEFAULT_VERIFY = "cfc-strava-verify";
 const SCOPE = "read,activity:read_all";
@@ -38,9 +38,9 @@ exports.handler = async (event) => {
   if (q.code || q.error) {
     if (q.error) return page(400, `Strava said: ${escapeHtml(q.error)}. Nothing changed.`);
 
-    const state = await takeState(q.state);
-    if (!state) {
-      return page(400, "That link has expired. Start again from /.netlify/functions/strava-connect.");
+    const state = verifyState(q.state);
+    if (!state.ok) {
+      return page(400, `That link has expired (${state.why}). Start again from /.netlify/functions/strava-connect.`);
     }
 
     const granted = String(q.scope || "");
@@ -97,8 +97,7 @@ exports.handler = async (event) => {
   const gated = Boolean(q.token) && verify !== DEFAULT_VERIFY && q.token === verify;
   if (q.token && !gated) return page(403, "Bad token.");
 
-  const nonce = randomId();
-  await putState(nonce, { ts: Date.now(), gated });
+  const nonce = signState({ ts: Date.now(), gated, n: randomId().slice(0, 8) });
 
   const url =
     "https://www.strava.com/oauth/authorize" +
@@ -109,7 +108,7 @@ exports.handler = async (event) => {
     `&scope=${encodeURIComponent(SCOPE)}` +
     `&state=${encodeURIComponent(nonce)}`;
 
-  return { statusCode: 302, headers: { Location: url, "Cache-Control": "no-store" }, body: "" };
+  return { statusCode: 302, headers: { Location: url, "Cache-Control": "no-store", "X-CFC-Connect": VERSION }, body: "" };
 };
 
 async function currentAthleteId() {
@@ -126,41 +125,28 @@ async function currentAthleteId() {
   }
 }
 
-// Pending nonces live in one blob as a small map, so a second request for the
-// start URL (a prefetch, a double click) can't wipe out the first one's state.
-async function loadStates() {
+// state = base64url(payload) + "." + hmac(payload, client secret)
+function signState(payload) {
+  const crypto = require("crypto");
+  const body = Buffer.from(JSON.stringify(payload)).toString("base64url");
+  const sig = crypto.createHmac("sha256", auth.env().clientSecret).update(body).digest("base64url");
+  return `${body}.${sig}`;
+}
+function verifyState(state) {
   try {
-    const raw = await auth.store().get(STATE_KEY, { type: "json" });
-    return raw && typeof raw === "object" ? raw : {};
+    if (!state || state.indexOf(".") < 0) return { ok: false, why: "no state" };
+    const crypto = require("crypto");
+    const [body, sig] = state.split(".");
+    const want = crypto.createHmac("sha256", auth.env().clientSecret).update(body).digest("base64url");
+    if (sig.length !== want.length || !crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(want))) {
+      return { ok: false, why: "bad signature" };
+    }
+    const payload = JSON.parse(Buffer.from(body, "base64url").toString("utf8"));
+    if (!payload.ts || Date.now() - payload.ts > STATE_TTL_MS) return { ok: false, why: "too old" };
+    return { ok: true, gated: Boolean(payload.gated) };
   } catch (_) {
-    return {};
+    return { ok: false, why: "unreadable" };
   }
-}
-async function saveStates(map) {
-  try {
-    await auth.store().setJSON(STATE_KEY, map);
-  } catch (_) {
-    /* without blobs the callback can't verify state; it will refuse */
-  }
-}
-async function putState(nonce, s) {
-  const map = await loadStates();
-  const now = Date.now();
-  for (const k of Object.keys(map)) {
-    if (!map[k] || now - map[k].ts > STATE_TTL_MS) delete map[k];
-  }
-  map[nonce] = s;
-  await saveStates(map);
-}
-// one-shot: returns the state for this nonce and removes it
-async function takeState(nonce) {
-  if (!nonce) return null;
-  const map = await loadStates();
-  const s = map[nonce];
-  if (!s || Date.now() - s.ts > STATE_TTL_MS) return null;
-  delete map[nonce];
-  await saveStates(map);
-  return s;
 }
 
 function randomId() {
@@ -177,5 +163,5 @@ function escapeHtml(s) {
 
 function page(status, text) {
   const body = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Strava — Cycle for Change</title><style>body{margin:0;min-height:100svh;display:grid;place-items:center;background:#E8DFD0;color:#2A2E28;font:18px/1.4 "Space Grotesk",system-ui,sans-serif;padding:24px}p{max-width:40ch;margin:0}a{color:inherit}</style></head><body><p>${text} <a href="/">Back to the site.</a></p></body></html>`;
-  return { statusCode: status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" }, body };
+  return { statusCode: status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "X-CFC-Connect": VERSION }, body };
 }
