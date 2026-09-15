@@ -1,0 +1,69 @@
+{
+  "id": "steamboat-springs-co",
+  "name": "Steamboat Springs",
+  "state": "Colorado",
+  "state_code": "CO",
+  "county": "Routt County",
+  "lat": 40.4728,
+  "lon": -106.8164,
+  "timezone": "America/Denver",
+  "population": "13,224 (2020 census)",
+  "elevation_ft": 6867,
+  "nearest_airport": { "name": "Yampa Valley Regional Airport (Hayden)", "code": "HDN", "miles": 22 },
+  "major_airport": { "name": "Denver International", "code": "DEN", "miles": 160 },
+  "official_url": "https://steamboatsprings.net",
+  "visitor_url": "https://www.steamboatchamber.com",
+  "summary": "Steamboat Springs is a ski and ranching town of about 13,000 people at 6,867 feet in Routt County, northwest Colorado, about 157 miles from Denver. It calls itself Bike Town USA, holds a Gold-level Bicycle Friendly Community rating, and hosts SBT GRVL, a gravel race and ride that starts on Yampa Street downtown each June. Cyclists come for the county's gravel ranch roads, the Yampa River Core Trail and the Steamboat Bike Park.",
+  "about": [
+    "Steamboat Springs is the Routt County seat, on the Yampa River in the northwest corner of Colorado. The 2020 census counted 13,224 residents. It is known as Ski Town USA and has sent more athletes to the Winter Olympics than any other town in North America, but summer is when the gravel riders show up.",
+    "Downtown runs along Lincoln Avenue (U.S. 40) and Yampa Street, a block over on the river. Yampa Street has been rebuilt as a riverside promenade with restaurants, bike lanes and an amphitheater, and it is where SBT GRVL starts and finishes. The ski resort at Mount Werner is a few miles south, with its own base-area lodging.",
+    "The town's economy still leans on ranching, which is why SBT GRVL's stated mission includes giving back to the Routt County ranching community whose roads the race uses."
+  ],
+  "riding": [
+    "Steamboat earned a Gold Level Bicycle Friendly Community rating from the League of American Bicyclists in 2013. The Yampa River Core Trail is a flat, paved path through town for easy spinning. Road riders use the country roads through the Yampa Valley, and the SBT GRVL courses show the gravel: smooth county roads, chunky Cow Creek and climbs over 7,000 feet. The Steamboat Bike Park and downhill trails on Mount Werner cover the mountain side.",
+    "Summer is warm, dry and mostly clear. June averages a high near 75°F and a low near 42°F and is the month with the fewest wet days. Altitude is the main adjustment for riders coming from sea level; arrive a couple of days early if you can."
+  ],
+  "getting_there": "Yampa Valley Regional Airport (HDN) in Hayden is 22 miles west of town with seasonal and year-round commercial service. Denver International is about 160 miles east; the drive from Denver is about 157 miles and 2 hours 45 minutes over Rabbit Ears Pass, and GO Alpine runs shared shuttles from DIA. A car is useful but not required for SBT GRVL if you stay downtown; the start is on Yampa Street.",
+  "hotels": [
+    { "name": "Rabbit Ears Motel", "url": "https://www.rabbitearsmotel.com/", "address": "201 Lincoln Avenue, Steamboat Springs, CO 80487", "note": "Family-run downtown motel since 1953, a few blocks from the SBT GRVL start; parking for bikes.", "price_hint": "$$" },
+    { "name": "The Nordic Lodge", "url": "https://www.nordiclodgeofsteamboat.com/", "address": "1036 Lincoln Avenue, Steamboat Springs, CO 80477", "note": "Budget downtown motel one block from the river and the start.", "price_hint": "$" },
+    { "name": "The Bristol Hotel", "url": "https://www.steamboathotelbristol.com/", "address": "917 Lincoln Ave, Steamboat Springs, CO 80487", "note": "Small historic hotel in the middle of downtown, walking distance to Yampa Street.", "price_hint": "$$" },
+    { "name": "Gravity Haus Steamboat", "url": "https://www.gravityhaus.com/locations/steamboat/", "address": "2304 Apres Ski Way, Steamboat Springs, CO 80487", "note": "Ski-in/ski-out at the mountain base, about three miles from the start; built for outdoor athletes.", "price_hint": "$$$" }
+  ],
+  "restaurants": [
+    { "name": "Aurum Food & Wine", "url": "https://aurumsteamboat.com/", "address": "811 Yampa St, Steamboat Springs, CO 80487", "cuisine": "New American", "note": "Riverfront patio on Yampa Street, a block from the start line." },
+    { "name": "The Laundry", "url": "https://www.rexsfamily.com/the-laundry-restaurant", "address": "127 11th Street, Steamboat Springs, CO 80487", "cuisine": "Shared plates, smoked and cured", "note": "Seasonal shared-plate menu in a converted laundry downtown." },
+    { "name": "Salt & Lime", "url": "https://www.rexsfamily.com/salt-lime", "address": "628 Lincoln Avenue, Steamboat Springs, CO 80487", "cuisine": "Mexican", "note": "Tacos and tequila on Lincoln Avenue; easy post-ride carbs." },
+    { "name": "Creekside Cafe", "url": "https://www.rexsfamily.com/creekside", "address": "131 11th Street, Steamboat Springs, CO 80487", "cuisine": "Breakfast and lunch", "note": "Open daily 7 a.m. to 2 p.m.; patio on Soda Creek; the pre-race breakfast spot." },
+    { "name": "Mountain Tap Brewery", "url": "https://www.mountaintapbrewery.com/", "address": "910 Yampa Street, Steamboat Springs, CO 80487", "cuisine": "Brewpub, wood-fired", "note": "Beer and wood-fired food on Yampa Street, in the same building as Ride Workshop." }
+  ],
+  "bike_shops": [
+    { "name": "Wheels Bike Shop", "url": "https://www.steamboatwheels.com/", "address": "841 Yampa Street, Steamboat Springs, CO 80487", "phone": "", "services": ["repair", "rental", "parts"], "note": "Full-service shop on the river a block from the SBT GRVL start; rents cruisers, full-suspension, e-bikes and fat bikes." },
+    { "name": "Orange Peel Bicycle Service", "url": "https://www.orangepeelbikes.com/", "address": "1901 Curve Plaza, Suite 3, Steamboat Springs, CO 80487", "phone": "(970) 879-2957", "services": ["repair", "rental", "parts"], "note": "Bikes-only shop; repairs, rentals and demos, Moots and Salsa dealer." },
+    { "name": "Ski Haus", "url": "https://skihaussteamboat.com/bike-repair/", "address": "1457 Pine Grove Road, Steamboat Springs, CO 80487", "phone": "(844) 878-0385", "services": ["repair", "rental", "parts"], "note": "Mountain shop with mechanics for gravel, road and mountain bikes; rental gear and shuttles." },
+    { "name": "Ride Workshop", "url": "https://rideworkshop.co/", "address": "910 Yampa St, #108, Steamboat Springs, CO 80487", "phone": "(970) 367-3517", "services": ["repair", "rental"], "note": "Downtown outfitter renting gravel, mountain and bikepacking bikes, with repairs and guided rides." }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Steamboat_Springs,_Colorado",
+    "https://www.steamboatchamber.com/activities/biking/",
+    "https://www.steamboatchamber.com/plan-your-trip/getting-here/",
+    "https://www.sbtgrvl.com/rulesandfaqs",
+    "https://www.sbtgrvl.com/2027courses",
+    "https://www.sbtgrvl.com/about",
+    "https://www.rabbitearsmotel.com/contact",
+    "https://www.nordiclodgeofsteamboat.com/contact-location",
+    "https://www.steamboathotelbristol.com/",
+    "https://www.gravityhaus.com/locations/steamboat/",
+    "https://aurumsteamboat.com/",
+    "https://www.rexsfamily.com/the-laundry-restaurant",
+    "https://www.rexsfamily.com/salt-lime",
+    "https://www.rexsfamily.com/creekside",
+    "https://www.mountaintapbrewery.com/",
+    "https://www.steamboatwheels.com/",
+    "https://www.orangepeelbikes.com/",
+    "https://skihaussteamboat.com/bike-repair/",
+    "https://rideworkshop.co/",
+    "https://weatherspark.com/y/3376/Average-Weather-in-Steamboat-Springs-Colorado-United-States-Year-Round"
+  ],
+  "verified": "2026-09-15"
+}

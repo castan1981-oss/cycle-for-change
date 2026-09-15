@@ -1,0 +1,67 @@
+{
+  "id": "emporia-ks",
+  "name": "Emporia",
+  "state": "Kansas",
+  "state_code": "KS",
+  "county": "Lyon County",
+  "lat": 38.4040,
+  "lon": -96.1817,
+  "timezone": "America/Chicago",
+  "population": "about 24,000 (2020 census: 24,139)",
+  "elevation_ft": 1142,
+  "nearest_airport": { "name": "Wichita Dwight D. Eisenhower National Airport", "code": "ICT", "miles": 94 },
+  "major_airport": { "name": "Kansas City International", "code": "MCI", "miles": 125 },
+  "official_url": "https://www.emporiaks.gov/",
+  "visitor_url": "https://visitemporia.com/",
+  "summary": "Emporia is a college town of about 24,000 in east-central Kansas, on I-35 between Topeka and Wichita at the edge of the Flint Hills. It is the home of Unbound Gravel, which has started and finished on its downtown Commercial Street every spring since 2006, and it has built an identity around gravel riding, with two bike shops on the main street. The nearest big airports are Wichita (94 miles) and Kansas City (125 miles).",
+  "about": [
+    "Emporia was founded in 1857 and named after the ancient trading city of Carthage. It is the Lyon County seat and home to Emporia State University and Flint Hills Technical College. The town sits at the junction of I-35, the Kansas Turnpike, US 50 and K-99, about an hour south of Topeka.",
+    "Downtown runs along Commercial Street, a brick-front historic district with restaurants, bars, a chocolate shop and the two bike shops. Unbound's finish line, expo and block party fill it every race weekend. The city government is at 111 E 6th Avenue.",
+    "The climate is humid subtropical: hot, humid summers, cold winters, and spring storms that can turn the gravel to mud on race day."
+  ],
+  "riding": [
+    "The Flint Hills start at the edge of town: rolling tallgrass prairie crossed by gravel and minimum-maintenance roads with sharp flint rock, creek crossings and long sightlines. This is where Unbound's routes go. The riding is remote, so carry what you need and tell someone your route. Both downtown shops sell maps and give route advice.",
+    "Wind out of the south is the constant. Early June averages a high near 82 F with about a 40 percent chance of rain on any day."
+  ],
+  "getting_there": "Fly into Wichita (ICT, about 94 miles and an hour and a half) or Kansas City (MCI, about 125 miles and two hours), then drive; both routes are interstate. Topeka is about 59 miles. There is no commercial air service in Emporia. A car is necessary, but once in town the hotels on the west side are a five-minute drive from Commercial Street and everything downtown is walkable.",
+  "hotels": [
+    { "name": "Holiday Inn Express & Suites Emporia Northwest", "url": "https://www.ihg.com/holidayinnexpress/hotels/us/en/emporia/empex/hoteldetail", "address": "3007 W 18th Ave, Emporia, KS 66801", "note": "Off I-35 on the west side, close to downtown and the university; books up early for Unbound", "price_hint": "$$" },
+    { "name": "Comfort Inn & Suites Emporia", "url": "https://www.choicehotels.com/kansas/emporia/quality-inn-hotels/ks209", "address": "2921 W 18th Ave, Emporia, KS 66801", "note": "Near I-35 with free hot breakfast, indoor pool and pet-friendly rooms", "price_hint": "$$" },
+    { "name": "La Quinta Inn & Suites by Wyndham Emporia", "url": "https://www.wyndhamhotels.com/laquinta/emporia-kansas/la-quinta-emporia/overview", "address": "2930 Eaglecrest Dr, Emporia, KS 66801", "note": "Off exit 128, two miles from Emporia State; free breakfast, heated indoor pool, fridge and microwave in rooms", "price_hint": "$$" },
+    { "name": "MainStay Suites Emporia", "url": "https://www.choicehotels.com/kansas/emporia/mainstay-hotels/ks314", "address": "2602 Candlewood Dr, Emporia, KS 66801", "note": "Extended-stay rooms with full kitchenettes right off I-35; good for a crew staying several nights", "price_hint": "$$" }
+  ],
+  "restaurants": [
+    { "name": "Radius Brewing Company", "url": "https://radiusbrewing.com/", "address": "610 Merchant St, Emporia, KS 66801", "cuisine": "Brewpub: pizza, steaks, sandwiches", "note": "Downtown brewery with brick-oven pizza, a beer garden and covered patio; the post-ride gathering spot" },
+    { "name": "Casa Ramos Mexican Restaurant", "url": "https://casaramosemporia.com/", "address": "402 Merchant St, Emporia, KS 66801", "cuisine": "Mexican", "note": "Full-service family Mexican downtown, open till 9 pm most nights and 11 pm Friday-Saturday" },
+    { "name": "Commercial Street Diner", "url": "https://members.emporiakschamber.org/directory/Details/commercial-street-diner-1399907", "address": "614 Commercial St, Emporia, KS 66801", "cuisine": "Diner, breakfast and lunch", "note": "Classic small-town diner on the main street for a pre-ride breakfast" },
+    { "name": "Mulready's Pub", "url": "https://mulreadys.com/", "address": "717 Commercial St, Emporia, KS 66801", "cuisine": "Pub", "note": "Downtown bar with 23 taps, cocktails and local art; a block from the Unbound finish" },
+    { "name": "Bourbon Cowboy", "url": "https://www.facebook.com/bourboncowboybar/", "address": "605 Commercial St, Emporia, KS 66801", "cuisine": "Country bar", "note": "Two-level country dance bar and pool hall downtown; a bar, not a restaurant. Listed for sale in 2025 but still operating" },
+    { "name": "The Sweet Granada", "url": "https://sweetgranada.com/", "address": "803 Commercial St, Emporia, KS 66801", "cuisine": "Chocolate shop", "note": "Handmade chocolates on Commercial Street since the mid-2000s; open daily" }
+  ],
+  "bike_shops": [
+    { "name": "Merchant Cycles (formerly Gravel City Adventure & Supply)", "url": "https://merchantcycles.com/", "address": "716 Commercial St, Emporia, KS 66801", "phone": "620-208-7680", "services": ["repair", "rental", "parts"], "note": "Gravel-focused shop on Commercial Street since 2016, renamed in 2023 when Yuri Hauswald and Bobby Wintle joined owner Tim Mohn; service from flat fixes to custom builds, rentals and demos" },
+    { "name": "High Gear", "url": "https://www.ridehighgear.com/", "address": "520 Commercial St, Emporia, KS 66801", "phone": "620-342-4977", "services": ["repair", "parts"], "note": "Downtown shop selling gravel, mountain and hybrid bikes with a full service department; Monday-Saturday, no rentals listed" }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Emporia,_Kansas",
+    "https://www.emporiaks.gov/",
+    "https://www.rome2rio.com/s/Emporia-KS-USA/Kansas-City-Airport-MCI",
+    "https://www.rome2rio.com/s/Emporia-KS-USA/Wichita-Dwight-D-Eisenhower-Airport-ICT",
+    "https://members.emporiakschamber.org/directory/Details/holiday-inn-express-1399794",
+    "https://members.emporiakschamber.org/directory/Details/comfort-inn-suites-1399701",
+    "https://members.emporiakschamber.org/directory/Details/mainstay-inns-suites-1491402",
+    "https://www.wyndhamhotels.com/laquinta/emporia-kansas/la-quinta-emporia/overview",
+    "https://maps.roadtrippers.com/us/emporia-ks/food-drink/radius-brewing-company",
+    "https://casaramosemporia.com/contact/",
+    "https://members.emporiakschamber.org/directory/Details/commercial-street-diner-1399907",
+    "https://www.emporiagazette.com/gaz/article_8822d21e-8ab8-11ed-b669-13f05026480c.html",
+    "https://www.emporiagazette.com/gaz/article_e1cef2f7-0e98-4fec-bdb2-f7e43bcbc0ab.html",
+    "https://sweetgranada.com/",
+    "https://www.emporiagazette.com/business/article_70eb3844-f5e2-11ed-90ca-4be536004ed4.html",
+    "https://www.singletracks.com/bike-shops/gravel-city-adventure-supply-co/",
+    "https://www.ridehighgear.com/",
+    "https://www.unboundgravel.com/about/",
+    "https://weatherspark.com/m/8976/6/Average-Weather-in-June-in-Emporia-Kansas-United-States"
+  ],
+  "verified": "2026-09-15"
+}
