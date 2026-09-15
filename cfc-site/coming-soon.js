@@ -276,6 +276,7 @@
     done = true;
     running = false;
     clearTimers();
+    settle();
     blast.classList.remove("on");
     blast.classList.remove("video-mode");
     hidePunches();
@@ -348,35 +349,39 @@
   }
 
   /* —— the open ——
-     First visit in a session: asphalt, the count rolls up, a beat of hold,
-     then the slam straight into the feed and the settle into the cover.
-     Later visits skip straight to the cover with a quick roll; tapping the
-     year runs the sequence again (and that tap lets the bed play out loud). */
+     Asphalt with the year on it while the feed arms (at least OPEN_MIN so
+     it registers, at most the arming grace), then straight into the feed,
+     then the settle: the cover appears and the count rolls up. Every load.
+     Reduced motion gets the cover, still. */
 
-  var ROLL_MS = 1700;
-  var HOLD_MS = 420;
+  var OPEN_MIN = 650;
   var openEl = document.getElementById("open");
-  var openNum = document.getElementById("openNum");
-
-  // the head script already hid the open for repeat visits and reduced motion
   var seen = /\bseen\b/.test(document.documentElement.className);
+  var settled = false;
 
   function target() { return currentMiles; }
 
+  function settle() {
+    if (settled) return;
+    settled = true;
+    if (!tallyEl) return;
+    if (reduce) paint(); else roll(tallyEl, 0, target, 900);
+  }
+
   if (!reduce && blast && openEl && !seen) {
-    armFeed(function () { /* just get it downloading */ });
-    startBed();
-    roll(openNum, 0, target, ROLL_MS, function () {
+    if (tallyEl) tallyEl.textContent = "0";   // the cover is hidden; the count starts from nothing
+    var t0 = performance.now();
+    running = true;
+    armFeed(function () {
+      var wait = Math.max(0, OPEN_MIN - (performance.now() - t0));
       later(function () {
-        openEl.classList.add("done");   // the slam: hard cut
-        paint();
-        try { sessionStorage.setItem("cfc-open", "1"); } catch (e) { /* fine */ }
-        start(0);
-      }, HOLD_MS);
+        openEl.classList.add("done");   // the slam: hard cut into the feed
+        go();
+      }, wait);
     });
   } else {
     if (openEl) openEl.classList.add("done");
-    if (!reduce && tallyEl) roll(tallyEl, 0, target, 900);
+    settle();
   }
 
   // The sequence runs once. Tapping the year runs it again — and the tap is
