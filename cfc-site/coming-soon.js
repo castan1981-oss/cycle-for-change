@@ -91,14 +91,14 @@
       });
   }
 
-  function refreshMiles() {
-    if (polling || document.hidden) return;
+  function refreshMiles(force) {
+    if (polling || (document.hidden && !force)) return;
     polling = true;
     fetchMiles(0).then(function () { polling = false; }, function () { polling = false; });
   }
 
   if (window.fetch) {
-    refreshMiles();
+    refreshMiles(true);   // the first read always happens, even in a background tab
     setInterval(refreshMiles, POLL_MS);
     document.addEventListener("visibilitychange", function () {
       if (!document.hidden) refreshMiles();
