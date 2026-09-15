@@ -18,6 +18,10 @@
   --pad:clamp(14px,2vw,28px);
   --maxw:1480px;
   --gutter:clamp(18px,3.4vw,52px);
+
+  /* the second plane: bone pushed a step toward dust */
+  --bone-2:#E1D7C5;
+  --noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/></filter><rect width='160' height='160' filter='url(%23n)' opacity='0.6'/></svg>");
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -36,6 +40,19 @@ body{
 }
 
 img{max-width:100%;display:block}
+
+/* paper: a whisper of grain over the whole ground, so the page has a
+   surface instead of a colour */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  opacity:.055;
+  mix-blend-mode:multiply;
+  background-image:var(--noise);
+}
 
 a{color:inherit}
 
@@ -62,13 +79,15 @@ a{color:inherit}
    waitlist as the colophon. Nothing scrolls unless the viewport is short. */
 
 .cover{
+  position:relative;
+  z-index:1;
   min-height:100svh;
   display:flex;
   flex-direction:column;
   width:100%;
   max-width:var(--maxw);
   margin:0 auto;
-  padding:var(--pad);
+  padding:var(--pad) var(--pad) 0;
 }
 
 .site-head{
@@ -132,15 +151,28 @@ main{
 .stack span{display:block}
 .stack-for{color:var(--creosote)}
 
-/* the photo takes the height the type gives it — it never sets the row */
+/* the photo takes the height the type gives it — it never sets the row.
+   It runs off the right edge of the page, sits on a dust slab a step
+   behind, and throws a soft shadow: a print laid on the table, not a
+   rectangle on a colour. */
 .hero-photo{
   grid-column:2;
   grid-row:1 / span 2;
   position:relative;
-  margin:0;
+  margin:0 calc(-1 * var(--pad)) 0 0;
   min-height:0;
-  overflow:hidden;
   background:var(--bone);
+  box-shadow:
+    0 30px 50px -28px rgba(42,46,40,.55),
+    0 1px 0 rgba(42,46,40,.08);
+}
+.hero-photo::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  transform:translate(-14px,14px);
+  background:var(--dust);
+  z-index:-1;
 }
 .hero-photo img{
   position:absolute;
@@ -148,7 +180,7 @@ main{
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:50% 62%;
+  object-position:50% 58%;
   /* black on bone: the photo prints like ink on the ground */
   filter:grayscale(1) contrast(1.12) brightness(1.02);
   mix-blend-mode:multiply;
@@ -204,6 +236,8 @@ main{
   margin-top:clamp(8px,1.6vh,18px);
 }
 .year-one{
+  position:relative;
+  isolation:isolate;
   margin:0 0 -.075em -.04em;
   font-family:var(--display);
   font-weight:800;
@@ -216,8 +250,38 @@ main{
   -webkit-user-select:none;
   -webkit-tap-highlight-color:transparent;
 }
+/* second impression, a hair off register, printed first */
+.year-one::before{
+  content:attr(data-ghost);
+  position:absolute;
+  left:.045em;
+  top:.035em;
+  color:var(--dust);
+  z-index:-1;
+  pointer-events:none;
+}
+/* the rule under the year is the top edge of the next plane */
+.year-wrap{border-bottom-color:var(--asphalt)}
 
-/* —— waitlist (the colophon) —— */
+/* —— colophon: the lower plane ——
+   Waitlist and footer sit on bone-2, a step deeper than the ground, and
+   the band runs to the edges of the window. The year's clipped baseline
+   lands exactly on its top edge. */
+
+.colophon{
+  margin:0 calc(-1 * var(--pad));
+  padding:0 var(--pad) var(--pad);
+  background:var(--bone-2);
+  box-shadow:inset 0 1px 0 rgba(42,46,40,.10);
+}
+@media (min-width:1481px){
+  .colophon{
+    margin-left:calc(50% - 50vw);
+    margin-right:calc(50% - 50vw);
+    padding-left:calc(50vw - 50% + var(--pad));
+    padding-right:calc(50vw - 50% + var(--pad));
+  }
+}
 
 .waitlist{
   display:grid;
@@ -225,7 +289,7 @@ main{
   align-items:end;
   column-gap:var(--gutter);
   row-gap:10px;
-  padding:clamp(12px,1.8vh,22px) 0 0;
+  padding:clamp(14px,2.2vh,26px) 0 0;
 }
 
 .eyebrow{
@@ -321,7 +385,7 @@ main{
   flex-wrap:wrap;
   margin-top:clamp(12px,1.6vh,20px);
   padding-top:11px;
-  border-top:1px solid var(--dust);
+  border-top:1px solid rgba(42,46,40,.18);
   font-family:var(--mono);
   font-size:11px;
   letter-spacing:.14em;
@@ -338,7 +402,7 @@ main{
 /* —— narrow: one column, photo between the name and the number —— */
 
 @media (max-width:760px){
-  .cover{padding:14px 16px 16px}
+  .cover{padding:14px 16px 0}
   .hero{
     grid-template-columns:1fr;
     grid-template-rows:auto auto auto auto;
@@ -351,10 +415,12 @@ main{
   .hero-photo{
     grid-column:1;
     grid-row:2;
-    margin-top:14px;
+    margin:16px -16px 0 0;
     max-height:36svh;
     aspect-ratio:4/3;
   }
+  .hero-photo::before{transform:translate(-10px,10px)}
+  .colophon{margin:0 -16px;padding:0 16px 16px}
   .hero-foot{
     grid-column:1;
     grid-row:3;
@@ -408,7 +474,9 @@ main{
   opacity:0;
   /* pushed in a touch so nothing printed at the frame edge survives the cut */
   transform:scale(1.08);
-  filter:contrast(1.4) saturate(.35) brightness(.9);
+  /* the grade lives in #feed-tone (index.html): asphalt shadows, bone
+     highlights, nothing crushed. The grain sits on top. */
+  filter:url(#feed-tone);
 }
 /* only when a real feed file is present and playing */
 .blast.video-mode .blast-vid{opacity:1}
@@ -441,10 +509,10 @@ main{
 .blast-grain{
   position:absolute;
   inset:0;
-  opacity:.26;
+  opacity:.34;
   mix-blend-mode:overlay;
   pointer-events:none;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/></filter><rect width='160' height='160' filter='url(%23n)' opacity='0.6'/></svg>");
+  background-image:var(--noise);
 }
 
 /* the interrupt never runs for reduced motion — designed page only */
