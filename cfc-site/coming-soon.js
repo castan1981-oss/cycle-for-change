@@ -111,13 +111,13 @@
      one dump back to quiet at the end. One sequence. It never replays.
 
      Every HIT is a seek, not a scrub: the picture jumps to an in-point,
-     runs for a few frames, and is cut. The in-points only land inside the
-     clean windows of the feed file (scanned at 0.05s), so the burned-in
-     caption lines, the handwritten title cards and the training-load gauge
-     are never on screen. Clean windows, in seconds:
-       0.02–0.14 · 0.21–0.63 · 1.03–1.14 · 1.31–1.49 · 1.56–1.64 · 1.76–1.84
-       1.96–2.19 · 2.31–2.44 · 2.66–2.89 · 2.96–3.09 · 3.21–4.13 · 4.26–4.63
-     If the feed file is ever re-cut, re-scan and rewrite BEATS.
+     runs for a few frames, and is cut. The feed file is our own cut (no
+     captions, no chrome), so any in-point is safe. Its map, in seconds:
+       0.00 road to Camelback   3.00 Robert riding, sky   5.20 the bridge
+       7.20 the freeway fence   8.60 palms, the HAUS rider   9.02 lane lines
+       9.28 Robert riding, low sun   11.28 the dome   11.41 road, trees (to 15.0)
+     Robert is on camera in short bursts only; the road and the bridge
+     carry the longer hits.
 
      The three 10000 punches are hard cuts *between* footage, not a fallback —
      the colour hits are part of the sequence, so they fire whether or not the
@@ -127,37 +127,37 @@
 
   // "hit" = footage from `at` seconds, "punch" = full-frame 10000, "off" = the page, untouched.
   var BEATS = [
-    { k: "hit",   at: 0.22, ms: 220 },   // palms, then the rider
-    { k: "off",            ms: 60 },
-    { k: "hit",   at: 3.38, ms: 120 },   // bibs, close
-    { k: "off",            ms: 50 },
-    { k: "punch",          ms: 160 },    // bone
-    { k: "off",            ms: 70 },
-    { k: "hit",   at: 3.57, ms: 260 },   // lane lines, mountain road
-    { k: "off",            ms: 40 },
-    { k: "hit",   at: 0.04, ms: 90 },    // marina, the face
-    { k: "off",            ms: 40 },
-    { k: "hit",   at: 4.28, ms: 180 },   // rider, hand
-    { k: "off",            ms: 90 },
-    { k: "punch",          ms: 130 },    // creosote
-    { k: "off",            ms: 50 },
-    { k: "hit",   at: 1.97, ms: 220 },   // road, rider, house
-    { k: "off",            ms: 40 },
-    { k: "hit",   at: 2.67, ms: 110 },   // street
-    { k: "off",            ms: 60 },
-    { k: "hit",   at: 1.32, ms: 90 },    // riders on the road
-    { k: "off",            ms: 120 },
-    { k: "punch",          ms: 110 },    // signal pink
-    { k: "off",            ms: 50 },
-    { k: "hit",   at: 3.86, ms: 240 },   // the wig, the standing figure, the road
-    { k: "off",            ms: 40 },
-    { k: "hit",   at: 2.32, ms: 120 },   // the dome
-    { k: "off",            ms: 30 },
-    { k: "hit",   at: 1.57, ms: 70 },    // sunset
-    { k: "off",            ms: 70 },
-    { k: "hit",   at: 4.47, ms: 150 },   // the crowd, the rider
-    { k: "off",            ms: 40 },
-    { k: "hit",   at: 3.21, ms: 300 }    // road, street, bibs — holds, then the dump to quiet
+    { k: "hit",   at: 0.10,  ms: 260 },   // road, Camelback ahead
+    { k: "off",             ms: 60 },
+    { k: "hit",   at: 5.30,  ms: 140 },   // the bridge
+    { k: "off",             ms: 50 },
+    { k: "punch",           ms: 160 },    // bone
+    { k: "off",             ms: 70 },
+    { k: "hit",   at: 1.20,  ms: 300 },   // road
+    { k: "off",             ms: 40 },
+    { k: "hit",   at: 8.62,  ms: 120 },   // palms
+    { k: "off",             ms: 40 },
+    { k: "hit",   at: 3.40,  ms: 180 },   // Robert, riding
+    { k: "off",             ms: 90 },
+    { k: "punch",           ms: 130 },    // creosote
+    { k: "off",             ms: 50 },
+    { k: "hit",   at: 7.30,  ms: 320 },   // the fence, the freeway below
+    { k: "off",             ms: 40 },
+    { k: "hit",   at: 11.60, ms: 110 },   // road, trees
+    { k: "off",             ms: 60 },
+    { k: "hit",   at: 9.05,  ms: 90 },    // lane lines
+    { k: "off",             ms: 120 },
+    { k: "punch",           ms: 110 },    // signal pink
+    { k: "off",             ms: 50 },
+    { k: "hit",   at: 6.10,  ms: 240 },   // the bridge again
+    { k: "off",             ms: 40 },
+    { k: "hit",   at: 9.60,  ms: 140 },   // Robert, low sun
+    { k: "off",             ms: 30 },
+    { k: "hit",   at: 11.30, ms: 80 },    // the dome
+    { k: "off",             ms: 70 },
+    { k: "hit",   at: 2.20,  ms: 150 },   // road
+    { k: "off",             ms: 40 },
+    { k: "hit",   at: 12.40, ms: 320 }    // road — holds, then the dump to quiet
   ];
 
   var reduce = window.matchMedia &&
