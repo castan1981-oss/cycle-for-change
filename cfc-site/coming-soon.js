@@ -13,20 +13,63 @@
   var ENDPOINTS = ["/api/strava", "/.netlify/functions/strava"];
 
   /* —— live miles since June 1 ——
-     Painted on load, then re-checked every minute while the tab is visible
-     and whenever it comes back into view. A ride that lands on Strava is on
-     the cover within about a minute of the upload. */
+     The count is a number first and text second: the open rolls it up from
+     zero, the cover shows it, and the feed re-checks it every minute while
+     the tab is visible. A ride that lands on Strava is on the cover within
+     about a minute of the upload. */
 
   var POLL_MS = 60 * 1000;
   var polling = false;
+  var tallyEl = document.querySelector("[data-cur]");
+  var lastEl = document.getElementById("lastRide");
+  var currentMiles = tallyEl ? parseInt(tallyEl.textContent.replace(/\D/g, ""), 10) || 0 : 0;
+  var rolling = false;
 
-  function paint(text) {
-    var els = document.querySelectorAll("[data-cur]");
-    for (var i = 0; i < els.length; i++) els[i].textContent = text;
+  function fmt(n) { return Math.round(n).toLocaleString("en-US"); }
+
+  function paint() {
+    if (rolling || !tallyEl) return;
+    tallyEl.textContent = fmt(currentMiles);
+  }
+
+  // roll a number element from `from` to whatever the target is by the time
+  // each frame lands — the live fetch can arrive mid-roll and it converges
+  function roll(el, from, target, ms, done) {
+    if (!el) { if (done) done(); return; }
+    var t0 = null;
+    rolling = true;
+    function frame(ts) {
+      if (t0 === null) t0 = ts;
+      var p = Math.min(1, (ts - t0) / ms);
+      var e = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(from + (target() - from) * e);
+      if (p < 1) requestAnimationFrame(frame);
+      else { rolling = false; el.textContent = fmt(target()); if (done) done(); }
+    }
+    requestAnimationFrame(frame);
+  }
+
+  function whenLabel(iso) {
+    var d = new Date(iso);
+    if (isNaN(d)) return "";
+    var now = new Date();
+    var day = function (x) { return x.getFullYear() * 400 + x.getMonth() * 32 + x.getDate(); };
+    var diff = day(now) - day(d);
+    if (diff === 0) return d.getHours() < 12 ? "this morning" : "today";
+    if (diff === 1) return "yesterday";
+    return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  }
+
+  function paintLast(d) {
+    if (!lastEl || !d.recent || !d.recent.length) return;
+    var r = d.recent[0];
+    if (typeof r.miles !== "number") return;
+    var when = whenLabel(r.date);
+    lastEl.textContent = "Last ride " + (Math.round(r.miles * 10) / 10) + " mi" + (when ? " \u00b7 " + when : "");
   }
 
   function fetchMiles(i) {
-    if (i >= ENDPOINTS.length) return Promise.resolve(); // leave the static fallback in the HTML
+    if (i >= ENDPOINTS.length) return Promise.resolve(); // leave the static count
     return fetch(ENDPOINTS[i], { headers: { Accept: "application/json" }, cache: "no-store" })
       .then(function (res) {
         if (!res.ok) throw new Error("bad status");
@@ -39,7 +82,9 @@
         if (typeof miles !== "number" || !isFinite(miles)) return;
         // zero miles with no rides behind it is a dead feed, not a number
         if (miles === 0 && (!d.recent || !d.recent.length)) return;
-        paint(Math.round(miles).toLocaleString("en-US"));
+        currentMiles = miles;
+        paint();
+        paintLast(d);
       })
       .catch(function () {
         return fetchMiles(i + 1);
@@ -78,8 +123,7 @@
      the colour hits are part of the sequence, so they fire whether or not the
      feed file is there. */
 
-  var SLAM = 2500;        // the page sits still this long before the slam
-  var BED_VOLUME = 0.55;
+    var BED_VOLUME = 0.55;
 
   // "hit" = footage from `at` seconds, "punch" = full-frame 10000, "off" = the page, untouched.
   var BEATS = [
@@ -290,7 +334,7 @@
       playVid();
     }
 
-    startBed();
+    if (!bedOn) startBed();
     runBeats();
   }
 
@@ -303,7 +347,37 @@
     later(function () { armFeed(go); }, delay);
   }
 
-  start(SLAM);
+  /* —— the open ——
+     First visit in a session: asphalt, the count rolls up, a beat of hold,
+     then the slam straight into the feed and the settle into the cover.
+     Later visits skip straight to the cover with a quick roll; tapping the
+     year runs the sequence again (and that tap lets the bed play out loud). */
+
+  var ROLL_MS = 1700;
+  var HOLD_MS = 420;
+  var openEl = document.getElementById("open");
+  var openNum = document.getElementById("openNum");
+
+  // the head script already hid the open for repeat visits and reduced motion
+  var seen = /\bseen\b/.test(document.documentElement.className);
+
+  function target() { return currentMiles; }
+
+  if (!reduce && blast && openEl && !seen) {
+    armFeed(function () { /* just get it downloading */ });
+    startBed();
+    roll(openNum, 0, target, ROLL_MS, function () {
+      later(function () {
+        openEl.classList.add("done");   // the slam: hard cut
+        paint();
+        try { sessionStorage.setItem("cfc-open", "1"); } catch (e) { /* fine */ }
+        start(0);
+      }, HOLD_MS);
+    });
+  } else {
+    if (openEl) openEl.classList.add("done");
+    if (!reduce && tallyEl) roll(tallyEl, 0, target, 900);
+  }
 
   // The sequence runs once. Tapping the year runs it again — and the tap is
   // the user gesture that lets the bed play out loud on browsers that muted it

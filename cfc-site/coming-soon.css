@@ -16,8 +16,8 @@
   --mono:"Space Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
 
   --pad:clamp(14px,2vw,28px);
-  --maxw:1480px;
-  --gutter:clamp(18px,3.4vw,52px);
+  --maxw:1720px;
+  --gutter:clamp(20px,3.6vw,56px);
 
   /* the second plane: bone pushed a step toward dust */
   --bone-2:#E1D7C5;
@@ -70,80 +70,91 @@ a{color:inherit}
   font-family:var(--mono);
   font-size:12px;
   padding:10px 14px;
-  z-index:10;
+  z-index:60;
 }
 .skip:focus{left:0}
 
+/* —— the open ——
+   Asphalt. The count rolls up in bone. Then the slam. It's a hard cut:
+   display on, display off, nothing in between. */
+
+.open{
+  position:fixed;
+  inset:0;
+  z-index:40;
+  display:grid;
+  place-items:center;
+  background:var(--asphalt);
+  color:var(--bone);
+  padding:var(--pad);
+}
+html.seen .open,
+.open.done{display:none}
+.open-inner{text-align:left}
+.open-num{
+  margin:0;
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(96px,min(24vw,34svh),360px);
+  line-height:.88;
+  letter-spacing:-.045em;
+  font-variant-numeric:lining-nums tabular-nums;
+}
+.open-label{
+  margin:.35em 0 0 .06em;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--dust);
+}
+
 /* —— the cover ——
-   One screen. Head at the top, the masthead number at the bottom, the
-   waitlist as the colophon. Nothing scrolls unless the viewport is short. */
+   One grid. Left: the name, the line, the count, the year. Right: the
+   photo, edge to edge from the top of the window down to the colophon.
+   Below both: the colophon, a deeper plane running to the window edges. */
 
 .cover{
   position:relative;
   z-index:1;
   min-height:100svh;
-  display:flex;
-  flex-direction:column;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(300px,42%);
+  grid-template-rows:auto minmax(0,1fr) auto;
+  column-gap:var(--gutter);
   width:100%;
   max-width:var(--maxw);
   margin:0 auto;
-  padding:var(--pad) var(--pad) 0;
+  padding:0 0 0 var(--pad);
 }
 
 .site-head{
+  grid-column:1;
+  grid-row:1;
+  padding-top:var(--pad);
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap:16px;
 }
+.mark{display:inline-flex;align-items:center;text-decoration:none}
+.mark-glyph{flex:0 0 auto;width:clamp(28px,2.8vw,38px);height:auto}
 
-.mark{
-  display:inline-flex;
-  align-items:center;
-  text-decoration:none;
-}
-.mark-glyph{
-  flex:0 0 auto;
-  width:clamp(28px,2.8vw,38px);
-  height:auto;
-}
-
-.meta{
-  margin:0;
-  font-family:var(--mono);
-  font-size:11px;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  text-align:right;
-}
-
-main{
-  flex:1 0 auto;
-  display:flex;
-  flex-direction:column;
-}
-
-/* —— hero grid ——
-   stack | photo
-   line  | photo
-   10000 across the whole width, clipped at the rule. */
+/* —— left column —— */
 
 .hero{
-  flex:1 0 auto;
+  grid-column:1;
+  grid-row:2;
+  min-height:0;
   display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(260px,37%);
   grid-template-rows:auto minmax(0,1fr) auto;
-  column-gap:var(--gutter);
   padding-top:clamp(12px,1.8vh,24px);
 }
 
 .stack{
-  grid-column:1;
   grid-row:1;
   margin:0;
   font-family:var(--display);
   font-weight:800;
-  font-size:clamp(52px,min(8.4vw,10.2svh),136px);
+  font-size:clamp(52px,min(7.4vw,10.2svh),150px);
   line-height:.84;
   letter-spacing:-.03em;
   text-transform:uppercase;
@@ -151,17 +162,101 @@ main{
 .stack span{display:block}
 .stack-for{color:var(--creosote)}
 
-/* the photo takes the height the type gives it — it never sets the row.
-   It runs off the right edge of the page, sits on a dust slab a step
-   behind, and throws a soft shadow: a print laid on the table, not a
-   rectangle on a colour. */
+.hero-foot{
+  grid-row:2;
+  align-self:end;
+  display:flex;
+  flex-direction:column;
+  gap:clamp(10px,1.6vh,18px);
+  padding:clamp(14px,2.2vh,26px) 0 0;
+}
+
+.line{
+  margin:0;
+  max-width:22ch;
+  font-size:clamp(19px,1.7vw,26px);
+  line-height:1.22;
+  letter-spacing:-.005em;
+}
+
+.tally{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+  flex-wrap:wrap;
+  margin:0;
+}
+.tally-num{
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(40px,min(4.6vw,6.4svh),72px);
+  line-height:1;
+  letter-spacing:-.025em;
+  font-variant-numeric:lining-nums tabular-nums;
+}
+.tally-label{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+/* the last ride, from the feed — proof, not a claim */
+.last{
+  margin:0;
+  min-height:1.3em;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:rgba(42,46,40,.62);
+}
+
+/* the year, printed to the edge: the digits sit on the rule and the
+   bottom of them is cut by it. Cropped, not floating. */
+.year-wrap{
+  grid-row:3;
+  overflow:hidden;
+  border-bottom:1px solid var(--asphalt);
+  margin-top:clamp(8px,1.6vh,18px);
+}
+.year-one{
+  position:relative;
+  isolation:isolate;
+  margin:0 0 -.075em -.04em;
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(96px,min(15vw,22.5svh),360px);
+  line-height:.8;
+  letter-spacing:-.045em;
+  font-variant-numeric:lining-nums tabular-nums;
+  white-space:nowrap;
+  cursor:pointer;
+  user-select:none;
+  -webkit-user-select:none;
+  -webkit-tap-highlight-color:transparent;
+}
+/* second impression, a hair off register, printed first */
+.year-one::before{
+  content:attr(data-ghost);
+  position:absolute;
+  left:.045em;
+  top:.035em;
+  color:var(--dust);
+  z-index:-1;
+  pointer-events:none;
+}
+
+/* —— the photo: top of the window to the colophon, off the right edge.
+   Printed in the same two-tone as the feed (#feed-tone), on a dust slab a
+   step behind, with a soft shadow. —— */
+
 .hero-photo{
   grid-column:2;
   grid-row:1 / span 2;
   position:relative;
-  margin:0 calc(-1 * var(--pad)) 0 0;
+  margin:0;
   min-height:0;
-  background:var(--bone);
+  background:var(--bone-2);
   box-shadow:
     0 30px 50px -28px rgba(42,46,40,.55),
     0 1px 0 rgba(42,46,40,.08);
@@ -180,88 +275,21 @@ main{
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:50% 58%;
-  /* black on bone: the photo prints like ink on the ground */
-  filter:grayscale(1) contrast(1.12) brightness(1.02);
-  mix-blend-mode:multiply;
+  object-position:50% 56%;
+  filter:url(#feed-tone);
 }
-
-.hero-foot{
-  grid-column:1;
-  grid-row:2;
-  align-self:end;
-  display:flex;
-  flex-direction:column;
-  gap:clamp(12px,1.8vh,20px);
-  padding:clamp(16px,2.4vh,28px) 0 clamp(4px,1vh,10px);
-}
-
-.line{
+.meta{
+  position:absolute;
+  top:var(--pad);
+  right:var(--pad);
   margin:0;
-  max-width:22ch;
-  font-size:clamp(19px,1.9vw,27px);
-  line-height:1.22;
-  letter-spacing:-.005em;
-}
-
-.tally{
-  display:flex;
-  align-items:baseline;
-  gap:14px;
-  flex-wrap:wrap;
-  margin:0;
-}
-.tally-num{
-  font-family:var(--display);
-  font-weight:800;
-  font-size:clamp(40px,min(5vw,6.4svh),72px);
-  line-height:1;
-  letter-spacing:-.025em;
-  font-variant-numeric:lining-nums tabular-nums;
-}
-.tally-label{
   font-family:var(--mono);
   font-size:11px;
-  letter-spacing:.18em;
+  letter-spacing:.2em;
   text-transform:uppercase;
+  color:var(--asphalt);
+  text-align:right;
 }
-
-/* the year, printed to the edge: the digits sit on the rule and the
-   bottom of them is cut by it. Cropped, not floating. */
-.year-wrap{
-  grid-column:1 / -1;
-  grid-row:3;
-  overflow:hidden;
-  border-bottom:1px solid var(--asphalt);
-  margin-top:clamp(8px,1.6vh,18px);
-}
-.year-one{
-  position:relative;
-  isolation:isolate;
-  margin:0 0 -.075em -.04em;
-  font-family:var(--display);
-  font-weight:800;
-  font-size:clamp(104px,min(23.5vw,25svh),372px);
-  line-height:.8;
-  letter-spacing:-.045em;
-  font-variant-numeric:lining-nums tabular-nums;
-  white-space:nowrap;
-  user-select:none;
-  -webkit-user-select:none;
-  -webkit-tap-highlight-color:transparent;
-}
-/* second impression, a hair off register, printed first */
-.year-one::before{
-  content:attr(data-ghost);
-  position:absolute;
-  left:.045em;
-  top:.035em;
-  color:var(--dust);
-  z-index:-1;
-  pointer-events:none;
-}
-/* the rule under the year is the top edge of the next plane */
-.year-wrap{border-bottom-color:var(--asphalt)}
 
 /* —— colophon: the lower plane ——
    Waitlist and footer sit on bone-2, a step deeper than the ground, and
@@ -269,14 +297,16 @@ main{
    lands exactly on its top edge. */
 
 .colophon{
-  margin:0 calc(-1 * var(--pad));
+  grid-column:1 / -1;
+  grid-row:3;
+  margin-left:calc(-1 * var(--pad));
   padding:0 var(--pad) var(--pad);
   background:var(--bone-2);
   box-shadow:inset 0 1px 0 rgba(42,46,40,.10);
 }
-@media (min-width:1481px){
+@media (min-width:1721px){
   .colophon{
-    margin-left:calc(50% - 50vw);
+    margin-left:calc(50% - 50vw - var(--pad));
     margin-right:calc(50% - 50vw);
     padding-left:calc(50vw - 50% + var(--pad));
     padding-right:calc(50vw - 50% + var(--pad));
@@ -391,45 +421,46 @@ main{
   letter-spacing:.14em;
   text-transform:uppercase;
 }
+.hint{color:rgba(42,46,40,.55)}
 
 /* —— tall screens: let the type take the room —— */
 
 @media (min-height:900px) and (min-width:761px){
-  .stack{font-size:clamp(52px,min(8.4vw,11svh),160px)}
-  .year-one{font-size:clamp(104px,min(23.5vw,27svh),400px)}
+  .stack{font-size:clamp(52px,min(7.4vw,11svh),160px)}
+  .year-one{font-size:clamp(96px,min(15vw,26svh),380px)}
 }
 
-/* —— narrow: one column, photo between the name and the number —— */
+/* —— narrow: the photo is the cover, the type follows it —— */
 
 @media (max-width:760px){
-  .cover{padding:14px 16px 0}
-  .hero{
-    grid-template-columns:1fr;
-    grid-template-rows:auto auto auto auto;
-    padding-top:12px;
+  .cover{
+    display:flex;
+    flex-direction:column;
+    padding:14px 16px 0;
   }
-  .stack{
-    grid-row:1;
-    font-size:clamp(58px,17.5vw,96px);
-  }
+  .site-head{order:1;padding-top:0}
   .hero-photo{
-    grid-column:1;
-    grid-row:2;
-    margin:16px -16px 0 0;
-    max-height:36svh;
-    aspect-ratio:4/3;
+    order:2;
+    margin:14px -16px 0;
+    height:46svh;
+    max-height:520px;
   }
-  .hero-photo::before{transform:translate(-10px,10px)}
-  .colophon{margin:0 -16px;padding:0 16px 16px}
-  .hero-foot{
-    grid-column:1;
-    grid-row:3;
-    padding:18px 0 8px;
+  .hero-photo::before{transform:translate(0,10px)}
+  .meta{top:14px;right:16px}
+  .hero{
+    order:3;
+    padding-top:22px;
   }
+  .stack{font-size:clamp(58px,17.5vw,96px)}
+  .hero-foot{padding:18px 0 8px}
   .line{max-width:26ch;font-size:19px}
-  .year-wrap{grid-row:4;margin-top:4px}
+  .year-wrap{margin-top:6px}
   .year-one{font-size:clamp(96px,31vw,150px);margin-left:-.03em}
-
+  .colophon{
+    order:4;
+    margin:0 -16px;
+    padding:0 16px 16px;
+  }
   .waitlist{
     grid-template-columns:1fr;
     row-gap:14px;
@@ -437,6 +468,8 @@ main{
   }
   .eyebrow{grid-column:1;grid-row:1;text-align:left;margin:0}
   .wl-form{grid-row:2;max-width:none}
+  .site-foot .hint{order:3;flex:1 0 100%}
+  .open-num{font-size:clamp(88px,26vw,200px)}
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -446,6 +479,7 @@ main{
     transition-duration:.01ms !important;
     scroll-behavior:auto !important;
   }
+  .open{display:none !important}
 }
 
 /* —— the feed interrupt ——

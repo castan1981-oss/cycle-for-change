@@ -22,6 +22,18 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
 
+  <script>
+    /* the open is the default state; skip it on repeat visits in this session
+       and when motion is reduced — decided before first paint, not by the
+       deferred script */
+    try {
+      if (sessionStorage.getItem("cfc-open") === "1" ||
+          (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) {
+        document.documentElement.className += " seen";
+      }
+    } catch (e) {}
+  </script>
+  <noscript><style>.open{display:none !important}</style></noscript>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Space+Grotesk:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -31,32 +43,33 @@
 
 <a class="skip" href="#main">Skip to content</a>
 
+<!-- the open: asphalt, the count rolling up, then the slam. Once per session. -->
+<div class="open" id="open" aria-hidden="true">
+  <div class="open-inner">
+    <p class="open-num" id="openNum">0</p>
+    <p class="open-label">miles since June 1</p>
+  </div>
+</div>
+
 <div class="cover">
 
-<header class="site-head">
-  <a class="mark" href="/" aria-label="Cycle for Change home">
-    <svg class="mark-glyph" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-      <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="#2A2E28" stroke-width="12" stroke-linecap="round"/>
-      <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
-      <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
-      <circle cx="60" cy="60" r="6" fill="#2A2E28"/>
-    </svg>
-  </a>
-  <p class="meta">10000 &middot; 2027 &middot; All on the bike</p>
-</header>
+  <header class="site-head">
+    <a class="mark" href="/" aria-label="Cycle for Change home">
+      <svg class="mark-glyph" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+        <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="#2A2E28" stroke-width="12" stroke-linecap="round"/>
+        <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
+        <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
+        <circle cx="60" cy="60" r="6" fill="#2A2E28"/>
+      </svg>
+    </a>
+  </header>
 
-<main id="main">
-
-  <section class="hero" aria-labelledby="stack">
+  <main id="main" class="hero" aria-labelledby="stack">
     <h1 class="stack" id="stack">
       <span>Cycle</span>
       <span class="stack-for">For</span>
       <span>Change</span>
     </h1>
-
-    <figure class="hero-photo">
-      <img src="/hero-cover.jpg" alt="A rider on a two-lane desert road at golden hour, Camelback Mountain ahead under a streaked sky." width="1350" height="1800" loading="eager" decoding="async" fetchpriority="high">
-    </figure>
 
     <div class="hero-foot">
       <p class="line">I do the miles. You decide who they&rsquo;re for.</p>
@@ -64,36 +77,41 @@
         <span class="tally-num" data-cur>2,926</span>
         <span class="tally-label">miles since June 1</span>
       </p>
+      <p class="last" id="lastRide" aria-live="polite"></p>
     </div>
 
     <div class="year-wrap">
-      <p class="year-one" aria-label="10000" data-ghost="10000">10000</p>
+      <p class="year-one" id="year" aria-label="10000" data-ghost="10000">10000</p>
     </div>
-  </section>
+  </main>
 
-</main>
+  <figure class="hero-photo">
+    <img src="/hero-cover.jpg" alt="A rider on a two-lane desert road at golden hour, Camelback Mountain ahead under a streaked sky." width="1350" height="1800" loading="eager" decoding="async" fetchpriority="high">
+    <figcaption class="meta">10000 &middot; 2027 &middot; All on the bike</figcaption>
+  </figure>
 
-<div class="colophon">
-  <section class="waitlist" aria-labelledby="waitlist-head">
-    <p class="eyebrow" id="waitlist-head">Site in December. Year starts January&nbsp;1.</p>
+  <div class="colophon">
+    <section class="waitlist" aria-labelledby="waitlist-head">
+      <p class="eyebrow" id="waitlist-head">Site in December. Year starts January&nbsp;1.</p>
 
-    <form class="wl-form" name="waitlist" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="waitlistForm">
-      <input type="hidden" name="form-name" value="waitlist">
-      <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-      <div class="wl-field">
-        <label class="wl-label" for="wl-email">Email</label>
-        <input class="wl-input" id="wl-email" name="email" type="email" required autocomplete="email" inputmode="email">
-      </div>
-      <button class="wl-btn" type="submit">Notify me</button>
-      <p class="wl-msg" id="wlMsg" role="status" aria-live="polite"></p>
-    </form>
-  </section>
+      <form class="wl-form" name="waitlist" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="waitlistForm">
+        <input type="hidden" name="form-name" value="waitlist">
+        <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="wl-field">
+          <label class="wl-label" for="wl-email">Email</label>
+          <input class="wl-input" id="wl-email" name="email" type="email" required autocomplete="email" inputmode="email">
+        </div>
+        <button class="wl-btn" type="submit">Notify me</button>
+        <p class="wl-msg" id="wlMsg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
 
-<footer class="site-foot">
-  <span>Cycle for Change</span>
-  <span>Phoenix &middot; bike only</span>
-</footer>
-</div>
+    <footer class="site-foot">
+      <span>Cycle for Change</span>
+      <span class="hint">Tap the year &middot; sound on</span>
+      <span>Phoenix &middot; bike only</span>
+    </footer>
+  </div>
 
 </div>
 
