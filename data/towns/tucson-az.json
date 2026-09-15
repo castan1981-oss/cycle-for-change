@@ -1,0 +1,76 @@
+{
+  "id": "tucson-az",
+  "name": "Tucson",
+  "state": "Arizona",
+  "state_code": "AZ",
+  "county": "Pima County",
+  "lat": 32.2226,
+  "lon": -110.9747,
+  "timezone": "America/Phoenix",
+  "population": "about 543,000 (2020 census: 542,629); metro about 1.04 million",
+  "elevation_ft": 2388,
+  "nearest_airport": { "name": "Tucson International Airport", "code": "TUS", "miles": 8 },
+  "major_airport": { "name": "Phoenix Sky Harbor International", "code": "PHX", "miles": 112 },
+  "official_url": "https://www.tucsonaz.gov/",
+  "visitor_url": "https://www.visittucson.org/",
+  "summary": "Tucson is Arizona's second-largest city, a desert town of about 543,000 people at 2,400 feet, ringed by five mountain ranges about 110 miles southeast of Phoenix. It is one of the most-ridden cities in the country, with the 131-mile car-free Loop path, the 25-mile Mount Lemmon climb and dry, sunny weather most of the year. El Tour de Tucson, held the Saturday before Thanksgiving, is its biggest ride.",
+  "about": [
+    "Tucson sits on an alluvial plain in the Sonoran Desert, about 60 miles north of the Mexican border, with the Santa Catalina Mountains to the north and the Santa Ritas to the south. It began as a Spanish fort in 1775, was the territorial capital from 1867 to 1877, and is home to the University of Arizona and Davis-Monthan Air Force Base.",
+    "The city is known for its food. UNESCO named it the first City of Gastronomy in the United States in 2015. Downtown, Fourth Avenue and the Mercado San Agustin district west of the river hold most of the restaurants and small hotels a visiting rider will use, and the Tucson Convention Center, where El Tour starts, sits at the south end of downtown.",
+    "Summers are hot, with average highs near 100 F from June through August. The rest of the year is mild and dry, which is why the cycling calendar runs from fall through spring."
+  ],
+  "riding": [
+    "Pima County's Chuck Huckelberry Loop is about 131-140 miles of paved, car-free shared-use path linking river parks and washes through Tucson, South Tucson, Marana and Oro Valley, open sunrise to sunset with about 50 parking lots along it. Visit Tucson calls the city one of the top cycling cities in the U.S. and lists a TUGO bike-share system for getting around downtown.",
+    "For climbing, the Catalina Highway up Mount Lemmon is the standard: about 25 miles and 5,300 feet of gain from the desert floor to pine forest. El Tour's 102-mile route heads out Old Spanish Trail past Saguaro National Park East and Colossal Cave before looping through Vail, Sahuarita and Green Valley. Mountain bikers have trails on Lemmon (Bug Springs, Molino Basin) and around town."
+  ],
+  "getting_there": "Tucson International Airport (TUS) is eight miles south of downtown with nonstop service to about two dozen cities on Southwest, American, Delta, United and Alaska. Phoenix Sky Harbor is about 112 miles and under two hours up I-10 and often cheaper to fly into. Downtown is walkable and the fare-free Sun Link streetcar links the convention center, Fourth Avenue, the university and the Mercado district, but you will want a car or a bike for Mount Lemmon and most of the Loop.",
+  "hotels": [
+    { "name": "DoubleTree by Hilton Tucson Downtown Convention Center", "url": "https://www.hilton.com/en/hotels/tusaudt-doubletree-tucson-downtown-at-the-convention-center/", "address": "280 S Church Ave, Tucson, AZ 85701", "note": "Directly beside the Tucson Convention Center, where El Tour starts and packets are picked up; pool and lobby bar", "price_hint": "$$$" },
+    { "name": "The Leo Kent Hotel", "url": "https://www.theleokenthotel.com/", "address": "1 S Church Ave, Tucson, AZ 85701", "note": "Upscale boutique hotel a few blocks north of the convention center, with a restaurant and gym", "price_hint": "$$$" },
+    { "name": "AC Hotel by Marriott Tucson Downtown", "url": "https://www.marriott.com/hotels/travel/tusad-ac-hotel-tucson-downtown/", "address": "151 E Broadway Blvd, Tucson, AZ 85701", "note": "Modern downtown hotel at Fifth and Congress, walkable to the start and the streetcar", "price_hint": "$$$" },
+    { "name": "Hotel Congress", "url": "https://hotelcongress.com/", "address": "311 E Congress St, Tucson, AZ 85701", "note": "Historic downtown hotel with the Cup Cafe downstairs; lively, not quiet, and a short walk to the start", "price_hint": "$$" },
+    { "name": "Hotel McCoy", "url": "https://www.hotelmccoy.com/locations/tucson", "address": "720 W Silverlake Rd, Tucson, AZ 85713", "note": "Retro motor lodge south of downtown with free breakfast, a heated saltwater pool and room-front parking for loading bikes", "price_hint": "$$" }
+  ],
+  "restaurants": [
+    { "name": "El Charro Cafe (Downtown)", "url": "https://www.elcharrocafe.com/locations/downtown/", "address": "311 N Court Ave, Tucson, AZ 85701", "cuisine": "Sonoran Mexican", "note": "Same family since 1922; carne seca is the dish. Open 11 am to 9 pm daily" },
+    { "name": "Cup Cafe at Hotel Congress", "url": "https://hotelcongress.com/restaurants/cup-cafe/", "address": "311 E Congress St, Tucson, AZ 85701", "cuisine": "American cafe", "note": "Breakfast from 8 am and dinner till 9 pm downtown; closes 2-4 pm" },
+    { "name": "BOCA by Chef Maria Mazon", "url": "https://bocatacos.com/", "address": "533 N 4th Ave, Tucson, AZ 85705", "cuisine": "Tacos, modern Mexican", "note": "Scratch tortillas and daily salsas on Fourth Avenue; dog-friendly patio" },
+    { "name": "Seis Kitchen (Mercado San Agustin)", "url": "https://www.seiskitchen.com/", "address": "130 S Avenida del Convento, Tucson, AZ 85745", "cuisine": "Regional Mexican", "note": "Breakfast, lunch and dinner from 8 am daily in the Mercado courtyard, right on the Loop west of downtown" },
+    { "name": "Tumerico", "url": "https://www.tumerico.com/", "address": "2526 E 6th St, Tucson, AZ 85716", "cuisine": "Latin vegan and vegetarian", "note": "Chef Wendy Garcia's changing menu; a midtown stop for plant-based riders" },
+    { "name": "Barrio Bread", "url": "https://barriobread.com/", "address": "18 S Eastbourne Ave, Tucson, AZ 85716", "cuisine": "Bakery", "note": "Don Guerra's James Beard-winning sourdough; Tuesday-Saturday 9 am to 1 pm or until sold out" }
+  ],
+  "bike_shops": [
+    { "name": "Fair Wheel Bikes", "url": "https://www.fairwheelbikes.com/", "address": "1110 E 6th St, Tucson, AZ 85719", "phone": "520-884-9018", "services": ["repair", "rental", "parts", "fitting"], "note": "High-end road and gravel shop near the university; rents road, gravel, mountain and e-bikes and offers route advice" },
+    { "name": "Transit Cycles", "url": "https://www.transitcycles.com/", "address": "267 S Avenida del Convento, Bldg 10, Tucson, AZ 85745", "phone": "520-396-4525", "services": ["repair", "parts"], "note": "Woman-owned shop in the Mercado district beside the Loop; commuter, gravel and mountain focus, services road and most e-bikes. Closed Mondays" },
+    { "name": "Ajo Bikes", "url": "https://www.ajobikes.com/", "address": "1301 E Ajo Way, Ste 117, Tucson, AZ 85713", "phone": "520-294-1434", "services": ["repair", "parts"], "note": "Family shop for 50-plus years on the south side, near the airport; four certified mechanics, recumbents and trikes too" },
+    { "name": "BICAS", "url": "https://bicas.org/", "address": "2001 N 7th Ave, Tucson, AZ 85705", "phone": "520-628-7950", "services": ["repair", "rental", "parts", "diy"], "note": "Nonprofit community bike shop since 1989: DIY stands with mechanic help, used parts, refurbished bikes and rentals. Thursday-Sunday" },
+    { "name": "Bicycle Ranch Tucson", "url": "https://www.bicycleranchtucson.com/", "address": "7090 N Oracle Rd #156, Tucson, AZ 85704", "phone": "520-219-4311", "services": ["repair", "parts", "fitting"], "note": "Full-service shop on the north side near Oro Valley and the Catalina foothills; services all makes. No rentals listed" }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Tucson,_Arizona",
+    "https://en.wikipedia.org/wiki/Tucson_International_Airport",
+    "https://www.tucsonaz.gov/",
+    "https://www.visittucson.org/",
+    "https://www.visittucson.org/things-to-do/outdoors/biking/",
+    "https://www.pima.gov/162/The-Chuck-Huckelberry-Loop",
+    "https://www.rome2rio.com/s/Phoenix-Airport-PHX/Tucson",
+    "https://downtowntucson.org/go/doubletree-by-hilton-tucson-downtown-convention-center",
+    "https://downtowntucson.org/go/ac-hotel-by-marriott-tucson-downtown",
+    "https://www.theleokenthotel.com/",
+    "https://hotelcongress.com/about/contact/",
+    "https://www.hotelmccoy.com/locations/tucson",
+    "https://www.elcharrocafe.com/locations/downtown/",
+    "https://hotelcongress.com/restaurants/cup-cafe/",
+    "https://bocatacos.com/",
+    "https://mercadodistrict.com/business/seis-kitchen/",
+    "https://www.tumerico.com/ourstory",
+    "https://barriobread.com/contact/",
+    "https://www.fairwheelbikes.com/",
+    "https://www.transitcycles.com/contact",
+    "https://www.ajobikes.com/about/location-pg141.htm",
+    "https://bicas.org/",
+    "https://www.bicycleranchtucson.com/",
+    "https://eltourdetucson.org/el-tour-de-tucson/route/"
+  ],
+  "verified": "2026-09-15"
+}

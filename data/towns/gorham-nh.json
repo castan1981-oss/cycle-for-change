@@ -1,0 +1,62 @@
+{
+  "id": "gorham-nh",
+  "name": "Gorham",
+  "state": "New Hampshire",
+  "state_code": "NH",
+  "county": "Coös County",
+  "lat": 44.3947,
+  "lon": -71.2036,
+  "timezone": "America/New_York",
+  "population": "about 2,700 (2,698, 2020 census)",
+  "elevation_ft": 840,
+  "nearest_airport": { "name": "Portland International Jetport", "code": "PWM", "miles": 67 },
+  "major_airport": { "name": "Manchester-Boston Regional", "code": "MHT", "miles": 102 },
+  "official_url": "https://www.gorhamnh.gov/",
+  "visitor_url": "https://gorhamnhoutdoors.com/",
+  "summary": "Gorham is a town of about 2,700 in Coös County, northern New Hampshire, where the Androscoggin River meets the north side of the Presidential Range. It is the gateway to the Mt. Washington Auto Road, which starts on Route 16 south of the village and hosts the bicycle hillclimb each August. Cyclists also come for the Presidential Rail Trail and the Cross New Hampshire Adventure Trail, and for the carriage roads at Great Glen Trails at the base of the mountain.",
+  "about": [
+    "Gorham was incorporated in 1836 and grew as a railroad town in the 19th century before tourism took over. Part of the White Mountain National Forest lies inside the town line, and the nickname 'Switzerland of America' dates from the hotel era. Main Street (Route 2/16) runs through a compact village of diners, an Italian place, a butcher shop and motels.",
+    "The Mt. Washington Auto Road, opened in 1861 and billed as the first man-made attraction in the United States, is the town's main draw. Its base, with the Glen House hotel and Great Glen Trails across the road, sits south of the village on Route 16 toward Pinkham Notch.",
+    "Berlin, the larger mill city, is six miles north and has the area's bike shop and the Androscoggin Valley Chamber of Commerce. Moose Brook State Park is on the west side of town."
+  ],
+  "riding": [
+    "The Presidential Rail Trail and the Cross New Hampshire Adventure Trail give flat to rolling gravel riding out of the village along the Androscoggin, and the town's own Gorham NH Outdoors site maps the in-town trailheads and parking. Great Glen Trails at the Auto Road base rents bikes for its carriage roads and singletrack.",
+    "Road riders come for the Auto Road itself, but it is a toll road, and the hillclimb is the one day a year it is reserved for bikes. Route 16 through Pinkham Notch and Route 2 along the river are the paved options; both carry traffic. Summer is short, mud season is real, and the summit is a different climate from the valley."
+  ],
+  "getting_there": "Portland, Maine (PWM) is the closest airport at about 67 miles, roughly an hour and a half by car. Manchester-Boston Regional (MHT) is about 102 miles and Boston Logan about three and a half hours. Route 16 from the south and Route 2 from the east and west are the roads in. There is no transit to speak of; you need a car, and for the hillclimb you need a driver anyway.",
+  "hotels": [
+    { "name": "The Glen House", "url": "https://theglenhouse.com/", "address": "979 NH Route 16, Gorham, NH 03581", "note": "Modern hotel at the base of the Auto Road, across the street from Great Glen Trails; the closest bed to the start line.", "price_hint": "$$$" },
+    { "name": "Top Notch Inn", "url": "https://www.topnotchinn.com/", "address": "265 Main Street, Gorham, NH 03581", "note": "Motel in the village on Main Street, listed by the Androscoggin Valley Chamber; a short drive down Route 16 to the Auto Road.", "price_hint": "$$" },
+    { "name": "Town & Country Inn and Resort", "url": "https://www.townandcountryinnandresort.com/", "address": "20 State Route 2, Shelburne, NH 03581", "note": "Larger inn just east of the village with pool, hot tub and restaurant, and direct trail access.", "price_hint": "$$" }
+  ],
+  "restaurants": [
+    { "name": "Nonna's Kitchen", "url": "https://nonnasgorham.com/", "address": "19 Exchange Street, Gorham, NH 03581", "cuisine": "Italian", "note": "Scratch Italian in a casual room; dinner from 4 PM, Wednesday to Sunday in season." },
+    { "name": "J's Corner Restaurant & Lounge", "url": "https://jscornernh.com/", "address": "277 Main Street, Gorham, NH 03581", "cuisine": "American, seafood, steaks", "note": "Village standby on Main Street with a full bar, open 11 to 9." },
+    { "name": "The Butcher's Daughter", "url": "https://thebutchersdaughterfood.com/", "address": "152 Main Street, Gorham, NH 03581", "cuisine": "Butcher shop, deli, prepared foods", "note": "Local meats, deli and prepared meals for a cabin or the drive home." },
+    { "name": "White Mountain Cafe & Bookstore", "url": "http://whitemountaincafe.com/", "address": "Main Street, Gorham, NH 03581", "cuisine": "Coffee, cafe", "note": "Coffee and a bookstore on Main Street for the morning before the climb." }
+  ],
+  "bike_shops": [
+    { "name": "Crooker Cycle Sports (Berlin)", "url": "https://gorhamnhoutdoors.com/directory/local-businesses/crooker-cycle-sports/", "address": "240 Glen Ave, Berlin, NH 03570", "phone": "(603) 752-3632", "services": ["repair", "parts"], "note": "The only bike shop in the Gorham-Berlin area, six miles north of the village; services all makes." },
+    { "name": "Great Glen Trails Outdoor Center", "url": "https://greatglentrails.com/", "address": "1 Mount Washington Auto Road, Gorham, NH 03581", "phone": "(603) 466-3988", "services": ["rental"], "note": "Rentals and a gear shop at the Auto Road base, across from the Glen House. Rental only; race-day mechanical support at the hillclimb is provided by REI Co-op, per the organizer." }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Gorham,_New_Hampshire",
+    "https://www.gorhamnh.gov/",
+    "https://gorhamnhoutdoors.com/",
+    "https://androscogginvalleychamber.com/",
+    "https://androscogginvalleychamber.com/business-directory/wpbdp_category/lodging/",
+    "https://gorhamnewhampshire.com/dining.html",
+    "https://www.xnhat.org/bike-rentals-repair",
+    "https://theglenhouse.com/",
+    "https://www.townandcountryinnandresort.com/",
+    "https://nonnasgorham.com/",
+    "https://jscornernh.com/",
+    "https://thebutchersdaughterfood.com/",
+    "https://greatglentrails.com/",
+    "https://gorhamnhoutdoors.com/directory/local-businesses/crooker-cycle-sports/",
+    "https://www.mwarbh.org/race-information",
+    "https://www.mwarbh.org/riders",
+    "https://www.rome2rio.com/s/Nearby-Airports/Gorham-NH-USA"
+  ],
+  "verified": "2026-09-15"
+}

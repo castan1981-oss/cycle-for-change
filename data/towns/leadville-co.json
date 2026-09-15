@@ -1,0 +1,68 @@
+{
+  "id": "leadville-co",
+  "name": "Leadville",
+  "state": "Colorado",
+  "state_code": "CO",
+  "county": "Lake County",
+  "lat": 39.2508,
+  "lon": -106.2925,
+  "timezone": "America/Denver",
+  "population": "about 2,600 (2020 census: 2,633)",
+  "elevation_ft": 10154,
+  "nearest_airport": { "name": "Eagle County Regional Airport", "code": "EGE", "miles": 62 },
+  "major_airport": { "name": "Denver International", "code": "DEN", "miles": 125 },
+  "official_url": "https://www.leadville-co.gov/",
+  "visitor_url": "https://www.leadvilletwinlakes.com/",
+  "summary": "Leadville is a former silver-mining town of about 2,600 people at 10,154 feet, the highest incorporated city in the United States, about 100 miles southwest of Denver. Its Victorian main street, Harrison Avenue, is a National Historic Landmark district and the start line for the Leadville Trail 100 MTB and Run. Riders come for the race, the paved 11.6-mile Mineral Belt Trail and high-altitude dirt.",
+  "about": [
+    "Leadville boomed on silver after 1877 and by 1880 was the second-largest city in Colorado, with nearly 15,000 people. The mines produced millions of ounces of gold and silver and, later, molybdenum from the Climax mine north of town, which by 1980 was the largest underground mine in the world. When Climax shut down in 1981 the town lost most of its economy.",
+    "Ken Chlouber's answer was a 100-mile foot race in 1983, followed by the mountain bike race in 1994. Endurance sport and tourism now hold the town up. The historic district was designated a National Historic Landmark in 1961, and the visitor center is at 460 Harrison Avenue.",
+    "The town sits in a high valley between the Mosquito and Sawatch ranges, with Colorado's two tallest peaks, Elbert and Massive, to the southwest. The climate is alpine: July averages 39 to 71 F, and winters are long and snowy. The tourism office claims about 310 sunny days a year."
+  ],
+  "riding": [
+    "The Mineral Belt Trail is an 11.6-mile paved loop around town and through the old mining district, all above 10,000 feet, with interpretive signs and views of the Sawatch. It is the easy warm-up ride and both bike shops rent bikes for it. Beyond that the riding is dirt: the LT100 course itself, St. Kevin's, Sugarloaf and Powerline, and singletrack around Turquoise Lake and Twin Lakes.",
+    "Altitude changes everything. Even the flat rides feel hard for the first few days. August averages a high near 67 F with a one-in-three chance of afternoon rain, so carry a layer."
+  ],
+  "getting_there": "Denver International Airport is about 125 miles and two hours 20 minutes by car via I-70 and then Highway 91 over Fremont Pass or US 24 over Tennessee Pass; downtown Denver is about 100 miles. Eagle County Regional Airport (EGE) is 62 miles and has daily commercial flights. Vail is 44 miles and Colorado Springs 128. Shuttles from Denver run to Frisco, 30 miles away, and Lake County Transit offers free door-to-door service in town, but for race weekend you will want your own car. Uber and Lyft are scarce.",
+  "hotels": [
+    { "name": "Historic Delaware Hotel", "url": "https://delawarehotel.com/", "address": "700 Harrison Ave, Leadville, CO 80461", "note": "1886 Victorian with 36 rooms and a lobby bar on Harrison, a block from the LT100 start; three floors, steep stairs, no elevator", "price_hint": "$$" },
+    { "name": "The Timberline", "url": "https://timberlineleadville.com/", "address": "216 Harrison Ave, Leadville, CO 80461", "note": "Renovated motel on the south end of Harrison with kitchenette bunk units and a three-bedroom loft; consistently the town's top-rated stay", "price_hint": "$$" },
+    { "name": "Columbine Inn & Suites", "url": "https://columbineinn.com/", "address": "2019 N Poplar St, Leadville, CO 80461", "note": "Value motel on the north edge of town with free breakfast and parking; a short ride to the start", "price_hint": "$" },
+    { "name": "Inn the Clouds Hostel & Inn", "url": "https://www.stayinntheclouds.com/", "address": "500 E 7th St, Leadville, CO 80461", "note": "Hostel dorms and private ensuite rooms five blocks from downtown, with a full kitchen and steel bike racks in the garage from June on", "price_hint": "$" }
+  ],
+  "restaurants": [
+    { "name": "Tennessee Pass Cafe", "url": "https://tennesseepasscafe.shop/", "address": "222 Harrison Ave, Leadville, CO 80461", "cuisine": "American cafe", "note": "Organic, locally sourced menu with vegan and vegetarian options and a patio; the standard post-ride lunch" },
+    { "name": "High Mountain Pies", "url": "https://www.hmpies.com/", "address": "115 W 4th St, Leadville, CO 80461", "cuisine": "Pizza", "note": "Twenty-plus years of pizza a block off Harrison; open 11 am to 10 pm daily" },
+    { "name": "Treeline Kitchen", "url": "https://treelinekitchen.com/", "address": "615 Harrison Ave, Leadville, CO 80461", "cuisine": "New American", "note": "Family-owned dinner spot, Wednesday-Sunday from 3:30 pm, with a seasonal rooftop bar it calls the highest in the country" },
+    { "name": "The Legendary Silver Dollar Saloon", "url": "https://legendarysilverdollarsaloon.com/", "address": "315 Harrison Ave, Leadville, CO 80461", "cuisine": "Saloon, pub food", "note": "Open since 1879; a small in-house menu and a lot of history on the walls" },
+    { "name": "Buchi Cafe Cubano", "url": "http://www.buchicafecubano.com/", "address": "401 Harrison Ave, Leadville, CO 80461", "cuisine": "Cuban coffee and sandwiches", "note": "Breakfast and lunch on Harrison; Cuban coffee and pressed sandwiches" },
+    { "name": "Quincy's Steak & Spirits", "url": "https://www.quincyssteakandspirits.com/", "address": "416 Harrison Ave, Leadville, CO 80461", "cuisine": "Steakhouse", "note": "Simple steak-and-spirits dinner on the main street" }
+  ],
+  "bike_shops": [
+    { "name": "Cycles of Life", "url": "https://www.colbikes.com/", "address": "309 Harrison Ave, Leadville, CO 80461", "phone": "719-486-5533", "services": ["repair", "rental", "parts", "fitting", "suspension"], "note": "Full-service shop on Harrison: tune-ups, custom wheels, suspension and fork overhauls, bike fitting; rents mountain, hardtail, gravel and e-bikes for the Mineral Belt Trail and singletrack" },
+    { "name": "Leadvelo Bicicasa", "url": "https://www.leadvelobicicasa.com/", "address": "719 Harrison Ave, Leadville, CO 80461", "phone": "719-293-2362", "services": ["repair", "rental", "parts"], "note": "All-bikes, all-people shop at nearly 10,200 feet, with service on every brake and drivetrain type, tubeless setups, wheel building, rentals and bikepacking gear; Spanish spoken. Closed Monday-Tuesday" }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Leadville,_Colorado",
+    "https://www.leadvilletwinlakes.com/",
+    "https://www.leadvilletwinlakes.com/getting-here/",
+    "https://www.leadvilletwinlakes.com/listing/mineral-belt-trail/",
+    "https://www.leadvilleraceseries.com/history/",
+    "https://www.leadvilleraceseries.com/visit-leadville/",
+    "https://www.rome2rio.com/s/Denver-Airport-DEN/Leadville",
+    "https://delawarehotel.com/",
+    "https://www.leadvilletwinlakes.com/listing/the-timberline/",
+    "https://columbineinn.com/contact/",
+    "https://www.stayinntheclouds.com/about-us",
+    "https://www.leadvilletwinlakes.com/listing/tennessee-pass-cafe/",
+    "https://www.hmpies.com/maps",
+    "https://treelinekitchen.com/",
+    "https://www.leadvilletwinlakes.com/listing/silver-dollar-saloon/",
+    "https://www.leadvilletwinlakes.com/listing/buchi-cubano-cafe/",
+    "https://www.quincyssteakandspirits.com/contact-steakhouse",
+    "https://www.leadvilletwinlakes.com/listing/cycles-of-life/",
+    "https://www.leadvilletwinlakes.com/listing/leadvelo-bicicasa/",
+    "https://weatherspark.com/m/3368/8/Average-Weather-in-August-in-Leadville-Colorado-United-States"
+  ],
+  "verified": "2026-09-15"
+}

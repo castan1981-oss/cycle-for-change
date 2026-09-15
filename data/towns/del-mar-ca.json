@@ -1,0 +1,66 @@
+{
+  "id": "del-mar-ca",
+  "name": "Del Mar",
+  "state": "California",
+  "state_code": "CA",
+  "county": "San Diego County",
+  "lat": 32.9550,
+  "lon": -117.2639,
+  "timezone": "America/Los_Angeles",
+  "population": "3,954 (2020 census)",
+  "elevation_ft": 112,
+  "nearest_airport": { "name": "San Diego International", "code": "SAN", "miles": 21 },
+  "major_airport": { "name": "San Diego International", "code": "SAN", "miles": 21 },
+  "official_url": "https://www.delmar.ca.us",
+  "visitor_url": "https://www.visitdelmarvillage.com",
+  "summary": "Del Mar is a small beach city of about 4,000 people on the coast of San Diego County, roughly 21 miles north of San Diego International Airport. It is best known for the Del Mar Fairgrounds and its summer horse racing, and since 2025 it has hosted the Belgian Waffle Ride California at the Del Mar Polo Fields at Surf Sports Park, next door to the fairgrounds. Cyclists come for BWR and for the coast road and the canyons inland.",
+  "about": [
+    "Del Mar sits on the Pacific between Solana Beach and the northern edge of San Diego. The 2020 census counted 3,954 residents. The village center is along Camino Del Mar, a few blocks of restaurants, inns and shops on a bluff above the beach.",
+    "The Del Mar Fairgrounds has been here since 1936, with horse racing at the track every summer since the following year. The polo fields at Surf Sports Park, across the San Dieguito River from the fairgrounds, are where BWR California sets up its expo, start and finish.",
+    "The city runs a certified farmers market, the second-oldest in San Diego County, and part of the beach is dog-friendly. It is a quiet, expensive place to stay; Solana Beach and Encinitas to the north have more of the bike shops."
+  ],
+  "riding": [
+    "The coast road (Camino Del Mar and Highway 101) runs north through Solana Beach and Encinitas and is the standard road ride. Inland, the BWR courses use the canyons and dirt of North San Diego County: sand, rock, fire roads and singletrack between the coast and Escondido.",
+    "Late April and May on the coast average a high near 69°F and a low near 58°F with almost no rain, though mornings can be gray under the marine layer. A few miles inland it is hotter and drier, which matters on a 100-mile day."
+  ],
+  "getting_there": "Fly into San Diego International (SAN), about 21 miles south; the drive up I-5 takes 25 to 35 minutes depending on traffic. Los Angeles is about two hours north by car. You will want a car in Del Mar, since the village, the polo fields and the Solana Beach bike shops are spread along a few miles of coast, though a bike covers it too.",
+  "hotels": [
+    { "name": "L'Auberge Del Mar", "url": "https://www.laubergedelmar.com/", "address": "1540 Camino Del Mar, Del Mar, CA 92014", "note": "Full-service resort in the middle of the village with a spa and pool; the splurge.", "price_hint": "$$$" },
+    { "name": "Del Mar Beach Hotel", "url": "https://delmarhotel.com/", "address": "1702 Coast Blvd, Del Mar, CA 92014", "note": "The only beachfront hotel in Del Mar; simple rooms right on the sand.", "price_hint": "$$$" },
+    { "name": "Les Artistes Inn", "url": "https://lesartistesinn.com/", "address": "944 Camino Del Mar, Del Mar, CA 92014", "note": "Twelve artist-themed rooms in the village, walkable to restaurants; the mid-priced option.", "price_hint": "$$" },
+    { "name": "Secret Garden Inn", "url": "https://lesartistesinn.com/", "address": "1140 Camino Del Mar, Del Mar, CA 92014", "note": "Sister inn to Les Artistes, same owners, a few blocks up Camino Del Mar.", "price_hint": "$$" }
+  ],
+  "restaurants": [
+    { "name": "Jake's Del Mar", "url": "https://jakesdelmar.com/", "address": "1660 Coast Blvd, Del Mar, CA 92014", "cuisine": "Coastal seafood", "note": "On the beach in the village; brunch through dinner." },
+    { "name": "Pacifica Del Mar", "url": "https://www.pacificadelmar.com/", "address": "1555 Camino Del Mar, Del Mar, CA 92014", "cuisine": "Seafood", "note": "Village seafood house for more than 30 years; casual enough for post-ride." },
+    { "name": "Sbicca", "url": "https://sbiccadelmar.com/", "address": "215 15th St, Del Mar, CA 92014", "cuisine": "California", "note": "Rooftop with ocean views, a block off Camino Del Mar." },
+    { "name": "Brigantine Seafood & Oyster Bar", "url": "https://www.brigantine.com/del-mar", "address": "3263 Camino Del Mar, Del Mar, CA 92014", "cuisine": "Seafood and oysters", "note": "At the north end of town near the fairgrounds; big enough for a group." },
+    { "name": "Viewpoint Brewing Co.", "url": "https://www.viewpointbrewing.com/", "address": "2201 San Dieguito Dr, Suite D, Del Mar, CA 92014", "cuisine": "Brewpub", "note": "Brewery and full menu on the river next to the fairgrounds, the closest food to the BWR polo fields." }
+  ],
+  "bike_shops": [
+    { "name": "Epic Cycles Solana Beach", "url": "https://epic-cycles.com/pages/stores/epic-cycles-solana-beach-store", "address": "115 N Hwy 101, Solana Beach, CA 92075", "phone": "(858) 925-7230", "services": ["repair", "parts"], "note": "Road, gravel, mountain and e-bike service two miles north of Del Mar; closed Sunday and Monday. No rentals." },
+    { "name": "Revolution Bike Shop", "url": "https://revolutionbikeshop.com/", "address": "235 S Hwy 101, Solana Beach, CA 92075", "phone": "", "services": ["repair", "parts"], "note": "Service and sales on the 101 in Solana Beach; ENVE Ride Center dealer." },
+    { "name": "Trek Bicycle Encinitas", "url": "https://www.trekbikes.com/us/en_US/retail/encinitas/", "address": "1010 S Coast Hwy 101, Suite 101, Encinitas, CA 92024", "phone": "(760) 632-0006", "services": ["repair", "rental", "parts"], "note": "Trek store with 24-hour service on any brand and bike and e-bike rentals, about eight miles north." },
+    { "name": "San Diego Electric Bike", "url": "https://www.solanabeach.com/activities/biking/", "address": "101 S Hwy 101, Solana Beach, CA 92075", "phone": "", "services": ["repair", "rental"], "note": "E-bike rentals and service on the 101 in Solana Beach." }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Del_Mar,_California",
+    "https://www.delmar.ca.us/",
+    "https://www.belgianwaffleride.bike/pages/belgian-waffle-ride-ca",
+    "https://www.laubergedelmar.com/",
+    "https://delmarhotel.com/",
+    "https://lesartistesinn.com/",
+    "https://jakesdelmar.com/",
+    "https://www.pacificadelmar.com/",
+    "https://sbiccadelmar.com/",
+    "https://www.brigantine.com/del-mar",
+    "https://www.viewpointbrewing.com/",
+    "https://epic-cycles.com/pages/stores/epic-cycles-solana-beach-store",
+    "https://www.solanabeach.com/activities/biking/",
+    "https://www.trekbikes.com/us/en_US/retail/encinitas/",
+    "https://revolutionbikeshop.com/",
+    "https://www.fodors.com/community/united-states/san-diego-airport-to-del-mar-driving-distance-and-time-643004/",
+    "https://weatherspark.com/y/1806/Average-Weather-in-Del-Mar-California-United-States-Year-Round"
+  ],
+  "verified": "2026-09-15"
+}
