@@ -1,0 +1,67 @@
+{
+  "id": "seattle-wa",
+  "name": "Seattle",
+  "state": "Washington",
+  "state_code": "WA",
+  "county": "King County",
+  "lat": 47.6039,
+  "lon": -122.3300,
+  "timezone": "America/Los_Angeles",
+  "population": "737,015 (2020 census)",
+  "elevation_ft": 148,
+  "nearest_airport": { "name": "Seattle-Tacoma International", "code": "SEA", "miles": 14 },
+  "major_airport": { "name": "Seattle-Tacoma International", "code": "SEA", "miles": 14 },
+  "official_url": "https://www.seattle.gov",
+  "visitor_url": "https://visitseattle.org",
+  "summary": "Seattle is the largest city in the Pacific Northwest, on Puget Sound in King County, Washington, with about 737,000 residents. It is home to Cascade Bicycle Club and the start of the Seattle to Portland Bicycle Classic, which leaves from the University of Washington each July. Cyclists come for the STP, the club's training rides and a dry, mild summer.",
+  "about": [
+    "Seattle sits between Puget Sound and Lake Washington, about 14 miles north of Sea-Tac airport. The 2020 census counted 737,015 people in the city proper. The Link light rail connects the airport to downtown and to the University of Washington in under an hour for a few dollars.",
+    "The STP starts in the University District, the neighborhood around the University of Washington campus on the north side of the ship canal. It is a student neighborhood: cheap food on University Way NE ('the Ave'), a handful of mid-priced hotels within a mile of the start lot, and the Montlake and Green Lake bike shops close by.",
+    "Cascade Bicycle Club, which established the STP in 1979, is based here and runs a full season of rides and a training series each spring for riders building up to 206 miles."
+  ],
+  "riding": [
+    "Seattle is hilly and wet most of the year, but July is the driest month, with an average high near 77°F and less than an inch of rain. The STP itself leaves the University of Washington at 5 a.m. and heads south on country roads, so most of the riding out of town is rolling rather than steep.",
+    "If you are here early, Cascade Bicycle Club's spring training series and season schedule are the easiest way to find supported rides on local roads. Gregg's in Green Lake and Montlake Bicycle Shop both rent bikes if you arrive without one."
+  ],
+  "getting_there": "Fly into Seattle-Tacoma International (SEA), about 14 miles south of downtown; the Link light rail runs from the airport to downtown in about 38 minutes for around $3 and continues to the University of Washington. Portland is about three hours south by car or train, which is how most two-day STP riders get home. You do not need a car for the STP start if you stay in the University District.",
+  "hotels": [
+    { "name": "University Inn (Staypineapple)", "url": "https://www.staypineapple.com/university-inn-seattle-wa", "address": "4140 Roosevelt Way NE, Seattle, WA 98105", "note": "A short ride to the STP start lot; mid-priced U District hotel.", "price_hint": "$$" },
+    { "name": "Graduate Seattle", "url": "https://www.graduatehotels.com/seattle/", "address": "4507 Brooklyn Ave NE, Seattle, WA 98105", "note": "Full-service hotel a few blocks from campus with a restaurant and bar.", "price_hint": "$$$" },
+    { "name": "Watertown Hotel (Staypineapple)", "url": "https://www.staypineapple.com/watertown-hotel-seattle-wa", "address": "4242 Roosevelt Way NE, Seattle, WA 98105", "note": "Sister property to University Inn, same distance to the start.", "price_hint": "$$" },
+    { "name": "College Inn Hotel", "url": "https://www.collegeinnseattle.com", "address": "4000 University Way NE, Seattle, WA 98105", "note": "Budget European-style inn on the Ave, closest to campus.", "price_hint": "$" },
+    { "name": "Residence Inn by Marriott Seattle University District", "url": "https://www.marriott.com", "address": "4501 12th Ave NE, Seattle, WA 98105", "note": "Suites with kitchens, useful for an early breakfast before a 5 a.m. start.", "price_hint": "$$$" }
+  ],
+  "restaurants": [
+    { "name": "Portage Bay Cafe", "url": "https://www.portagebaycafe.com/", "address": "4130 Roosevelt Way NE, Seattle, WA 98105", "cuisine": "Breakfast and brunch", "note": "Local, organic breakfast; opens 7:30 a.m. weekdays, 8 a.m. weekends." },
+    { "name": "Big Time Brewery & Alehouse", "url": "https://www.bigtimebrewery.com/", "address": "4133 University Way NE, Seattle, WA 98105", "cuisine": "Brewpub", "note": "Seattle's original brewpub, since 1988; family-friendly." },
+    { "name": "Shultzy's Bar & Grill", "url": "https://www.shultzys.com/", "address": "4114 University Way NE, Seattle, WA 98105", "cuisine": "Sausages and grill", "note": "House-made sausage since 1988; a plate of carbs and protein the night before." },
+    { "name": "Thai Tom", "url": "https://udistrictseattle.com/business-category/food-drink", "address": "4543 University Way NE, Seattle, WA 98105", "cuisine": "Thai", "note": "Tiny, cheap, cash-friendly counter spot on the Ave; expect a line." },
+    { "name": "Aladdin Gyro-cery", "url": "https://udistrictseattle.com/business-category/food-drink", "address": "4139 University Way NE, Seattle, WA 98105", "cuisine": "Middle Eastern", "note": "Gyros, falafel and hummus, mostly takeout, open late." },
+    { "name": "Cedars Restaurant", "url": "https://www.cedarsseattle.com/", "address": "4759 Brooklyn Ave NE, Seattle, WA 98105", "cuisine": "Indian and Mediterranean", "note": "In the U District since 1974; curries and kabobs." }
+  ],
+  "bike_shops": [
+    { "name": "Montlake Bicycle Shop", "url": "https://www.montlakebike.com/", "address": "2223 24th Ave E, Seattle, WA 98112", "phone": "(206) 329-7333", "services": ["repair", "rental", "parts"], "note": "Closest full-service shop to the STP start; rents city, electric and mountain bikes." },
+    { "name": "R+E Cycles (Rodriguez Bicycle Company)", "url": "https://www.recycles.com/", "address": "5627 University Way NE, Seattle, WA 98105", "phone": "", "services": ["repair", "parts"], "note": "Custom hand-built Rodriguez bikes and tandems, plus repairs, at the north end of the Ave." },
+    { "name": "Gregg's Greenlake Cycle", "url": "https://www.greggscycles.com/", "address": "7007 Woodlawn Ave NE, Seattle, WA 98115", "phone": "(206) 523-1822", "services": ["repair", "parts"], "note": "Large shop with service and bike fitting, about two miles north of campus." },
+    { "name": "Recycled Cycles", "url": "https://www.recycledcycles.com/", "address": "", "phone": "", "services": ["repair", "rental", "parts"], "note": "New and used bikes, rentals bookable online, service packages; in Seattle since 1994. Confirm the street address on their site." }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Seattle",
+    "https://udistrictseattle.com/business-category/places-to-stay",
+    "https://udistrictseattle.com/business-category/food-drink",
+    "https://udistrictseattle.com/business-category/shops",
+    "https://www.portagebaycafe.com/",
+    "https://www.bigtimebrewery.com/",
+    "https://www.shultzys.com/",
+    "https://www.cedarsseattle.com/",
+    "https://www.montlakebike.com/",
+    "https://www.greggscycles.com/",
+    "https://www.recycledcycles.com/",
+    "https://cascade.org/news/2020/01/50-years-and-how-far-weve-come",
+    "https://cascade.org/rides-events/seattle-portland-2027-2027",
+    "https://weatherspark.com/y/913/Average-Weather-in-Seattle-Washington-United-States-Year-Round",
+    "https://www.soundtransit.org/ride-with-us/popular-destinations/sea-tac-airport",
+    "https://postcardstoseattle.com/seattle-airport-to-downtown-seattle/"
+  ],
+  "verified": "2026-09-15"
+}

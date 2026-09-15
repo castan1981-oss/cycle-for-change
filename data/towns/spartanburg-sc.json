@@ -1,0 +1,64 @@
+{
+  "id": "spartanburg-sc",
+  "name": "Spartanburg",
+  "state": "South Carolina",
+  "state_code": "SC",
+  "county": "Spartanburg County",
+  "lat": 34.9494,
+  "lon": -81.9250,
+  "timezone": "America/New_York",
+  "population": "about 38,700 (38,732, 2020 census)",
+  "elevation_ft": 745,
+  "nearest_airport": { "name": "Greenville-Spartanburg International", "code": "GSP", "miles": 19 },
+  "major_airport": { "name": "Charlotte Douglas International", "code": "CLT", "miles": 69 },
+  "official_url": "https://www.cityofspartanburg.org/",
+  "visitor_url": "https://www.experiencespartanburg.com/",
+  "summary": "Spartanburg is a city of about 38,700 in the South Carolina Upstate, on I-85 and I-26 between Greenville and Charlotte. It is a college town with a rebuilt downtown around Morgan Square, and the start of the Assault on Mt. Mitchell, which leaves from the Memorial Auditorium on Church Street. Riders also use the Mary Black Rail Trail south of downtown and the mountain bike trails at Croft State Park a few miles out.",
+  "about": [
+    "Spartanburg was founded in 1785 and incorporated in 1831, named for the Spartan Regiment that fought at the Battle of Cowpens. Morgan Square, the original courthouse village, is still the center of downtown. The city is home to Wofford College, Converse University, Spartanburg Community College and a medical school.",
+    "Downtown has been rebuilt over the past decade with new hotels, a minor league ballpark and mixed-use blocks, and most of the restaurants and bars sit within a few blocks of Morgan Square, Main Street and Church Street. The city's visitor office is on North Pine Street.",
+    "The Freewheelers cycling club has been here since 1973 and has run the Assault on Mt. Mitchell and Marion out of downtown since 1975. The city also hosts a downtown criterium each year."
+  ],
+  "riding": [
+    "In town, the Mary Black Rail Trail is a 2-mile paved rail trail just south of downtown with a bike park (wooden berms, rollers and jumps) along it. Croft State Park, at 450 Croft State Park Road on the south side of the city, is South Carolina's largest state park with more than 16 miles of mountain bike trail, including the 9.7-mile Southside Loop and a 12.6-mile stretch of the Palmetto Trail.",
+    "Road riding is rolling Piedmont farm country with the Blue Ridge escarpment about an hour north. The Assault on Mt. Mitchell route is the classic: 74 miles of rollers to Marion, North Carolina, then the Blue Ridge Parkway to the summit. Summers are hot and humid; spring and fall are the riding seasons."
+  ],
+  "getting_there": "Greenville-Spartanburg International (GSP) is about 19 miles west of downtown, under half an hour by car. Charlotte (CLT) is about 69 miles northeast, roughly an hour and 20 minutes, and has more flights. Spartanburg sits where I-85 and I-26 cross, so it is an easy drive from Charlotte, Asheville, Greenville and Atlanta. You will want a car; downtown itself is walkable.",
+  "hotels": [
+    { "name": "Spartanburg Marriott", "url": "https://www.marriott.com/en-us/hotels/gspmc-spartanburg-marriott/overview/", "address": "299 North Church Street, Spartanburg, SC 29306", "note": "0.2 miles from the Memorial Auditorium start; the obvious pick for the Assaults.", "price_hint": "$$$" },
+    { "name": "AC Hotel by Marriott Spartanburg", "url": "https://www.marriott.com/en-us/hotels/gspac-ac-hotel-spartanburg/overview/", "address": "225 West Main Street, Spartanburg, SC 29306", "note": "Downtown on Main Street, about 0.6 miles from the auditorium and steps from Morgan Square restaurants.", "price_hint": "$$$" },
+    { "name": "Fairfield Inn & Suites Spartanburg Downtown", "url": "https://www.marriott.com/en-us/hotels/gspsf-fairfield-inn-and-suites-spartanburg-downtown/overview/", "address": "Downtown Spartanburg, SC", "note": "Newer mid-price chain downtown; listed by the visitor bureau as the downtown option.", "price_hint": "$$" },
+    { "name": "Hampton Inn & Suites Spartanburg I-26", "url": "https://hotelguides.com/south-carolina/spartanburg-memorial-auditorium-sc-hotels.html", "address": "801 Spartan Blvd, Spartanburg, SC 29301", "note": "Budget-friendlier chain off I-26 exit 21, about 3.7 miles from the start; drive in.", "price_hint": "$$" },
+    { "name": "Holiday Inn Express & Suites Spartanburg I-26", "url": "https://hotelguides.com/south-carolina/spartanburg-memorial-auditorium-sc-hotels.html", "address": "895 Spartan Blvd, Spartanburg, SC 29301", "note": "Same I-26 cluster, about 3.5 miles from the auditorium.", "price_hint": "$$" }
+  ],
+  "restaurants": [
+    { "name": "Sophia's Italian Restaurant", "url": "https://sophiasrestaurantsc.com/", "address": "155 W Main St, Spartanburg, SC 29306", "cuisine": "Italian", "note": "Hand-rolled pasta steps from Morgan Square; dinner only, Monday to Saturday 5 to 10." },
+    { "name": "Islas on the Square", "url": "https://islasonthesquare.com/", "address": "113 North Church Street, Spartanburg, SC 29306", "cuisine": "Seafood", "note": "Coastal seafood on Church Street; dinner Tuesday to Saturday, closed Sunday and Monday." },
+    { "name": "The Kennedy", "url": "https://thekennedysc.com/", "address": "East Kennedy Street, downtown Spartanburg, SC", "cuisine": "Contemporary American / steakhouse", "note": "Chef-driven dinner spot a few blocks from Morgan Square." },
+    { "name": "Cribbs Kitchen", "url": "https://cribbskitchen.com/", "address": "West Main Street, downtown Spartanburg, SC", "cuisine": "Southern, burgers", "note": "Casual downtown standby for a post-ride burger." },
+    { "name": "Little River Coffee Bar", "url": "https://littleriverroasting.com/", "address": "Downtown Spartanburg, SC", "cuisine": "Coffee", "note": "Local roaster's downtown coffee bar for the early start." }
+  ],
+  "bike_shops": [
+    { "name": "Bike Worx", "url": "https://bikeworx.net/", "address": "1321 Union St, Spartanburg, SC 29302", "phone": "(864) 542-2453", "services": ["repair", "parts"], "note": "Spartanburg's oldest locally owned shop, since 1998; owner Eric Turner is a Barnett-trained mechanic. Test rides on the Mary Black Rail Trail. Closed Sunday and Monday." },
+    { "name": "Trek Bicycle Spartanburg", "url": "https://www.shoptrekbikes.com/about/spartanburg-sc-pg764.htm", "address": "1735 John B White Sr. Blvd, Suite 1B, Spartanburg, SC 29301", "phone": "(864) 574-5273", "services": ["repair", "parts"], "note": "Trek store on the west side with a 48-hour repair guarantee and weekly group rides; closed Sunday and Monday." }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Spartanburg,_South_Carolina",
+    "https://www.cityofspartanburg.org/",
+    "https://www.cityofspartanburg.org/238/Mary-Black-Rail-Trail",
+    "https://www.experiencespartanburg.com/visitspartanburg_com/",
+    "https://www.experiencespartanburg.com/places-to-stay/",
+    "https://www.experiencespartanburg.com/spartanburg-downtown/dining/",
+    "https://www.experiencespartanburg.com/blog/post/biking-around-spartanburg/",
+    "https://southcarolinaparks.com/croft/trails",
+    "https://hotelguides.com/south-carolina/spartanburg-memorial-auditorium-sc-hotels.html",
+    "https://sophiasrestaurantsc.com/",
+    "https://islasonthesquare.com/",
+    "https://bikeworx.net/",
+    "https://bikeupcountrysc.com/resources/",
+    "https://www.shoptrekbikes.com/about/spartanburg-sc-pg764.htm",
+    "https://theassaults.com/our-history/",
+    "https://www.rome2rio.com/s/Spartanburg/Greenville-Spartanburg-Airport-GSP"
+  ],
+  "verified": "2026-09-15"
+}

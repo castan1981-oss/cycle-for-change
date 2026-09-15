@@ -1,0 +1,68 @@
+{
+  "id": "hayward-wi",
+  "name": "Hayward",
+  "state": "Wisconsin",
+  "state_code": "WI",
+  "county": "Sawyer County",
+  "lat": 46.0100,
+  "lon": -91.4806,
+  "timezone": "America/Chicago",
+  "population": "about 2,500 (2,533, 2020 census)",
+  "elevation_ft": null,
+  "nearest_airport": { "name": "Duluth International", "code": "DLH", "miles": 66 },
+  "major_airport": { "name": "Minneapolis-St. Paul International", "code": "MSP", "miles": 115 },
+  "official_url": "https://cityofhaywardwi.gov/",
+  "visitor_url": "https://haywardlakes.com/",
+  "summary": "Hayward is a town of about 2,500 in Sawyer County, northwest Wisconsin, roughly 70 miles south of Lake Superior. It is a year-round recreation town built on lakes, forest and the American Birkebeiner ski trail. Cyclists come for the Chequamegon MTB Festival, which starts on Main Street each September, and for the CAMBA network of more than 135 miles of singletrack and 200 miles of mapped gravel between Hayward and Cable.",
+  "about": [
+    "Hayward started as a sawmill town. Anthony Judson Hayward, a lumberman from Eau Claire, arrived in 1878 and built a mill on the Namekagon River; the city was organized in 1883 and is the Sawyer County seat. The big mill burned in 1922 after the timber was mostly gone, and the town turned to lakes and tourism.",
+    "Today it is known for musky fishing, the National Fresh Water Fishing Hall of Fame with its 143-foot fiberglass muskie, the Lumberjack World Championships, and the American Birkebeiner, North America's largest cross-country ski marathon. The same trail system hosts the Chequamegon 40 in September.",
+    "Downtown is a few blocks of Main Street with bars, a brewpub, bakeries and bike shops. Cable, about 20 miles northeast on U.S. 63, is the other half of the Chequamegon area and where the race finishes."
+  ],
+  "riding": [
+    "The Chequamegon Area Mountain Bike Association (CAMBA) maintains more than 135 miles of singletrack, 70 miles of groomed winter fat-bike trail and more than 200 miles of mapped gravel routes across Sawyer and Bayfield counties and the Chequamegon-Nicolet National Forest. The terrain is glacial: short punchy climbs, no long ones, with sand and roots in places.",
+    "The Birkie trail is the spine of the area, a wide groomed corridor between Cable and Hayward that the Chequamegon 40 follows. Summer is the riding season; September brings cooler days and fall color, and by late fall the trails turn over to skiing and fat bikes."
+  ],
+  "getting_there": "Hayward is about 66 miles from Duluth International Airport (DLH) and 115 miles from Minneapolis-St. Paul (MSP), roughly two and a half to three hours by car from the Twin Cities. There is no useful transit; you need a car, and race weekend traffic between Hayward and Cable on U.S. 63 is heavy. Lodging fills months ahead for the festival.",
+  "hotels": [
+    { "name": "Flat Creek Hotel & Restaurant", "url": "https://flatcreekhotel.com/", "address": "10290 Highway 27 South, Hayward, WI 54843", "note": "Full-service hotel with pool, whirlpool and its own restaurant and saloon; dogs welcome.", "price_hint": "$$" },
+    { "name": "AmericInn by Wyndham Hayward", "url": "https://www.wyndhamhotels.com/americinn/hayward-wisconsin/americinn-hayward/overview", "address": "15601 Highway 63 N, Hayward, WI 54843", "note": "Chain hotel on U.S. 63 north of town with free breakfast, indoor pool and free parking.", "price_hint": "$$" },
+    { "name": "Holiday Inn Express & Suites Hayward", "url": "https://haywardlakes.com/stay/hotel-and-motel/", "address": "Hayward, WI (listed by the Hayward Lakes visitor bureau, 715-634-0700)", "note": "All-suite chain hotel with pool, whirlpool, sauna and fitness room.", "price_hint": "$$" },
+    { "name": "Northwoods Motel", "url": "https://haywardlakes.com/stay/hotel-and-motel/", "address": "Downtown Hayward, WI (visitor bureau listing, 715-634-8088)", "note": "Family-owned motel in town; the budget pick near the Main Street start.", "price_hint": "$" },
+    { "name": "Home Base at Mt. Telemark Village", "url": "https://homebaselodging.com/", "address": "42105 Telemark Road, Cable, WI 54821", "note": "Ten rooms at the old Telemark site in Cable, next to the Chequamegon finish, with in-room bike storage, a wrench pavilion, bike wash and Park Tool stands.", "price_hint": "$$" },
+    { "name": "Lakewoods Resort & Golf", "url": "https://haywardlakes.com/stay/hotel-and-motel/", "address": "Cable, WI, on Lake Namakagon (visitor bureau listing, 715-794-2561)", "note": "Lake resort near the Cable finish with lodge rooms and condos; one of the festival's founding partners.", "price_hint": "$$" }
+  ],
+  "restaurants": [
+    { "name": "Angler's Bar & Grill", "url": "https://www.anglersbar.com/", "address": "10547 Main Street, Hayward, WI 54843", "cuisine": "Bar and grill, burgers, pizza, steak, Friday fish fry", "note": "Middle of Main Street, a block from the race start." },
+    { "name": "Angry Minnow Brewing Co.", "url": "https://angryminnow.com/", "address": "10551 Main Street, Hayward, WI 54843", "cuisine": "Brewpub", "note": "House-brewed ales and pub food, Monday to Saturday 11 to 8, closed Sunday." },
+    { "name": "Out of the Woods Winery", "url": "https://outofthewoodswinery.com/", "address": "10588 Main Street, Hayward, WI 54843", "cuisine": "Wine, cider and mead bar", "note": "Bring your own food; the kitchen closes in summer. Closed Mondays." },
+    { "name": "Backroads Coffee & Vibes Bakery", "url": "https://downtownhaywardwi.com/eat/", "address": "Downtown Hayward, WI", "cuisine": "Coffee, breakfast, lunch", "note": "Pre-race coffee and breakfast on Main Street." },
+    { "name": "Firehouse Bakery & Deli", "url": "https://downtownhaywardwi.com/eat/", "address": "Downtown Hayward, WI", "cuisine": "Bakery and deli", "note": "Homemade bread, donuts and pastries for the ride out." }
+  ],
+  "bike_shops": [
+    { "name": "Riverbrook Bike & Ski", "url": "https://www.riverbrookbike.com/", "address": "10538 Main St, Hayward, WI 54843", "phone": "(715) 634-0437", "services": ["repair", "rental", "parts"], "note": "Full-service shop in the old library on Main Street; rents bikes and runs a Trek outpost at Mt. Telemark Village on race weekend." },
+    { "name": "New Moon Ski & Bike", "url": "https://www.newmoonski.com/", "address": "15569 US Hwy 63, Hayward, WI 54843", "phone": "(715) 634-8685", "services": ["repair", "rental", "parts"], "note": "Bike and ski shop on U.S. 63 with repairs and rentals; a second location, New Moon North, sits at Mt. Telemark Village in Cable (15555 Birkie Blvd)." },
+    { "name": "Start Line Inn", "url": "https://startlineinn.com/", "address": "14795 McNaught Rd, Cable, WI 54821", "phone": "(773) 991-5944", "services": ["repair"], "note": "Small repair operation in Cable listed by CAMBA; call ahead." }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Hayward,_Wisconsin",
+    "https://cityofhaywardwi.gov/about-the-city/",
+    "https://haywardlakes.com/",
+    "https://haywardlakes.com/stay/hotel-and-motel/",
+    "https://www.cheqmtb.com/visit-chequamegon/",
+    "https://www.cheqmtb.com/info/",
+    "https://www.cambatrails.org/",
+    "http://www.cambatrails.org/bike-shops",
+    "https://downtownhaywardwi.com/eat/",
+    "https://www.riverbrookbike.com/",
+    "https://www.newmoonski.com/",
+    "https://flatcreekhotel.com/",
+    "https://www.wyndhamhotels.com/americinn/hayward-wisconsin/americinn-hayward/overview",
+    "https://homebaselodging.com/",
+    "https://www.anglersbar.com/contact",
+    "https://angryminnow.com/contact-us/",
+    "https://outofthewoodswinery.com/",
+    "https://www.rome2rio.com/s/Nearby-Airports/Hayward-WI-USA"
+  ],
+  "verified": "2026-09-15"
+}
