@@ -23,12 +23,10 @@
   <link rel="apple-touch-icon" href="/favicon-180.png">
 
   <script>
-    /* the open is the default state; skip it on repeat visits in this session
-       and when motion is reduced — decided before first paint, not by the
-       deferred script */
+    /* the open is the default state; skipped only when motion is reduced —
+       decided before first paint, not by the deferred script */
     try {
-      if (sessionStorage.getItem("cfc-open") === "1" ||
-          (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) {
+      if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) {
         document.documentElement.className += " seen";
       }
     } catch (e) {}
@@ -43,11 +41,11 @@
 
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- the open: asphalt, the count rolling up, then the slam. Once per session. -->
+<!-- the open: asphalt, the year in bone, and the feed runs the moment it can. -->
 <div class="open" id="open" aria-hidden="true">
   <div class="open-inner">
-    <p class="open-num" id="openNum">0</p>
-    <p class="open-label">miles since June 1</p>
+    <p class="open-num">10000</p>
+    <p class="open-label">2027 &middot; all on the bike</p>
   </div>
 </div>
 

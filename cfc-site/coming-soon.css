@@ -10,6 +10,7 @@
   --dust:#C4B7A2;
   --creosote:#5C6B4A;
   --asphalt:#2A2E28;
+  --volt:#C6FF00;      /* one off-register impression under the year; nowhere else */
 
   --display:"Outfit",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
   --body:"Space Grotesk",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
@@ -75,8 +76,8 @@ a{color:inherit}
 .skip:focus{left:0}
 
 /* —— the open ——
-   Asphalt. The count rolls up in bone. Then the slam. It's a hard cut:
-   display on, display off, nothing in between. */
+   Asphalt, the year in bone, for as long as it takes the feed to arm and
+   not a beat longer. It's a hard cut: display on, display off. */
 
 .open{
   position:fixed;
@@ -235,13 +236,14 @@ html.seen .open,
   -webkit-user-select:none;
   -webkit-tap-highlight-color:transparent;
 }
-/* second impression, a hair off register, printed first */
+/* the volt impression, printed first and a hair off register: the year
+   pops off the bone without leaving the house palette */
 .year-one::before{
   content:attr(data-ghost);
   position:absolute;
-  left:.045em;
-  top:.035em;
-  color:var(--dust);
+  left:.055em;
+  top:.045em;
+  color:var(--volt);
   z-index:-1;
   pointer-events:none;
 }
