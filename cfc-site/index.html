@@ -55,7 +55,7 @@
     </h1>
 
     <figure class="hero-photo">
-      <img src="/hero-poster.jpg" alt="Riding view over the handlebars, desert road ahead, low sun on the horizon." width="1080" height="1920" decoding="async" fetchpriority="high">
+      <img src="/hero-cover.jpg" alt="A rider on a two-lane desert road at golden hour, Camelback Mountain ahead under a streaked sky." width="1350" height="1800" loading="eager" decoding="async" fetchpriority="high">
     </figure>
 
     <div class="hero-foot">
@@ -67,10 +67,13 @@
     </div>
 
     <div class="year-wrap">
-      <p class="year-one" aria-label="10000">10000</p>
+      <p class="year-one" aria-label="10000" data-ghost="10000">10000</p>
     </div>
   </section>
 
+</main>
+
+<div class="colophon">
   <section class="waitlist" aria-labelledby="waitlist-head">
     <p class="eyebrow" id="waitlist-head">Site in December. Year starts January&nbsp;1.</p>
 
@@ -86,12 +89,11 @@
     </form>
   </section>
 
-</main>
-
 <footer class="site-foot">
   <span>Cycle for Change</span>
   <span>Phoenix &middot; bike only</span>
 </footer>
+</div>
 
 </div>
 
@@ -104,6 +106,25 @@
   <div class="punch punch-3" data-punch><span>10000</span></div>
   <div class="blast-grain"></div>
 </div>
+
+<!-- the feed's grade: desaturate, open the mids, then print in the house
+     two-tone (asphalt shadows, bone highlights). Lives on the video element
+     itself, so it can't fall out of sync with the picture. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="feed-tone" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+    <feColorMatrix type="saturate" values="0.12" result="desat"/>
+    <feComponentTransfer in="desat" result="graded">
+      <feFuncR type="linear" slope="1.35" intercept="-0.06"/>
+      <feFuncG type="linear" slope="1.35" intercept="-0.06"/>
+      <feFuncB type="linear" slope="1.35" intercept="-0.06"/>
+    </feComponentTransfer>
+    <feComponentTransfer in="graded">
+      <feFuncR type="table" tableValues="0.165 0.910"/>
+      <feFuncG type="table" tableValues="0.180 0.875"/>
+      <feFuncB type="table" tableValues="0.157 0.816"/>
+    </feComponentTransfer>
+  </filter>
+</svg>
 
 <audio id="bed" src="/feed-bed.m4a" preload="auto"></audio>
 
