@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:cincinnati-oh-ubbc-tuesday-night-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260922T181500
+DTEND;TZID=America/New_York:20260922T194500
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:UBBC Tuesday Night Ride — Cincinnati\, OH
+LOCATION:Washington Park gazebo\, 1230 Elm St\, Cincinnati\, OH 45202
+DESCRIPTION:Pace: casual party pace.\nNo-drop.\nSchedule: Every Tuesday; 
+ meet 6:00 pm\, roll 6:15 pm.\nConfirm with the host before you go.\nhttp
+ s://cycleforchange.org/rides/cincinnati-oh-ubbc-tuesday-night-ride/
+URL:https://cycleforchange.org/rides/cincinnati-oh-ubbc-tuesday-night-rid
+ e/
+END:VEVENT
+END:VCALENDAR

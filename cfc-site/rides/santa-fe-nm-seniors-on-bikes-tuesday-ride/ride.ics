@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:santa-fe-nm-seniors-on-bikes-tuesday-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Denver:20260922T090000
+DTEND;TZID=America/Denver:20260922T110000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261031T235959Z
+SUMMARY:Santa Fe Seniors on Bikes Tuesday Ride — Santa Fe\, NM
+LOCATION:DeVargas Mall\, 564 N Guadalupe St\, Santa Fe\, NM 87501
+DESCRIPTION:Pace: A (energetic) and B (relaxed) groups.\nSchedule: Every 
+ Tuesday; start time shifts by month (9:00 am in summer\, 11:00 am in win
+ ter).\nConfirm with the host before you go.\nhttps://cycleforchange.org/
+ rides/santa-fe-nm-seniors-on-bikes-tuesday-ride/
+URL:https://cycleforchange.org/rides/santa-fe-nm-seniors-on-bikes-tuesday
+ -ride/
+END:VEVENT
+END:VCALENDAR

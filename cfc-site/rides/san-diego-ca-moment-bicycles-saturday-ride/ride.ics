@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-diego-ca-moment-bicycles-saturday-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260919T083000
+DTEND;TZID=America/Los_Angeles:20260919T103000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Moment Bicycles Saturday Point Loma Ride — San Diego\, CA
+LOCATION:Moment Bicycles\, 1891 San Diego Ave\, San Diego\, CA 92110
+DESCRIPTION:Pace: two groups; a second group scoops up anyone dropped fro
+ m the first.\nNo-drop.\nSchedule: Every Saturday\, 8:30 am (Tue/Thu 6:30
+  am and Sunday 8:00 am rides also).\nConfirm with the host before you go
+ .\nhttps://cycleforchange.org/rides/san-diego-ca-moment-bicycles-saturda
+ y-ride/
+URL:https://cycleforchange.org/rides/san-diego-ca-moment-bicycles-saturda
+ y-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:portland-or-sorella-forte-saturday-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260919T090000
+DTEND;TZID=America/Los_Angeles:20260919T120000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Sorella Forte Saturday Ride — Portland\, OR
+LOCATION:River City Bicycles parking lot\, 706 SE Martin Luther King Jr B
+ lvd\, Portland\, OR 97214
+DESCRIPTION:Pace: no-drop\, roughly 11–16 mph; the shop lists 14–19 m
+ ph.\nNo-drop.\nSchedule: Every Saturday\, 9:00 am.\nConfirm with the hos
+ t before you go.\nhttps://cycleforchange.org/rides/portland-or-sorella-f
+ orte-saturday-ride/
+URL:https://cycleforchange.org/rides/portland-or-sorella-forte-saturday-r
+ ide/
+END:VEVENT
+END:VCALENDAR

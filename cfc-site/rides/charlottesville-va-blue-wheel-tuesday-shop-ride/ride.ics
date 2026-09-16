@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:charlottesville-va-blue-wheel-tuesday-shop-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260922T181500
+DTEND;TZID=America/New_York:20260922T201500
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Tuesday Shop Ride (Blue Wheel Bicycles) — Charlottesville\, VA
+LOCATION:Charlottesville\, VA
+DESCRIPTION:Pace: two groups: Shred (fast) and Social (gentle\, beginner-
+ friendly).\nSchedule: Tuesdays\, gather 6:15 pm; location rotates betwee
+ n Biscuit Run\, Heyward Forest and O-Hill.\nConfirm with the host before
+  you go.\nhttps://cycleforchange.org/rides/charlottesville-va-blue-wheel
+ -tuesday-shop-ride/
+URL:https://cycleforchange.org/rides/charlottesville-va-blue-wheel-tuesda
+ y-shop-ride/
+END:VEVENT
+END:VCALENDAR

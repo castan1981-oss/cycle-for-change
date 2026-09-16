@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:germantown-tn-major-taylor-thirsty-thursday@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260917T180000
+DTEND;TZID=America/Chicago:20260917T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20260930T235959Z
+SUMMARY:Major Taylor Thirsty Thursday — Germantown\, TN
+LOCATION:Trek Bicycle Germantown (parking lot north of the tennis courts)
+DESCRIPTION:Pace: B/C/D groups.\nNo-drop.\nSchedule: Every Thursday\, 6:0
+ 0 pm (late March–late September).\nConfirm with the host before you go
+ .\nhttps://cycleforchange.org/rides/germantown-tn-major-taylor-thirsty-t
+ hursday/
+URL:https://cycleforchange.org/rides/germantown-tn-major-taylor-thirsty-t
+ hursday/
+END:VEVENT
+END:VCALENDAR

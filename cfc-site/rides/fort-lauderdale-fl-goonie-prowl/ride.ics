@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fort-lauderdale-fl-goonie-prowl@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260918T200000
+DTEND;TZID=America/New_York:20260918T220000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+SUMMARY:The Goonie Prowl — Fort Lauderdale\, FL
+LOCATION:Tarpon River Brewing\, 280 SW 6th St\, Fort Lauderdale\, FL 3330
+ 1
+DESCRIPTION:Pace: D\, 12–14 mph.\nSchedule: Every Friday\, meet 7:30 pm
+ \, pedals 8:00 pm.\nConfirm with the host before you go.\nhttps://cyclef
+ orchange.org/rides/fort-lauderdale-fl-goonie-prowl/
+URL:https://cycleforchange.org/rides/fort-lauderdale-fl-goonie-prowl/
+END:VEVENT
+END:VCALENDAR

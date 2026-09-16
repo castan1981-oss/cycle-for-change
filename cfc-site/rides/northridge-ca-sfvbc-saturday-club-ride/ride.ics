@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:northridge-ca-sfvbc-saturday-club-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260919T080000
+DTEND;TZID=America/Los_Angeles:20260919T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA,SU
+SUMMARY:SFVBC Saturday Club Ride — Los Angeles\, CA
+LOCATION:CSUN Parking Lot B1\, Nordhoff St & Etiwanda Ave\, Northridge\, 
+ CA 91330
+DESCRIPTION:Pace: ride levels 1–5; beginner no-drop ride the first Satu
+ rday of the month.\nSchedule: Every Saturday (and Sunday)\, 8:00 am shar
+ p.\nConfirm with the host before you go.\nhttps://cycleforchange.org/rid
+ es/northridge-ca-sfvbc-saturday-club-ride/
+URL:https://cycleforchange.org/rides/northridge-ca-sfvbc-saturday-club-ri
+ de/
+END:VEVENT
+END:VCALENDAR

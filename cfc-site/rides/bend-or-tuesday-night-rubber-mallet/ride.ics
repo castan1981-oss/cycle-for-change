@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bend-or-tuesday-night-rubber-mallet@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260922T173000
+DTEND;TZID=America/Los_Angeles:20260922T193000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Tuesday Night Rubber Mallet — Bend\, OR
+LOCATION:Jackson's Outpost at The Grove\, 921 NW Mt Washington Dr Ste 170
+ \, Bend\, OR 97703
+DESCRIPTION:Pace: 19–20 mph average\, 2–3 regroups.\nSchedule: Every 
+ Tuesday\, 5:30 pm.\nConfirm with the host before you go.\nhttps://cyclef
+ orchange.org/rides/bend-or-tuesday-night-rubber-mallet/
+URL:https://cycleforchange.org/rides/bend-or-tuesday-night-rubber-mallet/
+END:VEVENT
+END:VCALENDAR

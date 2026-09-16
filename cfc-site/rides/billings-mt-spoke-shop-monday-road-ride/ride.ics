@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:billings-mt-spoke-shop-monday-road-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Denver:20260921T183000
+DTEND;TZID=America/Denver:20260921T203000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Spoke Shop Monday Road Ride — Billings\, MT
+LOCATION:The Spoke Shop parking lot\, 1910 Broadwater Ave\, Billings\, MT
+  59102
+DESCRIPTION:Pace: all levels\, adjusted to the group.\nSchedule: Mondays\
+ , 6:30 pm.\nConfirm with the host before you go.\nhttps://cycleforchange
+ .org/rides/billings-mt-spoke-shop-monday-road-ride/
+URL:https://cycleforchange.org/rides/billings-mt-spoke-shop-monday-road-r
+ ide/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:new-york-ny-thursday-night-social-bikeride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260917T190000
+DTEND;TZID=America/New_York:20260917T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20261231T235959Z
+SUMMARY:Thursday Night Social Bikeride — New York\, NY
+LOCATION:Columbus Circle entrance of Central Park\, Columbus Circle\, New
+  York\, NY 10019
+DESCRIPTION:Pace: social.\nNo-drop.\nSchedule: Every Thursday\, 7:00 pm (
+ April through December).\nConfirm with the host before you go.\nhttps://
+ cycleforchange.org/rides/new-york-ny-thursday-night-social-bikeride/
+URL:https://cycleforchange.org/rides/new-york-ny-thursday-night-social-bi
+ keride/
+END:VEVENT
+END:VCALENDAR

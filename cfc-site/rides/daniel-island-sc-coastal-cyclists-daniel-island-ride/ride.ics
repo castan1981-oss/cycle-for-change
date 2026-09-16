@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:daniel-island-sc-coastal-cyclists-daniel-island-ride@cycleforchange.o
+ rg
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260920T100000
+DTEND;TZID=America/New_York:20260920T120000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Daniel Island Sunday Ride — Charleston\, SC
+LOCATION:Guggenheim Park\, Daniel Island\, Charleston\, SC 29492
+DESCRIPTION:Pace: 14–16 mph.\nNo-drop.\nSchedule: Every Sunday\, 10:00 
+ am (2:00 pm in winter).\nConfirm with the host before you go.\nhttps://c
+ ycleforchange.org/rides/daniel-island-sc-coastal-cyclists-daniel-island-
+ ride/
+URL:https://cycleforchange.org/rides/daniel-island-sc-coastal-cyclists-da
+ niel-island-ride/
+END:VEVENT
+END:VCALENDAR

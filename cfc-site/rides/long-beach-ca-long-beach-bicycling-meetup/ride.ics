@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:long-beach-ca-long-beach-bicycling-meetup@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260916T190000
+DTEND;TZID=America/Los_Angeles:20260916T203000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Long Beach Bicycling Meetup Wednesday Ride — Long Beach\, CA
+LOCATION:Long Beach Windsurf Center\, 3850 E Ocean Blvd\, Long Beach\, CA
+  90803
+DESCRIPTION:Pace: casual.\nNo-drop.\nSchedule: Every Wednesday\, 7:00 pm.
+ \nConfirm with the host before you go.\nhttps://cycleforchange.org/rides
+ /long-beach-ca-long-beach-bicycling-meetup/
+URL:https://cycleforchange.org/rides/long-beach-ca-long-beach-bicycling-m
+ eetup/
+END:VEVENT
+END:VCALENDAR

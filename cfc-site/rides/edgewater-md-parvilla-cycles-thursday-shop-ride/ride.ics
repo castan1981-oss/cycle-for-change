@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:edgewater-md-parvilla-cycles-thursday-shop-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260917T173000
+DTEND;TZID=America/New_York:20260917T193000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20261031T235959Z
+SUMMARY:Thursday Parvilla Shop Ride — Edgewater\, MD
+LOCATION:Parvilla Cycles\, Edgewater\, MD
+DESCRIPTION:Pace: recovery pace; A/B split after 5 miles.\nSchedule: Thur
+ sdays\, 5:30 pm\, April to mid-October.\nConfirm with the host before yo
+ u go.\nhttps://cycleforchange.org/rides/edgewater-md-parvilla-cycles-thu
+ rsday-shop-ride/
+URL:https://cycleforchange.org/rides/edgewater-md-parvilla-cycles-thursda
+ y-shop-ride/
+END:VEVENT
+END:VCALENDAR

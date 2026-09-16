@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:keizer-or-keizer-family-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260917T183000
+DTEND;TZID=America/Los_Angeles:20260917T203000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Keizer Family Ride — Keizer\, OR
+LOCATION:Cummings Elementary School\, Cummings Ln N\, Keizer\, OR 97303
+DESCRIPTION:Pace: family pace.\nSchedule: Thursdays\, 6:30 pm.\nConfirm w
+ ith the host before you go.\nhttps://cycleforchange.org/rides/keizer-or-
+ keizer-family-ride/
+URL:https://cycleforchange.org/rides/keizer-or-keizer-family-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:los-angeles-ca-venice-electric-light-parade@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260920T183500
+DTEND;TZID=America/Los_Angeles:20260920T203500
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Venice Electric Light Parade — Los Angeles\, CA
+LOCATION:Venice Beach\, Venice Beach boardwalk\, Los Angeles\, CA 90291
+DESCRIPTION:Pace: slow\, party pace.\nNo-drop.\nSchedule: Every Sunday at
+  sunset (gathers around 6:35 pm)\, Venice Beach.\nConfirm with the host 
+ before you go.\nhttps://cycleforchange.org/rides/los-angeles-ca-venice-e
+ lectric-light-parade/
+URL:https://cycleforchange.org/rides/los-angeles-ca-venice-electric-light
+ -parade/
+END:VEVENT
+END:VCALENDAR

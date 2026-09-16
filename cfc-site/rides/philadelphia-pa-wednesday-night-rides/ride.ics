@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:philadelphia-pa-wednesday-night-rides@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260916T190000
+DTEND;TZID=America/New_York:20260916T210000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=WE
+SUMMARY:Wednesday Night Rides — Philadelphia\, PA
+LOCATION:Philadelphia\, PA
+DESCRIPTION:Pace: easy to adventurous\, depending on the ride.\nNo-drop.\
+ nSchedule: Every other Wednesday\, 7:00 pm; start park changes each ride
+ .\nConfirm with the host before you go.\nhttps://cycleforchange.org/ride
+ s/philadelphia-pa-wednesday-night-rides/
+URL:https://cycleforchange.org/rides/philadelphia-pa-wednesday-night-ride
+ s/
+END:VEVENT
+END:VCALENDAR

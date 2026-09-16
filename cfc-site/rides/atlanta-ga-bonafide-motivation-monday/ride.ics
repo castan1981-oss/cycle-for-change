@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:atlanta-ga-bonafide-motivation-monday@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260921T181500
+DTEND;TZID=America/New_York:20260921T201500
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Motivation Monday (Bonafide CC) — Atlanta\, GA
+LOCATION:Inman Park MARTA Station\, 133 Hurt St NE\, Atlanta\, GA 30307
+DESCRIPTION:Pace: beginner-friendly\, lower elevation.\nSchedule: Every M
+ onday\, meet 6:00 pm\, roll 6:15 pm.\nConfirm with the host before you g
+ o.\nhttps://cycleforchange.org/rides/atlanta-ga-bonafide-motivation-mond
+ ay/
+URL:https://cycleforchange.org/rides/atlanta-ga-bonafide-motivation-monda
+ y/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:grand-rapids-mi-wednesday-evening-rides@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260916T200000
+DTEND;TZID=America/New_York:20260916T213000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Wednesday Evening Rides — Grand Rapids\, MI
+LOCATION:Veterans Memorial Park\, 101 Fulton St E\, Grand Rapids\, MI 495
+ 03
+DESCRIPTION:Pace: casual.\nSchedule: Every Wednesday; meet 7:45 pm\, depa
+ rt 8:00 pm sharp.\nConfirm with the host before you go.\nhttps://cyclefo
+ rchange.org/rides/grand-rapids-mi-wednesday-evening-rides/
+URL:https://cycleforchange.org/rides/grand-rapids-mi-wednesday-evening-ri
+ des/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:boise-id-mountain-mondays@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Denver:20260921T173000
+DTEND;TZID=America/Denver:20260921T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20270531T235959Z
+SUMMARY:Mountain Mondays — Boise\, ID
+LOCATION:Boise State Cycle Learning Center\, Boise State University\, Boi
+ se\, ID 83725
+DESCRIPTION:Pace: all levels.\nSchedule: Mondays\, 5:30 pm\, most weeks d
+ uring the school year.\nConfirm with the host before you go.\nhttps://cy
+ cleforchange.org/rides/boise-id-mountain-mondays/
+URL:https://cycleforchange.org/rides/boise-id-mountain-mondays/
+END:VEVENT
+END:VCALENDAR

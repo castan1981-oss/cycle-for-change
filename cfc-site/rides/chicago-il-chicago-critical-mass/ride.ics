@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:chicago-il-chicago-critical-mass@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260925T180000
+DTEND;TZID=America/Chicago:20260925T200000
+RRULE:FREQ=MONTHLY;BYDAY=-1FR
+SUMMARY:Chicago Critical Mass — Chicago\, IL
+LOCATION:Daley Plaza\, 50 W Washington St\, Chicago\, IL 60602
+DESCRIPTION:Pace: slow mass ride.\nNo-drop.\nSchedule: Last Friday of eve
+ ry month. Gather 5:30 pm\, leave around 6:00–6:15 pm.\nConfirm with th
+ e host before you go.\nhttps://cycleforchange.org/rides/chicago-il-chica
+ go-critical-mass/
+URL:https://cycleforchange.org/rides/chicago-il-chicago-critical-mass/
+END:VEVENT
+END:VCALENDAR

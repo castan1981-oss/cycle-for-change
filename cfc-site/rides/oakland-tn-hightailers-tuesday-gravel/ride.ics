@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:oakland-tn-hightailers-tuesday-gravel@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260922T180000
+DTEND;TZID=America/Chicago:20260922T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Hightailers Tuesday Gravel — Oakland\, TN
+LOCATION:Loven-Fresh BBQ\, Lakewood Dr and Hwy 64\, Oakland\, TN 38060
+DESCRIPTION:Pace: gravel group.\nNo-drop.\nSchedule: Every Tuesday\, 6:00
+  pm.\nConfirm with the host before you go.\nhttps://cycleforchange.org/r
+ ides/oakland-tn-hightailers-tuesday-gravel/
+URL:https://cycleforchange.org/rides/oakland-tn-hightailers-tuesday-grave
+ l/
+END:VEVENT
+END:VCALENDAR

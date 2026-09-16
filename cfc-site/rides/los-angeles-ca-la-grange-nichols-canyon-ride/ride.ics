@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:los-angeles-ca-la-grange-nichols-canyon-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260919T080000
+DTEND;TZID=America/Los_Angeles:20260919T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Nichols Canyon Ride (Velo Club La Grange) — Los Angeles\, CA
+LOCATION:Raymond Fouquet Square\, Westwood Blvd & La Grange Ave\, Los Ang
+ eles\, CA 90024
+DESCRIPTION:Pace: difficult.\nSchedule: Every Saturday\, 8:00 am.\nConfir
+ m with the host before you go.\nhttps://cycleforchange.org/rides/los-ang
+ eles-ca-la-grange-nichols-canyon-ride/
+URL:https://cycleforchange.org/rides/los-angeles-ca-la-grange-nichols-can
+ yon-ride/
+END:VEVENT
+END:VCALENDAR

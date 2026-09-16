@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:augusta-ga-outspokin-wednesday-worlds@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260916T181000
+DTEND;TZID=America/New_York:20260916T201000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20261031T235959Z
+SUMMARY:Wednesday Worlds — Augusta\, GA
+LOCATION:Outspokin' Bicycles\, 1904 Walton Way\, Augusta\, GA 30904
+DESCRIPTION:Pace: race-like\, very challenging.\nSchedule: Every Wednesda
+ y\, meet 6:00 pm\, roll 6:10 pm (March–October).\nConfirm with the hos
+ t before you go.\nhttps://cycleforchange.org/rides/augusta-ga-outspokin-
+ wednesday-worlds/
+URL:https://cycleforchange.org/rides/augusta-ga-outspokin-wednesday-world
+ s/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:little-rock-ar-mtcc-little-rock-evening-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260917T180000
+DTEND;TZID=America/Chicago:20260917T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH
+SUMMARY:Major Taylor Cycling Club Little Rock Evening Ride — Little Roc
+ k\, AR
+LOCATION:Big Dam Bridge\, Little Rock side\, 7600 Rebsamen Park Rd\, Litt
+ le Rock\, AR 72207
+DESCRIPTION:Pace: intermediate to advanced.\nSchedule: Every Tuesday and 
+ Thursday\, 6:00 pm.\nConfirm with the host before you go.\nhttps://cycle
+ forchange.org/rides/little-rock-ar-mtcc-little-rock-evening-ride/
+URL:https://cycleforchange.org/rides/little-rock-ar-mtcc-little-rock-even
+ ing-ride/
+END:VEVENT
+END:VCALENDAR

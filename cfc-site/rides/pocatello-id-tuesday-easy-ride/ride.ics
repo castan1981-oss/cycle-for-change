@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:pocatello-id-tuesday-easy-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Denver:20260922T180000
+DTEND;TZID=America/Denver:20260922T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20260930T235959Z
+SUMMARY:Tuesday Night Easy Ride — Pocatello\, ID
+LOCATION:Barrie's Ski and Sports\, 624 Yellowstone Ave\, Pocatello\, ID 8
+ 3201
+DESCRIPTION:Pace: leisure\, adjusted to the group.\nNo-drop.\nSchedule: E
+ very Tuesday\, 6:00 pm\, April to about September 10.\nConfirm with the 
+ host before you go.\nhttps://cycleforchange.org/rides/pocatello-id-tuesd
+ ay-easy-ride/
+URL:https://cycleforchange.org/rides/pocatello-id-tuesday-easy-ride/
+END:VEVENT
+END:VCALENDAR

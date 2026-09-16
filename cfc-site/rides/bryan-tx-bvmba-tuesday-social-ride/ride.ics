@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bryan-tx-bvmba-tuesday-social-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260922T183000
+DTEND;TZID=America/Chicago:20260922T203000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:BVMBA Tuesday Social Ride — Bryan\, TX
+LOCATION:Lake Bryan boat ramp parking lot\, Lake Bryan\, Bryan\, TX 77807
+DESCRIPTION:Pace: all skill levels.\nNo-drop.\nSchedule: Every Tuesday\, 
+ meet 6:15 pm\, roll 6:30 pm.\nConfirm with the host before you go.\nhttp
+ s://cycleforchange.org/rides/bryan-tx-bvmba-tuesday-social-ride/
+URL:https://cycleforchange.org/rides/bryan-tx-bvmba-tuesday-social-ride/
+END:VEVENT
+END:VCALENDAR

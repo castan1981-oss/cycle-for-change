@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:portland-or-gay-gravel-group@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260916T173000
+DTEND;TZID=America/Los_Angeles:20260916T193000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Gay Gravel Group — Portland\, OR
+LOCATION:Cycle Town Coffee Roasters\, NW 16th Ave and NW Thurman St\, Por
+ tland\, OR 97209
+DESCRIPTION:Pace: social\, ~1\,000 ft of climbing.\nSchedule: Every Wedne
+ sday\, meet 5:00 pm\, roll 5:30 pm.\nConfirm with the host before you go
+ .\nhttps://cycleforchange.org/rides/portland-or-gay-gravel-group/
+URL:https://cycleforchange.org/rides/portland-or-gay-gravel-group/
+END:VEVENT
+END:VCALENDAR

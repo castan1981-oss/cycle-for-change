@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:traverse-city-mi-nmmba-community-group-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260921T183000
+DTEND;TZID=America/New_York:20260921T203000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20261031T235959Z
+SUMMARY:NMMBA Community Group Ride — Traverse City\, MI
+LOCATION:VASA Singletrack trailhead lot\, Bartlett Rd\, Williamsburg\, MI
+  49690
+DESCRIPTION:Pace: social\, many regroup stops.\nNo-drop.\nSchedule: Every
+  Monday\, 6:30 pm\, May through about the end of October.\nConfirm with 
+ the host before you go.\nhttps://cycleforchange.org/rides/traverse-city-
+ mi-nmmba-community-group-ride/
+URL:https://cycleforchange.org/rides/traverse-city-mi-nmmba-community-gro
+ up-ride/
+END:VEVENT
+END:VCALENDAR

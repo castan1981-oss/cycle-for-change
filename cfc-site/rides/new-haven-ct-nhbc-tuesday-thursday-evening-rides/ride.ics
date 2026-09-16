@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:new-haven-ct-nhbc-tuesday-thursday-evening-rides@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260917T173000
+DTEND;TZID=America/New_York:20260917T193000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20261130T235959Z
+SUMMARY:New Haven Bicycling Club Tuesday & Thursday Evening Rides — New
+  Haven\, CT
+LOCATION:Wilbur Cross High School parking lot\, 181 Mitchell Dr\, New Hav
+ en\, CT 06511
+DESCRIPTION:Pace: groups from 10–12 mph up.\nSchedule: Every Tuesday an
+ d Thursday\, 5:30 pm\, March–November.\nConfirm with the host before y
+ ou go.\nhttps://cycleforchange.org/rides/new-haven-ct-nhbc-tuesday-thurs
+ day-evening-rides/
+URL:https://cycleforchange.org/rides/new-haven-ct-nhbc-tuesday-thursday-e
+ vening-rides/
+END:VEVENT
+END:VCALENDAR

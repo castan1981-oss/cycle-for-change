@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:austin-tx-mellow-johnnys-scout-a-route@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260919T090000
+DTEND;TZID=America/Chicago:20260919T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Scout-a-Route Saturday Ride — Austin\, TX
+LOCATION:Mellow Johnny's Bike Shop\, 400 Nueces St\, Austin\, TX 78701
+DESCRIPTION:Pace: 12–16 mph.\nNo-drop.\nSchedule: Every Saturday\, 9:00
+  am.\nConfirm with the host before you go.\nhttps://cycleforchange.org/r
+ ides/austin-tx-mellow-johnnys-scout-a-route/
+URL:https://cycleforchange.org/rides/austin-tx-mellow-johnnys-scout-a-rou
+ te/
+END:VEVENT
+END:VCALENDAR

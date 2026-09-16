@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:santa-cruz-ca-girls-rock-monthly-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260920T100000
+DTEND;TZID=America/Los_Angeles:20260920T120000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20261031T235959Z
+SUMMARY:Girls Rock Monthly Ride — Santa Cruz\, CA
+LOCATION:Varies (Santa Cruz Mountain Brewing for Sep–Oct 2026)\, 402 In
+ galls St\, Santa Cruz\, CA 95060
+DESCRIPTION:Pace: groups by skill level\, guided.\nSchedule: One Sunday a
+  month\, check-in 8:45 am\, roll out 10:00 am (start venue changes; Sant
+ a Cruz Mountain Brewing in Sep and Oct 2026).\nConfirm with the host bef
+ ore you go.\nhttps://cycleforchange.org/rides/santa-cruz-ca-girls-rock-m
+ onthly-ride/
+URL:https://cycleforchange.org/rides/santa-cruz-ca-girls-rock-monthly-rid
+ e/
+END:VEVENT
+END:VCALENDAR

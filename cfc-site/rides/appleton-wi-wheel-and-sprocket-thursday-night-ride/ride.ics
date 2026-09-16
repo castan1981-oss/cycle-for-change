@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:appleton-wi-wheel-and-sprocket-thursday-night-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20270506T180000
+DTEND;TZID=America/Chicago:20270506T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270831T235959Z
+SUMMARY:Wheel & Sprocket Appleton Thursday Night Ride — Appleton\, WI
+LOCATION:Wheel & Sprocket Appleton (back parking lot)
+DESCRIPTION:Pace: two groups by rider level.\nSchedule: Every Thursday\, 
+ meet 5:45 pm\, roll 6:00 pm\, May 7–Aug 27.\nConfirm with the host bef
+ ore you go.\nhttps://cycleforchange.org/rides/appleton-wi-wheel-and-spro
+ cket-thursday-night-ride/
+URL:https://cycleforchange.org/rides/appleton-wi-wheel-and-sprocket-thurs
+ day-night-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:buffalo-ny-slow-spokes-tuesday-wilkeson-pointe-ride@cycleforchange.or
+ g
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260922T180000
+DTEND;TZID=America/New_York:20260922T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Slow Spokes Tuesday Ride at Wilkeson Pointe — Buffalo\, NY
+LOCATION:Perro & Poni\, 225 Fuhrmann Blvd\, Buffalo\, NY 14203
+DESCRIPTION:Pace: relaxed\, social.\nNo-drop.\nSchedule: Every Tuesday\, 
+ 6:00 pm.\nConfirm with the host before you go.\nhttps://cycleforchange.o
+ rg/rides/buffalo-ny-slow-spokes-tuesday-wilkeson-pointe-ride/
+URL:https://cycleforchange.org/rides/buffalo-ny-slow-spokes-tuesday-wilke
+ son-pointe-ride/
+END:VEVENT
+END:VCALENDAR

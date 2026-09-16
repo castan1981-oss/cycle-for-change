@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:washington-dc-dc-queer-bike-rides@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20261010T120000
+DTEND;TZID=America/New_York:20261010T140000
+RRULE:FREQ=MONTHLY;BYDAY=2SA
+SUMMARY:DC Queer Bike Rides — Washington\, DC
+LOCATION:Washington\, DC
+DESCRIPTION:Pace: social\, 5–8 mph.\nNo-drop.\nSchedule: Twice a month:
+  second Saturday at 12:00 pm and fourth Thursday at 6:30 pm.\nConfirm wi
+ th the host before you go.\nhttps://cycleforchange.org/rides/washington-
+ dc-dc-queer-bike-rides/
+URL:https://cycleforchange.org/rides/washington-dc-dc-queer-bike-rides/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fayetteville-ar-bike-club-sunday-service@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260920T103000
+DTEND;TZID=America/Chicago:20260920T133000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Sunday Service — Fayetteville\, AR
+LOCATION:Puritan Coffee & Beer\, 205 W Dickson St\, Fayetteville\, AR 727
+ 01
+DESCRIPTION:Pace: 18+ mph average.\nSchedule: Every Sunday\, usually 10:3
+ 0 am.\nConfirm with the host before you go.\nhttps://cycleforchange.org/
+ rides/fayetteville-ar-bike-club-sunday-service/
+URL:https://cycleforchange.org/rides/fayetteville-ar-bike-club-sunday-ser
+ vice/
+END:VEVENT
+END:VCALENDAR

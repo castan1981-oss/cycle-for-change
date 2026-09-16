@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:powhatan-va-raba-powhatan-courthouse-no-drop@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260920T090000
+DTEND;TZID=America/New_York:20260920T110000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Powhatan Courthouse No Drop (RABA) — Powhatan\, VA
+LOCATION:Citizens Bank & Trust\, Flatrock\, 2501 Anderson Hwy\, Powhatan\
+ , VA 23139
+DESCRIPTION:Pace: C/D pace.\nNo-drop.\nSchedule: Sundays\, 9:00 am depart
+ ure.\nConfirm with the host before you go.\nhttps://cycleforchange.org/r
+ ides/powhatan-va-raba-powhatan-courthouse-no-drop/
+URL:https://cycleforchange.org/rides/powhatan-va-raba-powhatan-courthouse
+ -no-drop/
+END:VEVENT
+END:VCALENDAR

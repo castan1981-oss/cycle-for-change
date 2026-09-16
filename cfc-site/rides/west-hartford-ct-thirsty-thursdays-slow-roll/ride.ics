@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:west-hartford-ct-thirsty-thursdays-slow-roll@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260917T183000
+DTEND;TZID=America/New_York:20260917T203000
+RRULE:FREQ=MONTHLY;BYDAY=3TH
+SUMMARY:Thirsty Thursdays Slow Roll — West Hartford\, CT
+LOCATION:Asylum Ave and the Trout Brook Trail\, West Hartford\, CT
+DESCRIPTION:Pace: slow roll.\nNo-drop.\nSchedule: Third Thursday of the m
+ onth; slow roll gathers 6:30 pm\, social at GastroPark 7–9 pm.\nConfir
+ m with the host before you go.\nhttps://cycleforchange.org/rides/west-ha
+ rtford-ct-thirsty-thursdays-slow-roll/
+URL:https://cycleforchange.org/rides/west-hartford-ct-thirsty-thursdays-s
+ low-roll/
+END:VEVENT
+END:VCALENDAR

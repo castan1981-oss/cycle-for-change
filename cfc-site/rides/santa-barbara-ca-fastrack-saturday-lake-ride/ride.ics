@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:santa-barbara-ca-fastrack-saturday-lake-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260919T080000
+DTEND;TZID=America/Los_Angeles:20260919T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Fastrack Saturday Lake Ride — Santa Barbara\, CA
+LOCATION:Dolphin Fountain at Stearns Wharf\, Stearns Wharf\, Santa Barbar
+ a\, CA 93101
+DESCRIPTION:Pace: moderate\, regroups at the top of climbs.\nSchedule: Ev
+ ery Saturday\, 8:00 am (Sunday Echelon club ride 8:30 am from the Missio
+ n).\nConfirm with the host before you go.\nhttps://cycleforchange.org/ri
+ des/santa-barbara-ca-fastrack-saturday-lake-ride/
+URL:https://cycleforchange.org/rides/santa-barbara-ca-fastrack-saturday-l
+ ake-ride/
+END:VEVENT
+END:VCALENDAR

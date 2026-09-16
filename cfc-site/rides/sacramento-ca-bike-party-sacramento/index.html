@@ -5,16 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>Bike Party Sacramento — group ride in Sacramento, CA — Cycle for Change</title>
-  <meta name="description" content="Bike Party Sacramento is a social group ride in Sacramento, CA. It meets first Friday of every month, 7:00 pm. Pace: party pace.">
+  <title>Bike Party Sacramento — Sacramento, CA group ride</title>
+  <meta name="description" content="Bike Party Sacramento is a social group ride in Sacramento, CA. It rolls first Friday of the month at 7:00 pm. Pace: party pace.">
   <link rel="canonical" href="https://cycleforchange.org/rides/sacramento-ca-bike-party-sacramento/">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Bike Party Sacramento — group ride in Sacramento, CA — Cycle for Change">
-  <meta property="og:description" content="Bike Party Sacramento is a social group ride in Sacramento, CA. It meets first Friday of every month, 7:00 pm. Pace: party pace.">
+  <meta property="og:site_name" content="Cycle for Change">
+  <meta property="og:title" content="Bike Party Sacramento — Sacramento, CA group ride">
+  <meta property="og:description" content="Bike Party Sacramento is a social group ride in Sacramento, CA. It rolls first Friday of the month at 7:00 pm. Pace: party pace.">
   <meta property="og:url" content="https://cycleforchange.org/rides/sacramento-ca-bike-party-sacramento/">
+  <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Bike Party Sacramento — group ride in Sacramento, CA — Cycle for Change">
-  <meta name="twitter:description" content="Bike Party Sacramento is a social group ride in Sacramento, CA. It meets first Friday of every month, 7:00 pm. Pace: party pace.">
+  <meta name="twitter:title" content="Bike Party Sacramento — Sacramento, CA group ride">
+  <meta name="twitter:description" content="Bike Party Sacramento is a social group ride in Sacramento, CA. It rolls first Friday of the month at 7:00 pm. Pace: party pace.">
+  <meta name="twitter:image" content="https://cycleforchange.org/og-cfc.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,42 +28,100 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Event",
-  "name": "Bike Party Sacramento",
-  "description": "Bike Party Sacramento is a social group ride in Sacramento, CA. It meets first Friday of every month, 7:00 pm. Pace: party pace.",
-  "url": "https://cycleforchange.org/rides/sacramento-ca-bike-party-sacramento/",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "eventStatus": "https://schema.org/EventScheduled",
-  "isAccessibleForFree": true,
-  "location": {
-    "@type": "Place",
-    "name": "Sacramento, CA",
-    "address": "Sacramento, CA",
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 38.5816,
-      "longitude": -121.4944
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cycleforchange.org/rides/sacramento-ca-bike-party-sacramento/",
+      "url": "https://cycleforchange.org/rides/sacramento-ca-bike-party-sacramento/",
+      "name": "Bike Party Sacramento — Sacramento, CA group ride",
+      "description": "Bike Party Sacramento is a social group ride in Sacramento, CA. It rolls first Friday of the month at 7:00 pm. Pace: party pace.",
+      "dateModified": "2026-09-15",
+      "author": {
+        "@type": "Person",
+        "name": "Robert Castan",
+        "url": "https://cycleforchange.org/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Cycle for Change",
+        "url": "https://cycleforchange.org/",
+        "logo": "https://cycleforchange.org/favicon-512.png"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Cycle for Change",
+            "item": "https://cycleforchange.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Group rides",
+            "item": "https://cycleforchange.org/rides/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "California",
+            "item": "https://cycleforchange.org/rides/ca/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Bike Party Sacramento",
+            "item": "https://cycleforchange.org/rides/sacramento-ca-bike-party-sacramento/"
+          }
+        ]
+      },
+      "mainEntity": {
+        "@id": "https://cycleforchange.org/rides/sacramento-ca-bike-party-sacramento/#event"
+      }
+    },
+    {
+      "@type": "Event",
+      "@id": "https://cycleforchange.org/rides/sacramento-ca-bike-party-sacramento/#event",
+      "name": "Bike Party Sacramento",
+      "description": "Bike Party Sacramento is a social group ride in Sacramento, CA. It rolls first Friday of the month at 7:00 pm. Pace: party pace.",
+      "url": "https://cycleforchange.org/rides/sacramento-ca-bike-party-sacramento/",
+      "startDate": "2026-10-02T19:00:00-07:00",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "isAccessibleForFree": true,
+      "location": {
+        "@type": "Place",
+        "name": "Sacramento, CA",
+        "address": "Sacramento, CA",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.5816,
+          "longitude": -121.4944
+        }
+      },
+      "eventSchedule": {
+        "@type": "Schedule",
+        "scheduleTimezone": "America/Los_Angeles",
+        "startTime": "19:00",
+        "byDay": [
+          "https://schema.org/Friday"
+        ],
+        "repeatFrequency": "P1M"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Bike Party Sacramento",
+        "url": "https://bikepartysacramento.com/about-us"
+      },
+      "sameAs": [
+        "https://bikepartysacramento.com/about-us",
+        "https://www.instagram.com/sacramentobikeparty/",
+        "https://www.facebook.com/groups/112438735614676/",
+        "https://www.strava.com/clubs/224090"
+      ]
     }
-  },
-  "organizer": {
-    "@type": "Organization",
-    "name": "Bike Party Sacramento",
-    "url": "https://bikepartysacramento.com/about-us"
-  },
-  "sameAs": [
-    "https://bikepartysacramento.com/about-us",
-    "https://www.instagram.com/sacramentobikeparty/",
-    "https://www.facebook.com/groups/112438735614676/",
-    "https://www.strava.com/clubs/224090"
-  ],
-  "eventSchedule": {
-    "@type": "Schedule",
-    "byDay": [
-      "https://schema.org/Friday"
-    ],
-    "repeatFrequency": "P1M",
-    "startTime": "19:00"
-  }
+  ]
 }
   </script>
 </head>
@@ -78,11 +141,8 @@
       <span class="word">Cycle for Change</span>
     </a>
     <nav class="links" aria-label="Primary">
-      <a href="/#tally">The tally</a>
-      <a href="/field-notes/">Field Notes</a>
-      <a href="/resources/">Resources</a>
       <a href="/rides/">Group rides</a>
-      <a href="/#vote">Vote</a>
+      <a href="/events/">Events</a>
     </nav>
     <div class="nav-right">
       <a href="/#board" class="btn btn-dark">Pledge a mile →</a>
@@ -91,23 +151,35 @@
 </header>
 
 <main class="fn-post gr-ride">
-  <article class="fn-article">
-    <p class="fn-meta">
-      <span class="fn-chip place"><a href="/rides/ca/">California</a></span>
-      <span class="dot">·</span>
-      <span>Social</span>
-      <span class="dot">·</span>
-      <span>Checked 2026-09-15</span>
-    </p>
+  <article class="fn-article" data-ride
+    data-tz="America/Los_Angeles" data-time="19:00" data-days="fri"
+    data-freq="monthly" data-season=""
+    data-monthly="[{&quot;ord&quot;:1,&quot;day&quot;:&quot;fri&quot;}]">
+    <nav class="gr-crumbs" aria-label="Breadcrumb"><a href="/">Cycle for Change</a><span class="sep" aria-hidden="true">›</span><a href="/rides/">Group rides</a><span class="sep" aria-hidden="true">›</span><a href="/rides/ca/">California</a><span class="sep" aria-hidden="true">›</span><span aria-current="page">Bike Party Sacramento</span></nav>
 
     <h1>Bike Party Sacramento</h1>
-    <p class="gr-place">Sacramento, CA</p>
+    <p class="gr-place">Sacramento, CA · Social</p>
     <p class="gr-tags"><span class="gr-tag">No-drop</span></p>
 
-    <p class="fn-lede">Bike Party Sacramento is a social group ride in Sacramento, CA. It meets first Friday of every month, 7:00 pm. Pace: party pace.</p>
+    <p class="fn-lede">Bike Party Sacramento is a social group ride in Sacramento, CA. It rolls first Friday of the month at 7:00 pm. Pace: party pace.</p>
+
+    <div class="gr-next" id="gr-next" >
+      <span class="gr-next-label">Next ride</span>
+      <time class="gr-next-when" data-next-text datetime="2026-10-02T19:00:00-07:00">Fri, Oct 2, 7:00 PM PDT</time>
+      <span class="gr-next-rel" data-next-rel></span>
+    </div>
+
+    <div class="gr-actions">
+      <a class="btn btn-y gr-primary" href="https://bikepartysacramento.com/about-us" rel="noopener nofollow">Host's website ↗</a>
+        <a class="btn btn-dark" href="/rides/sacramento-ca-bike-party-sacramento/ride.ics" download="sacramento-ca-bike-party-sacramento.ics">Add to calendar</a>
+        <a class="gr-minor" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Bike+Party+Sacramento+%E2%80%94+Sacramento%2C+CA&amp;dates=20261002T190000%2F20261002T210000&amp;ctz=America%2FLos_Angeles&amp;recur=RRULE%3AFREQ%3DMONTHLY%3BBYDAY%3D1FR&amp;location=Sacramento%2C+CA&amp;details=First+Friday+of+every+month%2C+7%3A00+pm%0Ahttps%3A%2F%2Fcycleforchange.org%2Frides%2Fsacramento-ca-bike-party-sacramento%2F" rel="noopener">Google Calendar</a>
+      <button type="button" class="btn btn-dark" id="gr-share" data-title="Bike Party Sacramento — Sacramento, CA">Share</button>
+      <span class="gr-share-alt"><a href="sms:?&body=Bike%20Party%20Sacramento%20%E2%80%94%20https%3A%2F%2Fcycleforchange.org%2Frides%2Fsacramento-ca-bike-party-sacramento%2F">Text it</a> · <a href="https://wa.me/?text=Bike%20Party%20Sacramento%20%E2%80%94%20https%3A%2F%2Fcycleforchange.org%2Frides%2Fsacramento-ca-bike-party-sacramento%2F" rel="noopener">WhatsApp</a> · <a href="mailto:?subject=Group%20ride%3A%20Bike%20Party%20Sacramento&body=https%3A%2F%2Fcycleforchange.org%2Frides%2Fsacramento-ca-bike-party-sacramento%2F">Email</a></span>
+      <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
+    </div>
 
     <dl class="gr-facts">
-        <div class="gr-fact"><dt>When</dt><dd>First Friday of every month, 7:00 pm<small>Year-round</small></dd></div>
+        <div class="gr-fact"><dt>When</dt><dd>First Friday of the month, 7:00 pm<small>Year-round</small></dd></div>
         <div class="gr-fact"><dt>Pace</dt><dd>party pace</dd></div>
         <div class="gr-fact"><dt>Hosted by</dt><dd>Bike Party Sacramento<small>Collective</small></dd></div>
         <div class="gr-fact"><dt>Started</dt><dd>2013<small>Rode its 13th birthday ride in February 2026, per an Abridged / PBS KVIE story</small></dd></div>
@@ -115,10 +187,18 @@
         <div class="gr-fact"><dt>Bike</dt><dd>Social</dd></div>
     </dl>
 
+    <section class="gr-first" aria-labelledby="gr-first-h">
+      <h2 id="gr-first-h">First time? Here's the drill</h2>
+      <dl>
+        <div><dt>Bring</dt><dd>a helmet, front and rear lights (it's a dark-hours ride), water, a spare tube or patch kit, a way to pay for the stop.</dd></div>
+        <div><dt>Arrive</dt><dd>Ten or fifteen minutes before 7:00 pm. Tell whoever's leading that you're new.</dd></div>
+        <div><dt>Pace</dt><dd>Pace: party pace.</dd></div>
+        <div><dt>Check</dt><dd>Look at <a href="https://www.instagram.com/sacramentobikeparty/" rel="noopener nofollow">@sacramentobikeparty</a> the day of — that's where cancellations, weather calls and start changes get posted.</dd></div>
+      </dl>
+    </section>
     <div class="fn-body">
       <h2>About the Bike Party Sacramento group ride</h2>
       <p>A big themed social ride on the first Friday of the month, rain or shine. Hundreds show up with lights, costumes and sound systems. Volunteers plan the route and theme; there are no official leaders, and you ride at your own risk. Start point changes each month and is posted on Facebook and Instagram.</p>
-      
     </div>
 
     <div class="gr-links">
@@ -127,23 +207,24 @@
         <a class="btn btn-dark" href="https://bikepartysacramento.com/about-us" rel="noopener nofollow">Website ↗</a>
         <a class="btn btn-dark" href="https://www.instagram.com/sacramentobikeparty/" rel="noopener nofollow">@sacramentobikeparty ↗</a>
         <a class="btn btn-dark" href="https://www.facebook.com/groups/112438735614676/" rel="noopener nofollow">Facebook ↗</a>
-        <a class="btn btn-dark" href="https://www.strava.com/clubs/224090" rel="noopener nofollow">Strava club ↗</a>
+        <a class="btn btn-y" href="https://www.strava.com/clubs/224090" rel="noopener nofollow">Join the Strava club ↗</a>
       </div>
     </div>
 
     <p class="fn-note gr-verify">
       Last checked 2026-09-15 against <a href="https://bikepartysacramento.com/about-us" rel="noopener nofollow">source 1</a>, <a href="https://bikepartysacramento.com/" rel="noopener nofollow">source 2</a>, <a href="https://www.abridged.org/news/bike-party-sacramento/" rel="noopener nofollow">source 3</a>, <a href="https://www.lovetoride.net/50sactma/groups/4833" rel="noopener nofollow">source 4</a>, <a href="https://sacbike.org/bike-clubs/" rel="noopener nofollow">source 5</a>, <a href="https://www.strava.com/clubs/224090" rel="noopener nofollow">source 6</a>, <a href="https://luma.com/cgfulyi3" rel="noopener nofollow">source 7</a>, <a href="https://www.sacbee.com/entertainment/living/article253299358.html" rel="noopener nofollow">source 8</a>.
-      Schedules change. Confirm with the host before you go. Wrong or gone?
-      <a href="https://www.instagram.com/cycl_eforchange/">Tell us</a>.
+      Schedules change. Confirm with the host before you go. Wrong, gone, or you run this ride?
+      <a href="https://www.instagram.com/cycl_eforchange/" rel="noopener">Tell us on Instagram</a>.
     </p>
   </article>
 
   <nav class="fn-related" aria-label="Nearby group rides">
     <h2>Nearby rides</h2>
-    <a href="/rides/davis-ca-tuesday-bakery-easy-ride/">Tuesday Bakery Easy Ride <small>· Davis, CA · 15 mi</small></a>
-    <a href="/rides/oakland-ca-red-bike-and-green-community-rides/">Red Bike &amp; Green Community Rides <small>· Oakland, CA · 67 mi</small></a>
-    <a href="/rides/oakland-ca-east-bay-bike-party/">East Bay Bike Party <small>· Oakland, CA · 68 mi</small></a>
-    <a href="/rides/san-francisco-ca-butterlap/">Butterlap <small>· San Francisco, CA · 73 mi</small></a>
+    <a href="/rides/davis-ca-tuesday-bakery-easy-ride/">Tuesday Bakery Easy Ride <small>· Davis, CA · Road · 15 mi</small></a>
+    <a href="/rides/oakland-ca-red-bike-and-green-community-rides/">Red Bike &amp; Green Community Rides <small>· Oakland, CA · Social · 67 mi</small></a>
+    <a href="/rides/oakland-ca-east-bay-bike-party/">East Bay Bike Party <small>· Oakland, CA · Social · 68 mi</small></a>
+    <a href="/rides/san-francisco-ca-butterlap/">Butterlap <small>· San Francisco, CA · Road · 73 mi</small></a>
+    
     <a href="/rides/ca/">All rides in California →</a>
   </nav>
 
@@ -170,5 +251,6 @@
 </footer>
 
 <script src="/field-notes/field-notes.js" defer></script>
+<script src="/rides/ride.js" defer></script>
 </body>
 </html>

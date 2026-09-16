@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:boulder-co-bma-gurlz-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Denver:20260922T170000
+DTEND;TZID=America/Denver:20260922T190000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Gurlz Ride — Boulder\, CO
+LOCATION:Greenbelt Plateau Trailhead\, CO-128\, Boulder\, CO 80303
+DESCRIPTION:Pace: women's intermediate.\nNo-drop.\nSchedule: Every Tuesda
+ y\, 5:00 pm.\nConfirm with the host before you go.\nhttps://cycleforchan
+ ge.org/rides/boulder-co-bma-gurlz-ride/
+URL:https://cycleforchange.org/rides/boulder-co-bma-gurlz-ride/
+END:VEVENT
+END:VCALENDAR

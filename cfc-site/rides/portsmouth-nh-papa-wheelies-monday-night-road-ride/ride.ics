@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:portsmouth-nh-papa-wheelies-monday-night-road-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260921T180000
+DTEND;TZID=America/New_York:20260921T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20261031T235959Z
+SUMMARY:Papa Wheelies Monday Night Road Ride — Portsmouth\, NH
+LOCATION:Papa Wheelies parking lot\, 653 Islington St\, Portsmouth\, NH 0
+ 3801
+DESCRIPTION:Pace: A 22–24 mph / B 18–21 / C 14–16 mph.\nSchedule: M
+ ondays\, 6:00 pm\, April–October.\nConfirm with the host before you go
+ .\nhttps://cycleforchange.org/rides/portsmouth-nh-papa-wheelies-monday-n
+ ight-road-ride/
+URL:https://cycleforchange.org/rides/portsmouth-nh-papa-wheelies-monday-n
+ ight-road-ride/
+END:VEVENT
+END:VCALENDAR

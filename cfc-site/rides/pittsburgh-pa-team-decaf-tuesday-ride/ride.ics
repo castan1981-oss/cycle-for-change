@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:pittsburgh-pa-team-decaf-tuesday-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260922T180000
+DTEND;TZID=America/New_York:20260922T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261031T235959Z
+SUMMARY:Team Decaf Tuesday Ride — Pittsburgh\, PA
+LOCATION:Highland Park entrance (welcome sculptures)\, top of N Highland 
+ Ave at Reservoir Dr\, N Highland Ave & Reservoir Dr\, Pittsburgh\, PA 15
+ 206
+DESCRIPTION:Pace: slower and faster groups.\nSchedule: Every Tuesday\, 6:
+ 00 pm\, April until the first Tuesday in October.\nConfirm with the host
+  before you go.\nhttps://cycleforchange.org/rides/pittsburgh-pa-team-dec
+ af-tuesday-ride/
+URL:https://cycleforchange.org/rides/pittsburgh-pa-team-decaf-tuesday-rid
+ e/
+END:VEVENT
+END:VCALENDAR

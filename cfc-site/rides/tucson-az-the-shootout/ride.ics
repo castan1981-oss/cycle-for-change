@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tucson-az-the-shootout@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Phoenix:20260919T073000
+DTEND;TZID=America/Phoenix:20260919T093000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:The Shootout — Tucson\, AZ
+LOCATION:University Blvd & Euclid Ave\, University Blvd & N Euclid Ave\, 
+ Tucson\, AZ 85719
+DESCRIPTION:Pace: A 22–28+ mph; Scootout 19–23 mph; Old-Old Man 16–
+ 20 mph.\nSchedule: Every Saturday morning; start varies 6:00–7:30 am b
+ y season.\nConfirm with the host before you go.\nhttps://cycleforchange.
+ org/rides/tucson-az-the-shootout/
+URL:https://cycleforchange.org/rides/tucson-az-the-shootout/
+END:VEVENT
+END:VCALENDAR

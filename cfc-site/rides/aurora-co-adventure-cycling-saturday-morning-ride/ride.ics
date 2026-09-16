@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:aurora-co-adventure-cycling-saturday-morning-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Denver:20260919T090000
+DTEND;TZID=America/Denver:20260919T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261031T235959Z
+SUMMARY:Adventure Cycling Saturday Morning Ride — Aurora\, CO
+LOCATION:Adventure Cycling\, 4361 S Parker Rd\, Aurora\, CO 80015
+DESCRIPTION:Pace: no-drop\, 12–15 mph.\nNo-drop.\nSchedule: Every Satur
+ day\, 9:00 am (summer) / 10:00 am (winter).\nConfirm with the host befor
+ e you go.\nhttps://cycleforchange.org/rides/aurora-co-adventure-cycling-
+ saturday-morning-ride/
+URL:https://cycleforchange.org/rides/aurora-co-adventure-cycling-saturday
+ -morning-ride/
+END:VEVENT
+END:VCALENDAR

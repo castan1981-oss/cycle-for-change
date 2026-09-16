@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:south-bend-in-bikes-and-brews@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20270506T183000
+DTEND;TZID=America/New_York:20270506T203000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270831T235959Z
+SUMMARY:Bikes and Brews (formerly the Rollout) — South Bend\, IN
+LOCATION:The old 7-11\, 501 E LaSalle Ave\, South Bend\, IN 46617
+DESCRIPTION:Pace: social ride\, MTB ride and a faster road ride each week
+ .\nSchedule: Every Thursday\, May–August; arrive 6:15 pm\, roll 6:30 p
+ m sharp.\nConfirm with the host before you go.\nhttps://cycleforchange.o
+ rg/rides/south-bend-in-bikes-and-brews/
+URL:https://cycleforchange.org/rides/south-bend-in-bikes-and-brews/
+END:VEVENT
+END:VCALENDAR

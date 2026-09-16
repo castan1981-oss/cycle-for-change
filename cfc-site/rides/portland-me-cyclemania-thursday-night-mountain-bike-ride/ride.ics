@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:portland-me-cyclemania-thursday-night-mountain-bike-ride@cycleforchan
+ ge.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260917T180000
+DTEND;TZID=America/New_York:20260917T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:CycleMania Thursday Night Mountain Bike Ride — Portland\, ME
+LOCATION:CycleMania\, Portland\, ME
+DESCRIPTION:Pace: all-inclusive.\nNo-drop.\nSchedule: Thursdays\, 6:00 pm
+ .\nConfirm with the host before you go.\nhttps://cycleforchange.org/ride
+ s/portland-me-cyclemania-thursday-night-mountain-bike-ride/
+URL:https://cycleforchange.org/rides/portland-me-cyclemania-thursday-nigh
+ t-mountain-bike-ride/
+END:VEVENT
+END:VCALENDAR

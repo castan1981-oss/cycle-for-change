@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:louisville-ky-ridenfaden-wednesday@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260916T180000
+DTEND;TZID=America/New_York:20260916T200000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Ridenfaden Wednesday — Louisville\, KY
+LOCATION:Seidenfaden's\, 1134 Breckinridge St\, Louisville\, KY 40204
+DESCRIPTION:Pace: no-drop group and a fast group.\nSchedule: Every Wednes
+ day\, year-round; no-drop group 6:00 pm\, fast ride 6:30 pm.\nConfirm wi
+ th the host before you go.\nhttps://cycleforchange.org/rides/louisville-
+ ky-ridenfaden-wednesday/
+URL:https://cycleforchange.org/rides/louisville-ky-ridenfaden-wednesday/
+END:VEVENT
+END:VCALENDAR

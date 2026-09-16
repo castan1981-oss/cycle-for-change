@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:minnetonka-mn-cycle-unmapped-thursday-rides@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260917T180000
+DTEND;TZID=America/Chicago:20260917T193000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20261031T235959Z
+SUMMARY:Cycle Unmapped Thursday Rides — Minnetonka\, MN
+LOCATION:Unmapped Brewing Co.\, 14625 Excelsior Blvd\, Minnetonka\, MN 55
+ 345
+DESCRIPTION:Pace: Road A ~17 mph\, Road B ~13 mph\, social ~10 mph\, MTB 
+ at Lone Lake Park.\nSchedule: Every Thursday\, 5:30 pm gather\, 6:00 pm 
+ roll (spring and summer).\nConfirm with the host before you go.\nhttps:/
+ /cycleforchange.org/rides/minnetonka-mn-cycle-unmapped-thursday-rides/
+URL:https://cycleforchange.org/rides/minnetonka-mn-cycle-unmapped-thursda
+ y-rides/
+END:VEVENT
+END:VCALENDAR

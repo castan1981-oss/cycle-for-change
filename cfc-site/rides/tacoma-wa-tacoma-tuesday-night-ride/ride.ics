@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tacoma-wa-tacoma-tuesday-night-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260922T183000
+DTEND;TZID=America/Los_Angeles:20260922T203000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Tacoma Tuesday Night Ride — Tacoma\, WA
+LOCATION:Tacoma\, WA
+DESCRIPTION:Pace: social.\nSchedule: Every Tuesday\, 6:30 pm\, from a dif
+ ferent local bar each week.\nConfirm with the host before you go.\nhttps
+ ://cycleforchange.org/rides/tacoma-wa-tacoma-tuesday-night-ride/
+URL:https://cycleforchange.org/rides/tacoma-wa-tacoma-tuesday-night-ride/
+END:VEVENT
+END:VCALENDAR

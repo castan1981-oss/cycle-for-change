@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:jacksonville-fl-tunibiri-tuesday-night-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260922T220000
+DTEND;TZID=America/New_York:20260923T000000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:TuNiBiRi (Tuesday Night Bike Ride) — Jacksonville\, FL
+LOCATION:Florida Velvet Tattoo and Piercing
+DESCRIPTION:Pace: peppy but social.\nSchedule: Every Tuesday\, meet 9:00
+ –9:30 pm\, roll 10:00 pm.\nConfirm with the host before you go.\nhttps
+ ://cycleforchange.org/rides/jacksonville-fl-tunibiri-tuesday-night-ride/
+URL:https://cycleforchange.org/rides/jacksonville-fl-tunibiri-tuesday-nig
+ ht-ride/
+END:VEVENT
+END:VCALENDAR

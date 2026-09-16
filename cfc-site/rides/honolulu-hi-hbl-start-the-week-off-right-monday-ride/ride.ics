@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:honolulu-hi-hbl-start-the-week-off-right-monday-ride@cycleforchange.o
+ rg
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=Pacific/Honolulu:20260921T083000
+DTEND;TZID=Pacific/Honolulu:20260921T113000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Start the Week Off Right — Honolulu\, HI
+LOCATION:Kahala Community Center\, Moa St & Pahoa Ave\, Honolulu\, HI 968
+ 16
+DESCRIPTION:Pace: beginner-friendly.\nNo-drop.\nSchedule: Every Monday\, 
+ 8:30 am to about noon.\nConfirm with the host before you go.\nhttps://cy
+ cleforchange.org/rides/honolulu-hi-hbl-start-the-week-off-right-monday-r
+ ide/
+URL:https://cycleforchange.org/rides/honolulu-hi-hbl-start-the-week-off-r
+ ight-monday-ride/
+END:VEVENT
+END:VCALENDAR

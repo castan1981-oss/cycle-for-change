@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:boulder-co-wednesday-morning-velo@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Denver:20260923T063000
+DTEND;TZID=America/Denver:20260923T083000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20260930T235959Z
+SUMMARY:Wednesday Morning Velo — Boulder\, CO
+LOCATION:Gateway Fun Park parking lot\, 4800 28th St\, Boulder\, CO 80301
+DESCRIPTION:Pace: six groups; slowest 13–15 mph.\nSchedule: Every Wedne
+ sday\, 6:30 am\, May 20 – Sep 30.\nConfirm with the host before you go
+ .\nhttps://cycleforchange.org/rides/boulder-co-wednesday-morning-velo/
+URL:https://cycleforchange.org/rides/boulder-co-wednesday-morning-velo/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:portland-me-gorham-bike-friday-morning-coffee-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260918T080000
+DTEND;TZID=America/New_York:20260918T100000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20261130T235959Z
+SUMMARY:Gorham Bike & Ski Friday Morning Coffee Shop Road Ride — Portla
+ nd\, ME
+LOCATION:Gorham Bike & Ski\, Portland\, Portland\, ME
+DESCRIPTION:Pace: talking pace out\, can get spirited on the way back.\nS
+ chedule: Fridays\, 8:00 am\, first Friday in May through last Friday in 
+ November.\nConfirm with the host before you go.\nhttps://cycleforchange.
+ org/rides/portland-me-gorham-bike-friday-morning-coffee-ride/
+URL:https://cycleforchange.org/rides/portland-me-gorham-bike-friday-morni
+ ng-coffee-ride/
+END:VEVENT
+END:VCALENDAR

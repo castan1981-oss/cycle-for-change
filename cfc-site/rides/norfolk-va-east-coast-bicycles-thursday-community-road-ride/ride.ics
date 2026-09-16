@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:norfolk-va-east-coast-bicycles-thursday-community-road-ride@cycleforc
+ hange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260917T180000
+DTEND;TZID=America/New_York:20260917T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Thursday Community Road Ride (East Coast Bicycles) — Norfolk\, 
+ VA
+LOCATION:East Coast Bicycles\, 1910 Colley Ave\, Norfolk\, VA 23517
+DESCRIPTION:Pace: 15–17 mph.\nSchedule: Thursdays\, 6:00 pm.\nConfirm w
+ ith the host before you go.\nhttps://cycleforchange.org/rides/norfolk-va
+ -east-coast-bicycles-thursday-community-road-ride/
+URL:https://cycleforchange.org/rides/norfolk-va-east-coast-bicycles-thurs
+ day-community-road-ride/
+END:VEVENT
+END:VCALENDAR

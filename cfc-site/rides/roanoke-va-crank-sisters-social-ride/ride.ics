@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:roanoke-va-crank-sisters-social-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260917T180000
+DTEND;TZID=America/New_York:20260917T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Crank Sisters Social Ride — Roanoke\, VA
+LOCATION:Cardinal Bicycle Grandin Village\, 1312 Winborne St SW\, Roanoke
+ \, VA 24015
+DESCRIPTION:Pace: casual\, social.\nNo-drop.\nSchedule: Thursdays\, 6:00 
+ pm.\nConfirm with the host before you go.\nhttps://cycleforchange.org/ri
+ des/roanoke-va-crank-sisters-social-ride/
+URL:https://cycleforchange.org/rides/roanoke-va-crank-sisters-social-ride
+ /
+END:VEVENT
+END:VCALENDAR

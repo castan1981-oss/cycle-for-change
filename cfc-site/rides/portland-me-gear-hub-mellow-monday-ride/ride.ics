@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:portland-me-gear-hub-mellow-monday-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260921T181000
+DTEND;TZID=America/New_York:20260921T191000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=MO
+SUMMARY:Mellow Monday Ride — Portland\, ME
+LOCATION:Back Cove parking lot (opposite Hannaford)\, Portland\, ME
+DESCRIPTION:Pace: mellow.\nNo-drop.\nSchedule: 2nd and 4th Mondays; meet 
+ 6:00 pm\, roll 6:10 pm\, back by ~7:20.\nConfirm with the host before yo
+ u go.\nhttps://cycleforchange.org/rides/portland-me-gear-hub-mellow-mond
+ ay-ride/
+URL:https://cycleforchange.org/rides/portland-me-gear-hub-mellow-monday-r
+ ide/
+END:VEVENT
+END:VCALENDAR

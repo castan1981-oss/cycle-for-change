@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:long-beach-ca-queercicles-c-u-next-tuesday@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260922T080000
+DTEND;TZID=America/Los_Angeles:20260922T100000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:C U Next Tuesday (Queercicles) — Long Beach\, CA
+LOCATION:Colorado Lagoon\, Colorado Lagoon\, Long Beach\, CA 90803
+DESCRIPTION:Pace: moderate (one chili on the local ride list).\nSchedule:
+  Every Tuesday\, 8:00 am.\nConfirm with the host before you go.\nhttps:/
+ /cycleforchange.org/rides/long-beach-ca-queercicles-c-u-next-tuesday/
+URL:https://cycleforchange.org/rides/long-beach-ca-queercicles-c-u-next-t
+ uesday/
+END:VEVENT
+END:VCALENDAR

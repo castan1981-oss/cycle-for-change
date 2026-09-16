@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:newburyport-ma-riverside-cycle-judy-jam@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260921T173000
+DTEND;TZID=America/New_York:20260921T193000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20260930T235959Z
+SUMMARY:The Judy Jam — Newburyport\, MA
+LOCATION:Riverside Cycle\, Newburyport\, Newburyport\, MA
+DESCRIPTION:Pace: 14+ mph\, A and B groups.\nNo-drop.\nSchedule: Mondays\
+ , 5:30 pm\, mid-April to mid-September.\nConfirm with the host before yo
+ u go.\nhttps://cycleforchange.org/rides/newburyport-ma-riverside-cycle-j
+ udy-jam/
+URL:https://cycleforchange.org/rides/newburyport-ma-riverside-cycle-judy-
+ jam/
+END:VEVENT
+END:VCALENDAR

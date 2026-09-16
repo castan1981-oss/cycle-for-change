@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:college-station-tx-southenders-midweek-motley@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260923T073000
+DTEND;TZID=America/Chicago:20260923T093000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Midweek Motley (Southenders) — College Station\, TX
+LOCATION:1862 Rock Prairie / Pebble Creek entrance (two starts)\, Rock Pr
+ airie Rd\, College Station\, TX 77845
+DESCRIPTION:Schedule: Every Wednesday\, 7:30 am.\nConfirm with the host b
+ efore you go.\nhttps://cycleforchange.org/rides/college-station-tx-south
+ enders-midweek-motley/
+URL:https://cycleforchange.org/rides/college-station-tx-southenders-midwe
+ ek-motley/
+END:VEVENT
+END:VCALENDAR

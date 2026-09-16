@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fort-collins-co-saturday-open-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Denver:20260919T080000
+DTEND;TZID=America/Denver:20260919T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:SOR (Saturday Open Ride) — Fort Collins\, CO
+LOCATION:Front Range Community College library parking lot (SW corner)\, 
+ 4616 S Shields St\, Fort Collins\, CO 80526
+DESCRIPTION:Pace: B+ to A.\nSchedule: Every Saturday\, 8:00 am (shifts wi
+ th season).\nConfirm with the host before you go.\nhttps://cycleforchang
+ e.org/rides/fort-collins-co-saturday-open-ride/
+URL:https://cycleforchange.org/rides/fort-collins-co-saturday-open-ride/
+END:VEVENT
+END:VCALENDAR

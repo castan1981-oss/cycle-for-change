@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:seattle-wa-wtfnb-weekly-with-brevay@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260917T063000
+DTEND;TZID=America/Los_Angeles:20260917T083000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:WTFNB Weekly with Brevay — Seattle\, WA
+LOCATION:Pacha Collective\, Seattle\, WA
+DESCRIPTION:Pace: moderate\, 14–16 mph\, frequent regroups.\nNo-drop.\n
+ Schedule: Every Thursday\, 6:30 am.\nConfirm with the host before you go
+ .\nhttps://cycleforchange.org/rides/seattle-wa-wtfnb-weekly-with-brevay/
+URL:https://cycleforchange.org/rides/seattle-wa-wtfnb-weekly-with-brevay/
+END:VEVENT
+END:VCALENDAR

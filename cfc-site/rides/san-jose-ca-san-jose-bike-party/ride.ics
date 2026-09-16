@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-jose-ca-san-jose-bike-party@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260918T200000
+DTEND;TZID=America/Los_Angeles:20260918T230000
+RRULE:FREQ=MONTHLY;BYDAY=3FR
+SUMMARY:San Jose Bike Party — San Jose\, CA
+LOCATION:San Jose\, CA
+DESCRIPTION:Pace: party pace.\nNo-drop.\nSchedule: Third Friday of every 
+ month\, 8:00 pm (meet 7:30 pm).\nConfirm with the host before you go.\nh
+ ttps://cycleforchange.org/rides/san-jose-ca-san-jose-bike-party/
+URL:https://cycleforchange.org/rides/san-jose-ca-san-jose-bike-party/
+END:VEVENT
+END:VCALENDAR

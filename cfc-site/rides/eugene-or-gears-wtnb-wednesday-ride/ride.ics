@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eugene-or-gears-wtnb-wednesday-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260916T180000
+DTEND;TZID=America/Los_Angeles:20260916T190000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:GEARs WTNB Wednesday Ride — Eugene\, OR
+LOCATION:Alton Baker Park\, 100 Day Island Rd\, Eugene\, OR 97401
+DESCRIPTION:Pace: 10–12 mph.\nSchedule: Wednesdays\, 6:00 pm.\nConfirm 
+ with the host before you go.\nhttps://cycleforchange.org/rides/eugene-or
+ -gears-wtnb-wednesday-ride/
+URL:https://cycleforchange.org/rides/eugene-or-gears-wtnb-wednesday-ride/
+END:VEVENT
+END:VCALENDAR

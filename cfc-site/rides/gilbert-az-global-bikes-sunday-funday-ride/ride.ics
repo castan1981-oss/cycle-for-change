@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:gilbert-az-global-bikes-sunday-funday-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Phoenix:20260920T060000
+DTEND;TZID=America/Phoenix:20260920T070000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Gilbert Sunday Funday Ride — Gilbert\, AZ
+LOCATION:Global Bikes & E-Bikes Gilbert\, 835 N Gilbert Rd #111\, Gilbert
+ \, AZ 85234
+DESCRIPTION:Pace: no-drop\, 11–13 mph.\nNo-drop.\nSchedule: Every Sunda
+ y\, meet 5:45 am\, roll 6:00 am.\nConfirm with the host before you go.\n
+ https://cycleforchange.org/rides/gilbert-az-global-bikes-sunday-funday-r
+ ide/
+URL:https://cycleforchange.org/rides/gilbert-az-global-bikes-sunday-funda
+ y-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:springboro-oh-dcc-kesling-park-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260917T180000
+DTEND;TZID=America/New_York:20260917T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:DCC Kesling Park Ride — Springboro\, OH
+LOCATION:Kesling Park\, front lot by the basketball court\, 7201 Red Lion
+  5 Points Rd\, Springboro\, OH 45066
+DESCRIPTION:Pace: groups from 12–15 mph up to 19+ mph.\nNo-drop.\nSched
+ ule: Every Thursday\, 6:00 pm.\nConfirm with the host before you go.\nht
+ tps://cycleforchange.org/rides/springboro-oh-dcc-kesling-park-ride/
+URL:https://cycleforchange.org/rides/springboro-oh-dcc-kesling-park-ride/
+END:VEVENT
+END:VCALENDAR

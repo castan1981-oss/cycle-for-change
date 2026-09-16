@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:el-paso-tx-thursday-morning-cruise@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Denver:20260917T070000
+DTEND;TZID=America/Denver:20260917T090000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Thursday Morning Cruise — El Paso\, TX
+LOCATION:Starbucks at the Outlet Shoppes\, 7051 S Desert Blvd\, El Paso\,
+  TX 79932
+DESCRIPTION:Pace: 14–16 mph.\nNo-drop.\nSchedule: Every Thursday\, 7:00
+  am (start time shifts with the season).\nConfirm with the host before y
+ ou go.\nhttps://cycleforchange.org/rides/el-paso-tx-thursday-morning-cru
+ ise/
+URL:https://cycleforchange.org/rides/el-paso-tx-thursday-morning-cruise/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:roanoke-va-cardinal-bicycle-tuesday-night-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260922T174500
+DTEND;TZID=America/New_York:20260922T194500
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Tuesday Night Ride (Cardinal Bicycle Grandin) — Roanoke\, VA
+LOCATION:Cardinal Bicycle Grandin Village\, 1312 Winborne St SW\, Roanoke
+ \, VA 24015
+DESCRIPTION:Pace: Classic 4-Crossings (advanced\, regroups) or Flatlander
+ s (beginner\, no-drop).\nSchedule: Tuesdays\, 5:45 pm.\nConfirm with the
+  host before you go.\nhttps://cycleforchange.org/rides/roanoke-va-cardin
+ al-bicycle-tuesday-night-ride/
+URL:https://cycleforchange.org/rides/roanoke-va-cardinal-bicycle-tuesday-
+ night-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:minneapolis-mn-utepils-cycling-sunday-rides@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260920T100000
+DTEND;TZID=America/Chicago:20260920T120000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Utepils Cycling Sunday Road and MTB Rides — Minneapolis\, MN
+LOCATION:Utepils Brewing\, 225 Thomas Ave N #700\, Minneapolis\, MN 55405
+DESCRIPTION:Pace: Road groups: Rec 11–13 mph\, Sport Ultra Lite 15–17
+ \, Sport Lite 17–19\, Sport 19–21; three MTB groups on the Wirth tra
+ ils.\nSchedule: Every Sunday\, meet 9:45 am\, roll 10:00 am.\nConfirm wi
+ th the host before you go.\nhttps://cycleforchange.org/rides/minneapolis
+ -mn-utepils-cycling-sunday-rides/
+URL:https://cycleforchange.org/rides/minneapolis-mn-utepils-cycling-sunda
+ y-rides/
+END:VEVENT
+END:VCALENDAR

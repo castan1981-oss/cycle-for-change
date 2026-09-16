@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:detroit-mi-palmer-park-thursday-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260917T183000
+DTEND;TZID=America/New_York:20260917T193000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20261031T235959Z
+SUMMARY:People for Palmer Park Thursday Ride — Detroit\, MI
+LOCATION:Palmer Park Community House lot\, 9900 Merrill Plaisance\, Detro
+ it\, MI 48203
+DESCRIPTION:Pace: fitness pace\, 10–15 mph.\nSchedule: Every Thursday\,
+  May 7–Oct 29\, 2026; meet 6:00 pm\, roll 6:30 pm sharp.\nConfirm with
+  the host before you go.\nhttps://cycleforchange.org/rides/detroit-mi-pa
+ lmer-park-thursday-ride/
+URL:https://cycleforchange.org/rides/detroit-mi-palmer-park-thursday-ride
+ /
+END:VEVENT
+END:VCALENDAR

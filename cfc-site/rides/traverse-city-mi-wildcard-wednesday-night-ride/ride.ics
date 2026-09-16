@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:traverse-city-mi-wildcard-wednesday-night-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260916T180000
+DTEND;TZID=America/New_York:20260916T200000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20261031T235959Z
+SUMMARY:Wildcard Wednesday Night Ride — Traverse City\, MI
+LOCATION:VASA Singletrack trailhead lot\, Bartlett Rd\, Williamsburg\, MI
+  49690
+DESCRIPTION:Pace: fast\, medium and slow/newbie groups.\nSchedule: Every 
+ Wednesday\, early spring to late fall\, 6:00 pm rollout.\nConfirm with t
+ he host before you go.\nhttps://cycleforchange.org/rides/traverse-city-m
+ i-wildcard-wednesday-night-ride/
+URL:https://cycleforchange.org/rides/traverse-city-mi-wildcard-wednesday-
+ night-ride/
+END:VEVENT
+END:VCALENDAR

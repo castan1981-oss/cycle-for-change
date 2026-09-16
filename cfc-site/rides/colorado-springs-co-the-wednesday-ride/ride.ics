@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:colorado-springs-co-the-wednesday-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Denver:20260916T180000
+DTEND;TZID=America/Denver:20260916T200000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20261031T235959Z
+SUMMARY:The Wednesday Ride — Colorado Springs\, CO
+LOCATION:Colorado Springs\, CO
+DESCRIPTION:Pace: casual\, no-drop.\nNo-drop.\nSchedule: Every Wednesday\
+ , 6:00 pm\, March 12 – October 29.\nConfirm with the host before you g
+ o.\nhttps://cycleforchange.org/rides/colorado-springs-co-the-wednesday-r
+ ide/
+URL:https://cycleforchange.org/rides/colorado-springs-co-the-wednesday-ri
+ de/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:boise-id-lactic-acid-saturday-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Denver:20261003T090000
+DTEND;TZID=America/Denver:20261003T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20260831T235959Z
+SUMMARY:Lactic Acid Cycling Saturday Ride — Boise\, ID
+LOCATION:LuLu's Pizza\, 2594 N Bogus Basin Rd\, Boise\, ID 83702
+DESCRIPTION:Pace: A group 18–22 mph\, B group 16–18 mph.\nSchedule: E
+ very Saturday. 10:00 am Oct–Apr\, 9:00 am May and Sep\, 8:00 am Jun–
+ Aug.\nConfirm with the host before you go.\nhttps://cycleforchange.org/r
+ ides/boise-id-lactic-acid-saturday-ride/
+URL:https://cycleforchange.org/rides/boise-id-lactic-acid-saturday-ride/
+END:VEVENT
+END:VCALENDAR

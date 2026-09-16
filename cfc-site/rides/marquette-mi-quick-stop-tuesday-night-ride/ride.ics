@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:marquette-mi-quick-stop-tuesday-night-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260922T183000
+DTEND;TZID=America/New_York:20260922T203000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Quick Stop Tuesday Night Ride — Marquette\, MI
+LOCATION:Behind Quick Stop Bike Shop
+DESCRIPTION:Pace: moderate.\nSchedule: Every Tuesday\, 6:30 pm.\nConfirm 
+ with the host before you go.\nhttps://cycleforchange.org/rides/marquette
+ -mi-quick-stop-tuesday-night-ride/
+URL:https://cycleforchange.org/rides/marquette-mi-quick-stop-tuesday-nigh
+ t-ride/
+END:VEVENT
+END:VCALENDAR

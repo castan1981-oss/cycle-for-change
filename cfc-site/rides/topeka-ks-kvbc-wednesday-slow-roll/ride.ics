@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:topeka-ks-kvbc-wednesday-slow-roll@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260916T181000
+DTEND;TZID=America/Chicago:20260916T201000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:KVBC Wednesday Slow Roll — Topeka\, KS
+LOCATION:Washburn University parking lot\, SW 20th & MacVicar\, SW 20th S
+ t & SW MacVicar Ave\, Topeka\, KS 66604
+DESCRIPTION:Pace: no drop\, lycra optional.\nNo-drop.\nSchedule: Every We
+ dnesday\, 6:10 pm\, spring through fall (starts early May).\nConfirm wit
+ h the host before you go.\nhttps://cycleforchange.org/rides/topeka-ks-kv
+ bc-wednesday-slow-roll/
+URL:https://cycleforchange.org/rides/topeka-ks-kvbc-wednesday-slow-roll/
+END:VEVENT
+END:VCALENDAR

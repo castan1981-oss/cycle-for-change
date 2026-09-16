@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:erie-pa-slow-roll-erie@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260917T180000
+DTEND;TZID=America/New_York:20260917T190000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Slow Roll Erie — Erie\, PA
+LOCATION:West Perry Square\, by the artistic bike rack\, Perry Square\, E
+ rie\, PA 16501
+DESCRIPTION:Pace: slow\, social.\nNo-drop.\nSchedule: Every Thursday\, 6:
+ 00 pm\, weather dependent.\nConfirm with the host before you go.\nhttps:
+ //cycleforchange.org/rides/erie-pa-slow-roll-erie/
+URL:https://cycleforchange.org/rides/erie-pa-slow-roll-erie/
+END:VEVENT
+END:VCALENDAR

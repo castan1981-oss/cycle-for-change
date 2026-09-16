@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:seattle-wa-good-weather-sunday-social@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260920T103000
+DTEND;TZID=America/Los_Angeles:20260920T140000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Good Weather Sunday Social — Seattle\, WA
+LOCATION:Tailwind Cafe\, Capitol Hill\, Seattle\, WA
+DESCRIPTION:Pace: leisurely\, 10–12 mph\, stay together.\nNo-drop.\nSch
+ edule: Every Sunday\, 10:30 am to about 2:00 pm.\nConfirm with the host 
+ before you go.\nhttps://cycleforchange.org/rides/seattle-wa-good-weather
+ -sunday-social/
+URL:https://cycleforchange.org/rides/seattle-wa-good-weather-sunday-socia
+ l/
+END:VEVENT
+END:VCALENDAR

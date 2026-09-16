@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:la-crosse-wi-smiths-womens-road-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260921T173000
+DTEND;TZID=America/Chicago:20260921T193000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Smith's Women's Road Ride — La Crosse\, WI
+LOCATION:Smith's Bike Shop\, 125 N 7th St\, La Crosse\, WI 54601
+DESCRIPTION:Pace: ~16 mph average\, 17–20 on the flats.\nSchedule: Ever
+ y Monday\, 5:30 pm\, May through summer.\nConfirm with the host before y
+ ou go.\nhttps://cycleforchange.org/rides/la-crosse-wi-smiths-womens-road
+ -ride/
+URL:https://cycleforchange.org/rides/la-crosse-wi-smiths-womens-road-ride
+ /
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fargo-nd-gnbc-thursday-wow-road-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260917T180000
+DTEND;TZID=America/Chicago:20260917T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20260930T235959Z
+SUMMARY:Great Northern W.O.W. (Women on Wheels) Road Ride — Fargo\, ND
+LOCATION:Great Northern Bicycle Co.\, 425 Broadway N\, Fargo\, ND 58102
+DESCRIPTION:Pace: 15–18 mph.\nNo-drop.\nSchedule: Every Thursday\, 6:00
+  pm\, spring and summer.\nConfirm with the host before you go.\nhttps://
+ cycleforchange.org/rides/fargo-nd-gnbc-thursday-wow-road-ride/
+URL:https://cycleforchange.org/rides/fargo-nd-gnbc-thursday-wow-road-ride
+ /
+END:VEVENT
+END:VCALENDAR

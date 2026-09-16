@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:milwaukee-wi-cadence-tuesday-thursday-rides@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20270504T180000
+DTEND;TZID=America/Chicago:20270504T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20270831T235959Z
+SUMMARY:Cadence Tuesday and Thursday Rides — Milwaukee\, WI
+LOCATION:Bay View Wheel & Sprocket (Tue) / Fox Point Wheel & Sprocket (Th
+ u)
+DESCRIPTION:Pace: Group 1: 15+ mph (drop). Group 2: 13–14 mph\, no-drop
+ .\nSchedule: Tuesdays from Bay View Wheel & Sprocket and Thursdays from 
+ Fox Point Wheel & Sprocket\, 6:00 pm\, May 1–Aug 30.\nConfirm with the
+  host before you go.\nhttps://cycleforchange.org/rides/milwaukee-wi-cade
+ nce-tuesday-thursday-rides/
+URL:https://cycleforchange.org/rides/milwaukee-wi-cadence-tuesday-thursda
+ y-rides/
+END:VEVENT
+END:VCALENDAR

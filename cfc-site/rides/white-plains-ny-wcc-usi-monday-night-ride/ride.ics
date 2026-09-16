@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:white-plains-ny-wcc-usi-monday-night-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260921T180000
+DTEND;TZID=America/New_York:20260921T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:WCC USI Monday Night Ride — White Plains\, NY
+LOCATION:Waller Ave. parking lot\, Waller Ave\, White Plains\, NY
+DESCRIPTION:Pace: B\, ~16 mph.\nSchedule: Mondays\, 6:00 pm.\nConfirm wit
+ h the host before you go.\nhttps://cycleforchange.org/rides/white-plains
+ -ny-wcc-usi-monday-night-ride/
+URL:https://cycleforchange.org/rides/white-plains-ny-wcc-usi-monday-night
+ -ride/
+END:VEVENT
+END:VCALENDAR

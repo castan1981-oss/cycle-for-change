@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bloomington-in-wednesday-world-bloomington-bicycles@cycleforchange.or
+ g
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260916T180000
+DTEND;TZID=America/New_York:20260916T200000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Wednesday World pb Bloomington Bicycles — Bloomington\, IN
+LOCATION:E Kirkwood Ave & S Indiana Ave\, E Kirkwood Ave & S Indiana Ave\
+ , Bloomington\, IN 47405
+DESCRIPTION:Pace: fast.\nSchedule: Every Wednesday\, 6:00 pm.\nConfirm wi
+ th the host before you go.\nhttps://cycleforchange.org/rides/bloomington
+ -in-wednesday-world-bloomington-bicycles/
+URL:https://cycleforchange.org/rides/bloomington-in-wednesday-world-bloom
+ ington-bicycles/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mcallen-tx-bicycle-world-tnt-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260917T183000
+DTEND;TZID=America/Chicago:20260917T203000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH
+SUMMARY:TNT Ride (Tuesday & Thursday) — McAllen\, TX
+LOCATION:Bicycle World McAllen (shop parking lot)
+DESCRIPTION:Schedule: Every Tuesday and Thursday\, 6:30 pm.\nConfirm with
+  the host before you go.\nhttps://cycleforchange.org/rides/mcallen-tx-bi
+ cycle-world-tnt-ride/
+URL:https://cycleforchange.org/rides/mcallen-tx-bicycle-world-tnt-ride/
+END:VEVENT
+END:VCALENDAR

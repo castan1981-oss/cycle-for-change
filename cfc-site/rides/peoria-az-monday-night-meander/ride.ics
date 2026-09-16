@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:peoria-az-monday-night-meander@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Phoenix:20260921T190000
+DTEND;TZID=America/Phoenix:20260921T210000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Monday Night Meander — Peoria\, AZ
+LOCATION:West Valley Casual Bike Rides meet spot\, 8866 W Thunderbird Rd\
+ , Peoria\, AZ 85381
+DESCRIPTION:Pace: casual.\nNo-drop.\nSchedule: Every Monday\, 7:00 pm.\nC
+ onfirm with the host before you go.\nhttps://cycleforchange.org/rides/pe
+ oria-az-monday-night-meander/
+URL:https://cycleforchange.org/rides/peoria-az-monday-night-meander/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:scarsdale-ny-dannys-cycles-sunday-road-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260920T093000
+DTEND;TZID=America/New_York:20260920T113000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20261031T235959Z
+SUMMARY:Danny's Cycles Scarsdale Sunday Road Ride — Scarsdale\, NY
+LOCATION:Danny's Cycles Scarsdale\, Scarsdale\, NY
+DESCRIPTION:Pace: 12–15 mph.\nNo-drop.\nSchedule: Every Sunday in summe
+ r\, meet 9:00 am\, roll 9:30 am.\nConfirm with the host before you go.\n
+ https://cycleforchange.org/rides/scarsdale-ny-dannys-cycles-sunday-road-
+ ride/
+URL:https://cycleforchange.org/rides/scarsdale-ny-dannys-cycles-sunday-ro
+ ad-ride/
+END:VEVENT
+END:VCALENDAR

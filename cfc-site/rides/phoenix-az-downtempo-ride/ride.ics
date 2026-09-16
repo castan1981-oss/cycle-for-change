@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:phoenix-az-downtempo-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Phoenix:20260921T200000
+DTEND;TZID=America/Phoenix:20260921T210000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Phoenix Downtempo Ride — Phoenix\, AZ
+LOCATION:Civic Space Park\, 424 N Central Ave\, Phoenix\, AZ 85004
+DESCRIPTION:Pace: slow\, around 8 mph.\nNo-drop.\nSchedule: Every Monday\
+ , 8:00 pm.\nConfirm with the host before you go.\nhttps://cycleforchange
+ .org/rides/phoenix-az-downtempo-ride/
+URL:https://cycleforchange.org/rides/phoenix-az-downtempo-ride/
+END:VEVENT
+END:VCALENDAR

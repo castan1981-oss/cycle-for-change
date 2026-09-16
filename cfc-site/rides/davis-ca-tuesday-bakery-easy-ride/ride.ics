@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:davis-ca-tuesday-bakery-easy-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260922T090000
+DTEND;TZID=America/Los_Angeles:20260922T110000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20260930T235959Z
+SUMMARY:Tuesday Bakery Easy Ride — Davis\, CA
+LOCATION:Westlake Plaza parking lot\, 1260 Lake Blvd\, Davis\, CA 95616
+DESCRIPTION:Pace: 12–14 mph.\nSchedule: Every Tuesday\, 9:00 am (8:00 a
+ m late May through mid-September).\nConfirm with the host before you go.
+ \nhttps://cycleforchange.org/rides/davis-ca-tuesday-bakery-easy-ride/
+URL:https://cycleforchange.org/rides/davis-ca-tuesday-bakery-easy-ride/
+END:VEVENT
+END:VCALENDAR

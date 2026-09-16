@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:philadelphia-pa-papertrail-gravel-espresso@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260916T180000
+DTEND;TZID=America/New_York:20260916T200000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20261031T235959Z
+SUMMARY:Gravel Espresso (PAPERtrail Bike Cafe) — Philadelphia\, PA
+LOCATION:PAPERtrail Bike Cafe\, 211 Lincoln Dr\, Philadelphia\, PA 19144
+DESCRIPTION:Pace: social\, no-drop\, regroup at the top of each climb.\nN
+ o-drop.\nSchedule: Wednesdays\, 6:00 pm\, April–October.\nConfirm with
+  the host before you go.\nhttps://cycleforchange.org/rides/philadelphia-
+ pa-papertrail-gravel-espresso/
+URL:https://cycleforchange.org/rides/philadelphia-pa-papertrail-gravel-es
+ presso/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:reno-nv-reno-wheelmen-wednesday-group-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260916T173000
+DTEND;TZID=America/Los_Angeles:20260916T193000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20261031T235959Z
+SUMMARY:Reno Wheelmen Wednesday Group Ride — Reno\, NV
+LOCATION:Reno\, NV
+DESCRIPTION:Pace: B ~18 mph\, C ~15 mph\, faster riders self-organize.\nS
+ chedule: Every Wednesday\, 5:30 pm (seasonal; waiver required once per s
+ eason).\nConfirm with the host before you go.\nhttps://cycleforchange.or
+ g/rides/reno-nv-reno-wheelmen-wednesday-group-ride/
+URL:https://cycleforchange.org/rides/reno-nv-reno-wheelmen-wednesday-grou
+ p-ride/
+END:VEVENT
+END:VCALENDAR

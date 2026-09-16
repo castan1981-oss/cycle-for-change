@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:montclair-nj-montclair-bikery-friday-ladies-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260918T090000
+DTEND;TZID=America/New_York:20260918T110000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20261031T235959Z
+SUMMARY:Friday Ladies Ride (Montclair Bikery) — Montclair\, NJ
+LOCATION:Montclair Bikery\, 148 Valley Rd\, Montclair\, NJ 07042
+DESCRIPTION:Pace: C pace\, low to mid teens mph.\nSchedule: Fridays\, 9:0
+ 0 am\, April–October.\nConfirm with the host before you go.\nhttps://c
+ ycleforchange.org/rides/montclair-nj-montclair-bikery-friday-ladies-ride
+ /
+URL:https://cycleforchange.org/rides/montclair-nj-montclair-bikery-friday
+ -ladies-ride/
+END:VEVENT
+END:VCALENDAR

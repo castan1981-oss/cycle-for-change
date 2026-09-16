@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fargo-nd-gnbc-monday-riding-101@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260921T180000
+DTEND;TZID=America/Chicago:20260921T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20260930T235959Z
+SUMMARY:Great Northern Monday Riding 101 Ride — Fargo\, ND
+LOCATION:Great Northern Bicycle Co.\, 425 Broadway N\, Fargo\, ND 58102
+DESCRIPTION:Pace: 12–16 mph.\nNo-drop.\nSchedule: Every Monday\, 6:00 p
+ m\, spring and summer.\nConfirm with the host before you go.\nhttps://cy
+ cleforchange.org/rides/fargo-nd-gnbc-monday-riding-101/
+URL:https://cycleforchange.org/rides/fargo-nd-gnbc-monday-riding-101/
+END:VEVENT
+END:VCALENDAR

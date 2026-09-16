@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:denton-tx-monday-community-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260921T180000
+DTEND;TZID=America/Chicago:20260921T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20261130T235959Z
+SUMMARY:Monday Community Ride — Denton\, TX
+LOCATION:Denton County Courthouse-on-the-Square\, north lawn\, 110 W Hick
+ ory St\, Denton\, TX 76201
+DESCRIPTION:Pace: 10–12 mph.\nNo-drop.\nSchedule: Every Monday\, 6:00 p
+ m (March–November).\nConfirm with the host before you go.\nhttps://cyc
+ leforchange.org/rides/denton-tx-monday-community-ride/
+URL:https://cycleforchange.org/rides/denton-tx-monday-community-ride/
+END:VEVENT
+END:VCALENDAR

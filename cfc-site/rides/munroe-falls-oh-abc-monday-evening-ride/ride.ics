@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:munroe-falls-oh-abc-monday-evening-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260921T180000
+DTEND;TZID=America/New_York:20260921T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20260930T235959Z
+SUMMARY:ABC Monday Evening Ride — Munroe Falls\, OH
+LOCATION:Brust Park\, 128 N Main St\, Munroe Falls\, OH 44262
+DESCRIPTION:Pace: 11–13 mph.\nNo-drop.\nSchedule: Every Monday\, 6:00 p
+ m\, in season.\nConfirm with the host before you go.\nhttps://cycleforch
+ ange.org/rides/munroe-falls-oh-abc-monday-evening-ride/
+URL:https://cycleforchange.org/rides/munroe-falls-oh-abc-monday-evening-r
+ ide/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:washington-dc-district-cycling-collective-monday-moves@cycleforchange
+ .org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260921T101500
+DTEND;TZID=America/New_York:20260921T121500
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Monday Moves (District Cycling Collective) — Washington\, DC
+LOCATION:Conte's Bike Shop Navy Yard\, 1331 4th St SE\, Washington\, DC 2
+ 0003
+DESCRIPTION:Pace: casual\, geared to newer riders.\nNo-drop.\nSchedule: M
+ ondays\, 10:00 am (rolls 10:15).\nConfirm with the host before you go.\n
+ https://cycleforchange.org/rides/washington-dc-district-cycling-collecti
+ ve-monday-moves/
+URL:https://cycleforchange.org/rides/washington-dc-district-cycling-colle
+ ctive-monday-moves/
+END:VEVENT
+END:VCALENDAR

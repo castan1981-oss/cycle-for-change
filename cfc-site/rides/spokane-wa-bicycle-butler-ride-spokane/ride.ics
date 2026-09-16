@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:spokane-wa-bicycle-butler-ride-spokane@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20260916T181500
+DTEND;TZID=America/Los_Angeles:20260916T201500
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Bicycle Butler Wednesday Ride — Spokane\, WA
+LOCATION:Bicycle Butler\, 6520 N Ash St\, Spokane\, WA 99208
+DESCRIPTION:Pace: social; regroups at turns and hills.\nNo-drop.\nSchedul
+ e: Every Wednesday\, meet 6:00 pm\, roll 6:15 pm.\nConfirm with the host
+  before you go.\nhttps://cycleforchange.org/rides/spokane-wa-bicycle-but
+ ler-ride-spokane/
+URL:https://cycleforchange.org/rides/spokane-wa-bicycle-butler-ride-spoka
+ ne/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:oakland-ca-east-bay-bike-party@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Los_Angeles:20261009T200000
+DTEND;TZID=America/Los_Angeles:20261009T230000
+RRULE:FREQ=MONTHLY;BYDAY=2FR
+SUMMARY:East Bay Bike Party — Oakland\, CA
+LOCATION:Oakland\, CA
+DESCRIPTION:Pace: party pace.\nNo-drop.\nSchedule: Second Friday of every
+  month. Meet 7:30 pm\, roll 8:00 pm.\nConfirm with the host before you g
+ o.\nhttps://cycleforchange.org/rides/oakland-ca-east-bay-bike-party/
+URL:https://cycleforchange.org/rides/oakland-ca-east-bay-bike-party/
+END:VEVENT
+END:VCALENDAR

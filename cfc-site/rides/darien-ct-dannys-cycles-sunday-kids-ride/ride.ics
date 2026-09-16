@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:darien-ct-dannys-cycles-sunday-kids-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260920T140000
+DTEND;TZID=America/New_York:20260920T160000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Danny's Cycles Darien Kids' Ride — Darien\, CT
+LOCATION:Danny's Cycles Darien\, Darien\, CT
+DESCRIPTION:Pace: kids' pace.\nNo-drop.\nSchedule: Every Sunday\, 2:00 pm
+ .\nConfirm with the host before you go.\nhttps://cycleforchange.org/ride
+ s/darien-ct-dannys-cycles-sunday-kids-ride/
+URL:https://cycleforchange.org/rides/darien-ct-dannys-cycles-sunday-kids-
+ ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:omaha-ne-opbc-saturday-morning-easy-trail-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260919T090000
+DTEND;TZID=America/Chicago:20260919T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Omaha Pedalers Saturday Morning Easy Trail Ride — Omaha\, NE
+LOCATION:Stinson Park restrooms\, Aksarben Village\, 2285 S 67th St\, Oma
+ ha\, NE 68106
+DESCRIPTION:Pace: easy.\nNo-drop.\nSchedule: Every Saturday\, 9:00 am (cl
+ ub signature rides take priority some Saturdays).\nConfirm with the host
+  before you go.\nhttps://cycleforchange.org/rides/omaha-ne-opbc-saturday
+ -morning-easy-trail-ride/
+URL:https://cycleforchange.org/rides/omaha-ne-opbc-saturday-morning-easy-
+ trail-ride/
+END:VEVENT
+END:VCALENDAR

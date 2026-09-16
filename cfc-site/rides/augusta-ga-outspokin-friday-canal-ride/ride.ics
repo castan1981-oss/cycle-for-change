@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:augusta-ga-outspokin-friday-canal-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260918T180000
+DTEND;TZID=America/New_York:20260918T200000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+SUMMARY:Outspokin' Friday Canal Ride — Augusta\, GA
+LOCATION:Outspokin' Bicycles\, 1904 Walton Way\, Augusta\, GA 30904
+DESCRIPTION:Pace: conversation pace.\nSchedule: Every Friday\, 6:00 pm.\n
+ Confirm with the host before you go.\nhttps://cycleforchange.org/rides/a
+ ugusta-ga-outspokin-friday-canal-ride/
+URL:https://cycleforchange.org/rides/augusta-ga-outspokin-friday-canal-ri
+ de/
+END:VEVENT
+END:VCALENDAR

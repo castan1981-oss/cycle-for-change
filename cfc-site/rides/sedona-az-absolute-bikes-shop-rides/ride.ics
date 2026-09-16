@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sedona-az-absolute-bikes-shop-rides@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Phoenix:20260917T160000
+DTEND;TZID=America/Phoenix:20260917T180000
+RRULE:FREQ=WEEKLY;BYDAY=TH,SU;UNTIL=20261130T235959Z
+SUMMARY:Absolute Bikes Sedona Shop Rides — Sedona\, AZ
+LOCATION:Absolute Bikes Sedona\, 6101 Highway 179 Suite B\, Sedona\, AZ 8
+ 6351
+DESCRIPTION:Pace: varies week to week.\nSchedule: Thursdays and Sundays i
+ n spring and fall (Sunday meets about 3:45 pm\, rolls 4:00 pm).\nConfirm
+  with the host before you go.\nhttps://cycleforchange.org/rides/sedona-a
+ z-absolute-bikes-shop-rides/
+URL:https://cycleforchange.org/rides/sedona-az-absolute-bikes-shop-rides/
+END:VEVENT
+END:VCALENDAR

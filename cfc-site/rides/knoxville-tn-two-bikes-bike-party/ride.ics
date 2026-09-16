@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:knoxville-tn-two-bikes-bike-party@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260925T180000
+DTEND;TZID=America/New_York:20260925T200000
+RRULE:FREQ=MONTHLY;BYDAY=-1FR
+SUMMARY:Two Bikes Bike Party — Knoxville\, TN
+LOCATION:Two Bikes\, 118 S Central St\, Knoxville\, TN 37902
+DESCRIPTION:Pace: 8–10 mph\, party pace.\nNo-drop.\nSchedule: Monthly\,
+  typically the last Friday\, 6:00–8:00 pm.\nConfirm with the host befo
+ re you go.\nhttps://cycleforchange.org/rides/knoxville-tn-two-bikes-bike
+ -party/
+URL:https://cycleforchange.org/rides/knoxville-tn-two-bikes-bike-party/
+END:VEVENT
+END:VCALENDAR

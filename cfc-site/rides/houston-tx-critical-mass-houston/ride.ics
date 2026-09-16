@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:houston-tx-critical-mass-houston@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260925T191500
+DTEND;TZID=America/Chicago:20260925T214500
+RRULE:FREQ=MONTHLY;BYDAY=-1FR
+SUMMARY:Critical Mass Houston — Houston\, TX
+LOCATION:Guadalupe Plaza Park\, 2311 Runnels St\, Houston\, TX 77003
+DESCRIPTION:Pace: slow\, all skill levels.\nNo-drop.\nSchedule: Last Frid
+ ay of every month. Gather 6:45–7:15 pm\, roll 7:15 pm.\nConfirm with t
+ he host before you go.\nhttps://cycleforchange.org/rides/houston-tx-crit
+ ical-mass-houston/
+URL:https://cycleforchange.org/rides/houston-tx-critical-mass-houston/
+END:VEVENT
+END:VCALENDAR

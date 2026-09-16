@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:madison-wi-cap-city-cyclists-mad-town-mondays@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260921T180000
+DTEND;TZID=America/Chicago:20260921T193000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Mad Town Mondays — Madison\, WI
+LOCATION:Orton Park\, 1100 Spaight St\, Madison\, WI 53703
+DESCRIPTION:Pace: party pace\, 10–12 mph.\nNo-drop.\nSchedule: Every Mo
+ nday\, 6:00 pm.\nConfirm with the host before you go.\nhttps://cycleforc
+ hange.org/rides/madison-wi-cap-city-cyclists-mad-town-mondays/
+URL:https://cycleforchange.org/rides/madison-wi-cap-city-cyclists-mad-tow
+ n-mondays/
+END:VEVENT
+END:VCALENDAR

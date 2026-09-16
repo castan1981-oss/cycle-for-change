@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:atlanta-ga-midweek-roll@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260916T193000
+DTEND;TZID=America/New_York:20260916T213000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=WE
+SUMMARY:Midweek Roll — Atlanta\, GA
+LOCATION:97 Estoria\, 727 Wylie St SE\, Atlanta\, GA 30316
+DESCRIPTION:Pace: 10–12 mph.\nSchedule: Every other Wednesday\, meet 7:
+ 00 pm\, roll 7:30 pm.\nConfirm with the host before you go.\nhttps://cyc
+ leforchange.org/rides/atlanta-ga-midweek-roll/
+URL:https://cycleforchange.org/rides/atlanta-ga-midweek-roll/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:camillus-ny-onondaga-cycling-club-tuesday-slow-n-easy@cycleforchange.
+ org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260922T180000
+DTEND;TZID=America/New_York:20260922T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261031T235959Z
+SUMMARY:OCC Tuesday Slow N' Easy Ride — Camillus\, NY
+LOCATION:Reed Webster Park\, Camillus\, NY
+DESCRIPTION:Pace: leisurely.\nNo-drop.\nSchedule: Every Tuesday in summer
+ \, 6:00 pm.\nConfirm with the host before you go.\nhttps://cycleforchang
+ e.org/rides/camillus-ny-onondaga-cycling-club-tuesday-slow-n-easy/
+URL:https://cycleforchange.org/rides/camillus-ny-onondaga-cycling-club-tu
+ esday-slow-n-easy/
+END:VEVENT
+END:VCALENDAR

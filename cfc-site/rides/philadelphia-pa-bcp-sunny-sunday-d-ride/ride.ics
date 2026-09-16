@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:philadelphia-pa-bcp-sunny-sunday-d-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260920T120000
+DTEND;TZID=America/New_York:20260920T140000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Sunny Sunday D Ride (Bicycle Club of Philadelphia) — Philadelph
+ ia\, PA
+LOCATION:Azalea Garden formal entrance\, behind the Art Museum\, Kelly Dr
+ \, Philadelphia\, PA 19130
+DESCRIPTION:Pace: D pace\, 9–12 mph.\nNo-drop.\nSchedule: Sundays\, 12:
+ 00 pm.\nConfirm with the host before you go.\nhttps://cycleforchange.org
+ /rides/philadelphia-pa-bcp-sunny-sunday-d-ride/
+URL:https://cycleforchange.org/rides/philadelphia-pa-bcp-sunny-sunday-d-r
+ ide/
+END:VEVENT
+END:VCALENDAR

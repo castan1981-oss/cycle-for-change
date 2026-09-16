@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:virginia-beach-va-tripower-sunday-beginner-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260920T080000
+DTEND;TZID=America/New_York:20260920T100000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Sunday Beginner Ride (Tripower Cycling Club) — Virginia Beach\,
+  VA
+LOCATION:Conte's Bike Shop Virginia Beach\, 1805 Laskin Rd\, Virginia Bea
+ ch\, VA 23454
+DESCRIPTION:Pace: D group\, 15–17 mph.\nSchedule: Sundays\, 8:00 am.\nC
+ onfirm with the host before you go.\nhttps://cycleforchange.org/rides/vi
+ rginia-beach-va-tripower-sunday-beginner-ride/
+URL:https://cycleforchange.org/rides/virginia-beach-va-tripower-sunday-be
+ ginner-ride/
+END:VEVENT
+END:VCALENDAR

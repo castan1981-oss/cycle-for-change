@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:coral-gables-fl-ebc-bike305-beginner-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20261010T073000
+DTEND;TZID=America/New_York:20261010T093000
+RRULE:FREQ=MONTHLY;BYDAY=2SA
+SUMMARY:EBC / Bike 305 Beginner Ride — Coral Gables\, FL
+LOCATION:Ponce de Leon Middle School\, 5801 Augusto St\, Coral Gables\, F
+ L 33146
+DESCRIPTION:Pace: D\, 12–14 mph.\nSchedule: Second Saturday of the mont
+ h\, 7:30 am.\nConfirm with the host before you go.\nhttps://cycleforchan
+ ge.org/rides/coral-gables-fl-ebc-bike305-beginner-ride/
+URL:https://cycleforchange.org/rides/coral-gables-fl-ebc-bike305-beginner
+ -ride/
+END:VEVENT
+END:VCALENDAR

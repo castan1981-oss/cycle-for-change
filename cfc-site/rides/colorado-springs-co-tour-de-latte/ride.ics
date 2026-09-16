@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:colorado-springs-co-tour-de-latte@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Denver:20260919T090000
+DTEND;TZID=America/Denver:20260919T120000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20260930T235959Z
+SUMMARY:Tour de Latte — Colorado Springs\, CO
+LOCATION:E Fontanero St & N Weber St\, 1901 N Weber St\, Colorado Springs
+ \, CO 80907
+DESCRIPTION:Pace: casual\, 8–10 mph.\nNo-drop.\nSchedule: Every Saturda
+ y\, 9:00 am\, in season.\nConfirm with the host before you go.\nhttps://
+ cycleforchange.org/rides/colorado-springs-co-tour-de-latte/
+URL:https://cycleforchange.org/rides/colorado-springs-co-tour-de-latte/
+END:VEVENT
+END:VCALENDAR

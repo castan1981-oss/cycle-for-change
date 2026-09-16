@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:harrisonburg-va-womens-monday-mountain-bike-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/New_York:20260921T173000
+DTEND;TZID=America/New_York:20260921T183000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Women's Monday Mountain Bike Ride — Harrisonburg\, VA
+LOCATION:Massanutten Western Slope parking lot\, Massanutten\, VA
+DESCRIPTION:Pace: beginner\, frequent stops.\nNo-drop.\nSchedule: Mondays
+ \, 5:30 pm.\nConfirm with the host before you go.\nhttps://cycleforchang
+ e.org/rides/harrisonburg-va-womens-monday-mountain-bike-ride/
+URL:https://cycleforchange.org/rides/harrisonburg-va-womens-monday-mounta
+ in-bike-ride/
+END:VEVENT
+END:VCALENDAR

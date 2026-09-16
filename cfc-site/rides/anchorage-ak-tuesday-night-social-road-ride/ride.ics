@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:anchorage-ak-tuesday-night-social-road-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Anchorage:20260922T183000
+DTEND;TZID=America/Anchorage:20260922T213000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261031T235959Z
+SUMMARY:Tuesday Night Social Road Ride (Taco Tuesdays) — Anchorage\, AK
+LOCATION:Bartlett High School student parking lot\, 1101 Golden Bear Dr\,
+  Anchorage\, AK 99504
+DESCRIPTION:Pace: no-drop\, two-abreast peloton.\nNo-drop.\nSchedule: Eve
+ ry Tuesday\, 6:30 pm\, through the summer.\nConfirm with the host before
+  you go.\nhttps://cycleforchange.org/rides/anchorage-ak-tuesday-night-so
+ cial-road-ride/
+URL:https://cycleforchange.org/rides/anchorage-ak-tuesday-night-social-ro
+ ad-ride/
+END:VEVENT
+END:VCALENDAR

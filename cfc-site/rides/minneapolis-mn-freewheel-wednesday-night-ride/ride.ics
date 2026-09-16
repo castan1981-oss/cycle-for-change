@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:minneapolis-mn-freewheel-wednesday-night-ride@cycleforchange.org
+DTSTAMP:20260916T185552Z
+DTSTART;TZID=America/Chicago:20260916T180000
+DTEND;TZID=America/Chicago:20260916T200000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Freewheel MPLS Wednesday Night Ride — Minneapolis\, MN
+LOCATION:Freewheel Bike Minneapolis\, 750 SE 9th St\, Minneapolis\, MN 55
+ 414
+DESCRIPTION:Pace: 15–17 mph average.\nNo-drop.\nSchedule: Every Wednesd
+ ay\, 6:00 pm (spring–September).\nConfirm with the host before you go.
+ \nhttps://cycleforchange.org/rides/minneapolis-mn-freewheel-wednesday-ni
+ ght-ride/
+URL:https://cycleforchange.org/rides/minneapolis-mn-freewheel-wednesday-n
+ ight-ride/
+END:VEVENT
+END:VCALENDAR
