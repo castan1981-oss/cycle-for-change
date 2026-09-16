@@ -8,6 +8,7 @@
   <title>Find a group ride near you | Cycle for Change</title>
   <meta name="description" content="Search 402 recurring bicycle group rides in 49 states by city or state. Road, gravel, mountain bike and social rides — day, time, start point, pace and links for each. No account, just show up.">
   <link rel="canonical" href="https://cycleforchange.org/rides/">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cycle for Change">
   <meta property="og:title" content="Find a group ride near you">
@@ -21,10 +22,12 @@
   <meta name="twitter:description" content="Search 402 recurring bicycle group rides in 49 states by city or state. Road, gravel, mountain bike and social rides — day, time, start point, pace and links for each. No account, just show up.">
   <meta name="twitter:image" content="https://cycleforchange.org/og-cfc.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Space+Grotesk:wght@400;500&family=Space+Mono&family=Anton&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Space+Grotesk:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/events/events.css">
+  <link rel="stylesheet" href="/rides/rides.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -69,43 +72,39 @@
 }
   </script>
 </head>
-<body id="top">
-
-<div class="util">
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
   <div class="wrap">
-    <span><b><span data-cur>—</span> / 10,000</b> miles logged · all on the bike · 2027</span>
-    <span>every mile for queer communities</span>
-  </div>
-</div>
-
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="/" aria-label="Cycle for Change home">
-      <svg width="32" height="32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M98.45 71.03 A40.00 40.00 0 0 1 50.32 98.81" stroke="#372C3C" stroke-width="12" stroke-linecap="round"/><path d="M31.23 87.79 A40.00 40.00 0 0 1 31.23 32.21" stroke="#E9E224" stroke-width="12" stroke-linecap="round"/><path d="M50.32 21.19 A40.00 40.00 0 0 1 98.45 48.97" stroke="#A99CB0" stroke-width="12" stroke-linecap="round"/><circle cx="60.00" cy="60.00" r="6.00" fill="#372C3C"/></svg>
-      <span class="word">Cycle for Change</span>
+    <a class="mark" href="/" aria-label="Cycle for Change home">
+      <svg class="mark-glyph" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+      <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="#2A2E28" stroke-width="12" stroke-linecap="round"/>
+      <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
+      <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
+      <circle cx="60" cy="60" r="6" fill="#2A2E28"/>
+    </svg>
+      <span class="wordmark">Cycle <span class="for">For</span> Change</span>
     </a>
-    <nav class="links" aria-label="Primary">
-      <a href="/rides/">Group rides</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/rides/">Rides</a>
       <a href="/events/">Events</a>
+      <a href="/towns/">Towns</a>
+      <a href="/" class="btn btn-solid">The 10000</a>
     </nav>
-    <div class="nav-right">
-      <a href="/#board" class="btn btn-dark">Pledge a mile →</a>
-    </div>
   </div>
+  <p class="tally-line wrap"><span class="tally-num" data-cur>—</span>&nbsp;miles since June 1 &middot; 10000 in 2027 &middot; all on the bike</p>
 </header>
 
-<main class="fn-pillar gr-dir">
-  <header class="fn-pillar-head">
-    <div class="wrap">
-      <nav class="gr-crumbs" aria-label="Breadcrumb"><a href="/">Cycle for Change</a><span class="sep" aria-hidden="true">›</span><span aria-current="page">Group rides</span></nav>
+<main id="main" class="gr-dir">
+  <header class="gr-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><span aria-current="page">Group rides</span></li></ol></nav>
+      <p class="eyebrow">402 rides &middot; 49 states &middot; checked 2026-09-15</p>
       <h1>Find a group ride near you</h1>
-      <p class="fn-pillar-intro">
+      <p class="lede">
         402 recurring group rides in 49 states. 209 are no-drop, so nobody gets left behind.
         65 are run by and for queer, women/trans/femme or BIPOC riders. Each ride has its own page:
         when it rolls, where it starts, how far, how fast, what to bring. Type a city or tap Near me.
       </p>
-      <div class="fn-line" aria-hidden="true"><i data-line></i></div>
-    </div>
   </header>
 
   <section class="gr-search-wrap">
@@ -114,7 +113,7 @@
         <label class="visually-hidden" for="gr-q">Search by city, state or ride name</label>
         <input id="gr-q" type="search" placeholder="City, state, or ride name — e.g. Phoenix, AZ" autocomplete="off" list="gr-cities">
         <datalist id="gr-cities"><option value="Anchorage, AK"><option value="Birmingham, AL"><option value="Fairhope, AL"><option value="Huntsville, AL"><option value="Bentonville, AR"><option value="Fayetteville, AR"><option value="Little Rock, AR"><option value="Chandler, AZ"><option value="Cottonwood, AZ"><option value="Flagstaff, AZ"><option value="Gilbert, AZ"><option value="Peoria, AZ"><option value="Phoenix, AZ"><option value="Prescott, AZ"><option value="Sedona, AZ"><option value="Tempe, AZ"><option value="Tucson, AZ"><option value="Bakersfield, CA"><option value="Carlsbad, CA"><option value="Chico, CA"><option value="Davis, CA"><option value="Encinitas, CA"><option value="Fresno, CA"><option value="Huntington Beach, CA"><option value="Irvine, CA"><option value="Long Beach, CA"><option value="Los Angeles, CA"><option value="Mill Valley, CA"><option value="Oakland, CA"><option value="Palm Springs, CA"><option value="Pasadena, CA"><option value="Redding, CA"><option value="Redondo Beach, CA"><option value="Riverside, CA"><option value="Sacramento, CA"><option value="San Diego, CA"><option value="San Francisco, CA"><option value="San Jose, CA"><option value="Santa Barbara, CA"><option value="Santa Cruz, CA"><option value="Ventura, CA"><option value="Aurora, CO"><option value="Boulder, CO"><option value="Broomfield, CO"><option value="Colorado Springs, CO"><option value="Denver, CO"><option value="Durango, CO"><option value="Fort Collins, CO"><option value="Grand Junction, CO"><option value="Littleton, CO"><option value="Longmont, CO"><option value="Monument, CO"><option value="Darien, CT"><option value="Middletown, CT"><option value="New Haven, CT"><option value="West Hartford, CT"><option value="Washington, DC"><option value="Milton, DE"><option value="Wilmington, DE"><option value="Clermont, FL"><option value="Coral Gables, FL"><option value="Fort Lauderdale, FL"><option value="Jacksonville, FL"><option value="Lakewood Ranch, FL"><option value="Miami, FL"><option value="Orlando, FL"><option value="Pensacola, FL"><option value="Sanford, FL"><option value="Seminole, FL"><option value="St. Petersburg, FL"><option value="Sunrise, FL"><option value="Tallahassee, FL"><option value="Athens, GA"><option value="Atlanta, GA"><option value="Augusta, GA"><option value="Avondale Estates, GA"><option value="Brookhaven, GA"><option value="Roswell, GA"><option value="Savannah, GA"><option value="Honolulu, HI"><option value="Kailua-Kona, HI"><option value="Kapolei, HI"><option value="Kihei, HI"><option value="Des Moines, IA"><option value="Grinnell, IA"><option value="Iowa City, IA"><option value="North Liberty, IA"><option value="Boise, ID"><option value="Coeur d'Alene, ID"><option value="Pocatello, ID"><option value="Champaign, IL"><option value="Chicago, IL"><option value="Tinley Park, IL"><option value="Bloomington, IN"><option value="Fort Wayne, IN"><option value="Indianapolis, IN"><option value="South Bend, IN"><option value="Leawood, KS"><option value="Topeka, KS"><option value="Bowling Green, KY"><option value="Covington, KY"><option value="Lexington, KY"><option value="Louisville, KY"><option value="Baton Rouge, LA"><option value="Lafayette, LA"><option value="New Orleans, LA"><option value="Shreveport, LA"><option value="Boston, MA"><option value="Lexington, MA"><option value="Newburyport, MA"><option value="Northampton, MA"><option value="Paxton, MA"><option value="Waltham, MA"><option value="Westwood, MA"><option value="Annapolis, MD"><option value="Baltimore, MD"><option value="Bethesda, MD"><option value="Edgewater, MD"><option value="Frederick, MD"><option value="Silver Spring, MD"><option value="Portland, ME"><option value="Saco, ME"><option value="South Portland, ME"><option value="Waterville, ME"><option value="Ann Arbor, MI"><option value="Detroit, MI"><option value="Grand Rapids, MI"><option value="Kalamazoo, MI"><option value="Lansing, MI"><option value="Marquette, MI"><option value="Portage, MI"><option value="Traverse City, MI"><option value="Duluth, MN"><option value="Minneapolis, MN"><option value="Minnetonka, MN"><option value="Rochester, MN"><option value="Chesterfield, MO"><option value="Kansas City, MO"><option value="Richmond Heights, MO"><option value="St. Louis, MO"><option value="Billings, MT"><option value="Bozeman, MT"><option value="Missoula, MT"><option value="Boone, NC"><option value="Greensboro, NC"><option value="Pisgah Forest, NC"><option value="Fargo, ND"><option value="Omaha, NE"><option value="Papillion, NE"><option value="Dover, NH"><option value="Portsmouth, NH"><option value="Hopewell, NJ"><option value="Jersey City, NJ"><option value="Montclair, NJ"><option value="Red Bank, NJ"><option value="Albuquerque, NM"><option value="Las Cruces, NM"><option value="Santa Fe, NM"><option value="Las Vegas, NV"><option value="Reno, NV"><option value="Sparks, NV"><option value="Buffalo, NY"><option value="Camillus, NY"><option value="Lockport, NY"><option value="New York, NY"><option value="Rochester, NY"><option value="Rotterdam, NY"><option value="Scarsdale, NY"><option value="White Plains, NY"><option value="Athens, OH"><option value="Cincinnati, OH"><option value="Cleveland, OH"><option value="Columbus, OH"><option value="Milford, OH"><option value="Munroe Falls, OH"><option value="Springboro, OH"><option value="Sylvania, OH"><option value="Edmond, OK"><option value="Norman, OK"><option value="Oklahoma City, OK"><option value="Tulsa, OK"><option value="Ashland, OR"><option value="Bend, OR"><option value="Corvallis, OR"><option value="Eugene, OR"><option value="Keizer, OR"><option value="Portland, OR"><option value="Bethlehem, PA"><option value="Erie, PA"><option value="Fairview, PA"><option value="Lancaster, PA"><option value="Mechanicsburg, PA"><option value="Philadelphia, PA"><option value="Pittsburgh, PA"><option value="State College, PA"><option value="Providence, RI"><option value="Awendaw, SC"><option value="Charleston, SC"><option value="Greenville, SC"><option value="Sullivan's Island, SC"><option value="Germantown, TN"><option value="Knoxville, TN"><option value="Memphis, TN"><option value="Oakland, TN"><option value="Austin, TX"><option value="Bryan, TX"><option value="College Station, TX"><option value="Corpus Christi, TX"><option value="Dallas, TX"><option value="Denton, TX"><option value="El Paso, TX"><option value="Fort Worth, TX"><option value="Houston, TX"><option value="McAllen, TX"><option value="San Antonio, TX"><option value="Waco, TX"><option value="Orem, UT"><option value="Park City, UT"><option value="Salt Lake City, UT"><option value="Arlington, VA"><option value="Charlottesville, VA"><option value="Harrisonburg, VA"><option value="Norfolk, VA"><option value="Powhatan, VA"><option value="Richmond, VA"><option value="Roanoke, VA"><option value="Salem, VA"><option value="Virginia Beach, VA"><option value="Barre, VT"><option value="South Burlington, VT"><option value="Stowe, VT"><option value="Bellingham, WA"><option value="Olympia, WA"><option value="Seattle, WA"><option value="Spokane, WA"><option value="Tacoma, WA"><option value="Wenatchee, WA"><option value="Appleton, WI"><option value="Green Bay, WI"><option value="La Crosse, WI"><option value="Madison, WI"><option value="Middleton, WI"><option value="Milwaukee, WI"><option value="Suamico, WI"><option value="Wauwatosa, WI"><option value="Charleston, WV"><option value="Morgantown, WV"><option value="Jackson, WY"><option value="Laramie, WY"></datalist>
-        <button type="button" class="btn btn-dark" id="gr-geo">Near me</button>
+        <button type="button" class="btn btn-solid" id="gr-geo">Near me</button>
       </form>
       <div class="gr-filters">
         <div class="gr-filter-row"><span class="gr-filter-label">Bike</span>
@@ -146,7 +145,7 @@
   </section>
   <section class="gr-results-wrap">
     <div class="wrap">
-      <h2 class="fn-spokes-head">Group rides near you, by state</h2>
+      <h2>Group rides near you, by state</h2>
       <nav class="gr-states" aria-label="Jump to a state">
           <a href="/rides/ak/">Alaska <small>1</small></a>
           <a href="/rides/al/">Alabama <small>4</small></a>
@@ -5326,8 +5325,7 @@
     </div>
   </section>
 
-  <section class="gr-why">
-    <div class="wrap">
+  <section class="gr-why wrap">
       <h2>Why a group ride directory on a mental-health site</h2>
       <p>
         A group ride is the cheapest, most reliable way I know to get out of my own head and into a room
@@ -5340,43 +5338,33 @@
         Rides we couldn't fully confirm are marked "Unconfirmed". Know one we're missing, or run one that's listed? <a href="https://www.instagram.com/cycl_eforchange/" rel="noopener">Tell us on Instagram</a>.
         Last checked: 2026-09-15.
       </p>
-      <p>
-        I'm riding 10,000 miles in 2027 for queer mental health. <a href="/#board">Pledge a mile</a> if
-        you want to back it. Or just go find your ride.
-      </p>
-      <aside class="fn-crisis">
+
+      <aside class="crisis">
         <strong>If you're struggling:</strong> the <strong>988 Suicide &amp; Crisis Lifeline</strong>
         is free and 24/7 — call or text <strong>988</strong>. For LGBTQ youth, the
         <strong>Trevor Project</strong> is at <strong>1-866-488-7386</strong> (or text START to 678-678).
       </aside>
-    </div>
+  </section>
+  <div class="wrap">
+
+  <section class="pledge" aria-label="The pledge">
+    <p class="pledge-num">10000</p>
+    <p class="pledge-line">I do the miles. You decide who they&rsquo;re for.</p>
+    <p>This directory is part of Cycle for Change. In 2027 I ride 10,000 miles, all on the bike, every one of them for queer communities. You pick where the money goes. It starts January 1.</p>
+    <p class="pledge-links"><a class="btn btn-solid" href="/">See the project</a> <a class="btn" href="https://www.instagram.com/cycl_eforchange/" rel="noopener">Follow on Instagram</a></p>
   </section>
 
-  <section class="fn-cta" aria-label="Follow the miles and give">
-    <p class="fn-cta-num"><span data-cur>—</span><span class="of"> / 10,000 mi</span></p>
-    <p>Every mile is logged live as I ride it. <a href="/#tally" style="color:var(--yellow);border-bottom:1px solid var(--yellow);">Follow the number →</a></p>
-    <hr>
-    <p class="give">Pledge a mile — it goes direct to queer-community orgs at year-end, by vote.</p>
-    <div class="fn-cta-row">
-      <a href="/#board" class="btn btn-y">Pledge a mile →</a>
-      <a href="/#vote" class="btn btn-dark" style="border:1px solid rgba(255,255,255,.2);">See the orgs →</a>
-    </div>
-  </section>
-
-
-  <p class="fn-note" style="max-width:38rem;margin:24px auto 0;color:var(--mute);font-size:.9rem;line-height:1.6;">
-    Always confirm with the host before you show up; schedules change with the seasons. This site isn't
-    affiliated with any ride listed.
-  </p>
+  <p class="gr-note">Always confirm with the host before you show up; schedules change with the seasons. This site isn't affiliated with any ride listed.</p>
+  </div>
 </main>
 
-<footer>
+<footer class="site-foot">
   <div class="wrap">
-    <div class="foot-base"><span>Cycle for Change™</span><span>every mile for queer communities</span></div>
+    <p><span>Cycle for Change&trade;</span><span>every mile for queer communities</span></p>
+    <p class="foot-links"><a href="/rides/">Rides</a> <a href="/events/">Events</a> <a href="/towns/">Towns</a> <a href="/">Home</a></p>
   </div>
 </footer>
-
-<script src="/field-notes/field-notes.js" defer></script>
+<script src="/rides/tally.js" defer></script>
 <script id="gr-index" type="application/json">{"cities":[["Anchorage, AK",61.2255,-149.729],["Birmingham, AL",33.5114,-86.8023],["Fairhope, AL",30.5227,-87.901],["Huntsville, AL",34.654,-86.562],["Bentonville, AR",36.39,-94.23],["Fayetteville, AR",36.0672,-94.161],["Little Rock, AR",34.7797,-92.34],["Chandler, AZ",33.32,-111.8875],["Cottonwood, AZ",34.719,-112.009],["Flagstaff, AZ",34.906,-111.465],["Gilbert, AZ",33.364,-111.7895],["Peoria, AZ",33.611,-112.253],["Phoenix, AZ",33.3978,-112.03],["Prescott, AZ",34.5392,-112.4695],["Sedona, AZ",34.825,-111.777],["Tempe, AZ",33.4525,-111.9265],["Tucson, AZ",32.2166,-110.9691],["Bakersfield, CA",35.3733,-119.0187],["Carlsbad, CA",33.1285,-117.2575],["Chico, CA",39.7602,-121.7967],["Davis, CA",38.5566,-121.7765],["Encinitas, CA",33.0685,-117.3035],["Fresno, CA",36.8545,-119.7355],["Huntington Beach, CA",33.6685,-117.9555],["Irvine, CA",33.689,-117.7905],["Long Beach, CA",33.7674,-118.1448],["Los Angeles, CA",34.0689,-118.4364],["Mill Valley, CA",37.8836,-122.5153],["Oakland, CA",37.8079,-122.2603],["Palm Springs, CA",33.8055,-116.5495],["Pasadena, CA",34.1435,-118.1505],["Redding, CA",40.5945,-122.3781],["Redondo Beach, CA",33.8445,-118.3935],["Riverside, CA",33.9806,-117.3755],["Sacramento, CA",38.5816,-121.4944],["San Diego, CA",32.7681,-117.1786],["San Francisco, CA",37.7849,-122.407],["San Jose, CA",37.3382,-121.8863],["Santa Barbara, CA",34.4105,-119.6855],["Santa Cruz, CA",36.9741,-122.0308],["Ventura, CA",34.2815,-119.298],["Aurora, CO",39.64,-104.832],["Boulder, CO",40.023,-105.237],["Broomfield, CO",39.92,-105.08],["Colorado Springs, CO",38.8454,-104.8214],["Denver, CO",39.7406,-104.9942],["Durango, CO",37.274,-107.88],["Fort Collins, CO",40.5669,-105.0893],["Grand Junction, CO",39.0639,-108.5506],["Littleton, CO",39.5935,-105.0235],["Longmont, CO",40.16,-105.07],["Monument, CO",39.093,-104.889],["Darien, CT",41.079,-73.469],["Middletown, CT",41.5605,-72.651],["New Haven, CT",41.327,-72.91],["West Hartford, CT",41.762,-72.742],["Washington, DC",38.9008,-77.0295],["Milton, DE",38.7776,-75.3102],["Wilmington, DE",39.7391,-75.5398],["Clermont, FL",28.5486,-81.7188],["Coral Gables, FL",25.7183,-80.2775],["Fort Lauderdale, FL",26.1234,-80.1397],["Jacksonville, FL",30.3248,-81.6673],["Lakewood Ranch, FL",27.399,-82.4485],["Miami, FL",25.7752,-80.1955],["Orlando, FL",28.549,-81.341],["Pensacola, FL",30.4213,-87.2169],["Sanford, FL",28.8113,-81.2683],["Seminole, FL",27.8386,-82.7885],["St. Petersburg, FL",27.777,-82.6328],["Sunrise, FL",26.1287,-80.3574],["Tallahassee, FL",30.4383,-84.2807],["Athens, GA",33.9622,-83.3956],["Atlanta, GA",33.7535,-84.3642],["Augusta, GA",33.475,-82.0006],["Avondale Estates, GA",33.7717,-84.267],["Brookhaven, GA",33.8607,-84.3402],["Roswell, GA",34.0197,-84.3595],["Savannah, GA",32.077,-81.0947],["Honolulu, HI",21.2813,-157.8134],["Kailua-Kona, HI",19.6535,-156.0025],["Kapolei, HI",21.3305,-158.0805],["Kihei, HI",20.7267,-156.4489],["Des Moines, IA",41.5675,-93.6455],["Grinnell, IA",41.743,-92.7225],["Iowa City, IA",41.6611,-91.5302],["North Liberty, IA",41.749,-91.598],["Boise, ID",43.6218,-116.2047],["Coeur d'Alene, ID",47.674,-116.768],["Pocatello, ID",42.876,-112.447],["Champaign, IL",40.1164,-88.2434],["Chicago, IL",41.8958,-87.649],["Tinley Park, IL",41.533,-87.796],["Bloomington, IN",39.166,-86.527],["Fort Wayne, IN",41.08,-85.14],["Indianapolis, IN",39.87,-86.14],["South Bend, IN",41.69,-86.255],["Leawood, KS",38.9265,-94.628],["Topeka, KS",39.0315,-95.7275],["Bowling Green, KY",36.99,-86.44],["Covington, KY",39.083,-84.517],["Lexington, KY",38.055,-84.495],["Louisville, KY",38.24,-85.74],["Baton Rouge, LA",30.4465,-91.181],["Lafayette, LA",30.2241,-92.0198],["New Orleans, LA",29.9511,-90.0715],["Shreveport, LA",32.4601,-93.7401],["Boston, MA",42.3504,-71.0968],["Lexington, MA",42.446,-71.228],["Newburyport, MA",42.812,-70.877],["Northampton, MA",42.319,-72.63],["Paxton, MA",42.311,-71.929],["Waltham, MA",42.384,-71.203],["Westwood, MA",42.222,-71.216],["Annapolis, MD",38.9784,-76.4922],["Baltimore, MD",39.2934,-76.6174],["Bethesda, MD",38.9847,-77.0947],["Edgewater, MD",38.9573,-76.5497],["Frederick, MD",39.4143,-77.4105],["Silver Spring, MD",38.9907,-77.0261],["Portland, ME",43.6658,-70.259],["Saco, ME",43.501,-70.443],["South Portland, ME",43.63,-70.275],["Waterville, ME",44.552,-69.632],["Ann Arbor, MI",42.28,-83.76],["Detroit, MI",42.3739,-83.0696],["Grand Rapids, MI",42.9765,-85.6625],["Kalamazoo, MI",42.265,-85.625],["Lansing, MI",42.73,-84.53],["Marquette, MI",46.54,-87.4],["Portage, MI",42.2,-85.58],["Traverse City, MI",44.72,-85.5],["Duluth, MN",46.7867,-92.1005],["Minneapolis, MN",44.9715,-93.2644],["Minnetonka, MN",44.913,-93.464],["Rochester, MN",43.9935,-92.5165],["Chesterfield, MO",38.6631,-90.5771],["Kansas City, MO",39.0237,-94.592],["Richmond Heights, MO",38.627,-90.338],["St. Louis, MO",38.5785,-90.287],["Billings, MT",45.775,-108.556],["Bozeman, MT",45.687,-111.0295],["Missoula, MT",46.8721,-113.994],["Boone, NC",36.2168,-81.6746],["Greensboro, NC",36.0726,-79.792],["Pisgah Forest, NC",35.279,-82.729],["Fargo, ND",46.879,-96.789],["Omaha, NE",41.2278,-96.078],["Papillion, NE",41.147,-96.062],["Dover, NH",43.198,-70.874],["Portsmouth, NH",43.069,-70.777],["Hopewell, NJ",40.3893,-74.7621],["Jersey City, NJ",40.7195,-74.0431],["Montclair, NJ",40.8259,-74.209],["Red Bank, NJ",40.3471,-74.0643],["Albuquerque, NM",35.0844,-106.6504],["Las Cruces, NM",32.3199,-106.7637],["Santa Fe, NM",35.6902,-105.9461],["Las Vegas, NV",36.1145,-115.3348],["Reno, NV",39.5247,-119.8132],["Sparks, NV",39.5245,-119.7275],["Buffalo, NY",42.8777,-78.8817],["Camillus, NY",43.039,-76.306],["Lockport, NY",43.171,-78.69],["New York, NY",40.7327,-73.996],["Rochester, NY",43.16,-77.6],["Rotterdam, NY",42.787,-73.97],["Scarsdale, NY",41.005,-73.785],["White Plains, NY",41.034,-73.763],["Athens, OH",39.33,-82.35],["Cincinnati, OH",39.1597,-84.4393],["Cleveland, OH",41.4975,-81.695],["Columbus, OH",39.9838,-82.9788],["Milford, OH",39.17,-84.29],["Munroe Falls, OH",41.14,-81.44],["Springboro, OH",39.58,-84.2],["Sylvania, OH",41.72,-83.75],["Edmond, OK",35.6463,-97.4357],["Norman, OK",35.2216,-97.437],["Oklahoma City, OK",35.4718,-97.5417],["Tulsa, OK",36.1105,-95.9844],["Ashland, OR",42.1977,-122.7137],["Bend, OR",44.073,-121.3365],["Corvallis, OR",44.5866,-123.2795],["Eugene, OR",44.0538,-123.0884],["Keizer, OR",45.006,-123.0235],["Portland, OR",45.521,-122.6668],["Bethlehem, PA",40.6259,-75.3705],["Erie, PA",42.129,-80.085],["Fairview, PA",42.03,-80.25],["Lancaster, PA",40.0379,-76.3055],["Mechanicsburg, PA",40.2143,-77.0086],["Philadelphia, PA",39.9548,-75.1678],["Pittsburgh, PA",40.4577,-79.9427],["State College, PA",40.79,-77.86],["Providence, RI",41.8225,-71.419],["Awendaw, SC",32.904,-79.682],["Charleston, SC",32.862,-79.906],["Greenville, SC",34.755,-82.37],["Sullivan's Island, SC",32.763,-79.839],["Germantown, TN",35.0868,-89.8101],["Knoxville, TN",35.967,-83.918],["Memphis, TN",35.1495,-90.049],["Oakland, TN",35.2259,-89.5145],["Austin, TX",30.2639,-97.7393],["Bryan, TX",30.729,-96.47],["College Station, TX",30.589,-96.29],["Corpus Christi, TX",27.7963,-97.3947],["Dallas, TX",32.7791,-96.7887],["Denton, TX",33.2144,-97.1336],["El Paso, TX",31.908,-106.583],["Fort Worth, TX",32.718,-97.3521],["Houston, TX",29.7659,-95.3798],["McAllen, TX",26.2034,-98.23],["San Antonio, TX",29.4335,-98.479],["Waco, TX",31.5845,-97.172],["Orem, UT",40.301,-111.698],["Park City, UT",40.6461,-111.498],["Salt Lake City, UT",40.7572,-111.8827],["Arlington, VA",38.8405,-77.087],["Charlottesville, VA",38.0293,-78.4767],["Harrisonburg, VA",38.4496,-78.8689],["Norfolk, VA",36.8508,-76.2859],["Powhatan, VA",37.5421,-77.9192],["Richmond, VA",37.5407,-77.436],["Roanoke, VA",37.271,-79.9414],["Salem, VA",37.2935,-80.0548],["Virginia Beach, VA",36.8529,-75.978],["Barre, VT",44.197,-72.502],["South Burlington, VT",44.467,-73.171],["Stowe, VT",44.465,-72.685],["Bellingham, WA",48.7351,-122.4914],["Olympia, WA",47.0379,-122.9007],["Seattle, WA",47.6086,-122.3281],["Spokane, WA",47.716,-117.436],["Tacoma, WA",47.2529,-122.4443],["Wenatchee, WA",47.4235,-120.3103],["Appleton, WI",44.2619,-88.4154],["Green Bay, WI",44.5195,-88.0205],["La Crosse, WI",43.8135,-91.2525],["Madison, WI",43.0754,-89.3729],["Middleton, WI",43.1024,-89.5187],["Milwaukee, WI",43.009,-87.906],["Suamico, WI",44.633,-88.039],["Wauwatosa, WI",43.0495,-88.0076],["Charleston, WV",38.35,-81.63],["Morgantown, WV",39.63,-79.96],["Jackson, WY",43.4799,-110.7624],["Laramie, WY",41.2903,-105.5138]],"states":[["AL","Alabama"],["AK","Alaska"],["AZ","Arizona"],["AR","Arkansas"],["CA","California"],["CO","Colorado"],["CT","Connecticut"],["DE","Delaware"],["DC","Washington, DC"],["FL","Florida"],["GA","Georgia"],["HI","Hawaii"],["ID","Idaho"],["IL","Illinois"],["IN","Indiana"],["IA","Iowa"],["KS","Kansas"],["KY","Kentucky"],["LA","Louisiana"],["ME","Maine"],["MD","Maryland"],["MA","Massachusetts"],["MI","Michigan"],["MN","Minnesota"],["MS","Mississippi"],["MO","Missouri"],["MT","Montana"],["NE","Nebraska"],["NV","Nevada"],["NH","New Hampshire"],["NJ","New Jersey"],["NM","New Mexico"],["NY","New York"],["NC","North Carolina"],["ND","North Dakota"],["OH","Ohio"],["OK","Oklahoma"],["OR","Oregon"],["PA","Pennsylvania"],["RI","Rhode Island"],["SC","South Carolina"],["SD","South Dakota"],["TN","Tennessee"],["TX","Texas"],["UT","Utah"],["VT","Vermont"],["VA","Virginia"],["WA","Washington"],["WV","West Virginia"],["WI","Wisconsin"],["WY","Wyoming"],["PR","Puerto Rico"]],"hubs":[["CO","Denver","/rides/co/denver/"],["CA","Long Beach","/rides/ca/long-beach/"],["CA","Los Angeles","/rides/ca/los-angeles/"],["MN","Minneapolis","/rides/mn/minneapolis/"],["ME","Portland","/rides/me/portland/"],["PA","Philadelphia","/rides/pa/philadelphia/"],["CA","San Diego","/rides/ca/san-diego/"],["NY","New York","/rides/ny/new-york/"],["GA","Atlanta","/rides/ga/atlanta/"],["CA","San Francisco","/rides/ca/san-francisco/"],["OK","Oklahoma City","/rides/ok/oklahoma-city/"],["AZ","Phoenix","/rides/az/phoenix/"],["IL","Chicago","/rides/il/chicago/"],["WA","Seattle","/rides/wa/seattle/"],["AZ","Tucson","/rides/az/tucson/"],["DC","Washington","/rides/dc/washington/"],["HI","Honolulu","/rides/hi/honolulu/"],["WI","Madison","/rides/wi/madison/"],["MA","Boston","/rides/ma/boston/"],["CO","Boulder","/rides/co/boulder/"],["FL","Miami","/rides/fl/miami/"],["OH","Columbus","/rides/oh/columbus/"],["OR","Portland","/rides/or/portland/"],["OH","Cincinnati","/rides/oh/cincinnati/"],["UT","Salt Lake City","/rides/ut/salt-lake-city/"],["MD","Baltimore","/rides/md/baltimore/"],["CT","Middletown","/rides/ct/middletown/"],["AZ","Sedona","/rides/az/sedona/"],["FL","Orlando","/rides/fl/orlando/"],["WA","Tacoma","/rides/wa/tacoma/"],["TX","Austin","/rides/tx/austin/"],["TX","Denton","/rides/tx/denton/"],["MI","Detroit","/rides/mi/detroit/"],["CO","Fort Collins","/rides/co/fort-collins/"],["TX","Houston","/rides/tx/houston/"],["NV","Las Vegas","/rides/nv/las-vegas/"],["AR","Little Rock","/rides/ar/little-rock/"],["KY","Louisville","/rides/ky/louisville/"],["LA","New Orleans","/rides/la/new-orleans/"],["PA","Pittsburgh","/rides/pa/pittsburgh/"],["NY","Buffalo","/rides/ny/buffalo/"],["CO","Colorado Springs","/rides/co/colorado-springs/"],["IA","Iowa City","/rides/ia/iowa-city/"],["MI","Kalamazoo","/rides/mi/kalamazoo/"],["NJ","Jersey City","/rides/nj/jersey-city/"],["VA","Norfolk","/rides/va/norfolk/"],["NE","Omaha","/rides/ne/omaha/"],["NH","Portsmouth","/rides/nh/portsmouth/"],["NV","Reno","/rides/nv/reno/"],["VA","Roanoke","/rides/va/roanoke/"],["FL","St. Petersburg","/rides/fl/st-petersburg/"],["CA","Ventura","/rides/ca/ventura/"],["SC","Charleston","/rides/sc/charleston/"],["CA","Carlsbad","/rides/ca/carlsbad/"],["MO","St. Louis","/rides/mo/st-louis/"],["TN","Memphis","/rides/tn/memphis/"],["VT","Stowe","/rides/vt/stowe/"],["FL","Fort Lauderdale","/rides/fl/fort-lauderdale/"]]}</script>
 <script src="/rides/rides.js" defer></script>
 </body>
