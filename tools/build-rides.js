@@ -12,7 +12,8 @@
           cfc-site/rides/<slug>/ride.ics       (calendar file with the recurrence rule)
           cfc-site/rides/sitemap.xml           (rides-only sitemap, lastmod from verified_on)
 
-  Plain static HTML that links /styles.css like every other page. Re-run after
+  Plain static HTML. Loads /events/events.css (the Creosote house shared with
+  /events/ and /towns/) plus /rides/rides.css for the rides-only bits. Re-run after
   editing rides.json. Generated folders are wiped first so nothing drifts.
 */
 "use strict";
@@ -303,6 +304,7 @@ function head({ title, description, canonical, jsonld, ogType = "website", title
   <title>${esc(title)}${titleHasBrand ? " | Cycle for Change" : ""}</title>
   <meta name="description" content="${attr(description)}">
   <link rel="canonical" href="${attr(canonical)}">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta property="og:type" content="${ogType}">
   <meta property="og:site_name" content="Cycle for Change">
   <meta property="og:title" content="${attr(title)}">
@@ -316,37 +318,37 @@ function head({ title, description, canonical, jsonld, ogType = "website", title
   <meta name="twitter:description" content="${attr(description)}">
   <meta name="twitter:image" content="${OG_IMAGE}">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Space+Grotesk:wght@400;500&family=Space+Mono&family=Anton&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Space+Grotesk:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/events/events.css">
+  <link rel="stylesheet" href="/rides/rides.css">
   <script type="application/ld+json">
 ${JSON.stringify(jsonld, null, 2)}
   </script>
 </head>
-<body id="top">
-
-<div class="util">
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
   <div class="wrap">
-    <span><b><span data-cur>—</span> / 10,000</b> miles logged · all on the bike · 2027</span>
-    <span>every mile for queer communities</span>
-  </div>
-</div>
-
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="/" aria-label="Cycle for Change home">
-      <svg width="32" height="32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M98.45 71.03 A40.00 40.00 0 0 1 50.32 98.81" stroke="#372C3C" stroke-width="12" stroke-linecap="round"/><path d="M31.23 87.79 A40.00 40.00 0 0 1 31.23 32.21" stroke="#E9E224" stroke-width="12" stroke-linecap="round"/><path d="M50.32 21.19 A40.00 40.00 0 0 1 98.45 48.97" stroke="#A99CB0" stroke-width="12" stroke-linecap="round"/><circle cx="60.00" cy="60.00" r="6.00" fill="#372C3C"/></svg>
-      <span class="word">Cycle for Change</span>
+    <a class="mark" href="/" aria-label="Cycle for Change home">
+      <svg class="mark-glyph" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+      <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="#2A2E28" stroke-width="12" stroke-linecap="round"/>
+      <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
+      <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
+      <circle cx="60" cy="60" r="6" fill="#2A2E28"/>
+    </svg>
+      <span class="wordmark">Cycle <span class="for">For</span> Change</span>
     </a>
-    <nav class="links" aria-label="Primary">
-      <a href="/rides/">Group rides</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/rides/">Rides</a>
       <a href="/events/">Events</a>
+      <a href="/towns/">Towns</a>
+      <a href="/" class="btn btn-solid">The 10000</a>
     </nav>
-    <div class="nav-right">
-      <a href="/#board" class="btn btn-dark">Pledge a mile →</a>
-    </div>
   </div>
+  <p class="tally-line wrap"><span class="tally-num" data-cur>—</span>&nbsp;miles since June 1 &middot; 10000 in 2027 &middot; all on the bike</p>
 </header>
 `;
 }
@@ -356,30 +358,33 @@ function breadcrumbLd(items) {
   return { "@type": "BreadcrumbList", itemListElement: items.map(([name, url], i) => ({ "@type": "ListItem", position: i + 1, name, ...(url ? { item: url } : {}) })) };
 }
 function crumbsHtml(items) {
-  return `<nav class="gr-crumbs" aria-label="Breadcrumb">${items.map(([n, u], i) => u && i < items.length - 1 ? `<a href="${attr(u.replace(SITE, ""))}">${esc(n)}</a>` : `<span aria-current="page">${esc(n)}</span>`).join('<span class="sep" aria-hidden="true">›</span>')}</nav>`;
+  const inner = items.slice(1).map(([n, u], i, arr) => i < arr.length - 1 && u ? `<li><a href="${attr(u.replace(SITE, ""))}">${esc(n)}</a></li>` : `<li><span aria-current="page">${esc(n)}</span></li>`).join("");
+  return `<nav class="crumbs" aria-label="Breadcrumb"><ol>${inner}</ol></nav>`;
 }
 
 const CTA = `
-  <section class="fn-cta" aria-label="Follow the miles and give">
-    <p class="fn-cta-num"><span data-cur>—</span><span class="of"> / 10,000 mi</span></p>
-    <p>Every mile is logged live as I ride it. <a href="/#tally" style="color:var(--yellow);border-bottom:1px solid var(--yellow);">Follow the number →</a></p>
-    <hr>
-    <p class="give">Pledge a mile — it goes direct to queer-community orgs at year-end, by vote.</p>
-    <div class="fn-cta-row">
-      <a href="/#board" class="btn btn-y">Pledge a mile →</a>
-      <a href="/#vote" class="btn btn-dark" style="border:1px solid rgba(255,255,255,.2);">See the orgs →</a>
-    </div>
+  <section class="pledge" aria-label="The pledge">
+    <p class="pledge-num">10000</p>
+    <p class="pledge-line">I do the miles. You decide who they&rsquo;re for.</p>
+    <p>This directory is part of Cycle for Change. In 2027 I ride 10,000 miles, all on the bike, every one of them for queer communities. You pick where the money goes. It starts January 1.</p>
+    <p class="pledge-links"><a class="btn btn-solid" href="/">See the project</a> <a class="btn" href="${IG}" rel="noopener">Follow on Instagram</a></p>
   </section>
 `;
+const CRISIS = `
+      <aside class="crisis">
+        <strong>If you're struggling:</strong> the <strong>988 Suicide &amp; Crisis Lifeline</strong>
+        is free and 24/7 — call or text <strong>988</strong>. For LGBTQ youth, the
+        <strong>Trevor Project</strong> is at <strong>1-866-488-7386</strong> (or text START to 678-678).
+      </aside>`;
 function foot(extraScript = "") {
   return `
-<footer>
+<footer class="site-foot">
   <div class="wrap">
-    <div class="foot-base"><span>Cycle for Change™</span><span>every mile for queer communities</span></div>
+    <p><span>Cycle for Change&trade;</span><span>every mile for queer communities</span></p>
+    <p class="foot-links"><a href="/rides/">Rides</a> <a href="/events/">Events</a> <a href="/towns/">Towns</a> <a href="/">Home</a></p>
   </div>
 </footer>
-
-<script src="/field-notes/field-notes.js" defer></script>${extraScript}
+<script src="/rides/tally.js" defer></script>${extraScript}
 </body>
 </html>
 `;
@@ -421,7 +426,7 @@ function searchUi(rides, { cityIndex, placeholder }) {
         <label class="visually-hidden" for="gr-q">Search by city, state or ride name</label>
         <input id="gr-q" type="search" placeholder="${attr(placeholder)}" autocomplete="off" list="gr-cities">
         <datalist id="gr-cities">${cityIndex.map(([k]) => `<option value="${attr(k)}">`).join("")}</datalist>
-        <button type="button" class="btn btn-dark" id="gr-geo">Near me</button>
+        <button type="button" class="btn btn-solid" id="gr-geo">Near me</button>
       </form>
       <div class="gr-filters">
         <div class="gr-filter-row"><span class="gr-filter-label">Bike</span>
@@ -475,23 +480,21 @@ ${byState[s].map((r) => card(r)).join("\n")}
       </section>`).join("\n");
 
   return head({ title: "Find a group ride near you", description, canonical: `${SITE}/rides/`, jsonld }) + `
-<main class="fn-pillar gr-dir">
-  <header class="fn-pillar-head">
-    <div class="wrap">
+<main id="main" class="gr-dir">
+  <header class="gr-head wrap">
       ${crumbsHtml([["Cycle for Change", `${SITE}/`], ["Group rides", null]])}
+      <p class="eyebrow">${rides.length} rides &middot; ${states.length} states &middot; checked ${esc(lastChecked)}</p>
       <h1>Find a group ride near you</h1>
-      <p class="fn-pillar-intro">
+      <p class="lede">
         ${rides.length} recurring group rides in ${states.length} states. ${nNoDrop} are no-drop, so nobody gets left behind.
         ${nInclusive} are run by and for queer, women/trans/femme or BIPOC riders. Each ride has its own page:
         when it rolls, where it starts, how far, how fast, what to bring. Type a city or tap Near me.
       </p>
-      <div class="fn-line" aria-hidden="true"><i data-line></i></div>
-    </div>
   </header>
 ${searchUi(rides, { cityIndex: cityIndexFor(rides), placeholder: "City, state, or ride name — e.g. Phoenix, AZ" })}
   <section class="gr-results-wrap">
     <div class="wrap">
-      <h2 class="fn-spokes-head">Group rides near you, by state</h2>
+      <h2>Group rides near you, by state</h2>
       <nav class="gr-states" aria-label="Jump to a state">
           ${stateLinks}
       </nav>
@@ -506,8 +509,7 @@ ${searchUi(rides, { cityIndex: cityIndexFor(rides), placeholder: "City, state, o
     </div>
   </section>
 
-  <section class="gr-why">
-    <div class="wrap">
+  <section class="gr-why wrap">
       <h2>Why a group ride directory on a mental-health site</h2>
       <p>
         A group ride is the cheapest, most reliable way I know to get out of my own head and into a room
@@ -520,23 +522,12 @@ ${searchUi(rides, { cityIndex: cityIndexFor(rides), placeholder: "City, state, o
         Rides we couldn't fully confirm are marked "Unconfirmed". Know one we're missing, or run one that's listed? <a href="${IG}" rel="noopener">Tell us on Instagram</a>.
         Last checked: ${esc(lastChecked)}.
       </p>
-      <p>
-        I'm riding 10,000 miles in 2027 for queer mental health. <a href="/#board">Pledge a mile</a> if
-        you want to back it. Or just go find your ride.
-      </p>
-      <aside class="fn-crisis">
-        <strong>If you're struggling:</strong> the <strong>988 Suicide &amp; Crisis Lifeline</strong>
-        is free and 24/7 — call or text <strong>988</strong>. For LGBTQ youth, the
-        <strong>Trevor Project</strong> is at <strong>1-866-488-7386</strong> (or text START to 678-678).
-      </aside>
-    </div>
+${CRISIS}
   </section>
+  <div class="wrap">
 ${CTA}
-
-  <p class="fn-note" style="max-width:38rem;margin:24px auto 0;color:var(--mute);font-size:.9rem;line-height:1.6;">
-    Always confirm with the host before you show up; schedules change with the seasons. This site isn't
-    affiliated with any ride listed.
-  </p>
+  <p class="gr-note">Always confirm with the host before you show up; schedules change with the seasons. This site isn't affiliated with any ride listed.</p>
+  </div>
 </main>
 ` + foot(indexScript(rides, hubs));
 }
@@ -582,14 +573,12 @@ function hubPage({ title, h1, crumbs, canonical, description, intro, rides, sect
     { "@type": "CollectionPage", "@id": canonical, name: h1, description, url: canonical, dateModified: lastChecked, author: AUTHOR, publisher: PUBLISHER, breadcrumb: breadcrumbLd(crumbs) },
   ] };
   return head({ title, description, canonical, jsonld }) + `
-<main class="fn-pillar gr-dir">
-  <header class="fn-pillar-head">
-    <div class="wrap">
+<main id="main" class="gr-dir">
+  <header class="gr-head wrap">
       ${crumbsHtml(crumbs)}
+      <p class="eyebrow">${rides.length} ride${rides.length === 1 ? "" : "s"} &middot; checked ${esc(lastChecked)}</p>
       <h1>${esc(h1)}</h1>
-      <p class="fn-pillar-intro">${intro.join(" ")}</p>
-      <div class="fn-line" aria-hidden="true"><i data-line></i></div>
-    </div>
+      <p class="lede">${intro.join(" ")}</p>
   </header>
 ${searchUi(rides, { cityIndex: cityIndexFor(rides), placeholder: "City or ride name" })}
   <section class="gr-results-wrap">
@@ -604,10 +593,10 @@ ${extra.top || ""}
       </div>
 ${extra.bottom || ""}
       <p class="gr-hub-foot">Rides here were last checked ${esc(lastChecked)}. Wrong, gone, or missing one? <a href="${IG}" rel="noopener">Tell us on Instagram</a>.</p>
-      <p class="fn-back"><a href="/rides/">← All states</a></p>
+      <p class="back"><a href="/rides/">← All states</a></p>
+${CTA}
     </div>
   </section>
-${CTA}
 </main>
 ` + foot(indexScript(rides, hubs));
 }
@@ -638,7 +627,7 @@ ${byCity[c].map((r) => card(r)).join("\n")}
     intro: hubIntro(rides, name),
     rides, sections, hubs,
     extra: {
-      top: `      <h2 class="fn-spokes-head">Group rides in ${esc(name)}, by city</h2>
+      top: `      <h2>Group rides in ${esc(name)}, by city</h2>
       <nav class="gr-states" aria-label="Jump to a city">
           ${cityLinks}
       </nav>`,
@@ -677,7 +666,7 @@ ${others.map(({ x, d }) => `          <li><a href="${x.path}">${esc(x.city)}, ${
     description: trunc(`${rides.length} recurring bicycle group rides within ${METRO_RADIUS} miles of ${name}: ${[...new Set(rides.map((r) => r.name))].slice(0, 4).join(", ")}. Day, time, start point, pace and what to bring.`, 158),
     intro: hubIntro(rides, name),
     rides, sections, hubs,
-    extra: { top: `      <h2 class="fn-spokes-head">Group rides within ${METRO_RADIUS} miles of ${esc(name)}, closest first</h2>`, bottom },
+    extra: { top: `      <h2>Group rides within ${METRO_RADIUS} miles of ${esc(name)}, closest first</h2>`, bottom },
   });
 }
 
@@ -766,7 +755,7 @@ function ridePage(r, all, hubFor, hubs) {
     L.strava && ["Join the Strava club", L.strava],
     L.meetup && ["Meetup group", L.meetup],
     ...(L.other || []).map((u) => ["More", u]),
-  ].filter(Boolean).map(([t, u]) => `<a class="btn ${/strava/i.test(t) ? "btn-y" : "btn-dark"}" href="${attr(u)}" rel="noopener nofollow">${esc(t)} ↗</a>`).join("\n        ");
+  ].filter(Boolean).map(([t, u]) => `<a class="btn ${/strava/i.test(t) ? "btn-solid" : ""}" href="${attr(u)}" rel="noopener nofollow">${esc(t)} ↗</a>`).join("\n        ");
 
   const tags = r.inclusive_focus.map((t) => `<span class="gr-tag">${esc(TAG_LABEL[t] || t)}</span>`).join("")
     + (r.confidence === "low" ? `<span class="gr-tag gr-tag-warn" title="We found this ride but couldn't confirm every detail">Unconfirmed — check with the host</span>` : "")
@@ -796,12 +785,12 @@ function ridePage(r, all, hubFor, hubs) {
   const jsonld = { "@context": "https://schema.org", "@graph": graph };
 
   const calBtns = next && rule ? `
-        <a class="btn btn-dark" href="/rides/${r.slug}/ride.ics" download="${attr(r.slug)}.ics">Add to calendar</a>
+        <a class="btn" href="/rides/${r.slug}/ride.ics" download="${attr(r.slug)}.ics">Add to calendar</a>
         <a class="gr-minor" href="${attr(gcalUrl(r, next, rule))}" rel="noopener">Google Calendar</a>` : "";
 
   return head({ title, description, canonical: url, jsonld, ogType: "article", titleHasBrand: false }) + `
-<main class="fn-post gr-ride">
-  <article class="fn-article" data-ride
+<main id="main" class="wrap gr-ride">
+  <article class="ride" data-ride
     data-tz="${attr(r.tz || "")}" data-time="${attr(r.start_hhmm || "")}" data-days="${r.days.join(" ")}"
     data-freq="${attr(r.frequency || "")}" data-season="${r.season_months ? `${r.season_months.start}-${r.season_months.end}` : ""}"
     data-monthly="${attr(r.monthly_rule ? JSON.stringify(r.monthly_rule) : "")}">
@@ -811,7 +800,7 @@ function ridePage(r, all, hubFor, hubs) {
     <p class="gr-place">${esc(placeText(r))}${r.neighborhood ? ` · ${esc(r.neighborhood)}` : ""} · ${esc(disc)}</p>
     ${tags ? `<p class="gr-tags">${tags}</p>` : ""}
 
-    <p class="fn-lede">${esc(lede)}</p>
+    <p class="lede">${esc(lede)}</p>
 
     <div class="gr-next" id="gr-next" ${next ? "" : "hidden"}>
       <span class="gr-next-label">Next ride</span>
@@ -820,8 +809,8 @@ function ridePage(r, all, hubFor, hubs) {
     </div>
 
     <div class="gr-actions">
-      ${primary ? `<a class="btn btn-y gr-primary" href="${attr(primary[1])}" rel="noopener nofollow">${esc(primary[0])} ↗</a>` : ""}${calBtns}
-      <button type="button" class="btn btn-dark" id="gr-share" data-title="${attr(r.name + " — " + placeText(r))}">Share</button>
+      ${primary ? `<a class="btn btn-solid btn-lg gr-primary" href="${attr(primary[1])}" rel="noopener nofollow">${esc(primary[0])} ↗</a>` : ""}${calBtns}
+      <button type="button" class="btn" id="gr-share" data-title="${attr(r.name + " — " + placeText(r))}">Share</button>
       <span class="gr-share-alt"><a href="sms:?&body=${encodeURIComponent(r.name + " — " + url)}">Text it</a> · <a href="https://wa.me/?text=${encodeURIComponent(r.name + " — " + url)}" rel="noopener">WhatsApp</a> · <a href="mailto:?subject=${encodeURIComponent("Group ride: " + r.name)}&body=${encodeURIComponent(url)}">Email</a></span>
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
     </div>
@@ -830,35 +819,34 @@ function ridePage(r, all, hubFor, hubs) {
         ${factsHtml}
     </dl>
 ${firstTimeBlock(r, hostLabel)}
-    <div class="fn-body">
+    <div class="gr-about">
       <h2>About the ${esc(r.name)} group ride</h2>
       ${(r.description || "").split(/\n+/).filter(Boolean).map((p) => `<p>${esc(p)}</p>`).join("\n      ") || "<p>Details are on the host's page below.</p>"}
     </div>
 
     <div class="gr-links">
       <h2>Where to find them</h2>
-      <div class="fn-cta-row">
+      <div class="gr-linkrow">
         ${linkBtns}
       </div>
     </div>
 
-    <p class="fn-note gr-verify">
+    <p class="verified gr-verify">
       Last checked ${esc(r.verified_on)} against ${r.sources.length ? r.sources.map((s, i) => `<a href="${attr(s)}" rel="noopener nofollow">source ${i + 1}</a>`).join(", ") : "the links above"}.
       Schedules change. Confirm with the host before you go. Wrong, gone, or you run this ride?
       <a href="${IG}" rel="noopener">Tell us on Instagram</a>.
     </p>
   </article>
 
-  <nav class="fn-related" aria-label="Nearby group rides">
+  <nav class="related gr-related" aria-label="Nearby group rides">
     <h2>Nearby rides</h2>
     ${nearby.map(({ o, d }) => `<a href="/rides/${o.slug}/">${esc(o.name)} <small>· ${esc(placeText(o))} · ${esc(DISC_LABEL[o.discipline[0]] || o.discipline[0])} · ${d < 0.5 ? "same start" : Math.round(d) + " mi"}</small></a>`).join("\n    ")}
     ${hub ? `<a href="${hub.path}">All rides near ${esc(hub.city)} →</a>` : ""}
     <a href="/rides/${r.state.toLowerCase()}/">All rides in ${esc(stateName(r.state))} →</a>
   </nav>
 
+  <p class="back"><a href="/rides/">← Find another group ride</a></p>
 ${CTA}
-
-  <p class="fn-back"><a href="/rides/">← Find another group ride</a></p>
 </main>
 ` + foot(`
 <script src="/rides/ride.js" defer></script>`);
