@@ -87,7 +87,6 @@
     <nav class="links" aria-label="Primary">
       <a href="/rides/">Group rides</a>
       <a href="/events/">Events</a>
-      <a href="/rides/#submit">Add a ride</a>
     </nav>
     <div class="nav-right">
       <a href="/#board" class="btn btn-dark">Pledge a mile →</a>
@@ -5322,7 +5321,7 @@
       <div class="gr-empty" id="gr-empty" hidden>
         <p>No rides match.</p>
         <p class="gr-empty-actions"><button type="button" class="gr-chip" id="gr-widen">Show the closest rides anyway</button> <a class="gr-chip" id="gr-empty-state" href="/rides/" hidden>See the whole state</a> <button type="button" class="gr-chip" data-clear>Clear filters</button></p>
-        <p>Know a ride we're missing? <a href="#submit">Add it below</a>.</p>
+        <p>Know a ride we're missing? <a href="https://www.instagram.com/cycl_eforchange/" rel="noopener">Tell us on Instagram</a>.</p>
       </div>
     </div>
   </section>
@@ -5338,7 +5337,7 @@
       <p>
         <strong>How this list is built.</strong> Every ride is real and recurring, checked against its own website,
         Instagram, Facebook or Strava page. Each page shows the date it was last checked and the sources.
-        Rides we couldn't fully confirm are marked "Unconfirmed". Organizers can claim their ride from its page.
+        Rides we couldn't fully confirm are marked "Unconfirmed". Know one we're missing, or run one that's listed? <a href="https://www.instagram.com/cycl_eforchange/" rel="noopener">Tell us on Instagram</a>.
         Last checked: 2026-09-15.
       </p>
       <p>
@@ -5350,26 +5349,6 @@
         is free and 24/7 — call or text <strong>988</strong>. For LGBTQ youth, the
         <strong>Trevor Project</strong> is at <strong>1-866-488-7386</strong> (or text START to 678-678).
       </aside>
-    </div>
-  </section>
-
-  <section class="gr-form-wrap gr-submit" id="submit" aria-labelledby="gr-submit-h">
-    <div class="wrap">
-      <h2 id="gr-submit-h">Know a ride that isn't here?</h2>
-      <p class="gr-form-intro">Send it. We check every ride against its own site or social page before it goes up, usually within a week.</p>
-      <form name="ride-submit" method="POST" action="/rides/thanks/" data-netlify="true" netlify-honeypot="bot-field" class="gr-form gr-form-grid">
-        <input type="hidden" name="form-name" value="ride-submit">
-        <input type="hidden" name="subject" value="[rides] new ride submission">
-        <p class="gr-hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-        <label class="gr-field">Ride name <input name="name" required></label>
-        <label class="gr-field">City, state <input name="place" required placeholder="Phoenix, AZ"></label>
-        <label class="gr-field">When <input name="when" required placeholder="Every Tuesday, 6:30 pm"></label>
-        <label class="gr-field">Website, Instagram, Facebook or Strava link <input name="link" type="url" required placeholder="https://"></label>
-        <label class="gr-field gr-span">Anything else <small>(start point, distance, pace, who it's for)</small><textarea name="message" rows="3"></textarea></label>
-        <label class="gr-field">Your email <small>(optional)</small><input type="email" name="email" autocomplete="email"></label>
-        <label class="gr-field gr-check"><input type="checkbox" name="organizer" value="yes"> I organize this ride</label>
-        <div class="gr-span"><button type="submit" class="btn btn-dark">Send the ride</button></div>
-      </form>
     </div>
   </section>
 

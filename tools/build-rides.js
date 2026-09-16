@@ -10,7 +10,6 @@
           cfc-site/rides/<st>/<city>/index.html (metro hubs where ≥3 rides sit within 25 mi)
           cfc-site/rides/<slug>/index.html     (one page per ride)
           cfc-site/rides/<slug>/ride.ics       (calendar file with the recurrence rule)
-          cfc-site/rides/thanks/index.html     (form landing page)
           cfc-site/rides/sitemap.xml           (rides-only sitemap, lastmod from verified_on)
 
   Plain static HTML that links /styles.css like every other page. Re-run after
@@ -28,8 +27,7 @@ const SITE = "https://cycleforchange.org";
 const TODAY = new Date().toISOString().slice(0, 10);
 const NOW = new Date();
 const OG_IMAGE = `${SITE}/og-cfc.png`;
-const FORM_EDIT = "ride-edit";
-const FORM_SUBMIT = "ride-submit";
+const IG = "https://www.instagram.com/cycl_eforchange/";
 const METRO_RADIUS = 25;   // miles — a city hub covers rides within this radius
 const METRO_MIN = 3;       // rides needed before a city gets its own hub
 const HUB_GAP = 15;        // miles — two hubs can't sit closer than this (Miami + Fort Lauderdale both survive; suburbs don't)
@@ -344,7 +342,6 @@ ${JSON.stringify(jsonld, null, 2)}
     <nav class="links" aria-label="Primary">
       <a href="/rides/">Group rides</a>
       <a href="/events/">Events</a>
-      <a href="/rides/#submit">Add a ride</a>
     </nav>
     <div class="nav-right">
       <a href="/#board" class="btn btn-dark">Pledge a mile →</a>
@@ -386,55 +383,6 @@ function foot(extraScript = "") {
 </body>
 </html>
 `;
-}
-
-// ---------- forms (Netlify Forms: static HTML, honeypot, hidden slug) ----------
-function editForm(r) {
-  return `
-    <section class="gr-form-wrap" id="edit" aria-labelledby="gr-form-h">
-      <h2 id="gr-form-h">Is this right?</h2>
-      <p class="gr-form-intro">Schedules move. If something here is wrong, gone, or you run this ride, tell us and we'll fix the page. No account needed.</p>
-      <form name="${FORM_EDIT}" method="POST" action="/rides/thanks/" data-netlify="true" netlify-honeypot="bot-field" class="gr-form">
-        <input type="hidden" name="form-name" value="${FORM_EDIT}">
-        <input type="hidden" name="slug" value="${attr(r.slug)}">
-        <input type="hidden" name="ride" value="${attr(r.name + " — " + placeText(r))}">
-        <input type="hidden" name="subject" value="${attr(`[rides] ${r.slug}`)}">
-        <p class="gr-hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-        <fieldset class="gr-form-kind">
-          <legend class="visually-hidden">What is this about?</legend>
-          <label><input type="radio" name="kind" value="edit" checked> Suggest an edit</label>
-          <label><input type="radio" name="kind" value="claim"> I organize this ride</label>
-          <label><input type="radio" name="kind" value="inactive"> This ride has stopped</label>
-        </fieldset>
-        <label class="gr-field">What should the page say?
-          <textarea name="message" rows="4" required placeholder="e.g. We moved to 6:30 pm in October. Start is now the coffee shop on Main."></textarea></label>
-        <label class="gr-field">Your email <small>(optional — so we can confirm a claim)</small>
-          <input type="email" name="email" autocomplete="email"></label>
-        <button type="submit" class="btn btn-dark">Send it</button>
-      </form>
-    </section>`;
-}
-function submitForm() {
-  return `
-  <section class="gr-form-wrap gr-submit" id="submit" aria-labelledby="gr-submit-h">
-    <div class="wrap">
-      <h2 id="gr-submit-h">Know a ride that isn't here?</h2>
-      <p class="gr-form-intro">Send it. We check every ride against its own site or social page before it goes up, usually within a week.</p>
-      <form name="${FORM_SUBMIT}" method="POST" action="/rides/thanks/" data-netlify="true" netlify-honeypot="bot-field" class="gr-form gr-form-grid">
-        <input type="hidden" name="form-name" value="${FORM_SUBMIT}">
-        <input type="hidden" name="subject" value="[rides] new ride submission">
-        <p class="gr-hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-        <label class="gr-field">Ride name <input name="name" required></label>
-        <label class="gr-field">City, state <input name="place" required placeholder="Phoenix, AZ"></label>
-        <label class="gr-field">When <input name="when" required placeholder="Every Tuesday, 6:30 pm"></label>
-        <label class="gr-field">Website, Instagram, Facebook or Strava link <input name="link" type="url" required placeholder="https://"></label>
-        <label class="gr-field gr-span">Anything else <small>(start point, distance, pace, who it's for)</small><textarea name="message" rows="3"></textarea></label>
-        <label class="gr-field">Your email <small>(optional)</small><input type="email" name="email" autocomplete="email"></label>
-        <label class="gr-field gr-check"><input type="checkbox" name="organizer" value="yes"> I organize this ride</label>
-        <div class="gr-span"><button type="submit" class="btn btn-dark">Send the ride</button></div>
-      </form>
-    </div>
-  </section>`;
 }
 
 // ---------- ride card (directory + hubs) ----------
@@ -553,7 +501,7 @@ ${searchUi(rides, { cityIndex: cityIndexFor(rides), placeholder: "City, state, o
       <div class="gr-empty" id="gr-empty" hidden>
         <p>No rides match.</p>
         <p class="gr-empty-actions"><button type="button" class="gr-chip" id="gr-widen">Show the closest rides anyway</button> <a class="gr-chip" id="gr-empty-state" href="/rides/" hidden>See the whole state</a> <button type="button" class="gr-chip" data-clear>Clear filters</button></p>
-        <p>Know a ride we're missing? <a href="#submit">Add it below</a>.</p>
+        <p>Know a ride we're missing? <a href="${IG}" rel="noopener">Tell us on Instagram</a>.</p>
       </div>
     </div>
   </section>
@@ -569,7 +517,7 @@ ${searchUi(rides, { cityIndex: cityIndexFor(rides), placeholder: "City, state, o
       <p>
         <strong>How this list is built.</strong> Every ride is real and recurring, checked against its own website,
         Instagram, Facebook or Strava page. Each page shows the date it was last checked and the sources.
-        Rides we couldn't fully confirm are marked "Unconfirmed". Organizers can claim their ride from its page.
+        Rides we couldn't fully confirm are marked "Unconfirmed". Know one we're missing, or run one that's listed? <a href="${IG}" rel="noopener">Tell us on Instagram</a>.
         Last checked: ${esc(lastChecked)}.
       </p>
       <p>
@@ -583,7 +531,6 @@ ${searchUi(rides, { cityIndex: cityIndexFor(rides), placeholder: "City, state, o
       </aside>
     </div>
   </section>
-${submitForm()}
 ${CTA}
 
   <p class="fn-note" style="max-width:38rem;margin:24px auto 0;color:var(--mute);font-size:.9rem;line-height:1.6;">
@@ -656,7 +603,7 @@ ${extra.top || ""}
         <p class="gr-empty-actions"><button type="button" class="gr-chip" id="gr-widen">Show the closest rides anyway</button> <a class="gr-chip" href="/rides/">Search the whole country</a> <button type="button" class="gr-chip" data-clear>Clear filters</button></p>
       </div>
 ${extra.bottom || ""}
-      <p class="gr-hub-foot">Rides here were last checked ${esc(lastChecked)}. Wrong or gone? Use "Is this right?" on the ride's page. Know one we're missing? <a href="/rides/#submit">Add it</a>.</p>
+      <p class="gr-hub-foot">Rides here were last checked ${esc(lastChecked)}. Wrong, gone, or missing one? <a href="${IG}" rel="noopener">Tell us on Instagram</a>.</p>
       <p class="fn-back"><a href="/rides/">← All states</a></p>
     </div>
   </section>
@@ -897,9 +844,9 @@ ${firstTimeBlock(r, hostLabel)}
 
     <p class="fn-note gr-verify">
       Last checked ${esc(r.verified_on)} against ${r.sources.length ? r.sources.map((s, i) => `<a href="${attr(s)}" rel="noopener nofollow">source ${i + 1}</a>`).join(", ") : "the links above"}.
-      Schedules change. Confirm with the host before you go.
+      Schedules change. Confirm with the host before you go. Wrong, gone, or you run this ride?
+      <a href="${IG}" rel="noopener">Tell us on Instagram</a>.
     </p>
-${editForm(r)}
   </article>
 
   <nav class="fn-related" aria-label="Nearby group rides">
@@ -915,21 +862,6 @@ ${CTA}
 </main>
 ` + foot(`
 <script src="/rides/ride.js" defer></script>`);
-}
-
-// ---------- thanks page ----------
-function thanksPage() {
-  const jsonld = { "@context": "https://schema.org", "@type": "WebPage", name: "Thanks", url: `${SITE}/rides/thanks/`, publisher: PUBLISHER };
-  return head({ title: "Thanks — we got it", description: "Your note about a group ride was received. We check every change against the ride's own page before it goes up.", canonical: `${SITE}/rides/thanks/`, jsonld }) + `
-<main class="fn-post gr-ride">
-  <article class="fn-article">
-    <h1>Got it. Thank you.</h1>
-    <p class="fn-lede">We read every one of these. Edits and new rides usually show up within a week, after we check them against the ride's own page.</p>
-    <p>If you said you organize the ride and left an email, we'll reply from there to confirm before marking the page "Verified by the organizer".</p>
-    <p class="fn-back"><a href="/rides/">← Back to the directory</a></p>
-  </article>
-</main>
-` + foot();
 }
 
 // ---------- sitemap (lastmod = real verified dates, never "today") ----------
@@ -955,7 +887,6 @@ function main() {
 
   for (const ent of fs.readdirSync(OUT, { withFileTypes: true })) if (ent.isDirectory()) rmrf(path.join(OUT, ent.name));
   write(path.join(OUT, "index.html"), directory(rides, hubs));
-  write(path.join(OUT, "thanks", "index.html"), thanksPage());
   for (const st of states) write(path.join(OUT, st.toLowerCase(), "index.html"), statePage(st, rides.filter((r) => r.state === st), hubs, events));
   for (const h of hubs) write(path.join(OUT, h.state.toLowerCase(), h.slug, "index.html"), metroPage(h, hubs, events));
   let nIcs = 0, nEvent = 0;

@@ -1794,28 +1794,6 @@ footer {
 .gr-first dd { margin: 0; font-size: 0.96rem; line-height: 1.55; }
 .gr-first dd a { border-bottom: 1px solid var(--yellow-deep); }
 
-.gr-form-wrap { margin: 40px 0 0; padding: 24px; background: var(--cream-2); border-radius: 16px; }
-.gr-form-wrap h2 { font-size: 1.3rem; margin: 0 0 6px; }
-.gr-form-intro { color: #46394e; font-size: 0.95rem; margin: 0 0 16px; }
-.gr-form { display: grid; gap: 14px; }
-.gr-form-grid { grid-template-columns: 1fr 1fr; }
-.gr-span { grid-column: 1 / -1; }
-.gr-hp { position: absolute; left: -9999px; height: 0; overflow: hidden; }
-.gr-form-kind { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 0.92rem; }
-.gr-form-kind label { display: inline-flex; gap: 6px; align-items: center; }
-.gr-field { display: grid; gap: 6px; font-size: 0.85rem; font-family: var(--m); letter-spacing: 0.04em; color: var(--mute); }
-.gr-field small { font-family: var(--g); letter-spacing: 0; text-transform: none; }
-.gr-field input, .gr-field textarea {
-  font: 400 1rem/1.5 var(--g); color: var(--ink); background: var(--card);
-  border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; width: 100%;
-}
-.gr-field input:focus, .gr-field textarea:focus { border-color: var(--ink); outline: none; }
-.gr-check { display: flex; align-items: center; gap: 8px; font-family: var(--g); letter-spacing: 0; color: var(--ink); font-size: 0.92rem; }
-.gr-check input { width: auto; }
-.gr-submit { padding: 48px 0 0; }
-.gr-submit .wrap { max-width: 42rem; }
-.gr-submit .gr-form-wrap { margin: 0; }
-
 .gr-empty { padding: 20px 0; color: var(--mute); }
 .gr-empty p { margin: 0 0 10px; }
 .gr-empty a { border-bottom: 1px solid var(--mute); }
@@ -1831,7 +1809,6 @@ footer {
 .fn-pillar-intro a { border-bottom: 1px solid var(--yellow-deep); }
 
 @media (max-width: 640px) {
-  .gr-form-grid { grid-template-columns: 1fr; }
   .gr-first dl > div { grid-template-columns: 1fr; gap: 2px; }
   .gr-next-when { font-size: 1.1rem; }
 }
