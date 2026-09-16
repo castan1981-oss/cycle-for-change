@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Coming-soon through December 2026. The other 20+ pages are still in the
-     repo but redirect home, so they are deliberately not listed here. Restore
-     the full sitemap when the site comes back. -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://cycleforchange.org/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-</urlset>
+<!-- Sitemap index. Each public section keeps its own sitemap:
+     - sitemap-pages.xml   hand-listed pages (the coming-soon homepage for now;
+                           restore the full list when the site comes back)
+     - sitemap-events.xml  /events/ and /towns/, written by scripts/build-events.js
+     - rides/sitemap.xml   /rides/, written by tools/build-rides.js
+     Paused sections (/field-notes, /guides, /resources, /journal) redirect home
+     and are deliberately not listed. -->
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://cycleforchange.org/sitemap-pages.xml</loc>
+    <lastmod>2026-09-16</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://cycleforchange.org/sitemap-events.xml</loc>
+    <lastmod>2026-09-15</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://cycleforchange.org/rides/sitemap.xml</loc>
+    <lastmod>2026-09-15</lastmod>
+  </sitemap>
+</sitemapindex>
