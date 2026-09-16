@@ -29,6 +29,8 @@ const DATA = path.join(ROOT, "data");
 const OUT = path.join(ROOT, "cfc-site");
 const SITE = "https://cycleforchange.org";
 const TODAY = new Date().toISOString().slice(0, 10);
+// No forms on these pages. Every call to action is a plain link.
+const INSTAGRAM = "https://www.instagram.com/cycl_eforchange/";
 
 // ——— guardrails from CLAUDE.md ———————————————————————————————————————
 const BANNED = [
@@ -188,7 +190,7 @@ ${ld.map(jsonld).join("\n")}
     <nav class="site-nav" aria-label="Primary">
       <a href="/events/">Events</a>
       <a href="/towns/">Towns</a>
-      <a href="/#board" class="btn btn-solid">Pledge a mile</a>
+      <a href="/" class="btn btn-solid">The 10000</a>
     </nav>
   </div>
   <p class="tally-line wrap"><span class="tally-num" data-cur>—</span>&nbsp;miles since June 1 &middot; 10000 in 2027 &middot; all on the bike</p>
@@ -202,8 +204,8 @@ function foot() {
   <section class="pledge" aria-label="The pledge">
     <p class="pledge-num">10000</p>
     <p class="pledge-line">I do the miles. You decide who they&rsquo;re for.</p>
-    <p>Every mile of 2027 is ridden for queer communities and logged live. Pledge a mile, then pick where it goes.</p>
-    <p><a class="btn btn-solid" href="/#board">Pledge a mile</a></p>
+    <p>This directory is part of Cycle for Change. In 2027 I ride 10,000 miles, all on the bike, every one of them for queer communities. You pick where the money goes. It starts January 1.</p>
+    <p class="pledge-links"><a class="btn btn-solid" href="/">See the project</a> <a class="btn" href="${INSTAGRAM}" rel="noopener">Follow on Instagram</a></p>
   </section>
 </main>
 <footer class="site-foot">
@@ -470,7 +472,7 @@ function resourcePage(t, r) {
     <nav class="res-links-row" aria-label="Other resources">
       ${Object.values(RESOURCE).filter((x) => x.seg !== r.seg).map((x) => `<a href="${t.url}${x.seg}/">${esc(x.h(t))}</a>`).join("")}
     </nav>
-    <p class="verified">Checked ${esc(fmtDate(t.verified || TODAY, { weekday: undefined }))}. No paid placements. If a place has closed or should be here, <a href="/#board">tell us</a>.</p>
+    <p class="verified">Checked ${esc(fmtDate(t.verified || TODAY, { weekday: undefined }))}. No paid placements. If a place has closed or should be here, <a href="${INSTAGRAM}" rel="noopener">message us on Instagram</a>.</p>
   </article>
   <p class="back"><a href="${t.url}">Back to ${esc(t.name)}</a></p>
 `;
@@ -504,7 +506,7 @@ function eventsIndex() {
 
     <section><h2>How this directory works</h2>
       <p>Each event page is checked against the organizer's site and lists its sources. Dates and prices change, so the sign-up link always goes to the organizer. Weather is a live forecast for the host town. Town pages list hotels, restaurants and bike shops we could confirm are open. Nothing here is paid placement.</p>
-      <p>Missing an event? <a href="/#board">Tell us</a> and we will add it.</p>
+      <p>Missing an event? <a href="${INSTAGRAM}" rel="noopener">Message us on Instagram</a> and we will add it.</p>
     </section>
   </article>
 `;
