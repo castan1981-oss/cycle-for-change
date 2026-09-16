@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sullivans-island-sc-coastal-cyclists-social-fun-sunday@cycleforchange
+ .org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260920T100000
+DTEND;TZID=America/New_York:20260920T120000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Social Fun Sunday — Sullivan's Island\, SC
+LOCATION:Harris Teeter\, Sullivan's Island\, Sullivan's Island\, SC 29482
+DESCRIPTION:Pace: 14–18 mph.\nNo-drop.\nSchedule: Every Sunday\, 10:00 
+ am.\nConfirm with the host before you go.\nhttps://cycleforchange.org/ri
+ des/sullivans-island-sc-coastal-cyclists-social-fun-sunday/
+URL:https://cycleforchange.org/rides/sullivans-island-sc-coastal-cyclists
+ -social-fun-sunday/
+END:VEVENT
+END:VCALENDAR

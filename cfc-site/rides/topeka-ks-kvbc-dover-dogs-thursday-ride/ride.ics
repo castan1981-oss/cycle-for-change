@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:topeka-ks-kvbc-dover-dogs-thursday-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260917T180000
+DTEND;TZID=America/Chicago:20260917T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20261031T235959Z
+SUMMARY:KVBC Dover Dogs — Topeka\, KS
+LOCATION:Western Hills Church\, 29th & Auburn Rd\, SW 29th St & SW Auburn
+  Rd\, Topeka\, KS 66614
+DESCRIPTION:Pace: mixed group that splits by speed and regroups in Dover.
+ \nNo-drop.\nSchedule: Every Thursday\, 6:00 pm\, spring through fall.\nC
+ onfirm with the host before you go.\nhttps://cycleforchange.org/rides/to
+ peka-ks-kvbc-dover-dogs-thursday-ride/
+URL:https://cycleforchange.org/rides/topeka-ks-kvbc-dover-dogs-thursday-r
+ ide/
+END:VEVENT
+END:VCALENDAR

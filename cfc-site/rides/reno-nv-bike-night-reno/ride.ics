@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:reno-nv-bike-night-reno@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Los_Angeles:20260916T201500
+DTEND;TZID=America/Los_Angeles:20260916T221500
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Bike Night Reno — Reno\, NV
+LOCATION:Reno City Plaza (Believe sign / Space Whale)\, 10 N Virginia St\
+ , Reno\, NV 89501
+DESCRIPTION:Pace: social.\nSchedule: Every Wednesday\, show up 7:45 pm\, 
+ roll about 8:15 pm.\nConfirm with the host before you go.\nhttps://cycle
+ forchange.org/rides/reno-nv-bike-night-reno/
+URL:https://cycleforchange.org/rides/reno-nv-bike-night-reno/
+END:VEVENT
+END:VCALENDAR

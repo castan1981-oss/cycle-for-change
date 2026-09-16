@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:louisville-ky-monnik-monday-recovery@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260921T181500
+DTEND;TZID=America/New_York:20260921T191500
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Monnik Monday Recovery Ride — Louisville\, KY
+LOCATION:Monnik Beer Company\, 1036 E Burnett Ave\, Louisville\, KY 40217
+DESCRIPTION:Pace: 10–15 mph\, actual recovery pace.\nSchedule: Every Mo
+ nday\, 6:15 pm sharp\, year-round.\nConfirm with the host before you go.
+ \nhttps://cycleforchange.org/rides/louisville-ky-monnik-monday-recovery/
+URL:https://cycleforchange.org/rides/louisville-ky-monnik-monday-recovery
+ /
+END:VEVENT
+END:VCALENDAR

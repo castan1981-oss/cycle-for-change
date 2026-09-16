@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:salt-lake-city-ut-999-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Denver:20260917T210000
+DTEND;TZID=America/Denver:20260917T230000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:999 Ride — Salt Lake City\, UT
+LOCATION:9th and 9th\, 900 S 900 E\, Salt Lake City\, UT 84105
+DESCRIPTION:Pace: casual.\nNo-drop.\nSchedule: Every Thursday\, 9:00 pm (
+ busiest in the warm months).\nConfirm with the host before you go.\nhttp
+ s://cycleforchange.org/rides/salt-lake-city-ut-999-ride/
+URL:https://cycleforchange.org/rides/salt-lake-city-ut-999-ride/
+END:VEVENT
+END:VCALENDAR

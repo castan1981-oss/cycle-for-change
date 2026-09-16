@@ -5,16 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>Group rides in California — Cycle for Change</title>
-  <meta name="description" content="40 recurring bicycle group rides in California — Bakersfield, Carlsbad, Chico, Davis, Encinitas, Fresno, Huntington Beach, Irvine and more. Day, time, start point, pace and links for each.">
+  <title>Group rides in California (40 rides, 24 cities) | Cycle for Change</title>
+  <meta name="description" content="40 recurring bicycle group rides in California — Bakersfield, Carlsbad, Chico, Davis, Encinitas, Fresno, Huntington Beach, Irvine and more. Day, time, start…">
   <link rel="canonical" href="https://cycleforchange.org/rides/ca/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Group rides in California — Cycle for Change">
-  <meta property="og:description" content="40 recurring bicycle group rides in California — Bakersfield, Carlsbad, Chico, Davis, Encinitas, Fresno, Huntington Beach, Irvine and more. Day, time, start point, pace and links for each.">
+  <meta property="og:site_name" content="Cycle for Change">
+  <meta property="og:title" content="Group rides in California (40 rides, 24 cities)">
+  <meta property="og:description" content="40 recurring bicycle group rides in California — Bakersfield, Carlsbad, Chico, Davis, Encinitas, Fresno, Huntington Beach, Irvine and more. Day, time, start…">
   <meta property="og:url" content="https://cycleforchange.org/rides/ca/">
+  <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Group rides in California — Cycle for Change">
-  <meta name="twitter:description" content="40 recurring bicycle group rides in California — Bakersfield, Carlsbad, Chico, Davis, Encinitas, Fresno, Huntington Beach, Irvine and more. Day, time, start point, pace and links for each.">
+  <meta name="twitter:title" content="Group rides in California (40 rides, 24 cities)">
+  <meta name="twitter:description" content="40 recurring bicycle group rides in California — Bakersfield, Carlsbad, Chico, Davis, Encinitas, Fresno, Huntington Beach, Irvine and more. Day, time, start…">
+  <meta name="twitter:image" content="https://cycleforchange.org/og-cfc.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,15 +28,50 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Group rides in California",
-  "description": "40 recurring bicycle group rides in California: Bakersfield, Carlsbad, Chico, Davis, Encinitas, Fresno, Huntington Beach, Irvine, Long Beach, Los Angeles, Mill Valley, Oakland, Palm Springs, Pasadena, Redding, Redondo Beach, Riverside, Sacramento, San Diego, San Francisco, San Jose, Santa Barbara, Santa Cruz, Ventura.",
-  "url": "https://cycleforchange.org/rides/ca/",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Cycle for Change",
-    "url": "https://cycleforchange.org/"
-  }
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://cycleforchange.org/rides/ca/",
+      "name": "Group rides in California",
+      "description": "40 recurring bicycle group rides in California — Bakersfield, Carlsbad, Chico, Davis, Encinitas, Fresno, Huntington Beach, Irvine and more. Day, time, start…",
+      "url": "https://cycleforchange.org/rides/ca/",
+      "dateModified": "2026-09-15",
+      "author": {
+        "@type": "Person",
+        "name": "Robert Castan",
+        "url": "https://cycleforchange.org/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Cycle for Change",
+        "url": "https://cycleforchange.org/",
+        "logo": "https://cycleforchange.org/favicon-512.png"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Cycle for Change",
+            "item": "https://cycleforchange.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Group rides",
+            "item": "https://cycleforchange.org/rides/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "California",
+            "item": "https://cycleforchange.org/rides/ca/"
+          }
+        ]
+      }
+    }
+  ]
 }
   </script>
 </head>
@@ -51,11 +91,9 @@
       <span class="word">Cycle for Change</span>
     </a>
     <nav class="links" aria-label="Primary">
-      <a href="/#tally">The tally</a>
-      <a href="/field-notes/">Field Notes</a>
-      <a href="/resources/">Resources</a>
       <a href="/rides/">Group rides</a>
-      <a href="/#vote">Vote</a>
+      <a href="/events/">Events</a>
+      <a href="/rides/#submit">Add a ride</a>
     </nav>
     <div class="nav-right">
       <a href="/#board" class="btn btn-dark">Pledge a mile →</a>
@@ -66,18 +104,79 @@
 <main class="fn-pillar gr-dir">
   <header class="fn-pillar-head">
     <div class="wrap">
-      <span class="eyebrow"><a href="/rides/">Group rides</a> · California</span>
+      <nav class="gr-crumbs" aria-label="Breadcrumb"><a href="/">Cycle for Change</a><span class="sep" aria-hidden="true">›</span><a href="/rides/">Group rides</a><span class="sep" aria-hidden="true">›</span><span aria-current="page">California</span></nav>
       <h1>Group rides in California</h1>
-      <p class="fn-pillar-intro">40 recurring group rides in California, across 24 cities. Each one has its own page with the day, time, start point and links.</p>
+      <p class="fn-pillar-intro">40 recurring group rides around California: 27 road, 15 social, 10 mixed. 8 roll on weeknights, 23 on weekends. New to group rides? Start with <a href="/rides/chico-ca-north-rim-easy-does-it-sunday-ride/">Easy Does It Sunday Ride</a> in Chico — it's no-drop, nobody gets left. Want to go fast? <a href="/rides/huntington-beach-ca-hb-velo-sunday-shop-ride/">HB Velo Sunday Morning Shop Ride</a> runs 18 mph average.</p>
       <div class="fn-line" aria-hidden="true"><i data-line></i></div>
     </div>
   </header>
+
+  <section class="gr-search-wrap">
+    <div class="wrap">
+      <form class="gr-search" role="search" id="gr-form" onsubmit="return false">
+        <label class="visually-hidden" for="gr-q">Search by city, state or ride name</label>
+        <input id="gr-q" type="search" placeholder="City or ride name" autocomplete="off" list="gr-cities">
+        <datalist id="gr-cities"><option value="Bakersfield, CA"><option value="Carlsbad, CA"><option value="Chico, CA"><option value="Davis, CA"><option value="Encinitas, CA"><option value="Fresno, CA"><option value="Huntington Beach, CA"><option value="Irvine, CA"><option value="Long Beach, CA"><option value="Los Angeles, CA"><option value="Mill Valley, CA"><option value="Oakland, CA"><option value="Palm Springs, CA"><option value="Pasadena, CA"><option value="Redding, CA"><option value="Redondo Beach, CA"><option value="Riverside, CA"><option value="Sacramento, CA"><option value="San Diego, CA"><option value="San Francisco, CA"><option value="San Jose, CA"><option value="Santa Barbara, CA"><option value="Santa Cruz, CA"><option value="Ventura, CA"></datalist>
+        <button type="button" class="btn btn-dark" id="gr-geo">Near me</button>
+      </form>
+      <div class="gr-filters">
+        <div class="gr-filter-row"><span class="gr-filter-label">Bike</span>
+          <button type="button" class="gr-chip" data-filter="disc" data-value="road" aria-pressed="false">Road</button>
+          <button type="button" class="gr-chip" data-filter="disc" data-value="mtb" aria-pressed="false">Mountain bike</button>
+          <button type="button" class="gr-chip" data-filter="disc" data-value="social" aria-pressed="false">Social</button>
+          <button type="button" class="gr-chip" data-filter="disc" data-value="cruiser" aria-pressed="false">Cruiser</button>
+          <button type="button" class="gr-chip" data-filter="disc" data-value="ebike" aria-pressed="false">E-bike</button>
+          <button type="button" class="gr-chip" data-filter="disc" data-value="mixed" aria-pressed="false">Mixed</button>
+        </div>
+        <div class="gr-filter-row"><span class="gr-filter-label">Made for</span>
+          <button type="button" class="gr-chip" data-filter="tag" data-value="lgbtq" aria-pressed="false">LGBTQ+</button>
+          <button type="button" class="gr-chip" data-filter="tag" data-value="wtf" aria-pressed="false">Women / trans / femme</button>
+          <button type="button" class="gr-chip" data-filter="tag" data-value="bipoc" aria-pressed="false">BIPOC</button>
+          <button type="button" class="gr-chip" data-filter="tag" data-value="beginner" aria-pressed="false">Beginner friendly</button>
+          <button type="button" class="gr-chip" data-filter="tag" data-value="no-drop" aria-pressed="false">No-drop</button>
+          <button type="button" class="gr-chip" data-filter="tag" data-value="family" aria-pressed="false">Family</button>
+        </div>
+        <div class="gr-filter-row"><span class="gr-filter-label">When</span>
+          <select id="gr-day" aria-label="Day of week"><option value="">Any day</option><option value="today">Today</option><option value="weekend">This weekend</option><option value="mon">Mondays</option><option value="tue">Tuesdays</option><option value="wed">Wednesdays</option><option value="thu">Thursdays</option><option value="fri">Fridays</option><option value="sat">Saturdays</option><option value="sun">Sundays</option></select>
+          <button type="button" class="gr-clear" id="gr-clear" hidden>Clear all</button>
+        </div>
+      </div>
+      <p class="gr-status" id="gr-status" aria-live="polite" data-total="40">40 rides</p>
+    </div>
+  </section>
   <section class="gr-results-wrap">
     <div class="wrap">
       <h2 class="fn-spokes-head">Group rides in California, by city</h2>
-
-      <section class="gr-state">
-        <h3 class="gr-state-head">Bakersfield <span class="gr-count">1</span></h3>
+      <nav class="gr-states" aria-label="Jump to a city">
+          <a href="#bakersfield">Bakersfield <small>1</small></a>
+          <a href="/rides/ca/carlsbad/">Carlsbad <small>1</small></a>
+          <a href="#chico">Chico <small>1</small></a>
+          <a href="#davis">Davis <small>1</small></a>
+          <a href="#encinitas">Encinitas <small>1</small></a>
+          <a href="#fresno">Fresno <small>1</small></a>
+          <a href="#huntington-beach">Huntington Beach <small>1</small></a>
+          <a href="#irvine">Irvine <small>2</small></a>
+          <a href="/rides/ca/long-beach/">Long Beach <small>4</small></a>
+          <a href="/rides/ca/los-angeles/">Los Angeles <small>5</small></a>
+          <a href="#mill-valley">Mill Valley <small>1</small></a>
+          <a href="#oakland">Oakland <small>2</small></a>
+          <a href="#palm-springs">Palm Springs <small>1</small></a>
+          <a href="#pasadena">Pasadena <small>1</small></a>
+          <a href="#redding">Redding <small>1</small></a>
+          <a href="#redondo-beach">Redondo Beach <small>1</small></a>
+          <a href="#riverside">Riverside <small>1</small></a>
+          <a href="#sacramento">Sacramento <small>1</small></a>
+          <a href="/rides/ca/san-diego/">San Diego <small>5</small></a>
+          <a href="/rides/ca/san-francisco/">San Francisco <small>3</small></a>
+          <a href="#san-jose">San Jose <small>1</small></a>
+          <a href="#santa-barbara">Santa Barbara <small>1</small></a>
+          <a href="#santa-cruz">Santa Cruz <small>1</small></a>
+          <a href="/rides/ca/ventura/">Ventura <small>2</small></a>
+      </nav>
+      <div id="gr-nearby" class="gr-grid gr-nearby" hidden></div>
+      <div id="gr-states">
+      <section class="gr-state" id="bakersfield">
+        <h2 class="gr-state-head">Bakersfield <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/bakersfield-ca-bike-bakersfield-full-moon-ride/"
    data-name="Bike Bakersfield Full Moon Ride" data-city="Bakersfield" data-state="CA"
@@ -88,13 +187,14 @@
   <span class="gr-card-name">Bike Bakersfield Full Moon Ride</span>
   <span class="gr-card-place">Bakersfield, CA · Downtown</span>
   <span class="gr-card-when">Monthly on or near the full moon; details on Instagram and Facebook</span>
-  <span class="gr-tags"><span class="gr-tag">Beginner friendly</span></span>
+  <span class="gr-card-stat">casual night ride</span>
+  <span class="gr-tags"><span class="gr-tag">Beginner friendly</span><span class="gr-tag gr-tag-warn">Unconfirmed</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Carlsbad <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="carlsbad">
+        <h2 class="gr-state-head"><a href="/rides/ca/carlsbad/">Carlsbad</a> <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/carlsbad-ca-swamis-monthly-social-ride/"
    data-name="Swami's Monthly Sunday Social Ride" data-city="Carlsbad" data-state="CA"
@@ -105,13 +205,14 @@
   <span class="gr-card-name">Swami's Monthly Sunday Social Ride</span>
   <span class="gr-card-place">Carlsbad, CA · Bressi Ranch</span>
   <span class="gr-card-when">One Sunday a month (time posted on the club calendar); weekly World Famous Saturday Ride from Encinitas</span>
+  <span class="gr-card-stat">33 mi · 2x2, conversational, no-drop</span>
   <span class="gr-tags"><span class="gr-tag">No-drop</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Chico <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="chico">
+        <h2 class="gr-state-head">Chico <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/chico-ca-north-rim-easy-does-it-sunday-ride/"
    data-name="Easy Does It Sunday Ride" data-city="Chico" data-state="CA"
@@ -122,13 +223,14 @@
   <span class="gr-card-name">Easy Does It Sunday Ride</span>
   <span class="gr-card-place">Chico, CA · Bidwell Park</span>
   <span class="gr-card-when">Every Sunday, 1:00 pm</span>
+  <span class="gr-card-stat">12 mi · about 11 mph, no-drop</span>
   <span class="gr-tags"><span class="gr-tag">Beginner friendly</span><span class="gr-tag">No-drop</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Davis <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="davis">
+        <h2 class="gr-state-head">Davis <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/davis-ca-tuesday-bakery-easy-ride/"
    data-name="Tuesday Bakery Easy Ride" data-city="Davis" data-state="CA"
@@ -138,14 +240,15 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">Tuesday Bakery Easy Ride</span>
   <span class="gr-card-place">Davis, CA · West Davis</span>
-  <span class="gr-card-when">Every Tuesday, 9:00 am (8:00 am late May through mid-September)</span>
+  <span class="gr-card-when">Every Tuesday, 9:00 am</span>
+  <span class="gr-card-stat">26 mi · 12–14 mph</span>
   <span class="gr-tags"><span class="gr-tag">Beginner friendly</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Encinitas <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="encinitas">
+        <h2 class="gr-state-head">Encinitas <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/encinitas-ca-leucadia-cyclery-sunday-social-ride/"
    data-name="Leucadia Cyclery Sunday Social Ride" data-city="Encinitas" data-state="CA"
@@ -155,14 +258,15 @@
   <span class="gr-card-top"><span class="gr-disc">Road · Mixed</span></span>
   <span class="gr-card-name">Leucadia Cyclery Sunday Social Ride</span>
   <span class="gr-card-place">Encinitas, CA · Leucadia</span>
-  <span class="gr-card-when">Every Sunday, 8:00 am (Wednesday Warriors 6:00 pm from Cardiff State Beach; women's ride Saturday 9:00 am)</span>
+  <span class="gr-card-when">Every Sunday, 8:00 am</span>
+  <span class="gr-card-stat">15–20 mi · casual, 10–12 mph</span>
   <span class="gr-tags"><span class="gr-tag">Beginner friendly</span><span class="gr-tag">No-drop</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Fresno <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="fresno">
+        <h2 class="gr-state-head">Fresno <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/fresno-ca-fresno-cycling-club-birthday-rides/"
    data-name="Fresno Cycling Club Monthly Birthday Rides" data-city="Fresno" data-state="CA"
@@ -172,14 +276,15 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">Fresno Cycling Club Monthly Birthday Rides</span>
   <span class="gr-card-place">Fresno, CA · Woodward Park area</span>
-  <span class="gr-card-when">One Saturday a month, meet 7:45 am, roll 8:00 am (September 2026 edition on the 19th)</span>
+  <span class="gr-card-when">Monthly, on a Saturday, 8:00 am</span>
+  <span class="gr-card-stat">B, C and C/D groups with leaders</span>
   
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Huntington Beach <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="huntington-beach">
+        <h2 class="gr-state-head">Huntington Beach <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/huntington-beach-ca-hb-velo-sunday-shop-ride/"
    data-name="HB Velo Sunday Morning Shop Ride" data-city="Huntington Beach" data-state="CA"
@@ -189,14 +294,15 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">HB Velo Sunday Morning Shop Ride</span>
   <span class="gr-card-place">Huntington Beach, CA</span>
-  <span class="gr-card-when">Every Sunday, roll-out 8:05 am sharp (Wed/Fri coffee ride 8:30 am, ~25 mi at 15 mph)</span>
+  <span class="gr-card-when">Every Sunday, 8:05 am</span>
+  <span class="gr-card-stat">25–70 mi · 18 mph average</span>
   
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Irvine <span class="gr-count">2</span></h3>
+      <section class="gr-state" id="irvine">
+        <h2 class="gr-state-head">Irvine <span class="gr-count">2</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/irvine-ca-bicycle-club-of-irvine-saturday-ride/"
    data-name="BCI Saturday Ride" data-city="Irvine" data-state="CA"
@@ -206,7 +312,8 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">BCI Saturday Ride</span>
   <span class="gr-card-place">Irvine, CA</span>
-  <span class="gr-card-when">Every Saturday, 9:00 am (Tuesday 9:15 am and Sunday 9:00 am rides also)</span>
+  <span class="gr-card-when">Every Saturday, 9:00 am</span>
+  <span class="gr-card-stat">18–37 (short, medium, long options) mi · friendly, regroup at a coffee stop</span>
   <span class="gr-tags"><span class="gr-tag">Beginner friendly</span></span>
 </a>
 <a class="gr-card" href="/rides/irvine-ca-orange-county-wheelmen-weekday-ride/"
@@ -217,14 +324,15 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">OCW Tuesday/Thursday Ride</span>
   <span class="gr-card-place">Irvine, CA</span>
-  <span class="gr-card-when">Every Tuesday and Thursday, 9:00 am (weekend rides too)</span>
+  <span class="gr-card-when">Tuesdays and Thursdays, 9:00 am</span>
+  <span class="gr-card-stat">35–40 mi · all abilities, Class 1 e-bikes…</span>
   
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Long Beach <span class="gr-count">4</span></h3>
+      <section class="gr-state" id="long-beach">
+        <h2 class="gr-state-head"><a href="/rides/ca/long-beach/">Long Beach</a> <span class="gr-count">4</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/long-beach-ca-bike-long-beach-bikes-and-coffee/"
    data-name="Bikes and Coffee (Bike Long Beach)" data-city="Long Beach" data-state="CA"
@@ -234,7 +342,8 @@
   <span class="gr-card-top"><span class="gr-disc">Social · Mixed</span></span>
   <span class="gr-card-name">Bikes and Coffee (Bike Long Beach)</span>
   <span class="gr-card-place">Long Beach, CA</span>
-  <span class="gr-card-when">Last Sunday of the month, meet 9:30 am, roll 10:00 am</span>
+  <span class="gr-card-when">Last Sunday of the month, 10:00 am</span>
+  <span class="gr-card-stat">8–12 mi · slow, casual</span>
   <span class="gr-tags"><span class="gr-tag">Beginner friendly</span><span class="gr-tag">No-drop</span></span>
 </a>
 <a class="gr-card" href="/rides/long-beach-ca-queercicles-c-u-next-tuesday/"
@@ -246,6 +355,7 @@
   <span class="gr-card-name">C U Next Tuesday (Queercicles)</span>
   <span class="gr-card-place">Long Beach, CA · Colorado Lagoon</span>
   <span class="gr-card-when">Every Tuesday, 8:00 am</span>
+  <span class="gr-card-stat">moderate (one chili on the local…</span>
   <span class="gr-tags"><span class="gr-tag">LGBTQ+</span></span>
 </a>
 <a class="gr-card" href="/rides/long-beach-ca-lightning-velo-saturday-ride/"
@@ -256,7 +366,8 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">Lightning Velo Saturday Ride</span>
   <span class="gr-card-place">Long Beach, CA · East Long Beach</span>
-  <span class="gr-card-when">Every Saturday, 8:00 am (also Sunday 8:00 am)</span>
+  <span class="gr-card-when">Saturdays and Sundays, 8:00 am</span>
+  <span class="gr-card-stat">A 23+ mph, B 19–22 (no drop), C…</span>
   <span class="gr-tags"><span class="gr-tag">Beginner friendly</span></span>
 </a>
 <a class="gr-card" href="/rides/long-beach-ca-long-beach-bicycling-meetup/"
@@ -268,13 +379,14 @@
   <span class="gr-card-name">Long Beach Bicycling Meetup Wednesday Ride</span>
   <span class="gr-card-place">Long Beach, CA · Belmont Shore</span>
   <span class="gr-card-when">Every Wednesday, 7:00 pm</span>
+  <span class="gr-card-stat">casual</span>
   <span class="gr-tags"><span class="gr-tag">Beginner friendly</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Los Angeles <span class="gr-count">5</span></h3>
+      <section class="gr-state" id="los-angeles">
+        <h2 class="gr-state-head"><a href="/rides/ca/los-angeles/">Los Angeles</a> <span class="gr-count">5</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/los-angeles-ca-different-spokes-sunday-ride/"
    data-name="Different Spokes Sunday Ride" data-city="Los Angeles" data-state="CA"
@@ -285,6 +397,7 @@
   <span class="gr-card-name">Different Spokes Sunday Ride</span>
   <span class="gr-card-place">Los Angeles, CA</span>
   <span class="gr-card-when">Sundays; route and start rotate and are posted on the club calendar</span>
+  <span class="gr-card-stat">easy to demanding; no-drop</span>
   <span class="gr-tags"><span class="gr-tag">LGBTQ+</span><span class="gr-tag">No-drop</span></span>
 </a>
 <a class="gr-card" href="/rides/los-angeles-ca-la-grange-womens-ride/"
@@ -295,7 +408,8 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">La Grange Women's Ride</span>
   <span class="gr-card-place">Los Angeles, CA · Westside</span>
-  <span class="gr-card-when">3rd Saturday of the month, 8:00 am, rotating Westside start</span>
+  <span class="gr-card-when">Third Saturday of the month, 8:00 am</span>
+  <span class="gr-card-stat">25–40 mi · social, 16–18 mph on flats,…</span>
   <span class="gr-tags"><span class="gr-tag">Women / trans / femme</span><span class="gr-tag">No-drop</span></span>
 </a>
 <a class="gr-card" href="/rides/los-angeles-ca-la-grange-nichols-canyon-ride/"
@@ -307,6 +421,7 @@
   <span class="gr-card-name">Nichols Canyon Ride (Velo Club La Grange)</span>
   <span class="gr-card-place">Los Angeles, CA · Westwood</span>
   <span class="gr-card-when">Every Saturday, 8:00 am</span>
+  <span class="gr-card-stat">27 mi · difficult</span>
   
 </a>
 <a class="gr-card" href="/rides/northridge-ca-sfvbc-saturday-club-ride/"
@@ -317,7 +432,8 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">SFVBC Saturday Club Ride</span>
   <span class="gr-card-place">Los Angeles, CA · Northridge (San Fernando Valley)</span>
-  <span class="gr-card-when">Every Saturday (and Sunday), 8:00 am sharp</span>
+  <span class="gr-card-when">Saturdays and Sundays, 8:00 am</span>
+  <span class="gr-card-stat">ride levels 1–5; beginner…</span>
   <span class="gr-tags"><span class="gr-tag">Beginner friendly</span></span>
 </a>
 <a class="gr-card" href="/rides/los-angeles-ca-venice-electric-light-parade/"
@@ -328,14 +444,15 @@
   <span class="gr-card-top"><span class="gr-disc">Social · Cruiser · E-bike · Mixed</span></span>
   <span class="gr-card-name">Venice Electric Light Parade</span>
   <span class="gr-card-place">Los Angeles, CA · Venice</span>
-  <span class="gr-card-when">Every Sunday at sunset (gathers around 6:35 pm), Venice Beach</span>
+  <span class="gr-card-when">Every Sunday, 6:35 pm</span>
+  <span class="gr-card-stat">slow, party pace</span>
   <span class="gr-tags"><span class="gr-tag">Family</span><span class="gr-tag">Beginner friendly</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Mill Valley <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="mill-valley">
+        <h2 class="gr-state-head">Mill Valley <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/mill-valley-ca-tam-velo-sunday-recovery-ride/"
    data-name="Tam Velo Club Sunday Recovery Ride" data-city="Mill Valley" data-state="CA"
@@ -345,14 +462,15 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">Tam Velo Club Sunday Recovery Ride</span>
   <span class="gr-card-place">Mill Valley, CA</span>
-  <span class="gr-card-when">Every Sunday, 9:30 am (roll out 9:35 am), weather permitting</span>
+  <span class="gr-card-when">Every Sunday, 9:35 am</span>
+  <span class="gr-card-stat">25–35 mi · moderate, 14–17 mph average,…</span>
   <span class="gr-tags"><span class="gr-tag">No-drop</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Oakland <span class="gr-count">2</span></h3>
+      <section class="gr-state" id="oakland">
+        <h2 class="gr-state-head">Oakland <span class="gr-count">2</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/oakland-ca-east-bay-bike-party/"
    data-name="East Bay Bike Party" data-city="Oakland" data-state="CA"
@@ -362,7 +480,8 @@
   <span class="gr-card-top"><span class="gr-disc">Social</span></span>
   <span class="gr-card-name">East Bay Bike Party</span>
   <span class="gr-card-place">Oakland, CA</span>
-  <span class="gr-card-when">Second Friday of every month. Meet 7:30 pm, roll 8:00 pm</span>
+  <span class="gr-card-when">Second Friday of the month, 8:00 pm</span>
+  <span class="gr-card-stat">15 mi · party pace</span>
   <span class="gr-tags"><span class="gr-tag">No-drop</span></span>
 </a>
 <a class="gr-card" href="/rides/oakland-ca-red-bike-and-green-community-rides/"
@@ -373,14 +492,15 @@
   <span class="gr-card-top"><span class="gr-disc">Social</span></span>
   <span class="gr-card-name">Red Bike &amp; Green Community Rides</span>
   <span class="gr-card-place">Oakland, CA · Lake Merritt</span>
-  <span class="gr-card-when">First Friday, 6:00 pm, and second Saturday, 12:00 pm</span>
+  <span class="gr-card-when">First Friday of the month, 6:00 pm</span>
+  <span class="gr-card-stat">casual</span>
   <span class="gr-tags"><span class="gr-tag">BIPOC</span><span class="gr-tag">Family</span><span class="gr-tag">No-drop</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Palm Springs <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="palm-springs">
+        <h2 class="gr-state-head">Palm Springs <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/palm-springs-ca-big-wheel-bikes-community-group-rides/"
    data-name="Big Wheel Bikes CV Community Group Rides" data-city="Palm Springs" data-state="CA"
@@ -391,13 +511,14 @@
   <span class="gr-card-name">Big Wheel Bikes CV Community Group Rides</span>
   <span class="gr-card-place">Palm Springs, CA</span>
   <span class="gr-card-when">Seasonal (Nov–Apr); rides announced on the shop's social media, no fixed weekly slot</span>
-  <span class="gr-tags"><span class="gr-tag">Beginner friendly</span></span>
+  <span class="gr-card-stat">all skill levels</span>
+  <span class="gr-tags"><span class="gr-tag">Beginner friendly</span><span class="gr-tag gr-tag-warn">Unconfirmed</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Pasadena <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="pasadena">
+        <h2 class="gr-state-head">Pasadena <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/pasadena-ca-foo-chow-ride/"
    data-name="FOO CHOW Ride" data-city="Pasadena" data-state="CA"
@@ -407,14 +528,15 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">FOO CHOW Ride</span>
   <span class="gr-card-place">Pasadena, CA · Old Pasadena</span>
-  <span class="gr-card-when">1st and 3rd Tuesday of the month, meet 6:45 pm, roll 7:00 pm</span>
+  <span class="gr-card-when">First Tuesday and Third Tuesday of the month, 7:00 pm</span>
+  <span class="gr-card-stat">25–35 mi · medium to spicy, regroups at…</span>
   
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Redding <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="redding">
+        <h2 class="gr-state-head">Redding <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/redding-ca-shasta-wheelmen-weekday-ride/"
    data-name="Shasta Wheelmen Weekday Ride" data-city="Redding" data-state="CA"
@@ -424,14 +546,15 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">Shasta Wheelmen Weekday Ride</span>
   <span class="gr-card-place">Redding, CA · Turtle Bay</span>
-  <span class="gr-card-when">Tuesdays and Thursdays; start time shifts by month (8:00 am in September, 7:00 am in summer, 9:00 am in winter; one hour earlier when the forecast high is 100°F or more)</span>
+  <span class="gr-card-when">Tuesdays and Thursdays, 8:00 am</span>
+  <span class="gr-card-stat">28–42 mi · club ratings B to C (moderate)</span>
   
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Redondo Beach <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="redondo-beach">
+        <h2 class="gr-state-head">Redondo Beach <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/redondo-beach-ca-beach-cities-cycling-club-java-ride/"
    data-name="Friday Java Ride (Beach Cities Cycling Club)" data-city="Redondo Beach" data-state="CA"
@@ -441,14 +564,15 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">Friday Java Ride (Beach Cities Cycling Club)</span>
   <span class="gr-card-place">Redondo Beach, CA · South Bay</span>
-  <span class="gr-card-when">Every Friday, 9:00 am (club also rides Saturday 8:00 am, Sunday 9:00 am, Tuesday 9:00 am)</span>
+  <span class="gr-card-when">Every Friday, 9:00 am</span>
+  <span class="gr-card-stat">easy, flat, Level 4 (casual)</span>
   <span class="gr-tags"><span class="gr-tag">Beginner friendly</span><span class="gr-tag">No-drop</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Riverside <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="riverside">
+        <h2 class="gr-state-head">Riverside <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/riverside-ca-riverside-bicycle-club-saturday-casual-ride/"
    data-name="Riverside Bicycle Club Saturday Casual Ride" data-city="Riverside" data-state="CA"
@@ -459,13 +583,14 @@
   <span class="gr-card-name">Riverside Bicycle Club Saturday Casual Ride</span>
   <span class="gr-card-place">Riverside, CA</span>
   <span class="gr-card-when">Every Saturday (club also rides Tuesday, Thursday and Sunday); times on the club calendar</span>
+  <span class="gr-card-stat">short, mostly flat, regroup in…</span>
   <span class="gr-tags"><span class="gr-tag">Beginner friendly</span><span class="gr-tag">No-drop</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Sacramento <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="sacramento">
+        <h2 class="gr-state-head">Sacramento <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/sacramento-ca-bike-party-sacramento/"
    data-name="Bike Party Sacramento" data-city="Sacramento" data-state="CA"
@@ -475,14 +600,15 @@
   <span class="gr-card-top"><span class="gr-disc">Social</span></span>
   <span class="gr-card-name">Bike Party Sacramento</span>
   <span class="gr-card-place">Sacramento, CA</span>
-  <span class="gr-card-when">First Friday of every month, 7:00 pm</span>
+  <span class="gr-card-when">First Friday of the month, 7:00 pm</span>
+  <span class="gr-card-stat">party pace</span>
   <span class="gr-tags"><span class="gr-tag">No-drop</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">San Diego <span class="gr-count">5</span></h3>
+      <section class="gr-state" id="san-diego">
+        <h2 class="gr-state-head"><a href="/rides/ca/san-diego/">San Diego</a> <span class="gr-count">5</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/san-diego-ca-cyclo-vets-saturday-ride/"
    data-name="Cyclo-Vets Saturday Ride" data-city="San Diego" data-state="CA"
@@ -492,7 +618,8 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">Cyclo-Vets Saturday Ride</span>
   <span class="gr-card-place">San Diego, CA · Mission Valley</span>
-  <span class="gr-card-when">Every Saturday, 8:30 am (also Wednesday 8:30 am coffee ride and Friday 8:00 am Coronado ride)</span>
+  <span class="gr-card-when">Every Saturday, 8:30 am</span>
+  <span class="gr-card-stat">35–50 mi · A (hilly, ~50 mi), B+ (~40 mi,…</span>
   <span class="gr-tags"><span class="gr-tag">No-drop</span></span>
 </a>
 <a class="gr-card" href="/rides/san-diego-ca-moment-bicycles-saturday-ride/"
@@ -503,7 +630,8 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">Moment Bicycles Saturday Point Loma Ride</span>
   <span class="gr-card-place">San Diego, CA · Old Town</span>
-  <span class="gr-card-when">Every Saturday, 8:30 am (Tue/Thu 6:30 am and Sunday 8:00 am rides also)</span>
+  <span class="gr-card-when">Every Saturday, 8:30 am</span>
+  <span class="gr-card-stat">23 or 39 mi · two groups; a second group…</span>
   <span class="gr-tags"><span class="gr-tag">No-drop</span></span>
 </a>
 <a class="gr-card" href="/rides/san-diego-ca-outspoken-cycle-club-rides/"
@@ -515,7 +643,8 @@
   <span class="gr-card-name">Outspoken Cycle Club San Diego Rides</span>
   <span class="gr-card-place">San Diego, CA</span>
   <span class="gr-card-when">Regular open-to-all rides; dates posted on the club's San Diego page and Heylo group</span>
-  <span class="gr-tags"><span class="gr-tag">LGBTQ+</span><span class="gr-tag">Beginner friendly</span></span>
+  <span class="gr-card-stat">beginner-friendly outings to…</span>
+  <span class="gr-tags"><span class="gr-tag">LGBTQ+</span><span class="gr-tag">Beginner friendly</span><span class="gr-tag gr-tag-warn">Unconfirmed</span></span>
 </a>
 <a class="gr-card" href="/rides/la-jolla-ca-sdbc-saturday-ride/"
    data-name="SDBC Saturday Ride" data-city="San Diego" data-state="CA"
@@ -525,7 +654,8 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">SDBC Saturday Ride</span>
   <span class="gr-card-place">San Diego, CA · La Jolla / University City</span>
-  <span class="gr-card-when">Every Saturday, rolls 8:30 am; new-rider orientation 8:15 am</span>
+  <span class="gr-card-when">Every Saturday, 8:30 am</span>
+  <span class="gr-card-stat">24–46 mi · 7 groups: A, B, C, and…</span>
   <span class="gr-tags"><span class="gr-tag">Beginner friendly</span></span>
 </a>
 <a class="gr-card" href="/rides/san-diego-ca-shewolves-ride/"
@@ -536,14 +666,15 @@
   <span class="gr-card-top"><span class="gr-disc">Social · Mixed</span></span>
   <span class="gr-card-name">SheWolves Ride</span>
   <span class="gr-card-place">San Diego, CA · Balboa Park</span>
-  <span class="gr-card-when">Thursday evenings, 7:15 pm; dates posted on Instagram (reported as monthly)</span>
+  <span class="gr-card-when">Monthly, on a Thursday, 7:15 pm</span>
+  <span class="gr-card-stat">no-drop evening loop</span>
   <span class="gr-tags"><span class="gr-tag">Women / trans / femme</span><span class="gr-tag">LGBTQ+</span><span class="gr-tag">No-drop</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">San Francisco <span class="gr-count">3</span></h3>
+      <section class="gr-state" id="san-francisco">
+        <h2 class="gr-state-head"><a href="/rides/ca/san-francisco/">San Francisco</a> <span class="gr-count">3</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/san-francisco-ca-butterlap/"
    data-name="Butterlap" data-city="San Francisco" data-state="CA"
@@ -553,7 +684,8 @@
   <span class="gr-card-top"><span class="gr-disc">Road · Social</span></span>
   <span class="gr-card-name">Butterlap</span>
   <span class="gr-card-place">San Francisco, CA · Embarcadero</span>
-  <span class="gr-card-when">Every Wednesday, 7:00 pm (roll out 7:15 pm)</span>
+  <span class="gr-card-when">Every Wednesday, 7:15 pm</span>
+  <span class="gr-card-stat">relaxed, no-drop</span>
   <span class="gr-tags"><span class="gr-tag">No-drop</span></span>
 </a>
 <a class="gr-card" href="/rides/san-francisco-ca-different-spokes-jersey-ride/"
@@ -564,7 +696,8 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">Different Spokes Jersey Ride</span>
   <span class="gr-card-place">San Francisco, CA · Castro</span>
-  <span class="gr-card-when">Second Saturday of the month; SF group meets 8:45 am (roll 9:00 am), Sausalito group meets 9:45 am (roll 10:00 am)</span>
+  <span class="gr-card-when">Second Saturday of the month, 9:00 am</span>
+  <span class="gr-card-stat">24 or 48 mi · B/C (48-mile option), A/C…</span>
   <span class="gr-tags"><span class="gr-tag">LGBTQ+</span></span>
 </a>
 <a class="gr-card" href="/rides/san-francisco-ca-critical-mass/"
@@ -575,14 +708,15 @@
   <span class="gr-card-top"><span class="gr-disc">Social</span></span>
   <span class="gr-card-name">San Francisco Critical Mass</span>
   <span class="gr-card-place">San Francisco, CA</span>
-  <span class="gr-card-when">Last Friday of every month, 5:30 pm</span>
+  <span class="gr-card-when">Last Friday of the month, 5:30 pm</span>
+  <span class="gr-card-stat">mass ride, slow</span>
   
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">San Jose <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="san-jose">
+        <h2 class="gr-state-head">San Jose <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/san-jose-ca-san-jose-bike-party/"
    data-name="San Jose Bike Party" data-city="San Jose" data-state="CA"
@@ -592,14 +726,15 @@
   <span class="gr-card-top"><span class="gr-disc">Social</span></span>
   <span class="gr-card-name">San Jose Bike Party</span>
   <span class="gr-card-place">San Jose, CA</span>
-  <span class="gr-card-when">Third Friday of every month, 8:00 pm (meet 7:30 pm)</span>
+  <span class="gr-card-when">Third Friday of the month, 8:00 pm</span>
+  <span class="gr-card-stat">15–30 mi · party pace</span>
   <span class="gr-tags"><span class="gr-tag">No-drop</span><span class="gr-tag">Family</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Santa Barbara <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="santa-barbara">
+        <h2 class="gr-state-head">Santa Barbara <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/santa-barbara-ca-fastrack-saturday-lake-ride/"
    data-name="Fastrack Saturday Lake Ride" data-city="Santa Barbara" data-state="CA"
@@ -609,14 +744,15 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">Fastrack Saturday Lake Ride</span>
   <span class="gr-card-place">Santa Barbara, CA · Waterfront</span>
-  <span class="gr-card-when">Every Saturday, 8:00 am (Sunday Echelon club ride 8:30 am from the Mission)</span>
+  <span class="gr-card-when">Every Saturday, 8:00 am</span>
+  <span class="gr-card-stat">40–50 mi · moderate, regroups at the top of…</span>
   
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Santa Cruz <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="santa-cruz">
+        <h2 class="gr-state-head">Santa Cruz <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/santa-cruz-ca-girls-rock-monthly-ride/"
    data-name="Girls Rock Monthly Ride" data-city="Santa Cruz" data-state="CA"
@@ -626,14 +762,15 @@
   <span class="gr-card-top"><span class="gr-disc">Mountain bike</span></span>
   <span class="gr-card-name">Girls Rock Monthly Ride</span>
   <span class="gr-card-place">Santa Cruz, CA</span>
-  <span class="gr-card-when">One Sunday a month, check-in 8:45 am, roll out 10:00 am (start venue changes; Santa Cruz Mountain Brewing in Sep and Oct 2026)</span>
+  <span class="gr-card-when">Monthly, on a Sunday, 10:00 am</span>
+  <span class="gr-card-stat">groups by skill level, guided</span>
   <span class="gr-tags"><span class="gr-tag">Women / trans / femme</span><span class="gr-tag">Beginner friendly</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Ventura <span class="gr-count">2</span></h3>
+      <section class="gr-state" id="ventura">
+        <h2 class="gr-state-head"><a href="/rides/ca/ventura/">Ventura</a> <span class="gr-count">2</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/ventura-ca-bikevc-brew-ride/"
    data-name="BikeVC Brew Ride" data-city="Ventura" data-state="CA"
@@ -643,7 +780,8 @@
   <span class="gr-card-top"><span class="gr-disc">Social · Mixed</span></span>
   <span class="gr-card-name">BikeVC Brew Ride</span>
   <span class="gr-card-place">Ventura, CA · Westside</span>
-  <span class="gr-card-when">Second Sunday of the month, 1:00 pm, spring through fall</span>
+  <span class="gr-card-when">Second Sunday of the month, 1:00 pm</span>
+  <span class="gr-card-stat">easy city pace</span>
   <span class="gr-tags"><span class="gr-tag">Beginner friendly</span></span>
 </a>
 <a class="gr-card" href="/rides/ventura-ca-easy-rider-community-ride/"
@@ -655,10 +793,18 @@
   <span class="gr-card-name">Easy Rider Community Ride</span>
   <span class="gr-card-place">Ventura, CA · Downtown</span>
   <span class="gr-card-when">About twice a month, mornings; dates on the Easy Rider Meetup group</span>
+  <span class="gr-card-stat">15 mi · 12 mph, with a briefing and bike…</span>
   <span class="gr-tags"><span class="gr-tag">Beginner friendly</span><span class="gr-tag">No-drop</span></span>
 </a>
         </div>
       </section>
+      </div>
+      <div class="gr-empty" id="gr-empty" hidden>
+        <p>No rides match here.</p>
+        <p class="gr-empty-actions"><button type="button" class="gr-chip" id="gr-widen">Show the closest rides anyway</button> <a class="gr-chip" href="/rides/">Search the whole country</a> <button type="button" class="gr-chip" data-clear>Clear filters</button></p>
+      </div>
+
+      <p class="gr-hub-foot">Rides here were last checked 2026-09-15. Wrong or gone? Use "Is this right?" on the ride's page. Know one we're missing? <a href="/rides/#submit">Add it</a>.</p>
       <p class="fn-back"><a href="/rides/">← All states</a></p>
     </div>
   </section>
@@ -683,5 +829,7 @@
 </footer>
 
 <script src="/field-notes/field-notes.js" defer></script>
+<script id="gr-index" type="application/json">{"cities":[["Bakersfield, CA",35.3733,-119.0187],["Carlsbad, CA",33.1285,-117.2575],["Chico, CA",39.7602,-121.7967],["Davis, CA",38.5566,-121.7765],["Encinitas, CA",33.0685,-117.3035],["Fresno, CA",36.8545,-119.7355],["Huntington Beach, CA",33.6685,-117.9555],["Irvine, CA",33.689,-117.7905],["Long Beach, CA",33.7674,-118.1448],["Los Angeles, CA",34.0689,-118.4364],["Mill Valley, CA",37.8836,-122.5153],["Oakland, CA",37.8079,-122.2603],["Palm Springs, CA",33.8055,-116.5495],["Pasadena, CA",34.1435,-118.1505],["Redding, CA",40.5945,-122.3781],["Redondo Beach, CA",33.8445,-118.3935],["Riverside, CA",33.9806,-117.3755],["Sacramento, CA",38.5816,-121.4944],["San Diego, CA",32.7681,-117.1786],["San Francisco, CA",37.7849,-122.407],["San Jose, CA",37.3382,-121.8863],["Santa Barbara, CA",34.4105,-119.6855],["Santa Cruz, CA",36.9741,-122.0308],["Ventura, CA",34.2815,-119.298]],"states":[["AL","Alabama"],["AK","Alaska"],["AZ","Arizona"],["AR","Arkansas"],["CA","California"],["CO","Colorado"],["CT","Connecticut"],["DE","Delaware"],["DC","Washington, DC"],["FL","Florida"],["GA","Georgia"],["HI","Hawaii"],["ID","Idaho"],["IL","Illinois"],["IN","Indiana"],["IA","Iowa"],["KS","Kansas"],["KY","Kentucky"],["LA","Louisiana"],["ME","Maine"],["MD","Maryland"],["MA","Massachusetts"],["MI","Michigan"],["MN","Minnesota"],["MS","Mississippi"],["MO","Missouri"],["MT","Montana"],["NE","Nebraska"],["NV","Nevada"],["NH","New Hampshire"],["NJ","New Jersey"],["NM","New Mexico"],["NY","New York"],["NC","North Carolina"],["ND","North Dakota"],["OH","Ohio"],["OK","Oklahoma"],["OR","Oregon"],["PA","Pennsylvania"],["RI","Rhode Island"],["SC","South Carolina"],["SD","South Dakota"],["TN","Tennessee"],["TX","Texas"],["UT","Utah"],["VT","Vermont"],["VA","Virginia"],["WA","Washington"],["WV","West Virginia"],["WI","Wisconsin"],["WY","Wyoming"],["PR","Puerto Rico"]],"hubs":[["CO","Denver","/rides/co/denver/"],["CA","Long Beach","/rides/ca/long-beach/"],["CA","Los Angeles","/rides/ca/los-angeles/"],["MN","Minneapolis","/rides/mn/minneapolis/"],["ME","Portland","/rides/me/portland/"],["PA","Philadelphia","/rides/pa/philadelphia/"],["CA","San Diego","/rides/ca/san-diego/"],["NY","New York","/rides/ny/new-york/"],["GA","Atlanta","/rides/ga/atlanta/"],["CA","San Francisco","/rides/ca/san-francisco/"],["OK","Oklahoma City","/rides/ok/oklahoma-city/"],["AZ","Phoenix","/rides/az/phoenix/"],["IL","Chicago","/rides/il/chicago/"],["WA","Seattle","/rides/wa/seattle/"],["AZ","Tucson","/rides/az/tucson/"],["DC","Washington","/rides/dc/washington/"],["HI","Honolulu","/rides/hi/honolulu/"],["WI","Madison","/rides/wi/madison/"],["MA","Boston","/rides/ma/boston/"],["CO","Boulder","/rides/co/boulder/"],["FL","Miami","/rides/fl/miami/"],["OH","Columbus","/rides/oh/columbus/"],["OR","Portland","/rides/or/portland/"],["OH","Cincinnati","/rides/oh/cincinnati/"],["UT","Salt Lake City","/rides/ut/salt-lake-city/"],["MD","Baltimore","/rides/md/baltimore/"],["CT","Middletown","/rides/ct/middletown/"],["AZ","Sedona","/rides/az/sedona/"],["FL","Orlando","/rides/fl/orlando/"],["WA","Tacoma","/rides/wa/tacoma/"],["TX","Austin","/rides/tx/austin/"],["TX","Denton","/rides/tx/denton/"],["MI","Detroit","/rides/mi/detroit/"],["CO","Fort Collins","/rides/co/fort-collins/"],["TX","Houston","/rides/tx/houston/"],["NV","Las Vegas","/rides/nv/las-vegas/"],["AR","Little Rock","/rides/ar/little-rock/"],["KY","Louisville","/rides/ky/louisville/"],["LA","New Orleans","/rides/la/new-orleans/"],["PA","Pittsburgh","/rides/pa/pittsburgh/"],["NY","Buffalo","/rides/ny/buffalo/"],["CO","Colorado Springs","/rides/co/colorado-springs/"],["IA","Iowa City","/rides/ia/iowa-city/"],["MI","Kalamazoo","/rides/mi/kalamazoo/"],["NJ","Jersey City","/rides/nj/jersey-city/"],["VA","Norfolk","/rides/va/norfolk/"],["NE","Omaha","/rides/ne/omaha/"],["NH","Portsmouth","/rides/nh/portsmouth/"],["NV","Reno","/rides/nv/reno/"],["VA","Roanoke","/rides/va/roanoke/"],["FL","St. Petersburg","/rides/fl/st-petersburg/"],["CA","Ventura","/rides/ca/ventura/"],["SC","Charleston","/rides/sc/charleston/"],["CA","Carlsbad","/rides/ca/carlsbad/"],["MO","St. Louis","/rides/mo/st-louis/"],["TN","Memphis","/rides/tn/memphis/"],["VT","Stowe","/rides/vt/stowe/"],["FL","Fort Lauderdale","/rides/fl/fort-lauderdale/"]]}</script>
+<script src="/rides/rides.js" defer></script>
 </body>
 </html>

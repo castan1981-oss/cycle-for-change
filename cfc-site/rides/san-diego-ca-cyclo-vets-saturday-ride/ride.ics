@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-diego-ca-cyclo-vets-saturday-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Los_Angeles:20260919T083000
+DTEND;TZID=America/Los_Angeles:20260919T103000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Cyclo-Vets Saturday Ride — San Diego\, CA
+LOCATION:Trader Joe's / Coffee Bean lot\, Mission Valley\, 5010 Mission C
+ enter Rd\, San Diego\, CA 92108
+DESCRIPTION:Pace: A (hilly\, ~50 mi)\, B+ (~40 mi\, no-drop)\, B Top Gun 
+ (~35 mi\, mostly flat).\nSchedule: Every Saturday\, 8:30 am (also Wednes
+ day 8:30 am coffee ride and Friday 8:00 am Coronado ride).\nConfirm with
+  the host before you go.\nhttps://cycleforchange.org/rides/san-diego-ca-
+ cyclo-vets-saturday-ride/
+URL:https://cycleforchange.org/rides/san-diego-ca-cyclo-vets-saturday-rid
+ e/
+END:VEVENT
+END:VCALENDAR

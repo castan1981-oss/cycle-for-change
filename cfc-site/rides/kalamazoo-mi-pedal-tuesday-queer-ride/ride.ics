@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:kalamazoo-mi-pedal-tuesday-queer-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260922T180000
+DTEND;TZID=America/New_York:20260922T193000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:PEDAL Tuesday Queer Ride — Portage\, MI
+LOCATION:Water Street Coffee (Portage)
+DESCRIPTION:Pace: party pace.\nSchedule: Every Tuesday\, 6:00 pm\, throug
+ h mid-September.\nConfirm with the host before you go.\nhttps://cyclefor
+ change.org/rides/kalamazoo-mi-pedal-tuesday-queer-ride/
+URL:https://cycleforchange.org/rides/kalamazoo-mi-pedal-tuesday-queer-rid
+ e/
+END:VEVENT
+END:VCALENDAR

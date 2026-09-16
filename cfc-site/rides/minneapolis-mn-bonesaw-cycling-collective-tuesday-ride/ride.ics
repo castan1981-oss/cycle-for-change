@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:minneapolis-mn-bonesaw-cycling-collective-tuesday-ride@cycleforchange
+ .org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260929T190000
+DTEND;TZID=America/Chicago:20260929T203000
+RRULE:FREQ=MONTHLY;BYDAY=-1TU;UNTIL=20260930T235959Z
+SUMMARY:Bonesaw Cycling Collective Summer Tuesday Ride — Minneapolis\, 
+ MN
+LOCATION:Cepro Site / Parque Monarca (Midtown Greenway at 10th Ave S)\, 2
+ 828 11th Ave S\, Minneapolis\, MN 55407
+DESCRIPTION:Pace: 10–12 mph.\nNo-drop.\nSchedule: Last Tuesday of the m
+ onth\, April–September\, meet 6:45 pm\, roll 7:00 pm.\nConfirm with th
+ e host before you go.\nhttps://cycleforchange.org/rides/minneapolis-mn-b
+ onesaw-cycling-collective-tuesday-ride/
+URL:https://cycleforchange.org/rides/minneapolis-mn-bonesaw-cycling-colle
+ ctive-tuesday-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:kailua-kona-hi-saturday-recreational-north-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=Pacific/Honolulu:20260919T070000
+DTEND;TZID=Pacific/Honolulu:20260919T090000
+RRULE:FREQ=WEEKLY;BYDAY=SA,TU
+SUMMARY:Kona Saturday Recreational Ride — Kailua-Kona\, HI
+LOCATION:Kailua-Kona Target parking lot\, NW corner\, 74-5450 Makala Blvd
+ \, Kailua-Kona\, HI 96740
+DESCRIPTION:Pace: casual no-drop tempo\, 13–20 mph\, rolling hills.\nNo
+ -drop.\nSchedule: Every Saturday\, 7:00 am (also Tuesday 7:00 am).\nConf
+ irm with the host before you go.\nhttps://cycleforchange.org/rides/kailu
+ a-kona-hi-saturday-recreational-north-ride/
+URL:https://cycleforchange.org/rides/kailua-kona-hi-saturday-recreational
+ -north-ride/
+END:VEVENT
+END:VCALENDAR

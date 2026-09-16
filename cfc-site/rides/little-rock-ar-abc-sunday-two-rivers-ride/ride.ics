@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:little-rock-ar-abc-sunday-two-rivers-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260920T130000
+DTEND;TZID=America/Chicago:20260920T150000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Arkansas Bicycle Club Sunday Ride — Little Rock\, AR
+LOCATION:Two Rivers Park Bridge\, 99 River Mountain Rd\, Little Rock\, AR
+  72223
+DESCRIPTION:Pace: beginner to intermediate\, faster and slower riders.\nS
+ chedule: Every Sunday\, 1:00 pm.\nConfirm with the host before you go.\n
+ https://cycleforchange.org/rides/little-rock-ar-abc-sunday-two-rivers-ri
+ de/
+URL:https://cycleforchange.org/rides/little-rock-ar-abc-sunday-two-rivers
+ -ride/
+END:VEVENT
+END:VCALENDAR

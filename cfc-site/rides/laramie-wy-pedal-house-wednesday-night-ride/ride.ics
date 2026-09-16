@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:laramie-wy-pedal-house-wednesday-night-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Denver:20260916T170000
+DTEND;TZID=America/Denver:20260916T190000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Wednesday Night Pedal House Ride — Laramie\, WY
+LOCATION:Pedal House\, 207 S 1st St\, Laramie\, WY 82070
+DESCRIPTION:Pace: paceline; regroups\, everyone returns together.\nSchedu
+ le: Every Wednesday\, 5:00 pm.\nConfirm with the host before you go.\nht
+ tps://cycleforchange.org/rides/laramie-wy-pedal-house-wednesday-night-ri
+ de/
+URL:https://cycleforchange.org/rides/laramie-wy-pedal-house-wednesday-nig
+ ht-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:des-moines-ia-monday-night-no-drop-road-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260921T180000
+DTEND;TZID=America/Chicago:20260921T193000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20260930T235959Z
+SUMMARY:Monday Night No-Drop Road Ride (MNNDR) — Des Moines\, IA
+LOCATION:Great Western Trail trailhead\, 4343 George Flagg Pkwy\, Des Moi
+ nes\, IA 50321
+DESCRIPTION:Pace: ~17 mph average\, conversational; riders should be able
+  to hold 14 mph.\nNo-drop.\nSchedule: Every Monday\, 6:00 pm sharp\, fro
+ m the start of Daylight Saving Time to Labor Day.\nConfirm with the host
+  before you go.\nhttps://cycleforchange.org/rides/des-moines-ia-monday-n
+ ight-no-drop-road-ride/
+URL:https://cycleforchange.org/rides/des-moines-ia-monday-night-no-drop-r
+ oad-ride/
+END:VEVENT
+END:VCALENDAR

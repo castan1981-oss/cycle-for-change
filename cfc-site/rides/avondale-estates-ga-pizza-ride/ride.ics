@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:avondale-estates-ga-pizza-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260917T180000
+DTEND;TZID=America/New_York:20260917T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Pizza Ride — Avondale Estates\, GA
+LOCATION:Art Lot\, 70 N Avondale Rd\, Avondale Estates\, GA 30002
+DESCRIPTION:Pace: moderate to strenuous\, several paces.\nSchedule: Every
+  Thursday\, 6:00 pm.\nConfirm with the host before you go.\nhttps://cycl
+ eforchange.org/rides/avondale-estates-ga-pizza-ride/
+URL:https://cycleforchange.org/rides/avondale-estates-ga-pizza-ride/
+END:VEVENT
+END:VCALENDAR

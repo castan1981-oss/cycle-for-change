@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fort-lauderdale-fl-critical-mass@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260925T193000
+DTEND;TZID=America/New_York:20260925T213000
+RRULE:FREQ=MONTHLY;BYDAY=-1FR
+SUMMARY:Fort Lauderdale Critical Mass — Fort Lauderdale\, FL
+LOCATION:Holiday Park\, 800 NE 8th St\, Fort Lauderdale\, FL 33304
+DESCRIPTION:Pace: C/D\, 12–17 mph.\nSchedule: Last Friday of the month\
+ , 7:30 pm.\nConfirm with the host before you go.\nhttps://cycleforchange
+ .org/rides/fort-lauderdale-fl-critical-mass/
+URL:https://cycleforchange.org/rides/fort-lauderdale-fl-critical-mass/
+END:VEVENT
+END:VCALENDAR

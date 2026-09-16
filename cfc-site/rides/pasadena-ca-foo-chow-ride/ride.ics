@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:pasadena-ca-foo-chow-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Los_Angeles:20261006T190000
+DTEND;TZID=America/Los_Angeles:20261006T210000
+RRULE:FREQ=MONTHLY;BYDAY=1TU,3TU
+SUMMARY:FOO CHOW Ride — Pasadena\, CA
+LOCATION:Incycle Pasadena\, 175 S Fair Oaks Ave\, Pasadena\, CA 91105
+DESCRIPTION:Pace: medium to spicy\, regroups at major turns and tops of c
+ limbs.\nSchedule: 1st and 3rd Tuesday of the month\, meet 6:45 pm\, roll
+  7:00 pm.\nConfirm with the host before you go.\nhttps://cycleforchange.
+ org/rides/pasadena-ca-foo-chow-ride/
+URL:https://cycleforchange.org/rides/pasadena-ca-foo-chow-ride/
+END:VEVENT
+END:VCALENDAR

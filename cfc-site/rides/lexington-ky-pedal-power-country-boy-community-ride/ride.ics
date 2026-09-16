@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:lexington-ky-pedal-power-country-boy-community-ride@cycleforchange.or
+ g
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260916T183000
+DTEND;TZID=America/New_York:20260916T200000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=WE
+SUMMARY:Pedal Power x Country Boy Community Bike Ride — Lexington\, KY
+LOCATION:Country Boy Brewing\, 436 Chair Ave\, Lexington\, KY 40508
+DESCRIPTION:Pace: social\, no-drop.\nNo-drop.\nSchedule: 2nd and 4th Wedn
+ esdays; meet 6:15 pm\, roll 6:30 pm.\nConfirm with the host before you g
+ o.\nhttps://cycleforchange.org/rides/lexington-ky-pedal-power-country-bo
+ y-community-ride/
+URL:https://cycleforchange.org/rides/lexington-ky-pedal-power-country-boy
+ -community-ride/
+END:VEVENT
+END:VCALENDAR

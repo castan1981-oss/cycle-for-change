@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:middletown-ct-pedal-power-sunday-beginner-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260920T140000
+DTEND;TZID=America/New_York:20260920T160000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Pedal Power Sunday Beginner Ride — Middletown\, CT
+LOCATION:Rotating (check ride page each week)
+DESCRIPTION:Pace: beginner.\nNo-drop.\nSchedule: Sundays\, 2:00 pm; start
+  point rotates around the Middletown area.\nConfirm with the host before
+  you go.\nhttps://cycleforchange.org/rides/middletown-ct-pedal-power-sun
+ day-beginner-ride/
+URL:https://cycleforchange.org/rides/middletown-ct-pedal-power-sunday-beg
+ inner-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:red-bank-nj-jsts-weeknight-rides@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260916T173000
+DTEND;TZID=America/New_York:20260916T193000
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE
+SUMMARY:JSTS Weeknight Rides (Jersey Shore Touring Society) — Red Bank\
+ , NJ
+LOCATION:Red Bank\, NJ
+DESCRIPTION:Pace: A/B+\, B\, B/C groups.\nSchedule: Tuesday and Wednesday
+  evenings\, roughly 4:45–5:30 pm as sunset shifts; weekend morning rid
+ es too.\nConfirm with the host before you go.\nhttps://cycleforchange.or
+ g/rides/red-bank-nj-jsts-weeknight-rides/
+URL:https://cycleforchange.org/rides/red-bank-nj-jsts-weeknight-rides/
+END:VEVENT
+END:VCALENDAR

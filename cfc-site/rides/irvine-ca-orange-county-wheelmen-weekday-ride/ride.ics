@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:irvine-ca-orange-county-wheelmen-weekday-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Los_Angeles:20260917T090000
+DTEND;TZID=America/Los_Angeles:20260917T110000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH
+SUMMARY:OCW Tuesday/Thursday Ride — Irvine\, CA
+LOCATION:Bill Barber Park\, 4 Civic Center Plaza\, Irvine\, CA 92606
+DESCRIPTION:Pace: all abilities\, Class 1 e-bikes allowed.\nSchedule: Eve
+ ry Tuesday and Thursday\, 9:00 am (weekend rides too).\nConfirm with the
+  host before you go.\nhttps://cycleforchange.org/rides/irvine-ca-orange-
+ county-wheelmen-weekday-ride/
+URL:https://cycleforchange.org/rides/irvine-ca-orange-county-wheelmen-wee
+ kday-ride/
+END:VEVENT
+END:VCALENDAR

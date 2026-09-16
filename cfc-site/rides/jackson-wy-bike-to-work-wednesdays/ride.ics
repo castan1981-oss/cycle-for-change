@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:jackson-wy-bike-to-work-wednesdays@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Denver:20270602T073000
+DTEND;TZID=America/Denver:20270602T093000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20270831T235959Z
+SUMMARY:Bike to Work Wednesdays — Jackson\, WY
+LOCATION:Jackson\, WY
+DESCRIPTION:Pace: commute pace.\nNo-drop.\nSchedule: Every Wednesday in s
+ ummer\, 7:30–9:00 am; location rotates weekly.\nConfirm with the host 
+ before you go.\nhttps://cycleforchange.org/rides/jackson-wy-bike-to-work
+ -wednesdays/
+URL:https://cycleforchange.org/rides/jackson-wy-bike-to-work-wednesdays/
+END:VEVENT
+END:VCALENDAR

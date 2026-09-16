@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:denton-tx-east-side-social-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260917T193000
+DTEND;TZID=America/Chicago:20260917T203000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:East Side Social Ride — Denton\, TX
+LOCATION:East Side Denton\, 117 E Oak St\, Denton\, TX 76201
+DESCRIPTION:Pace: 11–14 mph.\nNo-drop.\nSchedule: Every Thursday\, 7:30
+  pm.\nConfirm with the host before you go.\nhttps://cycleforchange.org/r
+ ides/denton-tx-east-side-social-ride/
+URL:https://cycleforchange.org/rides/denton-tx-east-side-social-ride/
+END:VEVENT
+END:VCALENDAR

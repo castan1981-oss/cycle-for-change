@@ -5,16 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>Group rides in Louisiana — Cycle for Change</title>
-  <meta name="description" content="8 recurring bicycle group rides in Louisiana — Baton Rouge, Lafayette, New Orleans, Shreveport. Day, time, start point, pace and links for each.">
+  <title>Group rides in Louisiana (8 rides, 4 cities) | Cycle for Change</title>
+  <meta name="description" content="8 recurring bicycle group rides in Louisiana — Baton Rouge, Lafayette, New Orleans, Shreveport. Day, time, start point, pace and what to bring for each.">
   <link rel="canonical" href="https://cycleforchange.org/rides/la/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Group rides in Louisiana — Cycle for Change">
-  <meta property="og:description" content="8 recurring bicycle group rides in Louisiana — Baton Rouge, Lafayette, New Orleans, Shreveport. Day, time, start point, pace and links for each.">
+  <meta property="og:site_name" content="Cycle for Change">
+  <meta property="og:title" content="Group rides in Louisiana (8 rides, 4 cities)">
+  <meta property="og:description" content="8 recurring bicycle group rides in Louisiana — Baton Rouge, Lafayette, New Orleans, Shreveport. Day, time, start point, pace and what to bring for each.">
   <meta property="og:url" content="https://cycleforchange.org/rides/la/">
+  <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Group rides in Louisiana — Cycle for Change">
-  <meta name="twitter:description" content="8 recurring bicycle group rides in Louisiana — Baton Rouge, Lafayette, New Orleans, Shreveport. Day, time, start point, pace and links for each.">
+  <meta name="twitter:title" content="Group rides in Louisiana (8 rides, 4 cities)">
+  <meta name="twitter:description" content="8 recurring bicycle group rides in Louisiana — Baton Rouge, Lafayette, New Orleans, Shreveport. Day, time, start point, pace and what to bring for each.">
+  <meta name="twitter:image" content="https://cycleforchange.org/og-cfc.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,15 +28,50 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Group rides in Louisiana",
-  "description": "8 recurring bicycle group rides in Louisiana: Baton Rouge, Lafayette, New Orleans, Shreveport.",
-  "url": "https://cycleforchange.org/rides/la/",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Cycle for Change",
-    "url": "https://cycleforchange.org/"
-  }
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://cycleforchange.org/rides/la/",
+      "name": "Group rides in Louisiana",
+      "description": "8 recurring bicycle group rides in Louisiana — Baton Rouge, Lafayette, New Orleans, Shreveport. Day, time, start point, pace and what to bring for each.",
+      "url": "https://cycleforchange.org/rides/la/",
+      "dateModified": "2026-09-15",
+      "author": {
+        "@type": "Person",
+        "name": "Robert Castan",
+        "url": "https://cycleforchange.org/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Cycle for Change",
+        "url": "https://cycleforchange.org/",
+        "logo": "https://cycleforchange.org/favicon-512.png"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Cycle for Change",
+            "item": "https://cycleforchange.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Group rides",
+            "item": "https://cycleforchange.org/rides/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Louisiana",
+            "item": "https://cycleforchange.org/rides/la/"
+          }
+        ]
+      }
+    }
+  ]
 }
   </script>
 </head>
@@ -51,11 +91,9 @@
       <span class="word">Cycle for Change</span>
     </a>
     <nav class="links" aria-label="Primary">
-      <a href="/#tally">The tally</a>
-      <a href="/field-notes/">Field Notes</a>
-      <a href="/resources/">Resources</a>
       <a href="/rides/">Group rides</a>
-      <a href="/#vote">Vote</a>
+      <a href="/events/">Events</a>
+      <a href="/rides/#submit">Add a ride</a>
     </nav>
     <div class="nav-right">
       <a href="/#board" class="btn btn-dark">Pledge a mile →</a>
@@ -66,18 +104,53 @@
 <main class="fn-pillar gr-dir">
   <header class="fn-pillar-head">
     <div class="wrap">
-      <span class="eyebrow"><a href="/rides/">Group rides</a> · Louisiana</span>
+      <nav class="gr-crumbs" aria-label="Breadcrumb"><a href="/">Cycle for Change</a><span class="sep" aria-hidden="true">›</span><a href="/rides/">Group rides</a><span class="sep" aria-hidden="true">›</span><span aria-current="page">Louisiana</span></nav>
       <h1>Group rides in Louisiana</h1>
-      <p class="fn-pillar-intro">8 recurring group rides in Louisiana, across 4 cities. Each one has its own page with the day, time, start point and links.</p>
+      <p class="fn-pillar-intro">8 recurring group rides around Louisiana: 7 social, 3 cruiser, 1 road. 5 roll on weeknights, 2 on weekends. New to group rides? Start with <a href="/rides/baton-rouge-la-downtown-east-social-ride/">Downtown East Social Ride</a> in Baton Rouge — it's no-drop, nobody gets left.</p>
       <div class="fn-line" aria-hidden="true"><i data-line></i></div>
     </div>
   </header>
+
+  <section class="gr-search-wrap">
+    <div class="wrap">
+      <form class="gr-search" role="search" id="gr-form" onsubmit="return false">
+        <label class="visually-hidden" for="gr-q">Search by city, state or ride name</label>
+        <input id="gr-q" type="search" placeholder="City or ride name" autocomplete="off" list="gr-cities">
+        <datalist id="gr-cities"><option value="Baton Rouge, LA"><option value="Lafayette, LA"><option value="New Orleans, LA"><option value="Shreveport, LA"></datalist>
+        <button type="button" class="btn btn-dark" id="gr-geo">Near me</button>
+      </form>
+      <div class="gr-filters">
+        <div class="gr-filter-row"><span class="gr-filter-label">Bike</span>
+          <button type="button" class="gr-chip" data-filter="disc" data-value="road" aria-pressed="false">Road</button>
+          <button type="button" class="gr-chip" data-filter="disc" data-value="social" aria-pressed="false">Social</button>
+          <button type="button" class="gr-chip" data-filter="disc" data-value="cruiser" aria-pressed="false">Cruiser</button>
+        </div>
+        <div class="gr-filter-row"><span class="gr-filter-label">Made for</span>
+          <button type="button" class="gr-chip" data-filter="tag" data-value="beginner" aria-pressed="false">Beginner friendly</button>
+          <button type="button" class="gr-chip" data-filter="tag" data-value="no-drop" aria-pressed="false">No-drop</button>
+          <button type="button" class="gr-chip" data-filter="tag" data-value="family" aria-pressed="false">Family</button>
+        </div>
+        <div class="gr-filter-row"><span class="gr-filter-label">When</span>
+          <select id="gr-day" aria-label="Day of week"><option value="">Any day</option><option value="today">Today</option><option value="weekend">This weekend</option><option value="mon">Mondays</option><option value="tue">Tuesdays</option><option value="wed">Wednesdays</option><option value="thu">Thursdays</option><option value="fri">Fridays</option><option value="sat">Saturdays</option><option value="sun">Sundays</option></select>
+          <button type="button" class="gr-clear" id="gr-clear" hidden>Clear all</button>
+        </div>
+      </div>
+      <p class="gr-status" id="gr-status" aria-live="polite" data-total="8">8 rides</p>
+    </div>
+  </section>
   <section class="gr-results-wrap">
     <div class="wrap">
       <h2 class="fn-spokes-head">Group rides in Louisiana, by city</h2>
-
-      <section class="gr-state">
-        <h3 class="gr-state-head">Baton Rouge <span class="gr-count">2</span></h3>
+      <nav class="gr-states" aria-label="Jump to a city">
+          <a href="#baton-rouge">Baton Rouge <small>2</small></a>
+          <a href="#lafayette">Lafayette <small>1</small></a>
+          <a href="/rides/la/new-orleans/">New Orleans <small>3</small></a>
+          <a href="#shreveport">Shreveport <small>2</small></a>
+      </nav>
+      <div id="gr-nearby" class="gr-grid gr-nearby" hidden></div>
+      <div id="gr-states">
+      <section class="gr-state" id="baton-rouge">
+        <h2 class="gr-state-head">Baton Rouge <span class="gr-count">2</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/baton-rouge-la-downtown-east-social-ride/"
    data-name="Downtown East Social Ride" data-city="Baton Rouge" data-state="LA"
@@ -87,7 +160,8 @@
   <span class="gr-card-top"><span class="gr-disc">Social</span></span>
   <span class="gr-card-name">Downtown East Social Ride</span>
   <span class="gr-card-place">Baton Rouge, LA · Downtown East</span>
-  <span class="gr-card-when">Every Monday, 6:00 pm (weather permitting)</span>
+  <span class="gr-card-when">Every Monday, 6:00 pm</span>
+  <span class="gr-card-stat">7–10 mi · pace of the slowest rider</span>
   <span class="gr-tags"><span class="gr-tag">No-drop</span><span class="gr-tag">Beginner friendly</span><span class="gr-tag">Family</span></span>
 </a>
 <a class="gr-card" href="/rides/baton-rouge-la-geaux-ride-thursday-night-community-ride/"
@@ -98,14 +172,15 @@
   <span class="gr-card-top"><span class="gr-disc">Social · Cruiser</span></span>
   <span class="gr-card-name">Geaux Ride Thursday Night Community Ride</span>
   <span class="gr-card-place">Baton Rouge, LA · Downtown</span>
-  <span class="gr-card-when">Every Thursday, meet 7:30 pm, roll 7:45 pm, back by 9:30 pm</span>
+  <span class="gr-card-when">Every Thursday, 7:45 pm</span>
+  <span class="gr-card-stat">slow, family friendly</span>
   <span class="gr-tags"><span class="gr-tag">Family</span><span class="gr-tag">Beginner friendly</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Lafayette <span class="gr-count">1</span></h3>
+      <section class="gr-state" id="lafayette">
+        <h2 class="gr-state-head">Lafayette <span class="gr-count">1</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/lafayette-la-bike-lafayette-saturday-ride/"
    data-name="Bike Lafayette Saturday Community Ride" data-city="Lafayette" data-state="LA"
@@ -116,13 +191,14 @@
   <span class="gr-card-name">Bike Lafayette Saturday Community Ride</span>
   <span class="gr-card-place">Lafayette, LA</span>
   <span class="gr-card-when">Second and last Saturday of each month; details on Facebook</span>
-  
+  <span class="gr-card-stat">social</span>
+  <span class="gr-tags"><span class="gr-tag gr-tag-warn">Unconfirmed</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">New Orleans <span class="gr-count">3</span></h3>
+      <section class="gr-state" id="new-orleans">
+        <h2 class="gr-state-head"><a href="/rides/la/new-orleans/">New Orleans</a> <span class="gr-count">3</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/new-orleans-la-getupnride-tuesday-ride/"
    data-name="Get Up N Ride Tuesday Ride" data-city="New Orleans" data-state="LA"
@@ -133,7 +209,8 @@
   <span class="gr-card-name">Get Up N Ride Tuesday Ride</span>
   <span class="gr-card-place">New Orleans, LA</span>
   <span class="gr-card-when">Every Tuesday evening</span>
-  
+  <span class="gr-card-stat">social</span>
+  <span class="gr-tags"><span class="gr-tag gr-tag-warn">Unconfirmed</span></span>
 </a>
 <a class="gr-card" href="/rides/new-orleans-la-nola-social-ride-happy-thursday/"
    data-name="NOLA Social Ride Happy Thursday" data-city="New Orleans" data-state="LA"
@@ -143,7 +220,8 @@
   <span class="gr-card-top"><span class="gr-disc">Social · Cruiser</span></span>
   <span class="gr-card-name">NOLA Social Ride Happy Thursday</span>
   <span class="gr-card-place">New Orleans, LA</span>
-  <span class="gr-card-when">Every Thursday, 7:00 pm meet, ride leaves 8:00 pm. Start rotates by week of the month (Uptown, Mid-City and more)</span>
+  <span class="gr-card-when">Every Thursday, 8:00 pm</span>
+  <span class="gr-card-stat">10 mi · slow paced</span>
   <span class="gr-tags"><span class="gr-tag">No-drop</span></span>
 </a>
 <a class="gr-card" href="/rides/new-orleans-la-nola-social-ride-thursday/"
@@ -155,13 +233,14 @@
   <span class="gr-card-name">NOLA Social Ride Thursday Night Ride</span>
   <span class="gr-card-place">New Orleans, LA</span>
   <span class="gr-card-when">Every Thursday night; start posted weekly on Facebook</span>
-  <span class="gr-tags"><span class="gr-tag">Beginner friendly</span></span>
+  <span class="gr-card-stat">social</span>
+  <span class="gr-tags"><span class="gr-tag">Beginner friendly</span><span class="gr-tag gr-tag-warn">Unconfirmed</span></span>
 </a>
         </div>
       </section>
 
-      <section class="gr-state">
-        <h3 class="gr-state-head">Shreveport <span class="gr-count">2</span></h3>
+      <section class="gr-state" id="shreveport">
+        <h2 class="gr-state-head">Shreveport <span class="gr-count">2</span></h2>
         <div class="gr-grid">
 <a class="gr-card" href="/rides/shreveport-la-sb-rides-led-cruiser-ride/"
    data-name="SB Rides LED Night Ride" data-city="Shreveport" data-state="LA"
@@ -172,6 +251,7 @@
   <span class="gr-card-name">SB Rides LED Night Ride</span>
   <span class="gr-card-place">Shreveport, LA · Downtown</span>
   <span class="gr-card-when">Select evenings, roughly every week or two in summer, 8:00 pm; dates on Instagram</span>
+  <span class="gr-card-stat">casual</span>
   <span class="gr-tags"><span class="gr-tag">Beginner friendly</span></span>
 </a>
 <a class="gr-card" href="/rides/shreveport-la-shreveport-bicycle-club-saturday-ride/"
@@ -182,11 +262,19 @@
   <span class="gr-card-top"><span class="gr-disc">Road</span></span>
   <span class="gr-card-name">Shreveport Bicycle Club Saturday Ride</span>
   <span class="gr-card-place">Shreveport, LA · Southeast Shreveport</span>
-  <span class="gr-card-when">Every Saturday, 7:30 am; also Tuesday and Thursday rides</span>
+  <span class="gr-card-when">Every Saturday, 7:30 am</span>
   
+  <span class="gr-tags"><span class="gr-tag gr-tag-warn">Unconfirmed</span></span>
 </a>
         </div>
       </section>
+      </div>
+      <div class="gr-empty" id="gr-empty" hidden>
+        <p>No rides match here.</p>
+        <p class="gr-empty-actions"><button type="button" class="gr-chip" id="gr-widen">Show the closest rides anyway</button> <a class="gr-chip" href="/rides/">Search the whole country</a> <button type="button" class="gr-chip" data-clear>Clear filters</button></p>
+      </div>
+
+      <p class="gr-hub-foot">Rides here were last checked 2026-09-15. Wrong or gone? Use "Is this right?" on the ride's page. Know one we're missing? <a href="/rides/#submit">Add it</a>.</p>
       <p class="fn-back"><a href="/rides/">← All states</a></p>
     </div>
   </section>
@@ -211,5 +299,7 @@
 </footer>
 
 <script src="/field-notes/field-notes.js" defer></script>
+<script id="gr-index" type="application/json">{"cities":[["Baton Rouge, LA",30.4465,-91.181],["Lafayette, LA",30.2241,-92.0198],["New Orleans, LA",29.9511,-90.0715],["Shreveport, LA",32.4601,-93.7401]],"states":[["AL","Alabama"],["AK","Alaska"],["AZ","Arizona"],["AR","Arkansas"],["CA","California"],["CO","Colorado"],["CT","Connecticut"],["DE","Delaware"],["DC","Washington, DC"],["FL","Florida"],["GA","Georgia"],["HI","Hawaii"],["ID","Idaho"],["IL","Illinois"],["IN","Indiana"],["IA","Iowa"],["KS","Kansas"],["KY","Kentucky"],["LA","Louisiana"],["ME","Maine"],["MD","Maryland"],["MA","Massachusetts"],["MI","Michigan"],["MN","Minnesota"],["MS","Mississippi"],["MO","Missouri"],["MT","Montana"],["NE","Nebraska"],["NV","Nevada"],["NH","New Hampshire"],["NJ","New Jersey"],["NM","New Mexico"],["NY","New York"],["NC","North Carolina"],["ND","North Dakota"],["OH","Ohio"],["OK","Oklahoma"],["OR","Oregon"],["PA","Pennsylvania"],["RI","Rhode Island"],["SC","South Carolina"],["SD","South Dakota"],["TN","Tennessee"],["TX","Texas"],["UT","Utah"],["VT","Vermont"],["VA","Virginia"],["WA","Washington"],["WV","West Virginia"],["WI","Wisconsin"],["WY","Wyoming"],["PR","Puerto Rico"]],"hubs":[["CO","Denver","/rides/co/denver/"],["CA","Long Beach","/rides/ca/long-beach/"],["CA","Los Angeles","/rides/ca/los-angeles/"],["MN","Minneapolis","/rides/mn/minneapolis/"],["ME","Portland","/rides/me/portland/"],["PA","Philadelphia","/rides/pa/philadelphia/"],["CA","San Diego","/rides/ca/san-diego/"],["NY","New York","/rides/ny/new-york/"],["GA","Atlanta","/rides/ga/atlanta/"],["CA","San Francisco","/rides/ca/san-francisco/"],["OK","Oklahoma City","/rides/ok/oklahoma-city/"],["AZ","Phoenix","/rides/az/phoenix/"],["IL","Chicago","/rides/il/chicago/"],["WA","Seattle","/rides/wa/seattle/"],["AZ","Tucson","/rides/az/tucson/"],["DC","Washington","/rides/dc/washington/"],["HI","Honolulu","/rides/hi/honolulu/"],["WI","Madison","/rides/wi/madison/"],["MA","Boston","/rides/ma/boston/"],["CO","Boulder","/rides/co/boulder/"],["FL","Miami","/rides/fl/miami/"],["OH","Columbus","/rides/oh/columbus/"],["OR","Portland","/rides/or/portland/"],["OH","Cincinnati","/rides/oh/cincinnati/"],["UT","Salt Lake City","/rides/ut/salt-lake-city/"],["MD","Baltimore","/rides/md/baltimore/"],["CT","Middletown","/rides/ct/middletown/"],["AZ","Sedona","/rides/az/sedona/"],["FL","Orlando","/rides/fl/orlando/"],["WA","Tacoma","/rides/wa/tacoma/"],["TX","Austin","/rides/tx/austin/"],["TX","Denton","/rides/tx/denton/"],["MI","Detroit","/rides/mi/detroit/"],["CO","Fort Collins","/rides/co/fort-collins/"],["TX","Houston","/rides/tx/houston/"],["NV","Las Vegas","/rides/nv/las-vegas/"],["AR","Little Rock","/rides/ar/little-rock/"],["KY","Louisville","/rides/ky/louisville/"],["LA","New Orleans","/rides/la/new-orleans/"],["PA","Pittsburgh","/rides/pa/pittsburgh/"],["NY","Buffalo","/rides/ny/buffalo/"],["CO","Colorado Springs","/rides/co/colorado-springs/"],["IA","Iowa City","/rides/ia/iowa-city/"],["MI","Kalamazoo","/rides/mi/kalamazoo/"],["NJ","Jersey City","/rides/nj/jersey-city/"],["VA","Norfolk","/rides/va/norfolk/"],["NE","Omaha","/rides/ne/omaha/"],["NH","Portsmouth","/rides/nh/portsmouth/"],["NV","Reno","/rides/nv/reno/"],["VA","Roanoke","/rides/va/roanoke/"],["FL","St. Petersburg","/rides/fl/st-petersburg/"],["CA","Ventura","/rides/ca/ventura/"],["SC","Charleston","/rides/sc/charleston/"],["CA","Carlsbad","/rides/ca/carlsbad/"],["MO","St. Louis","/rides/mo/st-louis/"],["TN","Memphis","/rides/tn/memphis/"],["VT","Stowe","/rides/vt/stowe/"],["FL","Fort Lauderdale","/rides/fl/fort-lauderdale/"]]}</script>
+<script src="/rides/rides.js" defer></script>
 </body>
 </html>

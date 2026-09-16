@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fairview-pa-girls-gone-cycle-monday-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20270405T180000
+DTEND;TZID=America/New_York:20270405T193000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20270831T235959Z
+SUMMARY:Girls Gone Cycle Monday Ride — Fairview\, PA
+LOCATION:Walnut Creek Middle School parking lot\, 5901 Sterrettania Rd\, 
+ Fairview\, PA 16415
+DESCRIPTION:Pace: all levels.\nSchedule: Every Monday\, April–August; m
+ eet 5:45 pm\, roll 6:00 pm.\nConfirm with the host before you go.\nhttps
+ ://cycleforchange.org/rides/fairview-pa-girls-gone-cycle-monday-ride/
+URL:https://cycleforchange.org/rides/fairview-pa-girls-gone-cycle-monday-
+ ride/
+END:VEVENT
+END:VCALENDAR

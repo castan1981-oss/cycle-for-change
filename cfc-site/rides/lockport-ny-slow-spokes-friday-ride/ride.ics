@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:lockport-ny-slow-spokes-friday-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260918T180000
+DTEND;TZID=America/New_York:20260918T200000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+SUMMARY:Slow Spokes Friday Ride in Lockport — Lockport\, NY
+LOCATION:Wide Waters Cafe\, 767 Market St\, Lockport\, NY 14094
+DESCRIPTION:Pace: relaxed\, social.\nNo-drop.\nSchedule: Every Friday\, 6
+ :00 pm.\nConfirm with the host before you go.\nhttps://cycleforchange.or
+ g/rides/lockport-ny-slow-spokes-friday-ride/
+URL:https://cycleforchange.org/rides/lockport-ny-slow-spokes-friday-ride/
+END:VEVENT
+END:VCALENDAR

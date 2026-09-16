@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:arlington-va-nova-cbg-tuesday-night-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260922T183000
+DTEND;TZID=America/New_York:20260922T203000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Tuesday Night Ride (NoVA Casual Bicycling Group) — Arlington\, 
+ VA
+LOCATION:Shirlington Library\, 4200 Campbell Ave\, Arlington\, VA 22206
+DESCRIPTION:Pace: no-drop\, up to 15 mph.\nNo-drop.\nSchedule: Tuesdays\,
+  6:30 pm.\nConfirm with the host before you go.\nhttps://cycleforchange.
+ org/rides/arlington-va-nova-cbg-tuesday-night-ride/
+URL:https://cycleforchange.org/rides/arlington-va-nova-cbg-tuesday-night-
+ ride/
+END:VEVENT
+END:VCALENDAR

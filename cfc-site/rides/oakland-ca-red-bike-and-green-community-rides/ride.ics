@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:oakland-ca-red-bike-and-green-community-rides@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Los_Angeles:20261002T180000
+DTEND;TZID=America/Los_Angeles:20261002T200000
+RRULE:FREQ=MONTHLY;BYDAY=1FR
+SUMMARY:Red Bike & Green Community Rides — Oakland\, CA
+LOCATION:Lake Merritt Pergola\, Lake Merritt Pergola\, Oakland\, CA 94610
+DESCRIPTION:Pace: casual.\nSchedule: First Friday\, 6:00 pm\, and second 
+ Saturday\, 12:00 pm.\nConfirm with the host before you go.\nhttps://cycl
+ eforchange.org/rides/oakland-ca-red-bike-and-green-community-rides/
+URL:https://cycleforchange.org/rides/oakland-ca-red-bike-and-green-commun
+ ity-rides/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:salt-lake-city-ut-wasatch-mountain-club-tuesday-mtb-ride@cycleforchan
+ ge.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Denver:20260922T170000
+DTEND;TZID=America/Denver:20260922T190000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Wasatch Mountain Club Tuesday Night Mountain Bike Ride — Salt L
+ ake City\, UT
+LOCATION:Salt Lake City\, UT
+DESCRIPTION:Pace: all levels.\nSchedule: Every Tuesday\, 5:00 pm; trailhe
+ ad announced the Sunday or Monday before.\nConfirm with the host before 
+ you go.\nhttps://cycleforchange.org/rides/salt-lake-city-ut-wasatch-moun
+ tain-club-tuesday-mtb-ride/
+URL:https://cycleforchange.org/rides/salt-lake-city-ut-wasatch-mountain-c
+ lub-tuesday-mtb-ride/
+END:VEVENT
+END:VCALENDAR

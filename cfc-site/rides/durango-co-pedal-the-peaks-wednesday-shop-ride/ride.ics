@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:durango-co-pedal-the-peaks-wednesday-shop-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Denver:20260916T180000
+DTEND;TZID=America/Denver:20260916T200000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Pedal the Peaks Wednesday Shop Ride — Durango\, CO
+LOCATION:Pedal the Peaks\, 598 Main Ave Suite B\, Durango\, CO 81301
+DESCRIPTION:Schedule: Wednesdays\, 6:00–8:00 pm.\nConfirm with the host
+  before you go.\nhttps://cycleforchange.org/rides/durango-co-pedal-the-p
+ eaks-wednesday-shop-ride/
+URL:https://cycleforchange.org/rides/durango-co-pedal-the-peaks-wednesday
+ -shop-ride/
+END:VEVENT
+END:VCALENDAR

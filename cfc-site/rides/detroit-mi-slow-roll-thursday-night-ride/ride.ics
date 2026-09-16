@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:detroit-mi-slow-roll-thursday-night-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260917T183000
+DTEND;TZID=America/New_York:20260917T203000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20260930T235959Z
+SUMMARY:Slow Roll Detroit Thursday Night Ride — Detroit\, MI
+LOCATION:Chroma Detroit\, 2937 E Grand Blvd\, Detroit\, MI 48202
+DESCRIPTION:Pace: easy social pace\, 8–10 mph.\nNo-drop.\nSchedule: Eve
+ ry Thursday\, May through September. Meet 5:00 pm\, roll out 6:30 pm\, b
+ ack by 8:30 pm.\nConfirm with the host before you go.\nhttps://cycleforc
+ hange.org/rides/detroit-mi-slow-roll-thursday-night-ride/
+URL:https://cycleforchange.org/rides/detroit-mi-slow-roll-thursday-night-
+ ride/
+END:VEVENT
+END:VCALENDAR

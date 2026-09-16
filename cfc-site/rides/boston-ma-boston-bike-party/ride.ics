@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:boston-ma-boston-bike-party@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20261009T190000
+DTEND;TZID=America/New_York:20261009T210000
+RRULE:FREQ=MONTHLY;BYDAY=2FR
+SUMMARY:Boston Bike Party — Boston\, MA
+LOCATION:Copley Square\, Copley Square\, Boston\, MA 02116
+DESCRIPTION:Pace: casual.\nNo-drop.\nSchedule: Second Friday of every mon
+ th\, 7:00 pm.\nConfirm with the host before you go.\nhttps://cycleforcha
+ nge.org/rides/boston-ma-boston-bike-party/
+URL:https://cycleforchange.org/rides/boston-ma-boston-bike-party/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:washington-dc-dc-bike-party@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20261009T190000
+DTEND;TZID=America/New_York:20261009T210000
+RRULE:FREQ=MONTHLY;BYDAY=2FR
+SUMMARY:DC Bike Party — Washington\, DC
+LOCATION:Washington\, DC
+DESCRIPTION:Pace: leisurely.\nNo-drop.\nSchedule: Second Friday of every 
+ month\, 7:00 pm.\nConfirm with the host before you go.\nhttps://cyclefor
+ change.org/rides/washington-dc-dc-bike-party/
+URL:https://cycleforchange.org/rides/washington-dc-dc-bike-party/
+END:VEVENT
+END:VCALENDAR

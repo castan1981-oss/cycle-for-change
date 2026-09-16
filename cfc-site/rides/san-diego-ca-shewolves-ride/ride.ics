@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-diego-ca-shewolves-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Los_Angeles:20260917T191500
+DTEND;TZID=America/Los_Angeles:20260917T211500
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:SheWolves Ride — San Diego\, CA
+LOCATION:Bea Evenson Fountain\, Balboa Park\, Balboa Park\, San Diego\, C
+ A 92101
+DESCRIPTION:Pace: no-drop evening loop.\nNo-drop.\nSchedule: Thursday eve
+ nings\, 7:15 pm; dates posted on Instagram (reported as monthly).\nConfi
+ rm with the host before you go.\nhttps://cycleforchange.org/rides/san-di
+ ego-ca-shewolves-ride/
+URL:https://cycleforchange.org/rides/san-diego-ca-shewolves-ride/
+END:VEVENT
+END:VCALENDAR

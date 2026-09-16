@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hopewell-nj-sourland-cycles-saturday-no-drop-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260919T090000
+DTEND;TZID=America/New_York:20260919T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261031T235959Z
+SUMMARY:Saturday No-Drop Road Ride (Sourland Cycles) — Hopewell\, NJ
+LOCATION:Sourland Cycles\, Hopewell\, NJ 08525
+DESCRIPTION:Pace: beginner\, builds through the season.\nNo-drop.\nSchedu
+ le: Saturdays\, 9:00 am\, spring through fall.\nConfirm with the host be
+ fore you go.\nhttps://cycleforchange.org/rides/hopewell-nj-sourland-cycl
+ es-saturday-no-drop-ride/
+URL:https://cycleforchange.org/rides/hopewell-nj-sourland-cycles-saturday
+ -no-drop-ride/
+END:VEVENT
+END:VCALENDAR

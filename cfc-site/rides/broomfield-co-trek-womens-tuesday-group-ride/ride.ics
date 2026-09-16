@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:broomfield-co-trek-womens-tuesday-group-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Denver:20260922T180000
+DTEND;TZID=America/Denver:20260922T193000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Women's Tuesday Group Ride — Broomfield\, CO
+LOCATION:Trek Bicycle Broomfield\, 290 Nickel St #100\, Broomfield\, CO 8
+ 0020
+DESCRIPTION:Pace: no-drop\, 13–15 mph.\nNo-drop.\nSchedule: Every Tuesd
+ ay\, 6:00 pm (through mid-October).\nConfirm with the host before you go
+ .\nhttps://cycleforchange.org/rides/broomfield-co-trek-womens-tuesday-gr
+ oup-ride/
+URL:https://cycleforchange.org/rides/broomfield-co-trek-womens-tuesday-gr
+ oup-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:kansas-city-mo-kc-critical-mass@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260925T190000
+DTEND;TZID=America/Chicago:20260925T210000
+RRULE:FREQ=MONTHLY;BYDAY=-1FR
+SUMMARY:KC Critical Mass — Kansas City\, MO
+LOCATION:Sunfresh in Westport\, back lot off 40th & Pennsylvania\, 4001 M
+ ill St\, Kansas City\, MO 64111
+DESCRIPTION:Pace: slowest rider sets the pace.\nNo-drop.\nSchedule: Last 
+ Friday of every month\, meet ~6:30 pm\, roll ~7:00 pm.\nConfirm with the
+  host before you go.\nhttps://cycleforchange.org/rides/kansas-city-mo-kc
+ -critical-mass/
+URL:https://cycleforchange.org/rides/kansas-city-mo-kc-critical-mass/
+END:VEVENT
+END:VCALENDAR

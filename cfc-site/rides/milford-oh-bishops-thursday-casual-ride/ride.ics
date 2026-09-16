@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:milford-oh-bishops-thursday-casual-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260917T181500
+DTEND;TZID=America/New_York:20260917T194500
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Thursday Bishop's Casual Ride — Milford\, OH
+LOCATION:Bishop's Bicycles\, 313 Main St\, Milford\, OH 45150
+DESCRIPTION:Pace: pace of the slowest rider.\nNo-drop.\nSchedule: Every T
+ hursday\, 6:15 pm.\nConfirm with the host before you go.\nhttps://cyclef
+ orchange.org/rides/milford-oh-bishops-thursday-casual-ride/
+URL:https://cycleforchange.org/rides/milford-oh-bishops-thursday-casual-r
+ ide/
+END:VEVENT
+END:VCALENDAR

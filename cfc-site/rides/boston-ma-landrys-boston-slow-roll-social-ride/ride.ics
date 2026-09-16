@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:boston-ma-landrys-boston-slow-roll-social-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260921T180000
+DTEND;TZID=America/New_York:20260921T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Landry's Boston Slow Roll Social Ride — Boston\, MA
+LOCATION:Landry's Bicycles\, Boston store\, Boston\, MA
+DESCRIPTION:Pace: casual.\nNo-drop.\nSchedule: Mondays\, 6:00 pm\, spring
+  through mid-September (2026 season ended 9/14).\nConfirm with the host 
+ before you go.\nhttps://cycleforchange.org/rides/boston-ma-landrys-bosto
+ n-slow-roll-social-ride/
+URL:https://cycleforchange.org/rides/boston-ma-landrys-boston-slow-roll-s
+ ocial-ride/
+END:VEVENT
+END:VCALENDAR

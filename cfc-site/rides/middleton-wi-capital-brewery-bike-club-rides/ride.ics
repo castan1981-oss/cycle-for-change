@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:middleton-wi-capital-brewery-bike-club-rides@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260917T173000
+DTEND;TZID=America/Chicago:20260917T193000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20260930T235959Z
+SUMMARY:Capital Brewery Bike Club Tuesday and Thursday Rides — Middleto
+ n\, WI
+LOCATION:Capital Brewery Beer Garden\, 7734 Terrace Ave\, Middleton\, WI 
+ 53562
+DESCRIPTION:Pace: A: 20–25 mph\, 20–35 mi. B: 16–20 mph\, 20–30 m
+ i. C: 12–16 mph\, 18–28 mi (e-bikes welcome).\nSchedule: Tuesdays an
+ d Thursdays\, 5:30 pm\, late May–mid September (Wednesdays are e-bike 
+ night).\nConfirm with the host before you go.\nhttps://cycleforchange.or
+ g/rides/middleton-wi-capital-brewery-bike-club-rides/
+URL:https://cycleforchange.org/rides/middleton-wi-capital-brewery-bike-cl
+ ub-rides/
+END:VEVENT
+END:VCALENDAR

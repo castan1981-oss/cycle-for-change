@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:phoenix-az-taco-tuesday-south-mountain@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Phoenix:20260922T191500
+DTEND;TZID=America/Phoenix:20260922T211500
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Taco Tuesday Ride at South Mountain — Phoenix\, AZ
+LOCATION:Kyrene de las Lomas Elementary School\, 11820 S Warner Elliot Lo
+ op\, Phoenix\, AZ 85044
+DESCRIPTION:Pace: advanced beginner and up.\nSchedule: Every Tuesday\, 7:
+ 15 pm.\nConfirm with the host before you go.\nhttps://cycleforchange.org
+ /rides/phoenix-az-taco-tuesday-south-mountain/
+URL:https://cycleforchange.org/rides/phoenix-az-taco-tuesday-south-mounta
+ in/
+END:VEVENT
+END:VCALENDAR

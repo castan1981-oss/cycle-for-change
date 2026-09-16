@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-francisco-ca-critical-mass@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Los_Angeles:20260925T173000
+DTEND;TZID=America/Los_Angeles:20260925T193000
+RRULE:FREQ=MONTHLY;BYDAY=-1FR
+SUMMARY:San Francisco Critical Mass — San Francisco\, CA
+LOCATION:Embarcadero Plaza (foot of Market Street)\, Embarcadero Plaza\, 
+ San Francisco\, CA 94111
+DESCRIPTION:Pace: mass ride\, slow.\nNo-drop.\nSchedule: Last Friday of e
+ very month\, 5:30 pm.\nConfirm with the host before you go.\nhttps://cyc
+ leforchange.org/rides/san-francisco-ca-critical-mass/
+URL:https://cycleforchange.org/rides/san-francisco-ca-critical-mass/
+END:VEVENT
+END:VCALENDAR

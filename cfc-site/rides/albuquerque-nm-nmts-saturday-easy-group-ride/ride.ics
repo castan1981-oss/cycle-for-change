@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:albuquerque-nm-nmts-saturday-easy-group-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Denver:20260919T090000
+DTEND;TZID=America/Denver:20260919T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:NMTS Saturday Easy Group Ride — Albuquerque\, NM
+LOCATION:Open Space Shining River parking lot\, Albuquerque\, NM
+DESCRIPTION:Pace: about 13 mph.\nSchedule: Every Saturday\, 9:00 am.\nCon
+ firm with the host before you go.\nhttps://cycleforchange.org/rides/albu
+ querque-nm-nmts-saturday-easy-group-ride/
+URL:https://cycleforchange.org/rides/albuquerque-nm-nmts-saturday-easy-gr
+ oup-ride/
+END:VEVENT
+END:VCALENDAR

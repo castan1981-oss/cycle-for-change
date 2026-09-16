@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:kapolei-hi-sunday-morning-coffee-jam@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=Pacific/Honolulu:20260920T071500
+DTEND;TZID=Pacific/Honolulu:20260920T091500
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Sunday Morning Coffee Jam — Kapolei\, HI
+LOCATION:Chili's parking lot\, Kapolei\, Kapolei\, HI 96707
+DESCRIPTION:Pace: fast social group\, no-drop\, all abilities.\nNo-drop.\
+ nSchedule: Every Sunday\, meet 7:00 am\, roll 7:15 am.\nConfirm with the
+  host before you go.\nhttps://cycleforchange.org/rides/kapolei-hi-sunday
+ -morning-coffee-jam/
+URL:https://cycleforchange.org/rides/kapolei-hi-sunday-morning-coffee-jam
+ /
+END:VEVENT
+END:VCALENDAR

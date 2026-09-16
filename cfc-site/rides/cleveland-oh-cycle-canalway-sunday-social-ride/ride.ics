@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:cleveland-oh-cycle-canalway-sunday-social-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260920T100000
+DTEND;TZID=America/New_York:20260920T120000
+RRULE:FREQ=MONTHLY;BYDAY=3SU;UNTIL=20260930T235959Z
+SUMMARY:Cycle Canalway Sunday Social Ride — Cleveland\, OH
+LOCATION:Canal Basin Park\, 989 West St\, Cleveland\, OH 44113
+DESCRIPTION:Pace: guided\, easy.\nSchedule: Third Sunday of the month\, J
+ une–September\, 10:00 am.\nConfirm with the host before you go.\nhttps
+ ://cycleforchange.org/rides/cleveland-oh-cycle-canalway-sunday-social-ri
+ de/
+URL:https://cycleforchange.org/rides/cleveland-oh-cycle-canalway-sunday-s
+ ocial-ride/
+END:VEVENT
+END:VCALENDAR

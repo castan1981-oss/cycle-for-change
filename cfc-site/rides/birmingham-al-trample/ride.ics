@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:birmingham-al-trample@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260917T180000
+DTEND;TZID=America/Chicago:20260917T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Trample — Birmingham\, AL
+LOCATION:Redemptive Cycles\, 906 1st Ave N\, Birmingham\, AL 35203
+DESCRIPTION:Pace: easy\, all levels.\nNo-drop.\nSchedule: Every Thursday\
+ , 6:00 pm.\nConfirm with the host before you go.\nhttps://cycleforchange
+ .org/rides/birmingham-al-trample/
+URL:https://cycleforchange.org/rides/birmingham-al-trample/
+END:VEVENT
+END:VCALENDAR

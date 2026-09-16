@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:annapolis-md-abrt-sunday-no-drop-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260920T080000
+DTEND;TZID=America/New_York:20260920T100000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20261031T235959Z
+SUMMARY:Sunday No-Drop Ride (ABRT Cycling) — Annapolis\, MD
+LOCATION:Prince George St at USNA Barry Gate\, Prince George St\, Annapol
+ is\, MD 21401
+DESCRIPTION:Pace: 16–18 mph average.\nNo-drop.\nSchedule: Sundays; 8:00
+  am summer\, 9:00 am spring/fall\, 10:00 am winter.\nConfirm with the ho
+ st before you go.\nhttps://cycleforchange.org/rides/annapolis-md-abrt-su
+ nday-no-drop-ride/
+URL:https://cycleforchange.org/rides/annapolis-md-abrt-sunday-no-drop-rid
+ e/
+END:VEVENT
+END:VCALENDAR

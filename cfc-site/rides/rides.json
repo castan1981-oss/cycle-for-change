@@ -50,7 +50,15 @@
    "https://orca.bike/event/weekly-taco-tuesdays-or-pizza-road-ride/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Anchorage",
+  "start_hhmm": "18:30",
+  "duration_min": 180,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "birmingham-al-le-tour-de-ham",
@@ -103,7 +111,12 @@
    "https://bhamnow.com/2018/05/29/experiencebirminghamontwowheelswiththesetenlocalcyclinggroupsincludingletourdeham/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "birmingham-al-trample",
@@ -157,7 +170,12 @@
    "https://bhamnow.com/2018/05/29/experiencebirminghamontwowheelswiththesetenlocalcyclinggroupsincludingletourdeham/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "fairhope-al-pro-cycle-thursday-night-social-ride",
@@ -211,7 +229,15 @@
    "https://www.procycleandtri.com/rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "huntsville-al-sunset-rides",
@@ -265,7 +291,15 @@
    "https://www.sunsetbicycles.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "bentonville-ar-tour-de-coler",
@@ -321,7 +355,12 @@
    "https://www.visitbentonville.com/blog/stories/post/bentonville-group-rides-your-guide-to-the-citys-cycling-scene/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "fayetteville-ar-bike-club-sunday-service",
@@ -372,7 +411,12 @@
    "https://bikeclub.bike/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "10:30",
+  "duration_min": 180,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "little-rock-ar-abc-sunday-two-rivers-ride",
@@ -428,7 +472,12 @@
    "https://littlerock.gov/residents/bikeped-little-rock/community/weekly-activities/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "13:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "little-rock-ar-heels-on-wheels-monday-ride",
@@ -485,7 +534,12 @@
    "https://www.facebook.com/ArkansasHeelsOnWheels"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "little-rock-ar-mtcc-little-rock-evening-ride",
@@ -540,7 +594,12 @@
    "https://littlerock.gov/residents/bikeped-little-rock/community/weekly-activities/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "chandler-az-global-bikes-chandler-north-saturday-ride",
@@ -591,7 +650,12 @@
    "https://www.globalbikes.info/articles/ride-and-clinic-calendar-pg2857.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Phoenix",
+  "start_hhmm": "06:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "cottonwood-az-vvcc-wednesday-cottonwood-ride",
@@ -642,7 +706,12 @@
    "https://www.vvcc.us/Road-Rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Phoenix",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "flagstaff-az-vvcc-mormon-lake-thursday-ride",
@@ -693,7 +762,12 @@
    "https://www.meetup.com/vvcc-road-bike-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Phoenix",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "gilbert-az-global-bikes-sunday-funday-ride",
@@ -748,7 +822,12 @@
    "https://www.globalbikes.info/articles/ride-and-clinic-calendar-pg2857.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Phoenix",
+  "start_hhmm": "06:00",
+  "duration_min": 60,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "peoria-az-monday-night-meander",
@@ -803,7 +882,12 @@
    "https://www.meetup.com/find/us--az--phoenix/cycling/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Phoenix",
+  "start_hhmm": "19:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "phoenix-az-downtempo-ride",
@@ -858,7 +942,12 @@
    "https://www.facebook.com/phxdowntemporide/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Phoenix",
+  "start_hhmm": "20:00",
+  "duration_min": 60,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "phoenix-az-taco-tuesday-south-mountain",
@@ -909,7 +998,12 @@
    "https://www.meetup.com/find/us--az--phoenix/cycling/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Phoenix",
+  "start_hhmm": "19:15",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "prescott-az-bike-prescott-thursday-mtb-series",
@@ -960,7 +1054,12 @@
    "https://www.bikeprescott.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Phoenix",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "prescott-az-soul-ride-sunday-shop-ride",
@@ -1013,7 +1112,12 @@
    "https://experienceprescott.com/listing/soulride/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Phoenix",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "sedona-az-absolute-bikes-shop-rides",
@@ -1066,7 +1170,15 @@
    "https://www.vvcc.us/MTB-Rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Phoenix",
+  "start_hhmm": "16:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 3,
+   "end": 11
+  },
+  "monthly_rule": null
  },
  {
   "slug": "sedona-az-wednesday-evening-mtb-ride",
@@ -1116,7 +1228,12 @@
    "https://www.facebook.com/groups/sedonamtb"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Phoenix",
+  "start_hhmm": null,
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "tempe-az-regroup-coffee-ride",
@@ -1169,7 +1286,12 @@
    "https://regroupwithus.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Phoenix",
+  "start_hhmm": "06:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "tucson-az-bicas-wtf-ride",
@@ -1227,7 +1349,17 @@
    "https://wildcat.arizona.edu/131170/news/bicas-wtf-fixing-bikes-and-fixing-stereotypes/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Phoenix",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "mon"
+   }
+  ]
  },
  {
   "slug": "tucson-az-fuga-southside-ride",
@@ -1284,7 +1416,17 @@
    "https://www.transitcycles.com/events-1"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Phoenix",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "tucson-az-the-shootout",
@@ -1336,7 +1478,12 @@
    "https://www.fairwheelbikes.com/service/group-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Phoenix",
+  "start_hhmm": "07:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "tucson-az-tuesday-night-ride",
@@ -1392,7 +1539,12 @@
    "https://www.facebook.com/groups/TNRTucson/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Phoenix",
+  "start_hhmm": "20:45",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "tucson-az-womens-shootout",
@@ -1446,7 +1598,12 @@
    "https://www.transitcycles.com/events-1"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Phoenix",
+  "start_hhmm": "06:15",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "bakersfield-ca-bike-bakersfield-full-moon-ride",
@@ -1494,7 +1651,12 @@
    "https://bikebakersfield.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "carlsbad-ca-swamis-monthly-social-ride",
@@ -1547,7 +1709,12 @@
    "https://swamis.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "chico-ca-north-rim-easy-does-it-sunday-ride",
@@ -1602,7 +1769,12 @@
    "https://www.chicovelo.org/calendar.html"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "13:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "davis-ca-tuesday-bakery-easy-ride",
@@ -1657,7 +1829,15 @@
    "https://calendar.google.com/calendar/ical/davisbikeclubwww%40gmail.com/public/basic.ics"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 5,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "encinitas-ca-leucadia-cyclery-sunday-social-ride",
@@ -1712,7 +1892,12 @@
    "https://leucadiabikes.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "fresno-ca-fresno-cycling-club-birthday-rides",
@@ -1764,7 +1949,12 @@
    "https://fresnocycling.com/Ride-Calendar"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "huntington-beach-ca-hb-velo-sunday-shop-ride",
@@ -1814,7 +2004,12 @@
    "https://hbvelocyclery.net/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "08:05",
+  "duration_min": 180,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "irvine-ca-bicycle-club-of-irvine-saturday-ride",
@@ -1867,7 +2062,12 @@
    "https://www.bikeirvine.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "irvine-ca-orange-county-wheelmen-weekday-ride",
@@ -1919,7 +2119,12 @@
    "https://www.ocwheelmen.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "long-beach-ca-bike-long-beach-bikes-and-coffee",
@@ -1974,7 +2179,17 @@
    "https://www.longbeachbikerides.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "10:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "sun"
+   }
+  ]
  },
  {
   "slug": "long-beach-ca-queercicles-c-u-next-tuesday",
@@ -2027,7 +2242,12 @@
    "https://www.longbeachbikerides.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "long-beach-ca-lightning-velo-saturday-ride",
@@ -2080,7 +2300,12 @@
    "https://www.lightningvelo.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "long-beach-ca-long-beach-bicycling-meetup",
@@ -2134,7 +2359,12 @@
    "https://www.longbeachbikerides.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "19:00",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "los-angeles-ca-different-spokes-sunday-ride",
@@ -2186,7 +2416,12 @@
    "https://www.facebook.com/groups/dspokes/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "los-angeles-ca-la-grange-womens-ride",
@@ -2237,7 +2472,17 @@
    "https://www.lagrange.org/rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 3,
+    "day": "sat"
+   }
+  ]
  },
  {
   "slug": "los-angeles-ca-la-grange-nichols-canyon-ride",
@@ -2288,7 +2533,12 @@
    "https://www.lagrange.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "northridge-ca-sfvbc-saturday-club-ride",
@@ -2341,7 +2591,12 @@
    "https://sfvbc.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "los-angeles-ca-venice-electric-light-parade",
@@ -2398,7 +2653,12 @@
    "https://sunnycyclesla.com/pages/community"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "18:35",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "mill-valley-ca-tam-velo-sunday-recovery-ride",
@@ -2451,7 +2711,12 @@
    "https://www.tamveloclub.com/weeklyrides.html"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "09:35",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "oakland-ca-east-bay-bike-party",
@@ -2500,7 +2765,17 @@
    "https://eastbaybikeparty.wordpress.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "20:00",
+  "duration_min": 180,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "oakland-ca-red-bike-and-green-community-rides",
@@ -2560,7 +2835,17 @@
    "https://bikeeastbay.org/event/red-bike-and-green-oakland-second-saturdays-rides-2026/2026-10-10/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "palm-springs-ca-big-wheel-bikes-community-group-rides",
@@ -2612,7 +2897,15 @@
    "https://www.bigwheelbikescv.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": {
+   "start": 11,
+   "end": 4
+  },
+  "monthly_rule": null
  },
  {
   "slug": "pasadena-ca-foo-chow-ride",
@@ -2663,7 +2956,21 @@
    "https://www.incycle.com/pages/group-rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "19:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "tue"
+   },
+   {
+    "ord": 3,
+    "day": "tue"
+   }
+  ]
  },
  {
   "slug": "redding-ca-shasta-wheelmen-weekday-ride",
@@ -2719,7 +3026,12 @@
    "https://shastalivingstreets.org/activities-and-events/recreation-in-the-northstate/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "redondo-beach-ca-beach-cities-cycling-club-java-ride",
@@ -2773,7 +3085,12 @@
    "https://www.bcccsb.org/Weekly-Activities-Description"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "riverside-ca-riverside-bicycle-club-saturday-casual-ride",
@@ -2823,7 +3140,12 @@
    "https://www.riversidebicycleclub.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "sacramento-ca-bike-party-sacramento",
@@ -2879,7 +3201,17 @@
    "https://www.sacbee.com/entertainment/living/article253299358.html"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "19:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "san-diego-ca-cyclo-vets-saturday-ride",
@@ -2932,7 +3264,12 @@
    "https://cyclo-vets.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "08:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "san-diego-ca-moment-bicycles-saturday-ride",
@@ -2985,7 +3322,12 @@
    "https://www.momentbikes.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "08:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "san-diego-ca-outspoken-cycle-club-rides",
@@ -3035,7 +3377,12 @@
    "https://www.outspoken.cc/rides-and-events-sd"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "la-jolla-ca-sdbc-saturday-ride",
@@ -3088,7 +3435,12 @@
    "https://sdbc.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "08:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "san-diego-ca-shewolves-ride",
@@ -3143,7 +3495,12 @@
    "https://sandiegomagazine.com/everything-sd/health-fitness/10-local-group-rides-for-every-type-of-cyclist/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "19:15",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "san-francisco-ca-butterlap",
@@ -3197,7 +3554,12 @@
    "https://www.strava.com/clubs/butterlap-443"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "19:15",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "san-francisco-ca-different-spokes-jersey-ride",
@@ -3251,7 +3613,17 @@
    "https://dssf.org/content.aspx?page_id=22&club_id=17789&module_id=322904"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "sat"
+   }
+  ]
  },
  {
   "slug": "san-francisco-ca-critical-mass",
@@ -3301,7 +3673,17 @@
    "https://www.sfcriticalmass.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "san-jose-ca-san-jose-bike-party",
@@ -3355,7 +3737,17 @@
    "https://www.sjbikeparty.org/about/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "20:00",
+  "duration_min": 180,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 3,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "santa-barbara-ca-fastrack-saturday-lake-ride",
@@ -3405,7 +3797,12 @@
    "http://www.fastrackbicycles.com/rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "santa-cruz-ca-girls-rock-monthly-ride",
@@ -3459,7 +3856,15 @@
    "https://www.girlsrock-mtb.com/about-us"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "10:00",
+  "duration_min": 120,
+  "season_months": {
+   "start": 9,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "ventura-ca-bikevc-brew-ride",
@@ -3513,7 +3918,20 @@
    "https://www.bikeventura.org/community-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "13:00",
+  "duration_min": 180,
+  "season_months": {
+   "start": 3,
+   "end": 11
+  },
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "sun"
+   }
+  ]
  },
  {
   "slug": "ventura-ca-easy-rider-community-ride",
@@ -3566,7 +3984,12 @@
    "https://www.cibike.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "aurora-co-adventure-cycling-saturday-morning-ride",
@@ -3619,7 +4042,15 @@
    "https://www.adventurecycle.net/about/saturday-morning-rides-pg246.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "boulder-co-bma-gurlz-ride",
@@ -3673,7 +4104,12 @@
    "https://www.meetup.com/find/us--co--boulder/cycling/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "17:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "boulder-co-bma-knobby-wednesday",
@@ -3727,7 +4163,12 @@
    "https://www.meetup.com/find/us--co--boulder/cycling/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "boulder-co-wednesday-morning-velo",
@@ -3777,7 +4218,15 @@
    "https://wednesdayvelo.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "06:30",
+  "duration_min": null,
+  "season_months": {
+   "start": 5,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "broomfield-co-trek-womens-tuesday-group-ride",
@@ -3835,7 +4284,12 @@
    "https://www.meetup.com/find/us--co--denver/cycling/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "18:00",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "colorado-springs-co-the-wednesday-ride",
@@ -3887,7 +4341,15 @@
    "https://www.oldtownbikeshop.com/articles/clubs-group-rides-pg1140.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Denver",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 3,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "colorado-springs-co-tour-de-latte",
@@ -3945,7 +4407,15 @@
    "https://www.bikesprings.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "09:00",
+  "duration_min": 180,
+  "season_months": {
+   "start": 5,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "denver-co-denver-cruiser-ride",
@@ -4000,7 +4470,15 @@
    "https://en.wikipedia.org/wiki/Denver_Cruiser_Ride"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Denver",
+  "start_hhmm": "19:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 5,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "denver-co-outspokin-lgbtq-club-rides",
@@ -4054,7 +4532,15 @@
    "https://www.outspokin.org/ridewithus/outspokin-ride-schedule/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Denver",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": {
+   "start": 5,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "denver-co-rar-front-range-see-you-next-tuesday",
@@ -4110,7 +4596,15 @@
    "https://radicaladventureriders.com/chapters-list"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Denver",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "denver-co-the-phoenix-sober-weekend-rides",
@@ -4165,7 +4659,12 @@
    "https://thephoenix.org/explore-events"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Denver",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "durango-co-pedal-the-peaks-wednesday-shop-ride",
@@ -4216,7 +4715,12 @@
    "https://www.ptpdurango.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Denver",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "fort-collins-co-gravel-people",
@@ -4267,7 +4771,15 @@
    "https://yourgroupride.com/group-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "fort-collins-co-omba-singletrack-social",
@@ -4320,7 +4832,15 @@
    "https://yourgroupride.com/group-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Denver",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": {
+   "start": 3,
+   "end": 8
+  },
+  "monthly_rule": null
  },
  {
   "slug": "fort-collins-co-saturday-open-ride",
@@ -4371,7 +4891,12 @@
    "https://yourgroupride.com/group-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "08:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "grand-junction-co-cyclepaths-group-rides",
@@ -4420,7 +4945,12 @@
    "https://www.meetup.com/find/us--co--grand-junction/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Denver",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "littleton-co-dcc-phils-circuit-ride",
@@ -4473,7 +5003,12 @@
    "https://www.meetup.com/find/us--co--denver/cycling/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "08:00",
+  "duration_min": 180,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "longmont-co-svcg-spin-into-the-setting-sun",
@@ -4526,7 +5061,12 @@
    "https://www.meetup.com/find/us--co--boulder/cycling/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "17:30",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "monument-co-mmb-tuesday-ride",
@@ -4577,7 +5117,15 @@
    "https://www.meetup.com/find/us--co--colorado-springs/cycling/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "17:30",
+  "duration_min": 90,
+  "season_months": {
+   "start": 5,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "darien-ct-dannys-cycles-sunday-kids-ride",
@@ -4631,7 +5179,12 @@
    "https://www.dannyscycles.com/about/shop-rides-pg576.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "14:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "middletown-ct-pedal-power-saturday-morning-ride",
@@ -4681,7 +5234,12 @@
    "https://www.pedalpowerct.com/events/weekly-group-rides-ride-alert-pg505.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "middletown-ct-pedal-power-sunday-beginner-ride",
@@ -4735,7 +5293,12 @@
    "https://www.pedalpowerct.com/events/weekly-group-rides-ride-alert-pg505.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "14:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "new-haven-ct-nhbc-tuesday-thursday-evening-rides",
@@ -4790,7 +5353,15 @@
    "https://www.newhavenbicyclingclub.org/general-5"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": {
+   "start": 3,
+   "end": 11
+  },
+  "monthly_rule": null
  },
  {
   "slug": "west-hartford-ct-thirsty-thursdays-slow-roll",
@@ -4845,7 +5416,17 @@
    "https://bikewesthartford.org/calendar/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 3,
+    "day": "thu"
+   }
+  ]
  },
  {
   "slug": "washington-dc-dc-bike-party",
@@ -4895,7 +5476,17 @@
    "https://www.facebook.com/DCBikeParty/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "19:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "washington-dc-dc-queer-bike-rides",
@@ -4947,7 +5538,17 @@
    "https://dcqueerbikes.neocities.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "12:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "sat"
+   }
+  ]
  },
  {
   "slug": "washington-dc-district-cycling-collective-monday-moves",
@@ -5001,7 +5602,12 @@
    "https://www.meetup.com/district-cycling-collective/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "10:15",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "washington-dc-outriders-thursday-night-ride",
@@ -5051,7 +5657,15 @@
    "https://www.meetup.com/outriders-dc-va-md/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "washington-dc-dc-tri-club-sunday-no-drop-ride",
@@ -5101,7 +5715,12 @@
    "https://www.dctriclub.org/event/sunday-no-drop-group-bike-rides/2026-04-05/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "08:45",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "milton-de-sussex-cyclists-wednesday-dogfish-head-ride",
@@ -5151,7 +5770,12 @@
    "https://www.sussexcyclists.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "wilmington-de-wcbc-north-wilmington-flat-ride",
@@ -5201,7 +5825,12 @@
    "https://www.huntcal.com/cal/view/WCBC/WCBC?vm=r"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "clermont-fl-trek-clermont-saturday-group-ride",
@@ -5251,7 +5880,12 @@
    "https://www.facebook.com/events/1675-hancock-rd-clermont-fl-united-states-florida-34711/saturday-group-bike-ride/1256876966621308/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "07:30",
+  "duration_min": 150,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "coral-gables-fl-ebc-bike305-beginner-ride",
@@ -5306,7 +5940,17 @@
    "https://www.evergladesbc.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "07:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "sat"
+   }
+  ]
  },
  {
   "slug": "coral-gables-fl-everglades-bicycle-club-saturday-ride",
@@ -5357,7 +6001,12 @@
    "https://www.themiamibikescene.com/p/group-rides.html"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "07:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "fort-lauderdale-fl-critical-mass",
@@ -5412,7 +6061,17 @@
    "https://www.themiamibikescene.com/p/miami-critical-mass-guidelines.html"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "19:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "fort-lauderdale-fl-goonie-prowl",
@@ -5465,7 +6124,12 @@
    "https://www.themiamibikescene.com/p/broward-group-rides.html"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "20:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "jacksonville-fl-ram-ride",
@@ -5517,7 +6181,12 @@
    "https://www.zencog.com/events/ride-with-us-pg200.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "jacksonville-fl-tunibiri-tuesday-night-ride",
@@ -5567,7 +6236,12 @@
    "https://www.zencog.com/events/ride-with-us-pg200.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "22:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "lakewood-ranch-fl-vicc-wednesday-night-worlds",
@@ -5620,7 +6294,15 @@
    "https://www.villagebikes.com/articles/local-rides-clubs-pg195.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 3,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "miami-fl-miami-critical-mass",
@@ -5671,7 +6353,17 @@
    "https://www.themiamibikescene.com/2026/06/miami-critical-mass-june-26th.html"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "19:15",
+  "duration_min": 150,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "orlando-fl-kyles-thursday-night-ride",
@@ -5723,7 +6415,12 @@
    "https://kylesbikeshop.net/articles/thursday-night-ride-pg71.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "19:00",
+  "duration_min": 150,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "pensacola-fl-bike-pensacola-slow-ride",
@@ -5773,7 +6470,12 @@
    "https://www.bikepensacola.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": 60,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "sanford-fl-sanford-bicycle-club-monday-ride",
@@ -5826,7 +6528,12 @@
    "https://www.bicikletabikeshop.com/articles/local-events-rides-clubs-pg204.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 60,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "sanford-fl-saturday-social-ride",
@@ -5878,7 +6585,12 @@
    "https://www.bicikletabikeshop.com/articles/local-events-rides-clubs-pg204.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "07:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "seminole-fl-spbc-dunedin-breakfast-ride",
@@ -5930,7 +6642,15 @@
    "https://stpetebicycleclub.com/rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 10,
+   "end": 4
+  },
+  "monthly_rule": null
  },
  {
   "slug": "st-petersburg-fl-critical-mass",
@@ -5980,7 +6700,17 @@
    "https://www.visitstpeteclearwater.com/event/critical-mass-ride-st-pete/49041"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "19:30",
+  "duration_min": 60,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "st-petersburg-fl-spbc-saturday-club-ride",
@@ -6030,7 +6760,12 @@
    "https://stpetebicycleclub.com/rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "sunrise-fl-south-broward-wheelers-saturday-ride",
@@ -6081,7 +6816,12 @@
    "https://www.themiamibikescene.com/p/broward-group-rides.html"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "07:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "tallahassee-fl-ccc-saturday-classic-chaires",
@@ -6133,7 +6873,12 @@
    "https://cccyclists.clubexpress.com/content.aspx?page_id=22&club_id=105555&module_id=306458"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "athens-ga-bikeathens-joy-ride",
@@ -6187,7 +6932,17 @@
    "https://www.bikeathens.org/engage/joyrides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "atlanta-ga-critical-mass-atlanta",
@@ -6241,7 +6996,17 @@
    "https://gatech.campuslabs.com/engage/organization/starter-bikes"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "atlanta-ga-midweek-roll",
@@ -6291,7 +7056,12 @@
    "https://sadlebred.com/rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "19:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "atlanta-ga-bonafide-motivation-monday",
@@ -6344,7 +7114,12 @@
    "https://sadlebred.com/rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:15",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "augusta-ga-outspokin-friday-canal-ride",
@@ -6398,7 +7173,12 @@
    "https://www.outspokinaugusta.com/rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "augusta-ga-outspokin-wednesday-worlds",
@@ -6448,7 +7228,15 @@
    "https://www.outspokinaugusta.com/rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:10",
+  "duration_min": null,
+  "season_months": {
+   "start": 3,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "avondale-estates-ga-pizza-ride",
@@ -6499,7 +7287,12 @@
    "https://atlptn.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "brookhaven-ga-brookhaven-bike-alliance-monday-ride",
@@ -6552,7 +7345,12 @@
    "https://sadlebred.com/rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "roswell-ga-bike-roswell-wednesday-evening-ride",
@@ -6605,7 +7403,12 @@
    "https://sadlebred.com/rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "savannah-ga-perry-rubber-saturday-ride",
@@ -6655,7 +7458,12 @@
    "https://perryrubberbikeshop.com/group-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "honolulu-hi-outta-bounds-pau-hana-wednesday",
@@ -6708,7 +7516,12 @@
    "https://hbl.org/group-ride-listings/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "Pacific/Honolulu",
+  "start_hhmm": "16:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "honolulu-hi-red-hot-ladies-roving-ride",
@@ -6759,7 +7572,12 @@
    "https://hbl.org/group-ride-listings/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "Pacific/Honolulu",
+  "start_hhmm": "07:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "honolulu-hi-hbl-start-the-week-off-right-monday-ride",
@@ -6813,7 +7631,12 @@
    "https://hbl.org/group-ride-listings/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "Pacific/Honolulu",
+  "start_hhmm": "08:30",
+  "duration_min": 180,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "honolulu-hi-wolfpack-tuesday-night-ride",
@@ -6863,7 +7686,12 @@
    "https://hbl.org/group-ride-listings/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "Pacific/Honolulu",
+  "start_hhmm": "16:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "kailua-kona-hi-saturday-recreational-north-ride",
@@ -6919,7 +7747,12 @@
    "http://www.hawaiicyclingclub.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "Pacific/Honolulu",
+  "start_hhmm": "07:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "kapolei-hi-sunday-morning-coffee-jam",
@@ -6971,7 +7804,12 @@
    "https://hbl.org/group-ride-listings/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "Pacific/Honolulu",
+  "start_hhmm": "07:15",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "maui-hi-maui-bicycling-league-monthly-group-ride",
@@ -7022,7 +7860,12 @@
    "https://mauinow.com/events/event/k3m6d3e3k1v2g/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "Pacific/Honolulu",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "des-moines-ia-monday-night-no-drop-road-ride",
@@ -7077,7 +7920,15 @@
    "https://www.dsmgrouprides.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": 90,
+  "season_months": {
+   "start": 3,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "grinnell-ia-prairie-burner-tuesday-gravel-ride",
@@ -7132,7 +7983,12 @@
    "https://www.imaginegrinnell.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "17:30",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "iowa-city-ia-bic-wednesday-night-social-ride",
@@ -7183,7 +8039,15 @@
    "https://bikeiowacity.com/event-calendar/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "iowa-city-ia-gatos-en-ronda-friday-night-ride",
@@ -7235,7 +8099,12 @@
    "https://bikeiowacity.com/event-calendar/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "north-liberty-ia-sugar-bottom-bikes-wednesday-night-gravel",
@@ -7286,7 +8155,15 @@
    "https://www.sugarbottombikes.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:10",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "boise-id-lactic-acid-saturday-ride",
@@ -7340,7 +8217,15 @@
    "https://lacticacid.clubexpress.com/content.aspx?page_id=0&club_id=95288"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 10,
+   "end": 8
+  },
+  "monthly_rule": null
  },
  {
   "slug": "boise-id-mountain-mondays",
@@ -7392,7 +8277,15 @@
    "https://www.boisestate.edu/clc/events-and-programs/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "17:30",
+  "duration_min": 90,
+  "season_months": {
+   "start": 8,
+   "end": 5
+  },
+  "monthly_rule": null
  },
  {
   "slug": "coeur-dalene-id-tuesday-classic",
@@ -7443,7 +8336,15 @@
    "https://cdacycling.club/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "pocatello-id-tuesday-easy-ride",
@@ -7499,7 +8400,15 @@
    "https://www.barriessports.com/articles/group-rides-roll-with-the-pack-tuesday-pg183.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "champaign-il-prairie-cycle-club-wednesday-evening-ride",
@@ -7552,7 +8461,15 @@
    "https://www.prairiecycleclub.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "chicago-il-bff-bikes-beginner-intermediate-ride",
@@ -7606,7 +8523,12 @@
    "https://www.bffbikes.com/pages/group-rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "chicago-il-bff-bikes-thursday-wtf-social-ride",
@@ -7661,7 +8583,12 @@
    "https://www.bffbikes.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "chicago-il-chicago-critical-mass",
@@ -7713,7 +8640,17 @@
    "https://www.facebook.com/ChicagoCriticalMass/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "chicago-il-femmes-thems-bike-chi-monthly-social-ride",
@@ -7766,7 +8703,17 @@
    "https://chicagogrouprides.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "sat"
+   }
+  ]
  },
  {
   "slug": "chicago-il-southside-critical-mass",
@@ -7813,7 +8760,17 @@
    "https://chicagogrouprides.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:15",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "tinley-park-il-mtc3-big-ring",
@@ -7867,7 +8824,12 @@
    "https://chicagogrouprides.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "bloomington-in-wednesday-world-bloomington-bicycles",
@@ -7917,7 +8879,12 @@
    "https://risingtidecycling.cc/group-rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "fort-wayne-in-3rvs-monday-morning-meandering",
@@ -7967,7 +8934,12 @@
    "https://www.3rvs.com/ride-schedules/weeknight-rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "10:00",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "fort-wayne-in-3rvs-wednesday-d-ride",
@@ -8020,7 +8992,12 @@
    "https://www.3rvs.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:15",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "indianapolis-in-bike-line-tuesday-thursday-ride",
@@ -8071,7 +9048,12 @@
    "https://www.thebikeline.com/about/group-rides-pg439.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "19:00",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "south-bend-in-bikes-and-brews",
@@ -8126,7 +9108,15 @@
    "https://www.abc57.com/news/weekly-group-bike-ride-with-rollout-south-bend-thursday"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": {
+   "start": 5,
+   "end": 8
+  },
+  "monthly_rule": null
  },
  {
   "slug": "south-bend-in-mba-monday-leisure-ride",
@@ -8180,7 +9170,15 @@
    "https://www.mbabike.com/mba-rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 90,
+  "season_months": {
+   "start": 4,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "leawood-ks-brbc-monday-social-ride",
@@ -8235,7 +9233,15 @@
    "https://www.elitecycling.com/articles/rides-and-events-pg37.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:30",
+  "duration_min": 60,
+  "season_months": {
+   "start": 3,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "topeka-ks-kvbc-dover-dogs-thursday-ride",
@@ -8287,7 +9293,15 @@
    "https://kvbc.org/rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "topeka-ks-kvbc-wednesday-slow-roll",
@@ -8340,7 +9354,12 @@
    "https://kvbc.org/rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:10",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "bowling-green-ky-bikewalkbg-weekly-womens-ride",
@@ -8394,7 +9413,12 @@
    "https://www.warrenpc.org/event/bikewalkbg-free-weekly-community-family-fun-bike-rides/2026-06-22/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "17:30",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "covington-ky-ridethecov-wednesday-series",
@@ -8446,7 +9470,15 @@
    "https://events.queencity.bike/event/c6s1hoheb0egceahvs9f0q9vvs_20260923T220000Z"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 105,
+  "season_months": {
+   "start": 3,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "lexington-ky-first-friday-social-ride",
@@ -8501,7 +9533,17 @@
    "https://www.lexingtonky.gov/government/departments-programs/environmental-quality-public-works/environmental-services/live-green-lexington/bike-walk-month"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "lexington-ky-pedal-power-country-boy-community-ride",
@@ -8555,7 +9597,12 @@
    "https://www.lexingtonky.gov/government/departments-programs/environmental-quality-public-works/environmental-services/live-green-lexington/bike-walk-month"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "louisville-ky-monnik-monday-recovery",
@@ -8608,7 +9655,12 @@
    "https://www.ridenfaden.com/about-and-mission/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:15",
+  "duration_min": 60,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "louisville-ky-ridenfaden-wednesday",
@@ -8662,7 +9714,12 @@
    "https://www.ridenfaden.com/about-and-mission/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "louisville-ky-outsiders-wednesday-social-ride",
@@ -8717,7 +9774,12 @@
    "https://outsiderscycling.com/rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:45",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "baton-rouge-la-downtown-east-social-ride",
@@ -8775,7 +9837,12 @@
    "https://www.instagram.com/downtowneastsocialride/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "baton-rouge-la-geaux-ride-thursday-night-community-ride",
@@ -8833,7 +9900,12 @@
    "https://www.225batonrouge.com/things-to-do/local-cycling-groups-expanding-across-town-promoting-bikeable-baton-rouge"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "19:45",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "lafayette-la-bike-lafayette-saturday-ride",
@@ -8881,7 +9953,21 @@
    "https://www.theadvocate.com/louisiana_inspired/bike-lafayette-acadiana/article_ac5d993f-7c4c-5b75-949e-29e08ce87d93.html"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Chicago",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "sat"
+   },
+   {
+    "ord": -1,
+    "day": "sat"
+   }
+  ]
  },
  {
   "slug": "new-orleans-la-getupnride-tuesday-ride",
@@ -8929,7 +10015,12 @@
    "https://momentummag.com/easy-rider-social-rides-reshaping-new-orleans-bicycling-scene/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Chicago",
+  "start_hhmm": null,
+  "duration_min": 180,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "new-orleans-la-nola-social-ride-happy-thursday",
@@ -8981,7 +10072,12 @@
    "https://nolasocialride.org/happy-thursday-the-tutu-ride/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "20:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "new-orleans-la-nola-social-ride-thursday",
@@ -9030,7 +10126,12 @@
    "https://www.facebook.com/NolaSocialRide/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Chicago",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "shreveport-la-sb-rides-led-cruiser-ride",
@@ -9084,7 +10185,15 @@
    "https://www.instagram.com/sb_rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "20:00",
+  "duration_min": 120,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "shreveport-la-shreveport-bicycle-club-saturday-ride",
@@ -9136,7 +10245,12 @@
    "https://adventureprovisionco.com/blog/local-shreveport-cycling-clubs/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Chicago",
+  "start_hhmm": "07:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "boston-ma-boston-bike-party",
@@ -9189,7 +10303,17 @@
    "https://bostonbikeparty.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "19:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "boston-ma-landrys-boston-slow-roll-social-ride",
@@ -9242,7 +10366,12 @@
    "https://www.landrys.com/events/landrys-group-rides-pg163.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "lexington-ma-contes-sunday-ride-b2c2",
@@ -9294,7 +10423,12 @@
    "https://www.b2c2cycling.com/group-rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "newburyport-ma-riverside-cycle-judy-jam",
@@ -9348,7 +10482,15 @@
    "https://www.riversidecycle.com/about/group-rides-pg200.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "northampton-ma-ncc-wednesday-ab-ride",
@@ -9398,7 +10540,15 @@
    "https://www.nohobikeclub.org/group-rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "paxton-ma-seven-hills-wheelmen-tuesday-night-ride",
@@ -9451,7 +10601,15 @@
    "https://sevenhillswheelmen.org/resources/recurring-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": {
+   "start": 9,
+   "end": 4
+  },
+  "monthly_rule": null
  },
  {
   "slug": "waltham-ma-gbnemba-tuesday-western-greenway-social-ride",
@@ -9503,7 +10661,12 @@
    "https://www.nemba.org/chapters/greater-boston-nemba"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "westwood-ma-landrys-needham-womens-nonbinary-mtb-ride",
@@ -9556,7 +10719,12 @@
    "https://www.landrys.com/events/landrys-group-rides-pg163.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "annapolis-md-abrt-sunday-no-drop-ride",
@@ -9608,7 +10776,15 @@
    "https://www.abrtcycling.com/about/training-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "baltimore-md-baltimore-bike-party",
@@ -9664,7 +10840,17 @@
    "https://www.bikemore.net/calendar"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "19:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "baltimore-md-taco-tuesday-ride",
@@ -9714,7 +10900,12 @@
    "https://www.facebook.com/groups/310740799305361/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "bethesda-md-bethesda-bike-and-ski-sunday-shop-ride",
@@ -9764,7 +10955,12 @@
    "https://www.bethesdabikeandski.com/articles/shop-rides-pg225.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "edgewater-md-parvilla-cycles-thursday-shop-ride",
@@ -9814,7 +11010,15 @@
    "https://www.abrtcycling.com/about/training-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "frederick-md-frederick-pedalers-sunday-monocacy-ride",
@@ -9867,7 +11071,12 @@
    "https://frederickpedalers.org/ride-info/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "09:30",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "silver-spring-md-goon-ride",
@@ -9918,7 +11127,15 @@
    "https://dcpaceline.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": {
+   "start": 3,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "portland-me-cyclemania-thursday-night-mountain-bike-ride",
@@ -9971,7 +11188,12 @@
    "https://www.cyclemania1.com/articles/routes-rides-pg193.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "portland-me-gorham-bike-friday-morning-coffee-ride",
@@ -10021,7 +11243,15 @@
    "https://www.gorhambike.com/articles/group-rides-pg1358.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 5,
+   "end": 11
+  },
+  "monthly_rule": null
  },
  {
   "slug": "portland-me-gear-hub-mellow-monday-ride",
@@ -10074,7 +11304,12 @@
    "https://www.portlandgearhub.org/events"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:10",
+  "duration_min": 60,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "portland-me-gear-hub-thursday-group-ride",
@@ -10125,7 +11360,12 @@
    "https://www.portlandgearhub.org/events"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 150,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "portland-me-queers-in-gear-saturday-ride",
@@ -10181,7 +11421,12 @@
    "https://www.portlandgearhub.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "16:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "saco-me-gorham-bike-tuesday-night-gravel-ride",
@@ -10231,7 +11476,12 @@
    "https://www.gorhambike.com/articles/group-rides-pg1358.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "south-portland-me-pvc-wednesday-night-ride",
@@ -10281,7 +11531,12 @@
    "https://www.cyclemania1.com/articles/routes-rides-pg193.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "waterville-me-gorham-bike-wednesday-night-mountain-bike-ride",
@@ -10333,7 +11588,12 @@
    "https://www.gorhambike.com/articles/group-rides-pg1358.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "ann-arbor-mi-aavc-monday-social-road-ride",
@@ -10384,7 +11644,15 @@
    "https://annarborobserver.com/mc-events/group-ride-ann-arbor-velo-club-5/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": {
+   "start": 3,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "ann-arbor-mi-nacho-ride",
@@ -10435,7 +11703,15 @@
    "https://www.wheelsinmotion.us/articles/group-rides-and-events-pg532.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 150,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "detroit-mi-cruise-detroit",
@@ -10482,7 +11758,12 @@
    "https://www.bridgedetroit.com/group-bike-riding-in-detroit-how-it-began-and-how-to-join/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "detroit-mi-palmer-park-thursday-ride",
@@ -10533,7 +11814,15 @@
    "https://www.peopleforpalmerpark.org/bike-rides.html"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": 60,
+  "season_months": {
+   "start": 5,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "detroit-mi-slow-roll-thursday-night-ride",
@@ -10589,7 +11878,15 @@
    "https://www.clickondetroit.com/live-in-the-d/2026/03/31/slow-roll-is-returning-to-the-streets-of-detroit/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": 120,
+  "season_months": {
+   "start": 5,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "grand-rapids-mi-village-bike-tuesday-night-road-ride",
@@ -10642,7 +11939,12 @@
    "https://www.villagebikeshop.com/events/ride-with-us-pg690.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "19:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "grand-rapids-mi-wednesday-evening-rides",
@@ -10695,7 +11997,12 @@
    "https://www.facebook.com/groups/WERGR/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "20:00",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "kalamazoo-mi-kbc-monday-night-ride",
@@ -10747,7 +12054,15 @@
    "https://kalamazoobicycleclub.org/rides/club-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": {
+   "start": 3,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "kalamazoo-mi-kbc-lgbtqia-allies-ride",
@@ -10803,7 +12118,15 @@
    "https://kalamazoobicycleclub.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "10:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 5,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "lansing-mi-lansing-bike-party",
@@ -10856,7 +12179,12 @@
    "https://eastlansinginfo.news/15-years-later-the-lansing-bike-party-rides-on/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "marquette-mi-quick-stop-tuesday-night-ride",
@@ -10907,7 +12235,12 @@
    "https://www.quickstopbike.com/articles/local-rides-clubs-pg196.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "kalamazoo-mi-pedal-tuesday-queer-ride",
@@ -10961,7 +12294,12 @@
    "http://pedalbicycle.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "traverse-city-mi-nmmba-community-group-ride",
@@ -11014,7 +12352,15 @@
    "https://nmmba.net/content.aspx?page_id=22&club_id=533979&module_id=685190"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": {
+   "start": 5,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "traverse-city-mi-wildcard-wednesday-night-ride",
@@ -11066,7 +12412,15 @@
    "https://nmmba.net/content.aspx?page_id=22&club_id=533979&module_id=685190"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "duluth-mn-ski-hut-wednesday-social-ride",
@@ -11121,7 +12475,15 @@
    "https://www.skihut.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "minneapolis-mn-angry-catfish-thursday-ftw-social-ride",
@@ -11179,7 +12541,12 @@
    "https://www.angrycatfishbicycle.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "minneapolis-mn-bonesaw-cycling-collective-tuesday-ride",
@@ -11232,7 +12599,20 @@
    "https://msp.bike/events/bonesaw-summer-tuesday-rides-b37ecb12"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "19:00",
+  "duration_min": 90,
+  "season_months": {
+   "start": 4,
+   "end": 9
+  },
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "tue"
+   }
+  ]
  },
  {
   "slug": "minneapolis-mn-behind-bars-fixie-friday",
@@ -11285,7 +12665,12 @@
    "https://msp.bike/events"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "19:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "minneapolis-mn-freewheel-wednesday-night-ride",
@@ -11338,7 +12723,12 @@
    "https://msp.bike/events/freewheel-mpls-wednesday-night-rides-f60de410"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "minneapolis-mn-joyful-riders-club-monthly-ride",
@@ -11394,7 +12784,17 @@
    "https://thejoyfulriders.club/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "thu"
+   }
+  ]
  },
  {
   "slug": "minneapolis-mn-joyful-riders-dj-dance-ride",
@@ -11449,7 +12849,15 @@
    "https://www.mprnews.org/story/2026/07/10/joyful-riders-club-spins-up-beats-for-minneapolis-bike-dance-party"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "19:00",
+  "duration_min": 90,
+  "season_months": {
+   "start": 6,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "minneapolis-mn-sociable-cider-recovery-wednesday-social-ride",
@@ -11506,7 +12914,12 @@
    "https://msp.bike/events"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": 60,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "minneapolis-mn-utepils-cycling-sunday-rides",
@@ -11559,7 +12972,12 @@
    "https://msp.bike/events/utepils-cycling-road-mtb-rides-67830d1e"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "10:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "minnetonka-mn-cycle-unmapped-thursday-rides",
@@ -11614,7 +13032,15 @@
    "https://www.bikemn.org/events/cycle-unmapped-weekly-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": 90,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "rochester-mn-rasc-monday-road-ride",
@@ -11664,7 +13090,15 @@
    "https://www.rasc-mn.org/road-gravel-biking"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "chesterfield-mo-big-shark-west-saturday-gravel-growl",
@@ -11716,7 +13150,12 @@
    "https://www.bigshark.com/articles/group-training-rides-pg334.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "07:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "kansas-city-mo-kc-critical-mass",
@@ -11769,7 +13208,17 @@
    "https://www.kccriticalmass.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "19:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "kansas-city-mo-women-led-cycling-wednesday-ride",
@@ -11822,7 +13271,12 @@
    "https://bikewalkkc.org/education/womenbikekc/resources/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/Chicago",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "richmond-heights-mo-big-shark-saturday-mellow-ride",
@@ -11875,7 +13329,12 @@
    "https://www.bigshark.com/articles/group-training-rides-pg334.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "07:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "st-louis-mo-south-side-cyclery-wednesday-evening-ride",
@@ -11927,7 +13386,15 @@
    "https://www.southsidecyclery.com/articles/rides-events-pg243.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "billings-mt-spoke-shop-monday-road-ride",
@@ -11982,7 +13449,12 @@
    "https://www.spokeshop.com/about/rides-events-calendar-pg238.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Denver",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "bozeman-mt-alter-cycles-tuesday-ride",
@@ -12036,7 +13508,15 @@
    "https://theradavist.com/when-in-bozeman-come-together-on-the-alter-cycles-supper-club-shred"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Denver",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "missoula-mt-montana-dirt-girls-tuesday",
@@ -12091,7 +13571,12 @@
    "https://www.mtalphacycling.org/local-group-rides.html"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "18:00",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "missoula-mt-thursday-night-mountain-bike-group",
@@ -12139,7 +13624,12 @@
    "https://www.mtalphacycling.org/local-group-rides.html"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "boone-nc-magic-cycles-shop-ride",
@@ -12192,7 +13682,15 @@
    "https://www.booneareacyclists.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": {
+   "start": 3,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "greensboro-nc-cycles-de-oro-easy-riders-tuesday",
@@ -12244,7 +13742,12 @@
    "https://cyclesdeoro.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "greensboro-nc-cycles-de-oro-saturday-social-ride",
@@ -12294,7 +13797,12 @@
    "https://cyclesdeoro.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "pisgah-forest-nc-hub-wednesday-shop-ride",
@@ -12346,7 +13854,12 @@
    "https://www.thehubpisgah.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "fargo-nd-gnbc-monday-riding-101",
@@ -12399,7 +13912,15 @@
    "https://www.gncycles.com/events/group-rides-events-pg204.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 5,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "fargo-nd-gnbc-thursday-wow-road-ride",
@@ -12452,7 +13973,15 @@
    "https://www.gncycles.com/events/group-rides-events-pg204.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 5,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "omaha-ne-opbc-saturday-morning-easy-trail-ride",
@@ -12505,7 +14034,12 @@
    "https://opbc.clubexpress.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "omaha-ne-bike-way-omaha-velo-monday-shop-ride",
@@ -12555,7 +14089,12 @@
    "https://www.omahavelo.com/group-rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:15",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "papillion-ne-tuesday-night-womens-gravel-ride",
@@ -12607,7 +14146,12 @@
    "https://www.omahavelo.com/group-rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "dover-nh-dover-cyclery-thirsty-turtle",
@@ -12663,7 +14207,15 @@
    "https://www.seacoastbikes.org/bikeshoprides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 60,
+  "season_months": {
+   "start": 3,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "portsmouth-nh-mama-wheelies-wednesday-ladies-ride",
@@ -12716,7 +14268,12 @@
    "https://www.seacoastbikes.org/bikeshoprides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "17:45",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "portsmouth-nh-papa-wheelies-monday-night-road-ride",
@@ -12769,7 +14326,15 @@
    "https://www.seacoastbikes.org/bikeshoprides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "hopewell-nj-sourland-cycles-saturday-no-drop-ride",
@@ -12823,7 +14388,15 @@
    "https://www.sourlandcycles.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "hopewell-nj-sourland-cycles-womens-wednesday-road-ride",
@@ -12877,7 +14450,15 @@
    "https://www.sourlandcycles.com/about/sourland-cycles-group-rides-pg229.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "jersey-city-nj-bike-jc-light-up-ride",
@@ -12930,7 +14511,12 @@
    "https://bikejc.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "19:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "montclair-nj-montclair-bikery-friday-ladies-ride",
@@ -12982,7 +14568,15 @@
    "https://www.montclairbikery.com/about/about-the-montclair-bikery-group-rides-pg207.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "montclair-nj-montclair-bikery-saturday-shop-ride",
@@ -13034,7 +14628,15 @@
    "https://www.montclairbikery.com/about/about-the-montclair-bikery-group-rides-pg207.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "red-bank-nj-jsts-weeknight-rides",
@@ -13086,7 +14688,12 @@
    "https://www.jsts.us/Important-Ride-Notes"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/New_York",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "albuquerque-nm-nmts-saturday-easy-group-ride",
@@ -13140,7 +14747,12 @@
    "https://www.nmts.org/displayWeekly.php"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "albuquerque-nm-nmts-sunday-bosque-trail-ride",
@@ -13193,7 +14805,12 @@
    "https://www.nmts.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "las-cruces-nm-bike-and-chowder-club-rides",
@@ -13249,7 +14866,12 @@
    "https://www.velocruces.org/organizations-resources"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Denver",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "santa-fe-nm-santa-fe-road-riders-weekend-rides",
@@ -13299,7 +14921,12 @@
    "https://www.bikesantafe.org/shops-clubs-trails"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Denver",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "santa-fe-nm-seniors-on-bikes-tuesday-ride",
@@ -13353,7 +14980,15 @@
    "https://www.bikesantafe.org/shops-clubs-trails"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "las-vegas-nv-giant-summerlin-saturday-road-ride",
@@ -13407,7 +15042,12 @@
    "https://www.giantlasvegas.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "07:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "blue-diamond-nv-giant-las-vegas-tuesday-night-mtb-ride",
@@ -13459,7 +15099,12 @@
    "https://www.giantlasvegas.com/articles/local-rides-pg226.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "19:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "las-vegas-nv-pedal-and-pour-sunday-coffee-ride",
@@ -13512,7 +15157,12 @@
    "https://lasvegasweekly.com/news/2024/oct/17/ride-sip-and-connect-at-pedal-pours-group-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "reno-nv-bike-night-reno",
@@ -13566,7 +15216,12 @@
    "https://renowheelmen.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "20:15",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "reno-nv-reno-wheelmen-wednesday-group-ride",
@@ -13614,7 +15269,15 @@
    "https://renowheelmen.org/event/mwf-ride/2026-09-16/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "17:30",
+  "duration_min": 120,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "sparks-nv-reno-wheelmen-sparks-group-ride",
@@ -13667,7 +15330,12 @@
    "https://renowheelmen.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "10:00",
+  "duration_min": 180,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "buffalo-ny-slow-roll-buffalo-monday-night-community-ride",
@@ -13721,7 +15389,15 @@
    "https://www.buffalorising.com/2026/04/2026-slow-roll/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": 150,
+  "season_months": {
+   "start": 5,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "buffalo-ny-slow-spokes-tuesday-wilkeson-pointe-ride",
@@ -13774,7 +15450,12 @@
    "https://www.slowspokesusa.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "camillus-ny-onondaga-cycling-club-tuesday-slow-n-easy",
@@ -13830,7 +15511,15 @@
    "https://onondagacyclingclub.org/rides-and-tt/slow-n-easy-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "lockport-ny-slow-spokes-friday-ride",
@@ -13883,7 +15572,12 @@
    "https://www.slowspokesusa.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "new-york-ny-nycc-weekend-club-rides",
@@ -13932,7 +15626,12 @@
    "https://www.instagram.com/newyorkcycleclub/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "new-york-ny-critical-mass-last-friday",
@@ -13983,7 +15682,17 @@
    "https://times-up.org/critical-mass/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "19:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "new-york-ny-outcycling-weekly-park-laps",
@@ -14032,7 +15741,15 @@
    "https://www.outcycling.org/fall-training"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "new-york-ny-thursday-night-social-bikeride",
@@ -14085,7 +15802,15 @@
    "https://times-up.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "19:00",
+  "duration_min": 60,
+  "season_months": {
+   "start": 4,
+   "end": 12
+  },
+  "monthly_rule": null
  },
  {
   "slug": "rochester-ny-just-for-giggles-monday-night-brewery-ride",
@@ -14139,7 +15864,12 @@
    "https://www.facebook.com/groups/154523048022623/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:15",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "rochester-ny-rochester-bike-gang-thursday-ride",
@@ -14193,7 +15923,12 @@
    "https://www.facebook.com/groups/rocbicycletime/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "19:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "rotterdam-ny-mhcc-tuesday-evening-river-ride",
@@ -14246,7 +15981,12 @@
    "https://www.mohawkhudsoncyclingclub.org/rides/public"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "scarsdale-ny-dannys-cycles-sunday-road-ride",
@@ -14298,7 +16038,15 @@
    "https://www.dannyscycles.com/about/shop-rides-pg576.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "09:30",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "white-plains-ny-wcc-usi-monday-night-ride",
@@ -14351,7 +16099,12 @@
    "https://www.westchestercycleclub.org/Schedule"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "athens-oh-sunday-lake-hope-mountain-bike-ride",
@@ -14401,7 +16154,12 @@
    "https://athensbicycleclub.org/events/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "09:45",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "cincinnati-oh-biowheels-monday-night-tour-de-indian-hill",
@@ -14453,7 +16211,12 @@
    "https://www.biowheels.com/articles/local-rides-clubs-pg195.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "cincinnati-oh-ride-pleasant-streets",
@@ -14505,7 +16268,21 @@
    "https://events.queencity.bike/event/_8oo44gpo68pj0b9o8or32b9k6923eba16gq44b9l6p0jeg9o8ksk8h9m8c_20260919T140000Z"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "14:05",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "sat"
+   },
+   {
+    "ord": 3,
+    "day": "sat"
+   }
+  ]
  },
  {
   "slug": "cincinnati-oh-ubbc-tuesday-night-ride",
@@ -14559,7 +16336,12 @@
    "https://events.queencity.bike/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:15",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "cleveland-oh-cycle-canalway-sunday-social-ride",
@@ -14611,7 +16393,20 @@
    "https://www.canalwaypartners.com/events/2026/06/21/sunday-social-ride"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "10:00",
+  "duration_min": 120,
+  "season_months": {
+   "start": 6,
+   "end": 9
+  },
+  "monthly_rule": [
+   {
+    "ord": 3,
+    "day": "sun"
+   }
+  ]
  },
  {
   "slug": "cleveland-oh-slow-roll-cleveland",
@@ -14664,7 +16459,15 @@
    "https://coolcleveland.com/events/slow-roll-cleveland-kicks-off-its-season-in-ohio-city/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "19:00",
+  "duration_min": 120,
+  "season_months": {
+   "start": 5,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "columbus-oh-cafe-hero-sunday-ride",
@@ -14717,7 +16520,20 @@
    "https://cycos.cc/columbus"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "sun"
+   }
+  ]
  },
  {
   "slug": "columbus-oh-columbus-friday-night-ride",
@@ -14768,7 +16584,12 @@
    "https://www.instagram.com/cbusfridayride/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "19:00",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "columbus-oh-thursday-night-central-columbus-metro-parks-ride",
@@ -14823,7 +16644,12 @@
    "https://outdoor-pursuits.org/weekly-training-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "columbus-oh-wheels-of-color-thursday-night-ride-therapy",
@@ -14877,7 +16703,15 @@
    "https://www.thereportingproject.org/diverse-bicycling-group-brings-people-together-builds-community-and-helps-riders-train-for-their-cancer-fighting-pelotonia-weekend/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:15",
+  "duration_min": 120,
+  "season_months": {
+   "start": 5,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "milford-oh-bishops-thursday-casual-ride",
@@ -14932,7 +16766,12 @@
    "https://www.biowheels.com/articles/local-rides-clubs-pg195.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:15",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "munroe-falls-oh-abc-monday-evening-ride",
@@ -14987,7 +16826,15 @@
    "https://www.akronbike.org/content.aspx?page_id=9"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": {
+   "start": 4,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "springboro-oh-dcc-kesling-park-ride",
@@ -15041,7 +16888,12 @@
    "https://daytoncyclingclub.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "sylvania-oh-tab-windsday-ride",
@@ -15092,7 +16944,15 @@
    "https://www.toledoareabicyclists.org/MemberOrg/ToledoAreaBicyclistsTAB/Page/ClubRides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": {
+   "start": 5,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "edmond-ok-obs-edmond-tuesday-casual-ride",
@@ -15145,7 +17005,15 @@
    "https://www.okcbike.org/content.aspx?page_id=22&club_id=437396&module_id=453248"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:16",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "edmond-ok-phat-tire-monday-arcadia-trails-mtb",
@@ -15198,7 +17066,12 @@
    "https://www.phattirebikeshop.com/articles/oklahoma-group-rides-pg375.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:45",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "edmond-ok-phat-tire-tuesday-night-road-ride",
@@ -15250,7 +17123,12 @@
    "https://www.phattirebikeshop.com/articles/oklahoma-group-rides-pg375.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:10",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "norman-ok-lazy-circles-wednesday-night-ride",
@@ -15306,7 +17184,15 @@
    "https://www.phattirebikeshop.com/articles/oklahoma-group-rides-pg375.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:30",
+  "duration_min": 60,
+  "season_months": {
+   "start": 3,
+   "end": 11
+  },
+  "monthly_rule": null
  },
  {
   "slug": "oklahoma-city-ok-phat-tire-lake-to-lake-friday-ride",
@@ -15358,7 +17244,12 @@
    "https://www.phattirebikeshop.com/articles/oklahoma-group-rides-pg375.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "oklahoma-city-ok-obs-donut-ride",
@@ -15415,7 +17306,12 @@
    "https://www.metrofamilymagazine.com/okc-bike-events/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "09:04",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "tulsa-ok-tbc-saturday-nomad-leisurely-ride",
@@ -15468,7 +17364,12 @@
    "https://tulsabicycleclub.clubexpress.com/content.aspx?page_id=22&club_id=539195&module_id=107729"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "tulsa-ok-tbc-tuesday-evening-leisurely-ride",
@@ -15524,7 +17425,12 @@
    "https://tulsabicycleclub.clubexpress.com/content.aspx?page_id=22&club_id=539195&module_id=107729"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "ashland-or-cycle-sport-wednesday-night-mtb",
@@ -15574,7 +17480,12 @@
    "https://www.roguecycle.com/articles/rides-and-events-pg37.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "17:30",
+  "duration_min": 60,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "ashland-or-handlebar-tuesday-shop-ride",
@@ -15624,7 +17535,12 @@
    "https://www.handlebarashland.com/articles/local-rides-clubs-pg196.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "bend-or-tuesday-night-rubber-mallet",
@@ -15678,7 +17594,12 @@
    "https://www.bendsource.com/news/rollin-with-the-homies-23085920/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "corvallis-or-mvbc-tenners-saturday-ride",
@@ -15734,7 +17655,15 @@
    "https://www.mvbc.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 6,
+   "end": 5
+  },
+  "monthly_rule": null
  },
  {
   "slug": "eugene-or-gears-wtnb-wednesday-ride",
@@ -15792,7 +17721,12 @@
    "https://eugenegears.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "18:00",
+  "duration_min": 60,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "eugene-or-klink-cycles-social-ride",
@@ -15846,7 +17780,21 @@
    "https://www.klinkcycles.com/rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "wed"
+   },
+   {
+    "ord": 3,
+    "day": "wed"
+   }
+  ]
  },
  {
   "slug": "keizer-or-keizer-family-ride",
@@ -15899,7 +17847,12 @@
    "https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "portland-or-gay-gravel-group",
@@ -15953,7 +17906,12 @@
    "https://www.shift2bikes.org/calendar/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "portland-or-ride-safe-pdx-thursdays",
@@ -16010,7 +17968,12 @@
    "https://linktr.ee/ridesafepdx"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "18:30",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "portland-or-sorella-forte-saturday-ride",
@@ -16066,7 +18029,12 @@
    "https://www.rivercitybicycles.com/articles/events-shop-rides-pg140.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "09:00",
+  "duration_min": 180,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "portland-or-thursday-night-ride",
@@ -16118,7 +18086,12 @@
    "https://www.shift2bikes.org/api/events.php?startdate=2026-09-15&enddate=2026-10-31"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "19:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "bethlehem-pa-cat-womens-ride",
@@ -16171,7 +18144,12 @@
    "https://lvcat.org/group-bike-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "erie-pa-slow-roll-erie",
@@ -16225,7 +18203,12 @@
    "https://toureriepa.wordpress.com/2026/06/03/slow-roll-thursdays-eries-most-easygoing-bike-ride/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 60,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "fairview-pa-girls-gone-cycle-monday-ride",
@@ -16278,7 +18261,15 @@
    "https://bikeerie.org/get-involved/rides-groups-activities/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 90,
+  "season_months": {
+   "start": 4,
+   "end": 8
+  },
+  "monthly_rule": null
  },
  {
   "slug": "lancaster-pa-lbc-tuesday-training-ride",
@@ -16329,7 +18320,12 @@
    "https://lancasterbikeclub.net/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "mechanicsburg-pa-hbc-ua-friendship-park-rides",
@@ -16383,7 +18379,12 @@
    "https://www.harrisburgbicycleclub.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "17:40",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "philadelphia-pa-philly-gravel-club-apres-gravel",
@@ -16439,7 +18440,12 @@
    "https://www.thetrellisphilly.com/calendar/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "philadelphia-pa-papertrail-gravel-espresso",
@@ -16493,7 +18499,15 @@
    "https://www.thetrellisphilly.com/calendar/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "philadelphia-pa-laurel-hill-fridays",
@@ -16545,7 +18559,12 @@
    "https://www.thetrellisphilly.com/calendar/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "06:45",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "philadelphia-pa-rar-philadelphia-group-rides",
@@ -16599,7 +18618,12 @@
    "https://www.joinphilly.com/clubs/radical-adventure-riders"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "philadelphia-pa-bcp-sunny-sunday-d-ride",
@@ -16652,7 +18676,12 @@
    "https://phillybikeclub.org/bcpdo/ride/calendarweekly"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "12:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "philadelphia-pa-wednesday-night-rides",
@@ -16705,7 +18734,12 @@
    "https://www.thetrellisphilly.com/calendar/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "19:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "pittsburgh-pa-pmtcc-wednesday-ride",
@@ -16760,7 +18794,12 @@
    "https://pmtcc.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "pittsburgh-pa-pgh-babes-on-bikes-frigid-witch-training-rides",
@@ -16813,7 +18852,15 @@
    "https://www.bikepgh.org/events/events-calendar/local-cycling-calendars/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "13:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 1,
+   "end": 2
+  },
+  "monthly_rule": null
  },
  {
   "slug": "pittsburgh-pa-team-decaf-tuesday-ride",
@@ -16867,7 +18914,15 @@
    "https://bikestreets.com/pa/pittsburgh/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "state-college-pa-sccc-tuesday-ride",
@@ -16914,7 +18969,15 @@
    "https://www.statecollegecycling.com/general-ride-information"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "providence-ri-dash-bicycle-first-sunday-ride",
@@ -16965,7 +19028,17 @@
    "https://www.instagram.com/dashbicycle/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "10:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "sun"
+   }
+  ]
  },
  {
   "slug": "providence-ri-providence-bike-jam",
@@ -17021,7 +19094,12 @@
    "https://www.instagram.com/pvdbikejam/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "awendaw-sc-coastal-cyclists-friday-social-beginner-ride",
@@ -17074,7 +19152,12 @@
    "https://coastalcyclists.com/rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "10:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "daniel-island-sc-coastal-cyclists-daniel-island-ride",
@@ -17127,7 +19210,12 @@
    "https://coastalcyclists.com/rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "10:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "greenville-sc-spinners-sctac-tuesday-ride",
@@ -17177,7 +19265,12 @@
    "https://greenvillespinners.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 150,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "sullivans-island-sc-coastal-cyclists-social-fun-sunday",
@@ -17233,7 +19326,12 @@
    "https://coastalcyclists.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "10:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "germantown-tn-major-taylor-thirsty-thursday",
@@ -17285,7 +19383,15 @@
    "https://www.memphishightailers.com/content.aspx?page_id=22&club_id=631861&module_id=154509"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 3,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "knoxville-tn-two-bikes-coffee-outside",
@@ -17340,7 +19446,12 @@
    "https://twobikes.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "09:00",
+  "duration_min": 150,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "knoxville-tn-two-bikes-bike-party",
@@ -17394,7 +19505,17 @@
    "https://twobikes.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": 120,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "memphis-tn-hightailers-chill-ride",
@@ -17448,7 +19569,12 @@
    "https://www.memphishightailers.com/content.aspx?page_id=22&club_id=631861&module_id=154509"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "14:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "oakland-tn-hightailers-tuesday-gravel",
@@ -17500,7 +19626,12 @@
    "https://www.memphishightailers.com/content.aspx?page_id=22&club_id=631861&module_id=154509"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "austin-tx-austin-ridge-riders-sunday-ride",
@@ -17553,7 +19684,12 @@
    "https://www.austinridgeriders.com/ride"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "austin-tx-mellow-johnnys-scout-a-route",
@@ -17609,7 +19745,12 @@
    "https://austin.mellowjohnnys.com/rides-clubs"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "austin-tx-thursday-night-social-ride",
@@ -17664,7 +19805,12 @@
    "https://www.findglocal.com/US/Austin/197548500283068/Social-Cycling-Austin"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "19:30",
+  "duration_min": 180,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "bryan-tx-bvmba-tuesday-social-ride",
@@ -17720,7 +19866,12 @@
    "https://brazoscyclists.org/rides-and-events/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "college-station-tx-southenders-midweek-motley",
@@ -17773,7 +19924,12 @@
    "https://brazoscyclists.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "07:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "corpus-christi-tx-bicycle-world-tuesday-no-drop-ride",
@@ -17828,7 +19984,12 @@
    "https://www.bicycleworldrgv.com/about/come-ride-with-us-pg377.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "corpus-christi-tx-cc-led-saturday-light-ride",
@@ -17885,7 +20046,12 @@
    "https://www.instagram.com/getccled/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "19:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "dallas-tx-dallas-critical-mass",
@@ -17937,7 +20103,17 @@
    "https://dfwpulse.com/dallas/dallas-critical-mass-c91019"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "20:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "denton-tx-denton-women-cyclists-tuesday-ride",
@@ -17994,7 +20170,12 @@
    "https://www.velorepublicbikes.com/events/rides-trails-pg199.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "19:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "denton-tx-east-side-social-ride",
@@ -18049,7 +20230,12 @@
    "https://www.velorepublicbikes.com/events/rides-trails-pg199.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "19:30",
+  "duration_min": 60,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "denton-tx-monday-community-ride",
@@ -18106,7 +20292,15 @@
    "https://www.instagram.com/dentoncommunityrides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": 60,
+  "season_months": {
+   "start": 3,
+   "end": 11
+  },
+  "monthly_rule": null
  },
  {
   "slug": "el-paso-tx-saturday-road-ride",
@@ -18158,7 +20352,12 @@
    "https://elpasobicycleclub.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "07:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "el-paso-tx-thursday-morning-cruise",
@@ -18212,7 +20411,12 @@
    "https://elpasobicycleclub.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "07:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "fort-worth-tx-fwba-saturday-club-ride",
@@ -18263,7 +20467,12 @@
    "https://www.fwcycling.com/events/rides-events-maps-pg230.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "fort-worth-tx-trek-fort-worth-south-thursday-ride",
@@ -18315,7 +20524,12 @@
    "https://www.eventbrite.com/e/the-wednesday-ride-trek-fort-worth-south-tickets-1991143980245"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:15",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "houston-tx-blue-line-bike-lab-wednesday-ride",
@@ -18366,7 +20580,12 @@
    "https://www.bluelinebikelab.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "houston-tx-critical-mass-houston",
@@ -18417,7 +20636,17 @@
    "https://www.instagram.com/criticalmasshtx/reels/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "19:15",
+  "duration_min": 150,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ]
  },
  {
   "slug": "houston-tx-pride-bike-ride-tuesgay-social-ride",
@@ -18477,7 +20706,12 @@
    "https://www.outsmartmagazine.com/2021/06/pride-bike-ride/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "19:30",
+  "duration_min": 180,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "mcallen-tx-mujeres-mondays",
@@ -18529,7 +20763,12 @@
    "https://www.bicycleworldrgv.com/articles/group-rides-pg625.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "mcallen-tx-bicycle-world-tnt-ride",
@@ -18580,7 +20819,12 @@
    "https://www.bicycleworldrgv.com/articles/group-rides-pg625.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "san-antonio-tx-satx-social-ride",
@@ -18638,7 +20882,12 @@
    "https://www.facebook.com/groups/SATNBC/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "19:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "waco-tx-cameron-park-sunday-mtb-ride",
@@ -18692,7 +20941,12 @@
    "https://www.wacobicycleclub.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "14:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "waco-tx-dam-ride-tuesday",
@@ -18747,7 +21001,12 @@
    "https://www.wacobicycleclub.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "17:45",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "orem-ut-orem-bicycle-coalition-monthly-ride",
@@ -18798,7 +21057,17 @@
    "https://www.maddogcycles.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Denver",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "wed"
+   }
+  ]
  },
  {
   "slug": "park-city-ut-slcmtb-tuesday-social-ride",
@@ -18849,7 +21118,12 @@
    "https://www.meetup.com/find/us--ut--salt-lake-city/cycling/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "17:45",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "salt-lake-city-ut-999-ride",
@@ -18904,7 +21178,12 @@
    "https://kutv.com/news/local/salt-lake-streets-fill-with-hundreds-of-bicyclists-for-999-thursday-night-rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "21:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "salt-lake-city-ut-bonneville-cycling-club-weekly-rides",
@@ -18952,7 +21231,12 @@
    "https://www.bccutah.org/rides/week/2026/38"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Denver",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "salt-lake-city-ut-wasatch-mountain-club-tuesday-mtb-ride",
@@ -19000,7 +21284,12 @@
    "https://www.meetup.com/find/us--ut--salt-lake-city/cycling/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Denver",
+  "start_hhmm": "17:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "arlington-va-nova-cbg-tuesday-night-ride",
@@ -19054,7 +21343,12 @@
    "https://www.meetup.com/novacbg/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "charlottesville-va-blue-wheel-tuesday-shop-ride",
@@ -19103,7 +21397,12 @@
    "https://www.bluewheel.com/articles/group-rides-pg216.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:15",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "charlottesville-va-endeavor-cycles-wednesday-mtb-ride",
@@ -19155,7 +21454,12 @@
    "https://www.endeavorcycles.com/articles/shop-rides-events-pg189.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "harrisonburg-va-womens-monday-mountain-bike-ride",
@@ -19212,7 +21516,12 @@
    "https://svbcoalition.org/ride/weekly-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "17:30",
+  "duration_min": 60,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "norfolk-va-slow-and-steady-sundays",
@@ -19266,7 +21575,12 @@
    "https://www.downtownnorfolk.org/event/slow-and-steady-sunday-ride"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/New_York",
+  "start_hhmm": "10:30",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "norfolk-va-east-coast-bicycles-thursday-community-road-ride",
@@ -19316,7 +21630,12 @@
    "https://www.eastcoastbicycles.com/articles/group-rides-pg169.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "powhatan-va-raba-powhatan-courthouse-no-drop",
@@ -19371,7 +21690,12 @@
    "https://www.raba.org/weekly-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "richmond-va-rar-richmond-monday-night-ride",
@@ -19425,7 +21749,12 @@
    "https://radicaladventureriders.com/chapters/richmond"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "low"
+  "confidence": "low",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "richmond-va-blue-ridge-cyclery-saturday-bridge-ride",
@@ -19477,7 +21806,12 @@
    "https://www.blueridgecyclery.com/articles/events-richmond-group-rides-pg334.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "08:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "roanoke-va-crank-sisters-social-ride",
@@ -19534,7 +21868,12 @@
    "https://roanokeoutside.com/group-bike-rides-for-every-day-of-the-week/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "roanoke-va-cardinal-bicycle-tuesday-night-ride",
@@ -19589,7 +21928,12 @@
    "https://roanokeoutside.com/group-bike-rides-for-every-day-of-the-week/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "17:45",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "salem-va-olde-salem-brewery-ride",
@@ -19641,7 +21985,12 @@
    "https://roanokeoutside.com/group-bike-rides-for-every-day-of-the-week/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "virginia-beach-va-tripower-sunday-beginner-ride",
@@ -19693,7 +22042,12 @@
    "https://www.tripowercycling.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "08:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "barre-vt-vermont-bicycle-shop-pizza-ride",
@@ -19747,7 +22101,15 @@
    "https://www.vermontbicycleshop.com/blogs/adventures/places-to-ride-and-group-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": 30,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "south-burlington-vt-gmbc-wednesday-training-ride",
@@ -19797,7 +22159,12 @@
    "https://thegmbc.com/wed-training-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "stowe-vt-ranch-camp-ladies-rides",
@@ -19850,7 +22217,15 @@
    "https://www.ranchcampvt.com/articles/ladies-rides-pg293.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": {
+   "start": 6,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "bellingham-wa-rabbit-ride",
@@ -19904,7 +22279,15 @@
    "https://www.fairhavenbicycles.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "07:45",
+  "duration_min": 120,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "bellingham-wa-shifting-gears-womens-mtb-ride",
@@ -19958,7 +22341,15 @@
    "https://letsshiftgears.org/mountain-biking"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "17:30",
+  "duration_min": 120,
+  "season_months": {
+   "start": 5,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "olympia-wa-gravel-happy-hour",
@@ -20013,7 +22404,24 @@
    "https://www.bigstumpbikes.com/articles/local-rides-clubs-pg201.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": {
+   "start": 10,
+   "end": 3
+  },
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "sun"
+   },
+   {
+    "ord": 4,
+    "day": "sun"
+   }
+  ]
  },
  {
   "slug": "seattle-wa-good-weather-sunday-social",
@@ -20067,7 +22475,12 @@
    "https://everydayrides.com/event-series/6a6b75d827f0f18ef3e161f0-good-weather-sunday-social"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "10:30",
+  "duration_min": 210,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "seattle-wa-moxie-monday",
@@ -20125,7 +22538,17 @@
    "https://www.commuteseattle.com/bike-month-spotlight-cycling-groups-for-shared-identies/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "mon"
+   }
+  ]
  },
  {
   "slug": "seattle-wa-northstar-sunday-service",
@@ -20183,7 +22606,12 @@
    "https://everydayrides.com/groups"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "11:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "seattle-wa-seattle-bike-disco",
@@ -20233,7 +22661,15 @@
    "https://everydayrides.com/calendar"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "19:30",
+  "duration_min": null,
+  "season_months": {
+   "start": 9,
+   "end": 11
+  },
+  "monthly_rule": null
  },
  {
   "slug": "seattle-wa-wtfnb-weekly-with-brevay",
@@ -20288,7 +22724,12 @@
    "https://everydayrides.com/calendar"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "06:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "spokane-wa-bicycle-butler-ride-spokane",
@@ -20343,7 +22784,12 @@
    "https://www.bicyclebutler.com/ride-spokane/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "18:15",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "tacoma-wa-tacoma-tuesday-night-ride",
@@ -20395,7 +22841,12 @@
    "https://www.instagram.com/tacomatnr/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "wenatchee-wa-wenatchee-valley-velo-saturday-ride",
@@ -20449,7 +22900,12 @@
    "https://wenatcheevalleyvelo.org/page-18101"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Los_Angeles",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "appleton-wi-wheel-and-sprocket-thursday-night-ride",
@@ -20499,7 +22955,15 @@
    "https://www.wheelandsprocket.com/about/event-calendar-pg76.htm"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 5,
+   "end": 8
+  },
+  "monthly_rule": null
  },
  {
   "slug": "green-bay-wi-market-to-music-ride",
@@ -20554,7 +23018,15 @@
    "https://www.gbbicycle.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:30",
+  "duration_min": 60,
+  "season_months": {
+   "start": 6,
+   "end": 8
+  },
+  "monthly_rule": null
  },
  {
   "slug": "la-crosse-wi-smiths-womens-road-ride",
@@ -20606,7 +23078,12 @@
    "https://smithsbikes.com/group-bike-rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "madison-wi-cap-city-cyclists-mad-town-mondays",
@@ -20660,7 +23137,12 @@
    "https://www.capcitycyclists.com/mad-town-mondays"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": 90,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "madison-wi-madison-queer-bike-ride",
@@ -20715,7 +23197,17 @@
    "https://raw.githubusercontent.com/allyrilling/madison-group-rides/main/src/content/rides/madison-queer-bike-ride.md"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "wed"
+   }
+  ]
  },
  {
   "slug": "madison-wi-madison-womens-cycling-club-tuesday-ride",
@@ -20771,7 +23263,12 @@
    "https://github.com/allyrilling/madison-group-rides"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "madison-wi-motorless-motion-taco-ride",
@@ -20825,7 +23322,15 @@
    "https://www.motorlessmotionbicycles.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:15",
+  "duration_min": 60,
+  "season_months": {
+   "start": 5,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "middleton-wi-capital-brewery-bike-club-rides",
@@ -20879,7 +23384,15 @@
    "https://raw.githubusercontent.com/allyrilling/madison-group-rides/main/src/content/rides/capital-brewery-bike-club-tue-thu-rides.md"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "17:30",
+  "duration_min": null,
+  "season_months": {
+   "start": 5,
+   "end": 9
+  },
+  "monthly_rule": null
  },
  {
   "slug": "milwaukee-wi-cadence-tuesday-thursday-rides",
@@ -20932,7 +23445,15 @@
    "https://cadencemke.com/rides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 5,
+   "end": 8
+  },
+  "monthly_rule": null
  },
  {
   "slug": "suamico-wi-broken-spoke-monday-night-road-ride",
@@ -20983,7 +23504,12 @@
    "https://www.brokenspokebikes.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Chicago",
+  "start_hhmm": "18:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "wauwatosa-wi-tosa-full-moon-bicycle-ride",
@@ -21036,7 +23562,12 @@
    "https://www.instagram.com/milwaukeebikerides/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Chicago",
+  "start_hhmm": null,
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "charleston-wv-mountain-state-wheelers-saturday-ride",
@@ -21085,7 +23616,15 @@
    "https://mountainstatewheelers.org/ride-info/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/New_York",
+  "start_hhmm": "09:00",
+  "duration_min": null,
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "monthly_rule": null
  },
  {
   "slug": "morgantown-wv-mamba-weekly-group-ride",
@@ -21135,7 +23674,12 @@
    "https://mambawv.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/New_York",
+  "start_hhmm": "18:30",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "jackson-wy-bike-to-work-wednesdays",
@@ -21187,7 +23731,15 @@
    "https://www.friendsofpathways.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "medium"
+  "confidence": "medium",
+  "tz": "America/Denver",
+  "start_hhmm": "07:30",
+  "duration_min": null,
+  "season_months": {
+   "start": 6,
+   "end": 8
+  },
+  "monthly_rule": null
  },
  {
   "slug": "laramie-wy-spinderellas",
@@ -21242,7 +23794,12 @@
    "https://www.laramiebikenet.org/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "17:45",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  },
  {
   "slug": "laramie-wy-pedal-house-wednesday-night-ride",
@@ -21295,6 +23852,11 @@
    "https://www.pedalhouse.com/"
   ],
   "verified_on": "2026-09-15",
-  "confidence": "high"
+  "confidence": "high",
+  "tz": "America/Denver",
+  "start_hhmm": "17:00",
+  "duration_min": null,
+  "season_months": null,
+  "monthly_rule": null
  }
 ]

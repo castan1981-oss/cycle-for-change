@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:athens-ga-bikeathens-joy-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260925T180000
+DTEND;TZID=America/New_York:20260925T193000
+RRULE:FREQ=MONTHLY;BYDAY=-1FR
+SUMMARY:BikeAthens Joy Ride — Athens\, GA
+LOCATION:BikeAthens shop (under Daily Groceries)\, 1190 Prince Ave Suite 
+ B\, Athens\, GA 30606
+DESCRIPTION:Pace: casual\, slow.\nNo-drop.\nSchedule: Last Friday of the 
+ month\, 6:00 pm.\nConfirm with the host before you go.\nhttps://cyclefor
+ change.org/rides/athens-ga-bikeathens-joy-ride/
+URL:https://cycleforchange.org/rides/athens-ga-bikeathens-joy-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:austin-tx-thursday-night-social-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260917T193000
+DTEND;TZID=America/Chicago:20260917T223000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Thursday Night Social Ride — Austin\, TX
+LOCATION:Chicano Park\, 14 Salina St\, Austin\, TX 78702
+DESCRIPTION:Pace: social\, easy.\nNo-drop.\nSchedule: Every Thursday. Mee
+ t around 7:30 pm.\nConfirm with the host before you go.\nhttps://cyclefo
+ rchange.org/rides/austin-tx-thursday-night-social-ride/
+URL:https://cycleforchange.org/rides/austin-tx-thursday-night-social-ride
+ /
+END:VEVENT
+END:VCALENDAR

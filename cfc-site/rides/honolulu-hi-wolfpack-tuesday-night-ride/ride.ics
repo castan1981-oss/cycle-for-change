@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:honolulu-hi-wolfpack-tuesday-night-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=Pacific/Honolulu:20260922T163000
+DTEND;TZID=Pacific/Honolulu:20260922T183000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Wolfpack Tuesday Night Ride — Honolulu\, HI
+LOCATION:Kilauea District Park\, 4109 Kilauea Ave\, Honolulu\, HI 96816
+DESCRIPTION:Pace: fast; drop ride on the return.\nSchedule: Every Tuesday
+ \, 4:30 pm.\nConfirm with the host before you go.\nhttps://cycleforchang
+ e.org/rides/honolulu-hi-wolfpack-tuesday-night-ride/
+URL:https://cycleforchange.org/rides/honolulu-hi-wolfpack-tuesday-night-r
+ ide/
+END:VEVENT
+END:VCALENDAR

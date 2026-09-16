@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:rotterdam-ny-mhcc-tuesday-evening-river-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260922T183000
+DTEND;TZID=America/New_York:20260922T203000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:MHCC Tuesday Evening River Ride — Rotterdam\, NY
+LOCATION:Kiwanis Park\, Rotterdam\, NY
+DESCRIPTION:Pace: tour pace.\nSchedule: Tuesdays\, 6:30 pm.\nConfirm with
+  the host before you go.\nhttps://cycleforchange.org/rides/rotterdam-ny-
+ mhcc-tuesday-evening-river-ride/
+URL:https://cycleforchange.org/rides/rotterdam-ny-mhcc-tuesday-evening-ri
+ ver-ride/
+END:VEVENT
+END:VCALENDAR

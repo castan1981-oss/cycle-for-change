@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:buffalo-ny-slow-roll-buffalo-monday-night-community-ride@cycleforchan
+ ge.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260921T183000
+DTEND;TZID=America/New_York:20260921T210000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20261031T235959Z
+SUMMARY:Slow Roll Buffalo Monday Night Community Ride — Buffalo\, NY
+LOCATION:Buffalo\, NY
+DESCRIPTION:Pace: slow\, 8–10 mph at the front.\nNo-drop.\nSchedule: Ev
+ ery Monday\, mid-May through mid-October. Meet 6:00 pm\, ride 6:30 pm (5
+ :30 pm in October).\nConfirm with the host before you go.\nhttps://cycle
+ forchange.org/rides/buffalo-ny-slow-roll-buffalo-monday-night-community-
+ ride/
+URL:https://cycleforchange.org/rides/buffalo-ny-slow-roll-buffalo-monday-
+ night-community-ride/
+END:VEVENT
+END:VCALENDAR

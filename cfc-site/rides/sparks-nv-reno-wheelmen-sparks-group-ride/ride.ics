@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sparks-nv-reno-wheelmen-sparks-group-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Los_Angeles:20260919T100000
+DTEND;TZID=America/Los_Angeles:20260919T130000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Sparks Group Ride — Sparks\, NV
+LOCATION:Sierra Bicycle Supply\, 1380 Kleppe Ln\, Sparks\, NV 89431
+DESCRIPTION:Pace: friendly\, social\, recreational; all experience levels
+ .\nSchedule: Every Saturday\, 10:00 am (start time may shift in summer h
+ eat).\nConfirm with the host before you go.\nhttps://cycleforchange.org/
+ rides/sparks-nv-reno-wheelmen-sparks-group-ride/
+URL:https://cycleforchange.org/rides/sparks-nv-reno-wheelmen-sparks-group
+ -ride/
+END:VEVENT
+END:VCALENDAR

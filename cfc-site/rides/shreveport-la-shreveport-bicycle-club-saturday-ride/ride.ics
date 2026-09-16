@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:shreveport-la-shreveport-bicycle-club-saturday-ride@cycleforchange.or
+ g
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260919T073000
+DTEND;TZID=America/Chicago:20260919T093000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Shreveport Bicycle Club Saturday Ride — Shreveport\, LA
+LOCATION:Ellerbe Road Baptist Church\, Ellerbe Rd\, Shreveport\, LA 71115
+DESCRIPTION:Schedule: Every Saturday\, 7:30 am; also Tuesday and Thursday
+  rides.\nConfirm with the host before you go.\nhttps://cycleforchange.or
+ g/rides/shreveport-la-shreveport-bicycle-club-saturday-ride/
+URL:https://cycleforchange.org/rides/shreveport-la-shreveport-bicycle-clu
+ b-saturday-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sunrise-fl-south-broward-wheelers-saturday-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260919T070000
+DTEND;TZID=America/New_York:20260919T090000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:South Broward Wheelers Saturday Ride — Sunrise\, FL
+LOCATION:Markham Park\, 16001 W State Rd 84\, Sunrise\, FL 33326
+DESCRIPTION:Pace: 15–17 / 17–19 / 19–21 mph groups.\nSchedule: Ever
+ y Saturday\, 7:00 am.\nConfirm with the host before you go.\nhttps://cyc
+ leforchange.org/rides/sunrise-fl-south-broward-wheelers-saturday-ride/
+URL:https://cycleforchange.org/rides/sunrise-fl-south-broward-wheelers-sa
+ turday-ride/
+END:VEVENT
+END:VCALENDAR

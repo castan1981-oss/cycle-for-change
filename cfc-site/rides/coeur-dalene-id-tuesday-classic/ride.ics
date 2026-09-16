@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:coeur-dalene-id-tuesday-classic@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Los_Angeles:20260922T173000
+DTEND;TZID=America/Los_Angeles:20260922T193000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261031T235959Z
+SUMMARY:Tuesday Classic — Coeur d'Alene\, ID
+LOCATION:Workhorse office\, 1324 E Sherman Ave\, Coeur d'Alene\, ID 83814
+DESCRIPTION:Pace: ~18 mph.\nSchedule: Every Tuesday\, 5:30 pm (spring–s
+ ummer).\nConfirm with the host before you go.\nhttps://cycleforchange.or
+ g/rides/coeur-dalene-id-tuesday-classic/
+URL:https://cycleforchange.org/rides/coeur-dalene-id-tuesday-classic/
+END:VEVENT
+END:VCALENDAR

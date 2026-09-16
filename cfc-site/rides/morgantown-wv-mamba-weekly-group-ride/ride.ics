@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:morgantown-wv-mamba-weekly-group-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260922T183000
+DTEND;TZID=America/New_York:20260922T203000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:MAMBA Weekly Group Ride — Morgantown\, WV
+LOCATION:Morgantown\, WV
+DESCRIPTION:Pace: beginner/intermediate\, regroups along the trail.\nNo-d
+ rop.\nSchedule: Usually Tuesdays\, 6:30 pm\, daylight dependent; trail v
+ aries.\nConfirm with the host before you go.\nhttps://cycleforchange.org
+ /rides/morgantown-wv-mamba-weekly-group-ride/
+URL:https://cycleforchange.org/rides/morgantown-wv-mamba-weekly-group-rid
+ e/
+END:VEVENT
+END:VCALENDAR

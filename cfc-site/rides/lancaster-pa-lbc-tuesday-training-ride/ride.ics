@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:lancaster-pa-lbc-tuesday-training-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260922T180000
+DTEND;TZID=America/New_York:20260922T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Tuesday Training Ride (Lancaster Bicycle Club) — Lancaster\, PA
+LOCATION:Calvary Church\, 1051 Landis Valley Rd\, Lancaster\, PA 17601
+DESCRIPTION:Pace: A (18–20 mph) and A+ (20–22 mph) groups.\nSchedule:
+  Tuesdays\, 6:00 pm.\nConfirm with the host before you go.\nhttps://cycl
+ eforchange.org/rides/lancaster-pa-lbc-tuesday-training-ride/
+URL:https://cycleforchange.org/rides/lancaster-pa-lbc-tuesday-training-ri
+ de/
+END:VEVENT
+END:VCALENDAR

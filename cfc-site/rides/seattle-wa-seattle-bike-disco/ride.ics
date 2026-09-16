@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:seattle-wa-seattle-bike-disco@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Los_Angeles:20260918T193000
+DTEND;TZID=America/Los_Angeles:20260918T213000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20261130T235959Z
+SUMMARY:Seattle Bike Disco — Seattle\, WA
+LOCATION:Seattle\, WA
+DESCRIPTION:Pace: no-drop\, non-stop dance party.\nNo-drop.\nSchedule: Mo
+ nthly\, usually a Friday. Gather 7:00 pm\, ride 7:30 pm. Next dates: Sep
+  18\, Oct 23\, Nov 20\, 2026.\nConfirm with the host before you go.\nhtt
+ ps://cycleforchange.org/rides/seattle-wa-seattle-bike-disco/
+URL:https://cycleforchange.org/rides/seattle-wa-seattle-bike-disco/
+END:VEVENT
+END:VCALENDAR

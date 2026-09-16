@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:lexington-ma-contes-sunday-ride-b2c2@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260920T090000
+DTEND;TZID=America/New_York:20260920T110000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Conte's Sunday Ride p/b B2C2 — Lexington\, MA
+LOCATION:Conte's Bike Shop\, 1684 Massachusetts Ave\, Lexington\, MA 0242
+ 0
+DESCRIPTION:Pace: S >24 mph / A 20–22 / B 18–20 / C 16–17 mph.\nSch
+ edule: Every Sunday\, 9:00 am sharp.\nConfirm with the host before you g
+ o.\nhttps://cycleforchange.org/rides/lexington-ma-contes-sunday-ride-b2c
+ 2/
+URL:https://cycleforchange.org/rides/lexington-ma-contes-sunday-ride-b2c2
+ /
+END:VEVENT
+END:VCALENDAR

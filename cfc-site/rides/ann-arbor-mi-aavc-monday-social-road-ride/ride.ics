@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ann-arbor-mi-aavc-monday-social-road-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260921T180000
+DTEND;TZID=America/New_York:20260921T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20261031T235959Z
+SUMMARY:AAVC Monday Social Road Ride — Ann Arbor\, MI
+LOCATION:Ann Arbor\, MI
+DESCRIPTION:Pace: moderate\, no-drop.\nNo-drop.\nSchedule: Every Monday\,
+  6:00 pm\, mid-March through late October.\nConfirm with the host before
+  you go.\nhttps://cycleforchange.org/rides/ann-arbor-mi-aavc-monday-soci
+ al-road-ride/
+URL:https://cycleforchange.org/rides/ann-arbor-mi-aavc-monday-social-road
+ -ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:roswell-ga-bike-roswell-wednesday-evening-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260916T183000
+DTEND;TZID=America/New_York:20260916T203000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Bike Roswell! Wednesday Evening Ride — Roswell\, GA
+LOCATION:Roswell United Methodist Church parking lot\, Corner of Magnolia
+  St and Mimosa Blvd\, Roswell\, GA 30075
+DESCRIPTION:Pace: A 18+ mph\, B 16–17 mph\, C 14–15 mph.\nNo-drop.\nS
+ chedule: Every Wednesday\, 6:30 pm.\nConfirm with the host before you go
+ .\nhttps://cycleforchange.org/rides/roswell-ga-bike-roswell-wednesday-ev
+ ening-ride/
+URL:https://cycleforchange.org/rides/roswell-ga-bike-roswell-wednesday-ev
+ ening-ride/
+END:VEVENT
+END:VCALENDAR

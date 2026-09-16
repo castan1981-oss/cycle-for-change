@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-francisco-ca-butterlap@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Los_Angeles:20260916T191500
+DTEND;TZID=America/Los_Angeles:20260916T211500
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Butterlap — San Francisco\, CA
+LOCATION:Ferry Building\, 1 Ferry Building\, San Francisco\, CA 94111
+DESCRIPTION:Pace: relaxed\, no-drop.\nNo-drop.\nSchedule: Every Wednesday
+ \, 7:00 pm (roll out 7:15 pm).\nConfirm with the host before you go.\nht
+ tps://cycleforchange.org/rides/san-francisco-ca-butterlap/
+URL:https://cycleforchange.org/rides/san-francisco-ca-butterlap/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:waco-tx-cameron-park-sunday-mtb-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260920T140000
+DTEND;TZID=America/Chicago:20260920T160000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Cameron Park Sunday MTB Ride — Waco\, TX
+LOCATION:Redwood Shelter\, Cameron Park\, Cameron Park\, Waco\, TX 76708
+DESCRIPTION:Pace: all levels.\nNo-drop.\nSchedule: Every Sunday\, 2:00 pm
+ .\nConfirm with the host before you go.\nhttps://cycleforchange.org/ride
+ s/waco-tx-cameron-park-sunday-mtb-ride/
+URL:https://cycleforchange.org/rides/waco-tx-cameron-park-sunday-mtb-ride
+ /
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:laramie-wy-spinderellas@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Denver:20260922T174500
+DTEND;TZID=America/Denver:20260922T194500
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Spinderellas — Laramie\, WY
+LOCATION:Tie City Trailhead parking lot\, Happy Jack Rd\, Laramie\, WY 82
+ 070
+DESCRIPTION:Pace: recreational\, no-drop.\nNo-drop.\nSchedule: Every Tues
+ day\, 5:45 pm.\nConfirm with the host before you go.\nhttps://cycleforch
+ ange.org/rides/laramie-wy-spinderellas/
+URL:https://cycleforchange.org/rides/laramie-wy-spinderellas/
+END:VEVENT
+END:VCALENDAR

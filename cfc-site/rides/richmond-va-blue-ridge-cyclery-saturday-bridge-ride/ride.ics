@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:richmond-va-blue-ridge-cyclery-saturday-bridge-ride@cycleforchange.or
+ g
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260919T083000
+DTEND;TZID=America/New_York:20260919T103000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Saturday Bridge Ride (Blue Ridge Cyclery / BikeFitRVA Racing) —
+  Richmond\, VA
+LOCATION:Blue Ridge Cyclery Richmond\, 5001 Libbie Mill East Blvd\, Suite
+  100\, Richmond\, VA 23230
+DESCRIPTION:Pace: 16–19 mph.\nSchedule: Saturdays\, arrive 8:15 am\, ro
+ ll 8:30 am (Bridge Ride leaves 5–10 minutes after the A+ group).\nConf
+ irm with the host before you go.\nhttps://cycleforchange.org/rides/richm
+ ond-va-blue-ridge-cyclery-saturday-bridge-ride/
+URL:https://cycleforchange.org/rides/richmond-va-blue-ridge-cyclery-satur
+ day-bridge-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:indianapolis-in-bike-line-tuesday-thursday-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260917T190000
+DTEND;TZID=America/New_York:20260917T203000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH
+SUMMARY:The Bike Line Tuesday & Thursday Road Ride — Indianapolis\, IN
+LOCATION:The Bike Line\, Broad Ripple\, 6520 Cornell Ave\, Indianapolis\,
+  IN 46220
+DESCRIPTION:Pace: fast group ~23 mph\, slower group ~18 mph.\nSchedule: E
+ very Tuesday and Thursday\, 7:00 pm.\nConfirm with the host before you g
+ o.\nhttps://cycleforchange.org/rides/indianapolis-in-bike-line-tuesday-t
+ hursday-ride/
+URL:https://cycleforchange.org/rides/indianapolis-in-bike-line-tuesday-th
+ ursday-ride/
+END:VEVENT
+END:VCALENDAR

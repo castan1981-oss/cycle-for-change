@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:waco-tx-dam-ride-tuesday@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260922T174500
+DTEND;TZID=America/Chicago:20260922T194500
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Dam Ride (Tuesday Evenings) — Waco\, TX
+LOCATION:Waco Dam\, 3803 Skeet Eason Rd\, Waco\, TX 76708
+DESCRIPTION:Pace: A 20+ mph (drop)\, B 18–20\, C 16–18 (regroup)\, D 
+ 13–15 (no-drop).\nSchedule: Every Tuesday\, roll out 5:45 pm (season s
+ tarts in March).\nConfirm with the host before you go.\nhttps://cyclefor
+ change.org/rides/waco-tx-dam-ride-tuesday/
+URL:https://cycleforchange.org/rides/waco-tx-dam-ride-tuesday/
+END:VEVENT
+END:VCALENDAR

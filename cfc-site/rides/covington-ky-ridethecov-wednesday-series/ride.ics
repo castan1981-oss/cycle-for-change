@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:covington-ky-ridethecov-wednesday-series@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260916T180000
+DTEND;TZID=America/New_York:20260916T194500
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=WE;UNTIL=20261031T235959Z
+SUMMARY:RideTheCov Wednesday Series — Covington\, KY
+LOCATION:MainStrasse Village\, Goose Girl Fountain\, Main St & 6th St\, C
+ ovington\, KY 41011
+DESCRIPTION:Pace: easy\, gentle on hills.\nSchedule: 2nd and 4th Wednesda
+ ys\, 6:00 pm\, late March through October.\nConfirm with the host before
+  you go.\nhttps://cycleforchange.org/rides/covington-ky-ridethecov-wedne
+ sday-series/
+URL:https://cycleforchange.org/rides/covington-ky-ridethecov-wednesday-se
+ ries/
+END:VEVENT
+END:VCALENDAR

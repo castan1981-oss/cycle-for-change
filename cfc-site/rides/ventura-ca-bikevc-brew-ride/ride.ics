@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ventura-ca-bikevc-brew-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Los_Angeles:20261011T130000
+DTEND;TZID=America/Los_Angeles:20261011T160000
+RRULE:FREQ=MONTHLY;BYDAY=2SU;UNTIL=20261130T235959Z
+SUMMARY:BikeVC Brew Ride — Ventura\, CA
+LOCATION:Ventura Bike HUB\, 490 N Ventura Ave\, Ventura\, CA 93001
+DESCRIPTION:Pace: easy city pace.\nNo-drop.\nSchedule: Second Sunday of t
+ he month\, 1:00 pm\, spring through fall.\nConfirm with the host before 
+ you go.\nhttps://cycleforchange.org/rides/ventura-ca-bikevc-brew-ride/
+URL:https://cycleforchange.org/rides/ventura-ca-bikevc-brew-ride/
+END:VEVENT
+END:VCALENDAR

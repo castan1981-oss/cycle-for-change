@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mechanicsburg-pa-hbc-ua-friendship-park-rides@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260917T174000
+DTEND;TZID=America/New_York:20260917T194000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH
+SUMMARY:UA Friendship Park Evening Rides (Harrisburg Bicycle Club) — Me
+ chanicsburg\, PA
+LOCATION:Upper Allen Friendship Park\, Mechanicsburg\, PA
+DESCRIPTION:Pace: B+\, B and C groups.\nSchedule: Tuesdays and Thursdays\
+ , 6:00 pm (B+ group sometimes rolls 5:40 pm as days shorten).\nConfirm w
+ ith the host before you go.\nhttps://cycleforchange.org/rides/mechanicsb
+ urg-pa-hbc-ua-friendship-park-rides/
+URL:https://cycleforchange.org/rides/mechanicsburg-pa-hbc-ua-friendship-p
+ ark-rides/
+END:VEVENT
+END:VCALENDAR

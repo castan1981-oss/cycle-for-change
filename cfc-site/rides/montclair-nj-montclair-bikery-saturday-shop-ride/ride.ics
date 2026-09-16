@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:montclair-nj-montclair-bikery-saturday-shop-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260919T080000
+DTEND;TZID=America/New_York:20260919T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261031T235959Z
+SUMMARY:Saturday Shop Ride (Montclair Bikery) — Montclair\, NJ
+LOCATION:Montclair Bikery\, 148 Valley Rd\, Montclair\, NJ 07042
+DESCRIPTION:Pace: A or B pace depending on who shows.\nSchedule: Saturday
+ s\, 8:00 am\, April–October.\nConfirm with the host before you go.\nht
+ tps://cycleforchange.org/rides/montclair-nj-montclair-bikery-saturday-sh
+ op-ride/
+URL:https://cycleforchange.org/rides/montclair-nj-montclair-bikery-saturd
+ ay-shop-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:edmond-ok-obs-edmond-tuesday-casual-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260922T181600
+DTEND;TZID=America/Chicago:20260922T201600
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20260930T235959Z
+SUMMARY:Edmond Tuesday Casual Ride — Edmond\, OK
+LOCATION:Edmond City Hall\, Littler Ave & Main St\, Edmond\, OK 73034
+DESCRIPTION:Pace: 8–10 mph.\nNo-drop.\nSchedule: Every Tuesday\, 6:16 p
+ m (April–September).\nConfirm with the host before you go.\nhttps://cy
+ cleforchange.org/rides/edmond-ok-obs-edmond-tuesday-casual-ride/
+URL:https://cycleforchange.org/rides/edmond-ok-obs-edmond-tuesday-casual-
+ ride/
+END:VEVENT
+END:VCALENDAR

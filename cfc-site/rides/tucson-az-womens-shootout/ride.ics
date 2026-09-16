@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tucson-az-womens-shootout@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Phoenix:20260919T061500
+DTEND;TZID=America/Phoenix:20260919T081500
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Women's Shootout Tucson — Tucson\, AZ
+LOCATION:Mercado San Agustín\, 100 S Avenida del Convento\, Tucson\, AZ 
+ 85745
+DESCRIPTION:Pace: road ride\, cycling experience required.\nSchedule: Eve
+ ry Saturday\, meet 6:00 am\, roll 6:15 am (shifts with season).\nConfirm
+  with the host before you go.\nhttps://cycleforchange.org/rides/tucson-a
+ z-womens-shootout/
+URL:https://cycleforchange.org/rides/tucson-az-womens-shootout/
+END:VEVENT
+END:VCALENDAR

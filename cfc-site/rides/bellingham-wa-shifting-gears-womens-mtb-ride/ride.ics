@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bellingham-wa-shifting-gears-womens-mtb-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Los_Angeles:20260921T173000
+DTEND;TZID=America/Los_Angeles:20260921T193000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20260930T235959Z
+SUMMARY:Shifting Gears Women's Mountain Bike Ride — Bellingham\, WA
+LOCATION:Galbraith Mountain or Lake Padden trailheads (varies weekly)
+DESCRIPTION:Pace: beginner-friendly\, small groups.\nNo-drop.\nSchedule: 
+ Mondays\, 5:30–7:30 pm\, May through September.\nConfirm with the host
+  before you go.\nhttps://cycleforchange.org/rides/bellingham-wa-shifting
+ -gears-womens-mtb-ride/
+URL:https://cycleforchange.org/rides/bellingham-wa-shifting-gears-womens-
+ mtb-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:knoxville-tn-two-bikes-coffee-outside@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260920T090000
+DTEND;TZID=America/New_York:20260920T113000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Coffee Outside — Knoxville\, TN
+LOCATION:Two Bikes\, 118 S Central St\, Knoxville\, TN 37902
+DESCRIPTION:Pace: slow.\nNo-drop.\nSchedule: Monthly\, a Sunday\, 9:00–
+ 11:30 am.\nConfirm with the host before you go.\nhttps://cycleforchange.
+ org/rides/knoxville-tn-two-bikes-coffee-outside/
+URL:https://cycleforchange.org/rides/knoxville-tn-two-bikes-coffee-outsid
+ e/
+END:VEVENT
+END:VCALENDAR

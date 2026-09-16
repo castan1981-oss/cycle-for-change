@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sanford-fl-sanford-bicycle-club-monday-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260921T180000
+DTEND;TZID=America/New_York:20260921T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Sanford Bicycle Club Monday Ride — Sanford\, FL
+LOCATION:Deviant Wolfe / Dees Brothers Brewery area\, downtown Sanford
+DESCRIPTION:Pace: casual.\nNo-drop.\nSchedule: Every Monday\, 6:00 pm.\nC
+ onfirm with the host before you go.\nhttps://cycleforchange.org/rides/sa
+ nford-fl-sanford-bicycle-club-monday-ride/
+URL:https://cycleforchange.org/rides/sanford-fl-sanford-bicycle-club-mond
+ ay-ride/
+END:VEVENT
+END:VCALENDAR

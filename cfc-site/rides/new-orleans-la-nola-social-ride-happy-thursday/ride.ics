@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:new-orleans-la-nola-social-ride-happy-thursday@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260917T200000
+DTEND;TZID=America/Chicago:20260917T220000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:NOLA Social Ride Happy Thursday — New Orleans\, LA
+LOCATION:New Orleans\, LA
+DESCRIPTION:Pace: slow paced.\nNo-drop.\nSchedule: Every Thursday\, 7:00 
+ pm meet\, ride leaves 8:00 pm. Start rotates by week of the month (Uptow
+ n\, Mid-City and more).\nConfirm with the host before you go.\nhttps://c
+ ycleforchange.org/rides/new-orleans-la-nola-social-ride-happy-thursday/
+URL:https://cycleforchange.org/rides/new-orleans-la-nola-social-ride-happ
+ y-thursday/
+END:VEVENT
+END:VCALENDAR

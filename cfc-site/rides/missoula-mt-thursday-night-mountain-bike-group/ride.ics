@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:missoula-mt-thursday-night-mountain-bike-group@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Denver:20260917T180000
+DTEND;TZID=America/Denver:20260917T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Thursday Night Mountain Bike Group — Missoula\, MT
+LOCATION:Missoula\, MT
+DESCRIPTION:Schedule: Every Thursday\, 6:00 pm; trailhead changes weekly.
+ \nConfirm with the host before you go.\nhttps://cycleforchange.org/rides
+ /missoula-mt-thursday-night-mountain-bike-group/
+URL:https://cycleforchange.org/rides/missoula-mt-thursday-night-mountain-
+ bike-group/
+END:VEVENT
+END:VCALENDAR

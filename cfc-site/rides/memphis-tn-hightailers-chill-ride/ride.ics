@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:memphis-tn-hightailers-chill-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260920T140000
+DTEND;TZID=America/Chicago:20260920T160000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:The Chill Ride — Memphis\, TN
+LOCATION:Rotates: Overton Park\, Big River Crossing\, Shelby Farms\, Cros
+ stown Brewery and others
+DESCRIPTION:Pace: D\, 16 mph max.\nNo-drop.\nSchedule: Every Sunday\, 2:0
+ 0 pm; start point rotates.\nConfirm with the host before you go.\nhttps:
+ //cycleforchange.org/rides/memphis-tn-hightailers-chill-ride/
+URL:https://cycleforchange.org/rides/memphis-tn-hightailers-chill-ride/
+END:VEVENT
+END:VCALENDAR

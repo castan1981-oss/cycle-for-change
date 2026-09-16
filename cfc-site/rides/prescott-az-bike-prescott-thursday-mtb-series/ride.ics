@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:prescott-az-bike-prescott-thursday-mtb-series@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Phoenix:20260917T080000
+DTEND;TZID=America/Phoenix:20260917T100000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Bike Prescott Thursday Mountain Bike Series — Prescott\, AZ
+LOCATION:Prescott\, AZ
+DESCRIPTION:Pace: varies\, no-drop.\nNo-drop.\nSchedule: Every Thursday m
+ orning (8:00 am in September; trailhead changes weekly).\nConfirm with t
+ he host before you go.\nhttps://cycleforchange.org/rides/prescott-az-bik
+ e-prescott-thursday-mtb-series/
+URL:https://cycleforchange.org/rides/prescott-az-bike-prescott-thursday-m
+ tb-series/
+END:VEVENT
+END:VCALENDAR

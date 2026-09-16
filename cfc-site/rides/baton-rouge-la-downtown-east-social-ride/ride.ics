@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:baton-rouge-la-downtown-east-social-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260921T180000
+DTEND;TZID=America/Chicago:20260921T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Downtown East Social Ride — Baton Rouge\, LA
+LOCATION:Outside City Roots at Electric Depot\, 1509 Government St\, Bato
+ n Rouge\, LA 70802
+DESCRIPTION:Pace: pace of the slowest rider.\nNo-drop.\nSchedule: Every M
+ onday\, 6:00 pm (weather permitting).\nConfirm with the host before you 
+ go.\nhttps://cycleforchange.org/rides/baton-rouge-la-downtown-east-socia
+ l-ride/
+URL:https://cycleforchange.org/rides/baton-rouge-la-downtown-east-social-
+ ride/
+END:VEVENT
+END:VCALENDAR

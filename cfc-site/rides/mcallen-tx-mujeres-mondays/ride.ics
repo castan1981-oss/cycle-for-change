@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mcallen-tx-mujeres-mondays@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260921T183000
+DTEND;TZID=America/Chicago:20260921T203000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Mujeres Mondays — McAllen\, TX
+LOCATION:Bicycle World McAllen (shop parking lot)
+DESCRIPTION:Schedule: Every Monday\, 6:30 pm.\nConfirm with the host befo
+ re you go.\nhttps://cycleforchange.org/rides/mcallen-tx-mujeres-mondays/
+URL:https://cycleforchange.org/rides/mcallen-tx-mujeres-mondays/
+END:VEVENT
+END:VCALENDAR

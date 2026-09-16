@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-francisco-ca-different-spokes-jersey-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Los_Angeles:20261010T090000
+DTEND;TZID=America/Los_Angeles:20261010T110000
+RRULE:FREQ=MONTHLY;BYDAY=2SA
+SUMMARY:Different Spokes Jersey Ride — San Francisco\, CA
+LOCATION:Peet's Coffee\, Castro (16th and Market)\, 2257 Market St\, San 
+ Francisco\, CA 94114
+DESCRIPTION:Pace: B/C (48-mile option)\, A/C (24-mile option).\nSchedule:
+  Second Saturday of the month; SF group meets 8:45 am (roll 9:00 am)\, S
+ ausalito group meets 9:45 am (roll 10:00 am).\nConfirm with the host bef
+ ore you go.\nhttps://cycleforchange.org/rides/san-francisco-ca-different
+ -spokes-jersey-ride/
+URL:https://cycleforchange.org/rides/san-francisco-ca-different-spokes-je
+ rsey-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:salem-va-olde-salem-brewery-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260917T173000
+DTEND;TZID=America/New_York:20260917T193000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Olde Salem Brewery Ride — Salem\, VA
+LOCATION:Olde Salem Brewery (back parking lot)\, Salem\, VA
+DESCRIPTION:Pace: A and B groups.\nNo-drop.\nSchedule: Thursdays\, 5:30 p
+ m.\nConfirm with the host before you go.\nhttps://cycleforchange.org/rid
+ es/salem-va-olde-salem-brewery-ride/
+URL:https://cycleforchange.org/rides/salem-va-olde-salem-brewery-ride/
+END:VEVENT
+END:VCALENDAR

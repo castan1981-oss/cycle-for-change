@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:huntsville-al-sunset-rides@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Chicago:20260916T180000
+DTEND;TZID=America/Chicago:20260916T200000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20260930T235959Z
+SUMMARY:Sunset Rides — Huntsville\, AL
+LOCATION:Sunset Bicycles\, 8402 Whitesburg Dr SE Suite F\, Huntsville\, A
+ L 35802
+DESCRIPTION:Pace: ~14 mph average.\nSchedule: Every Wednesday\, April–S
+ eptember; 5:30 pm in April\, 6:00 pm from May\, shifting with daylight.\
+ nConfirm with the host before you go.\nhttps://cycleforchange.org/rides/
+ huntsville-al-sunset-rides/
+URL:https://cycleforchange.org/rides/huntsville-al-sunset-rides/
+END:VEVENT
+END:VCALENDAR

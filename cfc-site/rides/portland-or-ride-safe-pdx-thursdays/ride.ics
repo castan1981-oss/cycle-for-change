@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:portland-or-ride-safe-pdx-thursdays@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Los_Angeles:20260917T183000
+DTEND;TZID=America/Los_Angeles:20260917T203000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Ride Safe PDX Thursdays — Portland\, OR
+LOCATION:Colonel Summers Park\, SE 20th Ave & SE Belmont St\, Portland\, 
+ OR 97214
+DESCRIPTION:Pace: casual\, no-drop.\nNo-drop.\nSchedule: Every Thursday\,
+  6:30 pm.\nConfirm with the host before you go.\nhttps://cycleforchange.
+ org/rides/portland-or-ride-safe-pdx-thursdays/
+URL:https://cycleforchange.org/rides/portland-or-ride-safe-pdx-thursdays/
+END:VEVENT
+END:VCALENDAR

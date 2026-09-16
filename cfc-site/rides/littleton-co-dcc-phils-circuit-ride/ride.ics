@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:littleton-co-dcc-phils-circuit-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/Denver:20260923T080000
+DTEND;TZID=America/Denver:20260923T110000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Phil's Circuit Ride (Denver Cycling Club Social B Ride) — Littl
+ eton\, CO
+LOCATION:Reynolds Landing\, 6745 S Santa Fe Dr\, Littleton\, CO 80120
+DESCRIPTION:Pace: social B.\nSchedule: Every Wednesday\, 8:00 am.\nConfir
+ m with the host before you go.\nhttps://cycleforchange.org/rides/littlet
+ on-co-dcc-phils-circuit-ride/
+URL:https://cycleforchange.org/rides/littleton-co-dcc-phils-circuit-ride/
+END:VEVENT
+END:VCALENDAR

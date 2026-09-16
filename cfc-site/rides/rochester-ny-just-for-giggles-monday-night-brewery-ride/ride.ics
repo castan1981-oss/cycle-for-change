@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:rochester-ny-just-for-giggles-monday-night-brewery-ride@cycleforchang
+ e.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260919T181500
+DTEND;TZID=America/New_York:20260919T201500
+RRULE:FREQ=WEEKLY;BYDAY=MO,SA
+SUMMARY:Just for Giggles Monday Night Ride — Rochester\, NY
+LOCATION:Three Heads Brewing\, 186 Atlantic Ave\, Rochester\, NY 14607
+DESCRIPTION:Pace: casual.\nNo-drop.\nSchedule: Mondays\, 6:15 pm (plus Sa
+ turday 8:00 am from Schoen Place\, Pittsford).\nConfirm with the host be
+ fore you go.\nhttps://cycleforchange.org/rides/rochester-ny-just-for-gig
+ gles-monday-night-brewery-ride/
+URL:https://cycleforchange.org/rides/rochester-ny-just-for-giggles-monday
+ -night-brewery-ride/
+END:VEVENT
+END:VCALENDAR

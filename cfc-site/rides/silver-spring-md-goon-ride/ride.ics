@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:silver-spring-md-goon-ride@cycleforchange.org
+DTSTAMP:20260916T165823Z
+DTSTART;TZID=America/New_York:20260917T183000
+DTEND;TZID=America/New_York:20260917T203000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20260930T235959Z
+SUMMARY:Goon Ride — Silver Spring\, MD
+LOCATION:Veirs Mill Park\, Silver Spring\, MD 20906
+DESCRIPTION:Pace: A pace\, fast.\nSchedule: Tuesdays and Thursdays\, 6:30
+  pm\, March–September.\nConfirm with the host before you go.\nhttps://
+ cycleforchange.org/rides/silver-spring-md-goon-ride/
+URL:https://cycleforchange.org/rides/silver-spring-md-goon-ride/
+END:VEVENT
+END:VCALENDAR
