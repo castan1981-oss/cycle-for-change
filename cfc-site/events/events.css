@@ -2,7 +2,9 @@
    Creosote house: bone ground, asphalt type, creosote once per screen as the
    accent, dust hairlines. Outfit for display, Space Grotesk body, Space Mono
    labels. Generated pages from scripts/build-events.js load this and nothing
-   else. Field Notes tokens in /styles.css are not used here. */
+   else. Field Notes tokens in /styles.css are not used here.
+   /rides/ pages also load this file (plus /rides/rides.css), so keep it at
+   /events/events.css and keep the class names stable, or update rides too. */
 
 :root{
   --bone:#E8DFD0;

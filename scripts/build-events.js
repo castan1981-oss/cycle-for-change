@@ -188,6 +188,7 @@ ${ld.map(jsonld).join("\n")}
       <span class="wordmark">Cycle <span class="for">For</span> Change</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
+      <a href="/rides/">Rides</a>
       <a href="/events/">Events</a>
       <a href="/towns/">Towns</a>
       <a href="/" class="btn btn-solid">The 10000</a>
@@ -211,7 +212,7 @@ function foot() {
 <footer class="site-foot">
   <div class="wrap">
     <p><span>Cycle for Change&trade;</span><span>every mile for queer communities</span></p>
-    <p class="foot-links"><a href="/events/">Events</a> <a href="/towns/">Towns</a> <a href="/">Home</a></p>
+    <p class="foot-links"><a href="/rides/">Rides</a> <a href="/events/">Events</a> <a href="/towns/">Towns</a> <a href="/">Home</a></p>
   </div>
 </footer>
 <script src="/events/events.js" defer></script>
