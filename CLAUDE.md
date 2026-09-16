@@ -106,8 +106,9 @@ You write content for cycleforchange.org. Follow these rules on every run.
 - Edit the JSON, run the build, commit both. Never hand-edit the generated page.
 - Dates: `confirmed` only when the organizer published it. `projected` keeps its
   `date_note`. No invented dates.
-- Like the rest of the paused tree, it redirects home until the December
-  relaunch (netlify.toml). It is built now so it ships with the new pages.
+- /events/ is already served (netlify.toml only force-redirects guides,
+  field-notes, resources and journal), so this page is public as soon as it
+  is merged and deployed.
 
 ## Voice
 - Short sentences. Anti-polish. Plain.
