@@ -425,6 +425,14 @@ html.seen .open,
 }
 .hint{color:rgba(42,46,40,.55)}
 
+/* the only way off the holding page: the directories that are already live */
+.foot-nav{display:flex;gap:14px;flex-wrap:wrap}
+.foot-nav a{
+  text-decoration:none;
+  border-bottom:1px solid rgba(42,46,40,.35);
+}
+.foot-nav a:hover{border-bottom-color:var(--asphalt)}
+
 /* —— tall screens: let the type take the room —— */
 
 @media (min-height:900px) and (min-width:761px){
@@ -471,6 +479,7 @@ html.seen .open,
   .eyebrow{grid-column:1;grid-row:1;text-align:left;margin:0}
   .wl-form{grid-row:2;max-width:none}
   .site-foot .hint{order:3;flex:1 0 100%}
+  .foot-nav{order:-1;flex:1 0 100%}
   .open-num{font-size:clamp(88px,26vw,200px)}
 }
 
