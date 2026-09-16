@@ -1,0 +1,68 @@
+{
+  "id": "new-york-ny",
+  "name": "New York",
+  "state": "New York",
+  "state_code": "NY",
+  "county": "New York County (Manhattan)",
+  "lat": 40.7128,
+  "lon": -74.0060,
+  "timezone": "America/New_York",
+  "population": "8,804,190 (2020 census)",
+  "elevation_ft": null,
+  "nearest_airport": { "name": "Newark Liberty International", "code": "EWR", "miles": 13 },
+  "major_airport": { "name": "John F. Kennedy International", "code": "JFK", "miles": 18 },
+  "official_url": "https://www.nyc.gov",
+  "visitor_url": "https://www.nyctourism.com",
+  "summary": "New York City is the largest city in the United States, with about 8.8 million people across five boroughs. The TD Five Boro Bike Tour starts at Bowling Green at the southern tip of Manhattan on the first Sunday in May and is the one day a year 40 miles of city streets and bridges are closed to cars. Riders base themselves in the Financial District, a short roll from the start.",
+  "about": [
+    "New York is five boroughs, each its own county: Manhattan (New York County), Brooklyn (Kings), Queens, the Bronx and Staten Island (Richmond). The 2020 census counted 8,804,190 residents. The Five Boro Bike Tour touches all five and crosses five bridges, ending on Staten Island.",
+    "The tour starts at Bowling Green, the small park at the foot of Broadway in Lower Manhattan, reached by the Hudson River Greenway or Broadway itself. The Financial District around it is dense with hotels, from historic inns on the old Dutch street grid to converted office towers, and it is quiet on a Sunday morning.",
+    "Bike New York, the nonprofit that runs the tour, uses the proceeds to teach free bike-skills classes across the city; it has taught more than 100,000 people since 2007."
+  ],
+  "riding": [
+    "Manhattan riding is flat and busy. The Hudson River Greenway runs the length of the west side and is the easiest way to reach Bowling Green from any midtown or downtown hotel without traffic. Early May averages a high around 71°F and a low near 56°F, with rain on roughly a third of days, so bring a layer.",
+    "On tour day the FDR Drive, the Queensboro Bridge, the Pulaski Bridge and the Verrazzano-Narrows are car-free. The rest of the year, the bridges into Brooklyn and the greenways are the go-to routes; the Staten Island Ferry carries bikes free of charge back to Manhattan from the finish."
+  ],
+  "getting_there": "Three airports serve the city. Newark (EWR) is about 13 miles from Lower Manhattan and JFK about 18; LaGuardia is closer to Queens. You do not want a car. Take a train or cab to a Financial District hotel and you can ride to the Bowling Green start in minutes. If you are shipping or renting a bike, Unlimited Biking, the tour's official rental partner, has a downtown pickup at 105 Broad Street.",
+  "hotels": [
+    { "name": "The Wall Street Inn", "url": "https://www.thewallstreetinn.com/", "address": "9 South William Street, New York, NY 10004", "note": "Small historic hotel a few blocks from Bowling Green; the closest of this list to the start.", "price_hint": "$$" },
+    { "name": "The Beekman, a Thompson Hotel", "url": "https://www.thebeekman.com/", "address": "123 Nassau Street, New York, NY 10038", "note": "Restored 19th-century building near City Hall, about a mile from the start.", "price_hint": "$$$" },
+    { "name": "M Social Hotel New York Downtown", "url": "https://www.msocial.com/en/new-york/m-social-hotel-new-york-downtown/", "address": "55 Church Street, New York, NY 10007", "note": "Recently renovated tower across from the World Trade Center; easy Greenway access.", "price_hint": "$$" },
+    { "name": "The Artezen Hotel", "url": "https://www.artezenhotel.com/", "address": "24 John Street, New York, NY 10038", "note": "Quiet side-street hotel in the Financial District, under a mile to Bowling Green.", "price_hint": "$$" }
+  ],
+  "restaurants": [
+    { "name": "Fraunces Tavern", "url": "https://frauncestavern.com/", "address": "54 Pearl Street, New York, NY 10004", "cuisine": "American tavern", "note": "Bar and restaurant in a 1762 landmark two blocks from the start; sit-down dinner the night before." },
+    { "name": "Adrienne's Pizzabar", "url": "https://www.adriennespizzabar.com/", "address": "54 Stone Street, New York, NY 10004", "cuisine": "Pizza", "note": "Square pies on the cobblestoned Stone Street, steps from Bowling Green." },
+    { "name": "Leo's Bagels", "url": "https://www.leosbagels.com/", "address": "3 Hanover Square, New York, NY 10004", "cuisine": "Bagels and deli", "note": "Hand-rolled, kettle-boiled bagels since 2007; pre-ride breakfast." },
+    { "name": "Crown Shy", "url": "https://www.crownshy.nyc/", "address": "70 Pine Street, New York, NY 10005", "cuisine": "Contemporary, European technique", "note": "Post-tour celebration dinner in a landmark art deco tower; book ahead." }
+  ],
+  "bike_shops": [
+    { "name": "NYC Velo (East Village)", "url": "https://www.nycvelo.com/", "address": "66 2nd Avenue, New York, NY 10003", "phone": "(212) 253-7771", "services": ["repair", "rental", "parts"], "note": "Full-service shop about 2.5 miles north of the start; rentals through rentals.nycvelo.com." },
+    { "name": "BikeFixNYC", "url": "https://www.bikefixnyc.com/", "address": "334 East 6th Street, New York, NY 10003", "phone": "(347) 463-3876", "services": ["repair", "parts"], "note": "Repair-focused East Village shop, open seven days; no rentals." },
+    { "name": "Circles In Motion", "url": "https://circlesinmotion.com/", "address": "151 West 19th Street, New York, NY 10011", "phone": "(212) 206-7656", "services": ["repair", "parts"], "note": "Chelsea repair shop about three miles up from Bowling Green." },
+    { "name": "Waterfront Bicycle Shop", "url": "https://www.bikeshopny.com/", "address": "", "phone": "", "services": ["repair", "rental", "parts"], "note": "West Village shop open since 2009 on the Hudson Greenway side; on-the-spot repairs, $125 tune-ups and hybrid and road rentals. Confirm the street address on their site." }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/New_York_City",
+    "https://www.bike.nyc/events/td-five-boro-bike-tour/",
+    "https://www.bike.nyc/about/our-story/",
+    "https://en.wikipedia.org/wiki/Five_Boro_Bike_Tour",
+    "https://unlimitedbiking.com/events/nyc-five-boro-bike-tour-rentals/",
+    "https://www.thewallstreetinn.com/",
+    "https://www.thebeekman.com/",
+    "https://www.msocial.com/en/new-york/m-social-hotel-new-york-downtown/",
+    "https://www.artezenhotel.com/",
+    "https://frauncestavern.com/",
+    "https://www.adriennespizzabar.com/",
+    "https://www.leosbagels.com/",
+    "https://www.crownshy.nyc/about",
+    "https://www.nycvelo.com/",
+    "https://www.bikefixnyc.com/",
+    "https://circlesinmotion.com/",
+    "https://www.bikeshopny.com/",
+    "https://www.travelmath.com/drive-distance/from/JFK/to/Manhattan,+NY",
+    "https://www.blade.com/distance-from-newark-airport-to-manhattan",
+    "https://weatherspark.com/y/23912/Average-Weather-in-New-York-City-New-York-United-States-Year-Round"
+  ],
+  "verified": "2026-09-15"
+}

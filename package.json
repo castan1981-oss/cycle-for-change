@@ -3,5 +3,8 @@
   "private": true,
   "dependencies": {
     "@netlify/blobs": "^8.1.0"
+  },
+  "scripts": {
+    "build:rides": "node tools/build-rides.js"
   }
 }
