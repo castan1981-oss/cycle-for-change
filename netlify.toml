@@ -31,56 +31,20 @@
   to = "/.netlify/functions/instagram"
   status = 200
 
-# —— Coming-soon (through December 2026) ——
-# The old pages stay in the repo, they just aren't reachable. force = true is
-# required: without it Netlify serves the existing file and never redirects.
+# —— Live since 2026-09-18 ——
+# The coming-soon gate is gone: /field-notes, /guides, /resources and /journal
+# are served again. Real files win; anything else gets cfc-site/404.html.
 
 [[redirects]]
-  from = "/guides"
+  from = "/next"
   to = "/"
-  status = 302
+  status = 301
   force = true
 
 [[redirects]]
-  from = "/guides/*"
+  from = "/next/"
   to = "/"
-  status = 302
-  force = true
-
-[[redirects]]
-  from = "/field-notes"
-  to = "/"
-  status = 302
-  force = true
-
-[[redirects]]
-  from = "/field-notes/*"
-  to = "/"
-  status = 302
-  force = true
-
-[[redirects]]
-  from = "/resources"
-  to = "/"
-  status = 302
-  force = true
-
-[[redirects]]
-  from = "/resources/*"
-  to = "/"
-  status = 302
-  force = true
-
-[[redirects]]
-  from = "/journal"
-  to = "/"
-  status = 302
-  force = true
-
-[[redirects]]
-  from = "/journal/*"
-  to = "/"
-  status = 302
+  status = 301
   force = true
 
 [[redirects]]
@@ -94,11 +58,3 @@
   to = "/"
   status = 302
   force = true
-
-# Anything else that isn't a real file goes home too. Not forced, so
-# /coming-soon.css, /coming-soon.js, /hero-poster.jpg, /favicon.svg,
-# /og-cfc.png and the /api/* rules above are all still served.
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 302

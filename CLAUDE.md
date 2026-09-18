@@ -1,42 +1,37 @@
 # Cycle for Change — project context for automated content
 
-> **State of the public site (updated 2026-09-18).** The homepage
-> `cfc-site/index.html` is still the coming-soon page until December 2026 (new
-> brand: Creosote palette, stacked wordmark, 10000 as year one for 2027). The
-> December homepage is staged, noindex, at `/next/`. **Three directories are
-> live and public now**, because Robert chose to ship them early: `/rides/`,
-> `/events/`, `/towns/` (see "Live directories" below). The old sections
-> (`/field-notes`, `/guides`, `/resources`, `/journal`) still 302 home via
-> forced redirects in `netlify.toml`; their files stay in the repo for December.
-> **Do not ship Field Notes, guides, resources or journal pages in the
-> meantime** — they would not be reachable, and the content loop workflows are
-> paused for the same reason. Do not edit `cfc-site/index.html`,
-> `coming-soon.css`, `coming-soon.js`, or the redirect block in `netlify.toml`
-> as part of a content run.
->
-> The catch-all `/*` redirect is **not forced**, so any real file under
-> `cfc-site/` is served. A merge to main is a publish. Work on a branch, open a
-> PR, check the Netlify deploy preview, and let Robert say "merge".
+> **LIVE since 2026-09-18.** Robert took the coming-soon gate down early. The
+> homepage is `cfc-site/index.html`, built on the coming-soon design
+> (`coming-soon.css` + `next/home.css`, scripts `coming-soon.js` + `main.js`).
+> `/field-notes`, `/guides`, `/resources` and `/journal` are served again, and
+> `cfc-site/404.html` replaces the old catch-all redirect. Content work is
+> allowed again. The old content pages still wear the previous cream/plum/yellow
+> styles from `styles.css`; a redesign into the Creosote house is in progress
+> (design canvas, Sept 2026), so don't restyle them piecemeal.
+> The goal is **10,000 miles in 2027, all on the bike**. The count on the site
+> is miles since June 1, 2026; never show it as a fraction of 10,000.
 
-## Live directories (public now)
+## Directories: /rides/, /events/, /towns/
 
-All three are **generated**: edit the data, run the generator, commit data +
-output. Never hand-edit a generated page (each one says so in its first line).
+All generated: edit the data, run the generator, commit data + output. Never
+hand-edit a generated page (each one says so in its first line). A merge to
+main is a publish, so branch, open a PR, check the Netlify deploy preview, and
+let Robert say "merge".
 
 | Section | Data | Generator | Output |
 |---|---|---|---|
-| `/rides/` — recurring US group rides: search page, state hubs, city hubs (3+ rides within 25 mi), one page + `ride.ics` per ride | `cfc-site/rides/rides.json` | `tools/build-rides.js` (`npm run build:rides`) | `cfc-site/rides/` |
-| `/events/`, `/towns/` — annual events and the towns that host them | `data/events/*.json`, `data/towns/*.json` (rules in `data/SCHEMA.md`) | `scripts/build-events.js` | `cfc-site/events/`, `cfc-site/towns/` |
+| `/rides/` — recurring US group rides: search page, state hubs, city hubs, one page + `ride.ics` per ride | `cfc-site/rides/rides.json` | `tools/derive-ride-fields.js` then `tools/build-rides.js` (`npm run derive:rides`, `npm run build:rides`) | `cfc-site/rides/` |
+| `/events/`, `/towns/`, `/events/2027/` | `data/events/*.json`, `data/towns/*.json`, `data/calendar-2027.json` (rules in `data/SCHEMA.md`) | `scripts/build-events.js`, `scripts/build-calendar.js` | `cfc-site/events/`, `cfc-site/towns/` |
 
 Rules for these pages:
-- **Look:** the Creosote house, not the paused Field Notes tokens. Everything
-  loads `/events/events.css` (shared; do not rename it or its classes) and
-  rides adds `/rides/rides.css`. Outfit display, Space Grotesk body, Space Mono
-  labels. No `/styles.css`, Fraunces or Anton here.
+- **Look:** the Creosote house. Everything loads `/events/events.css` (shared;
+  do not rename it or its classes) and rides adds `/rides/rides.css`. Outfit
+  display, Space Grotesk body, Space Mono labels. No `/styles.css`, Fraunces or
+  Anton here.
 - **Chrome:** header nav is Rides · Events · Towns · "The 10000" (→ `/`);
   footer is Rides · Events · Towns · Home; the pledge block is the plain
-  paragraph with "See the project" (→ `/`) and "Follow on Instagram".
-  **No `/#board`, `/#tally`, `/#vote` links** while the homepage is coming-soon.
+  paragraph with "See the project" (→ `/`) and "Follow on Instagram". Before
+  linking to a homepage anchor, check it exists on the live homepage.
 - **No forms.** Robert's call: no signup, email, contact, claim or submit forms
   on directory pages. Corrections go to https://www.instagram.com/cycl_eforchange/.
   The search box on `/rides/` is a filter, not a form.
@@ -47,10 +42,10 @@ Rules for these pages:
   handle; `confidence: low` shows an "Unconfirmed" badge; `verified_on` is the
   real check date and feeds `dateModified` and the sitemap `lastmod` (never
   stamp today's date on everything). `tz`, `start_hhmm`, `season_months` and
-  `monthly_rule` drive the next-ride line, the calendar file and `Event`
-  structured data; a ride without them simply doesn't show those. They are
-  derived, not hand-typed: after editing `rides.json` run
-  `node tools/derive-ride-fields.js`, then `node tools/build-rides.js`.
+  `monthly_rule` are derived by `tools/derive-ride-fields.js`, not hand-typed;
+  they drive the next-ride line, the calendar file and `Event` structured data.
+  City hubs exist where 3+ rides sit within 25 miles; before merging a data
+  change, check that no live hub URL disappears by accident.
 - **Freshness:** Netlify runs the rides generator on every deploy, and
   `.github/workflows/rides-weekly-rebuild.yml` forces a deploy each Monday, so
   baked-in next-ride dates are never more than a week old.
@@ -59,9 +54,6 @@ Rules for these pages:
   LocalBusiness markup. Breadcrumbs, honest dates, a real `startDate`, short
   titles and city hubs with real data are what matter. `?q=` search URLs
   canonical to `/rides/`; don't add noindex on top.
-- Sitemaps: `/sitemap.xml` is an index → `sitemap-pages.xml`,
-  `sitemap-events.xml`, `rides/sitemap.xml`. Search Console is set up.
-
 
 ## 10K kit — PRODUCTION LOCK (Sep 2026)
 > **Update 2026-09-10 (after this lock was written): the lock was reopened.** The maker-pack
@@ -145,6 +137,20 @@ You write content for cycleforchange.org. Follow these rules on every run.
 - The live mileage counter is fed by `/.netlify/functions/strava`. Reuse it via
   the `[data-cur]` / `[data-pct]` / `[data-line]` attributes and
   `/field-notes/field-notes.js` — do NOT fork the mileage logic.
+
+## 2027 ride calendar — `/events/2027/`
+- One page, generated: `node scripts/build-calendar.js` reads
+  `data/calendar-2027.json` (600+ organized US rides and races for 2027) and
+  writes `cfc-site/events/2027/index.html` + the JSON feed + `sitemap-calendar.xml`.
+  Schema and rules in `data/SCHEMA.md` ("2027 calendar"). `calendar.css` and
+  `calendar.js` next to it are hand-written; the page uses the events chrome
+  (`/events/events.css`, `/events/events.js`).
+- Edit the JSON, run the build, commit both. Never hand-edit the generated page.
+- Dates: `confirmed` only when the organizer published it. `projected` keeps its
+  `date_note`. No invented dates.
+- /events/ is already served (netlify.toml only force-redirects guides,
+  field-notes, resources and journal), so this page is public as soon as it
+  is merged and deployed.
 
 ## Voice
 - Short sentences. Anti-polish. Plain.

@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>Cycle for Change — 10000, 2027, all on the bike</title>
-  <meta name="description" content="Cycle for Change. 10000 miles in 2027, all on the bike. Live miles since June 1. Site in December.">
+  <title>Cycle for Change — 10,000 miles in 2027, all on the bike, for queer communities</title>
+  <meta name="description" content="Cycle for Change. Robert rides 10,000 miles in 2027, all on the bike. You pledge a few cents a mile. At year-end the pledgers vote where the money goes. Live miles, field notes, guides, group rides, events and LGBTQ mental health resources.">
   <link rel="canonical" href="https://cycleforchange.org/">
   <meta name="robots" content="index, follow">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cycleforchange.org/">
-  <meta property="og:title" content="Cycle for Change — 10000, 2027, all on the bike">
-  <meta property="og:description" content="10000 miles in 2027, all on the bike. Live miles since June 1. Site in December.">
+  <meta property="og:title" content="Cycle for Change — 10,000 miles in 2027, all on the bike">
+  <meta property="og:description" content="I do the miles. You decide who they're for. 10,000 miles in 2027, every one on the bike, for queer communities.">
   <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -23,19 +23,36 @@
   <link rel="apple-touch-icon" href="/favicon-180.png">
 
   <script>
-    /* the open is the default state; skipped only when motion is reduced —
-       decided before first paint, not by the deferred script */
+    /* the open plays once per visit — skipped when motion is reduced or when
+       this tab has already seen it. Decided before first paint, not by the
+       deferred script. Tapping the year always replays it. */
     try {
-      if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        document.documentElement.className += " seen";
-      }
+      var rm = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var seenOnce = false;
+      try {
+        seenOnce = sessionStorage.getItem("cfc-open") === "1";
+        if (!seenOnce) sessionStorage.setItem("cfc-open", "1");
+      } catch (e2) {}
+      if (rm || seenOnce) document.documentElement.className += " seen";
     } catch (e) {}
   </script>
   <noscript><style>.open{display:none !important}</style></noscript>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Space+Grotesk:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/coming-soon.css">
+  <link rel="stylesheet" href="/next/home.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Cycle for Change",
+    "url": "https://cycleforchange.org/",
+    "logo": "https://cycleforchange.org/og-cfc.png",
+    "sameAs": ["https://www.instagram.com/cycl_eforchange"],
+    "description": "10,000 miles in 2027, all on the bike, for queer communities. Pledgers vote where the money goes."
+  }
+  </script>
 </head>
 <body>
 
@@ -60,6 +77,12 @@
         <circle cx="60" cy="60" r="6" fill="#2A2E28"/>
       </svg>
     </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/rides/">Ride</a>
+      <a href="/field-notes/">Read</a>
+      <a href="/resources/">Resources</a>
+      <a class="nav-pledge" href="#board">Pledge</a>
+    </nav>
   </header>
 
   <main id="main" class="hero" aria-labelledby="stack">
@@ -72,10 +95,11 @@
     <div class="hero-foot">
       <p class="line">I do the miles. You decide who they&rsquo;re for.</p>
       <p class="tally">
-        <span class="tally-num" data-cur>2,926</span>
+        <span class="tally-num" data-cur>2,999</span>
         <span class="tally-label">miles since June 1</span>
       </p>
       <p class="last" id="lastRide" aria-live="polite"></p>
+      <a class="cta" href="#board">Pledge a mile</a>
     </div>
 
     <div class="year-wrap">
@@ -88,35 +112,228 @@
     <figcaption class="meta">10000 &middot; 2027 &middot; All on the bike</figcaption>
   </figure>
 
-  <div class="colophon">
-    <section class="waitlist" aria-labelledby="waitlist-head">
-      <p class="eyebrow" id="waitlist-head">Site in December. Year starts January&nbsp;1.</p>
-
-      <form class="wl-form" name="waitlist" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="waitlistForm">
-        <input type="hidden" name="form-name" value="waitlist">
-        <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-        <div class="wl-field">
-          <label class="wl-label" for="wl-email">Email</label>
-          <input class="wl-input" id="wl-email" name="email" type="email" required autocomplete="email" inputmode="email">
-        </div>
-        <button class="wl-btn" type="submit">Notify me</button>
-        <p class="wl-msg" id="wlMsg" role="status" aria-live="polite"></p>
-      </form>
-    </section>
-
-    <footer class="site-foot">
-      <span>Cycle for Change</span>
-      <nav class="foot-nav" aria-label="Ride directories">
-        <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
-        <a href="/towns/">Towns</a>
-      </nav>
-      <span class="hint">Tap the year &middot; sound on</span>
-      <span>Phoenix &middot; bike only</span>
-    </footer>
+  <div class="colophon cover-band">
+    <p class="band-line">10,000 miles in 2027. Every one on the bike. You put up a few cents a mile. When it&rsquo;s done, you vote where the money goes.</p>
+    <p class="band-facts"><span>Free to join</span><span>No card today</span><span>100% to the orgs</span><span class="hint">Tap the year &middot; sound on</span></p>
   </div>
 
 </div>
+
+<!-- —— the board —— -->
+<section class="band" id="board" aria-labelledby="board-head">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">The pledge</p>
+      <h2 id="board-head">Get on the board.</h2>
+      <p class="big">Free to join. No card, no amount today. You put up a few cents a mile, or a flat number, and settle up when the year is done.</p>
+      <p>At year-end the people on the board vote. Whatever they pick gets all of it. I don&rsquo;t keep a cent.</p>
+      <p class="micro"><b id="boardCount">0</b> on the board</p>
+    </div>
+    <form class="form" name="pledges" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="pledgeForm">
+      <input type="hidden" name="form-name" value="pledges">
+      <p hidden><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
+      <div class="f">
+        <label class="lab" for="pname">Your name</label>
+        <input class="field" name="name" id="pname" type="text" maxlength="40" required autocomplete="name">
+      </div>
+      <div class="f">
+        <label class="lab" for="pemail">Email <span class="opt">optional</span></label>
+        <input class="field" name="email" id="pemail" type="email" autocomplete="email" inputmode="email">
+      </div>
+      <label class="check">
+        <input type="checkbox" name="ok-text" id="poktext">
+        <span>OK to text me the occasional mile update</span>
+      </label>
+      <button class="btn-solid" type="submit">Get on it</button>
+      <p class="ok" id="okmsg" role="status">You&rsquo;re on the board. See you out there.</p>
+    </form>
+  </div>
+  <div class="wrap">
+    <ol class="steps" id="how" aria-label="How it works">
+      <li><span class="n">01</span><h3>I ride.</h3><p>10,000 miles in 2027, all of them on the bike. Every ride logs to Strava and lands on this page within the hour.</p></li>
+      <li><span class="n">02</span><h3>You pledge.</h3><p>A few cents a mile, or a flat amount. Nothing changes hands until the year is over.</p></li>
+      <li><span class="n">03</span><h3>You decide.</h3><p>At year-end, the board votes. The winning orgs get every dollar. Queer communities, every mile.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- —— photo —— -->
+<figure class="photo-band">
+  <img src="/photos/haus-road.jpg" alt="Robert on a canal path in Phoenix, one arm out for the camera, morning light on the water." width="1600" height="1200" loading="lazy" decoding="async">
+  <figcaption>Canal path &middot; Phoenix</figcaption>
+</figure>
+
+<!-- —— where it goes —— -->
+<section class="band" id="vote" aria-labelledby="vote-head">
+  <div class="wrap">
+    <p class="eyebrow">Where it goes &middot; you pick</p>
+    <h2 id="vote-head">Pledgers choose the cause.</h2>
+    <p class="big">These are the orgs the miles support. Throw one a vote. The final call belongs to whoever is on the board.</p>
+    <div class="orgs" id="orgsList" aria-live="polite"></div>
+    <p class="vote-msg" id="voteMsg" hidden></p>
+    <p class="micro vt">total votes &middot; <b id="vtotal">912</b></p>
+  </div>
+</section>
+
+<!-- —— from the road —— -->
+<section class="band deep" id="feed" aria-labelledby="feed-head">
+  <div class="wrap">
+    <div class="sec-row">
+      <div>
+        <p class="eyebrow">From the road</p>
+        <h2 id="feed-head">The last rides.</h2>
+      </div>
+      <a class="more" id="stravaLink" href="https://www.strava.com" target="_blank" rel="noopener noreferrer">Strava</a>
+    </div>
+    <div class="feed-grid" id="feedList" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- —— read —— -->
+<section class="band" id="read" aria-labelledby="read-head">
+  <div class="wrap">
+    <div class="sec-row">
+      <div>
+        <p class="eyebrow">Read</p>
+        <h2 id="read-head">Field notes, guides, the journal.</h2>
+      </div>
+      <a class="more" href="/field-notes/">All field notes</a>
+    </div>
+    <div class="read-cols">
+      <div>
+        <p class="eyebrow">Field notes &amp; journal</p>
+        <ul class="read-list">
+          <li><a href="/field-notes/south-mountain-climb/"><span class="rl-k">Field notes</span><span class="rl-t">South Mountain at sunset</span><span class="rl-d">Down Central from uptown, through downtown into South Phoenix, up the mountain as the light goes.</span></a></li>
+          <li><a href="/field-notes/paradise-valley-loop/"><span class="rl-k">Field notes</span><span class="rl-t">The Paradise Valley loop</span><span class="rl-d">The loop around Camelback and Mummy Mountain. Early, before the heat, with the whole valley below.</span></a></li>
+          <li><a href="/journal/the-carrot-cake-theory/"><span class="rl-k">Journal</span><span class="rl-t">The carrot cake theory</span><span class="rl-d">On why the hard part of a long ride is never the ride.</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Guides</p>
+        <ul class="guide-list one">
+          <li><a href="/guides/charity-rides/">LGBTQ+ charity bike rides, the complete guide</a></li>
+          <li><a href="/guides/your-first-charity-ride/">Your first charity ride</a></li>
+          <li><a href="/guides/pledge-per-mile-fundraising/">Pledge-per-mile fundraising, explained</a></li>
+          <li><a href="/guides/what-happened-to-aids-lifecycle/">What happened to AIDS/LifeCycle</a></li>
+          <li><a href="/guides/charity-ride-packing-list/">Charity ride packing list</a></li>
+          <li><a href="/guides/">All twelve guides</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- —— photo —— -->
+<figure class="photo-band low">
+  <img src="/photos/vest-ride.jpg" alt="Hands on the bars, the head unit lit, cracked asphalt under the front wheel." width="1200" height="1600" loading="lazy" decoding="async">
+  <figcaption>Asphalt &middot; Phoenix</figcaption>
+</figure>
+
+<!-- —— ride —— -->
+<section class="band" id="ride" aria-labelledby="ride-head">
+  <div class="wrap">
+    <p class="eyebrow">Ride</p>
+    <h2 id="ride-head">Find your people.</h2>
+    <div class="cards three tiles">
+      <a class="tile" href="/rides/">
+        <span class="tile-num">402</span>
+        <h3>Group rides</h3>
+        <p>Shop rides, no-drop rides, queer rides. Every state, by town.</p>
+      </a>
+      <a class="tile" href="/events/">
+        <span class="tile-num">12</span>
+        <h3>Cycling events</h3>
+        <p>Dates, routes, sign-up, weather, where to stay. Charity rides first.</p>
+      </a>
+      <a class="tile" href="/towns/">
+        <span class="tile-num">12</span>
+        <h3>Event towns</h3>
+        <p>Hotels, food, bike shops and the forecast for the towns rides start in.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- —— resources —— -->
+<section class="band" id="resources" aria-labelledby="res-head">
+  <div class="wrap">
+    <p class="eyebrow">Resources</p>
+    <h2 id="res-head">Queer mental health, by age.</h2>
+    <div class="res-row">
+    <div>
+      <p class="big">Plain lists of who to call and where to look, checked against the sources they cite. Not advice. Doors.</p>
+      <ul class="res-list">
+        <li><a href="/resources/teens/">Teens</a></li>
+        <li><a href="/resources/young-adults/">Young adults</a></li>
+        <li><a href="/resources/adults/">Adults</a></li>
+        <li><a href="/resources/">The full list</a></li>
+      </ul>
+    </div>
+    <div class="card crisis">
+      <p class="eyebrow">If it&rsquo;s now</p>
+      <p><b>988</b> Suicide &amp; Crisis Lifeline. Call or text 988, any hour.</p>
+      <p><b>Trevor Project</b> for LGBTQ young people. Call <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- —— the story —— -->
+<section class="band" id="story" aria-labelledby="story-head">
+  <div class="wrap two story">
+    <figure class="story-photo">
+      <img src="/photos/portrait.jpg" alt="Robert, off the bike, by the river." width="800" height="1000" loading="lazy" decoding="async">
+    </figure>
+    <div>
+      <p class="eyebrow">The story</p>
+      <h2 id="story-head">Queer in the field. Miles where my mouth is.</h2>
+      <p class="big">I came back from a place a lot of people don&rsquo;t. Queer in a field that didn&rsquo;t always leave room for it, and I stayed anyway. Now the miles go to the communities that kept people like me alive.</p>
+      <p>Phoenix. Bike only. 10,000 in 2027. You decide who it&rsquo;s for.</p>
+      <p class="sig">Robert &middot; Cycle for Change</p>
+      <a class="cta" href="#board">Pledge a mile</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot-full">
+  <div class="wrap foot-grid">
+    <div class="foot-col">
+      <p class="eyebrow">Ride</p>
+      <a href="/rides/">Group rides</a>
+      <a href="/events/">Events</a>
+      <a href="/events/2027/">2027 calendar</a>
+      <a href="/towns/">Towns</a>
+      <a href="#board">Pledge</a>
+    </div>
+    <div class="foot-col">
+      <p class="eyebrow">Read</p>
+      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
+      <a href="/journal/the-carrot-cake-theory/">Journal</a>
+      <a href="/resources/">Resources</a>
+    </div>
+    <div class="foot-col">
+      <p class="eyebrow">Follow</p>
+      <a id="footInstagram" href="https://www.instagram.com/cycl_eforchange" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a id="footStrava" href="https://www.strava.com" target="_blank" rel="noopener noreferrer">Strava</a>
+    </div>
+    <form class="foot-col signup" id="emailForm" aria-label="Email signup">
+      <p class="eyebrow">Mile updates</p>
+      <label class="lab" for="email">Email</label>
+      <input class="field" id="email" type="email" name="email" required autocomplete="email" inputmode="email">
+      <button class="wl-btn" type="submit">Notify me</button>
+      <p class="email-ok" id="emailOk"></p>
+    </form>
+  </div>
+  <div class="wrap foot-crisis">
+    <span class="eyebrow">If it&rsquo;s now</span>
+    <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+  </div>
+  <div class="wrap foot-line">
+    <span>Cycle for Change</span>
+    <span>Phoenix &middot; bike only</span>
+  </div>
+</footer>
 
 <div class="blast" id="blast" aria-hidden="true">
   <video id="blastVid" class="blast-vid" muted playsinline preload="auto" disablepictureinpicture>
@@ -129,8 +346,7 @@
 </div>
 
 <!-- the feed's grade: desaturate, open the mids, then print in the house
-     two-tone (asphalt shadows, bone highlights). Lives on the video element
-     itself, so it can't fall out of sync with the picture. -->
+     two-tone (asphalt shadows, bone highlights). Also used on the photos. -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <filter id="feed-tone" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
     <feColorMatrix type="saturate" values="0.12" result="desat"/>
@@ -150,5 +366,7 @@
 <audio id="bed" src="/feed-bed.m4a" preload="auto"></audio>
 
 <script src="/coming-soon.js" defer></script>
+<script src="/main.js" defer></script>
+<script src="/next/home.js" defer></script>
 </body>
 </html>
