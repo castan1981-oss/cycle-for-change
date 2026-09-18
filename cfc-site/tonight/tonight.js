@@ -265,7 +265,7 @@
       return new Promise(function (res) { c.toBlob(function (b) { res(b); }, "image/png"); });
     });
   }
-  function s { return s.split("").join(" "); }
+  function track(ctx, px) { if ("letterSpacing" in ctx) ctx.letterSpacing = px + "px"; }
   function measure(ctx, text, font) { var f = ctx.font; ctx.font = font; var w = ctx.measureText(text).width; ctx.font = f; return w; }
 
   function shareFlyer(r, btn) {
