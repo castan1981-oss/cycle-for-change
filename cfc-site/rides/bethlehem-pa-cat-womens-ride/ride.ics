@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bethlehem-pa-cat-womens-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/New_York:20260923T180000
+DTEND;TZID=America/New_York:20260923T200000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:CAT Women's Ride — Bethlehem\, PA
+LOCATION:Charles A. Brown Ice House\, Sand Island\, Sand Island\, Bethleh
+ em\, PA
+DESCRIPTION:Pace: easy\, social.\nNo-drop.\nSchedule: Every Wednesday\, 6
+ :00 pm (RSVP on Meetup).\nConfirm with the host before you go.\nhttps://
+ cycleforchange.org/rides/bethlehem-pa-cat-womens-ride/
+URL:https://cycleforchange.org/rides/bethlehem-pa-cat-womens-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mobile-al-sunday-morning-breakfast-club@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260920T070000
+DTEND;TZID=America/Chicago:20260920T090000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20261031T235959Z
+SUMMARY:Sunday Morning Breakfast Club — Mobile\, AL
+LOCATION:Nova Espresso
+DESCRIPTION:Schedule: Sundays\, 7:00 am in summer\, 8:00 am in winter.\nC
+ onfirm with the host before you go.\nhttps://cycleforchange.org/rides/mo
+ bile-al-sunday-morning-breakfast-club/
+URL:https://cycleforchange.org/rides/mobile-al-sunday-morning-breakfast-c
+ lub/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fort-collins-co-gravel-people@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Denver:20260922T180000
+DTEND;TZID=America/Denver:20260922T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261031T235959Z
+SUMMARY:Fort Collins Gravel People — Fort Collins\, CO
+LOCATION:Fort Collins\, CO
+DESCRIPTION:Pace: no-drop\, pace groups 14–18 mph\, 1–2 regroups.\nNo
+ -drop.\nSchedule: Every Tuesday\, 6:00 pm\, spring through fall; start l
+ ocation varies and is posted weekly.\nConfirm with the host before you g
+ o.\nhttps://cycleforchange.org/rides/fort-collins-co-gravel-people/
+URL:https://cycleforchange.org/rides/fort-collins-co-gravel-people/
+END:VEVENT
+END:VCALENDAR

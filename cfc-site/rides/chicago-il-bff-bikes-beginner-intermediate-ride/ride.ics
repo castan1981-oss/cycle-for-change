@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:chicago-il-bff-bikes-beginner-intermediate-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260920T080000
+DTEND;TZID=America/Chicago:20260920T100000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:BFF Bikes Beginner/Intermediate Ride — Chicago\, IL
+LOCATION:BFF Bikes\, 2056 N Damen Ave\, Chicago\, IL 60647
+DESCRIPTION:Pace: 12–14 mph.\nNo-drop.\nSchedule: Select Sundays\, 8:00
+  am\, about every three to four weeks\, alternating with the shop's Endu
+ rance Ride; dates on the shop calendar.\nConfirm with the host before yo
+ u go.\nhttps://cycleforchange.org/rides/chicago-il-bff-bikes-beginner-in
+ termediate-ride/
+URL:https://cycleforchange.org/rides/chicago-il-bff-bikes-beginner-interm
+ ediate-ride/
+END:VEVENT
+END:VCALENDAR

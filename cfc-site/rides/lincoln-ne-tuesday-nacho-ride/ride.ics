@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:lincoln-ne-tuesday-nacho-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260922T173000
+DTEND;TZID=America/Chicago:20260922T203000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20260930T235959Z
+SUMMARY:Tuesday Nacho Ride — Lincoln\, NE
+LOCATION:MoPac East trailhead\, 84th St & N Hazelwood
+DESCRIPTION:Pace: go your own pace.\nSchedule: Tuesday evenings\, around 
+ 5:30 pm\, May through September.\nConfirm with the host before you go.\n
+ https://cycleforchange.org/rides/lincoln-ne-tuesday-nacho-ride/
+URL:https://cycleforchange.org/rides/lincoln-ne-tuesday-nacho-ride/
+END:VEVENT
+END:VCALENDAR

@@ -7,6 +7,7 @@
   "scripts": {
     "build:rides": "node tools/build-rides.js",
     "build:calendar": "node scripts/build-calendar.js",
-    "build:events": "node scripts/build-events.js"
+    "build:events": "node scripts/build-events.js",
+    "derive:rides": "node tools/derive-ride-fields.js"
   }
 }

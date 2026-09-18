@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:chicago-il-streets-calling-bike-club-night-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260924T200000
+DTEND;TZID=America/Chicago:20260924T220000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Streets Calling Bike Club Night Ride — Chicago\, IL
+LOCATION:Chicago\, IL
+DESCRIPTION:Pace: open to all paces\, quick at the front.\nSchedule: Thur
+ sdays\, 8:00 pm\, starting in May. Some weeks move to Wednesday. Start p
+ oint is posted on Instagram..\nConfirm with the host before you go.\nhtt
+ ps://cycleforchange.org/rides/chicago-il-streets-calling-bike-club-night
+ -ride/
+URL:https://cycleforchange.org/rides/chicago-il-streets-calling-bike-club
+ -night-ride/
+END:VEVENT
+END:VCALENDAR

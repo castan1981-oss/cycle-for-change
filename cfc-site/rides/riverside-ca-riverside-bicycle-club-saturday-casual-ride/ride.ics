@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:riverside-ca-riverside-bicycle-club-saturday-casual-ride@cycleforchan
+ ge.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Los_Angeles:20260919T073000
+DTEND;TZID=America/Los_Angeles:20260919T093000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270430T235959Z
+SUMMARY:Riverside Bicycle Club Saturday Casual Ride — Riverside\, CA
+LOCATION:Stater Bros parking lot\, Lincoln & Mary Streets\, Lincoln & Mar
+ y Streets\, Riverside\, CA
+DESCRIPTION:Pace: D/E casual group\, 10–13 mph\, mostly flat\, frequent
+  regroups.\nNo-drop.\nSchedule: Every Saturday\, 7:30 am May–September
+ \, 8:00 am October–April.\nConfirm with the host before you go.\nhttps
+ ://cycleforchange.org/rides/riverside-ca-riverside-bicycle-club-saturday
+ -casual-ride/
+URL:https://cycleforchange.org/rides/riverside-ca-riverside-bicycle-club-
+ saturday-casual-ride/
+END:VEVENT
+END:VCALENDAR

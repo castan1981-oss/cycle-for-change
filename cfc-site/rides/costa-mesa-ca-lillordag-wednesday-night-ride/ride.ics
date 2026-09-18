@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:costa-mesa-ca-lillordag-wednesday-night-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Los_Angeles:20260923T183000
+DTEND;TZID=America/Los_Angeles:20260923T203000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Lillördag Wednesday Night Ride — Costa Mesa\, CA
+LOCATION:Lions Park\, 566 W 18th St\, Costa Mesa\, CA 92627
+DESCRIPTION:Pace: mostly flat\, social pace.\nSchedule: Every Wednesday\,
+  meet 6:15 pm\, roll 6:30 pm.\nConfirm with the host before you go.\nhtt
+ ps://cycleforchange.org/rides/costa-mesa-ca-lillordag-wednesday-night-ri
+ de/
+URL:https://cycleforchange.org/rides/costa-mesa-ca-lillordag-wednesday-ni
+ ght-ride/
+END:VEVENT
+END:VCALENDAR

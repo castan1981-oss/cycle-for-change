@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:chicago-il-windy-city-cycling-club-casual-saturday@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260919T090000
+DTEND;TZID=America/Chicago:20260919T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Windy City Cycling Club Casual Saturday — Chicago\, IL
+LOCATION:Kwa-Ma-Rolas totem pole\, Addison St & Lakefront Trail\, W Addis
+ on St & Lakefront Trail\, Chicago\, IL 60613
+DESCRIPTION:Pace: easy 10–12 mph and moderate 13–14 mph groups.\nSche
+ dule: Every Saturday\, 9:00 am.\nConfirm with the host before you go.\nh
+ ttps://cycleforchange.org/rides/chicago-il-windy-city-cycling-club-casua
+ l-saturday/
+URL:https://cycleforchange.org/rides/chicago-il-windy-city-cycling-club-c
+ asual-saturday/
+END:VEVENT
+END:VCALENDAR

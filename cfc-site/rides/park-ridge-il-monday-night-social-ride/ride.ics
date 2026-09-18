@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:park-ridge-il-monday-night-social-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260921T181500
+DTEND;TZID=America/Chicago:20260921T201500
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20260930T235959Z
+SUMMARY:Park Ridge Cycling Club Monday Night Social Ride — Park Ridge\,
+  IL
+LOCATION:Prospect Park\, 733 N Prospect Ave\, Park Ridge\, IL 60068
+DESCRIPTION:Pace: two groups\, capped at 14 mph and 18 mph.\nSchedule: Mo
+ ndays\, 6:15 pm\, Memorial Day through Labor Day.\nConfirm with the host
+  before you go.\nhttps://cycleforchange.org/rides/park-ridge-il-monday-n
+ ight-social-ride/
+URL:https://cycleforchange.org/rides/park-ridge-il-monday-night-social-ri
+ de/
+END:VEVENT
+END:VCALENDAR

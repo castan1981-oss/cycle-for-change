@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:plano-tx-pba-tuesday-night-ladies-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260922T180000
+DTEND;TZID=America/Chicago:20260922T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:PBA Tuesday Night Ladies Ride — Plano\, TX
+LOCATION:NE corner of Windhaven and Communications Pkwy (west side of the
+  building\, by the Pinstack lot)\, 6101 Windhaven Pkwy #100\, Plano\, TX
+  75093
+DESCRIPTION:Pace: no-drop; C group 15.5–17 mph\, D group 14–15.5 mph.
+ \nNo-drop.\nSchedule: Every Tuesday\, arrive 5:45 pm\, roll 6:00 pm.\nCo
+ nfirm with the host before you go.\nhttps://cycleforchange.org/rides/pla
+ no-tx-pba-tuesday-night-ladies-ride/
+URL:https://cycleforchange.org/rides/plano-tx-pba-tuesday-night-ladies-ri
+ de/
+END:VEVENT
+END:VCALENDAR

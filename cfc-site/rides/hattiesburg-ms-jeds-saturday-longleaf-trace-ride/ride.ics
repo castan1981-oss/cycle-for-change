@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hattiesburg-ms-jeds-saturday-longleaf-trace-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260919T080000
+DTEND;TZID=America/Chicago:20260919T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Jed's Saturday Morning Ride — Hattiesburg\, MS
+LOCATION:Longleaf Trace (location posted weekly)
+DESCRIPTION:Pace: A race pace; B ~18.5 mph; C under 17 mph.\nSchedule: Sa
+ turdays\, 8:00 am; exact start posted weekly on Facebook.\nConfirm with 
+ the host before you go.\nhttps://cycleforchange.org/rides/hattiesburg-ms
+ -jeds-saturday-longleaf-trace-ride/
+URL:https://cycleforchange.org/rides/hattiesburg-ms-jeds-saturday-longlea
+ f-trace-ride/
+END:VEVENT
+END:VCALENDAR

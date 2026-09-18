@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:prattville-al-mbc-thursday-night-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260924T180000
+DTEND;TZID=America/Chicago:20260924T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Thursday Night Ride from Prattville High School — Prattville\, 
+ AL
+LOCATION:Prattville High School parking lot\, near the main entrance\, 13
+ 15 Upper Kingston Rd\, Prattville\, AL 36067
+DESCRIPTION:Pace: C 13–15 mph\, B 16–18 mph.\nSchedule: Thursdays\, 6
+ :00 pm\, through early October.\nConfirm with the host before you go.\nh
+ ttps://cycleforchange.org/rides/prattville-al-mbc-thursday-night-ride/
+URL:https://cycleforchange.org/rides/prattville-al-mbc-thursday-night-rid
+ e/
+END:VEVENT
+END:VCALENDAR

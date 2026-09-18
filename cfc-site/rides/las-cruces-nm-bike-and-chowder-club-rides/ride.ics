@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:las-cruces-nm-bike-and-chowder-club-rides@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Denver:20260919T080000
+DTEND;TZID=America/Denver:20260919T100000
+RRULE:FREQ=WEEKLY;BYDAY=SU,TU,TH,SA
+SUMMARY:Bike & Chowder Club Rides — Las Cruces\, NM
+LOCATION:Mesilla Plaza\, Mesilla Plaza\, Mesilla\, NM
+DESCRIPTION:Pace: A group 18–20+ mph; B group stay-together 14–18 mph
+ .\nSchedule: A group Sunday\, Tuesday and Thursday; B group Tuesday\, Th
+ ursday and Saturday; 8:00 am start in September (check the schedule page
+  as seasons change).\nConfirm with the host before you go.\nhttps://cycl
+ eforchange.org/rides/las-cruces-nm-bike-and-chowder-club-rides/
+URL:https://cycleforchange.org/rides/las-cruces-nm-bike-and-chowder-club-
+ rides/
+END:VEVENT
+END:VCALENDAR

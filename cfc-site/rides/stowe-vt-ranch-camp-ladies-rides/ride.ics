@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:stowe-vt-ranch-camp-ladies-rides@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/New_York:20260921T173000
+DTEND;TZID=America/New_York:20260921T193000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=MO;UNTIL=20260930T235959Z
+SUMMARY:Ranch Camp Ladies Rides — Stowe\, VT
+LOCATION:Rotating trailheads around Stowe; shop at 311 Mountain Rd\, 311 
+ Mountain Rd\, Stowe\, VT 05672
+DESCRIPTION:No-drop.\nSchedule: Every other Monday\, June–September (20
+ 26: Jun 1\, 15\, 29\, Jul 13\, 27\, Aug 10\, 24\, Sep 14\, 28); 5:30 pm 
+ for the Sept 14 ride; free\, RSVP on Eventbrite.\nConfirm with the host 
+ before you go.\nhttps://cycleforchange.org/rides/stowe-vt-ranch-camp-lad
+ ies-rides/
+URL:https://cycleforchange.org/rides/stowe-vt-ranch-camp-ladies-rides/
+END:VEVENT
+END:VCALENDAR

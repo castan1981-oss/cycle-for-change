@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tomball-tx-nwcc-saturday-coffee-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260919T080000
+DTEND;TZID=America/Chicago:20260919T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:NWCC Saturday Coffee Ride — Tomball\, TX
+LOCATION:Wildwood Elementary\, 13802 Northpointe Blvd\, Tomball\, TX
+DESCRIPTION:Pace: social\, no-drop\, around 12 mph.\nNo-drop.\nSchedule: 
+ Every Saturday\, 8:00 am.\nConfirm with the host before you go.\nhttps:/
+ /cycleforchange.org/rides/tomball-tx-nwcc-saturday-coffee-ride/
+URL:https://cycleforchange.org/rides/tomball-tx-nwcc-saturday-coffee-ride
+ /
+END:VEVENT
+END:VCALENDAR
