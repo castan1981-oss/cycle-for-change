@@ -53,6 +53,8 @@ p{margin:0 0 1em}
 .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin:0 0 .6em;color:var(--mute)}
 .eyebrow a{text-decoration:none;color:var(--creosote)}
 .lede{font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.45;max-width:46em;margin:0 0 1.4em;font-weight:500}
+.calendar-link{max-width:46em;margin:-.6em 0 1.6em;color:var(--mute)}
+.calendar-link a{color:var(--asphalt)}
 
 /* —— header —— */
 .site-head{border-bottom:1px solid var(--dust);padding:14px 0 0}

@@ -94,6 +94,20 @@ You write content for cycleforchange.org. Follow these rules on every run.
   the `[data-cur]` / `[data-pct]` / `[data-line]` attributes and
   `/field-notes/field-notes.js` — do NOT fork the mileage logic.
 
+## 2027 ride calendar — `/events/2027/`
+- One page, generated: `node scripts/build-calendar.js` reads
+  `data/calendar-2027.json` (600+ organized US rides and races for 2027) and
+  writes `cfc-site/events/2027/index.html` + the JSON feed + `sitemap-calendar.xml`.
+  Schema and rules in `data/SCHEMA.md` ("2027 calendar"). `calendar.css` and
+  `calendar.js` next to it are hand-written; the page uses the events chrome
+  (`/events/events.css`, `/events/events.js`).
+- Edit the JSON, run the build, commit both. Never hand-edit the generated page.
+- Dates: `confirmed` only when the organizer published it. `projected` keeps its
+  `date_note`. No invented dates.
+- /events/ is already served (netlify.toml only force-redirects guides,
+  field-notes, resources and journal), so this page is public as soon as it
+  is merged and deployed.
+
 ## Voice
 - Short sentences. Anti-polish. Plain.
 - No corporate language, no buzzwords, no hype.

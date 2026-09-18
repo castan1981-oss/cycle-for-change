@@ -2,7 +2,8 @@
 <!-- Sitemap index. Each public section keeps its own sitemap:
      - sitemap-pages.xml   hand-listed pages (home, field notes, guides, journal, resources)
      - sitemap-events.xml  /events/ and /towns/, written by scripts/build-events.js
-     - rides/sitemap.xml   /rides/, written by tools/build-rides.js -->
+     - rides/sitemap.xml   /rides/, written by tools/build-rides.js
+     - sitemap-calendar.xml /events/2027/, written by scripts/build-calendar.js -->
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://cycleforchange.org/sitemap-pages.xml</loc>
@@ -14,6 +15,10 @@
   </sitemap>
   <sitemap>
     <loc>https://cycleforchange.org/rides/sitemap.xml</loc>
+    <lastmod>2026-09-16</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://cycleforchange.org/sitemap-calendar.xml</loc>
     <lastmod>2026-09-16</lastmod>
   </sitemap>
 </sitemapindex>
