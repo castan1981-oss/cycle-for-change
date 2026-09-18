@@ -278,7 +278,11 @@ function buildMetros(rides) {
     let center = { lat: best.lat, lng: best.lng }, name = best.city;
     let ridesIn = rides.filter((r) => r.state === c.state && miles(center, r) <= METRO_RADIUS);
     if (ridesIn.length < METRO_MIN) { center = { lat: c.lat, lng: c.lng }; name = c.city; ridesIn = c.rides; }
-    if (hubs.some((h) => h.state === c.state && miles(h, center) <= HUB_GAP)) continue;
+    if (hubs.some((h) => h.state === c.state && miles(h, center) <= HUB_GAP)) {
+      // the big city it would be named after already has a hub; keep the candidate as its own hub if it stands clear
+      if (best === c || c.n < METRO_MIN || hubs.some((h) => h.state === c.state && miles(h, c) <= HUB_GAP)) continue;   // only a city with 3+ rides of its own
+      center = { lat: c.lat, lng: c.lng }; name = c.city; ridesIn = c.rides;
+    }
     const RENAME = { "Awendaw|SC": "Charleston", "Germantown|TN": "Memphis" };   // metro name when the big city has no ride of its own
     name = RENAME[`${name}|${c.state}`] || name;
     if (hubs.some((h) => h.state === c.state && h.city === name)) continue;      // one hub per city name per state
