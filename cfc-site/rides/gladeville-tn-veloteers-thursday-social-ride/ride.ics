@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:gladeville-tn-veloteers-thursday-social-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Chicago:20260924T180000
+DTEND;TZID=America/Chicago:20260924T193000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20260930T235959Z
+SUMMARY:Thursday Social Ride — Gladeville\, TN
+LOCATION:Gladeville Community Center
+DESCRIPTION:Pace: 11–18+ mph\, pick your route.\nSchedule: Thursdays\, 
+ 6:00 pm.\nConfirm with the host before you go.\nhttps://cycleforchange.o
+ rg/rides/gladeville-tn-veloteers-thursday-social-ride/
+URL:https://cycleforchange.org/rides/gladeville-tn-veloteers-thursday-soc
+ ial-ride/
+END:VEVENT
+END:VCALENDAR

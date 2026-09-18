@@ -5,17 +5,20 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:red-bank-nj-jsts-weeknight-rides@cycleforchange.org
-DTSTAMP:20260916T191024Z
-DTSTART;TZID=America/New_York:20260916T173000
-DTEND;TZID=America/New_York:20260916T193000
-RRULE:FREQ=WEEKLY;BYDAY=TU,WE
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260922T171500
+DTEND;TZID=America/New_York:20260922T191500
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH
 SUMMARY:JSTS Weeknight Rides (Jersey Shore Touring Society) — Red Bank\
  , NJ
-LOCATION:Red Bank\, NJ
-DESCRIPTION:Pace: A/B+\, B\, B/C groups.\nSchedule: Tuesday and Wednesday
-  evenings\, roughly 4:45–5:30 pm as sunset shifts; weekend morning rid
- es too.\nConfirm with the host before you go.\nhttps://cycleforchange.or
- g/rides/red-bank-nj-jsts-weeknight-rides/
+LOCATION:Varies by day: Michael J. Tighe Park\, Freehold (Tue); Holmdel P
+ ark (Wed); Brookdale Community College\, Lincroft (Thu)
+DESCRIPTION:Pace: A through D pace groups\, listed per ride.\nSchedule: W
+ eeknight rides Tuesday (Michael J. Tighe Park\, 5:15 pm)\, Wednesday (Ho
+ lmdel Park\, 5:00 pm) and Thursday (Brookdale Community College\, 5:30 p
+ m) as of early September 2026; start times move with sunset; many weeken
+ d rides too.\nConfirm with the host before you go.\nhttps://cycleforchan
+ ge.org/rides/red-bank-nj-jsts-weeknight-rides/
 URL:https://cycleforchange.org/rides/red-bank-nj-jsts-weeknight-rides/
 END:VEVENT
 END:VCALENDAR

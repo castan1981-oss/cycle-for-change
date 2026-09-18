@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bismarck-nd-701-womens-mtb-group-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Chicago:20270607T180000
+DTEND;TZID=America/Chicago:20270607T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20270831T235959Z
+SUMMARY:701 Women's MTB Group Ride — Bismarck\, ND
+LOCATION:Bismarck\, ND
+DESCRIPTION:Schedule: Most Mondays in summer\, 6:00 pm\, trailhead rotate
+ s.\nConfirm with the host before you go.\nhttps://cycleforchange.org/rid
+ es/bismarck-nd-701-womens-mtb-group-ride/
+URL:https://cycleforchange.org/rides/bismarck-nd-701-womens-mtb-group-rid
+ e/
+END:VEVENT
+END:VCALENDAR

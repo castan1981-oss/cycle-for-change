@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bangor-me-slipping-gears-saturday-morning-road-ride@cycleforchange.or
+ g
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260919T080000
+DTEND;TZID=America/New_York:20260919T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261031T235959Z
+SUMMARY:Slipping Gears Saturday Morning Road Ride — Bangor\, ME
+LOCATION:Slipping Gears Cycling\, 753 Stillwater Ave\, Bangor\, ME 04401
+DESCRIPTION:Pace: 14–16 mph\, social.\nSchedule: Every Saturday\, 8:00 
+ am\, spring through fall.\nConfirm with the host before you go.\nhttps:/
+ /cycleforchange.org/rides/bangor-me-slipping-gears-saturday-morning-road
+ -ride/
+URL:https://cycleforchange.org/rides/bangor-me-slipping-gears-saturday-mo
+ rning-road-ride/
+END:VEVENT
+END:VCALENDAR

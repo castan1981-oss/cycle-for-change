@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:pensacola-fl-bike-pensacola-slow-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Chicago:20260918T180000
+DTEND;TZID=America/Chicago:20260918T190000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+SUMMARY:Bike Pensacola Slow Ride — Pensacola\, FL
+LOCATION:Pensacola\, FL
+DESCRIPTION:Pace: slow\, about an hour.\nNo-drop.\nSchedule: Monthly\, us
+ ually a Friday\, 6:00–7:00 pm; the date and start point change each mo
+ nth and are posted on Facebook.\nConfirm with the host before you go.\nh
+ ttps://cycleforchange.org/rides/pensacola-fl-bike-pensacola-slow-ride/
+URL:https://cycleforchange.org/rides/pensacola-fl-bike-pensacola-slow-rid
+ e/
+END:VEVENT
+END:VCALENDAR

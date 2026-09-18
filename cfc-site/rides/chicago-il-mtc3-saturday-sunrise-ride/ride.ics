@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:chicago-il-mtc3-saturday-sunrise-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Chicago:20260919T053000
+DTEND;TZID=America/Chicago:20260919T073000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Major Taylor Cycling Club Chicago Saturday Sunrise Ride — Chica
+ go\, IL
+LOCATION:La Rabida Children's Hospital parking lot\, 6501 S Promontory Dr
+ \, Chicago\, IL 60649
+DESCRIPTION:Pace: 15–16 mph.\nSchedule: Every Saturday\, 5:30 am.\nConf
+ irm with the host before you go.\nhttps://cycleforchange.org/rides/chica
+ go-il-mtc3-saturday-sunrise-ride/
+URL:https://cycleforchange.org/rides/chicago-il-mtc3-saturday-sunrise-rid
+ e/
+END:VEVENT
+END:VCALENDAR

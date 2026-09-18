@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:greensboro-nc-cycles-de-oro-saturday-social-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260919T100000
+DTEND;TZID=America/New_York:20260919T120000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Cycles de ORO Saturday Social Ride — Greensboro\, NC
+LOCATION:Cycles de ORO
+DESCRIPTION:Pace: conversational\, short distances\, group stays together
+ .\nNo-drop.\nSchedule: Every Saturday; arrive 9:30 am\, roll 10:00 am (w
+ arm-weather schedule; skipped for local charity rides or bad weather).\n
+ Confirm with the host before you go.\nhttps://cycleforchange.org/rides/g
+ reensboro-nc-cycles-de-oro-saturday-social-ride/
+URL:https://cycleforchange.org/rides/greensboro-nc-cycles-de-oro-saturday
+ -social-ride/
+END:VEVENT
+END:VCALENDAR

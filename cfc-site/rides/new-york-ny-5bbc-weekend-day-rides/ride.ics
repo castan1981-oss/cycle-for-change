@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:new-york-ny-5bbc-weekend-day-rides@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260919T103000
+DTEND;TZID=America/New_York:20260919T123000
+RRULE:FREQ=WEEKLY;BYDAY=SA,SU
+SUMMARY:Five Borough Bicycle Club Day Rides — New York\, NY
+LOCATION:New York\, NY
+DESCRIPTION:Pace: beginner 'Happy Face' rides up to fast-paced rides.\nNo
+ -drop.\nSchedule: Most Saturdays and Sundays\, plus some weekdays and ho
+ lidays. Starts are usually between 9:00 and 10:30 am and change with the
+  route.\nConfirm with the host before you go.\nhttps://cycleforchange.or
+ g/rides/new-york-ny-5bbc-weekend-day-rides/
+URL:https://cycleforchange.org/rides/new-york-ny-5bbc-weekend-day-rides/
+END:VEVENT
+END:VCALENDAR

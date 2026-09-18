@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:lubbock-tx-wtca-tuesday-thursday-ransom-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Chicago:20260922T080000
+DTEND;TZID=America/Chicago:20260922T100000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH
+SUMMARY:WTCA Tuesday/Thursday Ransom Ride — Lubbock\, TX
+LOCATION:Ransom Canyon Center parking lot\, 8312 E FM 3523\, Ransom Canyo
+ n\, TX
+DESCRIPTION:Pace: morning 15–17 mph no-drop; evening 17–19 mph drop.\
+ nSchedule: Tuesdays and Thursdays\, 8:00 am (no-drop) and 5:30 pm (drop)
+ .\nConfirm with the host before you go.\nhttps://cycleforchange.org/ride
+ s/lubbock-tx-wtca-tuesday-thursday-ransom-ride/
+URL:https://cycleforchange.org/rides/lubbock-tx-wtca-tuesday-thursday-ran
+ som-ride/
+END:VEVENT
+END:VCALENDAR

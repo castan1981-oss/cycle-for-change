@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:gladeville-tn-veloteers-girls-morning-out@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Chicago:20260925T080000
+DTEND;TZID=America/Chicago:20260925T100000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20260930T235959Z
+SUMMARY:Girls' Morning Out — Gladeville\, TN
+LOCATION:Gladeville Community Center
+DESCRIPTION:Pace: 14–16+ mph.\nSchedule: Fridays\, 8:00 am.\nConfirm wi
+ th the host before you go.\nhttps://cycleforchange.org/rides/gladeville-
+ tn-veloteers-girls-morning-out/
+URL:https://cycleforchange.org/rides/gladeville-tn-veloteers-girls-mornin
+ g-out/
+END:VEVENT
+END:VCALENDAR

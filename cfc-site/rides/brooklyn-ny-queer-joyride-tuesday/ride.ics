@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:brooklyn-ny-queer-joyride-tuesday@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260922T191200
+DTEND;TZID=America/New_York:20260922T211200
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Queer Joyride — Brooklyn\, NY
+LOCATION:Grand Army Plaza\, Grand Army Plaza\, Brooklyn\, NY 11238
+DESCRIPTION:Pace: social pace.\nSchedule: Every Tuesday\, meet 7:00 pm\, 
+ roll about 7:12 pm.\nConfirm with the host before you go.\nhttps://cycle
+ forchange.org/rides/brooklyn-ny-queer-joyride-tuesday/
+URL:https://cycleforchange.org/rides/brooklyn-ny-queer-joyride-tuesday/
+END:VEVENT
+END:VCALENDAR

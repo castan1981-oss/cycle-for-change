@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:barre-vt-vermont-bicycle-shop-pizza-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20261003T160000
+DTEND;TZID=America/New_York:20261003T163000
+RRULE:FREQ=MONTHLY;BYDAY=1SA;UNTIL=20261031T235959Z
+SUMMARY:Vermont Bicycle Shop Pizza Ride — Barre\, VT
+LOCATION:Vermont Bicycle Shop\, Barre\, Barre\, VT
+DESCRIPTION:Pace: casual\, family friendly\, about 30 minutes.\nNo-drop.\
+ nSchedule: First Saturday of each month\, 4:00 pm sharp\, April–Octobe
+ r\, weather permitting.\nConfirm with the host before you go.\nhttps://c
+ ycleforchange.org/rides/barre-vt-vermont-bicycle-shop-pizza-ride/
+URL:https://cycleforchange.org/rides/barre-vt-vermont-bicycle-shop-pizza-
+ ride/
+END:VEVENT
+END:VCALENDAR

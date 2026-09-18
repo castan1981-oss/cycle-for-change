@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:houston-tx-nwcc-saturday-zube-park-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Chicago:20260919T073000
+DTEND;TZID=America/Chicago:20260919T093000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270331T235959Z
+SUMMARY:NWCC Saturday Zube Park Ride — Houston\, TX
+LOCATION:Zube Park
+DESCRIPTION:Pace: groups by ability; no-drop group about 13 mph.\nSchedul
+ e: Every Saturday; 7:30 am Apr–Sep\, 8:00 am Oct–Mar.\nConfirm with 
+ the host before you go.\nhttps://cycleforchange.org/rides/houston-tx-nwc
+ c-saturday-zube-park-ride/
+URL:https://cycleforchange.org/rides/houston-tx-nwcc-saturday-zube-park-r
+ ide/
+END:VEVENT
+END:VCALENDAR

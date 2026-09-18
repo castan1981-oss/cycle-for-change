@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:plano-tx-pba-saturday-club-rides@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Chicago:20261003T080000
+DTEND;TZID=America/Chicago:20261003T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20260831T235959Z
+SUMMARY:PBA Saturday Club Rides — Plano\, TX
+LOCATION:Gulledge Elementary School parking lot (novice groups); faster g
+ roups start at Spring Creek & Coit\, Preston Meadow Dr\, just south of L
+ egacy\, Plano\, TX
+DESCRIPTION:Pace: many groups; Novice is ~20 miles at 11–13 mph.\nSched
+ ule: Every Saturday morning; 8:00 am Oct–Apr\, 7:30 am May and Sep\, 7
+ :00 am Jun–Aug.\nConfirm with the host before you go.\nhttps://cyclefo
+ rchange.org/rides/plano-tx-pba-saturday-club-rides/
+URL:https://cycleforchange.org/rides/plano-tx-pba-saturday-club-rides/
+END:VEVENT
+END:VCALENDAR

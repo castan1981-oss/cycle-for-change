@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:austin-tx-austin-ridge-riders-sunday-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Chicago:20261004T090000
+DTEND;TZID=America/Chicago:20261004T110000
+RRULE:FREQ=MONTHLY;BYDAY=1SU;UNTIL=20261231T235959Z
+SUMMARY:Austin Ridge Riders Sunday Ride — Austin\, TX
+LOCATION:Rotates; Walnut Creek Metropolitan Park is the usual home trail
+DESCRIPTION:Pace: no-drop groups by ability\, 1.5–2 hours.\nNo-drop.\nS
+ chedule: Every Sunday morning; trail rotates by month with an alternate 
+ venue on the first Sunday (fall 2026: Walnut Creek in Sept\, Brushy Cree
+ k in Oct\, GTX Trails in Nov\, Circle C in Dec). The club's Meetup liste
+ d 9:00 am starts in 2025; RSVP for current details.\nConfirm with the ho
+ st before you go.\nhttps://cycleforchange.org/rides/austin-tx-austin-rid
+ ge-riders-sunday-ride/
+URL:https://cycleforchange.org/rides/austin-tx-austin-ridge-riders-sunday
+ -ride/
+END:VEVENT
+END:VCALENDAR

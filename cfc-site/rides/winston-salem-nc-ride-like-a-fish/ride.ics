@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:winston-salem-nc-ride-like-a-fish@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260921T181500
+DTEND;TZID=America/New_York:20260921T201500
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Ride Like a Fish — Winston-Salem\, NC
+LOCATION:Fiddlin' Fish Brewing Co. (lot across 8th St)
+DESCRIPTION:No-drop.\nSchedule: Every Monday\, meet 6:15 pm\, year-round.
+ \nConfirm with the host before you go.\nhttps://cycleforchange.org/rides
+ /winston-salem-nc-ride-like-a-fish/
+URL:https://cycleforchange.org/rides/winston-salem-nc-ride-like-a-fish/
+END:VEVENT
+END:VCALENDAR

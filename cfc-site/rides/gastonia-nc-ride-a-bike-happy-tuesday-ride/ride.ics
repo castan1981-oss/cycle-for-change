@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:gastonia-nc-ride-a-bike-happy-tuesday-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20270504T180000
+DTEND;TZID=America/New_York:20270504T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270831T235959Z
+SUMMARY:Ride-A-Bike Happy Tuesday Ride — Gastonia\, NC
+LOCATION:Ride A Bike Bicycle Shop\, 140 E Main Ave\, Gastonia\, NC 28052
+DESCRIPTION:Pace: party pace\, 6–9 mph.\nNo-drop.\nSchedule: Every Tues
+ day\, 6:00 pm (listed as May through August).\nConfirm with the host bef
+ ore you go.\nhttps://cycleforchange.org/rides/gastonia-nc-ride-a-bike-ha
+ ppy-tuesday-ride/
+URL:https://cycleforchange.org/rides/gastonia-nc-ride-a-bike-happy-tuesda
+ y-ride/
+END:VEVENT
+END:VCALENDAR

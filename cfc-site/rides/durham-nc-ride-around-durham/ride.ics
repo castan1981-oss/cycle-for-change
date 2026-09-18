@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:durham-nc-ride-around-durham@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260924T183000
+DTEND;TZID=America/New_York:20260924T203000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Ride Around Durham (RAD) — Durham\, NC
+LOCATION:Duke Chapel\, 401 Chapel Dr\, Durham\, NC 27708
+DESCRIPTION:Pace: 8–10 mph.\nNo-drop.\nSchedule: Every Thursday\, 6:30 
+ pm.\nConfirm with the host before you go.\nhttps://cycleforchange.org/ri
+ des/durham-nc-ride-around-durham/
+URL:https://cycleforchange.org/rides/durham-nc-ride-around-durham/
+END:VEVENT
+END:VCALENDAR

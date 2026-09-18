@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:new-york-ny-achilles-citi-bike-adaptive-cycling-central-park@cyclefor
+ change.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260919T170000
+DTEND;TZID=America/New_York:20260919T190000
+RRULE:FREQ=WEEKLY;BYDAY=TU,SA;UNTIL=20261130T235959Z
+SUMMARY:Achilles + Citi Bike Adaptive Cycling (Central Park) — New York
+ \, NY
+LOCATION:Central Park
+DESCRIPTION:No-drop.\nSchedule: Tuesdays 5:00 pm and Saturdays 8:00 am\, 
+ May to early November. Other sessions run weekly in Brooklyn\, the Bronx
+  and Queens.\nConfirm with the host before you go.\nhttps://cycleforchan
+ ge.org/rides/new-york-ny-achilles-citi-bike-adaptive-cycling-central-par
+ k/
+URL:https://cycleforchange.org/rides/new-york-ny-achilles-citi-bike-adapt
+ ive-cycling-central-park/
+END:VEVENT
+END:VCALENDAR

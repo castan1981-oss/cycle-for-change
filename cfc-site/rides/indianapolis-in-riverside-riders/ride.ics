@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:indianapolis-in-riverside-riders@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260920T173000
+DTEND;TZID=America/New_York:20260920T193000
+RRULE:FREQ=WEEKLY;BYDAY=TH,SU
+SUMMARY:Riverside Riders — Indianapolis\, IN
+LOCATION:Riverside Park\, 2420 E Riverside Dr\, Indianapolis\, IN 46208
+DESCRIPTION:Pace: moderate.\nSchedule: Thursdays and Sundays\, 5:30 pm\, 
+ starting in April.\nConfirm with the host before you go.\nhttps://cyclef
+ orchange.org/rides/indianapolis-in-riverside-riders/
+URL:https://cycleforchange.org/rides/indianapolis-in-riverside-riders/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:boise-id-cbr-tuesday-because-we-can-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Denver:20260922T090000
+DTEND;TZID=America/Denver:20260922T110000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:CBR Tuesday Because We Can Ride — Boise\, ID
+LOCATION:Boise\, ID
+DESCRIPTION:Schedule: Tuesdays\, 9:00 am. Start location rotates around t
+ he Treasure Valley..\nConfirm with the host before you go.\nhttps://cycl
+ eforchange.org/rides/boise-id-cbr-tuesday-because-we-can-ride/
+URL:https://cycleforchange.org/rides/boise-id-cbr-tuesday-because-we-can-
+ ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bentonville-ar-tour-de-coler@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Chicago:20270302T173000
+DTEND;TZID=America/Chicago:20270302T193000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270331T235959Z
+SUMMARY:Tour de Coler — Bentonville\, AR
+LOCATION:The Grove parking lot\, Coler Mountain Bike Preserve\, 2500 NW G
+ rove Ln\, Bentonville\, AR
+DESCRIPTION:Pace: Groups split by ability and riding style.\nSchedule: Ev
+ ery Tuesday\, 5:30 pm mid-March through October; 4:00 pm November throug
+ h mid-March.\nConfirm with the host before you go.\nhttps://cycleforchan
+ ge.org/rides/bentonville-ar-tour-de-coler/
+URL:https://cycleforchange.org/rides/bentonville-ar-tour-de-coler/
+END:VEVENT
+END:VCALENDAR

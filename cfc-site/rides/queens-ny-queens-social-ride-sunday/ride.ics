@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:queens-ny-queens-social-ride-sunday@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260920T090000
+DTEND;TZID=America/New_York:20260920T110000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Queens Social Ride — Queens\, NY
+LOCATION:The Unisphere\, Africa side\, Flushing Meadows Corona Park\, Flu
+ shing Meadows Corona Park\, Queens\, NY 11368
+DESCRIPTION:Pace: 8–13 mph\, social.\nSchedule: Every Sunday\, 9:00 am 
+ sharp.\nConfirm with the host before you go.\nhttps://cycleforchange.org
+ /rides/queens-ny-queens-social-ride-sunday/
+URL:https://cycleforchange.org/rides/queens-ny-queens-social-ride-sunday/
+END:VEVENT
+END:VCALENDAR

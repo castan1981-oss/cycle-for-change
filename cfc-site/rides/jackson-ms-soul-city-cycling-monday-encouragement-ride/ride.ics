@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:jackson-ms-soul-city-cycling-monday-encouragement-ride@cycleforchange
+ .org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Chicago:20260921T180000
+DTEND;TZID=America/Chicago:20260921T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Soul City Cycling Monday Encouragement Ride — Jackson\, MS
+LOCATION:Jackson\, MS
+DESCRIPTION:Pace: all levels\, ride your own pace.\nSchedule: Mondays\, 6
+ :00 pm\, starting in late March.\nConfirm with the host before you go.\n
+ https://cycleforchange.org/rides/jackson-ms-soul-city-cycling-monday-enc
+ ouragement-ride/
+URL:https://cycleforchange.org/rides/jackson-ms-soul-city-cycling-monday-
+ encouragement-ride/
+END:VEVENT
+END:VCALENDAR

@@ -5,15 +5,16 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:chicago-il-southside-critical-mass@cycleforchange.org
-DTSTAMP:20260916T191024Z
+DTSTAMP:20260918T174710Z
 DTSTART;TZID=America/Chicago:20261002T181500
 DTEND;TZID=America/Chicago:20261002T201500
-RRULE:FREQ=MONTHLY;BYDAY=1FR
+RRULE:FREQ=MONTHLY;BYDAY=1FR;UNTIL=20261130T235959Z
 SUMMARY:Southside Critical Mass — Chicago\, IL
-LOCATION:Chicago\, IL
-DESCRIPTION:Pace: slow.\nNo-drop.\nSchedule: First Friday of every month\
- , 6:15 pm.\nConfirm with the host before you go.\nhttps://cycleforchange
- .org/rides/chicago-il-southside-critical-mass/
+LOCATION:Nichols Park\, 55th St & Kimbark Ave\, Chicago\, IL
+DESCRIPTION:Pace: under 10 mph.\nNo-drop.\nSchedule: First Friday of ever
+ y month\, 6:15 pm\, April–November.\nConfirm with the host before you 
+ go.\nhttps://cycleforchange.org/rides/chicago-il-southside-critical-mass
+ /
 URL:https://cycleforchange.org/rides/chicago-il-southside-critical-mass/
 END:VEVENT
 END:VCALENDAR

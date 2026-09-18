@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:idaho-falls-id-daves-monday-night-road-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Denver:20260921T180000
+DTEND;TZID=America/Denver:20260921T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20261031T235959Z
+SUMMARY:Dave's Monday Night Road Ride — Idaho Falls\, ID
+LOCATION:Dave's Bike Shop\, 367 W Broadway St\, Idaho Falls\, ID 83402
+DESCRIPTION:Pace: different groups for different abilities.\nSchedule: Mo
+ ndays\, 6:00 pm\, April to October.\nConfirm with the host before you go
+ .\nhttps://cycleforchange.org/rides/idaho-falls-id-daves-monday-night-ro
+ ad-ride/
+URL:https://cycleforchange.org/rides/idaho-falls-id-daves-monday-night-ro
+ ad-ride/
+END:VEVENT
+END:VCALENDAR

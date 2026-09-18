@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ventura-ca-easy-rider-community-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Los_Angeles:20260920T090000
+DTEND;TZID=America/Los_Angeles:20260920T110000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=SU
+SUMMARY:Easy Rider Community Ride — Ventura\, CA
+LOCATION:Museum of Ventura County parking lot\, 100 E Main St\, Ventura\,
+  CA
+DESCRIPTION:Pace: about 12 mph; Easy Rider Plus option is longer and a bi
+ t faster.\nNo-drop.\nSchedule: About every other Sunday\, 9:00 am (arriv
+ e 8:45); dates on the Easy Rider Meetup group.\nConfirm with the host be
+ fore you go.\nhttps://cycleforchange.org/rides/ventura-ca-easy-rider-com
+ munity-ride/
+URL:https://cycleforchange.org/rides/ventura-ca-easy-rider-community-ride
+ /
+END:VEVENT
+END:VCALENDAR

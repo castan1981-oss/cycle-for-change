@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:manchester-nh-qc-bike-sunday-morning-over-easy@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260920T100000
+DTEND;TZID=America/New_York:20260920T120000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20261031T235959Z
+SUMMARY:Sunday Morning Over Easy — Manchester\, NH
+LOCATION:QC Bike Collective\, 35 Elm St\, Manchester\, NH 03101
+DESCRIPTION:Pace: relaxed.\nSchedule: Every Sunday\, 10:00 am\, May to Oc
+ tober.\nConfirm with the host before you go.\nhttps://cycleforchange.org
+ /rides/manchester-nh-qc-bike-sunday-morning-over-easy/
+URL:https://cycleforchange.org/rides/manchester-nh-qc-bike-sunday-morning
+ -over-easy/
+END:VEVENT
+END:VCALENDAR

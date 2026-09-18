@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:naples-fl-naples-velo-saturday-bridge-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260919T070000
+DTEND;TZID=America/New_York:20260919T090000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Naples Velo Saturday Ft. Myers Bridge Ride — Naples\, FL
+LOCATION:Naples Cyclery (side lot)\, 813 Vanderbilt Beach Rd\, Naples\, F
+ L 34108
+DESCRIPTION:Pace: Black group 30+ mph in places; Blue group 24–27 mph; 
+ rotating paceline.\nSchedule: Every Saturday\, 7:00 am.\nConfirm with th
+ e host before you go.\nhttps://cycleforchange.org/rides/naples-fl-naples
+ -velo-saturday-bridge-ride/
+URL:https://cycleforchange.org/rides/naples-fl-naples-velo-saturday-bridg
+ e-ride/
+END:VEVENT
+END:VCALENDAR

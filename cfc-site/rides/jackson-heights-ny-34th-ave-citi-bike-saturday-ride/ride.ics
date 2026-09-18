@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:jackson-heights-ny-34th-ave-citi-bike-saturday-ride@cycleforchange.or
+ g
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260919T100000
+DTEND;TZID=America/New_York:20260919T120000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20260930T235959Z
+SUMMARY:34th Avenue Citi Bike Weekly Ride — Jackson Heights\, NY
+LOCATION:Citi Bike station\, 34th Avenue between 93rd & 94th Streets\, 34
+ th Ave & 93rd St\, Jackson Heights\, NY 11372
+DESCRIPTION:Pace: beginner pace.\nNo-drop.\nSchedule: Every Saturday\, 10
+ :00 am\, early June to mid/late September.\nConfirm with the host before
+  you go.\nhttps://cycleforchange.org/rides/jackson-heights-ny-34th-ave-c
+ iti-bike-saturday-ride/
+URL:https://cycleforchange.org/rides/jackson-heights-ny-34th-ave-citi-bik
+ e-saturday-ride/
+END:VEVENT
+END:VCALENDAR

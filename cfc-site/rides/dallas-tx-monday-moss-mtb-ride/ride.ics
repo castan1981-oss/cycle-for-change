@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dallas-tx-monday-moss-mtb-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Chicago:20260921T183000
+DTEND;TZID=America/Chicago:20260921T203000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Monday Moss — Dallas\, TX
+LOCATION:Harry Moss Trailhead
+DESCRIPTION:Pace: fun pace\, regroups.\nNo-drop.\nSchedule: Every Monday\
+ , 6:30 pm.\nConfirm with the host before you go.\nhttps://cycleforchange
+ .org/rides/dallas-tx-monday-moss-mtb-ride/
+URL:https://cycleforchange.org/rides/dallas-tx-monday-moss-mtb-ride/
+END:VEVENT
+END:VCALENDAR

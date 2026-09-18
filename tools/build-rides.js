@@ -281,6 +281,7 @@ function buildMetros(rides) {
     if (hubs.some((h) => h.state === c.state && miles(h, center) <= HUB_GAP)) continue;
     const RENAME = { "Awendaw|SC": "Charleston", "Germantown|TN": "Memphis" };   // metro name when the big city has no ride of its own
     name = RENAME[`${name}|${c.state}`] || name;
+    if (hubs.some((h) => h.state === c.state && h.city === name)) continue;      // one hub per city name per state
     hubs.push({ ...c, ...center, city: name, rides: ridesIn, slug: slugify(name), path: `/rides/${c.state.toLowerCase()}/${slugify(name)}/` });
   }
   // each ride -> nearest hub in its state that covers it (or null)

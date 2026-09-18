@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tampa-fl-critical-mass-tampa-bay@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260925T200000
+DTEND;TZID=America/New_York:20260925T220000
+RRULE:FREQ=MONTHLY;BYDAY=-1FR
+SUMMARY:Critical Mass Tampa Bay — Tampa\, FL
+LOCATION:Curtis Hixon Waterfront Park\, 600 N Ashley Dr\, Tampa\, FL 3360
+ 2
+DESCRIPTION:Schedule: Last Friday of every month\, meet 7:45 pm\, roll 8:
+ 00 pm.\nConfirm with the host before you go.\nhttps://cycleforchange.org
+ /rides/tampa-fl-critical-mass-tampa-bay/
+URL:https://cycleforchange.org/rides/tampa-fl-critical-mass-tampa-bay/
+END:VEVENT
+END:VCALENDAR

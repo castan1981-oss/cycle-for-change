@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:charlotte-nc-plaza-midwood-tuesday-night-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260922T200000
+DTEND;TZID=America/New_York:20260922T223000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Plaza Midwood Tuesday Night Ride (PMTNR) — Charlotte\, NC
+LOCATION:Common Market Plaza Midwood\, 2007 Commonwealth Ave\, Charlotte\
+ , NC 28205
+DESCRIPTION:Pace: party pace\, about 10 mph\, regroups every 2–3 miles.
+ \nNo-drop.\nSchedule: Every Tuesday\, meet 7:45 pm\, roll 8:00 pm.\nConf
+ irm with the host before you go.\nhttps://cycleforchange.org/rides/charl
+ otte-nc-plaza-midwood-tuesday-night-ride/
+URL:https://cycleforchange.org/rides/charlotte-nc-plaza-midwood-tuesday-n
+ ight-ride/
+END:VEVENT
+END:VCALENDAR

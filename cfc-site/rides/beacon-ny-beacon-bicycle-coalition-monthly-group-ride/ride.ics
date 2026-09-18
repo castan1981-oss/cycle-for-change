@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:beacon-ny-beacon-bicycle-coalition-monthly-group-ride@cycleforchange.
+ org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260924T180000
+DTEND;TZID=America/New_York:20260924T200000
+RRULE:FREQ=MONTHLY;BYDAY=-1TH
+SUMMARY:Beacon Bicycle Coalition Monthly Group Ride — Beacon\, NY
+LOCATION:The Dummy Light\, Main St & East Main St\, Beacon\, NY 12508
+DESCRIPTION:Pace: casual to moderate\, mixed ability.\nSchedule: Last Thu
+ rsday of every month\, 6:00 pm.\nConfirm with the host before you go.\nh
+ ttps://cycleforchange.org/rides/beacon-ny-beacon-bicycle-coalition-month
+ ly-group-ride/
+URL:https://cycleforchange.org/rides/beacon-ny-beacon-bicycle-coalition-m
+ onthly-group-ride/
+END:VEVENT
+END:VCALENDAR

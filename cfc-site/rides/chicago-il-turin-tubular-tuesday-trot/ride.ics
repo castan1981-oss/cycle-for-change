@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:chicago-il-turin-tubular-tuesday-trot@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Chicago:20260922T180000
+DTEND;TZID=America/Chicago:20260922T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Turin Tubular Tuesday Trot — Chicago\, IL
+LOCATION:Turin Bicycle\, 4710 N Damen Ave\, Chicago\, IL 60625
+DESCRIPTION:Pace: 16–19 mph.\nNo-drop.\nSchedule: Every Tuesday\, 6:00 
+ pm rollout.\nConfirm with the host before you go.\nhttps://cycleforchang
+ e.org/rides/chicago-il-turin-tubular-tuesday-trot/
+URL:https://cycleforchange.org/rides/chicago-il-turin-tubular-tuesday-tro
+ t/
+END:VEVENT
+END:VCALENDAR

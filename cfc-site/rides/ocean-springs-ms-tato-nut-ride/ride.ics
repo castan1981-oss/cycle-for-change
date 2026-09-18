@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ocean-springs-ms-tato-nut-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/Chicago:20261003T090000
+DTEND;TZID=America/Chicago:20261003T110000
+RRULE:FREQ=MONTHLY;BYDAY=1SA
+SUMMARY:First Saturday Ocean Springs Community Ride (Tato-Nut) — Ocean 
+ Springs\, MS
+LOCATION:Little Children's Park\, Ocean Springs
+DESCRIPTION:Pace: about 10 mph.\nSchedule: First Saturday of the month\, 
+ about 9:00 am (varies by season).\nConfirm with the host before you go.\
+ nhttps://cycleforchange.org/rides/ocean-springs-ms-tato-nut-ride/
+URL:https://cycleforchange.org/rides/ocean-springs-ms-tato-nut-ride/
+END:VEVENT
+END:VCALENDAR

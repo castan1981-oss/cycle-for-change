@@ -5,6 +5,7 @@
     "@netlify/blobs": "^8.1.0"
   },
   "scripts": {
-    "build:rides": "node tools/build-rides.js"
+    "build:rides": "node tools/build-rides.js",
+    "derive:rides": "node tools/derive-ride-fields.js"
   }
 }

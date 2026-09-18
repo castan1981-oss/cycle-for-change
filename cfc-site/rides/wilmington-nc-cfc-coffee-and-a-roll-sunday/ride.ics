@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wilmington-nc-cfc-coffee-and-a-roll-sunday@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260920T080000
+DTEND;TZID=America/New_York:20260920T120000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Coffee & A Roll Sunday Ride — Wilmington\, NC
+LOCATION:Greenfield Lake Park\, main parking lot\, 200 Park St\, Wilmingt
+ on\, NC 28401
+DESCRIPTION:Pace: conversational\, class D.\nSchedule: Most Sundays\, 8:0
+ 0 am.\nConfirm with the host before you go.\nhttps://cycleforchange.org/
+ rides/wilmington-nc-cfc-coffee-and-a-roll-sunday/
+URL:https://cycleforchange.org/rides/wilmington-nc-cfc-coffee-and-a-roll-
+ sunday/
+END:VEVENT
+END:VCALENDAR

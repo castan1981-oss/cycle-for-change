@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:asheville-nc-bears-community-ride@cycleforchange.org
+DTSTAMP:20260918T174710Z
+DTSTART;TZID=America/New_York:20260923T183000
+DTEND;TZID=America/New_York:20260923T193000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Bear's Community Ride — Asheville\, NC
+LOCATION:Bear's Smokehouse BBQ\, 135 Coxe Ave\, Asheville\, NC 28801
+DESCRIPTION:Pace: social\, conversational\, with gather-up stops.\nNo-dro
+ p.\nSchedule: Every Wednesday in season\, gather 6:00 pm\, roll 6:30 pm.
+ \nConfirm with the host before you go.\nhttps://cycleforchange.org/rides
+ /asheville-nc-bears-community-ride/
+URL:https://cycleforchange.org/rides/asheville-nc-bears-community-ride/
+END:VEVENT
+END:VCALENDAR
