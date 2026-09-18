@@ -189,7 +189,7 @@ function ics(r, next, rule) {
     "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Cycle for Change//Group Rides//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
     "BEGIN:VEVENT",
     `UID:${r.slug}@cycleforchange.org`,
-    `DTSTAMP:${NOW.toISOString().replace(/[-:]/g, "").slice(0, 15)}Z`,
+    `DTSTAMP:${String(r.verified_on).replace(/-/g, "")}T000000Z`,            // stable across builds, so rebuilds don't churn 500 files
     `DTSTART;TZID=${r.tz}:${icsLocal(next, r.tz)}`,
     `DTEND;TZID=${r.tz}:${icsLocal(end, r.tz)}`,
     `RRULE:${rule}`,
