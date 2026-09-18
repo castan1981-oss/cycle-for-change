@@ -495,6 +495,7 @@ function eventsIndex() {
     <p class="eyebrow">${events.length} events &middot; ${stateList.length} states &middot; updated ${esc(fmtDate(TODAY, { weekday: undefined }))}</p>
     <h1>US cycling events directory</h1>
     <p class="lede">Bike events across the United States, one page each. Where it is, when it runs, how it started, how to sign up, what the weather is doing, and where to sleep, eat and get your bike fixed once you are there.</p>
+    <p class="calendar-link">Looking for everything next year? <a href="/events/2027/">The 2027 calendar</a> lists every organized US ride and race we could pin down, with confirmed and projected dates.</p>
 
     <section><h2>Coming up</h2>
       ${upcoming.length ? `<ul class="cards">${upcoming.map((e) => eventCard(e)).join("")}</ul>` : `<p>Dates for the next editions are still being announced. Browse by state below.</p>`}
