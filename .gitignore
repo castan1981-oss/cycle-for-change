@@ -1,3 +1,9 @@
 .DS_Store
 .netlify/
 .claude/settings.local.json
+
+# social video cuts stay local / in Drive, never in git
+social/video/inbox/*.mp4
+social/video/inbox/*.mov
+social/video/posted/*.mp4
+social/video/posted/*.mov
