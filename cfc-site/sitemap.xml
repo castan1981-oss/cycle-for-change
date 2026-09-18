@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Sitemap index. Each public section keeps its own sitemap:
-     - sitemap-pages.xml   hand-listed pages (the coming-soon homepage for now;
-                           restore the full list when the site comes back)
+     - sitemap-pages.xml   hand-listed pages (home, field notes, guides, journal, resources)
      - sitemap-events.xml  /events/ and /towns/, written by scripts/build-events.js
      - rides/sitemap.xml   /rides/, written by tools/build-rides.js
-     - sitemap-calendar.xml /events/2027/, written by scripts/build-calendar.js
-     Paused sections (/field-notes, /guides, /resources, /journal) redirect home
-     and are deliberately not listed. -->
+     - sitemap-calendar.xml /events/2027/, written by scripts/build-calendar.js -->
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://cycleforchange.org/sitemap-pages.xml</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-09-18</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://cycleforchange.org/sitemap-events.xml</loc>
