@@ -1,16 +1,64 @@
 # Cycle for Change — project context for automated content
 
-> **PAUSED — the public site is a coming-soon page until December 2026.**
-> `cfc-site/index.html` is now the single public page (new brand: Creosote
-> palette, stacked wordmark, 10000 as year one for 2027). Every other public
-> URL 302s home via `netlify.toml`; the old pages are still in the repo for the
-> December rebuild, they just aren't reachable. **Do not ship Field Notes,
-> guides, resources or journal pages in the meantime** — they would not be
-> published, and the content loop workflows are paused for the same reason. If
-> you are asked to write content now, write it into the repo only after the
-> site comes back, or say the site is down and stop. Do not edit
-> `cfc-site/index.html`, `coming-soon.css`, `coming-soon.js`, or the redirect
-> block in `netlify.toml` as part of a content run.
+> **State of the public site (updated 2026-09-18).** The homepage
+> `cfc-site/index.html` is still the coming-soon page until December 2026 (new
+> brand: Creosote palette, stacked wordmark, 10000 as year one for 2027). The
+> December homepage is staged, noindex, at `/next/`. **Three directories are
+> live and public now**, because Robert chose to ship them early: `/rides/`,
+> `/events/`, `/towns/` (see "Live directories" below). The old sections
+> (`/field-notes`, `/guides`, `/resources`, `/journal`) still 302 home via
+> forced redirects in `netlify.toml`; their files stay in the repo for December.
+> **Do not ship Field Notes, guides, resources or journal pages in the
+> meantime** — they would not be reachable, and the content loop workflows are
+> paused for the same reason. Do not edit `cfc-site/index.html`,
+> `coming-soon.css`, `coming-soon.js`, or the redirect block in `netlify.toml`
+> as part of a content run.
+>
+> The catch-all `/*` redirect is **not forced**, so any real file under
+> `cfc-site/` is served. A merge to main is a publish. Work on a branch, open a
+> PR, check the Netlify deploy preview, and let Robert say "merge".
+
+## Live directories (public now)
+
+All three are **generated**: edit the data, run the generator, commit data +
+output. Never hand-edit a generated page (each one says so in its first line).
+
+| Section | Data | Generator | Output |
+|---|---|---|---|
+| `/rides/` — recurring US group rides: search page, state hubs, city hubs (3+ rides within 25 mi), one page + `ride.ics` per ride | `cfc-site/rides/rides.json` | `tools/build-rides.js` (`npm run build:rides`) | `cfc-site/rides/` |
+| `/events/`, `/towns/` — annual events and the towns that host them | `data/events/*.json`, `data/towns/*.json` (rules in `data/SCHEMA.md`) | `scripts/build-events.js` | `cfc-site/events/`, `cfc-site/towns/` |
+
+Rules for these pages:
+- **Look:** the Creosote house, not the paused Field Notes tokens. Everything
+  loads `/events/events.css` (shared; do not rename it or its classes) and
+  rides adds `/rides/rides.css`. Outfit display, Space Grotesk body, Space Mono
+  labels. No `/styles.css`, Fraunces or Anton here.
+- **Chrome:** header nav is Rides · Events · Towns · "The 10000" (→ `/`);
+  footer is Rides · Events · Towns · Home; the pledge block is the plain
+  paragraph with "See the project" (→ `/`) and "Follow on Instagram".
+  **No `/#board`, `/#tally`, `/#vote` links** while the homepage is coming-soon.
+- **No forms.** Robert's call: no signup, email, contact, claim or submit forms
+  on directory pages. Corrections go to https://www.instagram.com/cycl_eforchange/.
+  The search box on `/rides/` is a filter, not a form.
+- **Mileage line:** paint `[data-cur]` from `/api/strava` (`/rides/tally.js`,
+  `/events/events.js`). Do not fork the mileage logic.
+- **Rides data rules:** real, recurring rides only, each checked against its own
+  site or social page; unknown = `null`, never a guess; never guess an Instagram
+  handle; `confidence: low` shows an "Unconfirmed" badge; `verified_on` is the
+  real check date and feeds `dateModified` and the sitemap `lastmod` (never
+  stamp today's date on everything). `tz`, `start_hhmm`, `season_months` and
+  `monthly_rule` drive the next-ride line, the calendar file and `Event`
+  structured data; a ride without them simply doesn't show those.
+- **Freshness:** Netlify runs the rides generator on every deploy, and
+  `.github/workflows/rides-weekly-rebuild.yml` forces a deploy each Monday, so
+  baked-in next-ride dates are never more than a week old.
+- **SEO facts we checked (Sep 2026):** Google gives no rich result for recurring
+  events and retired FAQ rich results; don't add FAQPage, ItemList or
+  LocalBusiness markup. Breadcrumbs, honest dates, a real `startDate`, short
+  titles and city hubs with real data are what matter. `?q=` search URLs
+  canonical to `/rides/`; don't add noindex on top.
+- Sitemaps: `/sitemap.xml` is an index → `sitemap-pages.xml`,
+  `sitemap-events.xml`, `rides/sitemap.xml`. Search Console is set up.
 
 
 ## 10K kit — PRODUCTION LOCK (Sep 2026)
