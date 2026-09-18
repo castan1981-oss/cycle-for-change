@@ -48,7 +48,9 @@ Rules for these pages:
   real check date and feeds `dateModified` and the sitemap `lastmod` (never
   stamp today's date on everything). `tz`, `start_hhmm`, `season_months` and
   `monthly_rule` drive the next-ride line, the calendar file and `Event`
-  structured data; a ride without them simply doesn't show those.
+  structured data; a ride without them simply doesn't show those. They are
+  derived, not hand-typed: after editing `rides.json` run
+  `node tools/derive-ride-fields.js`, then `node tools/build-rides.js`.
 - **Freshness:** Netlify runs the rides generator on every deploy, and
   `.github/workflows/rides-weekly-rebuild.yml` forces a deploy each Monday, so
   baked-in next-ride dates are never more than a week old.
