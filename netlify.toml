@@ -1,7 +1,12 @@
 [build]
   publish = "cfc-site"
   functions = "netlify/functions"
-  command = "npm install"
+  # The rides generator runs on every deploy so "next ride" dates, Event
+  # startDate and the .ics DTSTART are never older than the last deploy. A
+  # weekly GitHub Action (.github/workflows/rides-weekly-rebuild.yml) triggers
+  # a deploy so they never go more than a week stale. If the generator fails
+  # (bad rides.json) the deploy fails and the previous deploy stays live.
+  command = "npm install && node tools/build-rides.js"
 
 [dev]
   publish = "cfc-site"

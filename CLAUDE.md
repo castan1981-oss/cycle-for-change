@@ -11,6 +11,50 @@
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
 
+## Directories: /rides/, /events/, /towns/
+
+All generated: edit the data, run the generator, commit data + output. Never
+hand-edit a generated page (each one says so in its first line). A merge to
+main is a publish, so branch, open a PR, check the Netlify deploy preview, and
+let Robert say "merge".
+
+| Section | Data | Generator | Output |
+|---|---|---|---|
+| `/rides/` — recurring US group rides: search page, state hubs, city hubs, one page + `ride.ics` per ride | `cfc-site/rides/rides.json` | `tools/derive-ride-fields.js` then `tools/build-rides.js` (`npm run derive:rides`, `npm run build:rides`) | `cfc-site/rides/` |
+| `/events/`, `/towns/`, `/events/2027/` | `data/events/*.json`, `data/towns/*.json`, `data/calendar-2027.json` (rules in `data/SCHEMA.md`) | `scripts/build-events.js`, `scripts/build-calendar.js` | `cfc-site/events/`, `cfc-site/towns/` |
+
+Rules for these pages:
+- **Look:** the Creosote house. Everything loads `/events/events.css` (shared;
+  do not rename it or its classes) and rides adds `/rides/rides.css`. Outfit
+  display, Space Grotesk body, Space Mono labels. No `/styles.css`, Fraunces or
+  Anton here.
+- **Chrome:** header nav is Rides · Events · Towns · "The 10000" (→ `/`);
+  footer is Rides · Events · Towns · Home; the pledge block is the plain
+  paragraph with "See the project" (→ `/`) and "Follow on Instagram". Before
+  linking to a homepage anchor, check it exists on the live homepage.
+- **No forms.** Robert's call: no signup, email, contact, claim or submit forms
+  on directory pages. Corrections go to https://www.instagram.com/cycl_eforchange/.
+  The search box on `/rides/` is a filter, not a form.
+- **Mileage line:** paint `[data-cur]` from `/api/strava` (`/rides/tally.js`,
+  `/events/events.js`). Do not fork the mileage logic.
+- **Rides data rules:** real, recurring rides only, each checked against its own
+  site or social page; unknown = `null`, never a guess; never guess an Instagram
+  handle; `confidence: low` shows an "Unconfirmed" badge; `verified_on` is the
+  real check date and feeds `dateModified` and the sitemap `lastmod` (never
+  stamp today's date on everything). `tz`, `start_hhmm`, `season_months` and
+  `monthly_rule` are derived by `tools/derive-ride-fields.js`, not hand-typed;
+  they drive the next-ride line, the calendar file and `Event` structured data.
+  City hubs exist where 3+ rides sit within 25 miles; before merging a data
+  change, check that no live hub URL disappears by accident.
+- **Freshness:** Netlify runs the rides generator on every deploy, and
+  `.github/workflows/rides-weekly-rebuild.yml` forces a deploy each Monday, so
+  baked-in next-ride dates are never more than a week old.
+- **SEO facts we checked (Sep 2026):** Google gives no rich result for recurring
+  events and retired FAQ rich results; don't add FAQPage, ItemList or
+  LocalBusiness markup. Breadcrumbs, honest dates, a real `startDate`, short
+  titles and city hubs with real data are what matter. `?q=` search URLs
+  canonical to `/rides/`; don't add noindex on top.
+
 ## 10K kit — PRODUCTION LOCK (Sep 2026)
 > **Update 2026-09-10 (after this lock was written): the lock was reopened.** The maker-pack
 > specs and both lookbooks no longer match the direction. New direction: the kit adopts the
