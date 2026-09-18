@@ -59,7 +59,7 @@ const esc = (s) => String(s == null ? "" : s)
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const attr = esc;
 const num = (v) => (v == null || v === "" || isNaN(Number(v)) ? null : Number(v));
-const slugify = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const slugify = (s) => String(s).toLowerCase().replace(/['’.]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const miles = (a, b) => {
   const R = 3958.8, toR = (d) => (d * Math.PI) / 180;
   const dLat = toR(b.lat - a.lat), dLng = toR(b.lng - a.lng);
@@ -463,10 +463,12 @@ function directory(rides, hubs) {
   const byState = {};
   for (const r of rides) (byState[r.state] ||= []).push(r);
   const states = Object.keys(byState).sort();
+  const nStates = states.filter((x) => x !== "DC").length;
+  const statesText = `${nStates} states${states.includes("DC") ? " and DC" : ""}`;
   const nInclusive = rides.filter((r) => r.inclusive_focus.some((t) => ["lgbtq", "wtf", "bipoc"].includes(t))).length;
   const nNoDrop = rides.filter((r) => r.drop_policy === "no-drop").length;
   const lastChecked = rides.map((r) => r.verified_on).sort().pop();
-  const description = `Search ${rides.length} recurring bicycle group rides in ${states.length} states by city or state. Road, gravel, mountain bike and social rides — day, time, start point, pace and links for each. No account, just show up.`;
+  const description = `Search ${rides.length} recurring bicycle group rides in ${statesText} by city or state. Road, gravel, mountain bike and social rides — day, time, start point, pace and links for each. No account, just show up.`;
   const jsonld = { "@context": "https://schema.org", "@graph": [
     { "@type": "CollectionPage", "@id": `${SITE}/rides/`, name: "Find a group ride near you", description, url: `${SITE}/rides/`,
       dateModified: lastChecked, author: AUTHOR, publisher: PUBLISHER, breadcrumb: breadcrumbLd([["Cycle for Change", `${SITE}/`], ["Group rides", `${SITE}/rides/`]]) },
@@ -484,10 +486,10 @@ ${byState[s].map((r) => card(r)).join("\n")}
 <main id="main" class="gr-dir">
   <header class="gr-head wrap">
       ${crumbsHtml([["Cycle for Change", `${SITE}/`], ["Group rides", null]])}
-      <p class="eyebrow">${rides.length} rides &middot; ${states.length} states &middot; checked ${esc(lastChecked)}</p>
+      <p class="eyebrow">${rides.length} rides &middot; ${statesText} &middot; checked ${esc(lastChecked)}</p>
       <h1>Find a group ride near you</h1>
       <p class="lede">
-        ${rides.length} recurring group rides in ${states.length} states. ${nNoDrop} are no-drop, so nobody gets left behind.
+        ${rides.length} recurring group rides in ${statesText}. ${nNoDrop} are no-drop, so nobody gets left behind.
         ${nInclusive} are run by and for queer, women/trans/femme or BIPOC riders. Each ride has its own page:
         when it rolls, where it starts, how far, how fast, what to bring. Type a city or tap Near me.
       </p>
