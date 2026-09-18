@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Bike rides tonight near you — group rides rolling in the next 12 hours | Cycle for Change</title>
+  <meta name="description" content="What's rolling near you tonight. Free group bike rides in the next twelve hours, soonest first, with pace, start spot and a plain go or no-go on the weather.">
+  <link rel="canonical" href="https://cycleforchange.org/tonight/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cycleforchange.org/tonight/">
+  <meta property="og:title" content="Bike rides tonight near you">
+  <meta property="og:description" content="Free group rides rolling in the next twelve hours, soonest first.">
+  <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Space+Grotesk:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tonight/tonight.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-run" id="ticker">Tonight &middot; free group rides &middot; soonest first &middot; </div></div>
+
+<header class="head wrap">
+  <a class="mark" href="/" aria-label="Cycle for Change home">
+    <svg viewBox="0 0 120 120" width="34" height="34" aria-hidden="true" focusable="false">
+      <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="#E8DFD0" stroke-width="12" stroke-linecap="round"/>
+      <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#C6FF00" stroke-width="12" stroke-linecap="round"/>
+      <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
+      <circle cx="60" cy="60" r="6" fill="#E8DFD0"/>
+    </svg>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a href="/rides/">All rides</a>
+    <a href="/events/">Events</a>
+    <a href="/towns/">Towns</a>
+    <a href="/field-notes/">Field notes</a>
+    <a class="nav-cta" href="/#board">Pledge a mile</a>
+  </nav>
+</header>
+
+<main id="main" class="wrap">
+  <div class="title-row">
+    <h1 class="title" data-ghost="Tonight">Tonight</h1>
+    <p class="where"><span id="whereLabel">Pick a place</span> <button class="linkish" id="changePlace" type="button" hidden>change</button></p>
+  </div>
+  <p class="lede">What&rsquo;s rolling near you in the next twelve hours. Free group rides, soonest first, with the honest bit up front: will they wait for you.</p>
+
+  <section class="place" id="place" aria-labelledby="place-head">
+    <h2 class="label" id="place-head">Where are you riding</h2>
+    <div class="place-row">
+      <button class="btn solid" id="useLocation" type="button">Use my location</button>
+      <span class="or">or pick a town</span>
+    </div>
+    <div class="metros" id="metros"></div>
+    <label class="visually-hidden" for="allTowns">All towns</label>
+    <select class="select" id="allTowns"><option value="">All towns, A to Z</option></select>
+    <p class="fine" id="placeMsg" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="controls" id="controls" hidden aria-label="Filters">
+    <div class="seg" role="group" aria-label="When">
+      <button type="button" data-window="12" aria-pressed="true">Next 12 hours</button>
+      <button type="button" data-window="48" aria-pressed="false">Next 2 days</button>
+    </div>
+    <div class="seg" role="group" aria-label="How far">
+      <button type="button" data-radius="15" aria-pressed="false">15 mi</button>
+      <button type="button" data-radius="40" aria-pressed="true">40 mi</button>
+      <button type="button" data-radius="100" aria-pressed="false">100 mi</button>
+    </div>
+    <button class="btn" type="button" id="noDrop" aria-pressed="false">No-drop only</button>
+  </section>
+
+  <section id="wallSec" hidden aria-labelledby="wall-head">
+    <div class="sec-row"><h2 class="label" id="wall-head">On the wall</h2><p class="label dim" id="wallNote"></p></div>
+    <div class="wall" id="wall"></div>
+  </section>
+
+  <section id="lineupSec" hidden aria-labelledby="lineup-head">
+    <div class="sec-row"><h2 class="label" id="lineup-head">The lineup</h2><p class="label dim" id="lineupNote"></p></div>
+    <div class="lineup" id="lineup"></div>
+  </section>
+
+  <section id="weekSec" hidden aria-labelledby="week-head">
+    <div class="sec-row"><h2 class="label" id="week-head">My week</h2><p class="label dim">Saved on this phone. No account.</p></div>
+    <div class="lineup" id="week"></div>
+  </section>
+
+  <section class="addride">
+    <p class="addride-big">Know a ride that isn&rsquo;t on the wall?</p>
+    <p class="addride-links"><a href="https://www.instagram.com/cycl_eforchange" target="_blank" rel="noopener noreferrer">Message us on Instagram</a> <a href="/rides/">See all 402 rides</a></p>
+  </section>
+</main>
+
+<footer class="foot wrap">
+  <span>Cycle for Change</span>
+  <span><a href="/#board">Every mile for queer communities. Pledge one.</a></span>
+  <span>Forecast: Open-Meteo</span>
+</footer>
+
+<script src="/tonight/tonight.js" defer></script>
+</body>
+</html>
