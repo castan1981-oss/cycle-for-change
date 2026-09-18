@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var GOAL = 7500;
+  var GOAL = 10000; // 2027. Miles shown are since June 1, 2026.
 
   function paint(miles, pct) {
     var m = Math.max(0, Number(miles) || 0);
@@ -28,7 +28,7 @@
     .then(function (r) { return r.json(); })
     .then(function (d) {
       var miles = d.totalMiles != null ? d.totalMiles : (d.miles || 0);
-      paint(miles, d.pct);
+      paint(miles, null); // ignore the API pct: it is built on a retired goal
     })
     .catch(function () { paint(0, 0); });
 })();

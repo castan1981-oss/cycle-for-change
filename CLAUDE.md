@@ -1,17 +1,15 @@
 # Cycle for Change — project context for automated content
 
-> **PAUSED — the public site is a coming-soon page until December 2026.**
-> `cfc-site/index.html` is now the single public page (new brand: Creosote
-> palette, stacked wordmark, 10000 as year one for 2027). Every other public
-> URL 302s home via `netlify.toml`; the old pages are still in the repo for the
-> December rebuild, they just aren't reachable. **Do not ship Field Notes,
-> guides, resources or journal pages in the meantime** — they would not be
-> published, and the content loop workflows are paused for the same reason. If
-> you are asked to write content now, write it into the repo only after the
-> site comes back, or say the site is down and stop. Do not edit
-> `cfc-site/index.html`, `coming-soon.css`, `coming-soon.js`, or the redirect
-> block in `netlify.toml` as part of a content run.
-
+> **LIVE since 2026-09-18.** Robert took the coming-soon gate down early. The
+> homepage is `cfc-site/index.html`, built on the coming-soon design
+> (`coming-soon.css` + `next/home.css`, scripts `coming-soon.js` + `main.js`).
+> `/field-notes`, `/guides`, `/resources` and `/journal` are served again, and
+> `cfc-site/404.html` replaces the old catch-all redirect. Content work is
+> allowed again. The old content pages still wear the previous cream/plum/yellow
+> styles from `styles.css`; a redesign into the Creosote house is in progress
+> (design canvas, Sept 2026), so don't restyle them piecemeal.
+> The goal is **10,000 miles in 2027, all on the bike**. The count on the site
+> is miles since June 1, 2026; never show it as a fraction of 10,000.
 
 ## 10K kit — PRODUCTION LOCK (Sep 2026)
 > **Update 2026-09-10 (after this lock was written): the lock was reopened.** The maker-pack
