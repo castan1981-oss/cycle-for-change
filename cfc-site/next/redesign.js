@@ -279,13 +279,14 @@
      ———————————————————————————————————————————————— */
 
   var names = [];           /* [{name, ago}], newest first, from the pledges function */
+  var countKnown = true;    /* false while the function can't read names back (no NETLIFY_API_TOKEN) */
   var onBoard = false;
   var pname = $("pname"), slots = $("slots"), form = $("pledgeForm"), okmsg = $("okmsg");
   var pad2 = function (n) { return n < 10 ? "0" + n : String(n); };
 
   function row(n, text, open, ago, id) {
     var li = document.createElement("li");
-    var a = document.createElement("span"); a.className = "n"; a.textContent = pad2(n);
+    var a = document.createElement("span"); a.className = "n"; a.textContent = n === "" ? "" : pad2(n);
     var b = document.createElement("span"); b.className = "name" + (open ? " open" : ""); b.textContent = text; if (id) b.id = id;
     li.appendChild(a); li.appendChild(b);
     if (ago) { var c = document.createElement("span"); c.className = "ago"; c.textContent = ago; li.appendChild(c); }
@@ -295,8 +296,15 @@
   function paintBoard() {
     var total = names.length + (onBoard ? 1 : 0);
     $("boardCount").textContent = fmt(total);
+    /* pledges are saved either way, so an unknown count is hidden, never shown as 0 */
+    $("boardCount").parentNode.hidden = !countKnown;
     while (slots.firstChild) slots.removeChild(slots.firstChild);
     var typed = pname.value.trim();
+    if (!countKnown) {
+      /* no numbers and no "open" rows when we can't see who's already there */
+      slots.appendChild(row("", typed || "Your name here", !typed, onBoard ? "just now" : "", "slotYou"));
+      return;
+    }
     /* your row sits on top, numbered as the next one up */
     slots.appendChild(row(names.length + 1, typed || "Your name here", !typed, onBoard ? "just now" : "", "slotYou"));
     if (!names.length) {
@@ -348,11 +356,12 @@
     fetch("/.netlify/functions/pledges")
       .then(function (r) { return r.json(); })
       .then(function (d) {
-        if (!d || !d.names || !d.names.length) return;
+        if (!d || d.configured === false || d.error) { countKnown = false; paintBoard(); return; }
+        if (!d.names || !d.names.length) return;
         names = d.names.filter(function (p) { return p && p.name; });
         paintBoard();
       })
-      .catch(function () {});
+      .catch(function () { countKnown = false; paintBoard(); });
   }
 
   /* ————————————————————————————————————————————————
