@@ -347,17 +347,36 @@
     })
     .catch(() => {});
 
-  /* —— Email signup —— */
+  /* —— Email signup ——
+     A real Netlify form ("waitlist", the coming-soon list). The address is
+     only confirmed once Netlify has actually taken it. */
   const emailForm = document.getElementById("emailForm");
   const emailOk = document.getElementById("emailOk");
   if (emailForm) {
     emailForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      if (emailOk) {
+      const btn = emailForm.querySelector('button[type="submit"]');
+      const say = (text) => {
+        if (!emailOk) return;
         emailOk.style.display = "block";
-        emailOk.textContent = "You're on the list. We'll write when there's news.";
-      }
-      emailForm.reset();
+        emailOk.textContent = text;
+      };
+      if (btn) btn.disabled = true;
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(emailForm)).toString(),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error("bad status");
+          emailForm.reset();
+          say("You're on the list. We'll write when there's news.");
+        })
+        .catch(() => say("That didn't send. Try again."))
+        .then(() => {
+          if (btn) btn.disabled = false;
+        });
     });
   }
 })();
