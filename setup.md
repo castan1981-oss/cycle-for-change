@@ -18,13 +18,15 @@ Drag this whole folder onto Netlify and the site goes live. The pledge board and
 
 ## Step 2 — Show the saved names on the board (5 min)
 The board reads names back through Netlify's own API, which needs a token.
-1. Netlify → **User settings → Applications → Personal access tokens → New access token**. Copy it.
-2. Your site → **Site settings → Environment variables → Add**:
+1. Netlify → your avatar → **User settings → Applications → Personal access tokens → New access token**. Name it (e.g. `cfc pledge board`), pick an expiration, **Generate token**, and copy it — it is shown once.
+2. Your site → **Project configuration → Environment variables → Add a variable**:
    ```
    NETLIFY_API_TOKEN = (paste the token)
    ```
    (SITE_ID is provided automatically — you don't need to add it.)
-3. **Deploys → Trigger deploy → Clear cache and deploy.**
+3. **Deploys → Trigger deploy → Deploy project.** Environment variable changes only take effect on a new deploy.
+
+Until this is done the homepage hides the "N on the board" line rather than showing 0 — pledges are being saved the whole time. When the token expires the line hides itself again; make a new token and repeat.
 4. Done. Every pledge now appears in "The Crew," newest first.
 
 You'll also see every pledge in **Netlify → Forms → pledges** — that's your master list, exportable to CSV anytime.
