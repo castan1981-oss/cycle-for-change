@@ -30,17 +30,8 @@
 # The coming-soon gate is gone: /field-notes, /guides, /resources and /journal
 # are served again. Real files win; anything else gets cfc-site/404.html.
 
-[[redirects]]
-  from = "/next"
-  to = "/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/next/"
-  to = "/"
-  status = 301
-  force = true
+# /next/ is a real page again: the redesigned homepage is parked there (noindex)
+# until it replaces /. When it does, put the two forced /next → / redirects back.
 
 [[redirects]]
   from = "/strava-setup"
