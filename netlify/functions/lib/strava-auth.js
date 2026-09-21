@@ -15,8 +15,7 @@ let memo = null;
 // Blobs are eventually consistent by default; every read here must see the
 // write that just happened on another instance, so ask for strong reads.
 function store() {
-  const { getStore } = require("@netlify/blobs");
-  return getStore({ name: STORE, consistency: "strong" });
+  return require("./blobs").store(STORE);
 }
 
 async function readAuth() {
