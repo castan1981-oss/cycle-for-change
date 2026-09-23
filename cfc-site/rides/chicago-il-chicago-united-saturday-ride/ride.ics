@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:chicago-il-chicago-united-saturday-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260919T080000
+DTEND;TZID=America/Chicago:20260919T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Chicago United Saturday BIPOC Ride — Chicago\, IL
+LOCATION:Comrade Cycles\, 1908 W Chicago Ave\, Chicago\, IL 60622
+DESCRIPTION:Pace: 17–20 mph rolling.\nNo-drop.\nSchedule: Saturdays\, m
+ eet 7:30 am\, roll 8:00 am.\nConfirm with the host before you go.\nhttps
+ ://cycleforchange.org/rides/chicago-il-chicago-united-saturday-ride/
+URL:https://cycleforchange.org/rides/chicago-il-chicago-united-saturday-r
+ ide/
+END:VEVENT
+END:VCALENDAR

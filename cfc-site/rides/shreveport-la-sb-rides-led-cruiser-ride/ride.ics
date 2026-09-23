@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:shreveport-la-sb-rides-led-cruiser-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260922T200000
+DTEND;TZID=America/Chicago:20260922T220000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261031T235959Z
+SUMMARY:SB Rides LED Night Ride — Shreveport\, LA
+LOCATION:Corner of Crockett St & Commerce St\, downtown Shreveport (meet-
+ up subject to change)\, Crockett St & Commerce St\, Shreveport\, LA 7110
+ 1
+DESCRIPTION:Pace: casual.\nNo-drop.\nSchedule: Every Tuesday; meet 8:00 p
+ m\, ride 8:30 pm (plus occasional themed Friday/Saturday night rides).\n
+ Confirm with the host before you go.\nhttps://cycleforchange.org/rides/s
+ hreveport-la-sb-rides-led-cruiser-ride/
+URL:https://cycleforchange.org/rides/shreveport-la-sb-rides-led-cruiser-r
+ ide/
+END:VEVENT
+END:VCALENDAR

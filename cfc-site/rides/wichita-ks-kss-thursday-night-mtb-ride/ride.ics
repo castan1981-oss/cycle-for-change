@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wichita-ks-kss-thursday-night-mtb-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260924T173000
+DTEND;TZID=America/Chicago:20260924T193000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:KSS Thursday Night MTB Ride — Wichita\, KS
+LOCATION:Wichita\, KS
+DESCRIPTION:Pace: show and go.\nSchedule: Every Thursday night\, show and
+  go from 5:30 to 9:30 pm.\nConfirm with the host before you go.\nhttps:/
+ /cycleforchange.org/rides/wichita-ks-kss-thursday-night-mtb-ride/
+URL:https://cycleforchange.org/rides/wichita-ks-kss-thursday-night-mtb-ri
+ de/
+END:VEVENT
+END:VCALENDAR

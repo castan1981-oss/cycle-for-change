@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:franklin-tn-nashville-local-cycling-gsd-saturday@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260919T070000
+DTEND;TZID=America/Chicago:20260919T090000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:GSD Saturday Ride — Franklin\, TN
+LOCATION:Starbucks\, downtown Franklin\, 438 Main St\, Franklin\, TN 3706
+ 4
+DESCRIPTION:Pace: A low 20s mph\, B 19 mph.\nSchedule: Saturdays year-rou
+ nd; B group 7:00 am and A group 7:10 am in summer\, one hour later in wi
+ nter.\nConfirm with the host before you go.\nhttps://cycleforchange.org/
+ rides/franklin-tn-nashville-local-cycling-gsd-saturday/
+URL:https://cycleforchange.org/rides/franklin-tn-nashville-local-cycling-
+ gsd-saturday/
+END:VEVENT
+END:VCALENDAR

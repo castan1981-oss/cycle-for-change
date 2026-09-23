@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:chattanooga-tn-cbc-riverpark-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/New_York:20260925T090000
+DTEND;TZID=America/New_York:20260925T110000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+SUMMARY:Riverpark Ride — Chattanooga\, TN
+LOCATION:Hubert Fry Station\, Tennessee Riverpark\, 4301 Amnicola Hwy\, C
+ hattanooga\, TN 37406
+DESCRIPTION:Pace: 11 mph average.\nNo-drop.\nSchedule: Fridays\, 9:00 am 
+ ready to ride; paused until October 16\, 2026.\nConfirm with the host be
+ fore you go.\nhttps://cycleforchange.org/rides/chattanooga-tn-cbc-riverp
+ ark-ride/
+URL:https://cycleforchange.org/rides/chattanooga-tn-cbc-riverpark-ride/
+END:VEVENT
+END:VCALENDAR

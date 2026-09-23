@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dallas-tx-make-the-healthy-choice-community-bike-ride@cycleforchange.
+ org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260920T090000
+DTEND;TZID=America/Chicago:20260920T110000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=SU
+SUMMARY:Make The Healthy Choice Community Bike Ride — Dallas\, TX
+LOCATION:White Rock Brewing Co.\, 2477 N Beckley Ave\, Dallas\, TX
+DESCRIPTION:Pace: social pace.\nSchedule: Every other Sunday\, 9:00 am (R
+ SVP on the group's site).\nConfirm with the host before you go.\nhttps:/
+ /cycleforchange.org/rides/dallas-tx-make-the-healthy-choice-community-bi
+ ke-ride/
+URL:https://cycleforchange.org/rides/dallas-tx-make-the-healthy-choice-co
+ mmunity-bike-ride/
+END:VEVENT
+END:VCALENDAR

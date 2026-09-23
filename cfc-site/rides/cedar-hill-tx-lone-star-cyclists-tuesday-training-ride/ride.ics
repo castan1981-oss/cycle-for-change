@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:cedar-hill-tx-lone-star-cyclists-tuesday-training-ride@cycleforchange
+ .org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260922T181500
+DTEND;TZID=America/Chicago:20260922T201500
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Lone Star Cyclists Tuesday Training Ride — Cedar Hill\, TX
+LOCATION:Lake Ridge Elementary\, 1020 Lake Ridge Pkwy\, Cedar Hill\, TX 7
+ 5104
+DESCRIPTION:Schedule: Every Tuesday\, 6:15 pm.\nConfirm with the host bef
+ ore you go.\nhttps://cycleforchange.org/rides/cedar-hill-tx-lone-star-cy
+ clists-tuesday-training-ride/
+URL:https://cycleforchange.org/rides/cedar-hill-tx-lone-star-cyclists-tue
+ sday-training-ride/
+END:VEVENT
+END:VCALENDAR

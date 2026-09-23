@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bethpage-ny-massapequa-park-bicycle-club-rides@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/New_York:20260919T083000
+DTEND;TZID=America/New_York:20260919T103000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH,SA,SU
+SUMMARY:Massapequa Park Bicycle Club Rides — Bethpage\, NY
+LOCATION:Bethpage Public Library (most common start; others on the calend
+ ar)
+DESCRIPTION:Pace: B through A+ pace groups.\nSchedule: Tuesday\, Thursday
+ \, Saturday\, Sunday and holidays. 8:30 am in warmer months\, 9:00 am in
+  cooler months; some rides start earlier.\nConfirm with the host before 
+ you go.\nhttps://cycleforchange.org/rides/bethpage-ny-massapequa-park-bi
+ cycle-club-rides/
+URL:https://cycleforchange.org/rides/bethpage-ny-massapequa-park-bicycle-
+ club-rides/
+END:VEVENT
+END:VCALENDAR

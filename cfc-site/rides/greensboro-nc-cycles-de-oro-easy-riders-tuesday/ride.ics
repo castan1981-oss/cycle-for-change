@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:greensboro-nc-cycles-de-oro-easy-riders-tuesday@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/New_York:20260922T180000
+DTEND;TZID=America/New_York:20260922T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261130T235959Z
+SUMMARY:Cycles de ORO Easy Riders Ride — Greensboro\, NC
+LOCATION:Cycles de ORO
+DESCRIPTION:Pace: slow\, conversational\, frequent regroups\, no one left
+  behind.\nNo-drop.\nSchedule: Every Tuesday during Daylight Saving Time;
+  6:00 pm meet\, 6:15 pm briefing\, 6:30 pm roll.\nConfirm with the host 
+ before you go.\nhttps://cycleforchange.org/rides/greensboro-nc-cycles-de
+ -oro-easy-riders-tuesday/
+URL:https://cycleforchange.org/rides/greensboro-nc-cycles-de-oro-easy-rid
+ ers-tuesday/
+END:VEVENT
+END:VCALENDAR

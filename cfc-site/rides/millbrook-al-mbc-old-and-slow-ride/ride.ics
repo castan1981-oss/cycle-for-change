@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:millbrook-al-mbc-old-and-slow-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260919T070000
+DTEND;TZID=America/Chicago:20260919T090000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Old & Slow Ride — Millbrook\, AL
+LOCATION:Millbrook City Hall\, 3160 Main St\, Millbrook\, AL 36054
+DESCRIPTION:Pace: easy.\nNo-drop.\nSchedule: Saturdays\, 7:00 am.\nConfir
+ m with the host before you go.\nhttps://cycleforchange.org/rides/millbro
+ ok-al-mbc-old-and-slow-ride/
+URL:https://cycleforchange.org/rides/millbrook-al-mbc-old-and-slow-ride/
+END:VEVENT
+END:VCALENDAR

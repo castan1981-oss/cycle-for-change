@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:golden-co-golden-bike-cruise@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Denver:20260929T173000
+DTEND;TZID=America/Denver:20260929T193000
+RRULE:FREQ=MONTHLY;BYDAY=-1TU;UNTIL=20260930T235959Z
+SUMMARY:Golden Bike Cruise — Golden\, CO
+LOCATION:Behind the Armory building\, 818 14th St\, Golden\, CO 80401
+DESCRIPTION:Pace: slow cruise.\nNo-drop.\nSchedule: Last Tuesday of the m
+ onth\, 5:30 pm\, May through September.\nConfirm with the host before yo
+ u go.\nhttps://cycleforchange.org/rides/golden-co-golden-bike-cruise/
+URL:https://cycleforchange.org/rides/golden-co-golden-bike-cruise/
+END:VEVENT
+END:VCALENDAR

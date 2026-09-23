@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tucson-az-bicas-wtf-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Phoenix:20260928T190000
+DTEND;TZID=America/Phoenix:20260928T210000
+RRULE:FREQ=MONTHLY;BYDAY=-1MO
+SUMMARY:BICAS WTF Ride — Tucson\, AZ
+LOCATION:BICAS
+DESCRIPTION:Pace: no-drop\, party pace.\nNo-drop.\nSchedule: Last Monday 
+ of the month\, evening (the June 2024 ride gathered 6:30 pm and rolled 7
+ :00 pm; confirm the time with BICAS).\nConfirm with the host before you 
+ go.\nhttps://cycleforchange.org/rides/tucson-az-bicas-wtf-ride/
+URL:https://cycleforchange.org/rides/tucson-az-bicas-wtf-ride/
+END:VEVENT
+END:VCALENDAR

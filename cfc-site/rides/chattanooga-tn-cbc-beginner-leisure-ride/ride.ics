@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:chattanooga-tn-cbc-beginner-leisure-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/New_York:20260921T174500
+DTEND;TZID=America/New_York:20260921T194500
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Beginner/Leisure Ride — Chattanooga\, TN
+LOCATION:Parking lot behind the old Food Works restaurant\, 205 Manufactu
+ rers Rd\, Chattanooga\, TN 37405
+DESCRIPTION:Pace: set by who shows up; no speed is too slow.\nNo-drop.\nS
+ chedule: Mondays\, 5:45 pm (start time moves earlier as daylight shorten
+ s).\nConfirm with the host before you go.\nhttps://cycleforchange.org/ri
+ des/chattanooga-tn-cbc-beginner-leisure-ride/
+URL:https://cycleforchange.org/rides/chattanooga-tn-cbc-beginner-leisure-
+ ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:durham-nc-twig-cruiser-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/New_York:20260927T140000
+DTEND;TZID=America/New_York:20260927T160000
+RRULE:FREQ=MONTHLY;BYDAY=-1SU
+SUMMARY:TWIG Cruiser Ride — Durham\, NC
+LOCATION:CCB Plaza\, 201 Corcoran St\, Durham\, NC 27701
+DESCRIPTION:Pace: 8–10 mph.\nNo-drop.\nSchedule: Last Sunday of every m
+ onth; time varies (calendar shows about 2 pm).\nConfirm with the host be
+ fore you go.\nhttps://cycleforchange.org/rides/durham-nc-twig-cruiser-ri
+ de/
+URL:https://cycleforchange.org/rides/durham-nc-twig-cruiser-ride/
+END:VEVENT
+END:VCALENDAR

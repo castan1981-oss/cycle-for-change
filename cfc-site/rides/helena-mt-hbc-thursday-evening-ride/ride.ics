@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:helena-mt-hbc-thursday-evening-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Denver:20260924T180000
+DTEND;TZID=America/Denver:20260924T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20260930T235959Z
+SUMMARY:Helena Bicycle Club Thursday Evening Ride — Helena\, MT
+LOCATION:Parking lot behind Four Georgians School\, on Custer Ave
+DESCRIPTION:Schedule: Thursdays\, 6:00 pm\, May through September.\nConfi
+ rm with the host before you go.\nhttps://cycleforchange.org/rides/helena
+ -mt-hbc-thursday-evening-ride/
+URL:https://cycleforchange.org/rides/helena-mt-hbc-thursday-evening-ride/
+END:VEVENT
+END:VCALENDAR

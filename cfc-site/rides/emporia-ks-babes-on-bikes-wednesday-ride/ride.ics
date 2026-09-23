@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:emporia-ks-babes-on-bikes-wednesday-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260923T180000
+DTEND;TZID=America/Chicago:20260923T200000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Babes on Bikes Weekly Ride — Emporia\, KS
+LOCATION:700 block of Commercial St\, downtown Emporia
+DESCRIPTION:Schedule: Wednesdays\, around 6:00 pm.\nConfirm with the host
+  before you go.\nhttps://cycleforchange.org/rides/emporia-ks-babes-on-bi
+ kes-wednesday-ride/
+URL:https://cycleforchange.org/rides/emporia-ks-babes-on-bikes-wednesday-
+ ride/
+END:VEVENT
+END:VCALENDAR

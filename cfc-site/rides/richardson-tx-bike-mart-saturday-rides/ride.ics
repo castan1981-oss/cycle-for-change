@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:richardson-tx-bike-mart-saturday-rides@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260919T080000
+DTEND;TZID=America/Chicago:20260919T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:Richardson Bike Mart Saturday Rides — Richardson\, TX
+LOCATION:Bike Mart – Richardson (UTD)\, 1451 W Campbell Rd\, Richardson
+ \, TX 75080
+DESCRIPTION:Pace: six groups\, from 10–12 mph no-drop to 22+ mph.\nSche
+ dule: Every Saturday\, groups leave between 8:00 and 8:25 am.\nConfirm w
+ ith the host before you go.\nhttps://cycleforchange.org/rides/richardson
+ -tx-bike-mart-saturday-rides/
+URL:https://cycleforchange.org/rides/richardson-tx-bike-mart-saturday-rid
+ es/
+END:VEVENT
+END:VCALENDAR

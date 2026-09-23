@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tuscaloosa-al-wamba-monday-beginner-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260921T173000
+DTEND;TZID=America/Chicago:20260921T193000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:WAMBA Monday Beginner Ride — Tuscaloosa\, AL
+LOCATION:Munny Sokol Park
+DESCRIPTION:Pace: beginner.\nSchedule: Mondays\, 5:30 pm (intermediate We
+ dnesdays\, fast Thursdays).\nConfirm with the host before you go.\nhttps
+ ://cycleforchange.org/rides/tuscaloosa-al-wamba-monday-beginner-ride/
+URL:https://cycleforchange.org/rides/tuscaloosa-al-wamba-monday-beginner-
+ ride/
+END:VEVENT
+END:VCALENDAR

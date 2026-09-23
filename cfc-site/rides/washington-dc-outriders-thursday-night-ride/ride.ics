@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:washington-dc-outriders-thursday-night-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/New_York:20260924T181500
+DTEND;TZID=America/New_York:20260924T201500
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20261031T235959Z
+SUMMARY:OutRiders DC Thursday Night Ride — Washington\, DC
+LOCATION:Varies by week; a Metro station named in the Meetup event (Sept 
+ 17\, 2026: Smithsonian Metro)
+DESCRIPTION:Pace: casual.\nSchedule: Thursdays\, 6:15 pm\, summer series;
+  start rotates between Metro stations (posted on Meetup). Also a Tuesday
+  2:00 pm ride from Virginia Square Metro and weekend rides.\nConfirm wit
+ h the host before you go.\nhttps://cycleforchange.org/rides/washington-d
+ c-outriders-thursday-night-ride/
+URL:https://cycleforchange.org/rides/washington-dc-outriders-thursday-nig
+ ht-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:nashville-tn-trail-and-fitness-percy-warner-night-ride@cycleforchange
+ .org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20260924T190000
+DTEND;TZID=America/Chicago:20260924T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Percy Warner Night Ride — Nashville\, TN
+LOCATION:Percy Warner Park main mountain bike trailhead\, next to the clu
+ bhouse
+DESCRIPTION:Pace: all skill levels.\nSchedule: Thursdays\, 7:00 pm.\nConf
+ irm with the host before you go.\nhttps://cycleforchange.org/rides/nashv
+ ille-tn-trail-and-fitness-percy-warner-night-ride/
+URL:https://cycleforchange.org/rides/nashville-tn-trail-and-fitness-percy
+ -warner-night-ride/
+END:VEVENT
+END:VCALENDAR

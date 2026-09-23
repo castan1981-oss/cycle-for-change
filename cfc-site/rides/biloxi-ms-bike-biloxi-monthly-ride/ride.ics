@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:biloxi-ms-bike-biloxi-monthly-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20261020T180000
+DTEND;TZID=America/Chicago:20261020T200000
+RRULE:FREQ=MONTHLY;BYDAY=3TU
+SUMMARY:Bike Biloxi Monthly Ride — Biloxi\, MS
+LOCATION:Biloxi Visitors Center
+DESCRIPTION:Pace: social.\nSchedule: Third Tuesday of the month\, 6:00 pm
+ .\nConfirm with the host before you go.\nhttps://cycleforchange.org/ride
+ s/biloxi-ms-bike-biloxi-monthly-ride/
+URL:https://cycleforchange.org/rides/biloxi-ms-bike-biloxi-monthly-ride/
+END:VEVENT
+END:VCALENDAR
