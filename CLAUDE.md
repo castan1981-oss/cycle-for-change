@@ -11,6 +11,26 @@
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
 
+## Homepage redesign — preview at `/next/` (Sept 2026)
+> The redesigned homepage is parked at `cfc-site/next/index.html` (noindex) with its own
+> `next/redesign.css`, `next/redesign.js` and `next/img/`. It is NOT live. The live homepage
+> still runs on `coming-soon.css` + `next/home.css` + `next/home.js` — those three are shared
+> with `/`, so do not edit them for the preview.
+- Same Creosote house tokens. One addition, `--tar` #1A1D18 (asphalt a step darker) for the film
+  hero, the ride log and the close; `--paper` #F6F1E7 only for text on the creosote field.
+- Two families only: Outfit (display + body) and Space Mono (labels, data). No Space Grotesk here.
+- Volt means "live" and nothing else: the hero dot, the ghost under 10000, the last point on the
+  miles chart, desktop hover. Never next to creosote. Creosote is used once, as the field behind
+  the orgs.
+- `10000` crops on the rule; `10K` appears only in the kit section. Count stays "miles since
+  June 1", never shown against 10,000.
+- Wiring: `/api/strava` → strava function (same guards as the live cover: a dead feed is never
+  painted as 0), votes, pledges, instagram; Netlify forms `pledges` (same fields as `/`) and
+  `waitlist` (the coming-soon list, a real form again). Every number in the HTML is a fallback.
+- The six "riding" rows are hand-kept from `data/calendar-2027.json` (`"riding": true`).
+- To promote: move `next/index.html` to `cfc-site/index.html`, delete its robots noindex line,
+  and restore the forced `/next` → `/` redirects in `netlify.toml`.
+
 ## 10K kit — PRODUCTION LOCK (Sep 2026)
 > **Update 2026-09-10 (after this lock was written): the lock was reopened.** The maker-pack
 > specs and both lookbooks no longer match the direction. New direction: the kit adopts the
