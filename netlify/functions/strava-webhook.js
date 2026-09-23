@@ -19,6 +19,8 @@ const VERIFY = process.env.STRAVA_VERIFY_TOKEN || DEFAULT_VERIFY;
 const API = "https://www.strava.com/api/v3/push_subscriptions";
 
 exports.handler = async (event) => {
+  require("./lib/blobs").connect(event);
+
   const headers = { "Content-Type": "application/json", "Cache-Control": "no-store" };
   const json = (statusCode, body) => ({ statusCode, headers, body: JSON.stringify(body) });
 

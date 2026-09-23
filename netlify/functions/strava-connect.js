@@ -27,6 +27,8 @@ const DEFAULT_VERIFY = "cfc-strava-verify";
 const SCOPE = "read,activity:read_all";
 
 exports.handler = async (event) => {
+  require("./lib/blobs").connect(event);
+
   const q = event.queryStringParameters || {};
   const host = (event.headers && (event.headers["x-forwarded-host"] || event.headers.host)) || "cycleforchange.org";
   const self = `https://${host}/.netlify/functions/strava-connect`;

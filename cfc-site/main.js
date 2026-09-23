@@ -289,13 +289,25 @@
   const okMsg = document.getElementById("okmsg");
   const boardCount = document.getElementById("boardCount");
 
+  // The count is only shown when it is known. Until NETLIFY_API_TOKEN is set
+  // the function can't read the names back (configured: false) — pledges are
+  // still being saved, so "0 on the board" would simply be wrong.
+  const boardLine = boardCount ? boardCount.closest("p") : null;
+  const showBoardLine = (on) => {
+    if (boardLine) boardLine.style.display = on ? "" : "none";
+  };
+
   fetch("/.netlify/functions/pledges")
     .then((r) => r.json())
     .then((d) => {
-      const n = (d && d.names && d.names.length) || 0;
+      if (!d || d.configured === false || d.error) {
+        showBoardLine(false);
+        return;
+      }
+      const n = (d.names && d.names.length) || 0;
       if (boardCount) boardCount.textContent = n.toLocaleString("en-US");
     })
-    .catch(() => {});
+    .catch(() => showBoardLine(false));
 
   if (form) {
     form.addEventListener("submit", (e) => {
@@ -304,22 +316,34 @@
       const name = String(data.get("name") || "").trim().slice(0, 40);
       if (!name) return;
 
-      const prev = boardCount ? parseInt(boardCount.textContent.replace(/,/g, "") || "0", 10) : 0;
-      if (boardCount) boardCount.textContent = (prev + 1).toLocaleString("en-US");
-      if (okMsg) okMsg.style.display = "block";
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
 
+      // "You're on the board" is only said once Netlify has taken the pledge —
+      // fetch resolves on a 4xx/5xx too, so the status is checked.
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(data).toString(),
       })
-        .then(() => form.reset())
+        .then((res) => {
+          if (!res.ok) throw new Error("bad status");
+          const prev = boardCount ? parseInt(boardCount.textContent.replace(/,/g, "") || "0", 10) : 0;
+          if (boardCount) boardCount.textContent = (prev + 1).toLocaleString("en-US");
+          if (okMsg) {
+            okMsg.innerHTML = "You&rsquo;re on the board. See you out there.";
+            okMsg.style.display = "block";
+          }
+          form.reset();
+        })
         .catch(() => {
-          if (boardCount) boardCount.textContent = prev.toLocaleString("en-US");
           if (okMsg) {
             okMsg.textContent = "Hmm — try again in a moment.";
             okMsg.style.display = "block";
           }
+        })
+        .then(() => {
+          if (submitBtn) submitBtn.disabled = false;
         });
     });
   }
@@ -347,17 +371,36 @@
     })
     .catch(() => {});
 
-  /* —— Email signup —— */
+  /* —— Email signup ——
+     A real Netlify form ("waitlist", the coming-soon list). The address is
+     only confirmed once Netlify has actually taken it. */
   const emailForm = document.getElementById("emailForm");
   const emailOk = document.getElementById("emailOk");
   if (emailForm) {
     emailForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      if (emailOk) {
+      const btn = emailForm.querySelector('button[type="submit"]');
+      const say = (text) => {
+        if (!emailOk) return;
         emailOk.style.display = "block";
-        emailOk.textContent = "You're on the list. We'll write when there's news.";
-      }
-      emailForm.reset();
+        emailOk.textContent = text;
+      };
+      if (btn) btn.disabled = true;
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(emailForm)).toString(),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error("bad status");
+          emailForm.reset();
+          say("You're on the list. We'll write when there's news.");
+        })
+        .catch(() => say("That didn't send. Try again."))
+        .then(() => {
+          if (btn) btn.disabled = false;
+        });
     });
   }
 })();

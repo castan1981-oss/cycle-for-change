@@ -15,6 +15,8 @@ const RUN = new Set(["Run", "TrailRun"]);
 const SWIM = new Set(["Swim", "OpenWaterSwim"]);
 
 exports.handler = async (event) => {
+  require("./lib/blobs").connect(event);
+
   const headers = {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",

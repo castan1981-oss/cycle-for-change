@@ -322,12 +322,15 @@
       <a id="footInstagram" href="https://www.instagram.com/cycl_eforchange" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a id="footStrava" href="https://www.strava.com" target="_blank" rel="noopener noreferrer">Strava</a>
     </div>
-    <form class="foot-col signup" id="emailForm" aria-label="Email signup">
+    <!-- a real Netlify form again ("waitlist", the coming-soon list): addresses typed here are kept -->
+    <form class="foot-col signup" name="waitlist" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="emailForm" aria-label="Email signup">
+      <input type="hidden" name="form-name" value="waitlist">
+      <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
       <p class="eyebrow">Mile updates</p>
       <label class="lab" for="email">Email</label>
       <input class="field" id="email" type="email" name="email" required autocomplete="email" inputmode="email">
       <button class="wl-btn" type="submit">Notify me</button>
-      <p class="email-ok" id="emailOk"></p>
+      <p class="email-ok" id="emailOk" role="status" aria-live="polite"></p>
     </form>
   </div>
   <div class="wrap foot-crisis">

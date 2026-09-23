@@ -24,9 +24,17 @@ const ORGS = [
 
 const SEED = { onenten: 318, lalgbtcenter: 305, sfaf: 289 };
 
+const blobs = require("./lib/blobs");
+
+// A warm instance keeps its last read for reads only, briefly. Every write
+// re-reads the blob first, so two instances can't overwrite each other's votes.
+const READ_CACHE_MS = 30 * 1000;
 let store = null;
+let storeTs = 0;
 
 exports.handler = async (event) => {
+  blobs.connect(event);
+
   const headers = {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
@@ -37,7 +45,7 @@ exports.handler = async (event) => {
     return { statusCode: 204, headers, body: "" };
   }
 
-  const data = await loadStore();
+  const data = await loadStore(event.httpMethod === "POST");
 
   if (event.httpMethod === "GET") {
     return {
@@ -94,31 +102,31 @@ function buildResponse(data, justVoted) {
   };
 }
 
-async function loadStore() {
-  if (store) return store;
+async function loadStore(fresh) {
+  if (store && !fresh && Date.now() - storeTs < READ_CACHE_MS) return store;
 
   try {
-    const { getStore } = require("@netlify/blobs");
-    const blobStore = getStore("cfc-votes");
-    const raw = await blobStore.get("tallies", { type: "json" });
+    const raw = await blobs.store("cfc-votes").get("tallies", { type: "json" });
     if (raw && raw.votes) {
-      store = raw;
+      store = { votes: raw.votes, voters: raw.voters || {} };
+      storeTs = Date.now();
       return store;
     }
   } catch (_) {
-    /* fall through to seed */
+    /* blobs unavailable: keep whatever this instance has */
+    if (store) return store;
   }
 
-  store = { votes: { ...SEED }, voters: {} };
+  if (!store) store = { votes: { ...SEED }, voters: {} };
+  storeTs = Date.now();
   return store;
 }
 
 async function saveStore(data) {
   store = data;
+  storeTs = Date.now();
   try {
-    const { getStore } = require("@netlify/blobs");
-    const blobStore = getStore("cfc-votes");
-    await blobStore.setJSON("tallies", data);
+    await blobs.store("cfc-votes").setJSON("tallies", data);
   } catch (_) {
     /* in-memory only when blobs unavailable */
   }

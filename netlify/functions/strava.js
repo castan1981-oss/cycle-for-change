@@ -53,6 +53,8 @@ async function writeBlob(record) {
 }
 
 exports.handler = async (event) => {
+  require("./lib/blobs").connect(event);
+
   const headers = {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
