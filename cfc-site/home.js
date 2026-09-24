@@ -1,5 +1,5 @@
-/* Cycle for Change — the redesigned homepage (/next/ preview).
-   Loaded by cfc-site/next/index.html and nothing else. No dependencies.
+/* Cycle for Change — the homepage (live since Sept 2026).
+   Loaded by cfc-site/index.html and nothing else. No dependencies.
 
    It talks to the same back end the live homepage uses and changes none of it:
      /api/strava  →  /.netlify/functions/strava     miles, rides, last rides, chart

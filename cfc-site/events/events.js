@@ -1,6 +1,6 @@
 /* Cycle for Change — events directory client script.
    1. Mileage line: reads the same /api/strava the homepage reads (see
-      /coming-soon.js). Not a fork — only paints [data-cur] with miles.
+      /home.js). Not a fork — only paints [data-cur] with miles.
    2. Countdown: [data-countdown="YYYY-MM-DD"] → "in 42 days".
    3. Weather: [data-weather] with data-lat/lon/tz and optional
       data-event-date. Fetches Open-Meteo (no key, free for non-commercial use)

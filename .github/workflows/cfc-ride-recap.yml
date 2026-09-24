@@ -30,7 +30,7 @@ jobs:
             Follow CLAUDE.md at all times. This is a hand-written STATIC site:
             Netlify publishes `cfc-site/`, so the new page lives inside `cfc-site/`.
             Field Notes posts are self-contained HTML files, NOT markdown. Do NOT
-            touch the homepage `cfc-site/index.html`, `cfc-site/main.js`, or
+            touch the homepage `cfc-site/index.html`, `cfc-site/home.js`, or
             anything under `netlify/functions/`. Ignore the repo-root `index.html`
             and `/guides/` legacy tree.
 
