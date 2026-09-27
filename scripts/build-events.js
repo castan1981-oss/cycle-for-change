@@ -23,6 +23,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const CHROME = require("./chrome.js"); // shared header, footer, fonts
 
 const ROOT = path.resolve(__dirname, "..");
 const DATA = path.join(ROOT, "data");
@@ -140,12 +141,6 @@ events.sort(byDate);
 for (const s of stateList) { s.events.sort(byDate); s.towns.sort((a, b) => a.name.localeCompare(b.name)); }
 
 // ——— shared chrome ————————————————————————————————————————————————————————
-const MARK = `<svg class="mark-glyph" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-      <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="#2A2E28" stroke-width="12" stroke-linecap="round"/>
-      <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
-      <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
-      <circle cx="60" cy="60" r="6" fill="#2A2E28"/>
-    </svg>`;
 
 function head({ title, description, url, ld, ogType }) {
   return `<!DOCTYPE html>
@@ -173,29 +168,12 @@ function head({ title, description, url, ld, ogType }) {
   <meta name="twitter:image" content="${SITE}/og-cfc.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Space+Grotesk:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  ${CHROME.FONTS}
   <link rel="stylesheet" href="/events/events.css">
 ${ld.map(jsonld).join("\n")}
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-head">
-  <div class="wrap">
-    <a class="mark" href="/" aria-label="Cycle for Change home">
-      ${MARK}
-      <span class="wordmark">Cycle <span class="for">For</span> Change</span>
-    </a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="/rides/">Rides</a>
-      <a href="/events/">Events</a>
-      <a href="/towns/">Towns</a>
-      <a href="/" class="btn btn-solid">The 10000</a>
-    </nav>
-  </div>
-  <p class="tally-line wrap"><span class="tally-num" data-cur>—</span>&nbsp;miles since June 1 &middot; 10000 in 2027 &middot; all on the bike</p>
-</header>
+${CHROME.HEADER}
 <main id="main" class="wrap">
 `;
 }
@@ -209,12 +187,7 @@ function foot() {
     <p class="pledge-links"><a class="btn btn-solid" href="/">See the project</a> <a class="btn" href="${INSTAGRAM}" rel="noopener">Follow on Instagram</a></p>
   </section>
 </main>
-<footer class="site-foot">
-  <div class="wrap">
-    <p><span>Cycle for Change&trade;</span><span>every mile for queer communities</span></p>
-    <p class="foot-links"><a href="/rides/">Rides</a> <a href="/events/">Events</a> <a href="/towns/">Towns</a> <a href="/">Home</a></p>
-  </div>
-</footer>
+${CHROME.FOOTER}
 <script src="/events/events.js" defer></script>
 </body>
 </html>
@@ -554,8 +527,9 @@ function townsIndex() {
 
 // ——— build ————————————————————————————————————————————————————————————————
 // Clear stale output first. Everything under events/ and towns/ is generated
-// except events.css and events.js.
-const KEEP = new Set(["events.css", "events.js"]);
+// except events.css, events.js and 2027/ (the calendar, owned by
+// scripts/build-calendar.js, holds hand-written calendar.css and calendar.js).
+const KEEP = new Set(["events.css", "events.js", "2027"]);
 const evDir = path.join(OUT, "events");
 if (fs.existsSync(evDir)) for (const f of fs.readdirSync(evDir)) if (!KEEP.has(f)) fs.rmSync(path.join(evDir, f), { recursive: true, force: true });
 fs.rmSync(path.join(OUT, "towns"), { recursive: true, force: true });

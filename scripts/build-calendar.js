@@ -20,6 +20,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const CHROME = require("./chrome.js"); // shared header, footer, fonts
 
 const ROOT = path.resolve(__dirname, "..");
 const DATA = path.join(ROOT, "data", "calendar-2027.json");
@@ -101,12 +102,6 @@ const riding = events.filter((e) => e.riding);
 const updatedLong = new Date(data.updated + "T12:00:00Z").toLocaleDateString("en-US", { timeZone: "UTC", month: "long", day: "numeric", year: "numeric" });
 
 // ——— chrome (mirrors build-events.js) —————————————————————————————————————
-const MARK = `<svg class="mark-glyph" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-      <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="#2A2E28" stroke-width="12" stroke-linecap="round"/>
-      <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
-      <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
-      <circle cx="60" cy="60" r="6" fill="#2A2E28"/>
-    </svg>`;
 
 const title = "2027 bike rides and races in the US — the full calendar";
 const description = `${events.length} organized US bike rides and races for 2027 — charity rides, gran fondos, gravel, multi-day tours, ultras and races — with ${nConf} organizer-confirmed dates, projected dates for the rest, distances, causes and sign-up links. Updated ${updatedLong}.`;
@@ -149,30 +144,13 @@ function head() {
   <meta name="twitter:image" content="${SITE}/og-cfc.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Space+Grotesk:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  ${CHROME.FONTS}
   <link rel="stylesheet" href="/events/events.css">
   <link rel="stylesheet" href="/events/2027/calendar.css">
 ${ld.map(jsonld).join("\n")}
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-head">
-  <div class="wrap">
-    <a class="mark" href="/" aria-label="Cycle for Change home">
-      ${MARK}
-      <span class="wordmark">Cycle <span class="for">For</span> Change</span>
-    </a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="/rides/">Rides</a>
-      <a href="/events/">Events</a>
-      <a href="/towns/">Towns</a>
-      <a href="/" class="btn btn-solid">The 10000</a>
-    </nav>
-  </div>
-  <p class="tally-line wrap"><span class="tally-num" data-cur>—</span>&nbsp;miles since June 1 &middot; 10000 in 2027 &middot; all on the bike</p>
-</header>
+${CHROME.HEADER}
 <main id="main" class="wrap">
 `;
 }
@@ -185,12 +163,7 @@ function foot() {
     <p class="pledge-links"><a class="btn btn-solid" href="/">See the project</a> <a class="btn" href="${INSTAGRAM}" rel="noopener">Follow on Instagram</a></p>
   </section>
 </main>
-<footer class="site-foot">
-  <div class="wrap">
-    <p><span>Cycle for Change&trade;</span><span>every mile for queer communities</span></p>
-    <p class="foot-links"><a href="/rides/">Rides</a> <a href="/events/">Events</a> <a href="/towns/">Towns</a> <a href="/">Home</a></p>
-  </div>
-</footer>
+${CHROME.FOOTER}
 <script src="/events/events.js" defer></script>
 <script src="/events/2027/calendar.js" defer></script>
 </body>

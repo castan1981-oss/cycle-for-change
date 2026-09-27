@@ -1,7 +1,7 @@
 /* Cycle for Change — events directory (/events/, /towns/).
    Creosote house: bone ground, asphalt type, creosote once per screen as the
-   accent, dust hairlines. Outfit for display, Space Grotesk body, Space Mono
-   labels. Generated pages from scripts/build-events.js load this and nothing
+   accent, dust hairlines. Outfit for display and body, Space Mono for labels
+   and data (no Space Grotesk, same as the homepage). Generated pages from scripts/build-events.js load this and nothing
    else. Field Notes tokens in /styles.css are not used here.
    /rides/ pages also load this file (plus /rides/rides.css), so keep it at
    /events/events.css and keep the class names stable, or update rides too. */
@@ -15,7 +15,7 @@
   --mute:#6B6A62;
 
   --display:"Outfit",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
-  --body:"Space Grotesk",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --body:"Outfit",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
   --mono:"Space Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
 
   --maxw:1180px;
@@ -65,6 +65,7 @@ p{margin:0 0 1em}
 .wordmark .for{color:var(--creosote)}
 .site-nav{display:flex;align-items:center;gap:18px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 .site-nav a{text-decoration:none}
+.site-nav a:not(.btn):hover{text-decoration:underline;text-decoration-color:var(--creosote)}
 .site-head .tally-line{display:block;margin:10px auto 0;padding-bottom:10px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
 .tally-num{color:var(--asphalt);font-weight:700}
 
@@ -184,14 +185,28 @@ article{max-width:820px}
 .pledge-links{display:flex;flex-wrap:wrap;gap:10px}
 .pledge-line{font-family:var(--display);font-weight:700;font-size:1.3rem;margin:0 0 .5em}
 
-/* —— footer —— */
-.site-foot{border-top:1px solid var(--dust);padding:20px 0 28px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
-.site-foot p{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0 0 8px}
-.foot-links a{text-decoration:none}
+/* —— footer (shared with every non-home page; markup in scripts/chrome.js) —— */
+.site-foot{margin-top:72px;background:var(--asphalt);color:var(--bone);padding:48px 0 28px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.site-foot a{color:var(--bone);text-decoration:none}
+.site-foot a:hover{text-decoration:underline;text-decoration-color:var(--dust)}
+.site-foot p{margin:0}
+.foot-stack{display:flex;flex-direction:column;font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,9vw,5.2rem);line-height:.86;letter-spacing:-.035em;margin:0 0 40px!important}
+.foot-stack .for{color:var(--dust)}
+.foot-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;padding-bottom:32px;border-bottom:1px solid rgba(232,223,208,.22)}
+.foot-grid p{display:flex;flex-direction:column;gap:10px}
+.foot-h{display:block;color:var(--dust);margin-bottom:4px}
+.foot-crisis{display:flex;flex-wrap:wrap;gap:6px 18px;padding:20px 0;border-bottom:1px solid rgba(232,223,208,.22);text-transform:none;letter-spacing:.04em;font-size:12px;line-height:1.6}
+.foot-crisis .foot-h{text-transform:uppercase;letter-spacing:.12em;margin:0}
+.foot-crisis b{font-weight:700}
+.foot-crisis a{text-decoration:underline;text-decoration-color:var(--dust)}
+.foot-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;padding-top:18px;color:var(--dust)}
 
 @media (max-width:640px){
-  .site-head .wrap{flex-wrap:wrap}
-  .site-nav{gap:12px}
+  .site-head .wrap{flex-wrap:wrap;row-gap:10px}
+  .site-nav{gap:14px;flex-wrap:wrap;width:100%}
+  .site-nav .btn{margin-left:auto}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-grid p:last-child{grid-column:1/-1}
   .rows li{grid-template-columns:1fr;gap:2px}
   .row-meta{text-align:left}
 }

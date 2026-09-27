@@ -6,9 +6,12 @@
 > (`coming-soon.css/js`, `main.js`, `next/home.css/js`, the feed video and audio) are
 > gone — git history has them. `/next/*` redirects home.
 > `/field-notes`, `/guides`, `/resources` and `/journal` are served; `cfc-site/404.html`
-> is the catch-all. Content work is allowed. The old content pages still wear the
-> previous cream/plum/yellow styles from `styles.css`; a redesign into the Creosote
-> house is in progress (design canvas, Sept 2026), so don't restyle them piecemeal.
+> is the catch-all. Content work is allowed. **Every page is in the Creosote house
+> (Sept 27, 2026).** Every non-home page shares one header and footer from
+> `scripts/chrome.js` (the three generators import it; `python3 scripts/apply-chrome.py`
+> pastes it into the hand-written content pages). Content pages load
+> `/events/events.css` (base + chrome) then `/styles.css` (long-form reading).
+> The cream/plum/yellow + Fraunces/Anton look is gone everywhere.
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
 
@@ -92,8 +95,8 @@ You write content for cycleforchange.org. Follow these rules on every run.
     `guides.css`) are an older tree that is **not published**. Do not build there.
 - The homepage is `cfc-site/index.html`. Do NOT touch it, `cfc-site/home.js`
   (pledge form, votes, Strava/Instagram wiring), `cfc-site/home.css`, or anything
-  under `netlify/functions/`. Content pages style with `cfc-site/styles.css` (no
-  inline `<style>` block to edit).
+  under `netlify/functions/`. Content pages style with `/events/events.css` +
+  `cfc-site/styles.css` (no inline `<style>` block to edit).
 - New content pages are **self-contained HTML files**, not markdown. There is no
   `/content` folder and nothing renders markdown.
   - Field Notes: `cfc-site/field-notes/<slug>/index.html`
@@ -102,16 +105,18 @@ You write content for cycleforchange.org. Follow these rules on every run.
   - Directory-style (`<slug>/index.html`) gives a clean URL with no build step.
 - Start every new post from `cfc-site/field-notes/_template.html`. Keep the
   `<head>`, the nav, the footer, the JSON-LD block, and the
-  `<link rel="stylesheet" href="/styles.css">` exactly as the template has them.
+  `/events/events.css` + `/styles.css` links exactly as the template has them.
   Fill in the page-specific parts only.
 - Publishing a post = three edits, all by hand (no loader): create the
   `<slug>/index.html`, add one row to `cfc-site/field-notes/index.html` (newest
   first), and add the URL to `cfc-site/sitemap.xml`.
-- Every page links the shared stylesheet at `/styles.css` (absolute path) so it
-  inherits the brand. Do not inline a different stylesheet.
-- The live mileage counter is fed by `/.netlify/functions/strava`. Reuse it via
-  the `[data-cur]` / `[data-pct]` / `[data-line]` attributes and
-  `/field-notes/field-notes.js` — do NOT fork the mileage logic.
+- Every content page links `/events/events.css` then `/styles.css` (absolute
+  paths) so it inherits the brand. Do not inline a different stylesheet.
+- The header/footer are shared: edit `scripts/chrome.js`, re-run the three
+  generators, then `python3 scripts/apply-chrome.py`. Never hand-edit one page's chrome.
+- The live mileage count is painted into `[data-cur]` by `/events/events.js`
+  (reads `/api/strava`, leaves "—" if the feed fails — never paints a dead feed as 0).
+  Show it as "miles since June 1". No percentages, no progress line against 10,000.
 
 ## 2027 ride calendar — `/events/2027/`
 - One page, generated: `node scripts/build-calendar.js` reads
@@ -173,17 +178,16 @@ You write content for cycleforchange.org. Follow these rules on every run.
 - Cross-link 2 related posts at the bottom of each post (same tag where
   possible), and link every post from the index. Add new URLs to `sitemap.xml`.
 
-## Brand (paused Field Notes only) — tokens from cfc-site/styles.css
-> Not the kit. Not the coming-soon Creosote house. Use only if Field Notes pages return after December.
-- Background cream `--cream` #F1EBDD, deeper band `--cream-2` #E7DFCE,
-  card `--card` #FBF7EE, ink `--ink` #2E2433.
-- Plum `--plum` #372C3C / `--plum-2` #2A2130 (dark panels, footer, CTA).
-- Acid yellow `--yellow` #E9E224 (deep variant `--yellow-deep` #B9A800).
-- Lavender `--lav` #A99CB0 / `--lav-band` #E7DEEA, muted text `--mute` #7E7388.
-- Fonts already loaded by the template: **Fraunces** (`--serif`, headings),
-  **Space Grotesk** (`--g`, body), **Space Mono** (`--m`, labels/numbers),
-  **Anton** (`--disp`, wordmark). Use the CSS variables — do not hardcode hexes
-  and do not add new fonts (no DM Sans / JetBrains Mono — those are the legacy
-  un-published tree).
-- Field Notes adds its own classes (`.fn-*`) appended to `styles.css`. Reuse
-  those; don't introduce a parallel stylesheet.
+## Brand on content pages — Creosote house (Sept 27, 2026)
+- Tokens come from `/events/events.css`: bone #E8DFD0, bone-2 #EFE8DB, dust #C4B7A2,
+  creosote #5C6B4A, asphalt #2A2E28, mute #6B6A62. `styles.css` adds only
+  `--bone-3` #E1D7C5 (masthead band), `--line`, `--body-ink`, `--read`.
+- Fonts: Outfit (display + body) and Space Mono (labels, data). Nothing else.
+- Creosote is the accent (eyebrow rule, link underlines, blockquote rule, kicker
+  labels). Volt is not used on content pages — it means "live" (homepage, /tonight/).
+- Square corners, hairlines, no shadows, no rounded pills. The end-of-post CTA is
+  an asphalt block with the big "10,000" in bone.
+- Reuse the `.fn-*` / `.res-*` / `.jr-*` classes in `styles.css`; don't start a
+  parallel stylesheet. Share image for every page: `/og-cfc.png`.
+- The old cream/plum/acid-yellow, Fraunces, Anton, Space Grotesk and the `///`
+  slash are retired. Do not bring them back.

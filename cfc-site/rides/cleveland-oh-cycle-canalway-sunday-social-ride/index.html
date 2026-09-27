@@ -25,7 +25,7 @@
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Space+Grotesk:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/events/events.css">
   <link rel="stylesheet" href="/rides/rides.css">
   <script type="application/ld+json">
@@ -78,51 +78,7 @@
             "item": "https://cycleforchange.org/rides/cleveland-oh-cycle-canalway-sunday-social-ride/"
           }
         ]
-      },
-      "mainEntity": {
-        "@id": "https://cycleforchange.org/rides/cleveland-oh-cycle-canalway-sunday-social-ride/#event"
       }
-    },
-    {
-      "@type": "Event",
-      "@id": "https://cycleforchange.org/rides/cleveland-oh-cycle-canalway-sunday-social-ride/#event",
-      "name": "Cycle Canalway Sunday Social Ride",
-      "description": "Cycle Canalway Sunday Social Ride is a social group ride in Cleveland, OH. It rolls third Sunday of the month at 10:00 am from Canal Basin Park. About 8…",
-      "url": "https://cycleforchange.org/rides/cleveland-oh-cycle-canalway-sunday-social-ride/",
-      "startDate": "2026-09-20T10:00:00-04:00",
-      "endDate": "2026-09-20T12:00:00-04:00",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "isAccessibleForFree": true,
-      "location": {
-        "@type": "Place",
-        "name": "Canal Basin Park",
-        "address": "989 West St, Cleveland, OH 44113",
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 41.495,
-          "longitude": -81.7
-        }
-      },
-      "eventSchedule": {
-        "@type": "Schedule",
-        "scheduleTimezone": "America/New_York",
-        "startTime": "10:00",
-        "byDay": [
-          "https://schema.org/Sunday"
-        ],
-        "repeatFrequency": "P1M"
-      },
-      "organizer": {
-        "@type": "Organization",
-        "name": "Canalway Partners",
-        "url": "https://www.canalwaypartners.com/events/2026/06/21/sunday-social-ride"
-      },
-      "sameAs": [
-        "https://www.canalwaypartners.com/events/2026/06/21/sunday-social-ride",
-        "https://www.instagram.com/canalwaycle",
-        "https://www.facebook.com/canalwaypartners"
-      ]
     }
   ]
 }
@@ -134,18 +90,19 @@
   <div class="wrap">
     <a class="mark" href="/" aria-label="Cycle for Change home">
       <svg class="mark-glyph" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-      <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="#2A2E28" stroke-width="12" stroke-linecap="round"/>
-      <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
-      <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
-      <circle cx="60" cy="60" r="6" fill="#2A2E28"/>
-    </svg>
+        <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="#2A2E28" stroke-width="12" stroke-linecap="round"/>
+        <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
+        <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
+        <circle cx="60" cy="60" r="6" fill="#2A2E28"/>
+      </svg>
       <span class="wordmark">Cycle <span class="for">For</span> Change</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
       <a href="/rides/">Rides</a>
-      <a href="/events/">Events</a>
-      <a href="/towns/">Towns</a>
-      <a href="/" class="btn btn-solid">The 10000</a>
+      <a href="/events/2027/">2027</a>
+      <a href="/field-notes/">Read</a>
+      <a href="/resources/">Resources</a>
+      <a href="/#board" class="btn btn-solid">Pledge</a>
     </nav>
   </div>
   <p class="tally-line wrap"><span class="tally-num" data-cur>—</span>&nbsp;miles since June 1 &middot; 10000 in 2027 &middot; all on the bike</p>
@@ -164,16 +121,14 @@
 
     <p class="lede">Cycle Canalway Sunday Social Ride is a social group ride in Cleveland, OH. It rolls third Sunday of the month at 10:00 am from Canal Basin Park. About 8 miles, guided, easy.</p>
 
-    <div class="gr-next" id="gr-next" >
+    <div class="gr-next" id="gr-next" hidden>
       <span class="gr-next-label">Next ride</span>
-      <time class="gr-next-when" data-next-text datetime="2026-09-20T10:00:00-04:00">Sun, Sep 20, 10:00 AM EDT</time>
+      <time class="gr-next-when" data-next-text></time>
       <span class="gr-next-rel" data-next-rel></span>
     </div>
 
     <div class="gr-actions">
       <a class="btn btn-solid btn-lg gr-primary" href="https://www.canalwaypartners.com/events/2026/06/21/sunday-social-ride" rel="noopener nofollow">Host's website ↗</a>
-        <a class="btn" href="/rides/cleveland-oh-cycle-canalway-sunday-social-ride/ride.ics" download="cleveland-oh-cycle-canalway-sunday-social-ride.ics">Add to calendar</a>
-        <a class="gr-minor" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Cycle+Canalway+Sunday+Social+Ride+%E2%80%94+Cleveland%2C+OH&amp;dates=20260920T100000%2F20260920T120000&amp;ctz=America%2FNew_York&amp;recur=RRULE%3AFREQ%3DMONTHLY%3BBYDAY%3D3SU%3BUNTIL%3D20260930T235959Z&amp;location=Canal+Basin+Park%2C+989+West+St%2C+Cleveland%2C+OH+44113&amp;details=Third+Sunday+of+the+month%2C+June%E2%80%93September%2C+10%3A00+am%0Ahttps%3A%2F%2Fcycleforchange.org%2Frides%2Fcleveland-oh-cycle-canalway-sunday-social-ride%2F" rel="noopener">Google Calendar</a>
       <button type="button" class="btn" id="gr-share" data-title="Cycle Canalway Sunday Social Ride — Cleveland, OH">Share</button>
       <span class="gr-share-alt"><a href="sms:?&body=Cycle%20Canalway%20Sunday%20Social%20Ride%20%E2%80%94%20https%3A%2F%2Fcycleforchange.org%2Frides%2Fcleveland-oh-cycle-canalway-sunday-social-ride%2F">Text it</a> · <a href="https://wa.me/?text=Cycle%20Canalway%20Sunday%20Social%20Ride%20%E2%80%94%20https%3A%2F%2Fcycleforchange.org%2Frides%2Fcleveland-oh-cycle-canalway-sunday-social-ride%2F" rel="noopener">WhatsApp</a> · <a href="mailto:?subject=Group%20ride%3A%20Cycle%20Canalway%20Sunday%20Social%20Ride&body=https%3A%2F%2Fcycleforchange.org%2Frides%2Fcleveland-oh-cycle-canalway-sunday-social-ride%2F">Email</a></span>
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
@@ -242,8 +197,14 @@
 
 <footer class="site-foot">
   <div class="wrap">
-    <p><span>Cycle for Change&trade;</span><span>every mile for queer communities</span></p>
-    <p class="foot-links"><a href="/rides/">Rides</a> <a href="/events/">Events</a> <a href="/towns/">Towns</a> <a href="/">Home</a></p>
+    <p class="foot-stack" aria-label="Cycle for Change"><span>Cycle</span><span class="for">For</span><span>Change</span></p>
+    <nav class="foot-grid" aria-label="Footer">
+      <p><span class="foot-h">Ride</span><a href="/rides/">Group rides</a><a href="/events/">Events</a><a href="/events/2027/">2027 calendar</a><a href="/towns/">Towns</a><a href="/tonight/">Tonight</a></p>
+      <p><span class="foot-h">Read</span><a href="/field-notes/">Field notes</a><a href="/guides/">Guides</a><a href="/journal/the-carrot-cake-theory/">Journal</a><a href="/resources/">Resources</a></p>
+      <p><span class="foot-h">The pledge</span><a href="/">Home</a><a href="/#board">Get on the board</a><a href="/#vote">Where it goes</a><a href="https://www.instagram.com/cycl_eforchange" rel="noopener">Instagram</a></p>
+    </nav>
+    <p class="foot-crisis"><span class="foot-h">If it&rsquo;s now</span><span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span></p>
+    <p class="foot-base"><span>Cycle for Change&trade;</span><span>Phoenix &middot; bike only</span></p>
   </div>
 </footer>
 <script src="/rides/tally.js" defer></script>

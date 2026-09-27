@@ -19,6 +19,7 @@
 "use strict";
 const fs = require("fs");
 const path = require("path");
+const CHROME = require("../scripts/chrome.js"); // shared header, footer, fonts
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "cfc-site", "rides");
@@ -319,9 +320,7 @@ function head({ title, description, canonical, jsonld, ogType = "website", title
   <meta name="twitter:image" content="${OG_IMAGE}">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Space+Grotesk:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  ${CHROME.FONTS}
   <link rel="stylesheet" href="/events/events.css">
   <link rel="stylesheet" href="/rides/rides.css">
   <script type="application/ld+json">
@@ -329,27 +328,7 @@ ${JSON.stringify(jsonld, null, 2)}
   </script>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-head">
-  <div class="wrap">
-    <a class="mark" href="/" aria-label="Cycle for Change home">
-      <svg class="mark-glyph" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-      <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="#2A2E28" stroke-width="12" stroke-linecap="round"/>
-      <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
-      <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
-      <circle cx="60" cy="60" r="6" fill="#2A2E28"/>
-    </svg>
-      <span class="wordmark">Cycle <span class="for">For</span> Change</span>
-    </a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="/rides/">Rides</a>
-      <a href="/events/">Events</a>
-      <a href="/towns/">Towns</a>
-      <a href="/" class="btn btn-solid">The 10000</a>
-    </nav>
-  </div>
-  <p class="tally-line wrap"><span class="tally-num" data-cur>—</span>&nbsp;miles since June 1 &middot; 10000 in 2027 &middot; all on the bike</p>
-</header>
+${CHROME.HEADER}
 `;
 }
 const PUBLISHER = { "@type": "Organization", name: "Cycle for Change", url: `${SITE}/`, logo: `${SITE}/favicon-512.png` };
@@ -378,12 +357,7 @@ const CRISIS = `
       </aside>`;
 function foot(extraScript = "") {
   return `
-<footer class="site-foot">
-  <div class="wrap">
-    <p><span>Cycle for Change&trade;</span><span>every mile for queer communities</span></p>
-    <p class="foot-links"><a href="/rides/">Rides</a> <a href="/events/">Events</a> <a href="/towns/">Towns</a> <a href="/">Home</a></p>
-  </div>
-</footer>
+${CHROME.FOOTER}
 <script src="/rides/tally.js" defer></script>${extraScript}
 </body>
 </html>
