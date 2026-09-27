@@ -5,7 +5,6 @@
    Creosote appears on FOR, on confirmed dates (✓) and on rides Robert is doing.
    Nothing else on the page is green. Hairlines are dust. */
 
-.calendar h1{text-transform:uppercase;letter-spacing:-.03em;line-height:.92;font-size:clamp(2.6rem,7vw,5.2rem);margin:.1em 0 .25em}
 .calendar .eyebrow b{color:var(--creosote);font-weight:700}
 .key-conf::before,.key-proj::before{font-family:var(--mono);font-weight:700;margin-right:2px}
 .key-conf::before{content:"✓";color:var(--creosote)}

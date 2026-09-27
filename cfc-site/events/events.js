@@ -1,6 +1,5 @@
 /* Cycle for Change — events directory client script.
-   1. Mileage line: reads the same /api/strava the homepage reads (see
-      /home.js). Not a fork — only paints [data-cur] with miles.
+   (The tally line is painted by /chrome.js.)
    2. Countdown: [data-countdown="YYYY-MM-DD"] → "in 42 days".
    3. Weather: [data-weather] with data-lat/lon/tz and optional
       data-event-date. Fetches Open-Meteo (no key, free for non-commercial use)
@@ -8,25 +7,6 @@
       the event falls inside that window so the event day is highlighted. */
 (function () {
   "use strict";
-
-  // —— 1. mileage line ————————————————————————————————————————————————————
-  var ENDPOINTS = ["/api/strava", "/.netlify/functions/strava"];
-  function paintMiles(miles) {
-    var n = Math.max(0, Math.round(Number(miles) || 0));
-    document.querySelectorAll("[data-cur]").forEach(function (el) {
-      el.textContent = n.toLocaleString("en-US");
-    });
-  }
-  (function tryNext(i) {
-    if (i >= ENDPOINTS.length) return;
-    fetch(ENDPOINTS[i], { cache: "no-store" })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (d) {
-        var miles = typeof d.miles === "number" ? d.miles : d.totalMiles;
-        if (typeof miles === "number") paintMiles(miles); else tryNext(i + 1);
-      })
-      .catch(function () { tryNext(i + 1); });
-  })(0);
 
   // —— 2. countdown ————————————————————————————————————————————————————————
   document.querySelectorAll("[data-countdown]").forEach(function (el) {

@@ -7,10 +7,14 @@
 > gone — git history has them. `/next/*` redirects home.
 > `/field-notes`, `/guides`, `/resources` and `/journal` are served; `cfc-site/404.html`
 > is the catch-all. Content work is allowed. **Every page is in the Creosote house
-> (Sept 27, 2026).** Every non-home page shares one header and footer from
-> `scripts/chrome.js` (the three generators import it; `python3 scripts/apply-chrome.py`
-> pastes it into the hand-written content pages). Content pages load
-> `/events/events.css` (base + chrome) then `/styles.css` (long-form reading).
+> (Sept 27, 2026) and every inner page wears the homepage's chrome.** One source:
+> `scripts/chrome.js` = `<head>` block, header + mobile menu, tally line, pledge
+> block, footer (with the mile-updates signup). The three generators import it;
+> `python3 scripts/apply-chrome.py` puts it on the hand-written pages (guides,
+> field notes, resources, journal, tonight, 404). Styles: `/chrome.css` (tokens,
+> type scale, buttons, nav, menu, pledge, footer — every value copied from
+> `/home.css`) loads first on every inner page, then the section's own sheet.
+> Behaviour: `/chrome.js` (tally, menu, signup). Titles end " — Cycle for Change".
 > The cream/plum/yellow + Fraunces/Anton look is gone everywhere.
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
@@ -95,7 +99,7 @@ You write content for cycleforchange.org. Follow these rules on every run.
     `guides.css`) are an older tree that is **not published**. Do not build there.
 - The homepage is `cfc-site/index.html`. Do NOT touch it, `cfc-site/home.js`
   (pledge form, votes, Strava/Instagram wiring), `cfc-site/home.css`, or anything
-  under `netlify/functions/`. Content pages style with `/events/events.css` +
+  under `netlify/functions/`. Content pages style with `/chrome.css` +
   `cfc-site/styles.css` (no inline `<style>` block to edit).
 - New content pages are **self-contained HTML files**, not markdown. There is no
   `/content` folder and nothing renders markdown.
@@ -105,16 +109,21 @@ You write content for cycleforchange.org. Follow these rules on every run.
   - Directory-style (`<slug>/index.html`) gives a clean URL with no build step.
 - Start every new post from `cfc-site/field-notes/_template.html`. Keep the
   `<head>`, the nav, the footer, the JSON-LD block, and the
-  `/events/events.css` + `/styles.css` links exactly as the template has them.
+  `/chrome.css` + `/styles.css` links exactly as the template has them.
   Fill in the page-specific parts only.
 - Publishing a post = three edits, all by hand (no loader): create the
   `<slug>/index.html`, add one row to `cfc-site/field-notes/index.html` (newest
   first), and add the URL to `cfc-site/sitemap.xml`.
-- Every content page links `/events/events.css` then `/styles.css` (absolute
-  paths) so it inherits the brand. Do not inline a different stylesheet.
-- The header/footer are shared: edit `scripts/chrome.js`, re-run the three
-  generators, then `python3 scripts/apply-chrome.py`. Never hand-edit one page's chrome.
-- The live mileage count is painted into `[data-cur]` by `/events/events.js`
+- Every content page links `/chrome.css` then `/styles.css` (absolute paths) so
+  it inherits the brand. Do not inline a different stylesheet.
+- The header, menu, tally line, pledge block and footer are shared: edit
+  `scripts/chrome.js` (and `/chrome.css`), re-run the three generators, then
+  `python3 scripts/apply-chrome.py`. Never hand-edit one page's chrome. If the
+  homepage nav or footer changes, change `scripts/chrome.js` to match the same day.
+- Every content page ends with the shared pledge block (`CHROME.PLEDGE`) — don't
+  write a page-specific CTA. Buttons are the homepage's: `.btn .btn--bone`,
+  `.btn--ink`, `.btn--ghost`, `.btn--sm`; text links with an arrow are `.link`.
+- The live mileage count is painted into `[data-cur]` by `/chrome.js`
   (reads `/api/strava`, leaves "—" if the feed fails — never paints a dead feed as 0).
   Show it as "miles since June 1". No percentages, no progress line against 10,000.
 
@@ -123,8 +132,8 @@ You write content for cycleforchange.org. Follow these rules on every run.
   `data/calendar-2027.json` (600+ organized US rides and races for 2027) and
   writes `cfc-site/events/2027/index.html` + the JSON feed + `sitemap-calendar.xml`.
   Schema and rules in `data/SCHEMA.md` ("2027 calendar"). `calendar.css` and
-  `calendar.js` next to it are hand-written; the page uses the events chrome
-  (`/events/events.css`, `/events/events.js`).
+  `calendar.js` next to it are hand-written; the page loads `/chrome.css`,
+  `/events/events.css`, `/chrome.js` and `/events/events.js`.
 - Edit the JSON, run the build, commit both. Never hand-edit the generated page.
 - Dates: `confirmed` only when the organizer published it. `projected` keeps its
   `date_note`. No invented dates.
@@ -179,9 +188,9 @@ You write content for cycleforchange.org. Follow these rules on every run.
   possible), and link every post from the index. Add new URLs to `sitemap.xml`.
 
 ## Brand on content pages — Creosote house (Sept 27, 2026)
-- Tokens come from `/events/events.css`: bone #E8DFD0, bone-2 #EFE8DB, dust #C4B7A2,
-  creosote #5C6B4A, asphalt #2A2E28, mute #6B6A62. `styles.css` adds only
-  `--bone-3` #E1D7C5 (masthead band), `--line`, `--body-ink`, `--read`.
+- Tokens come from `/chrome.css` and are the homepage's: bone #E8DFD0, bone-2
+  #E1D7C5, paper #F6F1E7, dust #C4B7A2, creosote #5C6B4A, asphalt #2A2E28, tar
+  #1A1D18, volt #C6FF00, mute #5F5E56. Type scale: h1 = home `.h1`, h3 = home `.h3`.
 - Fonts: Outfit (display + body) and Space Mono (labels, data). Nothing else.
 - Creosote is the accent (eyebrow rule, link underlines, blockquote rule, kicker
   labels). Volt is not used on content pages — it means "live" (homepage, /tonight/).

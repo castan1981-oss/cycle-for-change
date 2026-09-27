@@ -3,33 +3,138 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
   <title>Not here — Cycle for Change</title>
-  <meta name="robots" content="noindex">
+  <meta name="description" content="Wrong turn. This road doesn’t go anywhere.">
+  <link rel="canonical" href="https://cycleforchange.org/404.html">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cycle for Change">
+  <meta property="og:url" content="https://cycleforchange.org/404.html">
+  <meta property="og:title" content="Not here — Cycle for Change">
+  <meta property="og:description" content="Wrong turn. This road doesn’t go anywhere.">
+  <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Not here — Cycle for Change">
+  <meta name="twitter:description" content="Wrong turn. This road doesn’t go anywhere.">
+  <meta name="twitter:image" content="https://cycleforchange.org/og-cfc.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/chrome.css">
+  <link rel="stylesheet" href="/styles.css">
+
+  <meta name="robots" content="noindex">
   <style>
-    body{margin:0;min-height:100svh;display:grid;place-items:center;background:#E8DFD0;color:#2A2E28;font-family:Outfit,system-ui,sans-serif;padding:24px}
-    main{max-width:34rem}
-    h1{margin:0 0 .2em;font-family:Outfit,system-ui,sans-serif;font-weight:800;font-size:clamp(72px,18vw,180px);line-height:.85;letter-spacing:-.045em}
-    p{margin:0 0 1.2em;font-size:19px;line-height:1.45}
-    nav{display:flex;gap:18px;flex-wrap:wrap;font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
-    a{color:inherit;text-decoration:none;border-bottom:1px solid #2A2E28;padding-bottom:6px}
+    .lost{min-height:60svh;display:flex;flex-direction:column;justify-content:center;max-width:34rem}
+    .lost h1{margin:0 0 .15em;font-size:clamp(5rem,18vw,12rem);line-height:.85;letter-spacing:-.045em}
+    .lost p{margin:0 0 1.4em;font-size:clamp(1.15rem,.7vw + 1rem,1.45rem);line-height:1.36}
+    .lost nav{display:flex;gap:18px 22px;flex-wrap:wrap}
   </style>
 </head>
 <body>
-<main>
-  <h1>404</h1>
-  <p>Wrong turn. This road doesn&rsquo;t go anywhere. These do.</p>
-  <nav aria-label="Ways back">
-    <a href="/">Home</a>
-    <a href="/rides/">Group rides</a>
-    <a href="/events/">Events</a>
-    <a href="/field-notes/">Field notes</a>
-    <a href="/guides/">Guides</a>
-    <a href="/#board">Pledge a mile</a>
-  </nav>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav site-head" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="/" aria-label="Cycle for Change home">
+      <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+        <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
+        <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
+        <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
+        <circle cx="60" cy="60" r="6" fill="currentColor"/>
+      </svg>
+      <span class="brand-word">Cycle <i>For</i> Change</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/rides/">Ride</a>
+      <a href="/field-notes/">Read</a>
+      <a href="/resources/">Resources</a>
+      <a href="/events/2027/">2027</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn--sm" href="/#board">Pledge</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
+    </div>
+  </div>
+</header>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="menu-top">
+    <span class="eyebrow">Cycle for Change</span>
+    <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
+  </div>
+  <ul class="menu-list">
+    <li><a href="/#board">Pledge a mile <span>Free</span></a></li>
+    <li><a href="/rides/">Ride <span>402</span></a></li>
+    <li><a href="/events/2027/">2027 <span>635</span></a></li>
+    <li><a href="/field-notes/">Read <span>Notes &middot; guides</span></a></li>
+    <li><a href="/resources/">Resources <span>By age</span></a></li>
+  </ul>
+  <div class="menu-foot">
+    <span class="eyebrow">If it&rsquo;s now</span>
+    <span><b>988</b> call or text, any hour</span>
+    <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
+  </div>
+</div>
+<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;miles since June 1 &middot; 10000 in 2027 &middot; all on the bike</span></p>
+<main id="main" class="wrap">
+  <div class="lost">
+    <h1>404</h1>
+    <p>Wrong turn. This road doesn&rsquo;t go anywhere. These do.</p>
+    <nav aria-label="Ways back">
+      <a class="link" href="/">Home</a>
+      <a class="link" href="/rides/">Group rides</a>
+      <a class="link" href="/events/2027/">2027 calendar</a>
+      <a class="link" href="/field-notes/">Field notes</a>
+      <a class="link" href="/#board">Pledge a mile</a>
+    </nav>
+  </div>
 </main>
+<footer class="foot site-foot">
+  <div class="wrap">
+    <p class="stack" aria-label="Cycle for Change"><span>Cycle</span><span class="for">For</span><span>Change</span></p>
+    <div class="foot-grid">
+      <div class="foot-col">
+        <p class="eyebrow">Ride</p>
+        <a href="/rides/">Group rides</a>
+        <a href="/events/">Events</a>
+        <a href="/events/2027/">2027 calendar</a>
+        <a href="/towns/">Towns</a>
+        <a href="/tonight/">Tonight</a>
+        <a href="/#board">Pledge</a>
+      </div>
+      <div class="foot-col">
+        <p class="eyebrow">Read</p>
+        <a href="/field-notes/">Field notes</a>
+        <a href="/guides/">Guides</a>
+        <a href="/journal/the-carrot-cake-theory/">Journal</a>
+        <a href="/resources/">Resources</a>
+      </div>
+      <div class="foot-col">
+        <p class="eyebrow">Follow</p>
+        <a href="https://www.instagram.com/cycl_eforchange" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Strava</a>
+      </div>
+      <form class="foot-col signup" name="waitlist" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="emailForm" aria-label="Email signup">
+        <input type="hidden" name="form-name" value="waitlist">
+        <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <p class="eyebrow">Mile updates</p>
+        <label class="lab" for="email">Email</label>
+        <input class="field" id="email" type="email" name="email" required autocomplete="email" inputmode="email">
+        <button class="btn btn--bone btn--sm" type="submit">Notify me</button>
+        <p class="ok" id="emailOk" role="status" aria-live="polite" hidden></p>
+      </form>
+    </div>
+    <div class="foot-crisis">
+      <span class="eyebrow">If it&rsquo;s now</span>
+      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+    </div>
+    <div class="foot-line"><span>Cycle for Change</span><span>Phoenix &middot; bike only</span></div>
+  </div>
+</footer>
+<script src="/chrome.js" defer></script>
 </body>
 </html>

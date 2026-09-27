@@ -1,35 +1,19 @@
 /* Cycle for Change — content pages: /guides/, /field-notes/, /resources/, /journal/.
-   Creosote house. Loads AFTER /events/events.css, which supplies the tokens,
-   the base type, .btn, the shared header (.site-head) and footer (.site-foot).
+   Creosote house. Loads AFTER /chrome.css, which supplies the tokens, the base
+   type, .btn, .link, .eyebrow, the shared header and footer.
    This file only adds what long-form reading needs. No new colours, no new
    fonts: Outfit (display + body) and Space Mono (labels, data).
    Volt is not used here — it means "live" and nothing else.
    Rewritten Sept 2026; the cream/plum/acid-yellow + Fraunces/Anton look is retired. */
 
-:root{
-  --bone-3:#E1D7C5;                 /* band behind mastheads (homepage bone-2) */
-  --line:rgba(42,46,40,.16);        /* hairline on bone */
-  --body-ink:#3A3D37;               /* long-form paragraph ink, a step off asphalt */
-  --read:40rem;                     /* reading measure */
-}
+.fn-page,main{--read:40rem}                /* reading measure */
 
 main{display:block}
 
-/* —— eyebrow: mono label, short creosote rule —— */
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);margin:0 0 16px}
-.eyebrow::before{content:"";width:18px;height:2px;background:var(--creosote);display:inline-block}
-
-/* —— buttons (content pages only; base .btn comes from events.css) —— */
-.btn-y{background:var(--bone);color:var(--asphalt);border-color:var(--bone)}
-.btn-y:hover{background:var(--bone-2);color:var(--asphalt)}
-.btn-dark{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
-.btn-dark:hover{background:#111;color:var(--bone)}
-.btn-link{display:inline-block;padding:8px 0;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--asphalt);text-decoration:none;border-bottom:1px solid currentColor}
-
 /* —— masthead band (field notes index, pillar + resources hubs) —— */
-.fn-masthead,.fn-pillar-head{background:var(--bone-3);border-bottom:1px solid var(--line);padding:72px 0 56px}
-.fn-masthead h1,.fn-pillar-head h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,7vw,5rem);line-height:.95;letter-spacing:-.035em;max-width:14ch;margin:6px 0 0;text-wrap:balance}
-.fn-pillar-intro,.res-intro-note{font-size:1.2rem;line-height:1.55;color:var(--body-ink);max-width:56ch;margin:22px 0 0}
+.fn-masthead,.fn-pillar-head{background:var(--bone-2);border-bottom:1px solid var(--line);padding:clamp(48px,7vw,88px) 0 clamp(40px,5vw,64px)}
+.fn-masthead h1,.fn-pillar-head h1{max-width:14ch;margin:6px 0 0}
+.fn-pillar-intro,.res-intro-note{font-size:1.2rem;line-height:1.55;color:var(--asphalt);max-width:56ch;margin:22px 0 0}
 .res-intro-note{font-size:1.05rem}
 
 /* the running count — always "miles since June 1", never against 10,000 */
@@ -50,27 +34,25 @@ main{display:block}
 .fn-chip.mind::before{background:var(--dust)}
 
 /* —— single post —— */
-.fn-post{padding:64px 0 0}
+.fn-post{padding:0}
 .fn-article{max-width:var(--read);margin:0 auto;padding:0 var(--gutter)}
 .fn-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 20px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
 .fn-meta .dot{color:var(--dust)}
-.fn-article h1{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,7vw,4rem);line-height:.98;letter-spacing:-.035em;margin:0;text-wrap:balance}
-.fn-lede{font-size:1.3rem;line-height:1.5;font-weight:500;color:var(--asphalt);margin:24px 0 8px}
+.fn-article h1{margin:0}
+.fn-lede{font-size:clamp(1.15rem,.7vw + 1rem,1.45rem);line-height:1.36;max-width:none;margin:24px 0 8px}
 .fn-body{margin-top:20px}
-.fn-body h2{font-size:clamp(1.5rem,3.6vw,2rem);margin:44px 0 0}
-.fn-body h3{font-size:1.25rem;margin:30px 0 0}
-.fn-body p{font-size:1.08rem;line-height:1.7;color:var(--body-ink);margin:16px 0 0}
-.fn-body ul,.fn-body ol{margin:16px 0 0;padding-left:1.3em;color:var(--body-ink)}
+.fn-body h2{margin:44px 0 0}
+.fn-body h3{margin:30px 0 0}
+.fn-body p{font-size:1.08rem;line-height:1.7;color:var(--asphalt);margin:16px 0 0}
+.fn-body ul,.fn-body ol{margin:16px 0 0;padding-left:1.3em;color:var(--asphalt)}
 .fn-body li{margin:8px 0 0;line-height:1.6}
 .fn-body li::marker{color:var(--creosote)}
-.fn-body a{color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-decoration-thickness:2px;text-underline-offset:3px}
-.fn-body a:hover{color:var(--creosote)}
 .fn-body img{width:100%;height:auto;border:1px solid var(--line);margin:28px 0 0}
 .fn-body blockquote{margin:36px 0 0;padding:4px 0 4px 20px;border-left:3px solid var(--creosote);font-family:var(--display);font-weight:700;font-size:clamp(1.35rem,3.4vw,1.7rem);line-height:1.25;letter-spacing:-.01em;color:var(--asphalt)}
 .fn-todo{margin:24px 0 0;padding:16px 18px;border:1px dashed var(--dust);font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--mute)}
 
 /* crisis line — mental-health pages carry 988 and the Trevor Project */
-.fn-crisis{margin:36px 0 0;padding:20px 22px;background:var(--bone-3);border:1px solid var(--asphalt);font-size:.98rem;line-height:1.6;color:var(--asphalt)}
+.fn-crisis{margin:36px 0 0;padding:20px 22px;background:var(--bone-2);border:1px solid var(--asphalt);font-size:.98rem;line-height:1.6;color:var(--asphalt)}
 .fn-crisis strong{color:var(--asphalt)}
 .fn-crisis a{color:var(--asphalt)}
 
@@ -80,17 +62,6 @@ main{display:block}
 .fn-related a{display:block;margin-top:14px;font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:-.01em;text-decoration:none}
 .fn-related a:hover{text-decoration:underline;text-decoration-color:var(--creosote)}
 
-.fn-cta{max-width:var(--read);margin:48px auto 0;padding:36px var(--gutter);background:var(--asphalt);color:var(--bone)}
-.fn-cta .fn-cta-num{font-family:var(--display);font-weight:800;font-size:clamp(3rem,11vw,5rem);line-height:.9;letter-spacing:-.04em;color:var(--bone)}
-.fn-cta .fn-cta-num .of{display:block;margin-top:10px;font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dust)}
-.fn-cta p{margin:16px 0 22px;color:var(--bone-2);font-size:1rem}
-.fn-cta .fn-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
-.fn-cta .btn-link{color:var(--bone)}
-.fn-cta .btn-dark{background:transparent;color:var(--bone);border-color:rgba(232,223,208,.45)}
-.fn-cta .btn-dark:hover{background:rgba(232,223,208,.08)}
-.fn-cta hr{border:0;border-top:1px solid rgba(232,223,208,.22);margin:26px 0}
-.fn-cta .give{margin:0 0 16px;color:var(--bone);font-size:1.05rem}
-.fn-cta a:not(.btn):not(.btn-link){color:var(--bone)}
 
 .fn-note{max-width:var(--read);margin:22px auto 0;padding:0 var(--gutter);font-size:.94rem;line-height:1.6;color:var(--mute)}
 .fn-back{max-width:var(--read);margin:40px auto 0;padding:0 var(--gutter);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
@@ -107,7 +78,6 @@ main{display:block}
 .fn-spoke .fn-spoke-title{font-family:var(--display);font-weight:800;font-size:1.45rem;line-height:1.05;letter-spacing:-.02em;color:var(--asphalt)}
 .fn-spoke .fn-spoke-dek{margin:0;color:var(--mute);font-size:.98rem;line-height:1.5}
 .fn-spoke .fn-spoke-more{margin-top:auto;padding-top:6px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--creosote)}
-.fn-pillar .fn-cta{margin-top:56px}
 
 /* —— resources: publication-style cards —— */
 .res-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));gap:0;border-top:1px solid var(--asphalt);border-left:1px solid var(--line)}
@@ -116,7 +86,7 @@ main{display:block}
 .res-card h3{margin:0;font-family:var(--display);font-weight:800;font-size:1.4rem;line-height:1.08;letter-spacing:-.02em;color:var(--asphalt)}
 .res-card h3 a{color:inherit;text-decoration:none}
 .res-card h3 a:hover{text-decoration:underline;text-decoration-color:var(--creosote)}
-.res-card .res-desc{margin:0;color:var(--body-ink);font-size:.98rem;line-height:1.55}
+.res-card .res-desc{margin:0;color:var(--asphalt);font-size:.98rem;line-height:1.55}
 .res-foot{display:flex;flex-direction:column;gap:7px;margin-top:auto;padding-top:6px}
 .res-foot .res-contact{font-family:var(--mono);font-size:13px;color:var(--asphalt)}
 .res-foot .res-contact a{color:var(--asphalt);text-decoration-color:var(--creosote)}
@@ -126,13 +96,17 @@ main{display:block}
 .jr-ledger{margin:36px 0 0;padding:18px 0;border-top:1px solid var(--asphalt);border-bottom:1px solid var(--asphalt);font-family:var(--mono);font-size:13px;line-height:2}
 .jr-ledger .row{display:flex;justify-content:space-between;gap:16px}
 .jr-ledger .row span:last-child{color:var(--creosote);text-align:right}
-.jr-ledger .note{margin:10px 0 0;font-family:var(--body);font-size:1.02rem;line-height:1.5;color:var(--body-ink)}
-.fn-body .hl{background:var(--bone-3);box-shadow:inset 0 -3px 0 var(--creosote);padding:0 .12em}
+.jr-ledger .note{margin:10px 0 0;font-family:var(--body);font-size:1.02rem;line-height:1.5;color:var(--asphalt)}
+.fn-body .hl{background:var(--bone-2);box-shadow:inset 0 -3px 0 var(--creosote);padding:0 .12em}
 
 @media (max-width:640px){
   .fn-masthead,.fn-pillar-head{padding:52px 0 40px}
   .fn-row{grid-template-columns:1fr}
   .fn-row .fn-rdate{grid-column:1;grid-row:auto;text-align:left}
-  .fn-post{padding-top:44px}
-  .fn-cta{margin-left:0;margin-right:0}
 }
+
+/* —— the shared pledge block on content pages (markup in scripts/chrome.js) —— */
+.fn-post>.pledge{max-width:var(--read);margin-inline:auto}
+.fn-pillar>.pledge{margin-inline:max(var(--gut),calc((100% - var(--maxw)) / 2 + var(--gut)))}
+@media (max-width:639px){.fn-post>.pledge,.fn-pillar>.pledge{margin-inline:0}}
+.fn-pillar>.fn-note,.fn-pillar>.fn-back{max-width:none;padding:0;margin-inline:max(var(--gut),calc((100% - var(--maxw)) / 2 + var(--gut)))}

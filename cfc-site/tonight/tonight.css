@@ -2,20 +2,12 @@
    asphalt ground, bone type, volt as the only light. Flyers for what rolls
    next, a set-time lineup for the rest. Loaded by /tonight/ and nothing else. */
 
+/* /chrome.css loads first and owns the tokens; the page is dark, so the hairline flips. */
 :root{
-  --bone:#E8DFD0;
-  --dust:#C4B7A2;
-  --asphalt:#2A2E28;
-  --volt:#C6FF00;
   --line:rgba(232,223,208,.28);
-  --display:"Outfit",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
-  --body:"Outfit",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
-  --mono:"Space Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-  --pad:clamp(16px,3.4vw,48px);
+  --pad:var(--gut);
   --noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/></filter><rect width='160' height='160' filter='url(%23n)' opacity='0.6'/></svg>");
 }
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
 body{
   margin:0;
   min-height:100svh;
@@ -38,10 +30,8 @@ body::before{
 }
 a{color:inherit}
 :focus-visible{outline:2px solid var(--volt);outline-offset:3px}
-.skip{position:absolute;left:-9999px;top:0;background:var(--bone);color:var(--asphalt);font-family:var(--mono);font-size:12px;padding:10px 14px;z-index:10}
-.skip:focus{left:0}
-.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.wrap{position:relative;z-index:1;width:100%;max-width:1440px;margin:0 auto;padding:0 var(--pad)}
+main.wrap,.ticker .wrap{position:relative;z-index:1}
+main.wrap{padding-top:0}
 
 .label{
   margin:0;
@@ -72,27 +62,6 @@ a{color:inherit}
 @keyframes run{to{transform:translateX(-100%)}}
 
 /* —— head —— */
-.head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  padding-top:20px;
-}
-.mark{display:inline-flex}
-.nav{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-  gap:8px 20px;
-  font-family:var(--mono);
-  font-size:10.5px;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-}
-.nav a{text-decoration:none;color:var(--dust);padding:6px 0;border-bottom:1px solid transparent}
-.nav a:hover{color:var(--bone)}
-.nav .nav-cta{color:var(--bone);border-bottom-color:var(--bone)}
 
 /* —— title —— */
 .title-row{
@@ -149,7 +118,7 @@ a{color:inherit}
 .place-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:14px 0 18px}
 .or{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dust)}
 .metros{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
-.btn,.seg button,.metros button{
+.tbtn,.seg button,.metros button{
   min-height:44px;
   border:1px solid var(--bone);
   background:transparent;
@@ -161,9 +130,9 @@ a{color:inherit}
   text-transform:uppercase;
   cursor:pointer;
 }
-.btn.solid,.btn[aria-pressed="true"],.seg button[aria-pressed="true"]{background:var(--bone);color:var(--asphalt)}
+.tbtn.solid,.tbtn[aria-pressed="true"],.seg button[aria-pressed="true"]{background:var(--bone);color:var(--asphalt)}
 .metros button{border-color:var(--line)}
-.metros button:hover,.btn:hover{border-color:var(--volt)}
+.metros button:hover,.tbtn:hover{border-color:var(--volt)}
 .select{
   min-height:44px;
   width:min(100%,360px);
@@ -312,22 +281,6 @@ a{color:inherit}
 }
 .addride-links{margin:0;display:flex;gap:22px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
 .addride-links a{text-decoration:none;border-bottom:1px solid var(--bone);padding-bottom:6px}
-.foot{
-  display:flex;
-  justify-content:space-between;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-top:clamp(40px,7vh,72px);
-  padding-top:14px;
-  padding-bottom:28px;
-  border-top:1px solid var(--line);
-  font-family:var(--mono);
-  font-size:11px;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--dust);
-}
-.foot a{text-decoration:none;border-bottom:1px solid var(--dust);padding-bottom:3px}
 
 @media (max-width:900px){
   .wall{grid-template-columns:1fr;gap:26px;padding-right:6px}

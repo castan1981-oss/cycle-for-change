@@ -1,31 +1,37 @@
 #!/usr/bin/env python3
-"""Put the shared site chrome (scripts/chrome.js) on the hand-written content pages.
+"""Put the shared site chrome (scripts/chrome.js) on the hand-written pages.
 
 Run from the repo root:   python3 scripts/apply-chrome.py
-Safe to re-run: it replaces whatever header/footer/font link a page has with the
-current one from scripts/chrome.js. Pages covered: every .html under
-cfc-site/guides, field-notes, resources and journal (templates included).
+Safe to re-run: it rebuilds each page's <head>, header and footer from the
+current scripts/chrome.js. Pages covered: every .html under cfc-site/guides,
+field-notes, resources, journal and tonight (templates included), plus 404.html.
 
 What it does to each page
-  - fonts: Outfit + Space Mono (no Fraunces, Anton, Space Grotesk)
-  - stylesheets: /events/events.css (base + chrome) then /styles.css (reading)
-  - the top <header> (and the old .util tally bar) -> the shared .site-head
-  - <footer> -> the shared .site-foot (with 988 + Trevor Project)
-  - /field-notes/field-notes.js -> /events/events.js (guarded mileage paint)
+  - <head>: keeps the page's title, description, canonical, og:type and JSON-LD,
+    regenerates everything else (fonts, share tags, icons, /chrome.css + the
+    section's own stylesheets) through CHROME.head() so it matches the generators
+  - the top <header> (+ any old tally bar) -> the shared header, menu and tally line
+  - <footer> -> the shared footer (988 + Trevor Project, mile updates signup)
+  - the end-of-page CTA (.fn-cta) -> the shared pledge block (CHROME.PLEDGE)
+  - button classes -> the homepage's (.btn--bone / .btn--ink / .btn--ghost / .link)
   - homepage anchors that no longer exist -> ones that do
 """
 import json, re, subprocess, pathlib, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = ROOT / "cfc-site"
-C = json.loads(subprocess.check_output(["node", str(ROOT / "scripts/chrome.js")]))
+NODE = ["node", str(ROOT / "scripts/chrome.js")]
+C = json.loads(subprocess.check_output(NODE))
 
-FONT_RE = re.compile(
-    r'(?:<link rel="preconnect" href="https://fonts\.googleapis\.com">\s*)?'
-    r'(?:<link rel="preconnect" href="https://fonts\.gstatic\.com" crossorigin>\s*)?'
-    r'<link href="https://fonts\.googleapis\.com/css2\?[^"]*" rel="stylesheet">')
+SECTION_STYLES = {  # stylesheets after /chrome.css, by top-level folder
+    "guides": ["/styles.css"], "field-notes": ["/styles.css"], "resources": ["/styles.css"],
+    "journal": ["/styles.css"], "tonight": ["/tonight/tonight.css"], "": ["/styles.css"],
+}
 ANCHORS = {'href="/#tally"': 'href="/"', 'href="/#rides"': 'href="/#ride"',
-           'href="/#disciplines"': 'href="/#pledge"'}
+           'href="/#disciplines"': 'href="/#pledge"', 'href="#top"': 'href="/"'}
+CLASSES = [(r'class="btn btn-y"', 'class="btn btn--bone"'), (r'class="btn btn-solid"', 'class="btn btn--ink"'),
+           (r'class="btn btn-dark"', 'class="btn btn--ghost"'), (r'class="btn-link"', 'class="link"'),
+           (r'class="btn"', 'class="btn btn--ghost"')]
 RETIRED_INLINE = [
     ' style="color:var(--cream);border-bottom-color:var(--cream);"',
     ' style="color:var(--yellow);border-bottom:1px solid var(--yellow);"',
@@ -34,32 +40,62 @@ RETIRED_INLINE = [
 ]
 
 
-def chrome(s: str) -> str:
-    s = FONT_RE.sub(C["FONTS"], s, count=1)
-    if "/events/events.css" not in s:
-        s = s.replace('<link rel="stylesheet" href="/styles.css">',
-                      '<link rel="stylesheet" href="/events/events.css">\n  <link rel="stylesheet" href="/styles.css">', 1)
-    # old tally strip above/inside the header
-    s = re.sub(r'<div class="util">\s*<div class="wrap">.*?</div>\s*</div>\s*', '', s, flags=re.S)
-    # top-level header only (inner mastheads carry a class and are left alone)
-    s = re.sub(r'(?:<a class="skip"[^>]*>[^<]*</a>\s*)?<header(?: class="site-head")?>.*?</header>', lambda m: C["HEADER"], s, count=1, flags=re.S)
-    s = re.sub(r'<footer(?: class="site-foot")?>.*?</footer>', lambda m: C["FOOTER"], s, count=1, flags=re.S)
+def meta(s, name, attr="name"):
+    m = re.search(r'<meta %s="%s" content="([^"]*)"' % (attr, re.escape(name)), s)
+    return m.group(1) if m else ""
+
+
+def new_head(s, page):
+    old = re.search(r"<head>(.*?)</head>", s, re.S).group(1)
+    title = re.search(r"<title>(.*?)</title>", old, re.S).group(1).strip()
+    title = re.sub(r"\s*[—–|]\s*Cycle for Change\s*$", "", title)   # head() adds the brand once
+    desc = meta(old, "description") or meta(old, "og:description", "property")
+    canon = re.search(r'<link rel="canonical" href="([^"]+)"', old)
+    url = canon.group(1) if canon else "https://cycleforchange.org/" + page.relative_to(SITE).as_posix().replace("index.html", "")
+    ogtype = meta(old, "og:type", "property") or "website"
+    ld = [json.loads(m) for m in re.findall(r'<script type="application/ld\+json">(.*?)</script>', old, re.S)]
+    # page-specific bits that survive the rebuild: noindex, <style> blocks, inline non-LD scripts
+    keep = re.findall(r'<meta name="robots" content="noindex[^>]*>', old)
+    keep += re.findall(r'<style>.*?</style>', old, re.S)
+    keep += [m for m in re.findall(r'<script(?![^>]*ld\+json)[^>]*>.*?</script>', old, re.S)]
+    extra = "\n".join("  " + k.strip() for k in keep)
+    top = page.relative_to(SITE).parts[0] if len(page.relative_to(SITE).parts) > 1 else ""
+    dark = 'content="dark"' in old or 'class="theme-dark"' in s
+    spec = {"title": title, "description": desc, "url": url, "ogType": ogtype, "dark": dark,
+            "styles": SECTION_STYLES.get(top, ["/styles.css"]), "ld": ld, "extra": extra}
+    head = subprocess.check_output(NODE + ["head", json.dumps(spec)]).decode()
+    return s.replace("<head>" + old + "</head>", "<head>\n" + head + "\n</head>", 1)
+
+
+def chrome(s: str, page) -> str:
+    s = new_head(s, page)
+    s = re.sub(r'<div class="util">\s*<div class="wrap">.*?</div>\s*</div>\s*', "", s, flags=re.S)
+    # skip link + top-level header (+ an already-applied menu and tally line)
+    s = re.sub(r'(?:<a class="skip"[^>]*>[^<]*</a>\s*)?<header(?: class="(?:site-head|nav site-head|head wrap)"[^>]*)?>.*?</header>'
+               r'(?:\s*<div class="menu" id="menu".*?</div>\s*</div>)?(?:\s*<p class="tally-line">.*?</p>)?',
+               lambda m: C["HEADER"], s, count=1, flags=re.S)
+    s = re.sub(r'<footer(?: class="[^"]*")?>.*?</footer>(?:\s*<script src="/(?:chrome|events/events|field-notes/field-notes)\.js" defer></script>)*',
+               lambda m: C["FOOTER"], s, count=1, flags=re.S)
     s = re.sub(r'<main(?![^>]*\bid=)', '<main id="main"', s, count=1)
-    s = s.replace('/field-notes/field-notes.js', '/events/events.js')
+    # the end-of-page pledge block: one shared component
+    s = re.sub(r'<(div|section) class="fn-cta"[^>]*>.*?</\1>(?=\s*(?:<p class="fn-back"|<p class="fn-note"|</main>))', lambda m: C["PLEDGE"], s, count=1, flags=re.S)
+    s = re.sub(r'\s*<script src="/(?:events/events|field-notes/field-notes|rides/tally)\.js" defer></script>', "", s)
     for a, b in ANCHORS.items():
         s = s.replace(a, b)
+    for a, b in CLASSES:
+        s = re.sub(a, b, s)
     for x in RETIRED_INLINE:
         s = s.replace(x, "")
     return s
 
 
 def main():
-    pages = []
-    for d in ("guides", "field-notes", "resources", "journal"):
+    pages = [SITE / "404.html"]
+    for d in ("guides", "field-notes", "resources", "journal", "tonight"):
         pages += sorted((SITE / d).rglob("*.html"))
     for p in pages:
         s = p.read_text()
-        t = chrome(s)
+        t = chrome(s, p)
         if t != s:
             p.write_text(t)
         print(("updated " if t != s else "same    ") + str(p.relative_to(ROOT)))
