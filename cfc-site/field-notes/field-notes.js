@@ -1,6 +1,6 @@
 /* Field Notes — masthead mileage counter.
    Reuses the same data source and [data-cur]/[data-pct] contract as the
-   homepage (see /main.js paintTally). Do NOT fork the mileage logic — this
+   homepage (see /home.js paintFeed). Do NOT fork the mileage logic — this
    only reads the existing strava function and paints the masthead + line. */
 (function () {
   "use strict";

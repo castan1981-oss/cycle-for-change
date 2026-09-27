@@ -31,7 +31,7 @@ jobs:
             Netlify publishes the `cfc-site/` directory, so EVERY new page lives
             inside `cfc-site/`. Field Notes posts are self-contained HTML files,
             NOT markdown — nothing renders markdown or a /content folder.
-            Do NOT touch the homepage `cfc-site/index.html`, `cfc-site/main.js`,
+            Do NOT touch the homepage `cfc-site/index.html`, `cfc-site/home.js`,
             or anything under `netlify/functions/`. The repo-root `index.html`
             and `/guides/` folder are an unpublished legacy tree — ignore them.
 

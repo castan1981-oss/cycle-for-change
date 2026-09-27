@@ -1,6 +1,6 @@
-/* Cycle for Change — the redesigned homepage (/next/ preview, Sept 2026).
-   Loaded by cfc-site/next/index.html and nothing else. The live homepage still
-   runs on /coming-soon.css + /next/home.css; this file does not touch them.
+/* Cycle for Change — the homepage (live since Sept 2026).
+   Loaded by cfc-site/index.html and nothing else. The older content pages
+   still wear /styles.css until they're redesigned as a set.
 
    Creosote house tokens, unchanged. One addition: --tar, asphalt pushed a step
    darker, for the planes that carry film and the ride log. --paper is bone a
@@ -220,7 +220,7 @@ button{font:inherit;color:inherit}
   color:var(--bone);
   overflow:hidden;
 }
-.hero-media{position:absolute;inset:0;z-index:-2;background:var(--tar) url("/next/img/hero-poster.jpg") center 30%/cover no-repeat}
+.hero-media{position:absolute;inset:0;z-index:-2;background:var(--tar) url("/img/hero-poster.jpg") center 30%/cover no-repeat}
 .hero-media video{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
 .hero-media::after{
   content:"";

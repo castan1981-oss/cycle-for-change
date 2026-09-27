@@ -1,35 +1,34 @@
 # Cycle for Change — project context for automated content
 
-> **LIVE since 2026-09-18.** Robert took the coming-soon gate down early. The
-> homepage is `cfc-site/index.html`, built on the coming-soon design
-> (`coming-soon.css` + `next/home.css`, scripts `coming-soon.js` + `main.js`).
-> `/field-notes`, `/guides`, `/resources` and `/journal` are served again, and
-> `cfc-site/404.html` replaces the old catch-all redirect. Content work is
-> allowed again. The old content pages still wear the previous cream/plum/yellow
-> styles from `styles.css`; a redesign into the Creosote house is in progress
-> (design canvas, Sept 2026), so don't restyle them piecemeal.
+> **HOMEPAGE: the redesign is live since 2026-09-24.** `cfc-site/index.html` +
+> `cfc-site/home.css` + `cfc-site/home.js` + `cfc-site/img/` (graded photos and the
+> 6s hero film). The Sept 18 coming-soon-based homepage and its files
+> (`coming-soon.css/js`, `main.js`, `next/home.css/js`, the feed video and audio) are
+> gone — git history has them. `/next/*` redirects home.
+> `/field-notes`, `/guides`, `/resources` and `/journal` are served; `cfc-site/404.html`
+> is the catch-all. Content work is allowed. The old content pages still wear the
+> previous cream/plum/yellow styles from `styles.css`; a redesign into the Creosote
+> house is in progress (design canvas, Sept 2026), so don't restyle them piecemeal.
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
 
-## Homepage redesign — preview at `/next/` (Sept 2026)
-> The redesigned homepage is parked at `cfc-site/next/index.html` (noindex) with its own
-> `next/redesign.css`, `next/redesign.js` and `next/img/`. It is NOT live. The live homepage
-> still runs on `coming-soon.css` + `next/home.css` + `next/home.js` — those three are shared
-> with `/`, so do not edit them for the preview.
+## The homepage (Sept 2026 redesign)
 - Same Creosote house tokens. One addition, `--tar` #1A1D18 (asphalt a step darker) for the film
   hero, the ride log and the close; `--paper` #F6F1E7 only for text on the creosote field.
-- Two families only: Outfit (display + body) and Space Mono (labels, data). No Space Grotesk here.
+- Two families only: Outfit (display + body) and Space Mono (labels, data). No Space Grotesk.
 - Volt means "live" and nothing else: the hero dot, the ghost under 10000, the last point on the
   miles chart, desktop hover. Never next to creosote. Creosote is used once, as the field behind
   the orgs.
 - `10000` crops on the rule; `10K` appears only in the kit section. Count stays "miles since
   June 1", never shown against 10,000.
-- Wiring: `/api/strava` → strava function (same guards as the live cover: a dead feed is never
-  painted as 0), votes, pledges, instagram; Netlify forms `pledges` (same fields as `/`) and
-  `waitlist` (the coming-soon list, a real form again). Every number in the HTML is a fallback.
+- Wiring (all in `home.js`): `/api/strava` → strava function, polled each minute while the tab is
+  visible, with the same guards as before (a dead feed is never painted as 0); votes (same
+  localStorage keys as before); pledges (board names; the count hides while the function can't
+  read them); instagram; Netlify forms `pledges` and `waitlist`. Every number in the HTML is a
+  fallback; failures show an honest message.
 - The six "riding" rows are hand-kept from `data/calendar-2027.json` (`"riding": true`).
-- To promote: move `next/index.html` to `cfc-site/index.html`, delete its robots noindex line,
-  and restore the forced `/next` → `/` redirects in `netlify.toml`.
+- Do NOT touch `cfc-site/index.html`, `cfc-site/home.js` or anything under `netlify/functions/`
+  from the content loops.
 
 ## 10K kit — PRODUCTION LOCK (Sep 2026)
 > **Update 2026-09-10 (after this lock was written): the lock was reopened.** The maker-pack
@@ -91,10 +90,10 @@ You write content for cycleforchange.org. Follow these rules on every run.
   served. **Put every new page inside `cfc-site/`** or it will not deploy.
   - Legacy note: the repo-root `index.html` and the `/guides/` folder (with
     `guides.css`) are an older tree that is **not published**. Do not build there.
-- The homepage is `cfc-site/index.html`. Do NOT touch it, `cfc-site/main.js`
-  (pledge form, votes, Strava/Instagram wiring), or anything under
-  `netlify/functions/`. Styling is external in `cfc-site/styles.css` (no inline
-  `<style>` block to edit).
+- The homepage is `cfc-site/index.html`. Do NOT touch it, `cfc-site/home.js`
+  (pledge form, votes, Strava/Instagram wiring), `cfc-site/home.css`, or anything
+  under `netlify/functions/`. Content pages style with `cfc-site/styles.css` (no
+  inline `<style>` block to edit).
 - New content pages are **self-contained HTML files**, not markdown. There is no
   `/content` folder and nothing renders markdown.
   - Field Notes: `cfc-site/field-notes/<slug>/index.html`
