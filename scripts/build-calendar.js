@@ -196,7 +196,7 @@ ${CATS.map((c) => `        <button class="tag" type="button" data-set="t" data-v
       </div>
       <div class="frow" role="group" aria-label="Show"><span class="lab">Show</span>
         <button class="tag" type="button" id="tConf" aria-pressed="false">Confirmed only<span class="c">${nConf}</span></button>
-        <button class="tag you" type="button" id="tRiding" aria-pressed="false">Riding<span class="c">${riding.length}</span></button>
+        <button class="tag you" type="button" id="tRiding" aria-pressed="false">I&rsquo;m riding<span class="c">${riding.length}</span></button>
       </div>
       <details class="more-f" id="moreF">
         <summary>More filters <span class="on" id="moreOn"></span></summary>
@@ -209,6 +209,18 @@ ${CAUSE_ORDER.filter((c) => byCause.has(c)).map((c) => `          <button class=
       </details>
     </section>
 
+${(() => {
+  let deep = null;
+  try { deep = JSON.parse(fs.readFileSync(path.join(ROOT, "cfc-site", "events", "events.json"), "utf8")); } catch (e) { return ""; }
+  const list = Array.isArray(deep) ? deep : (deep && deep.events) || [];
+  if (!list.length) return "";
+  return `
+    <aside class="deep" aria-labelledby="deep-h">
+      <p class="eyebrow" id="deep-h">${list.length} events with their own page</p>
+      <p class="deep-note">Dates, routes, sign-up, weather, and where to sleep, eat and get the bike fixed.</p>
+      <p class="deep-links">${list.map((d) => `<a href="${attr(String(d.url || "").replace(SITE, ""))}">${esc(d.short_name || d.name)}</a>`).join("")}</p>
+    </aside>`;
+})()}
     <div class="bar">
       <p class="count" id="count"><b>${events.length}</b> events</p>
       <button class="clear" id="clear" type="button" hidden>Clear all</button>

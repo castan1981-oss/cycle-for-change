@@ -81,7 +81,10 @@
     var data = { title: btn.dataset.title, text: "Group ride: " + btn.dataset.title, url: location.href.split("#")[0] };
     if (navigator.share && (!navigator.canShare || navigator.canShare(data))) {
       navigator.share(data).catch(function () {});
-    } else if (navigator.clipboard) {
+      return;
+    }
+    var alt = document.getElementById("gr-share-alt"); if (alt) alt.hidden = false;
+    if (navigator.clipboard) {
       navigator.clipboard.writeText(data.url).then(function () { say("Link copied"); }, function () { say(data.url); });
     } else {
       say(data.url);

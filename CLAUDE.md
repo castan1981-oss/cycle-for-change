@@ -32,6 +32,16 @@
 - Nav everywhere: Find a ride · 2027 calendar · Guides · Resources · Pledge (→ /pledge/).
   The FAQ answers were drafted from the site's own copy; Robert rewrites them in his words.
 
+## The directories (Sept 28, 2026 — Pass 3 of the site plan)
+- Event pages: sign-up up top; the town strip (Sleep / Eat / Fix) with a link to the town guide;
+  "Group rides around <town>" pulled from cfc-site/rides/rides.json (within 30 mi, up to 4);
+  on the six rides Robert is doing (calendar `riding: true`, matched by name) the pledge block
+  says "I'm riding this one" via `CHROME.pledge({ line, copy })`.
+- Ride cards carry the third fact: Waits for you / Regroups / Drops (from `drop_policy`).
+  The directory search row links to /tonight/. Ride pages fold Text/WhatsApp/Email under
+  Share until the browser has no share sheet.
+- Calendar: the "I'm riding" filter, and a strip of the twelve events that have their own page.
+
 ## The homepage (Sept 2026 redesign)
 - Same Creosote house tokens. One addition, `--tar` #1A1D18 (asphalt a step darker) for the film
   hero, the ride log and the close; `--paper` #F6F1E7 only for text on the creosote field.

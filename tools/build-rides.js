@@ -340,6 +340,7 @@ function card(r, opts = {}) {
   const dist = opts.distance != null ? `<span class="gr-dist">${Math.round(opts.distance)} mi away</span>` : "";
   const when = dayPhrase(r) && r.start_hhmm ? `${dayPhrase(r)}, ${fmtTime(r.start_hhmm)}` : (r.schedule || "See the ride's page for schedule");
   const stat = [cleanDist(r.distance_miles) ? `${cleanDist(r.distance_miles)} mi` : null, r.pace ? trunc(r.pace, 34) : null].filter(Boolean).join(" · ");
+  const wait = { "no-drop": ["waits", "Waits for you"], groups: ["regroups", "Regroups"], drop: ["drops", "Drops"] }[r.drop_policy];
   return `<a class="gr-card" href="/rides/${r.slug}/"
    data-name="${attr(r.name)}" data-city="${attr(r.city)}" data-state="${r.state}"
    data-lat="${r.lat}" data-lng="${r.lng}" data-disc="${r.discipline.join(" ")}"
@@ -349,7 +350,7 @@ function card(r, opts = {}) {
   <span class="gr-card-name">${esc(r.name)}</span>
   <span class="gr-card-place">${esc(placeText(r))}${r.neighborhood ? " · " + esc(r.neighborhood) : ""}</span>
   <span class="gr-card-when">${esc(when)}</span>
-  ${stat ? `<span class="gr-card-stat">${esc(stat)}</span>` : ""}
+  ${stat || wait ? `<span class="gr-card-stat">${esc(stat)}${wait ? `${stat ? " · " : ""}<em class="gr-wait gr-wait--${wait[0]}">${wait[1]}</em>` : ""}</span>` : ""}
   ${tags ? `<span class="gr-tags">${tags}</span>` : ""}
 </a>`;
 }
@@ -369,6 +370,7 @@ function searchUi(rides, { cityIndex, placeholder }) {
         <input id="gr-q" type="search" placeholder="${attr(placeholder)}" autocomplete="off" list="gr-cities">
         <datalist id="gr-cities">${cityIndex.map(([k]) => `<option value="${attr(k)}">`).join("")}</datalist>
         <button type="button" class="btn btn--ink" id="gr-geo">Near me</button>
+        <a class="gr-tonight" href="/tonight/">What&rsquo;s rolling tonight &rarr;</a>
       </form>
       <div class="gr-filters">
         <div class="gr-filter-row"><span class="gr-filter-label">Bike</span>
@@ -428,9 +430,7 @@ ${byState[s].map((r) => card(r)).join("\n")}
       <p class="eyebrow">${rides.length} rides &middot; ${states.length} states &middot; checked ${esc(lastChecked)}</p>
       <h1>Find a group ride near you</h1>
       <p class="lede">
-        ${rides.length} recurring group rides in ${states.length} states. ${nNoDrop} are no-drop, so nobody gets left behind.
-        ${nInclusive} are run by and for queer, women/trans/femme or BIPOC riders. Each ride has its own page:
-        when it rolls, where it starts, how far, how fast, what to bring. Type a city or tap Near me.
+        ${rides.length} free, recurring group rides in ${states.length} states. When they roll, where they start, how fast, and whether they wait for you. ${nNoDrop} are no-drop; ${nInclusive} are run by and for queer, women/trans/femme or BIPOC riders.
       </p>
   </header>
 ${searchUi(rides, { cityIndex: cityIndexFor(rides), placeholder: "City, state, or ride name — e.g. Phoenix, AZ" })}
@@ -452,11 +452,12 @@ ${searchUi(rides, { cityIndex: cityIndexFor(rides), placeholder: "City, state, o
   </section>
 
   <section class="gr-why wrap">
-      <h2>Why a group ride directory on a mental-health site</h2>
+      <h2>Why Cycle for Change keeps a group ride directory</h2>
       <p>
         A group ride is the cheapest, most reliable way I know to get out of my own head and into a room
-        of people who want you there. Nobody asks what you do. You just ride. This directory exists so
-        that anyone, anywhere in the country, can find one this week.
+        of people who want you there. Nobody asks what you do. You just ride. In 2027 I&rsquo;m riding
+        10,000 miles for queer communities, and a lot of them will be on rides like these. This directory
+        exists so that anyone, anywhere in the country, can find one this week.
       </p>
       <p>
         <strong>How this list is built.</strong> Every ride is real and recurring, checked against its own website,
@@ -753,7 +754,7 @@ function ridePage(r, all, hubFor, hubs) {
     <div class="gr-actions">
       ${primary ? `<a class="btn btn--ink gr-primary" href="${attr(primary[1])}" rel="noopener nofollow">${esc(primary[0])} ↗</a>` : ""}${calBtns}
       <button type="button" class="btn btn--ghost" id="gr-share" data-title="${attr(r.name + " — " + placeText(r))}">Share</button>
-      <span class="gr-share-alt"><a href="sms:?&body=${encodeURIComponent(r.name + " — " + url)}">Text it</a> · <a href="https://wa.me/?text=${encodeURIComponent(r.name + " — " + url)}" rel="noopener">WhatsApp</a> · <a href="mailto:?subject=${encodeURIComponent("Group ride: " + r.name)}&body=${encodeURIComponent(url)}">Email</a></span>
+      <span class="gr-share-alt" id="gr-share-alt" hidden><a href="sms:?&body=${encodeURIComponent(r.name + " — " + url)}">Text it</a> · <a href="https://wa.me/?text=${encodeURIComponent(r.name + " — " + url)}" rel="noopener">WhatsApp</a> · <a href="mailto:?subject=${encodeURIComponent("Group ride: " + r.name)}&body=${encodeURIComponent(url)}">Email</a></span>
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
     </div>
 

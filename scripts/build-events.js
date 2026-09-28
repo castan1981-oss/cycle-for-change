@@ -103,6 +103,17 @@ function write(rel, html) {
 // ——— load + validate ————————————————————————————————————————————————————
 const towns = readDir(path.join(DATA, "towns"));
 const events = readDir(path.join(DATA, "events"));
+
+// Group rides near each event town come from the rides directory; the six rides
+// Robert is doing in 2027 come from the calendar (riding: true). Both optional.
+function readJson(p) { try { return JSON.parse(fs.readFileSync(p, "utf8")); } catch (e) { return null; } }
+const RIDES = readJson(path.join(ROOT, "cfc-site", "rides", "rides.json")) || [];
+const RIDING = ((readJson(path.join(ROOT, "data", "calendar-2027.json")) || {}).events || []).filter((e) => e.riding).map((e) => String(e.name).replace(/\s*\(.*?\)\s*/g, "").toLowerCase());
+const norm = (n) => String(n || "").toLowerCase().replace(/^(the|td)\s+/, "").replace(/\s*\(.*?\)\s*/g, "").trim();
+const isRiding = (e) => RIDING.some((n) => norm(n) === norm(e.name) || norm(n).startsWith(norm(e.name)) || norm(e.name).startsWith(norm(n)));
+function ridesNear(e, radius = 30, max = 4) {
+  return RIDES.map((r) => ({ r, d: haversineMi(e, { lat: r.lat, lon: r.lng }) })).filter((x) => x.d <= radius).sort((a, b) => a.d - b.d).slice(0, max);
+}
 const townById = Object.fromEntries(towns.map((t) => [t.id, t]));
 
 for (const t of towns) {
@@ -155,9 +166,9 @@ ${CHROME.HEADER}
 `;
 }
 
-function foot() {
+function foot(pledgeHtml) {
   return `
-${CHROME.PLEDGE}
+${pledgeHtml || CHROME.PLEDGE}
 </main>
 ${CHROME.FOOTER}
 <script src="/events/events.js" defer></script>
@@ -293,16 +304,26 @@ function eventPage(e) {
     ${weatherBlock(t, { heading: `Weather in ${t.name} for the ${e.name}`, note: e.weather_note, date: e.next_date, endDate: e.end_date })}
 
     <section class="town-box" aria-labelledby="town-h">
-      <h2 id="town-h">Getting to ${esc(t.name)}</h2>
+      <p class="eyebrow">Once you&rsquo;re in ${esc(t.name)}</p>
+      <h2 id="town-h">Sleep, eat, fix the bike.</h2>
       <p>${esc(t.summary)}</p>
       ${t.getting_there ? `<p>${esc(t.getting_there)}</p>` : ""}
-      <ul class="res-links">
-        <li><a href="${t.url}">About ${esc(t.name)}</a></li>
-        <li><a href="${t.url}hotels/">Where to stay in ${esc(t.name)}</a>${t.hotels ? ` <span class="count">${t.hotels.length}</span>` : ""}</li>
-        <li><a href="${t.url}restaurants/">Where to eat in ${esc(t.name)}</a>${t.restaurants ? ` <span class="count">${t.restaurants.length}</span>` : ""}</li>
-        <li><a href="${t.url}bike-shops/">Bike shops and repairs in ${esc(t.name)}</a>${t.bike_shops ? ` <span class="count">${t.bike_shops.length}</span>` : ""}</li>
-      </ul>
+      <div class="town-strip">
+        <a href="${t.url}hotels/"><span class="eyebrow">Sleep</span><b>Where to stay</b><span>${t.hotels ? `${t.hotels.length} picks` : "Hotels near the start"}</span></a>
+        <a href="${t.url}restaurants/"><span class="eyebrow">Eat</span><b>Where to eat</b><span>${t.restaurants ? `${t.restaurants.length} picks` : "Carb night, post-ride, early coffee"}</span></a>
+        <a href="${t.url}bike-shops/"><span class="eyebrow">Fix</span><b>Bike shops</b><span>${t.bike_shops ? `${t.bike_shops.length} shops` : "Open the day before"}</span></a>
+      </div>
+      <p class="town-more"><a href="${t.url}">The ${esc(t.name)} town guide &rarr;</a></p>
     </section>
+${(() => { const near = ridesNear(e); if (!near.length) return ""; return `
+    <section class="local-rides" aria-labelledby="local-h">
+      <h2 id="local-h">Group rides around ${esc(t.name)}</h2>
+      <p class="mute">Free, recurring, open to anyone. Ride with locals the day before, or the week after.</p>
+      <ul class="rows">
+${near.map(({ r, d }) => `        <li><a href="/rides/${r.slug}/"><span class="row-name">${esc(r.name)}</span><span class="row-meta">${esc(r.city)}, ${esc(r.state)} &middot; ${esc(r.schedule || "")}${d >= 1 ? ` &middot; ${Math.round(d)} mi from the start` : ""}</span></a></li>`).join("\n")}
+      </ul>
+      <p class="town-more"><a href="/rides/${t.state_code.toLowerCase()}/">All group rides in ${esc(t.state)} &rarr;</a></p>
+    </section>`; })()}
 
     ${e.faq && e.faq.length ? `<section class="faq"><h2>${esc(e.name)} FAQ</h2>${e.faq.map((f) => `<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("")}</section>` : ""}
 
@@ -314,7 +335,8 @@ function eventPage(e) {
   <p class="back"><a href="/events/">All events</a> &middot; <a href="/events/state/${t.state_slug}/">Events in ${esc(t.state)}</a></p>
 `;
   const lds = [ld, crumbs.ld, pageLd].concat(faqLd ? [faqLd] : []).map(stripUndef);
-  return head({ title, description, url: e.url, ld: lds, ogType: "article" }) + body + foot();
+  const pledgeHtml = isRiding(e) ? CHROME.pledge({ line: "I&rsquo;m riding this one. Pledge a mile.", copy: `${esc(e.short_name || e.name)} is one of the six rides on my 2027 calendar. Every mile of it counts toward 10,000, and every one is for queer communities. You pledge a few cents a mile and vote where the money goes.` }) : CHROME.PLEDGE;
+  return head({ title, description, url: e.url, ld: lds, ogType: "article" }) + body + foot(pledgeHtml);
 }
 
 function stripUndef(o) { return JSON.parse(JSON.stringify(o)); }

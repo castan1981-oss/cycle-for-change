@@ -166,14 +166,17 @@ const FOOTER = `<footer class="foot site-foot">
 
 /* The pledge block that closes every inner page, right before the footer.
    One component, one copy, everywhere. `10000` is the story mark; prose says 10,000. */
-const PLEDGE = `<section class="pledge" aria-labelledby="pledge-h">
+function pledge({ line, copy } = {}) {
+  return `<section class="pledge" aria-labelledby="pledge-h">
   <p class="pledge-num" aria-hidden="true">10000</p>
-  <h2 class="pledge-line" id="pledge-h">I do the miles. You decide who they&rsquo;re for.</h2>
-  <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, every one of them for queer communities. You pledge a few cents a mile and vote where the money goes. It starts January 1.</p>
+  <h2 class="pledge-line" id="pledge-h">${line || "I do the miles. You decide who they&rsquo;re for."}</h2>
+  <p class="pledge-copy">${copy || "In 2027 I ride 10,000 miles, all on the bike, every one of them for queer communities. You pledge a few cents a mile and vote where the money goes. It starts January 1."}</p>
   <div class="cta-row"><a class="btn btn--bone" href="/pledge/">Pledge a mile</a><a class="btn btn--ghost" href="/pledge/#vote">See the orgs</a><a class="link" href="/">The live count</a></div>
 </section>`;
+}
+const PLEDGE = pledge();
 
-module.exports = { SITE, INSTAGRAM, STRAVA, OG_IMAGE, FONTS, MARK, HEADER, FOOTER, PLEDGE, head, esc, attr };
+module.exports = { SITE, INSTAGRAM, STRAVA, OG_IMAGE, FONTS, MARK, HEADER, FOOTER, PLEDGE, pledge, head, esc, attr };
 
 if (require.main === module) {
   // `node scripts/chrome.js` -> the markup as JSON (apply-chrome.py reads it)
