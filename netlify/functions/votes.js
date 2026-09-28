@@ -22,7 +22,14 @@ const ORGS = [
   },
 ];
 
-const SEED = { onenten: 318, lalgbtcenter: 305, sfaf: 289 };
+// Real votes only (Sept 28, 2026). The board used to start from made-up numbers so it
+// didn't look empty; those are gone. Tallies live under a new blob key. The first read
+// carries over anything stored under the old key with the old seed taken back out,
+// so no real vote is lost.
+const SEED = { onenten: 0, lalgbtcenter: 0, sfaf: 0 };
+const KEY = "tallies-real";
+const LEGACY_KEY = "tallies";
+const LEGACY_SEED = { onenten: 318, lalgbtcenter: 305, sfaf: 289 };
 
 const blobs = require("./lib/blobs");
 
@@ -90,14 +97,15 @@ exports.handler = async (event) => {
 };
 
 function buildResponse(data, justVoted) {
-  const total = Object.values(data.votes).reduce((s, n) => s + n, 0) || 1;
+  const real = Object.values(data.votes).reduce((s, n) => s + n, 0);
+  const total = real || 1; // divisor only; totalVotes reports the real count
   return {
     orgs: ORGS.map((o) => ({
       ...o,
       votes: data.votes[o.id] || 0,
       pct: Math.round(((data.votes[o.id] || 0) / total) * 1000) / 10,
     })),
-    totalVotes: total,
+    totalVotes: real,
     votedFor: justVoted || null,
   };
 }
@@ -106,10 +114,19 @@ async function loadStore(fresh) {
   if (store && !fresh && Date.now() - storeTs < READ_CACHE_MS) return store;
 
   try {
-    const raw = await blobs.store("cfc-votes").get("tallies", { type: "json" });
+    const raw = await blobs.store("cfc-votes").get(KEY, { type: "json" });
     if (raw && raw.votes) {
       store = { votes: raw.votes, voters: raw.voters || {} };
       storeTs = Date.now();
+      return store;
+    }
+    const old = await blobs.store("cfc-votes").get(LEGACY_KEY, { type: "json" });
+    if (old && old.votes) {
+      const votes = { ...SEED };
+      for (const id of Object.keys(old.votes)) votes[id] = Math.max(0, (old.votes[id] || 0) - (LEGACY_SEED[id] || 0));
+      store = { votes, voters: old.voters || {} };
+      storeTs = Date.now();
+      await blobs.store("cfc-votes").setJSON(KEY, store);
       return store;
     }
   } catch (_) {
@@ -126,7 +143,7 @@ async function saveStore(data) {
   store = data;
   storeTs = Date.now();
   try {
-    await blobs.store("cfc-votes").setJSON("tallies", data);
+    await blobs.store("cfc-votes").setJSON(KEY, data);
   } catch (_) {
     /* in-memory only when blobs unavailable */
   }

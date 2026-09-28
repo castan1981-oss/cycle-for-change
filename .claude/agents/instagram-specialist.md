@@ -29,7 +29,7 @@ alt text, and hashtag you write.
   homepage waitlist. Do not link to Field Notes, guides, or `/#board`
   until the site is back; every other URL redirects home.
 - **Handle:** `@cycl_eforchange` per `cfc-site/main.js`. The serverless
-  function defaults to `cycle_forchange`. Confirm with Robert once, then use
+  function defaults to `cycl_eforchange` (the real account, confirmed Sept 28, 2026). Use
   one handle everywhere and flag the mismatch if it is still in the code.
 
 ### Marks and look (kit lock, Sep 2026)

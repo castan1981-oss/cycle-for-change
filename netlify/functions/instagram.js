@@ -52,7 +52,7 @@ exports.handler = async () => {
     "Cache-Control": "public, max-age=3600",
   };
 
-  const handle = process.env.INSTAGRAM_HANDLE || "cycle_forchange";
+  const handle = process.env.INSTAGRAM_HANDLE || "cycl_eforchange";
   const profileUrl = `https://instagram.com/${handle}`;
   const beholdFeedId = process.env.BEHOLD_FEED_ID || null;
   const token = process.env.INSTAGRAM_ACCESS_TOKEN;

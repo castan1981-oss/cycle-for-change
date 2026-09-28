@@ -24,7 +24,13 @@ exports.handler = async () => {
     });
     const forms = await formsRes.json();
     const form = Array.isArray(forms) ? forms.find((f) => f.name === "pledges") : null;
-    if (!form) return { statusCode: 200, headers, body: JSON.stringify({ names: [] }) };
+    if (!form) {
+      // Say why, so the board's state can be read from the URL alone: the API refused the
+      // token (status 401/403), or the site has no "pledges" form registered yet (forms lists
+      // what Netlify does have). No names or submission data here.
+      const seen = Array.isArray(forms) ? forms.map((f) => f.name) : null;
+      return { statusCode: 200, headers, body: JSON.stringify({ names: [], configured: true, form: false, status: formsRes.status, forms: seen }) };
+    }
 
     // 2) pull its submissions (newest first)
     const subRes = await fetch(`https://api.netlify.com/api/v1/forms/${form.id}/submissions?per_page=500`, {
