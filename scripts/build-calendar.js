@@ -21,6 +21,7 @@
 const fs = require("fs");
 const path = require("path");
 const CHROME = require("./chrome.js"); // shared header, footer, fonts
+const BLOCKS = require("./blocks.js"); // the ride-report form (Pass 3)
 
 const ROOT = path.resolve(__dirname, "..");
 const DATA = path.join(ROOT, "data", "calendar-2027.json");
@@ -28,8 +29,7 @@ const OUT = path.join(ROOT, "cfc-site");
 const SITE = "https://cycleforchange.org";
 const URL = "/events/2027/";
 const TODAY = new Date().toISOString().slice(0, 10);
-// No forms on this page. Every call to action is a plain link (same as build-events.js).
-const INSTAGRAM = "https://www.instagram.com/cycl_eforchange/";
+// One form on this page: `ride-report` (scripts/blocks.js), for a missing event or a changed date.
 
 // ——— guardrails from CLAUDE.md ———————————————————————————————————————
 // Same list as build-events.js minus /Prescott/: here it is a place name in
@@ -137,6 +137,7 @@ ${CHROME.PLEDGE}
 ${CHROME.FOOTER}
 <script src="/events/events.js" defer></script>
 <script src="/events/2027/calendar.js" defer></script>
+${BLOCKS.REPORT_JS}
 </body>
 </html>
 `;
@@ -250,8 +251,9 @@ ${retired.slice().sort((a, b) => a.name.localeCompare(b.name)).map((r) => `     
 
     <div class="method">
       <p>Dates marked ✓ are published by the organizer. Dates marked ~ are placed on the same weekend as the 2026 edition; the date note under each event says how. TBA means the event exists but has not put out a 2026 or 2027 date. US only; virtual-only and indoor-only events are left out.</p>
-      <p>${esc(data.source || "")} Confirm with the organizer before booking travel. Missing an event, or a date changed? <a href="${INSTAGRAM}" rel="noopener">Message us on Instagram</a>. <a href="/events/2027/calendar-2027.json">JSON feed</a>.</p>
+      <p>${esc(data.source || "")} Confirm with the organizer before booking travel. <a href="/events/2027/calendar-2027.json">JSON feed</a>.</p>
     </div>
+${BLOCKS.REPORT({ thing: "event", heading: "Missing an event, or a date changed?", lede: "Tell us and we'll check it against the organizer's page. Confirmed dates only go up once the organizer publishes them." })}
   </article>
 `;
 body += foot();

@@ -128,10 +128,42 @@
       <ul class="rows"><li><span class="row-date"><time datetime="2026-09-18">Fri, Sep 18, 2026</time></span><a href="/events/chequamegon-mtb-festival/">Chequamegon MTB Festival</a><span class="row-meta">Hayward &middot; Mountain bike</span></li></ul>
     </section>
 
-    <section><h2>How this directory works</h2>
-      <p>Each event page is checked against the organizer's site and lists its sources. Dates and prices change, so the sign-up link always goes to the organizer. Weather is a live forecast for the host town. Town pages list hotels, restaurants and bike shops we could confirm are open. Nothing here is paid placement.</p>
-      <p>Missing an event? <a href="https://www.instagram.com/cycl_eforchange/" rel="noopener">Message us on Instagram</a> and we will add it.</p>
-    </section>
+
+  <section class="dir-built" id="how-built" aria-labelledby="how-built-h">
+    <h2 id="how-built-h">How this directory works</h2>
+    <div class="dir-built-grid">
+      <div><span class="k">Checked</span><h3>At the organizer</h3><p>Each event page is checked against the organizer's own site and lists its sources.</p></div>
+      <div><span class="k">Direct</span><h3>Sign-up goes to them</h3><p>Dates and prices change, so the sign-up link always goes to the organizer, never through us.</p></div>
+      <div><span class="k">Live</span><h3>Weather for the town</h3><p>Every event page carries a live forecast for the host town.</p></div>
+      <div><span class="k">Free</span><h3>No paid placement</h3><p>Nobody pays to be listed. Town pages list only places we could confirm are open.</p></div>
+    </div>
+  </section>
+
+  <section class="dir-report" id="add" aria-labelledby="add-h">
+    <div class="dir-report-head">
+      <p class="eyebrow">Free to list</p>
+      <h2 id="add-h">Missing an event, or a date changed?</h2>
+      <p>Tell us what's new or what changed. We check it against the event's own page before it goes up. Listing is free and always will be.</p>
+    </div>
+    <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
+      <input type="hidden" name="form-name" value="ride-report">
+      <input type="hidden" name="page" value="" data-page>
+      <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <fieldset class="dir-report-kind">
+        <legend class="visually-hidden">What is this about?</legend>
+        <label><input type="radio" name="kind" value="new" checked> <span>New event</span></label>
+        <label><input type="radio" name="kind" value="changed"> <span>Something changed</span></label>
+        <label><input type="radio" name="kind" value="gone"> <span>It's gone</span></label>
+      </fieldset>
+      <label class="lab" for="rr-what-1">Event name or link</label>
+      <input class="field" id="rr-what-1" name="ride" type="text" required autocomplete="off" value="">
+      <label class="lab" for="rr-details-1">What should we know? <small>Day, time, start, pace, who runs it</small></label>
+      <textarea class="field" id="rr-details-1" name="details" rows="3"></textarea>
+      <label class="lab" for="rr-email-1">Your email <small>Optional. Only if we have a question.</small></label>
+      <input class="field" id="rr-email-1" name="email" type="email" autocomplete="email" inputmode="email">
+      <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
+    </form>
+  </section>
   </article>
 
 <section class="pledge" aria-labelledby="pledge-h">
@@ -185,5 +217,6 @@
 </footer>
 <script src="/chrome.js" defer></script>
 <script src="/events/events.js" defer></script>
+<script src="/events/report.js" defer></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 # Cycle for Change — project context for automated content
 
-> **HOMEPAGE: the redesign is live since 2026-09-24.** `cfc-site/index.html` +
+> **HOMEPAGE: the redesign is live since 2026-09-27.** `cfc-site/index.html` +
 > `cfc-site/home.css` + `cfc-site/home.js` + `cfc-site/img/` (graded photos and the
 > 6s hero film). The Sept 18 coming-soon-based homepage and its files
 > (`coming-soon.css/js`, `main.js`, `next/home.css/js`, the feed video and audio) are
@@ -68,6 +68,32 @@
 - The six "riding" rows are hand-kept from `data/calendar-2027.json` (`"riding": true`).
 - Do NOT touch `cfc-site/index.html`, `cfc-site/home.js` or anything under `netlify/functions/`
   from the content loops.
+
+## Directories + help pages (Sept 28, 2026 — Passes 3 and 4 of the site plan)
+UX references Robert named: behavioralhealthguide.org, recovery.com, thesyn.cc. Blueprint:
+the "Pass 3 Blueprint" artifact; notes in the claude.ai project doc `claude/ux-references-pass-3-4.md`.
+- `/rides/` is search-first: tar hero with the search box + quick chips, a "Three taps"
+  matcher (ride · pace · when), then browse tiles (by who's riding, by city, by state), the
+  how-it's-built tiles, plain questions, and the add/fix form. It ships NO ride cards:
+  `/rides/hub.js` fetches `/rides/index.json` (written by tools/build-rides.js) on the first
+  search or filter. State, city and facet pages keep every card in HTML (`/rides/rides.js`).
+- Facet pages: `/rides/lgbtq/`, `/no-drop/`, `/beginner/`, `/women-trans-femme/`, `/bipoc/`,
+  `/family/`, `/gravel/` — `FACETS` in tools/build-rides.js. "no-drop" counts `drop_policy`
+  as well as the tag (`tagsOf()`), so chips, tiles and pages agree. City hubs were already there.
+- Cards are `<div class="gr-card">` with a stretched name link and a Save star
+  (`/rides/save.js`, localStorage `cfc-week` — the same list /tonight/ calls "My week").
+  hub.js renders the same markup client-side; keep `card()` and hub.js in step.
+- One Netlify form for every directory: `ride-report` (add / something changed / it's gone),
+  markup in `scripts/blocks.js`, submit script `/events/report.js` (kept by build-events.js).
+  It replaced every "message us on Instagram" ask. `BLOCKS.BUILT()` = the four
+  how-it's-built tiles. Styles for both live in `/events/events.css`.
+- `/guides/` is sorted by stage: 01 Pick a ride · 02 Get ready · 03 Raise the money, then
+  "From the road" (field notes, journal). New guides go in the right stage.
+- `/resources/` opens on three doors: Right now (988, Trevor, 911) · For me (by age) ·
+  For someone I love (988 for someone else, PFLAG, Trevor). Every resources page carries
+  the phone-only `.help-bar` (tap to call 988) just before `</main>`.
+- `/pledge/` lists "What you get on the board": your name, a vote, ride days (an easy open
+  ride the day before each of the six 2027 events, details by email), mile updates.
 
 ## 10K kit — PRODUCTION LOCK (Sep 2026)
 > **Update 2026-09-10 (after this lock was written): the lock was reopened.** The maker-pack
@@ -195,9 +221,8 @@ You write content for cycleforchange.org. Follow these rules on every run.
 ## Mission first
 - Every page ties back to the pledge (10,000 miles, all on the bike, 2027) and the cause.
   The old 7,500-mile swim/bike/run framing is retired — never write it.
-- At least one internal link toward the pledge. The pledge form is the `#board`
-  section of the homepage, so the canonical internal link is `/#board`
-  (there is no `/pledge` page on this site).
+- At least one internal link toward the pledge. The pledge form lives on
+  `/pledge/` (since Sept 27, 2026), so the canonical internal link is `/pledge/`.
 - Topics live at the intersection of cycling/endurance and queer mental health.
 
 ## Health-content safety (queer mental health is YMYL — handle with care)

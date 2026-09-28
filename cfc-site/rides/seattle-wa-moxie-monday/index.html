@@ -99,6 +99,7 @@
       <a class="btn btn--ink gr-primary" href="https://everydayrides.com/groups/moxie-monday" rel="noopener nofollow">Host's website ↗</a>
         <a class="btn btn--ghost" href="/rides/seattle-wa-moxie-monday/ride.ics" download="seattle-wa-moxie-monday.ics">Add to calendar</a>
         <a class="gr-minor" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Moxie+Monday+%E2%80%94+Seattle%2C+WA&amp;dates=20261005T180000%2F20261005T200000&amp;ctz=America%2FLos_Angeles&amp;recur=RRULE%3AFREQ%3DMONTHLY%3BBYDAY%3D1MO&amp;location=Westlake+Park%2C+401+Pine+St%2C+Seattle%2C+WA+98101&amp;details=First+Monday+of+the+month%2C+6%3A00+pm+%28has+run+weekly+in+past+seasons%3B+check+Instagram%29%0Ahttps%3A%2F%2Fcycleforchange.org%2Frides%2Fseattle-wa-moxie-monday%2F" rel="noopener">Google Calendar</a>
+      <button type="button" class="btn btn--ghost gr-save-btn" data-save="seattle-wa-moxie-monday" aria-pressed="false"><span aria-hidden="true">☆</span> <span data-save-label>Save</span></button>
       <button type="button" class="btn btn--ghost" id="gr-share" data-title="Moxie Monday — Seattle, WA">Share</button>
       <span class="gr-share-alt" id="gr-share-alt" hidden><a href="sms:?&body=Moxie%20Monday%20%E2%80%94%20https%3A%2F%2Fcycleforchange.org%2Frides%2Fseattle-wa-moxie-monday%2F">Text it</a> · <a href="https://wa.me/?text=Moxie%20Monday%20%E2%80%94%20https%3A%2F%2Fcycleforchange.org%2Frides%2Fseattle-wa-moxie-monday%2F" rel="noopener">WhatsApp</a> · <a href="mailto:?subject=Group%20ride%3A%20Moxie%20Monday&body=https%3A%2F%2Fcycleforchange.org%2Frides%2Fseattle-wa-moxie-monday%2F">Email</a></span>
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
@@ -138,9 +139,30 @@
 
     <p class="verified gr-verify">
       Last checked 2026-09-15 against <a href="https://everydayrides.com/groups/moxie-monday" rel="noopener nofollow">source 1</a>, <a href="https://everydayrides.com/groups" rel="noopener nofollow">source 2</a>, <a href="https://www.commuteseattle.com/bike-month-spotlight-cycling-groups-for-shared-identies/" rel="noopener nofollow">source 3</a>.
-      Schedules change. Confirm with the host before you go. Wrong, gone, or you run this ride?
-      <a href="https://www.instagram.com/cycl_eforchange/" rel="noopener">Tell us on Instagram</a>.
+      Schedules change. Confirm with the host before you go.
     </p>
+
+    <details class="dir-report dir-report--compact" id="fix">
+      <summary>Wrong, gone, or you run this ride? Tell us</summary>
+      <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
+      <input type="hidden" name="form-name" value="ride-report">
+      <input type="hidden" name="page" value="" data-page>
+      <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <fieldset class="dir-report-kind">
+        <legend class="visually-hidden">What is this about?</legend>
+        <label><input type="radio" name="kind" value="new"> <span>New ride</span></label>
+        <label><input type="radio" name="kind" value="changed" checked> <span>Something changed</span></label>
+        <label><input type="radio" name="kind" value="gone"> <span>It's gone</span></label>
+      </fieldset>
+      <label class="lab" for="rr-what-495">Ride name or link</label>
+      <input class="field" id="rr-what-495" name="ride" type="text" required autocomplete="off" value="Moxie Monday">
+      <label class="lab" for="rr-details-495">What should we know? <small>Day, time, start, pace, who runs it</small></label>
+      <textarea class="field" id="rr-details-495" name="details" rows="3"></textarea>
+      <label class="lab" for="rr-email-495">Your email <small>Optional. Only if we have a question.</small></label>
+      <input class="field" id="rr-email-495" name="email" type="email" autocomplete="email" inputmode="email">
+      <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
+    </form>
+    </details>
   </article>
 
   <nav class="related gr-related" aria-label="Nearby group rides">
@@ -207,6 +229,8 @@
   </div>
 </footer>
 <script src="/chrome.js" defer></script>
+<script src="/rides/save.js" defer></script>
+<script src="/events/report.js" defer></script>
 <script src="/rides/ride.js" defer></script>
 </body>
 </html>

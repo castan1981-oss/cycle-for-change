@@ -6032,8 +6032,34 @@
 
     <div class="method">
       <p>Dates marked ✓ are published by the organizer. Dates marked ~ are placed on the same weekend as the 2026 edition; the date note under each event says how. TBA means the event exists but has not put out a 2026 or 2027 date. US only; virtual-only and indoor-only events are left out.</p>
-      <p>Compiled Sept 15–16, 2026 from organizer sites, BikeReg, USA Cycling, Life Time, the National MS Society, the ADA and GranFondoGuide; per-event URLs in sources. Refreshed twice a month by the &quot;2027 Ride Directory refresh&quot; scheduled task (artifact https://claude.ai/artifact/1BhU7ywcW4SBYrg3GitPqC). Confirm with the organizer before booking travel. Missing an event, or a date changed? <a href="https://www.instagram.com/cycl_eforchange/" rel="noopener">Message us on Instagram</a>. <a href="/events/2027/calendar-2027.json">JSON feed</a>.</p>
+      <p>Compiled Sept 15–16, 2026 from organizer sites, BikeReg, USA Cycling, Life Time, the National MS Society, the ADA and GranFondoGuide; per-event URLs in sources. Refreshed twice a month by the &quot;2027 Ride Directory refresh&quot; scheduled task (artifact https://claude.ai/artifact/1BhU7ywcW4SBYrg3GitPqC). Confirm with the organizer before booking travel. <a href="/events/2027/calendar-2027.json">JSON feed</a>.</p>
     </div>
+
+  <section class="dir-report" id="add" aria-labelledby="add-h">
+    <div class="dir-report-head">
+      <p class="eyebrow">Free to list</p>
+      <h2 id="add-h">Missing an event, or a date changed?</h2>
+      <p>Tell us and we'll check it against the organizer's page. Confirmed dates only go up once the organizer publishes them.</p>
+    </div>
+    <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
+      <input type="hidden" name="form-name" value="ride-report">
+      <input type="hidden" name="page" value="" data-page>
+      <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <fieldset class="dir-report-kind">
+        <legend class="visually-hidden">What is this about?</legend>
+        <label><input type="radio" name="kind" value="new" checked> <span>New event</span></label>
+        <label><input type="radio" name="kind" value="changed"> <span>Something changed</span></label>
+        <label><input type="radio" name="kind" value="gone"> <span>It's gone</span></label>
+      </fieldset>
+      <label class="lab" for="rr-what-1">Event name or link</label>
+      <input class="field" id="rr-what-1" name="ride" type="text" required autocomplete="off" value="">
+      <label class="lab" for="rr-details-1">What should we know? <small>Day, time, start, pace, who runs it</small></label>
+      <textarea class="field" id="rr-details-1" name="details" rows="3"></textarea>
+      <label class="lab" for="rr-email-1">Your email <small>Optional. Only if we have a question.</small></label>
+      <input class="field" id="rr-email-1" name="email" type="email" autocomplete="email" inputmode="email">
+      <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
+    </form>
+  </section>
   </article>
 
 <section class="pledge" aria-labelledby="pledge-h">
@@ -6088,5 +6114,6 @@
 <script src="/chrome.js" defer></script>
 <script src="/events/events.js" defer></script>
 <script src="/events/2027/calendar.js" defer></script>
+<script src="/events/report.js" defer></script>
 </body>
 </html>

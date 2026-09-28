@@ -99,6 +99,7 @@
       <a class="btn btn--ink gr-primary" href="https://opbc.clubexpress.com/" rel="noopener nofollow">Host's website ↗</a>
         <a class="btn btn--ghost" href="/rides/omaha-ne-opbc-saturday-morning-easy-trail-ride/ride.ics" download="omaha-ne-opbc-saturday-morning-easy-trail-ride.ics">Add to calendar</a>
         <a class="gr-minor" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Omaha+Pedalers+Saturday+Morning+Easy+Trail+Ride+%E2%80%94+Omaha%2C+NE&amp;dates=20261003T090000%2F20261003T110000&amp;ctz=America%2FChicago&amp;recur=RRULE%3AFREQ%3DWEEKLY%3BBYDAY%3DSA&amp;location=Stinson+Park+restrooms%2C+Aksarben+Village%2C+2285+S+67th+St%2C+Omaha%2C+NE+68106&amp;details=Every+Saturday%2C+9%3A00+am+%28club+signature+rides+take+priority+some+Saturdays%29%0Ahttps%3A%2F%2Fcycleforchange.org%2Frides%2Fomaha-ne-opbc-saturday-morning-easy-trail-ride%2F" rel="noopener">Google Calendar</a>
+      <button type="button" class="btn btn--ghost gr-save-btn" data-save="omaha-ne-opbc-saturday-morning-easy-trail-ride" aria-pressed="false"><span aria-hidden="true">☆</span> <span data-save-label>Save</span></button>
       <button type="button" class="btn btn--ghost" id="gr-share" data-title="Omaha Pedalers Saturday Morning Easy Trail Ride — Omaha, NE">Share</button>
       <span class="gr-share-alt" id="gr-share-alt" hidden><a href="sms:?&body=Omaha%20Pedalers%20Saturday%20Morning%20Easy%20Trail%20Ride%20%E2%80%94%20https%3A%2F%2Fcycleforchange.org%2Frides%2Fomaha-ne-opbc-saturday-morning-easy-trail-ride%2F">Text it</a> · <a href="https://wa.me/?text=Omaha%20Pedalers%20Saturday%20Morning%20Easy%20Trail%20Ride%20%E2%80%94%20https%3A%2F%2Fcycleforchange.org%2Frides%2Fomaha-ne-opbc-saturday-morning-easy-trail-ride%2F" rel="noopener">WhatsApp</a> · <a href="mailto:?subject=Group%20ride%3A%20Omaha%20Pedalers%20Saturday%20Morning%20Easy%20Trail%20Ride&body=https%3A%2F%2Fcycleforchange.org%2Frides%2Fomaha-ne-opbc-saturday-morning-easy-trail-ride%2F">Email</a></span>
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
@@ -138,9 +139,30 @@
 
     <p class="verified gr-verify">
       Last checked 2026-09-15 against <a href="https://opbc.clubexpress.com/" rel="noopener nofollow">source 1</a>.
-      Schedules change. Confirm with the host before you go. Wrong, gone, or you run this ride?
-      <a href="https://www.instagram.com/cycl_eforchange/" rel="noopener">Tell us on Instagram</a>.
+      Schedules change. Confirm with the host before you go.
     </p>
+
+    <details class="dir-report dir-report--compact" id="fix">
+      <summary>Wrong, gone, or you run this ride? Tell us</summary>
+      <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
+      <input type="hidden" name="form-name" value="ride-report">
+      <input type="hidden" name="page" value="" data-page>
+      <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <fieldset class="dir-report-kind">
+        <legend class="visually-hidden">What is this about?</legend>
+        <label><input type="radio" name="kind" value="new"> <span>New ride</span></label>
+        <label><input type="radio" name="kind" value="changed" checked> <span>Something changed</span></label>
+        <label><input type="radio" name="kind" value="gone"> <span>It's gone</span></label>
+      </fieldset>
+      <label class="lab" for="rr-what-352">Ride name or link</label>
+      <input class="field" id="rr-what-352" name="ride" type="text" required autocomplete="off" value="Omaha Pedalers Saturday Morning Easy Trail Ride">
+      <label class="lab" for="rr-details-352">What should we know? <small>Day, time, start, pace, who runs it</small></label>
+      <textarea class="field" id="rr-details-352" name="details" rows="3"></textarea>
+      <label class="lab" for="rr-email-352">Your email <small>Optional. Only if we have a question.</small></label>
+      <input class="field" id="rr-email-352" name="email" type="email" autocomplete="email" inputmode="email">
+      <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
+    </form>
+    </details>
   </article>
 
   <nav class="related gr-related" aria-label="Nearby group rides">
@@ -207,6 +229,8 @@
   </div>
 </footer>
 <script src="/chrome.js" defer></script>
+<script src="/rides/save.js" defer></script>
+<script src="/events/report.js" defer></script>
 <script src="/rides/ride.js" defer></script>
 </body>
 </html>

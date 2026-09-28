@@ -24,14 +24,14 @@
 const fs = require("fs");
 const path = require("path");
 const CHROME = require("./chrome.js"); // shared header, footer, fonts
+const BLOCKS = require("./blocks.js"); // how-it's-built tiles + the ride-report form (Pass 3)
 
 const ROOT = path.resolve(__dirname, "..");
 const DATA = path.join(ROOT, "data");
 const OUT = path.join(ROOT, "cfc-site");
 const SITE = "https://cycleforchange.org";
 const TODAY = new Date().toISOString().slice(0, 10);
-// No forms on these pages. Every call to action is a plain link.
-const INSTAGRAM = "https://www.instagram.com/cycl_eforchange/";
+// One form on these pages: `ride-report` (scripts/blocks.js), for adding or fixing a listing.
 
 // ——— guardrails from CLAUDE.md ———————————————————————————————————————
 const BANNED = [
@@ -172,6 +172,7 @@ ${pledgeHtml || CHROME.PLEDGE}
 </main>
 ${CHROME.FOOTER}
 <script src="/events/events.js" defer></script>
+${BLOCKS.REPORT_JS}
 </body>
 </html>
 `;
@@ -329,6 +330,7 @@ ${near.map(({ r, d }) => `        <li><a href="/rides/${r.slug}/"><span class="r
 
     ${sourcesList(e.sources)}
     <p class="verified">Facts checked ${esc(fmtDate(e.verified || TODAY, { weekday: undefined }))}. Dates and prices come from the organizer and change. Confirm on the official site before you book anything.</p>
+${BLOCKS.REPORT({ thing: "event", name: e.name, kind: "changed", compact: true, id: "fix" })}
   </article>
 
   ${nearby.length ? `<section class="related"><h2>Nearby events</h2><ul class="cards">${nearby.map((n) => eventCard(n.e, { distance: n.d })).join("")}</ul></section>` : ""}
@@ -394,6 +396,7 @@ function townPage(t) {
     ${weatherBlock(t)}
     ${sourcesList(t.sources)}
     <p class="verified">Checked ${esc(fmtDate(t.verified || TODAY, { weekday: undefined }))}. Businesses open and close. Call before you count on anyone.</p>
+${BLOCKS.REPORT({ thing: "place", name: t.name, kind: "changed", compact: true, id: "fix" })}
   </article>
   <p class="back"><a href="/towns/">All towns</a> &middot; <a href="/events/state/${t.state_slug}/">${esc(t.state)}</a></p>
 `;
@@ -440,7 +443,8 @@ function resourcePage(t, r) {
     <nav class="res-links-row" aria-label="Other resources">
       ${Object.values(RESOURCE).filter((x) => x.seg !== r.seg).map((x) => `<a href="${t.url}${x.seg}/">${esc(x.h(t))}</a>`).join("")}
     </nav>
-    <p class="verified">Checked ${esc(fmtDate(t.verified || TODAY, { weekday: undefined }))}. No paid placements. If a place has closed or should be here, <a href="${INSTAGRAM}" rel="noopener">message us on Instagram</a>.</p>
+    <p class="verified">Checked ${esc(fmtDate(t.verified || TODAY, { weekday: undefined }))}. No paid placements. Businesses open and close; call before you count on anyone.</p>
+${BLOCKS.REPORT({ thing: "place", name: `${r.h(t)}`, kind: "changed", compact: true, id: "fix" })}
   </article>
   <p class="back"><a href="${t.url}">Back to ${esc(t.name)}</a></p>
 `;
@@ -473,10 +477,13 @@ function eventsIndex() {
       <ul class="rows">${s.events.map((e) => `<li><span class="row-date">${e.next_date ? `<time datetime="${e.next_date}">${esc(fmtDate(e.next_date, { weekday: "short", month: "short" }))}</time>` : esc(e.typical_timing || "TBA")}</span><a href="${e.url}">${esc(e.name)}</a><span class="row-meta">${esc(e.townRef.name)} &middot; ${esc(TYPE_LABEL[e.type] || e.type)}</span></li>`).join("")}</ul>`).join("")}
     </section>
 
-    <section><h2>How this directory works</h2>
-      <p>Each event page is checked against the organizer's site and lists its sources. Dates and prices change, so the sign-up link always goes to the organizer. Weather is a live forecast for the host town. Town pages list hotels, restaurants and bike shops we could confirm are open. Nothing here is paid placement.</p>
-      <p>Missing an event? <a href="${INSTAGRAM}" rel="noopener">Message us on Instagram</a> and we will add it.</p>
-    </section>
+${BLOCKS.BUILT([
+      ["Checked", "At the organizer", "Each event page is checked against the organizer's own site and lists its sources."],
+      ["Direct", "Sign-up goes to them", "Dates and prices change, so the sign-up link always goes to the organizer, never through us."],
+      ["Live", "Weather for the town", "Every event page carries a live forecast for the host town."],
+      ["Free", "No paid placement", "Nobody pays to be listed. Town pages list only places we could confirm are open."],
+    ], { heading: "How this directory works" })}
+${BLOCKS.REPORT({ thing: "event" })}
   </article>
 `;
   return head({ title, description, url, ld: [ld] }) + body + foot();
@@ -514,6 +521,7 @@ function townsIndex() {
     <section class="by-state"><h2>Towns by state</h2>
     ${stateList.map((s) => `<h3><a href="/events/state/${s.slug}/">${esc(s.name)}</a></h3><ul class="rows">${s.towns.map((t) => `<li><a href="${t.url}">${esc(t.name)}</a><span class="row-meta">${esc(t.events.map((e) => e.name).join(", "))}</span></li>`).join("")}</ul>`).join("")}
     </section>
+${BLOCKS.REPORT({ thing: "place" })}
   </article>
 `;
   return head({ title, description, url, ld: [] }) + body + foot();
@@ -523,7 +531,7 @@ function townsIndex() {
 // Clear stale output first. Everything under events/ and towns/ is generated
 // except events.css, events.js and 2027/ (the calendar, owned by
 // scripts/build-calendar.js, holds hand-written calendar.css and calendar.js).
-const KEEP = new Set(["events.css", "events.js", "2027"]);
+const KEEP = new Set(["events.css", "events.js", "report.js", "2027"]);
 const evDir = path.join(OUT, "events");
 if (fs.existsSync(evDir)) for (const f of fs.readdirSync(evDir)) if (!KEEP.has(f)) fs.rmSync(path.join(evDir, f), { recursive: true, force: true });
 fs.rmSync(path.join(OUT, "towns"), { recursive: true, force: true });

@@ -85,7 +85,7 @@
 
     <h1>Southside Critical Mass</h1>
     <p class="gr-place">Chicago, IL · South Side · Social</p>
-    <p class="gr-tags"><span class="gr-tag gr-tag-warn" title="We found this ride but couldn't confirm every detail">Unconfirmed — check with the host</span></p>
+    <p class="gr-tags"><span class="gr-tag">No-drop</span><span class="gr-tag gr-tag-warn" title="We found this ride but couldn't confirm every detail">Unconfirmed — check with the host</span></p>
 
     <p class="lede">Southside Critical Mass is a social group ride in Chicago, IL. It rolls first Friday of the month at 6:15 pm. Pace: slow. No-drop.</p>
 
@@ -99,6 +99,7 @@
       <a class="btn btn--ink gr-primary" href="https://www.facebook.com/SSCritMass" rel="noopener nofollow">Host on Facebook ↗</a>
         <a class="btn btn--ghost" href="/rides/chicago-il-southside-critical-mass/ride.ics" download="chicago-il-southside-critical-mass.ics">Add to calendar</a>
         <a class="gr-minor" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Southside+Critical+Mass+%E2%80%94+Chicago%2C+IL&amp;dates=20261002T181500%2F20261002T201500&amp;ctz=America%2FChicago&amp;recur=RRULE%3AFREQ%3DMONTHLY%3BBYDAY%3D1FR&amp;location=Chicago%2C+IL&amp;details=First+Friday+of+every+month%2C+6%3A15+pm%0Ahttps%3A%2F%2Fcycleforchange.org%2Frides%2Fchicago-il-southside-critical-mass%2F" rel="noopener">Google Calendar</a>
+      <button type="button" class="btn btn--ghost gr-save-btn" data-save="chicago-il-southside-critical-mass" aria-pressed="false"><span aria-hidden="true">☆</span> <span data-save-label>Save</span></button>
       <button type="button" class="btn btn--ghost" id="gr-share" data-title="Southside Critical Mass — Chicago, IL">Share</button>
       <span class="gr-share-alt" id="gr-share-alt" hidden><a href="sms:?&body=Southside%20Critical%20Mass%20%E2%80%94%20https%3A%2F%2Fcycleforchange.org%2Frides%2Fchicago-il-southside-critical-mass%2F">Text it</a> · <a href="https://wa.me/?text=Southside%20Critical%20Mass%20%E2%80%94%20https%3A%2F%2Fcycleforchange.org%2Frides%2Fchicago-il-southside-critical-mass%2F" rel="noopener">WhatsApp</a> · <a href="mailto:?subject=Group%20ride%3A%20Southside%20Critical%20Mass&body=https%3A%2F%2Fcycleforchange.org%2Frides%2Fchicago-il-southside-critical-mass%2F">Email</a></span>
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
@@ -135,9 +136,30 @@
 
     <p class="verified gr-verify">
       Last checked 2026-09-15 against <a href="https://chicagogrouprides.com/" rel="noopener nofollow">source 1</a>.
-      Schedules change. Confirm with the host before you go. Wrong, gone, or you run this ride?
-      <a href="https://www.instagram.com/cycl_eforchange/" rel="noopener">Tell us on Instagram</a>.
+      Schedules change. Confirm with the host before you go.
     </p>
+
+    <details class="dir-report dir-report--compact" id="fix">
+      <summary>Wrong, gone, or you run this ride? Tell us</summary>
+      <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
+      <input type="hidden" name="form-name" value="ride-report">
+      <input type="hidden" name="page" value="" data-page>
+      <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <fieldset class="dir-report-kind">
+        <legend class="visually-hidden">What is this about?</legend>
+        <label><input type="radio" name="kind" value="new"> <span>New ride</span></label>
+        <label><input type="radio" name="kind" value="changed" checked> <span>Something changed</span></label>
+        <label><input type="radio" name="kind" value="gone"> <span>It's gone</span></label>
+      </fieldset>
+      <label class="lab" for="rr-what-263">Ride name or link</label>
+      <input class="field" id="rr-what-263" name="ride" type="text" required autocomplete="off" value="Southside Critical Mass">
+      <label class="lab" for="rr-details-263">What should we know? <small>Day, time, start, pace, who runs it</small></label>
+      <textarea class="field" id="rr-details-263" name="details" rows="3"></textarea>
+      <label class="lab" for="rr-email-263">Your email <small>Optional. Only if we have a question.</small></label>
+      <input class="field" id="rr-email-263" name="email" type="email" autocomplete="email" inputmode="email">
+      <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
+    </form>
+    </details>
   </article>
 
   <nav class="related gr-related" aria-label="Nearby group rides">
@@ -204,6 +226,8 @@
   </div>
 </footer>
 <script src="/chrome.js" defer></script>
+<script src="/rides/save.js" defer></script>
+<script src="/events/report.js" defer></script>
 <script src="/rides/ride.js" defer></script>
 </body>
 </html>

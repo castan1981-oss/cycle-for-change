@@ -99,6 +99,7 @@
       <a class="btn btn--ink gr-primary" href="https://bikeclub.bike/rides/" rel="noopener nofollow">Host's website ↗</a>
         <a class="btn btn--ghost" href="/rides/fayetteville-ar-bike-club-sunday-service/ride.ics" download="fayetteville-ar-bike-club-sunday-service.ics">Add to calendar</a>
         <a class="gr-minor" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Sunday+Service+%E2%80%94+Fayetteville%2C+AR&amp;dates=20261004T103000%2F20261004T133000&amp;ctz=America%2FChicago&amp;recur=RRULE%3AFREQ%3DWEEKLY%3BBYDAY%3DSU&amp;location=Puritan+Coffee+%26+Beer%2C+205+W+Dickson+St%2C+Fayetteville%2C+AR+72701&amp;details=Every+Sunday%2C+usually+10%3A30+am%0Ahttps%3A%2F%2Fcycleforchange.org%2Frides%2Ffayetteville-ar-bike-club-sunday-service%2F" rel="noopener">Google Calendar</a>
+      <button type="button" class="btn btn--ghost gr-save-btn" data-save="fayetteville-ar-bike-club-sunday-service" aria-pressed="false"><span aria-hidden="true">☆</span> <span data-save-label>Save</span></button>
       <button type="button" class="btn btn--ghost" id="gr-share" data-title="Sunday Service — Fayetteville, AR">Share</button>
       <span class="gr-share-alt" id="gr-share-alt" hidden><a href="sms:?&body=Sunday%20Service%20%E2%80%94%20https%3A%2F%2Fcycleforchange.org%2Frides%2Ffayetteville-ar-bike-club-sunday-service%2F">Text it</a> · <a href="https://wa.me/?text=Sunday%20Service%20%E2%80%94%20https%3A%2F%2Fcycleforchange.org%2Frides%2Ffayetteville-ar-bike-club-sunday-service%2F" rel="noopener">WhatsApp</a> · <a href="mailto:?subject=Group%20ride%3A%20Sunday%20Service&body=https%3A%2F%2Fcycleforchange.org%2Frides%2Ffayetteville-ar-bike-club-sunday-service%2F">Email</a></span>
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
@@ -138,9 +139,30 @@
 
     <p class="verified gr-verify">
       Last checked 2026-09-15 against <a href="https://bikeclub.bike/rides/" rel="noopener nofollow">source 1</a>, <a href="https://bikeclub.bike/" rel="noopener nofollow">source 2</a>.
-      Schedules change. Confirm with the host before you go. Wrong, gone, or you run this ride?
-      <a href="https://www.instagram.com/cycl_eforchange/" rel="noopener">Tell us on Instagram</a>.
+      Schedules change. Confirm with the host before you go.
     </p>
+
+    <details class="dir-report dir-report--compact" id="fix">
+      <summary>Wrong, gone, or you run this ride? Tell us</summary>
+      <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
+      <input type="hidden" name="form-name" value="ride-report">
+      <input type="hidden" name="page" value="" data-page>
+      <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <fieldset class="dir-report-kind">
+        <legend class="visually-hidden">What is this about?</legend>
+        <label><input type="radio" name="kind" value="new"> <span>New ride</span></label>
+        <label><input type="radio" name="kind" value="changed" checked> <span>Something changed</span></label>
+        <label><input type="radio" name="kind" value="gone"> <span>It's gone</span></label>
+      </fieldset>
+      <label class="lab" for="rr-what-122">Ride name or link</label>
+      <input class="field" id="rr-what-122" name="ride" type="text" required autocomplete="off" value="Sunday Service">
+      <label class="lab" for="rr-details-122">What should we know? <small>Day, time, start, pace, who runs it</small></label>
+      <textarea class="field" id="rr-details-122" name="details" rows="3"></textarea>
+      <label class="lab" for="rr-email-122">Your email <small>Optional. Only if we have a question.</small></label>
+      <input class="field" id="rr-email-122" name="email" type="email" autocomplete="email" inputmode="email">
+      <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
+    </form>
+    </details>
   </article>
 
   <nav class="related gr-related" aria-label="Nearby group rides">
@@ -207,6 +229,8 @@
   </div>
 </footer>
 <script src="/chrome.js" defer></script>
+<script src="/rides/save.js" defer></script>
+<script src="/events/report.js" defer></script>
 <script src="/rides/ride.js" defer></script>
 </body>
 </html>

@@ -99,6 +99,7 @@
       <a class="btn btn--ink gr-primary" href="https://baltimorebikeparty.com/" rel="noopener nofollow">Host's website ↗</a>
         <a class="btn btn--ghost" href="/rides/baltimore-md-baltimore-bike-party/ride.ics" download="baltimore-md-baltimore-bike-party.ics">Add to calendar</a>
         <a class="gr-minor" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Baltimore+Bike+Party+%E2%80%94+Baltimore%2C+MD&amp;dates=20261030T190000%2F20261030T210000&amp;ctz=America%2FNew_York&amp;recur=RRULE%3AFREQ%3DMONTHLY%3BBYDAY%3D-1FR&amp;location=St.+Mary%27s+Park%2C+600+N+Paca+St%2C+Baltimore%2C+MD+21201&amp;details=Last+Friday+of+every+month%2C+gather+6%3A30+pm%2C+roll+7%3A00+pm%0Ahttps%3A%2F%2Fcycleforchange.org%2Frides%2Fbaltimore-md-baltimore-bike-party%2F" rel="noopener">Google Calendar</a>
+      <button type="button" class="btn btn--ghost gr-save-btn" data-save="baltimore-md-baltimore-bike-party" aria-pressed="false"><span aria-hidden="true">☆</span> <span data-save-label>Save</span></button>
       <button type="button" class="btn btn--ghost" id="gr-share" data-title="Baltimore Bike Party — Baltimore, MD">Share</button>
       <span class="gr-share-alt" id="gr-share-alt" hidden><a href="sms:?&body=Baltimore%20Bike%20Party%20%E2%80%94%20https%3A%2F%2Fcycleforchange.org%2Frides%2Fbaltimore-md-baltimore-bike-party%2F">Text it</a> · <a href="https://wa.me/?text=Baltimore%20Bike%20Party%20%E2%80%94%20https%3A%2F%2Fcycleforchange.org%2Frides%2Fbaltimore-md-baltimore-bike-party%2F" rel="noopener">WhatsApp</a> · <a href="mailto:?subject=Group%20ride%3A%20Baltimore%20Bike%20Party&body=https%3A%2F%2Fcycleforchange.org%2Frides%2Fbaltimore-md-baltimore-bike-party%2F">Email</a></span>
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
@@ -138,9 +139,30 @@
 
     <p class="verified gr-verify">
       Last checked 2026-09-15 against <a href="https://baltimorebikeparty.wordpress.com/" rel="noopener nofollow">source 1</a>, <a href="https://localcharm.wiki/Baltimore_Bike_Party" rel="noopener nofollow">source 2</a>, <a href="https://www.bikemore.net/calendar" rel="noopener nofollow">source 3</a>.
-      Schedules change. Confirm with the host before you go. Wrong, gone, or you run this ride?
-      <a href="https://www.instagram.com/cycl_eforchange/" rel="noopener">Tell us on Instagram</a>.
+      Schedules change. Confirm with the host before you go.
     </p>
+
+    <details class="dir-report dir-report--compact" id="fix">
+      <summary>Wrong, gone, or you run this ride? Tell us</summary>
+      <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
+      <input type="hidden" name="form-name" value="ride-report">
+      <input type="hidden" name="page" value="" data-page>
+      <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <fieldset class="dir-report-kind">
+        <legend class="visually-hidden">What is this about?</legend>
+        <label><input type="radio" name="kind" value="new"> <span>New ride</span></label>
+        <label><input type="radio" name="kind" value="changed" checked> <span>Something changed</span></label>
+        <label><input type="radio" name="kind" value="gone"> <span>It's gone</span></label>
+      </fieldset>
+      <label class="lab" for="rr-what-298">Ride name or link</label>
+      <input class="field" id="rr-what-298" name="ride" type="text" required autocomplete="off" value="Baltimore Bike Party">
+      <label class="lab" for="rr-details-298">What should we know? <small>Day, time, start, pace, who runs it</small></label>
+      <textarea class="field" id="rr-details-298" name="details" rows="3"></textarea>
+      <label class="lab" for="rr-email-298">Your email <small>Optional. Only if we have a question.</small></label>
+      <input class="field" id="rr-email-298" name="email" type="email" autocomplete="email" inputmode="email">
+      <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
+    </form>
+    </details>
   </article>
 
   <nav class="related gr-related" aria-label="Nearby group rides">
@@ -207,6 +229,8 @@
   </div>
 </footer>
 <script src="/chrome.js" defer></script>
+<script src="/rides/save.js" defer></script>
+<script src="/events/report.js" defer></script>
 <script src="/rides/ride.js" defer></script>
 </body>
 </html>

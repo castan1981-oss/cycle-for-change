@@ -606,3 +606,9 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .board-s .lede{max-width:40ch}
 .specs--dark{margin-bottom:clamp(32px,5vw,56px);max-width:none}
 @media (min-width:900px){.specs--dark{max-width:none}}
+
+/* —— Pass 4 (Sept 28, 2026): /pledge/ "What you get on the board" (SYN's join-the-club list) —— */
+.perks-h{margin:28px 0 0}
+.perks{margin-top:10px}
+.perks b{font-size:1.1rem;white-space:nowrap}
+.perks span{font-family:var(--display);font-size:.95rem;letter-spacing:0;text-transform:none;text-align:right;max-width:30ch;color:var(--mute);line-height:1.35}
