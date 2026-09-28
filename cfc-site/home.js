@@ -1,5 +1,8 @@
-/* Cycle for Change — the homepage (live since Sept 2026).
-   Loaded by cfc-site/index.html and nothing else. No dependencies.
+/* Cycle for Change — the homepage and the pledge page (Sept 2026).
+   Loaded by cfc-site/index.html and cfc-site/pledge/index.html. No dependencies.
+   Every block below checks for its own elements first, so the same file runs
+   on both pages: the home page has the hero, the vote and the menu; the pledge
+   page has the board, the vote, the rate chips, the ride log and the chart.
 
    It talks to the same back end the live homepage uses and changes none of it:
      /api/strava  →  /.netlify/functions/strava     miles, rides, last rides, chart
@@ -91,23 +94,23 @@
 
   function paintFeed() {
     rollTo(feed.miles);
-    if (feed.rides) $("rideCount").textContent = fmt(feed.rides);
+    if (feed.rides && $("rideCount")) $("rideCount").textContent = fmt(feed.rides);
 
     var daysIn = Math.max(1, Math.floor((Date.parse(feed.updated) - SEASON_START) / DAY) + 1);
-    if (isFinite(daysIn)) $("pace").textContent = (feed.miles / daysIn).toFixed(1);
+    if (isFinite(daysIn) && $("pace")) $("pace").textContent = (feed.miles / daysIn).toFixed(1);
 
     var rides = feed.recent.filter(function (r) { return !r.discipline || r.discipline === "bike"; });
     if (!rides.length) rides = feed.recent;
 
     var last = rides[0];
-    if (last && typeof last.miles === "number") {
+    if (last && typeof last.miles === "number" && $("lastRide")) {
       var w = whenLabel(last.date);
       $("lastRide").textContent = "last ride " + last.miles.toFixed(1) + " mi" + (w ? " · " + w : "");
     }
 
     var log = $("log");
-    while (log.firstChild) log.removeChild(log.firstChild);
-    rides.slice(0, 5).forEach(function (r) {
+    if (log) { while (log.firstChild) log.removeChild(log.firstChild); }
+    if (log) rides.slice(0, 5).forEach(function (r) {
       var li = document.createElement("li");
       var when = document.createElement("span"); when.className = "when"; when.textContent = dayLabel(r.date);
       var title = String(r.title || "").trim();
@@ -153,7 +156,7 @@
     fetchFeed(0).then(function () { polling = false; }, function () { polling = false; });
   }
 
-  $("daysTo").textContent = fmt(Math.max(0, Math.ceil((YEAR_START - Date.now()) / DAY)));
+  if ($("daysTo")) $("daysTo").textContent = fmt(Math.max(0, Math.ceil((YEAR_START - Date.now()) / DAY)));
 
   /* ————————————————————————————————————————————————
      the chart: one series, the line; the last point is the live one
@@ -163,6 +166,7 @@
   var pts = [], geo = null, cur = -1;
 
   function buildPoints() {
+    if (!chart) return;
     pts = feed.chart.map(function (p) { return { ride: Math.round(1 + p[0] / 100 * (feed.rides - 1)), x: p[0], y: p[1] }; });
     var tb = document.querySelector("#chartTable tbody");
     while (tb.firstChild) tb.removeChild(tb.firstChild);
@@ -184,7 +188,7 @@
   }
 
   function draw() {
-    if (!pts.length) return;
+    if (!chart || !pts.length) return;
     var old = chart.querySelector("svg"); if (old) chart.removeChild(old);
     var W = Math.max(280, chart.clientWidth), H = Math.round(Math.min(340, Math.max(210, W * 0.52)));
     var pad = { t: 18, r: 18, b: 30, l: 48 }, sc = scale(pts[pts.length - 1].y);
@@ -230,19 +234,21 @@
     pts.forEach(function (p, i) { var dd = Math.abs(geo.X(p.x) - x); if (dd < bd) { bd = dd; best = i; } });
     return best;
   }
-  chart.addEventListener("pointermove", function (e) { if (geo) show(nearest(e.clientX)); });
-  chart.addEventListener("pointerdown", function (e) { if (geo) show(nearest(e.clientX)); });
-  chart.addEventListener("pointerleave", function (e) { if (e.pointerType === "mouse") hide(); });
-  document.addEventListener("pointerdown", function (e) { if (!chart.contains(e.target)) hide(); });
-  chart.addEventListener("blur", hide);
-  chart.addEventListener("keydown", function (e) {
-    if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
-    e.preventDefault();
-    var i = cur < 0 ? pts.length - 1 : cur + (e.key === "ArrowRight" ? 1 : -1);
-    show(Math.min(pts.length - 1, Math.max(0, i)));
-  });
-  var rz; window.addEventListener("resize", function () { clearTimeout(rz); rz = setTimeout(draw, 120); });
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+  if (chart) {
+    chart.addEventListener("pointermove", function (e) { if (geo) show(nearest(e.clientX)); });
+    chart.addEventListener("pointerdown", function (e) { if (geo) show(nearest(e.clientX)); });
+    chart.addEventListener("pointerleave", function (e) { if (e.pointerType === "mouse") hide(); });
+    document.addEventListener("pointerdown", function (e) { if (!chart.contains(e.target)) hide(); });
+    chart.addEventListener("blur", hide);
+    chart.addEventListener("keydown", function (e) {
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+      e.preventDefault();
+      var i = cur < 0 ? pts.length - 1 : cur + (e.key === "ArrowRight" ? 1 : -1);
+      show(Math.min(pts.length - 1, Math.max(0, i)));
+    });
+    var rz; window.addEventListener("resize", function () { clearTimeout(rz); rz = setTimeout(draw, 120); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+  }
 
   /* first paint from the fallback, then the live read; re-check every minute
      while the tab is visible, the way the live cover does */
@@ -264,15 +270,27 @@
   }
   function paintCalc() {
     var r = document.querySelector('#calc input[name="rate"]:checked');
-    var cents = r ? parseInt(r.value, 10) : 5;
-    var total = cents * GOAL / 100;
-    $("calcEq").textContent = cents + "¢ × 10,000 miles";
-    $("calcTotal").textContent = "$" + fmt(total);
-    $("calcKit").textContent = kitFor(total);
+    var v = r ? r.value : "2", flat = v === "flat", flatRow = $("flatRow");
+    if (flatRow) flatRow.hidden = !flat;
+    var total;
+    if (flat) {
+      total = parseFloat(String($("pflat") ? $("pflat").value : "").replace(/[^0-9.]/g, "")) || 0;
+      $("calcEq").textContent = "A flat pledge";
+      $("calcTotal").textContent = total ? "$" + fmt(total) : "$—";
+    } else {
+      var cents = parseInt(v, 10) || 2;
+      total = cents * GOAL / 100;
+      $("calcEq").textContent = cents + "¢ × 10,000 miles";
+      $("calcTotal").textContent = "$" + fmt(total);
+    }
+    var kit = kitFor(total);
+    $("calcKit").textContent = kit === "—" ? "the thank-you" : kit.toLowerCase();
   }
-  $("calc").addEventListener("change", paintCalc);
-  $("calc").addEventListener("submit", function (e) { e.preventDefault(); });
-  paintCalc();
+  if ($("calc")) {
+    $("calc").addEventListener("change", paintCalc);
+    if ($("pflat")) $("pflat").addEventListener("input", paintCalc);
+    paintCalc();
+  }
 
   /* ————————————————————————————————————————————————
      the board: the newest names, and yours going up as you type it
@@ -283,6 +301,7 @@
   var onBoard = false;
   var pname = $("pname"), slots = $("slots"), form = $("pledgeForm"), okmsg = $("okmsg");
   var pad2 = function (n) { return n < 10 ? "0" + n : String(n); };
+  if (form && pname && slots) {
 
   function row(n, text, open, ago, id) {
     var li = document.createElement("li");
@@ -363,13 +382,14 @@
       })
       .catch(function () { countKnown = false; paintBoard(); });
   }
+  }
 
   /* ————————————————————————————————————————————————
      mile updates: the "waitlist" form, kept for real
      ———————————————————————————————————————————————— */
 
   var emailForm = $("emailForm"), emailOk = $("emailOk");
-  emailForm.addEventListener("submit", function (e) {
+  if (emailForm && emailOk) emailForm.addEventListener("submit", function (e) {
     e.preventDefault();
     var f = $("email");
     if (!f.value || f.value.indexOf("@") < 1) { f.focus(); return; }
@@ -397,6 +417,7 @@
 
   var orgsEl = $("orgs"), voteMsg = $("voteMsg");
   var votedOrg = null, fingerprint = null;
+  if (orgsEl) {
   try {
     fingerprint = localStorage.getItem("cfc-vote-fp");
     if (!fingerprint) { fingerprint = "fp_" + Math.random().toString(36).slice(2) + Date.now().toString(36); localStorage.setItem("cfc-vote-fp", fingerprint); }
@@ -469,7 +490,9 @@
       .then(function (r) { return r.json(); })
       .then(function (d) { if (d && d.orgs) renderOrgs(d.orgs); })
       .catch(function () {});
-
+  }
+  }
+  if (window.fetch) {
     fetch("/.netlify/functions/instagram")
       .then(function (r) { return r.json(); })
       .then(function (d) { var a = $("footInstagram"); if (a) a.href = (d && d.profileUrl) || INSTAGRAM_URL; })
@@ -499,23 +522,24 @@
      nav turns to bone past the film; the tally bar shows up with it
      ———————————————————————————————————————————————— */
 
-  var nav = $("nav"), bar = $("bar"), hero = document.querySelector(".hero"), boardSec = $("board"), foot = document.querySelector(".foot");
-  var pastHero = false, atBoard = false, atFoot = false;
+  var nav = $("nav"), bar = $("bar"), hero = document.querySelector(".hero"), closeSec = document.querySelector(".close"), foot = document.querySelector(".foot");
+  var pastHero = false, atClose = false, atFoot = false;
   function paintBar() {
-    var on = pastHero && !atBoard && !atFoot;
+    if (!bar) return;
+    var on = pastHero && !atClose && !atFoot;
     bar.setAttribute("data-on", on ? "true" : "false");
     bar.setAttribute("aria-hidden", on ? "false" : "true");
     var a = bar.querySelector("a"); if (a) a.tabIndex = on ? 0 : -1;
   }
-  if ("IntersectionObserver" in window) {
+  if (hero && nav && "IntersectionObserver" in window) {
     new IntersectionObserver(function (es) {
       pastHero = !es[0].isIntersecting;
       nav.setAttribute("data-solid", pastHero ? "true" : "false");
       paintBar();
     }, { rootMargin: "-64px 0px 0px 0px" }).observe(hero);
-    new IntersectionObserver(function (es) { atBoard = es[0].isIntersecting; paintBar(); }, { threshold: 0.25 }).observe(boardSec);
-    new IntersectionObserver(function (es) { atFoot = es[0].isIntersecting; paintBar(); }, { threshold: 0.2 }).observe(foot);
-  } else {
+    if (closeSec) new IntersectionObserver(function (es) { atClose = es[0].isIntersecting; paintBar(); }, { threshold: 0.25 }).observe(closeSec);
+    if (foot) new IntersectionObserver(function (es) { atFoot = es[0].isIntersecting; paintBar(); }, { threshold: 0.2 }).observe(foot);
+  } else if (nav) {
     nav.setAttribute("data-solid", "true");
   }
 
@@ -524,6 +548,7 @@
      ———————————————————————————————————————————————— */
 
   var menu = $("menu"), menuBtn = $("menuBtn");
+  if (menu && menuBtn) {
   function setMenu(open, refocus) {
     menu.hidden = !open;
     menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
@@ -542,4 +567,5 @@
     if (e.shiftKey && document.activeElement === first) { e.preventDefault(); lastF.focus(); }
     else if (!e.shiftKey && document.activeElement === lastF) { e.preventDefault(); first.focus(); }
   });
+  }
 })();

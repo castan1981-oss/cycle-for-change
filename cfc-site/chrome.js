@@ -76,7 +76,7 @@
 
   /* —— 4. current section —— */
   var here = location.pathname;
-  var SECTION = { "/rides/": /^\/(rides|tonight)\//, "/field-notes/": /^\/(field-notes|guides|journal)\//, "/resources/": /^\/resources\//, "/events/2027/": /^\/(events|towns)\// };
+  var SECTION = { "/rides/": /^\/(rides|tonight)\//, "/guides/": /^\/(field-notes|guides|journal)\//, "/resources/": /^\/resources\//, "/events/2027/": /^\/(events|towns)\// };
   document.querySelectorAll(".nav-links a").forEach(function (a) {
     var rx = SECTION[a.getAttribute("href")];
     if (rx && rx.test(here)) a.setAttribute("aria-current", "page");

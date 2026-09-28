@@ -19,6 +19,19 @@
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
 
+## The homepage and /pledge/ (Sept 27, 2026 — Pass 2 of the site plan)
+- `cfc-site/index.html` is the door: film hero (the locked line, plain sub, Pledge a mile /
+  Find a group ride), the Free / No card / 100% strip, three paths (Pledge / Ride / Read),
+  How it works, the orgs + vote, the Find-your-people plane, the directory tiles + six 2027
+  dates, Read, five questions, the close. Board, calculator, chart, kit and story left it.
+- `cfc-site/pledge/index.html` is where every "Pledge" button on the site lands: the pledges
+  form (name, email, rate chips 1/2/5/10¢ or Flat + amount, ok-text), the board, the tiers,
+  the vote, the ride log + chart, the full FAQ. It is the link in bio.
+- Both pages load `/home.css` + `/home.js`. home.js guards every block by element, so one
+  file serves both; don't fork it. The `pledges` Netlify form now carries `rate` and `amount`.
+- Nav everywhere: Find a ride · 2027 calendar · Guides · Resources · Pledge (→ /pledge/).
+  The FAQ answers were drafted from the site's own copy; Robert rewrites them in his words.
+
 ## The homepage (Sept 2026 redesign)
 - Same Creosote house tokens. One addition, `--tar` #1A1D18 (asphalt a step darker) for the film
   hero, the ride log and the close; `--paper` #F6F1E7 only for text on the creosote field.

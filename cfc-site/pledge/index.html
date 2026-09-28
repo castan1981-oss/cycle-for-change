@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Pledge a mile — Cycle for Change</title>
+  <meta name="description" content="Get on the board. Pledge a few cents a mile for 10,000 miles in 2027, all on the bike, for queer communities. Free to join, no card today, and you vote where the money goes.">
+  <link rel="canonical" href="https://cycleforchange.org/pledge/">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cycle for Change">
+  <meta property="og:url" content="https://cycleforchange.org/pledge/">
+  <meta property="og:title" content="Pledge a mile — Cycle for Change">
+  <meta property="og:description" content="I do the miles. You decide who they're for. A few cents a mile, free to start, 100% to the orgs.">
+  <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pledge a mile — Cycle for Change">
+  <meta name="twitter:description" content="I do the miles. You decide who they're for. A few cents a mile, free to start, 100% to the orgs.">
+  <meta name="twitter:image" content="https://cycleforchange.org/og-cfc.png">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-180.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/home.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Pledge a mile",
+    "url": "https://cycleforchange.org/pledge/",
+    "description": "Pledge a few cents a mile for 10,000 miles in 2027, all on the bike, for queer communities.",
+    "isPartOf": { "@type": "WebSite", "name": "Cycle for Change", "url": "https://cycleforchange.org/" }
+  }
+  </script>
+</head>
+<body class="page-pledge">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav nav--static" id="nav" data-solid="true">
+  <div class="wrap nav-in">
+    <a class="brand" href="/" aria-label="Cycle for Change home">
+      <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+        <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
+        <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
+        <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
+        <circle cx="60" cy="60" r="6" fill="currentColor"/>
+      </svg>
+      <span class="brand-word">Cycle <i>For</i> Change</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/rides/">Find a ride</a>
+      <a href="/events/2027/">2027 calendar</a>
+      <a href="/guides/">Guides</a>
+      <a href="/resources/">Resources</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn--sm" href="#pledgeForm" aria-current="page">Pledge</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="menu-top">
+    <span class="eyebrow">Cycle for Change</span>
+    <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
+  </div>
+  <ul class="menu-list">
+    <li><a href="/pledge/">Pledge a mile <span>Free</span></a></li>
+    <li><a href="/rides/">Find a ride <span>402</span></a></li>
+    <li><a href="/events/2027/">2027 calendar <span>635</span></a></li>
+    <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
+    <li><a href="/resources/">Resources <span>By age</span></a></li>
+  </ul>
+  <div class="menu-foot">
+    <span class="eyebrow">If it&rsquo;s now</span>
+    <span><b>988</b> call or text, any hour</span>
+    <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
+  </div>
+</div>
+
+<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num num" data-miles>3,067</span>&nbsp;miles since June 1 &middot; 10000 in 2027 &middot; all on the bike</span></p>
+
+<main id="main">
+
+<!-- —— the board: the form, and the names ——
+     Same Netlify form as before (name="pledges"), same fields plus the rate, so
+     names land in the same place and /.netlify/functions/pledges reads them back. -->
+<section class="s board-s" id="board" aria-labelledby="board-h">
+  <div class="wrap board-grid">
+    <div class="board-copy">
+      <p class="eyebrow">The pledge &middot; 2027</p>
+      <h1 class="h1" id="board-h">Get on the board.</h1>
+      <p class="lede">Free to join. No card, no amount today. You put up a few cents a mile, or a flat number, and settle up when the year is done.</p>
+      <p class="p mute">At year-end the people on the board vote. Whatever they pick gets all of it. I don&rsquo;t keep a cent.</p>
+      <form class="form" name="pledges" method="POST" action="/pledge/" data-netlify="true" netlify-honeypot="bot-field" id="pledgeForm">
+        <input type="hidden" name="form-name" value="pledges">
+        <p class="hp" hidden><label>Don&rsquo;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="f">
+          <label class="lab" for="pname">Your name <i>goes on the board</i></label>
+          <input class="field" id="pname" name="name" type="text" maxlength="40" required autocomplete="name">
+        </div>
+        <div class="f">
+          <label class="lab" for="pemail">Email <i>optional</i></label>
+          <input class="field" id="pemail" name="email" type="email" autocomplete="email" inputmode="email">
+        </div>
+        <fieldset class="chips chips--bone" id="calc">
+          <legend>Your pledge</legend>
+          <label class="chip"><input type="radio" name="rate" id="rate1" value="1"><span>1&cent;</span></label>
+          <label class="chip"><input type="radio" name="rate" id="rate2" value="2" checked><span>2&cent;</span></label>
+          <label class="chip"><input type="radio" name="rate" id="rate5" value="5"><span>5&cent;</span></label>
+          <label class="chip"><input type="radio" name="rate" id="rate10" value="10"><span>10&cent;</span></label>
+          <label class="chip"><input type="radio" name="rate" id="rateFlat" value="flat"><span>Flat</span></label>
+        </fieldset>
+        <div class="f" id="flatRow" hidden>
+          <label class="lab" for="pflat">Flat amount <i>any number</i></label>
+          <input class="field" id="pflat" name="amount" type="text" inputmode="numeric" placeholder="$250">
+        </div>
+        <p class="calc-line" aria-live="polite"><span id="calcEq">2&cent; &times; 10,000 miles</span> <b class="num" id="calcTotal">$200</b> <span class="calc-kit">comes with <b id="calcKit">socks</b></span></p>
+        <label class="check" for="poktext"><input type="checkbox" id="poktext" name="ok-text"><span>OK to text me the occasional mile update</span></label>
+        <button class="btn btn--ink" type="submit">Get on it</button>
+        <p class="ok" id="okmsg" role="status" hidden>You&rsquo;re on the board. See you out there.</p>
+      </form>
+    </div>
+    <div class="board rise" aria-label="The board">
+      <div class="board-top"><span class="eyebrow">The board</span><span class="eyebrow"><span id="boardCount">0</span> on it</span></div>
+      <ol class="slots" id="slots">
+        <li><span class="n">01</span><span class="name open" id="slotYou">Your name here</span></li>
+        <li><span class="n">02</span><span class="name open">Open</span></li>
+        <li><span class="n">03</span><span class="name open">Open</span></li>
+        <li><span class="n">04</span><span class="name open">Open</span></li>
+      </ol>
+      <ul class="tiers" aria-label="What a pledge comes with">
+        <li><b class="num">$100</b><span>Two bottles</span></li>
+        <li><b class="num">$200</b><span>Socks</span></li>
+        <li><b class="num">$1,000</b><span>The jersey</span></li>
+        <li><b class="num">$2,000+</b><span>Jersey and bibs</span></li>
+      </ul>
+      <p class="p mute tiers-note">The 10K kit lands in December. Swag ships after the year, with the thank-you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- —— where it goes —— (cards come from /.netlify/functions/votes; these are the fallback) -->
+<section class="s s--creosote on-creosote" id="vote" aria-labelledby="vote-h">
+  <div class="wrap">
+    <div class="orgs-head">
+      <p class="eyebrow">Where it goes &middot; you pick</p>
+      <h2 class="h2" id="vote-h">Pledgers choose the cause.</h2>
+      <p class="lede w38">These are the orgs the miles support. Vote once; change it any time before December 31, 2027. The final tally decides.</p>
+    </div>
+    <div class="orgs" id="orgs" aria-live="polite">
+      <article class="org" data-id="onenten">
+        <h3 class="h3">one&middot;n&middot;ten</h3>
+        <p>Phoenix nonprofit for LGBTQ+ youth ages 11&ndash;24 &mdash; safe spaces, housing, leadership.</p>
+        <div class="org-acts"><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Visit site</a><button class="btn btn--ghost btn--sm" type="button" data-vote="onenten" aria-pressed="false">Vote</button></div>
+      </article>
+      <article class="org" data-id="lalgbtcenter">
+        <h3 class="h3">Los Angeles LGBT Center</h3>
+        <p>Health, housing and advocacy for LGBTQ+ people &mdash; the Center Ride Out beneficiary.</p>
+        <div class="org-acts"><a class="link" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Visit site</a><button class="btn btn--ghost btn--sm" type="button" data-vote="lalgbtcenter" aria-pressed="false">Vote</button></div>
+      </article>
+      <article class="org" data-id="sfaf">
+        <h3 class="h3">San Francisco AIDS Foundation</h3>
+        <p>No-cost HIV, harm-reduction and LGBTQ+ health services &mdash; the Cycle to Zero beneficiary.</p>
+        <div class="org-acts"><a class="link" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Visit site</a><button class="btn btn--ghost btn--sm" type="button" data-vote="sfaf" aria-pressed="false">Vote</button></div>
+      </article>
+    </div>
+    <p class="vote-msg" id="voteMsg" role="status" hidden></p>
+  </div>
+</section>
+
+<!-- —— from the road: the proof —— -->
+<section class="s s--tar" id="feed" aria-labelledby="feed-h">
+  <div class="wrap">
+    <div class="s-head s-head--row">
+      <div class="stack16">
+        <p class="eyebrow">From the road</p>
+        <h2 class="h2" id="feed-h">The last rides.</h2>
+      </div>
+      <a class="link" id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Strava</a>
+    </div>
+    <dl class="specs specs--dark">
+      <div><dt>Miles since June&nbsp;1</dt><dd class="num" data-miles>3,067</dd></div>
+      <div><dt>Rides logged</dt><dd class="num" id="rideCount">85</dd></div>
+      <div><dt>Days to Jan&nbsp;1</dt><dd class="num" id="daysTo">102</dd></div>
+    </dl>
+    <div class="log-grid">
+      <ol class="log" id="log" aria-live="polite"></ol>
+      <div class="chart-card">
+        <div class="chart-head">
+          <p class="eyebrow">Miles since June 1, ride by ride</p>
+        </div>
+        <div class="chart" id="chart" tabindex="0" role="img" aria-label="Line chart of cumulative miles since June 1, ride by ride. Use the left and right arrow keys to read values.">
+          <div class="tip" id="tip" hidden><b id="tipV"></b><span id="tipK"></span></div>
+        </div>
+        <table class="sr" id="chartTable"><caption>Cumulative miles since June 1 by ride number</caption><thead><tr><th scope="col">Ride</th><th scope="col">Miles</th></tr></thead><tbody></tbody></table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- —— questions —— -->
+<section class="s s--bone2" id="questions" aria-labelledby="q-h">
+  <div class="wrap">
+    <div class="s-head"><div class="stack16"><p class="eyebrow">Questions</p><h2 class="h2" id="q-h">Everything people ask.</h2></div></div>
+    <dl class="faq">
+      <div><dt>Do I have to pay now?</dt><dd>No. You pledge now and settle up in January 2028, one email, one link. No card until then.</dd></div>
+      <div><dt>What does a pledge cost?</dt><dd>You pick. At 1&cent; a mile it&rsquo;s $100 for the whole year; at 5&cent; it&rsquo;s $500. Or name a flat number, any size. Same deal.</dd></div>
+      <div><dt>Where does the money go?</dt><dd>Direct to the orgs, 100% of it. The people on the board vote which ones. I don&rsquo;t keep a cent.</dd></div>
+      <div><dt>How do I pay, and to whom?</dt><dd>In January 2028 you get one email with the final miles, your number, and a link to give straight to the org that won the vote. The money never passes through me.</dd></div>
+      <div><dt>Is it tax deductible?</dt><dd>You give directly to the org, so it works the way any gift to them does. They send the receipt.</dd></div>
+      <div><dt>What if you don&rsquo;t make 10,000?</dt><dd>You pay for the miles I rode. Every one of them is on Strava, and the count on this page updates within the hour.</dd></div>
+      <div><dt>Can a team or a company pledge?</dt><dd>Yes. One name on the board, any amount. If you want a logo on the kit, write me.</dd></div>
+      <div><dt>Can I ride with you?</dt><dd>Yes. Six dates on the <a href="/events/2027/">2027 calendar</a> so far, and every ride in the <a href="/rides/">directory</a> is open to anyone.</dd></div>
+      <div><dt>Can I change my vote?</dt><dd>Any time before December 31, 2027. Come back to this page; your pick is remembered in your browser.</dd></div>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="stack" aria-label="Cycle for Change"><span>Cycle</span><span class="for">For</span><span>Change</span></p>
+    <div class="foot-grid">
+      <div class="foot-col">
+        <p class="eyebrow">Ride</p>
+        <a href="/rides/">Group rides</a>
+        <a href="/events/">Events</a>
+        <a href="/events/2027/">2027 calendar</a>
+        <a href="/towns/">Towns</a>
+        <a href="/tonight/">Tonight</a>
+        <a href="/pledge/">Pledge</a>
+      </div>
+      <div class="foot-col">
+        <p class="eyebrow">Read</p>
+        <a href="/field-notes/">Field notes</a>
+        <a href="/guides/">Guides</a>
+        <a href="/journal/the-carrot-cake-theory/">Journal</a>
+        <a href="/resources/">Resources</a>
+      </div>
+      <div class="foot-col">
+        <p class="eyebrow">Follow</p>
+        <a id="footInstagram" href="https://www.instagram.com/cycl_eforchange" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a id="footStrava" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Strava</a>
+      </div>
+      <form class="foot-col signup" name="waitlist" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="emailForm" aria-label="Email signup">
+        <input type="hidden" name="form-name" value="waitlist">
+        <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <p class="eyebrow">Mile updates</p>
+        <label class="lab" for="email">Email</label>
+        <input class="field" id="email" type="email" name="email" required autocomplete="email" inputmode="email">
+        <button class="btn btn--bone btn--sm" type="submit">Notify me</button>
+        <p class="ok" id="emailOk" role="status" aria-live="polite" hidden></p>
+      </form>
+    </div>
+    <div class="foot-crisis">
+      <span class="eyebrow">If it&rsquo;s now</span>
+      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+    </div>
+    <div class="foot-line"><span>Cycle for Change</span><span>Phoenix &middot; bike only</span></div>
+  </div>
+</footer>
+
+<script src="/home.js" defer></script>
+</body>
+</html>

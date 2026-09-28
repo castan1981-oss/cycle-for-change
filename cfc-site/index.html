@@ -58,13 +58,13 @@
       <span class="brand-word">Cycle <i>For</i> Change</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="/rides/">Ride</a>
-      <a href="/field-notes/">Read</a>
+      <a href="/rides/">Find a ride</a>
+      <a href="/events/2027/">2027 calendar</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
-      <a href="/events/2027/">2027</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="#board">Pledge</a>
+      <a class="btn btn--sm" href="/pledge/">Pledge</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -76,10 +76,10 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="#board">Pledge a mile <span>Free</span></a></li>
-    <li><a href="/rides/">Ride <span>402</span></a></li>
-    <li><a href="/events/2027/">2027 <span>635</span></a></li>
-    <li><a href="/field-notes/">Read <span>Notes &middot; guides</span></a></li>
+    <li><a href="/pledge/">Pledge a mile <span>Free</span></a></li>
+    <li><a href="/rides/">Find a ride <span>402</span></a></li>
+    <li><a href="/events/2027/">2027 calendar <span>635</span></a></li>
+    <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>By age</span></a></li>
   </ul>
   <div class="menu-foot">
@@ -102,10 +102,10 @@
     <div class="hero-copy">
       <p class="live"><span class="dot" aria-hidden="true"></span><span>Live &middot; <span id="lastRide" aria-live="polite">miles since June 1</span></span></p>
       <h1 class="h1" id="line"><span>I do the miles.</span> <span>You decide who they&rsquo;re&nbsp;for.</span></h1>
-      <p class="hero-sub">10,000 miles in 2027. Every one on the bike.</p>
+      <p class="hero-sub">In 2027 I ride 10,000 miles, all on the bike, for queer communities. You pledge a few cents a mile, free to start, and vote where the money goes.</p>
       <div class="cta-row">
-        <a class="btn btn--bone" href="#board">Pledge a mile</a>
-        <a class="btn btn--glass" href="#how">How it works</a>
+        <a class="btn btn--bone" href="/pledge/">Pledge a mile</a>
+        <a class="btn btn--glass" href="/rides/">Find a group ride</a>
       </div>
     </div>
     <!-- static numbers are the fallback; /home.js repaints them from the Strava function -->
@@ -126,96 +126,27 @@
   </div>
 </section>
 
-<!-- —— the pledge: the year, then the price —— -->
-<section class="s pledge" id="pledge" aria-labelledby="pledge-h">
-  <div class="wrap pledge-grid">
-    <div>
-      <p class="eyebrow">The pledge &middot; 2027</p>
-      <h2 class="sr" id="pledge-h">10,000 miles in 2027</h2>
-      <div class="year" aria-hidden="true"><p data-ghost="10000">10000</p></div>
-      <div class="pledge-copy">
-        <p class="lede rise w31">10,000 miles in 2027. Every one on the bike. You put up a few cents a mile. When it&rsquo;s done, you vote where the money goes.</p>
-        <ul class="rows rise" aria-label="The math">
-          <li><span class="k">10,000 miles over 365 days</span><span class="v num">27.4<small>a day</small></span></li>
-          <li><span class="k">Training pace since June 1</span><span class="v num"><span id="pace">27.1</span><small>a day</small></span></li>
-          <li><span class="k">Pledge year starts</span><span class="v">Jan 1, 2027</span></li>
-        </ul>
-      </div>
+<!-- —— start here: the three visitors, one door each —— -->
+<section class="s paths-s" id="start" aria-labelledby="start-h">
+  <div class="wrap">
+    <div class="s-head"><h2 class="eyebrow" id="start-h">Start here</h2></div>
+    <div class="paths">
+      <a class="path" href="/pledge/"><span class="eyebrow">I want to</span><span class="h2">Pledge</span><p>A few cents a mile, or a flat number. Nothing today. Your name goes on the board and you vote where the money goes.</p><span class="link">Get on the board</span></a>
+      <a class="path" href="/rides/"><span class="eyebrow">I want to</span><span class="h2">Ride</span><p>402 free group rides, every state, by town. What&rsquo;s rolling tonight near you.</p><span class="link">Find a ride</span></a>
+      <a class="path" href="/guides/"><span class="eyebrow">I want to</span><span class="h2">Read</span><p>Charity-ride guides, field notes from the road, the journal.</p><span class="link">The guides</span></a>
     </div>
-
-    <form class="calc rise" id="calc" aria-labelledby="calc-h">
-      <p class="eyebrow">Do the math</p>
-      <h3 class="h2 h2--calc" id="calc-h">What&rsquo;s a mile worth?</h3>
-      <fieldset class="chips">
-        <legend>Cents a mile</legend>
-        <label class="chip"><input type="radio" name="rate" id="rate1" value="1"><span>1&cent;</span></label>
-        <label class="chip"><input type="radio" name="rate" id="rate2" value="2"><span>2&cent;</span></label>
-        <label class="chip"><input type="radio" name="rate" id="rate5" value="5" checked><span>5&cent;</span></label>
-        <label class="chip"><input type="radio" name="rate" id="rate10" value="10"><span>10&cent;</span></label>
-        <label class="chip"><input type="radio" name="rate" id="rate20" value="20"><span>20&cent;</span></label>
-      </fieldset>
-      <div class="calc-out" aria-live="polite">
-        <p class="calc-eq"><span id="calcEq">5&cent; &times; 10,000 miles</span></p>
-        <p class="calc-total num" id="calcTotal">$500</p>
-      </div>
-      <ul class="rows">
-        <li><span class="k">Due today</span><span class="v">$0</span></li>
-        <li><span class="k">Goes to the orgs</span><span class="v">100%</span></li>
-        <li><span class="k">Comes with</span><span class="v" id="calcKit">Socks</span></li>
-      </ul>
-      <p class="calc-note">Or name a flat amount. Same deal.</p>
-      <a class="btn btn--bone" href="#board">Get on the board</a>
-    </form>
   </div>
 </section>
 
 <!-- —— how it works —— -->
 <section class="s s--bone2" id="how" aria-labelledby="how-h">
   <div class="wrap">
-    <div class="s-head"><h2 class="eyebrow" id="how-h">How it works</h2></div>
+    <div class="s-head s-head--row"><div class="stack16"><p class="eyebrow">How it works</p><h2 class="h2" id="how-h">Three steps. No card today.</h2></div><a class="link" href="/pledge/">Pledge a mile</a></div>
     <ol class="steps">
-      <li class="rise"><span class="n">01</span><h3 class="h3">I ride.</h3><p>10,000 miles in 2027, all of them on the bike. Every ride logs to Strava and lands on this page within the hour.</p></li>
-      <li class="rise"><span class="n">02</span><h3 class="h3">You pledge.</h3><p>A few cents a mile, or a flat amount. Nothing changes hands until the year is over.</p></li>
-      <li class="rise"><span class="n">03</span><h3 class="h3">You decide.</h3><p>At year-end, the board votes. The winning orgs get every dollar. Queer communities, every mile.</p></li>
+      <li class="rise"><span class="n">01</span><h3 class="h3">You pledge.</h3><p>A few cents a mile, or a flat amount. No card, nothing today. Your name goes on the board.</p></li>
+      <li class="rise"><span class="n">02</span><h3 class="h3">I ride.</h3><p>10,000 miles in 2027, all of them on the bike. Every ride logs to Strava and lands on this site within the hour.</p></li>
+      <li class="rise"><span class="n">03</span><h3 class="h3">You decide.</h3><p>At year-end the board votes, you settle up, and the winning orgs get every dollar. Queer communities, every mile.</p></li>
     </ol>
-  </div>
-</section>
-
-<!-- —— the board ——
-     Same Netlify form as the live homepage (name="pledges", same fields), so
-     names land in the same place and /.netlify/functions/pledges reads them back. -->
-<section class="s" id="board" aria-labelledby="board-h">
-  <div class="wrap board-grid">
-    <div class="board-copy">
-      <p class="eyebrow">The pledge</p>
-      <h2 class="h2" id="board-h">Get on the board.</h2>
-      <p class="lede">Free to join. No card, no amount today. You put up a few cents a mile, or a flat number, and settle up when the year is done.</p>
-      <p class="p mute">At year-end the people on the board vote. Whatever they pick gets all of it. I don&rsquo;t keep a cent.</p>
-      <form class="form" name="pledges" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="pledgeForm">
-        <input type="hidden" name="form-name" value="pledges">
-        <p class="hp" hidden><label>Don&rsquo;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-        <div class="f">
-          <label class="lab" for="pname">Your name</label>
-          <input class="field" id="pname" name="name" type="text" maxlength="40" required autocomplete="name">
-        </div>
-        <div class="f">
-          <label class="lab" for="pemail">Email <i>optional</i></label>
-          <input class="field" id="pemail" name="email" type="email" autocomplete="email" inputmode="email">
-        </div>
-        <label class="check" for="poktext"><input type="checkbox" id="poktext" name="ok-text"><span>OK to text me the occasional mile update</span></label>
-        <button class="btn btn--ink" type="submit">Get on it</button>
-        <p class="ok" id="okmsg" role="status" hidden>You&rsquo;re on the board. See you out there.</p>
-      </form>
-    </div>
-    <div class="board rise" aria-label="The board">
-      <div class="board-top"><span class="eyebrow">The board</span><span class="eyebrow"><span id="boardCount">0</span> on it</span></div>
-      <ol class="slots" id="slots">
-        <li><span class="n">01</span><span class="name open" id="slotYou">Your name here</span></li>
-        <li><span class="n">02</span><span class="name open">Open</span></li>
-        <li><span class="n">03</span><span class="name open">Open</span></li>
-        <li><span class="n">04</span><span class="name open">Open</span></li>
-      </ol>
-    </div>
   </div>
 </section>
 
@@ -225,7 +156,7 @@
     <div class="orgs-head">
       <p class="eyebrow">Where it goes &middot; you pick</p>
       <h2 class="h2" id="vote-h">Pledgers choose the cause.</h2>
-      <p class="lede w38">These are the orgs the miles support. Throw one a vote. The final call belongs to whoever is on the board.</p>
+      <p class="lede w38">These are the orgs the miles support. Throw one a vote. The final call belongs to whoever is <a href="/pledge/">on the board</a>.</p>
     </div>
     <div class="orgs" id="orgs" aria-live="polite">
       <article class="org" data-id="onenten">
@@ -318,31 +249,6 @@
   </div>
 </section>
 
-<!-- —— from the road —— -->
-<section class="s s--tar" id="feed" aria-labelledby="feed-h">
-  <div class="wrap">
-    <div class="s-head s-head--row">
-      <div class="stack16">
-        <p class="eyebrow">From the road</p>
-        <h2 class="h2" id="feed-h">The last rides.</h2>
-      </div>
-      <a class="link" id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Strava</a>
-    </div>
-    <div class="log-grid">
-      <ol class="log" id="log" aria-live="polite"></ol>
-      <div class="chart-card">
-        <div class="chart-head">
-          <p class="eyebrow">Miles since June 1, ride by ride</p>
-        </div>
-        <div class="chart" id="chart" tabindex="0" role="img" aria-label="Line chart of cumulative miles since June 1, ride by ride. Use the left and right arrow keys to read values.">
-          <div class="tip" id="tip" hidden><b id="tipV"></b><span id="tipK"></span></div>
-        </div>
-        <table class="sr" id="chartTable"><caption>Cumulative miles since June 1 by ride number</caption><thead><tr><th scope="col">Ride</th><th scope="col">Miles</th></tr></thead><tbody></tbody></table>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- —— read —— -->
 <section class="s" id="read" aria-labelledby="read-h">
   <div class="wrap">
@@ -389,58 +295,17 @@
   </div>
 </section>
 
-<!-- —— the kit —— (typographic on purpose: the kit is still open. Swap in product photos when samples exist.) -->
-<section class="s s--bone2 kit" id="kit" aria-labelledby="kit-h">
-  <div class="wrap kit-grid">
-    <div class="kit-copy">
-      <p class="eyebrow">The kit &middot; December</p>
-      <h2 class="h2" id="kit-h">The 10K kit.</h2>
-      <p class="lede">It comes with the pledge. Final kit lands in December.</p>
-      <ul class="tiers">
-        <li><b class="num">$100</b><span>Two bottles</span></li>
-        <li><b class="num">$200</b><span>Socks</span></li>
-        <li><b class="num">$1,000</b><span>Jersey</span></li>
-        <li><b class="num">$2,000+</b><span>Jersey and bibs</span></li>
-      </ul>
-    </div>
-    <p class="kit-mark" aria-hidden="true">10K</p>
-  </div>
-</section>
-
-<!-- —— story + resources —— -->
-<section class="s" id="story" aria-labelledby="story-h">
+<!-- —— the questions people ask first —— -->
+<section class="s s--bone2" id="questions" aria-labelledby="q-h">
   <div class="wrap">
-    <div class="story-grid">
-      <figure class="rise"><img src="/img/portrait.jpg" alt="Robert, off the bike, by the river." width="768" height="1024" loading="lazy" decoding="async"></figure>
-      <div class="story-copy">
-        <p class="eyebrow">The story</p>
-        <h2 class="h2 h-w15" id="story-h">Queer in the field. Miles where my mouth is.</h2>
-        <p class="lede w40">I came back from a place a lot of people don&rsquo;t. Queer in a field that didn&rsquo;t always leave room for it, and I stayed anyway. Now the miles go to the communities that kept people like me alive.</p>
-        <p class="p mute">Phoenix. Bike only. 10,000 in 2027. You decide who it&rsquo;s for.</p>
-        <p class="sig">Robert &middot; Cycle for Change</p>
-      </div>
-    </div>
-
-    <div class="res" id="resources">
-      <div class="res-grid">
-        <div class="res-copy">
-          <p class="eyebrow">Resources</p>
-          <h2 class="h2 h-w13">Queer mental health, by age.</h2>
-          <p class="lede w38">Plain lists of who to call and where to look, checked against the sources they cite. Not advice. Doors.</p>
-          <ul class="res-list">
-            <li><a href="/resources/teens/">Teens</a></li>
-            <li><a href="/resources/young-adults/">Young adults</a></li>
-            <li><a href="/resources/adults/">Adults</a></li>
-            <li><a href="/resources/">The full list</a></li>
-          </ul>
-        </div>
-        <div class="crisis">
-          <p class="eyebrow">If it&rsquo;s now</p>
-          <p><b>988</b> Suicide &amp; Crisis Lifeline. Call or text 988, any hour.</p>
-          <p><b>Trevor Project</b> for LGBTQ young people. Call <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678.</p>
-        </div>
-      </div>
-    </div>
+    <div class="s-head s-head--row"><div class="stack16"><p class="eyebrow">Questions</p><h2 class="h2" id="q-h">The ones people ask first.</h2></div><a class="link" href="/pledge/#questions">All of them</a></div>
+    <dl class="faq">
+      <div><dt>Do I have to pay now?</dt><dd>No. You pledge now and settle up in January 2028, one email, one link. No card until then.</dd></div>
+      <div><dt>Where does the money go?</dt><dd>Direct to the orgs, 100% of it. The people on the board vote which ones. I don&rsquo;t keep a cent.</dd></div>
+      <div><dt>What does a pledge cost?</dt><dd>A few cents a mile. At 1&cent; that&rsquo;s $100 for the year. Or name a flat number. Same deal.</dd></div>
+      <div><dt>Can I ride with you?</dt><dd>Yes. Six dates on the calendar so far, and every group ride in the directory is open to anyone.</dd></div>
+      <div><dt>What if you don&rsquo;t make 10,000?</dt><dd>You pay for the miles I rode. Every one of them is on Strava.</dd></div>
+    </dl>
   </div>
 </section>
 
@@ -452,7 +317,7 @@
     <h2 class="h2 h-w12" id="close-h">Queer communities, every mile.</h2>
     <p class="lede soft">Free to join. No card today. 100% to the orgs.</p>
     <div class="cta-row">
-      <a class="btn btn--bone" href="#board">Pledge a mile</a>
+      <a class="btn btn--bone" href="/pledge/">Pledge a mile</a>
       <a class="btn btn--ghost" href="#vote">See the orgs</a>
     </div>
   </div>
@@ -471,7 +336,7 @@
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
-        <a href="#board">Pledge</a>
+        <a href="/pledge/">Pledge</a>
       </div>
       <div class="foot-col">
         <p class="eyebrow">Read</p>
@@ -508,7 +373,7 @@
 <!-- —— the tally, everywhere (phone) —— -->
 <div class="bar" id="bar" data-on="false" aria-hidden="true">
   <div class="bar-tally"><span class="dot dot--bone" aria-hidden="true"></span><b class="num" data-miles>3,067</b><span>mi since<br>June 1</span></div>
-  <a class="btn btn--bone" href="#board" tabindex="-1">Pledge a mile</a>
+  <a class="btn btn--bone" href="/pledge/" tabindex="-1">Pledge a mile</a>
 </div>
 
 <script src="/home.js" defer></script>

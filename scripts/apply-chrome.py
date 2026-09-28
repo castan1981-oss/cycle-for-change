@@ -28,7 +28,8 @@ SECTION_STYLES = {  # stylesheets after /chrome.css, by top-level folder
     "journal": ["/styles.css"], "tonight": ["/tonight/tonight.css"], "": ["/styles.css"],
 }
 ANCHORS = {'href="/#tally"': 'href="/"', 'href="/#rides"': 'href="/#ride"',
-           'href="/#disciplines"': 'href="/#pledge"', 'href="#top"': 'href="/"'}
+           'href="/#disciplines"': 'href="/pledge/"', 'href="/#pledge"': 'href="/pledge/"',
+           'href="/#board"': 'href="/pledge/"', 'href="/#vote"': 'href="/pledge/#vote"', 'href="#top"': 'href="/"'}
 CLASSES = [(r'class="btn btn-y"', 'class="btn btn--bone"'), (r'class="btn btn-solid"', 'class="btn btn--ink"'),
            (r'class="btn btn-dark"', 'class="btn btn--ghost"'), (r'class="btn-link"', 'class="link"'),
            (r'class="btn"', 'class="btn btn--ghost"')]
