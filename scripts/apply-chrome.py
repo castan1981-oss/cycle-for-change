@@ -12,7 +12,9 @@ What it does to each page
     section's own stylesheets) through CHROME.head() so it matches the generators
   - the top <header> (+ any old tally bar) -> the shared header, menu and tally line
   - <footer> -> the shared footer (988 + Trevor Project, mile updates signup)
-  - the end-of-page CTA (.fn-cta) -> the shared pledge block (CHROME.PLEDGE)
+  - the end-of-page CTA (.fn-cta) -> the shared pledge block (CHROME.PLEDGE);
+    resources pages get the crisis line first and a quiet "why this page is here"
+    note instead of the pledge block
   - button classes -> the homepage's (.btn--bone / .btn--ink / .btn--ghost / .link)
   - homepage anchors that no longer exist -> ones that do
 """
@@ -87,6 +89,26 @@ def chrome(s: str, page) -> str:
         s = re.sub(a, b, s)
     for x in RETIRED_INLINE:
         s = s.replace(x, "")
+    if "/resources/" in str(page) or page.parent.name == "resources" or "resources" in page.parts:
+        s = resources(s)
+    return s
+
+
+WHY = '''<div class="fn-why">
+    <p class="eyebrow">Why this page is here</p>
+    <p>Riding is part of what kept me steady before I had the words for anything. Cycle for Change raises money for the kinds of orgs on this page: in 2027 I ride 10,000 miles and the people who pledge vote where it goes. That&rsquo;s the connection, and it&rsquo;s the only ask here. <a href="/pledge/">About the pledge</a></p>
+  </div>'''
+
+
+def resources(s: str) -> str:
+    """Resources pages break two rules on purpose: the crisis line comes before the
+    intro, and the page closes with a quiet note instead of the pledge block."""
+    m = re.search(r'\s*<aside class="fn-crisis">.*?</aside>', s, re.S)
+    if m and "</h1>" in s and s.index("</h1>") < m.start():
+        aside = m.group(0).strip()
+        s = s[:m.start()] + s[m.end():]
+        s = s.replace("</h1>", "</h1>\n        " + aside, 1)
+    s = re.sub(r'<section class="pledge" aria-labelledby="pledge-h">.*?</section>', WHY, s, count=1, flags=re.S)
     return s
 
 

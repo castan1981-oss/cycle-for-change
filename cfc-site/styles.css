@@ -110,3 +110,34 @@ main{display:block}
 .fn-pillar>.pledge{margin-inline:max(var(--gut),calc((100% - var(--maxw)) / 2 + var(--gut)))}
 @media (max-width:639px){.fn-post>.pledge,.fn-pillar>.pledge{margin-inline:0}}
 .fn-pillar>.fn-note,.fn-pillar>.fn-back{max-width:none;padding:0;margin-inline:max(var(--gut),calc((100% - var(--maxw)) / 2 + var(--gut)))}
+
+/* —— field notes index + "From the road" strips: photo cards —— */
+.fn-index{padding-top:clamp(40px,6vw,64px)}
+.fn-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:clamp(18px,2.4vw,32px) clamp(16px,1.8vw,28px)}
+.fn-card{display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit}
+.fn-card figure{margin:0;aspect-ratio:4/5;max-width:100%;overflow:hidden;background:var(--bone-2)}
+.fn-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+@media (hover:hover){.fn-card:hover img{transform:scale(1.035)}.fn-card:hover .fn-title{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}}
+.fn-card .fn-chip{margin-top:4px}
+.fn-card .fn-title{font-weight:800;font-size:clamp(1.3rem,.9vw+1.08rem,1.7rem);line-height:1.06;letter-spacing:-.02em}
+.fn-card .fn-dek{margin:0;color:var(--mute);font-size:15px;line-height:1.42;max-width:36ch}
+.fn-more{margin:24px 0 0}
+.fn-road{padding-top:clamp(40px,6vw,72px)}
+
+/* the six 2027 rides, a note the week after each */
+.fn-coming-head{margin-top:clamp(44px,6vw,72px)}
+.fn-coming{list-style:none;margin:0;padding:0;border-top:1px solid var(--asphalt)}
+.fn-coming a{display:grid;grid-template-columns:96px minmax(0,1fr);gap:2px 16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.fn-coming .d{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);grid-row:1 / span 2}
+.fn-coming .n{font-weight:700;font-size:1.1rem;letter-spacing:-.01em}
+.fn-coming .m{font-size:14px;color:var(--mute)}
+@media (min-width:700px){.fn-coming a{grid-template-columns:110px minmax(0,1.2fr) minmax(0,1fr)}.fn-coming .d{grid-row:auto}.fn-coming .m{text-align:right}}
+@media (hover:hover){.fn-coming a:hover .n{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}}
+
+/* —— resources: the crisis line in the headline band, and the quiet close —— */
+.fn-pillar-head .fn-crisis{margin:22px 0 0;background:var(--bone);max-width:56ch}
+.fn-why{max-width:var(--read);margin:clamp(40px,6vw,64px) auto 0;padding:24px var(--gutter) 0;border-top:1px solid var(--asphalt);display:flex;flex-direction:column;gap:10px}
+.fn-why .eyebrow{margin:0}
+.fn-why p{margin:0;color:var(--asphalt);line-height:1.55}
+.fn-pillar>.fn-why{margin-inline:max(var(--gut),calc((100% - var(--maxw)) / 2 + var(--gut)));padding-inline:0;max-width:56ch}
+@media (max-width:639px){.fn-pillar>.fn-why{margin-inline:0;padding-inline:var(--gutter)}}

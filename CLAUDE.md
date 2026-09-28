@@ -42,6 +42,15 @@
   Share until the browser has no share sheet.
 - Calendar: the "I'm riding" filter, and a strip of the twelve events that have their own page.
 
+## The story pages (Sept 28, 2026 — Pass 4 of the site plan, the last)
+- Field notes index: photo cards (`.fn-cards` / `.fn-card`, 4:5 images from /img/) and the
+  "Coming in 2027" list of the six rides, hand-kept like the homepage's. Guides hub ends with
+  a "From the road" strip of the same cards.
+- Resources pages break two rules on purpose (apply-chrome.py does it): the crisis line sits
+  right under the h1, and the page closes with the quiet `.fn-why` note, not the pledge block.
+- `email/mile-updates.html` is the mile-updates email template (table-based, inline styles,
+  {{placeholders}} listed at the top). Send from whatever reads the Netlify "waitlist" form.
+
 ## The homepage (Sept 2026 redesign)
 - Same Creosote house tokens. One addition, `--tar` #1A1D18 (asphalt a step darker) for the film
   hero, the ride log and the close; `--paper` #F6F1E7 only for text on the creosote field.

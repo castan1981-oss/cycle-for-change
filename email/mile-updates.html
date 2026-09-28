@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<title>Mile updates — Cycle for Change</title>
+<!--
+  Cycle for Change — "Mile updates" email template (Creosote house).
+  Table-based, inline styles, no web fonts (email clients swap them anyway):
+  Helvetica/Arial stands in for Outfit, Courier for Space Mono.
+  Fill the {{placeholders}} and send from whatever list tool reads the Netlify
+  "waitlist" form (export it as CSV from the Netlify Forms tab).
+
+  {{month}}            September 2026
+  {{miles}}            3,067
+  {{rides}}            85
+  {{last_ride}}        Sat, Sep 26 · 48 mi · South Mountain
+  {{days_to_jan}}      96
+  {{note_title}}       The Paradise Valley Loop
+  {{note_url}}         https://cycleforchange.org/field-notes/paradise-valley-loop/
+  {{note_dek}}         Just under 40 quiet miles…
+  {{next_ride}}        Tour de Palm Springs · Feb 6, 2027
+  {{board_count}}      128
+  {{unsubscribe_url}}  from the list tool
+-->
+<style>
+  @media (max-width:600px){ .col{display:block!important;width:100%!important} .pad{padding-left:20px!important;padding-right:20px!important} .num{font-size:52px!important} }
+</style>
+</head>
+<body style="margin:0;padding:0;background:#E8DFD0;">
+<div style="display:none;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#E8DFD0;">{{miles}} miles since June 1. {{last_ride}}.</div>
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#E8DFD0;">
+<tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;width:100%;">
+
+  <!-- masthead -->
+  <tr><td class="pad" style="padding:8px 32px 18px;font-family:Helvetica,Arial,sans-serif;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr>
+      <td style="font-family:Helvetica,Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;color:#2A2E28;">Cycle <span style="color:#5C6B4A;">For</span> Change</td>
+      <td align="right" style="font-family:Courier,monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#5F5E56;">Mile updates &middot; {{month}}</td>
+    </tr></table>
+  </td></tr>
+
+  <!-- the count -->
+  <tr><td class="pad" style="background:#1A1D18;padding:36px 32px 32px;">
+    <p style="margin:0 0 10px;font-family:Courier,monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#C4B7A2;"><span style="display:inline-block;width:8px;height:8px;border-radius:8px;background:#C6FF00;vertical-align:middle;margin-right:8px;"></span>Live &middot; miles since June 1</p>
+    <p class="num" style="margin:0;font-family:Helvetica,Arial,sans-serif;font-size:72px;line-height:0.9;font-weight:bold;letter-spacing:-3px;color:#E8DFD0;">{{miles}}</p>
+    <p style="margin:18px 0 0;font-family:Helvetica,Arial,sans-serif;font-size:17px;line-height:1.5;color:#E8DFD0;">{{rides}} rides logged. Last one: {{last_ride}}. {{days_to_jan}} days to January 1, when the 10,000 starts.</p>
+  </td></tr>
+
+  <!-- the note -->
+  <tr><td class="pad" style="background:#E8DFD0;padding:36px 32px 8px;">
+    <p style="margin:0 0 8px;font-family:Courier,monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#5F5E56;">From the road</p>
+    <p style="margin:0 0 8px;font-family:Helvetica,Arial,sans-serif;font-size:28px;line-height:1.05;font-weight:bold;letter-spacing:-1px;color:#2A2E28;"><a href="{{note_url}}" style="color:#2A2E28;text-decoration:none;">{{note_title}}</a></p>
+    <p style="margin:0 0 14px;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;color:#5F5E56;">{{note_dek}}</p>
+    <p style="margin:0;"><a href="{{note_url}}" style="font-family:Courier,monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#2A2E28;text-decoration:none;border-bottom:1px solid #5C6B4A;padding-bottom:3px;">Read the note &rarr;</a></p>
+  </td></tr>
+
+  <!-- next up + the board -->
+  <tr><td class="pad" style="padding:28px 32px 8px;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr>
+      <td class="col" width="50%" valign="top" style="padding:16px 16px 16px 0;border-top:1px solid #2A2E28;font-family:Helvetica,Arial,sans-serif;">
+        <p style="margin:0 0 6px;font-family:Courier,monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#5F5E56;">Next up</p>
+        <p style="margin:0;font-size:17px;line-height:1.4;font-weight:bold;color:#2A2E28;">{{next_ride}}</p>
+        <p style="margin:6px 0 0;"><a href="https://cycleforchange.org/events/2027/" style="font-size:14px;color:#5C6B4A;">The 2027 calendar</a></p>
+      </td>
+      <td class="col" width="50%" valign="top" style="padding:16px 0 16px 16px;border-top:1px solid #2A2E28;font-family:Helvetica,Arial,sans-serif;">
+        <p style="margin:0 0 6px;font-family:Courier,monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#5F5E56;">The board</p>
+        <p style="margin:0;font-size:17px;line-height:1.4;font-weight:bold;color:#2A2E28;">{{board_count}} names on it</p>
+        <p style="margin:6px 0 0;"><a href="https://cycleforchange.org/pledge/" style="font-size:14px;color:#5C6B4A;">Add yours, or your vote</a></p>
+      </td>
+    </tr></table>
+  </td></tr>
+
+  <!-- the pledge -->
+  <tr><td class="pad" style="padding:20px 32px 0;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#2A2E28;"><tr><td style="padding:28px 28px 26px;font-family:Helvetica,Arial,sans-serif;">
+      <p style="margin:0 0 6px;font-family:Helvetica,Arial,sans-serif;font-size:44px;line-height:0.9;font-weight:bold;letter-spacing:-2px;color:#E8DFD0;">10000</p>
+      <p style="margin:0 0 10px;font-size:19px;line-height:1.2;font-weight:bold;letter-spacing:-0.5px;color:#E8DFD0;">I do the miles. You decide who they&rsquo;re for.</p>
+      <p style="margin:0 0 18px;font-size:15px;line-height:1.5;color:#E1D7C5;">In 2027 I ride 10,000 miles, all on the bike, every one of them for queer communities. You pledge a few cents a mile and vote where the money goes. Nothing today.</p>
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr>
+        <td style="background:#E8DFD0;"><a href="https://cycleforchange.org/pledge/" style="display:inline-block;padding:14px 22px;font-family:Courier,monospace;font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#2A2E28;text-decoration:none;">Pledge a mile</a></td>
+        <td style="padding-left:14px;"><a href="https://cycleforchange.org/pledge/#vote" style="font-family:Courier,monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#E8DFD0;text-decoration:none;border-bottom:1px solid #E8DFD0;padding-bottom:3px;">See the orgs</a></td>
+      </tr></table>
+    </td></tr></table>
+  </td></tr>
+
+  <!-- footer -->
+  <tr><td class="pad" style="padding:28px 32px 20px;font-family:Courier,monospace;font-size:11px;line-height:1.7;letter-spacing:1px;text-transform:uppercase;color:#5F5E56;">
+    <p style="margin:0 0 10px;"><a href="https://cycleforchange.org/rides/" style="color:#2A2E28;text-decoration:none;">Find a ride</a> &nbsp;&middot;&nbsp; <a href="https://cycleforchange.org/events/2027/" style="color:#2A2E28;text-decoration:none;">2027 calendar</a> &nbsp;&middot;&nbsp; <a href="https://cycleforchange.org/guides/" style="color:#2A2E28;text-decoration:none;">Guides</a> &nbsp;&middot;&nbsp; <a href="https://www.instagram.com/cycl_eforchange" style="color:#2A2E28;text-decoration:none;">Instagram</a></p>
+    <p style="margin:0 0 10px;text-transform:none;letter-spacing:0;font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#2A2E28;">If it&rsquo;s now: <b>988</b> call or text, any hour &middot; <b>Trevor Project</b> 1-866-488-7386 or text START to 678-678</p>
+    <p style="margin:0;">Cycle for Change &middot; Phoenix &middot; bike only &nbsp;&middot;&nbsp; <a href="{{unsubscribe_url}}" style="color:#5F5E56;">Unsubscribe</a></p>
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>
