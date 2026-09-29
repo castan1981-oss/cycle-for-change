@@ -79,7 +79,7 @@
     <li><a href="/rides/">Find a ride <span>402</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>635</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
-    <li><a href="/resources/">Resources <span>By age</span></a></li>
+    <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
@@ -88,7 +88,7 @@
   </div>
 </div>
 
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num num" data-miles>3,067</span>&nbsp;miles since June 1 &middot; 10000 in 2027 &middot; all on the bike</span></p>
+<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num num" data-miles>3,067</span>&nbsp;miles since June 1 &middot; 10,000 in 2027 &middot; all on the bike</span></p>
 
 <main id="main">
 
@@ -101,7 +101,7 @@
       <p class="eyebrow">The pledge &middot; 2027</p>
       <h1 class="h1" id="board-h">Get on the board.</h1>
       <p class="lede">Free to join. No card, no amount today. You put up a few cents a mile, or a flat number, and settle up when the year is done.</p>
-      <p class="p mute">At year-end the people on the board vote. Whatever they pick gets all of it. I don&rsquo;t keep a cent.</p>
+      <p class="p mute">Your name on the board. A vote on where the money goes. Mile updates by email. At year-end the board votes, and whatever wins gets all of it. I don&rsquo;t keep a cent.</p>
       <form class="form" name="pledges" method="POST" action="/pledge/" data-netlify="true" netlify-honeypot="bot-field" id="pledgeForm">
         <input type="hidden" name="form-name" value="pledges">
         <p class="hp" hidden><label>Don&rsquo;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
@@ -110,26 +110,61 @@
           <input class="field" id="pname" name="name" type="text" maxlength="40" required autocomplete="name">
         </div>
         <div class="f">
-          <label class="lab" for="pemail">Email <i>optional</i></label>
-          <input class="field" id="pemail" name="email" type="email" autocomplete="email" inputmode="email">
+          <label class="lab" for="pemail">Email</label>
+          <input class="field" id="pemail" name="email" type="email" required autocomplete="email" inputmode="email" aria-describedby="pemailHint">
+          <p class="hint" id="pemailHint">The only way I can send you the mile updates and the one link in January. Nothing else, ever.</p>
         </div>
         <fieldset class="chips chips--bone" id="calc">
-          <legend>Your pledge</legend>
-          <label class="chip"><input type="radio" name="rate" id="rate1" value="1"><span>1&cent;</span></label>
-          <label class="chip"><input type="radio" name="rate" id="rate2" value="2" checked><span>2&cent;</span></label>
-          <label class="chip"><input type="radio" name="rate" id="rate5" value="5"><span>5&cent;</span></label>
-          <label class="chip"><input type="radio" name="rate" id="rate10" value="10"><span>10&cent;</span></label>
-          <label class="chip"><input type="radio" name="rate" id="rateFlat" value="flat"><span>Flat</span></label>
+          <legend>Your pledge, per mile</legend>
+          <label class="chip"><input type="radio" name="rate" id="rate1" value="1"><span>1&cent;<small>$100</small></span></label>
+          <label class="chip"><input type="radio" name="rate" id="rate2" value="2" checked><span>2&cent;<small>$200</small></span></label>
+          <label class="chip"><input type="radio" name="rate" id="rate5" value="5"><span>5&cent;<small>$500</small></span></label>
+          <label class="chip"><input type="radio" name="rate" id="rate10" value="10"><span>10&cent;<small>$1,000</small></span></label>
+          <label class="chip"><input type="radio" name="rate" id="rateFlat" value="flat"><span>Flat<small>any</small></span></label>
         </fieldset>
         <div class="f" id="flatRow" hidden>
           <label class="lab" for="pflat">Flat amount <i>any number</i></label>
           <input class="field" id="pflat" name="amount" type="text" inputmode="numeric" placeholder="$250">
         </div>
+        <div class="f" id="capRow">
+          <label class="lab" for="pcap">Cap it <i>optional</i></label>
+          <input class="field" id="pcap" name="cap" type="text" inputmode="numeric" placeholder="$150" aria-describedby="pcapHint">
+          <p class="hint" id="pcapHint">The most you&rsquo;ll pay, whatever the miles do.</p>
+        </div>
         <p class="calc-line" aria-live="polite"><span id="calcEq">2&cent; &times; 10,000 miles</span> <b class="num" id="calcTotal">$200</b> <span class="calc-kit">comes with <b id="calcKit">socks</b></span></p>
-        <label class="check" for="poktext"><input type="checkbox" id="poktext" name="ok-text"><span>OK to text me the occasional mile update</span></label>
-        <button class="btn btn--ink" type="submit">Get on it</button>
-        <p class="ok" id="okmsg" role="status" hidden>You&rsquo;re on the board. See you out there.</p>
+        <fieldset class="orgpick">
+          <legend>Who are your miles for? <i>change it any time</i></legend>
+          <label><input type="radio" name="org" value="onenten"><span>one&middot;n&middot;ten</span><small>LGBTQ+ youth, Phoenix.</small></label>
+          <label><input type="radio" name="org" value="lalgbtcenter"><span>Los Angeles LGBT Center</span><small>Health, housing and advocacy.</small></label>
+          <label><input type="radio" name="org" value="sfaf"><span>San Francisco AIDS Foundation</span><small>HIV, harm reduction and LGBTQ+ health.</small></label>
+          <label><input type="radio" name="org" value="later"><span>Decide later</span><small>Come back any time before Dec 31, 2027.</small></label>
+        </fieldset>
+        <div class="f">
+          <label class="lab" for="pphone">Mobile <i>optional, for the occasional text</i></label>
+          <input class="field" id="pphone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+        </div>
+        <label class="check" for="poktext" id="okTextRow" hidden><input type="checkbox" id="poktext" name="ok-text"><span>OK to text me the occasional mile update</span></label>
+        <button class="btn btn--ink" type="submit">Get on the board</button>
+        <p class="form-note">Free. No card. You settle up with the org you pick after Dec 31, 2027. Change or cancel any time.</p>
+        <p class="ok" id="okmsg" role="status" hidden></p>
       </form>
+      <!-- the thank-you state: the form is replaced by this once Netlify has the pledge (Pass 5) -->
+      <div class="done" id="done" hidden tabindex="-1" aria-live="polite">
+        <p class="eyebrow">You&rsquo;re on the board</p>
+        <h2 class="h2" id="doneH">See you out there.</h2>
+        <p class="p" id="doneLine">2&cent; a mile. If I ride all 10,000, that&rsquo;s $200 to whoever wins the vote.</p>
+        <ol>
+          <li>Mile updates about once a month, from me.</li>
+          <li>Your vote counts at year-end. Change it any time before Dec 31, 2027.</li>
+          <li>January 2028: one email with the final miles, your number, and one link to the org. The money never touches me.</li>
+        </ol>
+        <div class="done-acts">
+          <button class="btn btn--ink btn--sm" type="button" id="shareBtn">Share the pledge</button>
+          <a class="link" href="/rides/">Find a group ride</a>
+        </div>
+        <p class="fine" id="shareMsg" role="status" hidden></p>
+        <p class="fine">Need to change something? Send the form again with the same name and I&rsquo;ll keep the latest.</p>
+      </div>
     </div>
     <div class="board rise" aria-label="The board">
       <div class="board-top"><span class="eyebrow">The board</span><span class="eyebrow"><span id="boardCount">0</span> on it</span></div>
@@ -157,36 +192,7 @@
   </div>
 </section>
 
-<!-- —— where it goes —— (cards come from /.netlify/functions/votes; these are the fallback) -->
-<section class="s s--creosote on-creosote" id="vote" aria-labelledby="vote-h">
-  <div class="wrap">
-    <div class="orgs-head">
-      <p class="eyebrow">Where it goes &middot; you pick</p>
-      <h2 class="h2" id="vote-h">Pledgers choose the cause.</h2>
-      <p class="lede w38">These are the orgs the miles support. Vote once; change it any time before December 31, 2027. The final tally decides.</p>
-    </div>
-    <div class="orgs" id="orgs" aria-live="polite">
-      <article class="org" data-id="onenten">
-        <h3 class="h3">one&middot;n&middot;ten</h3>
-        <p>Phoenix nonprofit for LGBTQ+ youth ages 11&ndash;24 &mdash; safe spaces, housing, leadership.</p>
-        <div class="org-acts"><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Visit site</a><button class="btn btn--ghost btn--sm" type="button" data-vote="onenten" aria-pressed="false">Vote</button></div>
-      </article>
-      <article class="org" data-id="lalgbtcenter">
-        <h3 class="h3">Los Angeles LGBT Center</h3>
-        <p>Health, housing and advocacy for LGBTQ+ people &mdash; the Center Ride Out beneficiary.</p>
-        <div class="org-acts"><a class="link" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Visit site</a><button class="btn btn--ghost btn--sm" type="button" data-vote="lalgbtcenter" aria-pressed="false">Vote</button></div>
-      </article>
-      <article class="org" data-id="sfaf">
-        <h3 class="h3">San Francisco AIDS Foundation</h3>
-        <p>No-cost HIV, harm-reduction and LGBTQ+ health services &mdash; the Cycle to Zero beneficiary.</p>
-        <div class="org-acts"><a class="link" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Visit site</a><button class="btn btn--ghost btn--sm" type="button" data-vote="sfaf" aria-pressed="false">Vote</button></div>
-      </article>
-    </div>
-    <p class="vote-msg" id="voteMsg" role="status" hidden></p>
-  </div>
-</section>
-
-<!-- —— from the road: the proof —— -->
+<!-- —— from the road: the proof (Pass 5: straight under the form) —— -->
 <section class="s s--tar" id="feed" aria-labelledby="feed-h">
   <div class="wrap">
     <div class="s-head s-head--row">
@@ -216,20 +222,57 @@
   </div>
 </section>
 
-<!-- —— questions —— -->
+<!-- —— where it goes —— (cards come from /.netlify/functions/votes; these are the fallback.
+     The pick is made in the form above; these buttons are how you change it.) -->
+<section class="s s--creosote on-creosote" id="vote" aria-labelledby="vote-h">
+  <div class="wrap">
+    <div class="orgs-head">
+      <p class="eyebrow">Where it goes &middot; you pick</p>
+      <h2 class="h2" id="vote-h">Pledgers choose the cause.</h2>
+      <p class="lede w38">These are the orgs the miles support. You pick one when you pledge, and you can change it here any time before December 31, 2027. The final tally decides.</p>
+    </div>
+    <div class="orgs" id="orgs" aria-live="polite">
+      <article class="org" data-id="onenten">
+        <h3 class="h3">one&middot;n&middot;ten</h3>
+        <p>Phoenix nonprofit for LGBTQ+ youth ages 11&ndash;24 &mdash; safe spaces, housing, leadership.</p>
+        <div class="org-acts"><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Visit site</a><button class="btn btn--ghost btn--sm" type="button" data-vote="onenten" aria-pressed="false" aria-label="Vote for one·n·ten">Vote</button></div>
+      </article>
+      <article class="org" data-id="lalgbtcenter">
+        <h3 class="h3">Los Angeles LGBT Center</h3>
+        <p>Health, housing and advocacy for LGBTQ+ people &mdash; the Center Ride Out beneficiary.</p>
+        <div class="org-acts"><a class="link" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Visit site</a><button class="btn btn--ghost btn--sm" type="button" data-vote="lalgbtcenter" aria-pressed="false" aria-label="Vote for Los Angeles LGBT Center">Vote</button></div>
+      </article>
+      <article class="org" data-id="sfaf">
+        <h3 class="h3">San Francisco AIDS Foundation</h3>
+        <p>No-cost HIV, harm-reduction and LGBTQ+ health services &mdash; the Cycle to Zero beneficiary.</p>
+        <div class="org-acts"><a class="link" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Visit site</a><button class="btn btn--ghost btn--sm" type="button" data-vote="sfaf" aria-pressed="false" aria-label="Vote for San Francisco AIDS Foundation">Vote</button></div>
+      </article>
+    </div>
+    <p class="vote-msg" id="voteMsg" role="status" hidden></p>
+  </div>
+</section>
+
+<!-- —— questions (Pass 5: two groups, Money and The ride) —— -->
 <section class="s s--bone2" id="questions" aria-labelledby="q-h">
   <div class="wrap">
     <div class="s-head"><div class="stack16"><p class="eyebrow">Questions</p><h2 class="h2" id="q-h">Everything people ask.</h2></div></div>
+    <h3 class="eyebrow faq-h">The money</h3>
     <dl class="faq">
       <div><dt>Do I have to pay now?</dt><dd>No. You pledge now and settle up in January 2028, one email, one link. No card until then.</dd></div>
-      <div><dt>What does a pledge cost?</dt><dd>You pick. At 1&cent; a mile it&rsquo;s $100 for the whole year; at 5&cent; it&rsquo;s $500. Or name a flat number, any size. Same deal.</dd></div>
+      <div><dt>What does a pledge cost?</dt><dd>You pick. At 1&cent; a mile it&rsquo;s $100 for the whole year; at 5&cent; it&rsquo;s $500. Or name a flat number, any size. You can cap it, too. Same deal.</dd></div>
       <div><dt>Where does the money go?</dt><dd>Direct to the orgs, 100% of it. The people on the board vote which ones. I don&rsquo;t keep a cent.</dd></div>
-      <div><dt>How do I pay, and to whom?</dt><dd>In January 2028 you get one email with the final miles, your number, and a link to give straight to the org that won the vote. The money never passes through me.</dd></div>
+      <div><dt>Does any of it go to Robert?</dt><dd>No. Not a dollar, not for the bike, not for the kit. The money never passes through me.</dd></div>
+      <div><dt>How do I pay, and to whom?</dt><dd>In January 2028 you get one email with the final miles, your number, and a link to give straight to the org that won the vote.</dd></div>
       <div><dt>Is it tax deductible?</dt><dd>You give directly to the org, so it works the way any gift to them does. They send the receipt.</dd></div>
       <div><dt>What if you don&rsquo;t make 10,000?</dt><dd>You pay for the miles I rode. Every one of them is on Strava, and the count on this page updates within the hour.</dd></div>
-      <div><dt>Can a team or a company pledge?</dt><dd>Yes. One name on the board, any amount. If you want a logo on the kit, write me.</dd></div>
+      <div><dt>Can I change or cancel my pledge?</dt><dd>Yes, any time before the year ends. Send the form again with the same name and I&rsquo;ll keep the latest, or reply to any mile update.</dd></div>
+      <div><dt>Can a team or a company pledge?</dt><dd>Yes. One name on the board, any amount. If you want a logo on the kit, reply to a mile update and we&rsquo;ll talk.</dd></div>
+    </dl>
+    <h3 class="eyebrow faq-h">The ride</h3>
+    <dl class="faq">
       <div><dt>Can I ride with you?</dt><dd>Yes. Six dates on the <a href="/events/2027/">2027 calendar</a> so far, and every ride in the <a href="/rides/">directory</a> is open to anyone.</dd></div>
       <div><dt>What are ride days?</dt><dd>The day before each of my six 2027 events, an easy open ride in that town for anyone on the board. No-drop, no sign-up fee. Where and when goes out by email a few weeks ahead.</dd></div>
+      <div><dt>Do I have to be queer to be part of this?</dt><dd>No. Anyone can pledge, anyone can ride. The money goes to queer-serving orgs. That&rsquo;s the point.</dd></div>
       <div><dt>Can I change my vote?</dt><dd>Any time before December 31, 2027. Come back to this page; your pick is remembered in your browser.</dd></div>
     </dl>
   </div>
@@ -249,6 +292,7 @@
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
         <a href="/pledge/">Pledge</a>
+        <a href="/pledge/#questions">Where the money goes</a>
       </div>
       <div class="foot-col">
         <p class="eyebrow">Read</p>
@@ -266,9 +310,10 @@
         <input type="hidden" name="form-name" value="waitlist">
         <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <p class="eyebrow">Mile updates</p>
+        <p class="note">About once a month. The miles, the money, where it went.</p>
         <label class="lab" for="email">Email</label>
         <input class="field" id="email" type="email" name="email" required autocomplete="email" inputmode="email">
-        <button class="btn btn--bone btn--sm" type="submit">Notify me</button>
+        <button class="btn btn--bone btn--sm" type="submit">Send me mile updates</button>
         <p class="ok" id="emailOk" role="status" aria-live="polite" hidden></p>
       </form>
     </div>

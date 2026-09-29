@@ -78,14 +78,14 @@ exports.handler = async (event) => {
     if (!ORGS.find((o) => o.id === orgId)) {
       return { statusCode: 400, headers, body: JSON.stringify({ error: "unknown org" }) };
     }
-    if (data.voters[fingerprint]) {
-      return {
-        statusCode: 429,
-        headers,
-        body: JSON.stringify({ error: "already voted", votedFor: data.voters[fingerprint] }),
-      };
+    // One vote per browser, and it can move (Pass 5): the FAQ promises "change it any
+    // time before December 31, 2027". Same org again is a no-op; a different org moves
+    // the vote. `changed` tells the page which happened.
+    const prev = data.voters[fingerprint];
+    if (prev === orgId) {
+      return { statusCode: 200, headers, body: JSON.stringify({ ...buildResponse(data, orgId), changed: false }) };
     }
-
+    if (prev) data.votes[prev] = Math.max(0, (data.votes[prev] || 0) - 1);
     data.votes[orgId] = (data.votes[orgId] || 0) + 1;
     data.voters[fingerprint] = orgId;
     await saveStore(data);

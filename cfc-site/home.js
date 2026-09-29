@@ -109,8 +109,9 @@
     }
 
     var log = $("log");
+    var logMax = log && log.getAttribute("data-max") ? parseInt(log.getAttribute("data-max"), 10) || 5 : 5;
     if (log) { while (log.firstChild) log.removeChild(log.firstChild); }
-    if (log) rides.slice(0, 5).forEach(function (r) {
+    if (log) rides.slice(0, logMax).forEach(function (r) {
       var li = document.createElement("li");
       var when = document.createElement("span"); when.className = "when"; when.textContent = dayLabel(r.date);
       var title = String(r.title || "").trim();
@@ -268,47 +269,70 @@
     if (total >= 100) return "Two bottles";
     return "—";
   }
-  function paintCalc() {
+  var money = function (el) { return parseFloat(String(el ? el.value : "").replace(/[^0-9.]/g, "")) || 0; };
+  /* the pledge as chosen right now: {flat, cents, total, cap, org} */
+  function pledgeNow() {
     var r = document.querySelector('#calc input[name="rate"]:checked');
-    var v = r ? r.value : "2", flat = v === "flat", flatRow = $("flatRow");
-    if (flatRow) flatRow.hidden = !flat;
-    var total;
-    if (flat) {
-      total = parseFloat(String($("pflat") ? $("pflat").value : "").replace(/[^0-9.]/g, "")) || 0;
+    var v = r ? r.value : "2", flat = v === "flat";
+    var cents = flat ? 0 : (parseInt(v, 10) || 2);
+    var total = flat ? money($("pflat")) : cents * GOAL / 100;
+    var cap = flat ? 0 : money($("pcap"));
+    var o = document.querySelector('.orgpick input[name="org"]:checked');
+    return { flat: flat, cents: cents, total: total, cap: cap, org: o ? o.value : "later" };
+  }
+  function paintCalc() {
+    var p = pledgeNow(), flatRow = $("flatRow"), capRow = $("capRow");
+    if (flatRow) flatRow.hidden = !p.flat;
+    if (capRow) capRow.hidden = p.flat;
+    var pays = p.total;
+    if (p.flat) {
       $("calcEq").textContent = "A flat pledge";
-      $("calcTotal").textContent = total ? "$" + fmt(total) : "$—";
+      $("calcTotal").textContent = p.total ? "$" + fmt(p.total) : "$—";
+    } else if (p.cap && p.cap < p.total) {
+      pays = p.cap;
+      $("calcEq").textContent = p.cents + "¢ × 10,000 miles, capped at";
+      $("calcTotal").textContent = "$" + fmt(p.cap);
     } else {
-      var cents = parseInt(v, 10) || 2;
-      total = cents * GOAL / 100;
-      $("calcEq").textContent = cents + "¢ × 10,000 miles";
-      $("calcTotal").textContent = "$" + fmt(total);
+      $("calcEq").textContent = p.cents + "¢ × 10,000 miles";
+      $("calcTotal").textContent = "$" + fmt(p.total);
     }
-    var kit = kitFor(total);
+    var kit = kitFor(pays);
     $("calcKit").textContent = kit === "—" ? "the thank-you" : kit.toLowerCase();
   }
   if ($("calc")) {
     $("calc").addEventListener("change", paintCalc);
     if ($("pflat")) $("pflat").addEventListener("input", paintCalc);
+    if ($("pcap")) $("pcap").addEventListener("input", paintCalc);
     paintCalc();
+  }
+  /* the text opt-in only appears once there's a number to text (Pass 5) */
+  var phone = $("pphone"), okTextRow = $("okTextRow");
+  if (phone && okTextRow) {
+    var showOk = function () { okTextRow.hidden = phone.value.replace(/\D/g, "").length < 7; };
+    phone.addEventListener("input", showOk);
+    showOk();
   }
 
   /* ————————————————————————————————————————————————
      the board: the newest names, and yours going up as you type it
      ———————————————————————————————————————————————— */
 
-  var names = [];           /* [{name, ago}], newest first, from the pledges function */
+  var names = [];           /* [{name, ago, org}], newest first, from the pledges function */
   var countKnown = true;    /* false while the function can't read names back (no NETLIFY_API_TOKEN) */
   var onBoard = false;
+  var castVote = null;      /* set by the ballot block below; the pledge form calls it on submit */
+  var ORG_NAMES = { onenten: "one·n·ten", lalgbtcenter: "Los Angeles LGBT Center", sfaf: "San Francisco AIDS Foundation" };
   var pname = $("pname"), slots = $("slots"), form = $("pledgeForm"), okmsg = $("okmsg");
   var pad2 = function (n) { return n < 10 ? "0" + n : String(n); };
   if (form && pname && slots) {
 
-  function row(n, text, open, ago, id) {
+  function row(n, text, open, ago, id, org) {
     var li = document.createElement("li");
     var a = document.createElement("span"); a.className = "n"; a.textContent = n === "" ? "" : pad2(n);
     var b = document.createElement("span"); b.className = "name" + (open ? " open" : ""); b.textContent = text; if (id) b.id = id;
     li.appendChild(a); li.appendChild(b);
     if (ago) { var c = document.createElement("span"); c.className = "ago"; c.textContent = ago; li.appendChild(c); }
+    if (org && ORG_NAMES[org]) { var d = document.createElement("span"); d.className = "org"; d.textContent = "for " + ORG_NAMES[org]; li.appendChild(d); }
     return li;
   }
 
@@ -332,7 +356,7 @@
       return;
     }
     /* newest first, counting down; the rest are one line */
-    names.slice(0, 4).forEach(function (p, i) { slots.appendChild(row(names.length - i, p.name, false, p.ago)); });
+    names.slice(0, 4).forEach(function (p, i) { slots.appendChild(row(names.length - i, p.name, false, p.ago, null, p.org)); });
     if (names.length > 4) {
       var more = document.createElement("li"); more.className = "more";
       more.textContent = "+ " + fmt(names.length - 4) + " more";
@@ -347,12 +371,48 @@
     you.classList.toggle("open", !v);
   });
 
+  /* the pledge in one sentence, for the thank-you and the share line */
+  function pledgeLine(p, orgId) {
+    var to = ORG_NAMES[orgId] ? ORG_NAMES[orgId] : "whoever wins the vote";
+    if (p.flat) return (p.total ? "$" + fmt(p.total) + ", flat" : "A flat pledge") + ", to " + to + ".";
+    var s = p.cents + "¢ a mile. If I ride all 10,000, that’s $" + fmt(p.total);
+    if (p.cap && p.cap < p.total) s += ", capped at $" + fmt(p.cap) + ",";
+    return s + " to " + to + ".";
+  }
+
+  function showDone(p, orgId) {
+    var done = $("done");
+    if (!done) { okmsg.textContent = "You’re on the board. See you out there."; okmsg.hidden = false; return; }
+    var n = countKnown ? names.length + 1 : 0;
+    $("doneH").textContent = (n ? "#" + n + ". " : "") + "See you out there.";
+    $("doneLine").textContent = pledgeLine(p, orgId);
+    form.hidden = true;
+    done.hidden = false;
+    try { done.focus({ preventScroll: false }); } catch (_) { done.focus(); }
+  }
+
+  var shareBtn = $("shareBtn"), shareMsg = $("shareMsg");
+  if (shareBtn) shareBtn.addEventListener("click", function () {
+    var text = "I’m on the board. Robert rides 10,000 miles in 2027 for queer communities; you pledge a few cents a mile, free to start, and vote where the money goes.";
+    var url = "https://cycleforchange.org/pledge/";
+    if (navigator.share) { navigator.share({ title: "Cycle for Change", text: text, url: url }).catch(function () {}); return; }
+    var say = function (m) { if (shareMsg) { shareMsg.textContent = m; shareMsg.hidden = false; } };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text + " " + url).then(function () { say("Copied. Paste it anywhere."); }, function () { say(url); });
+    else say(url);
+  });
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var data = new FormData(form);
     var name = String(data.get("name") || "").trim().slice(0, 40);
     if (!name) { pname.focus(); return; }
+    var email = String(data.get("email") || "").trim();
+    if (!email || email.indexOf("@") < 1) { var pe = $("pemail"); if (pe) pe.focus(); return; }
+    /* "OK to text me" needs a number to text */
+    if (data.get("ok-text") && String(data.get("phone") || "").replace(/\D/g, "").length < 7) { if ($("pphone")) $("pphone").focus(); return; }
     if (onBoard) return;
+    var p = pledgeNow();
+    if (!data.get("org")) data.set("org", "later");
     var btn = form.querySelector("button[type=submit]");
     btn.disabled = true;
     fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(data).toString() })
@@ -360,8 +420,9 @@
         if (!res.ok) throw new Error("bad status");
         onBoard = true;
         paintBoard();
-        okmsg.textContent = "You’re on the board. See you out there.";
-        okmsg.hidden = false;
+        showDone(p, p.org);
+        /* the pick in the form is the vote (one per browser); the ballot below is how you change it */
+        if (castVote && ORG_NAMES[p.org]) castVote(p.org);
       })
       .catch(function () {
         btn.disabled = false;
@@ -424,14 +485,18 @@
     votedOrg = localStorage.getItem("cfc-voted-org");
   } catch (_) { fingerprint = fingerprint || "session_" + Date.now(); }
 
+  /* the vote can move (Pass 5): the other buttons stay live, so a pick can change */
   function paintVotes() {
     var btns = orgsEl.querySelectorAll("[data-vote]");
     for (var i = 0; i < btns.length; i++) {
       var mine = votedOrg && btns[i].getAttribute("data-vote") === votedOrg;
-      btns[i].disabled = !!votedOrg && !mine;
+      btns[i].disabled = false;
       btns[i].setAttribute("aria-pressed", mine ? "true" : "false");
-      btns[i].textContent = mine ? "Your pick ✓" : "Vote";
+      btns[i].textContent = mine ? "Your pick ✓" : (votedOrg ? "Switch" : "Vote");
     }
+    /* the form's radio follows the ballot, so both say the same thing */
+    var radio = votedOrg ? document.querySelector('.orgpick input[name="org"][value="' + votedOrg + '"]') : null;
+    if (radio && !radio.checked && !document.querySelector('.orgpick input[name="org"]:checked')) radio.checked = true;
   }
 
   function renderOrgs(list) {
@@ -444,7 +509,7 @@
       var acts = document.createElement("div"); acts.className = "org-acts";
       var a = document.createElement("a"); a.className = "link"; a.textContent = "Visit site";
       if (/^https?:\/\//i.test(o.url || "")) { a.href = o.url; a.target = "_blank"; a.rel = "noopener noreferrer"; }
-      var b = document.createElement("button"); b.className = "btn btn--ghost btn--sm"; b.type = "button"; b.setAttribute("data-vote", o.id); b.textContent = "Vote";
+      var b = document.createElement("button"); b.className = "btn btn--ghost btn--sm"; b.type = "button"; b.setAttribute("data-vote", o.id); b.setAttribute("aria-label", "Vote for " + o.name); b.textContent = "Vote";
       acts.appendChild(a); acts.appendChild(b);
       art.appendChild(h); art.appendChild(p); art.appendChild(acts);
       orgsEl.appendChild(art);
@@ -458,30 +523,37 @@
   }
 
   function setVoted(id, announce) {
+    var moved = votedOrg && votedOrg !== id;
     votedOrg = id;
     try { localStorage.setItem("cfc-voted-org", id); } catch (_) {}
     paintVotes();
     if (announce) {
-      var n = orgName(id);
-      voteMsg.textContent = n ? "You voted for " + n + ". Final tally closes at year-end." : "Vote recorded.";
+      var n = orgName(id) || ORG_NAMES[id];
+      voteMsg.textContent = n ? (moved ? "Moved. " : "") + "You voted for " + n + ". Final tally closes at year-end." : "Vote recorded.";
       voteMsg.hidden = false;
     }
   }
 
-  orgsEl.addEventListener("click", function (e) {
-    var btn = e.target.closest ? e.target.closest("[data-vote]") : null;
-    if (!btn || votedOrg || btn.disabled) return;
-    var id = btn.getAttribute("data-vote");
-    btn.disabled = true;
+  /* one POST, used by the buttons here and by the pledge form's org pick */
+  function sendVote(id, btn, announce) {
+    if (!id || votedOrg === id) return;
+    if (btn) btn.disabled = true;
     fetch("/.netlify/functions/votes", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ orgId: id, fingerprint: fingerprint }) })
       .then(function (r) { return r.json(); })
       .then(function (d) {
         if (d && d.error === "already voted") { setVoted(d.votedFor || id, false); return; }
-        if (d && d.error) { btn.disabled = false; return; }
+        if (d && d.error) { if (btn) btn.disabled = false; return; }
         if (d && d.orgs) renderOrgs(d.orgs);
-        setVoted(id, true);
+        setVoted(id, announce);
       })
-      .catch(function () { btn.disabled = false; });
+      .catch(function () { if (btn) btn.disabled = false; });
+  }
+  castVote = function (id) { sendVote(id, null, false); };
+
+  orgsEl.addEventListener("click", function (e) {
+    var btn = e.target.closest ? e.target.closest("[data-vote]") : null;
+    if (!btn || btn.disabled) return;
+    sendVote(btn.getAttribute("data-vote"), btn, true);
   });
 
   paintVotes();
@@ -500,36 +572,66 @@
   }
 
   /* ————————————————————————————————————————————————
-     film: plays if the phone lets it, the poster holds if not
+     film (Pass 5): the phone gets the still. On desktop the film starts after
+     the page has loaded, only without reduced motion, and can be paused —
+     video above the ask is the best-documented conversion killer, and a
+     moving hero needs a pause control (WCAG 2.2.2).
      ———————————————————————————————————————————————— */
 
-  var vid = $("heroVid");
-  if (vid && !reduce) {
+  var vid = $("heroVid"), filmBtn = $("filmBtn");
+  var wide = !!(window.matchMedia && matchMedia("(min-width: 900px)").matches);
+  var filmOn = false;
+  function setFilm(on) {
+    filmOn = on;
+    if (on) { var q = vid.play(); if (q && q.catch) q.catch(function () {}); } else vid.pause();
+    if (filmBtn) { filmBtn.textContent = on ? "Pause the film" : "Play the film"; filmBtn.setAttribute("aria-pressed", on ? "false" : "true"); }
+  }
+  if (vid && !reduce && wide) {
     vid.muted = true;
-    var pl = vid.play();
-    if (pl && pl.catch) pl.catch(function () {});
-    vid.addEventListener("error", function () { vid.hidden = true; }, true);
-    /* don't burn battery on a film nobody can see */
-    if ("IntersectionObserver" in window) {
-      new IntersectionObserver(function (es) {
-        if (es[0].isIntersecting) { var q = vid.play(); if (q && q.catch) q.catch(function () {}); }
-        else vid.pause();
-      }, { threshold: 0.05 }).observe(vid);
-    }
-  } else if (vid) { vid.removeAttribute("loop"); }
+    vid.addEventListener("error", function () { vid.hidden = true; if (filmBtn) filmBtn.hidden = true; }, true);
+    var startFilm = function () {
+      vid.preload = "auto";
+      setFilm(true);
+      if (filmBtn) filmBtn.setAttribute("data-ready", "true");
+      /* don't burn cycles on a film nobody can see */
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (es) {
+          if (!filmOn) return;
+          if (es[0].isIntersecting) { var q = vid.play(); if (q && q.catch) q.catch(function () {}); }
+          else vid.pause();
+        }, { threshold: 0.05 }).observe(vid);
+      }
+    };
+    if (document.readyState === "complete") setTimeout(startFilm, 300);
+    else window.addEventListener("load", function () { setTimeout(startFilm, 300); });
+    if (filmBtn) filmBtn.addEventListener("click", function () { setFilm(!filmOn); });
+  } else if (vid) { vid.removeAttribute("loop"); vid.removeAttribute("autoplay"); }
 
   /* ————————————————————————————————————————————————
      nav turns to bone past the film; the tally bar shows up with it
      ———————————————————————————————————————————————— */
 
   var nav = $("nav"), bar = $("bar"), hero = document.querySelector(".hero"), closeSec = document.querySelector(".close"), foot = document.querySelector(".foot");
-  var pastHero = false, atClose = false, atFoot = false;
+  var pastHero = false, atClose = false, atFoot = false, scrollingDown = false;
   function paintBar() {
     if (!bar) return;
-    var on = pastHero && !atClose && !atFoot;
+    var on = pastHero && !atClose && !atFoot && !scrollingDown;
     bar.setAttribute("data-on", on ? "true" : "false");
     bar.setAttribute("aria-hidden", on ? "false" : "true");
     var a = bar.querySelector("a"); if (a) a.tabIndex = on ? 0 : -1;
+  }
+  /* Pass 5: the bar steps aside while you scroll down and comes back when you scroll up */
+  if (bar) {
+    var lastY = window.pageYOffset || 0, ticking = false;
+    window.addEventListener("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        var y = window.pageYOffset || 0, dy = y - lastY;
+        if (Math.abs(dy) > 8) { scrollingDown = dy > 0; lastY = y; paintBar(); }
+        ticking = false;
+      });
+    }, { passive: true });
   }
   if (hero && nav && "IntersectionObserver" in window) {
     new IntersectionObserver(function (es) {

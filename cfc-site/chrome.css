@@ -12,6 +12,8 @@
   --paper:#F6F1E7;
   --dust:#C4B7A2;
   --creosote:#5C6B4A;
+  --creosote-ink:#4A5639;   /* creosote a step darker: small text on bone clears 4.5:1 (Pass 5) */
+  --dust-deep:#8A7C66;      /* dust a step darker: a hairline that has to be seen */
   --asphalt:#2A2E28;
   --tar:#1A1D18;
   --volt:#C6FF00;
@@ -144,7 +146,8 @@ p{margin:0 0 1em}
 .brand svg{width:26px;height:26px;flex:0 0 auto}
 .brand-word{font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
 .brand-word i{font-style:normal;color:var(--creosote)}
-.nav-links{display:none;gap:clamp(18px,2.4vw,36px);font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+/* Pass 5: nav labels read at body size, same as the homepage */
+.nav-links{display:none;gap:clamp(18px,2.4vw,32px);font-family:var(--display);font-size:15px;font-weight:600;letter-spacing:0}
 .nav-links a{text-decoration:none;padding:8px 0;border-bottom:1px solid transparent}
 .nav-links a[aria-current="page"]{border-bottom-color:currentColor}
 @media (hover:hover){.nav-links a:hover{border-bottom-color:currentColor}}
@@ -235,6 +238,7 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .signup .field{border-bottom-color:var(--bone);margin-bottom:10px}
 .signup .field:focus{box-shadow:0 1px 0 var(--bone)}
 .signup .btn{align-self:flex-start}
+.signup .note{margin:0 0 6px;font-size:14.5px;line-height:1.4;color:var(--dust);max-width:32ch}
 .foot-crisis{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;margin-top:clamp(36px,5vw,64px);padding-top:16px;border-top:1px solid var(--line-d);font-size:15px}
 .foot-crisis .eyebrow{color:var(--dust)}
 .foot-crisis b{font-weight:800}

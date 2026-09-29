@@ -110,7 +110,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
     <li><a href="/rides/">Find a ride ${n(RIDE_COUNT)}</a></li>
     <li><a href="/events/2027/">2027 calendar ${n(CAL_COUNT)}</a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
-    <li><a href="/resources/">Resources <span>By age</span></a></li>
+    <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
@@ -118,7 +118,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;miles since June 1 &middot; 10000 in 2027 &middot; all on the bike</span></p>`;
+<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;miles since June 1 &middot; 10,000 in 2027 &middot; all on the bike</span></p>`;
 
 const FOOTER = `<footer class="foot site-foot">
   <div class="wrap">
@@ -132,6 +132,7 @@ const FOOTER = `<footer class="foot site-foot">
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
         <a href="/pledge/">Pledge</a>
+        <a href="/pledge/#questions">Where the money goes</a>
       </div>
       <div class="foot-col">
         <p class="eyebrow">Read</p>
@@ -149,9 +150,10 @@ const FOOTER = `<footer class="foot site-foot">
         <input type="hidden" name="form-name" value="waitlist">
         <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <p class="eyebrow">Mile updates</p>
+        <p class="note">About once a month. The miles, the money, where it went.</p>
         <label class="lab" for="email">Email</label>
         <input class="field" id="email" type="email" name="email" required autocomplete="email" inputmode="email">
-        <button class="btn btn--bone btn--sm" type="submit">Notify me</button>
+        <button class="btn btn--bone btn--sm" type="submit">Send me mile updates</button>
         <p class="ok" id="emailOk" role="status" aria-live="polite" hidden></p>
       </form>
     </div>
