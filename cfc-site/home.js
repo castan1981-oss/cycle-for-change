@@ -436,7 +436,7 @@
     fetch("/.netlify/functions/pledges")
       .then(function (r) { return r.json(); })
       .then(function (d) {
-        if (!d || d.configured === false || d.error) { countKnown = false; paintBoard(); return; }
+        if (!d || d.configured === false || d.error || d.form === false) { countKnown = false; paintBoard(); return; }
         if (!d.names || !d.names.length) return;
         names = d.names.filter(function (p) { return p && p.name; });
         paintBoard();
