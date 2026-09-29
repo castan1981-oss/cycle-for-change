@@ -13,6 +13,7 @@
   --dust:#C4B7A2;
   --creosote:#5C6B4A;
   --creosote-ink:#4A5639;   /* creosote a step darker: small text on bone clears 4.5:1 (Pass 5) */
+  --creosote-lift:#7E8F6A;  /* creosote a step lighter: the green FOR on asphalt clears 3:1 for large type (Pass 6) */
   --dust-deep:#8A7C66;      /* dust a step darker: a hairline that has to be seen */
   --asphalt:#2A2E28;
   --tar:#1A1D18;
@@ -145,7 +146,7 @@ p{margin:0 0 1em}
 .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
 .brand svg{width:26px;height:26px;flex:0 0 auto}
 .brand-word{font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
-.brand-word i{font-style:normal;color:var(--creosote)}
+.brand-word i{font-style:normal;color:var(--creosote-ink)}
 /* Pass 5: nav labels read at body size, same as the homepage */
 .nav-links{display:none;gap:clamp(18px,2.4vw,32px);font-family:var(--display);font-size:15px;font-weight:600;letter-spacing:0}
 .nav-links a{text-decoration:none;padding:8px 0;border-bottom:1px solid transparent}
@@ -211,7 +212,7 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .foot{margin-top:var(--sec);background:var(--asphalt);color:var(--bone);padding-block:clamp(48px,7vw,96px) 32px}
 .stack{margin:0 0 clamp(40px,6vw,80px);font-weight:800;font-size:clamp(4.4rem,21.4vw,13rem);line-height:.84;letter-spacing:-.035em;text-transform:uppercase}
 .stack span{display:block}
-.stack .for{color:var(--creosote)}
+.stack .for{color:var(--creosote-lift)}
 .foot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 16px}
 .foot-col{display:flex;flex-direction:column;gap:2px}
 .foot-col .eyebrow{color:var(--dust);margin-bottom:10px}

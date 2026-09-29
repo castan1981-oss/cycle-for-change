@@ -20,6 +20,7 @@
   --volt:#C6FF00;
   --mute:#5F5E56;
   --creosote-ink:#4A5639;   /* creosote a step darker: small text on bone clears 4.5:1 (creosote itself is 4.35) */
+  --creosote-lift:#7E8F6A;  /* creosote a step lighter: the green FOR on asphalt clears 3:1 for large type (Pass 6) */
   --dust-deep:#8A7C66;      /* dust a step darker: a hairline that has to be seen (3:1 on bone) */
   --line:rgba(42,46,40,.18);
   --line-d:rgba(232,223,208,.2);
@@ -173,7 +174,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
 .brand svg{width:26px;height:26px;flex:0 0 auto}
 .brand-word{font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
-.brand-word i{color:var(--creosote)}
+.brand-word i{color:var(--creosote-ink)}
 .brand-word i{font-style:normal}
 /* Pass 5: nav labels read at body size (a tiny, low-salience nav is the one people don't use) */
 .nav-links{display:none;gap:clamp(18px,2.4vw,32px);font-family:var(--display);font-size:15px;font-weight:600;letter-spacing:0}
@@ -435,14 +436,14 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 
 /* —— where it goes: the one colour field on the page —— */
 .orgs-head{display:grid;gap:20px;margin-bottom:clamp(28px,4vw,56px)}
-.orgs-head .eyebrow{color:rgba(246,241,231,.78)}
+.orgs-head .eyebrow{color:var(--paper)}
 .orgs{display:grid;gap:0}
 .org{display:flex;flex-direction:column;gap:10px;padding:24px 0;border-top:1px solid rgba(246,241,231,.34)}
 .org p{margin:0;max-width:44ch;flex:1 0 auto}
 .org-acts{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:10px}
 .vote-msg{margin:20px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
 .orgs-foot{margin-top:clamp(24px,3vw,40px);display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
-.orgs-foot .p{color:rgba(246,241,231,.82);font-size:15.5px;max-width:44ch}
+.orgs-foot .p{color:rgba(246,241,231,.95);font-size:15.5px;max-width:44ch}
 .org .btn[aria-pressed="true"]{background:var(--paper);border-color:var(--paper);color:var(--creosote);opacity:1}
 .org .btn[disabled]{opacity:.45;cursor:default}
 @media (min-width:900px){
@@ -585,7 +586,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .foot{background:var(--asphalt);color:var(--bone);padding-block:clamp(48px,7vw,96px) 32px}
 .stack{margin:0 0 clamp(40px,6vw,80px);font-weight:800;font-size:clamp(4.4rem,21.4vw,13rem);line-height:.84;letter-spacing:-.035em;text-transform:uppercase}
 .stack span{display:block}
-.stack .for{color:var(--creosote)}
+.stack .for{color:var(--creosote-lift)}
 .foot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 16px}
 .foot-col{display:flex;flex-direction:column;gap:2px}
 .foot-col .eyebrow{color:var(--dust);margin-bottom:10px}
