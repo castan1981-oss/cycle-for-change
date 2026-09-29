@@ -15,22 +15,24 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'cfc-site'
 BONE = np.array([0xE8, 0xDF, 0xD0]) / 255.0       # highlight end of the duotone
 SHADOW = np.array([0x3A, 0x3E, 0x36]) / 255.0     # warm asphalt, a step above tar, so blacks never go dead
 
-# output, source, options. Sources with no original (card-south, card-pv) are re-lifted from the graded file.
+# output, source, options. Robert's picks (Sept 29): crew = hero, portrait = the Pledge door, mural = the close.
+# card-south / card-pv have no color original; photos/*-duo.jpg are the old duotone files, re-lifted.
 MANIFEST = [
     ('img/hero.jpg',         'photos/crew.jpg',        dict(max=1200, up=True)),
     ('img/hero-wide.jpg',    'photos/crew.jpg',        dict(max=1400, up=True, crop='7:5', focus=(0.5, 0.46))),
-    ('img/people.jpg',       'photos/haus-road.jpg',   dict(max=1600)),
-    ('img/finish.jpg',       'photos/finish-line.jpg', dict(max=1200, up=True)),
+    ('img/people.jpg',       'photos/finish-line.jpg', dict(max=1200, up=True)),
+    ('img/close.jpg',        'photos/mural.jpg',       dict(max=1200, up=True)),
     ('img/door-pledge.jpg',  'photos/portrait.jpg',    dict(max=1000, crop='4:5')),
     ('img/door-ride.jpg',    'photos/ride-lavender.jpg', dict(max=1000, crop='4:5')),
-    ('img/door-read.jpg',    'photos/mural.jpg',       dict(max=1000, crop='4:5')),
+    ('img/door-read.jpg',    'photos/card-south-duo.jpg', dict(strength=0.0, stop=0.35, lift=0.12, warm=0.08)),
     ('img/card-journal.jpg', 'photos/mural.jpg',       dict(max=1000, crop='4:5')),
-    ('img/card-south.jpg',   'img/card-south.jpg',     dict(strength=0.0, stop=0.35, lift=0.12, warm=0.08)),
-    ('img/card-pv.jpg',      'img/card-pv.jpg',        dict(strength=0.0, stop=0.25, lift=0.10, warm=0.06)),
+    ('img/card-south.jpg',   'photos/card-south-duo.jpg', dict(strength=0.0, stop=0.35, lift=0.12, warm=0.08)),
+    ('img/card-pv.jpg',      'photos/card-pv-duo.jpg', dict(strength=0.0, stop=0.25, lift=0.10, warm=0.06)),
     ('img/portrait.jpg',     'photos/portrait.jpg',    dict(max=1024)),
     ('img/bike.jpg',         'photos/bike-detail.jpg', dict(max=1000)),
     ('img/vest.jpg',         'photos/vest-ride.jpg',   dict(max=1200, crop='4:5')),
     ('img/crew-haus.jpg',    'photos/crew-haus.jpg',   dict(max=1000)),
+    ('img/haus-road.jpg',    'photos/haus-road.jpg',   dict(max=1600)),
 ]
 
 def srgb_to_lin(x): return np.where(x <= 0.04045, x / 12.92, ((x + 0.055) / 1.055) ** 2.4)
@@ -77,17 +79,8 @@ def process(src, dst, strength=0.22, lift=0.13, stop=0.5, warm=0.06, sat=1.08, m
 
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == '--all':
-        # graded-only sources are read before they get overwritten
-        cache = {}
         for dst, src, opts in MANIFEST:
-            if src.startswith('img/') and src not in cache: cache[src] = Image.open(os.path.join(ROOT, src)).copy()
-        for dst, src, opts in MANIFEST:
-            s = os.path.join(ROOT, src)
-            if src in cache:
-                tmp = os.path.join(ROOT, 'img', '_tmp_src.jpg'); cache[src].save(tmp, quality=95); s = tmp
-            process(s, os.path.join(ROOT, dst), **opts)
-        tmp = os.path.join(ROOT, 'img', '_tmp_src.jpg')
-        if os.path.exists(tmp): os.remove(tmp)
+            process(os.path.join(ROOT, src), os.path.join(ROOT, dst), **opts)
         sys.exit(0)
     p = argparse.ArgumentParser(); p.add_argument('inp'); p.add_argument('out')
     p.add_argument('--strength', type=float, default=0.22); p.add_argument('--lift', type=float, default=0.13)
