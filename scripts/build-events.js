@@ -513,13 +513,28 @@ function townsIndex() {
   const url = "/towns/";
   const title = "Bike event towns — travel guides for cyclists: hotels, food, bike shops, weather";
   const description = `Town guides for ${towns.length} places that host bike events. Where to stay, where to eat, who can fix your bike, and what the weather is doing.`;
+  // Pass 6 (Sept 29, 2026): every town is a poster tile — the name fills the tile, the count sits
+  // at the foot, the town's contour (tools/contour-art.js → cfc-site/towns/art/<slug>.svg) behind it
+  // once it has been drawn. Same tile family as /rides/ (styles in events.css).
+  const artDir = path.join(OUT, "towns", "art");
+  const longestWord = (name) => Math.max(...String(name).split(/[\s-]+/).map((w) => w.length), 4);
+  const townTile = (t) => {
+    const slug = t.url.split("/").filter(Boolean).pop();
+    const art = fs.existsSync(path.join(artDir, `${slug}.svg`)) ? `<img class="tile-art" src="/towns/art/${slug}.svg" alt="" loading="lazy" decoding="async" width="200" height="200">` : "";
+    const n = t.events.length;
+    return `<a class="tile-p${art ? " tile-p--art" : ""}" href="${t.url}" style="--l:${longestWord(t.name)}">${art}<span class="t">${esc(t.name)}</span><span class="b">${esc(t.events.map((e) => e.name).join(", "))}</span><span class="c"><b class="n num">${n}</b><span class="s">event${n === 1 ? "" : "s"}<br>${esc(t.state_code)}</span></span></a>`;
+  };
+  const sorted = [...towns].sort((a, b) => a.state.localeCompare(b.state) || a.name.localeCompare(b.name));
   const body = `
   <article class="index">
     <p class="eyebrow">${towns.length} towns &middot; ${stateList.length} states</p>
     <h1>Bike event towns</h1>
     <p class="lede">A guide for every town that hosts a ride in the directory. Each one has live weather, the events held there, and pages for hotels, restaurants and bike shops we could confirm.</p>
-    <section class="by-state"><h2>Towns by state</h2>
-    ${stateList.map((s) => `<h3><a href="/events/state/${s.slug}/">${esc(s.name)}</a></h3><ul class="rows">${s.towns.map((t) => `<li><a href="${t.url}">${esc(t.name)}</a><span class="row-meta">${esc(t.events.map((e) => e.name).join(", "))}</span></li>`).join("")}</ul>`).join("")}
+    <section class="by-state" aria-labelledby="towns-h"><h2 id="towns-h">Every town, A to Z by state</h2>
+      <div class="tiles-p tiles-p--towns">
+        ${sorted.map(townTile).join("\n        ")}
+      </div>
+      <p class="town-more">${stateList.map((s) => `<a href="/events/state/${s.slug}/">${esc(s.name)}</a>`).join(" &middot; ")}</p>
     </section>
 ${BLOCKS.REPORT({ thing: "place" })}
   </article>

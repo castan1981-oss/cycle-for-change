@@ -41,6 +41,8 @@
 .gr-card:hover{border-color:var(--asphalt)}
 .gr-card-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
 .gr-disc,.gr-dist{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+/* Pass 6: the discipline's mark (cfc-site/rides/marks.svg) opens every card */
+.gr-mark{width:22px;height:22px;flex:0 0 auto;color:var(--asphalt);margin:-3px 0}
 .gr-dist{color:var(--creosote);white-space:nowrap}
 .gr-card-name{font-family:var(--display);font-weight:700;font-size:1.15rem;line-height:1.1;letter-spacing:-.01em}
 .gr-card-place{font-size:.9rem}
@@ -123,27 +125,29 @@
 .gr-save:focus-visible{outline:2px solid var(--asphalt);outline-offset:-4px}
 .gr-save-btn[aria-pressed="true"]{border-color:var(--creosote);color:var(--creosote)}
 
-.gr-hub .gr-hero{background:var(--tar);color:var(--bone);padding-block:clamp(28px,5vw,64px) clamp(24px,4vw,44px)}
-.gr-hub .gr-hero .crumbs a,.gr-hub .gr-hero .crumbs [aria-current]{color:var(--dust)}
-.gr-hub .gr-hero .eyebrow{color:var(--dust)}
-.gr-hub .gr-hero h1{color:var(--bone)}
-.gr-hub .gr-hero .lede{max-width:46ch;color:var(--bone-2);margin:0 0 22px}
+/* Pass 6: the search hero sits on paper, not tar (tar is no longer a canvas) */
+.gr-hub .gr-hero{background:var(--paper);color:var(--asphalt);padding-block:clamp(28px,5vw,64px) clamp(24px,4vw,44px);border-bottom:1px solid var(--line)}
+.gr-hub .gr-hero .crumbs a,.gr-hub .gr-hero .crumbs [aria-current]{color:var(--mute)}
+.gr-hub .gr-hero .eyebrow{color:var(--mute)}
+.gr-hub .gr-hero h1{color:var(--asphalt)}
+.gr-hub .gr-hero .lede{max-width:46ch;color:var(--creosote-ink);margin:0 0 22px}
 .gr-hub .gr-search{max-width:760px}
-.gr-hub .gr-search input{background:var(--paper);border-color:var(--paper);font-size:1.1rem;padding:14px 16px}
-.gr-hub .gr-search input:focus{outline:2px solid var(--bone);outline-offset:2px}
+.gr-hub .gr-search input{background:var(--bone);border-color:var(--asphalt);font-size:1.1rem;padding:14px 16px}
+.gr-hub .gr-search input:focus{outline:2px solid var(--asphalt);outline-offset:2px}
+.gr-hub .gr-search .btn--bone{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
 .gr-quick{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
-.gr-hub .gr-hero .gr-chip{background:transparent;color:var(--bone);border-color:rgba(232,223,208,.35)}
-.gr-hub .gr-hero .gr-chip:hover{border-color:var(--bone)}
-.gr-hub .gr-hero .gr-chip[aria-pressed="true"]{background:var(--bone);color:var(--asphalt);border-color:var(--bone)}
-.gr-hub .gr-hero .gr-filter-label{color:var(--dust)}
-.gr-hub .gr-hero select{background:transparent;color:var(--bone);border-color:rgba(232,223,208,.35)}
+.gr-hub .gr-hero .gr-chip{background:transparent;color:var(--asphalt);border-color:var(--asphalt)}
+.gr-hub .gr-hero .gr-chip:hover{background:var(--bone-2)}
+.gr-hub .gr-hero .gr-chip[aria-pressed="true"]{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
+.gr-hub .gr-hero .gr-filter-label{color:var(--mute)}
+.gr-hub .gr-hero select{background:transparent;color:var(--asphalt);border-color:var(--asphalt)}
 .gr-hub .gr-hero select option{color:var(--asphalt)}
 .gr-more{margin-top:12px}
-.gr-more>summary{cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dust);padding:8px 0;list-style:none;display:inline-block}
+.gr-more>summary{cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding:8px 0;list-style:none;display:inline-block}
 .gr-more>summary::-webkit-details-marker{display:none}
 .gr-more>summary::after{content:" +"}
 .gr-more[open]>summary::after{content:" −"}
-.gr-hub .gr-status{color:var(--dust)}
+.gr-hub .gr-status{color:var(--mute)}
 .gr-hub .gr-status:empty{display:none}
 
 .gr-hub .gr-results-wrap{padding-block:clamp(24px,4vw,40px) 0;scroll-margin-top:80px}
@@ -165,4 +169,4 @@
 @media (max-width:640px){
   .gr-hub .gr-search .btn{flex:1 1 100%}
 }
-.gr-hub .gr-hero .gr-tonight{align-self:center;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dust);margin-left:4px}
+.gr-hub .gr-hero .gr-tonight{align-self:center;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--asphalt);margin-left:4px}
