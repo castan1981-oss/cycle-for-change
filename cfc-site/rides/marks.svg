@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <!-- Cycle for Change marks (Pass 6, Sept 29 2026). One family: 24-unit grid, one 1.7px
+       stroke, round caps, no fills. Asphalt on bone, bone on asphalt (currentColor).
+       Use: <svg class="mark"><use href="/rides/marks.svg#m-road"/></svg>. Add a mark here,
+       not inline. Rides: road, gravel, mtb, fixed, social, cruiser, ebike, mixed, bmx, track,
+       cyclocross. Who it's for: no-drop, lgbtq, wtf, bipoc, family, beginner, youth, adaptive. -->
+  <defs>
+    <g id="m-base" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  </defs>
+
+  <!-- the bike -->
+  <symbol id="m-road" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 7h16"/><path d="M4 7c0 4 1 6.5 3.5 6.5"/><path d="M20 7c0 4-1 6.5-3.5 6.5"/><path d="M12 7v9"/>
+  </g></symbol>
+  <symbol id="m-gravel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 17.5c3-3 6-3 9 0s6 3 9 0"/><circle cx="7.5" cy="9.5" r="1.4"/><circle cx="13" cy="7" r="1.4"/><circle cx="17.5" cy="10.5" r="1.4"/>
+  </g></symbol>
+  <symbol id="m-mtb" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 18.5L9 7l4 7 3-4.5 5 9"/><path d="M3 18.5h18"/>
+  </g></symbol>
+  <symbol id="m-fixed" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="7.2"/><circle cx="12" cy="12" r="1.6"/><path d="M12 4.8v3M12 16.2v3M4.8 12h3M16.2 12h3"/>
+  </g></symbol>
+  <symbol id="m-social" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 9h11v5.5A4.5 4.5 0 0 1 11.5 19h-2A4.5 4.5 0 0 1 5 14.5z"/><path d="M16 11h1.5a2 2 0 0 1 0 4H16"/><path d="M8.5 5.5V4M12 5.5V4"/>
+  </g></symbol>
+  <symbol id="m-cruiser" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="3.6"/><path d="M12 3.5v2.3M12 18.2v2.3M3.5 12h2.3M18.2 12h2.3M6 6l1.6 1.6M16.4 16.4L18 18M18 6l-1.6 1.6M7.6 16.4L6 18"/>
+  </g></symbol>
+  <symbol id="m-ebike" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13.5 3.5L6 14h5.5l-1 6.5L18 10h-5.5z"/>
+  </g></symbol>
+  <symbol id="m-mixed" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="8" cy="13.5" r="5"/><circle cx="16" cy="10.5" r="5"/>
+  </g></symbol>
+  <symbol id="m-bmx" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 18c3-9 6-9 9-5.5 3-3.5 6-3.5 9 5.5"/><path d="M3 18h18"/>
+  </g></symbol>
+  <symbol id="m-track" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="6" width="18" height="12" rx="6"/><rect x="7" y="9.5" width="10" height="5" rx="2.5"/>
+  </g></symbol>
+  <symbol id="m-cyclocross" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 18h18"/><path d="M7 18v-6M11 18v-6M15 18v-6M19 18v-6"/><path d="M5 12h16"/>
+  </g></symbol>
+
+  <!-- who it's for -->
+  <symbol id="m-no-drop" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="8" cy="7.5" r="2.6"/><circle cx="16" cy="7.5" r="2.6"/><path d="M3 19a5 5 0 0 1 10 0"/><path d="M11 19a5 5 0 0 1 10 0"/>
+  </g></symbol>
+  <symbol id="m-lgbtq" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 17a9 9 0 0 1 18 0"/><path d="M6.5 17a5.5 5.5 0 0 1 11 0"/><path d="M10 17a2 2 0 0 1 4 0"/>
+  </g></symbol>
+  <symbol id="m-wtf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="8.5" r="4.8"/><path d="M12 13.3V21M8.8 18h6.4"/>
+  </g></symbol>
+  <symbol id="m-bipoc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="1.5"/><path d="M12 4.5v6M12 13.5v6M4.5 12h6M13.5 12h6M6.7 6.7l4.2 4.2M13.1 13.1l4.2 4.2M17.3 6.7l-4.2 4.2M10.9 13.1l-4.2 4.2"/>
+  </g></symbol>
+  <symbol id="m-family" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="8.5" cy="6.5" r="2.7"/><circle cx="16.5" cy="10" r="2"/><path d="M8.5 9.5V19M16.5 12.5V19M4 21h16"/>
+  </g></symbol>
+  <symbol id="m-beginner" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 21v-8.5"/><path d="M12 12.5c0-4.2 3-6.5 7.5-6.5 0 4.2-3 6.5-7.5 6.5z"/><path d="M12 15c0-3-2.2-5-5.5-5 0 3 2.2 5 5.5 5z"/>
+  </g></symbol>
+  <symbol id="m-youth" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3.5l2.5 5.3 5.8.7-4.3 4 1.1 5.8-5.1-2.8-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/>
+  </g></symbol>
+  <symbol id="m-adaptive" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="5" r="2"/><path d="M12 8v6h5l2.5 5"/><path d="M12 10H8"/><circle cx="9" cy="17.5" r="3.5"/>
+  </g></symbol>
+
+  <!-- the site -->
+  <symbol id="m-live" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="7"/>
+  </g></symbol>
+  <symbol id="m-town" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 21s-6-6.2-6-11a6 6 0 0 1 12 0c0 4.8-6 11-6 11z"/><circle cx="12" cy="10" r="2"/>
+  </g></symbol>
+</svg>

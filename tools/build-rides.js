@@ -367,6 +367,25 @@ ${BLOCKS.REPORT_JS}${extraScript}
 }
 
 // ---------- ride card (directory + hubs) ----------
+// ---------- Pass 6 (Sept 29, 2026): marks and poster tiles ----------
+// One pictogram family lives in cfc-site/rides/marks.svg (a symbol sprite, currentColor).
+// A ride card carries its discipline's mark; a facet tile carries its facet's mark.
+const MARK_OF = { road:"road", gravel:"gravel", mtb:"mtb", fixed:"fixed", social:"social", cruiser:"cruiser",
+  bmx:"bmx", track:"track", cyclocross:"cyclocross", ebike:"ebike", mixed:"mixed" };
+const mark = (id, cls = "gr-mark") => `<svg class="${cls}" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-${id}"/></svg>`;
+const discMark = (r) => mark(MARK_OF[r.discipline[0]] || "mixed");
+// Poster tiles: the name blows up to fill the tile (font-size fits the longest word via --l),
+// the count sits big at the foot. If tools/contour-art.js has drawn the town's contour into
+// cfc-site/rides/art/<st>-<city>.svg, it sits behind the type; otherwise the tile is the type.
+const ART_DIR = path.join(OUT, "art");   // OUT is cfc-site/rides
+const artFor = (key) => (fs.existsSync(path.join(ART_DIR, `${key}.svg`)) ? `/rides/art/${key}.svg` : null);
+const longestWord = (name) => Math.max(...String(name).split(/[\s-]+/).map((w) => w.length), 4);
+function posterTile({ href, name, count, small, art, cls = "", markId = null, blurb = null }) {
+  const artImg = art ? `<img class="tile-art" src="${art}" alt="" loading="lazy" decoding="async" width="200" height="200">` : "";
+  const mk = markId ? mark(markId, "tile-mark") : "";
+  return `<a class="tile-p ${cls}${art ? " tile-p--art" : ""}" href="${href}" style="--l:${longestWord(name)}">${artImg}${mk}<span class="t">${esc(name)}</span>${blurb ? `<span class="b">${esc(blurb)}</span>` : ""}<span class="c"><b class="n num">${count}</b><span class="s">${small}</span></span></a>`;
+}
+
 // A <div> with one stretched link plus a Save button (a button can't sit inside an <a>).
 // The same markup is rendered client-side by hub.js — keep the two in step.
 const cardWhen = (r) => (dayPhrase(r) && r.start_hhmm ? `${dayPhrase(r)}, ${fmtTime(r.start_hhmm)}` : (r.schedule || "See the ride's page for schedule"));
@@ -384,7 +403,7 @@ function card(r, opts = {}) {
    data-lat="${r.lat}" data-lng="${r.lng}" data-disc="${r.discipline.join(" ")}"
    data-tags="${tagsOf(r).join(" ")}" data-days="${r.days.join(" ")}" data-pace="${paceOf(r).join(" ")}"
    data-host="${attr(r.host ? r.host.name : "")}" data-hood="${attr(r.neighborhood || "")}">
-  <span class="gr-card-top"><span class="gr-disc">${esc(discLabel(r.discipline))}</span>${dist}</span>
+  <span class="gr-card-top">${discMark(r)}<span class="gr-disc">${esc(discLabel(r.discipline))}</span>${dist}</span>
   <a class="gr-card-name" href="/rides/${r.slug}/">${esc(r.name)}</a>
   <span class="gr-card-place">${esc(placeText(r))}${r.neighborhood ? " · " + esc(r.neighborhood) : ""}</span>
   <span class="gr-card-when">${esc(cardWhen(r))}</span>
@@ -478,11 +497,12 @@ function directory(rides, hubs) {
   const discChips = Object.entries(DISC_LABEL).filter(([k]) => rides.some((r) => r.discipline.includes(k))).map(([k, v]) => chip("disc", k, v)).join("\n            ");
   const tagChips = Object.entries(TAG_LABEL).filter(([k]) => rides.some((r) => tagsOf(r).includes(k))).map(([k, v]) => chip("tag", k, v)).join("\n            ");
   const dayOpts = Object.entries(DAY_LONG).map(([k, v]) => `<option value="${k}">${v}s</option>`).join("");
-  const facetTiles = FACETS.map((f) => `<a class="dir-tile" href="/rides/${f.slug}/"><span class="n">${rides.filter(f.pick).length}</span><span class="t">${esc(f.label)}</span><span class="s">${esc(f.blurb)}</span></a>`).join("\n        ");
+  const FACET_MARK = { lgbtq:"lgbtq", "no-drop":"no-drop", beginner:"beginner", "women-trans-femme":"wtf", bipoc:"bipoc", family:"family", gravel:"gravel" };
+  const facetTiles = FACETS.map((f) => posterTile({ href: `/rides/${f.slug}/`, name: f.label, count: rides.filter(f.pick).length, small: "rides", blurb: f.blurb, markId: FACET_MARK[f.slug] || "mixed", cls: "tile-p--facet" })).join("\n        ");
   const home = hubs.find((h) => h.state === "AZ" && h.city === "Phoenix");
   const cityList = [...(home ? [home] : []), ...hubs.filter((h) => h !== home).sort((a, b) => b.rides.length - a.rides.length || a.city.localeCompare(b.city))];
-  const cityTile = (h) => `<a class="dir-tile dir-tile--sm" href="${h.path}"><span class="n">${h.rides.length}</span><span class="t">${esc(h.city)}, ${h.state}</span>${h === home ? `<span class="s">Home base</span>` : ""}</a>`;
-  const stateTile = (s) => `<a class="dir-tile dir-tile--sm" href="/rides/${s.toLowerCase()}/"><span class="n">${byState[s].length}</span><span class="t">${esc(stateName(s))}</span></a>`;
+  const cityTile = (h) => posterTile({ href: h.path, name: h.city, count: h.rides.length, small: h === home ? `rides<br>home base` : `rides<br>${h.state}`, art: artFor(`${h.state.toLowerCase()}-${slugify(h.city)}`), cls: h === home ? "tile-p--ink" : "" });
+  const stateTile = (s) => posterTile({ href: `/rides/${s.toLowerCase()}/`, name: stateName(s), count: byState[s].length, small: "rides", cls: "tile-p--wide" });
 
   return head({ title: "Find a group ride near you", description, canonical: `${SITE}/rides/`, jsonld }) + `
 <main id="main" class="gr-dir gr-hub">
@@ -567,18 +587,18 @@ function directory(rides, hubs) {
 
     <section class="dir-browse" aria-labelledby="who-h">
       <h2 id="who-h">By who's riding</h2>
-      <div class="dir-tiles">
+      <div class="tiles-p tiles-p--facets">
         ${facetTiles}
       </div>
     </section>
 
     <section class="dir-browse" aria-labelledby="city-h">
       <h2 id="city-h">By city <span class="gr-count">${cityList.length} cities with 3+ rides</span></h2>
-      <div class="dir-tiles dir-tiles--sm">
+      <div class="tiles-p">
         ${cityList.slice(0, 12).map(cityTile).join("\n        ")}
       </div>
       <details class="dir-all"><summary>All ${cityList.length} cities</summary>
-        <div class="dir-tiles dir-tiles--sm">
+        <div class="tiles-p">
         ${cityList.slice(12).map(cityTile).join("\n        ")}
         </div>
       </details>
@@ -586,7 +606,7 @@ function directory(rides, hubs) {
 
     <section class="dir-browse" aria-labelledby="state-h">
       <h2 id="state-h">By state <span class="gr-count">${states.length}</span></h2>
-      <div class="dir-tiles dir-tiles--sm">
+      <div class="tiles-p tiles-p--wide">
         ${states.map(stateTile).join("\n        ")}
       </div>
     </section>
@@ -1008,6 +1028,8 @@ function main() {
   for (const h of hubs) write(path.join(OUT, h.state.toLowerCase(), h.slug, "index.html"), metroPage(h, hubs, events));
   for (const f of FACETS) write(path.join(OUT, f.slug, "index.html"), facetPage(f, rides, hubs));
   write(path.join(OUT, "index.json"), JSON.stringify(hubJson(rides)));
+  // Pass 6: the hub centres, for tools/contour-art.js (one contour tile per city hub)
+  write(path.join(OUT, "hubs.json"), JSON.stringify(hubs.map((h) => ({ key: `${h.state.toLowerCase()}-${h.slug}`, city: h.city, state: h.state, lat: +h.lat.toFixed(4), lng: +h.lng.toFixed(4), rides: h.rides.length }))));
   let nIcs = 0, nEvent = 0;
   for (const r of rides) {
     write(path.join(OUT, r.slug, "index.html"), ridePage(r, rides, hubFor, hubs));

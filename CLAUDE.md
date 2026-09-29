@@ -1,8 +1,8 @@
 # Cycle for Change — project context for automated content
 
-> **HOMEPAGE: the redesign is live since 2026-09-27.** `cfc-site/index.html` +
-> `cfc-site/home.css` + `cfc-site/home.js` + `cfc-site/img/` (graded photos and the
-> 6s hero film). The Sept 18 coming-soon-based homepage and its files
+> **HOMEPAGE: the redesign is live since 2026-09-27; Pass 6 (Sept 29) brightened it.**
+> `cfc-site/index.html` + `cfc-site/home.css` + `cfc-site/home.js` + `cfc-site/img/` (the
+> house-graded photos; the hero is a still, the film is gone). The Sept 18 coming-soon-based homepage and its files
 > (`coming-soon.css/js`, `main.js`, `next/home.css/js`, the feed video and audio) are
 > gone — git history has them. `/next/*` redirects home.
 > `/field-notes`, `/guides`, `/resources` and `/journal` are served; `cfc-site/404.html`
@@ -51,6 +51,44 @@
 - `email/mile-updates.html` is the mile-updates email template (table-based, inline styles,
   {{placeholders}} listed at the top). Send from whatever reads the Netlify "waitlist" form.
 
+## Pass 6 — brighten + the graphic system (Sept 29, 2026)
+Robert's brief: the site was too dark and read as "words on a page"; he wants designed
+graphics, "visually stunning, high fashion", and the film hero redone. Art direction happened
+first (claude.ai project doc `claude/art-direction-prompt-kit-sept-2026.md` and the "Three
+Directions" canvas); he picked 01 high-key photos where there's a photo, route art where there
+isn't, poster type as the fallback. These are now house rules:
+- **Tar is not a canvas.** `html` and the page sit on bone; the hero, photo planes and the close
+  are on bone/bone-2 with the photo whole and bright. Dark is allowed once per page (the ride
+  log on the homepage; the footer). The phone menu is bone. No gradient washes over photos, no
+  grain overlay. `--sec` is roughly double what it was: air is deliberate.
+- **Photos wear the house grade.** `python3 tools/grade.py --all` regrades `cfc-site/photos/`
+  (originals — keep adding here) into `cfc-site/img/` (what the site loads): lifted blacks, half
+  a stop over, warm, 22% bone-forward duotone. The desert at 10 a.m., not 8 p.m. Never place
+  a dark-duotoned or gradient-washed photo again. Robert's picks: crew.jpg = hero (phone crop +
+  `hero-wide.jpg` desktop), portrait = the Pledge door, mural = the close, finish line = Find
+  your people. The film (`hero.mp4`) is gone; the hero is one still on every device.
+- **Volt only ever sits on asphalt or tar** (the live chip, the button hover). Never on bone.
+- **No tile is text-only.** Directory tiles are "poster tiles" (`.tile-p`, styles in
+  `cfc-site/events/events.css`): the name fills the tile (type fitted to the longest word via
+  `--l`, set by the generator), the count sits big at the foot, tiles alternate bone-2/paper,
+  the home base is asphalt. Used on /rides/ (who / city / state) and /towns/. Generators:
+  `posterTile()` in tools/build-rides.js, `townTile()` in scripts/build-events.js.
+- **Route art.** `node tools/contour-art.js` (run on the Mac — it fetches AWS terrain tiles; the
+  Cowork sandbox can't) draws one topographic contour per city hub into `cfc-site/rides/art/`
+  and per event town into `cfc-site/towns/art/`. The generators pick the art up automatically
+  (`.tile-p--art`, one stroke, asphalt, behind the type); no art = the type-only tile. After
+  drawing: `node tools/build-rides.js && node scripts/build-events.js`. `cfc-site/rides/hubs.json`
+  (written by build-rides) is the list of hub centres it reads.
+- **Marks.** `cfc-site/rides/marks.svg` is the pictogram family (a symbol sprite; 24-unit grid,
+  one 1.7 stroke, round caps, currentColor). Ride cards open with the discipline's mark
+  (`.gr-mark`; `card()` in build-rides.js and hub.js are in step), facet tiles carry their
+  facet's mark. Add marks to the sprite, never inline. The "icons — dead" line in the kit lock
+  below refers to the retired 2025 icon set, not to this family.
+- **The floor, checked at the end of every design pass, never designed from:** Creosote house
+  tokens, Outfit + Space Mono, WCAG AA (creosote-ink for small text on bone), one primary
+  button per screen, a still not a film on phones, no scroll-snap, 988 + Trevor on every page,
+  the voice rules, 390px first.
+
 ## Pass 5 — the in-between (Sept 29, 2026)
 Built from the research in the claude.ai project doc `claude/ux-research-design-and-funnels-sept-2026.md`
 (same content at https://claude.ai/artifact/LhaJ5fK8MLfmdhHjpUiuwC). Robert's brief: "funky and cool"
@@ -85,8 +123,9 @@ Tokens, type and copy rules unchanged. What changed:
   towns A–Z index; the monthly ledger email; the January 2028 settle-up sequence (see the doc).
 
 ## The homepage (Sept 2026 redesign)
-- Same Creosote house tokens. One addition, `--tar` #1A1D18 (asphalt a step darker) for the film
-  hero, the ride log and the close; `--paper` #F6F1E7 only for text on the creosote field.
+- Same Creosote house tokens. `--tar` #1A1D18 (asphalt a step darker) is now used only for the
+  ride log (Pass 6: tar is not a canvas); `--paper` #F6F1E7 for text on the creosote field and
+  the poster tiles.
 - Two families only: Outfit (display + body) and Space Mono (labels, data). No Space Grotesk.
 - Volt means "live" and nothing else: the hero dot, the ghost under 10000, the last point on the
   miles chart, desktop hover. Never next to creosote. Creosote is used once, as the field behind
@@ -105,8 +144,8 @@ Tokens, type and copy rules unchanged. What changed:
 ## Directories + help pages (Sept 28, 2026 — Passes 3 and 4 of the site plan)
 UX references Robert named: behavioralhealthguide.org, recovery.com, thesyn.cc. Blueprint:
 the "Pass 3 Blueprint" artifact; notes in the claude.ai project doc `claude/ux-references-pass-3-4.md`.
-- `/rides/` is search-first: tar hero with the search box + quick chips, a "Three taps"
-  matcher (ride · pace · when), then browse tiles (by who's riding, by city, by state), the
+- `/rides/` is search-first: paper hero (Pass 6; it was tar) with the search box + quick chips, a "Three taps"
+  matcher (ride · pace · when), then poster tiles (by who's riding, by city, by state), the
   how-it's-built tiles, plain questions, and the add/fix form. It ships NO ride cards:
   `/rides/hub.js` fetches `/rides/index.json` (written by tools/build-rides.js) on the first
   search or filter. State, city and facet pages keep every card in HTML (`/rides/rides.js`).

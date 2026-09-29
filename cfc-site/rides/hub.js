@@ -63,10 +63,13 @@
   function any() { return !!(f.disc.length || f.tags.length || f.day || f.pace || f.saved || q.value.trim() || origin); }
 
   var WAIT = { waits: "Waits for you", regroups: "Regroups", drops: "Drops" };
+  /* Pass 6: the card carries its discipline's mark (cfc-site/rides/marks.svg); keep in step with tools/build-rides.js card() */
+  var MARKS = { road: 1, gravel: 1, mtb: 1, fixed: 1, social: 1, cruiser: 1, bmx: 1, track: 1, cyclocross: 1, ebike: 1, mixed: 1 };
+  function markOf(r) { var k = r.d && r.d[0]; return '<svg class="gr-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-' + (MARKS[k] ? k : "mixed") + '"/></svg>'; }
   function card(r, d) {
     var tags = r.tl.map(function (t) { return '<span class="gr-tag">' + esc(t) + "</span>"; }).join("") + (r.u ? '<span class="gr-tag gr-tag-warn">Unconfirmed</span>' : "");
     return '<div class="gr-card" data-slug="' + r.s + '">' +
-      '<span class="gr-card-top"><span class="gr-disc">' + esc(r.dl) + "</span>" + (d != null ? '<span class="gr-dist">' + Math.round(d) + " mi away</span>" : "") + "</span>" +
+      '<span class="gr-card-top">' + markOf(r) + '<span class="gr-disc">' + esc(r.dl) + "</span>" + (d != null ? '<span class="gr-dist">' + Math.round(d) + " mi away</span>" : "") + "</span>" +
       '<a class="gr-card-name" href="/rides/' + r.s + '/">' + esc(r.n) + "</a>" +
       '<span class="gr-card-place">' + esc(r.c + ", " + r.st) + (r.h ? " · " + esc(r.h) : "") + "</span>" +
       '<span class="gr-card-when">' + esc(r.w) + "</span>" +
