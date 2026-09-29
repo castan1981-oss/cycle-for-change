@@ -51,6 +51,39 @@
 - `email/mile-updates.html` is the mile-updates email template (table-based, inline styles,
   {{placeholders}} listed at the top). Send from whatever reads the Netlify "waitlist" form.
 
+## Pass 5 — the in-between (Sept 29, 2026)
+Built from the research in the claude.ai project doc `claude/ux-research-design-and-funnels-sept-2026.md`
+(same content at https://claude.ai/artifact/LhaJ5fK8MLfmdhHjpUiuwC). Robert's brief: "funky and cool"
+but "storyboard-like" → "super user-friendly", between the current look and behavioralhealthguide.org.
+Tokens, type and copy rules unchanged. What changed:
+- Homepage: hero stops at ~72svh so the next section peeks (no more full-viewport panels);
+  the film only plays on desktop, after `load`, with a pause button (`#filmBtn`); phones get the
+  poster. One number in the hero (`.tally-hero`), rides + days as a mono caption. One button
+  ("Pledge a mile"); "Find a group ride" is a text link. The money sentence sits under the three
+  facts (`.facts-line`). The announcement bar is gone; "Next up · Nov 7" lives in the 2027 block
+  (`.next-up`). New "From the road" log (`#road`, `#log[data-max]`) painted by home.js from Strava.
+  Orgs have no Vote buttons on the homepage (the container is `#orgList`, so the ballot code
+  skips it) — the pick is made in the pledge form. The directory section opens on a town box
+  (GET `/rides/?q=`) and compact count rows, not four giant numerals. Nav labels are Outfit 15px.
+- /pledge/: email is required (hint says why); chips show their total; optional cap (`name="cap"`);
+  "Who are your miles for?" radios (`name="org"`: onenten / lalgbtcenter / sfaf / later) inside
+  the form — on submit the pick is also cast as the browser's vote; mobile (`name="phone"`) with
+  the text opt-in revealed only once a number is typed; button "Get on the board"; the form is
+  replaced by the thank-you state (`#done`) with the pledge restated in dollars and a share button.
+  Section order: board → the last rides → where it goes (vote buttons can now SWITCH a vote) →
+  questions in two groups (The money · The ride).
+- Functions: `votes.js` moves a vote instead of refusing a second one; `pledges.js` returns `org`
+  with each name (never email/phone/rate/amount); new `submission-created.js` sends the
+  confirmation email for the pledges form via Resend when `RESEND_API_KEY` + `PLEDGE_FROM` are set
+  (optional `PLEDGE_REPLY_TO`, `PLEDGE_BCC`) — a no-op until then.
+- Contrast: `--creosote-ink` #4A5639 for small creosote text on bone (creosote itself is 4.35:1);
+  `--dust-deep` #8A7C66 for hairlines that must be seen; the empty board slots use `--mute`.
+- Shared chrome (scripts/chrome.js, regenerated): menu "Resources · Help lines, by age", tally line
+  "10,000 in 2027", footer "Where the money goes" link, signup "Send me mile updates" + the
+  once-a-month note. Nav labels in chrome.css match home.css.
+- Still to do from the research: /rides/ location-first "Where" tap, filter counts + load-more, the
+  towns A–Z index; the monthly ledger email; the January 2028 settle-up sequence (see the doc).
+
 ## The homepage (Sept 2026 redesign)
 - Same Creosote house tokens. One addition, `--tar` #1A1D18 (asphalt a step darker) for the film
   hero, the ride log and the close; `--paper` #F6F1E7 only for text on the creosote field.

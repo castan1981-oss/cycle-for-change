@@ -77,12 +77,12 @@ main{display:block}
 .fn-spoke .fn-spoke-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
 .fn-spoke .fn-spoke-title{font-family:var(--display);font-weight:800;font-size:1.45rem;line-height:1.05;letter-spacing:-.02em;color:var(--asphalt)}
 .fn-spoke .fn-spoke-dek{margin:0;color:var(--mute);font-size:.98rem;line-height:1.5}
-.fn-spoke .fn-spoke-more{margin-top:auto;padding-top:6px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--creosote)}
+.fn-spoke .fn-spoke-more{margin-top:auto;padding-top:6px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--creosote-ink)}
 
 /* —— resources: publication-style cards —— */
 .res-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));gap:0;border-top:1px solid var(--asphalt);border-left:1px solid var(--line)}
 .res-card{display:flex;flex-direction:column;gap:10px;padding:26px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-.res-card .res-cat{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--creosote)}
+.res-card .res-cat{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--creosote-ink)}
 .res-card h3{margin:0;font-family:var(--display);font-weight:800;font-size:1.4rem;line-height:1.08;letter-spacing:-.02em;color:var(--asphalt)}
 .res-card h3 a{color:inherit;text-decoration:none}
 .res-card h3 a:hover{text-decoration:underline;text-decoration-color:var(--creosote)}
@@ -90,12 +90,12 @@ main{display:block}
 .res-foot{display:flex;flex-direction:column;gap:7px;margin-top:auto;padding-top:6px}
 .res-foot .res-contact{font-family:var(--mono);font-size:13px;color:var(--asphalt)}
 .res-foot .res-contact a{color:var(--asphalt);text-decoration-color:var(--creosote)}
-.res-foot .res-out{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--creosote)}
+.res-foot .res-out{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--creosote-ink)}
 
 /* —— journal (/journal/<slug>/) —— */
 .jr-ledger{margin:36px 0 0;padding:18px 0;border-top:1px solid var(--asphalt);border-bottom:1px solid var(--asphalt);font-family:var(--mono);font-size:13px;line-height:2}
 .jr-ledger .row{display:flex;justify-content:space-between;gap:16px}
-.jr-ledger .row span:last-child{color:var(--creosote);text-align:right}
+.jr-ledger .row span:last-child{color:var(--creosote-ink);text-align:right}
 .jr-ledger .note{margin:10px 0 0;font-family:var(--body);font-size:1.02rem;line-height:1.5;color:var(--asphalt)}
 .fn-body .hl{background:var(--bone-2);box-shadow:inset 0 -3px 0 var(--creosote);padding:0 .12em}
 
@@ -146,7 +146,7 @@ main{display:block}
 .fn-stage-intro{margin:0 0 clamp(28px,4vw,44px);max-width:56ch;font-size:1.05rem;line-height:1.5;color:var(--mute)}
 .fn-stage{margin:0 0 clamp(40px,5vw,64px)}
 .fn-stage-head{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:baseline;margin:0 0 18px;max-width:880px}
-.fn-stage-n{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--creosote);grid-row:span 2}
+.fn-stage-n{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--creosote-ink);grid-row:span 2}
 .fn-stage-head h2{margin:0}
 .fn-stage-head p{margin:0;grid-column:2;max-width:56ch;line-height:1.5;color:var(--asphalt)}
 .fn-stage--read .fn-stage-head{grid-template-columns:1fr}
@@ -160,7 +160,7 @@ main{display:block}
 .res-door p{margin:0;line-height:1.5}
 .res-door .fn-spoke-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
 .res-door .fn-spoke-title{font-family:var(--display);font-weight:800;font-size:1.45rem;line-height:1.05;letter-spacing:-.02em;color:var(--asphalt)}
-.res-door .fn-spoke-more{margin-top:auto;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--creosote)}
+.res-door .fn-spoke-more{margin-top:auto;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--creosote-ink)}
 .res-door--now{background:var(--tar);color:var(--bone);border-color:var(--tar)}
 .res-door--now .fn-spoke-kicker{color:var(--dust)}
 .res-door--now .fn-spoke-title{color:var(--bone)}

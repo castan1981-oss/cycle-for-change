@@ -38,11 +38,17 @@ exports.handler = async () => {
     });
     const subs = await subRes.json();
 
+    // Name, when, and the org they picked (Pass 5) — never the email, phone, rate or amount.
+    const ORG_IDS = ["onenten", "lalgbtcenter", "sfaf"];
     const names = (Array.isArray(subs) ? subs : [])
-      .map((s) => ({
-        name: (s.data && s.data.name ? String(s.data.name) : "").slice(0, 40),
-        ago: timeAgo(new Date(s.created_at).getTime()),
-      }))
+      .map((s) => {
+        const org = s.data && s.data.org ? String(s.data.org) : "";
+        return {
+          name: (s.data && s.data.name ? String(s.data.name) : "").slice(0, 40),
+          ago: timeAgo(new Date(s.created_at).getTime()),
+          org: ORG_IDS.includes(org) ? org : "",
+        };
+      })
       .filter((n) => n.name);
 
     return { statusCode: 200, headers, body: JSON.stringify({ names, configured: true }) };
