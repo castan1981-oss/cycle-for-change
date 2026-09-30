@@ -7,3 +7,6 @@ social/video/inbox/*.mp4
 social/video/inbox/*.mov
 social/video/posted/*.mp4
 social/video/posted/*.mov
+
+# git bundles used to hand branches to the Mac (never commit them)
+*.bundle
