@@ -439,22 +439,42 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .done ol{margin:0;padding-left:1.2em;color:var(--mute);max-width:44ch}
 .done li{margin-bottom:6px}
 .done-acts{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+.card-fig{margin:4px 0 0;max-width:340px}
+.card-fig img{display:block;width:100%;height:auto;border:1px solid var(--asphalt)}
+.card-fig figcaption{margin-top:8px}
 .done .fine{margin:0;font-size:13.5px;color:var(--mute);max-width:44ch}
 .board{align-self:start}
-.board-top{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:12px;border-bottom:1px solid var(--asphalt)}
+/* Pass 10 (Sept 30, 2026): the board is a sheet — paper, a hairline frame, bib numbers,
+   your line on top as you type it, the open lines under it. The rows are painted by home.js
+   (row(): .n .name[.open] .ago .org); keep the class names. */
+.sheet{background:var(--paper);border:1px solid var(--asphalt);padding:16px 18px 4px}
+.board-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--asphalt)}
+.board-kicker{display:flex;align-items:center;gap:10px}
+.mk--sheet{width:26px;height:26px;color:var(--creosote-ink)}
 .slots{list-style:none;margin:0;padding:0}
-.slots li{display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:baseline;gap:0 12px;padding:16px 0;border-bottom:1px solid var(--line)}
-.slots .n{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--mute);font-variant-numeric:tabular-nums}
+.slots li{display:grid;grid-template-columns:48px minmax(0,1fr) auto;align-items:center;gap:0 14px;padding:14px 0 13px;border-bottom:1px solid var(--dust)}
+.slots li:last-child{border-bottom:0}
+.slots .n{justify-self:start;min-width:40px;padding:5px 0 4px;border:1px solid var(--asphalt);font-weight:800;font-size:13px;line-height:1;letter-spacing:.02em;text-align:center;font-variant-numeric:tabular-nums}   /* the bib */
+.slots li.nobib{grid-template-columns:minmax(0,1fr) auto}
 .slots .name{font-weight:800;font-size:clamp(1.5rem,1.6vw + 1.1rem,2.4rem);line-height:1;letter-spacing:-.03em;text-transform:uppercase;overflow-wrap:anywhere}
-.slots .open{color:var(--mute)}   /* dust on bone is 1.5:1; mute reads */
-.slots .org{grid-column:2;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.slots .open{color:var(--mute)}   /* dust on paper doesn't read; mute does */
+.slots .open:not(#slotYou){font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.16em;color:var(--mute);align-self:end;padding-bottom:2px}   /* an open line: the number and a quiet word */
+.slots .org{grid-column:2;display:block;padding:0;border:0;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-top:2px}   /* .org is also the vote section's card class; reset it here */
 .slots .more{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
-.slots .ago{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);white-space:nowrap}
+.slots .ago{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);white-space:nowrap;align-self:start;padding-top:4px}
+/* the swag: four poster tiles */
+.swag{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}
+.swag li{display:flex;flex-direction:column;justify-content:space-between;gap:22px;min-height:150px;padding:14px 14px 12px;background:var(--bone-2)}
+.swag li:nth-child(4n+2),.swag li:nth-child(4n+3){background:var(--paper)}
+.mk--swag{width:36px;height:36px;color:var(--creosote-ink)}
+.swag b{display:block;font-weight:800;font-size:1.7rem;line-height:1;letter-spacing:-.03em}
+.swag span{display:block;margin-top:5px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--creosote-ink)}
 .tiers{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--asphalt)}
 .tiers li{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
 .tiers b{font-weight:800;font-size:1.5rem;letter-spacing:-.03em}
 .tiers span{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:right}
 .tiers-note{margin-top:12px;font-size:15px}
+@media (min-width:900px){.swag{grid-template-columns:repeat(4,minmax(0,1fr))}.swag li:nth-child(4n+2),.swag li:nth-child(4n+3){background:var(--bone-2)}.swag li:nth-child(2n){background:var(--paper)}}
 @media (min-width:900px){.board-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 
 /* —— where it goes: the one colour field on the page —— */

@@ -89,6 +89,22 @@ carries the town strip when a guide exists for that city.
 - `email/mile-updates.html` is the mile-updates email template (table-based, inline styles,
   {{placeholders}} listed at the top). Send from whatever reads the Netlify "waitlist" form.
 
+## Pass 10 — the board is a board (Sept 30, 2026)
+- `/pledge/`: the board is a sheet (`.sheet`: paper, a hairline frame, the board mark): bib
+  numbers in boxes (`.slots .n`), your line on top as you type it, the open lines under it
+  (`.open` rows are a quiet mono word). When the pledges function can't read names back the
+  rows carry no numbers (`li.nobib`) and never claim a count. The swag is four poster tiles
+  (`.swag`, marks `m-bottle` / `m-socks` / `m-jersey` / `m-bibs`, added to the sprite).
+- **The card.** Once a pledge is in, `drawCard()` in home.js paints a 1080×1350 PNG on a
+  canvas — the stack, I'M ON THE BOARD., the name (fitted, two lines if it must), the pledge
+  line, the org, the link — shows it under the thank-you (`#cardWrap`), and "Share the pledge"
+  sends it as an image where the share sheet takes files; "Save the card" downloads it. Bone,
+  asphalt, creosote-ink; Outfit + Space Mono loaded through `document.fonts` first.
+- The fallback numbers (the HTML tallies, the `feed` object in home.js, the four static log
+  rows) were refreshed to Sept 30; refresh them whenever these pages are touched.
+- The live pledges function currently answers `status: 401` — the NETLIFY_API_TOKEN in the
+  site's env is refused, so the board can't show names until Robert makes a new token.
+
 ## Pass 9 — the calendar and resources (Sept 30, 2026)
 - `/events/2027/`: the month strip is a bar chart (`.mo-bar`, `--h` = the month's share of the
   busiest month, set by build-calendar.js); every row is a small poster (`CAT_MARK` picks the

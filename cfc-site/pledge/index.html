@@ -88,7 +88,7 @@
   </div>
 </div>
 
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num num" data-miles>3,067</span>&nbsp;miles since June 1 &middot; 10,000 in 2027 &middot; all on the bike</span></p>
+<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num num" data-miles>3,360</span>&nbsp;miles since June 1 &middot; 10,000 in 2027 &middot; all on the bike</span></p>
 
 <main id="main">
 
@@ -158,8 +158,14 @@
           <li>Your vote counts at year-end. Change it any time before Dec 31, 2027.</li>
           <li>January 2028: one email with the final miles, your number, and one link to the org. The money never touches me.</li>
         </ol>
+        <!-- Pass 10: the card — drawn by home.js once the pledge is in (bone, the stack, I'M ON THE BOARD, the name, the pledge) -->
+        <figure class="card-fig" id="cardWrap" hidden>
+          <img id="cardImg" alt="" width="1080" height="1350">
+          <figcaption class="fine">Your card. Post it anywhere; the link on it comes back here.</figcaption>
+        </figure>
         <div class="done-acts">
           <button class="btn btn--ink btn--sm" type="button" id="shareBtn">Share the pledge</button>
+          <a class="link" id="cardSave" href="#" download="cycle-for-change-pledge.png" hidden>Save the card</a>
           <a class="link" href="/rides/">Find a group ride</a>
         </div>
         <p class="fine" id="shareMsg" role="status" hidden></p>
@@ -167,18 +173,25 @@
       </div>
     </div>
     <div class="board rise" aria-label="The board">
-      <div class="board-top"><span class="eyebrow">The board</span><span class="eyebrow"><span id="boardCount">0</span> on it</span></div>
-      <ol class="slots" id="slots">
-        <li><span class="n">01</span><span class="name open" id="slotYou">Your name here</span></li>
-        <li><span class="n">02</span><span class="name open">Open</span></li>
-        <li><span class="n">03</span><span class="name open">Open</span></li>
-        <li><span class="n">04</span><span class="name open">Open</span></li>
-      </ol>
-      <ul class="tiers" aria-label="What a pledge comes with">
-        <li><b class="num">$100</b><span>Two bottles</span></li>
-        <li><b class="num">$200</b><span>Socks</span></li>
-        <li><b class="num">$1,000</b><span>The jersey</span></li>
-        <li><b class="num">$2,000+</b><span>Jersey and bibs</span></li>
+      <!-- Pass 10 (Sept 30, 2026): the board is a sheet. Bib numbers, your line on top, the open
+           lines under it; the swag as four poster tiles with their marks. home.js paints the rows. -->
+      <div class="sheet">
+        <div class="board-top">
+          <span class="board-kicker"><svg class="mk mk--sheet" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-board"/></svg><span class="eyebrow">The board &middot; 2027</span></span>
+          <span class="eyebrow"><span id="boardCount">0</span> on it</span>
+        </div>
+        <ol class="slots" id="slots">
+          <li><span class="n">01</span><span class="name open" id="slotYou">Your name here</span></li>
+          <li><span class="n">02</span><span class="name open">Open</span></li>
+          <li><span class="n">03</span><span class="name open">Open</span></li>
+          <li><span class="n">04</span><span class="name open">Open</span></li>
+        </ol>
+      </div>
+      <ul class="swag" aria-label="What a pledge comes with">
+        <li><svg class="mk mk--swag" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-bottle"/></svg><b class="num">$100</b><span>Two bottles</span></li>
+        <li><svg class="mk mk--swag" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-socks"/></svg><b class="num">$200</b><span>Socks</span></li>
+        <li><svg class="mk mk--swag" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-jersey"/></svg><b class="num">$1,000</b><span>The jersey</span></li>
+        <li><svg class="mk mk--swag" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-bibs"/></svg><b class="num">$2,000+</b><span>Jersey and bibs</span></li>
       </ul>
       <p class="p mute tiers-note">The 10K kit lands in December. Swag ships after the year, with the thank-you.</p>
       <p class="eyebrow perks-h">What you get on the board</p>
@@ -203,9 +216,9 @@
       <a class="link" id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Strava</a>
     </div>
     <dl class="specs specs--dark">
-      <div><dt>Miles since June&nbsp;1</dt><dd class="num" data-miles>3,067</dd></div>
-      <div><dt>Rides logged</dt><dd class="num" id="rideCount">85</dd></div>
-      <div><dt>Days to Jan&nbsp;1</dt><dd class="num" id="daysTo">102</dd></div>
+      <div><dt>Miles since June&nbsp;1</dt><dd class="num" data-miles>3,360</dd></div>
+      <div><dt>Rides logged</dt><dd class="num" id="rideCount">92</dd></div>
+      <div><dt>Days to Jan&nbsp;1</dt><dd class="num" id="daysTo">93</dd></div>
     </dl>
     <div class="log-grid">
       <ol class="log" id="log" aria-live="polite"></ol>
