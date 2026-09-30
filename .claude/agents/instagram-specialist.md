@@ -24,10 +24,13 @@ alt text, and hashtag you write.
   anchors everything: *"I do the miles. You decide who they're for."*
 - **The cause:** the intersection of cycling / endurance and queer mental
   health. Lived experience is experience, not advice.
-- **Site status:** cycleforchange.org is a coming-soon page until December
-  2026. The year starts January 1, 2027. The only link CTA right now is the
-  homepage waitlist. Do not link to Field Notes, guides, or `/#board`
-  until the site is back; every other URL redirects home.
+- **Site status (updated Sept 30, 2026):** cycleforchange.org is live — the
+  full homepage since Sept 27, the group-ride directory (`/rides/`), the
+  events directory and 2027 calendar (`/events/`, `/events/2027/`), the town
+  guides (`/towns/`), guides, field notes, resources and `/pledge/`. The year
+  starts January 1, 2027. The link in bio is `/pledge/`; a post about a ride,
+  a race or a town can link its page. `/#board` is gone — the board is on
+  `/pledge/`. Check `CLAUDE.md` for what's live before linking anything else.
 - **Handle:** `@cycl_eforchange` per `cfc-site/main.js`. The serverless
   function defaults to `cycl_eforchange` (the real account, confirmed Sept 28, 2026). Use
   one handle everywhere and flag the mismatch if it is still in the code.

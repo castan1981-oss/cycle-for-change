@@ -19,6 +19,44 @@
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
 
+## Town guides — the destination layer (Sept 30, 2026)
+Robert's brief: the site becomes the guide for a rider who lives somewhere else and is coming to
+a town with a bike — "you live in Boise, you're going to LA, you're bringing the bike": where to
+ride, the ride-out coffee, who fixes or rents a bike, where to sleep with it, what to do off the
+bike, how to get the bike there. **And it sits everywhere we post races, fundraising rides and
+group rides** (his words): every event page, every 2027 calendar row and every group-ride page
+carries the town strip when a guide exists for that city.
+- **Data:** `data/towns/<id>.json` grew the guide fields (`data/SCHEMA.md`, "Town guide fields"):
+  `kind` (event-host | destination), `tagline`, `best_months`, `covers[]` (the cities a big guide
+  speaks for), `routes[]`, `coffee[]`, `culture[]`, `clubs[]`, `bring_your_bike`, `faq[]`, hotel
+  `bike_policy` / `booking_url`, `travel_links[]`. Start from `data/towns/_template.json`. Every
+  field is optional; a page renders only when its data exists. First full guide: `los-angeles-ca`.
+- **Pages:** `scripts/build-events.js` writes `/towns/<state>/<town>/` plus `routes/`, `coffee/`,
+  `culture/`, `bring-your-bike/` next to the old `hotels/`, `restaurants/`, `bike-shops/`. The town
+  page lists the clubs, the nearest group rides (rides.json, 30 mi), the town's 2027 calendar rows,
+  and links the rides hub (`/rides/<st>/<city>/`). `FAQPage` JSON-LD from `faq[]`.
+- **The strip:** `scripts/towns.js` is the one town lookup all three generators use —
+  `TOWNS.find({ city, state, lat, lng })` matches the town's name, then `covers[]`, then the nearest
+  `destination` within 25 mi — and `TOWNS.strip(t)` renders the cards. build-events (event pages),
+  build-calendar (row link + strip in the details) and build-rides (ride pages, city hubs) all call
+  it. Never hand-write a town strip.
+- **Agents (`.claude/agents/`):** eight scouts, one section each — `route-scout`, `shop-scout`,
+  `coffee-scout`, `eat-scout`, `stay-scout`, `culture-scout`, `logistics-scout`, `community-scout`
+  — plus `town-editor` (opens the brief, assembles the JSON, ships the PR; the only agent that
+  writes `data/towns/*.json`), `town-verifier` (re-fetches; a guide doesn't ship without its
+  **ships**), `voice-editor`, `seo-geo-editor`. Rules they share: `research/towns/SCOUT-RULES.md`
+  (verified = fetched; unknown = null; queer-owned only in the business's own words). Reports live
+  in `research/towns/<id>/`. Run the whole thing with `/town Los Angeles, CA`, `/town refresh
+  <id>` or `/town next` (`.claude/commands/town.md`).
+- **Check before the build:** `node tools/verify-town.js data/towns/<id>.json` — fetches every URL,
+  checks fields and vocabularies, lints banned phrases, flags undated prices and `queer-owned`
+  entries whose note doesn't say where the business says so. `--all`, `--no-fetch`.
+- **Rides the scouts find** go into `cfc-site/rides/rides.json` through the editor (confidence
+  high/medium only), then `node tools/build-rides.js`. Build order when everything changed:
+  `node tools/build-rides.js && node scripts/build-events.js && node scripts/build-calendar.js`.
+- The queer lens informs the picks and never headlines a page. No mental-health language on a
+  town page; if any gets in, it needs 988 + Trevor like everywhere else.
+
 ## The homepage and /pledge/ (Sept 27, 2026 — Pass 2 of the site plan)
 - `cfc-site/index.html` is the door: film hero (the locked line, plain sub, Pledge a mile /
   Find a group ride), the Free / No card / 100% strip, three paths (Pledge / Ride / Read),
