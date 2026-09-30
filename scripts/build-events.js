@@ -206,14 +206,21 @@ function facts(rows) {
   return `<dl class="facts">${rows.filter((r) => r[1]).map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join("")}</dl>`;
 }
 
+// Pass 7 (Sept 30, 2026): events are posters. The date as a big numeral (MM.DD), the town's
+// name filling the width, the specs as scannable mono lines (the SYN flyer Robert saved).
+// The town's contour (tools/contour-art.js → cfc-site/towns/art/<slug>.svg) sits behind it once drawn.
+const posterDate = (e) => e.next_date ? `${e.next_date.slice(5, 7)}.${e.next_date.slice(8, 10)}` : "TBA";
+const townArt = (t) => (fs.existsSync(path.join(OUT, "towns", "art", `${t.slug}.svg`)) ? `<img class="tile-art" src="/towns/art/${t.slug}.svg" alt="" loading="lazy" decoding="async" width="200" height="200">` : "");
+const longestWordOf = (name) => Math.max(...String(name).split(/[\s-]+/).map((w) => w.length), 4);
 function eventCard(e, opts) {
   const o = opts || {};
   const t = e.townRef;
   const when = e.next_date ? fmtRange(e.next_date, e.end_date) : (e.typical_timing || "Date to be announced");
-  return `<li class="card">
-    <p class="card-eyebrow">${esc(TYPE_LABEL[e.type] || e.type)} &middot; ${esc(when)}</p>
-    <h3><a href="${e.url}">${esc(e.name)}</a></h3>
-    <p>${esc(t.name)}, ${esc(t.state_code)}${o.distance != null ? ` &middot; ${Math.round(o.distance)} mi away` : ""}${e.distances && e.distances.length ? ` &middot; ${esc(e.distances.map((d) => d.label).join(" / "))}` : ""}</p>
+  const dist = e.distances && e.distances.length ? e.distances.map((d) => d.label).join(" / ") : "";
+  const art = townArt(t);
+  return `<li class="tile-p tile-p--event${art ? " tile-p--art" : ""}" style="--l:${longestWordOf(t.name)}">${art}
+    <a class="ev-link" href="${e.url}"><span class="d num">${posterDate(e)}</span><span class="t">${esc(t.name)}</span><span class="ev-name">${esc(e.name)}</span></a>
+    <span class="ev-spec">${esc(TYPE_LABEL[e.type] || e.type)} &middot; ${esc(when)}${o.distance != null ? ` &middot; ${Math.round(o.distance)} mi away` : ""}${dist ? `<br>${esc(dist)}` : ""}</span>
   </li>`;
 }
 
@@ -268,8 +275,22 @@ function eventPage(e) {
 
   const nearby = events.filter((x) => x !== e).map((x) => ({ e: x, d: haversineMi(e, x) })).sort((a, b) => a.d - b.d).slice(0, 3);
 
+  const art = townArt(t);
+  const specLines = (e.distances && e.distances.length ? e.distances : []).slice(0, 4).map((d) => `<li><b>${esc(d.label)}</b>${d.note ? `<span>${esc(d.note)}</span>` : ""}</li>`).join("");
   const body = `
   ${crumbs.html}
+  <section class="ev-poster${art ? " tile-p--art" : ""}" style="--l:${longestWordOf(t.name)}" aria-label="${attr(e.name)}, at a glance">${art}
+    <div class="ev-poster-top">
+      <span class="ev-poster-date num">${posterDate(e)}</span>
+      <span class="ev-poster-town">${esc(t.name)}</span>
+    </div>
+    <div class="ev-poster-info">
+      <p class="ev-poster-kind">${esc(TYPE_LABEL[e.type] || e.type)}${e.founded ? ` &middot; since ${e.founded}` : ""}</p>
+      <p class="ev-poster-when">${when ? esc(when) : esc(e.date_note || e.typical_timing || "Next date to be announced")}${e.start_location ? ` <span>@ ${esc(e.start_location)}</span>` : ""}</p>
+      ${specLines ? `<ul class="ev-poster-spec">${specLines}</ul>` : ""}
+      ${e.elevation_gain_ft ? `<p class="ev-poster-climb">${Number(e.elevation_gain_ft).toLocaleString("en-US")} ft of climbing on the longest route</p>` : ""}
+    </div>
+  </section>
   <article class="event">
     <p class="eyebrow">${esc(TYPE_LABEL[e.type] || e.type)} &middot; <a href="${t.url}">${esc(t.name)}, ${esc(t.state)}</a>${e.founded ? ` &middot; since ${e.founded}` : ""}</p>
     <h1>${esc(e.name)}</h1>
@@ -333,7 +354,7 @@ ${near.map(({ r, d }) => `        <li><a href="/rides/${r.slug}/"><span class="r
 ${BLOCKS.REPORT({ thing: "event", name: e.name, kind: "changed", compact: true, id: "fix" })}
   </article>
 
-  ${nearby.length ? `<section class="related"><h2>Nearby events</h2><ul class="cards">${nearby.map((n) => eventCard(n.e, { distance: n.d })).join("")}</ul></section>` : ""}
+  ${nearby.length ? `<section class="related"><h2>Nearby events</h2><ul class="tiles-p tiles-p--events">${nearby.map((n) => eventCard(n.e, { distance: n.d })).join("")}</ul></section>` : ""}
   <p class="back"><a href="/events/">All events</a> &middot; <a href="/events/state/${t.state_slug}/">Events in ${esc(t.state)}</a></p>
 `;
   const lds = [ld, crumbs.ld, pageLd].concat(faqLd ? [faqLd] : []).map(stripUndef);
@@ -386,7 +407,7 @@ function townPage(t) {
     </section>
 
     <section><h2>Bike events in ${esc(t.name)}</h2>
-      ${t.events.length ? `<ul class="cards">${t.events.map((e) => eventCard(e)).join("")}</ul>` : `<p>No events listed here yet.</p>`}
+      ${t.events.length ? `<ul class="tiles-p tiles-p--events">${t.events.map((e) => eventCard(e)).join("")}</ul>` : `<p>No events listed here yet.</p>`}
     </section>
 
     ${t.about && t.about.length ? `<section><h2>About ${esc(t.name)}</h2>${paras(t.about)}</section>` : ""}
@@ -469,7 +490,7 @@ function eventsIndex() {
     <p class="calendar-link">Looking for everything next year? <a href="/events/2027/">The 2027 calendar</a> lists every organized US ride and race we could pin down, with confirmed and projected dates.</p>
 
     <section><h2>Coming up</h2>
-      ${upcoming.length ? `<ul class="cards">${upcoming.map((e) => eventCard(e)).join("")}</ul>` : `<p>Dates for the next editions are still being announced. Browse by state below.</p>`}
+      ${upcoming.length ? `<ul class="tiles-p tiles-p--events">${upcoming.map((e) => eventCard(e)).join("")}</ul>` : `<p>Dates for the next editions are still being announced. Browse by state below.</p>`}
     </section>
 
     <section class="by-state"><h2>Cycling events by state</h2>
@@ -501,7 +522,7 @@ function statePage(s) {
     <p class="eyebrow">${s.events.length} events &middot; ${s.towns.length} towns</p>
     <h1>Cycling events in ${esc(s.name)}</h1>
     <p class="lede">${esc(s.events.length)} bike events in ${esc(s.name)} with a page each: ${esc(s.events.map((e) => e.name).join(", "))}. Every page has the date, the routes, the sign-up link, live weather and a guide to the host town.</p>
-    <section><h2>Bike events in ${esc(s.name)}</h2><ul class="cards">${s.events.map((e) => eventCard(e)).join("")}</ul></section>
+    <section><h2>Bike events in ${esc(s.name)}</h2><ul class="tiles-p tiles-p--events">${s.events.map((e) => eventCard(e)).join("")}</ul></section>
     <section><h2>Towns in ${esc(s.name)} that host rides</h2><ul class="rows">${s.towns.map((t) => `<li><a href="${t.url}">${esc(t.name)}</a><span class="row-meta">${t.events.length} event${t.events.length === 1 ? "" : "s"}</span></li>`).join("")}</ul></section>
   </article>
   <p class="back"><a href="/events/">All events</a></p>
