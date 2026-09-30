@@ -128,6 +128,26 @@ carries the town strip when a guide exists for that city.
 - `email/mile-updates.html` is the mile-updates email template (table-based, inline styles,
   {{placeholders}} listed at the top). Send from whatever reads the Netlify "waitlist" form.
 
+## Pass 11 — the homepage, last comb (Sept 30, 2026)
+Robert: the above-the-fold still "looks a little blocky and not perfect", and the page wants more
+custom icons. What changed:
+- **The hero photo is sharp now.** `photos/crew.jpg` is a 1024px phone export, so at 2x screens it
+  was soft and blocky. `tools/sr.py` (denoise, then EDSR 2x in tiles) wrote `photos/crew-2x.jpg`;
+  grade.py reads that for `hero.jpg` (1600) and `hero-wide.jpg` (2000×1428) with a gentler
+  half-stop (`stop=0.3`) so the sunset holds. Any photo that will run big goes through sr.py
+  once before it goes in the manifest. The `<picture>` sizes match the new files.
+- **Phones get the split too, stacked.** The photo sits up top (58svh), whole and bright, and
+  dissolves into the bone the copy sits on (`.hero-media picture` bottom mask); the copy starts
+  84px up inside the fade. No scrim, no type over the picture, no hard edge where the photo
+  stops. The button is asphalt everywhere; the tally sits on bone in asphalt/mute. The phone crop
+  is `object-position:78% 34%` so the saguaro at the photo's left edge stays out of frame.
+  Desktop keeps the side-by-side split; its tally rule stays inside the copy column.
+- **Marks where the page still read as words:** the doors' "I want to" kicker, the six 2027
+  rides (type before the name — `hundred` for the centuries, `distance` for the multi-day rides;
+  `checked` / `date` in the status tag), Next up, the field-note cards' kickers, the guides list
+  (stage marks, like the hub), the five questions, and three facts under Find your people
+  (no-drop · queer rides · tonight). 46 marks on the page; every one picked by meaning.
+
 ## Pass 10 — the board is a board (Sept 30, 2026)
 - `/pledge/`: the board is a sheet (`.sheet`: paper, a hairline frame, the board mark): bib
   numbers in boxes (`.slots .n`), your line on top as you type it, the open lines under it
