@@ -233,8 +233,11 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   color:var(--bone);
   overflow:hidden;
 }
-.hero-media{position:absolute;inset:0;z-index:-2;background:var(--bone-2)}
+.hero-media{position:absolute;inset:0;z-index:-2;background:var(--bone)}
 .hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 34%}
+/* Pass 7 (Sept 30): photos sit ON the paper, not on top of it. Every photo's edge that meets
+   bone dissolves into it (mask-image), so there is no seam between picture and page. */
+.hero-media picture{display:block;width:100%;height:100%}
 .hero-media::after{
   content:"";
   position:absolute;
@@ -297,9 +300,19 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 
 @media (min-width:900px){
   .hero{min-height:clamp(600px,78svh,820px);color:var(--asphalt)}
-  .hero-media{left:auto;width:min(54vw,960px)}
+  /* the photo runs wider than before and its left and bottom edges fade into the bone the copy
+     sits on; the copy's right end sits inside that fade, so the two share ground */
+  .hero-media{left:auto;width:min(60vw,1040px)}
+  .hero-media picture{
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 24%),linear-gradient(to bottom,#000 72%,transparent 100%);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(to right,transparent 0,#000 24%),linear-gradient(to bottom,#000 72%,transparent 100%);
+    mask-composite:intersect;
+  }
   .hero-media img{object-position:50% 40%}
   .hero-media::after{display:none}
+  /* the sunset spills into the copy column: a warm wash across the seam */
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(52% 64% at 44% 46%,rgba(222,168,92,.20),rgba(222,168,92,0) 70%)}
   .hero .btn--hero{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
   .hero-sub{display:block;color:var(--mute)}
   .hero .link{color:var(--asphalt)}
@@ -458,12 +471,18 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
    No gradient wash. On phones the photo comes first at 4:3, the copy under it. —— */
 .plane{background:var(--bone);color:var(--asphalt)}
 .plane-grid{display:grid;gap:clamp(20px,3vw,36px)}
-.plane-fig{margin:0;aspect-ratio:4/3;overflow:hidden;background:var(--bone-2)}
+.plane-fig{margin:0 calc(-1 * var(--gut));aspect-ratio:4/3;overflow:hidden;background:transparent;
+  -webkit-mask-image:linear-gradient(to bottom,#000 80%,transparent 100%);mask-image:linear-gradient(to bottom,#000 80%,transparent 100%)}
 .plane-fig img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;display:block}
 .plane-copy{display:flex;flex-direction:column;gap:18px}
 @media (min-width:900px){
   .plane-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:center;gap:clamp(32px,5vw,80px)}
-  .plane-fig{aspect-ratio:5/4}
+  /* full-bleed to the left edge of the screen; the right edge dissolves toward the words */
+  .plane-fig{aspect-ratio:5/4;margin:0 0 0 calc(-1 * max(var(--gut),(100vw - var(--maxw)) / 2 + var(--gut)));
+    -webkit-mask-image:linear-gradient(to right,#000 72%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 84%,transparent 100%);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(to right,#000 72%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 84%,transparent 100%);
+    mask-composite:intersect}
   .plane--flip .plane-fig{order:2}
 }
 
@@ -554,7 +573,8 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 }
 .cards::-webkit-scrollbar{display:none}
 .card{flex:0 0 min(76%,330px);display:flex;flex-direction:column;gap:12px;text-decoration:none}
-.card figure{position:relative;margin:0;aspect-ratio:4/5;max-width:100%;overflow:hidden;background:var(--bone-2)}
+.card figure{position:relative;margin:0;aspect-ratio:4/5;max-width:100%;overflow:hidden;background:transparent;
+  -webkit-mask-image:linear-gradient(to bottom,#000 84%,transparent 100%);mask-image:linear-gradient(to bottom,#000 84%,transparent 100%)}
 .card img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 @media (hover:hover){.card:hover img{transform:scale(1.035)}}
 .card .eyebrow{color:var(--mute)}
@@ -571,14 +591,19 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 
 /* —— close (Pass 6): on bone-2, the finish line in color, no wash —— */
 .close{background:var(--bone-2);color:var(--asphalt);display:grid}
-.close figure{position:relative;margin:0;aspect-ratio:4/3;max-width:100%;overflow:hidden;background:var(--bone-2)}
+.close figure{position:relative;margin:0;aspect-ratio:4/3;max-width:100%;overflow:hidden;background:transparent;
+  -webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}
 .close img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
 .close-copy{display:flex;flex-direction:column;justify-content:center;gap:20px;padding:clamp(36px,6vw,96px) var(--gut) clamp(44px,6vw,96px)}
 .close .eyebrow{color:var(--mute)}
 .close .lede{color:var(--creosote-ink)}
 @media (min-width:900px){
   .close{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-  .close figure{order:2;aspect-ratio:auto;min-height:460px}
+  .close figure{order:2;aspect-ratio:auto;min-height:460px;
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 28%),linear-gradient(to bottom,transparent 0,#000 18%);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(to right,transparent 0,#000 28%),linear-gradient(to bottom,transparent 0,#000 18%);
+    mask-composite:intersect}
   .close-copy{padding-left:max(var(--gut),calc((100vw - var(--maxw)) / 2 + var(--gut)))}
 }
 
@@ -651,9 +676,16 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .path .link{margin-top:10px;align-self:end;justify-self:start}
 @media (hover:hover){.path:hover .h2{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}.path:hover img{transform:scale(1.035)}}
 @media (min-width:900px){
-  .paths{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px)}
-  .path{grid-template-columns:1fr;grid-template-rows:auto auto auto 1fr auto;gap:10px 0;padding:22px 0 0;border-bottom:0}
-  .path figure{grid-row:auto;margin-bottom:8px}
+  .paths{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px);align-items:start;border-top:0}
+  .path{grid-template-columns:1fr;grid-template-rows:auto auto auto 1fr auto;gap:10px 0;padding:0;border-bottom:0}
+  /* an editorial stagger: the three doors step down the page instead of lining up like cards */
+  .path:nth-child(2){margin-top:56px}
+  .path:nth-child(3){margin-top:112px}
+  .path figure{grid-row:auto;margin-bottom:8px;background:transparent;
+    -webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%),linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(to bottom,#000 78%,transparent 100%),linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%);
+    mask-composite:intersect}
   .path p{font-size:16px}
 }
 
