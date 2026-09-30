@@ -197,3 +197,5 @@ main{display:block}
 /* Pass 8: the stage marks on the guides hub */
 .mk{width:22px;height:22px;flex:0 0 auto;color:var(--asphalt);display:block}
 .fn-stage-head .mk--stage{width:36px;height:36px;color:var(--creosote-ink);margin-top:4px}
+.mk--door{width:28px;height:28px;color:var(--creosote-ink);margin-bottom:2px}
+.res-door--now .mk--door{color:var(--bone)}
