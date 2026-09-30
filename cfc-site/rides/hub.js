@@ -12,6 +12,9 @@
   var idx = JSON.parse(idxEl.textContent);
   var cities = idx.cities, stateAbbr = {}, stateNames = {};
   idx.states.forEach(function (s) { stateAbbr[s[0]] = s[1]; stateNames[s[1].toLowerCase()] = s[0]; });
+  // the world (Sept 30, 2026): [code, name, path, keys] for every country with a ride
+  var countries = idx.countries || [], countryName = {};
+  countries.forEach(function (c) { countryName[c[0]] = c[1]; });
 
   var form = $("gr-form"), geoBtn = $("gr-geo"), daySel = $("gr-day"), status = $("gr-status");
   var results = $("results"), grid = $("gr-results"), count = $("gr-count"), more = $("gr-show-more");
@@ -31,7 +34,9 @@
     return loading;
   }
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
-  function norm(s) { return (s || "").toLowerCase().replace(/[^a-z0-9, ]+/g, " ").replace(/\s+/g, " ").trim(); }
+  // fold accents so "Bogota" finds "Bogotá" and "Zürich" finds "Zurich"
+  function fold(s) { s = String(s || ""); return s.normalize ? s.normalize("NFD").replace(/[\u0300-\u036f]/g, "") : s; }
+  function norm(s) { return fold(s).toLowerCase().replace(/[’']/g, "").replace(/[^a-z0-9, ]+/g, " ").replace(/\s+/g, " ").trim(); }
   function miles(a, b) {
     var R = 3958.8, r = Math.PI / 180, dLat = (b.lat - a.lat) * r, dLng = (b.lng - a.lng) * r;
     var h = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dLng / 2) * Math.sin(dLng / 2);
@@ -41,11 +46,19 @@
     var t = norm(text).replace(/,/g, " ").replace(/\s+/g, " ").trim(), best = null;
     if (!t) return null;
     cities.forEach(function (c) {
-      var name = norm(c[0]).replace(/,/g, ""), cityOnly = name.replace(/ [a-z]{2}$/, ""), st = name.slice(-2).toUpperCase();
+      var name = norm(c[0]).replace(/,/g, "");
+      if (c[3]) { if (t === name || c[3].indexOf(t) > -1) { if (!best || t === name) best = c; } return; }
+      var cityOnly = name.replace(/ [a-z]{2}$/, ""), st = name.slice(-2).toUpperCase();
       var full = cityOnly + " " + (stateAbbr[st] || st).toLowerCase();
       if (t === name || t === cityOnly || t === full) { if (!best || t === name) best = c; }
     });
     return best;
+  }
+  function matchCountry(text) {
+    var t = norm(text).replace(/,/g, "").trim(), hit = null;
+    if (!t) return null;
+    countries.forEach(function (c) { if (!hit && (norm(c[1]) === t || c[3].indexOf(t) > -1)) hit = c[0]; });
+    return hit;
   }
   function matchState(text) {
     var t = norm(text).replace(/,/g, "").trim();
@@ -65,16 +78,18 @@
   var WAIT = { waits: "Waits for you", regroups: "Regroups", drops: "Drops" };
   /* Pass 6: the card carries its discipline's mark (cfc-site/rides/marks.svg); keep in step with tools/build-rides.js card() */
   var MARKS = { road: 1, gravel: 1, mtb: 1, fixed: 1, social: 1, cruiser: 1, bmx: 1, track: 1, cyclocross: 1, ebike: 1, mixed: 1 };
-  function markOf(r) { var k = r.d && r.d[0]; return '<svg class="gr-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-' + (MARKS[k] ? k : "mixed") + '"/></svg>'; }
+  function markOf(r) { var k = r.k === "open-streets" ? "open-streets" : (r.d && r.d[0]); return '<svg class="gr-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-' + (MARKS[k] || k === "open-streets" ? k : "mixed") + '"/></svg>'; }
   function card(r, d) {
     var tags = r.tl.map(function (t) { return '<span class="gr-tag">' + esc(t) + "</span>"; }).join("") + (r.u ? '<span class="gr-tag gr-tag-warn">Unconfirmed</span>' : "");
     return '<div class="gr-card" data-slug="' + r.s + '">' +
       '<span class="gr-card-top">' + markOf(r) + '<span class="gr-disc">' + esc(r.dl) + "</span>" + (d != null ? '<span class="gr-dist">' + Math.round(d) + " mi away</span>" : "") + "</span>" +
       '<a class="gr-card-name" href="/rides/' + r.s + '/">' + esc(r.n) + "</a>" +
-      '<span class="gr-card-place">' + esc(r.c + ", " + r.st) + (r.h ? " · " + esc(r.h) : "") + "</span>" +
+      (r.ne ? '<span class="gr-card-en">' + esc(r.ne) + "</span>" : "") +
+      '<span class="gr-card-place">' + esc(r.pl || (r.c + ", " + r.st)) + (r.h ? " · " + esc(r.h) : "") + "</span>" +
       '<span class="gr-card-when">' + esc(r.w) + "</span>" +
       (r.x || r.wt ? '<span class="gr-card-stat">' + esc(r.x) + (r.wt ? (r.x ? " · " : "") + '<em class="gr-wait gr-wait--' + r.wt + '">' + WAIT[r.wt] + "</em>" : "") + "</span>" : "") +
       (tags ? '<span class="gr-tags">' + tags + "</span>" : "") +
+      (r.ck ? '<span class="gr-card-checked' + (r.cf ? " gr-card-checked--look" : "") + '">' + esc(r.ck) + "</span>" : "") +
       '<button type="button" class="gr-save" data-save="' + r.s + '" aria-pressed="false" aria-label="Save ' + esc(r.n) + '"><span aria-hidden="true">☆</span></button>' +
       "</div>";
   }
@@ -89,7 +104,7 @@
   }
   function textMatch(r, t) {
     if (!t) return true;
-    var hay = norm([r.n, r.c, r.st, stateAbbr[r.st], r.ho, r.h, r.dl, r.tl.join(" ")].join(" "));
+    var hay = norm([r.n, r.ne, r.c, r.st, stateAbbr[r.st], r.co, r.rg, r.ho, r.h, r.dl, r.tl.join(" ")].join(" "));
     return t.split(" ").every(function (w) { return hay.indexOf(w) > -1; });
   }
   function describe() {
@@ -142,6 +157,7 @@
     var text = q.value, o = origin, label = origin && origin.label;
     if (!o) { var c = matchCity(text); if (c) { o = { lat: c[1], lng: c[2] }; label = c[0]; } }
     var st = !o ? matchState(text) : null;
+    var cc = !o && !st ? matchCountry(text) : null;
     var list, note = "", desc = describe();
     if (o) {
       var all = RIDES.filter(function (r) { return passes(r, saved); })
@@ -152,9 +168,9 @@
       count.textContent = list.length ? plural(list.length) + " within " + RADIUS + " mi of " + label + ", closest first" + note + (desc ? " · " + desc : "") : "No rides within " + RADIUS + " mi of " + label + (desc ? " · " + desc : "");
       widenBtn.hidden = list.length > 0 || !all.length;
     } else {
-      var t = st ? "" : norm(text);
-      list = RIDES.filter(function (r) { return passes(r, saved) && (st ? r.st === st : textMatch(r, t)); }).map(function (r) { return { r: r, d: null }; });
-      count.textContent = plural(list.length) + (st ? " in " + stateAbbr[st] : text.trim() ? " matching “" + text.trim() + "”" : "") + (desc ? " · " + desc : "");
+      var t = st || cc ? "" : norm(text);
+      list = RIDES.filter(function (r) { return passes(r, saved) && (st ? r.st === st : cc ? r.co === cc : textMatch(r, t)); }).map(function (r) { return { r: r, d: null }; });
+      count.textContent = plural(list.length) + (st ? " in " + stateAbbr[st] : cc ? " in " + countryName[cc] : text.trim() ? " matching “" + text.trim() + "”" : "") + (desc ? " · " + desc : "");
       widenBtn.hidden = true;
     }
     if (!opts.more) shown = PAGE;

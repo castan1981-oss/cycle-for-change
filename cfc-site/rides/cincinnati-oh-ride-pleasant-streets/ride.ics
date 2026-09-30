@@ -8,7 +8,7 @@ UID:cincinnati-oh-ride-pleasant-streets@cycleforchange.org
 DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/New_York:20261003T140500
 DTEND;TZID=America/New_York:20261003T160500
-RRULE:FREQ=MONTHLY;BYDAY=1SA,3SA
+RRULE:FREQ=MONTHLY;BYDAY=1SA,3SA;UNTIL=20270212T235959Z
 SUMMARY:Ride Pleasant Streets — Cincinnati\, OH
 LOCATION:Community Happens Here\, 6238 Montgomery Rd\, Cincinnati\, OH 45
  213

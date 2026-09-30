@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:london-gb-southwark-cyclists-healthy-rides@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=Europe/London:20261003T100000
+DTEND;TZID=Europe/London:20261003T120000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270227T235959Z
+SUMMARY:Southwark Cyclists Healthy Rides — London\, United Kingdom
+LOCATION:Varies — posted on the Healthy Rides page
+DESCRIPTION:Pace: Short\, easy-paced rides on local roads and paths\, abo
+ ut 10–18 miles\, groups of around 15.\nSchedule: Usually two short rid
+ es every Saturday morning\, most starting at 10:00 am. The start point c
+ hanges each week (London Bridge\, Stratford station\, Dulwich and others
+ ) and is posted with each ride..\nConfirm with the host before you go.\n
+ https://cycleforchange.org/rides/london-gb-southwark-cyclists-healthy-ri
+ des/
+URL:https://cycleforchange.org/rides/london-gb-southwark-cyclists-healthy
+ -rides/
+END:VEVENT
+END:VCALENDAR

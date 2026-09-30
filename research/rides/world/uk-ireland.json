@@ -1,0 +1,791 @@
+[
+  {
+    "slug": "london-gb-ealing-cycling-campaign-womens-ride",
+    "name": "Ealing Women's Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "London",
+    "region": "England",
+    "state": null,
+    "country": "GB",
+    "neighborhood": "Ealing",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social",
+      "road"
+    ],
+    "schedule": "One women's ride most weekends, on a Saturday or a Sunday. Meet from 9:45 am outside Ealing Town Hall for a prompt 10:00 departure. The level rotates: Beginners+, Intermediate, Advanced. October 2026 dates: Oct 3, 10, 18, 25, 31.",
+    "days": [
+      "sat",
+      "sun"
+    ],
+    "time_local": "10:00 am",
+    "start_hhmm": "10:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Europe/London",
+    "start_location": {
+      "name": "Ealing Town Hall",
+      "address": "Ealing Town Hall, London W5 2BY"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "~4 hours with a café stop",
+    "duration_min": 255,
+    "pace": "Varies by level; Beginners+ rides are 'slower paced… suitable for anyone who can pedal, brake and steer'",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Ealing Cycling Campaign (London Cycling Campaign group)",
+      "type": "nonprofit"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free (book a place)",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Women only. Free, but places are limited and must be booked through the London Cycling Campaign events page. Check the level before you book.",
+    "description": "Led women-only rides from Ealing Town Hall out to west London parks and palaces, with a café stop. Levels rotate week to week, from slow Beginners+ rides to faster Advanced rides to places like Bushy Park and Hampton Court. Run by volunteers from the local cycling campaign.",
+    "links": {
+      "website": "https://www.ealingcycling.org.uk",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://lcc.org.uk/events-calendar/"
+      ]
+    },
+    "inclusive_focus": [
+      "wtf",
+      "beginner"
+    ],
+    "sources": [
+      "https://lcc.org.uk/events-calendar/",
+      "https://lcc.org.uk/events/list/?ical=1",
+      "https://lcc.org.uk/events/ealing-womens-ride-horsenden-hill-beginners-level/",
+      "https://www.ealingcycling.org.uk"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "evidence": "The LCC events calendar and its iCal feed list Ealing Women's Rides on Oct 3, 10, 18, 25 and 31, 2026, each 9:45 am at Ealing Town Hall (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://lcc.org.uk/events-calendar/",
+      "feed_url": "https://lcc.org.uk/events/list/?ical=1",
+      "notes": "Each ride is its own LCC event; filter the feed for SUMMARY 'Ealing Women's Ride'. Ealing's own list: http://www.ealingcycling.org.uk/p/events.html"
+    }
+  },
+  {
+    "slug": "london-gb-southwark-cyclists-healthy-rides",
+    "name": "Southwark Cyclists Healthy Rides",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "London",
+    "region": "England",
+    "state": null,
+    "country": "GB",
+    "neighborhood": "Varies (south and east London)",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Usually two short rides every Saturday morning, most starting at 10:00 am. The start point changes each week (London Bridge, Stratford station, Dulwich and others) and is posted with each ride.",
+    "days": [
+      "sat"
+    ],
+    "time_local": "10:00 am",
+    "start_hhmm": "10:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Europe/London",
+    "start_location": {
+      "name": "Varies — posted on the Healthy Rides page",
+      "address": null
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "~2 hours",
+    "duration_min": 120,
+    "pace": "Short, easy-paced rides on local roads and paths, about 10–18 miles, groups of around 15",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Southwark Cyclists",
+      "type": "nonprofit"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free (register on Eventbrite)",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Open to anyone, whatever age, wherever they live. Register on Eventbrite for each ride. Under-18s must come with an adult.",
+    "description": "Short guided Saturday rides from Southwark Cyclists, the local London Cycling Campaign group. Routes are themed tours: city alleyways, the Lee Valley, the Frieze sculptures in Regent's Park, the Thames Barrier. Made for less experienced riders who want company and a route.",
+    "links": {
+      "website": "https://southwarkcyclists.org.uk/healthy-rides/",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [
+      "beginner"
+    ],
+    "sources": [
+      "https://southwarkcyclists.org.uk/healthy-rides/",
+      "https://lcc.org.uk/events/city-alleyways-tour-southwwark-healthy-ride/",
+      "https://lcc.org.uk/events/list/?ical=1"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "evidence": "The Healthy Rides page lists rides for Oct 3, 10, 17 and 31, 2026; the Oct 3 City Alleyways Tour (10 miles, 10:00 from Southwark Gateway Needle) is on the LCC calendar (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://southwarkcyclists.org.uk/healthy-rides/",
+      "feed_url": "https://lcc.org.uk/events/list/?ical=1",
+      "notes": "Dates marked provisional firm up a week or two ahead. Rides also appear in the LCC iCal feed (SUMMARY contains 'Southwark Healthy Ride' — note the feed's spelling 'Southwwark')."
+    }
+  },
+  {
+    "slug": "london-gb-joyride-collective-social-ride",
+    "name": "The Joyride Collective social ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "London",
+    "region": "England",
+    "state": null,
+    "country": "GB",
+    "neighborhood": "Varies",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "About once a month, usually a Sunday early afternoon (Sept 13, 2026 was 1:00 pm); one summer ride was a Saturday. The start changes every time (Alexandra Palace, Wandsworth, Hackney Wick, Richmond Park so far). Time and start on each Meetup event.",
+    "days": [
+      "sun"
+    ],
+    "time_local": null,
+    "start_hhmm": null,
+    "frequency": "irregular",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Europe/London",
+    "start_location": {
+      "name": "Varies — posted on Meetup",
+      "address": null
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": "Social; total beginners to experienced riders",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "The Joyride Collective",
+      "type": "collective"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "RSVP on Meetup. E-bikes, hybrids, Bromptons and borrowed bikes all welcome. Rides often end at a pub or bar.",
+    "description": "A small LGBTQ+ women's cycling and social club, new in summer 2026. In its own words it is for 'LGBTQIA+ women, non-binary folks, trans sisters, and hetero girlies of any age/background'. Easy park and towpath routes across London, finishing somewhere to sit down. 'No lycra required, no race pace, no judgment.'",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": "https://www.meetup.com/the-joyride-collective/",
+      "other": []
+    },
+    "inclusive_focus": [
+      "lgbtq",
+      "wtf",
+      "beginner"
+    ],
+    "sources": [
+      "https://www.meetup.com/the-joyride-collective/"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-13",
+    "evidence": "The group's Meetup page shows four past rides in 2026, the latest on Sun Sept 13, 2026 (Alexandra Palace to Finsbury Park, 1:00 pm); no upcoming ride was posted on Sept 30, 2026.",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "meetup",
+      "watch_url": "https://www.meetup.com/the-joyride-collective/",
+      "feed_url": null,
+      "notes": "Meetup's iCal feed (https://www.meetup.com/the-joyride-collective/events/ical/) loads but was empty on Sept 30, 2026. Rides are posted a few weeks ahead; if nothing new appears by late November, mark it stale."
+    }
+  },
+  {
+    "slug": "london-gb-cycle-club-london-regents-park-chat-laps",
+    "name": "Regent's Park Chat Laps",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "London",
+    "region": "England",
+    "state": null,
+    "country": "GB",
+    "neighborhood": "Regent's Park",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Wednesday and Friday, 7:00 am: one hour of chat laps around the Outer Circle, then coffee and buns. (The club's faster race laps are Tuesdays and Thursdays at 6:00 am from the same gates.)",
+    "days": [
+      "wed",
+      "fri"
+    ],
+    "time_local": "7:00 am",
+    "start_hhmm": "07:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Europe/London",
+    "start_location": {
+      "name": "Inner Circle gates at the end of York Bridge, Regent's Park",
+      "address": "York Bridge, Regent's Park, London (what3words: incomes.crest.tribal)"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "1 hour plus coffee",
+    "duration_min": 60,
+    "pace": "Chat laps — social pace",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Cycle Club London",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free for a trial ride; club membership after that",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Non-members can come on trial rides; members get ride details in the club's Spond app. Park etiquette used by London clubs: groups of 12 at most, two abreast, never jump a red light.",
+    "description": "A pre-work hour of easy laps around the Outer Circle of Regent's Park, then coffee and buns. Cycle Club London calls itself 'a cycling club for all'. A gentle way to meet London riders on a weekday.",
+    "links": {
+      "website": "https://cycleclub.london/our-rides/",
+      "instagram": null,
+      "facebook": null,
+      "strava": "https://www.strava.com/clubs/cc-london",
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://cycleclub.london/our-rides/",
+      "https://cycleclub.london/wp-json/wp/v2/pages?slug=our-rides"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-06-15",
+    "evidence": "The club's Our Rides page states Wednesday and Friday 7:00 am chat laps from the Inner Circle gates at York Bridge; the site's WordPress API shows the page was last modified June 15, 2026 (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "static-page",
+      "watch_url": "https://cycleclub.london/our-rides/",
+      "feed_url": null,
+      "notes": "Dated rides live in the members' Spond app. The page's modified date is at https://cycleclub.london/wp-json/wp/v2/pages?slug=our-rides — a change there is the cue to re-read the schedule."
+    }
+  },
+  {
+    "slug": "london-gb-cycle-club-london-saturday-steady-club-ride",
+    "name": "Saturday Steady Club Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "London",
+    "region": "England",
+    "state": null,
+    "country": "GB",
+    "neighborhood": "Winchmore Hill",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Saturday: from 8:30 am for pre-ride coffee in Winchmore Hill, depart 9:00 am sharp. A Faster group leaves at the same time; the Sparrows group leaves East Finchley at 6:30 am.",
+    "days": [
+      "sat"
+    ],
+    "time_local": "9:00 am",
+    "start_hhmm": "09:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Europe/London",
+    "start_location": {
+      "name": "Winchmore Hill (café posted in the club app)",
+      "address": null
+    },
+    "distance_km": 72,
+    "distance_miles": 45,
+    "duration": null,
+    "duration_min": null,
+    "pace": "13–15 mph / 21–23 km/h",
+    "drop_policy": "no-drop",
+    "host": {
+      "name": "Cycle Club London",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free for a trial ride; club membership after that",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Non-members can join on trial rides — contact the club first; the exact café is shared in Spond.",
+    "description": "A steady, no-drop Saturday club run from north London out into Hertfordshire and Essex lanes, about 45 miles. The club says: 'All of our Club Rides are no-drop. We won't leave anyone behind.' A good first club run for a visitor who can hold 21–23 km/h.",
+    "links": {
+      "website": "https://cycleclub.london/our-rides/",
+      "instagram": null,
+      "facebook": null,
+      "strava": "https://www.strava.com/clubs/cc-london",
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [
+      "no-drop"
+    ],
+    "sources": [
+      "https://cycleclub.london/our-rides/",
+      "https://cycleclub.london/wp-json/wp/v2/pages?slug=our-rides"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-06-15",
+    "evidence": "The club's Our Rides page states the Saturday Steady ride (8:30 coffee, 9:00 depart, 45 mi, no-drop) and was last modified June 15, 2026 per the site's WordPress API; the café is only named in the members' app, so this stays medium (fetched Sept 30, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "static-page",
+      "watch_url": "https://cycleclub.london/our-rides/",
+      "feed_url": null,
+      "notes": "Members' Spond app carries the dated rides and the café. Page modified date: https://cycleclub.london/wp-json/wp/v2/pages?slug=our-rides"
+    }
+  },
+  {
+    "slug": "london-gb-critical-mass-london",
+    "name": "Critical Mass London",
+    "name_en": null,
+    "kind": "critical-mass",
+    "city": "London",
+    "region": "England",
+    "state": null,
+    "country": "GB",
+    "neighborhood": "South Bank",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Last Friday of every month. Meet from 7:00 pm on the South Bank under Waterloo Bridge (by the BFI and the National Theatre); it usually rolls around 7:30 pm. Some directories still say 6:00 pm — the ride's own posts in Sept 2026 say 7:00.",
+    "days": [
+      "fri"
+    ],
+    "time_local": "7:30 pm",
+    "start_hhmm": "19:30",
+    "frequency": "monthly",
+    "monthly_rule": [
+      {
+        "ord": -1,
+        "day": "fri"
+      }
+    ],
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Europe/London",
+    "start_location": {
+      "name": "South Bank, under Waterloo Bridge (by the BFI / National Theatre)",
+      "address": null
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": "Slow, leaderless mass ride",
+    "drop_policy": "no-drop",
+    "host": {
+      "name": "Critical Mass London (no organiser)",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "No sign-up, no leader, no set route. Any bike. Lights after dark.",
+    "description": "London's monthly Critical Mass: riders gather under Waterloo Bridge on the South Bank on the last Friday of the month and ride through central London together, with no set route and no leader. Any bike. It is a crowd, so expect a slow pace and a long evening.",
+    "links": {
+      "website": "https://www.criticalmass.bike/ride/london-gb",
+      "instagram": "https://www.instagram.com/critical_mass_london/",
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://criticalmass.in/london"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.criticalmass.bike/ride/london-gb",
+      "https://criticalmass.in/london",
+      "https://criticalmass.in/london/socialnetwork/list-items"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-27",
+    "evidence": "Posts from the ride's Instagram, shown on criticalmass.in and dated Sept 26–27, 2026 (the day after the Sept 25 ride), state 'The Last Friday of Every Month, 19:00, South Bank under Waterloo Bridge. Avg. departure 19:30' (fetched Sept 30, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "instagram",
+      "watch_url": "https://criticalmass.in/london/socialnetwork/list-items",
+      "feed_url": null,
+      "notes": "criticalmass.in mirrors the ride's Instagram posts without a login wall. criticalmass.bike and criticalmass.in's own ride entry still say 18:00. The old network23.org/criticalmasslondon site returned HTTP 500 on Sept 30, 2026. Next rides: Fri Oct 30, Fri Nov 27, 2026."
+    }
+  },
+  {
+    "slug": "london-gb-dulwich-paragon-monthly-introductory-ride",
+    "name": "Dulwich Paragon Monthly Introductory Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "London",
+    "region": "England",
+    "state": null,
+    "country": "GB",
+    "neighborhood": "Herne Hill",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Usually the first Saturday of each month; arrive at Herne Hill Velodrome for 9:00 am. The club says there will not be an intro ride in October 2026; the next should be the first Saturday of November — confirm on the page.",
+    "days": [
+      "sat"
+    ],
+    "time_local": "9:00 am",
+    "start_hhmm": "09:00",
+    "frequency": "monthly",
+    "monthly_rule": [
+      {
+        "ord": 1,
+        "day": "sat"
+      }
+    ],
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Europe/London",
+    "start_location": {
+      "name": "Herne Hill Velodrome",
+      "address": null
+    },
+    "distance_km": 55,
+    "distance_miles": 34,
+    "duration": null,
+    "duration_min": null,
+    "pace": "Groups of up to 10, fastest first, steadiest riders last",
+    "drop_policy": "groups",
+    "host": {
+      "name": "Dulwich Paragon Cycling Club",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Made for non-members. You should be 'generally pretty confident riding your bike on the road'. All experience and ability levels welcome.",
+    "description": "Dulwich Paragon's door-opener: a 55 km ride from Herne Hill Velodrome for people who want to try riding with one of south London's biggest clubs. Riders split into groups of up to ten by pace.",
+    "links": {
+      "website": "https://www.dulwichparagon.com/monthly-introductory-ride/",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.dulwichparagon.com/monthly-introductory-ride/"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-07",
+    "evidence": "The club's intro-ride page states first Saturday, 9:00, Herne Hill Velodrome, 55 km, and 'There will not be an intro ride in October'; its metadata shows it was last modified Sept 7, 2026 (read via WebFetch; the raw page is behind a bot check; fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "seasonal-break",
+    "refresh": {
+      "method": "static-page",
+      "watch_url": "https://www.dulwichparagon.com/monthly-introductory-ride/",
+      "feed_url": null,
+      "notes": "The page carries one-off notices ('no ride in October'). The club's 2026 news posts are on dulwichparagon.com."
+    }
+  },
+  {
+    "slug": "london-gb-rapha-london-womens-chat-laps",
+    "name": "Rapha Womens Chat Lap's",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "London",
+    "region": "England",
+    "state": null,
+    "country": "GB",
+    "neighborhood": "Regent's Park",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Tuesday, meet 7:00 am at the Inner Circle (Jubilee Gates), Regent's Park; three laps of the Outer Circle, then back to the Rapha clubhouse in Soho. Book a free slot on Rapha's events site.",
+    "days": [
+      "tue"
+    ],
+    "time_local": "7:00 am",
+    "start_hhmm": "07:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Europe/London",
+    "start_location": {
+      "name": "Inner Circle (Jubilee Gates), Regent's Park",
+      "address": "Jubilee Gates, Inner Circle, Regent's Park, London"
+    },
+    "distance_km": 20,
+    "distance_miles": 12,
+    "duration": null,
+    "duration_min": null,
+    "pace": "22–24 km/h average, no-drop, easy-paced",
+    "drop_policy": "no-drop",
+    "host": {
+      "name": "Rapha London Clubhouse",
+      "type": "brand"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free (book a slot)",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Open to non-members; book a slot on events.rapha.cc. Helmet mandatory, lights charged with the rear on solid, carry your own spares. Ends at 85 Brewer Street, W1F 9ZN.",
+    "description": "A weekly women's social spin around Regent's Park before work, then coffee at the Rapha clubhouse in Soho. Rapha calls it 'a no-drop, easy-paced jaunt' and 'an LGBTQ+ friendly, non-binary and trans-inclusive ride. All are welcome.' A good first London ride for a visiting woman or non-binary rider.",
+    "links": {
+      "website": "https://events.rapha.cc/products/rapha-x-steezy-ride",
+      "instagram": "https://www.instagram.com/rapha_london/",
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://content.rapha.cc/gb/en/clubhouses/london"
+      ]
+    },
+    "inclusive_focus": [
+      "wtf",
+      "lgbtq",
+      "no-drop"
+    ],
+    "sources": [
+      "https://events.rapha.cc/rapha-london",
+      "https://events.rapha.cc/products/rapha-x-steezy-ride",
+      "https://content.rapha.cc/gb/en/clubhouses/london"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "evidence": "Rapha's London events page lists Womens Chat Lap's as a weekly Tuesday ride open to everyone, and its booking page offers slots from September to December 2026 (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://events.rapha.cc/rapha-london",
+      "feed_url": null,
+      "notes": "events.rapha.cc is behind Cloudflare (curl gets 403); WebFetch reads it. The clubhouse page (content.rapha.cc/gb/en/clubhouses/london) lists hours and address."
+    }
+  },
+  {
+    "slug": "london-gb-rapha-london-friday-chat-laps",
+    "name": "Rapha Friday Chat Laps",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "London",
+    "region": "England",
+    "state": null,
+    "country": "GB",
+    "neighborhood": "Regent's Park",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Friday, meet 7:00 am, briefing 7:15 am at the Inner Circle (Jubilee Gates), Regent's Park; three or four laps, finishing at the Rapha clubhouse. Book a free slot on Rapha's events site.",
+    "days": [
+      "fri"
+    ],
+    "time_local": "7:15 am",
+    "start_hhmm": "07:15",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Europe/London",
+    "start_location": {
+      "name": "Inner Circle (Jubilee Gates), Regent's Park",
+      "address": "Jubilee Gates, Inner Circle, Regent's Park, London"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": "Mixed-ability groups, including a new-rider group",
+    "drop_policy": "groups",
+    "host": {
+      "name": "Rapha London Clubhouse",
+      "type": "brand"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free (book a slot)",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Open to all, RCC member or not; book on events.rapha.cc. Helmet mandatory, lights charged, carry spares and a layer. Finishes at 85 Brewer Street, W1F 9ZN.",
+    "description": "Rapha London's weekly Friday laps of Regent's Park Outer Circle, split into mixed-ability groups with a dedicated new-rider group, then back to the Soho clubhouse. It is the easiest way into the London clubhouse scene; most other Rapha London rides are for RCC members only.",
+    "links": {
+      "website": "https://events.rapha.cc/products/regents-park-friday-chat-laps",
+      "instagram": "https://www.instagram.com/rapha_london/",
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://content.rapha.cc/gb/en/clubhouses/london"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://events.rapha.cc/rapha-london",
+      "https://events.rapha.cc/products/regents-park-friday-chat-laps",
+      "https://content.rapha.cc/gb/en/clubhouses/london"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "evidence": "Rapha's London events page lists Friday Chat Lap's as open to everyone; the ride page gives 7:00 meet, 7:15 briefing at Jubilee Gates and offers weekly slots from October to December 2026 (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://events.rapha.cc/rapha-london",
+      "feed_url": null,
+      "notes": "Cloudflare blocks curl; use WebFetch. Also on the page: 'More Than Circles' (fortnightly, open to all) and 'Beyond 100 Women's Rides' (monthly, open to all)."
+    }
+  },
+  {
+    "slug": "london-gb-camden-anchor-kentish-town-pedals",
+    "name": "Kentish Town Pedals",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "London",
+    "region": "England",
+    "state": null,
+    "country": "GB",
+    "neighborhood": "Kentish Town",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "First Saturday of every month, 10:00 am to noon, from the Peckwater Centre. Next: Oct 3, Nov 7, Dec 5, 2026. Free place booked on Eventbrite.",
+    "days": [
+      "sat"
+    ],
+    "time_local": "10:00 am",
+    "start_hhmm": "10:00",
+    "frequency": "monthly",
+    "monthly_rule": [
+      {
+        "ord": 1,
+        "day": "sat"
+      }
+    ],
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Europe/London",
+    "start_location": {
+      "name": "Peckwater Centre",
+      "address": "6 Peckwater St, London NW5 2UP"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "~2 hours with a café stop",
+    "duration_min": 120,
+    "pace": "Friendly, gentle pace; an easy 5–6 miles",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Camden Anchor (Camden Cyclists)",
+      "type": "nonprofit"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free (book on Eventbrite)",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "'If you can pedal, steer and brake, you're very welcome.' Some helmets to borrow. Children and vulnerable adults come with a responsible adult.",
+    "description": "A short, gentle monthly ride around north London on cycleways, quiet roads and parks, with a café stop every time. Made for people getting back on a bike or recent learners. Run by volunteers from Camden Cyclists, the local London Cycling Campaign group.",
+    "links": {
+      "website": "https://lcc.org.uk/events/kentish-town-pedals-13/2026-10-03/",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://ktpedals.eventbrite.com/"
+      ]
+    },
+    "inclusive_focus": [
+      "beginner"
+    ],
+    "sources": [
+      "https://lcc.org.uk/events/kentish-town-pedals-13/2026-10-03/",
+      "https://lcc.org.uk/events/list/?ical=1"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "evidence": "The LCC event page and iCal feed list Kentish Town Pedals as a recurring first-Saturday ride, 10:00 am at the Peckwater Centre, with dates Oct 3, Nov 7 and Dec 5, 2026 (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "ics",
+      "watch_url": "https://ktpedals.eventbrite.com/",
+      "feed_url": "https://lcc.org.uk/events/list/?ical=1",
+      "notes": "Filter the LCC feed for SUMMARY 'Kentish Town Pedals'. Sister ride 'Kilburn Pedals' runs third Saturdays from 5 Netherwood Street, NW6."
+    }
+  }
+]

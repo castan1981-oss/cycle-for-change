@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:puebla-mx-via-recreativa-metropolitana@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Mexico_City:20261004T070000
+DTEND;TZID=America/Mexico_City:20261004T130000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270227T235959Z
+SUMMARY:Vía Recreativa Metropolitana — Puebla\, Mexico
+LOCATION:Any of the nine stations between La Paz and the Distribuidor Cho
+ lula
+DESCRIPTION:Schedule: Every Sunday\, 7:00 am to 1:00 pm. 6.5 km each way 
+ between La Paz and the Distribuidor Cholula\, over Bulevar Esteban de An
+ tuñano\, Calzada Zavaleta\, the Periférico Ecológico and the Recta a 
+ Cholula\, with nine stations..\nConfirm with the host before you go.\nht
+ tps://cycleforchange.org/rides/puebla-mx-via-recreativa-metropolitana/
+URL:https://cycleforchange.org/rides/puebla-mx-via-recreativa-metropolita
+ na/
+END:VEVENT
+END:VCALENDAR

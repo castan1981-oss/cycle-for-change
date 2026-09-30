@@ -170,3 +170,36 @@
   .gr-hub .gr-search .btn{flex:1 1 100%}
 }
 .gr-hub .gr-hero .gr-tonight{align-self:center;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--asphalt);margin-left:4px}
+
+/* Freshness (Sept 30, 2026). tools/lib/rides-freshness.js picks the words; these carry them.
+   The "Checked" line on every card, the checked block on every ride page, the banner on a
+   ride that's off the lists (dark once per page: the Next-ride box is hidden when it shows). */
+.gr-card-checked{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--creosote-ink);margin-top:2px}
+.gr-card-checked--look{color:var(--asphalt);font-weight:700}
+.gr-checked{display:flex;gap:14px;align-items:flex-start;margin:0 0 14px;padding:14px 18px;border:1px solid var(--dust);border-left:3px solid var(--creosote);background:var(--bone-2)}
+.gr-checked--look{border-left-color:var(--asphalt)}
+.gr-checked-mark{width:22px;height:22px;flex:none;color:var(--creosote-ink);margin-top:1px}
+.gr-checked--look .gr-checked-mark{color:var(--asphalt)}
+.gr-checked p{margin:0 0 6px;font-size:.95rem;line-height:1.5}
+.gr-checked p:last-child{margin-bottom:0}
+.gr-checked-nudge{font-weight:600}
+.gr-banner{margin:0 0 18px;padding:16px 20px;background:var(--asphalt);color:var(--bone)}
+.gr-banner p{margin:0 0 6px;line-height:1.5}
+.gr-banner p:last-child{margin:0}
+.gr-banner a,.gr-banner .link{color:var(--bone)}
+/* The world: the English name under a local one, the visitor notes, a country's "what to know" */
+.gr-name-en{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:-.3em 0 .5em}
+.gr-visit{margin:34px 0 0;padding:20px 22px;border:1px solid var(--dust);background:var(--bone-2)}
+.gr-visit h2{margin:0 0 10px;font-size:1.3rem}
+.gr-visit p{margin:0;max-width:46em;line-height:1.55}
+.gr-country-notes{margin:22px 0 8px}
+.gr-country-notes dl>div{grid-template-columns:170px 1fr}
+@media (max-width:600px){.gr-country-notes dl>div{grid-template-columns:1fr;gap:2px}}
+/* By country (Sept 30, 2026): a country's name can take two lines plus its cities, so the tile grows */
+.tile-p--country{aspect-ratio:auto;min-height:168px;gap:6px}
+.tile-p--country .t{font-size:clamp(1rem,calc((100cqw - 24px) / (var(--l,8) * .7)),1.9rem)}
+.tile-p--country .b{font-size:.8rem;line-height:1.25}
+.tile-p--country .n{font-size:1.6rem}
+.gr-checked>div{flex:1;min-width:0}
+.gr-checked .link{white-space:normal}
+.gr-card-en{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--creosote-ink);margin-top:-3px}

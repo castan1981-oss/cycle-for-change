@@ -1,5 +1,6 @@
 /* Cycle for Change — /tonight/
-   Reads the same /rides/rides.json the directory is built from. Nothing is
+   Reads /rides/live.json: the rides on the directory's lists (written by tools/build-rides.js,
+   Sept 30, 2026 — rides we can't vouch for any more stay off /tonight/ too). Nothing is
    sent anywhere: location stays in the browser, "My week" lives in
    localStorage, and the only outside call is Open-Meteo for the forecast at
    roll-out for the rides on the wall. */
@@ -255,7 +256,7 @@
       track(x, 6);
       x.font = '400 40px "Space Mono", monospace'; x.fillStyle = "#C4B7A2"; y += 50;
       var spot = r.start_location && r.start_location.name;
-      [spot, r.city + ", " + r.state, [r.distance_miles ? r.distance_miles + " mi" : "", r.pace || ""].filter(Boolean).join(" · "), dropLabel(r)].filter(Boolean).forEach(function (f) {
+      [spot, (r.place || (r.city + ", " + r.state)), [r.distance_miles ? r.distance_miles + " mi" : "", r.pace || ""].filter(Boolean).join(" · "), dropLabel(r)].filter(Boolean).forEach(function (f) {
         wrapText(x, String(f).toUpperCase(), W - 140).slice(0, 2).forEach(function (l) { x.fillText(l, 70, y); y += 62; });
       });
       // foot
@@ -296,7 +297,7 @@
     var byTown = {};
     state.rides.forEach(function (r) {
       if (r.lat == null) return;
-      var k = r.city + ", " + r.state;
+      var k = (r.place || (r.city + ", " + r.state));
       (byTown[k] = byTown[k] || { label: k, n: 0, lat: 0, lng: 0 });
       byTown[k].n++; byTown[k].lat += r.lat; byTown[k].lng += r.lng;
     });
@@ -342,7 +343,7 @@
   }
 
   /* —— boot —— */
-  fetch("/rides/rides.json").then(function (r) { return r.json(); }).then(function (rides) {
+  fetch("/rides/live.json").then(function (r) { return r.json(); }).then(function (rides) {
     state.rides = rides;
     buildPlaces();
     var here = load("cfc-here", null);

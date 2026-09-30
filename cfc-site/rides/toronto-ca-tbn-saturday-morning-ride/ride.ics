@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:toronto-ca-tbn-saturday-morning-ride@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Toronto:20261003T093000
+DTEND;TZID=America/Toronto:20261003T123000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261031T235959Z
+SUMMARY:Saturday Morning Ride — Toronto\, Canada
+LOCATION:Changes weekly (Oct 3\, 2026: Shoppers World parking lot)\, Vict
+ oria Park Ave & Danforth Ave\, Toronto\, ON
+DESCRIPTION:Pace: Urban Roller class\, 19–23 km/h average\, 30–60 km.
+ \nSchedule: Saturdays\, early April to late October\, 9:30 am sharp\, ba
+ ck by 12:30 or 1:00 pm. The start changes weekly and is on each calendar
+  event\, usually near a subway or transit stop. 2026 dates left: Oct 3\,
+  10\, 17\, 24 and 31 (the season's final ride)..\nConfirm with the host 
+ before you go.\nhttps://cycleforchange.org/rides/toronto-ca-tbn-saturday
+ -morning-ride/
+URL:https://cycleforchange.org/rides/toronto-ca-tbn-saturday-morning-ride
+ /
+END:VEVENT
+END:VCALENDAR

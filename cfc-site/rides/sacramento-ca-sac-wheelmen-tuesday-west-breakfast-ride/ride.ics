@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sacramento-ca-sac-wheelmen-tuesday-west-breakfast-ride@cycleforchange
+ .org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Los_Angeles:20261006T090000
+DTEND;TZID=America/Los_Angeles:20261006T110000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261130T235959Z
+SUMMARY:Tuesday West Breakfast Ride — Sacramento\, CA
+LOCATION:Westin Hotel parking lot\, 4800 Riverside Blvd\, Sacramento\, CA
+DESCRIPTION:Pace: Flat\, flexible pace.\nSchedule: Every Tuesday\, 9:00 a
+ m (listed weekly Oct 6 to Nov 24\, 2026)..\nConfirm with the host before
+  you go.\nhttps://cycleforchange.org/rides/sacramento-ca-sac-wheelmen-tu
+ esday-west-breakfast-ride/
+URL:https://cycleforchange.org/rides/sacramento-ca-sac-wheelmen-tuesday-w
+ est-breakfast-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:merida-mx-biciruta-nocturna@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Merida:20261003T180000
+DTEND;TZID=America/Merida:20261003T220000
+RRULE:FREQ=MONTHLY;BYDAY=1SA;UNTIL=20261231T235959Z
+SUMMARY:Biciruta Nocturna — Mérida\, Mexico
+LOCATION:Monumento a los Montejo\, Paseo de Montejo
+DESCRIPTION:Schedule: First Saturday of every month\, 6:00 pm to 10:00 pm
+ . One lane of Paseo de Montejo opens to bikes\, from the Monumento a los
+  Montejo to the Monumento a la Patria. Remaining 2026 dates: Oct 3\, Nov
+  7\, Dec 5..\nConfirm with the host before you go.\nhttps://cycleforchan
+ ge.org/rides/merida-mx-biciruta-nocturna/
+URL:https://cycleforchange.org/rides/merida-mx-biciruta-nocturna/
+END:VEVENT
+END:VCALENDAR

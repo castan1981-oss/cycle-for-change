@@ -8,7 +8,7 @@ UID:dallas-tx-dallas-critical-mass@cycleforchange.org
 DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/Chicago:20261030T200000
 DTEND;TZID=America/Chicago:20261030T220000
-RRULE:FREQ=MONTHLY;BYDAY=-1FR
+RRULE:FREQ=MONTHLY;BYDAY=-1FR;UNTIL=20270212T235959Z
 SUMMARY:Dallas Critical Mass — Dallas\, TX
 LOCATION:Dallas Farmers Market\, 920 S Harwood St\, Dallas\, TX 75201
 DESCRIPTION:Pace: 10–12 mph.\nNo-drop.\nSchedule: Last Friday of every 

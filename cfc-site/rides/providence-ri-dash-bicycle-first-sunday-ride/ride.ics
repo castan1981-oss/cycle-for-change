@@ -8,7 +8,7 @@ UID:providence-ri-dash-bicycle-first-sunday-ride@cycleforchange.org
 DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/New_York:20261004T100000
 DTEND;TZID=America/New_York:20261004T120000
-RRULE:FREQ=MONTHLY;BYDAY=1SU
+RRULE:FREQ=MONTHLY;BYDAY=1SU;UNTIL=20270212T235959Z
 SUMMARY:Dash Bicycle First Sunday Ride — Providence\, RI
 LOCATION:Dash Bicycle Shop\, 230 Broadway\, Providence\, RI 02903
 DESCRIPTION:Pace: slightly faster\, free-form.\nSchedule: First Sunday of

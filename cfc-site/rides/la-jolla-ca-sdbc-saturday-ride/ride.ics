@@ -8,7 +8,7 @@ UID:la-jolla-ca-sdbc-saturday-ride@cycleforchange.org
 DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/Los_Angeles:20261003T083000
 DTEND;TZID=America/Los_Angeles:20261003T103000
-RRULE:FREQ=WEEKLY;BYDAY=SA
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270212T235959Z
 SUMMARY:SDBC Saturday Ride — San Diego\, CA
 LOCATION:UC Cyclery\, 8715 Villa La Jolla Dr #B\, La Jolla\, CA 92037
 DESCRIPTION:Pace: 7 groups: A\, B\, C\, and Development D-1 through D-4.\

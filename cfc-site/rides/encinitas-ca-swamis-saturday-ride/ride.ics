@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:encinitas-ca-swamis-saturday-ride@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T081500
+DTEND;TZID=America/Los_Angeles:20261003T110000
+RRULE:FREQ=MONTHLY;BYDAY=1SA;UNTIL=20270227T235959Z
+SUMMARY:World Famous Swami's Saturday Ride — Encinitas\, CA
+LOCATION:Cadence Cyclery\, 190 N Coast Hwy 101\, Encinitas\, CA 92024
+DESCRIPTION:Pace: Two groups\, A and B\, leaving four minutes apart.\nSch
+ edule: Every Saturday: A group rolls 8:15 am\, B group 8:19 am. On the f
+ irst Saturday of the month the route runs in reverse. Some Saturdays add
+  a special training ride from the same start..\nConfirm with the host be
+ fore you go.\nhttps://cycleforchange.org/rides/encinitas-ca-swamis-satur
+ day-ride/
+URL:https://cycleforchange.org/rides/encinitas-ca-swamis-saturday-ride/
+END:VEVENT
+END:VCALENDAR

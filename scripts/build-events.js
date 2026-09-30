@@ -113,7 +113,10 @@ const events = readDir(path.join(DATA, "events"));
 // Group rides near each event town come from the rides directory; the six rides
 // Robert is doing in 2027 come from the calendar (riding: true). Both optional.
 function readJson(p) { try { return JSON.parse(fs.readFileSync(p, "utf8")); } catch (e) { return null; } }
-const RIDES = readJson(path.join(ROOT, "cfc-site", "rides", "rides.json")) || [];
+// The rides on the directory's lists: tools/build-rides.js writes live.json (Sept 30, 2026) — rides we
+// can't vouch for any more (stale, paused, ended) stay off event and town pages too. Run build-rides first.
+const RIDES = readJson(path.join(ROOT, "cfc-site", "rides", "live.json"))
+  || (readJson(path.join(ROOT, "cfc-site", "rides", "rides.json")) || []).filter((r) => !["ended", "paused"].includes(r.status));
 const RIDING = ((readJson(path.join(ROOT, "data", "calendar-2027.json")) || {}).events || []).filter((e) => e.riding).map((e) => String(e.name).replace(/\s*\(.*?\)\s*/g, "").toLowerCase());
 const norm = (n) => String(n || "").toLowerCase().replace(/^(the|td)\s+/, "").replace(/\s*\(.*?\)\s*/g, "").trim();
 const isRiding = (e) => RIDING.some((n) => norm(n) === norm(e.name) || norm(n).startsWith(norm(e.name)) || norm(e.name).startsWith(norm(n)));

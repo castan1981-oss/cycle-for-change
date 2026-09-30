@@ -23,7 +23,8 @@
           form.reset();
           what.value = keep;
           if (page) page.value = location.pathname;
-          if (ok) { ok.textContent = "Got it. We check it against the source, then it goes up."; ok.hidden = false; }
+          var kind = form.querySelector("[name=kind]:checked");
+          if (ok) { ok.textContent = kind && kind.value === "still-on" ? "Thanks for telling us it's still on." : "Got it. We check it against the source, then it goes up."; ok.hidden = false; }
           btn.disabled = false;
         })
         .catch(function () {

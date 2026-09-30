@@ -8,7 +8,7 @@ UID:abilene-tx-biketown-monday-easy-ride@cycleforchange.org
 DTSTAMP:20260918T000000Z
 DTSTART;TZID=America/Chicago:20261005T180000
 DTEND;TZID=America/Chicago:20261005T190000
-RRULE:FREQ=WEEKLY;BYDAY=MO
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20270215T235959Z
 SUMMARY:BikeTown Monday Easy Ride — Abilene\, TX
 LOCATION:BikeTown parking lot\, 1789 Industrial Blvd\, Abilene\, TX 79602
 DESCRIPTION:Pace: easy\, no rider left behind.\nNo-drop.\nSchedule: Every

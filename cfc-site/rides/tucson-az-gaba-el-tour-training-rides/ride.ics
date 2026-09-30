@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tucson-az-gaba-el-tour-training-rides@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Phoenix:20261004T064500
+DTEND;TZID=America/Phoenix:20261004T084500
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20261130T235959Z
+SUMMARY:GABA El Tour de Tucson Training Rides — Tucson\, AZ
+LOCATION:Safeway at Golf Links and Wilmot\, Golf Links Rd and Wilmot Rd\,
+  Tucson\, AZ
+DESCRIPTION:Pace: Two groups: B (16–18 mph) and C to C+ (12–16 mph)\,
+  on GABA's scale.\nSchedule: Sundays through the 11 weeks before El Tour
+  de Tucson (week 6 is Oct 4\, 2026). Meet 6:45 am\, roll shortly after. 
+ Distance grows about 10% a week (66 miles in week 6)..\nConfirm with the
+  host before you go.\nhttps://cycleforchange.org/rides/tucson-az-gaba-el
+ -tour-training-rides/
+URL:https://cycleforchange.org/rides/tucson-az-gaba-el-tour-training-ride
+ s/
+END:VEVENT
+END:VCALENDAR

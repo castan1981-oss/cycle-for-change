@@ -63,7 +63,7 @@
   </div>
   <ul class="menu-list">
     <li><a href="/pledge/">Pledge a mile <span>Free</span></a></li>
-    <li><a href="/rides/">Find a ride <span>614</span></a></li>
+    <li><a href="/rides/">Find a ride <span>670</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>635</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
@@ -84,8 +84,10 @@
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/rides/">Group rides</a></li><li><a href="/rides/az/">Arizona</a></li><li><span aria-current="page">Foothills Bicycle Club Sunday &amp; Tuesday Social Rides</span></li></ol></nav>
 
     <h1>Foothills Bicycle Club Sunday &amp; Tuesday Social Rides</h1>
+    
     <p class="gr-place">Yuma, AZ · Foothills · Road</p>
     
+
 
     <p class="lede">Foothills Bicycle Club Sunday &amp; Tuesday Social Rides is a road group ride in Yuma, AZ. Schedule: Sundays and Tuesdays, November through April, from Foothills Library. About 25 miles, relaxed social pace, 12–13 mph.</p>
 
@@ -103,6 +105,16 @@
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
     </div>
 
+
+    <aside class="gr-checked" aria-label="When this ride was last checked">
+      <svg class="gr-checked-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-checked"/></svg>
+      <div>
+        <p class="gr-checked-line"><strong>Checked Sep 18, 2026.</strong> Confirmed on the host's own page.</p>
+        
+        
+        <p class="gr-checked-go"><a class="link" href="https://foothillsbicycleclub.org/" rel="noopener nofollow">Check the host's page before you go</a></p>
+      </div>
+    </aside>
     <dl class="gr-facts">
         <div class="gr-fact"><dt>When</dt><dd>Sundays and Tuesdays, November through April<small>Season: Nov–Apr</small></dd></div>
         <div class="gr-fact"><dt>Starts at</dt><dd>Foothills Library <a class="gr-map" href="https://www.google.com/maps/search/?api=1&amp;query=Foothills%20Library" rel="noopener">Map ↗</a></dd></div>
@@ -111,6 +123,7 @@
         <div class="gr-fact"><dt>Hosted by</dt><dd>Foothills Bicycle Club<small>Club</small></dd></div>
         <div class="gr-fact"><dt>Bike</dt><dd>Road</dd></div>
     </dl>
+
 
     <section class="gr-first" aria-labelledby="gr-first-h">
       <h2 id="gr-first-h">First time? Here's the drill</h2>
@@ -136,12 +149,12 @@
 
 
     <p class="verified gr-verify">
-      Last checked 2026-09-18 against <a href="https://foothillsbicycleclub.org/" rel="noopener nofollow">source 1</a>.
+      Checked Sep 18, 2026 against <a href="https://foothillsbicycleclub.org/" rel="noopener nofollow">source 1</a>.
       Schedules change. Confirm with the host before you go.
     </p>
 
     <details class="dir-report dir-report--compact" id="fix">
-      <summary>Wrong, gone, or you run this ride? Tell us</summary>
+      <summary>Rode it lately, or something's wrong? Tell us</summary>
       <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
       <input type="hidden" name="form-name" value="ride-report">
       <input type="hidden" name="page" value="" data-page>
@@ -151,24 +164,25 @@
         <label><input type="radio" name="kind" value="new"> <span>New ride</span></label>
         <label><input type="radio" name="kind" value="changed" checked> <span>Something changed</span></label>
         <label><input type="radio" name="kind" value="gone"> <span>It's gone</span></label>
+        <label><input type="radio" name="kind" value="still-on"> <span>Still on — I rode it</span></label>
       </fieldset>
-      <label class="lab" for="rr-what-189">Ride name or link</label>
-      <input class="field" id="rr-what-189" name="ride" type="text" required autocomplete="off" value="Foothills Bicycle Club Sunday &amp; Tuesday Social Rides">
-      <label class="lab" for="rr-details-189">What should we know? <small>Day, time, start, pace, who runs it</small></label>
-      <textarea class="field" id="rr-details-189" name="details" rows="3"></textarea>
-      <label class="lab" for="rr-email-189">Your email <small>Optional. Only if we have a question.</small></label>
-      <input class="field" id="rr-email-189" name="email" type="email" autocomplete="email" inputmode="email">
+      <label class="lab" for="rr-what-215">Ride name or link</label>
+      <input class="field" id="rr-what-215" name="ride" type="text" required autocomplete="off" value="Foothills Bicycle Club Sunday &amp; Tuesday Social Rides">
+      <label class="lab" for="rr-details-215">What should we know? <small>Day, time, start, pace, who runs it</small></label>
+      <textarea class="field" id="rr-details-215" name="details" rows="3"></textarea>
+      <label class="lab" for="rr-email-215">Your email <small>Optional. Only if we have a question.</small></label>
+      <input class="field" id="rr-email-215" name="email" type="email" autocomplete="email" inputmode="email">
       <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
     </form>
     </details>
   </article>
 
-  <nav class="related gr-related" aria-label="Nearby group rides">
+  <nav class="related gr-related" id="nearby" aria-label="Nearby group rides">
     <h2>Nearby rides</h2>
+    <a href="/rides/peoria-az-west-valley-casual-thursday-any-bike-ride/">Whatever You Feel Like Ride <small>· Peoria, AZ · Social · 141 mi</small></a>
     <a href="/rides/peoria-az-monday-night-meander/">Monday Night Meander <small>· Peoria, AZ · Social · 142 mi</small></a>
+    <a href="/rides/peoria-az-west-valley-casual-true-beginner-ride/">True Beginner Ride <small>· Peoria, AZ · Road · 143 mi</small></a>
     <a href="/rides/phoenix-az-downtempo-ride/">Phoenix Downtempo Ride <small>· Phoenix, AZ · Social · 146 mi</small></a>
-    <a href="/rides/palm-springs-ca-big-wheel-bikes-community-group-rides/">Big Wheel Bikes CV Community Group Rides <small>· Palm Springs, CA · Road · 147 mi</small></a>
-    <a href="/rides/phoenix-az-taco-tuesday-south-mountain/">Taco Tuesday Ride at South Mountain <small>· Phoenix, AZ · Mountain bike · 148 mi</small></a>
     
     <a href="/rides/az/">All rides in Arizona →</a>
   </nav>

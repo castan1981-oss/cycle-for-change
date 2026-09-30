@@ -1,0 +1,923 @@
+[
+  {
+    "slug": "mexico-city-mx-muevete-en-bici-paseo-dominical",
+    "name": "Paseo Dominical Muévete en Bici",
+    "name_en": "Muévete en Bici car-free Sunday",
+    "kind": "open-streets",
+    "city": "Mexico City",
+    "region": "Mexico City",
+    "state": null,
+    "country": "MX",
+    "neighborhood": "Paseo de la Reforma and the Centro Histórico",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Every Sunday, 8:00 am to 2:00 pm. The route changes from week to week; on Sept 13, 2026 it ran about 55 km over Paseo de la Reforma, División del Norte, Patriotismo, the Centro Histórico, Calzada de Guadalupe and Eje 7 Sur.",
+    "days": [
+      "sun"
+    ],
+    "time_local": "8:00 am",
+    "start_hhmm": "08:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Mexico_City",
+    "start_location": {
+      "name": "Any point on the Sunday circuit (Paseo de la Reforma is the spine)",
+      "address": null
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "Open 8:00 am to 2:00 pm; ride as much as you like",
+    "duration_min": 360,
+    "pace": null,
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Muévete en Bici (Mexico City government)",
+      "type": "public"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "es"
+    ],
+    "visitor_notes": "Free, no sign-up. Join and leave anywhere on the route. Bike rental (including kids bikes and bikes for riders with disabilities), basic mechanics and medical help along the route. On ozone-alert days it can still run; watch the air-quality notice.",
+    "description": "Mexico City's car-free Sunday. Big avenues close to cars and fill with bikes, skaters and walkers until 2:00 pm. Ride a few kilometres or the whole loop; it is the easy way to see the city by bike on your first weekend.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [
+      "family",
+      "beginner"
+    ],
+    "sources": [
+      "https://amexi.com.mx/nacional/muevete-en-bici-ruta-horario-domingo-13-septiembre/"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-13",
+    "evidence": "Amexi (Sept 13, 2026) gives that Sunday’s 55 km route and the hours, 8:00 am to 2:00 pm (fetched Sept 30, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "news",
+      "watch_url": "https://www.semovi.cdmx.gob.mx/tramites-y-servicios/mi-bici/muevete-en-bici",
+      "feed_url": null,
+      "notes": "The official SEMOVI page would not load from our network. Local outlets (Amexi, Infobae, Chilango) post each Sunday’s route between Friday and Sunday morning; search “Muévete en Bici” plus the date."
+    }
+  },
+  {
+    "slug": "mexico-city-mx-indeporte-cicloton",
+    "name": "Ciclotón",
+    "name_en": "Ciclotón monthly car-free ride",
+    "kind": "open-streets",
+    "city": "Mexico City",
+    "region": "Mexico City",
+    "state": null,
+    "country": "MX",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Last Sunday of every month, 8:00 am to 2:00 pm. The route changes each month; on Sept 27, 2026 it ran 33 km from Avenida Patriotismo to Churubusco.",
+    "days": [
+      "sun"
+    ],
+    "time_local": "8:00 am",
+    "start_hhmm": "08:00",
+    "frequency": "monthly",
+    "monthly_rule": [
+      {
+        "ord": -1,
+        "day": "sun"
+      }
+    ],
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Mexico_City",
+    "start_location": {
+      "name": "Any point on that month's circuit (Sept 2026: Avenida Patriotismo to Churubusco)",
+      "address": null
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "Open 8:00 am to 2:00 pm",
+    "duration_min": 360,
+    "pace": null,
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Indeporte (Instituto del Deporte de la Ciudad de México)",
+      "type": "public"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "es"
+    ],
+    "visitor_notes": "Free, no sign-up. Runners, skaters and walkers share the route. Service stations, water points and medical posts along the way (six, five and two in September 2026).",
+    "description": "Once a month, on the last Sunday, Mexico City closes a long circuit of main avenues to cars for the Ciclotón. It is longer than the weekly Sunday route, 33 km in September 2026, and the route changes every month. Indeporte posts it a few days before.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [
+      "family"
+    ],
+    "sources": [
+      "https://chilango.com/noticias/cicloton-de-septiembre-en-cdmx-fecha-ruta-y-horarios"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-27",
+    "evidence": "Chilango (Sept 25, 2026) reports Indeporte's route for the Sept 27, 2026 Ciclotón, 33 km, 8:00 am to 2:00 pm, held on the last Sunday of the month (fetched Sept 30, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "news",
+      "watch_url": null,
+      "feed_url": null,
+      "notes": "Indeporte announces each month's route on its social accounts a few days ahead; Chilango and other Mexico City outlets repeat it. Search 'Ciclotón' plus the month."
+    }
+  },
+  {
+    "slug": "mexico-city-mx-paseo-de-todos-night-ride",
+    "name": "Paseo de Todos",
+    "name_en": "Paseo de Todos monthly night ride",
+    "kind": "group-ride",
+    "city": "Mexico City",
+    "region": "Mexico City",
+    "state": null,
+    "country": "MX",
+    "neighborhood": "Tabacalera (Monumento a la Revolución)",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Last Thursday of the month, 8:30 pm, out and back from the Monumento a la Revolución. Each edition has its own theme and route (about 15 km in June 2026, with one short rest stop).",
+    "days": [
+      "thu"
+    ],
+    "time_local": "8:30 pm",
+    "start_hhmm": "20:30",
+    "frequency": "monthly",
+    "monthly_rule": [
+      {
+        "ord": -1,
+        "day": "thu"
+      }
+    ],
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Mexico_City",
+    "start_location": {
+      "name": "Monumento a la Revolución",
+      "address": "Monumento a la Revolución, Cuauhtémoc, Ciudad de México"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": null,
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Paseo de Todos Ciudad de México",
+      "type": "collective"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "es"
+    ],
+    "visitor_notes": "Free, no sign-up. It rides after dark, so bring lights. Each route is posted on the group's X account before the ride.",
+    "description": "A big monthly night ride through central Mexico City that starts and ends at the Monumento a la Revolución. Every edition has a theme: in June 2026 (route 166) it rode about 15 km up Reforma to the Villa de Guadalupe and back; in September it looped down Reforma. Social pace, lots of people, all kinds of bikes.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://x.com/paseodetodos"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.chilango.com/que-hacer/rodada-nocturna-gratis-en-cdmx-pasara-reforma-y-la-villa-cuando-es/",
+      "https://lasillarota.com/metropoli/2026/9/24/marchas-concentraciones-y-cierres-viales-hoy-24-de-septiembre-en-cdmx-529782.html"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-24",
+    "evidence": "Chilango (June 24, 2026) covers route 166 on Thu June 25 at 8:30 pm from the Monumento a la Revolución; the city's ride agenda for Thu Sept 24, 2026 (La Silla Rota) lists Paseo de Todos at 8:30 pm from the same spot (fetched Sept 30, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "news",
+      "watch_url": "https://lasillarota.com/temas/movilizaciones-cdmx-48751.html",
+      "feed_url": null,
+      "notes": "Escorted rides appear in the Secretaría de Seguridad Ciudadana's daily agenda of marches and rides, which La Silla Rota (topic page) and UnoTV republish every weekday morning under 'Rodadas ciclistas'. Search the ride name there for the next date. Check the last Thursday of each month. The group also posts routes on X (x.com/paseodetodos)."
+    }
+  },
+  {
+    "slug": "mexico-city-mx-people-for-bikes-polanco-tuesday-la-venta",
+    "name": "People for Bikes Polanco, Tuesday ride to La Venta",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Mexico City",
+    "region": "Mexico City",
+    "state": null,
+    "country": "MX",
+    "neighborhood": "Polanco",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every other Tuesday, 6:00 am, from the Polanco store up the México–Toluca road to the La Venta toll booth (Sept 1, 15 and 29, 2026). On the Tuesdays in between, the shop's ride leaves its Coyoacán store for Los Dinamos.",
+    "days": [
+      "tue"
+    ],
+    "time_local": "6:00 am",
+    "start_hhmm": "06:00",
+    "frequency": "biweekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Mexico_City",
+    "start_location": {
+      "name": "People for Bikes Polanco",
+      "address": "Goldsmith 53, Polanco III Sección, Miguel Hidalgo, Ciudad de México"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": null,
+    "drop_policy": "unknown",
+    "host": {
+      "name": "People for Bikes",
+      "type": "shop"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "language": [
+      "es"
+    ],
+    "visitor_notes": "Starts before sunrise, so bring lights. About 25 riders are registered with the city for each edition.",
+    "description": "A dawn road ride from the shop’s Polanco store. It climbs west out of the city on the México–Toluca road to the La Venta toll booth in Cuajimalpa. The shop also runs a Tuesday ride from its Coyoacán store on alternate weeks and a Wednesday ride from its Roma store.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://lasillarota.com/metropoli/2026/9/1/marchas-concentraciones-y-cierres-viales-hoy-1-de-septiembre-en-cdmx-526751.html",
+      "https://lasillarota.com/metropoli/2026/9/15/marchas-concentraciones-y-cierres-viales-hoy-15-de-septiembre-en-cdmx-528602.html",
+      "https://www.unotv.com/estados/ciudad-de-mexico/mujeres-parteras-encabezaran-las-protestas-en-la-cdmx-este-29-de-septiembre/"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-29",
+    "evidence": "The Secretaría de Seguridad Ciudadana's ride agenda, republished by La Silla Rota and UnoTV, lists this ride at 6:00 am from Goldsmith 53 to La Venta on Tue Sept 1, 15 and 29, 2026 (fetched Sept 30, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "news",
+      "watch_url": "https://lasillarota.com/temas/movilizaciones-cdmx-48751.html",
+      "feed_url": null,
+      "notes": "Escorted rides appear in the Secretaría de Seguridad Ciudadana's daily agenda of marches and rides, which La Silla Rota (topic page) and UnoTV republish every weekday morning under 'Rodadas ciclistas'. Search the ride name there for the next date. If the alternation holds, the next Polanco edition is Tue Oct 13, 2026."
+    }
+  },
+  {
+    "slug": "mexico-city-mx-people-for-bikes-coyoacan-tuesday-los-dinamos",
+    "name": "People for Bikes Coyoacán, Tuesday ride to Los Dinamos",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Mexico City",
+    "region": "Mexico City",
+    "state": null,
+    "country": "MX",
+    "neighborhood": "Coyoacán (Oxtopulco)",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every other Tuesday, 6:00 am, from the Coyoacán store to Los Dinamos in Magdalena Contreras (Sept 8 and 22, 2026). On the other Tuesdays the ride leaves the Polanco store for La Venta.",
+    "days": [
+      "tue"
+    ],
+    "time_local": "6:00 am",
+    "start_hhmm": "06:00",
+    "frequency": "biweekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Mexico_City",
+    "start_location": {
+      "name": "People for Bikes Coyoacán",
+      "address": "Av. Miguel Ángel de Quevedo 217, Oxtopulco, Coyoacán, Ciudad de México"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": null,
+    "drop_policy": "unknown",
+    "host": {
+      "name": "People for Bikes",
+      "type": "shop"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "language": [
+      "es"
+    ],
+    "visitor_notes": "Starts before sunrise, so bring lights. About 20 riders are registered with the city for each edition.",
+    "description": "The south-side version of the shop’s Tuesday ride. It leaves the Coyoacán store for the forest road at Los Dinamos in Magdalena Contreras, south-west of the city.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://lasillarota.com/metropoli/2026/9/8/marchas-concentraciones-y-cierres-viales-hoy-8-de-septiembre-en-cdmx-527649.html",
+      "https://lasillarota.com/metropoli/2026/9/22/marchas-concentraciones-y-cierres-viales-hoy-22-de-septiembre-en-cdmx-529439.html"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-22",
+    "evidence": "The city's ride agenda (La Silla Rota) lists People for Bikes Coyoacán at 6:00 am from Av. Miguel Ángel de Quevedo 217 to Los Dinamos on Tue Sept 8 and Tue Sept 22, 2026 (fetched Sept 30, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "news",
+      "watch_url": "https://lasillarota.com/temas/movilizaciones-cdmx-48751.html",
+      "feed_url": null,
+      "notes": "Escorted rides appear in the Secretaría de Seguridad Ciudadana's daily agenda of marches and rides, which La Silla Rota (topic page) and UnoTV republish every weekday morning under 'Rodadas ciclistas'. Search the ride name there for the next date. If the alternation holds, the next Coyoacán edition is Tue Oct 6, 2026."
+    }
+  },
+  {
+    "slug": "mexico-city-mx-people-for-bikes-roma-wednesday-ride",
+    "name": "People for Bikes Roma, Wednesday morning ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Mexico City",
+    "region": "Mexico City",
+    "state": null,
+    "country": "MX",
+    "neighborhood": "Roma Norte",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Wednesdays, 6:50 am, from the Roma store to the Bosque de Chapultepec and Parque Aztlán (Sept 2, 9 and 23, 2026). On Sept 30, 2026 it left at 6:00 am for Valle de las Monjas in the Desierto de los Leones instead.",
+    "days": [
+      "wed"
+    ],
+    "time_local": "6:50 am",
+    "start_hhmm": "06:50",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Mexico_City",
+    "start_location": {
+      "name": "People for Bikes Roma",
+      "address": "Zacatecas 55, Roma Norte, Cuauhtémoc, Ciudad de México"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": null,
+    "drop_policy": "unknown",
+    "host": {
+      "name": "People for Bikes",
+      "type": "shop"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "language": [
+      "es"
+    ],
+    "visitor_notes": "About 20 riders are registered with the city for each edition. The destination can change; check the shop's posts the day before.",
+    "description": "A midweek morning ride from the shop's Roma Norte store. Most weeks it is a short trip to the Bosque de Chapultepec and Parque Aztlán; now and then it goes further, like the Sept 30 ride to Valle de las Monjas. An easy way into the city's riding if you are staying in Roma or Condesa.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://lasillarota.com/metropoli/2026/9/2/marchas-concentraciones-y-cierres-viales-hoy-2-de-septiembre-en-cdmx-526910.html",
+      "https://lasillarota.com/metropoli/2026/9/9/marchas-concentraciones-y-cierres-viales-hoy-9-de-septiembre-en-cdmx-527807.html",
+      "https://lasillarota.com/metropoli/2026/9/23/marchas-concentraciones-y-cierres-viales-hoy-23-de-septiembre-en-cdmx-529606.html",
+      "https://unotv.com/estados/ciudad-de-mexico/jubilados-de-pemex-y-colectivos-encabezan-protestas-en-la-cdmx-este-30-de-septiembre"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "evidence": "The city's ride agenda (La Silla Rota, UnoTV) lists People for Bikes Roma from Zacatecas 55 on Wed Sept 2, 9 and 23, 2026 at 6:50 am to Chapultepec, and on Wed Sept 30 at 6:00 am to Valle de las Monjas (fetched Sept 30, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "news",
+      "watch_url": "https://lasillarota.com/temas/movilizaciones-cdmx-48751.html",
+      "feed_url": null,
+      "notes": "Escorted rides appear in the Secretaría de Seguridad Ciudadana's daily agenda of marches and rides, which La Silla Rota (topic page) and UnoTV republish every weekday morning under 'Rodadas ciclistas'. Search the ride name there for the next date."
+    }
+  },
+  {
+    "slug": "mexico-city-mx-ohtli-chiquxs-lgbt-rides",
+    "name": "Ohtli Chiquxs rides",
+    "name_en": "Ohtli Chiquxs LGBT+ group rides",
+    "kind": "group-ride",
+    "city": "Mexico City",
+    "region": "Mexico City",
+    "state": null,
+    "country": "MX",
+    "neighborhood": "Centro (Alameda Central)",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Some Tuesday evenings, about 8:00 pm, from the kiosk in the Alameda Central (Tue Sept 1, 2026 at 8:00 pm; Tue Sept 22 at 7:45 pm, with Tantales). Dates and routes go up on the collective's Instagram.",
+    "days": [
+      "tue"
+    ],
+    "time_local": "8:00 pm",
+    "start_hhmm": "20:00",
+    "frequency": "irregular",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Mexico_City",
+    "start_location": {
+      "name": "Kiosco de la Alameda Central",
+      "address": "Parque Alameda Central, Centro, Cuauhtémoc, Ciudad de México"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": null,
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Ohtli Chiquxs",
+      "type": "collective"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "language": [
+      "es"
+    ],
+    "visitor_notes": "Check Instagram for the next date; rides are not every week. Its Pride ride on May 30, 2026 was free and at a basic level, and sign-up was by direct message.",
+    "description": "An LGBT+ riding collective in Mexico City, registered with the city as Ohtli Chiquxs LGBTTIQ. Its evening rides leave the Alameda Central kiosk for a destination across town: the last Orozco mural at the Centro Urbano Presidente Alemán on Sept 1, Plaza San Jacinto in San Ángel on Sept 22. Its Pride ride was billed as a safe, inclusive space for LGBT+ people, allies and anyone who loves bikes.",
+    "links": {
+      "website": null,
+      "instagram": "https://www.instagram.com/ohtlichiqxs/",
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [
+      "lgbtq"
+    ],
+    "sources": [
+      "https://www.dondeir.com/ciudad/habra-rodada-con-causa-gratis-en-cdmx-rumbo-al-mes-del-orgullo/2026/05/",
+      "https://lasillarota.com/metropoli/2026/9/1/marchas-concentraciones-y-cierres-viales-hoy-1-de-septiembre-en-cdmx-526751.html",
+      "https://lasillarota.com/metropoli/2026/9/22/marchas-concentraciones-y-cierres-viales-hoy-22-de-septiembre-en-cdmx-529439.html"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-22",
+    "evidence": "The city's ride agenda (La Silla Rota) lists Ohtli Chiquxs LGBTTIQ from the Alameda Central kiosk on Tue Sept 1 and Tue Sept 22, 2026; Donde Ir (May 24, 2026) covers its free Pride ride from the same kiosk (fetched Sept 30, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "instagram",
+      "watch_url": "https://www.instagram.com/ohtlichiqxs/",
+      "feed_url": null,
+      "notes": "Instagram will not load for a robot. The city's daily ride agenda (La Silla Rota topic page: https://lasillarota.com/temas/movilizaciones-cdmx-48751.html) lists each ride the morning of; search 'Ohtli'."
+    }
+  },
+  {
+    "slug": "guadalajara-mx-via-recreactiva",
+    "name": "Vía RecreActiva",
+    "name_en": "Vía RecreActiva car-free Sunday",
+    "kind": "open-streets",
+    "city": "Guadalajara",
+    "region": "Jalisco",
+    "state": null,
+    "country": "MX",
+    "neighborhood": "Avenida Vallarta, Juárez and Javier Mina, from La Minerva east",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Every Sunday and on official holidays, 8:00 am to 2:00 pm. Over 30 km of streets: Avenida Vallarta, Juárez and Javier Mina from the Minerva roundabout east; Chapultepec, Niños Héroes and Paseo de la Arboleda; Calzada del Federalismo. Branches reach Zapopan, Tlaquepaque and Tonalá.",
+    "days": [
+      "sun"
+    ],
+    "time_local": "8:00 am",
+    "start_hhmm": "08:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Mexico_City",
+    "start_location": {
+      "name": "Any point on the route (Glorieta La Minerva is the west end of the main axis)",
+      "address": null
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "Open 8:00 am to 2:00 pm",
+    "duration_min": 360,
+    "pace": null,
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Vía RecreActiva (coordinated by Comude Guadalajara with neighbouring municipalities)",
+      "type": "public"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "es"
+    ],
+    "visitor_notes": "Free, no sign-up. Water stations, volunteer guides and traffic marshals at the crossings that stay open to cars.",
+    "description": "Guadalajara's car-free Sunday. Over 30 km of main avenues close to cars every Sunday morning across four municipalities. Ride it end to end or use it to cross the city without traffic.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [
+      "family"
+    ],
+    "sources": [
+      "https://www.informador.mx/jalisco/via-recreactiva-guadalajara-conoce-la-ruta-y-domina-las-calles-20260816-0041.html"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-08-16",
+    "evidence": "El Informador (Aug 16, 2026) gives the route and the hours: every Sunday and official holiday, 8:00 am to 2:00 pm (fetched Sept 30, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "news",
+      "watch_url": "https://viarecreactiva.org/",
+      "feed_url": null,
+      "notes": "The program’s own site answers 403 to bots. El Informador and other Guadalajara outlets report suspensions (football matches, marathons) the week before."
+    }
+  },
+  {
+    "slug": "merida-mx-biciruta-dominical",
+    "name": "Biciruta",
+    "name_en": "Biciruta car-free Sunday",
+    "kind": "open-streets",
+    "city": "Mérida",
+    "region": "Yucatán",
+    "state": null,
+    "country": "MX",
+    "neighborhood": "Centro and Paseo de Montejo",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Every Sunday, 8:00 am to 12:30 pm, on a circuit through the historic centre (La Mejorada, La Plancha, Paseo de Montejo) that ends at the Monumento a la Patria.",
+    "days": [
+      "sun"
+    ],
+    "time_local": "8:00 am",
+    "start_hhmm": "08:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Merida",
+    "start_location": {
+      "name": "Any point on the circuit; it ends at the Monumento a la Patria on Paseo de Montejo",
+      "address": null
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "Open 8:00 am to 12:30 pm",
+    "duration_min": 270,
+    "pace": null,
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Ayuntamiento de Mérida",
+      "type": "public"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "es"
+    ],
+    "visitor_notes": "Free, bring your own bike or rent one at points along Paseo de Montejo. Water, first aid and toilets on the route. The city says hours can change.",
+    "description": "Mérida's Sunday car-free circuit through the old centre and up Paseo de Montejo. Flat and done by 12:30, before the worst of the heat. Families and riders out for an easy spin.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [
+      "family"
+    ],
+    "sources": [
+      "https://www.yucatan.com.mx/merida/2026/07/31/biciruta-nocturna-merida-horario.html"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-08-06",
+    "evidence": "Diario de Yucatán (July 31, 2026, updated Aug 6) gives the Sunday Biciruta as every Sunday, 8:00 am to 12:30 pm (fetched Sept 30, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "news",
+      "watch_url": "https://www.merida.gob.mx/",
+      "feed_url": null,
+      "notes": "merida.gob.mx sits behind a bot wall. Diario de Yucatán (yucatan.com.mx/merida) reports schedule changes."
+    }
+  },
+  {
+    "slug": "merida-mx-biciruta-nocturna",
+    "name": "Biciruta Nocturna",
+    "name_en": "Biciruta night ride",
+    "kind": "open-streets",
+    "city": "Mérida",
+    "region": "Yucatán",
+    "state": null,
+    "country": "MX",
+    "neighborhood": "Paseo de Montejo",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "First Saturday of every month, 6:00 pm to 10:00 pm. One lane of Paseo de Montejo opens to bikes, from the Monumento a los Montejo to the Monumento a la Patria. Remaining 2026 dates: Oct 3, Nov 7, Dec 5.",
+    "days": [
+      "sat"
+    ],
+    "time_local": "6:00 pm",
+    "start_hhmm": "18:00",
+    "frequency": "monthly",
+    "monthly_rule": [
+      {
+        "ord": 1,
+        "day": "sat"
+      }
+    ],
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Merida",
+    "start_location": {
+      "name": "Monumento a los Montejo, Paseo de Montejo",
+      "address": null
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "Open 6:00 pm to 10:00 pm",
+    "duration_min": 240,
+    "pace": null,
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Ayuntamiento de Mérida",
+      "type": "public"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "es"
+    ],
+    "visitor_notes": "Free. Bring lights and water; it is still hot after dark. Rental points along Paseo de Montejo. The city says hours can change.",
+    "description": "Once a month a lane of Paseo de Montejo opens to bikes after dark. It is the cooler way to ride in Mérida: after sunset, easy and social, past the old mansions.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [
+      "family"
+    ],
+    "sources": [
+      "https://www.yucatan.com.mx/merida/2026/07/31/biciruta-nocturna-merida-horario.html"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-08-06",
+    "evidence": "Diario de Yucatán (July 31, 2026, updated Aug 6) lists the night Biciruta on the first Saturday of the month, 6:00 to 10:00 pm, with dates through Dec 5, 2026 (fetched Sept 30, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "news",
+      "watch_url": "https://www.yucatan.com.mx/merida/2026/07/31/biciruta-nocturna-merida-horario.html",
+      "feed_url": null,
+      "notes": "Diario de Yucatán updates this explainer when dates change; the Ayuntamiento posts each edition on its social accounts."
+    }
+  },
+  {
+    "slug": "puebla-mx-via-recreativa-metropolitana",
+    "name": "Vía Recreativa Metropolitana",
+    "name_en": "Vía Recreativa car-free Sunday",
+    "kind": "open-streets",
+    "city": "Puebla",
+    "region": "Puebla",
+    "state": null,
+    "country": "MX",
+    "neighborhood": "La Paz to the Recta a Cholula",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Every Sunday, 7:00 am to 1:00 pm. 6.5 km each way between La Paz and the Distribuidor Cholula, over Bulevar Esteban de Antuñano, Calzada Zavaleta, the Periférico Ecológico and the Recta a Cholula, with nine stations.",
+    "days": [
+      "sun"
+    ],
+    "time_local": "7:00 am",
+    "start_hhmm": "07:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Mexico_City",
+    "start_location": {
+      "name": "Any of the nine stations between La Paz and the Distribuidor Cholula",
+      "address": null
+    },
+    "distance_km": 6.5,
+    "distance_miles": 4,
+    "duration": "Open 7:00 am to 1:00 pm",
+    "duration_min": 360,
+    "pace": null,
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Gobierno del Estado de Puebla (Secretaría de Movilidad y Transporte)",
+      "type": "public"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "es"
+    ],
+    "visitor_notes": "Free. Basic repairs, first aid, toilets and water points for people and dogs along the route.",
+    "description": "Puebla's Sunday car-free corridor from La Paz out to Cholula. An easy 6.5 km each way with repair and water points. Good for a morning spin, or to reach Cholula without traffic.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [
+      "family"
+    ],
+    "sources": [
+      "https://elpopular.mx/comunidad/movilidad/2026/09/17/via-recreativa-en-puebla-asi-es-la-ruta-de-la-paz-a-cholula-cada-domingo"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-17",
+    "evidence": "El Popular's Sept 17, 2026 article gives the route and hours, every Sunday 7:00 am to 1:00 pm (fetched Sept 30, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "news",
+      "watch_url": "https://elpopular.mx/comunidad/movilidad/2026/09/17/via-recreativa-en-puebla-asi-es-la-ruta-de-la-paz-a-cholula-cada-domingo",
+      "feed_url": null,
+      "notes": "Run by the Puebla state government (Secretaría de Movilidad y Transporte). Puebla outlets such as El Popular report route or hour changes."
+    }
+  },
+  {
+    "slug": "panama-city-pa-recreovia-cinta-costera",
+    "name": "Recreovía Cinta Costera",
+    "name_en": "Recreovía car-free Sunday on the Cinta Costera",
+    "kind": "open-streets",
+    "city": "Panama City",
+    "region": "Panamá Province",
+    "state": null,
+    "country": "PA",
+    "neighborhood": "Cinta Costera (Paitilla to Cinta Costera 3)",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Sundays, 6:00 am to 11:00 am, on the Cinta Costera from the elevated bridge by the McDonald's at Paitilla to the end of the marine section (Cinta Costera 3). Cancelled some Sundays for races: the Sept 20, 2026 edition gave way to the Panama City Marathon.",
+    "days": [
+      "sun"
+    ],
+    "time_local": "6:00 am",
+    "start_hhmm": "06:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Panama",
+    "start_location": {
+      "name": "Elevated bridge by the McDonald's at Paitilla, Cinta Costera",
+      "address": null
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "Open 6:00 am to 11:00 am",
+    "duration_min": 300,
+    "pace": null,
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Alcaldía de Panamá",
+      "type": "public"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "es"
+    ],
+    "visitor_notes": "Free. Bike school, bike rental at Punto 0 (across from Rali), parking by the Miramar courts and at the Cinta Costera south gate. Suspended on some race Sundays and holiday weekends. Early start because of the heat.",
+    "description": "Panama City's Sunday morning car-free waterfront. The Cinta Costera closes to cars from Paitilla to the end of its section over the sea. Flat, early and done by 11.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [
+      "family"
+    ],
+    "sources": [
+      "https://mupa.gob.pa/el-verano-brilla-en-toda-la-capital-en-el-domingo-de-recreovia/",
+      "https://www.telemetro.com/nacionales/recreovia-regresa-este-domingo-la-cinta-costera-horario-y-actividades-n6085504",
+      "https://www.telemetro.com/nacionales/recreovia-cinta-costera-este-domingo-20-septiembre-horario-y-actividades-n6092338"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-19",
+    "evidence": "The Alcaldía’s own page (Jan 21, 2026) gives 6:00 to 11:00 am from the Paitilla bridge; its own posts quoted by Telemetro confirm the July 19, 2026 edition at those hours and cancel Sept 20, 2026 for the marathon (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "news",
+      "watch_url": "https://mupa.gob.pa/",
+      "feed_url": null,
+      "notes": "The Alcaldía (mupa.gob.pa, and @Panamaalcaldia on X) posts each Sunday’s Recreovía and any suspension; Telemetro repeats it."
+    }
+  }
+]

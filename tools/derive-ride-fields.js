@@ -24,7 +24,8 @@
 "use strict";
 const fs = require("fs"), path = require("path");
 const S = require("./lib/rides-schema.js");
-const DATA = path.join(__dirname, "..", "cfc-site", "rides", "rides.json");
+const dataArg = process.argv.indexOf("--data");                          // --data <file>: work on another copy (fixtures, merges)
+const DATA = dataArg > -1 ? path.resolve(process.argv[dataArg + 1]) : path.join(__dirname, "..", "cfc-site", "rides", "rides.json");
 const rides = JSON.parse(fs.readFileSync(DATA, "utf8"));
 
 const ET = "America/New_York", CT = "America/Chicago", MT = "America/Denver", PT = "America/Los_Angeles";

@@ -63,7 +63,7 @@
   </div>
   <ul class="menu-list">
     <li><a href="/pledge/">Pledge a mile <span>Free</span></a></li>
-    <li><a href="/rides/">Find a ride <span>614</span></a></li>
+    <li><a href="/rides/">Find a ride <span>670</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>635</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
@@ -84,8 +84,10 @@
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/rides/">Group rides</a></li><li><a href="/rides/ms/">Mississippi</a></li><li><a href="/rides/ms/jackson/">Jackson</a></li><li><span aria-current="page">JMC Thursday Evening Ride</span></li></ol></nav>
 
     <h1>JMC Thursday Evening Ride</h1>
+    
     <p class="gr-place">Ridgeland, MS · Road</p>
     
+
 
     <p class="lede">JMC Thursday Evening Ride is a road group ride in Ridgeland, MS. Schedule: Thursday evenings; routes and start posted on Facebook, from Parking lot behind Soulshine Pizza, or the office building across from Fleet Feet on Hwy 51. Pace: intermediate to fast (15–24+ mph groups).</p>
 
@@ -103,6 +105,16 @@
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
     </div>
 
+
+    <aside class="gr-checked" aria-label="When this ride was last checked">
+      <svg class="gr-checked-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-checked"/></svg>
+      <div>
+        <p class="gr-checked-line"><strong>Checked Sep 18, 2026.</strong> Confirmed against the sources at the foot of this page.</p>
+        
+        
+        <p class="gr-checked-go"><a class="link" href="https://jmc.clubexpress.com/content.aspx?page_id=22&amp;club_id=657022&amp;module_id=58942" rel="noopener nofollow">Check the host's page before you go</a></p>
+      </div>
+    </aside>
     <dl class="gr-facts">
         <div class="gr-fact"><dt>When</dt><dd>Thursday evenings; routes and start posted on Facebook</dd></div>
         <div class="gr-fact"><dt>Starts at</dt><dd>Parking lot behind Soulshine Pizza, or the office building across from Fleet Feet on Hwy 51 <a class="gr-map" href="https://www.google.com/maps/search/?api=1&amp;query=Parking%20lot%20behind%20Soulshine%20Pizza%2C%20or%20the%20office%20building%20across%20from%20Fleet%20Feet%20on%20Hwy%2051" rel="noopener">Map ↗</a></dd></div>
@@ -112,6 +124,7 @@
         <div class="gr-fact"><dt>Cost</dt><dd>free</dd></div>
         <div class="gr-fact"><dt>Bike</dt><dd>Road</dd></div>
     </dl>
+
 
     <section class="gr-first" aria-labelledby="gr-first-h">
       <h2 id="gr-first-h">First time? Here's the drill</h2>
@@ -139,12 +152,12 @@
 
 
     <p class="verified gr-verify">
-      Last checked 2026-09-18 against <a href="https://jmc.clubexpress.com/content.aspx?page_id=22&amp;club_id=657022&amp;module_id=58942" rel="noopener nofollow">source 1</a>.
+      Checked Sep 18, 2026 against <a href="https://jmc.clubexpress.com/content.aspx?page_id=22&amp;club_id=657022&amp;module_id=58942" rel="noopener nofollow">source 1</a>.
       Schedules change. Confirm with the host before you go.
     </p>
 
     <details class="dir-report dir-report--compact" id="fix">
-      <summary>Wrong, gone, or you run this ride? Tell us</summary>
+      <summary>Rode it lately, or something's wrong? Tell us</summary>
       <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
       <input type="hidden" name="form-name" value="ride-report">
       <input type="hidden" name="page" value="" data-page>
@@ -154,19 +167,20 @@
         <label><input type="radio" name="kind" value="new"> <span>New ride</span></label>
         <label><input type="radio" name="kind" value="changed" checked> <span>Something changed</span></label>
         <label><input type="radio" name="kind" value="gone"> <span>It's gone</span></label>
+        <label><input type="radio" name="kind" value="still-on"> <span>Still on — I rode it</span></label>
       </fieldset>
-      <label class="lab" for="rr-what-460">Ride name or link</label>
-      <input class="field" id="rr-what-460" name="ride" type="text" required autocomplete="off" value="JMC Thursday Evening Ride">
-      <label class="lab" for="rr-details-460">What should we know? <small>Day, time, start, pace, who runs it</small></label>
-      <textarea class="field" id="rr-details-460" name="details" rows="3"></textarea>
-      <label class="lab" for="rr-email-460">Your email <small>Optional. Only if we have a question.</small></label>
-      <input class="field" id="rr-email-460" name="email" type="email" autocomplete="email" inputmode="email">
+      <label class="lab" for="rr-what-491">Ride name or link</label>
+      <input class="field" id="rr-what-491" name="ride" type="text" required autocomplete="off" value="JMC Thursday Evening Ride">
+      <label class="lab" for="rr-details-491">What should we know? <small>Day, time, start, pace, who runs it</small></label>
+      <textarea class="field" id="rr-details-491" name="details" rows="3"></textarea>
+      <label class="lab" for="rr-email-491">Your email <small>Optional. Only if we have a question.</small></label>
+      <input class="field" id="rr-email-491" name="email" type="email" autocomplete="email" inputmode="email">
       <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
     </form>
     </details>
   </article>
 
-  <nav class="related gr-related" aria-label="Nearby group rides">
+  <nav class="related gr-related" id="nearby" aria-label="Nearby group rides">
     <h2>Nearby rides</h2>
     <a href="/rides/jackson-ms-soul-city-cycling-monday-encouragement-ride/">Soul City Cycling Monday Encouragement Ride <small>· Jackson, MS · Road · 9 mi</small></a>
     <a href="/rides/canton-ms-jmc-tuesday-club-ride/">JMC Tuesday Club Ride <small>· Canton, MS · Road · 12 mi</small></a>

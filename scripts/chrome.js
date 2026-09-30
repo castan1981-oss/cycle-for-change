@@ -41,7 +41,7 @@ const FONTS = `<link rel="preconnect" href="https://fonts.googleapis.com">
 
 /* Everything a page's <head> needs besides its own title/description/canonical.
    `styles` = the page's stylesheets after /chrome.css. `ld` = JSON-LD objects. */
-function head({ title, description, url, ogType = "website", styles = [], ld = [], extra = "", dark = false }) {
+function head({ title, description, url, ogType = "website", styles = [], ld = [], extra = "", dark = false, robots = "index, follow, max-snippet:-1, max-image-preview:large" }) {
   const full = /Cycle for Change/.test(title) ? title : `${title} — Cycle for Change`;
   const canonical = /^https?:/.test(url) ? url : SITE + url;
   const sheets = ["/chrome.css", ...styles].map((h) => `  <link rel="stylesheet" href="${h}">`).join("\n");
@@ -52,7 +52,7 @@ function head({ title, description, url, ogType = "website", styles = [], ld = [
   <title>${esc(full)}</title>
   <meta name="description" content="${attr(description)}">
   <link rel="canonical" href="${attr(canonical)}">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="robots" content="${attr(robots)}">
   <meta property="og:type" content="${ogType}">
   <meta property="og:site_name" content="Cycle for Change">
   <meta property="og:url" content="${attr(canonical)}">

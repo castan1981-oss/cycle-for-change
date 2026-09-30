@@ -7,9 +7,9 @@ BEGIN:VEVENT
 UID:charlottesville-va-endeavor-cycles-wednesday-mtb-ride@cycleforchange.
  org
 DTSTAMP:20260915T000000Z
-DTSTART;TZID=America/New_York:20260930T173000
-DTEND;TZID=America/New_York:20260930T193000
-RRULE:FREQ=WEEKLY;BYDAY=WE
+DTSTART;TZID=America/New_York:20261007T173000
+DTEND;TZID=America/New_York:20261007T193000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20270212T235959Z
 SUMMARY:Wednesday Mountain Bike Ride (Endeavor Cycles) — Charlottesvill
  e\, VA
 LOCATION:Endeavor Cycles\, 119 Maury Ave\, Charlottesville\, VA 22903

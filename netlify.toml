@@ -61,3 +61,11 @@
   to = "/"
   status = 302
   force = true
+
+# Rides hubs that moved when the data grew (Sept 30, 2026): Encinitas took over Carlsbad's hub
+# when the Swamis ride came in. Keep old hub URLs alive; add a line here whenever a hub is renamed.
+[[redirects]]
+  from = "/rides/ca/carlsbad/"
+  to = "/rides/ca/encinitas/"
+  status = 301
+  force = true

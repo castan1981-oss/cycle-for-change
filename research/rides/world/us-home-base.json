@@ -1,0 +1,1461 @@
+[
+  {
+    "slug": "chandler-az-pmbc-mikes-sunday-ride",
+    "name": "Mike's Sunday Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Chandler",
+    "region": "Arizona",
+    "state": "AZ",
+    "country": "US",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Sunday. The start moves with the season: 8:30 am Jan, 8:00 Feb, 7:30 Mar, 7:00 Apr, 6:30 May–Aug, 7:00 Sept, 7:30 Oct, 8:00 Nov, 8:30 Dec.",
+    "days": [
+      "sun"
+    ],
+    "time_local": "7:30 am",
+    "start_hhmm": "07:30",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Phoenix",
+    "start_location": {
+      "name": "Desert Breeze Park, north parking lot",
+      "address": "Desert Breeze Blvd, between McClintock and Rural Rds and Chandler Blvd and Ray Rd, Chandler, AZ"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": "Paceline riding at about 18–20 mph",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Phoenix Metro Bicycle Club",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "The club says visitors are always welcome. Helmet required, no earphones.",
+    "description": "A paceline ride of 40–50 miles at about 18–20 mph, with short-cut options. Routes cover the Valley, from downtown Phoenix to Mummy Mountain and the far Southeast Valley, and the club says it rarely repeats one within a quarter. Optional breakfast at the end. Named for longtime club member Michael Kirk.",
+    "links": {
+      "website": "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=364161",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=364161",
+      "https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-27",
+    "evidence": "PMBC's event calendar lists Mike's Sunday Ride with a named route every Sunday in September 2026, the last on Sept 27 (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467",
+      "feed_url": null,
+      "notes": "Same monthly start-time table as Saturday Cycling."
+    }
+  },
+  {
+    "slug": "fountain-hills-az-mcdowell-mountain-cycles-sunday-funday-gravel",
+    "name": "Sunday Funday Gravel Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Fountain Hills",
+    "region": "Arizona",
+    "state": "AZ",
+    "country": "US",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "gravel"
+    ],
+    "schedule": "Some Sundays, 6:00 am from the shop. Next dates: Oct 4 and Oct 25, 2026.",
+    "days": [
+      "sun"
+    ],
+    "time_local": "6:00 am",
+    "start_hhmm": "06:00",
+    "frequency": "irregular",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Phoenix",
+    "start_location": {
+      "name": "McDowell Mountain Cycles",
+      "address": "11879 N. Saguaro Blvd., Fountain Hills, AZ"
+    },
+    "distance_km": 64,
+    "distance_miles": 40,
+    "duration": "~3.5 hours",
+    "duration_min": 210,
+    "pace": "One group",
+    "drop_policy": "no-drop",
+    "host": {
+      "name": "McDowell Mountain Cycles",
+      "type": "shop"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "The shop says everyone is welcome.",
+    "description": "A mixed ride from the shop — gravel, road and singletrack — of about 40 miles and three and a half hours. One group, no-drop. Dates are posted on the shop's rides page.",
+    "links": {
+      "website": "https://mcdowellmountaincycles.com/mmc-life/",
+      "instagram": "https://instagram.com/ridemmc/",
+      "facebook": "https://www.facebook.com/mcdowellmountaincycles",
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [
+      "no-drop"
+    ],
+    "sources": [
+      "https://mcdowellmountaincycles.com/mmc-life/"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": null,
+    "evidence": "The shop's rides page, modified Sept 30, 2026, lists the next Sunday Funday Gravel Rides for Oct 4 and Oct 25, 2026 (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "static-page",
+      "watch_url": "https://mcdowellmountaincycles.com/mmc-life/",
+      "feed_url": null,
+      "notes": "Not every Sunday: the page lists the month's dates."
+    }
+  },
+  {
+    "slug": "fountain-hills-az-mcdowell-mountain-cycles-tuesday-night-mtb",
+    "name": "MMC Tuesday Night Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Fountain Hills",
+    "region": "Arizona",
+    "state": "AZ",
+    "country": "US",
+    "neighborhood": "McDowell Mountain Regional Park",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "mtb"
+    ],
+    "schedule": "Every Tuesday, 7:00 pm, from the Four Peaks lot. The shop confirms weekly times on its Facebook page.",
+    "days": [
+      "tue"
+    ],
+    "time_local": "7:00 pm",
+    "start_hhmm": "19:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Phoenix",
+    "start_location": {
+      "name": "Four Peaks Trailhead parking lot, across the road from the Competition Loops, McDowell Mountain Regional Park",
+      "address": null
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": "New route each week, several regroup spots",
+    "drop_policy": "groups",
+    "host": {
+      "name": "McDowell Mountain Cycles",
+      "type": "shop"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "The shop says everyone is welcome. Lights and helmets required.",
+    "description": "The shop's Tuesday night mountain bike ride in McDowell Mountain Regional Park: 15–20 miles on a new route each week, with several regroups. Lights required. Riders hang out in the lot afterward.",
+    "links": {
+      "website": "https://mcdowellmountaincycles.com/mmc-life/",
+      "instagram": "https://instagram.com/ridemmc/",
+      "facebook": "https://www.facebook.com/mcdowellmountaincycles",
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://mcdowellmountaincycles.com/mmc-life/"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": null,
+    "evidence": "The shop's rides page, modified Sept 30, 2026, lists the Tuesday 7:00 pm ride next to dated October 2026 rides and events (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "static-page",
+      "watch_url": "https://mcdowellmountaincycles.com/mmc-life/",
+      "feed_url": null,
+      "notes": "The shop posts time changes on Facebook first."
+    }
+  },
+  {
+    "slug": "peoria-az-west-valley-casual-thursday-any-bike-ride",
+    "name": "Whatever You Feel Like Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Peoria",
+    "region": "Arizona",
+    "state": "AZ",
+    "country": "US",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social",
+      "mixed"
+    ],
+    "schedule": "Every Thursday, 7:00 pm (the Meetup series runs to Jan 28, 2027).",
+    "days": [
+      "thu"
+    ],
+    "time_local": "7:00 pm",
+    "start_hhmm": "19:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Phoenix",
+    "start_location": {
+      "name": "Rio Vista (the Meetup venue is Biscuits Cafe)",
+      "address": "8877 W. Thunderbird Rd., Peoria, AZ"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": "Relaxed, stops as needed",
+    "drop_policy": "no-drop",
+    "host": {
+      "name": "West Valley Casual Bike Rides",
+      "type": "informal"
+    },
+    "founded_year": 2012,
+    "founded_note": "The group says it has run rides for all skill levels since 2012.",
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Sign the group's waiver (linked on the Meetup event) and RSVP. No helmet, no ride. Front and rear lights and plenty of water.",
+    "description": "A Thursday night ride on whatever bike you have: fixies, mountain bikes, e-bikes, gravel, road, trikes. It covers 10–18 miles after dark from Rio Vista in Peoria and stops as needed for water. Nobody gets left behind.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": "https://www.meetup.com/west-valley-casual-bike-rides/",
+      "other": []
+    },
+    "inclusive_focus": [
+      "no-drop"
+    ],
+    "sources": [
+      "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/",
+      "https://www.meetup.com/west-valley-casual-bike-rides/events/316522954/",
+      "https://www.meetup.com/west-valley-casual-bike-rides/"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": null,
+    "evidence": "The group's Meetup feed lists the ride on Thu Oct 1 and Thu Oct 8, 2026 (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "meetup",
+      "watch_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/",
+      "feed_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/",
+      "notes": "The event text says Rio Vista; the Meetup venue is Biscuits Cafe on the same stretch of Thunderbird Rd."
+    }
+  },
+  {
+    "slug": "peoria-az-west-valley-casual-true-beginner-ride",
+    "name": "True Beginner Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Peoria",
+    "region": "Arizona",
+    "state": "AZ",
+    "country": "US",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road",
+      "social"
+    ],
+    "schedule": "Every Wednesday evening. The start moves between 6:30 and 7:30 pm with the season (7:00 pm on Sept 30 and Oct 7, 2026). Called off above 105°F, in strong wind or lightning.",
+    "days": [
+      "wed"
+    ],
+    "time_local": "7:00 pm",
+    "start_hhmm": "19:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Phoenix",
+    "start_location": {
+      "name": "Sweetwater Park",
+      "address": "7460 W Sweetwater Ave, Peoria, AZ"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": "Set by the riders' comfort level, on neighborhood streets",
+    "drop_policy": "no-drop",
+    "host": {
+      "name": "West Valley Casual Bike Rides",
+      "type": "informal"
+    },
+    "founded_year": 2012,
+    "founded_note": "The group says it has run rides for all skill levels since 2012.",
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "RSVP on Meetup. Helmets required. Bring front and rear lights, a spare tube, tools and water.",
+    "description": "A weekly ride for people who are just starting out or getting back on the bike. The group rides neighborhood streets at whatever distance suits the riders, and newcomers learn group-riding basics and etiquette. The group's rule: nobody gets left behind.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": "https://www.meetup.com/west-valley-casual-bike-rides/",
+      "other": []
+    },
+    "inclusive_focus": [
+      "beginner",
+      "no-drop"
+    ],
+    "sources": [
+      "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/",
+      "https://www.meetup.com/west-valley-casual-bike-rides/events/316509048/",
+      "https://www.meetup.com/west-valley-casual-bike-rides/"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "evidence": "The group's Meetup feed lists the ride on Wed Sept 30 and Wed Oct 7, 2026; the Meetup series runs weekly to Dec 23, 2026 (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "meetup",
+      "watch_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/",
+      "feed_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/",
+      "notes": "Heat cancellations are posted on the Meetup event."
+    }
+  },
+  {
+    "slug": "phoenix-az-bullshifters-saturday-club-ride",
+    "name": "Bullshifters Saturday Club Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Phoenix",
+    "region": "Arizona",
+    "state": "AZ",
+    "country": "US",
+    "neighborhood": "Moon Valley",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Saturday, about half an hour after sunrise. October 2026: 7:00 am on Oct 3 and 10, 7:30 am on Oct 17, 24 and 31. Routes are posted a month at a time.",
+    "days": [
+      "sat"
+    ],
+    "time_local": "7:30 am",
+    "start_hhmm": "07:30",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Phoenix",
+    "start_location": {
+      "name": "Moon Valley Park",
+      "address": "7th Ave and Coral Gables, Phoenix, AZ"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": "Faster group averages 19–20 mph, moderate group 15–17 mph",
+    "drop_policy": "groups",
+    "host": {
+      "name": "Bullshifters Bicycling Club",
+      "type": "club"
+    },
+    "founded_year": 1986,
+    "founded_note": "Started in 1986 as an employee club of Honeywell Bull.",
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Helmets required. The club asks riders to take out a paid membership after an introductory ride.",
+    "description": "A north-central Phoenix club that rides every Saturday from Moon Valley Park in two groups, regrouping at planned rest stops, with a breakfast stop. Rides run 40–65 miles; the October 2026 list goes to 56th Street, Via Linda, Pyramid Peak, Carefree Highlands and Vistancia. Routes are on RideWithGPS.",
+    "links": {
+      "website": "https://bullshifters.org/upcoming-bull-shifter-rides-club-events/",
+      "instagram": null,
+      "facebook": "https://www.facebook.com/BullShiftersBicyclingClub",
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://bullshifters.org/upcoming-bull-shifter-rides-club-events/",
+      "https://bullshifters.org/about-us/"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": null,
+    "evidence": "The club's rides page lists Saturday rides for Oct 3, 10, 17, 24 and 31, 2026, with routes, distances and start times (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "static-page",
+      "watch_url": "https://bullshifters.org/upcoming-bull-shifter-rides-club-events/",
+      "feed_url": null,
+      "notes": "The page is rewritten each month with that month's Saturday routes and start times."
+    }
+  },
+  {
+    "slug": "phoenix-az-global-bikes-ahwatukee-wednesday-ride",
+    "name": "Ahwatukee Climbing Circuit Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Phoenix",
+    "region": "Arizona",
+    "state": "AZ",
+    "country": "US",
+    "neighborhood": "Ahwatukee",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Wednesday evening. Sept 30: meet 6:45 pm, roll 7:00 pm. From Oct 7: meet 6:15 pm, roll 6:30 pm. Each Meetup event gives that week's time.",
+    "days": [
+      "wed"
+    ],
+    "time_local": "6:30 pm",
+    "start_hhmm": "18:30",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Phoenix",
+    "start_location": {
+      "name": "Philly's Sports Grill, east end of the shopping center at 48th St and Warner",
+      "address": "4855 E Warner Rd, Phoenix, AZ"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "~2 hours",
+    "duration_min": 120,
+    "pace": "A group 20+ mph on the flats, B 18–20+, C 16+",
+    "drop_policy": "no-drop",
+    "host": {
+      "name": "Global Bikes & E-Bikes",
+      "type": "shop"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "RSVP on the Global Bikes Meetup. Road bike; front and rear lights required.",
+    "description": "A Wednesday evening road ride run jointly by Global Bikes and the Wheel Sucker ride group from Philly's in Ahwatukee. Three pace groups, 24–30 miles, about two hours, billed as no-drop. It finishes in the dark, so lights are required.",
+    "links": {
+      "website": "https://www.globalbikes.info/articles/ride-and-clinic-calendar-pg2857.htm",
+      "instagram": "https://www.instagram.com/globalbikes",
+      "facebook": "https://www.facebook.com/globalbikes2001/",
+      "strava": null,
+      "meetup": "https://www.meetup.com/global-bikes-meetup/",
+      "other": []
+    },
+    "inclusive_focus": [
+      "no-drop"
+    ],
+    "sources": [
+      "https://www.meetup.com/global-bikes-meetup/events/ical/",
+      "https://www.meetup.com/global-bikes-meetup/events/316759305/",
+      "https://www.meetup.com/global-bikes-meetup/events/316771398/",
+      "https://www.globalbikes.info/articles/ride-and-clinic-calendar-pg2857.htm"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "evidence": "The Global Bikes Meetup feed lists this ride on Wed Sept 30 (7:00 pm) and Wed Oct 7, 2026 (6:30 pm) (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "meetup",
+      "watch_url": "https://www.meetup.com/global-bikes-meetup/events/",
+      "feed_url": "https://www.meetup.com/global-bikes-meetup/events/ical/",
+      "notes": "Start time shifts with daylight; each Meetup event states it."
+    }
+  },
+  {
+    "slug": "phoenix-az-pmbc-granada-sunday-breakfast-ride",
+    "name": "Granada Sunday Breakfast Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Phoenix",
+    "region": "Arizona",
+    "state": "AZ",
+    "country": "US",
+    "neighborhood": "Central Phoenix",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Sunday: 7:30 am October through March, 6:30 am April through September. The club calendar names each week's breakfast stop.",
+    "days": [
+      "sun"
+    ],
+    "time_local": "7:30 am",
+    "start_hhmm": "07:30",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Phoenix",
+    "start_location": {
+      "name": "Granada Park",
+      "address": "20th St. and Maryland, Phoenix, AZ"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": "Two groups: the 3s average 15–16 mph, the 4s average 11–13 mph",
+    "drop_policy": "groups",
+    "host": {
+      "name": "Phoenix Metro Bicycle Club (Granada chapter)",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "The club says visitors are always welcome. Helmets required; bring water.",
+    "description": "The club's Granada chapter meets every Sunday at Granada Park in central Phoenix and rides in two groups, one around 15–16 mph and one around 11–13 mph. Each week ends at a different breakfast place, named on the club calendar.",
+    "links": {
+      "website": "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=364277",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=364277",
+      "https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-27",
+    "evidence": "PMBC's event calendar lists a Granada Breakfast Ride every Sunday from Aug 30 to Sept 27, 2026, each with its breakfast stop (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467",
+      "feed_url": null,
+      "notes": "Start switches to 6:30 am in April and back to 7:30 am in October."
+    }
+  },
+  {
+    "slug": "phoenix-az-valley-epic-rides-night-rider-trail-100",
+    "name": "Night Rider Series @ Trail 100",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Phoenix",
+    "region": "Arizona",
+    "state": "AZ",
+    "country": "US",
+    "neighborhood": "Phoenix Mountains Preserve",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "mtb"
+    ],
+    "schedule": "Every Wednesday, 6:30 pm, on Trail 100. The meet spot can change with the season or the trailhead; check the Meetup event.",
+    "days": [
+      "wed"
+    ],
+    "time_local": "6:30 pm",
+    "start_hhmm": "18:30",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Phoenix",
+    "start_location": {
+      "name": "Trail 100 meet spot (Meetup venue)",
+      "address": "1418 E Sunnyside Dr, Phoenix, AZ"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "~2 hours",
+    "duration_min": 120,
+    "pace": "8–10 miles in about two hours",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Valley Epic Rides",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "RSVP on Meetup (capped at 20 riders). Bring lights that last two hours.",
+    "description": "A weeknight mountain bike ride on Trail 100 in the Phoenix Mountains Preserve: mostly out-and-back with side trails mixed in, 8–10 miles in about two hours. The same group rides South Mountain on Tuesday nights (Taco Tuesday).",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": "https://www.meetup.com/valley-epic-rides/",
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.meetup.com/valley-epic-rides/events/ical/",
+      "https://www.meetup.com/valley-epic-rides/events/316509061/"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "evidence": "Valley Epic Rides' Meetup feed lists the ride every Wednesday from Sept 30 to Oct 21, 2026 (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "meetup",
+      "watch_url": "https://www.meetup.com/valley-epic-rides/events/",
+      "feed_url": "https://www.meetup.com/valley-epic-rides/events/ical/",
+      "notes": "The current Meetup series runs to Oct 27, 2026; watch for the next one."
+    }
+  },
+  {
+    "slug": "tempe-az-pmbc-saturday-cycling",
+    "name": "Saturday Cycling",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Tempe",
+    "region": "Arizona",
+    "state": "AZ",
+    "country": "US",
+    "neighborhood": "Kiwanis Park",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Saturday. The start moves with the season: 8:30 am Jan, 8:00 Feb, 7:30 Mar, 7:00 Apr, 6:30 May–Aug, 7:00 Sept, 7:30 Oct, 8:00 Nov, 8:30 Dec.",
+    "days": [
+      "sat"
+    ],
+    "time_local": "7:30 am",
+    "start_hhmm": "07:30",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Phoenix",
+    "start_location": {
+      "name": "Kiwanis Park, the parking lot on S. All America Way nearest Mill Ave",
+      "address": "Kiwanis Park, SE of Mill Ave and Baseline Rd, Tempe, AZ"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": "Standard route is no-drop with a sweep rider; faster riders go around 20 mph",
+    "drop_policy": "no-drop",
+    "host": {
+      "name": "Phoenix Metro Bicycle Club",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "The club says visitors are always welcome. Helmet required, no earphones.",
+    "description": "The club calls it the big weekly ride for everyone. Routes rotate through more than a dozen loops, always with a ~25-mile and a ~35-mile option. The standard route is no-drop with a sweep, and faster riders run around 20 mph. Optional breakfast stop near the finish. The club also runs a Wednesday no-drop ride from changing Southeast Valley starts.",
+    "links": {
+      "website": "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=364159",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://ridewithgps.com/clubs/3053-phoenix-metro-bicycle-club/events"
+      ]
+    },
+    "inclusive_focus": [
+      "no-drop",
+      "beginner"
+    ],
+    "sources": [
+      "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=364159",
+      "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=356095",
+      "https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-26",
+    "evidence": "PMBC's event calendar lists Saturday Cycling on Sept 5, 12, 19 and 26 and Oct 3, 2026, each with its route (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467",
+      "feed_url": null,
+      "notes": "The start time changes every month (table on the ride page). The calendar names each week's route."
+    }
+  },
+  {
+    "slug": "tucson-az-gaba-el-tour-training-rides",
+    "name": "GABA El Tour de Tucson Training Rides",
+    "name_en": null,
+    "kind": "training-series",
+    "city": "Tucson",
+    "region": "Arizona",
+    "state": "AZ",
+    "country": "US",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Sundays through the 11 weeks before El Tour de Tucson (week 6 is Oct 4, 2026). Meet 6:45 am, roll shortly after. Distance grows about 10% a week (66 miles in week 6).",
+    "days": [
+      "sun"
+    ],
+    "time_local": "6:45 am",
+    "start_hhmm": "06:45",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "seasonal",
+    "season_months": {
+      "start": 8,
+      "end": 11
+    },
+    "tz": "America/Phoenix",
+    "start_location": {
+      "name": "Safeway at Golf Links and Wilmot",
+      "address": "Golf Links Rd and Wilmot Rd, Tucson, AZ"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": "Two groups: B (16–18 mph) and C to C+ (12–16 mph), on GABA's scale",
+    "drop_policy": "groups",
+    "host": {
+      "name": "Greater Arizona Bicycling Association (GABA)",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Register through the gatherist.org link on each Meetup event. Know the route (RideWithGPS link on the event), carry flat repair and at least two hours of water.",
+    "description": "GABA's 11-week build for El Tour de Tucson in November. Two ride leaders run a faster B group and a moderate C/C+ group, with occasional regroups, and the route gets about 10% longer each week. Good for anyone in town training for El Tour.",
+    "links": {
+      "website": "https://www.bikegaba.org/",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": "https://www.meetup.com/bikegaba/",
+      "other": [
+        "https://ridewithgps.com/routes/57369192"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.meetup.com/bikegaba/events/ical/",
+      "https://www.meetup.com/bikegaba/events/316767522/"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": null,
+    "evidence": "GABA's Meetup feed lists 'ETT Training Week #6' for Sun Oct 4, 2026, 6:45 am at the Safeway on Golf Links and Wilmot (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "meetup",
+      "watch_url": "https://www.meetup.com/bikegaba/events/",
+      "feed_url": "https://www.meetup.com/bikegaba/events/ical/",
+      "notes": "Seasonal: the series starts in late summer and ends before El Tour in November."
+    }
+  },
+  {
+    "slug": "tucson-az-tuesday-morning-fast-ride",
+    "name": "Tuesday Morning Fast Ride (TMFR)",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Tucson",
+    "region": "Arizona",
+    "state": "AZ",
+    "country": "US",
+    "neighborhood": "University of Arizona",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Tuesday morning, at the same time as the Saturday Shootout A group: 6:30 am from the first Saturday of September, 7:00 am from the second Saturday of October (Oct 10, 2026), 7:30 am from the second Saturday of November, 7:00 am from March, 6:30 am from early April, 6:00 am from the third Saturday of April.",
+    "days": [
+      "tue"
+    ],
+    "time_local": "7:00 am",
+    "start_hhmm": "07:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Phoenix",
+    "start_location": {
+      "name": "Near University Blvd and Euclid Ave, by the University of Arizona",
+      "address": "University Blvd and Euclid Ave, Tucson, AZ"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": "Fast; natural group splits as the pace rises",
+    "drop_policy": "drop",
+    "host": {
+      "name": "Tuesday Morning Fast Ride (documented by Fair Wheel Bikes)",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Self-supported and open to everyone. Bring water, food and flat repair, and know the route (Strava route on Fair Wheel's page).",
+    "description": "Tucson's weekday fast ride, from near the University of Arizona. Rolling terrain, a steep climb near the finish, and the group splits as the pace goes up. Not a beginner ride. Fair Wheel Bikes, a short ride from the start, keeps the route and the start-time table.",
+    "links": {
+      "website": "https://www.fairwheelbikes.com/service/group-rides/",
+      "instagram": "https://instagram.com/fairwheel",
+      "facebook": "https://www.facebook.com/fairwheelbikes/",
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://www.strava.com/routes/3200956981929684736"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.fairwheelbikes.com/service/group-rides/"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": null,
+    "evidence": "Fair Wheel Bikes' group-ride page gives the start and the seasonal start-time table; nothing on the page is dated (fetched Sept 30, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "static-page",
+      "watch_url": "https://www.fairwheelbikes.com/service/group-rides/",
+      "feed_url": null,
+      "notes": "Start time follows the Shootout's seasonal table on the same page."
+    }
+  },
+  {
+    "slug": "encinitas-ca-swamis-saturday-ride",
+    "name": "World Famous Swami's Saturday Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Encinitas",
+    "region": "California",
+    "state": "CA",
+    "country": "US",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Saturday: A group rolls 8:15 am, B group 8:19 am. On the first Saturday of the month the route runs in reverse. Some Saturdays add a special training ride from the same start.",
+    "days": [
+      "sat"
+    ],
+    "time_local": "8:15 am",
+    "start_hhmm": "08:15",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Los_Angeles",
+    "start_location": {
+      "name": "Cadence Cyclery",
+      "address": "190 N Coast Hwy 101, Encinitas, CA 92024"
+    },
+    "distance_km": 60,
+    "distance_miles": 37,
+    "duration": "~2.75 hours",
+    "duration_min": 165,
+    "pace": "Two groups, A and B, leaving four minutes apart",
+    "drop_policy": "groups",
+    "host": {
+      "name": "Swami's Cycling Club",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "The club's weekly-rides page lists its rides as open to non-members.",
+    "description": "North County San Diego's best-known Saturday ride. A and B groups leave Cadence Cyclery on Coast Highway 101 four minutes apart and usually ride the classic Elfin Forest / Del Dios loop, about 37 miles. On the first Saturday of the month the loop runs in reverse.",
+    "links": {
+      "website": "https://swamis.org/rides-events/weekly-group-rides-t/",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://swamis.org/events/venues/cadence-cyclery/"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://swamis.org/events/venues/cadence-cyclery/",
+      "https://swamis.org/rides-events/weekly-group-rides-t/",
+      "https://swamis.org/events/event/world-famous-swamis-saturday-ride-a-b-groups-4/"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": null,
+    "evidence": "The club's event listings at Cadence Cyclery show the Saturday ride every week from Oct 3 to Nov 28, 2026, A group 8:15 am, B group 8:19 am (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://swamis.org/events/venues/cadence-cyclery/",
+      "feed_url": null,
+      "notes": "swamis.org answers plain scripted fetches with a 202 bot wall; read it with a browser-like fetch."
+    }
+  },
+  {
+    "slug": "granite-bay-ca-sac-wheelmen-saturday-granite-bay-ride",
+    "name": "Saturday Morning Granite Bay Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Granite Bay",
+    "region": "California",
+    "state": "CA",
+    "country": "US",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Saturday, 8:30 am.",
+    "days": [
+      "sat"
+    ],
+    "time_local": "8:30 am",
+    "start_hhmm": "08:30",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Los_Angeles",
+    "start_location": {
+      "name": "Granite Bay Community Park",
+      "address": null
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": null,
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Sacramento Wheelmen",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Non-members sign the club's accident waiver and the ride roster at the start. Helmet required; a road bike works best.",
+    "description": "The Sacramento Wheelmen's Saturday ride from Granite Bay Community Park, in the foothills east of Sacramento near Folsom Lake. The club calendar lists it every Saturday.",
+    "links": {
+      "website": "https://sacwheelmen.wildapricot.org/Ride-Calendar/",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://sacwheelmen.wildapricot.org/event-6843354"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://sacwheelmen.wildapricot.org/event-6843354",
+      "https://sacwheelmen.wildapricot.org/Ride-Calendar/",
+      "https://sacwheelmen.wildapricot.org/Riding-with-the-Wheelmen"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-26",
+    "evidence": "The club calendar lists the ride every Saturday in September 2026, and its event page shows Sat Oct 10, 2026, 8:30 am at Granite Bay Community Park (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://sacwheelmen.wildapricot.org/Ride-Calendar/",
+      "feed_url": null,
+      "notes": null
+    }
+  },
+  {
+    "slug": "sacramento-ca-sac-wheelmen-tuesday-west-breakfast-ride",
+    "name": "Tuesday West Breakfast Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Sacramento",
+    "region": "California",
+    "state": "CA",
+    "country": "US",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Tuesday, 9:00 am (listed weekly Oct 6 to Nov 24, 2026).",
+    "days": [
+      "tue"
+    ],
+    "time_local": "9:00 am",
+    "start_hhmm": "09:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Los_Angeles",
+    "start_location": {
+      "name": "Westin Hotel parking lot",
+      "address": "4800 Riverside Blvd, Sacramento, CA"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": "Flat, flexible pace",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Sacramento Wheelmen",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Non-members sign the club's accident waiver and the ride roster at the start. Helmet required.",
+    "description": "A flat Tuesday club ride to a different breakfast place each week, 25–75 miles, with a longer option every week. The club also runs a Thursday breakfast ride and a Saturday ride from Granite Bay.",
+    "links": {
+      "website": "https://sacwheelmen.wildapricot.org/Ride-Calendar/",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://sacwheelmen.wildapricot.org/event-6843338"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://sacwheelmen.wildapricot.org/event-6843338",
+      "https://sacwheelmen.wildapricot.org/Ride-Calendar/",
+      "https://sacwheelmen.wildapricot.org/Riding-with-the-Wheelmen"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-22",
+    "evidence": "The club calendar lists the ride every Tuesday in September 2026, and its event page lists eight Tuesdays from Oct 6 to Nov 24, 2026 at 9:00 am (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://sacwheelmen.wildapricot.org/Ride-Calendar/",
+      "feed_url": null,
+      "notes": "Posted in eight-week blocks; weekday leaders also send changes by club email."
+    }
+  },
+  {
+    "slug": "cambridge-ma-crw-praline-croissant-women-nb-ride",
+    "name": "Praline Croissant Women's/NB Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Cambridge",
+    "region": "Massachusetts",
+    "state": "MA",
+    "country": "US",
+    "neighborhood": "Alewife",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Fridays at 6:30 am in season (listed Sept 11, Sept 18, Oct 2 and Oct 9, 2026). Leaves on time. Rain calls go up by 10 pm the night before and again at 5:30 am.",
+    "days": [
+      "fri"
+    ],
+    "time_local": "6:30 am",
+    "start_hhmm": "06:30",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "seasonal",
+    "season_months": null,
+    "tz": "America/New_York",
+    "start_location": {
+      "name": "Minuteman Bikeway Trailhead – Alewife",
+      "address": "Steel Pl and Alewife Station Access Rd, Cambridge, MA"
+    },
+    "distance_km": 32,
+    "distance_miles": 20,
+    "duration": "~2.5 hours",
+    "duration_min": 150,
+    "pace": "13–16 mph, regrouping; optional paceline",
+    "drop_policy": "groups",
+    "host": {
+      "name": "Charles River Wheelers",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "For women, women-identifying and nonbinary riders. Register on the event page. Guests may do two CRW rides a year before joining. Helmets required.",
+    "description": "The Friday women's and nonbinary ride from Alewife: 20 miles at 13–16 mph through Lexington and Burlington to Mary Cummings Park and Horn Pond, back past Mystic Lakes, with an optional coffee stop at Kickstand Cafe. It regroups and leaves on time so riders get to work; slower riders can ride it at their own pace with navigation.",
+    "links": {
+      "website": "https://crw.org/events",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://crw.org/event-6826857",
+        "https://ridewithgps.com/routes/45804334"
+      ]
+    },
+    "inclusive_focus": [
+      "wtf"
+    ],
+    "sources": [
+      "https://crw.org/event-6826857",
+      "https://crw.org/events",
+      "https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-18",
+    "evidence": "CRW's calendar feed lists the ride on Sept 11, Oct 2 and Oct 9, 2026, and its event page is dated Sept 18, 2026 (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "ics",
+      "watch_url": "https://crw.org/events",
+      "feed_url": "https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics",
+      "notes": "Runs in blocks through the riding season; check the feed for the next block."
+    }
+  },
+  {
+    "slug": "cambridge-ma-crw-speedy-croissant-women-nb-ride",
+    "name": "Speedy Croissant Women/NB Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Cambridge",
+    "region": "Massachusetts",
+    "state": "MA",
+    "country": "US",
+    "neighborhood": "Alewife",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Tuesdays at 6:00 am in season (listed every Tuesday from May 5 to Oct 6, 2026). Rain calls go up by 10 pm the night before and again at 5 am.",
+    "days": [
+      "tue"
+    ],
+    "time_local": "6:00 am",
+    "start_hhmm": "06:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "seasonal",
+    "season_months": {
+      "start": 5,
+      "end": 10
+    },
+    "tz": "America/New_York",
+    "start_location": {
+      "name": "Minuteman Bikeway trailhead, Alewife",
+      "address": "Steel Pl and Alewife Station Access Rd, Cambridge, MA"
+    },
+    "distance_km": 39,
+    "distance_miles": 24,
+    "duration": "~2 hours",
+    "duration_min": 120,
+    "pace": "16+ mph show-and-go; optional paceline",
+    "drop_policy": "drop",
+    "host": {
+      "name": "Charles River Wheelers",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "For women, women-identifying and nonbinary riders. Register on the event page. Guests may do two CRW rides a year before joining. Paceline experience required; helmets required.",
+    "description": "A spirited early-morning ride from the Alewife end of the Minuteman Bikeway for women, women-identifying and nonbinary riders, part of the club's Women's/Nonbinary Program. It holds 16+ mph and does not regroup, so riders need paceline experience. The slower Praline Croissant ride runs on Fridays.",
+    "links": {
+      "website": "https://crw.org/events",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://crw.org/event-6826838"
+      ]
+    },
+    "inclusive_focus": [
+      "wtf"
+    ],
+    "sources": [
+      "https://crw.org/event-6826838",
+      "https://crw.org/events",
+      "https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-29",
+    "evidence": "CRW's calendar feed lists the ride every Tuesday from May 5 to Oct 6, 2026, the latest past date Sept 29 (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "ics",
+      "watch_url": "https://crw.org/events",
+      "feed_url": "https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics",
+      "notes": "Seasonal early-morning series; the new season appears in the feed each spring."
+    }
+  },
+  {
+    "slug": "portland-or-pbc-slow-poke-ride",
+    "name": "Slow Poke Ride from St Matthews Church",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Portland",
+    "region": "Oregon",
+    "state": "OR",
+    "country": "US",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Thursday. 10:00 am on Oct 1, 2026 (it left at 9:30 am in early September); each dated listing gives the time.",
+    "days": [
+      "thu"
+    ],
+    "time_local": "10:00 am",
+    "start_hhmm": "10:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Los_Angeles",
+    "start_location": {
+      "name": "St Matthew's Anglican Church",
+      "address": "11100 NE Skidmore St, Portland, OR"
+    },
+    "distance_km": 32,
+    "distance_miles": 20,
+    "duration": null,
+    "duration_min": null,
+    "pace": "Slow, 10–12 mph, flat",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Portland Bicycling Club",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Sign in at the start. The club says it welcomes riders of all abilities.",
+    "description": "A slow, flat 20-mile Thursday ride into Northeast Portland at 10–12 mph, with a break at Guilder Coffee Company (72nd and Prescott). The club posts it every week, next to its Monday and Friday 'meander' rides.",
+    "links": {
+      "website": "https://portlandbicyclingclub.com/scheduled_rides/",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://portlandbicyclingclub.com/scheduled_rides/slow-poke-ride-from-st-matthews-church-64/"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://portlandbicyclingclub.com/scheduled_rides/slow-poke-ride-from-st-matthews-church-64/",
+      "https://portlandbicyclingclub.com/scheduled_rides/",
+      "https://portlandbicyclingclub.com/about/"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-24",
+    "evidence": "The club's ride calendar (as of Sept 30, 2026) lists the ride every Thursday in September, and its Oct 1, 2026 listing gives 10:00 am from St Matthew's (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://portlandbicyclingclub.com/scheduled_rides/",
+      "feed_url": null,
+      "notes": "Each week is its own listing; the start time moves with the season."
+    }
+  },
+  {
+    "slug": "tualatin-or-pbc-saturday-tualatin-ride",
+    "name": "Saturday Tualatin Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Tualatin",
+    "region": "Oregon",
+    "state": "OR",
+    "country": "US",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Saturday, 9:00 am.",
+    "days": [
+      "sat"
+    ],
+    "time_local": "9:00 am",
+    "start_hhmm": "09:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Los_Angeles",
+    "start_location": {
+      "name": "Tualatin Community Park",
+      "address": "8515 SW Tualatin Rd, Tualatin, OR 97062"
+    },
+    "distance_km": 100,
+    "distance_miles": 62,
+    "duration": null,
+    "duration_min": null,
+    "pace": "Fast (18+ mph); paceline at 20 mph",
+    "drop_policy": "groups",
+    "host": {
+      "name": "Portland Bicycling Club",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Non-members sign up on the ride's page. Road bikes only, no TT or tri bikes. Load the route on a bike computer in case you come off the back.",
+    "description": "A fast, hilly Saturday ride of about 62 miles from Tualatin Community Park, southwest of Portland. It starts as one group and may split into speed groups, with a food stop about halfway; riders need to be comfortable in a paceline at 20 mph. Free parking at the park.",
+    "links": {
+      "website": "https://portlandbicyclingclub.com/scheduled_rides/",
+      "instagram": null,
+      "facebook": "https://www.facebook.com/groups/pbcTualatin",
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://portlandbicyclingclub.com/scheduled_rides/saturday-tualatin-ride-175/"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://portlandbicyclingclub.com/scheduled_rides/saturday-tualatin-ride-175/",
+      "https://portlandbicyclingclub.com/scheduled_rides/"
+    ],
+    "verified_on": "2026-09-30",
+    "last_seen": "2026-09-26",
+    "evidence": "The club's ride calendar lists the ride every Saturday in September 2026, and its Oct 3, 2026 listing gives 9:00 am from Tualatin Community Park (fetched Sept 30, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://portlandbicyclingclub.com/scheduled_rides/",
+      "feed_url": null,
+      "notes": null
+    }
+  }
+]

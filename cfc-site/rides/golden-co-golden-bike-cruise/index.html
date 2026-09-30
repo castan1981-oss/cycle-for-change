@@ -63,7 +63,7 @@
   </div>
   <ul class="menu-list">
     <li><a href="/pledge/">Pledge a mile <span>Free</span></a></li>
-    <li><a href="/rides/">Find a ride <span>614</span></a></li>
+    <li><a href="/rides/">Find a ride <span>670</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>635</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
@@ -84,8 +84,10 @@
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/rides/">Group rides</a></li><li><a href="/rides/co/">Colorado</a></li><li><a href="/rides/co/denver/">Denver</a></li><li><span aria-current="page">Golden Bike Cruise</span></li></ol></nav>
 
     <h1>Golden Bike Cruise</h1>
+    
     <p class="gr-place">Golden, CO · Cruiser · Social</p>
     <p class="gr-tags"><span class="gr-tag">Family</span><span class="gr-tag">Beginner friendly</span><span class="gr-tag">No-drop</span></p>
+
 
     <p class="lede">Golden Bike Cruise is a cruiser and social group ride in Golden, CO. It rolls last Tuesday of the month at 5:30 pm from Behind the Armory building. Pace: slow cruise. No-drop.</p>
 
@@ -103,6 +105,16 @@
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
     </div>
 
+
+    <aside class="gr-checked" aria-label="When this ride was last checked">
+      <svg class="gr-checked-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-checked"/></svg>
+      <div>
+        <p class="gr-checked-line"><strong>Checked Sep 18, 2026.</strong> Confirmed on the host's own page.</p>
+        
+        
+        <p class="gr-checked-go"><a class="link" href="https://goldenbikecruise.com/" rel="noopener nofollow">Check the host's page before you go</a></p>
+      </div>
+    </aside>
     <dl class="gr-facts">
         <div class="gr-fact"><dt>When</dt><dd>Last Tuesday of the month, 5:30 pm<small>Season: May–Sep</small></dd></div>
         <div class="gr-fact"><dt>Starts at</dt><dd>Behind the Armory building, 818 14th St, Golden, CO 80401 <a class="gr-map" href="https://www.google.com/maps/search/?api=1&amp;query=Behind%20the%20Armory%20building%2C%20818%2014th%20St%2C%20Golden%2C%20CO%2080401" rel="noopener">Map ↗</a></dd></div>
@@ -110,6 +122,7 @@
         <div class="gr-fact"><dt>Hosted by</dt><dd>Golden Bike Cruise<small>Nonprofit</small></dd></div>
         <div class="gr-fact"><dt>Bike</dt><dd>Cruiser · Social</dd></div>
     </dl>
+
 
     <section class="gr-first" aria-labelledby="gr-first-h">
       <h2 id="gr-first-h">First time? Here's the drill</h2>
@@ -137,12 +150,12 @@
 
 
     <p class="verified gr-verify">
-      Last checked 2026-09-18 against <a href="https://goldenbikecruise.com/" rel="noopener nofollow">source 1</a>.
+      Checked Sep 18, 2026 against <a href="https://goldenbikecruise.com/" rel="noopener nofollow">source 1</a>.
       Schedules change. Confirm with the host before you go.
     </p>
 
     <details class="dir-report dir-report--compact" id="fix">
-      <summary>Wrong, gone, or you run this ride? Tell us</summary>
+      <summary>Rode it lately, or something's wrong? Tell us</summary>
       <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
       <input type="hidden" name="form-name" value="ride-report">
       <input type="hidden" name="page" value="" data-page>
@@ -152,19 +165,20 @@
         <label><input type="radio" name="kind" value="new"> <span>New ride</span></label>
         <label><input type="radio" name="kind" value="changed" checked> <span>Something changed</span></label>
         <label><input type="radio" name="kind" value="gone"> <span>It's gone</span></label>
+        <label><input type="radio" name="kind" value="still-on"> <span>Still on — I rode it</span></label>
       </fieldset>
-      <label class="lab" for="rr-what-261">Ride name or link</label>
-      <input class="field" id="rr-what-261" name="ride" type="text" required autocomplete="off" value="Golden Bike Cruise">
-      <label class="lab" for="rr-details-261">What should we know? <small>Day, time, start, pace, who runs it</small></label>
-      <textarea class="field" id="rr-details-261" name="details" rows="3"></textarea>
-      <label class="lab" for="rr-email-261">Your email <small>Optional. Only if we have a question.</small></label>
-      <input class="field" id="rr-email-261" name="email" type="email" autocomplete="email" inputmode="email">
+      <label class="lab" for="rr-what-290">Ride name or link</label>
+      <input class="field" id="rr-what-290" name="ride" type="text" required autocomplete="off" value="Golden Bike Cruise">
+      <label class="lab" for="rr-details-290">What should we know? <small>Day, time, start, pace, who runs it</small></label>
+      <textarea class="field" id="rr-details-290" name="details" rows="3"></textarea>
+      <label class="lab" for="rr-email-290">Your email <small>Optional. Only if we have a question.</small></label>
+      <input class="field" id="rr-email-290" name="email" type="email" autocomplete="email" inputmode="email">
       <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
     </form>
     </details>
   </article>
 
-  <nav class="related gr-related" aria-label="Nearby group rides">
+  <nav class="related gr-related" id="nearby" aria-label="Nearby group rides">
     <h2>Nearby rides</h2>
     <a href="/rides/denver-co-denver-cruiser-ride/">Denver Cruiser Ride <small>· Denver, CO · Cruiser · 11 mi</small></a>
     <a href="/rides/boulder-co-bma-gurlz-ride/">Gurlz Ride <small>· Boulder, CO · Mountain bike · 12 mi</small></a>

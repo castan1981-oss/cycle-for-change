@@ -8,7 +8,7 @@ UID:norfolk-va-slow-and-steady-sundays@cycleforchange.org
 DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/New_York:20261004T103000
 DTEND;TZID=America/New_York:20261004T120000
-RRULE:FREQ=WEEKLY;BYDAY=SU
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270212T235959Z
 SUMMARY:Slow & Steady Sundays — Norfolk\, VA
 LOCATION:Slow & Steady Bikes and Goods\, 2406 Colley Ave\, Norfolk\, VA
 DESCRIPTION:Pace: party pace\, 8–12 mph.\nNo-drop.\nSchedule: Sundays\,

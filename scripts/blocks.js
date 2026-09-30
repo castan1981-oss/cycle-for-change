@@ -30,14 +30,16 @@ ${items.map(([k, h, t]) => `      <div>${BUILT_MARK(k)}<span class="k">${esc(k)}
 /* opts.thing   "ride" | "event" | "place"  (words only)
    opts.name    prefill for the "which one" field (a ride or event page)
    opts.kind    default radio: "new" | "changed" | "gone"
-   opts.compact true on a single ride/event page: tucked into a <details> */
+   opts.compact true on a single ride/event page: tucked into a <details>
+   opts.stillOn true on a ride page that's on the lists: a fourth choice, "Still on — I rode it"
+                (kind "still-on") — a rider's word that the ride is still happening (Sept 30, 2026) */
 let uid = 0;
-function REPORT({ thing = "ride", name = "", kind = "new", compact = false, heading, lede, id = "add" } = {}) {
+function REPORT({ thing = "ride", name = "", kind = "new", compact = false, heading, lede, id = "add", stillOn = false } = {}) {
   const n = ++uid;
   const Thing = thing.charAt(0).toUpperCase() + thing.slice(1);
   const h = heading || (thing === "ride" ? "Run a ride? Add it, or fix what we got wrong." : thing === "event" ? "Missing an event, or a date changed?" : "Closed, moved, or missing?");
   const l = lede || `Tell us what's new or what changed. We check it against the ${thing}'s own page before it goes up. Listing is free and always will be.`;
-  const kinds = [["new", `New ${thing}`], ["changed", "Something changed"], ["gone", "It's gone"]];
+  const kinds = [["new", `New ${thing}`], ["changed", "Something changed"], ["gone", "It's gone"], ...(stillOn ? [["still-on", "Still on — I rode it"]] : [])];
   const form = `<form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
       <input type="hidden" name="form-name" value="ride-report">
       <input type="hidden" name="page" value="" data-page>
@@ -56,7 +58,7 @@ ${kinds.map(([v, t]) => `        <label><input type="radio" name="kind" value="$
     </form>`;
   if (compact) return `
     <details class="dir-report dir-report--compact" id="${id}">
-      <summary>Wrong, gone, or you run this ${esc(thing)}? Tell us</summary>
+      <summary>${stillOn ? `Rode it lately, or something's wrong? Tell us` : `Wrong, gone, or you run this ${esc(thing)}? Tell us`}</summary>
       ${form}
     </details>`;
   return `

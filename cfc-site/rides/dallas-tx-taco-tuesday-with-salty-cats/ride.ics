@@ -8,7 +8,7 @@ UID:dallas-tx-taco-tuesday-with-salty-cats@cycleforchange.org
 DTSTAMP:20260918T000000Z
 DTSTART;TZID=America/Chicago:20261006T200000
 DTEND;TZID=America/Chicago:20261006T220000
-RRULE:FREQ=WEEKLY;BYDAY=TU
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270215T235959Z
 SUMMARY:Taco Tuesday with Salty Cats — Dallas\, TX
 LOCATION:Cold Beer Company\, 3600 Main St\, Dallas\, TX 75226
 DESCRIPTION:Schedule: Every Tuesday\, 8:00 pm.\nConfirm with the host bef

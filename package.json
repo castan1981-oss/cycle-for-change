@@ -8,6 +8,9 @@
     "build:rides": "node tools/build-rides.js",
     "build:calendar": "node scripts/build-calendar.js",
     "build:events": "node scripts/build-events.js",
-    "derive:rides": "node tools/derive-ride-fields.js"
+    "derive:rides": "node tools/derive-ride-fields.js",
+    "merge:rides": "node tools/merge-ride-research.js",
+    "geocode:rides": "node tools/geocode-rides.js",
+    "test:rides": "node --test tools/test/*.test.js"
   }
 }

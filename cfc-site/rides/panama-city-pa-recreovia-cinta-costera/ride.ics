@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:panama-city-pa-recreovia-cinta-costera@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Panama:20270307T060000
+DTEND;TZID=America/Panama:20270307T110000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270227T235959Z
+SUMMARY:Recreovía Cinta Costera — Panama City\, Panama
+LOCATION:Elevated bridge by the McDonald's at Paitilla\, Cinta Costera
+DESCRIPTION:Schedule: Sundays\, 6:00 am to 11:00 am\, on the Cinta Coster
+ a from the elevated bridge by the McDonald's at Paitilla to the end of t
+ he marine section (Cinta Costera 3). Cancelled some Sundays for races: t
+ he Sept 20\, 2026 edition gave way to the Panama City Marathon..\nConfir
+ m with the host before you go.\nhttps://cycleforchange.org/rides/panama-
+ city-pa-recreovia-cinta-costera/
+URL:https://cycleforchange.org/rides/panama-city-pa-recreovia-cinta-coste
+ ra/
+END:VEVENT
+END:VCALENDAR

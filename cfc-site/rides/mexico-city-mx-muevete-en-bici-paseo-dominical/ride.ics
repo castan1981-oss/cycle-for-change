@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mexico-city-mx-muevete-en-bici-paseo-dominical@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Mexico_City:20261004T080000
+DTEND;TZID=America/Mexico_City:20261004T140000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270227T235959Z
+SUMMARY:Paseo Dominical Muévete en Bici — Mexico City\, Mexico
+LOCATION:Any point on the Sunday circuit (Paseo de la Reforma is the spin
+ e)
+DESCRIPTION:Schedule: Every Sunday\, 8:00 am to 2:00 pm. The route change
+ s from week to week; on Sept 13\, 2026 it ran about 55 km over Paseo de 
+ la Reforma\, División del Norte\, Patriotismo\, the Centro Histórico\,
+  Calzada de Guadalupe and Eje 7 Sur..\nConfirm with the host before you 
+ go.\nhttps://cycleforchange.org/rides/mexico-city-mx-muevete-en-bici-pas
+ eo-dominical/
+URL:https://cycleforchange.org/rides/mexico-city-mx-muevete-en-bici-paseo
+ -dominical/
+END:VEVENT
+END:VCALENDAR

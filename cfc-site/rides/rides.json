@@ -1678,6 +1678,85 @@
   }
  },
  {
+  "slug": "chandler-az-pmbc-mikes-sunday-ride",
+  "name": "Mike's Sunday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Chandler",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 33.3062,
+  "lng": -111.84118,
+  "geo_precision": "city",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Sunday. The start moves with the season: 8:30 am Jan, 8:00 Feb, 7:30 Mar, 7:00 Apr, 6:30 May–Aug, 7:00 Sept, 7:30 Oct, 8:00 Nov, 8:30 Dec.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": {
+   "start": 1,
+   "end": 12
+  },
+  "start_location": {
+   "name": "Desert Breeze Park, north parking lot",
+   "address": "Desert Breeze Blvd, between McClintock and Rural Rds and Chandler Blvd and Ray Rd, Chandler, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Paceline riding at about 18–20 mph",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Phoenix Metro Bicycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The club says visitors are always welcome. Helmet required, no earphones.",
+  "description": "A paceline ride of 40–50 miles at about 18–20 mph, with short-cut options. Routes cover the Valley, from downtown Phoenix to Mummy Mountain and the far Southeast Valley, and the club says it rarely repeats one within a quarter. Optional breakfast at the end. Named for longtime club member Michael Kirk.",
+  "links": {
+   "website": "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=364161",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=364161",
+   "https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-27",
+  "evidence": "PMBC's event calendar lists Mike's Sunday Ride with a named route every Sunday in September 2026, the last on Sept 27 (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467",
+   "feed_url": null,
+   "notes": "Same monthly start-time table as Saturday Cycling."
+  }
+ },
+ {
   "slug": "cottonwood-az-vvcc-wednesday-cottonwood-ride",
   "name": "VVCC Wednesday Cottonwood Ride",
   "name_en": null,
@@ -1827,6 +1906,161 @@
    "watch_url": "https://www.meetup.com/find/us--az--flagstaff/mountain-biking/",
    "feed_url": null,
    "notes": null
+  }
+ },
+ {
+  "slug": "fountain-hills-az-mcdowell-mountain-cycles-tuesday-night-mtb",
+  "name": "MMC Tuesday Night Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Fountain Hills",
+  "neighborhood": "McDowell Mountain Regional Park",
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 33.61171,
+  "lng": -111.71736,
+  "geo_precision": "city",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Every Tuesday, 7:00 pm, from the Four Peaks lot. The shop confirms weekly times on its Facebook page.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "7:00 pm",
+  "start_hhmm": "19:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Four Peaks Trailhead parking lot, across the road from the Competition Loops, McDowell Mountain Regional Park",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "New route each week, several regroup spots",
+  "drop_policy": "groups",
+  "host": {
+   "name": "McDowell Mountain Cycles",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The shop says everyone is welcome. Lights and helmets required.",
+  "description": "The shop's Tuesday night mountain bike ride in McDowell Mountain Regional Park: 15–20 miles on a new route each week, with several regroups. Lights required. Riders hang out in the lot afterward.",
+  "links": {
+   "website": "https://mcdowellmountaincycles.com/mmc-life/",
+   "instagram": "https://instagram.com/ridemmc/",
+   "facebook": "https://www.facebook.com/mcdowellmountaincycles",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://mcdowellmountaincycles.com/mmc-life/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The shop's rides page, modified Sept 30, 2026, lists the Tuesday 7:00 pm ride next to dated October 2026 rides and events (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://mcdowellmountaincycles.com/mmc-life/",
+   "feed_url": null,
+   "notes": "The shop posts time changes on Facebook first."
+  }
+ },
+ {
+  "slug": "fountain-hills-az-mcdowell-mountain-cycles-sunday-funday-gravel",
+  "name": "Sunday Funday Gravel Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Fountain Hills",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 33.5951,
+  "lng": -111.71413,
+  "geo_precision": "start",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "gravel"
+  ],
+  "schedule": "Some Sundays, 6:00 am from the shop. Next dates: Oct 4 and Oct 25, 2026.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "6:00 am",
+  "start_hhmm": "06:00",
+  "frequency": "irregular",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": {
+   "start": 10,
+   "end": 10
+  },
+  "start_location": {
+   "name": "McDowell Mountain Cycles",
+   "address": "11879 N. Saguaro Blvd., Fountain Hills, AZ"
+  },
+  "distance_km": 64,
+  "distance_miles": 40,
+  "duration": "~3.5 hours",
+  "duration_min": 210,
+  "pace": "One group",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "McDowell Mountain Cycles",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The shop says everyone is welcome.",
+  "description": "A mixed ride from the shop — gravel, road and singletrack — of about 40 miles and three and a half hours. One group, no-drop. Dates are posted on the shop's rides page.",
+  "links": {
+   "website": "https://mcdowellmountaincycles.com/mmc-life/",
+   "instagram": "https://instagram.com/ridemmc/",
+   "facebook": "https://www.facebook.com/mcdowellmountaincycles",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://mcdowellmountaincycles.com/mmc-life/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The shop's rides page, modified Sept 30, 2026, lists the next Sunday Funday Gravel Rides for Oct 4 and Oct 25, 2026 (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://mcdowellmountaincycles.com/mmc-life/",
+   "feed_url": null,
+   "notes": "Not every Sunday: the page lists the month's dates."
   }
  },
  {
@@ -1987,6 +2221,487 @@
    "watch_url": "https://www.meetup.com/west-valley-casual-bike-rides/",
    "feed_url": null,
    "notes": null
+  }
+ },
+ {
+  "slug": "peoria-az-west-valley-casual-true-beginner-ride",
+  "name": "True Beginner Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Peoria",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 33.60321,
+  "lng": -112.21962,
+  "geo_precision": "start",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Wednesday evening. The start moves between 6:30 and 7:30 pm with the season (7:00 pm on Sept 30 and Oct 7, 2026). Called off above 105°F, in strong wind or lightning.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "7:00 pm",
+  "start_hhmm": "19:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": {
+   "start": 9,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Sweetwater Park",
+   "address": "7460 W Sweetwater Ave, Peoria, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Set by the riders' comfort level, on neighborhood streets",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "West Valley Casual Bike Rides",
+   "type": "informal"
+  },
+  "founded_year": 2012,
+  "founded_note": "The group says it has run rides for all skill levels since 2012.",
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "RSVP on Meetup. Helmets required. Bring front and rear lights, a spare tube, tools and water.",
+  "description": "A weekly ride for people who are just starting out or getting back on the bike. The group rides neighborhood streets at whatever distance suits the riders, and newcomers learn group-riding basics and etiquette. The group's rule: nobody gets left behind.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/west-valley-casual-bike-rides/",
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner",
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/",
+   "https://www.meetup.com/west-valley-casual-bike-rides/events/316509048/",
+   "https://www.meetup.com/west-valley-casual-bike-rides/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "evidence": "The group's Meetup feed lists the ride on Wed Sept 30 and Wed Oct 7, 2026; the Meetup series runs weekly to Dec 23, 2026 (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/",
+   "feed_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/",
+   "notes": "Heat cancellations are posted on the Meetup event."
+  }
+ },
+ {
+  "slug": "peoria-az-west-valley-casual-thursday-any-bike-ride",
+  "name": "Whatever You Feel Like Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Peoria",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 33.60904,
+  "lng": -112.24987,
+  "geo_precision": "start",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "social",
+   "mixed"
+  ],
+  "schedule": "Every Thursday, 7:00 pm (the Meetup series runs to Jan 28, 2027).",
+  "days": [
+   "thu"
+  ],
+  "time_local": "7:00 pm",
+  "start_hhmm": "19:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Rio Vista (the Meetup venue is Biscuits Cafe)",
+   "address": "8877 W. Thunderbird Rd., Peoria, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Relaxed, stops as needed",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "West Valley Casual Bike Rides",
+   "type": "informal"
+  },
+  "founded_year": 2012,
+  "founded_note": "The group says it has run rides for all skill levels since 2012.",
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Sign the group's waiver (linked on the Meetup event) and RSVP. No helmet, no ride. Front and rear lights and plenty of water.",
+  "description": "A Thursday night ride on whatever bike you have: fixies, mountain bikes, e-bikes, gravel, road, trikes. It covers 10–18 miles after dark from Rio Vista in Peoria and stops as needed for water. Nobody gets left behind.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/west-valley-casual-bike-rides/",
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/",
+   "https://www.meetup.com/west-valley-casual-bike-rides/events/316522954/",
+   "https://www.meetup.com/west-valley-casual-bike-rides/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The group's Meetup feed lists the ride on Thu Oct 1 and Thu Oct 8, 2026 (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/",
+   "feed_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/",
+   "notes": "The event text says Rio Vista; the Meetup venue is Biscuits Cafe on the same stretch of Thunderbird Rd."
+  }
+ },
+ {
+  "slug": "phoenix-az-global-bikes-ahwatukee-wednesday-ride",
+  "name": "Ahwatukee Climbing Circuit Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Phoenix",
+  "neighborhood": "Ahwatukee",
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 33.33037,
+  "lng": -111.97845,
+  "geo_precision": "start",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday evening. Sept 30: meet 6:45 pm, roll 7:00 pm. From Oct 7: meet 6:15 pm, roll 6:30 pm. Each Meetup event gives that week's time.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "19:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": {
+   "start": 9,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Philly's Sports Grill, east end of the shopping center at 48th St and Warner",
+   "address": "4855 E Warner Rd, Phoenix, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "~2 hours",
+  "duration_min": 120,
+  "pace": "A group 20+ mph on the flats, B 18–20+, C 16+",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Global Bikes & E-Bikes",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "RSVP on the Global Bikes Meetup. Road bike; front and rear lights required.",
+  "description": "A Wednesday evening road ride run jointly by Global Bikes and the Wheel Sucker ride group from Philly's in Ahwatukee. Three pace groups, 24–30 miles, about two hours, billed as no-drop. It finishes in the dark, so lights are required.",
+  "links": {
+   "website": "https://www.globalbikes.info/articles/ride-and-clinic-calendar-pg2857.htm",
+   "instagram": "https://www.instagram.com/globalbikes",
+   "facebook": "https://www.facebook.com/globalbikes2001/",
+   "strava": null,
+   "meetup": "https://www.meetup.com/global-bikes-meetup/",
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.meetup.com/global-bikes-meetup/events/ical/",
+   "https://www.meetup.com/global-bikes-meetup/events/316759305/",
+   "https://www.meetup.com/global-bikes-meetup/events/316771398/",
+   "https://www.globalbikes.info/articles/ride-and-clinic-calendar-pg2857.htm"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "evidence": "The Global Bikes Meetup feed lists this ride on Wed Sept 30 (7:00 pm) and Wed Oct 7, 2026 (6:30 pm) (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/global-bikes-meetup/events/",
+   "feed_url": "https://www.meetup.com/global-bikes-meetup/events/ical/",
+   "notes": "Start time shifts with daylight; each Meetup event states it."
+  }
+ },
+ {
+  "slug": "phoenix-az-bullshifters-saturday-club-ride",
+  "name": "Bullshifters Saturday Club Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Phoenix",
+  "neighborhood": "Moon Valley",
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 33.6278,
+  "lng": -112.08063,
+  "geo_precision": "start",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday, about half an hour after sunrise. October 2026: 7:00 am on Oct 3 and 10, 7:30 am on Oct 17, 24 and 31. Routes are posted a month at a time.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": {
+   "start": 10,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Moon Valley Park",
+   "address": "7th Ave and Coral Gables, Phoenix, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Faster group averages 19–20 mph, moderate group 15–17 mph",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Bullshifters Bicycling Club",
+   "type": "club"
+  },
+  "founded_year": 1986,
+  "founded_note": "Started in 1986 as an employee club of Honeywell Bull.",
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Helmets required. The club asks riders to take out a paid membership after an introductory ride.",
+  "description": "A north-central Phoenix club that rides every Saturday from Moon Valley Park in two groups, regrouping at planned rest stops, with a breakfast stop. Rides run 40–65 miles; the October 2026 list goes to 56th Street, Via Linda, Pyramid Peak, Carefree Highlands and Vistancia. Routes are on RideWithGPS.",
+  "links": {
+   "website": "https://bullshifters.org/upcoming-bull-shifter-rides-club-events/",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/BullShiftersBicyclingClub",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://bullshifters.org/upcoming-bull-shifter-rides-club-events/",
+   "https://bullshifters.org/about-us/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The club's rides page lists Saturday rides for Oct 3, 10, 17, 24 and 31, 2026, with routes, distances and start times (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://bullshifters.org/upcoming-bull-shifter-rides-club-events/",
+   "feed_url": null,
+   "notes": "The page is rewritten each month with that month's Saturday routes and start times."
+  }
+ },
+ {
+  "slug": "phoenix-az-pmbc-granada-sunday-breakfast-ride",
+  "name": "Granada Sunday Breakfast Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Phoenix",
+  "neighborhood": "Central Phoenix",
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 33.5329,
+  "lng": -112.03552,
+  "geo_precision": "start",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Sunday: 7:30 am October through March, 6:30 am April through September. The club calendar names each week's breakfast stop.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": {
+   "start": 10,
+   "end": 9
+  },
+  "start_location": {
+   "name": "Granada Park",
+   "address": "20th St. and Maryland, Phoenix, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Two groups: the 3s average 15–16 mph, the 4s average 11–13 mph",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Phoenix Metro Bicycle Club (Granada chapter)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The club says visitors are always welcome. Helmets required; bring water.",
+  "description": "The club's Granada chapter meets every Sunday at Granada Park in central Phoenix and rides in two groups, one around 15–16 mph and one around 11–13 mph. Each week ends at a different breakfast place, named on the club calendar.",
+  "links": {
+   "website": "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=364277",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=364277",
+   "https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-27",
+  "evidence": "PMBC's event calendar lists a Granada Breakfast Ride every Sunday from Aug 30 to Sept 27, 2026, each with its breakfast stop (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467",
+   "feed_url": null,
+   "notes": "Start switches to 6:30 am in April and back to 7:30 am in October."
+  }
+ },
+ {
+  "slug": "phoenix-az-valley-epic-rides-night-rider-trail-100",
+  "name": "Night Rider Series @ Trail 100",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Phoenix",
+  "neighborhood": "Phoenix Mountains Preserve",
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 33.59285,
+  "lng": -112.05131,
+  "geo_precision": "start",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Every Wednesday, 6:30 pm, on Trail 100. The meet spot can change with the season or the trailhead; check the Meetup event.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Trail 100 meet spot (Meetup venue)",
+   "address": "1418 E Sunnyside Dr, Phoenix, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "~2 hours",
+  "duration_min": 120,
+  "pace": "8–10 miles in about two hours",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Valley Epic Rides",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "RSVP on Meetup (capped at 20 riders). Bring lights that last two hours.",
+  "description": "A weeknight mountain bike ride on Trail 100 in the Phoenix Mountains Preserve: mostly out-and-back with side trails mixed in, 8–10 miles in about two hours. The same group rides South Mountain on Tuesday nights (Taco Tuesday).",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/valley-epic-rides/",
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.meetup.com/valley-epic-rides/events/ical/",
+   "https://www.meetup.com/valley-epic-rides/events/316509061/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "evidence": "Valley Epic Rides' Meetup feed lists the ride every Wednesday from Sept 30 to Oct 21, 2026 (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/valley-epic-rides/events/",
+   "feed_url": "https://www.meetup.com/valley-epic-rides/events/ical/",
+   "notes": "The current Meetup series runs to Oct 27, 2026; watch for the next one."
   }
  },
  {
@@ -2537,6 +3252,91 @@
   }
  },
  {
+  "slug": "tempe-az-pmbc-saturday-cycling",
+  "name": "Saturday Cycling",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Tempe",
+  "neighborhood": "Kiwanis Park",
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 33.42551,
+  "lng": -111.94002,
+  "geo_precision": "city",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday. The start moves with the season: 8:30 am Jan, 8:00 Feb, 7:30 Mar, 7:00 Apr, 6:30 May–Aug, 7:00 Sept, 7:30 Oct, 8:00 Nov, 8:30 Dec.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": {
+   "start": 1,
+   "end": 12
+  },
+  "start_location": {
+   "name": "Kiwanis Park, the parking lot on S. All America Way nearest Mill Ave",
+   "address": "Kiwanis Park, SE of Mill Ave and Baseline Rd, Tempe, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Standard route is no-drop with a sweep rider; faster riders go around 20 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Phoenix Metro Bicycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The club says visitors are always welcome. Helmet required, no earphones.",
+  "description": "The club calls it the big weekly ride for everyone. Routes rotate through more than a dozen loops, always with a ~25-mile and a ~35-mile option. The standard route is no-drop with a sweep, and faster riders run around 20 mph. Optional breakfast stop near the finish. The club also runs a Wednesday no-drop ride from changing Southeast Valley starts.",
+  "links": {
+   "website": "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=364159",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://ridewithgps.com/clubs/3053-phoenix-metro-bicycle-club/events"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop",
+   "beginner"
+  ],
+  "sources": [
+   "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=364159",
+   "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=356095",
+   "https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-26",
+  "evidence": "PMBC's event calendar lists Saturday Cycling on Sept 5, 12, 19 and 26 and Oct 3, 2026, each with its route (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467",
+   "feed_url": null,
+   "notes": "The start time changes every month (table on the ride page). The calendar names each week's route."
+  }
+ },
+ {
   "slug": "tucson-az-bicas-wtf-ride",
   "name": "BICAS WTF Ride",
   "name_en": null,
@@ -2713,6 +3513,87 @@
   }
  },
  {
+  "slug": "tucson-az-gaba-el-tour-training-rides",
+  "name": "GABA El Tour de Tucson Training Rides",
+  "name_en": null,
+  "kind": "training-series",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Tucson",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 32.22288,
+  "lng": -110.97485,
+  "geo_precision": "city",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Sundays through the 11 weeks before El Tour de Tucson (week 6 is Oct 4, 2026). Meet 6:45 am, roll shortly after. Distance grows about 10% a week (66 miles in week 6).",
+  "days": [
+   "sun"
+  ],
+  "time_local": "6:45 am",
+  "start_hhmm": "06:45",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "seasonal",
+  "season_months": {
+   "start": 8,
+   "end": 11
+  },
+  "start_location": {
+   "name": "Safeway at Golf Links and Wilmot",
+   "address": "Golf Links Rd and Wilmot Rd, Tucson, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Two groups: B (16–18 mph) and C to C+ (12–16 mph), on GABA's scale",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Greater Arizona Bicycling Association (GABA)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Register through the gatherist.org link on each Meetup event. Know the route (RideWithGPS link on the event), carry flat repair and at least two hours of water.",
+  "description": "GABA's 11-week build for El Tour de Tucson in November. Two ride leaders run a faster B group and a moderate C/C+ group, with occasional regroups, and the route gets about 10% longer each week. Good for anyone in town training for El Tour.",
+  "links": {
+   "website": "https://www.bikegaba.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/bikegaba/",
+   "other": [
+    "https://ridewithgps.com/routes/57369192"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.meetup.com/bikegaba/events/ical/",
+   "https://www.meetup.com/bikegaba/events/316767522/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "GABA's Meetup feed lists 'ETT Training Week #6' for Sun Oct 4, 2026, 6:45 am at the Safeway on Golf Links and Wilmot (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/bikegaba/events/",
+   "feed_url": "https://www.meetup.com/bikegaba/events/ical/",
+   "notes": "Seasonal: the series starts in late summer and ends before El Tour in November."
+  }
+ },
+ {
   "slug": "tucson-az-the-shootout",
   "name": "The Shootout",
   "name_en": null,
@@ -2787,6 +3668,86 @@
    "watch_url": "https://www.fairwheelbikes.com/service/group-rides/",
    "feed_url": null,
    "notes": null
+  }
+ },
+ {
+  "slug": "tucson-az-tuesday-morning-fast-ride",
+  "name": "Tuesday Morning Fast Ride (TMFR)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Tucson",
+  "neighborhood": "University of Arizona",
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 32.22288,
+  "lng": -110.97485,
+  "geo_precision": "city",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday morning, at the same time as the Saturday Shootout A group: 6:30 am from the first Saturday of September, 7:00 am from the second Saturday of October (Oct 10, 2026), 7:30 am from the second Saturday of November, 7:00 am from March, 6:30 am from early April, 6:00 am from the third Saturday of April.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": {
+   "start": 9,
+   "end": 4
+  },
+  "start_location": {
+   "name": "Near University Blvd and Euclid Ave, by the University of Arizona",
+   "address": "University Blvd and Euclid Ave, Tucson, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Fast; natural group splits as the pace rises",
+  "drop_policy": "drop",
+  "host": {
+   "name": "Tuesday Morning Fast Ride (documented by Fair Wheel Bikes)",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Self-supported and open to everyone. Bring water, food and flat repair, and know the route (Strava route on Fair Wheel's page).",
+  "description": "Tucson's weekday fast ride, from near the University of Arizona. Rolling terrain, a steep climb near the finish, and the group splits as the pace goes up. Not a beginner ride. Fair Wheel Bikes, a short ride from the start, keeps the route and the start-time table.",
+  "links": {
+   "website": "https://www.fairwheelbikes.com/service/group-rides/",
+   "instagram": "https://instagram.com/fairwheel",
+   "facebook": "https://www.facebook.com/fairwheelbikes/",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.strava.com/routes/3200956981929684736"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.fairwheelbikes.com/service/group-rides/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "Fair Wheel Bikes' group-ride page gives the start and the seasonal start-time table; nothing on the page is dated (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.fairwheelbikes.com/service/group-rides/",
+   "feed_url": null,
+   "notes": "Start time follows the Shootout's seasonal table on the same page."
   }
  },
  {
@@ -3579,6 +4540,90 @@
   }
  },
  {
+  "slug": "encinitas-ca-swamis-saturday-ride",
+  "name": "World Famous Swami's Saturday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Encinitas",
+  "neighborhood": null,
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": 33.0524,
+  "lng": -117.29609,
+  "geo_precision": "start",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday: A group rolls 8:15 am, B group 8:19 am. On the first Saturday of the month the route runs in reverse. Some Saturdays add a special training ride from the same start.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:15 am",
+  "start_hhmm": "08:15",
+  "frequency": "weekly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "sat"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Cadence Cyclery",
+   "address": "190 N Coast Hwy 101, Encinitas, CA 92024"
+  },
+  "distance_km": 60,
+  "distance_miles": 37,
+  "duration": "~2.75 hours",
+  "duration_min": 165,
+  "pace": "Two groups, A and B, leaving four minutes apart",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Swami's Cycling Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The club's weekly-rides page lists its rides as open to non-members.",
+  "description": "North County San Diego's best-known Saturday ride. A and B groups leave Cadence Cyclery on Coast Highway 101 four minutes apart and usually ride the classic Elfin Forest / Del Dios loop, about 37 miles. On the first Saturday of the month the loop runs in reverse.",
+  "links": {
+   "website": "https://swamis.org/rides-events/weekly-group-rides-t/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://swamis.org/events/venues/cadence-cyclery/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://swamis.org/events/venues/cadence-cyclery/",
+   "https://swamis.org/rides-events/weekly-group-rides-t/",
+   "https://swamis.org/events/event/world-famous-swamis-saturday-ride-a-b-groups-4/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The club's event listings at Cadence Cyclery show the Saturday ride every week from Oct 3 to Nov 28, 2026, A group 8:15 am, B group 8:19 am (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://swamis.org/events/venues/cadence-cyclery/",
+   "feed_url": null,
+   "notes": "swamis.org answers plain scripted fetches with a 202 bot wall; read it with a browser-like fetch."
+  }
+ },
+ {
   "slug": "fresno-ca-fresno-cycling-club-birthday-rides",
   "name": "Fresno Cycling Club Monthly Birthday Rides",
   "name_en": null,
@@ -3728,6 +4773,85 @@
   "refresh": {
    "method": "static-page",
    "watch_url": "https://bikehikers.clubexpress.com/content.aspx?page_id=4001&club_id=216251",
+   "feed_url": null,
+   "notes": null
+  }
+ },
+ {
+  "slug": "granite-bay-ca-sac-wheelmen-saturday-granite-bay-ride",
+  "name": "Saturday Morning Granite Bay Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Granite Bay",
+  "neighborhood": null,
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": 38.76217,
+  "lng": -121.18501,
+  "geo_precision": "city",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday, 8:30 am.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:30 am",
+  "start_hhmm": "08:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Granite Bay Community Park",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Sacramento Wheelmen",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Non-members sign the club's accident waiver and the ride roster at the start. Helmet required; a road bike works best.",
+  "description": "The Sacramento Wheelmen's Saturday ride from Granite Bay Community Park, in the foothills east of Sacramento near Folsom Lake. The club calendar lists it every Saturday.",
+  "links": {
+   "website": "https://sacwheelmen.wildapricot.org/Ride-Calendar/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://sacwheelmen.wildapricot.org/event-6843354"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://sacwheelmen.wildapricot.org/event-6843354",
+   "https://sacwheelmen.wildapricot.org/Ride-Calendar/",
+   "https://sacwheelmen.wildapricot.org/Riding-with-the-Wheelmen"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-26",
+  "evidence": "The club calendar lists the ride every Saturday in September 2026, and its event page shows Sat Oct 10, 2026, 8:30 am at Granite Bay Community Park (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://sacwheelmen.wildapricot.org/Ride-Calendar/",
    "feed_url": null,
    "notes": null
   }
@@ -6190,6 +7314,88 @@
    "watch_url": "https://bikepartysacramento.com/about-us",
    "feed_url": null,
    "notes": null
+  }
+ },
+ {
+  "slug": "sacramento-ca-sac-wheelmen-tuesday-west-breakfast-ride",
+  "name": "Tuesday West Breakfast Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Sacramento",
+  "neighborhood": null,
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": 38.53435,
+  "lng": -121.51807,
+  "geo_precision": "start",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday, 9:00 am (listed weekly Oct 6 to Nov 24, 2026).",
+  "days": [
+   "tue"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": {
+   "start": 10,
+   "end": 11
+  },
+  "start_location": {
+   "name": "Westin Hotel parking lot",
+   "address": "4800 Riverside Blvd, Sacramento, CA"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Flat, flexible pace",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Sacramento Wheelmen",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Non-members sign the club's accident waiver and the ride roster at the start. Helmet required.",
+  "description": "A flat Tuesday club ride to a different breakfast place each week, 25–75 miles, with a longer option every week. The club also runs a Thursday breakfast ride and a Saturday ride from Granite Bay.",
+  "links": {
+   "website": "https://sacwheelmen.wildapricot.org/Ride-Calendar/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://sacwheelmen.wildapricot.org/event-6843338"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://sacwheelmen.wildapricot.org/event-6843338",
+   "https://sacwheelmen.wildapricot.org/Ride-Calendar/",
+   "https://sacwheelmen.wildapricot.org/Riding-with-the-Wheelmen"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-22",
+  "evidence": "The club calendar lists the ride every Tuesday in September 2026, and its event page lists eight Tuesdays from Oct 6 to Nov 24, 2026 at 9:00 am (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://sacwheelmen.wildapricot.org/Ride-Calendar/",
+   "feed_url": null,
+   "notes": "Posted in eight-week blocks; weekday leaders also send changes by club email."
   }
  },
  {
@@ -19233,6 +20439,175 @@
    "watch_url": "https://www.landrys.com/events/landrys-group-rides-pg163.htm",
    "feed_url": null,
    "notes": null
+  }
+ },
+ {
+  "slug": "cambridge-ma-crw-praline-croissant-women-nb-ride",
+  "name": "Praline Croissant Women's/NB Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Cambridge",
+  "neighborhood": "Alewife",
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": 42.36563,
+  "lng": -71.104,
+  "geo_precision": "city",
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Fridays at 6:30 am in season (listed Sept 11, Sept 18, Oct 2 and Oct 9, 2026). Leaves on time. Rain calls go up by 10 pm the night before and again at 5:30 am.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:30 am",
+  "start_hhmm": "06:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "seasonal",
+  "season_months": {
+   "start": 9,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Minuteman Bikeway Trailhead – Alewife",
+   "address": "Steel Pl and Alewife Station Access Rd, Cambridge, MA"
+  },
+  "distance_km": 32,
+  "distance_miles": 20,
+  "duration": "~2.5 hours",
+  "duration_min": 150,
+  "pace": "13–16 mph, regrouping; optional paceline",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Charles River Wheelers",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "For women, women-identifying and nonbinary riders. Register on the event page. Guests may do two CRW rides a year before joining. Helmets required.",
+  "description": "The Friday women's and nonbinary ride from Alewife: 20 miles at 13–16 mph through Lexington and Burlington to Mary Cummings Park and Horn Pond, back past Mystic Lakes, with an optional coffee stop at Kickstand Cafe. It regroups and leaves on time so riders get to work; slower riders can ride it at their own pace with navigation.",
+  "links": {
+   "website": "https://crw.org/events",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://crw.org/event-6826857",
+    "https://ridewithgps.com/routes/45804334"
+   ]
+  },
+  "inclusive_focus": [
+   "wtf"
+  ],
+  "sources": [
+   "https://crw.org/event-6826857",
+   "https://crw.org/events",
+   "https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-18",
+  "evidence": "CRW's calendar feed lists the ride on Sept 11, Oct 2 and Oct 9, 2026, and its event page is dated Sept 18, 2026 (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://crw.org/events",
+   "feed_url": "https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics",
+   "notes": "Runs in blocks through the riding season; check the feed for the next block."
+  }
+ },
+ {
+  "slug": "cambridge-ma-crw-speedy-croissant-women-nb-ride",
+  "name": "Speedy Croissant Women/NB Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Cambridge",
+  "neighborhood": "Alewife",
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": 42.36563,
+  "lng": -71.104,
+  "geo_precision": "city",
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Tuesdays at 6:00 am in season (listed every Tuesday from May 5 to Oct 6, 2026). Rain calls go up by 10 pm the night before and again at 5 am.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:00 am",
+  "start_hhmm": "06:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "seasonal",
+  "season_months": {
+   "start": 5,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Minuteman Bikeway trailhead, Alewife",
+   "address": "Steel Pl and Alewife Station Access Rd, Cambridge, MA"
+  },
+  "distance_km": 39,
+  "distance_miles": 24,
+  "duration": "~2 hours",
+  "duration_min": 120,
+  "pace": "16+ mph show-and-go; optional paceline",
+  "drop_policy": "drop",
+  "host": {
+   "name": "Charles River Wheelers",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "For women, women-identifying and nonbinary riders. Register on the event page. Guests may do two CRW rides a year before joining. Paceline experience required; helmets required.",
+  "description": "A spirited early-morning ride from the Alewife end of the Minuteman Bikeway for women, women-identifying and nonbinary riders, part of the club's Women's/Nonbinary Program. It holds 16+ mph and does not regroup, so riders need paceline experience. The slower Praline Croissant ride runs on Fridays.",
+  "links": {
+   "website": "https://crw.org/events",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://crw.org/event-6826838"
+   ]
+  },
+  "inclusive_focus": [
+   "wtf"
+  ],
+  "sources": [
+   "https://crw.org/event-6826838",
+   "https://crw.org/events",
+   "https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-29",
+  "evidence": "CRW's calendar feed lists the ride every Tuesday from May 5 to Oct 6, 2026, the latest past date Sept 29 (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://crw.org/events",
+   "feed_url": "https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics",
+   "notes": "Seasonal early-morning series; the new season appears in the feed each spring."
   }
  },
  {
@@ -35205,6 +36580,88 @@
   }
  },
  {
+  "slug": "portland-or-pbc-slow-poke-ride",
+  "name": "Slow Poke Ride from St Matthews Church",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Portland",
+  "neighborhood": null,
+  "region": "Oregon",
+  "state": "OR",
+  "country": "US",
+  "lat": 45.55315,
+  "lng": -122.54797,
+  "geo_precision": "start",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Thursday. 10:00 am on Oct 1, 2026 (it left at 9:30 am in early September); each dated listing gives the time.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": {
+   "start": 10,
+   "end": 9
+  },
+  "start_location": {
+   "name": "St Matthew's Anglican Church",
+   "address": "11100 NE Skidmore St, Portland, OR"
+  },
+  "distance_km": 32,
+  "distance_miles": 20,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slow, 10–12 mph, flat",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Portland Bicycling Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Sign in at the start. The club says it welcomes riders of all abilities.",
+  "description": "A slow, flat 20-mile Thursday ride into Northeast Portland at 10–12 mph, with a break at Guilder Coffee Company (72nd and Prescott). The club posts it every week, next to its Monday and Friday 'meander' rides.",
+  "links": {
+   "website": "https://portlandbicyclingclub.com/scheduled_rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://portlandbicyclingclub.com/scheduled_rides/slow-poke-ride-from-st-matthews-church-64/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://portlandbicyclingclub.com/scheduled_rides/slow-poke-ride-from-st-matthews-church-64/",
+   "https://portlandbicyclingclub.com/scheduled_rides/",
+   "https://portlandbicyclingclub.com/about/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-24",
+  "evidence": "The club's ride calendar (as of Sept 30, 2026) lists the ride every Thursday in September, and its Oct 1, 2026 listing gives 10:00 am from St Matthew's (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://portlandbicyclingclub.com/scheduled_rides/",
+   "feed_url": null,
+   "notes": "Each week is its own listing; the start time moves with the season."
+  }
+ },
+ {
   "slug": "portland-or-sorella-forte-saturday-ride",
   "name": "Sorella Forte Saturday Ride",
   "name_en": null,
@@ -35358,6 +36815,84 @@
   "refresh": {
    "method": "calendar-page",
    "watch_url": "https://www.shift2bikes.org/api/events.php?startdate=2026-09-15&enddate=2026-10-31",
+   "feed_url": null,
+   "notes": null
+  }
+ },
+ {
+  "slug": "tualatin-or-pbc-saturday-tualatin-ride",
+  "name": "Saturday Tualatin Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Tualatin",
+  "neighborhood": null,
+  "region": "Oregon",
+  "state": "OR",
+  "country": "US",
+  "lat": 45.38573,
+  "lng": -122.76404,
+  "geo_precision": "start",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday, 9:00 am.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Tualatin Community Park",
+   "address": "8515 SW Tualatin Rd, Tualatin, OR 97062"
+  },
+  "distance_km": 100,
+  "distance_miles": 62,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Fast (18+ mph); paceline at 20 mph",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Portland Bicycling Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Non-members sign up on the ride's page. Road bikes only, no TT or tri bikes. Load the route on a bike computer in case you come off the back.",
+  "description": "A fast, hilly Saturday ride of about 62 miles from Tualatin Community Park, southwest of Portland. It starts as one group and may split into speed groups, with a food stop about halfway; riders need to be comfortable in a paceline at 20 mph. Free parking at the park.",
+  "links": {
+   "website": "https://portlandbicyclingclub.com/scheduled_rides/",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/groups/pbcTualatin",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://portlandbicyclingclub.com/scheduled_rides/saturday-tualatin-ride-175/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://portlandbicyclingclub.com/scheduled_rides/saturday-tualatin-ride-175/",
+   "https://portlandbicyclingclub.com/scheduled_rides/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-26",
+  "evidence": "The club's ride calendar lists the ride every Saturday in September 2026, and its Oct 3, 2026 listing gives 9:00 am from Tualatin Community Park (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://portlandbicyclingclub.com/scheduled_rides/",
    "feed_url": null,
    "notes": null
   }
@@ -48848,6 +50383,3020 @@
    "watch_url": "https://www.laramiebikenet.org/group-rides",
    "feed_url": null,
    "notes": null
+  }
+ },
+ {
+  "slug": "toronto-ca-friends-for-life-bike-rally-training-rides",
+  "name": "Bike Rally Training Rides",
+  "name_en": null,
+  "kind": "training-series",
+  "status": "seasonal-break",
+  "status_note": null,
+  "status_since": null,
+  "city": "Toronto",
+  "neighborhood": null,
+  "region": "Ontario",
+  "state": null,
+  "country": "CA",
+  "lat": 43.65348,
+  "lng": -79.38393,
+  "geo_precision": "city",
+  "tz": "America/Toronto",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Weekend training rides from April to July, 8:00 am (arrive 15 minutes early for sign-in). Mostly Saturdays, some Sundays. The start and route change each week; 2026 starts included Kipling station and Vaughan Metropolitan Centre station. Outdoor rides begin again in April 2027.",
+  "days": [
+   "sat",
+   "sun"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "April to July, before the August Rally",
+  "season_months": {
+   "start": 4,
+   "end": 8
+  },
+  "start_location": {
+   "name": "Changes weekly (listed on each calendar event)",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Friends For Life Bike Rally (PWA)",
+   "type": "nonprofit"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Run for riders training for the August Bike Rally. The pages don't say whether riders who haven't registered for the Rally can join, so email the Rally first. Some rides include a box lunch at the break ($10, cash or tap, 2026).",
+  "description": "Weekly long training rides for the Friends For Life Bike Rally, the August ride from Toronto to Montréal that raises money for PWA (600 km, with 300 km and 100 km options). Routes head out of the city to places like Burlington, Glen Williams and Keswick, with a sign-in and announcements at the start. Montréal and Kingston riders have their own training rides.",
+  "links": {
+   "website": "https://bikerally.org/training",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/BikeRally/",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://bikerally.org/events"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://bikerally.org/training",
+   "https://bikerally.org/events",
+   "https://bikerally.org/events/training-ride-kipling-burlington-brd26-8dbk3"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-07-25",
+  "evidence": "The Rally's calendar holds 2026 Toronto training rides into late July (Vaughan to Keswick, Sat July 25, 2026, 8:00 am), and the training page says organized outdoor rides begin in April (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://bikerally.org/events",
+   "feed_url": null,
+   "notes": "Squarespace calendar; each event has its own ICS link (append ?format=ical to the event URL) but the collection has no feed. 2027 training rides should appear from March."
+  }
+ },
+ {
+  "slug": "toronto-ca-critical-mass",
+  "name": "Critical Mass Toronto",
+  "name_en": null,
+  "kind": "critical-mass",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Toronto",
+  "neighborhood": null,
+  "region": "Ontario",
+  "state": null,
+  "country": "CA",
+  "lat": 43.65348,
+  "lng": -79.38393,
+  "geo_precision": "city",
+  "tz": "America/Toronto",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Last Friday of the month. The Sept 25, 2026 ride met at 6:00 pm and rolled at 6:30 pm. The start moves month to month (Aug 28, 2026: Prince Edward Viaduct Parkette; Sept 25, 2026: High Park front gates on Bloor St W).",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ],
+  "season": null,
+  "season_months": {
+   "start": 9,
+   "end": 9
+  },
+  "start_location": {
+   "name": "Changes monthly; check the latest announcement",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "slow, social, volunteers cork intersections",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Critical Mass Toronto (volunteer riders)",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "No sign-up. The start point moves, so check the month's announcement first. Bring lights: from September the ride ends in the dark.",
+  "description": "Toronto's monthly mass ride. In 2026 it doubled as a protest against the province's bike lane removals and drew big crowds: more than 1,000 riders in August, when the mayor spoke at the start, and 783 counted bikes in September. Slow pace, one big group, music and costumes.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://jnyyz.wordpress.com/2026/09/25/sept-2026-critical-mass/",
+    "https://www.twowheeledpolitics.ca/2026/08/august-2026-critical-mass.html",
+    "https://ebikes-international.com/critical-mass-ride-on-september-25-for-safe-cycling-infrastructure-in-toronto-and-ontario-2/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://jnyyz.wordpress.com/2026/09/25/sept-2026-critical-mass/",
+   "https://www.twowheeledpolitics.ca/2026/08/august-2026-critical-mass.html",
+   "https://ebikes-international.com/critical-mass-ride-on-september-25-for-safe-cycling-infrastructure-in-toronto-and-ontario-2/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-25",
+  "evidence": "Two local bike blogs write up the Aug 28 and Sept 25, 2026 rides (both last Fridays), and an eBikes International post gives the Sept 25 meet time and place (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://jnyyz.wordpress.com/",
+   "feed_url": null,
+   "notes": "No official site. Local bike blogs (jnyyz.wordpress.com, twowheeledpolitics.ca) write up each month's ride; the start is announced shortly before. In August 2026 Cycle Toronto was among the groups that helped put it on."
+  }
+ },
+ {
+  "slug": "toronto-ca-tbn-friday-night-ride",
+  "name": "Friday Night Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Toronto",
+  "neighborhood": null,
+  "region": "Ontario",
+  "state": null,
+  "country": "CA",
+  "lat": 43.66767,
+  "lng": -79.35376,
+  "geo_precision": "start",
+  "tz": "America/Toronto",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Fridays in season, evening. The start and time change week to week and are on each calendar event; starts stay near the waterfront or a subway stop. Next listed: Fri Oct 2, 2026, 6:00 pm from Riverdale Park East, 33 km, ending on the Danforth.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "summer and early fall; no Friday rides listed after Oct 2, 2026",
+  "season_months": null,
+  "start_location": {
+   "name": "Changes weekly (Oct 2, 2026: Riverdale Park East)",
+   "address": "450 Broadview Ave, Toronto, ON"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "~2 hours, then food and drinks",
+  "duration_min": 120,
+  "pace": "Urban Roller class, 16–22 km/h, stops to regroup",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Toronto Bicycling Network",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free for guests this season (register first)",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Guests ride free but must register on the TBN calendar before the ride; if you haven't registered you may not join. Helmet and front and rear lights required. Not a beginner ride: you should be able to hold about 20 km/h on city streets.",
+  "description": "The Toronto Bicycling Network's social Friday evening ride: festivals, the waterfront, Toronto Island, the Distillery District, the Brick Works. 20 to 35 km at a relaxed pace with regroups, and most riders stay for food and a drink after. Starts move each week.",
+  "links": {
+   "website": "https://www.tbn.ca/programs/cycling/fnr",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.tbn.ca/event-6857124",
+    "https://www.tbn.ca/Next20events"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.tbn.ca/programs/cycling/fnr",
+   "https://www.tbn.ca/event-6857124",
+   "https://www.tbn.ca/join/faq"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "evidence": "TBN's calendar lists a Friday Night Ride on Fri Oct 2, 2026, 6:00 pm from 450 Broadview Ave, open to guest riders for free (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.tbn.ca/programs/cycling/fnr",
+   "feed_url": null,
+   "notes": "Each ride is its own Wild Apricot event (tbn.ca/event-<id>) with start, time and guest registration. The club-wide list of the next 20 events is https://www.tbn.ca/Next20events."
+  }
+ },
+ {
+  "slug": "toronto-ca-tbn-saturday-morning-ride",
+  "name": "Saturday Morning Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Toronto",
+  "neighborhood": null,
+  "region": "Ontario",
+  "state": null,
+  "country": "CA",
+  "lat": 43.69151,
+  "lng": -79.28866,
+  "geo_precision": "start",
+  "tz": "America/Toronto",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays, early April to late October, 9:30 am sharp, back by 12:30 or 1:00 pm. The start changes weekly and is on each calendar event, usually near a subway or transit stop. 2026 dates left: Oct 3, 10, 17, 24 and 31 (the season's final ride).",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:30 am",
+  "start_hhmm": "09:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "early April to late October",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Changes weekly (Oct 3, 2026: Shoppers World parking lot)",
+   "address": "Victoria Park Ave & Danforth Ave, Toronto, ON"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "3 to 3.5 hours",
+  "duration_min": 180,
+  "pace": "Urban Roller class, 19–23 km/h average, 30–60 km",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Toronto Bicycling Network",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": "Run by the same two coordinators since 2013.",
+  "cost": "$15 30-day trial for non-members (Sept 2026)",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Club ride. Non-members can buy TBN's $15 30-day trial, which covers most rides; everyone registers on the calendar before each ride. Helmet and a spare tube required. Find the ride leader and say you're new.",
+  "description": "TBN's in-town Saturday ride on Toronto's paved trails and quiet streets: the Martin Goodman Trail, the Don, the Leslie Street Spit, the Humber, Edwards Gardens. Fifteen rotating routes, 30 to 60 km, groups of about 15 to 35. You're done by early afternoon.",
+  "links": {
+   "website": "https://www.tbn.ca/programs/cycling/smr",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.tbn.ca/join/faq"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.tbn.ca/programs/cycling/smr",
+   "https://www.tbn.ca/Next20events",
+   "https://www.tbn.ca/join/faq"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "evidence": "The program page lists Saturday rides at 9:30 am on Oct 3, 10, 17, 24 and 31, 2026, with Oct 31 marked the final ride of 2026 (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.tbn.ca/programs/cycling/smr",
+   "feed_url": null,
+   "notes": "Season ends Oct 31, 2026; the 2027 dates appear on the same page in spring."
+  }
+ },
+ {
+  "slug": "toronto-ca-tbn-sunday-leisure-wheeler",
+  "name": "Sunday Leisure Wheeler",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Toronto",
+  "neighborhood": null,
+  "region": "Ontario",
+  "state": null,
+  "country": "CA",
+  "lat": 43.65348,
+  "lng": -79.38393,
+  "geo_precision": "city",
+  "tz": "America/Toronto",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Sundays, late April to early October (2026 rides listed to Oct 18), usually 10:00 am. The start changes weekly and is on each calendar event. Next: Oct 4 from Oriole Park, Oct 11 at 10:10 am from June Rowlands Park, Oct 18 from Aurora GO station.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "late April to early October",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Changes weekly (Oct 4, 2026: Oriole Park)",
+   "address": "Oriole Park, west of Davisville Station, south of Chaplin Cres., Toronto, ON"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "15–18 km/h, 18–55 km, frequent stops to regroup",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Toronto Bicycling Network",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "$15 30-day trial for non-members (Sept 2026)",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Registration opens the Monday before each ride and runs six days. Non-members use TBN's $15 30-day trial. Arrive 15 minutes early. Check the schedule after 8:00 am on ride day for weather cancellations.",
+  "description": "TBN's slow Sunday ride, built for entry-level riders, people coming back to cycling after a long break, and seniors. Paved trails and streets at 15 to 18 km/h with frequent regroups. Bring lunch on the longer ones.",
+  "links": {
+   "website": "https://www.tbn.ca/programs/cycling/lw",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.tbn.ca/Upcoming-Leisure-Wheeler-Class-Rides"
+   ]
+  },
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "sources": [
+   "https://www.tbn.ca/programs/cycling/lw",
+   "https://www.tbn.ca/Next20events",
+   "https://www.tbn.ca/join/faq"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "evidence": "The program page lists Leisure Wheeler rides on Sun Oct 4, 11 and 18, 2026 (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.tbn.ca/programs/cycling/lw",
+   "feed_url": null,
+   "notes": "Upcoming rides are listed at the foot of the program page; the season closes in October."
+  }
+ },
+ {
+  "slug": "toronto-ca-batemans-thursday-mtb-ride",
+  "name": "Thursday MTB Group Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Toronto",
+  "neighborhood": "Leaside",
+  "region": "Ontario",
+  "state": null,
+  "country": "CA",
+  "lat": 43.70427,
+  "lng": -79.36072,
+  "geo_precision": "start",
+  "tz": "America/Toronto",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Thursdays, 6:00 pm, through the fall. Slow, medium and fast groups; 90 to 120 minutes in the Don Valley. Cancelled for rain.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "summer and fall",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Bateman's Trail Shop",
+   "address": "49 Laird Drive, Toronto, ON"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "90–120 minutes",
+  "duration_min": 120,
+  "pace": "Slow, medium and fast groups; the slow group leaves no rider behind",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Bateman's Bicycle Company",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free (sign the online waiver)",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "18 and older, with some mountain bike experience. Sign the waiver online before you come. Rental bikes must be booked in advance. Lights are mandatory this fall. Park on Canvarco Road or in the nearby plazas.",
+  "description": "Bateman's leads free Thursday evening mountain bike rides from its Leaside trail shop into the Don Valley's singletrack. Riders split by ability, and the slow group is about trail etiquette and building confidence. Snacks and drinks at the shop after.",
+  "links": {
+   "website": "https://batemansbikeco.com/pages/batemans-group-rides-1",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://batemansbikeco.com/pages/batemans-group-rides-1",
+   "https://batemansbikeco.com/blogs/team-batemans-clubhouse/mountain-bike-group-rides-in-toronto"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "Bateman's group-ride page advertises fall Thursday 6:00 pm rides from the trail shop and says lights are now required; nothing on it is dated (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://batemansbikeco.com/pages/batemans-group-rides-1",
+   "feed_url": null,
+   "notes": "The site banner carries the current ride night; rain cancellations are posted on the shop's Instagram."
+  }
+ },
+ {
+  "slug": "osaka-jp-ys-road-osaka-honkan-sunday-ride",
+  "name": "ワイズロード大阪本館 サンデーライド",
+  "name_en": "Y's Road Osaka Sunday Ride",
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Osaka",
+  "neighborhood": "Senba, Chuo-ku",
+  "region": "Osaka",
+  "state": null,
+  "country": "JP",
+  "lat": 34.69376,
+  "lng": 135.50145,
+  "geo_precision": "city",
+  "tz": "Asia/Tokyo",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Usually two Sundays a month (July 2026: the 12th and 26th). Meet 8:30 am at the store's front entrance. Dates and routes go up on the store blog each month. Off in August for the heat; resumed Sept 27, 2026.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "8:30 am",
+  "start_hhmm": "08:30",
+  "frequency": "irregular",
+  "monthly_rule": null,
+  "season": "year-round, off in the August heat",
+  "season_months": {
+   "start": 7,
+   "end": 9
+  },
+  "start_location": {
+   "name": "Y's Road Osaka Honkan (front entrance)",
+   "address": "大阪府大阪市中央区南久宝寺町2-2-9 船場藤井ビル 1F (2-2-9 Minami-Kyuhojimachi, Chuo-ku, Osaka)"
+  },
+  "distance_km": 70,
+  "distance_miles": 43,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Each ride is rated one to five stars; climbs at your own pace, and the leaders wait so nobody ends up riding alone",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Y's Road Osaka Honkan",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "¥200 insurance fee (Sept 2026)",
+  "language": [
+   "ja"
+  ],
+  "visitor_notes": "Book ahead: register on the Y's Road site, pay the ¥200 fee, then fill in the Google Form for that date. Ten riders max. Helmet and gloves required or you are turned away; bring lights, a bell and a spare tube. Called off if the 5 pm forecast the day before gives over 50% rain for 6 am to noon.",
+  "description": "The Osaka flagship store's Sunday lunch ride: up to ten riders leave the shop in Senba at 8:30 for about 70 km, often south on the Yamato River cycling road toward Nara or Tondabayashi, with a café lunch at the turn. Each ride carries a star rating so you can pick your level. Staff lead it.",
+  "links": {
+   "website": "https://ysroad.co.jp/osaka/category/event/cat125/sunday_ride",
+   "instagram": "https://www.instagram.com/ysroad.osaka/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://ysroad.co.jp/osaka/2026/09/25/265436",
+   "https://ysroad.co.jp/osaka/2026/07/10/260474",
+   "https://ysroad.co.jp/osaka/category/event/cat125/sunday_ride/feed",
+   "https://www.ysroad.co.jp/support/teamy/category/sunday.html"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-25",
+  "evidence": "The store blog announced the Sept 27, 2026 ride (posted Sept 25, 2026) and reported the July 12, 2026 ride as run.",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://ysroad.co.jp/osaka/category/event/cat125/sunday_ride",
+   "feed_url": "https://ysroad.co.jp/osaka/category/event/cat125/sunday_ride/feed",
+   "notes": "The feed is WordPress RSS, not ICS: each month's dates arrive as a post titled 【サンデーライド】. Rain calls go on the blog and Instagram the evening before."
+  }
+ },
+ {
+  "slug": "tokyo-jp-rapha-tokyo-ride-this-city",
+  "name": "Ride This City Tokyo",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Tokyo",
+  "neighborhood": "Jingumae, Shibuya (Cat Street)",
+  "region": "Tokyo",
+  "state": null,
+  "country": "JP",
+  "lat": 35.67598,
+  "lng": 139.70597,
+  "geo_precision": "start",
+  "tz": "Asia/Tokyo",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday, meet 9:30 am at Rapha Tokyo, back about 12:30 pm. Cancelled in rain; the call is made by the evening before.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:30 am",
+  "start_hhmm": "09:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Rapha Tokyo",
+   "address": "東京都渋谷区神宮前5-29-1, 150-0001 (5-29-1 Jingumae, Shibuya-ku, Tokyo)"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "~3 hours (meet 9:30, finish about 12:30)",
+  "duration_min": 180,
+  "pace": "around 25 km/h",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Rapha Tokyo",
+   "type": "brand"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free (book a place)",
+  "language": [
+   "ja"
+  ],
+  "visitor_notes": "Open ride: no RCC membership needed. Free, but book on Rapha's event site (an Easol account, then name, phone and emergency contact). The listing is in Japanese and English. The clubhouse has bike racks; the café opens at noon.",
+  "description": "Rapha Tokyo's weekly open Saturday ride from the clubhouse on Cat Street. 30 to 40 km through the city at about 25 km/h, back by 12:30; the route is posted on RideWithGPS. The clubhouse also runs members-only RCC rides (the Arakawa Classic on Sunday mornings, the Yanokuchi Classic on Saturdays at 7:00).",
+  "links": {
+   "website": "https://events.rapha.cc/products/ride-this-city-tokyo",
+   "instagram": "https://www.instagram.com/rapha.tokyo",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://content.rapha.cc/jp/ja/clubhouses/tokyo",
+    "https://ridewithgps.com/routes/49784027"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://events.rapha.cc/products/ride-this-city-tokyo",
+   "https://events.rapha.cc/rapha-tokyo",
+   "https://content.rapha.cc/jp/ja/clubhouses/tokyo"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "evidence": "Rapha's event page for the ride, headed Japan · October 2026, gives Saturday, meet 9:30 am, 30 to 40 km at 25 km/h, open to all (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://events.rapha.cc/rapha-tokyo",
+   "feed_url": null,
+   "notes": "events.rapha.cc sits behind a bot check; plain curl gets a 403, a browser fetch works. Rain cancellations are posted the evening before."
+  }
+ },
+ {
+  "slug": "tokyo-jp-night-pedal-cruising-monthly-ride",
+  "name": "Tokyo Night Pedal Cruising (NPC)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Tokyo",
+  "neighborhood": "Jingumae, Shibuya",
+  "region": "Tokyo",
+  "state": null,
+  "country": "JP",
+  "lat": 35.66247,
+  "lng": 139.70822,
+  "geo_precision": "start",
+  "tz": "Asia/Tokyo",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Once a month, usually the third Saturday, in the evening. The June 20, July 18 and Sept 19, 2026 rides met at 5:30 pm at the United Nations University; August's was an all-night Yamanote loop from 10:30 pm. Time and place on each Meetup event.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 3,
+    "day": "sat"
+   }
+  ],
+  "season": "year-round",
+  "season_months": {
+   "start": 6,
+   "end": 8
+  },
+  "start_location": {
+   "name": "United Nations University",
+   "address": "5-53-70 Jingumae, Shibuya City, Tokyo"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "relatively low speed",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Tokyo Night Pedal Cruising NPC (東京ナイトペダルクルージング)",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "ja",
+   "en"
+  ],
+  "visitor_notes": "RSVP on Meetup. Any kind of bike is fine. Most members are Japanese; the group says foreigners are welcome and it is always happy to meet new people.",
+  "description": "A monthly evening ride through Tokyo at an easy pace, on any kind of bike. Each ride has a theme: a six-park loop, a fireworks ride, an all-night lap of the Yamanote line in August. A good first social ride for a visitor who wants the city at night.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/tokyo-night-pedal-cruising-npc/",
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.meetup.com/tokyo-night-pedal-cruising-npc/",
+   "https://www.meetup.com/tokyo-night-pedal-cruising-npc/events/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-19",
+  "evidence": "The group's Meetup page lists rides on June 20, July 18, Aug 15 and Sept 19, 2026, the last from the United Nations University at 5:30 pm (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/tokyo-night-pedal-cruising-npc/events/",
+   "feed_url": null,
+   "notes": "The Meetup iCal URL came back empty to curl; the group page embeds each event's date and venue in its page JSON."
+  }
+ },
+ {
+  "slug": "tokyo-jp-jbpi-palace-cycling",
+  "name": "パレスサイクリング",
+  "name_en": "Palace Cycling",
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Tokyo",
+  "neighborhood": "Chiyoda (Imperial Palace, Uchibori-dori)",
+  "region": "Tokyo",
+  "state": null,
+  "country": "JP",
+  "lat": 35.68125,
+  "lng": 139.76671,
+  "geo_precision": "city",
+  "tz": "Asia/Tokyo",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Sundays, 10:00 am to 4:00 pm. Off for the summer break (July 19 to Sept 13, 2026), on Oct 18, 2026 (Tokyo Legacy Half Marathon), for the winter break (Dec 27, 2026 to Jan 24, 2027) and on Mar 7, 2027 (Tokyo Marathon). Called off when the Friday 11:00 am JMA forecast gives a 50% or higher chance of rain.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round, with summer and winter breaks",
+  "season_months": {
+   "start": 7,
+   "end": 3
+  },
+  "start_location": {
+   "name": "Palace Cycling course, Iwaidabashi to Hirakawa-mon (Imperial Palace)",
+   "address": "祝田橋～平川門 (Iwaidabashi crossing to Hirakawa-mon), Imperial Palace, Tokyo"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Open 10:00 am to 4:00 pm; ride as many laps as you like",
+  "duration_min": 360,
+  "pace": "Not a race course: the organizers ask riders to keep speeds down and pass only when it is safe",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Japan Bicycle Promotion Institute (自転車産業振興協会)",
+   "type": "nonprofit"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "ja"
+  ],
+  "visitor_notes": "No sign-up. Free loaner bikes (about 70, adult city bikes down to kids' bikes) from 10:00 am to 3:30 pm, back by 4:00 pm, one lap per loan; you register on your phone with a QR code at the tent. Since March 2026 you must get off and walk the U-turn at the Hirakawa-mon crossing. Cars come back at 4:00 pm sharp.",
+  "description": "Every Sunday the road along the Imperial Palace moat closes to cars and opens to bikes: a flat 3 km out-and-back between Iwaidabashi and Hirakawa-mon. It is a family course, not a training loop; kids, tandems and tourists share it and staff ask fast riders to ease off. Free loaner bikes since April 2026 make it an easy first ride in Tokyo.",
+  "links": {
+   "website": "https://jbpi.or.jp/guidance/palace/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://jbpi.or.jp/wp-content/uploads/2026/04/2026年度パレスサイクリング事業開催カレンダー.pdf"
+   ]
+  },
+  "inclusive_focus": [
+   "family"
+  ],
+  "sources": [
+   "https://jbpi.or.jp/guidance/palace/",
+   "https://jbpi.or.jp/wp-content/uploads/2026/04/2026年度パレスサイクリング事業開催カレンダー.pdf"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "evidence": "JBPI's Palace Cycling page carries 2026 notices (summer break July 19 to Sept 13, loaner bikes from April 2026) and its FY2026 calendar PDF lists 36 Sunday sessions, including Oct 4, 11 and 25, 2026 (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://jbpi.or.jp/guidance/palace/",
+   "feed_url": null,
+   "notes": "Rain calls go up by Friday 11:00 am under 直近のパレスサイクリング開催情報. A new fiscal-year calendar PDF (April to March) is posted each April."
+  }
+ },
+ {
+  "slug": "tokyo-jp-giant-store-meguro-dori-saturday-morning-ride",
+  "name": "朝活サイクリング",
+  "name_en": "Giant Store Meguro-dori Saturday Morning Ride",
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Tokyo",
+  "neighborhood": "Nakane, Meguro (Toritsu-daigaku station)",
+  "region": "Tokyo",
+  "state": null,
+  "country": "JP",
+  "lat": 35.68125,
+  "lng": 139.76671,
+  "geo_precision": "city",
+  "tz": "Asia/Tokyo",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Saturday, meet 7:00 am at the store, finish around 9:00 am. No booking. Called off if the chance of rain is over 40%; the call goes on Instagram the evening before.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Giant Store Meguro-dori (ジャイアントストア目黒通り)",
+   "address": "東京都目黒区中根1-4-3 (1-4-3 Nakane, Meguro-ku, Tokyo), one minute from Toritsu-daigaku station on the Tokyu Toyoko line"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "~2 hours (7:00 to about 9:00)",
+  "duration_min": 120,
+  "pace": "Set to the riders who show up; the Komazawa Park loop goes at beginner and cross-bike pace",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Giant Store Meguro-dori",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "ja"
+  ],
+  "visitor_notes": "No booking: just turn up. Any brand of bike is welcome, bought anywhere. Helmet and gloves asked for, and the store asks riders to carry bicycle insurance.",
+  "description": "A short Saturday-morning shop ride for new and easygoing riders: 20 to 30 km, back by about 9:00. The route is picked on the day from three standards: Tokyo Tower via Shiba Park, easy laps of Komazawa Park, or a photo stop at Giant Japan's head office. Beginners are the point of it.",
+  "links": {
+   "website": "https://giant-store.jp/meguro/bike/33962/",
+   "instagram": "https://www.instagram.com/giant_store_meguro/",
+   "facebook": "https://www.facebook.com/giantstore.megurodori",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "sources": [
+   "https://giant-store.jp/meguro/bike/33962/",
+   "https://giant-store.jp/meguro/category/event/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-19",
+  "evidence": "The store's post dated Sept 19, 2026 announces the weekly Saturday 7:00 am ride, no booking needed, 20 to 30 km.",
+  "confidence": "high",
+  "refresh": {
+   "method": "instagram",
+   "watch_url": "https://giant-store.jp/meguro/category/event/",
+   "feed_url": null,
+   "notes": "The event page holds the standing schedule; weather cancellations go only on Instagram (@giant_store_meguro) the evening before."
+  }
+ },
+ {
+  "slug": "guadalajara-mx-via-recreactiva",
+  "name": "Vía RecreActiva",
+  "name_en": "Vía RecreActiva car-free Sunday",
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Guadalajara",
+  "neighborhood": "Avenida Vallarta, Juárez and Javier Mina, from La Minerva east",
+  "region": "Jalisco",
+  "state": null,
+  "country": "MX",
+  "lat": 20.67204,
+  "lng": -103.3384,
+  "geo_precision": "city",
+  "tz": "America/Mexico_City",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Sunday and on official holidays, 8:00 am to 2:00 pm. Over 30 km of streets: Avenida Vallarta, Juárez and Javier Mina from the Minerva roundabout east; Chapultepec, Niños Héroes and Paseo de la Arboleda; Calzada del Federalismo. Branches reach Zapopan, Tlaquepaque and Tonalá.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Any point on the route (Glorieta La Minerva is the west end of the main axis)",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Open 8:00 am to 2:00 pm",
+  "duration_min": 360,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Vía RecreActiva (coordinated by Comude Guadalajara with neighbouring municipalities)",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Free, no sign-up. Water stations, volunteer guides and traffic marshals at the crossings that stay open to cars.",
+  "description": "Guadalajara's car-free Sunday. Over 30 km of main avenues close to cars every Sunday morning across four municipalities. Ride it end to end or use it to cross the city without traffic.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "family"
+  ],
+  "sources": [
+   "https://www.informador.mx/jalisco/via-recreactiva-guadalajara-conoce-la-ruta-y-domina-las-calles-20260816-0041.html"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-08-16",
+  "evidence": "El Informador (Aug 16, 2026) gives the route and the hours: every Sunday and official holiday, 8:00 am to 2:00 pm (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://viarecreactiva.org/",
+   "feed_url": null,
+   "notes": "The program’s own site answers 403 to bots. El Informador and other Guadalajara outlets report suspensions (football matches, marathons) the week before."
+  }
+ },
+ {
+  "slug": "merida-mx-biciruta-dominical",
+  "name": "Biciruta",
+  "name_en": "Biciruta car-free Sunday",
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Mérida",
+  "neighborhood": "Centro and Paseo de Montejo",
+  "region": "Yucatán",
+  "state": null,
+  "country": "MX",
+  "lat": 20.96708,
+  "lng": -89.62374,
+  "geo_precision": "city",
+  "tz": "America/Merida",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Sunday, 8:00 am to 12:30 pm, on a circuit through the historic centre (La Mejorada, La Plancha, Paseo de Montejo) that ends at the Monumento a la Patria.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Any point on the circuit; it ends at the Monumento a la Patria on Paseo de Montejo",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Open 8:00 am to 12:30 pm",
+  "duration_min": 270,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Ayuntamiento de Mérida",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Free, bring your own bike or rent one at points along Paseo de Montejo. Water, first aid and toilets on the route. The city says hours can change.",
+  "description": "Mérida's Sunday car-free circuit through the old centre and up Paseo de Montejo. Flat and done by 12:30, before the worst of the heat. Families and riders out for an easy spin.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "family"
+  ],
+  "sources": [
+   "https://www.yucatan.com.mx/merida/2026/07/31/biciruta-nocturna-merida-horario.html"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-08-06",
+  "evidence": "Diario de Yucatán (July 31, 2026, updated Aug 6) gives the Sunday Biciruta as every Sunday, 8:00 am to 12:30 pm (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://www.merida.gob.mx/",
+   "feed_url": null,
+   "notes": "merida.gob.mx sits behind a bot wall. Diario de Yucatán (yucatan.com.mx/merida) reports schedule changes."
+  }
+ },
+ {
+  "slug": "merida-mx-biciruta-nocturna",
+  "name": "Biciruta Nocturna",
+  "name_en": "Biciruta night ride",
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Mérida",
+  "neighborhood": "Paseo de Montejo",
+  "region": "Yucatán",
+  "state": null,
+  "country": "MX",
+  "lat": 20.97532,
+  "lng": -89.61959,
+  "geo_precision": "start",
+  "tz": "America/Merida",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "First Saturday of every month, 6:00 pm to 10:00 pm. One lane of Paseo de Montejo opens to bikes, from the Monumento a los Montejo to the Monumento a la Patria. Remaining 2026 dates: Oct 3, Nov 7, Dec 5.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "sat"
+   }
+  ],
+  "season": "year-round",
+  "season_months": {
+   "start": 10,
+   "end": 12
+  },
+  "start_location": {
+   "name": "Monumento a los Montejo, Paseo de Montejo",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Open 6:00 pm to 10:00 pm",
+  "duration_min": 240,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Ayuntamiento de Mérida",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Free. Bring lights and water; it is still hot after dark. Rental points along Paseo de Montejo. The city says hours can change.",
+  "description": "Once a month a lane of Paseo de Montejo opens to bikes after dark. It is the cooler way to ride in Mérida: after sunset, easy and social, past the old mansions.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "family"
+  ],
+  "sources": [
+   "https://www.yucatan.com.mx/merida/2026/07/31/biciruta-nocturna-merida-horario.html"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-08-06",
+  "evidence": "Diario de Yucatán (July 31, 2026, updated Aug 6) lists the night Biciruta on the first Saturday of the month, 6:00 to 10:00 pm, with dates through Dec 5, 2026 (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://www.yucatan.com.mx/merida/2026/07/31/biciruta-nocturna-merida-horario.html",
+   "feed_url": null,
+   "notes": "Diario de Yucatán updates this explainer when dates change; the Ayuntamiento posts each edition on its social accounts."
+  }
+ },
+ {
+  "slug": "mexico-city-mx-indeporte-cicloton",
+  "name": "Ciclotón",
+  "name_en": "Ciclotón monthly car-free ride",
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Mexico City",
+  "neighborhood": null,
+  "region": "Mexico City",
+  "state": null,
+  "country": "MX",
+  "lat": 19.43263,
+  "lng": -99.13318,
+  "geo_precision": "city",
+  "tz": "America/Mexico_City",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Last Sunday of every month, 8:00 am to 2:00 pm. The route changes each month; on Sept 27, 2026 it ran 33 km from Avenida Patriotismo to Churubusco.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "sun"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Any point on that month's circuit (Sept 2026: Avenida Patriotismo to Churubusco)",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Open 8:00 am to 2:00 pm",
+  "duration_min": 360,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Indeporte (Instituto del Deporte de la Ciudad de México)",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Free, no sign-up. Runners, skaters and walkers share the route. Service stations, water points and medical posts along the way (six, five and two in September 2026).",
+  "description": "Once a month, on the last Sunday, Mexico City closes a long circuit of main avenues to cars for the Ciclotón. It is longer than the weekly Sunday route, 33 km in September 2026, and the route changes every month. Indeporte posts it a few days before.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "family"
+  ],
+  "sources": [
+   "https://chilango.com/noticias/cicloton-de-septiembre-en-cdmx-fecha-ruta-y-horarios"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-27",
+  "evidence": "Chilango (Sept 25, 2026) reports Indeporte's route for the Sept 27, 2026 Ciclotón, 33 km, 8:00 am to 2:00 pm, held on the last Sunday of the month (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://chilango.com/noticias/cicloton-de-septiembre-en-cdmx-fecha-ruta-y-horarios",
+   "feed_url": null,
+   "notes": "Indeporte announces each month's route on its social accounts a few days ahead; Chilango and other Mexico City outlets repeat it. Search 'Ciclotón' plus the month."
+  }
+ },
+ {
+  "slug": "mexico-city-mx-ohtli-chiquxs-lgbt-rides",
+  "name": "Ohtli Chiquxs rides",
+  "name_en": "Ohtli Chiquxs LGBT+ group rides",
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Mexico City",
+  "neighborhood": "Centro (Alameda Central)",
+  "region": "Mexico City",
+  "state": null,
+  "country": "MX",
+  "lat": 19.43642,
+  "lng": -99.14384,
+  "geo_precision": "start",
+  "tz": "America/Mexico_City",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Some Tuesday evenings, about 8:00 pm, from the kiosk in the Alameda Central (Tue Sept 1, 2026 at 8:00 pm; Tue Sept 22 at 7:45 pm, with Tantales). Dates and routes go up on the collective's Instagram.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "8:00 pm",
+  "start_hhmm": "20:00",
+  "frequency": "irregular",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": {
+   "start": 9,
+   "end": 9
+  },
+  "start_location": {
+   "name": "Kiosco de la Alameda Central",
+   "address": "Parque Alameda Central, Centro, Cuauhtémoc, Ciudad de México"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Ohtli Chiquxs",
+   "type": "collective"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Check Instagram for the next date; rides are not every week. Its Pride ride on May 30, 2026 was free and at a basic level, and sign-up was by direct message.",
+  "description": "An LGBT+ riding collective in Mexico City, registered with the city as Ohtli Chiquxs LGBTTIQ. Its evening rides leave the Alameda Central kiosk for a destination across town: the last Orozco mural at the Centro Urbano Presidente Alemán on Sept 1, Plaza San Jacinto in San Ángel on Sept 22. Its Pride ride was billed as a safe, inclusive space for LGBT+ people, allies and anyone who loves bikes.",
+  "links": {
+   "website": null,
+   "instagram": "https://www.instagram.com/ohtlichiqxs/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "lgbtq"
+  ],
+  "sources": [
+   "https://www.dondeir.com/ciudad/habra-rodada-con-causa-gratis-en-cdmx-rumbo-al-mes-del-orgullo/2026/05/",
+   "https://lasillarota.com/metropoli/2026/9/1/marchas-concentraciones-y-cierres-viales-hoy-1-de-septiembre-en-cdmx-526751.html",
+   "https://lasillarota.com/metropoli/2026/9/22/marchas-concentraciones-y-cierres-viales-hoy-22-de-septiembre-en-cdmx-529439.html"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-22",
+  "evidence": "The city's ride agenda (La Silla Rota) lists Ohtli Chiquxs LGBTTIQ from the Alameda Central kiosk on Tue Sept 1 and Tue Sept 22, 2026; Donde Ir (May 24, 2026) covers its free Pride ride from the same kiosk (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "instagram",
+   "watch_url": "https://www.instagram.com/ohtlichiqxs/",
+   "feed_url": null,
+   "notes": "Instagram will not load for a robot. The city's daily ride agenda (La Silla Rota topic page: https://lasillarota.com/temas/movilizaciones-cdmx-48751.html) lists each ride the morning of; search 'Ohtli'."
+  }
+ },
+ {
+  "slug": "mexico-city-mx-paseo-de-todos-night-ride",
+  "name": "Paseo de Todos",
+  "name_en": "Paseo de Todos monthly night ride",
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Mexico City",
+  "neighborhood": "Tabacalera (Monumento a la Revolución)",
+  "region": "Mexico City",
+  "state": null,
+  "country": "MX",
+  "lat": 19.43617,
+  "lng": -99.15462,
+  "geo_precision": "start",
+  "tz": "America/Mexico_City",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Last Thursday of the month, 8:30 pm, out and back from the Monumento a la Revolución. Each edition has its own theme and route (about 15 km in June 2026, with one short rest stop).",
+  "days": [
+   "thu"
+  ],
+  "time_local": "8:30 pm",
+  "start_hhmm": "20:30",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "thu"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Monumento a la Revolución",
+   "address": "Monumento a la Revolución, Cuauhtémoc, Ciudad de México"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Paseo de Todos Ciudad de México",
+   "type": "collective"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Free, no sign-up. It rides after dark, so bring lights. Each route is posted on the group's X account before the ride.",
+  "description": "A big monthly night ride through central Mexico City that starts and ends at the Monumento a la Revolución. Every edition has a theme: in June 2026 (route 166) it rode about 15 km up Reforma to the Villa de Guadalupe and back; in September it looped down Reforma. Social pace, lots of people, all kinds of bikes.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://x.com/paseodetodos"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.chilango.com/que-hacer/rodada-nocturna-gratis-en-cdmx-pasara-reforma-y-la-villa-cuando-es/",
+   "https://lasillarota.com/metropoli/2026/9/24/marchas-concentraciones-y-cierres-viales-hoy-24-de-septiembre-en-cdmx-529782.html"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-24",
+  "evidence": "Chilango (June 24, 2026) covers route 166 on Thu June 25 at 8:30 pm from the Monumento a la Revolución; the city's ride agenda for Thu Sept 24, 2026 (La Silla Rota) lists Paseo de Todos at 8:30 pm from the same spot (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://lasillarota.com/temas/movilizaciones-cdmx-48751.html",
+   "feed_url": null,
+   "notes": "Escorted rides appear in the Secretaría de Seguridad Ciudadana's daily agenda of marches and rides, which La Silla Rota (topic page) and UnoTV republish every weekday morning under 'Rodadas ciclistas'. Search the ride name there for the next date. Check the last Thursday of each month. The group also posts routes on X (x.com/paseodetodos)."
+  }
+ },
+ {
+  "slug": "mexico-city-mx-muevete-en-bici-paseo-dominical",
+  "name": "Paseo Dominical Muévete en Bici",
+  "name_en": "Muévete en Bici car-free Sunday",
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Mexico City",
+  "neighborhood": "Paseo de la Reforma and the Centro Histórico",
+  "region": "Mexico City",
+  "state": null,
+  "country": "MX",
+  "lat": 19.43263,
+  "lng": -99.13318,
+  "geo_precision": "city",
+  "tz": "America/Mexico_City",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Sunday, 8:00 am to 2:00 pm. The route changes from week to week; on Sept 13, 2026 it ran about 55 km over Paseo de la Reforma, División del Norte, Patriotismo, the Centro Histórico, Calzada de Guadalupe and Eje 7 Sur.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Any point on the Sunday circuit (Paseo de la Reforma is the spine)",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Open 8:00 am to 2:00 pm; ride as much as you like",
+  "duration_min": 360,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Muévete en Bici (Mexico City government)",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Free, no sign-up. Join and leave anywhere on the route. Bike rental (including kids bikes and bikes for riders with disabilities), basic mechanics and medical help along the route. On ozone-alert days it can still run; watch the air-quality notice.",
+  "description": "Mexico City's car-free Sunday. Big avenues close to cars and fill with bikes, skaters and walkers until 2:00 pm. Ride a few kilometres or the whole loop; it is the easy way to see the city by bike on your first weekend.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "family",
+   "beginner"
+  ],
+  "sources": [
+   "https://amexi.com.mx/nacional/muevete-en-bici-ruta-horario-domingo-13-septiembre/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-13",
+  "evidence": "Amexi (Sept 13, 2026) gives that Sunday’s 55 km route and the hours, 8:00 am to 2:00 pm (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://www.semovi.cdmx.gob.mx/tramites-y-servicios/mi-bici/muevete-en-bici",
+   "feed_url": null,
+   "notes": "The official SEMOVI page would not load from our network. Local outlets (Amexi, Infobae, Chilango) post each Sunday’s route between Friday and Sunday morning; search “Muévete en Bici” plus the date."
+  }
+ },
+ {
+  "slug": "mexico-city-mx-people-for-bikes-coyoacan-tuesday-los-dinamos",
+  "name": "People for Bikes Coyoacán, Tuesday ride to Los Dinamos",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Mexico City",
+  "neighborhood": "Coyoacán (Oxtopulco)",
+  "region": "Mexico City",
+  "state": null,
+  "country": "MX",
+  "lat": 19.34648,
+  "lng": -99.17945,
+  "geo_precision": "start",
+  "tz": "America/Mexico_City",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every other Tuesday, 6:00 am, from the Coyoacán store to Los Dinamos in Magdalena Contreras (Sept 8 and 22, 2026). On the other Tuesdays the ride leaves the Polanco store for La Venta.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:00 am",
+  "start_hhmm": "06:00",
+  "frequency": "biweekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "People for Bikes Coyoacán",
+   "address": "Av. Miguel Ángel de Quevedo 217, Oxtopulco, Coyoacán, Ciudad de México"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "People for Bikes",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Starts before sunrise, so bring lights. About 20 riders are registered with the city for each edition.",
+  "description": "The south-side version of the shop’s Tuesday ride. It leaves the Coyoacán store for the forest road at Los Dinamos in Magdalena Contreras, south-west of the city.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://lasillarota.com/metropoli/2026/9/8/marchas-concentraciones-y-cierres-viales-hoy-8-de-septiembre-en-cdmx-527649.html",
+   "https://lasillarota.com/metropoli/2026/9/22/marchas-concentraciones-y-cierres-viales-hoy-22-de-septiembre-en-cdmx-529439.html"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-22",
+  "evidence": "The city's ride agenda (La Silla Rota) lists People for Bikes Coyoacán at 6:00 am from Av. Miguel Ángel de Quevedo 217 to Los Dinamos on Tue Sept 8 and Tue Sept 22, 2026 (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://lasillarota.com/temas/movilizaciones-cdmx-48751.html",
+   "feed_url": null,
+   "notes": "Escorted rides appear in the Secretaría de Seguridad Ciudadana's daily agenda of marches and rides, which La Silla Rota (topic page) and UnoTV republish every weekday morning under 'Rodadas ciclistas'. Search the ride name there for the next date. If the alternation holds, the next Coyoacán edition is Tue Oct 6, 2026."
+  }
+ },
+ {
+  "slug": "mexico-city-mx-people-for-bikes-polanco-tuesday-la-venta",
+  "name": "People for Bikes Polanco, Tuesday ride to La Venta",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Mexico City",
+  "neighborhood": "Polanco",
+  "region": "Mexico City",
+  "state": null,
+  "country": "MX",
+  "lat": 19.43084,
+  "lng": -99.20053,
+  "geo_precision": "start",
+  "tz": "America/Mexico_City",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every other Tuesday, 6:00 am, from the Polanco store up the México–Toluca road to the La Venta toll booth (Sept 1, 15 and 29, 2026). On the Tuesdays in between, the shop's ride leaves its Coyoacán store for Los Dinamos.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:00 am",
+  "start_hhmm": "06:00",
+  "frequency": "biweekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "People for Bikes Polanco",
+   "address": "Goldsmith 53, Polanco III Sección, Miguel Hidalgo, Ciudad de México"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "People for Bikes",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Starts before sunrise, so bring lights. About 25 riders are registered with the city for each edition.",
+  "description": "A dawn road ride from the shop’s Polanco store. It climbs west out of the city on the México–Toluca road to the La Venta toll booth in Cuajimalpa. The shop also runs a Tuesday ride from its Coyoacán store on alternate weeks and a Wednesday ride from its Roma store.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://lasillarota.com/metropoli/2026/9/1/marchas-concentraciones-y-cierres-viales-hoy-1-de-septiembre-en-cdmx-526751.html",
+   "https://lasillarota.com/metropoli/2026/9/15/marchas-concentraciones-y-cierres-viales-hoy-15-de-septiembre-en-cdmx-528602.html",
+   "https://www.unotv.com/estados/ciudad-de-mexico/mujeres-parteras-encabezaran-las-protestas-en-la-cdmx-este-29-de-septiembre/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-29",
+  "evidence": "The Secretaría de Seguridad Ciudadana's ride agenda, republished by La Silla Rota and UnoTV, lists this ride at 6:00 am from Goldsmith 53 to La Venta on Tue Sept 1, 15 and 29, 2026 (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://lasillarota.com/temas/movilizaciones-cdmx-48751.html",
+   "feed_url": null,
+   "notes": "Escorted rides appear in the Secretaría de Seguridad Ciudadana's daily agenda of marches and rides, which La Silla Rota (topic page) and UnoTV republish every weekday morning under 'Rodadas ciclistas'. Search the ride name there for the next date. If the alternation holds, the next Polanco edition is Tue Oct 13, 2026."
+  }
+ },
+ {
+  "slug": "mexico-city-mx-people-for-bikes-roma-wednesday-ride",
+  "name": "People for Bikes Roma, Wednesday morning ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Mexico City",
+  "neighborhood": "Roma Norte",
+  "region": "Mexico City",
+  "state": null,
+  "country": "MX",
+  "lat": 19.41644,
+  "lng": -99.15692,
+  "geo_precision": "start",
+  "tz": "America/Mexico_City",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Wednesdays, 6:50 am, from the Roma store to the Bosque de Chapultepec and Parque Aztlán (Sept 2, 9 and 23, 2026). On Sept 30, 2026 it left at 6:00 am for Valle de las Monjas in the Desierto de los Leones instead.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:50 am",
+  "start_hhmm": "06:50",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": {
+   "start": 9,
+   "end": 9
+  },
+  "start_location": {
+   "name": "People for Bikes Roma",
+   "address": "Zacatecas 55, Roma Norte, Cuauhtémoc, Ciudad de México"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "People for Bikes",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "About 20 riders are registered with the city for each edition. The destination can change; check the shop's posts the day before.",
+  "description": "A midweek morning ride from the shop's Roma Norte store. Most weeks it is a short trip to the Bosque de Chapultepec and Parque Aztlán; now and then it goes further, like the Sept 30 ride to Valle de las Monjas. An easy way into the city's riding if you are staying in Roma or Condesa.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://lasillarota.com/metropoli/2026/9/2/marchas-concentraciones-y-cierres-viales-hoy-2-de-septiembre-en-cdmx-526910.html",
+   "https://lasillarota.com/metropoli/2026/9/9/marchas-concentraciones-y-cierres-viales-hoy-9-de-septiembre-en-cdmx-527807.html",
+   "https://lasillarota.com/metropoli/2026/9/23/marchas-concentraciones-y-cierres-viales-hoy-23-de-septiembre-en-cdmx-529606.html",
+   "https://unotv.com/estados/ciudad-de-mexico/jubilados-de-pemex-y-colectivos-encabezan-protestas-en-la-cdmx-este-30-de-septiembre"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "evidence": "The city's ride agenda (La Silla Rota, UnoTV) lists People for Bikes Roma from Zacatecas 55 on Wed Sept 2, 9 and 23, 2026 at 6:50 am to Chapultepec, and on Wed Sept 30 at 6:00 am to Valle de las Monjas (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://lasillarota.com/temas/movilizaciones-cdmx-48751.html",
+   "feed_url": null,
+   "notes": "Escorted rides appear in the Secretaría de Seguridad Ciudadana's daily agenda of marches and rides, which La Silla Rota (topic page) and UnoTV republish every weekday morning under 'Rodadas ciclistas'. Search the ride name there for the next date."
+  }
+ },
+ {
+  "slug": "puebla-mx-via-recreativa-metropolitana",
+  "name": "Vía Recreativa Metropolitana",
+  "name_en": "Vía Recreativa car-free Sunday",
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Puebla",
+  "neighborhood": "La Paz to the Recta a Cholula",
+  "region": "Puebla",
+  "state": null,
+  "country": "MX",
+  "lat": 19.0438,
+  "lng": -98.19815,
+  "geo_precision": "city",
+  "tz": "America/Mexico_City",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Sunday, 7:00 am to 1:00 pm. 6.5 km each way between La Paz and the Distribuidor Cholula, over Bulevar Esteban de Antuñano, Calzada Zavaleta, the Periférico Ecológico and the Recta a Cholula, with nine stations.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Any of the nine stations between La Paz and the Distribuidor Cholula",
+   "address": null
+  },
+  "distance_km": 6.5,
+  "distance_miles": 4,
+  "duration": "Open 7:00 am to 1:00 pm",
+  "duration_min": 360,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Gobierno del Estado de Puebla (Secretaría de Movilidad y Transporte)",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Free. Basic repairs, first aid, toilets and water points for people and dogs along the route.",
+  "description": "Puebla's Sunday car-free corridor from La Paz out to Cholula. An easy 6.5 km each way with repair and water points. Good for a morning spin, or to reach Cholula without traffic.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "family"
+  ],
+  "sources": [
+   "https://elpopular.mx/comunidad/movilidad/2026/09/17/via-recreativa-en-puebla-asi-es-la-ruta-de-la-paz-a-cholula-cada-domingo"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-17",
+  "evidence": "El Popular's Sept 17, 2026 article gives the route and hours, every Sunday 7:00 am to 1:00 pm (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://elpopular.mx/comunidad/movilidad/2026/09/17/via-recreativa-en-puebla-asi-es-la-ruta-de-la-paz-a-cholula-cada-domingo",
+   "feed_url": null,
+   "notes": "Run by the Puebla state government (Secretaría de Movilidad y Transporte). Puebla outlets such as El Popular report route or hour changes."
+  }
+ },
+ {
+  "slug": "panama-city-pa-recreovia-cinta-costera",
+  "name": "Recreovía Cinta Costera",
+  "name_en": "Recreovía car-free Sunday on the Cinta Costera",
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Panama City",
+  "neighborhood": "Cinta Costera (Paitilla to Cinta Costera 3)",
+  "region": "Panamá Province",
+  "state": null,
+  "country": "PA",
+  "lat": 8.97145,
+  "lng": -79.53418,
+  "geo_precision": "city",
+  "tz": "America/Panama",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Sundays, 6:00 am to 11:00 am, on the Cinta Costera from the elevated bridge by the McDonald's at Paitilla to the end of the marine section (Cinta Costera 3). Cancelled some Sundays for races: the Sept 20, 2026 edition gave way to the Panama City Marathon.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "6:00 am",
+  "start_hhmm": "06:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": {
+   "start": 3,
+   "end": 3
+  },
+  "start_location": {
+   "name": "Elevated bridge by the McDonald's at Paitilla, Cinta Costera",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Open 6:00 am to 11:00 am",
+  "duration_min": 300,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Alcaldía de Panamá",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Free. Bike school, bike rental at Punto 0 (across from Rali), parking by the Miramar courts and at the Cinta Costera south gate. Suspended on some race Sundays and holiday weekends. Early start because of the heat.",
+  "description": "Panama City's Sunday morning car-free waterfront. The Cinta Costera closes to cars from Paitilla to the end of its section over the sea. Flat, early and done by 11.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "family"
+  ],
+  "sources": [
+   "https://mupa.gob.pa/el-verano-brilla-en-toda-la-capital-en-el-domingo-de-recreovia/",
+   "https://www.telemetro.com/nacionales/recreovia-regresa-este-domingo-la-cinta-costera-horario-y-actividades-n6085504",
+   "https://www.telemetro.com/nacionales/recreovia-cinta-costera-este-domingo-20-septiembre-horario-y-actividades-n6092338"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-19",
+  "evidence": "The Alcaldía’s own page (Jan 21, 2026) gives 6:00 to 11:00 am from the Paitilla bridge; its own posts quoted by Telemetro confirm the July 19, 2026 edition at those hours and cancel Sept 20, 2026 for the marathon (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://mupa.gob.pa/",
+   "feed_url": null,
+   "notes": "The Alcaldía (mupa.gob.pa, and @Panamaalcaldia on X) posts each Sunday’s Recreovía and any suspension; Telemetro repeats it."
+  }
+ },
+ {
+  "slug": "kigali-rw-city-of-kigali-car-free-day",
+  "name": "Kigali Car Free Day",
+  "name_en": null,
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Kigali",
+  "neighborhood": null,
+  "region": "Kigali",
+  "state": null,
+  "country": "RW",
+  "lat": -1.9438,
+  "lng": 30.0593,
+  "geo_precision": "city",
+  "tz": "Africa/Kigali",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Twice a month on Sunday mornings, from 7:00 am until about 10:00–11:00 am. The published rule is the first and third Sunday, but the Sept 2026 edition ran on the second Sunday (Sept 13), so check the City's announcement that week.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "biweekly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "sun"
+   },
+   {
+    "ord": 3,
+    "day": "sun"
+   }
+  ],
+  "season": null,
+  "season_months": {
+   "start": 9,
+   "end": 9
+  },
+  "start_location": {
+   "name": "Sites in each district (in Sept 2026 the Kicukiro route ran from Sonatube to IPRC-Kigali)",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "7:00 to about 10:00–11:00 am",
+  "duration_min": 180,
+  "pace": "Your own pace",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "City of Kigali",
+   "type": "public"
+  },
+  "founded_year": 2016,
+  "founded_note": "Started as a monthly event in 2016 and went to twice a month in 2018, per a May 2026 study.",
+  "cost": "free",
+  "language": [
+   "rw",
+   "en"
+  ],
+  "visitor_notes": "Free and open to anyone on foot or on a bike. Some main roads close to cars for the morning; each district runs its own site with aerobics and other sessions. Bring your own bike.",
+  "description": "Twice a month the City of Kigali closes some main roads to cars on a Sunday morning, and the streets fill with runners, cyclists, families and aerobics groups. It has run since 2016. There is no set route or pace; ride the closed roads and join whatever is on at your district's site.",
+  "links": {
+   "website": "https://www.kigalicity.gov.rw/news-detail/expanding-kigali-car-free-day",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.ktpress.rw/2026/09/when-thousands-leave-their-cars-behind-kigali-turns-streets-into-spaces-for-health/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.ktpress.rw/2026/09/when-thousands-leave-their-cars-behind-kigali-turns-streets-into-spaces-for-health/",
+   "https://www.frontiersin.org/journals/future-transportation/articles/10.3389/ffutr.2026.1857164/full",
+   "https://forum.ncdalliance.org/sessions/kigali-car-free-day/",
+   "https://www.rwandancda.org/program/1",
+   "https://www.kigalicity.gov.rw/news-detail/expanding-kigali-car-free-day"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-13",
+  "evidence": "KT Press ran a report on the car-free day dated Sunday Sept 13, 2026; a May 28, 2026 study gives the first-and-third-Sunday, 7–11 am pattern (both fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://www.ktpress.rw/2026/09/when-thousands-leave-their-cars-behind-kigali-turns-streets-into-spaces-for-health/",
+   "feed_url": null,
+   "notes": "The City of Kigali announces each edition and its sites on its X account, which needs a login. Local news (KT Press, The New Times) covers most editions; search 'Kigali Car Free Day' plus the month."
+  }
+ },
+ {
+  "slug": "cape-town-za-pedal-power-association-saturday-social-rides",
+  "name": "PPA Weekly Social Rides",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Cape Town",
+  "neighborhood": "Mowbray",
+  "region": "Western Cape",
+  "state": null,
+  "country": "ZA",
+  "lat": -33.949,
+  "lng": 18.4779,
+  "geo_precision": "start",
+  "tz": "Africa/Johannesburg",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday, 6:30 am, from 9 Hill Park Lane, Mowbray: a short group (32–36 km, mostly flat) and an intermediate group (70 km, start point varies weekly). A social group (60–75 km) rides alternate Saturdays and Sundays, 6:30–7:30 am. PPA lists the series from Aug 1, 2026 to Feb 21, 2027.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "6:30 am",
+  "start_hhmm": "06:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Aug–Feb (listed Aug 1, 2026 to Feb 21, 2027)",
+  "season_months": {
+   "start": 8,
+   "end": 2
+  },
+  "start_location": {
+   "name": "9 Hill Park Lane, Mowbray",
+   "address": "9 Hill Park Lane, Mowbray, Cape Town"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Short group about 1 h 50 min; social group 4+ hours",
+  "duration_min": 60,
+  "pace": "Short group: ride captain controls the pace, no one left behind. Social group: averages 20–22 km/h.",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Pedal Power Association",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Free and open to non-members. The short group has a backup vehicle and coffee after. The intermediate group needs charged lights, tubes and spares; its start and route are posted in the PPA Social Rides WhatsApp group each week. The social group asks for riders who could finish the Cape Town Cycle Tour in under six hours.",
+  "description": "Pedal Power Association's free Saturday rides out of Mowbray. The short group rides 32–36 km at a pace the ride captain sets, with a backup vehicle and coffee after; PPA pitches it at newcomers building confidence on the road. Stronger riders can join the 70 km intermediate group or the longer social group.",
+  "links": {
+   "website": "https://www.pedalpower.org.za/events/ppa-social-rides",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop",
+   "beginner"
+  ],
+  "sources": [
+   "https://www.pedalpower.org.za/events/ppa-social-rides",
+   "https://pedalpower.org.za/social-rides/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-08-01",
+  "evidence": "PPA's events page lists the weekly social rides from Aug 1, 2026 to Feb 21, 2027, with times and groups (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.pedalpower.org.za/events/ppa-social-rides",
+   "feed_url": null,
+   "notes": "Trust the events page: the older /social-rides/ page still says 7:00 am and a different coffee stop. The listing's date range shows when the season ends; weekly routes go out on the group's WhatsApp on Fridays."
+  }
+ },
+ {
+  "slug": "abu-dhabi-ae-yas-marina-circuit-trainyas",
+  "name": "TrainYAS",
+  "name_en": null,
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Abu Dhabi",
+  "neighborhood": "Yas Island",
+  "region": "Abu Dhabi",
+  "state": null,
+  "country": "AE",
+  "lat": 24.4718,
+  "lng": 54.6058,
+  "geo_precision": "start",
+  "tz": "Asia/Dubai",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Mondays and Wednesdays, 6:00–10:00 pm; the cyclists' gate closes at 9:45 pm. A women-only session, TrainYAS Ladies, runs on Tuesdays.",
+  "days": [
+   "mon",
+   "wed"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Yas Marina Circuit (cyclists' gate)",
+   "address": "Yas Marina Circuit, Yas Island, Abu Dhabi"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Open session, 6:00–10:00 pm",
+  "duration_min": 240,
+  "pace": "Your own pace on the Formula 1 circuit",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Yas Marina Circuit, presented by Abu Dhabi Sports Council",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en",
+   "ar"
+  ],
+  "visitor_notes": "Free, but register online first to get the TrainYAS barcode. Helmets are compulsory. Free loan bikes and helmets (adult and kids' sizes) from Abu Dhabi Cycling Club, limited numbers. Under-18s must come with an adult.",
+  "description": "Yas Marina Circuit opens its Formula 1 track to cyclists, runners and walkers two evenings a week. You ride laps at your own pace on closed tarmac, and loan bikes are there if you travelled without one. It is free and open to all ages and levels.",
+  "links": {
+   "website": "https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-detailpage",
+   "instagram": "https://www.instagram.com/ymcofficial/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-detailpage",
+   "https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-ladies"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2025-10-29",
+  "evidence": "The circuit's TrainYAS page gives Monday and Wednesday 6:00–10:00 pm and shows a session dated Oct 29, 2025; nothing on it is dated 2026 (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-detailpage",
+   "feed_url": null,
+   "notes": "The page lists upcoming session dates when they are set. The circuit's Ladies page says updates go out on Instagram @ymcofficial."
+  }
+ },
+ {
+  "slug": "abu-dhabi-ae-yas-marina-circuit-trainyas-ladies",
+  "name": "TrainYAS Ladies",
+  "name_en": null,
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Abu Dhabi",
+  "neighborhood": "Yas Island",
+  "region": "Abu Dhabi",
+  "state": null,
+  "country": "AE",
+  "lat": 24.4718,
+  "lng": 54.6058,
+  "geo_precision": "start",
+  "tz": "Asia/Dubai",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Tuesdays, 6:00–9:00 pm, women only (the last dated session shown ran on the North Circuit).",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Yas Marina Circuit",
+   "address": "Yas Marina Circuit, Yas Island, Abu Dhabi"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Open session, 6:00–9:00 pm",
+  "duration_min": 180,
+  "pace": "Your own pace; cyclists ride anti-clockwise",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Yas Marina Circuit, presented by Abu Dhabi Sports Council",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en",
+   "ar"
+  ],
+  "visitor_notes": "Women only. Register online for a TrainYAS barcode and show it at the gate. Helmet and closed shoes compulsory. Free loan bikes in adult sizes, first come first served.",
+  "description": "A women-only evening on the Yas Marina Formula 1 circuit, for cyclists, runners and walkers. Ride laps at your own pace on closed tarmac. Loan bikes are available.",
+  "links": {
+   "website": "https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-ladies",
+   "instagram": "https://www.instagram.com/ymcofficial/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "wtf"
+  ],
+  "sources": [
+   "https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-ladies"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2025-10-07",
+  "evidence": "The circuit's TrainYAS Ladies page gives Tuesdays 6:00–9:00 pm and shows a session dated Oct 7, 2025, with a note that sessions resume in September (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "instagram",
+   "watch_url": "https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-ladies",
+   "feed_url": null,
+   "notes": "The page says to watch Instagram @ymcofficial for restarts after the summer break. Check that a 2026–27 session date has appeared."
+  }
+ },
+ {
+  "slug": "london-gb-critical-mass-london",
+  "name": "Critical Mass London",
+  "name_en": null,
+  "kind": "critical-mass",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "London",
+  "neighborhood": "South Bank",
+  "region": "England",
+  "state": null,
+  "country": "GB",
+  "lat": 51.50745,
+  "lng": -0.12777,
+  "geo_precision": "city",
+  "tz": "Europe/London",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Last Friday of every month. Meet from 7:00 pm on the South Bank under Waterloo Bridge (by the BFI and the National Theatre); it usually rolls around 7:30 pm. Some directories still say 6:00 pm — the ride's own posts in Sept 2026 say 7:00.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "7:30 pm",
+  "start_hhmm": "19:30",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "South Bank, under Waterloo Bridge (by the BFI / National Theatre)",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slow, leaderless mass ride",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Critical Mass London (no organiser)",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "No sign-up, no leader, no set route. Any bike. Lights after dark.",
+  "description": "London's monthly Critical Mass: riders gather under Waterloo Bridge on the South Bank on the last Friday of the month and ride through central London together, with no set route and no leader. Any bike. It is a crowd, so expect a slow pace and a long evening.",
+  "links": {
+   "website": "https://www.criticalmass.bike/ride/london-gb",
+   "instagram": "https://www.instagram.com/critical_mass_london/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://criticalmass.in/london"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.criticalmass.bike/ride/london-gb",
+   "https://criticalmass.in/london",
+   "https://criticalmass.in/london/socialnetwork/list-items"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-27",
+  "evidence": "Posts from the ride's Instagram, shown on criticalmass.in and dated Sept 26–27, 2026 (the day after the Sept 25 ride), state 'The Last Friday of Every Month, 19:00, South Bank under Waterloo Bridge. Avg. departure 19:30' (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "instagram",
+   "watch_url": "https://criticalmass.in/london/socialnetwork/list-items",
+   "feed_url": null,
+   "notes": "criticalmass.in mirrors the ride's Instagram posts without a login wall. criticalmass.bike and criticalmass.in's own ride entry still say 18:00. The old network23.org/criticalmasslondon site returned HTTP 500 on Sept 30, 2026. Next rides: Fri Oct 30, Fri Nov 27, 2026."
+  }
+ },
+ {
+  "slug": "london-gb-dulwich-paragon-monthly-introductory-ride",
+  "name": "Dulwich Paragon Monthly Introductory Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "seasonal-break",
+  "status_note": null,
+  "status_since": null,
+  "city": "London",
+  "neighborhood": "Herne Hill",
+  "region": "England",
+  "state": null,
+  "country": "GB",
+  "lat": 51.45071,
+  "lng": -0.09177,
+  "geo_precision": "start",
+  "tz": "Europe/London",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Usually the first Saturday of each month; arrive at Herne Hill Velodrome for 9:00 am. The club says there will not be an intro ride in October 2026; the next should be the first Saturday of November — confirm on the page.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "sat"
+   }
+  ],
+  "season": "year-round",
+  "season_months": {
+   "start": 10,
+   "end": 11
+  },
+  "start_location": {
+   "name": "Herne Hill Velodrome",
+   "address": null
+  },
+  "distance_km": 55,
+  "distance_miles": 34,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Groups of up to 10, fastest first, steadiest riders last",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Dulwich Paragon Cycling Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Made for non-members. You should be 'generally pretty confident riding your bike on the road'. All experience and ability levels welcome.",
+  "description": "Dulwich Paragon's door-opener: a 55 km ride from Herne Hill Velodrome for people who want to try riding with one of south London's biggest clubs. Riders split into groups of up to ten by pace.",
+  "links": {
+   "website": "https://www.dulwichparagon.com/monthly-introductory-ride/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.dulwichparagon.com/monthly-introductory-ride/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-07",
+  "evidence": "The club's intro-ride page states first Saturday, 9:00, Herne Hill Velodrome, 55 km, and 'There will not be an intro ride in October'; its metadata shows it was last modified Sept 7, 2026 (read via WebFetch; the raw page is behind a bot check; fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.dulwichparagon.com/monthly-introductory-ride/",
+   "feed_url": null,
+   "notes": "The page carries one-off notices ('no ride in October'). The club's 2026 news posts are on dulwichparagon.com."
+  }
+ },
+ {
+  "slug": "london-gb-ealing-cycling-campaign-womens-ride",
+  "name": "Ealing Women's Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "London",
+  "neighborhood": "Ealing",
+  "region": "England",
+  "state": null,
+  "country": "GB",
+  "lat": 51.51316,
+  "lng": -0.30759,
+  "geo_precision": "start",
+  "tz": "Europe/London",
+  "discipline": [
+   "social",
+   "road"
+  ],
+  "schedule": "One women's ride most weekends, on a Saturday or a Sunday. Meet from 9:45 am outside Ealing Town Hall for a prompt 10:00 departure. The level rotates: Beginners+, Intermediate, Advanced. October 2026 dates: Oct 3, 10, 18, 25, 31.",
+  "days": [
+   "sat",
+   "sun"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": {
+   "start": 10,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Ealing Town Hall",
+   "address": "Ealing Town Hall, London W5 2BY"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "~4 hours with a café stop",
+  "duration_min": 240,
+  "pace": "Varies by level; Beginners+ rides are 'slower paced… suitable for anyone who can pedal, brake and steer'",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Ealing Cycling Campaign (London Cycling Campaign group)",
+   "type": "nonprofit"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free (book a place)",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Women only. Free, but places are limited and must be booked through the London Cycling Campaign events page. Check the level before you book.",
+  "description": "Led women-only rides from Ealing Town Hall out to west London parks and palaces, with a café stop. Levels rotate week to week, from slow Beginners+ rides to faster Advanced rides to places like Bushy Park and Hampton Court. Run by volunteers from the local cycling campaign.",
+  "links": {
+   "website": "https://www.ealingcycling.org.uk",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://lcc.org.uk/events-calendar/"
+   ]
+  },
+  "inclusive_focus": [
+   "wtf",
+   "beginner"
+  ],
+  "sources": [
+   "https://lcc.org.uk/events-calendar/",
+   "https://lcc.org.uk/events/list/?ical=1",
+   "https://lcc.org.uk/events/ealing-womens-ride-horsenden-hill-beginners-level/",
+   "https://www.ealingcycling.org.uk"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "evidence": "The LCC events calendar and its iCal feed list Ealing Women's Rides on Oct 3, 10, 18, 25 and 31, 2026, each 9:45 am at Ealing Town Hall (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://lcc.org.uk/events-calendar/",
+   "feed_url": "https://lcc.org.uk/events/list/?ical=1",
+   "notes": "Each ride is its own LCC event; filter the feed for SUMMARY 'Ealing Women's Ride'. Ealing's own list: http://www.ealingcycling.org.uk/p/events.html"
+  }
+ },
+ {
+  "slug": "london-gb-camden-anchor-kentish-town-pedals",
+  "name": "Kentish Town Pedals",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "London",
+  "neighborhood": "Kentish Town",
+  "region": "England",
+  "state": null,
+  "country": "GB",
+  "lat": 51.55014,
+  "lng": -0.13783,
+  "geo_precision": "start",
+  "tz": "Europe/London",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "First Saturday of every month, 10:00 am to noon, from the Peckwater Centre. Next: Oct 3, Nov 7, Dec 5, 2026. Free place booked on Eventbrite.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "sat"
+   }
+  ],
+  "season": "year-round",
+  "season_months": {
+   "start": 10,
+   "end": 12
+  },
+  "start_location": {
+   "name": "Peckwater Centre",
+   "address": "6 Peckwater St, London NW5 2UP"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "~2 hours with a café stop",
+  "duration_min": 120,
+  "pace": "Friendly, gentle pace; an easy 5–6 miles",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Camden Anchor (Camden Cyclists)",
+   "type": "nonprofit"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free (book on Eventbrite)",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "'If you can pedal, steer and brake, you're very welcome.' Some helmets to borrow. Children and vulnerable adults come with a responsible adult.",
+  "description": "A short, gentle monthly ride around north London on cycleways, quiet roads and parks, with a café stop every time. Made for people getting back on a bike or recent learners. Run by volunteers from Camden Cyclists, the local London Cycling Campaign group.",
+  "links": {
+   "website": "https://lcc.org.uk/events/kentish-town-pedals-13/2026-10-03/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://ktpedals.eventbrite.com/"
+   ]
+  },
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "sources": [
+   "https://lcc.org.uk/events/kentish-town-pedals-13/2026-10-03/",
+   "https://lcc.org.uk/events/list/?ical=1"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "evidence": "The LCC event page and iCal feed list Kentish Town Pedals as a recurring first-Saturday ride, 10:00 am at the Peckwater Centre, with dates Oct 3, Nov 7 and Dec 5, 2026 (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://ktpedals.eventbrite.com/",
+   "feed_url": "https://lcc.org.uk/events/list/?ical=1",
+   "notes": "Filter the LCC feed for SUMMARY 'Kentish Town Pedals'. Sister ride 'Kilburn Pedals' runs third Saturdays from 5 Netherwood Street, NW6."
+  }
+ },
+ {
+  "slug": "london-gb-rapha-london-friday-chat-laps",
+  "name": "Rapha Friday Chat Laps",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "London",
+  "neighborhood": "Regent's Park",
+  "region": "England",
+  "state": null,
+  "country": "GB",
+  "lat": 51.50745,
+  "lng": -0.12777,
+  "geo_precision": "city",
+  "tz": "Europe/London",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Friday, meet 7:00 am, briefing 7:15 am at the Inner Circle (Jubilee Gates), Regent's Park; three or four laps, finishing at the Rapha clubhouse. Book a free slot on Rapha's events site.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "7:15 am",
+  "start_hhmm": "07:15",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Inner Circle (Jubilee Gates), Regent's Park",
+   "address": "Jubilee Gates, Inner Circle, Regent's Park, London"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Mixed-ability groups, including a new-rider group",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Rapha London Clubhouse",
+   "type": "brand"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free (book a slot)",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Open to all, RCC member or not; book on events.rapha.cc. Helmet mandatory, lights charged, carry spares and a layer. Finishes at 85 Brewer Street, W1F 9ZN.",
+  "description": "Rapha London's weekly Friday laps of Regent's Park Outer Circle, split into mixed-ability groups with a dedicated new-rider group, then back to the Soho clubhouse. It is the easiest way into the London clubhouse scene; most other Rapha London rides are for RCC members only.",
+  "links": {
+   "website": "https://events.rapha.cc/products/regents-park-friday-chat-laps",
+   "instagram": "https://www.instagram.com/rapha_london/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://content.rapha.cc/gb/en/clubhouses/london"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://events.rapha.cc/rapha-london",
+   "https://events.rapha.cc/products/regents-park-friday-chat-laps",
+   "https://content.rapha.cc/gb/en/clubhouses/london"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "evidence": "Rapha's London events page lists Friday Chat Lap's as open to everyone; the ride page gives 7:00 meet, 7:15 briefing at Jubilee Gates and offers weekly slots from October to December 2026 (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://events.rapha.cc/rapha-london",
+   "feed_url": null,
+   "notes": "Cloudflare blocks curl; use WebFetch. Also on the page: 'More Than Circles' (fortnightly, open to all) and 'Beyond 100 Women's Rides' (monthly, open to all)."
+  }
+ },
+ {
+  "slug": "london-gb-rapha-london-womens-chat-laps",
+  "name": "Rapha Women's Chat Laps",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "London",
+  "neighborhood": "Regent's Park",
+  "region": "England",
+  "state": null,
+  "country": "GB",
+  "lat": 51.50745,
+  "lng": -0.12777,
+  "geo_precision": "city",
+  "tz": "Europe/London",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday, meet 7:00 am at the Inner Circle (Jubilee Gates), Regent's Park; three laps of the Outer Circle, then back to the Rapha clubhouse in Soho. Book a free slot on Rapha's events site.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Inner Circle (Jubilee Gates), Regent's Park",
+   "address": "Jubilee Gates, Inner Circle, Regent's Park, London"
+  },
+  "distance_km": 20,
+  "distance_miles": 12,
+  "duration": null,
+  "duration_min": null,
+  "pace": "22–24 km/h average, no-drop, easy-paced",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Rapha London Clubhouse",
+   "type": "brand"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free (book a slot)",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Open to non-members; book a slot on events.rapha.cc. Helmet mandatory, lights charged with the rear on solid, carry your own spares. Ends at 85 Brewer Street, W1F 9ZN.",
+  "description": "A weekly women's social spin around Regent's Park before work, then coffee at the Rapha clubhouse in Soho. Rapha calls it 'a no-drop, easy-paced jaunt' and 'an LGBTQ+ friendly, non-binary and trans-inclusive ride. All are welcome.' A good first London ride for a visiting woman or non-binary rider.",
+  "links": {
+   "website": "https://events.rapha.cc/products/rapha-x-steezy-ride",
+   "instagram": "https://www.instagram.com/rapha_london/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://content.rapha.cc/gb/en/clubhouses/london"
+   ]
+  },
+  "inclusive_focus": [
+   "wtf",
+   "lgbtq",
+   "no-drop"
+  ],
+  "sources": [
+   "https://events.rapha.cc/rapha-london",
+   "https://events.rapha.cc/products/rapha-x-steezy-ride",
+   "https://content.rapha.cc/gb/en/clubhouses/london"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "evidence": "Rapha's London events page lists Womens Chat Lap's as a weekly Tuesday ride open to everyone, and its booking page offers slots from September to December 2026 (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://events.rapha.cc/rapha-london",
+   "feed_url": null,
+   "notes": "events.rapha.cc is behind Cloudflare (curl gets 403); WebFetch reads it. The clubhouse page (content.rapha.cc/gb/en/clubhouses/london) lists hours and address."
+  }
+ },
+ {
+  "slug": "london-gb-cycle-club-london-regents-park-chat-laps",
+  "name": "Regent's Park Chat Laps",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "London",
+  "neighborhood": "Regent's Park",
+  "region": "England",
+  "state": null,
+  "country": "GB",
+  "lat": 51.50745,
+  "lng": -0.12777,
+  "geo_precision": "city",
+  "tz": "Europe/London",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday and Friday, 7:00 am: one hour of chat laps around the Outer Circle, then coffee and buns. (The club's faster race laps are Tuesdays and Thursdays at 6:00 am from the same gates.)",
+  "days": [
+   "wed",
+   "fri"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Inner Circle gates at the end of York Bridge, Regent's Park",
+   "address": "York Bridge, Regent's Park, London (what3words: incomes.crest.tribal)"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "1 hour plus coffee",
+  "duration_min": 60,
+  "pace": "Chat laps — social pace",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Cycle Club London",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free for a trial ride; club membership after that",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Non-members can come on trial rides; members get ride details in the club's Spond app. Park etiquette used by London clubs: groups of 12 at most, two abreast, never jump a red light.",
+  "description": "A pre-work hour of easy laps around the Outer Circle of Regent's Park, then coffee and buns. Cycle Club London calls itself 'a cycling club for all'. A gentle way to meet London riders on a weekday.",
+  "links": {
+   "website": "https://cycleclub.london/our-rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/cc-london",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://cycleclub.london/our-rides/",
+   "https://cycleclub.london/wp-json/wp/v2/pages?slug=our-rides"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-06-15",
+  "evidence": "The club's Our Rides page states Wednesday and Friday 7:00 am chat laps from the Inner Circle gates at York Bridge; the site's WordPress API shows the page was last modified June 15, 2026 (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://cycleclub.london/our-rides/",
+   "feed_url": null,
+   "notes": "Dated rides live in the members' Spond app. The page's modified date is at https://cycleclub.london/wp-json/wp/v2/pages?slug=our-rides — a change there is the cue to re-read the schedule."
+  }
+ },
+ {
+  "slug": "london-gb-cycle-club-london-saturday-steady-club-ride",
+  "name": "Saturday Steady Club Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "London",
+  "neighborhood": "Winchmore Hill",
+  "region": "England",
+  "state": null,
+  "country": "GB",
+  "lat": 51.50745,
+  "lng": -0.12777,
+  "geo_precision": "city",
+  "tz": "Europe/London",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday: from 8:30 am for pre-ride coffee in Winchmore Hill, depart 9:00 am sharp. A Faster group leaves at the same time; the Sparrows group leaves East Finchley at 6:30 am.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Winchmore Hill (café posted in the club app)",
+   "address": null
+  },
+  "distance_km": 72,
+  "distance_miles": 45,
+  "duration": null,
+  "duration_min": null,
+  "pace": "13–15 mph / 21–23 km/h",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Cycle Club London",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free for a trial ride; club membership after that",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Non-members can join on trial rides — contact the club first; the exact café is shared in Spond.",
+  "description": "A steady, no-drop Saturday club run from north London out into Hertfordshire and Essex lanes, about 45 miles. The club says: 'All of our Club Rides are no-drop. We won't leave anyone behind.' A good first club run for a visitor who can hold 21–23 km/h.",
+  "links": {
+   "website": "https://cycleclub.london/our-rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/cc-london",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://cycleclub.london/our-rides/",
+   "https://cycleclub.london/wp-json/wp/v2/pages?slug=our-rides"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-06-15",
+  "evidence": "The club's Our Rides page states the Saturday Steady ride (8:30 coffee, 9:00 depart, 45 mi, no-drop) and was last modified June 15, 2026 per the site's WordPress API; the café is only named in the members' app, so this stays medium (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://cycleclub.london/our-rides/",
+   "feed_url": null,
+   "notes": "Members' Spond app carries the dated rides and the café. Page modified date: https://cycleclub.london/wp-json/wp/v2/pages?slug=our-rides"
+  }
+ },
+ {
+  "slug": "london-gb-southwark-cyclists-healthy-rides",
+  "name": "Southwark Cyclists Healthy Rides",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "London",
+  "neighborhood": "Varies (south and east London)",
+  "region": "England",
+  "state": null,
+  "country": "GB",
+  "lat": 51.50745,
+  "lng": -0.12777,
+  "geo_precision": "city",
+  "tz": "Europe/London",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Usually two short rides every Saturday morning, most starting at 10:00 am. The start point changes each week (London Bridge, Stratford station, Dulwich and others) and is posted with each ride.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Varies — posted on the Healthy Rides page",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "~2 hours",
+  "duration_min": 120,
+  "pace": "Short, easy-paced rides on local roads and paths, about 10–18 miles, groups of around 15",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Southwark Cyclists",
+   "type": "nonprofit"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free (register on Eventbrite)",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Open to anyone, whatever age, wherever they live. Register on Eventbrite for each ride. Under-18s must come with an adult.",
+  "description": "Short guided Saturday rides from Southwark Cyclists, the local London Cycling Campaign group. Routes are themed tours: city alleyways, the Lee Valley, the Frieze sculptures in Regent's Park, the Thames Barrier. Made for less experienced riders who want company and a route.",
+  "links": {
+   "website": "https://southwarkcyclists.org.uk/healthy-rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "sources": [
+   "https://southwarkcyclists.org.uk/healthy-rides/",
+   "https://lcc.org.uk/events/city-alleyways-tour-southwwark-healthy-ride/",
+   "https://lcc.org.uk/events/list/?ical=1"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "evidence": "The Healthy Rides page lists rides for Oct 3, 10, 17 and 31, 2026; the Oct 3 City Alleyways Tour (10 miles, 10:00 from Southwark Gateway Needle) is on the LCC calendar (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://southwarkcyclists.org.uk/healthy-rides/",
+   "feed_url": "https://lcc.org.uk/events/list/?ical=1",
+   "notes": "Dates marked provisional firm up a week or two ahead. Rides also appear in the LCC iCal feed (SUMMARY contains 'Southwark Healthy Ride' — note the feed's spelling 'Southwwark')."
+  }
+ },
+ {
+  "slug": "london-gb-joyride-collective-social-ride",
+  "name": "The Joyride Collective social ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "London",
+  "neighborhood": "Varies",
+  "region": "England",
+  "state": null,
+  "country": "GB",
+  "lat": 51.50745,
+  "lng": -0.12777,
+  "geo_precision": "city",
+  "tz": "Europe/London",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "About once a month, usually a Sunday early afternoon (Sept 13, 2026 was 1:00 pm); one summer ride was a Saturday. The start changes every time (Alexandra Palace, Wandsworth, Hackney Wick, Richmond Park so far). Time and start on each Meetup event.",
+  "days": [
+   "sun"
+  ],
+  "time_local": null,
+  "start_hhmm": "13:00",
+  "frequency": "irregular",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Varies — posted on Meetup",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Social; total beginners to experienced riders",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "The Joyride Collective",
+   "type": "collective"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "RSVP on Meetup. E-bikes, hybrids, Bromptons and borrowed bikes all welcome. Rides often end at a pub or bar.",
+  "description": "A small LGBTQ+ women's cycling and social club, new in summer 2026. In its own words it is for 'LGBTQIA+ women, non-binary folks, trans sisters, and hetero girlies of any age/background'. Easy park and towpath routes across London, finishing somewhere to sit down. 'No lycra required, no race pace, no judgment.'",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/the-joyride-collective/",
+   "other": []
+  },
+  "inclusive_focus": [
+   "lgbtq",
+   "wtf",
+   "beginner"
+  ],
+  "sources": [
+   "https://www.meetup.com/the-joyride-collective/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-13",
+  "evidence": "The group's Meetup page shows four past rides in 2026, the latest on Sun Sept 13, 2026 (Alexandra Palace to Finsbury Park, 1:00 pm); no upcoming ride was posted on Sept 30, 2026.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/the-joyride-collective/",
+   "feed_url": null,
+   "notes": "Meetup's iCal feed (https://www.meetup.com/the-joyride-collective/events/ical/) loads but was empty on Sept 30, 2026. Rides are posted a few weeks ahead; if nothing new appears by late November, mark it stale."
   }
  }
 ]

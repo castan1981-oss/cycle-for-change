@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mexico-city-mx-indeporte-cicloton@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Mexico_City:20261025T080000
+DTEND;TZID=America/Mexico_City:20261025T140000
+RRULE:FREQ=MONTHLY;BYDAY=-1SU;UNTIL=20270227T235959Z
+SUMMARY:Ciclotón — Mexico City\, Mexico
+LOCATION:Any point on that month's circuit (Sept 2026: Avenida Patriotism
+ o to Churubusco)
+DESCRIPTION:Schedule: Last Sunday of every month\, 8:00 am to 2:00 pm. Th
+ e route changes each month; on Sept 27\, 2026 it ran 33 km from Avenida 
+ Patriotismo to Churubusco..\nConfirm with the host before you go.\nhttps
+ ://cycleforchange.org/rides/mexico-city-mx-indeporte-cicloton/
+URL:https://cycleforchange.org/rides/mexico-city-mx-indeporte-cicloton/
+END:VEVENT
+END:VCALENDAR

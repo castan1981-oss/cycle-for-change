@@ -8,7 +8,7 @@ UID:oklahoma-city-ok-obs-donut-ride@cycleforchange.org
 DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/Chicago:20261003T090400
 DTEND;TZID=America/Chicago:20261003T110400
-RRULE:FREQ=WEEKLY;BYDAY=SA
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270212T235959Z
 SUMMARY:OBS Donut Ride — Oklahoma City\, OK
 LOCATION:Will Rogers Park Tennis Center\, east end of parking lot\, 400 N
   Portland Ave\, Oklahoma City\, OK 73107
