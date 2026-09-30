@@ -61,13 +61,19 @@ const CAUSE_ORDER = ["LGBTQ+", "HIV/AIDS", "Recovery", "Mental health", "Cancer"
 
 function day(iso) { const d = new Date(iso + "T12:00:00Z"); return { m: d.getUTCMonth() + 1, d: d.getUTCDate(), dow: DOW[d.getUTCDay()] }; }
 function fmtLong(iso) { return new Date(iso + "T12:00:00Z").toLocaleDateString("en-US", { timeZone: "UTC", weekday: "short", month: "long", day: "numeric", year: "numeric" }); }
+// Pass 9 (Sept 30, 2026): every row is a small poster — the day big, the rest of the date small,
+// the category's mark beside it (cfc-site/rides/marks.svg).
+const CAT_MARK = { "Charity ride": "hundred", Road: "road", Gravel: "gravel", MTB: "mtb", "Multi-day tour": "distance", "Ultra / bikepacking": "terrain", Race: "flag", "Hill climb": "climb" };
+const mark = (id, cls = "mk") => `<svg class="${cls}" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-${id}"/></svg>`;
 function dateCell(e) {
-  if (!e.start) return `<span class="d"><b>TBA</b></span>`;
+  const st = e.date_status === "confirmed" ? `<span class="st ok" title="Date published by the organizer">✓</span>` : e.date_status === "projected" ? `<span class="st" title="Projected from the 2026 edition">~</span>` : "";
+  if (!e.start) return `<span class="d d--tba"><b class="dd">TBA</b><span class="dm">date to<br>come</span></span>`;
   const a = day(e.start), b = day(e.end || e.start);
-  const st = e.date_status === "confirmed" ? ` <span class="st ok" title="Date published by the organizer">✓</span>` : e.date_status === "projected" ? ` <span class="st" title="Projected from the 2026 edition">~</span>` : "";
-  if (e.start === (e.end || e.start)) return `<span class="d">${a.dow} <b>${MONTHS[a.m - 1]} ${a.d}</b>${st}</span>`;
-  if (a.m === b.m) return `<span class="d"><b>${MONTHS[a.m - 1]} ${a.d}–${b.d}</b>${st}</span>`;
-  return `<span class="d"><b>${MONTHS[a.m - 1]} ${a.d}–${MONTHS[b.m - 1]} ${b.d}</b>${st}</span>`;
+  let small;
+  if (e.start === (e.end || e.start)) small = `${a.dow}<br>${MONTHS[a.m - 1]}`;
+  else if (a.m === b.m) small = `${MONTHS[a.m - 1]}<br>${a.d}–${b.d}`;
+  else small = `${MONTHS[a.m - 1]} ${a.d}–<br>${MONTHS[b.m - 1]} ${b.d}`;
+  return `<span class="d"><b class="dd num">${a.d}</b><span class="dm">${small}${st ? " " + st : ""}</span></span>`;
 }
 function place(e) {
   if (e.start_city && e.end_city && e.start_city !== e.end_city && e.days > 1) {
@@ -167,7 +173,7 @@ function eventHtml(e) {
   const town = TOWNS.find({ city: (e.city || "").replace(/\s*\(.*?\)\s*/g, " ").trim(), state: e.state });
   if (town) meta.push(TOWNS.link(town));
   return `<details class="ev${e.riding ? " you" : ""}" id="${attr(e.slug)}" data-m="${e.month}" data-t="${attr(e.category)}" data-r="${attr(e.region)}" data-c="${attr(e.cause)}" data-s="${attr(e.date_status)}" data-y="${e.riding ? 1 : 0}" data-q="${attr(q)}">
-  <summary class="row">${dateCell(e)}<span class="nm"><span class="h">${esc(e.name)}${e.riding ? `<span class="you-tag">Riding</span>` : ""}</span><span class="meta">${meta.join(" &middot; ")}</span></span><span class="acts">Details</span></summary>
+  <summary class="row">${mark(CAT_MARK[e.category] || "flag", "mk mk--row")}${dateCell(e)}<span class="nm"><span class="h">${esc(e.name)}${e.riding ? `<span class="you-tag">Riding</span>` : ""}</span><span class="meta">${meta.join(" &middot; ")}</span></span><span class="acts">Details</span></summary>
   <div class="det">
     <dl class="facts">${facts(e)}</dl>
     ${e.date_note ? `<p class="note"><b>Date</b>${esc(e.date_note)}</p>` : ""}
@@ -193,11 +199,11 @@ body += `
         <input type="search" id="q" placeholder="Event, city, state, cause, organizer" autocomplete="off">
       </div>
       <div class="months" id="months" role="group" aria-label="Month">
-${MONTHS.map((m, i) => `        <button class="mo" type="button" data-m="${i + 1}" aria-pressed="false"><span class="n">${m}</span><span class="c">${byMonth.get(i + 1) || 0}</span></button>`).join("\n")}
-        <button class="mo" type="button" data-m="0" aria-pressed="false"><span class="n">TBA</span><span class="c">${byMonth.get(0) || 0}</span></button>
+${(() => { const mx = Math.max(...MONTHS.map((_, i) => byMonth.get(i + 1) || 0), 1); return MONTHS.map((m, i) => `        <button class="mo" type="button" data-m="${i + 1}" aria-pressed="false" style="--h:${((byMonth.get(i + 1) || 0) / mx).toFixed(2)}"><i class="mo-bar" aria-hidden="true"></i><span class="n">${m}</span><span class="c">${byMonth.get(i + 1) || 0}</span></button>`).join("\n"); })()}
+        <button class="mo mo--tba" type="button" data-m="0" aria-pressed="false" style="--h:0"><i class="mo-bar" aria-hidden="true"></i><span class="n">TBA</span><span class="c">${byMonth.get(0) || 0}</span></button>
       </div>
       <div class="frow scroll" role="group" aria-label="Type"><span class="lab">Type</span>
-${CATS.map((c) => `        <button class="tag" type="button" data-set="t" data-v="${attr(c)}" aria-pressed="false">${esc(c)}<span class="c">${byCat.get(c) || 0}</span></button>`).join("\n")}
+${CATS.map((c) => `        <button class="tag tag--mk" type="button" data-set="t" data-v="${attr(c)}" aria-pressed="false">${mark(CAT_MARK[c] || "flag", "mk mk--tag")}${esc(c)}<span class="c">${byCat.get(c) || 0}</span></button>`).join("\n")}
       </div>
       <div class="frow" role="group" aria-label="Show"><span class="lab">Show</span>
         <button class="tag" type="button" id="tConf" aria-pressed="false">Confirmed only<span class="c">${nConf}</span></button>
@@ -219,11 +225,21 @@ ${(() => {
   try { deep = JSON.parse(fs.readFileSync(path.join(ROOT, "cfc-site", "events", "events.json"), "utf8")); } catch (e) { return ""; }
   const list = Array.isArray(deep) ? deep : (deep && deep.events) || [];
   if (!list.length) return "";
+  const longestWord = (name) => Math.max(...String(name).split(/[\s-]+/).map((w) => w.length), 4);
+  const norm = (x) => String(x || "").toLowerCase().replace(/[^a-z0-9]+/g, "");
+  const tile = (d) => {
+    // the 2027 date comes from this calendar (matched by name); the events feed's next_date may still be 2026
+    const cal = events.find((e) => norm(e.name) === norm(d.name) || norm(e.name) === norm(d.short_name) || (d.website && e.url && host(e.url) === host(d.website)));
+    const dt = cal && cal.start ? `${cal.start.slice(5, 7)}.${cal.start.slice(8, 10)}` : "TBA";
+    const slug = String(d.town || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    const art = fs.existsSync(path.join(ROOT, "cfc-site", "towns", "art", `${slug}.svg`)) ? `<img class="tile-art" src="/towns/art/${slug}.svg" alt="" loading="lazy" decoding="async" width="200" height="200">` : "";
+    return `<a class="tile-p tile-p--deep${art ? " tile-p--art" : ""}" href="${attr(String(d.url || "").replace(SITE, ""))}" style="--l:${longestWord(d.town || d.name)}">${art}<span class="dd">${esc(dt)}${cal && cal.date_status === "confirmed" ? `<span class="st ok" title="Date published by the organizer">✓</span>` : cal && cal.date_status === "projected" ? `<span class="st" title="Projected from the 2026 edition">~</span>` : ""}</span><span class="t">${esc(d.town || "")}</span><span class="b">${esc(d.short_name || d.name)}</span></a>`;
+  };
   return `
     <aside class="deep" aria-labelledby="deep-h">
       <p class="eyebrow" id="deep-h">${list.length} events with their own page</p>
       <p class="deep-note">Dates, routes, sign-up, weather, and where to sleep, eat and get the bike fixed.</p>
-      <p class="deep-links">${list.map((d) => `<a href="${attr(String(d.url || "").replace(SITE, ""))}">${esc(d.short_name || d.name)}</a>`).join("")}</p>
+      <div class="tiles-p tiles-p--deep">${list.map(tile).join("")}</div>
     </aside>`;
 })()}
     <div class="bar">

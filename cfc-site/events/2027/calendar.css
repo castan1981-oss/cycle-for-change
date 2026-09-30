@@ -5,9 +5,9 @@
    Creosote appears on FOR, on confirmed dates (✓) and on rides Robert is doing.
    Nothing else on the page is green. Hairlines are dust. */
 
-.calendar .eyebrow b{color:var(--creosote);font-weight:700}
+.calendar .eyebrow b{color:var(--creosote-ink);font-weight:700}
 .key-conf::before,.key-proj::before{font-family:var(--mono);font-weight:700;margin-right:2px}
-.key-conf::before{content:"✓";color:var(--creosote)}
+.key-conf::before{content:"✓";color:var(--creosote-ink)}
 .key-proj::before{content:"~";color:var(--mute)}
 .calendar .lede .k{white-space:nowrap}
 
@@ -39,12 +39,12 @@
 .more-f summary::-webkit-details-marker{display:none}
 .more-f summary::before{content:"+";font-weight:700;width:1em}
 .more-f[open] summary::before{content:"–"}
-.more-f summary .on{color:var(--creosote)}
+.more-f summary .on{color:var(--creosote-ink)}
 .more-f .frow{padding-top:4px;padding-bottom:14px}
 
 .bar{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 16px;margin-top:18px;padding:12px 0;border-top:1px solid var(--asphalt)}
 .bar .count{margin:0;font-family:var(--display);font-weight:800;font-size:1.4rem;letter-spacing:-.02em;text-transform:uppercase;color:var(--asphalt)}
-.bar .count b{color:var(--creosote);font-variant-numeric:tabular-nums}
+.bar .count b{color:var(--creosote-ink);font-variant-numeric:tabular-nums}
 .clear{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:none;border:0;border-bottom:1px solid var(--asphalt);padding:0 0 2px;color:inherit;cursor:pointer}
 
 /* —— months + rows —— */
@@ -58,11 +58,11 @@
 .d{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);white-space:nowrap;font-variant-numeric:tabular-nums}
 .d b{color:var(--asphalt);font-weight:700}
 .d .st{display:inline-block;margin-left:2px;font-weight:700}
-.d .st.ok{color:var(--creosote)}
+.d .st.ok{color:var(--creosote-ink)}
 .ev.you .d b{color:var(--creosote)}
 .nm{min-width:0;display:block}
 .nm .h{display:block;font-weight:500;font-size:1.05rem;line-height:1.3}
-.nm .you-tag{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--creosote);margin-left:8px}
+.nm .you-tag{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--creosote-ink);margin-left:8px}
 .nm .meta{display:block;margin:3px 0 0;font-size:.9rem;color:var(--mute);line-height:1.4}
 .nm .meta b{font-weight:500;color:var(--asphalt)}
 .acts{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);border-bottom:1px solid transparent;padding-bottom:2px}
@@ -100,9 +100,10 @@
   .frow.scroll{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:calc(-1 * var(--gutter));padding-inline:var(--gutter);-webkit-overflow-scrolling:touch}
   .frow.scroll::-webkit-scrollbar{display:none}
   .frow.scroll .tag{flex:0 0 auto}
-  .ev>summary{grid-template-columns:minmax(0,1fr) auto;gap:4px 12px}
-  .d{grid-column:1 / -1}
-  .acts{align-self:start}
+  .ev>summary{grid-template-columns:22px 52px minmax(0,1fr);gap:4px 10px}
+  .d{grid-column:2}
+  .nm{grid-column:3}
+  .acts{grid-column:3;align-self:start;justify-self:start}
   .nm .h{font-size:1rem}
 }
 
@@ -113,3 +114,31 @@
 .deep-links{display:flex;flex-wrap:wrap;gap:6px;margin:0}
 .deep-links a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid var(--dust);padding:8px 11px}
 .deep-links a:hover{border-color:var(--asphalt)}
+
+/* —— Pass 9 (Sept 30, 2026): the calendar gets its graphics. —— */
+/* the month strip is a bar chart: each bar is the month's share of the busiest month */
+.mo{position:relative;justify-content:flex-end;min-height:74px;padding-top:26px;isolation:isolate}
+.mo-bar{position:absolute;left:6px;right:6px;bottom:38px;height:calc(var(--h,0) * 28px);background:var(--dust-deep);opacity:.55;z-index:-1;pointer-events:none}
+.mo[aria-pressed="true"] .mo-bar{background:var(--bone);opacity:.35}
+.mo--tba .mo-bar{display:none}
+/* the type chips carry their marks */
+.tag--mk{display:inline-flex;align-items:center;gap:6px;padding-left:8px}
+.mk--tag{width:14px;height:14px;color:currentColor}
+/* the rows: mark, the day big, the rest small */
+.ev>summary{grid-template-columns:22px 56px minmax(0,1fr) auto;gap:8px 12px;align-items:start;padding:14px 0}
+.mk--row{width:22px;height:22px;color:var(--creosote-ink);margin-top:6px}
+.ev.you .mk--row{color:var(--creosote)}
+.d{display:flex;flex-direction:column;gap:2px;white-space:normal}
+.d .dd{display:block;font-family:var(--display);font-weight:800;font-size:1.9rem;line-height:.95;letter-spacing:-.04em;color:var(--asphalt)}
+.d--tba .dd{font-size:1.1rem;letter-spacing:0;padding-top:6px}
+.d .dm{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;line-height:1.3;color:var(--mute)}
+.d .st{margin-left:0}
+.ev>summary .nm{padding-top:4px}
+/* the twelve deep pages as poster tiles */
+.tiles-p--deep{grid-template-columns:repeat(auto-fill,minmax(min(150px,100%),1fr));gap:6px;margin-top:12px}
+.tile-p--deep{aspect-ratio:auto;min-height:150px;padding:10px 10px 9px;gap:2px}
+.tile-p--deep .dd{font-weight:800;font-size:1.5rem;line-height:1;letter-spacing:-.04em}
+.tile-p--deep .t{font-size:clamp(1rem,calc((100cqw - 20px) / (var(--l,8) * .74)),1.6rem);margin-top:4px}
+.tile-p--deep .b{font-size:.8rem;margin-top:auto;padding-top:8px;color:var(--creosote-ink)}
+.tile-p--deep .tile-art{opacity:.35}
+@media (min-width:900px){.tiles-p--deep{grid-template-columns:repeat(6,minmax(0,1fr))}}

@@ -89,6 +89,17 @@ carries the town strip when a guide exists for that city.
 - `email/mile-updates.html` is the mile-updates email template (table-based, inline styles,
   {{placeholders}} listed at the top). Send from whatever reads the Netlify "waitlist" form.
 
+## Pass 9 — the calendar and resources (Sept 30, 2026)
+- `/events/2027/`: the month strip is a bar chart (`.mo-bar`, `--h` = the month's share of the
+  busiest month, set by build-calendar.js); every row is a small poster (`CAT_MARK` picks the
+  category's mark, the day is a big numeral, the rest of the date small); the type chips carry
+  marks; the twelve events with their own page are `.tile-p--deep` poster tiles with their 2027
+  date from this calendar (never the events feed's next_date, which may be 2026) and the town's
+  contour behind. Small creosote text on bone is creosote-ink everywhere on the page.
+- `/resources/`: the three doors and the three age cards carry marks (help / riders / no-drop;
+  youth / beginner / riders). `/tonight/` stays tar on purpose: it is the night page, and volt
+  there means live.
+
 ## Pass 8 — custom graphics and marks throughout (Sept 30, 2026)
 Robert: "there needs to be more custom graphics and custom icons throughout." Now:
 - **The mark family is 58 pictograms** in `cfc-site/rides/marks.svg` (ride types, who it's for, the
