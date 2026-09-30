@@ -111,14 +111,18 @@
     var log = $("log");
     var logMax = log && log.getAttribute("data-max") ? parseInt(log.getAttribute("data-max"), 10) || 5 : 5;
     if (log) { while (log.firstChild) log.removeChild(log.firstChild); }
-    if (log) rides.slice(0, logMax).forEach(function (r) {
+    /* Pass 8: each row carries a bar, its length the ride's miles against the longest ride shown */
+    var shown = rides.slice(0, logMax), longest = 0;
+    shown.forEach(function (r) { longest = Math.max(longest, Number(r.miles) || 0); });
+    if (log) shown.forEach(function (r) {
       var li = document.createElement("li");
       var when = document.createElement("span"); when.className = "when"; when.textContent = dayLabel(r.date);
       var title = String(r.title || "").trim();
       if (title && !GENERIC.test(title)) { var b = document.createElement("b"); b.textContent = title; when.appendChild(b); }
+      var bar = document.createElement("span"); bar.className = "bar-mi"; bar.style.setProperty("--w", longest ? ((Number(r.miles) || 0) / longest).toFixed(2) : "0");
       var mi = document.createElement("span"); mi.className = "mi num"; mi.textContent = Number(r.miles).toFixed(1);
       var u = document.createElement("small"); u.textContent = "MI"; mi.appendChild(u);
-      li.appendChild(when); li.appendChild(mi); log.appendChild(li);
+      li.appendChild(when); li.appendChild(bar); li.appendChild(mi); log.appendChild(li);
     });
 
     if (feed.profileUrl) ["stravaLink", "footStrava"].forEach(function (id) { var a = $(id); if (a) a.href = feed.profileUrl; });

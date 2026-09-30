@@ -51,6 +51,22 @@
 - `email/mile-updates.html` is the mile-updates email template (table-based, inline styles,
   {{placeholders}} listed at the top). Send from whatever reads the Netlify "waitlist" form.
 
+## Pass 8 — custom graphics and marks throughout (Sept 30, 2026)
+Robert: "there needs to be more custom graphics and custom icons throughout." Now:
+- **The mark family is 58 pictograms** in `cfc-site/rides/marks.svg` (ride types, who it's for, the
+  pledge, the event facts, the town, weather, the guides, the site). Same stroke system. A fact, a
+  list row, a tile kicker or a step gets its mark: homepage facts strip, How it works (big marks),
+  the orgs, the directory rows; event facts (`MARK_FOR` in build-events.js), Sleep/Eat/Fix, the
+  weather heading and every forecast day (`wxMark` in events.js, from the WMO code); the
+  how-it's-built tiles (`BUILT_MARKS` in blocks.js); the guides' three stages; the pledge perks.
+  `.mk` is the base class (22px, currentColor); sized variants per context. Add a mark to the
+  sprite, never inline; pick the mark by meaning, never decorate.
+- **The 2027 route map** (`cfc-site/img/route-2027.svg`, drawn by `python3 tools/route-map.py`
+  from real coordinates: the lower 48 as one stroke, the six rides, Phoenix as home) sits beside
+  the six-rides list on the homepage. Re-run the script when the six rides change.
+- **The ride log carries bars** (`.bar-mi`, length = miles against the longest ride shown, the
+  latest in volt on tar; painted by home.js).
+
 ## Pass 7 — photos on the paper, posters everywhere, the route art drawn (Sept 30, 2026)
 Robert's note after Pass 6 went live: the homepage photos "don't blend into the sections or the
 background, they're just put there." Now house rules on top of Pass 6:

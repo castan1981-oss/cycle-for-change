@@ -159,10 +159,11 @@ main{display:block}
 /* —— Pass 4 (Sept 28, 2026): /guides/ sorted by stage (recovery.com's "every step" hub) —— */
 .fn-stage-intro{margin:0 0 clamp(28px,4vw,44px);max-width:56ch;font-size:1.05rem;line-height:1.5;color:var(--mute)}
 .fn-stage{margin:0 0 clamp(40px,5vw,64px)}
-.fn-stage-head{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:baseline;margin:0 0 18px;max-width:880px}
+.fn-stage-head{display:grid;grid-template-columns:auto auto 1fr;gap:4px 16px;align-items:baseline;margin:0 0 18px;max-width:880px}
+.fn-stage-head .mk--stage{grid-row:1 / span 2;align-self:start}
 .fn-stage-n{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--creosote-ink);grid-row:span 2}
 .fn-stage-head h2{margin:0}
-.fn-stage-head p{margin:0;grid-column:2;max-width:56ch;line-height:1.5;color:var(--asphalt)}
+.fn-stage-head p{margin:0;grid-column:3;max-width:56ch;line-height:1.5;color:var(--asphalt)}
 .fn-stage--read .fn-stage-head{grid-template-columns:1fr}
 .fn-stage--read .fn-stage-head p{grid-column:1}
 .fn-stage-next{margin:0;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
@@ -192,3 +193,7 @@ main{display:block}
     font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;border-top:1px solid rgba(232,223,208,.2)}
   .help-bar b{font-family:var(--display);font-size:16px;letter-spacing:-.01em;text-transform:none}
 }
+
+/* Pass 8: the stage marks on the guides hub */
+.mk{width:22px;height:22px;flex:0 0 auto;color:var(--asphalt);display:block}
+.fn-stage-head .mk--stage{width:36px;height:36px;color:var(--creosote-ink);margin-top:4px}

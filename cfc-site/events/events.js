@@ -61,8 +61,13 @@
     fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (d) {
       var c = d.current || {}, dy = d.daily || {};
       var html = "";
+      /* Pass 8: each day carries a weather mark (cfc-site/rides/marks.svg) picked from the WMO code */
+      var wxMark = function (code, hi) {
+        var id = code >= 95 ? "rain" : code >= 51 ? "rain" : code >= 45 ? "cloud" : code >= 2 ? "cloud" : (hi != null && hi >= 95 ? "heat" : "sun");
+        return '<svg class="mk mk--wx" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-' + id + '"/></svg>';
+      };
       if (c.temperature_2m != null) {
-        html += '<p class="wx-now"><b>' + Math.round(c.temperature_2m) + '°F</b><span>' + esc(WMO[c.weather_code] || "") +
+        html += '<p class="wx-now">' + wxMark(c.weather_code, c.temperature_2m).replace("mk--wx", "mk--wx-now") + '<b>' + Math.round(c.temperature_2m) + '°F</b><span>' + esc(WMO[c.weather_code] || "") +
           (c.apparent_temperature != null ? " · feels like " + Math.round(c.apparent_temperature) + "°" : "") +
           (c.wind_speed_10m != null ? " · wind " + Math.round(c.wind_speed_10m) + " mph" : "") +
           (c.relative_humidity_2m != null ? " · " + Math.round(c.relative_humidity_2m) + "% humidity" : "") + " · right now</span></p>";
@@ -73,6 +78,7 @@
           var isEvent = eventDate && iso >= eventDate && iso <= eventEnd;
           html += '<li class="wx-day' + (isEvent ? " is-event" : "") + '">' +
             '<span class="d">' + esc(isEvent ? "Event · " + dayLabel(iso, today) : dayLabel(iso, today)) + "</span>" +
+            wxMark(dy.weather_code[i], dy.temperature_2m_max[i]) +
             '<span class="hi">' + Math.round(dy.temperature_2m_max[i]) + "°</span> <span class=\"lo\">/ " + Math.round(dy.temperature_2m_min[i]) + "°</span>" +
             '<span class="x">' + esc(WMO[dy.weather_code[i]] || "") + "</span>" +
             '<span class="x">' + (dy.precipitation_probability_max[i] != null ? dy.precipitation_probability_max[i] + "% rain" : "") +
