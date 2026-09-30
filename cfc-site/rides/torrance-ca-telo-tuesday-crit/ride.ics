@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:torrance-ca-telo-tuesday-crit@cycleforchange.org
+DTSTAMP:20260930T181554Z
+DTSTART;TZID=America/Los_Angeles:20261006T180000
+DTEND;TZID=America/Los_Angeles:20261006T190000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261130T235959Z
+SUMMARY:Telo (Tuesday practice crit) — Torrance\, CA
+LOCATION:Telo Ave & Kashiwa St\, Telo Ave & Kashiwa St\, Torrance\, CA
+DESCRIPTION:Pace: practice criterium\, A and B groups; one-mile\, six-cor
+ ner flat circuit.\nSchedule: Tuesdays\, 6:00 pm\, Daylight Saving Time o
+ nly.\nConfirm with the host before you go.\nhttps://cycleforchange.org/r
+ ides/torrance-ca-telo-tuesday-crit/
+URL:https://cycleforchange.org/rides/torrance-ca-telo-tuesday-crit/
+END:VEVENT
+END:VCALENDAR

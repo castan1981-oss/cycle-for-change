@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:manhattan-beach-ca-new-pier-ride@cycleforchange.org
+DTSTAMP:20260930T181554Z
+DTSTART;TZID=America/Los_Angeles:20261001T064000
+DTEND;TZID=America/Los_Angeles:20261001T084000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH
+SUMMARY:New Pier Ride (NPR) — Manhattan Beach\, CA
+LOCATION:Manhattan Beach Pier\, Manhattan Beach Pier\, Manhattan Beach\, 
+ CA
+DESCRIPTION:Pace: flat and fast; the pace can pick up at any time.\nSched
+ ule: Every Tuesday and Thursday\, 6:40 am.\nConfirm with the host before
+  you go.\nhttps://cycleforchange.org/rides/manhattan-beach-ca-new-pier-r
+ ide/
+URL:https://cycleforchange.org/rides/manhattan-beach-ca-new-pier-ride/
+END:VEVENT
+END:VCALENDAR

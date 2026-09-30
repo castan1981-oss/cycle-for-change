@@ -1,0 +1,936 @@
+{
+  "id": "los-angeles-ca",
+  "kind": "destination",
+  "name": "Los Angeles",
+  "state": "California",
+  "state_code": "CA",
+  "county": "Los Angeles County",
+  "lat": 34.0522,
+  "lon": -118.2437,
+  "timezone": "America/Los_Angeles",
+  "population": "about 3.9 million (2020 census)",
+  "elevation_ft": 285,
+  "tagline": "Coast path, canyon climbs, one big mountain road",
+  "best_months": "October to May. The coast rides all year; the canyons and Glendora Mountain Road are hot by late morning from June to September, so those start at dawn.",
+  "nearest_airport": {
+    "name": "Los Angeles International",
+    "code": "LAX",
+    "miles": 12
+  },
+  "major_airport": {
+    "name": "Hollywood Burbank",
+    "code": "BUR",
+    "miles": 12
+  },
+  "official_url": "https://lacity.gov/",
+  "visitor_url": "https://www.discoverlosangeles.com/",
+  "covers": [
+    "Santa Monica",
+    "Venice",
+    "Marina del Rey",
+    "Pacific Palisades",
+    "Brentwood",
+    "Westwood",
+    "West Hollywood",
+    "Beverly Hills",
+    "Culver City",
+    "Hollywood",
+    "Silver Lake",
+    "Los Feliz",
+    "Malibu",
+    "Calabasas",
+    "Agoura Hills",
+    "Glendora",
+    "San Dimas",
+    "Redondo Beach",
+    "Manhattan Beach",
+    "Hermosa Beach",
+    "Palos Verdes Estates",
+    "Rancho Palos Verdes",
+    "Torrance",
+    "El Segundo",
+    "Northridge",
+    "Studio City",
+    "Burbank",
+    "Glendale",
+    "Pasadena",
+    "Altadena"
+  ],
+  "summary": "Los Angeles is a cycling city in zones: a 22-mile car-free beach path from Will Rogers State Beach to Torrance, canyon climbs in the Santa Monica Mountains above Malibu, Griffith Park's car-free roads and the LA River path on the east side, and Glendora Mountain Road in the San Gabriels. The zones sit 20 to 40 miles apart, so most visitors rent a car. Alaska, Southwest, Delta and American all check a packed bike as a standard bag (Sept 2026), one West Hollywood shop builds a shipped one, and two Santa Monica shops rent a road bike. Bring yours for three days or more.",
+  "about": [
+    "Los Angeles fills a basin between the Pacific and the San Gabriel Mountains, with the Santa Monica Mountains running east to west through the middle of it. Downtown is the centre of nothing a rider needs; the riding is on the edges. LAX sits about 12 miles southwest of downtown on the Westside, Burbank about 12 miles north for Griffith Park and the Valley, Long Beach 17 miles south for the South Bay.",
+    "The city is big enough that this guide names its zones by name: the Westside and the coast (Santa Monica, Venice, the beach path), the Santa Monica Mountains (Latigo, Mulholland, the Rock Store), Griffith Park and the river (Los Feliz, Silver Lake, Frogtown), the San Gabriels by way of Pasadena and Glendora, the South Bay and Palos Verdes, and the Valley. Every listing below says which one it sits in."
+  ],
+  "riding": [
+    "The ride for the day you land is the beach path: 22 paved miles along the sand, flat, no cars, turn around whenever you want. The signature climb is Latigo Canyon out of Malibu to Mulholland Highway and back down to the coast, about 44 miles and 4,000 feet. Griffith Park's roads above the Observatory are closed to cars and loop with the LA River path for a 26-mile ride you can start from a Los Feliz hotel. Glendora Mountain Road is the steady 5 percent time-trial climb of the San Gabriel foothills, 8.6 miles and 2,300 feet, and the road on to Mt. Baldy makes it a 51-mile, 6,850-foot day. The Donut loop around Palos Verdes is the South Bay's Saturday.",
+    "The group rides are the way in. Velo Club La Grange leaves 26th and San Vicente in Santa Monica at 6:30 every weekday and Westwood at 8 on Saturdays, open to anyone. Big Orange Cycling lists the South Bay's rides: the Donut at 8 on Saturdays from Redondo Beach, the New Pier Ride at 6:40 on Tuesdays and Thursdays. Different Spokes Southern California is the LGBTQ+ club with a Sunday ride. LA Critical Mass gathers at Wilshire and Western on the last Friday of the month. Sidewalk riding is legal in the city; the boulevards between the zones are where you stay alert."
+  ],
+  "getting_there": "Fly into LAX (about 12 miles from downtown, closest to the Westside) or Burbank (about 12 miles, closer to Griffith Park, the Valley and the Pasadena side; a smaller airport that is faster to get out of). Long Beach is the South Bay airport, Ontario the one for Glendora Mountain Road. You will want a car: the zones are 20 to 40 miles apart, and rental offices at LAX are off airport by free shuttle. Ride apps pick up at the LAX-it lot next to Terminal 1; book an XL for the bike case. The Bring-your-bike page has the airline rules, the shipping option and Metro's bike rules.",
+  "routes": [
+    {
+      "name": "The beach path (Marvin Braude Bike Trail)",
+      "type": "path",
+      "miles": 22,
+      "elevation_gain_ft": null,
+      "surface": "Paved bike path end to end. Three pieces are not county-maintained: the Santa Monica State Beach section, the Washington Blvd bike lane between Admiralty Way and Venice Beach (on-street), and First Ave in Hermosa to the south end of Redondo Pier.",
+      "difficulty": "moderate",
+      "start": {
+        "name": "Will Rogers State Beach, north end of the path",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "22 miles of paved path along the sand from Will Rogers State Beach to Torrance Beach, past Santa Monica, Venice, Marina del Rey and the South Bay towns. This is the ride for the day you land: flat, no cars, turn around whenever you want. The county keeps a map with mile markers and restrooms on its page.",
+      "water": null,
+      "hazards": "The path leaves the sand through Marina del Rey on the Washington Blvd bike lane, and again from First Ave in Hermosa to the south end of Redondo Pier. At the north end, PCH from Chautauqua Blvd to Carbon Beach Terrace is a Caltrans fire-repair work zone: cones, 25 to 35 mph, single-lane closures 9 a.m. to 3 p.m. on weekdays (Caltrans page and Santa Monica Daily Press, May to Sept 2026). Don't keep going north on PCH without checking the Caltrans page first.",
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://beaches.lacounty.gov/la-county-beach-bike-path/"
+      },
+      "sources": [
+        "https://beaches.lacounty.gov/la-county-beach-bike-path/",
+        "https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/palisades-fire-repairs",
+        "https://www.smdp.com/weekly-road-and-lane-closures-on-pacific-coast-highway-and-topanga-canyon-boulevard-in-palisades-work-zones/"
+      ],
+      "verified": "2026-09-30"
+    },
+    {
+      "name": "Latigo Canyon – Mulholland – PCH loop (with Point Dume)",
+      "type": "road",
+      "miles": 44,
+      "elevation_gain_ft": 4000,
+      "surface": "Paved road.",
+      "difficulty": "hard",
+      "start": {
+        "name": "Civic Center Way near Pepperdine, Malibu",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "Up Latigo Canyon from PCH to its top at Kanan Road, a short jog onto Mulholland Highway heading west, then back down to PCH and home along the coast with a spur out to Point Dume. 44 miles and about 4,000 feet, per the RideWithGPS page. Helen's Cycles rides a 55-mile, 4,200-foot version from the Westside that comes back down Kanan. Mulholland Highway here is on the Mulholland ClimbFest course (April 10, 2027). The Rock Store on Mulholland Highway is the stop, weekends only.",
+      "water": null,
+      "hazards": "PCH from Chautauqua Blvd to Carbon Beach Terrace is a Caltrans fire-repair work zone: 35 mph with cones from Temescal Canyon to Sunset, then 25 mph with single-lane closures 9 a.m. to 3 p.m. on weekdays from Sunset to Carbon Beach Terrace (Caltrans page and Santa Monica Daily Press, May to Sept 2026). Nothing published says what the shoulder is like for a bike. If you ride out from Santa Monica you go through it; go early. Topanga Canyon Blvd is closed from midnight to 5 a.m. with a 15 mph work zone by day.",
+      "links": {
+        "rwgps": "https://ridewithgps.com/routes/27086090",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": null
+      },
+      "sources": [
+        "https://ridewithgps.com/routes/27086090",
+        "https://www.helenscycles.com/events/our-favorite-rides-routes-pg1456.htm",
+        "https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/palisades-fire-repairs",
+        "https://www.smdp.com/weekly-road-and-lane-closures-on-pacific-coast-highway-and-topanga-canyon-boulevard-in-palisades-work-zones/"
+      ],
+      "verified": "2026-09-30"
+    },
+    {
+      "name": "Griffith Park and LA River loop",
+      "type": "road",
+      "miles": 26,
+      "elevation_gain_ft": 1300,
+      "surface": "About 17 of the 26 miles are bike path or car-free park road; the rest is street.",
+      "difficulty": "moderate",
+      "start": {
+        "name": null,
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "One loop that joins the two rides on this side of town: the LA River path through Elysian Valley, the Taylor Yard bridge, and Griffith Park's roads up past Cathy's Corner to Mount Hollywood Drive, which is closed to cars. About 26 miles and 1,300 feet, per the Komoot page. It's a loop, so start wherever you're staying along it. Spoke Bicycle Cafe sits on the river path in Frogtown, mid-loop.",
+      "water": null,
+      "hazards": null,
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": "https://www.komoot.com/smarttour/e1773790309/griffith-park-and-los-angeles-river-loop",
+        "gpx": null,
+        "other": null
+      },
+      "sources": [
+        "https://www.komoot.com/smarttour/e1773790309/griffith-park-and-los-angeles-river-loop"
+      ],
+      "verified": "2026-09-30"
+    },
+    {
+      "name": "Griffith Park loop from the Zoo lot",
+      "type": "road",
+      "miles": 13,
+      "elevation_gain_ft": 1200,
+      "surface": "Paved park road.",
+      "difficulty": "moderate",
+      "start": {
+        "name": "Free parking area near the LA Zoo, Griffith Park",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "A counter-clockwise lap of Griffith Park from the free lot near the Zoo, past Travel Town and up to the Observatory. 13 miles and about 1,200 feet, per the RideWithGPS page. The shortest ride on this list; the one to do the evening you land if your legs want a hill.",
+      "water": null,
+      "hazards": null,
+      "links": {
+        "rwgps": "https://ridewithgps.com/routes/37914104",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": null
+      },
+      "sources": [
+        "https://ridewithgps.com/routes/37914104"
+      ],
+      "verified": "2026-09-30"
+    },
+    {
+      "name": "Glendora Mountain Road (GMR)",
+      "type": "climb",
+      "miles": 9,
+      "elevation_gain_ft": 2300,
+      "surface": "Paved mountain road.",
+      "difficulty": "moderate",
+      "start": {
+        "name": "Glendora Mountain Road just above Big Dalton Canyon Road, Glendora",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "The time-trial climb of the San Gabriel foothills: 8.6 miles and about 2,300 feet at a steady 5 percent from just above Big Dalton Canyon Road to the summit, the course Lightning Velo uses for its GMR Challenge. Measured from Sierra Madre Ave at the bottom of town it's 9.3 miles and 2,514 feet (CiclaValley). The pitch stays in the single digits the whole way. Past the summit the road runs five more miles north and down to the East Fork of the San Gabriel River; the Mt. Baldy loop in this guide carries it on from there. The Donut Man on Route 66 is the bottom-of-the-climb stop, open 24 hours per its listing.",
+      "water": null,
+      "hazards": "GMR is shut to vehicle traffic often, for fire prevention (CiclaValley); check the road status before you drive out. On the descent, watch for other riders. North of the summit the turns tighten.",
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://www.lightningvelo.org/content.aspx?page_id=22&club_id=333987&module_id=776697"
+      },
+      "sources": [
+        "https://www.lightningvelo.org/content.aspx?page_id=22&club_id=333987&module_id=776697",
+        "https://ciclavalley.org/descending-glendora-mountain-road/"
+      ],
+      "verified": "2026-09-30"
+    },
+    {
+      "name": "Glendora Mountain Road to Mt. Baldy loop",
+      "type": "road",
+      "miles": 51,
+      "elevation_gain_ft": 6850,
+      "surface": "Paved mountain road.",
+      "difficulty": "epic",
+      "start": {
+        "name": "Glendora",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "The big day in the San Gabriels: 51 miles and about 6,850 feet, per the RideWithGPS page, out of Glendora up GMR and on to Mt. Baldy and back. The page gives the numbers and the town; it doesn't spell out the roads, so read the map before you ride it.",
+      "water": null,
+      "hazards": "GMR is shut to vehicle traffic often, for fire prevention (CiclaValley); check the road status before you drive out.",
+      "links": {
+        "rwgps": "https://ridewithgps.com/routes/10616171",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": null
+      },
+      "sources": [
+        "https://ridewithgps.com/routes/10616171",
+        "https://ciclavalley.org/descending-glendora-mountain-road/"
+      ],
+      "verified": "2026-09-30"
+    },
+    {
+      "name": "The Donut loop (Palos Verdes)",
+      "type": "road",
+      "miles": 28,
+      "elevation_gain_ft": 1950,
+      "surface": "Paved road.",
+      "difficulty": "moderate",
+      "start": {
+        "name": "Redondo Beach",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "The South Bay loop around the Palos Verdes peninsula, 28 miles and about 1,950 feet, per the RideWithGPS page, starting in Redondo Beach. It's the loop of the Donut Ride, the South Bay's group ride; the Donut Ride leaves Avenue I and Elena in Redondo Beach at 8 on Saturdays, per Big Orange Cycling's page; the no-drop Friendly Donut leaves Miramar Park the same morning. Komoot has a 55-mile, 2,116-foot version from El Segundo Beach that adds the beach path both ways.",
+      "water": null,
+      "hazards": null,
+      "links": {
+        "rwgps": "https://ridewithgps.com/routes/6391692",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": null
+      },
+      "sources": [
+        "https://ridewithgps.com/routes/6391692",
+        "https://www.komoot.com/smarttour/e1772037750/palos-verdes-classic-donut-loop"
+      ],
+      "verified": "2026-09-30"
+    },
+    {
+      "name": "Nichols Canyon – Mulholland (the La Grange Saturday ride)",
+      "type": "road",
+      "miles": 27,
+      "elevation_gain_ft": 1950,
+      "surface": "Paved city street and canyon road.",
+      "difficulty": "moderate",
+      "start": {
+        "name": "Raymond Fouquet Square",
+        "address": "Westwood Blvd & La Grange Ave, Los Angeles, CA 90024",
+        "lat": 34.0525,
+        "lon": -118.4425
+      },
+      "description": "Velo Club La Grange's club ride, 8:00 a.m. from Raymond Fouquet Square in Westwood; open to non-members, and fast. East on Santa Monica Blvd and Sunset through Century City and Beverly Hills, three miles of steady climbing up Nichols Canyon to a 100-meter wall at the top, then about ten miles of fast rollers on Mulholland Drive west to Sepulveda, where the group regroups by the 405, and back down to Westwood. 27 miles per the club; about 1,950 feet per a RideWithGPS route of it. Ride it alone any day. With the group, sit at the back if a fast pack is new to you.",
+      "water": null,
+      "hazards": "The club names them: cars coming down Nichols Canyon, and the crossings at Laurel Canyon, Coldwater Canyon and Beverly Glen on Mulholland. The club says new riders should not ride Mulholland alone.",
+      "links": {
+        "rwgps": "https://ridewithgps.com/routes/31929982",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://www.lagrange.org/nichols"
+      },
+      "sources": [
+        "https://www.lagrange.org/nichols",
+        "https://www.lagrange.org/rides",
+        "https://ridewithgps.com/routes/31929982"
+      ],
+      "verified": "2026-09-30",
+      "ride": "los-angeles-ca-nichols-canyon-ride-velo-club-la-grange"
+    }
+  ],
+  "coffee": [
+    {
+      "name": "Caffe Luxxe (Brentwood Country Mart)",
+      "url": "https://www.caffeluxxe.com/pages/brentwood-country-mart",
+      "address": "225 26th Street, Santa Monica, CA 90402",
+      "note": "On the corner of 26th and San Vicente in the Brentwood Country Mart, where Velo Club La Grange's weekday rides leave at 6:30 a.m. It opens at 7, after the roll-out, so it is the coffee after. Outdoor tables, per its site. Nothing on either site says bike parking.",
+      "hours_hint": "7 a.m. to 6 p.m. daily",
+      "ride_out": true
+    },
+    {
+      "name": "Pedalers Fork / 10 Speed Coffee",
+      "url": "https://www.pedalersfork.com/",
+      "address": "23504 Calabasas Rd, Calabasas, CA 91302",
+      "note": "The Valley side of the Santa Monica Mountains, in Calabasas: 10 Speed Coffee's café inside the Pedalers Fork restaurant, a bike shop on the creekside patio. Opens at 6 every day (Tock and joe.coffee, Sept 2026), the one confirmed 6 a.m. door near the canyon climbs. The shop's own hours and bike parking were not confirmed.",
+      "hours_hint": "6 a.m. daily; closes 3 p.m. Sunday to Tuesday, 9 p.m. Wednesday to Saturday",
+      "ride_out": false
+    },
+    {
+      "name": "Spoke Bicycle Cafe",
+      "url": "https://www.spokebicyclecafe.com/",
+      "address": "3050 N. Coolidge Ave., Los Angeles, CA 90039",
+      "note": "A café with a bike shop on the LA River path in Frogtown, on the Griffith Park and LA River loop. Opens at 9, so it is the mid-ride or after stop. Repairs and rentals on site; the shop is closed Tuesdays. Nothing on its site says bike parking or a pump.",
+      "hours_hint": "9 to 6 Monday to Wednesday, 9 to 9 Thursday to Sunday; bike shop 10 to 5 weekdays, 9 to 5 weekends, closed Tuesday",
+      "ride_out": false
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Reddi Chick BBQ",
+      "url": "https://reddichickbbq.com/contact-us",
+      "address": "225 26th Street #23, Santa Monica, CA 90402",
+      "cuisine": "Barbecue",
+      "note": "After the ride, on the Westside: a counter in the Brentwood Country Mart, the corner where Velo Club La Grange's weekday rides leave at 6:30. Open 10 to 7 every day, so lunch, not breakfast. Barbecue chicken, ribs and baked potatoes, per its site. Seating and bike parking were not on the page."
+    },
+    {
+      "name": "Pine & Crane Silverlake",
+      "url": "https://www.pineandcrane.com/silverlake",
+      "address": "1521 Griffith Park Blvd, Los Angeles, CA 90026",
+      "cuisine": "Taiwanese",
+      "note": "The night before, on the east side: noodle soup and rice plates at a counter in Silver Lake, at the Sunset Triangle, on the Griffith Park side of town. Noon to 10, closed Tuesday. No reservations; a group lines up. Some seating outside in the plaza next door, per its site."
+    },
+    {
+      "name": "Canter's Deli",
+      "url": "https://cantersdeli.com/north-fairfax",
+      "address": "419 N Fairfax Ave, Los Angeles, CA 90036",
+      "cuisine": "Deli",
+      "note": "Late, and early: 6 a.m. to 11:30 p.m. Monday to Friday, from 5 a.m. Sunday, all night Saturday, per its site. A big room on Fairfax between the Westside and the east side. Takes a group at any hour. Breakfast all day."
+    },
+    {
+      "name": "Brent's Deli Northridge",
+      "url": "https://brentsdeli.com/locations/",
+      "address": "19565 Parthenia Street, Northridge, CA 91324",
+      "cuisine": "Deli",
+      "note": "After the ride, in the Valley: the Northridge deli in the same neighborhood as the CSUN lot where SFVBC's Saturday ride leaves at 8. Opens at 8 every day; closes at 8, or 3 on Monday. Outdoor tables and bike parking were not on its page."
+    },
+    {
+      "name": "Martha's 22nd Street Grill",
+      "url": "https://www.opentable.com/r/marthas-22nd-street-grill-hermosa-beach",
+      "address": "25 22nd St, Hermosa Beach, CA 90254",
+      "cuisine": "Breakfast",
+      "note": "After the ride, South Bay: breakfast and lunch on a patio in Hermosa Beach with the sand in view, on the beach path and north of the Donut loop's Redondo Beach start. 7 to 3 every day, per OpenTable and a listing with 2026 reviews. No site of its own; (310) 376-7786."
+    },
+    {
+      "name": "The Rock Store",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g32655-d4915186-Reviews-The_Rock_Store-Los_Angeles_California.html",
+      "address": "30354 Mulholland Highway, Cornell, CA 91301",
+      "cuisine": "Diner",
+      "note": "On the way, in the mountains: the motorcycle roadhouse on Mulholland Highway, the road the Latigo loop jogs onto at Kanan. Breakfast and lunch on an outside patio, weekends only: 7 to 6 Saturday and Sunday, 9 to 6 Friday, closed Monday to Thursday, per TripAdvisor and a September 2025 local guide. Its own site was dead when we checked. Call (818) 889-1311 before you count on it."
+    },
+    {
+      "name": "The Donut Man",
+      "url": "https://www.yellowpages.com/glendora-ca/mip/the-donut-man-22285272",
+      "address": "915 E Route 66, Glendora, CA 91740",
+      "cuisine": "Donuts",
+      "note": "On the way, in the foothills: the donut shop on Route 66 in Glendora, the town at the bottom of Glendora Mountain Road. Before or after GMR and the Baldy loop. Open 24 hours every day, per a listing; its own site would not load for us. Confirm by phone, (626) 335-9111."
+    }
+  ],
+  "hotels": [
+    {
+      "name": "HI Los Angeles Santa Monica Hostel",
+      "url": "https://www.hiusa.org/find-hostels/california/santa-monica-1436-2nd-street",
+      "booking_url": null,
+      "address": "1436 2nd Street, Santa Monica, CA 90401",
+      "note": "Downtown Santa Monica, 0.4 mile from the pier by its own page; the beach path passes the pier. The one place this run found with the bike policy in writing. Beds from $35 (HI's site, Sept 2026); dorms of 4 to 10 and private rooms; elevator, kitchen, lockers; check-in 3, out 11. No parking: the P6 structure across the street is $20 to $25 a day, Civic Center $5 to $14 and a 10-minute walk.",
+      "price_hint": "$",
+      "bike_policy": "Free bicycle storage at the hostel (its words). E-bikes only if UL- or EN 15194-certified; nothing charges inside the building."
+    },
+    {
+      "name": "Inn at Venice Beach",
+      "url": "https://www.innatvenicebeach.com/",
+      "booking_url": "https://be.synxis.com/?Hotel=101034&Chain=5335",
+      "address": "327 Washington Boulevard, Venice, CA 90292",
+      "note": "Washington Blvd in Venice, two blocks from the sand by its own page. The beach path runs on-street along Washington here, so you roll out the door onto it. Nothing about your own bike on the inn's page; the chain page says Pacifica Hotels \"invites you (and your bike)\" and rents bikes. No rate shown (Sept 2026).",
+      "price_hint": null,
+      "bike_policy": "No stated policy — ask when you book"
+    },
+    {
+      "name": "The Ambrose Hotel",
+      "url": "https://www.ambrosehotel.com/",
+      "booking_url": "https://reservations.ambrosehotel.com/3549",
+      "address": "1255 20th Street, Santa Monica, CA 90404",
+      "note": "Mid-city Santa Monica on 20th St, the nearest hotel this run found to 26th and San Vicente, where Velo Club La Grange's weekday rides leave at 6:30. Beach cruisers to borrow \"based on availability,\" per the page; nothing about your own bike. No rate shown (Sept 2026).",
+      "price_hint": null,
+      "bike_policy": "No stated policy — ask when you book"
+    },
+    {
+      "name": "Kimpton Hotel Palomar Los Angeles Beverly Hills",
+      "url": "https://www.ihg.com/kimptonhotels/hotels/us/en/hotel-palomar-la-beverly-hills/laxwp/hoteldetail",
+      "booking_url": null,
+      "address": "10740 Wilshire Boulevard, Los Angeles, CA 90024",
+      "note": "Wilshire Blvd in Westwood, the same ZIP as Raymond Fouquet Square, where the Saturday La Grange Nichols Canyon ride starts at 8. No bike line on the page. No rate shown; self-parking $55 a day, valet $77 (Sept 2026).",
+      "price_hint": null,
+      "bike_policy": "No stated policy — ask when you book"
+    },
+    {
+      "name": "Kimpton Everly Hotel",
+      "url": "https://www.ihg.com/kimptonhotels/hotels/us/en/everly-hotel-los-angeles-ca/laxgy/hoteldetail",
+      "booking_url": null,
+      "address": "1800 Argyle Ave, Los Angeles, CA 90028",
+      "note": "Hollywood, below the hills; Griffith Park is the near end of a ride from here. No bike line on the page. No rate shown; valet parking $75 plus tax a night (Sept 2026).",
+      "price_hint": null,
+      "bike_policy": "No stated policy — ask when you book"
+    },
+    {
+      "name": "Sea Sprite Beach Club",
+      "url": "https://www.seaspritebeachclub.com/",
+      "booking_url": "https://res.windsurfercrs.com/ibe/details.aspx?hotelID=15910",
+      "address": "1016 The Strand, Hermosa Beach, CA 90254",
+      "note": "On the Strand in Hermosa Beach; the Strand is the beach path here, and the page says \"direct access to The Strand's 22-mile oceanfront path.\" South, the path leaves the sand at First Ave for the roll to Redondo Pier and the Donut start. The page's only bike line is about rentals. Starting rate $287 (Sept 2026), after a 2025 remodel.",
+      "price_hint": "$$$",
+      "bike_policy": "No stated policy — ask when you book"
+    }
+  ],
+  "bike_shops": [
+    {
+      "name": "Helen's Cycles Santa Monica",
+      "url": "https://www.helenscycles.com/about/santa-monica-pg284.htm",
+      "address": "2501 Broadway, Santa Monica, CA 90404",
+      "phone": "(310) 829-1836",
+      "services": [
+        "repair",
+        "fitting",
+        "rental",
+        "rental-road",
+        "shop-rides"
+      ],
+      "note": "Zone 1, the Westside, about 13 miles west of downtown and a mile or so from the La Grange 6:30 weekday start at 26th and San Vicente. Rents a carbon Cannondale SuperSix EVO CRB 3: $120 for one day, $90 a day for three days, $75 a day for five or more (Sept 2026); pedals, helmet and lock on request, flat kit in the saddle bag, photo ID, reserve by phone. Closed Mondays; Tuesday to Saturday 10 to 6, Sunday 11 to 5; service is call-ahead, not walk-in (standard tune-up $125, Sept 2026). Bike fitting on site; boxes a bike to ship home for $145 (Sept 2026); road and dirt shop rides leave from the door but the site lists the schedule as TBD — check the shop's Strava club."
+    },
+    {
+      "name": "Bike Attack",
+      "url": "https://bikeattack.com/",
+      "address": "2904 Main Street, Santa Monica, CA 90405",
+      "phone": "(310) 862-5001",
+      "services": [
+        "repair",
+        "rental",
+        "rental-road"
+      ],
+      "note": "Zone 1, Main Street at the Ocean Park end of Santa Monica, about 14 miles west of downtown. Rents Bianchi and KHS road bikes with Shimano 105 or similar: $50 a day or $75 for 24 hours (Sept 2026), first come first served, no reservations — call before you count on one; the fleet changes. Open every day 10 to 6. Flat fix $25 plus tube, tune-ups $95 to $235; assembles a boxed bike for $120 to $300 and boxes one to ship for $100 to $250 (Sept 2026), but the site does not say it receives shipments addressed to the shop — ask."
+    },
+    {
+      "name": "Bike Shop LA",
+      "url": "https://www.bikeshopla.com/",
+      "address": "7740 Santa Monica Blvd, West Hollywood, CA 90046",
+      "phone": "(323) 515-0070",
+      "services": [
+        "repair",
+        "ship-to-shop"
+      ],
+      "note": "West Hollywood, about 7 miles west of downtown; the closest pick to the Hollywood side of Nichols Canyon and to Griffith Park. The one confirmed ship-to-shop: register with BikeFlights, name Bike Shop LA as the recipient, they build it and call you; no build fee is published (Sept 2026). Walk-ins welcome, no appointment, typical turnaround 24 to 48 hours; flat fix $23 plus tube, standard tune-up $109.25 (Sept 2026). Open every day; the site says 9 to 5 in one place and 10 to 5 in another. No rentals of its own."
+    },
+    {
+      "name": "Incycle Pasadena",
+      "url": "https://www.incycle.com/pages/pasadena-ca",
+      "address": "175 S Fair Oaks Ave, Pasadena, CA 91105",
+      "phone": "(626) 577-0440",
+      "services": [
+        "repair",
+        "fitting",
+        "shop-rides"
+      ],
+      "note": "Zone 4, Old Pasadena, about 8 miles northeast of downtown; the shop for the San Gabriels side. Retul custom fit, 2.5 hours, $400 (Sept 2026), booked at this store. Runs the FOO CHOW ride from the door, first and third Tuesdays, roll at 7 pm (already in the rides directory). Open every day: Monday 10 to 5, Tuesday to Saturday 10 to 6, Sunday 11 to 5. The chain's service page lists boxed-bike assembly at $70 to $200 (Sept 2026) and does not say the store receives shipped bikes — call."
+    },
+    {
+      "name": "Helen's Cycles Manhattan Beach",
+      "url": "https://www.helenscycles.com/about/manhattan-beach-pg283.htm",
+      "address": "1570-C Rosecrans Avenue, Manhattan Beach, CA 90266",
+      "phone": "(310) 321-5290",
+      "services": [
+        "repair",
+        "fitting",
+        "rental"
+      ],
+      "note": "Zone 5, the South Bay, about 13 miles southwest of downtown, for the beach path south and the Palos Verdes loop. Closed Mondays; Tuesday to Saturday 10 to 6, Sunday 11 to 5; call ahead for service. Repair and bike fitting on site. The only rental here is a Cannondale Treadwell 3, a flat-bar fitness bike, $50 a day (Sept 2026) — fine for the beach path, not the bike for the Donut."
+    },
+    {
+      "name": "C Street Bikes",
+      "url": "https://www.cstreetbikes.com/",
+      "address": "3717 Cahuenga Blvd., Studio City, CA 91604",
+      "phone": "(818) 980-7456",
+      "services": [
+        "repair"
+      ],
+      "note": "Zone 6, the Valley, on Cahuenga Blvd in Studio City, about 9 miles northwest of downtown. Family-owned; repair and service on road, gravel, mountain and commuter bikes. Tuesday to Saturday 11 to 6, or by appointment; closed Sunday and Monday. No rentals, fitting or shipping stated on the site; email service@cstreetbikes.com before you show up."
+    }
+  ],
+  "culture": [
+    {
+      "name": "Amoeba Music Hollywood",
+      "kind": "record-store",
+      "url": "https://www.amoeba.com/our-stores/",
+      "address": "6200 Hollywood Blvd. Los Angeles, CA 90028",
+      "note": "The big one, on Hollywood Blvd a few miles west of Los Feliz (Zone 3). New and used vinyl, CDs and DVDs, and in-store shows. Open 11 to 8 Monday to Thursday and 11 to 9 Friday to Sunday, so it works as the evening after a Griffith Park ride."
+    },
+    {
+      "name": "Record Surplus",
+      "kind": "record-store",
+      "url": "https://www.recordsurplusla.com/",
+      "address": "12436 Santa Monica Blvd., Los Angeles, CA 90025",
+      "note": "Zone 1, West LA, on Santa Monica Blvd inland from the beach. New and used vinyl, used CDs and cassettes, buy-sell-trade; it calls itself one of the largest record stores in Los Angeles. Open 11:30 to 7 every day. The one to hit after a Westside ride instead of driving to Hollywood."
+    },
+    {
+      "name": "Skylight Books",
+      "kind": "bookstore",
+      "url": "https://www.skylightbooks.com/",
+      "address": "1818 N Vermont Ave, Los Angeles, CA 90027",
+      "note": "Zone 3, Los Feliz, at the foot of Griffith Park. Independent, with an Arts Annex, small-press picks and a full events calendar. Open 10 a.m. to 10 p.m. every day, so it is there after dinner."
+    },
+    {
+      "name": "The Broad",
+      "kind": "museum",
+      "url": "https://www.thebroad.org/visit",
+      "address": "221 S. Grand Avenue, Los Angeles, CA 90012",
+      "note": "Downtown. Two hours, and general admission is free; timed tickets recommended, walk-ups taken daily. Open 11 to 5 Tuesday, Wednesday and Friday, 11 to 8 Thursday, 10 to 6 Saturday and Sunday, closed Monday. Parking $19 for three hours with validation (Sept 2026). Grand Ave. is closed between 1st and 2nd St. while the expansion is built (Sept 2026)."
+    },
+    {
+      "name": "Akbar",
+      "kind": "bar",
+      "url": "https://akbarsilverlake.com/",
+      "address": "4356 W Sunset Blvd, Los Angeles, CA 90029",
+      "note": "Silver Lake, on Sunset. Opened December 31, 1996. Its own site calls it \"a welcoming, creative, alternative space for queer and queer allies in Silver Lake,\" a neighborhood hangout and a dance bar. Open 4 p.m. to 2 a.m. every day. Sold after 27 years by the two who opened it to the managers who ran it through the pandemic."
+    },
+    {
+      "name": "Downtown Santa Monica Farmers Market (Wednesday)",
+      "kind": "market",
+      "url": "https://downtownsm.com/events-calendar/8948/downtown-farmers-market--wednesdays",
+      "address": "155-199 Arizona Ave, Santa Monica, CA 90401",
+      "note": "Downtown Santa Monica. Wednesdays 8 a.m. to 1 p.m., year-round, rain or shine; 60-plus farm stands, per the district's page, and the chefs shop it. A Saturday market runs the same hours in the same spot. No bike parking stated."
+    },
+    {
+      "name": "Griffith Observatory",
+      "kind": "other",
+      "url": "https://griffithobservatory.lacity.gov/",
+      "address": "2800 East Observatory Road, Los Angeles, CA 90027",
+      "note": "Zone 3, the top of the observatory climb. Go back after dark: admission is free, the public telescopes are free, and it is open noon to 10 p.m. Tuesday to Friday, 10 a.m. to 10 p.m. Saturday and Sunday, closed Monday. Paid parking up top, free parking downhill, per its site."
+    }
+  ],
+  "clubs": [
+    {
+      "name": "Different Spokes Southern California",
+      "url": "https://www.differentspokes.com/",
+      "note": "The LGBTQ+ cycling club. Sunday rides with a start and route that rotate and are posted on the club calendar; no-drop.",
+      "inclusive_focus": [
+        "lgbtq",
+        "no-drop"
+      ],
+      "ride": "los-angeles-ca-different-spokes-sunday-ride"
+    },
+    {
+      "name": "Velo Club La Grange",
+      "url": "https://www.lagrange.org/rides",
+      "note": "The Westside club. Weekday rides leave 26th and San Vicente in Santa Monica at 6:30 (Marina Ride, Mandeville Canyon, Gravel Wednesday, Amalfi Loops, Marina Lite; 15 to 26 miles) and the Saturday Nichols Canyon ride leaves Westwood at 8. Every one is open to non-members; helmet required, no earphones. A monthly women's ride for female-identifying riders at a social pace where, the club says, no one gets left behind.",
+      "inclusive_focus": [
+        "women-trans-femme",
+        "gravel"
+      ],
+      "ride": "los-angeles-ca-nichols-canyon-ride-velo-club-la-grange"
+    },
+    {
+      "name": "Big Orange Cycling",
+      "url": "https://www.bigorangecycling.org/local-rides",
+      "note": "The South Bay club, and the one page that lists the South Bay's rides: the Donut (Saturday 8, Avenue I and Elena, Redondo Beach), the New Pier Ride (Tuesday and Thursday 6:40, Manhattan Beach Pier), the Wheatgrass (Sunday 8, Malaga Cove Plaza), plus its own Saturday club ride and Sunday team ride. The Friendly Donut Ride, Saturdays from Miramar Park, is the no-drop one. Show up.",
+      "inclusive_focus": [
+        "no-drop"
+      ]
+    },
+    {
+      "name": "Bicycle Kitchen",
+      "url": "https://bicyclekitchen.org/",
+      "note": "The volunteer-run co-op at 4429 Fountain Ave: walk in, no membership, no fee, and fix your own bike with their tools and their help. Open Monday to Thursday evenings and Saturday 12 to 3; call ahead, (323) 662-2776, because nights get cancelled. Thursday is the gender-expansive wrench night, in their words for women, trans and non-binary folks.",
+      "inclusive_focus": [
+        "women-trans-femme"
+      ]
+    },
+    {
+      "name": "Wild Wolf Cycling Collective",
+      "url": "https://wildwolfcc.weebly.com/",
+      "note": "A collective that says it centers all gender-expansive and women riders, founded and led by BIPOC and LGBTQIA+ riders, all skill levels. Social rides, monthly bike campouts, wrench classes and skill shares around LA. No fixed weekly ride on its site; join the Slack through the form on the site or follow @wildwolf.cc for the next one.",
+      "inclusive_focus": [
+        "women-trans-femme",
+        "lgbtq",
+        "bipoc"
+      ]
+    },
+    {
+      "name": "Black Girls Do Bike: Los Angeles",
+      "url": "https://www.blackgirlsdobike.org/chapters",
+      "note": "The LA chapter of the national group, which describes itself as a community of women and girls of color who ride. The chapter runs through its Facebook group (facebook.com/groups/BGDBLA), where rides are posted; join the group and ask for the next one. No ride schedule is published on the site.",
+      "inclusive_focus": [
+        "bipoc",
+        "women-trans-femme"
+      ]
+    },
+    {
+      "name": "Los Angeles Wheelmen",
+      "url": "https://www.lawheelmen.org/",
+      "note": "A recreational club with a ride every Sunday from a different start around LA, Orange and Ventura counties, with easy, moderate and ambitious routes, and a smaller Saturday group on shorter, harder ones. Guests ride with a signed waiver; helmets mandatory; the month's schedule and route sheets are on the site. It puts on the Grand Tour double century in late June.",
+      "inclusive_focus": []
+    }
+  ],
+  "bring_your_bike": {
+    "summary": "Bring it. Alaska, Southwest, Delta and American all check a packed bike as a standard bag, so it costs the same as your suitcase, $45 each way (Sept 2026), and Bike Shop LA in West Hollywood receives a BikeFlights delivery and builds it if you would rather not fly with the case. Renting only wins on a one- or two-day trip: the two Westside road rentals run $50 to $120 a day (Sept 2026), and nobody rents gravel. You will want a car; the coast, the canyons and the San Gabriels start 20 to 40 miles apart.",
+    "fly": {
+      "airports": [
+        {
+          "name": "Los Angeles International",
+          "code": "LAX",
+          "miles": 12,
+          "note": "About 12 miles southwest of downtown and the closest airport to the Westside riding. Alaska (Terminal 6), Southwest (Terminal 1), Delta (Terminal 3), American (Terminal 4) and United (Terminal 7), per the airport's airline list (Sept 2026). Ride apps and taxis pick up at the LAX-it lot next to Terminal 1, a walk or a free shuttle from the terminals; rental car offices are off airport by shuttle."
+        },
+        {
+          "name": "Hollywood Burbank",
+          "code": "BUR",
+          "miles": 12,
+          "note": "About 12 miles north of downtown; the airport for Griffith Park, the Valley and the Pasadena side. Alaska, American, Delta, Frontier, JetBlue, Southwest, Spirit and United, per the airport's FAQ (Sept 2026). Ten on-site rental car companies in one building, and an Amtrak and Metrolink station across the street. Smaller and faster to get out of than LAX."
+        },
+        {
+          "name": "Long Beach",
+          "code": "LGB",
+          "miles": 17,
+          "note": "About 17 miles south of downtown; the airport for the South Bay, Palos Verdes and the Long Beach rides. Southwest, Hawaiian, Delta and Alaska, per the airport's airlines page (Sept 2026). Small; a Southwest rider from Phoenix or Boise lands here without the LAX crowd."
+        },
+        {
+          "name": "Ontario International",
+          "code": "ONT",
+          "miles": 37,
+          "note": "About 37 miles east of downtown, on the far side of the San Gabriels' foothills; closer to Glendora Mountain Road than to anything on the coast. Alaska, American, Delta, Frontier, JetBlue, Southwest, United and others, per the airport's airlines page (Sept 2026). Only worth it for a GMR or Mt. Baldy trip."
+        },
+        {
+          "name": "John Wayne (Orange County)",
+          "code": "SNA",
+          "miles": 34,
+          "note": "About 34 miles southeast of downtown, in Orange County. Alaska, American, Delta, Southwest, United, Frontier, Spirit and others, per the airport's airlines page (Sept 2026). Wrong side of the metro for the Westside, the canyons and the San Gabriels; a fallback fare, not a plan."
+        }
+      ],
+      "airline_note": "Read on each airline's own page, Sept 2026. Alaska: a non-motorized bike in a soft or hard case or the maker's box is a standard checked bag; the oversize fee is waived and the overweight fee is waived up to 70 lb; over 115 linear inches pays oversize, over 70 lb pays overweight; one bike per case, handlebars sideways, pedals off. First bag $45, second $55 for flights ticketed on or after April 10, 2026. Southwest: a non-motorized single-seat bike is checked baggage at the standard bag fee with oversize fees waived; over 100 lb or 115 linear inches is refused; pedals and handlebars removed and wrapped; a cardboard or soft case flies with a limited release. First bag $45, second $55 for travel booked on or after April 9, 2026 ($35 and $45 before). Delta: a non-motorized touring or single-seat racing bike in a container built for bikes goes at the standard bag allowance and fee; over 50 lb pays the excess weight fee; over 115 linear inches or 100 lb is refused; soft bags sign a limited release. First bag $45, second $55, US domestic Main. American: one non-motorized bike in a hard case, bike bag or box; standard checked bag fee up to 50 lb, standard overweight fee 51 to 70 lb, oversize fees do not apply; handlebars fixed sideways and pedals off or wrapped; not in a hard case it is treated as fragile. First bag $50 ($45 paid online), second $60 ($55 online), updated May 18, 2026. United: its sports-equipment page would not load from this session; not confirmed. Keep a bike case under 50 lb on every one of these and it is one ordinary checked bag."
+    },
+    "ship": {
+      "note": "One shop says it on its own site: Bike Shop LA in West Hollywood takes BikeFlights deliveries addressed to the shop and builds the bike; no build fee is published (Sept 2026). Helen's Cycles, Bike Attack and Incycle each publish a fee to assemble a boxed bike ($145, $120 to $300 and $70 to $200, Sept 2026) but none says it will receive a shipment — call before you book. Bike Shop LA's page says BikeFlights typically runs about $100 within the US (Sept 2026). BikeFlights ships by UPS and tells you to allow an extra day or two for weather; its pages do not state a transit-day count (read Sept 2026). ShipBikes, also UPS ground, says no more than 6 business days one way anywhere in the continental US (read Sept 2026). Ship a week ahead and the bike is built before you land.",
+      "shops": [
+        {
+          "name": "Bike Shop LA",
+          "url": "https://www.bikeshopla.com/articles/bike-shipping-assembly-pg230.htm",
+          "note": "Register with BikeFlights, pick Bike Shop LA as the recipient; they build it and call when it is ready. Build fee not published (Sept 2026). Open every day. 7740 Santa Monica Blvd, West Hollywood; (323) 515-0070."
+        }
+      ]
+    },
+    "rent": {
+      "note": "Two Westside shops rent a road bike worth the day; neither lists sizes, so call with your height. Helen's Cycles Santa Monica has a carbon Cannondale SuperSix EVO CRB 3 at $120 a day, $90 a day for three days, $75 a day for five or more, with the pedals you ask for (Sept 2026). Bike Attack on Main Street has Bianchi and KHS road bikes at Shimano 105 level, $50 a day or $75 for 24 hours, first come first served (Sept 2026). No gravel or mountain bike rental was confirmed anywhere. Helen's Manhattan Beach rents only a Treadwell fitness bike, $50 a day (Sept 2026), which does the beach path and not much more. The math: flying the bike costs $90 round trip on Alaska, Southwest or Delta and $100 on American (Sept 2026), so renting wins only on a one- or two-day trip, and only if a 105-level bike in a size you did not choose is fine for the Donut or Latigo. Three days or more, bring yours. Gravel: bring yours, nobody rents one.",
+      "shops": [
+        {
+          "name": "Helen's Cycles Santa Monica",
+          "url": "https://www.helenscycles.com/articles/bike-rentals-pg271.htm",
+          "note": "Cannondale SuperSix EVO CRB 3 (carbon road). $120 one day, $90 a day for three days, $75 a day for five or more (Sept 2026). Pedals, helmet and lock free on request; flat kit included; photo ID. Reserve ahead: (310) 829-1836. Sizes not listed. Closed Mondays."
+        },
+        {
+          "name": "Bike Attack",
+          "url": "https://bikeattack.com/bike-rentals/",
+          "note": "Bianchi and KHS road bikes, Shimano 105 or similar. $50 a day or $75 for 24 hours (Sept 2026). First come first served, no reservations; call (310) 862-5001 for availability. Waiver, ID and card copy. Sizes not listed. Open every day 10 to 6."
+        }
+      ]
+    },
+    "get_around": {
+      "car_needed": true,
+      "note": "Yes, unless you are staying on the Westside and riding only the coast and the Saturday La Grange ride. The zones sit far apart: the Westwood ride start is about 11 miles from downtown, Pasadena and the San Gabriels are about 18 miles the other way, Glendora Mountain Road is another 20 beyond that, and the canyon climbs start in Malibu. Out of LAX with a bike case: rental car offices are off airport, reached by the free shuttle under the purple Rental Car sign; ride apps and taxis pick up at the LAX-it lot next to Terminal 1, a walk or a free shuttle from the terminals (the airport's ground-transport page, Sept 2026) — book an XL and expect the case to ride in the back. The FlyAway bus runs nonstop to Union Station and Van Nuys, $12.75 one way, contactless card or app only; its pages say nothing about oversize luggage or bike boxes. Metro rail from LAX: a free shuttle from the terminals to the LAX/Metro Transit Center for the C and K Lines, $1.75 a ride with free transfers for two hours (metro.net, Sept 2026); fine with a built bike, not the way to move a case.",
+      "transit_bike_rules": "LA Metro, read Sept 2026: bikes ride on rail at all operating hours; board at the doors marked with the yellow bike sign and stand with the bike in the open area. E-bikes are allowed on trains if they are standard-bike sized and pass inspection; fuel-powered, three-wheeled, tandem, recumbent and over-six-foot bikes, mopeds and trailers are not. Every bus has two or more racks on the front; motorized bikes and any bike over 55 lb cannot go on the rack; folding bikes with wheels 20 inches or smaller ride inside. Metrolink (Burbank airport station, Union Station) has its own bike rules on metrolinktrains.com; not read this run.",
+      "bike_share": {
+        "name": "Metro Bike Share",
+        "url": "https://bikeshare.metro.net/",
+        "note": "Classic and electric bikes, 24 hours. A single ride is $1.75 per 30 minutes; an e-bike is $1 more to unlock for casual riders (Sept 2026). Docks are downtown, on the Westside and along the river path, not in the canyons. For the errand or the ride to dinner, not the ride."
+      }
+    },
+    "rules_and_safety": "California, read Sept 2026. Drivers must give three feet when passing a bike (Vehicle Code 21760, the Three Feet for Safety Act); since January 1, 2023 (AB 1909) a driver in the same lane must change lanes to pass when one is open, and when three feet is not possible must slow to a reasonable speed and pass only when it does not endanger the rider. The fine is $35, $220 if a collision injures the rider. Helmets are required under 18 (21212). E-bikes come in three classes (312.5): class 1 pedal-assist to 20 mph, class 2 throttle to 20 mph, class 3 pedal-assist to 28 mph with a speedometer, rider 16 or older and helmeted. Ride as far right as practicable except when passing, turning left, avoiding a hazard or in a lane too narrow to share (21202). Sidewalk riding is set city by city (21206); the City of Los Angeles allows it unless ridden with willful or wanton disregard for people or property (LAMC 56.15), and Santa Monica and the beach cities set their own rules. California has no stop-as-yield law. The read: the city recorded 303 traffic deaths in 2024 by preliminary LAPD data, up from about 240 when Vision Zero began in 2015, and the city controller's April 2025 audit said the program was hampered by weak political support and half its projects unbuilt (LAist, April 14, 2025). LAPD data through late 2024 put 35 percent of fatal crashes as hit-and-runs and most bicycling deaths in South LA (BikinginLA, Oct 2024; Crosstown, Nov 2024). The coast path and the canyon roads are a different world from the boulevards; the miles between them are where you stay alert.",
+    "sources": [
+      "https://www.alaskaair.com/content/travel-info/baggage/special-baggage/traveling-with-sporting-equipment",
+      "https://www.alaskaair.com/content/travel-info/baggage/checked-bags",
+      "https://support.southwest.com/helpcenter/article/flying-with-a-bike-policy",
+      "https://www.southwest.com/html/customer-service/travel-fees.html",
+      "https://www.delta.com/us/en/baggage/special-items/sporting-equipment",
+      "https://www.delta.com/us/en/baggage/overview",
+      "https://www.aa.com/i18n/travel-info/baggage/specialty-and-sports.jsp",
+      "https://www.aa.com/i18n/travel-info/baggage/checked-baggage-policy.jsp",
+      "https://www.flylax.com/lax-airline-list",
+      "https://www.flylax.com/lax-traffic-and-ground-transportation",
+      "https://www.flylax.com/flyaway-bus/fares-tickets",
+      "https://www.flylax.com/flyaway-bus/metro-rider-information",
+      "https://www.flylax.com/media/2150",
+      "https://www.hollywoodburbankairport.com/about-us/faq/",
+      "https://www.longbeach.gov/lgb/airlines-destinations/",
+      "https://www.flyontario.com/flights/airlines",
+      "https://www.ocair.com/travelers/flights/airlines/",
+      "https://www.metro.net/riding/biking-on-metro/",
+      "https://www.metro.net/riding/go-metro-to-lax/",
+      "https://bikeshare.metro.net/faq/how-much-does-metro-bike-share-cost/",
+      "https://www.bikeshopla.com/articles/bike-shipping-assembly-pg230.htm",
+      "https://faq.bikeflights.com/support/solutions/articles/13000072401-how-does-the-service-work-",
+      "https://faq.bikeflights.com/support/solutions/articles/13000072445-what-delivery-date-should-i-choose-",
+      "https://www.bikeflights.com/shippingpolicy",
+      "https://www.shipbikes.com/frequently-asked-questions/",
+      "https://www.helenscycles.com/articles/bike-rentals-pg271.htm",
+      "https://bikeattack.com/bike-rentals/",
+      "https://california.public.law/codes/vehicle_code_section_21760",
+      "https://www.calbike.org/go_for_a_ride/california_bicycle_laws/",
+      "https://www.dmv.ca.gov/portal/driver-education-and-safety/special-interest-driver-guides/bicyclists-pedestrians/",
+      "https://codelibrary.amlegal.com/codes/los_angeles/latest/lamc/0-0-0-138429",
+      "https://laist.com/news/transportation/lack-of-political-will-and-poor-coordination-hamper-la-goal-to-eliminate-traffic-deaths-audit-finds",
+      "https://bikinginla.com/2024/10/14/la-on-track-for-record-setting-traffic-deaths-including-5-previously-unreported-bicycling-deaths-and-injuries-continue/",
+      "https://xtown.la/2024/11/25/los-angeles-suffering-from-a-spike-in-deadly-hit-and-run-collisions/"
+    ]
+  },
+  "travel_links": [],
+  "faq": [
+    {
+      "q": "Should I bring my bike to Los Angeles?",
+      "a": "Yes, for three days or more. Alaska, Southwest, Delta and American check a packed bike as a standard bag, $45 to $50 each way (Sept 2026), and Bike Shop LA in West Hollywood receives a BikeFlights shipment and builds it. Renting only wins on a one- or two-day trip, and nobody rents a gravel bike."
+    },
+    {
+      "q": "What does it cost to fly with a bike to LA?",
+      "a": "On Alaska, Southwest and Delta a bike case under 50 lb is a standard checked bag, $45 for the first bag (Sept 2026); American is $50, or $45 paid online. Oversize fees are waived on all four. United's page would not load when we checked, so confirm it yourself."
+    },
+    {
+      "q": "Do I need a car to ride in Los Angeles?",
+      "a": "Yes, unless you stay on the Westside and ride only the coast and the Saturday La Grange ride. The Westwood ride start is about 11 miles from downtown, Pasadena and the San Gabriels about 18 the other way, Glendora Mountain Road another 20 beyond that, and the canyon climbs start in Malibu."
+    },
+    {
+      "q": "Where do group rides start in Los Angeles?",
+      "a": "Velo Club La Grange leaves 26th and San Vicente in Santa Monica at 6:30 a.m. on weekdays and Raymond Fouquet Square in Westwood at 8 on Saturdays, open to non-members. The Donut Ride leaves Avenue I and Elena in Redondo Beach at 8 on Saturdays. Different Spokes, the LGBTQ+ club, rides Sundays from a rotating start. LA Critical Mass gathers at Wilshire and Western at 6:30 p.m. on the last Friday of the month."
+    },
+    {
+      "q": "Can I rent a road bike in Los Angeles?",
+      "a": "Two Santa Monica shops rent one worth the day: Helen's Cycles has a carbon Cannondale SuperSix at $120 a day, less for three or five days, and Bike Attack has Shimano 105-level Bianchi and KHS bikes at $50 a day, first come first served (Sept 2026). Neither lists sizes, so call with your height. No gravel or mountain bike rental was confirmed."
+    },
+    {
+      "q": "Is the beach path open after the Palisades fire?",
+      "a": "LA County's page lists the path from Will Rogers State Beach to Torrance Beach. North of the path, PCH from Chautauqua Blvd to Carbon Beach Terrace is a Caltrans fire-repair work zone with cones, 25 to 35 mph and weekday single-lane closures (Caltrans and the Santa Monica Daily Press, May to Sept 2026). Check the Caltrans page before riding PCH north of the path."
+    }
+  ],
+  "sources": [
+    "https://www.lagrange.org/nichols",
+    "https://www.lagrange.org/rides",
+    "https://ridewithgps.com/routes/31929982",
+    "https://ridewithgps.com/routes/27086090",
+    "https://ridewithgps.com/routes/37914104",
+    "https://ridewithgps.com/routes/10616171",
+    "https://ridewithgps.com/routes/6391692",
+    "https://ridewithgps.com/routes/33986805",
+    "https://ridewithgps.com/regions/north_america/us/106-malibu-california-usa",
+    "https://www.komoot.com/smarttour/e1773790309/griffith-park-and-los-angeles-river-loop",
+    "https://www.komoot.com/smarttour/e1772037750/palos-verdes-classic-donut-loop",
+    "https://beaches.lacounty.gov/la-county-beach-bike-path/",
+    "https://www.helenscycles.com/events/our-favorite-rides-routes-pg1456.htm",
+    "https://www.lightningvelo.org/content.aspx?page_id=22&club_id=333987&module_id=776697",
+    "https://ciclavalley.org/descending-glendora-mountain-road/",
+    "https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/palisades-fire-repairs",
+    "https://www.smdp.com/weekly-road-and-lane-closures-on-pacific-coast-highway-and-topanga-canyon-boulevard-in-palisades-work-zones/",
+    "https://www.smdp.com/lane-closures-persist-along-pch-as-workers-contine-to-repair-fire-damage/",
+    "https://www.strava.com/segments/646188",
+    "https://www.malibucity.org/m/newsflash/home/detail/2134",
+    "https://www.malibucity.org/CivicAlerts.aspx?AID=2068",
+    "https://palisadesnews.com/southbound-pacific-coast-highway-lane-closures-near-coastline-drive-sept-14-18/",
+    "https://ridewithgps.com/routes/37914104.json",
+    "https://www.helenscycles.com/",
+    "https://www.helenscycles.com/storelocator/",
+    "https://www.helenscycles.com/about/santa-monica-pg284.htm",
+    "https://www.helenscycles.com/about/manhattan-beach-pg283.htm",
+    "https://www.helenscycles.com/articles/bike-rentals-pg271.htm",
+    "https://www.helenscycles.com/articles/bike-repair-and-service-pg62.htm",
+    "https://www.helenscycles.com/articles/local-rides-events-pg390.htm",
+    "https://bikeattack.com/",
+    "https://bikeattack.com/bike-rentals/",
+    "https://bikeattack.com/service-repairs/",
+    "https://bikeattack.com/contact-us/",
+    "https://www.bikeshopla.com/articles/bike-shipping-assembly-pg230.htm",
+    "https://www.bikeshopla.com/articles/bike-service-repair-pg186.htm",
+    "https://www.incycle.com/pages/pasadena-ca",
+    "https://www.incycle.com/pages/bike-fit",
+    "https://www.incycle.com/pages/bike-service",
+    "https://www.cstreetbikes.com/",
+    "https://www.velopasadena.com/articles/bike-service-repair-pg186.htm",
+    "https://www.incycle.com/pages/retail-event/foo-chow-ride",
+    "https://www.spokebicyclecafe.com/",
+    "https://www.caffeluxxe.com/pages/brentwood-country-mart",
+    "https://www.brentwoodcountrymart.com/caffe-luxxe",
+    "https://www.brentwoodcountrymart.com/",
+    "https://en.wikipedia.org/wiki/Brentwood_Country_Mart",
+    "https://www.spokebicyclecafe.com/findus",
+    "https://www.exploretock.com/pedalers-fork-calabasas",
+    "https://joe.coffee/locations/ca/calabasas/pedalers-fork-calabasas-cdbcaacb-7841-4872-b5f1-951f88434e36/",
+    "https://www.opentable.com/r/pedalers-fork-calabasas",
+    "https://www.bigorangecycling.org/local-rides",
+    "https://joe.coffee/locations/ca/los-angeles/the-trails-los-angeles-56b2caf9-b39c-4a82-ba6e-7b1302b7d81f/",
+    "https://joe.coffee/locations/ca/santa-monica/dogtown-coffee-santa-monica/",
+    "https://www.yelp.com/biz/spoke-bicycle-cafe-los-angeles-3",
+    "https://www.pedalersfork.com/",
+    "https://www.10speedcoffee.com/",
+    "https://www.dogtowncoffee.com/",
+    "https://www.santamonica.gov/local-businesses/dogtown-coffee",
+    "https://order.kekes.com/store/YellowVase-620368",
+    "https://toast.app/r/the-trails-cafe-2333-fern-dell-drive/order/r-50af251e-b35c-472e-9727-373b09a0a1df",
+    "https://www.toasttab.com/local/pedalers-fork-calabasas-23504-calabasas-rd/r-1d365613-db5b-4422-a361-564a1d63da51",
+    "https://reddichickbbq.com/contact-us",
+    "https://www.brentwoodcountrymart.com/reddi-chick-bbq",
+    "https://www.pineandcrane.com/silverlake",
+    "https://cantersdeli.com/north-fairfax",
+    "https://brentsdeli.com/locations/",
+    "https://www.opentable.com/r/marthas-22nd-street-grill-hermosa-beach",
+    "https://frankiapp.com/business/martha-s-22nd-street-grill-307275",
+    "https://www.tripadvisor.com/Restaurant_Review-g32655-d4915186-Reviews-The_Rock_Store-Los_Angeles_California.html",
+    "https://www.conejovalleyguide.com/welcome/hang-out-with-motorcyclists-at-the-rock-store-on-mulholland.html",
+    "https://www.yellowpages.com/glendora-ca/mip/the-donut-man-22285272",
+    "https://www.fred62.com/",
+    "https://www.brentsdeli.com/",
+    "https://cantersdeli.com/",
+    "http://www.thedonutmanca.com",
+    "https://www.toasttab.com/local/order/martha-s-22nd-street-grill-25-22nd-st",
+    "https://maps.apple.com/place?place-id=I3DEE6E8C1D5D1475",
+    "https://centerrideout.lalgbtcenter.org/",
+    "https://www.hiusa.org/hi-los-angeles-santa-monica-hostel-faq",
+    "https://www.hiusa.org/find-hostels/california/santa-monica-1436-2nd-street",
+    "https://www.hiusa.org/group-travel/california/santa-monica-1436-2nd-street",
+    "https://www.innatvenicebeach.com/",
+    "https://www.thekinneyvenicebeach.com/",
+    "https://www.ambrosehotel.com/",
+    "https://www.ihg.com/kimptonhotels/hotels/us/en/hotel-palomar-la-beverly-hills/laxwp/hoteldetail",
+    "https://www.ihg.com/kimptonhotels/hotels/us/en/everly-hotel-los-angeles-ca/laxgy/hoteldetail",
+    "https://www.seaspritebeachclub.com/",
+    "https://www.hoteldena.com/",
+    "https://www.bikabout.com/lodging",
+    "https://www.hostelworld.com/pwa/hosteldetails.php/HI-Los-Angeles-Santa-Monica-Hostel/Santa-Monica/1229",
+    "https://www.yelp.com/biz/hi-los-angeles-santa-monica-hostel-santa-monica-2",
+    "https://www.amoeba.com/our-stores/",
+    "https://www.recordsurplusla.com/",
+    "https://www.skylightbooks.com/",
+    "https://www.thebroad.org/visit",
+    "https://www.akbarsilverlake.com/",
+    "https://akbarsilverlake.com/about-us/",
+    "https://downtownsm.com/events-calendar/8948/downtown-farmers-market--wednesdays",
+    "https://www.downtownsm.com/dtsm-farmers-market",
+    "https://griffithobservatory.lacity.gov/",
+    "https://www.rockaway.com/",
+    "https://www.permanentrecordsla.com/",
+    "https://laist.com/news/entertainment/the-best-record-stores-in-los-angel-1",
+    "https://www.alaskaair.com/content/travel-info/baggage/special-baggage/traveling-with-sporting-equipment",
+    "https://www.alaskaair.com/content/travel-info/baggage/checked-bags",
+    "https://news.alaskaair.com/guest-experience/sports-equipment-update/",
+    "https://support.southwest.com/helpcenter/article/flying-with-a-bike-policy",
+    "https://www.southwest.com/html/customer-service/travel-fees.html",
+    "https://www.delta.com/us/en/baggage/special-items/sporting-equipment",
+    "https://www.delta.com/us/en/baggage/overview",
+    "https://www.aa.com/i18n/travel-info/baggage/specialty-and-sports.jsp",
+    "https://www.aa.com/i18n/travel-info/baggage/checked-baggage-policy.jsp",
+    "https://www.orucase.com/blogs/airline-guides/flying-with-a-bike-on-united-airlines",
+    "https://www.ibike.org/encouragement/travel/bags-american-airlines.htm",
+    "https://www.flylax.com/lax-airline-list",
+    "https://www.flylax.com/lax-traffic-and-ground-transportation",
+    "https://www.flylax.com/flyaway-bus/fares-tickets",
+    "https://www.flylax.com/flyaway-bus/metro-rider-information",
+    "https://www.flylax.com/media/2150",
+    "https://www.hollywoodburbankairport.com/about-us/faq/",
+    "https://www.longbeach.gov/lgb/airlines-destinations/",
+    "https://www.flyontario.com/flights/airlines",
+    "https://www.ocair.com/travelers/flights/airlines/",
+    "https://www.metro.net/riding/biking-on-metro/",
+    "https://www.metro.net/riding/go-metro-to-lax/",
+    "https://bikeshare.metro.net/faq/how-much-does-metro-bike-share-cost/",
+    "https://faq.bikeflights.com/support/solutions/articles/13000072401-how-does-the-service-work-",
+    "https://faq.bikeflights.com/support/solutions/articles/13000078512-why-do-bikeflights-and-ups-estimates-of-shipping-transit-times-or-delivery-date-differ-",
+    "https://faq.bikeflights.com/support/solutions/articles/13000072445-what-delivery-date-should-i-choose-",
+    "https://www.bikeflights.com/shippingpolicy",
+    "https://www.shipbikes.com/frequently-asked-questions/",
+    "https://california.public.law/codes/vehicle_code_section_21760",
+    "https://www.calbike.org/go_for_a_ride/california_bicycle_laws/",
+    "https://www.dmv.ca.gov/portal/driver-education-and-safety/special-interest-driver-guides/bicyclists-pedestrians/",
+    "https://codelibrary.amlegal.com/codes/los_angeles/latest/lamc/0-0-0-138429",
+    "https://visionzero.lacounty.gov/",
+    "https://ladot.lacity.gov/media-releases/press/vision-zero",
+    "https://laist.com/news/transportation/lack-of-political-will-and-poor-coordination-hamper-la-goal-to-eliminate-traffic-deaths-audit-finds",
+    "https://bikinginla.com/2024/10/14/la-on-track-for-record-setting-traffic-deaths-including-5-previously-unreported-bicycling-deaths-and-injuries-continue/",
+    "https://xtown.la/2024/11/25/los-angeles-suffering-from-a-spike-in-deadly-hit-and-run-collisions/",
+    "https://www.united.com/en/us/fly/baggage/sports-equipment.html",
+    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=21760",
+    "https://www.flylax.com/ground-transportation",
+    "https://www.alaskaair.com/content/travel-info/optional-services-fees",
+    "https://www.delta.com/us/en/baggage/checked-baggage/checked-baggage-fees-allowances",
+    "https://www.lagrange.org/womens-ride",
+    "https://www.strava.com/clubs/helenscycles",
+    "https://la-bike.org",
+    "https://www.la-bike.org/join-a-bike-ride-2",
+    "https://www.la-bike.org/chapters",
+    "https://bicyclekitchen.org",
+    "https://lawheelmen.org",
+    "https://www.lawheelmen.org/overview-of-rides/",
+    "https://www.blackgirlsdobike.org/",
+    "https://www.blackgirlsdobike.org/chapters",
+    "https://wildwolfcc.weebly.com/",
+    "https://ridewithgps.com/partners/wild-wolf-cycling-collective",
+    "https://www.strava.com/clubs/456639",
+    "https://la-criticalmass.org/",
+    "https://lapublicpress.org/2023/05/biking-in-la-hasnt-always-been-accepting-but-these-gender-expansive-group-rides-are-trying-to-change-that/",
+    "https://www.laweekly.com/7-group-bike-rides-for-cyclists-new-to-l-a-s-streets/",
+    "https://www.lawheelmen.org/upcoming-rides/",
+    "https://www.threads.com/@trashpandacycling",
+    "https://www.calbike.org/community-on-two-wheels-las-gender-expansive-ride/",
+    "https://queeradventurers.com/queer-bike-clubs/",
+    "https://www.wildwolfcc.com/organizers.html",
+    "https://www.instagram.com/wildwolf.cc/",
+    "https://www.facebook.com/groups/BGDBLA",
+    "https://la-criticalmass.org/faqs/"
+  ],
+  "verified": "2026-09-30"
+}

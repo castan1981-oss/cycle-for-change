@@ -1,0 +1,627 @@
+[
+  {
+    "slug": "los-angeles-ca-los-angeles-critical-mass",
+    "name": "Los Angeles Critical Mass",
+    "city": "Los Angeles",
+    "state": "CA",
+    "neighborhood": "Koreatown",
+    "lat": 34.0617,
+    "lng": -118.3089,
+    "geo_precision": "start",
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Last Friday of every month; gather 6:30 pm, roll at 7:29 pm",
+    "days": [
+      "fri"
+    ],
+    "time_local": "6:30 pm (rolls 7:29 pm)",
+    "frequency": "monthly",
+    "season": "year-round",
+    "start_location": {
+      "name": "Wilshire/Western Metro D Line station",
+      "address": "Wilshire Blvd & Western Ave, Koreatown, Los Angeles, CA"
+    },
+    "distance_miles": null,
+    "duration": null,
+    "pace": "mass ride; the group says all ages and skill levels",
+    "drop_policy": "no-drop",
+    "host": {
+      "name": "Los Angeles Critical Mass",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "description": "The last-Friday mass ride out of Koreatown, which calls itself the largest community bike ride in the country at 4,000-plus riders. Gather at Wilshire and Western by 6:30 and roll at 7:29. Every kind of bike; the group says all ages and skill levels. Read the ride rules and the waiver on the site before you come.",
+    "links": {
+      "website": "https://la-criticalmass.org/",
+      "instagram": "https://www.instagram.com/lacriticalmass/",
+      "facebook": "https://www.facebook.com/lacriticalmass/",
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://la-criticalmass.org/lacm-ride-rules/",
+        "https://la-criticalmass.org/directions-and-parking/"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://la-criticalmass.org/"
+    ],
+    "verified_on": "2026-09-30",
+    "confidence": "high",
+    "tz": "America/Los_Angeles",
+    "start_hhmm": "18:30",
+    "duration_min": null,
+    "season_months": null,
+    "monthly_rule": [
+      {
+        "ord": -1,
+        "day": "fri"
+      }
+    ]
+  },
+  {
+    "slug": "santa-monica-ca-la-grange-gravel-wednesday",
+    "name": "Gravel Wednesday (Velo Club La Grange)",
+    "city": "Santa Monica",
+    "state": "CA",
+    "neighborhood": "26th & San Vicente",
+    "lat": 34.0447,
+    "lng": -118.4869,
+    "geo_precision": "start",
+    "discipline": [
+      "gravel"
+    ],
+    "schedule": "Every Wednesday, 6:30 am",
+    "days": [
+      "wed"
+    ],
+    "time_local": "6:30 am",
+    "frequency": "weekly",
+    "season": "year-round",
+    "start_location": {
+      "name": "26th St & San Vicente Blvd",
+      "address": "San Vicente Blvd & 26th St, Santa Monica, CA"
+    },
+    "distance_miles": "15",
+    "duration": null,
+    "pace": "moderate/difficult; climbing and descending on gravel and loose dirt",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Velo Club La Grange",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "open to non-members; no fee stated",
+    "description": "The club's weekday dirt ride: 15 miles from the corner of 26th and San Vicente at 6:30 on Wednesdays, with climbing and descending on gravel and loose dirt. Open to members and non-members, like all the club's rides. The club's rules: helmet, lights when it's dark, no aero bars, no earphones.",
+    "links": {
+      "website": "https://www.lagrange.org/rides",
+      "instagram": "https://www.instagram.com/veloclublagrange",
+      "facebook": "https://www.facebook.com/groups/lagrangecycling",
+      "strava": "https://www.strava.com/clubs/velo-club-la-grange",
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.lagrange.org/rides"
+    ],
+    "verified_on": "2026-09-30",
+    "confidence": "medium",
+    "tz": "America/Los_Angeles",
+    "start_hhmm": "06:30",
+    "duration_min": null,
+    "season_months": null,
+    "monthly_rule": null
+  },
+  {
+    "slug": "redondo-beach-ca-the-donut-ride",
+    "name": "The Donut Ride",
+    "city": "Redondo Beach",
+    "state": "CA",
+    "neighborhood": "Riviera Village",
+    "lat": 33.8185,
+    "lng": -118.3866,
+    "geo_precision": "start",
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Saturday, 8:00 am",
+    "days": [
+      "sat"
+    ],
+    "time_local": "8:00 am",
+    "frequency": "weekly",
+    "season": "year-round",
+    "start_location": {
+      "name": "Avenue I & Elena Ave",
+      "address": "Avenue I & Elena Ave, Redondo Beach, CA"
+    },
+    "distance_miles": "42.9",
+    "duration": null,
+    "pace": "hard; regroups after the major climbs",
+    "drop_policy": "groups",
+    "host": {
+      "name": "The Donut Ride",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": "Ridden every Saturday since the 1980s, per bigorangecycling.org",
+    "cost": null,
+    "description": "The South Bay's Saturday ride since the 1980s, around the Palos Verdes peninsula: 42.9 miles and about 4,700 feet, per Big Orange's page. No club or team owns it. You show up at Avenue I and Elena at 8 and ride hard; it regroups after the major climbs. Not a first group ride.",
+    "links": {
+      "website": "https://www.bigorangecycling.org/local-rides",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.bigorangecycling.org/local-rides"
+    ],
+    "verified_on": "2026-09-30",
+    "confidence": "medium",
+    "tz": "America/Los_Angeles",
+    "start_hhmm": "08:00",
+    "duration_min": null,
+    "season_months": null,
+    "monthly_rule": null
+  },
+  {
+    "slug": "redondo-beach-ca-friendly-donut-ride",
+    "name": "Friendly Donut Ride (FDR)",
+    "city": "Redondo Beach",
+    "state": "CA",
+    "neighborhood": "Hollywood Riviera (south Redondo Beach)",
+    "lat": 33.8115,
+    "lng": -118.3912,
+    "geo_precision": "start",
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Saturday, usually 8:00 am",
+    "days": [
+      "sat"
+    ],
+    "time_local": "8:00 am (usually)",
+    "frequency": "weekly",
+    "season": "year-round",
+    "start_location": {
+      "name": "Miramar Park",
+      "address": "Miramar Park, Redondo Beach, CA"
+    },
+    "distance_miles": "25–75",
+    "duration": null,
+    "pace": "no-drop; 1,000 to 5,000-plus feet depending on the day",
+    "drop_policy": "no-drop",
+    "host": {
+      "name": "Friendly Donut Ride",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "description": "The no-drop version of the Donut, from Miramar Park on Saturday mornings. 25 to 75 miles depending on the day, and the group's stated rule is that no one goes home feeling like a loser. It runs beginner rides at least twice a year; check in with the group before your first one. Listed on Big Orange's rides page, with its own Instagram.",
+    "links": {
+      "website": "https://www.bigorangecycling.org/local-rides",
+      "instagram": "https://www.instagram.com/fdr.group/",
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [
+      "no-drop"
+    ],
+    "sources": [
+      "https://www.bigorangecycling.org/local-rides"
+    ],
+    "verified_on": "2026-09-30",
+    "confidence": "medium",
+    "tz": "America/Los_Angeles",
+    "start_hhmm": "08:00",
+    "duration_min": null,
+    "season_months": null,
+    "monthly_rule": null
+  },
+  {
+    "slug": "redondo-beach-ca-big-orange-club-ride",
+    "name": "Big Orange Club Ride",
+    "city": "Redondo Beach",
+    "state": "CA",
+    "neighborhood": "Hollywood Riviera (south Redondo Beach)",
+    "lat": 33.8115,
+    "lng": -118.3912,
+    "geo_precision": "start",
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Saturday, usually 8:00 am",
+    "days": [
+      "sat"
+    ],
+    "time_local": "8:00 am (usually)",
+    "frequency": "weekly",
+    "season": "year-round",
+    "start_location": {
+      "name": "Miramar Park",
+      "address": "Miramar Park, Redondo Beach, CA"
+    },
+    "distance_miles": "40–100",
+    "duration": null,
+    "pace": "club training ride; regroups at the top of the major climbs; prior group-riding experience expected",
+    "drop_policy": "groups",
+    "host": {
+      "name": "Big Orange Cycling",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "description": "Big Orange's Saturday club ride out of Miramar Park: 40 to 100 miles and 3,000 to 6,000-plus feet, with regroups at the top of the major climbs. The club asks for prior group-riding experience and that you know its group practices. This week's route is on the club's Strava.",
+    "links": {
+      "website": "https://www.bigorangecycling.org/local-rides",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.bigorangecycling.org/local-rides"
+    ],
+    "verified_on": "2026-09-30",
+    "confidence": "medium",
+    "tz": "America/Los_Angeles",
+    "start_hhmm": "08:00",
+    "duration_min": null,
+    "season_months": null,
+    "monthly_rule": null
+  },
+  {
+    "slug": "manhattan-beach-ca-big-orange-team-ride",
+    "name": "Big Orange Team Ride",
+    "city": "Manhattan Beach",
+    "state": "CA",
+    "neighborhood": "Downtown Manhattan Beach",
+    "lat": 33.8845,
+    "lng": -118.4097,
+    "geo_precision": "city",
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Sunday morning; 7:00 or 8:00 am depending on the season",
+    "days": [
+      "sun"
+    ],
+    "time_local": "7:00–8:00 am, varies with the season",
+    "frequency": "weekly",
+    "season": "year-round; easier in August and September, harder October through January",
+    "start_location": {
+      "name": "Starbucks, Manhattan Beach (as the club page names it)",
+      "address": null
+    },
+    "distance_miles": "60–100",
+    "duration": null,
+    "pace": "endurance tempo, around 3 w/kg; no-drop but serious training",
+    "drop_policy": "no-drop",
+    "host": {
+      "name": "Big Orange Cycling",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "description": "The club's Sunday training ride from a Starbucks in Manhattan Beach: 60 to 100 miles and anything from 1,000 to 7,000-plus feet. The page calls it no-drop and serious training at an endurance tempo. Mellow in August and September, harder from October into the racing season. The start time moves with the season; check the club's Strava before you go.",
+    "links": {
+      "website": "https://www.bigorangecycling.org/local-rides",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [
+      "no-drop"
+    ],
+    "sources": [
+      "https://www.bigorangecycling.org/local-rides"
+    ],
+    "verified_on": "2026-09-30",
+    "confidence": "medium",
+    "tz": "America/Los_Angeles",
+    "start_hhmm": null,
+    "duration_min": null,
+    "season_months": null,
+    "monthly_rule": null
+  },
+  {
+    "slug": "manhattan-beach-ca-new-pier-ride",
+    "name": "New Pier Ride (NPR)",
+    "city": "Manhattan Beach",
+    "state": "CA",
+    "neighborhood": "Manhattan Beach Pier",
+    "lat": 33.8842,
+    "lng": -118.4108,
+    "geo_precision": "start",
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Tuesday and Thursday, 6:40 am",
+    "days": [
+      "tue",
+      "thu"
+    ],
+    "time_local": "6:40 am",
+    "frequency": "weekly",
+    "season": "year-round",
+    "start_location": {
+      "name": "Manhattan Beach Pier",
+      "address": "Manhattan Beach Pier, Manhattan Beach, CA"
+    },
+    "distance_miles": "21.8",
+    "duration": null,
+    "pace": "flat and fast; the pace can pick up at any time",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "New Pier Ride",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "description": "The South Bay's weekday fast ride: 21.8 flat miles from the Manhattan Beach Pier at 6:40 on Tuesday and Thursday mornings. Big Orange's page says the pace can pick up at any time and that it's not for the timid. Know your speed before you show up.",
+    "links": {
+      "website": "https://www.bigorangecycling.org/local-rides",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.bigorangecycling.org/local-rides"
+    ],
+    "verified_on": "2026-09-30",
+    "confidence": "medium",
+    "tz": "America/Los_Angeles",
+    "start_hhmm": "06:40",
+    "duration_min": null,
+    "season_months": null,
+    "monthly_rule": null
+  },
+  {
+    "slug": "palos-verdes-estates-ca-wheatgrass-ride",
+    "name": "Wheatgrass Ride",
+    "city": "Palos Verdes Estates",
+    "state": "CA",
+    "neighborhood": "Malaga Cove",
+    "lat": 33.8018,
+    "lng": -118.3893,
+    "geo_precision": "start",
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Sunday, 8:00 am",
+    "days": [
+      "sun"
+    ],
+    "time_local": "8:00 am",
+    "frequency": "weekly",
+    "season": "year-round",
+    "start_location": {
+      "name": "Malaga Cove Plaza",
+      "address": "Malaga Cove Plaza, Palos Verdes Estates, CA"
+    },
+    "distance_miles": "40",
+    "duration": null,
+    "pace": "quick; hilly, about 4,600 feet",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Wheatgrass Ride",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "description": "Sunday's hilly ride on the Palos Verdes peninsula: 40 miles and about 4,600 feet from Malaga Cove Plaza at 8. Big Orange's page calls it friendly but challenging, at a quick pace. Bring climbing legs.",
+    "links": {
+      "website": "https://www.bigorangecycling.org/local-rides",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.bigorangecycling.org/local-rides"
+    ],
+    "verified_on": "2026-09-30",
+    "confidence": "medium",
+    "tz": "America/Los_Angeles",
+    "start_hhmm": "08:00",
+    "duration_min": null,
+    "season_months": null,
+    "monthly_rule": null
+  },
+  {
+    "slug": "los-angeles-ca-major-taylor-tuesday-ride",
+    "name": "Major Taylor (Westchester Parkway laps)",
+    "city": "Los Angeles",
+    "state": "CA",
+    "neighborhood": "Westchester",
+    "lat": 33.9588,
+    "lng": -118.409,
+    "geo_precision": "city",
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Tuesdays, 6:00 pm, Daylight Saving Time only",
+    "days": [
+      "tue"
+    ],
+    "time_local": "6:00 pm",
+    "frequency": "weekly",
+    "season": "Daylight Saving Time only (March–November)",
+    "start_location": {
+      "name": "Westchester Parkway",
+      "address": "Westchester Pkwy, Westchester, Los Angeles, CA"
+    },
+    "distance_miles": null,
+    "duration": null,
+    "pace": "circuit-race training, 4.5-mile laps; half of each lap into a headwind",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Major Taylor ride",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "description": "Tuesday-evening laps on Westchester Parkway by LAX, 4.5 miles and 60 feet a lap, during Daylight Saving Time. Race training, not a social ride; Big Orange's page says half of every lap is into the headwind. The page names the parkway, not a corner; ask on the club's Strava where the group gathers.",
+    "links": {
+      "website": "https://www.bigorangecycling.org/local-rides",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.bigorangecycling.org/local-rides"
+    ],
+    "verified_on": "2026-09-30",
+    "confidence": "medium",
+    "tz": "America/Los_Angeles",
+    "start_hhmm": "18:00",
+    "duration_min": null,
+    "season_months": {
+      "start": 3,
+      "end": 11
+    },
+    "monthly_rule": null
+  },
+  {
+    "slug": "torrance-ca-telo-tuesday-crit",
+    "name": "Telo (Tuesday practice crit)",
+    "city": "Torrance",
+    "state": "CA",
+    "neighborhood": null,
+    "lat": 33.8358,
+    "lng": -118.3406,
+    "geo_precision": "city",
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Tuesdays, 6:00 pm, Daylight Saving Time only",
+    "days": [
+      "tue"
+    ],
+    "time_local": "6:00 pm",
+    "frequency": "weekly",
+    "season": "Daylight Saving Time only (March–November)",
+    "start_location": {
+      "name": "Telo Ave & Kashiwa St",
+      "address": "Telo Ave & Kashiwa St, Torrance, CA"
+    },
+    "distance_miles": null,
+    "duration": "about 1 hour",
+    "pace": "practice criterium, A and B groups; one-mile, six-corner flat circuit",
+    "drop_policy": "groups",
+    "host": {
+      "name": "Telo practice crit",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "description": "The South Bay's Tuesday-night practice criterium: a flat one-mile, six-corner circuit off Telo Avenue in Torrance, A and B groups, during Daylight Saving Time. Big Orange's page calls it one hour of beat down. It's a race, not a group ride.",
+    "links": {
+      "website": "https://www.bigorangecycling.org/local-rides",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.bigorangecycling.org/local-rides"
+    ],
+    "verified_on": "2026-09-30",
+    "confidence": "medium",
+    "tz": "America/Los_Angeles",
+    "start_hhmm": "18:00",
+    "duration_min": 60,
+    "season_months": {
+      "start": 3,
+      "end": 11
+    },
+    "monthly_rule": null
+  },
+  {
+    "slug": "los-angeles-ca-la-wheelmen-sunday-ride",
+    "name": "LA Wheelmen Sunday Ride",
+    "city": "Los Angeles",
+    "state": "CA",
+    "neighborhood": null,
+    "lat": 34.0522,
+    "lng": -118.2437,
+    "geo_precision": "city",
+    "discipline": [
+      "road"
+    ],
+    "schedule": "Every Sunday; the start and routes change weekly and are posted on the club site",
+    "days": [
+      "sun"
+    ],
+    "time_local": null,
+    "frequency": "weekly",
+    "season": "year-round",
+    "start_location": null,
+    "distance_miles": null,
+    "duration": null,
+    "pace": "easy, moderate and ambitious routes each Sunday",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Los Angeles Wheelmen",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "guests welcome with a signed waiver; membership price not on the page",
+    "description": "A recreational club that rides every Sunday from a different start around LA, Orange and Ventura counties, with easy, moderate and ambitious routes; a smaller Saturday group rides shorter, harder ones. Guests are welcome on every ride with a signed waiver. Helmets are mandatory. The month's schedule and route sheets are on the club site under Upcoming Rides.",
+    "links": {
+      "website": "https://www.lawheelmen.org/",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://www.lawheelmen.org/upcoming-rides/",
+        "https://www.lawheelmen.org/overview-of-rides/"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://lawheelmen.org",
+      "https://www.lawheelmen.org/overview-of-rides/"
+    ],
+    "verified_on": "2026-09-30",
+    "confidence": "medium",
+    "tz": "America/Los_Angeles",
+    "start_hhmm": null,
+    "duration_min": null,
+    "season_months": null,
+    "monthly_rule": null
+  }
+]
