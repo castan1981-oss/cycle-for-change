@@ -193,7 +193,7 @@ function weatherBlock(place, opts) {
   const o = opts || {};
   return `
   <section class="weather" id="weather" aria-labelledby="weather-h">
-    <h2 id="weather-h">${esc(o.heading || `Weather in ${place.name}`)}</h2>
+    <h2 id="weather-h">${mark("weather", "mk mk--h2")}${esc(o.heading || `Weather in ${place.name}`)}</h2>
     ${o.note ? `<p class="weather-note">${esc(o.note)}</p>` : ""}
     <div class="wx" data-weather data-lat="${place.lat}" data-lon="${place.lon}" data-tz="${attr(place.timezone)}"${o.date ? ` data-event-date="${o.date}"` : ""}${o.endDate ? ` data-event-end="${o.endDate}"` : ""} aria-live="polite">
       <p class="wx-status">Loading the forecast for ${esc(place.name)}&hellip;</p>
@@ -202,8 +202,13 @@ function weatherBlock(place, opts) {
   </section>`;
 }
 
+// Pass 8 (Sept 30, 2026): every fact carries its mark (cfc-site/rides/marks.svg)
+const MARK_FOR = { "Next edition": "date", Usually: "ride-day", Start: "start", Distances: "distance", Terrain: "terrain", Climbing: "climb",
+  Riders: "riders", Cost: "cost", Founded: "founded", Organizer: "organizer", "Sign-up": "signup", Registration: "signup", Cause: "hundred",
+  Benefits: "hundred", Beneficiary: "hundred", Elevation: "climb", Population: "riders", "Nearest airport": "airport", County: "town", Timezone: "founded" };
+const mark = (id, cls = "mk") => `<svg class="${cls}" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-${id}"/></svg>`;
 function facts(rows) {
-  return `<dl class="facts">${rows.filter((r) => r[1]).map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join("")}</dl>`;
+  return `<dl class="facts">${rows.filter((r) => r[1]).map(([k, v]) => `<div>${mark(MARK_FOR[k] || "flag")}<dt>${esc(k)}</dt><dd>${v}</dd></div>`).join("")}</dl>`;
 }
 
 // Pass 7 (Sept 30, 2026): events are posters. The date as a big numeral (MM.DD), the town's
@@ -331,9 +336,9 @@ function eventPage(e) {
       <p>${esc(t.summary)}</p>
       ${t.getting_there ? `<p>${esc(t.getting_there)}</p>` : ""}
       <div class="town-strip">
-        <a href="${t.url}hotels/"><span class="eyebrow">Sleep</span><b>Where to stay</b><span>${t.hotels ? `${t.hotels.length} picks` : "Hotels near the start"}</span></a>
-        <a href="${t.url}restaurants/"><span class="eyebrow">Eat</span><b>Where to eat</b><span>${t.restaurants ? `${t.restaurants.length} picks` : "Carb night, post-ride, early coffee"}</span></a>
-        <a href="${t.url}bike-shops/"><span class="eyebrow">Fix</span><b>Bike shops</b><span>${t.bike_shops ? `${t.bike_shops.length} shops` : "Open the day before"}</span></a>
+        <a href="${t.url}hotels/">${mark("sleep", "mk mk--strip")}<span class="eyebrow">Sleep</span><b>Where to stay</b><span>${t.hotels ? `${t.hotels.length} picks` : "Hotels near the start"}</span></a>
+        <a href="${t.url}restaurants/">${mark("eat", "mk mk--strip")}<span class="eyebrow">Eat</span><b>Where to eat</b><span>${t.restaurants ? `${t.restaurants.length} picks` : "Carb night, post-ride, early coffee"}</span></a>
+        <a href="${t.url}bike-shops/">${mark("fix", "mk mk--strip")}<span class="eyebrow">Fix</span><b>Bike shops</b><span>${t.bike_shops ? `${t.bike_shops.length} shops` : "Open the day before"}</span></a>
       </div>
       <p class="town-more"><a href="${t.url}">The ${esc(t.name)} town guide &rarr;</a></p>
     </section>

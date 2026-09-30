@@ -282,3 +282,16 @@ article{max-width:820px}
   .ev-poster{grid-template-columns:minmax(0,7fr) minmax(0,4fr);align-items:end;gap:32px;padding:clamp(28px,3.5vw,48px)}
   .ev-poster-info{padding-bottom:6px}
 }
+
+/* —— Pass 8 (Sept 30, 2026): the marks on the directory pages (cfc-site/rides/marks.svg, currentColor) —— */
+.mk{width:22px;height:22px;flex:0 0 auto;color:var(--asphalt);display:block}
+.facts>div{display:grid;grid-template-columns:22px minmax(0,1fr);gap:2px 10px;align-items:start}
+.facts>div .mk{grid-row:1 / span 2;margin-top:1px;color:var(--creosote-ink)}
+.facts dt,.facts dd{grid-column:2}
+.mk--strip{width:24px;height:24px;margin-bottom:2px}
+.mk--h2{display:inline-block;vertical-align:-3px;width:.95em;height:.95em;margin-right:.35em}
+.mk--built{width:24px;height:24px;margin-bottom:4px;color:var(--creosote-ink)}
+.dir-built-grid>div{display:flex;flex-direction:column}
+.mk--wx{width:22px;height:22px;margin:2px 0 4px;color:var(--creosote-ink)}
+.wx-now{align-items:center}
+.mk--wx-now{width:40px;height:40px;color:var(--creosote-ink);margin-right:4px}

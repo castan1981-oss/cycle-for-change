@@ -14,12 +14,15 @@
 const esc = (s) => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 /* items: [[label, title, text], ...] — four is the design; three or five still lay out. */
+// Pass 8: the kicker picks the mark (cfc-site/rides/marks.svg)
+const BUILT_MARKS = { Checked: "checked", Dated: "date", Flagged: "flag", Free: "free", Direct: "signup", Live: "weather" };
+const BUILT_MARK = (k) => `<svg class="mk mk--built" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-${BUILT_MARKS[k] || "checked"}"/></svg>`;
 function BUILT(items, { heading = "How this list is built", id = "how-built" } = {}) {
   return `
   <section class="dir-built" id="${id}" aria-labelledby="${id}-h">
     <h2 id="${id}-h">${esc(heading)}</h2>
     <div class="dir-built-grid">
-${items.map(([k, h, t]) => `      <div><span class="k">${esc(k)}</span><h3>${esc(h)}</h3><p>${t}</p></div>`).join("\n")}
+${items.map(([k, h, t]) => `      <div>${BUILT_MARK(k)}<span class="k">${esc(k)}</span><h3>${esc(h)}</h3><p>${t}</p></div>`).join("\n")}
     </div>
   </section>`;
 }
