@@ -1,0 +1,85 @@
+{
+  "_readme": "Copy to data/towns/<slug>-<st>.json and delete this key. Files starting with _ are ignored by the build. Every field below is optional except id, name, state, state_code, lat, lon, timezone, summary. Unknown = null, never a guess. Rules: data/SCHEMA.md and research/towns/SCOUT-RULES.md.",
+
+  "id": "city-st",
+  "kind": "destination",
+  "name": "City",
+  "state": "State",
+  "state_code": "ST",
+  "county": null,
+  "lat": 0.0,
+  "lon": 0.0,
+  "timezone": "America/Los_Angeles",
+  "population": null,
+  "elevation_ft": null,
+  "tagline": null,
+  "best_months": null,
+  "nearest_airport": { "name": null, "code": null, "miles": null },
+  "major_airport": { "name": null, "code": null, "miles": null },
+  "official_url": null,
+  "visitor_url": null,
+
+  "summary": "2 to 4 sentences an assistant could quote whole: what the town is for a cyclist, what the riding is, how you get there.",
+  "about": [],
+  "riding": [],
+  "getting_there": null,
+
+  "routes": [
+    {
+      "name": null,
+      "type": "road",
+      "miles": null,
+      "elevation_gain_ft": null,
+      "surface": null,
+      "difficulty": "moderate",
+      "start": { "name": null, "address": null, "lat": null, "lon": null },
+      "description": null,
+      "water": null,
+      "hazards": null,
+      "links": { "rwgps": null, "strava": null, "komoot": null, "gpx": null, "other": null },
+      "sources": [],
+      "verified": null
+    }
+  ],
+
+  "coffee": [
+    { "name": null, "url": null, "address": null, "note": null, "hours_hint": null, "ride_out": false }
+  ],
+
+  "restaurants": [
+    { "name": null, "url": null, "address": null, "cuisine": null, "note": null }
+  ],
+
+  "hotels": [
+    { "name": null, "url": null, "booking_url": null, "address": null, "note": null, "price_hint": null, "bike_policy": null }
+  ],
+
+  "bike_shops": [
+    { "name": null, "url": null, "address": null, "phone": null, "services": [], "note": null }
+  ],
+
+  "culture": [
+    { "name": null, "kind": "record-store", "url": null, "address": null, "note": null }
+  ],
+
+  "clubs": [
+    { "name": null, "url": null, "note": null, "inclusive_focus": [] }
+  ],
+
+  "bring_your_bike": {
+    "summary": null,
+    "fly": { "airports": [ { "name": null, "code": null, "miles": null, "note": null } ], "airline_note": null },
+    "ship": { "note": null, "shops": [ { "name": null, "url": null, "note": null } ] },
+    "rent": { "note": null, "shops": [ { "name": null, "url": null, "note": null } ] },
+    "get_around": { "car_needed": null, "note": null, "transit_bike_rules": null, "bike_share": { "name": null, "url": null, "note": null } },
+    "rules_and_safety": null,
+    "sources": []
+  },
+
+  "travel_links": [],
+  "faq": [
+    { "q": null, "a": null }
+  ],
+  "sources": [],
+  "verified": null
+}

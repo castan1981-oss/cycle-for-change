@@ -60,6 +60,11 @@ article{max-width:820px}
 /* —— town box on event page —— */
 .town-box{margin-top:2.5em}
 .town-box h2{margin-top:.2em}
+/* —— town guide (Sept 30, 2026): the one-line tagline under the h1; the guide pages reuse .places —— */
+.town .tagline{font-family:var(--display);font-size:1.25rem;line-height:1.2;letter-spacing:-.01em;color:var(--creosote-ink);margin:-.4em 0 1em}
+.place-tags span a{text-decoration:none;color:inherit}
+.byb section h2,.routes section h2{margin-top:1.6em}
+.town-link{text-decoration:none;border-bottom:1px solid currentColor;white-space:nowrap}
 .town-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));gap:0;border-top:1px solid var(--asphalt);border-left:1px solid var(--line);margin-top:18px}
 .town-strip a{display:flex;flex-direction:column;gap:6px;padding:18px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;background:var(--bone-2)}
 .town-strip a b{font-size:1.15rem;line-height:1.1;letter-spacing:-.02em}
