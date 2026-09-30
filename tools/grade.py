@@ -22,12 +22,12 @@ MANIFEST = [
     # hero is crisp at 2x screens; a gentler stop so the sunset holds. Re-run tools/sr.py if crew.jpg changes.
     ('img/hero.jpg',         'photos/crew-2x.jpg',     dict(max=1600, stop=0.3, lift=0.11, q=80)),
     ('img/hero-wide.jpg',    'photos/crew-2x.jpg',     dict(max=2000, stop=0.3, lift=0.11, crop='7:5', focus=(0.5, 0.46), q=80)),
-    ('img/people.jpg',       'photos/finish-line.jpg', dict(max=1200, up=True)),
-    ('img/close.jpg',        'photos/mural.jpg',       dict(max=1200, up=True)),
+    ('img/people.jpg',       'photos/finish-line-2x.jpg', dict(max=1600, q=80)),   # 2x through tools/sr.py (Pass 11)
+    ('img/close.jpg',        'photos/mural-2x.jpg',    dict(max=1600, q=80)),
     ('img/door-pledge.jpg',  'photos/portrait.jpg',    dict(max=1000, crop='4:5')),
     ('img/door-ride.jpg',    'photos/ride-lavender.jpg', dict(max=1000, crop='4:5')),
     ('img/door-read.jpg',    'photos/card-south-duo.jpg', dict(strength=0.0, stop=0.35, lift=0.12, warm=0.08)),
-    ('img/card-journal.jpg', 'photos/mural.jpg',       dict(max=1000, crop='4:5')),
+    ('img/card-journal.jpg', 'photos/mural-2x.jpg',    dict(max=1000, crop='4:5')),
     ('img/card-south.jpg',   'photos/card-south-duo.jpg', dict(strength=0.0, stop=0.35, lift=0.12, warm=0.08)),
     ('img/card-pv.jpg',      'photos/card-pv-duo.jpg', dict(strength=0.0, stop=0.25, lift=0.10, warm=0.06)),
     ('img/portrait.jpg',     'photos/portrait.jpg',    dict(max=1024)),

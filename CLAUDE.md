@@ -135,7 +135,8 @@ custom icons. What changed:
   was soft and blocky. `tools/sr.py` (denoise, then EDSR 2x in tiles) wrote `photos/crew-2x.jpg`;
   grade.py reads that for `hero.jpg` (1600) and `hero-wide.jpg` (2000×1428) with a gentler
   half-stop (`stop=0.3`) so the sunset holds. Any photo that will run big goes through sr.py
-  once before it goes in the manifest. The `<picture>` sizes match the new files.
+  once before it goes in the manifest (crew, mural and finish-line are done: `*-2x.jpg`). The
+  `<img>` sizes match the new files.
 - **Phones get the split too, stacked.** The photo sits up top (58svh), whole and bright, and
   dissolves into the bone the copy sits on (`.hero-media picture` bottom mask); the copy starts
   84px up inside the fade. No scrim, no type over the picture, no hard edge where the photo
