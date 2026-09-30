@@ -30,21 +30,21 @@
   var fmt = function (n) { return Math.round(n).toLocaleString("en-US"); };
 
   /* What the page shows until the feed answers: the function's own output on
-     Sept 21 2026. x = how far through the ride list (0–100), y = cumulative miles. */
+     Sept 30 2026. x = how far through the ride list (0–100), y = cumulative miles. */
   var feed = {
-    miles: 3066.8,
-    rides: 85,
-    updated: "2026-09-21T13:18:18Z",
+    miles: 3359.5,
+    rides: 92,
+    updated: "2026-09-30T20:11:30.310Z",
     profileUrl: "https://www.strava.com/athletes/22899089",
     recent: [
-      { discipline: "bike", title: "Morning Ride", miles: 32.4, date: "2026-09-18T13:14:29Z" },
-      { discipline: "bike", title: "Morning Ride", miles: 35.9, date: "2026-09-17T12:49:23Z" },
-      { discipline: "bike", title: "New bike day", miles: 37, date: "2026-09-16T13:00:48Z" },
-      { discipline: "bike", title: "Morning Ride", miles: 35.8, date: "2026-09-15T13:16:15Z" },
-      { discipline: "bike", title: "Morning Ride", miles: 41.2, date: "2026-09-14T13:29:06Z" },
-      { discipline: "bike", title: "Church", miles: 40, date: "2026-09-13T12:48:51Z" }
+      { discipline: "bike", title: "Somo Sunday", miles: 56, date: "2026-09-27T13:47:01Z" },
+      { discipline: "bike", title: "Morning Ride", miles: 60.2, date: "2026-09-26T12:55:17Z" },
+      { discipline: "bike", title: "Morning Ride", miles: 32.7, date: "2026-09-25T13:18:16Z" },
+      { discipline: "bike", title: "Morning Ride", miles: 36.5, date: "2026-09-23T14:09:32Z" },
+      { discipline: "bike", title: "Morning Ride", miles: 41.6, date: "2026-09-21T14:04:09Z" },
+      { discipline: "bike", title: "Morning Ride", miles: 29, date: "2026-09-20T14:35:05Z" }
     ],
-    chart: [[0, 35.2], [10, 278.6], [19, 564.5], [29, 864.8], [38, 1258.9], [48, 1528.7], [57, 1765.8], [67, 2050.5], [76, 2329], [86, 2618.6], [95, 2925.7], [100, 3066.8]]
+    chart: [[0, 35.2], [9, 278.6], [18, 564.5], [26, 864.8], [35, 1258.9], [44, 1528.7], [53, 1765.8], [62, 2050.5], [70, 2329], [79, 2618.6], [88, 2925.7], [97, 3210.6], [100, 3359.5]]
   };
 
   /* ————————————————————————————————————————————————
@@ -332,9 +332,10 @@
 
   function row(n, text, open, ago, id, org) {
     var li = document.createElement("li");
-    var a = document.createElement("span"); a.className = "n"; a.textContent = n === "" ? "" : pad2(n);
     var b = document.createElement("span"); b.className = "name" + (open ? " open" : ""); b.textContent = text; if (id) b.id = id;
-    li.appendChild(a); li.appendChild(b);
+    if (n === "") { li.className = "nobib"; }   /* the count is unknown: no bib number on the line (Pass 10) */
+    else { var a = document.createElement("span"); a.className = "n"; a.textContent = pad2(n); li.appendChild(a); }
+    li.appendChild(b);
     if (ago) { var c = document.createElement("span"); c.className = "ago"; c.textContent = ago; li.appendChild(c); }
     if (org && ORG_NAMES[org]) { var d = document.createElement("span"); d.className = "org"; d.textContent = "for " + ORG_NAMES[org]; li.appendChild(d); }
     return li;
@@ -348,8 +349,9 @@
     while (slots.firstChild) slots.removeChild(slots.firstChild);
     var typed = pname.value.trim();
     if (!countKnown) {
-      /* no numbers and no "open" rows when we can't see who's already there */
+      /* no numbers when we can't see who's already there; the open lines under yours stay unnumbered */
       slots.appendChild(row("", typed || "Your name here", !typed, onBoard ? "just now" : "", "slotYou"));
+      for (var j = 0; j < 3; j++) slots.appendChild(row("", "Open", true));
       return;
     }
     /* your row sits on top, numbered as the next one up */
@@ -392,13 +394,89 @@
     $("doneLine").textContent = pledgeLine(p, orgId);
     form.hidden = true;
     done.hidden = false;
+    drawCard(pname.value.trim(), p, orgId, n);
     try { done.focus({ preventScroll: false }); } catch (_) { done.focus(); }
+  }
+
+  /* ————————————————————————————————————————————————
+     the card (Pass 10, Sept 30 2026): a 1080×1350 poster of the pledge, drawn once the
+     pledge is in — the stack, I'M ON THE BOARD, the name, the pledge line, the link.
+     Shown under the thank-you; the share button sends it as an image where the browser
+     can (iOS/Android share sheet), "Save the card" downloads it. Bone, asphalt, creosote.
+     ———————————————————————————————————————————————— */
+  var cardBlob = null;
+  function drawCard(name, p, orgId, bib) {
+    var wrap = $("cardWrap"), img = $("cardImg"), save = $("cardSave");
+    if (!wrap || !img || !document.createElement("canvas").getContext) return;
+    var W = 1080, H = 1350, M = 72;
+    var cv = document.createElement("canvas"); cv.width = W; cv.height = H;
+    var g = cv.getContext("2d");
+    var BONE = "#E8DFD0", ASPHALT = "#2A2E28", CREOSOTE = "#4A5639", MUTE = "#5F5E56";
+    var disp = function (px) { return "800 " + px + "px Outfit, 'Helvetica Neue', Arial, sans-serif"; };
+    var mono = function (px) { return "400 " + px + "px 'Space Mono', Menlo, monospace"; };
+    var spaced = function (t, x, y, tr) { /* letter-spaced mono, drawn by hand */
+      var cx = x; for (var i = 0; i < t.length; i++) { g.fillText(t[i], cx, y); cx += g.measureText(t[i]).width + tr; } return cx; };
+    var fit = function (t, max, px, floor) { g.font = disp(px); while (g.measureText(t).width > max && px > floor) { px -= 4; g.font = disp(px); } return px; };
+    var paint = function () {
+      g.fillStyle = BONE; g.fillRect(0, 0, W, H);
+      g.textBaseline = "alphabetic"; g.textAlign = "left";
+      /* the stack */
+      g.font = disp(44); g.fillStyle = ASPHALT; g.fillText("CYCLE", M, M + 40);
+      g.fillStyle = CREOSOTE; g.fillText("FOR", M, M + 84);
+      g.fillStyle = ASPHALT; g.fillText("CHANGE", M, M + 128);
+      /* the year, the bib */
+      g.font = mono(26); g.fillStyle = ASPHALT; g.textAlign = "right";
+      g.fillText("2027", W - M, M + 30);
+      g.font = mono(18); g.fillStyle = CREOSOTE;
+      g.fillText("10,000 MILES", W - M, M + 62); g.fillText("ALL ON THE BIKE", W - M, M + 88);
+      if (bib) { g.font = disp(30); g.fillStyle = ASPHALT; var bt = "#" + bib, bw = g.measureText(bt).width + 36; g.lineWidth = 3; g.strokeStyle = ASPHALT; g.strokeRect(W - M - bw, M + 112, bw, 54); g.fillText(bt, W - M - 18, M + 152); }
+      g.textAlign = "left";
+      /* the line */
+      g.fillStyle = ASPHALT; g.font = disp(152);
+      g.fillText("I\u2019M ON", M - 6, 590); g.fillText("THE BOARD.", M - 6, 730);
+      /* the name, fitted; two lines if it has to */
+      var nm = String(name || "").toUpperCase(), px = fit(nm, W - 2 * M, 96, 56), y = 880;
+      if (g.measureText(nm).width > W - 2 * M) {
+        var words = nm.split(" "), a = "", b = "";
+        for (var i = 0; i < words.length; i++) { var t = (a ? a + " " : "") + words[i]; if (g.measureText(t).width <= W - 2 * M || !a) a = t; else b = (b ? b + " " : "") + words[i]; }
+        g.fillStyle = ASPHALT; g.fillText(a, M, y); if (b) { g.fillText(b, M, y + px * 1.02); y += px * 1.02; }
+      } else { g.fillStyle = ASPHALT; g.fillText(nm, M, y); }
+      /* the rule and the pledge */
+      g.fillStyle = ASPHALT; g.fillRect(M, y + 48, W - 2 * M, 2);
+      g.font = mono(24); g.fillStyle = ASPHALT;
+      var line = p.flat ? ((p.total ? "$" + fmt(p.total) + " FLAT" : "A FLAT PLEDGE"))
+        : (p.cap && p.cap < p.total) ? (p.cents + "\u00A2 A MILE \u00B7 CAPPED AT $" + fmt(p.cap))
+        : (p.cents + "\u00A2 A MILE \u00B7 $" + fmt(p.total) + " IF HE RIDES ALL 10,000");
+      spaced(line, M, y + 104, 3);
+      g.fillStyle = CREOSOTE; spaced("FOR " + (ORG_NAMES[orgId] ? ORG_NAMES[orgId].toUpperCase() : "WHOEVER WINS THE VOTE"), M, y + 146, 3);
+      /* the foot */
+      g.font = mono(22); g.fillStyle = ASPHALT; spaced("CYCLEFORCHANGE.ORG/PLEDGE", M, H - M, 3);
+      g.fillStyle = MUTE; g.textAlign = "right"; g.fillText("FREE TO JOIN. NO CARD.", W - M, H - M); g.textAlign = "left";
+    };
+    var show = function () {
+      paint();
+      try { img.src = cv.toDataURL("image/png"); } catch (_) { return; }
+      img.alt = "Your pledge card: I\u2019m on the board. " + name + ". " + pledgeLine(p, orgId);
+      wrap.hidden = false;
+      if (save) { save.href = img.src; save.hidden = false; }
+      if (cv.toBlob) cv.toBlob(function (b) { cardBlob = b; }, "image/png");
+    };
+    if (document.fonts && document.fonts.load) {
+      Promise.all([document.fonts.load(disp(100)), document.fonts.load(mono(24))]).then(show, show);
+    } else show();
   }
 
   var shareBtn = $("shareBtn"), shareMsg = $("shareMsg");
   if (shareBtn) shareBtn.addEventListener("click", function () {
     var text = "I’m on the board. Robert rides 10,000 miles in 2027 for queer communities; you pledge a few cents a mile, free to start, and vote where the money goes.";
     var url = "https://cycleforchange.org/pledge/";
+    /* the card goes with it where the share sheet takes files (phones, mostly) */
+    if (cardBlob && navigator.canShare && window.File) {
+      try {
+        var file = new File([cardBlob], "cycle-for-change-pledge.png", { type: "image/png" });
+        if (navigator.canShare({ files: [file] })) { navigator.share({ files: [file], title: "Cycle for Change", text: text + " " + url }).catch(function () {}); return; }
+      } catch (_) {}
+    }
     if (navigator.share) { navigator.share({ title: "Cycle for Change", text: text, url: url }).catch(function () {}); return; }
     var say = function (m) { if (shareMsg) { shareMsg.textContent = m; shareMsg.hidden = false; } };
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text + " " + url).then(function () { say("Copied. Paste it anywhere."); }, function () { say(url); });
