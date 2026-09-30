@@ -1023,7 +1023,7 @@ function main() {
   const clash = rides.filter((r) => FACETS.some((f) => f.slug === r.slug) || /^[a-z]{2}$/.test(r.slug));
   if (clash.length) { console.error("ride slug clashes with a facet or state folder: " + clash.map((r) => r.slug).join(", ")); process.exit(1); }
 
-  for (const ent of fs.readdirSync(OUT, { withFileTypes: true })) if (ent.isDirectory()) rmrf(path.join(OUT, ent.name));
+  for (const ent of fs.readdirSync(OUT, { withFileTypes: true })) if (ent.isDirectory() && ent.name !== "art") rmrf(path.join(OUT, ent.name));   // art/ is drawn by tools/contour-art.js, never regenerated here
   write(path.join(OUT, "index.html"), directory(rides, hubs));
   for (const st of states) write(path.join(OUT, st.toLowerCase(), "index.html"), statePage(st, rides.filter((r) => r.state === st), hubs, events));
   for (const h of hubs) write(path.join(OUT, h.state.toLowerCase(), h.slug, "index.html"), metroPage(h, hubs, events));

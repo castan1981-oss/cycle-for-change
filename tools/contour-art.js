@@ -27,7 +27,7 @@ const SITE = path.join(ROOT, "cfc-site");
 const args = process.argv.slice(2);
 const only = args.includes("--only") ? args[args.indexOf("--only") + 1] : null;
 const dry = args.includes("--dry");
-const Z = 11, PATCH = 1, LEVELS = 12, SIZE = 200;   // SIZE = the SVG's viewBox; tiles scale it
+const Z = 11, PATCH = 1, LEVELS = 10, SIZE = 200;   // SIZE = the SVG's viewBox; tiles scale it
 
 let PNG;
 try { PNG = require("pngjs").PNG; } catch { console.error("npm i pngjs  (once), then run again"); process.exit(1); }
@@ -75,36 +75,93 @@ async function elevationPatch(lat, lng) {
   return { grid, W };
 }
 
-// ---- marching squares ----
-function contours(grid, W, level, step) {
+// ---- contours ----
+// Downsample the 768px patch to 256, smooth it twice (a 3x3 box), then marching squares at
+// evenly spaced levels between the 3rd and 97th percentile. Segments are chained into
+// polylines and short loops are dropped, so the file is small and the lines read as terrain
+// rather than noise. Steep towns still get dense lines where the mountains are; that's the point.
+function downsample(grid, W, f) {
+  const w = Math.floor(W / f), out = new Float32Array(w * w);
+  for (let y = 0; y < w; y++) for (let x = 0; x < w; x++) {
+    let acc = 0;
+    for (let j = 0; j < f; j++) for (let i = 0; i < f; i++) acc += grid[(y * f + j) * W + x * f + i];
+    out[y * w + x] = acc / (f * f);
+  }
+  return { grid: out, W: w };
+}
+function blur(grid, W) {
+  const out = new Float32Array(W * W);
+  for (let y = 0; y < W; y++) for (let x = 0; x < W; x++) {
+    let acc = 0, n = 0;
+    for (let j = -1; j <= 1; j++) for (let i = -1; i <= 1; i++) { const yy = y + j, xx = x + i; if (yy < 0 || xx < 0 || yy >= W || xx >= W) continue; acc += grid[yy * W + xx]; n++; }
+    out[y * W + x] = acc / n;
+  }
+  return out;
+}
+function segments(grid, W, level) {
   const segs = [];
   const at = (x, y) => grid[y * W + x];
   const lerp = (a, b, va, vb) => a + ((level - va) / (vb - va || 1e-9)) * (b - a);
-  for (let y = 0; y < W - step; y += step) for (let x = 0; x < W - step; x += step) {
-    const v = [at(x, y), at(x + step, y), at(x + step, y + step), at(x, y + step)];
+  const T = { 1: [[3, 0]], 2: [[0, 1]], 3: [[3, 1]], 4: [[1, 2]], 5: [[3, 0], [1, 2]], 6: [[0, 2]], 7: [[3, 2]], 8: [[2, 3]], 9: [[0, 2]], 10: [[0, 1], [2, 3]], 11: [[1, 2]], 12: [[1, 3]], 13: [[0, 1]], 14: [[3, 0]] };
+  for (let y = 0; y < W - 1; y++) for (let x = 0; x < W - 1; x++) {
+    const v = [at(x, y), at(x + 1, y), at(x + 1, y + 1), at(x, y + 1)];
     const idx = (v[0] > level) | ((v[1] > level) << 1) | ((v[2] > level) << 2) | ((v[3] > level) << 3);
     if (idx === 0 || idx === 15) continue;
-    const e = [
-      [lerp(x, x + step, v[0], v[1]), y],
-      [x + step, lerp(y, y + step, v[1], v[2])],
-      [lerp(x, x + step, v[3], v[2]), y + step],
-      [x, lerp(y, y + step, v[0], v[3])],
-    ];
-    const T = { 1: [[3, 0]], 2: [[0, 1]], 3: [[3, 1]], 4: [[1, 2]], 5: [[3, 0], [1, 2]], 6: [[0, 2]], 7: [[3, 2]], 8: [[2, 3]], 9: [[0, 2]], 10: [[0, 1], [2, 3]], 11: [[1, 2]], 12: [[1, 3]], 13: [[0, 1]], 14: [[3, 0]] };
+    const e = [[lerp(x, x + 1, v[0], v[1]), y], [x + 1, lerp(y, y + 1, v[1], v[2])], [lerp(x, x + 1, v[3], v[2]), y + 1], [x, lerp(y, y + 1, v[0], v[3])]];
     for (const [a, b] of T[idx]) segs.push([e[a], e[b]]);
   }
   return segs;
 }
-function svgFor(grid, W) {
+function chain(segs) {
+  // join segments end to end in either direction (marching squares gives them no consistent orientation)
+  const key = (p) => `${p[0].toFixed(2)},${p[1].toFixed(2)}`;
+  const touch = new Map();
+  const add = (k, s) => { const l = touch.get(k); if (l) l.push(s); else touch.set(k, [s]); };
+  for (const s of segs) { add(key(s[0]), s); add(key(s[1]), s); }
+  const used = new Set(); const lines = [];
+  const next = (pt) => { const l = touch.get(key(pt)); if (!l) return null; const s = l.find((x) => !used.has(x)); if (!s) return null; used.add(s); return key(s[0]) === key(pt) ? s[1] : s[0]; };
+  for (const s of segs) {
+    if (used.has(s)) continue;
+    used.add(s);
+    const line = [s[0], s[1]];
+    for (let guard = 0; guard < 100000; guard++) { const p = next(line[line.length - 1]); if (!p) break; line.push(p); }
+    for (let guard = 0; guard < 100000; guard++) { const p = next(line[0]); if (!p) break; line.unshift(p); }
+    lines.push(line);
+  }
+  return lines;
+}
+// Ramer–Douglas–Peucker: drop points that don't change the line (keeps mountain tiles under ~80 KB)
+function simplify(line, eps) {
+  if (line.length < 3) return line;
+  const [ax, ay] = line[0], [bx, by] = line[line.length - 1];
+  let maxD = -1, idx = 0;
+  const dx = bx - ax, dy = by - ay, len = Math.hypot(dx, dy) || 1e-9;
+  for (let i = 1; i < line.length - 1; i++) {
+    const [px, py] = line[i];
+    const d = Math.abs(dy * px - dx * py + bx * ay - by * ax) / len;
+    if (d > maxD) { maxD = d; idx = i; }
+  }
+  if (maxD <= eps) return [line[0], line[line.length - 1]];
+  return simplify(line.slice(0, idx + 1), eps).slice(0, -1).concat(simplify(line.slice(idx), eps));
+}
+function svgFor(raw, rawW) {
+  let { grid, W } = downsample(raw, rawW, 3);
+  grid = blur(blur(grid, W), W);
   const sorted = Float32Array.from(grid).sort();
-  const lo = sorted[Math.floor(sorted.length * 0.02)], hi = sorted[Math.floor(sorted.length * 0.98)];
-  const s = SIZE / W, step = 4;
-  let d = "";
+  const lo = sorted[Math.floor(sorted.length * 0.03)], hi = sorted[Math.floor(sorted.length * 0.97)];
+  const s = SIZE / (W - 1);
+  let d = "", n = 0;
   for (let i = 1; i <= LEVELS; i++) {
     const level = lo + ((hi - lo) * i) / (LEVELS + 1);
-    for (const [[x1, y1], [x2, y2]] of contours(grid, W, level, step)) d += `M${(x1 * s).toFixed(1)} ${(y1 * s).toFixed(1)}L${(x2 * s).toFixed(1)} ${(y2 * s).toFixed(1)}`;
+    for (const raw of chain(segments(grid, W, level))) {
+      const closed = Math.hypot(raw[0][0] - raw[raw.length - 1][0], raw[0][1] - raw[raw.length - 1][1]) < 0.01;
+      if (raw.length < (closed ? 5 : 10)) continue;   // small closed loops are the peaks; keep them
+      const line = simplify(raw.map(([x, y]) => [x * s, y * s]), 0.45);
+      d += "M" + line.map(([x, y], k) => `${k ? "L" : ""}${x.toFixed(1)} ${y.toFixed(1)}`).join("");
+      n++;
+    }
   }
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${SIZE} ${SIZE}" preserveAspectRatio="xMidYMid slice"><path d="${d}" fill="none" stroke="#2A2E28" stroke-width=".9" stroke-linecap="round"/></svg>\n`;
+  return { svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${SIZE} ${SIZE}" preserveAspectRatio="xMidYMid slice"><path d="${d}" fill="none" stroke="#2A2E28" stroke-width=".65" stroke-linejoin="round" stroke-linecap="round"/></svg>\n`, lines: n };
 }
 
 (async () => {
@@ -116,8 +173,9 @@ function svgFor(grid, W) {
     try {
       const { grid, W } = await elevationPatch(t.lat, t.lng);
       fs.mkdirSync(path.dirname(out), { recursive: true });
-      fs.writeFileSync(out, svgFor(grid, W));
-      console.log(`  ✓ ${t.key}.svg  (${t.name})`);
+      const { svg, lines } = svgFor(grid, W);
+      fs.writeFileSync(out, svg);
+      console.log(`  ✓ ${t.key}.svg  (${t.name}, ${lines} lines, ${Math.round(svg.length / 1024)} KB)`);
     } catch (e) { console.log(`  ✗ ${t.key}: ${e.message}`); }
   }
   if (!dry) console.log("Now: node tools/build-rides.js && node scripts/build-events.js");

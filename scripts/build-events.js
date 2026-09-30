@@ -570,7 +570,9 @@ ${BLOCKS.REPORT({ thing: "place" })}
 const KEEP = new Set(["events.css", "events.js", "report.js", "2027"]);
 const evDir = path.join(OUT, "events");
 if (fs.existsSync(evDir)) for (const f of fs.readdirSync(evDir)) if (!KEEP.has(f)) fs.rmSync(path.join(evDir, f), { recursive: true, force: true });
-fs.rmSync(path.join(OUT, "towns"), { recursive: true, force: true });
+// towns/art/ is drawn by tools/contour-art.js and survives the rebuild
+const townsDir = path.join(OUT, "towns");
+if (fs.existsSync(townsDir)) for (const f of fs.readdirSync(townsDir)) if (f !== "art") fs.rmSync(path.join(townsDir, f), { recursive: true, force: true });
 
 const written = [];
 written.push(write("events/index.html", eventsIndex()));
