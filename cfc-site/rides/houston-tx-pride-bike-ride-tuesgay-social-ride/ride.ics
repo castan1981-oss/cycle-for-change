@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:houston-tx-pride-bike-ride-tuesgay-social-ride@cycleforchange.org
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/Chicago:20261006T193000
 DTEND;TZID=America/Chicago:20261006T223000
-RRULE:FREQ=WEEKLY;BYDAY=TU
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270212T235959Z
 SUMMARY:Tuesgay Social Ride — Houston\, TX
 LOCATION:Varsity Bar HTX\, 611 Hyde Park Blvd\, Houston\, TX 77006
 DESCRIPTION:Pace: social\, 13 mph max.\nNo-drop.\nSchedule: Every Tuesday

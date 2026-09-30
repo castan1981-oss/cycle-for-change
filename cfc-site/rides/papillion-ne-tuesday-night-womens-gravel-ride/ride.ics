@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:papillion-ne-tuesday-night-womens-gravel-ride@cycleforchange.org
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/Chicago:20261006T180000
 DTEND;TZID=America/Chicago:20261006T200000
-RRULE:FREQ=WEEKLY;BYDAY=TU
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270212T235959Z
 SUMMARY:Tuesday Night Women's Gravel Ride — Papillion\, NE
 LOCATION:Papio South\, 10799 NE-370\, Papillion\, NE 68046
 DESCRIPTION:Schedule: Every Tuesday\, 6:00 pm.\nConfirm with the host bef

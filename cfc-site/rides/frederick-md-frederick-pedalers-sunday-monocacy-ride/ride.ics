@@ -6,10 +6,10 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:frederick-md-frederick-pedalers-sunday-monocacy-ride@cycleforchange.o
  rg
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/New_York:20261004T093000
 DTEND;TZID=America/New_York:20261004T113000
-RRULE:FREQ=WEEKLY;BYDAY=SU
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270212T235959Z
 SUMMARY:Sunday Ride from Monocacy Middle School (Frederick Pedalers) — 
  Frederick\, MD
 LOCATION:Monocacy Middle School\, Frederick\, MD

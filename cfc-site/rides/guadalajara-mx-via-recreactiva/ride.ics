@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:guadalajara-mx-via-recreactiva@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Mexico_City:20261004T080000
+DTEND;TZID=America/Mexico_City:20261004T140000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270227T235959Z
+SUMMARY:Vía RecreActiva — Guadalajara\, Mexico
+LOCATION:Any point on the route (Glorieta La Minerva is the west end of t
+ he main axis)
+DESCRIPTION:Schedule: Every Sunday and on official holidays\, 8:00 am to 
+ 2:00 pm. Over 30 km of streets: Avenida Vallarta\, Juárez and Javier Mi
+ na from the Minerva roundabout east; Chapultepec\, Niños Héroes and Pa
+ seo de la Arboleda; Calzada del Federalismo. Branches reach Zapopan\, Tl
+ aquepaque and Tonalá..\nConfirm with the host before you go.\nhttps://c
+ ycleforchange.org/rides/guadalajara-mx-via-recreactiva/
+URL:https://cycleforchange.org/rides/guadalajara-mx-via-recreactiva/
+END:VEVENT
+END:VCALENDAR

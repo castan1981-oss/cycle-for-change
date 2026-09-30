@@ -11,6 +11,8 @@
   var stateNames = {};             // "arizona" -> "AZ"
   var stateAbbr = {};              // "AZ" -> "Arizona"
   idx.states.forEach(function (s) { stateNames[s[1].toLowerCase()] = s[0]; stateAbbr[s[0]] = s[1]; });
+  var countries = idx.countries || [], countryName = {};   // the world (Sept 30, 2026): [code, name, path, keys]
+  countries.forEach(function (c) { countryName[c[0]] = c[1]; });
 
   var q = document.getElementById("gr-q");
   var geoBtn = document.getElementById("gr-geo");
@@ -40,7 +42,8 @@
     var h = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dLng / 2) * Math.sin(dLng / 2);
     return 2 * R * Math.asin(Math.sqrt(h));
   }
-  function norm(s) { return (s || "").toLowerCase().replace(/[^a-z0-9, ]+/g, " ").replace(/\s+/g, " ").trim(); }
+  function fold(s) { s = String(s || ""); return s.normalize ? s.normalize("NFD").replace(/[\u0300-\u036f]/g, "") : s; }
+  function norm(s) { return fold(s).toLowerCase().replace(/[’']/g, "").replace(/[^a-z0-9, ]+/g, " ").replace(/\s+/g, " ").trim(); }
 
   function matchCity(text) {
     var t = norm(text).replace(/,/g, " ").replace(/\s+/g, " ").trim();
@@ -48,6 +51,7 @@
     var best = null;
     cities.forEach(function (c) {
       var name = norm(c[0]).replace(/,/g, "");           // "phoenix az"
+      if (c[3]) { if (t === name || c[3].indexOf(t) > -1) { if (!best || t === name) best = c; } return; }   // keys: "bogota", "bogota colombia"…
       var cityOnly = name.replace(/ [a-z]{2}$/, "");     // "phoenix"
       var st = name.slice(-2).toUpperCase();
       var full = cityOnly + " " + (stateAbbr[st] || st).toLowerCase();
@@ -60,6 +64,12 @@
     if (stateNames[t]) return stateNames[t];
     if (/^[a-z]{2}$/.test(t) && stateAbbr[t.toUpperCase()]) return t.toUpperCase();
     return null;
+  }
+  function matchCountry(text) {
+    var t = norm(text).replace(/,/g, "").trim(), hit = null;
+    if (!t) return null;
+    countries.forEach(function (c) { if (!hit && (norm(c[1]) === t || c[3].indexOf(t) > -1)) hit = c[0]; });
+    return hit;
   }
   function todayKey() { return ["sun", "mon", "tue", "wed", "thu", "fri", "sat"][new Date().getDay()]; }
 
@@ -79,7 +89,7 @@
   }
   function textMatch(card, t) {
     if (!t) return true;
-    var hay = norm([card.dataset.name, card.dataset.city, card.dataset.state, card.dataset.host, card.dataset.hood, card.dataset.disc, card.dataset.tags].join(" "));
+    var hay = norm([card.dataset.name, card.dataset.city, card.dataset.state, card.dataset.country, card.dataset.place, card.dataset.host, card.dataset.hood, card.dataset.disc, card.dataset.tags].join(" "));
     return t.split(" ").every(function (w) { return hay.indexOf(w) > -1; });
   }
   function reset() {
@@ -117,6 +127,7 @@
     var o = origin, label = origin && origin.label;
     if (!o) { var c = matchCity(text); if (c) { o = { lat: c[1], lng: c[2] }; label = c[0]; } }
     var st = !o ? matchState(text) : null;
+    var cc = !o && !st ? matchCountry(text) : null;
     var shown = 0;
 
     if (o) {
@@ -137,13 +148,13 @@
       status.textContent = shown ? plural(shown) + " within " + RADIUS + " mi of " + label + ", closest first" + note : "No rides within " + RADIUS + " mi of " + label;
       if (!shown && widenBtn) widenBtn.hidden = !all.length;
     } else {
-      var t = st ? "" : norm(text);
+      var t = st || cc ? "" : norm(text);
       cards.forEach(function (card) {
-        var ok = passesFilters(card, f) && (st ? card.dataset.state === st : textMatch(card, t));
+        var ok = passesFilters(card, f) && (st ? card.dataset.state === st : cc ? card.dataset.country === cc : textMatch(card, t));
         card.hidden = !ok; if (ok) shown++;
       });
       sections.forEach(function (s) { s.hidden = !s.querySelector(".gr-card:not([hidden])"); });
-      status.textContent = plural(shown) + (st ? " in " + (stateAbbr[st] || st) : text.trim() ? " matching “" + text.trim() + "”" : "");
+      status.textContent = plural(shown) + (st ? " in " + (stateAbbr[st] || st) : cc ? " in " + (countryName[cc] || cc) : text.trim() ? " matching “" + text.trim() + "”" : "");
       if (widenBtn) widenBtn.hidden = true;
       if (!shown && st && emptyState) { emptyState.href = "/rides/" + st.toLowerCase() + "/"; emptyState.hidden = false; }
     }

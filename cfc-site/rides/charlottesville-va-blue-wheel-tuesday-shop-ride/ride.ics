@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:charlottesville-va-blue-wheel-tuesday-shop-ride@cycleforchange.org
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/New_York:20261006T181500
 DTEND;TZID=America/New_York:20261006T201500
-RRULE:FREQ=WEEKLY;BYDAY=TU
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270212T235959Z
 SUMMARY:Tuesday Shop Ride (Blue Wheel Bicycles) — Charlottesville\, VA
 LOCATION:Charlottesville\, VA
 DESCRIPTION:Pace: two groups: Shred (fast) and Social (gentle\, beginner-

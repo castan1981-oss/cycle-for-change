@@ -63,7 +63,7 @@
   </div>
   <ul class="menu-list">
     <li><a href="/pledge/">Pledge a mile <span>Free</span></a></li>
-    <li><a href="/rides/">Find a ride <span>413</span></a></li>
+    <li><a href="/rides/">Find a ride <span>670</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>635</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
@@ -84,8 +84,10 @@
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/rides/">Group rides</a></li><li><a href="/rides/la/">Louisiana</a></li><li><a href="/rides/la/new-orleans/">New Orleans</a></li><li><span aria-current="page">NOLA Social Ride Thursday Night Ride</span></li></ol></nav>
 
     <h1>NOLA Social Ride Thursday Night Ride</h1>
+    
     <p class="gr-place">New Orleans, LA · Social</p>
     <p class="gr-tags"><span class="gr-tag">Beginner friendly</span><span class="gr-tag gr-tag-warn" title="We found this ride but couldn't confirm every detail">Unconfirmed — check with the host</span></p>
+
 
     <p class="lede">NOLA Social Ride Thursday Night Ride is a social group ride in New Orleans, LA. Schedule: Every Thursday night; start posted weekly on Facebook. Pace: social.</p>
 
@@ -103,6 +105,16 @@
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
     </div>
 
+
+    <aside class="gr-checked gr-checked--look" aria-label="When this ride was last checked">
+      <svg class="gr-checked-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-flag"/></svg>
+      <div>
+        <p class="gr-checked-line"><strong>Checked Sep 15, 2026.</strong> Confirmed against the sources at the foot of this page.</p>
+        
+        <p class="gr-checked-nudge">We found this ride on one source only. Confirm with the host before you go.</p>
+        <p class="gr-checked-go"><a class="link" href="https://www.facebook.com/NolaSocialRide/" rel="noopener nofollow">Check the host's page before you go</a></p>
+      </div>
+    </aside>
     <dl class="gr-facts">
         <div class="gr-fact"><dt>When</dt><dd>Every Thursday night; start posted weekly on Facebook</dd></div>
         <div class="gr-fact"><dt>Pace</dt><dd>social</dd></div>
@@ -111,6 +123,7 @@
         <div class="gr-fact"><dt>Cost</dt><dd>free</dd></div>
         <div class="gr-fact"><dt>Bike</dt><dd>Social</dd></div>
     </dl>
+
 
     <section class="gr-first" aria-labelledby="gr-first-h">
       <h2 id="gr-first-h">First time? Here's the drill</h2>
@@ -136,12 +149,12 @@
 
 
     <p class="verified gr-verify">
-      Last checked 2026-09-15 against <a href="https://www.facebook.com/NolaSocialRide/" rel="noopener nofollow">source 1</a>.
+      Checked Sep 15, 2026 against <a href="https://www.facebook.com/NolaSocialRide/" rel="noopener nofollow">source 1</a>.
       Schedules change. Confirm with the host before you go.
     </p>
 
     <details class="dir-report dir-report--compact" id="fix">
-      <summary>Wrong, gone, or you run this ride? Tell us</summary>
+      <summary>Rode it lately, or something's wrong? Tell us</summary>
       <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
       <input type="hidden" name="form-name" value="ride-report">
       <input type="hidden" name="page" value="" data-page>
@@ -151,24 +164,25 @@
         <label><input type="radio" name="kind" value="new"> <span>New ride</span></label>
         <label><input type="radio" name="kind" value="changed" checked> <span>Something changed</span></label>
         <label><input type="radio" name="kind" value="gone"> <span>It's gone</span></label>
+        <label><input type="radio" name="kind" value="still-on"> <span>Still on — I rode it</span></label>
       </fieldset>
-      <label class="lab" for="rr-what-297">Ride name or link</label>
-      <input class="field" id="rr-what-297" name="ride" type="text" required autocomplete="off" value="NOLA Social Ride Thursday Night Ride">
-      <label class="lab" for="rr-details-297">What should we know? <small>Day, time, start, pace, who runs it</small></label>
-      <textarea class="field" id="rr-details-297" name="details" rows="3"></textarea>
-      <label class="lab" for="rr-email-297">Your email <small>Optional. Only if we have a question.</small></label>
-      <input class="field" id="rr-email-297" name="email" type="email" autocomplete="email" inputmode="email">
+      <label class="lab" for="rr-what-418">Ride name or link</label>
+      <input class="field" id="rr-what-418" name="ride" type="text" required autocomplete="off" value="NOLA Social Ride Thursday Night Ride">
+      <label class="lab" for="rr-details-418">What should we know? <small>Day, time, start, pace, who runs it</small></label>
+      <textarea class="field" id="rr-details-418" name="details" rows="3"></textarea>
+      <label class="lab" for="rr-email-418">Your email <small>Optional. Only if we have a question.</small></label>
+      <input class="field" id="rr-email-418" name="email" type="email" autocomplete="email" inputmode="email">
       <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
     </form>
     </details>
   </article>
 
-  <nav class="related gr-related" aria-label="Nearby group rides">
+  <nav class="related gr-related" id="nearby" aria-label="Nearby group rides">
     <h2>Nearby rides</h2>
-    <a href="/rides/new-orleans-la-getupnride-tuesday-ride/">Get Up N Ride Tuesday Ride <small>· New Orleans, LA · Social · same start</small></a>
     <a href="/rides/new-orleans-la-nola-social-ride-happy-thursday/">NOLA Social Ride Happy Thursday <small>· New Orleans, LA · Social · same start</small></a>
+    <a href="/rides/new-orleans-la-getupnride-tuesday-ride/">Get Up N Ride Tuesday Ride <small>· New Orleans, LA · Social · 2 mi</small></a>
+    <a href="/rides/pass-christian-ms-bay-night-ride/">Bay Night Ride <small>· Pass Christian, MS · Social · 55 mi</small></a>
     <a href="/rides/baton-rouge-la-downtown-east-social-ride/">Downtown East Social Ride <small>· Baton Rouge, LA · Social · 74 mi</small></a>
-    <a href="/rides/baton-rouge-la-geaux-ride-thursday-night-community-ride/">Geaux Ride Thursday Night Community Ride <small>· Baton Rouge, LA · Social · 75 mi</small></a>
     <a href="/rides/la/new-orleans/">All rides near New Orleans →</a>
     <a href="/rides/la/">All rides in Louisiana →</a>
   </nav>

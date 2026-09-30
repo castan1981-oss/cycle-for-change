@@ -6,10 +6,10 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:corpus-christi-tx-bicycle-world-tuesday-no-drop-ride@cycleforchange.o
  rg
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/Chicago:20261006T183000
 DTEND;TZID=America/Chicago:20261006T203000
-RRULE:FREQ=WEEKLY;BYDAY=TU
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270212T235959Z
 SUMMARY:Bicycle World Tuesday No-Drop Ride — Corpus Christi\, TX
 LOCATION:Bicycle World Corpus Christi (shop parking lot)
 DESCRIPTION:Pace: no-drop.\nNo-drop.\nSchedule: Every Tuesday\, wheels do

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tokyo-jp-rapha-tokyo-ride-this-city@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=Asia/Tokyo:20261003T093000
+DTEND;TZID=Asia/Tokyo:20261003T123000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270227T235959Z
+SUMMARY:Ride This City Tokyo — Tokyo\, Japan
+LOCATION:Rapha Tokyo\, 東京都渋谷区神宮前5-29-1\, 150-0001 (5-29
+ -1 Jingumae\, Shibuya-ku\, Tokyo)
+DESCRIPTION:Pace: around 25 km/h.\nSchedule: Every Saturday\, meet 9:30 a
+ m at Rapha Tokyo\, back about 12:30 pm. Cancelled in rain; the call is m
+ ade by the evening before..\nConfirm with the host before you go.\nhttps
+ ://cycleforchange.org/rides/tokyo-jp-rapha-tokyo-ride-this-city/
+URL:https://cycleforchange.org/rides/tokyo-jp-rapha-tokyo-ride-this-city/
+END:VEVENT
+END:VCALENDAR

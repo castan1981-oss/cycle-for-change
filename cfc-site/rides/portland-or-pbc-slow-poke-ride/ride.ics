@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:portland-or-pbc-slow-poke-ride@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Los_Angeles:20261001T100000
+DTEND;TZID=America/Los_Angeles:20261001T120000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20260930T235959Z
+SUMMARY:Slow Poke Ride from St Matthews Church — Portland\, OR
+LOCATION:St Matthew's Anglican Church\, 11100 NE Skidmore St\, Portland\,
+  OR
+DESCRIPTION:Pace: Slow\, 10–12 mph\, flat.\nSchedule: Every Thursday. 1
+ 0:00 am on Oct 1\, 2026 (it left at 9:30 am in early September); each da
+ ted listing gives the time..\nConfirm with the host before you go.\nhttp
+ s://cycleforchange.org/rides/portland-or-pbc-slow-poke-ride/
+URL:https://cycleforchange.org/rides/portland-or-pbc-slow-poke-ride/
+END:VEVENT
+END:VCALENDAR

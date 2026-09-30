@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:brookhaven-ga-brookhaven-bike-alliance-monday-ride@cycleforchange.org
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/New_York:20261005T180000
 DTEND;TZID=America/New_York:20261005T200000
-RRULE:FREQ=WEEKLY;BYDAY=MO
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20270212T235959Z
 SUMMARY:Brookhaven Bike Alliance Monday Ride — Brookhaven\, GA
 LOCATION:Savi Provisions\, Dresden Dr\, Brookhaven\, GA 30319
 DESCRIPTION:Pace: 10–12 mph or 15–16 mph.\nNo-drop.\nSchedule: Every 

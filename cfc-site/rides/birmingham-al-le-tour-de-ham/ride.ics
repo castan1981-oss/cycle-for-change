@@ -5,16 +5,16 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:birmingham-al-le-tour-de-ham@cycleforchange.org
-DTSTAMP:20260930T181554Z
-DTSTART;TZID=America/Chicago:20261006T180000
-DTEND;TZID=America/Chicago:20261006T200000
-RRULE:FREQ=WEEKLY;BYDAY=TU
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20261006T181500
+DTEND;TZID=America/Chicago:20261006T201500
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270215T235959Z
 SUMMARY:Le Tour de Ham — Birmingham\, AL
-LOCATION:Rozar's Auto Paint Supply\, 3005 6th Ave S\, Birmingham\, AL 352
- 33
+LOCATION:Varies; current start posted in the Facebook group
 DESCRIPTION:Pace: slowest rider sets the pace.\nNo-drop.\nSchedule: Every
-  Tuesday\, 6:00 pm.\nConfirm with the host before you go.\nhttps://cycle
- forchange.org/rides/birmingham-al-le-tour-de-ham/
+  Tuesday\, meet 6:00 pm\, roll 6:15 pm; start point changes\, check the 
+ Facebook group.\nConfirm with the host before you go.\nhttps://cycleforc
+ hange.org/rides/birmingham-al-le-tour-de-ham/
 URL:https://cycleforchange.org/rides/birmingham-al-le-tour-de-ham/
 END:VEVENT
 END:VCALENDAR

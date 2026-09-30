@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:santa-monica-ca-la-grange-gravel-wednesday@cycleforchange.org
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260930T000000Z
 DTSTART;TZID=America/Los_Angeles:20261007T063000
 DTEND;TZID=America/Los_Angeles:20261007T083000
-RRULE:FREQ=WEEKLY;BYDAY=WE
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20270227T235959Z
 SUMMARY:Gravel Wednesday (Velo Club La Grange) — Santa Monica\, CA
 LOCATION:26th St & San Vicente Blvd\, San Vicente Blvd & 26th St\, Santa 
  Monica\, CA

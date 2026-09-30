@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:richmond-heights-mo-big-shark-saturday-mellow-ride@cycleforchange.org
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/Chicago:20261003T073000
 DTEND;TZID=America/Chicago:20261003T093000
-RRULE:FREQ=WEEKLY;BYDAY=SA
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270212T235959Z
 SUMMARY:Big Shark Saturday Mellow Ride — Richmond Heights\, MO
 LOCATION:Big Shark Bicycle Company\, Big Bend
 DESCRIPTION:Pace: chilled out\, slightly slower than the shop's main ride

@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:philadelphia-pa-bcp-sunny-sunday-d-ride@cycleforchange.org
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/New_York:20261004T120000
 DTEND;TZID=America/New_York:20261004T140000
-RRULE:FREQ=WEEKLY;BYDAY=SU
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270212T235959Z
 SUMMARY:Sunny Sunday D Ride (Bicycle Club of Philadelphia) — Philadelph
  ia\, PA
 LOCATION:Azalea Garden formal entrance\, behind the Art Museum\, Kelly Dr

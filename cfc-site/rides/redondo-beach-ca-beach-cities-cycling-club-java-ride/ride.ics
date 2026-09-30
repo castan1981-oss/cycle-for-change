@@ -6,10 +6,10 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:redondo-beach-ca-beach-cities-cycling-club-java-ride@cycleforchange.o
  rg
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/Los_Angeles:20261002T090000
 DTEND;TZID=America/Los_Angeles:20261002T110000
-RRULE:FREQ=WEEKLY;BYDAY=FR
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270212T235959Z
 SUMMARY:Friday Java Ride (Beach Cities Cycling Club) — Redondo Beach\, 
  CA
 LOCATION:Redondo Beach Pier\, pedestrian area south of Captain Kidd's\, H

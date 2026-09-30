@@ -6,10 +6,10 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:richmond-va-blue-ridge-cyclery-saturday-bridge-ride@cycleforchange.or
  g
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/New_York:20261003T083000
 DTEND;TZID=America/New_York:20261003T103000
-RRULE:FREQ=WEEKLY;BYDAY=SA
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270212T235959Z
 SUMMARY:Saturday Bridge Ride (Blue Ridge Cyclery / BikeFitRVA Racing) —
   Richmond\, VA
 LOCATION:Blue Ridge Cyclery Richmond\, 5001 Libbie Mill East Blvd\, Suite

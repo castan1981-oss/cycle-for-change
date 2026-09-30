@@ -8,7 +8,8 @@
        ride-day), the event facts (date, start, distance, climb, terrain, riders, cost, founded,
        organizer, signup, checked, flag), the town (sleep, eat, fix, weather, sun, cloud, rain,
        wind, heat, airport), the guides (pick, ready, raise, journal, help).
-       Pass 10 (Sept 30): the swag (bottle, socks, jersey, bibs). -->
+       Pass 10 (Sept 30): the swag (bottle, socks, jersey, bibs). Sept 30: globe,
+       open-streets (the world layer of /rides/). -->
   <defs>
     <g id="m-base" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
   </defs>
@@ -213,5 +214,12 @@
   </g></symbol>
   <symbol id="m-bibs" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
     <path d="M7 9.5h10l-1 11.5h-3l-1-5.5-1 5.5H8z"/><path d="M9.5 9.5V4h1.5M14.5 9.5V4H13"/>
+  </g></symbol>
+  <!-- the world (Sept 30, 2026): countries on /rides/, and the car-free Sunday programs -->
+  <symbol id="m-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.6 2.4 3.9 5.2 3.9 8.5s-1.3 6.1-3.9 8.5c-2.6-2.4-3.9-5.2-3.9-8.5s1.3-6.1 3.9-8.5z"/>
+  </g></symbol>
+  <symbol id="m-open-streets" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 3 5 21"/><path d="M16 3l3 18"/><path d="M12 4v2.5"/><path d="M12 10v2.5"/><path d="M12 16v2.5"/>
   </g></symbol>
 </svg>

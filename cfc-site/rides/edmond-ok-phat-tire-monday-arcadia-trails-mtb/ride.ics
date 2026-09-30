@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:edmond-ok-phat-tire-monday-arcadia-trails-mtb@cycleforchange.org
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/Chicago:20261005T184500
 DTEND;TZID=America/Chicago:20261005T204500
-RRULE:FREQ=WEEKLY;BYDAY=MO
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20270212T235959Z
 SUMMARY:Monday Nights at Arcadia Trails — Edmond\, OK
 LOCATION:Post Road parking lot\, under the Edmond water tower (northeast 
  side of Arcadia Lake)\, Post Rd\, Edmond\, OK 73034

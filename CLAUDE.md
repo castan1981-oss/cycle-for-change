@@ -19,6 +19,45 @@
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
 
+## Group rides go worldwide, and every ride says when it was checked (Sept 30, 2026)
+Robert's brief: be the local expert on group rides in Europe, North and South America and beyond —
+rides that are hard to find — and keep them current, because "nobody wants to look for a ride and
+find out it changed or no longer exists."
+- **Data:** `cfc-site/rides/rides.json` is schema v3 (`data/SCHEMA.md` → "Group rides"; code contract
+  `tools/lib/rides-schema.js`): `country`, `region`, `kind` (group-ride · open-streets · critical-mass ·
+  training-series), `status`, `name_en`, `language`, `visitor_notes`, `distance_km`, `last_seen`,
+  `evidence`, `refresh {method, watch_url, feed_url, notes}`. `state` is US-only. Run
+  `node tools/derive-ride-fields.js` after any edit (it fills the v3 defaults and derived fields).
+- **Pages:** US URLs never change. New: `/rides/<country-slug>/` (`/rides/united-kingdom/`), world
+  city hubs `/rides/<country-slug>/<city>/` (2+ listed rides within 40 km), `/rides/united-states/`
+  (the states, as a country), "By country" tiles on `/rides/` (the `globe` mark). Search folds
+  accents and knows country names and aliases (hub.js, rides.js). World pages say "local time" and
+  km first. Optional `data/rides-countries.json` ({"ES": {words, where, rhythm, visitors}}) adds a
+  "Riding in Spain: what to know" block to country and city pages.
+- **Freshness (`tools/lib/rides-freshness.js`, the one policy):** every card says "Checked Sep 30";
+  every ride page has a checked block (how, the evidence sentence, "last seen", a link to the host's
+  page). Checked ≤90 days = fresh; 90–150 = still listed with "confirm with the host"; 150+ = off
+  every list, index.json, live.json, the sitemap and "nearby"; its page stays with a banner and
+  `noindex`, no Event markup, no .ics. Flags from `data/rides-health.json` (the machine side) or a
+  rider's "gone/changed" report show a warning for 14 days, then hide the ride until a person
+  re-checks it (a new `verified_on`). Ended rides keep a page for a year. .ics files stop at the hide
+  date. Never stamp `verified_on` on a ride nobody checked — it is the clock.
+- **Adding rides:** scouts follow `research/rides/world/BRIEF.md` and write
+  `research/rides/world/<region>.json`; then `node tools/merge-ride-research.js research/rides/world/*.json`
+  (gates: high/medium only, evidence under 12 months, no news-only undated rides, dedupe by city +
+  day + time + host unless the starts differ, the LGBTQ never-list, geocoding, derive), then
+  `node tools/build-rides.js && node scripts/build-events.js && node scripts/build-calendar.js`.
+- `/tonight/` and `scripts/build-events.js` read `cfc-site/rides/live.json` (listed rides only).
+- The ride-report form on a listed ride page has a fourth choice, "Still on — I rode it" (`still-on`).
+- Netlify runs the rides build on every deploy and the Monday workflow forces a deploy, so rides fall
+  off the lists on schedule even when no data changes. When a hub URL disappears because the data
+  grew, add a 301 in `netlify.toml` (Carlsbad → Encinitas is the first).
+- Never list LGBTQ-focused rides in `NO_LGBTQ_LISTING` countries (criminalisation or bans on
+  gatherings / "propaganda"). The merge refuses them.
+- Next to build: the weekly watcher (`tools/rides-watch.js` → `data/rides-health.json`: dead pages,
+  changed schedules, feed proof of life), rider-report intake from Netlify Forms, and the weekly
+  re-check PR (a Claude Code action working the queue). The policy and the pages already read them.
+
 ## Town guides — the destination layer (Sept 30, 2026)
 Robert's brief: the site becomes the guide for a rider who lives somewhere else and is coming to
 a town with a bike — "you live in Boise, you're going to LA, you're bringing the bike": where to

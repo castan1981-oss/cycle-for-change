@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:seattle-wa-northstar-sunday-service@cycleforchange.org
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/Los_Angeles:20261004T110000
 DTEND;TZID=America/Los_Angeles:20261004T130000
-RRULE:FREQ=WEEKLY;BYDAY=SU
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270212T235959Z
 SUMMARY:NorthStar Cycling Sunday Service — Seattle\, WA
 LOCATION:NorthStar Clubhouse\, 2015 E Union St\, Seattle\, WA 98122
 DESCRIPTION:Pace: easy\, no-drop.\nNo-drop.\nSchedule: Sundays\, meet 10:

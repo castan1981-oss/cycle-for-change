@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:honolulu-hi-outta-bounds-pau-hana-wednesday@cycleforchange.org
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=Pacific/Honolulu:20260930T163000
 DTEND;TZID=Pacific/Honolulu:20260930T183000
-RRULE:FREQ=WEEKLY;BYDAY=WE
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20270212T235959Z
 SUMMARY:Pau Hana Wednesday (Outta Bounds) — Honolulu\, HI
 LOCATION:Triangle Park (Fort Ruger Park)\, east of Diamond Head\, Fort Ru
  ger Park\, Honolulu\, HI 96816

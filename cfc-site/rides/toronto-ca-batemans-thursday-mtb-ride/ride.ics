@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:toronto-ca-batemans-thursday-mtb-ride@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Toronto:20261001T180000
+DTEND;TZID=America/Toronto:20261001T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20261031T235959Z
+SUMMARY:Thursday MTB Group Ride — Toronto\, Canada
+LOCATION:Bateman's Trail Shop\, 49 Laird Drive\, Toronto\, ON
+DESCRIPTION:Pace: Slow\, medium and fast groups; the slow group leaves no
+  rider behind.\nSchedule: Thursdays\, 6:00 pm\, through the fall. Slow\,
+  medium and fast groups; 90 to 120 minutes in the Don Valley. Cancelled 
+ for rain..\nConfirm with the host before you go.\nhttps://cycleforchange
+ .org/rides/toronto-ca-batemans-thursday-mtb-ride/
+URL:https://cycleforchange.org/rides/toronto-ca-batemans-thursday-mtb-rid
+ e/
+END:VEVENT
+END:VCALENDAR

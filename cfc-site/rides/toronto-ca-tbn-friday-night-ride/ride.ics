@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:toronto-ca-tbn-friday-night-ride@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Toronto:20261002T180000
+DTEND;TZID=America/Toronto:20261002T200000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270227T235959Z
+SUMMARY:Friday Night Ride — Toronto\, Canada
+LOCATION:Changes weekly (Oct 2\, 2026: Riverdale Park East)\, 450 Broadvi
+ ew Ave\, Toronto\, ON
+DESCRIPTION:Pace: Urban Roller class\, 16–22 km/h\, stops to regroup.\n
+ Schedule: Fridays in season\, evening. The start and time change week to
+  week and are on each calendar event; starts stay near the waterfront or
+  a subway stop. Next listed: Fri Oct 2\, 2026\, 6:00 pm from Riverdale P
+ ark East\, 33 km\, ending on the Danforth..\nConfirm with the host befor
+ e you go.\nhttps://cycleforchange.org/rides/toronto-ca-tbn-friday-night-
+ ride/
+URL:https://cycleforchange.org/rides/toronto-ca-tbn-friday-night-ride/
+END:VEVENT
+END:VCALENDAR

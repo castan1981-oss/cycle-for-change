@@ -6,10 +6,10 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:waltham-ma-gbnemba-tuesday-western-greenway-social-ride@cycleforchang
  e.org
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/New_York:20261006T180000
 DTEND;TZID=America/New_York:20261006T200000
-RRULE:FREQ=WEEKLY;BYDAY=TU
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270212T235959Z
 SUMMARY:GBNEMBA Tuesday Western Greenway Social Ride — Waltham\, MA
 LOCATION:Mighty Squirrel Brewing Co.\, 411 Waverley Oaks Rd\, Waltham\, M
  A 02452

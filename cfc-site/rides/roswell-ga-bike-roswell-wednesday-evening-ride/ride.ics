@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:roswell-ga-bike-roswell-wednesday-evening-ride@cycleforchange.org
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/New_York:20260930T183000
 DTEND;TZID=America/New_York:20260930T203000
-RRULE:FREQ=WEEKLY;BYDAY=WE
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20270212T235959Z
 SUMMARY:Bike Roswell! Wednesday Evening Ride — Roswell\, GA
 LOCATION:Roswell United Methodist Church parking lot\, Corner of Magnolia
   St and Mimosa Blvd\, Roswell\, GA 30075

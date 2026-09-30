@@ -6,10 +6,10 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:milton-de-sussex-cyclists-wednesday-dogfish-head-ride@cycleforchange.
  org
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/New_York:20261007T090000
 DTEND;TZID=America/New_York:20261007T110000
-RRULE:FREQ=WEEKLY;BYDAY=WE
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20270212T235959Z
 SUMMARY:Wednesday Dogfish Head Ride (Sussex Cyclists) — Milton\, DE
 LOCATION:Dogfish Head Brewery\, Milton\, DE 19968
 DESCRIPTION:Pace: 16 mph and 17 mph groups.\nSchedule: Wednesdays\, 9:00 

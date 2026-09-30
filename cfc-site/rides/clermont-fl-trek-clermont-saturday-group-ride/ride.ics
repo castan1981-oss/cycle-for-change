@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:clermont-fl-trek-clermont-saturday-group-ride@cycleforchange.org
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/New_York:20261003T073000
 DTEND;TZID=America/New_York:20261003T100000
-RRULE:FREQ=WEEKLY;BYDAY=SA
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270212T235959Z
 SUMMARY:Trek Clermont Saturday Group Ride — Clermont\, FL
 LOCATION:Trek Bicycle Clermont\, 1675 Hancock Rd\, Clermont\, FL 34711
 DESCRIPTION:Pace: group choice; some hills.\nSchedule: Every Saturday\, 7

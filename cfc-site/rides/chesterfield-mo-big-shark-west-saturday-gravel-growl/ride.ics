@@ -6,10 +6,10 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:chesterfield-mo-big-shark-west-saturday-gravel-growl@cycleforchange.o
  rg
-DTSTAMP:20260930T181554Z
+DTSTAMP:20260915T000000Z
 DTSTART;TZID=America/Chicago:20261003T073000
 DTEND;TZID=America/Chicago:20261003T093000
-RRULE:FREQ=WEEKLY;BYDAY=SA
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270212T235959Z
 SUMMARY:Big Shark West Saturday Gravel Growl — Chesterfield\, MO
 LOCATION:Big Shark West (next to Kaldi's Coffee)
 DESCRIPTION:Pace: no-drop within the posted pace.\nNo-drop.\nSchedule: Ev
