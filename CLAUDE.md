@@ -51,6 +51,25 @@
 - `email/mile-updates.html` is the mile-updates email template (table-based, inline styles,
   {{placeholders}} listed at the top). Send from whatever reads the Netlify "waitlist" form.
 
+## Pass 7 — photos on the paper, posters everywhere, the route art drawn (Sept 30, 2026)
+Robert's note after Pass 6 went live: the homepage photos "don't blend into the sections or the
+background, they're just put there." Now house rules on top of Pass 6:
+- **Photos live on the paper.** Every photo edge that meets bone dissolves into it with
+  `mask-image` (never a wash, never a hard seam): the desktop hero fades in from the copy column
+  and out at the foot with a warm radial wash across the seam; the three doors step down the page
+  in a stagger and fade into their own words; Find your people bleeds to the screen's left edge;
+  the close fades in from the copy; the field-note cards fade at the foot. Phone thumbnails stay
+  crisp. New photos follow the same rule.
+- **Events are posters.** `.ev-poster` on every event page (date as a big numeral, the town
+  filling the width, the specs beside) and `.tile-p--event` tiles on the events index, state,
+  town and nearby lists. States on /rides/ are `.tile-p--code` (postal code big, name small) so
+  all 49 are the same size. The guides hub opens on a photo (`.fn-pillar-head--photo`).
+- **The route art is drawn.** `cfc-site/rides/art/` (58 city hubs) and `cfc-site/towns/art/`
+  (12 towns) hold real topographic contours from AWS terrain tiles, 7–90 KB each; both generators
+  keep those folders when they rebuild, and the tiles and posters pick the art up automatically.
+  Re-draw with `node tools/contour-art.js` on the Mac (`npm i pngjs` once) when a city hub or
+  town is added, then run both builds. The Cowork sandbox can't reach the tile server.
+
 ## Pass 6 — brighten + the graphic system (Sept 29, 2026)
 Robert's brief: the site was too dark and read as "words on a page"; he wants designed
 graphics, "visually stunning, high fashion", and the film hero redone. Art direction happened
