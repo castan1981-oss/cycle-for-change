@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tyler-tx-ride-tyler-social-spin-urban-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20261001T180000
+DTEND;TZID=America/Chicago:20261001T200000
+RRULE:FREQ=MONTHLY;BYDAY=1TH,3TH
+SUMMARY:Social Spin Urban Ride — Tyler\, TX
+LOCATION:Ride Tyler\, 322 E Southeast Loop 323\, Suite 144\, Tyler\, TX 7
+ 5703
+DESCRIPTION:Pace: relaxed.\nSchedule: First and third Thursday of the mon
+ th\, rolls 6:00–6:15 pm.\nConfirm with the host before you go.\nhttps:
+ //cycleforchange.org/rides/tyler-tx-ride-tyler-social-spin-urban-ride/
+URL:https://cycleforchange.org/rides/tyler-tx-ride-tyler-social-spin-urba
+ n-ride/
+END:VEVENT
+END:VCALENDAR

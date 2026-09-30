@@ -5,9 +5,9 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:los-angeles-ca-los-angeles-critical-mass@cycleforchange.org
-DTSTAMP:20260930T181554Z
-DTSTART;TZID=America/Los_Angeles:20261030T183000
-DTEND;TZID=America/Los_Angeles:20261030T203000
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Los_Angeles:20261030T192900
+DTEND;TZID=America/Los_Angeles:20261030T212900
 RRULE:FREQ=MONTHLY;BYDAY=-1FR
 SUMMARY:Los Angeles Critical Mass — Los Angeles\, CA
 LOCATION:Wilshire/Western Metro D Line station\, Wilshire Blvd & Western 

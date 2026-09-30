@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:manhattan-beach-ca-big-orange-team-ride@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Los_Angeles:20261004T080000
+DTEND;TZID=America/Los_Angeles:20261004T100000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Big Orange Team Ride — Manhattan Beach\, CA
+LOCATION:Starbucks\, Manhattan Beach (as the club page names it)
+DESCRIPTION:Pace: endurance tempo\, around 3 w/kg; no-drop but serious tr
+ aining.\nNo-drop.\nSchedule: Every Sunday morning; 7:00 or 8:00 am depen
+ ding on the season.\nConfirm with the host before you go.\nhttps://cycle
+ forchange.org/rides/manhattan-beach-ca-big-orange-team-ride/
+URL:https://cycleforchange.org/rides/manhattan-beach-ca-big-orange-team-r
+ ide/
+END:VEVENT
+END:VCALENDAR

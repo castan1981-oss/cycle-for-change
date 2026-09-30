@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sioux-falls-sd-sfbc-wednesday-joy-ride@cycleforchange.org
+DTSTAMP:20260918T000000Z
+DTSTART;TZID=America/Chicago:20261021T183000
+DTEND;TZID=America/Chicago:20261021T203000
+RRULE:FREQ=MONTHLY;BYDAY=3WE;UNTIL=20261031T235959Z
+SUMMARY:Wednesday Joy Ride — Sioux Falls\, SD
+LOCATION:Sioux Falls Bicycle Company\, 1740 S Cliff Ave\, Sioux Falls\, S
+ D 57105
+DESCRIPTION:Schedule: Third Wednesday of the month\, 6:30 pm\, May to Oct
+ ober.\nConfirm with the host before you go.\nhttps://cycleforchange.org/
+ rides/sioux-falls-sd-sfbc-wednesday-joy-ride/
+URL:https://cycleforchange.org/rides/sioux-falls-sd-sfbc-wednesday-joy-ri
+ de/
+END:VEVENT
+END:VCALENDAR
