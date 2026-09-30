@@ -214,3 +214,67 @@ claude.ai side (the "2027 Ride Directory refresh" task) and republishes the
 artifact at https://claude.ai/artifact/1BhU7ywcW4SBYrg3GitPqC; its data block
 has the same fields plus `on_list` (= `riding`) and can be dropped straight
 into this file, then rebuilt.
+
+## Group rides — `cfc-site/rides/rides.json` (schema v3, Sept 30, 2026)
+
+One array, one object per recurring ride, US and the world. Code contract:
+`tools/lib/rides-schema.js` (vocabularies, field order, countries, the safety
+list) and `tools/lib/rides-freshness.js` (what's fresh, what hides).
+`tools/derive-ride-fields.js` fills the derived fields and the v3 defaults and
+orders the keys; run it after every edit, then `node tools/validate-rides.js`,
+then `node tools/build-rides.js`.
+
+### Fields
+
+| Field | Type | Notes |
+|---|---|---|
+| `slug` | string | `<city>-<st or cc>-<host>-<ride>`, `a-z 0-9 -`, unique. Never changes once published (it is the URL). |
+| `name` / `name_en` | string / string\|null | The host's name for the ride; `name_en` only when `name` isn't English. |
+| `kind` | `group-ride` · `open-streets` · `critical-mass` · `training-series` | Open streets = a city's car-free program (Bogotá's Ciclovía). Training series = the training rides for a charity event. |
+| `status` | `active` · `seasonal-break` · `paused` · `ended` | `status_note`, `status_since` (YYYY-MM-DD) say what and when. Changed day/time is not a status: edit the fields. |
+| `city`, `neighborhood`, `region` | string | `region` = state name in the US, first-level division elsewhere (Catalonia, Ontario). |
+| `state` | `AZ`… \| null | US only. `null` everywhere else. |
+| `country` | ISO 3166-1 alpha-2 | `US` for the US. |
+| `lat`, `lng`, `geo_precision` | number, number, `start`\|`city` | Start point when geocoded from its address; else the city centre. |
+| `tz` | IANA zone | Derived in the US; from the research elsewhere. Drives next-ride dates and the .ics. |
+| `discipline` | array | `road` `gravel` `mtb` `social` `cruiser` `fixed` `track` `cyclocross` `ebike` `mixed` `bmx` |
+| `schedule` | string | The whole rule in plain words, summer/winter differences included. |
+| `days`, `time_local`, `start_hhmm` | array, string, `HH:MM` | `time_local` 12-hour English ("7:30 am"); `start_hhmm` the 24-hour roll time. |
+| `frequency`, `monthly_rule` | `weekly`·`biweekly`·`monthly`·`irregular`, `[{ord,day}]` | `ord` 1–4 or -1 (last). |
+| `season`, `season_months` | string, `{start,end}`\|null | Months inclusive; southern-hemisphere wraps (`{start:10,end:4}`) are fine. |
+| `start_location` | `{name, address}` | |
+| `distance_km`, `distance_miles` | number\|string\|null | US data keeps display text in `distance_miles` ("10–12"). World records give km as a number; miles is filled from it. |
+| `duration`, `duration_min`, `pace`, `drop_policy` | | `drop_policy`: `no-drop` · `groups` · `drop` · `unknown`. `pace` in the host's own units and words. |
+| `host` | `{name, type}` | `type`: `shop` `club` `collective` `nonprofit` `informal` `brand` `team` `cafe` `public` |
+| `founded_year`, `founded_note`, `cost` | | |
+| `language` | array of ISO 639-1 | The language(s) the ride runs in. |
+| `visitor_notes` | string\|null | What a visitor needs: sign-up, licence, guest rides, lights, which side of the road. |
+| `description` | string | 2–4 plain sentences in English. |
+| `links` | `{website, instagram, facebook, strava, meetup, other[]}` | Never a guessed handle. |
+| `inclusive_focus` | array | `lgbtq` `wtf` `bipoc` `beginner` `no-drop` `family` `adaptive` `youth` — only in the host's own words. |
+| `sources` | array of URLs | Every page a fact came from. |
+| `verified_on` | YYYY-MM-DD | The last day a person or agent confirmed the ride at its source. The freshness clock. Never stamp today on a ride nobody checked. |
+| `last_seen` | YYYY-MM-DD\|null | The newest dated evidence the ride is happening (a listed date, a dated post). |
+| `evidence` | string\|null | One sentence: what the source showed, and its date. |
+| `confidence` | `high` · `medium` · `low` | High: the host's own page states day/time/start and there's a dated 2026 signal. Medium: host page without a recent date, or a dated secondary source. Low: shown with an "Unconfirmed" line and re-checked first. |
+| `refresh` | `{method, watch_url, feed_url, notes}` | How to re-check it. `watch_url`: the one page that changes when the schedule does. `feed_url`: an ICS/iCal or Meetup feed that lists this ride's dates (the watcher reads it on its own). `method`: `ics` `calendar-page` `meetup` `ridewithgps` `eventbrite` `heylo` `spond` `strava-club` `instagram` `facebook` `static-page` `federation-calendar` `news`. |
+
+### Freshness — how a ride stays on the site (tools/lib/rides-freshness.js)
+
+- **Fresh**: checked in the last 90 days (a person, or the host's own feed
+  showing the next date in the last 21 days). Card says "Checked Sep 30".
+- **Due**: 90–150 days. Still listed; the page says when it was checked and
+  asks the rider to confirm with the host. First in line for a re-check.
+- **Stale**: 150+ days. Off the directory, hubs, search and sitemap. The page
+  stays, says so, and is `noindex`.
+- **Flagged**: the watcher saw the host's page go away or say "cancelled",
+  or a rider reported it gone or changed. Listed with a warning for 14 days
+  while it's re-checked, then off the lists. A person re-checking it
+  (`verified_on` moving past the flag) clears it; a feed hit doesn't.
+- **Paused** / **ended**: off the lists. Ended pages stay a year (noindex,
+  pointing at rides nearby), then the build drops them.
+
+The machine side lives in `data/rides-health.json` (written by
+`tools/rides-watch.js`, never by hand): per ride, the last fetch of each
+URL, fingerprints of the schedule text, flags, the feed's next date, rider
+reports. Human-checked facts live only in `rides.json`.

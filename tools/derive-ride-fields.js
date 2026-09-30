@@ -13,9 +13,17 @@
     monthly_rule   [{ord,day}] from "Second Wednesday", "Last Friday", …
   and normalises state, days and slug characters. Idempotent. Run it after
   editing rides.json and before tools/build-rides.js.
+
+  Schema v3 (Sept 30, 2026 — the world layer): it also fills the defaults every
+  record carries (country "US" for a US state, region, kind, status, language,
+  distance_km <-> distance_miles, refresh.method/watch_url, null for the rest)
+  and puts the keys in the canonical order (tools/lib/rides-schema.js).
+  Outside the US: `state` is null, `tz` and `start_hhmm` come from the research
+  and are kept when valid (24-hour times like "06:30" are mornings there).
 */
 "use strict";
 const fs = require("fs"), path = require("path");
+const S = require("./lib/rides-schema.js");
 const DATA = path.join(__dirname, "..", "cfc-site", "rides", "rides.json");
 const rides = JSON.parse(fs.readFileSync(DATA, "utf8"));
 
@@ -76,18 +84,52 @@ function monthly(s) {
 }
 
 let changed = 0;
-for (const r of rides) {
-  const before = JSON.stringify([r.tz, r.start_hhmm, r.duration_min, r.season_months, r.monthly_rule, r.days]);
-  r.state = String(r.state).toUpperCase().slice(0, 2);
+const validTz = (z) => { if (!z) return false; try { new Intl.DateTimeFormat("en", { timeZone: z }); return true; } catch (e) { return false; } };
+const validHHMM = (t) => typeof t === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(t);
+const KIND_CM = /critical mass|masa cr[ií]tica|massa cr[ií]tica|masse critique|kritische masse|masa krytyczna/i;
+const out = rides.map((r) => {
+  const before = JSON.stringify(r);
+  // where it is
+  if (!r.country && r.state && S.US_STATES[String(r.state).toUpperCase().slice(0, 2)]) r.country = "US";
+  r.country = String(r.country || "US").toUpperCase();
+  const us = r.country === "US";
+  if (us) {
+    r.state = String(r.state).toUpperCase().slice(0, 2);
+    r.region = S.US_STATES[r.state] || r.region || null;
+    r.tz = tz(r);
+  } else {
+    r.state = null;
+    if (!validTz(r.tz)) r.tz = null;                                    // the validator reports it
+  }
+  // when it rolls
   r.days = (r.days || []).map((d) => String(d).toLowerCase().slice(0, 3)).filter((d) => /^(mon|tue|wed|thu|fri|sat|sun)$/.test(d));
-  r.tz = tz(r);
-  r.start_hhmm = rollTime(r.schedule) || rollTime(r.time_local) || anyTime(r.time_local) || anyTime(r.schedule);
-  r.duration_min = duration(r.duration);
-  r.season_months = season(r.season) || season(r.schedule);
-  r.monthly_rule = r.frequency === "monthly" || /month/i.test(r.schedule || "") ? monthly(r.schedule) : null;
+  if (us || !validHHMM(r.start_hhmm)) {
+    const had = validHHMM(r.start_hhmm) ? r.start_hhmm : null;
+    r.start_hhmm = rollTime(r.schedule) || rollTime(r.time_local) || anyTime(r.time_local) || anyTime(r.schedule) || had;
+  }
+  const dm = duration(r.duration);
+  r.duration_min = dm != null ? dm : (Number.isFinite(r.duration_min) ? r.duration_min : null);
+  r.season_months = season(r.season) || season(r.schedule) || (r.season_months && r.season_months.start ? r.season_months : null);
+  r.monthly_rule = r.frequency === "monthly" || /month/i.test(r.schedule || "") ? (monthly(r.schedule) || r.monthly_rule || null) : null;
   if (r.monthly_rule && !r.days.length) r.days = [...new Set(r.monthly_rule.map((x) => x.day))];
-  if (before !== JSON.stringify([r.tz, r.start_hhmm, r.duration_min, r.season_months, r.monthly_rule, r.days])) changed++;
-}
-rides.sort((a, b) => a.state.localeCompare(b.state) || a.city.localeCompare(b.city) || a.name.localeCompare(b.name));
-fs.writeFileSync(DATA, JSON.stringify(rides, null, 1) + "\n");
-console.log(`derived fields for ${rides.length} rides (${changed} changed); ${rides.filter((r) => r.start_hhmm).length} have a start time, ${rides.filter((r) => r.season_months).length} a season, ${rides.filter((r) => r.monthly_rule).length} a monthly rule`);
+  // v3 defaults
+  if (!r.kind) r.kind = KIND_CM.test(r.name || "") ? "critical-mass" : "group-ride";
+  if (!r.status) r.status = "active";
+  for (const k of ["name_en", "status_note", "status_since", "visitor_notes", "last_seen", "evidence"]) if (!(k in r)) r[k] = null;
+  if (!Array.isArray(r.language) || !r.language.length) r.language = us ? ["en"] : [];
+  // distance_miles is display text in the US data ("10–12", "~20"); keep it. Outside the US the research
+  // gives distance_km as a number; fill miles from it when missing. Never overwrite a value that's there.
+  if (!("distance_km" in r)) r.distance_km = null;
+  if (!("distance_miles" in r)) r.distance_miles = null;
+  if (!us && Number.isFinite(r.distance_km) && r.distance_miles == null) r.distance_miles = Math.round(r.distance_km * 0.621371);
+  const f = r.refresh && typeof r.refresh === "object" ? r.refresh : {};
+  const watch = f.watch_url || (r.sources || [])[0] || (r.links || {}).website || null;
+  r.refresh = { method: f.method || S.refreshMethodFor(watch), watch_url: watch, feed_url: f.feed_url || null, notes: f.notes || null };
+  const o = S.orderRecord(r);
+  if (before !== JSON.stringify(o)) changed++;
+  return o;
+});
+S.sortRides(out);
+fs.writeFileSync(DATA, JSON.stringify(out, null, 1) + "\n");
+const world = out.filter((r) => r.country !== "US");
+console.log(`derived fields for ${out.length} rides (${changed} changed; ${world.length} outside the US in ${new Set(world.map((r) => r.country)).size} countries); ${out.filter((r) => r.start_hhmm).length} have a start time, ${out.filter((r) => r.season_months).length} a season, ${out.filter((r) => r.monthly_rule).length} a monthly rule`);
