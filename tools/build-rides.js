@@ -21,6 +21,7 @@ const fs = require("fs");
 const path = require("path");
 const CHROME = require("../scripts/chrome.js"); // shared header, footer, fonts
 const BLOCKS = require("../scripts/blocks.js"); // how-it's-built tiles + the ride-report form
+const TOWNS = require("../scripts/towns.js");  // the town layer (Sept 30, 2026): the strip on every ride page and city hub that has a guide
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "cfc-site", "rides");
@@ -758,7 +759,8 @@ ${byCity[c].map((r) => card(r, { distance: miles(h, r) })).join("\n")}
         </div>
       </section>`).join("\n");
   const others = hubs.filter((x) => x !== h).map((x) => ({ x, d: miles(h, x) })).filter((x) => x.d <= 150).sort((a, b) => a.d - b.d).slice(0, 5);
-  const bottom = (others.length ? `
+  const town = TOWNS.find({ city: h.city, state: h.state, lat: h.lat, lng: h.lng });
+  const bottom = (town ? TOWNS.strip(town, { heading: `Coming to ${esc(town.name)} to ride?` }) : "") + (others.length ? `
       <section class="gr-events">
         <h2 class="gr-state-head">Nearby cities with group rides</h2>
         <ul class="gr-event-list">
@@ -977,6 +979,8 @@ ${firstTimeBlock(r, hostLabel)}
         ${linkBtns}
       </div>
     </div>
+
+${(() => { const town = TOWNS.find({ city: r.city, state: r.state, lat: r.lat, lng: r.lng }); return town ? TOWNS.strip(town, { compact: true, heading: `Riding ${esc(town.name)} from out of town?`, lede: `Where the routes are, who fixes or rents a bike, where to sleep with it, how to get it here.` }) : ""; })()}
 
     <p class="verified gr-verify">
       Last checked ${esc(r.verified_on)} against ${r.sources.length ? r.sources.map((s, i) => `<a href="${attr(s)}" rel="noopener nofollow">source ${i + 1}</a>`).join(", ") : "the links above"}.

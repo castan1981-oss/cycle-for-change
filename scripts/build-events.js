@@ -16,6 +16,10 @@
      /towns/<state>/<town>/hotels/
      /towns/<state>/<town>/restaurants/
      /towns/<state>/<town>/bike-shops/
+     /towns/<state>/<town>/routes/          } only when the town carries the
+     /towns/<state>/<town>/coffee/          } guide fields (data/SCHEMA.md,
+     /towns/<state>/<town>/culture/         } "Town guide fields") — the
+     /towns/<state>/<town>/bring-your-bike/ } destination layer, Sept 30, 2026
      /events/events.json               machine-readable feed
      /sitemap-events.xml               sitemap for everything above (listed in /sitemap.xml)
 */
@@ -25,6 +29,7 @@ const fs = require("fs");
 const path = require("path");
 const CHROME = require("./chrome.js"); // shared header, footer, fonts
 const BLOCKS = require("./blocks.js"); // how-it's-built tiles + the ride-report form (Pass 3)
+const TOWNS = require("./towns.js");   // the town layer: the strip every event, calendar row and ride page carries (Sept 30, 2026)
 
 const ROOT = path.resolve(__dirname, "..");
 const DATA = path.join(ROOT, "data");
@@ -87,7 +92,8 @@ function haversineMi(a, b) {
 const TYPE_LABEL = { road: "Road", gravel: "Gravel", mtb: "Mountain bike", tour: "Tour", hillclimb: "Hill climb", charity: "Charity ride", "multi-day": "Multi-day" };
 
 function readDir(dir) {
-  return fs.readdirSync(dir).filter((f) => f.endsWith(".json")).map((f) => {
+  // Files starting with "_" are templates and notes (data/towns/_template.json), not records.
+  return fs.readdirSync(dir).filter((f) => f.endsWith(".json") && !f.startsWith("_")).map((f) => {
     const p = path.join(dir, f);
     try { return JSON.parse(fs.readFileSync(p, "utf8")); }
     catch (e) { throw new Error(`Bad JSON in ${p}: ${e.message}`); }
@@ -114,7 +120,33 @@ const isRiding = (e) => RIDING.some((n) => norm(n) === norm(e.name) || norm(n).s
 function ridesNear(e, radius = 30, max = 4) {
   return RIDES.map((r) => ({ r, d: haversineMi(e, { lat: r.lat, lon: r.lng }) })).filter((x) => x.d <= radius).sort((a, b) => a.d - b.d).slice(0, max);
 }
+// The 2027 calendar (one row per organized ride) and the rides-directory hubs
+// (cfc-site/rides/hubs.json, written by tools/build-rides.js) feed the town page:
+// "Organized rides in <town> in 2027" and the link to /rides/<st>/<city>/.
+const CALENDAR = (readJson(path.join(ROOT, "data", "calendar-2027.json")) || {}).events || [];
+const HUBS = readJson(path.join(ROOT, "cfc-site", "rides", "hubs.json")) || [];
+function hubFor(t) {
+  const h = HUBS.find((x) => slugify(x.city) === t.slug && String(x.state).toUpperCase() === t.state_code);
+  return h ? { path: `/rides/${t.state_code.toLowerCase()}/${t.slug}/`, rides: h.rides } : null;
+}
+function calendarIn(t, max = 8) {
+  const city = String(t.name).toLowerCase();
+  return CALENDAR.filter((e) => e.start && String(e.city || "").toLowerCase() === city && String(e.state || "").toUpperCase() === t.state_code)
+    .filter((e) => !t.events.some((x) => norm(x.name) === norm(e.name)))
+    .sort((a, b) => a.start.localeCompare(b.start)).slice(0, max);
+}
 const townById = Object.fromEntries(towns.map((t) => [t.id, t]));
+
+// Guide-field vocabularies (data/SCHEMA.md). The build fails on a value outside them,
+// so chips, filters and JSON-LD always agree.
+const ENUM = {
+  kind: ["event-host", "destination"],
+  routeType: ["road", "gravel", "mtb", "path", "climb"],
+  difficulty: ["easy", "moderate", "hard", "epic"],
+  cultureKind: ["record-store", "bookstore", "gallery", "museum", "bar", "queer-owned", "venue", "market", "other"],
+  linkKind: ["official", "affiliate"],
+};
+const inEnum = (where, v, list) => { if (v != null && !list.includes(v)) throw new Error(`${where}: "${v}" is not one of ${list.join(", ")}`); };
 
 for (const t of towns) {
   for (const k of ["id", "name", "state", "state_code", "lat", "lon", "timezone", "summary"]) {
@@ -124,6 +156,19 @@ for (const t of towns) {
   t.slug = slugify(t.name);
   t.url = `/towns/${t.state_slug}/${t.slug}/`;
   t.events = [];
+  t.kind = t.kind || "event-host";
+  inEnum(`towns/${t.id}.kind`, t.kind, ENUM.kind);
+  (t.routes || []).forEach((r, i) => {
+    if (!r.name) throw new Error(`towns/${t.id}.routes[${i}] has no name`);
+    inEnum(`towns/${t.id}.routes[${i}].type`, r.type, ENUM.routeType);
+    inEnum(`towns/${t.id}.routes[${i}].difficulty`, r.difficulty, ENUM.difficulty);
+    if (!r.links || !Object.values(r.links).some(Boolean)) throw new Error(`towns/${t.id}.routes[${i}] (${r.name}) has no route link — a route needs a public route page`);
+  });
+  (t.culture || []).forEach((c, i) => inEnum(`towns/${t.id}.culture[${i}].kind`, c.kind, ENUM.cultureKind));
+  (t.travel_links || []).forEach((l, i) => inEnum(`towns/${t.id}.travel_links[${i}].kind`, l.kind, ENUM.linkKind));
+  for (const k of ["hotels", "restaurants", "bike_shops", "coffee", "culture", "clubs", "routes"]) {
+    (t[k] || []).forEach((it, i) => { if (!it.name) throw new Error(`towns/${t.id}.${k}[${i}] has no name`); });
+  }
   lintDeep(`towns/${t.id}`, t);
 }
 for (const e of events) {
@@ -330,18 +375,7 @@ function eventPage(e) {
 
     ${weatherBlock(t, { heading: `Weather in ${t.name} for the ${e.name}`, note: e.weather_note, date: e.next_date, endDate: e.end_date })}
 
-    <section class="town-box" aria-labelledby="town-h">
-      <p class="eyebrow">Once you&rsquo;re in ${esc(t.name)}</p>
-      <h2 id="town-h">Sleep, eat, fix the bike.</h2>
-      <p>${esc(t.summary)}</p>
-      ${t.getting_there ? `<p>${esc(t.getting_there)}</p>` : ""}
-      <div class="town-strip">
-        <a href="${t.url}hotels/">${mark("sleep", "mk mk--strip")}<span class="eyebrow">Sleep</span><b>Where to stay</b><span>${t.hotels ? `${t.hotels.length} picks` : "Hotels near the start"}</span></a>
-        <a href="${t.url}restaurants/">${mark("eat", "mk mk--strip")}<span class="eyebrow">Eat</span><b>Where to eat</b><span>${t.restaurants ? `${t.restaurants.length} picks` : "Carb night, post-ride, early coffee"}</span></a>
-        <a href="${t.url}bike-shops/">${mark("fix", "mk mk--strip")}<span class="eyebrow">Fix</span><b>Bike shops</b><span>${t.bike_shops ? `${t.bike_shops.length} shops` : "Open the day before"}</span></a>
-      </div>
-      <p class="town-more"><a href="${t.url}">The ${esc(t.name)} town guide &rarr;</a></p>
-    </section>
+    ${(() => { const tg = TOWNS.find({ city: t.name, state: t.state_code }); return tg ? TOWNS.strip(tg, { heading: tg.kind === "destination" ? "Ride, sleep, eat, fix the bike." : "Sleep, eat, fix the bike.", lede: t.getting_there ? esc(t.getting_there) : "" }) : ""; })()}
 ${(() => { const near = ridesNear(e); if (!near.length) return ""; return `
     <section class="local-rides" aria-labelledby="local-h">
       <h2 id="local-h">Group rides around ${esc(t.name)}</h2>
@@ -370,10 +404,27 @@ ${BLOCKS.REPORT({ thing: "event", name: e.name, kind: "changed", compact: true, 
 function stripUndef(o) { return JSON.parse(JSON.stringify(o)); }
 
 // ——— town page + resource pages ————————————————————————————————————————
+// Which resource pages a town gets: the three legacy pages always (Sleep / Eat / Fix),
+// the guide pages only when their data exists. Order on the town page follows the kind:
+// a destination leads with the riding, an event host with the bed.
+function guidePages(t) {
+  const all = Object.values(RESOURCE);
+  const has = (r) => r.always || (r.key === "bring_your_bike" ? !!(t.bring_your_bike && t.bring_your_bike.summary) : Array.isArray(t[r.key]) && t[r.key].length > 0);
+  const order = t.kind === "destination" ? ["routes", "coffee", "bike-shops", "hotels", "restaurants", "culture", "bring-your-bike"] : ["hotels", "restaurants", "bike-shops", "routes", "coffee", "culture", "bring-your-bike"];
+  return order.map((seg) => all.find((r) => r.seg === seg)).filter((r) => r && has(r));
+}
+const count = (t, r) => r.key === "bring_your_bike" ? null : (t[r.key] || []).length;
+
 function townPage(t) {
-  const title = `${t.name}, ${t.state_code} for cyclists — bike events, weather, where to stay, bike shops`;
+  const dest = t.kind === "destination";
+  const title = dest
+    ? `${t.name}, ${t.state_code} for cyclists — rides, bike shops, coffee, where to stay, bringing your bike`
+    : `${t.name}, ${t.state_code} for cyclists — bike events, weather, where to stay, bike shops`;
   const description = truncate(t.summary, 155);
   const crumbs = breadcrumb([{ name: "Towns", url: "/towns/" }, { name: t.state, url: `/events/state/${t.state_slug}/` }, { name: t.name, url: t.url }]);
+  const hub = hubFor(t);
+  const near = ridesNear(t, 30, 6);
+  const cal = calendarIn(t);
   const ld = stripUndef({
     "@context": "https://schema.org", "@type": "City",
     name: t.name, url: SITE + t.url, sameAs: t.official_url || undefined, description: t.summary,
@@ -387,53 +438,115 @@ function townPage(t) {
     dateModified: t.verified || TODAY,
     speakable: { "@type": "SpeakableSpecification", cssSelector: [".lede"] },
     publisher: { "@type": "Organization", name: "Cycle for Change", url: SITE + "/" },
+    author: { "@type": "Person", name: "Robert Castan" },
+  };
+  const faqLd = t.faq && t.faq.length ? {
+    "@context": "https://schema.org", "@type": "FAQPage",
+    mainEntity: t.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  } : null;
+  const pages = guidePages(t);
+  const CARD = {
+    hotels: (n) => [`Stay`, `Hotels in ${t.name}`, `${n} places, picked for riders`],
+    restaurants: (n) => [`Eat`, `Restaurants in ${t.name}`, `${n} places for the night before and after`],
+    "bike-shops": (n) => [`Fix`, `Bike shops in ${t.name}`, `${n} shops for repairs, parts, rentals`],
+    routes: (n) => [`Ride`, `Rides in ${t.name}`, `${n} routes with a route page each`],
+    coffee: (n) => [`Coffee`, `Coffee in ${t.name}`, `${n} places riders roll out from`],
+    culture: (n) => [`Off the bike`, `${t.name} off the bike`, `${n} places for the afternoon after`],
+    "bring-your-bike": () => [`Bring the bike`, `Getting your bike to ${t.name}`, `Fly, ship or rent. Getting around. The rules.`],
   };
   const body = `
   ${crumbs.html}
   <article class="town">
     <p class="eyebrow">${esc(t.county ? t.county + " · " : "")}${esc(t.state)}${t.elevation_ft ? ` · ${Number(t.elevation_ft).toLocaleString("en-US")} ft` : ""}</p>
     <h1>${esc(t.name)}, ${esc(t.state)}</h1>
+    ${t.tagline ? `<p class="tagline">${esc(t.tagline)}</p>` : ""}
     <h2 class="visually-hidden">Cycling in ${esc(t.name)}</h2>
     <p class="lede">${esc(t.summary)}</p>
 
     ${facts([
+      ["Best months", t.best_months ? esc(t.best_months) : null],
       ["Population", t.population ? esc(t.population) : null],
-      ["Nearest airport", t.nearest_airport ? `${esc(t.nearest_airport.name)}${t.nearest_airport.code ? ` (${esc(t.nearest_airport.code)})` : ""}${t.nearest_airport.miles ? `, ${t.nearest_airport.miles} mi` : ""}` : null],
-      ["Major airport", t.major_airport && (!t.nearest_airport || t.major_airport.code !== t.nearest_airport.code) ? `${esc(t.major_airport.name)}${t.major_airport.code ? ` (${esc(t.major_airport.code)})` : ""}${t.major_airport.miles ? `, ${t.major_airport.miles} mi` : ""}` : null],
+      ["Nearest airport", t.nearest_airport && t.nearest_airport.name ? `${esc(t.nearest_airport.name)}${t.nearest_airport.code ? ` (${esc(t.nearest_airport.code)})` : ""}${t.nearest_airport.miles ? `, ${t.nearest_airport.miles} mi` : ""}` : null],
+      ["Major airport", t.major_airport && t.major_airport.name && (!t.nearest_airport || t.major_airport.code !== t.nearest_airport.code) ? `${esc(t.major_airport.name)}${t.major_airport.code ? ` (${esc(t.major_airport.code)})` : ""}${t.major_airport.miles ? `, ${t.major_airport.miles} mi` : ""}` : null],
+      ["Group rides", hub ? `<a href="${hub.path}">${hub.rides} weekly ride${hub.rides === 1 ? "" : "s"} listed</a>` : null],
       ["Time zone", esc(t.timezone.replace(/_/g, " "))],
       ["Official site", t.official_url ? `<a href="${attr(t.official_url)}" rel="noopener">${esc(domain(t.official_url))}</a>` : null],
       ["Visitor info", t.visitor_url ? `<a href="${attr(t.visitor_url)}" rel="noopener">${esc(domain(t.visitor_url))}</a>` : null],
     ])}
 
-    <section class="res-grid" aria-label="Travel resources">
-      <a class="res-card" href="${t.url}hotels/"><span class="res-k">Stay</span><b>Hotels in ${esc(t.name)}</b><span>${t.hotels ? t.hotels.length : 0} places, picked for riders</span></a>
-      <a class="res-card" href="${t.url}restaurants/"><span class="res-k">Eat</span><b>Restaurants in ${esc(t.name)}</b><span>${t.restaurants ? t.restaurants.length : 0} places for the night before and after</span></a>
-      <a class="res-card" href="${t.url}bike-shops/"><span class="res-k">Fix</span><b>Bike shops in ${esc(t.name)}</b><span>${t.bike_shops ? t.bike_shops.length : 0} shops for repairs, parts, rentals</span></a>
+    <section class="res-grid" aria-label="${dest ? "The guide" : "Travel resources"}">
+      ${pages.map((r) => { const [k, b, s] = CARD[r.seg](count(t, r)); return `<a class="res-card" href="${t.url}${r.seg}/"><span class="res-k">${esc(k)}</span><b>${esc(b)}</b><span>${esc(s)}</span></a>`; }).join("\n      ")}
     </section>
 
-    <section><h2>Bike events in ${esc(t.name)}</h2>
-      ${t.events.length ? `<ul class="tiles-p tiles-p--events">${t.events.map((e) => eventCard(e)).join("")}</ul>` : `<p>No events listed here yet.</p>`}
-    </section>
+    ${t.events.length || !cal.length ? `<section><h2>Bike events in ${esc(t.name)}</h2>
+      ${t.events.length ? `<ul class="tiles-p tiles-p--events">${t.events.map((e) => eventCard(e)).join("")}</ul>` : `<p>No events with their own page here yet.</p>`}
+    </section>` : ""}
+    ${cal.length ? `<section class="local-rides" aria-labelledby="cal-h">
+      <h2 id="cal-h">Organized rides in ${esc(t.name)} in 2027</h2>
+      <p class="mute">From the 2027 calendar. Dates marked projected follow last year's weekend; check the organizer.</p>
+      <ul class="rows">
+${cal.map((e) => `        <li><a href="/events/2027/#${attr(e.slug)}"><span class="row-name">${esc(e.name)}</span><span class="row-meta">${esc(e.end && e.end !== e.start ? fmtRange(e.start, e.end) : fmtDate(e.start, { weekday: undefined }))}${e.date_status === "projected" ? " (projected)" : ""} &middot; ${esc(e.category)}${e.cause ? ` &middot; ${esc(e.cause)}` : ""}</span></a></li>`).join("\n")}
+      </ul>
+      <p class="town-more"><a href="/events/2027/">The whole 2027 calendar &rarr;</a></p>
+    </section>` : ""}
+
+    ${near.length ? `<section class="local-rides" aria-labelledby="local-h">
+      <h2 id="local-h">Group rides around ${esc(t.name)}</h2>
+      <p class="mute">Free, recurring, open to anyone. The fastest way into a town is somebody's Saturday ride.</p>
+      <ul class="rows">
+${near.map(({ r, d }) => `        <li><a href="/rides/${r.slug}/"><span class="row-name">${esc(r.name)}</span><span class="row-meta">${esc(r.city)}, ${esc(r.state)} &middot; ${esc(r.schedule || "")}${d >= 1 ? ` &middot; ${Math.round(d)} mi out` : ""}</span></a></li>`).join("\n")}
+      </ul>
+      <p class="town-more"><a href="${hub ? hub.path : `/rides/${t.state_code.toLowerCase()}/`}">${hub ? `All ${hub.rides} group rides in ${esc(t.name)}` : `All group rides in ${esc(t.state)}`} &rarr;</a></p>
+    </section>` : ""}
+
+    ${t.clubs && t.clubs.length ? `<section aria-labelledby="clubs-h"><h2 id="clubs-h">Clubs and collectives in ${esc(t.name)}</h2>
+      <ol class="places">${t.clubs.map((c) => `<li class="place">
+        <h3>${c.url ? `<a href="${attr(c.url)}" rel="noopener">${esc(c.name)}</a>` : esc(c.name)}</h3>
+        ${focusChips(c.inclusive_focus)}
+        ${c.note ? `<p>${esc(c.note)}</p>` : ""}
+        ${c.ride ? `<p class="place-meta"><a href="/rides/${attr(c.ride)}/">Their ride in the directory &rarr;</a></p>` : ""}
+      </li>`).join("")}</ol>
+    </section>` : ""}
 
     ${t.about && t.about.length ? `<section><h2>About ${esc(t.name)}</h2>${paras(t.about)}</section>` : ""}
-    ${t.riding && t.riding.length ? `<section><h2>Riding in ${esc(t.name)}</h2>${paras(t.riding)}</section>` : ""}
-    ${t.getting_there ? `<section><h2>Getting to ${esc(t.name)}</h2><p>${esc(t.getting_there)}</p></section>` : ""}
+    ${t.riding && t.riding.length ? `<section><h2>Riding in ${esc(t.name)}</h2>${paras(t.riding)}${t.routes && t.routes.length ? `<p class="town-more"><a href="${t.url}routes/">The ${t.routes.length} routes, with maps &rarr;</a></p>` : ""}</section>` : ""}
+    ${t.getting_there ? `<section><h2>Getting to ${esc(t.name)}</h2><p>${esc(t.getting_there)}</p>${t.bring_your_bike && t.bring_your_bike.summary ? `<p class="town-more"><a href="${t.url}bring-your-bike/">Bringing the bike: fly, ship or rent &rarr;</a></p>` : ""}</section>` : ""}
 
     ${weatherBlock(t)}
+    ${t.faq && t.faq.length ? `<section class="faq"><h2>Questions about riding in ${esc(t.name)}</h2>${t.faq.map((f) => `<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("")}</section>` : ""}
     ${sourcesList(t.sources)}
+    ${affiliateNote(t)}
     <p class="verified">Checked ${esc(fmtDate(t.verified || TODAY, { weekday: undefined }))}. Businesses open and close. Call before you count on anyone.</p>
 ${BLOCKS.REPORT({ thing: "place", name: t.name, kind: "changed", compact: true, id: "fix" })}
   </article>
   <p class="back"><a href="/towns/">All towns</a> &middot; <a href="/events/state/${t.state_slug}/">${esc(t.state)}</a></p>
 `;
-  return head({ title, description, url: t.url, ld: [ld, crumbs.ld, pageLd] }) + body + foot();
+  return head({ title, description, url: t.url, ld: [ld, crumbs.ld, pageLd].concat(faqLd ? [faqLd] : []) }) + body + foot();
 }
 
+// Affiliate links (travel_links[].kind === "affiliate") get the disclosure printed by the
+// build, once, on every page of the town that carries them. Nobody pays to be listed.
+function hasAffiliate(t) { return (t.travel_links || []).some((l) => l.kind === "affiliate"); }
+function affiliateNote(t) {
+  return hasAffiliate(t) ? `<p class="verified">Some booking links on these pages pay Cycle for Change a small commission at no cost to you. That money goes where the pledge money goes. It never decides who's listed.</p>` : "";
+}
+const affiliateUrls = (t) => new Set((t.travel_links || []).filter((l) => l.kind === "affiliate").map((l) => l.url));
+const outLink = (t, url, text) => `<a href="${attr(url)}" rel="${affiliateUrls(t).has(url) ? "sponsored noopener" : "noopener"}">${text}</a>`;
+
 const RESOURCE = {
-  hotels: { key: "hotels", seg: "hotels", h: (t) => `Hotels in ${t.name} for cyclists`, title: (t) => `Hotels in ${t.name}, ${t.state_code} for cyclists — where to stay for bike events`, type: "LodgingBusiness", verb: "stay", intro: (t) => `Places to stay in ${t.name} when you are in town to ride. Picked for being near the start, easy with a bike, or cheap. Book early for event weekends. Rooms go first.` },
-  restaurants: { key: "restaurants", seg: "restaurants", h: (t) => `Restaurants in ${t.name} for cyclists`, title: (t) => `Restaurants in ${t.name}, ${t.state_code} — where to eat before and after a ride`, type: "Restaurant", verb: "eat", intro: (t) => `Where to eat in ${t.name} the night before a ride and the afternoon after. Nothing fancy. Real food, real portions, places that are open when you need them.` },
-  "bike-shops": { key: "bike_shops", seg: "bike-shops", h: (t) => `Bike shops in ${t.name}: repairs, parts, rentals`, title: (t) => `Bike shops in ${t.name}, ${t.state_code} — bike repair, parts and rentals near the event`, type: "BikeStore", verb: "fix", intro: (t) => `Bike shops in ${t.name} that do repairs. If something breaks in transit or the night before, start here. Call ahead on event weekends. Mechanics get slammed.` },
+  hotels: { key: "hotels", seg: "hotels", always: true, h: (t) => `Hotels in ${t.name} for cyclists`, title: (t) => `Hotels in ${t.name}, ${t.state_code} for cyclists — where to stay with a bike`, type: "LodgingBusiness", verb: "stay", intro: (t) => `Places to stay in ${t.name} when you are in town to ride. Picked for being near the riding, easy with a bike, or cheap. Book early for event weekends. Rooms go first.` },
+  restaurants: { key: "restaurants", seg: "restaurants", always: true, h: (t) => `Restaurants in ${t.name} for cyclists`, title: (t) => `Restaurants in ${t.name}, ${t.state_code} — where to eat before and after a ride`, type: "Restaurant", verb: "eat", intro: (t) => `Where to eat in ${t.name} the night before a ride and the afternoon after. Nothing fancy. Real food, real portions, places that are open when you need them.` },
+  "bike-shops": { key: "bike_shops", seg: "bike-shops", always: true, h: (t) => `Bike shops in ${t.name}: repairs, parts, rentals`, title: (t) => `Bike shops in ${t.name}, ${t.state_code} — bike repair, rentals, and shops that build a shipped bike`, type: "BikeStore", verb: "fix", intro: (t) => `Bike shops in ${t.name} that do repairs. If something breaks in transit or the night before, start here. Call ahead on event weekends. Mechanics get slammed.` },
+  coffee: { key: "coffee", seg: "coffee", h: (t) => `Coffee in ${t.name} for cyclists`, title: (t) => `Coffee in ${t.name}, ${t.state_code} for cyclists — where the rides start and end`, type: "CafeOrCoffeeShop", verb: "coffee", intro: (t) => `Where riders in ${t.name} start the day and finish the ride. Open early, near the routes, fine with a table of people in bibs. Show up at the ride-out ones on a Saturday and you'll find company.` },
+  culture: { key: "culture", seg: "culture", h: (t) => `${t.name} off the bike: record stores, bookshops, bars`, title: (t) => `${t.name}, ${t.state_code} off the bike — record stores, bookshops, bars and what to do after the ride`, type: "LocalBusiness", verb: "off the bike", intro: (t) => `What to do in ${t.name} with the afternoon after the ride and the evening before it. A short list, not a city guide: the record store, the bookshop, the bar, the market.` },
+  routes: { key: "routes", seg: "routes", h: (t) => `Rides in ${t.name}: the routes to bring your bike for`, title: (t) => `Bike routes in ${t.name}, ${t.state_code} — road, gravel, the climb and the easy one, with maps`, verb: "ride", intro: (t) => `The rides locals in ${t.name} actually do, each with a public route page you can load on your computer. Real miles, real feet, where it starts, where the water is, and the line about what will get you hurt.` },
+  "bring-your-bike": { key: "bring_your_bike", seg: "bring-your-bike", h: (t) => `Should you bring your bike to ${t.name}?`, title: (t) => `Bringing your bike to ${t.name}, ${t.state_code} — fly, ship or rent, getting around, the rules`, verb: "bring the bike", intro: (t) => `` },
 };
+
+const FOCUS_LABEL = { lgbtq: "LGBTQ+", "no-drop": "No-drop", beginner: "Beginner friendly", "women-trans-femme": "Women / trans / femme", bipoc: "BIPOC", family: "Family", gravel: "Gravel" };
+const focusChips = (list) => list && list.length ? `<p class="place-tags">${list.map((s) => `<span><a href="/rides/${attr(s)}/">${esc(FOCUS_LABEL[s] || s)}</a></span>`).join("")}</p>` : "";
+const CULTURE_LABEL = { "record-store": "Record store", bookstore: "Bookstore", gallery: "Gallery", museum: "Museum", bar: "Bar", "queer-owned": "Queer-owned", venue: "Venue", market: "Market", other: "" };
+const CULTURE_TYPE = { "record-store": "MusicStore", bookstore: "BookStore", gallery: "ArtGallery", museum: "Museum", bar: "BarOrPub", venue: "EventVenue", market: "LocalBusiness", "queer-owned": "LocalBusiness", other: "LocalBusiness" };
 
 function resourcePage(t, r) {
   const items = t[r.key] || [];
@@ -446,12 +559,26 @@ function resourcePage(t, r) {
     itemListElement: items.map((it, i) => ({
       "@type": "ListItem", position: i + 1,
       item: {
-        "@type": r.type, name: it.name, url: it.url || undefined, telephone: it.phone || undefined,
+        "@type": r.key === "culture" ? (CULTURE_TYPE[it.kind] || "LocalBusiness") : r.type, name: it.name, url: it.url || undefined, telephone: it.phone || undefined,
         address: it.address ? { "@type": "PostalAddress", streetAddress: it.address, addressLocality: t.name, addressRegion: t.state_code, addressCountry: "US" } : undefined,
         servesCuisine: it.cuisine || undefined, priceRange: it.price_hint || undefined,
       },
     })),
   });
+  const meta = (it) => [
+    r.key === "culture" ? CULTURE_LABEL[it.kind] : null,
+    it.cuisine, it.price_hint, it.address, it.phone, it.hours_hint,
+  ].filter(Boolean).map(esc).join(" &middot; ");
+  const tags = (it) => {
+    const list = [];
+    if (it.services && it.services.length) list.push(...it.services);
+    if (it.ride_out) list.push("ride-out");
+    return list.length ? `<p class="place-tags">${list.map((s) => `<span>${esc(s)}</span>`).join("")}</p>` : "";
+  };
+  const extra = (it) => [
+    it.bike_policy ? `<p><b>Bike:</b> ${esc(it.bike_policy)}</p>` : "",
+    it.booking_url ? `<p class="place-meta">${outLink(t, it.booking_url, "Book")} &middot; ${it.url ? `<a href="${attr(it.url)}" rel="noopener">${esc(domain(it.url))}</a>` : ""}</p>` : "",
+  ].join("");
   const body = `
   ${crumbs.html}
   <article class="resource">
@@ -462,19 +589,131 @@ function resourcePage(t, r) {
     <h2 class="visually-hidden">${esc(r.h(t))}, listed</h2>
     ${items.length ? `<ol class="places">${items.map((it) => `<li class="place">
         <h3>${it.url ? `<a href="${attr(it.url)}" rel="noopener">${esc(it.name)}</a>` : esc(it.name)}</h3>
-        <p class="place-meta">${[it.cuisine, it.price_hint, it.address, it.phone].filter(Boolean).map(esc).join(" &middot; ")}</p>
-        ${it.services && it.services.length ? `<p class="place-tags">${it.services.map((s) => `<span>${esc(s)}</span>`).join("")}</p>` : ""}
+        <p class="place-meta">${meta(it)}</p>
+        ${tags(it)}
         ${it.note ? `<p>${esc(it.note)}</p>` : ""}
+        ${extra(it)}
       </li>`).join("")}</ol>` : `<p>Nothing listed yet for ${esc(t.name)}. Check the <a href="${attr(t.visitor_url || t.official_url || "#")}" rel="noopener">local visitor site</a>.</p>`}
-    <nav class="res-links-row" aria-label="Other resources">
-      ${Object.values(RESOURCE).filter((x) => x.seg !== r.seg).map((x) => `<a href="${t.url}${x.seg}/">${esc(x.h(t))}</a>`).join("")}
-    </nav>
+    ${resourceNav(t, r)}
+    ${affiliateNote(t)}
     <p class="verified">Checked ${esc(fmtDate(t.verified || TODAY, { weekday: undefined }))}. No paid placements. Businesses open and close; call before you count on anyone.</p>
 ${BLOCKS.REPORT({ thing: "place", name: `${r.h(t)}`, kind: "changed", compact: true, id: "fix" })}
   </article>
   <p class="back"><a href="${t.url}">Back to ${esc(t.name)}</a></p>
 `;
   return head({ title, description, url, ld: [ld, crumbs.ld] }) + body + foot();
+}
+
+function resourceNav(t, r) {
+  return `<nav class="res-links-row" aria-label="Other resources">
+      ${guidePages(t).filter((x) => x.seg !== r.seg).map((x) => `<a href="${t.url}${x.seg}/">${esc(x.h(t))}</a>`).join("")}
+    </nav>`;
+}
+
+// ——— routes page ——————————————————————————————————————————————————————————
+const ROUTE_LABEL = { road: "Road", gravel: "Gravel", mtb: "Mountain bike", path: "Path", climb: "Climb" };
+const LINK_LABEL = { rwgps: "RideWithGPS", strava: "Strava", komoot: "Komoot", gpx: "GPX", other: "Route page" };
+function routesPage(t) {
+  const r = RESOURCE.routes;
+  const items = t.routes || [];
+  const url = `${t.url}routes/`;
+  const title = r.title(t);
+  const description = truncate(`${items.length} bike routes in ${t.name}: ${items.map((x) => x.name).join(", ")}. Miles, climbing, where each starts, water, hazards, and a map link for every one.`, 155);
+  const crumbs = breadcrumb([{ name: "Towns", url: "/towns/" }, { name: t.name, url: t.url }, { name: r.h(t), url }]);
+  const firstLink = (x) => x.links ? Object.keys(LINK_LABEL).map((k) => x.links[k]).find(Boolean) : null;
+  const ld = stripUndef({
+    "@context": "https://schema.org", "@type": "ItemList", name: r.h(t), url: SITE + url, numberOfItems: items.length,
+    itemListElement: items.map((x, i) => ({
+      "@type": "ListItem", position: i + 1,
+      item: {
+        "@type": "Trip", name: x.name, description: x.description || undefined, url: firstLink(x) || undefined,
+        itinerary: x.start && x.start.lat != null ? { "@type": "Place", name: x.start.name || undefined, address: x.start.address || undefined, geo: { "@type": "GeoCoordinates", latitude: x.start.lat, longitude: x.start.lon } } : undefined,
+      },
+    })),
+  });
+  const num = (n) => Number(n).toLocaleString("en-US");
+  const body = `
+  ${crumbs.html}
+  <article class="resource routes">
+    <p class="eyebrow"><a href="${t.url}">${esc(t.name)}, ${esc(t.state)}</a> &middot; ride</p>
+    <h1>${esc(r.h(t))}</h1>
+    <p class="lede">${esc(r.intro(t))}</p>
+    ${t.best_months ? `<p class="for-events">Best months: ${esc(t.best_months)}</p>` : ""}
+    <h2 class="visually-hidden">Bike routes in ${esc(t.name)}, listed</h2>
+    ${items.length ? `<ol class="places">${items.map((x) => `<li class="place">
+        <h3>${esc(x.name)}</h3>
+        <p class="place-meta">${[ROUTE_LABEL[x.type], x.miles != null ? `${num(x.miles)} mi` : null, x.elevation_gain_ft != null ? `${num(x.elevation_gain_ft)} ft` : null, x.difficulty, x.surface].filter(Boolean).map(esc).join(" &middot; ")}</p>
+        ${x.links ? `<p class="place-tags">${Object.keys(LINK_LABEL).filter((k) => x.links[k]).map((k) => `<span><a href="${attr(x.links[k])}" rel="noopener">${LINK_LABEL[k]}</a></span>`).join("")}</p>` : ""}
+        ${x.description ? `<p>${esc(x.description)}</p>` : ""}
+        ${x.start && (x.start.name || x.start.address) ? `<p><b>Start:</b> ${esc([x.start.name, x.start.address].filter(Boolean).join(", "))}</p>` : ""}
+        ${x.water ? `<p><b>Water:</b> ${esc(x.water)}</p>` : ""}
+        ${x.hazards ? `<p><b>Watch:</b> ${esc(x.hazards)}</p>` : ""}
+        ${x.ride ? `<p class="place-meta"><a href="/rides/${attr(x.ride)}/">Ride it with the group &rarr;</a></p>` : ""}
+      </li>`).join("")}</ol>` : `<p>No routes listed yet for ${esc(t.name)}.</p>`}
+    ${resourceNav(t, r)}
+    <p class="verified">Checked ${esc(fmtDate(t.verified || TODAY, { weekday: undefined }))}. Roads close, trails wash out, and the numbers are the route page's. Ride your own ride.</p>
+${BLOCKS.REPORT({ thing: "place", name: `Routes in ${t.name}`, kind: "changed", compact: true, id: "fix" })}
+  </article>
+  <p class="back"><a href="${t.url}">Back to ${esc(t.name)}</a></p>
+`;
+  return head({ title, description, url, ld: [ld, crumbs.ld] }) + body + foot();
+}
+
+// ——— bring-your-bike page ————————————————————————————————————————————————
+function bringYourBikePage(t) {
+  const r = RESOURCE["bring-your-bike"];
+  const b = t.bring_your_bike;
+  const url = `${t.url}bring-your-bike/`;
+  const title = r.title(t);
+  const description = truncate(b.summary, 155);
+  const crumbs = breadcrumb([{ name: "Towns", url: "/towns/" }, { name: t.name, url: t.url }, { name: r.h(t), url }]);
+  const pageLd = {
+    "@context": "https://schema.org", "@type": "WebPage", url: SITE + url, name: title, description,
+    dateModified: t.verified || TODAY,
+    speakable: { "@type": "SpeakableSpecification", cssSelector: [".lede"] },
+    publisher: { "@type": "Organization", name: "Cycle for Change", url: SITE + "/" },
+    author: { "@type": "Person", name: "Robert Castan" },
+  };
+  const shopList = (list) => list && list.length ? `<ol class="places">${list.map((s) => `<li class="place"><h3>${s.url ? `<a href="${attr(s.url)}" rel="noopener">${esc(s.name)}</a>` : esc(s.name)}</h3>${s.note ? `<p>${esc(s.note)}</p>` : ""}</li>`).join("")}</ol>` : "";
+  const fly = b.fly || {}, ship = b.ship || {}, rent = b.rent || {}, go = b.get_around || {};
+  const body = `
+  ${crumbs.html}
+  <article class="resource byb">
+    <p class="eyebrow"><a href="${t.url}">${esc(t.name)}, ${esc(t.state)}</a> &middot; bring the bike</p>
+    <h1>${esc(r.h(t))}</h1>
+    <p class="lede">${esc(b.summary)}</p>
+
+    ${fly.airports && fly.airports.length ? `<section><h2>Flying to ${esc(t.name)} with a bike</h2>
+      ${facts(fly.airports.map((a) => [`${a.name}${a.code ? ` (${a.code})` : ""}`, `${a.miles != null ? `${esc(a.miles)} mi` : ""}${a.note ? `${a.miles != null ? " &middot; " : ""}${esc(a.note)}` : ""}`]))}
+      ${fly.airline_note ? `<p>${esc(fly.airline_note)}</p>` : ""}
+    </section>` : ""}
+
+    ${ship.note || (ship.shops && ship.shops.length) ? `<section><h2>Shipping your bike to ${esc(t.name)}</h2>
+      ${ship.note ? `<p>${esc(ship.note)}</p>` : ""}
+      ${shopList(ship.shops)}
+    </section>` : ""}
+
+    ${rent.note || (rent.shops && rent.shops.length) ? `<section><h2>Renting a bike in ${esc(t.name)}</h2>
+      ${rent.note ? `<p>${esc(rent.note)}</p>` : ""}
+      ${shopList(rent.shops)}
+    </section>` : ""}
+
+    ${go.note || go.transit_bike_rules || (go.bike_share && go.bike_share.name) ? `<section><h2>Getting around ${esc(t.name)} with a bike</h2>
+      ${go.car_needed != null ? `<p><b>${go.car_needed ? "You'll want a car." : "You can skip the car."}</b> ${esc(go.note || "")}</p>` : go.note ? `<p>${esc(go.note)}</p>` : ""}
+      ${go.transit_bike_rules ? `<p><b>Transit:</b> ${esc(go.transit_bike_rules)}</p>` : ""}
+      ${go.bike_share && go.bike_share.name ? `<p><b>Bike share:</b> ${go.bike_share.url ? `<a href="${attr(go.bike_share.url)}" rel="noopener">${esc(go.bike_share.name)}</a>` : esc(go.bike_share.name)}${go.bike_share.note ? `. ${esc(go.bike_share.note)}` : ""}</p>` : ""}
+    </section>` : ""}
+
+    ${b.rules_and_safety ? `<section><h2>The rules on the road in ${esc(t.state)}</h2><p>${esc(b.rules_and_safety)}</p></section>` : ""}
+    ${(t.bike_shops || []).length ? `<p class="town-more"><a href="${t.url}bike-shops/">Every bike shop in ${esc(t.name)} &rarr;</a></p>` : ""}
+    ${sourcesList(b.sources)}
+    ${resourceNav(t, r)}
+    <p class="verified">Checked ${esc(fmtDate(t.verified || TODAY, { weekday: undefined }))}. Airline fees and transit rules change without telling anyone. The date next to each one is the day we read it.</p>
+${BLOCKS.REPORT({ thing: "place", name: `Bringing a bike to ${t.name}`, kind: "changed", compact: true, id: "fix" })}
+  </article>
+  <p class="back"><a href="${t.url}">Back to ${esc(t.name)}</a></p>
+`;
+  return head({ title, description, url, ld: [pageLd, crumbs.ld] }) + body + foot();
 }
 
 // ——— indexes ————————————————————————————————————————————————————————————
@@ -537,25 +776,30 @@ function statePage(s) {
 
 function townsIndex() {
   const url = "/towns/";
-  const title = "Bike event towns — travel guides for cyclists: hotels, food, bike shops, weather";
-  const description = `Town guides for ${towns.length} places that host bike events. Where to stay, where to eat, who can fix your bike, and what the weather is doing.`;
+  const title = "Town guides for cyclists — rides, bike shops, coffee, where to stay, bringing your bike";
+  const description = `Town guides for ${towns.length} places: where to ride, where the ride-out coffee is, who fixes or rents a bike, where to sleep with it, and how to get the bike there. Live weather on every page.`;
   // Pass 6 (Sept 29, 2026): every town is a poster tile — the name fills the tile, the count sits
   // at the foot, the town's contour (tools/contour-art.js → cfc-site/towns/art/<slug>.svg) behind it
   // once it has been drawn. Same tile family as /rides/ (styles in events.css).
+  // Sept 30, 2026: a destination town counts its routes instead of its events and shows its tagline.
   const artDir = path.join(OUT, "towns", "art");
   const longestWord = (name) => Math.max(...String(name).split(/[\s-]+/).map((w) => w.length), 4);
   const townTile = (t) => {
     const slug = t.url.split("/").filter(Boolean).pop();
     const art = fs.existsSync(path.join(artDir, `${slug}.svg`)) ? `<img class="tile-art" src="/towns/art/${slug}.svg" alt="" loading="lazy" decoding="async" width="200" height="200">` : "";
-    const n = t.events.length;
-    return `<a class="tile-p${art ? " tile-p--art" : ""}" href="${t.url}" style="--l:${longestWord(t.name)}">${art}<span class="t">${esc(t.name)}</span><span class="b">${esc(t.events.map((e) => e.name).join(", "))}</span><span class="c"><b class="n num">${n}</b><span class="s">event${n === 1 ? "" : "s"}<br>${esc(t.state_code)}</span></span></a>`;
+    const dest = t.kind === "destination" || (!t.events.length && t.routes && t.routes.length);
+    const n = dest ? (t.routes || []).length : t.events.length;
+    const small = dest ? `route${n === 1 ? "" : "s"}` : `event${n === 1 ? "" : "s"}`;
+    const blurb = dest ? (t.tagline || "") : t.events.map((e) => e.name).join(", ");
+    return `<a class="tile-p${art ? " tile-p--art" : ""}" href="${t.url}" style="--l:${longestWord(t.name)}">${art}<span class="t">${esc(t.name)}</span><span class="b">${esc(blurb)}</span><span class="c"><b class="n num">${n}</b><span class="s">${small}<br>${esc(t.state_code)}</span></span></a>`;
   };
   const sorted = [...towns].sort((a, b) => a.state.localeCompare(b.state) || a.name.localeCompare(b.name));
+  const destinations = towns.filter((t) => t.kind === "destination").length;
   const body = `
   <article class="index">
-    <p class="eyebrow">${towns.length} towns &middot; ${stateList.length} states</p>
-    <h1>Bike event towns</h1>
-    <p class="lede">A guide for every town that hosts a ride in the directory. Each one has live weather, the events held there, and pages for hotels, restaurants and bike shops we could confirm.</p>
+    <p class="eyebrow">${towns.length} towns &middot; ${stateList.length} states${destinations ? ` &middot; ${destinations} full guide${destinations === 1 ? "" : "s"}` : ""}</p>
+    <h1>Town guides for cyclists</h1>
+    <p class="lede">A guide for every town in the directory: the ones that host a ride, and the ones worth bringing a bike to. Each has live weather and pages for hotels, restaurants and bike shops we could confirm. The full guides add the routes, the coffee, what to do off the bike, and how to get your bike there.</p>
     <section class="by-state" aria-labelledby="towns-h"><h2 id="towns-h">Every town, A to Z by state</h2>
       <div class="tiles-p tiles-p--towns">
         ${sorted.map(townTile).join("\n        ")}
@@ -586,7 +830,10 @@ for (const s of stateList) written.push(write(`events/state/${s.slug}/index.html
 for (const e of events) written.push(write(`events/${e.slug}/index.html`, eventPage(e)));
 for (const t of towns) {
   written.push(write(`${t.url.slice(1)}index.html`, townPage(t)));
-  for (const r of Object.values(RESOURCE)) written.push(write(`${t.url.slice(1)}${r.seg}/index.html`, resourcePage(t, r)));
+  for (const r of guidePages(t)) {
+    const html = r.seg === "routes" ? routesPage(t) : r.seg === "bring-your-bike" ? bringYourBikePage(t) : resourcePage(t, r);
+    written.push(write(`${t.url.slice(1)}${r.seg}/index.html`, html));
+  }
 }
 
 // machine-readable feed

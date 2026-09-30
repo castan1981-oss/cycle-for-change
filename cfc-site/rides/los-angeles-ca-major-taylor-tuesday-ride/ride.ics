@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:los-angeles-ca-major-taylor-tuesday-ride@cycleforchange.org
+DTSTAMP:20260930T181554Z
+DTSTART;TZID=America/Los_Angeles:20261006T180000
+DTEND;TZID=America/Los_Angeles:20261006T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261130T235959Z
+SUMMARY:Major Taylor (Westchester Parkway laps) — Los Angeles\, CA
+LOCATION:Westchester Parkway\, Westchester Pkwy\, Westchester\, Los Angel
+ es\, CA
+DESCRIPTION:Pace: circuit-race training\, 4.5-mile laps; half of each lap
+  into a headwind.\nSchedule: Tuesdays\, 6:00 pm\, Daylight Saving Time o
+ nly.\nConfirm with the host before you go.\nhttps://cycleforchange.org/r
+ ides/los-angeles-ca-major-taylor-tuesday-ride/
+URL:https://cycleforchange.org/rides/los-angeles-ca-major-taylor-tuesday-
+ ride/
+END:VEVENT
+END:VCALENDAR

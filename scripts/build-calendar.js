@@ -22,6 +22,7 @@ const fs = require("fs");
 const path = require("path");
 const CHROME = require("./chrome.js"); // shared header, footer, fonts
 const BLOCKS = require("./blocks.js"); // the ride-report form (Pass 3)
+const TOWNS = require("./towns.js");  // the town layer (Sept 30, 2026): a guide link on every row that has one, the strip in its details
 
 const ROOT = path.resolve(__dirname, "..");
 const DATA = path.join(ROOT, "data", "calendar-2027.json");
@@ -163,6 +164,8 @@ function eventHtml(e) {
   if (e.distances) meta.push(esc(shortDist(e.distances)));
   const q = [e.name, e.city, e.state, e.region, e.category, e.cause, e.beneficiary, e.organizer, e.series].join(" ").toLowerCase().replace(/\s+/g, " ").trim();
   const src = (e.sources || []).slice(0, 2).map((u) => `<a href="${attr(u)}" rel="noopener nofollow" target="_blank">${esc(host(u))}</a>`).join(" ");
+  const town = TOWNS.find({ city: (e.city || "").replace(/\s*\(.*?\)\s*/g, " ").trim(), state: e.state });
+  if (town) meta.push(TOWNS.link(town));
   return `<details class="ev${e.riding ? " you" : ""}" id="${attr(e.slug)}" data-m="${e.month}" data-t="${attr(e.category)}" data-r="${attr(e.region)}" data-c="${attr(e.cause)}" data-s="${attr(e.date_status)}" data-y="${e.riding ? 1 : 0}" data-q="${attr(q)}">
   <summary class="row">${dateCell(e)}<span class="nm"><span class="h">${esc(e.name)}${e.riding ? `<span class="you-tag">Riding</span>` : ""}</span><span class="meta">${meta.join(" &middot; ")}</span></span><span class="acts">Details</span></summary>
   <div class="det">
@@ -170,6 +173,7 @@ function eventHtml(e) {
     ${e.date_note ? `<p class="note"><b>Date</b>${esc(e.date_note)}</p>` : ""}
     ${e.notes ? `<p class="note"><b>Notes</b>${esc(e.notes)}</p>` : ""}
     <p class="det-links">${e.url ? `<a class="btn btn--ghost" href="${attr(e.url)}" rel="noopener" target="_blank">Event site</a>` : ""}${src ? `<span class="src">Sources: ${src}</span>` : ""}</p>
+    ${town ? TOWNS.strip(town, { compact: true, heading: `Once you&rsquo;re in ${esc(town.name)}` }) : ""}
   </div>
 </details>`;
 }

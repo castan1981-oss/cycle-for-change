@@ -46,8 +46,8 @@ tool's own parameter description the first time; if it takes a different
 shape, follow the tool, not this note, and record what worked in
 `social/video/README.md` so the next run doesn't guess.
 
-Never put a video into `cfc-site/`. It is the published directory and the
-site is a coming-soon page until December 2026.
+Never put a video into `cfc-site/`. It is the published directory; the
+site is live and every file in it is public the moment it deploys.
 
 ## Formats per network
 
@@ -74,9 +74,10 @@ network supports it. Describe what's on screen and any on-screen words.
 - The pledge anchors it: Robert rides 10,000 miles in 2027, all on the
   bike. Pledgers decide the cause. *"I do the miles. You decide who
   they're for."* Not every post says it; roughly every third one does.
-- Site is coming-soon until December 2026. The only link is
-  `cycleforchange.org` (waitlist). Never link `/#board`, Field Notes,
-  guides, or resources until the site is back.
+- Site is live (since Sept 27, 2026): `/pledge/` is the link in bio and the
+  board lives there (`/#board` is gone); `/rides/`, `/events/`, `/events/2027/`,
+  `/towns/`, guides, field notes and resources can all be linked. Check
+  `CLAUDE.md` before linking anything not listed here.
 - Handle is `@cycl_eforchange` on Instagram. Confirm handles on the other
   networks from `getBrandSettings` the first time and write them into
   `social/video/README.md`.

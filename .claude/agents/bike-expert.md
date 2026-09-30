@@ -49,8 +49,9 @@ specifically, without hype.
   treats or cures anything. Every public mental-health piece gets 988 and
   the Trevor Project (1-866-488-7386). No sober-time counts, ever.
 - **Cycle for Change context**: Robert rides 10,000 miles in 2027, all on
-  the bike; pledgers decide the cause; the site is a coming-soon page until
-  December 2026; the kit is the 10K / CYCLE FOR CHANGE hierarchy in the
+  the bike; pledgers decide the cause; the site is live (the full homepage
+  since Sept 27, 2026, with /rides/, /events/, /events/2027/, /towns/,
+  guides, field notes and /pledge/); the kit is the 10K / CYCLE FOR CHANGE hierarchy in the
   Creosote palette (bone, creosote, asphalt, volt, dust). Arizona is home:
   heat, Pivot and State and Lectric are local brands, El Tour de Tucson and
   Mt. Lemmon are the local landmarks. Bring bike knowledge back to the
