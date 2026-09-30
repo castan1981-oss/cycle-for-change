@@ -95,8 +95,8 @@
 <section class="hero" aria-labelledby="line">
   <div class="hero-media">
     <picture>
-      <source media="(min-width:900px)" srcset="/img/hero-wide.jpg" width="1400" height="999">
-      <img src="/img/hero.jpg" alt="Two riders stopped on a desert road at sunset, saguaros behind them, the sun sitting on the horizon." width="1200" height="1200" fetchpriority="high" decoding="async">
+      <source media="(min-width:900px)" srcset="/img/hero-wide.jpg" width="2000" height="1428">
+      <img src="/img/hero.jpg" alt="Two riders stopped on a desert road at sunset, saguaros behind them, the sun sitting on the horizon." width="1600" height="1600" fetchpriority="high" decoding="async">
     </picture>
   </div>
   <div class="wrap hero-in">
@@ -134,9 +134,9 @@
   <div class="wrap">
     <div class="s-head"><h2 class="eyebrow" id="start-h">Start here</h2></div>
     <div class="paths">
-      <a class="path" href="/pledge/"><figure><img src="/img/door-pledge.jpg" alt="Robert leaning on the handlebars on a bridge, blue sky behind him." width="768" height="960" loading="lazy" decoding="async"></figure><span class="eyebrow">I want to</span><span class="h2">Pledge</span><p>A few cents a mile, or a flat number. Nothing today. Your name goes on the board and you vote where the money goes.</p><span class="link">Get on the board</span></a>
-      <a class="path" href="/rides/"><figure><img src="/img/door-ride.jpg" alt="A rider in a lavender kit grinning at the camera on an empty road." width="800" height="1000" loading="lazy" decoding="async"></figure><span class="eyebrow">I want to</span><span class="h2">Ride</span><p>670 free group rides. Every state, and 8 more countries. What&rsquo;s rolling tonight near you.</p><span class="link">Find a ride</span></a>
-      <a class="path" href="/guides/"><figure><img src="/img/door-read.jpg" alt="Handlebars pointed down a mountain road at sunset, the valley lit below." width="800" height="1000" loading="lazy" decoding="async"></figure><span class="eyebrow">I want to</span><span class="h2">Read</span><p>Charity-ride guides, field notes from the road, the journal.</p><span class="link">The guides</span></a>
+      <a class="path" href="/pledge/"><figure><img src="/img/door-pledge.jpg" alt="Robert leaning on the handlebars on a bridge, blue sky behind him." width="768" height="960" loading="lazy" decoding="async"></figure><span class="eyebrow eyebrow--mk"><svg class="mk mk--eyebrow" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-pledge"/></svg>I want to</span><span class="h2">Pledge</span><p>A few cents a mile, or a flat number. Nothing today. Your name goes on the board and you vote where the money goes.</p><span class="link">Get on the board</span></a>
+      <a class="path" href="/rides/"><figure><img src="/img/door-ride.jpg" alt="A rider in a lavender kit grinning at the camera on an empty road." width="800" height="1000" loading="lazy" decoding="async"></figure><span class="eyebrow eyebrow--mk"><svg class="mk mk--eyebrow" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg>I want to</span><span class="h2">Ride</span><p>670 free group rides. Every state, and 8 more countries. What&rsquo;s rolling tonight near you.</p><span class="link">Find a ride</span></a>
+      <a class="path" href="/guides/"><figure><img src="/img/door-read.jpg" alt="Handlebars pointed down a mountain road at sunset, the valley lit below." width="800" height="1000" loading="lazy" decoding="async"></figure><span class="eyebrow eyebrow--mk"><svg class="mk mk--eyebrow" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-journal"/></svg>I want to</span><span class="h2">Read</span><p>Charity-ride guides, field notes from the road, the journal.</p><span class="link">The guides</span></a>
     </div>
   </div>
 </section>
@@ -209,11 +209,16 @@
 <!-- —— find your people (Pass 6: the photo bright and whole, the words beside it) —— -->
 <section class="s plane" id="ride" aria-labelledby="ride-h">
   <div class="wrap plane-grid">
-    <figure class="plane-fig"><img src="/img/people.jpg" alt="Two riders crossing a finish line with their hands joined in the air, a rainbow umbrella in the crowd." width="1200" height="1200" loading="lazy" decoding="async"></figure>
+    <figure class="plane-fig"><img src="/img/people.jpg" alt="Two riders crossing a finish line with their hands joined in the air, a rainbow umbrella in the crowd." width="1600" height="1600" loading="lazy" decoding="async"></figure>
     <div class="plane-copy">
       <p class="eyebrow">Ride</p>
       <h2 class="h2" id="ride-h">Find your people.</h2>
-      <p class="lede">670 group rides. Every state, and 8 more countries.</p>
+            <p class="lede">670 group rides. Every state, and 8 more countries.</p>
+      <ul class="plane-facts" aria-label="What kind of rides">
+        <li><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-no-drop"/></svg>No-drop rides</li>
+        <li><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-lgbtq"/></svg>Queer rides</li>
+        <li><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-live"/></svg>Tonight, near you</li>
+      </ul>
       <div class="cta-row">
         <a class="btn btn--ink" href="/rides/">Find a group ride</a>
         <a class="btn btn--ghost" href="/tonight/">Rides tonight</a>
@@ -244,7 +249,7 @@
     <!-- The six rows below are the events flagged "riding": true in
          data/calendar-2027.json. Hand-kept: when that list changes, change these. -->
     <div class="season" id="season">
-      <p class="next-up"><span>Next up</span><b>Nov 7, 2026</b><span>Cycling 4 one&middot;n&middot;ten &middot; Phoenix &middot; 20 or 62 miles</span><a href="https://onenten.org" target="_blank" rel="noopener noreferrer">Sign up at one&middot;n&middot;ten &rarr;</a></p>
+      <p class="next-up"><span class="next-up-k"><svg class="mk mk--inline" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-date"/></svg>Next up</span><b>Nov 7, 2026</b><span>Cycling 4 one&middot;n&middot;ten &middot; Phoenix &middot; 20 or 62 miles</span><a href="https://onenten.org" target="_blank" rel="noopener noreferrer">Sign up at one&middot;n&middot;ten &rarr;</a></p>
       <div class="s-head s-head--row">
         <div class="stack16">
           <p class="eyebrow">2027 &middot; riding</p>
@@ -283,34 +288,34 @@
       <ol class="rides">
         <li class="ride"><a href="/events/2027/#tour-de-palm-springs">
           <span class="d num">02.06<small>Sat<br>Feb 6</small></span>
-          <span class="what"><span class="h3">Tour de Palm Springs</span><span class="spec">Palm Springs CA &middot; 101 mi &middot; 1 day</span></span>
+          <span class="what"><span class="h3"><svg class="mk mk--h3" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-hundred"/></svg>Tour de Palm Springs</span><span class="spec">Palm Springs CA &middot; 101 mi &middot; 1 day</span></span>
           <span class="for">For Coachella Valley charities</span>
-          <span class="tag">Confirmed</span></a></li>
+          <span class="tag"><svg class="mk mk--tag" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-checked"/></svg>Confirmed</span></a></li>
         <li class="ride"><a href="/events/2027/#center-ride-out">
           <span class="d num">04.23<small>Fri&ndash;Sun<br>Apr 23&ndash;25</small></span>
-          <span class="what"><span class="h3">Center Ride Out</span><span class="spec">Los Angeles CA &middot; 200+ mi &middot; 3 days</span></span>
+          <span class="what"><span class="h3"><svg class="mk mk--h3" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-distance"/></svg>Center Ride Out</span><span class="spec">Los Angeles CA &middot; 200+ mi &middot; 3 days</span></span>
           <span class="for">For the Los Angeles LGBT Center</span>
-          <span class="tag">Confirmed</span></a></li>
+          <span class="tag"><svg class="mk mk--tag" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-checked"/></svg>Confirmed</span></a></li>
         <li class="ride"><a href="/events/2027/#cycle-to-zero">
           <span class="d num">05.21<small>Fri&ndash;Sun<br>May 21&ndash;23</small></span>
-          <span class="what"><span class="h3">Cycle to Zero</span><span class="spec">San Francisco CA &middot; 210+ mi &middot; 3 days</span></span>
+          <span class="what"><span class="h3"><svg class="mk mk--h3" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-distance"/></svg>Cycle to Zero</span><span class="spec">San Francisco CA &middot; 210+ mi &middot; 3 days</span></span>
           <span class="for">For San Francisco AIDS Foundation</span>
-          <span class="tag">Confirmed</span></a></li>
+          <span class="tag"><svg class="mk mk--tag" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-checked"/></svg>Confirmed</span></a></li>
         <li class="ride"><a href="/events/2027/#seattle-to-portland-bicycle-classic">
           <span class="d num">07.10<small>Sat&ndash;Sun<br>Jul 10&ndash;11</small></span>
-          <span class="what"><span class="h3">Seattle to Portland</span><span class="spec">Seattle WA &middot; 206 mi &middot; 2 days</span></span>
+          <span class="what"><span class="h3"><svg class="mk mk--h3" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-distance"/></svg>Seattle to Portland</span><span class="spec">Seattle WA &middot; 206 mi &middot; 2 days</span></span>
           <span class="for">Cascade Bicycle Club</span>
-          <span class="tag">Confirmed</span></a></li>
+          <span class="tag"><svg class="mk mk--tag" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-checked"/></svg>Confirmed</span></a></li>
         <li class="ride"><a href="/events/2027/#recovery-ride">
           <span class="d num">09.10<small>Fri&ndash;Sun<br>Sep 10&ndash;12</small></span>
-          <span class="what"><span class="h3">Recovery Ride</span><span class="spec">San Francisco CA &middot; Sausalito to Guerneville &middot; 3 days</span></span>
+          <span class="what"><span class="h3"><svg class="mk mk--h3" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-distance"/></svg>Recovery Ride</span><span class="spec">San Francisco CA &middot; Sausalito to Guerneville &middot; 3 days</span></span>
           <span class="for">For Castro Country Club</span>
-          <span class="tag tag--soft">Date projected</span></a></li>
+          <span class="tag tag--soft"><svg class="mk mk--tag" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-date"/></svg>Date projected</span></a></li>
         <li class="ride"><a href="/events/2027/#el-tour-de-tucson">
           <span class="d num">11.20<small>Sat<br>Nov 20</small></span>
-          <span class="what"><span class="h3">El Tour de Tucson</span><span class="spec">Tucson AZ &middot; 102 mi &middot; 1 day</span></span>
+          <span class="what"><span class="h3"><svg class="mk mk--h3" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-hundred"/></svg>El Tour de Tucson</span><span class="spec">Tucson AZ &middot; 102 mi &middot; 1 day</span></span>
           <span class="for">For Tucson nonprofits</span>
-          <span class="tag tag--soft">Date projected</span></a></li>
+          <span class="tag tag--soft"><svg class="mk mk--tag" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-date"/></svg>Date projected</span></a></li>
       </ol>
       </div>
     </div>
@@ -331,19 +336,19 @@
       <div class="cards">
         <a class="card" href="/field-notes/south-mountain-climb/">
           <figure><img src="/img/card-south.jpg" alt="Handlebars pointed down a mountain road at sunset, the valley lit below." width="800" height="1000" loading="lazy" decoding="async"></figure>
-          <span class="eyebrow">Field notes</span>
+          <span class="eyebrow eyebrow--mk"><svg class="mk mk--eyebrow" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg>Field notes</span>
           <span class="h3">South Mountain at sunset</span>
           <p>Down Central from uptown, through downtown into South Phoenix, up the mountain as the light goes.</p>
         </a>
         <a class="card" href="/field-notes/paradise-valley-loop/">
           <figure><img src="/img/card-pv.jpg" alt="A rider&rsquo;s shadow on the road, one hand up off the bars, mountains ahead." width="800" height="1000" loading="lazy" decoding="async"></figure>
-          <span class="eyebrow">Field notes</span>
+          <span class="eyebrow eyebrow--mk"><svg class="mk mk--eyebrow" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg>Field notes</span>
           <span class="h3">The Paradise Valley loop</span>
           <p>The loop around Camelback and Mummy Mountain. Early, before the heat, with the whole valley below.</p>
         </a>
         <a class="card" href="/journal/the-carrot-cake-theory/">
           <figure><img src="/img/card-journal.jpg" alt="A bike leaned on a painted wall, low sun down the street." width="800" height="1000" loading="lazy" decoding="async"></figure>
-          <span class="eyebrow">Journal</span>
+          <span class="eyebrow eyebrow--mk"><svg class="mk mk--eyebrow" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-journal"/></svg>Journal</span>
           <span class="h3">The carrot cake theory</span>
           <p>On why the hard part of a long ride is never the ride.</p>
         </a>
@@ -351,12 +356,12 @@
       <div>
         <h3 class="eyebrow">Guides</h3>
         <ul class="guides">
-          <li><a href="/guides/charity-rides/">LGBTQ+ charity bike rides, the complete guide</a></li>
-          <li><a href="/guides/your-first-charity-ride/">Your first charity ride</a></li>
-          <li><a href="/guides/pledge-per-mile-fundraising/">Pledge-per-mile fundraising, explained</a></li>
-          <li><a href="/guides/what-happened-to-aids-lifecycle/">What happened to AIDS/LifeCycle</a></li>
-          <li><a href="/guides/charity-ride-packing-list/">Charity ride packing list</a></li>
-          <li><a href="/guides/">All 12 guides</a></li>
+          <li><a href="/guides/charity-rides/"><svg class="mk mk--li" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-pick"/></svg><span>LGBTQ+ charity bike rides, the complete guide</span></a></li>
+          <li><a href="/guides/your-first-charity-ride/"><svg class="mk mk--li" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-ready"/></svg><span>Your first charity ride</span></a></li>
+          <li><a href="/guides/pledge-per-mile-fundraising/"><svg class="mk mk--li" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-raise"/></svg><span>Pledge-per-mile fundraising, explained</span></a></li>
+          <li><a href="/guides/what-happened-to-aids-lifecycle/"><svg class="mk mk--li" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-flag"/></svg><span>What happened to AIDS/LifeCycle</span></a></li>
+          <li><a href="/guides/charity-ride-packing-list/"><svg class="mk mk--li" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-ready"/></svg><span>Charity ride packing list</span></a></li>
+          <li><a href="/guides/"><svg class="mk mk--li" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-pick"/></svg><span>All 12 guides</span></a></li>
         </ul>
       </div>
     </div>
@@ -368,18 +373,18 @@
   <div class="wrap">
     <div class="s-head s-head--row"><div class="stack16"><p class="eyebrow">Questions</p><h2 class="h2" id="q-h">The ones people ask first.</h2></div><a class="link" href="/pledge/#questions">All of them</a></div>
     <dl class="faq">
-      <div><dt>Do I have to pay now?</dt><dd>No. You pledge now and settle up in January 2028, one email, one link. No card until then.</dd></div>
-      <div><dt>Where does the money go?</dt><dd>Direct to the orgs, 100% of it. The people on the board vote which ones. I don&rsquo;t keep a cent.</dd></div>
-      <div><dt>What does a pledge cost?</dt><dd>A few cents a mile. At 1&cent; that&rsquo;s $100 for the year. Or name a flat number. Same deal.</dd></div>
-      <div><dt>Can I ride with you?</dt><dd>Yes. Six dates on the calendar so far, and every group ride in the directory is open to anyone.</dd></div>
-      <div><dt>What if you don&rsquo;t make 10,000?</dt><dd>You pay for the miles I rode. Every one of them is on Strava.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-no-card"/></svg><span>Do I have to pay now?</span></dt><dd>No. You pledge now and settle up in January 2028, one email, one link. No card until then.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-vote"/></svg><span>Where does the money go?</span></dt><dd>Direct to the orgs, 100% of it. The people on the board vote which ones. I don&rsquo;t keep a cent.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-cost"/></svg><span>What does a pledge cost?</span></dt><dd>A few cents a mile. At 1&cent; that&rsquo;s $100 for the year. Or name a flat number. Same deal.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-no-drop"/></svg><span>Can I ride with you?</span></dt><dd>Yes. Six dates on the calendar so far, and every group ride in the directory is open to anyone.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-strava"/></svg><span>What if you don&rsquo;t make 10,000?</span></dt><dd>You pay for the miles I rode. Every one of them is on Strava.</dd></div>
     </dl>
   </div>
 </section>
 
 <!-- —— close —— -->
 <section class="close" aria-labelledby="close-h">
-  <figure><img src="/img/close.jpg" alt="A bike leaned on a painted wall, low sun down the street." width="900" height="1200" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/close.jpg" alt="A bike leaned on a painted wall, low sun down the street." width="1200" height="1600" loading="lazy" decoding="async"></figure>
   <div class="close-copy">
     <p class="eyebrow">10000 &middot; 2027 &middot; All on the bike</p>
     <h2 class="h2 h-w12" id="close-h">Queer communities, every mile.</h2>

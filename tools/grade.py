@@ -18,14 +18,16 @@ SHADOW = np.array([0x3A, 0x3E, 0x36]) / 255.0     # warm asphalt, a step above t
 # output, source, options. Robert's picks (Sept 29): crew = hero, portrait = the Pledge door, mural = the close.
 # card-south / card-pv have no color original; photos/*-duo.jpg are the old duotone files, re-lifted.
 MANIFEST = [
-    ('img/hero.jpg',         'photos/crew.jpg',        dict(max=1200, up=True)),
-    ('img/hero-wide.jpg',    'photos/crew.jpg',        dict(max=1400, up=True, crop='7:5', focus=(0.5, 0.46))),
-    ('img/people.jpg',       'photos/finish-line.jpg', dict(max=1200, up=True)),
-    ('img/close.jpg',        'photos/mural.jpg',       dict(max=1200, up=True)),
+    # Pass 11 (Sept 30): crew-2x.jpg is crew.jpg super-resolved 2x (EDSR, after a light denoise) so the
+    # hero is crisp at 2x screens; a gentler stop so the sunset holds. Re-run tools/sr.py if crew.jpg changes.
+    ('img/hero.jpg',         'photos/crew-2x.jpg',     dict(max=1600, stop=0.3, lift=0.11, q=80)),
+    ('img/hero-wide.jpg',    'photos/crew-2x.jpg',     dict(max=2000, stop=0.3, lift=0.11, crop='7:5', focus=(0.5, 0.46), q=80)),
+    ('img/people.jpg',       'photos/finish-line-2x.jpg', dict(max=1600, q=80)),   # 2x through tools/sr.py (Pass 11)
+    ('img/close.jpg',        'photos/mural-2x.jpg',    dict(max=1600, q=80)),
     ('img/door-pledge.jpg',  'photos/portrait.jpg',    dict(max=1000, crop='4:5')),
     ('img/door-ride.jpg',    'photos/ride-lavender.jpg', dict(max=1000, crop='4:5')),
     ('img/door-read.jpg',    'photos/card-south-duo.jpg', dict(strength=0.0, stop=0.35, lift=0.12, warm=0.08)),
-    ('img/card-journal.jpg', 'photos/mural.jpg',       dict(max=1000, crop='4:5')),
+    ('img/card-journal.jpg', 'photos/mural-2x.jpg',    dict(max=1000, crop='4:5')),
     ('img/card-south.jpg',   'photos/card-south-duo.jpg', dict(strength=0.0, stop=0.35, lift=0.12, warm=0.08)),
     ('img/card-pv.jpg',      'photos/card-pv-duo.jpg', dict(strength=0.0, stop=0.25, lift=0.10, warm=0.06)),
     ('img/portrait.jpg',     'photos/portrait.jpg',    dict(max=1024)),
