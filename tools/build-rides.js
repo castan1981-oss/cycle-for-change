@@ -502,7 +502,8 @@ function directory(rides, hubs) {
   const home = hubs.find((h) => h.state === "AZ" && h.city === "Phoenix");
   const cityList = [...(home ? [home] : []), ...hubs.filter((h) => h !== home).sort((a, b) => b.rides.length - a.rides.length || a.city.localeCompare(b.city))];
   const cityTile = (h) => posterTile({ href: h.path, name: h.city, count: h.rides.length, small: h === home ? `rides<br>home base` : `rides<br>${h.state}`, art: artFor(`${h.state.toLowerCase()}-${slugify(h.city)}`), cls: h === home ? "tile-p--ink" : "" });
-  const stateTile = (s) => posterTile({ href: `/rides/${s.toLowerCase()}/`, name: stateName(s), count: byState[s].length, small: "rides", cls: "tile-p--wide" });
+  // states: the postal code big (uniform across all 49; "MASSACHUSETTS" never fits a tile), the name small
+  const stateTile = (s) => posterTile({ href: `/rides/${s.toLowerCase()}/`, name: s, count: byState[s].length, small: "rides", blurb: stateName(s), cls: "tile-p--wide tile-p--code" });
 
   return head({ title: "Find a group ride near you", description, canonical: `${SITE}/rides/`, jsonld }) + `
 <main id="main" class="gr-dir gr-hub">
