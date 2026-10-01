@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:scottsdale-az-scottsdale-cycling-saturday-ride@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Phoenix:20261003T053000
+DTEND;TZID=America/Phoenix:20261003T073000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270227T235959Z
+SUMMARY:The Saturday Ride (Fuss Buss) — Scottsdale\, AZ
+LOCATION:Gainey Village\, Scottsdale Rd and Doubletree Ranch Rd\, 8977 N 
+ Scottsdale Rd\, Scottsdale\, AZ 85253
+DESCRIPTION:Pace: Intermediate and rolling\, in the club's own rating.\nS
+ chedule: Every Saturday\, 5:30 am\, from the same Gainey Village corner 
+ as the Thursday ride. Rain usually cancels it..\nConfirm with the host b
+ efore you go.\nhttps://cycleforchange.org/rides/scottsdale-az-scottsdale
+ -cycling-saturday-ride/
+URL:https://cycleforchange.org/rides/scottsdale-az-scottsdale-cycling-sat
+ urday-ride/
+END:VEVENT
+END:VCALENDAR

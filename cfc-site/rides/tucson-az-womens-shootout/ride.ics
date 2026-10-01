@@ -5,17 +5,56 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:tucson-az-womens-shootout@cycleforchange.org
-DTSTAMP:20260915T000000Z
-DTSTART;TZID=America/Phoenix:20261003T061500
-DTEND;TZID=America/Phoenix:20261003T081500
-RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270212T235959Z
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Phoenix:20261003T064500
+DTEND;TZID=America/Phoenix:20261003T084500
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261010T065959Z
 SUMMARY:Women's Shootout Tucson — Tucson\, AZ
 LOCATION:Mercado San Agustín\, 100 S Avenida del Convento\, Tucson\, AZ 
  85745
 DESCRIPTION:Pace: road ride\, cycling experience required.\nSchedule: Eve
- ry Saturday\, meet 6:00 am\, roll 6:15 am (shifts with season).\nConfirm
-  with the host before you go.\nhttps://cycleforchange.org/rides/tucson-a
- z-womens-shootout/
+ ry Saturday morning. Fair Wheel Bikes' women's rides page: 6:45 am from 
+ the first Saturday of September\, 7:15 am from the second week of Octobe
+ r\, 7:45 am from the second Saturday of November. Transit Cycles' events
+  page still says a 6:00 am meet and 6:15 am start; go by Fair Wheel's ta
+ ble..\nConfirm with the host before you go.\nhttps://cycleforchange.org/
+ rides/tucson-az-womens-shootout/
+URL:https://cycleforchange.org/rides/tucson-az-womens-shootout/
+END:VEVENT
+BEGIN:VEVENT
+UID:tucson-az-womens-shootout-from-2026-10-10@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Phoenix:20261010T071500
+DTEND;TZID=America/Phoenix:20261010T091500
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261114T065959Z
+SUMMARY:Women's Shootout Tucson — Tucson\, AZ
+LOCATION:Mercado San Agustín\, 100 S Avenida del Convento\, Tucson\, AZ 
+ 85745
+DESCRIPTION:Pace: road ride\, cycling experience required.\nSchedule: Eve
+ ry Saturday morning. Fair Wheel Bikes' women's rides page: 6:45 am from 
+ the first Saturday of September\, 7:15 am from the second week of Octobe
+ r\, 7:45 am from the second Saturday of November. Transit Cycles' events
+  page still says a 6:00 am meet and 6:15 am start; go by Fair Wheel's ta
+ ble..\nConfirm with the host before you go.\nhttps://cycleforchange.org/
+ rides/tucson-az-womens-shootout/
+URL:https://cycleforchange.org/rides/tucson-az-womens-shootout/
+END:VEVENT
+BEGIN:VEVENT
+UID:tucson-az-womens-shootout-from-2026-11-14@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Phoenix:20261114T074500
+DTEND;TZID=America/Phoenix:20261114T094500
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270227T235959Z
+SUMMARY:Women's Shootout Tucson — Tucson\, AZ
+LOCATION:Mercado San Agustín\, 100 S Avenida del Convento\, Tucson\, AZ 
+ 85745
+DESCRIPTION:Pace: road ride\, cycling experience required.\nSchedule: Eve
+ ry Saturday morning. Fair Wheel Bikes' women's rides page: 6:45 am from 
+ the first Saturday of September\, 7:15 am from the second week of Octobe
+ r\, 7:45 am from the second Saturday of November. Transit Cycles' events
+  page still says a 6:00 am meet and 6:15 am start; go by Fair Wheel's ta
+ ble..\nConfirm with the host before you go.\nhttps://cycleforchange.org/
+ rides/tucson-az-womens-shootout/
 URL:https://cycleforchange.org/rides/tucson-az-womens-shootout/
 END:VEVENT
 END:VCALENDAR

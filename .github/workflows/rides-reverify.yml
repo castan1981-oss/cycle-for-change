@@ -1,0 +1,142 @@
+name: Rides re-check
+
+# Mondays 3 am Phoenix, an hour after the watch. Claude works the top of the re-check queue
+# (data/rides-queue.json) the way .claude/commands/rides.md says: @ride-verifier subagents read
+# each ride at its source, the results go through tools/rides-apply.js, the pages are built, and
+# a PR labelled rides-upkeep comes out with the summary. Run it by hand to re-check more rides,
+# or to `discover` rides in a new area with @ride-scout.
+#
+# No ANTHROPIC_API_KEY secret = a notice and a green run, nothing else.
+# Repo variable RIDES_AUTOMERGE = "true": the PR is merged once validate + tests + build pass.
+# Plain words: tools/RIDES-UPKEEP.md.
+
+on:
+  schedule:
+    - cron: "0 10 * * 1"       # Mondays 10:00 UTC = 3 am Phoenix
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "refresh: how many rides from the top of the queue"
+        default: "40"
+      mode:
+        description: "refresh = re-check the queue · discover = find rides in an area"
+        type: choice
+        options: [refresh, discover]
+        default: refresh
+      area:
+        description: 'discover: the city or region, e.g. "Phoenix metro, AZ"'
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: rides-data
+  cancel-in-progress: false
+
+jobs:
+  recheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      COUNT: ${{ github.event.inputs.count || '40' }}
+      MODE: ${{ github.event.inputs.mode || 'refresh' }}
+      AREA: ${{ github.event.inputs.area || '' }}
+    steps:
+      - name: Is there a key?
+        id: key
+        env:
+          KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "::notice title=Rides re-check skipped::No ANTHROPIC_API_KEY repo secret, so nothing was re-checked. Add it under Settings > Secrets and variables > Actions (see tools/RIDES-UPKEEP.md)."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v6
+        if: steps.key.outputs.ok == 'true'
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        if: steps.key.outputs.ok == 'true'
+        with:
+          node-version: 22
+
+      - name: Name the branch
+        id: b
+        if: steps.key.outputs.ok == 'true'
+        run: |
+          d=$(TZ=America/Phoenix date +%F)
+          echo "date=$d" >> "$GITHUB_OUTPUT"
+          if [ "$MODE" = "discover" ]; then
+            if [ -z "$AREA" ]; then echo "::error::discover needs an area, e.g. \"Phoenix metro, AZ\""; exit 1; fi
+            s=$(printf '%s' "$AREA" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g')
+            echo "area_id=$s" >> "$GITHUB_OUTPUT"
+            echo "branch=upkeep/rides-discover-$s-$d" >> "$GITHUB_OUTPUT"
+          else
+            echo "branch=upkeep/rides-$d" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: anthropics/claude-code-action@v1
+        if: steps.key.outputs.ok == 'true'
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          claude_args: '--model claude-sonnet-4-6 --max-turns 150 --allowedTools "Task,Agent,WebFetch,WebSearch,Read,Write,Edit,Glob,Grep,Bash(node:*),Bash(git:*),Bash(gh:*),Bash(curl:*),Bash(python3:*),Bash(grep:*),Bash(head:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*)"'
+          prompt: |
+            You are running the Cycle for Change group-ride upkeep, unattended. The promise: a ride
+            on cycleforchange.org/rides/ was confirmed at its source recently, and anything we've
+            seen go wrong with it is fixed or said out loud. Never stamp verified_on on a ride
+            nobody confirmed — it is the freshness clock.
+
+            Read CLAUDE.md (the "Group rides go worldwide" section and the voice rules),
+            data/SCHEMA.md ("Group rides"), tools/RIDES-UPKEEP.md and .claude/commands/rides.md,
+            then follow .claude/commands/rides.md exactly for this run:
+
+              mode:   ${{ env.MODE }}
+              count:  ${{ env.COUNT }}          (refresh)
+              area:   ${{ env.AREA }}           (discover; area id: ${{ steps.b.outputs.area_id }})
+              today:  ${{ steps.b.outputs.date }} (Phoenix)
+              branch: ${{ steps.b.outputs.branch }}
+
+            refresh = "/rides refresh ${{ env.COUNT }}": re-check the top ${{ env.COUNT }} rides of
+            data/rides-queue.json with @ride-verifier subagents (.claude/agents/ride-verifier.md),
+            write research/rides/upkeep/${{ steps.b.outputs.date }}.json, run
+            `node tools/rides-apply.js research/rides/upkeep/${{ steps.b.outputs.date }}.json`, then
+            `node tools/validate-rides.js` (no new errors), `node --test tools/test/*.test.js` and
+            `node tools/build-rides.js`.
+            discover = "/rides discover ${{ env.AREA }}": run @ride-scout (.claude/agents/ride-scout.md)
+            on the area, writing research/rides/discover/${{ steps.b.outputs.area_id }}.json and .md, merge with
+            `node tools/merge-ride-research.js research/rides/discover/${{ steps.b.outputs.area_id }}.json`,
+            then validate, test and build the same way.
+
+            Then ship it: create the branch ${{ steps.b.outputs.branch }} from main, commit everything
+            the run changed (rides.json, the generated cfc-site/rides/ pages, data/rides-health.json,
+            data/rides-changelog.json, the research files), push the branch, and open the pull request
+            with `gh pr create --base main --head ${{ steps.b.outputs.branch }} --label rides-upkeep`
+            (create the label first if it's missing: `gh label create rides-upkeep --color 5C6B4A || true`).
+            Title: "Rides re-check ${{ steps.b.outputs.date }}" (refresh) or "New rides: ${{ env.AREA }}"
+            (discover). Body: the markdown tools/rides-apply.js printed (or the merge summary), then the
+            rides you couldn't confirm and what a person should check by hand. Opening the PR is the
+            most important step — do it as soon as the commit is pushed and confirm you got a PR URL.
+            Do NOT push to main. Do NOT merge. If something fails that you can't fix in one pass,
+            open the PR as a draft and say why.
+
+      - name: Merge when the checks pass (repo variable RIDES_AUTOMERGE = "true")
+        if: steps.key.outputs.ok == 'true' && vars.RIDES_AUTOMERGE == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: ${{ steps.b.outputs.branch }}
+        run: |
+          if ! git fetch origin "$BRANCH"; then echo "No branch $BRANCH, nothing to merge."; exit 0; fi
+          git checkout -B rides-check "origin/$BRANCH"
+          node tools/validate-rides.js
+          node --test tools/test/*.test.js
+          node tools/build-rides.js
+          if [ "$(gh pr view "$BRANCH" --json isDraft --jq .isDraft)" = "true" ]; then echo "The PR is a draft; leaving it for a person."; exit 0; fi
+          gh pr merge "$BRANCH" --squash --delete-branch

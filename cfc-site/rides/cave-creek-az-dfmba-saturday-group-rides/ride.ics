@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:cave-creek-az-dfmba-saturday-group-rides@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Phoenix:20261003T063000
+DTEND;TZID=America/Phoenix:20261003T083000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270227T235959Z
+SUMMARY:DFMBA Saturday Group Rides — Cave Creek\, AZ
+LOCATION:Rotating trailheads on the local trail network; see DFMBA's Face
+ book page
+DESCRIPTION:Pace: Rides for all skill levels (the association's words)..\
+ nSchedule: Every Saturday. 6:30 am in summer\, 8:00 am in winter (the si
+ te doesn't say when the switch happens). The trailhead rotates; DFMBA's 
+ site links its Facebook page for this ride..\nConfirm with the host befo
+ re you go.\nhttps://cycleforchange.org/rides/cave-creek-az-dfmba-saturda
+ y-group-rides/
+URL:https://cycleforchange.org/rides/cave-creek-az-dfmba-saturday-group-r
+ ides/
+END:VEVENT
+END:VCALENDAR

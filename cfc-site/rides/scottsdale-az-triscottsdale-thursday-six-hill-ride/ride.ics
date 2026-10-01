@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:scottsdale-az-triscottsdale-thursday-six-hill-ride@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Phoenix:20261008T053500
+DTEND;TZID=America/Phoenix:20261008T072000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270227T235959Z
+SUMMARY:TriScottsdale Six-Hill Thursday Ride — Scottsdale\, AZ
+LOCATION:Village Tavern\, 8787 N Scottsdale Rd\, Scottsdale\, AZ
+DESCRIPTION:Pace: A set of short hills in a row at Hidden Hills. The club
+  says it sometimes swaps the six hills for something else..\nSchedule: E
+ very Thursday\, 5:35 to 7:20 am\, from Village Tavern..\nConfirm with th
+ e host before you go.\nhttps://cycleforchange.org/rides/scottsdale-az-tr
+ iscottsdale-thursday-six-hill-ride/
+URL:https://cycleforchange.org/rides/scottsdale-az-triscottsdale-thursday
+ -six-hill-ride/
+END:VEVENT
+END:VCALENDAR

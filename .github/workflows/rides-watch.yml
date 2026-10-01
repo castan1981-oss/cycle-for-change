@@ -1,0 +1,82 @@
+name: Rides watch
+
+# Mondays 2 am Phoenix. No AI, no judgment calls — the machine side of "every ride says when it
+# was checked":
+#   1. rider reports from the ride-report Netlify form → data/rides-health.json and
+#      data/rides-suggestions.json (tools/rides-reports.js; skipped without NETLIFY_API_TOKEN)
+#   2. every ride's own pages and feeds read → data/rides-health.json, data/rides-queue.json,
+#      data/rides-queue.md (tools/rides-watch.js)
+#   3. those files committed to main with [skip netlify] (the 4 am rebuild deploys them)
+#   4. one open issue, "Rides to re-check" (label rides-upkeep), kept up to date with the queue
+# At 3 am the re-check workflow (rides-reverify.yml) works the top of the queue.
+# Plain words: tools/RIDES-UPKEEP.md.
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"        # Mondays 09:00 UTC = 2 am Phoenix (no daylight saving)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: rides-data
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Rider reports from the Netlify form
+        # optional: without the two secrets it prints "skipped" and the watch still runs
+        continue-on-error: true
+        env:
+          NETLIFY_API_TOKEN: ${{ secrets.NETLIFY_API_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: node tools/rides-reports.js
+
+      - name: Watch every ride
+        run: node tools/rides-watch.js
+
+      - name: Commit the health files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for f in data/rides-health.json data/rides-queue.json data/rides-queue.md data/rides-suggestions.json; do
+            if [ -f "$f" ]; then git add "$f"; fi
+          done
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -m "rides: weekly watch $(date -u +%F) [skip netlify]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Update the "Rides to re-check" issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create rides-upkeep --color 5C6B4A --description "Group-ride directory upkeep" 2>/dev/null || true
+          {
+            head -c 60000 data/rides-queue.md
+            echo
+            echo "---"
+            echo "Updated by the Rides watch workflow ([run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})). The Monday re-check opens a PR for the top of this list."
+          } > "$RUNNER_TEMP/issue.md"
+          num=$(gh issue list --state open --label rides-upkeep --search 'in:title "Rides to re-check"' --json number --jq '.[0].number // empty')
+          if [ -n "$num" ]; then
+            gh issue edit "$num" --body-file "$RUNNER_TEMP/issue.md"
+          else
+            gh issue create --title "Rides to re-check" --label rides-upkeep --body-file "$RUNNER_TEMP/issue.md"
+          fi

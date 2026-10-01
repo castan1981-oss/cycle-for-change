@@ -129,8 +129,15 @@ function assess(ride, health = null, today = todayUTC()) {
   }
 
   if (amber.length) {
-    Object.assign(out, { state: "flagged", priority: QUEUE.amber,
-      nudge: `The host changed their page on ${fmt(amber.map((f) => f.since).filter(isDate).sort().pop(), { today }) || "a recent check"}. Confirm the day and time with them before you go.` });
+    // the line says what the watcher actually saw (tools/rides-watch.js flag codes)
+    const codes = new Set(amber.map((f) => f.code));
+    const when = fmt(amber.map((f) => f.since).filter(isDate).sort().pop(), { today }) || "a recent check";
+    const nudge = codes.has("schedule-text-changed") || codes.has("time-missing") ? `The host changed their page on ${when}. Confirm the day and time with them before you go.`
+      : codes.has("moved") ? `The host's page moved on ${when}. Confirm the day and time with them before you go.`
+      : codes.has("event-date-past") || codes.has("next-date-far") ? "The host's page doesn't show an upcoming date for this ride. Confirm with them before you go."
+      : codes.has("unreachable") ? "We haven't been able to load the host's page lately. Confirm with them before you go."
+      : `The host changed their page on ${when}. Confirm the day and time with them before you go.`;
+    Object.assign(out, { state: "flagged", priority: QUEUE.amber, nudge });
     reasons.push(...amber.map((f) => `${f.code}: ${f.detail || ""}`.trim()));
     return out;
   }

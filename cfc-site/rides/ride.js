@@ -26,10 +26,17 @@
     if (ord > 0) { var first = new Date(Date.UTC(y, mo - 1, 1)).getUTCDay(); return 1 + ((dow - first + 7) % 7) + (ord - 1) * 7; }
     var last = new Date(Date.UTC(y, mo, 0)); return last.getUTCDate() - ((last.getUTCDay() - dow + 7) % 7);
   }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
   function next() {
     var tz = art.dataset.tz, time = art.dataset.time, freq = art.dataset.freq;
     if (!tz || !time || freq === "irregular") return null;
-    var hh = +time.split(":")[0], mm = +time.split(":")[1];
+    // the host's table of start-time changes ([[from, "HH:MM"], ...], oldest first): the time in force that day
+    var times = []; try { times = art.dataset.times ? JSON.parse(art.dataset.times) : []; } catch (e) { times = []; }
+    function at(y, mo, d) {
+      var t = time, ymd = y + "-" + pad(mo) + "-" + pad(d);
+      for (var j = 0; j < times.length; j++) if (times[j][0] <= ymd) t = times[j][1];
+      return zoned(y, mo, d, +t.split(":")[0], +t.split(":")[1], tz);
+    }
     var season = art.dataset.season ? art.dataset.season.split("-").map(Number) : null;
     var monthly = art.dataset.monthly ? JSON.parse(art.dataset.monthly) : null;
     var days = art.dataset.days ? art.dataset.days.split(" ") : [];
@@ -38,7 +45,7 @@
       for (k = 0; k < 4; k++) {
         var y = p.year, mo = p.month + k; while (mo > 12) { mo -= 12; y += 1; }
         var cands = monthly.map(function (m) { return nth(y, mo, DAY[m.day], m.ord); }).sort(function (a, b) { return a - b; });
-        for (var i = 0; i < cands.length; i++) { t = zoned(y, mo, cands[i], hh, mm, tz); if (t > now && inSeason(mo, season)) return t; }
+        for (var i = 0; i < cands.length; i++) { t = at(y, mo, cands[i]); if (t > now && inSeason(mo, season)) return t; }
       }
       return null;
     }
@@ -47,7 +54,7 @@
     for (k = 0; k < 400; k++) {
       var dt = new Date(Date.UTC(p.year, p.month - 1, p.day + k));
       if (!want[dt.getUTCDay()]) continue;
-      t = zoned(dt.getUTCFullYear(), dt.getUTCMonth() + 1, dt.getUTCDate(), hh, mm, tz);
+      t = at(dt.getUTCFullYear(), dt.getUTCMonth() + 1, dt.getUTCDate());
       if (t > now && inSeason(dt.getUTCMonth() + 1, season)) return t;
     }
     return null;
