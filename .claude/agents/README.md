@@ -25,6 +25,15 @@ The guide for a rider coming to a town with a bike. One town at a time;
 
 Shared rules: `research/towns/SCOUT-RULES.md`. Field shapes: `data/SCHEMA.md`.
 
+## The group-ride upkeep (Sept 30, 2026)
+
+`/rides` runs it (`.claude/commands/rides.md`); `tools/RIDES-UPKEEP.md` explains it in plain words.
+
+| agent | owns | writes |
+|---|---|---|
+| `ride-verifier` | re-checking listed rides at their source: confirmed / changed / seasonal-break / paused / ended / unreachable — never a guess | `research/rides/upkeep/<date>.json`, applied by `tools/rides-apply.js` |
+| `ride-scout` | finding new rides in a city or region, each with proof of life and a way to re-check it | `research/rides/<dir>/<area-id>.json` + `.md`, merged by `tools/merge-ride-research.js` |
+
 ## The rest
 
 | agent | job |

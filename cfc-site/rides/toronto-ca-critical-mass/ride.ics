@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:toronto-ca-critical-mass@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Toronto:20261030T183000
+DTEND;TZID=America/Toronto:20261030T203000
+RRULE:FREQ=MONTHLY;BYDAY=-1FR;UNTIL=20270227T235959Z
+SUMMARY:Critical Mass Toronto — Toronto\, Canada
+LOCATION:Changes monthly; check the latest announcement
+DESCRIPTION:Pace: slow\, social\, volunteers cork intersections.\nNo-drop
+ .\nSchedule: Last Friday of the month. The Sept 25\, 2026 ride met at 6:
+ 00 pm and rolled at 6:30 pm. The start moves month to month (Aug 28\, 20
+ 26: Prince Edward Viaduct Parkette; Sept 25\, 2026: High Park front gate
+ s on Bloor St W)..\nConfirm with the host before you go.\nhttps://cyclef
+ orchange.org/rides/toronto-ca-critical-mass/
+URL:https://cycleforchange.org/rides/toronto-ca-critical-mass/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,38 @@
+name: Rides check
+
+# Every change to the ride data, the rides tools or the health files: the validator, the tests,
+# and a full build of the rides pages. A PR that breaks rides.json goes red here, before Netlify.
+# Plain words: tools/RIDES-UPKEEP.md.
+
+on:
+  pull_request:
+    paths:
+      - "cfc-site/rides/rides.json"
+      - "tools/**"
+      - "data/rides-*.json"
+  push:
+    branches: [main]
+    paths:
+      - "cfc-site/rides/rides.json"
+      - "tools/**"
+      - "data/rides-*.json"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate rides.json
+        run: node tools/validate-rides.js
+      - name: Tests
+        run: node --test tools/test/*.test.js
+      - name: Build the rides pages
+        run: node tools/build-rides.js

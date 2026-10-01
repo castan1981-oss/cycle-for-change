@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "sun-city-az-sun-city-cycling-club-thursday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "evidence": "Sun City Cycling Club's schedule page gives the Thursday start by month: 8:00 am in October and November, 9:00 am in December, January and February (read Sept 30, 2026).",
+    "changes": { "start_times": [{ "from": "2026-12-01", "start_hhmm": "09:00" }] }
+  },
+  {
+    "slug": "sun-city-az-sun-city-cycling-club-tuesday-casual-ride",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "evidence": "Sun City Cycling Club's schedule page gives the Tuesday start by month: 8:00 am in October and November, 9:00 am in December, January and February (read Sept 30, 2026).",
+    "changes": { "start_times": [{ "from": "2026-12-01", "start_hhmm": "09:00" }] }
+  }
+]

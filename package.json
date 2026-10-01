@@ -11,6 +11,10 @@
     "derive:rides": "node tools/derive-ride-fields.js",
     "merge:rides": "node tools/merge-ride-research.js",
     "geocode:rides": "node tools/geocode-rides.js",
+    "validate:rides": "node tools/validate-rides.js",
+    "watch:rides": "node tools/rides-watch.js",
+    "reports:rides": "node tools/rides-reports.js",
+    "apply:rides": "node tools/rides-apply.js",
     "test:rides": "node --test tools/test/*.test.js"
   }
 }

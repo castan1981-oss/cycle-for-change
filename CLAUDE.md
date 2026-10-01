@@ -54,9 +54,38 @@ find out it changed or no longer exists."
   grew, add a 301 in `netlify.toml` (Carlsbad → Encinitas is the first).
 - Never list LGBTQ-focused rides in `NO_LGBTQ_LISTING` countries (criminalisation or bans on
   gatherings / "propaganda"). The merge refuses them.
-- Next to build: the weekly watcher (`tools/rides-watch.js` → `data/rides-health.json`: dead pages,
-  changed schedules, feed proof of life), rider-report intake from Netlify Forms, and the weekly
-  re-check PR (a Claude Code action working the queue). The policy and the pages already read them.
+- **Upkeep (built Sept 30, 2026; plain words in `tools/RIDES-UPKEEP.md`):** Mondays 2 am Phoenix
+  `tools/rides-watch.js` reads every ride's pages and feeds (ICS, JSON-LD, Strava club event pages)
+  → `data/rides-health.json` (flags, proof of life) + `data/rides-queue.json/.md` + the "Rides to
+  re-check" issue; `tools/rides-reports.js` brings in the ride-report form. 3 am the re-check
+  workflow runs `/rides refresh 40` (`.claude/commands/rides.md`, @ride-verifier) through
+  `tools/rides-apply.js` — the only way a re-check reaches rides.json — and opens a PR labelled
+  rides-upkeep. `node tools/validate-rides.js` gates every change (`rides-check.yml`).
+
+## Arizona deep sweep + start-time tables (Sept 30, 2026, evening)
+Robert: "there are so many group rides that we do not have especially in Arizona" — his own 5:30 am
+Thursday ride from Gainey Village wasn't listed. Arizona rides live on Strava clubs, Meetup,
+RideWithGPS club calendars and shop pages, not on websites; `research/rides/az/BRIEF-AZ.md` says
+where to look (public Strava event pages first). 46 new Arizona rides merged (76 in the state);
+the four scout reports in `research/rides/az/` list ~80 groups we couldn't confirm (Instagram /
+Facebook / login-only) for Robert to confirm by hand.
+- **`start_times`** (schema, `data/SCHEMA.md`): the host's own table of start-time changes,
+  `[{ "from": "2026-10-10", "start_hhmm": "07:00" }]`. `S.startOn(ride, date)` in
+  `tools/lib/rides-schema.js` is the one lookup: the build shows the time in force at the next ride
+  (cards, titles, JSON-LD, live.json), says the coming changes under "When", writes one .ics VEVENT
+  per stretch; ride.js (`data-times`), /tonight/ and the watcher read the table date by date.
+  Tucson's Shootout, PMBC's month-by-month starts and Sun City's are in. Only what the host published.
+- **derive-ride-fields.js fixes:** `season: "year-round"` always means no `season_months` (month
+  words in a schedule are usually dates or a start-time table — 49 year-round rides had been made
+  seasonal and dropped out of "next ride"); a weekly ride never gets a `monthly_rule`; month words
+  are whole words ("market" isn't March, "the start may vary" isn't May); "May–fall" reads as May–Oct.
+  `tools/test/derive-ride-fields.test.js` holds the cases.
+- **City hubs:** the ten biggest cities keep their hub name against a busy suburb (Phoenix stays
+  `/rides/az/phoenix/`), and a city with 8+ rides of its own gets its own hub 6+ miles from the
+  others (`OWN_MIN`, `OWN_GAP` → `/rides/az/scottsdale/`). Check `cfc-site/rides/hubs.json` against
+  the last commit after a merge: a hub that disappears needs a 301.
+- Irregular rides (posted date by date) say "Some Mondays", never "Every Monday".
+- Re-check batches live in `research/rides/upkeep/` and go through `tools/rides-apply.js`.
 
 ## Town guides — the destination layer (Sept 30, 2026)
 Robert's brief: the site becomes the guide for a rider who lives somewhere else and is coming to

@@ -6,9 +6,27 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:phoenix-az-bullshifters-saturday-club-ride@cycleforchange.org
 DTSTAMP:20260930T000000Z
-DTSTART;TZID=America/Phoenix:20261003T073000
-DTEND;TZID=America/Phoenix:20261003T093000
-RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261031T235959Z
+DTSTART;TZID=America/Phoenix:20261003T070000
+DTEND;TZID=America/Phoenix:20261003T090000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261017T065959Z
+SUMMARY:Bullshifters Saturday Club Ride — Phoenix\, AZ
+LOCATION:Moon Valley Park\, 7th Ave and Coral Gables\, Phoenix\, AZ
+DESCRIPTION:Pace: Faster group averages 19–20 mph\, moderate group 15
+ –17 mph.\nSchedule: Every Saturday\, about half an hour after sunrise.
+  October 2026: 7:00 am on Oct 3 and 10\, 7:30 am on Oct 17\, 24 and 31. 
+ Routes are posted a month at a time..\nConfirm with the host before you 
+ go.\nhttps://cycleforchange.org/rides/phoenix-az-bullshifters-saturday-c
+ lub-ride/
+URL:https://cycleforchange.org/rides/phoenix-az-bullshifters-saturday-clu
+ b-ride/
+END:VEVENT
+BEGIN:VEVENT
+UID:phoenix-az-bullshifters-saturday-club-ride-from-2026-10-17@cycleforch
+ ange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Phoenix:20261017T073000
+DTEND;TZID=America/Phoenix:20261017T093000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270227T235959Z
 SUMMARY:Bullshifters Saturday Club Ride — Phoenix\, AZ
 LOCATION:Moon Valley Park\, 7th Ave and Coral Gables\, Phoenix\, AZ
 DESCRIPTION:Pace: Faster group averages 19–20 mph\, moderate group 15

@@ -52,7 +52,12 @@ function sameRide(a, b) {
   const hostWords = (x) => S.fold((x.host && x.host.name) || "").toLowerCase();
   const nameA = la.name && S.fold(la.name).toLowerCase().split(hostWords(a)).join(" "), nameB = lb.name && S.fold(lb.name).toLowerCase().split(hostWords(b)).join(" ");
   const apart = (la.address && lb.address && overlap(la.address, lb.address) < 0.5) || (nameA && nameB && nameA.trim() && nameB.trim() && overlap(nameA, nameB) < 0.5);
-  return days && time && host && !apart;
+  // one host, one start, two names that share nothing once the host's words are gone = two rides
+  // (West Valley Casual's Stadium Ride and Bear Claw Ride alternate Sundays from the same park)
+  const own = (x) => { const hw = words((x.host && x.host.name) || ""); return [...words(strip(x.name))].filter((w) => !hw.has(w)).join(" "); };
+  const oa = own(a), ob = own(b);
+  const named = oa && ob && overlap(oa, ob) < 0.5;
+  return days && time && host && !apart && !named;
 }
 
 function gate(r) {

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tucson-az-fuga-bicis-y-burros-second-sunday-ride@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Phoenix:20261011T080000
+DTEND;TZID=America/Phoenix:20261011T100000
+RRULE:FREQ=MONTHLY;BYDAY=2SU;UNTIL=20270227T235959Z
+SUMMARY:Bicis y Burros (Westside Second Sunday Ride) — Tucson\, AZ
+LOCATION:Ward 1 Office\, 940 W Alameda St\, Tucson\, AZ 85745
+DESCRIPTION:Schedule: Second Sunday of the month\, from the Ward 1 Office
+  on W Alameda St. May to October 8:00 to 10:00 am\, November to April 9:
+ 00 to 11:00 am. Listed for Oct 11 (8:00)\, Nov 8 (9:00) and Dec 13 (9:00
+ )\, 2026..\nConfirm with the host before you go.\nhttps://cycleforchange
+ .org/rides/tucson-az-fuga-bicis-y-burros-second-sunday-ride/
+URL:https://cycleforchange.org/rides/tucson-az-fuga-bicis-y-burros-second
+ -sunday-ride/
+END:VEVENT
+END:VCALENDAR

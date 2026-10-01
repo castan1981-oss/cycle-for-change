@@ -1,0 +1,188 @@
+[
+  {
+    "slug": "tempe-az-regroup-coffee-ride",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "evidence": "Regroup's rides page lists Sat Oct 3, 2026 at 6:30 am, marked \"NEW START TIME\", on a 50-mile route (read Sept 30, 2026).",
+    "sources": ["https://regroupwithus.com/rides-and-events/"],
+    "changes": {
+      "time_local": "6:30 am",
+      "start_hhmm": "06:30",
+      "schedule": "Every Saturday morning, 6:30 am from Oct 3, 2026 (the shop calls it a new start time; it was 6:00 am). The start shifts with the season, so check the shop's rides page the week you go."
+    }
+  },
+  {
+    "slug": "gilbert-az-global-bikes-sunday-funday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "last_seen": "2026-09-27",
+    "evidence": "Global Bikes' Meetup lists the Sunday Funday at 6:30 am from Sept 27, 2026, weekly through Jan 3, 2027; it was 6:00 am on Sept 13 and 20 (read Sept 30, 2026).",
+    "sources": ["https://www.meetup.com/global-bikes-meetup/events/"],
+    "changes": {
+      "time_local": "6:30 am",
+      "start_hhmm": "06:30",
+      "schedule": "Every Sunday, 6:30 am since Sept 27, 2026 (it was 6:00 am through Sept 20). Global Bikes' Meetup lists it weekly through Jan 3, 2027.",
+      "refresh": { "method": "meetup", "watch_url": "https://www.meetup.com/global-bikes-meetup/events/", "feed_url": "https://www.meetup.com/global-bikes-meetup/events/ical/" }
+    }
+  },
+  {
+    "slug": "phoenix-az-global-bikes-ahwatukee-wednesday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "evidence": "Global Bikes' Meetup lists the Ahwatukee ride at 7:00 pm on Sept 30 and at 6:30 pm (meet 6:15 pm) from Oct 7, 2026 (read Sept 30, 2026).",
+    "changes": {
+      "time_local": "6:30 pm",
+      "start_hhmm": "18:30",
+      "schedule": "Every Wednesday evening: meet 6:15 pm, roll 6:30 pm from Oct 7, 2026 (Sept 30 was 7:00 pm). Each Meetup event gives that week's time."
+    }
+  },
+  {
+    "slug": "phoenix-az-taco-tuesday-south-mountain",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "evidence": "Valley Epic Rides' Meetup shows Taco Tuesday at 6:30 pm since Sept 22, 2026 (7:15 pm through Sept 15), from Kyrene de las Lomas Elementary School, 11820 S Warner Elliot Loop (read Sept 30, 2026).",
+    "sources": ["https://www.meetup.com/valley-epic-rides/events/"],
+    "changes": {
+      "time_local": "6:30 pm",
+      "start_hhmm": "18:30",
+      "schedule": "Every Tuesday, 6:30 pm since Sept 22, 2026 (it was 7:15 pm through Sept 15). Each Meetup event gives that week's start; the series runs weekly on Meetup.",
+      "refresh": { "method": "meetup", "watch_url": "https://www.meetup.com/valley-epic-rides/events/", "feed_url": "https://www.meetup.com/valley-epic-rides/events/ical/" }
+    }
+  },
+  {
+    "slug": "phoenix-az-valley-epic-rides-night-rider-trail-100",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "evidence": "Valley Epic Rides' Meetup shows the Night Rider series at 6:30 pm from 1418 E Sunnyside Dr, with Oct 14 cancelled and the series ending Oct 27, 2026 (read Sept 30, 2026).",
+    "changes": {
+      "schedule": "Wednesdays, 6:30 pm, on Trail 100, in a Meetup series that ends Oct 27, 2026: Oct 14 is off, so the last ride of this series is Oct 21. The meet spot can change; check the Meetup event."
+    }
+  },
+  {
+    "slug": "tucson-az-the-shootout",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "evidence": "Fair Wheel Bikes' group rides page gives the Shootout's start table: 6:30 am from the first Saturday of September, 7:00 am from the second Saturday of October, 7:30 am from the second Saturday of November (read Sept 30, 2026).",
+    "changes": {
+      "time_local": "6:30 am",
+      "start_hhmm": "06:30",
+      "start_times": [{ "from": "2026-10-10", "start_hhmm": "07:00" }, { "from": "2026-11-14", "start_hhmm": "07:30" }],
+      "schedule": "Every Saturday morning. Fair Wheel Bikes' start table: 6:30 am from the first Saturday of September, 7:00 am from the second Saturday of October (Oct 10, 2026), 7:30 am from the second Saturday of November (Nov 14, 2026)."
+    }
+  },
+  {
+    "slug": "tucson-az-tuesday-morning-fast-ride",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "evidence": "Fair Wheel Bikes' group rides page says TMFR starts at the same time as the Shootout A group: 6:30 am now, 7:00 am from the second Saturday of October, 7:30 am from the second Saturday of November (read Sept 30, 2026).",
+    "changes": {
+      "time_local": "6:30 am",
+      "start_hhmm": "06:30",
+      "start_times": [{ "from": "2026-10-10", "start_hhmm": "07:00" }, { "from": "2026-11-14", "start_hhmm": "07:30" }]
+    }
+  },
+  {
+    "slug": "tucson-az-womens-shootout",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "evidence": "Fair Wheel Bikes' women's rides page gives the Women's Shootout start as 6:45 am from the first Saturday of September, 7:15 am from the second week of October and 7:45 am from the second Saturday of November (read Sept 30, 2026).",
+    "sources": ["https://www.fairwheelbikes.com/blogs/posts/womens-rides/"],
+    "changes": {
+      "time_local": "6:45 am",
+      "start_hhmm": "06:45",
+      "start_times": [{ "from": "2026-10-10", "start_hhmm": "07:15" }, { "from": "2026-11-14", "start_hhmm": "07:45" }],
+      "schedule": "Every Saturday morning. Fair Wheel Bikes' women's rides page: 6:45 am from the first Saturday of September, 7:15 am from the second week of October, 7:45 am from the second Saturday of November. Transit Cycles' events page still says a 6:00 am meet and 6:15 am start; go by Fair Wheel's table.",
+      "refresh": { "method": "static-page", "watch_url": "https://www.fairwheelbikes.com/blogs/posts/womens-rides/" }
+    }
+  },
+  {
+    "slug": "prescott-az-bike-prescott-thursday-mtb-series",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "evidence": "Bike Prescott's Meetup calendar lists the Thursday mountain bike ride for Oct 1, 2026 at 9:00 am (read Sept 30, 2026).",
+    "sources": ["https://www.meetup.com/bike-prescott-meetup/events/ical/"],
+    "changes": {
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00",
+      "schedule": "Every Thursday morning, 9:00 am on Oct 1, 2026 (it was 8:00 am in September). The trailhead changes every week; the Meetup post names it.",
+      "refresh": { "feed_url": "https://www.meetup.com/bike-prescott-meetup/events/ical/" }
+    }
+  },
+  {
+    "slug": "phoenix-az-bullshifters-saturday-club-ride",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "evidence": "Bullshifters' rides page lists Oct 3 and 10 at 7:00 am and Oct 17, 24 and 31 at 7:30 am, from Moon Valley Park (read Sept 30, 2026).",
+    "changes": {
+      "time_local": "7:00 am",
+      "start_hhmm": "07:00",
+      "start_times": [{ "from": "2026-10-17", "start_hhmm": "07:30" }]
+    }
+  },
+  {
+    "slug": "peoria-az-west-valley-casual-true-beginner-ride",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "evidence": "West Valley Casual Bike Rides' Meetup calendar lists True Beginner on Thu Oct 8, 2026 at 6:30 pm, and the group's events page shows Thursdays Oct 8, 15 and 22 plus Wed Oct 14 at 6:30 pm, after Wednesdays at 7:00 pm through Sept 30 (read Sept 30, 2026).",
+    "changes": {
+      "days": ["thu"],
+      "time_local": "6:30 pm",
+      "start_hhmm": "18:30",
+      "schedule": "Weekly, in the evening. From Oct 8, 2026 the Meetup lists it on Thursdays at 6:30 pm (Oct 8, 15 and 22), plus one Wednesday, Oct 14, at 6:30 pm; it ran Wednesdays at 7:00 pm through Sept 30. Called off above 105°F, in strong wind or lightning."
+    }
+  },
+  {
+    "slug": "phoenix-az-pmbc-granada-sunday-breakfast-ride",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "evidence": "PMBC's RideWithGPS calendar lists the Granada Breakfast Ride at 6:30 am every Sunday from Sept 27 to Nov 8, 2026, while the ride's description says 7:30 am from October (read Sept 30, 2026).",
+    "sources": ["https://ridewithgps.com/organizations/3053-phoenix-metro-bicycle-club/events"],
+    "changes": {
+      "time_local": "6:30 am",
+      "start_hhmm": "06:30",
+      "schedule": "Every Sunday. The club's ride description says 7:30 am October through March, but its RideWithGPS calendar lists 6:30 am every Sunday from Sept 27 to Nov 8, 2026, so come at 6:30 or check the calendar that week. The calendar names each week's breakfast stop."
+    }
+  },
+  {
+    "slug": "chandler-az-pmbc-mikes-sunday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "evidence": "PMBC's ride page gives Mike's Sunday Ride's start by month: 7:30 am October, 8:00 November, 8:30 December and January, 8:00 February, 7:30 March, 7:00 April (read Sept 30, 2026).",
+    "changes": {
+      "start_times": [{ "from": "2026-11-01", "start_hhmm": "08:00" }, { "from": "2026-12-01", "start_hhmm": "08:30" }, { "from": "2027-02-01", "start_hhmm": "08:00" }, { "from": "2027-03-01", "start_hhmm": "07:30" }, { "from": "2027-04-01", "start_hhmm": "07:00" }]
+    }
+  },
+  {
+    "slug": "tempe-az-pmbc-saturday-cycling",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "evidence": "PMBC's ride page gives Saturday Cycling's start by month: 7:30 am October, 8:00 November, 8:30 December and January, 8:00 February, 7:30 March, 7:00 April (read Sept 30, 2026).",
+    "changes": {
+      "start_times": [{ "from": "2026-11-01", "start_hhmm": "08:00" }, { "from": "2026-12-01", "start_hhmm": "08:30" }, { "from": "2027-02-01", "start_hhmm": "08:00" }, { "from": "2027-03-01", "start_hhmm": "07:30" }, { "from": "2027-04-01", "start_hhmm": "07:00" }]
+    }
+  },
+  {
+    "slug": "chandler-az-pmbc-wednesday-no-drop",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "evidence": "PMBC's ride page gives the Wednesday No-Drop's usual start by month: 7:30 am October, 8:00 November, 8:30 December and January, 8:00 February and March, 7:30 April (read Sept 30, 2026).",
+    "changes": {
+      "start_times": [{ "from": "2026-11-01", "start_hhmm": "08:00" }, { "from": "2026-12-01", "start_hhmm": "08:30" }, { "from": "2027-02-01", "start_hhmm": "08:00" }, { "from": "2027-04-01", "start_hhmm": "07:30" }]
+    }
+  },
+  {
+    "slug": "tempe-az-pmbc-sunday-kickoff",
+    "outcome": "changed",
+    "checked_on": "2026-09-30",
+    "evidence": "PMBC's ride page gives Sunday Kickoff's usual start by month: 7:30 am October, 8:00 November, 8:30 December, 9:00 January and February, 8:00 March, 7:30 April (read Sept 30, 2026).",
+    "changes": {
+      "start_times": [{ "from": "2026-11-01", "start_hhmm": "08:00" }, { "from": "2026-12-01", "start_hhmm": "08:30" }, { "from": "2027-01-01", "start_hhmm": "09:00" }, { "from": "2027-03-01", "start_hhmm": "08:00" }, { "from": "2027-04-01", "start_hhmm": "07:30" }]
+    }
+  }
+]

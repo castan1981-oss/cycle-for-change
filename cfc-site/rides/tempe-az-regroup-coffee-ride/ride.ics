@@ -5,17 +5,18 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:tempe-az-regroup-coffee-ride@cycleforchange.org
-DTSTAMP:20260915T000000Z
-DTSTART;TZID=America/Phoenix:20261003T060000
-DTEND;TZID=America/Phoenix:20261003T080000
-RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270212T235959Z
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Phoenix:20261003T063000
+DTEND;TZID=America/Phoenix:20261003T083000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270227T235959Z
 SUMMARY:Regroup Saturday Coffee Ride — Tempe\, AZ
 LOCATION:Regroup Coffee + Bicycles\, 1205 N Scottsdale Rd\, Tempe\, AZ 85
  288
 DESCRIPTION:Pace: multiple groups by ability.\nNo-drop.\nSchedule: Every 
- Saturday morning (6:00 am in September; start shifts with the season).\n
- Confirm with the host before you go.\nhttps://cycleforchange.org/rides/t
- empe-az-regroup-coffee-ride/
+ Saturday morning\, 6:30 am from Oct 3\, 2026 (the shop calls it a new st
+ art time; it was 6:00 am). The start shifts with the season\, so check t
+ he shop's rides page the week you go..\nConfirm with the host before you
+  go.\nhttps://cycleforchange.org/rides/tempe-az-regroup-coffee-ride/
 URL:https://cycleforchange.org/rides/tempe-az-regroup-coffee-ride/
 END:VEVENT
 END:VCALENDAR

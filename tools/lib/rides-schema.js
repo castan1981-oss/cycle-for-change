@@ -27,7 +27,7 @@ const VOCAB = {
 const FIELD_ORDER = [
   "slug", "name", "name_en", "kind", "status", "status_note", "status_since",
   "city", "neighborhood", "region", "state", "country", "lat", "lng", "geo_precision", "tz",
-  "discipline", "schedule", "days", "time_local", "start_hhmm", "frequency", "monthly_rule", "season", "season_months",
+  "discipline", "schedule", "days", "time_local", "start_hhmm", "start_times", "frequency", "monthly_rule", "season", "season_months",
   "start_location", "distance_km", "distance_miles", "duration", "duration_min", "pace", "drop_policy",
   "host", "founded_year", "founded_note", "cost", "language", "visitor_notes", "description",
   "links", "inclusive_focus", "sources", "verified_on", "last_seen", "evidence", "confidence", "refresh",
@@ -132,7 +132,25 @@ function refreshMethodFor(url) {
 const SOCIAL_HOSTS = /(^|\.)(instagram\.com|facebook\.com|fb\.me|fb\.com|strava\.com|x\.com|twitter\.com|tiktok\.com|threads\.net|linktr\.ee|whatsapp\.com|chat\.whatsapp\.com|t\.me)$/i;
 const isSocial = (url) => { try { return SOCIAL_HOSTS.test(new URL(url).hostname); } catch (e) { return false; } };
 
+// start_times: a host's own table of start-time changes, [{ from: "YYYY-MM-DD", start_hhmm: "HH:MM" }],
+// oldest first. From `from` (the ride's local date) on, the ride starts at that time; before the first
+// entry it starts at start_hhmm. Arizona rides move with the heat and the light ("6:30 from the first
+// Saturday of September, 7:00 from the second Saturday of October"), so the build, the ride page and the
+// watcher all ask startOn(ride, date) instead of reading start_hhmm. Only what the host published — never a guess.
+function startOn(ride, ymd) {
+  let t = ride && ride.start_hhmm ? ride.start_hhmm : null;
+  const tab = ride && Array.isArray(ride.start_times) ? ride.start_times : [];
+  for (const e of tab) if (e && typeof e.from === "string" && e.from <= ymd && typeof e.start_hhmm === "string") t = e.start_hhmm;
+  return t;
+}
+// every time the ride can start at (the base and the table), for "does the host's page mention our time"
+function startTimesAll(ride) {
+  const out = new Set(); if (ride && ride.start_hhmm) out.add(ride.start_hhmm);
+  for (const e of (ride && Array.isArray(ride.start_times) ? ride.start_times : [])) if (e && e.start_hhmm) out.add(e.start_hhmm);
+  return [...out];
+}
+
 module.exports = {
   VOCAB, FIELD_ORDER, US_STATES, COUNTRY_ALIASES, NO_LGBTQ_LISTING, DAY_WORDS,
-  countryName, countrySlug, slugify, fold, orderRecord, sortRides, refreshMethodFor, isSocial,
+  countryName, countrySlug, slugify, fold, orderRecord, sortRides, refreshMethodFor, isSocial, startOn, startTimesAll,
 };

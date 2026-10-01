@@ -76,3 +76,11 @@ test("short label shows the year once it is old", () => {
   assert.equal(F.fmt("2025-12-01", { short: true, today: "2026-09-30" }), "Dec 2025");
   assert.equal(F.fmt("2026-03-01", { short: true, today: "2026-09-30" }), "Mar 1");
 });
+test("the amber line says what the watcher saw", () => {
+  const n = (code) => F.assess(ride(), { flags: [{ code, severity: "amber", since: "2026-09-28" }] }, T).nudge;
+  assert.match(n("event-date-past"), /doesn't show an upcoming date/);
+  assert.match(n("next-date-far"), /doesn't show an upcoming date/);
+  assert.match(n("moved"), /page moved on Sep 28/);
+  assert.match(n("unreachable"), /haven't been able to load/);
+  assert.match(n("time-missing"), /changed their page on Sep 28/);
+});

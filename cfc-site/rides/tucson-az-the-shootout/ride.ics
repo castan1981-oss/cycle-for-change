@@ -5,17 +5,53 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:tucson-az-the-shootout@cycleforchange.org
-DTSTAMP:20260915T000000Z
-DTSTART;TZID=America/Phoenix:20261003T073000
-DTEND;TZID=America/Phoenix:20261003T093000
-RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270212T235959Z
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Phoenix:20261003T063000
+DTEND;TZID=America/Phoenix:20261003T083000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261010T065959Z
 SUMMARY:The Shootout — Tucson\, AZ
 LOCATION:University Blvd & Euclid Ave\, University Blvd & N Euclid Ave\, 
  Tucson\, AZ 85719
 DESCRIPTION:Pace: A 22–28+ mph; Scootout 19–23 mph; Old-Old Man 16–
- 20 mph.\nSchedule: Every Saturday morning; start varies 6:00–7:30 am b
- y season.\nConfirm with the host before you go.\nhttps://cycleforchange.
- org/rides/tucson-az-the-shootout/
+ 20 mph.\nSchedule: Every Saturday morning. Fair Wheel Bikes' start table
+ : 6:30 am from the first Saturday of September\, 7:00 am from the second
+  Saturday of October (Oct 10\, 2026)\, 7:30 am from the second Saturday 
+ of November (Nov 14\, 2026)..\nConfirm with the host before you go.\nhtt
+ ps://cycleforchange.org/rides/tucson-az-the-shootout/
+URL:https://cycleforchange.org/rides/tucson-az-the-shootout/
+END:VEVENT
+BEGIN:VEVENT
+UID:tucson-az-the-shootout-from-2026-10-10@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Phoenix:20261010T070000
+DTEND;TZID=America/Phoenix:20261010T090000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261114T065959Z
+SUMMARY:The Shootout — Tucson\, AZ
+LOCATION:University Blvd & Euclid Ave\, University Blvd & N Euclid Ave\, 
+ Tucson\, AZ 85719
+DESCRIPTION:Pace: A 22–28+ mph; Scootout 19–23 mph; Old-Old Man 16–
+ 20 mph.\nSchedule: Every Saturday morning. Fair Wheel Bikes' start table
+ : 6:30 am from the first Saturday of September\, 7:00 am from the second
+  Saturday of October (Oct 10\, 2026)\, 7:30 am from the second Saturday 
+ of November (Nov 14\, 2026)..\nConfirm with the host before you go.\nhtt
+ ps://cycleforchange.org/rides/tucson-az-the-shootout/
+URL:https://cycleforchange.org/rides/tucson-az-the-shootout/
+END:VEVENT
+BEGIN:VEVENT
+UID:tucson-az-the-shootout-from-2026-11-14@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Phoenix:20261114T073000
+DTEND;TZID=America/Phoenix:20261114T093000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270227T235959Z
+SUMMARY:The Shootout — Tucson\, AZ
+LOCATION:University Blvd & Euclid Ave\, University Blvd & N Euclid Ave\, 
+ Tucson\, AZ 85719
+DESCRIPTION:Pace: A 22–28+ mph; Scootout 19–23 mph; Old-Old Man 16–
+ 20 mph.\nSchedule: Every Saturday morning. Fair Wheel Bikes' start table
+ : 6:30 am from the first Saturday of September\, 7:00 am from the second
+  Saturday of October (Oct 10\, 2026)\, 7:30 am from the second Saturday 
+ of November (Nov 14\, 2026)..\nConfirm with the host before you go.\nhtt
+ ps://cycleforchange.org/rides/tucson-az-the-shootout/
 URL:https://cycleforchange.org/rides/tucson-az-the-shootout/
 END:VEVENT
 END:VCALENDAR
