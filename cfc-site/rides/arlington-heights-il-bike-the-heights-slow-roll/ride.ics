@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:arlington-heights-il-bike-the-heights-slow-roll@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261023T181500
+DTEND;TZID=America/Chicago:20261023T201500
+RRULE:FREQ=MONTHLY;BYDAY=4FR;UNTIL=20261031T235959Z
+SUMMARY:Bike the Heights! Slow Roll — Arlington Heights\, IL
+LOCATION:Harmony Park\, 7 S Vail Ave\, Arlington Heights\, IL 60005
+DESCRIPTION:Pace: Slow.\nSchedule: Fourth Friday of the month\, rolls at 
+ 6:15 pm (meet 6:00 pm) from Harmony Park\, 7 S Vail Ave. Dates listed: A
+ ug 28\, Sep 25\, Oct 23\, 2026 (a Halloween ride). Weather permitting..\
+ nConfirm with the host before you go.\nhttps://cycleforchange.org/rides/
+ arlington-heights-il-bike-the-heights-slow-roll/
+URL:https://cycleforchange.org/rides/arlington-heights-il-bike-the-height
+ s-slow-roll/
+END:VEVENT
+END:VCALENDAR

@@ -69,3 +69,27 @@
   to = "/rides/ca/encinitas/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/rides/ca/redondo-beach/"
+  to = "/rides/ca/long-beach/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/tx/plano/"
+  to = "/rides/tx/frisco/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/ny/greenlawn/"
+  to = "/rides/ny/old-bethpage/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/il/matteson/"
+  to = "/rides/il/chicago/"
+  status = 301
+  force = true

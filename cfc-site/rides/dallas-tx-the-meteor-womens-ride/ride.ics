@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dallas-tx-the-meteor-womens-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261021T180000
+DTEND;TZID=America/Chicago:20261021T200000
+RRULE:FREQ=MONTHLY;BYDAY=3WE;UNTIL=20270228T235959Z
+SUMMARY:The Meteor Women's Ride — Dallas\, TX
+LOCATION:The Meteor Cafe\, 1950 Hi Line Dr\, Dallas\, TX 75207
+DESCRIPTION:Pace: 12–14 mph.\nSchedule: Monthly\, usually the second or
+  third Wednesday\, wheels down 6:00 pm. 2026 dates: Oct 21\, Nov 11\, De
+ c 9. Pizza at the cafe after..\nConfirm with the host before you go.\nht
+ tps://cycleforchange.org/rides/dallas-tx-the-meteor-womens-ride/
+URL:https://cycleforchange.org/rides/dallas-tx-the-meteor-womens-ride/
+END:VEVENT
+END:VCALENDAR

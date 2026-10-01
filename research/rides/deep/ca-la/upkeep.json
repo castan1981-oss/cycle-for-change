@@ -1,0 +1,308 @@
+[
+ {
+  "slug": "long-beach-ca-bike-long-beach-bikes-and-coffee",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-25",
+  "evidence": "Bike Long Beach's rides page says every last Sunday, meet 9:30 am, roll 10:00 am, and its public calendar lists the last-Sunday series at 10:00 am (entry edited Sept 25, 2026) with the next ride on Sun Oct 25 (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.bikelb.com/rides/",
+   "https://www.bikelb.com/calendar/",
+   "https://calendar.google.com/calendar/ical/c_74a00fbd136eaad93850107be04fb2d309ee442b55f3b2ef908c66a37d0d07e3%40group.calendar.google.com/public/basic.ics"
+  ],
+  "promote_feed": "https://calendar.google.com/calendar/ical/c_74a00fbd136eaad93850107be04fb2d309ee442b55f3b2ef908c66a37d0d07e3%40group.calendar.google.com/public/basic.ics"
+ },
+ {
+  "slug": "long-beach-ca-lightning-velo-saturday-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-27",
+  "evidence": "Lightning Velo's Meetup feed lists the Saturday C-Group (36 miles, 15 to 18 mph) at 7:30 am for Oct 3, 10 and 17, 2026 (events edited Sept 13 to 27), while the club's home page says \"During standard time we start at 8am\" and that every ride starts from 6460 E Marina Dr since May 10, 2026 (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.lightningvelo.org/",
+   "https://www.lightningvelo.org/content.aspx?page_id=4001&club_id=333987",
+   "https://www.meetup.com/Lightning-Velo-Cycling-Club/events/ical/"
+  ],
+  "changes": {
+   "days": [
+    "sat"
+   ],
+   "schedule": "Every Saturday: 7:30 am while daylight time lasts (club's Meetup listing), 8:00 am in standard time from Sun Nov 1, 2026 (the club's home page). The club also rides Sundays at 8:00 am. All rides start from 6460 E Marina Dr while Studebaker Rd is under construction.",
+   "time_local": "7:30 am",
+   "start_hhmm": "07:30",
+   "start_times": [
+    {
+     "from": "2026-11-01",
+     "start_hhmm": "08:00"
+    }
+   ],
+   "description": "Road club with four groups rolling every Saturday morning, and Sunday too. A and B groups hold 19 to 23+ mph; B and C are no-drop double pacelines; the D group is for newer road riders and covers skills and rules of the road. Rides end at a coffee shop in Seal Beach.",
+   "visitor_notes": "The club's Meetup post calls the C-Group a good ride for a strong cyclist to try the group out. Sign the ride waiver on the club's site. The start is the Marina Dr lot, not the Eldorado Park library lot, until the construction ends (club notice dated May 2026).",
+   "refresh": {
+    "feed_url": "https://www.meetup.com/Lightning-Velo-Cycling-Club/events/ical/",
+    "notes": "The Meetup feed shows the Saturday C-Group at 7:30 am through December, but only the next few events are edited each week; the home page says 8:00 am in standard time."
+   }
+  }
+ },
+ {
+  "slug": "long-beach-ca-long-beach-bicycling-meetup",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-25",
+  "evidence": "The group's Meetup feed lists a Wednesday ride at 7:00 pm with Oct 7 and Oct 14, 2026 posted (edited Sept 18 and Sept 25), and Bike Long Beach's calendar puts the start at Long Beach Windsurf & Kayak, 3850 E Ocean Blvd (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.meetup.com/long-beach-bicycling-meetup/events/ical/",
+   "https://www.longbeachbikerides.com/"
+  ],
+  "promote_feed": "https://www.meetup.com/long-beach-bicycling-meetup/events/ical/"
+ },
+ {
+  "slug": "los-angeles-ca-la-grange-womens-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-07-07",
+  "evidence": "La Grange's Strava club posted the July women's ride on July 7, 2026 (Sat July 18, 8 am roll, Ocean and San Vicente), after rides on June 20 and April 18, all third Saturdays; the club's women's page says 3rd Saturday, 8:00 am, though its rides page says 2nd Saturday (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.lagrange.org/womens-ride",
+   "https://www.lagrange.org/rides",
+   "https://www.strava.com/clubs/velo-club-la-grange"
+  ]
+ },
+ {
+  "slug": "los-angeles-ca-la-grange-nichols-canyon-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-01-30",
+  "evidence": "La Grange's own Nichols page says \"The World Famous Nichols Ride, Sunday, 8 AM\" from Raymond Fouquet Square, its Weekly Rides page (edited Jan 30, 2026) lists the ride at 8:00AM from the same corner, and Big Orange's 2026 list shows it on Sunday at 8:00 AM, not Saturday (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.lagrange.org/nichols",
+   "https://www.lagrange.org/rides",
+   "https://www.bigorangecycling.org/more-local-rides"
+  ],
+  "changes": {
+   "days": [
+    "sun"
+   ],
+   "schedule": "Every Sunday, 8:00 am",
+   "description": "The Sunday club ride of one of LA's oldest and largest cycling clubs, known as the World Famous Nichols Ride. Hard pace with racers in the group, and turnout of 40 to over 100. The club suggests newer riders try one of its easier weekday rides first. Open to non-members. Helmets, lights when dark, no aero bars, no earphones."
+  }
+ },
+ {
+  "slug": "northridge-ca-sfvbc-saturday-club-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "SFVBC's home page lists upcoming rides for Sat Oct 3 (Encinal), Sun Oct 4 (Valley Vista) and Sat Oct 17, 24 and 31, with the start at the northwest corner of Nordhoff and Etiwanda in Northridge (CSUN Lot B1), 8:00 AM sharp unless noted (fetched Oct 1, 2026).",
+  "sources": [
+   "https://sfvbc.org/"
+  ]
+ },
+ {
+  "slug": "los-angeles-ca-venice-electric-light-parade",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The parade's page says every Sunday at sunset at 1501 Ocean Front Walk, and the Venice Chamber's listing for Sun Oct 11, 2026 says to meet 45 minutes before sunset and leave at sunset from Windward Plaza, so the start moves with the sun and is not a fixed 6:35 pm (fetched Oct 1, 2026; the parade's own page carries no 2026 date).",
+  "sources": [
+   "https://www.veniceelectriclightparade.com/",
+   "https://business.venicechamber.net/events/details/venice-electric-light-parade-sundays-at-sunset-10-11-2026-57043"
+  ],
+  "changes": {
+   "schedule": "Every Sunday at sunset: meet 45 minutes before sunset, leave at sunset (the time moves through the year), at Windward Plaza, 1501 Ocean Front Walk, Venice",
+   "time_local": null,
+   "start_hhmm": null,
+   "start_location": {
+    "name": "Windward Plaza, Venice Beach",
+    "address": "1501 Ocean Front Walk, Venice, CA 90291"
+   },
+   "visitor_notes": "The start follows sunset, so it is about 5:40 pm in early October and earlier in winter. The parade's page shows each night's boarding and takeoff times. Bring headlights and taillights."
+  }
+ },
+ {
+  "slug": "pasadena-ca-foo-chow-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-21",
+  "evidence": "Foo Chow's Strava club (1,388 members) says \"Currently every Monday Night. Meet @ 6p, roll out @ 6:30p\" from Incycle Pasadena and posted rides for Mon Sept 14 and Mon Sept 21, 2026, while Incycle's own page still says 1st and 3rd Tuesday and its event list stops May 26, 2025 (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.strava.com/clubs/315899",
+   "https://www.incycle.com/pages/retail-event/foo-chow-ride"
+  ],
+  "changes": {
+   "schedule": "Every Monday night, meet 6:00 pm, roll 6:30 pm, from Incycle Pasadena (the club says \"currently\"; rain can cancel)",
+   "days": [
+    "mon"
+   ],
+   "time_local": "6:30 pm",
+   "start_hhmm": "18:30",
+   "frequency": "weekly",
+   "monthly_rule": null,
+   "pace": "medium to spicy, usually 20 to 35 miles, regroups at major turns and the tops of long climbs",
+   "description": "Weekly Monday-night road ride out of Incycle Pasadena, going since 2007. The pace runs medium to hard, but the group regroups at major turns and at the top of long climbs. The route changes every week and is posted on the club's Strava page. Bring lights, tools, a tube and water.",
+   "visitor_notes": "The club's Strava page (open to join) posts each week's route, rain cancellations and the odd week off. Incycle's page still lists an older 1st and 3rd Tuesday schedule that the club no longer uses.",
+   "links": {
+    "strava": "https://www.strava.com/clubs/315899"
+   },
+   "refresh": {
+    "method": "strava-club",
+    "watch_url": "https://www.strava.com/clubs/315899",
+    "notes": "The club's posts say which Monday is on or off; Incycle's page is out of date."
+   }
+  }
+ },
+ {
+  "slug": "redondo-beach-ca-beach-cities-cycling-club-java-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "BCCC's Weekly Activities page (rev. July 15, 2026) lists the Friday Java Ride at 9 AM from the pedestrian area south of Captain Kidd's, and its October 2026 calendar shows a Friday Java Ride every week from Oct 2 to Oct 30, each to a named cafe (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.bcccsb.org/Weekly-Activities-Description",
+   "https://www.bcccsb.org/Ride-Calendar"
+  ]
+ },
+ {
+  "slug": "ventura-ca-bikevc-brew-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "BikeVC's Meetup feed lists the Brew Ride for Sun Oct 11, 2026 at 1:00 pm, and its Brew Ride page says second Sundays, 1:00 pm from the Ventura Bike Hub, spring through fall (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.meetup.com/bikeventura/events/ical/",
+   "https://www.bikeventura.org/brew-ride/"
+  ],
+  "promote_feed": "https://www.meetup.com/bikeventura/events/ical/"
+ },
+ {
+  "slug": "ventura-ca-easy-rider-community-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The Easy Rider Meetup feed lists rides on Sun Oct 4 and Oct 18, 2026 at 9:00 am (arrive 8:45) from the Museum of Ventura County lot, 100 E Main St, with more on Nov 1, Nov 15, Dec 6 and Dec 20 (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.meetup.com/meetup-group-easyrider/events/ical/",
+   "https://www.bikeventura.org/easy-rider/"
+  ],
+  "promote_feed": "https://www.meetup.com/meetup-group-easyrider/events/ical/"
+ },
+ {
+  "slug": "los-angeles-ca-la-wheelmen-sunday-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The club's Upcoming Rides page lists Sun Oct 4 (8:30 am, Beverly Hills) and Sun Oct 11 (7:30 am, Manhattan Beach), with the start and route changing each week, and the home page says guests are welcome on every ride (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.lawheelmen.org/upcoming-rides/",
+   "https://www.lawheelmen.org/"
+  ]
+ },
+ {
+  "slug": "los-angeles-ca-los-angeles-critical-mass",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-30",
+  "evidence": "The home page says every last Friday, meet 6:30 pm at Western and Wilshire, roll 7:29 pm, and carries posts dated Sept 24, 29 and 30, 2026, one about the Sept 25 ride's die-in (fetched Oct 1, 2026).",
+  "sources": [
+   "https://la-criticalmass.org/"
+  ]
+ },
+ {
+  "slug": "manhattan-beach-ca-big-orange-team-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Big Orange's local-rides list (footer 2026) shows the Big Orange Team Ride every Sunday from Manhattan Beach, 7:00 to 8:00 AM depending on the week, with the Manhattan Beach Ave Starbucks as the start (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.bigorangecycling.org/local-rides",
+   "https://www.bigorangecycling.org/more-local-rides"
+  ]
+ },
+ {
+  "slug": "manhattan-beach-ca-new-pier-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Big Orange's local-rides list (footer 2026) shows NPR on Tuesday and Thursday at 6:40 AM from the Manhattan Beach Pier (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.bigorangecycling.org/local-rides",
+   "https://www.bigorangecycling.org/more-local-rides"
+  ]
+ },
+ {
+  "slug": "los-angeles-ca-major-taylor-tuesday-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Big Orange's local-rides list (footer 2026) shows Major Taylor on Tuesday at 6:00 PM, during daylight saving hours only, on Westchester Parkway (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.bigorangecycling.org/local-rides",
+   "https://www.bigorangecycling.org/more-local-rides"
+  ]
+ },
+ {
+  "slug": "palos-verdes-estates-ca-wheatgrass-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Big Orange's local-rides list (footer 2026) shows the Wheatgrass Ride on Sunday at 8:00 AM from Malaga Cove Plaza (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.bigorangecycling.org/local-rides",
+   "https://www.bigorangecycling.org/more-local-rides"
+  ]
+ },
+ {
+  "slug": "redondo-beach-ca-big-orange-club-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Big Orange's local-rides list (footer 2026) shows the Big Orange Club Ride on Saturday at 8:00 AM from Miramar Park, Redondo Beach (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.bigorangecycling.org/local-rides",
+   "https://www.bigorangecycling.org/more-local-rides"
+  ]
+ },
+ {
+  "slug": "redondo-beach-ca-friendly-donut-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Big Orange's local-rides list (footer 2026) shows the Friendly Donut Ride every Saturday at 8:00 AM from Miramar Park, Redondo Beach (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.bigorangecycling.org/local-rides",
+   "https://www.bigorangecycling.org/more-local-rides"
+  ]
+ },
+ {
+  "slug": "redondo-beach-ca-the-donut-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Big Orange's local-rides list (footer 2026) shows the Donut Ride every Saturday at 8:00 AM from Avenue I and Elena, Redondo Beach (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.bigorangecycling.org/local-rides",
+   "https://www.bigorangecycling.org/more-local-rides"
+  ]
+ },
+ {
+  "slug": "torrance-ca-telo-tuesday-crit",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Big Orange's local-rides list (footer 2026) shows Telo on Tuesday at 6:00 PM, during daylight saving hours only, at Telo Ave and Kashiwa St, Torrance (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.bigorangecycling.org/local-rides",
+   "https://www.bigorangecycling.org/more-local-rides"
+  ]
+ },
+ {
+  "slug": "santa-monica-ca-la-grange-gravel-wednesday",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-01-30",
+  "evidence": "La Grange's Weekly Rides page (edited Jan 30, 2026) lists Gravel Wednesday at 6:30AM from San Vicente Blvd and 26th St in Santa Monica, and its ride page says \"Wednesday Gravel 6:30AM departs from 26th St. and San Vicente Blvd.\" (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.lagrange.org/rides",
+   "https://www.lagrange.org/gravelwednesday"
+  ]
+ }
+]

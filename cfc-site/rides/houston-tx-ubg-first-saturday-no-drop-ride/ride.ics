@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:houston-tx-ubg-first-saturday-no-drop-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T093000
+DTEND;TZID=America/Chicago:20261003T113000
+RRULE:FREQ=MONTHLY;BYDAY=1SA;UNTIL=20270228T235959Z
+SUMMARY:First Saturday No-Drop Beginner Ride (UBG) — Houston\, TX
+LOCATION:Urban Bicycle Gallery\, 801 Durham Dr\, Houston\, TX 77007
+DESCRIPTION:Pace: 12-14 mph\, 8-10 miles\, flat to rolling.\nNo-drop.\nSc
+ hedule: First Saturday of every month\, ready to roll 9:30 am from the s
+ hop. 8-10 miles at 12-14 mph..\nConfirm with the host before you go.\nht
+ tps://cycleforchange.org/rides/houston-tx-ubg-first-saturday-no-drop-rid
+ e/
+URL:https://cycleforchange.org/rides/houston-tx-ubg-first-saturday-no-dro
+ p-ride/
+END:VEVENT
+END:VCALENDAR

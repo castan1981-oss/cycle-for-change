@@ -1,0 +1,1108 @@
+[
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "region": "Washington",
+  "state": "WA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "neighborhood": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "seattle-wa-mello-fellos-saturday-ride",
+  "name": "Mello Fellos Saturday Ride",
+  "city": "Seattle",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Saturday mornings at 8:00 am (sometimes Sunday) from Mello Fellos Bike Shop. Posted for Oct 17 and Oct 24, 2026.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Mello Fellos Bike Shop",
+   "address": "2151 Sixth Ave, Seattle, WA"
+  },
+  "pace": "Friendly pace, 14-16 mph average, 15-25 miles typical, loop route",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Mello Fellos Bike Shop",
+   "type": "shop"
+  },
+  "visitor_notes": "Route is posted shortly before the ride on the shop's Strava club. Some weeks the ride moves to Sunday, so check the club or Everyday Rides listing.",
+  "description": "A shop ride that starts and ends at Mello Fellos on Sixth Avenue. Ride leaders take a Mello route around the city, with views of Puget Sound, Lake Union, Discovery Park, the UW campus or Lake Washington. The pace is friendly and most rides run 15 to 25 miles.",
+  "links": {
+   "website": "https://www.mellofellos.com/",
+   "instagram": "https://www.instagram.com/MelloFellosBikeShop/",
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/2297734",
+   "meetup": null,
+   "other": [
+    "https://everydayrides.com/events/6ab5af7780459b2004507bf3-a-route-to-be-named-but-we-re-riding-on-saturday"
+   ]
+  },
+  "sources": [
+   "https://www.strava.com/clubs/2297734",
+   "https://everydayrides.com/events/6ab5af7780459b2004507bf3-a-route-to-be-named-but-we-re-riding-on-saturday",
+   "https://everydayrides.com/calendar"
+  ],
+  "evidence": "Everyday Rides lists the shop's Saturday ride for Oct 17 and Oct 24, 2026 at 8:00 am from 2151 Sixth Ave, and the shop's Strava club says Saturday mornings at 8:00 am (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "strava-club",
+   "watch_url": "https://www.strava.com/clubs/2297734",
+   "feed_url": null,
+   "notes": "The Strava club page shows the standing description; the next dates are on Everyday Rides (event posted per ride)."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "region": "Washington",
+  "state": "WA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "neighborhood": "West Seattle",
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "sat"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "30 to 60 minutes",
+  "duration_min": 60,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "no-drop",
+   "beginner"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "seattle-wa-beer-junction-bike-club",
+  "name": "Beer Junction Bike Club",
+  "city": "Seattle",
+  "discipline": [
+   "social",
+   "road"
+  ],
+  "schedule": "Last Saturday of every month, meet and leave shortly after 2:00 pm from the back parking lot of The Beer Junction. Next: Oct 31, 2026.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "2:00 pm",
+  "start_hhmm": "14:00",
+  "frequency": "monthly",
+  "start_location": {
+   "name": "The Beer Junction (back parking lot)",
+   "address": "4511 California Ave SW, Seattle, WA 98116"
+  },
+  "pace": "Easy, under 10 mph; 3-8 miles; rotating ride leaders and a new route each time",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "The Beer Junction",
+   "type": "shop"
+  },
+  "visitor_notes": "Ages 21+. Helmets required. All bodies and all bikes welcome. Rain or shine.",
+  "description": "A monthly beer-paced loop around West Seattle that starts and ends at The Beer Junction. Rides are led by a rotating group of experienced riders and run 4 to 10 miles at a slow pace, about 30 to 60 minutes. Bring a helmet and an ID.",
+  "links": {
+   "website": "https://www.thebeerjunction.com/",
+   "instagram": "https://www.instagram.com/thebeerjunction",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://everydayrides.com/event-series/69f900c7dfa02246876a0807-beer-junction-bike-club",
+   "https://everydayrides.com/events/69f90377b4d3a54697a485bc-beer-junction-bike-club"
+  ],
+  "evidence": "The host's Everyday Rides series page says active every month on the last Saturday and lists the next ride for Sat Oct 31, 2026 at 2:00 pm, with 5 past rides (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://everydayrides.com/event-series/69f900c7dfa02246876a0807-beer-junction-bike-club",
+   "feed_url": null,
+   "notes": "Series page lists the next date."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "region": "Washington",
+  "state": "WA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "neighborhood": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "about 2 hours 15 minutes",
+  "duration_min": 135,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free for one guest ride; membership from $25 a year",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "seattle-wa-cogs-wednesday-evening-ride",
+  "name": "COGS Wednesday Evening Ride",
+  "city": "Seattle",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Wednesday evenings, year round, 5:45 pm to about 8:00 pm. Start place and route are posted by Monday or Tuesday if rain threatens.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "5:45 pm",
+  "start_hhmm": "17:45",
+  "frequency": "weekly",
+  "start_location": null,
+  "pace": "Evening exercise ride; pace set per ride",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Cyclists of Greater Seattle (COGS)",
+   "type": "club"
+  },
+  "visitor_notes": "Register on the club site first. Non-members may join one COGS ride under the club's insurance policy, then need to join. Rain doesn't usually cancel it.",
+  "description": "The club's weekly evening exercise ride around Seattle, held year round. Each week's start and route go up on the club calendar. Guests get one ride to try the club before joining.",
+  "links": {
+   "website": "https://www.cyclistsofgreaterseattle.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://cyclistsofgreaterseattle.wildapricot.org/event-6707781"
+   ]
+  },
+  "sources": [
+   "https://cyclistsofgreaterseattle.wildapricot.org/event-6707781",
+   "https://www.cyclistsofgreaterseattle.org/",
+   "https://everydayrides.com/groups/cyclists-of-greater-seattle-cogs"
+  ],
+  "evidence": "COGS' own calendar lists the Wednesday evening ride for Oct 7, 2026, 5:45 to 8:00 pm, with 15 spaces left, and says there are rides on Wednesday evenings year round (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.cyclistsofgreaterseattle.org/",
+   "feed_url": null,
+   "notes": "Home page lists the next few rides; the start place is added to each event during the week."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "region": "Washington",
+  "state": "WA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "neighborhood": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "seattle-wa-cascade-frumps-friday-ride",
+  "name": "FRUMPS (Friday Rides for Underemployed Merry Pedalers)",
+  "city": "Seattle",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Fridays, about 10:00 am (some weeks a 9:15 early start); start place changes each week. Steady pace, 12-14 mph.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Varies by week (Oct 2: Matthews Beach Park; Oct 9: Woodinville; Oct 16: West Seattle)",
+   "address": null
+  },
+  "pace": "Steady, 12-14 mph, regroups at hilltops and turns; the three posted rides ran 32 to 35 miles",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Cascade Bicycle Club Free Group Rides",
+   "type": "nonprofit"
+  },
+  "visitor_notes": "Free, but sign in on Cascade's site and register for each ride. Helmets and a safety briefing at the start are required; bring a spare tube and fenders in the wet.",
+  "description": "A weekday-morning Cascade free group ride, led by volunteers, at a steady pace across Seattle and the north end. Each Friday brings a new route and start. Expect coffee and snack stops along the way.",
+  "links": {
+   "website": "https://cascade.org/rides-events/friday-rides-underemployed-merry-pedalers-frumps/90673",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://cascade.org/rides-events/ride-event-search?f%5B0%5D=field_event_type&f%5B1%5D=field_event_type%3A38"
+   ]
+  },
+  "sources": [
+   "https://cascade.org/rides-events/friday-rides-underemployed-merry-pedalers-frumps/90673",
+   "https://cascade.org/rides-events/ride-event-search?f%5B0%5D=field_event_type&f%5B1%5D=field_event_type%3A38"
+  ],
+  "evidence": "Cascade's ride calendar lists FRUMPS for Fri Oct 2, Oct 9 and Oct 16, 2026 (10:00 am, 10:00 am and 9:15 am) as part of the Friday series (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://cascade.org/rides-events/ride-event-search?f%5B0%5D=field_event_type&f%5B1%5D=field_event_type%3A38",
+   "feed_url": null,
+   "notes": "Cascade posts each week's ride about a week ahead; the start place changes weekly."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "region": "Washington",
+  "state": "WA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "neighborhood": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "about 3.5 hours",
+  "duration_min": 210,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "issaquah-wa-cascade-issaquah-social",
+  "name": "Issaquah Social",
+  "city": "Issaquah",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Thursdays at 11:00 am from Issaquah (Oct 1: Tibbetts Valley Skateboard Park). Steady pace.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "11:00 am",
+  "start_hhmm": "11:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Tibbetts Valley Skateboard Park (Oct 1 start)",
+   "address": null
+  },
+  "pace": "Steady, 12-14 mph; the two posted rides ran 26 to 28 miles, hills climbed at a steady effort with regroups at the top",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Cascade Bicycle Club Free Group Rides",
+   "type": "nonprofit"
+  },
+  "visitor_notes": "Free, but sign in on Cascade's site and register for each ride. Helmet and a safety briefing at the start are required.",
+  "description": "A Thursday late-morning Cascade free group ride out of Issaquah. The Oct 1 route ran northwest to Bellevue College and Redmond and back on the East Lake Sammamish Trail, with a food stop at mile 16.6. It's a steady, social pace with regroups at the top of the hills.",
+  "links": {
+   "website": "https://cascade.org/rides-events/90654",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://cascade.org/rides-events/ride-event-search?f%5B0%5D=field_event_type&f%5B1%5D=field_event_type%3A38"
+   ]
+  },
+  "sources": [
+   "https://cascade.org/rides-events/90654",
+   "https://cascade.org/rides-events/ride-event-search?f%5B0%5D=field_event_type&f%5B1%5D=field_event_type%3A38"
+  ],
+  "evidence": "Cascade's ride calendar lists Issaquah Social for Thu Oct 1 and Thu Oct 8, 2026 at 11:00 am (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://cascade.org/rides-events/ride-event-search?f%5B0%5D=field_event_type&f%5B1%5D=field_event_type%3A38",
+   "feed_url": null,
+   "notes": "Cascade posts each ride about a week ahead; check the start place."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "region": "Washington",
+  "state": "WA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "neighborhood": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": 25,
+  "duration": "about 2 hours 20 minutes",
+  "duration_min": 140,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "bellevue-wa-cascade-eastside-tours-evening-ride",
+  "name": "Eastside Tours Evening Ride",
+  "city": "Bellevue",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Thursdays at 6:20 pm (briefing, then roll out); winter location is the east parking lot of Crossroads Park. First ride of each month is burrito night.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:20 pm",
+  "start_hhmm": "18:20",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Crossroads Park, east parking lot (enter off 164th)",
+   "address": null
+  },
+  "pace": "Brisk, 16-18 mph on the flat; mellow on flats, hills at your own pace; about 1,500 ft of climbing",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Cascade Bicycle Club Free Group Rides",
+   "type": "nonprofit"
+  },
+  "visitor_notes": "Front and rear lights required once it's dark. Free, but register on Cascade's site and attend the safety briefing. Go/no-go call is made at 4:20 pm on rough weather. A hilly ride.",
+  "description": "A Thursday evening Cascade free group ride around the Eastside, with a different route each week and about 25 miles with 1,500 feet of climbing. It's brisk on the flat and climbs are at your own pace. First ride of each month finishes at Chipotle.",
+  "links": {
+   "website": "https://cascade.org/rides-events/eastside-tours/90669",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://cascade.org/rides-events/ride-event-search?f%5B0%5D=field_event_type&f%5B1%5D=field_event_type%3A38"
+   ]
+  },
+  "sources": [
+   "https://cascade.org/rides-events/eastside-tours/90669",
+   "https://cascade.org/rides-events/ride-event-search?f%5B0%5D=field_event_type&f%5B1%5D=field_event_type%3A38"
+  ],
+  "evidence": "Cascade's ride calendar lists the Eastside Tours Evening Ride (winter location, part of the Eastside Tours series) for Thu Oct 1, 2026 at 6:20 pm with 15 spots (fetched Oct 1, 2026); only the Oct 1 date was posted.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://cascade.org/rides-events/ride-event-search?f%5B0%5D=field_event_type&f%5B1%5D=field_event_type%3A38",
+   "feed_url": null,
+   "notes": "Series ride posted about a week ahead; confirm the next Thursday is listed."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "region": "Washington",
+  "state": "WA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "neighborhood": "Proctor",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": 23,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "tacoma-wa-twbc-monday-moderate-ride",
+  "name": "Monday Moderate Ride",
+  "city": "Tacoma",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Monday, meet at 9:15 am at the Proctor Starbucks to sign in; leisurely group leaves 9:15, faster group (14-16 mph) at 9:30.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "9:15 am",
+  "start_hhmm": "09:15",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Starbucks, 26th and Proctor",
+   "address": "2602 N Proctor St, Tacoma, WA 98407"
+  },
+  "pace": "Leisurely 10-12 mph; a faster group of 14-16 mph leaves at 9:30; regroups at four points",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Tacoma Washington Bicycle Club (TWBC)",
+   "type": "club"
+  },
+  "visitor_notes": "No membership needed to try a ride, but sign the TWBC waiver. A ride leader may be present, or may not, so bring the route. Strava rates it Beginner / Rolling.",
+  "description": "TWBC's Monday-morning ride from Proctor. It runs down to the waterfront, loops Point Defiance, and heads on to University Place and Fircrest for coffee. About 23 miles at a leisurely pace, with a faster group leaving 15 minutes later.",
+  "links": {
+   "website": "https://www.twbc.org/rides-events/events/",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/4289",
+   "meetup": null,
+   "other": [
+    "https://www.strava.com/clubs/4289/group_events/2104207"
+   ]
+  },
+  "sources": [
+   "https://www.strava.com/clubs/4289/group_events/2104207",
+   "https://calendar.google.com/calendar/embed?src=c_09948e3acff7ac241e85f664486c0901cee98a09a87aff38169e126d8020e974%40group.calendar.google.com",
+   "https://www.twbc.org/rides-events/events/"
+  ],
+  "evidence": "TWBC's Strava event page lists Monday Moderate Ride for Mon Oct 5, 2026 at 9:15 am, Proctor, rated Beginner / Rolling, and the club's public Google calendar carries the weekly entry (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "strava-club",
+   "watch_url": "https://www.strava.com/clubs/4289/group_events/2104207",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_09948e3acff7ac241e85f664486c0901cee98a09a87aff38169e126d8020e974%40group.calendar.google.com/public/basic.ics",
+   "notes": "Strava event page shows the next date without a login; the club's public Google calendar repeats it weekly."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "region": "Washington",
+  "state": "WA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "neighborhood": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": 30,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "puyallup-wa-twbc-thursday-foothills-trail-ride",
+  "name": "Thursday Foothills Trail Ride",
+  "city": "Puyallup",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Thursday at 9:00 am from the East Puyallup trailhead on the Foothills Trail (the club's calendar says be there before 9:30).",
+  "days": [
+   "thu"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Foothills Trail, East Puyallup Trailhead",
+   "address": null
+  },
+  "pace": "Easy, flat paved trail; Strava rates it Beginner / Flat",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Tacoma Washington Bicycle Club (TWBC)",
+   "type": "club"
+  },
+  "visitor_notes": "Arrive early because parking fills. Waiver required; no membership needed to try a ride. Ride to South Prairie and back (30 miles) or on to Buckley for lunch (40 miles).",
+  "description": "One of TWBC's most popular weekly rides: a flat, paved run up the Foothills Trail to South Prairie for a drink, or on to Buckley for lunch. About 30 miles round trip to South Prairie, 40 to Buckley.",
+  "links": {
+   "website": "https://www.twbc.org/rides-events/events/",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/4289",
+   "meetup": null,
+   "other": [
+    "https://www.strava.com/clubs/4289/group_events/2057378"
+   ]
+  },
+  "sources": [
+   "https://www.strava.com/clubs/4289/group_events/2057378",
+   "https://www.twbc.org/rides-events/events/"
+  ],
+  "evidence": "TWBC's Strava event page lists Thursdays Foothills Trail for Thu Oct 8, 2026 at 9:00 am from the East Puyallup Trailhead, rated Beginner / Flat (fetched Oct 1, 2026); the club calendar's wording says before 9:30.",
+  "confidence": "high",
+  "refresh": {
+   "method": "strava-club",
+   "watch_url": "https://www.strava.com/clubs/4289/group_events/2057378",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_09948e3acff7ac241e85f664486c0901cee98a09a87aff38169e126d8020e974%40group.calendar.google.com/public/basic.ics",
+   "notes": "Strava shows 9:00 am; the club's Google calendar text (2025) says arrive before 9:30. Confirm if the time changes."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "region": "Washington",
+  "state": "WA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "neighborhood": "Lacey (Chambers Lake trailhead)",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": 40,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "olympia-wa-twbc-wednesday-chehalis-western-trail-ride",
+  "name": "Wednesday Chehalis Western Trail Ride",
+  "city": "Olympia",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Wednesday at 9:00 am from the Chambers Lake Chehalis Western Trailhead in Lacey (the club's calendar says be ready to leave at 9:30).",
+  "days": [
+   "wed"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Chambers Lake Chehalis Western Trailhead",
+   "address": "3725 14th Ave SE, Olympia, WA 98501"
+  },
+  "pace": "Easy, flat paved trail; Strava rates it Beginner / Flat",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Tacoma Washington Bicycle Club (TWBC)",
+   "type": "club"
+  },
+  "visitor_notes": "From I-5 take exit 108 to Sleater Kinney Road SE south to 14th Ave, then left after the trestle. Bring money for the stop. Waiver required.",
+  "description": "A 40-mile out-and-back on the Chehalis Western Trail that starts in Lacey and usually goes to Tenino, sometimes Yelm. It's flat, paved and social, with a stop on the way.",
+  "links": {
+   "website": "https://www.twbc.org/rides-events/events/",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/4289",
+   "meetup": null,
+   "other": [
+    "https://www.strava.com/clubs/4289/group_events/2075554"
+   ]
+  },
+  "sources": [
+   "https://www.strava.com/clubs/4289/group_events/2075554",
+   "https://www.twbc.org/rides-events/events/"
+  ],
+  "evidence": "TWBC's Strava event page lists Wednesday Chehalis Western Trail for Wed Oct 7, 2026 at 9:00 am from 3725 14th Ave SE, rated Beginner / Flat (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "strava-club",
+   "watch_url": "https://www.strava.com/clubs/4289/group_events/2075554",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_09948e3acff7ac241e85f664486c0901cee98a09a87aff38169e126d8020e974%40group.calendar.google.com/public/basic.ics",
+   "notes": "Strava shows 9:00 am; the club's Google calendar text (2025) says leave at 9:30."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "region": "Washington",
+  "state": "WA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "neighborhood": "Downtown",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": 50,
+  "duration": "about 2.5 hours",
+  "duration_min": 150,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "start_times": [
+   {
+    "from": "2027-03-01",
+    "start_hhmm": "07:00"
+   }
+  ],
+  "slug": "bellingham-wa-mount-baker-bicycle-club-saturday-donut-ride",
+  "name": "Saturday Donut Ride",
+  "city": "Bellingham",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday, every week of the year. Leaves Trek Bellingham at 7:30 am October through February and 7:00 am March through September.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Trek Bellingham (in front of the store)",
+   "address": "100 E Chestnut St, Bellingham, WA 98225"
+  },
+  "pace": "17+ mph average, segments at 19+; three sprints with a regroup",
+  "drop_policy": "drop",
+  "host": {
+   "name": "Saturday Donut Ride (self-organized; listed by the Mount Baker Bicycle Club)",
+   "type": "informal"
+  },
+  "visitor_notes": "Not a club ride and not insured by the club. It's a drop ride, though the group tries to stay together. Ask riders where the sprints are if you're new. Goes to Birch Bay and back.",
+  "description": "Bellingham's long-running Saturday road ride, about 50 miles to Birch Bay and back at a fast pace. The club's calendar says it runs every week of the year, rain or shine. It's self-organized, so the group is whoever shows up.",
+  "links": {
+   "website": "https://www.mtbakerbikeclub.org/content.aspx?page_id=4001&club_id=608345",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.mtbakerbikeclub.org/content.aspx?page_id=22&club_id=608345&module_id=249583",
+    "https://www.mtbakerbikeclub.org/content.aspx?page_id=4091&club_id=608345&item_id=3081828"
+   ]
+  },
+  "sources": [
+   "https://www.mtbakerbikeclub.org/content.aspx?page_id=4001&club_id=608345",
+   "https://www.mtbakerbikeclub.org/content.aspx?page_id=4091&club_id=608345&item_id=3081828",
+   "https://www.mtbakerbikeclub.org/content.aspx?page_id=22&club_id=608345&module_id=249583"
+  ],
+  "evidence": "Mount Baker Bicycle Club's event calendar lists the Saturday Donut Ride for Oct 3, 10, 17, 24 and 31, 2026 at 7:30 am from Trek Bellingham, 100 E Chestnut St (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.mtbakerbikeclub.org/content.aspx?page_id=4001&club_id=608345",
+   "feed_url": null,
+   "notes": "Calendar lists each Saturday; the 7:00 am March start applies from March 2027."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "region": "Washington",
+  "state": "WA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "neighborhood": "Downtown",
+  "monthly_rule": null,
+  "season": "fall and winter",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "75 to 90 minutes",
+  "duration_min": 90,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free for non-members (club registration required)",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "bellingham-wa-mount-baker-bicycle-club-wednesday-trail-ride",
+  "name": "Wednesday Winter Trail Ride (with lights)",
+  "city": "Bellingham",
+  "discipline": [
+   "mtb",
+   "mixed"
+  ],
+  "schedule": "Wednesdays, meet 5:45 pm, leave 6:00 pm, fall and winter. Starts late September or mid-October each year. Lights required.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Depot Market parking lot, across from Boundary Bay Brewery",
+   "address": "Railroad Ave, Bellingham, WA"
+  },
+  "pace": "Moderate; the group stays together on the trails",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Mount Baker Bicycle Club",
+   "type": "club"
+  },
+  "visitor_notes": "Bring front and rear lights. A cyclocross or trail-ready bike works. Road tires aren't great. Register on the club's event page; non-members can sign up at no fee.",
+  "description": "The Mount Baker Bicycle Club's fall and winter Wednesday night ride on the trails, about 90 minutes with lights. It leaves from the Depot Market lot downtown. Cyclocross and old steel mountain bikes are fine.",
+  "links": {
+   "website": "https://www.mtbakerbikeclub.org/content.aspx?page_id=4001&club_id=608345",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.mtbakerbikeclub.org/content.aspx?page_id=22&club_id=608345&module_id=249583"
+   ]
+  },
+  "sources": [
+   "https://www.mtbakerbikeclub.org/content.aspx?page_id=4001&club_id=608345",
+   "https://www.mtbakerbikeclub.org/content.aspx?page_id=4091&club_id=608345&item_id=3070457",
+   "https://www.mtbakerbikeclub.org/content.aspx?page_id=22&club_id=608345&module_id=249583"
+  ],
+  "evidence": "Mount Baker Bicycle Club's calendar lists the Wednesday Workout Trail Ride (winter schedule, with lights) for Oct 7, 14, 21 and 28, 2026 at 6:00 pm (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.mtbakerbikeclub.org/content.aspx?page_id=4001&club_id=608345",
+   "feed_url": null,
+   "notes": "Calendar lists each Wednesday."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "region": "Washington",
+  "state": "WA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "neighborhood": "Fairhaven",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "about 2 hours",
+  "duration_min": 120,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free for a first ride; club membership after that",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "bellingham-wa-mount-baker-bicycle-club-saturday-gravel-ride-series",
+  "name": "Saturday Gravel Ride Series",
+  "city": "Bellingham",
+  "discipline": [
+   "gravel"
+  ],
+  "schedule": "Saturday series, gather 9:30-9:45 am, roll out 10:00 am sharp from Fairhaven Village Green. Posted for Oct 3 and Oct 24, 2026.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "irregular",
+  "start_location": {
+   "name": "Fairhaven Village Green",
+   "address": "1207 10th St, Bellingham, WA 98225"
+  },
+  "pace": "Group pace; regroups after climbs and at important intersections",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Mount Baker Bicycle Club",
+   "type": "club"
+  },
+  "visitor_notes": "Registration is required, including for non-members, who can come once to try it. The club asks you to join to be covered by its insurance.",
+  "description": "A club-led, no-drop gravel ride that starts at the Fairhaven Village Green. The leaders regroup after climbs and at intersections so nobody gets lost. Dates are posted a few weeks at a time, with Oct 3 and Oct 24 up now.",
+  "links": {
+   "website": "https://www.mtbakerbikeclub.org/content.aspx?page_id=4001&club_id=608345",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.mtbakerbikeclub.org/content.aspx?page_id=4091&club_id=608345&item_id=2996481&event_date_id=490868"
+   ]
+  },
+  "sources": [
+   "https://www.mtbakerbikeclub.org/content.aspx?page_id=4001&club_id=608345",
+   "https://www.mtbakerbikeclub.org/content.aspx?page_id=4091&club_id=608345&item_id=2996481&event_date_id=490868"
+  ],
+  "evidence": "Mount Baker Bicycle Club's calendar lists the Saturday Gravel Ride Series for Oct 3 and Oct 24, 2026, 10:00 am to noon, from the Fairhaven Village Green (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.mtbakerbikeclub.org/content.aspx?page_id=4001&club_id=608345",
+   "feed_url": null,
+   "notes": "Only some Saturdays carry the series; look for 'Saturday Gravel Ride Series' on the calendar."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "region": "Washington",
+  "state": "WA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "neighborhood": null,
+  "monthly_rule": null,
+  "season": "Mar-mid-Nov",
+  "season_months": {
+   "start": 3,
+   "end": 11
+  },
+  "distance_km": null,
+  "distance_miles": 20,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free to try; club membership $35 a year",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "wtf"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "spokane-wa-spokane-bicycle-club-womens-friday-ride",
+  "name": "Spokane Bicycle Club Women's Friday Ride",
+  "city": "Spokane",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Fridays, arrive 9:45 am for a briefing, depart 10:00 am. Women only. Start place changes each week; mid-March to mid-November.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Varies by week (Oct 2: Kellogg City Park lot, Kellogg, Idaho)",
+   "address": null
+  },
+  "pace": "Varies by leader; the Oct 2 ride was 20 miles round trip on a paved bike trail, mostly flat",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Spokane Bicycle Club",
+   "type": "club"
+  },
+  "visitor_notes": "Helmets required and the club waiver is signed on Meetup. Non-members can ride. Rain, under 50 degrees or AQI over 100 cancels the Oct 2 ride; check each Meetup post.",
+  "description": "The Spokane Bicycle Club says Friday mornings are a women-only ride. Each week's leader picks the route and start, often a flat trail ride with a lunch stop. The Oct 2 ride was a 20-mile round trip on a paved bike trail from Kellogg to Silverton, Idaho.",
+  "links": {
+   "website": "https://www.spokanebicycleclub.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/spokane-bicycle-club-meetup-group/",
+   "other": [
+    "https://www.meetup.com/spokane-bicycle-club-meetup-group/events/316768974/"
+   ]
+  },
+  "sources": [
+   "https://www.meetup.com/spokane-bicycle-club-meetup-group/events/ical/",
+   "https://www.meetup.com/spokane-bicycle-club-meetup-group/events/316768974/",
+   "https://www.spokanebicycleclub.org/"
+  ],
+  "evidence": "The club's Meetup feed lists a Women's Ride for Fri Oct 2, 2026 (arrive 9:45, depart 10:00 am) and its home page says Friday mornings are a women's-only ride (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/spokane-bicycle-club-meetup-group/",
+   "feed_url": "https://www.meetup.com/spokane-bicycle-club-meetup-group/events/ical/",
+   "notes": "Each ride is posted on Meetup about a week ahead; the club also runs indoor Zwift rides in winter."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "region": "Washington",
+  "state": "WA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "neighborhood": null,
+  "monthly_rule": null,
+  "season": "Mar-mid-Nov",
+  "season_months": {
+   "start": 3,
+   "end": 11
+  },
+  "distance_km": null,
+  "distance_miles": 37,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free to try; club membership $35 a year",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-24",
+  "slug": "spokane-wa-spokane-bicycle-club-team-thursday-ride",
+  "name": "Spokane Bicycle Club Team Thursday",
+  "city": "Spokane",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Thursdays, meet 9:15 am, roll 9:30 am. Start place changes (Oct 1: Safeway on N Newport Hwy). Mid-March to mid-November.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "9:30 am",
+  "start_hhmm": "09:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Varies by week (Oct 1: Safeway, corner of Hawthorne)",
+   "address": "10100 N Newport Hwy, Spokane, WA 99218"
+  },
+  "pace": "12-14 mph on the flats; paved roads with moderate hills",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Spokane Bicycle Club",
+   "type": "club"
+  },
+  "visitor_notes": "Helmets required and the club waiver applies. Rain, high winds or other extreme conditions may cancel; check Meetup. The Oct 1 address is only that week's start.",
+  "description": "A Thursday-morning road ride with the Spokane Bicycle Club. The Oct 1 ride was 37 miles through Peone, Green Bluff and Secret Valley at 12 to 14 mph. Each week's leader sets the route and start.",
+  "links": {
+   "website": "https://www.spokanebicycleclub.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/spokane-bicycle-club-meetup-group/",
+   "other": [
+    "https://ridewithgps.com/routes/46631211"
+   ]
+  },
+  "sources": [
+   "https://www.meetup.com/spokane-bicycle-club-meetup-group/events/ical/",
+   "https://www.meetup.com/spokane-bicycle-club-meetup-group/",
+   "https://www.spokanebicycleclub.org/"
+  ],
+  "evidence": "The club's Meetup feed lists Team Thursday for Thu Oct 1, 2026 at 9:30 am (meet 9:15), and the Meetup past events show a Team Thursday ride on Sept 24 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/spokane-bicycle-club-meetup-group/",
+   "feed_url": "https://www.meetup.com/spokane-bicycle-club-meetup-group/events/ical/",
+   "notes": "Posted on Meetup about a week ahead; the start place changes weekly."
+  }
+ }
+]

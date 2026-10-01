@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:berkeley-ca-berkeley-bicycle-club-friday-coffee-ride@cycleforchange.o
+ rg
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261002T065000
+DTEND;TZID=America/Los_Angeles:20261002T085000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270228T235959Z
+SUMMARY:Berkeley Bicycle Club Friday Coffee Ride — Berkeley\, CA
+LOCATION:Peet's on Domingo\, next to the Claremont Hotel
+DESCRIPTION:No-drop.\nSchedule: Fridays\, meet 6:45 am\, roll 6:50 am\, f
+ rom Peet's on Domingo.\nConfirm with the host before you go.\nhttps://cy
+ cleforchange.org/rides/berkeley-ca-berkeley-bicycle-club-friday-coffee-r
+ ide/
+URL:https://cycleforchange.org/rides/berkeley-ca-berkeley-bicycle-club-fr
+ iday-coffee-ride/
+END:VEVENT
+END:VCALENDAR

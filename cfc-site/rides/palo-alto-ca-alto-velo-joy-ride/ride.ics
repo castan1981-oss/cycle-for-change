@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:palo-alto-ca-alto-velo-joy-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261010T092000
+DTEND;TZID=America/Los_Angeles:20261010T112000
+RRULE:FREQ=MONTHLY;BYDAY=2SA;UNTIL=20270228T235959Z
+SUMMARY:Alto Velo Joy Ride — Palo Alto\, CA
+LOCATION:Summit Bicycles\, 392 California Ave\, Palo Alto\, CA 94306
+DESCRIPTION:Pace: slower than the club C ride.\nNo-drop.\nSchedule: Secon
+ d Saturday of the month\, gather 9:00 am\, roll 9:20 am\, from Summit Bi
+ cycles.\nConfirm with the host before you go.\nhttps://cycleforchange.or
+ g/rides/palo-alto-ca-alto-velo-joy-ride/
+URL:https://cycleforchange.org/rides/palo-alto-ca-alto-velo-joy-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:pasadena-ca-incycle-pasadena-sunday-no-drop-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261004T073000
+DTEND;TZID=America/Los_Angeles:20261004T093000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Sunday No-Drop Ride (Incycle Pasadena) — Pasadena\, CA
+LOCATION:Incycle Pasadena shop parking lot\, 175 S Fair Oaks Ave\, Pasade
+ na\, CA 91105
+DESCRIPTION:Pace: Group 1: intermediate\, 35-45 miles\, a true no-drop ri
+ de. Group 2: for riders who like a challenge\, with a lot of climbing an
+ d plenty of regrouping. No sprinting or breaking away.\nNo-drop.\nSchedu
+ le: Every Sunday\, 7:30 am from the Incycle Pasadena parking lot. Two gr
+ oups..\nConfirm with the host before you go.\nhttps://cycleforchange.org
+ /rides/pasadena-ca-incycle-pasadena-sunday-no-drop-ride/
+URL:https://cycleforchange.org/rides/pasadena-ca-incycle-pasadena-sunday-
+ no-drop-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sugar-land-tx-motherland-cycling-sugar-land-morning-rides@cycleforcha
+ nge.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261006T063000
+DTEND;TZID=America/Chicago:20261006T083000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20270228T235959Z
+SUMMARY:Sugar Land Morning Rides (Motherland Cycling Club) — Sugar Land
+ \, TX
+LOCATION:Shell gas station\, University Blvd\, 18725 University Blvd\, Su
+ gar Land\, TX 77479
+DESCRIPTION:Pace: Usually two groups: A 18-20 mph\, B/C 15-17 mph.\nSched
+ ule: Every Tuesday and Thursday\, roll out 6:30 am sharp\, from the Shel
+ l station at 18725 University Blvd..\nConfirm with the host before you g
+ o.\nhttps://cycleforchange.org/rides/sugar-land-tx-motherland-cycling-su
+ gar-land-morning-rides/
+URL:https://cycleforchange.org/rides/sugar-land-tx-motherland-cycling-sug
+ ar-land-morning-rides/
+END:VEVENT
+END:VCALENDAR

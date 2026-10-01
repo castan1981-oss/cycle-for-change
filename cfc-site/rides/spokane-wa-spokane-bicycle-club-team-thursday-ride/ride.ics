@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:spokane-wa-spokane-bicycle-club-team-thursday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261008T093000
+DTEND;TZID=America/Los_Angeles:20261008T113000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20261130T235959Z
+SUMMARY:Spokane Bicycle Club Team Thursday — Spokane\, WA
+LOCATION:Varies by week (Oct 1: Safeway\, corner of Hawthorne)\, 10100 N 
+ Newport Hwy\, Spokane\, WA 99218
+DESCRIPTION:Pace: 12-14 mph on the flats; paved roads with moderate hills
+ .\nSchedule: Thursdays\, meet 9:15 am\, roll 9:30 am. Start place change
+ s (Oct 1: Safeway on N Newport Hwy). Mid-March to mid-November..\nConfir
+ m with the host before you go.\nhttps://cycleforchange.org/rides/spokane
+ -wa-spokane-bicycle-club-team-thursday-ride/
+URL:https://cycleforchange.org/rides/spokane-wa-spokane-bicycle-club-team
+ -thursday-ride/
+END:VEVENT
+END:VCALENDAR

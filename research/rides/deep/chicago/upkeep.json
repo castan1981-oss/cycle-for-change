@@ -1,0 +1,259 @@
+[
+ {
+  "slug": "tinley-park-il-mtc3-big-ring",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-15",
+  "evidence": "MTC3's calendar feed lists Big Ring for Tue Oct 6, 2026 at 5:30 pm from Bartel Grasslands, and the Sept 15 event page gives the departure as 5:30 pm sharp, not 6:00 (read Oct 1, 2026). The feed lists no Big Ring after Oct 6; the club's season finale is the Oct 10 Apple Orchard Ride.",
+  "sources": [
+   "https://majortaylorchicago.com/event/big-ring/2026-09-15/",
+   "https://majortaylorchicago.com/event/big-ring/2026-10-06/",
+   "https://majortaylorchicago.com/events/?ical=1"
+  ],
+  "changes": {
+   "schedule": "Tuesdays, 5:30 pm sharp to 7:00 pm, through the club's riding season. The calendar lists the last Big Ring on Tue Oct 6, 2026; the season finale is the Oct 10 Apple Orchard Ride.",
+   "time_local": "5:30 pm",
+   "start_hhmm": "17:30",
+   "refresh": {
+    "method": "ics",
+    "watch_url": "https://majortaylorchicago.com/events/",
+    "feed_url": "https://majortaylorchicago.com/events/?ical=1",
+    "notes": "The club's Events Calendar feed lists every MTC3 ride by date. The weekly rides stop after the Oct 10 season finale."
+   }
+  }
+ },
+ {
+  "slug": "matteson-il-mtc3-monday-night-malarkey",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-22",
+  "evidence": "MTC3's calendar feed lists Monday Night Malarkey for Mon Oct 5, 2026 at 5:30 pm from the Menards lot in Matteson, and the event page says departure 5:30 pm and \"Absolutely a NO DROP ride\" (read Oct 1, 2026). The feed lists no Malarkey after Oct 5; the club's season finale is the Oct 10 Apple Orchard Ride.",
+  "sources": [
+   "https://majortaylorchicago.com/event/monday-night-malarkey-5/2026-10-05/",
+   "https://majortaylorchicago.com/events/?ical=1"
+  ],
+  "changes": {
+   "schedule": "Mondays, 5:30 pm, for about an hour or until sunset, from the Menards parking lot on the Old Plank Trail. The calendar lists the last Monday Night Malarkey on Mon Oct 5, 2026; the season finale is the Oct 10 Apple Orchard Ride.",
+   "time_local": "5:30 pm",
+   "start_hhmm": "17:30",
+   "drop_policy": "no-drop",
+   "pace": "B group 17 mph, C group 14–15 mph, D group 10–12 mph",
+   "refresh": {
+    "method": "ics",
+    "watch_url": "https://majortaylorchicago.com/events/",
+    "feed_url": "https://majortaylorchicago.com/events/?ical=1",
+    "notes": "The club's Events Calendar feed lists every MTC3 ride by date. The weekly rides stop after the Oct 10 season finale."
+   }
+  }
+ },
+ {
+  "slug": "chicago-il-turin-tubular-tuesday-trot",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-01",
+  "evidence": "Turin Bicycle's Strava club has a post dated Aug 26, 2026 saying the Tuesday and Thursday night rides roll at 5:30 pm from Sept 8 and 10, not 6:00, and that the last official rides are Oct 6 and Oct 8; a Sept 2 post recaps the Sept 1 ride. The shop's community page still says 6:00 pm (read Oct 1, 2026).",
+  "sources": [
+   "https://www.strava.com/clubs/turinchicago",
+   "https://turinbicycle.com/community/"
+  ],
+  "changes": {
+   "schedule": "Every Tuesday, rolls at 5:30 pm from the shop at 4710 N Damen Ave (6:00 pm until the start of September). The shop's Strava club says the last official Tuesday ride of 2026 is Oct 6; after that, riders organize their own on the club page.",
+   "time_local": "5:30 pm",
+   "start_hhmm": "17:30",
+   "drop_policy": "groups",
+   "visitor_notes": "The shop's community page still says 6:00 pm and no-drop. The ride leader's September posts say the group rides as one no-drop group when it can and sometimes splits into A and B groups; riders dropped from the A group are picked up by the B group. Turin also posts a Thursday night ride at the same 5:30 pm start, last official ride Oct 8.",
+   "refresh": {
+    "notes": "The community page lags behind. The time change and the season end are posted in the shop's Strava club (https://www.strava.com/clubs/turinchicago)."
+   }
+  }
+ },
+ {
+  "slug": "chicago-il-mtc3-saturday-sunrise-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-24",
+  "evidence": "MTC3's calendar feed lists the Saturday Sunrise Ride for Sat Oct 3, 2026 at 5:30 am from La Rabida and nothing after it on a Saturday except the Oct 10 Apple Orchard Ride, marked season finale (read Oct 1, 2026).",
+  "sources": [
+   "https://majortaylorchicago.com/event/mtc3-saturday-sunrise-ride-5-2-2/2026-10-03/",
+   "https://majortaylorchicago.com/events/?ical=1"
+  ],
+  "changes": {
+   "schedule": "Saturdays, 5:30 am, from La Rabida Children's Hospital. The calendar lists this ride on Sat Oct 3, 2026 and no later Saturday; the season finale is the Oct 10 Apple Orchard Ride.",
+   "refresh": {
+    "method": "ics",
+    "watch_url": "https://majortaylorchicago.com/events/",
+    "feed_url": "https://majortaylorchicago.com/events/?ical=1",
+    "notes": "The club's Events Calendar feed lists every MTC3 ride by date. The weekly rides stop after the Oct 10 season finale."
+   }
+  }
+ },
+ {
+  "slug": "chicago-il-mtc3-sunrise-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-17",
+  "evidence": "MTC3's calendar feed lists the Sunrise Ride at 5:30 am from LA Fitness on Fri Oct 2 and Mon to Fri Oct 5 to 9, 2026, and nothing after Oct 9 (read Oct 1, 2026). The club's season finale is the Oct 10 Apple Orchard Ride.",
+  "sources": [
+   "https://majortaylorchicago.com/event/mtc3-sunrise-ride-2/2026-10-02/",
+   "https://majortaylorchicago.com/events/?ical=1"
+  ],
+  "changes": {
+   "schedule": "Monday through Friday, 5:30 am, from the LA Fitness lot. The calendar lists a Sunrise Ride every weekday through Fri Oct 9, 2026 and none after; the season finale is the Oct 10 Apple Orchard Ride.",
+   "refresh": {
+    "method": "ics",
+    "watch_url": "https://majortaylorchicago.com/events/",
+    "feed_url": "https://majortaylorchicago.com/events/?ical=1",
+    "notes": "The club's Events Calendar feed lists every MTC3 ride by date. The weekly rides stop after the Oct 10 season finale."
+   }
+  }
+ },
+ {
+  "slug": "chicago-il-bff-bikes-beginner-intermediate-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-20",
+  "evidence": "BFF Bikes' events calendar lists the Beginner/Intermediate Ride for Sun Oct 4, 2026, 8:00 to 10:00 am from 2056 N Damen Ave (12–18 miles at 12–14 mph); the previous one ran Sun Sep 20 and Aug 16 (read Oct 1, 2026). The old group-rides page now returns 404, so the watch page moves to the calendar.",
+  "sources": [
+   "https://www.bffbikes.com/events/oct2026beginner-intermediate-ride-bbnc4",
+   "https://www.bffbikes.com/events"
+  ],
+  "changes": {
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://www.bffbikes.com/events",
+    "notes": "The shop's Squarespace calendar lists dated rides. Add ?format=json to the URL for the same events as data. The old /pages/group-rides page returns 404."
+   }
+  }
+ },
+ {
+  "slug": "chicago-il-bff-bikes-thursday-wtf-social-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-10",
+  "evidence": "BFF Bikes' events calendar lists Thursday WTF Social Rides on Aug 13, Aug 27 and Sep 10, 2026 at 6:30 pm from the shop, plus a ticketed Thursday Social Ride on Sep 24; no Thursday ride is listed in October yet (read Oct 1, 2026).",
+  "sources": [
+   "https://www.bffbikes.com/events?month=september-2026&view=calendar&format=json",
+   "https://www.bffbikes.com/events"
+  ],
+  "changes": {
+   "visitor_notes": "Dates go up on the shop calendar a few weeks ahead. As of Oct 1 no October Thursday ride is posted, so check the calendar before you go.",
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://www.bffbikes.com/events",
+    "notes": "The shop's Squarespace calendar lists dated rides. Add ?format=json to the URL for the same events as data. The old /pages/group-rides page returns 404."
+   }
+  }
+ },
+ {
+  "slug": "oak-park-il-oak-park-cycle-club-monday-social-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-28",
+  "evidence": "Oak Park Cycle Club's event calendar lists the Monday OPCC Social Ride on Mon Sep 28, 2026, 5:00 to 7:00 pm, and no October rides: only a Year End Celebration club meeting on Oct 13 and a board meeting on Oct 28 (read Oct 1, 2026).",
+  "sources": [
+   "https://www.oakparkcycleclub.org/content.aspx?page_id=4001&club_id=38447",
+   "https://www.oakparkcycleclub.org/content.aspx?page_id=22&club_id=38447&module_id=753300"
+  ],
+  "changes": {
+   "schedule": "Mondays in season, 5:00 pm in late September 2026 (departure times shift with daylight). The club's calendar lists the last Monday Social Ride on Sep 28 and none in October.",
+   "time_local": "5:00 pm",
+   "start_hhmm": "17:00",
+   "visitor_notes": "Check the club's event calendar before you go: no October Monday ride is listed. Lights are required on evening rides (white in front, red in back); bring a helmet and a spare tube.",
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://www.oakparkcycleclub.org/content.aspx?page_id=4001&club_id=38447",
+    "notes": "ClubExpress calendar; the Club Rides page says departure times vary over the year."
+   }
+  }
+ },
+ {
+  "slug": "chicago-il-evolution-cycling-sunday-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-28",
+  "evidence": "Evolution Cycling's rides page, last updated Sept 28, 2026, lists the Sunday Ride at 8:00 am (fall) from the Walgreens lot at 5440 N Clark St: A group 24+ mph fast drop ride, B group 17–19 mph no drop, beginners welcome (read Oct 1, 2026).",
+  "sources": [
+   "https://evolution-cycling.org/rides"
+  ]
+ },
+ {
+  "slug": "chicago-il-femmes-thems-bike-chi-monthly-social-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-05",
+  "evidence": "Femmes + Thems' public Google Calendar lists the October Social Ride for Sat Oct 3, 2026: meet at noon, roll at 1:00 pm from the Welles Park Gazebo, an 8-mile loop at 8–10 mph, no drop; the September ride was Sat Sep 5 (read Oct 1, 2026).",
+  "sources": [
+   "https://femmesandthems.org/calendar.html",
+   "https://calendar.google.com/calendar/ical/878dbc7fac8cc23612dcc4dadca26609cb8c5f7b9df3a452310af547021e352c%40group.calendar.google.com/public/basic.ics"
+  ],
+  "promote_feed": "https://calendar.google.com/calendar/ical/878dbc7fac8cc23612dcc4dadca26609cb8c5f7b9df3a452310af547021e352c%40group.calendar.google.com/public/basic.ics"
+ },
+ {
+  "slug": "chicago-il-half-acre-wednesday-night-for-mortals",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-04-11",
+  "evidence": "Half Acre Cycling's Wednesday Night for Mortals page, edited Apr 11, 2026 (the site's WordPress data), lists Wednesdays at 6:00 pm from the Winnemac Park lot and says the ride runs as long as daylight and weather allow in the fall; nothing on it is dated later (read Oct 1, 2026).",
+  "sources": [
+   "https://halfacrecycling.org/wednesday-night-for-mortals/",
+   "https://halfacrecycling.org/wp-json/wp/v2/pages?slug=wednesday-night-for-mortals&_fields=id,slug,modified,date,link"
+  ]
+ },
+ {
+  "slug": "chicago-il-spidermonkey-saturday-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-26",
+  "evidence": "Spidermonkey Cycling's public Google Calendar lists the Saturday ride at 8:00 am from Hexe Coffee on Sep 26 and Oct 3, 2026 (read Oct 1, 2026).",
+  "sources": [
+   "https://spidermonkeycycling.com/calendar/",
+   "https://calendar.google.com/calendar/ical/6mnumhq9tk2c62en58qp7fp3jo%40group.calendar.google.com/public/basic.ics"
+  ],
+  "promote_feed": "https://calendar.google.com/calendar/ical/6mnumhq9tk2c62en58qp7fp3jo%40group.calendar.google.com/public/basic.ics"
+ },
+ {
+  "slug": "chicago-il-windy-city-cycling-club-casual-saturday",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "Windy City Cycling Club's Meetup feed lists Casual Saturday (Recreational Ride) for Sat Oct 3, 2026 at 9:00 am (read Oct 1, 2026).",
+  "sources": [
+   "https://www.meetup.com/windy-city-cycling-club/events/316329545/",
+   "https://www.meetup.com/windy-city-cycling-club/events/ical/"
+  ],
+  "promote_feed": "https://www.meetup.com/windy-city-cycling-club/events/ical/"
+ },
+ {
+  "slug": "chicago-il-windy-city-cycling-club-sunday-morning",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "Windy City Cycling Club's Meetup feed lists the WCCC Sunday Morning (Training Ride) for Sun Oct 4, 2026 at 8:00 am (read Oct 1, 2026).",
+  "sources": [
+   "https://www.meetup.com/windy-city-cycling-club/events/316329551/",
+   "https://www.meetup.com/windy-city-cycling-club/events/ical/"
+  ],
+  "promote_feed": "https://www.meetup.com/windy-city-cycling-club/events/ical/"
+ },
+ {
+  "slug": "chicago-il-evolution-cycling-spiteful-thursday",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-28",
+  "evidence": "Evolution Cycling's rides page, last updated Sept 28, 2026, says weekday rides are on a seasonal hiatus and will resume in the spring of 2027 (read Oct 1, 2026).",
+  "sources": [
+   "https://evolution-cycling.org/rides"
+  ],
+  "status_note": "Weekday rides are on a seasonal hiatus. The team will pick up its regular weekday rides in the spring of 2027. The Saturday and Sunday rides continue.",
+  "status_since": "2026-09-28"
+ },
+ {
+  "slug": "park-ridge-il-monday-night-social-ride",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "evidence": "Park Ridge Cycling Club's groups page says Monday Social Rides run from the Monday after Memorial Day to the Monday after Labor Day, which is Mon Sep 14 in 2026 (read Oct 1, 2026).",
+  "sources": [
+   "https://www.parkridgecycling.org/groups"
+  ],
+  "status_note": "Monday Social Rides run from the Monday after Memorial Day to the Monday after Labor Day (Sept 14 in 2026), then stop for the year. The club's weekend rides continue.",
+  "status_since": "2026-09-15"
+ }
+]

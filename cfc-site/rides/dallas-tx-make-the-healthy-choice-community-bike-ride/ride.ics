@@ -6,16 +6,19 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:dallas-tx-make-the-healthy-choice-community-bike-ride@cycleforchange.
  org
-DTSTAMP:20260918T000000Z
-DTSTART;TZID=America/Chicago:20261004T090000
-DTEND;TZID=America/Chicago:20261004T110000
-RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=SU;UNTIL=20270215T235959Z
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T090000
+DTEND;TZID=America/Chicago:20261003T110000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=SA,SU;UNTIL=20270228T235959Z
 SUMMARY:Make The Healthy Choice Community Bike Ride — Dallas\, TX
-LOCATION:White Rock Brewing Co.\, 2477 N Beckley Ave\, Dallas\, TX
-DESCRIPTION:Pace: social pace.\nSchedule: Every other Sunday\, 9:00 am (R
- SVP on the group's site).\nConfirm with the host before you go.\nhttps:/
- /cycleforchange.org/rides/dallas-tx-make-the-healthy-choice-community-bi
- ke-ride/
+LOCATION:Varies by ride: Glendale Park (Oak Cliff) or the Trinity River A
+ udubon Center (Great Trinity Forest)
+DESCRIPTION:Pace: social pace.\nSchedule: About every two weeks\, 9:00 am
+ \, on a Saturday or Sunday. Each ride is its own Eventbrite event with i
+ ts own trail and start: Sat Oct 10 from Glendale Park (Oak Cliff)\, Sun 
+ Oct 25 from the Trinity River Audubon Center..\nConfirm with the host be
+ fore you go.\nhttps://cycleforchange.org/rides/dallas-tx-make-the-health
+ y-choice-community-bike-ride/
 URL:https://cycleforchange.org/rides/dallas-tx-make-the-healthy-choice-co
  mmunity-bike-ride/
 END:VEVENT

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:colorado-springs-co-cscc-sunday-social-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Denver:20261004T130000
+DTEND;TZID=America/Denver:20261004T150000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Sunday Social Ride — Colorado Springs\, CO
+LOCATION:Legacy Loop Plaza (I-25 and Centennial exit)\, 1800 Recreation W
+ ay\, Colorado Springs\, CO
+DESCRIPTION:Pace: Casual\, 8-12 mph\, 10-20 miles.\nNo-drop.\nSchedule: E
+ very Sunday\, 1:00 pm\, through Dec 31\, 2026\, from Legacy Loop Plaza u
+ nless the event says otherwise..\nConfirm with the host before you go.\n
+ https://cycleforchange.org/rides/colorado-springs-co-cscc-sunday-social-
+ ride/
+URL:https://cycleforchange.org/rides/colorado-springs-co-cscc-sunday-soci
+ al-ride/
+END:VEVENT
+END:VCALENDAR

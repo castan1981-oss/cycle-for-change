@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:austin-tx-violet-crown-bagel-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T073000
+DTEND;TZID=America/Chicago:20261003T103000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:The Bagel Ride — Austin\, TX
+LOCATION:Behind Little Woodrow's\, Tech Ridge\, 12601 Tech Ridge Blvd\, A
+ ustin\, TX 78753
+DESCRIPTION:Pace: 18–20 mph on Violet Crown's page; the Strava club say
+ s 19–21 mph average over 50–60 miles.\nSchedule: Every Saturday\, 7:
+ 30 am from Aug 15 (Violet Crown's ride page). The Strava club's Jan 3\, 
+ 2026 event started at 8:30 am\, so expect a later start in winter..\nCon
+ firm with the host before you go.\nhttps://cycleforchange.org/rides/aust
+ in-tx-violet-crown-bagel-ride/
+URL:https://cycleforchange.org/rides/austin-tx-violet-crown-bagel-ride/
+END:VEVENT
+END:VCALENDAR

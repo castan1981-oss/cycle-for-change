@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:oakland-ca-waffles-n-wheels-hills-n-sips@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261001T173000
+DTEND;TZID=America/Los_Angeles:20261001T193000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:Waffles n Wheels Hills n Sips — Oakland\, CA
+LOCATION:Start not published (Strava members only)
+DESCRIPTION:Schedule: Thursdays at 5:30 pm\, Hills n Sips; Belgians and E
+ ggos ride separately.\nConfirm with the host before you go.\nhttps://cyc
+ leforchange.org/rides/oakland-ca-waffles-n-wheels-hills-n-sips/
+URL:https://cycleforchange.org/rides/oakland-ca-waffles-n-wheels-hills-n-
+ sips/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fort-collins-co-incycle-mtb-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Denver:20261001T184500
+DTEND;TZID=America/Denver:20261001T194500
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:Incycle MTB Ride — Fort Collins\, CO
+LOCATION:Soderberg Trailhead\, Horsetooth Open Space
+DESCRIPTION:Schedule: Thursdays at 6:45 pm from the Soderberg Trailhead a
+ t Horsetooth Open Space..\nConfirm with the host before you go.\nhttps:/
+ /cycleforchange.org/rides/fort-collins-co-incycle-mtb-ride/
+URL:https://cycleforchange.org/rides/fort-collins-co-incycle-mtb-ride/
+END:VEVENT
+END:VCALENDAR

@@ -5,17 +5,34 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:bellingham-wa-rabbit-ride@cycleforchange.org
-DTSTAMP:20260915T000000Z
-DTSTART;TZID=America/Los_Angeles:20261004T074500
-DTEND;TZID=America/Los_Angeles:20261004T094500
-RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270212T235959Z
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261004T080000
+DTEND;TZID=America/Los_Angeles:20261004T100000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20261101T065959Z
 SUMMARY:Rabbit Ride — Bellingham\, WA
 LOCATION:Fairhaven Bicycles (rally point only)\, 1108 11th St\, Bellingha
  m\, WA 98225
 DESCRIPTION:Pace: 16+ mph; groups leave by speed\, fastest last.\nSchedul
- e: Every Sunday; 7:45 am in summer\, 8:15 am in winter.\nConfirm with th
- e host before you go.\nhttps://cycleforchange.org/rides/bellingham-wa-ra
- bbit-ride/
+ e: Every Sunday since 2011; 8:00 am during daylight saving time (roughly
+  March through October)\, 8:30 am in standard time.\nConfirm with the ho
+ st before you go.\nhttps://cycleforchange.org/rides/bellingham-wa-rabbit
+ -ride/
+URL:https://cycleforchange.org/rides/bellingham-wa-rabbit-ride/
+END:VEVENT
+BEGIN:VEVENT
+UID:bellingham-wa-rabbit-ride-from-2026-11-01@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261101T073000
+DTEND;TZID=America/Los_Angeles:20261101T093000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Rabbit Ride — Bellingham\, WA
+LOCATION:Fairhaven Bicycles (rally point only)\, 1108 11th St\, Bellingha
+ m\, WA 98225
+DESCRIPTION:Pace: 16+ mph; groups leave by speed\, fastest last.\nSchedul
+ e: Every Sunday since 2011; 8:00 am during daylight saving time (roughly
+  March through October)\, 8:30 am in standard time.\nConfirm with the ho
+ st before you go.\nhttps://cycleforchange.org/rides/bellingham-wa-rabbit
+ -ride/
 URL:https://cycleforchange.org/rides/bellingham-wa-rabbit-ride/
 END:VEVENT
 END:VCALENDAR

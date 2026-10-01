@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-jose-ca-almaden-cycle-touring-club-monday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261005T093000
+DTEND;TZID=America/Los_Angeles:20261005T113000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20270228T235959Z
+SUMMARY:Almaden Cycle Touring Club Monday Ride — San Jose\, CA
+LOCATION:Almaden Lake Park restrooms\, Coleman Ave at Winfield Blvd
+DESCRIPTION:Pace: LM (easy moderate)\, 10 to 14 mph on the Oct 26 listing
+ .\nSchedule: Mondays at 9:30 am from the Almaden Lake Park restrooms; a 
+ new destination each week.\nConfirm with the host before you go.\nhttps:
+ //cycleforchange.org/rides/san-jose-ca-almaden-cycle-touring-club-monday
+ -ride/
+URL:https://cycleforchange.org/rides/san-jose-ca-almaden-cycle-touring-cl
+ ub-monday-ride/
+END:VEVENT
+END:VCALENDAR

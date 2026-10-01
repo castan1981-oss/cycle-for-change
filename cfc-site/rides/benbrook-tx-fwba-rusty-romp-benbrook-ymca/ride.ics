@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:benbrook-tx-fwba-rusty-romp-benbrook-ymca@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261006T080000
+DTEND;TZID=America/Chicago:20261006T100000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20270228T235959Z
+SUMMARY:Rusty Romp (Tuesday and Thursday) — Benbrook\, TX
+LOCATION:Benbrook YMCA\, near the restroom at the southwest side\, 1899 W
+ inscott Rd\, Benbrook\, TX 76126
+DESCRIPTION:Pace: Slow group\, with faster groups going 25 to 40 miles.\n
+ Schedule: Tuesdays and Thursdays\, 8:00 am\, from the Benbrook YMCA. Arr
+ ive 30 minutes early. Next: Tue Oct 6 and Thu Oct 8\, 2026..\nConfirm wi
+ th the host before you go.\nhttps://cycleforchange.org/rides/benbrook-tx
+ -fwba-rusty-romp-benbrook-ymca/
+URL:https://cycleforchange.org/rides/benbrook-tx-fwba-rusty-romp-benbrook
+ -ymca/
+END:VEVENT
+END:VCALENDAR

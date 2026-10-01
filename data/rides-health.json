@@ -2005,7 +2005,10 @@
      "code": "page-gone",
      "severity": "red",
      "since": "2026-09-30",
-     "detail": "https://www.bffbikes.com/pages/group-rides answers 404"
+     "detail": "https://www.bffbikes.com/pages/group-rides answers 404",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -2025,7 +2028,10 @@
      "code": "page-gone",
      "severity": "red",
      "since": "2026-09-30",
-     "detail": "https://www.bffbikes.com/pages/group-rides answers 404"
+     "detail": "https://www.bffbikes.com/pages/group-rides answers 404",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -2591,7 +2597,10 @@
      "since": "2026-09-30",
      "detail": "The host's calendar shows Sat Oct 3, 2026 10:00 am (\"Tour de Latte - TIME CHANGE\"); we list Saturday 9:00 am",
      "was": "Saturday 9:00 am",
-     "now": "Sat Oct 3, 2026 10:00 am (\"Tour de Latte - TIME CHANGE\")"
+     "now": "Sat Oct 3, 2026 10:00 am (\"Tour de Latte - TIME CHANGE\")",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -7841,7 +7850,10 @@
      "code": "moved",
      "severity": "amber",
      "since": "2026-09-30",
-     "detail": "https://www.5bbc.org/ now sends you to https://5bbc.clubexpress.com/"
+     "detail": "https://www.5bbc.org/ now sends you to https://5bbc.clubexpress.com/",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [

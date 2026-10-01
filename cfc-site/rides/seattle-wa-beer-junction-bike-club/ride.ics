@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:seattle-wa-beer-junction-bike-club@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261031T140000
+DTEND;TZID=America/Los_Angeles:20261031T150000
+RRULE:FREQ=MONTHLY;BYDAY=-1SA;UNTIL=20270228T235959Z
+SUMMARY:Beer Junction Bike Club — Seattle\, WA
+LOCATION:The Beer Junction (back parking lot)\, 4511 California Ave SW\, 
+ Seattle\, WA 98116
+DESCRIPTION:Pace: Easy\, under 10 mph; 3-8 miles; rotating ride leaders a
+ nd a new route each time.\nNo-drop.\nSchedule: Last Saturday of every mo
+ nth\, meet and leave shortly after 2:00 pm from the back parking lot of 
+ The Beer Junction. Next: Oct 31\, 2026..\nConfirm with the host before y
+ ou go.\nhttps://cycleforchange.org/rides/seattle-wa-beer-junction-bike-c
+ lub/
+URL:https://cycleforchange.org/rides/seattle-wa-beer-junction-bike-club/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,61 @@
+[
+ {
+  "slug": "houston-tx-nwcc-saturday-zube-park-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "NWCC's events list shows the Zube Park Ride for Sat Oct 3, Oct 10 and Oct 17, 2026 at 8:00 am, and the ride page (route maps updated July 29, 2026) says Oct-March 8 a.m., April-Sept 7:30 a.m.; the site had 7:30.",
+  "changes": {
+   "schedule": "Every Saturday, rain or shine; 8:00 am October through March, 7:30 am April through September. Zube Park, 17400 Roberts Rd.",
+   "time_local": "8:00 am",
+   "start_hhmm": "08:00",
+   "start_times": [
+    {
+     "from": "2027-04-01",
+     "start_hhmm": "07:30"
+    }
+   ],
+   "start_location": {
+    "name": "Zube Park",
+    "address": "17400 Roberts Rd, Houston, TX"
+   }
+  },
+  "sources": [
+   "https://nwcc.bike/road-cycling-nwcc-saturday-zube-park-ride/",
+   "https://nwcc.bike/nwcc-cycling-club-events-list/"
+  ]
+ },
+ {
+  "slug": "tomball-tx-nwcc-saturday-coffee-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "NWCC's events list shows the Saturday Coffee Ride for Sat Oct 3 and Oct 10, 2026 at 8:00 am, and the ride page gives Wildwood Elementary, 13802 Northpointe Blvd, Tomball, and an 8:00 am start year-round (fetched Oct 1, 2026).",
+  "sources": [
+   "https://nwcc.bike/the-nwcc-coffee-ride/",
+   "https://nwcc.bike/nwcc-cycling-club-events-list/"
+  ]
+ },
+ {
+  "slug": "houston-tx-pride-bike-ride-tuesgay-social-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "pridebikeride.com says every Tuesday, meet 7:00 pm, roll 7:30 pm from Varsity Bar HTX, 611 Hyde Park Blvd; the group's Queer Calendar listing shows the next ride Tue Oct 6, 2026 and every Tuesday to Dec 22 (fetched Oct 1, 2026).",
+  "sources": [
+   "https://pridebikeride.com/",
+   "https://qcal.app/event/tuesgay-social-ride-houston-tx-us"
+  ]
+ },
+ {
+  "slug": "bryan-tx-bvmba-tuesday-social-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-07-01",
+  "evidence": "bvmba.net's home page, edited Jul 1, 2026 per the site's page data, says Tuesdays: meet at the Lake Bryan boat ramp lot by 6:15 pm for the 6:30 pm no-drop ride; Brazos Valley Cyclists' schedule page lists it too (fetched Oct 1, 2026). No dated upcoming ride is shown.",
+  "sources": [
+   "https://bvmba.net/",
+   "https://brazoscyclists.org/rides-and-events/"
+  ]
+ }
+]

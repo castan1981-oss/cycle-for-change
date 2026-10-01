@@ -1,0 +1,83 @@
+[
+ {
+  "slug": "austin-tx-austin-ridge-riders-sunday-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "Austin Ridge Riders' Ticket Tailor page lists the Sunday Group Ride with an alternate-venue ride on Sun Oct 4, 2026 at 9:00 AM at Georgetown Trails, and the club's events page lists a venue for every Sunday through Dec 27; the club also says wet trails cancel the ride (read Oct 1, 2026).",
+  "sources": [
+   "https://www.tickettailor.com/events/austinridgeriders",
+   "https://www.austinridgeriders.com/events",
+   "https://www.austinridgeriders.com/ride"
+  ],
+  "changes": {
+   "schedule": "Every Sunday, 9:00 am, free, no-drop groups by ability; wet trails cancel it. The venue rotates and the first Sunday of the month is an alternate venue: Oct 4 Georgetown Trails, Oct 11–25 Brushy Creek Lake Park, Nov 1 South Walnut Creek, Nov 8–29 Georgetown Trails, Dec 6 Mary Moore Searight, Dec 13–27 Circle C.",
+   "start_location": {
+    "name": "Rotates by month (Oct 11–25: Brushy Creek Lake Park)"
+   },
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://www.tickettailor.com/events/austinridgeriders",
+    "notes": "Ticket Tailor lists every Sunday ride with its date and trailhead; the club's events page lists the same venues."
+   }
+  }
+ },
+ {
+  "slug": "austin-tx-thursday-night-social-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-08-27",
+  "evidence": "Do512's listing for Social Cycling's ride on Thu Aug 27, 2026 says \"Wheels down 8 pm new time since 2026\" from Chicano Park, 14 Salina St, and HeyAustin's May 22, 2026 listing says the same with a 7:30 pm meet-up (read Oct 1, 2026); I found nothing newer, and the Instagram reel would not load.",
+  "sources": [
+   "https://do512.com/events/2026/8/27/thursday-night-social-ride-tribute-to-dolly-parton-tickets",
+   "https://heyaustin.com/events/thursday-night-social-ride-28/"
+  ],
+  "changes": {
+   "schedule": "Every Thursday. Meet around 7:30 pm at Chicano Park, wheels down 8:00 pm (a new time since 2026).",
+   "time_local": "8:00 pm",
+   "start_hhmm": "20:00"
+  }
+ },
+ {
+  "slug": "san-antonio-tx-san-antonio-wheelmen-weekend-rides",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "SAW's calendar lists rides on Sat Oct 3, Sun Oct 4, Sat Oct 10, Sun Oct 11 and on through Nov 1, each with \"Wheels down at 8:00 AM\", where the Sept 19 and Sept 27 event pages said 7:30 AM (read Oct 1, 2026).",
+  "sources": [
+   "http://www.sawheelmen.com/",
+   "http://www.sawheelmen.com/events/1003-cibolo",
+   "http://www.sawheelmen.com/events/1004-bulverde",
+   "http://www.sawheelmen.com/events/2026-0919-whc",
+   "http://www.sawheelmen.com/events/2026-0927-recovery"
+  ],
+  "changes": {
+   "schedule": "Most weekends, Saturday or Sunday, wheels down 8:00 am from October (it was 7:30 am in September); the ride and start point rotate, see the calendar.",
+   "time_local": "8:00 am",
+   "start_hhmm": "08:00",
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "http://www.sawheelmen.com/events",
+    "notes": "The calendar lists each weekend's ride, start point and wheels-down time. The club says to check its Facebook page for cancellations."
+   }
+  }
+ },
+ {
+  "slug": "waco-tx-dam-ride-tuesday",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "Waco Bicycle Club's club-rides page says the Dam Ride runs evenings, the 2026 ride season began March 10, roll out 5:45 pm from Waco Dam, 3803 Skeet Eason Rd, levels A to D; the page gives no end date for the season (read Oct 1, 2026).",
+  "sources": [
+   "https://runsignup.com/MemberOrg/WacoBicycleClub/Page/club-rides",
+   "https://www.strava.com/clubs/340757"
+  ]
+ },
+ {
+  "slug": "waco-tx-cameron-park-sunday-mtb-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "Waco Bicycle Club's club-rides page lists the Sunday mountain bike ride at 2:00 pm from the Redwood Shelter in Cameron Park, all levels, no drop; the same page gives a June 2 start for the Tuesday and Thursday 9 am summer time and the 2026 Dam Ride season, so it is current for 2026 (read Oct 1, 2026).",
+  "sources": [
+   "https://runsignup.com/MemberOrg/WacoBicycleClub/Page/club-rides",
+   "https://www.strava.com/clubs/340757"
+  ]
+ }
+]

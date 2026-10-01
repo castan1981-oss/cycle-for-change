@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:santa-monica-ca-la-grange-marina-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261006T063000
+DTEND;TZID=America/Los_Angeles:20261006T083000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270228T235959Z
+SUMMARY:Marina Ride (Velo Club La Grange) — Santa Monica\, CA
+LOCATION:26th St & San Vicente Blvd\, at Blue Bottle Coffee\, San Vicente
+  Blvd & 26th St\, Santa Monica\, CA
+DESCRIPTION:Pace: Junior Varsity moderate\, Varsity difficult; the pace v
+ aries from 18 to 30 mph.\nSchedule: Every Tuesday\, 6:30 am from 26th St
+  and San Vicente Blvd. Two groups: Junior Varsity (moderate) and Varsity
+  (difficult)..\nConfirm with the host before you go.\nhttps://cycleforch
+ ange.org/rides/santa-monica-ca-la-grange-marina-ride/
+URL:https://cycleforchange.org/rides/santa-monica-ca-la-grange-marina-rid
+ e/
+END:VEVENT
+END:VCALENDAR

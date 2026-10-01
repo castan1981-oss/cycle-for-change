@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-francisco-ca-fat-cake-club-tuesday-headlands-arsicault@cycleforch
+ ange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261006T063000
+DTEND;TZID=America/Los_Angeles:20261006T083000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270228T235959Z
+SUMMARY:Fat Cake Tuesday Headlands and Arsicault — San Francisco\, CA
+LOCATION:Golden Gate Bridge southern pavilion
+DESCRIPTION:Schedule: Every Tuesday\, 6:30 am\, from the southern Golden 
+ Gate Bridge pavilion.\nConfirm with the host before you go.\nhttps://cyc
+ leforchange.org/rides/san-francisco-ca-fat-cake-club-tuesday-headlands-a
+ rsicault/
+URL:https://cycleforchange.org/rides/san-francisco-ca-fat-cake-club-tuesd
+ ay-headlands-arsicault/
+END:VEVENT
+END:VCALENDAR

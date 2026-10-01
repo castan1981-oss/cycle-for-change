@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:redwood-city-ca-sports-basement-sunday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261004T093000
+DTEND;TZID=America/Los_Angeles:20261004T113000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Sports Basement Redwood City Sunday Ride — Redwood City\, CA
+LOCATION:Sports Basement Redwood City\, front doors
+DESCRIPTION:Pace: casual\, 10–15 mph.\nNo-drop.\nSchedule: Sundays\, me
+ et 9:00 am\, roll 9:30 am\, at the store front doors.\nConfirm with the 
+ host before you go.\nhttps://cycleforchange.org/rides/redwood-city-ca-sp
+ orts-basement-sunday-ride/
+URL:https://cycleforchange.org/rides/redwood-city-ca-sports-basement-sund
+ ay-ride/
+END:VEVENT
+END:VCALENDAR

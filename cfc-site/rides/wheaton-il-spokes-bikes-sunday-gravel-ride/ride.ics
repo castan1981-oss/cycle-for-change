@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wheaton-il-spokes-bikes-sunday-gravel-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261004T090000
+DTEND;TZID=America/Chicago:20261004T120000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Spokes Sunday Gravel Ride — Wheaton\, IL
+LOCATION:Spokes Bikes\, Wheaton store\, 229 Rice Lake Square\, Wheaton\, 
+ IL 60187
+DESCRIPTION:Pace: Leisure.\nSchedule: Every Sunday\, 9:00 am from Spokes 
+ Bikes in Wheaton..\nConfirm with the host before you go.\nhttps://cyclef
+ orchange.org/rides/wheaton-il-spokes-bikes-sunday-gravel-ride/
+URL:https://cycleforchange.org/rides/wheaton-il-spokes-bikes-sunday-grave
+ l-ride/
+END:VEVENT
+END:VCALENDAR

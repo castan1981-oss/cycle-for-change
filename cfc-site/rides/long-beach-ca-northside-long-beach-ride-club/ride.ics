@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:long-beach-ca-northside-long-beach-ride-club@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261007T190000
+DTEND;TZID=America/Los_Angeles:20261007T210000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20270228T235959Z
+SUMMARY:Northside Long Beach Ride Club (Wednesday Ride) — Long Beach\, 
+ CA
+LOCATION:Houghton Park\, 6301 Myrtle Ave\, Long Beach\, CA 90805
+DESCRIPTION:Pace: casual.\nSchedule: Every Wednesday\, 7:00 pm from Hough
+ ton Park. Around 10 miles at a casual pace. It moved from Tuesdays to We
+ dnesdays in 2026..\nConfirm with the host before you go.\nhttps://cyclef
+ orchange.org/rides/long-beach-ca-northside-long-beach-ride-club/
+URL:https://cycleforchange.org/rides/long-beach-ca-northside-long-beach-r
+ ide-club/
+END:VEVENT
+END:VCALENDAR

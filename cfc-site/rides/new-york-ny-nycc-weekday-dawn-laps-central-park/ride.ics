@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:new-york-ny-nycc-weekday-dawn-laps-central-park@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261005T060500
+DTEND;TZID=America/New_York:20261005T072000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH;UNTIL=20270228T235959Z
+SUMMARY:Weekday Dawn Laps in Central Park (NYCC) — New York\, NY
+LOCATION:Central Park (the public ride page gives no meeting point)
+DESCRIPTION:Pace: Lap times from 16:00 (A\, about 22 mph) to 29:00 (C\, a
+ bout 12 mph).\nSchedule: Monday to Thursday before work. Several groups 
+ start between 5:40 and 6:50 am\, sorted by lap time. A-level laps at 5:4
+ 0 am on Tuesdays and Thursdays\, B-level laps at 6:05 am on Tuesdays and
+  Thursdays\, Recovery Laps on Mondays at 6:25 am\, a slower C group on T
+ hursdays at 6:45 am. Each ride is two to four laps\, 12 to 24 miles..\nC
+ onfirm with the host before you go.\nhttps://cycleforchange.org/rides/ne
+ w-york-ny-nycc-weekday-dawn-laps-central-park/
+URL:https://cycleforchange.org/rides/new-york-ny-nycc-weekday-dawn-laps-c
+ entral-park/
+END:VEVENT
+END:VCALENDAR

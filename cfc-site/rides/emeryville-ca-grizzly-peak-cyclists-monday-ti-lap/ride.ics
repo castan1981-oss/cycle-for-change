@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:emeryville-ca-grizzly-peak-cyclists-monday-ti-lap@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261005T172500
+DTEND;TZID=America/Los_Angeles:20261005T192500
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20270228T235959Z
+SUMMARY:Grizzly Peak Cyclists Monday TI Lap — Emeryville\, CA
+LOCATION:Emeryville\, opposite IKEA
+DESCRIPTION:Pace: faster T to moderate\, with short regroups.\nSchedule: 
+ Mondays\, meet 5:25 pm\, start 5:35 pm\, Emeryville opposite IKEA; throu
+ gh early November.\nConfirm with the host before you go.\nhttps://cyclef
+ orchange.org/rides/emeryville-ca-grizzly-peak-cyclists-monday-ti-lap/
+URL:https://cycleforchange.org/rides/emeryville-ca-grizzly-peak-cyclists-
+ monday-ti-lap/
+END:VEVENT
+END:VCALENDAR

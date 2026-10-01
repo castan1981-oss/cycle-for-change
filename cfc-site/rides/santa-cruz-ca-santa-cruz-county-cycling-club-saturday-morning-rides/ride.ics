@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:santa-cruz-ca-santa-cruz-county-cycling-club-saturday-morning-rides@c
+ ycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T100000
+DTEND;TZID=America/Los_Angeles:20261003T120000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Santa Cruz County Cycling Club Saturday Morning Rides — Santa C
+ ruz\, CA
+LOCATION:Varies by week (see the ride listing)
+DESCRIPTION:Pace: Classes A\, B\, C and LSD.\nSchedule: Saturdays at 10:0
+ 0 am\, a different start each week.\nConfirm with the host before you go
+ .\nhttps://cycleforchange.org/rides/santa-cruz-ca-santa-cruz-county-cycl
+ ing-club-saturday-morning-rides/
+URL:https://cycleforchange.org/rides/santa-cruz-ca-santa-cruz-county-cycl
+ ing-club-saturday-morning-rides/
+END:VEVENT
+END:VCALENDAR

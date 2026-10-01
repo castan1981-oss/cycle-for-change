@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:austin-tx-critical-mass-austin-last-friday@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261030T190000
+DTEND;TZID=America/Chicago:20261030T210000
+RRULE:FREQ=MONTHLY;BYDAY=-1FR;UNTIL=20270228T235959Z
+SUMMARY:Critical Mass Austin — Austin\, TX
+LOCATION:Ping pong tables near Industry Bar\, 1211 E 5th St\, Austin\, TX
+DESCRIPTION:Pace: Social\, all bikes.\nSchedule: Last Friday of every mon
+ th\, rain or shine. Meet 6:00–6:30 pm at the ping pong tables near Ind
+ ustry Bar\, ride out about 7:00 pm..\nConfirm with the host before you g
+ o.\nhttps://cycleforchange.org/rides/austin-tx-critical-mass-austin-last
+ -friday/
+URL:https://cycleforchange.org/rides/austin-tx-critical-mass-austin-last-
+ friday/
+END:VEVENT
+END:VCALENDAR

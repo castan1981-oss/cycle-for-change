@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:pasadena-ca-foothill-cycle-club-sunday-easy-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261004T080000
+DTEND;TZID=America/Los_Angeles:20261004T100000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Foothill Cycle Club Sunday Easy Ride — Pasadena\, CA
+LOCATION:Hill Ave and San Pasqual St\, near Caltech
+DESCRIPTION:Pace: easy.\nSchedule: Sundays\, 8:00 am\, from the corner of
+  Hill and San Pasqual in Pasadena\, near Caltech. Under 20 miles\, with 
+ breakfast at a different place each week..\nConfirm with the host before
+  you go.\nhttps://cycleforchange.org/rides/pasadena-ca-foothill-cycle-cl
+ ub-sunday-easy-ride/
+URL:https://cycleforchange.org/rides/pasadena-ca-foothill-cycle-club-sund
+ ay-easy-ride/
+END:VEVENT
+END:VCALENDAR

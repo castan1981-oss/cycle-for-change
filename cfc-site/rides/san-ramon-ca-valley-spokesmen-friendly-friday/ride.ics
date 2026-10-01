@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-ramon-ca-valley-spokesmen-friendly-friday@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261002T090000
+DTEND;TZID=America/Los_Angeles:20261002T110000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270228T235959Z
+SUMMARY:Valley Spokesmen Friendly Friday — San Ramon\, CA
+LOCATION:Sports Basement San Ramon
+DESCRIPTION:Pace: 3L/M\, no-drop.\nNo-drop.\nSchedule: Fridays\, arrive 8
+ :45 am\, roll 9:00 am\, from Sports Basement San Ramon.\nConfirm with th
+ e host before you go.\nhttps://cycleforchange.org/rides/san-ramon-ca-val
+ ley-spokesmen-friendly-friday/
+URL:https://cycleforchange.org/rides/san-ramon-ca-valley-spokesmen-friend
+ ly-friday/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ventura-ca-bikevc-ventura-electric-light-parade@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T172000
+DTEND;TZID=America/Los_Angeles:20261003T192000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Ventura Electric Light Parade (BikeVC) — Ventura\, CA
+LOCATION:Ventura Pier\, Ventura Pier\, Ventura\, CA
+DESCRIPTION:Pace: easy community cruise along the Promenade and through d
+ owntown.\nSchedule: One Saturday evening a month. Gather on the Ventura 
+ Pier one hour before sunset (Oct 17 at 5:20 pm; Nov 14 is also listed)..
+ \nConfirm with the host before you go.\nhttps://cycleforchange.org/rides
+ /ventura-ca-bikevc-ventura-electric-light-parade/
+URL:https://cycleforchange.org/rides/ventura-ca-bikevc-ventura-electric-l
+ ight-parade/
+END:VEVENT
+END:VCALENDAR

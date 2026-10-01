@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:chicago-il-evolution-cycling-saturday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T080000
+DTEND;TZID=America/Chicago:20261003T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Evolution Cycling Saturday Ride — Chicago\, IL
+LOCATION:Walgreens parking lot\, Andersonville\, 5440 N Clark St\, Chicag
+ o\, IL 60640
+DESCRIPTION:Pace: Steady\, 17-19 mph.\nNo-drop.\nSchedule: Every Saturday
+ \, rolls at 8:00 am on the fall schedule\, from the Walgreens lot at 544
+ 0 N Clark St in Andersonville..\nConfirm with the host before you go.\nh
+ ttps://cycleforchange.org/rides/chicago-il-evolution-cycling-saturday-ri
+ de/
+URL:https://cycleforchange.org/rides/chicago-il-evolution-cycling-saturda
+ y-ride/
+END:VEVENT
+END:VCALENDAR

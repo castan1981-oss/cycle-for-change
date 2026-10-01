@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:greenwood-village-co-denver-outdoor-adventures-crappy-road-bikes-ride
+ @cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Denver:20261001T171500
+DTEND;TZID=America/Denver:20261001T191500
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:Crappy Road Bikes Group Ride — Greenwood Village\, CO
+LOCATION:Illegal Pete's - DTC\, 5312 DTC Blvd #400\, Greenwood Village\, 
+ CO
+DESCRIPTION:Pace: Party pace\, about 16-17 mph end-of-ride average.\nSche
+ dule: Every Thursday\, 5:15 pm\, from Illegal Pete's in the Denver Tech 
+ Center. The Meetup series runs to Nov 3\, 2026..\nConfirm with the host 
+ before you go.\nhttps://cycleforchange.org/rides/greenwood-village-co-de
+ nver-outdoor-adventures-crappy-road-bikes-ride/
+URL:https://cycleforchange.org/rides/greenwood-village-co-denver-outdoor-
+ adventures-crappy-road-bikes-ride/
+END:VEVENT
+END:VCALENDAR

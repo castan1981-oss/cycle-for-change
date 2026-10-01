@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:colorado-springs-co-cscc-tuesday-morning-gravel@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Denver:20261006T090000
+DTEND;TZID=America/Denver:20261006T110000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261031T235959Z
+SUMMARY:Tuesday Morning Gravel — Colorado Springs\, CO
+LOCATION:Varies weekly; Oct 6 start is Calhan Baseball Park
+DESCRIPTION:Pace: Intermediate\, 12-16 mph\, 25-40 miles.\nNo-drop.\nSche
+ dule: Every Tuesday\, 9:00 am\, through Oct 27\, 2026. A different start
+  each week; the leader posts a Ride with GPS route with the start the we
+ ekend before (Oct 6: Calhan Baseball Park)..\nConfirm with the host befo
+ re you go.\nhttps://cycleforchange.org/rides/colorado-springs-co-cscc-tu
+ esday-morning-gravel/
+URL:https://cycleforchange.org/rides/colorado-springs-co-cscc-tuesday-mor
+ ning-gravel/
+END:VEVENT
+END:VCALENDAR

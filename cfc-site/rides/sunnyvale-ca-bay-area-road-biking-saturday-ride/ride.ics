@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sunnyvale-ca-bay-area-road-biking-saturday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T083000
+DTEND;TZID=America/Los_Angeles:20261003T103000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Bay Area Road Biking Saturday Ride — Sunnyvale\, CA
+LOCATION:Foothill Expressway and Homestead Road
+DESCRIPTION:Schedule: Saturdays at 8:30 am\, Foothill Expressway at Homes
+ tead Road.\nConfirm with the host before you go.\nhttps://cycleforchange
+ .org/rides/sunnyvale-ca-bay-area-road-biking-saturday-ride/
+URL:https://cycleforchange.org/rides/sunnyvale-ca-bay-area-road-biking-sa
+ turday-ride/
+END:VEVENT
+END:VCALENDAR
