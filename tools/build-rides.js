@@ -551,38 +551,77 @@ function card(r, opts = {}) {
 </div>`;
 }
 
-// ---------- search UI (directory + state hubs share it) ----------
-function searchUi(rides, { cityIndex, placeholder }) {
-  const discChips = Object.entries(DISC_LABEL).filter(([k]) => rides.some((r) => r.discipline.includes(k)))
-    .map(([k, v]) => `<button type="button" class="gr-chip" data-filter="disc" data-value="${k}" aria-pressed="false">${v}</button>`).join("\n          ");
-  const tagChips = Object.entries(TAG_LABEL).filter(([k]) => rides.some((r) => tagsOf(r).includes(k)))
-    .map(([k, v]) => `<button type="button" class="gr-chip" data-filter="tag" data-value="${k}" aria-pressed="false">${v}</button>`).join("\n          ");
-  const dayOpts = Object.entries(DAY_LONG).map(([k, v]) => `<option value="${k}">${v}s</option>`).join("");
+// ---------- the filter panel (Oct 1, 2026) ----------
+// Robert, on his phone: the filters read as a wall of words, and once you tapped one nothing
+// seemed to happen (the count was a small line below the fold). Now every option is a tile
+// with its mark and a count, the week is a bar strip (the calendar's month strip, by day),
+// and the number of rides left sits big under the panel. rides.js and hub.js keep the counts
+// live — each tile says how many rides you'd get if you tapped it, and a tile that would leave
+// nothing goes quiet. The counts written here are the whole page's; they're what shows
+// without JS.
+const DAY_ORDER = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+const DAY_SHORT = { mon:"Mo", tue:"Tu", wed:"We", thu:"Th", fri:"Fr", sat:"Sa", sun:"Su" };
+const TILE_TAG = { ...TAG_LABEL, wtf:"Women, trans, femme", beginner:"Beginners" };
+const TILE_SUB = { "no-drop":"Waits for you" };
+const TAG_MARK = { lgbtq:"lgbtq", wtf:"wtf", bipoc:"bipoc", beginner:"beginner", "no-drop":"no-drop", family:"family", adaptive:"adaptive", youth:"youth" };
+// how the status line says a pick: "2 rides · gravel · Saturdays"
+const sayOf = (label) => (/^[A-Z]{2,}/.test(label) ? label : label.toLowerCase());
+function tile(filter, value, name, n, markId, sub, say) {
+  return `<button type="button" class="gr-tile" data-filter="${filter}" data-value="${value}" data-say="${attr(say)}" aria-pressed="false"${n ? "" : ` aria-disabled="true"`}>`
+    + `${mark(markId, "gr-tile-mark")}<span class="gr-tile-name">${esc(name)}</span>${sub ? `<span class="gr-tile-sub">${esc(sub)}</span>` : ""}`
+    + `<span class="gr-tile-n"><span data-n>${n}</span><span class="visually-hidden"> rides</span></span></button>`;
+}
+function filterPanel(rides, { tonight = true } = {}) {
+  const discs = Object.keys(DISC_LABEL).map((k) => [k, rides.filter((r) => r.discipline.includes(k)).length]).filter(([, n]) => n);
+  const tags = Object.keys(TAG_LABEL).map((k) => [k, rides.filter((r) => tagsOf(r).includes(k)).length]).filter(([, n]) => n);
+  const days = DAY_ORDER.map((d) => [d, rides.filter((r) => r.days.includes(d)).length]);
+  const max = Math.max(1, ...days.map(([, n]) => n));
+  const discTiles = discs.map(([k, n]) => tile("disc", k, DISC_LABEL[k], n, MARK_OF[k] || "mixed", null, sayOf(DISC_LABEL[k]))).join("\n            ");
+  const tagTiles = tags.map(([k, n]) => tile("tag", k, TILE_TAG[k], n, TAG_MARK[k] || "riders", TILE_SUB[k], sayOf(TAG_LABEL[k]))).join("\n            ");
+  const dayTiles = days.map(([d, n]) => `<button type="button" class="gr-day" data-filter="day" data-value="${d}" data-say="${DAY_LONG[d]}s" aria-pressed="false"${n ? "" : ` aria-disabled="true"`} style="--h:${(n / max).toFixed(2)}">`
+    + `<i class="gr-day-bar" aria-hidden="true"></i><span class="gr-day-l" aria-hidden="true">${DAY_SHORT[d]}</span><span class="visually-hidden">${DAY_LONG[d]}s</span>`
+    + `<span class="gr-day-n"><span data-n>${n}</span><span class="visually-hidden"> rides</span></span></button>`).join("\n            ");
   return `
-  <section class="gr-search-wrap">
+      <div class="gr-filters" id="gr-filters">
+        ${discs.length ? `<fieldset class="gr-group gr-group--disc"><legend class="gr-filter-label">Bike</legend>
+          <div class="gr-tiles">
+            ${discTiles}
+          </div>
+        </fieldset>` : ""}
+        ${tags.length ? `<fieldset class="gr-group gr-group--tag"><legend class="gr-filter-label">Made for</legend>
+          <div class="gr-tiles">
+            ${tagTiles}
+          </div>
+        </fieldset>` : ""}
+        <fieldset class="gr-group gr-group--day"><legend class="gr-filter-label">When</legend>
+          <div class="gr-week">
+            ${dayTiles}
+          </div>
+          ${tonight ? `<a class="gr-tonight" href="/tonight/">${mark("live", "gr-tonight-mark")}What&rsquo;s rolling tonight &rarr;</a>` : ""}
+        </fieldset>
+      </div>`;
+}
+
+// ---------- search UI (state, city, country and facet pages share it) ----------
+function searchUi(rides, { cityIndex, placeholder }) {
+  const n = rides.length;
+  return `
+  <section class="gr-search-wrap gr-finder" aria-label="Find a ride">
     <div class="wrap">
       <form class="gr-search" role="search" id="gr-form" onsubmit="return false">
         <label class="visually-hidden" for="gr-q">Search by city, state or ride name</label>
-        <input id="gr-q" type="search" placeholder="${attr(placeholder)}" autocomplete="off" list="gr-cities">
+        <span class="gr-field">${mark("search", "gr-field-mark")}<input id="gr-q" type="search" placeholder="${attr(placeholder)}" autocomplete="off" list="gr-cities"></span>
         <datalist id="gr-cities">${cityIndex.map(([k]) => `<option value="${attr(k)}">`).join("")}</datalist>
-        <button type="button" class="btn btn--ink" id="gr-geo">Near me</button>
-        <a class="gr-tonight" href="/tonight/">What&rsquo;s rolling tonight &rarr;</a>
+        <button type="button" class="btn btn--ink gr-geo" id="gr-geo">${mark("locate", "gr-geo-mark")}Near me</button>
       </form>
-      <div class="gr-filters">
-        <div class="gr-filter-row"><span class="gr-filter-label">Bike</span>
-          ${discChips}
-        </div>
-        <div class="gr-filter-row"><span class="gr-filter-label">Made for</span>
-          ${tagChips}
-        </div>
-        <div class="gr-filter-row"><span class="gr-filter-label">When</span>
-          <select id="gr-day" aria-label="Day of week"><option value="">Any day</option><option value="today">Today</option><option value="weekend">This weekend</option>${dayOpts}</select>
-          <button type="button" class="gr-clear" id="gr-clear" hidden>Clear all</button>
-        </div>
+${filterPanel(rides)}
+      <div class="gr-result">
+        <p class="gr-result-line" aria-live="polite"><b class="gr-result-n" id="gr-n">${n}</b> <span class="gr-status" id="gr-status" data-total="${n}">ride${n === 1 ? "" : "s"}</span></p>
+        <button type="button" class="gr-clear" id="gr-clear" hidden>Clear all</button>
       </div>
-      <p class="gr-status" id="gr-status" aria-live="polite" data-total="${rides.length}">${rides.length} rides</p>
     </div>
-  </section>`;
+  </section>
+  <a class="gr-jump" id="gr-jump" href="#gr-list" hidden><span class="gr-jump-n"></span><span class="gr-jump-go">See them &darr;</span></a>`;
 }
 // [label, lat, lng, keys]: keys are what a searcher might type, folded (no accents, lower case):
 // "phoenix", "phoenix az", "phoenix arizona" / "bogota", "bogota colombia", "bogota co".
@@ -668,10 +707,8 @@ function directory(rides, hubs, worldHubs = []) {
       dateModified: lastChecked, author: AUTHOR, publisher: PUBLISHER, breadcrumb: breadcrumbLd([["Cycle for Change", `${SITE}/`], ["Group rides", `${SITE}/rides/`]]) },
     { "@type": "FAQPage", mainEntity: FAQ.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a.replace(/<[^>]+>/g, "") } })) },
   ] };
-  const chip = (filter, value, label, extra = "") => `<button type="button" class="gr-chip" data-filter="${filter}" data-value="${value}" aria-pressed="false"${extra}>${label}</button>`;
-  const discChips = Object.entries(DISC_LABEL).filter(([k]) => rides.some((r) => r.discipline.includes(k))).map(([k, v]) => chip("disc", k, v)).join("\n            ");
-  const tagChips = Object.entries(TAG_LABEL).filter(([k]) => rides.some((r) => tagsOf(r).includes(k))).map(([k, v]) => chip("tag", k, v)).join("\n            ");
-  const dayOpts = Object.entries(DAY_LONG).map(([k, v]) => `<option value="${k}">${v}s</option>`).join("");
+  // the quick chips carry their marks (Oct 1, 2026), like every other pick on the site
+  const chip = (filter, value, label, markId = null, extra = "") => `<button type="button" class="gr-chip${markId ? " gr-chip--mk" : ""}" data-filter="${filter}" data-value="${value}" aria-pressed="false"${extra}>${markId ? mark(markId, "gr-chip-mark") : ""}${label}</button>`;
   const FACET_MARK = { lgbtq:"lgbtq", "no-drop":"no-drop", beginner:"beginner", "women-trans-femme":"wtf", bipoc:"bipoc", family:"family", gravel:"gravel" };
   const facetTiles = FACETS.map((f) => posterTile({ href: `/rides/${f.slug}/`, name: f.label, count: rides.filter(f.pick).length, small: "rides", blurb: f.blurb, markId: FACET_MARK[f.slug] || "mixed", cls: "tile-p--facet" })).join("\n        ");
   const home = hubs.find((h) => h.state === "AZ" && h.city === "Phoenix");
@@ -695,37 +732,28 @@ function directory(rides, hubs, worldHubs = []) {
       <p class="lede">${nNoDrop} are no-drop, so nobody gets left. ${nInclusive} are run by and for queer, women/trans/femme or BIPOC riders. Type a city or tap Near me.</p>
       <form class="gr-search" role="search" id="gr-form" action="/rides/" method="get">
         <label class="visually-hidden" for="gr-q">Search by city, state, country or ride name</label>
-        <input id="gr-q" name="q" type="search" placeholder="City, country or ride name" autocomplete="off" list="gr-cities">
+        <span class="gr-field">${mark("search", "gr-field-mark")}<input id="gr-q" name="q" type="search" placeholder="City, country or ride name" autocomplete="off" list="gr-cities"></span>
         <datalist id="gr-cities">${cityIndexFor(rides).map(([k]) => `<option value="${attr(k)}">`).join("")}</datalist>
-        <button type="button" class="btn btn--bone" id="gr-geo">Near me</button>
+        <button type="button" class="btn btn--bone gr-geo" id="gr-geo">${mark("locate", "gr-geo-mark")}Near me</button>
       </form>
       <div class="gr-quick" aria-label="Quick filters">
-        ${chip("day", "today", "Today")}
-        ${chip("day", "weekend", "This weekend")}
-        ${chip("tag", "no-drop", "No-drop")}
-        ${chip("tag", "beginner", "Beginner friendly")}
-        ${chip("tag", "lgbtq", "Made for LGBTQ+")}
-        ${chip("disc", "gravel", "Gravel")}
-        ${chip("saved", "1", "★ Saved <span data-saved-count></span>", " hidden")}
-        <a class="gr-tonight" href="/tonight/">What&rsquo;s rolling tonight &rarr;</a>
+        ${chip("day", "today", "Today", "date")}
+        ${chip("day", "weekend", "This weekend", "ride-day")}
+        ${chip("tag", "no-drop", "No-drop", "no-drop")}
+        ${chip("tag", "beginner", "Beginner friendly", "beginner")}
+        ${chip("tag", "lgbtq", "Made for LGBTQ+", "lgbtq")}
+        ${chip("disc", "gravel", "Gravel", "gravel")}
+        ${chip("saved", "1", "★ Saved <span data-saved-count></span>", null, " hidden")}
+        <a class="gr-tonight" href="/tonight/">${mark("live", "gr-tonight-mark")}What&rsquo;s rolling tonight &rarr;</a>
       </div>
       <details class="gr-more">
         <summary>More filters</summary>
-        <div class="gr-filters">
-          <div class="gr-filter-row"><span class="gr-filter-label">Bike</span>
-            ${discChips}
-          </div>
-          <div class="gr-filter-row"><span class="gr-filter-label">Made for</span>
-            ${tagChips}
-          </div>
-          <div class="gr-filter-row"><span class="gr-filter-label">When</span>
-            <select id="gr-day" aria-label="Day of week"><option value="">Any day</option><option value="today">Today</option><option value="weekend">This weekend</option><option value="weekday">Weekdays</option>${dayOpts}</select>
-          </div>
-        </div>
+${filterPanel(rides, { tonight: false })}
       </details>
       <p class="gr-status" id="gr-status" aria-live="polite" data-total="${rides.length}"></p>
     </div>
   </section>
+  <a class="gr-jump" id="gr-jump" href="#results" hidden><span class="gr-jump-n"></span><span class="gr-jump-go">See them &darr;</span></a>
 
   <section class="gr-results-wrap wrap" id="results" aria-label="Matching rides" hidden>
     <div class="gr-results-head"><p class="gr-results-count" id="gr-count"></p><button type="button" class="gr-clear" id="gr-clear">Clear all</button></div>
@@ -885,7 +913,7 @@ function hubPage({ title, h1, crumbs, canonical, description, intro, rides, sect
       <p class="lede">${intro.join(" ")}</p>
   </header>
 ${searchUi(rides, { cityIndex: cityIndexFor(rides), placeholder: "City or ride name" })}
-  <section class="gr-results-wrap">
+  <section class="gr-results-wrap" id="gr-list">
     <div class="wrap">
 ${extra.top || ""}
       <div id="gr-nearby" class="gr-grid gr-nearby" hidden></div>

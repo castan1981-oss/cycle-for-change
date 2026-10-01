@@ -10,20 +10,89 @@
 .gr-note{font-size:.85rem;color:var(--mute);max-width:46em;margin:28px 0 0}
 
 /* —— search —— */
-.gr-search-wrap{border-top:1px solid var(--dust);border-bottom:1px solid var(--dust);background:var(--bone-2);padding:22px 0;margin:22px 0 0}
+.gr-search-wrap{border-top:1px solid var(--dust);border-bottom:1px solid var(--dust);background:var(--bone-2);padding:22px 0 20px;margin:22px 0 0}
 .gr-search{display:flex;gap:10px;flex-wrap:wrap}
 .gr-search input{flex:1 1 320px;min-width:0;font:500 1.02rem/1.4 var(--body);color:var(--asphalt);background:var(--bone);border:1px solid var(--asphalt);border-radius:0;padding:11px 14px}
 .gr-search input:focus{outline:2px solid var(--asphalt);outline-offset:2px}
 .gr-search .btn{white-space:nowrap}
-.gr-filters{margin-top:14px;display:flex;flex-direction:column;gap:8px}
-.gr-filter-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
-.gr-filter-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);min-width:72px}
+.gr-status{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--creosote-ink);margin:14px 0 0;min-height:1.2em}
 .gr-chip{font:400 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--asphalt);background:var(--bone);border:1px solid var(--dust);border-radius:0;padding:8px 11px;cursor:pointer;text-decoration:none}
 .gr-chip:hover{border-color:var(--asphalt)}
 .gr-chip[aria-pressed="true"]{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
-.gr-filters select{font:400 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--asphalt);background:var(--bone);border:1px solid var(--dust);border-radius:0;padding:8px 11px}
-.gr-clear{font:400 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mute);background:none;border:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
-.gr-status{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--creosote-ink);margin:14px 0 0;min-height:1.2em}
+.gr-chip--mk{display:inline-flex;align-items:center;gap:7px;padding-left:9px}
+.gr-chip-mark{width:16px;height:16px;flex:none;color:currentColor}
+
+/* —— the finder (Oct 1, 2026): every pick is a tile with its mark and a live count ——
+   Built by filterPanel() in tools/build-rides.js; rides.js (and hub.js on /rides/) keep the
+   counts true. Square corners, hairlines, asphalt when picked. A tile that would leave no
+   rides goes quiet (aria-disabled). The week is the calendar's month strip, by day. */
+.gr-field{position:relative;display:flex;flex:1 1 320px;min-width:0}
+.gr-field input{flex:1 1 auto;width:100%;padding-left:42px}
+.gr-field-mark{position:absolute;left:13px;top:50%;width:20px;height:20px;margin-top:-10px;color:var(--mute);pointer-events:none}
+.gr-search .gr-geo{gap:8px;padding:0 18px}
+.gr-geo-mark{width:17px;height:17px;flex:none}
+.gr-filters{margin-top:22px;display:grid;gap:22px}
+.gr-group{border:0;margin:0;padding:0;min-width:0}
+.gr-filter-label{display:flex;align-items:center;gap:10px;width:100%;float:none;padding:0;margin:0 0 10px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.gr-filter-label::after{content:"";flex:1;height:1px;background:var(--dust)}
+.gr-tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px}
+.gr-tile{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:4px;min-height:92px;padding:12px 12px 11px;background:var(--paper);border:1px solid var(--dust);border-radius:0;color:var(--asphalt);text-align:left;cursor:pointer;font:inherit;transition:background-color .15s ease,color .15s ease,border-color .15s ease}
+.gr-tile-mark{width:28px;height:28px;flex:none;margin-bottom:auto;color:currentColor}
+.gr-tile-name{display:block;margin-top:10px;font-family:var(--display);font-weight:600;font-size:15px;line-height:1.12;letter-spacing:-.01em}
+.gr-tile-sub{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--creosote-ink)}
+.gr-tile-n{position:absolute;top:11px;right:11px;font-family:var(--mono);font-size:11px;letter-spacing:.02em;line-height:1;color:var(--creosote-ink);font-variant-numeric:tabular-nums}
+.gr-tile[aria-pressed="true"]{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}
+.gr-tile[aria-pressed="true"] .gr-tile-n,.gr-tile[aria-pressed="true"] .gr-tile-sub{color:var(--dust)}
+.gr-tile[aria-pressed="true"]::after{content:"";position:absolute;right:12px;top:12px;width:10px;height:5px;border-left:1.7px solid var(--bone);border-bottom:1.7px solid var(--bone);transform:rotate(-45deg)}
+.gr-tile[aria-pressed="true"] .gr-tile-n{right:32px}
+.gr-tile[aria-disabled="true"]{background:transparent;border-style:dashed;color:var(--dust-deep);cursor:default}
+.gr-tile[aria-disabled="true"] .gr-tile-n,.gr-tile[aria-disabled="true"] .gr-tile-sub{color:var(--dust-deep)}
+.gr-tile:focus-visible,.gr-day:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px}
+@media (hover:hover){.gr-tile:not([aria-pressed="true"]):not([aria-disabled="true"]):hover{border-color:var(--asphalt)}}
+
+.gr-week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));max-width:620px;border:1px solid var(--dust);background:var(--paper)}
+.gr-day{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;min-height:92px;padding:12px 2px 10px;border:0;border-right:1px solid var(--dust);border-radius:0;background:transparent;color:var(--asphalt);cursor:pointer;font:inherit}
+.gr-day:last-child{border-right:0}
+.gr-day-bar{display:block;width:calc(100% - 18px);max-width:30px;height:max(2px,calc(var(--h,0) * 34px));margin-bottom:4px;background:var(--asphalt);opacity:.82;transition:height .2s ease}
+.gr-day-l{font-family:var(--display);font-weight:700;font-size:16px;line-height:1;letter-spacing:-.01em}
+.gr-day-n{font-family:var(--mono);font-size:10.5px;line-height:1;color:var(--creosote-ink);font-variant-numeric:tabular-nums}
+.gr-day.is-today::before{content:"";position:absolute;top:8px;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--creosote)}
+.gr-day[aria-pressed="true"]{background:var(--asphalt);color:var(--bone)}
+.gr-day[aria-pressed="true"] .gr-day-bar{background:var(--bone);opacity:1}
+.gr-day[aria-pressed="true"] .gr-day-n{color:var(--dust)}
+.gr-day[aria-pressed="true"].is-today::before{background:var(--bone)}
+.gr-day[aria-disabled="true"]{color:var(--dust-deep);cursor:default}
+.gr-day[aria-disabled="true"] .gr-day-n{color:var(--dust-deep)}
+@media (hover:hover){.gr-day:not([aria-pressed="true"]):not([aria-disabled="true"]):hover{background:var(--bone)}}
+@media (prefers-reduced-motion:reduce){.gr-day-bar,.gr-tile{transition:none}}
+
+.gr-tonight{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--asphalt)}
+.gr-tonight:hover{text-decoration:underline;text-decoration-color:var(--creosote)}
+.gr-tonight-mark{width:16px;height:16px;flex:none;color:var(--creosote-ink)}
+
+/* what's left: one big number, the picks in words, Clear */
+.gr-result{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:22px;padding-top:16px;border-top:1px solid var(--asphalt)}
+.gr-result-line{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px;margin:0;min-width:0}
+.gr-result-n{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,9vw,3.4rem);line-height:.9;letter-spacing:-.04em;color:var(--asphalt);font-variant-numeric:tabular-nums}
+.gr-result .gr-status{margin:0;font-family:var(--display);font-size:1rem;letter-spacing:0;line-height:1.35;color:var(--asphalt);min-height:0}
+.gr-clear{flex:none;font:400 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--asphalt);background:none;border:0;padding:8px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+/* while the rides are below the fold: how many, and a way down to them */
+.gr-jump{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:520px;margin:0 auto;min-height:54px;padding:0 18px;background:var(--asphalt);color:var(--bone);text-decoration:none;font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.gr-jump-n{font-family:var(--display);font-size:17px;font-weight:700;letter-spacing:-.01em;text-transform:none}
+#gr-list,#results{scroll-margin-top:calc(var(--nav-h) + 12px)}
+
+@media (max-width:560px){
+  .gr-search .gr-field{flex:1 1 0}
+  .gr-search .gr-geo{flex:none;padding:0 14px}
+  .gr-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .gr-tile{min-height:88px;padding:10px 10px 10px}
+  .gr-tile-name{font-size:14px}
+}
+@media (min-width:900px){
+  .gr-filters{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px 36px}
+  .gr-group--disc{grid-column:1 / -1}
+}
 
 /* —— results —— */
 .gr-results-wrap{padding-top:8px}
@@ -52,8 +121,6 @@
 .gr-wait--waits{color:var(--creosote-ink)}
 .gr-wait--regroups{color:var(--asphalt)}
 .gr-wait--drops{color:var(--mute)}
-.gr-tonight{flex-basis:100%;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--asphalt)}
-.gr-tonight:hover{text-decoration:underline;text-decoration-color:var(--creosote)}
 .gr-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
 .gr-tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--dust);padding:2px 7px;color:var(--asphalt)}
 .gr-tag-warn{border-color:var(--creosote);color:var(--creosote)}
@@ -109,7 +176,6 @@
 @media (max-width:640px){
   .gr-first dl>div{grid-template-columns:1fr;gap:2px}
   .gr-next-when{font-size:1.1rem}
-  .gr-filter-label{min-width:100%}
 }
 
 /* —— Pass 3 (Sept 28, 2026): cards carry a Save star; the /rides/ hub is search-first —— */
@@ -132,7 +198,7 @@
 .gr-hub .gr-hero h1{color:var(--asphalt)}
 .gr-hub .gr-hero .lede{max-width:46ch;color:var(--creosote-ink);margin:0 0 22px}
 .gr-hub .gr-search{max-width:760px}
-.gr-hub .gr-search input{background:var(--bone);border-color:var(--asphalt);font-size:1.1rem;padding:14px 16px}
+.gr-hub .gr-search input{background:var(--bone);border-color:var(--asphalt);font-size:1.1rem;padding:14px 16px 14px 44px}
 .gr-hub .gr-search input:focus{outline:2px solid var(--asphalt);outline-offset:2px}
 .gr-hub .gr-search .btn--bone{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
 .gr-quick{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
@@ -169,7 +235,8 @@
 @media (max-width:640px){
   .gr-hub .gr-search .btn{flex:1 1 100%}
 }
-.gr-hub .gr-hero .gr-tonight{align-self:center;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--asphalt);margin-left:4px}
+.gr-hub .gr-hero .gr-tonight{align-self:center;margin:0 0 0 4px;letter-spacing:.08em}
+.gr-hub .gr-more .gr-filters{margin-top:12px}
 
 /* Freshness (Sept 30, 2026). tools/lib/rides-freshness.js picks the words; these carry them.
    The "Checked" line on every card, the checked block on every ride page, the banner on a
