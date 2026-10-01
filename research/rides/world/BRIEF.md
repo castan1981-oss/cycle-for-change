@@ -181,7 +181,9 @@ is invented — never copy its values:
   (street and number, postcode, city); `null` when the source gives none.
 - `time_local`: 12-hour English ("7:30 am"). `start_hhmm`: the 24-hour roll time.
   If summer and winter times differ, put both in `schedule` and the one in force
-  in October 2026 in `start_hhmm`.
+  in October 2026 in `start_hhmm`. If the host says on which dates the time
+  changes, add `start_times`: `[{ "from": "2026-10-10", "start_hhmm": "07:00" }]`
+  (oldest first; the site switches on those dates).
 - `distance_km` / `distance_miles`: numbers or `null` (miles = km × 0.621, rounded).
 - `pace`: in the host's units and words (km/h outside the US).
 - `description`: 2–4 plain sentences in English.

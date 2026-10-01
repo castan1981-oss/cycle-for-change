@@ -240,6 +240,7 @@ then `node tools/build-rides.js`.
 | `discipline` | array | `road` `gravel` `mtb` `social` `cruiser` `fixed` `track` `cyclocross` `ebike` `mixed` `bmx` |
 | `schedule` | string | The whole rule in plain words, summer/winter differences included. |
 | `days`, `time_local`, `start_hhmm` | array, string, `HH:MM` | `time_local` 12-hour English ("7:30 am"); `start_hhmm` the 24-hour roll time. |
+| `start_times` | array\|absent | The host's own table of start-time changes, oldest first: `[{ "from": "2026-10-10", "start_hhmm": "07:00" }]`. From `from` (local date) on, the ride starts at that time; before the first entry, at `start_hhmm`. For rides that move with the heat and the light (Tucson's Shootout: 6:30 from the first Saturday of September, 7:00 from the second Saturday of October, 7:30 from the second Saturday of November) or an announced change ("6:30 pm from Oct 7"). The build shows the time in force at the next ride on cards, titles, JSON-LD and live.json, says the coming changes under "When", writes one .ics VEVENT per stretch; ride.js, /tonight/ and the watcher read the table date by date (`startOn` in tools/lib/rides-schema.js). Only what the host published — never a guess. Leave it out when there's no table. |
 | `frequency`, `monthly_rule` | `weekly`·`biweekly`·`monthly`·`irregular`, `[{ord,day}]` | `ord` 1–4 or -1 (last). |
 | `season`, `season_months` | string, `{start,end}`\|null | Months inclusive; southern-hemisphere wraps (`{start:10,end:4}`) are fine. |
 | `start_location` | `{name, address}` | |
@@ -275,6 +276,12 @@ then `node tools/build-rides.js`.
   pointing at rides nearby), then the build drops them.
 
 The machine side lives in `data/rides-health.json` (written by
-`tools/rides-watch.js`, never by hand): per ride, the last fetch of each
+`tools/rides-watch.js`; rider reports added by `tools/rides-reports.js`, flags
+resolved by `tools/rides-apply.js`; never by hand): per ride, the last fetch of each
 URL, fingerprints of the schedule text, flags, the feed's next date, rider
 reports. Human-checked facts live only in `rides.json`.
+
+Around it: `data/rides-queue.json` / `.md` (the re-check queue, from the watcher),
+`data/rides-suggestions.json` (new rides and unmatched reports from the ride-report
+form), `data/rides-changelog.json` (every applied re-check). A re-check reaches
+`rides.json` only through `tools/rides-apply.js`. How it all runs: `tools/RIDES-UPKEEP.md`.

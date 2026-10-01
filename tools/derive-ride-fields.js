@@ -66,14 +66,48 @@ function duration(s) {
   const m = s.match(/(\d+)\s*min/); return m ? +m[1] : null;
 }
 const MON = { jan:1, feb:2, mar:3, apr:4, may:5, jun:6, jul:7, aug:8, sep:9, sept:9, oct:10, nov:11, dec:12 };
+// whole month words only: "market" is not March, "maybe" is not May, and "the start may vary" is not May either
+const MONTH_WORD = "jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may(?!\\s+(?:be|vary|change|not|also|move|start|shift|run|have|take|leave|differ|get|need|ride|happen|come|go|stop|end|include|use|close|open|cancel|turn|switch|follow|join|bring|want)\\b)|june?|july?|aug(?:ust)?|sept?(?:ember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?";
+const SEASON_WORD = "spring|summer|fall|autumn|winter";
+// spring/summer/fall/winter as the ends of a range: "May–fall" = May–Oct, "spring–Sep" = Apr–Sep
+const SEASON_START = { spring: 4, summer: 6, fall: 9, autumn: 9, winter: 12 };
+const SEASON_END = { spring: 5, summer: 9, fall: 10, autumn: 10, winter: 2 };
+const monthNum = (w) => MON[w.slice(0, 4)] || MON[w.slice(0, 3)] || null;
 function season(s) {
   if (!s || /year[- ]round|all year/i.test(s)) return null;
   const t = String(s).toLowerCase();
-  const ms = [...t.matchAll(/\b(jan|feb|mar|apr|may|jun|jul|aug|sept|sep|oct|nov|dec)[a-z]*\b/g)].map((x) => MON[x[1]]);
-  if (ms.length >= 2) return { start: ms[0], end: ms[ms.length - 1] };
-  // "spring and summer" with no months: assume Apr–Oct so the page never promises a January ride
-  if (/spring|summer/.test(t) && !ms.length) return { start: 4, end: 10 };
+  const months = [...t.matchAll(new RegExp(`\\b(${MONTH_WORD})\\b`, "g"))].map((x) => monthNum(x[1]));
+  if (months.length >= 2) return { start: months[0], end: months[months.length - 1] };
+  const toks = [...t.matchAll(new RegExp(`\\b(${MONTH_WORD}|${SEASON_WORD})\\b`, "g"))].map((x) => x[1]);
+  if (toks.length >= 2) {
+    const a = toks[0], b = toks[toks.length - 1];
+    return { start: monthNum(a) || SEASON_START[a], end: monthNum(b) || SEASON_END[b] };
+  }
+  // "summer" alone: Apr–Oct, so the page never promises a January ride; a lone month says nothing
+  if (toks.length === 1 && /^(spring|summer)$/.test(toks[0])) return { start: 4, end: 10 };
   return null;
+}
+// A season from the schedule text only when the text states one ("Thursdays, 5:30 pm, spring and summer").
+// Month words there are usually dates ("since Sept 27"), a start-time table ("7:00 am Apr–Nov, 8:00 am
+// Dec–Mar", "9:00 am (summer) / 10:00 am (winter)", "Jan-Feb 9:00 am, Mar 8:00") or a remark ("draws few
+// riders from April to mid October") — none of those is a season.
+function scheduleSeason(s) {
+  if (!s) return null;
+  let t = String(s).toLowerCase();
+  t = t.replace(new RegExp(`\\b(${MONTH_WORD})\\.?\\s+\\d{1,2}(st|nd|rd|th)?\\b`, "g"), " ");                      // dates
+  if (/(start|time|roll)[^.;]{0,40}\b(changes?|moves?|shifts?|slides?|varies|vary|follows?)\b|\bby (the )?(month|season)\b/.test(t)) return null;
+  if (/\b(earlier|later)\b[^.;]{0,20}\b(spring|summer|fall|autumn|winter)\b/.test(t)) return null;
+  const TIME = "\\d{1,2}(?::\\d{2})?\\s*(?:a\\.?m\\.?|p\\.?m\\.?)";
+  const WHEN = `(?:late\\s+|early\\s+|mid-?\\s*)?(?:${MONTH_WORD}|${SEASON_WORD})\\b`;
+  // a time qualified by a month or season, with no comma between: "7:00 am Apr–Nov", "8:00 am in winter",
+  // "(8:30 am late Oct–late Apr)", "6:00 am from July to early September"
+  if (new RegExp(`${TIME}\\s*(?:\\(\\s*)?(?:(?:in|from|during|through)\\s+)?(?:the\\s+)?${WHEN}`).test(t)) return null;
+  // a month followed by a time, twice or more: "Jan-Feb 9:00 am, Mar 8:00"
+  if ((t.match(new RegExp(`\\b(?:${MONTH_WORD})\\b\\.?(?:\\s*[-–]\\s*(?:${MONTH_WORD})\\b)?\\s+\\d{1,2}:\\d{2}`, "g")) || []).length >= 2) return null;
+  // two ranges is a remark or a table, not a season: "from April to mid October, and ... from late October through March"
+  const RANGE = `\\b(?:${MONTH_WORD}|${SEASON_WORD})\\b[^.;]{0,8}?(?:–|-|\\bto\\b|\\bthrough\\b|\\bthru\\b|\\buntil\\b|\\binto\\b)\\s*${WHEN}`;
+  if ((t.match(new RegExp(RANGE, "g")) || []).length >= 2) return null;
+  return season(t);
 }
 const ORD = { first:1, "1st":1, second:2, "2nd":2, third:3, "3rd":3, fourth:4, "4th":4, last:-1 };
 function monthly(s) {
@@ -110,9 +144,18 @@ const out = rides.map((r) => {
   }
   const dm = duration(r.duration);
   r.duration_min = dm != null ? dm : (Number.isFinite(r.duration_min) ? r.duration_min : null);
-  r.season_months = season(r.season) || season(r.schedule) || (r.season_months && r.season_months.start ? r.season_months : null);
-  r.monthly_rule = r.frequency === "monthly" || /month/i.test(r.schedule || "") ? (monthly(r.schedule) || r.monthly_rule || null) : null;
+  // year-round means year-round, whatever months the schedule names; a season field says the season;
+  // only with neither do we read one out of the schedule text (scheduleSeason)
+  r.season_months = /^\s*(year[- ]round|all year)/i.test(r.season || "") ? null
+    : (season(r.season) || scheduleSeason(r.schedule) || null);
+  // a weekly ride that mentions a month in passing ("the route runs in reverse on the first Saturday of the month",
+  // "start time changes by month") is still weekly: only monthly and twice-a-month rides get a monthly rule
+  r.monthly_rule = r.frequency !== "weekly" && (r.frequency === "monthly" || /month/i.test(r.schedule || "")) ? (monthly(r.schedule) || r.monthly_rule || null) : null;
   if (r.monthly_rule && !r.days.length) r.days = [...new Set(r.monthly_rule.map((x) => x.day))];
+  // v3 frequency words: "seasonal" was a v2 value — the season lives in season / season_months, the rhythm is weekly.
+  if (r.frequency === "seasonal") r.frequency = "weekly";
+  // no fixed weekday (full-moon rides, "most days", "posted ad hoc") = irregular; the schedule text says the rest
+  if (!r.days.length && r.frequency !== "irregular") r.frequency = "irregular";
   // v3 defaults
   if (!r.kind) r.kind = KIND_CM.test(r.name || "") ? "critical-mass" : "group-ride";
   if (!r.status) r.status = "active";

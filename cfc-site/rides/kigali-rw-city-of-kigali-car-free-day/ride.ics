@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:kigali-rw-city-of-kigali-car-free-day@cycleforchange.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=Africa/Kigali:20261004T070000
+DTEND;TZID=Africa/Kigali:20261004T100000
+RRULE:FREQ=MONTHLY;BYDAY=1SU,3SU;UNTIL=20270227T235959Z
+SUMMARY:Kigali Car Free Day — Kigali\, Rwanda
+LOCATION:Sites in each district (in Sept 2026 the Kicukiro route ran from
+  Sonatube to IPRC-Kigali)
+DESCRIPTION:Pace: Your own pace.\nSchedule: Twice a month on Sunday morni
+ ngs\, from 7:00 am until about 10:00–11:00 am. The published rule is t
+ he first and third Sunday\, but the Sept 2026 edition ran on the second 
+ Sunday (Sept 13)\, so check the City's announcement that week..\nConfirm
+  with the host before you go.\nhttps://cycleforchange.org/rides/kigali-r
+ w-city-of-kigali-car-free-day/
+URL:https://cycleforchange.org/rides/kigali-rw-city-of-kigali-car-free-da
+ y/
+END:VEVENT
+END:VCALENDAR

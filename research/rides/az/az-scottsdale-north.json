@@ -1,0 +1,837 @@
+[
+ {
+  "slug": "scottsdale-az-scottsdale-cycling-gainey-tuesday",
+  "name": "Gainey Tuesday (Flat Route)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Scottsdale",
+  "neighborhood": "Gainey Ranch",
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday, 5:30 am, from Gainey Village (Scottsdale Rd and Doubletree Ranch Rd). Rain usually cancels it.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "5:30 am",
+  "start_hhmm": "05:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Gainey Village, Scottsdale Rd and Doubletree Ranch Rd",
+   "address": "8977 N Scottsdale Rd, Scottsdale, AZ 85253"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Fast. Rated Advanced / Flat by the club. A few crit-style sections with fast cornering, three main efforts, a KOM point and a sprint point.",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Scottsdale Cycling (Strava club)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Request to join the Strava club to see the route and any changes. Bring front and rear red lights: most of the year the ride starts in the dark. The club asks everyone to obey traffic laws, stop signs and lights. Two regroup points in Paradise Valley (Hummingbird Ln at Mockingbird Ln, then Desert Jewel Dr at N 54th St). If it's raining, it's likely cancelled.",
+  "description": "Scottsdale Cycling's Tuesday-morning road ride, rolling out of Gainey Village before sunrise. The club rates it advanced and flat. It loops quiet Paradise Valley roads at a fast pace, with a few crit-style sections and three main efforts. Same corner as the club's Thursday and Saturday rides.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/620243",
+   "meetup": null,
+   "other": [
+    "https://www.strava.com/clubs/620243/group_events/814572"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.strava.com/clubs/620243/group_events/814572",
+   "https://www.strava.com/clubs/620243"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "Scottsdale Cycling's Strava event page lists the next ride for Tue Oct 6, 2026 at 5:30 am from 8977 N Scottsdale Rd, rated Advanced / Flat (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "strava-club",
+   "watch_url": "https://www.strava.com/clubs/620243/group_events/814572",
+   "feed_url": null,
+   "notes": "The event page shows the next date without a login. The date sits in the page's embedded JSON (script id __NEXT_DATA__, event.occurrences[].occurrenceDateTime), so a plain GET can read it. The club's event list needs a login."
+  }
+ },
+ {
+  "slug": "scottsdale-az-triscottsdale-saturday-group-ride",
+  "name": "TriScottsdale Saturday Group Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Scottsdale",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday from Village Tavern. The start time follows the season and is set week by week on the club's 2026 Saturday calendar: 6:30 am in October, 7:00 am in November (7:30 on Nov 28), 7:30 am December to February, 7:00 am in March, about 6:00 am April to mid-June and in September, 5:30 am from June 20 to August 29.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "6:30 am",
+  "start_hhmm": "06:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Village Tavern",
+   "address": "8787 N Scottsdale Rd, Scottsdale, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "A group averages 19 mph. B group 15 to 17 mph. About 50 to 60 miles (the club's words).",
+  "drop_policy": "groups",
+  "host": {
+   "name": "TriScottsdale",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The club's page says 'or just show up'; its waiver is on the club's site. The start time changes with the season, so check the Saturday calendar the week you come. The calendar names the route for each Saturday (Towers, Los Gatos - Toms Thumb, 9 mile, or a 'special'). Early starts: bring lights in the darker months.",
+  "description": "TriScottsdale's Saturday road ride from the Village Tavern on Scottsdale Road. It splits into two groups: A averages 19 mph, B 15 to 17. The club's calendar posts the route and the start time for each week. Rides run about 50 to 60 miles.",
+  "links": {
+   "website": "https://triscottsdale.com/group-workouts",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://docs.google.com/spreadsheets/d/1icHTpSwPk8BtJCVjNJe_UbuF_DrIowfoVp0UIjHI9qE/edit?usp=sharing"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://triscottsdale.com/group-workouts",
+   "https://docs.google.com/spreadsheets/d/1icHTpSwPk8BtJCVjNJe_UbuF_DrIowfoVp0UIjHI9qE/edit?usp=sharing",
+   "https://docs.google.com/spreadsheets/d/1icHTpSwPk8BtJCVjNJe_UbuF_DrIowfoVp0UIjHI9qE/export?format=csv"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "TriScottsdale's 2026 Saturday ride calendar (a Google Sheet linked from its group workouts page) lists Sat Oct 3 and Sat Oct 10, 2026 at 6:30 am; the page puts the Saturday start at Village Tavern, 8787 N. Scottsdale (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://docs.google.com/spreadsheets/d/1icHTpSwPk8BtJCVjNJe_UbuF_DrIowfoVp0UIjHI9qE/edit?usp=sharing",
+   "feed_url": "https://docs.google.com/spreadsheets/d/1icHTpSwPk8BtJCVjNJe_UbuF_DrIowfoVp0UIjHI9qE/export?format=csv",
+   "notes": "The sheet is public. The CSV export (feed_url) lists every 2026 Saturday with date, conflicts, route and start time. The calendar covers 2026 only; look for a 2027 tab or a new sheet in December."
+  }
+ },
+ {
+  "slug": "scottsdale-az-triscottsdale-tuesday-flat-and-fast",
+  "name": "TriScottsdale Flat and Fast Tuesday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Scottsdale",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday, 5:35 to 7:00 am. Rolls out sharp at 5:35 from the Village Tavern parking lot.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "5:35 am",
+  "start_hhmm": "05:35",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Village Tavern parking lot",
+   "address": "8787 N Scottsdale Rd, Scottsdale, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Listed 5:35 to 7:00 am",
+  "duration_min": 85,
+  "pace": "'Fast and furious,' in the club's words. Listed as the flat ride.",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "TriScottsdale",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The club's page says 'or just show up'; its waiver is on the club's site. A pre-sunrise start most of the year, so bring front and rear lights. The page lists the ride with no dates, so check with the club before a first visit.",
+  "description": "TriScottsdale's Tuesday road ride around Paradise Valley before the sun is up. The club calls it fast and furious and says it rolls out sharp at 5:35 am from the parking lot. It's the flat one of the club's two weekday rides.",
+  "links": {
+   "website": "https://triscottsdale.com/group-workouts",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://triscottsdale.com/group-workouts",
+   "https://triscottsdale.com/sitemap.website.xml"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "TriScottsdale's group workouts page lists the Tuesday 'Flat and fast group ride', 5:35 to 7:00 am, Village Tavern, 8787 N. Scottsdale. The page shows no dates; the site's sitemap shows it was last published Feb 1, 2026 (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://triscottsdale.com/group-workouts",
+   "feed_url": null,
+   "notes": "No dates on the page. Re-read the Tuesday listing for time or place changes. The sitemap (triscottsdale.com/sitemap.website.xml) lastmod moves when the site is republished."
+  }
+ },
+ {
+  "slug": "scottsdale-az-triscottsdale-thursday-six-hill-ride",
+  "name": "TriScottsdale Six-Hill Thursday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Scottsdale",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Thursday, 5:35 to 7:20 am, from Village Tavern.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "5:35 am",
+  "start_hhmm": "05:35",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Village Tavern",
+   "address": "8787 N Scottsdale Rd, Scottsdale, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Listed 5:35 to 7:20 am",
+  "duration_min": 105,
+  "pace": "A set of short hills in a row at Hidden Hills. The club says it sometimes swaps the six hills for something else.",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "TriScottsdale",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The club's page says 'or just show up'; its waiver is on the club's site. Pre-sunrise start most of the year, so bring front and rear lights. The page lists the ride with no dates, so check with the club before a first visit.",
+  "description": "TriScottsdale's Thursday hill ride. It heads north from the Village Tavern to Hidden Hills for a set of short hills in a row. The club says every so often it exchanges the six hills for something else.",
+  "links": {
+   "website": "https://triscottsdale.com/group-workouts",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://triscottsdale.com/group-workouts",
+   "https://triscottsdale.com/sitemap.website.xml"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "TriScottsdale's group workouts page lists 'The 6 hill group ride' on Thursdays, 5:35 to 7:20 am, Village Tavern, 8787 N. Scottsdale. The page shows no dates; the site's sitemap shows it was last published Feb 1, 2026 (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://triscottsdale.com/group-workouts",
+   "feed_url": null,
+   "notes": "No dates on the page. Re-read the Thursday listing for time or place changes."
+  }
+ },
+ {
+  "slug": "scottsdale-az-cyclologic-saturday-group-ride",
+  "name": "Cyclologic Saturday Morning Group Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Scottsdale",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday, rolling at 6:30 am sharp. Usually three groups (C, B, A) plus a fastest 'Ride to the Max' group, depending on who shows up.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "6:30 am",
+  "start_hhmm": "06:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Cyclologic (the shop's page doesn't name the start place)",
+   "address": "9376 E Bahia Dr, Suite D104, Scottsdale, AZ 85260"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "C group about 15 to 17 mph, 35 to 50 miles. B group about 17 to 18 mph, 40 to 50 miles. A group about 18 to 20 mph, 40 to 50 miles. Ride to the Max 22+ mph, 50 to 60 miles. All on rolling terrain (the shop's figures).",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Cyclologic",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The page doesn't say where the ride starts. The shop is at 9376 E Bahia Dr, Suite D104, and Cyclologic's old Strava listings (2019 and 2020) gave the shop as the meeting spot; the 2020 one says the ride leaves from Cyclologic. Call the shop (480-699-5358) before your first ride. The C group is for people new to riding in groups. The shop asks riders to be on time: it tries to start rolling at 6:30 sharp.",
+  "description": "Cyclologic's Saturday shop ride. The shop calls it an alternative to the free-for-all most shop rides have become. Depending on turnout there are usually three groups: C for people new to group riding, B on rolling terrain, A faster and harder, plus a fastest Ride to the Max at 22+ mph. Rides run 35 to 60 miles.",
+  "links": {
+   "website": "https://www.cyclologic.com/shoprides",
+   "instagram": "https://www.instagram.com/cyclologic",
+   "facebook": "https://www.facebook.com/cyclologic/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.cyclologic.com/shoprides",
+   "https://www.cyclologic.com/shoprides?format=json",
+   "https://www.strava.com/clubs/465038/group_events/651519",
+   "https://www.strava.com/clubs/465038/group_events/588581"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The shop's rides page states the Saturday groups and the 6:30 am start. The page carries a 2026 copyright and was last edited June 3, 2026 (its JSON shows updatedOn); it lists no upcoming dates (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.cyclologic.com/shoprides",
+   "feed_url": null,
+   "notes": "Squarespace page: adding ?format=json shows collection.updatedOn (2026-06-03 when fetched). Re-read for time changes. The old /group-rides address is a 404; the page moved to /shoprides. Cyclologic's Strava club events are from 2019 and 2020 only."
+  }
+ },
+ {
+  "slug": "scottsdale-az-cyclologic-sunday-gravel-ride",
+  "name": "Cyclologic Sunday Gravel Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Scottsdale",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "gravel"
+  ],
+  "schedule": "Sunday mornings. The shop rolls at a different time and from a different place every week; each week's time and place is posted on its Instagram page, or call the shop. Usually an out-and-back route.",
+  "days": [
+   "sun"
+  ],
+  "time_local": null,
+  "start_hhmm": null,
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Different place each week, posted on Cyclologic's Instagram",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Out-and-back, all abilities and skill levels welcome (the shop's words). Bring enough water and calories for at least two hours.",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Cyclologic",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Gravel, mountain and cyclocross bikes only; no city or road bikes. Everyone must carry what they need to fix a flat, and the shop recommends tubeless tires with lots of traction. Check the shop's Instagram or call (480-699-5358) for that week's time and place.",
+  "description": "The Cyclologic crew's Sunday-morning gravel ride. It meets at a different time and place each week, usually runs out and back, and welcomes all abilities as long as you can fix your own flat. Gravel, mountain and cyclocross bikes are welcome.",
+  "links": {
+   "website": "https://www.cyclologic.com/shoprides",
+   "instagram": "https://www.instagram.com/cyclologic",
+   "facebook": "https://www.facebook.com/cyclologic/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.cyclologic.com/shoprides",
+   "https://www.cyclologic.com/shoprides?format=json"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The shop's rides page describes the Sunday gravel rides and says to check its Instagram or call for each week's time and place. The page carries a 2026 copyright and was last edited June 3, 2026 (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "instagram",
+   "watch_url": "https://www.instagram.com/cyclologic",
+   "feed_url": null,
+   "notes": "Each week's time and place is posted on Instagram, which doesn't load without a login. The shop's rides page (cyclologic.com/shoprides) can be re-read for edits; the page's JSON (?format=json) shows collection.updatedOn."
+  }
+ },
+ {
+  "slug": "scottsdale-az-phoenix-hiking-biking-group-tuesday-night-ride",
+  "name": "Tuesday Night Bike Ride from R.T. O'Sullivan's",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Scottsdale",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Tuesday, 7:15 to 9:15 pm, from R.T. O'Sullivan's Sports Grill. The host moved it to 7:15 because of the daytime heat. The Meetup series runs through Dec 29, 2026.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "7:15 pm",
+  "start_hhmm": "19:15",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Weekly; the Meetup series is listed through Dec 29, 2026",
+  "season_months": null,
+  "start_location": {
+   "name": "R.T. O'Sullivan's Sports Grill",
+   "address": "7919 E Thomas Rd #101, Scottsdale, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Listed 7:15 to 9:15 pm",
+  "duration_min": 120,
+  "pace": "Social ride on bike paths with regroups at Tempe Town Lake Marina, the Priest Road bridge and the Rural Road bridge.",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Phoenix Hiking, Biking and Everythinging Group (Meetup)",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "RSVP on the Meetup event. The ride runs after dark and ends around 9:15 pm, so bring lights. The host posts the route turn by turn on the event page. Meetup shows no fee.",
+  "description": "A Tuesday-night social ride from R.T. O'Sullivan's in Scottsdale. It runs the Scottsdale Greenbelt south to Tempe Town Lake, crosses the lake on the pedestrian bridge by the Tempe Center for the Arts, loops back over the Priest Road and Rural Road bridges, and finishes at the sports grill. The host moved it to 7:15 pm because of the summer heat.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/phoenix-hiking-biking-and-everythinging-group/",
+   "other": [
+    "https://www.meetup.com/phoenix-hiking-biking-and-everythinging-group/events/316479853/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.meetup.com/phoenix-hiking-biking-and-everythinging-group/events/316479853/",
+   "https://www.meetup.com/phoenix-hiking-biking-and-everythinging-group/events/ical/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The group's Meetup event page lists this ride for Tue Oct 6, 2026, 7:15 to 9:15 pm, 'every week on Tuesday until December 29, 2026'; the group's ICS feed lists each Tuesday through at least Nov 17 (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/phoenix-hiking-biking-and-everythinging-group/events/316479853/",
+   "feed_url": "https://www.meetup.com/phoenix-hiking-biking-and-everythinging-group/events/ical/",
+   "notes": "The ICS lists each Tuesday as its own event with the time in the title. The ICS has no LOCATION lines; the venue is on the event page."
+  }
+ },
+ {
+  "slug": "scottsdale-az-the-bike-lane-greenbelt-and-canal-rides",
+  "name": "The Bike Lane AZ Bike-Path Rides",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Scottsdale",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "A season of about 15 to 16 local rides on bike paths (greenbelt, canals), 2026-2027. Each ride has its own Meetup event with its own day, time and start. Season kick-off: Saturday Oct 10, 2026, social breakfast 8:00 am, ride at 9:00, El Dorado Park. Next after that: Saturday Oct 31, 11:00 am, Arizona Canal to OHSO.",
+  "days": [
+   "sat"
+  ],
+  "time_local": null,
+  "start_hhmm": null,
+  "frequency": "irregular",
+  "monthly_rule": null,
+  "season": "2026-2027 cool-weather season",
+  "season_months": null,
+  "start_location": {
+   "name": "Varies by ride. Oct 10 kick-off: El Dorado Park, behind the Aquatics Center",
+   "address": "2301 N Miller Rd, Scottsdale, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Social, easy pace, 'no one left behind' (host's words on the Oct 10 ride). The Oct 10 ride is about 45 minutes down the Greenbelt and around Tempe Town Lake.",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "The Bike Lane AZ",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "RSVP on the Meetup event; the group asks riders to accept its liability waiver (on its website) when signing up. Bike paths only: no mountain biking or singletrack. The Meetup page says no current cycling experience is needed and that many members ride e-bikes. The organizer also runs paid bike-and-boat trips through A Wild Adventure; the local rides are separate Meetup events.",
+  "description": "The Bike Lane is a Phoenix-Valley social group for leisurely rides on the greenbelt, canals and other bike paths. The 2026-2027 season opens with a kick-off breakfast and ride on Oct 10 in Scottsdale. The group says it does about 15 to 16 local rides a season and that no current cycling experience is needed.",
+  "links": {
+   "website": "https://www.awildadventure.com/the-bike-lane-az",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/groups/thebikelaneaz",
+   "strava": null,
+   "meetup": "https://www.meetup.com/the-bike-lane/",
+   "other": [
+    "https://www.meetup.com/the-bike-lane/events/316264005/"
+   ]
+  },
+  "inclusive_focus": [
+   "beginner",
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.meetup.com/the-bike-lane/events/316264005/",
+   "https://www.meetup.com/the-bike-lane/events/ical/",
+   "https://www.meetup.com/the-bike-lane/",
+   "https://www.awildadventure.com/the-bike-lane-az"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The group's Meetup feed lists a season kick-off ride for Sat Oct 10, 2026 (El Dorado Park, Scottsdale) and a Halloween canal ride for Sat Oct 31, 2026 at 11:00 am; its site says the 2026-2027 season has 15 to 16 local rides on bike paths (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/the-bike-lane/events/316264005/",
+   "feed_url": "https://www.meetup.com/the-bike-lane/events/ical/",
+   "notes": "The ICS shows only the next few events, and the local rides are mixed with the group's paid trips (Oceanside, Amsterdam, Scotland). Filter to events in the Phoenix area. The ICS has no LOCATION lines."
+  }
+ },
+ {
+  "slug": "fountain-hills-az-mcdowell-mountain-cycles-saturday-road-ride",
+  "name": "MMC Saturday Road Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Fountain Hills",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays at 6:30 am from the shop, on the dates the shop posts each month. October 2026: the 3rd, 10th and 31st. The Oct 3 ride is a longer route, a warm-up for the MS 40+ mile ride.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "6:30 am",
+  "start_hhmm": "06:30",
+  "frequency": "irregular",
+  "monthly_rule": null,
+  "season": "Dates posted month by month",
+  "season_months": null,
+  "start_location": {
+   "name": "McDowell Mountain Cycles",
+   "address": "11879 N Saguaro Blvd, Fountain Hills, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "'Fun, no drop' ride of about 30+ miles. The route is shared before roll-out.",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "McDowell Mountain Cycles",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The shop posts the dates monthly and says to follow its Facebook page to confirm weekly ride times. The route is shared before roll-out. Early start: bring lights in the darker months.",
+  "description": "McDowell Mountain Cycles' Saturday road ride out of the shop in Fountain Hills. The shop calls it a fun, no-drop ride of about 30+ miles and shares the route before roll-out. The Oct 3 ride runs longer, as a warm-up for the 40+ mile MS ride.",
+  "links": {
+   "website": "https://mcdowellmountaincycles.com/mmc-life/",
+   "instagram": "https://instagram.com/ridemmc/",
+   "facebook": "https://www.facebook.com/mcdowellmountaincycles",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://mcdowellmountaincycles.com/mmc-life/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The shop's rides page lists the MMC Road Ride for Saturdays Oct 3, 10 and 31, 2026 at 6:30 am, departing the shop, as a no-drop ride of about 30+ miles (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://mcdowellmountaincycles.com/mmc-life/",
+   "feed_url": null,
+   "notes": "The shop edits this page by hand each month with the next dates. It says to confirm weekly times on its Facebook page, which doesn't load without a login."
+  }
+ },
+ {
+  "slug": "fountain-hills-az-mcdowell-mountain-cycles-ladies-mountain-bike-ride",
+  "name": "MMC Ladies Mountain Bike Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Fountain Hills",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Posted by date; the day and time move. Next: Monday, Oct 12, 2026 at 7:00 am, rolling from the Four Peaks lot in McDowell Mountain Regional Park. The shop has listed it on other days and evenings before (a Thursday 6:30 pm ride in August 2025).",
+  "days": [
+   "mon"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "irregular",
+  "monthly_rule": null,
+  "season": "Posted by date",
+  "season_months": null,
+  "start_location": {
+   "name": "Four Peaks lot, McDowell Mountain Regional Park",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Not stated.",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "McDowell Mountain Cycles",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The shop calls it a ladies' ride and runs a Ladies Night Social at the shop (Thu Oct 1, 5 to 7 pm). Confirm each ride on the shop's Facebook page, as the shop's page asks. Bring water, and lights if the ride is after dark.",
+  "description": "McDowell Mountain Cycles' ladies' mountain bike ride in McDowell Mountain Regional Park, rolling from the Four Peaks lot. The shop lists it by date, and the day and time change: a Thursday evening in August 2025, a Monday morning on Oct 12, 2026. A shop post from 2017 describes a ladies' MTB and wine ride on Wednesday nights.",
+  "links": {
+   "website": "https://mcdowellmountaincycles.com/mmc-life/",
+   "instagram": "https://instagram.com/ridemmc/",
+   "facebook": "https://www.facebook.com/mcdowellmountaincycles",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "wtf"
+  ],
+  "sources": [
+   "https://mcdowellmountaincycles.com/mmc-life/",
+   "https://cm.fhchamber.com/events/details/mcdowell-mountain-cycles-august-group-rides-49986",
+   "https://mcdowellmountaincycles.com/join-mmc-adventures/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The shop's rides page lists the Ladies Mountain Bike Ride for Monday Oct 12, 2026 at 7:00 am from the Four Peaks lot (fetched Sept 30, 2026). A Fountain Hills Chamber listing shows a 'Dirty Thursday Ladies MTB Ride' on Aug 21, 2025 from the same lot.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://mcdowellmountaincycles.com/mmc-life/",
+   "feed_url": null,
+   "notes": "The shop edits this page by hand each month. Medium because the page lists one date and the recurrence comes from earlier listings (Aug 2025 chamber listing, 2017 shop post)."
+  }
+ },
+ {
+  "slug": "cave-creek-az-dfmba-saturday-group-rides",
+  "name": "DFMBA Saturday Group Rides",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Cave Creek",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Every Saturday. 6:30 am in summer, 8:00 am in winter (the site doesn't say when the switch happens). The trailhead rotates; DFMBA's site links its Facebook page for this ride.",
+  "days": [
+   "sat"
+  ],
+  "time_local": null,
+  "start_hhmm": null,
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Rotating trailheads on the local trail network; see DFMBA's Facebook page",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Rides for all skill levels (the association's words).",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Desert Foothills Mountain Bike Association (DFMBA)",
+   "type": "club"
+  },
+  "founded_year": 2010,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The trailhead changes, so check DFMBA's Facebook page before you go. The site gives a summer time (6:30 am) and a winter time (8:00 am) but not the switch date, so confirm which applies. Bring more water than you think.",
+  "description": "DFMBA's weekly Saturday trail ride. It rotates between trailheads so riders see the local network, and the association says it's for all skill levels and a way to meet new riders. It rolls at 6:30 am in summer and 8:00 am in winter. DFMBA is the Cave Creek-area mountain bike association and an IMBA chapter.",
+  "links": {
+   "website": "https://www.dfmba.org/events",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/DFMBA/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.dfmba.org/events",
+   "https://www.dfmba.org/_data/events.json",
+   "https://www.dfmba.org/js/content.js"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "DFMBA's events page builds its 'Trail Days & Rides' list from a data file on the same site; the file lists 'Saturday Group Rides, Weekly, Saturdays, 6:30 AM (summer) / 8:00 AM (winter), Rotating Trailheads'. The same page carries 2026 items: the Nov 14, 2026 Cave Creek Cactus Classic and a trail-work note updated July 2026 (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.dfmba.org/events",
+   "feed_url": null,
+   "notes": "The page renders https://www.dfmba.org/_data/events.json in the browser, so a plain GET of the HTML won't show the ride; read the JSON instead. The ride entry has no date. Each week's trailhead is on DFMBA's Facebook page, which doesn't load without a login."
+  }
+ }
+]

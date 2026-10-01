@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:phoenix-az-city-of-phoenix-silent-sunday-south-mountain@cycleforchang
+ e.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Phoenix:20261004T050000
+DTEND;TZID=America/Phoenix:20261004T070000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270227T235959Z
+SUMMARY:Silent Sunday at South Mountain — Phoenix\, AZ
+LOCATION:South Mountain Park/Preserve\, Summit Road. Drivers park at the 
+ Activity Complex.
+DESCRIPTION:Schedule: Every Sunday the park's main road\, Summit Road\, c
+ loses to cars. 4th Sunday of the month: all day\, 5 am to 7 pm. 1st\, 2n
+ d\, 3rd and 5th Sundays: 5 am to 10 am\, with the road closed at the 1.0
+  mile marker..\nConfirm with the host before you go.\nhttps://cycleforch
+ ange.org/rides/phoenix-az-city-of-phoenix-silent-sunday-south-mountain/
+URL:https://cycleforchange.org/rides/phoenix-az-city-of-phoenix-silent-su
+ nday-south-mountain/
+END:VEVENT
+END:VCALENDAR

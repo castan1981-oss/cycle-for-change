@@ -1,0 +1,872 @@
+[
+ {
+  "slug": "peoria-az-west-valley-casual-bike-rides-bear-claw-ride",
+  "name": "Bear Claw Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Peoria",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every other Sunday, 6:30 am, from Rio Vista Community Park. Next rides: Oct 4 and Oct 18, 2026. It alternates Sundays with the Stadium Ride.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "6:30 am",
+  "start_hhmm": "06:30",
+  "frequency": "biweekly",
+  "monthly_rule": null,
+  "season": "Meetup series runs to Jan 30, 2028",
+  "season_months": null,
+  "start_location": {
+   "name": "Rio Vista Community Park",
+   "address": "8866 W Thunderbird Rd, Peoria, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": 10,
+  "duration": "Listed as 3 hours with the bakery stop",
+  "duration_min": 180,
+  "pace": "Average 10 to 13 mph. The host calls it a strictly social ride and very casual.",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "West Valley Casual Bike Rides (Meetup group)",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Helmets are required. The group won't let you ride without one. Sign the waiver (link on the Meetup event) and RSVP on Meetup. If you RSVP and can't come, un-RSVP so a ride leader isn't left waiting. Bring plenty of water.",
+  "description": "A short, slow Sunday ride out of Rio Vista Community Park in Peoria. The group rides about 6 miles to a bakery, eats and talks over coffee, then rides 4 miles back. The host calls it strictly social and very casual, at 10 to 13 mph. It alternates Sundays with the faster Stadium Ride.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/west-valley-casual-bike-rides/",
+   "other": [
+    "https://www.meetup.com/west-valley-casual-bike-rides/events/316553007/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.meetup.com/west-valley-casual-bike-rides/events/",
+   "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The group's Meetup events page lists the next two rides, Sun Oct 4 and Sun Oct 18, 2026, at 6:30 am from Rio Vista Community Park. The group's calendar feed carries the Oct 4 ride (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/",
+   "feed_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/",
+   "notes": "The feed holds only the next ten events for the whole group, so this ride shows up in it about a week ahead. The events page lists further out."
+  }
+ },
+ {
+  "slug": "peoria-az-west-valley-casual-bike-rides-stadium-ride",
+  "name": "Stadium Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Peoria",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every other Sunday, 6:30 am, from Rio Vista Community Park. Next rides: Oct 11 and Oct 25, 2026. About 10 miles out to a Carls Jr for breakfast, then 10 back. It alternates Sundays with the Bear Claw Ride.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "6:30 am",
+  "start_hhmm": "06:30",
+  "frequency": "biweekly",
+  "monthly_rule": null,
+  "season": "Meetup series runs to Jan 2, 2027",
+  "season_months": null,
+  "start_location": {
+   "name": "Rio Vista Community Park",
+   "address": "8866 W Thunderbird Rd, Peoria, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": 20,
+  "duration": null,
+  "duration_min": null,
+  "pace": "11 to 20+ mph, \"depending on how spicy we're feeling\". The host says it is a bit faster and farther than the group's beginner rides.",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "West Valley Casual Bike Rides (Meetup group)",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Helmets are required, and you sign the waiver and RSVP on Meetup, same as the group's other rides. Bring plenty of water. The host says that if you struggle to keep up the group slows down, and if you need to turn back a leader rides back with you.",
+  "description": "A Sunday road ride from Rio Vista Community Park in Peoria. It goes 10 miles out to a Carls Jr for breakfast, then 10 miles back. The host says it is a bit faster and farther than the group's beginner rides, at 11 to 20+ mph, and that it is a no-drop group.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/west-valley-casual-bike-rides/",
+   "other": [
+    "https://www.meetup.com/west-valley-casual-bike-rides/events/316649744/"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.meetup.com/west-valley-casual-bike-rides/events/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-27",
+  "evidence": "The group's Meetup events page lists the Sun Sept 27 Stadium Ride as past (7 RSVPs) and the next two, Sun Oct 11 and Sun Oct 25, at 6:30 am from Rio Vista Community Park (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/",
+   "feed_url": null,
+   "notes": "The group's feed holds only the next ten events for the whole group, so this ride shows up there about a week ahead. Use the events page."
+  }
+ },
+ {
+  "slug": "surprise-az-west-valley-casual-bike-rides-dirty-gravel-mtb-rides",
+  "name": "Dirty Gravel/MTB Rides",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Surprise",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "mtb",
+   "gravel"
+  ],
+  "schedule": "Every other Saturday, 7:00 am. The start moves each time and is posted on the Meetup event. Oct 10: Sun Valley Trailhead, Surprise. Oct 24: Apache Wash Trailhead, Phoenix. The Sept 26 ride was at Tres Rios Wetlands.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "biweekly",
+  "monthly_rule": null,
+  "season": "Dirty season: every 2 weeks from Aug 29, 2026. Meetup series runs to June 26, 2027",
+  "season_months": null,
+  "start_location": {
+   "name": "Moves every ride. Oct 10: Sun Valley Trailhead, Surprise. Oct 24: Apache Wash Trailhead, 1600 E Sonoran Desert Dr, Phoenix.",
+   "address": "19103 N Crozier Rd, Surprise, AZ 85388"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Listed as 3 hours",
+  "duration_min": 180,
+  "pace": "As short as 4 miles or as long as the group wants to ride. Hard-pack trails, some soft sand, and a canal path (or not), per the Oct 10 listing.",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "West Valley Casual Bike Rides (Meetup group)",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The start changes every ride, so read the Meetup event the week of. Helmets are required, and you sign the waiver and RSVP on Meetup. Bring water. The host says to bring a mountain bike, a gravel bike or a cruiser.",
+  "description": "An every-other-Saturday off-road ride around the West Valley and north Phoenix. The leaders pick a different trailhead each time and post it on the Meetup event. Expect hard-pack trails, some soft sand and canal paths, as short as 4 miles or longer if the group wants. The host says to bring a mountain bike, a gravel bike or a cruiser.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/west-valley-casual-bike-rides/",
+   "other": [
+    "https://www.meetup.com/west-valley-casual-bike-rides/events/316636011/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.meetup.com/west-valley-casual-bike-rides/events/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-26",
+  "evidence": "The group's Meetup events page lists the Sept 26 ride (Tres Rios Wetlands) as past and the next two, Sat Oct 10 (Sun Valley Trailhead, Surprise) and Sat Oct 24 (Apache Wash Trailhead), both at 7:00 am (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/",
+   "feed_url": null,
+   "notes": "Each ride posts its own start. The group's feed shows a ride only in the last ten days or so before it."
+  }
+ },
+ {
+  "slug": "sun-city-az-sun-city-cycling-club-tuesday-casual-ride",
+  "name": "Tuesday Casual Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Sun City",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Tuesday from the Sundial Recreation Center parking lot. Start time changes by month: Jan, Feb and Dec 9:00 am. March 9:00, then 8:00. Apr, Oct and Nov 8:00 am. May and Sep 7:00 am. Jun, Jul and Aug 6:00 am. Rain cancels it.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Sundial Recreation Center parking lot, Sun City (northeast corner of 103rd Ave and Boswell Blvd)",
+   "address": "14801 N 103rd Ave, Sun City, AZ 85351"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "An average pace everyone is comfortable riding. The distance is set by who shows up.",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Sun City Cycling Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Guests are always welcome. A guest is covered by the club's insurance on the first ride only, then the club asks you to join. Everyone signs that day's waiver. A certified helmet is required, and lights are strongly encouraged. Class 2 and throttle e-bikes are not allowed. Rain at the start cancels the ride, and the club posts cancellations on its home page. The week's route, and any coffee or breakfast stop, is on the club's RideWithGPS calendar.",
+  "description": "The Sun City Cycling Club's Tuesday ride, which the club calls its casual ride. The group rides at a pace everyone is comfortable with, and the distance depends on who shows up. Routes use trails, streets with bike lanes and low-traffic residential streets. Some Tuesdays include a coffee or breakfast stop. The club says beginners are welcome and the ride is no-drop.",
+  "links": {
+   "website": "https://suncitycycling.com/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://suncitycycling.com/schedule.html",
+    "https://ridewithgps.com/clubs/6598-sun-city-cycling-club-of-arizona/events",
+    "https://suncitycycling.com/Club/Policies%20and%20guidelines.pdf"
+   ]
+  },
+  "inclusive_focus": [
+   "beginner",
+   "no-drop"
+  ],
+  "sources": [
+   "https://suncitycycling.com/schedule.html",
+   "https://ridewithgps.com/organizations/6598-sun-city-cycling-club-of-arizona/calendar.ics",
+   "https://ridewithgps.com/clubs/6598-sun-city-cycling-club-of-arizona/events",
+   "https://suncitycycling.com/Club/Policies%20and%20guidelines.pdf"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-22",
+  "evidence": "The club's RideWithGPS calendar lists Tuesday rides for Oct 6, 13, 20 and 27, 2026 at 8:00 am, and its schedule page gives 8:00 am for October. The Sept 22 ride is listed as a normal ride. The Sept 29 entry says the ride was cancelled and breakfast still went ahead (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ridewithgps",
+   "watch_url": "https://ridewithgps.com/clubs/6598-sun-city-cycling-club-of-arizona/events",
+   "feed_url": "https://ridewithgps.com/organizations/6598-sun-city-cycling-club-of-arizona/calendar.ics",
+   "notes": "The club's calendar feed shows the next rides with the leader's route. The schedule page holds the month-by-month start times (its Last-Modified header reads Sept 3, 2026)."
+  }
+ },
+ {
+  "slug": "sun-city-az-sun-city-cycling-club-thursday-ride",
+  "name": "Thursday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Sun City",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Thursday from the Sundial Recreation Center parking lot, weather permitting. Start time changes by month: Jan, Feb and Dec 9:00 am. March 9:00, then 8:00. Apr, Oct and Nov 8:00 am. May and Sep 7:00 am. Jun and Aug 6:00 am. Jul 5:30 am. The first Thursday of the month starts somewhere else, posted on the club calendar.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Sundial Recreation Center parking lot, Sun City (northeast corner of 103rd Ave and Boswell Blvd). First Thursdays start elsewhere: Oct 1 is the parking garage across from Spitz Mediterranean Restaurant, north end of Globe Drive.",
+   "address": "14801 N 103rd Ave, Sun City, AZ 85351"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "30 to 50+ miles depending on the time of year. Average 13 to 15 mph on the club's schedule page, and 12.5 to 13.5 mph in the RideWithGPS event text. The club says average means some stretches slower and some faster.",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Sun City Cycling Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Guests are always welcome. A guest is covered by the club's insurance on the first ride only, then the club asks you to join. Everyone signs that day's waiver. A certified helmet is required, and lights are strongly encouraged. Class 2 and throttle e-bikes are not allowed. Rain at the start cancels the ride, and the club posts cancellations on its home page. The club calls Thursday more serious than the Tuesday ride and asks you to keep its pace guide in mind. Each ride's route and leader are on the club's RideWithGPS calendar.",
+  "description": "The Sun City Cycling Club's Thursday ride: 30 to 50+ miles at an average of about 13 to 15 mph. The club calls it more serious than the Tuesday ride, and says the group stays together. It leaves from the Sundial Recreation Center, except on the first Thursday of the month, when it starts somewhere else.",
+  "links": {
+   "website": "https://suncitycycling.com/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://suncitycycling.com/schedule.html",
+    "https://ridewithgps.com/clubs/6598-sun-city-cycling-club-of-arizona/events",
+    "https://suncitycycling.com/Club/Policies%20and%20guidelines.pdf"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://suncitycycling.com/schedule.html",
+   "https://ridewithgps.com/organizations/6598-sun-city-cycling-club-of-arizona/calendar.ics",
+   "https://ridewithgps.com/clubs/6598-sun-city-cycling-club-of-arizona/events",
+   "https://suncitycycling.com/Club/Policies%20and%20guidelines.pdf"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-24",
+  "evidence": "The club's RideWithGPS calendar lists Thursday rides for Sept 24 (7:00 am), Oct 1 (first Thursday, 8:00 am, from a parking garage near Spitz Mediterranean Restaurant), and Oct 8, 15, 22 and 29 at 8:00 am. The club's schedule page gives 8:00 am for October and calls the ride no-drop (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ridewithgps",
+   "watch_url": "https://ridewithgps.com/clubs/6598-sun-city-cycling-club-of-arizona/events",
+   "feed_url": "https://ridewithgps.com/organizations/6598-sun-city-cycling-club-of-arizona/calendar.ics",
+   "notes": "The calendar feed shows each Thursday's start, which differs on the first Thursday of the month. The schedule page holds the month-by-month start times."
+  }
+ },
+ {
+  "slug": "peoria-az-southwest-bicycles-cycling-club-friday-show-and-go",
+  "name": "All Levels: Show & Go",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Peoria",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Friday from the SouthWest Bicycles back lot. 7:00 am since Sept 25. The club's calendar has run it at 5:30 or 6:00 am from July to early September and 6:30 am on Sept 18. The calendar shows July 17 cancelled for rain.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "SouthWest Bicycles, in the back lot",
+   "address": "19027 N 83rd Ave #2, Peoria, AZ 85382"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "All levels. The leader says you show up and the group works out where to go, and the posted routes are just a suggestion. The club's ride key says all rides are no-drop.",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "SouthWest Bicycles Cycling Club (SWBCC)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "First-time guests can ride once and are covered by the club's insurance. Non-members sign a waiver each time. After one guest ride you must join the club. A helmet is required. The ride leader posts each week's details on the club's RideWithGPS calendar.",
+  "description": "The SouthWest Bicycles Cycling Club's Friday morning road ride for every level, out of the shop's back lot in Peoria. There is no fixed route. The leader says you show up and the group works out where to go, and the posted routes are only a suggestion. The club says all its rides are no-drop.",
+  "links": {
+   "website": "https://swbcc.clubexpress.com/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://ridewithgps.com/organizations/14-southwest-bicycles-cycling-club",
+    "https://ridewithgps.com/events/504920-all-levels-show-go"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://ridewithgps.com/organizations/14-southwest-bicycles-cycling-club/calendar.ics",
+   "https://ridewithgps.com/events/504920-all-levels-show-go",
+   "https://swbcc.clubexpress.com/docs.ashx?id=1399215",
+   "https://swbcc.clubexpress.com/docs.ashx?id=697420",
+   "https://swbcc.clubexpress.com/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-25",
+  "evidence": "The club's RideWithGPS calendar lists All Levels: Show & Go on most Fridays since June, including Sept 25 and Oct 2, 2026 at 7:00 am. The Oct 2 event page puts the start at SouthWest Bicycles, 19027 N 83rd Ave #2, Peoria, in the back lot (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ridewithgps",
+   "watch_url": "https://ridewithgps.com/organizations/14-southwest-bicycles-cycling-club",
+   "feed_url": "https://ridewithgps.com/organizations/14-southwest-bicycles-cycling-club/calendar.ics",
+   "notes": "The feed shows each Friday's start time, which the club moves with the heat. It also lists the club's other rides."
+  }
+ },
+ {
+  "slug": "peoria-az-southwest-bicycles-cycling-club-sunday-c-ride",
+  "name": "Sunday C Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Peoria",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Most Sundays, 6:30 am (6:00 am through Sept 20). The start changes: SouthWest Bicycles back lot on Sept 6 and Sept 27, the Fry's at Norterra on Sept 13, the Starbucks at Bell and Citrus on Sept 20, and the Panera Bread at 9918 W Happy Valley Rd on Oct 4. The leader posts each week's start on the club's RideWithGPS calendar. B and D rides run on Sundays too.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "6:30 am",
+  "start_hhmm": "06:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Changes each week. Often the SouthWest Bicycles back lot. Oct 4: Panera Bread, 9918 W Happy Valley Rd, Peoria.",
+   "address": "19027 N 83rd Ave #2, Peoria, AZ 85382"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "C ride on the club's key: brisk, 14 to 16 mph average, social but with the emphasis on riding, with a rest stop every 15 to 20 miles. Listed Sunday C rides run 26 to 29 miles.",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "SouthWest Bicycles Cycling Club (SWBCC)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "First-time guests can ride once and are covered by the club's insurance. Non-members sign a waiver each time. After one guest ride you must join the club. A helmet is required. Leaders ask you to arrive early and be ready to roll on time. The club's own key calls C a good choice for experienced group riders.",
+  "description": "The SouthWest Bicycles Cycling Club's Sunday road ride at C pace: 26 to 29 miles at about 14 to 16 mph, with a rest stop. The start changes from week to week around Peoria and the north Valley, and the leader posts it on the club calendar. Riders often stay for coffee after. The club says all its rides are no-drop.",
+  "links": {
+   "website": "https://swbcc.clubexpress.com/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://ridewithgps.com/organizations/14-southwest-bicycles-cycling-club",
+    "https://ridewithgps.com/events/505118-swb-c-ride-26-miles-vistancia"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://ridewithgps.com/organizations/14-southwest-bicycles-cycling-club/calendar.ics",
+   "https://ridewithgps.com/events/505118-swb-c-ride-26-miles-vistancia",
+   "https://swbcc.clubexpress.com/docs.ashx?id=1399215",
+   "https://swbcc.clubexpress.com/docs.ashx?id=697420",
+   "https://swbcc.clubexpress.com/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": "2026-09-27",
+  "evidence": "The club's RideWithGPS calendar lists a C ride on most Sundays since mid-August, including Sept 27 (6:30 am, SouthWest Bicycles back lot) and Oct 4 (6:30 am, Panera Bread, 9918 W Happy Valley Rd, Peoria). The Oct 4 event page gives 26 miles to Vistancia (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ridewithgps",
+   "watch_url": "https://ridewithgps.com/organizations/14-southwest-bicycles-cycling-club",
+   "feed_url": "https://ridewithgps.com/organizations/14-southwest-bicycles-cycling-club/calendar.ics",
+   "notes": "The leader posts each Sunday's start place by midweek. The feed carries it, along with B and D rides on the same day."
+  }
+ },
+ {
+  "slug": "goodyear-az-west-valley-cycle-saturday-group-ride",
+  "name": "Saturday Group Ride (A and B)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Goodyear",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday. Main ride 6:30 am from the Red Robin on McDowell Road, with optional early miles (15) at 5:30 am. The club says times can change with weather and sunrise. Details are posted every Friday on the club's Facebook group. The C and Delta groups post their own start and time there each Friday.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "6:30 am",
+  "start_hhmm": "06:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Red Robin, Goodyear (all of the club's rides start here)",
+   "address": "14551 W McDowell Rd, Goodyear, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "A and B groups. First regroup at the Safeway in Estrella Mountain about 1.2 hours after the start.",
+  "drop_policy": "groups",
+  "host": {
+   "name": "West Valley Cycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": "The club's home page says its community has been riding together for over 24 years.",
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "No permits, no insurance, no dues. The club says you ride at your own risk. Its core values include welcoming all new riders. The 5:30 am early miles start before sunrise, so bring lights. The club's Facebook group has the real details each Friday. The site links only to Facebook's home page, so ask the club contact (on its contact page) for the group.",
+  "description": "West Valley Cycle's Saturday road ride from the Red Robin in Goodyear. The A and B groups offer a 40-mile half ride or a 62-mile full ride, with a first regroup at the Safeway in Estrella Mountain. Optional early miles start an hour before the main ride. C and Delta groups ride the same day and post their own start and time on Facebook.",
+  "links": {
+   "website": "http://westvalleycycle.net/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "http://westvalleycycle.net/general/",
+    "http://westvalleycycle.net/contact/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "http://westvalleycycle.net/",
+   "http://westvalleycycle.net/general/",
+   "http://westvalleycycle.net/contact/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The club's Weekly Rides page lists the Saturday A and B ride at 6:30 am from Red Robin, with early miles at 5:30 am. The server copy of the page is stamped Tue Sept 29, 2026 (Last-Modified header and a page-render comment), but the page shows no ride dates (fetched Sept 30, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "http://westvalleycycle.net/general/",
+   "feed_url": null,
+   "notes": "The page has no dated entries, so watch its Last-Modified header. The weekly details go on the club's Facebook group each Friday, which doesn't load without a login. The site answers on http only."
+  }
+ },
+ {
+  "slug": "goodyear-az-west-valley-cycle-wednesday-happy-ride",
+  "name": "Wednesday Happy Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Goodyear",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Wednesday from the Red Robin on McDowell Road in Goodyear. The start time is posted on the club's Facebook group the day before. The route changes every week and the group rides back downwind to Red Robin.",
+  "days": [
+   "wed"
+  ],
+  "time_local": null,
+  "start_hhmm": null,
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Red Robin, Goodyear (all of the club's rides start here)",
+   "address": "14551 W McDowell Rd, Goodyear, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "The club calls it a mid-week ride that stays together.",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "West Valley Cycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": "The club's home page says its community has been riding together for over 24 years.",
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "No permits, no insurance, no dues. The club says you ride at your own risk. The start time is only on the club's Facebook group, posted the day before, so ask the club contact (on its contact page) how to get in. Bring water and lights if it's dark at the start.",
+  "description": "West Valley Cycle's mid-week ride. It picks a different route each week and stays together, with a downwind ride back to the Red Robin in Goodyear. The club calls it the perfect mid-week happy ride.",
+  "links": {
+   "website": "http://westvalleycycle.net/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "http://westvalleycycle.net/general/",
+    "http://westvalleycycle.net/contact/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "http://westvalleycycle.net/",
+   "http://westvalleycycle.net/general/",
+   "http://westvalleycycle.net/contact/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The club's Weekly Rides page lists the Wednesday Happy Ride from Red Robin and says the start time is posted on Facebook the day before. The server copy of the page is stamped Tue Sept 29, 2026, but the page shows no ride dates and no time (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "http://westvalleycycle.net/general/",
+   "feed_url": null,
+   "notes": "The page can't confirm a given week. Day-of details are on the club's Facebook group, which doesn't load without a login."
+  }
+ },
+ {
+  "slug": "goodyear-az-west-valley-cycle-sunday-recovery-ride",
+  "name": "Sunday Recovery Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Goodyear",
+  "neighborhood": null,
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Sunday from the Red Robin on McDowell Road in Goodyear. The start time is posted on the club's Facebook group the day before. A set 35-mile loop with a refuel stop in Verrado.",
+  "days": [
+   "sun"
+  ],
+  "time_local": null,
+  "start_hhmm": null,
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Red Robin, Goodyear (all of the club's rides start here)",
+   "address": "14551 W McDowell Rd, Goodyear, AZ"
+  },
+  "distance_km": null,
+  "distance_miles": 35,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Recovery pace on a set 35-mile loop. Some riders push the second half and the group lets them go.",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "West Valley Cycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": "The club's home page says its community has been riding together for over 24 years.",
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "No permits, no insurance, no dues. The club says you ride at your own risk. The start time is only on the club's Facebook group, posted the day before, so ask the club contact (on its contact page) how to get in. Bring water.",
+  "description": "West Valley Cycle's easy Sunday ride: a set 35-mile loop at recovery pace, with a stop in Verrado to refuel. Riders who want to push the second half are let go, and the group enjoys the downhill ride back to the Red Robin in Goodyear.",
+  "links": {
+   "website": "http://westvalleycycle.net/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "http://westvalleycycle.net/general/",
+    "http://westvalleycycle.net/contact/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "http://westvalleycycle.net/",
+   "http://westvalleycycle.net/general/",
+   "http://westvalleycycle.net/contact/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The club's Weekly Rides page lists the Sunday Recovery Ride as a set 35-mile loop with a Verrado stop and says the start time is posted on Facebook the day before. The server copy of the page is stamped Tue Sept 29, 2026, but the page shows no ride dates and no time (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "http://westvalleycycle.net/general/",
+   "feed_url": null,
+   "notes": "The page can't confirm a given week. Day-of details are on the club's Facebook group, which doesn't load without a login."
+  }
+ },
+ {
+  "slug": "phoenix-az-city-of-phoenix-silent-sunday-south-mountain",
+  "name": "Silent Sunday at South Mountain",
+  "name_en": null,
+  "kind": "open-streets",
+  "status": "active",
+  "city": "Phoenix",
+  "neighborhood": "South Mountain Park/Preserve",
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Phoenix",
+  "discipline": [
+   "social",
+   "road"
+  ],
+  "schedule": "Every Sunday the park's main road, Summit Road, closes to cars. 4th Sunday of the month: all day, 5 am to 7 pm. 1st, 2nd, 3rd and 5th Sundays: 5 am to 10 am, with the road closed at the 1.0 mile marker.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "5:00 am",
+  "start_hhmm": "05:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "South Mountain Park/Preserve, Summit Road. Drivers park at the Activity Complex.",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Road closed 5 am to 10 am; 4th Sundays 5 am to 7 pm",
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "City of Phoenix Parks and Recreation",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "This is a closed road, not a led ride. The city page lists no sign-up. Vehicles must turn into the Activity Complex and park there. City staff, tower workers and emergency vehicles may be on the road at any time. Park and entrance hours are 5 a.m. to 7 p.m.",
+  "description": "South Mountain's main road, Summit Road, closes to cars on Sundays and is reserved for walking, cycling, jogging and hiking. On the 4th Sunday of the month the closure lasts all day, 5 am to 7 pm. On the other Sundays it runs 5 am to 10 am and stops at the 1.0 mile marker. Riders and walkers share the road.",
+  "links": {
+   "website": "https://www.phoenix.gov/administration/departments/parks/activities-facilities/trails/south-mountain-parkpreserve.html",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.phoenix.gov/administration/departments/parks/activities-facilities/trails/south-mountain-parkpreserve.html",
+   "https://bullshifters.org/upcoming-bull-shifter-rides-club-events/"
+  ],
+  "verified_on": "2026-09-30",
+  "last_seen": null,
+  "evidence": "The City's South Mountain page describes Silent Sunday: Summit Road closed to cars on Sundays, all day on 4th Sundays and 5 to 10 am on the others. Nothing on the page is dated after April 2026. Its dated notes are a Saturday, Feb 21 closure and an alert for Sept 2 to 18 with no year. The Bullshifters rides page (October 2026) also says Silent Sunday rides leave on the 4th Sunday of each month (fetched Sept 30, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.phoenix.gov/administration/departments/parks/activities-facilities/trails/south-mountain-parkpreserve.html",
+   "feed_url": null,
+   "notes": "The page is a general description with no dated entry for a given Sunday. Watch it for changes to the hours. Re-read the closure line each fall."
+  }
+ }
+]

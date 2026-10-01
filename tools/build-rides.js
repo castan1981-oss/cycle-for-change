@@ -52,6 +52,8 @@ const OG_IMAGE = `${SITE}/og-cfc.png`;
 const METRO_RADIUS = 25;   // miles — a city hub covers rides within this radius
 const METRO_MIN = 3;       // rides needed before a city gets its own hub
 const HUB_GAP = 15;        // miles — two hubs can't sit closer than this (Miami + Fort Lauderdale both survive; suburbs don't)
+const OWN_MIN = 8;         // …unless the city has this many rides of its own (Scottsdale beside Phoenix)
+const OWN_GAP = 6;         // miles — and sits at least this far from every other hub
 
 const STATE_NAMES = {
   AL:"Alabama",AK:"Alaska",AZ:"Arizona",AR:"Arkansas",CA:"California",CO:"Colorado",CT:"Connecticut",
@@ -177,16 +179,19 @@ function nthWeekdayOfMonth(y, mo, dow, ord) {   // dow 0..6, ord 1..4 or -1
   const lastDay = new Date(Date.UTC(y, mo, 0)); const back = (lastDay.getUTCDay() - dow + 7) % 7; return lastDay.getUTCDate() - back;
 }
 // Next occurrence as a Date, or null when the schedule can't be computed
+const ymdOf = (y, mo, d) => `${y}-${String(mo).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+const localYmd = (date, tz) => { const p = partsIn(date, tz); return ymdOf(p.year, p.month, p.day); };
 function nextOccurrence(r, from = NOW) {
   if (!r.start_hhmm || !r.tz || r.frequency === "irregular") return null;
-  const [hh, mm] = r.start_hhmm.split(":").map(Number);
+  // the time in force on that day: start_hhmm, or the host's table of changes (start_times, S.startOn)
+  const at = (y, mo, d) => { const [hh, mm] = S.startOn(r, ymdOf(y, mo, d)).split(":").map(Number); return zoned(y, mo, d, hh, mm, r.tz); };
   const p = partsIn(from, r.tz);
   const y0 = p.year, mo0 = p.month, d0 = p.day;
   if (r.monthly_rule && r.monthly_rule.length) {
     for (let k = 0; k < 4; k++) {
       let y = y0, mo = mo0 + k; while (mo > 12) { mo -= 12; y += 1; }
       const cands = r.monthly_rule.map((m) => nthWeekdayOfMonth(y, mo, DAY_IDX[m.day], m.ord)).sort((a, b) => a - b);
-      for (const d of cands) { const t = zoned(y, mo, d, hh, mm, r.tz); if (t > from && inSeason(mo, r.season_months)) return t; }
+      for (const d of cands) { const t = at(y, mo, d); if (t > from && inSeason(mo, r.season_months)) return t; }
     }
     return null;
   }
@@ -195,7 +200,7 @@ function nextOccurrence(r, from = NOW) {
   for (let k = 0; k < 400; k++) {
     const dt = new Date(Date.UTC(y0, mo0 - 1, d0 + k));
     if (!want.has(dt.getUTCDay())) continue;
-    const t = zoned(dt.getUTCFullYear(), dt.getUTCMonth() + 1, dt.getUTCDate(), hh, mm, r.tz);
+    const t = at(dt.getUTCFullYear(), dt.getUTCMonth() + 1, dt.getUTCDate());
     if (t > from && inSeason(dt.getUTCMonth() + 1, r.season_months)) return t;
   }
   return null;
@@ -217,12 +222,14 @@ function dayPhrase(r) {
   const names = r.days.map((d) => DAY_LONG[d]);
   if (r.monthly_rule && r.monthly_rule.length) return r.monthly_rule.map((m) => `${ORD_WORD[m.ord]} ${DAY_LONG[m.day]}`).join(" and ") + " of the month";
   if (!names.length) return null;
+  if (r.frequency === "irregular") return "Some " + names.map((n) => n + "s").join(" and ");   // posted date by date: never "Every Monday"
   if (r.frequency === "biweekly") return "Every other " + names.join(" and ");
   if (r.frequency === "monthly") return "Monthly, on a " + names[0];
   if (names.length === 1) return "Every " + names[0];
   return names.map((n) => n + "s").join(" and ");
 }
 function shortWhen(r) {   // for <title>: "Tuesdays 8:30 pm" / "2nd Wednesdays" / "Last Fridays"
+  if (r.frequency === "irregular") return null;
   const t = fmtTime(r.start_hhmm);
   if (r.monthly_rule && r.monthly_rule.length) {
     const m = r.monthly_rule[0]; const o = { 1:"1st", 2:"2nd", 3:"3rd", 4:"4th", "-1":"Last" }[m.ord];
@@ -232,7 +239,9 @@ function shortWhen(r) {   // for <title>: "Tuesdays 8:30 pm" / "2nd Wednesdays" 
   if (r.days.length > 1) return r.days.map((d) => DAY_LONG[d].slice(0, 3)).join("/") + (t ? " " + t : "");
   return null;
 }
-function rrule(r) {
+// UNTIL for a rule: the season's end or the hide date, whichever is first; "YYYYMMDDTHHMMSSZ" or null
+const utcStamp = (date) => date.toISOString().replace(/[-:]/g, "").slice(0, 15) + "Z";
+function rrule(r, cap = null) {
   if (r.frequency === "irregular") return null;
   let rule;
   if (r.monthly_rule && r.monthly_rule.length) rule = "FREQ=MONTHLY;BYDAY=" + r.monthly_rule.map((m) => `${m.ord}${DAY_ICS[m.day]}`).join(",");
@@ -254,31 +263,53 @@ function rrule(r) {
     const hide = d.toISOString().slice(0, 10).replace(/-/g, "");
     if (!until || hide < until) until = hide;
   }
-  if (until) rule += `;UNTIL=${until}T235959Z`;
+  let stamp = until ? `${until}T235959Z` : null;
+  if (cap && (!stamp || cap < stamp)) stamp = cap;   // a start-time change ends this rule (periodsOf)
+  if (stamp) rule += `;UNTIL=${stamp}`;
   return rule;
+}
+// One calendar rule per start time: a ride whose host publishes a table of start-time changes
+// (start_times) gets one VEVENT per stretch, each ending the second before the next change.
+function periodsOf(r, next) {
+  const base = rrule(r);
+  if (!base || !next) return [];
+  const changes = (Array.isArray(r.start_times) ? r.start_times : []).filter((e) => e.from > localYmd(next, r.tz));
+  const midnight = (ymd) => zoned(+ymd.slice(0, 4), +ymd.slice(5, 7), +ymd.slice(8, 10), 0, 0, r.tz);
+  const stretches = [{ first: next, from: null }, ...changes.map((e) => ({ first: nextOccurrence(r, new Date(midnight(e.from).getTime() - 1)), from: e.from }))];
+  const end = (base.match(/UNTIL=(\w+)/) || [])[1] || null;
+  const out = [];
+  stretches.forEach((st, i) => {
+    if (!st.first || (end && utcStamp(st.first) > end)) return;
+    const nextChange = stretches[i + 1];
+    const cap = nextChange ? utcStamp(new Date(midnight(nextChange.from).getTime() - 1000)) : null;
+    out.push({ next: st.first, rule: rrule(r, cap), uid: st.from ? `${r.slug}-from-${st.from}@cycleforchange.org` : `${r.slug}@cycleforchange.org` });
+  });
+  return out;
 }
 function icsEscape(s) { return String(s || "").replace(/\\/g, "\\\\").replace(/;/g, "\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n"); }
 function foldLine(line) { const out = []; let s = line; while (Buffer.byteLength(s) > 73) { let cut = 73; while (Buffer.byteLength(s.slice(0, cut)) > 73) cut--; out.push(s.slice(0, cut)); s = " " + s.slice(cut); } out.push(s); return out.join("\r\n"); }
-function ics(r, next, rule) {
+function ics(r, periods) {
   const url = `${SITE}/rides/${r.slug}/`;
   const dur = r.duration_min || 120;
-  const end = new Date(next.getTime() + dur * 60000);
   const loc = r.start_location ? [r.start_location.name, r.start_location.address].filter(Boolean).join(", ") : placeText(r);
   const desc = [r.pace ? `Pace: ${r.pace}.` : null, r.drop_policy === "no-drop" ? "No-drop." : null, r.schedule ? `Schedule: ${r.schedule}.` : null, "Confirm with the host before you go.", url].filter(Boolean).join("\n");
-  const lines = [
-    "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Cycle for Change//Group Rides//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
-    "BEGIN:VEVENT",
-    `UID:${r.slug}@cycleforchange.org`,
-    `DTSTAMP:${String(r.verified_on).replace(/-/g, "")}T000000Z`,            // stable across builds, so rebuilds don't churn 500 files
-    `DTSTART;TZID=${r.tz}:${icsLocal(next, r.tz)}`,
-    `DTEND;TZID=${r.tz}:${icsLocal(end, r.tz)}`,
-    `RRULE:${rule}`,
-    `SUMMARY:${icsEscape(r.name + " — " + placeText(r))}`,
-    `LOCATION:${icsEscape(loc)}`,
-    `DESCRIPTION:${icsEscape(desc)}`,
-    `URL:${url}`,
-    "END:VEVENT", "END:VCALENDAR",
-  ];
+  const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Cycle for Change//Group Rides//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH"];
+  for (const { next, rule, uid } of periods) {
+    const end = new Date(next.getTime() + dur * 60000);
+    lines.push(
+      "BEGIN:VEVENT",
+      `UID:${uid}`,
+      `DTSTAMP:${String(r.verified_on).replace(/-/g, "")}T000000Z`,            // stable across builds, so rebuilds don't churn 500 files
+      `DTSTART;TZID=${r.tz}:${icsLocal(next, r.tz)}`,
+      `DTEND;TZID=${r.tz}:${icsLocal(end, r.tz)}`,
+      `RRULE:${rule}`,
+      `SUMMARY:${icsEscape(r.name + " — " + placeText(r))}`,
+      `LOCATION:${icsEscape(loc)}`,
+      `DESCRIPTION:${icsEscape(desc)}`,
+      `URL:${url}`,
+      "END:VEVENT");
+  }
+  lines.push("END:VCALENDAR");
   return lines.map(foldLine).join("\r\n") + "\r\n";
 }
 function gcalUrl(r, next, rule) {
@@ -361,7 +392,9 @@ function buildMetros(allRides) {
     if (c.rides.length < METRO_MIN) continue;
     if (hubs.some((h) => h.state === c.state && miles(h, c) <= HUB_GAP)) continue;
     // best = most rides of its own, with a bonus for being a genuinely big city (top ~150)
-    const score = (o) => o.n + (rank(o.city) < 120 ? 3 : 0);
+    // the ten biggest cities hold their name against a busy suburb (Phoenix, not Scottsdale), so the
+    // home city's hub URL doesn't move when a suburb gains a few rides
+    const score = (o) => o.n + (rank(o.city) < 10 ? 8 : rank(o.city) < 120 ? 3 : 0);
     const covered = list.filter((o) => o.state === c.state && miles(c, o) <= METRO_RADIUS).sort((a, b) => score(b) - score(a) || rank(a.city) - rank(b.city));
     const best = covered[0] && score(covered[0]) > score(c) ? covered[0] : c;
     let center = { lat: best.lat, lng: best.lng }, name = best.city;
@@ -376,6 +409,14 @@ function buildMetros(allRides) {
     name = RENAME[`${name}|${c.state}`] || name;
     if (hubs.some((h) => h.state === c.state && h.city === name)) continue;      // one hub per city name per state
     hubs.push({ ...c, ...center, city: name, rides: ridesIn, slug: slugify(name), path: `/rides/${c.state.toLowerCase()}/${slugify(name)}/` });
+  }
+  // A city with plenty of rides of its own gets its own page even inside a bigger city's radius
+  // (Scottsdale beside Phoenix): people search for it by name. Added after the metro pass, so the
+  // metro hubs never change because of it.
+  for (const c of [...list].sort((a, b) => b.n - a.n || a.city.localeCompare(b.city))) {
+    if (c.n < OWN_MIN) continue;
+    if (hubs.some((h) => h.state === c.state && (h.city === c.city || miles(h, c) < OWN_GAP))) continue;
+    hubs.push({ ...c, city: c.city, rides: c.rides, slug: slugify(c.city), path: `/rides/${c.state.toLowerCase()}/${slugify(c.city)}/` });
   }
   // each ride -> nearest hub in its state that covers it (or null)
   const hubFor = {};
@@ -595,7 +636,7 @@ function hubJson(rides) {
 // (They used to read rides.json, which also holds rides we've taken off the lists.)
 function liveJson(rides) {
   const keep = ["slug", "name", "kind", "city", "state", "country", "region", "neighborhood", "lat", "lng", "tz", "schedule", "days", "time_local",
-    "start_hhmm", "frequency", "monthly_rule", "season_months", "start_location", "distance_km", "distance_miles", "duration_min", "pace", "drop_policy",
+    "start_hhmm", "start_times", "frequency", "monthly_rule", "season_months", "start_location", "distance_km", "distance_miles", "duration_min", "pace", "drop_policy",
     "discipline", "confidence"];
   return rides.map((r) => ({ ...Object.fromEntries(keep.map((k) => [k, r[k] ?? null])), place: placeText(r), checked: r._f ? r._f.label_short : null }));
 }
@@ -1163,7 +1204,11 @@ function ridePage(r, all, hubFor, hubs) {
   // schedule, next occurrence, calendar
   const dp = dayPhrase(r); const tm = fmtTime(r.start_hhmm);
   const next = listed ? nextOccurrence(r) : null;   // no "next ride", Event or calendar file for a ride we can't vouch for
-  const rule = next ? rrule(r) : null;
+  const periods = next ? periodsOf(r, next) : [];
+  const rule = periods.length ? periods[0].rule : null;
+  // the host's coming start-time changes, said plainly under "When"
+  const later = (Array.isArray(r.start_times) ? r.start_times : []).filter((e) => next && e.from > localYmd(next, r.tz));
+  const laterText = later.length ? `Then ${later.map((e) => `${fmtTime(e.start_hhmm)} from ${F.fmt(e.from, { short: true, today: TODAY })}`).join(", ")}, by the host's own schedule.` : null;
   const ledeDiscs = (r.discipline.length > 1 ? r.discipline.filter((d) => d !== "mixed") : r.discipline).map((d) => (DISC_LABEL[d] || d).toLowerCase());
   const ledeDisc = ledeDiscs.length > 1 ? ledeDiscs.slice(0, -1).join(", ") + " and " + ledeDiscs.slice(-1) : ledeDiscs[0];
   const dist = distText(r, { long: true });
@@ -1196,7 +1241,7 @@ function ridePage(r, all, hubFor, hubs) {
   const nearText = (d, o) => (d < 0.5 ? "same start" : isUS(r) ? `${Math.round(d)} mi` : `${Math.round(d * 1.609344)} km`);
 
   const facts = [
-    ["When", dp && tm ? `${dp}, ${tm}${isUS(r) ? "" : " local time"}` : r.schedule, r.season_months ? `Season: ${r.season || "seasonal"}` : r.season === "year-round" ? "Year-round" : (dp && tm && r.schedule && r.schedule !== `${dp}, ${tm}` ? r.schedule : null)],
+    ["When", dp && tm ? `${dp}, ${tm}${isUS(r) ? "" : " local time"}` : r.schedule, laterText && dp && tm ? [laterText, r.season_months ? `Season: ${r.season || "seasonal"}.` : null].filter(Boolean).join(" ") : r.season_months ? `Season: ${r.season || "seasonal"}` : r.season === "year-round" ? "Year-round" : (dp && tm && r.schedule && r.schedule !== `${dp}, ${tm}` ? r.schedule : null)],
     ["Starts at", startName ? `${esc(startName)} <a class="gr-map" href="${attr(mapUrl)}" rel="noopener">Map ↗</a>` : null, null, true],
     ["Distance", dist, r.duration || (r.duration_min ? `about ${Math.round(r.duration_min / 60 * 10) / 10} hours` : null)],
     ["Pace", r.pace, r.drop_policy && r.drop_policy !== "unknown" ? { "no-drop": "No-drop: nobody gets left", drop: "Drop ride: keep up or get dropped", groups: "Splits into pace groups" }[r.drop_policy] : null],
@@ -1280,7 +1325,8 @@ function ridePage(r, all, hubFor, hubs) {
   <article class="ride" data-ride
     data-tz="${attr(listed ? r.tz || "" : "")}" data-time="${attr(listed ? r.start_hhmm || "" : "")}" data-days="${r.days.join(" ")}"
     data-freq="${attr(r.frequency || "")}" data-season="${r.season_months ? `${r.season_months.start}-${r.season_months.end}` : ""}"
-    data-monthly="${attr(r.monthly_rule ? JSON.stringify(r.monthly_rule) : "")}">
+    data-monthly="${attr(r.monthly_rule ? JSON.stringify(r.monthly_rule) : "")}"
+    data-times="${attr(listed && Array.isArray(r.start_times) && r.start_times.length ? JSON.stringify(r.start_times.map((e) => [e.from, e.start_hhmm])) : "")}">
     ${crumbsHtml(crumbs)}
 
     <h1>${esc(r.name)}</h1>
@@ -1372,6 +1418,13 @@ function main() {
   const health = loadHealth();
   const notes = loadCountryNotes();
   for (const r of all) r._f = F.assess(r, health[r.slug] || null, TODAY);
+  // a host's table of start-time changes (start_times): cards, titles, JSON-LD and live.json show the time in
+  // force at the next ride; the ride page (ride.js) and /tonight/ read the table for the dates after that
+  for (const r of all) if (Array.isArray(r.start_times) && r.start_times.length && r.tz) {
+    const n = nextOccurrence(r);
+    const eff = n ? S.startOn(r, localYmd(n, r.tz)) : null;
+    if (eff && eff !== r.start_hhmm) { r.start_hhmm = eff; r.time_local = fmtTime(eff); }
+  }
   const rides = all.filter((r) => r._f.listed);                                   // on the lists
   const pages = all.filter((r) => !(r._f.state === "ended" && r._f.expired));     // every ride that still gets a page
   const events = loadEvents();
@@ -1412,9 +1465,9 @@ function main() {
   for (const r of pages) {
     write(path.join(OUT, r.slug, "index.html"), ridePage(r, rides, hubForAll, hubs));
     if (!r._f.listed) continue;
-    const next = nextOccurrence(r); const rule = next ? rrule(r) : null;
+    const next = nextOccurrence(r); const periods = next ? periodsOf(r, next) : [];
     if (next) nEvent++;
-    if (next && rule) { write(path.join(OUT, r.slug, "ride.ics"), ics(r, next, rule)); nIcs++; }
+    if (periods.length) { write(path.join(OUT, r.slug, "ride.ics"), ics(r, periods)); nIcs++; }
   }
   write(path.join(OUT, "sitemap.xml"), sitemap(rides, states, hubs, worldCCs, world.hubs));
   const byState = {}; for (const r of all) byState[r._f.state] = (byState[r._f.state] || 0) + 1;

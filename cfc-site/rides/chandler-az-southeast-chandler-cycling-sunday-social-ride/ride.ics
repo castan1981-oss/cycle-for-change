@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:chandler-az-southeast-chandler-cycling-sunday-social-ride@cycleforcha
+ nge.org
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Phoenix:20261004T060000
+DTEND;TZID=America/Phoenix:20261004T080000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270227T235959Z
+SUMMARY:Sunday Social Ride — Chandler\, AZ
+LOCATION:Panera Bread (formerly Paradise Bakery)\, 2970 E Germann Rd\, Ch
+ andler\, AZ
+DESCRIPTION:Pace: "Can be fast\, can be slow" in the host's words.\nNo-dr
+ op.\nSchedule: Every Sunday\, wheels down 6:00 am\, from the Panera Brea
+ d on Germann Rd. The Meetup post lists a 6:00 start every week from Aug 
+ 9 through Oct 4\, 2026..\nConfirm with the host before you go.\nhttps://
+ cycleforchange.org/rides/chandler-az-southeast-chandler-cycling-sunday-s
+ ocial-ride/
+URL:https://cycleforchange.org/rides/chandler-az-southeast-chandler-cycli
+ ng-sunday-social-ride/
+END:VEVENT
+END:VCALENDAR

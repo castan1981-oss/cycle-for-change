@@ -49,7 +49,12 @@
   // next start within `horizonH` hours, or null. Returns minutes from now + a caveat.
   function nextStart(r, horizonH) {
     if (!r.start_hhmm || !Array.isArray(r.days) || !r.days.length || !r.tz) return null;
-    var hm = r.start_hhmm.split(":"), start = (+hm[0]) * 60 + (+hm[1]);
+    // the host's table of start-time changes (start_times, oldest first): the time in force on that day
+    function startOn(p) {
+      var t = r.start_hhmm, ymd = p.y + "-" + (p.m < 10 ? "0" : "") + p.m + "-" + (p.d < 10 ? "0" : "") + p.d;
+      (Array.isArray(r.start_times) ? r.start_times : []).forEach(function (e) { if (e && e.from <= ymd && e.start_hhmm) t = e.start_hhmm; });
+      var hm = t.split(":"); return (+hm[0]) * 60 + (+hm[1]);
+    }
     var now = new Date();
     var today = partsIn(r.tz, now);
     if (!today || today.dow < 0) return null;
@@ -57,7 +62,7 @@
     for (var off = 0; off <= maxOffset; off++) {
       var p = off === 0 ? today : partsIn(r.tz, new Date(now.getTime() + off * 86400000));
       if (!p || r.days.indexOf(DAYS[p.dow]) < 0) continue;
-      var mins = off * 1440 + start - today.mins;
+      var start = startOn(p), mins = off * 1440 + start - today.mins;
       if (mins < -20 || mins > horizonH * 60) continue;
       if (!inSeason(r, p.m)) continue;
       var caveat = "";
