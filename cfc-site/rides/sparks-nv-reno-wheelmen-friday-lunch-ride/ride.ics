@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sparks-nv-reno-wheelmen-friday-lunch-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261002T120000
+DTEND;TZID=America/Los_Angeles:20261002T130000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270228T235959Z
+SUMMARY:The Friday Lunch Ride — Sparks\, NV
+LOCATION:McClelland Laboratories\, 952 Greg St\, Sparks\, NV 89431
+DESCRIPTION:Pace: Easy to moderate\, 15 to 18 mph; 18 to 23 miles.\nSched
+ ule: Every Friday at noon (weather permitting)\, from McClelland Laborat
+ ories\, 952 Greg St..\nConfirm with the host before you go.\nhttps://cyc
+ leforchange.org/rides/sparks-nv-reno-wheelmen-friday-lunch-ride/
+URL:https://cycleforchange.org/rides/sparks-nv-reno-wheelmen-friday-lunch
+ -ride/
+END:VEVENT
+END:VCALENDAR

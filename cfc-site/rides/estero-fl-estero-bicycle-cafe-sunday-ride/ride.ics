@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:estero-fl-estero-bicycle-cafe-sunday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261004T071500
+DTEND;TZID=America/New_York:20261004T091500
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Estero Bicycle Cafe Sunday Ride — Estero\, FL
+LOCATION:Estero Bicycle Cafe\, Estero Ridge Plaza\, 20041 S Tamiami Trl\,
+  Estero\, FL 33928
+DESCRIPTION:Pace: Open group 22+ mph\, A group 20-22 mph\, B group 18-20 
+ mph.\nSchedule: Every Sunday\, 7:15 am\, from Estero Bicycle Cafe. About
+  35 miles\, three speed groups on the same route: Open 22+ mph\, A 20-22
+ \, B 18-20..\nConfirm with the host before you go.\nhttps://cycleforchan
+ ge.org/rides/estero-fl-estero-bicycle-cafe-sunday-ride/
+URL:https://cycleforchange.org/rides/estero-fl-estero-bicycle-cafe-sunday
+ -ride/
+END:VEVENT
+END:VCALENDAR

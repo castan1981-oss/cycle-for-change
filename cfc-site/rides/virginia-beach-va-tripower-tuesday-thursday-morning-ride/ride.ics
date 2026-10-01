@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:virginia-beach-va-tripower-tuesday-thursday-morning-ride@cycleforchan
+ ge.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261006T071500
+DTEND;TZID=America/New_York:20261006T091500
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20270228T235959Z
+SUMMARY:Tuesday/Thursday Morning Ride (Tripower Cycling Club) — Virgini
+ a Beach\, VA
+LOCATION:Harris Teeter\, south parking lot\, 2800 Arctic Ave\, Virginia B
+ each\, VA 23451
+DESCRIPTION:Pace: 18-20+ mph per the club; 20-22 mph capped at 22 per the
+  shop calendar.\nSchedule: Tuesdays and Thursdays\, 7:15 am\, from Harri
+ s Teeter on Arctic Ave.\nConfirm with the host before you go.\nhttps://c
+ ycleforchange.org/rides/virginia-beach-va-tripower-tuesday-thursday-morn
+ ing-ride/
+URL:https://cycleforchange.org/rides/virginia-beach-va-tripower-tuesday-t
+ hursday-morning-ride/
+END:VEVENT
+END:VCALENDAR

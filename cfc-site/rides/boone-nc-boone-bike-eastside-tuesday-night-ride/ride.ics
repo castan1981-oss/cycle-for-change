@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:boone-nc-boone-bike-eastside-tuesday-night-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261006T173000
+DTEND;TZID=America/New_York:20261006T193000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261031T235959Z
+SUMMARY:Eastside Tuesday Night Ride — Boone\, NC
+LOCATION:Food Lion parking lot\, 1864 Old 421 S Suite D\, Boone\, NC 2860
+ 7
+DESCRIPTION:Pace: 15–17 mph with plenty of regroups.\nNo-drop.\nSchedul
+ e: Tuesdays\, 5:30 pm\, from the Food Lion in Deep Gap. Warmer months\, 
+ starting and ending around the time change..\nConfirm with the host befo
+ re you go.\nhttps://cycleforchange.org/rides/boone-nc-boone-bike-eastsid
+ e-tuesday-night-ride/
+URL:https://cycleforchange.org/rides/boone-nc-boone-bike-eastside-tuesday
+ -night-ride/
+END:VEVENT
+END:VCALENDAR

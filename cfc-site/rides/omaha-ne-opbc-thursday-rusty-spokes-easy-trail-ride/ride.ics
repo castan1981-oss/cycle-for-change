@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:omaha-ne-opbc-thursday-rusty-spokes-easy-trail-ride@cycleforchange.or
+ g
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261008T100000
+DTEND;TZID=America/Chicago:20261008T120000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:Rusty Spokes Thursday Easy Trail Ride — Omaha\, NE
+LOCATION:Karen Park\, 62nd and Buckingham Ave\, 6288 H Street\, Omaha\, N
+ E
+DESCRIPTION:Pace: Easy.\nSchedule: Thursdays\, 10:00 am from Karen Park (
+ 62nd and Buckingham Ave).\nConfirm with the host before you go.\nhttps:/
+ /cycleforchange.org/rides/omaha-ne-opbc-thursday-rusty-spokes-easy-trail
+ -ride/
+URL:https://cycleforchange.org/rides/omaha-ne-opbc-thursday-rusty-spokes-
+ easy-trail-ride/
+END:VEVENT
+END:VCALENDAR

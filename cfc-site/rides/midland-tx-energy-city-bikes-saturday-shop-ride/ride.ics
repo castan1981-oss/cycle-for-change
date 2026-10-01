@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:midland-tx-energy-city-bikes-saturday-shop-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T080000
+DTEND;TZID=America/Chicago:20261003T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Energy City Bikes Saturday Shop Ride — Midland\, TX
+LOCATION:Energy City Bikes
+DESCRIPTION:Pace: A group: fast\, race-pace miles. B group: slightly shor
+ ter route.\nSchedule: Every Saturday\, 8:00 am from Energy City Bikes; A
+  and B groups.\nConfirm with the host before you go.\nhttps://cycleforch
+ ange.org/rides/midland-tx-energy-city-bikes-saturday-shop-ride/
+URL:https://cycleforchange.org/rides/midland-tx-energy-city-bikes-saturda
+ y-shop-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,235 @@
+[
+ {
+  "slug": "washington-dc-dc-queer-bike-rides",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The group's 2026 schedule page lists Sat Oct 10 at 12 PM (Smithsonian Metro to Hains Point) and Thu Oct 22 at 6:30 PM (Fort Totten Metro to Union Market); an announcement on the page is dated July 8, 2026. It also says the rides are sober, queer-only and 5-8 miles.",
+  "sources": [
+   "https://dcqueerbikes.neocities.org/"
+  ]
+ },
+ {
+  "slug": "washington-dc-district-cycling-collective-monday-moves",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "DCC's Meetup feed lists Monday Moves for Mon Oct 5, 19 and 26 and Nov 2 and 9, 2026: meet 10:00 am at Conte's Navy Yard, depart 10:15.",
+  "sources": [
+   "https://www.meetup.com/district-cycling-collective/events/ical/"
+  ],
+  "promote_feed": "https://www.meetup.com/district-cycling-collective/events/ical/"
+ },
+ {
+  "slug": "washington-dc-dc-tri-club-sunday-no-drop-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "DC Tri Club's calendar feed lists the Sunday No-Drop Group Bike Rides for Sun Oct 4, 11 and 18, 2026 (intros 8:30 am, ride 8:45 am), so the ride runs past summer; the listing says the start time may adjust with the summer heat and routes post a week ahead in the member group.",
+  "sources": [
+   "https://www.dctriclub.org/calendar/?ical=1",
+   "https://www.dctriclub.org/event/sunday-no-drop-group-bike-rides/2026-10-04/"
+  ],
+  "changes": {
+   "schedule": "Sundays, intros and mini-class 8:30 am, ride at 8:45 am, April into fall; routes post a week ahead in the member group",
+   "season": "Apr\u2013fall",
+   "refresh": {
+    "feed_url": "https://www.dctriclub.org/calendar/?ical=1",
+    "watch_url": "https://www.dctriclub.org/calendar/"
+   }
+  }
+ },
+ {
+  "slug": "milton-de-sussex-cyclists-wednesday-dogfish-head-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Sussex Cyclists' Upcoming Events page lists the Wednesday Dogfish Head Ride at 9:00 am on Oct 7, then 'NEW WINTER START TIME' at 10:00 am on Oct 14, 21 and 28, 2026 (14, 16 and 17 mph groups).",
+  "sources": [
+   "https://www.sussexcyclists.org/Upcoming-Events"
+  ],
+  "changes": {
+   "schedule": "Wednesdays, 9:00 am through Oct 7; winter start of 10:00 am from Oct 14. Pace groups 14, 16 and 17 mph",
+   "start_times": [
+    {
+     "from": "2026-10-14",
+     "start_hhmm": "10:00"
+    }
+   ],
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://www.sussexcyclists.org/Upcoming-Events"
+   }
+  }
+ },
+ {
+  "slug": "lewes-de-sussex-cyclists-friday-brewery-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Sussex Cyclists' Upcoming Events page lists the Friday Brewery ride at 10:00 am on Oct 2, 9, 16, 23 and 30, 2026; the start rotates (Lewes Brewery Company Oct 2, 16 and 23; First State Brewery Oct 9; Crooked Hammock Brewery Oct 30).",
+  "sources": [
+   "https://www.sussexcyclists.org/Upcoming-Events"
+  ]
+ },
+ {
+  "slug": "millsboro-de-sussex-cyclists-cupola-park-thursday-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Sussex Cyclists' Upcoming Events page lists the Cupola Park ride (15 mph, 38 miles, Millsboro) on Thu Oct 15, 2026 at 9:00 am, and its calendar shows a Cupola Park entry on Oct 1. The Oct 8 ride is not posted yet.",
+  "sources": [
+   "https://www.sussexcyclists.org/Upcoming-Events",
+   "https://www.sussexcyclists.org/calendar"
+  ]
+ },
+ {
+  "slug": "annapolis-md-abrt-sunday-no-drop-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "ABRT's training-rides page gives the Sunday No-Drop Ride as 8 am Memorial Day to Labor Day, 9 am from Labor Day to December and from March to Memorial Day, 10 am December to February, so it is 9:00 am now. The team's Google Calendar, updated in 2026, runs the Saturday ride on the same 9 am autumn schedule from Oct 3.",
+  "sources": [
+   "https://www.abrtcycling.com/about/training-rides/",
+   "https://calendar.google.com/calendar/ical/abrtmembership%40gmail.com/public/basic.ics"
+  ],
+  "changes": {
+   "time_local": "9:00 am",
+   "start_hhmm": "09:00",
+   "schedule": "Sundays; 8:00 am Memorial Day to Labor Day, 9:00 am Labor Day to December and March to Memorial Day, 10:00 am December to February"
+  }
+ },
+ {
+  "slug": "edgewater-md-parvilla-cycles-thursday-shop-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "ABRT's training-rides page (copyright 2026; the team calendar shows 2026 rides on the same page's schedule) states the Thursday Parvilla Shop Ride at 5:30 pm, April through mid-October, 23 miles from Parvilla Cycles in Edgewater.",
+  "sources": [
+   "https://www.abrtcycling.com/about/training-rides/"
+  ]
+ },
+ {
+  "slug": "frederick-md-frederick-pedalers-sunday-monocacy-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Frederick Pedalers' ride-info page lists the Monocacy Middle School Ride on Sundays Oct 4 through Nov 29, 2026 at 9:30 am ('Sundays (year-round)', C pace, 20-25 miles). Last year the club moved the Sunday start to 11:00 am on Oct 31, 2025, so watch for the same in 2026.",
+  "sources": [
+   "https://frederickpedalers.org/ride-info/",
+   "https://frederickpedalers.org/events/"
+  ]
+ },
+ {
+  "slug": "arlington-va-nova-cbg-tuesday-night-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "NoVA CBG's Meetup feed lists the Tuesday Night Ride (B group, no faster than 15 mph, from Shirlington Library) as 'NEW TIME': arrive 5:45 pm and roll at 6:00 pm on Oct 6, then arrive 5:30 pm and roll at 5:45 pm on Oct 13, 2026. The Thursday Thirsty Thursday rides ended Oct 1.",
+  "sources": [
+   "https://www.meetup.com/novacbg/events/ical/"
+  ],
+  "promote_feed": "https://www.meetup.com/novacbg/events/ical/",
+  "changes": {
+   "schedule": "Tuesdays, arrive 5:45 pm and roll 6:00 pm on Oct 6; arrive 5:30 pm and roll 5:45 pm from Oct 13 as the days shorten. B group, no faster than 15 mph, no-drop",
+   "time_local": "6:00 pm",
+   "start_hhmm": "18:00",
+   "start_times": [
+    {
+     "from": "2026-10-13",
+     "start_hhmm": "17:45"
+    }
+   ],
+   "drop_policy": "no-drop",
+   "pace": "B group, no faster than 15 mph"
+  }
+ },
+ {
+  "slug": "silver-spring-md-goon-ride",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The DC Paceline listing says the Goon Ride runs March to September, on daylight saving time, and that the Strava group has the actual schedule.",
+  "sources": [
+   "https://dcpaceline.com/"
+  ],
+  "status_note": "DC Paceline lists the Goon Ride as running March to September; the ride's Strava group has the schedule.",
+  "status_since": "2026-10-01"
+ },
+ {
+  "slug": "charlottesville-va-blue-wheel-tuesday-shop-ride",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-22",
+  "evidence": "Blue Wheel's group rides page says 'That's a wrap on Tuesday night rides for the season', that the Sept 22 ride was cancelled for rain, and heads the Tuesday Shop Ride 'PAUSED FOR THE WINTER'.",
+  "sources": [
+   "https://www.bluewheel.com/articles/group-rides-pg216.htm"
+  ],
+  "status_note": "Blue Wheel says the Tuesday night shop rides are done for the season and paused for the winter; the Winter Gravel Series runs instead.",
+  "status_since": "2026-09-22"
+ },
+ {
+  "slug": "powhatan-va-raba-powhatan-courthouse-no-drop",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "RABA's weekly rides page, headed Weekly Rides for October 2026, lists Sunday Powhatan Courthouse No Drop at 9:00 am, 31 miles, from the Citizens Bank & Trust in Flatrock.",
+  "sources": [
+   "https://www.raba.org/weekly-rides/"
+  ]
+ },
+ {
+  "slug": "richmond-va-blue-ridge-cyclery-saturday-bridge-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Blue Ridge Cyclery's Richmond group rides page says the two Saturday road rides are new for the 2026 season and run every Saturday, arrive 8:15 am for 8:30 am; the Bridge Ride leaves 5 to 10 minutes after the A+ group.",
+  "sources": [
+   "https://www.blueridgecyclery.com/articles/events-richmond-group-rides-pg334.htm"
+  ]
+ },
+ {
+  "slug": "roanoke-va-cardinal-bicycle-tuesday-night-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Cardinal Bicycle's weekly group rides page (copyright 2026) lists the Tuesday Road Ride, Grandin Village, 5:45 pm, with a Classic and a beginner Flatlanders group.",
+  "sources": [
+   "https://www.cardinalbicycle.com/articles/weekly-group-rides-pg215.htm"
+  ]
+ },
+ {
+  "slug": "virginia-beach-va-tripower-sunday-beginner-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Tripower's home page lists the upcoming Oct 10, 2026 Pink Ride and the weekly rides, including Sunday 8:00 am, D pace 15-17 mph, about 20 miles, weather dependent, from Conte's Bike Shop on Laskin Road (marked NEW RIDE).",
+  "sources": [
+   "https://www.tripowercycling.com/"
+  ]
+ },
+ {
+  "slug": "charleston-wv-mountain-state-wheelers-saturday-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The club's 2026 Saturday schedule PDF (as of 3/30/26, posted April 2026) lists Oct 3 at 9:00 AM (Bridge to Ridge routes) and Oct 10 at 9:00 AM ('week to week as weather allows'), with 8:00 AM starts from June through mid-September.",
+  "sources": [
+   "https://mountainstatewheelers.org/2026/04/2026-ride-schedule/",
+   "https://mountainstatewheelers.org/wp-content/uploads/2026/04/Mountain-State-Wheelers-2026-Saturday-proposed.pdf"
+  ]
+ },
+ {
+  "slug": "washington-dc-outriders-thursday-night-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "OutRiders' Meetup events page (a private group whose event list still loads) shows 'DC Thursday Night Ride - Lights Required' on Thu Oct 1, 2026 at 6:15 pm and Sept 24 at 6:15 pm, so the ride runs into October; a Tuesday afternoon ride also repeats.",
+  "sources": [
+   "https://www.meetup.com/outriders-dc-va-md/events/"
+  ],
+  "changes": {
+   "schedule": "Thursdays, 6:15 pm; start rotates between Metro stations (posted on Meetup); lights required as the evenings shorten. Also a Tuesday afternoon ride and weekend rides"
+  }
+ }
+]

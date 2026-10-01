@@ -1,0 +1,1225 @@
+[
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "North Davis",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "about 3 hours with a coffee break",
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "verified_on": "2026-10-01",
+  "slug": "davis-ca-davis-bike-club-sunday-no-drop-ride",
+  "name": "Sunday No Drop Ride",
+  "city": "Davis",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Sunday, 9:30 am from the John Jones parking lot in Davis (9:00 am in summer). Rain or heat can cancel.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "9:30 am",
+  "start_hhmm": "09:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "John Jones Professional Offices parking lot",
+   "address": "2068 John Jones Rd, Davis, CA 95616"
+  },
+  "pace": "14 mph and up; riders at 14-16 and at 18-22 both ride it",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Davis Bike Club",
+   "type": "club"
+  },
+  "visitor_notes": "Guests can ride once; after that the club asks you to join. Helmet required. Arrive about five minutes early, the group rolls on time. A sweeper rides at the back.",
+  "description": "A long-running Davis club ride out to Winters by County Road 29 and Buckeye Road, with a 20-minute break, then back by Putah Creek Road and the Russell bike path. Turnout is usually 8 to 18 riders. The club says it is welcoming to newcomers and regroups about halfway.",
+  "links": {
+   "website": "https://davisbikeclub.org/sunday-morning-no-drop-ride/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://davisbikeclub.org/sunday-morning-no-drop-ride/",
+   "https://calendar.google.com/calendar/ical/davisbikeclubwww%40gmail.com/public/basic.ics"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "The Davis Bike Club's public ride calendar lists Sunday No Drop Ride at 9:30 am from 2068 John Jones Rd, with Oct 4, 11 and 18, 2026 next (calendar read Oct 1, 2026); the ride page describes the route and no-drop rule.",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://davisbikeclub.org/club-events-calendar/",
+   "feed_url": "https://calendar.google.com/calendar/ical/davisbikeclubwww%40gmail.com/public/basic.ics",
+   "notes": "The club ride calendar is a public Google Calendar. Summer start times run an hour earlier; the club edits the series each spring and fall."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Westlake",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "beginner",
+   "no-drop"
+  ],
+  "verified_on": "2026-10-01",
+  "slug": "davis-ca-davis-bike-club-saturday-joy-ride",
+  "name": "Saturday Joy Ride",
+  "city": "Davis",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Saturday, 10:00 am from the Westlake Plaza parking lot (9:00 am April to mid-September). Rain or wind over 12 mph cancels; the leader may cancel when few riders sign up.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Westlake Plaza parking lot (Westlake Market)",
+   "address": "1260 Lake Blvd, Davis, CA 95616"
+  },
+  "pace": "leisurely, 12 to 14 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Davis Bike Club",
+   "type": "club"
+  },
+  "visitor_notes": "Contact the ride leader before you come, because the ride can be cancelled without notice when attendance is thin. Guests can ride once, then the club asks you to join. Helmet required.",
+  "description": "The Davis Bike Club's slow Saturday ride. Nobody is dropped, there are regular catch-up spots, and the route changes with who shows up. The club pitches it at people recovering from an injury or getting back on a bike.",
+  "links": {
+   "website": "https://davisbikeclub.org/saturday-joy-ride/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://davisbikeclub.org/saturday-joy-ride/",
+   "https://calendar.google.com/calendar/ical/davisbikeclubwww%40gmail.com/public/basic.ics"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "The Davis Bike Club's public ride calendar lists Saturday Joy Ride at 10:00 am from 1260 Lake Blvd for Oct 3, 10, 17 and 24, 2026; the ride page (updated June 30, 2026) gives the 12-14 mph pace and says no one is dropped.",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://davisbikeclub.org/club-events-calendar/",
+   "feed_url": "https://calendar.google.com/calendar/ical/davisbikeclubwww%40gmail.com/public/basic.ics",
+   "notes": "The club ride calendar is a public Google Calendar. Summer start times run an hour earlier; the club edits the series each spring and fall."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 48,
+  "distance_miles": 30,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "slug": "clovis-ca-fresno-cycling-club-taco-tuesday-ride",
+  "name": "Taco Tuesday Ride",
+  "city": "Clovis",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Tuesday, 6:00 pm from Shaw and Academy Avenues, south on Academy to a taco stand at Adams and Academy and back. Bring lights as the days shorten.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Shaw Avenue and North Academy Avenue",
+   "address": "Shaw Ave & N Academy Ave, 93619"
+  },
+  "pace": "B level, social, 12 to 16 mph",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Fresno Cycling Club",
+   "type": "club"
+  },
+  "visitor_notes": "The calendar names the ride leader; their phone number is on the club calendar. Rain cancels club rides. Lights for the ride back in the dark.",
+  "description": "A flat out-and-back along Academy Avenue, about 15 miles each way, to The Purple Plum taco stand at Adams and Academy. The club rates it B level at a social pace. It runs every Tuesday evening.",
+  "links": {
+   "website": "https://fresnocycling.com/Ride-Calendar",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://calendar.google.com/calendar/ical/iajuho1aghkd2de16t400k2cfg%40group.calendar.google.com/public/basic.ics",
+   "https://fresnocycling.com/Ride-Calendar"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "The Fresno Cycling Club's public Google Calendar lists Taco Tuesday Ride at 6:00 pm from Shaw and Academy, weekly, with Oct 6, 13 and 20, 2026 next (feed read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://fresnocycling.com/Ride-Calendar",
+   "feed_url": "https://calendar.google.com/calendar/ical/iajuho1aghkd2de16t400k2cfg%40group.calendar.google.com/public/basic.ics",
+   "notes": "The Fresno Cycling Club ride calendar page embeds this public Google Calendar. Rides are posted with a level code like B/1/30 (pace, terrain, miles)."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 26,
+  "distance_miles": 16,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "verified_on": "2026-10-01",
+  "slug": "fresno-ca-fresno-cycling-club-lost-lake-ride",
+  "name": "Lost Lake Ride",
+  "city": "Fresno",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every other Thursday, 5:00 pm from the Valero at Copper and Friant (Oct 1, 15 and 29). Out and back to Lost Lake Park.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "5:00 pm",
+  "start_hhmm": "17:00",
+  "frequency": "biweekly",
+  "start_location": {
+   "name": "Valero gas station (Copper Market), Copper and Friant",
+   "address": "1060 E Copper Ave, Fresno, CA 93730"
+  },
+  "pace": "C level, social, no drops",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Fresno Cycling Club",
+   "type": "club"
+  },
+  "visitor_notes": "The calendar names the ride leader. It gets dark soon after 5 pm by late October, so bring front and rear lights.",
+  "description": "A short evening ride out to Lost Lake Park and back, 16 miles round trip, every other Thursday since March 19. The club marks it C level, social pace, no drops.",
+  "links": {
+   "website": "https://fresnocycling.com/Ride-Calendar",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://calendar.google.com/calendar/ical/iajuho1aghkd2de16t400k2cfg%40group.calendar.google.com/public/basic.ics",
+   "https://fresnocycling.com/Ride-Calendar"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "The Fresno Cycling Club's public Google Calendar lists Lost Lake every other Thursday at 5:00 pm from 1060 E Copper Ave, with Oct 1, 15 and 29, 2026 next (feed read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://fresnocycling.com/Ride-Calendar",
+   "feed_url": "https://calendar.google.com/calendar/ical/iajuho1aghkd2de16t400k2cfg%40group.calendar.google.com/public/basic.ics",
+   "notes": "The Fresno Cycling Club ride calendar page embeds this public Google Calendar. Rides are posted with a level code like B/1/30 (pace, terrain, miles)."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Clover Creek Preserve",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 35,
+  "distance_miles": 22,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "verified_on": "2026-10-01",
+  "slug": "redding-ca-shasta-wheelmen-saturday-geezer-ride",
+  "name": "Saturday Geezer Ride",
+  "city": "Redding",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Saturdays, 8:00 am sharp from Clover Creek Preserve, 20 to 25 miles out to Anderson River Park and back for coffee. Listed every Saturday in September and on Oct 3, 2026.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Clover Creek Preserve",
+   "address": "Clover Creek Preserve, Redding, CA 96002"
+  },
+  "pace": "social, \"no murderous pace\"",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Shasta Wheelmen",
+   "type": "club"
+  },
+  "visitor_notes": "Non-members bring a signed waiver (form on the club site). The club says it is for riders of a certain age. Only Oct 3 is posted so far; later October Saturdays list the club weekend rides instead, so check the calendar.",
+  "description": "A Saturday social ride from Clover Creek Preserve to Anderson River Park and back, with coffee and talk at the Starbucks or Holiday Market on Hartnell and Shasta View. The club calls it social with no drops. It rolls at 8:00 on the dot.",
+  "links": {
+   "website": "https://shastawheelmen.org/ridecalendar",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/ShastaWheelmen",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://calendar.google.com/calendar/ical/c_1a2dfbf2dae9efe68b141d60d80e7e6ee5ef5124f9a0549ef86ff24ba3aa7763%40group.calendar.google.com/public/basic.ics",
+   "https://shastawheelmen.org/ridecalendar"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "The Shasta Wheelmen's public Google Calendar lists Geezers ride on Sat Oct 3, 2026 at 8:00 am from Clover Creek Preserve and the same ride every Saturday in September (feed read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://shastawheelmen.org/ridecalendar",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_1a2dfbf2dae9efe68b141d60d80e7e6ee5ef5124f9a0549ef86ff24ba3aa7763%40group.calendar.google.com/public/basic.ics",
+   "notes": "Each ride is its own dated entry in the club Google Calendar, so recurring weekend rides show only as far ahead as the club has posted."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "slug": "redding-ca-shasta-wheelmen-weekend-rides",
+  "name": "Weekend Club Rides",
+  "city": "Redding",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays and Sundays, 8:30 am in October (8:00 in September, 7:00 in summer). The start changes by ride: Sundial Bridge lot, the CVS on Placer St, Anderson Starbucks or the Palo Cedro park and ride.",
+  "days": [
+   "sat",
+   "sun"
+  ],
+  "time_local": "8:30 am",
+  "start_hhmm": "08:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Varies by ride: Sundial Bridge parking lot, CVS at 3375 Placer St, Anderson Starbucks, Palo Cedro park and ride",
+   "address": null
+  },
+  "pace": "posted on each ride (C/D on the Oct 4 ride)",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Shasta Wheelmen",
+   "type": "club"
+  },
+  "visitor_notes": "Open the dated entry on the club calendar for the start, distance and pace. Non-members bring a signed waiver. Start times shift earlier in summer heat.",
+  "description": "The club's numbered weekend rides, 30 to 70 miles, each with its own route, start and pace rating. Each is its own dated entry on the club Google Calendar. Oct 3 starts at Anderson Starbucks and Oct 4 at the Placer St CVS.",
+  "links": {
+   "website": "https://shastawheelmen.org/ridecalendar",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/ShastaWheelmen",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://calendar.google.com/calendar/ical/c_1a2dfbf2dae9efe68b141d60d80e7e6ee5ef5124f9a0549ef86ff24ba3aa7763%40group.calendar.google.com/public/basic.ics",
+   "https://shastawheelmen.org/ridecalendar"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "The Shasta Wheelmen's public Google Calendar lists weekend rides on Oct 3 and 4, 10 and 11, 17 and 18, 24 and 25, 2026 at 8:30 am with start points and pace ratings (feed read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://shastawheelmen.org/ridecalendar",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_1a2dfbf2dae9efe68b141d60d80e7e6ee5ef5124f9a0549ef86ff24ba3aa7763%40group.calendar.google.com/public/basic.ics",
+   "notes": "Each ride is its own dated entry in the club Google Calendar, so recurring weekend rides show only as far ahead as the club has posted."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Old Fair Oaks Village",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 76,
+  "distance_miles": 47,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "slug": "fair-oaks-ca-sac-wheelmen-tuesday-coffee-ride-old-fair-oaks",
+  "name": "Tuesday Coffee Ride, Old Fair Oaks",
+  "city": "Fair Oaks",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday, 8:30 am from Old Fair Oaks Village Park. Listed weekly through October 2026.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "8:30 am",
+  "start_hhmm": "08:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Old Fair Oaks Village Park (opposite the Fair Oaks Recreation and Parks building)",
+   "address": "4150 Temescal St, Fair Oaks, CA"
+  },
+  "pace": "hilly; flexible choice of 47 or 62 miles",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Sacramento Wheelmen",
+   "type": "club"
+  },
+  "visitor_notes": "Each event page has a Wheelmen Guest registration. A mileage roster goes out by email on Tuesday evening to people who registered. The club says the routes suit class 3 e-bikes.",
+  "description": "A hilly loop from Old Fair Oaks to Roanies in Loomis, ridden as a double loop (short, 47 miles) or a triple loop (long, 62 miles), with the coffee stop at mile 24 or 30. The club calls it hilly and flexible. Routes avoid bike trails.",
+  "links": {
+   "website": "https://sacwheelmen.wildapricot.org/Ride-Calendar/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://sacwheelmen.wildapricot.org/event-6855802",
+   "https://sacwheelmen.wildapricot.org/Ride-Calendar/"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "The Sacramento Wheelmen ride calendar shows Tuesday Coffee Ride - Old Fair Oaks on every Tuesday in October 2026, and its event page lists Oct 6, 2026 at 8:30 am from Old Fair Oaks Village Park with 47 and 62 mile options (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://sacwheelmen.wildapricot.org/Ride-Calendar/",
+   "feed_url": null,
+   "notes": "Posted in blocks of weeks; the October block ends Oct 27."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 42,
+  "distance_miles": 26,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "slug": "gold-river-ca-bike-hikers-tuesday-morning-ez-rider",
+  "name": "Tuesday Morning EZ Rider",
+  "city": "Gold River",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Tuesday mornings from Gold River Town Center: 9:00 am on Oct 6, 2026 (the Sept 29 ride started at 10:00 am). 20, 26 or 31 miles on the American River bike trail.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Gold River Town Center, north of Jack's Urban Eats near Sunrise Blvd",
+   "address": "2111 Golden Centre Lane, Rancho Cordova, CA 95670"
+  },
+  "pace": "listed as D- on the club calendar; see the club's route grades page",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Sacramento Bike Hikers",
+   "type": "club"
+  },
+  "visitor_notes": "Check the dated event on the club calendar for the start time, because it changes with the ride leader. The leader sweeps the 31-mile group. Ask the club about its guest rules before you come.",
+  "description": "A Tuesday morning club ride from Gold River up to the Fish Hatchery and on to William Pond Park (20 miles), Watt Ave (26) or the Guy West Bridge (31). The leader sweeps from the bridge back to the start.",
+  "links": {
+   "website": "https://www.bikehikers.com/",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/26543",
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://bikehikers.clubexpress.com/content.aspx?page_id=4091&club_id=216251&item_id=3088682",
+   "https://bikehikers.clubexpress.com/content.aspx?page_id=4001&club_id=216251"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "The Sacramento Bike Hikers calendar lists EZ Rider 20D-, 26D-, 31D- on Tue Oct 6, 2026 at 9:00 am from Gold River Town Center, after a Tuesday AM Ride at 10:00 am on Sept 29 (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://bikehikers.clubexpress.com/content.aspx?page_id=4001&club_id=216251",
+   "feed_url": null,
+   "notes": "Start time and leader change by week, so read the dated event."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "One Mile Recreation Area",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "verified_on": "2026-10-01",
+  "slug": "chico-ca-north-rim-friday-morning-no-drop-road-ride",
+  "name": "Friday Morning No-Drop Road Ride",
+  "city": "Chico",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Friday, 9:01 am from the One Mile Recreation Area. Chico Velo's 2026 calendar lists a Friday 8:30 am road coffee ride at Decide & Ride, next to the One Mile bridge, so confirm the time.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "9:01 am",
+  "start_hhmm": "09:01",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "One Mile Recreation Area",
+   "address": null
+  },
+  "pace": "alternates between flat and hilly routes",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "North Rim Adventure Sports",
+   "type": "shop"
+  },
+  "visitor_notes": "Helmet required, no earbuds, carry a spare tube and ID. The route is posted weekly on the shop's Facebook page. Rides are free.",
+  "description": "North Rim Adventure Sports' Friday morning road ride from the One Mile Recreation Area. It alternates between flat and hilly routes and is no-drop. The route goes up on the shop's Facebook page each week.",
+  "links": {
+   "website": "https://www.northrimadventure.com/articles/chico-area-rides-and-events-pg37.htm",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/NorthRimAdventureSports/",
+   "strava": "https://www.strava.com/clubs/northrimadventure",
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://www.northrimadventure.com/articles/chico-area-rides-and-events-pg37.htm",
+   "https://www.chicovelo.org/calendar.html"
+  ],
+  "last_seen": null,
+  "evidence": "North Rim Adventure Sports' ride page (undated, fetched Oct 1, 2026) lists the Friday no-drop road ride at 9:01 am from the One Mile Recreation Area; Chico Velo's 2026 calendar lists a Friday 8:30 am road coffee ride.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.northrimadventure.com/articles/chico-area-rides-and-events-pg37.htm",
+   "feed_url": null,
+   "notes": "The page has no dates. North Rim says to check its Facebook page the morning of for cancellations."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Rosedale",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": null,
+  "season": "Mar–Oct",
+  "season_months": {
+   "start": 3,
+   "end": 10
+  },
+  "distance_km": 48,
+  "distance_miles": 30,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "verified_on": "2026-10-01",
+  "slug": "chico-ca-fast-fit-fun-50-wednesday-evening-ride",
+  "name": "Fast, Fit and Fun 50",
+  "city": "Chico",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday, March through October: Fit and Friendly leaves 5:30 pm, Fun (no-drop) 5:35 pm, Fast 6:00 pm, from Rosedale Elementary School.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "5:35 pm",
+  "start_hhmm": "17:35",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Rosedale Elementary School",
+   "address": "100 Oak St, Chico, CA"
+  },
+  "pace": "three groups: Fast 23-28 mph, Fit and Friendly 18-23 mph, Fun 15-18 mph (about 25 miles, no drop)",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Fast, Fit and Fun 50 (listed on North Rim Adventure Sports' page)",
+   "type": "informal"
+  },
+  "visitor_notes": "Flat training, skills and social ride. The page lists the ride but not who runs it. It gets dark by 6:30 pm in October, so bring lights. Check North Rim's Facebook page for cancellations.",
+  "description": "A flat Wednesday evening ride out of Rosedale Elementary in three groups. Fun is 15 to 18 mph, about 25 miles and no-drop. Fit and Friendly and Fast cover about 30 miles at 18 to 28 mph. The listing says it runs March through October.",
+  "links": {
+   "website": "https://www.northrimadventure.com/articles/chico-area-rides-and-events-pg37.htm",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/NorthRimAdventureSports/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://www.northrimadventure.com/articles/chico-area-rides-and-events-pg37.htm"
+  ],
+  "last_seen": null,
+  "evidence": "North Rim Adventure Sports' Chico ride page (undated, fetched Oct 1, 2026) lists Fast, Fit and Fun 50 every Wednesday, March through October, from Rosedale Elementary School.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.northrimadventure.com/articles/chico-area-rides-and-events-pg37.htm",
+   "feed_url": null,
+   "notes": "The page has no dates. North Rim says to check its Facebook page the morning of for cancellations."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "One Mile Recreation Area",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": null,
+  "season": "Oct–Feb",
+  "season_months": {
+   "start": 10,
+   "end": 2
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "slug": "chico-ca-saturday-fast-road-ride-october-to-february",
+  "name": "Saturday Fast Road Ride (October to February)",
+  "city": "Chico",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday, 9:00 am from the One Mile Recreation Area, October to February.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "One Mile Recreation Area",
+   "address": null
+  },
+  "pace": "fast, with one regroup at the halfway point",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Chico Saturday road ride (listed on North Rim Adventure Sports' page)",
+   "type": "informal"
+  },
+  "visitor_notes": "The page calls it fast-paced and lists one regroup. It lists the ride but not who runs it. Check North Rim's Facebook page for cancellations.",
+  "description": "A fast road ride through the flat and rolling country around Chico and Oroville, with a regroup at the halfway point. It runs October to February.",
+  "links": {
+   "website": "https://www.northrimadventure.com/articles/chico-area-rides-and-events-pg37.htm",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/NorthRimAdventureSports/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://www.northrimadventure.com/articles/chico-area-rides-and-events-pg37.htm"
+  ],
+  "last_seen": null,
+  "evidence": "North Rim Adventure Sports' Chico ride page (undated, fetched Oct 1, 2026) lists a fast Saturday road ride at 9:00 am from the One Mile Recreation Area, running October to February.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.northrimadventure.com/articles/chico-area-rides-and-events-pg37.htm",
+   "feed_url": null,
+   "notes": "The page has no dates. North Rim says to check its Facebook page the morning of for cancellations."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "sun"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "about 2 hours",
+  "duration_min": 120,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "beginner",
+   "family"
+  ],
+  "verified_on": "2026-10-01",
+  "slug": "sacramento-ca-saba-monthly-social-ride",
+  "name": "SABA Monthly Social Ride",
+  "city": "Sacramento",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "About once a month, usually the last Sunday morning (sometimes the third), about two hours. Start time and place are on each event: 8:30 or 9:30 am.",
+  "days": [
+   "sun"
+  ],
+  "time_local": null,
+  "start_hhmm": null,
+  "frequency": "monthly",
+  "start_location": {
+   "name": "Changes each month; posted on the SABA events calendar",
+   "address": null
+  },
+  "pace": "slow, themed rides that suit every level",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Sacramento Area Bicycle Advocates (SABA)",
+   "type": "nonprofit"
+  },
+  "visitor_notes": "Sign the social ride waiver on the SABA site. Volunteer monitors help at busy crossings. Children are welcome with an adult. Group size runs from 8 to nearly 80.",
+  "description": "SABA's monthly social ride around Sacramento and West Sacramento. Each one has a theme, such as a mural tour, a trail ride or a ride to a neighborhood festival, and goes at a slow pace. The Sept 27 ride was the latest on the calendar.",
+  "links": {
+   "website": "https://sacbike.org/social-rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://sacbike.org/social-rides/",
+   "https://calendar.google.com/calendar/ical/c_2d9b1356bbfc16a8ed5a0108f1b234701fdcb0b47679219637841c024d29179e%40group.calendar.google.com/public/basic.ics"
+  ],
+  "last_seen": "2026-09-27",
+  "evidence": "SABA's Social Rides Google Calendar lists a social ride on Sept 27, 2026 (9:30 am) and one nearly every month from March, with the rides page saying they are usually the third or last Sunday (read Oct 1, 2026). The next date is not posted yet.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://sacbike.org/events-calendar/",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_2d9b1356bbfc16a8ed5a0108f1b234701fdcb0b47679219637841c024d29179e%40group.calendar.google.com/public/basic.ics",
+   "notes": "The next ride is usually posted a few weeks ahead; the October entry was not up on Oct 1."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "sun"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "no-drop",
+   "beginner"
+  ],
+  "verified_on": "2026-10-01",
+  "slug": "santa-rosa-ca-sports-basement-last-sunday-ride",
+  "name": "Last Sunday Ride",
+  "city": "Santa Rosa",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "The last Sunday of every month, 9:00 am from the Sports Basement store.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "monthly",
+  "start_location": {
+   "name": "Sports Basement Santa Rosa",
+   "address": null
+  },
+  "pace": "casual, 15 to 30 miles",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Sports Basement Santa Rosa",
+   "type": "shop"
+  },
+  "visitor_notes": "Open to all. The shop rents bikes if you need one.",
+  "description": "A casual 15 to 30 mile ride from the Sports Basement store in Santa Rosa. The shop says it is no-drop, community-focused and open to all, and that you can rent a bike from the store.",
+  "links": {
+   "website": "https://www.sportsbasement.com/pages/sb-x-strava-groups",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/santarosagrouprides",
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://www.strava.com/clubs/santarosagrouprides",
+   "https://www.sportsbasement.com/pages/sb-x-strava-groups"
+  ],
+  "last_seen": null,
+  "evidence": "The Sports Basement Strava groups page lists Santa Rosa, last Sundays at 9am, and the store's Strava club description says a casual 15-30 mile no-drop ride every last Sunday at 9am (both undated, fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "strava-club",
+   "watch_url": "https://www.strava.com/clubs/santarosagrouprides",
+   "feed_url": null,
+   "notes": "The club page loads without a login but shows no event dates."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "CSUB",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 32,
+  "distance_miles": 20,
+  "duration": "about 2 hours",
+  "duration_min": 120,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "slug": "bakersfield-ca-kern-wheelmen-open-sunday-ride",
+  "name": "KW Open Sunday Ride",
+  "city": "Bakersfield",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Sunday, 8:00 am sharp from the Finish Line / CSUB lot on Stockdale Hwy.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Finish Line / CSUB parking lot (Stockdale Hwy at Don Hart)",
+   "address": "8850 Stockdale Hwy, Bakersfield, CA"
+  },
+  "pace": "whatever pace you want",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Kern Wheelmen Bicycle Club",
+   "type": "club"
+  },
+  "visitor_notes": "No host; show up and go. The club welcomes all levels, ages and genders. It calls this ride open.",
+  "description": "A no-host Sunday ride from the Finish Line lot at CSUB out to Enos Lane and back, with a stop at the pump house to rest and regroup. About 20 miles at your own pace. The club says it is a ride to recover, discover and mingle.",
+  "links": {
+   "website": "https://kernwheelmen.org/calendar/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://kernwheelmen.org/calendar/"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "The Kern Wheelmen calendar lists KW Open Sunday Ride at 8:00 am from 8850 Stockdale Hwy for Oct 4, 11, 18 and 25, 2026 (calendar fetched Oct 1, 2026; the entries repeat weekly into 2028).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://kernwheelmen.org/calendar/",
+   "feed_url": null,
+   "notes": "The calendar page draws its events with JavaScript. Entries repeat out to 2028, so a listed date alone does not prove the ride is running."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "River Walk",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "about 1 hour",
+  "duration_min": 60,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "slug": "bakersfield-ca-kern-wheelmen-monday-recovery-ride",
+  "name": "Monday Recovery Ride",
+  "city": "Bakersfield",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Monday, 4:30 pm from California Pizza Kitchen at River Walk; east to Darrel's and back.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "4:30 pm",
+  "start_hhmm": "16:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "California Pizza Kitchen at River Walk",
+   "address": "10150 Stockdale Hwy, Bakersfield, CA 93311"
+  },
+  "pace": "social, recovery pace",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Kern Wheelmen Bicycle Club",
+   "type": "club"
+  },
+  "visitor_notes": "A one-hour ride. Bring lights as the evenings get dark.",
+  "description": "A short social ride at recovery pace, east along the river path to Darrel's and back, from the River Walk shopping center. One hour.",
+  "links": {
+   "website": "https://kernwheelmen.org/calendar/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://kernwheelmen.org/calendar/"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "The Kern Wheelmen calendar lists Monday Recovery Ride at 4:30 pm from 10150 Stockdale Hwy for Oct 5, 12, 19 and 26, 2026 (calendar fetched Oct 1, 2026; the entries repeat weekly into 2028).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://kernwheelmen.org/calendar/",
+   "feed_url": null,
+   "notes": "The calendar page draws its events with JavaScript. Entries repeat out to 2028, so a listed date alone does not prove the ride is running."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "River Walk",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Los_Angeles",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "slug": "bakersfield-ca-kern-wheelmen-wednesday-evening-club-ride",
+  "name": "KW Weekly Evening Club Ride",
+  "city": "Bakersfield",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday, meet 4:30 pm, groups leave 5:00 pm from the California Pizza Kitchen lot at River Walk.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "5:00 pm",
+  "start_hhmm": "17:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "California Pizza Kitchen parking lot at River Walk",
+   "address": "10150 Stockdale Hwy, Bakersfield, CA 93311"
+  },
+  "pace": "three groups: A very fast, B moderate to fast, C moderate; limited to under 20 mph east of Allen Road",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Kern Wheelmen Bicycle Club",
+   "type": "club"
+  },
+  "visitor_notes": "A short safety talk happens each week before the roll; arrive by 4:30. The A group rides to the Kern County Raceway Park driveway and back; B and C ride to the Enos Lane lot and back.",
+  "description": "The club's weekly after-work ride on the bike path in three pace groups. A goes to the Raceway Park driveway and back, B and C to Enos Lane and back. There is a short safety talk first.",
+  "links": {
+   "website": "https://kernwheelmen.org/calendar/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://kernwheelmen.org/calendar/"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "The Kern Wheelmen calendar lists KW Weekly Evening Club Ride on Wednesdays at 4:30 pm (groups leave at 5:00) from 10150 Stockdale Hwy, with Oct 7 listed (calendar fetched Oct 1, 2026; the entries repeat weekly into 2028).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://kernwheelmen.org/calendar/",
+   "feed_url": null,
+   "notes": "The calendar page draws its events with JavaScript. Entries repeat out to 2028, so a listed date alone does not prove the ride is running."
+  }
+ }
+]

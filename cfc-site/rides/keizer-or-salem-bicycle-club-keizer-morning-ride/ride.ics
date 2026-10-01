@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:keizer-or-salem-bicycle-club-keizer-morning-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261006T100000
+DTEND;TZID=America/Los_Angeles:20261006T120000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270228T235959Z
+SUMMARY:Keizer Morning Ride — Keizer\, OR
+LOCATION:Keizer Station shopping center\, south side of REI
+DESCRIPTION:Schedule: Tuesdays\, 10:00 am from October 6 (it was 9:00 am 
+ on Sept 29)\, from the south side of REI at Keizer Station. Registration
+  recommended..\nConfirm with the host before you go.\nhttps://cycleforch
+ ange.org/rides/keizer-or-salem-bicycle-club-keizer-morning-ride/
+URL:https://cycleforchange.org/rides/keizer-or-salem-bicycle-club-keizer-
+ morning-ride/
+END:VEVENT
+END:VCALENDAR

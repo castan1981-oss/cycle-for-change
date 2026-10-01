@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:davis-ca-davis-bike-club-saturday-joy-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T100000
+DTEND;TZID=America/Los_Angeles:20261003T120000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Saturday Joy Ride — Davis\, CA
+LOCATION:Westlake Plaza parking lot (Westlake Market)\, 1260 Lake Blvd\, 
+ Davis\, CA 95616
+DESCRIPTION:Pace: leisurely\, 12 to 14 mph.\nNo-drop.\nSchedule: Every Sa
+ turday\, 10:00 am from the Westlake Plaza parking lot (9:00 am April to 
+ mid-September). Rain or wind over 12 mph cancels; the leader may cancel 
+ when few riders sign up..\nConfirm with the host before you go.\nhttps:/
+ /cycleforchange.org/rides/davis-ca-davis-bike-club-saturday-joy-ride/
+URL:https://cycleforchange.org/rides/davis-ca-davis-bike-club-saturday-jo
+ y-ride/
+END:VEVENT
+END:VCALENDAR

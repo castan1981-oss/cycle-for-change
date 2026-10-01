@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mount-pleasant-sc-trek-mount-pleasant-sunday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261004T090000
+DTEND;TZID=America/New_York:20261004T110000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Sunday Ride (Trek Mount Pleasant) — Mount Pleasant\, SC
+LOCATION:Varies\, see the weekly ride email
+DESCRIPTION:Pace: B 17–18 mph\, C 15–16\, D 13–14.\nNo-drop.\nSched
+ ule: Every Sunday\, 9:00 am from Labor Day to Memorial Day (8:00 am the 
+ rest of the year). Start varies: I'On Swamp Trailhead\, Witherbee Work C
+ enter\, Bonneau Ferry or Halfway Creek..\nConfirm with the host before y
+ ou go.\nhttps://cycleforchange.org/rides/mount-pleasant-sc-trek-mount-pl
+ easant-sunday-ride/
+URL:https://cycleforchange.org/rides/mount-pleasant-sc-trek-mount-pleasan
+ t-sunday-ride/
+END:VEVENT
+END:VCALENDAR

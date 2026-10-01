@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bentonville-ar-social-ride-bentonville-monday@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261005T183000
+DTEND;TZID=America/Chicago:20261005T203000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20270228T235959Z
+SUMMARY:Bentonville Social Bike Ride — Bentonville\, AR
+LOCATION:Archie's Sandwichery
+DESCRIPTION:Pace: Easy\, about 10 miles.\nSchedule: Every Monday night\, 
+ rolling 6:30 pm from Archie's Sandwichery; a themed 10-mile greenway cru
+ ise.\nConfirm with the host before you go.\nhttps://cycleforchange.org/r
+ ides/bentonville-ar-social-ride-bentonville-monday/
+URL:https://cycleforchange.org/rides/bentonville-ar-social-ride-bentonvil
+ le-monday/
+END:VEVENT
+END:VCALENDAR

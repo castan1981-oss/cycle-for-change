@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:nashua-nh-southern-nh-nemba-thursday-at-yudicky@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261001T180000
+DTEND;TZID=America/New_York:20261001T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:SNH NEMBA Thursday at Yudicky — Nashua\, NH
+LOCATION:Yudicky Park\, Yudicky Park\, Nashua\, NH
+DESCRIPTION:Schedule: Thursdays\, 6:00-8:00 pm at Yudicky Park\, Nashua. 
+ Skills\, exercise and fun..\nConfirm with the host before you go.\nhttps
+ ://cycleforchange.org/rides/nashua-nh-southern-nh-nemba-thursday-at-yudi
+ cky/
+URL:https://cycleforchange.org/rides/nashua-nh-southern-nh-nemba-thursday
+ -at-yudicky/
+END:VEVENT
+END:VCALENDAR

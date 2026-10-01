@@ -1,0 +1,275 @@
+[
+ {
+  "slug": "des-moines-ia-monday-night-no-drop-road-ride",
+  "outcome": "seasonal-break",
+  "evidence": "BikeIowa's event page (fetched Oct 1, 2026) says the ride runs Monday evenings 'between the start of Daylight Saving and Labor Day' at 6pm sharp from the Great Western Trailhead; Labor Day 2026 was Sept 7. dsmgrouprides.com still lists it Mondays 6:00 PM, no end date.",
+  "sources": [
+   "https://www.bikeiowa.com/Event/16079/monday-night-no-drop-road-ride",
+   "https://www.dsmgrouprides.com/"
+  ],
+  "status_note": "The host's event page says it runs Mondays from the start of Daylight Saving Time to Labor Day (Sept 7, 2026), so it is off for the winter and should return around March 14, 2027. The BikeIowa page itself is the 2025 listing; the Facebook group may say more.",
+  "status_since": "2026-09-08",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "grinnell-ia-prairie-burner-tuesday-gravel-ride",
+  "outcome": "changed",
+  "last_seen": "2026-09-15",
+  "evidence": "Imagine Grinnell's events page (fetched Oct 1, 2026) lists Weekly Prairie Burner Rides every Tuesday, Mar 10 to Oct 27, 2026, leave 5:30 pm from Bikes To You, 20-25 miles; BikeIowa's recurring listing shows an instance on Sep 15, 2026.",
+  "sources": [
+   "https://www.imaginegrinnell.org/events/weekly-prairie-burner-rides",
+   "https://www.bikeiowa.com/Event/16564/prairie-burner-weekly-gravel-rides"
+  ],
+  "changes": {
+   "season": "Mar–Oct",
+   "schedule": "Every Tuesday, leave 5:30 pm from Bikes To You, March 10 to October 27, 2026 (returns when the clocks change in spring)",
+   "refresh": {
+    "watch_url": "https://www.imaginegrinnell.org/events/weekly-prairie-burner-rides",
+    "notes": "Host's event page gives the season dates and an ICS link."
+   }
+  },
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "iowa-city-ia-bic-wednesday-night-social-ride",
+  "outcome": "changed",
+  "last_seen": "2026-10-01",
+  "evidence": "BIC's ride calendar (fetched Oct 1, 2026) lists Wednesday Oct 7 and Oct 14 as short rides at 5:30 PM from El Señor Cactus, 1534 S Gilbert St, Iowa City, 'weather and daylight permitting'; no Wednesday rides listed after Oct 14.",
+  "sources": [
+   "https://bic.clubexpress.com/content.aspx?page_id=4001&club_id=74108",
+   "https://bic.clubexpress.com/content.aspx?page_id=22&club_id=74108&module_id=153871"
+  ],
+  "changes": {
+   "schedule": "Wednesdays, 6:00 pm April–September; shorter 5:30 pm rides in October (Oct 7 and 14 listed), start varies, see the BIC calendar",
+   "time_local": "5:30 pm",
+   "start_hhmm": "17:30",
+   "season": "Apr–Oct",
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://bic.clubexpress.com/content.aspx?page_id=4001&club_id=74108",
+    "notes": "Month-view calendar lists each Wednesday's start and time; October rides move to 5:30 pm."
+   }
+  },
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "north-liberty-ia-sugar-bottom-bikes-wednesday-night-gravel",
+  "outcome": "confirmed",
+  "evidence": "Sugar Bottom Bikes' group rides page (fetched Oct 1, 2026) lists Wednesday Gravel Rides every Wednesday April 22 to October 14 (2026 dates), meet 5:50 pm, roll 6:10 pm from the shop, ending at Field Day Brewing; the C ride is on hold.",
+  "sources": [
+   "https://www.sugarbottombikes.com/rides"
+  ],
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "minneapolis-mn-angry-catfish-thursday-ftw-social-ride",
+  "outcome": "seasonal-break",
+  "last_seen": "2026-09-24",
+  "evidence": "The msp.bike Twin Cities calendar feed (fetched Oct 1, 2026) has the ACF Thursday FTW Ride as a weekly series, 6:00 pm (meet 5:30), that ends Sept 24, 2026; nothing for October. The ACF Wednesday social moves to the first Wednesday monthly from Oct 7.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "https://msp.bike/events/acf-thursday-ftw-ride-ce93d5dd"
+  ],
+  "status_note": "The calendar's weekly Thursday FTW series stops after Sept 24, 2026 and no fall dates are posted. Angry Catfish's own page (2025 text) is out of date, and the ACF Discord has current word. Check before going.",
+  "status_since": "2026-09-25",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "minneapolis-mn-bonesaw-cycling-collective-tuesday-ride",
+  "outcome": "changed",
+  "last_seen": "2026-09-29",
+  "evidence": "Bonesaw's own events page (fetched Oct 1, 2026) lists the monthly Tuesday social ride, last Tuesday April–September, meet 6:30 pm at CEPRO Park, roll 7:00, plus a winter series last Tuesday November–March, meet 6:45 at Sabo Bridge; the msp.bike calendar shows the Sept 29 ride postponed to Tue Oct 6, 6:45 pm meet, 7:00 roll.",
+  "sources": [
+   "https://bonesawcycling.bike/events",
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
+  ],
+  "changes": {
+   "schedule": "Last Tuesday of the month: April–September from CEPRO Park (meet 6:30 pm, roll 7:00); winter series November–March from Sabo Bridge (meet 6:45 pm, roll 7:00). The September ride was moved to Tue Oct 6.",
+   "season": "Apr–Sep, Nov–Mar",
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://bonesawcycling.bike/events",
+    "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+    "notes": "Bonesaw's events page has an ICS per event; the msp.bike Google calendar also carries the rides."
+   }
+  },
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "minneapolis-mn-behind-bars-fixie-friday",
+  "outcome": "confirmed",
+  "last_seen": "2026-09-25",
+  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) lists Fixie Friday, meet 6:45 pm, roll 7:00 from Behind Bars, on Sept 25, Oct 2, Oct 30 and Nov 6, 2026 (fixed gear only, signed waiver); Oct 9, 16 and 23 are not posted yet.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "https://msp.bike/events/fixie-friday-lake-of-isles-laps-5fab06b5"
+  ],
+  "promote_feed": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "minneapolis-mn-freewheel-wednesday-night-ride",
+  "outcome": "seasonal-break",
+  "last_seen": "2026-09-16",
+  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) carries Freewheel MPLS Wednesday Night Rides as a weekly 6 pm series from May 6 that ends Sept 16, 2026; no October dates.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
+  ],
+  "status_note": "The calendar's weekly Wednesday series ended Sept 16, 2026 and nothing is posted for fall. It should come back in spring; Freewheel's Strava club and Instagram would say.",
+  "status_since": "2026-09-17",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "minneapolis-mn-joyful-riders-club-monthly-ride",
+  "outcome": "confirmed",
+  "last_seen": "2026-09-05",
+  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) lists the Joyful Riders monthly ride at Fulton Beer Taproom on the second Thursday, next Thu Oct 8, 2026 at 6:00 pm (spooky theme), and a Nov 27 Joyfulton social.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "https://msp.bike/events/joyful-riders-monthly-ride-fulton-beer-0ae92ff4"
+  ],
+  "promote_feed": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "minneapolis-mn-joyful-riders-dj-dance-ride",
+  "outcome": "changed",
+  "last_seen": "2026-09-16",
+  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) lists 'Bikes. Beats. Bonfire.', the final DJ Ride of the 2026 season, on Sat Oct 3 (meet 6 pm, roll 6:30 from Perennial Cycle); earlier 2026 rides were Jun 6 and Jul 11 from Perennial and Aug 22 from Lowertown in St. Paul. Perennial's own page is behind a bot wall.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "https://msp.bike/events"
+  ],
+  "changes": {
+   "schedule": "Monthly summer Saturday-evening DJ dance ride, 7:00 pm (June–August), from Perennial Cycle or Lowertown Bike Shop in St. Paul; the 2026 season finale is Sat Oct 3 (meet 6:00 pm, roll 6:30). Next season not posted.",
+   "season": "Jun–Oct"
+  },
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "minneapolis-mn-sociable-cider-recovery-wednesday-social-ride",
+  "outcome": "confirmed",
+  "last_seen": "2026-09-30",
+  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) carries a weekly Wednesday 6:00 pm series at Sociable Cider Werks with no end date; Oct 7, 14, 21 and 28 are all on it, last edited Aug 24, 2026.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "https://msp.bike/events/sociable-cider-x-recovery-bike-shop-wednesday-social-rides-d5c0a581"
+  ],
+  "promote_feed": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "minneapolis-mn-utepils-cycling-sunday-rides",
+  "outcome": "confirmed",
+  "last_seen": "2026-09-27",
+  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) carries a weekly Sunday series at Utepils Brewing, 9:45 am meet, no end date, last edited Sept 21, 2026; Oct 4, 11, 18 and 25 are on it.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "https://msp.bike/events/utepils-cycling-road-mtb-rides-67830d1e"
+  ],
+  "promote_feed": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "rochester-mn-rasc-monday-road-ride",
+  "outcome": "seasonal-break",
+  "last_seen": "2026-09-28",
+  "evidence": "RASC's RideWithGPS club calendar (fetched Oct 1, 2026) shows the Monday Bamber Valley road ride last on Sept 28, 2026 (6:00 pm), no later road rides, and an 'End of season Pizza Ride' on Oct 7; the club page says the road rides run 'throughout the summer'.",
+  "sources": [
+   "https://ridewithgps.com/events.json?organization_id=7265",
+   "https://www.rasc-mn.org/road-gravel-biking"
+  ],
+  "status_note": "RASC's calendar shows the last Monday road ride on Sept 28, 2026 and an end-of-season pizza ride on Oct 7; no road rides after that. The club's Thursday gravel rides continue through Oct 29.",
+  "status_since": "2026-09-29",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "appleton-wi-wheel-and-sprocket-thursday-night-ride",
+  "outcome": "seasonal-break",
+  "evidence": "Wheel & Sprocket's event calendar page (fetched Oct 1, 2026) lists no Thursday night ride and now shows winter in-store events plus the NICA state championship Oct 23-25; our record's host-stated season was May 7 to Aug 27, 2026.",
+  "sources": [
+   "https://www.wheelandsprocket.com/about/event-calendar-pg76.htm"
+  ],
+  "status_note": "Season ran May 7 to Aug 27, 2026 per the shop's calendar; the page now lists winter in-store events and no Thursday ride. Expect it back around May 2027.",
+  "status_since": "2026-08-28",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "milwaukee-wi-cadence-tuesday-thursday-rides",
+  "outcome": "seasonal-break",
+  "evidence": "Cadence's rides page (fetched Oct 1, 2026) says 'Our ride season begins May 1st annually and runs through August 30th', two club rides a week at 6:00 pm rollout (Tue Bay View, Thu Fox Point); it is a women's and nonbinary cycling group.",
+  "sources": [
+   "https://cadencemke.com/rides/"
+  ],
+  "status_note": "Cadence says its ride season runs May 1 through August 30 each year, so the Tuesday and Thursday club rides are off until May 2027.",
+  "status_since": "2026-08-31",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "la-crosse-wi-smiths-womens-road-ride",
+  "outcome": "seasonal-break",
+  "last_seen": "2026-09-14",
+  "evidence": "Smith's Bike Shop's public Google Calendar feed (fetched Oct 1, 2026) has Smith's Women's Ride as a weekly Monday 5:30 pm series that ends Sept 20, 2026 (last Monday Sept 14), and the shop's October calendar lists no Monday ride; the group-rides page says the ride is outdoors in summer and Zwift at 6:30 pm in winter.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/invoices.smithsbikes%40gmail.com/public/basic.ics",
+   "https://smithsbikes.com/calendar/",
+   "https://smithsbikes.com/group-bike-rides/"
+  ],
+  "status_note": "The shop's calendar series for the Monday 5:30 pm women's road ride ended Sept 20, 2026. The page says winter rides are on Zwift at 6:30 pm instead (email the shop to join); outdoor rides usually restart in May.",
+  "status_since": "2026-09-21",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "madison-wi-motorless-motion-taco-ride",
+  "outcome": "confirmed",
+  "last_seen": "2026-06-03",
+  "evidence": "Wisconsin Bike Fed's event page for the ride (fetched Oct 1, 2026) shows a Wed Jun 3 (2026) listing and says the Taco Ride meets at the shop every Wednesday, May to October, at 6 pm, rolling about 6:15, 6-8 miles, happy hour at Bandit Tacos after.",
+  "sources": [
+   "https://wisconsinbikefed.org/events/motorless-motion-taco-ride/"
+  ],
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "milwaukee-wi-cream-city-cycle-club-wednesday-morning-ride",
+  "outcome": "changed",
+  "last_seen": "2026-10-01",
+  "evidence": "Cream City Cycle Club's calendar (fetched Oct 1, 2026) lists Wednesday rides on Oct 7 (Cedarburg Covered Bridge / Newburg, 10:00 am start) and Oct 14 (North Kettle Moraine, 10:00 am start), with Oct 21 and 28 open for a ride leader; the home page says rides run mid-April through October and non-members can ride once.",
+  "sources": [
+   "https://www.creamcitycycleclub.com/content.aspx?page_id=4001&club_id=119379",
+   "https://www.creamcitycycleclub.com/"
+  ],
+  "changes": {
+   "schedule": "Wednesdays, 9:30 am mid-April through September, 10:00 am in October; route and start change weekly (see the club calendar). Non-members can ride once before joining.",
+   "time_local": "10:00 am",
+   "start_hhmm": "10:00",
+   "season": "mid-Apr–Oct",
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://www.creamcitycycleclub.com/content.aspx?page_id=4001&club_id=119379",
+    "notes": "Month-grid calendar shows each ride; red rides lack a leader."
+   }
+  },
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "middleton-wi-capital-brewery-bike-club-rides",
+  "outcome": "seasonal-break",
+  "evidence": "The Capital Brewery Bike Club calendar (fetched Oct 1, 2026) shows no Tuesday, Wednesday or Thursday rides from Sept 28 through Oct 31, only brewery music and Oktoberfest events; the club's season on our record was late May to mid September.",
+  "sources": [
+   "https://capitalbikeclub.org/calendar?app=index&pagez=calendar&context=1790880647&end=1&groupid=104188418",
+   "https://capitalbikeclub.org/"
+  ],
+  "status_note": "The club's calendar has no group rides on any Tuesday, Wednesday or Thursday after Sept 28, 2026. The Tue/Thu road rides ran late May to mid September; the club says nothing about fall rides.",
+  "status_since": "2026-09-28",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "iowa-city-ia-gatos-en-ronda-friday-night-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "evidence": "bikeiowacity.com/event-calendar/ returned a bot-check redirect (sgcaptcha) to my fetch on Oct 1, 2026, so the Friday night ride could not be read.",
+  "sources": [
+   "https://bikeiowacity.com/event-calendar/"
+  ]
+ }
+]

@@ -5,16 +5,17 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:kalamazoo-mi-kbc-monday-night-ride@cycleforchange.org
-DTSTAMP:20260915T000000Z
-DTSTART;TZID=America/New_York:20261005T180000
-DTEND;TZID=America/New_York:20261005T200000
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261005T173000
+DTEND;TZID=America/New_York:20261005T193000
 RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20261031T235959Z
 SUMMARY:KBC Monday Night Ride — Kalamazoo\, MI
 LOCATION:Texas Drive Park\, 6603 Texas Dr\, Kalamazoo\, MI 49009
 DESCRIPTION:Pace: up to eight groups\, 12–13 mph through 19–21 mph.\n
- Schedule: Every Monday\, March 10–Oct 31; 6:00 pm (5:30 pm in March an
- d October).\nConfirm with the host before you go.\nhttps://cycleforchang
- e.org/rides/kalamazoo-mi-kbc-monday-night-ride/
+ Schedule: Every Monday\, March 10-Oct 31\, 2026; 5:30 pm in October (6:0
+ 0 pm April through September\, 5:30 pm in March).\nConfirm with the host
+  before you go.\nhttps://cycleforchange.org/rides/kalamazoo-mi-kbc-monda
+ y-night-ride/
 URL:https://cycleforchange.org/rides/kalamazoo-mi-kbc-monday-night-ride/
 END:VEVENT
 END:VCALENDAR

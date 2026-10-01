@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:irvine-ca-bicycle-club-of-irvine-tuesday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261006T091500
+DTEND;TZID=America/Los_Angeles:20261006T111500
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270228T235959Z
+SUMMARY:BCI Tuesday Ride — Irvine\, CA
+LOCATION:University Park\, Irvine (park on the streets and gather at the 
+ building)
+DESCRIPTION:Pace: Route slips run about 26 to 31 miles with a coffee stop
+ .\nSchedule: Every Tuesday\, 9:15 am\, from University Park\, Irvine. Pa
+ rk on the streets and gather at the building. A different route each wee
+ k\, ending at a coffee stop..\nConfirm with the host before you go.\nhtt
+ ps://cycleforchange.org/rides/irvine-ca-bicycle-club-of-irvine-tuesday-r
+ ide/
+URL:https://cycleforchange.org/rides/irvine-ca-bicycle-club-of-irvine-tue
+ sday-ride/
+END:VEVENT
+END:VCALENDAR

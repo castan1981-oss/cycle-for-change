@@ -1,0 +1,143 @@
+[
+ {
+  "slug": "lancaster-pa-lbc-tuesday-training-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-29",
+  "evidence": "Lancaster Bicycle Club's Meetup events page lists the Tuesday Training Rides (A and A+) for Sept 29 and for Oct 6 and Oct 13, 2026 at 6:00 pm from Calvary Church, 1051 Landis Valley Rd (read Oct 1, 2026).",
+  "sources": [
+   "https://www.meetup.com/lancaster-bicycle-club/events/"
+  ]
+ },
+ {
+  "slug": "philadelphia-pa-wednesday-night-rides",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-30",
+  "evidence": "wednightrides.org lists rides on Sept 2, Sept 16 and Sept 30, 2026, every other Wednesday; the Sept 30 post says meet 7:00 pm, roll 7:10 pm from 6th and Kater (read Oct 1, 2026). The next ride is not posted yet.",
+  "sources": [
+   "https://wednightrides.org/",
+   "https://wednightrides.org/posts/2026/09/271/ride"
+  ]
+ },
+ {
+  "slug": "bethlehem-pa-cat-womens-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-30",
+  "evidence": "CAT's Meetup page lists Weekly Women's Bike Rides on Wednesdays Sept 9, 16, 23 and 30 and Oct 7, 14, 21 and 28, 2026, all at 6:00 pm from the D&L Trail; CAT's rides page says women's rides are usually Tuesday or Wednesday at 6 pm, usually from the Charlie Brown Ice House on Sand Island (read Oct 1, 2026).",
+  "sources": [
+   "https://www.meetup.com/cat-bike-rides-in-the-lehigh-valley/events/",
+   "https://lvcat.org/group-bike-rides/"
+  ],
+  "changes": {
+   "visitor_notes": "RSVP on CAT's Meetup page. CAT says the women's ride is usually Tuesday or Wednesday at 6 pm and usually meets at the Charlie Brown Ice House on Sand Island; the Meetup lists each Wednesday's start, so check it. No one is left behind.",
+   "refresh": {
+    "method": "meetup",
+    "watch_url": "https://www.meetup.com/cat-bike-rides-in-the-lehigh-valley/events/",
+    "feed_url": "https://www.meetup.com/cat-bike-rides-in-the-lehigh-valley/events/ical/",
+    "notes": "One Meetup event per week."
+   }
+  }
+ },
+ {
+  "slug": "red-bank-nj-jsts-weeknight-rides",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "JSTS's ride calendar for October 2026 lists the weeknight rides at 4:45 pm the week of Sept 29 (5:00 pm for one Thursday group), 4:30 pm on Oct 6 to 8 and 4:00 pm on Oct 13 to 15, with no weeknight evening rides after Oct 15 and only morning weekday rides from Oct 20 (read Oct 1, 2026).",
+  "sources": [
+   "https://www.jsts.us/Ride-Calendar"
+  ],
+  "changes": {
+   "schedule": "Weeknight rides Tuesday (Michael J. Tighe Park), Wednesday (Holmdel Park) and Thursday (Brookdale Community College). Start times move earlier with sunset: 4:45 pm the week of Sept 29, 4:30 pm Oct 6 to 8, 4:00 pm Oct 13 to 15. The calendar lists no weeknight evening rides after Oct 15; weekday rides from Oct 20 are mornings (8 or 9 am). Many weekend rides too.",
+   "time_local": "4:45 pm",
+   "start_hhmm": "16:45",
+   "start_times": [
+    {
+     "from": "2026-10-06",
+     "start_hhmm": "16:30"
+    },
+    {
+     "from": "2026-10-13",
+     "start_hhmm": "16:00"
+    }
+   ],
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://www.jsts.us/Ride-Calendar",
+    "notes": "The month calendar lists every ride with its start time in the hover text. Evening start times drop each week in October."
+   }
+  }
+ },
+ {
+  "slug": "mechanicsburg-pa-hbc-ua-friendship-park-rides",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-29",
+  "status_since": "2026-09-29",
+  "status_note": "The club calendar labels the Sept 29, 2026 Upper Allen Friendship Park B+ ride 'earlier start final ride' and lists no Friendship Park rides after it through Oct 31; Hershey, Carlisle and West Shore rides fill the evenings. Nothing says when it returns.",
+  "evidence": "HBC's event calendar (read Oct 1, 2026) shows the UA Friendship Park B+ at 5:30 pm and B and C at 6:00 pm on Tue Sept 29 and none after; Thursday Oct 1 shows Hershey B rides instead.",
+  "sources": [
+   "https://harrisburgbicycleclub.org/content.aspx?page_id=4001&club_id=750678",
+   "https://harrisburgbicycleclub.org/content.aspx?page_id=4091&club_id=750678&item_id=2924775"
+  ]
+ },
+ {
+  "slug": "pittsburgh-pa-pmtcc-wednesday-ride",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-30",
+  "status_since": "2026-09-30",
+  "status_note": "PMTCC's public calendar lists a 'Final PMTCC Weekly Wednesdays Ride' on Wed Sept 30, 2026 at 6:00 pm and ends the weekly series on Oct 1; no 2027 date is posted.",
+  "evidence": "PMTCC's public Google Calendar (read Oct 1, 2026) has the weekly Wednesday event with a rule that ends Oct 1, 2026, and a separate entry titled Final PMTCC Weekly Wednesdays Ride on Sept 30 from Tunnel Blvd and S 27th St.",
+  "sources": [
+   "https://pmtcc.org/",
+   "https://calendar.google.com/calendar/ical/pmtccrides%40gmail.com/public/basic.ics"
+  ]
+ },
+ {
+  "slug": "pittsburgh-pa-pgh-babes-on-bikes-frigid-witch-training-rides",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-02-08",
+  "status_since": "2026-02-08",
+  "status_note": "The 2026 series ran the first six Sundays, Jan 4 to Feb 8, ahead of Frigid Witch on Feb 14. The events page lists no 2027 dates yet.",
+  "evidence": "Pittsburgh Babes on Bikes' events page (read Oct 1, 2026) lists Frigid Witch Training Rides #1 to #6 for Jan 4 to Feb 8, 2026 under previous events; its upcoming list is other rides.",
+  "sources": [
+   "https://pghbabesonbikes.com/events",
+   "https://pghbabesonbikes.com/"
+  ]
+ },
+ {
+  "slug": "philadelphia-pa-philly-gravel-club-apres-gravel",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The Trellis's Philly Bike Events Calendar, which lists events through Dec 2026, lists Philly Gravel Club Apres under Monday as no-drop gravel at 6pm (read Oct 1, 2026). Secondary source: the club's own page did not load.",
+  "sources": [
+   "https://www.thetrellisphilly.com/calendar/"
+  ]
+ },
+ {
+  "slug": "philadelphia-pa-papertrail-gravel-espresso",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "PAPERtrail's group rides page says Gravel Espresso runs April to October, Wednesdays at 6 pm, no-drop; the Trellis's 2026 events calendar lists it under Wednesday at 6pm (read Oct 1, 2026). The shop's page has no date on it.",
+  "sources": [
+   "https://papertrailbikecafe.com/group-rides/",
+   "https://www.thetrellisphilly.com/calendar/"
+  ]
+ },
+ {
+  "slug": "philadelphia-pa-laurel-hill-fridays",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The Trellis's Philly Bike Events Calendar, which lists events through Dec 2026, lists Laurel Hill Fridays as social, women-led, WTF-friendly at 6:45am on Fridays (read Oct 1, 2026). Secondary source: the ride's own page did not load.",
+  "sources": [
+   "https://www.thetrellisphilly.com/calendar/"
+  ]
+ }
+]

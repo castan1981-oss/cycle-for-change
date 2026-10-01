@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:columbus-ga-standing-boy-trails-sunday-group-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261004T150000
+DTEND;TZID=America/New_York:20261004T170000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Standing Boy Trails Sunday Group Ride — Columbus\, GA
+LOCATION:Standing Boy Trails\, Upper Lot
+DESCRIPTION:Schedule: Every Sunday at 3:00 pm\, meeting in the Upper Lot 
+ at Standing Boy Trails..\nConfirm with the host before you go.\nhttps://
+ cycleforchange.org/rides/columbus-ga-standing-boy-trails-sunday-group-ri
+ de/
+URL:https://cycleforchange.org/rides/columbus-ga-standing-boy-trails-sund
+ ay-group-ride/
+END:VEVENT
+END:VCALENDAR

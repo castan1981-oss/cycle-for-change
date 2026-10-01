@@ -1,0 +1,187 @@
+[
+ {
+  "slug": "anchorage-ak-tuesday-night-social-road-ride",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-08-25",
+  "evidence": "ORCA's calendar feed lists the Taco Tuesday road ride every Tuesday from May 19 to Aug 25, 2026 and nothing after; the event page says it repeats 'throughout the summer' and is marked passed (fetched Oct 1, 2026).",
+  "status_note": "The host's page says the weekly Tuesday ride runs throughout the summer. The calendar's last Tuesday date is Aug 25, 2026 and no fall dates are posted.",
+  "status_since": "2026-08-26",
+  "sources": [
+   "https://orca.bike/event/weekly-taco-tuesdays-or-pizza-road-ride/",
+   "https://orca.bike/calendar/?ical=1"
+  ]
+ },
+ {
+  "slug": "honolulu-hi-outta-bounds-pau-hana-wednesday",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-09",
+  "evidence": "HBL's Group Ride Listings page (last modified Sept 9, 2026) lists the Pau Hana Ride, Wednesdays 4:30 pm from Triangle Park, led by Outta Bounds Racing Team; the team's own site would not load (expired certificate).",
+  "sources": [
+   "https://hbl.org/group-ride-listings/"
+  ]
+ },
+ {
+  "slug": "honolulu-hi-red-hot-ladies-roving-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-20",
+  "evidence": "HBL's ride calendar lists the RHL Roving Ride for Sun Sept 20, 2026, 7:30 am from Koko Head Neighborhood Park, and every Sunday back to Aug 23 ('all start promptly at 7:30'); the listing page (modified Sept 9, 2026) still says meet 7:15, roll 7:30. Late-summer rides were long Honolulu Century Ride training routes (55 to 80 miles).",
+  "sources": [
+   "https://hbl.org/group-ride-listings/",
+   "https://calendar.google.com/calendar/ical/hbl.org_jsh32i71qaqsjip8h24s54oj8c%40group.calendar.google.com/public/basic.ics"
+  ]
+ },
+ {
+  "slug": "honolulu-hi-hbl-start-the-week-off-right-monday-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-09",
+  "evidence": "HBL's Group Ride Listings page (last modified Sept 9, 2026) lists Start-the-Week-Off-Right, Mondays 8:30 am to noon, typically from Kahala Community Center.",
+  "sources": [
+   "https://hbl.org/group-ride-listings/"
+  ]
+ },
+ {
+  "slug": "honolulu-hi-wolfpack-tuesday-night-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-09",
+  "evidence": "HBL's Group Ride Listings page (last modified Sept 9, 2026) lists Wolfpack Tuesday Night Ride, Tuesdays 4:30 pm from Kilauea District Park, 25 miles, drop ride on the way back.",
+  "sources": [
+   "https://hbl.org/group-ride-listings/"
+  ]
+ },
+ {
+  "slug": "kapolei-hi-sunday-morning-coffee-jam",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-09",
+  "evidence": "HBL's Group Ride Listings page (last modified Sept 9, 2026) lists Sunday Morning Coffee Jam, meet 7:00 am, roll 7:15 am from Kapolei Chili's, 35 to 40 miles, no-drop social.",
+  "sources": [
+   "https://hbl.org/group-ride-listings/"
+  ]
+ },
+ {
+  "slug": "fargo-nd-gnbc-monday-riding-101",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "GNBC's Group Rides & Events page (carries the 2026 waiver) lists Monday 6:00 pm Riding 101 from 425 Broadway N as a ride 'every week during the spring and summer months' with no fall schedule (fetched Oct 1, 2026).",
+  "status_note": "Shop lists its weekly rides as spring and summer only; no fall schedule posted. Expect it back in spring 2027.",
+  "status_since": "2026-10-01",
+  "sources": [
+   "https://www.gncycles.com/events/group-rides-events-pg204.htm"
+  ]
+ },
+ {
+  "slug": "fargo-nd-gnbc-thursday-wow-road-ride",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "GNBC's Group Rides & Events page (carries the 2026 waiver) lists Thursday 6:00 pm W.O.W. road ride as a spring and summer ride with no fall schedule (fetched Oct 1, 2026).",
+  "status_note": "Shop lists its weekly rides as spring and summer only; no fall schedule posted. Expect it back in spring 2027.",
+  "status_since": "2026-10-01",
+  "sources": [
+   "https://www.gncycles.com/events/group-rides-events-pg204.htm"
+  ]
+ },
+ {
+  "slug": "maui-hi-maui-bicycling-league-monthly-group-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-08-15",
+  "evidence": "mauibike.org is behind a captcha, but HBL's ride calendar carries MBL's own ride notices for 2026: Sat Feb 21 (8:45 am), Sun Apr 12 (BBQ ride), Sat Jun 27 (7:45 am, Pukalani to Kula) and Sat Aug 15 (7:45 am, Kalama Park); rides come about every six to eight weeks, not monthly. Nothing is posted after Aug 15.",
+  "changes": {
+   "schedule": "About every six to eight weeks, usually a Saturday morning (7:45 am in summer 2026); the start moves between Kalama Park in Kihei and Pukalani; registration required",
+   "time_local": "7:45 am",
+   "start_hhmm": "07:45",
+   "frequency": "irregular",
+   "start_location": {
+    "name": "Kalama Park, Kihei (start varies by ride; Pukalani for the Kula ride)",
+    "address": "1900 S Kihei Rd, Kihei, HI 96753"
+   }
+  },
+  "sources": [
+   "https://calendar.google.com/calendar/ical/hbl.org_jsh32i71qaqsjip8h24s54oj8c%40group.calendar.google.com/public/basic.ics",
+   "https://mauinow.com/events/event/k3m6d3e3k1v2g/"
+  ]
+ },
+ {
+  "slug": "grand-forks-nd-sbs-monday-gravel-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Ski & Bike Shop's Local Group Rides page (2026 footer) lists the no-drop gravel ride, Mondays 6:00 pm from the store front, with no end-of-season notice (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.skiandbikeshop.net/articles/local-group-rides-pg195.htm"
+  ]
+ },
+ {
+  "slug": "grand-forks-nd-sbs-thursday-road-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Ski & Bike Shop's Local Group Rides page (2026 footer) lists the no-drop group road ride, Thursdays 6:00 pm from the store front, with no end-of-season notice (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.skiandbikeshop.net/articles/local-group-rides-pg195.htm"
+  ]
+ },
+ {
+  "slug": "rapid-city-sd-bhbh-ladies-rides",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Black Hills Bike Hub's events page (site last edited Aug 2026) lists Ladies Rides as 'June-August, every other Thursday, 6 p.m.' (fetched Oct 1, 2026).",
+  "status_note": "The Hub lists Ladies Rides for June to August only. Back in June 2027.",
+  "status_since": "2026-09-01",
+  "sources": [
+   "https://www.blackhillsbikehub.org/eventscalendar"
+  ]
+ },
+ {
+  "slug": "rapid-city-sd-bhbh-chilly-nights-chill-rides",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Black Hills Bike Hub's events page (site last edited Aug 2026) lists Chilly Nights, Chill Rides for 'November-December, every other Thursday, as weather allows' (fetched Oct 1, 2026).",
+  "status_note": "Series starts in November, every other Thursday, weather allowing; front light and helmet required.",
+  "status_since": "2026-10-01",
+  "sources": [
+   "https://www.blackhillsbikehub.org/eventscalendar"
+  ]
+ },
+ {
+  "slug": "sioux-falls-sd-sfbc-first-friday-mtb-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Sioux Falls Bicycle Company's events page lists First Friday Rides as a 2026 series from May 1 through Oct 1, 5:30 pm from the shop, and says the rides run to October 3rd; next is Fri Oct 2 (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.siouxfallsbikestore.com/events-1"
+  ]
+ },
+ {
+  "slug": "sioux-falls-sd-sfbc-wednesday-joy-ride",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-16",
+  "evidence": "Sioux Falls Bicycle Company's events page lists the Wednesday Joy Ride (pub ride, third Wednesday monthly, 6:30 pm) as a series running May 20 to Sep 16, 2026; no October date is posted (fetched Oct 1, 2026).",
+  "status_note": "The shop's 2026 series ran May 20 to Sep 16; no October date is posted. Expect it back in May 2027.",
+  "status_since": "2026-09-17",
+  "sources": [
+   "https://www.siouxfallsbikestore.com/events-1"
+  ]
+ },
+ {
+  "slug": "spearfish-sd-twd-friday-night-club-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Two Wheeler Dealer's Rides & Events page (2026 footer) lists the Friday Night Club Ride, Fridays 5:00 pm April to October from the shop, rotating canyon, gravel and mountain rides (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.twowheelerdealer.com/articles/rides-events-pg147.htm"
+  ]
+ }
+]

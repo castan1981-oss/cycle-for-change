@@ -5,17 +5,18 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:merida-mx-biciruta-dominical@cycleforchange.org
-DTSTAMP:20260930T000000Z
+DTSTAMP:20261001T000000Z
 DTSTART;TZID=America/Merida:20261004T080000
 DTEND;TZID=America/Merida:20261004T123000
-RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270227T235959Z
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
 SUMMARY:Biciruta — Mérida\, Mexico
 LOCATION:Any point on the circuit; it ends at the Monumento a la Patria o
  n Paseo de Montejo
-DESCRIPTION:Schedule: Every Sunday\, 8:00 am to 12:30 pm\, on a circuit t
- hrough the historic centre (La Mejorada\, La Plancha\, Paseo de Montejo)
-  that ends at the Monumento a la Patria..\nConfirm with the host before 
- you go.\nhttps://cycleforchange.org/rides/merida-mx-biciruta-dominical/
+DESCRIPTION:Schedule: Every Sunday\, 8:00 am to 12:00 pm\, on a circuit t
+ hat links San Juan\, Distrito Mejorada\, the Gran Parque de La Plancha a
+ nd Paseo de Montejo and ends at the Monumento a la Patria. An earlier Di
+ ario de Yucatán explainer said 12:30 pm..\nConfirm with the host before
+  you go.\nhttps://cycleforchange.org/rides/merida-mx-biciruta-dominical/
 URL:https://cycleforchange.org/rides/merida-mx-biciruta-dominical/
 END:VEVENT
 END:VCALENDAR

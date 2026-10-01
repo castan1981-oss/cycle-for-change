@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-diego-ca-cyclo-vets-friday-coronado-ferry-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261002T080000
+DTEND;TZID=America/Los_Angeles:20261002T100000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270228T235959Z
+SUMMARY:Cyclo-Vets Friday Coronado Ferry to Bayshore Bikeway Ride — San
+  Diego\, CA
+LOCATION:Coronado ferry landing at Broadway Pier
+DESCRIPTION:Pace: C\, leisurely\, flat.\nSchedule: Every Friday\, 8:00 am
+  at the Coronado ferry landing at Broadway Pier. Ferry to Coronado\, the
+ n the Bayshore Bikeway\, about 32 miles..\nConfirm with the host before 
+ you go.\nhttps://cycleforchange.org/rides/san-diego-ca-cyclo-vets-friday
+ -coronado-ferry-ride/
+URL:https://cycleforchange.org/rides/san-diego-ca-cyclo-vets-friday-coron
+ ado-ferry-ride/
+END:VEVENT
+END:VCALENDAR

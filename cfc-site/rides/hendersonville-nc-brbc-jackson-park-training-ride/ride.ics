@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hendersonville-nc-brbc-jackson-park-training-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T093000
+DTEND;TZID=America/New_York:20261003T120000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261107T045959Z
+SUMMARY:Trevor's Jackson Park Training Ride — Hendersonville\, NC
+LOCATION:Jackson Park\, 708 Glover St\, Hendersonville\, NC 28739
+DESCRIPTION:Pace: Riders set their own pace and split into groups of simi
+ lar ability.\nSchedule: Saturdays\, 9:30 am\, from Jackson Park; noon fr
+ om Nov 7. The same Apple Pancake loop every week..\nConfirm with the hos
+ t before you go.\nhttps://cycleforchange.org/rides/hendersonville-nc-brb
+ c-jackson-park-training-ride/
+URL:https://cycleforchange.org/rides/hendersonville-nc-brbc-jackson-park-
+ training-ride/
+END:VEVENT
+BEGIN:VEVENT
+UID:hendersonville-nc-brbc-jackson-park-training-ride-from-2026-11-07@cyc
+ leforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261107T120000
+DTEND;TZID=America/New_York:20261107T143000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Trevor's Jackson Park Training Ride — Hendersonville\, NC
+LOCATION:Jackson Park\, 708 Glover St\, Hendersonville\, NC 28739
+DESCRIPTION:Pace: Riders set their own pace and split into groups of simi
+ lar ability.\nSchedule: Saturdays\, 9:30 am\, from Jackson Park; noon fr
+ om Nov 7. The same Apple Pancake loop every week..\nConfirm with the hos
+ t before you go.\nhttps://cycleforchange.org/rides/hendersonville-nc-brb
+ c-jackson-park-training-ride/
+URL:https://cycleforchange.org/rides/hendersonville-nc-brbc-jackson-park-
+ training-ride/
+END:VEVENT
+END:VCALENDAR

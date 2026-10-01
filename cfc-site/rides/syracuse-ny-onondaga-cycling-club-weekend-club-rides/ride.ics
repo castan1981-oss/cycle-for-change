@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:syracuse-ny-onondaga-cycling-club-weekend-club-rides@cycleforchange.o
+ rg
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T100000
+DTEND;TZID=America/New_York:20261003T120000
+RRULE:FREQ=WEEKLY;BYDAY=SA,SU;UNTIL=20270228T235959Z
+SUMMARY:OCC Saturday and Sunday Club Rides — Syracuse\, NY
+LOCATION:Varies by ride; see the OCC ride calendar and its ride start loc
+ ations page
+DESCRIPTION:Pace: Rated on the calendar for each ride\, with shorter opti
+ ons on most.\nSchedule: Saturdays and Sundays\, 10:00 am\, a different r
+ ide and start each weekend on the club calendar. Saturday rides are shor
+ ter and flatter; Sunday rides are the longest and hilliest. Several Octo
+ ber dates still say 'Leader needed'..\nConfirm with the host before you 
+ go.\nhttps://cycleforchange.org/rides/syracuse-ny-onondaga-cycling-club-
+ weekend-club-rides/
+URL:https://cycleforchange.org/rides/syracuse-ny-onondaga-cycling-club-we
+ ekend-club-rides/
+END:VEVENT
+END:VCALENDAR

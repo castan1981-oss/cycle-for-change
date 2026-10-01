@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:detroit-mi-soul-roll-detroit-monday-saturday@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T190000
+DTEND;TZID=America/New_York:20261003T210000
+RRULE:FREQ=WEEKLY;BYDAY=MO,SA;UNTIL=20270228T235959Z
+SUMMARY:Soul Roll Detroit — Detroit\, MI
+LOCATION:Eastern Market Shed 5\, 2810 Russell St\, Detroit\, MI 48207
+DESCRIPTION:Pace: 10-12 mph (2023 BridgeDetroit guide).\nNo-drop.\nSchedu
+ le: Mondays and Saturdays\, rolling out at 7:00 pm from Eastern Market S
+ hed 5. The calendar runs both through Oct 31\, 2026; earlier entries say
+  meet at 6:00\, roll at 7:00. Sometimes canceled for weather..\nConfirm 
+ with the host before you go.\nhttps://cycleforchange.org/rides/detroit-m
+ i-soul-roll-detroit-monday-saturday/
+URL:https://cycleforchange.org/rides/detroit-mi-soul-roll-detroit-monday-
+ saturday/
+END:VEVENT
+END:VCALENDAR

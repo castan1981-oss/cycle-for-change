@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mexico-city-mx-chirimixquics-bike-friday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Mexico_City:20261002T181500
+DTEND;TZID=America/Mexico_City:20261002T201500
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270228T235959Z
+SUMMARY:Chirimixquic's Bike\, rodada del viernes — Mexico City\, Mexico
+LOCATION:Reloj de Tecómitl\, Plaza de la Corregidora 26\, Pueblo de San 
+ Antonio Tecómitl\, Milpa Alta\, Ciudad de México
+DESCRIPTION:Schedule: Friday evenings\, 6:15 pm from the Reloj de Tecómi
+ tl in San Antonio Tecómitl\, Milpa Alta (Sept 4\, 11 and 25\, 2026). Th
+ e destination changes each week..\nConfirm with the host before you go.\
+ nhttps://cycleforchange.org/rides/mexico-city-mx-chirimixquics-bike-frid
+ ay-ride/
+URL:https://cycleforchange.org/rides/mexico-city-mx-chirimixquics-bike-fr
+ iday-ride/
+END:VEVENT
+END:VCALENDAR

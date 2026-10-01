@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:las-vegas-nv-lvvbc-wednesday-morning-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261007T070000
+DTEND;TZID=America/Los_Angeles:20261007T100000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20270228T235959Z
+SUMMARY:LVVBC Wednesday Morning Ride — Las Vegas\, NV
+LOCATION:Einstein Bagels\, 8300 W. Cheyenne Ave.\, Las Vegas\, NV
+DESCRIPTION:Pace: About 15 mph average\, with a mid-ride stop for water a
+ nd restrooms.\nSchedule: Every Wednesday\, 7:00 am\, from Einstein Bagel
+ s on W. Cheyenne Ave. The Meetup series runs to Jan 5\, 2027; the route 
+ is posted a couple of days ahead..\nConfirm with the host before you go.
+ \nhttps://cycleforchange.org/rides/las-vegas-nv-lvvbc-wednesday-morning-
+ ride/
+URL:https://cycleforchange.org/rides/las-vegas-nv-lvvbc-wednesday-morning
+ -ride/
+END:VEVENT
+END:VCALENDAR

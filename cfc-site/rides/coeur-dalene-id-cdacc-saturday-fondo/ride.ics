@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:coeur-dalene-id-cdacc-saturday-fondo@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T120500
+DTEND;TZID=America/Los_Angeles:20261003T140500
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261031T235959Z
+SUMMARY:Saturday Fondo (Grandeur) — Coeur d'Alene\, ID
+LOCATION:Workhorse office\, 1324 E Sherman Ave\, Coeur d'Alene\, ID 83814
+DESCRIPTION:Pace: About 18 mph\, set by the group.\nSchedule: Saturdays\,
+  12:00 pm (departs 12:05) from the Workhorse office\, spring through fal
+ l 2026. Last ride date not posted..\nConfirm with the host before you go
+ .\nhttps://cycleforchange.org/rides/coeur-dalene-id-cdacc-saturday-fondo
+ /
+URL:https://cycleforchange.org/rides/coeur-dalene-id-cdacc-saturday-fondo
+ /
+END:VEVENT
+END:VCALENDAR

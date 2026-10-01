@@ -1,0 +1,1002 @@
+[
+  {
+    "slug": "hamburg-de-critical-mass-hamburg-last-friday",
+    "name": "Critical Mass Hamburg",
+    "name_en": null,
+    "kind": "critical-mass",
+    "city": "Hamburg",
+    "region": "Hamburg",
+    "state": null,
+    "country": "DE",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Last Friday of every month, about 7:00 pm. The start point is where the previous month's ride ended (Sept 25, 2026 started at the Alter Elbpark).",
+    "days": [
+      "fri"
+    ],
+    "time_local": "7:00 pm",
+    "start_hhmm": "19:00",
+    "frequency": "monthly",
+    "monthly_rule": [
+      {
+        "ord": -1,
+        "day": "fri"
+      }
+    ],
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Europe/Berlin",
+    "start_location": {
+      "name": "Changes every month: where the last ride ended (Sept 2026: Alter Elbpark)",
+      "address": null
+    },
+    "distance_km": 25,
+    "distance_miles": 16,
+    "duration": "~2.5 to 3 hours",
+    "duration_min": 165,
+    "pace": "Mass pace, set by the crowd",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Critical Mass Hamburg",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "de"
+    ],
+    "visitor_notes": "Free, no sign-up and no leader. Check the group's channels for the start point, because it moves each month. The ride's own rules ask for friendly riding, corking junctions and never riding in the oncoming lane. Lights in winter.",
+    "description": "Hamburg's monthly mass ride on the last Friday, all year, whatever the weather. The page on criticalmass.in says about 500 riders in snow and ice and close to 6,000 on summer evenings. The ride's own estimates for July to September 2026 were 1,100 to 1,800 riders over 24 to 30 km.",
+    "links": {
+      "website": "http://www.criticalmass.hamburg/",
+      "instagram": "https://www.instagram.com/critical_mass_hamburg/",
+      "facebook": "https://www.facebook.com/cmhamburg",
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://criticalmass.in/hamburg"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://criticalmass.in/hamburg",
+      "https://criticalmass.in/api/ride?citySlug=hamburg&year=2026&month=9"
+    ],
+    "verified_on": "2026-10-01",
+    "last_seen": "2026-09-25",
+    "evidence": "criticalmass.in logs the Sept 25, 2026 ride at the Alter Elbpark with an estimated 1,315 riders over 24.4 km; the Aug 28 (1,134 riders) and Jul 31 (1,788 riders) rides are logged the same way (fetched Oct 1, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://criticalmass.in/hamburg",
+      "feed_url": null,
+      "notes": "The next date criticalmass.in shows is worked out from the monthly rule, so it proves nothing alone. Check that last month's ride has a rider estimate. The platform's API lists estimated_participants after each ride."
+    }
+  },
+  {
+    "slug": "berlin-de-critical-mass-berlin-last-friday",
+    "name": "Critical Mass Berlin (Friday evening)",
+    "name_en": null,
+    "kind": "critical-mass",
+    "city": "Berlin",
+    "region": "Berlin",
+    "state": null,
+    "country": "DE",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Last Friday of every month, 8:00 pm, from Mariannenplatz. criticalmass.in also lists a first-Sunday ride at 2:00 pm from the Brandenburger Tor, but no rider counts are logged for it.",
+    "days": [
+      "fri"
+    ],
+    "time_local": "8:00 pm",
+    "start_hhmm": "20:00",
+    "frequency": "monthly",
+    "monthly_rule": [
+      {
+        "ord": -1,
+        "day": "fri"
+      }
+    ],
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Europe/Berlin",
+    "start_location": {
+      "name": "Mariannenplatz",
+      "address": "Mariannenplatz, Berlin"
+    },
+    "distance_km": 38,
+    "distance_miles": 24,
+    "duration": "~4 hours",
+    "duration_min": 240,
+    "pace": "Mass pace, set by the crowd",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Critical Mass Berlin",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "de"
+    ],
+    "visitor_notes": "Free, no sign-up and no leader. Expect hundreds to thousands of riders in summer and a few hundred in the cold months. Bring lights.",
+    "description": "Berlin's Critical Mass has rolled since September 1997, the first in Germany. The Friday evening ride starts at Mariannenplatz and runs about 38 km. Riders on the platform estimated 800 for Sept 25 and 1,800 for Aug 28, 2026.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": "https://www.facebook.com/pages/Critical-Mass-Berlin/74806304846",
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://criticalmass.in/berlin",
+        "https://bsky.app/profile/did:plc:wwrjssxbvzpqoljk5yq67jey"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://criticalmass.in/berlin",
+      "https://criticalmass.in/api/ride?citySlug=berlin&year=2026&month=9"
+    ],
+    "verified_on": "2026-10-01",
+    "last_seen": "2026-09-25",
+    "evidence": "criticalmass.in logs the Sept 25, 2026 ride at Mariannenplatz (about 800 riders, 37.9 km) and the Aug 28 ride (about 1,800 riders); the Sunday rides on the Brandenburger Tor have no counts (fetched Oct 1, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://criticalmass.in/berlin",
+      "feed_url": null,
+      "notes": "The next date criticalmass.in shows is worked out from the monthly rule, so it proves nothing alone. Check that last month's ride has a rider estimate. The platform's API lists estimated_participants after each ride. The old homepage critical-mass-berlin.de no longer resolves."
+    }
+  },
+  {
+    "slug": "frankfurt-de-critical-mass-frankfurt-second-friday",
+    "name": "Critical Mass Frankfurt (Friday evening)",
+    "name_en": null,
+    "kind": "critical-mass",
+    "city": "Frankfurt",
+    "region": "Hesse",
+    "state": null,
+    "country": "DE",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Second Friday of the month, 7:00 pm, in front of the Alte Oper (Aug 2026 ran on the first Friday, Aug 7). A smaller first-Sunday ride leaves the same place at 2:00 pm.",
+    "days": [
+      "fri"
+    ],
+    "time_local": "7:00 pm",
+    "start_hhmm": "19:00",
+    "frequency": "monthly",
+    "monthly_rule": [
+      {
+        "ord": 2,
+        "day": "fri"
+      }
+    ],
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Europe/Berlin",
+    "start_location": {
+      "name": "Vor der Alten Oper",
+      "address": "Opernplatz, Frankfurt am Main"
+    },
+    "distance_km": 20,
+    "distance_miles": 12,
+    "duration": "~2.5 to 3.5 hours",
+    "duration_min": 165,
+    "pace": "Mass pace, set by the crowd",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Critical Mass Frankfurt",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "de"
+    ],
+    "visitor_notes": "Free, no sign-up and no leader. Friday rides drew 220 to 670 riders in June to September 2026; the Sunday rides 40 to 60. Bring lights.",
+    "description": "Frankfurt's Critical Mass rolls from the Alte Oper on the second Friday evening, with a smaller Sunday ride at 2:00 pm on the first Sunday. Rides in summer 2026 ran 16 to 24 km. Riders on the platform estimated 460 for Sept 11 and 673 for Aug 7.",
+    "links": {
+      "website": "https://criticalmass-frankfurt.de/",
+      "instagram": null,
+      "facebook": "https://www.facebook.com/critical.mass.ffm",
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://criticalmass.in/frankfurt"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://criticalmass.in/api/frankfurt",
+      "https://criticalmass.in/api/ride?citySlug=frankfurt&year=2026&month=9"
+    ],
+    "verified_on": "2026-10-01",
+    "last_seen": "2026-09-11",
+    "evidence": "criticalmass.in logs the Sept 11, 2026 ride from the Alte Oper (about 460 riders, 20.1 km), Aug 7 (673 riders), Jul 10 (550) and Jun 12 (220) (fetched Oct 1, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://criticalmass.in/frankfurt",
+      "feed_url": null,
+      "notes": "The next date criticalmass.in shows is worked out from the monthly rule, so it proves nothing alone. Check that last month's ride has a rider estimate. The platform's API lists estimated_participants after each ride. The August 2026 ride fell on the first Friday, so confirm the date in the week."
+    }
+  },
+  {
+    "slug": "koln-de-critical-mass-koln-last-friday",
+    "name": "Critical Mass Köln",
+    "name_en": null,
+    "kind": "critical-mass",
+    "city": "Köln",
+    "region": "North Rhine-Westphalia",
+    "state": null,
+    "country": "DE",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Last Friday of every month, 6:00 pm, from the Rudolfplatz.",
+    "days": [
+      "fri"
+    ],
+    "time_local": "6:00 pm",
+    "start_hhmm": "18:00",
+    "frequency": "monthly",
+    "monthly_rule": [
+      {
+        "ord": -1,
+        "day": "fri"
+      }
+    ],
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Europe/Berlin",
+    "start_location": {
+      "name": "Rudolfplatz",
+      "address": "Rudolfplatz, Köln"
+    },
+    "distance_km": 30,
+    "distance_miles": 19,
+    "duration": "~1.5 to 3 hours",
+    "duration_min": 165,
+    "pace": "Mass pace, set by the crowd",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Critical Mass Köln",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "de"
+    ],
+    "visitor_notes": "Free, no sign-up and no leader. Numbers swing with the season: about 25 riders in June 2026, 246 in September. Bring lights.",
+    "description": "Cologne's monthly mass ride leaves the Rudolfplatz on the last Friday at 6:00 pm. The September 2026 ride ran about 30 km. Riders on the platform estimated 246 for Sept 25 and 80 for Aug 28.",
+    "links": {
+      "website": "http://critical-mass.koeln/",
+      "instagram": null,
+      "facebook": "https://www.facebook.com/critical.mass.koeln",
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://criticalmass.in/koeln"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://criticalmass.in/api/koeln",
+      "https://criticalmass.in/api/ride?citySlug=koeln&year=2026&month=9"
+    ],
+    "verified_on": "2026-10-01",
+    "last_seen": "2026-09-25",
+    "evidence": "criticalmass.in logs the Sept 25, 2026 ride from the Rudolfplatz (about 246 riders, 29.8 km), Aug 28 (80 riders) and Jun 26 (25 riders) (fetched Oct 1, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "calendar-page",
+      "watch_url": "https://criticalmass.in/koeln",
+      "feed_url": null,
+      "notes": "The next date criticalmass.in shows is worked out from the monthly rule, so it proves nothing alone. Check that last month's ride has a rider estimate. The platform's API lists estimated_participants after each ride."
+    }
+  },
+  {
+    "slug": "bogota-co-idrd-ciclovia-de-bogota",
+    "name": "Ciclovía de Bogotá",
+    "name_en": "Bogotá Ciclovía",
+    "kind": "open-streets",
+    "city": "Bogotá",
+    "region": "Bogotá",
+    "state": null,
+    "country": "CO",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Every Sunday and public holiday, 7:00 am to 2:00 pm, on a 141.46 km circuit of streets closed to cars.",
+    "days": [
+      "sun"
+    ],
+    "time_local": "7:00 am",
+    "start_hhmm": "07:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "America/Bogota",
+    "start_location": {
+      "name": "A circuit across the city, no single start (the IDRD site has the route map)",
+      "address": null
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "7 hours open",
+    "duration_min": 420,
+    "pace": "Your own pace",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Instituto Distrital de Recreación y Deporte (IDRD)",
+      "type": "public"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": "free",
+    "language": [
+      "es"
+    ],
+    "visitor_notes": "Free and nothing to book. Open to bikes, skates and walkers; join the circuit anywhere. The IDRD runs it on Sundays and holidays all year.",
+    "description": "The oldest recreational Ciclovía in the world, run by the city's sports institute. About 141 km of connected streets close to cars every Sunday and holiday morning. The IDRD says more than 1.5 million people use it each week.",
+    "links": {
+      "website": "https://www.idrd.gov.co/ciclovia",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": null,
+      "other": [
+        "https://ciclovia.idrd.gov.co/"
+      ]
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.idrd.gov.co/ciclovia",
+      "https://ciclovia.idrd.gov.co/",
+      "https://www.idrd.gov.co/noticias"
+    ],
+    "verified_on": "2026-10-01",
+    "last_seen": "2026-09-15",
+    "evidence": "The IDRD's Ciclovía page gives Sundays and holidays, 7:00 am to 2:00 pm, 141.46 km; the IDRD news page carries a Sept 15, 2026 item on recruiting new Ciclovía guards (fetched Oct 1, 2026). No dated item names a specific Sunday.",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "static-page",
+      "watch_url": "https://www.idrd.gov.co/ciclovia",
+      "feed_url": null,
+      "notes": "Holiday and event changes are posted on the IDRD news page. The programme page shows no dated Sundays."
+    }
+  },
+  {
+    "slug": "sydney-au-bikeast-supasaturday-ramsgate",
+    "name": "SupaSaturday Ride: Moore Park to Ramsgate",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Sydney",
+    "region": "New South Wales",
+    "state": null,
+    "country": "AU",
+    "neighborhood": "Kensington",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Every Saturday, meet 7:30 am at the Dacey Avenue bus shelter, Kensington (or 7:45 am at The Grounds, Alexandria); back about 10:30 am. The Meetup series was posted to Oct 11, 2026.",
+    "days": [
+      "sat"
+    ],
+    "time_local": "7:30 am",
+    "start_hhmm": "07:30",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Australia/Sydney",
+    "start_location": {
+      "name": "Dacey Avenue bus shelter, in front of the E S Marks Athletic Field",
+      "address": "Dacey Avenue, Kensington NSW"
+    },
+    "distance_km": 36,
+    "distance_miles": 22,
+    "duration": "~3 hours",
+    "duration_min": 180,
+    "pace": "Medium, about 20 km/h average on Meetup; BIKEast's own page calls it fast",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "BIKEast",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "RSVP on Meetup. Mostly cycleways and back streets, with a short stretch on Dacey Ave and South Dowling St. BIKEast calls these recreational rides, not roadie-style group rides.",
+    "description": "A Saturday ride south through Waterloo, Mascot and around Sydney Airport, then along the cycle path through the Barton and Scarborough Park wetlands to Ramsgate Beach for coffee and pastries. BIKEast says the Saturday rides started in the late 1970s and the Ramsgate route in 2003.",
+    "links": {
+      "website": "https://www.bikeast.org.au/rides/",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": "https://www.meetup.com/bikeast/",
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.bikeast.org.au/rides/",
+      "https://www.meetup.com/bikeast/",
+      "https://www.meetup.com/bikeast/events/316728162/",
+      "https://www.meetup.com/bikeast/events/ical/"
+    ],
+    "verified_on": "2026-10-01",
+    "last_seen": "2026-09-26",
+    "evidence": "BIKEast's Meetup page lists this ride on Sat Sept 12, 19 and 26 and upcoming Oct 3 and 10, 2026, 7:30 am; its rides page (copyright 2026) names the Saturday ride (fetched Oct 1, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "meetup",
+      "watch_url": "https://www.meetup.com/bikeast/events/",
+      "feed_url": "https://www.meetup.com/bikeast/events/ical/",
+      "notes": "The Saturday series is posted a few weeks at a time and the current one ends Oct 11, 2026; look for a new series."
+    }
+  },
+  {
+    "slug": "sydney-au-bikeast-eastern-sydney-coastal-explorer",
+    "name": "Eastern Sydney Coastal Explorer",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Sydney",
+    "region": "New South Wales",
+    "state": null,
+    "country": "AU",
+    "neighborhood": "Bondi Junction",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Every second Sunday, 8:15 am from 72 Spring St, Bondi Junction; back about 11:30 am. Listed for Oct 4 and 18, Nov 1, 15 and 29, 2026.",
+    "days": [
+      "sun"
+    ],
+    "time_local": "8:15 am",
+    "start_hhmm": "08:15",
+    "frequency": "biweekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Australia/Sydney",
+    "start_location": {
+      "name": "72 Spring St, Bondi Junction",
+      "address": "72 Spring St, Bondi Junction NSW"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "~3 hours 15 minutes",
+    "duration_min": 195,
+    "pace": "Easy, with plenty of stops",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "BIKEast",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "You must RSVP on Meetup. Mostly quiet streets and shared paths; the ride goes ahead in fine drizzle but not heavy rain, so check the Meetup page that morning.",
+    "description": "A relaxed morning ride along the eastern harbour and coast, with stops for the views, back to Bondi Junction. It starts early to stay ahead of the beach and harbourside traffic. BIKEast's site also lists a monthly cruisy coastal ride from Bondi Junction to La Perouse (35 km).",
+    "links": {
+      "website": "https://www.bikeast.org.au/rides/",
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": "https://www.meetup.com/bikeast/",
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.bikeast.org.au/rides/",
+      "https://www.meetup.com/bikeast/events/316396524/",
+      "https://www.meetup.com/bikeast/events/ical/"
+    ],
+    "verified_on": "2026-10-01",
+    "last_seen": "2026-09-06",
+    "evidence": "BIKEast's Meetup feed lists the ride for Sun Oct 4, Oct 18, Nov 1, Nov 15 and Nov 29, 2026, 8:15 am, and the group page shows Sept 6 (fetched Oct 1, 2026); the series is marked every 2 weeks to Dec 20, 2026.",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "meetup",
+      "watch_url": "https://www.meetup.com/bikeast/events/",
+      "feed_url": "https://www.meetup.com/bikeast/events/ical/",
+      "notes": "The route name on the BIKEast site (Cruisy Coastal Ride, monthly) differs from Meetup (every second Sunday); trust the Meetup dates."
+    }
+  },
+  {
+    "slug": "sydney-au-balmain-bike-bus-wednesday",
+    "name": "Balmain Bike Bus",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Sydney",
+    "region": "New South Wales",
+    "state": null,
+    "country": "AU",
+    "neighborhood": "Balmain",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Every Wednesday morning: meet 8:00 am at Loyalty Square, Balmain (outside Woolworths), leave 8:10; or join at the Robert Street gate of White Bay Power Station at 8:10 for an 8:20 departure.",
+    "days": [
+      "wed"
+    ],
+    "time_local": "8:00 am",
+    "start_hhmm": "08:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Australia/Sydney",
+    "start_location": {
+      "name": "Loyalty Square, outside Woolworths, Balmain",
+      "address": "Loyalty Square, Balmain NSW"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "~2 hours on Meetup",
+    "duration_min": 120,
+    "pace": "Easy commuter pace",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Climate Change Balmain-Rozelle (listed by Bike Leichhardt)",
+      "type": "collective"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "RSVP on the Bike Leichhardt Meetup page. After Pyrmont people go on to work, have a coffee, or ride home.",
+    "description": "A led commute ride from Balmain through White Bay Power Station and over the Anzac Bridge to Union Square on Harris Street, Pyrmont. Run by the Climate Change Balmain-Rozelle group and posted on the Bike Leichhardt Meetup.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": "https://www.meetup.com/bike-leichhardt/",
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.meetup.com/bike-leichhardt/",
+      "https://www.meetup.com/bike-leichhardt/events/316150340/"
+    ],
+    "verified_on": "2026-10-01",
+    "last_seen": "2026-09-30",
+    "evidence": "The Bike Leichhardt Meetup page lists the Balmain Bike Bus for Wed Sept 23 and Sept 30, 2026, 8:00 am, with the line 'happens every Wednesday from Loyalty Square'; no later Wednesday was posted on Oct 1, 2026.",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "meetup",
+      "watch_url": "https://www.meetup.com/bike-leichhardt/events/",
+      "feed_url": null,
+      "notes": "The Meetup feed showed no Wednesday dates on Oct 1, 2026. Check that a new Wednesday event is up before listing it as running."
+    }
+  },
+  {
+    "slug": "dublin-ie-dublin-easy-wheelers-howth-social-cycle",
+    "name": "Howth Social Cycle",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Dublin",
+    "region": "Leinster",
+    "state": null,
+    "country": "IE",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Fridays in autumn 2026: leave 6:45 pm on Sept 18 and 25, 6:30 pm on Oct 2, from the Sails sculpture on Clontarf Road. Back in Clontarf about 9:00 pm. Time on each Meetup event.",
+    "days": [
+      "fri"
+    ],
+    "time_local": "6:30 pm",
+    "start_hhmm": "18:30",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "Spring to autumn (check each event)",
+    "season_months": null,
+    "tz": "Europe/Dublin",
+    "start_location": {
+      "name": "The Sails sculpture, Alfie Byrne Road / Clontarf Road",
+      "address": "Clontarf Road, Dublin"
+    },
+    "distance_km": 25,
+    "distance_miles": 16,
+    "duration": "~2.5 hours",
+    "duration_min": 150,
+    "pace": "Social, mostly flat with an optional climb to the Summit",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Dublin Easy Wheelers",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "RSVP on Meetup. A helmet is asked for and the group is run by volunteers, so you ride at your own risk. Stop for refreshments at the Abbey Tavern in Howth village.",
+    "description": "An evening social cycle out the coastal path to Sutton Cross, over Howth Hill to the village, then back by a shorter route. About 25 km, mostly flat. Drinks at the Abbey Tavern in Howth.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": "https://www.meetup.com/dublin-easy-wheelers/",
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.meetup.com/dublin-easy-wheelers/events/316734111/",
+      "https://www.meetup.com/dublin-easy-wheelers/events/ical/"
+    ],
+    "verified_on": "2026-10-01",
+    "last_seen": "2026-09-25",
+    "evidence": "Dublin Easy Wheelers' Meetup lists this ride for Fri Sept 18 and 25 (6:45 pm) and the upcoming Fri Oct 2, 2026 (6:30 pm) (fetched Oct 1, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "meetup",
+      "watch_url": "https://www.meetup.com/dublin-easy-wheelers/events/",
+      "feed_url": "https://www.meetup.com/dublin-easy-wheelers/events/ical/",
+      "notes": "Each ride is posted a week or two ahead with its own time and route."
+    }
+  },
+  {
+    "slug": "dublin-ie-dublin-easy-wheelers-killakee-thursday",
+    "name": "Killakee Viewpoint (Thursday evening)",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Dublin",
+    "region": "Leinster",
+    "state": null,
+    "country": "IE",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Thursday evenings, leave 6:30 pm from Swan Leisure, Rathmines (listed Sept 24 and Oct 1, 2026). Time and route on each Meetup event.",
+    "days": [
+      "thu"
+    ],
+    "time_local": "6:30 pm",
+    "start_hhmm": "18:30",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "Spring to autumn (check each event)",
+    "season_months": null,
+    "tz": "Europe/Dublin",
+    "start_location": {
+      "name": "Swan Leisure, Rathmines Square",
+      "address": "Rathmines Square, Lower Rathmines Road, Dublin"
+    },
+    "distance_km": 25,
+    "distance_miles": 16,
+    "duration": "~2.5 hours",
+    "duration_min": 150,
+    "pace": "Slow on the climb: as slow as the group needs",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Dublin Easy Wheelers",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "RSVP on Meetup. Front and back lights are essential and a helmet is asked for. One long steep climb (350 m in 25 km); the host suggests trying the easier Howth ride first if you are unsure.",
+    "description": "A Thursday evening ride south through Rathfarnham and up Stocking Lane to the Killakee viewpoint, with a stop at the Merry Ploughboy pub if time allows. 25 km with 350 m of climbing in one go.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": "https://www.meetup.com/dublin-easy-wheelers/",
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.meetup.com/dublin-easy-wheelers/events/316770343/",
+      "https://www.meetup.com/dublin-easy-wheelers/events/ical/"
+    ],
+    "verified_on": "2026-10-01",
+    "last_seen": "2026-09-24",
+    "evidence": "Dublin Easy Wheelers' Meetup lists this ride for Thu Sept 24 and the upcoming Thu Oct 1, 2026, 6:30 pm (fetched Oct 1, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "meetup",
+      "watch_url": "https://www.meetup.com/dublin-easy-wheelers/events/",
+      "feed_url": "https://www.meetup.com/dublin-easy-wheelers/events/ical/",
+      "notes": "Each ride is posted a week or two ahead with its own time and route."
+    }
+  },
+  {
+    "slug": "dublin-ie-dublin-easy-wheelers-sunday-wicklow-loop",
+    "name": "Sunday Wicklow loop",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Dublin",
+    "region": "Leinster",
+    "state": null,
+    "country": "IE",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Most Sundays, meet 9:00 am outside The Barge Pub, Charlemont Bridge, Harold's Cross (Sept 20 and Oct 4, 2026 listed; a second Oct 4 loop leaves at 9:45). Time and route on each Meetup event.",
+    "days": [
+      "sun"
+    ],
+    "time_local": "9:00 am",
+    "start_hhmm": "09:00",
+    "frequency": "irregular",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Europe/Dublin",
+    "start_location": {
+      "name": "The Barge Pub, Charlemont Bridge",
+      "address": "Charlemont Bridge, Harold's Cross, Dublin"
+    },
+    "distance_km": 60,
+    "distance_miles": 37,
+    "duration": "~5 hours with lunch",
+    "duration_min": 300,
+    "pace": "Regular cyclist pace; not for beginner cyclists",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Dublin Easy Wheelers",
+      "type": "club"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "Newcomers are welcome but the host says this ride is not suitable for beginner cyclists. Helmet compulsory; bring a spare tube. RSVP on Meetup.",
+    "description": "A Sunday ride from Harold's Cross through the south suburbs and up into the Wicklow hills, with lunch at the Armoury Cafe in Glencree. The Oct 4 loop is 60 km with 850 m of climbing; other Sundays use other routes.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": "https://www.meetup.com/dublin-easy-wheelers/",
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.meetup.com/dublin-easy-wheelers/events/316784666/",
+      "https://www.meetup.com/dublin-easy-wheelers/events/ical/"
+    ],
+    "verified_on": "2026-10-01",
+    "last_seen": "2026-09-20",
+    "evidence": "Dublin Easy Wheelers' Meetup lists a Sunday loop at 9:00 am on Sept 20 and the upcoming Oct 4, 2026, plus a 9:45 am Bray loop on Oct 4 (fetched Oct 1, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "meetup",
+      "watch_url": "https://www.meetup.com/dublin-easy-wheelers/events/",
+      "feed_url": "https://www.meetup.com/dublin-easy-wheelers/events/ical/",
+      "notes": "Each ride is posted a week or two ahead with its own time and route."
+    }
+  },
+  {
+    "slug": "singapore-sg-sunday-cycling-woodleigh-east-coast-park",
+    "name": "Sunday Cycling: Woodleigh, Eunos and East Coast Park loop",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Singapore",
+    "region": "Singapore",
+    "state": null,
+    "country": "SG",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Every Sunday, meet 7:00 am at 2 Braddell Road (Hong Chang Frog Porridge); back at Woodleigh by 11:00 am sharp.",
+    "days": [
+      "sun"
+    ],
+    "time_local": "7:00 am",
+    "start_hhmm": "07:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Asia/Singapore",
+    "start_location": {
+      "name": "Hong Chang Frog Porridge",
+      "address": "2 Braddell Road, Singapore 359895"
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": "4 hours",
+    "duration_min": 240,
+    "pace": "Comfortable and social, several short stops. Not a race ride.",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Sunday Cycling Woodleigh–Eunos–ECP Loop (Meetup group)",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "RSVP on Meetup. Park connectors and footpaths, no road riding apart from short crossings.",
+    "description": "A social Sunday-morning ride on park connectors from Woodleigh through Eunos and Siglap to the East Coast Lagoon Food Village, then back via Tanjong Rhu, Kallang, Geylang Bahru and Potong Pasir. The host says it suits casual riders and beginners with reasonable fitness.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": "https://www.meetup.com/sunday-cycling-woodleigh-eunos-ecp-loop/",
+      "other": []
+    },
+    "inclusive_focus": [
+      "beginner"
+    ],
+    "sources": [
+      "https://www.meetup.com/sunday-cycling-woodleigh-eunos-ecp-loop/",
+      "https://www.meetup.com/sunday-cycling-woodleigh-eunos-ecp-loop/events/316742543/"
+    ],
+    "verified_on": "2026-10-01",
+    "last_seen": "2026-09-27",
+    "evidence": "The group's Meetup page lists a 7:00 am Sunday ride on Sept 6, 13, 20 and 27, and its iCal feed lists every Sunday from Oct 4 to Dec 6, 2026 (fetched Oct 1, 2026).",
+    "confidence": "high",
+    "status": "active",
+    "refresh": {
+      "method": "meetup",
+      "watch_url": "https://www.meetup.com/sunday-cycling-woodleigh-eunos-ecp-loop/events/",
+      "feed_url": "https://www.meetup.com/sunday-cycling-woodleigh-eunos-ecp-loop/events/ical/",
+      "notes": "A rolling weekly series; the iCal feed lists Sundays at 7:00 am through Dec 6, 2026."
+    }
+  },
+  {
+    "slug": "auckland-nz-over-60-peddlers-thursday-ride",
+    "name": "Over 60 Peddlers Thursday ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "city": "Auckland",
+    "region": "Auckland",
+    "state": null,
+    "country": "NZ",
+    "neighborhood": null,
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "discipline": [
+      "social"
+    ],
+    "schedule": "Thursdays, 10:30 am (Sept 17 and 24 held; Oct 8, 15 and 22, 2026 listed). The start changes each week and is on the Meetup event: Oct 15 starts at Pine Harbour Marina, Beachlands.",
+    "days": [
+      "thu"
+    ],
+    "time_local": "10:30 am",
+    "start_hhmm": "10:30",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "tz": "Pacific/Auckland",
+    "start_location": {
+      "name": "Changes weekly (on each Meetup event)",
+      "address": null
+    },
+    "distance_km": null,
+    "distance_miles": null,
+    "duration": null,
+    "duration_min": null,
+    "pace": "About 20 km/h with a tail-end rider",
+    "drop_policy": "unknown",
+    "host": {
+      "name": "Over 60 Peddlers (Meetup group)",
+      "type": "informal"
+    },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "language": [
+      "en"
+    ],
+    "visitor_notes": "For riders over 60 with their own bike. RSVP on Meetup. Bring a spare tube for your wheel size and wear bright colours. Grades range from easy coffee rides to trail rides, so read each event.",
+    "description": "Weekday rides for people over 60 around Auckland: harbourside cycleways, coastal loops and some out-of-town trails, usually with lunch or coffee. Each week has its own leader, route and start.",
+    "links": {
+      "website": null,
+      "instagram": null,
+      "facebook": null,
+      "strava": null,
+      "meetup": "https://www.meetup.com/over-60-peddlers/",
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.meetup.com/over-60-peddlers/",
+      "https://www.meetup.com/over-60-peddlers/events/316293000/",
+      "https://www.meetup.com/over-60-peddlers/events/ical/"
+    ],
+    "verified_on": "2026-10-01",
+    "last_seen": "2026-09-24",
+    "evidence": "The group's Meetup page lists Thursday 10:30 am rides on Sept 10, 17 and 24 and upcoming Oct 8, 15 and 22, 2026 (fetched Oct 1, 2026).",
+    "confidence": "medium",
+    "status": "active",
+    "refresh": {
+      "method": "meetup",
+      "watch_url": "https://www.meetup.com/over-60-peddlers/events/",
+      "feed_url": "https://www.meetup.com/over-60-peddlers/events/ical/",
+      "notes": "Weekly, but the start changes each week."
+    }
+  }
+]

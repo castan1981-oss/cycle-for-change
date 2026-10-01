@@ -1,0 +1,1336 @@
+[
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "North Portland",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": 16,
+  "distance_miles": 10,
+  "duration": "about 75 minutes",
+  "duration_min": 75,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.shift2bikes.org/calendar/event-14549"
+   ]
+  },
+  "country": "US",
+  "slug": "portland-or-nopo-night-riders-thursday-night-ride",
+  "name": "NoPo Night Ride",
+  "city": "Portland",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Thursday, meet 7:45 pm, roll 8:05 pm sharp, from Columbia Park in front of the pool. Last Thursday of the month has a pre-ride social (Oct 29 spot to be announced).",
+  "days": [
+   "thu"
+  ],
+  "time_local": "8:05 pm",
+  "start_hhmm": "20:05",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Columbia Park, in front of the pool (between the pool building and the soccer field)",
+   "address": "7701 N Chautauqua Blvd, Portland, OR 97217"
+  },
+  "pace": "About 10 mph, conversation pace; 8 to 15 miles",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "NoPo Night Riders",
+   "type": "informal"
+  },
+  "visitor_notes": "Front and rear lights are required. No store stop, so bring snacks and water. Any bike that cruises at about 10 mph for an hour is fine. Check the air quality on smoky days.",
+  "description": "A Thursday night ramble through North Portland and beyond, an hour or so, ending back at Columbia Park. The host calls it no-drop and says there is no agenda beyond riding bikes. Basket bikes, cruisers, gravel bikes and old bikes are all named as welcome.",
+  "sources": [
+   "https://www.shift2bikes.org/calendar/event-14549",
+   "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20"
+  ],
+  "evidence": "Shift's calendar lists NoPo Night Ride for Thu Oct 1, 8, 15, 22 and 29, 2026: meet 7:45 pm, hard start 8:05 pm, Columbia Park (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20",
+   "feed_url": null,
+   "notes": "Shift's calendar API lists the next dates for event 14549."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Ladds Addition",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.shift2bikes.org/calendar/event-8727"
+   ]
+  },
+  "country": "US",
+  "slug": "portland-or-friday-night-ride-at-ladds-friday-night-ride",
+  "name": "Friday Night Ride at LADDS",
+  "city": "Portland",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Friday, meet around 7 pm, ride around 8 pm, from the circle in Ladds Addition (covered area at Abernethy Elementary if it rains). Second Fridays run late to link up with the Midnight Mystery Ride.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "8:00 pm",
+  "start_hhmm": "20:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "The circle in Ladds Addition (Abernethy Elementary covered area if raining)",
+   "address": null
+  },
+  "pace": "Sporty social pace with some extra zip; 10 to 25 miles with store, park and art stops",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Friday Night Ride at LADDS",
+   "type": "informal"
+  },
+  "visitor_notes": "Not necessarily no-drop, especially in fall, winter and spring, so be self-sufficient and have a plan to get home. Bring lights, a lock and a cup. Pedal-assist e-bikes (class 1 and 2) are fine.",
+  "description": "A Friday night social ride out of Ladds Addition for people who like a sporty pace and adventurous routes. Expect 15 to 25 miles with some climbing and a faster speed than a typical Pedalpalooza ride. The host says guest ride leaders are welcome.",
+  "sources": [
+   "https://www.shift2bikes.org/calendar/event-8727",
+   "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20"
+  ],
+  "evidence": "Shift's calendar lists Friday Night Ride at LADDS every Friday from Oct 2 to Nov 27, 2026: meet 7ish, ride 8ish (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20",
+   "feed_url": null,
+   "notes": "Shift's calendar API lists the next dates for event 8727."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Clinton Neighborhood Greenway",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.shift2bikes.org/calendar/event-12379"
+   ]
+  },
+  "country": "US",
+  "slug": "portland-or-psu-farmers-market-ride-saturday-market-ride",
+  "name": "PSU Farmers Market Ride",
+  "city": "Portland",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Saturday the market is open, year round except the weekend between Christmas and New Year. Meet SE Clinton St and 41st Ave at 10:00 (ride 10:05); join at SE Clinton and 26th at 10:10 (ride 10:15) or the Tilikum Bridge at about 10:25 (leave 10:30); arrive at the market about 11:00.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "10:05 am",
+  "start_hhmm": "10:05",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "SE Clinton St and 41st Ave, Clinton Neighborhood Greenway",
+   "address": null
+  },
+  "pace": "Easy, community-led",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "PSU Farmers Market Ride (community-led)",
+   "type": "informal"
+  },
+  "visitor_notes": "Different riders lead the route each week. Weather closures are posted on the listing.",
+  "description": "A community-led Saturday ride from the Clinton greenway to the Portland State University farmers market. Three meeting points let you join along the way, and the group arrives around 11 am.",
+  "sources": [
+   "https://www.shift2bikes.org/calendar/event-12379",
+   "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20"
+  ],
+  "evidence": "Shift's calendar lists the PSU Farmers Market Ride every Saturday from Oct 3 to Dec 19, 2026 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20",
+   "feed_url": null,
+   "notes": "Shift's calendar API lists the next dates for event 12379."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Wilshire Park",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": 3,
+  "distance_miles": 2,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.shift2bikes.org/calendar/event-14044"
+   ]
+  },
+  "country": "US",
+  "slug": "portland-or-team-apuggalypse-king-farmers-market-ride",
+  "name": "King Farmer's Market Ride",
+  "city": "Portland",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Sunday in the market season, meet 10:15 am, ride out 10:30 am from Wilshire Park (37th and Skidmore); listed through Nov 22, 2026.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "10:30 am",
+  "start_hhmm": "10:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Wilshire Park, 37th and Skidmore (look for pugs with bikes on Skidmore between 36th and 37th)",
+   "address": null
+  },
+  "pace": "Bike-bus style, short and slow (0 to 3 miles)",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Team Apuggalypse",
+   "type": "informal"
+  },
+  "visitor_notes": "Hop on anywhere along the route. It follows the Mason bike lane and the Going and 32nd greenways to the King Farmers Market.",
+  "description": "A short bike-bus style ride from Wilshire Park to the King Farmers Market at MLK Jr Elementary. The host describes it as a way to support local food and meet neighbors.",
+  "sources": [
+   "https://www.shift2bikes.org/calendar/event-14044",
+   "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20"
+  ],
+  "evidence": "Shift's calendar lists the King Farmer's Market Ride every Sunday from Oct 4 to Nov 22, 2026 (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20",
+   "feed_url": null,
+   "notes": "Listed through Nov 22; re-check for a spring return."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Peninsula Park",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "sun"
+   }
+  ],
+  "season": null,
+  "season_months": null,
+  "distance_km": 16,
+  "distance_miles": 10,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.shift2bikes.org/calendar/event-8132",
+    "https://corvidaebc.weebly.com/code-of-conduct.html"
+   ]
+  },
+  "country": "US",
+  "slug": "portland-or-corvidae-bc-monthly-ride",
+  "name": "Corvidae BC Monthly Ride",
+  "city": "Portland",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Second Sunday of every month. Hang out at 1 pm, wheels down at 2 pm sharp, from Peninsula Park Rose Fountain (or the gazebo, depending on weather).",
+  "days": [
+   "sun"
+  ],
+  "time_local": "2:00 pm",
+  "start_hhmm": "14:00",
+  "frequency": "monthly",
+  "start_location": {
+   "name": "Peninsula Park Rose Fountain (or the gazebo)",
+   "address": "700 N Rosa Parks Way, Portland, OR 97217"
+  },
+  "pace": "Casual, about 10 miles with a few park stops",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Corvidae BC",
+   "type": "club"
+  },
+  "visitor_notes": "Bring a repair kit and a spare tube, and your own food; the group stops near stores, not at them. Each month a different member leads. The club has a code of conduct.",
+  "description": "A monthly no-drop ride, going since 2017, led by a different Corvidae member each month. It leans on greenways, group etiquette and safety. Pop-up rides run in summer, and the club collects dry non-perishables for food donations each month.",
+  "sources": [
+   "https://www.shift2bikes.org/calendar/event-8132",
+   "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20"
+  ],
+  "evidence": "Shift's calendar lists Corvidae BC for Sun Oct 11, Nov 8 and Dec 13, 2026, 2nd Sunday, hang at 1 pm, roll at 2 pm (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20",
+   "feed_url": null,
+   "notes": "Shift's calendar API lists the next dates for event 8132."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Overlook",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "sun"
+   }
+  ],
+  "season": null,
+  "season_months": null,
+  "distance_km": 8,
+  "distance_miles": 5,
+  "duration": "about 1 hour",
+  "duration_min": 60,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "family"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.shift2bikes.org/calendar/event-13809"
+   ]
+  },
+  "country": "US",
+  "slug": "portland-or-overlook-neighborhood-association-overlook-bike-ride",
+  "name": "Overlook Bike Ride",
+  "city": "Portland",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Second Sunday of every month. Meet 9:30 am for coffee at Stacks Coffeehouse, depart 10:15 am. A loop of under 6 miles, about an hour.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "10:15 am",
+  "start_hhmm": "10:15",
+  "frequency": "monthly",
+  "start_location": {
+   "name": "Stacks Coffeehouse",
+   "address": "1831 N Killingsworth St, Portland, OR 97217"
+  },
+  "pace": "Conversational, under 6 miles",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Overlook Neighborhood Association",
+   "type": "nonprofit"
+  },
+  "visitor_notes": "Free and family-friendly. Each month's route is a loop through the neighborhood's bike paths and destinations.",
+  "description": "A monthly neighbor ride led by the Overlook Neighborhood Association's transportation chair. It meets for coffee, then rolls an hour-long loop of under six miles around Overlook.",
+  "sources": [
+   "https://www.shift2bikes.org/calendar/event-13809",
+   "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20"
+  ],
+  "evidence": "Shift's calendar lists the Overlook Bike Ride for Sun Oct 11, Nov 8 and Dec 13, 2026, 2nd Sunday, depart 10:15 am (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20",
+   "feed_url": null,
+   "notes": "Shift's calendar API lists the next dates for event 13809."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Foster-Powell",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.shift2bikes.org/calendar/event-13844"
+   ]
+  },
+  "country": "US",
+  "slug": "portland-or-foster-night-ride-tuesday-night-ride",
+  "name": "Foster Night Ride",
+  "city": "Portland",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every other Tuesday, meet 7 pm, ride out 8 pm, from the food carts at 5205 SE Foster Rd (Oct 13 and 27, Nov 10 and 24, Dec 8).",
+  "days": [
+   "tue"
+  ],
+  "time_local": "8:00 pm",
+  "start_hhmm": "20:00",
+  "frequency": "biweekly",
+  "start_location": {
+   "name": "Foster food carts, 5205 SE Foster Rd (beer tent)",
+   "address": "5205 SE Foster Rd, Portland, OR"
+  },
+  "pace": "Social; 8 to 15 miles",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Foster Night Ride",
+   "type": "informal"
+  },
+  "visitor_notes": "Meets at the food carts and beer tent, then rides to a spot where the group usually has a fire. Bring lights.",
+  "description": "A close-knit every-other-Tuesday night ride in Southeast Portland. It starts with food carts and a beer tent, then goes somewhere and generally ends at a fire.",
+  "sources": [
+   "https://www.shift2bikes.org/calendar/event-13844",
+   "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20"
+  ],
+  "evidence": "Shift's calendar lists Foster night ride for Tue Oct 13 and 27, Nov 10 and 24, and Dec 8, 2026: meet 7 pm, ride out 8 pm (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20",
+   "feed_url": null,
+   "notes": "Every other Tuesday; Shift's calendar API lists the next dates for event 13844."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Buckman",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "Apr-May and Sep-Oct (2026: through Oct 14)",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": "https://www.rivercitybicycles.com/articles/events-shop-rides-pg140.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "country": "US",
+  "slug": "portland-or-river-city-bicycles-wednesday-intermediate-road-ride",
+  "name": "RCB Weekly Intermediate Road Ride",
+  "city": "Portland",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Wednesdays, meet 5 pm, roll 5:15 pm from the River City Bicycles lot. 2026 dates: April 8 to May 27 and Sept 2 to Oct 14; it resumes in spring.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "5:15 pm",
+  "start_hhmm": "17:15",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "River City Bicycles, MLK parking lot (don't park in the lot)",
+   "address": "706 SE Martin Luther King Jr Blvd, Portland, OR 97214"
+  },
+  "pace": "Intermediate; climbs with regroups",
+  "drop_policy": "groups",
+  "host": {
+   "name": "River City Bicycles",
+   "type": "shop"
+  },
+  "visitor_notes": "The shop asks riders to fill out its ride waiver online before the first ride. Park outside the shop lot.",
+  "description": "A Wednesday evening road ride from River City Bicycles up into the West Hills. The route changes each week but climbs to Council Crest, with regroups along the way. At the top you can head home or be escorted back to the shop.",
+  "sources": [
+   "https://www.rivercitybicycles.com/articles/events-shop-rides-pg140.htm"
+  ],
+  "evidence": "River City Bicycles' '2026 Group Rides' page lists 'Wednesdays, April 8 - May 27 & Sept 2 - October 14, Meet 5PM w/5:15 Rollout' (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.rivercitybicycles.com/articles/events-shop-rides-pg140.htm",
+   "feed_url": null,
+   "notes": "Dated 2026 series; ends Oct 14. Check the page in March for 2027 dates."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Parkrose",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 40,
+  "distance_miles": 25,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": "https://portlandbicyclingclub.com/scheduled_rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://portlandbicyclingclub.com/scheduled_rides/friday-morning-meander-from-st-matthews-church-65/"
+   ]
+  },
+  "country": "US",
+  "slug": "portland-or-pbc-friday-morning-meander",
+  "name": "Friday Morning Meander from St Matthews Church",
+  "city": "Portland",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Friday, 10:00 am from St Matthew's Anglican Church (listed Oct 2, 9, 16, 23 and 30, 2026); each dated listing gives the time.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "St Matthew's Anglican Church",
+   "address": "11100 NE Skidmore St, Portland, OR"
+  },
+  "pace": "Intermediate, 13 to 15 mph, 20 to 30 miles",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Portland Bicycling Club",
+   "type": "club"
+  },
+  "visitor_notes": "Contact the ride leader through the listing page. The club's other Thursday ride from the same church is the slower Slow Poke Ride.",
+  "description": "A weekday morning road ride from the same NE Portland church as the club's Slow Poke Ride, at an intermediate pace. Each week's route is posted on the club's calendar.",
+  "sources": [
+   "https://portlandbicyclingclub.com/scheduled_rides/",
+   "https://portlandbicyclingclub.com/scheduled_rides/friday-morning-meander-from-st-matthews-church-65/"
+  ],
+  "evidence": "Portland Bicycling Club's ride calendar lists the Friday Morning Meander for Fri Oct 2, 9, 16, 23 and 30, 2026 at 10:00 am; the Oct 2 listing says intermediate 13-15 mph, 20-30 miles (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://portlandbicyclingclub.com/scheduled_rides/",
+   "feed_url": null,
+   "notes": "Each week is its own listing; the start time moves with the season."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "mon"
+   },
+   {
+    "ord": 4,
+    "day": "mon"
+   }
+  ],
+  "season": null,
+  "season_months": null,
+  "distance_km": 19,
+  "distance_miles": 12,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": "https://www.ridewestside.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.shift2bikes.org/calendar/event-13811"
+   ]
+  },
+  "country": "US",
+  "slug": "beaverton-or-ride-westside-post-happy-hour-casual-ride",
+  "name": "Ride Westside Post Happy Hour Casual Ride",
+  "city": "Beaverton",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Second and fourth Monday of the month. Bike Happy Hour 4:30 to 7 pm, then find your bike at 7 and ride at 7:10 pm from BGs Food Cartel; back before 9.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "7:10 pm",
+  "start_hhmm": "19:10",
+  "frequency": "biweekly",
+  "start_location": {
+   "name": "BGs Food Cartel, western bike rack near the SW Rose Biggi Ave entrance",
+   "address": "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
+  },
+  "pace": "Casual loop, 8 to 15 miles around Beaverton and Hillsboro",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Ride Westside",
+   "type": "collective"
+  },
+  "visitor_notes": "Dress for the weather and bring lights. Message Ride Westside on Instagram if you need anything. The happy hour before it is a meetup, not a ride.",
+  "description": "A casual evening loop after Ride Westside's twice-monthly Bike Happy Hour in Beaverton. The group rolls at 7:10 pm around Beaverton and Hillsboro and aims to finish before 9.",
+  "sources": [
+   "https://www.ridewestside.org/",
+   "https://www.shift2bikes.org/calendar/event-13811",
+   "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20"
+  ],
+  "evidence": "Ride Westside's site lists the Post-Bike Happy Hour Ride for Oct 12 and 26, 2026 and every second and fourth Monday into Sept 2027, and Shift's calendar lists it at 7 pm (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.ridewestside.org/",
+   "feed_url": null,
+   "notes": "Ride Westside's home page lists dated events; Shift's calendar API also carries event 13811."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Bethany / Tanasbourne",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": 24,
+  "distance_miles": 15,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": "https://www.ridewestside.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.shift2bikes.org/calendar/event-14975"
+   ]
+  },
+  "country": "US",
+  "slug": "beaverton-or-ride-westside-sunset-happy-hour-post-ride",
+  "name": "Sunset Happy Hour and Post Ride",
+  "city": "Beaverton",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every other Monday (Oct 5 and 19, Nov 2, 16 and 30, Dec 7). Happy Hour 4:30 to 7 pm at Xplore Food Carts, ride at 7:10 pm.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "7:10 pm",
+  "start_hhmm": "19:10",
+  "frequency": "biweekly",
+  "start_location": {
+   "name": "Xplore Food Carts (eat inside when it rains)",
+   "address": "16365 NW Twin Oaks Dr, Beaverton, OR 97006"
+  },
+  "pace": "Casual, 10 to 20 miles around northern Washington County",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Ride Westside",
+   "type": "informal"
+  },
+  "visitor_notes": "The happy hour is not a ride in itself; the ride leaves right after it. Bring lights. This is the fall continuation of the Tanasbourne Happy Hour at a new spot.",
+  "description": "A casual 10 to 20 mile ride around northern Washington County that follows an every-other-Monday Bike Happy Hour at Xplore Food Carts. It is a good way to meet westside riders.",
+  "sources": [
+   "https://www.shift2bikes.org/calendar/event-14975",
+   "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20"
+  ],
+  "evidence": "Shift's calendar lists Sunset Happy Hour + Post Ride for Mon Oct 5 and 19, Nov 2, 16 and 30, and Dec 7, 2026, happy hour 4:30-7 pm, ride at 7:10 pm (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20",
+   "feed_url": null,
+   "notes": "Fall series at Xplore Food Carts; the listing says it will try that spot for the fall."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "thu"
+   },
+   {
+    "ord": 4,
+    "day": "thu"
+   }
+  ],
+  "season": null,
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.shift2bikes.org/calendar/event-13816"
+   ]
+  },
+  "country": "US",
+  "slug": "tigard-or-tigard-bike-happy-hour-short-ride",
+  "name": "Tigard Bike Happy Hour and Short Ride",
+  "city": "Tigard",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Second and fourth Thursday of the month. Happy hour 5:30 to 6:30 pm, short ride around Tigard at 6:30 pm, from Cooper Mountain Ale Works.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "biweekly",
+  "start_location": {
+   "name": "Cooper Mountain Ale Works",
+   "address": "12562 SW Main St, Tigard, OR 97223"
+  },
+  "pace": "Short, easy ride around Tigard",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Tigard Bike Happy Hour",
+   "type": "informal"
+  },
+  "visitor_notes": "Meet for food or a drink first (non-alcoholic options available); the ride is short. Indoor or outdoor seating depending on weather.",
+  "description": "A bike meetup in Tigard on the second and fourth Thursdays, with a short ride around town at 6:30 pm. The host's aim is a better Tigard for everyone on a bike.",
+  "sources": [
+   "https://www.shift2bikes.org/calendar/event-13816",
+   "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20",
+   "https://www.ridewestside.org/"
+  ],
+  "evidence": "Shift's calendar lists Tigard Bike Happy Hour for Thu Oct 8 and 22, Nov 12 and 26, and Dec 10, 2026, 'a short ride around Tigard at 6:30' (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20",
+   "feed_url": null,
+   "notes": "Shift's calendar API lists the next dates for event 13816."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": "https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.salembicycleclub.org/content.aspx?page_id=4091&club_id=189926&item_id=2953887"
+   ]
+  },
+  "country": "US",
+  "slug": "keizer-or-salem-bicycle-club-keizer-morning-ride",
+  "name": "Keizer Morning Ride",
+  "city": "Keizer",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Tuesdays, 10:00 am from October 6 (it was 9:00 am on Sept 29), from the south side of REI at Keizer Station. Registration recommended.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Keizer Station shopping center, south side of REI",
+   "address": null
+  },
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Salem Bicycle Club",
+   "type": "club"
+  },
+  "visitor_notes": "Register on the club calendar. The Oct 6 listing says to note the later start time and new meeting location.",
+  "description": "A Tuesday morning ride from Keizer Station that the Salem Bicycle Club runs as a weekly ride. Routes and pace are on each dated listing.",
+  "sources": [
+   "https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926",
+   "https://www.salembicycleclub.org/content.aspx?page_id=4091&club_id=189926&item_id=2953887"
+  ],
+  "evidence": "Salem Bicycle Club's calendar lists the Keizer Morning Ride for Tue Sept 29 at 9:00 am and Oct 6, 13, 20 and 27, 2026 at 10:00 am from Keizer Station (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926",
+   "feed_url": null,
+   "notes": "The start time moved from 9:00 to 10:00 on Oct 6; check each October."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "East Salem",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": "https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.salembicycleclub.org/content.aspx?page_id=4091&club_id=189926&item_id=3086068"
+   ]
+  },
+  "country": "US",
+  "slug": "salem-or-salem-bicycle-club-east-salem-morning-ride",
+  "name": "East Salem Morning Ride",
+  "city": "Salem",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Wednesdays, 10:00 am from McKay Park (Oct 7, 14, 21 and 28 listed).",
+  "days": [
+   "wed"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "McKay Park, Hollywood Dr between Silverton Rd and Sunnyview Rd",
+   "address": null
+  },
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Salem Bicycle Club",
+   "type": "club"
+  },
+  "visitor_notes": "Park on the street or in the west lot if the gates are closed; rider sign-in is in the east lot.",
+  "description": "A Wednesday morning ride from McKay Park in East Salem, run by the Salem Bicycle Club as a weekly ride.",
+  "sources": [
+   "https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926",
+   "https://www.salembicycleclub.org/content.aspx?page_id=4091&club_id=189926&item_id=3086068"
+  ],
+  "evidence": "Salem Bicycle Club's calendar lists the East Salem Morning Ride for Wed Sept 30 and Oct 7, 14, 21 and 28, 2026 at 10:00 am from McKay Park (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926",
+   "feed_url": null,
+   "notes": null
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 32,
+  "distance_miles": 20,
+  "duration": "about 2 hours",
+  "duration_min": 120,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free, club membership encouraged",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": "https://www.mvbc.com/weeklyrides",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "country": "US",
+  "slug": "corvallis-or-mvbc-wednesday-night-gravel-ride",
+  "name": "MVBC Wednesday Night Gravel Ride",
+  "city": "Corvallis",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "gravel"
+  ],
+  "schedule": "Wednesday evenings, year-round, 6:00 pm from Osborn Aquatic Center (extreme weather cancels). About 20 miles and 2,000 feet in 2 hours.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Osborn Aquatic Center",
+   "address": "1940 NW Highland Dr, Corvallis, OR 97330"
+  },
+  "pace": "10 to 12 mph average, moderate to fast for a confident off-road rider",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Mid-Valley Bicycle Club",
+   "type": "club"
+  },
+  "visitor_notes": "Helmet required; non-members submit the liability waiver. Lights highly encouraged, plus flat repair gear and the downloaded route. OSU Research Forests prohibit e-bikes. Comfort on grades over 10 percent helps.",
+  "description": "A no-drop mixed-surface night ride into McDonald Forest, with the evening view from Dimple Hill and a return via Oak Creek and the Midge Cramer path. The club rates it moderate to fast and aimed at a confident gravel rider.",
+  "sources": [
+   "https://www.mvbc.com/weeklyrides"
+  ],
+  "evidence": "Mid-Valley Bicycle Club's weekly rides page (fetched Oct 1, 2026; it covers the 2026 gravel and winery series) lists the Wednesday Night Gravel Ride, Wednesday evenings year-round, 6:00 PM from Osborn Aquatic Center.",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.mvbc.com/weeklyrides",
+   "feed_url": null,
+   "notes": "The club also keeps a dated schedule linked from this page."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 84,
+  "distance_miles": 52,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free, club membership encouraged",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": "https://www.mvbc.com/weeklyrides",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "country": "US",
+  "slug": "corvallis-or-mvbc-wednesday-road-ride",
+  "name": "MVBC Wednesday Road Ride",
+  "city": "Corvallis",
+  "region": "Oregon",
+  "state": "OR",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Wednesdays, year-round, from Osborn Aquatic Center: 9:00 am October 1 to May 31, 8:00 am June 1 to September 30. Extreme weather cancels.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "start_times": [
+   {
+    "from": "2027-06-01",
+    "start_hhmm": "08:00"
+   },
+   {
+    "from": "2027-10-01",
+    "start_hhmm": "09:00"
+   }
+  ],
+  "start_location": {
+   "name": "Osborn Aquatic Center",
+   "address": "1940 NW Highland Dr, Corvallis, OR 97330"
+  },
+  "pace": "12 to 15 mph average (up to 18); 45 to 60 miles with a mid-ride coffee or pastry stop",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Mid-Valley Bicycle Club",
+   "type": "club"
+  },
+  "visitor_notes": "Helmet required; non-members submit the liability waiver. Download the route from the club's route library. The group stops to help with mechanicals.",
+  "description": "The club's Wednesday gathering: a casual, moderate-paced road ride on favorite club routes, usually with a mid-ride stop for coffee, pastries or lunch.",
+  "sources": [
+   "https://www.mvbc.com/weeklyrides"
+  ],
+  "evidence": "Mid-Valley Bicycle Club's weekly rides page (fetched Oct 1, 2026; it covers the 2026 gravel and winery series) lists the Wednesday Road Ride at 9:00 AM from October 1 through May 31.",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.mvbc.com/weeklyrides",
+   "feed_url": null,
+   "notes": "Summer start is 8:00 am from June 1."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "East Sherman",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "Spring-fall",
+  "season_months": {
+   "start": 4,
+   "end": 11
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free to ride after signing the waiver; $25 annual membership (2026)",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "links": {
+   "website": "https://cdacycling.club/rides",
+   "instagram": "https://www.instagram.com/cdacyclingclub/",
+   "facebook": "https://www.facebook.com/cdacyclingclub",
+   "strava": "https://www.strava.com/clubs/cdacyclingclub",
+   "meetup": null,
+   "other": []
+  },
+  "country": "US",
+  "slug": "coeur-dalene-id-cdacc-saturday-fondo",
+  "name": "Saturday Fondo (Grandeur)",
+  "city": "Coeur d'Alene",
+  "region": "Idaho",
+  "state": "ID",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays, 12:00 pm (departs 12:05) from the Workhorse office, spring through fall 2026. Last ride date not posted.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "12:00 pm",
+  "start_hhmm": "12:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Workhorse office",
+   "address": "1324 E Sherman Ave, Coeur d'Alene, ID 83814"
+  },
+  "pace": "About 18 mph, set by the group",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Coeur d'Alene Cycling Club",
+   "type": "club"
+  },
+  "visitor_notes": "Everyone is welcome; sign the club's safety waiver first. The route alternates between a Hayden Lake loop, Fernan Saddle and longer trips into Washington.",
+  "description": "The club's longer Saturday ride, starting at noon from the Workhorse office. Routes alternate between Hayden Lake, Fernan Saddle and bigger outings into Washington. The page marks the pace with a beer-and-pretzel icon.",
+  "sources": [
+   "https://cdacycling.club/rides"
+  ],
+  "evidence": "Coeur d'Alene Cycling Club's Group Rides page for the 2026 season (fetched Oct 1, 2026) lists Saturday Fondo, Saturdays 12pm, Spring/Summer/Fall 2026, with the last ride 'TBD' (the Tuesday ride's last ride was 9/29).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://cdacycling.club/rides",
+   "feed_url": null,
+   "notes": "The club's Strava club (193729) also lists events, but its event list needs a login."
+  }
+ }
+]

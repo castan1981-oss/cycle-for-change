@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:beaverton-or-ride-westside-post-happy-hour-casual-ride@cycleforchange
+ .org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261012T191000
+DTEND;TZID=America/Los_Angeles:20261012T211000
+RRULE:FREQ=MONTHLY;BYDAY=2MO,4MO;UNTIL=20270228T235959Z
+SUMMARY:Ride Westside Post Happy Hour Casual Ride — Beaverton\, OR
+LOCATION:BGs Food Cartel\, western bike rack near the SW Rose Biggi Ave e
+ ntrance\, 4250 SW Rose Biggi Ave\, Beaverton\, OR 97005
+DESCRIPTION:Pace: Casual loop\, 8 to 15 miles around Beaverton and Hillsb
+ oro.\nSchedule: Second and fourth Monday of the month. Bike Happy Hour 4
+ :30 to 7 pm\, then find your bike at 7 and ride at 7:10 pm from BGs Food
+  Cartel; back before 9..\nConfirm with the host before you go.\nhttps://
+ cycleforchange.org/rides/beaverton-or-ride-westside-post-happy-hour-casu
+ al-ride/
+URL:https://cycleforchange.org/rides/beaverton-or-ride-westside-post-happ
+ y-hour-casual-ride/
+END:VEVENT
+END:VCALENDAR

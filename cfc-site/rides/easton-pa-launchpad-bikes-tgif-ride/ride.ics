@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:easton-pa-launchpad-bikes-tgif-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261002T070300
+DTEND;TZID=America/New_York:20261002T083300
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270228T235959Z
+SUMMARY:TGIF Ride (Launchpad Bikes) — Easton\, PA
+LOCATION:Center Square (the circle)\, downtown Easton\, 41 Center Square\
+ , Easton\, PA 18042
+DESCRIPTION:Pace: About 13 mph average\, no-drop.\nNo-drop.\nSchedule: Ev
+ ery Friday\, meet 7:00 am at Center Square\, leaves promptly at 7:03 am;
+  ends at Spectracolor Coffee Roasters at the Silk Mill..\nConfirm with t
+ he host before you go.\nhttps://cycleforchange.org/rides/easton-pa-launc
+ hpad-bikes-tgif-ride/
+URL:https://cycleforchange.org/rides/easton-pa-launchpad-bikes-tgif-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:abilene-tx-biketown-thursday-intermediate-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261001T180000
+DTEND;TZID=America/Chicago:20261001T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:BikeTown Thursday Intermediate Ride — Abilene\, TX
+LOCATION:BikeTown parking lot\, 1789 Industrial Blvd\, Abilene\, TX 79602
+DESCRIPTION:Pace: 15-18 mph.\nSchedule: Every Thursday\, 6:00 pm from the
+  BikeTown parking lot; up old Coleman Highway.\nConfirm with the host be
+ fore you go.\nhttps://cycleforchange.org/rides/abilene-tx-biketown-thurs
+ day-intermediate-ride/
+URL:https://cycleforchange.org/rides/abilene-tx-biketown-thursday-interme
+ diate-ride/
+END:VEVENT
+END:VCALENDAR

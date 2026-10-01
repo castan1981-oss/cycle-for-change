@@ -1,0 +1,298 @@
+[
+ {
+  "slug": "birmingham-al-trample",
+  "outcome": "changed",
+  "evidence": "Redemptive Cycles' Trample page says meet at 6:00 pm, roll out promptly at 6:30 pm, 'rain or shine, we never miss a Thursday'; the shop's events index (fetched Oct 1, 2026) is current, with a Cranksgiving 2026 registration banner.",
+  "sources": [
+   "https://www.redemptivecycles.com/event/trample",
+   "https://www.redemptivecycles.com/events"
+  ],
+  "changes": {
+   "schedule": "Every Thursday, rolls out 6:30 pm (meet 6:00 pm behind the shop); rain or shine",
+   "time_local": "6:30 pm",
+   "start_hhmm": "18:30",
+   "drop_policy": "no-drop"
+  },
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "huntsville-al-sunset-rides",
+  "outcome": "seasonal-break",
+  "status_since": "2026-10-01",
+  "status_note": "Sunset Bicycles' page says the Wednesday Sunset Cruise began April 1, 2026 and the last ride of the season was planned for September 30. Nothing on the page about a 2027 restart date.",
+  "evidence": "Sunset Bicycles' Sunset Rides page (fetched Oct 1, 2026): 'Every Wednesday Beginning April 1, 2026 ... Last ride of the season is planned for September 30.'",
+  "sources": [
+   "https://sunsetbicycles.com/cruise"
+  ],
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "baton-rouge-la-downtown-east-social-ride",
+  "outcome": "confirmed",
+  "last_seen": "2026-09-14",
+  "evidence": "Downtown East Social Ride's home page says 'Every Monday at the Electric Depot, 1509 Government Street, we gather at 6 p.m.' and shows a banner 'Next ride is Monday, September 14th' (fetched Oct 1, 2026). Its Aug 19, 2026 newsletter says the group skipped the summer heat and will be back to normal soon, so the Sept 14 banner is the latest sign it is rolling again.",
+  "sources": [
+   "https://www.downtowneastsocialride.com/",
+   "https://www.downtowneastsocialride.com/post/too-hot-to-ride-plenty-to-look-forward-to"
+  ],
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "new-orleans-la-nola-social-ride-happy-thursday",
+  "outcome": "confirmed",
+  "evidence": "NOLA Social Ride's own site (an event page showing Oct 2, 2026) lists 'Every Thursday: NSR Happy Thursday Ride, various locations'; its event calendar was updated Sept 25, 2026. No dated Happy Thursday post since Aug 2025, so check Facebook for the week's start.",
+  "sources": [
+   "https://nolasocialride.org/new-orleans-metro-social-rides/",
+   "https://nolasocialride.org/events/?ical=1"
+  ],
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "auburn-al-james-bros-saturday-shop-ride",
+  "outcome": "confirmed",
+  "last_seen": "2026-09-26",
+  "evidence": "The Montgomery Bicycle Club Google Calendar that this ride links to lists 'James Bros, 52 miles' from 1100 S College St, Auburn on Sat Sept 26, 2026 at 7:00 am CDT (and Sept 12 at 7:00; August Saturdays at 6:00). Fetched Oct 1, 2026.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/3gp47l8ftrpp8812vhfnp9j9s4%40group.calendar.google.com/public/basic.ics",
+   "https://www.jamesbrosbikes.com/"
+  ],
+  "promote_feed": "https://calendar.google.com/calendar/ical/3gp47l8ftrpp8812vhfnp9j9s4%40group.calendar.google.com/public/basic.ics",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "auburn-al-second-sunday-ride",
+  "outcome": "confirmed",
+  "last_seen": "2026-09-26",
+  "evidence": "The Second Sunday Ride's home page (fetched Oct 1, 2026) shows its Sept 26, 2026 adventure (Kolomoki Mounds) and the next dates: Oct 9-11, Oct 24, Nov 8 and Dec 13.",
+  "sources": [
+   "https://www.secondsundayride.org/"
+  ],
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "auburn-al-thursday-night-dirtbags",
+  "outcome": "confirmed",
+  "last_seen": "2026-09-24",
+  "evidence": "Trek Bicycle Auburn's events page (fetched Oct 1, 2026) lists Thursday Night Dirtbags at Waverly Local, 7:00 pm, on Sept 3, 10 and 17, and an Opelika end-of-summer ride Sept 24; the Montgomery Bicycle Club calendar lists Oct 1, 8, 15 and 22 at 7:00 pm.",
+  "sources": [
+   "https://www.trekbicycleauburn.com/events",
+   "https://www.trekbicycleauburn.com/journal",
+   "https://calendar.google.com/calendar/ical/3gp47l8ftrpp8812vhfnp9j9s4%40group.calendar.google.com/public/basic.ics"
+  ],
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "millbrook-al-mbc-old-and-slow-ride",
+  "outcome": "confirmed",
+  "last_seen": "2026-09-26",
+  "evidence": "Montgomery Bicycle Club's Google Calendar lists 'Old & Slow Ride' from Millbrook City Hall on Sat Sept 26, 2026 at 7:00 am (also Sept 5, 12 and 19); Aug 1 was marked cancelled. Fetched Oct 1, 2026.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/3gp47l8ftrpp8812vhfnp9j9s4%40group.calendar.google.com/public/basic.ics",
+   "https://www.mgmbikeclub.org/clubrides.html"
+  ],
+  "promote_feed": "https://calendar.google.com/calendar/ical/3gp47l8ftrpp8812vhfnp9j9s4%40group.calendar.google.com/public/basic.ics",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "prattville-al-mbc-tuesday-prattville-loop",
+  "outcome": "changed",
+  "last_seen": "2026-09-29",
+  "evidence": "Montgomery Bicycle Club's Google Calendar (fetched Oct 1, 2026) lists the Prattville Loop Tuesdays at 6:00 pm through Sept 29, then a new weekly series at 5:30 pm from Oct 6, 2026 to Nov 1.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/3gp47l8ftrpp8812vhfnp9j9s4%40group.calendar.google.com/public/basic.ics",
+   "https://www.mgmbikeclub.org/clubrides.html"
+  ],
+  "promote_feed": "https://calendar.google.com/calendar/ical/3gp47l8ftrpp8812vhfnp9j9s4%40group.calendar.google.com/public/basic.ics",
+  "changes": {
+   "schedule": "Tuesdays, 6:00 pm through Sept 29; 5:30 pm from Oct 6 (club calendar)",
+   "start_times": [
+    {
+     "from": "2026-10-06",
+     "start_hhmm": "17:30"
+    }
+   ]
+  },
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "prattville-al-mbc-thursday-night-ride",
+  "outcome": "changed",
+  "last_seen": "2026-09-24",
+  "evidence": "Montgomery Bicycle Club's Google Calendar (fetched Oct 1, 2026) lists the Thursday Night Ride at Prattville High School at 5:30 pm weekly from Sept 10, 2026, with the series ending Oct 8.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/3gp47l8ftrpp8812vhfnp9j9s4%40group.calendar.google.com/public/basic.ics",
+   "https://www.mgmbikeclub.org/clubrides.html"
+  ],
+  "promote_feed": "https://calendar.google.com/calendar/ical/3gp47l8ftrpp8812vhfnp9j9s4%40group.calendar.google.com/public/basic.ics",
+  "changes": {
+   "schedule": "Thursdays, 5:30 pm, through Oct 8 (club calendar)",
+   "time_local": "5:30 pm",
+   "start_hhmm": "17:30"
+  },
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "tuscaloosa-al-druid-city-bicycle-club-tuesday-ride",
+  "outcome": "changed",
+  "evidence": "Druid City Bicycle Club's own home page (fetched Oct 1, 2026; it mentions the 2026 renewal and the closed Hot Hundred registration) lists the Tuesday Night Ride at 5:30 pm from Parker-Haun Park and a Wednesday Ladies Ride; it no longer lists a Thursday ride or the Embassy Suites lot.",
+  "sources": [
+   "https://druidcitybicycleclub.com/"
+  ],
+  "changes": {
+   "days": [
+    "tue"
+   ],
+   "schedule": "Tuesdays, 5:30 pm, from Parker-Haun Park; a variety of distances and pace groups",
+   "start_location": {
+    "name": "Parker-Haun Park, Tuscaloosa",
+    "address": null
+   },
+   "description": "The club's main weeknight ride, with a variety of distances and pace groups. It starts at 5:30 pm from Parker-Haun Park. The club's own schedule no longer lists the Thursday ride, and its Wednesday ride is a separate ladies ride. Rides are members only, at $25 a year, per the shop that lists them. Join the club GroupMe for details.",
+   "links": {
+    "website": "https://druidcitybicycleclub.com/"
+   }
+  },
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "new-orleans-la-getupnride-tuesday-ride",
+  "outcome": "confirmed",
+  "evidence": "Get Up N Ride's About page says 'show up for 8pm at the Art Garage 2231 St. Claude' every Tuesday, and the NOLA Social Ride calendar lists 'Get Up N Ride Tuesday Social Ride' for Oct 6, 13, 20 and 27, 2026 (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.getupnride.com/pages/about-us",
+   "https://nolasocialride.org/events/?ical=1"
+  ],
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "ocean-springs-ms-tato-nut-ride",
+  "outcome": "confirmed",
+  "evidence": "The Gulf Coast Bicycle Club's Ride with GPS calendar lists 'Tri Hard Tatonut in Ocean Springs' for Sat Oct 3, 2026 at 9:00 am (and Nov 7), meeting at Little Children's Park, Dewey and Calhoun; Tri Hard Sports' community page says 'Every first Saturday of the month: Tatonut Ride @ 9:00am'. Fetched Oct 1, 2026.",
+  "sources": [
+   "https://ridewithgps.com/organizations/14742-gulf-coast-bicycle-club",
+   "https://www.trihardsports.com/community"
+  ],
+  "promote_feed": "https://ridewithgps.com/organizations/14742/calendar.ics",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "fairhope-al-pro-cycle-thursday-night-social-ride",
+  "outcome": "unreachable",
+  "note": "Pro Cycle's rides page lists the Thursday Night Social (6:00 pm, 'Spring & Summer', no-drop) with no dates; nothing says whether it runs in October.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "baton-rouge-la-geaux-ride-thursday-night-community-ride",
+  "outcome": "unreachable",
+  "note": "Geaux Ride's page still lists the Thursday community ride (meet 7:30 pm, kickstands up 7:45) but nothing on it is dated 2026; the downtown development page for it is an old date.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "lafayette-la-bike-lafayette-saturday-ride",
+  "outcome": "unreachable",
+  "note": "Bike Lafayette's site only says rides are on its Facebook page; nothing dated or loadable.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "new-orleans-la-nola-social-ride-thursday",
+  "outcome": "unreachable",
+  "note": "Facebook page won't load; same ride as the Happy Thursday listing, which was confirmed from nolasocialride.org.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "shreveport-la-shreveport-bicycle-club-saturday-ride",
+  "outcome": "unreachable",
+  "note": "Adventure Provision's rides page (copyright 2026, undated) still lists the Saturday 7:30 am ride from Ellerbe Road Baptist Church; the club's own site and TeamApp page didn't load.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "birmingham-al-le-tour-de-ham",
+  "outcome": "unreachable",
+  "note": "The club's Strava page describes Tuesday 6:00 / roll 6:15 and a Saturday stroll, but it is undated and its event list needs a login.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "mobile-al-sunday-morning-breakfast-club",
+  "outcome": "unreachable",
+  "note": "Only an undated tourism page and a Facebook group; the Mobile Bay Riders calendar lists Nova Espresso rides on Saturdays and a Sunday Greer's Market ride, not this Sunday ride.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "tuscaloosa-al-velocity-casual-campus-cruise",
+  "outcome": "unreachable",
+  "note": "VeloCity's group-rides page is undated and says start times are on Facebook and Instagram stories.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "tuscaloosa-al-wamba-monday-beginner-ride",
+  "outcome": "unreachable",
+  "note": "Only VeloCity's undated group-rides page and a Facebook page.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "shreveport-la-sb-rides-led-cruiser-ride",
+  "outcome": "unreachable",
+  "note": "SB Rides' product page still says 'Every Tuesday, meet 8 PM, ride 8:30 PM' but nothing is dated 2026; its events list says 'no upcoming events' and its save-the-date items look a year old. The ride is ticketed, not free.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "biloxi-ms-bike-biloxi-monthly-ride",
+  "outcome": "unreachable",
+  "note": "Gulf Coast Trails' community rides page (copyright 2025) only links to Facebook; no times.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "canton-ms-jmc-tuesday-club-ride",
+  "outcome": "unreachable",
+  "note": "JMC's Local Rides page states the Tuesday 6 pm Canton ride but is undated, and JMC's October 2026 calendar lists no weekly rides.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "hattiesburg-ms-tuesday-night-worlds",
+  "outcome": "unreachable",
+  "note": "Jed's community-events page still states Tuesday 5:30 pm but its event list is from fall 2024; nothing newer.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "hattiesburg-ms-jeds-saturday-longleaf-trace-ride",
+  "outcome": "unreachable",
+  "note": "Jed's community-events page states Saturday 8:00 am but its event list is from fall 2024; weekly details are on Facebook.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "jackson-ms-soul-city-cycling-monday-encouragement-ride",
+  "outcome": "unreachable",
+  "note": "JMC's Local Rides page states the Monday 6 pm ride but is undated; Soul City's own site was blocked.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "pass-christian-ms-bay-night-ride",
+  "outcome": "unreachable",
+  "note": "Gulf Coast Trails' community rides page (copyright 2025) only links to Facebook; no times.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "ridgeland-ms-jmc-thursday-ride",
+  "outcome": "unreachable",
+  "note": "JMC's Local Rides page states Thursday evenings but is undated; weekly details are on Facebook.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "tupelo-ms-core-saturday-shop-ride",
+  "outcome": "unreachable",
+  "note": "CORE's group-rides page was last edited Aug 29, 2023 and shows 2023 copyright; the site's home page was edited Aug 2026 but doesn't mention rides.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "tupelo-ms-core-thursday-spring-lake-ride",
+  "outcome": "unreachable",
+  "note": "CORE's group-rides page was last edited Aug 29, 2023; nothing newer.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "tupelo-ms-core-tuesday-night-loop",
+  "outcome": "unreachable",
+  "note": "CORE's group-rides page was last edited Aug 29, 2023; nothing newer.",
+  "checked_on": "2026-10-01"
+ }
+]

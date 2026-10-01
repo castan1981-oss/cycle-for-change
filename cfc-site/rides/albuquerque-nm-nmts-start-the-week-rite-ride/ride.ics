@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:albuquerque-nm-nmts-start-the-week-rite-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Denver:20261026T090000
+DTEND;TZID=America/Denver:20261026T110000
+RRULE:FREQ=MONTHLY;BYDAY=4MO;UNTIL=20270228T235959Z
+SUMMARY:NMTS Start the Week Rite Ride (4th Monday) — Albuquerque\, NM
+LOCATION:NE corner of San Pedro and Candelaria\, San Pedro Dr NE and Cand
+ elaria Rd NE\, Albuquerque\, NM
+DESCRIPTION:Pace: 13 mph (plus or minus 1)\, minor hills.\nSchedule: Four
+ th Monday of the month\, 9:00 am\, from the NE corner of San Pedro and C
+ andelaria..\nConfirm with the host before you go.\nhttps://cycleforchang
+ e.org/rides/albuquerque-nm-nmts-start-the-week-rite-ride/
+URL:https://cycleforchange.org/rides/albuquerque-nm-nmts-start-the-week-r
+ ite-ride/
+END:VEVENT
+END:VCALENDAR

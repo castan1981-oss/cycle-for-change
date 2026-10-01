@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:virginia-beach-va-tripower-saturday-group-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T071500
+DTEND;TZID=America/New_York:20261003T091500
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Saturday Group Ride (Tripower Cycling Club) — Virginia Beach\, 
+ VA
+LOCATION:Conte's Bike Shop Virginia Beach\, 1805 Laskin Rd\, Virginia Bea
+ ch\, VA 23454
+DESCRIPTION:Pace: A 22-25 mph (drop); B 18-20 mph (no-drop); C 16-18 mph 
+ on the club page.\nSchedule: Saturdays\, 7:15 am and 8:30 am\, from Cont
+ e's Bike Shop in Virginia Beach.\nConfirm with the host before you go.\n
+ https://cycleforchange.org/rides/virginia-beach-va-tripower-saturday-gro
+ up-ride/
+URL:https://cycleforchange.org/rides/virginia-beach-va-tripower-saturday-
+ group-ride/
+END:VEVENT
+END:VCALENDAR

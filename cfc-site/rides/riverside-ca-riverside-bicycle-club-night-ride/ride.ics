@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:riverside-ca-riverside-bicycle-club-night-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261001T183000
+DTEND;TZID=America/Los_Angeles:20261001T203000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20270228T235959Z
+SUMMARY:Riverside Bicycle Club Tuesday and Thursday Night Ride — Rivers
+ ide\, CA
+LOCATION:Stater Brothers\, corner of Lincoln and Mary Street\, Riverside
+DESCRIPTION:Pace: B group: 17 to 19 mph\, per the club's ride levels.\nSc
+ hedule: Tuesday and Thursday evenings\, 6:30 pm\, B group\, from Stater 
+ Brothers at Lincoln and Mary Street\, Riverside. Lights required..\nConf
+ irm with the host before you go.\nhttps://cycleforchange.org/rides/river
+ side-ca-riverside-bicycle-club-night-ride/
+URL:https://cycleforchange.org/rides/riverside-ca-riverside-bicycle-club-
+ night-ride/
+END:VEVENT
+END:VCALENDAR

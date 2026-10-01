@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:woodbury-mn-freewheel-bike-monday-night-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261005T170000
+DTEND;TZID=America/Chicago:20261005T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20270228T235959Z
+SUMMARY:Freewheel Woodbury Monday Night Ride — Woodbury\, MN
+LOCATION:Freewheel Bike Woodbury (Strava meet-up spot)\, 6415 Lake Road T
+ err\, Woodbury\, MN 55125
+DESCRIPTION:Schedule: Mondays\, 5:00 pm\, from 6415 Lake Road Terrace\, W
+ oodbury. The Strava event shows the next ride\, Mon Oct 5\, 2026..\nConf
+ irm with the host before you go.\nhttps://cycleforchange.org/rides/woodb
+ ury-mn-freewheel-bike-monday-night-ride/
+URL:https://cycleforchange.org/rides/woodbury-mn-freewheel-bike-monday-ni
+ ght-ride/
+END:VEVENT
+END:VCALENDAR

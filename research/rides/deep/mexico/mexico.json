@@ -1,0 +1,677 @@
+[
+ {
+  "slug": "mexico-city-mx-ciclopolis-tuesday-ajusco-ride",
+  "name": "Rodada al Ajusco a la Y (martes)",
+  "name_en": "Tuesday ride up the Ajusco old road",
+  "kind": "group-ride",
+  "city": "Mexico City",
+  "region": "Mexico City",
+  "state": null,
+  "country": "MX",
+  "neighborhood": "Coyoacán",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Tuesdays, meet 6:00 am, roll 6:10 am, from the Ciclópolis Coyoacán shop. The shop's calendar lists Oct 6, 13, 20 and 27, 2026.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:10 am",
+  "start_hhmm": "06:10",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "tz": "America/Mexico_City",
+  "start_location": {
+   "name": "Ciclópolis Coyoacán",
+   "address": "Av. Miguel Ángel de Quevedo 287, Col. Romero de Terreros, Coyoacán, Ciudad de México"
+  },
+  "distance_km": 70,
+  "distance_miles": 43,
+  "duration": "2 h 30 min",
+  "duration_min": 150,
+  "pace": "Intermediate to advanced. About 900 m of climbing on the Federal highway up the Ajusco.",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Ciclópolis",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Sign up with the Registrarme button on the shop's events page. Bring helmet, gloves, a repair kit and water, plus a rear light. Meeting 10 minutes before the roll.",
+  "description": "A weekday-morning road ride from the Ciclópolis shop in Coyoacán up the old Federal highway to the Ajusco, 70 km with about 900 m of climbing. The shop lists it as an intermediate to advanced ride and posts each Tuesday on its events page. Mexico City's own ride agenda showed the same Tuesday start on Sept 8.",
+  "links": {
+   "website": "https://www.ciclopolis.mx/pages/eventos",
+   "instagram": "https://www.instagram.com/ciclopolismx/",
+   "facebook": "https://www.facebook.com/ciclopolis",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.ciclopolis.mx/pages/eventos",
+   "https://lasillarota.com/metropoli/2026/9/8/marchas-concentraciones-y-cierres-viales-hoy-8-de-septiembre-en-cdmx-527649.html"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-08",
+  "evidence": "Ciclópolis's own events page (titled Septiembre-Octubre 2026) lists Rodada al Ajusco a la Y on Tue Oct 6, 13, 20 and 27 at 6:00 am meeting, 6:10 roll; the city's ride agenda (La Silla Rota, Sept 8, 2026) shows Ciclópolis leaving Coyoacán at 6:00 am for the Ajusco (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "status": "active",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.ciclopolis.mx/pages/eventos",
+   "feed_url": null,
+   "notes": "The events page lists the next two months of dated rides. No feed. Instagram: @ciclopolismx."
+  }
+ },
+ {
+  "slug": "mexico-city-mx-ciclopolis-saturday-rodada",
+  "name": "Rodada de sábado Ciclópolis",
+  "name_en": "Ciclópolis Saturday ride",
+  "kind": "group-ride",
+  "city": "Mexico City",
+  "region": "Mexico City",
+  "state": null,
+  "country": "MX",
+  "neighborhood": "Coyoacán",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "discipline": [
+   "mixed"
+  ],
+  "schedule": "Saturdays, meet 7:00 am, roll 7:10 am, from the Ciclópolis Coyoacán shop. The route changes each week: Ajusco on Oct 3, a themed city ride to the Monumento a la Revolución on Oct 10, Ciudad Universitaria on Oct 17, a gravel ride with Gravel Mafia on Oct 24, a Halloween ride to Ciudad Universitaria on Oct 31.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:10 am",
+  "start_hhmm": "07:10",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "tz": "America/Mexico_City",
+  "start_location": {
+   "name": "Ciclópolis Coyoacán",
+   "address": "Av. Miguel Ángel de Quevedo 287, Col. Romero de Terreros, Coyoacán, Ciudad de México"
+  },
+  "distance_km": 30,
+  "distance_miles": 19,
+  "duration": "2 h 30 min to 3 hours",
+  "duration_min": 180,
+  "pace": "Level is posted per ride. The Ciudad Universitaria rides (30 km, flat, by the Insurgentes bike lane) are marked beginner to intermediate; the Ajusco and gravel rides are intermediate to advanced.",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Ciclópolis",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Sign up on the events page. Helmet, gloves, repair kit, water and a rear light are required. The Oct 10 ride is open to road, MTB, gravel, BMX and city bikes.",
+  "description": "The shop's Saturday morning ride leaves Ciclópolis Coyoacán at 7:10 am and changes route every week. Some weeks are 30 km on the flat to Ciudad Universitaria with a road-safety talk, some are the 70 km Ajusco climb, and one in October is a gravel ride with Gravel Mafia. Distance, climbing and level are posted for each date.",
+  "links": {
+   "website": "https://www.ciclopolis.mx/pages/eventos",
+   "instagram": "https://www.instagram.com/ciclopolismx/",
+   "facebook": "https://www.facebook.com/ciclopolis",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.ciclopolis.mx/pages/eventos"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Ciclópolis's own events page (titled Septiembre-Octubre 2026) lists a Saturday ride at 7:00 am meeting, 7:10 roll, on Oct 3, 10, 17, 24 and 31, 2026 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "status": "active",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.ciclopolis.mx/pages/eventos",
+   "feed_url": null,
+   "notes": "The events page lists the next two months of dated rides. Distance on the record is the Oct 10 and 17 figure (30 km); it varies."
+  }
+ },
+ {
+  "slug": "mexico-city-mx-rueda-libre-thursday-night-ride",
+  "name": "Rueda Libre, rodada del jueves",
+  "name_en": "Rueda Libre Thursday night ride",
+  "kind": "group-ride",
+  "city": "Mexico City",
+  "region": "Mexico City",
+  "state": null,
+  "country": "MX",
+  "neighborhood": "Barrio San Lucas, Iztapalapa",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Thursday evenings, 7:45 pm from Casa Rueda Libre in Iztapalapa (7:45 pm on Sept 10, Sept 17 and Oct 1, 8:15 pm on Sept 24, 2026). The destination changes each week.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "7:45 pm",
+  "start_hhmm": "19:45",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "tz": "America/Mexico_City",
+  "start_location": {
+   "name": "Casa Rueda Libre",
+   "address": "Calzada Ermita Iztapalapa y Cuauhtémoc, Barrio San Lucas, Iztapalapa, Ciudad de México"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Rueda Libre",
+   "type": "collective"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Group size is capped at 20 to 25 in the city's filing. Check the collective's channels for the route; the city's daily ride agenda lists each night's destination the morning of. A ride on Wed Sept 9 (8:15 pm) was also listed.",
+  "description": "A Thursday-night group ride that leaves Casa Rueda Libre in Barrio San Lucas, Iztapalapa, for a different destination every week: the Basílica de Guadalupe on Sept 10, Ecatepec on Sept 17, Tlalpan on Sept 24 and Coyoacán's central plaza on Oct 1.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://lasillarota.com/metropoli/2026/9/10/marchas-concentraciones-y-cierres-viales-hoy-10-de-septiembre-en-cdmx-527976.html",
+   "https://lasillarota.com/metropoli/2026/9/17/marchas-concentraciones-y-cierres-viales-hoy-17-de-septiembre-en-cdmx-528838.html",
+   "https://lasillarota.com/metropoli/2026/9/24/marchas-concentraciones-y-cierres-viales-hoy-24-de-septiembre-en-cdmx-529782.html",
+   "https://lasillarota.com/metropoli/2026/10/1/marchas-concentraciones-y-cierres-viales-hoy-1-de-octubre-en-cdmx-530901.html"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Mexico City's daily ride agenda (La Silla Rota) lists Rueda Libre from Casa Rueda Libre on Thu Sept 10, Sept 17, Sept 24 and Oct 1, 2026 (fetched Oct 1, 2026). Secondary source: the host's own channels would not load.",
+  "confidence": "medium",
+  "status": "active",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://lasillarota.com/temas/movilizaciones-cdmx-48751.html",
+   "feed_url": null,
+   "notes": "The Secretaría de Seguridad Ciudadana's daily agenda of marches and rides, republished each weekday morning by La Silla Rota under 'Rodadas ciclistas'. Search 'Rueda Libre'. Not listed on Thu Sept 3."
+  }
+ },
+ {
+  "slug": "mexico-city-mx-libertad-en-bici-wednesday-night-ride",
+  "name": "Libertad en Bici, rodada del miércoles",
+  "name_en": "Libertad en Bici Wednesday night ride",
+  "kind": "group-ride",
+  "city": "Mexico City",
+  "region": "Mexico City",
+  "state": null,
+  "country": "MX",
+  "neighborhood": "Leyes de Reforma, Iztapalapa",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Wednesday evenings, 8:15 pm from Eje 5 Sur and Calle 10 de Agosto in Iztapalapa (Sept 9, 23 and 30, 2026). The destination changes each week.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "8:15 pm",
+  "start_hhmm": "20:15",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "tz": "America/Mexico_City",
+  "start_location": {
+   "name": "Eje 5 Sur y Calle 10 de Agosto",
+   "address": "Eje 5 Sur y Calle 10 de Agosto, Col. Leyes de Reforma, Iztapalapa, Ciudad de México"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Libertad en Bici",
+   "type": "collective"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Group size is capped at 25 in the city's filing. It was not listed on Wed Sept 2 or Sept 16 in the agenda pages checked, so confirm the week with the collective before travelling across town.",
+  "description": "An evening group ride from the east side of Mexico City. It meets at Eje 5 Sur and Calle 10 de Agosto in Iztapalapa and rides to a different place each week: Miguel Hidalgo on Sept 9, the Unidad Independencia in Magdalena Contreras on Sept 23, the Ángel de la Independencia on Sept 30.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://lasillarota.com/metropoli/2026/9/9/marchas-concentraciones-y-cierres-viales-hoy-9-de-septiembre-en-cdmx-527807.html",
+   "https://lasillarota.com/metropoli/2026/9/23/marchas-concentraciones-y-cierres-viales-hoy-23-de-septiembre-en-cdmx-529606.html",
+   "https://lasillarota.com/metropoli/2026/9/30/marchas-concentraciones-y-cierres-viales-hoy-30-de-septiembre-en-cdmx-530755.html"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-30",
+  "evidence": "Mexico City's daily ride agenda (La Silla Rota) lists Libertad en Bici at 8:15 pm from Eje 5 Sur y 10 de Agosto on Wed Sept 9, Sept 23 and Sept 30, 2026 (fetched Oct 1, 2026). Secondary source: the host's own channels were not found.",
+  "confidence": "medium",
+  "status": "active",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://lasillarota.com/temas/movilizaciones-cdmx-48751.html",
+   "feed_url": null,
+   "notes": "The city's daily ride agenda, republished by La Silla Rota. Search 'Libertad en Bici'."
+  }
+ },
+ {
+  "slug": "mexico-city-mx-chirimixquics-bike-friday-ride",
+  "name": "Chirimixquic's Bike, rodada del viernes",
+  "name_en": "Chirimixquic's Bike Friday ride",
+  "kind": "group-ride",
+  "city": "Mexico City",
+  "region": "Mexico City",
+  "state": null,
+  "country": "MX",
+  "neighborhood": "San Antonio Tecómitl, Milpa Alta",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Friday evenings, 6:15 pm from the Reloj de Tecómitl in San Antonio Tecómitl, Milpa Alta (Sept 4, 11 and 25, 2026). The destination changes each week.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:15 pm",
+  "start_hhmm": "18:15",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "tz": "America/Mexico_City",
+  "start_location": {
+   "name": "Reloj de Tecómitl",
+   "address": "Plaza de la Corregidora 26, Pueblo de San Antonio Tecómitl, Milpa Alta, Ciudad de México"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Chirimixquic's Bike",
+   "type": "collective"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Group size is capped at 25 in the city's filing. Rides head into the hills of Milpa Alta and out to the State of Mexico (Chalma on Sept 25), so lights are needed for the ride back. Not listed on Fri Sept 18; check before going.",
+  "description": "A Friday-evening group ride from the Tecómitl clock on the south-east edge of Mexico City. Destinations in September were Cerro San Miguel and the Feria del Elote in Santa Ana Tlacotenco, then the church at Chalma in the State of Mexico.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://lasillarota.com/metropoli/2026/9/4/marchas-concentraciones-y-cierres-viales-hoy-4-de-septiembre-en-cdmx-527231.html",
+   "https://lasillarota.com/metropoli/2026/9/11/marchas-concentraciones-y-cierres-viales-hoy-11-de-septiembre-en-cdmx-528139.html",
+   "https://lasillarota.com/metropoli/2026/9/25/marchas-concentraciones-y-cierres-viales-hoy-25-de-septiembre-en-cdmx-529983.html"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-25",
+  "evidence": "Mexico City's daily ride agenda (La Silla Rota) lists Chirimixquic's Bike at 6:15 pm from the Reloj de Tecómitl on Fri Sept 4, Sept 11 and Sept 25, 2026 (fetched Oct 1, 2026). Secondary source: the host's own channels were not found.",
+  "confidence": "medium",
+  "status": "active",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://lasillarota.com/temas/movilizaciones-cdmx-48751.html",
+   "feed_url": null,
+   "notes": "The city's daily ride agenda, republished by La Silla Rota. Search 'Chirimixquic'."
+  }
+ },
+ {
+  "slug": "guadalajara-mx-gobierno-guadalajara-via-recreactiva-nocturna",
+  "name": "Vía RecreActiva Nocturna (Bien de Noche)",
+  "name_en": "Night RecreActiva, Guadalajara",
+  "kind": "open-streets",
+  "city": "Guadalajara",
+  "region": "Jalisco",
+  "state": null,
+  "country": "MX",
+  "neighborhood": "Centro, Americana",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "discipline": [
+   "social"
+  ],
+  "schedule": "First Saturday of every month, 7:00 pm to 11:00 pm. Av. Ignacio L. Vallarta from the Glorieta Minerva to the Templo Expiatorio, plus Paseo Alcalde. Next: Sat Oct 3, 2026 (costume edition).",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:00 pm",
+  "start_hhmm": "19:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "sat"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "tz": "America/Mexico_City",
+  "start_location": {
+   "name": "Glorieta Minerva / Paseo Alcalde",
+   "address": "Av. Ignacio L. Vallarta and Paseo Alcalde, Guadalajara, Jalisco"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "4 hours",
+  "duration_min": 240,
+  "pace": "Open street, no pace. Families and walkers share the road.",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Gobierno de Guadalajara (Vía RecreActiva)",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Wear lights and reflective gear. In January the organisers said electric bikes, scooters and skates are not allowed. The regular Sunday RecreActiva runs the next morning. Closures on Javier Mina–Juárez and Fray Antonio Alcalde affect buses and the light rail that evening.",
+  "description": "The night edition of Guadalajara's car-free street program, held with the Bien de Noche festival on the first Saturday of each month. Av. Vallarta and Paseo Alcalde close to cars from 7:00 to 11:00 pm, with music, workshops and a lot of people on bikes.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.informador.mx/jalisco/bien-de-noche-guadalajara-tendra-edicion-de-disfraces-este-sabado-3-de-octubre-checa-el-programa-20260929-0061.html",
+   "https://www.notisistema.com/noticias/ajustan-rutas-de-transporte-por-via-recreativa-nocturna-en-guadalajara/",
+   "https://guadalajarasecreta.com/via-recreactiva-nocturna-guadalajara/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-29",
+  "evidence": "El Informador (Sept 29, 2026) says Bien de Noche, with its bike-and-walk night circuit, runs without a break on the first Saturday of every month, 7:00 to 11:00 pm, next on Sat Oct 3, 2026; Notisistema (Jul 31, 2026) reports the Vía RecreActiva Nocturna closing Javier Mina–Juárez from 7 pm on Sat Aug 1; Guadalajara Secreta (Jan 2, 2026) gives the Sat Jan 3 edition 7 to 11 pm (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "status": "active",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://www.informador.mx/jalisco/bien-de-noche-guadalajara-tendra-edicion-de-disfraces-este-sabado-3-de-octubre-checa-el-programa-20260929-0061.html",
+   "feed_url": null,
+   "notes": "The program's own site, viarecreactiva.org, answers 403 to bots. Local outlets (El Informador, Notisistema) announce each edition the week before. Same program as the Sunday Vía RecreActiva already listed."
+  }
+ },
+ {
+  "slug": "saltillo-mx-gobierno-municipal-ruta-recreativa",
+  "name": "Ruta Recreativa de Saltillo",
+  "name_en": "Saltillo Sunday Recreational Route",
+  "kind": "open-streets",
+  "city": "Saltillo",
+  "region": "Coahuila",
+  "state": null,
+  "country": "MX",
+  "neighborhood": "Bulevar Venustiano Carranza",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Sunday, 6:30 am to 11:30 am (new hours since Sunday July 5, 2026). Bulevar Venustiano Carranza between calle Chihuahua and calle Canadá.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "6:30 am",
+  "start_hhmm": "06:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "tz": "America/Monterrey",
+  "start_location": {
+   "name": "Bulevar Venustiano Carranza (calle Chihuahua to calle Canadá)",
+   "address": "Bulevar Venustiano Carranza, Saltillo, Coahuila"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "5 hours",
+  "duration_min": 300,
+  "pace": "Open street, no pace.",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Gobierno Municipal de Saltillo",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Bikes, skates, scooters and dogs share the closed boulevard with walkers. The city moved the start earlier on July 5; ask locally or check the municipal site if it has changed back for the cooler months.",
+  "description": "A car-free stretch of Bulevar Venustiano Carranza that the city opens every Sunday morning for walking, running, cycling and skating. City departments run health and pet-care stands along the route.",
+  "links": {
+   "website": "https://saltillo.gob.mx/a-partir-de-este-domingo-cambia-el-horario-de-la-ruta-recreativa/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://saltillo.gob.mx/a-partir-de-este-domingo-cambia-el-horario-de-la-ruta-recreativa/",
+   "https://vanguardia.com.mx/coahuila/saltillo/saltillenses-disfrutan-la-primera-ruta-recreativa-de-septiembre-BD23315422",
+   "https://elcoahuilense.com/asisten-a-pasear-y-activarse-a-la-ruta-recreativa-de-saltillo/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-06",
+  "evidence": "The municipal government's notice dated July 3, 2026 gives the Sunday Ruta Recreativa as 6:30 to 11:30 am from July 5; Vanguardia (Sept 6, 2026) reports the first Ruta Recreativa of September on the boulevard and says it runs every Sunday (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "status": "active",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://saltillo.gob.mx/a-partir-de-este-domingo-cambia-el-horario-de-la-ruta-recreativa/",
+   "feed_url": null,
+   "notes": "The municipality posts notices on saltillo.gob.mx whenever the hours change; Vanguardia repeats them. The 6:30 start began July 5, 2026, so watch for a notice around October or November."
+  }
+ },
+ {
+  "slug": "toluca-mx-ayuntamiento-toluca-recreativa",
+  "name": "Toluca Recreativa",
+  "name_en": "Toluca Recreational Route",
+  "kind": "open-streets",
+  "city": "Toluca",
+  "region": "State of Mexico",
+  "state": null,
+  "country": "MX",
+  "neighborhood": "Paseo Colón",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Sunday, 8:00 am to 12:00 pm, from the Glorieta del Águila on Paseo Colón. On the first Sunday of each month it runs the longer \"extended\" route toward Venustiano Carranza and the Parque Vicente Guerrero.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "tz": "America/Mexico_City",
+  "start_location": {
+   "name": "Glorieta del Águila, Paseo Colón",
+   "address": "Paseo Colón, Toluca de Lerdo, Estado de México"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "4 hours",
+  "duration_min": 240,
+  "pace": "Open street, no pace.",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Ayuntamiento de Toluca (IMCUFIDET)",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Free. On extended Sundays there is a group exercise session at 9:00 in front of the Glorieta del Águila. Expect closed streets around Paseo Colón.",
+  "description": "A weekly car-free route on Paseo Colón run by the Toluca city sports institute. Riders, runners, walkers and dog owners use the closed street, and the first Sunday of the month adds a longer route.",
+  "links": {
+   "website": "https://www2.toluca.gob.mx/invita-gobierno-municipal-a-disfrutar-la-version-extendida-de-toluca-recreativa-en-paseo-colon/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www2.toluca.gob.mx/invita-gobierno-municipal-a-disfrutar-la-version-extendida-de-toluca-recreativa-en-paseo-colon/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-06",
+  "evidence": "The city government's release no. 942/2026 (Sept 5-7, 2026) announces the extended Toluca Recreativa for Sun Sept 6 in its usual hours, 8:00 am to 12:00 pm, and says registration for the Medio Maratón Alfeñique will continue \"every Sunday of Toluca Recreativa\" (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "status": "active",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://www2.toluca.gob.mx/invita-gobierno-municipal-a-disfrutar-la-version-extendida-de-toluca-recreativa-en-paseo-colon/",
+   "feed_url": null,
+   "notes": "The city's news pages (www2.toluca.gob.mx) post each month's extended edition. El Sol de Toluca repeats them."
+  }
+ },
+ {
+  "slug": "xalapa-mx-ayuntamiento-xalapa-se-mueve-ruta-recreativa",
+  "name": "Xalapa se Mueve: Ruta Recreativa",
+  "name_en": "Xalapa Moves: Recreational Route",
+  "kind": "open-streets",
+  "city": "Xalapa",
+  "region": "Veracruz",
+  "state": null,
+  "country": "MX",
+  "neighborhood": "Centro",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "discipline": [
+   "social"
+  ],
+  "schedule": "One Sunday every five to seven weeks, 7:00 am to 12:00 pm. Avenida Ávila Camacho and Avenida Enríquez close to cars with side streets in the centre. Editions seen: Jun 7, Jul 26 and Aug 30, 2026. Dates are announced a few days ahead.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "irregular",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "tz": "America/Mexico_City",
+  "start_location": {
+   "name": "Avenida Ávila Camacho (Monumento a la Madre) to Avenida Enríquez",
+   "address": "Avenida Ávila Camacho and Avenida Enríquez, Centro, Xalapa, Veracruz"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "5 hours",
+  "duration_min": 300,
+  "pace": "Open street, no pace.",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Ayuntamiento de Xalapa (Desarrollo Urbano)",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "This is not weekly. Check the city's announcement for the next Sunday before going; the closure map is published the day before.",
+  "description": "Xalapa's city government closes the main avenues of the centre to cars on selected Sundays for walking, cycling and family activities. The August edition was billed as the third of the program.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://lasillarota.com/veracruz/local/2026/6/6/cerraran-estas-avenidas-calles-de-xalapa-para-uso-peatonal-el-domingo-de-junio-513488.html",
+   "https://www.entornopolitico.com/nota/239412/local/recuperando-espacios-publicos-y-fomentando-la-convivencia-familiar-en-domingo-de-ruta-recreativa-del-ayuntamiento"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-08-30",
+  "evidence": "La Silla Rota (Jun 6, 2026) gives the Jun 7 Ruta Recreativa as a 7:00 am to 12:00 pm car closure on Ávila Camacho and Enríquez; Entorno Político (listed Aug 30, 2026) covers the third edition of Xalapa se Mueve; a Diario de Xalapa headline of Jul 26 reports another edition (headline only, not opened) (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "status": "active",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://lasillarota.com/veracruz/local/2026/6/6/cerraran-estas-avenidas-calles-de-xalapa-para-uso-peatonal-el-domingo-de-junio-513488.html",
+   "feed_url": null,
+   "notes": "Local outlets (Diario de Xalapa, La Silla Rota Veracruz) publish the closure map the day before each edition. Search 'Xalapa se Mueve Ruta Recreativa'."
+  }
+ }
+]

@@ -1,0 +1,552 @@
+[
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "state": null,
+  "country": "CA",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "founded_year": null,
+  "founded_note": null,
+  "status": "active",
+  "verified_on": "2026-10-01",
+  "slug": "ottawa-ca-obc-sunday-ride",
+  "name": "Sunday Ride",
+  "city": "Ottawa",
+  "region": "Ontario",
+  "neighborhood": null,
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Sundays, 9:00 am roll-out (gather 8:30 to 8:45), from a different start each week; the 2026 calendar lists Sunday rides to Oct 25. Groups by distance and speed, 60 to 129 km on Oct 4. It ran at 8:00 am in late August. Next: Sun Oct 4 from Millennium Park 'n' Ride, Orleans; Oct 11 Andrew Haydon Park; Oct 18 Nepean Sportsplex; Oct 25 Ottawa airport (NRC).",
+  "days": [
+   "sun"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "season": "through late October (2026 calendar ends Oct 25)",
+  "season_months": null,
+  "tz": "America/Toronto",
+  "start_location": {
+   "name": "Changes weekly (Oct 4, 2026: Millennium Park 'n' Ride, Orleans)",
+   "address": "Millennium Park 'n' Ride, Orleans, ON"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "most of the day on long routes",
+  "duration_min": null,
+  "pace": "Pace groups by speed and distance, set by who shows up with a ride leader; the fastest groups are performance-focused",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Ottawa Bicycle Club",
+   "type": "club"
+  },
+  "cost": "members; $10 one-time Club Day Pass for a trial ride",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Club rides are members-only for insurance. To try one, buy a one-time $10 Club Day Pass from Ontario Cycling (credited back if you join) and contact the club's Group Riding Director at rides@ottawabicycleclub.ca first. Register for a ride on obcrides.ca before the cut-off (Oct 4 closes Oct 3, 5:00 pm). Route and start are emailed the evening before.",
+  "description": "The Ottawa Bicycle Club's Sunday road ride. Riders sign up on the club's ride calendar and split into groups of 6 to 12 by speed and distance, each with a ride leader. Starts move around the city each week. The club's rule is no-drop unless a ride says otherwise.",
+  "links": {
+   "website": "https://ottawabicycleclub.ca/road-rides/",
+   "instagram": null,
+   "facebook": "http://www.facebook.com/OttawaBicycleClub",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://obcrides.ca/events",
+    "https://obcrides.ca/events/4469",
+    "https://ottawabicycleclub.ca/ride-with-us/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://obcrides.ca/events",
+   "https://obcrides.ca/events/4469",
+   "https://obcrides.ca/events.ics",
+   "https://ottawabicycleclub.ca/road-rides/",
+   "https://ottawabicycleclub.ca/ride-with-us/"
+  ],
+  "last_seen": "2026-09-27",
+  "evidence": "OBC's ride calendar lists the Sunday Ride for Oct 4, 2026 at 9:00 AM from Millennium Park 'n' Ride (4 groups, 60 to 129 km) and the club's .ics feed shows weekly Sunday rides through Sept 27 and Oct 25 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://obcrides.ca/events",
+   "feed_url": "https://obcrides.ca/events.ics",
+   "notes": "Each ride has its own page (obcrides.ca/events/<id>) with start, time, distance and groups. Next week's start often shows as 'Announced, registration coming soon'. The feed times are in UTC."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "state": null,
+  "country": "CA",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "founded_year": null,
+  "founded_note": null,
+  "status": "active",
+  "verified_on": "2026-10-01",
+  "slug": "ottawa-ca-obc-saturday-gravel-ride",
+  "name": "Saturday Gravel Ride",
+  "city": "Ottawa",
+  "region": "Ontario",
+  "neighborhood": null,
+  "discipline": [
+   "gravel"
+  ],
+  "schedule": "Saturdays, 9:00 am to about noon, from a different start each week; the club calendar holds a Gravel Ride slot every Saturday to Oct 31, 2026. Next: Sat Oct 3, 'Waba Ramble II', 56 km from Blakeney Rapids Park, Mississippi Mills. Later October rides are 'TBD' for now.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "season": "through late October (2026 calendar ends Oct 31)",
+  "season_months": null,
+  "tz": "America/Toronto",
+  "start_location": {
+   "name": "Changes weekly (Oct 3, 2026: Blakeney Rapids Park)",
+   "address": "Blakeney Rapids Park, Mississippi Mills, ON"
+  },
+  "distance_km": 56,
+  "distance_miles": 35,
+  "duration": "about 3 hours",
+  "duration_min": 180,
+  "pace": "Pace groups on the Oct 3 ride: 20 to 22, 23 to 25 and 26 to 28 km/h",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Ottawa Bicycle Club",
+   "type": "club"
+  },
+  "cost": "members; $10 one-time Club Day Pass for a trial ride",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Club rides are members-only for insurance. To try one, buy a one-time $10 Club Day Pass from Ontario Cycling (credited back if you join) and contact rides@ottawabicycleclub.ca first. Register on obcrides.ca (the Oct 3 ride closed registration Oct 2, 9:00 pm). Bring two spare tubes or a tubeless kit, a pump and a multi-tool; 32 mm tires or wider recommended for Oct 3.",
+  "description": "The Ottawa Bicycle Club's weekly mixed-surface ride. Routes mix pavement, hardpack and gravel around the National Capital, and rides lean toward riders new to gravel. Each listing names the surface and the tire size it needs. The club follows a strict no-drop policy on gravel rides.",
+  "links": {
+   "website": "https://ottawabicycleclub.ca/gravel-rides/",
+   "instagram": null,
+   "facebook": "http://www.facebook.com/OttawaBicycleClub",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://obcrides.ca/events",
+    "https://obcrides.ca/events/3102",
+    "https://ottawabicycleclub.ca/ride-with-us/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://obcrides.ca/events",
+   "https://obcrides.ca/events/3102",
+   "https://obcrides.ca/events.ics",
+   "https://ottawabicycleclub.ca/gravel-rides/",
+   "https://ottawabicycleclub.ca/ride-with-us/"
+  ],
+  "last_seen": "2026-09-26",
+  "evidence": "OBC's ride calendar lists Gravel Ride 'Waba Ramble II' for Sat Oct 3, 2026, 9:00 AM to noon (56 km, 7 registered) and Saturday gravel slots to Oct 31; the .ics feed shows gravel rides on Sept 5, 12, 19 and 26 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://obcrides.ca/events",
+   "feed_url": "https://obcrides.ca/events.ics",
+   "notes": "Each ride has its own page (obcrides.ca/events/<id>). Slots after Oct 3 read 'Gravel Ride - TBD' until the leader posts the route. The feed times are in UTC."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "state": null,
+  "country": "CA",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "founded_year": null,
+  "founded_note": null,
+  "status": "active",
+  "verified_on": "2026-10-01",
+  "slug": "ottawa-ca-one-cycling-saturday-ride",
+  "name": "Saturday Ride (One Cycling)",
+  "city": "Ottawa",
+  "region": "Ontario",
+  "neighborhood": null,
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Saturdays, usually 10:30 am (Aug 22 to Sept 26, 2026), from a different start each week; the next ride, Sat Oct 3, is a 45 km Gatineau Park loop meeting 7:50 am for an 8:00 am departure from Parking Lot P3. Nothing after Oct 3 is posted yet.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "season": "Saturdays through the season; late-season posts are thin",
+  "season_months": null,
+  "tz": "America/Toronto",
+  "start_location": {
+   "name": "Parking Lot P3, Gatineau Park (Oct 3, 2026); the start changes weekly",
+   "address": "Stationnement P3, Parc de la Gatineau, Gatineau, QC"
+  },
+  "distance_km": 45,
+  "distance_miles": 28,
+  "duration": "about 4 hours (Oct 3: 8:00 am to about 12:30 pm)",
+  "duration_min": 270,
+  "pace": "Easy rides most weeks (Hogs Back, Britannia, Jacques-Cartier Park to Pink Lake); Oct 3 is hilly, 700 m of climbing",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "One Cycling - Ottawa Cycling Group",
+   "type": "informal"
+  },
+  "cost": null,
+  "language": [
+   "en",
+   "fr"
+  ],
+  "visitor_notes": "Open Meetup group; join the group and RSVP on the event. Helmets strongly recommended, bring two bottles of water and a snack. The group runs an after-work social at The Waverley on Elgin most second Thursdays. It also has a Strava club.",
+  "description": "A community cycling group in Ottawa-Gatineau that rides most Saturdays, often with a coffee or ice cream stop. Routes run along the river paths and into Gatineau Park. The group describes itself as made up of many cultures and languages, and posts in English and French.",
+  "links": {
+   "website": "https://www.meetup.com/onecycling/",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/1275462",
+   "meetup": "https://www.meetup.com/onecycling/",
+   "other": [
+    "https://www.meetup.com/onecycling/events/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.meetup.com/onecycling/",
+   "https://www.meetup.com/onecycling/events/",
+   "https://www.meetup.com/onecycling/events/ical/"
+  ],
+  "last_seen": "2026-09-26",
+  "evidence": "The group's Meetup feed lists Sat Oct 3, 2026 (Champlain Lookout, 7:50 am meet) and past Saturday rides on Aug 22 and 29, Sept 5, 12, 19 and 26 at 10:30 am (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/onecycling/events/",
+   "feed_url": "https://www.meetup.com/onecycling/events/ical/",
+   "notes": "Each Saturday ride is posted about a week ahead. The feed also holds the Thursday socials, which are not rides."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "state": null,
+  "country": "CA",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "founded_year": null,
+  "founded_note": null,
+  "status": "active",
+  "verified_on": "2026-10-01",
+  "slug": "calgary-ca-slow-and-steady-hikers-friday-evening-bike-ride",
+  "name": "Friday Evening Bike Ride",
+  "city": "Calgary",
+  "region": "Alberta",
+  "neighborhood": "Heritage Park / Glenmore Reservoir",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Friday, 6:15 pm to 8:15 pm, from Heritage Park for a loop of the Glenmore Reservoir. Weather permitting. Next: Fri Oct 2, 9, 16, 23 and 30, 2026 are all listed.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:15 pm",
+  "start_hhmm": "18:15",
+  "frequency": "weekly",
+  "season": "year-round on the Meetup listing; weather permitting",
+  "season_months": null,
+  "tz": "America/Edmonton",
+  "start_location": {
+   "name": "Heritage Park",
+   "address": "1900 Heritage Dr, Calgary, AB"
+  },
+  "distance_km": 15,
+  "distance_miles": 9,
+  "duration": "about 2 hours",
+  "duration_min": 120,
+  "pace": "Easy and scenic, not too difficult",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Slow and Steady Hikers (Meetup group)",
+   "type": "informal"
+  },
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Helmet and a bike in good working order required. Join the Meetup group and RSVP. It gets dark by 6:30 pm in October, so bring lights. The group is mainly a hiking group; this is its weekly bike night.",
+  "description": "A weekly easy evening spin around the Glenmore Reservoir in Calgary, about 15 km on paved pathways. It leaves from the Heritage Park lot after work. Run by a hiking Meetup group, so expect a mixed-ability crowd rather than a training ride.",
+  "links": {
+   "website": "https://www.meetup.com/slow-and-steady-hikers/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/slow-and-steady-hikers/",
+   "other": [
+    "https://www.meetup.com/slow-and-steady-hikers/events/315946587/"
+   ]
+  },
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "sources": [
+   "https://www.meetup.com/slow-and-steady-hikers/events/315946587/",
+   "https://www.meetup.com/slow-and-steady-hikers/events/ical/"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "The group's Meetup event page reads 'Every week on Friday, 6:15 PM, Heritage Park, 1900 Heritage Dr' and lists Oct 2 and the four Fridays after it; the event was created Aug 2, 2026 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/slow-and-steady-hikers/events/315946587/",
+   "feed_url": "https://www.meetup.com/slow-and-steady-hikers/events/ical/",
+   "notes": "The feed mixes hikes and the bike night; look for 'Friday Evening Bike Ride'."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "state": null,
+  "country": "CA",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "founded_year": null,
+  "founded_note": null,
+  "status": "active",
+  "verified_on": "2026-10-01",
+  "slug": "vancouver-ca-out-n-about-cycling-weekday-rides",
+  "name": "Weekday Rides (Out-n-About Cycling)",
+  "city": "Vancouver",
+  "region": "British Columbia",
+  "neighborhood": "Metro Vancouver (start changes each ride)",
+  "discipline": [
+   "mixed"
+  ],
+  "schedule": "Mostly Mondays, Wednesdays and Fridays at 10:00 am (a few Saturdays), a different route and start each ride, roughly 10:00 am to 3:30 pm. Next: Fri Oct 2 (Peace Arch loop from Bakerview Park, Surrey), Mon Oct 5, Wed Oct 7, Fri Oct 9, Mon Oct 12.",
+  "days": [
+   "mon",
+   "wed",
+   "fri"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "season": "year-round on the Meetup listing; weather-dependent",
+  "season_months": null,
+  "tz": "America/Vancouver",
+  "start_location": {
+   "name": "Changes each ride (Oct 2, 2026: Bakerview Park parking lot, Surrey)",
+   "address": "1845 154 St, Surrey, BC"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "5 to 5.5 hours with stops",
+  "duration_min": 330,
+  "pace": "Each listing rates the ride (the Oct 2 loop is 57.7 km and 'hard because of hills'); leader-guided",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Out-n-About Cycling in Metro Vancouver",
+   "type": "informal"
+  },
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Guests welcome; read the whole ride listing before signing up on Meetup. Helmets are mandatory. Bring water, snacks and often a packed lunch, plus a spare tube. Riders cycle at their own risk. Last-minute changes are posted the night before and the morning of.",
+  "description": "A Meetup group that runs guided weekday rides across Metro Vancouver and the Fraser Valley, mostly three a week. Each ride has its own route on RideWithGPS, a named start, a coffee or lunch stop and a difficulty rating. Rides cover paved routes and some hard-packed trail.",
+  "links": {
+   "website": "https://www.meetup.com/out-and-about-cycling-in-metro-vancouver/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/out-and-about-cycling-in-metro-vancouver/",
+   "other": [
+    "https://www.meetup.com/out-and-about-cycling-in-metro-vancouver/events/316384878/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.meetup.com/out-and-about-cycling-in-metro-vancouver/events/ical/",
+   "https://www.meetup.com/out-and-about-cycling-in-metro-vancouver/events/316384878/"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "The group's Meetup feed lists ten weekday rides from Fri Oct 2 to Fri Oct 23, 2026, all at 10:00 am (Mon, Wed, Fri), with start, distance and difficulty in each (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/out-and-about-cycling-in-metro-vancouver/events/",
+   "feed_url": "https://www.meetup.com/out-and-about-cycling-in-metro-vancouver/events/ical/",
+   "notes": "Each event description carries the meet-up location, distance, elevation and a RideWithGPS link."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "state": null,
+  "country": "CA",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "founded_year": null,
+  "founded_note": null,
+  "status": "seasonal-break",
+  "verified_on": "2026-10-01",
+  "slug": "saskatoon-ca-saskatoon-cycling-club-frosty-ramble",
+  "name": "Frosty Ramble Winter Rides",
+  "city": "Saskatoon",
+  "region": "Saskatchewan",
+  "neighborhood": "River Landing",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Saturdays at 1:00 pm, November to March, with Horizon 100 Cycling Club. Starts most often at the Nutrien Wonderhub (east side, between the building and the river), not always; the week's start and any cancellation go on the club's Facebook page. Resumes in November 2026.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "1:00 pm",
+  "start_hhmm": "13:00",
+  "frequency": "weekly",
+  "season": "November to March",
+  "season_months": {
+   "start": 11,
+   "end": 3
+  },
+  "tz": "America/Regina",
+  "start_location": {
+   "name": "Nutrien Wonderhub, east side (most weeks; check Facebook)",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Recreational",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Saskatoon Cycling Club",
+   "type": "club"
+  },
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Fat bikes on the St. Barbe trails once they are snow-covered; dirt or gravel bikes are fine until then. E-bikes are too heavy for the trails. The page does not say whether non-members can join; email clubinfo@saskatooncyclingclub.ca to ask. Its Wednesday-evening and weekend summer rides run on members' insurance, and its non-member Try-it Rides finished for 2026.",
+  "description": "The Saskatoon Cycling Club and Horizon 100 Cycling Club lead a weekly Saturday afternoon fat bike and trail ride through the winter. The start moves with trail conditions, most often by the river near the Wonderhub. Cancellations and the week's start are posted on Facebook.",
+  "links": {
+   "website": "https://www.saskatooncyclingclub.ca/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.saskatooncyclingclub.ca/calendar/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.saskatooncyclingclub.ca/",
+   "https://www.saskatooncyclingclub.ca/calendar/"
+  ],
+  "last_seen": null,
+  "evidence": "The club's home page and schedule page describe the Frosty Ramble winter rides as every Saturday at 1 pm from November to March, and the same pages carry 2026 club news dated through the Sept 12 to 13 Waskesiu weekend (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.saskatooncyclingclub.ca/calendar/",
+   "feed_url": null,
+   "notes": "Weekly start and weather cancellations are only on the club's Facebook page. Check again in early November."
+  }
+ },
+ {
+  "slug": "halifax-ca-cyclesmith-thursday-road-ride",
+  "name": "Thursday Road Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Halifax",
+  "region": "Nova Scotia",
+  "state": null,
+  "country": "CA",
+  "neighborhood": "North End",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Halifax",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Thursday, 6:15 pm, from Cyclesmith Halifax on Agricola Street; routes vary, weather dependent. The shop's page names the Thursday May 21 ride (Herring Cove loop, finishing at Oxford Taproom) as its latest listed ride, so ask the shop whether evening rides have wound down for the fall.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:15 pm",
+  "start_hhmm": "18:15",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "spring to fall; weather dependent",
+  "season_months": null,
+  "start_location": {
+   "name": "Cyclesmith Halifax",
+   "address": "2553 Agricola Street, Halifax, NS B3K 4C4"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Averages about 25 to 28 km/h",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Cyclesmith",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Helmet, lights and a repair kit are required; bring a spare tube, mini pump and food. Routes are posted on the shop's page. The shop also lists road, gravel and mountain bike rides from its Cranked Collective as 'starting soon'.",
+  "description": "A weekly road ride from Cyclesmith's Halifax shop, open to all skill levels on the shop's page. Routes change each week and average 25 to 28 km/h. The May 21 ride ended at a patio so riders could catch up afterward.",
+  "links": {
+   "website": "https://www.cyclesmith.ca/events/cyclesmith-group-rides-pg1917.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.cyclesmith.ca/articles/cyclesmith-events-calendar-pg1974.htm"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.cyclesmith.ca/events/cyclesmith-group-rides-pg1917.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-05-21",
+  "evidence": "Cyclesmith's group-ride page states 'every Thursday evening, 6:15pm' from the Halifax shop and names Thursday May 21 (2026, the shop's 40th-anniversary year) as the next ride; nothing newer on it (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.cyclesmith.ca/events/cyclesmith-group-rides-pg1917.htm",
+   "feed_url": null,
+   "notes": "The page names the next ride by date; if it still says May 21, the shop has not updated it. Check the shop's social posts."
+  }
+ }
+]

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:santa-fe-nm-rob-and-charlies-sunday-group-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Denver:20261004T090000
+DTEND;TZID=America/Denver:20261004T120000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Rob and Charlie's Sunday Group Ride — Santa Fe\, NM
+LOCATION:Rob and Charlie's Bike Shop\, St. Michael's Village West\, 1632 
+ St. Michael's Dr\, Santa Fe\, NM 87505
+DESCRIPTION:Pace: 14 to 17 mph overall\, depending on route and group; 45
+  to 65 miles.\nSchedule: Sundays\, coffee at 8:30 am and roll out at 9:0
+ 0 am from the shop (weather permitting). The shop opens at 9:30..\nConfi
+ rm with the host before you go.\nhttps://cycleforchange.org/rides/santa-
+ fe-nm-rob-and-charlies-sunday-group-ride/
+URL:https://cycleforchange.org/rides/santa-fe-nm-rob-and-charlies-sunday-
+ group-ride/
+END:VEVENT
+END:VCALENDAR

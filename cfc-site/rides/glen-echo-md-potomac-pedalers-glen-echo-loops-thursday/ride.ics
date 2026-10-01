@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:glen-echo-md-potomac-pedalers-glen-echo-loops-thursday@cycleforchange
+ .org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261008T100000
+DTEND;TZID=America/New_York:20261008T120000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:Glen Echo Loops (C pace) — Glen Echo\, MD
+LOCATION:Glen Echo\, MD
+DESCRIPTION:Pace: C pace\, 11-12 mph average; B/BB group 14-16 mph.\nSche
+ dule: Thursdays\, 10:00 am\, from Glen Echo; register each week.\nConfir
+ m with the host before you go.\nhttps://cycleforchange.org/rides/glen-ec
+ ho-md-potomac-pedalers-glen-echo-loops-thursday/
+URL:https://cycleforchange.org/rides/glen-echo-md-potomac-pedalers-glen-e
+ cho-loops-thursday/
+END:VEVENT
+END:VCALENDAR

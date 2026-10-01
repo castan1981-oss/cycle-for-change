@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:detroit-mi-pedalup-riderz-friday-night-groove@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261002T190000
+DTEND;TZID=America/New_York:20261002T210000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270228T235959Z
+SUMMARY:Friday Night Groove — Detroit\, MI
+LOCATION:Eastern Market Shed 5\, 2810 Russell St\, Detroit\, MI 48207
+DESCRIPTION:Schedule: Fridays\, meet 6:30 pm\, roll out 7:00 pm\, from Ea
+ stern Market Shed 5. The calendar runs it through Oct 30\, 2026..\nConfi
+ rm with the host before you go.\nhttps://cycleforchange.org/rides/detroi
+ t-mi-pedalup-riderz-friday-night-groove/
+URL:https://cycleforchange.org/rides/detroit-mi-pedalup-riderz-friday-nig
+ ht-groove/
+END:VEVENT
+END:VCALENDAR

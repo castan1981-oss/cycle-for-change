@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:halifax-ca-cyclesmith-thursday-road-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Halifax:20261001T181500
+DTEND;TZID=America/Halifax:20261001T201500
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20261031T235959Z
+SUMMARY:Thursday Road Ride — Halifax\, Canada
+LOCATION:Cyclesmith Halifax\, 2553 Agricola Street\, Halifax\, NS B3K 4C4
+DESCRIPTION:Pace: Averages about 25 to 28 km/h.\nSchedule: Every Thursday
+ \, 6:15 pm\, from Cyclesmith Halifax on Agricola Street; routes vary\, w
+ eather dependent. The shop's page names the Thursday May 21 ride (Herrin
+ g Cove loop\, finishing at Oxford Taproom) as its latest listed ride\, s
+ o ask the shop whether evening rides have wound down for the fall..\nCon
+ firm with the host before you go.\nhttps://cycleforchange.org/rides/hali
+ fax-ca-cyclesmith-thursday-road-ride/
+URL:https://cycleforchange.org/rides/halifax-ca-cyclesmith-thursday-road-
+ ride/
+END:VEVENT
+END:VCALENDAR

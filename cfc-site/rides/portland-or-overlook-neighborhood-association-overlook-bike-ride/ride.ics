@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:portland-or-overlook-neighborhood-association-overlook-bike-ride@cycl
+ eforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261011T101500
+DTEND;TZID=America/Los_Angeles:20261011T111500
+RRULE:FREQ=MONTHLY;BYDAY=2SU;UNTIL=20270228T235959Z
+SUMMARY:Overlook Bike Ride — Portland\, OR
+LOCATION:Stacks Coffeehouse\, 1831 N Killingsworth St\, Portland\, OR 972
+ 17
+DESCRIPTION:Pace: Conversational\, under 6 miles.\nSchedule: Second Sunda
+ y of every month. Meet 9:30 am for coffee at Stacks Coffeehouse\, depart
+  10:15 am. A loop of under 6 miles\, about an hour..\nConfirm with the h
+ ost before you go.\nhttps://cycleforchange.org/rides/portland-or-overloo
+ k-neighborhood-association-overlook-bike-ride/
+URL:https://cycleforchange.org/rides/portland-or-overlook-neighborhood-as
+ sociation-overlook-bike-ride/
+END:VEVENT
+END:VCALENDAR

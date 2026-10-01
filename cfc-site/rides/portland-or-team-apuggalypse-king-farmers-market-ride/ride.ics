@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:portland-or-team-apuggalypse-king-farmers-market-ride@cycleforchange.
+ org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261004T103000
+DTEND;TZID=America/Los_Angeles:20261004T123000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:King Farmer's Market Ride — Portland\, OR
+LOCATION:Wilshire Park\, 37th and Skidmore (look for pugs with bikes on S
+ kidmore between 36th and 37th)
+DESCRIPTION:Pace: Bike-bus style\, short and slow (0 to 3 miles).\nSchedu
+ le: Every Sunday in the market season\, meet 10:15 am\, ride out 10:30 a
+ m from Wilshire Park (37th and Skidmore); listed through Nov 22\, 2026..
+ \nConfirm with the host before you go.\nhttps://cycleforchange.org/rides
+ /portland-or-team-apuggalypse-king-farmers-market-ride/
+URL:https://cycleforchange.org/rides/portland-or-team-apuggalypse-king-fa
+ rmers-market-ride/
+END:VEVENT
+END:VCALENDAR

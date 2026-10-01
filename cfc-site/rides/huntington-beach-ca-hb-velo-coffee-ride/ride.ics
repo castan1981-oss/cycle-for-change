@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:huntington-beach-ca-hb-velo-coffee-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261002T083000
+DTEND;TZID=America/Los_Angeles:20261002T103000
+RRULE:FREQ=WEEKLY;BYDAY=WE,FR;UNTIL=20270228T235959Z
+SUMMARY:HB Velo Wednesday and Friday Coffee Ride — Huntington Beach\, C
+ A
+LOCATION:HB Velo Cyclery\, 21032 Brookhurst St\, Huntington Beach\, CA 92
+ 646
+DESCRIPTION:Pace: About 15 mph average.\nSchedule: Wednesday and Friday m
+ ornings\, roll out at 8:30 am sharp from the shop. About 25 miles at a 1
+ 5 mph average..\nConfirm with the host before you go.\nhttps://cycleforc
+ hange.org/rides/huntington-beach-ca-hb-velo-coffee-ride/
+URL:https://cycleforchange.org/rides/huntington-beach-ca-hb-velo-coffee-r
+ ide/
+END:VEVENT
+END:VCALENDAR

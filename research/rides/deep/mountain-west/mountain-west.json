@@ -1,0 +1,765 @@
+[
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": 30,
+  "duration": "About 3 hours (7:00 to 10:00 am on the event)",
+  "duration_min": 180,
+  "pace": "About 15 mph average, with a mid-ride stop for water and restrooms",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "RSVP on Meetup; the club treats the RSVP or showing up as the waiver. Download the route before the ride.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "confidence": "high",
+  "slug": "las-vegas-nv-lvvbc-wednesday-morning-ride",
+  "name": "LVVBC Wednesday Morning Ride",
+  "city": "Las Vegas",
+  "region": "Nevada",
+  "state": "NV",
+  "country": "US",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday, 7:00 am, from Einstein Bagels on W. Cheyenne Ave. The Meetup series runs to Jan 5, 2027; the route is posted a couple of days ahead.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Einstein Bagels",
+   "address": "8300 W. Cheyenne Ave., Las Vegas, NV"
+  },
+  "host": {
+   "name": "Las Vegas Valley Bicycle Club",
+   "type": "club"
+  },
+  "description": "The club's weekday morning road ride, about 30 miles in the western or northern parts of the valley. The route is posted two days ahead so riders can load it on a device. The pace is steady and there is one stop mid-ride.",
+  "links": {
+   "website": "https://www.lasvegasbikeclub.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/las-vegas-valley-bicycle-club/",
+   "other": []
+  },
+  "sources": [
+   "https://www.meetup.com/las-vegas-valley-bicycle-club/events/316595875/",
+   "https://www.meetup.com/las-vegas-valley-bicycle-club/events/ical/"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "LVVBC's Meetup feed lists the Wednesday Morning Ride for Oct 7, 14 and 21, 2026 at 7:00 am; the Oct 7 event page says 'Every week on Wednesday until January 5, 2027' from Einstein Bagels, 8300 W. Cheyenne Ave (fetched Oct 1, 2026).",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/las-vegas-valley-bicycle-club/events/",
+   "feed_url": "https://www.meetup.com/las-vegas-valley-bicycle-club/events/ical/",
+   "notes": "Each week's route is on the Meetup event; the event page shows the series end date."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": 30,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Not stated; the club lists it as a round trip of about 30 miles",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "RSVP on Meetup; the club treats the RSVP or showing up as the waiver. The group hangs out for coffee and a bite after the ride.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "confidence": "high",
+  "slug": "las-vegas-nv-lvvbc-sunday-ride",
+  "name": "LVVBC Sunday Ride",
+  "city": "Las Vegas",
+  "region": "Nevada",
+  "state": "NV",
+  "country": "US",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Sunday, 8:00 am, from the Einstein Bagel Shop on W. Cheyenne at Soaring Gulls Drive (near Durango). Route is posted on each Meetup event.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Einstein Bagel Shop, W. Cheyenne Ave at Soaring Gulls Dr",
+   "address": "W. Cheyenne Ave at Soaring Gulls Dr, Las Vegas, NV"
+  },
+  "host": {
+   "name": "Las Vegas Valley Bicycle Club",
+   "type": "club"
+  },
+  "description": "The club's Sunday road ride, about 30 miles round trip from the Einstein Bagel Shop on W. Cheyenne. The route is set closer to the day. Riders stay for coffee and food afterward.",
+  "links": {
+   "website": "https://www.lasvegasbikeclub.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/las-vegas-valley-bicycle-club/",
+   "other": []
+  },
+  "sources": [
+   "https://www.meetup.com/las-vegas-valley-bicycle-club/events/316554469/",
+   "https://www.meetup.com/las-vegas-valley-bicycle-club/events/ical/"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "LVVBC's Meetup feed lists 'LVVBC Sunday - 8:00 AM' for Oct 4, 11, 18 and 25, 2026, about 30 miles round trip from the Einstein Bagel Shop on W. Cheyenne at Soaring Gulls Drive (fetched Oct 1, 2026).",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/las-vegas-valley-bicycle-club/events/",
+   "feed_url": "https://www.meetup.com/las-vegas-valley-bicycle-club/events/ical/",
+   "notes": "Route shows 'TBD' until the week of the ride."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "Through Nov 23, 2026 (current Meetup series)",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": 24,
+  "duration": "About 2 hours (6:00 to 8:00 pm on the event)",
+  "duration_min": 120,
+  "pace": "14 to 17 mph rolling; flat routes of 23 to 26 miles, back before dark",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Front and rear lights are recommended; some stretches have no street lighting. RSVP on Meetup, which the club treats as the waiver. The start spot is on each event, so check it before you go.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "confidence": "high",
+  "slug": "north-las-vegas-nv-lvvbc-monday-night-ride",
+  "name": "LVVBC Monday Night Ride",
+  "city": "North Las Vegas",
+  "region": "Nevada",
+  "state": "NV",
+  "country": "US",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Mondays, 6:00 pm, with a different loop each week; the Meetup series runs to Nov 23, 2026. Oct 5 started from Vincent L Triggs Elementary, 4470 W Rome Blvd.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Vincent L Triggs Elementary (Oct 5 start; check each event)",
+   "address": "4470 W Rome Blvd, North Las Vegas, NV"
+  },
+  "host": {
+   "name": "Las Vegas Valley Bicycle Club",
+   "type": "club"
+  },
+  "description": "An after-work road ride in the north valley. The club posts a different 23 to 26 mile loop each Monday, with a Garmin course to download. The pace is steady and the aim is to finish before dark.",
+  "links": {
+   "website": "https://www.lasvegasbikeclub.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/las-vegas-valley-bicycle-club/",
+   "other": []
+  },
+  "sources": [
+   "https://www.meetup.com/las-vegas-valley-bicycle-club/events/316531839/",
+   "https://www.meetup.com/las-vegas-valley-bicycle-club/events/ical/"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "LVVBC's Meetup feed lists Monday Night rides for Oct 5, 12 and 19, 2026 at 6:00 pm (Modified Tropical Loop, Alternate Flat Route, Flat Route); the Oct 5 event page gives Vincent L Triggs Elementary and a series end of Nov 23, 2026 (fetched Oct 1, 2026).",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/las-vegas-valley-bicycle-club/events/",
+   "feed_url": "https://www.meetup.com/las-vegas-valley-bicycle-club/events/ical/",
+   "notes": "The series end date and start spot are on the event page; routes change weekly."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": 35,
+  "duration": null,
+  "duration_min": null,
+  "pace": "A ride 21+ mph, close to a drop ride with regroups; B ride 16 to 17 mph on Mondays (no-drop, recovery) and 18 to 19 mph on Wednesdays and Fridays (regroups, generally no-drop)",
+  "drop_policy": "groups",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The calendar entry says this is not a Reno Wheelmen club ride. Start times move with the weather, so confirm the time on the group's Strava club. The B ride on Mondays rolls from the Jared's Jewelers lot at Summit.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "confidence": "medium",
+  "slug": "reno-nv-mwf-ride-dolce-caffe",
+  "name": "MWF Morning Ride",
+  "city": "Reno",
+  "region": "Nevada",
+  "state": "NV",
+  "country": "US",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Mondays, Wednesdays and Fridays, 9:00 am as listed in October 2026 (start times change through the year; the group's Strava club has the current time). Meet at Dolce Caffe, 3886 Mayberry Dr.",
+  "days": [
+   "mon",
+   "wed",
+   "fri"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Dolce Caffe",
+   "address": "3886 Mayberry Dr, Reno, NV"
+  },
+  "host": {
+   "name": "MWF Ride group",
+   "type": "informal"
+  },
+  "description": "Three mornings a week, an A and a B group. The A ride is about 35 miles with 1,500 feet of climbing out to Verdi, Boomtown and Belli Ranch. The B rides are steadier and mostly stay together. Reno Wheelmen lists it on their calendar but does not run it.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://renowheelmen.org/event/mwf-ride/2026-10-02/"
+   ]
+  },
+  "sources": [
+   "https://renowheelmen.org/event/mwf-ride/2026-10-02/",
+   "https://renowheelmen.org/events/?ical=1"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "Reno Wheelmen's calendar feed lists the MWF Ride for Mon, Wed and Fri mornings at 9:00 am from Oct 2 through Oct 30, 2026, and the entry says start times vary through the year (fetched Oct 1, 2026).",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://renowheelmen.org/event/mwf-ride/2026-10-02/",
+   "feed_url": "https://renowheelmen.org/events/?ical=1",
+   "notes": "The calendar entry points to the group's Strava club for the current start time, which is the thing most likely to change."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": 20,
+  "duration": "1 to 1.5 hours",
+  "duration_min": 75,
+  "pace": "Easy to moderate, 15 to 18 mph; 18 to 23 miles",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "All riders are welcome. The host calls it a good recovery ride. Weather can cancel it.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "confidence": "high",
+  "slug": "sparks-nv-reno-wheelmen-friday-lunch-ride",
+  "name": "The Friday Lunch Ride",
+  "city": "Sparks",
+  "region": "Nevada",
+  "state": "NV",
+  "country": "US",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Friday at noon (weather permitting), from McClelland Laboratories, 952 Greg St.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "12:00 pm",
+  "start_hhmm": "12:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "McClelland Laboratories",
+   "address": "952 Greg St, Sparks, NV 89431"
+  },
+  "host": {
+   "name": "Reno Wheelmen",
+   "type": "club"
+  },
+  "description": "A short ride that fits a lunch break, 18 to 23 miles from the Greg Street start in Sparks. The pace is easy to moderate and the host says everyone is welcome.",
+  "links": {
+   "website": "https://renowheelmen.org/",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/RenoWheelmen",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://renowheelmen.org/event/the-friday-lunch-ride/2026-10-02/",
+   "https://renowheelmen.org/events/?ical=1"
+  ],
+  "last_seen": "2026-10-01",
+  "evidence": "Reno Wheelmen's calendar feed lists The Friday Lunch Ride for Fri Oct 2, 9, 16, 23 and 30, 2026 at noon from 952 Greg St., Sparks, with a description of 18 to 23 miles at 15 to 18 mph (fetched Oct 1, 2026).",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://renowheelmen.org/event/the-friday-lunch-ride/2026-10-02/",
+   "feed_url": "https://renowheelmen.org/events/?ical=1",
+   "notes": "Each Friday is its own calendar entry."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": 55,
+  "duration": "3 to 4 hours",
+  "duration_min": 210,
+  "pace": "14 to 17 mph overall, depending on route and group; 45 to 65 miles",
+  "drop_policy": "groups",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Helmet required. The shop says it is for intermediate and advanced riders who know group etiquette and can fix a flat. It is not a no-drop ride, but the group regroups several times. Bring plenty to eat and drink. Seniors on Bikes says the ride splits into faster and shorter groups as it goes.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "confidence": "medium",
+  "slug": "santa-fe-nm-rob-and-charlies-sunday-group-ride",
+  "name": "Rob and Charlie's Sunday Group Ride",
+  "city": "Santa Fe",
+  "region": "New Mexico",
+  "state": "NM",
+  "country": "US",
+  "tz": "America/Denver",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Sundays, coffee at 8:30 am and roll out at 9:00 am from the shop (weather permitting). The shop opens at 9:30.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Rob and Charlie's Bike Shop, St. Michael's Village West",
+   "address": "1632 St. Michael's Dr, Santa Fe, NM 87505"
+  },
+  "host": {
+   "name": "Rob and Charlie's Bike Shop",
+   "type": "shop"
+  },
+  "description": "The shop's open Sunday ride out of St. Michael's Village. Expect a social but steady pace over 45 to 65 miles, two abreast where roads allow. The group tends to split into faster and shorter groups on the road.",
+  "links": {
+   "website": "https://www.robandcharlies.com/",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/RandCSundayShopRide",
+   "meetup": null,
+   "other": [
+    "https://www.robandcharlies.com/node/292"
+   ]
+  },
+  "sources": [
+   "https://www.robandcharlies.com/node/292",
+   "https://santafesobs.com/sunday-energetic-rides/"
+  ],
+  "last_seen": null,
+  "evidence": "The shop's blog post 'Rob and Charlies 2026 Group Ride Sundays' gives coffee 8:30 and rollout 9:00, and the shop's homepage was posting news dated late September 2026; Santa Fe Seniors on Bikes' page points to the same ride and its Strava club (fetched Oct 1, 2026).",
+  "refresh": {
+   "method": "strava-club",
+   "watch_url": "https://www.robandcharlies.com/node/292",
+   "feed_url": null,
+   "notes": "The club page is where weather cancellations and time changes are posted; it needs a login for the event list."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": [
+   {
+    "ord": 4,
+    "day": "mon"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": 20,
+  "duration": null,
+  "duration_min": null,
+  "pace": "13 mph (plus or minus 1), minor hills",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Helmets are required on all NMTS rides. E-bikes are welcome at the ride leader's discretion. The club points newer riders to this ride.",
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "verified_on": "2026-10-01",
+  "confidence": "high",
+  "slug": "albuquerque-nm-nmts-start-the-week-rite-ride",
+  "name": "NMTS Start the Week Rite Ride (4th Monday)",
+  "city": "Albuquerque",
+  "region": "New Mexico",
+  "state": "NM",
+  "country": "US",
+  "tz": "America/Denver",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Fourth Monday of the month, 9:00 am, from the NE corner of San Pedro and Candelaria.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "monthly",
+  "start_location": {
+   "name": "NE corner of San Pedro and Candelaria",
+   "address": "San Pedro Dr NE and Candelaria Rd NE, Albuquerque, NM"
+  },
+  "host": {
+   "name": "New Mexico Touring Society",
+   "type": "club"
+  },
+  "description": "A monthly easy-pace ride of about 20 miles on bike trails and bike lanes, led by Tom Sullivan. It began as a birthday ride for the club treasurer in 2013. The club calls it a good beginner ride.",
+  "links": {
+   "website": "https://www.nmts.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.nmts.org/displayWeekly.php"
+   ]
+  },
+  "sources": [
+   "https://www.nmts.org/displayWeekly.php"
+  ],
+  "last_seen": null,
+  "evidence": "NMTS's weekly rides page (copyright 2026, with entries dated Sept 27 and Oct 2, 2026) lists the 4th Monday 'Start the Week Rite Ride' at 9:00 am from the NE corner of San Pedro and Candelaria, 20 miles at 13 mph, and calls it a beginner ride (fetched Oct 1, 2026).",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.nmts.org/displayWeekly.php",
+   "feed_url": null,
+   "notes": "Day tabs on the page show each ride; leaders add dated notes."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": 40,
+  "duration": null,
+  "duration_min": null,
+  "pace": "18 to 19 mph average; two regroup stops",
+  "drop_policy": "no-drop",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The club says anyone is welcome. A club member makes sure the group waits for riders going farther. Wind and heat change the pace through the year.",
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "verified_on": "2026-10-01",
+  "confidence": "medium",
+  "slug": "las-cruces-nm-ziavelo-saturday-group-ride",
+  "name": "ZiaVelo Saturday Group Ride",
+  "city": "Las Cruces",
+  "region": "New Mexico",
+  "state": "NM",
+  "country": "US",
+  "tz": "America/Denver",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday from Milagro Coffee y Espresso. Meet 8:00 am and roll about 8:15 from late September; meet 7:00 am (depart 7:15) after Memorial Day.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Milagro Coffee y Espresso",
+   "address": "1733 E University Ave, Las Cruces, NM 88001"
+  },
+  "host": {
+   "name": "ZiaVelo Cycling",
+   "type": "club"
+  },
+  "description": "A no-drop Saturday road ride, usually a 40 mile out and back toward the airport with regroups at Frontage Rd and Crawford Blvd and at Bowlin's Old West Trading Post. Some riders turn back there and some go on toward Corralitos Ranch. Other ZiaVelo rides run Sundays and Wednesdays.",
+  "links": {
+   "website": "https://ziavelocycling.com/ziavelo-group-rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.nmcycling.org/grouprides.html"
+   ]
+  },
+  "sources": [
+   "https://ziavelocycling.com/ziavelo-group-rides/",
+   "https://www.nmcycling.org/grouprides.html"
+  ],
+  "last_seen": "2026-01-23",
+  "evidence": "ZiaVelo's group rides page gives the Saturday no-drop ride (8:00 meet in late September) with nothing dated on it; New Mexico Cycling's group ride list, last updated Jan 23, 2026, also lists a Saturday ZiaVelo ride all year (fetched Oct 1, 2026).",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://ziavelocycling.com/ziavelo-group-rides/",
+   "feed_url": null,
+   "notes": "The page gives winter and summer meet times; its Google Group posts changes."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Self-paced and hard; a drop ride",
+  "drop_policy": "drop",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Laramie BikeNet says it is a drop ride and the format changes: some weeks a full effort up the hill, some weeks hard segments with regroups. It also lines up with the Laramie City Tuesday night races.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "confidence": "medium",
+  "slug": "laramie-wy-laramie-bikenet-tuesday-night-hammer-ride",
+  "name": "Tuesday Night Hammer Ride (MTB)",
+  "city": "Laramie",
+  "region": "Wyoming",
+  "state": "WY",
+  "country": "US",
+  "tz": "America/Denver",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Tuesdays, 6:00 pm, from the end of Willett Dr. Format changes week to week.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "End of Willett Dr",
+   "address": "Willett Dr, Laramie, WY 82070"
+  },
+  "host": {
+   "name": "Laramie BikeNet",
+   "type": "nonprofit"
+  },
+  "description": "A mountain bike ride where you go as hard as you want. Some weeks it is a long effort up a route, some weeks it is a hard segment then a regroup. It is a drop ride, so know the trails or bring a map.",
+  "links": {
+   "website": "https://www.laramiebikenet.org/group-rides",
+   "instagram": "https://www.instagram.com/laramiebikenet/",
+   "facebook": "https://www.facebook.com/LaramieBikeNet/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://www.laramiebikenet.org/group-rides"
+  ],
+  "last_seen": null,
+  "evidence": "Laramie BikeNet's group rides page lists the Tuesday night hammer ride at 6 pm from the end of Willett Dr; the page's last edit stamp is Nov 16, 2025 and nothing on it is dated 2026 (fetched Oct 1, 2026).",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.laramiebikenet.org/group-rides",
+   "feed_url": null,
+   "notes": "Squarespace page; the page's edit date can be read with ?format=json."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "seasonal-break",
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "Apr–Sep",
+  "season_months": {
+   "start": 4,
+   "end": 9
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Spirited; ends with a sprint at the railroad tracks sign",
+  "drop_policy": "drop",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The Gallatin Valley Bicycle Club lists this but says most rides on its list are not club rides, so check with the ride host.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "confidence": "medium",
+  "slug": "bozeman-mt-38-special-saturday-ride",
+  "name": "38 Special",
+  "city": "Bozeman",
+  "region": "Montana",
+  "state": "MT",
+  "country": "US",
+  "tz": "America/Denver",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays at Kelly Canyon Rd and the I-90 frontage road. April and May at 10:00 am; June through September at 9:00 am, rain or shine. Off for the season; the host's schedule starts again in April.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Kelly Canyon Rd and the I-90 frontage road, at the Kelly Canyon railroad tracks",
+   "address": "Kelly Canyon Rd and I-90 Frontage Rd, Bozeman, MT"
+  },
+  "host": {
+   "name": "38 Special group ride (listed by Gallatin Valley Bicycle Club)",
+   "type": "informal"
+  },
+  "description": "A fast Saturday road ride over Kelly Canyon Rd, up Bridger Canyon Rd and along the frontage road to the top of Bozeman Pass, then back. It is a drop ride with regroups at Bridger Canyon Rd, the top of Jackson Creek and the top of the pass.",
+  "links": {
+   "website": "https://gallatinvalleybicycleclub.org/weekly-rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://gallatinvalleybicycleclub.org/weekly-rides/"
+  ],
+  "last_seen": "2026-03-09",
+  "evidence": "The Gallatin Valley Bicycle Club's weekly rides page (page last modified Mar 9, 2026) gives the 38 Special schedule as April and May Saturdays at 10 AM and June through September Saturdays at 9 AM; it is a secondary listing (fetched Oct 1, 2026).",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://gallatinvalleybicycleclub.org/weekly-rides/",
+   "feed_url": null,
+   "notes": "The page is a list of other hosts' rides; look for the 38 Special entry under Saturday."
+  },
+  "status_note": "Host's schedule covers April through September.",
+  "status_since": "2026-10-01"
+ }
+]

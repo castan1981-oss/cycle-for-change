@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:las-vegas-nv-lvvbc-sunday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261004T080000
+DTEND;TZID=America/Los_Angeles:20261004T100000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:LVVBC Sunday Ride — Las Vegas\, NV
+LOCATION:Einstein Bagel Shop\, W. Cheyenne Ave at Soaring Gulls Dr\, W. C
+ heyenne Ave at Soaring Gulls Dr\, Las Vegas\, NV
+DESCRIPTION:Pace: Not stated; the club lists it as a round trip of about 
+ 30 miles.\nSchedule: Every Sunday\, 8:00 am\, from the Einstein Bagel Sh
+ op on W. Cheyenne at Soaring Gulls Drive (near Durango). Route is posted
+  on each Meetup event..\nConfirm with the host before you go.\nhttps://c
+ ycleforchange.org/rides/las-vegas-nv-lvvbc-sunday-ride/
+URL:https://cycleforchange.org/rides/las-vegas-nv-lvvbc-sunday-ride/
+END:VEVENT
+END:VCALENDAR

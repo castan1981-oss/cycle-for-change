@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:horsham-pa-scu-tuesday-evening-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261006T173000
+DTEND;TZID=America/New_York:20261006T193000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270228T235959Z
+SUMMARY:Tuesday Evening Ride (Suburban Cyclists Unlimited) — Horsham\, 
+ PA
+LOCATION:Horsham Township Public Library\, 435 Babylon Rd\, Horsham\, PA 
+ 19044
+DESCRIPTION:Pace: 17 to 19 mph; you need to average at least 17.5 mph; wa
+ its at the top of hills.\nSchedule: Every Tuesday\, 5:30 pm from the Hor
+ sham Township Library; 17 to 19 mph. Listed weekly through Nov 3\, 2026.
+ .\nConfirm with the host before you go.\nhttps://cycleforchange.org/ride
+ s/horsham-pa-scu-tuesday-evening-ride/
+URL:https://cycleforchange.org/rides/horsham-pa-scu-tuesday-evening-ride/
+END:VEVENT
+END:VCALENDAR

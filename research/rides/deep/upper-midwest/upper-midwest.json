@@ -1,0 +1,2149 @@
+[
+ {
+  "slug": "rochester-mn-rasc-dirty-rascals-thursday-gravel",
+  "name": "Dirty RASCals Thursday Gravel",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Rochester",
+  "neighborhood": null,
+  "region": "Minnesota",
+  "state": "MN",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "gravel"
+  ],
+  "schedule": "Every Thursday, 6:00 pm, summer through Oct 29, 2026; start location changes weekly (calendar posts it). Bring lights in the fall.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Apr–Oct",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Varies each week (Oct 1 was Pine Island Trailhead Grille); see the RASC calendar",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Casual groups by speed: 10-12 mph, 13-15 mph and 16+ mph",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Rochester Active Sports Community (RASC)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "RASC members ride free; visitors can try it as a guest up to two times after signing the guest waiver. Routes and meet spot post on the RASC calendar and Discord. Daylight is short in October, so bring front and rear lights.",
+  "description": "RASC's Thursday-night gravel ride, rolling out at 6:00 pm from a different spot around Rochester each week, often a brewery, grill or trailhead. Riders sort into casual speed groups on arrival. Most weeks end with drinks and food. The RideWithGPS calendar lists a ride every Thursday through Oct 29, 2026.",
+  "links": {
+   "website": "https://www.rasc-mn.org/road-gravel-biking",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://ridewithgps.com/organizations/7265-rochester-active-sports-club/home"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://ridewithgps.com/events.json?organization_id=7265",
+   "https://www.rasc-mn.org/road-gravel-biking"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "RASC's RideWithGPS club calendar (fetched Oct 1, 2026) lists Dirty RASCals Gravel at 6:00 pm on Thu Oct 1 from Pine Island and every Thursday through Oct 29, 2026.",
+  "confidence": "high",
+  "refresh": {
+   "method": "ridewithgps",
+   "watch_url": "https://ridewithgps.com/organizations/7265-rochester-active-sports-club/home",
+   "feed_url": "https://ridewithgps.com/organizations/7265/calendar.ics",
+   "notes": "events.json?organization_id=7265 lists current and upcoming events; routes and start spot change weekly."
+  }
+ },
+ {
+  "slug": "rochester-mn-rasc-wednesday-road-ride",
+  "name": "RASC Wednesday Road Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "seasonal-break",
+  "city": "Rochester",
+  "neighborhood": null,
+  "region": "Minnesota",
+  "state": "MN",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday, 6:00 pm, summer. The last 2026 ride was Sept 30; an end-of-season pizza ride is Oct 7. Return date not posted.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "summer",
+  "season_months": null,
+  "start_location": {
+   "name": "Bicycle Sports",
+   "address": "1400 5th Pl NW, Rochester, MN 55901"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Speed groups: A and B drop, C and D regroup (roughly 10-12 to 16+ mph)",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Rochester Active Sports Community (RASC)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Members ride free; guests may ride twice after signing the guest waiver on the RASC page.",
+  "description": "RASC's Wednesday road ride leaves Bicycle Sports in northwest Rochester at 6:00 pm and splits by speed. A and B groups are drop rides, C and D regroup at hills and turns. It runs through the summer; the calendar's last one was Sept 30, 2026.",
+  "links": {
+   "website": "https://www.rasc-mn.org/road-gravel-biking",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://ridewithgps.com/organizations/7265-rochester-active-sports-club/home"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://ridewithgps.com/events.json?organization_id=7265",
+   "https://www.rasc-mn.org/road-gravel-biking"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-30",
+  "evidence": "RASC's RideWithGPS club calendar (fetched Oct 1, 2026) lists RASC Road Ride from Bicycle Sports on Wed Sept 30, 2026 at 6:00 pm, with no later road rides and an Oct 7 end-of-season pizza ride.",
+  "confidence": "high",
+  "refresh": {
+   "method": "ridewithgps",
+   "watch_url": "https://ridewithgps.com/organizations/7265-rochester-active-sports-club/home",
+   "feed_url": "https://ridewithgps.com/organizations/7265/calendar.ics",
+   "notes": "Road rides reappear on the calendar in spring."
+  }
+ },
+ {
+  "slug": "la-crosse-wi-smiths-bike-shop-tnwc-tuesday-night-world-champs",
+  "name": "TNWC (Tuesday Night World Champs)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "La Crosse",
+  "neighborhood": null,
+  "region": "Wisconsin",
+  "state": "WI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday, usually leaving 5:30 pm from Smith's Bike Shop; start time and place depend on the route (the shop's calendar lists 5:30 to 7:30 pm). On the calendar through at least Oct 27, 2026.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Smith's Bike Shop (route-dependent)",
+   "address": "125 N 7th St, La Crosse, WI 54601"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Intense; considered training for local racers",
+  "drop_policy": "drop",
+  "host": {
+   "name": "Smith's Bike Shop",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Helmets are required on Smith's group rides. Check the shop calendar or the La Crosse Rides Facebook group for the start spot and route, which change with the route. Lights for dusk in fall.",
+  "description": "Smith's Tuesday Night World Championships is a hard road ride that the shop describes as training for many of the local bike racers. It usually leaves Smith's Bike Shop at 5:30 pm, but the start time and place depend on the route. Expect a fast, drop-style group.",
+  "links": {
+   "website": "https://smithsbikes.com/group-bike-rides/",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/groups/lacrosserides/",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://smithsbikes.com/calendar/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://smithsbikes.com/calendar/",
+   "https://smithsbikes.com/group-bike-rides/",
+   "https://calendar.google.com/calendar/ical/invoices.smithsbikes%40gmail.com/public/basic.ics"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-06",
+  "evidence": "Smith's Bike Shop's calendar (fetched Oct 1, 2026) lists TNWC on Tuesdays Oct 6, 13, 20 and 27, 2026, 5:30 to 7:30 pm; its Google Calendar feed has a weekly Tuesday series with no end date.",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://smithsbikes.com/calendar/",
+   "feed_url": "https://calendar.google.com/calendar/ical/invoices.smithsbikes%40gmail.com/public/basic.ics",
+   "notes": "Calendar page and the public Google Calendar feed list each Tuesday."
+  }
+ },
+ {
+  "slug": "woodbury-mn-freewheel-bike-monday-night-ride",
+  "name": "Freewheel Woodbury Monday Night Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Woodbury",
+  "neighborhood": null,
+  "region": "Minnesota",
+  "state": "MN",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Mondays, 5:00 pm, from 6415 Lake Road Terrace, Woodbury. The Strava event shows the next ride, Mon Oct 5, 2026.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "5:00 pm",
+  "start_hhmm": "17:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Freewheel Bike Woodbury (Strava meet-up spot)",
+   "address": "6415 Lake Road Terr, Woodbury, MN 55125"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Freewheel Bike (Strava club)",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Freewheel asks riders to sign its group-ride waiver (link on the Freewheel group rides page). The Strava club page is public, but route details need a free Strava login.",
+  "description": "A Monday-evening group ride out of Freewheel's Woodbury shop, posted on the Freewheel Bike Strava club. The event page shows the day, a 5:00 pm start and the meet-up address. Route, pace and distance are only visible to Strava members.",
+  "links": {
+   "website": "https://www.freewheelbike.com/events/group-rides-pg1040.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/470025",
+   "meetup": null,
+   "other": [
+    "https://www.strava.com/clubs/470025/group_events/3480957573192654492"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.strava.com/clubs/470025/group_events/3480957573192654492",
+   "https://www.strava.com/clubs/470025",
+   "https://www.freewheelbike.com/events/group-rides-pg1040.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Freewheel Bike's Strava club event page lists the Freewheel Woodbury Monday Night Ride for Mon Oct 5, 2026 at 5:00 PM from 6415 Lake Road Terr, Woodbury (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "strava-club",
+   "watch_url": "https://www.strava.com/clubs/470025/group_events/3480957573192654492",
+   "feed_url": null,
+   "notes": "The event page shows only the next date; the club's event list needs a Strava login. Not seen: whether it runs every Monday."
+  }
+ },
+ {
+  "slug": "minnetonka-mn-freewheel-bike-monday-gravel-mtb-rides",
+  "name": "Freewheel Minnetonka Monday Gravel and MTB Rides",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Minnetonka",
+  "neighborhood": null,
+  "region": "Minnesota",
+  "state": "MN",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "gravel",
+   "mtb"
+  ],
+  "schedule": "Every Monday, roll 6:30 pm, year-round, weather permitting. About 90 minutes, with food and drinks at the shop around 8:00 pm.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Freewheel Bike Minnetonka",
+   "address": "10750 Cedar Bend, Minnetonka, MN 55305"
+  },
+  "distance_km": 24,
+  "distance_miles": 15,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Gravel group casual, 10-15 mph, 10-15 miles; the mountain bike group is faster, 4-5 miles out to Theodore Wirth or Lone Lake Park and back",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Freewheel Bike Minnetonka",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Any bike you can ride on rough roads works for the gravel ride. Bring a helmet and front and rear lights, since dark falls before 8 pm in fall. Winter turns it into a fat bike ride. Check the Freewheel Strava club the day of for cancellations.",
+  "description": "Freewheel's Minnetonka shop runs a Monday-night ride all year, gravel and mountain bike groups most weeks. Gravel is a chill 10 to 15 miles in 90 minutes with no one dropped. The shop feeds riders afterward.",
+  "links": {
+   "website": "https://www.freewheelbike.com/events/group-rides-pg1040.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/470025",
+   "meetup": null,
+   "other": [
+    "https://msp.bike/events"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://msp.bike/events",
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "https://www.strava.com/clubs/470025"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The msp.bike Twin Cities calendar feed (fetched Oct 1, 2026) carries this as a weekly Monday series with no end date and lists Oct 5, 12, 19 and 26, 2026; the entry says 'every Monday year round'.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://msp.bike/events",
+   "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "notes": "Weekly Monday series with no end date on the msp.bike Google calendar; Freewheel posts changes on its Strava club."
+  }
+ },
+ {
+  "slug": "minneapolis-mn-perennial-cycle-fall-ftw-saturday-ride",
+  "name": "Fall FTW Ride Series at Perennial Cycle",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Minneapolis",
+  "neighborhood": "Uptown",
+  "region": "Minnesota",
+  "state": "MN",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Saturday in October 2026 (Oct 3, 10, 17, 24, 31): meet 10:00 am, roll 10:15 am from behind Perennial Cycle. Social ride to coffee and treats.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "10:15 am",
+  "start_hhmm": "10:15",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Oct",
+  "season_months": {
+   "start": 10,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Behind Perennial Cycle",
+   "address": "3342 Hennepin Ave, Minneapolis, MN 55408"
+  },
+  "distance_km": 14,
+  "distance_miles": 9,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Casual, social pace, 6-12 miles",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Perennial Cycle",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "For femme, trans, women and nonbinary riders. The first ride heads to the Mill City Farmers Market and FRGMNT Coffee. Details post on the shop's Instagram.",
+  "description": "A Saturday-morning social ride for femme, trans, women and nonbinary riders, run every Saturday in October from Perennial Cycle. It rolls to local spots for coffee and treats at a casual pace over 6 to 12 miles. No one gets dropped.",
+  "links": {
+   "website": "https://www.perennialcycle.com/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://msp.bike/events/fall-ftw-ride-mill-city-farmers-market-ba6e9154"
+   ]
+  },
+  "inclusive_focus": [
+   "wtf",
+   "no-drop"
+  ],
+  "sources": [
+   "https://msp.bike/events",
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "https://msp.bike/events/fall-ftw-ride-mill-city-farmers-market-ba6e9154"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-17",
+  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited Sept 17, 2026) lists the Fall FTW Ride Series every Saturday through Oct 31, meet 10 AM, rollout 10:15, tagged no-drop and FTW. Perennial's own site is behind a bot wall.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://msp.bike/events",
+   "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "notes": "Series entry ends Nov 1, 2026; the shop posts the next series on its Instagram."
+  }
+ },
+ {
+  "slug": "minneapolis-mn-behind-bars-mellow-morning-ride",
+  "name": "Mellow Morning Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Minneapolis",
+  "neighborhood": "Northeast",
+  "region": "Minnesota",
+  "state": "MN",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Saturday, meet 10:15 am, roll about 10:45 am from Behind Bars. The calendar series runs through Oct 31, 2026.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "10:45 am",
+  "start_hhmm": "10:45",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Jun–Oct",
+  "season_months": {
+   "start": 6,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Behind Bars Bicycle Shop",
+   "address": "208 13th Ave NE, Minneapolis, MN 55413"
+  },
+  "distance_km": 19,
+  "distance_miles": 12,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Relaxed, 10-15 mph, 10-15 miles",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Behind Bars Bicycle Shop",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Led by shop ambassador Dietrich. Sign the shop waiver when you arrive. Details post on the shop's Instagram.",
+  "description": "A relaxed Saturday cruise out of Behind Bars in Northeast Minneapolis, led by a shop ambassador. It is no-drop at 10 to 15 mph over 10 to 15 miles. The weekly calendar series runs from early June through the end of October.",
+  "links": {
+   "website": null,
+   "instagram": "https://www.instagram.com/behindbarsbicycleshop/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://msp.bike/events/mellow-morning-ride-5a8ad751"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://msp.bike/events",
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "https://msp.bike/events/mellow-morning-ride-5a8ad751"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-17",
+  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited Sept 17, 2026) lists Mellow Morning Ride every Saturday from June 6 until Oct 31, 2026, meet 10:15 AM, depart 10:45, tagged no-drop.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://msp.bike/events",
+   "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "notes": "Weekly series ends Nov 1, 2026 on the calendar."
+  }
+ },
+ {
+  "slug": "minneapolis-mn-angry-catfish-first-wednesday-social-ride",
+  "name": "Angry Catfish Fall/Winter Social Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Minneapolis",
+  "neighborhood": null,
+  "region": "Minnesota",
+  "state": "MN",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "First Wednesday of the month, 6:00 pm from Angry Catfish. The first one is Oct 7, 2026; the summer weekly Wednesday series ended Sept 30.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "wed"
+   }
+  ],
+  "season": "Oct–spring",
+  "season_months": null,
+  "start_location": {
+   "name": "Angry Catfish Bicycle + Coffee Bar",
+   "address": "2900 E 42nd St, Minneapolis, MN 55406"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Angry Catfish Bicycle",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Bike advice (tires, lights, layers) is posted for each ride because it depends on the route and weather. Details and routes are on the ACF Discord.",
+  "description": "Angry Catfish's Wednesday social rides move to the first Wednesday of each month for fall and winter, rolling from the shop at 6:00 pm. They are tagged no-drop. Summer's weekly series ended Sept 30.",
+  "links": {
+   "website": "https://www.angrycatfishbicycle.com/articles/group-rides-events-pg260.htm",
+   "instagram": "https://www.instagram.com/angrycatfish",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://msp.bike/events/fall-winter-angry-catfish-social-rides-712e453d"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://msp.bike/events",
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "https://msp.bike/events/fall-winter-angry-catfish-social-rides-712e453d"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-10",
+  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited Sept 10, 2026) says Wednesday social rides move to the first Wednesday of the month, first on Oct 7, beginning at Angry Catfish at 6pm, tagged nodrop.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://msp.bike/events",
+   "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "notes": "Monthly first-Wednesday series; the shop's Discord has the details each month."
+  }
+ },
+ {
+  "slug": "golden-valley-mn-ez-cycle-club-monthly-community-ride",
+  "name": "EZ Cycle Club Monthly Community Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Golden Valley",
+  "neighborhood": "Theodore Wirth Park",
+  "region": "Minnesota",
+  "state": "MN",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "First Tuesday of the month: social meet 6:30 pm, ride out 7:15 pm from The Trailhead at Theodore Wirth Park. The calendar lists it through Oct 6, 2026.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "7:15 pm",
+  "start_hhmm": "19:15",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "tue"
+   }
+  ],
+  "season": "Jun–Oct",
+  "season_months": {
+   "start": 6,
+   "end": 10
+  },
+  "start_location": {
+   "name": "The Trailhead at Theodore Wirth Park",
+   "address": "1221 Theodore Wirth Pkwy, Golden Valley, MN 55422"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Conversational, easy pace",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "EZ Cycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "All are welcome. Television Cycles does pre-ride inspections, adjustments and minor repairs on site. Bring lights.",
+  "description": "A monthly easy-pace community ride from the Trailhead at Theodore Wirth Park, on the first Tuesday. Riders gather and socialize at 6:30 pm and roll at 7:15 pm. No-drop, and a bike shop checks bikes on site before the ride.",
+  "links": {
+   "website": null,
+   "instagram": "https://www.instagram.com/p/DY2Q2FrABAh/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://msp.bike/events/ez-cycle-club-monthly-community-ride-44a7c858"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://msp.bike/events",
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "https://msp.bike/events/ez-cycle-club-monthly-community-ride-44a7c858"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-05-29",
+  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited May 29, 2026) lists the ride on the first Tuesday monthly from June 2 through Oct 6, 2026, social meet 6:30 PM, ride out 7:15, no-drop.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://msp.bike/events",
+   "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "notes": "The calendar series has five dates, the last on Oct 6, 2026; check whether it continues."
+  }
+ },
+ {
+  "slug": "minneapolis-mn-fast-casual-francis-burger-ride",
+  "name": "Fast Casual x Francis Burger Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Minneapolis",
+  "neighborhood": null,
+  "region": "Minnesota",
+  "state": "MN",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Third Tuesday of the month, April through October: meet 6:15 pm, roll 6:30 pm from the Sabo Bridge to Francis Burger Joint on East Lake Street. Next: Oct 20, 2026.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 3,
+    "day": "tue"
+   }
+  ],
+  "season": "Apr–Oct",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Martin Olav Sabo Bridge",
+   "address": "Minneapolis, MN 55407"
+  },
+  "distance_km": 23,
+  "distance_miles": 14,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Moderately spicy, 14-16 mph rolling, 12-15 miles",
+  "drop_policy": "drop",
+  "host": {
+   "name": "Fast Casual",
+   "type": "team"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "An intermediate ride: be ready to hold 14-16 mph. Mechanical support is on hand. Free Hamm's or NA beverage for every rider. Bring helmet and lights.",
+  "description": "Fast Casual's monthly intermediate ride runs the third Tuesday from April to October, from the Sabo Bridge to Francis Burger Joint. The pace is 14 to 16 mph over 12 to 15 miles. It is not a no-drop ride.",
+  "links": {
+   "website": null,
+   "instagram": "https://www.instagram.com/p/DXHf6Q9gMtt/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://msp.bike/events"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://msp.bike/events",
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-06-15",
+  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited June 15, 2026) lists the ride on the third Tuesday monthly through Oct 20, 2026, meet 6:15 PM, roll 6:30, 14-16 mph, tagged drop.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://msp.bike/events",
+   "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "notes": "Series entry ends with Oct 20, 2026."
+  }
+ },
+ {
+  "slug": "minneapolis-mn-geno-atb-sunday-community-grocery-ride",
+  "name": "Geno ATB Community Grocery Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Minneapolis",
+  "neighborhood": null,
+  "region": "Minnesota",
+  "state": "MN",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social",
+   "gravel"
+  ],
+  "schedule": "Sundays, 10:00 am from the Sabo Bridge; the calendar lists Oct 4, 11 and 18, 2026. Each week is a different themed ride.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Sep–Oct",
+  "season_months": {
+   "start": 9,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Martin Olav Sabo Bridge",
+   "address": "Minneapolis, MN 55407"
+  },
+  "distance_km": 37,
+  "distance_miles": 23,
+  "duration": null,
+  "duration_min": null,
+  "pace": "10-12 mph, about 23 miles for the Sept 27 ride",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Geno ATB",
+   "type": "collective"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The Sept 27 ride was urban gravel with a grocery stop and food haul to camp. Bring a cargo bike, basket, trailer or bags. Details post on Instagram.",
+  "description": "Geno ATB's Sunday community rides start at the Sabo Bridge at 10:00 am. The Sept 27 edition was a no-drop 23-mile urban gravel loop with a grocery stop. The calendar lists Sundays Oct 4, 11 and 18 next.",
+  "links": {
+   "website": null,
+   "instagram": "https://www.instagram.com/reel/DdnbpIbh_dv/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://msp.bike/events/atb-grocery-ride-84c96838"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://msp.bike/events",
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "https://msp.bike/events/atb-grocery-ride-84c96838"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited Oct 1, 2026) lists the Geno ATB Community Grocery Ride every Sunday 10:00 AM from Sept 27 through Oct 18, 2026, tagged nodrop.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://msp.bike/events",
+   "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "notes": "Series entries end Oct 18, 2026."
+  }
+ },
+ {
+  "slug": "milwaukee-wi-friends-with-bikes-thursday-ride",
+  "name": "Friends With Bikes Thursday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Milwaukee",
+  "neighborhood": null,
+  "region": "Wisconsin",
+  "state": "WI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "First and third Thursday of the month, 6:30 pm, meeting at Fratney & Clarke. October 2026 dates: Oct 1 and Oct 15.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "thu"
+   },
+   {
+    "ord": 3,
+    "day": "thu"
+   }
+  ],
+  "season": "Apr–Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "Fratney & Clarke",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Casual pace for riders of all skill levels",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Friends With Bikes MKE",
+   "type": "collective"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "For women, trans, femme and nonbinary riders of all skill levels. Meeting spot is the corner of Fratney and Clarke; details on the group's Instagram.",
+  "description": "Friends With Bikes MKE is an inclusive cycling community for women, trans, femme and nonbinary riders. This is its first-and-third-Thursday evening ride, at a casual pace for all skill levels, from Fratney & Clarke.",
+  "links": {
+   "website": "https://fwbmke.com/",
+   "instagram": "https://www.instagram.com/fwb_mke/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://calendar.google.com/calendar/embed?src=e6e63d65e2b10ef28b478898ac26893a2b98937ac50372d834d964d325c049d4@group.calendar.google.com"
+   ]
+  },
+  "inclusive_focus": [
+   "wtf"
+  ],
+  "sources": [
+   "https://fwbmke.com/",
+   "https://calendar.google.com/calendar/ical/e6e63d65e2b10ef28b478898ac26893a2b98937ac50372d834d964d325c049d4%40group.calendar.google.com/public/basic.ics"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The group's own site lists rides Thursday Oct 1 and Oct 15, 2026 at 6:30pm from Fratney & Clarke; its public Google Calendar feed has a first-Thursday and third-Thursday series that includes Oct 1 and Oct 15 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://fwbmke.com/",
+   "feed_url": "https://calendar.google.com/calendar/ical/e6e63d65e2b10ef28b478898ac26893a2b98937ac50372d834d964d325c049d4%40group.calendar.google.com/public/basic.ics",
+   "notes": "The site lists each month's dates; the Google calendar feed repeats the 1st/3rd Thursday and last Sunday series."
+  }
+ },
+ {
+  "slug": "milwaukee-wi-friends-with-bikes-last-sunday-ride",
+  "name": "Friends With Bikes Last Sunday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Milwaukee",
+  "neighborhood": null,
+  "region": "Wisconsin",
+  "state": "WI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Last Sunday of the month, 11:00 am, meeting at Cactus Club. Next: Sun Oct 25, 2026.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "11:00 am",
+  "start_hhmm": "11:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "sun"
+   }
+  ],
+  "season": "Apr–Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "Cactus Club",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Casual pace for riders of all skill levels",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Friends With Bikes MKE",
+   "type": "collective"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "For women, trans, femme and nonbinary riders of all skill levels. Meet at the Cactus Club.",
+  "description": "The last-Sunday-of-the-month ride from Friends With Bikes MKE, an inclusive group for women, trans, femme and nonbinary riders. It meets at Cactus Club at 11:00 am for a casual-paced ride.",
+  "links": {
+   "website": "https://fwbmke.com/",
+   "instagram": "https://www.instagram.com/fwb_mke/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "wtf"
+  ],
+  "sources": [
+   "https://fwbmke.com/",
+   "https://calendar.google.com/calendar/ical/e6e63d65e2b10ef28b478898ac26893a2b98937ac50372d834d964d325c049d4%40group.calendar.google.com/public/basic.ics"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The group's own site lists Sunday Sept 27 and Sunday Oct 25, 2026 at 11:00am meeting at Cactus Club; its public Google Calendar feed has a last-Sunday series (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://fwbmke.com/",
+   "feed_url": "https://calendar.google.com/calendar/ical/e6e63d65e2b10ef28b478898ac26893a2b98937ac50372d834d964d325c049d4%40group.calendar.google.com/public/basic.ics",
+   "notes": "Site lists the dates; the calendar feed repeats the series."
+  }
+ },
+ {
+  "slug": "milwaukee-wi-critical-mass-milwaukee-last-friday",
+  "name": "Critical Mass Milwaukee",
+  "name_en": null,
+  "kind": "critical-mass",
+  "status": "active",
+  "city": "Milwaukee",
+  "neighborhood": null,
+  "region": "Wisconsin",
+  "state": "WI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Last Friday of every month, roll out 6:00 pm from Red Arrow Park. Next: Fri Oct 30, 2026.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Red Arrow Park",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Socially paced, about 10 mph",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Milwaukee Critical Mass",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Open to cyclists, skaters and scooter riders. The site also lists Bike Bus routes. Updates post on Instagram.",
+  "description": "Milwaukee's monthly Critical Mass rolls out from Red Arrow Park at 6 pm on the last Friday of the month. It is a fun, socially paced ride at about 10 mph, riding together for safety in numbers and safer streets.",
+  "links": {
+   "website": "https://www.mkecriticalmass.com/",
+   "instagram": "https://www.instagram.com/mkecriticalmass/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.mkecriticalmass.com/",
+   "https://www.milwaukeebikerides.com/riding-group/critical-mass-milwaukee/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The group's own site says 'Roll out from Red Arrow Park the last Friday of every month at 6PM' and 'Next Ride: Red Arrow Park October 30th, 6PM' (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.mkecriticalmass.com/",
+   "feed_url": null,
+   "notes": "The page names the next ride date."
+  }
+ },
+ {
+  "slug": "milwaukee-wi-mke-rec-thursday-night-rides",
+  "name": "MKE REC Thursday Night Rides",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Milwaukee",
+  "neighborhood": null,
+  "region": "Wisconsin",
+  "state": "WI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Thursday, 6:00 pm, April 16 to October 29, 2026 (not on holidays); the park changes weekly around Milwaukee County.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Apr–Oct",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Varies, a different park around Milwaukee County each week",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slow social roll, distances easy for beginners",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Milwaukee Recreation (MKE REC)",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Bring your own bike, helmet and front and rear lights. Sign up through Milwaukee Recreation's registration page. Treats and drinks often follow in the park.",
+  "description": "Milwaukee County's recreation department runs evening group rides from a different park every Thursday at 6:00 pm, mid-April to the end of October. They are no-drop, social slow rolls that beginners can manage. Riders often stay for refreshments afterward.",
+  "links": {
+   "website": "https://wisconsinbikefed.org/events/mke-rec-thursday-night-rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://wisconsinbikefed.org/events/mke-rec-thursday-night-rides/"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop",
+   "beginner"
+  ],
+  "sources": [
+   "https://wisconsinbikefed.org/events/mke-rec-thursday-night-rides/",
+   "https://www.milwaukeebikerides.com/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Wisconsin Bike Fed's event page (fetched Oct 1, 2026) lists MKE REC Thursday Night Rides, Apr 16 to Oct 29 (2026 dates), 6:00 pm, 'every Thursday evening at 6:00 PM from mid-April through the end of October'; no-drop and beginner-friendly.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://wisconsinbikefed.org/events/mke-rec-thursday-night-rides/",
+   "feed_url": null,
+   "notes": "Registration and parks are on Milwaukee Recreation's site; the Bike Fed listing carries the season dates."
+  }
+ },
+ {
+  "slug": "milwaukee-wi-mke-rec-saturday-community-bike-rides",
+  "name": "MKE REC Saturday Community Bike Rides",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Milwaukee",
+  "neighborhood": null,
+  "region": "Wisconsin",
+  "state": "WI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Saturday, 10:00 am, April 18 to October 24, 2026 (not on holidays); the start changes around Milwaukee County.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Apr–Oct",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Varies around Milwaukee County",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slow social roll, about 90 minutes, beginner-friendly",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Milwaukee Recreation (MKE REC)",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Rides are free but registration is required through Milwaukee Recreation. Bring your own bike and helmet. A short bike safety talk starts each ride.",
+  "description": "Milwaukee Recreation's Saturday group rides leave at 10:00 am from different places around the county, mid-April to the end of October. They are no-drop social slow rolls for beginners, about 90 minutes long, often with a stop at a local business. They focus on trails with some street riding.",
+  "links": {
+   "website": "https://wisconsinbikefed.org/events/mke-rec-saturday-community-bike-rides-2/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop",
+   "beginner"
+  ],
+  "sources": [
+   "https://wisconsinbikefed.org/events/mke-rec-saturday-community-bike-rides-2/",
+   "https://www.milwaukeebikerides.com/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Wisconsin Bike Fed's event page (fetched Oct 1, 2026) lists MKE REC Saturday Community Bike Rides, Apr 18 to Oct 24 (2026 dates), 10:00 am, no-drop social slow rolls; the Milwaukee Bike Rides directory says rides are free with registration.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://wisconsinbikefed.org/events/mke-rec-saturday-community-bike-rides-2/",
+   "feed_url": null,
+   "notes": "Season dates on the Bike Fed listing; registration on Milwaukee Recreation's site."
+  }
+ },
+ {
+  "slug": "milwaukee-wi-mke-rec-tuesday-good-morning-hank",
+  "name": "MKE REC Tuesday Rides, Good Morning Hank",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Milwaukee",
+  "neighborhood": null,
+  "region": "Wisconsin",
+  "state": "WI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Tuesday, 9:00 am, April 14 to October 27, 2026, from Juneau Playfield.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Apr–Oct",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Juneau Playfield",
+   "address": "6500 W Mt Vernon St, Milwaukee, WI"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "All levels; mostly trails with some street riding and coffee or bakery stops",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Milwaukee Recreation (MKE REC)",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Bring your own bike and helmet. Register through Milwaukee Recreation.",
+  "description": "A Tuesday-morning ride from Juneau Playfield on Milwaukee's northwest side, run by Milwaukee Recreation from mid-April to the end of October. It covers urban, river, prairie and wooded stretches, often with a social stop at a coffee shop or bakery. All levels are welcome.",
+  "links": {
+   "website": "https://wisconsinbikefed.org/events/mke-rec-tuesday-rides-good-morning-hank/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://wisconsinbikefed.org/events/mke-rec-tuesday-rides-good-morning-hank/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Wisconsin Bike Fed's event page (fetched Oct 1, 2026) lists MKE REC Tuesday Rides 'Good Morning Hank', Apr 14 to Oct 27 (2026 dates), 9:00 am from Juneau Playfield, suitable for all levels.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://wisconsinbikefed.org/events/mke-rec-tuesday-rides-good-morning-hank/",
+   "feed_url": null,
+   "notes": "Season dates on the Bike Fed listing."
+  }
+ },
+ {
+  "slug": "slinger-wi-bay-view-bicycle-club-saturday-big-cedar-lake",
+  "name": "Bay View Bicycle Club Saturday Ride, Big Cedar Lake",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Slinger",
+  "neighborhood": null,
+  "region": "Wisconsin",
+  "state": "WI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday, 9:00 am, May 1 to October 31, 2026, from Slinger Rotary Park. Moderately hilly loop around Big Cedar Lake; the long route continues to Kewaskum.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "May–Oct",
+  "season_months": {
+   "start": 5,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Slinger Rotary Park",
+   "address": "645 Baehring Dr, Slinger, WI"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Bay View Bicycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The listing says you can ride as a guest with the club. Send questions through the Bike Fed listing.",
+  "description": "Bay View Bicycle Club's Saturday ride rolls out of Slinger Rotary Park at 9:00 am and loops around Big Cedar Lake via West Bend over moderate hills. A long route goes on to Kewaskum. Guests are welcome.",
+  "links": {
+   "website": "https://wisconsinbikefed.org/events/bay-view-bicycle-club-weekly-sat-ride-big-cedar-lake/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://wisconsinbikefed.org/events/bay-view-bicycle-club-weekly-sat-ride-big-cedar-lake/",
+   "https://wisconsinbikefed.org/events/bay-view-bicycle-club/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Wisconsin Bike Fed's event page (fetched Oct 1, 2026) lists the Bay View Bicycle Club Weekly Sat Ride, May 1 to Oct 31 (2026 dates), 9:00 am from Slinger Rotary Park, 'Ride as a guest'.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://wisconsinbikefed.org/events/bay-view-bicycle-club-weekly-sat-ride-big-cedar-lake/",
+   "feed_url": null,
+   "notes": "Season dates on the Bike Fed listing; the club's Strava or site may post changes."
+  }
+ },
+ {
+  "slug": "waukesha-wi-bay-view-bicycle-club-sunday-3-trails-west",
+  "name": "Bay View Bicycle Club Sunday Ride, 3 Trails West",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Waukesha",
+  "neighborhood": null,
+  "region": "Wisconsin",
+  "state": "WI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Sunday, 9:00 am, May 3 to October 25, 2026, from Fox River Sanctuary in Waukesha. Out and back on the Glacial Drumlin, Cushing Park and Lake Country trails.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "May–Oct",
+  "season_months": {
+   "start": 5,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Fox River Sanctuary",
+   "address": "810 W College Ave, Waukesha, WI"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Bay View Bicycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "A daily or annual Wisconsin state trail pass is required on all routes. The listing says you can ride as a guest with the club.",
+  "description": "Bay View Bicycle Club's Sunday trail ride starts at Fox River Sanctuary in Waukesha at 9:00 am. Riders go out and back on the Glacial Drumlin, Cushing Park and Lake Country trails to Wales, Lapham Peak, Delafield or Oconomowoc. A Wisconsin state trail pass is required.",
+  "links": {
+   "website": "https://wisconsinbikefed.org/events/bay-view-bicycle-club-weekly-sun-ride-3-trails-west/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://wisconsinbikefed.org/events/bay-view-bicycle-club-weekly-sun-ride-3-trails-west/",
+   "https://wisconsinbikefed.org/events/bay-view-bicycle-club/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Wisconsin Bike Fed's event page (fetched Oct 1, 2026) lists the Bay View Bicycle Club Weekly Sun Ride, May 3 to Oct 25 (2026 dates), 9:00 am from Fox River Sanctuary, 'Ride as a guest'.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://wisconsinbikefed.org/events/bay-view-bicycle-club-weekly-sun-ride-3-trails-west/",
+   "feed_url": null,
+   "notes": "Season dates on the Bike Fed listing."
+  }
+ },
+ {
+  "slug": "middleton-wi-corp-trails-tuesday-capital-brewery-mtb-ride",
+  "name": "CORP Trails Tuesday Night Mountain Bike Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Middleton",
+  "neighborhood": null,
+  "region": "Wisconsin",
+  "state": "WI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Every Tuesday, roll about 5:40 pm from the Capital Brewery Beer Garden; about two hours of singletrack. Dated on the CORP calendar weekly through Sept 29, 2026.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "5:40 pm",
+  "start_hhmm": "17:40",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Capital Brewery Beer Garden",
+   "address": "7734 Terrace Ave, Middleton, WI 53562"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Beginner and intermediate singletrack with harder options, about two hours",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "CORP Trails",
+   "type": "nonprofit"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "All abilities welcome, no one is left behind. A functioning mountain bike is a good idea. The ride goes if the trails are open. Stay after for the beer garden.",
+  "description": "CORP Trails' Tuesday-night mountain bike ride (separate from the brewery's road club) leaves the Capital Brewery Beer Garden in Middleton at about 5:40 pm and heads by multi-use path to the Middleton trails and usually Blackhawk. It is a no-drop ride for all abilities, about two hours, and ends in the beer garden.",
+  "links": {
+   "website": "https://corptrails.org/events",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://corptrails.org/events/middleton-tuesday-night-rides-from-capital-brewery-wdaa5-s6har-4j6n9-k53kz-4rr63-pf2rr-46wnh-paem3-fjn5l-r34ps-lmp6w-pzbzw-59y8f-85fj7-lrtsl-4dkg4-n4747-yzz66-44l76"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop",
+   "beginner"
+  ],
+  "sources": [
+   "https://corptrails.org/events"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-29",
+  "evidence": "CORP Trails' events page (fetched Oct 1, 2026) lists the Capital Brewery–Middleton–Blackhawk Group Ride every Tuesday at 5:40 PM, most recently Sept 29, 2026, described as a no-drop ride for all abilities and speeds.",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://corptrails.org/events",
+   "feed_url": null,
+   "notes": "Events page lists each Tuesday; each event has a Google Calendar and ICS link. Winter hours not seen."
+  }
+ },
+ {
+  "slug": "cambridge-wi-corp-trails-thursday-camrock-group-ride",
+  "name": "CORP CamRock Thursday Group Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Cambridge",
+  "neighborhood": null,
+  "region": "Wisconsin",
+  "state": "WI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Every Thursday, 6:00 pm from the CORP Garage, year-round; 'if the trails are open we are riding'. Bonfire after.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "CORP Garage",
+   "address": "305 W Water St, Cambridge, WI 53523"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "An hour or two on the trails; a road or double-track ride if trails are closed",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "CORP Trails",
+   "type": "nonprofit"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "All ages, genders and abilities. Check trail conditions first; if the trails are closed the ride may switch to road or double-track.",
+  "description": "CORP Trails' Thursday-evening ride at CamRock MTB Trails in Cambridge, east of Madison. Riders meet at the CORP Garage and head out at 6:00 pm for an hour or two, then hang out around a bonfire. The group says the rides run year-round and are open to all ages, genders and abilities.",
+  "links": {
+   "website": "https://corptrails.org/events",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://corptrails.org/events/cy9y7rgng8y89wn-4emfg"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://corptrails.org/events",
+   "https://corptrails.org/events/cy9y7rgng8y89wn-4emfg"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-24",
+  "evidence": "CORP Trails' events page (fetched Oct 1, 2026) lists the Camrock Group Ride every Thursday at 6:00 PM, most recently Sept 24, 2026, described as 'year-round rides' from the CORP Garage, 305 W Water St, Cambridge.",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://corptrails.org/events",
+   "feed_url": null,
+   "notes": "Events page lists each Thursday, with an ICS link on each."
+  }
+ },
+ {
+  "slug": "iowa-city-ia-bic-2sday-2wheelers-tuesday-morning-ride",
+  "name": "BIC 2sday 2wheelers Tuesday Morning Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Iowa City",
+  "neighborhood": null,
+  "region": "Iowa",
+  "state": "IA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday, 10:00 am, April through October; the start changes monthly (Waterworks Prairie Park in October 2026). Weather permitting.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Apr–Oct",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Waterworks Prairie Park in October 2026 (varies by month; see the BIC calendar)",
+   "address": null
+  },
+  "distance_km": 52,
+  "distance_miles": 32,
+  "duration": null,
+  "duration_min": null,
+  "pace": "13-16+ mph over 25-40 miles; a fast group often breaks away",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Bicyclists of Iowa City",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Mid-ride refreshment stop. Cancellations post on the BIC calendar and Facebook page at least two hours before the start.",
+  "description": "The Bicyclists of Iowa City's Tuesday-morning group, '2sday 2wheelers', rides 25 to 40 miles at 13 to 16 mph with a refreshment stop. The start spot changes monthly to reach different trails. The club's calendar lists Tuesdays Oct 6, 13, 20 and 27, 2026 at 10:00 AM.",
+  "links": {
+   "website": "https://bic.clubexpress.com/",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/BikeIowaCity/",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://bic.clubexpress.com/content.aspx?page_id=4001&club_id=74108"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://bic.clubexpress.com/content.aspx?page_id=4001&club_id=74108",
+   "https://bic.clubexpress.com/content.aspx?page_id=22&club_id=74108&module_id=153871"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "BIC's ride calendar (fetched Oct 1, 2026) lists T2W rides on Tuesdays Oct 6, 13, 20 and 27, 2026 at 10:00 AM from Waterworks Prairie Park; the club's ride info says Tuesday rides run April through October.",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://bic.clubexpress.com/content.aspx?page_id=4001&club_id=74108",
+   "feed_url": null,
+   "notes": "Month-view calendar lists each ride's start and time."
+  }
+ },
+ {
+  "slug": "iowa-city-ia-bic-saturday-weekend-rides",
+  "name": "BIC Saturday Rides",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Iowa City",
+  "neighborhood": null,
+  "region": "Iowa",
+  "state": "IA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays, April through October, usually 10:00 am; start and route change each week (see the BIC calendar). Weather permitting.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Apr–Oct",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Varies weekly (Oct 3 Crosspark Hy-Vee, Oct 17 Big Grove Brewery); see the BIC calendar",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Intermediate to advanced, 13 to 19+ mph, 20 to 100 miles; may regroup at points",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Bicyclists of Iowa City",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Rides often include a stop at a dining spot. Each ride has a host who will not always ride with the slowest rider. Cancellations post on the BIC calendar and Facebook.",
+  "description": "Bicyclists of Iowa City hosts Saturday rides of 20 to 100 miles from April through October at an intermediate to advanced pace, 13 to 19+ mph. The start changes weekly. The club's calendar lists Oct 3 (Octoberfest ride to Amana, road or gravel) and Oct 17 (Big Grove Brewery to the Courage Stop, 37 miles).",
+  "links": {
+   "website": "https://bic.clubexpress.com/",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/BikeIowaCity/",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://bic.clubexpress.com/content.aspx?page_id=4001&club_id=74108"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://bic.clubexpress.com/content.aspx?page_id=4001&club_id=74108",
+   "https://bic.clubexpress.com/content.aspx?page_id=22&club_id=74108&module_id=153871"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "BIC's ride calendar (fetched Oct 1, 2026) lists Saturday rides on Oct 3 at 10:00 AM (Crosspark Hy-Vee, ride to Amana) and Oct 17 at 10:00 AM (Big Grove Brewery, 37 miles); the club says Saturday rides run April through October.",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://bic.clubexpress.com/content.aspx?page_id=4001&club_id=74108",
+   "feed_url": null,
+   "notes": "Month-view calendar lists each ride."
+  }
+ },
+ {
+  "slug": "grinnell-ia-imagine-grinnell-thursday-gravel-curious-ride",
+  "name": "Thursday Night Gravel, Gravel Curious Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Grinnell",
+  "neighborhood": null,
+  "region": "Iowa",
+  "state": "IA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "gravel"
+  ],
+  "schedule": "Every Thursday, leave 5:30 pm from Bikes to You, April 2 to October 29, 2026, weather permitting.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Apr–Oct",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Bikes to You",
+   "address": "921 Broad St, Grinnell, IA 50112"
+  },
+  "distance_km": 23,
+  "distance_miles": 14,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slower and shorter than the Tuesday ride, about 13-15 miles",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Imagine Grinnell",
+   "type": "nonprofit"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Free bike loans through Grinnell Bike Share if you sign up first. Weather permitting.",
+  "description": "Imagine Grinnell's slower Thursday-night gravel ride for the gravel curious, 13 to 15 miles from Bikes to You at 5:30 pm. It runs April 2 to October 29, 2026. Riders can borrow a bike free through the Grinnell Bike Share.",
+  "links": {
+   "website": "https://www.imaginegrinnell.org/events/thursday-night-gravel-gravel-curious-ride",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/imaginegrinnell/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "sources": [
+   "https://www.imaginegrinnell.org/events/thursday-night-gravel-gravel-curious-ride",
+   "https://www.imaginegrinnell.org/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Imagine Grinnell's events page (fetched Oct 1, 2026) lists the Thursday Night Gravel Gravel Curious ride from Apr 2 to Oct 29, 2026, leave 5:30 pm from 921 Broad St, about 13-15 miles, with an ICS link.",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.imaginegrinnell.org/events/thursday-night-gravel-gravel-curious-ride",
+   "feed_url": null,
+   "notes": "Event page has Google Calendar and ICS links."
+  }
+ },
+ {
+  "slug": "ankeny-ia-kyles-bikes-wednesday-night-rides",
+  "name": "Kyle's Bikes Wednesday Night Rides, Ankeny",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Ankeny",
+  "neighborhood": null,
+  "region": "Iowa",
+  "state": "IA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday, spring through fall: Road Group 5:45 pm (fast, about 30 miles), Trail Group 6:00 pm (relaxed, 20-25 miles) from Kyle's SW Oralabor shop.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "5:45 pm",
+  "start_hhmm": "17:45",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "spring–fall",
+  "season_months": null,
+  "start_location": {
+   "name": "Kyle's Bikes SW Oralabor",
+   "address": "1840 SW White Birch Circle, Ankeny, IA 50023"
+  },
+  "distance_km": 48,
+  "distance_miles": 30,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Road Group: fast, about 30 miles, regroups at certain spots. Trail Group: relaxed, 20-25 miles on trail",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Kyle's Bikes",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Helmets required. Bring water, a tube and basic tools, and arrive 10-15 minutes early. Cancellations and route changes post in the shop's riders Facebook group.",
+  "description": "Kyle's Bikes runs two Wednesday-night groups out of its SW Oralabor shop in Ankeny: a fitness road ride at 5:45 pm covering about 30 miles with regroups, and a relaxed trail ride at 6:00 pm covering 20 to 25 miles. The shop's 2026 season page says they run every Wednesday, spring through fall.",
+  "links": {
+   "website": "https://www.kylesbikes.com/articles/weekly-rides-pg1281.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.kylesbikes.com/articles/weekly-rides-pg1281.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Kyle's Bikes' weekly rides page, headed '2026 Season' (fetched Oct 1, 2026), lists Wednesday Night Rides every Wednesday spring through fall from the Ankeny SW Oralabor store: Road Group 5:45 PM, Trail Group 6:00 PM.",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.kylesbikes.com/articles/weekly-rides-pg1281.htm",
+   "feed_url": null,
+   "notes": "The shop's riders Facebook group posts cancellations and route changes. The page undated apart from '2026 Season'."
+  }
+ },
+ {
+  "slug": "waukee-ia-kyles-bikes-wednesday-trail-group",
+  "name": "Kyle's Bikes Waukee Wednesday Trail Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Waukee",
+  "neighborhood": null,
+  "region": "Iowa",
+  "state": "IA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Wednesday, 6:00 pm, spring through fall, from Kyle's Waukee store onto the Raccoon River Valley Trail.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "spring–fall",
+  "season_months": null,
+  "start_location": {
+   "name": "Kyle's Bikes Waukee",
+   "address": "100 SE Laurel St, Waukee, IA 50263"
+  },
+  "distance_km": 37,
+  "distance_miles": 23,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Relaxed, 20-25 miles on trail",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Kyle's Bikes",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "New for 2026, led by Peter MacNaughton. Helmets required. Cancellations post in the riders Facebook group.",
+  "description": "A social midweek ride that rolls from Kyle's Waukee store straight onto the Raccoon River Valley Trail at 6:00 pm. It is relaxed, 20 to 25 miles. The shop lists it as new for 2026.",
+  "links": {
+   "website": "https://www.kylesbikes.com/articles/weekly-rides-pg1281.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.kylesbikes.com/articles/weekly-rides-pg1281.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Kyle's Bikes' weekly rides page, headed '2026 Season' (fetched Oct 1, 2026), lists the Waukee Wednesday Trail Group, 6:00 PM, relaxed 20-25 miles, 'New for 2026'.",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.kylesbikes.com/articles/weekly-rides-pg1281.htm",
+   "feed_url": null,
+   "notes": "Facebook group posts cancellations."
+  }
+ },
+ {
+  "slug": "milwaukee-wi-cream-city-cycle-club-wow-womens-monday-ride",
+  "name": "Cream City Cycle Club WOW Women-Only Monday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Milwaukee",
+  "neighborhood": null,
+  "region": "Wisconsin",
+  "state": "WI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every other Monday from mid-April through the end of October: 9:30 am April to September, 10:00 am in October. Starts at or near a public park; see the club calendar.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "biweekly",
+  "monthly_rule": null,
+  "season": "mid-Apr–Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "At or near a public park, varies; see the club calendar",
+   "address": null
+  },
+  "distance_km": 48,
+  "distance_miles": 30,
+  "duration": null,
+  "duration_min": null,
+  "pace": "25 to 35 miles with a break stop near the midpoint",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Cream City Cycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Non-members can join one ride before joining the club. Calendar events are public; cue sheets and routes are for members.",
+  "description": "Cream City Cycle Club's women-only morning rides run every other Monday from mid-April to the end of October, 25 to 35 miles from a public park, with a break stop at the midpoint. The calendar's most recent one on Sept 28, 2026 went to the sculpture garden out of Sussex.",
+  "links": {
+   "website": "https://www.creamcitycycleclub.com/",
+   "instagram": null,
+   "facebook": "http://www.facebook.com/CreamCityCycleClub",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.creamcitycycleclub.com/content.aspx?page_id=4001&club_id=119379"
+   ]
+  },
+  "inclusive_focus": [
+   "wtf"
+  ],
+  "sources": [
+   "https://www.creamcitycycleclub.com/content.aspx?page_id=22&club_id=119379&module_id=395031",
+   "https://www.creamcitycycleclub.com/content.aspx?page_id=4001&club_id=119379",
+   "https://www.creamcitycycleclub.com/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-28",
+  "evidence": "Cream City Cycle Club's calendar (fetched Oct 1, 2026) lists 'WOW ride takes us to the infamous sculpture garden out of Sussex' on Mon Sept 28, 2026; its weekday ride page says Women Only morning rides run every other Monday, mid-April through October, 10:00 AM in October.",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.creamcitycycleclub.com/content.aspx?page_id=4001&club_id=119379",
+   "feed_url": null,
+   "notes": "Month-grid calendar; the Oct 12 and Oct 26 dates were not posted on Oct 1."
+  }
+ }
+]

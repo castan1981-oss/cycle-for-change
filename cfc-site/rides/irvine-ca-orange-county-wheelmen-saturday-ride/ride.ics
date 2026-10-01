@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:irvine-ca-orange-county-wheelmen-saturday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T083000
+DTEND;TZID=America/Los_Angeles:20261003T103000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:OCW Saturday Ride — Irvine\, CA
+LOCATION:17971 MacArthur Blvd (start map on the club's ride listing)\, 17
+ 971 MacArthur Boulevard\, Irvine\, CA 92614
+DESCRIPTION:Pace: Routes typically 35 to 40 miles\, per the club.\nSchedu
+ le: Every Saturday\, 8:30 am\, from 17971 MacArthur Blvd\, Irvine. Route
+ s are typically 35 to 40 miles..\nConfirm with the host before you go.\n
+ https://cycleforchange.org/rides/irvine-ca-orange-county-wheelmen-saturd
+ ay-ride/
+URL:https://cycleforchange.org/rides/irvine-ca-orange-county-wheelmen-sat
+ urday-ride/
+END:VEVENT
+END:VCALENDAR

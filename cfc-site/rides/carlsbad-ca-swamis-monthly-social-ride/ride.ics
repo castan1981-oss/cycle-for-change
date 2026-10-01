@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:carlsbad-ca-swamis-monthly-social-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261004T080000
+DTEND;TZID=America/Los_Angeles:20261004T100000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Swami's Monthly Sunday Social Ride — Carlsbad\, CA
+LOCATION:Bird Rock Coffee Roasters\, Bressi Ranch\, Bressi Ranch\, Carlsb
+ ad\, CA 92009
+DESCRIPTION:Pace: no-drop\, conversational 2x2.\nNo-drop.\nSchedule: One 
+ Sunday a month\, 8:00 am\, from Bird Rock Coffee Roasters in Bressi Ranc
+ h (next: Sun Oct 4\, 2026; other dates on the club calendar); weekly Wor
+ ld Famous Saturday Ride from Encinitas.\nConfirm with the host before yo
+ u go.\nhttps://cycleforchange.org/rides/carlsbad-ca-swamis-monthly-socia
+ l-ride/
+URL:https://cycleforchange.org/rides/carlsbad-ca-swamis-monthly-social-ri
+ de/
+END:VEVENT
+END:VCALENDAR

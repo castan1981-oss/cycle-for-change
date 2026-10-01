@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:greenville-de-wcbc-weekend-warrior-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T090000
+DTEND;TZID=America/New_York:20261003T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Greenville Weekend Warrior Ride (White Clay Bicycle Club) — Gre
+ enville\, DE
+LOCATION:Janssen's Market\, 3801 Kennett Pike\, Greenville\, DE
+DESCRIPTION:Pace: 13-14 mph average; 15-17 mph cruising.\nSchedule: Satur
+ days\, 9:00 am\, from Janssen's Market in Greenville.\nConfirm with the 
+ host before you go.\nhttps://cycleforchange.org/rides/greenville-de-wcbc
+ -weekend-warrior-ride/
+URL:https://cycleforchange.org/rides/greenville-de-wcbc-weekend-warrior-r
+ ide/
+END:VEVENT
+END:VCALENDAR

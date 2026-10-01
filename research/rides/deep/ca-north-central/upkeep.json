@@ -1,0 +1,117 @@
+[
+ {
+  "slug": "davis-ca-tuesday-bakery-easy-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The Davis Bike Club's public Google Calendar lists Tuesday Bakery Easy Ride at 9:00 am from Westlake Market, 1260 Lake Blvd, from Sept 22, 2026 (8:00 am from May 26 to Sept 15), with Oct 6, 13 and 20 next; the ride page was updated July 28, 2026. Same schedule as listed; only the feed is new.",
+  "sources": [
+   "https://davisbikeclub.org/club-events-calendar/",
+   "https://davisbikeclub.org/tuesday-bakery-easy-ride/",
+   "https://calendar.google.com/calendar/ical/davisbikeclubwww%40gmail.com/public/basic.ics"
+  ],
+  "changes": {
+   "refresh": {
+    "method": "ics",
+    "watch_url": "https://davisbikeclub.org/club-events-calendar/",
+    "feed_url": "https://calendar.google.com/calendar/ical/davisbikeclubwww%40gmail.com/public/basic.ics",
+    "notes": "The club ride calendar is a public Google Calendar. Summer start times run an hour earlier."
+   }
+  }
+ },
+ {
+  "slug": "fresno-ca-fresno-cycling-club-birthday-rides",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-19",
+  "evidence": "The club's event page for the September Birthday Rides shows Sat Sept 19, 2026, meet 7:45 am, wheels rolling 8:00 am from Steven's parking lot (fetched Oct 1, 2026); the October edition is not posted yet.",
+  "sources": [
+   "https://fresnocycling.com/event-6823836"
+  ]
+ },
+ {
+  "slug": "redding-ca-shasta-wheelmen-weekday-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The Shasta Wheelmen's public Google Calendar lists the Tuesday and Thursday rides at 8:00 am through Sept 29 and at 8:30 am from Thu Oct 1, 2026 (Sundial Bridge parking lot), and 9:00 am on Thu Nov 5. Summer was 7:00 am.",
+  "sources": [
+   "https://shastawheelmen.org/ridecalendar",
+   "https://calendar.google.com/calendar/ical/c_1a2dfbf2dae9efe68b141d60d80e7e6ee5ef5124f9a0549ef86ff24ba3aa7763%40group.calendar.google.com/public/basic.ics"
+  ],
+  "changes": {
+   "schedule": "Tuesdays and Thursdays from the Sundial Bridge parking lot; start time shifts by season (7:00 am in July and August, 8:00 am in September, 8:30 am in October, 9:00 am from Nov 5; one hour earlier when the forecast high is 100°F or more)",
+   "time_local": "8:30 am",
+   "start_hhmm": "08:30",
+   "start_times": [
+    {
+     "from": "2026-11-05",
+     "start_hhmm": "09:00"
+    }
+   ],
+   "refresh": {
+    "method": "ics",
+    "watch_url": "https://shastawheelmen.org/ridecalendar",
+    "feed_url": "https://calendar.google.com/calendar/ical/c_1a2dfbf2dae9efe68b141d60d80e7e6ee5ef5124f9a0549ef86ff24ba3aa7763%40group.calendar.google.com/public/basic.ics",
+    "notes": "Each ride is its own dated entry in the club Google Calendar."
+   }
+  }
+ },
+ {
+  "slug": "bakersfield-ca-bike-bakersfield-full-moon-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Bike Bakersfield's home page (copyright 2026) shows its Instagram posts for the July 29 (Wed), August (Thu) and September Full Moon Rides; the September post gives Beach Park, meet 6:30 pm, roll 7:00 pm, to Lengthwise Brewing at The Marketplace, and calls it the last Full Moon Ride of the summer.",
+  "sources": [
+   "https://bikebakersfield.org/"
+  ],
+  "changes": {
+   "schedule": "Monthly on or near the full moon, an evening roll from Beach Park to Lengthwise Brewing at The Marketplace. Day and time change each month (July 29 and August: meet 7:30 pm, roll 8:00 pm; September: meet 6:30 pm, roll 7:00 pm). Dates are posted on Instagram and Facebook; the September post called it the last Full Moon Ride of the summer.",
+   "start_location": {
+    "name": "Beach Park",
+    "address": null
+   },
+   "confidence": "medium",
+   "visitor_notes": "Bring front and rear lights; bring water in summer. Check Instagram or Facebook for the month's date and time. The September post called it the last Full Moon Ride of the summer, so winter rides are not confirmed.",
+   "refresh": {
+    "method": "static-page",
+    "watch_url": "https://bikebakersfield.org/",
+    "feed_url": null,
+    "notes": "The home page shows recent Instagram posts; each post gives that month's date and time."
+   }
+  }
+ },
+ {
+  "slug": "gold-river-ca-bike-hikers-tuesday-evening-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The Sacramento Bike Hikers calendar lists the Tuesday Evening Ride F20 on Tue Sept 29 and Oct 6, 2026, 6:00 to 8:00 pm, Gold Country to the Fish Hatchery and William Pond Park and back (fetched Oct 1, 2026).",
+  "sources": [
+   "https://bikehikers.clubexpress.com/content.aspx?page_id=4001&club_id=216251"
+  ]
+ },
+ {
+  "slug": "granite-bay-ca-sac-wheelmen-saturday-granite-bay-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The Sacramento Wheelmen calendar lists the Saturday Morning Granite Bay Ride every Saturday in October 2026; the Oct 3 event page gives 8:30 am at Granite Bay Community Park (fetched Oct 1, 2026).",
+  "sources": [
+   "https://sacwheelmen.wildapricot.org/Ride-Calendar/",
+   "https://sacwheelmen.wildapricot.org/event-6782221"
+  ]
+ },
+ {
+  "slug": "sacramento-ca-sac-wheelmen-tuesday-west-breakfast-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The Sacramento Wheelmen event page lists eight Tuesdays, Oct 6 to Nov 24, 2026, at 9:00 am from the Westin Hotel parking lot, 4800 Riverside Blvd (fetched Oct 1, 2026).",
+  "sources": [
+   "https://sacwheelmen.wildapricot.org/event-6843338",
+   "https://sacwheelmen.wildapricot.org/Ride-Calendar/"
+  ]
+ }
+]

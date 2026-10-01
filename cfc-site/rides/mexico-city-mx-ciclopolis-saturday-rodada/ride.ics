@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mexico-city-mx-ciclopolis-saturday-rodada@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Mexico_City:20261003T071000
+DTEND;TZID=America/Mexico_City:20261003T091000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Rodada de sábado Ciclópolis — Mexico City\, Mexico
+LOCATION:Ciclópolis Coyoacán\, Av. Miguel Ángel de Quevedo 287\, Col. 
+ Romero de Terreros\, Coyoacán\, Ciudad de México
+DESCRIPTION:Pace: Level is posted per ride. The Ciudad Universitaria ride
+ s (30 km\, flat\, by the Insurgentes bike lane) are marked beginner to i
+ ntermediate; the Ajusco and gravel rides are intermediate to advanced..\
+ nSchedule: Saturdays\, meet 7:00 am\, roll 7:10 am\, from the Ciclópoli
+ s Coyoacán shop. The route changes each week: Ajusco on Oct 3\, a theme
+ d city ride to the Monumento a la Revolución on Oct 10\, Ciudad Univers
+ itaria on Oct 17\, a gravel ride with Gravel Mafia on Oct 24\, a Hallowe
+ en ride to Ciudad Universitaria on Oct 31..\nConfirm with the host befor
+ e you go.\nhttps://cycleforchange.org/rides/mexico-city-mx-ciclopolis-sa
+ turday-rodada/
+URL:https://cycleforchange.org/rides/mexico-city-mx-ciclopolis-saturday-r
+ odada/
+END:VEVENT
+END:VCALENDAR

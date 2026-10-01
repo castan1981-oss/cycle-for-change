@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bentonville-ar-trackstand-cyclery-friday-shop-mtb-ride@cycleforchange
+ .org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261002T180000
+DTEND;TZID=America/Chicago:20261002T200000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270228T235959Z
+SUMMARY:Trackstand Friday Shop Mountain Bike Ride — Bentonville\, AR
+LOCATION:Trackstand Cyclery and Tavern\, 1400 SW Susana St Suite 6\, Bent
+ onville\, AR 72713
+DESCRIPTION:Pace: Casual\, about 7 mph.\nSchedule: Every Friday\, 6:00 pm
+  from the shop; about 10 miles at Coler.\nConfirm with the host before y
+ ou go.\nhttps://cycleforchange.org/rides/bentonville-ar-trackstand-cycle
+ ry-friday-shop-mtb-ride/
+URL:https://cycleforchange.org/rides/bentonville-ar-trackstand-cyclery-fr
+ iday-shop-mtb-ride/
+END:VEVENT
+END:VCALENDAR

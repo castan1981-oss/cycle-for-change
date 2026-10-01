@@ -1,0 +1,253 @@
+[
+ {
+  "slug": "coral-gables-fl-everglades-bicycle-club-saturday-ride",
+  "outcome": "changed",
+  "last_seen": "2026-10-01",
+  "evidence": "EBC's home page (fetched Oct 1, 2026) says 'Every Saturday Rides start at 7:00 AM from Ponce. Starting Saturday October 3rd Rides start at 7:30 AM from Ponce', and its calendar lists the training rides for Oct 3, 10 and 17 at 7:30 AM at Ponce de Leon Middle School.",
+  "sources": [
+   "https://www.evergladesbc.com/"
+  ],
+  "changes": {
+   "schedule": "Every Saturday, 7:00 am in summer; 7:30 am from Saturday Oct 3, 2026. Ponce de Leon Middle School, across from UM, Coral Gables.",
+   "start_times": [
+    {
+     "from": "2026-10-03",
+     "start_hhmm": "07:30"
+    }
+   ]
+  },
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "miami-fl-miami-critical-mass",
+  "outcome": "confirmed",
+  "last_seen": "2026-09-25",
+  "evidence": "The Miami Bike Scene's post for the Fri Sept 25, 2026 ride says 6:30 pm gather, ride starts 7:15 pm, Government Center, 111 NW First Street (fetched Oct 1, 2026); its home page lists a post for each month back to May.",
+  "sources": [
+   "https://www.themiamibikescene.com/2026/09/miami-critical-mass-friday-september-25.html",
+   "https://www.themiamibikescene.com/"
+  ],
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "sunrise-fl-south-broward-wheelers-saturday-ride",
+  "outcome": "changed",
+  "last_seen": "2026-10-01",
+  "evidence": "SBW's home page and calendar (fetched Oct 1, 2026) say 'All weekend rides start - 7:30 AM' (end of summer), the Saturday Oct 3 ride starts from Big Wheel Bicycles, 7035 Taft St, Pembroke Pines, and the October calendar rotates the start among sponsor shops (Big Wheel, City Bikes, Geronimo's); the site had Markham Park at 7:00.",
+  "sources": [
+   "https://www.southbrowardwheelers.com/",
+   "https://www.southbrowardwheelers.com/page-18071"
+  ],
+  "changes": {
+   "schedule": "Every Saturday, pedals up 7:30 am (weekend rides moved to 7:30 at the end of summer). The start rotates among sponsor shops; Oct 3 is Big Wheel Bicycles, 7035 Taft St, Pembroke Pines. Check the calendar for the week.",
+   "time_local": "7:30 am",
+   "start_hhmm": "07:30",
+   "start_location": {
+    "name": "Rotating sponsor shop start (Oct 3: Big Wheel Bicycles)",
+    "address": "7035 Taft St, Pembroke Pines, FL"
+   },
+   "visitor_notes": "Visitors get one trial ride, then the club asks for membership and a signed waiver (the site says members-only rides are now enforced). Three pace groups, 15-21 mph, rotating pace line, no one left behind."
+  },
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "st-petersburg-fl-spbc-saturday-club-ride",
+  "outcome": "changed",
+  "last_seen": "2026-10-01",
+  "evidence": "SPBC's rides page (fetched Oct 1, 2026) says the Saturday ride from North Shore Aquatic Center rolls at 8:00 a.m. from April 25, 2026 and 'moves back to 8:30 on October 31, 2026'; holiday rides are listed for 2026-27.",
+  "sources": [
+   "https://stpetebicycleclub.com/rides"
+  ],
+  "changes": {
+   "start_times": [
+    {
+     "from": "2026-10-31",
+     "start_hhmm": "08:30"
+    }
+   ]
+  },
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "seminole-fl-spbc-dunedin-breakfast-ride",
+  "outcome": "changed",
+  "last_seen": "2026-10-01",
+  "evidence": "SPBC's rides page (fetched Oct 1, 2026) lists the Tuesday Dunedin Breakfast Ride from Seminole City Park (no drop, 30 miles, 14-17 mph) and says the Tuesday start changes to 8:30 AM beginning Nov 3, 2026.",
+  "sources": [
+   "https://stpetebicycleclub.com/rides"
+  ],
+  "changes": {
+   "start_times": [
+    {
+     "from": "2026-11-03",
+     "start_hhmm": "08:30"
+    }
+   ]
+  },
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "sanford-fl-saturday-social-ride",
+  "outcome": "confirmed",
+  "last_seen": "2026-10-01",
+  "evidence": "Bicikleta's Local Events, Rides & Clubs page (fetched Oct 1, 2026, lists Oct 17, Oct 25 and Dec 21, 2026 events) shows Sanford's Saturday Social Ride, Lake Monroe Loop, 28 miles, meet 7:15, rolls 7:30 AM, two paces 15-17 and 17-19 mph.",
+  "sources": [
+   "https://www.bicikletabikeshop.com/articles/local-events-rides-clubs-pg204.htm"
+  ],
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "sanford-fl-sanford-bicycle-club-monday-ride",
+  "outcome": "confirmed",
+  "last_seen": "2026-10-01",
+  "evidence": "Bicikleta Bike Shop's local clubs page (fetched Oct 1, 2026, lists Oct and Dec 2026 events) says Sanford Bicycle Club rides 'Every Monday at 6 p.m.' from Dees Brothers Brewery in downtown Sanford, a relaxed no-drop one-hour ride. Secondary page; the club's own Facebook group did not load.",
+  "sources": [
+   "https://www.bicikletabikeshop.com/articles/local-events-rides-clubs-pg204.htm"
+  ],
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "orlando-fl-kyles-thursday-night-ride",
+  "outcome": "confirmed",
+  "last_seen": "2026-10-01",
+  "evidence": "Kyle's Bike Shop's Thursday Night Ride page (fetched Oct 1, 2026, site footer 2026) says the ride leaves the shop parking lot at 7:00pm, no-drop, A 19+ mph and B 16-19 mph, about 30 miles, lights and helmets required; the page carries no per-week date.",
+  "sources": [
+   "https://kylesbikeshop.net/articles/thursday-night-ride-pg71.htm",
+   "https://www.kylesbikeshop.net/articles/local-rides-clubs-pg2279.htm"
+  ],
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "coral-gables-fl-ebc-bike305-beginner-ride",
+  "outcome": "unreachable",
+  "note": "Only the Miami Bike Scene directory (undated, says 'starting 9/9/23') lists the second-Saturday beginner ride; EBC's own calendar for Oct 2026 shows only the Saturday training rides, so nothing current confirms it.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "fort-lauderdale-fl-critical-mass",
+  "outcome": "unreachable",
+  "note": "The Facebook group wouldn't load and the Miami Bike Scene Broward page is undated; no dated 2026 post found.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "fort-lauderdale-fl-goonie-prowl",
+  "outcome": "unreachable",
+  "note": "Only the undated Miami Bike Scene Broward page and a Facebook group (not loadable) carry it; nothing dated 2026.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "west-palm-beach-fl-critical-mass",
+  "outcome": "unreachable",
+  "note": "Facebook page returned an error and the Miami Bike Scene Palm Beach page is undated; nothing dated 2026.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "st-petersburg-fl-critical-mass",
+  "outcome": "unreachable",
+  "note": "The Visit St. Pete-Clearwater event page is behind a Cloudflare check and wouldn't load.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "tampa-fl-critical-mass-tampa-bay",
+  "outcome": "unreachable",
+  "note": "criticalmasstampa.com loads and states last Friday, meet 7:45 pm, roll 8:00 pm from Curtis Hixon, but its footer says copyright 2025 and no 2026 date appears, so it isn't confirmed.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "lakewood-ranch-fl-vicc-wednesday-night-worlds",
+  "outcome": "changed",
+  "last_seen": "2026-08-26",
+  "evidence": "VICC's public Google Calendar (fetched Oct 1, 2026) has Wednesday Night Worlds weekly at 6:00 pm from Aug 26 through Oct 28, 2026 (rule ends Oct 29 UTC), leaving the north parking lot of Lakewood Ranch Main Street, 101 Boardwalk Loop; the club's home page (2026) also gives 6:00 PM from Lakewood Ranch Main Street. The site had Village Bikes as the start.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/viccboard%40gmail.com/public/basic.ics",
+   "https://villageidiotscycling.com/"
+  ],
+  "changes": {
+   "schedule": "Every Wednesday, 6:00 pm, March through October (last ride Oct 28, 2026), from the north parking lot of Lakewood Ranch Main Street. Lights required: it gets dark before the ride ends.",
+   "start_location": {
+    "name": "Lakewood Ranch Main Street, north parking lot",
+    "address": "101 Boardwalk Loop, Lakewood Ranch, FL 34202"
+   },
+   "refresh": {
+    "method": "ics",
+    "watch_url": "https://villageidiotscycling.com/pages/vicc-events-calendar",
+    "feed_url": "https://calendar.google.com/calendar/ical/viccboard%40gmail.com/public/basic.ics"
+   }
+  },
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "jacksonville-fl-ram-ride",
+  "outcome": "unreachable",
+  "note": "ZenCog's Ride With Us page (undated, fetched Oct 1, 2026) still lists the Saturday 9 am RAM Ride under the Fuller Warren Bridge, but it is a shop's list of independent rides with no date, and the ride's Facebook page returned an error.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "jacksonville-fl-tunibiri-tuesday-night-ride",
+  "outcome": "unreachable",
+  "note": "ZenCog's Ride With Us page (undated, fetched Oct 1, 2026) still lists TuNiBiRi Tuesdays, meet 9:00-9:30 pm, leaves 10:00 pm, but nothing on it is dated and the Facebook group wouldn't load.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "clermont-fl-trek-clermont-saturday-group-ride",
+  "outcome": "unreachable",
+  "note": "The only source is a Facebook event page, which does not load without a login.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "fort-myers-fl-caloosa-riders-welcome-ride",
+  "outcome": "confirmed",
+  "last_seen": "2026-10-01",
+  "evidence": "Caloosa Riders' ClubExpress calendar (fetched Oct 1, 2026) lists The Welcome Ride on Sundays Oct 4, 11, 18 and 25, 2026 at 7:30 AM from TREK Ft. Myers, 8291 Dani Dr; the event page says no drop, 14-16 mph, about 25 miles.",
+  "sources": [
+   "https://crbc.clubexpress.com/content.aspx?page_id=4001&club_id=787276",
+   "https://crbc.clubexpress.com/content.aspx?page_id=4091&club_id=787276&item_id=3081643"
+  ],
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "naples-fl-naples-velo-saturday-bridge-ride",
+  "outcome": "confirmed",
+  "last_seen": "2026-10-01",
+  "evidence": "Naples Velo's North Naples rides page (fetched Oct 1, 2026) lists the Saturday Ft. Myers Bridge Ride at 7am from the side lot of Naples Cyclery, Black and Blue groups, 45 miles; the club's home page the same day shows 2026 sponsors and led rides seven days a week. The rides page itself carries no date.",
+  "sources": [
+   "https://www.naplesvelo.com/north-naples.html",
+   "https://www.naplesvelo.com/"
+  ],
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "pensacola-fl-bike-pensacola-slow-ride",
+  "outcome": "unreachable",
+  "note": "bikepensacola.org (fetched Oct 1, 2026) still shows monthly Slow Rides, 5-6 miles, beginners welcome, with the newest listed ride Fri May 22, 2026, 6-7 pm at Pensacola Mess Hall; it says 'Check Facebook for all upcoming events' and Facebook wouldn't load, so no current month could be confirmed.",
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "tallahassee-fl-ccc-saturday-classic-chaires",
+  "outcome": "changed",
+  "last_seen": "2026-10-01",
+  "evidence": "Capital City Cyclists' ride calendar (fetched Oct 1, 2026, site footer 2026) lists Saturday Chaires on Oct 3, 10, 17, 24 and 31 at 9:00 AM from Dorothy Cooper Spence Community Center, 4768 Chaires Cross Rd, 18-22 mph and 17-20 mph groups, 33 or 34 miles; the record had no time.",
+  "sources": [
+   "https://cccyclists.clubexpress.com/content.aspx?page_id=4001&club_id=105555",
+   "https://cccyclists.clubexpress.com/content.aspx?page_id=4091&club_id=105555&item_id=2981859"
+  ],
+  "changes": {
+   "schedule": "Every Saturday, 9:00 am, from the Dorothy Cooper Spence Community Center (Chaires). Two paces, 18-22 mph and 15-20 mph, 33 or 34 miles, regroups along the way.",
+   "time_local": "9:00 am",
+   "start_hhmm": "09:00",
+   "start_location": {
+    "name": "Dorothy Cooper Spence Community Center (Chaires)",
+    "address": "4768 Chaires Cross Rd, Tallahassee, FL"
+   },
+   "pace": "18-22 mph and 15-20 mph groups, regroups along the way",
+   "distance_miles": "33-34"
+  },
+  "checked_on": "2026-10-01"
+ },
+ {
+  "slug": "gainesville-fl-casual-tuesday-ride",
+  "outcome": "unreachable",
+  "note": "Instagram (@ctr.gnv) returned a 429 and no other page carries the ride.",
+  "checked_on": "2026-10-01"
+ }
+]

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:davis-ca-davis-bike-club-sunday-no-drop-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261004T093000
+DTEND;TZID=America/Los_Angeles:20261004T123000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Sunday No Drop Ride — Davis\, CA
+LOCATION:John Jones Professional Offices parking lot\, 2068 John Jones Rd
+ \, Davis\, CA 95616
+DESCRIPTION:Pace: 14 mph and up; riders at 14-16 and at 18-22 both ride i
+ t.\nNo-drop.\nSchedule: Every Sunday\, 9:30 am from the John Jones parki
+ ng lot in Davis (9:00 am in summer). Rain or heat can cancel..\nConfirm 
+ with the host before you go.\nhttps://cycleforchange.org/rides/davis-ca-
+ davis-bike-club-sunday-no-drop-ride/
+URL:https://cycleforchange.org/rides/davis-ca-davis-bike-club-sunday-no-d
+ rop-ride/
+END:VEVENT
+END:VCALENDAR

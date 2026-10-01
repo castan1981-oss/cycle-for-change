@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:milton-ga-whitetail-bicycles-thursday-gravel@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261001T180000
+DTEND;TZID=America/New_York:20261001T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:Thursday Gravel Shop Ride — Milton\, GA
+LOCATION:Whitetail Bicycles & Coffee Company\, 1885 Heritage Walk\, Milto
+ n\, GA 30004
+DESCRIPTION:Pace: 15+ mph average.\nSchedule: Every Thursday at 6:00 pm f
+ rom Whitetail Bicycles & Coffee Company in Milton..\nConfirm with the ho
+ st before you go.\nhttps://cycleforchange.org/rides/milton-ga-whitetail-
+ bicycles-thursday-gravel/
+URL:https://cycleforchange.org/rides/milton-ga-whitetail-bicycles-thursda
+ y-gravel/
+END:VEVENT
+END:VCALENDAR

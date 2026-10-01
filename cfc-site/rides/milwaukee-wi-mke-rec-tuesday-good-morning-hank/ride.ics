@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:milwaukee-wi-mke-rec-tuesday-good-morning-hank@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261006T090000
+DTEND;TZID=America/Chicago:20261006T110000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261031T235959Z
+SUMMARY:MKE REC Tuesday Rides\, Good Morning Hank — Milwaukee\, WI
+LOCATION:Juneau Playfield\, 6500 W Mt Vernon St\, Milwaukee\, WI
+DESCRIPTION:Pace: All levels; mostly trails with some street riding and c
+ offee or bakery stops.\nSchedule: Every Tuesday\, 9:00 am\, April 14 to 
+ October 27\, 2026\, from Juneau Playfield..\nConfirm with the host befor
+ e you go.\nhttps://cycleforchange.org/rides/milwaukee-wi-mke-rec-tuesday
+ -good-morning-hank/
+URL:https://cycleforchange.org/rides/milwaukee-wi-mke-rec-tuesday-good-mo
+ rning-hank/
+END:VEVENT
+END:VCALENDAR

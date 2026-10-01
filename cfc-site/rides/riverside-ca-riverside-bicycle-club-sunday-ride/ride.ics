@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:riverside-ca-riverside-bicycle-club-sunday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261004T080000
+DTEND;TZID=America/Los_Angeles:20261004T100000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Riverside Bicycle Club Sunday Ride — Riverside\, CA
+LOCATION:Courthouse\, corner of 11th and Main Street\, downtown Riverside
+DESCRIPTION:Pace: A 19 to 21 mph\, B 17 to 19\, C 14 to 16\, D 11 to 13\,
+  per the club's ride levels.\nSchedule: Every Sunday\, 8:00 am October t
+ o April and 7:30 am May to September\, from the Courthouse at 11th and M
+ ain Street\, downtown Riverside. A\, B\, C and D groups..\nConfirm with 
+ the host before you go.\nhttps://cycleforchange.org/rides/riverside-ca-r
+ iverside-bicycle-club-sunday-ride/
+URL:https://cycleforchange.org/rides/riverside-ca-riverside-bicycle-club-
+ sunday-ride/
+END:VEVENT
+END:VCALENDAR

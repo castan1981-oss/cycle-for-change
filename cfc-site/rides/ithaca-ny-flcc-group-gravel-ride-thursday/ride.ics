@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ithaca-ny-flcc-group-gravel-ride-thursday@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261001T180000
+DTEND;TZID=America/New_York:20261001T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:FLCC Thursday Group Gravel Ride — Ithaca\, NY
+LOCATION:Varies by week; announced on the FLCC-Gravel Google Group
+DESCRIPTION:Pace: Two groups\, one relaxed and one moderate.\nNo-drop.\nS
+ chedule: Thursdays\, 6:00 pm\, weather permitting. The start changes eac
+ h week (often the Shindagin MTB trailhead or the Danby Park'n'Ride lot) 
+ and is emailed earlier that week..\nConfirm with the host before you go.
+ \nhttps://cycleforchange.org/rides/ithaca-ny-flcc-group-gravel-ride-thur
+ sday/
+URL:https://cycleforchange.org/rides/ithaca-ny-flcc-group-gravel-ride-thu
+ rsday/
+END:VEVENT
+END:VCALENDAR

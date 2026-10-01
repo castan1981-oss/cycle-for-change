@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:chico-ca-saturday-fast-road-ride-october-to-february@cycleforchange.o
+ rg
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T090000
+DTEND;TZID=America/Los_Angeles:20261003T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Saturday Fast Road Ride (October to February) — Chico\, CA
+LOCATION:One Mile Recreation Area
+DESCRIPTION:Pace: fast\, with one regroup at the halfway point.\nSchedule
+ : Every Saturday\, 9:00 am from the One Mile Recreation Area\, October t
+ o February..\nConfirm with the host before you go.\nhttps://cycleforchan
+ ge.org/rides/chico-ca-saturday-fast-road-ride-october-to-february/
+URL:https://cycleforchange.org/rides/chico-ca-saturday-fast-road-ride-oct
+ ober-to-february/
+END:VEVENT
+END:VCALENDAR
