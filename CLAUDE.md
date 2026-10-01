@@ -87,6 +87,35 @@ Facebook / login-only) for Robert to confirm by hand.
 - Irregular rides (posted date by date) say "Some Mondays", never "Every Monday".
 - Re-check batches live in `research/rides/upkeep/` and go through `tools/rides-apply.js`.
 
+## The deep sweep, everywhere (Oct 1, 2026)
+Robert: "lets get all the places we have covered in detail like arizona." Every area the directory
+covered got the Arizona treatment: 29 areas (`research/rides/deep/areas.js`, run it to refresh each
+area's `_existing.tsv`), 559 new rides (716 → 1,275; 14 countries outside the US) and a source
+re-check of ~700 rides already listed. `research/rides/deep/BRIEF-DEEP.md` is the scout brief (two
+jobs: re-check what's listed → `<area>/upkeep.json` through `tools/rides-apply.js`; find new rides →
+`<area>/<area>.json` through `tools/merge-ride-research.js`); each area has a `<area>.md` report with
+the leads nobody could confirm (Instagram / Facebook / login-only) for Robert to check by hand.
+- What worked for proof: public Strava club event pages, Meetup (the .ics feeds now answer "Invalid
+  feed signature" for many groups), RideWithGPS (`events.json?organization_id=<id>` and
+  `organizations/<id>-<slug>/calendar.ics` need no login), public Google Calendar `.ics` (the club
+  page's calendar iframe `src=` holds the id; `calendar.google.com/calendar/ical/<id>/public/basic.ics`),
+  WordPress events calendars (POST `/wp-admin/admin-ajax.php` with the page's nonce), ClubExpress,
+  NEMBA chapter pages, `criticalmass.in`.
+- Scouts ran with the WebSearch cap spent, so Strava event hunts by city were thin after wave 1.
+  A second pass with search on (Strava club events per city, Instagram-only groups Robert confirms)
+  is the next gain. Yields: big metros are mostly Facebook/Instagram; shop pages with no dates are
+  `medium` at best. Per-host cap is 3 rides, counting rides already listed; the extras are in the reports.
+- **`geocode-rides.js` backs off and retries on a Nominatim 429** (a throttled merge used to drop
+  rides silently: "left out … no coordinates"). If a merge says "merged N" with N below "accepted",
+  re-run it — the leftovers go through.
+- **Hub names follow the data.** After every merge diff `cfc-site/rides/hubs.json` against
+  `git show origin/main:cfc-site/rides/hubs.json` and add a 301 in `netlify.toml` for each vanished
+  hub (this sweep: Redondo Beach, Plano, Greenlawn, Matteson, Portsmouth NH, Canton MS, Sullivan's
+  Island, and Encinitas — which flipped back to Carlsbad, so the Sept 30 redirect was reversed).
+  Never leave a redirect pointing at a URL that no longer exists.
+- The homepage hard-codes the ride count in four places (menu, door, lede, directory tile) plus
+  "N more countries"; update them after a merge (`grep -n "1,275\|more countries" cfc-site/index.html`).
+
 ## Town guides — the destination layer (Sept 30, 2026)
 Robert's brief: the site becomes the guide for a rider who lives somewhere else and is coming to
 a town with a bike — "you live in Boise, you're going to LA, you're bringing the bike": where to
