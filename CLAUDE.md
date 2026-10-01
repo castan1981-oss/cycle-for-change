@@ -128,6 +128,18 @@ carries the town strip when a guide exists for that city.
 - `email/mile-updates.html` is the mile-updates email template (table-based, inline styles,
   {{placeholders}} listed at the top). Send from whatever reads the Netlify "waitlist" form.
 
+## Pass 12 — no photo above the fold on phones (Sept 30, 2026, evening)
+Robert, on his phone: "I do not like above the fold. It doesn't look well on mobile. That picture
+is probably not gonna work. The background kind of makes the logo as you scroll look weird."
+- Phones (<900px): the hero is poster type on bone — the live chip, the line, the sub (shown
+  again), the button, the number — with the Phoenix contour (`/rides/art/az-phoenix.svg`, the
+  route art) behind it as `.hero-art` at 30%, fading out by the foot. That is the art direction's
+  own fallback: a photo where there's a photo, route art where there isn't. `.hero-media` is
+  `display:none` on phones; the nav is bone from the first pixel there (no transparent state), so
+  the logo never sits on a picture. Desktop keeps the side-by-side split with the sharp photo.
+- The crew photo still lives on desktop; the Pass 11 phone restack (photo up top, dissolving) is
+  gone. Don't put a photo back above the fold on phones without asking him.
+
 ## Pass 11 — the homepage, last comb (Sept 30, 2026)
 Robert: the above-the-fold still "looks a little blocky and not perfect", and the page wants more
 custom icons. What changed:
