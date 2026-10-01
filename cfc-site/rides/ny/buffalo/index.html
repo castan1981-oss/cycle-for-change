@@ -84,33 +84,49 @@
       <p class="lede">3 recurring group rides around Buffalo, NY: 3 social. 2 roll on weeknights, 0 on weekends. New to group rides? Start with <a href="/rides/buffalo-ny-slow-roll-buffalo-monday-night-community-ride/">Slow Roll Buffalo Monday Night Community Ride</a> in Buffalo — it's no-drop, nobody gets left.</p>
   </header>
 
-  <section class="gr-search-wrap">
+  <section class="gr-search-wrap gr-finder" aria-label="Find a ride">
     <div class="wrap">
       <form class="gr-search" role="search" id="gr-form" onsubmit="return false">
         <label class="visually-hidden" for="gr-q">Search by city, state or ride name</label>
-        <input id="gr-q" type="search" placeholder="City or ride name" autocomplete="off" list="gr-cities">
+        <span class="gr-field"><svg class="gr-field-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-search"/></svg><input id="gr-q" type="search" placeholder="City or ride name" autocomplete="off" list="gr-cities"></span>
         <datalist id="gr-cities"><option value="Buffalo, NY"><option value="Lockport, NY"></datalist>
-        <button type="button" class="btn btn--ink" id="gr-geo">Near me</button>
-        <a class="gr-tonight" href="/tonight/">What&rsquo;s rolling tonight &rarr;</a>
+        <button type="button" class="btn btn--ink gr-geo" id="gr-geo"><svg class="gr-geo-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-locate"/></svg>Near me</button>
       </form>
-      <div class="gr-filters">
-        <div class="gr-filter-row"><span class="gr-filter-label">Bike</span>
-          <button type="button" class="gr-chip" data-filter="disc" data-value="social" aria-pressed="false">Social</button>
-        </div>
-        <div class="gr-filter-row"><span class="gr-filter-label">Made for</span>
-          <button type="button" class="gr-chip" data-filter="tag" data-value="beginner" aria-pressed="false">Beginner friendly</button>
-          <button type="button" class="gr-chip" data-filter="tag" data-value="no-drop" aria-pressed="false">No-drop</button>
-          <button type="button" class="gr-chip" data-filter="tag" data-value="family" aria-pressed="false">Family</button>
-        </div>
-        <div class="gr-filter-row"><span class="gr-filter-label">When</span>
-          <select id="gr-day" aria-label="Day of week"><option value="">Any day</option><option value="today">Today</option><option value="weekend">This weekend</option><option value="mon">Mondays</option><option value="tue">Tuesdays</option><option value="wed">Wednesdays</option><option value="thu">Thursdays</option><option value="fri">Fridays</option><option value="sat">Saturdays</option><option value="sun">Sundays</option></select>
-          <button type="button" class="gr-clear" id="gr-clear" hidden>Clear all</button>
-        </div>
+
+      <div class="gr-filters" id="gr-filters">
+        <fieldset class="gr-group gr-group--disc"><legend class="gr-filter-label">Bike</legend>
+          <div class="gr-tiles">
+            <button type="button" class="gr-tile" data-filter="disc" data-value="social" data-say="social" aria-pressed="false"><svg class="gr-tile-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-social"/></svg><span class="gr-tile-name">Social</span><span class="gr-tile-n"><span data-n>3</span><span class="visually-hidden"> rides</span></span></button>
+          </div>
+        </fieldset>
+        <fieldset class="gr-group gr-group--tag"><legend class="gr-filter-label">Made for</legend>
+          <div class="gr-tiles">
+            <button type="button" class="gr-tile" data-filter="tag" data-value="beginner" data-say="beginner friendly" aria-pressed="false"><svg class="gr-tile-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-beginner"/></svg><span class="gr-tile-name">Beginners</span><span class="gr-tile-n"><span data-n>3</span><span class="visually-hidden"> rides</span></span></button>
+            <button type="button" class="gr-tile" data-filter="tag" data-value="no-drop" data-say="no-drop" aria-pressed="false"><svg class="gr-tile-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-no-drop"/></svg><span class="gr-tile-name">No-drop</span><span class="gr-tile-sub">Waits for you</span><span class="gr-tile-n"><span data-n>3</span><span class="visually-hidden"> rides</span></span></button>
+            <button type="button" class="gr-tile" data-filter="tag" data-value="family" data-say="family" aria-pressed="false"><svg class="gr-tile-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-family"/></svg><span class="gr-tile-name">Family</span><span class="gr-tile-n"><span data-n>1</span><span class="visually-hidden"> rides</span></span></button>
+          </div>
+        </fieldset>
+        <fieldset class="gr-group gr-group--day"><legend class="gr-filter-label">When</legend>
+          <div class="gr-week">
+            <button type="button" class="gr-day" data-filter="day" data-value="mon" data-say="Mondays" aria-pressed="false" style="--h:1.00"><i class="gr-day-bar" aria-hidden="true"></i><span class="gr-day-l" aria-hidden="true">Mo</span><span class="visually-hidden">Mondays</span><span class="gr-day-n"><span data-n>1</span><span class="visually-hidden"> rides</span></span></button>
+            <button type="button" class="gr-day" data-filter="day" data-value="tue" data-say="Tuesdays" aria-pressed="false" style="--h:1.00"><i class="gr-day-bar" aria-hidden="true"></i><span class="gr-day-l" aria-hidden="true">Tu</span><span class="visually-hidden">Tuesdays</span><span class="gr-day-n"><span data-n>1</span><span class="visually-hidden"> rides</span></span></button>
+            <button type="button" class="gr-day" data-filter="day" data-value="wed" data-say="Wednesdays" aria-pressed="false" aria-disabled="true" style="--h:0.00"><i class="gr-day-bar" aria-hidden="true"></i><span class="gr-day-l" aria-hidden="true">We</span><span class="visually-hidden">Wednesdays</span><span class="gr-day-n"><span data-n>0</span><span class="visually-hidden"> rides</span></span></button>
+            <button type="button" class="gr-day" data-filter="day" data-value="thu" data-say="Thursdays" aria-pressed="false" aria-disabled="true" style="--h:0.00"><i class="gr-day-bar" aria-hidden="true"></i><span class="gr-day-l" aria-hidden="true">Th</span><span class="visually-hidden">Thursdays</span><span class="gr-day-n"><span data-n>0</span><span class="visually-hidden"> rides</span></span></button>
+            <button type="button" class="gr-day" data-filter="day" data-value="fri" data-say="Fridays" aria-pressed="false" style="--h:1.00"><i class="gr-day-bar" aria-hidden="true"></i><span class="gr-day-l" aria-hidden="true">Fr</span><span class="visually-hidden">Fridays</span><span class="gr-day-n"><span data-n>1</span><span class="visually-hidden"> rides</span></span></button>
+            <button type="button" class="gr-day" data-filter="day" data-value="sat" data-say="Saturdays" aria-pressed="false" aria-disabled="true" style="--h:0.00"><i class="gr-day-bar" aria-hidden="true"></i><span class="gr-day-l" aria-hidden="true">Sa</span><span class="visually-hidden">Saturdays</span><span class="gr-day-n"><span data-n>0</span><span class="visually-hidden"> rides</span></span></button>
+            <button type="button" class="gr-day" data-filter="day" data-value="sun" data-say="Sundays" aria-pressed="false" aria-disabled="true" style="--h:0.00"><i class="gr-day-bar" aria-hidden="true"></i><span class="gr-day-l" aria-hidden="true">Su</span><span class="visually-hidden">Sundays</span><span class="gr-day-n"><span data-n>0</span><span class="visually-hidden"> rides</span></span></button>
+          </div>
+          <a class="gr-tonight" href="/tonight/"><svg class="gr-tonight-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-live"/></svg>What&rsquo;s rolling tonight &rarr;</a>
+        </fieldset>
       </div>
-      <p class="gr-status" id="gr-status" aria-live="polite" data-total="3">3 rides</p>
+      <div class="gr-result">
+        <p class="gr-result-line" aria-live="polite"><b class="gr-result-n" id="gr-n">3</b> <span class="gr-status" id="gr-status" data-total="3">rides</span></p>
+        <button type="button" class="gr-clear" id="gr-clear" hidden>Clear all</button>
+      </div>
     </div>
   </section>
-  <section class="gr-results-wrap">
+  <a class="gr-jump" id="gr-jump" href="#gr-list" hidden><span class="gr-jump-n"></span><span class="gr-jump-go">See them &darr;</span></a>
+  <section class="gr-results-wrap" id="gr-list">
     <div class="wrap">
       <h2>Group rides within 25 miles of Buffalo, NY, closest first</h2>
       <div id="gr-nearby" class="gr-grid gr-nearby" hidden></div>

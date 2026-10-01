@@ -19,6 +19,26 @@
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
 
+## Pass 14 — the ride finder is tiles, not words (Oct 1, 2026)
+Robert, on his phone, looking at `/rides/az/phoenix/`: the filters looked confusing once you used
+them — a wall of mono caps chips, and tapping one changed nothing you could see (the count was a
+small line below the fold). Now, on every state, city, country and facet page and inside "More
+filters" on `/rides/`:
+- **One generator:** `filterPanel()` in `tools/build-rides.js` (used by `searchUi()` and the /rides/
+  page). Bike and Made for are **tiles** (`.gr-tile`: the mark, the name, a count top-right);
+  When is the **week strip** (`.gr-day`, Mo–Su, a bar per day like the calendar's month strip,
+  a creosote dot on today). The search box carries `m-search`; Near me carries `m-locate`
+  (both new in `marks.svg`). The /rides/ quick chips carry marks (`.gr-chip--mk`).
+- **Counts are live** (`rides.js`, `hub.js` once index.json has loaded): each tile says how many
+  rides you'd get with it on, inside whatever place is typed. Bike and When are "any of",
+  Made for is "all of". A tile that would leave nothing goes quiet (`aria-disabled`, dashed) and
+  can't be tapped on.
+- **What's left is big:** `.gr-result` under the panel — the number (`#gr-n`), the picks in words
+  ("rides · gravel · Sundays"), Clear all. While it's below the fold, `.gr-jump` sits at the foot
+  of the screen ("2 rides · See them ↓") and scrolls to `#gr-list` (`#results` on /rides/).
+- `?day=` takes a list now (`day=sat,sun`); `today`, `weekend` and `weekday` still read. The
+  `#gr-day` select is gone.
+
 ## Group rides go worldwide, and every ride says when it was checked (Sept 30, 2026)
 Robert's brief: be the local expert on group rides in Europe, North and South America and beyond —
 rides that are hard to find — and keep them current, because "nobody wants to look for a ride and
