@@ -274,20 +274,27 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .tally-small b{font-weight:700;color:var(--asphalt)}
 .hero .link{color:var(--asphalt)}
 .hero-copy{display:flex;flex-direction:column;gap:clamp(14px,1.6vw,22px)}
+/* Pass 13: the live line is a quiet status, not a black slab. An asphalt disc holds the dot; the dot is
+   volt (and pings) only while the last ride is fresh, bone otherwise. Volt stays on asphalt. */
 .live{
   display:inline-flex;
   align-items:center;
   align-self:flex-start;
   gap:10px;
   margin:0;
-  padding:7px 11px;
-  background:var(--asphalt);
-  color:var(--bone);
+  padding:0;
+  color:var(--asphalt);
   font-family:var(--mono);
-  font-size:10.5px;
+  font-size:11px;
   letter-spacing:.14em;
   text-transform:uppercase;
 }
+.live b{font-weight:700}
+.live .dot{width:22px;height:22px;background:var(--asphalt);overflow:hidden}
+.live .dot::before{content:"";position:absolute;inset:7px;border-radius:50%;background:var(--bone)}
+.live .dot::after{inset:0;border-color:var(--volt);animation:none}
+.live.is-live .dot::before{background:var(--volt)}
+.live.is-live .dot::after{animation:ping 2.4s ease-out infinite}
 .dot{position:relative;flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:var(--volt)}
 .dot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--volt);opacity:0;animation:ping 2.4s ease-out infinite}
 .dot--bone{background:var(--bone)}
@@ -295,7 +302,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 @keyframes ping{0%{transform:scale(.4);opacity:.9}70%,100%{transform:scale(1.25);opacity:0}}
 /* Pass 6: on phones the hero is the line, the button and the number; the sub waits for desktop
    (the facts strip right under the hero carries the mechanism) */
-.hero-sub{display:block;margin:0;font-size:clamp(1.05rem,.6vw + .95rem,1.35rem);line-height:1.35;color:var(--mute);max-width:30ch}
+.hero-sub{display:block;margin:0;text-wrap:pretty;font-size:clamp(1.05rem,.6vw + .95rem,1.35rem);line-height:1.35;color:var(--mute);max-width:30ch}
 
 .specs{
   display:grid;
