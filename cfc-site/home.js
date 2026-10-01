@@ -30,11 +30,11 @@
   var fmt = function (n) { return Math.round(n).toLocaleString("en-US"); };
 
   /* What the page shows until the feed answers: the function's own output on
-     Sept 30 2026. x = how far through the ride list (0–100), y = cumulative miles. */
+     Oct 1 2026. x = how far through the ride list (0–100), y = cumulative miles. */
   var feed = {
     miles: 3359.5,
     rides: 92,
-    updated: "2026-09-30T20:11:30.310Z",
+    updated: "2026-10-01T16:47:04.691Z",
     profileUrl: "https://www.strava.com/athletes/22899089",
     recent: [
       { discipline: "bike", title: "Somo Sunday", miles: 56, date: "2026-09-27T13:47:01Z" },
@@ -105,7 +105,11 @@
     var last = rides[0];
     if (last && typeof last.miles === "number" && $("lastRide")) {
       var w = whenLabel(last.date);
-      $("lastRide").textContent = "last ride " + last.miles.toFixed(1) + " mi" + (w ? " · " + w : "");
+      $("lastRide").textContent = last.miles.toFixed(1) + " mi" + (w ? " · " + w : "");
+      /* "Live" is a claim: only say it when the ride is from the last day and a half. Otherwise it is just the last ride. */
+      var fresh = Date.now() - Date.parse(last.date) < 36 * 36e5;
+      if ($("liveWord")) $("liveWord").textContent = fresh ? "Live" : "Last ride";
+      if ($("live")) $("live").classList.toggle("is-live", fresh);
     }
 
     var log = $("log");

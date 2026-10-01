@@ -157,6 +157,15 @@ carries the town strip when a guide exists for that city.
 - `email/mile-updates.html` is the mile-updates email template (table-based, inline styles,
   {{placeholders}} listed at the top). Send from whatever reads the Netlify "waitlist" form.
 
+## Pass 13 — the live line tells the truth (Oct 1, 2026)
+Robert: "the live thing on the home page is kinda off." It was a black slab above the h1 that said
+"Live" over a ride four days old.
+- `.live` is a quiet status line now: an asphalt disc holding the dot, then mono text on the bone.
+  `home.js` says "Live" and turns the dot volt (and ping) only when the last bike ride is under 36
+  hours old (`is-live` on `#live`); otherwise it says "Last ride" with a bone dot. Never claim live
+  on a stale ride. Volt still only sits on asphalt (the disc).
+- The sub is `text-wrap:pretty` (no orphan "goes."). Fallback numbers refreshed to Oct 1 (92 days).
+
 ## Pass 12 — no photo above the fold on phones (Sept 30, 2026, evening)
 Robert, on his phone: "I do not like above the fold. It doesn't look well on mobile. That picture
 is probably not gonna work. The background kind of makes the logo as you scroll look weird."
