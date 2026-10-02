@@ -156,6 +156,21 @@ test("maps carry the detail picture, and a zoomed region its roads, water and in
   assert.ok(fs.existsSync(path.join(out, "maps", "detail", "az.svg")), "the picture is written");
   assert.match(read(sat.slug), /class="gr-map-pic" href="\/rides\/maps\/detail\//, "the ride page's small map wears it too");
 });
+// Pass 20 (Oct 2, 2026): Find a ride asks what kind first; /rides/ asks where; the US page folds its long list
+test("the front door asks what kind of ride, and each kind goes somewhere", () => {
+  const h = fs.readFileSync(path.join(out, "..", "find-a-ride", "index.html"), "utf8");
+  assert.match(h, /<h1>Find a ride<\/h1>/);
+  for (const href of ["/rides/", "/tonight/", "/events/2027/charity-rides/", "/find-a-ride/gravel/", "/events/2027/riding/"]) assert.match(h, new RegExp(`<a class="gr-tile gr-door gr-kind[^"]*" href="${href}"`), href);
+  assert.match(h, /<details class="gr-fold gr-about">/, "the explaining is folded");
+  const g = fs.readFileSync(path.join(out, "..", "find-a-ride", "gravel", "index.html"), "utf8");
+  assert.match(g, /href="\/rides\/gravel\/"/); assert.match(g, /href="\/events\/2027\/gravel\/"/);
+  const r = read();
+  assert.match(r, /id="where-h">Where\? Tap a state<\/h2>/);
+  assert.match(r, /class="gr-map gr-map--us"/, "the map is on /rides/");
+  const us = read("united-states");
+  assert.ok((us.match(/class="gr-row-st"/g) || []).length > 10, "state rows");
+  assert.match(us, /<details class="gr-fold">\s*<summary>All \d+, A to Z<\/summary>/);
+});
 test("the US page is a map you tap, a link for every state with a ride", () => {
   const h = read("united-states");
   const states = new Set(rides.filter((r) => r.country === "US" && r.state !== us.slug).map((r) => r.state));

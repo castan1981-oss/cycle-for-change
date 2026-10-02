@@ -545,3 +545,50 @@ details.gr-fold>dl{padding:0 18px 18px}
 
 /* the outline tiles on /rides/: the US and the land, drawn */
 .tile-p--outline .tile-art{object-fit:contain;padding:28% 10% 22%;opacity:.5}
+
+/* —— Pass 20 (Oct 2, 2026): Find a ride — the front door, and a shorter way down ——
+   /find-a-ride/ asks What kind of ride? (doors); /rides/ asks Where? (In the US / Outside the US,
+   cities as a chip row); the US page keeps the map, the ten busiest states as rows, the rest folded. */
+.gr-kinds{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:760px){.gr-kinds{grid-template-columns:repeat(4,minmax(0,1fr))}.gr-kinds--two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:640px}}
+.gr-kind{min-height:118px}
+.gr-kind .gr-tile-name{font-size:17px;margin-top:14px}
+.gr-kind .gr-tile-sub{text-transform:none;letter-spacing:0;font-family:var(--body);font-size:12.5px;line-height:1.3;color:var(--mute);margin-top:2px}
+.gr-kind--ink{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}
+.gr-kind--ink .gr-tile-sub,.gr-kind--ink .gr-tile-n{color:var(--dust)}
+@media (hover:hover){a.gr-kind--ink:hover{background:var(--asphalt);border-color:var(--asphalt)}a.gr-kind--ink:hover .gr-tile-name{text-decoration:underline;text-underline-offset:3px}}
+.gr-find .gr-head{padding-bottom:4px}
+.gr-jumpcities{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:12px 0 0}
+.gr-jumpcities-l{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-right:4px}
+.gr-jumpcities .gr-chip{min-height:36px;display:inline-flex;align-items:center;gap:6px}
+.gr-chip-n{font-size:9.5px;color:var(--creosote-ink)}
+/* the US page's state rows */
+.gr-rows-st{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px;border-top:1px solid var(--dust)}
+@media (min-width:760px){.gr-rows-st{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.gr-row-st{display:grid;grid-template-columns:2.4em minmax(0,1fr) auto;align-items:baseline;gap:8px;min-height:46px;padding:12px 2px;border-bottom:1px solid var(--dust);color:var(--asphalt);text-decoration:none}
+.gr-row-st b{font-family:var(--display);font-weight:800;font-size:16px;letter-spacing:-.01em}
+.gr-row-st span{font-size:14px;color:var(--mute);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gr-row-st i{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--creosote-ink);font-variant-numeric:tabular-nums}
+@media (hover:hover){.gr-row-st:hover b{text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px}}
+/* folded: the long lists and the explaining, one tap away (and still in the page for search) */
+.gr-fold{margin-top:14px;border-top:1px solid var(--asphalt)}
+.gr-fold>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;min-height:48px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.gr-fold>summary::-webkit-details-marker{display:none}
+.gr-fold>summary::before{content:"+";font-weight:700;width:1em}
+.gr-fold[open]>summary::before{content:"–"}
+.gr-about{margin-top:34px;border-top:1px solid var(--dust)}
+.gr-about-body{max-width:62ch;padding:2px 0 8px}
+.gr-about-body p{margin:0 0 .8em;font-size:1rem;line-height:1.55}
+.gr-about-body a{color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px}
+/* Pass 20, Robert's call: the map lives on /rides/ itself (Where? is the map), so the list and the
+   rest of the world are two wide doors under it */
+.gr-hub .gr-map--us{margin-top:2px}
+.gr-where-more{display:grid;grid-template-columns:1fr;gap:6px;margin-top:14px}
+@media (min-width:760px){.gr-where-more{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.gr-wide-door{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;min-height:64px;padding:12px 14px;background:var(--paper);border:1px solid var(--dust);color:var(--asphalt);text-decoration:none}
+.gr-wide-door-mk{width:26px;height:26px;color:currentColor}
+.gr-wide-door b{display:block;font-family:var(--display);font-weight:600;font-size:16px;line-height:1.15}
+.gr-wide-door span span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--creosote-ink);margin-top:3px}
+.gr-wide-door i{font-style:normal;font-family:var(--mono)}
+@media (hover:hover){a.gr-wide-door:hover{border-color:var(--asphalt);background:var(--bone)}}
+a.gr-wide-door:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px}

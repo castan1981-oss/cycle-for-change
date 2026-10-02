@@ -90,7 +90,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
       <span class="brand-word">Cycle <i>For</i> Change</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="/rides/">Find a ride</a>
+      <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
@@ -108,7 +108,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
   </div>
   <ul class="menu-list">
     <li><a href="/pledge/">Pledge a mile <span>Free</span></a></li>
-    <li><a href="/rides/">Find a ride ${n(RIDE_COUNT)}</a></li>
+    <li><a href="/find-a-ride/">Find a ride ${n(RIDE_COUNT)}</a></li>
     <li><a href="/events/2027/">2027 calendar ${n(CAL_COUNT)}</a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>

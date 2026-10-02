@@ -1162,7 +1162,7 @@ function directory(rides, hubs, worldHubs = []) {
   const statesText = `${nStates} states${states.includes("DC") ? " and DC" : ""}`;
   const lastChecked = lastCheckedOf(rides);
   const description = `Search ${rides.length} recurring bicycle group rides in ${statesText}${worldCCs.length ? ` and ${worldCCs.length} more ${worldCCs.length === 1 ? "country" : "countries"}` : ""} by city. Road, gravel, mountain bike and social rides — day, time, start point, pace, and when each was last checked.`;
-  const crumbs = [["Cycle for Change", `${SITE}/`], ["Group rides", `${SITE}/rides/`]];
+  const crumbs = [["Cycle for Change", `${SITE}/`], ["Find a ride", `${SITE}/find-a-ride/`], ["Group rides", `${SITE}/rides/`]];
   const jsonld = { "@context": "https://schema.org", "@graph": [
     { "@type": "CollectionPage", "@id": `${SITE}/rides/`, name: "Find a group ride near you", description, url: `${SITE}/rides/`, dateModified: lastChecked, author: AUTHOR, publisher: PUBLISHER, breadcrumb: breadcrumbLd(crumbs) },
   ] };
@@ -1170,7 +1170,6 @@ function directory(rides, hubs, worldHubs = []) {
   // home base, then the biggest city in each other state (four Phoenix suburbs aren't "pick a place")
   const seenSt = new Set(home ? [home.state] : []);
   const top = [...(home ? [home] : []), ...hubs.filter((h) => h !== home).sort((a, b) => b.rides.length - a.rides.length || a.city.localeCompare(b.city)).filter((h) => !seenSt.has(h.state) && seenSt.add(h.state))].slice(0, 6);
-  const cityTile = (h) => posterTile({ href: h.path, name: h.city, count: h.rides.length, small: h === home ? `rides<br>home base` : `rides<br>${h.state}`, art: artFor(`${h.state.toLowerCase()}-${slugify(h.city)}`), cls: h === home ? "tile-p--ink" : "" });
   const worldN = rides.filter((r) => !isUS(r)).length;
   const facetDoors = FACETS.map((f) => { const n = rides.filter(f.pick).length; return n ? door({ href: `/rides/${f.slug}/`, name: FACET_DOOR[f.slug], n, markId: FACET_MARK[f.slug] }) : ""; }).join("\n          ");
 
@@ -1178,7 +1177,7 @@ function directory(rides, hubs, worldHubs = []) {
 <main id="main" class="gr-dir gr-hub">
   <section class="gr-hero" aria-labelledby="gr-h1">
     <div class="wrap">
-      ${crumbsHtml([["Cycle for Change", `${SITE}/`], ["Group rides", null]])}
+      ${crumbsHtml([["Cycle for Change", `${SITE}/`], ["Find a ride", `${SITE}/find-a-ride/`], ["Group rides", null]])}
       <p class="eyebrow">${rides.length} rides &middot; ${nCountries} ${nCountries === 1 ? "country" : "countries"} &middot; newest check ${esc(fmtDate(lastChecked))}</p>
       <h1 id="gr-h1">Find a group ride</h1>
       <form class="gr-search" role="search" id="gr-form" action="/rides/" method="get">
@@ -1204,14 +1203,13 @@ function directory(rides, hubs, worldHubs = []) {
 
   <div class="wrap gr-steps">
     <section class="gr-step" aria-labelledby="where-h">
-      <h2 class="gr-filter-label" id="where-h">Pick a place</h2>
-      <div class="tiles-p">
-        ${top.map(cityTile).join("\n        ")}
+      <h2 class="gr-filter-label" id="where-h">Where? Tap a state</h2>
+      ${GEO && GEO.us ? usMap(byState) : posterTile({ href: "/rides/united-states/", name: "In the US", count: byCountry.US ? byCountry.US.length : 0, small: "rides", blurb: statesText, markId: "town", cls: "tile-p--country" })}
+      <div class="gr-where-more">
+        <a class="gr-wide-door" href="/rides/united-states/">${mark("list", "gr-wide-door-mk")}<span><b>Every state, as a list</b><span>${byCountry.US ? byCountry.US.length : 0} rides in ${statesText}</span></span><i aria-hidden="true">&rarr;</i></a>
+        ${worldN ? `<a class="gr-wide-door" href="/rides/world/">${mark("globe", "gr-wide-door-mk")}<span><b>Outside the US</b><span>${worldN} rides in ${worldCCs.length} ${worldCCs.length === 1 ? "country" : "countries"}</span></span><i aria-hidden="true">&rarr;</i></a>` : ""}
       </div>
-      <div class="tiles-p tiles-p--wide gr-wide-doors">
-        ${posterTile({ href: "/rides/united-states/", name: "Every US state", count: byCountry.US ? byCountry.US.length : 0, small: "rides", blurb: statesText, art: GEO ? "/rides/maps/us.svg" : null, markId: GEO ? null : "town", cls: "tile-p--country tile-p--outline" })}
-        ${worldN ? posterTile({ href: "/rides/world/", name: "Outside the US", count: worldN, small: "rides", blurb: `${worldCCs.length} ${worldCCs.length === 1 ? "country" : "countries"}`, art: GEO ? "/rides/maps/world.svg" : null, markId: GEO ? null : "globe", cls: "tile-p--country tile-p--outline" }) : ""}
-      </div>
+      <p class="gr-jumpcities"><span class="gr-jumpcities-l">Or jump to</span>${top.map((h) => `<a class="gr-chip" href="${h.path}">${esc(h.city)}${h === home ? ` <span class="gr-chip-n">home</span>` : ""}</a>`).join("")}</p>
     </section>
 ${photoBand("crew", { cls: "gr-photo--wide" })}
 
@@ -1229,6 +1227,104 @@ ${CTA}
 <script id="gr-index" type="application/json">${JSON.stringify({ cities: cityIndexFor(rides), states: Object.entries(STATE_NAMES), countries: countryIndexFor(rides) })}</script>
 ` + foot(`
 <script src="/rides/hub.js" defer></script>`);
+}
+
+// ---------- Pass 20 (Oct 2, 2026): Find a ride — the front door ----------
+// Robert: "Find a ride … is that person looking for a group ride? Is that person looking for a gravel
+// or a fundraising ride? … the next page needs to find out what's the ride … Once we have that
+// established that they want to find a group ride we can find out … are they looking in the United
+// States? Outside? … everything we build needs to be click friendly … we need that [content] for SEO
+// but we need to find a better way to hide it behind stuff." So the journey is:
+//   /find-a-ride/  What kind of ride?  → a group ride → /rides/ (Where? In the US / Outside the US)
+//                                       → charity, fondo, tour, race, the six → their /events/2027/ page
+//                                       → gravel → /find-a-ride/gravel/ (every week, or one big day?)
+// The explaining sits folded under the picks (<details>: crawled, out of the way).
+const CAL = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "calendar-2027.json"), "utf8")).events || []; } catch (e) { return []; } })();
+const calN = (cat) => CAL.filter((e) => e.category === cat).length;
+const stateRow = (byState) => (st) => `<a class="gr-row-st" href="/rides/${st.toLowerCase()}/"><b>${st}</b><span>${esc(stateName(st))}</span><i>${byState[st].length}</i></a>`;
+function kindDoor({ href, name, sub, n = null, markId, cls = "" }) {
+  return `<a class="gr-tile gr-door gr-kind ${cls}" href="${href}">${mark(markId, "gr-tile-mark")}<span class="gr-tile-name">${esc(name)}</span><span class="gr-tile-sub">${esc(sub)}</span>${n != null ? `<span class="gr-tile-n">${n}</span>` : ""}</a>`;
+}
+function fold(summary, html) {
+  return `
+    <details class="gr-fold gr-about">
+      <summary>${summary}</summary>
+      <div class="gr-about-body">${html}</div>
+    </details>`;
+}
+function findPage(rides) {
+  const canonical = `${SITE}/find-a-ride/`;
+  const nCountries = new Set(rides.map((r) => r.country || "US")).size;
+  const gravelRides = rides.filter((r) => (r.discipline || []).includes("gravel")).length;
+  const riding = CAL.filter((e) => e.riding).length;
+  const title = "Find a bike ride: group rides, charity rides, gravel and races";
+  const description = `Find a bike ride near you or worth traveling for: ${rides.length} free weekly group rides in ${nCountries} countries, and ${CAL.length} charity rides, gran fondos, gravel races and tours on the 2027 US calendar.`;
+  const crumbs = [["Cycle for Change", `${SITE}/`], ["Find a ride", canonical]];
+  const kinds = [
+    { href: "/rides/", name: "Group ride", sub: "Free, every week. Show up.", n: rides.length, markId: "riders", cls: "gr-kind--ink" },
+    { href: "/tonight/", name: "Rolling tonight", sub: "What's on this evening", markId: "live" },
+    { href: "/events/2027/charity-rides/", name: "Charity ride", sub: "Ride for a cause", n: calN("Charity ride"), markId: "pledge" },
+    { href: "/find-a-ride/gravel/", name: "Gravel", sub: "Weekly rides and races", n: gravelRides + calN("Gravel"), markId: "gravel" },
+    { href: "/events/2027/road/", name: "Fondo or century", sub: "A big organized road day", n: calN("Road"), markId: "hundred" },
+    { href: "/events/2027/multi-day-tours/", name: "Multi-day tour", sub: "Days in a row", n: calN("Multi-day tour"), markId: "distance" },
+    { href: "/events/2027/races/", name: "Race", sub: "Road, crit and stage races", n: calN("Race"), markId: "flag" },
+    { href: "/events/2027/riding/", name: "Ride with me", sub: "The six I'm doing in 2027", n: riding, markId: "ride-day" },
+  ].filter((k) => k.n == null || k.n > 0);
+  const jsonld = { "@context": "https://schema.org", "@graph": [
+    { "@type": "CollectionPage", "@id": canonical, name: "Find a ride", description, url: canonical, author: AUTHOR, publisher: PUBLISHER, breadcrumb: breadcrumbLd(crumbs) },
+    { "@type": "ItemList", name: "Kinds of rides", itemListElement: kinds.map((k, i) => ({ "@type": "ListItem", position: i + 1, name: k.name, url: `${SITE}${k.href}` })) },
+  ] };
+  return head({ title, description, canonical, jsonld }) + `
+<main id="main" class="gr-dir gr-find">
+  <header class="gr-head wrap">
+      ${crumbsHtml(crumbs)}
+      <h1>Find a ride</h1>
+      <p class="gr-sub">Pick the kind. We&rsquo;ll take it from there.</p>
+  </header>
+  <div class="wrap gr-steps">
+    <section class="gr-step" aria-labelledby="kind-h">
+      <h2 class="gr-filter-label" id="kind-h">What kind of ride?</h2>
+      <div class="gr-tiles gr-kinds">
+          ${kinds.map(kindDoor).join("\n          ")}
+      </div>
+    </section>
+    <p class="gr-all-link">${rideBtn({ href: "/events/2027/", text: `The whole 2027 calendar`, markId: "date", ghost: true })}</p>
+${fold("Group ride or organized ride?", `
+        <p>A group ride is free and happens every week from the same spot: a shop, a caf&eacute;, a park. No sign-up. You show up and ride. We list ${rides.length} of them in ${nCountries} countries, and every one says when it was last checked at its source.</p>
+        <p>An organized ride has a date, a sign-up and usually a fee or a fundraising minimum: charity rides, gran fondos, centuries, gravel races, multi-day tours. The <a href="/events/2027/">2027 calendar</a> has ${CAL.length} of them across the US, and says which dates the organizer has published.</p>
+        <p>I&rsquo;m riding ${riding} of those in 2027 as part of the 10,000 miles. Come ride one, or <a href="/pledge/">pledge a mile</a>.</p>`)}
+${FOOTLINE}
+${CTA}
+  </div>
+</main>
+` + foot();
+}
+function gravelPage(rides) {
+  const canonical = `${SITE}/find-a-ride/gravel/`;
+  const n1g = rides.filter((r) => (r.discipline || []).includes("gravel")).length, n2g = calN("Gravel");
+  const crumbs = [["Cycle for Change", `${SITE}/`], ["Find a ride", `${SITE}/find-a-ride/`], ["Gravel", canonical]];
+  const description = `Find a gravel ride: ${n1g} free weekly gravel group rides, and ${n2g} gravel races and events on the 2027 US calendar.`;
+  return head({ title: "Find a gravel ride: weekly group rides and 2027 races", description, canonical, jsonld: { "@context": "https://schema.org", "@graph": [
+    { "@type": "CollectionPage", "@id": canonical, name: "Find a gravel ride", description, url: canonical, author: AUTHOR, publisher: PUBLISHER, breadcrumb: breadcrumbLd(crumbs) } ] } }) + `
+<main id="main" class="gr-dir gr-find">
+  <header class="gr-head wrap">
+      ${crumbsHtml(crumbs)}
+      <h1>Find a gravel ride</h1>
+      <p class="gr-sub">Every week, or one big day?</p>
+  </header>
+  <div class="wrap gr-steps">
+    <section class="gr-step" aria-labelledby="g-h">
+      <h2 class="gr-filter-label" id="g-h">Pick one</h2>
+      <div class="gr-tiles gr-kinds gr-kinds--two">
+          ${kindDoor({ href: "/rides/gravel/", name: "Every week", sub: "Free gravel group rides", n: n1g, markId: "riders", cls: "gr-kind--ink" })}
+          ${kindDoor({ href: "/events/2027/gravel/", name: "One big day", sub: "Gravel races and events, 2027", n: n2g, markId: "gravel" })}
+      </div>
+    </section>
+    <p class="back"><a href="/find-a-ride/">&larr; Every kind of ride</a></p>
+${CTA}
+  </div>
+</main>
+` + foot();
 }
 
 // ---------- /rides/about/ and /rides/add/ — the explaining, off the path ----------
@@ -1655,13 +1751,13 @@ function usPage(usRides, hubs) {
   const states = Object.keys(byState).sort((a, b) => byState[b].length - byState[a].length || stateName(a).localeCompare(stateName(b)));
   const nStates = states.filter((x) => x !== "DC").length;
   const canonical = `${SITE}/rides/united-states/`;
-  const crumbs = [["Cycle for Change", `${SITE}/`], ["Group rides", `${SITE}/rides/`], ["United States", canonical]];
+  const crumbs = [["Cycle for Change", `${SITE}/`], ["Find a ride", `${SITE}/find-a-ride/`], ["Group rides", `${SITE}/rides/`], ["United States", canonical]];
   const description = `${usRides.length} recurring bicycle group rides in ${nStates} states${states.includes("DC") ? " and DC" : ""}. Pick a state or a city: day, time, start point, pace, and when each was last checked.`;
   const jsonld = { "@context": "https://schema.org", "@graph": [
     { "@type": "CollectionPage", "@id": canonical, name: "Group rides in the United States", description, url: canonical, dateModified: lastCheckedOf(usRides), author: AUTHOR, publisher: PUBLISHER, breadcrumb: breadcrumbLd(crumbs) },
   ] };
   const home = hubs.find((h) => h.state === "AZ" && h.city === "Phoenix");
-  const cityList = [...(home ? [home] : []), ...hubs.filter((h) => h !== home).sort((a, b) => b.rides.length - a.rides.length || a.city.localeCompare(b.city))].slice(0, 12);
+  const cityList = [...(home ? [home] : []), ...hubs.filter((h) => h !== home).sort((a, b) => b.rides.length - a.rides.length || a.city.localeCompare(b.city))].slice(0, 6);
   return head({ title: `Group rides in the United States (${usRides.length} rides)`, description, canonical, jsonld }) + `
 <main id="main" class="gr-dir">
   <header class="gr-head wrap">
@@ -1675,9 +1771,15 @@ function usPage(usRides, hubs) {
     </section>` : ""}
     <section class="gr-step" aria-labelledby="us-state-h">
       <h2 class="gr-filter-label" id="us-state-h">${GEO ? "Or pick from the list" : "Pick a state"}</h2>
-      <div class="tiles-p tiles-p--wide">
-        ${states.map((st) => posterTile({ href: `/rides/${st.toLowerCase()}/`, name: st, count: byState[st].length, small: "rides", blurb: stateName(st), cls: "tile-p--wide tile-p--code" })).join("\n        ")}
+      <div class="gr-rows-st">
+        ${states.slice(0, 10).map(stateRow(byState)).join("\n        ")}
       </div>
+      ${states.length > 10 ? `<details class="gr-fold">
+        <summary>All ${states.length}, A to Z</summary>
+        <div class="gr-rows-st">
+        ${states.slice().sort((a, b) => stateName(a).localeCompare(stateName(b))).map(stateRow(byState)).join("\n        ")}
+        </div>
+      </details>` : ""}
     </section>
     <section class="gr-step" aria-labelledby="us-city-h">
       <h2 class="gr-filter-label" id="us-city-h">Or one of the biggest cities</h2>
@@ -1992,7 +2094,7 @@ ${CTA}
 function sitemap(rides, states, hubs, worldCCs = [], worldHubs = [], steps = []) {
   // rides = the rides on the lists; lastmod = the last check, never "today"
   const maxOf = (list) => lastCheckedOf(list);
-  const rows = [[`${SITE}/rides/`, maxOf(rides)], [`${SITE}/rides/about/`, maxOf(rides)]];
+  const rows = [[`${SITE}/find-a-ride/`, maxOf(rides)], [`${SITE}/find-a-ride/gravel/`, maxOf(rides)], [`${SITE}/rides/`, maxOf(rides)], [`${SITE}/rides/about/`, maxOf(rides)]];
   if (rides.some((r) => !isUS(r))) rows.push([`${SITE}/rides/world/`, maxOf(rides.filter((r) => !isUS(r)))]);
   for (const pg of steps) rows.push([`${SITE}${pg.path}`, maxOf(pg.rides)]);
   const us = rides.filter(isUS);
@@ -2051,6 +2153,9 @@ function main() {
   if (GEO) { write(path.join(OUT, "maps", "us.svg"), outlineSvg(GEO.nation)); write(path.join(OUT, "maps", "world.svg"), outlineSvg(GEO.world)); }
   for (const [shape, det] of DETAIL_OF) write(path.join(OUT, "maps", "detail", `${det.file}.svg`), detailSvg(shape, det));   // Pass 18
   write(path.join(OUT, "index.html"), directory(rides, hubs, world.hubs));
+  // Pass 20: the front door sits beside /rides/ (cfc-site/find-a-ride/), so it follows --out too
+  write(path.join(OUT, "..", "find-a-ride", "index.html"), findPage(rides));
+  write(path.join(OUT, "..", "find-a-ride", "gravel", "index.html"), gravelPage(rides));
   write(path.join(OUT, "about", "index.html"), aboutPage(rides));
   write(path.join(OUT, "add", "index.html"), addPage(rides));
   if (rides.some((r) => !isUS(r))) write(path.join(OUT, "world", "index.html"), worldPage(rides, world.hubs));
