@@ -28,7 +28,11 @@ const BASE = (args.base || 'https://cycleforchange.org').replace(/\/$/, '');
 const OUT = args.out || path.join(path.dirname(new URL(import.meta.url).pathname), 'snapshots');
 const LIMIT = args.limit ? Number(args.limit) : Infinity;
 const CONCURRENCY = Number(args.concurrency || 8);
-const UA = 'CFC-SearchLab/1.0 (+https://cycleforchange.org; case-study crawler)';
+// A sitemap file listing more than SAMPLE_OVER URLs (e.g. 45,000 generated provider pages) is
+// crawled as a fixed panel of SAMPLE URLs, the same ones every week while they exist, so weeks compare.
+const SAMPLE = Number(args.sample || 300);
+const SAMPLE_OVER = Number(args['sample-over'] || 2000);
+const UA = 'SearchLab/1.0 (site owner\'s weekly case-study crawler)';
 const today = new Date().toISOString().slice(0, 10);
 
 // ---------- helpers ----------
@@ -91,12 +95,21 @@ async function sitemapUrls(url, seen = new Set()) {
     lastmod: (m[2].match(/<lastmod>([\s\S]*?)<\/lastmod>/) || [])[1] || null,
   }));
   const out = [];
-  for (const l of locs) {
-    if (l.kind === 'sitemap') out.push(...(await sitemapUrls(l.loc, seen)));
-    else out.push({ url: norm(l.loc), lastmod: l.lastmod, sitemap: url });
+  const urls = locs.filter((l) => l.kind === 'url');
+  for (const l of locs.filter((l) => l.kind === 'sitemap')) for (const x of await sitemapUrls(l.loc, seen)) out.push(x);
+  let keep = urls;
+  if (urls.length > SAMPLE_OVER) {
+    // Fixed panel: the SAMPLE URLs with the smallest hash, stable from week to week.
+    const h = (s) => { let x = 2166136261; for (let i = 0; i < s.length; i++) { x ^= s.charCodeAt(i); x = Math.imul(x, 16777619); } return x >>> 0; };
+    keep = urls.map((l) => [h(l.loc), l]).sort((a, b) => a[0] - b[0]).slice(0, SAMPLE).map((p) => p[1]);
+    sampledMaps.push({ sitemap: url, total: urls.length, sampled: keep.length });
   }
+  sitemapTotal += urls.length;
+  for (const l of keep) out.push({ url: norm(l.loc), lastmod: l.lastmod, sitemap: url });
   return out;
 }
+let sitemapTotal = 0;
+const sampledMaps = [];
 
 function jsonLdTypes(html) {
   const types = new Set();
@@ -165,7 +178,13 @@ function analyse(url, html) {
 // ---------- crawl ----------
 const t0 = Date.now();
 const robots = await get(BASE + '/robots.txt');
-const listed = await sitemapUrls(BASE + '/sitemap.xml');
+// Every sitemap robots.txt names (some sites list an index and a flat file); /sitemap.xml if none.
+const robotSitemaps = robots.status === 200
+  ? [...robots.body.matchAll(/^\s*sitemap:\s*(\S+)/gim)].map((m) => m[1].trim().replace(/^https?:\/\/[^/]+/i, BASE))
+  : [];
+const listed = [];
+const seenMaps = new Set();
+for (const sm of robotSitemaps.length ? robotSitemaps : [BASE + '/sitemap.xml']) for (const x of await sitemapUrls(sm, seenMaps)) listed.push(x);
 const sitemapErrors = listed.filter((l) => l.sitemapError);
 const inSitemap = new Map();
 for (const l of listed.filter((l) => l.url)) if (!inSitemap.has(l.url)) inSitemap.set(l.url, l);
@@ -243,7 +262,7 @@ for (const p of ok) for (const t of p.schema) schemaAll[t] = (schemaAll[t] || 0)
 const summary = {
   date: today, base: BASE, crawlSeconds: Math.round((Date.now() - t0) / 1000),
   robotsTxt: robots.status === 200 ? robots.body.trim() : `status ${robots.status}`,
-  sitemapUrls: inSitemap.size, sitemapErrors,
+  sitemapUrls: sitemapTotal, sitemapUrlsCrawled: inSitemap.size, sampled: sampledMaps, sitemapErrors,
   crawled: pages.length,
   status: pages.reduce((m, p) => ((m[p.status] = (m[p.status] || 0) + 1), m), {}),
   html200: ok.length,
