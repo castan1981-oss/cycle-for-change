@@ -1,0 +1,985 @@
+[
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "state": "TX",
+  "country": "US",
+  "region": "Texas",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Four groups. A: 20+ mph over 40 miles. B: 18+ mph over 40 miles. C: 15-16 mph over 33 miles. D: 12 mph over 20 miles.",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "neighborhood": "The Woodlands area",
+  "slug": "spring-tx-sun-and-ski-sunday-shop-ride",
+  "name": "Sun & Ski Sunday Shop Ride",
+  "city": "Spring",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Sunday, 7:00 am from the store. The Bike The Woodlands calendar says the start is 7:00 or 7:30 am by season.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Sun & Ski Sports",
+   "address": "25415 I-45, Spring, TX 77380"
+  },
+  "drop_policy": "groups",
+  "host": {
+   "name": "Sun & Ski Sports",
+   "type": "shop"
+  },
+  "visitor_notes": "No sign-up. The shop runs a Facebook group for updates. All groups stop at Creekside Green. Confirm the October start time with the shop: the shop page says 7:00 and the coalition calendar says it moves between 7:00 and 7:30.",
+  "description": "The biggest regular group ride in the north Houston suburbs. It leaves from the Sun & Ski store in Spring on Sunday mornings. There are four pace groups, from 20+ mph down to a 12 mph group over 20 miles. Groups stop at Creekside Green for a break, and the shop usually has refreshments at the end.",
+  "links": {
+   "website": "https://www.sunandski.com/stores/the-woodlands-5",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/groups/sunandskiwoodlandsgroupride/",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.facebook.com/share/1C1BTbm7Nj/",
+    "https://www.bikethewoodlands.org/rides"
+   ]
+  },
+  "sources": [
+   "https://www.sunandski.com/stores/the-woodlands-5",
+   "https://www.bikethewoodlands.org/rides"
+  ],
+  "last_seen": "2026-04-24",
+  "evidence": "Sun & Ski's own store page says 'Join us at the store Sundays at 7am' (fetched Oct 2, 2026); the Bike The Woodlands ride calendar, last updated Apr 24, 2026, lists the ride with its four groups and the 7:00 or 7:30 seasonal start.",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.sunandski.com/stores/the-woodlands-5",
+   "feed_url": null,
+   "notes": "Store page carries the ride line. The coalition calendar at bikethewoodlands.org/rides lists the seasonal start (7:00 or 7:30). Rides are also posted on Chasing Watts (login)."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "state": "TX",
+  "country": "US",
+  "region": "Texas",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 31,
+  "distance_miles": 19.5,
+  "duration": null,
+  "duration_min": null,
+  "pace": "About 11 mph average",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "neighborhood": "Heights",
+  "slug": "houston-tx-coffee-and-bikes-htx-sunday-social-ride",
+  "name": "Coffee & Bikes Sunday Social Ride",
+  "city": "Houston",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "About once a month, usually a Sunday morning. Next: Sun Oct 4, 2026, meet 7:00 am at Spotts Park, roll about 8:05. Date, start and time are posted on the site for each ride.",
+  "days": [
+   "sun"
+  ],
+  "time_local": null,
+  "start_hhmm": null,
+  "frequency": "irregular",
+  "start_location": {
+   "name": "Spotts Park (Oct 4 ride; the start changes by ride)",
+   "address": "401 S Heights Blvd, Houston, TX"
+  },
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Coffee & Bikes HTX",
+   "type": "collective"
+  },
+  "visitor_notes": "Each ride has its own page (C&B-86 is the next). Starts and routes change: Oct 4 starts at Spotts Park; the June 21 ride started at Slow Drip and the Nov 9, 2025 ride at Greenway Coffee Roastery. Helmets asked for. Ride at your own risk.",
+  "description": "A slow Sunday-morning social ride with a coffee stop, put on by Coffee & Bikes in Houston. Rides are numbered. The next is number 86, 19.5 miles at about 11 mph, starting with a bring-your-own-coffee meet-up at Spotts Park. Past rides have raised money for the Houston Food Bank.",
+  "links": {
+   "website": "https://coffeeandbikeshtx.com/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://coffeeandbikeshtx.com/",
+   "https://coffeeandbikeshtx.com/rides/cb-80/",
+   "https://coffeeandbikeshtx.com/rides/cb-71/"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "Coffee & Bikes' home page lists the next ride, C&B-86, for Sun Oct 4, 2026 (fetched Oct 2, 2026). Its ride pages show C&B-84 on Sep 5, C&B-80 on Jun 21, 2026 and C&B-71 on Nov 9, 2025, so about one ride a month.",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://coffeeandbikeshtx.com/",
+   "feed_url": null,
+   "notes": "Home page shows 'Catch Our Next Ride' with date, meet-up and pace. Each ride has a page at /rides/cb-<number>/. Cadence is about monthly, not fixed."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "state": "TX",
+  "country": "US",
+  "region": "Texas",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 40,
+  "distance_miles": 25,
+  "duration": null,
+  "duration_min": null,
+  "pace": "About 16 mph average, to the Starbucks on Lake Conroe",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "verified_on": "2026-10-02",
+  "neighborhood": null,
+  "slug": "magnolia-tx-love-and-coffee-friday-ride",
+  "name": "Love & Coffee Ride",
+  "city": "Magnolia",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Friday. Roll 7:30 or 8:00 am depending on the season; arrive by 7:30.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Fitness Project",
+   "address": "6511 FM 1488, Magnolia, TX 77354"
+  },
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Community ride (Magnolia and The Woodlands)",
+   "type": "informal"
+  },
+  "visitor_notes": "The listing gives the start as 7:30 or 8:00 am by season and does not say which applies in October. Confirm on Chasing Watts or with Bike The Woodlands before you go.",
+  "description": "A friendly Friday road ride of about 25 miles from Fitness Project in Magnolia to the Starbucks on Lake Conroe. It is a coffee and fellowship ride at about 16 mph, and no one is dropped. The Bike The Woodlands coalition lists it with the other regular rides in the area.",
+  "links": {
+   "website": "https://www.bikethewoodlands.org/rides",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://www.bikethewoodlands.org/rides"
+  ],
+  "last_seen": "2026-04-24",
+  "evidence": "Bike The Woodlands Coalition's Local Ride Calendar, 'last updated 04/24/26' and 'as of May 2026', lists the Love & Coffee Ride on Fridays from Fitness Project, 7:30 or 8:00 am, no drop (fetched Oct 2, 2026). The schedule comes from the coalition's page, not the riders'.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.bikethewoodlands.org/rides",
+   "feed_url": null,
+   "notes": "The coalition's calendar is hand-updated (last update Apr 24, 2026). The ride is also posted weekly on Chasing Watts (login)."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "state": "TX",
+  "country": "US",
+  "region": "Texas",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 71,
+  "distance_miles": 44,
+  "duration": null,
+  "duration_min": null,
+  "pace": "18-20+ mph average. The group often splits into two or three smaller groups.",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "neighborhood": null,
+  "slug": "the-woodlands-tx-woodlands-tuesday-night-ride",
+  "name": "Woodlands Tuesday Night Ride",
+  "city": "The Woodlands",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday, 5:30 pm from Whole Foods at Hughes Landing. A second, faster lap leaves at 6:30 pm.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Whole Foods Market, Hughes Landing",
+   "address": "1925 Hughes Landing Blvd, The Woodlands, TX 77380"
+  },
+  "drop_policy": "groups",
+  "host": {
+   "name": "Community ride (The Woodlands)",
+   "type": "informal"
+  },
+  "visitor_notes": "Bring lights: the ride runs into the evening. Posted weekly on Chasing Watts (free login). Confirm with Bike The Woodlands if the weather is bad.",
+  "description": "A fast community road ride from Hughes Landing in The Woodlands. The first lap rolls at 5:30 pm and a second, harder lap starts from the same spot at 6:30 pm. It covers about 44 miles at 18 to 20 mph or more, and the group often fractures into smaller groups.",
+  "links": {
+   "website": "https://www.bikethewoodlands.org/rides",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://www.bikethewoodlands.org/rides"
+  ],
+  "last_seen": "2026-04-24",
+  "evidence": "Bike The Woodlands Coalition's Local Ride Calendar, 'last updated 04/24/26' and 'as of May 2026', lists the Tuesday Night Ride at 5:30 pm from Whole Foods, Hughes Landing, with a 6:30 pm second lap (fetched Oct 2, 2026). The schedule comes from the coalition's page, not the riders'.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.bikethewoodlands.org/rides",
+   "feed_url": null,
+   "notes": "The coalition's calendar is hand-updated (last update Apr 24, 2026). The ride is also posted weekly on Chasing Watts (login)."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "state": "TX",
+  "country": "US",
+  "region": "Texas",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "17-19 mph, recovery pace",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "neighborhood": null,
+  "slug": "sugar-land-tx-motherland-cycling-sunday-recovery-ride",
+  "name": "Motherland Sunday Recovery Ride",
+  "city": "Sugar Land",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Sunday, roll out 7:30 am prompt. Rest stop at Blockhouse Coffee in Richmond.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Jersey Mike's Subs",
+   "address": "18427 Southwest Fwy, Sugar Land, TX 77479"
+  },
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Motherland Cycling Club",
+   "type": "club"
+  },
+  "visitor_notes": "The club asks new riders to read its Beginner's Orientation and Bike Laws & Safety pages before a first ride. The ride page says the rest stop is Blockhouse Coffee in Richmond; the club calendar gives the start address.",
+  "description": "Motherland Cycling Club's easy Sunday ride out of Sugar Land, rolling at 7:30 am with a coffee stop at Blockhouse Coffee in Richmond. The pace is 17 to 19 mph. The club also runs Tuesday and Thursday morning rides and a combined Saturday ride.",
+  "links": {
+   "website": "https://motherlandcycling.org/event/blockhouse-coffee-recovery-ride/",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/motherland.cycling",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://motherlandcycling.org/events/",
+   "https://motherlandcycling.org/event/blockhouse-coffee-recovery-ride/"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "Motherland's events calendar lists the Sunday Blockhouse Coffee Recovery Ride for Oct 4 and Oct 11, 2026, 7:30 am, at 18427 Southwest Fwy, Sugar Land; the ride page says 'Rollout Time: 7:30 AM Prompt' (fetched Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://motherlandcycling.org/events/",
+   "feed_url": null,
+   "notes": "WordPress events calendar lists the next two Sundays. The club's other rides are on the same calendar."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "state": "TX",
+  "country": "US",
+  "region": "Texas",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Pace groups: Warps 25+, 22+, 21, 20s, 18s, Cruisers 15-16 mph. Groups above 18 mph are drop groups.",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "neighborhood": "Clear Lake",
+  "slug": "houston-tx-space-city-cycling-club-weekly-rides",
+  "name": "Space City Cycling Club Weekly Rides",
+  "city": "Houston",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Mon, Wed, Fri, Sat and Sun, 7:30 am. Saturday is the biggest ride, with pace groups from 15-16 mph to 25+ mph.",
+  "days": [
+   "mon",
+   "wed",
+   "fri",
+   "sat",
+   "sun"
+  ],
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Trek Bicycle Clear Lake",
+   "address": "2422 Bay Area Blvd, Houston, TX 77058"
+  },
+  "drop_policy": "groups",
+  "host": {
+   "name": "Space City Cycling Club",
+   "type": "club"
+  },
+  "visitor_notes": "Membership is $50 a year. The club's new-rider page says to come on a Saturday for a first ride and how to pick a group. It does not say whether guests can ride before joining, so ask the club (info@spacecitycycling.club) first. Rides can be cancelled for wind, rain or cold.",
+  "description": "A Clear Lake club that has ridden since 1979, starting from Trek Bicycle Clear Lake. Rides roll at 7:30 am five days a week. Saturday has the most groups, from a 15-16 mph cruiser group to the 25+ mph Warps. Groups form at the start and leave fastest first.",
+  "links": {
+   "website": "https://spacecitycycling.club/riding/",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/spacecitycyclingclub/",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://ridewithgps.com/clubs/16206-space-city-cycling-club"
+   ]
+  },
+  "sources": [
+   "https://spacecitycycling.club/riding/",
+   "https://spacecitycycling.club/membership/"
+  ],
+  "last_seen": null,
+  "evidence": "The club's Riding page lists the weekly rides Monday, Wednesday, Friday, Saturday and Sunday at 7:30 am from Trek Bicycle Clear Lake (fetched Oct 2, 2026). Nothing on the page is dated; the club site carries a 2024 by-laws file.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://spacecitycycling.club/riding/",
+   "feed_url": null,
+   "notes": "Official ride days and the 7:30 am start sit on the Riding page. Announcements and cancellations are in the club's Facebook group (login). The RideWithGPS club page needs a login."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "state": "TX",
+  "country": "US",
+  "region": "Texas",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "neighborhood": "East Austin",
+  "slug": "austin-tx-ride-bikes-austin-friday-night-ride",
+  "name": "Ride Bikes Austin Friday Night Ride",
+  "city": "Austin",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Friday, rolling out 8:00 pm from Parque Zaragoza.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "8:00 pm",
+  "start_hhmm": "20:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Parque Zaragoza",
+   "address": "Parque Zaragoza, Austin, TX"
+  },
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Ride Bikes Austin",
+   "type": "informal"
+  },
+  "visitor_notes": "The route is posted most Fridays on the group's Linktree ('Check Date'). Lights and a lock are sensible. Critical Mass Austin uses the same park on the last Friday of the month.",
+  "description": "A weekly Friday-night bike ride that rolls out from Parque Zaragoza in East Austin at 8:00 pm. The group posts the route most Fridays and runs some cleanup and taco rides from the same park. It is a different group from Critical Mass Austin, though the two meet at the same place on the last Friday.",
+  "links": {
+   "website": "https://linktr.ee/RideBikesAustin",
+   "instagram": "https://instagram.com/ridebikesaustin",
+   "facebook": "https://www.facebook.com/RideBikesAustin",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://austinbikegroups.com/groups"
+   ]
+  },
+  "sources": [
+   "https://linktr.ee/RideBikesAustin",
+   "https://austinbikegroups.com/groups"
+  ],
+  "last_seen": "2026-09-15",
+  "evidence": "The group's Linktree bio says 'Rolling out 8pm from Parque Zaragoza every Friday!' and carries a link titled '9/15/26 Parque Zaragoza Cleanup & Taco Ride' (fetched Oct 2, 2026). The Austin bike-groups directory repeats the Friday 8 pm start.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://linktr.ee/RideBikesAustin",
+   "feed_url": null,
+   "notes": "Linktree carries a weekly route link ('Updated Most Fridays, Check Date'), a monthly events calendar link and dated posts. The group posts on Instagram and Facebook (both need a login)."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "state": "TX",
+  "country": "US",
+  "region": "Texas",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Tagged 'Beginner Friendly Pace' and 'Has Ride Leader' by the shop",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "verified_on": "2026-10-02",
+  "neighborhood": "Clearfork",
+  "slug": "fort-worth-tx-bike-mart-clearfork-panther-island-group-ride",
+  "name": "Panther Island Group Ride (Bike Mart Clearfork)",
+  "city": "Fort Worth",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday, 7:00 pm from the Bike Mart store at Clearfork. Led ride, beginner-friendly pace.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "7:00 pm",
+  "start_hhmm": "19:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Bike Mart Fort Worth, Clearfork at the Trailhead",
+   "address": "4801 Edwards Ranch Rd, Suite 125, Fort Worth, TX 76109"
+  },
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Bike Mart (Fort Worth Clearfork)",
+   "type": "shop"
+  },
+  "visitor_notes": "The route is on RideWithGPS (link on the shop's events page). Start times on Bike Mart's calendar shift with daylight, so check the page before a winter evening. Call the store with questions.",
+  "description": "Bike Mart's Fort Worth store runs a weekly Wednesday evening road ride out of the Trailhead at Clearfork. It is led, at a beginner-friendly pace, and follows a posted RideWithGPS route toward the Panther Island area.",
+  "links": {
+   "website": "https://www.bikemart.com/pages/group-rides",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://ridewithgps.com/routes/45032335"
+   ]
+  },
+  "sources": [
+   "https://www.bikemart.com/pages/group-rides"
+  ],
+  "last_seen": null,
+  "evidence": "Bike Mart's Group Rides page (an events widget) lists 'Road - Panther Island Group Ride' as a weekly repeat with no end date, Wednesdays 7:00 pm at Fort Worth Clearfork, tagged Beginner Friendly Pace and Has Ride Leader (widget data read Oct 2, 2026). The widget's first date is Oct 8, 2025.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.bikemart.com/pages/group-rides",
+   "feed_url": null,
+   "notes": "The page loads an Elfsight events widget; the ride repeats weekly, never ends, and carries a RideWithGPS route. No iCal feed found."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "state": "TX",
+  "country": "US",
+  "region": "Texas",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "West side of Northshore ridden in reverse; DORBA marks it for advanced riders",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "neighborhood": null,
+  "slug": "flower-mound-tx-dirt-disciples-thursday-northshore",
+  "name": "Dirt Disciples Thursday Ride (Northshore)",
+  "city": "Flower Mound",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Every Thursday, 6:00 pm from the MADD shelter at Northshore. West side reversed, for advanced riders.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "MADD shelter, Northshore Trail",
+   "address": null
+  },
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Dirt Disciples",
+   "type": "informal"
+  },
+  "visitor_notes": "DORBA's weekly rides page links the group's Facebook page for changes. On Tuesdays the same group rides at 6:15 pm from varying locations, also posted on Facebook. Check Northshore trail conditions with DORBA first.",
+  "description": "Dirt Disciples ride Northshore on Thursday evenings, starting at the MADD shelter at 6:00 pm. The route runs the west side in reverse and is meant for advanced riders. The group also rides Tuesday evenings from changing spots.",
+  "links": {
+   "website": "https://www.dorba.org/content.aspx?page_id=22&club_id=600794&module_id=647759",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/dfwdirtdisciples",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.trailforks.com/region/northshore/"
+   ]
+  },
+  "sources": [
+   "https://www.dorba.org/content.aspx?page_id=22&club_id=600794&module_id=647759"
+  ],
+  "last_seen": null,
+  "evidence": "DORBA's Weekly Rides page (footer copyright 2026) lists 'Dirt Disciples | Northshore at 6:00 PM (MADD shelter) - West side reversed (advanced riders)' under Thursday (fetched Oct 2, 2026). The page carries no dates.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.dorba.org/content.aspx?page_id=22&club_id=600794&module_id=647759",
+   "feed_url": null,
+   "notes": "DORBA's ClubExpress page lists every weekly trail ride; it has no dates. Changes are posted on the group's Facebook page."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "state": "TX",
+  "country": "US",
+  "region": "Texas",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "neighborhood": null,
+  "slug": "roanoke-tx-velo-cafe-tuesday-night-knob-hills",
+  "name": "Velo Cafe Tuesday Night Group Ride (Knob Hills)",
+  "city": "Roanoke",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Every Tuesday, 6:30 pm at the Knob Hills trail.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Knob Hills Bike Trail",
+   "address": "Knob Hills Bike Trail, Roanoke, TX 76262"
+  },
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Velo Cafe (Keller)",
+   "type": "shop"
+  },
+  "visitor_notes": "DORBA's weekly list links the shop's Facebook page for changes. DORBA says Velo Cafe in Keller leads this ride (its 2024 Knob Hills event page says so). Check that the trail is open before you drive out.",
+  "description": "A Tuesday-evening mountain bike group ride at DORBA's Knob Hills trail, led by Velo Cafe, a bike shop in Keller. It rolls at 6:30 pm.",
+  "links": {
+   "website": "https://www.dorba.org/content.aspx?page_id=22&club_id=600794&module_id=647759",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/velocafebikes",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://www.dorba.org/content.aspx?page_id=22&club_id=600794&module_id=647759",
+   "https://www.dorba.org/content.aspx?page_id=4002&club_id=600794&item_id=2376144"
+  ],
+  "last_seen": null,
+  "evidence": "DORBA's Weekly Rides page (footer copyright 2026) lists 'Velo Cafe Group Ride | Knob Hills at 6:30 PM' under Tuesday (fetched Oct 2, 2026). A 2024 DORBA event page at the trail gives the address and says Velo Cafe leads the Tuesday Night group ride. No dates on the weekly page.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.dorba.org/content.aspx?page_id=22&club_id=600794&module_id=647759",
+   "feed_url": null,
+   "notes": "DORBA's ClubExpress page lists every weekly trail ride; it has no dates. The shop posts changes on Facebook."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "state": "TX",
+  "country": "US",
+  "region": "Texas",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 27,
+  "distance_miles": 17,
+  "duration": null,
+  "duration_min": null,
+  "pace": "10-12 mph rolling average, or slower to keep the group together",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [
+   "beginner",
+   "no-drop",
+   "family"
+  ],
+  "verified_on": "2026-10-02",
+  "neighborhood": null,
+  "slug": "plano-tx-pba-sunday-caffeine-cruise",
+  "name": "PBA Sunday Caffeine Cruise",
+  "city": "Plano",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Sundays, 9:00 am from the Starbucks at Lakeside Market. About 17 miles, with a 10.5-mile cutoff.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Starbucks parking lot, Lakeside Market (NE of the store)",
+   "address": "4025 Preston Rd, Plano, TX 75093"
+  },
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Plano Bicycle Association",
+   "type": "club"
+  },
+  "visitor_notes": "Guests can sign up for 30 days of free membership, and PBA asks riders to register for each ride on its calendar. Arrive 15 minutes early. Helmet, closed-toe shoes, water and a flat kit required. Family members welcome; minors need a guardian who signs the waiver.",
+  "description": "The Plano Bicycle Association's easy Sunday ride: 17 miles at a social, conversational pace with a 10.5-mile cutoff and three optional sprint zones with regroups. It is billed as an introduction to group riding or a recovery ride. Coffee at the Starbucks after.",
+  "links": {
+   "website": "https://planobicycle.org/content.aspx?page_id=22&club_id=536213&module_id=280346",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://planobicycle.org/content.aspx?page_id=22&club_id=536213&module_id=280346",
+   "https://planobicycle.org/content.aspx?page_id=4002&club_id=536213",
+   "https://planobicycle.org/"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "PBA's ride calendar lists 'Caffeine Cruise 9AM' for Sun Oct 4, 2026, and the ride page gives the Starbucks start at 4025 Preston Rd, 17 miles, 10-12 mph, no drop (fetched Oct 2, 2026). The PBA home page carries its September 2026 newsletter and says guests may sign up for 30 days of free membership.",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://planobicycle.org/content.aspx?page_id=22&club_id=536213&module_id=280346",
+   "feed_url": null,
+   "notes": "The ClubExpress calendar at page_id=4002 lists each ride with its date and start time. PBA's ride page says to check the calendar for the start time."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "state": "TX",
+  "country": "US",
+  "region": "Texas",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "neighborhood": null,
+  "slug": "grand-prairie-tx-lone-star-cyclists-thursday-training-ride",
+  "name": "Lone Star Cyclists Thursday Training Ride",
+  "city": "Grand Prairie",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Thursday, rolling out 6:15 pm from Anna May Daulton Elementary. Helmets and lights required.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:15 pm",
+  "start_hhmm": "18:15",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Anna May Daulton Elementary School",
+   "address": "2607 N Grand Peninsula Dr, Grand Prairie, TX 75054"
+  },
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Lone Star Cyclists",
+   "type": "club"
+  },
+  "visitor_notes": "Several groups use the same lot, so look for a Lone Star Cyclists member. Helmets and lights required. The club's Tuesday training ride is listed separately.",
+  "description": "Lone Star Cyclists' Thursday evening training ride from Anna May Daulton Elementary in Grand Prairie. Several groups meet in the lot, so riders look for a club member and roll at 6:15 pm. The club also trains on Tuesdays from Lake Ridge Elementary in Cedar Hill.",
+  "links": {
+   "website": "https://lscyclists.clubexpress.com/content.aspx?page_id=4001&club_id=500833",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/groups/LoneStarCyclists/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://lscyclists.clubexpress.com/content.aspx?page_id=4002&club_id=500833",
+   "https://lscyclists.clubexpress.com/content.aspx?page_id=4091&club_id=500833&item_id=2435803&event_date_id=440626"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "The club's event calendar lists the Thursday Training Ride for Oct 1, 8, 15, 22 and 29, 2026, 6:15 pm, at Anna May Daulton Elementary, 2607 N Grand Peninsula Dr, Grand Prairie (fetched Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://lscyclists.clubexpress.com/content.aspx?page_id=4091&club_id=500833&item_id=2435803",
+   "feed_url": null,
+   "notes": "ClubExpress calendar at page_id=4002 shows each Thursday date; the event page repeats weekly."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "state": "TX",
+  "country": "US",
+  "region": "Texas",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "neighborhood": "North Austin",
+  "slug": "austin-tx-bagel-ride-friday-flora-coffee-ride",
+  "name": "Friday Flora Coffee Ride",
+  "city": "Austin",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Fridays, 7:15 am from Flora Coffee. Two distances, 23 and 50 miles.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "7:15 am",
+  "start_hhmm": "07:15",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Flora Coffee",
+   "address": "3300 W Anderson Ln, Austin, TX"
+  },
+  "drop_policy": "unknown",
+  "host": {
+   "name": "The Bagel Ride (Strava club)",
+   "type": "club"
+  },
+  "visitor_notes": "The Bagel Ride is affiliated with Violet Crown Sports Association. The ride leader asks riders to click 'I'm going' on the Strava event so they get a push notice if it is cancelled. The club's latest post about the Friday ride is Jul 24, 2026 (a cancellation), so check the Strava club before October.",
+  "description": "A Friday-morning coffee ride from Flora Coffee on West Anderson Lane, run by the people behind the Saturday Bagel Ride. There is a 23-mile and a 50-mile option, and a different leader some weeks.",
+  "links": {
+   "website": "https://www.strava.com/clubs/1158711",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/1158711",
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://www.strava.com/clubs/1158711"
+  ],
+  "last_seen": "2026-07-24",
+  "evidence": "The Bagel Ride's public Strava club posts say 'Today's FFCR is cancelled' (Jul 24, 2026), give '7:15am, Flora Coffee, 3300 West Anderson Lane. Two distances: 23mi & 50mi' (Jul 2, 2026) and mention the Friday Flora Coffee Ride on Mar 4, 2026 (fetched Oct 2, 2026). No Friday post since July.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "strava-club",
+   "watch_url": "https://www.strava.com/clubs/1158711",
+   "feed_url": null,
+   "notes": "Public club posts show cancellations and updates with dates. The ride itself is a Strava club event (login to see the next date)."
+  }
+ }
+]

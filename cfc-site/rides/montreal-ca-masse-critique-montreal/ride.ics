@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:montreal-ca-masse-critique-montreal@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Toronto:20261030T170000
+DTEND;TZID=America/Toronto:20261030T190000
+RRULE:FREQ=MONTHLY;BYDAY=-1FR;UNTIL=20270301T235959Z
+SUMMARY:Masse Critique Montréal — Montreal\, Canada
+LOCATION:Sir George-Étienne Cartier monument (the Mont-Royal statue)\, P
+ arc du Mont-Royal\, Parc du Mont-Royal\, Montréal\, Quebec
+DESCRIPTION:Pace: Slow group ride that takes the street.\nSchedule: Last 
+ Friday of every month\, 5:00 pm at the Sir George-Étienne Cartier monum
+ ent (the Mont-Royal statue). The Sep 25\, 2026 ride started at Jardin du
+  Petit Monde à Bicyclette in Parc La Fontaine instead\, for that date o
+ nly..\nConfirm with the host before you go.\nhttps://cycleforchange.org/
+ rides/montreal-ca-masse-critique-montreal/
+URL:https://cycleforchange.org/rides/montreal-ca-masse-critique-montreal/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:albuquerque-nm-cycling-peeps-wednesday-wheelers@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Denver:20261007T083000
+DTEND;TZID=America/Denver:20261007T103000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20270301T235959Z
+SUMMARY:Cycling Peeps Wednesday Wheelers — Albuquerque\, NM
+LOCATION:Shown to members on the Meetup event
+DESCRIPTION:Schedule: Wednesday mornings\, 8:30 am on Oct 7 (8:00 am in S
+ eptember). The start place is shown to members on Meetup. Some weeks are
+  cancelled..\nConfirm with the host before you go.\nhttps://cycleforchan
+ ge.org/rides/albuquerque-nm-cycling-peeps-wednesday-wheelers/
+URL:https://cycleforchange.org/rides/albuquerque-nm-cycling-peeps-wednesd
+ ay-wheelers/
+END:VEVENT
+END:VCALENDAR

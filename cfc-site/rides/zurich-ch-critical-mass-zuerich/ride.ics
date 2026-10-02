@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:zurich-ch-critical-mass-zuerich@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=Europe/Zurich:20261030T184500
+DTEND;TZID=Europe/Zurich:20261030T204500
+RRULE:FREQ=MONTHLY;BYDAY=-1FR;UNTIL=20270301T235959Z
+SUMMARY:Critical Mass Zürich — Zürich\, Switzerland
+LOCATION:Bürkliplatz (Stadthausanlage)\, Stadthausanlage\, Zürich
+DESCRIPTION:Pace: Slow group ride; no leader.\nSchedule: Last Friday of e
+ very month\, 6:45 pm at Bürkliplatz (Stadthausanlage). The page shows F
+ ri Sep 25\, 2026 at 18h45..\nConfirm with the host before you go.\nhttps
+ ://cycleforchange.org/rides/zurich-ch-critical-mass-zuerich/
+URL:https://cycleforchange.org/rides/zurich-ch-critical-mass-zuerich/
+END:VEVENT
+END:VCALENDAR

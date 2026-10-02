@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:barcelona-es-massa-critica-barcelona@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=Europe/Madrid:20261106T200000
+DTEND;TZID=Europe/Madrid:20261106T220000
+RRULE:FREQ=MONTHLY;BYDAY=1FR;UNTIL=20270301T235959Z
+SUMMARY:Massa Crítica Barcelona — Barcelona\, Spain
+LOCATION:Arc de Triomf (Passeig Sant Joan)\, Arc de Triomf\, Barcelona
+DESCRIPTION:Pace: Slow group ride; no leader.\nSchedule: First Friday of 
+ every month: meet 8:00 pm under the Arc de Triomf (Passeig Sant Joan)\, 
+ depart about 8:30 pm. Next: Fri Oct 2\, 2026..\nConfirm with the host be
+ fore you go.\nhttps://cycleforchange.org/rides/barcelona-es-massa-critic
+ a-barcelona/
+URL:https://cycleforchange.org/rides/barcelona-es-massa-critica-barcelona
+ /
+END:VEVENT
+END:VCALENDAR

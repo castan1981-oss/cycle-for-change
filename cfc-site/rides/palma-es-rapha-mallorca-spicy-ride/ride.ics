@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:palma-es-rapha-mallorca-spicy-ride@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=Europe/Madrid:20261008T083000
+DTEND;TZID=Europe/Madrid:20261008T103000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270301T235959Z
+SUMMARY:Rapha Mallorca Spicy Ride — Palma\, Spain
+LOCATION:Rapha Mallorca clubhouse\, Plaça del Rosari 1\, 07001 Palma\, I
+ lles Balears
+DESCRIPTION:Pace: Advanced: 28 to 32 km/h on the flat\, 25 to 28 km/h on 
+ climbs.\nSchedule: Every Thursday: meet 8:15 am at the Rapha Mallorca cl
+ ubhouse\, roll out 8:30 am; back about 10:30 am. The booking page shows 
+ October 2026 and ongoing Thursdays..\nConfirm with the host before you g
+ o.\nhttps://cycleforchange.org/rides/palma-es-rapha-mallorca-spicy-ride/
+URL:https://cycleforchange.org/rides/palma-es-rapha-mallorca-spicy-ride/
+END:VEVENT
+END:VCALENDAR

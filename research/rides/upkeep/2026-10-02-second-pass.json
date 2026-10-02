@@ -1,0 +1,13 @@
+[
+ { "slug": "buffalo-ny-slow-spokes-tuesday-wilkeson-pointe-ride", "outcome": "seasonal-break", "checked_on": "2026-10-02",
+   "status_since": "2026-10-01", "status_note": "Slow Spokes says \"Thank You for a Great 2026 Season\". The rides return in 2027; no dates yet.",
+   "evidence": "slowspokesusa.com closes the 2026 season and says 2027 registration is coming soon.", "sources": ["https://slowspokesusa.com/"] },
+ { "slug": "lockport-ny-slow-spokes-friday-ride", "outcome": "seasonal-break", "checked_on": "2026-10-02",
+   "status_since": "2026-10-01", "status_note": "Slow Spokes says \"Thank You for a Great 2026 Season\". The rides return in 2027; no dates yet.",
+   "evidence": "slowspokesusa.com closes the 2026 season and says 2027 registration is coming soon.", "sources": ["https://slowspokesusa.com/"] },
+ { "slug": "munroe-falls-oh-abc-monday-evening-ride", "outcome": "changed", "checked_on": "2026-10-02", "last_seen": "2026-10-01",
+   "evidence": "The Akron Bicycle Club calendar lists the Oct 5 Monday ride at 5:30 pm from the Barlow Road trailhead, 331 Barlow Rd, Hudson, because of the earlier sunset.",
+   "sources": ["https://www.akronbicycleclub.org/"],
+   "changes": { "start_times": [ { "from": "2026-10-05", "start_hhmm": "17:30" } ],
+     "visitor_notes": "From Oct 5 the club's calendar lists a 5:30 pm start from the Barlow Road trailhead, 331 Barlow Rd, Hudson (earlier sunset). Check the club calendar before you go." } }
+]

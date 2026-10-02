@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sydney-au-rapha-sydney-thursday-ladies-open-ride@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=Australia/Sydney:20261008T060000
+DTEND;TZID=Australia/Sydney:20261008T073000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20261231T235959Z
+SUMMARY:Rapha Sydney Thursday Ladies Open Ride — Sydney\, Australia
+LOCATION:Taylor Square\, Darlinghurst\, Taylor Square\, Darlinghurst NSW
+DESCRIPTION:Pace: Moderate fitness and bike-handling skill expected; abou
+ t 1.5 hours.\nSchedule: Every Thursday: meet 5:55 am at Taylor Square\, 
+ Darlinghurst\, roll out 6:00 am\, back at the Rapha Sydney clubhouse abo
+ ut 7:30 am. Dates listed Oct 1 to Dec 31\, 2026..\nConfirm with the host
+  before you go.\nhttps://cycleforchange.org/rides/sydney-au-rapha-sydney
+ -thursday-ladies-open-ride/
+URL:https://cycleforchange.org/rides/sydney-au-rapha-sydney-thursday-ladi
+ es-open-ride/
+END:VEVENT
+END:VCALENDAR

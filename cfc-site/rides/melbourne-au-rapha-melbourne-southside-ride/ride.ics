@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:melbourne-au-rapha-melbourne-southside-ride@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=Australia/Melbourne:20261008T060000
+DTEND;TZID=Australia/Melbourne:20261008T080000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20261231T235959Z
+SUMMARY:Rapha Melbourne Southside Ride — Melbourne\, Australia
+LOCATION:Luna Park entrance\, Luna Park\, Melbourne VIC
+DESCRIPTION:Pace: Four pace groups: Core 28 km/h (28 km\, no-drop)\, Clas
+ sic 32 km/h (no-drop)\, Classic Plus 35 to 37 km/h\, Pro Team 37 to 40 k
+ m/h (a drop ride).\nSchedule: Every Thursday from Jul 16 to Dec 30\, 202
+ 6: briefing and roll-out about 6:00 am from the Luna Park entrance\, fin
+ ishing at Halcyon Days; back about 7:15 to 7:30 am..\nConfirm with the h
+ ost before you go.\nhttps://cycleforchange.org/rides/melbourne-au-rapha-
+ melbourne-southside-ride/
+URL:https://cycleforchange.org/rides/melbourne-au-rapha-melbourne-southsi
+ de-ride/
+END:VEVENT
+END:VCALENDAR

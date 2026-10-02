@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:baton-rouge-la-brbc-shenandoah-shuffle@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Chicago:20261006T173000
+DTEND;TZID=America/Chicago:20261006T183000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270301T235959Z
+SUMMARY:Shenandoah Shuffle (Baton Rouge Bike Club) — Baton Rouge\, LA
+LOCATION:Capitol Cyclery\, 5542 Jones Creek Rd\, Baton Rouge\, LA 70817
+DESCRIPTION:Pace: C pace\, 10-15 mph\, no faster than the slowest rider.\
+ nNo-drop.\nSchedule: Every Tuesday\, 5:30 pm from Capitol Cyclery. No-dr
+ op C pace\, routes of 5\, 10 and 20 miles..\nConfirm with the host befor
+ e you go.\nhttps://cycleforchange.org/rides/baton-rouge-la-brbc-shenando
+ ah-shuffle/
+URL:https://cycleforchange.org/rides/baton-rouge-la-brbc-shenandoah-shuff
+ le/
+END:VEVENT
+END:VCALENDAR

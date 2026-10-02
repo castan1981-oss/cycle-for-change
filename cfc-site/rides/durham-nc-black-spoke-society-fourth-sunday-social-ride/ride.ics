@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:durham-nc-black-spoke-society-fourth-sunday-social-ride@cycleforchang
+ e.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/New_York:20261025T100000
+DTEND;TZID=America/New_York:20261025T120000
+RRULE:FREQ=MONTHLY;BYDAY=4SU;UNTIL=20270301T235959Z
+SUMMARY:Black Spoke Society Fourth Sunday Social Ride — Durham\, NC
+LOCATION:CCB Plaza\, 201 Corcoran St\, Durham\, NC 27701
+DESCRIPTION:Pace: Conversational\, about 8-10 mph (Bike Durham's guide).\
+ nNo-drop.\nSchedule: Fourth Sunday of every month\, 10:00 am to noon fro
+ m CCB Plaza..\nConfirm with the host before you go.\nhttps://cycleforcha
+ nge.org/rides/durham-nc-black-spoke-society-fourth-sunday-social-ride/
+URL:https://cycleforchange.org/rides/durham-nc-black-spoke-society-fourth
+ -sunday-social-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,872 @@
+[
+ {
+  "slug": "chicago-il-specialized-chicago-sunday-smr",
+  "name": "Specialized Chicago Fulton Market Sunday SMR",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Chicago",
+  "neighborhood": "Fulton Market",
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Most Sundays from April to late October, rolling 7:15 am sharp from the Fulton Market store (time from the April 7 post; fall time not restated). Fall dates posted: Oct 11, Oct 18 and Oct 25 (season finale). First Sundays are the T-Shirt ride instead.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "7:15 am",
+  "start_hhmm": "07:15",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Apr–Oct",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Specialized Fulton Market store",
+   "address": "925 W Lake St, Chicago, IL"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "About 19 mph average, rolling 20+ when it makes sense; a drop ride that mostly stays together",
+  "drop_policy": "drop",
+  "host": {
+   "name": "Specialized Chicago (Fulton Market)",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Open to anyone who can hold the pace. The first SMR of 2026 was 56 miles with no coffee stop, up to the Highland Park boat ramp and back by about 10:30 am. The route is posted at the start of each week. The club cancels for bad weather and says so on its Strava page.",
+  "description": "A fast Sunday road ride from Specialized's Fulton Market store. It runs most Sundays from April to late October. The group aims to stay together at about 19 mph, and the route is posted each week. First Sundays are a slower T-Shirt ride.",
+  "links": {
+   "website": "https://www.specialized.com/us/en/store-finder/specialized-chicago-fulton-market/6407248",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/1060518",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.strava.com/clubs/1060518",
+   "https://www.strava.com/clubs/1060518/group_events/1650834"
+  ],
+  "verified_on": "2026-10-02",
+  "last_seen": "2026-09-19",
+  "evidence": "The Specialized Chicago Strava club's Aug 18 ride-schedule post (edited Sept 10) lists SMR on Oct 11, 18 and 25; a Sept 19 post cancels that Sunday's SMR for weather; the Apr 7 post gives 7:15 am sharp and the Fulton Market start (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "strava-club",
+   "watch_url": "https://www.strava.com/clubs/1060518",
+   "feed_url": null,
+   "notes": "Club posts carry the schedule look-ahead each month and cancellations. The Strava event list needs a login, so read the club page posts. Fall start time is unposted; April post said 7:15 am sharp."
+  }
+ },
+ {
+  "slug": "chicago-il-specialized-chicago-first-sunday-t-shirt-ride",
+  "name": "Specialized Chicago Fulton Market First-Sunday T-Shirt Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Chicago",
+  "neighborhood": "Fulton Market",
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "First Sunday of the month, April to October, rolling 7:30 am sharp from the Fulton Market store (time from the April 2 post). Next: Sun Oct 4, 2026. The September ride moved to Sept 13 because of Bike the Drive.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "sun"
+   }
+  ],
+  "season": "Apr–Oct",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Specialized Fulton Market store",
+   "address": "925 W Lake St, Chicago, IL"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Specialized Chicago (Fulton Market)",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The shop locks its doors and holds the pre-ride briefing at 7:25 am, so be there before then. The 2026 opener was a cold one and the shop said to bring layers.",
+  "description": "The shop's first-Sunday-of-the-month ride, a season-long T-shirt ride from Fulton Market. The pace and distance are not posted. It rolls at 7:30 am sharp after a 7:25 briefing.",
+  "links": {
+   "website": "https://www.specialized.com/us/en/store-finder/specialized-chicago-fulton-market/6407248",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/1060518",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.strava.com/clubs/1060518"
+  ],
+  "verified_on": "2026-10-02",
+  "last_seen": "2026-08-18",
+  "evidence": "The Specialized Chicago Strava club's Apr 7 post says every first Sunday is a T-Shirt ride and lists Oct 4 as the last; the Aug 18 post (edited Sept 10) lists Oct 4 as a T-SHIRT RIDE; the Apr 2 post gives 7:30 am sharp (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "strava-club",
+   "watch_url": "https://www.strava.com/clubs/1060518",
+   "feed_url": null,
+   "notes": "Read the monthly look-ahead post on the club page. Time is from April; check it again in spring 2027."
+  }
+ },
+ {
+  "slug": "geneva-il-fvbsc-monday-novice-slow-roll",
+  "name": "Fox Valley Bicycle & Ski Club Monday Novice/Casual Slow Roll",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Geneva",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Monday, 5:00 pm. The club calendar lists Oct 5, 12, 19 and 26, 2026.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "5:00 pm",
+  "start_hhmm": "17:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Persinger Recreation Center (Peck Farms), west side of the lot near the gazebo",
+   "address": "3507 Kaneville Rd, Geneva, IL 60134"
+  },
+  "distance_km": null,
+  "distance_miles": 11,
+  "duration": "a little over an hour",
+  "duration_min": null,
+  "pace": "8–10 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Fox Valley Bicycle & Ski Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Made for new riders, old three-speeds, people coming back from an injury, and anyone who does not want to kit up. About 11 miles on the Mid-County Trail. The ride leader's note on the event page asks you to register on the club calendar first. The club's 'About Our Rides' page says all its rides except Advanced are no-drop, and also says it is not offering Novice or Casual rides for lack of leaders, yet the calendar lists this one through Oct 26 with the leader's own note and no cancellation.",
+  "description": "A slow Monday-evening trail ride for new or casual riders from the Persinger Recreation Center in Geneva. About 11 miles on the Mid-County Trail at 8 to 10 mph, a little over an hour. Look for the leader near the gazebo on the west side of the lot.",
+  "links": {
+   "website": "https://www.fvbsc.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner",
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.fvbsc.org/content.aspx?page_id=4001&club_id=401197&action=cira&vm=Future&sif=0",
+   "https://www.fvbsc.org/content.aspx?page_id=4002&club_id=401197&item_id=2938357",
+   "https://www.fvbsc.org/content.aspx?page_id=22&club_id=401197&module_id=178914"
+  ],
+  "verified_on": "2026-10-02",
+  "last_seen": "2026-10-02",
+  "evidence": "The club's calendar lists the Novice/Casual (8-10mph) Trail Ride for Mon Oct 5, 12, 19 and 26, 2026 at 5:00 PM from Persinger Recreation Center (Peck Farms), 3507 Kaneville Rd, Geneva, with the leader's note (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.fvbsc.org/content.aspx?page_id=4001&club_id=401197&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "ClubExpress calendar, Future view. The club's About Our Rides page says Novice and Casual rides are not offered for lack of leaders, so a leader change could end this one."
+  }
+ },
+ {
+  "slug": "lake-forest-il-velo-club-roubaix-sunday-ride",
+  "name": "Velo Club Roubaix Sunday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Lake Forest",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Sunday, rolling 8:00 am from Northcroft Park (the club's calendar entries). The club's meeting-locations page lists Sunday 9:00 am at Jaycee Park for the later, shorter 'Sunday Sleep In' ride.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Northcroft Park",
+   "address": "Northcroft Park, Lake Forest, IL 60045"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Main ride at the posted pace, a little slower than the Saturday A ride; an early A ride of 50–65 miles is faster; the Sunday Sleep In is relaxed",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Velo Club Roubaix",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Guests may ride up to three times before joining. Complete the online guest waiver first, wear a helmet, and bring a properly maintained bike. The club's website table says Sunday starts at 9:00 am at Jaycee Park, but its Ride with GPS calendar lists every Sunday ride at 8:00 am from Northcroft Park, so check the calendar entry for the week.",
+  "description": "The northern-suburbs club's Sunday ride from Northcroft Park in Lake Forest. The calendar lists an 8:00 am roll each Sunday. The club also runs a faster early A ride and a later, shorter, conversational Sunday Sleep In.",
+  "links": {
+   "website": "https://www.veloclubroubaix.com/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://ridewithgps.com/clubs/12596-velo-club-roubaix-vcr/events",
+   "https://ridewithgps.com/clubs/12596-velo-club-roubaix-vcr/calendar.ics",
+   "https://www.veloclubroubaix.com/rider-info",
+   "https://www.veloclubroubaix.com/meeting-locations"
+  ],
+  "verified_on": "2026-10-02",
+  "last_seen": "2026-09-27",
+  "evidence": "The club's Ride with GPS calendar lists Sunday rides at 8:00 am from Northcroft (Lake Forest) on Sept 27, Sept 20 and Sept 13, and 'County ML Counter Clockwise' for Sun Oct 4, 2026 (fetched Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ridewithgps",
+   "watch_url": "https://ridewithgps.com/clubs/12596-velo-club-roubaix-vcr/events",
+   "feed_url": "https://ridewithgps.com/clubs/12596-velo-club-roubaix-vcr/calendar.ics",
+   "notes": "ICS feed has one entry per ride. The website's meeting-locations table disagrees on the Sunday start, so prefer the calendar."
+  }
+ },
+ {
+  "slug": "villa-park-il-west-suburban-womens-cycling-sunday-ride",
+  "name": "West Suburban Women's Cycling Sunday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Villa Park",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Most Sundays, 9:00 am, posted date by date on Meetup (next: Sun Oct 4, 2026, a 25-mile bakery ride). Easy Tuesday evening rides at 6:00 pm also run (the last one was Sep 29). Start locations are shown to members only.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "irregular",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Posted to members on the Meetup event page",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Mostly path rides on paved and crushed limestone, with a pit stop along the way",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "West Suburban Women's Cycling",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Women only ('all ladies are welcome'). The group asks that you leave e-bikes at home. It is a private Meetup group: ask to join, and the start location shows once you are in.",
+  "description": "A women's Meetup group in the western Chicago suburbs with more than 600 members. Its Sunday rides are mostly path rides on paved and crushed-limestone trails, often ending at a bakery. It also runs easy Tuesday-evening rides of 10 to 14 miles.",
+  "links": {
+   "website": "https://www.meetup.com/west-suburban-womens-cycling/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/west-suburban-womens-cycling/",
+   "other": []
+  },
+  "inclusive_focus": [
+   "wtf"
+  ],
+  "sources": [
+   "https://www.meetup.com/west-suburban-womens-cycling/"
+  ],
+  "verified_on": "2026-10-02",
+  "last_seen": "2026-09-29",
+  "evidence": "The group's public Meetup page lists Sweet Sunday Ride, Triangle Route + Bakery Stop, 25 miles, Sun Oct 4, 2026 at 9:00 AM CDT, and past events on Sun Sep 27 (9:00 AM) and Tue Sep 29 (6:00 PM); it says 604 members and 491 past events (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/west-suburban-womens-cycling/",
+   "feed_url": null,
+   "notes": "The public group page shows the next three events with dates and times; the ICS feed answers 'Invalid feed signature'. Locations need membership."
+  }
+ },
+ {
+  "slug": "minneapolis-mn-all-bodies-on-bikes-mpls-monthly-ride",
+  "name": "All Bodies on Bikes MPLS Monthly Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Minneapolis",
+  "neighborhood": null,
+  "region": "Minnesota",
+  "state": "MN",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Monthly, usually a Monday evening in the 2026 series (Jul 7, Aug 3 and Oct 5). Next: Mon Oct 5, 2026, meet 6:00 pm, roll 6:30 pm. The dates are posted one at a time.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "irregular",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Angry Catfish Bicycle",
+   "address": "2900 E 42nd St, Minneapolis, MN 55406"
+  },
+  "distance_km": null,
+  "distance_miles": 11.8,
+  "duration": null,
+  "duration_min": null,
+  "pace": "12 mph or slower",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "All Bodies on Bikes MPLS",
+   "type": "collective"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The group describes itself as 'a cycling community in the twin cities that celebrates cycling diversity and inclusivity with joyful rides for all bodies.' The Minneapolis chapter began in 2025. Rides are tagged no-drop. The Oct 5 'Fall Colors Ride' is 11.8 miles.",
+  "description": "A monthly social ride with a size-inclusive crowd, starting at Angry Catfish Bicycle in south Minneapolis. The Fall Colors Ride on Oct 5 is 11.8 miles at 12 mph or slower, no-drop. Dates are posted one month at a time.",
+  "links": {
+   "website": "https://msp.bike/groups",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://msp.bike/groups",
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
+  ],
+  "verified_on": "2026-10-02",
+  "last_seen": "2026-09-18",
+  "evidence": "The msp.bike public calendar lists the ABOB Fall Colors Ride for Mon Oct 5, 2026 (meet 6:00 pm, roll 6:30, 11.8 miles, Angry Catfish Bicycle) and a postponed ABOB bikepacking trip dated Sep 18, 2026; earlier 2026 entries are Jul 7 and Aug 3 (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://msp.bike/groups",
+   "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "notes": "Community-run msp.bike Google Calendar; read its entries for 'ABOB'. The host posts on Instagram, which does not load. The next date after Oct 5 is not posted; the 2026 series was called a summer series."
+  }
+ },
+ {
+  "slug": "minneapolis-mn-geno-atb-buddy-systems-first-monday",
+  "name": "Buddy Systems Neighborhood Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Minneapolis",
+  "neighborhood": "Gold Medal Park",
+  "region": "Minnesota",
+  "state": "MN",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "First Monday of the month, 6:30 pm, June to November 2026 (the calendar series holds five Monday dates from Jul 6; next: Mon Oct 5 and Mon Nov 2). The text says 'exact time TBD', but the first gathering on June 1 and the calendar entries both say 6:30 pm.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "mon"
+   }
+  ],
+  "season": "Jun–Nov",
+  "season_months": {
+   "start": 6,
+   "end": 11
+  },
+  "start_location": {
+   "name": "Gold Medal Park",
+   "address": "Second Street and 11th Avenue South, Minneapolis, MN 55415"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Geno ATB",
+   "type": "collective"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Meet, swap skills and snacks, then ride in neighborhood groups to the nearest public park. Bring a snack or a bike stand to share. msp.bike lists the series under Geno ATB, which says it has hosted a monthly Monday social ride for several years. Confirm the time on the group's Instagram.",
+  "description": "A neighborly monthly ride series that starts with a social meetup at Gold Medal Park. Riders then split into neighborhood groups and bike to the public park nearest their homes. It meets the first Monday of the month through November.",
+  "links": {
+   "website": "https://msp.bike/groups",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://msp.bike/groups",
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
+  ],
+  "verified_on": "2026-10-02",
+  "last_seen": "2026-09-07",
+  "evidence": "The msp.bike public calendar lists Buddy Systems at Gold Medal Park on the first Monday of each month (Oct 5 at 6:30 PM on the groups page; entries last edited June 23, 2026), after a first gathering on Mon June 1 at 6:30 PM (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://msp.bike/groups",
+   "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "notes": "Community-run msp.bike Google Calendar; read entries named 'Buddy Systems'. The series entry has a count of five dates from Jul 6, so it may stop after Nov 2."
+  }
+ },
+ {
+  "slug": "akron-oh-akron-bicycle-club-wednesday-morning-ride",
+  "name": "Akron Bicycle Club Wednesday Morning Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Akron",
+  "neighborhood": null,
+  "region": "Ohio",
+  "state": "OH",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Wednesday mornings, usually 9:30 am; the start spot and route change each week and go on the club calendar. Oct 7, 2026: 34 miles to Ravenna, 15–17 mph.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "9:30 am",
+  "start_hhmm": "09:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Varies by week; posted on the club calendar",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": 34,
+  "duration": null,
+  "duration_min": null,
+  "pace": "15–17 mph, regroups as needed",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Akron Bicycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Rides are for current members and first-time guests. Arrive ten minutes early to check in. Helmets are required, and no ear buds or phone use while riding. The Oct 7 listing gives the Aukerman Park lot in North Royalton as its location but its text says the Barlow Rd lot, so read the week's listing before you go.",
+  "description": "A weekday-morning club ride of about 34 miles at 15 to 17 mph, with a different route and start each week. The Oct 7 ride goes to Ravenna with a rest stop at Bean and the Baker. First-time guests are welcome.",
+  "links": {
+   "website": "https://www.akronbike.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.akronbike.org/content.aspx?page_id=4001&club_id=133645&action=cira&vm=Future&sif=0",
+   "https://www.akronbike.org/content.aspx?page_id=4091&item_id=3071543"
+  ],
+  "verified_on": "2026-10-02",
+  "last_seen": "2026-10-02",
+  "evidence": "The Akron Bicycle Club calendar lists the Wednesday Morning Ride for Oct 7, 2026 at 9:30 AM, a 34-mile loop to Ravenna at 15-17 mph, 'for current members and first-time guests' (fetched Oct 2, 2026). Only one Wednesday is posted at a time.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.akronbike.org/content.aspx?page_id=4001&club_id=133645&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "ClubExpress calendar, Future view; only the next one or two weeks are posted. The Monday ride moved to a 5:30 pm start on Oct 5 for the early sunset."
+  }
+ },
+ {
+  "slug": "lexington-ky-bluegrass-cycling-club-masterson-mondays",
+  "name": "Bluegrass Cycling Club Masterson Mondays",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Lexington",
+  "neighborhood": "Masterson Station",
+  "region": "Kentucky",
+  "state": "KY",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Monday, 5:30 pm. The club calendar lists it through Oct 26, 2026.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Masterson Station",
+   "address": "3544 Shamrock Ln, Lexington, KY 40511"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Six pace groups from C (10–12 mph) to EF (20+ mph); typical 18–30 miles",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Bluegrass Cycling Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Registration is not required. The club's home page invites non-members to join a ride. Rain cancels; the club says to check its Ride Announcements Forum an hour before. Rolling terrain with regrouping and no store stop. Print the map or cue sheet beforehand, or ask the ride leader the day before.",
+  "description": "A weekly Monday-evening road ride from Masterson Station in Lexington, split into pace groups from a relaxed 10 to 12 mph up to 20+ mph. The group regroups, and there is no store stop. Typical distances run 18 to 30 miles.",
+  "links": {
+   "website": "https://bgcycling.net/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://bgcycling.net/content.aspx?page_id=4001&club_id=740127&action=cira&vm=Future&sif=0",
+   "https://bgcycling.net/content.aspx?page_id=4002&club_id=740127&item_id=3076762"
+  ],
+  "verified_on": "2026-10-02",
+  "last_seen": "2026-10-02",
+  "evidence": "The Bluegrass Cycling Club calendar lists Masterson Mondays at 5:30 PM from Masterson Station, 3544 Shamrock Ln, for Mon Oct 5, 12, 19 and 26, 2026, with pace groups C to EF (fetched Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://bgcycling.net/content.aspx?page_id=4001&club_id=740127&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "ClubExpress calendar, Future view. The 5:30 pm start gets earlier as the days shorten."
+  }
+ },
+ {
+  "slug": "lexington-ky-bluegrass-cycling-club-horse-park-tuesday",
+  "name": "Bluegrass Cycling Club Horse Park Tuesday",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Lexington",
+  "neighborhood": "Kentucky Horse Park",
+  "region": "Kentucky",
+  "state": "KY",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday, 5:30 pm. The club calendar lists it through Oct 27, 2026.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Kentucky Horse Park Visitors Center",
+   "address": "4089 Iron Works Pike, Lexington, KY 40511"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "B pace 14–16 mph and A/B pace 16–18 mph; 20–35 miles by daylight",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Bluegrass Cycling Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Registration is not required. The club's home page invites non-members to join a ride. Rain cancels; the club says to check its Ride Announcements Forum an hour before. The group rides single and double pace lines, rotating every few miles.",
+  "description": "A weekly Tuesday-evening road ride from the Kentucky Horse Park Visitors Center. It runs at 14 to 18 mph in paceline style over easy rollers, 20 to 35 miles depending on daylight, and the group regroups.",
+  "links": {
+   "website": "https://bgcycling.net/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://bgcycling.net/content.aspx?page_id=4001&club_id=740127&action=cira&vm=Future&sif=0",
+   "https://bgcycling.net/content.aspx?page_id=4002&club_id=740127&item_id=3075921"
+  ],
+  "verified_on": "2026-10-02",
+  "last_seen": "2026-10-02",
+  "evidence": "The Bluegrass Cycling Club calendar lists Horse Park Tuesday at 5:30 PM from the KY Horse Park Visitors Center, 4089 Iron Works Pike, for Tue Oct 6, 13, 20 and 27, 2026 (fetched Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://bgcycling.net/content.aspx?page_id=4001&club_id=740127&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "ClubExpress calendar, Future view."
+  }
+ },
+ {
+  "slug": "midway-ky-bluegrass-cycling-club-midway-wednesday",
+  "name": "Bluegrass Cycling Club Midway Wednesday",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Midway",
+  "neighborhood": null,
+  "region": "Kentucky",
+  "state": "KY",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday, 5:30 pm. The club calendar lists it through Oct 28, 2026.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Midway Christian Church",
+   "address": "123 Bruen Street, Midway, KY 40347"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Pace groups from B/C (12–14 mph) to EF (20+ mph); distance depends on pace group and daylight",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Bluegrass Cycling Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Registration is not required. The club's home page invites non-members to join a ride. Rain cancels; the club says to check its Ride Announcements Forum an hour before. The club calls it one of its friendliest rides. New riders should arrive early and talk to a ride leader to find a pace group. Leaders post the routes on the club's Facebook page the day of the ride, and the ride is swept.",
+  "description": "The Wednesday-evening Midway ride, which the club describes as a fun ride for riders of all levels. Pace groups run from 12 to 14 mph up to 20+ mph, the ride is swept, and nobody is left alone. Routes are posted the day of the ride.",
+  "links": {
+   "website": "https://bgcycling.net/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://bgcycling.net/content.aspx?page_id=4001&club_id=740127&action=cira&vm=Future&sif=0",
+   "https://bgcycling.net/content.aspx?page_id=4002&club_id=740127&item_id=2913961"
+  ],
+  "verified_on": "2026-10-02",
+  "last_seen": "2026-10-02",
+  "evidence": "The Bluegrass Cycling Club calendar lists Midway Wednesday at 5:30 PM from Midway Christian Church, 123 Bruen Street, for Wed Oct 7, 14, 21 and 28, 2026 (fetched Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://bgcycling.net/content.aspx?page_id=4001&club_id=740127&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "ClubExpress calendar, Future view."
+  }
+ }
+]

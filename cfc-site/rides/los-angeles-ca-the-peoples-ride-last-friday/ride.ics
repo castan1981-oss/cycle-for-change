@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:los-angeles-ca-the-peoples-ride-last-friday@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Los_Angeles:20261030T183000
+DTEND;TZID=America/Los_Angeles:20261030T203000
+RRULE:FREQ=MONTHLY;BYDAY=-1FR;UNTIL=20270301T235959Z
+SUMMARY:The People's Ride (LA) — Los Angeles\, CA
+LOCATION:Hollywood Blvd and Vermont Ave\, Vermont & Hollywood\, Los Angel
+ es\, CA 90027
+DESCRIPTION:Schedule: Every last Friday of the month. Meet 6:00 pm\, roll
+  6:30 pm at Hollywood and Vermont..\nConfirm with the host before you go
+ .\nhttps://cycleforchange.org/rides/los-angeles-ca-the-peoples-ride-last
+ -friday/
+URL:https://cycleforchange.org/rides/los-angeles-ca-the-peoples-ride-last
+ -friday/
+END:VEVENT
+END:VCALENDAR

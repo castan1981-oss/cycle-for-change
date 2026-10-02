@@ -1,0 +1,2154 @@
+[
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": "Islington",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 18,
+  "distance_miles": 11,
+  "duration": "About 2 hours riding, back by about 1:00 pm",
+  "duration_min": 180,
+  "pace": "Leisurely but not slow; the Oct 11 ride is about 18 km",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "inclusive_focus": [
+   "wtf"
+  ],
+  "verified_on": "2026-10-02",
+  "slug": "london-gb-cycle-islington-womens-ride",
+  "name": "Cycle Islington Women's Ride",
+  "city": "London",
+  "region": "England",
+  "country": "GB",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Some Sundays, 10:00 am from the Islington Ecology Centre: Jul 12, Sep 6 and Oct 11, 2026. Book a free place on the London Cycling Campaign (LCC) event page.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "irregular",
+  "tz": "Europe/London",
+  "start_location": {
+   "name": "Islington Ecology Centre",
+   "address": "191 Drayton Park, London N5 1PH"
+  },
+  "host": {
+   "name": "Cycle Islington (London Cycling Campaign borough group)",
+   "type": "nonprofit"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Free, but book a place on the LCC event page. The host says the Oct 11 ride is not a beginner ride. No bikes to borrow yet. Bring water, snacks and a lock.",
+  "description": "A women's ride led by volunteers from Cycle Islington, the London Cycling Campaign group for the borough. The Oct 11 ride goes to Walthamstow Wetlands by Clissold Park, Springfield Park and the Lea Valley, with a cafe stop at the Engine Room. The rides are for women who want more confidence and local knowledge.",
+  "links": {
+   "website": "https://cycleislington.uk/events/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://lcc.org.uk/events/cycle-islington-womens-little-green-ride/"
+   ]
+  },
+  "sources": [
+   "https://cycleislington.uk/events/",
+   "https://lcc.org.uk/events/cycle-islington-womens-little-green-ride/"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "Cycle Islington's events page lists its Women's ride for Sun Jul 12, Sep 6 and Oct 11, 2026, and the LCC event page gives Oct 11, 10:00 am to 1:00 pm from the Ecology Centre (fetched Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://cycleislington.uk/events/",
+   "feed_url": null,
+   "notes": "The page lists the next Women's rides by date. The ride is not weekly: check that a date after Oct 11 is posted before relying on it."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": "Ealing",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "sun"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 35,
+  "distance_miles": 22,
+  "duration": "A full day out, back around 3:00 to 4:00 pm",
+  "duration_min": 360,
+  "pace": "Leisurely, about 13 km/h; goes at the speed of the slowest rider",
+  "drop_policy": "no-drop",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "london-gb-ealing-cycling-campaign-leisurely-ride",
+  "name": "Ealing Leisurely Ride",
+  "city": "London",
+  "region": "England",
+  "country": "GB",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "First Sunday of every month: meet outside Ealing Town Hall from 9:45 am, leave 10:00 am. More rides in summer. Next: Sun Oct 4, 2026.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "monthly",
+  "tz": "Europe/London",
+  "start_location": {
+   "name": "Ealing Town Hall",
+   "address": "Ealing Town Hall, Ealing Broadway, London W5 2BY"
+  },
+  "host": {
+   "name": "Ealing Cycling Campaign (London Cycling Campaign group)",
+   "type": "nonprofit"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Free. The club's front page (Oct 2026) says places must be booked through the LCC website; its older ride notes say just turn up. Brunch or lunch stop on the way, or bring a picnic. Lights, pump and a spare tube.",
+  "description": "A relaxed day ride from Ealing Town Hall, run by volunteers from the Ealing Cycling Campaign. Distances run from about 35 to 42 km, with a coffee stop and a lunch stop. The group goes at the speed of the slowest rider and nobody is left behind.",
+  "links": {
+   "website": "https://www.ealingcycling.org.uk/p/events.html",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.ealingcycling.org.uk/p/about-our-rides.html",
+    "https://lcc.org.uk/events/ealing-cycling-campaign-leisurely-ride-ealing-garden-suburbs-3/"
+   ]
+  },
+  "sources": [
+   "https://www.ealingcycling.org.uk/p/events.html",
+   "https://www.ealingcycling.org.uk/p/about-our-rides.html",
+   "https://lcc.org.uk/events/ealing-cycling-campaign-leisurely-ride-ealing-garden-suburbs-3/"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "The club's own page (fetched Oct 2, 2026) says the next Leisurely Ride is Sun Oct 4 and its ride notes say they run the first Sunday of each month all year; the LCC page for Mar 1, 2026 gives the Ealing Town Hall 9:45 meet and 10:00 departure.",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.ealingcycling.org.uk/p/events.html",
+   "feed_url": null,
+   "notes": "The front page names the next Leisurely Ride. The LCC site has an event page for each one with the route."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": "Twickenham",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "About 22 to 40 miles, off-road trails and bridleways, fun over speed",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "london-gb-wild-cycling-saturday-rides",
+  "name": "Wild Cycling Saturday Rides",
+  "city": "London",
+  "region": "England",
+  "country": "GB",
+  "discipline": [
+   "gravel",
+   "mtb"
+  ],
+  "schedule": "Saturdays at 10:00 am, about every two weeks: Oct 3, Oct 17, Oct 31 and Nov 14, 2026. The start is a different railway station each time.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "biweekly",
+  "tz": "Europe/London",
+  "start_location": {
+   "name": "A different railway station each ride; see the Meetup event",
+   "address": null
+  },
+  "host": {
+   "name": "Wild Cycling (Twickenham)",
+   "type": "club"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Join the Meetup group to see the start station and book. Gravel, hybrid and mountain bikes and e-bikes are welcome. Some rides are labelled free. Bring tools and fix your own punctures. Several starts are outside London (Eastbourne, Farnham, Bracknell, Reading), so check the train.",
+  "description": "A Richmond and Twickenham club that rides off-road trails, bridleways and gravel away from traffic. The rides start at railway stations across Surrey, Sussex, Hampshire and Berkshire, so the group travels by train. E-bikes are welcome and beginners are too.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/wildcycling/",
+   "other": []
+  },
+  "sources": [
+   "https://www.meetup.com/wildcycling/",
+   "https://www.meetup.com/wildcycling/events/315818893/"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "The club's Meetup page lists Sat Oct 3 (Eastbourne), Oct 17 (Farnham), Oct 31 (Swinley Forest) and Nov 14 (Caversham), all 10:00 am; rides ran Sep 5 and Sep 19 (fetched Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/wildcycling/events/",
+   "feed_url": null,
+   "notes": "Each event names its own start station. Check the next Saturday event is posted."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "May–Oct",
+  "season_months": {
+   "start": 5,
+   "end": 10
+  },
+  "distance_km": 30,
+  "distance_miles": 19,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Self-drop fitness rides of 20 to 40 km on drop-bar bikes, 20 to 25 km/h, no long breaks",
+  "drop_policy": "drop",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [
+   "lgbtq"
+  ],
+  "verified_on": "2026-10-02",
+  "slug": "ottawa-ca-queer-bike-club-ottawa-level-2-rides",
+  "name": "Queer Bike Club Ottawa Level 2 Rides",
+  "city": "Ottawa",
+  "region": "Ontario",
+  "country": "CA",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every other Monday, 6:45 pm from the southwest corner of St. Luke's Park (Elgin and Gladstone). Calendar: Oct 12 (Gatineau Park Trail 5 climb) and Oct 26 (Rideau Canal and river loop), marked to be confirmed. The social rides are a separate series.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "6:45 pm",
+  "start_hhmm": "18:45",
+  "frequency": "biweekly",
+  "tz": "America/Toronto",
+  "start_location": {
+   "name": "St. Luke's Park, southwest corner of Elgin and Gladstone",
+   "address": "St. Luke's Park, 166 Frank St, Ottawa, ON K2P 0Y3"
+  },
+  "host": {
+   "name": "Queer Bike Club Ottawa",
+   "type": "club"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Sign the 2026 waiver and code of conduct before your first ride. The club's social rides are no-drop, 10 to 15 km at about 15 km/h; it said it may add one in mid or late October if the weather holds.",
+  "description": "The faster ride of an all-genders LGBTQ+ social bicycle club in its fifth season. Level 2 is a fitness and endurance ride on drop-bar bikes every other Monday evening from St. Luke's Park. The club's calendar lists the route for each date.",
+  "links": {
+   "website": "https://qbcottawa.org/",
+   "instagram": "https://www.instagram.com/queerbikeclubottawa",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://discord.gg/sV2zAK9AHN"
+   ]
+  },
+  "sources": [
+   "https://qbcottawa.org/",
+   "https://calendar.google.com/calendar/ical/cd39cbcc43556e2547f02536313b1e9e8fcf8f85c52871ac1f9a7dc3c9ed35f9%40group.calendar.google.com/public/basic.ics"
+  ],
+  "last_seen": "2026-09-28",
+  "evidence": "The club's home page (fetched Oct 2, 2026) says Level 2 rides go every other Monday at 6:45 pm and lists Oct 12 and Oct 26; its public calendar shows Level 2 rides on Sep 14 and Sep 28, 2026.",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://qbcottawa.org/",
+   "feed_url": "https://calendar.google.com/calendar/ical/cd39cbcc43556e2547f02536313b1e9e8fcf8f85c52871ac1f9a7dc3c9ed35f9%40group.calendar.google.com/public/basic.ics",
+   "notes": "The public Google Calendar lists each Level 2 ride, some marked TBC. The season ends in late October."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": "Bedford",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Choose from several routes and skill groups, each with a ride leader; riders need to hold about 25 km/h solo for an hour",
+  "drop_policy": "groups",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "halifax-ca-rocky-lake-cycling-saturday-ride",
+  "name": "RLC Saturday Ride",
+  "city": "Halifax",
+  "region": "Nova Scotia",
+  "country": "CA",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday: 9:00 am from the lot behind ChaaBaa Thai in Bedford; 10:00 am from October to May.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "tz": "America/Halifax",
+  "start_location": {
+   "name": "Parking lot behind ChaaBaa Thai, Bedford",
+   "address": "Bedford, Nova Scotia"
+  },
+  "host": {
+   "name": "Rocky Lake Cycling",
+   "type": "club"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "You must join the club and Cycling Nova Scotia online before you ride, so this is not a drop-in ride. Needs a drop-bar road bike. New riders are told to start with the orientation Saturday rides in May and June.",
+  "description": "The main club ride of Rocky Lake Cycling in Bedford, through Waverley and Fall River. Riders split into groups by route and skill, each with a ride leader. Rocky Lake also runs a Sunday Cookie ride.",
+  "links": {
+   "website": "https://www.rockylakecycling.ca/the-big-bpcc-saturday-ride",
+   "instagram": "https://www.instagram.com/rockylakecycling/",
+   "facebook": "https://www.facebook.com/groups/rockylakecycling/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://www.rockylakecycling.ca/the-big-bpcc-saturday-ride",
+   "https://www.rockylakecycling.ca/bpcc-orientation-ride"
+  ],
+  "last_seen": null,
+  "evidence": "The club's own ride page (footer 2026) gives Saturday 9 am, 10 am October to May, from behind ChaaBaa Thai in Bedford; nothing on the page is dated (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.rockylakecycling.ca/the-big-bpcc-saturday-ride",
+   "feed_url": null,
+   "notes": "The club's calendar page is an empty widget. Check the page for a changed start time each autumn."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "halifax-ca-rocky-lake-cycling-sunday-cookie-ride",
+  "name": "RLC Sunday Cookie Ride",
+  "city": "Halifax",
+  "region": "Nova Scotia",
+  "country": "CA",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Sundays, 10:00 am from the 5K Cafe on Chain Lake Drive; the ride turns at the Bike and Bean for a cookie break.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "tz": "America/Halifax",
+  "start_location": {
+   "name": "5K Cafe, Chain Lake Drive",
+   "address": "5K Cafe, Chain Lake Drive, Halifax, Nova Scotia"
+  },
+  "host": {
+   "name": "Rocky Lake Cycling",
+   "type": "club"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "You must join the club and Cycling Nova Scotia online before you ride. The club's Chunky Cookie gravel ride runs at the same time from the Bike and Bean, about 51 km to Hubbards and back.",
+  "description": "A Sunday morning ride along the Chain of Lakes trail system and Highway 3 through Timberlea and Hubley, turning at the Bike and Bean for a cookie break before riding back.",
+  "links": {
+   "website": "https://www.rockylakecycling.ca/rlc-cookie-ride",
+   "instagram": "https://www.instagram.com/rockylakecycling/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://www.rockylakecycling.ca/rlc-cookie-ride",
+   "https://www.rockylakecycling.ca/copy-of-rlc-sunday-cookie-ride"
+  ],
+  "last_seen": null,
+  "evidence": "The club's own page (footer 2026) gives Sunday 10 am from the 5K Cafe on Chain Lake Drive; nothing on the page is dated and no season is stated (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.rockylakecycling.ca/rlc-cookie-ride",
+   "feed_url": null,
+   "notes": "No season is stated. Check with the club whether it runs through winter."
+  }
+ },
+ {
+  "name_en": "Montréal Critical Mass",
+  "kind": "critical-mass",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": "Mont-Royal",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slow group ride that takes the street",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "montreal-ca-masse-critique-montreal",
+  "name": "Masse Critique Montréal",
+  "city": "Montreal",
+  "region": "Quebec",
+  "country": "CA",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Last Friday of every month, 5:00 pm at the Sir George-Étienne Cartier monument (the Mont-Royal statue). The Sep 25, 2026 ride started at Jardin du Petit Monde à Bicyclette in Parc La Fontaine instead, for that date only.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "5:00 pm",
+  "start_hhmm": "17:00",
+  "frequency": "monthly",
+  "tz": "America/Toronto",
+  "start_location": {
+   "name": "Sir George-Étienne Cartier monument (the Mont-Royal statue), Parc du Mont-Royal",
+   "address": "Parc du Mont-Royal, Montréal, Quebec"
+  },
+  "host": {
+   "name": "Masse Critique Montréal",
+   "type": "informal"
+  },
+  "language": [
+   "fr",
+   "en"
+  ],
+  "visitor_notes": "No sign-up. Install the Critical Maps app and switch it on at the meeting point so late riders can find the group. The route and end point change each month.",
+  "description": "Montréal's monthly Critical Mass, a group ride that takes the street to ask for safe bike infrastructure. It meets at the Mont-Royal statue and ends at a different park or bar each month.",
+  "links": {
+   "website": null,
+   "instagram": "https://www.instagram.com/masse_critique_montreal/",
+   "facebook": "https://www.facebook.com/massecritiqueamtl",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://jasette.facil.services/@MasseCritiqueMTL",
+    "https://criticalmass.in/montreal"
+   ]
+  },
+  "sources": [
+   "https://jasette.facil.services/@MasseCritiqueMTL",
+   "https://criticalmass.in/montreal"
+  ],
+  "last_seen": "2026-09-25",
+  "evidence": "The group's official Mastodon account posted on Sep 25, 2026 'Ce vendredi 25 septembre, c'est la Masse critique' and on Aug 27 ('demain'); its Apr 24 post gives 5 pm at the Mont-Royal statue 'comme toujours' (fetched Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://jasette.facil.services/@MasseCritiqueMTL",
+   "feed_url": null,
+   "notes": "The page needs JavaScript; the public API https://jasette.facil.services/api/v1/accounts/114232170716997677/statuses lists the posts as JSON. A post appears the day before each ride."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": "Darlinghurst",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "Sep–Dec",
+  "season_months": {
+   "start": 9,
+   "end": 12
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Seven groups, from conversational (23 km/h) to race pace (35 km/h+)",
+  "drop_policy": "groups",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "sydney-au-rapha-sydney-wednesday-open-ride",
+  "name": "Rapha Sydney Wednesday Open Ride",
+  "city": "Sydney",
+  "region": "New South Wales",
+  "country": "AU",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday, 6:00 am roll-out from Taylor Square, Darlinghurst (be there by 5:55 am for the briefing). Dates listed Oct 7 to Nov 25, 2026 and on to December.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:00 am",
+  "start_hhmm": "06:00",
+  "frequency": "weekly",
+  "tz": "Australia/Sydney",
+  "start_location": {
+   "name": "Taylor Square, Darlinghurst",
+   "address": "Taylor Square, Darlinghurst NSW"
+  },
+  "host": {
+   "name": "Rapha Sydney Clubhouse",
+   "type": "brand"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Members and non-members both welcome; book a place on Rapha's events site. Road bike and helmet. Rapha club members get 30% off coffee at Veneziano in Surry Hills after.",
+  "description": "Rapha Sydney calls this the city's largest weekly group ride. It rolls from Taylor Square at 6:00 am in seven pace groups.",
+  "links": {
+   "website": "https://events.rapha.cc/products/rapha-sydney-wednesday-open-ride",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://events.rapha.cc/products/rapha-sydney-wednesday-open-ride",
+   "https://events.rapha.cc/shop/rapha-sydney-wednesday-open-ride?slot_id=58f73152-bd52-4a61-9299-6f376670d138"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "Rapha's events page for the ride gives Wednesdays 6:00 am roll-out from Taylor Square, Sep to Dec 2026, open to non-members, and its booking page lists Wed Oct 7 to Nov 25, 2026 (read Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://events.rapha.cc/rapha-sydney",
+   "feed_url": null,
+   "notes": "Booking is on Rapha's events site. The page blocks scripted reads, so the times were read through a fetch tool, not the raw page."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": "Darlinghurst",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "Jul–Dec",
+  "season_months": {
+   "start": 7,
+   "end": 12
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 1.5 hours",
+  "duration_min": 90,
+  "pace": "Moderate fitness and bike-handling skill expected; about 1.5 hours",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [
+   "wtf"
+  ],
+  "verified_on": "2026-10-02",
+  "slug": "sydney-au-rapha-sydney-thursday-ladies-open-ride",
+  "name": "Rapha Sydney Thursday Ladies Open Ride",
+  "city": "Sydney",
+  "region": "New South Wales",
+  "country": "AU",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Thursday: meet 5:55 am at Taylor Square, Darlinghurst, roll out 6:00 am, back at the Rapha Sydney clubhouse about 7:30 am. Dates listed Oct 1 to Dec 31, 2026.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 am",
+  "start_hhmm": "06:00",
+  "frequency": "weekly",
+  "tz": "Australia/Sydney",
+  "start_location": {
+   "name": "Taylor Square, Darlinghurst",
+   "address": "Taylor Square, Darlinghurst NSW"
+  },
+  "host": {
+   "name": "Rapha Sydney Clubhouse",
+   "type": "brand"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Open to women who are not Rapha club members. Not a beginner ride. Needs a road bike (no TT bikes), a helmet and clipless shoes. Book on Rapha's events site.",
+  "description": "A women's morning ride from Rapha Sydney. Riders meet at Taylor Square and return to the clubhouse by about 7:30 am. The host says it is open to women outside the club and is for experienced riders.",
+  "links": {
+   "website": "https://events.rapha.cc/products/rapha-sydney-thursday-ladies-open-ride",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://events.rapha.cc/products/rapha-sydney-thursday-ladies-open-ride",
+   "https://events.rapha.cc/shop/rapha-sydney-thursday-ladies-open-ride?slot_id=edf824fc-1f09-467a-9a2c-e37f7c7d5e83"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "Rapha's events page says the Thursday Ladies ride meets 5:55 am at Taylor Square, rolls 6:00 am, is open to non-members, and the booking page lists Thursdays from Oct 1 to Dec 31, 2026 (read Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://events.rapha.cc/rapha-sydney",
+   "feed_url": null,
+   "notes": "Booking is on Rapha's events site. The page blocks scripted reads, so the times were read through a fetch tool, not the raw page."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "Jul–Dec",
+  "season_months": {
+   "start": 7,
+   "end": 12
+  },
+  "distance_km": 28,
+  "distance_miles": 17,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Four pace groups: Core 28 km/h (28 km, no-drop), Classic 32 km/h (no-drop), Classic Plus 35 to 37 km/h, Pro Team 37 to 40 km/h (a drop ride)",
+  "drop_policy": "groups",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "melbourne-au-rapha-melbourne-southside-ride",
+  "name": "Rapha Melbourne Southside Ride",
+  "city": "Melbourne",
+  "region": "Victoria",
+  "country": "AU",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Thursday from Jul 16 to Dec 30, 2026: briefing and roll-out about 6:00 am from the Luna Park entrance, finishing at Halcyon Days; back about 7:15 to 7:30 am.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 am",
+  "start_hhmm": "06:00",
+  "frequency": "weekly",
+  "tz": "Australia/Melbourne",
+  "start_location": {
+   "name": "Luna Park entrance",
+   "address": "Luna Park, Melbourne VIC"
+  },
+  "host": {
+   "name": "Rapha Melbourne Clubhouse",
+   "type": "brand"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Open to everyone, not just Rapha club members. Road bike with clip-in pedals; bring tubes, a pump or CO2 and a multi-tool. Book on Rapha's events site.",
+  "description": "A dawn ride down Beach Road, the road Melbourne cyclists use most. It starts at Luna Park in four pace groups and finishes at Halcyon Days.",
+  "links": {
+   "website": "https://events.rapha.cc/products/rapha-melbourne-southside-ride",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://events.rapha.cc/products/rapha-melbourne-southside-ride"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "Rapha's events page gives 'Every Thursday, 16 July - 30 December 2026' with a 6 am briefing at the Luna Park entrance, open to everyone (read Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://events.rapha.cc/rapha-melbourne",
+   "feed_url": null,
+   "notes": "Booking is on Rapha's events site. The page blocks scripted reads, so the times were read through a fetch tool, not the raw page."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": "Albert Park",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "Jul–Dec",
+  "season_months": {
+   "start": 7,
+   "end": 12
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "Back about 10:15 to 11:00 am",
+  "duration_min": 165,
+  "pace": "About 25 km/h (Bonds Rd), 28 km/h (Beach Rd), 25 km/h (Westside); no-drop",
+  "drop_policy": "no-drop",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [
+   "beginner",
+   "no-drop"
+  ],
+  "verified_on": "2026-10-02",
+  "slug": "melbourne-au-rapha-melbourne-social-saturday-ride",
+  "name": "Rapha Melbourne Social Saturday Ride",
+  "city": "Melbourne",
+  "region": "Victoria",
+  "country": "AU",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday from Jul 11 to Dec 30, 2026: meet 7:45 am, roll 8:00 am. Three rotating routes: Beach Rd and Westside from Halcyon Days, Bonds Rd from Advanced Vetcare in Kew. Back about 10:15 to 11:00 am.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "tz": "Australia/Melbourne",
+  "start_location": {
+   "name": "Halcyon Days (Beach Rd and Westside routes)",
+   "address": "Halcyon Days, 381 Montague St, Albert Park VIC"
+  },
+  "host": {
+   "name": "Rapha Melbourne Clubhouse",
+   "type": "brand"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Made for riders new to group riding or after a relaxed bunch ride. Road or gravel bike with clip-in pedals, helmet, spare tube and repair kit. The Bonds Rd route starts at Advanced Vetcare in Kew (Chandler Highway and Yarra Boulevard). Book on Rapha's events site.",
+  "description": "A relaxed Saturday bunch ride from Rapha Melbourne with three routes that rotate. It is a no-drop ride for people new to group riding, with coffee before the start on two routes.",
+  "links": {
+   "website": "https://events.rapha.cc/products/rapha-melbourne-social-saturday-ride",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://events.rapha.cc/products/rapha-melbourne-social-saturday-ride"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "Rapha's events page gives 'Every Saturday', 11 July - 30 December 2026, meet 7:45 am and roll-out 8:00 am from Halcyon Days or Kew (read Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://events.rapha.cc/rapha-melbourne",
+   "feed_url": null,
+   "notes": "Booking is on Rapha's events site. The page blocks scripted reads, so the times were read through a fetch tool, not the raw page."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": "Kew",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "Jul–Dec",
+  "season_months": {
+   "start": 7,
+   "end": 12
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 3 hours",
+  "duration_min": 180,
+  "pace": "Intermediate; rolling hills and the Mt P climb",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "melbourne-au-rapha-melbourne-mt-pleasant-ride",
+  "name": "Rapha Melbourne Mt Pleasant Ride",
+  "city": "Melbourne",
+  "region": "Victoria",
+  "country": "AU",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday from Jul 11 to Dec 30, 2026: meet 7:15 am, roll out 7:30 am from Melbourne Guide Dogs in Kew; back about 10:15 to 10:45 am.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
+  "frequency": "weekly",
+  "tz": "Australia/Melbourne",
+  "start_location": {
+   "name": "Melbourne Guide Dogs, Kew",
+   "address": "6 Chandler Highway, Kew VIC"
+  },
+  "host": {
+   "name": "Rapha Melbourne Clubhouse",
+   "type": "brand"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "No Rapha club membership needed. Road bike with clip-in pedals. Book on Rapha's events site.",
+  "description": "A classic Melbourne road ride from Kew with rolling hills, scenic roads and the Mt P climb. It is for intermediate riders and open to non-members.",
+  "links": {
+   "website": "https://events.rapha.cc/products/rapha-melbourne-mt-pleasant-ride",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://events.rapha.cc/products/rapha-melbourne-mt-pleasant-ride"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "Rapha's events page gives 'Every Saturday', 11 July - 30 December 2026, meet 7:15 am and roll-out 7:30 am from Melbourne Guide Dogs, 6 Chandler Highway, Kew (read Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://events.rapha.cc/rapha-melbourne",
+   "feed_url": null,
+   "notes": "Booking is on Rapha's events site. The page blocks scripted reads, so the times were read through a fetch tool, not the raw page."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": "Mitte",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": 62,
+  "distance_miles": 39,
+  "duration": "About 2 hours",
+  "duration_min": 120,
+  "pace": "About 30 km/h, 62 km to the airport, then splits into groups and rides laps",
+  "drop_policy": "groups",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "berlin-de-rapha-berlin-wednesday-early-bird",
+  "name": "Rapha Berlin Wednesday Early Bird",
+  "city": "Berlin",
+  "region": "Berlin",
+  "country": "DE",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday, 7:00 am from the Rapha Berlin clubhouse in Mitte; about two hours, back before 9:30 am with coffee at the clubhouse. Booking page lists Wed Oct 7, 2026.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "weekly",
+  "tz": "Europe/Berlin",
+  "start_location": {
+   "name": "Rapha Berlin clubhouse",
+   "address": "Alte Schönhauser Straße 5, 10119 Berlin"
+  },
+  "host": {
+   "name": "Rapha Berlin Clubhouse",
+   "type": "brand"
+  },
+  "language": [
+   "en",
+   "de"
+  ],
+  "visitor_notes": "Book on Rapha's events site. The page does not say the ride is members-only.",
+  "description": "A weekly sunrise ride from the Rapha clubhouse in Mitte, about 62 km out to the airport where the group splits by speed and rides laps. It finishes with coffee at the clubhouse.",
+  "links": {
+   "website": "https://events.rapha.cc/products/rapha-berlin-wednesday-early-bird",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://events.rapha.cc/products/rapha-berlin-wednesday-early-bird",
+   "https://events.rapha.cc/shop/rapha-berlin-wednesday-early-bird?slot_id=29f14b7a-ed92-42b1-8e7d-2c566830b7e9"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "Rapha's events page gives a weekly 7:00 am start from the clubhouse, and its booking page lists Wed Oct 7, 2026 at 07:00 (read Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://events.rapha.cc/rapha-berlin",
+   "feed_url": null,
+   "notes": "Booking is on Rapha's events site. The page blocks scripted reads, so the times were read through a fetch tool, not the raw page."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 2 to 2.5 hours",
+  "duration_min": 135,
+  "pace": "Intermediate: 25 to 28 km/h on the flat, 23 to 25 km/h in the mountains",
+  "drop_policy": "groups",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "palma-es-rapha-mallorca-social-ride",
+  "name": "Rapha Mallorca Social Ride",
+  "city": "Palma",
+  "region": "Balearic Islands",
+  "country": "ES",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday: meet 8:15 am at the Rapha Mallorca clubhouse, roll out 8:30 am; back about 10:30 to 11:00 am. The booking page shows October 2026 and ongoing Tuesdays.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "8:30 am",
+  "start_hhmm": "08:30",
+  "frequency": "weekly",
+  "tz": "Europe/Madrid",
+  "start_location": {
+   "name": "Rapha Mallorca clubhouse",
+   "address": "Plaça del Rosari 1, 07001 Palma, Illes Balears"
+  },
+  "host": {
+   "name": "Rapha Mallorca Clubhouse",
+   "type": "brand"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Book on Rapha's events site. Rapha club members get a free coffee before the ride and ride insurance. Choose the route that matches your pace.",
+  "description": "An intermediate-pace social ride from the Rapha clubhouse in Palma. There is a mid-ride stop at a supermarket to refill bottles.",
+  "links": {
+   "website": "https://events.rapha.cc/products/social-ride",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://events.rapha.cc/products/social-ride"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "Rapha's events page gives 'Every Tuesday', meet 8:15 am, roll-out 8:30 am, October 2026 and ongoing (read Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://events.rapha.cc/rapha-mallorca",
+   "feed_url": null,
+   "notes": "Booking is on Rapha's events site. The page blocks scripted reads, so the times were read through a fetch tool, not the raw page."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 2 hours",
+  "duration_min": 120,
+  "pace": "Advanced: 28 to 32 km/h on the flat, 25 to 28 km/h on climbs",
+  "drop_policy": "groups",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "palma-es-rapha-mallorca-spicy-ride",
+  "name": "Rapha Mallorca Spicy Ride",
+  "city": "Palma",
+  "region": "Balearic Islands",
+  "country": "ES",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Thursday: meet 8:15 am at the Rapha Mallorca clubhouse, roll out 8:30 am; back about 10:30 am. The booking page shows October 2026 and ongoing Thursdays.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "8:30 am",
+  "start_hhmm": "08:30",
+  "frequency": "weekly",
+  "tz": "Europe/Madrid",
+  "start_location": {
+   "name": "Rapha Mallorca clubhouse",
+   "address": "Plaça del Rosari 1, 07001 Palma, Illes Balears"
+  },
+  "host": {
+   "name": "Rapha Mallorca Clubhouse",
+   "type": "brand"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Book on Rapha's events site. Rapha club members get a free coffee before the ride and ride insurance.",
+  "description": "The faster weekly ride from the Rapha clubhouse in Palma, at an advanced pace of about 2 hours.",
+  "links": {
+   "website": "https://events.rapha.cc/products/spicy-ride",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://events.rapha.cc/products/spicy-ride"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "Rapha's events page gives 'Every Thursday', meet 8:15 am, roll-out 8:30 am, October 2026 and ongoing (read Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://events.rapha.cc/rapha-mallorca",
+   "feed_url": null,
+   "notes": "Booking is on Rapha's events site. The page blocks scripted reads, so the times were read through a fetch tool, not the raw page."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 3.5 hours",
+  "duration_min": 210,
+  "pace": "Easy: 23 to 25 km/h on the flat, 18 to 23 km/h on climbs; no-drop",
+  "drop_policy": "no-drop",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "verified_on": "2026-10-02",
+  "slug": "palma-es-rapha-mallorca-easy-ride",
+  "name": "Rapha Mallorca Easy Ride",
+  "city": "Palma",
+  "region": "Balearic Islands",
+  "country": "ES",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Three Saturdays a month: meet 8:15 am at the Rapha Mallorca clubhouse, roll out 8:30 am; back by about noon. The booking page lists the dates.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:30 am",
+  "start_hhmm": "08:30",
+  "frequency": "irregular",
+  "tz": "Europe/Madrid",
+  "start_location": {
+   "name": "Rapha Mallorca clubhouse",
+   "address": "Plaça del Rosari 1, 07001 Palma, Illes Balears"
+  },
+  "host": {
+   "name": "Rapha Mallorca Clubhouse",
+   "type": "brand"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Book on Rapha's events site. The host calls it inclusive and no-drop, with a coffee stop. Rapha club members get ride insurance.",
+  "description": "A no-drop Saturday ride from the Rapha clubhouse in Palma at an easy pace with a coffee stop, three Saturdays each month.",
+  "links": {
+   "website": "https://events.rapha.cc/products/easy-ride",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://events.rapha.cc/products/easy-ride"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "Rapha's events page gives an Easy Ride on three Saturdays a month, meet 8:15 am, roll-out 8:30 am, October 2026 (read Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://events.rapha.cc/rapha-mallorca",
+   "feed_url": null,
+   "notes": "Booking is on Rapha's events site. The page blocks scripted reads, so the times were read through a fetch tool, not the raw page."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "Sep–Dec",
+  "season_months": {
+   "start": 9,
+   "end": 12
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 1 to 1.5 hours",
+  "duration_min": 75,
+  "pace": "Uptempo, two groups of up to 10 riders",
+  "drop_policy": "groups",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "singapore-sg-rapha-singapore-raphalolowednesday",
+  "name": "RaphaLoloWednesday",
+  "city": "Singapore",
+  "region": "Singapore",
+  "country": "SG",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday, 5:30 am from MacRitchie Reservoir; Sep to Dec 2026 on the booking page. About 1 to 1.5 hours, finishing at the Rapha Singapore clubhouse for coffee.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "5:30 am",
+  "start_hhmm": "05:30",
+  "frequency": "weekly",
+  "tz": "Asia/Singapore",
+  "start_location": {
+   "name": "MacRitchie Reservoir",
+   "address": "MacRitchie Reservoir, Singapore"
+  },
+  "host": {
+   "name": "Rapha Singapore Clubhouse",
+   "type": "brand"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Open to all riders, booking on Rapha's events site. Groups are capped at 10 riders by local traffic rules.",
+  "description": "A fast dawn ride from MacRitchie Reservoir east on the flyovers, then south, ending at the Rapha Singapore clubhouse for coffee.",
+  "links": {
+   "website": "https://events.rapha.cc/products/raphalolowednesday",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://events.rapha.cc/products/raphalolowednesday"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "Rapha's events page gives Wednesdays 5:30 am at MacRitchie Reservoir, September to December 2026, open to all riders (read Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://events.rapha.cc/rapha-singapore",
+   "feed_url": null,
+   "notes": "Booking is on Rapha's events site. The page blocks scripted reads, so the times were read through a fetch tool, not the raw page."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "Oct–Dec",
+  "season_months": {
+   "start": 10,
+   "end": 12
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 1.3 hours",
+  "duration_min": 80,
+  "pace": "20 to 30 km/h, faster only on descents",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "singapore-sg-rapha-singapore-friday-social",
+  "name": "Rapha Singapore Friday Social",
+  "city": "Singapore",
+  "region": "Singapore",
+  "country": "SG",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Friday, 5:30 am from the MacRitchie Reservoir drop-off point; the last Friday of each month starts at the Rapha Singapore clubhouse instead. Ends about 6:50 am. Oct to Dec 2026 on the booking page.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "5:30 am",
+  "start_hhmm": "05:30",
+  "frequency": "weekly",
+  "tz": "Asia/Singapore",
+  "start_location": {
+   "name": "MacRitchie Reservoir drop-off point",
+   "address": "MacRitchie Reservoir, Singapore"
+  },
+  "host": {
+   "name": "Rapha Singapore Clubhouse",
+   "type": "brand"
+  },
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "You do not need to be a Rapha club member; it is open to everyone. Book on Rapha's events site. Route maps are on RideWithGPS.",
+  "description": "An easy dawn ride to explore new roads, ending with coffee at the clubhouse. The last Friday of the month is a clubhouse edition with Sentosa loops.",
+  "links": {
+   "website": "https://events.rapha.cc/products/rapha-singapore-friday-social",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://events.rapha.cc/products/rapha-singapore-friday-social"
+  ],
+  "last_seen": "2026-10-02",
+  "evidence": "Rapha's events page gives Fridays 5:30 am, October to December 2026, open to everyone (read Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://events.rapha.cc/rapha-singapore",
+   "feed_url": null,
+   "notes": "Booking is on Rapha's events site. The page blocks scripted reads, so the times were read through a fetch tool, not the raw page."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "critical-mass",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slow group ride; no leader",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "munich-de-critical-mass-muenchen",
+  "name": "Critical Mass München",
+  "city": "Munich",
+  "region": "Bavaria",
+  "country": "DE",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Last Friday of every month: meet 6:00 pm at Max-Josef-Platz in front of the Opera, ride off 6:30 pm. Stragglers are picked up at the Bavaria statue at 8:00 pm.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "monthly",
+  "tz": "Europe/Berlin",
+  "start_location": {
+   "name": "Max-Josef-Platz, in front of the Opera (by Odeonsplatz)",
+   "address": "Max-Joseph-Platz, Munich"
+  },
+  "host": {
+   "name": "Critical Mass München",
+   "type": "informal"
+  },
+  "language": [
+   "de"
+  ],
+  "visitor_notes": "No sign-up. Use the Critical Maps app if you miss the start. Children are welcome.",
+  "description": "Munich's monthly Critical Mass. Riders meet in front of the Opera, roll out together and the group has no organiser. The site says all are welcome, alone, in groups or with children.",
+  "links": {
+   "website": "https://www.criticalmass-muenchen.de",
+   "instagram": "https://www.instagram.com/criticalmassmuenchen/",
+   "facebook": "https://www.facebook.com/criticalmassmuenchen",
+   "strava": "https://www.strava.com/clubs/criticalmassmuenchen",
+   "meetup": null,
+   "other": [
+    "https://criticalmass.in/muenchen"
+   ]
+  },
+  "sources": [
+   "https://www.criticalmass-muenchen.de",
+   "https://criticalmass.in/muenchen"
+  ],
+  "last_seen": null,
+  "evidence": "The group's own site says 'jeden letzten Freitag im Monat um 18 Uhr am Max-Joseph-Platz' with the ride off at 18:30 and criticalmass.in lists the next ride for Fri Oct 30, 2026; the platform shows no inactivity warning (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.criticalmass-muenchen.de",
+   "feed_url": null,
+   "notes": "The site has no dated post. criticalmass.in works the next date out from the rule, so it proves nothing alone; look for a recent Instagram or Strava club post."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "critical-mass",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": [
+   {
+    "ord": 3,
+    "day": "fri"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slow group ride; no leader",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "vienna-at-critical-mass-wien",
+  "name": "Critical Mass Wien",
+  "city": "Vienna",
+  "region": "Vienna",
+  "country": "AT",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Third Friday of every month: meet 5:00 pm at Schwarzenbergplatz, start about 5:30 pm, in any weather. Next: Fri Oct 16, 2026.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "5:00 pm",
+  "start_hhmm": "17:00",
+  "frequency": "monthly",
+  "tz": "Europe/Vienna",
+  "start_location": {
+   "name": "Schwarzenbergplatz",
+   "address": "Schwarzenbergplatz, Vienna"
+  },
+  "host": {
+   "name": "Critical Mass Wien",
+   "type": "informal"
+  },
+  "language": [
+   "de",
+   "en"
+  ],
+  "visitor_notes": "No sign-up. The group asks riders to bring friends and sound systems.",
+  "description": "Vienna's monthly Critical Mass, rolling since 2006. It starts at Schwarzenbergplatz on the third Friday and ends at a different place each month, sometimes with music or a film.",
+  "links": {
+   "website": "http://www.criticalmass.at/category/wien",
+   "instagram": "https://www.instagram.com/criticalmasswien",
+   "facebook": "https://www.facebook.com/groups/Critical.Mass.Vienna/",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://criticalmass.in/wien",
+    "https://twitter.com/originalcmvie"
+   ]
+  },
+  "sources": [
+   "http://www.criticalmass.at/category/wien",
+   "https://criticalmass.in/wien"
+  ],
+  "last_seen": "2026-09-14",
+  "evidence": "The group's page criticalmass.at/category/wien has monthly posts through Sep 14, 2026 ('Am 18. September rollt die Critical Mass Vienna wie jeden Monat') giving Schwarzenbergplatz 17:00, start 17:30 (fetched Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "http://www.criticalmass.at/category/wien",
+   "feed_url": null,
+   "notes": "A new post appears about four days before each ride."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "critical-mass",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slow group ride; no leader",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "zurich-ch-critical-mass-zuerich",
+  "name": "Critical Mass Zürich",
+  "city": "Zürich",
+  "region": "Zurich",
+  "country": "CH",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Last Friday of every month, 6:45 pm at Bürkliplatz (Stadthausanlage). The page shows Fri Sep 25, 2026 at 18h45.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:45 pm",
+  "start_hhmm": "18:45",
+  "frequency": "monthly",
+  "tz": "Europe/Zurich",
+  "start_location": {
+   "name": "Bürkliplatz (Stadthausanlage)",
+   "address": "Stadthausanlage, Zürich"
+  },
+  "host": {
+   "name": "Critical Mass Zürich",
+   "type": "informal"
+  },
+  "language": [
+   "de"
+  ],
+  "visitor_notes": "No sign-up. A Telegram chat carries current info.",
+  "description": "Zürich's monthly Critical Mass, a group ride that is part of traffic rather than blocking it. The group's fan page gives the date and the meeting place.",
+  "links": {
+   "website": "https://criticalmass-zh.ch",
+   "instagram": "https://www.instagram.com/criticalmasszurich/",
+   "facebook": "https://www.facebook.com/CriticalMassZurich",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://t.me/criticalmassZH",
+    "https://criticalmass.in/zuerich"
+   ]
+  },
+  "sources": [
+   "https://criticalmass-zh.ch",
+   "https://criticalmass.in/zuerich"
+  ],
+  "last_seen": "2026-09-25",
+  "evidence": "The group's fan page says 'Immer am letzten Freitag im Monat' and shows 'Freitag 25. September 2026 18h45 Bürkliplatz' (fetched Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://criticalmass-zh.ch",
+   "feed_url": null,
+   "notes": "The page names the date of the next ride and is updated by hand each month. criticalmass.in logs no recent rides here."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "critical-mass",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "fri"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slow group ride; no leader",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "barcelona-es-massa-critica-barcelona",
+  "name": "Massa Crítica Barcelona",
+  "city": "Barcelona",
+  "region": "Catalonia",
+  "country": "ES",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "First Friday of every month: meet 8:00 pm under the Arc de Triomf (Passeig Sant Joan), depart about 8:30 pm. Next: Fri Oct 2, 2026.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "8:00 pm",
+  "start_hhmm": "20:00",
+  "frequency": "monthly",
+  "tz": "Europe/Madrid",
+  "start_location": {
+   "name": "Arc de Triomf (Passeig Sant Joan)",
+   "address": "Arc de Triomf, Barcelona"
+  },
+  "host": {
+   "name": "Massa Crítica Barcelona",
+   "type": "informal"
+  },
+  "language": [
+   "ca",
+   "es",
+   "en"
+  ],
+  "visitor_notes": "No sign-up. Use the Critical Maps app if you are late.",
+  "description": "Barcelona's monthly Critical Mass, 'bike every day, celebrate once a month'. Riders meet under the Arc de Triomf and leave about half an hour later.",
+  "links": {
+   "website": "https://barcelona.bicicritica.com/en",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/pg/mcbcn/",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://criticalmass.in/barcelona",
+    "https://twitter.com/massacriticabcn"
+   ]
+  },
+  "sources": [
+   "https://barcelona.bicicritica.com/en",
+   "https://criticalmass.in/barcelona"
+  ],
+  "last_seen": null,
+  "evidence": "The group's site says 'First Friday of every month. 20:00 at Arc de Triomf' and shows 'Next critical mass Friday, 2 October 2026 - 20:00' (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://barcelona.bicicritica.com/en",
+   "feed_url": null,
+   "notes": "The next date on the site may be worked out from the rule. Check the group's Twitter or Facebook for a post about the latest ride."
+  }
+ },
+ {
+  "name_en": "Sunday open streets at Cerro de las Campanas",
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": "Cerro de las Campanas",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "4 hours",
+  "duration_min": 240,
+  "pace": "Open street for walkers, runners, skaters and cyclists; no group pace",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "queretaro-mx-via-recreativa-cerro-de-las-campanas",
+  "name": "Vía Recreativa Cerro de las Campanas",
+  "city": "Querétaro",
+  "region": "Querétaro",
+  "country": "MX",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Sunday, 8:00 am to 12:00 pm, on the Circuito Cerro de las Campanas. Paused Sun Oct 4, 2026 for the Querétaro marathon; back Sun Oct 11.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "tz": "America/Mexico_City",
+  "start_location": {
+   "name": "Circuito Cerro de las Campanas",
+   "address": "Circuito Cerro de las Campanas, Santiago de Querétaro, Querétaro"
+  },
+  "host": {
+   "name": "Municipio de Querétaro",
+   "type": "public"
+  },
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Free. Bicycle loans on site. Road closures nearby, so allow time. The ride is skipped on big event days.",
+  "description": "A car-free loop around Cerro de las Campanas every Sunday morning. The city runs free activities beside it: fitness dancing, reading workshops, bicycle loans and games.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://expresoqueretaro.com/2026/09/30/por-maraton-este-domingo-no-habra-via-recreativa-en-el-cerro-de-las-campanas/"
+   ]
+  },
+  "sources": [
+   "https://expresoqueretaro.com/2026/09/30/por-maraton-este-domingo-no-habra-via-recreativa-en-el-cerro-de-las-campanas/",
+   "https://aldialogo.mx/queretaro/2026/08/07/sin-plan-para-este-domingo-habra-actividades-gratis-en-el-cerro-de-las-campanas",
+   "https://expresoqueretaro.com/2026/06/16/bernardo-quintana-queda-descartado-por-ahora-para-la-bici-via-recreativa/"
+  ],
+  "last_seen": "2026-09-30",
+  "evidence": "Expreso Querétaro (Sep 30, 2026) quotes a municipal notice: the Vía Recreativa at Cerro de las Campanas pauses Sun Oct 4 and returns Sun Oct 11; Al Diálogo (Aug 7, 2026) gives 8:00 am to 12:00 pm and Expreso (Jun 16, 2026) calls the Cerro the regular site (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://expresoqueretaro.com/2026/09/30/por-maraton-este-domingo-no-habra-via-recreativa-en-el-cerro-de-las-campanas/",
+   "feed_url": null,
+   "notes": "The municipality posts a notice when the ride is skipped; its X account @qromunicipio posts each Sunday. The schedule here comes from news pages, not a municipal page that loads."
+  }
+ },
+ {
+  "name_en": "Sunday Ciclovía",
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": "Centro Histórico",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Open street for walkers, runners, skaters and cyclists; no group pace",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "morelia-mx-ciclovia-recreativa-dominical",
+  "name": "Ciclovía Recreativa Dominical",
+  "city": "Morelia",
+  "region": "Michoacán",
+  "country": "MX",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Sunday from about 8:00 am to 1:00 pm (one source says 2:00 pm) on Av. Madero and Av. Acueducto in the Centro Histórico. A free bike school runs inside it 11:00 am to 1:00 pm.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "tz": "America/Mexico_City",
+  "start_location": {
+   "name": "Av. Francisco I. Madero, Centro Histórico (from Calle Andrés Quintana Roo to Av. Tata Vasco)",
+   "address": "Avenida Francisco I. Madero, Centro Histórico, Morelia, Michoacán"
+  },
+  "host": {
+   "name": "Ayuntamiento de Morelia, with Bicivilízate Michoacán A.C.",
+   "type": "public"
+  },
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Free. Bikes can be rented on the street at a low price. Hours differ between sources: ask at the start.",
+  "description": "Morelia's car-free Sunday on Avenida Madero, running since 2010. You can walk, run, skate or ride, and rent a bike on the street if you do not have one. A free bike school runs inside it.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://mimorelia.com/morelia/en-el-marco-del-dia-mundial-la-bicicleta-morelia-fortalece-la-biciescuela-la-ciclovia-dominical-n5583804"
+   ]
+  },
+  "sources": [
+   "https://mimorelia.com/morelia/en-el-marco-del-dia-mundial-la-bicicleta-morelia-fortalece-la-biciescuela-la-ciclovia-dominical-n5583804",
+   "https://mimorelia.com/noticias/morelia/date-una-vuelta-disfruta-la-ciclov%C3%ADa-recreativa-dominical-en-morelia",
+   "https://revistamorelia.com/ciclovia-dominical-de-morelia-2025/"
+  ],
+  "last_seen": "2026-05-30",
+  "evidence": "Mi Morelia (May 30, 2026) reports the city's Biciescuela runs every Sunday 11:00 to 13:00 inside the Ciclovía Recreativa Dominical in the Centro Histórico; another Mi Morelia story gives Sundays 8:00 am to 1:00 pm on Av. Madero (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://mimorelia.com/morelia/en-el-marco-del-dia-mundial-la-bicicleta-morelia-fortalece-la-biciescuela-la-ciclovia-dominical-n5583804",
+   "feed_url": null,
+   "notes": "The hours differ: 8:00 to 13:00 on Mi Morelia, 8:00 to 14:00 on Revista Morelia (2025). Check the city's notices around holidays."
+  }
+ },
+ {
+  "name_en": "PuenteAndo, open bridge day",
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "sun"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "4 to 5 hours",
+  "duration_min": 240,
+  "pace": "Open street for walkers, runners, skaters and cyclists; no group pace",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "cancun-mx-puenteando-nichupte",
+  "name": "PuenteAndo",
+  "city": "Cancún",
+  "region": "Quintana Roo",
+  "country": "MX",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Last Sunday of each month, about 4:00 or 5:00 pm to 9:00 pm, on the Nichupté bridge (about 8 km out and back). First edition Jul 26, 2026 (4 to 9 pm); the Aug 30 edition ran 5:00 to 9:00 pm. Next: Sun Oct 25, 2026.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "5:00 pm",
+  "start_hhmm": "17:00",
+  "frequency": "monthly",
+  "tz": "America/Cancun",
+  "start_location": {
+   "name": "Puente Nichupté",
+   "address": "Puente Nichupté, Cancún, Quintana Roo"
+  },
+  "host": {
+   "name": "Gobierno del Estado de Quintana Roo (IMOVEQROO)",
+   "type": "public"
+  },
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Free to join. Bicycles, skates and scooters ride on the bridge. The start time moved from 4:00 pm to 5:00 pm between the first and second editions, so check the day before.",
+  "description": "The state closes the Nichupté bridge to cars for a few hours on the last Sunday of the month. People ride bikes, skates and scooters, walk or run about 8 km out and back over the lagoon, with stalls and activities.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://cgc.qroo.gob.mx/arranca-mara-lezama-puenteyando-en-el-puente-nichupte-con-mas-de-6-mil-asistentes-espacio-dominical-de-convivencia-familiar/",
+    "https://www.clicnoticias.com.mx/cancun-puente-nichupte-segunda-edicion-puenteando/"
+   ]
+  },
+  "sources": [
+   "https://cgc.qroo.gob.mx/arranca-mara-lezama-puenteyando-en-el-puente-nichupte-con-mas-de-6-mil-asistentes-espacio-dominical-de-convivencia-familiar/",
+   "https://www.clicnoticias.com.mx/cancun-puente-nichupte-segunda-edicion-puenteando/",
+   "https://www.mcvnoticias.com/ven-a-puenteando-la-ruta-recreativa-del-puente-nichupte/"
+  ],
+  "last_seen": "2026-08-30",
+  "evidence": "The Quintana Roo state release (Jul 26, 2026) says PuenteyAndo runs the last Sunday of each month, and Clic Noticias (Aug 30, 2026) reports the second edition from 5:00 to 9:00 pm; the Sep 27 edition was not confirmed (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "news",
+   "watch_url": "https://cgc.qroo.gob.mx/arranca-mara-lezama-puenteyando-en-el-puente-nichupte-con-mas-de-6-mil-asistentes-espacio-dominical-de-convivencia-familiar/",
+   "feed_url": null,
+   "notes": "A new programme, so the hours may change. Look for a state notice before each last Sunday."
+  }
+ },
+ {
+  "name_en": "CicloRecreoVía, Sunday open streets",
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": "Providencia",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "5 hours",
+  "duration_min": 300,
+  "pace": "Open street for walkers, runners, skaters and cyclists; no group pace",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "santiago-cl-ciclorecreovia-santiago",
+  "name": "CicloRecreoVía Santiago",
+  "city": "Santiago",
+  "region": "Santiago Metropolitan Region",
+  "country": "CL",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Sunday of the year, 9:00 am to 2:00 pm, on closed streets in Providencia, Las Condes, Santiago Centro, Vitacura and Ñuñoa.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "tz": "America/Santiago",
+  "start_location": {
+   "name": "Several routes; the Centro-Oriente route runs along Av. Andrés Bello and Av. Pocuro, Providencia",
+   "address": "Avenida Andrés Bello, Providencia, Santiago"
+  },
+  "host": {
+   "name": "Fundación CicloRecreoVía",
+   "type": "nonprofit"
+  },
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Free. Sunday only. The host runs several routes; check its Tramos page for the one nearest you.",
+  "description": "Kilometres of car-free streets in Santiago every Sunday for walking, running, skating and cycling, about 35,000 people each week. The route changes by area: Centro-Oriente, Sur-Poniente and Oriente.",
+  "links": {
+   "website": "https://ciclorecreovia.cl/",
+   "instagram": null,
+   "facebook": "https://es-la.facebook.com/CicloRecreoVia/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://ciclorecreovia.cl/",
+   "https://ciclorecreovia.cl/santiago/"
+  ],
+  "last_seen": null,
+  "evidence": "The host's own site says 'Todos los domingos de 9.00 a 14.00 hrs' in Santiago and 'cada domingo del año'; nothing on the page is dated (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://ciclorecreovia.cl/santiago/",
+   "feed_url": null,
+   "notes": "Check the page for holiday closures and route changes."
+  }
+ },
+ {
+  "name_en": "CicloRecreoVía Viña del Mar, Sunday open streets",
+  "kind": "open-streets",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "state": null,
+  "neighborhood": "Borde costero",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "4 hours",
+  "duration_min": 240,
+  "pace": "Open street for walkers, runners, skaters and cyclists; no group pace",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "vina-del-mar-cl-ciclorecreovia-vina-del-mar",
+  "name": "CicloRecreoVía Viña del Mar",
+  "city": "Viña del Mar",
+  "region": "Valparaíso Region",
+  "country": "CL",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Sunday, 9:00 am to 1:00 pm, on the coast road of Viña del Mar: Av. San Martín and the west side of Av. Marina, ending at the Reloj de Flores.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "tz": "America/Santiago",
+  "start_location": {
+   "name": "Av. San Martín and Av. Marina, along the coast",
+   "address": "Avenida San Martín, Viña del Mar"
+  },
+  "host": {
+   "name": "Fundación CicloRecreoVía",
+   "type": "nonprofit"
+  },
+  "language": [
+   "es"
+  ],
+  "visitor_notes": "Free. Sunday only.",
+  "description": "A car-free stretch of the Viña del Mar seafront every Sunday morning, passing the main sights of the city and ending at the Flower Clock. About 3,500 people come each week.",
+  "links": {
+   "website": "https://ciclorecreovia.cl/",
+   "instagram": null,
+   "facebook": "https://es-la.facebook.com/CicloRecreoVia/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://ciclorecreovia.cl/",
+   "https://ciclorecreovia.cl/vinadelmar/"
+  ],
+  "last_seen": null,
+  "evidence": "The host's own site says 'Todos los domingos, de 9.00 a 13.00 hrs, en el borde costero de Viña del Mar'; nothing on the page is dated (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://ciclorecreovia.cl/vinadelmar/",
+   "feed_url": null,
+   "notes": "Check the page for holiday closures."
+  }
+ }
+]

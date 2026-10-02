@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:pleasant-hill-ca-concord-thursday-night-rides@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Los_Angeles:20261008T180000
+DTEND;TZID=America/Los_Angeles:20261008T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270301T235959Z
+SUMMARY:Concord Thursday Night Rides — Pleasant Hill\, CA
+LOCATION:Pleasant Hill BART Station\, Pleasant Hill BART Station\, Pleasa
+ nt Hill\, CA
+DESCRIPTION:Schedule: Every Thursday\, meet 5:45 pm\, roll 6:00 pm\, from
+  Pleasant Hill BART.\nConfirm with the host before you go.\nhttps://cycl
+ eforchange.org/rides/pleasant-hill-ca-concord-thursday-night-rides/
+URL:https://cycleforchange.org/rides/pleasant-hill-ca-concord-thursday-ni
+ ght-rides/
+END:VEVENT
+END:VCALENDAR

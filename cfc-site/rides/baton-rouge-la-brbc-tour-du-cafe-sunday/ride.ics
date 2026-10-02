@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:baton-rouge-la-brbc-tour-du-cafe-sunday@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Chicago:20261004T113000
+DTEND;TZID=America/Chicago:20261004T143000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270301T235959Z
+SUMMARY:Tour du Café C Ride (Baton Rouge Bike Club) — Baton Rouge\, LA
+LOCATION:Broadmoor United Methodist Church parking lot
+DESCRIPTION:Pace: C pace\, 10-15 mph\, no faster than the slowest rider.\
+ nNo-drop.\nSchedule: Sundays\, 11:30 am from the Broadmoor United Method
+ ist Church parking lot (11:45 am from the Goodwood Library lot on some b
+ oard-meeting Sundays). Riders join at Goodwood Park at noon and City Par
+ k Tennis Center at 12:30..\nConfirm with the host before you go.\nhttps:
+ //cycleforchange.org/rides/baton-rouge-la-brbc-tour-du-cafe-sunday/
+URL:https://cycleforchange.org/rides/baton-rouge-la-brbc-tour-du-cafe-sun
+ day/
+END:VEVENT
+END:VCALENDAR

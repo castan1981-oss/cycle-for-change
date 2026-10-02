@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:houston-tx-space-city-cycling-club-weekly-rides@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Chicago:20261003T073000
+DTEND;TZID=America/Chicago:20261003T093000
+RRULE:FREQ=WEEKLY;BYDAY=MO,WE,FR,SA,SU;UNTIL=20270301T235959Z
+SUMMARY:Space City Cycling Club Weekly Rides — Houston\, TX
+LOCATION:Trek Bicycle Clear Lake\, 2422 Bay Area Blvd\, Houston\, TX 7705
+ 8
+DESCRIPTION:Pace: Pace groups: Warps 25+\, 22+\, 21\, 20s\, 18s\, Cruiser
+ s 15-16 mph. Groups above 18 mph are drop groups..\nSchedule: Mon\, Wed\
+ , Fri\, Sat and Sun\, 7:30 am. Saturday is the biggest ride\, with pace 
+ groups from 15-16 mph to 25+ mph..\nConfirm with the host before you go.
+ \nhttps://cycleforchange.org/rides/houston-tx-space-city-cycling-club-we
+ ekly-rides/
+URL:https://cycleforchange.org/rides/houston-tx-space-city-cycling-club-w
+ eekly-rides/
+END:VEVENT
+END:VCALENDAR

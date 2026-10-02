@@ -79,8 +79,26 @@
   force = true
 
 [[redirects]]
-  from = "/rides/tx/plano/"
-  to = "/rides/tx/frisco/"
+  from = "/rides/tx/frisco/"
+  to = "/rides/tx/plano/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/tx/denton/"
+  to = "/rides/tx/flower-mound/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/ma/paxton/"
+  to = "/rides/ma/millbury/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/ma/uxbridge/"
+  to = "/rides/ma/millbury/"
   status = 301
   force = true
 

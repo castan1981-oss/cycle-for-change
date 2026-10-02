@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:queretaro-mx-via-recreativa-cerro-de-las-campanas@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Mexico_City:20261004T080000
+DTEND;TZID=America/Mexico_City:20261004T120000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270301T235959Z
+SUMMARY:Vía Recreativa Cerro de las Campanas — Querétaro\, Mexico
+LOCATION:Circuito Cerro de las Campanas\, Circuito Cerro de las Campanas\
+ , Santiago de Querétaro\, Querétaro
+DESCRIPTION:Pace: Open street for walkers\, runners\, skaters and cyclist
+ s; no group pace.\nSchedule: Every Sunday\, 8:00 am to 12:00 pm\, on the
+  Circuito Cerro de las Campanas. Paused Sun Oct 4\, 2026 for the Querét
+ aro marathon; back Sun Oct 11..\nConfirm with the host before you go.\nh
+ ttps://cycleforchange.org/rides/queretaro-mx-via-recreativa-cerro-de-las
+ -campanas/
+URL:https://cycleforchange.org/rides/queretaro-mx-via-recreativa-cerro-de
+ -las-campanas/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:long-beach-ca-lb-cannonball-run-taco-tuesday@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Los_Angeles:20261006T190000
+DTEND;TZID=America/Los_Angeles:20261006T210000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270301T235959Z
+SUMMARY:LB Cannonball Run (Taco Tuesday) — Long Beach\, CA
+LOCATION:Valparaiso Plaza\, 8 S 18th Pl\, Long Beach\, CA 90803
+DESCRIPTION:Pace: Fast\, 15 to 20 miles; no drop with regroups per longbe
+ achbikerides.com.\nNo-drop.\nSchedule: Most Tuesdays\, 7:00 pm. A differ
+ ent taco spot each week\, 15 to 20 miles\, fast pace with regroups. Chec
+ k Instagram to see if there is a ride that week..\nConfirm with the host
+  before you go.\nhttps://cycleforchange.org/rides/long-beach-ca-lb-canno
+ nball-run-taco-tuesday/
+URL:https://cycleforchange.org/rides/long-beach-ca-lb-cannonball-run-taco
+ -tuesday/
+END:VEVENT
+END:VCALENDAR

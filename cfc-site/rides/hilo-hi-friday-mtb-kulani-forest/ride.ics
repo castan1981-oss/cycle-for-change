@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hilo-hi-friday-mtb-kulani-forest@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=Pacific/Honolulu:20261002T160000
+DTEND;TZID=Pacific/Honolulu:20261002T180000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270301T235959Z
+SUMMARY:Friday MTB at Kulani Forest — Hilo\, HI
+LOCATION:Kulani Forest mountain bike park\, Kulani Forest mountain bike p
+ ark\, Stainback Hwy\, Hawaii
+DESCRIPTION:Schedule: Fridays\, 4:00 pm\, at the Kulani Forest mountain b
+ ike park off Stainback Highway.\nConfirm with the host before you go.\nh
+ ttps://cycleforchange.org/rides/hilo-hi-friday-mtb-kulani-forest/
+URL:https://cycleforchange.org/rides/hilo-hi-friday-mtb-kulani-forest/
+END:VEVENT
+END:VCALENDAR
