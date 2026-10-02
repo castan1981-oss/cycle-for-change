@@ -714,6 +714,123 @@ const FACET_DOOR = { lgbtq:"LGBTQ+", "no-drop":"No-drop", beginner:"Beginners", 
 const FACET_TAG = { lgbtq:"lgbtq", "no-drop":"no-drop", beginner:"beginner", "women-trans-femme":"wtf", bipoc:"bipoc", family:"family" };
 const plural = (n, one = "ride", many = one + "s") => `${n} ${n === 1 ? one : many}`;
 
+// ---------- Pass 16 (Oct 2, 2026): drawn maps, ride buttons, photos ----------
+// Robert: "even more custom buttons and graphics or even some photos." Three things, all drawn
+// here so every place page gets them:
+//  · maps — data/geo/outlines.json (tools/geo-outlines.js) holds each state's and country's
+//    outline and the Mercator numbers to put a ride on it. A state or country page opens on its
+//    map (a dot per ride, the cities you can tap); a city page shows where it sits, with the
+//    cities around it; a ride page shows its dot. /rides/united-states/ is a map you tap.
+//  · ride buttons — .gr-btn: a stamp holding the mark, the words, an arrow.
+//  · photos — Robert's own, in the house grade, where they're true to the place: the crew on
+//    /rides/ and the Arizona pages, the finish line on the who's-riding pages and /about/.
+const GEO = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "geo", "outlines.json"), "utf8")); } catch (e) { return null; } })();
+const geoPlace = ([k, tx, ty, rot], lng, lat) => {
+  const l = ((lng + rot + 540) % 360) - 180;
+  return [tx + k * (l * Math.PI / 180), ty - k * Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI / 180) / 2))];
+};
+const shapeOf = (st, cc) => (!GEO ? null : st ? GEO.states[st] || null : GEO.countries[cc] || null);
+const n1 = (v) => Math.round(v * 10) / 10;
+let mapUid = 0;
+// labels: [{ lng, lat, text, n, href, strong }] — placed biggest first; one that would sit on
+// another goes to the other side of its dot, or keeps only its ring (the tiles below name it).
+function mapFigure(shape, { dots = [], dim = [], labels = [], focus = null, ringMiles = null, ringAt = null, title, caption = "", cls = "" }) {
+  if (!shape) return "";
+  const id = `gm${++mapUid}`;
+  const P = (o) => geoPlace(shape.p, o.lng, o.lat);
+  const inBox = ([x, y]) => x >= -4 && y >= -4 && x <= shape.w + 4 && y <= shape.h + 4;
+  const seen = new Set();
+  const dotSvg = (list, c) => list.map(P).filter(inBox).map(([x, y]) => { const k = `${n1(x)},${n1(y)}`; if (seen.has(k)) return ""; seen.add(k); return `<circle class="${c}" cx="${n1(x)}" cy="${n1(y)}" r="3.4"/>`; }).join("");
+  const FS = 16, CW = FS * 0.62;   // Space Mono: every character is 0.6em
+  // every city's ring is in the way of every other city's name
+  const boxes = labels.map(P).filter(inBox).map(([x, y]) => ({ x0: x - 6, x1: x + 6, y0: y - 6, y1: y + 6, ring: true }));
+  if (focus) { const [x, y] = P(focus); boxes.push({ x0: x - 14, x1: x + 14, y0: y - 14, y1: y + 14 }); }
+  const labelSvg = [...labels].sort((a, b) => (b.strong ? 1 : 0) - (a.strong ? 1 : 0) || (b.n || 0) - (a.n || 0)).map((l) => {
+    const [x, y] = P(l); if (!inBox([x, y])) return "";
+    const text = String(l.text).toUpperCase(), cnt = l.n != null ? ` ${l.n}` : "";
+    const w = (text.length + cnt.length) * CW + 6;
+    // right, left, above, below — the first that's clear of the edges, the rings and the names already placed
+    const own = (b) => !(b.ring && Math.abs((b.x0 + b.x1) / 2 - x) < 0.5 && Math.abs((b.y0 + b.y1) / 2 - y) < 0.5);
+    const clear = (b) => b.x0 >= 0 && b.x1 <= shape.w && b.y0 >= 0 && b.y1 <= shape.h && !boxes.some((o) => own(o) && b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0);
+    const spots = { r: [x + 11, y + FS * 0.35, "start"], l: [x - 11, y + FS * 0.35, "end"], t: [x, y - 13, "middle"], b: [x, y + 13 + FS * 0.8, "middle"],
+      tr: [x + 7, y - 11, "start"], br: [x + 7, y + 11 + FS * 0.8, "start"], tl: [x - 7, y - 11, "end"], bl: [x - 7, y + 11 + FS * 0.8, "end"] };
+    const boxOf = ([tx, ty, a]) => ({ x0: a === "start" ? tx - 2 : a === "end" ? tx - w + 2 : tx - w / 2, x1: a === "start" ? tx + w - 2 : a === "end" ? tx + 2 : tx + w / 2, y0: ty - FS * 0.82, y1: ty + FS * 0.25 });
+    let spot = null;
+    for (const k of x > shape.w * 0.62 ? ["l", "r", "tl", "bl", "t", "b", "tr", "br"] : ["r", "l", "tr", "br", "t", "b", "tl", "bl"]) { const b = boxOf(spots[k]); if (clear(b)) { boxes.push(b); spot = spots[k]; break; } }
+    const ring = `<circle class="gr-map-hub${l.strong ? " gr-map-hub--here" : ""}" cx="${n1(x)}" cy="${n1(y)}" r="${l.strong ? 7.5 : 6}"/>`;
+    const label = spot ? `<text x="${n1(spot[0])}" y="${n1(spot[1])}" text-anchor="${spot[2]}"><tspan class="gr-map-name">${esc(text)}</tspan>${cnt ? `<tspan class="gr-map-n">${cnt}</tspan>` : ""}</text>` : "";
+    const inner = ring + label;
+    return l.href ? `<a href="${l.href}" aria-label="${attr(`${l.text}${l.n != null ? `, ${l.n} rides` : ""}`)}">${inner}</a>` : `<g>${inner}</g>`;
+  }).join("");
+  let ring = "";
+  if (ringMiles && ringAt) {
+    const [cx, cy] = P(ringAt), [, ty] = geoPlace(shape.p, ringAt.lng, ringAt.lat + ringMiles / 69.05);
+    ring = `<circle class="gr-map-ring" cx="${n1(cx)}" cy="${n1(cy)}" r="${n1(Math.abs(cy - ty))}"/>`;
+  }
+  let here = "";
+  if (focus) { const [x, y] = P(focus); if (inBox([x, y])) here = `<circle class="gr-map-halo" cx="${n1(x)}" cy="${n1(y)}" r="13"/><circle class="gr-map-here" cx="${n1(x)}" cy="${n1(y)}" r="6"/>`; }
+  return `
+      <figure class="gr-map ${cls}">
+        <svg class="gr-map-svg" viewBox="0 0 ${shape.w} ${shape.h}" role="img" aria-labelledby="${id}"><title id="${id}">${esc(title)}</title>
+          <path class="gr-map-land" d="${shape.d}"/>${ring}
+          <g class="gr-map-dots">${dotSvg(dim, "gr-map-dot gr-map-dot--dim")}${dotSvg(dots, "gr-map-dot")}</g>${here}
+          <g class="gr-map-labels">${labelSvg}</g>
+        </svg>${caption ? `
+        <figcaption>${caption}</figcaption>` : ""}
+      </figure>`;
+}
+const hubLabel = (h, opts = {}) => ({ lng: h.lng, lat: h.lat, text: h.city, n: h.rides.length, href: opts.strong ? null : h.path, strong: !!opts.strong });
+
+// /rides/united-states/: tap a state. Shaded by how many rides it has.
+function usMap(byState) {
+  if (!GEO || !GEO.us) return "";
+  const lvl = (n) => (n >= 40 ? 4 : n >= 15 ? 3 : n >= 5 ? 2 : n >= 1 ? 1 : 0);
+  const shapes = Object.entries(GEO.us.states).map(([st, s]) => {
+    const n = (byState[st] || []).length, L = lvl(n);
+    const path = `<path class="gr-us-st gr-us-st--${L}" d="${s.d}"/>`;
+    const label = s.a > 3400 ? `<text class="gr-us-code gr-us-code--${L}" x="${s.c[0]}" y="${s.c[1] + 8}" text-anchor="middle">${st}</text>` : "";
+    return n ? `<a href="/rides/${st.toLowerCase()}/" aria-label="${attr(`${stateName(st)}, ${n} rides`)}">${path}${label}</a>` : `<g aria-hidden="true">${path}</g>`;
+  }).join("\n          ");
+  return `
+      <figure class="gr-map gr-map--us">
+        <svg class="gr-map-svg" viewBox="0 0 ${GEO.us.w} ${GEO.us.h}" role="group" aria-label="Map of the United States. Tap a state.">
+          ${shapes}
+        </svg>
+        <figcaption class="gr-us-key"><span><i class="gr-us-sw gr-us-sw--1"></i>1–4</span><span><i class="gr-us-sw gr-us-sw--2"></i>5–14</span><span><i class="gr-us-sw gr-us-sw--3"></i>15–39</span><span><i class="gr-us-sw gr-us-sw--4"></i>40+ rides</span></figcaption>
+      </figure>`;
+}
+// the two outline tiles on /rides/ (the US and the land), written as files the poster tiles can show
+function outlineSvg(shape, { stroke = 1.3 } = {}) {
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${shape.w} ${shape.h}" preserveAspectRatio="xMidYMid meet"><path d="${shape.d}" fill="none" stroke="#2A2E28" stroke-width="${stroke}" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>`;
+}
+
+// The ride button: the mark in a stamp, the words, an arrow. --ghost on paper; the solid one is
+// the page's one primary.
+function rideBtn({ href, text, markId, ghost = false, back = false, ext = false, attrs = "", cls = "" }) {
+  return `<a class="gr-btn${ghost ? " gr-btn--ghost" : ""}${back ? " gr-btn--back" : ""} ${cls}" href="${href}"${ext ? ` rel="noopener nofollow"` : ""}${attrs}><span class="gr-btn-mk" aria-hidden="true">${mark(markId, "gr-btn-mark")}</span><span class="gr-btn-t">${text}</span><span class="gr-btn-go" aria-hidden="true">${back ? "&larr;" : ext ? "&#8599;" : "&rarr;"}</span></a>`;
+}
+// A photo band: the picture dissolves into the paper at both edges (Pass 7). Never the first
+// thing on a phone (Pass 12): every caller puts it after the first set of picks.
+const PHOTOS = {
+  crew: { src: "/img/hero.jpg", w: 1600, h: 1600, alt: "Two riders stopped on a desert road at sunset, saguaros behind them, the sun sitting on the horizon.", pos: "50% 46%" },
+  people: { src: "/img/people.jpg", w: 1600, h: 1600, alt: "Two riders crossing a finish line with their hands joined in the air, a rainbow umbrella in the crowd.", pos: "50% 40%" },
+  south: { src: "/img/card-south.jpg", w: 800, h: 1000, alt: "Handlebars pointed down a mountain road at sunset, the valley lit below.", pos: "50% 55%" },
+  road: { src: "/img/card-pv.jpg", w: 800, h: 1000, alt: "A rider’s shadow on the road, one hand up off the bars, mountains ahead.", pos: "50% 45%" },
+  haus: { src: "/img/haus-road.jpg", w: 1600, h: 1200, alt: "Robert grinning into the camera mid-ride, a canal path and the sun behind him.", pos: "50% 40%" },
+};
+function photoBand(key, { line = "", cls = "" } = {}) {
+  const p = PHOTOS[key]; if (!p) return "";
+  return `
+      <figure class="gr-photo ${cls}">
+        <img src="${p.src}" alt="${attr(p.alt)}" width="${p.w}" height="${p.h}" loading="lazy" decoding="async" style="object-position:${p.pos}">
+        ${line ? `<figcaption>${line}</figcaption>` : ""}
+      </figure>`;
+}
+// The short page's badge: the pick it stands for, drawn big (the mark, or the day's two letters).
+function badge({ markId = null, day = null, sub = "" }) {
+  return `<div class="gr-badge" aria-hidden="true">${day ? `<span class="gr-badge-day">${DAY_SHORT[day]}</span>` : mark(markId, "gr-badge-mark")}${sub ? `<span class="gr-badge-sub">${esc(sub)}</span>` : ""}</div>`;
+}
+
 // The subsets a place can be cut into, each with its own short page (2+ rides) or its one ride.
 function subsetsOf(rides) {
   return {
@@ -886,10 +1003,11 @@ function directory(rides, hubs, worldHubs = []) {
         ${top.map(cityTile).join("\n        ")}
       </div>
       <div class="tiles-p tiles-p--wide gr-wide-doors">
-        ${posterTile({ href: "/rides/united-states/", name: "Every US state", count: byCountry.US ? byCountry.US.length : 0, small: "rides", blurb: statesText, markId: "town", cls: "tile-p--country" })}
-        ${worldN ? posterTile({ href: "/rides/world/", name: "Outside the US", count: worldN, small: "rides", blurb: `${worldCCs.length} ${worldCCs.length === 1 ? "country" : "countries"}`, markId: "globe", cls: "tile-p--country" }) : ""}
+        ${posterTile({ href: "/rides/united-states/", name: "Every US state", count: byCountry.US ? byCountry.US.length : 0, small: "rides", blurb: statesText, art: GEO ? "/rides/maps/us.svg" : null, markId: GEO ? null : "town", cls: "tile-p--country tile-p--outline" })}
+        ${worldN ? posterTile({ href: "/rides/world/", name: "Outside the US", count: worldN, small: "rides", blurb: `${worldCCs.length} ${worldCCs.length === 1 ? "country" : "countries"}`, art: GEO ? "/rides/maps/world.svg" : null, markId: GEO ? null : "globe", cls: "tile-p--country tile-p--outline" }) : ""}
       </div>
     </section>
+${photoBand("crew", { cls: "gr-photo--wide" })}
 
     <section class="gr-step" aria-labelledby="who-h">
       <h2 class="gr-filter-label" id="who-h">Or pick who&rsquo;s riding</h2>
@@ -936,6 +1054,7 @@ ${BLOCKS.BUILT([
       <h2 id="faq-h">The ones people ask first</h2>
 ${FAQ.map(([q, a]) => `      <details><summary>${esc(q)}</summary><p>${a}</p></details>`).join("\n")}
     </section>
+${photoBand("people", { cls: "gr-photo--wide" })}
     <section class="gr-why">
       <h2>Why Cycle for Change keeps a group ride list</h2>
       <p>A group ride is the cheapest, most reliable way I know to get out of my own head and into a room of people who want you there. Nobody asks what you do. You just ride. In 2027 I&rsquo;m riding 10,000 miles for queer communities, and a lot of them will be on rides like these. This list exists so anyone, anywhere, can find one this week.</p>
@@ -1062,18 +1181,22 @@ ${CTA}
 }
 
 // ---------- a short page: one pick inside a place (Road in Phoenix, Saturday in Phoenix, No-drop in Arizona) ----------
-function subPage({ title, h1, crumbs, canonical, description, rides, body, jump = "", upHref, upText, sideHref = null, sideText = null }) {
+function subPage({ title, h1, crumbs, canonical, description, rides, body, jump = "", upHref, upText, sideHref = null, sideText = null, badgeHtml = "" }) {
   return head({ title, description, canonical, jsonld: pageLd(canonical, h1, description, rides, crumbs) }) + `
 <main id="main" class="gr-dir gr-sub-page">
-  <header class="gr-head wrap">
+  <header class="gr-head wrap${badgeHtml ? " gr-head--badge" : ""}">
       ${crumbsHtml(crumbs)}
+      ${badgeHtml}
       <h1>${esc(h1)}</h1>
       ${subLine(rides)}
   </header>
 ${jump}
   <section class="gr-results-wrap" id="gr-list">
     <div class="wrap">${body}
-      <p class="back"><a href="${upHref}">&larr; ${esc(upText)}</a>${sideHref ? ` &middot; <a href="${sideHref}">${esc(sideText)}</a>` : ""}</p>
+      <nav class="gr-btn-row" aria-label="Where next">
+        ${rideBtn({ href: upHref, text: esc(upText), markId: "town", ghost: true, back: true })}
+        ${sideHref ? rideBtn({ href: sideHref, text: esc(sideText), markId: "list", ghost: true }) : ""}
+      </nav>
 ${FOOTLINE}
 ${CTA}
     </div>
@@ -1084,7 +1207,7 @@ ${CTA}
 
 // ---------- a city (US metro hub or world city hub) ----------
 // Small: the rides, closest first. Big: the picks, then your bike · made for · which day.
-function cityPage(h, { pages, notes = null, others = [] }) {
+function cityPage(h, { pages, notes = null, others = [], areaRides = [], areaHubs = [] }) {
   const world = !h.state;
   const unit = world ? "km" : "mi";
   const dist = (r) => (world ? km(h, r) : miles(h, r));
@@ -1117,6 +1240,7 @@ function cityPage(h, { pages, notes = null, others = [] }) {
         title: `${xh1} (${plural(x.rides.length)})`, h1: xh1, crumbs: subCrumbs(x.name, `${SITE}${url}`), canonical: `${SITE}${url}`,
         description: trunc(`${plural(x.rides.length, x.kind === "day" ? `${x.name} group ride` : `${x.h1.replace(/ group rides$/, "").toLowerCase()} group ride`)} within ${radius} of ${name}: ${x.rides.slice(0, 3).map((r) => r.name).join(", ")}. Day, time, start and when each was checked.`, 158),
         rides: list, body: dg ? dg.html : rowsHtml(list, { distanceFrom: x.kind === "day" ? null : h, unit }), jump: dg ? dg.strip : "",
+        badgeHtml: x.kind === "day" ? badge({ day: x.key, sub: h.city }) : badge({ markId: x.markId, sub: h.city }),
         upHref: base, upText: `Every kind of ride in ${h.city}`, sideHref: `${base}all/`, sideText: `All ${rides.length}, with filters`,
       }) });
     }
@@ -1143,12 +1267,22 @@ function cityPage(h, { pages, notes = null, others = [] }) {
         <h2 class="gr-filter-label" id="day-h">Which day</h2>
           ${weekDoors(sub.day, base)}
       </section>
-      <p class="gr-all-link"><a class="link" href="${base}all/">${mark("list", "gr-all-mark")}All ${rides.length} rides, with filters</a></p>`;
+      <p class="gr-all-link">${rideBtn({ href: `${base}all/`, text: `All ${rides.length} rides, with filters`, markId: "list", ghost: true })}</p>${h.state === "AZ" && h.city === "Phoenix" ? photoBand("road", { cls: "gr-photo--tall" }) : ""}`;
   } else {
     body = `
       <h2 class="gr-list-h">Closest first</h2>${rowsHtml(rides, { distanceFrom: h, unit })}`;
   }
   const town = world ? null : TOWNS.find({ city: h.city, state: h.state, lat: h.lat, lng: h.lng });
+  // where it sits: the state (or country), the ring it covers, its rides dark, the rest of the state light,
+  // the cities around it you can tap
+  const inHub = new Set(rides.map((r) => r.slug));
+  const where = mapFigure(shapeOf(h.state, h.country), {
+    dots: rides, dim: areaRides.filter((r) => !inHub.has(r.slug)),
+    labels: [hubLabel(h, { strong: true }), ...areaHubs.filter((x) => x !== h).map((x) => hubLabel(x))],
+    ringMiles: world ? WORLD_RADIUS_KM / 1.609344 : METRO_RADIUS, ringAt: h,
+    title: `Map of ${areaName}: the ${radius} around ${h.city}, a dot for each ride`,
+    caption: `<span>${mark("town", "gr-map-cap-mark")}Where ${esc(h.city)} sits</span><span>Tap a city</span>`, cls: "gr-map--where" });
+  const art = world ? artFor(h.key) : artFor(`${h.state.toLowerCase()}-${slugify(h.city)}`);
   const near = others.length ? `
       <nav class="gr-near" aria-label="Nearby cities">
         <span class="gr-filter-label">Nearby</span>
@@ -1156,7 +1290,8 @@ function cityPage(h, { pages, notes = null, others = [] }) {
       </nav>` : "";
   return head({ title, description, canonical, jsonld: pageLd(canonical, h1, description, rides, crumbs) }) + `
 <main id="main" class="gr-dir gr-city${step ? " gr-city--step" : ""}"${step ? ` data-all="${h.path}all/"` : ""}>
-  <header class="gr-head wrap">
+  <header class="gr-head wrap${art ? " gr-head--art" : ""}">
+      ${art ? `<img class="gr-head-art" src="${art}" alt="" width="200" height="200" decoding="async">` : ""}
       ${crumbsHtml(crumbs)}
       <h1>${esc(h1)}</h1>
       ${subLine(rides, `within ${radius}`)}
@@ -1165,6 +1300,7 @@ function cityPage(h, { pages, notes = null, others = [] }) {
 ${body}
 ${world ? countryNotesBlock(h.country, notes) : ""}
 ${town ? TOWNS.strip(town, { compact: true, heading: `Coming to ${esc(town.name)} to ride?`, lede: "Routes, coffee, who fixes a bike, where to sleep with it." }) : ""}
+${where}
 ${near}
       <p class="back"><a href="${areaPath}">&larr; All of ${esc(areaName)}</a></p>
 ${FOOTLINE}
@@ -1176,7 +1312,7 @@ ${CTA}
 
 // ---------- a state or a country ----------
 // Small: the rides, by town. Big: its cities, then who's riding, then the rides no city covers.
-function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, description, notes = "", world = false, pages, areaWord }) {
+function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, description, notes = "", world = false, pages, areaWord, st = null, cc = null }) {
   const step = rides.length > LIST_MAX && hubsIn.length > 0;
   const towns = new Set(rides.map((r) => r.city)).size;
   const hubOf = (c) => hubsIn.find((x) => x.city === c);
@@ -1191,10 +1327,12 @@ function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, descripti
     pages.push({ path: url, rides: list, html: subPage({
       title: `${xh1} (${plural(list.length)})`, h1: xh1, crumbs: [...crumbs, [FACET_DOOR[f.slug], `${SITE}${url}`]], canonical: `${SITE}${url}`,
       description: trunc(`${plural(list.length, `${f.h1.replace(/ group rides$/, "").toLowerCase()} group ride`)} in ${areaWord}: ${list.slice(0, 3).map((r) => r.name).join(", ")}. ${f.intro}`, 158),
-      rides: list, body: groupedRows(list, { hubOf, collapse: list.length > LIST_MAX }), jump: list.length > LIST_MAX && new Set(list.map((r) => r.city)).size > 2 ? cityJump(list) : "",
+      rides: list, badgeHtml: badge({ markId: FACET_MARK[f.slug], sub: areaWord }), body: groupedRows(list, { hubOf, collapse: list.length > LIST_MAX }), jump: list.length > LIST_MAX && new Set(list.map((r) => r.city)).size > 2 ? cityJump(list) : "",
       upHref: base, upText: `All group rides in ${areaWord}`, sideHref: `/rides/${f.slug}/`, sideText: `${FACET_DOOR[f.slug]} rides everywhere`,
     }) });
   }
+  // the place's own map: a dot per ride, its cities to tap
+  const areaMap = mapFigure(shapeOf(st, cc), { dots: rides, labels: hubsIn.map((x) => hubLabel(x)), title: `Map of ${areaWord}: a dot for each of the ${plural(rides.length)}${hubsIn.length ? ", its cities to tap" : ""}`, cls: "gr-map--area" });
   let body;
   if (step) {
     const covered = new Set(hubsIn.flatMap((x) => x.rides.map((r) => r.slug)));
@@ -1225,7 +1363,7 @@ function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, descripti
           ${cityList.map(cityTile).join("\n          ")}
           ${elsewhereDoor ? posterTile({ href: `${base}other-towns/`, name: "Other towns", count: elsewhere.length, small: "rides", blurb: `${new Set(elsewhere.map((r) => r.city)).size} smaller towns`, markId: "town", cls: "tile-p--country" }) : ""}
         </div>
-      </section>
+      </section>${st === "AZ" ? photoBand("crew", { cls: "gr-photo--wide" }) : ""}
       ${facetDoors ? `<section class="gr-step" aria-labelledby="who-h">
         <h2 class="gr-filter-label" id="who-h">Or pick who&rsquo;s riding</h2>
         <div class="gr-tiles">
@@ -1235,16 +1373,18 @@ function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, descripti
       ${elsewhere.length && !elsewhereDoor ? `<section class="gr-step" aria-labelledby="else-h">
         <h2 class="gr-filter-label" id="else-h">Elsewhere in ${esc(areaWord)}</h2>${rowsHtml(elsewhere)}
       </section>` : ""}
-      <p class="gr-all-link"><a class="link" href="${base}all/">${mark("list", "gr-all-mark")}All ${rides.length} rides, with filters</a></p>`;
+      <p class="gr-all-link">${rideBtn({ href: `${base}all/`, text: `All ${rides.length} rides, with filters`, markId: "list", ghost: true })}</p>`;
   } else {
     body = groupedRows(rides, { hubOf });
   }
   return head({ title, description, canonical, jsonld: pageLd(canonical, h1, description, rides, crumbs) }) + `
 <main id="main" class="gr-dir gr-area${step ? " gr-area--step" : ""}"${step ? ` data-all="${base}all/"` : ""}>
-  <header class="gr-head wrap">
+  <header class="gr-head wrap${areaMap ? " gr-head--map" : ""}">
+      <div class="gr-head-words">
       ${crumbsHtml(crumbs)}
       <h1>${esc(h1)}</h1>
       ${subLine(rides, `in ${plural(towns, "town")}`)}
+      </div>${areaMap}
   </header>
   <div class="wrap gr-steps" id="gr-list">
 ${notes}
@@ -1262,7 +1402,7 @@ function statePage(st, rides, hubs, pages) {
   const canonical = `${SITE}/rides/${st.toLowerCase()}/`;
   const cities = [...new Set(rides.map((r) => r.city))].sort();
   return areaPage({
-    rides, hubsIn: hubs.filter((h) => h.state === st), base: `/rides/${st.toLowerCase()}/`, pages, areaWord: name,
+    rides, hubsIn: hubs.filter((h) => h.state === st), base: `/rides/${st.toLowerCase()}/`, pages, areaWord: name, st,
     title: `Group rides in ${name} (${plural(rides.length)}, ${plural(cities.length, "city", "cities")})`,
     h1: `Group rides in ${name}`,
     crumbs: [["Cycle for Change", `${SITE}/`], ["Group rides", `${SITE}/rides/`], [name, canonical]],
@@ -1292,7 +1432,7 @@ function countryPage(cc, rides, worldHubs, notes, pages) {
   const canonical = `${SITE}/rides/${countrySlug(cc)}/`;
   const cities = [...new Set(rides.map((r) => r.city))];
   return areaPage({
-    rides, hubsIn: worldHubs.filter((h) => h.country === cc), base: `/rides/${countrySlug(cc)}/`, pages, world: true, areaWord: theCountry(cc),
+    rides, hubsIn: worldHubs.filter((h) => h.country === cc), base: `/rides/${countrySlug(cc)}/`, pages, world: true, areaWord: theCountry(cc), cc,
     title: `Group rides in ${theCountry(cc)} (${plural(rides.length)}, ${plural(cities.length, "city", "cities")})`,
     h1: `Group rides in ${theCountry(cc)}`,
     crumbs: [["Cycle for Change", `${SITE}/`], ["Group rides", `${SITE}/rides/`], ["Outside the US", `${SITE}/rides/world/`], [name, canonical]],
@@ -1322,8 +1462,11 @@ function usPage(usRides, hubs) {
       ${subLine(usRides, `in ${nStates} states${states.includes("DC") ? " and DC" : ""}`)}
   </header>
   <div class="wrap gr-steps">
+    ${GEO ? `<section class="gr-step" aria-labelledby="us-map-h">
+      <h2 class="gr-filter-label" id="us-map-h">Tap a state</h2>${usMap(byState)}
+    </section>` : ""}
     <section class="gr-step" aria-labelledby="us-state-h">
-      <h2 class="gr-filter-label" id="us-state-h">Pick a state</h2>
+      <h2 class="gr-filter-label" id="us-state-h">${GEO ? "Or pick from the list" : "Pick a state"}</h2>
       <div class="tiles-p tiles-p--wide">
         ${states.map((st) => posterTile({ href: `/rides/${st.toLowerCase()}/`, name: st, count: byState[st].length, small: "rides", blurb: stateName(st), cls: "tile-p--wide tile-p--code" })).join("\n        ")}
       </div>
@@ -1357,8 +1500,9 @@ function facetPage(f, all) {
   const others = FACETS.filter((x) => x !== f).map((x) => { const n = all.filter(x.pick).length; return n ? door({ href: `/rides/${x.slug}/`, name: FACET_DOOR[x.slug], n, markId: FACET_MARK[x.slug] }) : ""; }).join("\n          ");
   return head({ title: ccs.length ? `${f.h1} (${rides.length} rides, US and ${plural(ccs.length, "more country", "more countries")})` : `${f.h1} in the US (${rides.length} rides, ${states.length} states)`, description, canonical, jsonld: pageLd(canonical, f.h1, description, rides, crumbs) }) + `
 <main id="main" class="gr-dir gr-facet" data-all="/rides/" data-keep="${f.slug === "gravel" ? "bike=gravel" : `for=${FACET_TAG[f.slug]}`}">
-  <header class="gr-head wrap">
+  <header class="gr-head wrap gr-head--badge">
       ${crumbsHtml(crumbs)}
+      ${badge({ markId: FACET_MARK[f.slug] })}
       <h1>${esc(f.h1)}</h1>
       ${subLine(rides, `in ${where}`)}
       <p class="gr-why-line">${esc(f.intro)}</p>
@@ -1370,6 +1514,7 @@ function facetPage(f, all) {
         ${states.map((st) => posterTile({ href: hrefFor(byState[st], `/rides/${st.toLowerCase()}/`), name: st, count: byState[st].length, small: byState[st].length === 1 ? "ride" : "rides", blurb: stateName(st), cls: "tile-p--wide tile-p--code" })).join("\n        ")}
       </div>
     </section>
+${["lgbtq", "no-drop", "beginner", "women-trans-femme"].includes(f.slug) ? photoBand("people", { cls: "gr-photo--wide" }) : ""}
     ${ccs.length ? `<section class="gr-step" aria-labelledby="fc-h">
       <h2 class="gr-filter-label" id="fc-h">Outside the US</h2>
       <div class="tiles-p tiles-p--wide">
@@ -1530,8 +1675,15 @@ function ridePage(r, all, hubFor, hubs) {
   const jsonld = { "@context": "https://schema.org", "@graph": graph };
 
   const calBtns = next && rule ? `
-        <a class="btn btn--ghost" href="/rides/${r.slug}/ride.ics" download="${attr(r.slug)}.ics">Add to calendar</a>
+        ${rideBtn({ href: `/rides/${r.slug}/ride.ics`, text: "Add to calendar", markId: "date", ghost: true, attrs: ` download="${attr(r.slug)}.ics"` })}
         <a class="gr-minor" href="${attr(gcalUrl(r, next, rule))}" rel="noopener">Google Calendar</a>` : "";
+  // Pass 16: where it is — the state (or country), this ride's dot, the city's ring, the rest of the area light
+  const hubR = hubFor[r.slug];
+  const locator = mapFigure(shapeOf(isUS(r) ? r.state : null, isUS(r) ? null : r.country), {
+    focus: r, dim: all.filter((o) => o.slug !== r.slug && (isUS(r) ? o.state === r.state : o.country === r.country)),
+    labels: hubR ? [hubLabel(hubR)] : [], ringMiles: hubR ? (isUS(r) ? METRO_RADIUS : WORLD_RADIUS_KM / 1.609344) : null, ringAt: hubR,
+    title: `Map of ${isUS(r) ? stateName(r.state) : countryName(r.country)} with this ride's start`,
+    caption: `<span>${mark("start", "gr-map-cap-mark")}${esc(placeText(r))}</span>${hubR ? `<a href="${hubR.path}">All rides near ${esc(hubR.city)} &rarr;</a>` : ""}`, cls: "gr-map--ride" });
 
   const watch = (r.refresh && r.refresh.watch_url) || r.sources[0] || L.website || null;
   const bannerHead = { ended: "This ride has ended", paused: "Paused", stale: "Not confirmed lately", flagged: "We're re-checking this ride" }[f.state] || "Check first";
@@ -1579,7 +1731,7 @@ ${banner}
     </div>
 
     <div class="gr-actions">
-      ${primary ? `<a class="btn btn--ink gr-primary" href="${attr(primary[1])}" rel="noopener nofollow">${esc(primary[0])} ↗</a>` : ""}${calBtns}
+      ${primary ? rideBtn({ href: attr(primary[1]), text: esc(primary[0]), markId: "organizer", ext: true, cls: "gr-primary" }) : ""}${calBtns}
       <button type="button" class="btn btn--ghost gr-save-btn" data-save="${r.slug}" aria-pressed="false"><span aria-hidden="true">☆</span> <span data-save-label>Save</span></button>
       <button type="button" class="btn btn--ghost" id="gr-share" data-title="${attr(r.name + " — " + placeText(r))}">Share</button>
       <span class="gr-share-alt" id="gr-share-alt" hidden><a href="sms:?&body=${encodeURIComponent(r.name + " — " + url)}">Text it</a> · <a href="https://wa.me/?text=${encodeURIComponent(r.name + " — " + url)}" rel="noopener">WhatsApp</a> · <a href="mailto:?subject=${encodeURIComponent("Group ride: " + r.name)}&body=${encodeURIComponent(url)}">Email</a></span>
@@ -1590,6 +1742,7 @@ ${checkedBlock}
     <dl class="gr-facts">
         ${factsHtml}
     </dl>
+${locator}
 ${visitBlock}
 ${firstTimeBlock(r, hostLabel)}
     <div class="gr-about">
@@ -1674,7 +1827,7 @@ function main() {
   const top = new Map();
   const claim = (name, what) => { if (top.has(name)) { console.error(`/rides/${name}/ is claimed twice: ${top.get(name)} and ${what}`); process.exit(1); } top.set(name, what); };
   claim("art", "contour art"); claim("united-states", "the US page");
-  claim("about", "how the list works"); claim("add", "the add-a-ride form"); claim("world", "outside the US");
+  claim("about", "how the list works"); claim("add", "the add-a-ride form"); claim("world", "outside the US"); claim("maps", "the outline tiles");
   for (const st of states) claim(st.toLowerCase(), `state ${st}`);
   for (const f of FACETS) claim(f.slug, `facet ${f.slug}`);
   for (const cc of worldCCs) claim(countrySlug(cc), `country ${cc}`);
@@ -1687,6 +1840,7 @@ function main() {
   // Pass 15: the place pages hand back their short pages (/rides/az/phoenix/road/, /rides/az/no-drop/,
   // …/all/) in `steps`; each gets its own folder, never on top of a city or another short page.
   const steps = [];
+  if (GEO) { write(path.join(OUT, "maps", "us.svg"), outlineSvg(GEO.nation)); write(path.join(OUT, "maps", "world.svg"), outlineSvg(GEO.world)); }
   write(path.join(OUT, "index.html"), directory(rides, hubs, world.hubs));
   write(path.join(OUT, "about", "index.html"), aboutPage(rides));
   write(path.join(OUT, "add", "index.html"), addPage(rides));
@@ -1694,9 +1848,9 @@ function main() {
   if (rides.some(isUS)) write(path.join(OUT, "united-states", "index.html"), usPage(rides.filter(isUS), hubs));
   for (const st of states) write(path.join(OUT, st.toLowerCase(), "index.html"), statePage(st, rides.filter((r) => r.state === st), hubs, steps));
   const nearHubs = (h, list, dist, max) => list.filter((x) => x !== h && (x.state || x.country) === (h.state || h.country)).map((x) => ({ x, d: dist(h, x) })).filter((x) => x.d <= max).sort((a, b) => a.d - b.d).slice(0, 5);
-  for (const h of hubs) write(path.join(OUT, h.state.toLowerCase(), h.slug, "index.html"), cityPage(h, { pages: steps, others: nearHubs(h, hubs, miles, 150) }));
+  for (const h of hubs) write(path.join(OUT, h.state.toLowerCase(), h.slug, "index.html"), cityPage(h, { pages: steps, others: nearHubs(h, hubs, miles, 150), areaRides: rides.filter((r) => r.state === h.state), areaHubs: hubs.filter((x) => x.state === h.state) }));
   for (const cc of worldCCs) write(path.join(OUT, countrySlug(cc), "index.html"), countryPage(cc, rides.filter((r) => r.country === cc), world.hubs, notes, steps));
-  for (const h of world.hubs) write(path.join(OUT, countrySlug(h.country), h.slug, "index.html"), cityPage(h, { pages: steps, notes, others: nearHubs(h, world.hubs, km, 400) }));
+  for (const h of world.hubs) write(path.join(OUT, countrySlug(h.country), h.slug, "index.html"), cityPage(h, { pages: steps, notes, others: nearHubs(h, world.hubs, km, 400), areaRides: rides.filter((r) => r.country === h.country), areaHubs: world.hubs.filter((x) => x.country === h.country) }));
   for (const f of FACETS) write(path.join(OUT, f.slug, "index.html"), facetPage(f, rides));
   const taken = new Set([...hubs, ...world.hubs].map((h) => h.path));
   for (const pg of steps) {

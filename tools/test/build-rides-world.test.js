@@ -123,3 +123,22 @@ test("a host's table of start times: the lists show the time in force, the page 
   assert.match(events[0], /UNTIL=20261114T\d{6}Z/, "the first stretch ends before the change");
   assert.match(events[1], new RegExp(`UID:${sat.slug}-from-2026-11-14@`));
 });
+
+// Pass 16 (Oct 2, 2026): drawn maps, ride buttons, photos
+test("a state page opens on its own map, its cities to tap", () => {
+  const h = read("az");
+  assert.match(h, /class="gr-map gr-map--area"/);
+  assert.match(h, /<a href="\/rides\/az\/phoenix\/" aria-label="Phoenix, \d+ rides">/);
+  assert.ok((h.match(/class="gr-map-dot"/g) || []).length >= 10, "a dot per ride");
+});
+test("the US page is a map you tap, a link for every state with a ride", () => {
+  const h = read("united-states");
+  const states = new Set(rides.filter((r) => r.country === "US" && r.state !== us.slug).map((r) => r.state));
+  for (const st of states) if (st !== "PR") assert.match(h, new RegExp(`<a href="/rides/${st.toLowerCase()}/" aria-label=`), st);
+});
+test("a ride page shows where it starts, and its buttons carry their marks", () => {
+  const h = read(sat.slug);
+  assert.match(h, /gr-map--ride/);
+  assert.match(h, /class="gr-map-here"/);
+  assert.match(h, /class="gr-btn /);
+});

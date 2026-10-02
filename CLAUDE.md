@@ -19,6 +19,29 @@
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
 
+## Pass 16 — maps, ride buttons, photos (Oct 2, 2026)
+Robert, after Pass 15 went live: "can you make even more custom buttons and graphics or even some
+photos." All in `tools/build-rides.js` (the Pass 16 block) + `cfc-site/rides/rides.css`:
+- **Drawn maps.** `data/geo/outlines.json` (written once by `tools/geo-outlines.js` from us-atlas /
+  world-atlas, Natural Earth; run `npm i --no-save us-atlas world-atlas topojson-client d3-geo
+  i18n-iso-countries` first) holds every state's and country's outline plus the Mercator numbers;
+  `geoPlace()` puts a ride on it, so the build needs no map library. A state or country page opens
+  on its map (a dot per ride, its cities as tappable labels — labels that can't find room skip, the
+  tiles name them); a city page ends on "Where <city> sits" (its 25-mile ring, its rides dark, the
+  rest light, the other cities to tap); a ride page shows its start under the facts;
+  `/rides/united-states/` opens on a tap-a-state map shaded by ride count (four steps of asphalt).
+  The "Every US state" / "Outside the US" tiles on /rides/ wear the outline (`/rides/maps/*.svg`).
+- **The ride button** `rideBtn()` / `.gr-btn`: a stamp holding the mark, the words, an arrow
+  (↗ off-site, ← back). Solid once per screen (the host's site on a ride page); `--ghost`
+  everywhere else ("All N rides, with filters", Add to calendar, the short pages' way back).
+  The stamp turns volt on hover — on asphalt only.
+- **Badges.** Every short page carries its pick drawn big (`badge()`): the mark, or the day's two
+  letters, on an asphalt square, the place under it.
+- **Photos** (`photoBand()`, Robert's own, house grade, dissolving into the paper; never the first
+  thing on a phone): the crew on /rides/ and Arizona, the road on Phoenix, the finish line on the
+  LGBTQ+ / no-drop / beginner / WTF pages and /rides/about/. Only where they're true to the place.
+- City headers wear their contour (the route art) behind the h1, fading.
+
 ## Pass 15 — step down, don't scroll (Oct 1, 2026, evening)
 Robert: "The words everywhere is very overwhelming … move them through more pages but less
 content. Like topic to subtopic, then that subtopic is where they find what they need." House
