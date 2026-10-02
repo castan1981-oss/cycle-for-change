@@ -488,7 +488,7 @@ function townPage(t) {
       <h2 id="cal-h">Organized rides in ${esc(t.name)} in 2027</h2>
       <p class="mute">From the 2027 calendar. Dates marked projected follow last year's weekend; check the organizer.</p>
       <ul class="rows">
-${cal.map((e) => `        <li><a href="/events/2027/#${attr(e.slug)}"><span class="row-name">${esc(e.name)}</span><span class="row-meta">${esc(e.end && e.end !== e.start ? fmtRange(e.start, e.end) : fmtDate(e.start, { weekday: undefined }))}${e.date_status === "projected" ? " (projected)" : ""} &middot; ${esc(e.category)}${e.cause ? ` &middot; ${esc(e.cause)}` : ""}</span></a></li>`).join("\n")}
+${cal.map((e) => `        <li><a href="/events/2027/${e.start ? ["january","february","march","april","may","june","july","august","september","october","november","december"][+e.start.slice(5, 7) - 1] : "date-tba"}/#${attr(e.slug)}"><span class="row-name">${esc(e.name)}</span><span class="row-meta">${esc(e.end && e.end !== e.start ? fmtRange(e.start, e.end) : fmtDate(e.start, { weekday: undefined }))}${e.date_status === "projected" ? " (projected)" : ""} &middot; ${esc(e.category)}${e.cause ? ` &middot; ${esc(e.cause)}` : ""}</span></a></li>`).join("\n")}
       </ul>
       <p class="town-more"><a href="/events/2027/">The whole 2027 calendar &rarr;</a></p>
     </section>` : ""}
