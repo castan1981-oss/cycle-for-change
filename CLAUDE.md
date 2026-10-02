@@ -45,8 +45,10 @@ the foot of `rides.css`):
   Fondo or century, Multi-day tour, Race (→ the `/events/2027/` category pages), Ride with me (→
   `/events/2027/riding/`). Counts from rides.json and `data/calendar-2027.json`. Written beside
   `/rides/` (`OUT/../find-a-ride/`), so it rebuilds with the rides.
-- **`/rides/`** asks **Where?**: In the US / Outside the US (the outline tiles), then the six big
-  cities as a chip row ("Or jump to"), then who's riding. Search and Near me stay on top.
+- **`/rides/`** asks **Where? Tap a state** — the tap-a-state map (`usMap()`) right there (Robert:
+  "I really just love that map"), then two wide doors (Every state, as a list → `/rides/united-states/`;
+  Outside the US → `/rides/world/`), the six big cities as a chip row, then who's riding. Search and
+  Near me stay on top.
 - **`/rides/united-states/`**: the map, the ten busiest states as rows, "All N, A to Z" folded, six cities.
 - **The words go under a fold, not away:** `fold()` writes `<details class="gr-fold gr-about">` —
   crawled, one tap for a person. Use it for the explaining on every hub page; keep the picks on top.

@@ -580,3 +580,15 @@ details.gr-fold>dl{padding:0 18px 18px}
 .gr-about-body{max-width:62ch;padding:2px 0 8px}
 .gr-about-body p{margin:0 0 .8em;font-size:1rem;line-height:1.55}
 .gr-about-body a{color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px}
+/* Pass 20, Robert's call: the map lives on /rides/ itself (Where? is the map), so the list and the
+   rest of the world are two wide doors under it */
+.gr-hub .gr-map--us{margin-top:2px}
+.gr-where-more{display:grid;grid-template-columns:1fr;gap:6px;margin-top:14px}
+@media (min-width:760px){.gr-where-more{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.gr-wide-door{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;min-height:64px;padding:12px 14px;background:var(--paper);border:1px solid var(--dust);color:var(--asphalt);text-decoration:none}
+.gr-wide-door-mk{width:26px;height:26px;color:currentColor}
+.gr-wide-door b{display:block;font-family:var(--display);font-weight:600;font-size:16px;line-height:1.15}
+.gr-wide-door span span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--creosote-ink);margin-top:3px}
+.gr-wide-door i{font-style:normal;font-family:var(--mono)}
+@media (hover:hover){a.gr-wide-door:hover{border-color:var(--asphalt);background:var(--bone)}}
+a.gr-wide-door:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px}

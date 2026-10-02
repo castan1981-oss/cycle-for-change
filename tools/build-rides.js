@@ -1203,10 +1203,11 @@ function directory(rides, hubs, worldHubs = []) {
 
   <div class="wrap gr-steps">
     <section class="gr-step" aria-labelledby="where-h">
-      <h2 class="gr-filter-label" id="where-h">Where?</h2>
-      <div class="tiles-p tiles-p--wide gr-wide-doors gr-where">
-        ${posterTile({ href: "/rides/united-states/", name: "In the US", count: byCountry.US ? byCountry.US.length : 0, small: "rides", blurb: statesText, art: GEO ? "/rides/maps/us.svg" : null, markId: GEO ? null : "town", cls: "tile-p--country tile-p--outline" })}
-        ${worldN ? posterTile({ href: "/rides/world/", name: "Outside the US", count: worldN, small: "rides", blurb: `${worldCCs.length} ${worldCCs.length === 1 ? "country" : "countries"}`, art: GEO ? "/rides/maps/world.svg" : null, markId: GEO ? null : "globe", cls: "tile-p--country tile-p--outline" }) : ""}
+      <h2 class="gr-filter-label" id="where-h">Where? Tap a state</h2>
+      ${GEO && GEO.us ? usMap(byState) : posterTile({ href: "/rides/united-states/", name: "In the US", count: byCountry.US ? byCountry.US.length : 0, small: "rides", blurb: statesText, markId: "town", cls: "tile-p--country" })}
+      <div class="gr-where-more">
+        <a class="gr-wide-door" href="/rides/united-states/">${mark("list", "gr-wide-door-mk")}<span><b>Every state, as a list</b><span>${byCountry.US ? byCountry.US.length : 0} rides in ${statesText}</span></span><i aria-hidden="true">&rarr;</i></a>
+        ${worldN ? `<a class="gr-wide-door" href="/rides/world/">${mark("globe", "gr-wide-door-mk")}<span><b>Outside the US</b><span>${worldN} rides in ${worldCCs.length} ${worldCCs.length === 1 ? "country" : "countries"}</span></span><i aria-hidden="true">&rarr;</i></a>` : ""}
       </div>
       <p class="gr-jumpcities"><span class="gr-jumpcities-l">Or jump to</span>${top.map((h) => `<a class="gr-chip" href="${h.path}">${esc(h.city)}${h === home ? ` <span class="gr-chip-n">home</span>` : ""}</a>`).join("")}</p>
     </section>

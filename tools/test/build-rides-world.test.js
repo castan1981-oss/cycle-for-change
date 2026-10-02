@@ -165,7 +165,8 @@ test("the front door asks what kind of ride, and each kind goes somewhere", () =
   const g = fs.readFileSync(path.join(out, "..", "find-a-ride", "gravel", "index.html"), "utf8");
   assert.match(g, /href="\/rides\/gravel\/"/); assert.match(g, /href="\/events\/2027\/gravel\/"/);
   const r = read();
-  assert.match(r, /id="where-h">Where\?<\/h2>/);
+  assert.match(r, /id="where-h">Where\? Tap a state<\/h2>/);
+  assert.match(r, /class="gr-map gr-map--us"/, "the map is on /rides/");
   const us = read("united-states");
   assert.ok((us.match(/class="gr-row-st"/g) || []).length > 10, "state rows");
   assert.match(us, /<details class="gr-fold">\s*<summary>All \d+, A to Z<\/summary>/);
