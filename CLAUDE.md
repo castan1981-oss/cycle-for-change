@@ -19,6 +19,20 @@
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
 
+## Search Lab — every page change is an experiment (Oct 2, 2026)
+Robert's brief: track everything search-related on this site as a case study — what moves, what
+lasts, and what we got wrong — on the thesis that SEO is the base under AI answers and social.
+- `seo/README.md` has the method; `seo/crawl.mjs` is the weekly crawler (no dependencies);
+  `seo/keywords.json` lists the tracked searches and AI questions. A scheduled run every Monday
+  crawls, reads Search Console, logs merged PRs as changes on trial and writes the week's findings.
+- **Every PR that changes public pages gets one line in its description:**
+  `Search Lab: <what should move> · <which measure> · read <date>` (2 weeks out for indexing,
+  4 weeks for rankings). The Monday run reads these.
+- Day 0 facts that should shape new work: single-ride pages earn ~77% of Google clicks; the thin
+  city and filter pages earn almost none; 129 pages sit "discovered, not indexed". Titles over 60
+  characters are likely cut off in results (86% of pages). Prefer fewer, fuller pages over more, thinner ones until
+  indexing catches up.
+
 ## Pass 16 — maps, ride buttons, photos (Oct 2, 2026)
 Robert, after Pass 15 went live: "can you make even more custom buttons and graphics or even some
 photos." All in `tools/build-rides.js` (the Pass 16 block) + `cfc-site/rides/rides.css`:
