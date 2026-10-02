@@ -15,6 +15,7 @@
     "watch:rides": "node tools/rides-watch.js",
     "reports:rides": "node tools/rides-reports.js",
     "apply:rides": "node tools/rides-apply.js",
-    "test:rides": "node --test tools/test/*.test.js"
+    "test:rides": "node --test tools/test/*.test.js",
+    "geo:outlines": "node tools/geo-outlines.js"
   }
 }
