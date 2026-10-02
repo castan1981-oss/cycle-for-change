@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tulsa-ok-tbc-tuesday-thursday-morning-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261006T090000
+DTEND;TZID=America/Chicago:20261006T110000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20261201T055959Z
+SUMMARY:Tuesday/Thursday Morning Ride — Tulsa\, OK
+LOCATION:Changes monthly; see the club calendar
+DESCRIPTION:Pace: 12-18 mph\, splits into pace groups.\nSchedule: Tuesday
+ s and Thursdays\, morning; start 9:00 am September to November\, 9:30 am
+  December to February\, 9:00 am March to May\, 8:00 am June to August; l
+ ocation changes monthly.\nConfirm with the host before you go.\nhttps://
+ cycleforchange.org/rides/tulsa-ok-tbc-tuesday-thursday-morning-ride/
+URL:https://cycleforchange.org/rides/tulsa-ok-tbc-tuesday-thursday-mornin
+ g-ride/
+END:VEVENT
+BEGIN:VEVENT
+UID:tulsa-ok-tbc-tuesday-thursday-morning-ride-from-2026-12-01@cycleforch
+ ange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261201T093000
+DTEND;TZID=America/Chicago:20261201T113000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20270228T235959Z
+SUMMARY:Tuesday/Thursday Morning Ride — Tulsa\, OK
+LOCATION:Changes monthly; see the club calendar
+DESCRIPTION:Pace: 12-18 mph\, splits into pace groups.\nSchedule: Tuesday
+ s and Thursdays\, morning; start 9:00 am September to November\, 9:30 am
+  December to February\, 9:00 am March to May\, 8:00 am June to August; l
+ ocation changes monthly.\nConfirm with the host before you go.\nhttps://
+ cycleforchange.org/rides/tulsa-ok-tbc-tuesday-thursday-morning-ride/
+URL:https://cycleforchange.org/rides/tulsa-ok-tbc-tuesday-thursday-mornin
+ g-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:park-ridge-il-park-ridge-cycling-saturday-c-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T073000
+DTEND;TZID=America/Chicago:20261003T093000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Park Ridge Cycling Saturday C Ride — Park Ridge\, IL
+LOCATION:Pickwick Marquee\, Pickwick Theatre\, 5 S Prospect Ave\, Park Ri
+ dge\, IL 60068
+DESCRIPTION:Pace: 14-15 mph; first-timers should be able to ride 30 miles
+  at 14-15 mph.\nNo-drop.\nSchedule: Saturdays\, 7:30 am from the Pickwic
+ k Marquee (as of the Sept 19 posting). Start times move with sunrise and
+  are posted weekly..\nConfirm with the host before you go.\nhttps://cycl
+ eforchange.org/rides/park-ridge-il-park-ridge-cycling-saturday-c-ride/
+URL:https://cycleforchange.org/rides/park-ridge-il-park-ridge-cycling-sat
+ urday-c-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:chicago-il-turin-bicycle-cowbell-x-turin-saturday-ride@cycleforchange
+ .org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T070000
+DTEND;TZID=America/Chicago:20261003T090000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Cowbell x Turin Saturday Ride — Chicago\, IL
+LOCATION:Turin Bicycle\, 4710 N Damen Ave\, Chicago\, IL 60625
+DESCRIPTION:Pace: 16-19 mph.\nNo-drop.\nSchedule: Saturdays\, rolls out a
+ t 7:00 am from Turin Bicycle at 4710 N Damen Ave. About 45 miles to the 
+ northern suburbs and back..\nConfirm with the host before you go.\nhttps
+ ://cycleforchange.org/rides/chicago-il-turin-bicycle-cowbell-x-turin-sat
+ urday-ride/
+URL:https://cycleforchange.org/rides/chicago-il-turin-bicycle-cowbell-x-t
+ urin-saturday-ride/
+END:VEVENT
+END:VCALENDAR

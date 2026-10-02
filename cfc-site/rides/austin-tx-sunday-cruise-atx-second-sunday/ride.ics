@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:austin-tx-sunday-cruise-atx-second-sunday@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261011T110000
+DTEND;TZID=America/Chicago:20261011T140000
+RRULE:FREQ=MONTHLY;BYDAY=2SU;UNTIL=20270228T235959Z
+SUMMARY:Sunday Cruise ATX — Austin\, TX
+LOCATION:Changes monthly; Sept 13 started at the Amphitheater at Girard K
+ inney Park\, 1809 Simond Ave\, Austin\, TX 78723
+DESCRIPTION:Pace: Easy\, minimal hills.\nSchedule: Second Sunday of every
+  month\, 11:00 am to about 2:00 pm. The start park changes each month (S
+ ept 13 started at the amphitheater at Girard Kinney Park)..\nConfirm wit
+ h the host before you go.\nhttps://cycleforchange.org/rides/austin-tx-su
+ nday-cruise-atx-second-sunday/
+URL:https://cycleforchange.org/rides/austin-tx-sunday-cruise-atx-second-s
+ unday/
+END:VEVENT
+END:VCALENDAR

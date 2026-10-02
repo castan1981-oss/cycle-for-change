@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:minneapolis-mn-fast-casual-francis-burger-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261020T183000
+DTEND;TZID=America/Chicago:20261020T203000
+RRULE:FREQ=MONTHLY;BYDAY=3TU;UNTIL=20261031T235959Z
+SUMMARY:Fast Casual x Francis Burger Ride — Minneapolis\, MN
+LOCATION:Martin Olav Sabo Bridge\, Minneapolis\, MN 55407
+DESCRIPTION:Pace: Moderately spicy\, 14-16 mph rolling\, 12-15 miles.\nSc
+ hedule: Third Tuesday of the month\, April through October: meet 6:15 pm
+ \, roll 6:30 pm from the Sabo Bridge to Francis Burger Joint on East Lak
+ e Street. Next: Oct 20\, 2026..\nConfirm with the host before you go.\nh
+ ttps://cycleforchange.org/rides/minneapolis-mn-fast-casual-francis-burge
+ r-ride/
+URL:https://cycleforchange.org/rides/minneapolis-mn-fast-casual-francis-b
+ urger-ride/
+END:VEVENT
+END:VCALENDAR

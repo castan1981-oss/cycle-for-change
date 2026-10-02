@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:auckland-nz-over-60-peddlers-thursday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=Pacific/Auckland:20261008T103000
+DTEND;TZID=Pacific/Auckland:20261008T123000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:Over 60 Peddlers Thursday ride — Auckland\, New Zealand
+LOCATION:Changes weekly (on each Meetup event)
+DESCRIPTION:Pace: About 20 km/h with a tail-end rider.\nSchedule: Thursda
+ ys\, 10:30 am (Sept 17 and 24 held; Oct 8\, 15 and 22\, 2026 listed). Th
+ e start changes each week and is on the Meetup event: Oct 15 starts at P
+ ine Harbour Marina\, Beachlands..\nConfirm with the host before you go.\
+ nhttps://cycleforchange.org/rides/auckland-nz-over-60-peddlers-thursday-
+ ride/
+URL:https://cycleforchange.org/rides/auckland-nz-over-60-peddlers-thursda
+ y-ride/
+END:VEVENT
+END:VCALENDAR

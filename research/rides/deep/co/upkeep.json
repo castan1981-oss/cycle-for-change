@@ -1,0 +1,212 @@
+[
+ {
+  "slug": "boulder-co-bma-gurlz-ride",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "evidence": "BMA's group rides page (fetched Oct 1, 2026) says rides 'start in April, continue through September' and lists Gurlz Ride as Tuesdays at 6:00 pm in season; the Oct 2026 Meetup feed lists only co-ed Nite Rides, no Gurlz Ride.",
+  "sources": [
+   "https://www.bouldermountainbike.org/group-rides/",
+   "https://www.meetup.com/boulder-mountain-bikers/events/ical/"
+  ],
+  "status_note": "BMA says its group rides run April through September. October's Meetup feed has only co-ed Nite Rides (Oct 13 Tuesday, 6:00 pm, 'Nite Ride'); the ladies-only Gurlz Ride is not on it. The page shows 6:00 pm for the in-season Tuesday ride, not the 5:00 pm we had.",
+  "status_since": "2026-10-01"
+ },
+ {
+  "slug": "boulder-co-bma-knobby-wednesday",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "evidence": "BMA's group rides page (fetched Oct 1, 2026) says rides run April through September and lists Knobby Wednesday as Wednesdays at 6:00 pm in season; the Oct 2026 Meetup feed shows a co-ed Nite Ride on Wed Oct 21 and no Knobby Wednesday.",
+  "sources": [
+   "https://www.bouldermountainbike.org/group-rides/",
+   "https://www.meetup.com/boulder-mountain-bikers/events/ical/"
+  ],
+  "status_note": "BMA says its group rides run April through September. October's Meetup feed has co-ed Nite Rides on varying weekdays, not Knobby Wednesday. The page shows 6:00 pm for the in-season ride, not the 5:30 pm we had.",
+  "status_since": "2026-10-01"
+ },
+ {
+  "slug": "boulder-co-wednesday-morning-velo",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "evidence": "wednesdayvelo.com (fetched Oct 1, 2026) says 'Wednesday Morning Velo 2026 will run from May 20th – September 30th', six groups at 6:30 am from Gateway Fun Park.",
+  "sources": [
+   "https://wednesdayvelo.com/"
+  ],
+  "status_note": "The host's page says the 2026 season ran May 20 to September 30. No 2027 dates posted yet.",
+  "status_since": "2026-10-01"
+ },
+ {
+  "slug": "broomfield-co-trek-womens-tuesday-group-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "Trek Broomfield Group Ride's Meetup feed (fetched Oct 1, 2026) lists Women's Tuesday Group Ride for Tue Oct 6 and Tue Oct 13 at 6:00 pm; the event page says 'every week on Tuesday until October 13, 2026', no-drop, 13-15 mph, 15-25 miles.",
+  "sources": [
+   "https://www.meetup.com/trek-broomfield-group-ride/events/316589532/",
+   "https://www.meetup.com/trek-broomfield-group-ride/events/ical/"
+  ],
+  "last_seen": "2026-10-01",
+  "promote_feed": "https://www.meetup.com/trek-broomfield-group-ride/events/ical/"
+ },
+ {
+  "slug": "colorado-springs-co-the-wednesday-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "Bike Colorado Springs' event calendar (fetched Oct 1, 2026) lists The Wednesday Ride for Oct 7, 14, 21 and 28 at 5:30 pm (roll out by 5:40) from The Lincoln Center, 2727 N Cascade Ave: a no-drop social ride, 10-12 miles at 10-11 mph. The ride's last date is Oct 28. Old Town Bike Shop's page still says 6 pm and a Mar 12 - Oct 29 season, which looks like last year's dates.",
+  "sources": [
+   "https://www.bikecoloradosprings.org/calendar/",
+   "https://www.oldtownbikeshop.com/articles/clubs-group-rides-pg1140.htm"
+  ],
+  "last_seen": "2026-10-01",
+  "changes": {
+   "schedule": "Every Wednesday at 5:30 pm from The Lincoln Center, in front of Building 3 Coffee; last ride of the season Oct 28",
+   "time_local": "5:30 pm",
+   "start_hhmm": "17:30",
+   "start_location": {
+    "name": "The Lincoln Center, in front of Building 3 Coffee",
+    "address": "2727 N Cascade Ave, Colorado Springs, CO 80907"
+   },
+   "pace": "About 10-11 mph, 10-12 miles",
+   "drop_policy": "no-drop",
+   "visitor_notes": "Meet at 5:30 pm; the group rolls out by 5:40. Ride your own bike or borrow a PikeRide e-bike from the Lincoln hub, per the calendar listing.",
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://www.bikecoloradosprings.org/calendar/"
+   }
+  }
+ },
+ {
+  "slug": "colorado-springs-co-tour-de-latte",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "Colorado Springs Cycling Club's Meetup feed (fetched Oct 1, 2026) lists 'Tour de Latte - TIME CHANGE' for Sat Oct 3 at 10:00 am, then Oct 10 and Oct 17 at 10:00 am, every Saturday until April 24, 2027, from E Fontanero & N Weber St. No-drop, 8-10 mph in the off-season (October-April).",
+  "sources": [
+   "https://www.meetup.com/colorado-springs-cycling-club/events/316790336/",
+   "https://www.meetup.com/colorado-springs-cycling-club/events/ical/"
+  ],
+  "last_seen": "2026-10-01",
+  "promote_feed": "https://www.meetup.com/colorado-springs-cycling-club/events/ical/",
+  "changes": {
+   "schedule": "Every Saturday, 10:00 am from October through April; 9:00 am in season. Different independent coffee house each week.",
+   "time_local": "10:00 am",
+   "start_hhmm": "10:00",
+   "season": "year-round",
+   "season_months": null,
+   "pace": "Casual, 8-10 mph average in the off-season",
+   "drop_policy": "no-drop"
+  }
+ },
+ {
+  "slug": "colorado-springs-co-rar-front-range-see-you-next-tuesday-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "RAR Front Range's public Google calendar (fetched Oct 1, 2026) carries 'See U Next Tuesday Ride' as a monthly 2nd-Tuesday event at 6:00 pm at Building Three Coffee, 2727 N Cascade Ave, no end date, last edited Aug 20, 2026. Next one: Tue Oct 13.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/e91b2be3bc199aa52fd012f5b87b263feda9b09ae19000da16fca398021f9680%40group.calendar.google.com/public/basic.ics",
+   "https://rarfrontrange.com/"
+  ],
+  "last_seen": "2026-08-20",
+  "promote_feed": "https://calendar.google.com/calendar/ical/e91b2be3bc199aa52fd012f5b87b263feda9b09ae19000da16fca398021f9680%40group.calendar.google.com/public/basic.ics"
+ },
+ {
+  "slug": "denver-co-denver-cruiser-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "denvercruiserride.com (fetched Oct 1, 2026) says 'Happy Thursday!! Meet at 7p, kickstands up @ 7:45p, click on map for location'; footer 2005-2026. The page posts no end-of-season date; the 'how we roll' page calls these summer Thursday nights.",
+  "sources": [
+   "https://www.denvercruiserride.com/",
+   "https://denvercruiserride.com/howweroll2025.html"
+  ],
+  "last_seen": "2026-10-01"
+ },
+ {
+  "slug": "denver-co-outspokin-lgbtq-club-rides",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "OUTspokin's Ride with GPS calendar (fetched Oct 1, 2026) lists Sun Oct 4 at 8:45 am (Green, Blue and Black rides) and Sat Oct 10 at 8:45 am (Rainbow Gravel season finale at Avery Brewing, Boulder), plus a season finale party Oct 3. That is the last ride on the calendar for 2026.",
+  "sources": [
+   "https://ridewithgps.com/events.json?organization_id=7045",
+   "https://www.outspokin.org/ridewithus/"
+  ],
+  "last_seen": "2026-10-01"
+ },
+ {
+  "slug": "fort-collins-co-omba-singletrack-social",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "Overland Mountain Bike Association's public Google calendar (fetched Oct 1, 2026) lists 'Wed. Rides' at 5:30 pm weekly: Blue Sky Trailhead through Sept 30, then Spring Canyon Park from Oct 7, with the series ending Oct 28.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/overlandmtbevents%40gmail.com/public/basic.ics",
+   "https://yourgroupride.com/ombc-wednesday-social-rides/"
+  ],
+  "last_seen": "2026-10-01",
+  "promote_feed": "https://calendar.google.com/calendar/ical/overlandmtbevents%40gmail.com/public/basic.ics"
+ },
+ {
+  "slug": "fort-collins-co-saturday-open-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "Your Group Ride's SOR page (fetched Oct 1, 2026, updated 06/10/2026) says 'Saturdays @ 08:00 am (start time changes seasonally)', status 'Currently Running', from the FRCC library lot at 4616 S Shields St. Directory page, not the host's own; the host posts on the NoCo Cycling Facebook page.",
+  "sources": [
+   "https://yourgroupride.com/saturday-leaving-from-provelo/"
+  ],
+  "last_seen": "2026-06-10"
+ },
+ {
+  "slug": "golden-co-golden-bike-cruise",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "evidence": "goldenbikecruise.com (fetched Oct 1, 2026) lists the 2026 schedule as May 26 through Sept 29 (last cruise 'Ride of the Living Dead', Sept 29) and says the cruise is held the last Tuesday of the month, May through September.",
+  "sources": [
+   "https://goldenbikecruise.com/"
+  ],
+  "status_note": "The 2026 season ended Sept 29. The host says the cruise runs May through September; 2027 dates are not posted yet.",
+  "status_since": "2026-09-30"
+ },
+ {
+  "slug": "grand-junction-co-cyclepaths-group-rides",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "Grand Junction CyclePaths' Meetup feed (fetched Oct 1, 2026) lists member-led rides: a Gunnison Bluffs MTB ride Oct 1, a 100K Sun Oct 4 at 9:00 am, Delta Pea Green Sat Oct 17 at 9:00 am, Wolverine loop Sat Oct 24 at 7:00 am. Days and times vary by ride, as listed.",
+  "sources": [
+   "https://www.meetup.com/gj-cyclepaths/events/ical/",
+   "https://www.meetup.com/gj-cyclepaths/"
+  ],
+  "last_seen": "2026-10-01",
+  "promote_feed": "https://www.meetup.com/gj-cyclepaths/events/ical/"
+ },
+ {
+  "slug": "littleton-co-dcc-phils-circuit-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "Denver Cycling Club's Meetup feed (fetched Oct 1, 2026) lists Phil's Circuit Ride, Social 'B' Ride (Greenway, C-470) every Wednesday at 8:00 am from Reynolds Landing, 6745 S Santa Fe Dr, Littleton: Oct 7, 14, 21, 28 and on into December.",
+  "sources": [
+   "https://www.meetup.com/denver-cycling-club-dcc/events/316595865/",
+   "https://www.meetup.com/denver-cycling-club-dcc/events/ical/"
+  ],
+  "last_seen": "2026-10-01",
+  "promote_feed": "https://www.meetup.com/denver-cycling-club-dcc/events/ical/"
+ },
+ {
+  "slug": "longmont-co-svcg-spin-into-the-setting-sun",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "evidence": "St Vrain Chain Gang's Meetup page (fetched Oct 1, 2026) says 'In the spring-summer season (March through September) we offer 2 rides per week (Tuesday and Saturday). For the rest of the year we do a Saturday ride'. Its feed has no Tuesday ride in October, only Sat Oct 3 from Bearded Brewer.",
+  "sources": [
+   "https://www.meetup.com/st-vrain-chain-gang/",
+   "https://www.meetup.com/st-vrain-chain-gang/events/ical/"
+  ],
+  "status_note": "The club says the Tuesday night ride runs March through September; after that it is a Saturday ride only. Resumes March 2027.",
+  "status_since": "2026-09-30"
+ },
+ {
+  "slug": "monument-co-mmb-tuesday-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "Monument Mountain Bikers' Meetup feed (fetched Oct 1, 2026) lists 'MMB Tuesday Ride - Monument Preserve' for Tue Oct 6 and Tue Oct 13 at 5:30 pm from Mount Herman Trail Head, 3169 Nursery Road, Monument.",
+  "sources": [
+   "https://www.meetup.com/monument-mountain-bikers/events/316734813/",
+   "https://www.meetup.com/monument-mountain-bikers/events/ical/"
+  ],
+  "last_seen": "2026-10-01",
+  "promote_feed": "https://www.meetup.com/monument-mountain-bikers/events/ical/"
+ }
+]

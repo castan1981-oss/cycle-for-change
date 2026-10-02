@@ -1,0 +1,156 @@
+[
+  {
+    "slug": "bellingham-wa-rabbit-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-01",
+    "last_seen": null,
+    "evidence": "Mount Baker Bicycle Club's event calendar lists the Rabbit Ride for Sundays Oct 4, 11, 18 and 25, 2026 at 8:00 AM, and its Weekly Rides page says 8 a.m. during daylight saving time (roughly March through October) and 8:30 a.m. in standard time; the old 7:45 / 8:15 times were on a March 1 entry.",
+    "sources": [
+      "https://www.mtbakerbikeclub.org/content.aspx?page_id=4001&club_id=608345",
+      "https://www.mtbakerbikeclub.org/content.aspx?page_id=4091&club_id=608345&item_id=2913857",
+      "https://www.mtbakerbikeclub.org/content.aspx?page_id=22&club_id=608345&module_id=249583"
+    ],
+    "changes": {
+      "schedule": "Every Sunday since 2011; 8:00 am during daylight saving time (roughly March through October), 8:30 am in standard time",
+      "time_local": "8:00 am",
+      "start_hhmm": "08:00",
+      "start_times": [
+        {
+          "from": "2026-11-01",
+          "start_hhmm": "08:30"
+        }
+      ],
+      "refresh": {
+        "method": "calendar-page",
+        "watch_url": "https://www.mtbakerbikeclub.org/content.aspx?page_id=4001&club_id=608345"
+      }
+    }
+  },
+  {
+    "slug": "bellingham-wa-shifting-gears-womens-mtb-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-01",
+    "last_seen": "2026-09-28",
+    "evidence": "Shifting Gears' mountain biking page lists weekly Monday rides from May 2026 through September 2026, with the last dated ride on Sept 28; no October or 2027 dates are posted.",
+    "sources": [
+      "https://letsshiftgears.org/mountain-biking"
+    ],
+    "status_note": "The host's 2026 program ran Mondays May through September 2026 (last ride Sept 28). No fall or 2027 dates are posted yet.",
+    "status_since": "2026-10-01"
+  },
+  {
+    "slug": "seattle-wa-good-weather-sunday-social",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-01",
+    "last_seen": null,
+    "evidence": "Everyday Rides' series page shows the ride active every Sunday with upcoming dates Oct 4, 11 and 18, 2026, 10:30 am to 2:00 pm from Tailwind Cafe, leisurely 10-12 mph, stay together.",
+    "sources": [
+      "https://everydayrides.com/event-series/6a6b75d827f0f18ef3e161f0-good-weather-sunday-social"
+    ]
+  },
+  {
+    "slug": "seattle-wa-moxie-monday",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-01",
+    "last_seen": null,
+    "evidence": "Everyday Rides' Moxie Monday group page lists the monthly reboot ride for Mon Oct 5, Nov 2 and Dec 7, 2026 at 6:00 pm from Westlake Park (first Monday of the month, women / trans / femme / nonbinary).",
+    "sources": [
+      "https://everydayrides.com/groups/moxie-monday",
+      "https://everydayrides.com/calendar"
+    ]
+  },
+  {
+    "slug": "seattle-wa-northstar-sunday-service",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-01",
+    "note": "northstarcycling.org returns an HTTP 526 error. The club's Shopify page https://northstar-bicycle-club.myshopify.com/pages/when-we-ride states Sunday Service meet 10:30 am at the Clubhouse (21st and Union), roll 11:00 am, no-drop, easy pace, and says the Wednesday ride is on hold, but it has no dated event, so nothing is confirmed. The listed watch_url is a May 2023 article; point it at the Shopify page."
+  },
+  {
+    "slug": "seattle-wa-seattle-bike-disco",
+    "outcome": "changed",
+    "checked_on": "2026-10-01",
+    "last_seen": "2026-09-18",
+    "evidence": "seattle.bikedis.co lists this quarter's rides as Sept 18, Oct 23 and Nov 20, 2026 (gather 7 pm, ride 7:30 pm); Everyday Rides lists the 72nd ride for Fri Oct 23 from Red Square and the 73rd for Fri Nov 20 from Pratt Park.",
+    "sources": [
+      "https://seattle.bikedis.co/",
+      "https://everydayrides.com/calendar"
+    ],
+    "changes": {
+      "schedule": "Monthly, usually a Friday, rain or shine. Gather 7:00 pm, ride 7:30 pm. Next: Oct 23 (starts at Red Square), Nov 20 (starts at Pratt Park), 2026",
+      "refresh": {
+        "method": "static-page",
+        "watch_url": "https://seattle.bikedis.co/"
+      }
+    }
+  },
+  {
+    "slug": "seattle-wa-wtfnb-weekly-with-brevay",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-01",
+    "last_seen": "2026-09-24",
+    "evidence": "Everyday Rides' series page says active every Thursday and shows the Sept 24, 2026 ride at 6:30 am (roll 6:35) from Pacha Collective; no later date was posted yet on Oct 1, so check before going.",
+    "sources": [
+      "https://everydayrides.com/event-series/690e2a060214ed1d170518b0-brevay-cycling-wtfnb-weekly",
+      "https://everydayrides.com/events/6a466ab7c2a9941c4f5abb76-wtfnb-weekly-with-brevay"
+    ]
+  },
+  {
+    "slug": "spokane-wa-bicycle-butler-ride-spokane",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-01",
+    "note": "The page loads and states Wednesday meet 6:00 pm, roll 6:15 pm from the shop, lights required fall and early spring, but its WordPress modified date is 2025-10-30 and it lists no dated event, so nothing current to confirm. Routes are posted by noon on Wednesdays on Instagram/RSVP, which does not load."
+  },
+  {
+    "slug": "tacoma-wa-tacoma-tuesday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-01",
+    "note": "Tacoma TNR's Instagram and Facebook do not load. A Peaks and Pints post dated May 26, 2026 listed the ride at 6:00 pm meet, departing 6:05, no-drop, from Cooper's Food and Drink, which differs from the 6:30 pm on the site. Nothing dated after May was found."
+  },
+  {
+    "slug": "wenatchee-wa-wenatchee-valley-velo-saturday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-01",
+    "last_seen": "2026-09-26",
+    "evidence": "Wenatchee Valley Velo's events page lists a Saturday Sept 26 ride (noon time change) and upcoming Saturday rides on Oct 3 (Monument Ride, 11:30 AM rollout, Plain) and Oct 17 (Upper Valley ride from Yonder Cider House in Cashmere, start set by Oct 12 by temperature); registration is required and each ride's start and place is posted per event.",
+    "sources": [
+      "https://wenatcheevalleyvelo.org/events",
+      "https://wenatcheevalleyvelo.org/"
+    ],
+    "changes": {
+      "schedule": "Saturdays through the warmer months. Start time and place change by ride and are posted on each event page; the Oct 17 ride is an Upper Valley loop from Yonder Cider House in Cashmere, with its start time set by Oct 12 from the morning temperature. Often from Wenatchee Valley Brewing Company. Free registration on the club site is required.",
+      "time_local": null,
+      "start_hhmm": null,
+      "visitor_notes": "Ride registration requires a club membership ($40 single, $50 family) and a signed waiver, per the club's event pages. Smoke and heat cancel rides; start times shift with morning temperature.",
+      "refresh": {
+        "method": "calendar-page",
+        "watch_url": "https://wenatcheevalleyvelo.org/events"
+      }
+    }
+  },
+  {
+    "slug": "olympia-wa-gravel-happy-hour",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-01",
+    "note": "Race Cascadia's page and Big Stump's page both load, but every date on them (beginner rides Nov 9 to Mar 8, faster rides Oct 26 to Mar 22) is the 2025-26 season, which ended in March 2026. No October 2026 or later date is posted, so nothing current to confirm."
+  },
+  {
+    "slug": "spokane-wa-spokane-bicycle-club-monday-riverside-state-park-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-01",
+    "last_seen": "2026-09-28",
+    "evidence": "Spokane Bicycle Club's Meetup shows the Monday Riverside State Park Out and Back on Sept 21 and Sept 28, 2026 at 9:00 am (titled 'NOTE 9:00 A.M START TIME FOR SEPTEMBER', meet 8:45 at Little Garden Cafe); no October Monday date was posted yet, and the club says rides run mid-March to mid-November with Zwift in winter.",
+    "sources": [
+      "https://www.meetup.com/spokane-bicycle-club-meetup-group/events/316471104/",
+      "https://www.spokanebicycleclub.org/"
+    ],
+    "changes": {
+      "schedule": "Mondays, 9:00 am (the host calls 9:00 the September start time; October time not posted yet, check Meetup). Meet 8:45 at Little Garden Cafe. Season mid-March to mid-November; indoor Zwift rides in winter.",
+      "season": "Mar–mid-Nov",
+      "season_months": {
+        "start": 3,
+        "end": 11
+      },
+      "visitor_notes": "Helmets required. Sign the club waiver; non-members are welcome to ride. Out and back to Nine Mile on the Centennial Trail, riders may go faster and wait at regroups. RSVP on Meetup."
+    }
+  }
+]

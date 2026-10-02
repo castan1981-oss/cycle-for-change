@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mexico-city-mx-rueda-libre-thursday-night-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Mexico_City:20261008T194500
+DTEND;TZID=America/Mexico_City:20261008T214500
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:Rueda Libre\, rodada del jueves — Mexico City\, Mexico
+LOCATION:Casa Rueda Libre\, Calzada Ermita Iztapalapa y Cuauhtémoc\, Bar
+ rio San Lucas\, Iztapalapa\, Ciudad de México
+DESCRIPTION:Schedule: Thursday evenings\, 7:45 pm from Casa Rueda Libre i
+ n Iztapalapa (7:45 pm on Sept 10\, Sept 17 and Oct 1\, 8:15 pm on Sept 2
+ 4\, 2026). The destination changes each week..\nConfirm with the host be
+ fore you go.\nhttps://cycleforchange.org/rides/mexico-city-mx-rueda-libr
+ e-thursday-night-ride/
+URL:https://cycleforchange.org/rides/mexico-city-mx-rueda-libre-thursday-
+ night-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:richmond-va-blue-ridge-cyclery-full-spectrum-racing-a-plus-ride@cycle
+ forchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T083000
+DTEND;TZID=America/New_York:20261003T103000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:A+ Pace Road Ride with Full Spectrum Racing — Richmond\, VA
+LOCATION:Blue Ridge Cyclery Richmond\, 5001 Libbie Mill East Blvd\, Suite
+  100\, Richmond\, VA 23230
+DESCRIPTION:Pace: A+ (21+ mph) after the first miles; 20-22 mph average.\
+ nSchedule: Saturdays\, arrive 8:15 am\, roll 8:30 am\, from Blue Ridge C
+ yclery at Libbie Mill.\nConfirm with the host before you go.\nhttps://cy
+ cleforchange.org/rides/richmond-va-blue-ridge-cyclery-full-spectrum-raci
+ ng-a-plus-ride/
+URL:https://cycleforchange.org/rides/richmond-va-blue-ridge-cyclery-full-
+ spectrum-racing-a-plus-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:college-station-tx-southenders-friday-follies@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261009T073000
+DTEND;TZID=America/Chicago:20261009T093000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270228T235959Z
+SUMMARY:Friday Follies (Southenders) — College Station\, TX
+LOCATION:1862 Rock Prairie / Pebble Creek entrance (two starts)\, Rock Pr
+ airie Rd\, College Station\, TX 77845
+DESCRIPTION:Schedule: Every Friday\, 7:30 am at 1862 Rock Prairie\, and 7
+ :50 am at the Pebble Creek entrance..\nConfirm with the host before you 
+ go.\nhttps://cycleforchange.org/rides/college-station-tx-southenders-fri
+ day-follies/
+URL:https://cycleforchange.org/rides/college-station-tx-southenders-frida
+ y-follies/
+END:VEVENT
+END:VCALENDAR

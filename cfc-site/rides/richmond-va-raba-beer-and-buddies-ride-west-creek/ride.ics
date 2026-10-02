@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:richmond-va-raba-beer-and-buddies-ride-west-creek@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261007T170000
+DTEND;TZID=America/New_York:20261007T190000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20270228T235959Z
+SUMMARY:Paul Z's Beer and Buddies Ride at West Creek — Richmond\, VA
+LOCATION:Kindred Spirit Brewery (park along the side\, not in front)\, 12
+ 830 W Creek Pkwy J\, Richmond\, VA 23238
+DESCRIPTION:Pace: All paces.\nSchedule: Wednesdays\, 5:00 pm\, from Kindr
+ ed Spirit Brewery in West Creek.\nConfirm with the host before you go.\n
+ https://cycleforchange.org/rides/richmond-va-raba-beer-and-buddies-ride-
+ west-creek/
+URL:https://cycleforchange.org/rides/richmond-va-raba-beer-and-buddies-ri
+ de-west-creek/
+END:VEVENT
+END:VCALENDAR

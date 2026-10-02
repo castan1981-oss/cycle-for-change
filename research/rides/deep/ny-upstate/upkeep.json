@@ -1,0 +1,138 @@
+[
+  {
+    "slug": "buffalo-ny-slow-roll-buffalo-monday-night-community-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-01",
+    "last_seen": "2026-10-01",
+    "evidence": "Slow Roll Buffalo's 2026 schedule page lists Mon Oct 5 (Buffalo Olde Brewery) and Mon Oct 12 (BriarBrothers Brewing) as 'Meet at 5:30pm! Ride at 6pm!', where the September rides said meet 6:00, ride 6:30; the ride page says the season runs through the end of October, but the schedule lists nothing after Oct 12 yet.",
+    "sources": [
+      "https://www.slowrollbuffalo.org/schedule",
+      "https://www.slowrollbuffalo.org/ride"
+    ],
+    "changes": {
+      "schedule": "Every Monday, mid-May through the end of October. Meet 6:00 pm, ride 6:30 pm through Sept 28; from Oct 5 meet 5:30 pm, ride 6:00 pm. A different host site each week. The schedule page lists Oct 5 and Oct 12 so far.",
+      "start_times": [
+        {
+          "from": "2026-10-05",
+          "start_hhmm": "18:00"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "buffalo-ny-slow-spokes-tuesday-wilkeson-pointe-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-01",
+    "last_seen": "2026-10-01",
+    "evidence": "Slow Spokes' home page says 'Thank You for a Great 2026 Season', that rides continue in Buffalo, Tonawanda, North Tonawanda, Lewiston and Lockport in 2027, and shows 'Wilkeson Point - 2027 registration coming soon'.",
+    "sources": [
+      "https://www.slowspokesusa.com/"
+    ],
+    "status_note": "Host thanks riders for the 2026 season and says 2027 registration for the Wilkeson Point (Perro & Poni) ride is coming soon. No 2027 start date posted.",
+    "status_since": "2026-10-01"
+  },
+  {
+    "slug": "lockport-ny-slow-spokes-friday-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-01",
+    "last_seen": "2026-10-01",
+    "evidence": "Slow Spokes' home page says 'Thank You for a Great 2026 Season', that Lockport rides continue in 2027, and shows 'Lockport Host - 2027 registration coming soon' (Wide Waters Cafe).",
+    "sources": [
+      "https://www.slowspokesusa.com/"
+    ],
+    "status_note": "Host thanks riders for the 2026 season and says 2027 registration for the Lockport ride (Wide Waters Cafe) is coming soon. No 2027 start date posted.",
+    "status_since": "2026-10-01"
+  },
+  {
+    "slug": "camillus-ny-onondaga-cycling-club-tuesday-slow-n-easy",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-01",
+    "last_seen": "2026-09-08",
+    "evidence": "OCC's ride calendar shows the last Tuesday 'Slow 'n Easy Ride - West' on Sept 8, 2026 (5:30 PM) and no Tuesday evening rides from Sept 15 through Oct 27; the club's Slow N' Easy page says 'Every Tuesday in the Summer' and its 2026 Tuesday schedule table runs Apr 21 to Sept 8.",
+    "sources": [
+      "https://onondagacyclingclub.org/ride_calendar/",
+      "https://onondagacyclingclub.org/rides-and-tt/slow-n-easy-rides/"
+    ],
+    "status_note": "OCC's own calendar and 2026 Tuesday table end on Sept 8; the page says the rides run in the summer. No 2027 date posted. The Tuesday start was 5:30 pm in September.",
+    "status_since": "2026-09-09"
+  },
+  {
+    "slug": "rochester-ny-just-for-giggles-monday-night-brewery-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-01",
+    "last_seen": "2026-10-01",
+    "evidence": "Just for Giggles' own pages show it running: its published ride-leader sheet for the Monday Night Beer Ride assigns a road and a gravel leader for every Monday from Sept 7 through Dec 2026 (Mon Oct 5 is set), its Strava event page lists the Saturday Morning Coffee Ride for Sat Oct 3 at 8:00 AM from Schoen Place, Pittsford, and Reconnect Rochester's public calendar carries the weekly Monday 6:15 pm start from Three Heads Brewing with no end date.",
+    "sources": [
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vSsnbQLIYIcdgmErxeqx1LpWLueT-n9jaAaH6qEyVBK1AAPEhxnhSrjrny-jqjj6jimTA6KNBqLw85y/pubhtml",
+      "https://www.strava.com/clubs/801735/group_events/3490438284057596288",
+      "https://linktr.ee/justforgigglescycling",
+      "https://reconnectrochester.org/cyclingcalendar/"
+    ],
+    "changes": {
+      "schedule": "Mondays, 6:15 pm from Three Heads Brewing, year-round, with a road and a gravel option each week (a ride leader is posted for each Monday through December). Saturdays, 8:00 am coffee ride from Collins Pavilion at Schoen Place, Pittsford, when it is above 34 degrees and the canal path is clear of snow and ice (meet 7:45 am).",
+      "links": {
+        "strava": "https://www.strava.com/clubs/801735",
+        "instagram": "https://www.instagram.com/JustForGigglesCycling/",
+        "facebook": "https://www.facebook.com/groups/jfgcycling/",
+        "other": [
+          "https://linktr.ee/justforgigglescycling",
+          "https://www.strava.com/clubs/801735/group_events/3490438284057596288"
+        ]
+      },
+      "refresh": {
+        "method": "ics",
+        "watch_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSsnbQLIYIcdgmErxeqx1LpWLueT-n9jaAaH6qEyVBK1AAPEhxnhSrjrny-jqjj6jimTA6KNBqLw85y/pubhtml",
+        "feed_url": "https://calendar.google.com/calendar/ical/c_8dstjm2qg2l45fbhg5n7ht8thg%40group.calendar.google.com/public/basic.ics",
+        "notes": "The Reconnect Rochester community calendar feed carries the Monday ride; the Strava event page shows the next Saturday coffee ride without a login."
+      }
+    }
+  },
+  {
+    "slug": "rochester-ny-rochester-bike-gang-thursday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-01",
+    "last_seen": "2026-10-01",
+    "evidence": "Reconnect Rochester's public community calendar has a weekly Thursday entry (from Apr 16, 2026, no end date, edited Oct 1, 2026): 'They meet at Parcel 5 every Thursday around 7pm and start rolling at 7:30pm.' The group's Facebook page is the place to check the night's start.",
+    "sources": [
+      "https://reconnectrochester.org/cyclingcalendar/",
+      "https://reconnectrochester.org/bike-scene-overview/"
+    ],
+    "changes": {
+      "refresh": {
+        "method": "ics",
+        "watch_url": "https://reconnectrochester.org/cyclingcalendar/",
+        "feed_url": "https://calendar.google.com/calendar/ical/c_8dstjm2qg2l45fbhg5n7ht8thg%40group.calendar.google.com/public/basic.ics",
+        "notes": "Reconnect Rochester's community calendar feed carries this weekly Thursday ride; the group's Facebook page has the night's start."
+      }
+    }
+  },
+  {
+    "slug": "rotterdam-ny-mhcc-tuesday-evening-river-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-01",
+    "last_seen": "2026-10-01",
+    "evidence": "MHCC's public ride schedule lists 'Tuesday Evening River Ride - Lock 8' for Tue Oct 6, 2026 at 6:30 PM (Tour/14 pace, 23.8 miles, lights recommended, sunset 6:30), described as a weekly ride series along the Mohawk River; no Tuesday rides are posted after Oct 6 yet.",
+    "sources": [
+      "https://www.mohawkhudsoncyclingclub.org/rides/public",
+      "https://www.mohawkhudsoncyclingclub.org/nonmemberride"
+    ],
+    "changes": {
+      "schedule": "Tuesdays, 6:30 pm, a weekly series along the Mohawk River. The Oct 6 ride is 'Lock 8' (23.8 miles). Nothing is posted after Oct 6 yet, so the series may be ending for the season.",
+      "distance_miles": "24",
+      "visitor_notes": "The ride leader gives the exact start and the route to non-members who use 'Contact Leader' on the ride listing. Non-members get one free ride, then club dues are $20 a year. Bring lights: the Oct 6 ride finishes after sunset."
+    }
+  },
+  {
+    "slug": "ithaca-ny-flcc-womens-road-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-01",
+    "last_seen": null,
+    "evidence": "FLCC's Women's Road Ride page says the ride 'rotates through the same four or so routes each week from mid May until mid September', and its events feed lists no Wednesday women's ride.",
+    "sources": [
+      "https://fingerlakescycling.org/flccpage/group-rides/womens-road-ride/",
+      "https://fingerlakescycling.org/events/?ical=1"
+    ],
+    "status_note": "Host says the ride runs from mid May until mid September. Back in mid May 2027 if it follows the same pattern; no 2027 date posted.",
+    "status_since": "2026-10-01"
+  }
+]

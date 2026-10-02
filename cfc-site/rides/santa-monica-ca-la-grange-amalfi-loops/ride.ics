@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:santa-monica-ca-la-grange-amalfi-loops@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261008T063000
+DTEND;TZID=America/Los_Angeles:20261008T083000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:Amalfi Loops (Velo Club La Grange) — Santa Monica\, CA
+LOCATION:26th St & San Vicente Blvd\, at Blue Bottle Coffee\, San Vicente
+  Blvd & 26th St\, Santa Monica\, CA
+DESCRIPTION:Pace: listed as moderate\, but the club calls it one of the w
+ eek's most challenging rides: hill intervals at race pace.\nSchedule: Ev
+ ery Thursday\, 6:30 am from 26th St and San Vicente Blvd..\nConfirm with
+  the host before you go.\nhttps://cycleforchange.org/rides/santa-monica-
+ ca-la-grange-amalfi-loops/
+URL:https://cycleforchange.org/rides/santa-monica-ca-la-grange-amalfi-loo
+ ps/
+END:VEVENT
+END:VCALENDAR

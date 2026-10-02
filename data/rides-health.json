@@ -138,7 +138,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-09-30",
-     "detail": "the host's page dates this ride Tue May 19, 2026, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Tue May 19, 2026, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -1419,7 +1422,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-09-30",
-     "detail": "the host's page dates this ride Wed Dec 18, 2024, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Wed Dec 18, 2024, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -2005,7 +2011,10 @@
      "code": "page-gone",
      "severity": "red",
      "since": "2026-09-30",
-     "detail": "https://www.bffbikes.com/pages/group-rides answers 404"
+     "detail": "https://www.bffbikes.com/pages/group-rides answers 404",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -2025,7 +2034,10 @@
      "code": "page-gone",
      "severity": "red",
      "since": "2026-09-30",
-     "detail": "https://www.bffbikes.com/pages/group-rides answers 404"
+     "detail": "https://www.bffbikes.com/pages/group-rides answers 404",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -2395,7 +2407,10 @@
      "code": "page-gone",
      "severity": "red",
      "since": "2026-09-30",
-     "detail": "https://events.queencity.bike/event/_8oo44gpo68pj0b9o8or32b9k6923eba16gq44b9l6p0jeg9o8ksk8h9m8c_20260919T140000Z answers 404"
+     "detail": "https://events.queencity.bike/event/_8oo44gpo68pj0b9o8or32b9k6923eba16gq44b9l6p0jeg9o8ksk8h9m8c_20260919T140000Z answers 404",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -2591,7 +2606,10 @@
      "since": "2026-09-30",
      "detail": "The host's calendar shows Sat Oct 3, 2026 10:00 am (\"Tour de Latte - TIME CHANGE\"); we list Saturday 9:00 am",
      "was": "Saturday 9:00 am",
-     "now": "Sat Oct 3, 2026 10:00 am (\"Tour de Latte - TIME CHANGE\")"
+     "now": "Sat Oct 3, 2026 10:00 am (\"Tour de Latte - TIME CHANGE\")",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -2729,7 +2747,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-09-30",
-     "detail": "the host's page dates this ride Thu May 28, 2026, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Thu May 28, 2026, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -4282,7 +4303,10 @@
      "code": "moved",
      "severity": "amber",
      "since": "2026-09-30",
-     "detail": "http://www.veloteers.org/ now sends you to https://veloteers.wildapricot.org/"
+     "detail": "http://www.veloteers.org/ now sends you to https://veloteers.wildapricot.org/",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -4311,7 +4335,10 @@
      "code": "moved",
      "severity": "amber",
      "since": "2026-09-30",
-     "detail": "http://www.veloteers.org/ now sends you to https://veloteers.wildapricot.org/"
+     "detail": "http://www.veloteers.org/ now sends you to https://veloteers.wildapricot.org/",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -5148,7 +5175,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-09-30",
-     "detail": "the host's page dates this ride Wed Aug 12, 2026, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Wed Aug 12, 2026, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -7630,7 +7660,10 @@
      "code": "moved",
      "severity": "amber",
      "since": "2026-09-30",
-     "detail": "http://www.veloteers.org/ now sends you to https://veloteers.wildapricot.org/"
+     "detail": "http://www.veloteers.org/ now sends you to https://veloteers.wildapricot.org/",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -7841,7 +7874,10 @@
      "code": "moved",
      "severity": "amber",
      "since": "2026-09-30",
-     "detail": "https://www.5bbc.org/ now sends you to https://5bbc.clubexpress.com/"
+     "detail": "https://www.5bbc.org/ now sends you to https://5bbc.clubexpress.com/",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -8262,7 +8298,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-09-30",
-     "detail": "the host's page dates this ride Sat Jun 7, 2025, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Sat Jun 7, 2025, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -10997,7 +11036,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-09-30",
-     "detail": "the host's page dates this ride Sat Aug 1, 2026, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Sat Aug 1, 2026, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -12271,7 +12313,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-09-30",
-     "detail": "the host's page dates this ride Sun Apr 5, 2026, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Sun Apr 5, 2026, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-10-01",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [

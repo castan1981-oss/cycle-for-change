@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:rochester-ny-rochester-bicycling-club-weekend-supported-rides@cyclefo
+ rchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T090000
+DTEND;TZID=America/New_York:20261003T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA,SU;UNTIL=20261130T235959Z
+SUMMARY:RBC Weekend Supported Rides — Rochester\, NY
+LOCATION:Different each ride; shown on the RBC Meetup event to members
+DESCRIPTION:Pace: Supported rides (SR): 10 to 12 mph average\, the leader
+  rides at the back.\nSchedule: Saturdays and Sundays\, 9:00 am\, April t
+ o November (the supported rides\, marked SR on the calendar). A differen
+ t route and start each weekend. The start is visible to members of the R
+ BC Meetup group..\nConfirm with the host before you go.\nhttps://cyclefo
+ rchange.org/rides/rochester-ny-rochester-bicycling-club-weekend-supporte
+ d-rides/
+URL:https://cycleforchange.org/rides/rochester-ny-rochester-bicycling-clu
+ b-weekend-supported-rides/
+END:VEVENT
+END:VCALENDAR

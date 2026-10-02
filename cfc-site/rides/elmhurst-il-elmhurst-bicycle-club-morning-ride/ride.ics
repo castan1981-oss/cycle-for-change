@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:elmhurst-il-elmhurst-bicycle-club-morning-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261005T090000
+DTEND;TZID=America/Chicago:20261005T110000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TH;UNTIL=20270228T235959Z
+SUMMARY:Elmhurst Bicycle Club Morning Ride — Elmhurst\, IL
+LOCATION:Whole Foods\, rear parking lot along West Ave\, Elmhurst
+DESCRIPTION:Pace: 13-15 mph.\nNo-drop.\nSchedule: Mondays and Thursdays\,
+  9:00 am from the rear lot at Whole Foods along West Ave. Listed through
+  Nov 5\, 2026..\nConfirm with the host before you go.\nhttps://cycleforc
+ hange.org/rides/elmhurst-il-elmhurst-bicycle-club-morning-ride/
+URL:https://cycleforchange.org/rides/elmhurst-il-elmhurst-bicycle-club-mo
+ rning-ride/
+END:VEVENT
+END:VCALENDAR

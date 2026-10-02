@@ -1,0 +1,41 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:charlotte-nc-bicycle-sport-saturday-morning-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T080000
+DTEND;TZID=America/New_York:20261003T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261101T035959Z
+SUMMARY:Saturday Morning Ride (Myers Park) — Charlotte\, NC
+LOCATION:Bicycle Sport Myers Park\, 2916 Selwyn Ave\, Charlotte\, NC 2820
+ 9
+DESCRIPTION:Pace: A about 22–24 mph\, B 18–20 mph\, C 16–17 mph.\nS
+ chedule: Saturdays\, 8:00 am from Bicycle Sport Myers Park; 8:30 am from
+  Nov 1 when clocks go back..\nConfirm with the host before you go.\nhttp
+ s://cycleforchange.org/rides/charlotte-nc-bicycle-sport-saturday-morning
+ -ride/
+URL:https://cycleforchange.org/rides/charlotte-nc-bicycle-sport-saturday-
+ morning-ride/
+END:VEVENT
+BEGIN:VEVENT
+UID:charlotte-nc-bicycle-sport-saturday-morning-ride-from-2026-11-01@cycl
+ eforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261107T083000
+DTEND;TZID=America/New_York:20261107T103000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Saturday Morning Ride (Myers Park) — Charlotte\, NC
+LOCATION:Bicycle Sport Myers Park\, 2916 Selwyn Ave\, Charlotte\, NC 2820
+ 9
+DESCRIPTION:Pace: A about 22–24 mph\, B 18–20 mph\, C 16–17 mph.\nS
+ chedule: Saturdays\, 8:00 am from Bicycle Sport Myers Park; 8:30 am from
+  Nov 1 when clocks go back..\nConfirm with the host before you go.\nhttp
+ s://cycleforchange.org/rides/charlotte-nc-bicycle-sport-saturday-morning
+ -ride/
+URL:https://cycleforchange.org/rides/charlotte-nc-bicycle-sport-saturday-
+ morning-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:east-cobb-ga-free-flite-saturday-group-road-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T083000
+DTEND;TZID=America/New_York:20261003T103000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:East Cobb Saturday Group Road Ride — East Cobb\, GA
+LOCATION:Free-Flite Bicycles\, Roswell Rd
+DESCRIPTION:Pace: Conversational\, in the shop's words.\nSchedule: Every 
+ Saturday at 8:30 am\, weather permitting\, from the Free-Flite shop on R
+ oswell Rd in East Cobb..\nConfirm with the host before you go.\nhttps://
+ cycleforchange.org/rides/east-cobb-ga-free-flite-saturday-group-road-rid
+ e/
+URL:https://cycleforchange.org/rides/east-cobb-ga-free-flite-saturday-gro
+ up-road-ride/
+END:VEVENT
+END:VCALENDAR

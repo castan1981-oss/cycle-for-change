@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:arvada-co-bikefriendlyarvada-saturday-community-ride@cycleforchange.o
+ rg
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Denver:20261003T100000
+DTEND;TZID=America/Denver:20261003T120000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261031T235959Z
+SUMMARY:BFA Saturday Community Bike Ride — Arvada\, CO
+LOCATION:Varies weekly; Oct 3 start is Van Bibber Park
+DESCRIPTION:Pace: Casual and recreational; the Oct 3 ride is about 10 mil
+ es.\nNo-drop.\nSchedule: Saturdays at 10:00 am\, May into October\, from
+  a different spot in Arvada each week (Oct 3: Van Bibber Park). Each rid
+ e is posted on Meetup with its start..\nConfirm with the host before you
+  go.\nhttps://cycleforchange.org/rides/arvada-co-bikefriendlyarvada-satu
+ rday-community-ride/
+URL:https://cycleforchange.org/rides/arvada-co-bikefriendlyarvada-saturda
+ y-community-ride/
+END:VEVENT
+END:VCALENDAR

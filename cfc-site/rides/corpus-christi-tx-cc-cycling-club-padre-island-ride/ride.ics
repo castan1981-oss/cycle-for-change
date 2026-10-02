@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:corpus-christi-tx-cc-cycling-club-padre-island-ride@cycleforchange.or
+ g
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261002T180000
+DTEND;TZID=America/Chicago:20261002T193000
+RRULE:FREQ=WEEKLY;BYDAY=MO,FR;UNTIL=20270228T235959Z
+SUMMARY:Padre Island Ride — Corpus Christi\, TX
+LOCATION:Island Presbyterian Church parking lot\, Gypsy St and Port of Ca
+ ll\, Gypsy St and Port of Call\, Corpus Christi\, TX
+DESCRIPTION:Pace: No-drop fun ride\, splits into pace groups by ability.\
+ nNo-drop.\nSchedule: Every Monday and Friday\, meet just before 6:00 pm 
+ at the Island Presbyterian Church parking lot (Gypsy St and Port of Call
+ ). About 20 miles to the National Seashore and back..\nConfirm with the 
+ host before you go.\nhttps://cycleforchange.org/rides/corpus-christi-tx-
+ cc-cycling-club-padre-island-ride/
+URL:https://cycleforchange.org/rides/corpus-christi-tx-cc-cycling-club-pa
+ dre-island-ride/
+END:VEVENT
+END:VCALENDAR

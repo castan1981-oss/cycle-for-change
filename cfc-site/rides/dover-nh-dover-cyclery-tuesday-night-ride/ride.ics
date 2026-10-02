@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dover-nh-dover-cyclery-tuesday-night-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261006T173000
+DTEND;TZID=America/New_York:20261006T193000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261031T235959Z
+SUMMARY:Dover Cyclery Tuesday Night Ride — Dover\, NH
+LOCATION:Dover Cyclery\, 12 Chestnut St\, Dover\, NH 03820
+DESCRIPTION:Pace: About 19-20 mph.\nSchedule: Tuesdays at about 5:30 pm f
+ rom Dover Cyclery. March through October..\nConfirm with the host before
+  you go.\nhttps://cycleforchange.org/rides/dover-nh-dover-cyclery-tuesda
+ y-night-ride/
+URL:https://cycleforchange.org/rides/dover-nh-dover-cyclery-tuesday-night
+ -ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fort-myers-fl-caloosa-riders-monday-minions@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261005T183000
+DTEND;TZID=America/New_York:20261005T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20270228T235959Z
+SUMMARY:Monday Minions (Caloosa Riders) — Fort Myers\, FL
+LOCATION:Publix at Colonial Crossings\, 4600 Summerlin Rd\, Fort Myers\, 
+ FL 33919
+DESCRIPTION:Pace: E group\, 12-14 mph\, one rest stop at about 11 miles.\
+ nNo-drop.\nSchedule: Every Monday\, 6:30 pm\, from the Publix at Colonia
+ l Crossings\, Summerlin Rd. About 20 miles at 12-14 mph..\nConfirm with 
+ the host before you go.\nhttps://cycleforchange.org/rides/fort-myers-fl-
+ caloosa-riders-monday-minions/
+URL:https://cycleforchange.org/rides/fort-myers-fl-caloosa-riders-monday-
+ minions/
+END:VEVENT
+END:VCALENDAR

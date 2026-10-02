@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:champaign-il-prairie-cycle-club-thursday-evening-ride@cycleforchange.
+ org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261008T180000
+DTEND;TZID=America/Chicago:20261008T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:Thursday Evening Ride — Champaign\, IL
+LOCATION:Porter Park\, Porter Park\, Champaign\, IL
+DESCRIPTION:Pace: 16-20 mph\, 20 to 35 miles.\nSchedule: Thursdays\, 6:00
+  pm\, from Porter Park in Champaign..\nConfirm with the host before you 
+ go.\nhttps://cycleforchange.org/rides/champaign-il-prairie-cycle-club-th
+ ursday-evening-ride/
+URL:https://cycleforchange.org/rides/champaign-il-prairie-cycle-club-thur
+ sday-evening-ride/
+END:VEVENT
+END:VCALENDAR

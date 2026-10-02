@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:woodside-ca-velo-girls-melo-velo@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261004T090000
+DTEND;TZID=America/Los_Angeles:20261004T110000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Velo Girls Melo Velo — Woodside\, CA
+LOCATION:Woodside Town Hall
+DESCRIPTION:Pace: about 10 mph.\nSchedule: Sundays at 9:00 am from Woodsi
+ de Town Hall.\nConfirm with the host before you go.\nhttps://cycleforcha
+ nge.org/rides/woodside-ca-velo-girls-melo-velo/
+URL:https://cycleforchange.org/rides/woodside-ca-velo-girls-melo-velo/
+END:VEVENT
+END:VCALENDAR

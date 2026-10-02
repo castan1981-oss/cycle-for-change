@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bakersfield-ca-kern-wheelmen-monday-recovery-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261005T163000
+DTEND;TZID=America/Los_Angeles:20261005T173000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20270228T235959Z
+SUMMARY:Monday Recovery Ride — Bakersfield\, CA
+LOCATION:California Pizza Kitchen at River Walk\, 10150 Stockdale Hwy\, B
+ akersfield\, CA 93311
+DESCRIPTION:Pace: social\, recovery pace.\nSchedule: Every Monday\, 4:30 
+ pm from California Pizza Kitchen at River Walk; east to Darrel's and bac
+ k..\nConfirm with the host before you go.\nhttps://cycleforchange.org/ri
+ des/bakersfield-ca-kern-wheelmen-monday-recovery-ride/
+URL:https://cycleforchange.org/rides/bakersfield-ca-kern-wheelmen-monday-
+ recovery-ride/
+END:VEVENT
+END:VCALENDAR

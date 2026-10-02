@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:st-petersburg-fl-spbc-weekday-usfsp-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261005T080000
+DTEND;TZID=America/New_York:20261005T100000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;UNTIL=20270228T235959Z
+SUMMARY:Weekday USFSP Ride (St. Petersburg Bicycle Club) — St. Petersbu
+ rg\, FL
+LOCATION:USFSP campus\, 2nd St S and 6th Ave S\, green concrete balls in 
+ front of the bronze bull\, 6th Ave S and 2nd St S\, St. Petersburg\, FL
+DESCRIPTION:Pace: Monday\, Wednesday\, Friday 20 mph controlled; Tuesday 
+ and Thursday 17-19 mph on the first loop.\nSchedule: Monday to Friday\, 
+ 8:00 am sharp\, from the USFSP campus (2nd St S and 6th Ave S\, by the b
+ ronze bull). About 17 miles\, with a faster second loop for another 9. S
+ how and go..\nConfirm with the host before you go.\nhttps://cycleforchan
+ ge.org/rides/st-petersburg-fl-spbc-weekday-usfsp-ride/
+URL:https://cycleforchange.org/rides/st-petersburg-fl-spbc-weekday-usfsp-
+ ride/
+END:VEVENT
+END:VCALENDAR

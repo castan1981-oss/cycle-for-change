@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:puyallup-wa-twbc-thursday-foothills-trail-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261008T090000
+DTEND;TZID=America/Los_Angeles:20261008T110000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:Thursday Foothills Trail Ride — Puyallup\, WA
+LOCATION:Foothills Trail\, East Puyallup Trailhead
+DESCRIPTION:Pace: Easy\, flat paved trail; Strava rates it Beginner / Fla
+ t.\nSchedule: Every Thursday at 9:00 am from the East Puyallup trailhead
+  on the Foothills Trail (the club's calendar says be there before 9:30).
+ .\nConfirm with the host before you go.\nhttps://cycleforchange.org/ride
+ s/puyallup-wa-twbc-thursday-foothills-trail-ride/
+URL:https://cycleforchange.org/rides/puyallup-wa-twbc-thursday-foothills-
+ trail-ride/
+END:VEVENT
+END:VCALENDAR

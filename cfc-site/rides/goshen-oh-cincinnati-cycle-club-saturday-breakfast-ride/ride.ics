@@ -1,0 +1,44 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:goshen-oh-cincinnati-cycle-club-saturday-breakfast-ride@cycleforchang
+ e.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T090000
+DTEND;TZID=America/New_York:20261003T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261017T035959Z
+SUMMARY:Saturday Breakfast Ride (Goshen) — Goshen\, OH
+LOCATION:Goshen Kroger parking lot\, 6725 Dick Flynn Blvd\, Goshen\, OH 4
+ 5039
+DESCRIPTION:Pace: Several speed groups; pick one you can keep up with.\nS
+ chedule: Saturdays from the Goshen Kroger lot. Oct 3: 9:00 am. From Oct 
+ 17: 8:00 am (the Oct 10 listing shows no time). The club calendar lists 
+ it through Oct 31\, 2026..\nConfirm with the host before you go.\nhttps:
+ //cycleforchange.org/rides/goshen-oh-cincinnati-cycle-club-saturday-brea
+ kfast-ride/
+URL:https://cycleforchange.org/rides/goshen-oh-cincinnati-cycle-club-satu
+ rday-breakfast-ride/
+END:VEVENT
+BEGIN:VEVENT
+UID:goshen-oh-cincinnati-cycle-club-saturday-breakfast-ride-from-2026-10-
+ 17@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261017T080000
+DTEND;TZID=America/New_York:20261017T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Saturday Breakfast Ride (Goshen) — Goshen\, OH
+LOCATION:Goshen Kroger parking lot\, 6725 Dick Flynn Blvd\, Goshen\, OH 4
+ 5039
+DESCRIPTION:Pace: Several speed groups; pick one you can keep up with.\nS
+ chedule: Saturdays from the Goshen Kroger lot. Oct 3: 9:00 am. From Oct 
+ 17: 8:00 am (the Oct 10 listing shows no time). The club calendar lists 
+ it through Oct 31\, 2026..\nConfirm with the host before you go.\nhttps:
+ //cycleforchange.org/rides/goshen-oh-cincinnati-cycle-club-saturday-brea
+ kfast-ride/
+URL:https://cycleforchange.org/rides/goshen-oh-cincinnati-cycle-club-satu
+ rday-breakfast-ride/
+END:VEVENT
+END:VCALENDAR

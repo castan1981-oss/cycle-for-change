@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:reno-nv-mwf-ride-dolce-caffe@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261005T090000
+DTEND;TZID=America/Los_Angeles:20261005T110000
+RRULE:FREQ=WEEKLY;BYDAY=MO,WE,FR;UNTIL=20270228T235959Z
+SUMMARY:MWF Morning Ride — Reno\, NV
+LOCATION:Dolce Caffe\, 3886 Mayberry Dr\, Reno\, NV
+DESCRIPTION:Pace: A ride 21+ mph\, close to a drop ride with regroups; B 
+ ride 16 to 17 mph on Mondays (no-drop\, recovery) and 18 to 19 mph on We
+ dnesdays and Fridays (regroups\, generally no-drop).\nSchedule: Mondays\
+ , Wednesdays and Fridays\, 9:00 am as listed in October 2026 (start time
+ s change through the year; the group's Strava club has the current time)
+ . Meet at Dolce Caffe\, 3886 Mayberry Dr..\nConfirm with the host before
+  you go.\nhttps://cycleforchange.org/rides/reno-nv-mwf-ride-dolce-caffe/
+URL:https://cycleforchange.org/rides/reno-nv-mwf-ride-dolce-caffe/
+END:VEVENT
+END:VCALENDAR

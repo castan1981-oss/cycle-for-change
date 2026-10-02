@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:charlotte-nc-charlotte-thrives-queer-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261004T100000
+DTEND;TZID=America/New_York:20261004T120000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Charlotte Thrives Pride Bike Ride — Charlotte\, NC
+LOCATION:Mugs Coffee\, 5126 Park Rd #1d\, Charlotte\, NC 28209
+DESCRIPTION:Pace: Casual\, stays together\, riding the greenway.\nSchedul
+ e: Monthly\, on a Sunday at 10:00 am (September's was Sunday Sept 27); t
+ he date is posted on the ride page each month.\nConfirm with the host be
+ fore you go.\nhttps://cycleforchange.org/rides/charlotte-nc-charlotte-th
+ rives-queer-ride/
+URL:https://cycleforchange.org/rides/charlotte-nc-charlotte-thrives-queer
+ -ride/
+END:VEVENT
+END:VCALENDAR

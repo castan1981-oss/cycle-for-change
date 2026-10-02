@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:arlington-va-squadra-coppi-sunday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261004T083500
+DTEND;TZID=America/New_York:20261004T113500
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Coppi Sunday Ride — Arlington\, VA
+LOCATION:Simona Cafe\, 2507 Franklin Rd\, Arlington\, VA 22201
+DESCRIPTION:Pace: Warm-up 16-18 mph\, 20-25 mph for much of the ride\, 25
+ + mph on harder sections.\nSchedule: Sundays\, rolls 8:35 am from Simona
+  Cafe in Arlington.\nConfirm with the host before you go.\nhttps://cycle
+ forchange.org/rides/arlington-va-squadra-coppi-sunday-ride/
+URL:https://cycleforchange.org/rides/arlington-va-squadra-coppi-sunday-ri
+ de/
+END:VEVENT
+END:VCALENDAR

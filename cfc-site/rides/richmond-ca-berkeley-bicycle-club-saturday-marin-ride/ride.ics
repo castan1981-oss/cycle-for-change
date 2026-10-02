@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:richmond-ca-berkeley-bicycle-club-saturday-marin-ride@cycleforchange.
+ org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T090000
+DTEND;TZID=America/Los_Angeles:20261003T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Berkeley Bicycle Club Saturday Marin Ride — Richmond\, CA
+LOCATION:Maya Taqueria\, Point Richmond
+DESCRIPTION:Schedule: Saturdays\, meet 8:45 am\, roll 9:00 am\, from Maya
+  Taqueria in Point Richmond.\nConfirm with the host before you go.\nhttp
+ s://cycleforchange.org/rides/richmond-ca-berkeley-bicycle-club-saturday-
+ marin-ride/
+URL:https://cycleforchange.org/rides/richmond-ca-berkeley-bicycle-club-sa
+ turday-marin-ride/
+END:VEVENT
+END:VCALENDAR

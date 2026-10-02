@@ -1,0 +1,282 @@
+[
+ {
+  "slug": "fort-worth-tx-fwba-saturday-club-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "FWBA's home page ride calendar lists Saturday rides at 8:00 am for Oct 3 (Joe Pool Lake, Hills of Granbury) and Oct 10, 2026 (Ride Across Johnson County), and the Joe Pool event page says 8 am in warm months and 9 am in cold months (read Oct 1, 2026).",
+  "sources": [
+   "https://www.fwbaclub.org/",
+   "https://www.fwbaclub.org/event-6837496"
+  ]
+ },
+ {
+  "slug": "carrollton-tx-ccc-south-saturday-morning-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-04-06",
+  "evidence": "Carrollton Cycling Club's rides page, last edited Apr 6, 2026 per the site's own page data, lists the CCC South Saturday ride rolling at 8:00 am from one block south of the Carrollton Square gazebo, 35 to 40 miles at 14 to 16 mph (read Oct 1, 2026).",
+  "sources": [
+   "http://carrolltoncycling.com/rides/"
+  ]
+ },
+ {
+  "slug": "plano-tx-pba-saturday-club-rides",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "PBA's home page carries its September 2026 newsletter ('Saturday rides are starting at 7:30 AM this weekend') and its Our Rides page gives the monthly start table: 8:00 am January to April, 7:30 May, 7:00 June to August, 7:30 September, 8:00 October to December (read Oct 1, 2026).",
+  "sources": [
+   "https://planobicycle.org/",
+   "https://planobicycle.org/content.aspx?page_id=22&club_id=536213&module_id=277154"
+  ],
+  "changes": {
+   "time_local": "8:00 am",
+   "start_hhmm": "08:00",
+   "schedule": "Every Saturday morning. Start times by month: 8:00 am January to April, 7:30 am May, 7:00 am June to August, 7:30 am September, 8:00 am October to December. Ride leaders can change them.",
+   "start_times": [
+    {
+     "from": "2027-05-01",
+     "start_hhmm": "07:30"
+    },
+    {
+     "from": "2027-06-01",
+     "start_hhmm": "07:00"
+    },
+    {
+     "from": "2027-09-01",
+     "start_hhmm": "07:30"
+    },
+    {
+     "from": "2027-10-01",
+     "start_hhmm": "08:00"
+    }
+   ],
+   "visitor_notes": "Guests can sign up for 30 days of free membership, and PBA asks riders to register for each ride on its calendar. New riders should start one level below the group they think they belong in."
+  }
+ },
+ {
+  "slug": "fort-worth-tx-trek-fort-worth-south-thursday-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "Trek Bicycle Fort Worth South's Eventbrite page lists The Thursday Ride, wheels down 6:15 pm, as a series from Jun 10 to Oct 29, 2026 with a session on Thu Oct 1; it calls it a beginner group ride at 14 to 16 mph and a drop ride (read Oct 1, 2026).",
+  "sources": [
+   "https://www.eventbrite.com/e/the-thursday-ride-trek-fort-worth-south-tickets-1991143980245",
+   "https://www.eventbrite.com/o/trek-bicycle-fort-worth-south-49087200853"
+  ],
+  "changes": {
+   "schedule": "Thursday evenings, wheels down 6:15 pm, weather permitting. The shop's Eventbrite series runs Jun 10 to Oct 29, 2026.",
+   "cost": "free",
+   "inclusive_focus": [
+    "beginner"
+   ],
+   "links": {
+    "website": "https://www.eventbrite.com/e/the-thursday-ride-trek-fort-worth-south-tickets-1991143980245"
+   },
+   "refresh": {
+    "watch_url": "https://www.eventbrite.com/e/the-thursday-ride-trek-fort-worth-south-tickets-1991143980245",
+    "notes": "Series end date is Oct 29, 2026; look for the next series then."
+   }
+  }
+ },
+ {
+  "slug": "dallas-tx-dallas-critical-mass",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "BikeDFW's community calendar feed lists Critical Mass Dallas on the last Friday of each month (Sept 25 and Oct 30, 2026) at 7:30 pm, 'rolling out around 8:00 PM from Dallas Farmers Market', in an entry added Nov 2, 2025 (read Oct 1, 2026). Instagram would not load.",
+  "sources": [
+   "https://www.bikedfw.org/community-calendar.html",
+   "https://tockify.com/api/feeds/ics/commevents"
+  ],
+  "changes": {
+   "distance_miles": "10–15",
+   "pace": "Casual, with plenty of stops",
+   "description": "A monthly social ride on the last Friday, from the Dallas Farmers Market, 10 to 15 miles at a casual pace with stops. The route changes every month. Bring lights, water and a helmet.",
+   "refresh": {
+    "method": "ics",
+    "watch_url": "https://www.bikedfw.org/community-calendar.html",
+    "feed_url": "https://tockify.com/api/feeds/ics/commevents",
+    "notes": "BikeDFW's Tockify feed carries the whole region; match on 'Critical Mass Dallas'. The route changes monthly and is posted on Instagram."
+   }
+  }
+ },
+ {
+  "slug": "dallas-tx-make-the-healthy-choice-community-bike-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "Make The Healthy Choice's Eventbrite organizer page lists group bike rides at 9:00 am on Sat Oct 10, 2026 (Glendale Park, Oak Cliff) and Sun Oct 25, 2026 (Trinity River Audubon Center, Great Trinity Forest AT&T Trail), each posted as its own event (read Oct 1, 2026).",
+  "sources": [
+   "https://www.eventbrite.com/o/make-the-healthy-choice-33450140319",
+   "https://www.eventbrite.com/e/group-bike-ride-runyon-creek-trail-glendale-park-to-unt-dallas-tickets-2002297930009",
+   "https://www.eventbrite.com/e/group-bike-ride-great-trinity-forest-att-trail-tickets-2002299056378"
+  ],
+  "changes": {
+   "days": [
+    "sat",
+    "sun"
+   ],
+   "frequency": "biweekly",
+   "schedule": "About every two weeks, 9:00 am, on a Saturday or Sunday. Each ride is its own Eventbrite event with its own trail and start: Sat Oct 10 from Glendale Park (Oak Cliff), Sun Oct 25 from the Trinity River Audubon Center.",
+   "time_local": "9:00 am",
+   "start_hhmm": "09:00",
+   "start_location": {
+    "name": "Varies by ride: Glendale Park (Oak Cliff) or the Trinity River Audubon Center (Great Trinity Forest)",
+    "address": null
+   },
+   "distance_miles": "8–10",
+   "description": "Group bike rides from Make The Healthy Choice, an Oak Cliff community health group, about every two weeks at 9:00 am on a Saturday or Sunday. Recent rides: the Runyon Creek Trail from Glendale Park (9 to 10 miles) and the Great Trinity Forest AT&T Trail (8 miles). Each ride has a free Eventbrite page with the start.",
+   "refresh": {
+    "method": "eventbrite",
+    "watch_url": "https://www.eventbrite.com/o/make-the-healthy-choice-33450140319",
+    "feed_url": null,
+    "notes": "Each ride is posted as its own event on the organizer page; the start changes ride to ride."
+   }
+  }
+ },
+ {
+  "slug": "dallas-tx-bike-mart-wrl-wednesday-spin-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "Bike Mart's group rides page (events widget read Oct 1, 2026) lists this: the WRL Wednesday Spin Ride is a weekly series at 7:30 pm from the White Rock Lake store, tagged Avid Rider pace with a ride leader. Every series repeats weekly with no end date, the Saturday series skip only Jul 4, 2026, and the widget carries a McKinney Monday ride that starts Feb 9, 2026. The old store-rides address now redirects to this page.",
+  "sources": [
+   "https://www.bikemart.com/pages/group-rides"
+  ],
+  "changes": {
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://www.bikemart.com/pages/group-rides",
+    "notes": "The old store-rides page now redirects here. The page loads its events from an Elfsight events widget; every ride is a weekly series with no end date."
+   }
+  }
+ },
+ {
+  "slug": "frisco-tx-bike-mart-hollyhock-saturday-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "Bike Mart's group rides page (events widget read Oct 1, 2026) lists this: the Hollyhock Ride is a weekly Saturday series at 8:30 am from the Prosper/Hollyhock store, tagged Beginner Friendly with a ride leader (plus a Sunday 9:00 am gravel ride and a Tuesday 6:30 pm family ride). Every series repeats weekly with no end date, the Saturday series skip only Jul 4, 2026, and the widget carries a McKinney Monday ride that starts Feb 9, 2026. The old store-rides address now redirects to this page.",
+  "sources": [
+   "https://www.bikemart.com/pages/group-rides"
+  ],
+  "changes": {
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://www.bikemart.com/pages/group-rides",
+    "notes": "The old store-rides page now redirects here. The page loads its events from an Elfsight events widget; every ride is a weekly series with no end date."
+   }
+  }
+ },
+ {
+  "slug": "mckinney-tx-bike-mart-saturday-abc-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "Bike Mart's group rides page (events widget read Oct 1, 2026) lists this: the McKinney A, B and C rides are weekly Saturday series at 8:00 am from the Stonebridge store (C is tagged Beginner Friendly), plus Monday 7:30 pm and Wednesday 6:30 and 7:30 pm rides. Every series repeats weekly with no end date, the Saturday series skip only Jul 4, 2026, and the widget carries a McKinney Monday ride that starts Feb 9, 2026. The old store-rides address now redirects to this page.",
+  "sources": [
+   "https://www.bikemart.com/pages/group-rides"
+  ],
+  "changes": {
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://www.bikemart.com/pages/group-rides",
+    "notes": "The old store-rides page now redirects here. The page loads its events from an Elfsight events widget; every ride is a weekly series with no end date."
+   }
+  }
+ },
+ {
+  "slug": "richardson-tx-bike-mart-saturday-rides",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "Bike Mart's group rides page (events widget read Oct 1, 2026) lists this: the Richardson UTD store has a weekly Saturday ladder from 8:00 am (Tour de McKinney, 8:05 Allen, 8:11 Plano, 8:15 Murphy, 8:20 Richardson, 8:25 Chick-fil-A). Every series repeats weekly with no end date, the Saturday series skip only Jul 4, 2026, and the widget carries a McKinney Monday ride that starts Feb 9, 2026. The old store-rides address now redirects to this page.",
+  "sources": [
+   "https://www.bikemart.com/pages/group-rides"
+  ],
+  "changes": {
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://www.bikemart.com/pages/group-rides",
+    "notes": "The old store-rides page now redirects here. The page loads its events from an Elfsight events widget; every ride is a weekly series with no end date."
+   }
+  }
+ },
+ {
+  "slug": "denton-tx-denton-women-cyclists-tuesday-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "Bike Denton's page and its Events feed were last updated in 2025 and Velo Republic's page is undated. The times disagree: Velo Republic says meet 5:45 pm at the shop and leave 6:00 pm, BikeDFW's calendar says 6:30 pm, we list 7:00 pm, and Bike Denton gives the Mulberry St lot with no time. The group's Facebook page would not load."
+ },
+ {
+  "slug": "denton-tx-east-side-social-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "Only Bike Denton's group-rides page (site last updated May 2025) and Velo Republic's undated page state it (Thursday evening, 7:30 pm per Velo Republic). The Facebook page would not load. Nothing dated 2026."
+ },
+ {
+  "slug": "denton-tx-monday-community-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "Bike Denton's page (site last updated May 2025) and Velo Republic's undated page say Mondays during daylight saving time, 6:00 pm. The Instagram account would not load. Nothing dated 2026."
+ },
+ {
+  "slug": "cedar-hill-tx-lone-star-cyclists-tuesday-training-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "The club's ClubExpress event page for the Tuesday Training Ride shows only a May 27, 2025 date, and its home page lists no upcoming events when logged out. Nothing dated 2026."
+ },
+ {
+  "slug": "dallas-tx-pull-through-friday-coffee-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "Pull Through Coffee Bar's Rides & Runs page lists the Friday Morning Lake Laps & Lattes among groups it co-hosts but gives no day, time or date. The Dallas Bicycle Coalition entry was added Jun 2025. Instagram would not load."
+ },
+ {
+  "slug": "dallas-tx-pull-through-womens-monthly-shop-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "Pull Through's Rides & Runs page describes the Women's Monthly Shop Ride (no-drop, 12 to 15 mph, about 18 miles, two laps of White Rock Lake) but gives no date or time and carries no date. The Dallas Bicycle Coalition entry was added Jun 2025."
+ },
+ {
+  "slug": "dallas-tx-femme-pedale-womens-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "Only the Dallas Bicycle Coalition (entry added Jun 2025) and BikeDFW's calendar (entry created May 2024, last edited Oct 2024) list it. The group's Facebook group would not load. Nothing dated 2026."
+ },
+ {
+  "slug": "dallas-tx-hangover-riders-first-friday-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "The Dallas Bicycle Coalition lists it (8:00 pm wheels down, Dallas Farmers Market; entry added Jun 2025). BikeDFW's calendar entry (created May 2024) has a broken recurrence. Instagram and Facebook would not load."
+ },
+ {
+  "slug": "dallas-tx-monday-moss-mtb-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "DORBA's own Weekly Rides page lists Monday Moss at Harry Moss at 6:30 pm every Monday, but the page carries no date. The only dated DORBA event pages are from 2021 and 2025. Facebook would not load."
+ },
+ {
+  "slug": "dallas-tx-shifty-freewheelers-monday-night-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "Only the Dallas Bicycle Coalition lists it (entry added Jun 2025, at Trinity Cider, 12 to 14 mph no drop). The Facebook group is the host's channel and would not load."
+ },
+ {
+  "slug": "dallas-tx-south-loop-weekend-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "Mirage Cycling's training-rides page is dated Jan 16, 2022 and calls the rides leaderless. The Dallas Bicycle Coalition lists the Saturday 7:30 am (fall) and Sunday 8:00 am Southie rides (entries added Jun 2025); the Facebook group is closed."
+ },
+ {
+  "slug": "dallas-tx-taco-tuesday-with-salty-cats",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "Only the Dallas Bicycle Coalition lists it (Cold Beer Co, Main St; entry added Jun 2025). Instagram would not load."
+ },
+ {
+  "slug": "dallas-tx-tits-tuesday-time-in-the-saddle",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "The Dallas Bicycle Coalition (entry added May 2025) and BikeDFW's calendar (entry created Dec 2021, never edited) list it, and BikeDFW shows 7:30 pm where we list 8:00 pm. The Facebook group would not load. Nothing dated 2026."
+ },
+ {
+  "slug": "plano-tx-pba-tuesday-night-ladies-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "PBA's ride page still says Tuesday 6:00 pm (arrive 5:45) and that the winter season starts in October with one group (D+/C-, 14.5 to 16.5 mph), but the page has no date and the ride's blog was last posted July 2025. Nothing dated 2026 for this ride."
+ }
+]

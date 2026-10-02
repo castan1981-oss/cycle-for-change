@@ -38,7 +38,14 @@ async function nominatim(q, cc) {
   const url = `https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&addressdetails=0&q=${encodeURIComponent(q)}${cc ? `&countrycodes=${cc.toLowerCase()}` : ""}`;
   let hit = null;
   try {
-    const res = await fetch(url, { headers: { "User-Agent": "cycleforchange.org ride directory geocoder (https://cycleforchange.org/rides/)", "Accept-Language": "en" } });
+    let res;
+    // a busy shared network gets throttled (429): wait longer each time and try again before giving up
+    for (let tries = 0; tries < 5; tries++) {
+      res = await fetch(url, { headers: { "User-Agent": "cycleforchange.org ride directory geocoder (https://cycleforchange.org/rides/)", "Accept-Language": "en" } });
+      if (res.status !== 429 && res.status < 500) break;
+      await sleep(4000 * (tries + 1));
+      last = Date.now();
+    }
     if (res.ok) {
       const j = await res.json();
       if (j && j[0]) hit = { lat: +(+j[0].lat).toFixed(5), lng: +(+j[0].lon).toFixed(5), type: j[0].type || null, name: j[0].display_name || null };

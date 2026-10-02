@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:new-orleans-la-critical-mass-nola-last-friday@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261030T183000
+DTEND;TZID=America/Chicago:20261030T203000
+RRULE:FREQ=MONTHLY;BYDAY=-1FR;UNTIL=20270228T235959Z
+SUMMARY:Critical Mass NOLA — New Orleans\, LA
+LOCATION:French Market\, Barracks Street side\, 1008 N Peters St\, New Or
+ leans\, LA 70116
+DESCRIPTION:Schedule: Last Friday of the month: meet 6:00 pm\, roll 6:30 
+ pm from the French Market\, Barracks Street side..\nConfirm with the hos
+ t before you go.\nhttps://cycleforchange.org/rides/new-orleans-la-critic
+ al-mass-nola-last-friday/
+URL:https://cycleforchange.org/rides/new-orleans-la-critical-mass-nola-la
+ st-friday/
+END:VEVENT
+END:VCALENDAR

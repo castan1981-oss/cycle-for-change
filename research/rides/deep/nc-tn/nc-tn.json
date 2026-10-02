@@ -1,0 +1,793 @@
+[
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "region": "North Carolina",
+  "state": "NC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": 61,
+  "distance_miles": 38,
+  "duration": "About 3 hours",
+  "duration_min": null,
+  "pace": "Each rider picks a pace; riders break into groups of similar ability",
+  "drop_policy": "groups",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "No fee listed; non-members sign the club waiver",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Registration is encouraged: you get a cancellation email if the ride is called off. If you are not a club member, sign the BRBC waiver first. The calendar listed Thursday Oct 1 at 9:30 am; every later Tuesday and Thursday date is at noon.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "slug": "etowah-nc-brbc-etowah-training-ride",
+  "name": "Trevor's Etowah Training Ride",
+  "city": "Etowah",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Tuesdays and Thursdays, 12:00 pm, from Etowah Park. The same out-and-back route into Pisgah Forest each time; riders sort into pace groups.",
+  "days": [
+   "tue",
+   "thu"
+  ],
+  "time_local": "12:00 pm",
+  "start_hhmm": "12:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Etowah Park",
+   "address": "449 Etowah School Rd, Etowah, NC 28739"
+  },
+  "host": {
+   "name": "Blue Ridge Bicycle Club",
+   "type": "club"
+  },
+  "description": "A weekly training ride from Etowah Park, run on the same route every time: out and back to Looking Glass Falls in Pisgah Forest, 38 miles with about 1,050 feet of climbing. A shorter 30-mile option turns around at the Ranger Station. It is a club training series, not a guided ride, so riders split into groups by pace.",
+  "links": {
+   "website": "https://brbcnc.clubexpress.com/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://brbcnc.clubexpress.com/content.aspx?page_id=4002&club_id=285841&item_id=2835131",
+    "https://brbcnc.clubexpress.com/content.aspx?page_id=4002&club_id=285841&item_id=2835071"
+   ]
+  },
+  "sources": [
+   "https://brbcnc.clubexpress.com/content.aspx?page_id=4001&club_id=285841",
+   "https://brbcnc.clubexpress.com/content.aspx?page_id=4002&club_id=285841&item_id=2835131",
+   "https://brbcnc.clubexpress.com/content.aspx?page_id=4002&club_id=285841&item_id=2835071"
+  ],
+  "evidence": "Blue Ridge Bicycle Club's ClubExpress calendar lists Trevor's Etowah Training Ride for Tue Oct 6 and Thu Oct 8, 2026 at 12:00 pm from Etowah Park, with weekly dates through December; the event pages give the 38-mile Looking Glass Falls route (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://brbcnc.clubexpress.com/content.aspx?page_id=4001&club_id=285841",
+   "feed_url": null,
+   "notes": "The calendar's list view shows every dated ride; the series is new this autumn."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "region": "North Carolina",
+  "state": "NC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": 53,
+  "distance_miles": 33,
+  "duration": "About 2.5 hours",
+  "duration_min": null,
+  "pace": "Riders set their own pace and split into groups of similar ability",
+  "drop_policy": "groups",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "No fee listed; non-members sign the club waiver",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Registration is encouraged and gets you cancellation emails. If you are not a club member, sign the BRBC waiver first. The calendar moves the start to noon from Saturday Nov 7.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "slug": "hendersonville-nc-brbc-jackson-park-training-ride",
+  "name": "Trevor's Jackson Park Training Ride",
+  "city": "Hendersonville",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays, 9:30 am, from Jackson Park; noon from Nov 7. The same Apple Pancake loop every week.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:30 am",
+  "start_hhmm": "09:30",
+  "start_times": [
+   {
+    "from": "2026-11-07",
+    "start_hhmm": "12:00"
+   }
+  ],
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Jackson Park",
+   "address": "708 Glover St, Hendersonville, NC 28739"
+  },
+  "host": {
+   "name": "Blue Ridge Bicycle Club",
+   "type": "club"
+  },
+  "description": "A Saturday training ride from Jackson Park in Hendersonville on the club's classic Apple Pancake route: a 33-mile loop through apple country with about 1,650 feet of climbing. It runs on the same route every week and riders sort into groups by pace.",
+  "links": {
+   "website": "https://brbcnc.clubexpress.com/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://brbcnc.clubexpress.com/content.aspx?page_id=4002&club_id=285841&item_id=2835003"
+   ]
+  },
+  "sources": [
+   "https://brbcnc.clubexpress.com/content.aspx?page_id=4001&club_id=285841",
+   "https://brbcnc.clubexpress.com/content.aspx?page_id=4002&club_id=285841&item_id=2835003"
+  ],
+  "evidence": "Blue Ridge Bicycle Club's ClubExpress calendar lists Trevor's Jackson Park Training Ride for Sat Oct 3, 10, 17, 24 and 31 at 9:30 am and every Saturday from Nov 7 at 12:00 pm, from 708 Glover St, Hendersonville (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://brbcnc.clubexpress.com/content.aspx?page_id=4001&club_id=285841",
+   "feed_url": null,
+   "notes": "The calendar lists the dated Saturdays; the start time moves to noon on Nov 7."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "region": "North Carolina",
+  "state": "NC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "monthly_rule": null,
+  "season": "Mar–Oct",
+  "season_months": {
+   "start": 3,
+   "end": 10
+  },
+  "distance_km": 48,
+  "distance_miles": 30,
+  "duration": null,
+  "duration_min": null,
+  "pace": "15–17 mph, regroups before and after the Parkway descent",
+  "drop_policy": "groups",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The shop calls this a common first group ride and has printable directions for people not on Strava. Blue Ridge Parkway closures mean route edits through 2026. Boone Area Cyclists list the same Monday 5:30 ride as the Monday Bistro Ride.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "blowing-rock-nc-boone-bike-monday-night-ride",
+  "name": "Monday Night Ride (Blue Ridge Parkway Viaduct loop)",
+  "city": "Blowing Rock",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Mondays, 5:30 pm, from the top level of the Blowing Rock public parking deck. Warmer months, starting and ending around the time change.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Blowing Rock public parking deck (top level)",
+   "address": "333 Wallingford St, Blowing Rock, NC 28605"
+  },
+  "host": {
+   "name": "Boone Bike & Touring",
+   "type": "shop"
+  },
+  "description": "The classic Viaduct loop out of Blowing Rock, 30 miles with about 2,500 feet of climbing. Most riders climb US 221 and descend the Parkway back to town. The group regroups before the Parkway descent and again near the end. Parkway closures in 2026 change the usual route.",
+  "links": {
+   "website": "http://www.boonebike.com/about/local-group-rides-pg59.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://booneareacyclists.org/ride/"
+   ]
+  },
+  "sources": [
+   "http://www.boonebike.com/about/local-group-rides-pg59.htm",
+   "https://booneareacyclists.org/ride/"
+  ],
+  "evidence": "Boone Bike & Touring's Local Rides page lists the Monday Night Ride at 5:30 pm from the Blowing Rock parking deck and says Parkway closures will force route edits 'throughout 2026'; Boone Area Cyclists' page lists a Monday 5:30 pm ride too. No dated upcoming ride is posted (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "http://www.boonebike.com/about/local-group-rides-pg59.htm",
+   "feed_url": null,
+   "notes": "Page says rides run in the warmer months, around the time change; confirm in late October."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "region": "North Carolina",
+  "state": "NC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "monthly_rule": null,
+  "season": "Mar–Oct",
+  "season_months": {
+   "start": 3,
+   "end": 10
+  },
+  "distance_km": 43,
+  "distance_miles": 27,
+  "duration": null,
+  "duration_min": null,
+  "pace": "15–17 mph with plenty of regroups",
+  "drop_policy": "no-drop",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The shop runs a post-Helene route to avoid the Castle Ford Rd bridge closure. Boone Area Cyclists list a Food Lion Tuesday ride at 5:30 pm on RideWithGPS.",
+  "inclusive_focus": [
+   "beginner",
+   "no-drop"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "boone-nc-boone-bike-eastside-tuesday-night-ride",
+  "name": "Eastside Tuesday Night Ride",
+  "city": "Boone",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Tuesdays, 5:30 pm, from the Food Lion in Deep Gap. Warmer months, starting and ending around the time change.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Food Lion parking lot",
+   "address": "1864 Old 421 S Suite D, Boone, NC 28607"
+  },
+  "host": {
+   "name": "Boone Bike & Touring",
+   "type": "shop"
+  },
+  "description": "The shop's most beginner-friendly group ride. It starts at the Food Lion on 421, runs out toward Todd and Railroad Grade Road, then climbs back to town: 27 miles with about 1,800 feet of climbing. The group regroups often and does not drop anyone.",
+  "links": {
+   "website": "http://www.boonebike.com/about/local-group-rides-pg59.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://booneareacyclists.org/ride/"
+   ]
+  },
+  "sources": [
+   "http://www.boonebike.com/about/local-group-rides-pg59.htm",
+   "https://booneareacyclists.org/ride/"
+  ],
+  "evidence": "Boone Bike & Touring's Local Rides page calls the Eastside Tuesday Night Ride (post-Helene route) 'the High Country's most beginner-friendly no-drop group ride', 5:30 pm from the Deep Gap Food Lion, and says Parkway closures affect routes 'throughout 2026'; Boone Area Cyclists' page also lists a Food Lion Tuesday 5:30 ride. No dated upcoming ride is posted (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "http://www.boonebike.com/about/local-group-rides-pg59.htm",
+   "feed_url": null,
+   "notes": "Page says rides run in the warmer months, around the time change; confirm in late October."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "region": "North Carolina",
+  "state": "NC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 2 hours",
+  "duration_min": null,
+  "pace": "Leisurely; do one, two or three laps of Greenfield Lake",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Listed in the club's 'All Speeds' category. Sign the club waiver at the ride. Cancelled if the forecast is below 38 F or the roads are wet at the start. The club moved Cargo District Thursday earlier this month, so check the event page for the October start time.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-30",
+  "slug": "wilmington-nc-cfc-flaming-amys-burrito-ride",
+  "name": "Flaming Amy's Burrito Ride",
+  "city": "Wilmington",
+  "discipline": [
+   "social",
+   "road"
+  ],
+  "schedule": "Wednesdays, 5:30 pm, from Able Insurance next to Flaming Amy's. The club calendar lists it through Oct 21.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Able Insurance (next to Flaming Amy's Burrito Barn)",
+   "address": "4008 Oleander Dr, Wilmington, NC 28403"
+  },
+  "host": {
+   "name": "Cape Fear Cyclists",
+   "type": "club"
+  },
+  "description": "An easy early-evening ride that starts near Flaming Amy's Burrito Barn. The group rolls about two miles through neighborhoods to Greenfield Lake, where each lap is about 4.5 miles. Ride one, two or three laps, then roll back for a burrito.",
+  "links": {
+   "website": "https://www.capefearcyclists.org/",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/groups/476004845842896",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.capefearcyclists.org/content.aspx?page_id=4091&club_id=807047&item_id=2909815"
+   ]
+  },
+  "sources": [
+   "https://www.capefearcyclists.org/content.aspx?page_id=4001&club_id=807047",
+   "https://www.capefearcyclists.org/content.aspx?page_id=4091&club_id=807047&item_id=2909815"
+  ],
+  "evidence": "Cape Fear Cyclists' calendar lists Flaming Amy's Burrito Ride on Wed Oct 7, 14 and 21, 2026, and the Sept 30 event page says 5:30 pm to 7:30 pm, category 'Club Ride - All Speeds', from 4008 Oleander (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.capefearcyclists.org/content.aspx?page_id=4001&club_id=807047",
+   "feed_url": null,
+   "notes": "ClubExpress calendar; open the event page for each date's time. Not listed Oct 28."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Uptown",
+  "region": "North Carolina",
+  "state": "NC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "monthly_rule": null,
+  "season": "Mar–Oct",
+  "season_months": {
+   "start": 3,
+   "end": 10
+  },
+  "distance_km": 48,
+  "distance_miles": 30,
+  "duration": null,
+  "duration_min": null,
+  "pace": "A group about 21–23 mph, B group about 18–19 mph",
+  "drop_policy": "groups",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Groups are set by turnout. The shop posts weather updates on its social channels. Rental bikes can be reserved ahead.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "charlotte-nc-bicycle-sport-monday-night-shop-ride",
+  "name": "Monday Night Shop Ride (Uptown)",
+  "city": "Charlotte",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Mondays, 6:00 pm, spring to fall (while daylight saving time is on), from Bicycle Sport Uptown.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Bicycle Sport Uptown",
+   "address": "1432 W Morehead St, Charlotte, NC 28208"
+  },
+  "host": {
+   "name": "Bicycle Sport",
+   "type": "shop"
+  },
+  "description": "A fast Monday evening road ride from the shop's Uptown store, about 30 miles. The shop splits it into an A group at 21 to 23 mph and a B group at 18 to 19 mph depending on numbers.",
+  "links": {
+   "website": "https://www.bicyclesport.com/articles/rides-events-pg195.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/48537",
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://www.bicyclesport.com/articles/rides-events-pg195.htm"
+  ],
+  "evidence": "Bicycle Sport's Rides & Events page lists the Monday Night Shop Ride, 6:00 pm, spring to fall (summer time daylight savings period), from the Uptown store; its only date is a 2026 copyright footer (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.bicyclesport.com/articles/rides-events-pg195.htm",
+   "feed_url": null,
+   "notes": "Page says the ride follows daylight saving time; confirm after Nov 1."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Myers Park",
+  "region": "North Carolina",
+  "state": "NC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": 64,
+  "distance_miles": 40,
+  "duration": null,
+  "duration_min": null,
+  "pace": "A about 22–24 mph, B 18–20 mph, C 16–17 mph",
+  "drop_policy": "groups",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Three groups by turnout. The shop posts weather updates on its social channels. Rental bikes can be reserved ahead.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "charlotte-nc-bicycle-sport-saturday-morning-ride",
+  "name": "Saturday Morning Ride (Myers Park)",
+  "city": "Charlotte",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays, 8:00 am from Bicycle Sport Myers Park; 8:30 am from Nov 1 when clocks go back.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "start_times": [
+   {
+    "from": "2026-11-01",
+    "start_hhmm": "08:30"
+   }
+  ],
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Bicycle Sport Myers Park",
+   "address": "2916 Selwyn Ave, Charlotte, NC 28209"
+  },
+  "host": {
+   "name": "Bicycle Sport",
+   "type": "shop"
+  },
+  "description": "The shop's year-round Saturday road ride from the Myers Park store, about 40 miles. It splits into A, B and C groups by turnout. The start is 8:00 am on daylight saving time and 8:30 am on standard time.",
+  "links": {
+   "website": "https://www.bicyclesport.com/articles/rides-events-pg195.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/48537",
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://www.bicyclesport.com/articles/rides-events-pg195.htm"
+  ],
+  "evidence": "Bicycle Sport's Rides & Events page lists the year-round Saturday Morning Ride from Myers Park, 8:00 am in daylight saving time and 8:30 am in standard time, A, B and C groups; its only date is a 2026 copyright footer (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.bicyclesport.com/articles/rides-events-pg195.htm",
+   "feed_url": null,
+   "notes": "Start moves to 8:30 am at the end of daylight saving time."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "South Charlotte",
+  "region": "North Carolina",
+  "state": "NC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "monthly_rule": null,
+  "season": "Mar–Oct",
+  "season_months": {
+   "start": 3,
+   "end": 10
+  },
+  "distance_km": 48,
+  "distance_miles": 30,
+  "duration": null,
+  "duration_min": null,
+  "pace": "A: 30 miles at 18+ mph; B: 38 miles at 20 mph; B2: 31 miles at 18–19 mph",
+  "drop_policy": "drop",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Show and go: the shop says this is not a no-drop ride, though the B2 group has a leader and a sweeper and tries to keep riders together. Helmets required. Riders usually meet for drinks and appetizers nearby after.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "charlotte-nc-trek-of-clt-south-wednesday-night-ride",
+  "name": "South Charlotte Wednesday Night Ride",
+  "city": "Charlotte",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Wednesdays, 6:00 pm, from the Trek store parking lot in South Charlotte, while daylight saving time is on. Second group rolls about five minutes later.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Trek Bicycle Store of Charlotte - South",
+   "address": "12194 Johnston Rd, Ste. 110, Charlotte, NC 28277"
+  },
+  "host": {
+   "name": "Trek Bicycle Store of Charlotte",
+   "type": "shop"
+  },
+  "description": "A Wednesday evening road ride toward the rolling country roads around Marvin and Waxhaw. A and B groups roll together and split after a 5 to 6 mile warm-up; a B2 group with a leader and sweeper rolls a few minutes behind. Weather permitting.",
+  "links": {
+   "website": "https://www.trekofclt.com/articles/our-group-rides-pg1188.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.trekofclt.com/articles/events-news-pg1241.htm"
+   ]
+  },
+  "sources": [
+   "https://www.trekofclt.com/articles/our-group-rides-pg1188.htm",
+   "https://www.trekofclt.com/articles/events-news-pg1241.htm"
+  ],
+  "evidence": "Trek Bicycle Store of Charlotte's group rides page and its Events & News page both list the South Charlotte Wednesday Night Ride at 6pm, tied to daylight saving time; their only date is a 2026 copyright footer (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.trekofclt.com/articles/our-group-rides-pg1188.htm",
+   "feed_url": null,
+   "notes": "Page says the ride follows daylight saving time; confirm after Nov 1."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": "Whitewater Center",
+  "region": "North Carolina",
+  "state": "NC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "monthly_rule": null,
+  "season": "Mar–Oct",
+  "season_months": {
+   "start": 3,
+   "end": 10
+  },
+  "distance_km": null,
+  "distance_miles": 10,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Social, with options to cut it short",
+  "drop_policy": "no-drop",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Beginner and intermediate riders. The shop's Lake Norman store runs it; call that store with questions. Helmets required.",
+  "inclusive_focus": [
+   "beginner",
+   "no-drop"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "slug": "charlotte-nc-trek-of-clt-thursday-night-mtb-whitewater",
+  "name": "Thursday Night Mountain Bike Ride at Whitewater",
+  "city": "Charlotte",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Thursdays, 6:00 pm, from the adventure pavilion at the Whitewater Center, while daylight saving time is on. Cancelled if it rains or the trails are closed.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Whitewater Center, adventure pavilion",
+   "address": null
+  },
+  "host": {
+   "name": "Trek Bicycle Store of Charlotte",
+   "type": "shop"
+  },
+  "description": "A no-drop mountain bike ride of 10 miles or more for beginner and intermediate riders. The shop calls it social, friendly and supportive, with options to cut it short. It meets by the adventure pavilion at the Whitewater Center.",
+  "links": {
+   "website": "https://www.trekofclt.com/articles/our-group-rides-pg1188.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.trekofclt.com/articles/events-news-pg1241.htm"
+   ]
+  },
+  "sources": [
+   "https://www.trekofclt.com/articles/our-group-rides-pg1188.htm",
+   "https://www.trekofclt.com/articles/events-news-pg1241.htm"
+  ],
+  "evidence": "Trek Bicycle Store of Charlotte's group rides page and Events & News page list the Thursday Night Mountain Bike Ride at Whitewater, no-drop, beginner and intermediate, 6:00pm, tied to daylight saving time; their only date is a 2026 copyright footer (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.trekofclt.com/articles/our-group-rides-pg1188.htm",
+   "feed_url": null,
+   "notes": "Page says the ride follows daylight saving time; confirm after Nov 1."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "neighborhood": null,
+  "region": "North Carolina",
+  "state": "NC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "monthly_rule": null,
+  "season": "Apr–Nov",
+  "season_months": {
+   "start": 4,
+   "end": 11
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 1 hour",
+  "duration_min": null,
+  "pace": "Easy, through local neighborhoods",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Bring a bike and a helmet. Honor The Warriors is a veterans group that runs adaptive cycling; the host says everyone is welcome at its events.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "slug": "mint-hill-nc-honor-the-warriors-wednesday-community-ride",
+  "name": "Mint Hill Community Ride",
+  "city": "Mint Hill",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Wednesdays, 6:30 pm, April through November, from the Harris Teeter parking lot on Matthews Mint Hill Rd.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Harris Teeter parking lot, Matthews Mint Hill Rd",
+   "address": null
+  },
+  "host": {
+   "name": "Honor The Warriors",
+   "type": "nonprofit"
+  },
+  "description": "A weekly hour-long community ride through Mint Hill neighborhoods, run by a veterans group that works in adaptive cycling. The host says it is a good way to meet people and get some exercise, and that everyone is welcome.",
+  "links": {
+   "website": "https://honorthewarriors.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://honorthewarriors.org/"
+  ],
+  "evidence": "Honor The Warriors' home page says 'In 2026 we have hosted... our weekly Mint Hill, NC Community Ride' and lists Wednesdays at 6:30 PM, April to November, from the Harris Teeter lot on Matthews Mint Hill Rd, plus its Oct 23-24, 2026 event (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://honorthewarriors.org/",
+   "feed_url": null,
+   "notes": "Home page lists the ride and the season, April to November."
+  }
+ }
+]

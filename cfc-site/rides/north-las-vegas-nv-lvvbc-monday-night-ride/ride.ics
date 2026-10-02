@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:north-las-vegas-nv-lvvbc-monday-night-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261005T180000
+DTEND;TZID=America/Los_Angeles:20261005T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20270228T235959Z
+SUMMARY:LVVBC Monday Night Ride — North Las Vegas\, NV
+LOCATION:Vincent L Triggs Elementary (Oct 5 start; check each event)\, 44
+ 70 W Rome Blvd\, North Las Vegas\, NV
+DESCRIPTION:Pace: 14 to 17 mph rolling; flat routes of 23 to 26 miles\, b
+ ack before dark.\nSchedule: Mondays\, 6:00 pm\, with a different loop ea
+ ch week; the Meetup series runs to Nov 23\, 2026. Oct 5 started from Vin
+ cent L Triggs Elementary\, 4470 W Rome Blvd..\nConfirm with the host bef
+ ore you go.\nhttps://cycleforchange.org/rides/north-las-vegas-nv-lvvbc-m
+ onday-night-ride/
+URL:https://cycleforchange.org/rides/north-las-vegas-nv-lvvbc-monday-nigh
+ t-ride/
+END:VEVENT
+END:VCALENDAR

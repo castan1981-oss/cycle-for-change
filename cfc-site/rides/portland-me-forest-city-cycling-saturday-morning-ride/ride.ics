@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:portland-me-forest-city-cycling-saturday-morning-ride@cycleforchange.
+ org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T080000
+DTEND;TZID=America/New_York:20261003T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261031T235959Z
+SUMMARY:Forest City Cycling Saturday Morning Ride — Portland\, ME
+LOCATION:Radio Tower parking lot\, behind 15 Baxter Blvd (next to Back Co
+ ve Hannaford)\, 15 Baxter Blvd\, Portland\, ME 04101
+DESCRIPTION:Pace: 16.5-18 mph.\nNo-drop.\nSchedule: Every Saturday\, typi
+ cally 8:00 am\, from the Radio Tower parking lot behind 15 Baxter Blvd. 
+ The time moves with the weather..\nConfirm with the host before you go.\
+ nhttps://cycleforchange.org/rides/portland-me-forest-city-cycling-saturd
+ ay-morning-ride/
+URL:https://cycleforchange.org/rides/portland-me-forest-city-cycling-satu
+ rday-morning-ride/
+END:VEVENT
+END:VCALENDAR

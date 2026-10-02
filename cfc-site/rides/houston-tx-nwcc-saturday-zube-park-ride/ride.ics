@@ -5,16 +5,17 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:houston-tx-nwcc-saturday-zube-park-ride@cycleforchange.org
-DTSTAMP:20260918T000000Z
-DTSTART;TZID=America/Chicago:20261003T073000
-DTEND;TZID=America/Chicago:20261003T093000
-RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270215T235959Z
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T080000
+DTEND;TZID=America/Chicago:20261003T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
 SUMMARY:NWCC Saturday Zube Park Ride — Houston\, TX
-LOCATION:Zube Park
+LOCATION:Zube Park\, 17400 Roberts Rd\, Houston\, TX
 DESCRIPTION:Pace: groups by ability; no-drop group about 13 mph.\nSchedul
- e: Every Saturday; 7:30 am Apr–Sep\, 8:00 am Oct–Mar.\nConfirm with 
- the host before you go.\nhttps://cycleforchange.org/rides/houston-tx-nwc
- c-saturday-zube-park-ride/
+ e: Every Saturday\, rain or shine; 8:00 am October through March\, 7:30 
+ am April through September. Zube Park\, 17400 Roberts Rd..\nConfirm with
+  the host before you go.\nhttps://cycleforchange.org/rides/houston-tx-nw
+ cc-saturday-zube-park-ride/
 URL:https://cycleforchange.org/rides/houston-tx-nwcc-saturday-zube-park-r
  ide/
 END:VEVENT

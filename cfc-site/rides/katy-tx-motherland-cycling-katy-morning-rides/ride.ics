@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:katy-tx-motherland-cycling-katy-morning-rides@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261006T063000
+DTEND;TZID=America/Chicago:20261006T083000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20270228T235959Z
+SUMMARY:Katy Morning Rides (Motherland Cycling Club) — Katy\, TX
+LOCATION:Handlebar Cyclery\, 24948 FM 1093\, Suite 220\, Katy\, TX 77494
+DESCRIPTION:Pace: Usually two groups: A 18-20 mph\, B/C 15-17 mph.\nSched
+ ule: Every Tuesday and Thursday\, roll out 6:30 am\, from Handlebar Cycl
+ ery. Typically 15-20 miles..\nConfirm with the host before you go.\nhttp
+ s://cycleforchange.org/rides/katy-tx-motherland-cycling-katy-morning-rid
+ es/
+URL:https://cycleforchange.org/rides/katy-tx-motherland-cycling-katy-morn
+ ing-rides/
+END:VEVENT
+END:VCALENDAR

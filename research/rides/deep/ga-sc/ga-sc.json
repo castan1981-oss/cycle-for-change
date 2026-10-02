@@ -1,0 +1,1888 @@
+[
+ {
+  "slug": "east-point-ga-macc-tuesday-tap-out",
+  "name": "Tuesday Tap-Out",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "East Point",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday, year-round, wheels rolling 6:30 pm sharp from Regions Bank on Main St in East Point. The group won't wait for latecomers.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Regions Bank",
+   "address": "2833 Main St, East Point, GA 30344"
+  },
+  "distance_km": null,
+  "distance_miles": 29,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Group A 19+ mph average, Group B 17–18 mph",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Metro Atlanta Cycling Club (MACC)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Arrive early; the start is sharp. The club suggests downloading the route to your GPS if you doubt you can hold the pace. The club's winter route (35 miles) is used from the time change until the Tuesday after daylight saving time begins; lights needed for the dark months.",
+  "description": "MACC's weekly Tuesday night road ride out of East Point, about 29 miles on the club's route with A and B groups and several regroup spots. In the standard-time months the club swaps in a 35-mile winter route toward Palmetto. A good first club ride if you can hold 17 mph.",
+  "links": {
+   "website": "https://maccattack.com/events/tuesday-tap-out/",
+   "instagram": "https://www.instagram.com/metroatlantacyclingclub/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://ridewithgps.com/routes/32070012"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://maccattack.com/events/tuesday-tap-out/",
+   "https://maccattack.com/calendar/",
+   "https://maccattack.com/?method=ical&id=1882"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "MACC's own calendar lists the ride for Tue Oct 6, 13, 20, 27 and Nov 3, 2026 at 6:30 pm from 2833 Main St, East Point; the event's feed is a weekly rule (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://maccattack.com/calendar/",
+   "feed_url": "https://maccattack.com/?method=ical&id=1882",
+   "notes": "Per-event iCal feed on the club's WordPress calendar. The club lists a longer winter route (35 miles, south on Hwy 29 to Palmetto) until the Tuesday after daylight saving time begins."
+  }
+ },
+ {
+  "slug": "east-point-ga-macc-thursday-tango",
+  "name": "Thursday Tango",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "East Point",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Thursday, wheels rolling 6:30 pm from Regions Bank on Main St in East Point. A training ride, 26 miles.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Regions Bank",
+   "address": "2833 Main St, East Point, GA 30344"
+  },
+  "distance_km": null,
+  "distance_miles": 26,
+  "duration": null,
+  "duration_min": null,
+  "pace": "19–21 mph average",
+  "drop_policy": "drop",
+  "host": {
+   "name": "Metro Atlanta Cycling Club (MACC)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The club lists this as a drop ride and a training ride. Download the route first if you doubt you can hold the pace.",
+  "description": "A quick-pace Thursday training ride from MACC, 26 miles at 19 to 21 mph. The club files it as a drop ride, so it is not the one for a first group ride. Same start as the Tuesday Tap-Out.",
+  "links": {
+   "website": "https://maccattack.com/events/thursday-tango/",
+   "instagram": "https://www.instagram.com/metroatlantacyclingclub/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://ridewithgps.com/routes/32070541"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://maccattack.com/events/thursday-tango/",
+   "https://maccattack.com/calendar/",
+   "https://maccattack.com/?method=ical&id=1884"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "MACC's own calendar lists the ride for Thu Oct 1, 8, 15, 22, 29, 2026 at 6:30 pm, category Drop Ride; the event's feed is a weekly rule (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://maccattack.com/calendar/",
+   "feed_url": "https://maccattack.com/?method=ical&id=1884",
+   "notes": "Per-event iCal feed on the club's WordPress calendar."
+  }
+ },
+ {
+  "slug": "atlanta-ga-macc-beginner-casual-ride",
+  "name": "Beginner / Casual Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Atlanta",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Second Saturday of the month, wheels rolling 9:00 am from Peters St near the U-Haul, southwest Atlanta. Arrive at least 20 minutes early.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "sat"
+   }
+  ],
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Peters St. U-Haul",
+   "address": "300 Peters St SW, Atlanta, GA 30313"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Beginner and casual pace; 18-mile and 28-mile options",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Metro Atlanta Cycling Club (MACC)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Aimed at beginners who want to try a group on city streets instead of the Silver Comet or Arabia Mountain trails. Arrive 20 minutes early.",
+  "description": "A monthly city-street group ride for people new to riding in a group, with an 18-mile and a 28-mile option toward Hwy 29. The club says no one will be left behind. The calendar also lists a pre-ride at 7:00 am from the same spot.",
+  "links": {
+   "website": "https://maccattack.com/events/beginner-casual-ride/",
+   "instagram": "https://www.instagram.com/metroatlantacyclingclub/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://ridewithgps.com/trips/66619082"
+   ]
+  },
+  "inclusive_focus": [
+   "beginner",
+   "no-drop"
+  ],
+  "sources": [
+   "https://maccattack.com/events/beginner-casual-ride/",
+   "https://maccattack.com/calendar/",
+   "https://maccattack.com/?method=ical&id=1860"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "MACC's calendar lists the ride for Sat Oct 10, 2026 at 9:00 am and its feed repeats it on the second Saturday of each month (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://maccattack.com/calendar/",
+   "feed_url": "https://maccattack.com/?method=ical&id=1860",
+   "notes": "Per-event iCal feed: repeats on the 2nd Saturday monthly."
+  }
+ },
+ {
+  "slug": "rock-hill-sc-rhbc-thursday-night-rocks-gravel",
+  "name": "Thursday Night Rocks (Gravel)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Rock Hill",
+  "neighborhood": null,
+  "region": "South Carolina",
+  "state": "SC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "gravel"
+  ],
+  "schedule": "Thursdays, wheels up 6:00 pm from the SCDOT lot at Ogden and Robertson Rd. The club's calendar lists it every Thursday through Oct 29, 2026.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "SCDOT lot, Ogden Rd and Robertson Rd",
+   "address": "338 W Robertson Rd, Rock Hill, SC 29730"
+  },
+  "distance_km": null,
+  "distance_miles": 25,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Crushers 18–20 mph, Grinders 16–18, Ramblers 14–16",
+  "drop_policy": "drop",
+  "host": {
+   "name": "Rock Hill Bicycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Club recommends 35 to 38 mm tires (the home page says 38 mm or wider). It will be getting dark by the end of October; bring lights.",
+  "description": "A Thursday evening gravel ride on Rock Hill's rural roads, about 25 miles, half hardpack gravel and half rural pavement. Three pace groups from 14 to 20 mph. The club calls it a drop ride.",
+  "links": {
+   "website": "https://rockhillbicycleclub.com/",
+   "instagram": "https://www.instagram.com/RockHillBikeClub/",
+   "facebook": "https://www.facebook.com/RockHillBicycleClub/",
+   "strava": "https://www.strava.com/clubs/rock-hill-bike-club",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://ridewithgps.com/events.json?organization_id=12871",
+   "https://rockhillbicycleclub.com/content.aspx?page_id=0&club_id=269880",
+   "https://ridewithgps.com/organizations/12871/calendar.ics"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The club's RideWithGPS events show Thursday Night Rocks for Oct 1, 8, 15, 22 and 29, 2026 at 6:00 pm, and the club's home page lists it as a drop ride (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ridewithgps",
+   "watch_url": "https://ridewithgps.com/clubs/12871-rock-hill-bicycle-club/home",
+   "feed_url": "https://ridewithgps.com/organizations/12871/calendar.ics",
+   "notes": "RWGPS org 12871 lists each Thursday as its own event. The club's description says every other week through the summer."
+  }
+ },
+ {
+  "slug": "roswell-ga-rambo-free-flite-big-creek-group-ride",
+  "name": "Free-Flite Group Ride at Big Creek",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Roswell",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "First Friday of the month, 6:00 to 8:00 pm at Big Creek Park (Sept 4, Oct 2, Nov 6, Dec 4, 2026 on the calendar).",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "fri"
+   }
+  ],
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Big Creek Park",
+   "address": "1600 Old Alabama Rd, Roswell, GA 30076"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "2 hours",
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Roswell-Alpharetta Mountain Bike Organization (RAMBO)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "From November the ride runs after dark, so bring MTB lights. RAMBO is the IMBA/SORBA chapter for north Atlanta and keeps trail status on its site.",
+  "description": "A monthly mountain bike group ride at Big Creek in Roswell, put on the RAMBO calendar as a Free-Flite group ride. Two hours, early evening, first Friday of the month.",
+  "links": {
+   "website": "https://www.rambo-mtb.org/rides",
+   "instagram": "http://instagram.com/rambomtb",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.rambo-mtb.org/events/2026/10/2/freeflite-group-ride-at-big-creek",
+   "https://www.rambo-mtb.org/rides"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-04",
+  "evidence": "RAMBO's events calendar lists the ride for Fri Oct 2, Nov 6 and Dec 4, 2026, 6:00 to 8:00 pm, and shows the Sept 4 ride just before (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.rambo-mtb.org/events/2026/10/2/freeflite-group-ride-at-big-creek",
+   "feed_url": null,
+   "notes": "Squarespace events page; each event has its own date and an ICS link. The recurring ride keeps landing on the first Friday."
+  }
+ },
+ {
+  "slug": "columbus-ga-standing-boy-trails-thursday-group-ride",
+  "name": "Standing Boy Trails Thursday Group Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Columbus",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Every Thursday at 6:00 pm, meeting in the Upper Lot at Standing Boy Trails.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Standing Boy Trails, Upper Lot",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Standing Boy, Inc.",
+   "type": "nonprofit"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Check the trail status on the home page first; the biking trailhead closes when trails are too wet. A parking pass is required. Archery hunts close the trails on listed dates (Oct 2 to 4, Nov 6 to 8 and 13 to 15, Dec 4 to 6, 2026).",
+  "description": "A weekly group mountain bike ride at Standing Boy Trails on the Chattahoochee in north Columbus. Meet in the Upper Lot. Standing Boy has about 30 miles of natural-surface trail.",
+  "links": {
+   "website": "https://www.standingboy.org/",
+   "instagram": "https://www.instagram.com/standingboytrails/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.standingboy.org/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Standing Boy Trails' home page lists group rides Sundays at 3 PM and Thursdays at 6:00 PM, meet in the Upper Lot, beside Oct to Dec 2026 hunt dates (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.standingboy.org/",
+   "feed_url": null,
+   "notes": "Group rides banner sits in the News & Alerts box on the home page; trail status is on the same page."
+  }
+ },
+ {
+  "slug": "columbus-ga-standing-boy-trails-sunday-group-ride",
+  "name": "Standing Boy Trails Sunday Group Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Columbus",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Every Sunday at 3:00 pm, meeting in the Upper Lot at Standing Boy Trails.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "3:00 pm",
+  "start_hhmm": "15:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Standing Boy Trails, Upper Lot",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Standing Boy, Inc.",
+   "type": "nonprofit"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Check the trail status on the home page first; the biking trailhead closes when trails are too wet. A parking pass is required. Archery hunts close the trails on listed dates (Oct 2 to 4, Nov 6 to 8 and 13 to 15, Dec 4 to 6, 2026).",
+  "description": "A weekly group mountain bike ride at Standing Boy Trails on the Chattahoochee in north Columbus. Meet in the Upper Lot. Standing Boy has about 30 miles of natural-surface trail.",
+  "links": {
+   "website": "https://www.standingboy.org/",
+   "instagram": "https://www.instagram.com/standingboytrails/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.standingboy.org/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Standing Boy Trails' home page lists group rides Sundays at 3 PM and Thursdays at 6:00 PM, meet in the Upper Lot, beside Oct to Dec 2026 hunt dates (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.standingboy.org/",
+   "feed_url": null,
+   "notes": "Group rides banner sits in the News & Alerts box on the home page; trail status is on the same page."
+  }
+ },
+ {
+  "slug": "savannah-ga-perry-rubber-monday-recovery-ride",
+  "name": "Monday Recovery Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Savannah",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Monday at 6:00 pm, spring through fall, from the shop on Bull St. Back before sunset.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Spring–fall",
+  "season_months": null,
+  "start_location": {
+   "name": "Perry Rubber Bike Shop",
+   "address": "240 Bull Street, Savannah, GA 31401"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slower recovery pace",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Perry Rubber Bike Shop",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Lights are highly recommended. The shop says Monday rides can be cancelled; call 912-236-9929 to check.",
+  "description": "A slow, short Monday evening ride from Perry Rubber to shake out the weekend. Length depends on how much daylight is left, and the aim is to be back before sunset. Rides are subject to cancellation.",
+  "links": {
+   "website": "https://perryrubberbikeshop.com/group-rides/monday/",
+   "instagram": "https://www.instagram.com/perryrubber/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://perryrubberbikeshop.com/group-rides/",
+   "https://perryrubberbikeshop.com/group-rides/monday/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Perry Rubber's group rides page and Monday page list the ride (spring to fall, 6pm) and the site footer reads 2026; nothing on the page carries a ride date (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://perryrubberbikeshop.com/group-rides/monday/",
+   "feed_url": null,
+   "notes": "Static page; no dates. Rides except Saturday are subject to cancellation."
+  }
+ },
+ {
+  "slug": "savannah-ga-perry-rubber-wednesday-ride",
+  "name": "Wednesday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Savannah",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday, meet 5:45 pm, leave 6:00 pm sharp, spring through fall, from the shop on Bull St.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Spring–fall",
+  "season_months": null,
+  "start_location": {
+   "name": "Perry Rubber Bike Shop",
+   "address": "240 Bull Street, Savannah, GA 31401"
+  },
+  "distance_km": null,
+  "distance_miles": 30,
+  "duration": null,
+  "duration_min": null,
+  "pace": "23 mph average",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Perry Rubber Bike Shop",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Fast. The shop wants riders able to average 23 mph. Subject to cancellation.",
+  "description": "A fast Wednesday evening road ride from Perry Rubber, a 30-mile loop at a 23 mph average. The shop says riders should be able to hold that pace. It runs spring to the end of fall.",
+  "links": {
+   "website": "https://perryrubberbikeshop.com/group-rides/wednesday/",
+   "instagram": "https://www.instagram.com/perryrubber/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://perryrubberbikeshop.com/group-rides/",
+   "https://perryrubberbikeshop.com/group-rides/wednesday/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Perry Rubber's Wednesday page lists the ride (meet 5:45, leave 6:00 sharp, spring to end of fall) and the footer reads 2026; no ride date on the page (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://perryrubberbikeshop.com/group-rides/wednesday/",
+   "feed_url": null,
+   "notes": "Static page; no dates. The shop says it only runs from the start of spring to the end of fall."
+  }
+ },
+ {
+  "slug": "west-columbia-sc-cycle-center-tuesday-thursday-night-ride",
+  "name": "Tuesday and Thursday Night Road Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "West Columbia",
+  "neighborhood": null,
+  "region": "South Carolina",
+  "state": "SC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday and Thursday night, 6:00 pm, from the Sports Complex lot on B Ave in West Columbia.",
+  "days": [
+   "tue",
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Sports Complex",
+   "address": "815 B Ave, West Columbia, SC 29169"
+  },
+  "distance_km": null,
+  "distance_miles": 24,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Fast, Pretty Fast and Club groups",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Cycle Center",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The shop's page lists the start as 815 B Ave in West Columbia (the Sports Complex). Evenings get dark early from October; bring lights.",
+  "description": "A 24-mile road ride that loops from Cayce through Pineridge and the airport and back. The ride splits into Fast, Pretty Fast and Club speed groups. Twice a week, evenings.",
+  "links": {
+   "website": "https://www.cyclecenter.com/events/rides-events-pg19.htm",
+   "instagram": "https://www.instagram.com/cyclecenter_sc/",
+   "facebook": "https://www.facebook.com/CycleCenterCola",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.cyclecenter.com/events/rides-events-pg19.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Cycle Center's rides page lists the Tuesday and Thursday 6:00 pm road ride and the footer reads © 2026; nothing on the row is dated (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.cyclecenter.com/events/rides-events-pg19.htm",
+   "feed_url": null,
+   "notes": "Shop rides table; no dates."
+  }
+ },
+ {
+  "slug": "tucker-ga-atlptn-tucker",
+  "name": "Tucker (TUK)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Tucker",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays from March 14, 2026: TUK A rolls 9:00 am, the B ride 9:10 am, the C ride 8:30 am, from downtown Tucker (daylight saving time).",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Downtown Tucker",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Race pace; A, B and C groups",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Atlanta Peloton (ATLPTN)",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Very fast and 50-plus riders. A third-party directory lists 10:00 am for the A ride in standard time, after the clocks change on Nov 1, 2026; the ATLPTN page doesn't say. Check before you go.",
+  "description": "One of Atlanta's big Saturday race-pace road rides, rolling out of downtown Tucker to Stone Mountain and back. The A group is very fast and the B ride is a smoother, more controlled pace. A slower C group goes at 8:30.",
+  "links": {
+   "website": "https://atlptn.com/rides/tucker",
+   "instagram": "https://www.instagram.com/theatlantapeloton/",
+   "facebook": "https://www.facebook.com/ATLPTN/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://atlptn.com/rides/tucker",
+   "https://sadlebred.com/rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "ATLPTN's Tucker page lists Saturdays starting March 14th with TUK at 9:00, the B ride at 9:10 and the C ride at 8:30, and the footer reads 2026 (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://atlptn.com/rides/tucker",
+   "feed_url": null,
+   "notes": "ATLPTN also sends a weekly email list of rides. The standard-time start isn't on the page."
+  }
+ },
+ {
+  "slug": "vinings-ga-atlptn-beyond-six-flags",
+  "name": "Beyond Six Flags (BSF)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Vinings",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays, 8:30 am June through August and 9:00 am September through May, from the Atlanta Cycling store in Vinings.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Atlanta Cycling store, Vinings",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": 50,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Steady but unpleasant, in the host's words",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Atlanta Peloton (ATLPTN)",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The 50-mile figure is from a third-party directory. The group splits at about mile 13.",
+  "description": "A steady, hard Saturday road ride southwest out of Vinings, rotating among four routes through the month. A group of 20-plus splits at mile 13, with the faster riders ramping up.",
+  "links": {
+   "website": "https://atlptn.com/rides/six-flags",
+   "instagram": "https://www.instagram.com/theatlantapeloton/",
+   "facebook": "https://www.facebook.com/ATLPTN/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://atlptn.com/rides/six-flags",
+   "https://sadlebred.com/rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "ATLPTN's Beyond Six Flags page lists Saturdays at 8:30 am June to August and 9:00 am September to May, from the Atlanta Cycling store in Vinings, footer 2026 (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://atlptn.com/rides/six-flags",
+   "feed_url": null,
+   "notes": "Static ATLPTN page. The time changes June 1 and Sept 1."
+  }
+ },
+ {
+  "slug": "milton-ga-whitetail-bicycles-thursday-gravel",
+  "name": "Thursday Gravel Shop Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Milton",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "gravel"
+  ],
+  "schedule": "Every Thursday at 6:00 pm from Whitetail Bicycles & Coffee Company in Milton.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Whitetail Bicycles & Coffee Company",
+   "address": "1885 Heritage Walk, Milton, GA 30004"
+  },
+  "distance_km": null,
+  "distance_miles": 33,
+  "duration": null,
+  "duration_min": null,
+  "pace": "15+ mph average",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Whitetail Bicycles & Coffee Company",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "A third-party directory calls the pace 15–16 mph and lists it as a drop ride. The shop's page doesn't say. Check the Strava club or call the shop (470-282-6789).",
+  "description": "A weekly gravel shop ride from Whitetail in Milton, 33 miles at a 15+ mph average. Whitetail runs rides on Tuesdays, Thursdays, Saturdays and Sundays; this is its gravel one.",
+  "links": {
+   "website": "https://whitetailbicycles.com/rides/",
+   "instagram": "https://www.instagram.com/whitetailbikes/",
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/whitetail-bicycles-cycling-club-231410",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://whitetailbicycles.com/rides/",
+   "https://sadlebred.com/rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Whitetail's rides page lists the Thursday 6 PM gravel ride, 33 miles at 15+ mph, and the footer reads 2016–2026; the page's own timestamp is May 2025 and no ride date is shown (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://whitetailbicycles.com/rides/",
+   "feed_url": null,
+   "notes": "Shop page; no dates. The shop also has a Strava club."
+  }
+ },
+ {
+  "slug": "milton-ga-whitetail-bicycles-saturday-road-ride",
+  "name": "Saturday Road Shop Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Milton",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday at 8:00 am from Whitetail Bicycles & Coffee Company in Milton.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Whitetail Bicycles & Coffee Company",
+   "address": "1885 Heritage Walk, Milton, GA 30004"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "20+ mph average",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Whitetail Bicycles & Coffee Company",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Hard ride. Call the shop (470-282-6789) or check the Strava club to confirm it's on.",
+  "description": "A long, fast Saturday road ride from the Whitetail shop in Milton, 60 to 70 miles at a 20+ mph average. Coffee shop on site.",
+  "links": {
+   "website": "https://whitetailbicycles.com/rides/",
+   "instagram": "https://www.instagram.com/whitetailbikes/",
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/whitetail-bicycles-cycling-club-231410",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://whitetailbicycles.com/rides/",
+   "https://sadlebred.com/rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Whitetail's rides page lists the Saturday 8 AM road ride, 60 to 70 miles at 20+ mph, footer 2016–2026; page timestamp May 2025, no ride date shown (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://whitetailbicycles.com/rides/",
+   "feed_url": null,
+   "notes": "Shop page; no dates."
+  }
+ },
+ {
+  "slug": "marietta-ga-free-flite-saturday-group-road-ride",
+  "name": "Marietta Saturday Group Road Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Marietta",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Saturday at 8:30 am, weather permitting, from the Free-Flite shop on Canton Rd in Marietta.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:30 am",
+  "start_hhmm": "08:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Free-Flite Bicycles, Canton Rd",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Conversational, in the shop's words",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Free-Flite Bicycles",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Weather permitting; updates are on the event page and Facebook.",
+  "description": "A Saturday morning road ride with Free-Flite staff and customers. The shop calls it beginner-friendly, with all skill levels welcome. It rolls from the Marietta store.",
+  "links": {
+   "website": "https://www.freeflite.com/articles/upcoming-events-pg1420.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "sources": [
+   "https://www.freeflite.com/articles/upcoming-events-pg1420.htm",
+   "https://sadlebred.com/rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Free-Flite's rides and events page lists the Saturday 8:30 am group road ride from its Marietta store and the footer reads 2026; no ride date shown (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.freeflite.com/articles/upcoming-events-pg1420.htm",
+   "feed_url": null,
+   "notes": "Shop events page; updates are posted on Facebook. Free-Flite also has a calendar page (events-calendar-pg840.htm)."
+  }
+ },
+ {
+  "slug": "east-cobb-ga-free-flite-saturday-group-road-ride",
+  "name": "East Cobb Saturday Group Road Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "East Cobb",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Saturday at 8:30 am, weather permitting, from the Free-Flite shop on Roswell Rd in East Cobb.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:30 am",
+  "start_hhmm": "08:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Free-Flite Bicycles, Roswell Rd",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Conversational, in the shop's words",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Free-Flite Bicycles",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Weather permitting; updates are on the event page and Facebook.",
+  "description": "A Saturday morning road ride with Free-Flite staff and customers. The shop calls it beginner-friendly, with all skill levels welcome. It rolls from the East Cobb store.",
+  "links": {
+   "website": "https://www.freeflite.com/articles/upcoming-events-pg1420.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "sources": [
+   "https://www.freeflite.com/articles/upcoming-events-pg1420.htm",
+   "https://sadlebred.com/rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Free-Flite's rides and events page lists the Saturday 8:30 am group road ride from its East Cobb store and the footer reads 2026; no ride date shown (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.freeflite.com/articles/upcoming-events-pg1420.htm",
+   "feed_url": null,
+   "notes": "Shop events page; updates are posted on Facebook. Free-Flite also has a calendar page (events-calendar-pg840.htm)."
+  }
+ },
+ {
+  "slug": "mount-pleasant-sc-trek-mount-pleasant-tuesday-ride",
+  "name": "Tuesday Evening Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Mount Pleasant",
+  "neighborhood": null,
+  "region": "South Carolina",
+  "state": "SC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Tuesdays at 6:30 pm, March through November, from the I'On Swamp Trailhead (Laurel Hill County Park on the first Tuesday of the month).",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Mar–Nov",
+  "season_months": {
+   "start": 3,
+   "end": 11
+  },
+  "start_location": {
+   "name": "I'On Swamp Trailhead",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "11–13 mph",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Trek Bicycle Store of Mount Pleasant",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Helmets are required and every rider signs the store's electronic waiver once a year. Lights and water suggested.",
+  "description": "A short, slow Tuesday evening ride from the Trek store's group, 12 to 16 miles at 11 to 13 mph, three or four laps at Laurel Hill on the first Tuesday of the month.",
+  "links": {
+   "website": "https://www.trekbikesofmountpleasant.com/about/store-group-rides-mount-pleasant-pg972.htm",
+   "instagram": "https://www.instagram.com/TrekBikesMTP",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.trekbikesofmountpleasant.com/about/store-group-rides-mount-pleasant-pg972.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Trek store's Mount Pleasant group rides page lists the Tuesday 6:30 pm ride, March to November, and the footer reads 2026; no ride date shown (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.trekbikesofmountpleasant.com/about/store-group-rides-mount-pleasant-pg972.htm",
+   "feed_url": "",
+   "notes": "The store also posts a weekly ride email and a ride email archive."
+  }
+ },
+ {
+  "slug": "charleston-sc-trek-charleston-saturday-ride",
+  "name": "Saturday Store Ride (Trek Charleston)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Charleston",
+  "neighborhood": null,
+  "region": "South Carolina",
+  "state": "SC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday at 8:00 am from Trek Bicycle Store of Charleston on Ashley River Rd. A, B, C and D pace groups, all no-drop.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Trek Bicycle Store of Charleston",
+   "address": "2408 Ashley River Rd, Charleston, SC 29414"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "A and B 19–21 mph, C 16–18, D 13–15",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Trek Bicycle Store of Mount Pleasant",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Routes without a ride leader that week are cancelled. Sign up for the store's ride newsletter for the latest. Helmets required; annual electronic waiver.",
+  "description": "A Saturday morning road ride from the Trek store on Ashley River Rd. Four pace groups: A and B at 19 to 21 mph for 38 miles, C at 16 to 18 mph for 31 miles, D at 13 to 15 mph for 22 miles. Drinks and snacks at the store after.",
+  "links": {
+   "website": "https://www.trekbikesofmountpleasant.com/about/store-group-rides-charleston-pg973.htm",
+   "instagram": "https://www.instagram.com/TrekBikesMTP",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.trekbikesofmountpleasant.com/about/store-group-rides-charleston-pg973.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Trek store's Charleston group rides page lists the Saturday 8 am ride in four no-drop pace groups and the footer reads 2026; no ride date shown (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.trekbikesofmountpleasant.com/about/store-group-rides-charleston-pg973.htm",
+   "feed_url": null,
+   "notes": "A ride with no leader on a given week is cancelled. The store's weekly ride email is the most current."
+  }
+ },
+ {
+  "slug": "mount-pleasant-sc-trek-mount-pleasant-sunday-ride",
+  "name": "Sunday Ride (Trek Mount Pleasant)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Mount Pleasant",
+  "neighborhood": null,
+  "region": "South Carolina",
+  "state": "SC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Sunday, 9:00 am from Labor Day to Memorial Day (8:00 am the rest of the year). Start varies: I'On Swamp Trailhead, Witherbee Work Center, Bonneau Ferry or Halfway Creek.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Varies, see the weekly ride email",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "B 17–18 mph, C 15–16, D 13–14",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Trek Bicycle Store of Mount Pleasant",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The start changes weekly, so you need the store's ride email. The store says rides roll based on ride leader availability; call (843) 371-8779.",
+  "description": "A Sunday road ride in three no-drop pace groups: B at 17 to 18 mph for 30 to 50 miles, C at 15 to 16 for 30 to 40, D at 13 to 14 for 23 to 30. Post-ride drinks and snacks.",
+  "links": {
+   "website": "https://www.trekbikesofmountpleasant.com/about/store-group-rides-mount-pleasant-pg972.htm",
+   "instagram": "https://www.instagram.com/TrekBikesMTP",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.trekbikesofmountpleasant.com/about/store-group-rides-mount-pleasant-pg972.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Trek store's Mount Pleasant group rides page lists the Sunday ride at 9 am from Labor Day to Memorial Day and the footer reads 2026; no ride date shown (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.trekbikesofmountpleasant.com/about/store-group-rides-mount-pleasant-pg972.htm",
+   "feed_url": null,
+   "notes": "The route and start are posted in the weekly ride email and on the store's socials."
+  }
+ },
+ {
+  "slug": "roswell-ga-bike-roswell-saturday-morning-ride",
+  "name": "Bike Roswell! Saturday Morning Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Roswell",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday at 8:00 am from the upper parking lot of Roswell North Elementary School.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Roswell North Elementary School, upper parking lot",
+   "address": "10517 Woodstock Road, Roswell, GA 30075"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Pace groups (the Wednesday ride runs A 18+ mph, B 16–17, C 14–15)",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Bike Roswell!",
+   "type": "nonprofit"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Sign the waiver before you ride. A third-party directory lists 9:00 am outside summer; the host's page says 8:00. Check the Bike City Facebook group.",
+  "description": "The Saturday companion to Bike Roswell's Wednesday ride: a 20 to 25 mile loop around Roswell in pace groups. The group says a leader stays with you if you fall off. Waiver required.",
+  "links": {
+   "website": "https://bikeroswell.com/group-rides/",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/groups/195212929385720/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://bikeroswell.com/group-rides/",
+   "https://sadlebred.com/rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Bike Roswell's group rides page lists the Saturday 8:00 AM ride and the footer reads 2026; the group rides guidelines are dated August 2024 and no ride date is shown (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://bikeroswell.com/group-rides/",
+   "feed_url": null,
+   "notes": "Real-time on/off status is posted in the Bike City Facebook group."
+  }
+ },
+ {
+  "slug": "greenville-sc-spinners-monthly-saturday-sctac-ride",
+  "name": "Monthly Saturday SCTAC Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Greenville",
+  "neighborhood": null,
+  "region": "South Carolina",
+  "state": "SC",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "One Saturday a month, 9:30 am, from SCTAC (the Spinners' lot on Perimeter Road). Sept 26, 2026 was the latest on the calendar.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:30 am",
+  "start_hhmm": "09:30",
+  "frequency": "monthly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "SCTAC, Greenville Spinners lot",
+   "address": "642 Perimeter Road, Greenville, SC 29605"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Greenville Spinners Bicycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Which Saturday of the month it falls on isn't published; read the calendar before you go. The club says membership is strongly encouraged for SCTAC rides.",
+  "description": "A monthly Saturday-morning ride from the club's SCTAC lot, listed on the Greenville Spinners calendar. The club's Tuesday evening rides from the same lot run April to mid-September.",
+  "links": {
+   "website": "https://www.greenvillespinners.org/",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/GreenvilleSpinners/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.greenvillespinners.org/events/monthly-saturday-sctac-ride-september/",
+   "https://www.greenvillespinners.org/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-26",
+  "evidence": "The Spinners' own events page lists 'Monthly Saturday SCTAC Ride' for Sat Sept 26, 2026 at 9:30 am, and the home page's event strip leads with it (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.greenvillespinners.org/",
+   "feed_url": null,
+   "notes": "Each month has its own event page (the September one is /events/monthly-saturday-sctac-ride-september/). Which Saturday of the month isn't stated."
+  }
+ },
+ {
+  "slug": "hiram-ga-cycology-thursday-night-group-ride",
+  "name": "Thursday Night Group Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Hiram",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Thursday evening from Cycology Bike Shop in Hiram, 24 miles on the Silver Comet Trail. The shop's page gives no time; a third-party directory (updated April 2026) says 6:00 pm.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Cycology Bike Shop",
+   "address": "45 Enterprise Path, Hiram, GA 30141"
+  },
+  "distance_km": null,
+  "distance_miles": 24,
+  "duration": null,
+  "duration_min": null,
+  "pace": "18 mph average",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Cycology Bike Shop",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Road bikes required; helmets required; no earbuds. The start time is from a third-party directory, so call the shop (678-909-2472).",
+  "description": "A Thursday night road ride on the Silver Comet Trail from the shop, 24 miles at about 18 mph. Road bikes and helmets required, no earbuds. The shop also runs a Tuesday trike ride.",
+  "links": {
+   "website": "https://www.cycologybikeshop.com/articles/events-pg176.htm",
+   "instagram": "https://www.instagram.com/cycologybikeshop/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.cycologybikeshop.com/articles/events-pg176.htm",
+   "https://sadlebred.com/rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Cycology's rides and events page lists the Thursday night group ride (24 miles, Silver Comet Trail, 18 mph average) and the footer reads 2026; the 6:00 pm start is from the Southeastern Cycling directory, updated April 2026 (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.cycologybikeshop.com/articles/events-pg176.htm",
+   "feed_url": null,
+   "notes": "Shop page; no time or dates on it."
+  }
+ },
+ {
+  "slug": "senoia-ga-senoia-bicycle-thursday-night-gravel-ride",
+  "name": "Thursday Night Gravel Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Senoia",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "gravel"
+  ],
+  "schedule": "Every Thursday, 6:00 pm from Senoia Bicycle (or 6:30 pm from Haralson Pavilion, 171 Magnolia St), for 1.5 to 2.5 hours.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Senoia Bicycle",
+   "address": "34 Main Street, Senoia, GA 30276"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "A 19–20 mph, B 16–19, C 13–16",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Senoia Bicycle",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Ride leader is announced before the ride. Evenings get dark early from October; bring lights. Call the shop to confirm: 770-599-0308.",
+  "description": "A Thursday evening gravel ride out of Senoia, 30 to 40 miles in A, B and C groups. The 6:00 start is at the shop and the 6:30 start is at the Haralson Pavilion.",
+  "links": {
+   "website": "https://www.senoiabicycle.com/about/group-rides-pg196.htm",
+   "instagram": "https://www.instagram.com/senoiabicycle/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.senoiabicycle.com/about/group-rides-pg196.htm",
+   "https://sadlebred.com/rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Senoia Bicycle's group rides page lists the Thursday gravel ride and a Southeastern Cycling directory updated April 2026 lists the same ride; the shop page's footer reads 2023 and shows no ride date (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.senoiabicycle.com/about/group-rides-pg196.htm",
+   "feed_url": null,
+   "notes": "Shop page; no dates. The shop asks you to call when in doubt: 770-599-0308."
+  }
+ },
+ {
+  "slug": "conyers-ga-ctown-bikes-tuesday-shop-ride",
+  "name": "Tuesday Shop Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Conyers",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday at 6:00 pm from CTown Bikes, unless it is raining or snowing.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "CTown Bikes",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "CTown Bikes",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Cancelled for rain or snow. The shop's page gives no address; check the shop's own channels. Lights from October.",
+  "description": "A weekly Tuesday evening road ride from CTown Bikes. The directory lists it as about 26 miles with 2,000 feet of climbing and regroups.",
+  "links": {
+   "website": "https://ctownbikes.com/shop-rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://ctownbikes.com/shop-rides/",
+   "https://sadlebred.com/rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "CTown Bikes' shop rides page lists the Tuesday 6pm ride and a Southeastern Cycling directory updated April 2026 lists it as a 26-mile hills and lakes ride; nothing on the shop page carries a date (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://ctownbikes.com/shop-rides/",
+   "feed_url": null,
+   "notes": "One-paragraph shop page; no dates."
+  }
+ },
+ {
+  "slug": "conyers-ga-ctown-bikes-thursday-horse-park-ride",
+  "name": "Thursday Horse Park Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Conyers",
+  "neighborhood": null,
+  "region": "Georgia",
+  "state": "GA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Thursday at 6:00 pm from the Georgia International Horse Park.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Georgia International Horse Park",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "CTown Bikes",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The shop says it's geared to a more experienced rider. The directory lists A and B groups with occasional regroups. Lights from October.",
+  "description": "A Thursday evening road ride for more experienced riders on the rolling roads of Newton and Rockdale counties, leaving the Georgia International Horse Park at 6pm.",
+  "links": {
+   "website": "https://ctownbikes.com/shop-rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://ctownbikes.com/shop-rides/",
+   "https://sadlebred.com/rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "CTown Bikes' shop rides page lists the Thursday HP ride leaving the Horse Park at 6pm, geared to more experienced riders; the shop page is undated (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://ctownbikes.com/shop-rides/",
+   "feed_url": null,
+   "notes": "One-paragraph shop page; no dates."
+  }
+ }
+]

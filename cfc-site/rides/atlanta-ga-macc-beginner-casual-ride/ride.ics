@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:atlanta-ga-macc-beginner-casual-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261010T090000
+DTEND;TZID=America/New_York:20261010T110000
+RRULE:FREQ=MONTHLY;BYDAY=2SA;UNTIL=20270228T235959Z
+SUMMARY:Beginner / Casual Ride — Atlanta\, GA
+LOCATION:Peters St. U-Haul\, 300 Peters St SW\, Atlanta\, GA 30313
+DESCRIPTION:Pace: Beginner and casual pace; 18-mile and 28-mile options.\
+ nNo-drop.\nSchedule: Second Saturday of the month\, wheels rolling 9:00 
+ am from Peters St near the U-Haul\, southwest Atlanta. Arrive at least 2
+ 0 minutes early..\nConfirm with the host before you go.\nhttps://cyclefo
+ rchange.org/rides/atlanta-ga-macc-beginner-casual-ride/
+URL:https://cycleforchange.org/rides/atlanta-ga-macc-beginner-casual-ride
+ /
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:lisle-il-elmhurst-bicycle-club-lisle-early-bird@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261005T053000
+DTEND;TZID=America/Chicago:20261005T073000
+RRULE:FREQ=WEEKLY;BYDAY=MO,WE,FR;UNTIL=20270228T235959Z
+SUMMARY:Elmhurst Bicycle Club Lisle Early Bird — Lisle\, IL
+LOCATION:Lisle Police Station\, Lincoln Ave (Rt. 53)
+DESCRIPTION:Pace: 14-16 mph.\nNo-drop.\nSchedule: Mondays\, Wednesdays an
+ d Fridays\, 5:30 am from the Lisle Police Station on Lincoln Ave. Listed
+  Oct 2 to 28\, 2026..\nConfirm with the host before you go.\nhttps://cyc
+ leforchange.org/rides/lisle-il-elmhurst-bicycle-club-lisle-early-bird/
+URL:https://cycleforchange.org/rides/lisle-il-elmhurst-bicycle-club-lisle
+ -early-bird/
+END:VEVENT
+END:VCALENDAR

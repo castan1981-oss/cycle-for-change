@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:pearland-tx-pearland-bicycles-sunday-coffee-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261004T073000
+DTEND;TZID=America/Chicago:20261004T093000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Sunday Coffee Ride (Pearland Bicycles) — Pearland\, TX
+LOCATION:Pearland Bicycles\, 2819 Cullen Pkwy\, Ste 112\, Pearland\, TX 7
+ 7584
+DESCRIPTION:Pace: C 16-18\, B 19-20 mph.\nSchedule: Every Sunday\, 7:30 a
+ m\, 32-36 miles with a coffee stop in Missouri City or Friendswood..\nCo
+ nfirm with the host before you go.\nhttps://cycleforchange.org/rides/pea
+ rland-tx-pearland-bicycles-sunday-coffee-ride/
+URL:https://cycleforchange.org/rides/pearland-tx-pearland-bicycles-sunday
+ -coffee-ride/
+END:VEVENT
+END:VCALENDAR

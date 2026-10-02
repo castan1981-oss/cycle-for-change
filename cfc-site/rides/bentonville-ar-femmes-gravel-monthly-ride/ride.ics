@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bentonville-ar-femmes-gravel-monthly-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T090000
+DTEND;TZID=America/Chicago:20261003T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Femmes Gravel Monthly Ride — Bentonville\, AR
+LOCATION:Ari Bicycles - Bentonville\, 215 NW A St unit 160\, Bentonville\
+ , AR 72712
+DESCRIPTION:Pace: All skill levels; the group offers ride levels to pick 
+ from.\nSchedule: Monthly on a Saturday morning\, 9:00 am to noon; next r
+ ide Sat Nov 21\, 2026 from Ari Bicycles.\nConfirm with the host before y
+ ou go.\nhttps://cycleforchange.org/rides/bentonville-ar-femmes-gravel-mo
+ nthly-ride/
+URL:https://cycleforchange.org/rides/bentonville-ar-femmes-gravel-monthly
+ -ride/
+END:VEVENT
+END:VCALENDAR

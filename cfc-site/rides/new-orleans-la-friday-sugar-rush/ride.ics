@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:new-orleans-la-friday-sugar-rush@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261002T180000
+DTEND;TZID=America/Chicago:20261002T200000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270228T235959Z
+SUMMARY:The Friday Sugar Rush — New Orleans\, LA
+LOCATION:NOMA (New Orleans Museum of Art)\, City Park\, 1 Collins Diboll 
+ Cir\, New Orleans\, LA 70125
+DESCRIPTION:Schedule: Every Friday\, 6:00 pm\, from NOMA in City Park (th
+ e calendar block runs 6 to 9 pm)..\nConfirm with the host before you go.
+ \nhttps://cycleforchange.org/rides/new-orleans-la-friday-sugar-rush/
+URL:https://cycleforchange.org/rides/new-orleans-la-friday-sugar-rush/
+END:VEVENT
+END:VCALENDAR

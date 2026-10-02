@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:vinings-ga-atlptn-beyond-six-flags@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T090000
+DTEND;TZID=America/New_York:20261003T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Beyond Six Flags (BSF) — Vinings\, GA
+LOCATION:Atlanta Cycling store\, Vinings
+DESCRIPTION:Pace: Steady but unpleasant\, in the host's words.\nSchedule:
+  Saturdays\, 8:30 am June through August and 9:00 am September through M
+ ay\, from the Atlanta Cycling store in Vinings..\nConfirm with the host 
+ before you go.\nhttps://cycleforchange.org/rides/vinings-ga-atlptn-beyon
+ d-six-flags/
+URL:https://cycleforchange.org/rides/vinings-ga-atlptn-beyond-six-flags/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:long-beach-ca-lightning-velo-tuesday-thursday-ptf-ride@cycleforchange
+ .org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261006T080000
+DTEND;TZID=America/Los_Angeles:20261006T100000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20270228T235959Z
+SUMMARY:Tuesday and Thursday PTF Ride (Lightning Velo) — Long Beach\, C
+ A
+LOCATION:Coyote Creek Bridge on the San Gabriel River Trail
+DESCRIPTION:Pace: one 33-mile route for all riders.\nSchedule: Tuesdays a
+ nd Thursdays\, 8:00 am from the Coyote Creek Bridge on the San Gabriel R
+ iver Trail. 33 miles for all riders\, a pit stop at PTF in Newport Beach
+ \, and the ride ends at The Crema Cafe in Seal Beach..\nConfirm with the
+  host before you go.\nhttps://cycleforchange.org/rides/long-beach-ca-lig
+ htning-velo-tuesday-thursday-ptf-ride/
+URL:https://cycleforchange.org/rides/long-beach-ca-lightning-velo-tuesday
+ -thursday-ptf-ride/
+END:VEVENT
+END:VCALENDAR

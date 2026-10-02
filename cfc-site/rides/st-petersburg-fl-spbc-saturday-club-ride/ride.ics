@@ -5,10 +5,27 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:st-petersburg-fl-spbc-saturday-club-ride@cycleforchange.org
-DTSTAMP:20260915T000000Z
+DTSTAMP:20261001T000000Z
 DTSTART;TZID=America/New_York:20261003T080000
 DTEND;TZID=America/New_York:20261003T100000
-RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270212T235959Z
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261031T035959Z
+SUMMARY:St. Petersburg Bicycle Club Saturday Ride — St. Petersburg\, FL
+LOCATION:North Shore Aquatic Center\, 901 N Shore Dr NE\, St. Petersburg\
+ , FL 33701
+DESCRIPTION:Pace: 16 / 18 / 20 / 22+ mph groups.\nSchedule: Every Saturda
+ y\, 8:00 am (8:30 am from Oct 31).\nConfirm with the host before you go.
+ \nhttps://cycleforchange.org/rides/st-petersburg-fl-spbc-saturday-club-r
+ ide/
+URL:https://cycleforchange.org/rides/st-petersburg-fl-spbc-saturday-club-
+ ride/
+END:VEVENT
+BEGIN:VEVENT
+UID:st-petersburg-fl-spbc-saturday-club-ride-from-2026-10-31@cycleforchan
+ ge.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261031T083000
+DTEND;TZID=America/New_York:20261031T103000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
 SUMMARY:St. Petersburg Bicycle Club Saturday Ride — St. Petersburg\, FL
 LOCATION:North Shore Aquatic Center\, 901 N Shore Dr NE\, St. Petersburg\
  , FL 33701

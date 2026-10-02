@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fairfax-ca-marin-cyclists-fairfax-to-point-reyes-station@cycleforchan
+ ge.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T090000
+DTEND;TZID=America/Los_Angeles:20261003T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Marin Cyclists Fairfax to Point Reyes Station — Fairfax\, CA
+LOCATION:Split Rock Tap and Wheel\, 2020 Sir Francis Drake Blvd\, Fairfax
+ \, CA 94930
+DESCRIPTION:Pace: all paces\, leaderless.\nSchedule: Saturdays\, meet 8:4
+ 5 am\, roll 9:00 am\, from Split Rock Tap and Wheel.\nConfirm with the h
+ ost before you go.\nhttps://cycleforchange.org/rides/fairfax-ca-marin-cy
+ clists-fairfax-to-point-reyes-station/
+URL:https://cycleforchange.org/rides/fairfax-ca-marin-cyclists-fairfax-to
+ -point-reyes-station/
+END:VEVENT
+END:VCALENDAR

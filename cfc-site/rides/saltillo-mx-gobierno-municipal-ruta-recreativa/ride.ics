@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:saltillo-mx-gobierno-municipal-ruta-recreativa@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Monterrey:20261004T063000
+DTEND;TZID=America/Monterrey:20261004T113000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Ruta Recreativa de Saltillo — Saltillo\, Mexico
+LOCATION:Bulevar Venustiano Carranza (calle Chihuahua to calle Canadá)\,
+  Bulevar Venustiano Carranza\, Saltillo\, Coahuila
+DESCRIPTION:Pace: Open street\, no pace..\nNo-drop.\nSchedule: Every Sund
+ ay\, 6:30 am to 11:30 am (new hours since Sunday July 5\, 2026). Bulevar
+  Venustiano Carranza between calle Chihuahua and calle Canadá..\nConfir
+ m with the host before you go.\nhttps://cycleforchange.org/rides/saltill
+ o-mx-gobierno-municipal-ruta-recreativa/
+URL:https://cycleforchange.org/rides/saltillo-mx-gobierno-municipal-ruta-
+ recreativa/
+END:VEVENT
+END:VCALENDAR

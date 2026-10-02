@@ -1,0 +1,168 @@
+[
+ {
+  "slug": "topeka-ks-kvbc-dover-dogs-thursday-ride",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-17",
+  "evidence": "KVBC's public Google Calendar (ICS) shows Dover Dogs as a weekly Thursday 6:00 pm series at Western Hills Church that ends 2026-09-17; the rides page (modified Nov 2025) calls it a spring-fall ride.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/kawvalleybicycleclub%40gmail.com/public/basic.ics",
+   "https://kvbc.org/rides/"
+  ],
+  "status_note": "KVBC calendar series ended Sept 17, 2026; the club lists Dover Dogs as spring-fall, so it should resume in spring 2027.",
+  "status_since": "2026-09-18",
+  "promote_feed": "https://calendar.google.com/calendar/ical/kawvalleybicycleclub%40gmail.com/public/basic.ics"
+ },
+ {
+  "slug": "topeka-ks-kvbc-wednesday-slow-roll",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-16",
+  "evidence": "KVBC's public Google Calendar (ICS) shows Wednesday Slow Roll as a weekly 6:10 pm series at the Washburn lot that ends 2026-09-16.",
+  "sources": [
+   "https://calendar.google.com/calendar/ical/kawvalleybicycleclub%40gmail.com/public/basic.ics",
+   "https://kvbc.org/rides/"
+  ],
+  "status_note": "KVBC calendar series ended mid-Sept 2026; the rides page says it starts again in May.",
+  "status_since": "2026-09-17",
+  "promote_feed": "https://calendar.google.com/calendar/ical/kawvalleybicycleclub%40gmail.com/public/basic.ics"
+ },
+ {
+  "slug": "st-louis-mo-south-side-cyclery-wednesday-evening-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-30",
+  "evidence": "South Side Cyclery's rides page lists 'GNO\u2014Girls Night Out: Wednesdays, April 1\u2013October 28 @ 6pm' (dates match 2026 weekdays) as a welcoming community of women, plus Winter Wednesdays Nov 11\u2013Mar 17; it is a women's ride, not just a pace-group ride.",
+  "sources": [
+   "https://www.southsidecyclery.com/articles/rides-events-pg243.htm"
+  ],
+  "changes": {
+   "name": "GNO \u2014 Girls Night Out (South Side Cycling Club)",
+   "inclusive_focus": [
+    "wtf",
+    "beginner"
+   ],
+   "description": "The shop and South Side Cycling Club run this Wednesday night ride as a welcoming community of women. Four groups leave at once, from a beginner group aiming for 10 miles in about 1 hour 45 minutes up to 16+ mph, and routes change weekly. Helmets and lights required; arrive early to sign the waiver. From November 11 to March 17 Wednesday nights turn into Winter Wednesdays: strength and mobility, bike maintenance clinics and social outings instead of rides. The shop also runs a Saturday 8 am training ride through October 31."
+  }
+ },
+ {
+  "slug": "bentonville-ar-tour-de-coler",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "sources": [
+   "https://peelcompton.org/"
+  ],
+  "note": "Host calendar API lists no Tour de Coler dates after Mar 31, 2026 (Apr-Oct empty, Oct Tuesdays show other programs); series page text still says every Tuesday."
+ },
+ {
+  "slug": "el-paso-tx-saturday-road-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "El Paso Bicycle Club's Meetup iCal feed lists Saturday Road Ride at 7:00 am for Oct 3, 10, 17, 24 and 31, 2026 (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.meetup.com/ElPasoBicycleClub/events/ical/",
+   "https://elpasobicycleclub.com/club-rides/"
+  ],
+  "promote_feed": "https://www.meetup.com/ElPasoBicycleClub/events/ical/"
+ },
+ {
+  "slug": "el-paso-tx-thursday-morning-cruise",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "El Paso Bicycle Club's Meetup iCal feed lists Thursday Morning Cruise at 7:00 am for Oct 8, 15, 22 and 29 and Nov 5, 2026 (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.meetup.com/ElPasoBicycleClub/events/ical/",
+   "https://elpasobicycleclub.com/club-rides/"
+  ],
+  "promote_feed": "https://www.meetup.com/ElPasoBicycleClub/events/ical/"
+ },
+ {
+  "slug": "midland-tx-tuesday-night-worlds",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "PBBA's weekly club rides page lists Tuesday Night Worlds from Energy City Bikes at 6:15 pm, 'Begins March 10, 2026' (fetched Oct 1, 2026; daylight-dependent season).",
+  "sources": [
+   "https://pbbatx.com/weekly-club-rides"
+  ]
+ },
+ {
+  "slug": "midland-tx-trek-saturday-coffee-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "PBBA's weekly club rides page (2026 season, rides 'begin March 10-11, 2026') lists the Saturday Coffee Ride from Trek Midland at 8 AM, 'will vary with weather', no-drop (fetched Oct 1, 2026).",
+  "sources": [
+   "https://pbbatx.com/weekly-club-rides"
+  ]
+ },
+ {
+  "slug": "odessa-tx-mission-and-monday",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "PBBA's weekly club rides page (2026 season) lists Mission & Monday at Mission Fitness, 6:15 pm, scheduled during daylight saving time as weather permits, organized by West Texas Gazelles Odessa (fetched Oct 1, 2026).",
+  "sources": [
+   "https://pbbatx.com/weekly-club-rides"
+  ]
+ },
+ {
+  "slug": "norman-ok-lazy-circles-wednesday-night-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-03-07",
+  "evidence": "Bicycle League of Norman's home page lists the Wednesday Club Ride at 6:30 pm from Lazy Circles Brewery, three groups, daylight saving time March to November, and links meeting minutes dated March 7, 2026 (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.bicycleleagueofnorman.com/"
+  ]
+ },
+ {
+  "slug": "tyler-tx-ride-tyler-social-spin-urban-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Ride Tyler's events page (2026) lists Social Spin on the first and third Thursday, rolling 6:00-6:15 pm from the shop, with upcoming dates Aug 6 and 20, Sep 3 and 17, Oct 1 and 15 (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.ridetyler.com/articles/upcoming-events-pg195.htm"
+  ]
+ },
+ {
+  "slug": "tyler-tx-ride-tyler-donut-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-05",
+  "evidence": "Ride Tyler's events page (2026) lists the Donut Ride on first Saturdays at 8:00 AM, no-drop, 'next ride will be on Saturday, September 5th' (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.ridetyler.com/articles/upcoming-events-pg195.htm"
+  ]
+ },
+ {
+  "slug": "tyler-tx-rose-city-cycling-wednesday-urban-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "Ride Tyler's events page (2026) lists Rose City Cycling's Wednesday Urban Ride every Wednesday at 6:00 PM from the back lot of FRESH by Brookshire's, no-drop, organized by Maureen Mangiameli (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.ridetyler.com/articles/upcoming-events-pg195.htm"
+  ]
+ },
+ {
+  "slug": "omaha-ne-opbc-saturday-morning-easy-trail-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Omaha Pedalers' home page (shows Oct 10 and Oct 12, 2026 events) lists the Saturday Morning Easy Trail Ride, 9:00 AM at the Stinson Park restrooms, with no end-of-season note, while its Sunday road ride and Thursday taco ride are marked finished for the season (fetched Oct 1, 2026).",
+  "sources": [
+   "https://opbc.clubexpress.com/"
+  ]
+ },
+ {
+  "slug": "richmond-heights-mo-big-shark-saturday-mellow-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Big Shark's public Group Rides calendar (Google Calendar ICS) has a weekly Saturday 7:30 am shop road ride from 1155 S Big Bend running to Oct 3, 2026, and the shop's rides page lists the 7:30 Mellow option with a ride leader March 1 to Oct 31 (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.bigshark.com/articles/rides-races-event-calendar-pg22.htm",
+   "https://www.bigshark.com/articles/group-training-rides-pg334.htm"
+  ]
+ }
+]

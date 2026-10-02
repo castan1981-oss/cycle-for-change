@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:roswell-ga-bike-roswell-saturday-morning-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T080000
+DTEND;TZID=America/New_York:20261003T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Bike Roswell! Saturday Morning Ride — Roswell\, GA
+LOCATION:Roswell North Elementary School\, upper parking lot\, 10517 Wood
+ stock Road\, Roswell\, GA 30075
+DESCRIPTION:Pace: Pace groups (the Wednesday ride runs A 18+ mph\, B 16
+ –17\, C 14–15).\nNo-drop.\nSchedule: Every Saturday at 8:00 am from 
+ the upper parking lot of Roswell North Elementary School..\nConfirm with
+  the host before you go.\nhttps://cycleforchange.org/rides/roswell-ga-bi
+ ke-roswell-saturday-morning-ride/
+URL:https://cycleforchange.org/rides/roswell-ga-bike-roswell-saturday-mor
+ ning-ride/
+END:VEVENT
+END:VCALENDAR

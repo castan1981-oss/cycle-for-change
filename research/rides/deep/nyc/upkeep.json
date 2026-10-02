@@ -1,0 +1,256 @@
+[
+ {
+  "slug": "jersey-city-nj-bike-jc-light-up-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Bike JC's Light-Up Rides page lists its 2026 schedule through Fri Oct 9 (meet 6:30 pm, roll 7:00 pm, from the Grove Street PATH plaza) and nothing after that date; the homepage banner still showed the Aug 14 ride (read Oct 1, 2026).",
+  "sources": [
+   "https://www.bikejc.org/light-up-rides"
+  ],
+  "changes": {
+   "time_local": "7:00 pm",
+   "start_hhmm": "19:00",
+   "schedule": "Monthly, on a Friday night: meet 6:30 pm, roll 7:00 pm for the next ride, Oct 9, 2026. The 2026 list runs Mar 13, Apr 10, May 8, Jun 19, Jul 10, Aug 14, Sep 18 and Oct 9, and nothing is posted after Oct 9. The roll slid from 8:00 pm in summer to 7:00 pm in autumn.",
+   "season": "Mar–Oct",
+   "season_months": {
+    "start": 3,
+    "end": 10
+   },
+   "pace": "About 8 mph, slow and social; stops to regroup at points and after hills",
+   "distance_miles": "10–20",
+   "visitor_notes": "No sign-up. Bring front and rear lights, a helmet, a spare tube and water. Weather permitting; check Bike JC's Instagram or Facebook for updates.",
+   "refresh": {
+    "method": "static-page",
+    "watch_url": "https://www.bikejc.org/light-up-rides",
+    "notes": "The Light-Up Rides page lists the whole year's dates. The homepage banner lags behind it."
+   }
+  }
+ },
+ {
+  "slug": "montclair-nj-montclair-bikery-friday-ladies-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-26",
+  "evidence": "Montclair Bikery's public ride calendar (last updated Sept 26, 2026) lists the Ladies Ride every Friday at 9:00 am from 148 Valley Rd, next on Fri Oct 2, and keeps listing it weekly through at least June 2027 (read Oct 1, 2026).",
+  "sources": [
+   "https://www.montclairbikery.com/about/calendar-pg165.htm",
+   "https://calendar.google.com/calendar/ical/v0bqmc4elji6e1lub4fh5tttd0%40group.calendar.google.com/public/basic.ics"
+  ],
+  "changes": {
+   "pace": "C ride: 15 mph average, sustained speeds in the mid to high teens",
+   "visitor_notes": "Arrive 10 minutes before 9:00. The shop's calendar says to have experience riding at least 20 miles, clip-in pedals, hydration and nutrition. Helmets required; wet roads or freezing temperatures cancel. The group-rides page says April through October, but the calendar lists the ride all year, so call the shop in winter. Call the shop for the WhatsApp link.",
+   "refresh": {
+    "method": "ics",
+    "feed_url": "https://calendar.google.com/calendar/ical/v0bqmc4elji6e1lub4fh5tttd0%40group.calendar.google.com/public/basic.ics",
+    "notes": "The shop's public Google Calendar; the calendar page loads it with JavaScript."
+   }
+  }
+ },
+ {
+  "slug": "montclair-nj-montclair-bikery-saturday-shop-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-26",
+  "evidence": "Montclair Bikery's public ride calendar (last updated Sept 26, 2026) lists the Shop Ride every Saturday at 8:00 am from 148 Valley Rd, next on Sat Oct 3, and keeps listing it weekly through at least June 2027 (read Oct 1, 2026).",
+  "sources": [
+   "https://www.montclairbikery.com/about/calendar-pg165.htm",
+   "https://calendar.google.com/calendar/ical/v0bqmc4elji6e1lub4fh5tttd0%40group.calendar.google.com/public/basic.ics"
+  ],
+  "changes": {
+   "pace": "B ride on the calendar: 16 mph average, sustained speeds in the high teens and low 20s (the group-rides page says A or B, depending on who shows up)",
+   "visitor_notes": "Arrive 10 minutes before 8:00. The shop's calendar says to have experience riding at least 30 miles, clip-in pedals, hydration and nutrition. Helmets required; wet roads or freezing temperatures cancel. The group-rides page says April through October, but the calendar lists the ride all year, so call the shop in winter.",
+   "refresh": {
+    "method": "ics",
+    "feed_url": "https://calendar.google.com/calendar/ical/v0bqmc4elji6e1lub4fh5tttd0%40group.calendar.google.com/public/basic.ics",
+    "notes": "The shop's public Google Calendar; the calendar page loads it with JavaScript."
+   }
+  }
+ },
+ {
+  "slug": "new-york-ny-thursday-night-social-bikeride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Time's Up!'s calendar lists the Thursday Night Social Bikeride on Thu Oct 1 and Thu Oct 8, 2026 at 7:00 pm at the Columbus Circle entrance of Central Park; the event page runs Apr 2, 2026 to Jan 1, 2027 and says it is hosted by Social Cycling NYC (read Oct 1, 2026).",
+  "sources": [
+   "https://times-up.org/calendar/thursday-night-social-bikeride/",
+   "https://times-up.org/calendar/"
+  ]
+ },
+ {
+  "slug": "bethpage-ny-massapequa-park-bicycle-club-rides",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The club's ride calendar for October 2026 lists Thursday Oct 1 rides at 9:00 am from Borella Field and 9:30 am from the Bethpage library, and a Sat Oct 3 ride at 8:30 am from Mattituck; the page says 8:30 am in warmer months and 9 am in cooler months, and that guests get one free ride (read Oct 1, 2026).",
+  "sources": [
+   "https://www.massparkbikeclub.org/ride-calendar/"
+  ],
+  "changes": {
+   "time_local": "9:00 am",
+   "start_hhmm": "09:00",
+   "schedule": "Tuesday, Thursday, Saturday, Sunday and holidays. Typical start 9:00 am in the cooler months and 8:30 am in warmer months; each ride on the calendar gives its own start and place (Oct 1: 9:00 and 9:30 am from Borella Field and the Bethpage library; Oct 3: 8:30 am from Mattituck).",
+   "visitor_notes": "Riders must be club members, but the club allows one free ride for a potential member. Sign up with the ride leader listed on the calendar; each posting gives pace, distance and start.",
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://www.massparkbikeclub.org/ride-calendar/",
+    "notes": "The calendar is posted week by week by ride leaders."
+   }
+  }
+ },
+ {
+  "slug": "brooklyn-ny-non-binary-bike-club-wednesday",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-30",
+  "evidence": "nb.bike says the club's most recent ride was Sept 30, 2026 and that its regular rides currently meet Wednesdays at 7:00 pm at Fort Greene Park; the next ride was 'not yet scheduled' on the page (read Oct 1, 2026).",
+  "sources": [
+   "https://nb.bike/"
+  ]
+ },
+ {
+  "slug": "greenlawn-ny-huntington-bicycle-club-weekend-rides",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The club's ride-start page gives the weekend start by month (9:00 am December to April, 8:30 am May and October, 8:00 am June to September, nothing for November) and its calendar lists Crankin' Saturday from Smith St at 8:30 am on Sat Oct 3, 2026 (read Oct 1, 2026).",
+  "sources": [
+   "https://www.hbcli.org/content.aspx?page_id=22&club_id=312624&module_id=546621",
+   "https://www.hbcli.org/content.aspx?page_id=4001&club_id=312624"
+  ],
+  "changes": {
+   "time_local": "8:30 am",
+   "start_hhmm": "08:30",
+   "schedule": "Saturdays, Sundays and holidays from the Smith St lot in Greenlawn. 8:30 am in October; the club's page says 9:00 am December to April, 8:30 am May and October, 8:00 am June to September (it doesn't list November). Each ride on the calendar gives its own start.",
+   "start_times": [
+    {
+     "from": "2026-12-01",
+     "start_hhmm": "09:00"
+    },
+    {
+     "from": "2027-05-01",
+     "start_hhmm": "08:30"
+    },
+    {
+     "from": "2027-06-01",
+     "start_hhmm": "08:00"
+    }
+   ],
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://www.hbcli.org/content.aspx?page_id=4001&club_id=312624",
+    "notes": "ClubExpress calendar with a dated entry for each ride; the start-time table is on the ride-start-locations page."
+   }
+  }
+ },
+ {
+  "slug": "new-york-ny-achilles-citi-bike-adaptive-cycling-central-park",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-06-11",
+  "evidence": "Achilles' Citi Bike adaptive cycling page, last edited Jun 11, 2026, lists Central Park on Tuesdays at 5:00 pm and Saturdays at 8:00 am and says the program runs May through early November; sign-up is on Achilles' Rosterfy portal (read Oct 1, 2026).",
+  "sources": [
+   "https://www.achillesinternational.org/citibike"
+  ]
+ },
+ {
+  "slug": "new-york-ny-black-girls-do-bike-nyc-weekend-rides",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The club's Linktree links its Eventbrite listing for the BGDBNYC Big Pink Ride Fundraiser on Sun Oct 11, 2026, 9 am to noon, so weekend rides are still posted on Eventbrite; no Saturday beginner ride is listed for October and the Strava club is invite-only (read Oct 1, 2026).",
+  "sources": [
+   "https://linktr.ee/bgdbnyc",
+   "https://www.eventbrite.com/e/bgdbnyc-big-pink-ride-fundraiser-2026-tickets-2000909914417"
+  ]
+ },
+ {
+  "slug": "new-york-ny-5bbc-weekend-day-rides",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "5BBC's ride calendar lists dated rides on Sat Oct 10 (three), Sun Oct 11, Tue Oct 13 and Sat Oct 17, 2026, and marks two Oct 1-2 Long Island rides canceled (read Oct 1, 2026).",
+  "sources": [
+   "https://5bbc.clubexpress.com/content.aspx?page_id=4001&club_id=511565"
+  ],
+  "changes": {
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://5bbc.clubexpress.com/content.aspx?page_id=4001&club_id=511565",
+    "notes": "ClubExpress calendar; each ride's page gives its start time, place and pace."
+   }
+  }
+ },
+ {
+  "slug": "new-york-ny-front-runners-sunday-bike-rides",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-01-07",
+  "evidence": "Front Runners New York's Multisport page, last edited Jan 7, 2026, says group bike rides run spring through early fall, on Sunday mornings or occasionally Saturdays, most from the George Washington Bridge up Route 9W; its calendar page lists no dated rides (read Oct 1, 2026).",
+  "sources": [
+   "https://www.frny.org/multisport",
+   "https://www.frny.org/calendar"
+  ]
+ },
+ {
+  "slug": "new-york-ny-intandem-central-park-tandem-rides",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-05-14",
+  "evidence": "InTandem's Join Us page, last edited May 14, 2026, says trained Captains and Stokers ride in Central Park weekly, year-round, weather permitting; its FAQ gives Saturday and Sunday mornings most of the year plus Tuesday to Thursday from May to September (read Oct 1, 2026).",
+  "sources": [
+   "https://www.intandembike.org/join-us/",
+   "https://www.intandembike.org/join-us/faqs/"
+  ]
+ },
+ {
+  "slug": "new-york-ny-nycc-weekend-club-rides",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "NYCC's public rides app lists Saturday Oct 3, 2026 rides at 6:30, 6:40, 7:20, 8:00 and 8:20 am, A and B levels, with sign-ups open (read Oct 1, 2026).",
+  "sources": [
+   "https://app.nycc.org/rides",
+   "https://nycc.org/riding-with-nycc"
+  ],
+  "changes": {
+   "refresh": {
+    "method": "calendar-page",
+    "watch_url": "https://app.nycc.org/rides",
+    "notes": "The club's ride list loads without a login and shows date, start time, pace and distance for each ride."
+   }
+  }
+ },
+ {
+  "slug": "new-york-ny-outcycling-weekend-training-series",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-08-30",
+  "evidence": "OutCycling's Fall Training Series page, last edited Aug 30, 2026, lists seven Saturdays from Sept 19 to Nov 7, 2026 with Oct 3, 10, 17 and 24 still to come and a free week on Oct 31; sign-up is on Spond (read Oct 1, 2026).",
+  "sources": [
+   "https://www.outcycling.org/fall-training"
+  ]
+ },
+ {
+  "slug": "new-york-ny-outcycling-weekly-park-laps",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-03-12",
+  "evidence": "OutCycling's FAQ, last edited Mar 12, 2026, says the club offers weekly lap sessions in Central and Prospect Park in spring, summer and fall; no day or time is on the site, so they stay in Spond (read Oct 1, 2026).",
+  "sources": [
+   "https://www.outcycling.org/faq"
+  ]
+ },
+ {
+  "slug": "queens-ny-queens-social-ride-sunday",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-04",
+  "evidence": "Queens Social Ride's home page, last edited Sept 4, 2026, says it meets every Sunday at 9:00 am at the Unisphere (Africa side) and rides year-round when it is above 25 F with no rain, snow or ice (read Oct 1, 2026).",
+  "sources": [
+   "https://queenssocialride.org/",
+   "http://queenssocialride.org/rides/"
+  ]
+ }
+]

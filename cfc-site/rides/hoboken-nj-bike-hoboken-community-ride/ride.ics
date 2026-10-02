@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hoboken-nj-bike-hoboken-community-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261004T110000
+DTEND;TZID=America/New_York:20261004T120000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20261031T235959Z
+SUMMARY:Bike Hoboken Community Ride — Hoboken\, NJ
+LOCATION:A different Hoboken park or plaza each month\, announced on the 
+ Bike Hoboken events page
+DESCRIPTION:Pace: Easy. Riders need to hold about 4 mph\, a brisk jogging
+  pace..\nSchedule: Monthly\, on a Sunday\, spring through fall: meet 10:
+ 45 am\, roll 11:00 am. 2026 rides: Apr 26\, May 31\, Jun 28\, Jul 26\, A
+ ug 30\, Sep 20 and Oct 25. The start changes every month and is announce
+ d before each ride..\nConfirm with the host before you go.\nhttps://cycl
+ eforchange.org/rides/hoboken-nj-bike-hoboken-community-ride/
+URL:https://cycleforchange.org/rides/hoboken-nj-bike-hoboken-community-ri
+ de/
+END:VEVENT
+END:VCALENDAR

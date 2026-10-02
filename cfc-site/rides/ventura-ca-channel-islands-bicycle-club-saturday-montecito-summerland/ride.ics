@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ventura-ca-channel-islands-bicycle-club-saturday-montecito-summerland
+ @cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T083000
+DTEND;TZID=America/Los_Angeles:20261003T103000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Saturday Montecito and Summerland (Channel Islands Bicycle Club) 
+ — Ventura\, CA
+LOCATION:Museum parking lot\, 100 E Santa Clara St\, Ventura\, CA 93001
+DESCRIPTION:Schedule: Every Saturday: meet 8:20 am\, depart 8:30 am from 
+ the Museum parking lot. Pick Carpinteria (37 miles)\, Summerland (44) or
+  Montecito (54)..\nConfirm with the host before you go.\nhttps://cyclefo
+ rchange.org/rides/ventura-ca-channel-islands-bicycle-club-saturday-monte
+ cito-summerland/
+URL:https://cycleforchange.org/rides/ventura-ca-channel-islands-bicycle-c
+ lub-saturday-montecito-summerland/
+END:VEVENT
+END:VCALENDAR

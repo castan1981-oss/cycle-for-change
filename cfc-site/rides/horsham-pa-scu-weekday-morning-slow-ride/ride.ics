@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:horsham-pa-scu-weekday-morning-slow-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261006T100000
+DTEND;TZID=America/New_York:20261006T120000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20270228T235959Z
+SUMMARY:Weekday Morning Ride\, 10.5–11.5 mph (Suburban Cyclists Unlimit
+ ed) — Horsham\, PA
+LOCATION:Horsham Township Library\, 435 Babylon Rd\, Horsham\, PA 19044
+DESCRIPTION:Pace: 10.5 to 11.5 mph.\nSchedule: Tuesdays and Thursdays\, 1
+ 0:00 am from the Horsham Township Library from Oct 6 (it was 9:00 am bef
+ ore); 30 to 40 miles at 10.5 to 11.5 mph..\nConfirm with the host before
+  you go.\nhttps://cycleforchange.org/rides/horsham-pa-scu-weekday-mornin
+ g-slow-ride/
+URL:https://cycleforchange.org/rides/horsham-pa-scu-weekday-morning-slow-
+ ride/
+END:VEVENT
+END:VCALENDAR

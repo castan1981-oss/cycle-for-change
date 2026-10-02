@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:norman-ok-bln-tuesday-club-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261006T180000
+DTEND;TZID=America/Chicago:20261006T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261130T235959Z
+SUMMARY:BLN Tuesday Club Ride — Norman\, OK
+LOCATION:Forest Lumber parking lot\, W Rock Creek Rd (the 14 mph group cu
+ rrently leaves from Brookhaven Village)
+DESCRIPTION:Pace: 20+ mph (drop)\, 18-20\, 16-18 and 14-16 mph (regroups)
+ .\nSchedule: Tuesdays\, 6:00 pm from the Forest Lumber parking lot on W 
+ Rock Creek Rd\, during daylight saving time (March to November).\nConfir
+ m with the host before you go.\nhttps://cycleforchange.org/rides/norman-
+ ok-bln-tuesday-club-ride/
+URL:https://cycleforchange.org/rides/norman-ok-bln-tuesday-club-ride/
+END:VEVENT
+END:VCALENDAR

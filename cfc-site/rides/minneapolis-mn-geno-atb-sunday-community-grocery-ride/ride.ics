@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:minneapolis-mn-geno-atb-sunday-community-grocery-ride@cycleforchange.
+ org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261004T100000
+DTEND;TZID=America/Chicago:20261004T120000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20261031T235959Z
+SUMMARY:Geno ATB Community Grocery Ride — Minneapolis\, MN
+LOCATION:Martin Olav Sabo Bridge\, Minneapolis\, MN 55407
+DESCRIPTION:Pace: 10-12 mph\, about 23 miles for the Sept 27 ride.\nNo-dr
+ op.\nSchedule: Sundays\, 10:00 am from the Sabo Bridge; the calendar lis
+ ts Oct 4\, 11 and 18\, 2026. Each week is a different themed ride..\nCon
+ firm with the host before you go.\nhttps://cycleforchange.org/rides/minn
+ eapolis-mn-geno-atb-sunday-community-grocery-ride/
+URL:https://cycleforchange.org/rides/minneapolis-mn-geno-atb-sunday-commu
+ nity-grocery-ride/
+END:VEVENT
+END:VCALENDAR

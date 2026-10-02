@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:york-pa-york-bicycling-tuesday-coffee-house-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261006T090000
+DTEND;TZID=America/New_York:20261006T110000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270228T235959Z
+SUMMARY:Tuesday Coffee House Ride (York Bicycling) — York\, PA
+LOCATION:A coffee shop in York or Lancaster county; announced a day or tw
+ o ahead
+DESCRIPTION:Pace: Socially paced C ride\, 12 to 14 mph.\nSchedule: Every 
+ Tuesday\, 9:00 am (back to 9:00 after the school-holiday time); starts a
+ nd ends at a different coffee shop in York or Lancaster county each week
+ ..\nConfirm with the host before you go.\nhttps://cycleforchange.org/rid
+ es/york-pa-york-bicycling-tuesday-coffee-house-ride/
+URL:https://cycleforchange.org/rides/york-pa-york-bicycling-tuesday-coffe
+ e-house-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-mateo-ca-western-wheelers-seal-point-no-drop-ride@cycleforchange.
+ org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T090000
+DTEND;TZID=America/Los_Angeles:20261003T110000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH,SA;UNTIL=20261231T235959Z
+SUMMARY:Western Wheelers Seal Point No-Drop Ride — San Mateo\, CA
+LOCATION:Seal Point Park\, north end
+DESCRIPTION:Pace: C/0/25 in the club rating.\nNo-drop.\nSchedule: Tuesday
+ s\, Thursdays and Saturdays\, meet by 8:45 am\, depart 9:00 am\, from th
+ e north end of Seal Point Park.\nConfirm with the host before you go.\nh
+ ttps://cycleforchange.org/rides/san-mateo-ca-western-wheelers-seal-point
+ -no-drop-ride/
+URL:https://cycleforchange.org/rides/san-mateo-ca-western-wheelers-seal-p
+ oint-no-drop-ride/
+END:VEVENT
+END:VCALENDAR

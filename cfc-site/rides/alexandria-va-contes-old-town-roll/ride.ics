@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:alexandria-va-contes-old-town-roll@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T083000
+DTEND;TZID=America/New_York:20261003T103000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Old Town Roll — Alexandria\, VA
+LOCATION:Conte's Bike Shop Alexandria\, 1100 King St\, Alexandria\, VA 22
+ 314
+DESCRIPTION:Pace: 14-16 mph (B pace).\nNo-drop.\nSchedule: Saturdays\, wh
+ eels up 8:30 am sharp\, from Conte's Bike Shop in Old Town.\nConfirm wit
+ h the host before you go.\nhttps://cycleforchange.org/rides/alexandria-v
+ a-contes-old-town-roll/
+URL:https://cycleforchange.org/rides/alexandria-va-contes-old-town-roll/
+END:VEVENT
+END:VCALENDAR

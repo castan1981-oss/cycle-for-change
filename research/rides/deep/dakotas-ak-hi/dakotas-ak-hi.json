@@ -1,0 +1,991 @@
+[
+ {
+  "slug": "honolulu-hi-tradewind-saturday-ride",
+  "name": "Tradewind Saturday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Honolulu",
+  "neighborhood": null,
+  "region": "Hawaii",
+  "state": "HI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "Pacific/Honolulu",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday, 7:00 am (7:30 am on some Leeward starts). The start rotates between Town (Kapiolani), Windward (Kailua) and Leeward (Kunia, Blaisdell); the team's calendar posts each week's route and start. No ride on pre-race Saturdays.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Rotates: Kapiolani (Town), Kailua (Windward) or Kunia / Blaisdell (Leeward); start map linked on the team calendar",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": 50,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Rides self-select into two or three ability and speed groups; aimed at advanced riders who race or want to",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Tradewind Cycling Team",
+   "type": "team"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Open to the public if you follow the team's ride rules, navigate yourself and handle your own mechanicals. Check the calendar for the week's start; it changes every Saturday.",
+  "description": "The Tradewind Cycling Team's Saturday ride is about 50 miles and changes start each week between town, the windward side and central or leeward Oahu. It is a racing team's ride, aimed at advanced riders, and splits into two or three speed groups. The team says the ride is open to the public.",
+  "links": {
+   "website": "https://www.tradewindcyclingteam.com/ride-calendar",
+   "instagram": "https://www.instagram.com/tradewindcyclingteam/",
+   "facebook": "https://www.facebook.com/tradewindcyclingteam/",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://hbl.org/group-ride-listings/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.tradewindcyclingteam.com/ride-calendar",
+   "https://hbl.org/group-ride-listings/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-12",
+  "evidence": "Tradewind's own ride calendar (2026) lists Sat Sept 12, 7:00 am, Kunia Central Oahu 'Figure 8', and the Saturdays back to January; HBL's listing page, modified Sept 9, 2026, repeats 'Saturdays, 7:00am start, ~50mi' (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.tradewindcyclingteam.com/ride-calendar",
+   "feed_url": null,
+   "notes": "The calendar was posted only through mid-September at fetch; check it for each week's start and for pre-race Saturdays with no ride."
+  }
+ },
+ {
+  "slug": "honolulu-hi-tradewind-sunday-spin",
+  "name": "Tradewind Sunday Spin",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Honolulu",
+  "neighborhood": null,
+  "region": "Hawaii",
+  "state": "HI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "Pacific/Honolulu",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Sunday, 7:30 am, from Kapiolani Park out to Waimanalo and back. No ride on race Sundays.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Kapiolani Park (fountain), Honolulu",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": 50,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Advanced; riders split into groups by speed",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Tradewind Cycling Team",
+   "type": "team"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Open to the public if you follow the team's ride rules and take care of your own navigation and mechanicals.",
+  "description": "The Tradewind Cycling Team's Sunday ride is about 50 miles from Kapiolani to Waimanalo. It is a team ride for advanced riders and open to the public.",
+  "links": {
+   "website": "https://www.tradewindcyclingteam.com/ride-calendar",
+   "instagram": "https://www.instagram.com/tradewindcyclingteam/",
+   "facebook": "https://www.facebook.com/tradewindcyclingteam/",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://hbl.org/group-ride-listings/"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.tradewindcyclingteam.com/ride-calendar",
+   "https://hbl.org/group-ride-listings/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-13",
+  "evidence": "Tradewind's ride calendar (2026) lists 'Sunday Spin' Sun Sept 13, 7:30 am, and every Sunday back to January; HBL's listing page, modified Sept 9, 2026, repeats 'Sundays, 7:30am start, ~50mi' (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.tradewindcyclingteam.com/ride-calendar",
+   "feed_url": null,
+   "notes": "Race Sundays (for example Sept 12-13 team time trial) replace the spin."
+  }
+ },
+ {
+  "slug": "kailua-hi-windward-cycling-team-thursday-night-worlds",
+  "name": "Thursday Night Worlds",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Kailua",
+  "neighborhood": "Kailua",
+  "region": "Hawaii",
+  "state": "HI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "Pacific/Honolulu",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Thursday, 5:00 pm, from Kailua District Park, through Waimanalo and back.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "5:00 pm",
+  "start_hhmm": "17:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Kailua District Park",
+   "address": "21 S Kainalu Dr, Kailua, HI 96734"
+  },
+  "distance_km": null,
+  "distance_miles": 20,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Fast; hard efforts with a few regroup sections",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Windward Cycling Team",
+   "type": "team"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": null,
+  "description": "A fast 20-mile evening road ride from Kailua through Waimanalo and back, with hard efforts and a few regroup sections. HBL lists it as an advanced ride.",
+  "links": {
+   "website": "https://hbl.org/group-ride-listings/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://hbl.org/group-ride-listings/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-09",
+  "evidence": "HBL's Group Ride Listings page, last modified Sept 9, 2026, lists Thursday Night Worlds, Thursdays 5 pm, Kailua District Park, 20 miles, led by Windward Cycling Team (fetched Oct 1, 2026). The team's own page was not found.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://hbl.org/group-ride-listings/",
+   "feed_url": null,
+   "notes": "Only HBL's listing was found; look for the Windward Cycling Team's own page or Instagram."
+  }
+ },
+ {
+  "slug": "honolulu-hi-red-hot-ladies-thursday-kahala-kailua",
+  "name": "Red Hot Ladies Thursday Kāhala–Kailua Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Honolulu",
+  "neighborhood": "Kāhala",
+  "region": "Hawaii",
+  "state": "HI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "Pacific/Honolulu",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Thursday, 8:30 am to about 1:30 pm; arrive 8:15 at Kahala Community Center. A shorter version leaves Kailua Bike Shop at 8:30 am.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "8:30 am",
+  "start_hhmm": "08:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Kahala Community Center (Moa St and Pahoa Ave)",
+   "address": "Moa St & Pahoa Ave, Honolulu, HI 96816"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 5 hours with the brunch stop",
+  "duration_min": 300,
+  "pace": "Intermediate; customized by the ride leaders for weather and skill level",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Red Hot Ladies (Hawaii Bicycling League)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Sign the HBL group ride waiver and contact the ride leader before your first ride. The group started for women 50 and over and now includes younger women and men.",
+  "description": "An intermediate ride along the south shore to Hawai'i Kai, around Makapu'u and through the Waimanalo backroads to Kailua, with brunch at Kalapawai Cafe before riding back. Many riders only go as far as Makapu'u Lookout. The Kailua group meets the Kāhala group on the way, so there is a shorter version from the Kailua Bike Shop.",
+  "links": {
+   "website": "https://hbl.org/group-ride-listings/",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/RedHotLadiesHI",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://hbl.org/group-ride-listings/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-09",
+  "evidence": "HBL's Group Ride Listings page, last modified Sept 9, 2026, lists the Thursday Kāhala-Kailua Meet Up, 8:30 am to 1:30 pm from Kahala Community Center, led by the Red Hot Ladies (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://hbl.org/group-ride-listings/",
+   "feed_url": null,
+   "notes": "HBL's listing is the only page found; RHL's email list (RedHotLadies@HBL.org) sends weekly updates."
+  }
+ },
+ {
+  "slug": "aiea-hi-red-hot-diabetes-riders-pearl-harbor-path",
+  "name": "Red Hot Diabetes Riders (Pearl Harbor Path)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Aiea",
+  "neighborhood": "'Aiea",
+  "region": "Hawaii",
+  "state": "HI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "Pacific/Honolulu",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Saturday, 7:30 am, from Neal Blaisdell Park in 'Aiea.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Neal S. Blaisdell Park",
+   "address": "98-319 Kamehameha Hwy, Aiea, HI 96701"
+  },
+  "distance_km": null,
+  "distance_miles": 11,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Easy",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Red Hot Diabetes Riders",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Contact the ride leader named on HBL's listing before your first ride.",
+  "description": "An easy-paced 10 to 12 mile ride on the Pearl Harbor Historic Path, listed by HBL as a weekly beginner ride.",
+  "links": {
+   "website": "https://hbl.org/group-ride-listings/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://hbl.org/group-ride-listings/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-09",
+  "evidence": "HBL's Group Ride Listings page, last modified Sept 9, 2026, lists Red Hot Diabetes Riders on the PHBP, Saturdays 7:30 am from Neal Blaisdell Park, 10-12 miles (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://hbl.org/group-ride-listings/",
+   "feed_url": null,
+   "notes": "HBL's listing is the only page found."
+  }
+ },
+ {
+  "slug": "honolulu-hi-808-lowriders-thursday-night-cruise",
+  "name": "808 Lowriders Thursday Night Cruise",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Honolulu",
+  "neighborhood": null,
+  "region": "Hawaii",
+  "state": "HI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "Pacific/Honolulu",
+  "discipline": [
+   "cruiser",
+   "social"
+  ],
+  "schedule": "Every Thursday, 9:00 to 10:00 pm, meeting near Ward Center.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "9:00 pm",
+  "start_hhmm": "21:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Near Ward Center",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "808 Lowriders",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Dark ride: bring lights.",
+  "description": "A late-evening lowrider bike cruise that meets near Ward Center. HBL points riders to the group's Facebook page for details.",
+  "links": {
+   "website": "https://hbl.org/group-ride-listings/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://hbl.org/group-ride-listings/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-09",
+  "evidence": "HBL's Group Ride Listings page, last modified Sept 9, 2026, lists the 808 Lowriders Thursday Night Cruise, Thursdays 9-10 pm near Ward Center (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://hbl.org/group-ride-listings/",
+   "feed_url": null,
+   "notes": "HBL says to see the group's Facebook page; the page URL was not given."
+  }
+ },
+ {
+  "slug": "lihue-hi-kauai-path-bikes-on-rice",
+  "name": "Bikes on Rice Slow Roll",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Lihue",
+  "neighborhood": null,
+  "region": "Hawaii",
+  "state": "HI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "Pacific/Honolulu",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Second Saturday of every month, 4:30 pm, from Kalena Park in Lihue (about 90 minutes). Listed dates: Oct 10 and Nov 14, 2026.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "4:30 pm",
+  "start_hhmm": "16:30",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "sat"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Kalena Park",
+   "address": "4210 Malama St, Lihue, HI 96766"
+  },
+  "distance_km": null,
+  "distance_miles": 6,
+  "duration": "About 90 minutes",
+  "duration_min": 90,
+  "pace": "Easy slow roll",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Kauai Path",
+   "type": "nonprofit"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Check the Kauai Path event page for registration. Bring a helmet.",
+  "description": "An easy-paced slow roll on Lihue's quiet streets, run by Kauai Path. Riders of all abilities are welcome and nobody gets left behind. The route changes (Ninini Lighthouse is a regular), usually about six miles, and some months end at the Kress Street Night Market downtown.",
+  "links": {
+   "website": "https://www.kauaipath.org/event-details/bikes-on-rice-slow-roll-bicycle-ride-2026-09-12-16-30",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://calendar.google.com/calendar/ical/hbl.org_jsh32i71qaqsjip8h24s54oj8c%40group.calendar.google.com/public/basic.ics"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.kauaipath.org/event-details/bikes-on-rice-slow-roll-bicycle-ride-2026-09-12-16-30",
+   "https://calendar.google.com/calendar/ical/hbl.org_jsh32i71qaqsjip8h24s54oj8c%40group.calendar.google.com/public/basic.ics"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Kauai Path's event page lists the ride 'Other dates Sat, Oct 10, 4:30 PM, Sat, Nov 14, 4:30 PM'; HBL's calendar shows the same ride on the second Saturday from Feb through Aug 2026 and marks the Sept 12 ride cancelled (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.kauaipath.org/event-details/bikes-on-rice-slow-roll-bicycle-ride-2026-09-12-16-30",
+   "feed_url": null,
+   "notes": "The page lists the next dates under 'Other dates'. September's ride was cancelled."
+  }
+ },
+ {
+  "slug": "anchorage-ak-trek-store-womens-hot-chocolate-ride",
+  "name": "Women's Hot Chocolate Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Anchorage",
+  "neighborhood": null,
+  "region": "Alaska",
+  "state": "AK",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Anchorage",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "About once a month, usually a Wednesday, 6:30 pm (arrive 6:15 to sign waivers); the park changes. Next: Wed Oct 7, 2026, Halloween edition, Abbott Loop Community Park.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "monthly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Varies by ride; Oct 7: Abbott Loop Community Park",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 1.5 hours",
+  "duration_min": 90,
+  "pace": "All ability levels; riders split into groups",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Trek Bicycle Store of Anchorage",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "A signed waiver is required; arrive 15 minutes early. Bring a helmet, a bike for soft-surface trails, charged lights and weather clothes. Fat bikes can be reserved from the shop in advance. No dogs.",
+  "description": "A women's group ride for all ability levels, sponsored by the Trek store. It runs about an hour and a half on soft-surface trails, splits into groups, and ends with hot chocolate and conversation. Past 2026 rides: May 20, June 16, Sept 23.",
+  "links": {
+   "website": "https://www.trekstorealaska.com/articles/womens-hot-chocolate-ride-pg1231.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.facebook.com/events/2067190937497050/"
+   ]
+  },
+  "inclusive_focus": [
+   "wtf"
+  ],
+  "sources": [
+   "https://www.trekstorealaska.com/articles/womens-hot-chocolate-ride-pg1231.htm",
+   "https://orca.bike/event/womens-hot-chocolate-ride-halloween-edition-%f0%9f%8e%83-2/",
+   "https://orca.bike/calendar/?ical=1"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The Trek Store's page (2026 footer) and ORCA's calendar list the October ride for Wed Oct 7, 2026, 6:30 pm at Abbott Loop Community Park; ORCA's feed shows monthly rides on May 20, Jun 16, Sep 23 and Oct 7 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.trekstorealaska.com/articles/womens-hot-chocolate-ride-pg1231.htm",
+   "feed_url": "https://orca.bike/calendar/?ical=1",
+   "notes": "The shop re-posts this page each month; ORCA's feed also lists each ride."
+  }
+ },
+ {
+  "slug": "anchorage-ak-trek-store-coed-cheese-and-crackers-ride",
+  "name": "Co-ed Cheese and Crackers Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Anchorage",
+  "neighborhood": null,
+  "region": "Alaska",
+  "state": "AK",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Anchorage",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "About once a month, usually a Tuesday, 6:30 pm (arrive 6:15 to sign waivers); the start changes. September's was Tue Sept 22, Hillside parking lot off Abbott Road. No October date posted at fetch.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "monthly",
+  "monthly_rule": null,
+  "season": "summer–fall",
+  "season_months": null,
+  "start_location": {
+   "name": "Varies; Sept: Hillside parking lot off Abbott Road",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 1 hour",
+  "duration_min": 60,
+  "pace": "All ability levels; riders split into groups",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Trek Bicycle Store of Anchorage",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Arrive 15 minutes early to sign waivers. Bring a helmet and a bike that can handle singletrack rocks and roots. No dogs.",
+  "description": "A relaxed co-ed mountain bike ride of about an hour, followed by cheese and crackers in the parking lot. It runs on singletrack such as the Service trails and splits into groups by comfort and effort. Past 2026 rides: June 18, July 14, Sept 22.",
+  "links": {
+   "website": "https://www.trekstorealaska.com/articles/co-ed-cheese-and-crackers-ride-pg1232.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.trekstorealaska.com/articles/co-ed-cheese-and-crackers-ride-pg1232.htm",
+   "https://orca.bike/calendar/?ical=1"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-22",
+  "evidence": "The Trek Store's page (2026 footer) lists the September ride for Tue Sept 22, 2026, 6:30 pm; ORCA's feed also lists June 18, July 14 and Sept 22 (fetched Oct 1, 2026). The next date is not posted.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.trekstorealaska.com/articles/co-ed-cheese-and-crackers-ride-pg1232.htm",
+   "feed_url": "https://orca.bike/calendar/?ical=1",
+   "notes": "The shop re-posts the page each month; no October ride was posted at fetch, and the series may stop for winter."
+  }
+ },
+ {
+  "slug": "palmer-ak-backcountry-bike-casual-road-friday",
+  "name": "Casual Road Friday",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Palmer",
+  "neighborhood": null,
+  "region": "Alaska",
+  "state": "AK",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Anchorage",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Friday evenings, 6:15 pm, from Backcountry Bike & Ski in Palmer, through October; dates are posted ride by ride.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:15 pm",
+  "start_hhmm": "18:15",
+  "frequency": "irregular",
+  "monthly_rule": null,
+  "season": "summer–Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "Backcountry Bike & Ski",
+   "address": "132 W Arctic Ave, Palmer, AK 99645"
+  },
+  "distance_km": null,
+  "distance_miles": 14.5,
+  "duration": "About 1 hour",
+  "duration_min": 60,
+  "pace": "12-15 mph, drop-bar bikes",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Backcountry Bike & Ski",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Waivers are signed at the shop's main counter. Lights are needed as days shorten.",
+  "description": "A friendly group ride for novice and intermediate riders on drop-bar bikes, about an hour at 12 to 15 mph. The Sept 4 ride was a 14.5-mile out-and-back on the Glenn bike path. The host says the Friday rides stop after October because daylight gets short.",
+  "links": {
+   "website": "https://www.backcountrybikeandski.com/events",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.facebook.com/events/1038159505770279/",
+    "https://strava.app.link/gPHaWYUz25b"
+   ]
+  },
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "sources": [
+   "https://orca.bike/event/backcountry-bike-casual-road-bike-friday-sept-4th/",
+   "https://orca.bike/calendar/?ical=1"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-04",
+  "evidence": "ORCA's calendar lists the shop's Casual Road Friday for Sept 4, 2026, 6:15 pm (and Aug 7), saying 'only a couple Friday rides left' before October (fetched Oct 1, 2026). No later date was posted.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://orca.bike/calendar/?ical=1",
+   "feed_url": "https://orca.bike/calendar/?ical=1",
+   "notes": "Each ride gets its own ORCA event and Facebook event with a Strava RSVP; the series ends after October."
+  }
+ },
+ {
+  "slug": "palmer-ak-backcountry-bike-spicy-sunday-road-ride",
+  "name": "Spicy Sunday Road Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Palmer",
+  "neighborhood": null,
+  "region": "Alaska",
+  "state": "AK",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Anchorage",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Roughly monthly on a Sunday; start time and place vary (8:00 am Aug 9; 3:00 pm Sept 13 from the shop). The host says one more is planned this year with a Wasilla start; an October ride depends on weather.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "3:00 pm",
+  "start_hhmm": "15:00",
+  "frequency": "monthly",
+  "monthly_rule": null,
+  "season": "summer–fall",
+  "season_months": null,
+  "start_location": {
+   "name": "Backcountry Bike & Ski (start varies)",
+   "address": "132 W Arctic Ave, Palmer, AK 99645"
+  },
+  "distance_km": null,
+  "distance_miles": 45,
+  "duration": "About 3 hours",
+  "duration_min": 180,
+  "pace": "16 mph minimum, for experienced road cyclists",
+  "drop_policy": "drop",
+  "host": {
+   "name": "Backcountry Bike & Ski",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Waivers are on file at the shop. Expect cold weather and rough pavement; 28 mm tires suggested.",
+  "description": "The shop's group ride for experienced road cyclists: 45 to 50 miles, about three hours, 16 mph or faster, and dropping back is allowed. The Sept 13 ride went out toward Sutton and King Mountain. The host moves it to Zwift once weather turns.",
+  "links": {
+   "website": "https://www.backcountrybikeandski.com/events",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.facebook.com/events/2076941243182162/",
+    "https://strava.app.link/YQlzG82Kd6b"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://orca.bike/event/9-13-spicy-sunday-road-ride/",
+   "https://orca.bike/calendar/?ical=1"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-13",
+  "evidence": "ORCA's calendar lists the shop's Spicy Sunday ride for Sept 13, 2026, 3:00 pm from Backcountry Bike & Ski; the host says one more ride is planned for the year (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://orca.bike/calendar/?ical=1",
+   "feed_url": "https://orca.bike/calendar/?ical=1",
+   "notes": "Each ride gets its own ORCA event with Strava RSVP; the next date was not posted."
+  }
+ },
+ {
+  "slug": "fargo-nd-gnbc-tuesday-social-ride",
+  "name": "Great Northern Tuesday Social Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "seasonal-break",
+  "city": "Fargo",
+  "neighborhood": null,
+  "region": "North Dakota",
+  "state": "ND",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Tuesday, 6:00 pm, from the shop, spring and summer months (no fall schedule posted).",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "May–Sep",
+  "season_months": {
+   "start": 5,
+   "end": 9
+  },
+  "start_location": {
+   "name": "Great Northern Bicycle Co.",
+   "address": "425 Broadway N, Fargo, ND 58102"
+  },
+  "distance_km": null,
+  "distance_miles": 22,
+  "duration": null,
+  "duration_min": null,
+  "pace": "16-21 mph",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Great Northern Bicycle Company",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Download and bring the 2026 waiver. Helmets required.",
+  "description": "The shop calls this its most popular ride: a conversational road ride at 16 to 21 mph over 20 to 25 miles. Road bike strongly recommended, helmet required. Park in the ramp across the street; it is free after 5 pm.",
+  "links": {
+   "website": "https://www.gncycles.com/events/group-rides-events-pg204.htm",
+   "instagram": "https://www.instagram.com/gnbcfargo/",
+   "facebook": "https://www.facebook.com/gnbcfargo/",
+   "strava": "https://www.strava.com/clubs/gnbc",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.gncycles.com/events/group-rides-events-pg204.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "GNBC's Group Rides & Events page, which carries the 2026 waiver, lists the Tuesday 6:00 pm social ride from 425 Broadway N as a spring and summer ride with no fall schedule (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.gncycles.com/events/group-rides-events-pg204.htm",
+   "feed_url": null,
+   "notes": "Seasonal; expect it back in spring 2027. The shop also runs a Wednesday fitness ride."
+  }
+ },
+ {
+  "slug": "grand-forks-nd-sbs-wednesday-mountain-bike-ride",
+  "name": "Ski & Bike Shop Wednesday Mountain Bike Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Grand Forks",
+  "neighborhood": null,
+  "region": "North Dakota",
+  "state": "ND",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Wednesdays, 6:00 pm, from Lincoln Park, starting in the spring.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Lincoln Park",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Ski & Bike Shop",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Dress for cold evenings; it gets dark early in October.",
+  "description": "The shop's mountain bike group ride, open to all skill levels, on the trails around Lincoln Park. The shop also runs a no-drop gravel ride on Mondays and a no-drop road ride on Thursdays.",
+  "links": {
+   "website": "https://www.skiandbikeshop.net/articles/local-group-rides-pg195.htm",
+   "instagram": "https://www.instagram.com/skiandbikeshop_gf/",
+   "facebook": "https://www.facebook.com/skiandbikeshop",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.skiandbikeshop.net/articles/local-group-rides-pg195.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Ski & Bike Shop's Local Group Rides page (2026 footer) lists the mountain bike group ride 'Wednesdays 6:00pm' from Lincoln Park, with no end-of-season notice (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.skiandbikeshop.net/articles/local-group-rides-pg195.htm",
+   "feed_url": null,
+   "notes": "The page has no dates; confirm the fall schedule with the shop."
+  }
+ }
+]

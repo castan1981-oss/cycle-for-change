@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:cleveland-oh-cleveland-critical-mass@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261030T190000
+DTEND;TZID=America/New_York:20261030T210000
+RRULE:FREQ=MONTHLY;BYDAY=-1FR;UNTIL=20270228T235959Z
+SUMMARY:Cleveland Critical Mass — Cleveland\, OH
+LOCATION:Public Square\, Public Square\, Cleveland\, OH
+DESCRIPTION:Schedule: Last Friday of the month\, 7:00 pm\, from Public Sq
+ uare..\nConfirm with the host before you go.\nhttps://cycleforchange.org
+ /rides/cleveland-oh-cleveland-critical-mass/
+URL:https://cycleforchange.org/rides/cleveland-oh-cleveland-critical-mass
+ /
+END:VEVENT
+END:VCALENDAR

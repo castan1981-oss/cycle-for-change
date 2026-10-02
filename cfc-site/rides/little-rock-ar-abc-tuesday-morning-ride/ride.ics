@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:little-rock-ar-abc-tuesday-morning-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261006T083000
+DTEND;TZID=America/Chicago:20261006T103000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270228T235959Z
+SUMMARY:Arkansas Bicycle Club Tuesday Morning Ride — Little Rock\, AR
+LOCATION:Big Dam Bridge\, Little Rock side\, 7600 Rebsamen Park Rd\, Litt
+ le Rock\, AR 72207
+DESCRIPTION:Pace: Beginner to intermediate\, about 15-25 miles (per the c
+ ity's list).\nSchedule: Every Tuesday\, 8:30 am from the Little Rock sid
+ e of the Big Dam Bridge.\nConfirm with the host before you go.\nhttps://
+ cycleforchange.org/rides/little-rock-ar-abc-tuesday-morning-ride/
+URL:https://cycleforchange.org/rides/little-rock-ar-abc-tuesday-morning-r
+ ide/
+END:VEVENT
+END:VCALENDAR

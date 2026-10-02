@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:oklahoma-city-ok-obs-sunday-morning-bricktown-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261004T083000
+DTEND;TZID=America/Chicago:20261004T103000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:OBS Sunday Morning Bricktown Ride — Oklahoma City\, OK
+LOCATION:Stars and Stripes Park\, south end of Lake Hefner
+DESCRIPTION:Pace: 12-16 mph.\nSchedule: Every Sunday\, 8:30 am\, year-rou
+ nd\, from Stars and Stripes Park at the south end of Lake Hefner.\nConfi
+ rm with the host before you go.\nhttps://cycleforchange.org/rides/oklaho
+ ma-city-ok-obs-sunday-morning-bricktown-ride/
+URL:https://cycleforchange.org/rides/oklahoma-city-ok-obs-sunday-morning-
+ bricktown-ride/
+END:VEVENT
+END:VCALENDAR

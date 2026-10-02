@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:seattle-wa-cascade-frumps-friday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261002T100000
+DTEND;TZID=America/Los_Angeles:20261002T120000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270228T235959Z
+SUMMARY:FRUMPS (Friday Rides for Underemployed Merry Pedalers) — Seattl
+ e\, WA
+LOCATION:Varies by week (Oct 2: Matthews Beach Park; Oct 9: Woodinville; 
+ Oct 16: West Seattle)
+DESCRIPTION:Pace: Steady\, 12-14 mph\, regroups at hilltops and turns; th
+ e three posted rides ran 32 to 35 miles.\nSchedule: Fridays\, about 10:0
+ 0 am (some weeks a 9:15 early start); start place changes each week. Ste
+ ady pace\, 12-14 mph..\nConfirm with the host before you go.\nhttps://cy
+ cleforchange.org/rides/seattle-wa-cascade-frumps-friday-ride/
+URL:https://cycleforchange.org/rides/seattle-wa-cascade-frumps-friday-rid
+ e/
+END:VEVENT
+END:VCALENDAR

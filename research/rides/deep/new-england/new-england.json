@@ -1,0 +1,2463 @@
+[
+ {
+  "slug": "braintree-ma-landrys-braintree-saturday-road-ride",
+  "name": "Landry's Braintree All Levels Road Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Braintree",
+  "neighborhood": null,
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday morning, meet 6:45 am for a safety talk, roll 7:00 am from Landry's Braintree store; back around 9:00-9:30 am. Landry's lists it under its spring/summer group rides, so ask the store before a late-fall visit.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Landry's Bicycles, Braintree store",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "~2 hours",
+  "duration_min": null,
+  "pace": "Beginner 13-15 mph; enthusiast 16-17 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Landry's Bicycles",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Free. Sign Landry's waiver once a year (online or in the store). Helmet and flat-repair kit required, daytime flashing lights suggested. Steady rain or thunderstorms cancel.",
+  "description": "A Saturday-morning road ride from the Braintree store with two paces, a beginner group at 13-15 mph and an enthusiast group at 16-17 mph. About two hours. Landry's says all its rides are no-drop, so choose the group that fits you.",
+  "links": {
+   "website": "https://www.landrys.com/pages/landrys-group-rides",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner",
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.landrys.com/pages/landrys-group-rides"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-27",
+  "evidence": "Landry's group-rides page lists the Braintree All Levels Road Ride for Saturdays at 7:00 am; the same page shows its Charlestown beginner ride as 'Ended 9/27', so it was edited in the last week (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.landrys.com/pages/landrys-group-rides",
+   "feed_url": null,
+   "notes": "Landry's calendar page loads by script and is not readable; the group-rides page is. Landry's headlines its calendar 'Spring/Summer Season', so check for a winter break."
+  }
+ },
+ {
+  "slug": "cambridge-ma-crw-wednesday-wheelers",
+  "name": "Wednesday Wheelers (Charles River Wheelers)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Cambridge",
+  "neighborhood": null,
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday, 10:00 am. The start changes each week and is posted on the event page. A lunch stop is part of the ride.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Varies every week (see the event page)",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": "30-40",
+  "duration": "Morning to early afternoon, lunch stop included",
+  "duration_min": null,
+  "pace": "15-17 mph on the flats, about 13 mph rolling average",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Charles River Wheelers",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "CRW rides are open to guests for up to two rides a year before joining. Register on the event page. Helmet required. Start location changes weekly.",
+  "description": "A midweek daytime ride through the western suburbs, sometimes north or south, with a lunch stop. The leader changes weekly and the group stays together. Rolling pace is about 13 mph with 30 to 40 miles. In winter the group may swap in a walk or a ski.",
+  "links": {
+   "website": "https://crw.org/events",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://crw.org/events",
+   "https://crw.org/event-6814253",
+   "https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "CRW's calendar feed lists Wednesday Wheelers every week from Sept 30 through Nov 18, 2026 at 10:00 am (feed and event page fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://crw.org/events",
+   "feed_url": "https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics",
+   "notes": "Each week is its own event with the start and leader; the feed carries them."
+  }
+ },
+ {
+  "slug": "marshfield-ma-southeast-ma-nemba-manic-monday-ride",
+  "name": "Manic Monday Ride (Carolina Hills)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Marshfield",
+  "neighborhood": null,
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Every Monday night, 5:30-7:30 pm at Eames Way School, for a ride at the Carolina Hills trails.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Eames Way School",
+   "address": "Eames Way School, Marshfield, MA"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Southeast MA NEMBA",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Bring lights as the days shorten. Register through the NEMBA event listing.",
+  "description": "A weekly mountain bike ride at Carolina Hills in Marshfield. NEMBA calls it minimal tech but climby. Park at Eames Way School when school is not in session.",
+  "links": {
+   "website": "https://www.nemba.org/chapters/southeast-ma-nemba",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.nemba.org/chapters/southeast-ma-nemba"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Southeast MA NEMBA's chapter page lists the weekly Manic Monday Ride for Mon Oct 5, 2026, 5:30-7:30 pm at Eames Way School, Marshfield (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.nemba.org/chapters/southeast-ma-nemba",
+   "feed_url": null,
+   "notes": "The chapter page lists the next date of each recurring ride with time and place."
+  }
+ },
+ {
+  "slug": "randolph-ma-southeast-ma-nemba-weekly-dirt-therapy-ride",
+  "name": "Ponky Rockets Weekly Dirt Therapy Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Randolph",
+  "neighborhood": null,
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Every Wednesday, 5:30-7:30 pm from 123 Reed St, Randolph. Intermediate, 7-9 mph, 10-12 miles.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "123 Reed St",
+   "address": "123 Reed St, Randolph, MA"
+  },
+  "distance_km": null,
+  "distance_miles": "10-12",
+  "duration": null,
+  "duration_min": null,
+  "pace": "7-9 mph",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Southeast MA NEMBA",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Register through the NEMBA event listing. Bring lights for the dark end of the season.",
+  "description": "A weekly intermediate mountain bike ride led by Steve C and friends in the Blue Hills area. The pace is 7 to 9 mph and the goal is 10 to 12 miles.",
+  "links": {
+   "website": "https://www.nemba.org/chapters/southeast-ma-nemba",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.nemba.org/chapters/southeast-ma-nemba"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Southeast MA NEMBA's chapter page lists the weekly Ponky Rockets Dirt Therapy Ride for Wed Oct 7, 2026, 5:30-7:30 pm at 123 Reed St, Randolph, rated Intermediate (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.nemba.org/chapters/southeast-ma-nemba",
+   "feed_url": null,
+   "notes": "The chapter page lists the next date of each recurring ride with time and place."
+  }
+ },
+ {
+  "slug": "milton-ma-southeast-ma-nemba-thursduro-blue-hills",
+  "name": "Thursduro Enduro Night at Blue Hills",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Milton",
+  "neighborhood": null,
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Every Thursday, 5:45-8:00 pm at 840 Hillside St, Milton (Blue Hills).",
+  "days": [
+   "thu"
+  ],
+  "time_local": "5:45 pm",
+  "start_hhmm": "17:45",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Houghton's Pond area, 840 Hillside St",
+   "address": "840 Hillside St, Milton, MA"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Intermediate to advanced",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Southeast MA NEMBA",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "MTB helmet and lights required. Knee pads and eye protection are suggested. Landry's lists the same ride, meeting 5:30 pm at Houghton's Pond with the ride starting at 6:00 pm.",
+  "description": "A weekly night enduro ride at Blue Hills Reservation, run with Landry's Braintree store. It takes in the harder technical features and downhill trails. Intermediate to advanced, full-suspension bikes.",
+  "links": {
+   "website": "https://www.nemba.org/chapters/southeast-ma-nemba",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.nemba.org/chapters/southeast-ma-nemba",
+   "https://www.landrys.com/pages/landrys-group-rides"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Southeast MA NEMBA's chapter page lists Thursduro for Thu Oct 1, 2026, 5:45-8 pm at 840 Hillside St, Milton, billed with Landry's (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.nemba.org/chapters/southeast-ma-nemba",
+   "feed_url": null,
+   "notes": "The chapter page lists the next date of each recurring ride with time and place."
+  }
+ },
+ {
+  "slug": "nashua-nh-southern-nh-nemba-wednesday-at-yudicky",
+  "name": "SNH NEMBA Wednesday at Yudicky (new riders)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Nashua",
+  "neighborhood": null,
+  "region": "New Hampshire",
+  "state": "NH",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Wednesdays, 6:00-8:00 pm at Yudicky Park, Nashua. Casual ride for people getting into the sport.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Yudicky Park",
+   "address": "Yudicky Park, Nashua, NH"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Southern NH NEMBA",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Lights needed after dark. Register through the NEMBA event listing. NEMBA marks it a recurring event; one date shows at a time.",
+  "description": "A casual mountain bike ride at Yudicky Park for people who want to get into the sport. The focus is skills, exercise and fun.",
+  "links": {
+   "website": "https://www.nemba.org/chapters/southern-nh-nemba",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "sources": [
+   "https://www.nemba.org/chapters/southern-nh-nemba"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Southern NH NEMBA's chapter page lists the recurring 'Wednesday at Yudicky' group ride for Wed Oct 7, 2026, 6-8 pm, for folks wanting to get into the sport (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.nemba.org/chapters/southern-nh-nemba",
+   "feed_url": null,
+   "notes": "The chapter page lists the next date of each recurring ride."
+  }
+ },
+ {
+  "slug": "nashua-nh-southern-nh-nemba-tuesday-at-mine-falls",
+  "name": "SNH NEMBA Tuesday at Mine Falls",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Nashua",
+  "neighborhood": null,
+  "region": "New Hampshire",
+  "state": "NH",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Tuesdays, 6:00-8:00 pm at 25 Stadium Drive, Nashua (Mine Falls). Leisurely.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Mine Falls, Stadium Drive",
+   "address": "25 Stadium Drive, Nashua, NH"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Southern NH NEMBA",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Register through the NEMBA event listing. NEMBA marks it a recurring event; one date shows at a time.",
+  "description": "A leisurely mountain bike ride at Mine Falls focusing on skills, exercise and fun. The same chapter runs a harder Tuesday ride at Yudicky later in the evening.",
+  "links": {
+   "website": "https://www.nemba.org/chapters/southern-nh-nemba",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.nemba.org/chapters/southern-nh-nemba"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Southern NH NEMBA's chapter page lists the recurring 'Tuesday at Mine Falls' ride for Tue Oct 6, 2026, 6-8 pm, 25 Stadium Drive, Nashua (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.nemba.org/chapters/southern-nh-nemba",
+   "feed_url": null,
+   "notes": "The chapter page lists the next date of each recurring ride."
+  }
+ },
+ {
+  "slug": "nashua-nh-southern-nh-nemba-thursday-at-yudicky",
+  "name": "SNH NEMBA Thursday at Yudicky",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Nashua",
+  "neighborhood": null,
+  "region": "New Hampshire",
+  "state": "NH",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Thursdays, 6:00-8:00 pm at Yudicky Park, Nashua. Skills, exercise and fun.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Yudicky Park",
+   "address": "Yudicky Park, Nashua, NH"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Southern NH NEMBA",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Register through the NEMBA event listing. NEMBA marks it a recurring event; one date shows at a time.",
+  "description": "A weekly mountain bike ride at Yudicky Park, known for tight technical singletrack with ramps and teeter-totters. The focus is skills, exercise and fun.",
+  "links": {
+   "website": "https://www.nemba.org/chapters/southern-nh-nemba",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.nemba.org/chapters/southern-nh-nemba"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Southern NH NEMBA's chapter page lists the recurring 'Thursday at Yudicky' ride for Thu Oct 1, 2026, 6-8 pm (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.nemba.org/chapters/southern-nh-nemba",
+   "feed_url": null,
+   "notes": "The chapter page lists the next date of each recurring ride."
+  }
+ },
+ {
+  "slug": "lexington-ma-merrimack-valley-nemba-easy-rider",
+  "name": "Easy Rider at Landlocked Forest (MVNEMBA by GratefulTread)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Lexington",
+  "neighborhood": null,
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Thursdays, 6:00-8:00 pm from Joseph Estabrook Elementary School, Lexington, for a ride at Landlocked Forest.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Joseph Estabrook Elementary School",
+   "address": "Joseph Estabrook Elementary School, Lexington, MA"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Easier trails, pace adapted to the group",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Merrimack Valley NEMBA",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Sign up with the link in the NEMBA event description. Lights needed in fall.",
+  "description": "A beginner-friendly evening mountain bike ride on the easier trails at Landlocked Forest in Burlington. The pace is adapted to whoever shows up. NEMBA says advanced beginner and up.",
+  "links": {
+   "website": "https://www.nemba.org/chapters/merrimack-valley-nemba",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "sources": [
+   "https://www.nemba.org/chapters/merrimack-valley-nemba"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Merrimack Valley NEMBA's chapter page lists 'Easy Rider - Landlocked Forest' for Thu Oct 1, 2026, 6-8 pm, rated Beginner (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.nemba.org/chapters/merrimack-valley-nemba",
+   "feed_url": null,
+   "notes": "The chapter page lists the next date of each recurring ride; sign-up links are in each event description."
+  }
+ },
+ {
+  "slug": "chelmsford-ma-merrimack-valley-nemba-rough-riders",
+  "name": "The Rough Riders at Russell Mill (MVNEMBA by GratefulTread)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Chelmsford",
+  "neighborhood": null,
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Tuesdays, 6:00-8:00 pm at Russell Mill Pond and Town Forest, Chelmsford. Faster, more technical.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Russell Mill Pond and Town Forest",
+   "address": "Russell Mill Pond and Town Forest, Chelmsford, MA"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Intermediate and up, faster",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Merrimack Valley NEMBA",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Sign up with the link in the NEMBA event description. Lights needed in fall.",
+  "description": "A Tuesday-night mountain bike ride with more technical trails and a faster pace, for intermediate riders and up.",
+  "links": {
+   "website": "https://www.nemba.org/chapters/merrimack-valley-nemba",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.nemba.org/chapters/merrimack-valley-nemba"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Merrimack Valley NEMBA's chapter page lists 'The Rough Riders - Russell Mill & BSF' for Tue Oct 6, 2026, 6-8 pm, rated Intermediate and Advanced (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.nemba.org/chapters/merrimack-valley-nemba",
+   "feed_url": null,
+   "notes": "The chapter page lists the next date of each recurring ride; sign-up links are in each event description."
+  }
+ },
+ {
+  "slug": "milford-ma-milford-bicycle-wednesday-vietnam-mtb",
+  "name": "Milford Bicycle Wednesday MTB Ride at Vietnam",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Milford",
+  "neighborhood": null,
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Every Wednesday, 6:30 pm from the Adams Street lot at the Vietnam trails. The shop may change the lot, so call ahead.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Adams Street lot, Vietnam trails",
+   "address": "Adams Street, Holliston, MA"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Milford Bicycle",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Call the shop (508-473-7955) ahead, especially as daylight shortens. Bring lights.",
+  "description": "A social mountain bike ride on the NEMBA Vietnam trails in Milford and Holliston. The shop calls it a fun social ride with a great group. Seven Hills Wheelmen's listing puts the lot at 388 Adams St, Holliston.",
+  "links": {
+   "website": "https://www.milfordbicycle.com/articles/rides-events-pg37.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.milfordbicycle.com/articles/rides-events-pg37.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Milford Bicycle's rides page lists 'Every Wednesday 6:30 PM, fun social mountain bike ride', Vietnam Adams Street lot, on a page with a 2026 copyright (fetched Oct 1, 2026). Nothing on it is dated after April 2026.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.milfordbicycle.com/articles/rides-events-pg37.htm",
+   "feed_url": null,
+   "notes": "No dates on the page; call the shop on 508-473-7955 to confirm."
+  }
+ },
+ {
+  "slug": "northampton-ma-ncc-monday-sawmill-mtb",
+  "name": "NCC Monday Sawmill MTB",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Northampton",
+  "neighborhood": null,
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Mondays, 5:30-7:00 pm from RK Finn Ryan Road School in Florence (Sawmill trails).",
+  "days": [
+   "mon"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "RK Finn Ryan Road School",
+   "address": "498 Ryan Rd, Florence, MA 01062"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Northampton Cycling Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Anyone may ride twice before joining NCC. Sign the club waiver first. Lights needed as days shorten.",
+  "description": "A chill way to start the week on the Sawmill trails. The ride is no-drop, regrouping at intersections, with A, B and C groups forming by who turns up. Prior mountain bike experience is expected.",
+  "links": {
+   "website": "https://www.nohobikeclub.org/group-rides",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://ridewithgps.com/events/478192-monday-sawmill-mtb",
+   "https://ridewithgps.com/organizations/15095-northampton-cycling-club"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "NCC's Ride with GPS club calendar lists Monday Sawmill MTB for Oct 5, 12, 19 and 26, 2026; the Oct 12 event shows 5:30-7:00 pm at RK Finn Ryan Road School (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ridewithgps",
+   "watch_url": "https://ridewithgps.com/organizations/15095-northampton-cycling-club",
+   "feed_url": null,
+   "notes": "The club page renders upcoming events as dated rows."
+  }
+ },
+ {
+  "slug": "northampton-ma-ncc-sunday-dirt-road-ride-series",
+  "name": "NCC Sunday Dirt Road Ride Series",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Northampton",
+  "neighborhood": null,
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "gravel"
+  ],
+  "schedule": "Sundays at 9:00 am through October (Oct 4, 11, 18, 25), from a different start each week. The route is added by the Monday before.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Varies each week (posted on the event)",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Conversational",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Northampton Cycling Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Sign the NCC waiver. Anyone may ride twice before joining. Bring a pump, tubes and tools. Rides may cancel in bad weather or on holiday weekends.",
+  "description": "Social-paced dirt road rides in the hills around Northampton, mostly hard-pack gravel with plenty of climbing. Low gears are recommended. The group rides at a conversational pace and regroups. A gravel bike is best, a road bike with 30 mm or wider tires can work.",
+  "links": {
+   "website": "https://www.nohobikeclub.org/group-rides",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://ridewithgps.com/events/476962-sunday-dirt-road-ride-series",
+   "https://ridewithgps.com/organizations/15095-northampton-cycling-club"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "NCC's Ride with GPS club calendar lists the Sunday Dirt Road Ride Series for Oct 4, 11, 18 and 25, 2026; the event data shows a 9:00 am start (fetched Oct 1, 2026). The event text still mentions 10:00 am.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ridewithgps",
+   "watch_url": "https://ridewithgps.com/organizations/15095-northampton-cycling-club",
+   "feed_url": null,
+   "notes": "Start times: calendar data says 9:00 am, the event text says 10:00 am. Check the event page for the week."
+  }
+ },
+ {
+  "slug": "newport-ri-ten-speed-spokes-saturday-social",
+  "name": "Ten Speed Spokes Saturday Social, Half Island",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Newport",
+  "neighborhood": null,
+  "region": "Rhode Island",
+  "state": "RI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday, 7:00 am, from Empire Coffee & Tea, 112 William St, Newport. About 32 miles.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Empire Coffee & Tea",
+   "address": "112 William St, Newport, RI 02840"
+  },
+  "distance_km": null,
+  "distance_miles": 32,
+  "duration": null,
+  "duration_min": null,
+  "pace": "18-19 mph finishing average",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Ten Speed Spokes",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Road bike, helmet and water. Call the shop on 401-847-5609 for changes.",
+  "description": "A mostly social road ride with a couple of spirited sections that regroups at set points. It averages 18 to 19 mph over about 32 miles and passes Empire Coffee again, so you can cut it to 20 miles.",
+  "links": {
+   "website": "https://www.tenspeedspokes.com/articles/tss-group-rides-pg37.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.tenspeedspokes.com/articles/tss-group-rides-pg37.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Ten Speed Spokes' group-rides page lists 'Every Saturday 7 AM, Saturday Social 1/2 Island' on a page with a 2026 copyright (fetched Oct 1, 2026). Nothing on it is dated after April 2026.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.tenspeedspokes.com/articles/tss-group-rides-pg37.htm",
+   "feed_url": null,
+   "notes": "Page carries no dates; its 'Group rides will start the first week of May' line is a spring note, so watch for winter changes."
+  }
+ },
+ {
+  "slug": "newport-ri-ten-speed-spokes-tempo-sunday",
+  "name": "Ten Speed Spokes Tempo Sunday",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Newport",
+  "neighborhood": null,
+  "region": "Rhode Island",
+  "state": "RI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Sunday, 7:00 am, from Empire Coffee & Tea, 112 William St, Newport. 60+ miles for the long option.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Empire Coffee & Tea",
+   "address": "112 William St, Newport, RI 02840"
+  },
+  "distance_km": null,
+  "distance_miles": "60+",
+  "duration": null,
+  "duration_min": null,
+  "pace": "About 19-20 mph in warm months",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Ten Speed Spokes",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Road bike, helmet and water. Call the shop on 401-847-5609 for changes.",
+  "description": "A spirited, no-drop group ride that regroups as needed. At the Sakonnet River bridge the ride splits for riders who want the extra distance, usually 60+ miles. Finishing pace is 19 to 20 mph in warmer months and varies with the season.",
+  "links": {
+   "website": "https://www.tenspeedspokes.com/articles/tss-group-rides-pg37.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.tenspeedspokes.com/articles/tss-group-rides-pg37.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Ten Speed Spokes' group-rides page lists 'Every Sunday 7:00 AM, Tempo Sunday' on a page with a 2026 copyright (fetched Oct 1, 2026). Nothing on it is dated after April 2026.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.tenspeedspokes.com/articles/tss-group-rides-pg37.htm",
+   "feed_url": null,
+   "notes": "Page carries no dates; its 'Group rides will start the first week of May' line is a spring note, so watch for winter changes."
+  }
+ },
+ {
+  "slug": "providence-ri-dash-bicycle-wednesday-no-drop-ride",
+  "name": "Dash Bicycle Wednesday No-Drop Recovery Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "seasonal-break",
+  "city": "Providence",
+  "neighborhood": null,
+  "region": "Rhode Island",
+  "state": "RI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Wednesday mornings, 7:00 am sharp from Dash Bicycle in spring through fall. Not running now: the shop says the Wednesday rides will be back in the spring.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "spring-fall",
+  "season_months": null,
+  "start_location": {
+   "name": "Dash Bicycle Shop",
+   "address": "230 Broadway, Providence, RI 02903"
+  },
+  "distance_km": null,
+  "distance_miles": 25,
+  "duration": null,
+  "duration_min": null,
+  "pace": "About 15 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Dash Bicycle",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Back in spring 2027. Helmets required. Join the shop's Strava club for updates.",
+  "description": "A no-drop recovery road ride from the shop, typically 25 miles at about 15 mph. Helmets are mandatory, lycra is not. The route is on Ride with GPS.",
+  "links": {
+   "website": "https://www.dashbicycle.com/service/group-rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/1166157",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.dashbicycle.com/service/group-rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Dash Bicycle's group-rides page says the Wednesday 7 am no-drop recovery rides will be back in the spring, on a page with a 2026 copyright (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.dashbicycle.com/service/group-rides/",
+   "feed_url": null,
+   "notes": "Watch for the spring restart. The shop's Strava club (1166157) and Instagram @dashbicycle carry the latest."
+  }
+ },
+ {
+  "slug": "barre-vt-vermont-bicycle-shop-thursday-millstone-adventure-hour",
+  "name": "Thursday Night Millstone Adventure Hour",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Barre",
+  "neighborhood": null,
+  "region": "Vermont",
+  "state": "VT",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Thursdays, gather 5:15 pm, wheels roll 5:30 pm from the Brook St. Garage at the Millstone Trails parking. Lights required.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Brook St. Garage, Millstone Trails parking",
+   "address": "Brook St, Barre, VT"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 1.5 hours",
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "groups",
+  "host": {
+   "name": "Vermont Bicycle Shop",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Free. Fill out the 2026 rider waiver online and pick up the sticker at the shop. Helmet and lights required. Check the blog on the day, rain cancels.",
+  "description": "A weekly mountain bike ride on the Millstone Trails. It opens with a beginner-friendly warm-up loop of 40 to 45 minutes, then continues for another 40 to 45 minutes for intermediate riders. The shop asks riders to make room for BIPOC, women and queer folks.",
+  "links": {
+   "website": "https://vermontbicycleclub.com/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner",
+   "lgbtq",
+   "wtf",
+   "bipoc"
+  ],
+  "sources": [
+   "https://vermontbicycleclub.com/2026/08/27/its-on-millstone-mtb-ride-tonight/",
+   "https://vermontbicycleclub.com/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-08-27",
+  "evidence": "The Vermont Bicycle Club blog post of Aug 27, 2026 announces the Thursday Night Millstone Adventure Hour, gather 5:15, roll 5:30, lights required (fetched Oct 1, 2026). Newest post about it is five weeks old.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://vermontbicycleclub.com/category/grouprides/",
+   "feed_url": null,
+   "notes": "The shop posts each week's go or no-go on this blog. Last year the series ran into late October."
+  }
+ },
+ {
+  "slug": "south-burlington-vt-gmbc-saturday-vp-training-ride",
+  "name": "GMBC Saturday (VP) Training Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "South Burlington",
+  "neighborhood": null,
+  "region": "Vermont",
+  "state": "VT",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays, April to fall. Start time and place are announced on the GMBC email list, usually by Thursday, and change through the year.",
+  "days": [
+   "sat"
+  ],
+  "time_local": null,
+  "start_hhmm": null,
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Announced on the GMBC email list",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Green Mountain Bicycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "GMBC says membership is not required. Sign the club waiver once a season and register for the ride.",
+  "description": "The club's Saturday training ride. GMBC posts the start, route and weather call to its email list by Thursday and asks riders to register. Lights are recommended all season and routes are on Ride with GPS.",
+  "links": {
+   "website": "https://thegmbc.com/sat-training-rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://thegmbc.com/sat-training-rides/",
+   "https://thegmbc.com/gravel-rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "GMBC's events calendar lists 'Sat VP Training Rides' for Oct 3 and Oct 10, 2026 (fetched Oct 1, 2026). The page gives no start time or pace.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://thegmbc.com/sat-training-rides/",
+   "feed_url": null,
+   "notes": "Calendar entries are all-day with no time. The time is emailed to the club list."
+  }
+ },
+ {
+  "slug": "dover-nh-dover-cyclery-tuesday-night-ride",
+  "name": "Dover Cyclery Tuesday Night Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Dover",
+  "neighborhood": null,
+  "region": "New Hampshire",
+  "state": "NH",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Tuesdays at about 5:30 pm from Dover Cyclery. March through October.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Mar-Oct",
+  "season_months": {
+   "start": 3,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Dover Cyclery",
+   "address": "12 Chestnut St, Dover, NH 03820"
+  },
+  "distance_km": null,
+  "distance_miles": "30-45",
+  "duration": null,
+  "duration_min": null,
+  "pace": "About 19-20 mph",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Dover Cyclery",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Daylight is short in October, bring lights. Ask in the shop for ride reminders.",
+  "description": "An intermediate road ride rolling out of the shop at about 5:30 pm, at 19 to 20 mph for 30 to 45 miles depending on daylight. Talk to Mike in the shop to get on the reminder list.",
+  "links": {
+   "website": "https://dovercyclery.net/group-rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://dovercyclery.net/group-rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Dover Cyclery's group-rides page lists the Tuesday Night Ride at around 5:30 pm, intermediate, 19-20 mph, on a page with a 2026 copyright (fetched Oct 1, 2026). Nothing on it is dated after April 2026.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://dovercyclery.net/group-rides/",
+   "feed_url": null,
+   "notes": "Ride reminders and Strava invites come from the shop. Winter is fat bikes."
+  }
+ },
+ {
+  "slug": "manchester-nh-qc-bike-friday-evening-spin",
+  "name": "Friday Evening Spin",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Manchester",
+  "neighborhood": null,
+  "region": "New Hampshire",
+  "state": "NH",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Selected Fridays, 5:30 pm from QC Bike, 35 Elm St. Left in 2026: Oct 2, Oct 16 and Oct 30 (Halloween ride).",
+  "days": [
+   "fri"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "irregular",
+  "monthly_rule": null,
+  "season": "May-Oct",
+  "season_months": {
+   "start": 5,
+   "end": 10
+  },
+  "start_location": {
+   "name": "QC Bike",
+   "address": "35 Elm St, Manchester, NH 03101"
+  },
+  "distance_km": null,
+  "distance_miles": 10,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Queen City Bicycle Collective",
+   "type": "nonprofit"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Bring lights. Sign the 2026 group ride waiver once. Rain cancels (two rides were called off in 2026). Bikes can be rented in advance, call 603-493-1720.",
+  "description": "A relaxed Friday evening ride of about 10 miles on Manchester's paved trails and quieter streets. Riders are welcome at a local brewery afterward. QC Bike runs these to help people get comfortable riding around the city.",
+  "links": {
+   "website": "https://qcbike.org/group-rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/qcbike",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "sources": [
+   "https://qcbike.org/group-rides/",
+   "https://www.strava.com/clubs/qcbike"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "QC Bike's 2026 group-ride schedule lists Friday Evening Spin for Oct 2, Oct 16 and Oct 30, 2026 at 5:30 pm (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://qcbike.org/group-rides/",
+   "feed_url": null,
+   "notes": "The page carries the full season schedule with cancellations. QC Bike also posts on its calendar and Strava club."
+  }
+ },
+ {
+  "slug": "portland-me-forest-city-cycling-saturday-morning-ride",
+  "name": "Forest City Cycling Saturday Morning Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Portland",
+  "neighborhood": null,
+  "region": "Maine",
+  "state": "ME",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday, typically 8:00 am, from the Radio Tower parking lot behind 15 Baxter Blvd. The time moves with the weather.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "spring-fall",
+  "season_months": null,
+  "start_location": {
+   "name": "Radio Tower parking lot, behind 15 Baxter Blvd (next to Back Cove Hannaford)",
+   "address": "15 Baxter Blvd, Portland, ME 04101"
+  },
+  "distance_km": null,
+  "distance_miles": "35-65",
+  "duration": null,
+  "duration_min": null,
+  "pace": "16.5-18 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Forest City Cycling",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "First-timers and visitors welcome. Check the club Strava page or blog for each Saturday's start. Lights if the start is dark.",
+  "description": "An inclusive, moderately paced, no-drop road ride of 35 to 65 miles on a different route each week. The club calls it the Sunday drive of the weekly schedule. It is good training for charity rides and a way into group riding.",
+  "links": {
+   "website": "https://www.forestcitycycling.org/rideandevents",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/forestcity",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.forestcitycycling.org/rideandevents",
+   "https://www.strava.com/clubs/forestcity"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Forest City Cycling's rides page lists the weekly Saturday Morning Ride, typically 8:00, and also lists its Oct 10 and Oct 24, 2026 events (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.forestcitycycling.org/rideandevents",
+   "feed_url": null,
+   "notes": "Each week's route and any change goes on the club's Strava page and blog."
+  }
+ },
+ {
+  "slug": "portland-me-forest-city-cycling-monday-night-ride",
+  "name": "Forest City Cycling Monday Night Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Portland",
+  "neighborhood": null,
+  "region": "Maine",
+  "state": "ME",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Mondays from the Radio Tower parking lot behind 15 Baxter Blvd. 5:30 pm in April and September, 6:00 pm May to August. October time not posted.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Radio Tower parking lot, behind 15 Baxter Blvd (next to Back Cove Hannaford)",
+   "address": "15 Baxter Blvd, Portland, ME 04101"
+  },
+  "distance_km": null,
+  "distance_miles": 30,
+  "duration": null,
+  "duration_min": null,
+  "pace": "B 17-18 mph; A 19-21 mph; Elite 20-23 mph",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Forest City Cycling",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Route and weekly changes are on the club's Strava page. Check the October start time there. Bring lights.",
+  "description": "A rolling loop to a scenic oceanfront turnaround on Cousins Island and back, about 30 miles. Elite, A and B groups run at 17 to 23 mph and regroup at the turnaround.",
+  "links": {
+   "website": "https://www.forestcitycycling.org/rideandevents",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/forestcity",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.forestcitycycling.org/rideandevents",
+   "https://www.strava.com/clubs/forestcity"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Forest City Cycling's rides page lists the weekly Monday Night Ride with 5:30 and 6:00 pm starts, and lists its Oct 10 and Oct 24, 2026 events (fetched Oct 1, 2026). It does not give an October start.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.forestcitycycling.org/rideandevents",
+   "feed_url": null,
+   "notes": "Each week's route and any change goes on the club's Strava page and blog."
+  }
+ },
+ {
+  "slug": "portland-me-portland-velo-club-saturday-morning-ride",
+  "name": "Portland Velo Club Saturday Morning Ride (SMR)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Portland",
+  "neighborhood": null,
+  "region": "Maine",
+  "state": "ME",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday, 7:30 am from CycleMania, March to the last Saturday before Thanksgiving. Last official ride of 2026 is Nov 14.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Mar-Nov",
+  "season_months": {
+   "start": 3,
+   "end": 11
+  },
+  "start_location": {
+   "name": "CycleMania",
+   "address": "65 Cove St, Portland, ME 04101"
+  },
+  "distance_km": null,
+  "distance_miles": 30,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Over 23 mph average (men's ride)",
+  "drop_policy": "drop",
+  "host": {
+   "name": "Portland Velo Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Group riding skills required. Road bike only, no tri bikes. Coffee at Coffee by Design after the last ride of the season.",
+  "description": "A team training ride open to all who know group riding. About 30 miles out to Prouts Neck and back along the shore, with four sprints. It is the biggest competitive ride in Maine, over 23 mph on the men's ride. This is a fast ride, not a beginner one.",
+  "links": {
+   "website": "https://portlandveloclub.wordpress.com/pvc-group-rides/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://portlandveloclub.wordpress.com/pvc-group-rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Portland Velo Club's group-rides page lists the Saturday Morning Ride at 7:30 am from CycleMania, with a last official ride on Nov 14, 2026 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://portlandveloclub.wordpress.com/pvc-group-rides/",
+   "feed_url": null,
+   "notes": "The page carries dated start times for the Wednesday ride and the season end for this one."
+  }
+ },
+ {
+  "slug": "orono-me-rose-bike-tuesday-beginner-mtb-ride",
+  "name": "Rose Bike Tuesday Beginner MTB Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Orono",
+  "neighborhood": null,
+  "region": "Maine",
+  "state": "ME",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Every Tuesday, 5:45 pm from Old Town Elementary School. About an hour. Ran through late October last year.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "5:45 pm",
+  "start_hhmm": "17:45",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "May-Oct",
+  "season_months": {
+   "start": 5,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Old Town Elementary School",
+   "address": "Old Town, ME"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 1 hour",
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Rose Bike",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Call the shop (207-866-3525) if you are new to this ride. Helmet required, annual waiver online. Bring a headlight for any night ride. Facebook has last-minute changes.",
+  "description": "A gentle, non-technical mountain bike ride for true beginners to learn the basics of handling and get to know local trails. About an hour. Rose Bike asks new riders to call the shop first.",
+  "links": {
+   "website": "https://www.rosebike.com/events/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner",
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.rosebike.com/events/",
+   "https://calendar.google.com/calendar/ical/7hjotrffh9ei6900fnonkg87bc%40group.calendar.google.com/public/basic.ics"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Rose Bike's events page, headed 'Group Rides 2026', lists Tuesdays 5:45 pm Beginner MTB ride; its public calendar carries the weekly series from May 12, 2026 with no end date (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://www.rosebike.com/events/",
+   "feed_url": "https://calendar.google.com/calendar/ical/7hjotrffh9ei6900fnonkg87bc%40group.calendar.google.com/public/basic.ics",
+   "notes": "Shop's public Google Calendar. Last year's series were marked 'finished for the year' around Oct 21-22."
+  }
+ },
+ {
+  "slug": "orono-me-rose-bike-tuesday-mixed-surface-ride",
+  "name": "Rose Bike Tuesday Mixed Surface Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Orono",
+  "neighborhood": null,
+  "region": "Maine",
+  "state": "ME",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "gravel"
+  ],
+  "schedule": "Every Tuesday, 5:30 pm from Rose Bike, 9 Pine St. About an hour and a half.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Rose Bike",
+   "address": "9 Pine St, Orono, ME 04473"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 1.5 hours",
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Rose Bike",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Helmet required, annual waiver online. Check Facebook for changes. Shop phone 207-866-3525.",
+  "description": "A mellow ride on road, dirt and gravel, suitable for most bikes except road bikes. A reasonably wide tire is recommended. About an hour and a half, no-drop, often ending at a bar or cafe.",
+  "links": {
+   "website": "https://www.rosebike.com/events/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.rosebike.com/events/",
+   "https://calendar.google.com/calendar/ical/7hjotrffh9ei6900fnonkg87bc%40group.calendar.google.com/public/basic.ics"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Rose Bike's events page, headed 'Group Rides 2026', lists Tuesdays 5:30 pm Mixed Surface Ride; its public calendar carries the weekly series with no end date (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://www.rosebike.com/events/",
+   "feed_url": "https://calendar.google.com/calendar/ical/7hjotrffh9ei6900fnonkg87bc%40group.calendar.google.com/public/basic.ics",
+   "notes": "Shop's public Google Calendar. Last year's series were marked 'finished for the year' around Oct 21-22."
+  }
+ },
+ {
+  "slug": "hyannis-ma-sea-sports-wednesday-night-lights-mtb",
+  "name": "Sea Sports Wednesday Night Lights MTB",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "seasonal-break",
+  "city": "Hyannis",
+  "neighborhood": null,
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Wednesdays, 5:30 pm from the shop, starting Oct 28, 2026. Front light required.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Oct 28-winter",
+  "season_months": null,
+  "start_location": {
+   "name": "Sea Sports Cyclery & Outdoor",
+   "address": "1441 Iyannough Rd (Rt 132), Hyannis, MA 02601"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "1.5-2 hours",
+  "duration_min": null,
+  "pace": "Moderate",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Sea Sports Cyclery & Outdoor",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Starts Oct 28, 2026. Front light required, rear blinky recommended. Helmet required, waiver once a year. Ask ahead for a demo bike or lights.",
+  "description": "A night mountain bike ride on local trails straight from the shop, moderate pace, 1.5 to 2 hours. Demo bikes and lights may be available with advance notice.",
+  "links": {
+   "website": "https://www.capecodseasports.com/about/group-rides-clubs-and-community-pg85.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/sea-sports-cycling",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.capecodseasports.com/about/group-rides-clubs-and-community-pg85.htm",
+   "https://www.strava.com/clubs/sea-sports-cycling"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Sea Sports' group-rides page says 'Wednesday Night Lights MTB, Wednesday starting 10/28', rolling 5:30 pm from the shop, on a page with 2026 events (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.capecodseasports.com/about/group-rides-clubs-and-community-pg85.htm",
+   "feed_url": null,
+   "notes": "Ride notices go to the Sea Sports Cycling Strava club."
+  }
+ },
+ {
+  "slug": "middletown-ct-pedal-power-tuesday-night-mountain-bike-ride",
+  "name": "Pedal Power Tuesday Night Mountain Bike Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Middletown",
+  "neighborhood": null,
+  "region": "Connecticut",
+  "state": "CT",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Tuesdays, 6:45 pm, from late September (end date not posted). Meets at Middlesex, location on the Ride Alert page.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:45 pm",
+  "start_hhmm": "18:45",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Middlesex (see the Ride Alert page)",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Casual pace, advanced tech",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Pedal Power",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Sign Pedal Power's annual waiver. Dark by the end, bring lights. Check the Ride Alert page before you go.",
+  "description": "A fall mountain bike ride from the Middletown shop for intermediate and advanced riders. Casual pace, advanced technical trails. A waiver is required.",
+  "links": {
+   "website": "https://www.pedalpowerct.com/events/weekly-group-rides-ride-alert-pg505.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.pedalpowerct.com/events/weekly-group-rides-ride-alert-pg505.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Pedal Power's weekly rides page lists 'Tuesdays at 6:45 PM, late September to ??, Middletown Intermediate/Advanced Mountain Bike Ride' beside notes that the road season is over (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.pedalpowerct.com/events/weekly-group-rides-ride-alert-pg505.htm",
+   "feed_url": null,
+   "notes": "The Ride Alert page carries route and weather status; the same page lists the shop's other rides."
+  }
+ },
+ {
+  "slug": "west-greenwich-ri-rhode-island-nemba-big-river-thursday-night-ride",
+  "name": "Big River Thursday Night Ride (RINEMBA)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "West Greenwich",
+  "neighborhood": null,
+  "region": "Rhode Island",
+  "state": "RI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Thursdays, 5:30-7:30 pm from the Exit 21 Park and Ride, West Greenwich. Fast and mellow groups.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Exit 21 Park and Ride",
+   "address": "Exit 21 Park and Ride, West Greenwich, RI"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Two groups, fast and mellow",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Rhode Island NEMBA",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Night ride, bring a bike light. Register through the NEMBA event listing.",
+  "description": "A weekly night mountain bike ride at Big River Management Area, a large trail network off I-95. NEMBA runs it as two groups, fast and mellow, so there is a pace for most riders.",
+  "links": {
+   "website": "https://www.nemba.org/chapters/rhode-island-nemba",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.nemba.org/chapters/rhode-island-nemba"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Rhode Island NEMBA's chapter page lists the recurring Big River night ride series for Thu Oct 1, 2026, 5:30-7:30 pm from the Exit 21 Park and Ride, in two groups (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.nemba.org/chapters/rhode-island-nemba",
+   "feed_url": null,
+   "notes": "The chapter page lists the next date of each recurring night ride."
+  }
+ },
+ {
+  "slug": "westerly-ri-rhode-island-nemba-woody-hill-monday-night-ride",
+  "name": "Woody Hill Monday Night Ride (RINEMBA)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Westerly",
+  "neighborhood": null,
+  "region": "Rhode Island",
+  "state": "RI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Mondays, 6:00-8:00 pm from the Westerly Youth Lacrosse Fields. Intermediate pace.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Westerly Youth Lacrosse Fields",
+   "address": "Westerly, RI"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Intermediate",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Rhode Island NEMBA",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Night ride, bring lights. Register through the NEMBA event listing.",
+  "description": "A weekly night mountain bike ride at Woody Hill at an intermediate pace. NEMBA says a second group may form if needed.",
+  "links": {
+   "website": "https://www.nemba.org/chapters/rhode-island-nemba",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.nemba.org/chapters/rhode-island-nemba"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Rhode Island NEMBA's chapter page lists the recurring Woody Hill night ride series for Mon Oct 5, 2026, 6-8 pm at the Westerly Youth Lacrosse Fields, rated Intermediate (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.nemba.org/chapters/rhode-island-nemba",
+   "feed_url": null,
+   "notes": "The chapter page lists the next date of each recurring night ride."
+  }
+ },
+ {
+  "slug": "exeter-ri-rhode-island-nemba-arcadia-tuesday-night-ride",
+  "name": "Arcadia Tuesday Night Ride (RINEMBA)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Exeter",
+  "neighborhood": null,
+  "region": "Rhode Island",
+  "state": "RI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Tuesdays, 5:30-7:30 pm from the Arcadia Midway parking lot, Exeter. Intermediate, 8-12 miles.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Arcadia Management Area, Midway parking",
+   "address": "Arcadia Management Area, Exeter, RI"
+  },
+  "distance_km": null,
+  "distance_miles": "8-12",
+  "duration": null,
+  "duration_min": null,
+  "pace": "Intermediate",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Rhode Island NEMBA",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Night ride, bring lights. Register through the NEMBA event listing.",
+  "description": "A weekly night mountain bike ride at Arcadia at an intermediate pace, 8 to 12 miles.",
+  "links": {
+   "website": "https://www.nemba.org/chapters/rhode-island-nemba",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.nemba.org/chapters/rhode-island-nemba"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Rhode Island NEMBA's chapter page lists the recurring Arcadia night ride series for Tue Oct 6, 2026, 5:30-7:30 pm at the Arcadia Management Area Midway parking, rated Intermediate (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.nemba.org/chapters/rhode-island-nemba",
+   "feed_url": null,
+   "notes": "The chapter page lists the next date of each recurring night ride."
+  }
+ },
+ {
+  "slug": "holliston-ma-blackstone-valley-nemba-thursday-vietnam-intermediate-ride",
+  "name": "Blackstone Valley NEMBA Thursday Vietnam Intermediate Ride (with lights)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Holliston",
+  "neighborhood": null,
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Thursdays, meet 5:30 pm, roll 5:45 pm from the Adams St parking lot in Holliston. About 7 miles, intermediate, lights.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "5:45 pm",
+  "start_hhmm": "17:45",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Adams St parking lot (Vietnam trails)",
+   "address": "Adams St, Holliston, MA"
+  },
+  "distance_km": null,
+  "distance_miles": 7,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Intermediate",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Blackstone Valley NEMBA",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Bring lights. Register through the NEMBA event listing.",
+  "description": "A weekly evening mountain bike ride on the Vietnam trail network, about 7 miles at an intermediate level. Lights are part of the ride name.",
+  "links": {
+   "website": "https://www.nemba.org/chapters/blackstone-valley-nemba",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.nemba.org/chapters/blackstone-valley-nemba"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Blackstone Valley NEMBA's chapter page lists the recurring Vietnam Intermediate Group Ride (With Lights) for Thu Oct 1, 2026, 5:30-7:30 pm at the Adams St lot, Holliston (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.nemba.org/chapters/blackstone-valley-nemba",
+   "feed_url": null,
+   "notes": "The chapter page lists the next date of each recurring ride."
+  }
+ },
+ {
+  "slug": "framingham-ma-blackstone-valley-nemba-nobscot-friday-rides",
+  "name": "Blackstone Valley NEMBA Nobscot Friday Rides",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Framingham",
+  "neighborhood": null,
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Every Friday afternoon, 1:30-4:00 pm at the Nobscot trail network, 1234 Edgell Rd, Framingham.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "1:30 pm",
+  "start_hhmm": "13:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Nobscot trail network",
+   "address": "1234 Edgell Rd, Framingham, MA"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Blackstone Valley NEMBA",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Register through the NEMBA event listing.",
+  "description": "A weekday-afternoon mountain bike ride on the Nobscot trails in Framingham and Sudbury, every Friday.",
+  "links": {
+   "website": "https://www.nemba.org/chapters/blackstone-valley-nemba",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.nemba.org/chapters/blackstone-valley-nemba"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Blackstone Valley NEMBA's chapter page lists the recurring Nobscot Friday Rides for Fri Oct 2, 2026, 1:30-4 pm at 1234 Edgell Rd, Framingham (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.nemba.org/chapters/blackstone-valley-nemba",
+   "feed_url": null,
+   "notes": "The chapter page lists the next date of each recurring ride."
+  }
+ },
+ {
+  "slug": "uxbridge-ma-blackstone-valley-nemba-dam-nice-ride",
+  "name": "Blackstone Valley NEMBA Dam Nice Ride (West Hill Dam)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Uxbridge",
+  "neighborhood": null,
+  "region": "Massachusetts",
+  "state": "MA",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "mtb"
+  ],
+  "schedule": "Sundays, 8:30-10:30 am at West Hill Dam, 370 Hartford Ave E, Uxbridge. New parking at Rice City since Sept 20.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "8:30 am",
+  "start_hhmm": "08:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "West Hill Dam, Rice City parking",
+   "address": "370 Hartford Ave E, Uxbridge, MA"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Blackstone Valley NEMBA",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Register through the NEMBA event listing.",
+  "description": "A Sunday-morning mountain bike ride at West Hill Dam, an Army Corps of Engineers reserve with trails for beginner to intermediate riders and a pump track.",
+  "links": {
+   "website": "https://www.nemba.org/chapters/blackstone-valley-nemba",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.nemba.org/chapters/blackstone-valley-nemba"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Blackstone Valley NEMBA's chapter page lists the recurring Dam Nice Ride for Sun Oct 4, 2026, 8:30-10:30 am at 370 Hartford Ave E, Uxbridge, with new parking at Rice City from Sept 20 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.nemba.org/chapters/blackstone-valley-nemba",
+   "feed_url": null,
+   "notes": "The chapter page lists the next date of each recurring ride."
+  }
+ }
+]

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:washington-dc-fabulosity-bike-rides-third-saturday-ride@cycleforchang
+ e.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261017T100000
+DTEND;TZID=America/New_York:20261017T120000
+RRULE:FREQ=MONTHLY;BYDAY=3SA;UNTIL=20270228T235959Z
+SUMMARY:Fabulosity Bike Ride — Washington\, DC
+LOCATION:National Museum of African American History and Culture\, 1400 C
+ onstitution Ave NW\, Washington\, DC 20560
+DESCRIPTION:Schedule: Third Saturday of every month\, 10:00 am\, from the
+  National Museum of African American History and Culture.\nConfirm with 
+ the host before you go.\nhttps://cycleforchange.org/rides/washington-dc-
+ fabulosity-bike-rides-third-saturday-ride/
+URL:https://cycleforchange.org/rides/washington-dc-fabulosity-bike-rides-
+ third-saturday-ride/
+END:VEVENT
+END:VCALENDAR

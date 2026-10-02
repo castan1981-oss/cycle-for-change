@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:easton-pa-launchpad-bikes-coffee-loop@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261004T073300
+DTEND;TZID=America/New_York:20261004T093300
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Coffee Loop (Launchpad Bikes) — Easton\, PA
+LOCATION:Center Square (the circle)\, downtown Easton\, 41 Center Square\
+ , Easton\, PA 18042
+DESCRIPTION:Pace: Casual\, 10 to 13 mph averages\, no-drop.\nNo-drop.\nSc
+ hedule: Every Sunday\, meet 7:15 am at Center Square\, leaves promptly a
+ t 7:33 am; ends at Three Birds Coffee House..\nConfirm with the host bef
+ ore you go.\nhttps://cycleforchange.org/rides/easton-pa-launchpad-bikes-
+ coffee-loop/
+URL:https://cycleforchange.org/rides/easton-pa-launchpad-bikes-coffee-loo
+ p/
+END:VEVENT
+END:VCALENDAR

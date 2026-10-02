@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:redding-ca-shasta-wheelmen-weekend-rides@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T083000
+DTEND;TZID=America/Los_Angeles:20261003T103000
+RRULE:FREQ=WEEKLY;BYDAY=SA,SU;UNTIL=20270228T235959Z
+SUMMARY:Weekend Club Rides — Redding\, CA
+LOCATION:Varies by ride: Sundial Bridge parking lot\, CVS at 3375 Placer 
+ St\, Anderson Starbucks\, Palo Cedro park and ride
+DESCRIPTION:Pace: posted on each ride (C/D on the Oct 4 ride).\nSchedule:
+  Saturdays and Sundays\, 8:30 am in October (8:00 in September\, 7:00 in
+  summer). The start changes by ride: Sundial Bridge lot\, the CVS on Pla
+ cer St\, Anderson Starbucks or the Palo Cedro park and ride..\nConfirm w
+ ith the host before you go.\nhttps://cycleforchange.org/rides/redding-ca
+ -shasta-wheelmen-weekend-rides/
+URL:https://cycleforchange.org/rides/redding-ca-shasta-wheelmen-weekend-r
+ ides/
+END:VEVENT
+END:VCALENDAR

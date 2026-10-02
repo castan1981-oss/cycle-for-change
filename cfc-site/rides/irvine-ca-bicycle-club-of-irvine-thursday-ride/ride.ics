@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:irvine-ca-bicycle-club-of-irvine-thursday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261008T090000
+DTEND;TZID=America/Los_Angeles:20261008T110000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:BCI Thursday Ride — Irvine\, CA
+LOCATION:Deerfield Park\, 55 Deerwood West\, Irvine\, CA 92604
+DESCRIPTION:Pace: Friendly and a bit slower than race or e-bike speeds; t
+ he group regroups.\nSchedule: Every Thursday\, 9:00 am\, from Deerfield 
+ Park\, Irvine. Mid-week long-distance training ride..\nConfirm with the 
+ host before you go.\nhttps://cycleforchange.org/rides/irvine-ca-bicycle-
+ club-of-irvine-thursday-ride/
+URL:https://cycleforchange.org/rides/irvine-ca-bicycle-club-of-irvine-thu
+ rsday-ride/
+END:VEVENT
+END:VCALENDAR

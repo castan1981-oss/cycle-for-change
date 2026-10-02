@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mill-valley-ca-tam-velo-club-saturday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T083500
+DTEND;TZID=America/Los_Angeles:20261003T103500
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Tam Velo Club Saturday Ride — Mill Valley\, CA
+LOCATION:Equator Coffees at Proof Lab\, 244 Shoreline Hwy\, Mill Valley\,
+  CA 94941
+DESCRIPTION:Pace: 14–20 mph\, depending on the ride.\nSchedule: Every S
+ aturday\, meet 8:30 am\, roll 8:35 am\, from Equator Coffees at Proof La
+ b.\nConfirm with the host before you go.\nhttps://cycleforchange.org/rid
+ es/mill-valley-ca-tam-velo-club-saturday-ride/
+URL:https://cycleforchange.org/rides/mill-valley-ca-tam-velo-club-saturda
+ y-ride/
+END:VEVENT
+END:VCALENDAR

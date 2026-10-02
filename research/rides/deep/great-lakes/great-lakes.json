@@ -1,0 +1,1911 @@
+[
+ {
+  "slug": "newport-ky-tuesday-night-worlds-tnw",
+  "name": "Tuesday Night Worlds (TNW)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Newport",
+  "neighborhood": null,
+  "region": "Kentucky",
+  "state": "KY",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday, 6:00 pm, from the parking lot at Orchard and 7th Streets in Newport. Several groups, from social to fast. The calendar lists Oct 13 as the last regular ride, then a scavenger hunt on Oct 20 and Biketoberfest on Oct 27.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "through Oct 27, 2026",
+  "season_months": null,
+  "start_location": {
+   "name": "Parking lot at Orchard and 7th Streets, near Reser Bicycle Outfitters",
+   "address": "16 E 7th St, Newport, KY"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "groups",
+  "host": {
+   "name": "Tuesday Night Worlds (TNW)",
+   "type": "collective"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Pick the group that fits your pace. Check the TNW Facebook group or Instagram before each ride for routes and any change.",
+  "description": "A weekly Tuesday-night ride that pulls riders in from across Cincinnati and Northern Kentucky. It offers a social group, a steady group and faster groups, so riders pick their own pace. Routes and groups change week to week; the organizers post updates on a Facebook group and Instagram.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://events.queencity.bike/event/ltu2svo0dnaoj2uorasu5o162s_20261006T220000Z",
+   "https://events.queencity.bike/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Queen City Bike's calendar lists Tuesday Night Worlds for Oct 6, 13, 20 and 27, 2026 from the Newport lot; the event text says Oct 13 is the last regular ride (read Oct 1, 2026). The calendar prints times in UTC: 10:00 PM UTC is 6:00 pm Eastern.",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://events.queencity.bike/event/ltu2svo0dnaoj2uorasu5o162s_20261006T220000Z",
+   "feed_url": null,
+   "notes": "Queen City Bike's calendar shows each date. The organizers post route and group changes on the TNW Facebook group and Instagram. Regular rides end Oct 13."
+  }
+ },
+ {
+  "slug": "goshen-oh-cincinnati-cycle-club-saturday-breakfast-ride",
+  "name": "Saturday Breakfast Ride (Goshen)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Goshen",
+  "neighborhood": null,
+  "region": "Ohio",
+  "state": "OH",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays from the Goshen Kroger lot. Oct 3: 9:00 am. From Oct 17: 8:00 am (the Oct 10 listing shows no time). The club calendar lists it through Oct 31, 2026.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Goshen Kroger parking lot",
+   "address": "6725 Dick Flynn Blvd, Goshen, OH 45039"
+  },
+  "distance_km": 56,
+  "distance_miles": 35,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Several speed groups; pick one you can keep up with",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Cincinnati Cycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Registration is not required but the club appreciates it. Helmet required. Download the RideWithGPS route before you go.",
+  "description": "A 35-mile Saturday ride over gentle rolling roads east of Cincinnati, with a mid-ride stop at Plainfolk Cafe. There are several speed groups, so new riders pick a group they can keep up with. Route files are on RideWithGPS.",
+  "links": {
+   "website": "https://www.cincinnaticycleclub.org/content.aspx?page_id=22&club_id=772752&module_id=337793",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://ridewithgps.com/routes/51771096"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.cincinnaticycleclub.org/content.aspx?page_id=4001&club_id=772752&action=cira&vm=Future&sif=0",
+   "https://www.cincinnaticycleclub.org/content.aspx?page_id=22&club_id=772752&module_id=337793"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Cincinnati Cycle Club's calendar lists the Saturday Breakfast Ride from the Goshen Kroger for Oct 3 (9:00 AM), Oct 17, 24 and 31 (8:00 AM) and Oct 10, 2026 (read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.cincinnaticycleclub.org/content.aspx?page_id=4001&club_id=772752&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "The club calendar lists each date with its start time. The start moves with daylight. The ride rider-line is a Google Group the page links to."
+  },
+  "start_times": [
+   {
+    "from": "2026-10-17",
+    "start_hhmm": "08:00"
+   }
+  ]
+ },
+ {
+  "slug": "cold-spring-ky-cincinnati-cycle-club-aterhamtning-thursday-ride",
+  "name": "Återhämtning's Thursday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Cold Spring",
+  "neighborhood": null,
+  "region": "Kentucky",
+  "state": "KY",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Thursdays, 5:45 pm, from the parking lot at East Alexandria Pike and Route 27 in Campbell County, Kentucky. The club calendar lists it through Oct 29, 2026.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "5:45 pm",
+  "start_hhmm": "17:45",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Parking lot at East Alexandria Pike and Route 27",
+   "address": "East Alexandria Pike and US 27, Cold Spring, KY"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Advanced; 25 to 40 miles depending on group and time of year",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Cincinnati Cycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Bring lights as the evenings get darker. The route link is on the club calendar event.",
+  "description": "An advanced, no-drop ride through the hills of Campbell County, Kentucky. The ride regroups at intersections and at the tops of hills. Routes run 25 to 40 miles depending on the group and the time of year.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.cincinnaticycleclub.org/content.aspx?page_id=4001&club_id=772752&action=cira&vm=Future&sif=0"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Cincinnati Cycle Club's calendar lists this ride for Thu Oct 1, 8, 15, 22 and 29, 2026 at 5:45 PM (read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.cincinnaticycleclub.org/content.aspx?page_id=4001&club_id=772752&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "The club calendar lists each Thursday. The town is taken from the street intersection; check the map on the event page."
+  }
+ },
+ {
+  "slug": "bellbrook-oh-dayton-cycling-club-bms-tuesday-thursday-evening-ride",
+  "name": "BMS Tuesday and Thursday Evening Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Bellbrook",
+  "neighborhood": null,
+  "region": "Ohio",
+  "state": "OH",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Tuesdays and Thursdays, 5:30 pm, from Bellbrook Middle School. The club calendar lists Oct 1, 6 and 8, 2026.",
+  "days": [
+   "tue",
+   "thu"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Bellbrook Middle School",
+   "address": "Bellbrook Middle School, Bellbrook, OH"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "A 19-20+ mph, B+/A- 18-19 mph, B 16-17 mph (three groups depending on attendance)",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Dayton Cycling Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Bring a headlight and a taillight.",
+  "description": "A fast-paced evening road ride from Bellbrook Middle School. The club runs three groups depending on who shows up: A at 19 to 20+ mph, B+/A- at 18 to 19 mph and B at 16 to 17 mph.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.daytoncyclingclub.org/content.aspx?page_id=4001&club_id=455464&action=cira&vm=Future&sif=0"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Dayton Cycling Club's calendar lists the BMS ride for Thu Oct 1, Tue Oct 6 and Thu Oct 8, 2026 at 5:30 PM (read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.daytoncyclingclub.org/content.aspx?page_id=4001&club_id=455464&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "The club posts each date a week or two ahead; later dates may not be up yet."
+  }
+ },
+ {
+  "slug": "kalamazoo-mi-kbc-friday-morning-womens-ride",
+  "name": "KBC Friday Morning Women's Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Kalamazoo",
+  "neighborhood": null,
+  "region": "Michigan",
+  "state": "MI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Detroit",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Fridays, May through October, from Texas Drive Park. Rolls at 9:30 am in May, September and October, and 9:00 am in June, July and August.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "9:30 am",
+  "start_hhmm": "09:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "May–Oct",
+  "season_months": {
+   "start": 5,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Texas Drive Park",
+   "address": "6603 Texas Dr, Kalamazoo, MI 49009"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Kalamazoo Bicycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": null,
+  "description": "The Kalamazoo Bicycle Club's women's ride on Friday mornings, run from the same park as the Monday night ride.",
+  "links": {
+   "website": "https://kalamazoobicycleclub.org/rides/club-rides/",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/groups/125535317736/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "wtf"
+  ],
+  "sources": [
+   "https://kalamazoobicycleclub.org/rides/club-rides/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The club's rides page, headed 2026 ride season (March 10 to Oct 31), lists the Friday Morning Women's Ride May through October from Texas Drive Park, 9:30 AM in October (read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://kalamazoobicycleclub.org/rides/club-rides/",
+   "feed_url": null,
+   "notes": "The club's ride page states the season and start times. The last Friday of the season is Oct 30."
+  }
+ },
+ {
+  "slug": "lansing-mi-tcba-monday-night-b-ride-old-town-dewitt",
+  "name": "TCBA Monday Night B Ride (Old Town and DeWitt)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Lansing",
+  "neighborhood": null,
+  "region": "Michigan",
+  "state": "MI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Detroit",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Mondays, 6:00 pm to 7:30 pm, from the Brenke Fish Ladder. The club calendar lists Oct 5, 12, 19 and 26, 2026. Lights required.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Brenke Fish Ladder",
+   "address": "Brenke Fish Ladder, Lansing, MI"
+  },
+  "distance_km": 37,
+  "distance_miles": 23,
+  "duration": null,
+  "duration_min": null,
+  "pace": "15-17 mph, two optional sprints with a regroup",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Tri-County Bicycle Association (TCBA)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Lights are required. Helmets are required on all TCBA rides.",
+  "description": "A 23-mile no-drop road ride through Old Town and DeWitt at 15 to 17 mph, with two optional sprints and a regroup after each. The group hangs out at Ozone's Brew House afterward.",
+  "links": {
+   "website": "http://www.biketcba.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://ridewithgps.com/trips/337953419"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "http://www.biketcba.org/content.aspx?page_id=4001&club_id=604795&action=cira&vm=Future&sif=0",
+   "http://www.biketcba.org/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The TCBA ride calendar lists the B Ride for Mon Oct 5, 12, 19 and 26, 2026 at 6:00 PM from the Brenke Fish Ladder, no drop (read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "http://www.biketcba.org/content.aspx?page_id=4001&club_id=604795&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "TCBA's ClubExpress calendar lists each date and ride leader."
+  }
+ },
+ {
+  "slug": "grand-ledge-mi-tcba-saturday-z-ride",
+  "name": "TCBA Saturday Grand Ledge Z Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Grand Ledge",
+  "neighborhood": null,
+  "region": "Michigan",
+  "state": "MI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Detroit",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays, 9:30 am, from the Grand Ledge Public Schools Administration Building parking lot. The club calendar lists Oct 3, 10, 17, 24 and 31, 2026. No ride if it rains.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:30 am",
+  "start_hhmm": "09:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Grand Ledge Public Schools Administration Building parking lot",
+   "address": "Grand Ledge Public Schools Administration Building, Grand Ledge, MI"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Z ride in TCBA's own rating; 40 to 55 miles",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Tri-County Bicycle Association (TCBA)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Helmets are required on all TCBA rides.",
+  "description": "A 40 to 55 mile Saturday road ride out of Grand Ledge, with a rest and food stop at a coffee shop or gas station.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "http://www.biketcba.org/content.aspx?page_id=4001&club_id=604795&action=cira&vm=Future&sif=0"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The TCBA ride calendar lists the Grand Ledge Z Ride for Sat Oct 3, 10, 17, 24 and 31, 2026 at 9:30 AM (read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "http://www.biketcba.org/content.aspx?page_id=4001&club_id=604795&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "TCBA's ClubExpress calendar lists each date."
+  }
+ },
+ {
+  "slug": "cadillac-mi-nmmba-cadillac-pathway-no-drop-ride",
+  "name": "Cadillac Pathway No Drop Group Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Cadillac",
+  "neighborhood": null,
+  "region": "Michigan",
+  "state": "MI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Detroit",
+  "discipline": [
+   "mtb",
+   "gravel"
+  ],
+  "schedule": "Wednesdays, 6:30 pm, from the Cadillac Pathway trailhead. The NMMBA calendar lists Oct 7, 14, 21 and 28, 2026.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "through October",
+  "season_months": null,
+  "start_location": {
+   "name": "Cadillac Pathway Trailhead",
+   "address": "Cadillac Pathway Trailhead, Cadillac, MI"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Northern Michigan Mountain Bike Association",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": null,
+  "description": "A beginner-friendly, no-drop group ride on the Cadillac Pathway. The group may split into smaller groups as numbers allow, but nobody gets left out. Ride updates go on the association's Facebook page.",
+  "links": {
+   "website": "https://nmmba.net/content.aspx?page_id=22&club_id=533979&module_id=685190",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner",
+   "no-drop"
+  ],
+  "sources": [
+   "https://nmmba.net/content.aspx?page_id=4001&club_id=533979&action=cira&vm=Future&sif=0",
+   "https://nmmba.net/content.aspx?page_id=22&club_id=533979&module_id=685190"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "NMMBA's calendar lists the Cadillac Pathway No Drop Group Ride for Wed Oct 7, 14, 21 and 28, 2026 at 6:30 PM (read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://nmmba.net/content.aspx?page_id=4001&club_id=533979&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "NMMBA's ClubExpress calendar lists each Wednesday. The event text still says 'starting May 14', an old line."
+  }
+ },
+ {
+  "slug": "toledo-oh-tab-saturday-adventure-ride-d-group",
+  "name": "TAB Adventure Ride (D)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Toledo",
+  "neighborhood": null,
+  "region": "Ohio",
+  "state": "OH",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road",
+   "gravel"
+  ],
+  "schedule": "Saturdays, 9:00 am in April and October, 8:00 am May through September. Start location changes weekly; the club posts it on its Facebook group.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Varies by week; posted on the TAB Facebook group",
+   "address": null
+  },
+  "distance_km": 64,
+  "distance_miles": 40,
+  "duration": null,
+  "duration_min": null,
+  "pace": "D pace: 16-18 mph average",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Toledo Area Bicyclists (TAB)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Helmets are required on all TAB rides. No headphones or earbuds. Check the TAB Facebook group for the week's start.",
+  "description": "The slower, no-drop version of Toledo Area Bicyclists' Saturday Adventure Ride, a new group for 2026. It follows the same routes and start as the B group. Routes are generally 40 or more miles.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.toledoareabicyclists.org/MemberOrg/ToledoAreaBicyclistsTAB/Page/ClubRides"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "TAB's club rides page, which lists new 2026 routes and groups, shows the Adventure Ride D group (new, no drop) Saturdays at 9:00 am in April and October (read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.toledoareabicyclists.org/MemberOrg/ToledoAreaBicyclistsTAB/Page/ClubRides",
+   "feed_url": null,
+   "notes": "The ride table gives the monthly start times. Each week's start location is on the TAB Facebook group."
+  }
+ },
+ {
+  "slug": "toledo-oh-tab-saturday-meandering-group",
+  "name": "TAB Meandering Ride (E/F)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Toledo",
+  "neighborhood": null,
+  "region": "Ohio",
+  "state": "OH",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays, 9:00 am in April and October, 8:00 am May through September. Start location changes weekly; the club posts it on its Facebook group.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Varies by week; posted on the TAB Facebook group",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "E/F pace: 16 mph and under",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Toledo Area Bicyclists (TAB)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Helmets are required on all TAB rides. No headphones or earbuds. Check the TAB Facebook group for the week's start.",
+  "description": "Toledo Area Bicyclists' easiest Saturday ride. Routes vary and run 20 to 40 miles, and the ride is no drop.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop",
+   "beginner"
+  ],
+  "sources": [
+   "https://www.toledoareabicyclists.org/MemberOrg/ToledoAreaBicyclistsTAB/Page/ClubRides"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "TAB's club rides page, which lists new 2026 routes and groups, shows the Meandering Group (E/F, no drop) Saturdays at 9:00 am in April and October (read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.toledoareabicyclists.org/MemberOrg/ToledoAreaBicyclistsTAB/Page/ClubRides",
+   "feed_url": null,
+   "notes": "The ride table gives the monthly start times. Each week's start location is on the TAB Facebook group."
+  }
+ },
+ {
+  "slug": "springfield-il-springfield-bicycle-club-wednesday-show-and-go-social-ride",
+  "name": "Wednesday Show & Go Social Ride from Springfield Beer",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Springfield",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Wednesdays, meet 5:30 pm in the lot behind Freddy's at Springfield Beer Company. The club calendar lists it through Oct 28, 2026.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "through Oct 28, 2026",
+  "season_months": null,
+  "start_location": {
+   "name": "Parking lot behind Freddy's, Springfield Beer Company",
+   "address": "3788 Wabash Ave, Springfield, IL 62711"
+  },
+  "distance_km": 24,
+  "distance_miles": 15,
+  "duration": null,
+  "duration_min": null,
+  "pace": "10-12 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Springfield Bicycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Lights are strongly suggested. The calendar posts weather cancellations.",
+  "description": "A casual 15-mile cruise on the Sangamon Valley Trail to Stuart Park and back at 10 to 12 mph, starting and ending at Springfield Beer. Through Oct 7 the calendar calls it the Slow C social ride, no drop; from Oct 7 it is a show and go.",
+  "links": {
+   "website": "https://www.springfieldbicycleclub.com/ride-with-us/",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/500472",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner",
+   "no-drop"
+  ],
+  "sources": [
+   "https://calendar.google.com/calendar/ical/c_70b758d11239668809108c39c0097096d58a9a40dde8370dafa80e9c2119eeb5%40group.calendar.google.com/public/basic.ics",
+   "https://www.springfieldbicycleclub.com/ride-with-us/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Springfield Bicycle Club's public Google Calendar lists the Show & Go Social Ride from Springfield Beer every Wednesday at 5:30 pm through Oct 28, 2026, and the Slow C version through Oct 7 (read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://www.springfieldbicycleclub.com/ride-with-us/",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_70b758d11239668809108c39c0097096d58a9a40dde8370dafa80e9c2119eeb5%40group.calendar.google.com/public/basic.ics",
+   "notes": "The club's Google Calendar lists every ride and cancellations. Weather changes are posted there."
+  }
+ },
+ {
+  "slug": "springfield-il-springfield-bicycle-club-v-park-weekend-rides",
+  "name": "V-Park Weekend Rides",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Springfield",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays and Sundays, 8:00 am, from Vredenburg Park. The club calendar lists Saturdays through Oct 31 and Sundays through Nov 1, 2026.",
+  "days": [
+   "sat",
+   "sun"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Apr–Oct",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Vredenburg Park",
+   "address": "100 Crusaders Rd, Springfield, IL"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Saturday faster steady pace; Sunday steady 18-19 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Springfield Bicycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "No obligation to take a pull; ride within your limits.",
+  "description": "Springfield's weekend fast rides. Saturday is a faster steady pace, still no drop. Sunday is a steady 18 to 19 mph, no drop. Nobody has to take a pull.",
+  "links": {
+   "website": "https://www.springfieldbicycleclub.com/ride-with-us/",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/500472",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://calendar.google.com/calendar/ical/c_70b758d11239668809108c39c0097096d58a9a40dde8370dafa80e9c2119eeb5%40group.calendar.google.com/public/basic.ics"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Springfield Bicycle Club's public Google Calendar lists V-Park Fast Rides at 8:00 AM Saturdays through Oct 31 and Sundays through Nov 1, 2026, both no drop (read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://www.springfieldbicycleclub.com/ride-with-us/",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_70b758d11239668809108c39c0097096d58a9a40dde8370dafa80e9c2119eeb5%40group.calendar.google.com/public/basic.ics",
+   "notes": "The club's Google Calendar lists the ride and the ride leader's notes."
+  }
+ },
+ {
+  "slug": "urbana-il-prairie-cycle-club-friday-kickapoo-rail-trail-ride",
+  "name": "Friday All Generation Kickapoo Rail Trail Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Urbana",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every other Friday, meet 5:45 pm, roll 6:05 pm, from the Urbana Walmart trailhead of the Kickapoo Rail Trail. 2026 dates: Oct 9 and Oct 23 are the last two.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:05 pm",
+  "start_hhmm": "18:05",
+  "frequency": "biweekly",
+  "monthly_rule": null,
+  "season": "Jun–Oct",
+  "season_months": {
+   "start": 6,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Urbana Walmart Kickapoo Rail Trail trailhead",
+   "address": "Kickapoo Rail Trail trailhead at Walmart, Urbana, IL"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "No set pace or distance",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Prairie Cycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Any kind of bike is fine. Volunteers will check tires, chains and brakes before the ride.",
+  "description": "A family ride on the Kickapoo Rail Trail: out and back as far as you like, at no set pace. Kids, parents and grandparents are welcome, on any bike, with trailers, tag-alongs or training wheels. Volunteers can help with chains, tires and brakes before the roll.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "family",
+   "beginner"
+  ],
+  "sources": [
+   "https://www.prairiecycleclub.org/group-rides"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Prairie Cycle Club's group rides page lists 2026 dates for this ride including Oct 9 and Oct 23, 5:45 PM meet and 6:05 PM rollout (read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.prairiecycleclub.org/group-rides",
+   "feed_url": null,
+   "notes": "The club page lists the year's dates. The next dates after Oct 23 will be on the same page."
+  }
+ },
+ {
+  "slug": "champaign-il-prairie-cycle-club-thursday-evening-ride",
+  "name": "Thursday Evening Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Champaign",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Thursdays, 6:00 pm, from Porter Park in Champaign.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Porter Park",
+   "address": "Porter Park, Champaign, IL"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "16-20 mph, 20 to 35 miles",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Prairie Cycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Check the club page for any fall start-time change.",
+  "description": "A brisk evening ride through the Champaign area at 16 to 20 mph, 20 to 35 miles. It is the club's faster weeknight group.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.prairiecycleclub.org/group-rides"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Prairie Cycle Club's group rides page, which carries 2026 dates for other rides, lists the Thursday Evening Ride at 6:00 PM from Porter Park, 16-20 mph (read Oct 1, 2026). The page does not date this ride.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.prairiecycleclub.org/group-rides",
+   "feed_url": null,
+   "notes": "The club page gives the schedule but not dates for this ride. The start time may move with daylight in the fall."
+  }
+ },
+ {
+  "slug": "rockford-il-bbsc-thursday-pedal-to-pec",
+  "name": "Thursday Pedal to Pec",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Rockford",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Thursdays, 9:00 am, from the rear parking lot of Faith Center. The club calendar lists Oct 8 and Oct 15, 2026; Oct 1 was canceled.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Mar–Nov",
+  "season_months": {
+   "start": 3,
+   "end": 11
+  },
+  "start_location": {
+   "name": "Faith Center, rear parking lot (S. Main at Pelley Roads)",
+   "address": "4701 S Main St, Rockford, IL"
+  },
+  "distance_km": 66,
+  "distance_miles": 41,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Moderate (the club's 14-17 mph band)",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Blackhawk Bicycle & Ski Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": null,
+  "description": "A moderate-paced group rides 41 miles of flat-to-rolling road to Pecatonica for breakfast. The club's calendar flags a later fall start time of 9:00 am.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://bbsc.clubexpress.com/content.aspx?page_id=4001&club_id=320178&action=cira&vm=Future&sif=0"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Blackhawk Bicycle & Ski Club's calendar lists Pedal To Pec for Thu Oct 8 and Oct 15, 2026 at 9:00 AM from Faith Center and shows Oct 1 as canceled (read Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://bbsc.clubexpress.com/content.aspx?page_id=4001&club_id=320178&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "The club calendar lists each date and shows cancellations."
+  }
+ },
+ {
+  "slug": "fort-wayne-in-3rvs-wednesday-short-and-sweet-ride",
+  "name": "3RVS Wednesday Short & Sweet Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Fort Wayne",
+  "neighborhood": null,
+  "region": "Indiana",
+  "state": "IN",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Indiana/Indianapolis",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Wednesdays, 6:00 pm, from the Veterans War Memorial. Rides started the week of May 4, 2026. New start location for 2026.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "May–fall",
+  "season_months": null,
+  "start_location": {
+   "name": "Veterans War Memorial",
+   "address": "2122 O'Day Rd, Fort Wayne, IN 46818"
+  },
+  "distance_km": 32,
+  "distance_miles": 20,
+  "duration": null,
+  "duration_min": null,
+  "pace": "B/C pace: 16-19 mph average",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Three Rivers Velo Sport",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Visiting cyclists are welcome. Check the club calendar and Facebook page for cancellations.",
+  "description": "A later, shorter weeknight ride on a flat-to-rolling course around Arcola. It starts at 20 miles and adds distance as the season goes on, at a B/C pace of 16 to 19 mph.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.3rvs.com/ride-schedules/weeknight-rides"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Three Rivers Velo Sport's weeknight rides page says rides start the week of 5/04/2026 and lists the Short & Sweet ride Wednesdays at 6:00 PM from the Veterans War Memorial (read Oct 1, 2026). The page does not say when the season ends.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.3rvs.com/ride-schedules/weeknight-rides",
+   "feed_url": null,
+   "notes": "Check the club calendar and Facebook page for changes and weather cancellations. Evening start may be dropped as the days shorten."
+  }
+ },
+ {
+  "slug": "eureka-il-illinois-valley-wheelmn-monday-morning-ride",
+  "name": "IVW Monday Morning Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Eureka",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Mondays, 9:00 am, from either the Eureka Water Tower or Five Points in Washington. The start is posted each week on the club's Facebook pages and email list.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "Apr–Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "Eureka Water Tower or Five Points, Washington (varies by week)",
+   "address": null
+  },
+  "distance_km": 56,
+  "distance_miles": 35,
+  "duration": null,
+  "duration_min": null,
+  "pace": "No drop, 30 to 40 miles",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Illinois Valley Wheelm'n",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": null,
+  "description": "A no-drop Monday morning ride of 30 to 40 miles, led by club members. Each week's start and route go out on the club's Facebook pages and email list.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.ivwheelmn.org/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Illinois Valley Wheelm'n's site has a post dated April 14, 2026 announcing the Monday rides at 9:00 am, no drop, 30 to 40 miles (read Oct 1, 2026). Nothing on the site dates the ride after that.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.ivwheelmn.org/",
+   "feed_url": null,
+   "notes": "The site posts the schedule once; weekly details are on the IVW and LO Riders Facebook pages and an email list."
+  }
+ },
+ {
+  "slug": "louisville-ky-ridenfaden-zanchi-rehab-monday",
+  "name": "Joe Zanchi Rehab Monday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Louisville",
+  "neighborhood": null,
+  "region": "Kentucky",
+  "state": "KY",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Monday, 5:15 pm, from the Big Four Bridge, year-round, weather permitting. Post-ride at Parlour in Jeffersonville, Indiana.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "5:15 pm",
+  "start_hhmm": "17:15",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Big Four Bridge",
+   "address": "1101 River Rd, Louisville, KY 40202"
+  },
+  "distance_km": 32,
+  "distance_miles": 20,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Moderate to quick tempo, about 16 mph",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Crazy Ridenfaden Cyclists",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Not usually swept. Tell the group you are new.",
+  "description": "A moderate to quick tempo ride at about 16 mph over a 20-mile route, run by Louisville's Ridenfaden group. It is usually not swept, so tell the riders if you are new and someone will stay with you.",
+  "links": {
+   "website": "https://www.ridenfaden.com/about-and-mission/",
+   "instagram": "https://www.instagram.com/crazyridenfadencyclists/",
+   "facebook": "https://www.facebook.com/groups/CrazyRidenfadenCyclists",
+   "strava": "https://www.strava.com/clubs/CrazyRidenfadenCyclists",
+   "meetup": null,
+   "other": [
+    "https://www.strava.com/routes/2933444760203965376"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.ridenfaden.com/about-and-mission/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Crazy Ridenfaden Cyclists' site (footer 2026) lists the Zanchi Rehab ride Mondays at 5:15 pm from the Big Four Bridge, and its event calendar lists club events on Oct 3 and 4, 2026 (read Oct 1, 2026). The page does not date this ride.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.ridenfaden.com/about-and-mission/",
+   "feed_url": null,
+   "notes": "The about page states the weekly schedule. The club's event calendar lists extra rides."
+  }
+ },
+ {
+  "slug": "cleveland-oh-cleveland-critical-mass",
+  "name": "Cleveland Critical Mass",
+  "name_en": null,
+  "kind": "critical-mass",
+  "status": "active",
+  "city": "Cleveland",
+  "neighborhood": null,
+  "region": "Ohio",
+  "state": "OH",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/New_York",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Last Friday of the month, 7:00 pm, from Public Square.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "7:00 pm",
+  "start_hhmm": "19:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Public Square",
+   "address": "Public Square, Cleveland, OH"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Cleveland Critical Mass",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": null,
+  "description": "A monthly Critical Mass ride that leaves Public Square on the last Friday of the month. The Cleveland Touring Club's public calendar lists it under non-club events.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://calendar.google.com/calendar/ical/2cbnl372173thois9lrv4tg9hs%40group.calendar.google.com/public/basic.ics",
+   "https://clevelandtouringclub.org/ride-events-calendar"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Cleveland Touring Club's public Google Calendar of non-club events lists Cleveland Critical Mass monthly on the last Friday at 7:00 pm from Public Square, added April 3, 2026 (read Oct 1, 2026). The next is Fri Oct 30.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://clevelandtouringclub.org/ride-events-calendar",
+   "feed_url": "https://calendar.google.com/calendar/ical/2cbnl372173thois9lrv4tg9hs%40group.calendar.google.com/public/basic.ics",
+   "notes": "A calendar line only; the organizers' own page was not found. Check local social media before going."
+  }
+ },
+ {
+  "slug": "detroit-mi-soul-roll-detroit-monday-saturday",
+  "name": "Soul Roll Detroit",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Detroit",
+  "neighborhood": null,
+  "region": "Michigan",
+  "state": "MI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Detroit",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Mondays and Saturdays, rolling out at 7:00 pm from Eastern Market Shed 5. The calendar runs both through Oct 31, 2026; earlier entries say meet at 6:00, roll at 7:00. Sometimes canceled for weather.",
+  "days": [
+   "mon",
+   "sat"
+  ],
+  "time_local": "7:00 pm",
+  "start_hhmm": "19:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "through Oct 31, 2026",
+  "season_months": null,
+  "start_location": {
+   "name": "Eastern Market Shed 5",
+   "address": "2810 Russell St, Detroit, MI 48207"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "10-12 mph (2023 BridgeDetroit guide)",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Soul Roll Detroit (D-Town Riders)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": null,
+  "description": "A multicultural group ride from Eastern Market. The organizers say nobody gets left behind and everyone stops if a bike breaks down. A 2023 BridgeDetroit guide put the pace at 10 to 12 mph.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": "https://www.facebook.com/groups/1108177122543271",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.bridgedetroit.com/group-bike-riding-in-detroit-how-it-began-and-how-to-join/"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
+   "https://detroitgreenways.org/events-calendar/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Detroit Greenways Coalition's community calendar, with entries edited in April 2026, lists Soul Roll Detroit Mondays and Saturdays at 7:00 pm from Eastern Market Shed 5 through Oct 31, 2026 (read Oct 1, 2026). The coalition says it does not host these rides.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://detroitgreenways.org/events-calendar/",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
+   "notes": "A community calendar the Detroit Greenways Coalition keeps; it does not host the rides. Soul Roll's own Facebook group has the latest, including weather cancellations."
+  }
+ },
+ {
+  "slug": "detroit-mi-pedalup-riderz-friday-night-groove",
+  "name": "Friday Night Groove",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Detroit",
+  "neighborhood": null,
+  "region": "Michigan",
+  "state": "MI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Detroit",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Fridays, meet 6:30 pm, roll out 7:00 pm, from Eastern Market Shed 5. The calendar runs it through Oct 30, 2026.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "7:00 pm",
+  "start_hhmm": "19:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "through Oct 30, 2026",
+  "season_months": null,
+  "start_location": {
+   "name": "Eastern Market Shed 5",
+   "address": "2810 Russell St, Detroit, MI 48207"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "PedalUp Riderz",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": null,
+  "description": "A Friday night group ride from Eastern Market, hosted by the PedalUp Riderz bike club. The calendar entry gives no pace or distance.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
+   "https://detroitgreenways.org/events-calendar/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Detroit Greenways Coalition's community calendar, edited in May 2026, lists Friday Night Groove (Pedal Up Riderz) Fridays from Eastern Market Shed 5 through Oct 30, 2026 (read Oct 1, 2026). The 2023 entry for the ride gives meet 6:30, roll 7:00.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://detroitgreenways.org/events-calendar/",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
+   "notes": "A community calendar the Detroit Greenways Coalition keeps; it does not host the rides. Check the club's social media for cancellations."
+  }
+ },
+ {
+  "slug": "detroit-mi-lane-bangerz-westside-wednesday-ride",
+  "name": "Westside Wednesday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Detroit",
+  "neighborhood": null,
+  "region": "Michigan",
+  "state": "MI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Detroit",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Wednesdays, meet 6:00 pm, roll out 7:00 pm, from Gordon Park. The calendar runs it through Oct 28, 2026.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "7:00 pm",
+  "start_hhmm": "19:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "through Oct 28, 2026",
+  "season_months": null,
+  "start_location": {
+   "name": "Gordon Park",
+   "address": "Gordon Park, Detroit, MI 48206"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Detroit Lane Bangerz",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": null,
+  "description": "A Wednesday evening group ride on Detroit's west side, presented by the Detroit Lane Bangerz.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
+   "https://detroitgreenways.org/events-calendar/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Detroit Greenways Coalition's community calendar, edited in July 2026, lists the Westside Wednesday Ride (Detroit Lane Bangerz) from Gordon Park, meet 6 PM, roll out 7 PM, through Oct 28, 2026 (read Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://detroitgreenways.org/events-calendar/",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
+   "notes": "A community calendar the Detroit Greenways Coalition keeps; it does not host the rides. The meeting spot has moved between parks in past seasons."
+  }
+ },
+ {
+  "slug": "detroit-mi-saturday-night-roll-outs-on-the-joe",
+  "name": "Saturday Night Roll Outs on the Joe",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Detroit",
+  "neighborhood": null,
+  "region": "Michigan",
+  "state": "MI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Detroit",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Saturdays, 7:00 pm, from the Joe Louis Greenway trailhead at 8034 W Warren, or from a partner meetup spot. Weekly since April 11, 2026.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:00 pm",
+  "start_hhmm": "19:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Joe Louis Greenway trailhead",
+   "address": "8034 W Warren Ave, Detroit, MI 48210"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "D pace, social and casual",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Saturday Night Roll Outs on the Joe",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Dress for the weather and carry a spare tube.",
+  "description": "A social, no-drop Saturday night ride from the Joe Louis Greenway at an easy D pace. A corker rider blocks traffic at intersections. Helmets are optional and riders bring a spare tube.",
+  "links": {
+   "website": null,
+   "instagram": "https://www.instagram.com/soulonicedetroit/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
+   "https://detroitgreenways.org/events-calendar/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Detroit Greenways Coalition's community calendar, edited in April 2026, lists Saturday Night Roll Outs on the Joe weekly from Apr 11, 2026 at 7:00 pm, D pace, no drop (read Oct 1, 2026). No end date is set.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://detroitgreenways.org/events-calendar/",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
+   "notes": "A community calendar the Detroit Greenways Coalition keeps; it does not host the rides. Partner meetup spots are on the organizers' Instagram."
+  }
+ },
+ {
+  "slug": "hamtramck-mi-hamtramck-parks-conservancy-community-bike-rides",
+  "name": "Hamtramck Community Bike Rides",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Hamtramck",
+  "neighborhood": null,
+  "region": "Michigan",
+  "state": "MI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Detroit",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Fourth Friday of the month, 6:00 pm, from Veterans Park, April through October. The last of 2026 is Oct 23.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 4,
+    "day": "fri"
+   }
+  ],
+  "season": "Apr–Oct",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "start_location": {
+   "name": "Veterans Park",
+   "address": "3201 Dan St, Hamtramck, MI 48212"
+  },
+  "distance_km": 11,
+  "distance_miles": 7,
+  "duration": "about 1 hour",
+  "duration_min": null,
+  "pace": "Easy, 5 to 10 miles",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Hamtramck Parks Conservancy",
+   "type": "nonprofit"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Wear a helmet and be visible; check your bike first. High school age and up unless with an adult.",
+  "description": "A one-hour community ride of 5 to 10 miles that starts and ends at Veterans Park. All skills are welcome. Riders should be in high school or older unless an adult rides with them.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
+   "https://detroitgreenways.org/events-calendar/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Detroit Greenways Coalition's community calendar, edited in February 2026, lists the Hamtramck Parks Conservancy's ride on the fourth Friday of each month at 6:00 pm through Oct 23, 2026, and an event on Sep 12 (read Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://detroitgreenways.org/events-calendar/",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
+   "notes": "A community calendar the Detroit Greenways Coalition keeps; it does not host the rides. The ride ends for the season after Oct 23."
+  }
+ },
+ {
+  "slug": "detroit-mi-where-we-at-wednesdays",
+  "name": "Where We At Wednesdays",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Detroit",
+  "neighborhood": null,
+  "region": "Michigan",
+  "state": "MI",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Detroit",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Wednesdays, 6:00 pm. Different clubs host it with a different start each week; the Facebook group has the location.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Varies by week; see the Facebook group",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Where We At Wednesdays",
+   "type": "collective"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Check the Facebook group for the week's start.",
+  "description": "A weekly Detroit group ride that different clubs take turns hosting. The start point changes every week.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": "https://www.facebook.com/groups/827155334928059",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
+   "https://detroitgreenways.org/events-calendar/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The Detroit Greenways Coalition's community calendar, edited in April 2026, lists Where We At Wednesdays weekly at 6:00 pm with ride locations that vary (read Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://detroitgreenways.org/events-calendar/",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
+   "notes": "A community calendar the Detroit Greenways Coalition keeps; it does not host the rides. The ride's Facebook group posts each week's start."
+  }
+ }
+]

@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:lancaster-pa-lbc-thursday-evening-special@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261008T180000
+DTEND;TZID=America/New_York:20261008T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270228T235959Z
+SUMMARY:Thursday Evening Special (Lancaster Bicycle Club) — Lancaster\,
+  PA
+LOCATION:Calvary Church (not the Landis Valley Museum)\, 1051 Landis Vall
+ ey Rd\, Lancaster\, PA 17601
+DESCRIPTION:Pace: A: 20 to 22 mph. A+: 22 to 24 mph. Race-like\, pacelini
+ ng; e-bikes not recommended.\nSchedule: Every Thursday\, 6:00 pm from Ca
+ lvary Church; A group 20 to 22 mph\, A+ group 22 to 24 mph; same flat-ro
+ lling route each week..\nConfirm with the host before you go.\nhttps://c
+ ycleforchange.org/rides/lancaster-pa-lbc-thursday-evening-special/
+URL:https://cycleforchange.org/rides/lancaster-pa-lbc-thursday-evening-sp
+ ecial/
+END:VEVENT
+END:VCALENDAR

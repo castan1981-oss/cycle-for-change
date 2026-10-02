@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:austin-tx-queer-ride-wednesday@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261007T193000
+DTEND;TZID=America/Chicago:20261007T213000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20270228T235959Z
+SUMMARY:Queer Ride — Austin\, TX
+LOCATION:South gate\, Texas State Capitol\, 1100 Congress Ave\, Austin\, 
+ TX 78701
+DESCRIPTION:Pace: Social\, 10–15 miles.\nNo-drop.\nSchedule: Every Wedn
+ esday. Meet 7:00 pm at the south gate of the Texas State Capitol\, wheel
+ s down 7:30 pm for a 10–15 mile ride..\nConfirm with the host before y
+ ou go.\nhttps://cycleforchange.org/rides/austin-tx-queer-ride-wednesday/
+URL:https://cycleforchange.org/rides/austin-tx-queer-ride-wednesday/
+END:VEVENT
+END:VCALENDAR

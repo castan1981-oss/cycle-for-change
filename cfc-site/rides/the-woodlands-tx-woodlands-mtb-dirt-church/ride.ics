@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:the-woodlands-tx-woodlands-mtb-dirt-church@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261004T090000
+DTEND;TZID=America/Chicago:20261004T110000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:The Woodlands MTB Dirt Church — The Woodlands\, TX
+LOCATION:Rob Fleming Recreation Center\, 6464 Creekside Forest Dr\, The W
+ oodlands\, TX 77389
+DESCRIPTION:Schedule: Every Sunday\, 9:00 am\, from Rob Fleming Recreatio
+ n Center. About 20 miles along the Spring Creek Nature Trail..\nConfirm 
+ with the host before you go.\nhttps://cycleforchange.org/rides/the-woodl
+ ands-tx-woodlands-mtb-dirt-church/
+URL:https://cycleforchange.org/rides/the-woodlands-tx-woodlands-mtb-dirt-
+ church/
+END:VEVENT
+END:VCALENDAR

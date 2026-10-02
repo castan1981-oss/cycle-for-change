@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:pearland-tx-pearland-bicycles-night-shop-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261006T180000
+DTEND;TZID=America/Chicago:20261006T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20261031T235959Z
+SUMMARY:Night Shop Ride (Pearland Bicycles) — Pearland\, TX
+LOCATION:Pearland Bicycles\, 2819 Cullen Pkwy\, Ste 112\, Pearland\, TX 7
+ 7584
+DESCRIPTION:Pace: Pace groups C 16-18\, B 19-20\, A 22+ mph.\nSchedule: E
+ very Tuesday and Thursday\, 6:00 pm\, spring to Oct 29 (the shop page sa
+ ys March 11 to Oct 28). From the shop..\nConfirm with the host before yo
+ u go.\nhttps://cycleforchange.org/rides/pearland-tx-pearland-bicycles-ni
+ ght-shop-ride/
+URL:https://cycleforchange.org/rides/pearland-tx-pearland-bicycles-night-
+ shop-ride/
+END:VEVENT
+END:VCALENDAR

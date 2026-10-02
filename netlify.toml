@@ -62,10 +62,54 @@
   status = 302
   force = true
 
-# Rides hubs that moved when the data grew (Sept 30, 2026): Encinitas took over Carlsbad's hub
-# when the Swamis ride came in. Keep old hub URLs alive; add a line here whenever a hub is renamed.
+# Rides hubs that moved when the data grew. Hub names follow the data (Sept 30: Encinitas took Carlsbad's
+# hub; Oct 1: Carlsbad took it back when the deep sweep added more rides). Keep old hub URLs alive:
+# after every merge compare cfc-site/rides/hubs.json with the last commit and add a line here for each
+# hub that vanished. Never leave a redirect pointing at a URL that no longer exists.
 [[redirects]]
-  from = "/rides/ca/carlsbad/"
-  to = "/rides/ca/encinitas/"
+  from = "/rides/ca/encinitas/"
+  to = "/rides/ca/carlsbad/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/ca/redondo-beach/"
+  to = "/rides/ca/long-beach/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/tx/plano/"
+  to = "/rides/tx/frisco/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/ny/greenlawn/"
+  to = "/rides/ny/old-bethpage/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/il/matteson/"
+  to = "/rides/il/chicago/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/nh/portsmouth/"
+  to = "/rides/nh/dover/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/ms/canton/"
+  to = "/rides/ms/jackson/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/sc/sullivans-island/"
+  to = "/rides/sc/charleston/"
   status = 301
   force = true

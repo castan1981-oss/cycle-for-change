@@ -1,0 +1,181 @@
+[
+ {
+  "slug": "encinitas-ca-leucadia-cyclery-sunday-social-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "The shop's community page loads and lists the Sunday Social Ride at 8:00 am from the shop, but nothing on it is dated, its Facebook and Instagram links don't load, and its events calendar page is empty. Shop blog posts dated July 2026 show the site is live."
+ },
+ {
+  "slug": "huntington-beach-ca-hb-velo-sunday-shop-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-07-28",
+  "evidence": "The shop's home page lists the Sunday Morning Shop Ride, roll-out 8:05 am sharp, 25 to 70 miles at an 18 mph average, and the page's WordPress modified date is July 28, 2026 (fetched Oct 1, 2026). The shop says current changes go on its Facebook page.",
+  "sources": [
+   "https://hbvelocyclery.net/",
+   "https://hbvelocyclery.net/wp-json/wp/v2/pages?per_page=20&_fields=slug,modified"
+  ]
+ },
+ {
+  "slug": "irvine-ca-bicycle-club-of-irvine-saturday-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The club's calendar lists Saturday Rides at 9:00 am from Deerfield Park for Oct 10, 17 and 24, 2026, and the 1st Saturday Jersey Day Rides at 9:00 am on Oct 3 (fetched Oct 1, 2026).",
+  "sources": [
+   "http://www.bikeirvine.org/rides-events",
+   "https://www.bikeirvine.org/rides-events?category=Saturday%20Rides"
+  ]
+ },
+ {
+  "slug": "irvine-ca-orange-county-wheelmen-weekday-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The club's Ride with GPS calendar lists the OCW Thursday Ride on Oct 1 and 8 and the OCW Tuesday Ride on Oct 6 and 13, 2026, each at 9:00 am from Bill Barber Memorial Park, Irvine (fetched Oct 1, 2026).",
+  "sources": [
+   "https://ridewithgps.com/organizations/5473-orange-county-wheelmen/events",
+   "https://ridewithgps.com/events.json?organization_id=5473",
+   "https://ridewithgps.com/organizations/5473-orange-county-wheelmen/calendar.ics",
+   "https://www.ocwheelmen.org/rideinfo"
+  ],
+  "promote_feed": "https://ridewithgps.com/organizations/5473-orange-county-wheelmen/calendar.ics"
+ },
+ {
+  "slug": "san-diego-ca-cyclo-vets-saturday-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "The club's rides page lists the Saturday A, B+ and B rides at 8:30 am from the Mission Valley lot at 5010 Mission Center Rd, and the page still carries a notice for the May 3, 2026 Gordy Shields Memorial Ride, so it was edited in 2026; the ride entries have no dates of their own (fetched Oct 1, 2026).",
+  "sources": [
+   "https://cyclo-vets.com/rides"
+  ]
+ },
+ {
+  "slug": "san-diego-ca-moment-bicycles-saturday-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "Moment's rides page loads and still lists the Saturday 8:30 am Point Loma ride, but it is undated (it says \"New for 2016\") and the shop's home page shows no 2026 ride news, so nothing current confirms it."
+ },
+ {
+  "slug": "san-diego-ca-outspoken-cycle-club-rides",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Outspoken's San Diego page (2026 copyright) says it offers regular open-to-all rides with dates posted on its Heylo group, and the club's Heylo event feed lists upcoming San Diego events including Ride the Point Metric Century on Nov 7, 2026 and a Pride takeover on June 25, 2027; no weekly day or time is published (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.outspoken.cc/rides-and-events-sd",
+   "https://www.outspoken.cc/"
+  ]
+ },
+ {
+  "slug": "la-jolla-ca-sdbc-saturday-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "SDBC's Saturday page says every Saturday, rolls at 0830 from UC Cyclery with orientation for first-time riders at 0815, and the club's home page lists 2026 events (Fiesta Island Time Trial on Nov 15, Turkey Ride on Nov 26); the Saturday page itself carries no date (fetched Oct 1, 2026).",
+  "sources": [
+   "https://sdbc.org/saturday",
+   "https://sdbc.org/"
+  ]
+ },
+ {
+  "slug": "san-diego-ca-shewolves-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "The only source is a San Diego Magazine list dated July 2024 (updated Dec 2022), and the club's Instagram page needs a login, so no current page confirms the Thursday 7:15 pm ride or whether it is weekly or monthly."
+ },
+ {
+  "slug": "carlsbad-ca-swamis-monthly-social-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Swami's calendar lists Swami's Social Ride on Sun Oct 4, 2026 at 8:00 am from Bird Rock Coffee Roasters, Bressi Ranch, and the club's weekly-rides page says the Monthly Sunday Social Ride starts at 8:00 am there, 2x2, no-drop, about 33 miles (read through page summaries on Oct 1, 2026; the club's site blocked direct fetches).",
+  "sources": [
+   "https://swamis.org/events-calendar/",
+   "https://swamis.org/rides-events/weekly-group-rides-t/"
+  ],
+  "changes": {
+   "schedule": "One Sunday a month, 8:00 am, from Bird Rock Coffee Roasters in Bressi Ranch (next: Sun Oct 4, 2026; other dates on the club calendar); weekly World Famous Saturday Ride from Encinitas",
+   "time_local": "8:00 am",
+   "start_hhmm": "08:00"
+  }
+ },
+ {
+  "slug": "costa-mesa-ca-lillordag-wednesday-night-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-01",
+  "note": "The only listing is the Costa Mesa Alliance for Better Streets events page, whose newest Lillördag entry is Wed May 28, 2025 (meet 6:15 pm, roll 6:30 pm); nothing from 2026, and Lillördag has no page of its own that we could find."
+ },
+ {
+  "slug": "costa-mesa-ca-unlikely-cyclist-saturday-womens-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-26",
+  "evidence": "The shop's calendar lists Saturday Women's Group Ride on Sept 26 (7:45 am start, Culver Chute/Shady Canyon), Sept 19, Aug 29 and Aug 1, 2026, and the Sept 26 notes say two pacing groups, 15 mph and 13 mph averages, all rides no drop, with a coffee stop and regroups (fetched Oct 1, 2026). The calendar gives 7:45 am and no separate roll time, so the 8:15 am roll is unchanged here.",
+  "sources": [
+   "https://www.theunlikelycyclist.com/new-events",
+   "https://www.theunlikelycyclist.com/new-events/km5eae59f94dehz-jyg9p-pglf4-en8mw-yel3e-kknyb-95d3z-y9xah-9b9l3-adpz4-638ed-9nlf5-ab8m5-xzmt6-242an-lryxs-ldb6j-w2xl6-53sgt-am5xx-xten6-w6wsx-bb8p4-5yn2e-8bbd9"
+  ],
+  "changes": {
+   "pace": "two groups: 15 mph and 13 mph average",
+   "visitor_notes": "Road bikes and helmets required, and the shop asks riders to wear team kit. The calendar lists a 7:45 am start for each ride; the shop's route notes are posted weekly. The shop's Wednesday women's ride (every other week) is listed separately."
+  }
+ },
+ {
+  "slug": "palm-springs-ca-big-wheel-bikes-community-group-rides",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "evidence": "The shop's events page (2026 copyright) still lists Community Group Rides, Demo Days, Clinics and Social Bike Nights as announced on social media with a Nov to Apr season, and says the Palm Springs store was closed for summer until Aug 31; no fixed weekly slot or dates are posted (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.bigwheelbikescv.com/events"
+  ]
+ },
+ {
+  "slug": "redlands-ca-rwbtc-women-only-friday-recovery-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The club's ride calendar lists Women Only Friday AM Recovery Ride on Fri Oct 2, 2026: meet at Cyclery USA on Stuart Ave by 8 am, roll by 8:15, a gentle hour-long social ride; no other October Fridays are posted yet (fetched Oct 1, 2026).",
+  "sources": [
+   "https://rwbtc.clubexpress.com/content.aspx?page_id=4001&club_id=934329"
+  ]
+ },
+ {
+  "slug": "riverside-ca-riverside-bicycle-club-saturday-casual-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The club's ride-levels page says morning rides start at 8:00 am October to April and 7:30 am May to September, with the Saturday AM ride at Canyon Crest Town Center; its Ride with GPS calendar lists Saturday rides at 8:00 am for Oct 3, 2026 (CC Corona Farmer Boys, from Canyon Crest Towne Centre) after 7:30 am starts on Sept 26 (fetched Oct 1, 2026).",
+  "sources": [
+   "https://www.riversidebicycleclub.com/page-1379195",
+   "https://ridewithgps.com/organizations/5058-rbc/events",
+   "https://ridewithgps.com/organizations/5058-rbc/calendar.ics"
+  ],
+  "changes": {
+   "schedule": "Every Saturday: 8:00 am October to April, 7:30 am May to September",
+   "time_local": "8:00 am",
+   "start_hhmm": "08:00",
+   "start_times": [
+    {
+     "from": "2027-05-01",
+     "start_hhmm": "07:30"
+    }
+   ],
+   "start_location": {
+    "name": "Canyon Crest Town Center, corner of Canyon Crest and El Cerrito",
+    "address": "5225 Canyon Crest Dr, Riverside, CA 92507"
+   },
+   "visitor_notes": "The club's ride-levels page lists Saturday AM from Canyon Crest Town Center for the A/B, C and D groups; the Tuesday and Thursday rides start at the Stater Brothers on Lincoln. Check the posted ride on Ride with GPS, since times can shift for weather."
+  },
+  "promote_feed": "https://ridewithgps.com/organizations/5058-rbc/calendar.ics"
+ },
+ {
+  "slug": "encinitas-ca-swamis-saturday-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Swami's calendar for Cadence Cyclery lists the World Famous Swami's Saturday Ride (A/B groups) on Sat Oct 3, 2026 (in reverse, first Saturday of the month) and Sat Oct 10, 2026, both at 8:15 am from Cadence Cyclery, Encinitas (fetched Oct 1, 2026).",
+  "sources": [
+   "https://swamis.org/events/venues/cadence-cyclery/"
+  ]
+ }
+]

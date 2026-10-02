@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:santa-cruz-ca-santa-cruz-county-cycling-club-tuesday-morning-rides@cy
+ cleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261006T100000
+DTEND;TZID=America/Los_Angeles:20261006T120000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270228T235959Z
+SUMMARY:Santa Cruz County Cycling Club Tuesday Morning Rides — Santa Cr
+ uz\, CA
+LOCATION:Varies by week (see the ride listing)
+DESCRIPTION:Pace: Classes A\, B\, C and LSD.\nSchedule: Tuesdays at 10:00
+  am\, a different start each week.\nConfirm with the host before you go.
+ \nhttps://cycleforchange.org/rides/santa-cruz-ca-santa-cruz-county-cycli
+ ng-club-tuesday-morning-rides/
+URL:https://cycleforchange.org/rides/santa-cruz-ca-santa-cruz-county-cycl
+ ing-club-tuesday-morning-rides/
+END:VEVENT
+END:VCALENDAR

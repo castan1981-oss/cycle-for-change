@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ventura-ca-channel-islands-bicycle-club-saturday-up-the-pacific-coast
+ @cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T080000
+DTEND;TZID=America/Los_Angeles:20261003T100000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Saturday Up the Pacific Coast (Channel Islands Bicycle Club) — 
+ Ventura\, CA
+LOCATION:Museum parking lot\, 100 E Santa Clara St\, Ventura\, CA 93001
+DESCRIPTION:Pace: 16-18 mph average; the club says this group is faster t
+ han normal.\nSchedule: Every Saturday: meet 7:50 am\, depart 8:00 am fro
+ m the Museum parking lot. 47 miles up the coast through Carpinteria\, Su
+ mmerland and Montecito\, coffee at Brass Bird in Carpinteria..\nConfirm 
+ with the host before you go.\nhttps://cycleforchange.org/rides/ventura-c
+ a-channel-islands-bicycle-club-saturday-up-the-pacific-coast/
+URL:https://cycleforchange.org/rides/ventura-ca-channel-islands-bicycle-c
+ lub-saturday-up-the-pacific-coast/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:pearland-tx-pearland-bicycles-saturday-shop-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261003T070000
+DTEND;TZID=America/Chicago:20261003T090000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:Saturday Shop Ride (Pearland Bicycles) — Pearland\, TX
+LOCATION:Pearland Bicycles\, 2819 Cullen Pkwy\, Ste 112\, Pearland\, TX 7
+ 7584
+DESCRIPTION:Pace: C 16-18 (no drop on older posts)\, B 19-20\, A 22-24+ m
+ ph.\nSchedule: Every Saturday\, 7:00 am\, from the shop. Usually 45-50 m
+ iles..\nConfirm with the host before you go.\nhttps://cycleforchange.org
+ /rides/pearland-tx-pearland-bicycles-saturday-shop-ride/
+URL:https://cycleforchange.org/rides/pearland-tx-pearland-bicycles-saturd
+ ay-shop-ride/
+END:VEVENT
+END:VCALENDAR

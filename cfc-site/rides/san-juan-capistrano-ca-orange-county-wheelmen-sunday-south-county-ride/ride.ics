@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-juan-capistrano-ca-orange-county-wheelmen-sunday-south-county-rid
+ e@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261004T083000
+DTEND;TZID=America/Los_Angeles:20261004T103000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:OCW Sunday Ride (South County) — San Juan Capistrano\, CA
+LOCATION:Varies weekly: South County cafés\, listed on the club's calend
+ ar
+DESCRIPTION:Pace: Weekend rides typically 35 to 40 miles\, per the club.\
+ nSchedule: Every Sunday\, 8:30 am\, from a different café in south Oran
+ ge County each week (Oct 4 and 18: JD Flannel Donuts and Coffee\, San Ju
+ an Capistrano; Oct 11: RJ's Cafe\, Dana Point; Oct 25: Parlor Doughnuts\
+ , Laguna Niguel)..\nConfirm with the host before you go.\nhttps://cyclef
+ orchange.org/rides/san-juan-capistrano-ca-orange-county-wheelmen-sunday-
+ south-county-ride/
+URL:https://cycleforchange.org/rides/san-juan-capistrano-ca-orange-county
+ -wheelmen-sunday-south-county-ride/
+END:VEVENT
+END:VCALENDAR

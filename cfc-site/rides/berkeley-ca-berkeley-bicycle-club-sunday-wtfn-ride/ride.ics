@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:berkeley-ca-berkeley-bicycle-club-sunday-wtfn-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261011T083000
+DTEND;TZID=America/Los_Angeles:20261011T103000
+RRULE:FREQ=MONTHLY;BYDAY=2SU;UNTIL=20270228T235959Z
+SUMMARY:Berkeley Bicycle Club Sunday WTFN Ride — Berkeley\, CA
+LOCATION:Peet's on Domingo\, next to the Claremont Hotel
+DESCRIPTION:Pace: 8–9 mph climbing\, 13–15 mph on the flats.\nNo-drop
+ .\nSchedule: Second Sunday of the month\, 8:30 am\, from Peet's on Domin
+ go.\nConfirm with the host before you go.\nhttps://cycleforchange.org/ri
+ des/berkeley-ca-berkeley-bicycle-club-sunday-wtfn-ride/
+URL:https://cycleforchange.org/rides/berkeley-ca-berkeley-bicycle-club-su
+ nday-wtfn-ride/
+END:VEVENT
+END:VCALENDAR

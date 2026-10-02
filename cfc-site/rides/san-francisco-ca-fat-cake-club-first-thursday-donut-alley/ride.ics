@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-francisco-ca-fat-cake-club-first-thursday-donut-alley@cycleforcha
+ nge.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261105T063000
+DTEND;TZID=America/Los_Angeles:20261105T083000
+RRULE:FREQ=MONTHLY;BYDAY=1TH;UNTIL=20270228T235959Z
+SUMMARY:Fat Cake First Thursday Donut Alley — San Francisco\, CA
+LOCATION:Golden Gate Bridge northern pavilion
+DESCRIPTION:Schedule: First Thursday of the month\, 6:30 am\, from the no
+ rthern Golden Gate Bridge pavilion; back about 9 am.\nConfirm with the h
+ ost before you go.\nhttps://cycleforchange.org/rides/san-francisco-ca-fa
+ t-cake-club-first-thursday-donut-alley/
+URL:https://cycleforchange.org/rides/san-francisco-ca-fat-cake-club-first
+ -thursday-donut-alley/
+END:VEVENT
+END:VCALENDAR

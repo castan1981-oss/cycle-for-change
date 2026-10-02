@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ventura-ca-bikevc-sunday-morning-coffee-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261004T090000
+DTEND;TZID=America/Los_Angeles:20261004T110000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+SUMMARY:Sunday Morning Coffee Ride (BikeVC) — Ventura\, CA
+LOCATION:Posted on each Meetup event; October's ride is built around coff
+ ee next to the Ventura Bike HUB\, 490 N Ventura Ave\, Ventura\, CA 93001
+DESCRIPTION:Pace: easy social pace; adults need to be able to ride about 
+ 10 miles in an hour (November: 10-13 mph).\nNo-drop.\nSchedule: Once a m
+ onth on a Sunday morning: Oct 25 at 9:00 am\, Nov 22 at 8:00 am..\nConfi
+ rm with the host before you go.\nhttps://cycleforchange.org/rides/ventur
+ a-ca-bikevc-sunday-morning-coffee-ride/
+URL:https://cycleforchange.org/rides/ventura-ca-bikevc-sunday-morning-cof
+ fee-ride/
+END:VEVENT
+END:VCALENDAR

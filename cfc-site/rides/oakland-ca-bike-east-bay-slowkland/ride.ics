@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:oakland-ca-bike-east-bay-slowkland@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261027T173000
+DTEND;TZID=America/Los_Angeles:20261027T193000
+RRULE:FREQ=MONTHLY;BYDAY=-1TU;UNTIL=20270228T235959Z
+SUMMARY:Slowkland — Oakland\, CA
+LOCATION:Lake Merritt BART\, east side of Oak St between 8th and 9th\, 80
+ 0 Oak St\, Oakland\, CA 94607
+DESCRIPTION:Pace: slow.\nSchedule: Last Tuesday of the month\, 5:30 pm\, 
+ from Lake Merritt BART; ends at 19th St BART.\nConfirm with the host bef
+ ore you go.\nhttps://cycleforchange.org/rides/oakland-ca-bike-east-bay-s
+ lowkland/
+URL:https://cycleforchange.org/rides/oakland-ca-bike-east-bay-slowkland/
+END:VEVENT
+END:VCALENDAR

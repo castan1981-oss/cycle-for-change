@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:austin-tx-atx-bikes-crank-n-drank@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261006T180000
+DTEND;TZID=America/Chicago:20261006T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270228T235959Z
+SUMMARY:Crank 'N Drank — Austin\, TX
+LOCATION:ATX Bikes (MTBATX's list says meet behind the shop)\, 5701 W Sla
+ ughter Ln Ste A110\, Austin\, TX 78749
+DESCRIPTION:Pace: Four groups of varying speed; pick one you can hang wit
+ h.\nSchedule: Every Tuesday evening\, wheels down 6:00 pm\, on the South
+  Austin trail network. About 15 miles\, BYOB hangout after..\nConfirm wi
+ th the host before you go.\nhttps://cycleforchange.org/rides/austin-tx-a
+ tx-bikes-crank-n-drank/
+URL:https://cycleforchange.org/rides/austin-tx-atx-bikes-crank-n-drank/
+END:VEVENT
+END:VCALENDAR

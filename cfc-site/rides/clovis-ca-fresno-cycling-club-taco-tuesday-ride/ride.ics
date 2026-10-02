@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:clovis-ca-fresno-cycling-club-taco-tuesday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261006T180000
+DTEND;TZID=America/Los_Angeles:20261006T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270228T235959Z
+SUMMARY:Taco Tuesday Ride — Clovis\, CA
+LOCATION:Shaw Avenue and North Academy Avenue\, Shaw Ave & N Academy Ave\
+ , 93619
+DESCRIPTION:Pace: B level\, social\, 12 to 16 mph.\nSchedule: Every Tuesd
+ ay\, 6:00 pm from Shaw and Academy Avenues\, south on Academy to a taco 
+ stand at Adams and Academy and back. Bring lights as the days shorten..\
+ nConfirm with the host before you go.\nhttps://cycleforchange.org/rides/
+ clovis-ca-fresno-cycling-club-taco-tuesday-ride/
+URL:https://cycleforchange.org/rides/clovis-ca-fresno-cycling-club-taco-t
+ uesday-ride/
+END:VEVENT
+END:VCALENDAR

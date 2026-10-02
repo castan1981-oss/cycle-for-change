@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:roswell-ga-rambo-free-flite-big-creek-group-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261002T180000
+DTEND;TZID=America/New_York:20261002T200000
+RRULE:FREQ=MONTHLY;BYDAY=1FR;UNTIL=20270228T235959Z
+SUMMARY:Free-Flite Group Ride at Big Creek — Roswell\, GA
+LOCATION:Big Creek Park\, 1600 Old Alabama Rd\, Roswell\, GA 30076
+DESCRIPTION:Schedule: First Friday of the month\, 6:00 to 8:00 pm at Big 
+ Creek Park (Sept 4\, Oct 2\, Nov 6\, Dec 4\, 2026 on the calendar)..\nCo
+ nfirm with the host before you go.\nhttps://cycleforchange.org/rides/ros
+ well-ga-rambo-free-flite-big-creek-group-ride/
+URL:https://cycleforchange.org/rides/roswell-ga-rambo-free-flite-big-cree
+ k-group-ride/
+END:VEVENT
+END:VCALENDAR

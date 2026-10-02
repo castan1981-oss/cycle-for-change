@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dallas-tx-dbc-second-saturday-coffee-social-and-ride@cycleforchange.o
+ rg
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20261010T103000
+DTEND;TZID=America/Chicago:20261010T113000
+RRULE:FREQ=MONTHLY;BYDAY=2SA;UNTIL=20270228T235959Z
+SUMMARY:DBC Second Saturday Coffee Social and Ride — Dallas\, TX
+LOCATION:Rotates monthly; RSVP on the Dallas Bicycle Coalition's Action N
+ etwork page for the spot
+DESCRIPTION:Pace: About 10 mph\, social.\nSchedule: Second Saturday of th
+ e month. Coffee social 9:00 to 10:30 am\, then an optional social-paced 
+ ride rolls at 10:30 am. The spot rotates around the city..\nConfirm with
+  the host before you go.\nhttps://cycleforchange.org/rides/dallas-tx-dbc
+ -second-saturday-coffee-social-and-ride/
+URL:https://cycleforchange.org/rides/dallas-tx-dbc-second-saturday-coffee
+ -social-and-ride/
+END:VEVENT
+END:VCALENDAR

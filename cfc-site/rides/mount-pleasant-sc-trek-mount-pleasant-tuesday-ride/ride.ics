@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mount-pleasant-sc-trek-mount-pleasant-tuesday-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261006T183000
+DTEND;TZID=America/New_York:20261006T203000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261130T235959Z
+SUMMARY:Tuesday Evening Ride — Mount Pleasant\, SC
+LOCATION:I'On Swamp Trailhead
+DESCRIPTION:Pace: 11–13 mph.\nSchedule: Tuesdays at 6:30 pm\, March thr
+ ough November\, from the I'On Swamp Trailhead (Laurel Hill County Park o
+ n the first Tuesday of the month)..\nConfirm with the host before you go
+ .\nhttps://cycleforchange.org/rides/mount-pleasant-sc-trek-mount-pleasan
+ t-tuesday-ride/
+URL:https://cycleforchange.org/rides/mount-pleasant-sc-trek-mount-pleasan
+ t-tuesday-ride/
+END:VEVENT
+END:VCALENDAR

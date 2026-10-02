@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sarasota-fl-vicc-saturday-bacon-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T073000
+DTEND;TZID=America/New_York:20261003T093000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+SUMMARY:VICC Saturday Bacon Ride — Sarasota\, FL
+LOCATION:Waterside Place\, parking lot off Deer Drive to Passerine\, 7500
+  Island Cove Terrace\, Sarasota\, FL 34240
+DESCRIPTION:Pace: D 14-16 (no drop)\, C- 17-19\, C 19-21\, C+ 21-22\, B 2
+ 2-23\, B+ 23-25\, A 25+.\nSchedule: Every Saturday\, 7:30 am\, year-roun
+ d\, from the Waterside parking lot off Deer Drive and Passerine (Watersi
+ de Place). Seven pace groups from 14-16 mph to 25+ mph..\nConfirm with t
+ he host before you go.\nhttps://cycleforchange.org/rides/sarasota-fl-vic
+ c-saturday-bacon-ride/
+URL:https://cycleforchange.org/rides/sarasota-fl-vicc-saturday-bacon-ride
+ /
+END:VEVENT
+END:VCALENDAR

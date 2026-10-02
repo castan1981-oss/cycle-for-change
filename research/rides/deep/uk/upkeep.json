@@ -1,0 +1,117 @@
+[
+ {
+  "slug": "london-gb-critical-mass-london",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "criticalmass.in's mirror of the ride's own Instagram posts, fetched Oct 1, 2026, repeats 'The Last Friday of Every Month, 19:00, South Bank under Waterloo Bridge. Avg. departure 19:30' in posts dated Sept 30 and Oct 1, 2026, plus 'Scenes from' the Sept 25, 2026 ride.",
+  "sources": [
+   "https://criticalmass.in/london/socialnetwork/list-items"
+  ]
+ },
+ {
+  "slug": "london-gb-dulwich-paragon-monthly-introductory-ride",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-07",
+  "status_note": "The club's page (modified Sept 7, 2026) says 'Usually on the first Saturday of each month', arrive 9:00 at Herne Hill Velodrome, and 'There will not be an intro ride in October.' It names no November date, so the next should be the first Saturday of November (Nov 7); check the page.",
+  "status_since": "2026-10-01",
+  "evidence": "Dulwich Paragon's monthly-introductory-ride page (published 2019, modified 2026-09-07) still gives the usual first-Saturday 9:00 Herne Hill Velodrome schedule and says there is no intro ride in October 2026 (read via WebFetch, Oct 1, 2026; curl gets a 202 bot wall).",
+  "sources": [
+   "https://www.dulwichparagon.com/monthly-introductory-ride/"
+  ]
+ },
+ {
+  "slug": "london-gb-ealing-cycling-campaign-womens-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The LCC events iCal feed (fetched Oct 1, 2026) lists Ealing Women's Rides from Ealing Town Hall at 9:45 on Sat Oct 3 (Fulham Palace, Intermediate), Sat Oct 10 (Bushy Park, Advanced), Sun Oct 18 (Horsenden Hill, Beginners+), Sun Oct 25 (Hampton Court, Advanced) and Sat Oct 31 (Osterley Park, Beginners+).",
+  "sources": [
+   "https://lcc.org.uk/events/list/?ical=1",
+   "https://lcc.org.uk/events/ealing-womens-ride-fulham-palace-intermediate-level/"
+  ]
+ },
+ {
+  "slug": "london-gb-camden-anchor-kentish-town-pedals",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "The LCC events iCal feed (fetched Oct 1, 2026) lists Kentish Town Pedals at 10:00 from the Peckwater Centre, 6 Peckwater St NW5 2UP, on Oct 3, Nov 7 and Dec 5, 2026.",
+  "sources": [
+   "https://lcc.org.uk/events/list/?ical=1",
+   "https://lcc.org.uk/events/kentish-town-pedals-13/2026-10-03/"
+  ]
+ },
+ {
+  "slug": "london-gb-rapha-london-friday-chat-laps",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Rapha's event page for Regent's Park Friday Chat Laps (read via WebFetch Oct 1, 2026) lists the series for October to December 2026: meet at the Inner Circle (Jubilee Gates) from 7:00 am, briefing at 7:15 am, with a Book Now button.",
+  "sources": [
+   "https://events.rapha.cc/products/regents-park-friday-chat-laps",
+   "https://events.rapha.cc/rapha-london"
+  ]
+ },
+ {
+  "slug": "london-gb-rapha-london-womens-chat-laps",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Rapha's event page for the Women's Chat Laps (read via WebFetch Oct 1, 2026) lists a weekly Tuesday 7:00 am series for September to December 2026 from the Inner Circle (Jubilee Gates): no-drop, easy pace, about 20 km at 22-24 km/h.",
+  "sources": [
+   "https://events.rapha.cc/products/rapha-x-steezy-ride",
+   "https://events.rapha.cc/rapha-london"
+  ]
+ },
+ {
+  "slug": "london-gb-cycle-club-london-regents-park-chat-laps",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-06-15",
+  "evidence": "The club's Our rides page, modified 2026-06-15 per its WordPress API (fetched Oct 1, 2026), still lists Wednesdays and Fridays 7:00 am as one hour of chat laps around the Outer Circle then coffee, from the Inner Circle gates at the end of York Bridge; it calls them open, member-led rides. Dated rides live in the members' Spond app, so nothing newer is public.",
+  "sources": [
+   "https://cycleclub.london/our-rides/",
+   "https://cycleclub.london/wp-json/wp/v2/pages?slug=our-rides"
+  ]
+ },
+ {
+  "slug": "london-gb-cycle-club-london-saturday-steady-club-ride",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-06-15",
+  "evidence": "The club's Our rides page, modified 2026-06-15 per its WordPress API (fetched Oct 1, 2026), lists the Saturday Steady Club Ride: pre-ride coffee from 8:30 in Winchmore Hill, depart 9:00 sharp, about 45 miles at 13-15 mph, and says all club rides are no-drop.",
+  "sources": [
+   "https://cycleclub.london/our-rides/",
+   "https://cycleclub.london/wp-json/wp/v2/pages?slug=our-rides"
+  ]
+ },
+ {
+  "slug": "london-gb-southwark-cyclists-healthy-rides",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "evidence": "Southwark Cyclists' Healthy Rides page (fetched Oct 1, 2026) says 'mostly doing two Saturday morning rides each week', registration on Eventbrite, 10am Saturday starts for most rides, and lists Oct 3 (two rides) and Oct 10 with a provisional Oct 17 and Oct 31; the LCC feed shows the Oct 3 and Oct 10 rides at 10:00.",
+  "sources": [
+   "https://southwarkcyclists.org.uk/healthy-rides/",
+   "https://lcc.org.uk/events/list/?ical=1"
+  ]
+ },
+ {
+  "slug": "london-gb-joyride-collective-social-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "last_seen": "2026-09-13",
+  "changes": {
+   "links": {
+    "instagram": "http://instagram.com/the.joyride.collective/"
+   }
+  },
+  "evidence": "The group's Meetup page (fetched Oct 1, 2026) lists past rides Sun Sep 13 at 1:00 PM (Alexandra Palace), Sun Aug 16, Sun Jul 26 and Sat Jun 13, shows no upcoming event yet, and links its Instagram @the.joyride.collective; the Meetup iCal feed is still empty.",
+  "sources": [
+   "https://www.meetup.com/the-joyride-collective/",
+   "https://www.meetup.com/the-joyride-collective/events/ical/"
+  ]
+ }
+]

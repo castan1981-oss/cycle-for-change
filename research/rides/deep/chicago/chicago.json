@@ -1,0 +1,2177 @@
+[
+ {
+  "slug": "chicago-il-evolution-cycling-saturday-ride",
+  "name": "Evolution Cycling Saturday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Chicago",
+  "neighborhood": "Andersonville",
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday, rolls at 8:00 am on the fall schedule, from the Walgreens lot at 5440 N Clark St in Andersonville.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Walgreens parking lot, Andersonville",
+   "address": "5440 N Clark St, Chicago, IL 60640"
+  },
+  "distance_km": null,
+  "distance_miles": "50-70",
+  "duration": null,
+  "duration_min": null,
+  "pace": "Steady, 17-19 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Evolution Cycling",
+   "type": "team"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The route changes week to week and is posted in the club's Discord. There is a coffee stop about halfway. The club's weekday rides are on a break until spring 2027; this Saturday ride and the Sunday ride run in the fall.",
+  "description": "Evolution's long Saturday road ride: 50 to 70 miles at a steady 17 to 19 mph, nobody dropped. The route rotates and the club posts it in Discord. Same Andersonville start as the Sunday ride.",
+  "links": {
+   "website": "https://evolution-cycling.org/rides",
+   "instagram": "https://www.instagram.com/evolutioncyclingchicago/",
+   "facebook": "https://www.facebook.com/EvolutionCyclingChicago",
+   "strava": "https://www.strava.com/clubs/1196678",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://evolution-cycling.org/rides"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-28",
+  "evidence": "Evolution Cycling's rides page, marked Last Updated Sept 28, 2026, lists the Saturday ride at 8:00 AM (Fall) from the Walgreens at 5440 N Clark St: 50-70 miles, steady 17-19 mph, no drop, rotating route, midway cafe stop (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://evolution-cycling.org/rides",
+   "feed_url": null,
+   "notes": "The page carries a Last Updated date; the start time changes between the fall and summer schedules."
+  }
+ },
+ {
+  "slug": "chicago-il-bff-bikes-endurance-ride",
+  "name": "BFF Bikes Endurance Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Chicago",
+  "neighborhood": "Bucktown",
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Some Sundays, rolls at 8:00 am from BFF Bikes at 2056 N Damen Ave. Listed Aug 9, Sep 27 and Oct 25, 2026.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "irregular",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "BFF Bikes",
+   "address": "2056 N Damen Ave, Chicago, IL 60647"
+  },
+  "distance_km": null,
+  "distance_miles": "30-50",
+  "duration": null,
+  "duration_min": null,
+  "pace": "15-18 mph",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "BFF Bikes",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The Oct 25 listing reads Beginner Gravel Ride or Endurance Ride, 8:00 am to 1:30 pm, so the shop may run a gravel outing that day. Check the event page before you go.",
+  "description": "The shop's longer Sunday ride: 30 to 50 miles at 15 to 18 mph from the shop door on Damen. Posted date by date on the shop's events calendar, roughly monthly.",
+  "links": {
+   "website": "https://www.bffbikes.com/events",
+   "instagram": "https://www.instagram.com/bffbikes/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.bffbikes.com/events",
+   "https://www.bffbikes.com/events/oct252026endurance-ride",
+   "https://www.bffbikes.com/events/sept27/2026endurance-ride"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-27",
+  "evidence": "BFF Bikes' events calendar lists Endurance Ride on Sun Aug 9, Sep 27 and Oct 25, 2026 at 8:00 am from the shop, 30-50 miles at 15-18 mph (event pages fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.bffbikes.com/events",
+   "feed_url": "https://www.bffbikes.com/events?format=ical",
+   "notes": "Squarespace events; the old /pages/group-rides page now returns 404."
+  }
+ },
+ {
+  "slug": "chicago-il-turin-bicycle-cowbell-x-turin-saturday-ride",
+  "name": "Cowbell x Turin Saturday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Chicago",
+  "neighborhood": "Ravenswood",
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays, rolls out at 7:00 am from Turin Bicycle at 4710 N Damen Ave. About 45 miles to the northern suburbs and back.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Turin Bicycle",
+   "address": "4710 N Damen Ave, Chicago, IL 60625"
+  },
+  "distance_km": 72.4,
+  "distance_miles": 45,
+  "duration": null,
+  "duration_min": null,
+  "pace": "16-19 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Turin Bicycle",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "A Cowbell Cycling Club team ride that Turin lists as open to all. Turin's page doesn't say whether the start moves later in winter, so check Turin's Instagram or the shop before a cold-weather Saturday.",
+  "description": "Turin's Saturday ride with Cowbell Cycling Club: 45 miles up to the northern suburbs and back at 16 to 19 mph, no drop, open to all. Cowbell's line is have fun, ride a bike, don't be a jerk.",
+  "links": {
+   "website": "https://turinbicycle.com/community/",
+   "instagram": "https://www.instagram.com/turinbicycle/",
+   "facebook": "https://www.facebook.com/p/Turin-Bicycle-Chicago-Ltd-100063565544068/",
+   "strava": "https://www.strava.com/clubs/turinchicago",
+   "meetup": null,
+   "other": [
+    "https://www.instagram.com/cowbellcyclingclub/"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://turinbicycle.com/community/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Turin Bicycle's community page, headed 2026 Turin Group Rides, lists the Cowbell x Turin Ride: Saturday 7:00 am roll out, 16-19 mph, 45 miles, no drop, open to all (fetched Oct 1, 2026). The page footer reads 2027 and has no dated post.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://turinbicycle.com/community/",
+   "feed_url": null,
+   "notes": "No date on the page; the shop's Strava club posts seasonal changes."
+  }
+ },
+ {
+  "slug": "chicago-il-chicago-family-biking-lakeview-east-kidical-mass",
+  "name": "Lakeview East Kidical Mass",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Chicago",
+  "neighborhood": "Lakeview",
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Last Saturday of the month, rolls at 9:15 am (meet 9:00 am) from the front playlot at Nettelhorst School. Dates listed: Aug 29, Sep 26, Oct 31, 2026.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:15 am",
+  "start_hhmm": "09:15",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "sat"
+   }
+  ],
+  "season": "spring-Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "Nettelhorst School, near the front playlot",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": "2-4",
+  "duration": "About an hour",
+  "duration_min": 60,
+  "pace": "Slow, 5-6 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Lakeview East Kidical Mass (Chicago Family Biking)",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Rain or shine. Helmets required. Children ride with a parent or guardian and should be past training wheels; trail-a-bikes, trailers and child seats are welcome. Volunteer-led.",
+  "description": "A slow neighborhood ride for kids and their grown-ups: two to four miles at walking-to-jogging pace with stops. Each month has a theme; October's is a Halloween ride.",
+  "links": {
+   "website": "http://www.chicagofamilybiking.org/events",
+   "instagram": "https://www.instagram.com/nettelhorstbike/",
+   "facebook": "http://www.facebook.com/chicagofamilybiking",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "family",
+   "beginner"
+  ],
+  "sources": [
+   "http://www.chicagofamilybiking.org/events"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-26",
+  "evidence": "Chicago Family Biking's events page lists Lakeview East Kidical Mass on Sat Aug 29, Sep 26 and Oct 31, 2026, roll 9:15 AM from Nettelhorst, 2-4 miles at 5-6 mph (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "http://www.chicagofamilybiking.org/events",
+   "feed_url": null,
+   "notes": "The page lists the chapter's next dates; the Oct 31 ride is the last on the 2026 list."
+  }
+ },
+ {
+  "slug": "chicago-il-chicago-family-biking-logan-square-kidical-mass",
+  "name": "Logan Square Kidical Mass",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Chicago",
+  "neighborhood": "Logan Square",
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Last Sunday of the month, rolls at 9:15 am (meet 9:00 am) from Palmer Square Park. Dates listed: Aug 30, Sep 27, Oct 25, 2026. Shine only.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "9:15 am",
+  "start_hhmm": "09:15",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "sun"
+   }
+  ],
+  "season": "spring-Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "Palmer Square Park",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": "2-4",
+  "duration": "About an hour",
+  "duration_min": 60,
+  "pace": "Slow, 5-6 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Logan Square Kidical Mass (Chicago Family Biking)",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The chapter's weather policy is shine only, so it can be called off for rain. Updates go to its Facebook group. Helmets required; children ride with a parent or guardian and should be past training wheels.",
+  "description": "Logan Square's monthly family ride: a slow two to four miles, about an hour, led by volunteers. The Oct 25 ride is a Halloween ride.",
+  "links": {
+   "website": "http://www.chicagofamilybiking.org/events",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/groups/1840928970184705",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "http://www.instagram.com/chicagofamilybiking"
+   ]
+  },
+  "inclusive_focus": [
+   "family",
+   "beginner"
+  ],
+  "sources": [
+   "http://www.chicagofamilybiking.org/events"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-27",
+  "evidence": "Chicago Family Biking's events page lists Logan Square Kidical Mass on Sun Aug 30, Sep 27 and Oct 25, 2026, roll 9:15 AM from Palmer Square Park, weather policy shine only (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "http://www.chicagofamilybiking.org/events",
+   "feed_url": null,
+   "notes": "Chicago Family Biking's page lists each chapter's dates."
+  }
+ },
+ {
+  "slug": "chicago-il-chicago-family-biking-hyde-park-kidical-mass",
+  "name": "Hyde Park Kidical Mass",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Chicago",
+  "neighborhood": "Hyde Park",
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Third Sunday of the month, rolls at 12:15 pm (meet 12:00 pm) from the Ray School playlot at 56th and Kimbark. Dates listed: Sep 20 and Oct 18, 2026. Shine only.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "12:15 pm",
+  "start_hhmm": "12:15",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 3,
+    "day": "sun"
+   }
+  ],
+  "season": "spring-Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "Ray School playlot, 56th and Kimbark",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": "2-4",
+  "duration": "About an hour",
+  "duration_min": 60,
+  "pace": "Slow, 5-6 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Hyde Park Kidical Mass (Chicago Family Biking)",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The chapter's weather policy is shine only. Questions go to the chapter's Google Group address on Chicago Family Biking's events page. Helmets required; children ride with a parent or guardian and should be past training wheels.",
+  "description": "The South Side Kidical Mass: a slow family ride from the Ray School playlot, two to four miles with stops, about an hour, on the third Sunday.",
+  "links": {
+   "website": "http://www.chicagofamilybiking.org/events",
+   "instagram": null,
+   "facebook": "http://www.facebook.com/chicagofamilybiking",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "http://www.instagram.com/chicagofamilybiking"
+   ]
+  },
+  "inclusive_focus": [
+   "family",
+   "beginner"
+  ],
+  "sources": [
+   "http://www.chicagofamilybiking.org/events"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-20",
+  "evidence": "Chicago Family Biking's events page lists Hyde Park Kidical Mass on Sun Sep 20 and Oct 18, 2026, roll 12:15 PM from the Ray School playlot, 56th and Kimbark (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "http://www.chicagofamilybiking.org/events",
+   "feed_url": null,
+   "notes": "Chicago Family Biking's page lists each chapter's dates."
+  }
+ },
+ {
+  "slug": "evanston-il-evanston-rides-adult-social-ride",
+  "name": "Evanston Rides! Adult Social Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Evanston",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "First Tuesday of the month, May-Oct, leaves Fountain Square at 5:30 pm. Next and last of 2026: Oct 6.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "tue"
+   }
+  ],
+  "season": "May-Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "Fountain Square, downtown Evanston",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": "10 or 20",
+  "duration": null,
+  "duration_min": null,
+  "pace": "Two groups: leisurely (about 10 miles) and fast (about 20 miles)",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Evanston Transit Alliance, with Downtown Evanston",
+   "type": "nonprofit"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Free, but register for the date you plan to ride. Helmet and a bike light required. It ends with an optional happy hour at Ridgeville Tavern. Parking: Sherman Plaza Self Park, a block from Fountain Square.",
+  "description": "A monthly after-work loop out of downtown Evanston, led by the Evanston Transit Alliance. It splits into a leisurely group and a fast group, then ends at Ridgeville Tavern.",
+  "links": {
+   "website": "https://downtownevanston.org/evanstonrides",
+   "instagram": "https://instagram.com/downtownevanston/",
+   "facebook": "https://www.facebook.com/downtownevanston",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "sources": [
+   "https://downtownevanston.org/evanstonrides"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Downtown Evanston's 2026 Evanston Rides! page lists the Adult Social Ride for Tue Oct 6, 5:30 PM from Fountain Square (leisurely about 10 miles, fast about 20), the last of the May-October series (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://downtownevanston.org/evanstonrides",
+   "feed_url": null,
+   "notes": "The page is rewritten each spring; the 2026 series ends Oct 6."
+  }
+ },
+ {
+  "slug": "evanston-il-evanston-rides-family-ride-kidical-mass",
+  "name": "Evanston Rides! Family Ride (Evanston Kidical Mass)",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Evanston",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Last Saturday of the month, May-Oct, rolls at 10:00 am. Oct 24, 2026 rolls at 1:30 pm from Twiggs Park for a trick-or-treat stroll downtown.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "start_times": [
+   {
+    "from": "2026-10-24",
+    "start_hhmm": "13:30"
+   }
+  ],
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "sat"
+   }
+  ],
+  "season": "May-Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "Varies by ride; Oct 24 starts at Twiggs Park",
+   "address": null
+  },
+  "distance_km": 2.4,
+  "distance_miles": 1.5,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slow, family pace",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Evanston Kidical Mass (Chicago Family Biking), with Downtown Evanston",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Free, but register for the date you plan to ride. Helmets required. Each month's start park changes, so read the listing for the date. Chicago Family Biking's events page shows Sep 26 starting at Independence Park and Oct 24 at Twiggs Park.",
+  "description": "Evanston's monthly family ride, led by Evanston Kidical Mass volunteers. The last one of 2026, Oct 24, is a short roll to downtown for the trick-or-treat stroll.",
+  "links": {
+   "website": "https://downtownevanston.org/evanstonrides",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "http://www.chicagofamilybiking.org/events"
+   ]
+  },
+  "inclusive_focus": [
+   "family"
+  ],
+  "sources": [
+   "https://downtownevanston.org/evanstonrides",
+   "http://www.chicagofamilybiking.org/events"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-26",
+  "evidence": "Chicago Family Biking's events page lists Evanston Kidical Mass on Sat Aug 29, Sep 26 and Oct 24, 2026; Downtown Evanston's Evanston Rides! page lists the family series May-October (both fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "http://www.chicagofamilybiking.org/events",
+   "feed_url": null,
+   "notes": "Also listed on downtownevanston.org/evanstonrides."
+  }
+ },
+ {
+  "slug": "morton-grove-il-lets-ride-wednesday-night-ride",
+  "name": "Let's Ride! Wednesday Night Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Morton Grove",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Wednesdays, wheels roll at 5:15 pm (gather 5:00 pm) on Oct 7 and Oct 14, and at 5:00 pm (gather 4:45 pm) from Oct 21. Oct 28 is the last one of 2026.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "5:15 pm",
+  "start_hhmm": "17:15",
+  "start_times": [
+   {
+    "from": "2026-10-21",
+    "start_hhmm": "17:00"
+   }
+  ],
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "spring-Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "Moretti's parking lot on Dempster (Oct 7: Harms Woods North lot)",
+   "address": "6415 W Dempster St, Morton Grove, IL"
+  },
+  "distance_km": null,
+  "distance_miles": "13 or 18",
+  "duration": null,
+  "duration_min": null,
+  "pace": "Keep up a 10 mph pace",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Let's Ride! (ages 40+, fun & fit social riding)",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "A 40-and-over group; the Meetup page says so. Oct 7 starts at the Harms Woods North lot; from Oct 14 the start is Moretti's lot on Dempster. Helmet required. Bring a headlight, since the North Branch Trail is dark in the woods. Check the Meetup page the day of the ride for cancellations. Running late: head north on the trail and you will catch the group.",
+  "description": "The group's Wednesday after-work ride up the North Branch Trail, turning around at Tower Rd (about 13 miles round trip from Moretti's) or Dundee Rd (about 18). Riders of all styles and bikes are welcome at a 10 mph pace. Two or three groups and a sweep rider.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/lets-ride-ages-40-fun-fit-social-riding/",
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.meetup.com/lets-ride-ages-40-fun-fit-social-riding/events/ical/",
+   "https://www.meetup.com/lets-ride-ages-40-fun-fit-social-riding/events/316718264/",
+   "https://www.meetup.com/lets-ride-ages-40-fun-fit-social-riding/events/316718708/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The group's Meetup feed lists Weekly Wednesday Night Let's Ride! on Oct 7, 14, 21 and 28, 2026: roll 5:15 pm through Oct 14, 5:00 pm from Oct 21; Oct 28 is marked the very last ride of the year (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/lets-ride-ages-40-fun-fit-social-riding/events/ical/",
+   "feed_url": "https://www.meetup.com/lets-ride-ages-40-fun-fit-social-riding/events/ical/",
+   "notes": "The ride returns in spring; the season's first month isn't posted."
+  }
+ },
+ {
+  "slug": "park-ridge-il-park-ridge-community-bike-rides-saturday-social-ride",
+  "name": "Park Ridge Community Bike Rides Saturday Social Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Park Ridge",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Some Saturdays, rolls at 10:30 am. Listed: Oct 3, 17 and 31, 2026. Each date is its own Meetup event with its own meeting spot.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "10:30 am",
+  "start_hhmm": "10:30",
+  "frequency": "irregular",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Listed on each Meetup event (Oct 17 and 31 meet at Miami Woods)",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": "7.5+",
+  "duration": null,
+  "duration_min": null,
+  "pace": "About 10 mph, ride as one group",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Park Ridge Community Bike Rides",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The Meetup page says any level is welcome and nobody gets left behind; bring a reliable bike and be able to hold about 10 mph for 7.5 miles or more. Helmet required, and carry photo ID and a phone. Check Meetup the day of the ride for changes or weather cancellations. Light refreshments usually follow.",
+  "description": "A laid-back social ride through Park Ridge and the neighbors, one group, no speed records. The October rides head to the North Branch Trail from Miami Woods for fall colors.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/park-ridge-community-bike-rides/",
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner",
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.meetup.com/park-ridge-community-bike-rides/events/ical/",
+   "https://www.meetup.com/park-ridge-community-bike-rides/events/316631891/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "The group's Meetup feed lists social rides on Sat Oct 3, 17 and 31, 2026 at 10:30 AM, one group at about 10 mph over 7.5+ miles, no one left behind (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/park-ridge-community-bike-rides/events/ical/",
+   "feed_url": "https://www.meetup.com/park-ridge-community-bike-rides/events/ical/",
+   "notes": "Rides are posted a few weeks at a time, so some weeks have none."
+  }
+ },
+ {
+  "slug": "park-ridge-il-park-ridge-cycling-saturday-c-ride",
+  "name": "Park Ridge Cycling Saturday C Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Park Ridge",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays, 7:30 am from the Pickwick Marquee (as of the Sept 19 posting). Start times move with sunrise and are posted weekly.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Pickwick Marquee, Pickwick Theatre",
+   "address": "5 S Prospect Ave, Park Ridge, IL 60068"
+  },
+  "distance_km": 45.1,
+  "distance_miles": 28,
+  "duration": null,
+  "duration_min": null,
+  "pace": "14-15 mph; first-timers should be able to ride 30 miles at 14-15 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Park Ridge Cycling Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The club says its rides are no drop as long as you can hold the pace. New riders get an intro and safety briefing before the start. Start times move with sunrise and go out by email on Thursdays; a 2026 waiver or club membership is required. This C ride is self-guided.",
+  "description": "The slowest of the club's Saturday groups, 28 miles at 14 to 15 mph, and the one it points first-timers to. The A group (20-22 mph, 54 miles) and B group (17-18 mph, 32 or 58 miles) leave from the same spot at 7:00 and 7:15.",
+  "links": {
+   "website": "https://www.parkridgecycling.org/groups",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner",
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.parkridgecycling.org/post/weekend-ride-schedule-for-september-18-and-19",
+   "https://www.parkridgecycling.org/groups"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-19",
+  "evidence": "Park Ridge Cycling's post dated Sept 18, 2026 lists Saturday Sept 19 groups from the Pickwick Marquee: C at 7:30 AM, 14-15 mph, 28 miles, first timers welcome, no drop provided you meet the pace (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.parkridgecycling.org/",
+   "feed_url": null,
+   "notes": "Weekly schedule posts; the start time changes with sunrise, so check the newest post."
+  }
+ },
+ {
+  "slug": "gurnee-il-bicycle-club-of-lake-county-bikes-and-bucks-ride",
+  "name": "Bicycle Club of Lake County Bikes and 'Bucks Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Gurnee",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Sundays, 9:00 am from the Starbucks lot off Grand Avenue, through Oct 25, 2026.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "spring-Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "Gurnee Starbucks, parking lot off Grand Avenue",
+   "address": "7105 Grand Ave, Gurnee, IL"
+  },
+  "distance_km": 64.4,
+  "distance_miles": 40,
+  "duration": null,
+  "duration_min": null,
+  "pace": "15-16 mph early in the season, 18-19 mph later; likely two groups",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Bicycle Club of Lake County",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Rural roads to Bristol Woods County Park in Wisconsin and back, with a break and a bring-your-own snack. The club says visitors are welcome at its rides; check the Meetup page for the day's details.",
+  "description": "A 40-mile Sunday road ride from Gurnee up to Bristol Woods in Wisconsin. Two groups, about 16 mph and about 19 mph, no drop.",
+  "links": {
+   "website": "https://www.bikebclc.com",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/bicycle-club-of-lake-county/",
+   "other": [
+    "https://ridewithgps.com/routes/57380607",
+    "https://ridewithgps.com/routes/57333152"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.meetup.com/bicycle-club-of-lake-county/events/ical/",
+   "https://www.meetup.com/bicycle-club-of-lake-county/events/316552589/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Bicycle Club of Lake County's Meetup lists Bikes and 'Bucks Ride every Sunday 9:00 AM from the Gurnee Starbucks, 40 miles, no drop, through Oct 25, 2026 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/bicycle-club-of-lake-county/events/ical/",
+   "feed_url": "https://www.meetup.com/bicycle-club-of-lake-county/events/ical/",
+   "notes": "Meetup feed shows the next ten club events."
+  }
+ },
+ {
+  "slug": "lincolnshire-il-bicycle-club-of-lake-county-saturday-get-your-gravel-on",
+  "name": "Bicycle Club of Lake County Saturday Get Your Gravel On",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Lincolnshire",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "gravel"
+  ],
+  "schedule": "Saturdays, 10:00 am from the west end of the Half Day Brewing lot. Listed Oct 3 and Oct 10, 2026.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Half Day Brewing Company, west end of the parking lot",
+   "address": "200 Village Green S, Lincolnshire, IL"
+  },
+  "distance_km": 40.2,
+  "distance_miles": 25,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Two groups: 14-15 mph and 12-13 mph",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Bicycle Club of Lake County",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Park in the far west spaces. Bring a helmet, eye protection, water and cash for refreshments afterward. The club says visitors are welcome at its rides.",
+  "description": "A gravel ride on the Des Plaines River Trail to Independence Grove and back, about 25 miles, then beers at Half Day. Pace groups sort themselves by who shows up.",
+  "links": {
+   "website": "https://www.bikebclc.com",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/bicycle-club-of-lake-county/",
+   "other": [
+    "https://ridewithgps.com/trips/383402308"
+   ]
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.meetup.com/bicycle-club-of-lake-county/events/ical/",
+   "https://www.meetup.com/bicycle-club-of-lake-county/events/316696081/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Bicycle Club of Lake County's Meetup lists Saturday Get Your Gravel On on Oct 3 and Oct 10, 2026 at 10:00 AM from Half Day Brewing, Lincolnshire, about 25 miles with 14-15 and 12-13 mph groups (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/bicycle-club-of-lake-county/events/ical/",
+   "feed_url": "https://www.meetup.com/bicycle-club-of-lake-county/events/ical/",
+   "notes": "Each date is its own Meetup event; the page doesn't say when the series ends."
+  }
+ },
+ {
+  "slug": "lake-bluff-il-bicycle-club-of-lake-county-tuesday-night-social-ride",
+  "name": "Bicycle Club of Lake County Tuesday Night Social Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Lake Bluff",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Tuesdays, 5:30 pm from the Lake Bluff Metra station, through Oct 27, 2026.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "spring-Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "Lake Bluff Metra station",
+   "address": "600 N Sheridan Rd, Lake Bluff, IL"
+  },
+  "distance_km": 24.1,
+  "distance_miles": 15,
+  "duration": null,
+  "duration_min": null,
+  "pace": "C pace, about 15 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Bicycle Club of Lake County",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Parking at the station is free after 6 pm. The club says visitors are welcome at its rides.",
+  "description": "A social, no-drop road ride from the Lake Bluff Metra station: about 15 miles at about 15 mph on paved trails and back streets through Lake Forest, Lake Bluff and Highland Park.",
+  "links": {
+   "website": "https://www.bikebclc.com",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": "https://www.meetup.com/bicycle-club-of-lake-county/",
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.meetup.com/bicycle-club-of-lake-county/events/ical/",
+   "https://www.meetup.com/bicycle-club-of-lake-county/events/316587785/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Bicycle Club of Lake County's Meetup lists the Tuesday Night Road Ride, C pace about 15 mph for about 15 miles, social no drop, every Tuesday 5:30 PM from the Lake Bluff Metra station until Oct 27, 2026 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/bicycle-club-of-lake-county/events/ical/",
+   "feed_url": "https://www.meetup.com/bicycle-club-of-lake-county/events/ical/",
+   "notes": "Meetup feed shows the next ten club events."
+  }
+ },
+ {
+  "slug": "deerfield-il-velo-club-roubaix-saturday-ride",
+  "name": "Velo Club Roubaix Saturday Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Deerfield",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Saturdays, 8:00 am from Jaycee Park, 1026 Wilmot Rd, Deerfield.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Jaycee Park",
+   "address": "1026 Wilmot Rd, Deerfield, IL"
+  },
+  "distance_km": null,
+  "distance_miles": "45-90",
+  "duration": null,
+  "duration_min": null,
+  "pace": "A group 20-21 mph; B group 17-18.5 mph",
+  "drop_policy": "groups",
+  "host": {
+   "name": "Velo Club Roubaix",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Guests may ride three times with a signed waiver before joining. The B group is listed as no drop; the A group regroups. The club's pages were last dated 2025, so confirm the fall start with the club before you go.",
+  "description": "A big North Shore club's Saturday ride: 45 to 90 miles in an A group (20-21 mph) and a B group (17-18.5 mph).",
+  "links": {
+   "website": "https://www.veloclubroubaix.com/",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/36425",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.veloclubroubaix.com/",
+   "https://www.veloclubroubaix.com/rider-info",
+   "https://www.veloclubroubaix.com/meeting-locations",
+   "https://www.strava.com/clubs/36425"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2025-11-01",
+  "evidence": "Velo Club Roubaix's rider-info and meeting-locations pages list the Saturday ride at 8:00 AM from Jaycee Park, Deerfield (A 20-21 mph, B 17-18.5 mph); its Strava club's last posts are from Nov 2025 (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.veloclubroubaix.com/meeting-locations",
+   "feed_url": null,
+   "notes": "Pages carry a 2025 copyright; the club's Strava posts stop in Nov 2025."
+  }
+ },
+ {
+  "slug": "buffalo-grove-il-arlington-heights-bicycle-club-bakery-ride",
+  "name": "Arlington Heights Bicycle Club Bakery Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Buffalo Grove",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Tuesdays and Thursdays, 9:00 am from Willow Stream Park. Listed Oct 1 to 29, 2026. A shorter 1/2 Baked ride (17-25 miles) leaves with it.",
+  "days": [
+   "tue",
+   "thu"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "spring-Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "Willow Stream Park",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": "17-25",
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Arlington Heights Bicycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The club's calendar says routes for the Bakery Ride and the shorter 1/2 Baked ride are decided at the start, and riders sign a waiver on the day. The club describes its rides as no-drop and independent. The start park's town comes from the Buffalo Grove Park District's listing; the club's page gives the park name only.",
+  "description": "The club's weekday-morning ride, with a shorter 1/2 Baked option, from Willow Stream Park. Routes get set at the start.",
+  "links": {
+   "website": "https://www.cyclearlington.com/",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/groups/ArlingtonHtsBikeClub",
+   "strava": "https://www.strava.com/clubs/556998",
+   "meetup": null,
+   "other": [
+    "https://ridewithgps.com/partners/ahbc"
+   ]
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.cyclearlington.com/content.aspx?page_id=4001&club_id=660709&action=cira&vm=Future&sif=0",
+   "https://www.cyclearlington.com/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Arlington Heights Bicycle Club's ClubExpress calendar lists the Bakery Ride and 1/2 Baked on Tuesdays and Thursdays at 9:00 AM from Willow Stream Park, dates Oct 1 to Oct 29, 2026 (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.cyclearlington.com/content.aspx?page_id=4001&club_id=660709&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "ClubExpress event list; only dates through Oct 29 were posted."
+  }
+ },
+ {
+  "slug": "arlington-heights-il-bike-the-heights-slow-roll",
+  "name": "Bike the Heights! Slow Roll",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Arlington Heights",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Fourth Friday of the month, rolls at 6:15 pm (meet 6:00 pm) from Harmony Park, 7 S Vail Ave. Dates listed: Aug 28, Sep 25, Oct 23, 2026 (a Halloween ride). Weather permitting.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:15 pm",
+  "start_hhmm": "18:15",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 4,
+    "day": "fri"
+   }
+  ],
+  "season": "spring-Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "Harmony Park",
+   "address": "7 S Vail Ave, Arlington Heights, IL 60005"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slow",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Bike the Heights!",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Weather permitting; updates go on the ride's Facebook event. It's listed on Chicago Family Biking's family-ride calendar, whose guidelines ask for helmets and a parent or guardian with each child.",
+  "description": "Arlington Heights' monthly slow roll from Harmony Park, listed on Chicago Family Biking's family-ride calendar. The October ride is a Halloween ride.",
+  "links": {
+   "website": "http://www.chicagofamilybiking.org/events",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://m.facebook.com/events/1963483244294605/"
+   ]
+  },
+  "inclusive_focus": [
+   "family"
+  ],
+  "sources": [
+   "http://www.chicagofamilybiking.org/events"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-25",
+  "evidence": "Chicago Family Biking's events page lists Bike the Heights! Slow Roll on Fri Aug 28, Sep 25 and Oct 23, 2026, meet 6:00 PM, roll 6:15 PM at Harmony Park, 7 S Vail Ave, Arlington Heights (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "http://www.chicagofamilybiking.org/events",
+   "feed_url": null,
+   "notes": "The page lists dates through Oct 31; later dates and any change go on Facebook."
+  }
+ },
+ {
+  "slug": "elmhurst-il-elmhurst-bicycle-club-morning-ride",
+  "name": "Elmhurst Bicycle Club Morning Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Elmhurst",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Mondays and Thursdays, 9:00 am from the rear lot at Whole Foods along West Ave. Listed through Nov 5, 2026.",
+  "days": [
+   "mon",
+   "thu"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Whole Foods, rear parking lot along West Ave, Elmhurst",
+   "address": null
+  },
+  "distance_km": 56.3,
+  "distance_miles": 35,
+  "duration": null,
+  "duration_min": null,
+  "pace": "13-15 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Elmhurst Bicycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The club's home page says guests are welcome with an online waiver, and that club rides stay together.",
+  "description": "The club's weekday-morning road ride, about 35 miles at 13 to 15 mph, from the Whole Foods lot on West Ave.",
+  "links": {
+   "website": "https://www.elmhurstbicycling.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://elmhurstbc.clubexpress.com/content.aspx?page_id=4001&club_id=695056&action=cira&vm=Future&sif=0",
+   "https://www.elmhurstbicycling.org/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Elmhurst Bicycle Club's ClubExpress calendar lists the Monday and Thursday 9:00 AM morning ride from the Whole Foods lot on West Ave, about 35 miles at 13-15 mph, dated through Nov 5, 2026 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://elmhurstbc.clubexpress.com/content.aspx?page_id=4001&club_id=695056&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "ClubExpress event list."
+  }
+ },
+ {
+  "slug": "lisle-il-elmhurst-bicycle-club-lisle-early-bird",
+  "name": "Elmhurst Bicycle Club Lisle Early Bird",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Lisle",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Mondays, Wednesdays and Fridays, 5:30 am from the Lisle Police Station on Lincoln Ave. Listed Oct 2 to 28, 2026.",
+  "days": [
+   "mon",
+   "wed",
+   "fri"
+  ],
+  "time_local": "5:30 am",
+  "start_hhmm": "05:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Lisle Police Station, Lincoln Ave (Rt. 53)",
+   "address": null
+  },
+  "distance_km": 27.4,
+  "distance_miles": 17,
+  "duration": null,
+  "duration_min": null,
+  "pace": "14-16 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Elmhurst Bicycle Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Lights are mandatory (it is dark at 5:30). Rain cancels it. The club's home page says guests are welcome with an online waiver.",
+  "description": "A before-work ride out of Lisle: 17 miles at 14 to 16 mph, no drop, three mornings a week.",
+  "links": {
+   "website": "https://www.elmhurstbicycling.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://elmhurstbc.clubexpress.com/content.aspx?page_id=4001&club_id=695056&action=cira&vm=Future&sif=0",
+   "https://www.elmhurstbicycling.org/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Elmhurst Bicycle Club's ClubExpress calendar lists the Lisle Early Bird Mon/Wed/Fri at 5:30 AM from the Lisle Police Station, 17 miles at 14-16 mph, no drop, lights mandatory, dated Oct 2 to Oct 28, 2026 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://elmhurstbc.clubexpress.com/content.aspx?page_id=4001&club_id=695056&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "ClubExpress event list."
+  }
+ },
+ {
+  "slug": "sugar-grove-il-fox-valley-bicycle-and-ski-club-sunday-intermediate-road-ride",
+  "name": "Fox Valley Bicycle & Ski Club Sunday Intermediate Road Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Sugar Grove",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Sundays, 8:00 am from Harter Middle School. Listed Oct 4, 11, 18 and 25, 2026.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Harter Middle School",
+   "address": "1601 Esker Dr, Sugar Grove, IL 60554"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "15-16 mph average",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Fox Valley Bicycle & Ski Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Registration is required but free for everyone. Rear lights required; front light and bright clothing recommended. Riders may separate and regroup at turns. A faster Intermediate High group (18+ mph, listed separately) starts at the same time and doesn't wait.",
+  "description": "The club's Sunday intermediate road ride from Harter Middle School in Sugar Grove: 15 to 16 mph, no drop, regrouping at turns, with a meal afterward at a nearby restaurant.",
+  "links": {
+   "website": "https://www.fvbsc.org/content.aspx?page_id=22&club_id=401197&module_id=178914",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.fvbsc.org/content.aspx?page_id=4002&club_id=401197&item_id=2938332",
+   "https://www.fvbsc.org/content.aspx?page_id=4001&club_id=401197&action=cira&vm=Future&sif=0"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Fox Valley Bicycle & Ski Club's calendar lists the Sunday Intermediate Road Ride (15-16 mph, no drop) at 8:00 AM from Harter Middle School on Oct 4, 11, 18 and 25, 2026 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.fvbsc.org/content.aspx?page_id=4001&club_id=401197&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "ClubExpress event list; each date is a registration page."
+  }
+ },
+ {
+  "slug": "st-charles-il-fox-valley-bicycle-and-ski-club-tuesday-trail-ride",
+  "name": "Fox Valley Bicycle & Ski Club Tuesday Trail Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "St. Charles",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Tuesdays, 5:30 pm from the James O Breen Community Park lot (east side, off Peck Rd). Listed Oct 6, 13, 20 and 27, 2026.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "James O Breen Community Park, east-side lot off Peck Rd",
+   "address": "Campton and Peck Rd, St. Charles, IL 60175"
+  },
+  "distance_km": null,
+  "distance_miles": "20-25",
+  "duration": null,
+  "duration_min": null,
+  "pace": "Intermediate Low, 12-14 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Fox Valley Bicycle & Ski Club",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Registration is required but free for everyone. Bring front and rear lights. The ride goes west for about an hour and returns.",
+  "description": "A Tuesday-evening trail ride west from St. Charles: 20 to 25 miles at 12 to 14 mph, one hour out and back. The club says all rides except its Advanced ones are no drop.",
+  "links": {
+   "website": "https://www.fvbsc.org/content.aspx?page_id=22&club_id=401197&module_id=178914",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop",
+   "beginner"
+  ],
+  "sources": [
+   "https://www.fvbsc.org/content.aspx?page_id=4002&club_id=401197&item_id=2938383",
+   "https://www.fvbsc.org/content.aspx?page_id=22&club_id=401197&module_id=178914"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Fox Valley Bicycle & Ski Club's calendar lists the Intermediate Low (12-14 mph) Trail Ride Tuesdays at 5:30 PM from James O Breen Community Park, St. Charles, on Oct 6, 13, 20 and 27, 2026 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://www.fvbsc.org/content.aspx?page_id=4001&club_id=401197&action=cira&vm=Future&sif=0",
+   "feed_url": null,
+   "notes": "ClubExpress event list."
+  }
+ },
+ {
+  "slug": "wheaton-il-spokes-bikes-saturday-road-ride",
+  "name": "Spokes Saturday Road Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Wheaton",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday, 9:00 am from Spokes Bikes in Wheaton.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Spokes Bikes, Wheaton store",
+   "address": "229 Rice Lake Square, Wheaton, IL 60187"
+  },
+  "distance_km": null,
+  "distance_miles": "30-50",
+  "duration": null,
+  "duration_min": null,
+  "pace": "18+ mph",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Spokes Bikes",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The shop's page says ride times are subject to change and to sign up for the shop's newsletter for current times; it also says many rides are weather permitting. Bring a bike in good working order, water and a helmet.",
+  "description": "The shop's Saturday road ride from the Wheaton store: 30 to 50 miles at 18+ mph. All experience levels are welcome, in the shop's words.",
+  "links": {
+   "website": "https://www.spokesbikes.com/articles/rides-and-events-pg37.htm",
+   "instagram": "https://www.instagram.com/spokesbikes/",
+   "facebook": "https://www.facebook.com/spokesbikes/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.spokesbikes.com/articles/rides-and-events-pg37.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Spokes Bikes' Rides and Events page (2026 footer, no dated post) lists the Saturday Road Ride in its weekly group rides table: every Saturday, 9:00 am from Spokes Bikes in Wheaton. (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.spokesbikes.com/articles/rides-and-events-pg37.htm",
+   "feed_url": null,
+   "notes": "Undated page; the shop says times change and points to its newsletter."
+  }
+ },
+ {
+  "slug": "wheaton-il-spokes-bikes-sunday-gravel-ride",
+  "name": "Spokes Sunday Gravel Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Wheaton",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "gravel"
+  ],
+  "schedule": "Every Sunday, 9:00 am from Spokes Bikes in Wheaton.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Spokes Bikes, Wheaton store",
+   "address": "229 Rice Lake Square, Wheaton, IL 60187"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": "About 3 hours",
+  "duration_min": 180,
+  "pace": "Leisure",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Spokes Bikes",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The shop's page says ride times are subject to change and to sign up for the shop's newsletter for current times; it also says many rides are weather permitting. Bring a bike in good working order, water and a helmet.",
+  "description": "The shop's Sunday gravel ride from the Wheaton store: about three hours, listed as a leisure ride. All experience levels are welcome, in the shop's words.",
+  "links": {
+   "website": "https://www.spokesbikes.com/articles/rides-and-events-pg37.htm",
+   "instagram": "https://www.instagram.com/spokesbikes/",
+   "facebook": "https://www.facebook.com/spokesbikes/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.spokesbikes.com/articles/rides-and-events-pg37.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Spokes Bikes' Rides and Events page (2026 footer, no dated post) lists the Sunday Gravel Ride in its weekly group rides table: every Sunday, 9:00 am from Spokes Bikes in Wheaton. (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.spokesbikes.com/articles/rides-and-events-pg37.htm",
+   "feed_url": null,
+   "notes": "Undated page; the shop says times change and points to its newsletter."
+  }
+ },
+ {
+  "slug": "wheaton-il-spokes-bikes-wednesday-road-ride",
+  "name": "Spokes Wednesday Road Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Wheaton",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday, 5:00 pm from Spokes Bikes in Wheaton.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "5:00 pm",
+  "start_hhmm": "17:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Spokes Bikes, Wheaton store",
+   "address": "229 Rice Lake Square, Wheaton, IL 60187"
+  },
+  "distance_km": null,
+  "distance_miles": "20",
+  "duration": null,
+  "duration_min": null,
+  "pace": "15+ mph",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Spokes Bikes",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The shop's page says ride times are subject to change and to sign up for the shop's newsletter for current times; it also says many rides are weather permitting. Bring a bike in good working order, water and a helmet.",
+  "description": "The shop's Wednesday after-work road ride from the Wheaton store: 20 miles at 15+ mph. All experience levels are welcome, in the shop's words.",
+  "links": {
+   "website": "https://www.spokesbikes.com/articles/rides-and-events-pg37.htm",
+   "instagram": "https://www.instagram.com/spokesbikes/",
+   "facebook": "https://www.facebook.com/spokesbikes/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.spokesbikes.com/articles/rides-and-events-pg37.htm"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Spokes Bikes' Rides and Events page (2026 footer, no dated post) lists the Wednesday Road Ride in its weekly group rides table: every Wednesday, 5:00 pm from Spokes Bikes in Wheaton. (fetched Oct 1, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.spokesbikes.com/articles/rides-and-events-pg37.htm",
+   "feed_url": null,
+   "notes": "Undated page; the shop says times change and points to its newsletter."
+  }
+ },
+ {
+  "slug": "riverside-il-ride-riverside-slow-roll",
+  "name": "Ride Riverside Slow Roll",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Riverside",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Second Friday of the month, April-October, 6:00 pm from Guthrie Park across from the Riverside train station. 2026 dates ran Apr 10 to Oct 9; Oct 9 is the last.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "fri"
+   }
+  ],
+  "season": "Apr-Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "Guthrie Park, across from the Riverside train station",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slow",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Ride Riverside",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The group calls itself a community bicycle group. Its page gives the date for each month of the season.",
+  "description": "Riverside's monthly slow roll, from the park by the train station. The 2026 season runs April to October, and Oct 9 is the last ride of the year.",
+  "links": {
+   "website": "https://rideriverside.org/",
+   "instagram": "https://www.instagram.com/rideriversideil/",
+   "facebook": "https://www.facebook.com/groups/rideriverside",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "beginner"
+  ],
+  "sources": [
+   "https://rideriverside.org/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-11",
+  "evidence": "Ride Riverside's page, with a 2026 schedule post dated June 30, 2026, lists Slow Roll every second Friday April through October at 6 pm from Guthrie Park, final date Oct 9 (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://rideriverside.org/",
+   "feed_url": null,
+   "notes": "The page posts a new schedule each year."
+  }
+ },
+ {
+  "slug": "brookfield-il-cycle-brookfield-first-friday-slow-roll",
+  "name": "Cycle Brookfield First Friday Slow Roll",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Brookfield",
+  "neighborhood": null,
+  "region": "Illinois",
+  "state": "IL",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "First Friday of the month, May-Oct, 6:00 pm start. Oct 2, 2026 starts at The Compassion Factory, 9210 Broadway.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "fri"
+   }
+  ],
+  "season": "May-Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "The Compassion Factory",
+   "address": "9210 Broadway, Brookfield, IL"
+  },
+  "distance_km": 10.0,
+  "distance_miles": 6.2,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slow",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Cycle Brookfield",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Weather permitting. The ride is usually about 6.2 miles (10 km). Cycle Brookfield also lists a Haunted Halloween Costume Ride on Oct 30. Facebook group has the latest.",
+  "description": "A family ride open to all levels: about 6.2 miles through Brookfield and the next suburbs at a slow pace, no drop, the first Friday of the month from May to October.",
+  "links": {
+   "website": "http://cyclebrookfield.com/events/",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/groups/cyclebrookfield/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "family",
+   "beginner",
+   "no-drop"
+  ],
+  "sources": [
+   "http://cyclebrookfield.com/events/"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": null,
+  "evidence": "Cycle Brookfield's events page lists First Friday Slow Roll Social Ride on May 1, Jun 5, Aug 7, Sep 4 and Oct 2, 2026, and invites riders to the Oct 2 ride at 6:00 PM from The Compassion Factory (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "http://cyclebrookfield.com/events/",
+   "feed_url": null,
+   "notes": "The events page carries the 2026 schedule."
+  }
+ },
+ {
+  "slug": "valparaiso-in-valpo-parks-pathways-group-bike-rides",
+  "name": "Valpo Pathways Group Bike Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Valparaiso",
+  "neighborhood": null,
+  "region": "Indiana",
+  "state": "IN",
+  "country": "US",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Second Monday of the month, 5:30 pm, April-October (no August). Next: Oct 12, 2026, the Fall Colors ride from Bicentennial Park.",
+  "days": [
+   "mon"
+  ],
+  "time_local": "5:30 pm",
+  "start_hhmm": "17:30",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 2,
+    "day": "mon"
+   }
+  ],
+  "season": "Apr-Oct",
+  "season_months": null,
+  "start_location": {
+   "name": "A different Valpo park each month; Oct 12 starts at Bicentennial Park",
+   "address": null
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Paved pathway ride",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Valparaiso Parks & Recreation, with the Valpo Parks Foundation",
+   "type": "public"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Free, all ages, no registration. The park changes each month; the city's page lists it. Valparaiso is just outside the 40-mile Chicago-area line the sweep used.",
+  "description": "The city's monthly group ride on Valpo's paved pathways, each month from a different park, with a theme: Bike Tune-Up, Tour de Parks, Ice Cream Ride, Fall Colors.",
+  "links": {
+   "website": "http://valpoparks.org/555/Group-Bike-Rides",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/valpopathways",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "family",
+   "beginner"
+  ],
+  "sources": [
+   "http://valpoparks.org/555/Group-Bike-Rides"
+  ],
+  "verified_on": "2026-10-01",
+  "last_seen": "2026-09-14",
+  "evidence": "Valparaiso Parks & Recreation's 2026 Pathways Group Bike Rides page lists rides on Mondays Apr 13, May 11, Jun 8, Jul 13, Sep 14 and Oct 12, 2026 at 5:30 pm; free, all ages, no registration (fetched Oct 1, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "http://valpoparks.org/555/Group-Bike-Rides",
+   "feed_url": null,
+   "notes": "The page is rewritten each year with that year's dates."
+  }
+ }
+]

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:braintree-ma-landrys-braintree-saturday-road-ride@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/New_York:20261003T070000
+DTEND;TZID=America/New_York:20261003T090000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20261031T235959Z
+SUMMARY:Landry's Braintree All Levels Road Ride — Braintree\, MA
+LOCATION:Landry's Bicycles\, Braintree store
+DESCRIPTION:Pace: Beginner 13-15 mph; enthusiast 16-17 mph.\nNo-drop.\nSc
+ hedule: Every Saturday morning\, meet 6:45 am for a safety talk\, roll 7
+ :00 am from Landry's Braintree store; back around 9:00-9:30 am. Landry's
+  lists it under its spring/summer group rides\, so ask the store before 
+ a late-fall visit..\nConfirm with the host before you go.\nhttps://cycle
+ forchange.org/rides/braintree-ma-landrys-braintree-saturday-road-ride/
+URL:https://cycleforchange.org/rides/braintree-ma-landrys-braintree-satur
+ day-road-ride/
+END:VEVENT
+END:VCALENDAR

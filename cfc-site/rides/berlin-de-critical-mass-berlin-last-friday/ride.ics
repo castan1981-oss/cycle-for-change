@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:berlin-de-critical-mass-berlin-last-friday@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=Europe/Berlin:20261030T200000
+DTEND;TZID=Europe/Berlin:20261031T000000
+RRULE:FREQ=MONTHLY;BYDAY=-1FR;UNTIL=20270228T235959Z
+SUMMARY:Critical Mass Berlin (Friday evening) — Berlin\, Germany
+LOCATION:Mariannenplatz\, Mariannenplatz\, Berlin
+DESCRIPTION:Pace: Mass pace\, set by the crowd.\nSchedule: Last Friday of
+  every month\, 8:00 pm\, from Mariannenplatz. criticalmass.in also lists
+  a first-Sunday ride at 2:00 pm from the Brandenburger Tor\, but no ride
+ r counts are logged for it..\nConfirm with the host before you go.\nhttp
+ s://cycleforchange.org/rides/berlin-de-critical-mass-berlin-last-friday/
+URL:https://cycleforchange.org/rides/berlin-de-critical-mass-berlin-last-
+ friday/
+END:VEVENT
+END:VCALENDAR
