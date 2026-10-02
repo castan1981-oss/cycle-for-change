@@ -33,10 +33,52 @@ test("a country page for every country with a ride, and the US as a country", ()
   }
   assert.match(read("united-states"), /Group rides in the United States/);
 });
-test("the directory counts countries and tiles them", () => {
-  const html = read();
-  assert.match(html, /By country/);
-  assert.match(html, /\d+ countries/);
+test("the directory counts countries; the world page tiles them", () => {
+  assert.match(read(), /\d+ countries/);
+  assert.match(read(), /href="\/rides\/world\/"/);
+  const html = read("world");
+  assert.match(html, /Pick a country/);
+  for (const cc of new Set(rides.filter((r) => r.country !== "US").map((r) => r.country))) assert.match(html, new RegExp(`href="/rides/${S.countrySlug(cc)}/"`));
+});
+
+// Pass 15 (Oct 1, 2026): step down, don't scroll.
+const LIST_MAX = 12;
+const pagesUnder = (dir, depth = 0) => fs.readdirSync(dir, { withFileTypes: true }).filter((e) => e.isDirectory())
+  .flatMap((e) => { const d = path.join(dir, e.name); return [...(fs.existsSync(path.join(d, "index.html")) ? [d] : []), ...(depth < 2 ? pagesUnder(d, depth + 1) : [])]; });
+const allPages = [out, ...pagesUnder(out)];
+const html = (d) => fs.readFileSync(path.join(d, "index.html"), "utf8");
+test("no place page shows more than LIST_MAX rides before the reader picks something", () => {
+  for (const d of allPages) {
+    const h = html(d);
+    if (/gr-sub-page|gr-all-page|class="wrap gr-ride"/.test(h)) continue;   // a pick was made, or it's a ride
+    const n = (h.match(/<div class="gr-card"/g) || []).length;
+    assert.ok(n <= LIST_MAX, `${path.relative(out, d) || "/rides/"} shows ${n} rows`);
+  }
+});
+test("a big city is doorways: your bike, made for, which day, and the full list", () => {
+  const big = JSON.parse(fs.readFileSync(path.join(out, "hubs.json"), "utf8")).find((h) => h.country === "US" && h.rides > LIST_MAX);
+  const dir = path.join(out, big.state.toLowerCase(), big.key.slice(3));
+  const h = html(dir);
+  assert.match(h, /Your bike/); assert.match(h, /Which day/); assert.match(h, /class="gr-tile gr-door/);
+  assert.ok(fs.existsSync(path.join(dir, "all", "index.html")));
+  assert.match(html(path.join(dir, "all")), /id="gr-q"/, "the full list keeps search and filters");
+});
+test("every link inside /rides/ leads to a page that exists", () => {
+  const missing = new Set();
+  for (const d of allPages) {
+    for (const m of html(d).matchAll(/href="(\/rides\/[^"#?]*)/g)) {
+      const u = m[1];
+      if (/\.(svg|css|js|json|xml|ics|png)$/.test(u)) continue;
+      const p = path.join(out, u.replace(/^\/rides\//, ""));
+      if (!fs.existsSync(path.join(p, "index.html"))) missing.add(`${u} (on ${path.relative(out, d) || "/rides/"})`);
+    }
+  }
+  assert.deepEqual([...missing].slice(0, 10), []);
+});
+test("the explaining and the form live on their own pages", () => {
+  assert.match(read("about"), /FAQPage/);
+  assert.match(read("add"), /name="ride-report"/);
+  assert.doesNotMatch(read(), /name="ride-report"/);
 });
 test("every card says when it was checked", () => {
   assert.match(read(S.countrySlug(world.country)), /gr-card-checked/);
