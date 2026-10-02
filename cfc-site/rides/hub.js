@@ -87,17 +87,19 @@
   /* Pass 6: the card carries its discipline's mark (cfc-site/rides/marks.svg); keep in step with tools/build-rides.js card() */
   var MARKS = { road: 1, gravel: 1, mtb: 1, fixed: 1, social: 1, cruiser: 1, bmx: 1, track: 1, cyclocross: 1, ebike: 1, mixed: 1 };
   function markOf(r) { var k = r.k === "open-streets" ? "open-streets" : (r.d && r.d[0]); return '<svg class="gr-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-' + (MARKS[k] || k === "open-streets" ? k : "mixed") + '"/></svg>'; }
+  // Pass 15 (Oct 1, 2026): the row — keep in step with card() in tools/build-rides.js
   function card(r, d) {
-    var tags = r.tl.map(function (t) { return '<span class="gr-tag">' + esc(t) + "</span>"; }).join("") + (r.u ? '<span class="gr-tag gr-tag-warn">Unconfirmed</span>' : "");
-    return '<div class="gr-card" data-slug="' + r.s + '">' +
-      '<span class="gr-card-top">' + markOf(r) + '<span class="gr-disc">' + esc(r.dl) + "</span>" + (d != null ? '<span class="gr-dist">' + Math.round(d) + " mi away</span>" : "") + "</span>" +
-      '<a class="gr-card-name" href="/rides/' + r.s + '/">' + esc(r.n) + "</a>" +
+    var meta = [
+      r.wt ? '<em class="gr-wait gr-wait--' + r.wt + '">' + WAIT[r.wt] + "</em>" : "",
+      d != null ? '<span class="gr-dist">' + Math.round(d) + " mi</span>" : "",
+      r.u ? '<span class="gr-card-warn">Unconfirmed</span>' : "",
+      r.ck ? '<span class="gr-card-checked' + (r.cf ? " gr-card-checked--look" : "") + '">' + esc(r.ck) + "</span>" : "",
+    ].join("");
+    return '<div class="gr-card" data-slug="' + r.s + '">' + markOf(r) +
+      '<a class="gr-card-name" href="/rides/' + r.s + '/">' + esc(r.n) + '<span class="visually-hidden">, ' + esc(r.dl) + "</span></a>" +
       (r.ne ? '<span class="gr-card-en">' + esc(r.ne) + "</span>" : "") +
-      '<span class="gr-card-place">' + esc(r.pl || (r.c + ", " + r.st)) + (r.h ? " · " + esc(r.h) : "") + "</span>" +
-      '<span class="gr-card-when">' + esc(r.w) + "</span>" +
-      (r.x || r.wt ? '<span class="gr-card-stat">' + esc(r.x) + (r.wt ? (r.x ? " · " : "") + '<em class="gr-wait gr-wait--' + r.wt + '">' + WAIT[r.wt] + "</em>" : "") + "</span>" : "") +
-      (tags ? '<span class="gr-tags">' + tags + "</span>" : "") +
-      (r.ck ? '<span class="gr-card-checked' + (r.cf ? " gr-card-checked--look" : "") + '">' + esc(r.ck) + "</span>" : "") +
+      '<span class="gr-card-when">' + esc(r.w) + '<i class="gr-dot" aria-hidden="true"> · </i>' + esc(r.c + (r.h ? " · " + r.h : "")) + "</span>" +
+      '<span class="gr-card-meta">' + meta + "</span>" +
       '<button type="button" class="gr-save" data-save="' + r.s + '" aria-pressed="false" aria-label="Save ' + esc(r.n) + '"><span aria-hidden="true">☆</span></button>' +
       "</div>";
   }

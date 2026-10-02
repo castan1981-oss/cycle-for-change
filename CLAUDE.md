@@ -19,7 +19,34 @@
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
 
+## Pass 15 — step down, don't scroll (Oct 1, 2026, evening)
+Robert: "The words everywhere is very overwhelming … move them through more pages but less
+content. Like topic to subtopic, then that subtopic is where they find what they need." House
+rule for /rides/ now (and the pattern for the rest of the site):
+- **Every page asks one question with a few big picks.** `/rides/` → a place (home base + the
+  biggest city in five other states, Every US state, Outside the US `/rides/world/`) or who's
+  riding (the facet doors). A state/country → its cities (poster tiles), who's riding (doors to
+  `/rides/<st>/<facet>/`), and the rides no city covers (inline when ≤6, else an "Other towns"
+  door → `/<st>/other-towns/`). A city → two picks (New to group rides? / Want to go fast?),
+  Your bike · Made for · Which day (doors to `/<st>/<city>/<road|social|…|no-drop|…|saturday>/`),
+  and "All N rides, with filters" → `/<place>/all/` (the Pass 14 panel lives only there now).
+- **`LIST_MAX = 12`:** a place page never shows more than 12 rows before a pick (the test checks
+  every page). At or under it, the place page *is* the list. A door with one ride behind it goes
+  straight to the ride; a door with none is quiet.
+- **Short pages** (`subPage()`): h1, one sub line, rows. Long ones are cut by day (the week strip
+  on top jumps to `#saturday`; a ride on two days shows under both) or, across a state, by town
+  (one-ride towns fold into "Other towns", a "Jump to" row on top).
+- **The row** (`card()` + hub.js): mark · name · when · town/hood · one mono line (Waits for you ·
+  N mi · Checked Sep 30). Pace, distance and tags moved to the ride page. Separators are CSS.
+- **Off the path:** how it's built + the questions + why → `/rides/about/` (FAQPage JSON-LD);
+  the form → `/rides/add/`. Every list page ends with one quiet line linking both.
+- **Ride page:** short lede (the long one stays the meta description), every fact carries its
+  mark, "Made for" is a fact, the first-time drill and the evidence are folded (`details`).
+- **Old links:** `/rides/step.js` sends `?bike=&for=&day=` on a doorway page to its `/all/` page
+  (`data-all`, `data-keep` on facet pages). Every short page is in the sitemap with an ItemList.
+
 ## Pass 14 — the ride finder is tiles, not words (Oct 1, 2026)
+> Pass 15 moved this panel to the `/all/` pages; the doorway pages use the same tiles as links.
 Robert, on his phone, looking at `/rides/az/phoenix/`: the filters looked confusing once you used
 them — a wall of mono caps chips, and tapping one changed nothing you could see (the count was a
 small line below the fold). Now, on every state, city, country and facet page and inside "More

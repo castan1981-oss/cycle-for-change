@@ -8,9 +8,9 @@
    says how many and jumps to them. */
 (function () {
   "use strict";
+  // Pass 15: a short page carries only the day strip — no search box, no index, no "near me"
   var idxEl = document.getElementById("gr-index");
-  if (!idxEl) return;
-  var idx = JSON.parse(idxEl.textContent);
+  var idx = idxEl ? JSON.parse(idxEl.textContent) : { cities: [], states: [], countries: [] };
   var cities = idx.cities;         // [["Phoenix, AZ", lat, lng], ...]
   var stateNames = {};             // "arizona" -> "AZ"
   var stateAbbr = {};              // "AZ" -> "Arizona"
@@ -27,7 +27,8 @@
   var cards = slice(document.querySelectorAll(".gr-card"));
   var sections = slice(document.querySelectorAll(".gr-state"));
   var total = +(status && status.dataset.total) || cards.length;
-  if (!q || !statesWrap) return;
+  if (!statesWrap || !tiles.length) return;
+  if (!q) q = { value: "", addEventListener: function () {} };
 
   cards.forEach(function (c) { c._home = c.parentNode; });
 
@@ -132,13 +133,14 @@
   function reset() {
     cards.forEach(function (c) {
       c.hidden = false;
-      var d = c.querySelector(".gr-dist[data-live]"); if (d) d.remove();
+      Array.prototype.forEach.call(c.querySelectorAll("[data-live]"), function (d) { d.remove(); });
+      var st = c.querySelector(".gr-dist"); if (st) st.hidden = false;
       if (c.parentNode !== c._home) c._home.appendChild(c);
     });
-    nearby.hidden = true; nearby.innerHTML = "";
+    if (nearby) { nearby.hidden = true; nearby.innerHTML = ""; }
     statesWrap.hidden = false;
     sections.forEach(function (s) { s.hidden = false; });
-    empty.hidden = true;
+    if (empty) empty.hidden = true;
     if (emptyState) emptyState.hidden = true;
   }
   function syncUrl(f) {
@@ -173,7 +175,7 @@
     var f = activeFilters();
     var text = q.value;
     var on = anyFilter(f);
-    clearBtn.hidden = !on;
+    if (clearBtn) clearBtn.hidden = !on;
     reset();
     syncUrl(f);
     var sc = scopeOf(text);
@@ -190,8 +192,11 @@
       nearby.hidden = false;
       hits.forEach(function (x) {
         var tag = document.createElement("span");
-        tag.className = "gr-dist"; tag.setAttribute("data-live", ""); tag.textContent = Math.round(x.d) + " mi away";
-        x.card.querySelector(".gr-card-top").appendChild(tag);
+        tag.className = "gr-dist"; tag.setAttribute("data-live", ""); tag.textContent = Math.round(x.d) + " mi";
+        // the distance from you replaces the distance from the city centre
+        var meta = x.card.querySelector(".gr-card-meta"), st = meta.querySelector(".gr-dist");
+        if (st) st.hidden = true;
+        meta.insertBefore(tag, meta.firstChild);
         nearby.appendChild(x.card);
       });
       shown = hits.length;
@@ -208,7 +213,7 @@
       if (widenBtn) widenBtn.hidden = true;
       if (!shown && sc.st && emptyState) { emptyState.href = "/rides/" + sc.st.toLowerCase() + "/"; emptyState.hidden = false; }
     }
-    empty.hidden = shown > 0;
+    if (empty) empty.hidden = shown > 0;
     paintJump();
   }
 
@@ -218,7 +223,7 @@
   function paintJump() {
     if (!jump || !list || !line) return;
     var below = line.getBoundingClientRect().bottom > window.innerHeight && list.getBoundingClientRect().top > 0;
-    var show = !clearBtn.hidden && shown > 0 && below;
+    var show = clearBtn && !clearBtn.hidden && shown > 0 && below;
     if (show) jumpN.textContent = shown + " " + rides(shown);
     jump.hidden = !show;
   }
@@ -247,7 +252,7 @@
     tiles.forEach(function (t) { t.setAttribute("aria-pressed", "false"); });
     render();
   }
-  clearBtn.addEventListener("click", clearAll);
+  if (clearBtn) clearBtn.addEventListener("click", clearAll);
   slice(document.querySelectorAll("[data-clear]")).forEach(function (b) { b.addEventListener("click", clearAll); });
   if (widenBtn) widenBtn.addEventListener("click", function () { widened = true; render(); });
   if (geoBtn) geoBtn.addEventListener("click", function () {

@@ -270,3 +270,117 @@
 .gr-checked>div{flex:1;min-width:0}
 .gr-checked .link{white-space:normal}
 .gr-card-en{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--creosote-ink);margin-top:-3px}
+
+/* —— Pass 15 (Oct 1, 2026): step down, don't scroll ——
+   Every page asks one question with a few big picks (tools/build-rides.js: directory,
+   areaPage, cityPage, facetPage); each pick opens a short page (subPage) or the ride.
+   The card is a row: the mark, the name, when · where, one mono line of small facts. */
+.gr-head .gr-sub{margin:.2em 0 0;font-size:1rem;line-height:1.4;color:var(--mute)}
+.gr-head .gr-sub b{font-weight:800;color:var(--asphalt);font-variant-numeric:tabular-nums}
+.gr-why-line{max-width:46ch;margin:.7em 0 0;font-size:1rem;line-height:1.5;color:var(--creosote-ink)}
+.gr-dot{font-style:normal;color:var(--dust-deep)}
+.gr-steps{display:flex;flex-direction:column;gap:clamp(30px,5vw,48px);padding-top:clamp(20px,3vw,32px)}
+.gr-steps > .pledge,.gr-steps > .back,.gr-steps > .gr-footline{margin-top:0}
+.gr-dir .gr-step > h2.gr-filter-label,.gr-dir h2.gr-list-h{margin:0 0 12px;font-weight:400;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);display:flex;align-items:center;gap:10px}
+.gr-dir h2.gr-list-h::after{content:"";flex:1;height:1px;background:var(--dust)}
+.gr-wide-doors{margin-top:6px}
+
+/* doorways: the filter tile, as a link */
+a.gr-tile{text-decoration:none}
+.gr-door{min-height:96px}
+@media (hover:hover){a.gr-door:hover{border-color:var(--asphalt);background:var(--bone)}}
+a.gr-door:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px}
+.gr-week--doors{max-width:none}
+a.gr-day{text-decoration:none}
+@media (hover:hover){a.gr-day:hover{background:var(--bone)}}
+.gr-week--doors .gr-day{min-height:104px}
+.gr-week--doors .gr-day-bar{max-width:34px;height:max(2px,calc(var(--h,0) * 40px))}
+
+/* the two picks: new to group rides / want to go fast */
+.gr-picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:8px}
+.gr-pick{position:relative;display:grid;grid-template-columns:30px minmax(0,1fr) auto;column-gap:14px;row-gap:2px;align-items:start;padding:16px 16px 15px;background:var(--paper);border:1px solid var(--dust);border-left:3px solid var(--asphalt);color:var(--asphalt);text-decoration:none}
+.gr-pick-mark{grid-row:1 / span 3;width:28px;height:28px;margin-top:2px}
+.gr-pick-k{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--creosote-ink)}
+.gr-pick-name{font-family:var(--display);font-weight:700;font-size:1.2rem;line-height:1.12;letter-spacing:-.01em}
+.gr-pick-when{font-size:.9rem;color:var(--mute)}
+.gr-pick-go{grid-column:3;grid-row:1 / span 3;align-self:center;font-size:1.3rem}
+.gr-pick > :not(.gr-pick-mark):not(.gr-pick-go){grid-column:2}
+@media (hover:hover){.gr-pick:hover{border-color:var(--asphalt)}.gr-pick:hover .gr-pick-name{text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px}}
+.gr-pick:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px}
+
+/* the way to the full list, the quiet foot line, nearby cities */
+.gr-all-link{margin:0}
+.gr-all-link .link{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:4px}
+.gr-all-mark{width:18px;height:18px;flex:none}
+.gr-footline{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--mute)}
+.gr-footline a{color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--dust-deep);text-underline-offset:3px}
+.gr-footline-mark{width:16px;height:16px;flex:none;color:var(--creosote-ink)}
+.gr-near{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px}
+.gr-near .gr-filter-label{width:100%;margin:0}
+.gr-near a{font-size:.98rem;text-decoration:none;border-bottom:1px solid var(--dust)}
+.gr-near a:hover{border-color:var(--asphalt)}
+.gr-near small{font-family:var(--mono);font-size:10.5px;color:var(--mute)}
+.gr-tonight-row{margin:0}
+.gr-steps .back{margin:0}
+.gr-steps .town-box{margin:0}
+
+/* a country's "what to know", folded */
+details.gr-country-notes{margin:0}
+details.gr-country-notes>summary{cursor:pointer;font-weight:700;font-size:1.05rem;list-style:none}
+details.gr-country-notes>summary::-webkit-details-marker{display:none}
+details.gr-country-notes>summary::after{content:" +";font-family:var(--mono);color:var(--mute)}
+details.gr-country-notes[open]>summary{margin-bottom:12px}
+details.gr-country-notes[open]>summary::after{content:" −"}
+
+/* the row */
+.gr-grid{gap:8px}
+.gr-card{display:grid;grid-template-columns:24px minmax(0,1fr);column-gap:12px;row-gap:3px;align-items:start;padding:14px 46px 13px 14px;background:var(--paper);border:1px solid var(--dust)}
+.gr-card > .gr-mark{grid-column:1;grid-row:1 / span 4;margin:1px 0 0;width:22px;height:22px}
+.gr-card > :not(.gr-mark):not(.gr-save){grid-column:2;min-width:0}
+.gr-card-name{font-size:1.08rem;line-height:1.15}
+.gr-card-when{font-size:.9rem;line-height:1.35;color:var(--mute)}
+.gr-card-meta{font-family:var(--mono);font-size:10.5px;letter-spacing:.02em;line-height:1.55;color:var(--creosote-ink)}
+.gr-card-meta .gr-wait{letter-spacing:.04em}
+.gr-card-meta .gr-dist{font-size:inherit;letter-spacing:inherit;text-transform:none}
+.gr-card-meta .gr-card-checked{display:inline;margin:0;font-size:inherit}
+.gr-card-warn{color:var(--asphalt);font-weight:700}
+.gr-card-meta > * + *::before{content:"\00B7";content:"\00B7" / "";display:inline-block;margin:0 .5em;color:var(--dust-deep);font-style:normal;font-weight:400}
+.gr-card .gr-save{top:6px;right:6px}
+.gr-state{margin:0 0 26px}
+.gr-state:last-child{margin-bottom:0}
+.gr-sub-page .gr-state-head,.gr-area .gr-state-head,.gr-all-page .gr-state-head{font-size:1.1rem;margin:0 0 10px}
+.gr-sub-page .gr-results-wrap,.gr-all-page .gr-results-wrap{padding-top:clamp(18px,3vw,28px)}
+.gr-sub-page .gr-results-wrap .back,.gr-all-page .gr-results-wrap .back{margin-top:2em}
+.gr-sub-page .gr-footline,.gr-all-page .gr-footline{margin-top:1.2em}
+.gr-finder--days{margin-top:16px;padding:16px 0 14px}
+.gr-finder--days .gr-filters{margin-top:0}
+.gr-finder--days .gr-week{max-width:none}
+@media (min-width:900px){.gr-finder--days .gr-filters{grid-template-columns:1fr}}
+/* the jump rows on a long short page: the week (to each day's group) or the towns */
+.gr-jumpweek{display:block;margin-top:clamp(16px,3vw,24px)}
+.gr-jumpweek .gr-week{max-width:620px}
+.gr-jumprow{margin-top:clamp(16px,3vw,24px)}
+.gr-day-group,.gr-sub-page .gr-state{scroll-margin-top:calc(var(--nav-h) + 16px)}
+.gr-day-group .gr-state-head{font-size:1.25rem}
+/* the ride page, lighter: marked facts, the drill and the evidence folded */
+.gr-fact{display:grid;grid-template-columns:22px minmax(0,1fr);column-gap:12px;align-items:start}
+.gr-fact-mark{grid-row:1 / span 2;width:20px;height:20px;margin-top:1px;color:var(--creosote-ink)}
+.gr-fact dt,.gr-fact dd{grid-column:2}
+.gr-fact dt{margin:0 0 3px}
+details.gr-fold{margin:24px 0 0;padding:0;border:1px solid var(--dust);background:var(--bone-2)}
+details.gr-fold>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;font-weight:700;font-size:1.05rem;line-height:1.3}
+details.gr-fold>summary::-webkit-details-marker{display:none}
+details.gr-fold>summary::after{content:"+";font-family:var(--mono);font-weight:400;font-size:18px;color:var(--mute)}
+details.gr-fold[open]>summary::after{content:"\2212"}
+details.gr-fold>dl{padding:0 18px 18px}
+.gr-checked-more{margin-top:4px}
+.gr-checked-more>summary{cursor:pointer;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--creosote-ink)}
+.gr-checked-more p{margin:6px 0 0;font-size:.92rem;color:var(--mute)}
+.gr-checked-line .link{white-space:normal}
+/* the town strip on a city page: two across on a phone, the card's last line dropped */
+.gr-steps .town-box{margin-top:0}
+.gr-steps .town-strip{grid-template-columns:repeat(auto-fill,minmax(min(150px,46%),1fr))}
+.gr-steps .town-strip a{padding:14px 12px;gap:4px}
+.gr-steps .town-strip a b{font-size:1rem}
+.gr-steps .town-strip a span:last-child{display:none}
+.gr-steps .town-strip a .eyebrow{display:block}
