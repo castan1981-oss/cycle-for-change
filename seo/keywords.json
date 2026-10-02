@@ -1,0 +1,50 @@
+{
+  "note": "The searches the Search Lab case study tracks. 'picked' = chosen on Day 0 (Oct 2, 2026) to test the thesis; 'found' = surfaced by Search Console as already moving. Positions live in the tracker, not here.",
+  "picked": [
+    { "id": "k02", "cluster": "Brand", "query": "cycle for change 10000 miles", "target": "/" },
+    { "id": "k03", "cluster": "Brand", "query": "Robert Castan cycling", "target": "/" },
+    { "id": "k01", "cluster": "Brand", "query": "cycle for change", "target": "/" },
+    { "id": "k13", "cluster": "Group rides", "query": "LGBTQ group bike rides California", "target": "/rides/ca/lgbtq/" },
+    { "id": "k14", "cluster": "Group rides", "query": "queer cycling group rides", "target": "/rides/ (LGBTQ pages)" },
+    { "id": "k10", "cluster": "Group rides", "query": "group rides Phoenix", "target": "/rides/az/phoenix/" },
+    { "id": "k11", "cluster": "Group rides", "query": "no drop group ride Phoenix", "target": "/rides/az/phoenix/no-drop/" },
+    { "id": "k12", "cluster": "Group rides", "query": "Scottsdale group bike rides", "target": "/rides/az/scottsdale/" },
+    { "id": "k15", "cluster": "Group rides", "query": "women trans femme group rides", "target": "/rides/ca/women-trans-femme/" },
+    { "id": "k17", "cluster": "Group rides", "query": "Two Bikes bike party Knoxville", "target": "/rides/knoxville-tn-two-bikes-bike-party/" },
+    { "id": "k16", "cluster": "Group rides", "query": "group bike rides London", "target": "/rides/united-kingdom/" },
+    { "id": "k04", "cluster": "Charity rides", "query": "lgbtq charity bike rides", "target": "/guides/charity-rides/" },
+    { "id": "k08", "cluster": "Charity rides", "query": "charity bike ride fundraising minimum tips", "target": "/guides/charity-ride-fundraising-tips/" },
+    { "id": "k09", "cluster": "Charity rides", "query": "how to start a charity ride team", "target": "/guides/start-a-charity-ride-team/" },
+    { "id": "k05", "cluster": "Charity rides", "query": "what happened to AIDS/LifeCycle", "target": "/guides/what-happened-to-aids-lifecycle/" },
+    { "id": "k06", "cluster": "Charity rides", "query": "Center Ride Out LA to San Diego", "target": "/guides/center-ride-out/" },
+    { "id": "k07", "cluster": "Charity rides", "query": "pledge per mile fundraiser", "target": "/guides/pledge-per-mile-fundraising/" },
+    { "id": "k19", "cluster": "Events", "query": "Seattle to Portland 2027 date", "target": "/events/seattle-to-portland/" },
+    { "id": "k18", "cluster": "Events", "query": "2027 cycling events calendar", "target": "/events/2027/" },
+    { "id": "k20", "cluster": "Events", "query": "El Tour de Tucson 2026", "target": "/events/el-tour-de-tucson/" },
+    { "id": "k21", "cluster": "Events", "query": "Unbound Gravel 2027 date", "target": "/events/unbound-gravel/" },
+    { "id": "k22", "cluster": "Towns", "query": "Emporia Kansas cycling where to stay", "target": "/towns/kansas/emporia/" },
+    { "id": "k23", "cluster": "Resources", "query": "LGBTQ mental health resources", "target": "/resources/" }
+  ],
+  "found": [
+    { "id": "d01", "query": "critical mass atlanta", "target": "/rides/atlanta-ga-critical-mass-atlanta/" },
+    { "id": "d02", "query": "critical mass chicago", "target": "/rides/chicago-il-chicago-critical-mass/" },
+    { "id": "d03", "query": "critical mass dallas", "target": "/rides/dallas-tx-dallas-critical-mass/" },
+    { "id": "d04", "query": "critical mass nyc", "target": "/rides/new-york-ny-critical-mass-last-friday/" },
+    { "id": "d05", "query": "pvd bike jam", "target": "/rides/providence-ri-providence-bike-jam/" },
+    { "id": "d06", "query": "dc bike party", "target": "/rides/washington-dc-dc-bike-party/" },
+    { "id": "d07", "query": "thursday night social ride", "target": "/rides/austin-tx-thursday-night-social-ride/" },
+    { "id": "d08", "query": "group rides near me", "target": "/rides/" },
+    { "id": "d09", "query": "leadville 100 mtb 2027 date", "target": "/events/leadville-trail-100-mtb/" },
+    { "id": "d10", "query": "assault on mt mitchell 2027", "target": "/events/assault-on-mt-mitchell/" },
+    { "id": "d11", "query": "los angeles group rides", "target": "/rides/ca/los-angeles/" },
+    { "id": "d12", "query": "salt lake city group rides", "target": "/rides/ut/salt-lake-city/" }
+  ],
+  "aiQuestions": [
+    { "id": "a6", "q": "What is Cycle for Change?", "target": "/" },
+    { "id": "a4", "q": "When is the 2027 Seattle to Portland bike ride?", "target": "/events/seattle-to-portland/" },
+    { "id": "a2", "q": "Are there no-drop group rides in Phoenix?", "target": "/rides/az/phoenix/no-drop/" },
+    { "id": "a3", "q": "What are the biggest LGBTQ charity bike rides in the US?", "target": "/guides/charity-rides/" },
+    { "id": "a1", "q": "What happened to the AIDS LifeCycle ride?", "target": "/guides/what-happened-to-aids-lifecycle/" },
+    { "id": "a5", "q": "How does a pledge-per-mile bike fundraiser work?", "target": "/guides/pledge-per-mile-fundraising/" }
+  ]
+}

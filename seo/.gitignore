@@ -1,0 +1,4 @@
+# Full per-page crawl output is big and changes every week; keep it local.
+# The small <date>.summary.json files are committed.
+snapshots/????-??-??.json
+snapshots/*-pages.csv

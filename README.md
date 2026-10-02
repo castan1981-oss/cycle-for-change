@@ -3,9 +3,11 @@
 Endurance as activism. **10,000 miles in 2027, all on the bike** — every mile for queer
 communities. Supporters pledge miles and vote on which orgs receive the funds.
 
-**Status (Sept 2026):** the public site is a coming-soon page (`cfc-site/index.html`) with a
-live mile counter until the December 2026 relaunch. Every other public URL redirects home via
-`netlify.toml`. Read `CLAUDE.md` before changing anything — it is the voice, brand, and safety spec.
+**Status (Oct 2026):** the site is live — home, `/pledge/`, a worldwide group-ride directory
+(`/rides/`), the 2027 event calendar (`/events/`), town guides (`/towns/`), guides and resources.
+The full launch is December 1, 2026; the pledge year starts January 1, 2027. Read `CLAUDE.md`
+before changing anything — it is the voice, brand, and safety spec. Search work is tracked in
+`seo/` (the Search Lab case study).
 
 ## Stack
 

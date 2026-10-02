@@ -1,0 +1,298 @@
+{
+ "date": "2026-10-02",
+ "base": "https://cycleforchange.org",
+ "crawlSeconds": 26,
+ "robotsTxt": "# cycleforchange.org\nUser-agent: *\nAllow: /\n\nSitemap: https://cycleforchange.org/sitemap.xml",
+ "sitemapUrls": 1304,
+ "sitemapErrors": [],
+ "crawled": 1304,
+ "status": {
+  "200": 1304
+ },
+ "html200": 1304,
+ "speed": {
+  "medianMs": 181,
+  "p90Ms": 223,
+  "medianTtfb": 179,
+  "medianKB": 20
+ },
+ "titles": {
+  "missing": 0,
+  "tooLong": 1115,
+  "tooShort": 0,
+  "duplicates": 0,
+  "duplicatePages": 0
+ },
+ "descriptions": {
+  "missing": 0,
+  "tooLong": 8,
+  "tooShort": 0,
+  "duplicates": 0,
+  "duplicatePages": 0
+ },
+ "h1": {
+  "missing": 0,
+  "multiple": 0
+ },
+ "canonical": {
+  "missing": 0,
+  "notSelf": 0
+ },
+ "indexing": {
+  "noindexInSitemap": 0,
+  "xRobotsNoindex": 0
+ },
+ "social": {
+  "missingOgImage": 0
+ },
+ "content": {
+  "medianWords": 427,
+  "thinUnder250": 378,
+  "over1000": 20
+ },
+ "schema": {
+  "pagesWithAny": 1301,
+  "pagesWithNone": 3,
+  "parseErrors": 0,
+  "types": {
+   "Organization": 1245,
+   "WebPage": 745,
+   "WebSite": 2,
+   "Article": 11,
+   "Person": 1244,
+   "BlogPosting": 3,
+   "CollectionPage": 488,
+   "BreadcrumbList": 1278,
+   "ItemList": 534,
+   "ListItem": 1279,
+   "Answer": 14,
+   "Event": 660,
+   "FAQPage": 14,
+   "GeoCoordinates": 674,
+   "Offer": 12,
+   "Place": 661,
+   "PostalAddress": 714,
+   "Question": 14,
+   "SpeakableSpecification": 27,
+   "SportsEvent": 24,
+   "LodgingBusiness": 13,
+   "City": 13,
+   "State": 13,
+   "Restaurant": 13,
+   "BikeStore": 13,
+   "CafeOrCoffeeShop": 1,
+   "Trip": 1,
+   "BarOrPub": 1,
+   "BookStore": 1,
+   "LocalBusiness": 1,
+   "Museum": 1,
+   "MusicStore": 1,
+   "Schedule": 648
+  }
+ },
+ "links": {
+  "orphans": 0,
+  "medianInlinks": 7,
+  "linkedNotInSitemap": 1,
+  "brokenInternal": 1,
+  "redirectsLinked": 0
+ },
+ "images": {
+  "total": 163,
+  "missingAlt": 0
+ },
+ "sections": {
+  "home": {
+   "pages": 1,
+   "ok": 1,
+   "thin": 0,
+   "schema": {
+    "Organization": 1
+   },
+   "orphans": 0,
+   "medianWords": 928,
+   "medianInlinks": 1303
+  },
+  "pledge": {
+   "pages": 1,
+   "ok": 1,
+   "thin": 0,
+   "schema": {
+    "WebPage": 1,
+    "WebSite": 1
+   },
+   "orphans": 0,
+   "medianWords": 921,
+   "medianInlinks": 1303
+  },
+  "guides": {
+   "pages": 12,
+   "ok": 12,
+   "thin": 1,
+   "schema": {
+    "Article": 11,
+    "Organization": 11,
+    "Person": 11,
+    "CollectionPage": 1
+   },
+   "orphans": 0,
+   "medianWords": 330,
+   "medianInlinks": 4
+  },
+  "field-notes": {
+   "pages": 4,
+   "ok": 4,
+   "thin": 2,
+   "schema": {
+    "BlogPosting": 2,
+    "Organization": 3,
+    "Person": 3,
+    "CollectionPage": 1
+   },
+   "orphans": 0,
+   "medianWords": 327,
+   "medianInlinks": 5
+  },
+  "journal": {
+   "pages": 1,
+   "ok": 1,
+   "thin": 0,
+   "schema": {
+    "BlogPosting": 1,
+    "Organization": 1,
+    "Person": 1
+   },
+   "orphans": 0,
+   "medianWords": 657,
+   "medianInlinks": 1303
+  },
+  "towns": {
+   "pages": 57,
+   "ok": 57,
+   "thin": 0,
+   "schema": {
+    "BreadcrumbList": 56,
+    "ItemList": 42,
+    "ListItem": 56,
+    "LodgingBusiness": 13,
+    "PostalAddress": 54,
+    "City": 13,
+    "GeoCoordinates": 14,
+    "Organization": 14,
+    "Person": 14,
+    "SpeakableSpecification": 14,
+    "SportsEvent": 12,
+    "State": 13,
+    "WebPage": 14,
+    "Restaurant": 13,
+    "BikeStore": 13,
+    "CafeOrCoffeeShop": 1,
+    "Answer": 1,
+    "FAQPage": 1,
+    "Question": 1,
+    "Place": 1,
+    "Trip": 1,
+    "BarOrPub": 1,
+    "BookStore": 1,
+    "LocalBusiness": 1,
+    "Museum": 1,
+    "MusicStore": 1
+   },
+   "orphans": 0,
+   "medianWords": 324,
+   "medianInlinks": 6
+  },
+  "resources": {
+   "pages": 4,
+   "ok": 4,
+   "thin": 0,
+   "schema": {
+    "CollectionPage": 4,
+    "Organization": 4,
+    "Person": 4
+   },
+   "orphans": 0,
+   "medianWords": 398,
+   "medianInlinks": 3
+  },
+  "tonight": {
+   "pages": 1,
+   "ok": 1,
+   "thin": 1,
+   "schema": {},
+   "orphans": 0,
+   "medianWords": 89,
+   "medianInlinks": 1303
+  },
+  "events": {
+   "pages": 24,
+   "ok": 24,
+   "thin": 10,
+   "schema": {
+    "BreadcrumbList": 23,
+    "ItemList": 12,
+    "ListItem": 24,
+    "Answer": 12,
+    "Event": 12,
+    "FAQPage": 12,
+    "GeoCoordinates": 12,
+    "Offer": 12,
+    "Organization": 12,
+    "Person": 12,
+    "Place": 12,
+    "PostalAddress": 12,
+    "Question": 12,
+    "SpeakableSpecification": 13,
+    "SportsEvent": 12,
+    "WebPage": 13,
+    "WebSite": 1
+   },
+   "orphans": 0,
+   "medianWords": 1408,
+   "medianInlinks": 8
+  },
+  "rides": {
+   "pages": 1199,
+   "ok": 1199,
+   "thin": 364,
+   "schema": {
+    "BreadcrumbList": 1199,
+    "CollectionPage": 482,
+    "ListItem": 1199,
+    "Organization": 1199,
+    "Person": 1199,
+    "Answer": 1,
+    "FAQPage": 1,
+    "Question": 1,
+    "WebPage": 717,
+    "ItemList": 480,
+    "Event": 648,
+    "GeoCoordinates": 648,
+    "Place": 648,
+    "PostalAddress": 648,
+    "Schedule": 648
+   },
+   "orphans": 0,
+   "medianWords": 429,
+   "medianInlinks": 7
+  }
+ },
+ "topDuplicateTitles": [],
+ "topDuplicateDescriptions": [],
+ "broken": [
+  {
+   "url": "https://cycleforchange.org/rides/los-angeles-ca-nichols-canyon-ride-velo-club-la-grange/",
+   "status": 404,
+   "location": null,
+   "linkedFrom": 2
+  }
+ ],
+ "notInSitemap": [
+  {
+   "url": "https://cycleforchange.org/rides/add/",
+   "status": 200,
+   "location": null,
+   "linkedFrom": 484
+  }
+ ]
+}
