@@ -142,3 +142,56 @@
 .tile-p--deep .b{font-size:.8rem;margin-top:auto;padding-top:8px;color:var(--creosote-ink)}
 .tile-p--deep .tile-art{opacity:.35}
 @media (min-width:900px){.tiles-p--deep{grid-template-columns:repeat(6,minmax(0,1fr))}}
+
+/* —— Pass 19 (Oct 2, 2026): step down, like /rides/ ——
+   /events/2027/ asks one question with a few big picks — When? (a tile per month) or Or pick
+   what (a door per type, and the six Robert is riding) — and each pick is a short page of rows.
+   The filters live on /events/2027/all/. */
+.cal-sub{margin:.35em 0 0;font-size:1rem;line-height:1.45;color:var(--mute);max-width:none}
+.cal-sub b{color:var(--asphalt);font-weight:700;font-variant-numeric:tabular-nums}
+.cal-key{display:flex;flex-wrap:wrap;gap:4px 16px;margin:10px 0 0;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.cal-key span::before{margin-right:6px}
+.cal-lead{margin:12px 0 0;max-width:60ch;font-size:1rem;line-height:1.5}
+.cal-step{margin-top:30px}
+.cal-q{display:flex;align-items:center;gap:10px;margin:0 0 12px;font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.cal-q::after{content:"";flex:1;height:1px;background:var(--dust)}
+
+/* the months: a tile each, its count big and its share of the busiest month as a bar */
+.mo-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+@media (min-width:640px){.mo-tiles{grid-template-columns:repeat(6,minmax(0,1fr))}}
+.mo-tile{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:88px;padding:11px 12px 0;background:var(--paper);border:1px solid var(--dust);color:var(--asphalt);text-decoration:none;overflow:hidden}
+.mo-tiles>.mo-tile:nth-child(2n){background:var(--bone-2)}
+.mo-n{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.mo-c{font-family:var(--display);font-weight:800;font-size:1.9rem;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums;margin:10px 0 9px}
+.mo-tile .mo-bar{display:block;height:6px;margin:0 -12px;background:var(--asphalt);transform-origin:left;transform:scaleX(var(--h));opacity:.85}
+.mo-tile[aria-disabled="true"]{background:transparent;border-style:dashed;color:var(--dust-deep)}
+@media (hover:hover){a.mo-tile:hover{border-color:var(--asphalt);background:var(--bone)}}
+a.mo-tile:focus-visible,a.cal-door:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px}
+.cal-tba{margin:10px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.cal-tba a{color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px}
+
+/* the types: a door each, the mark, the name, the count */
+.cal-doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+@media (min-width:640px){.cal-doors{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.cal-door{position:relative;display:flex;flex-direction:column;gap:10px;min-height:86px;padding:12px;background:var(--paper);border:1px solid var(--dust);color:var(--asphalt);text-decoration:none}
+.cal-door-mk{width:26px;height:26px;color:currentColor}
+.cal-door-name{font-family:var(--display);font-weight:600;font-size:15px;line-height:1.15;letter-spacing:-.01em;margin-top:auto}
+.cal-door-n{position:absolute;top:11px;right:11px;font-family:var(--mono);font-size:11px;color:var(--creosote-ink);font-variant-numeric:tabular-nums}
+.cal-door--you{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}
+.cal-door--you .cal-door-n{color:var(--dust)}
+@media (hover:hover){a.cal-door:not(.cal-door--you):hover{border-color:var(--asphalt);background:var(--bone)}}
+.cal-home .deep{margin-top:34px}
+.cal-all{margin:26px 0 0}
+
+/* a short page: rows, a way to the next month, a way back */
+.cal-short .month:first-child .ev:first-child{border-top:1px solid var(--asphalt)}
+.cal-short #results{margin-top:18px}
+.cal-jump{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 0}
+.cal-jump a{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:8px 10px;border:1px solid var(--dust);color:var(--asphalt);text-decoration:none}
+@media (hover:hover){.cal-jump a:hover{border-color:var(--asphalt)}}
+.mo-nav{display:flex;justify-content:space-between;gap:12px;margin:18px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.mo-nav a{color:var(--asphalt);text-decoration:none;padding:10px 0;border-bottom:1px solid var(--asphalt)}
+.cal-back{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;margin:28px 0 0;padding-top:14px;border-top:1px solid var(--dust);font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.cal-back a{color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px}
+@media (prefers-reduced-motion:reduce){.mo-tile,.cal-door{transition:none}}
+.ev{scroll-margin-top:84px}
