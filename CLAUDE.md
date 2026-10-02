@@ -33,6 +33,25 @@ lasts, and what we got wrong — on the thesis that SEO is the base under AI ans
   characters are likely cut off in results (86% of pages). Prefer fewer, fuller pages over more, thinner ones until
   indexing catches up.
 
+## Pass 20 — Find a ride: what kind, then where (Oct 2, 2026)
+Robert: "Find a ride … is that person looking for a group ride? … a gravel or a fundraising ride? The
+next page needs to find out what's the ride … then are they looking in the United States? Outside?
+… everything we build needs to be click friendly … we need [the words] for SEO but we need to find a
+better way to hide it behind stuff." The journey (`tools/build-rides.js`, the Pass 20 block; styles at
+the foot of `rides.css`):
+- **`/find-a-ride/`** (every "Find a ride" link: chrome.js nav + menu, the homepage and /pledge/ nav)
+  asks **What kind of ride?** — Group ride (→ `/rides/`), Rolling tonight, Charity ride, Gravel (→
+  `/find-a-ride/gravel/`: Every week → `/rides/gravel/` or One big day → `/events/2027/gravel/`),
+  Fondo or century, Multi-day tour, Race (→ the `/events/2027/` category pages), Ride with me (→
+  `/events/2027/riding/`). Counts from rides.json and `data/calendar-2027.json`. Written beside
+  `/rides/` (`OUT/../find-a-ride/`), so it rebuilds with the rides.
+- **`/rides/`** asks **Where?**: In the US / Outside the US (the outline tiles), then the six big
+  cities as a chip row ("Or jump to"), then who's riding. Search and Near me stay on top.
+- **`/rides/united-states/`**: the map, the ten busiest states as rows, "All N, A to Z" folded, six cities.
+- **The words go under a fold, not away:** `fold()` writes `<details class="gr-fold gr-about">` —
+  crawled, one tap for a person. Use it for the explaining on every hub page; keep the picks on top.
+- Homepage "Find a group ride" buttons still go straight to `/rides/` (they already said which kind).
+
 ## Pass 19 — the 2027 calendar steps down, and keeps up (Oct 2, 2026)
 Robert, on his phone at `/events/2027/`: "Should we clean this up too?" The first screen was a stats
 strip, the h1 and a paragraph explaining ✓ and ~, and the filters ran off the side. Now the Pass 15
