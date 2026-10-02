@@ -33,6 +33,21 @@ lasts, and what we got wrong — on the thesis that SEO is the base under AI ans
   characters are likely cut off in results (86% of pages). Prefer fewer, fuller pages over more, thinner ones until
   indexing catches up.
 
+## Pass 18 — the maps get terrain, water and roads (Oct 2, 2026)
+Robert, after Pass 17: the map "needs to be more detailed. It looks a little weird just being a blank
+slate like that." Every state/country map (and the small city and ride maps) now carries, inside the
+outline and under the dots: terrain contours, lakes, rivers and the expressways (interstates in the US).
+- Data: `data/geo/detail.json`, drawn by `node tools/geo-detail.js` (Natural Earth 10m roads, rivers,
+  lakes + AWS Terrain Tiles; needs `npm i --no-save pngjs`, and `NODE_USE_ENV_PROXY=1` behind a proxy).
+  Contour levels come from the state's own land, so flat states still draw. Re-run when outlines.json
+  changes or a new country gets rides (`--only TX`, `--only GB --country`, `--no-relief`).
+- Build: `/rides/maps/detail/<st>.svg` (countries `c-<cc>.svg`) is one picture per map, drawn as an
+  `<image>` clipped to the outline (`.gr-map-pic`). Maps that zoom on a phone also carry the roads and
+  water inside the zoomed areas as paths (`.gr-map-zlayer`, shown only while zoomed, so they stay a
+  hairline), and each zoomed region tags up to five interstates (`roadShields()`, `.gr-map-shield`),
+  clear of the cities, the rides, the back button and off-land spots. Contours fade out when zoomed.
+- Style: contours and roads asphalt, faint; water dust cut back to bone. The Pass 18 block in rides.css.
+
 ## Pass 17 — the area map zooms on a phone (Oct 2, 2026)
 Robert, on his phone at `/rides/tx/`: the map is "a bit too small and not super easy to use and looks
 kind of funky … I don't want to rework everything … but make it more friendly." Desktop is unchanged.

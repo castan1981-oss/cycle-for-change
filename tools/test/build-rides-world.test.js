@@ -147,6 +147,15 @@ test("a state with nearby cities gets the phone zoom: region bubbles, zoom layer
   const hubs = [...h.matchAll(/<a class="tile-p[^"]*" href="\/rides\/az\/[^"]+\/"[^>]*>.*?<b class="n num">(\d+)<\/b>/g)].map((m) => Number(m[1]));
   assert.ok(n <= hubs.reduce((s, x) => s + x, 0), "deduped, not summed");
 });
+// Pass 18 (Oct 2, 2026): the maps carry terrain, water and roads; the zoomed views name the interstates
+test("maps carry the detail picture, and a zoomed region its roads, water and interstate tags", () => {
+  const h = read("az");
+  assert.match(h, /<image class="gr-map-pic" href="\/rides\/maps\/detail\/az\.svg"/);
+  assert.match(h, /<g class="gr-map-zlayer">.*class="gr-map-road" d="M/);
+  assert.match(h, /<g class="gr-map-shield"><rect [^>]+\/><text [^>]+>I-\d+<\/text><\/g>/);
+  assert.ok(fs.existsSync(path.join(out, "maps", "detail", "az.svg")), "the picture is written");
+  assert.match(read(sat.slug), /class="gr-map-pic" href="\/rides\/maps\/detail\//, "the ride page's small map wears it too");
+});
 test("the US page is a map you tap, a link for every state with a ride", () => {
   const h = read("united-states");
   const states = new Set(rides.filter((r) => r.country === "US" && r.state !== us.slug).map((r) => r.state));
