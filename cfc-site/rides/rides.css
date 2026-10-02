@@ -409,6 +409,21 @@ details.gr-fold>dl{padding:0 18px 18px}
 .gr-map figcaption span{display:inline-flex;align-items:center;gap:8px}
 .gr-map figcaption a{color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px}
 .gr-map-cap-mark{width:16px;height:16px;flex:none;color:var(--creosote-ink)}
+/* Pass 18 (Oct 2, 2026): what's on the map besides the outline (data/geo/detail.json) — quiet,
+   one family: contours and roads in asphalt, water in dust cut back to the bone. Under the dots. */
+.gr-map-edge{fill:none;stroke:var(--asphalt);stroke-width:1.4;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
+.gr-map-detail{pointer-events:none}
+.gr-map-pic{transition:opacity .2s ease}
+.gr-map-zlayer{display:none;opacity:0;transition:opacity .2s ease}
+.gr-map-lake{fill:var(--bone);stroke:var(--dust);stroke-width:.8;vector-effect:non-scaling-stroke}
+.gr-map-river{fill:none;stroke:var(--dust);stroke-width:1.4;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.gr-map-road{fill:none;stroke:var(--asphalt);stroke-opacity:.42;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.gr-map--zoomable.is-live .gr-map-zlayer{display:inline}
+.gr-map--zoomable.is-zoomed .gr-map-zlayer{opacity:1}
+.gr-map--zoomable.is-zoomed .gr-map-pic{opacity:0}
+.gr-map-shield rect{fill:var(--paper);stroke:var(--asphalt);stroke-opacity:.55;vector-effect:non-scaling-stroke}
+.gr-map-shield text{font-family:var(--mono);font-weight:700;fill:var(--asphalt);fill-opacity:.8;letter-spacing:.02em}
+@media (prefers-reduced-motion:reduce){.gr-map-pic,.gr-map-zlayer{transition:none}}
 /* a state's or country's own map, in its header */
 .gr-head--map{display:grid;gap:18px 32px;align-items:center}
 .gr-head--map .gr-map--area{max-width:min(100%,440px);justify-self:center;width:100%}

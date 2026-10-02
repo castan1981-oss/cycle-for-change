@@ -85,7 +85,10 @@
       </div>
       <figure class="gr-map gr-map--area">
         <svg class="gr-map-svg" viewBox="0 0 400 217" role="img" aria-labelledby="gm235"><title id="gm235">Map of Singapore: a dot for each of the 1 ride</title>
-          <path class="gr-map-land" d="M364,135.3L196,208.7L8,143.1L68,33.1L196,8L296,42.7L352,67.8L392,98.7Z"/>
+          <path class="gr-map-land" id="gm235-land" d="M364,135.3L196,208.7L8,143.1L68,33.1L196,8L296,42.7L352,67.8L392,98.7Z"/>
+          <clipPath id="gm235-clip"><use href="#gm235-land"/></clipPath>
+          <g class="gr-map-detail" clip-path="url(#gm235-clip)" aria-hidden="true"><image class="gr-map-pic" href="/rides/maps/detail/c-sg.svg" x="0" y="0" width="400" height="217" preserveAspectRatio="none"/></g>
+          <path class="gr-map-edge" d="M364,135.3L196,208.7L8,143.1L68,33.1L196,8L296,42.7L352,67.8L392,98.7Z"/>
           <g class="gr-map-dots"><circle class="gr-map-dot" cx="252.4" cy="122.7" r="3.4"/></g>
           <g class="gr-map-labels"></g>
         </svg>

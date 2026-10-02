@@ -725,6 +725,35 @@ const plural = (n, one = "ride", many = one + "s") => `${n} ${n === 1 ? one : ma
 //  · photos — Robert's own, in the house grade, where they're true to the place: the crew on
 //    /rides/ and the Arizona pages, the finish line on the who's-riding pages and /about/.
 const GEO = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "geo", "outlines.json"), "utf8")); } catch (e) { return null; } })();
+// Pass 18 (Oct 2, 2026): what's on the map besides the outline — terrain contours, lakes, rivers,
+// the expressways (interstates by number). data/geo/detail.json, drawn by tools/geo-detail.js.
+// Robert: the map "looks a little weird just being a blank slate like that." State and country
+// maps show it as one picture, /rides/maps/detail/<key>.svg; the maps that zoom on a phone also
+// carry roads and water as paths for the zoomed view. No detail file = the plain outline, as before.
+const DETAIL = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "geo", "detail.json"), "utf8")); } catch (e) { return null; } })();
+const DETAIL_OF = new Map();
+if (GEO && DETAIL) {
+  for (const [k, d] of Object.entries(DETAIL.states || {})) if (GEO.states[k]) DETAIL_OF.set(GEO.states[k], { ...d, file: k.toLowerCase() });
+  for (const [k, d] of Object.entries(DETAIL.countries || {})) if (GEO.countries[k]) DETAIL_OF.set(GEO.countries[k], { ...d, file: `c-${k.toLowerCase()}` });
+}
+const roadsD = (det) => det.roads.map((r) => r[1]).join("");
+// keep the pieces of a path ("M…L…Z" with "x y" pairs) whose box meets one of the boxes [x, y, w, h]
+function pathIn(d, boxes) {
+  if (!d) return "";
+  return d.split("M").filter(Boolean).filter((part) => {
+    let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+    for (const q of part.replace(/Z/g, "").split("L")) { const [x, y] = q.split(" ").map(Number); if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; }
+    return boxes.some(([bx, by, bw, bh]) => x0 <= bx + bw && x1 >= bx && y0 <= by + bh && y1 >= by);
+  }).map((part) => "M" + part).join("");
+}
+function detailSvg(shape, det) {
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${shape.w} ${shape.h}" preserveAspectRatio="none">`
+    + (det.relief ? `<path d="${det.relief}" fill="none" stroke="#2A2E28" stroke-opacity=".14" stroke-width=".55" stroke-linejoin="round"/>` : "")
+    + (det.lakes ? `<path d="${det.lakes}" fill="#E8DFD0" stroke="#C4B7A2" stroke-width=".6"/>` : "")
+    + (det.rivers ? `<path d="${det.rivers}" fill="none" stroke="#C4B7A2" stroke-width=".85" stroke-linejoin="round"/>` : "")
+    + (det.roads.length ? `<path d="${roadsD(det)}" fill="none" stroke="#2A2E28" stroke-opacity=".3" stroke-width=".8" stroke-linejoin="round" stroke-linecap="round"/>` : "")
+    + `</svg>\n`;
+}
 const geoPlace = ([k, tx, ty, rot], lng, lat) => {
   const l = ((lng + rot + 540) % 360) - 180;
   return [tx + k * (l * Math.PI / 180), ty - k * Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI / 180) / 2))];
@@ -769,10 +798,20 @@ function mapFigure(shape, { dots = [], dim = [], labels = [], focus = null, ring
   }
   let here = "";
   if (focus) { const [x, y] = P(focus); if (inBox([x, y])) here = `<circle class="gr-map-halo" cx="${n1(x)}" cy="${n1(y)}" r="13"/><circle class="gr-map-here" cx="${n1(x)}" cy="${n1(y)}" r="6"/>`; }
+  const zoomLayer = (d, boxes) => { const lk = pathIn(d.lakes, boxes), rv = pathIn(d.rivers, boxes), rd = pathIn(roadsD(d), boxes); return `<g class="gr-map-zlayer">${lk ? `<path class="gr-map-lake" d="${lk}"/>` : ""}${rv ? `<path class="gr-map-river" d="${rv}"/>` : ""}${rd ? `<path class="gr-map-road" d="${rd}"/>` : ""}</g>`; };
+  // the detail, under everything and inside the outline: one picture (/rides/maps/detail/<key>.svg).
+  // A map that zooms on a phone also carries its roads and water as paths, shown only while zoomed,
+  // so they stay a hairline at 6x instead of growing with the picture.
+  const det = DETAIL_OF.get(shape);
+  const inline = det && /gr-map--area/.test(cls);
+  const detailG = !det ? "" : `
+          <clipPath id="${id}-clip"><use href="#${id}-land"/></clipPath>
+          <g class="gr-map-detail" clip-path="url(#${id}-clip)" aria-hidden="true"><image class="gr-map-pic" href="/rides/maps/detail/${det.file}.svg" x="0" y="0" width="${shape.w}" height="${shape.h}" preserveAspectRatio="none"/>${inline && zoom ? zoomLayer(det, zoom.boxes) : ""}</g>
+          <path class="gr-map-edge" d="${shape.d}"/>`;
   return `
       <figure class="gr-map ${cls}${zoom ? " gr-map--zoomable" : ""}">
         <svg class="gr-map-svg" viewBox="0 0 ${shape.w} ${shape.h}" role="img" aria-labelledby="${id}"><title id="${id}">${esc(title)}</title>
-          <path class="gr-map-land" d="${shape.d}"/>${ring}
+          <path class="gr-map-land" id="${id}-land" d="${shape.d}"/>${detailG}${ring}
           <g class="gr-map-dots">${dotSvg(dim, "gr-map-dot gr-map-dot--dim")}${dotSvg(dots, "gr-map-dot")}</g>${here}
           <g class="gr-map-labels">${labelSvg}</g>${zoom ? `
           <g class="gr-map-regions">${zoom.regionsSvg}</g>
@@ -830,6 +869,56 @@ function placeNames(items, W, H, FS, { fallback = false, small = null } = {}) {
     return { it, text, cnt, spot: fallback ? first : null, fs: FS };
   });
 }
+// Pass 18: in a zoomed region, the interstates that run through it get a small tag ("I-35E") on a
+// stretch clear of the cities, their names and the back button — up to five, longest first.
+const LAND_RINGS = new Map();
+function onLand(shape, x, y) {   // even-odd test against the outline (M/L/Z), in the map's own units
+  let rings = LAND_RINGS.get(shape);
+  if (!rings) LAND_RINGS.set(shape, (rings = shape.d.split("M").filter(Boolean).map((r) => r.replace(/Z/g, "").split("L").map((q) => q.split(",").map(Number)))));
+  let inside = false;
+  for (const r of rings) for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
+    const [xi, yi] = r[i], [xj, yj] = r[j];
+    if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) inside = !inside;
+  }
+  return inside;
+}
+function roadShields(det, rings, placed, toC, W, H, FS, dots = [], land = () => true) {
+  if (!det || !det.roads.length) return [];
+  const SF = 10.5, pad = 26;
+  const taken = [{ x0: 0, y0: 0, x1: 120, y1: 58 }];   // the "← Texas" button
+  for (const [x, y] of rings) taken.push({ x0: x - 14, y0: y - 14, x1: x + 14, y1: y + 14 });
+  for (const [x, y] of dots) taken.push({ x0: x - 5, y0: y - 5, x1: x + 5, y1: y + 5 });   // never sit on a ride
+  for (const { text, cnt, spot, fs } of placed) {
+    if (!spot) continue;
+    const w = (text.length + cnt.length) * fs * 0.62 + 6, [tx, ty, a] = spot;
+    taken.push({ x0: a === "start" ? tx - 2 : a === "end" ? tx - w : tx - w / 2, x1: a === "start" ? tx + w : a === "end" ? tx + 2 : tx + w / 2, y0: ty - fs * 0.9, y1: ty + fs * 0.35 });
+  }
+  const runs = [];
+  for (const [ref, d] of det.roads) {
+    if (!ref) continue;
+    const pts = [];   // points every ~10 canvas units along the route, inside the view
+    for (const part of d.split("M").filter(Boolean)) {
+      const line = part.split("L").map((q) => toC(q.split(" ").map(Number)));
+      for (let i = 1; i < line.length; i++) {
+        const [ax, ay] = line[i - 1], [bx, by] = line[i], n = Math.max(1, Math.ceil(Math.hypot(bx - ax, by - ay) / 10));
+        for (let k = 0; k < n; k++) { const x = ax + ((bx - ax) * k) / n, y = ay + ((by - ay) * k) / n; if (x > pad && x < W - pad && y > pad && y < H - pad && land(x, y)) pts.push([x, y]); }
+      }
+    }
+    if (pts.length > 3) runs.push({ ref, pts });
+  }
+  runs.sort((a, b) => b.pts.length - a.pts.length);
+  const out = [];
+  for (const { ref, pts } of runs) {
+    if (out.length >= 5) break;
+    const bw = ref.length * SF * 0.62 + 9, bh = SF + 6;
+    const ok = pts.filter(([x, y]) => { const b = { x0: x - bw / 2 - 3, x1: x + bw / 2 + 3, y0: y - bh / 2 - 3, y1: y + bh / 2 + 3 }; return !taken.some((o) => b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0); });
+    if (!ok.length) continue;
+    const [x, y] = ok[Math.floor(ok.length / 2)];   // the middle of what's clear: away from both ends
+    taken.push({ x0: x - bw / 2 - 4, x1: x + bw / 2 + 4, y0: y - bh / 2 - 4, y1: y + bh / 2 + 4 });
+    out.push({ ref, x, y, bw, bh, fs: SF });
+  }
+  return out;
+}
 function mapZoom(shape, hubsIn, areaWord) {
   if (!shape || hubsIn.length < 2) return null;
   const regions = mapRegions(hubsIn);
@@ -867,29 +956,32 @@ function mapZoom(shape, hubsIn, areaWord) {
   }).join("");
   // a layer per region of several cities, drawn for its zoom: names placed on a canvas the size of
   // the map, then shrunk by the zoom so they come out the same size as on the overview
-  const FS = 16;
+  const FS = 16, boxes = [];   // the zoomed views, so the roads and water drawn for them can stop there
   const zooms = regions.filter((g) => g.hubs.length > 1).map((g) => {
     const pts = g.hubs.map(P), xs = pts.map((p) => p[0]), ys = pts.map((p) => p[1]);
     const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
     const z = Math.max(1.6, Math.min(8, (W - 170) / Math.max(x1 - x0, 1), (H - 110) / Math.max(y1 - y0, 1)));
     const vb = [(x0 + x1) / 2 - W / (2 * z), (y0 + y1) / 2 - H / (2 * z), W / z, H / z];
+    boxes.push(vb);
     const toC = ([x, y]) => [(x - vb[0]) * z, (y - vb[1]) * z], u = (v) => n1(v / z * 10) / 10;
     const at = (c, i) => n1((vb[i] + c / z) * 100) / 100;
     const dots = g.rides.map(P).map(([x, y]) => `<circle class="gr-map-dot" cx="${n1(x * 10) / 10}" cy="${n1(y * 10) / 10}" r="${u(3.4)}"/>`).join("");
     const placed = placeNames(g.hubs.map((h, i) => { const [cx, cy] = toC(pts[i]); return { x: cx, y: cy, rr: 7, text: h.city, n: h.rides.length, h, i }; }), W, H, FS, { fallback: true });
+    const shields = roadShields(DETAIL_OF.get(shape), g.hubs.map((_, i) => toC(pts[i])), placed, toC, W, H, FS, g.rides.map((r) => toC(P(r))), (cx, cy) => onLand(shape, vb[0] + cx / z, vb[1] + cy / z)).map(({ ref, x, y, bw, bh, fs }) =>
+      `<g class="gr-map-shield"><rect x="${at(x - bw / 2, 0)}" y="${at(y - bh / 2, 1)}" width="${u(bw)}" height="${u(bh)}"/><text x="${at(x, 0)}" y="${at(y + fs * 0.36, 1)}" text-anchor="middle" style="font-size:${u(fs)}px">${esc(ref)}</text></g>`).join("");
     const cities = placed.map(({ it, text, cnt, spot }) => {
       const [x, y] = pts[it.i];
       const label = spot ? `<text x="${at(spot[0], 0)}" y="${at(spot[1], 1)}" text-anchor="${spot[2]}" style="font-size:${u(FS)}px;stroke-width:${u(4)}px"><tspan class="gr-map-name">${esc(text)}</tspan><tspan class="gr-map-n">${cnt}</tspan></text>` : "";
       return `<a href="${it.h.path}" aria-label="${attr(`${it.h.city}, ${plural(it.h.rides.length)}`)}"><circle class="gr-map-zhit" cx="${n1(x * 10) / 10}" cy="${n1(y * 10) / 10}" r="${u(24)}"/><circle class="gr-map-hub" cx="${n1(x * 10) / 10}" cy="${n1(y * 10) / 10}" r="${u(7)}"/>${label}</a>`;
     }).join("");
-    return `<g class="gr-map-zoom" data-reg="${g.key}" data-vb="${vb.map((v) => n1(v * 100) / 100).join(" ")}" data-paths="${attr(g.hubs.map((h) => h.path).join(" "))}"><g class="gr-map-zdots">${dots}</g>${cities}</g>`;
+    return `<g class="gr-map-zoom" data-reg="${g.key}" data-vb="${vb.map((v) => n1(v * 100) / 100).join(" ")}" data-paths="${attr(g.hubs.map((h) => h.path).join(" "))}">${shields}<g class="gr-map-zdots">${dots}</g>${cities}</g>`;
   }).join("");
   const multi = regions.filter((g) => g.hubs.length > 1);
   const chips = `<div class="gr-map-chips" role="group" aria-label="Zoom the map">
           <button type="button" class="gr-chip" data-reg="" aria-pressed="true">All ${esc(areaWord)}</button>${multi.map((g) => `
           <button type="button" class="gr-chip" data-reg="${g.key}" aria-pressed="false">${esc(g.name)} <span class="gr-map-chip-n">${g.n}</span></button>`).join("")}
         </div>`;
-  return { regionsSvg, zooms, chips, back: `<button type="button" class="gr-chip gr-map-back" aria-label="${attr(`Back to all of ${areaWord}`)}">&larr; ${esc(areaWord)}</button>` };
+  return { regionsSvg, zooms, chips, boxes, back: `<button type="button" class="gr-chip gr-map-back" aria-label="${attr(`Back to all of ${areaWord}`)}">&larr; ${esc(areaWord)}</button>` };
 }
 
 // /rides/united-states/: tap a state. Shaded by how many rides it has.
@@ -1957,6 +2049,7 @@ function main() {
   // …/all/) in `steps`; each gets its own folder, never on top of a city or another short page.
   const steps = [];
   if (GEO) { write(path.join(OUT, "maps", "us.svg"), outlineSvg(GEO.nation)); write(path.join(OUT, "maps", "world.svg"), outlineSvg(GEO.world)); }
+  for (const [shape, det] of DETAIL_OF) write(path.join(OUT, "maps", "detail", `${det.file}.svg`), detailSvg(shape, det));   // Pass 18
   write(path.join(OUT, "index.html"), directory(rides, hubs, world.hubs));
   write(path.join(OUT, "about", "index.html"), aboutPage(rides));
   write(path.join(OUT, "add", "index.html"), addPage(rides));

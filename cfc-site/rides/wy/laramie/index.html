@@ -149,7 +149,10 @@
 
       <figure class="gr-map gr-map--where">
         <svg class="gr-map-svg" viewBox="0 0 400 317" role="img" aria-labelledby="gm163"><title id="gm163">Map of Wyoming: the 25 miles around Laramie, a dot for each ride</title>
-          <path class="gr-map-land" d="M391.6,8.7L392,308.3L26.9,308.7L8.6,308.6L8.2,8.4L23,8.3L27.3,9.1L115.2,8L369,8.6Z"/><circle class="gr-map-ring" cx="315.1" cy="288.5" r="26.5"/>
+          <path class="gr-map-land" id="gm163-land" d="M391.6,8.7L392,308.3L26.9,308.7L8.6,308.6L8.2,8.4L23,8.3L27.3,9.1L115.2,8L369,8.6Z"/>
+          <clipPath id="gm163-clip"><use href="#gm163-land"/></clipPath>
+          <g class="gr-map-detail" clip-path="url(#gm163-clip)" aria-hidden="true"><image class="gr-map-pic" href="/rides/maps/detail/wy.svg" x="0" y="0" width="400" height="317" preserveAspectRatio="none"/></g>
+          <path class="gr-map-edge" d="M391.6,8.7L392,308.3L26.9,308.7L8.6,308.6L8.2,8.4L23,8.3L27.3,9.1L115.2,8L369,8.6Z"/><circle class="gr-map-ring" cx="315.1" cy="288.5" r="26.5"/>
           <g class="gr-map-dots"><circle class="gr-map-dot gr-map-dot--dim" cx="24.2" cy="124.8" r="3.4"/><circle class="gr-map-dot" cx="308.8" cy="285.6" r="3.4"/><circle class="gr-map-dot" cx="307.4" cy="285.7" r="3.4"/><circle class="gr-map-dot" cx="326.7" cy="295.7" r="3.4"/><circle class="gr-map-dot" cx="329" cy="294.3" r="3.4"/></g>
           <g class="gr-map-labels"><g><circle class="gr-map-hub gr-map-hub--here" cx="315.1" cy="288.5" r="7.5"/><text x="304.1" y="294.1" text-anchor="end"><tspan class="gr-map-name">LARAMIE</tspan><tspan class="gr-map-n"> 4</tspan></text></g></g>
         </svg>
