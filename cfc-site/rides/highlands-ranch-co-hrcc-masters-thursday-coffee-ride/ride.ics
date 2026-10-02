@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:highlands-ranch-co-hrcc-masters-thursday-coffee-ride@cycleforchange.o
+ rg
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Denver:20261008T083000
+DTEND;TZID=America/Denver:20261008T113000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270301T235959Z
+SUMMARY:HRCC Masters Thursday Coffee Ride — Highlands Ranch\, CO
+LOCATION:Mike's Bikes of Highlands Ranch\, 2030 E County Line Rd\, Highla
+ nds Ranch\, CO
+DESCRIPTION:Schedule: Every Thursday\, 8:30 am from Mike's Bikes of Highl
+ ands Ranch. The route changes each week and is posted on Meetup..\nConfi
+ rm with the host before you go.\nhttps://cycleforchange.org/rides/highla
+ nds-ranch-co-hrcc-masters-thursday-coffee-ride/
+URL:https://cycleforchange.org/rides/highlands-ranch-co-hrcc-masters-thur
+ sday-coffee-ride/
+END:VEVENT
+END:VCALENDAR

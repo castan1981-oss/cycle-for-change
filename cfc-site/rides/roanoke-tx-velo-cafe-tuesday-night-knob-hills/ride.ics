@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:roanoke-tx-velo-cafe-tuesday-night-knob-hills@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Chicago:20261006T183000
+DTEND;TZID=America/Chicago:20261006T203000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270301T235959Z
+SUMMARY:Velo Cafe Tuesday Night Group Ride (Knob Hills) — Roanoke\, TX
+LOCATION:Knob Hills Bike Trail\, Knob Hills Bike Trail\, Roanoke\, TX 762
+ 62
+DESCRIPTION:Schedule: Every Tuesday\, 6:30 pm at the Knob Hills trail..\n
+ Confirm with the host before you go.\nhttps://cycleforchange.org/rides/r
+ oanoke-tx-velo-cafe-tuesday-night-knob-hills/
+URL:https://cycleforchange.org/rides/roanoke-tx-velo-cafe-tuesday-night-k
+ nob-hills/
+END:VEVENT
+END:VCALENDAR

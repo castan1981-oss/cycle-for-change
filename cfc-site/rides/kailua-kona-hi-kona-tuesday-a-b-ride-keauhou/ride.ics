@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:kailua-kona-hi-kona-tuesday-a-b-ride-keauhou@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=Pacific/Honolulu:20261006T080000
+DTEND;TZID=Pacific/Honolulu:20261006T100000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270301T235959Z
+SUMMARY:Kona Tuesday A/B Ride from Keauhou — Kailua-Kona\, HI
+LOCATION:Keauhou Shopping Center parking lot\, Keauhou Shopping Center\, 
+ Kailua-Kona\, HI
+DESCRIPTION:Pace: Steep hills\, robust pace (A/B riders).\nSchedule: Tues
+ days\, 8:00 am\, from the Keauhou Shopping Center parking lot.\nConfirm 
+ with the host before you go.\nhttps://cycleforchange.org/rides/kailua-ko
+ na-hi-kona-tuesday-a-b-ride-keauhou/
+URL:https://cycleforchange.org/rides/kailua-kona-hi-kona-tuesday-a-b-ride
+ -keauhou/
+END:VEVENT
+END:VCALENDAR

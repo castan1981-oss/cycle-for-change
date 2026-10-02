@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:morelia-mx-ciclovia-recreativa-dominical@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Mexico_City:20261004T080000
+DTEND;TZID=America/Mexico_City:20261004T100000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270301T235959Z
+SUMMARY:Ciclovía Recreativa Dominical — Morelia\, Mexico
+LOCATION:Av. Francisco I. Madero\, Centro Histórico (from Calle Andrés 
+ Quintana Roo to Av. Tata Vasco)\, Avenida Francisco I. Madero\, Centro H
+ istórico\, Morelia\, Michoacán
+DESCRIPTION:Pace: Open street for walkers\, runners\, skaters and cyclist
+ s; no group pace.\nSchedule: Every Sunday from about 8:00 am to 1:00 pm 
+ (one source says 2:00 pm) on Av. Madero and Av. Acueducto in the Centro 
+ Histórico. A free bike school runs inside it 11:00 am to 1:00 pm..\nCon
+ firm with the host before you go.\nhttps://cycleforchange.org/rides/more
+ lia-mx-ciclovia-recreativa-dominical/
+URL:https://cycleforchange.org/rides/morelia-mx-ciclovia-recreativa-domin
+ ical/
+END:VEVENT
+END:VCALENDAR

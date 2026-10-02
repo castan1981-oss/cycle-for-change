@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:boca-raton-fl-brbc-breakfast-club-ride@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/New_York:20261003T070000
+DTEND;TZID=America/New_York:20261003T090000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270301T235959Z
+SUMMARY:Breakfast Club Ride (Boca Raton Bicycle Club) — Boca Raton\, FL
+LOCATION:A1A & Spanish River\, A1A & Spanish River\, Boca Raton\, FL
+DESCRIPTION:Pace: B and C levels.\nSchedule: Every Saturday\, 7:00 am fro
+ m A1A and Spanish River. B and C levels; 30\, 40\, 50 or 62 miles depend
+ ing on who shows up..\nConfirm with the host before you go.\nhttps://cyc
+ leforchange.org/rides/boca-raton-fl-brbc-breakfast-club-ride/
+URL:https://cycleforchange.org/rides/boca-raton-fl-brbc-breakfast-club-ri
+ de/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:washington-dc-ncvc-espresso-ride@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/New_York:20261004T084500
+DTEND;TZID=America/New_York:20261004T104500
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270301T235959Z
+SUMMARY:NCVC Espresso Ride — Washington\, DC
+LOCATION:High Road Cycling\, Georgetown\, 3210 Grace St NW\, Washington\,
+  DC
+DESCRIPTION:Pace: Not stated on the page.\nSchedule: Sundays\, 9:15 am in
+  winter and 8:45 am in summer\, from High Road Cycling in Georgetown. NC
+ VC does not say when the winter time starts\, so be there by 8:45 and ch
+ eck the club's Instagram. 47.8 miles\, 1\,520 ft of climbing..\nConfirm 
+ with the host before you go.\nhttps://cycleforchange.org/rides/washingto
+ n-dc-ncvc-espresso-ride/
+URL:https://cycleforchange.org/rides/washington-dc-ncvc-espresso-ride/
+END:VEVENT
+END:VCALENDAR

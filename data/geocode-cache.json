@@ -4528,5 +4528,892 @@
   "type": "city",
   "name": "Auckland, Waitematā, Auckland, 1010, New Zealand"
  },
- "nz|changes weekly (on each meetup event), auckland, auckland, new zealand": null
+ "nz|changes weekly (on each meetup event), auckland, auckland, new zealand": null,
+ "us|brooklyn, ny, united states": {
+  "lat": 40.6526,
+  "lng": -73.94972,
+  "type": "administrative",
+  "name": "Brooklyn, Kings County, New York, United States"
+ },
+ "us|bergen street and rockaway avenue, brooklyn, ny": null,
+ "us|thomas boyland st, one block west of rockaway ave (start of the route on bergen st), brooklyn, ny, united states": null,
+ "us|grand army plaza, brooklyn, ny": {
+  "lat": 40.6749,
+  "lng": -73.97087,
+  "type": "stop",
+  "name": "Grand Army Plaza, Flatbush Avenue, Park Slope, Brooklyn, Kings County, New York, 11238, United States"
+ },
+ "us|3914 atlantic ave, long beach, ca 90807": {
+  "lat": 33.82929,
+  "lng": -118.1849,
+  "type": "house",
+  "name": "3914, Atlantic Avenue, California Heights, Long Beach, Los Angeles County, California, 90807, United States"
+ },
+ "us|2122 e 4th st, long beach, ca 90814": {
+  "lat": 33.7716,
+  "lng": -118.16599,
+  "type": "brewery",
+  "name": "everywhere, 2122, East 4th Street, Long Beach, Los Angeles County, California, 90814, United States"
+ },
+ "us|e 4th st & cherry ave, long beach, ca 90802": null,
+ "us|e 4th st and cherry ave, long beach, ca, united states": null,
+ "us|8 s 18th pl, long beach, ca 90803": {
+  "lat": 33.7637,
+  "lng": -118.16621,
+  "type": "house",
+  "name": "8, South 18th Place, Long Beach, Los Angeles County, California, 90803, United States"
+ },
+ "us|cerritos, ca, united states": {
+  "lat": 33.86443,
+  "lng": -118.05393,
+  "type": "administrative",
+  "name": "Cerritos, Los Angeles County, California, 90715, United States"
+ },
+ "us|19211 studebaker rd, cerritos, ca 90703": {
+  "lat": 33.85649,
+  "lng": -118.09966,
+  "type": "house",
+  "name": "19211, Studebaker Road, Cerritos, Los Angeles County, California, 90703, United States"
+ },
+ "us|vermont & hollywood, los angeles, ca 90027": {
+  "lat": 34.10087,
+  "lng": -118.29192,
+  "type": "bus_stop",
+  "name": "Vermont & Hollywood, North Vermont Avenue, Los Angeles, Los Angeles County, California, 90027, United States"
+ },
+ "us|santa clarita, ca, united states": {
+  "lat": 34.4128,
+  "lng": -118.55381,
+  "type": "administrative",
+  "name": "Santa Clarita, Los Angeles County, California, United States"
+ },
+ "us|27107 mcbean pkwy, santa clarita, ca": {
+  "lat": 34.42325,
+  "lng": -118.56408,
+  "type": "department_store",
+  "name": "TJ Maxx, 27107, McBean Parkway, Valencia, Santa Clarita, Los Angeles County, California, 91355, United States"
+ },
+ "us|faria camp or cañada larga (alternates), ventura, ca, united states": null,
+ "us|pleasant hill, ca, united states": {
+  "lat": 37.94798,
+  "lng": -122.0608,
+  "type": "administrative",
+  "name": "Pleasant Hill, Contra Costa County, California, 94523, United States"
+ },
+ "us|pleasant hill bart station, pleasant hill, ca": null,
+ "us|pleasant hill bart station, pleasant hill, ca, united states": null,
+ "us|el cerrito, ca, united states": {
+  "lat": 37.91541,
+  "lng": -122.30141,
+  "type": "administrative",
+  "name": "El Cerrito, Contra Costa County, California, 94530, United States"
+ },
+ "us|6400 cutting blvd, el cerrito, ca 94530": {
+  "lat": 37.92572,
+  "lng": -122.31759,
+  "type": "house",
+  "name": "6400, Cutting Boulevard, El Cerrito, Contra Costa County, California, 94530, United States"
+ },
+ "us|golden gate bridge welcome center, san francisco, ca": null,
+ "us|golden gate bridge welcome center, san francisco, ca, united states": null,
+ "us|danville, ca, united states": {
+  "lat": 37.82259,
+  "lng": -122.00083,
+  "type": "administrative",
+  "name": "Danville, Contra Costa County, California, 94526, United States"
+ },
+ "us|1550 diablo rd, danville, ca 94526": {
+  "lat": 37.83632,
+  "lng": -121.97123,
+  "type": "church",
+  "name": "Sanctuary, 1550, Diablo Road, Danville, Contra Costa County, California, 94528, United States"
+ },
+ "us|saratoga, ca, united states": {
+  "lat": 37.26383,
+  "lng": -122.02301,
+  "type": "administrative",
+  "name": "Saratoga, Santa Clara County, California, 95070, United States"
+ },
+ "us|17301 skyline blvd, saratoga, ca 95070": null,
+ "us|saratoga gap parking, saratoga, ca, united states": null,
+ "us|sand hill rd & pasteur dr, palo alto, ca": {
+  "lat": 37.4348,
+  "lng": -122.18163,
+  "type": "bus_stop",
+  "name": "Sand Hill Road & Pasteur Drive, Sand Hill Road, Palo Alto, Santa Clara County, California, 94025, United States"
+ },
+ "us|alviso, ca, united states": {
+  "lat": 37.42605,
+  "lng": -121.97524,
+  "type": "administrative",
+  "name": "Alviso, San Jose, Santa Clara County, California, 95002, United States"
+ },
+ "us|2077 gold street, alviso, ca 95002": {
+  "lat": 37.4215,
+  "lng": -121.97663,
+  "type": "office",
+  "name": "Gold Business Center, 2077, Gold Street, Alviso, San Jose, Santa Clara County, California, 95002, United States"
+ },
+ "us|hollenbeck ave & homestead rd, sunnyvale, ca": {
+  "lat": 37.33766,
+  "lng": -122.04206,
+  "type": "bus_stop",
+  "name": "West Homestead Road & Hollenbeck Avenue, West Homestead Road, Sunnyvale, Santa Clara County, California, 94087, United States"
+ },
+ "us|college avenue & rockridge bart, oakland, ca": {
+  "lat": 37.84456,
+  "lng": -122.25169,
+  "type": "bus_stop",
+  "name": "College Avenue & Rockridge BART, College Avenue, Rockridge, North Oakland, Oakland, Alameda County, California, 94168, United States"
+ },
+ "us|401 pine st, seattle, wa 98101": {
+  "lat": 47.6109,
+  "lng": -122.3369,
+  "type": "artwork",
+  "name": "Children's Art Tiles, 401, Pine Street, Central Business District, Belltown, Seattle, King County, Washington, 98101, United States"
+ },
+ "us|fairbanks, ak, united states": {
+  "lat": 64.83785,
+  "lng": -147.71668,
+  "type": "administrative",
+  "name": "Fairbanks, Fairbanks North Star Borough, Alaska, United States"
+ },
+ "us|uaf nenana parking lot, university of alaska fairbanks, fairbanks, ak": null,
+ "us|uaf nenana parking lot (across from the patty center / src), fairbanks, ak, united states": null,
+ "us|patty center parking lot, university of alaska fairbanks, fairbanks, ak": null,
+ "us|uaf patty center parking lot, fairbanks, ak, united states": null,
+ "us|chena pump plaza, fairbanks, ak": null,
+ "us|starts vary; next ride: chena pump plaza (by lulu's bread and bagels), fairbanks, ak, united states": null,
+ "us|medford, or, united states": {
+  "lat": 42.32642,
+  "lng": -122.87186,
+  "type": "administrative",
+  "name": "Medford, Jackson County, Oregon, United States"
+ },
+ "us|940 n phoenix rd #100, medford, or 97504": null,
+ "us|medford cycle sport, medford, or, united states": null,
+ "us|kailua-kona, hi, united states": {
+  "lat": 19.64194,
+  "lng": -155.99693,
+  "type": "census",
+  "name": "Kailua, Hawaiʻi County, Hawaii, United States"
+ },
+ "us|hulikoa dr, kailua-kona, hi": null,
+ "us|hulikoa drive, in front of patricio's mexican taqueria, kailua-kona, hi, united states": null,
+ "us|kamehameha iii rd & ali'i dr, kailua-kona, hi": null,
+ "us|kam iii and ali'i drive intersection, kailua-kona, hi, united states": null,
+ "us|keauhou shopping center, kailua-kona, hi": null,
+ "us|keauhou shopping center parking lot, kailua-kona, hi, united states": null,
+ "us|hilo, hi, united states": {
+  "lat": 19.70737,
+  "lng": -155.08158,
+  "type": "census",
+  "name": "Hilo, Hawaiʻi County, Hawaii, 96720, United States"
+ },
+ "us|1133 manono st #4, hilo, hi 96720": null,
+ "us|mid-pacific wheels, hilo, hi, united states": {
+  "lat": 19.70671,
+  "lng": -155.06987,
+  "type": "bicycle",
+  "name": "Mid Pacific Wheels, 1133, Manono Street, Waiākea, Hilo, Hawaiʻi County, Hawaii, 96720, United States"
+ },
+ "us|pu'u huluhulu, mauna loa observatory rd, hawaii": null,
+ "us|pu'u huluhulu parking lot, mauna loa access road, hilo, hi, united states": null,
+ "us|kulani forest mountain bike park, stainback hwy, hawaii": null,
+ "us|kulani forest mountain bike park, hilo, hi, united states": null,
+ "us|waikoloa, hi, united states": {
+  "lat": 19.94693,
+  "lng": -155.7874,
+  "type": "village",
+  "name": "Waikoloa, Hawaiʻi County, Hawaii, United States"
+ },
+ "us|queens' marketplace, waikoloa, hi": null,
+ "us|parking lot behind bike works beach & sports, queens' marketplace, waikoloa, hi, united states": null,
+ "us|925 w lake st, chicago, il": {
+  "lat": 41.88546,
+  "lng": -87.65075,
+  "type": "bicycle",
+  "name": "Specialized, 925, West Lake Street, Fulton Market District, West Loop, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60607, United States"
+ },
+ "us|geneva, il, united states": {
+  "lat": 41.88753,
+  "lng": -88.30535,
+  "type": "administrative",
+  "name": "Geneva, Geneva Township, Kane County, Illinois, 60134, United States"
+ },
+ "us|3507 kaneville rd, geneva, il 60134": {
+  "lat": 41.87163,
+  "lng": -88.36208,
+  "type": "sports_centre",
+  "name": "Stephen D. Persinger Recreation Center, 3507, Kaneville Road, Geneva, Geneva Township, Kane County, Illinois, 60134, United States"
+ },
+ "us|lake forest, il, united states": {
+  "lat": 42.25865,
+  "lng": -87.84071,
+  "type": "administrative",
+  "name": "Lake Forest, Lake County, Illinois, 60045, United States"
+ },
+ "us|northcroft park, lake forest, il 60045": null,
+ "us|northcroft park, lake forest, il, united states": {
+  "lat": 42.21577,
+  "lng": -87.84733,
+  "type": "park",
+  "name": "Northcroft Park, Lake Forest, Lake County, Illinois, United States"
+ },
+ "us|villa park, il, united states": {
+  "lat": 41.88931,
+  "lng": -87.97784,
+  "type": "administrative",
+  "name": "Villa Park, DuPage County, Illinois, 60181, United States"
+ },
+ "us|posted to members on the meetup event page, villa park, il, united states": null,
+ "us|second street and 11th avenue south, minneapolis, mn 55415": null,
+ "us|gold medal park, minneapolis, mn, united states": {
+  "lat": 44.97743,
+  "lng": -93.25322,
+  "type": "park",
+  "name": "Gold Medal Park, Mill District, Central, Minneapolis, Hennepin County, Minnesota, United States"
+ },
+ "us|akron, oh, united states": {
+  "lat": 41.08306,
+  "lng": -81.51848,
+  "type": "administrative",
+  "name": "Akron, Summit County, Ohio, United States"
+ },
+ "us|varies by week; posted on the club calendar, akron, oh, united states": null,
+ "us|lexington, ky, united states": {
+  "lat": 38.04641,
+  "lng": -84.49704,
+  "type": "administrative",
+  "name": "Lexington, Fayette County, Kentucky, United States"
+ },
+ "us|3544 shamrock ln, lexington, ky 40511": {
+  "lat": 38.10609,
+  "lng": -84.5532,
+  "type": "yes",
+  "name": "3544, Shamrock Lane, Lexington, Fayette County, Kentucky, 40511, United States"
+ },
+ "us|4089 iron works pike, lexington, ky 40511": {
+  "lat": 38.14113,
+  "lng": -84.5133,
+  "type": "house",
+  "name": "4089, Iron Works Pike, Spindletop Estates, Lexington, Fayette County, Kentucky, 40511, United States"
+ },
+ "us|midway, ky, united states": {
+  "lat": 38.15091,
+  "lng": -84.68383,
+  "type": "administrative",
+  "name": "Midway, Woodford County, Kentucky, United States"
+ },
+ "us|123 bruen street, midway, ky 40347": {
+  "lat": 38.1493,
+  "lng": -84.68368,
+  "type": "house",
+  "name": "123, East Bruen Street, Midway, Woodford County, Kentucky, 40347, United States"
+ },
+ "us|1111 francis st, longmont, co 80501": {
+  "lat": 40.17813,
+  "lng": -105.11706,
+  "type": "yes",
+  "name": "1111, Francis Street, Longmont, Boulder County, Colorado, 80501, United States"
+ },
+ "us|highlands ranch, co, united states": {
+  "lat": 39.53856,
+  "lng": -104.97259,
+  "type": "census",
+  "name": "Highlands Ranch, Douglas County, Colorado, United States"
+ },
+ "us|2030 e county line rd, highlands ranch, co": {
+  "lat": 39.56495,
+  "lng": -104.96169,
+  "type": "commercial",
+  "name": "Mike's Bikes of Highlands Ranch, 2030, East County Line Road, Highlands Ranch, Douglas County, Colorado, 80126, United States"
+ },
+ "us|5198 south platte reservoir access rd, littleton, co": {
+  "lat": 39.56796,
+  "lng": -105.05095,
+  "type": "service",
+  "name": "South Platte Reservoir Access Road, Littleton, Arapahoe County, Colorado, 80128, United States"
+ },
+ "us|varies by week. oct 5: lair o' the bear park, upper lot, 22550 co-74, idledale, golden, co, united states": null,
+ "us|2 el paso blvd, colorado springs, co": {
+  "lat": 38.86019,
+  "lng": -104.8852,
+  "type": "resort",
+  "name": "Buffalo Lodge Bicycle Resort, 2, El Paso Boulevard, Colorado Springs, El Paso County, Colorado, 80904, United States"
+ },
+ "us|shown to members on the meetup event, albuquerque, nm, united states": null,
+ "us|unm duck pond, unm campus, albuquerque, nm, united states": null,
+ "us|fayetteville, ar, united states": {
+  "lat": 36.06258,
+  "lng": -94.15743,
+  "type": "administrative",
+  "name": "Fayetteville, Washington County, Arkansas, United States"
+ },
+ "us|205 w dickson st, fayetteville, ar 72701": {
+  "lat": 36.06613,
+  "lng": -94.16204,
+  "type": "retail",
+  "name": "205, West Dickson Street, Fayetteville, Washington County, Arkansas, 72701, United States"
+ },
+ "us|salt lake city, ut, united states": {
+  "lat": 40.75962,
+  "lng": -111.8868,
+  "type": "administrative",
+  "name": "Salt Lake City, Salt Lake County, Utah, United States"
+ },
+ "us|310 n wright brothers dr, salt lake city, ut 84116": {
+  "lat": 40.78344,
+  "lng": -112.00576,
+  "type": "unclassified",
+  "name": "Wright Brothers Drive, Jordan Meadows, Salt Lake City, Salt Lake County, Utah, 84122, United States"
+ },
+ "us|west jordan, ut, united states": {
+  "lat": 40.60613,
+  "lng": -111.93952,
+  "type": "administrative",
+  "name": "West Jordan, Salt Lake County, Utah, United States"
+ },
+ "us|1100 w 7800 s, west jordan, ut 84088": {
+  "lat": 40.60949,
+  "lng": -111.97197,
+  "type": "primary",
+  "name": "7800 South, West Jordan, Salt Lake County, Utah, 84088, United States"
+ },
+ "us|spring, tx, united states": {
+  "lat": 30.07098,
+  "lng": -95.40134,
+  "type": "census",
+  "name": "Spring, Harris County, Texas, 77373, United States"
+ },
+ "us|25415 i-45, spring, tx 77380": {
+  "lat": 30.10993,
+  "lng": -95.43609,
+  "type": "motorway",
+  "name": "I 45, Spring, Harris County, Texas, 77386, United States"
+ },
+ "us|401 s heights blvd, houston, tx": {
+  "lat": 29.76575,
+  "lng": -95.39795,
+  "type": "secondary",
+  "name": "South Heights Boulevard, Washington Avenue Coalition / Memorial Park, Washington Avenue Corridor, Houston, Harris County, Texas, 77007, United States"
+ },
+ "us|magnolia, tx, united states": {
+  "lat": 30.20956,
+  "lng": -95.75079,
+  "type": "administrative",
+  "name": "Magnolia, Montgomery County, Texas, United States"
+ },
+ "us|6511 fm 1488, magnolia, tx 77354": {
+  "lat": 30.22023,
+  "lng": -95.56452,
+  "type": "fitness_centre",
+  "name": "Gold's Gym, 6511, FM 1488, Egypt, Magnolia, Montgomery County, Texas, 77354, United States"
+ },
+ "us|18427 southwest fwy, sugar land, tx 77479": {
+  "lat": 29.5962,
+  "lng": -95.62498,
+  "type": "motorway",
+  "name": "Southwest Freeway, Sugar Land, Fort Bend County, Texas, 77479, United States"
+ },
+ "us|2422 bay area blvd, houston, tx 77058": {
+  "lat": 29.57437,
+  "lng": -95.10715,
+  "type": "bicycle",
+  "name": "Trek, 2422, Bay Area Boulevard, Houston, Harris County, Texas, 77058, United States"
+ },
+ "us|parque zaragoza, austin, tx": {
+  "lat": 30.26142,
+  "lng": -97.71133,
+  "type": "memorial",
+  "name": "Parque Zaragoza, Gonzales Street, Paul O. Simms, Austin, Travis County, Texas, 78702, United States"
+ },
+ "us|4801 edwards ranch rd, suite 125, fort worth, tx 76109": null,
+ "us|bike mart fort worth, clearfork at the trailhead, fort worth, tx, united states": null,
+ "us|roanoke, tx, united states": {
+  "lat": 33.00401,
+  "lng": -97.22585,
+  "type": "administrative",
+  "name": "Roanoke, Denton County, Texas, United States"
+ },
+ "us|knob hills bike trail, roanoke, tx 76262": null,
+ "us|knob hills bike trail, roanoke, tx, united states": null,
+ "us|plano, tx, united states": {
+  "lat": 33.01368,
+  "lng": -96.69251,
+  "type": "administrative",
+  "name": "Plano, Collin County, Texas, United States"
+ },
+ "us|4025 preston rd, plano, tx 75093": {
+  "lat": 33.05103,
+  "lng": -96.79459,
+  "type": "house",
+  "name": "4025, Preston Road, Plano, Collin County, Texas, 75093, United States"
+ },
+ "us|2607 n grand peninsula dr, grand prairie, tx 75054": {
+  "lat": 32.60642,
+  "lng": -97.0457,
+  "type": "school",
+  "name": "Anna May Daulton Elementary, 2607, North Grand Peninsula Drive, Lakeside, Grand Prairie, Tarrant County, Texas, 75054, United States"
+ },
+ "us|3300 w anderson ln, austin, tx": {
+  "lat": 30.3622,
+  "lng": -97.74237,
+  "type": "retail",
+  "name": "3300, West Anderson Lane, Allandale, Austin, Travis County, Texas, 78757, United States"
+ },
+ "us|lake mary, fl, united states": {
+  "lat": 28.75627,
+  "lng": -81.32209,
+  "type": "administrative",
+  "name": "Lake Mary, Seminole County, Florida, United States"
+ },
+ "us|3775 lake emma rd, lake mary, fl 32746": {
+  "lat": 28.75573,
+  "lng": -81.35758,
+  "type": "house",
+  "name": "3775, Lake Emma Road, Lake Mary, Seminole County, Florida, 32746, United States"
+ },
+ "us|longwood, fl, united states": {
+  "lat": 28.70122,
+  "lng": -81.34617,
+  "type": "administrative",
+  "name": "Longwood, Seminole County, Florida, 32750, United States"
+ },
+ "us|311 w warren ave, longwood, fl 32750": {
+  "lat": 28.70019,
+  "lng": -81.34951,
+  "type": "house",
+  "name": "311, West Warren Avenue, Longwood, Seminole County, Florida, 32750, United States"
+ },
+ "us|4720 international pkwy, sanford, fl 32771": {
+  "lat": 28.80526,
+  "lng": -81.34838,
+  "type": "hairdresser",
+  "name": "Gabrielle Rogers - Salon Lofts, 4720, International Parkway, Woodruff Springs, Sanford, Seminole County, Florida, 32771, United States"
+ },
+ "us|durham, nc, united states": {
+  "lat": 35.99665,
+  "lng": -78.90181,
+  "type": "administrative",
+  "name": "Durham, Durham County, North Carolina, United States"
+ },
+ "us|108 e main st suite 101, durham, nc 27701": null,
+ "us|the daily beer bar, durham, nc, united states": {
+  "lat": 35.99474,
+  "lng": -78.90041,
+  "type": "bar",
+  "name": "The Daily Beer Bar, 108, East Main Street, American Tobacco Historic District, Durham, Durham County, North Carolina, 27701, United States"
+ },
+ "us|201 corcoran st, durham, nc 27701": {
+  "lat": 35.99643,
+  "lng": -78.9016,
+  "type": "house",
+  "name": "201, North Corcoran Street, American Tobacco Historic District, Durham, Durham County, North Carolina, 27701, United States"
+ },
+ "us|206 broadway st suite 104, durham, nc 27701": null,
+ "us|durty bull brewing company, durham, nc, united states": null,
+ "us|starbucks on harrison avenue, new orleans, la, united states": {
+  "lat": 30.00415,
+  "lng": -90.10549,
+  "type": "cafe",
+  "name": "Starbucks, 800, Harrison Avenue, West End, Lakeview, New Orleans, Orleans Parish, Louisiana, 70124, United States"
+ },
+ "us|gretna, la, united states": {
+  "lat": 29.91465,
+  "lng": -90.05396,
+  "type": "administrative",
+  "name": "Gretna, Jefferson Parish, Louisiana, 70053, United States"
+ },
+ "us|the fountain next to rivershack, gretna, la, united states": null,
+ "us|city park, new orleans, la, united states": {
+  "lat": 30.00061,
+  "lng": -90.09329,
+  "type": "park",
+  "name": "City Park, Lakeview, New Orleans, Orleans Parish, Louisiana, United States"
+ },
+ "us|246 wilson dr # k, boone, nc 28607": null,
+ "us|basil's restaurant, boone, nc, united states": {
+  "lat": 36.20152,
+  "lng": -81.67075,
+  "type": "restaurant",
+  "name": "Basil's, Wilson Drive, Boone, Watauga County, North Carolina, 28607, United States"
+ },
+ "us|baton rouge, la, united states": {
+  "lat": 30.44942,
+  "lng": -91.18697,
+  "type": "administrative",
+  "name": "Baton Rouge, East Baton Rouge Parish, Louisiana, United States"
+ },
+ "us|5542 jones creek rd, baton rouge, la 70817": {
+  "lat": 30.41448,
+  "lng": -91.01485,
+  "type": "secondary",
+  "name": "Jones Creek Road, Jones Creek Village, Shenandoah, Saint George, East Baton Rouge Parish, Louisiana, 70817, United States"
+ },
+ "us|broadmoor united methodist church parking lot, baton rouge, la, united states": null,
+ "us|delray beach, fl, united states": {
+  "lat": 26.46146,
+  "lng": -80.07282,
+  "type": "administrative",
+  "name": "Delray Beach, Palm Beach County, Florida, United States"
+ },
+ "us|a1a & atlantic ave, delray beach, fl": {
+  "lat": 26.46152,
+  "lng": -80.0906,
+  "type": "primary",
+  "name": "West Atlantic Avenue, Delray Beach, Palm Beach County, Florida, 33444, United States"
+ },
+ "us|boca raton, fl, united states": {
+  "lat": 26.35869,
+  "lng": -80.0831,
+  "type": "administrative",
+  "name": "Boca Raton, Palm Beach County, Florida, United States"
+ },
+ "us|a1a & spanish river, boca raton, fl": {
+  "lat": 26.38611,
+  "lng": -80.07682,
+  "type": "secondary",
+  "name": "Northeast Spanish River Boulevard, Lake Rogers Isle, Boca Raton, Palm Beach County, Florida, 33487, United States"
+ },
+ "us|a1a & atlantic, delray beach, fl 33483": {
+  "lat": 26.46165,
+  "lng": -80.07075,
+  "type": "primary",
+  "name": "East Atlantic Avenue, Delray Beach, Palm Beach County, Florida, 33483, United States"
+ },
+ "us|pittsburgh, pa, united states": {
+  "lat": 40.4407,
+  "lng": -80.00257,
+  "type": "administrative",
+  "name": "Pittsburgh, Allegheny County, Pennsylvania, United States"
+ },
+ "us|1130 s. braddock ave., pittsburgh, pa 15218": {
+  "lat": 40.43188,
+  "lng": -79.8938,
+  "type": "outdoor",
+  "name": "3 Rivers Outdoor Co., 1130, South Braddock Avenue, Regent Square, Pittsburgh, Allegheny County, Pennsylvania, 15218, United States"
+ },
+ "us|2515 penn ave, pittsburgh, pa 15222": {
+  "lat": 40.45419,
+  "lng": -79.97964,
+  "type": "house",
+  "name": "2515, Penn Avenue, Strip District, Pittsburgh, Allegheny County, Pennsylvania, 15222, United States"
+ },
+ "us|4750 friendship ave, pittsburgh, pa 15224": {
+  "lat": 40.46273,
+  "lng": -79.94713,
+  "type": "house",
+  "name": "4750, Friendship Avenue, Bloomfield, Pittsburgh, Allegheny County, Pennsylvania, 15224, United States"
+ },
+ "us|falmouth, ma, united states": {
+  "lat": 41.5515,
+  "lng": -70.61475,
+  "type": "administrative",
+  "name": "Falmouth, Barnstable County, Massachusetts, United States"
+ },
+ "us|416 gifford st, falmouth, ma 02540": {
+  "lat": 41.56694,
+  "lng": -70.61035,
+  "type": "yes",
+  "name": "416, Gifford Street, Teaticket, Falmouth, Barnstable County, Massachusetts, 02540, United States"
+ },
+ "us|leominster, ma, united states": {
+  "lat": 42.52674,
+  "lng": -71.76149,
+  "type": "administrative",
+  "name": "Leominster, Worcester County, Massachusetts, 01453, United States"
+ },
+ "us|1022 elm st, leominster, ma": {
+  "lat": 42.51484,
+  "lng": -71.81261,
+  "type": "house",
+  "name": "1022, Elm Street, Leominster, Worcester County, Massachusetts, 01453, United States"
+ },
+ "us|changes weekly (portland, windham or falmouth), portland, me, united states": null,
+ "us|trexlertown, pa, united states": {
+  "lat": 40.54815,
+  "lng": -75.60574,
+  "type": "village",
+  "name": "Trexlertown, Upper Macungie Township, Lehigh County, Pennsylvania, 18087, United States"
+ },
+ "us|posted on each meetup event, trexlertown, pa, united states": null,
+ "us|annapolis, md, united states": {
+  "lat": 38.97864,
+  "lng": -76.49279,
+  "type": "administrative",
+  "name": "Annapolis, Anne Arundel County, Maryland, United States"
+ },
+ "us|2607 housley rd, annapolis, md 21401": null,
+ "us|annapolis waterworks trail, housley rd trailhead (near the petsmart), annapolis, md, united states": null,
+ "us|salem, va, united states": {
+  "lat": 37.2932,
+  "lng": -80.05568,
+  "type": "administrative",
+  "name": "Salem, Virginia, 24153, United States"
+ },
+ "us|salem, va": {
+  "lat": 37.2932,
+  "lng": -80.05568,
+  "type": "administrative",
+  "name": "Salem, Virginia, 24153, United States"
+ },
+ "us|1312 winborne st sw, roanoke, va 24015": {
+  "lat": 37.26524,
+  "lng": -79.97558,
+  "type": "bicycle",
+  "name": "Cardinal Bicycle, 1312, Winborne Street Southwest, Grandin Village, West End, Roanoke, Virginia, 24015, United States"
+ },
+ "us|bennett springs parking lot, carvins cove, roanoke, va, united states": null,
+ "us|burlington, vt, united states": {
+  "lat": 44.47616,
+  "lng": -73.21291,
+  "type": "administrative",
+  "name": "Burlington, Chittenden County, Vermont, United States"
+ },
+ "us|changes with each ride; see the calendar entry, burlington, vt, united states": null,
+ "us|philadelphia, pa, united states": {
+  "lat": 39.95272,
+  "lng": -75.16353,
+  "type": "administrative",
+  "name": "Philadelphia, Philadelphia County, Pennsylvania, United States"
+ },
+ "us|lloyd hall, boathouse row, philadelphia, pa, united states": null,
+ "us|211 lincoln dr, philadelphia, pa 19144": {
+  "lat": 40.02746,
+  "lng": -75.19175,
+  "type": "house",
+  "name": "211, Lincoln Drive, Northwest Philadelphia, Philadelphia, Philadelphia County, Pennsylvania, 19144, United States"
+ },
+ "us|3210 grace st nw, washington, dc": {
+  "lat": 38.90383,
+  "lng": -77.06351,
+  "type": "yes",
+  "name": "3210, Grace Street Northwest, Georgetown, Ward 2, Washington, District of Columbia, 20007, United States"
+ },
+ "us|millbury, ma, united states": {
+  "lat": 42.19138,
+  "lng": -71.76039,
+  "type": "administrative",
+  "name": "Millbury, Worcester County, Massachusetts, 01527, United States"
+ },
+ "us|4 south main st, millbury, ma": {
+  "lat": 42.19096,
+  "lng": -71.76057,
+  "type": "house",
+  "name": "4, South Main Street, Millbury, Worcester County, Massachusetts, 01527, United States"
+ },
+ "us|edinboro, pa, united states": {
+  "lat": 41.87422,
+  "lng": -80.13172,
+  "type": "administrative",
+  "name": "Edinboro, Erie County, Pennsylvania, 16444, United States"
+ },
+ "us|500 west plum street, suite a, edinboro, pa 16412": null,
+ "us|814 outdoor sports parking lot, edinboro, pa, united states": null,
+ "gb|191 drayton park, london n5 1ph": {
+  "lat": 51.55811,
+  "lng": -0.10677,
+  "type": "yes",
+  "name": "Islington Ecology Centre, 191, Drayton Park, Finsbury Park, London Borough of Islington, Greater London, England, N5 1PH, United Kingdom"
+ },
+ "gb|ealing town hall, ealing broadway, london w5 2by": {
+  "lat": 51.5128,
+  "lng": -0.30716,
+  "type": "bus_stop",
+  "name": "Ealing Town Hall, New Broadway, Park Royal, London Borough of Ealing, Greater London, England, W5 9TH, United Kingdom"
+ },
+ "gb|a different railway station each ride; see the meetup event, london, england, united kingdom": null,
+ "ca|st. luke's park, 166 frank st, ottawa, on k2p 0y3": {
+  "lat": 45.41514,
+  "lng": -75.68698,
+  "type": "swimming_pool",
+  "name": "Wading Pool - St. Luke's, 166, Frank Street, Golden Triangle, Centretown, Somerset, Ottawa, Eastern Ontario, Ontario, K2P 1M7, Canada"
+ },
+ "ca|bedford, nova scotia": {
+  "lat": 44.73039,
+  "lng": -63.65824,
+  "type": "administrative",
+  "name": "Bedford, Halifax Regional Municipality, Halifax County, Nova Scotia, Canada"
+ },
+ "ca|5k cafe, chain lake drive, halifax, nova scotia": {
+  "lat": 44.63878,
+  "lng": -63.66148,
+  "type": "cafe",
+  "name": "THE 5K CAFE, 124, Chain Lake Drive, Beechville, Halifax Regional Municipality, Halifax County, Nova Scotia, B3S 1A2, Canada"
+ },
+ "ca|montreal, quebec, canada": {
+  "lat": 45.50318,
+  "lng": -73.56981,
+  "type": "administrative",
+  "name": "Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, Canada"
+ },
+ "ca|parc du mont-royal, montréal, quebec": {
+  "lat": 45.5054,
+  "lng": -73.58864,
+  "type": "nature_reserve",
+  "name": "Mount Royal Park, Ville-Marie, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H3H 1X2, Canada"
+ },
+ "au|taylor square, darlinghurst nsw": {
+  "lat": -33.88027,
+  "lng": 151.21698,
+  "type": "pedestrian",
+  "name": "Taylor Square, Darlinghurst, Sydney, New South Wales, 2010, Australia"
+ },
+ "au|melbourne, victoria, australia": {
+  "lat": -37.81425,
+  "lng": 144.96317,
+  "type": "city",
+  "name": "Melbourne, Victoria, Australia"
+ },
+ "au|luna park, melbourne vic": {
+  "lat": -37.86802,
+  "lng": 144.97691,
+  "type": "theme_park",
+  "name": "Luna Park, 18, Lower Esplanade, St Kilda, Melbourne, Victoria, 3182, Australia"
+ },
+ "au|halcyon days, 381 montague st, albert park vic": {
+  "lat": -37.84341,
+  "lng": 144.95719,
+  "type": "cafe",
+  "name": "Halcyon Days, 381, Montague Street, Albert Park, Melbourne, Victoria, 3206, Australia"
+ },
+ "au|6 chandler highway, kew vic": {
+  "lat": -37.78909,
+  "lng": 145.02695,
+  "type": "animal_training",
+  "name": "Guide Dogs Victoria, 2-6, Chandler Highway, Kew, Melbourne, Victoria, 3101, Australia"
+ },
+ "de|alte schönhauser straße 5, 10119 berlin": {
+  "lat": 52.5278,
+  "lng": 13.40847,
+  "type": "house",
+  "name": "5, Alte Schönhauser Straße, Scheunenviertel, Rosenthaler Vorstadt, Mitte, Berlin, 10119, Germany"
+ },
+ "es|palma, balearic islands, spain": {
+  "lat": 39.56958,
+  "lng": 2.65007,
+  "type": "administrative",
+  "name": "Palma de Mallorca, Palma, Balearic Islands, Spain"
+ },
+ "es|plaça del rosari 1, 07001 palma, illes balears": {
+  "lat": 39.56944,
+  "lng": 2.64837,
+  "type": "sports",
+  "name": "Rapha, 1, plaça del Rosari, Sant Nicolau, Canamunt, Districte Centre, Palma de Mallorca, Palma, Balearic Islands, 07001, Spain"
+ },
+ "sg|macritchie reservoir, singapore": {
+  "lat": 1.34482,
+  "lng": 103.82394,
+  "type": "reservoir",
+  "name": "MacRitchie Reservoir, North Region, Singapore"
+ },
+ "de|munich, bavaria, germany": {
+  "lat": 48.13711,
+  "lng": 11.57538,
+  "type": "administrative",
+  "name": "Munich, Bavaria, Germany"
+ },
+ "de|max-joseph-platz, munich": {
+  "lat": 48.1398,
+  "lng": 11.57808,
+  "type": "pedestrian",
+  "name": "Max-Joseph-Platz, Graggenauerviertel, Old Town, Munich, Bavaria, 80539, Germany"
+ },
+ "at|vienna, vienna, austria": {
+  "lat": 48.18572,
+  "lng": 16.42216,
+  "type": "quango",
+  "name": "Statistik Austria, 13, Guglgasse, Katastralgemeinde Simmering, Simmering, Vienna, 1110, Austria"
+ },
+ "at|schwarzenbergplatz, vienna": {
+  "lat": 48.19861,
+  "lng": 16.37611,
+  "type": "pedestrian",
+  "name": "Schwarzenbergplatz, Botschaftsviertel, Landstraße, Katastralgemeinde Landstraße, Landstraße, Vienna, 1030, Austria"
+ },
+ "ch|zürich, zurich, switzerland": {
+  "lat": 47.37445,
+  "lng": 8.54104,
+  "type": "administrative",
+  "name": "Zurich, District Zurich, Zurich, Switzerland"
+ },
+ "ch|stadthausanlage, zürich": {
+  "lat": 47.36731,
+  "lng": 8.54076,
+  "type": "square",
+  "name": "Stadthausanlage, Lindenhof, Altstadt, Zurich, District Zurich, Zurich, Switzerland"
+ },
+ "es|barcelona, catalonia, spain": {
+  "lat": 41.38258,
+  "lng": 2.17707,
+  "type": "administrative",
+  "name": "Barcelona, Barcelonès, Barcelona, Catalonia, Spain"
+ },
+ "es|arc de triomf, barcelona": {
+  "lat": 41.3921,
+  "lng": 2.18094,
+  "type": "stop",
+  "name": "Arc de Triomf, Avinguda de Vilanova, Sant Pere, el Fort Pienc, l'Eixample, Barcelona, Barcelonès, Barcelona, Catalonia, 08010, Spain"
+ },
+ "mx|querétaro, querétaro, mexico": {
+  "lat": 20.5923,
+  "lng": -100.39174,
+  "type": "administrative",
+  "name": "Querétaro, Municipio de Querétaro, Querétaro, Mexico"
+ },
+ "mx|circuito cerro de las campanas, santiago de querétaro, querétaro": {
+  "lat": 20.59299,
+  "lng": -100.40817,
+  "type": "residential",
+  "name": "Circuito Cerro de las Campanas, La Piedad, Delegación Centro Histórico, Querétaro, Municipio de Querétaro, Querétaro, 76017, Mexico"
+ },
+ "mx|morelia, michoacán, mexico": {
+  "lat": 19.6546,
+  "lng": -101.26238,
+  "type": "administrative",
+  "name": "Morelia, Michoacán, Mexico"
+ },
+ "mx|avenida francisco i. madero, centro histórico, morelia, michoacán": {
+  "lat": 19.70318,
+  "lng": -101.1812,
+  "type": "public",
+  "name": "Servicio de administración tributarioa del estado de Michoacán (SATMICH), 1080, Avenida Francisco I. Madero Oriente, Morelia, Michoacán, 58000, Mexico"
+ },
+ "mx|cancún, quintana roo, mexico": {
+  "lat": 21.15275,
+  "lng": -86.84258,
+  "type": "administrative",
+  "name": "Cancún, Benito Juárez, Distrito 5, Quintana Roo, Mexico"
+ },
+ "mx|puente nichupté, cancún, quintana roo": {
+  "lat": 21.12729,
+  "lng": -86.83127,
+  "type": "primary",
+  "name": "Puente Nichupté, Supermanzana 10, Cancún, Benito Juárez, Quintana Roo, 77503, Mexico"
+ },
+ "cl|santiago, santiago metropolitan region, chile": {
+  "lat": -33.4377,
+  "lng": -70.65107,
+  "type": "city",
+  "name": "Santiago, Provincia de Santiago, Santiago Metropolitan Region, 8320000, Chile"
+ },
+ "cl|avenida andrés bello, providencia, santiago": {
+  "lat": -33.41693,
+  "lng": -70.60679,
+  "type": "office",
+  "name": "Gran Torre Costanera, 2457, Avenida Andrés Bello, Providencia, Provincia de Santiago, Santiago Metropolitan Region, 7500000, Chile"
+ },
+ "cl|viña del mar, valparaíso region, chile": {
+  "lat": -33.02445,
+  "lng": -71.55176,
+  "type": "administrative",
+  "name": "Viña del Mar, Provincia de Valparaíso, Valparaiso Region, Chile"
+ },
+ "cl|avenida san martín, viña del mar": {
+  "lat": -33.02004,
+  "lng": -71.55999,
+  "type": "primary",
+  "name": "Avenida San Martín, Cerro Castillo, Población Vergara, Recreo, Viña del Mar, Provincia de Valparaíso, Valparaiso Region, 2520214, Chile"
+ }
 }

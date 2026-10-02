@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:berlin-de-rapha-berlin-wednesday-early-bird@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=Europe/Berlin:20261007T070000
+DTEND;TZID=Europe/Berlin:20261007T090000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20270301T235959Z
+SUMMARY:Rapha Berlin Wednesday Early Bird — Berlin\, Germany
+LOCATION:Rapha Berlin clubhouse\, Alte Schönhauser Straße 5\, 10119 Ber
+ lin
+DESCRIPTION:Pace: About 30 km/h\, 62 km to the airport\, then splits into
+  groups and rides laps.\nSchedule: Every Wednesday\, 7:00 am from the Ra
+ pha Berlin clubhouse in Mitte; about two hours\, back before 9:30 am wit
+ h coffee at the clubhouse. Booking page lists Wed Oct 7\, 2026..\nConfir
+ m with the host before you go.\nhttps://cycleforchange.org/rides/berlin-
+ de-rapha-berlin-wednesday-early-bird/
+URL:https://cycleforchange.org/rides/berlin-de-rapha-berlin-wednesday-ear
+ ly-bird/
+END:VEVENT
+END:VCALENDAR

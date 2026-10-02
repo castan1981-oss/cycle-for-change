@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:santa-clarita-ca-santa-clarita-velo-saturday-morning-ride@cycleforcha
+ nge.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T070000
+DTEND;TZID=America/Los_Angeles:20261003T090000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270301T235959Z
+SUMMARY:Santa Clarita Velo Saturday Morning Ride — Santa Clarita\, CA
+LOCATION:Promenade Shopping Center parking lot\, at the head of the bike 
+ path near McDonald's\, 27107 McBean Pkwy\, Santa Clarita\, CA
+DESCRIPTION:Pace: Usually challenging; 50 to 100 miles.\nSchedule: Every 
+ Saturday. The club's site says rides leave between 7:00 and 8:00 am depe
+ nding on weather; its events page lists 8:00 am. Check Strava for the ac
+ tual time and meeting spot..\nConfirm with the host before you go.\nhttp
+ s://cycleforchange.org/rides/santa-clarita-ca-santa-clarita-velo-saturda
+ y-morning-ride/
+URL:https://cycleforchange.org/rides/santa-clarita-ca-santa-clarita-velo-
+ saturday-morning-ride/
+END:VEVENT
+END:VCALENDAR

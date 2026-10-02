@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:seattle-wa-critical-mass-seattle@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Los_Angeles:20261030T183000
+DTEND;TZID=America/Los_Angeles:20261030T203000
+RRULE:FREQ=MONTHLY;BYDAY=-1FR;UNTIL=20270301T235959Z
+SUMMARY:Critical Mass Seattle — Seattle\, WA
+LOCATION:Westlake Park\, 401 Pine St\, Seattle\, WA 98101
+DESCRIPTION:Schedule: Last Friday of every month\, meet 6:30 pm at Westla
+ ke Park; the route is picked on the night.\nConfirm with the host before
+  you go.\nhttps://cycleforchange.org/rides/seattle-wa-critical-mass-seat
+ tle/
+URL:https://cycleforchange.org/rides/seattle-wa-critical-mass-seattle/
+END:VEVENT
+END:VCALENDAR

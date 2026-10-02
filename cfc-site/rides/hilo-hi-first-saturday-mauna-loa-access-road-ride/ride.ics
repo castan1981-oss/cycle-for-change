@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hilo-hi-first-saturday-mauna-loa-access-road-ride@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=Pacific/Honolulu:20261003T074500
+DTEND;TZID=Pacific/Honolulu:20261003T094500
+RRULE:FREQ=MONTHLY;BYDAY=1SA;UNTIL=20270301T235959Z
+SUMMARY:First Saturday Mauna Loa Access Road Ride — Hilo\, HI
+LOCATION:Pu'u Huluhulu parking lot\, Mauna Loa Access Road\, Pu'u Huluhul
+ u\, Mauna Loa Observatory Rd\, Hawaii
+DESCRIPTION:Schedule: First Saturday of the month\, 7:45 am\, from the pa
+ rking lot at Pu'u Huluhulu on the Mauna Loa Access Road; rides to the ro
+ ad's end.\nConfirm with the host before you go.\nhttps://cycleforchange.
+ org/rides/hilo-hi-first-saturday-mauna-loa-access-road-ride/
+URL:https://cycleforchange.org/rides/hilo-hi-first-saturday-mauna-loa-acc
+ ess-road-ride/
+END:VEVENT
+END:VCALENDAR

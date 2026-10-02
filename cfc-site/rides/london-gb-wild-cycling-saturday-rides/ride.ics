@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:london-gb-wild-cycling-saturday-rides@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=Europe/London:20261003T100000
+DTEND;TZID=Europe/London:20261003T120000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=SA;UNTIL=20270301T235959Z
+SUMMARY:Wild Cycling Saturday Rides — London\, United Kingdom
+LOCATION:A different railway station each ride; see the Meetup event
+DESCRIPTION:Pace: About 22 to 40 miles\, off-road trails and bridleways\,
+  fun over speed.\nSchedule: Saturdays at 10:00 am\, about every two week
+ s: Oct 3\, Oct 17\, Oct 31 and Nov 14\, 2026. The start is a different r
+ ailway station each time..\nConfirm with the host before you go.\nhttps:
+ //cycleforchange.org/rides/london-gb-wild-cycling-saturday-rides/
+URL:https://cycleforchange.org/rides/london-gb-wild-cycling-saturday-ride
+ s/
+END:VEVENT
+END:VCALENDAR

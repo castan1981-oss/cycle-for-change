@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sunnyvale-ca-spectrum-ride@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Los_Angeles:20261003T090000
+DTEND;TZID=America/Los_Angeles:20261003T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270301T235959Z
+SUMMARY:Spectrum Ride — Sunnyvale\, CA
+LOCATION:Hollenbeck Ave and Homestead Rd\, Hollenbeck Ave & Homestead Rd\
+ , Sunnyvale\, CA
+DESCRIPTION:Pace: Fast pack ride with sprint points.\nSchedule: Every Sat
+ urday\, 9:00 am\, from Hollenbeck Ave and Homestead Rd in Sunnyvale; rol
+ ls past downtown Los Altos about 9:15.\nConfirm with the host before you
+  go.\nhttps://cycleforchange.org/rides/sunnyvale-ca-spectrum-ride/
+URL:https://cycleforchange.org/rides/sunnyvale-ca-spectrum-ride/
+END:VEVENT
+END:VCALENDAR

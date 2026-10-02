@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:littleton-co-hrcc-masters-tuesday-ride@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Denver:20261006T083000
+DTEND;TZID=America/Denver:20261006T113000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270301T235959Z
+SUMMARY:HRCC Masters Tuesday Ride — Littleton\, CO
+LOCATION:South Platte Reservoir parking lot\, 5198 South Platte Reservoir
+  Access Rd\, Littleton\, CO
+DESCRIPTION:Schedule: Every Tuesday\, 8:30 am from the South Platte Reser
+ voir parking lot (8:00 am in early September). The route is posted on Me
+ etup..\nConfirm with the host before you go.\nhttps://cycleforchange.org
+ /rides/littleton-co-hrcc-masters-tuesday-ride/
+URL:https://cycleforchange.org/rides/littleton-co-hrcc-masters-tuesday-ri
+ de/
+END:VEVENT
+END:VCALENDAR

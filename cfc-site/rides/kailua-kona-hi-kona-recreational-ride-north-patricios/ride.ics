@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:kailua-kona-hi-kona-recreational-ride-north-patricios@cycleforchange.
+ org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=Pacific/Honolulu:20261003T070000
+DTEND;TZID=Pacific/Honolulu:20261003T090000
+RRULE:FREQ=WEEKLY;BYDAY=TH,SA;UNTIL=20270301T235959Z
+SUMMARY:Kona Recreational Ride North from Patricio's — Kailua-Kona\, HI
+LOCATION:Hulikoa Drive\, in front of Patricio's Mexican Taqueria\, Huliko
+ a Dr\, Kailua-Kona\, HI
+DESCRIPTION:Pace: No-drop\, rolling hills\, tempo riding at 13 to 20 mph.
+ \nNo-drop.\nSchedule: Thursdays and Saturdays\, 7:00 am\, from Hulikoa D
+ rive in front of Patricio's Mexican Taqueria.\nConfirm with the host bef
+ ore you go.\nhttps://cycleforchange.org/rides/kailua-kona-hi-kona-recrea
+ tional-ride-north-patricios/
+URL:https://cycleforchange.org/rides/kailua-kona-hi-kona-recreational-rid
+ e-north-patricios/
+END:VEVENT
+END:VCALENDAR

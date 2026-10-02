@@ -229,6 +229,24 @@ the leads nobody could confirm (Instagram / Facebook / login-only) for Robert to
 - The homepage hard-codes the ride count in four places (menu, door, lede, directory tile) plus
   "N more countries"; update them after a merge (`grep -n "1,275\|more countries" cfc-site/index.html`).
 
+## The second pass (Oct 2, 2026)
+The deep sweep's leads (~636 unproven rides, mostly Instagram / Facebook only) got a second search pass:
+eight scouts by region (`research/rides/deep/second-pass/g1…g8`, brief `BRIEF-SECOND-PASS.md`), each with a
+`-leads.json`, a new-rides `.json`, an `-outcomes.json` (proven | gone | still-unproven + a public contact) and a
+report. 132 new rides merged (1,275 → 1,407; 18 countries outside the US), 3 re-checks through
+`tools/rides-apply.js` (`research/rides/upkeep/2026-10-02-second-pass.json`).
+- The WebSearch cap is shared by every agent in a session and ran out again: ~480 leads are still unproven.
+- Scouts that run in parallel need their own scratch subfolders (they overwrote each other's scripts).
+- Held back by the 3-rides-per-host cap: Motherland, PBA, Bicycle World RGV, CC Cycling Club, Seminole, Fat Cake,
+  Valley Spokesmen, Landry's Needham, Fox Valley Bike Rack, Bike Mart (~18 recurring). Date-by-date rides (UK Breeze
+  groups) need a type the schema doesn't have yet.
+- Sources worth a third pass: Bike LB's public Google Calendars, `bikethetriangle.com/events/?ical=1`, Bike Mart's
+  Elfsight widget JSON, more NEMBA chapter pages, Boulder BMA Monday/Thursday rides, West Texas Cycling Association
+  (Lubbock) Tue/Thu drop ride.
+- Hubs that vanished and got 301s: Frisco → Plano (Plano came back, so its old Plano → Frisco redirect is gone),
+  Denton → Flower Mound, Paxton and Uxbridge → Millbury.
+- The leads live in the "Group Ride Check" claude.ai artifact (see the project doc `claude/rides-worldwide-sept-2026.md`).
+
 ## Town guides — the destination layer (Sept 30, 2026)
 Robert's brief: the site becomes the guide for a rider who lives somewhere else and is coming to
 a town with a bike — "you live in Boise, you're going to LA, you're bringing the bike": where to

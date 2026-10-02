@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:albuquerque-nm-cycling-peeps-saturday-spin@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Denver:20261003T071500
+DTEND;TZID=America/Denver:20261003T101500
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270301T235959Z
+SUMMARY:Cycling Peeps Saturday Spin — Albuquerque\, NM
+LOCATION:Shown to members on the Meetup event
+DESCRIPTION:Pace: Moderate-speed road ride.\nSchedule: Saturday mornings.
+  The start time is on each Meetup event: 7:15 am on Oct 3 (a co-ed ride)
+ \, 9:30 am on Oct 10\, 8:30 am on Sept 26. The start place is shown to m
+ embers..\nConfirm with the host before you go.\nhttps://cycleforchange.o
+ rg/rides/albuquerque-nm-cycling-peeps-saturday-spin/
+URL:https://cycleforchange.org/rides/albuquerque-nm-cycling-peeps-saturda
+ y-spin/
+END:VEVENT
+END:VCALENDAR

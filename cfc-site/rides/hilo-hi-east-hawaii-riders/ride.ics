@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hilo-hi-east-hawaii-riders@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=Pacific/Honolulu:20261003T070000
+DTEND;TZID=Pacific/Honolulu:20261003T090000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH,SA;UNTIL=20270301T235959Z
+SUMMARY:East Hawaii Riders — Hilo\, HI
+LOCATION:Mid-Pacific Wheels\, 1133 Manono St #4\, Hilo\, HI 96720
+DESCRIPTION:Schedule: Tuesdays\, Thursdays and Saturdays\, 7:00 am in sum
+ mer and 7:30 am in winter\, from Mid-Pacific Wheels.\nConfirm with the h
+ ost before you go.\nhttps://cycleforchange.org/rides/hilo-hi-east-hawaii
+ -riders/
+URL:https://cycleforchange.org/rides/hilo-hi-east-hawaii-riders/
+END:VEVENT
+END:VCALENDAR

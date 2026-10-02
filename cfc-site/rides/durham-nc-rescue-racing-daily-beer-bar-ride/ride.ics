@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:durham-nc-rescue-racing-daily-beer-bar-ride@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/New_York:20261007T180000
+DTEND;TZID=America/New_York:20261007T200000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20270301T235959Z
+SUMMARY:Rescue Racing / Daily Beer Bar Ride — Durham\, NC
+LOCATION:The Daily Beer Bar\, 108 E Main St Suite 101\, Durham\, NC 27701
+DESCRIPTION:Pace: Two groups: 18 mph+ and 15-16 mph.\nSchedule: Every Wed
+ nesday\, 6:00 pm from The Daily Beer Bar. Two pace groups\, about 15-16 
+ mph and 18+ mph; the calendar lists routes of about 20 and 26 miles..\nC
+ onfirm with the host before you go.\nhttps://cycleforchange.org/rides/du
+ rham-nc-rescue-racing-daily-beer-bar-ride/
+URL:https://cycleforchange.org/rides/durham-nc-rescue-racing-daily-beer-b
+ ar-ride/
+END:VEVENT
+END:VCALENDAR

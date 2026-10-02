@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:el-cerrito-ca-bikes-burgers-brews-tuesday-night-ride@cycleforchange.o
+ rg
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Los_Angeles:20261006T180000
+DTEND;TZID=America/Los_Angeles:20261006T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270301T235959Z
+SUMMARY:Bikes Burgers Brews — El Cerrito\, CA
+LOCATION:El Cerrito del Norte BART (parking structure)\, 6400 Cutting Blv
+ d\, El Cerrito\, CA 94530
+DESCRIPTION:Pace: Chill\, no-drop\, 15 to 25 miles\, mostly flat with lig
+ ht climbing.\nNo-drop.\nSchedule: Every Tuesday night\, meet 5:45 pm\, r
+ oll 6:00 pm\, from the El Cerrito del Norte BART parking structure; ends
+  around 9:45 pm.\nConfirm with the host before you go.\nhttps://cyclefor
+ change.org/rides/el-cerrito-ca-bikes-burgers-brews-tuesday-night-ride/
+URL:https://cycleforchange.org/rides/el-cerrito-ca-bikes-burgers-brews-tu
+ esday-night-ride/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:santiago-cl-ciclorecreovia-santiago@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Santiago:20261004T090000
+DTEND;TZID=America/Santiago:20261004T140000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270301T235959Z
+SUMMARY:CicloRecreoVía Santiago — Santiago\, Chile
+LOCATION:Several routes; the Centro-Oriente route runs along Av. Andrés 
+ Bello and Av. Pocuro\, Providencia\, Avenida Andrés Bello\, Providencia
+ \, Santiago
+DESCRIPTION:Pace: Open street for walkers\, runners\, skaters and cyclist
+ s; no group pace.\nSchedule: Every Sunday of the year\, 9:00 am to 2:00 
+ pm\, on closed streets in Providencia\, Las Condes\, Santiago Centro\, V
+ itacura and Ñuñoa..\nConfirm with the host before you go.\nhttps://cyc
+ leforchange.org/rides/santiago-cl-ciclorecreovia-santiago/
+URL:https://cycleforchange.org/rides/santiago-cl-ciclorecreovia-santiago/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:santa-clarita-ca-santa-clarita-velo-sunday-funday-no-drop@cycleforcha
+ nge.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Los_Angeles:20261004T070000
+DTEND;TZID=America/Los_Angeles:20261004T090000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270301T235959Z
+SUMMARY:Santa Clarita Velo Sunday Funday (no-drop) — Santa Clarita\, CA
+LOCATION:Promenade Shopping Center parking lot\, at the head of the bike 
+ path near McDonald's\, 27107 McBean Pkwy\, Santa Clarita\, CA
+DESCRIPTION:Pace: Semi-casual with some efforts; 30 to 50 miles.\nNo-drop
+ .\nSchedule: Every Sunday. The club's site says rides leave between 7:00
+  and 8:00 am depending on weather; its events page lists 8:00 am. Check 
+ Strava for the actual time and meeting spot..\nConfirm with the host bef
+ ore you go.\nhttps://cycleforchange.org/rides/santa-clarita-ca-santa-cla
+ rita-velo-sunday-funday-no-drop/
+URL:https://cycleforchange.org/rides/santa-clarita-ca-santa-clarita-velo-
+ sunday-funday-no-drop/
+END:VEVENT
+END:VCALENDAR

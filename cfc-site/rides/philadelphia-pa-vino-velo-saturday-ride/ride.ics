@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:philadelphia-pa-vino-velo-saturday-ride@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/New_York:20261003T090500
+DTEND;TZID=America/New_York:20261003T110500
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270301T235959Z
+SUMMARY:Vino Velo — Philadelphia\, PA
+LOCATION:Lloyd Hall\, Boathouse Row
+DESCRIPTION:Pace: Fast. QCW's list says 'they will not wait'\, and a more
+  casual group often rolls out just behind the A group.\nSchedule: Saturd
+ ays\, 9:00 am from Lloyd Hall on Boathouse Row to Ambler and back\, 35 t
+ o 40 miles. The organizer's Strava club says the main group leaves at 9:
+ 05 and the race-pace group at 9:00..\nConfirm with the host before you g
+ o.\nhttps://cycleforchange.org/rides/philadelphia-pa-vino-velo-saturday-
+ ride/
+URL:https://cycleforchange.org/rides/philadelphia-pa-vino-velo-saturday-r
+ ide/
+END:VEVENT
+END:VCALENDAR

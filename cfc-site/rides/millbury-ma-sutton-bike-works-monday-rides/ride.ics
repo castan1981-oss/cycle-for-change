@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:millbury-ma-sutton-bike-works-monday-rides@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/New_York:20261005T180000
+DTEND;TZID=America/New_York:20261005T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20270301T235959Z
+SUMMARY:Sutton Bike Works Monday Rides — Millbury\, MA
+LOCATION:Sutton Bike Works\, 4 South Main St\, Millbury\, MA
+DESCRIPTION:Schedule: Mondays\, 6:00 pm\, about 22 miles\, from the shop.
+  Seven Hills Wheelmen's list gives it as a 2026 ride; the shop's Strava 
+ club has the details and RSVP..\nConfirm with the host before you go.\nh
+ ttps://cycleforchange.org/rides/millbury-ma-sutton-bike-works-monday-rid
+ es/
+URL:https://cycleforchange.org/rides/millbury-ma-sutton-bike-works-monday
+ -rides/
+END:VEVENT
+END:VCALENDAR

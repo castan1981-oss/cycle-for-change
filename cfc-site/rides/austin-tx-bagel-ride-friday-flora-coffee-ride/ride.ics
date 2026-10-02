@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:austin-tx-bagel-ride-friday-flora-coffee-ride@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Chicago:20261009T071500
+DTEND;TZID=America/Chicago:20261009T091500
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270301T235959Z
+SUMMARY:Friday Flora Coffee Ride — Austin\, TX
+LOCATION:Flora Coffee\, 3300 W Anderson Ln\, Austin\, TX
+DESCRIPTION:Schedule: Fridays\, 7:15 am from Flora Coffee. Two distances\
+ , 23 and 50 miles..\nConfirm with the host before you go.\nhttps://cycle
+ forchange.org/rides/austin-tx-bagel-ride-friday-flora-coffee-ride/
+URL:https://cycleforchange.org/rides/austin-tx-bagel-ride-friday-flora-co
+ ffee-ride/
+END:VEVENT
+END:VCALENDAR

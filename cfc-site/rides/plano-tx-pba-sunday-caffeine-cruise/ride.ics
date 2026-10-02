@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:plano-tx-pba-sunday-caffeine-cruise@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Chicago:20261004T090000
+DTEND;TZID=America/Chicago:20261004T110000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270301T235959Z
+SUMMARY:PBA Sunday Caffeine Cruise — Plano\, TX
+LOCATION:Starbucks parking lot\, Lakeside Market (NE of the store)\, 4025
+  Preston Rd\, Plano\, TX 75093
+DESCRIPTION:Pace: 10-12 mph rolling average\, or slower to keep the group
+  together.\nNo-drop.\nSchedule: Sundays\, 9:00 am from the Starbucks at 
+ Lakeside Market. About 17 miles\, with a 10.5-mile cutoff..\nConfirm wit
+ h the host before you go.\nhttps://cycleforchange.org/rides/plano-tx-pba
+ -sunday-caffeine-cruise/
+URL:https://cycleforchange.org/rides/plano-tx-pba-sunday-caffeine-cruise/
+END:VEVENT
+END:VCALENDAR

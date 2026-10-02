@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:palo-alto-ca-the-morning-ride-tmr@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Los_Angeles:20261006T063000
+DTEND;TZID=America/Los_Angeles:20261006T083000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20270301T235959Z
+SUMMARY:The Morning Ride (TMR) — Palo Alto\, CA
+LOCATION:Sand Hill Rd and Pasteur Dr\, Sand Hill Rd & Pasteur Dr\, Palo A
+ lto\, CA
+DESCRIPTION:Pace: Conversation pace up Sand Hill\, then hard efforts with
+  regroups; sprint points on Tuesdays and Thursdays.\nSchedule: Tuesdays 
+ and Thursdays: 6:10 am from the downtown Los Altos Starbucks\, then 6:30
+  am from Sand Hill Rd and Pasteur Dr in Palo Alto.\nConfirm with the hos
+ t before you go.\nhttps://cycleforchange.org/rides/palo-alto-ca-the-morn
+ ing-ride-tmr/
+URL:https://cycleforchange.org/rides/palo-alto-ca-the-morning-ride-tmr/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:medford-or-ashland-cycle-sport-thursday-lunch-laps@cycleforchange.org
+DTSTAMP:20261002T000000Z
+DTSTART;TZID=America/Los_Angeles:20261008T121500
+DTEND;TZID=America/Los_Angeles:20261008T141500
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20270301T235959Z
+SUMMARY:Thursday Lunch Laps — Medford\, OR
+LOCATION:Medford Cycle Sport\, 940 N Phoenix Rd #100\, Medford\, OR 97504
+DESCRIPTION:Pace: Laps near the shop\, about an hour.\nSchedule: Every Th
+ ursday\, wheels down at 12:15 pm\, from the Medford shop.\nConfirm with 
+ the host before you go.\nhttps://cycleforchange.org/rides/medford-or-ash
+ land-cycle-sport-thursday-lunch-laps/
+URL:https://cycleforchange.org/rides/medford-or-ashland-cycle-sport-thurs
+ day-lunch-laps/
+END:VEVENT
+END:VCALENDAR

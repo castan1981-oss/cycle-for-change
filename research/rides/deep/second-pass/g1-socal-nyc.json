@@ -1,0 +1,1041 @@
+[
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "School year",
+  "season_months": {
+   "start": 9,
+   "end": 6
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "School-run pace; riders hop on and off along the route",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "A youth-centered school-run ride. Families and kids hop on and off along Bergen Street. The Get Women Cycling calendar asks riders to sign up first.",
+  "inclusive_focus": [
+   "family",
+   "youth"
+  ],
+  "verified_on": "2026-10-02",
+  "slug": "brooklyn-ny-bergen-bike-bus-wednesday",
+  "name": "Bergen Bike Bus",
+  "city": "Brooklyn",
+  "region": "New York",
+  "state": "NY",
+  "country": "US",
+  "tz": "America/New_York",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Wednesday while school is in session, 7:15 am from Bergen St at Rockaway Ave to Court St by 8:00 am. Fall 2026 dates run Sept 16 to Dec 16. No bike bus on Nov 11 or Dec 23.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "7:15 am",
+  "start_hhmm": "07:15",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Thomas Boyland St, one block west of Rockaway Ave (start of the route on Bergen St)",
+   "address": "Bergen Street and Rockaway Avenue, Brooklyn, NY"
+  },
+  "host": {
+   "name": "Bergen Bike Bus (NYC Bike Bus)",
+   "type": "collective"
+  },
+  "description": "A weekly bike bus for families, kids and youth along Bergen Street in Brooklyn. It runs every Wednesday in the school year, rain or shine. Riders can join at the start or hop on partway.",
+  "links": {
+   "website": "https://www.bikebus.nyc/bergen-bike-bus",
+   "instagram": "https://www.instagram.com/bergenbikebus/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.getwomencycling.com/calendar-of-events"
+   ]
+  },
+  "sources": [
+   "https://www.bikebus.nyc/bergen-bike-bus",
+   "https://www.getwomencycling.com/calendar-of-events"
+  ],
+  "last_seen": "2026-09-16",
+  "evidence": "bikebus.nyc says the bus restarted Sept 16 for its fall 2026 season and lists every Wednesday through Dec, with Oct 7, 14, 21 and 28 upcoming (fetched Oct 2, 2026); the Get Women Cycling calendar listed the same Wednesday 7:15 am ride on Apr 1, 2026.",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.bikebus.nyc/bergen-bike-bus",
+   "feed_url": null,
+   "notes": "The page lists each Wednesday of the season and the no-ride days. Spring dates are posted in the winter."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "neighborhood": "Prospect Park",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Peaceful night ride that visits the park's little-known spots",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "No sign-up on the Time's Up! calendar page. Bring bicycle lights.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "brooklyn-ny-times-up-prospect-park-moon-and-magic-hour-ride",
+  "name": "Prospect Park Moon & Magic Hour Ride",
+  "city": "Brooklyn",
+  "region": "New York",
+  "state": "NY",
+  "country": "US",
+  "tz": "America/New_York",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Monthly on a Saturday evening, 7:15 pm at Grand Army Plaza. 2026 dates seen: May 30, June 27 and Oct 31. Bicycle lights recommended.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "7:15 pm",
+  "start_hhmm": "19:15",
+  "frequency": "monthly",
+  "start_location": {
+   "name": "Grand Army Plaza entrance to Prospect Park (across from the arch where the Saturday Greenmarket is)",
+   "address": "Grand Army Plaza, Brooklyn, NY"
+  },
+  "host": {
+   "name": "Time's Up!",
+   "type": "nonprofit"
+  },
+  "description": "A slow evening ride through Prospect Park once a month, led by Time's Up!, a Brooklyn environmental group. It starts at the Grand Army Plaza entrance and visits the park's quieter corners after dark.",
+  "links": {
+   "website": "https://times-up.org/calendar/prospect-park-moon-magic-hour-ride-8/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://times-up.org/calendar/"
+   ]
+  },
+  "sources": [
+   "https://times-up.org/calendar/prospect-park-moon-magic-hour-ride-8/",
+   "https://times-up.org/calendar/prospect-park-moon-and-magic-hour-ride-7/",
+   "https://times-up.org/calendar/ical/"
+  ],
+  "last_seen": "2026-06-27",
+  "evidence": "The Time's Up! calendar and its iCal feed list the next ride for Sat Oct 31, 2026, 7:15 pm at Grand Army Plaza; an earlier page lists Sat May 30 and Sat June 27, 2026 at 7:15 pm (fetched Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://times-up.org/calendar/",
+   "feed_url": "https://times-up.org/calendar/ical/",
+   "notes": "The feed holds all Time's Up! events; look for the Moon & Magic Hour title. Only one ride is posted at a time."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "neighborhood": "Bixby Knolls",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Very gentle; a lead car and an end car ride with the group",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Kids and adults of all ages and new riders are welcome. Helmets required. Free treats on the ride and a bike-mechanic pop-up before it.",
+  "inclusive_focus": [
+   "family",
+   "beginner"
+  ],
+  "verified_on": "2026-10-02",
+  "slug": "long-beach-ca-bixby-knolls-kidical-mass",
+  "name": "Kidical Mass Bike Ride (Bixby Knolls)",
+  "city": "Long Beach",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "One Sunday a month, ride leaves at 11:00 am from the back parking lot of Pixie Toys. 2026 dates: Jan 18, Feb 22, Mar 15, May 17, Jun 28, Aug 16, Sep 20.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "11:00 am",
+  "start_hhmm": "11:00",
+  "frequency": "monthly",
+  "start_location": {
+   "name": "Pixie Toys (back parking lot)",
+   "address": "3914 Atlantic Ave, Long Beach, CA 90807"
+  },
+  "host": {
+   "name": "Bixby Knolls Business Improvement Association",
+   "type": "nonprofit"
+  },
+  "description": "A monthly family ride through the Bixby Knolls neighborhood, about 4 to 4.5 miles. Staff lead it, with a patrol car at the front and the back. Free treats along the route and music before and after.",
+  "links": {
+   "website": "https://bixbyknollsinfo.com/events/kidical-mass/",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.bikelb.com/calendar/"
+   ]
+  },
+  "sources": [
+   "https://bixbyknollsinfo.com/events/kidical-mass/",
+   "https://calendar.google.com/calendar/ical/c_74a00fbd136eaad93850107be04fb2d309ee442b55f3b2ef908c66a37d0d07e3%40group.calendar.google.com/public/basic.ics"
+  ],
+  "last_seen": "2026-09-20",
+  "evidence": "The Bixby Knolls BIA page announces the ride for Sunday Sept 20, 2026, leaving 11 am from Pixie Toys, and the Bike LB rides calendar lists Kidical Mass for Jan 18, Feb 22, Mar 15, May 17, Jun 28, Aug 16 and Sep 20, 2026 (fetched Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://bixbyknollsinfo.com/events/kidical-mass/",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_74a00fbd136eaad93850107be04fb2d309ee442b55f3b2ef908c66a37d0d07e3%40group.calendar.google.com/public/basic.ics",
+   "notes": "The Bike LB 'Rides' Google Calendar feed carries each month's date once the host posts it. The BIA page is rewritten for each ride."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": 11,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Social, 8 to 13 mph depending on the ride",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "All types of bikes are welcome. The meet spot has changed between rides (Hot Java on Broadway, Good Time Coffee on 4th), so check the latest post.",
+  "inclusive_focus": [
+   "lgbtq",
+   "wtf"
+  ],
+  "verified_on": "2026-10-02",
+  "slug": "long-beach-ca-lbians-queer-wtfnb-ride",
+  "name": "Lbians Ride",
+  "city": "Long Beach",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Some Sundays, meet 11:00 am, roll 11:30 am at Good Time Coffee, social pace, about 11 miles round trip, then drinks nearby. Dates are posted ride by ride on Instagram and the Bike LB calendar. 2026 rides seen: Feb 22, Mar 29, Apr 19, May 16, Aug 1 (Sat, 9:30 am roll), Sep 27.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "11:30 am",
+  "start_hhmm": "11:30",
+  "frequency": "irregular",
+  "start_location": {
+   "name": "Good Time Coffee",
+   "address": "2122 E 4th St, Long Beach, CA 90814"
+  },
+  "host": {
+   "name": "Lbians",
+   "type": "informal"
+  },
+  "description": "A queer, social-pace ride in Long Beach, usually on a Sunday, with a hangout after. Earlier calendar entries call it a 'Queer WTFNB ride'. The group rides about once a month and posts each date ahead.",
+  "links": {
+   "website": null,
+   "instagram": "https://www.instagram.com/lbianss/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.bikelb.com/calendar/",
+    "https://www.longbeachbikerides.com/"
+   ]
+  },
+  "sources": [
+   "https://calendar.google.com/calendar/ical/c_74a00fbd136eaad93850107be04fb2d309ee442b55f3b2ef908c66a37d0d07e3%40group.calendar.google.com/public/basic.ics",
+   "https://www.longbeachbikerides.com/"
+  ],
+  "last_seen": "2026-09-20",
+  "evidence": "The Bike LB rides calendar lists 'Lbians ride' for Sunday Sept 27, 2026 (11:00 meet, 11:30 roll, Good Time Coffee, entry edited Sept 20, 2026); earlier entries for Aug 2025 to Apr 2026 describe it as a 'Queer WTFNB ride' (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://www.bikelb.com/calendar/",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_74a00fbd136eaad93850107be04fb2d309ee442b55f3b2ef908c66a37d0d07e3%40group.calendar.google.com/public/basic.ics",
+   "notes": "Bike LB's Google Calendar gets each ride a few days before. The host's Instagram (@lbianss) is the first source."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Fast; regroups. Last Wednesday of the month: casual but brisk",
+  "drop_policy": "groups",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The route changes each week and is posted on Instagram the day of the ride. Bring lights.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "long-beach-ca-vfixii-wednesday-night-ride",
+  "name": "VFIXII Wednesday Night Ride",
+  "city": "Long Beach",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday, meet 7:30 pm, roll 8:00 pm at 4th St and Cherry Ave. 20 to 40 miles, fast pace. The last Wednesday of the month is a party ride at a casual but brisk pace.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "8:00 pm",
+  "start_hhmm": "20:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "E 4th St and Cherry Ave",
+   "address": "E 4th St & Cherry Ave, Long Beach, CA 90802"
+  },
+  "host": {
+   "name": "VFIXII",
+   "type": "informal"
+  },
+  "description": "A fast Wednesday night ride from 4th and Cherry in Long Beach, usually 20 to 40 miles around the city and neighboring towns. The last Wednesday of the month is a slower party ride.",
+  "links": {
+   "website": null,
+   "instagram": "https://www.instagram.com/vfixll_lbc/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.bikelb.com/calendar/",
+    "https://www.longbeachbikerides.com/"
+   ]
+  },
+  "sources": [
+   "https://calendar.google.com/calendar/ical/c_ecf405d39e53c2549e061b8e50c9bdd2192bec672418a2e49428428ece8d210a%40group.calendar.google.com/public/basic.ics",
+   "https://www.longbeachbikerides.com/"
+  ],
+  "last_seen": "2026-02-19",
+  "evidence": "The Bike LB weekly calendar has a repeating Wednesday 7:30 pm VFIXII entry at E 4th St and Cherry Ave, last edited Feb 19, 2026, and longbeachbikerides.com lists it with a roll at 8:00 pm (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://www.bikelb.com/calendar/",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_ecf405d39e53c2549e061b8e50c9bdd2192bec672418a2e49428428ece8d210a%40group.calendar.google.com/public/basic.ics",
+   "notes": "Repeating entry in the Bike LB 'Weekly' Google Calendar; routes are on the host's Instagram."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Fast, 15 to 20 miles; no drop with regroups per longbeachbikerides.com",
+  "drop_policy": "no-drop",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Not every Tuesday runs; the route and taco stop are announced on Instagram the day of. Longbeachbikerides.com gives the meet spot as the cannon at Junipero and Ocean, so check the latest post.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "long-beach-ca-lb-cannonball-run-taco-tuesday",
+  "name": "LB Cannonball Run (Taco Tuesday)",
+  "city": "Long Beach",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Most Tuesdays, 7:00 pm. A different taco spot each week, 15 to 20 miles, fast pace with regroups. Check Instagram to see if there is a ride that week.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "7:00 pm",
+  "start_hhmm": "19:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Valparaiso Plaza",
+   "address": "8 S 18th Pl, Long Beach, CA 90803"
+  },
+  "host": {
+   "name": "LB Cannonball Run",
+   "type": "informal"
+  },
+  "description": "A Tuesday night ride from Long Beach that ends at a different taco spot each week. It is a fast 15 to 20 miles, with regroups.",
+  "links": {
+   "website": null,
+   "instagram": "https://www.instagram.com/lbcannonballrun/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.bikelb.com/calendar/",
+    "https://www.longbeachbikerides.com/"
+   ]
+  },
+  "sources": [
+   "https://calendar.google.com/calendar/ical/c_ecf405d39e53c2549e061b8e50c9bdd2192bec672418a2e49428428ece8d210a%40group.calendar.google.com/public/basic.ics",
+   "https://www.longbeachbikerides.com/"
+  ],
+  "last_seen": "2026-03-04",
+  "evidence": "The Bike LB weekly calendar has a repeating Tuesday 7:00 pm LB Cannonball Run entry at Valparaiso Plaza, last edited Mar 4, 2026; longbeachbikerides.com lists the same ride with a different meet spot (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://www.bikelb.com/calendar/",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_ecf405d39e53c2549e061b8e50c9bdd2192bec672418a2e49428428ece8d210a%40group.calendar.google.com/public/basic.ics",
+   "notes": "Repeating entry in the Bike LB 'Weekly' Google Calendar. The two sources disagree on the start; the host's Instagram settles it."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Fast",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The ride circles Long Beach. Details and any change are on the club's Instagram.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "cerritos-ca-long-beach-riding-club-thursday-squad-ride",
+  "name": "Thursday Squad Ride (Long Beach Riding Club)",
+  "city": "Cerritos",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Thursday, 5:45 pm sharp from Liberty Park in Cerritos. Fast pace; check Instagram for details.",
+  "days": [
+   "thu"
+  ],
+  "time_local": "5:45 pm",
+  "start_hhmm": "17:45",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Liberty Park and Fitness Center",
+   "address": "19211 Studebaker Rd, Cerritos, CA 90703"
+  },
+  "host": {
+   "name": "Long Beach Riding Club",
+   "type": "club"
+  },
+  "description": "A fast Thursday evening group ride from Liberty Park in Cerritos, run by Long Beach Riding Club. The same club also does a big climbing ride on Saturdays.",
+  "links": {
+   "website": null,
+   "instagram": "https://www.instagram.com/long_beach_riding_club/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.bikelb.com/calendar/",
+    "https://www.longbeachbikerides.com/"
+   ]
+  },
+  "sources": [
+   "https://calendar.google.com/calendar/ical/c_ecf405d39e53c2549e061b8e50c9bdd2192bec672418a2e49428428ece8d210a%40group.calendar.google.com/public/basic.ics",
+   "https://www.longbeachbikerides.com/"
+  ],
+  "last_seen": "2026-06-05",
+  "evidence": "The Bike LB weekly calendar has a repeating Thursday 5:45 pm 'Thursday Squad Ride with Long Beach Riding Club' entry at Liberty Park, Cerritos, last edited Jun 5, 2026, and longbeachbikerides.com lists it as '5:45 PM SHARP!' (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://www.bikelb.com/calendar/",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_ecf405d39e53c2549e061b8e50c9bdd2192bec672418a2e49428428ece8d210a%40group.calendar.google.com/public/basic.ics",
+   "notes": "Repeating entry in the Bike LB 'Weekly' Google Calendar; the club's Instagram has the week's details."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "neighborhood": "East Hollywood",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": [
+   {
+    "ord": -1,
+    "day": "fri"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Open community ride. Route and any update are posted on Instagram.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "los-angeles-ca-the-peoples-ride-last-friday",
+  "name": "The People's Ride (LA)",
+  "city": "Los Angeles",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every last Friday of the month. Meet 6:00 pm, roll 6:30 pm at Hollywood and Vermont.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
+  "frequency": "monthly",
+  "start_location": {
+   "name": "Hollywood Blvd and Vermont Ave",
+   "address": "Vermont & Hollywood, Los Angeles, CA 90027"
+  },
+  "host": {
+   "name": "The People's Ride",
+   "type": "informal"
+  },
+  "description": "A monthly community ride in Los Angeles that gathers at Hollywood and Vermont on the last Friday. It was relaunched in July 2026.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://www.bikelb.com/calendar/"
+   ]
+  },
+  "sources": [
+   "https://calendar.google.com/calendar/ical/c_74a00fbd136eaad93850107be04fb2d309ee442b55f3b2ef908c66a37d0d07e3%40group.calendar.google.com/public/basic.ics"
+  ],
+  "last_seen": "2026-07-24",
+  "evidence": "The Bike LB rides calendar has a repeating 'last Friday' entry starting Jul 31, 2026, 6:00 pm meet, 6:30 roll at Vermont & Hollywood, written 'The return of the PEOPLES RIDE', last edited Jul 24, 2026 (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ics",
+   "watch_url": "https://www.bikelb.com/calendar/",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_74a00fbd136eaad93850107be04fb2d309ee442b55f3b2ef908c66a37d0d07e3%40group.calendar.google.com/public/basic.ics",
+   "notes": "Repeating entry in the Bike LB 'Rides' Google Calendar. The host posts on Instagram; no host page was found."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "neighborhood": "Valencia",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Usually challenging; 50 to 100 miles",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The events page says all are welcome and free. Routes are on the club's Strava page, usually posted the Wednesday before. Always check Strava for time and meeting spot changes.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "santa-clarita-ca-santa-clarita-velo-saturday-morning-ride",
+  "name": "Santa Clarita Velo Saturday Morning Ride",
+  "city": "Santa Clarita",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Saturday. The club's site says rides leave between 7:00 and 8:00 am depending on weather; its events page lists 8:00 am. Check Strava for the actual time and meeting spot.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Promenade Shopping Center parking lot, at the head of the bike path near McDonald's",
+   "address": "27107 McBean Pkwy, Santa Clarita, CA"
+  },
+  "host": {
+   "name": "Santa Clarita Velo p/b CBS Cycling",
+   "type": "club"
+  },
+  "description": "The club's harder weekend ride, 50 to 100 miles from the Valencia Promenade. Routes are posted on Strava and Facebook the Wednesday before.",
+  "links": {
+   "website": "https://www.santaclaritavelo.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/115506",
+   "meetup": null,
+   "other": [
+    "https://www.santaclaritavelo.org/events/"
+   ]
+  },
+  "sources": [
+   "https://www.santaclaritavelo.org/",
+   "https://www.santaclaritavelo.org/events/",
+   "https://www.strava.com/clubs/115506"
+  ],
+  "last_seen": null,
+  "evidence": "The club's own site (copyright 2026) says it does group rides on Saturdays and Sundays from the Promenade parking lot in Valencia, and its events page lists a weekly Saturday ride at 8:00 am from 27107 McBean Pkwy; nothing on either page is dated 2026 (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.santaclaritavelo.org/",
+   "feed_url": null,
+   "notes": "The Strava club (115506) holds the real times. The site's events feed returned no events, so there is no feed."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "neighborhood": "Valencia",
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Semi-casual with some efforts; 30 to 50 miles",
+  "drop_policy": "no-drop",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "The club says Sunday rides are no drop. Routes are on the club's Strava page, usually posted the day before. Always check Strava for time and meeting spot changes.",
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "verified_on": "2026-10-02",
+  "slug": "santa-clarita-ca-santa-clarita-velo-sunday-funday-no-drop",
+  "name": "Santa Clarita Velo Sunday Funday (no-drop)",
+  "city": "Santa Clarita",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Sunday. The club's site says rides leave between 7:00 and 8:00 am depending on weather; its events page lists 8:00 am. Check Strava for the actual time and meeting spot.",
+  "days": [
+   "sun"
+  ],
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Promenade Shopping Center parking lot, at the head of the bike path near McDonald's",
+   "address": "27107 McBean Pkwy, Santa Clarita, CA"
+  },
+  "host": {
+   "name": "Santa Clarita Velo p/b CBS Cycling",
+   "type": "club"
+  },
+  "description": "A no-drop Sunday ride of 30 to 50 miles from the Valencia Promenade, semi-casual with a few efforts. Routes are posted on Strava and Facebook the day before.",
+  "links": {
+   "website": "https://www.santaclaritavelo.org/",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/115506",
+   "meetup": null,
+   "other": [
+    "https://www.santaclaritavelo.org/events/"
+   ]
+  },
+  "sources": [
+   "https://www.santaclaritavelo.org/",
+   "https://www.santaclaritavelo.org/events/",
+   "https://www.strava.com/clubs/115506"
+  ],
+  "last_seen": null,
+  "evidence": "The club's own site (copyright 2026) says Sunday rides are no drop and leave from the Promenade parking lot in Valencia, and its events page lists a weekly 'Sunday Funday with VELO' at 8:00 am; nothing on either page is dated 2026 (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.santaclaritavelo.org/",
+   "feed_url": null,
+   "notes": "The Strava club (115506) holds the real times. The site's events feed returned no events, so there is no feed."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "No-drop",
+  "drop_policy": "no-drop",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Latest route updates are on the club's Strava page. The page is hosted by Ventura Cycling Center, the bike shop that supports the club.",
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "verified_on": "2026-10-02",
+  "slug": "ventura-ca-ventura-cycling-club-tuesday-group-ride",
+  "name": "Ventura Cycling Club Tuesday Group Ride",
+  "city": "Ventura",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Tuesday, warm-up stretch at 4:45 pm, roll out at 5:00 pm. The start alternates between Faria Camp and Cañada Larga.",
+  "days": [
+   "tue"
+  ],
+  "time_local": "5:00 pm",
+  "start_hhmm": "17:00",
+  "frequency": "weekly",
+  "start_location": {
+   "name": "Faria Camp or Cañada Larga (alternates)",
+   "address": null
+  },
+  "host": {
+   "name": "Ventura Cycling Club",
+   "type": "club"
+  },
+  "description": "A no-drop Tuesday evening ride run by Ventura Cycling Club, with a warm-up stretch before the roll-out. The start alternates between two spots in the Ventura area.",
+  "links": {
+   "website": "https://www.venturacycling.com/articles/community-pg219.htm",
+   "instagram": null,
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/venturacycling",
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://www.venturacycling.com/articles/community-pg219.htm",
+   "https://www.strava.com/clubs/venturacycling"
+  ],
+  "last_seen": null,
+  "evidence": "The Ventura Cycling Center community page lists 'Tuesday Group Rides @ 4:45 PM', roll out 5 PM, no drop, alternating Faria Camp and Cañada Larga; the club's Strava page shows an upcoming club event; nothing on the page is dated (fetched Oct 2, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.venturacycling.com/articles/community-pg219.htm",
+   "feed_url": null,
+   "notes": "The Strava club page shows 'Upcoming Club Event' but hides the details without a login. Winter start time may change."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Medium paced; typically an A-to-B ride",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Anyone and any bike; a fixed gear, road bike, ten speed or mountain bike keeps up best. Helmet and lights required. The ride usually ends somewhere other than the start.",
+  "inclusive_focus": [],
+  "verified_on": "2026-10-02",
+  "slug": "san-diego-ca-awarewolfs-full-moon-bike-ride",
+  "name": "Awarewolfs Full Moon Bike Ride (FMBR)",
+  "city": "San Diego",
+  "region": "California",
+  "state": "CA",
+  "country": "US",
+  "tz": "America/Los_Angeles",
+  "discipline": [
+   "social",
+   "mixed"
+  ],
+  "schedule": "Every full moon, on whatever day it falls. The Aug 27, 2026 ride (FMBR #195) started 7:00 pm at Golden Hill Park. Route, start and time are posted ahead on Instagram. Next full moon after Oct 2: Oct 26.",
+  "days": [],
+  "time_local": "7:00 pm",
+  "start_hhmm": "19:00",
+  "frequency": "irregular",
+  "start_location": {
+   "name": "Changes each month (Golden Hill Park for Aug 2026)",
+   "address": null
+  },
+  "host": {
+   "name": "The Awarewolfs",
+   "type": "collective"
+  },
+  "description": "A monthly night ride on the full moon, run since 2010 by The Awarewolfs in San Diego. The start changes each month and is posted ahead. All bikes are welcome at a medium pace.",
+  "links": {
+   "website": "https://theawarewolfs.com/fmbr/",
+   "instagram": "https://www.instagram.com/theawarewolfs/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://bikingis.fun/"
+   ]
+  },
+  "sources": [
+   "https://theawarewolfs.com/fmbr/",
+   "https://bikingis.fun/"
+  ],
+  "last_seen": "2026-08-27",
+  "evidence": "theawarewolfs.com says the rides run every full moon since 2010 (no dated post since Apr 2025), and the San Diego calendar bikingis.fun lists FMBR #195 for Thu Aug 27, 2026, 7:00 pm at Golden Hill Park (page last modified Aug 27, 2026); fetched Oct 2, 2026.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://theawarewolfs.com/fmbr/",
+   "feed_url": null,
+   "notes": "Each ride's date, start and route are on the host's Instagram (@theawarewolfs) and the bikingis.fun calendar. The host's site page is undated."
+  }
+ },
+ {
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "neighborhood": null,
+  "lat": null,
+  "lng": null,
+  "geo_precision": null,
+  "monthly_rule": null,
+  "season": "Apr–Oct",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
+  "distance_km": null,
+  "distance_miles": 5,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Slow roll, family friendly",
+  "drop_policy": "unknown",
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Family-friendly. Costumes and lit-up wheels encouraged. Each ride uses different roads and trails, so it is on roads.",
+  "inclusive_focus": [
+   "family"
+  ],
+  "verified_on": "2026-10-02",
+  "slug": "ithaca-ny-bike-walk-tompkins-full-moon-lighted-bike-ride",
+  "name": "Full Moon Lighted Bike Ride",
+  "city": "Ithaca",
+  "region": "New York",
+  "state": "NY",
+  "country": "US",
+  "tz": "America/New_York",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Monthly at the full moon, April to October. Gather at Swamp City Community Cycles and roll out as the sun goes down: 8:00 pm, 8:30 pm in June and July. 2026 dates: Apr 1, May 2, May 31, Jun 29, Jul 29, Aug 28, Sep 26, Oct 26 (last of the season).",
+  "days": [],
+  "time_local": "8:00 pm",
+  "start_hhmm": "20:00",
+  "frequency": "irregular",
+  "start_location": {
+   "name": "Swamp City Community Cycles",
+   "address": "803 Cascadilla St, Ithaca, NY"
+  },
+  "host": {
+   "name": "Bike Walk Tompkins with Vie Cycle",
+   "type": "nonprofit"
+  },
+  "description": "A 5-mile slow roll around downtown Ithaca on the night of each full moon, led by Bike Walk Tompkins with Vie Cycle. Riders light up their bikes and wear costumes. A Halloween lighted bike sculpture ride follows in late October.",
+  "links": {
+   "website": "https://www.bikewalktompkins.org/lighted-rides",
+   "instagram": null,
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "sources": [
+   "https://www.bikewalktompkins.org/lighted-rides"
+  ],
+  "last_seen": "2026-09-26",
+  "evidence": "The Bike Walk Tompkins page lists the 2026 full moon dates with roll-out times, the next being Oct 26, 8 pm, and says the group gathers at Swamp City Community Cycles, 803 Cascadilla St (fetched Oct 2, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.bikewalktompkins.org/lighted-rides",
+   "feed_url": null,
+   "notes": "The page lists the whole year's dates each spring. The day of the week changes every month."
+  }
+ }
+]
