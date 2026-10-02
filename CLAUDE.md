@@ -33,6 +33,28 @@ lasts, and what we got wrong — on the thesis that SEO is the base under AI ans
   characters are likely cut off in results (86% of pages). Prefer fewer, fuller pages over more, thinner ones until
   indexing catches up.
 
+## Pass 19 — the 2027 calendar steps down, and keeps up (Oct 2, 2026)
+Robert, on his phone at `/events/2027/`: "Should we clean this up too?" The first screen was a stats
+strip, the h1 and a paragraph explaining ✓ and ~, and the filters ran off the side. Now the Pass 15
+pattern (`scripts/build-calendar.js`, the Pass 19 block; styles at the foot of `calendar.css`):
+- `/events/2027/` = h1, one sub line, **When?** (a tile per month, its count and a bar; "N more with
+  no date yet") and **Or pick what** (a door per category, plus "I'm riding" for the six), then the
+  twelve deep-page tiles, "All N, with filters", the report form. No rows, no calendar.js.
+- Short pages, rows only (no filters): `/events/2027/<month>/` (january…december, `date-tba/`) with
+  prev/next month; `/events/2027/<category>/` (`charity-rides`, `road`, `gravel`, `mountain-bike`,
+  `multi-day-tours`, `ultra-and-bikepacking`, `races`, `hill-climbs`) by month with a jump row;
+  `/events/2027/riding/`. A `#slug` on any of them opens that row (`OPEN_JS`).
+- The full list with every filter moved to `/events/2027/all/` (calendar.js loads only there).
+- Old `/events/2027/#slug` links (the homepage's six, anything shared) still land: the home page
+  reads `/events/2027/where.json` (slug → month page) and sends them to the row. Town pages link
+  the month page directly. Every page is in `sitemap-calendar.xml`.
+- **Keeping up:** `node tools/calendar-from-artifact.js <data.json>` brings the "2027 Ride
+  Directory" artifact's data block into `data/calendar-2027.json` (slugs kept by id, on_list →
+  riding, defunct → retired, the site's retired list kept, an event that silently drops off is
+  retired with a reason). The twice-monthly "2027 Ride Directory refresh" scheduled task now runs it,
+  rebuilds and opens a PR after republishing the artifact. The menu count lives in chrome.js; the
+  homepage and /pledge/ hard-code it (update both when the count moves).
+
 ## Pass 18 — the maps get terrain, water and roads (Oct 2, 2026)
 Robert, after Pass 17: the map "needs to be more detailed. It looks a little weird just being a blank
 slate like that." Every state/country map (and the small city and ride maps) now carries, inside the
@@ -628,9 +650,10 @@ You write content for cycleforchange.org. Follow these rules on every run.
   Show it as "miles since June 1". No percentages, no progress line against 10,000.
 
 ## 2027 ride calendar — `/events/2027/`
-- One page, generated: `node scripts/build-calendar.js` reads
+- Generated: `node scripts/build-calendar.js` reads
   `data/calendar-2027.json` (600+ organized US rides and races for 2027) and
-  writes `cfc-site/events/2027/index.html` + the JSON feed + `sitemap-calendar.xml`.
+  writes `cfc-site/events/2027/` (the step-down home, month/category/riding pages,
+  `all/`, `where.json`; see Pass 19) + the JSON feed + `sitemap-calendar.xml`.
   Schema and rules in `data/SCHEMA.md` ("2027 calendar"). `calendar.css` and
   `calendar.js` next to it are hand-written; the page loads `/chrome.css`,
   `/events/events.css`, `/chrome.js` and `/events/events.js`.
