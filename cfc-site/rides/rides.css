@@ -418,6 +418,45 @@ details.gr-fold>dl{padding:0 18px 18px}
   .gr-head--map .gr-map--area{justify-self:end}
   .gr-head--map .gr-map--area .gr-map-svg{max-height:380px}
 }
+/* —— Pass 17 (Oct 2, 2026): on a phone the area map zooms (mapZoom + /rides/map.js) ——
+   Nothing here shows until map.js marks the map .is-live, and it only does that up to 640px. */
+.gr-map-regions,.gr-map-zoom,.gr-map-chips,.gr-map-back,.gr-map-reset{display:none}
+.tiles-p > a[hidden]{display:none}
+@media (max-width:640px){
+  .gr-map--zoomable.is-live .gr-map-svg{overflow:hidden;touch-action:manipulation}
+  .gr-map--zoomable.is-live .gr-map-labels{display:none}
+  .gr-map--zoomable.is-live .gr-map-dots{opacity:.4;transition:opacity .2s ease}
+  .gr-map--zoomable.is-live.is-zoomed .gr-map-dots{opacity:0}
+  .gr-map--zoomable.is-live .gr-map-regions{display:inline;transition:opacity .2s ease}
+  .gr-map--zoomable.is-live.is-zoomed .gr-map-regions{opacity:0;pointer-events:none}
+  .gr-map--zoomable.is-live .gr-map-zoom{display:inline;opacity:0;pointer-events:none;transition:opacity .2s ease}
+  .gr-map--zoomable.is-live .gr-map-zoom.is-on{opacity:1;pointer-events:auto}
+  .gr-map--zoomable.is-live .gr-map-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+  .gr-map--zoomable.is-live.is-zoomed .gr-map-back{display:inline-flex;position:absolute;top:0;left:0;background:var(--paper)}
+  .gr-map-reset.is-on{display:inline-flex;margin-top:12px}
+  .gr-map-chips .gr-chip,.gr-map-back,.gr-map-reset{min-height:40px;align-items:center;gap:7px;-webkit-tap-highlight-color:transparent}
+  .gr-map-chip-n{opacity:.7;font-variant-numeric:tabular-nums}
+}
+/* the overview: dark = several cities (zooms in), pale = one city (goes to it) */
+.gr-map-reg{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.gr-map-reg:focus{outline:none}
+.gr-map-reg-hit,.gr-map-zhit{fill:transparent}
+.gr-map-reg-dot{fill:var(--asphalt);stroke:var(--paper);stroke-width:2;vector-effect:non-scaling-stroke;transition:fill .15s ease}
+.gr-map-reg-n{font-family:var(--mono);font-size:15px;font-weight:700;fill:var(--bone);pointer-events:none;font-variant-numeric:tabular-nums}
+.gr-map-reg--one .gr-map-reg-dot{fill:var(--bone);stroke:var(--asphalt);stroke-width:1.6}
+.gr-map-reg--one .gr-map-reg-n{fill:var(--asphalt)}
+.gr-map-reg-name{font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.02em;fill:var(--asphalt);paint-order:stroke;stroke:var(--paper);stroke-width:4px;stroke-linejoin:round;pointer-events:none}
+.gr-map-reg:active .gr-map-reg-dot,.gr-map-reg:focus-visible .gr-map-reg-dot{fill:var(--creosote-ink)}
+.gr-map-reg--one:active .gr-map-reg-dot,.gr-map-reg--one:focus-visible .gr-map-reg-dot{fill:var(--bone-2);stroke-width:3}
+/* a region's own layer, drawn for its zoom (font-size and halo set per layer on each name) */
+.gr-map-zoom text{font-family:var(--mono);letter-spacing:.02em;fill:var(--asphalt);paint-order:stroke;stroke:var(--paper);stroke-linejoin:round}
+.gr-map-zoom .gr-map-name{font-weight:700}
+.gr-map-zoom .gr-map-n{fill:var(--creosote-ink)}
+.gr-map-zoom a{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.gr-map-zoom a:focus{outline:none}
+.gr-map-zoom a:active .gr-map-hub,.gr-map-zoom a:focus-visible .gr-map-hub{fill:var(--asphalt)}
+.gr-map-zoom a:focus-visible .gr-map-name{text-decoration:underline}
+@media (prefers-reduced-motion:reduce){.gr-map--zoomable .gr-map-regions,.gr-map--zoomable .gr-map-zoom,.gr-map--zoomable .gr-map-dots,.gr-map-reg-dot{transition:none}}
 /* where a city sits / where a ride starts */
 .gr-map--where,.gr-map--ride{padding:16px;background:var(--bone-2);border:1px solid var(--dust)}
 .gr-map--where .gr-map-svg,.gr-map--ride .gr-map-svg{max-height:340px;margin:0 auto;width:auto;max-width:100%}

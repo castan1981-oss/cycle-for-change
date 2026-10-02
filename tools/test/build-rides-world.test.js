@@ -127,9 +127,25 @@ test("a host's table of start times: the lists show the time in force, the page 
 // Pass 16 (Oct 2, 2026): drawn maps, ride buttons, photos
 test("a state page opens on its own map, its cities to tap", () => {
   const h = read("az");
-  assert.match(h, /class="gr-map gr-map--area"/);
+  assert.match(h, /class="gr-map gr-map--area[ "]/);
   assert.match(h, /<a href="\/rides\/az\/phoenix\/" aria-label="Phoenix, \d+ rides">/);
   assert.ok((h.match(/class="gr-map-dot"/g) || []).length >= 10, "a dot per ride");
+});
+// Pass 17 (Oct 2, 2026): on a phone the area map zooms — bubbles per region, a layer per region of several cities
+test("a state with nearby cities gets the phone zoom: region bubbles, zoom layers, chips, map.js", () => {
+  const h = read("az");
+  assert.match(h, /class="gr-map gr-map--area gr-map--zoomable"/);
+  assert.match(h, /<g class="gr-map-reg" data-reg="phoenix" role="button" tabindex="0" aria-label="Phoenix area: \d+ rides in \d+ cities\. Zoom in">/);
+  const layer = h.match(/<g class="gr-map-zoom" data-reg="phoenix" data-vb="([^"]+)" data-paths="([^"]+)">/);
+  assert.ok(layer, "a zoom layer for the Phoenix area");
+  assert.equal(layer[1].split(" ").length, 4, "a viewBox to move to");
+  assert.ok(layer[2].split(" ").includes("/rides/az/phoenix/"), "its cities, for the tiles");
+  assert.match(h, /<button type="button" class="gr-chip" data-reg="phoenix" aria-pressed="false">Phoenix area/);
+  assert.match(h, /<script src="\/rides\/map\.js" defer><\/script>/);
+  // a region's number counts each ride once, even where city hubs overlap
+  const n = Number(h.match(/aria-label="Phoenix area: (\d+) rides/)[1]);
+  const hubs = [...h.matchAll(/<a class="tile-p[^"]*" href="\/rides\/az\/[^"]+\/"[^>]*>.*?<b class="n num">(\d+)<\/b>/g)].map((m) => Number(m[1]));
+  assert.ok(n <= hubs.reduce((s, x) => s + x, 0), "deduped, not summed");
 });
 test("the US page is a map you tap, a link for every state with a ride", () => {
   const h = read("united-states");

@@ -734,7 +734,7 @@ const n1 = (v) => Math.round(v * 10) / 10;
 let mapUid = 0;
 // labels: [{ lng, lat, text, n, href, strong }] — placed biggest first; one that would sit on
 // another goes to the other side of its dot, or keeps only its ring (the tiles below name it).
-function mapFigure(shape, { dots = [], dim = [], labels = [], focus = null, ringMiles = null, ringAt = null, title, caption = "", cls = "" }) {
+function mapFigure(shape, { dots = [], dim = [], labels = [], focus = null, ringMiles = null, ringAt = null, title, caption = "", cls = "", zoom = null }) {
   if (!shape) return "";
   const id = `gm${++mapUid}`;
   const P = (o) => geoPlace(shape.p, o.lng, o.lat);
@@ -770,16 +770,127 @@ function mapFigure(shape, { dots = [], dim = [], labels = [], focus = null, ring
   let here = "";
   if (focus) { const [x, y] = P(focus); if (inBox([x, y])) here = `<circle class="gr-map-halo" cx="${n1(x)}" cy="${n1(y)}" r="13"/><circle class="gr-map-here" cx="${n1(x)}" cy="${n1(y)}" r="6"/>`; }
   return `
-      <figure class="gr-map ${cls}">
+      <figure class="gr-map ${cls}${zoom ? " gr-map--zoomable" : ""}">
         <svg class="gr-map-svg" viewBox="0 0 ${shape.w} ${shape.h}" role="img" aria-labelledby="${id}"><title id="${id}">${esc(title)}</title>
           <path class="gr-map-land" d="${shape.d}"/>${ring}
           <g class="gr-map-dots">${dotSvg(dim, "gr-map-dot gr-map-dot--dim")}${dotSvg(dots, "gr-map-dot")}</g>${here}
-          <g class="gr-map-labels">${labelSvg}</g>
-        </svg>${caption ? `
+          <g class="gr-map-labels">${labelSvg}</g>${zoom ? `
+          <g class="gr-map-regions">${zoom.regionsSvg}</g>
+          ${zoom.zooms}` : ""}
+        </svg>${zoom ? `
+        ${zoom.back}
+        ${zoom.chips}` : ""}${caption ? `
         <figcaption>${caption}</figcaption>` : ""}
       </figure>`;
 }
 const hubLabel = (h, opts = {}) => ({ lng: h.lng, lat: h.lat, text: h.city, n: h.rides.length, href: opts.strong ? null : h.path, strong: !!opts.strong });
+
+// ---------- Pass 17 (Oct 2, 2026): on a phone the area map zooms ----------
+// Robert, on his phone at /rides/tx/: "the map on mobile is just a bit too small and not super
+// easy to use and looks kind of funky … I don't want to rework everything … but make it more
+// friendly." At phone width the labels fight for room and the placer drops some (Houston and
+// Frisco went unnamed; Pearland's name sat on the Houston cluster). So on a phone, and only once
+// /rides/map.js is running, the map trades its labels for one bubble per region — cities within
+// REGION_MI of each other are one region, its number the rides in it counted once. A region of one
+// city is a link to it (pale bubble); a region of several (dark bubble) zooms the same SVG in — the
+// viewBox moves, no library — to its own layer of cities, laid out here at that zoom, and the
+// "Pick a city" tiles narrow to them. Chips under the map do the same for a thumb. Desktop, and a
+// phone without JS, get the map exactly as before.
+const REGION_MI = 45;
+function mapRegions(hubs) {
+  const up = hubs.map((_, i) => i);
+  const root = (i) => (up[i] === i ? i : (up[i] = root(up[i])));
+  for (let i = 0; i < hubs.length; i++) for (let j = i + 1; j < hubs.length; j++) if (miles(hubs[i], hubs[j]) <= REGION_MI) up[root(i)] = root(j);
+  const groups = {};
+  hubs.forEach((h, i) => (groups[root(i)] ||= []).push(h));
+  return Object.values(groups).map((hs) => {
+    hs.sort((a, b) => b.rides.length - a.rides.length || a.city.localeCompare(b.city));
+    const rides = [...new Map(hs.flatMap((h) => h.rides).map((r) => [r.slug, r])).values()];
+    return { hubs: hs, rides, n: rides.length, name: hs.length > 1 ? `${hs[0].city} area` : hs[0].city, key: slugify(hs[0].city) };
+  }).sort((a, b) => b.n - a.n || a.name.localeCompare(b.name));
+}
+// names around rings: right, left, above, below, then the corners — the first clear of the edges,
+// every ring and the names already placed. items: [{ x, y, rr, text, n }] in canvas units.
+function placeNames(items, W, H, FS, { fallback = false, small = null } = {}) {
+  const boxes = items.map((it) => ({ x0: it.x - it.rr - 2, x1: it.x + it.rr + 2, y0: it.y - it.rr - 2, y1: it.y + it.rr + 2, it }));
+  return [...items].sort((a, b) => (b.n || 0) - (a.n || 0)).map((it) => {
+    const { x, y, rr } = it, text = String(it.text).toUpperCase(), cnt = it.n != null ? ` ${it.n}` : "", g = rr + 5;
+    const order = x > W * 0.62 ? ["l", "r", "tl", "bl", "t", "b", "tr", "br"] : ["r", "l", "tr", "br", "t", "b", "tl", "bl"];
+    const clear = (b) => b.x0 >= 0 && b.x1 <= W && b.y0 >= 0 && b.y1 <= H && !boxes.some((o) => o.it !== it && b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0);
+    // the size it's drawn at first; a name with no room tries once more a size down
+    let first = null;
+    for (const fs of small ? [FS, small] : [FS]) {
+      const w = (text.length + cnt.length) * fs * 0.62 + 6;
+      const spots = { r: [x + g, y + fs * 0.35, "start"], l: [x - g, y + fs * 0.35, "end"], t: [x, y - g - 2, "middle"], b: [x, y + g + fs * 0.8, "middle"],
+        tr: [x + g * 0.7, y - g * 0.7, "start"], br: [x + g * 0.7, y + g * 0.7 + fs * 0.8, "start"], tl: [x - g * 0.7, y - g * 0.7, "end"], bl: [x - g * 0.7, y + g * 0.7 + fs * 0.8, "end"] };
+      const boxOf = ([tx, ty, a]) => ({ x0: a === "start" ? tx - 2 : a === "end" ? tx - w + 2 : tx - w / 2, x1: a === "start" ? tx + w - 2 : a === "end" ? tx + 2 : tx + w / 2, y0: ty - fs * 0.82, y1: ty + fs * 0.25 });
+      first ||= spots[order[0]];
+      for (const k of order) { const b = boxOf(spots[k]); if (clear(b)) { boxes.push({ ...b, it: null }); return { it, text, cnt, spot: spots[k], fs }; } }
+    }
+    return { it, text, cnt, spot: fallback ? first : null, fs: FS };
+  });
+}
+function mapZoom(shape, hubsIn, areaWord) {
+  if (!shape || hubsIn.length < 2) return null;
+  const regions = mapRegions(hubsIn);
+  if (!regions.some((g) => g.hubs.length > 1)) return null;
+  const W = shape.w, H = shape.h, P = (o) => geoPlace(shape.p, o.lng, o.lat);
+  // the overview: a bubble per region at its ride-weighted middle, nudged apart so none overlap
+  const bubs = regions.map((g) => {
+    const wt = g.hubs.reduce((s, h) => s + h.rides.length, 0) || 1;
+    const pts = g.hubs.map((h) => [P(h), h.rides.length]);
+    return { g, x: pts.reduce((s, [p, n]) => s + p[0] * n, 0) / wt, y: pts.reduce((s, [p, n]) => s + p[1] * n, 0) / wt, r: Math.min(32, 9 + 3.2 * Math.sqrt(g.n)) };
+  });
+  for (let pass = 0; pass < 80; pass++) {
+    let moved = false;
+    for (let i = 0; i < bubs.length; i++) for (let j = i + 1; j < bubs.length; j++) {
+      const a = bubs[i], b = bubs[j], need = a.r + b.r + 4;
+      let dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy);
+      if (d >= need) continue;
+      if (d < 0.01) { dx = 1; dy = 0.5; d = Math.hypot(dx, dy); }
+      const push = (need - d) / 2, ux = dx / d, uy = dy / d;
+      a.x -= ux * push; a.y -= uy * push; b.x += ux * push; b.y += uy * push; moved = true;
+    }
+    for (const b of bubs) { b.x = Math.min(W - b.r, Math.max(b.r, b.x)); b.y = Math.min(H - b.r, Math.max(b.r, b.y)); }
+    if (!moved) break;
+  }
+  // on the map a dark bubble wears its biggest city's name (the dark says "and around"); the chip says "area"
+  const NAME_FS = 13;
+  const named = new Map(placeNames(bubs.map((b) => ({ x: b.x, y: b.y, rr: b.r, text: b.g.hubs[0].city, b })), W, H, NAME_FS, { small: 11 }).map((p) => [p.it.b, p]));
+  const regionsSvg = bubs.map((b) => {
+    const { g } = b, one = g.hubs.length === 1, p = named.get(b);
+    const name = p && p.spot ? `<text class="gr-map-reg-name" x="${n1(p.spot[0])}" y="${n1(p.spot[1])}" text-anchor="${p.spot[2]}"${p.fs !== NAME_FS ? ` style="font-size:${p.fs}px"` : ""}>${esc(p.text)}</text>` : "";
+    const inner = `<circle class="gr-map-reg-hit" cx="${n1(b.x)}" cy="${n1(b.y)}" r="${n1(Math.max(b.r + 4, 26))}"/><circle class="gr-map-reg-dot" cx="${n1(b.x)}" cy="${n1(b.y)}" r="${n1(b.r)}"/><text class="gr-map-reg-n" x="${n1(b.x)}" y="${n1(b.y + 5.2)}" text-anchor="middle">${g.n}</text>${name}`;
+    return one
+      ? `<a class="gr-map-reg gr-map-reg--one" href="${g.hubs[0].path}" aria-label="${attr(`${g.name}, ${plural(g.n)}`)}">${inner}</a>`
+      : `<g class="gr-map-reg" data-reg="${g.key}" role="button" tabindex="0" aria-label="${attr(`${g.name}: ${plural(g.n)} in ${g.hubs.length} cities. Zoom in`)}">${inner}</g>`;
+  }).join("");
+  // a layer per region of several cities, drawn for its zoom: names placed on a canvas the size of
+  // the map, then shrunk by the zoom so they come out the same size as on the overview
+  const FS = 16;
+  const zooms = regions.filter((g) => g.hubs.length > 1).map((g) => {
+    const pts = g.hubs.map(P), xs = pts.map((p) => p[0]), ys = pts.map((p) => p[1]);
+    const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+    const z = Math.max(1.6, Math.min(8, (W - 170) / Math.max(x1 - x0, 1), (H - 110) / Math.max(y1 - y0, 1)));
+    const vb = [(x0 + x1) / 2 - W / (2 * z), (y0 + y1) / 2 - H / (2 * z), W / z, H / z];
+    const toC = ([x, y]) => [(x - vb[0]) * z, (y - vb[1]) * z], u = (v) => n1(v / z * 10) / 10;
+    const at = (c, i) => n1((vb[i] + c / z) * 100) / 100;
+    const dots = g.rides.map(P).map(([x, y]) => `<circle class="gr-map-dot" cx="${n1(x * 10) / 10}" cy="${n1(y * 10) / 10}" r="${u(3.4)}"/>`).join("");
+    const placed = placeNames(g.hubs.map((h, i) => { const [cx, cy] = toC(pts[i]); return { x: cx, y: cy, rr: 7, text: h.city, n: h.rides.length, h, i }; }), W, H, FS, { fallback: true });
+    const cities = placed.map(({ it, text, cnt, spot }) => {
+      const [x, y] = pts[it.i];
+      const label = spot ? `<text x="${at(spot[0], 0)}" y="${at(spot[1], 1)}" text-anchor="${spot[2]}" style="font-size:${u(FS)}px;stroke-width:${u(4)}px"><tspan class="gr-map-name">${esc(text)}</tspan><tspan class="gr-map-n">${cnt}</tspan></text>` : "";
+      return `<a href="${it.h.path}" aria-label="${attr(`${it.h.city}, ${plural(it.h.rides.length)}`)}"><circle class="gr-map-zhit" cx="${n1(x * 10) / 10}" cy="${n1(y * 10) / 10}" r="${u(24)}"/><circle class="gr-map-hub" cx="${n1(x * 10) / 10}" cy="${n1(y * 10) / 10}" r="${u(7)}"/>${label}</a>`;
+    }).join("");
+    return `<g class="gr-map-zoom" data-reg="${g.key}" data-vb="${vb.map((v) => n1(v * 100) / 100).join(" ")}" data-paths="${attr(g.hubs.map((h) => h.path).join(" "))}"><g class="gr-map-zdots">${dots}</g>${cities}</g>`;
+  }).join("");
+  const multi = regions.filter((g) => g.hubs.length > 1);
+  const chips = `<div class="gr-map-chips" role="group" aria-label="Zoom the map">
+          <button type="button" class="gr-chip" data-reg="" aria-pressed="true">All ${esc(areaWord)}</button>${multi.map((g) => `
+          <button type="button" class="gr-chip" data-reg="${g.key}" aria-pressed="false">${esc(g.name)} <span class="gr-map-chip-n">${g.n}</span></button>`).join("")}
+        </div>`;
+  return { regionsSvg, zooms, chips, back: `<button type="button" class="gr-chip gr-map-back" aria-label="${attr(`Back to all of ${areaWord}`)}">&larr; ${esc(areaWord)}</button>` };
+}
 
 // /rides/united-states/: tap a state. Shaded by how many rides it has.
 function usMap(byState) {
@@ -877,6 +988,9 @@ const pageLd = (canonical, name, description, rides, crumbs) => ({ "@context": "
 // Old shared links (?bike=gravel&day=sun) on a page that no longer filters go to its /all/ page.
 const STEP_JS = `
 <script src="/rides/step.js" defer></script>`;
+// Pass 17: the area map's phone zoom (mapZoom)
+const MAP_JS = `
+<script src="/rides/map.js" defer></script>`;
 
 // rows, in one grid or under city headings
 function rowsHtml(rides, { distanceFrom = null, unit = "mi" } = {}) {
@@ -1332,7 +1446,8 @@ function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, descripti
     }) });
   }
   // the place's own map: a dot per ride, its cities to tap
-  const areaMap = mapFigure(shapeOf(st, cc), { dots: rides, labels: hubsIn.map((x) => hubLabel(x)), title: `Map of ${areaWord}: a dot for each of the ${plural(rides.length)}${hubsIn.length ? ", its cities to tap" : ""}`, cls: "gr-map--area" });
+  const zoom = mapZoom(shapeOf(st, cc), hubsIn, areaWord);
+  const areaMap = mapFigure(shapeOf(st, cc), { dots: rides, labels: hubsIn.map((x) => hubLabel(x)), title: `Map of ${areaWord}: a dot for each of the ${plural(rides.length)}${hubsIn.length ? ", its cities to tap" : ""}`, cls: "gr-map--area", zoom });
   let body;
   if (step) {
     const covered = new Set(hubsIn.flatMap((x) => x.rides.map((r) => r.slug)));
@@ -1362,7 +1477,8 @@ function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, descripti
         <div class="tiles-p">
           ${cityList.map(cityTile).join("\n          ")}
           ${elsewhereDoor ? posterTile({ href: `${base}other-towns/`, name: "Other towns", count: elsewhere.length, small: "rides", blurb: `${new Set(elsewhere.map((r) => r.city)).size} smaller towns`, markId: "town", cls: "tile-p--country" }) : ""}
-        </div>
+        </div>${zoom ? `
+        <button type="button" class="gr-chip gr-map-reset">Every city in ${esc(areaWord)}</button>` : ""}
       </section>${st === "AZ" ? photoBand("crew", { cls: "gr-photo--wide" }) : ""}
       ${facetDoors ? `<section class="gr-step" aria-labelledby="who-h">
         <h2 class="gr-filter-label" id="who-h">Or pick who&rsquo;s riding</h2>
@@ -1394,7 +1510,7 @@ ${FOOTLINE}
 ${CTA}
   </div>
 </main>
-` + foot(step ? STEP_JS : "");
+` + foot((step ? STEP_JS : "") + (zoom ? MAP_JS : ""));
 }
 
 function statePage(st, rides, hubs, pages) {

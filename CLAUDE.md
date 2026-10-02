@@ -33,6 +33,20 @@ lasts, and what we got wrong — on the thesis that SEO is the base under AI ans
   characters are likely cut off in results (86% of pages). Prefer fewer, fuller pages over more, thinner ones until
   indexing catches up.
 
+## Pass 17 — the area map zooms on a phone (Oct 2, 2026)
+Robert, on his phone at `/rides/tx/`: the map is "a bit too small and not super easy to use and looks
+kind of funky … I don't want to rework everything … but make it more friendly." Desktop is unchanged.
+- `mapZoom()` in `tools/build-rides.js` (the Pass 17 block, next to `mapFigure`): cities within
+  `REGION_MI` (45 mi) of each other are one region; the region's number counts each ride once (city
+  hubs overlap — Dallas and Frisco share suburbs). Each state/country map gains, hidden: a bubble per
+  region (dark = several cities, zooms; pale = one city, a link), a layer per multi-city region laid
+  out at its zoom (`data-vb`, `data-paths`), chips ("All Texas", "Dallas area 45"), a "← Texas" back
+  button, and "Every city in Texas" under the tiles. Only areas with a multi-city region get it.
+- `/rides/map.js` turns it on up to 640px (`.is-live`): labels hide, bubbles show, a dark bubble or
+  chip moves the viewBox in (420 ms, none with reduced motion) and narrows "Pick a city" to that
+  region's tiles. Wider than 640px or without JS, the map is exactly the Pass 16 map.
+- Styles: the Pass 17 block in `cfc-site/rides/rides.css`. Test: `build-rides-world.test.js`.
+
 ## Pass 16 — maps, ride buttons, photos (Oct 2, 2026)
 Robert, after Pass 15 went live: "can you make even more custom buttons and graphics or even some
 photos." All in `tools/build-rides.js` (the Pass 16 block) + `cfc-site/rides/rides.css`:
