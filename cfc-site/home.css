@@ -722,29 +722,44 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   .dot::after{display:none}
 }
 
-/* —— start here: three doors, each with a photo (Pass 6: no tile is text-only) ——
-   Phones: a small informational photo beside the words, all three in one screen.
-   Desktop: three columns, the photo on top at 4:5. */
-.paths{display:grid;gap:0;border-top:1px solid var(--asphalt)}
-.path{display:grid;grid-template-columns:112px minmax(0,1fr);grid-template-rows:auto auto 1fr auto;gap:2px 16px;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none}
-.path figure{grid-row:1 / span 4;margin:0;aspect-ratio:4/5;overflow:hidden;background:var(--bone-2)}
-.path img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
-.path .h2{font-size:clamp(2rem,3.2vw + 1.2rem,3.6rem);line-height:.97;letter-spacing:-.032em}
-.path p{margin:4px 0 0;color:var(--mute);max-width:40ch;font-size:15px;line-height:1.42}
-.path .link{margin-top:10px;align-self:end;justify-self:start}
-@media (hover:hover){.path:hover .h2{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}.path:hover img{transform:scale(1.035)}}
+/* —— Pass 22 (Oct 3, 2026): the picks. Robert: "The home page should have options. Pledge /
+   find a ride / find a race / or find a fundraiser." Four doors on the first screen, inside the
+   hero, in place of the button + link. Pledge is the one solid pick (asphalt; volt on hover, like
+   the hero button was); the other three are paper with a hairline. Two by two on every screen.
+   The three photo doors ("Start here") left the page: they asked the same question again. */
+.picks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:4px}
+.pick{
+  position:relative;
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+  gap:6px;
+  min-height:122px;
+  padding:14px 14px 13px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  color:var(--asphalt);
+  text-decoration:none;
+  transition:background-color .18s ease,border-color .18s ease,color .18s ease;
+}
+.pick .mk{width:26px;height:26px;color:var(--creosote-ink)}
+.pick::after{content:"\2192";position:absolute;top:13px;right:14px;font-family:var(--mono);font-size:15px;line-height:1;transition:transform .18s ease}
+.pick-name{align-self:end;font-weight:700;font-size:clamp(1.2rem,.8vw + 1.02rem,1.6rem);line-height:1.04;letter-spacing:-.024em;text-wrap:balance}
+.pick-sub{font-family:var(--mono);font-size:10px;line-height:1.35;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.pick--go{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}
+.pick--go .mk{color:var(--bone)}
+.pick--go .pick-sub{color:var(--dust)}
+@media (hover:hover){
+  .pick:hover{border-color:var(--asphalt)}
+  .pick:hover::after{transform:translateX(3px)}
+  .pick:hover .pick-name{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
+  .pick--go:hover{background:var(--volt);border-color:var(--volt);color:var(--asphalt)}
+  .pick--go:hover .mk,.pick--go:hover .pick-sub{color:var(--asphalt)}
+}
+@media (max-width:399px){.pick{padding-inline:12px}.pick-sub{letter-spacing:.07em}}   /* small phones: the subs stay on one line */
 @media (min-width:900px){
-  .paths{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px);align-items:start;border-top:0}
-  .path{grid-template-columns:1fr;grid-template-rows:auto auto auto 1fr auto;gap:10px 0;padding:0;border-bottom:0}
-  /* an editorial stagger: the three doors step down the page instead of lining up like cards */
-  .path:nth-child(2){margin-top:56px}
-  .path:nth-child(3){margin-top:112px}
-  .path figure{grid-row:auto;margin-bottom:8px;background:transparent;
-    -webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%),linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%);
-    -webkit-mask-composite:source-in;
-    mask-image:linear-gradient(to bottom,#000 78%,transparent 100%),linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%);
-    mask-composite:intersect}
-  .path p{font-size:16px}
+  .picks{max-width:560px;gap:10px}
+  .pick{min-height:132px;padding:16px 18px 15px}
+  .pick-sub{font-size:10.5px}
 }
 
 /* —— questions —— */
