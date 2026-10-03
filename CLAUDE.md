@@ -54,6 +54,19 @@ never redrawn." Live the same day.
   `.s--picks`, the old sub as its lede): two by two on phones, four across on desktop. The live
   line (`#live`, Pass 13) and the big tally (`.tally-hero`) are gone from the page; the ids
   home.js still looks for are guarded.
+- **Pass 23b, the same evening.** Robert, on his phone, live: "It's very blocky and doesn't really
+  blend." What was wrong: three asphalt rectangles across the top (I had boxed the menu button and
+  the nav Pledge to match the wheel square), a solid asphalt button, and a photo a step cooler than
+  the bone, so the fade read as a seam. Now: the nav is bone from the first pixel on every screen
+  (the only block left is the wheel's square; on phones the nav Pledge button is hidden — the hero's
+  button, the menu and the tally bar all carry it); the photo fades in from under the nav's edge
+  (`padding-top:var(--nav-h)` on `.hero-media`, mask transparent→#000 14%) and out at its foot
+  (44%→96%), so it sits in the paper instead of ending; the grade is a deeper bone duotone
+  (`strength=0.6, warm=0.10, sat=0.95, lift=0.15` — not the manifest default; re-run with those if
+  the photo changes); both actions are hairline buttons (`.btn--hero`, asphalt fill on hover); the
+  copy starts just under the fade (`margin-top:-3svh`) instead of inside it; the phone crop is
+  `scale(1.3)` from `12% 0`. The rule to keep: a photo band with hard edges or chrome boxed on top
+  of it reads as blocks to him — soften every edge and keep the chrome bare.
 
 ## Pass 22 — ten riders used the site (Oct 2–3, 2026)
 Robert: "Create ten agents, each one a biker, ten different ways that would use the site. Let them critique
