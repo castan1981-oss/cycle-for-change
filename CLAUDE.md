@@ -1,6 +1,6 @@
 # Cycle for Change — project context for automated content
 
-> **HOMEPAGE: the redesign is live since 2026-09-27; Pass 6 (Sept 29) brightened it.**
+> **HOMEPAGE: the redesign is live since 2026-09-27; Pass 6 (Sept 29) brightened it; Pass 23 (Oct 3) is the hero.**
 > `cfc-site/index.html` + `cfc-site/home.css` + `cfc-site/home.js` + `cfc-site/img/` (the
 > house-graded photos; the hero is a still, the film is gone). The Sept 18 coming-soon-based homepage and its files
 > (`coming-soon.css/js`, `main.js`, `next/home.css/js`, the feed video and audio) are
@@ -18,6 +18,42 @@
 > The cream/plum/yellow + Fraunces/Anton look is gone everywhere.
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
+
+## Pass 23 — the hero: one photograph, one kicker, the line, two actions (Oct 3, 2026)
+Robert, after the Assos homepage (an overcast photo, a mono kicker, one word, two buttons, nothing
+else) — the brief, in his words: "One photograph, full bleed. No collage, no sunset, no saguaro. One
+kicker in Space Mono: 10K · MILE 04,212 · PHX. Middots, not the double slash … One headline, the line.
+Two actions only: Get on the board. Read the last ride. The wheel in the corner, asphalt square,
+never redrawn." Live the same day.
+- **The photo** is the bike against the block wall, helmet hung on the bars: `photos/bike-detail.jpg`
+  → `photos/bike-detail-2x.jpg` (tools/sr.py) → `img/home-hero.jpg` (1600, phones) and
+  `img/home-hero-wide.jpg` (2400×1371, 7:4, desktop), house grade. `img/hero.jpg` / `hero-wide.jpg`
+  (the sunset crew) stay — `/rides/` and `/rides/az/` still use them as their photo band.
+- **Phones:** the photo runs edge to edge under a clear nav for ~54svh and dissolves into the bone
+  (mask 46%→90%); the copy starts inside the fade. Kicker, the line, two equal buttons, all on the
+  first screen. **Pass 12's "no photo above the fold on phones" is lifted by this brief.** The photo
+  is zoomed a touch into its top-left (`transform:scale(1.18)`) so the helmet and frame lead and the
+  rim falls into the fade. **Desktop:** the nav is bone from the first pixel (it has text links);
+  the photo runs the full width under its edge and fades in from the left (24%→60%), so the copy
+  keeps bone under it. No scrim, no type over the picture — the Pass 7/11 rules hold.
+- **The kicker** (`.kicker`): `10K · Mile <live count> · PHX`, Space Mono 12px/.18em, middots in
+  mute, never the retired `//`. The count is `[data-miles]` (home.js paints it), shown plain —
+  no zero-padding, no fraction, nothing against 10,000. "Since June 1 · the 10,000 start Jan 1"
+  now lives in the From-the-road side column (`.road-tally`, with `#rideCount` and `#daysTo`) and
+  in the phone bar. PHX is hand-kept.
+- **Two actions** (`.hero-acts`, `.btn--hero`): "Get on the board" → `/pledge/` (the one solid
+  button on the screen; volt on hover) and "Read the last ride" → `#road` (ghost; fills asphalt on
+  hover — volt never sits on bone). Side by side from 360px, stacked under it.
+- **The wheel in its asphalt square** (`.brand-sq`, 44px): the same drawing, on asphalt; the
+  currentColor arc and hub go bone, the creosote arc lifts to `--creosote-lift`. On phones the
+  wordmark hides while the nav is clear over the photo and comes back once the nav is bone; the
+  menu button carries an asphalt square there too; the nav Pledge button is 44px to match.
+  home.js: the nav watches `.hero-media` (clear while the photo is under it), the phone bar still
+  waits for the whole hero.
+- **The four picks** (Pass 22) left the hero for their own section right under it (`#picks`,
+  `.s--picks`, the old sub as its lede): two by two on phones, four across on desktop. The live
+  line (`#live`, Pass 13) and the big tally (`.tally-hero`) are gone from the page; the ids
+  home.js still looks for are guarded.
 
 ## Pass 22 — ten riders used the site (Oct 2–3, 2026)
 Robert: "Create ten agents, each one a biker, ten different ways that would use the site. Let them critique
@@ -92,7 +128,8 @@ Robert: "The home page should have options. Pledge/find a ride/find a race/ or f
 - The hero's button + link became four picks (`.picks` / `.pick` in home.css, the Pass 22 block where
   the old `.paths` rules were): **Pledge** (`/pledge/`, the one solid pick: asphalt, volt on hover),
   **Find a ride** (`/rides/`), **Find a race** (`/events/2027/races/`), **Find a fundraiser**
-  (`/events/2027/charity-rides/`). Two by two on every screen; all four sit on the first phone screen.
+  (`/events/2027/charity-rides/`). Two by two on every screen; all four sat on the first phone screen
+  until Pass 23 moved them to their own section right under the hero.
 - The "Start here" photo doors (Pledge / Ride / Read) left the page — they asked the same question
   again right below. `img/door-*.jpg` are still in /img/ if a door photo is wanted elsewhere.
 - Races is road, crit and stage only, so its page opens with "Racing off the road?" → Gravel ·
