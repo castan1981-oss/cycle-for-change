@@ -17,13 +17,20 @@ const esc = (s) => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</
 // Pass 8: the kicker picks the mark (cfc-site/rides/marks.svg)
 const BUILT_MARKS = { Checked: "checked", Dated: "date", Flagged: "flag", Free: "free", Direct: "signup", Live: "weather" };
 const BUILT_MARK = (k) => `<svg class="mk mk--built" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-${BUILT_MARKS[k] || "checked"}"/></svg>`;
-function BUILT(items, { heading = "How this list is built", id = "how-built" } = {}) {
-  return `
-  <section class="dir-built" id="${id}" aria-labelledby="${id}-h">
-    <h2 id="${id}-h">${esc(heading)}</h2>
+// Pass 21 (Oct 2, 2026): fold = true tucks the block under a one-line <details> summary — still in
+// the page for search, one tap for a person (Robert: "hide it behind stuff"). Hub pages fold it.
+function BUILT(items, { heading = "How this list is built", id = "how-built", fold = false } = {}) {
+  const grid = `
     <div class="dir-built-grid">
 ${items.map(([k, h, t]) => `      <div>${BUILT_MARK(k)}<span class="k">${esc(k)}</span><h3>${esc(h)}</h3><p>${t}</p></div>`).join("\n")}
-    </div>
+    </div>`;
+  if (fold) return `
+  <details class="dir-fold dir-built" id="${id}">
+    <summary>${esc(heading)}</summary>${grid}
+  </details>`;
+  return `
+  <section class="dir-built" id="${id}" aria-labelledby="${id}-h">
+    <h2 id="${id}-h">${esc(heading)}</h2>${grid}
   </section>`;
 }
 
@@ -58,7 +65,7 @@ ${kinds.map(([v, t]) => `        <label><input type="radio" name="kind" value="$
     </form>`;
   if (compact) return `
     <details class="dir-report dir-report--compact" id="${id}">
-      <summary>${stillOn ? `Rode it lately, or something's wrong? Tell us` : `Wrong, gone, or you run this ${esc(thing)}? Tell us`}</summary>
+      <summary>${stillOn ? `Rode it lately, or something's wrong? Tell us` : thing === "ride" ? `Wrong, gone, or you run this ride? Tell us` : thing === "event" ? `Missing an event, or a date changed?` : `Closed, moved, or missing?`}</summary>
       ${form}
     </details>`;
   return `

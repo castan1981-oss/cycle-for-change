@@ -733,8 +733,7 @@ function eventsIndex() {
   <article class="index">
     <p class="eyebrow">${events.length} events &middot; ${stateList.length} states &middot; updated ${esc(fmtDate(TODAY, { weekday: undefined }))}</p>
     <h1>US cycling events directory</h1>
-    <p class="lede">Bike events across the United States, one page each. Where it is, when it runs, how it started, how to sign up, what the weather is doing, and where to sleep, eat and get your bike fixed once you are there.</p>
-    <p class="calendar-link">Looking for everything next year? <a href="/events/2027/">The 2027 calendar</a> lists every organized US ride and race we could pin down, with confirmed and projected dates.</p>
+    <p class="lede">The big rides, one page each: the date, the sign-up, the weather, and where to sleep and eat. <a href="/events/2027/">Everything else is on the 2027 calendar.</a></p>
 
     <section><h2>Coming up</h2>
       ${upcoming.length ? `<ul class="tiles-p tiles-p--events">${upcoming.map((e) => eventCard(e)).join("")}</ul>` : `<p>Dates for the next editions are still being announced. Browse by state below.</p>`}
@@ -750,8 +749,8 @@ ${BLOCKS.BUILT([
       ["Direct", "Sign-up goes to them", "Dates and prices change, so the sign-up link always goes to the organizer, never through us."],
       ["Live", "Weather for the town", "Every event page carries a live forecast for the host town."],
       ["Free", "No paid placement", "Nobody pays to be listed. Town pages list only places we could confirm are open."],
-    ], { heading: "How this directory works" })}
-${BLOCKS.REPORT({ thing: "event" })}
+    ], { heading: "How this directory works", fold: true })}
+${BLOCKS.REPORT({ thing: "event", compact: true })}
   </article>
 `;
   return head({ title, description, url, ld: [ld] }) + body + foot();
@@ -802,14 +801,14 @@ function townsIndex() {
   <article class="index">
     <p class="eyebrow">${towns.length} towns &middot; ${stateList.length} states${destinations ? ` &middot; ${destinations} full guide${destinations === 1 ? "" : "s"}` : ""}</p>
     <h1>Town guides for cyclists</h1>
-    <p class="lede">A guide for every town in the directory: the ones that host a ride, and the ones worth bringing a bike to. Each has live weather and pages for hotels, restaurants and bike shops we could confirm. The full guides add the routes, the coffee, what to do off the bike, and how to get your bike there.</p>
+    <p class="lede">Where to ride, sleep, eat and get the bike fixed in every town we list.</p>
     <section class="by-state" aria-labelledby="towns-h"><h2 id="towns-h">Every town, A to Z by state</h2>
       <div class="tiles-p tiles-p--towns">
         ${sorted.map(townTile).join("\n        ")}
       </div>
       <p class="town-more">${stateList.map((s) => `<a href="/events/state/${s.slug}/">${esc(s.name)}</a>`).join(" &middot; ")}</p>
     </section>
-${BLOCKS.REPORT({ thing: "place" })}
+${BLOCKS.REPORT({ thing: "place", compact: true })}
   </article>
 `;
   return head({ title, description, url, ld: [] }) + body + foot();

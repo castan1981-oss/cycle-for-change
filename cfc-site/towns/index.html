@@ -79,7 +79,7 @@
   <article class="index">
     <p class="eyebrow">13 towns &middot; 10 states &middot; 1 full guide</p>
     <h1>Town guides for cyclists</h1>
-    <p class="lede">A guide for every town in the directory: the ones that host a ride, and the ones worth bringing a bike to. Each has live weather and pages for hotels, restaurants and bike shops we could confirm. The full guides add the routes, the coffee, what to do off the bike, and how to get your bike there.</p>
+    <p class="lede">Where to ride, sleep, eat and get the bike fixed in every town we list.</p>
     <section class="by-state" aria-labelledby="towns-h"><h2 id="towns-h">Every town, A to Z by state</h2>
       <div class="tiles-p tiles-p--towns">
         <a class="tile-p tile-p--art" href="/towns/arizona/tucson/" style="--l:6"><img class="tile-art" src="/towns/art/tucson.svg" alt="" loading="lazy" decoding="async" width="200" height="200"><span class="t">Tucson</span><span class="b">El Tour de Tucson</span><span class="c"><b class="n num">1</b><span class="s">event<br>AZ</span></span></a>
@@ -99,13 +99,9 @@
       <p class="town-more"><a href="/events/state/arizona/">Arizona</a> &middot; <a href="/events/state/california/">California</a> &middot; <a href="/events/state/colorado/">Colorado</a> &middot; <a href="/events/state/kansas/">Kansas</a> &middot; <a href="/events/state/new-hampshire/">New Hampshire</a> &middot; <a href="/events/state/new-york/">New York</a> &middot; <a href="/events/state/south-carolina/">South Carolina</a> &middot; <a href="/events/state/texas/">Texas</a> &middot; <a href="/events/state/washington/">Washington</a> &middot; <a href="/events/state/wisconsin/">Wisconsin</a></p>
     </section>
 
-  <section class="dir-report" id="add" aria-labelledby="add-h">
-    <div class="dir-report-head">
-      <p class="eyebrow">Free to list</p>
-      <h2 id="add-h">Closed, moved, or missing?</h2>
-      <p>Tell us what's new or what changed. We check it against the place's own page before it goes up. Listing is free and always will be.</p>
-    </div>
-    <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
+    <details class="dir-report dir-report--compact" id="add">
+      <summary>Closed, moved, or missing?</summary>
+      <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
       <input type="hidden" name="form-name" value="ride-report">
       <input type="hidden" name="page" value="" data-page>
       <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
@@ -123,7 +119,7 @@
       <input class="field" id="rr-email-2" name="email" type="email" autocomplete="email" inputmode="email">
       <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
     </form>
-  </section>
+    </details>
   </article>
 
 <section class="pledge" aria-labelledby="pledge-h">
