@@ -257,7 +257,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   color:var(--asphalt);
   overflow:hidden;
 }
-.hero-media{position:relative;z-index:0;height:clamp(300px,56svh,620px);margin:0;padding-top:var(--nav-h);box-sizing:border-box;background:var(--bone);overflow:hidden}
+.hero-media{position:relative;z-index:0;height:clamp(300px,50svh,620px);margin:0;padding-top:var(--nav-h);box-sizing:border-box;background:var(--bone);overflow:hidden}
 .hero-media picture{
   display:block;width:100%;height:100%;
   -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 44%,transparent 96%);
@@ -290,9 +290,11 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .kicker i{font-style:normal;color:var(--mute)}
 .kicker b{font-weight:700}
 .kicker abbr{text-decoration:none}
-/* two actions, equal, both hairlines (Pass 23b: a solid block was the heaviest thing on the screen);
-   they fill asphalt on hover */
+/* the actions, equal hairlines (Pass 23b: a solid block was the heaviest thing on the screen);
+   they fill asphalt on hover. Pass 23c: four of them — the pledge and the three finds — two by two
+   on phones, one row on desktop, all above the fold. The last ride is the quiet link under them. */
 .hero-acts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.hero-more{align-self:flex-start;margin-top:2px;min-height:44px;align-items:flex-end;color:var(--asphalt)}
 .btn--hero{min-height:52px;padding:0 10px;font-size:.6875rem;letter-spacing:.1em;background:transparent;color:var(--asphalt);border-color:var(--asphalt)}
 @media (hover:hover){.btn--hero:hover{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}}
 @media (max-width:359px){.hero-acts{grid-template-columns:minmax(0,1fr)}}
@@ -303,10 +305,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .dot--bone::after{border-color:var(--bone)}
 @keyframes ping{0%{transform:scale(.4);opacity:.9}70%,100%{transform:scale(1.25);opacity:0}}
 
-/* —— what are you here for (Pass 22; its own section since Pass 23) —— */
-.s--picks{padding-block:clamp(40px,5vw,72px);background:var(--bone)}
-.picks-head{display:flex;flex-direction:column;gap:14px;margin-bottom:clamp(20px,2.4vw,32px)}
-.picks-lede{color:var(--mute);max-width:40ch;font-size:clamp(1.05rem,.6vw + .95rem,1.3rem)}
+.how-lede{color:var(--mute);max-width:48ch;font-size:clamp(1.05rem,.6vw + .95rem,1.3rem)}
 .road-tally{margin:0 0 14px;font-family:var(--mono);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dust);line-height:1.5}
 .road-tally b{font-weight:700;color:var(--bone)}
 
@@ -335,12 +334,12 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   }
   .hero-media img{object-position:62% 44%;transform:none}
   .hero-in{margin-top:0;padding-top:calc(var(--nav-h) + 48px);padding-bottom:clamp(40px,4.5vw,64px)}
-  .hero-copy{max-width:600px;gap:clamp(20px,2vw,30px)}
+  .hero-copy{max-width:760px;gap:clamp(20px,2vw,30px)}
+  .hero-copy .h1{max-width:600px}
   .kicker{font-size:.8125rem}
-  .hero-acts{max-width:460px}
+  .hero-acts{grid-template-columns:repeat(4,minmax(0,1fr));max-width:760px}
   .btn--hero{padding:0 18px;font-size:.71875rem;letter-spacing:.14em}
   .nav .btn--sm{display:inline-flex}
-  .picks-lede{max-width:52ch}
   .specs{max-width:640px}
   .specs dt{font-size:10.5px}
 }
@@ -723,44 +722,6 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   .dot::after{display:none}
 }
 
-/* —— Pass 22 (Oct 3, 2026): the picks. Robert: "The home page should have options. Pledge /
-   find a ride / find a race / or find a fundraiser." Pledge is the one solid pick (asphalt; volt
-   on hover); the other three are paper with a hairline. Pass 23 moved them out of the hero into
-   their own section right under it (#picks): two by two on phones, four across on desktop.
-   The three photo doors ("Start here") left the page: they asked the same question again. */
-.picks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-.pick{
-  position:relative;
-  display:grid;
-  grid-template-rows:auto 1fr auto;
-  gap:6px;
-  min-height:122px;
-  padding:14px 14px 13px;
-  background:var(--paper);
-  border:1px solid var(--line);
-  color:var(--asphalt);
-  text-decoration:none;
-  transition:background-color .18s ease,border-color .18s ease,color .18s ease;
-}
-.pick .mk{width:26px;height:26px;color:var(--creosote-ink)}
-.pick::after{content:"\2192";position:absolute;top:13px;right:14px;font-family:var(--mono);font-size:15px;line-height:1;transition:transform .18s ease}
-.pick-name{align-self:end;font-weight:700;font-size:clamp(1.2rem,.8vw + 1.02rem,1.6rem);line-height:1.04;letter-spacing:-.024em;text-wrap:balance}
-.pick-sub{font-family:var(--mono);font-size:10px;line-height:1.35;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
-.pick--go{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}
-.pick--go .mk{color:var(--bone)}
-.pick--go .pick-sub{color:var(--dust)}
-@media (hover:hover){
-  .pick:hover{border-color:var(--asphalt)}
-  .pick:hover::after{transform:translateX(3px)}
-  .pick:hover .pick-name{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
-  .pick--go:hover{background:var(--volt);border-color:var(--volt);color:var(--asphalt)}
-  .pick--go:hover .mk,.pick--go:hover .pick-sub{color:var(--asphalt)}
-}
-@media (max-width:399px){.pick{padding-inline:12px}.pick-sub{letter-spacing:.07em}}   /* small phones: the subs stay on one line */
-@media (min-width:900px){
-  .picks{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
-  .pick{min-height:148px;padding:16px 18px 15px}
-  .pick-sub{font-size:10.5px}
 }
 
 /* —— questions —— */

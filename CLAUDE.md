@@ -67,6 +67,16 @@ never redrawn." Live the same day.
   copy starts just under the fade (`margin-top:-3svh`) instead of inside it; the phone crop is
   `scale(1.3)` from `12% 0`. The rule to keep: a photo band with hard edges or chrome boxed on top
   of it reads as blocks to him — soften every edge and keep the chrome bare.
+- **Pass 23c, same evening.** Robert: "I also wanna break one of the rules and make sure that we
+  put Find a ride. Find a race. Find a fundraiser above the fold." So the hero carries four
+  hairline buttons — Get on the board (`/pledge/`), Find a ride (`/rides/`), Find a race
+  (`/events/2027/races/`), Find a fundraiser (`/events/2027/charity-rides/`) — two by two on phones
+  (`.hero-acts`), one row on desktop, and "Read the last ride" (`#road`) is the quiet `.link`
+  under them (`.hero-more`). The photo is 50svh on phones so the fourth button clears a 664px
+  viewport. The separate picks section (`#picks`, Pass 22/23) is gone — it asked the same question
+  twice — and its mission sentence now sits under the How-it-works h2 (`.how-lede`). The `.pick`
+  styles left home.css with it. The hand-kept counts that rode on the picks (1,407 rides, 112
+  charity rides) no longer appear in the hero; the menu still carries 1407 / 640.
 
 ## Pass 22 — ten riders used the site (Oct 2–3, 2026)
 Robert: "Create ten agents, each one a biker, ten different ways that would use the site. Let them critique
@@ -138,7 +148,7 @@ lasts, and what we got wrong — on the thesis that SEO is the base under AI ans
 
 ## Pass 22 — the homepage asks what you came for (Oct 3, 2026)
 Robert: "The home page should have options. Pledge/find a ride/find a race/ or find a fundraiser."
-- The hero's button + link became four picks (`.picks` / `.pick` in home.css, the Pass 22 block where
+- The hero's button + link became four picks (`.picks` / `.pick` in home.css — removed in Pass 23c, when the four links became the hero's own buttons; the Pass 22 block was where
   the old `.paths` rules were): **Pledge** (`/pledge/`, the one solid pick: asphalt, volt on hover),
   **Find a ride** (`/rides/`), **Find a race** (`/events/2027/races/`), **Find a fundraiser**
   (`/events/2027/charity-rides/`). Two by two on every screen; all four sat on the first phone screen
