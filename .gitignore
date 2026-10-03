@@ -10,3 +10,7 @@ social/video/posted/*.mov
 
 # git bundles used to hand branches to the Mac (never commit them)
 *.bundle
+
+# installed by Netlify on every deploy
+node_modules/
+package-lock.json

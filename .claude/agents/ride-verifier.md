@@ -74,7 +74,13 @@ A 202 or 403 with a tiny body is a bot wall, not a dead page: fall back to WebFe
 - `unreachable` (amber) — nothing loaded three Mondays running. Try WebFetch, the other sources.
 - `moved` (amber) — the page now redirects to a homepage. Find the ride's page on the new site.
 - Rider reports: a `gone` or `changed` report is a lead, never proof on its own. A `still-on`
-  report supports a confirmation but doesn't replace the source.
+  report supports a confirmation but doesn't replace the source. A rider's `new_time` / `from_date`
+  says where to look.
+- `host-update` (someone ticked "I run this ride" and left an email; `said` = changed · gone ·
+  still-on, maybe `new_time` + `from_date`): no warning shows and no clock runs. Check the host's
+  page as usual. If it isn't posted there, write `unreachable` with the note "host update
+  <netlify_id>: reply to confirm": a person replies to that email from the Netlify submission,
+  and only their answer can become a `changed` with `start_times` and a new `verified_on`.
 
 ## The outcomes (one per ride)
 

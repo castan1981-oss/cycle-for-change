@@ -131,3 +131,132 @@
   to = "/rides/sc/charleston/"
   status = 301
   force = true
+
+# Pass 22 (Oct 2, 2026): a hub whose rides all sit inside a bigger hub is no longer built (Watford was an exact
+# copy of London's 28). Each goes to the hub that covers it; the ones that had short pages (/road/, /saturday/,
+# /all/ ...) send those too — every one of them exists on the target.
+[[redirects]]
+  from = "/rides/az/fountain-hills/"
+  to = "/rides/az/scottsdale/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/az/fountain-hills/*"
+  to = "/rides/az/scottsdale/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/ga/roswell/"
+  to = "/rides/ga/atlanta/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/ga/roswell/*"
+  to = "/rides/ga/atlanta/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/tx/pearland/"
+  to = "/rides/tx/houston/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/tx/pearland/*"
+  to = "/rides/tx/houston/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/nc/raleigh/"
+  to = "/rides/nc/durham/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/nc/raleigh/*"
+  to = "/rides/nc/durham/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/md/baltimore/"
+  to = "/rides/md/bowie/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/nj/morristown/"
+  to = "/rides/nj/jersey-city/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/pa/horsham/"
+  to = "/rides/pa/philadelphia/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/ok/norman/"
+  to = "/rides/ok/oklahoma-city/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/fl/sanford/"
+  to = "/rides/fl/orlando/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/ri/newport/"
+  to = "/rides/ri/providence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/pa/trexlertown/"
+  to = "/rides/pa/easton/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/ny/centereach/"
+  to = "/rides/ny/old-bethpage/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/va/virginia-beach/"
+  to = "/rides/va/norfolk/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/pa/edinboro/"
+  to = "/rides/pa/erie/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/de/millsboro/"
+  to = "/rides/de/lewes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/united-kingdom/watford/"
+  to = "/rides/united-kingdom/london/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rides/united-kingdom/watford/*"
+  to = "/rides/united-kingdom/london/:splat"
+  status = 301
+  force = true

@@ -65,6 +65,7 @@
     <li><a href="/pledge/">Pledge a mile <span>Free</span></a></li>
     <li><a href="/find-a-ride/">Find a ride <span>1407</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>640</span></a></li>
+    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
@@ -74,7 +75,7 @@
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;miles since June 1 &middot; 10,000 in 2027 &middot; all on the bike</span></p>
+<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1 &middot; the 10,000 start Jan 1</span></p>
 <main id="main" class="wrap">
 
   <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/towns/">Towns</a></li><li><a href="/towns/colorado/leadville/">Leadville</a></li><li><span aria-current="page">Bike shops in Leadville: repairs, parts, rentals</span></li></ol></nav>
@@ -84,15 +85,16 @@
     <p class="lede">Bike shops in Leadville that do repairs. If something breaks in transit or the night before, start here. Call ahead on event weekends. Mechanics get slammed.</p>
     <p class="for-events">For: <a href="/events/leadville-trail-100-mtb/">Leadville Trail 100 MTB</a>.</p>
     <h2 class="visually-hidden">Bike shops in Leadville: repairs, parts, rentals, listed</h2>
+    
     <ol class="places"><li class="place">
         <h3><a href="https://www.colbikes.com/" rel="noopener">Cycles of Life</a></h3>
-        <p class="place-meta">309 Harrison Ave, Leadville, CO 80461 &middot; 719-486-5533</p>
+        <p class="place-meta">309 Harrison Ave, Leadville, CO 80461 &middot; <a class="tel" href="tel:+17194865533">719-486-5533</a></p>
         <p class="place-tags"><span>repair</span><span>rental</span><span>parts</span><span>fitting</span><span>suspension</span></p>
         <p>Full-service shop on Harrison: tune-ups, custom wheels, suspension and fork overhauls, bike fitting; rents mountain, hardtail, gravel and e-bikes for the Mineral Belt Trail and singletrack</p>
         
       </li><li class="place">
         <h3><a href="https://www.leadvelobicicasa.com/" rel="noopener">Leadvelo Bicicasa</a></h3>
-        <p class="place-meta">719 Harrison Ave, Leadville, CO 80461 &middot; 719-293-2362</p>
+        <p class="place-meta">719 Harrison Ave, Leadville, CO 80461 &middot; <a class="tel" href="tel:+17192932362">719-293-2362</a></p>
         <p class="place-tags"><span>repair</span><span>rental</span><span>parts</span></p>
         <p>All-bikes, all-people shop at nearly 10,200 feet, with service on every brake and drivetrain type, tubeless setups, wheel building, rentals and bikepacking gear; Spanish spoken. Closed Monday-Tuesday</p>
         
@@ -105,7 +107,7 @@
 
     <details class="dir-report dir-report--compact" id="fix">
       <summary>Closed, moved, or missing?</summary>
-      <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
+      <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report data-thing="place">
       <input type="hidden" name="form-name" value="ride-report">
       <input type="hidden" name="page" value="" data-page>
       <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
@@ -115,11 +117,35 @@
         <label><input type="radio" name="kind" value="changed" checked> <span>Something changed</span></label>
         <label><input type="radio" name="kind" value="gone"> <span>It's gone</span></label>
       </fieldset>
+      <label class="dir-report-role"><input type="checkbox" name="role" value="host" data-role> <span>I run this place</span></label>
       <label class="lab" for="rr-what-38">Place name or link</label>
       <input class="field" id="rr-what-38" name="ride" type="text" required autocomplete="off" value="Bike shops in Leadville: repairs, parts, rentals">
-      <label class="lab" for="rr-details-38">What should we know? <small>Day, time, start, pace, who runs it</small></label>
+      <div class="dir-report-more" data-show="never" hidden>
+        <p class="dir-report-note">New time? Both optional.</p>
+        <div class="dir-report-more--two">
+          <div><label class="lab" for="rr-ntime-38">New start time</label>
+          <input class="field" id="rr-ntime-38" name="new_time" type="time"></div>
+          <div><label class="lab" for="rr-from-38">Starting</label>
+          <input class="field" id="rr-from-38" name="from_date" type="date"></div>
+        </div>
+      </div>
+      <div class="dir-report-more" data-show="never" hidden>
+        <fieldset class="dir-report-chips dir-report-chips--days"><legend class="lab">Day(s)</legend><label><input type="checkbox" name="days" value="mon"> <span>Mon</span></label><label><input type="checkbox" name="days" value="tue"> <span>Tue</span></label><label><input type="checkbox" name="days" value="wed"> <span>Wed</span></label><label><input type="checkbox" name="days" value="thu"> <span>Thu</span></label><label><input type="checkbox" name="days" value="fri"> <span>Fri</span></label><label><input type="checkbox" name="days" value="sat"> <span>Sat</span></label><label><input type="checkbox" name="days" value="sun"> <span>Sun</span></label></fieldset>
+        <div class="dir-report-more--two">
+          <div><label class="lab" for="rr-time-38">Start time</label>
+          <input class="field" id="rr-time-38" name="time" type="time"></div>
+          <div><label class="lab" for="rr-start-38">Meeting spot</label>
+          <input class="field" id="rr-start-38" name="start" type="text" autocomplete="off"></div>
+        </div>
+        <fieldset class="dir-report-chips"><legend class="lab">Drop policy</legend><label><input type="radio" name="drop" value="no-drop"> <span>Waits for you</span></label><label><input type="radio" name="drop" value="groups"> <span>Pace groups</span></label><label><input type="radio" name="drop" value="drop"> <span>Drops</span></label></fieldset>
+        <fieldset class="dir-report-chips"><legend class="lab">Made for <small>Only if the ride says so</small></legend><label><input type="checkbox" name="for" value="beginner"> <span>Beginners</span></label><label><input type="checkbox" name="for" value="lgbtq"> <span>LGBTQ+</span></label><label><input type="checkbox" name="for" value="wtf"> <span>Women/trans/femme/nonbinary</span></label><label><input type="checkbox" name="for" value="ebike"> <span>E-bikes welcome</span></label></fieldset>
+        <label class="lab" for="rr-link-38">Link <small>Where you post the ride</small></label>
+        <input class="field" id="rr-link-38" name="link" type="url" inputmode="url" autocomplete="off" placeholder="https://">
+        <p class="dir-report-note">Only on Instagram? Leave your email — we'll confirm with you.</p>
+      </div>
+      <label class="lab" for="rr-details-38">What should we know? <small data-hint-new="Anything else: pace, distance, who runs it">Day, time, start, pace, who runs it</small></label>
       <textarea class="field" id="rr-details-38" name="details" rows="3"></textarea>
-      <label class="lab" for="rr-email-38">Your email <small>Optional. Only if we have a question.</small></label>
+      <label class="lab" for="rr-email-38">Your email <small data-hint-host="We'll reply to confirm it with you before the listing changes.">Optional. We'll tell you when it's live, or ask if we have a question.</small></label>
       <input class="field" id="rr-email-38" name="email" type="email" autocomplete="email" inputmode="email">
       <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
     </form>
@@ -130,7 +156,7 @@
 <section class="pledge" aria-labelledby="pledge-h">
   <p class="pledge-num" aria-hidden="true">10000</p>
   <h2 class="pledge-line" id="pledge-h">I do the miles. You decide who they&rsquo;re for.</h2>
-  <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, every one of them for queer communities. You pledge a few cents a mile and vote where the money goes. It starts January 1.</p>
+  <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, every one of them for queer communities. You pledge a few cents a mile and pick which org it goes to. It starts January 1.</p>
   <div class="cta-row"><a class="btn btn--bone" href="/pledge/">Pledge a mile</a><a class="btn btn--ghost" href="/pledge/#vote">See the orgs</a><a class="link" href="/">The live count</a></div>
 </section>
 </main>

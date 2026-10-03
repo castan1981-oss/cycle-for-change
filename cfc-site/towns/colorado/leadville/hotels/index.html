@@ -65,6 +65,7 @@
     <li><a href="/pledge/">Pledge a mile <span>Free</span></a></li>
     <li><a href="/find-a-ride/">Find a ride <span>1407</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>640</span></a></li>
+    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
@@ -74,7 +75,7 @@
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;miles since June 1 &middot; 10,000 in 2027 &middot; all on the bike</span></p>
+<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1 &middot; the 10,000 start Jan 1</span></p>
 <main id="main" class="wrap">
 
   <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/towns/">Towns</a></li><li><a href="/towns/colorado/leadville/">Leadville</a></li><li><span aria-current="page">Hotels in Leadville for cyclists</span></li></ol></nav>
@@ -84,30 +85,31 @@
     <p class="lede">Places to stay in Leadville when you are in town to ride. Picked for being near the riding, easy with a bike, or cheap. Book early for event weekends. Rooms go first.</p>
     <p class="for-events">For: <a href="/events/leadville-trail-100-mtb/">Leadville Trail 100 MTB</a>.</p>
     <h2 class="visually-hidden">Hotels in Leadville for cyclists, listed</h2>
+    <p class="for-events">4 picks · ask about the bike when you book. A hotel's bike rule counts here only when it's on the hotel's own page.</p>
     <ol class="places"><li class="place">
         <h3><a href="https://delawarehotel.com/" rel="noopener">Historic Delaware Hotel</a></h3>
         <p class="place-meta">$$ &middot; 700 Harrison Ave, Leadville, CO 80461</p>
         
         <p>1886 Victorian with 36 rooms and a lobby bar on Harrison, a block from the LT100 start; three floors, steep stairs, no elevator</p>
-        
+        <p class="bike-policy"><b>Bike:</b> No stated policy — ask when you book</p>
       </li><li class="place">
         <h3><a href="https://timberlineleadville.com/" rel="noopener">The Timberline</a></h3>
         <p class="place-meta">$$ &middot; 216 Harrison Ave, Leadville, CO 80461</p>
         
         <p>Renovated motel on the south end of Harrison with kitchenette bunk units and a three-bedroom loft; consistently the town&#39;s top-rated stay</p>
-        
+        <p class="bike-policy"><b>Bike:</b> No stated policy — ask when you book</p>
       </li><li class="place">
         <h3><a href="https://columbineinn.com/" rel="noopener">Columbine Inn &amp; Suites</a></h3>
         <p class="place-meta">$ &middot; 2019 N Poplar St, Leadville, CO 80461</p>
         
         <p>Value motel on the north edge of town with free breakfast and parking; a short ride to the start</p>
-        
+        <p class="bike-policy"><b>Bike:</b> No stated policy — ask when you book</p>
       </li><li class="place">
         <h3><a href="https://www.stayinntheclouds.com/" rel="noopener">Inn the Clouds Hostel &amp; Inn</a></h3>
         <p class="place-meta">$ &middot; 500 E 7th St, Leadville, CO 80461</p>
         
         <p>Hostel dorms and private ensuite rooms five blocks from downtown, with a full kitchen and steel bike racks in the garage from June on</p>
-        
+        <p class="bike-policy"><b>Bike:</b> No stated policy — ask when you book</p>
       </li></ol>
     <nav class="res-links-row" aria-label="Other resources">
       <a href="/towns/colorado/leadville/restaurants/">Restaurants in Leadville for cyclists</a><a href="/towns/colorado/leadville/bike-shops/">Bike shops in Leadville: repairs, parts, rentals</a>
@@ -117,7 +119,7 @@
 
     <details class="dir-report dir-report--compact" id="fix">
       <summary>Closed, moved, or missing?</summary>
-      <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
+      <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report data-thing="place">
       <input type="hidden" name="form-name" value="ride-report">
       <input type="hidden" name="page" value="" data-page>
       <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
@@ -127,11 +129,35 @@
         <label><input type="radio" name="kind" value="changed" checked> <span>Something changed</span></label>
         <label><input type="radio" name="kind" value="gone"> <span>It's gone</span></label>
       </fieldset>
+      <label class="dir-report-role"><input type="checkbox" name="role" value="host" data-role> <span>I run this place</span></label>
       <label class="lab" for="rr-what-36">Place name or link</label>
       <input class="field" id="rr-what-36" name="ride" type="text" required autocomplete="off" value="Hotels in Leadville for cyclists">
-      <label class="lab" for="rr-details-36">What should we know? <small>Day, time, start, pace, who runs it</small></label>
+      <div class="dir-report-more" data-show="never" hidden>
+        <p class="dir-report-note">New time? Both optional.</p>
+        <div class="dir-report-more--two">
+          <div><label class="lab" for="rr-ntime-36">New start time</label>
+          <input class="field" id="rr-ntime-36" name="new_time" type="time"></div>
+          <div><label class="lab" for="rr-from-36">Starting</label>
+          <input class="field" id="rr-from-36" name="from_date" type="date"></div>
+        </div>
+      </div>
+      <div class="dir-report-more" data-show="never" hidden>
+        <fieldset class="dir-report-chips dir-report-chips--days"><legend class="lab">Day(s)</legend><label><input type="checkbox" name="days" value="mon"> <span>Mon</span></label><label><input type="checkbox" name="days" value="tue"> <span>Tue</span></label><label><input type="checkbox" name="days" value="wed"> <span>Wed</span></label><label><input type="checkbox" name="days" value="thu"> <span>Thu</span></label><label><input type="checkbox" name="days" value="fri"> <span>Fri</span></label><label><input type="checkbox" name="days" value="sat"> <span>Sat</span></label><label><input type="checkbox" name="days" value="sun"> <span>Sun</span></label></fieldset>
+        <div class="dir-report-more--two">
+          <div><label class="lab" for="rr-time-36">Start time</label>
+          <input class="field" id="rr-time-36" name="time" type="time"></div>
+          <div><label class="lab" for="rr-start-36">Meeting spot</label>
+          <input class="field" id="rr-start-36" name="start" type="text" autocomplete="off"></div>
+        </div>
+        <fieldset class="dir-report-chips"><legend class="lab">Drop policy</legend><label><input type="radio" name="drop" value="no-drop"> <span>Waits for you</span></label><label><input type="radio" name="drop" value="groups"> <span>Pace groups</span></label><label><input type="radio" name="drop" value="drop"> <span>Drops</span></label></fieldset>
+        <fieldset class="dir-report-chips"><legend class="lab">Made for <small>Only if the ride says so</small></legend><label><input type="checkbox" name="for" value="beginner"> <span>Beginners</span></label><label><input type="checkbox" name="for" value="lgbtq"> <span>LGBTQ+</span></label><label><input type="checkbox" name="for" value="wtf"> <span>Women/trans/femme/nonbinary</span></label><label><input type="checkbox" name="for" value="ebike"> <span>E-bikes welcome</span></label></fieldset>
+        <label class="lab" for="rr-link-36">Link <small>Where you post the ride</small></label>
+        <input class="field" id="rr-link-36" name="link" type="url" inputmode="url" autocomplete="off" placeholder="https://">
+        <p class="dir-report-note">Only on Instagram? Leave your email — we'll confirm with you.</p>
+      </div>
+      <label class="lab" for="rr-details-36">What should we know? <small data-hint-new="Anything else: pace, distance, who runs it">Day, time, start, pace, who runs it</small></label>
       <textarea class="field" id="rr-details-36" name="details" rows="3"></textarea>
-      <label class="lab" for="rr-email-36">Your email <small>Optional. Only if we have a question.</small></label>
+      <label class="lab" for="rr-email-36">Your email <small data-hint-host="We'll reply to confirm it with you before the listing changes.">Optional. We'll tell you when it's live, or ask if we have a question.</small></label>
       <input class="field" id="rr-email-36" name="email" type="email" autocomplete="email" inputmode="email">
       <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
     </form>
@@ -142,7 +168,7 @@
 <section class="pledge" aria-labelledby="pledge-h">
   <p class="pledge-num" aria-hidden="true">10000</p>
   <h2 class="pledge-line" id="pledge-h">I do the miles. You decide who they&rsquo;re for.</h2>
-  <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, every one of them for queer communities. You pledge a few cents a mile and vote where the money goes. It starts January 1.</p>
+  <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, every one of them for queer communities. You pledge a few cents a mile and pick which org it goes to. It starts January 1.</p>
   <div class="cta-row"><a class="btn btn--bone" href="/pledge/">Pledge a mile</a><a class="btn btn--ghost" href="/pledge/#vote">See the orgs</a><a class="link" href="/">The live count</a></div>
 </section>
 </main>

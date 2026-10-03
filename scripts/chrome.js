@@ -110,6 +110,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
     <li><a href="/pledge/">Pledge a mile <span>Free</span></a></li>
     <li><a href="/find-a-ride/">Find a ride ${n(RIDE_COUNT)}</a></li>
     <li><a href="/events/2027/">2027 calendar ${n(CAL_COUNT)}</a></li>
+    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
@@ -119,7 +120,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;miles since June 1 &middot; 10,000 in 2027 &middot; all on the bike</span></p>`;
+<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1 &middot; the 10,000 start Jan 1</span></p>`;
 
 const FOOTER = `<footer class="foot site-foot">
   <div class="wrap">
@@ -173,7 +174,7 @@ function pledge({ line, copy } = {}) {
   return `<section class="pledge" aria-labelledby="pledge-h">
   <p class="pledge-num" aria-hidden="true">10000</p>
   <h2 class="pledge-line" id="pledge-h">${line || "I do the miles. You decide who they&rsquo;re for."}</h2>
-  <p class="pledge-copy">${copy || "In 2027 I ride 10,000 miles, all on the bike, every one of them for queer communities. You pledge a few cents a mile and vote where the money goes. It starts January 1."}</p>
+  <p class="pledge-copy">${copy || "In 2027 I ride 10,000 miles, all on the bike, every one of them for queer communities. You pledge a few cents a mile and pick which org it goes to. It starts January 1."}</p>
   <div class="cta-row"><a class="btn btn--bone" href="/pledge/">Pledge a mile</a><a class="btn btn--ghost" href="/pledge/#vote">See the orgs</a><a class="link" href="/">The live count</a></div>
 </section>`;
 }

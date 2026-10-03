@@ -71,7 +71,7 @@ function line(data) {
   const money = (v) => parseFloat(String(v || "").replace(/[^0-9.]/g, "")) || 0;
   const fmt = (n) => Math.round(n).toLocaleString("en-US");
   const org = ORG_NAMES[String(data.org || "")];
-  const to = org ? `to ${org}` : "to whoever wins the vote";
+  const to = org ? `to ${org}` : "to the org you pick";
   if (rate === "flat") {
     const amt = money(data.amount);
     return `${amt ? "$" + fmt(amt) + ", flat" : "A flat pledge"}, ${to}.`;
@@ -79,7 +79,7 @@ function line(data) {
   const cents = parseInt(rate, 10) || 2;
   const total = (cents * GOAL) / 100;
   const cap = money(data.cap);
-  let s = `${cents}¢ a mile. If I ride all 10,000 in 2027, that’s $${fmt(total)}`;
+  let s = `${cents}¢ a mile. If I ride all 10,000 in 2027, that’s $${fmt(total)}`;   // past 10,000 it keeps counting unless capped (Robert, Oct 3, 2026)
   if (cap && cap < total) s += `, capped at $${fmt(cap)},`;
   return `${s} ${to}.`;
 }
@@ -96,7 +96,7 @@ function body(name, data) {
     "",
     "What happens next:",
     "- Mile updates about once a month, from me. The miles, the money, where it went.",
-    "- Your vote counts at year-end. Change it any time before Dec 31, 2027 at cycleforchange.org/pledge/",
+    "- Your pick is yours. Change it any time before Dec 31, 2027 at cycleforchange.org/pledge/",
     "- January 2028: one email with the final miles, your number, and one link to give straight to the org. The money never touches me.",
     "",
     "Need to change something? Reply to this email.",

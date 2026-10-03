@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>Pledge a mile — Cycle for Change</title>
-  <meta name="description" content="Get on the board. Pledge a few cents a mile for 10,000 miles in 2027, all on the bike, for queer communities. Free to join, no card today, and you vote where the money goes.">
+  <meta name="description" content="Get on the board. Pledge a few cents a mile for 10,000 miles in 2027, all on the bike, for queer communities. Free to join, no card today, and you pick which org it goes to.">
   <link rel="canonical" href="https://cycleforchange.org/pledge/">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
@@ -78,6 +78,7 @@
     <li><a href="/pledge/">Pledge a mile <span>Free</span></a></li>
     <li><a href="/find-a-ride/">Find a ride <span>1407</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>640</span></a></li>
+    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
@@ -88,7 +89,7 @@
   </div>
 </div>
 
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num num" data-miles>3,360</span>&nbsp;miles since June 1 &middot; 10,000 in 2027 &middot; all on the bike</span></p>
+<p class="tally-line"><span class="wrap"><span class="dot dot--ink" aria-hidden="true"></span><span><span class="tally-num num" data-miles>3,360</span>&nbsp;training miles since June 1 &middot; the 10,000 start Jan 1</span></span></p>
 
 <main id="main">
 
@@ -101,26 +102,27 @@
       <p class="eyebrow">The pledge &middot; 2027</p>
       <h1 class="h1" id="board-h">Get on the board.</h1>
       <p class="lede">Free to join. No card, no amount today. You put up a few cents a mile, or a flat number, and settle up when the year is done.</p>
-      <p class="p mute">Your name on the board. A vote on where the money goes. Mile updates by email. At year-end the board votes, and whatever wins gets all of it. I don&rsquo;t keep a cent.</p>
+      <p class="p mute">Your name on the board. You pick which org your miles are for. Mile updates by email. In January 2028 you give to that org, directly. I don&rsquo;t keep a cent.</p>
       <form class="form" name="pledges" method="POST" action="/pledge/" data-netlify="true" netlify-honeypot="bot-field" id="pledgeForm">
         <input type="hidden" name="form-name" value="pledges">
         <p class="hp" hidden><label>Don&rsquo;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <div class="f">
           <label class="lab" for="pname">Your name <i>goes on the board</i></label>
-          <input class="field" id="pname" name="name" type="text" maxlength="40" required autocomplete="name">
+          <input class="field" id="pname" name="name" type="text" maxlength="40" required autocomplete="name" aria-describedby="pnameHint">
+          <p class="hint" id="pnameHint">First name or initials is fine. Your amount isn&rsquo;t shown on the board.</p>
         </div>
         <div class="f">
           <label class="lab" for="pemail">Email</label>
           <input class="field" id="pemail" name="email" type="email" required autocomplete="email" inputmode="email" aria-describedby="pemailHint">
-          <p class="hint" id="pemailHint">The only way I can send you the mile updates and the one link in January. Nothing else, ever.</p>
+          <p class="hint" id="pemailHint">About once a month, an email with the miles. Ride-day details before each event. The one link in January.</p>
         </div>
         <fieldset class="chips chips--bone" id="calc">
           <legend>Your pledge, per mile</legend>
-          <label class="chip"><input type="radio" name="rate" id="rate1" value="1"><span>1&cent;<small>$100</small></span></label>
-          <label class="chip"><input type="radio" name="rate" id="rate2" value="2" checked><span>2&cent;<small>$200</small></span></label>
-          <label class="chip"><input type="radio" name="rate" id="rate5" value="5"><span>5&cent;<small>$500</small></span></label>
-          <label class="chip"><input type="radio" name="rate" id="rate10" value="10"><span>10&cent;<small>$1,000</small></span></label>
-          <label class="chip"><input type="radio" name="rate" id="rateFlat" value="flat"><span>Flat<small>any</small></span></label>
+          <label class="chip"><input type="radio" name="rate" id="rate1" value="1"><span>1&cent;<small>$100 <i>at 10,000&nbsp;mi</i></small></span></label>
+          <label class="chip"><input type="radio" name="rate" id="rate2" value="2" checked><span>2&cent;<small>$200 <i>at 10,000&nbsp;mi</i></small></span></label>
+          <label class="chip"><input type="radio" name="rate" id="rate5" value="5"><span>5&cent;<small>$500 <i>at 10,000&nbsp;mi</i></small></span></label>
+          <label class="chip"><input type="radio" name="rate" id="rate10" value="10"><span>10&cent;<small>$1,000 <i>at 10,000&nbsp;mi</i></small></span></label>
+          <label class="chip"><input type="radio" name="rate" id="rateFlat" value="flat"><span>Flat<small>any amount</small></span></label>
         </fieldset>
         <div class="f" id="flatRow" hidden>
           <label class="lab" for="pflat">Flat amount <i>any number</i></label>
@@ -128,10 +130,10 @@
         </div>
         <div class="f" id="capRow">
           <label class="lab" for="pcap">Cap it <i>optional</i></label>
-          <input class="field" id="pcap" name="cap" type="text" inputmode="numeric" placeholder="$150" aria-describedby="pcapHint">
+          <input class="field" id="pcap" name="cap" type="text" inputmode="numeric" placeholder="No cap" aria-describedby="pcapHint">
           <p class="hint" id="pcapHint">The most you&rsquo;ll pay, whatever the miles do.</p>
         </div>
-        <p class="calc-line" aria-live="polite"><span id="calcEq">2&cent; &times; 10,000 miles</span> <b class="num" id="calcTotal">$200</b> <span class="calc-kit">comes with <b id="calcKit">socks</b></span></p>
+        <p class="calc-line" aria-live="polite"><span id="calcEq">2&cent; a mile</span> <b class="num" id="calcTotal">$200</b> <span class="calc-at" id="calcAt">at 10,000 mi</span> <span class="calc-kit">comes with <b id="calcKit">socks</b></span></p>
         <fieldset class="orgpick">
           <legend>Who are your miles for? <i>change it any time</i></legend>
           <label><input type="radio" name="org" value="onenten"><span>one&middot;n&middot;ten</span><small>LGBTQ+ youth, Phoenix.</small></label>
@@ -139,11 +141,6 @@
           <label><input type="radio" name="org" value="sfaf"><span>San Francisco AIDS Foundation</span><small>HIV, harm reduction and LGBTQ+ health.</small></label>
           <label><input type="radio" name="org" value="later"><span>Decide later</span><small>Come back any time before Dec 31, 2027.</small></label>
         </fieldset>
-        <div class="f">
-          <label class="lab" for="pphone">Mobile <i>optional, for the occasional text</i></label>
-          <input class="field" id="pphone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
-        </div>
-        <label class="check" for="poktext" id="okTextRow" hidden><input type="checkbox" id="poktext" name="ok-text"><span>OK to text me the occasional mile update</span></label>
         <button class="btn btn--ink" type="submit">Get on the board</button>
         <p class="form-note">Free. No card. You settle up with the org you pick after Dec 31, 2027. Change or cancel any time.</p>
         <p class="ok" id="okmsg" role="status" hidden></p>
@@ -152,10 +149,10 @@
       <div class="done" id="done" hidden tabindex="-1" aria-live="polite">
         <p class="eyebrow">You&rsquo;re on the board</p>
         <h2 class="h2" id="doneH">See you out there.</h2>
-        <p class="p" id="doneLine">2&cent; a mile. If I ride all 10,000, that&rsquo;s $200 to whoever wins the vote.</p>
+        <p class="p" id="doneLine">2&cent; a mile. If I ride all 10,000, that&rsquo;s $200 to the org you picked.</p>
         <ol>
           <li>Mile updates about once a month, from me.</li>
-          <li>Your vote counts at year-end. Change it any time before Dec 31, 2027.</li>
+          <li>Your pick is yours. Change it any time before Dec 31, 2027.</li>
           <li>January 2028: one email with the final miles, your number, and one link to the org. The money never touches me.</li>
         </ol>
         <!-- Pass 10: the card — drawn by home.js once the pledge is in (bone, the stack, I'M ON THE BOARD, the name, the pledge) -->
@@ -197,7 +194,7 @@
       <p class="eyebrow perks-h">What you get on the board</p>
       <ul class="tiers perks" aria-label="What you get on the board">
         <li><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-board"/></svg><b>Your name</b><span>Up on the board the day you join.</span></li>
-        <li><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-vote"/></svg><b>A vote</b><span>You pick where the money goes.</span></li>
+        <li><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-vote"/></svg><b>Your pick</b><span>You choose which org your miles are for.</span></li>
         <li><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-ride-day"/></svg><b>Ride days</b><span>An easy open ride the day before each of my six 2027 events.</span></li>
         <li><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-mail"/></svg><b>The miles</b><span>Updates by email. No card until the year is done.</span></li>
       </ul>
@@ -241,24 +238,24 @@
   <div class="wrap">
     <div class="orgs-head">
       <p class="eyebrow">Where it goes &middot; you pick</p>
-      <h2 class="h2" id="vote-h">Pledgers choose the cause.</h2>
-      <p class="lede w38">These are the orgs the miles support. You pick one when you pledge, and you can change it here any time before December 31, 2027. The final tally decides.</p>
+      <h2 class="h2" id="vote-h">You choose the org.</h2>
+      <p class="lede w38">These are the orgs the miles support. You pick one when you pledge, and you can change it here any time before December 31, 2027. Your money goes to your pick. No vote at the end.</p>
     </div>
     <div class="orgs" id="orgs" aria-live="polite">
       <article class="org" data-id="onenten">
         <h3 class="h3">one&middot;n&middot;ten</h3>
         <p>Phoenix nonprofit for LGBTQ+ youth ages 11&ndash;24 &mdash; safe spaces, housing, leadership.</p>
-        <div class="org-acts"><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Visit site</a><button class="btn btn--ghost btn--sm" type="button" data-vote="onenten" aria-pressed="false" aria-label="Vote for one·n·ten">Vote</button></div>
+        <div class="org-acts"><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Visit site</a><button class="btn btn--ghost btn--sm" type="button" data-vote="onenten" aria-pressed="false" aria-label="Pick one·n·ten">Pick this one</button></div>
       </article>
       <article class="org" data-id="lalgbtcenter">
         <h3 class="h3">Los Angeles LGBT Center</h3>
         <p>Health, housing and advocacy for LGBTQ+ people &mdash; the Center Ride Out beneficiary.</p>
-        <div class="org-acts"><a class="link" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Visit site</a><button class="btn btn--ghost btn--sm" type="button" data-vote="lalgbtcenter" aria-pressed="false" aria-label="Vote for Los Angeles LGBT Center">Vote</button></div>
+        <div class="org-acts"><a class="link" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Visit site</a><button class="btn btn--ghost btn--sm" type="button" data-vote="lalgbtcenter" aria-pressed="false" aria-label="Pick Los Angeles LGBT Center">Pick this one</button></div>
       </article>
       <article class="org" data-id="sfaf">
         <h3 class="h3">San Francisco AIDS Foundation</h3>
         <p>No-cost HIV, harm-reduction and LGBTQ+ health services &mdash; the Cycle to Zero beneficiary.</p>
-        <div class="org-acts"><a class="link" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Visit site</a><button class="btn btn--ghost btn--sm" type="button" data-vote="sfaf" aria-pressed="false" aria-label="Vote for San Francisco AIDS Foundation">Vote</button></div>
+        <div class="org-acts"><a class="link" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Visit site</a><button class="btn btn--ghost btn--sm" type="button" data-vote="sfaf" aria-pressed="false" aria-label="Pick San Francisco AIDS Foundation">Pick this one</button></div>
       </article>
     </div>
     <p class="vote-msg" id="voteMsg" role="status" hidden></p>
@@ -271,22 +268,23 @@
     <div class="s-head"><div class="stack16"><p class="eyebrow">Questions</p><h2 class="h2" id="q-h">Everything people ask.</h2></div></div>
     <h3 class="eyebrow faq-h">The money</h3>
     <dl class="faq">
-      <div><dt>Do I have to pay now?</dt><dd>No. You pledge now and settle up in January 2028, one email, one link. No card until then.</dd></div>
-      <div><dt>What does a pledge cost?</dt><dd>You pick. At 1&cent; a mile it&rsquo;s $100 for the whole year; at 5&cent; it&rsquo;s $500. Or name a flat number, any size. You can cap it, too. Same deal.</dd></div>
-      <div><dt>Where does the money go?</dt><dd>Direct to the orgs, 100% of it. The people on the board vote which ones. I don&rsquo;t keep a cent.</dd></div>
-      <div><dt>Does any of it go to Robert?</dt><dd>No. Not a dollar, not for the bike, not for the kit. The money never passes through me.</dd></div>
-      <div><dt>How do I pay, and to whom?</dt><dd>In January 2028 you get one email with the final miles, your number, and a link to give straight to the org that won the vote.</dd></div>
-      <div><dt>Is it tax deductible?</dt><dd>You give directly to the org, so it works the way any gift to them does. They send the receipt.</dd></div>
-      <div><dt>What if you don&rsquo;t make 10,000?</dt><dd>You pay for the miles I rode. Every one of them is on Strava, and the count on this page updates within the hour.</dd></div>
-      <div><dt>Can I change or cancel my pledge?</dt><dd>Yes, any time before the year ends. Send the form again with the same name and I&rsquo;ll keep the latest, or reply to any mile update.</dd></div>
-      <div><dt>Can a team or a company pledge?</dt><dd>Yes. One name on the board, any amount. If you want a logo on the kit, reply to a mile update and we&rsquo;ll talk.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-no-card"/></svg><span>Do I have to pay now?</span></dt><dd>No. You pledge now and settle up in January 2028, one email, one link. No card until then.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-cost"/></svg><span>What does a pledge cost?</span></dt><dd>You pick. At 1&cent; a mile it&rsquo;s $100 at 10,000 miles; at 5&cent; it&rsquo;s $500. Or name a flat number, any size. You can cap it, too. Same deal.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-vote"/></svg><span>Where does the money go?</span></dt><dd>Direct to the org you picked, 100% of it. Everyone on the board chooses their own. I don&rsquo;t keep a cent.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-hundred"/></svg><span>Does any of it go to Robert?</span></dt><dd>No. Not a dollar, not for the bike, not for the kit. The money never passes through me.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-mail"/></svg><span>How do I pay, and to whom?</span></dt><dd>In January 2028 you get one email with the final miles, your number, and a link to give straight to the org you picked.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-checked"/></svg><span>Is it tax deductible?</span></dt><dd>You give directly to the org, so it works the way any gift to them does. They send the receipt.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-strava"/></svg><span>What if you don&rsquo;t make 10,000?</span></dt><dd>You pay for the miles I rode. Every one of them is on Strava, and the count on this page updates within the hour.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-distance"/></svg><span>What if you ride more than 10,000?</span></dt><dd>It keeps going. A per-mile pledge counts every mile I ride in 2027, unless you set a cap. A flat pledge stays flat.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-signup"/></svg><span>Can I change or cancel my pledge?</span></dt><dd>Yes, any time before the year ends. Send the form again with the same name and I&rsquo;ll keep the latest, or reply to any mile update.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-riders"/></svg><span>Can a team or a company pledge?</span></dt><dd>Yes. One name on the board, any amount. If you want a logo on the kit, reply to a mile update and we&rsquo;ll talk.</dd></div>
     </dl>
     <h3 class="eyebrow faq-h">The ride</h3>
     <dl class="faq">
-      <div><dt>Can I ride with you?</dt><dd>Yes. Six dates on the <a href="/events/2027/">2027 calendar</a> so far, and every ride in the <a href="/rides/">directory</a> is open to anyone.</dd></div>
-      <div><dt>What are ride days?</dt><dd>The day before each of my six 2027 events, an easy open ride in that town for anyone on the board. No-drop, no sign-up fee. Where and when goes out by email a few weeks ahead.</dd></div>
-      <div><dt>Do I have to be queer to be part of this?</dt><dd>No. Anyone can pledge, anyone can ride. The money goes to queer-serving orgs. That&rsquo;s the point.</dd></div>
-      <div><dt>Can I change my vote?</dt><dd>Any time before December 31, 2027. Come back to this page; your pick is remembered in your browser.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-no-drop"/></svg><span>Can I ride with you?</span></dt><dd>Yes. Six dates on the <a href="/events/2027/">2027 calendar</a> so far, and every ride in the <a href="/rides/">directory</a> is open to anyone.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-ride-day"/></svg><span>What are ride days?</span></dt><dd>The day before each of my six 2027 events, an easy open ride in that town for anyone on the board. No-drop, no sign-up fee. Where and when goes out by email a few weeks ahead.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-lgbtq"/></svg><span>Do I have to be queer to be part of this?</span></dt><dd>No. Anyone can pledge, anyone can ride. The money goes to queer-serving orgs. That&rsquo;s the point.</dd></div>
+      <div><dt><svg class="mk mk--dt" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-vote"/></svg><span>Can I change my pick?</span></dt><dd>Any time before December 31, 2027. Come back to this page; your pick is remembered in your browser.</dd></div>
     </dl>
   </div>
 </section>
