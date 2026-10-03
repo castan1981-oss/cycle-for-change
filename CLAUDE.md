@@ -33,6 +33,19 @@ lasts, and what we got wrong — on the thesis that SEO is the base under AI ans
   characters are likely cut off in results (86% of pages). Prefer fewer, fuller pages over more, thinner ones until
   indexing catches up.
 
+## Pass 22 — the homepage asks what you came for (Oct 3, 2026)
+Robert: "The home page should have options. Pledge/find a ride/find a race/ or find a fundraiser."
+- The hero's button + link became four picks (`.picks` / `.pick` in home.css, the Pass 22 block where
+  the old `.paths` rules were): **Pledge** (`/pledge/`, the one solid pick: asphalt, volt on hover),
+  **Find a ride** (`/rides/`), **Find a race** (`/events/2027/races/`), **Find a fundraiser**
+  (`/events/2027/charity-rides/`). Two by two on every screen; all four sit on the first phone screen.
+- The "Start here" photo doors (Pledge / Ride / Read) left the page — they asked the same question
+  again right below. `img/door-*.jpg` are still in /img/ if a door photo is wanted elsewhere.
+- Races is road, crit and stage only, so its page opens with "Racing off the road?" → Gravel ·
+  Mountain bike · Hill climbs · Ultra (`CAT_LEAD` in build-calendar.js); Charity rides points at /pledge/.
+- Hand-kept numbers on the picks: the ride count (with the other homepage spots) and the charity-ride
+  count ("112 charity rides"). Update them when the rides merge or the calendar refresh lands.
+
 ## Pass 21 — the hub pages fold their explaining (Oct 2, 2026)
 After Pass 20 Robert said yes to folding the words on the other hub pages. `BLOCKS.BUILT(items,
 { fold: true })` tucks "How this works" under a one-line `<details>` (`.dir-fold`, events.css) and
@@ -277,8 +290,8 @@ the leads nobody could confirm (Instagram / Facebook / login-only) for Robert to
   hub (this sweep: Redondo Beach, Plano, Greenlawn, Matteson, Portsmouth NH, Canton MS, Sullivan's
   Island, and Encinitas — which flipped back to Carlsbad, so the Sept 30 redirect was reversed).
   Never leave a redirect pointing at a URL that no longer exists.
-- The homepage hard-codes the ride count in four places (menu, door, lede, directory tile) plus
-  "N more countries"; update them after a merge (`grep -n "1,275\|more countries" cfc-site/index.html`).
+- The homepage hard-codes the ride count in four places (menu, the "Find a ride" pick, lede, directory
+  tile) plus "N more countries"; update them after a merge (`grep -n "1,407\|more countries" cfc-site/index.html`).
 
 ## The second pass (Oct 2, 2026)
 The deep sweep's leads (~636 unproven rides, mostly Instagram / Facebook only) got a second search pass:

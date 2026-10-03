@@ -255,11 +255,19 @@ for (let m = 0; m <= 12; m++) {
       : `${list.length} US bike rides and races that run every year but haven't put out a 2027 date yet: ${list.slice(0, 3).map((e) => e.name).join(", ")} and more.`,
     lead: m ? "" : `<p class="cal-lead">These run every year but haven&rsquo;t put out a 2026 or 2027 date we could confirm.</p>` });
 }
+// Pass 22 (Oct 3, 2026): the homepage's "Find a race" lands on Races, which is road, crit and stage
+// only — so it points across to the other kinds of racing in one line. "Find a fundraiser" lands on
+// Charity rides, which points back at the pledge.
+const otherRaces = ["Gravel", "MTB", "Hill climb", "Ultra / bikepacking"].filter((c) => byCat.get(c));
+const CAT_LEAD = {
+  Race: otherRaces.length ? `<p class="cal-lead">Racing off the road? ${otherRaces.map((c) => `<a href="${URL}${CAT_SLUG[c]}/">${esc(CAT_DOOR[c])}</a>`).join(" &middot; ")}</p>` : "",
+  "Charity ride": `<p class="cal-lead">Ride one for a cause, or <a href="/pledge/">pledge a mile</a> on mine.</p>`,
+};
 // one page per type, by month
 for (const c of CATS) {
   const list = events.filter((e) => e.category === c);
   if (!list.length) continue;
-  shortPage({ url: `${URL}${CAT_SLUG[c]}/`, crumb: CAT_DOOR[c], list, byMonth: true,
+  shortPage({ url: `${URL}${CAT_SLUG[c]}/`, crumb: CAT_DOOR[c], list, byMonth: true, lead: CAT_LEAD[c] || "",
     h1: `2027 ${CAT_H1[c]} in the US`, title: `2027 ${CAT_H1[c]} in the US`,
     description: `${list.length} ${CAT_H1[c]} in the US in 2027, ${nConfOf(list)} with organizer-confirmed dates, by month: ${list.slice(0, 3).map((e) => e.name).join(", ")} and more.` });
 }

@@ -105,10 +105,14 @@
       <p class="live" id="live"><span class="dot" aria-hidden="true"></span><span><b id="liveWord">Last ride</b> &middot; <span id="lastRide" aria-live="polite">56.0 mi &middot; Sep 27</span></span></p>
       <h1 class="h1" id="line"><span>I do the miles.</span> <span>You decide who they&rsquo;re&nbsp;for.</span></h1>
       <p class="hero-sub">In 2027 I ride 10,000 miles, all on the bike, for queer communities. You pledge a few cents a mile, free to start, and vote where the money goes.</p>
-      <div class="cta-row">
-        <a class="btn btn--hero" href="/pledge/">Pledge a mile</a>
-        <a class="link" href="/rides/">Find a group ride</a>
-      </div>
+      <!-- Pass 22 (Oct 3, 2026): the first screen asks what you came for. Pledge is the one
+           solid pick; the other three are paper. Counts are hand-kept (see CLAUDE.md). -->
+      <nav class="picks" aria-label="What are you here for?">
+        <a class="pick pick--go" href="/pledge/"><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-pledge"/></svg><span class="pick-name">Pledge</span><span class="pick-sub">A few cents a mile</span></a>
+        <a class="pick" href="/rides/"><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-riders"/></svg><span class="pick-name">Find a ride</span><span class="pick-sub">1,407 group rides</span></a>
+        <a class="pick" href="/events/2027/races/"><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-flag"/></svg><span class="pick-name">Find a race</span><span class="pick-sub">Road, gravel, dirt</span></a>
+        <a class="pick" href="/events/2027/charity-rides/"><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-raise"/></svg><span class="pick-name">Find a fundraiser</span><span class="pick-sub">112 charity rides</span></a>
+      </nav>
     </div>
     <!-- static numbers are the fallback; /home.js repaints them from the Strava function -->
     <div class="tally-hero">
@@ -127,18 +131,6 @@
       <p class="fact m0"><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-hundred"/></svg><b>100%</b><span>to the orgs</span></p>
     </div>
     <p class="facts-line"><span>After Dec 31, 2027 you settle up with the org you voted for, directly. The money never touches me. Every mile comes straight from Strava.</span><a class="link" href="/pledge/#questions">Where the money goes</a></p>
-  </div>
-</section>
-
-<!-- —— start here: the three visitors, one door each —— -->
-<section class="s paths-s" id="start" aria-labelledby="start-h">
-  <div class="wrap">
-    <div class="s-head"><h2 class="eyebrow" id="start-h">Start here</h2></div>
-    <div class="paths">
-      <a class="path" href="/pledge/"><figure><img src="/img/door-pledge.jpg" alt="Robert leaning on the handlebars on a bridge, blue sky behind him." width="768" height="960" loading="lazy" decoding="async"></figure><span class="eyebrow eyebrow--mk"><svg class="mk mk--eyebrow" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-pledge"/></svg>I want to</span><span class="h2">Pledge</span><p>A few cents a mile, or a flat number. Nothing today. Your name goes on the board and you vote where the money goes.</p><span class="link">Get on the board</span></a>
-      <a class="path" href="/rides/"><figure><img src="/img/door-ride.jpg" alt="A rider in a lavender kit grinning at the camera on an empty road." width="800" height="1000" loading="lazy" decoding="async"></figure><span class="eyebrow eyebrow--mk"><svg class="mk mk--eyebrow" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg>I want to</span><span class="h2">Ride</span><p>1,407 free group rides. Every state, and 18 more countries. What&rsquo;s rolling tonight near you.</p><span class="link">Find a ride</span></a>
-      <a class="path" href="/guides/"><figure><img src="/img/door-read.jpg" alt="Handlebars pointed down a mountain road at sunset, the valley lit below." width="800" height="1000" loading="lazy" decoding="async"></figure><span class="eyebrow eyebrow--mk"><svg class="mk mk--eyebrow" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-journal"/></svg>I want to</span><span class="h2">Read</span><p>Charity-ride guides, field notes from the road, the journal.</p><span class="link">The guides</span></a>
-    </div>
   </div>
 </section>
 
