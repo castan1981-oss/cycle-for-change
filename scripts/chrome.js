@@ -73,7 +73,9 @@ ${sheets}
 ${json}${extra ? "\n" + extra : ""}`;
 }
 
-const MARK = `<svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+/* Pass 23d (Oct 3, 2026): the wheel sits in an asphalt square (.brand-sq); on phones the square is the
+   bar's corner. Same drawing as the homepage's. */
+const MARK = `<svg class="brand-sq" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
         <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
         <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
         <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>

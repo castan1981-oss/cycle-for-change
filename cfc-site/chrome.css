@@ -30,7 +30,7 @@
   --gutter:var(--gut);
   --maxw:1360px;
   --sec:clamp(64px,9vw,128px);
-  --nav-h:56px;
+  --nav-h:64px;   /* Pass 23d: the same bar height on every screen (home.css) */
 }
 
 /* —— base (same as home) —— */
@@ -143,22 +143,33 @@ p{margin:0 0 1em}
   backdrop-filter:blur(14px);
 }
 .nav-in{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
+.brand{display:inline-flex;align-items:center;gap:14px;text-decoration:none;min-height:44px}
 .brand svg{width:26px;height:26px;flex:0 0 auto}
-.brand-word{font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+/* Pass 23d (Oct 3, 2026, from home.css): the wheel in its asphalt square — the drawing untouched; on
+   asphalt the currentColor arc and hub go bone and the creosote arc lifts a step. On phones the square
+   is the bar's corner: the full bar height, flush to the screen's left edge, the wheel 28px inside. */
+.brand .brand-sq{width:44px;height:44px;padding:9px;background:var(--asphalt);color:var(--bone)}
+.brand-sq path:nth-of-type(2){stroke:var(--creosote-lift)}
+.brand-word{font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
 .brand-word i{font-style:normal;color:var(--creosote-ink)}
+@media (max-width:899px){
+  .nav-in{padding-left:0}
+  .brand{gap:16px}
+  .brand .brand-sq{width:var(--nav-h);height:var(--nav-h);padding:18px}
+  .menu-btn{margin-right:-9px}
+}
 /* Pass 5: nav labels read at body size, same as the homepage */
 .nav-links{display:none;gap:clamp(18px,2.4vw,32px);font-family:var(--display);font-size:15px;font-weight:600;letter-spacing:0}
 .nav-links a{text-decoration:none;padding:8px 0;border-bottom:1px solid transparent}
 .nav-links a[aria-current="page"]{border-bottom-color:currentColor}
 @media (hover:hover){.nav-links a:hover{border-bottom-color:currentColor}}
-.nav-right{display:flex;align-items:center;gap:4px}
+.nav-right{display:flex;align-items:center;gap:8px}
 .nav .btn--sm{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
+@media (max-width:899px){.nav .btn--sm{min-height:40px;background:transparent;color:var(--asphalt);border-color:var(--asphalt)}}   /* Pass 23d: a hairline beside the stamp on phones, not a second block */
 .menu-btn{width:44px;height:44px;display:grid;place-items:center;background:none;border:0;padding:0;cursor:pointer}
-.menu-btn i{display:block;width:22px;height:2px;background:currentColor;box-shadow:0 7px 0 currentColor;transform:translateY(-3.5px)}
+.menu-btn i{display:block;width:26px;height:2px;background:currentColor;box-shadow:0 8px 0 currentColor;transform:translateY(-4px)}
 @media (max-width:359px){.brand-word{display:none}}
 @media (min-width:900px){
-  :root{--nav-h:64px}
   .nav-links{display:flex}
   .menu-btn{display:none}
   .brand-word{font-size:14px}

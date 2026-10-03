@@ -31,7 +31,7 @@
   --gut:clamp(16px,4.2vw,56px);
   --maxw:1360px;
   --sec:clamp(76px,9.5vw,152px);   /* Pass 6: air is the cheapest high-fashion move */
-  --nav-h:56px;
+  --nav-h:64px;   /* Pass 23d: the same bar height on every screen */
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -181,19 +181,30 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 /* Pass 23b: the nav is bone from the first pixel on every screen (Robert: the squares on the
    picture read as blocks). The hero photo fades in from under its edge, so there is no seam.
    On phones the Pledge button leaves the bar: the hero's own button, the menu and the tally
-   bar all carry the pledge, and the bar is quieter without a second asphalt block. */
+   bar all carry the pledge, and the bar is quieter without a second asphalt block.
+   Pass 23d — Robert: "especially on mobile it just looks sloppy." The square was a 44px tile
+   floating in a 56px strip. Now the bar is 64px everywhere and on phones the square IS the
+   corner: the full bar height, flush to the screen's left edge, the wheel 28px inside it; the
+   wordmark is set to it (12.5px, .1em); the menu glyph is two full lines, its right edge on the
+   gutter. Three things, one weight each: the stamp, the name, the lines. */
 .nav{background:rgba(232,223,208,.94);border-bottom-color:var(--line);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
-@media (max-width:899px){.nav .btn--sm{display:none}}
 .nav-in{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;min-height:44px}
+.brand{display:inline-flex;align-items:center;gap:14px;text-decoration:none;min-height:44px}
 .brand svg{width:26px;height:26px;flex:0 0 auto}
 /* the wheel in its asphalt square: the mark's own ground, the drawing untouched. On asphalt the
    currentColor arc and hub go bone and the creosote arc lifts a step so it still reads. */
 .brand .brand-sq{width:44px;height:44px;padding:9px;background:var(--asphalt);color:var(--bone)}
 .brand-sq path:nth-of-type(2){stroke:var(--creosote-lift)}
-.brand-word{font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.brand-word{font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
 .brand-word i{color:var(--creosote-ink)}
 .brand-word i{font-style:normal}
+@media (max-width:899px){
+  .nav .btn--sm{display:none}
+  .nav-in{padding-left:0}                                   /* the stamp sits in the corner; everything else keeps the gutter */
+  .brand{gap:16px}
+  .brand .brand-sq{width:var(--nav-h);height:var(--nav-h);padding:18px}   /* 64px square, the wheel 28px */
+  .menu-btn{margin-right:-9px}                               /* the lines' right edge lands on the gutter */
+}
 /* Pass 5: nav labels read at body size (a tiny, low-salience nav is the one people don't use) */
 .nav-links{display:none;gap:clamp(18px,2.4vw,32px);font-family:var(--display);font-size:15px;font-weight:600;letter-spacing:0}
 .nav-links a{text-decoration:none;padding:8px 0;border-bottom:1px solid transparent}
@@ -201,10 +212,9 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .nav-right{display:flex;align-items:center;gap:8px}
 .nav .btn--sm{min-height:44px;background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}   /* Pass 23: the same height as the wheel square and the menu square beside it */
 .menu-btn{width:44px;height:44px;display:grid;place-items:center;background:none;border:0;padding:0;cursor:pointer}
-.menu-btn i{display:block;width:22px;height:2px;background:currentColor;box-shadow:0 7px 0 currentColor;transform:translateY(-3.5px)}
+.menu-btn i{display:block;width:26px;height:2px;background:currentColor;box-shadow:0 8px 0 currentColor;transform:translateY(-4px)}
 @media (max-width:359px){.brand-word{display:none}}
 @media (min-width:900px){
-  :root{--nav-h:64px}
   .nav-links{display:flex}
   .menu-btn{display:none}
   .brand-word{font-size:14px}

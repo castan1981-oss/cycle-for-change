@@ -77,6 +77,17 @@ never redrawn." Live the same day.
   twice — and its mission sentence now sits under the How-it-works h2 (`.how-lede`). The `.pick`
   styles left home.css with it. The hand-kept counts that rode on the picks (1,407 rides, 112
   charity rides) no longer appear in the hero; the menu still carries 1407 / 640.
+- **Pass 23d, same evening — the header.** Robert: "I think we can do better for the header,
+  especially on mobile it just looks sloppy." It was a 44px tile floating in a 56px strip, a 13px
+  wordmark jammed against it and a small "=" at the far right. Now, on every page (home.css and
+  chrome.css carry the same rules; `scripts/chrome.js` gives the mark `class="brand-sq"`): the bar
+  is 64px on every screen; on phones the asphalt square IS the corner — the full bar height, flush to
+  the screen's left edge (`.nav-in{padding-left:0}`), the wheel 28px inside — then the wordmark set
+  to it (12.5px, .1em), then the menu glyph as two 26px lines whose right edge lands on the gutter.
+  Desktop keeps the 44px square inside the column. Inner pages keep their Pledge button on phones
+  as a hairline (one block per bar). Regenerated: `python3 scripts/apply-chrome.py`,
+  `node scripts/build-events.js`, `node scripts/build-calendar.js`; the rides pages pick it up from
+  chrome.js on the next deploy (Netlify runs tools/build-rides.js every time).
 
 ## Pass 22 — ten riders used the site (Oct 2–3, 2026)
 Robert: "Create ten agents, each one a biker, ten different ways that would use the site. Let them critique
