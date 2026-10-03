@@ -77,10 +77,9 @@
 <main id="main" class="wrap">
 
   <article class="index">
-    <p class="eyebrow">12 events &middot; 10 states &middot; updated October 2, 2026</p>
+    <p class="eyebrow">12 events &middot; 10 states &middot; updated October 3, 2026</p>
     <h1>US cycling events directory</h1>
-    <p class="lede">Bike events across the United States, one page each. Where it is, when it runs, how it started, how to sign up, what the weather is doing, and where to sleep, eat and get your bike fixed once you are there.</p>
-    <p class="calendar-link">Looking for everything next year? <a href="/events/2027/">The 2027 calendar</a> lists every organized US ride and race we could pin down, with confirmed and projected dates.</p>
+    <p class="lede">The big rides, one page each: the date, the sign-up, the weather, and where to sleep and eat. <a href="/events/2027/">Everything else is on the 2027 calendar.</a></p>
 
     <section><h2>Coming up</h2>
       <ul class="tiles-p tiles-p--events"><li class="tile-p tile-p--event tile-p--art" style="--l:6"><img class="tile-art" src="/towns/art/tucson.svg" alt="" loading="lazy" decoding="async" width="200" height="200">
@@ -122,23 +121,19 @@
     </section>
 
 
-  <section class="dir-built" id="how-built" aria-labelledby="how-built-h">
-    <h2 id="how-built-h">How this directory works</h2>
+  <details class="dir-fold dir-built" id="how-built">
+    <summary>How this directory works</summary>
     <div class="dir-built-grid">
       <div><svg class="mk mk--built" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-checked"/></svg><span class="k">Checked</span><h3>At the organizer</h3><p>Each event page is checked against the organizer's own site and lists its sources.</p></div>
       <div><svg class="mk mk--built" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-signup"/></svg><span class="k">Direct</span><h3>Sign-up goes to them</h3><p>Dates and prices change, so the sign-up link always goes to the organizer, never through us.</p></div>
       <div><svg class="mk mk--built" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-weather"/></svg><span class="k">Live</span><h3>Weather for the town</h3><p>Every event page carries a live forecast for the host town.</p></div>
       <div><svg class="mk mk--built" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-free"/></svg><span class="k">Free</span><h3>No paid placement</h3><p>Nobody pays to be listed. Town pages list only places we could confirm are open.</p></div>
     </div>
-  </section>
+  </details>
 
-  <section class="dir-report" id="add" aria-labelledby="add-h">
-    <div class="dir-report-head">
-      <p class="eyebrow">Free to list</p>
-      <h2 id="add-h">Missing an event, or a date changed?</h2>
-      <p>Tell us what's new or what changed. We check it against the event's own page before it goes up. Listing is free and always will be.</p>
-    </div>
-    <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
+    <details class="dir-report dir-report--compact" id="add">
+      <summary>Missing an event, or a date changed?</summary>
+      <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
       <input type="hidden" name="form-name" value="ride-report">
       <input type="hidden" name="page" value="" data-page>
       <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
@@ -156,7 +151,7 @@
       <input class="field" id="rr-email-1" name="email" type="email" autocomplete="email" inputmode="email">
       <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
     </form>
-  </section>
+    </details>
   </article>
 
 <section class="pledge" aria-labelledby="pledge-h">

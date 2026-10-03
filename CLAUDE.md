@@ -33,6 +33,14 @@ lasts, and what we got wrong — on the thesis that SEO is the base under AI ans
   characters are likely cut off in results (86% of pages). Prefer fewer, fuller pages over more, thinner ones until
   indexing catches up.
 
+## Pass 21 — the hub pages fold their explaining (Oct 2, 2026)
+After Pass 20 Robert said yes to folding the words on the other hub pages. `BLOCKS.BUILT(items,
+{ fold: true })` tucks "How this works" under a one-line `<details>` (`.dir-fold`, events.css) and
+`BLOCKS.REPORT({ compact: true })` does the same for the form; `/events/` and `/towns/` use both and
+their ledes are one line. `/guides/` keeps its cards (they are the content) with shorter intros.
+Left alone on purpose: `/resources/` (crisis info is never behind a tap) and `/rides/about/` (it IS the
+explaining page; people go there to read). The rides hubs were already clean (Pass 15).
+
 ## Pass 20 — Find a ride: what kind, then where (Oct 2, 2026)
 Robert: "Find a ride … is that person looking for a group ride? … a gravel or a fundraising ride? The
 next page needs to find out what's the ride … then are they looking in the United States? Outside?
