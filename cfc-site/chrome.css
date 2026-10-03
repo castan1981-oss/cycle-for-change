@@ -189,9 +189,9 @@ p{margin:0 0 1em}
 .menu-foot b{color:var(--asphalt)}
 
 /* —— the running tally, under the nav on every inner page —— */
-.tally-line{margin:0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.tally-line{margin:0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
 .tally-line .wrap{display:flex;align-items:center;gap:10px;min-height:38px;padding-block:8px}
-.tally-line .dot{width:8px;height:8px;border-radius:50%;background:var(--volt);box-shadow:0 0 0 3px rgba(198,255,0,.22);flex:0 0 auto}
+.tally-line .dot{width:8px;height:8px;border-radius:50%;background:var(--asphalt);flex:0 0 auto}
 .tally-num{color:var(--asphalt);font-weight:700}
 
 /* —— page body spacing —— */

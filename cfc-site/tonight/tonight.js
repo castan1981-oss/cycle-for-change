@@ -3,13 +3,23 @@
    Sept 30, 2026 — rides we can't vouch for any more stay off /tonight/ too). Nothing is
    sent anywhere: location stays in the browser, "My week" lives in
    localStorage, and the only outside call is Open-Meteo for the forecast at
-   roll-out for the rides on the wall. */
+   roll-out for the rides on the wall.
+
+   Pass 22 (Oct 2, 2026), Jules — queer, new in Chicago:
+   - rows and flyers carry the LGBTQ+ / women-trans-femme marks (live.json `tags`, falling back to
+     `inclusive_focus`), and "LGBTQ+" / "Women, trans, femme, nonbinary" sit beside "No-drop only".
+     Marks, not banners. `pc` (short pace) and `lg` (length) are used when live.json has them.
+   - a denied location says so right under the button, and the button lets go.
+   - My week sits near the top when it isn't empty (every "My week →" link lands on #weekSec), and
+     a saved ride with no start time ("start time varies") shows as "Date on the host's calendar →"
+     instead of vanishing. A saved ride that's off the lists says so. */
 (function () {
   "use strict";
 
   var DAYS = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
   var DAY_LABEL = { sun: "Sun", mon: "Mon", tue: "Tue", wed: "Wed", thu: "Thu", fri: "Fri", sat: "Sat" };
-  var state = { rides: [], here: null, windowH: 12, radius: 40, noDrop: false };
+  var state = { rides: [], here: null, windowH: 12, radius: 40, only: {} };
+  var bySlug = {};
   var $ = function (id) { return document.getElementById(id); };
 
   /* —— storage —— */
@@ -99,6 +109,20 @@
     if (n.mins < 12 * 60) return "Rolling in " + Math.round(n.mins / 60) + " h";
     return n.off === 1 ? "Tomorrow" : DAY_LABEL[DAYS[n.p.dow]];
   }
+  // what a ride is made for: live.json `tags` when the build sends them, else the raw focus + drop policy
+  function tagsOf(r) {
+    if (Array.isArray(r.tags)) return r.tags;
+    var t = Array.isArray(r.inclusive_focus) ? r.inclusive_focus.slice() : [];
+    if (r.drop_policy === "no-drop" && t.indexOf("no-drop") < 0) t.push("no-drop");
+    return t;
+  }
+  var MARKS = [["lgbtq", "LGBTQ+"], ["wtf", "Women, trans, femme"]];
+  function marks(r) {
+    var t = tagsOf(r);
+    return MARKS.filter(function (m) { return t.indexOf(m[0]) > -1; }).map(function (m) {
+      return '<span class="tag"><svg class="mk-t" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-' + m[0] + '"/></svg>' + esc(m[1]) + '</span>';
+    }).join("");
+  }
   function dropLabel(r) {
     return { "no-drop": "No-drop", "groups": "Groups by pace", "drop": "Drop ride" }[r.drop_policy] || "";
   }
@@ -107,11 +131,13 @@
     var spot = r.start_location && r.start_location.name;
     bits.push(esc(r.city) + (spot && spot !== r.city ? " &middot; " + esc(spot) : ""));
     var second = [];
-    if (r.distance_miles) second.push(esc(r.distance_miles) + " mi");
-    if (r.pace) second.push(esc(r.pace));
-    var d = dropLabel(r); if (d && !/no-drop/i.test(r.pace || "")) second.push(d);
+    var pace = r.pc || r.pace;
+    if (r.lg) second.push(esc(r.lg)); else if (r.distance_miles) second.push(esc(r.distance_miles) + " mi");
+    if (pace) second.push(esc(pace));
+    var d = dropLabel(r); if (d && !/no-drop/i.test(pace || "")) second.push(d);
     if (dist != null) second.push(Math.max(1, Math.round(dist)) + " mi away");
-    return bits.join("") + (second.length ? "<br>" + second.join(" &middot; ") : "");
+    var mk = marks(r);
+    return bits.join("") + (second.length ? "<br>" + second.join(" &middot; ") : "") + (mk ? '<br><span class="tags">' + mk + "</span>" : "");
   }
   function inWeek(slug) { return week.indexOf(slug) >= 0; }
 
@@ -144,7 +170,8 @@
     var out = [];
     state.rides.forEach(function (r) {
       if (r.lat == null || r.lng == null) return;
-      if (state.noDrop && r.drop_policy !== "no-drop") return;
+      var t = tagsOf(r), only = state.only;
+      if (Object.keys(only).some(function (k) { return only[k] && t.indexOf(k) < 0; })) return;
       var dist = miles(state.here, r);
       if (dist > state.radius) return;
       var n = nextStart(r, horizonH);
@@ -169,31 +196,59 @@
     $("lineupSec").hidden = false;
     var span = state.windowH === 12 ? "the next 12 hours" : "the next 2 days";
     $("wallNote").textContent = windowItems.length + (windowItems.length === 1 ? " ride" : " rides") + " in " + span + " within " + state.radius + " mi";
+    var picky = Object.keys(state.only).some(function (k) { return state.only[k]; });
     $("wall").innerHTML = wall.length ? wall.map(flyer).join("") :
-      '<p class="empty">Nothing on the list rolls near here in ' + span + '. The lineup below is what&rsquo;s coming up this week.</p>';
+      '<p class="empty">Nothing on the list' + (picky ? " with those picks" : "") + ' rolls near here in ' + span + '. The lineup below is what&rsquo;s coming up this week.</p>';
 
     var list = rest.concat(later);
     $("lineup-head").textContent = rest.length ? "The lineup" : "Later this week";
     $("lineupNote").textContent = list.length ? "Soonest first" : "";
     $("lineup").innerHTML = list.length ? list.map(row).join("") :
-      '<p class="empty">No more rides within ' + state.radius + ' miles this week. Try a wider circle, or <a href="/rides/">see every ride</a>.</p>';
+      '<p class="empty">No more rides within ' + state.radius + ' miles this week' + (picky ? " with those picks" : "") + '. Try a wider circle, or <a href="/rides/">see every ride</a>.</p>';
 
     renderWeek();
     ticker(windowItems);
     forecast(wall);
   }
 
+  // My week: everything saved, soonest first. A ride with no fixed start time points at the host's
+  // calendar; one that isn't on the lists any more says so. Nothing saved vanishes without a word.
+  var weekShown = false;
   function renderWeek() {
-    var items = [];
+    var dated = [], open = [];
     week.forEach(function (slug) {
-      var r = state.rides.filter(function (x) { return x.slug === slug; })[0];
-      if (!r) return;
+      var r = bySlug[slug];
+      if (!r) { open.push({ slug: slug, off: true }); return; }
       var n = nextStart(r, 8 * 24);
-      if (n) items.push({ r: r, n: n, dist: state.here ? miles(state.here, r) : null });
+      if (n) dated.push({ r: r, n: n, dist: state.here ? miles(state.here, r) : null });
+      else open.push({ r: r, slug: slug, noTime: !r.start_hhmm });
     });
-    items.sort(function (a, b) { return a.n.mins - b.n.mins; });
+    dated.sort(function (a, b) { return a.n.mins - b.n.mins; });
     $("weekSec").hidden = !week.length;
-    $("week").innerHTML = items.length ? items.map(row).join("") : '<p class="empty">Saved rides with no date in the next week will show up here when they come round.</p>';
+    $("week").innerHTML = dated.map(row).join("") + open.map(weekOpen).join("");
+    if (!weekShown && week.length && location.hash === "#weekSec") { weekShown = true; $("weekSec").scrollIntoView({ block: "start" }); }
+  }
+  function weekOpen(o) {
+    var r = o.r, slug = o.slug;
+    var days = r && Array.isArray(r.days) ? r.days.map(function (d) { return DAY_LABEL[d]; }).filter(Boolean).join(" / ") : "";
+    var lead, tail, line, href, ext = false;
+    if (o.off) {
+      lead = "Off"; tail = "the list"; href = "/rides/" + slug + "/";
+      line = 'We can&rsquo;t vouch for this one right now. <a class="go" href="' + esc(href) + '">See why &rarr;</a>';
+    } else if (o.noTime) {
+      lead = days || "Varies"; tail = "time varies";
+      href = r.hl || ("/rides/" + slug + "/"); ext = !!r.hl;
+      line = '<a class="go" href="' + esc(href) + '"' + (ext ? ' target="_blank" rel="noopener"' : "") + '>Date on the host&rsquo;s calendar &rarr;</a>';
+    } else {
+      lead = days || "Later"; tail = r.time_local || "";
+      line = "Not in the next week." + (r.frequency && r.frequency !== "weekly" ? " " + esc(r.frequency.charAt(0).toUpperCase() + r.frequency.slice(1)) + "." : "");
+    }
+    var name = r ? r.name : slug.replace(/-/g, " ");
+    return '<div class="row row--open" data-slug="' + esc(slug) + '">' +
+      '<div class="row-time">' + esc(lead) + '<small>' + esc(tail) + '</small></div>' +
+      '<h3 class="row-name"><a href="/rides/' + esc(slug) + '/">' + esc(name) + '</a></h3>' +
+      '<p class="row-meta">' + (r ? metaLine(r, state.here ? miles(state.here, r) : null) + "<br>" : "") + line + '</p>' +
+      '<div class="row-acts"><button class="act" type="button" data-week="' + esc(slug) + '">Remove</button></div></div>';
   }
 
   function ticker(items) {
@@ -320,24 +375,33 @@
   }
 
   /* —— events —— */
+  // the message sits right under the button; on a no, the button lets go so the towns are the next step
   $("useLocation").addEventListener("click", function () {
-    if (!navigator.geolocation) { $("placeMsg").textContent = "This browser won't share a location. Pick a town."; return; }
+    var btn = this;
+    function no(msg) {
+      btn.disabled = false; btn.removeAttribute("aria-busy"); btn.classList.remove("solid"); btn.textContent = "Try my location again";
+      $("placeMsg").textContent = msg;
+      btn.blur();
+    }
+    if (!navigator.geolocation) { no("This browser won't share a location. Pick a town below."); return; }
+    btn.disabled = true; btn.setAttribute("aria-busy", "true");
     $("placeMsg").textContent = "Finding you…";
     navigator.geolocation.getCurrentPosition(function (pos) {
+      btn.disabled = false; btn.removeAttribute("aria-busy");
       $("placeMsg").textContent = "";
       setHere({ lat: pos.coords.latitude, lng: pos.coords.longitude, label: "" });
-    }, function () { $("placeMsg").textContent = "No location. Pick a town instead."; }, { maximumAge: 600000, timeout: 10000 });
+    }, function () { no("No location. Pick a town below."); }, { maximumAge: 600000, timeout: 10000 });
   });
   $("changePlace").addEventListener("click", function () { $("place").hidden = false; $("place").scrollIntoView({ block: "start" }); });
   document.addEventListener("click", function (e) {
     var b = e.target.closest("button"); if (!b) return;
     if (b.dataset.window) { state.windowH = +b.dataset.window; press(b); render(); }
     else if (b.dataset.radius) { state.radius = +b.dataset.radius; press(b); render(); }
-    else if (b.id === "noDrop") { state.noDrop = !state.noDrop; b.setAttribute("aria-pressed", String(state.noDrop)); render(); }
+    else if (b.dataset.only) { var k = b.dataset.only; state.only[k] = !state.only[k]; b.setAttribute("aria-pressed", String(state.only[k])); render(); }
     else if (b.dataset.week) {
       var slug = b.dataset.week, i = week.indexOf(slug);
       if (i >= 0) week.splice(i, 1); else week.push(slug);
-      save("cfc-week", week); render();
+      save("cfc-week", week); if (state.here) render(); else renderWeek();
     } else if (b.dataset.flyer) {
       var r = state.rides.filter(function (x) { return x.slug === b.dataset.flyer; })[0];
       if (r) shareFlyer(r, b);
@@ -350,6 +414,11 @@
   /* —— boot —— */
   fetch("/rides/live.json").then(function (r) { return r.json(); }).then(function (rides) {
     state.rides = rides;
+    rides.forEach(function (r) { bySlug[r.slug] = r; });
+    // the LGBTQ+ and women/trans/femme toggles show only when some ride carries the mark
+    [["lgbtq", "onlyLgbtq"], ["wtf", "onlyWtf"]].forEach(function (p) {
+      $(p[1]).hidden = !rides.some(function (r) { return tagsOf(r).indexOf(p[0]) > -1; });
+    });
     buildPlaces();
     var here = load("cfc-here", null);
     if (here && typeof here.lat === "number") setHere(here); else renderWeek();

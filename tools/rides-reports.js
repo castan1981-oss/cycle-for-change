@@ -19,6 +19,17 @@
       re-check queue and show a warning; "still-on" is a rider's word it's still happening.
     - new rides, and anything it can't match → data/rides-suggestions.json, deduped by id.
   Never stores an email address.
+
+  Pass 22 (Oct 2, 2026) — the host's own word. The form has "I run this ride" (role=host) and, for
+  "Something changed", new_time + from_date; for "New ride", days, time, start, drop, for, link.
+    - role=host AND an email → never a rider warning and never the 14-day hide clock. It is filed
+      as { type: "host-update", said: <kind>, new_time?, from_date? } on the ride (or, unmatched or
+      new, as a suggestion with host: true). The re-check queue shows it; a person confirms it by
+      replying to the email from the Netlify submission (`netlify_id`). Only that person's check
+      may move verified_on or write a start_times row. The form itself never verifies anything.
+    - role=host without an email: nobody to confirm with, so it counts like any rider's report.
+    - new_time / from_date ride along on any report (a rider's "changed" too), and the new-ride
+      fields ride along on a suggestion, so whoever re-checks has them.
 */
 "use strict";
 const fs = require("fs");
@@ -74,6 +85,28 @@ function matchRide(sub, rides) {
   return null;
 }
 
+// "I run this ride" counts only with an email to confirm it by (the email itself is never stored)
+const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const isHost = (d) => String(d.role || "").toLowerCase().trim() === "host" && EMAIL.test(String(d.email || "").trim());
+// "New start time" (HH:MM) and "Starting" (YYYY-MM-DD), only when they look like what the form sends
+function timeChange(d) {
+  const t = String(d.new_time || "").trim(), f = String(d.from_date || "").trim();
+  return { ...(/^([01]\d|2[0-3]):[0-5]\d$/.test(t) ? { new_time: t } : {}), ...(/^\d{4}-\d{2}-\d{2}$/.test(f) ? { from_date: f } : {}) };
+}
+// the short facts "New ride" asks for; a list ("mon, wed") becomes an array
+const DAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"], DROP = ["no-drop", "groups", "drop"], FOR = ["beginner", "lgbtq", "wtf", "ebike"];
+const list = (v, ok) => String(v || "").toLowerCase().split(/[\s,]+/).filter((x) => ok.includes(x)).filter((x, i, a) => a.indexOf(x) === i);
+function newRideFields(d) {
+  const o = {};
+  const days = list(d.days, DAYS); if (days.length) o.days = days;
+  const t = String(d.time || "").trim(); if (/^([01]\d|2[0-3]):[0-5]\d$/.test(t)) o.time = t;
+  const st = String(d.start || "").replace(/\s+/g, " ").trim().slice(0, 200); if (st) o.start = st;
+  const dr = String(d.drop || "").trim(); if (DROP.includes(dr)) o.drop = dr;
+  const fo = list(d.for, FOR); if (fo.length) o.for = fo;
+  const ln = String(d.link || "").trim(); if (/^https?:\/\/\S+$/i.test(ln)) o.link = ln.slice(0, 500);
+  return o;
+}
+
 async function api(fetchFn, token, url) {
   const res = await fetchFn(url, { headers: { authorization: `Bearer ${token}`, "user-agent": "cycleforchange.org rides-reports" } });
   if (!res.ok) { const e = new Error(`Netlify API ${res.status} for ${url.replace(API, "")}`); e.status = res.status; throw e; }
@@ -95,7 +128,7 @@ async function run(o = {}) {
 
   const forms = await api(fetchFn, o.token, `${API}/sites/${encodeURIComponent(o.siteId)}/forms`);
   const form = (forms || []).find((f) => f.name === FORM);
-  if (!form) { log(`rides-reports: no "${FORM}" form on the site yet (no submissions), nothing to do`); return { submissions: 0, reports: 0, still_on: 0, suggestions: 0, unmatched: 0 }; }
+  if (!form) { log(`rides-reports: no "${FORM}" form on the site yet (no submissions), nothing to do`); return { submissions: 0, reports: 0, still_on: 0, host_updates: 0, suggestions: 0, unmatched: 0 }; }
   const subs = [];
   for (let page = 1; page < 200; page++) {
     const batch = await api(fetchFn, o.token, `${API}/forms/${form.id}/submissions?per_page=100&page=${page}`);
@@ -111,7 +144,7 @@ async function run(o = {}) {
   const seenReport = new Set();
   for (const h of Object.values(health.rides)) for (const r of h.reports || []) if (r.id) seenReport.add(r.id);
 
-  const out = { submissions: subs.length, reports: 0, still_on: 0, suggestions: 0, unmatched: 0, already: 0 };
+  const out = { submissions: subs.length, reports: 0, still_on: 0, host_updates: 0, suggestions: 0, unmatched: 0, already: 0 };
   for (const s of subs) {
     const d = s.data || {};
     const date = String(s.created_at || "").slice(0, 10) || today;
@@ -120,20 +153,27 @@ async function run(o = {}) {
     if (!id) continue;
     const kind = String(d.kind || "").toLowerCase().trim();
     const note = String(d.details || "").replace(/\s+/g, " ").trim().slice(0, 300);
+    const host = isHost(d);
+    const times = timeChange(d);
     const hit = kind === "new" ? null : matchRide({ page: d.page, ride: d.ride }, rides);
     if (hit && ["gone", "changed", "still-on"].includes(kind)) {
       if (seenReport.has(id)) { out.already++; continue; }
       const h = health.rides[hit.slug] || (health.rides[hit.slug] = {});
-      h.reports = [...(h.reports || []), { id, date, type: kind, ...(note ? { note } : {}) }].sort((a, b) => a.date.localeCompare(b.date)).slice(-KEEP_REPORTS);
+      // a host's update waits for a person to reply and confirm: no warning, no hide clock (rides-freshness.js
+      // only warns on "gone" / "changed")
+      const rep = host ? { id, date, type: "host-update", said: kind, ...times, ...(note ? { note } : {}), netlify_id: id }
+        : { id, date, type: kind, ...times, ...(note ? { note } : {}) };
+      h.reports = [...(h.reports || []), rep].sort((a, b) => a.date.localeCompare(b.date)).slice(-KEEP_REPORTS);
       health.rides[hit.slug] = order(h);
       seenReport.add(id);
-      if (kind === "still-on") out.still_on++; else out.reports++;
+      if (host) out.host_updates++; else if (kind === "still-on") out.still_on++; else out.reports++;
       continue;
     }
     if (seenSuggestion.has(id)) { out.already++; continue; }
-    suggestions.push({ id, date, kind: kind || null, ride: String(d.ride || "").trim().slice(0, 300), details: String(d.details || "").trim().slice(0, 1200) || null, page: d.page || null,
-      ...(kind !== "new" ? { unmatched: true } : {}) });
+    suggestions.push({ id, date, kind: kind || null, ...(host ? { host: true } : {}), ride: String(d.ride || "").trim().slice(0, 300), details: String(d.details || "").trim().slice(0, 1200) || null, page: d.page || null,
+      ...times, ...(kind === "new" ? newRideFields(d) : {}), ...(kind !== "new" ? { unmatched: true } : {}) });
     seenSuggestion.add(id);
+    if (host) out.host_updates++;
     if (kind === "new") out.suggestions++; else out.unmatched++;
   }
   suggestions.sort((a, b) => a.date.localeCompare(b.date) || String(a.id).localeCompare(String(b.id)));
@@ -146,6 +186,7 @@ async function run(o = {}) {
     fs.writeFileSync(suggestionsFile, JSON.stringify(suggestions, null, 1) + "\n");
   }
   log(`rides-reports: ${out.submissions} submissions on the "${FORM}" form — ${out.reports} new reports on listed rides (gone/changed), ${out.still_on} "still on", ` +
+    `${out.host_updates} from hosts who left an email (a person replies to confirm), ` +
     `${out.suggestions} new-ride suggestions, ${out.unmatched} we couldn't match to a ride, ${out.already} already in.${o.dry ? " (dry run, nothing written)" : ""}`);
   return out;
 }
@@ -171,7 +212,7 @@ async function main() {
   }
 }
 
-module.exports = { run, matchRide };
+module.exports = { run, matchRide, isHost, timeChange, newRideFields };
 if (require.main === module) {
   if ((process.env.HTTPS_PROXY || process.env.https_proxy) && !process.env.NODE_USE_ENV_PROXY && process.env.NETLIFY_API_TOKEN) {
     const r = require("child_process").spawnSync(process.execPath, ["--disable-warning=UNDICI-EHPA", ...process.argv.slice(1)], { stdio: "inherit", env: { ...process.env, NODE_USE_ENV_PROXY: "1" } });

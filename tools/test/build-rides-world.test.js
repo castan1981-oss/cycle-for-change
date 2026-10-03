@@ -55,11 +55,11 @@ test("no place page shows more than LIST_MAX rides before the reader picks somet
     assert.ok(n <= LIST_MAX, `${path.relative(out, d) || "/rides/"} shows ${n} rows`);
   }
 });
-test("a big city is doorways: your bike, made for, which day, and the full list", () => {
+test("a big city is doorways: kind of ride, made for, which day, and the full list", () => {
   const big = JSON.parse(fs.readFileSync(path.join(out, "hubs.json"), "utf8")).find((h) => h.country === "US" && h.rides > LIST_MAX);
   const dir = path.join(out, big.state.toLowerCase(), big.key.slice(3));
   const h = html(dir);
-  assert.match(h, /Your bike/); assert.match(h, /Which day/); assert.match(h, /class="gr-tile gr-door/);
+  assert.match(h, /Kind of ride/); assert.doesNotMatch(h, /Your bike/); assert.match(h, /Which day/); assert.match(h, /class="gr-tile gr-door/);
   assert.ok(fs.existsSync(path.join(dir, "all", "index.html")));
   assert.match(html(path.join(dir, "all")), /id="gr-q"/, "the full list keeps search and filters");
 });
@@ -181,4 +181,52 @@ test("a ride page shows where it starts, and its buttons carry their marks", () 
   assert.match(h, /gr-map--ride/);
   assert.match(h, /class="gr-map-here"/);
   assert.match(h, /class="gr-btn /);
+});
+
+// Pass 22 (Oct 2, 2026): ten rider personas tested the directory
+const card = (h, slug) => (h.match(new RegExp(`<div class="gr-card" data-slug="${slug}"[\\s\\S]*?</div>`)) || [""])[0];
+test("the row says pace and length, never a distance from the city centre", () => {
+  const idx = JSON.parse(fs.readFileSync(path.join(out, "index.json"), "utf8"));
+  assert.ok(idx.every((r) => typeof r.pc === "string" && typeof r.lg === "string"), "index.json: pc and lg on every ride");
+  const g = idx.find((r) => r.s === "dallas-tx-gdb-downtown-gelato-ride");
+  assert.equal(g.pc, "13 mph avg"); assert.equal(g.lg, "30 mi");
+  assert.deepEqual(g.p, ["easy"], "a posted 13 mph average is not fast");
+  for (const d of allPages) assert.doesNotMatch(html(d), /class="gr-dist"/, `${path.relative(out, d)} shows a centre distance`);
+  const dallas = read("tx", "dallas", "thursday");
+  assert.match(card(dallas, "dallas-tx-gdb-downtown-gelato-ride"), /<span class="gr-card-meta"><em class="gr-wait gr-wait--waits">Waits for you<\/em><span class="gr-card-pc">13 mph avg<\/span><span class="gr-card-lg">30 mi<\/span>/);
+  assert.match(dallas, /<span class="gr-card-meta">(?:<em [^>]+>[^<]+<\/em>)?<span class="gr-card-pc">/);
+});
+test("live.json carries tags, pace and length; hubs.json the url and the town guide", () => {
+  const live = JSON.parse(fs.readFileSync(path.join(out, "live.json"), "utf8"));
+  assert.ok(live.every((r) => Array.isArray(r.tags) && typeof r.pc === "string" && typeof r.lg === "string"));
+  const hubs = JSON.parse(fs.readFileSync(path.join(out, "hubs.json"), "utf8"));
+  assert.ok(hubs.every((h) => h.key && h.lat != null && h.lng != null && /^\/rides\/.+\/$/.test(h.url) && (h.guide === null || /^\/towns\//.test(h.guide))));
+  assert.equal(hubs.find((h) => h.key === "ca-los-angeles").url, "/rides/ca/los-angeles/");
+  assert.equal(hubs.find((h) => h.key === "ca-los-angeles").guide, "/towns/california/los-angeles/");
+});
+test("no hub is a copy of a bigger one (Watford was London's 28)", () => {
+  const hubs = JSON.parse(fs.readFileSync(path.join(out, "hubs.json"), "utf8"));
+  assert.ok(!hubs.some((h) => h.key === "gb-watford"));
+  assert.ok(!fs.existsSync(path.join(out, "united-kingdom", "watford")));
+  assert.match(read("world"), /href="\/rides\/united-kingdom\/"[^>]*>.*?<span class="b">London,/s, "the UK tile names London first");
+});
+test("the ride page: the facts on the first screen, the drill open for a new rider, the right pace in it", () => {
+  const h = read("tempe-az-pmbc-saturday-cycling");
+  const top = h.slice(h.indexOf("<h1>"), h.indexOf('class="gr-actions"'));
+  assert.match(top, /class="gr-facts gr-facts--key"/); assert.match(top, /<dt>When<\/dt>/); assert.match(top, /<dt>Pace<\/dt>/);
+  assert.match(h, /<details class="gr-first gr-fold" open>/, "open on a beginner, no-drop ride");
+  assert.doesNotMatch(h, /Expect 20 mph|race or train/);
+  assert.match(h, /href="\/rides\/about\/#first-ride">First group ride\? Start here/);
+  const bear = read("peoria-az-west-valley-casual-bike-rides-bear-claw-ride");
+  assert.doesNotMatch(bear, /breathe hard/);
+  assert.match(read("no-drop"), /First group ride\? Start here/); assert.match(read("beginner"), /First group ride\? Start here/);
+});
+test("e-bikes come from the ride's own words, shown only when stated", () => {
+  const sc = read("sun-city-az-sun-city-cycling-club-tuesday-casual-ride");
+  assert.match(sc, /<dt>E-bikes<\/dt><dd>Pedal-assist only<small>Class 2 and throttle e-bikes are not allowed\.<\/small>/);
+  assert.match(read("scottsdale-az-the-bike-lane-greenbelt-and-canal-rides"), /<dt>E-bikes<\/dt><dd>Welcome/);
+  assert.doesNotMatch(read("chandler-az-global-bikes-chandler-north-saturday-ride"), /<dt>E-bikes<\/dt>/, "a shop's name isn't an e-bike rule");
+  const idx = JSON.parse(fs.readFileSync(path.join(out, "index.json"), "utf8"));
+  assert.ok(idx.find((r) => r.s === "scottsdale-az-the-bike-lane-greenbelt-and-canal-rides").d.includes("ebike"));
+  assert.ok(!idx.find((r) => r.s === "chandler-az-global-bikes-chandler-north-saturday-ride").d.includes("ebike"));
 });

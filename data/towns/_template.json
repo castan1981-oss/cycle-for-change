@@ -1,5 +1,5 @@
 {
-  "_readme": "Copy to data/towns/<slug>-<st>.json and delete this key. Files starting with _ are ignored by the build. Every field below is optional except id, name, state, state_code, lat, lon, timezone, summary. Unknown = null, never a guess. Rules: data/SCHEMA.md and research/towns/SCOUT-RULES.md.",
+  "_readme": "Copy to data/towns/<slug>-<st>.json and delete this key. Files starting with _ are ignored by the build. Every field below is optional except id, name, state, state_code, lat, lon, timezone, summary. Unknown = null, never a guess. Rules: data/SCHEMA.md and research/towns/SCOUT-RULES.md. A group ride is always named by its rides.json slug — {ride:<slug>|label} in text, ride_slug on an entry — never by a typed day or time.",
 
   "id": "city-st",
   "kind": "destination",
@@ -37,13 +37,14 @@
       "water": null,
       "hazards": null,
       "links": { "rwgps": null, "strava": null, "komoot": null, "gpx": null, "other": null },
+      "ride_slug": null,
       "sources": [],
       "verified": null
     }
   ],
 
   "coffee": [
-    { "name": null, "url": null, "address": null, "note": null, "hours_hint": null, "ride_out": false }
+    { "name": null, "url": null, "address": null, "note": "Name a directory ride as {ride:<slug>|label}; the build adds its day, time and link. Never type the day or time.", "hours_hint": null, "ride_out": false, "ride_slug": null }
   ],
 
   "restaurants": [
@@ -51,7 +52,7 @@
   ],
 
   "hotels": [
-    { "name": null, "url": null, "booking_url": null, "address": null, "note": null, "price_hint": null, "bike_policy": null }
+    { "name": null, "url": null, "booking_url": null, "address": null, "phone": null, "note": null, "price_hint": null, "bike_policy": "Only what the hotel's own page says, or No stated policy — ask when you book" }
   ],
 
   "bike_shops": [
@@ -63,7 +64,7 @@
   ],
 
   "clubs": [
-    { "name": null, "url": null, "note": null, "inclusive_focus": [] }
+    { "name": null, "url": null, "note": null, "inclusive_focus": [], "ride_slug": null }
   ],
 
   "bring_your_bike": {

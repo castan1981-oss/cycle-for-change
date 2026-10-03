@@ -292,16 +292,19 @@
     var p = pledgeNow(), flatRow = $("flatRow"), capRow = $("capRow");
     if (flatRow) flatRow.hidden = !p.flat;
     if (capRow) capRow.hidden = p.flat;
-    var pays = p.total;
+    var pays = p.total, at = $("calcAt");
+    /* Pass 22: the total is what the rate comes to AT 10,000 mi — a rider read "5¢ × 10,000 miles $500"
+       as a fixed price. Say the rate, the total, and where that total comes from. */
+    if (at) at.hidden = p.flat || !!(p.cap && p.cap < p.total);
     if (p.flat) {
       $("calcEq").textContent = "A flat pledge";
       $("calcTotal").textContent = p.total ? "$" + fmt(p.total) : "$—";
     } else if (p.cap && p.cap < p.total) {
       pays = p.cap;
-      $("calcEq").textContent = p.cents + "¢ × 10,000 miles, capped at";
+      $("calcEq").textContent = p.cents + "¢ a mile, capped at";
       $("calcTotal").textContent = "$" + fmt(p.cap);
     } else {
-      $("calcEq").textContent = p.cents + "¢ × 10,000 miles";
+      $("calcEq").textContent = p.cents + "¢ a mile";
       $("calcTotal").textContent = "$" + fmt(p.total);
     }
     var kit = kitFor(pays);

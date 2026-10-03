@@ -88,6 +88,7 @@ has to look.
 ## When a rider tells us something
 
 1. They pick "It's gone", "Something changed" or "Still on — I rode it" on the ride's page.
+   "Something changed" also asks for the new start time and the day it starts (both optional).
 2. Monday at 2 am, `tools/rides-reports.js` reads the form (it needs the Netlify token, below).
    It matches the report to the ride by the page it came from and stores the kind, the date and
    up to 300 characters of what they wrote. Never their email.
@@ -97,6 +98,11 @@ has to look.
    needs the host's own page.
 5. New rides, and reports we can't match to a ride, go to `data/rides-suggestions.json`. Use
    `/rides add` for the ones worth adding.
+6. **"I run this ride" with an email** is the host talking. No warning goes on the page and the
+   14-day clock doesn't start. It's stored as a `host-update` (with the new start time and the date
+   it starts, if they gave them). Reply to their email from the Netlify submission to confirm it,
+   then record what they told you as a one-line batch (below): a new time from a date goes in as
+   `start_times`. Without an email it counts like any rider's report.
 
 ## Set up once
 

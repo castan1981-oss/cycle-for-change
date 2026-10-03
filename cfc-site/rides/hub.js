@@ -1,76 +1,65 @@
-/* /rides/ hub — search first, three-tap matcher, results on demand.
+/* /rides/ hub — search first, results on demand.
    Pass 3 (Sept 28, 2026). The page ships no ride cards; this fetches /rides/index.json
-   (written by tools/build-rides.js) the first time someone searches or filters, and
-   renders the same card markup the generator writes. Filter state lives in the URL
-   (?q=&bike=&for=&day=&pace=&saved=1) so a view can be shared. State, city and facet
-   pages keep the full list in HTML (and /rides/rides.js), so nothing needs JS to reach.
-   Oct 1, 2026: "More filters" is the same tile panel as the state and city pages
-   (tools/build-rides.js filterPanel): live counts once the list has loaded, a tile that would
-   leave nothing goes quiet, the week strip takes more than one day (?day=sat,sun; today,
-   weekend and weekday still read), and a bar at the foot of the screen jumps to the results. */
+   (written by tools/build-rides.js) the first time someone searches, and renders the same row
+   the generator writes (card() in tools/build-rides.js — keep the two in step). Filter state
+   lives in the URL (?q=, and the old ?bike=&for=&day=&pace=&saved=1) so a view can be shared.
+   State, city and facet pages keep the full list in HTML, so nothing needs JS to reach.
+
+   Pass 22 (Oct 2, 2026), after ten riders tried the box:
+   - What a search means lives in /rides/rides.js (window.CFCFind, loaded from here): every word
+     has to land somewhere — a place, who it's for, the bike, the pace, the day, a whole word of a
+     name. "queer chicago", "dallas tuesday", "Londres", "Hackney", "E8" all find their rides now.
+   - A town with its own page gives that page's rides (25 miles; 40 km outside the US) and says so,
+     with "Narrow these →" (its /all/ page, the picks carried over) and its town guide.
+   - The row matches the generator's: waits · pace · length · checked, and a distance only from the
+     reader or the town they typed ("3 mi away"; km outside the US).
+   - Nothing found is never a dead end: what didn't match, Near me, towns with a name like it,
+     Outside the US, Every state. A zip code gets told plainly we can't read those yet. */
 (function () {
   "use strict";
   var $ = function (id) { return document.getElementById(id); };
   var idxEl = $("gr-index"), q = $("gr-q");
   if (!idxEl || !q) return;
   var idx = JSON.parse(idxEl.textContent);
-  var cities = idx.cities, stateAbbr = {}, stateNames = {};
-  idx.states.forEach(function (s) { stateAbbr[s[0]] = s[1]; stateNames[s[1].toLowerCase()] = s[0]; });
-  // the world (Sept 30, 2026): [code, name, path, keys] for every country with a ride
-  var countries = idx.countries || [], countryName = {};
-  countries.forEach(function (c) { countryName[c[0]] = c[1]; });
+  var countryPath = {};
+  (idx.countries || []).forEach(function (c) { countryPath[c[0]] = c[2]; });
 
   var form = $("gr-form"), geoBtn = $("gr-geo"), status = $("gr-status");
   var results = $("results"), grid = $("gr-results"), count = $("gr-count"), more = $("gr-show-more");
-  var empty = $("gr-empty"), widenBtn = $("gr-widen"), clearBtn = $("gr-clear"), jump = $("gr-jump"), moreBox = document.querySelector(".gr-more");
-  var chips = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
+  var empty = $("gr-empty"), clearBtn = $("gr-clear"), jump = $("gr-jump");
+  var head = results && results.querySelector(".gr-results-head");
   var DAYS = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 
-  var RIDES = null, loading = null;
+  var RIDES = null, E = null, F = null, loading = null;
   var PAGE = 24, shown = PAGE;
   var origin = null, widened = false, RADIUS = 75;
-  var f = { disc: [], tags: [], days: [], pace: "", saved: false };
+  var f = { disc: [], tags: [], days: [], pace: "", saved: false };   // the old URL picks (?bike=&for=&day=&pace=&saved=)
 
+  // the words live in /rides/rides.js; on /rides/ it finds no cards, so only that part runs
+  function script(src) {
+    return new Promise(function (ok, no) {
+      if (window.CFCFind) return ok();
+      var s = document.createElement("script"); s.src = src; s.onload = function () { window.CFCFind ? ok() : no(new Error("no CFCFind")); }; s.onerror = no;
+      document.head.appendChild(s);
+    });
+  }
+  function json(u) { return fetch(u).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); }
   function load() {
-    if (RIDES) return Promise.resolve(RIDES);
-    if (!loading) loading = fetch("/rides/index.json").then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (d) { RIDES = d; return d; })
+    if (E) return Promise.resolve();
+    if (!loading) loading = Promise.all([script("/rides/rides.js"), json("/rides/index.json"), json("/rides/hubs.json").catch(function () { return []; })])
+      .then(function (a) {
+        F = window.CFCFind; RIDES = a[1];
+        // hubs.json carries each city page's url and town guide (Pass 22); an older file is read from its key
+        var hubs = (Array.isArray(a[2]) ? a[2] : []).map(function (h) {
+          if (!h.url) h.url = h.state ? "/rides/" + h.state.toLowerCase() + "/" + h.key.slice(3) + "/" : (countryPath[h.country] || "/rides/world/") + h.key.slice(3) + "/";
+          return h;
+        });
+        E = F.make({ cities: idx.cities, states: idx.states, countries: idx.countries || [], hubs: hubs });
+      })
       .catch(function (e) { loading = null; throw e; });
     return loading;
   }
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
-  // fold accents so "Bogota" finds "Bogotá" and "Zürich" finds "Zurich"
-  function fold(s) { s = String(s || ""); return s.normalize ? s.normalize("NFD").replace(/[\u0300-\u036f]/g, "") : s; }
-  function norm(s) { return fold(s).toLowerCase().replace(/[’']/g, "").replace(/[^a-z0-9, ]+/g, " ").replace(/\s+/g, " ").trim(); }
-  function miles(a, b) {
-    var R = 3958.8, r = Math.PI / 180, dLat = (b.lat - a.lat) * r, dLng = (b.lng - a.lng) * r;
-    var h = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dLng / 2) * Math.sin(dLng / 2);
-    return 2 * R * Math.asin(Math.sqrt(h));
-  }
-  function matchCity(text) {
-    var t = norm(text).replace(/,/g, " ").replace(/\s+/g, " ").trim(), best = null;
-    if (!t) return null;
-    cities.forEach(function (c) {
-      var name = norm(c[0]).replace(/,/g, "");
-      if (c[3]) { if (t === name || c[3].indexOf(t) > -1) { if (!best || t === name) best = c; } return; }
-      var cityOnly = name.replace(/ [a-z]{2}$/, ""), st = name.slice(-2).toUpperCase();
-      var full = cityOnly + " " + (stateAbbr[st] || st).toLowerCase();
-      if (t === name || t === cityOnly || t === full) { if (!best || t === name) best = c; }
-    });
-    return best;
-  }
-  function matchCountry(text) {
-    var t = norm(text).replace(/,/g, "").trim(), hit = null;
-    if (!t) return null;
-    countries.forEach(function (c) { if (!hit && (norm(c[1]) === t || c[3].indexOf(t) > -1)) hit = c[0]; });
-    return hit;
-  }
-  function matchState(text) {
-    var t = norm(text).replace(/,/g, "").trim();
-    if (stateNames[t]) return stateNames[t];
-    if (/^[a-z]{2}$/.test(t) && stateAbbr[t.toUpperCase()]) return t.toUpperCase();
-    return null;
-  }
   function todayKey() { return DAYS[new Date().getDay()]; }
   // a day, a list (sat,sun), or the words today / weekend / weekday
   function expandDay(day) {
@@ -79,19 +68,22 @@
     if (day === "weekday") return ["mon", "tue", "wed", "thu", "fri"];
     return String(day || "").split(",").filter(function (d) { return DAYS.indexOf(d) > -1; });
   }
-  function sameDays(a, b) { return a.length === b.length && a.every(function (d) { return b.indexOf(d) > -1; }); }
-  function isDayKey(v) { return DAYS.indexOf(v) > -1; }
-  function any() { return !!(f.disc.length || f.tags.length || f.days.length || f.pace || f.saved || q.value.trim() || origin); }
+  function anyF() { return !!(f.disc.length || f.tags.length || f.days.length || f.pace || f.saved); }
+  function any() { return !!(anyF() || q.value.trim() || origin); }
+  function plural(n) { return n + " ride" + (n === 1 ? "" : "s"); }
 
-  var WAIT = { waits: "Waits for you", regroups: "Regroups", drops: "Drops" };
+  var WAIT = { waits: "Waits for you", regroups: "Pace groups", drops: "Drops" };
   /* Pass 6: the card carries its discipline's mark (cfc-site/rides/marks.svg); keep in step with tools/build-rides.js card() */
   var MARKS = { road: 1, gravel: 1, mtb: 1, fixed: 1, social: 1, cruiser: 1, bmx: 1, track: 1, cyclocross: 1, ebike: 1, mixed: 1 };
   function markOf(r) { var k = r.k === "open-streets" ? "open-streets" : (r.d && r.d[0]); return '<svg class="gr-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-' + (MARKS[k] || k === "open-streets" ? k : "mixed") + '"/></svg>'; }
-  // Pass 15 (Oct 1, 2026): the row — keep in step with card() in tools/build-rides.js
-  function card(r, d) {
+  // Pass 22: the row — keep in step with card() in tools/build-rides.js (waits · pace · length · checked).
+  // A distance only ever says how far the ride is from the reader or the town they searched.
+  function card(r, d, km) {
     var meta = [
+      d != null ? '<span class="gr-dist">' + F.away(d, km) + "</span>" : "",
       r.wt ? '<em class="gr-wait gr-wait--' + r.wt + '">' + WAIT[r.wt] + "</em>" : "",
-      d != null ? '<span class="gr-dist">' + Math.round(d) + " mi</span>" : "",
+      r.pc ? '<span class="gr-card-pc">' + esc(r.pc) + "</span>" : "",
+      r.lg ? '<span class="gr-card-lg">' + esc(r.lg) + "</span>" : "",
       r.u ? '<span class="gr-card-warn">Unconfirmed</span>' : "",
       r.ck ? '<span class="gr-card-checked' + (r.cf ? " gr-card-checked--look" : "") + '">' + esc(r.ck) + "</span>" : "",
     ].join("");
@@ -103,30 +95,22 @@
       '<button type="button" class="gr-save" data-save="' + r.s + '" aria-pressed="false" aria-label="Save ' + esc(r.n) + '"><span aria-hidden="true">☆</span></button>' +
       "</div>";
   }
-  // disc and days are "any of", made-for is "all of"; skip leaves one group out (for the tile counts)
-  function passes(r, saved, skip) {
-    if (skip !== "disc" && f.disc.length && !f.disc.some(function (d) { return r.d.indexOf(d) > -1; })) return false;
+  // the old URL picks: disc and days are "any of", made-for is "all of"
+  function passesF(r, saved) {
+    if (f.disc.length && !f.disc.some(function (d) { return r.d.indexOf(d) > -1; })) return false;
     if (f.tags.length && !f.tags.every(function (t) { return r.t.indexOf(t) > -1; })) return false;
-    if (skip !== "days" && f.days.length && !f.days.some(function (d) { return r.dy.indexOf(d) > -1; })) return false;
+    if (f.days.length && !f.days.some(function (d) { return r.dy.indexOf(d) > -1; })) return false;
     if (f.pace && r.p.indexOf(f.pace) < 0) return false;
     if (f.saved && saved.indexOf(r.s) < 0) return false;
     return true;
   }
-  function textMatch(r, t) {
-    if (!t) return true;
-    var hay = norm([r.n, r.ne, r.c, r.st, stateAbbr[r.st], r.co, r.rg, r.ho, r.h, r.dl, r.tl.join(" ")].join(" "));
-    return t.split(" ").every(function (w) { return hay.indexOf(w) > -1; });
-  }
-  function describe() {
+  var DAY_SAY = { mon: "Mondays", tue: "Tuesdays", wed: "Wednesdays", thu: "Thursdays", fri: "Fridays", sat: "Saturdays", sun: "Sundays" };
+  function describeF() {
     var bits = [];
-    if (f.disc.length) bits.push(f.disc.map(function (d) { return { mtb: "mountain bike", ebike: "e-bike" }[d] || d; }).join(" or "));
+    if (f.disc.length) bits.push(f.disc.map(function (d) { return { mtb: "mountain bike", ebike: "e-bikes welcome" }[d] || d; }).join(" or "));
     if (f.pace) bits.push({ easy: "easy pace", steady: "steady pace", fast: "fast" }[f.pace]);
-    if (f.tags.length) bits.push(f.tags.map(function (t) { return { lgbtq: "made for LGBTQ+", wtf: "women/trans/femme", bipoc: "BIPOC", beginner: "beginner friendly", "no-drop": "no-drop", family: "family" }[t] || t; }).join(", "));
-    if (f.days.length) {
-      var W = { mon: "Mondays", tue: "Tuesdays", wed: "Wednesdays", thu: "Thursdays", fri: "Fridays", sat: "Saturdays", sun: "Sundays" };
-      bits.push(sameDays(f.days, [todayKey()]) ? "today" : sameDays(f.days, expandDay("weekend")) ? "weekends" : sameDays(f.days, expandDay("weekday")) ? "weekdays"
-        : DAYS.slice(1).concat("sun").filter(function (d) { return f.days.indexOf(d) > -1; }).map(function (d) { return W[d]; }).join(" or "));
-    }
+    if (f.tags.length) bits.push(f.tags.map(function (t) { return { lgbtq: "LGBTQ+", wtf: "women, trans, femme", bipoc: "BIPOC", beginner: "beginners", "no-drop": "no-drop", family: "family" }[t] || t; }).join(" · "));
+    if (f.days.length) bits.push(DAYS.slice(1).concat("sun").filter(function (d) { return f.days.indexOf(d) > -1; }).map(function (d) { return DAY_SAY[d]; }).join(" or "));
     if (f.saved) bits.push("saved");
     return bits.join(" · ");
   }
@@ -141,44 +125,91 @@
     var s = p.toString();
     history.replaceState(null, "", location.pathname + (s ? "?" + s : "") + location.hash);
   }
-  function syncChips() {
-    chips.forEach(function (ch) {
-      var k = ch.dataset.filter, v = ch.dataset.value, on;
-      if (k === "disc") on = f.disc.indexOf(v) > -1;
-      else if (k === "tag") on = f.tags.indexOf(v) > -1;
-      else if (k === "day") on = isDayKey(v) ? f.days.indexOf(v) > -1 : f.days.length > 0 && sameDays(f.days, expandDay(v));
-      else if (k === "saved") on = f.saved;
-      ch.setAttribute("aria-pressed", on ? "true" : "false");
-    });
-    if (window.CFCSave) window.CFCSave.paint();
-  }
-  function plural(n) { return n + " ride" + (n === 1 ? "" : "s"); }
+  // the line under the box is for screen readers once the results say the same thing on screen
+  function tell(text, onScreen) { status.textContent = text; status.classList.toggle("visually-hidden", !onScreen); }
 
-  // The tiles' counts: what you'd get with each one on, inside whatever place is typed.
-  // Until the list has loaded they keep the whole directory's numbers from the HTML.
-  function paintCounts(pool, saved) {
-    chips.forEach(function (ch) {
-      var k = ch.dataset.filter, v = ch.dataset.value, n = 0, el = ch.querySelector("[data-n]");
-      if (!el) return;   // quick chips carry no count
-      var skip = k === "disc" ? "disc" : k === "day" ? "days" : null;
-      pool.forEach(function (r) { if (passes(r, saved, skip) && (k === "disc" ? r.d : k === "tag" ? r.t : r.dy).indexOf(v) > -1) n++; });
-      el.textContent = n;
-      if (n || ch.getAttribute("aria-pressed") === "true") ch.removeAttribute("aria-disabled"); else ch.setAttribute("aria-disabled", "true");
-      ch._n = n;
-    });
-    var dayTiles = chips.filter(function (ch) { return ch.dataset.filter === "day" && isDayKey(ch.dataset.value) && ch.querySelector("[data-n]"); });
-    var max = Math.max.apply(null, [1].concat(dayTiles.map(function (ch) { return ch._n; })));
-    dayTiles.forEach(function (ch) { ch.style.setProperty("--h", (ch._n / max).toFixed(2)); });
+  // —— the links above the rows: the town's own page, its guide, the other towns with that name ——
+  var links = document.createElement("div");
+  links.className = "gr-links"; links.id = "gr-links"; links.hidden = true;
+  if (head) head.insertAdjacentElement("afterend", links);
+  var NEAR_BTN = '<button type="button" class="gr-chip gr-chip--mk" data-geo><svg class="gr-chip-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-locate"/></svg>Near me</button>';
+  function townOf(h) { return h.city + (h.state ? ", " + h.state : ""); }
+  function guideName(h) {
+    var seg = String(h.guide).replace(/\/$/, "").split("/").pop();
+    if (seg === F.norm(h.city).replace(/ /g, "-")) return h.city;
+    return seg.split("-").map(function (w) { return w.charAt(0).toUpperCase() + w.slice(1); }).join(" ");
   }
-  function poolFor(o, st, cc, t) {
-    return RIDES.filter(function (r) { return o ? miles(o, { lat: r.la, lng: r.ln }) <= RADIUS : st ? r.st === st : cc ? r.co === cc : textMatch(r, t); });
+  // "Narrow these →" opens the town's /all/ page with the picks that are tiles there; the rest ride along as words
+  function narrowHref(P, h) {
+    var p = new URLSearchParams(), days = [], tags = [], bikes = [], rest = [];
+    P.facets.forEach(function (x) {
+      var g = x.f.g;
+      if (g === "day") days = days.concat(x.f.days());
+      else if (x.f.tag) tags.push(x.f.tag);
+      else if (x.f.disc) bikes.push(x.f.disc);
+      else rest.push(x.ph);
+    });
+    P.words.forEach(function (w) { rest.push(w.w); });
+    bikes = bikes.concat(f.disc); tags = tags.concat(f.tags); days = days.concat(f.days);
+    if (f.pace) rest.push(f.pace);
+    var u = function (l) { return l.filter(function (x, i) { return l.indexOf(x) === i; }); };
+    if (rest.length) p.set("q", u(rest).join(" "));
+    if (bikes.length) p.set("bike", u(bikes).join(","));
+    if (tags.length) p.set("for", u(tags).join(","));
+    if (days.length) p.set("day", u(days).join(","));
+    var s = p.toString();
+    return h.url + "all/" + (s ? "?" + s : "");
+  }
+  function placeLinks(P, S, none) {
+    var out = [], h = S.hub, picks = P.facets.length || P.words.length || anyF();
+    if (S.kind === "near") h = E.covering(S.center);   // the city page that covers the reader, if one does
+    if (h) {
+      if (none) out.push('<a href="' + esc(h.url) + '">Every ride in ' + esc(h.city) + " (" + h.rides + ") &rarr;</a>");
+      else if (h.rides > 12 && S.kind === "city") out.push('<a href="' + esc(narrowHref(P, h)) + '">' + (picks ? "Narrow these" : "Narrow these by bike, rider and day") + " &rarr;</a>");
+      else out.push('<a href="' + esc(h.url) + '">The ' + esc(h.city) + " page &rarr;</a>");
+      if (h.guide) out.push('<a href="' + esc(h.guide) + '">' + esc(guideName(h)) + " town guide &rarr;</a>");
+    } else if (S.kind === "state" && S.area) out.push('<a href="/rides/' + S.area.st.toLowerCase() + '/">The ' + esc(S.area.label) + " page &rarr;</a>");
+    else if (S.kind === "country" && S.area && countryPath[S.area.cc]) out.push('<a href="' + esc(countryPath[S.area.cc]) + '">The ' + esc(S.area.label) + " page &rarr;</a>");
+    var alts = P.alts.filter(function (a) { return a.type === "city"; }).slice(0, 2);
+    alts.forEach(function (a) { out.push('<a href="' + esc(a.hub ? a.hub.url : "/rides/?q=" + encodeURIComponent(a.label)) + '">Or ' + esc(a.label) + " &rarr;</a>"); });
+    return out;
   }
 
-  // The jump bar: while the results are below the fold.
+  // —— nothing found: what didn't match, and every way on ——
+  function paintEmpty(P, S, code, canWiden) {
+    var why, acts = [NEAR_BTN];
+    if (code) {
+      why = "<b>We can&rsquo;t look up " + (code === "zip" ? "zip codes" : "postcodes") + " yet.</b> Try your town or Near me.";
+    } else {
+      var fPre = [], fPost = [];
+      if (f.tags.length || f.disc.length || f.pace) fPre.push(describeF().split(" · ").filter(function (b) { return !/day|saved/.test(b); }).join(" "));
+      if (f.days.length) fPost.push("on " + DAYS.slice(1).concat("sun").filter(function (d) { return f.days.indexOf(d) > -1; }).map(function (d) { return DAY_SAY[d]; }).join(" or "));
+      if (f.saved) fPost.push("in your saved list");
+      why = "<b>" + esc(E.sentence(P, S, { pre: fPre, post: fPost })) + "</b>";
+      // a word nothing we list carries anywhere (said only when the line above doesn't already say it)
+      var gone = E.unknown(P, RIDES);
+      if (gone.length && (P.places.length || P.facets.length || P.words.length > gone.length || anyF())) why += " Nothing we list says " + gone.map(function (w) { return "&ldquo;" + esc(w) + "&rdquo;"; }).join(" or ") + ".";
+      if (canWiden) acts.push('<button type="button" class="gr-chip" data-widen>Show the closest rides anyway</button>');
+      acts = acts.concat(placeLinks(P, S, true).map(function (a) { return a.replace("<a ", '<a class="gr-chip" '); }));
+      // a word that looks like a town we list (a typo, half a name)
+      if (!P.places.length && P.words.length) {
+        var near = E.suggest(P.words.map(function (w) { return w.w; }), 3);
+        if (near.length) why += " Did you mean " + near.map(function (c) { return esc(c.hub ? townOf(c.hub) : c.label); }).join(" or ") + "?";
+        near.forEach(function (c) { acts.push('<a class="gr-chip" href="' + esc(c.hub ? c.hub.url : "/rides/?q=" + encodeURIComponent(c.label)) + '">' + esc(c.hub ? townOf(c.hub) : c.label) + " &rarr;</a>"); });
+      }
+    }
+    acts.push('<a class="gr-chip" href="/rides/world/">Outside the US &rarr;</a>', '<a class="gr-chip" href="/rides/united-states/">Every state &rarr;</a>');
+    empty.innerHTML = '<p class="gr-empty-why">' + why + '</p><p class="gr-empty-actions">' + acts.join(" ") +
+      '</p><p class="gr-empty-add"><a href="/rides/add/">Add a ride we&rsquo;re missing</a></p>';
+    if (window.CFCSave) window.CFCSave.paint(empty);
+    return why.replace(/<[^>]+>/g, "").replace(/&rsquo;/g, "’").replace(/&ldquo;/g, "“").replace(/&rdquo;/g, "”");
+  }
+
+  // The jump bar: while the count line is below the fold.
   var jumpN = jump && jump.querySelector(".gr-jump-n"), nShown = 0, ticking = false;
   function paintJump() {
     if (!jump) return;
-    var show = !results.hidden && nShown > 0 && results.getBoundingClientRect().top > window.innerHeight - 120;
+    var show = !results.hidden && nShown > 0 && (head || results).getBoundingClientRect().top > window.innerHeight - 40;
     if (show) jumpN.textContent = plural(nShown);
     jump.hidden = !show;
   }
@@ -194,100 +225,89 @@
 
   function render(opts) {
     opts = opts || {};
-    syncChips(); syncUrl();
-    if (!any()) { results.hidden = true; status.textContent = ""; nShown = 0; if (RIDES) paintCounts(RIDES, []); paintJump(); return; }
+    syncUrl();
+    if (!any()) { results.hidden = true; tell("", false); nShown = 0; paintJump(); return; }
     results.hidden = false;
-    if (!RIDES) {
+    if (!E) {
       count.textContent = "Loading rides…";
       load().then(function () { render(opts); }).catch(function () {
-        count.textContent = "The ride list didn't load. Pick a state below instead.";
+        count.textContent = "The ride list didn't load. Tap a state below instead.";
       });
       return;
     }
     var saved = window.CFCSave ? window.CFCSave.read() : [];
-    var text = q.value, o = origin, label = origin && origin.label;
-    if (!o) { var c = matchCity(text); if (c) { o = { lat: c[1], lng: c[2] }; label = c[0]; } }
-    var st = !o ? matchState(text) : null;
-    var cc = !o && !st ? matchCountry(text) : null;
-    var list, note = "", desc = describe();
-    paintCounts(poolFor(o, st, cc, st || cc ? "" : norm(text)), saved);
-    if (o) {
-      var all = RIDES.filter(function (r) { return passes(r, saved); })
-        .map(function (r) { return { r: r, d: miles(o, { lat: r.la, lng: r.ln }) }; })
-        .sort(function (a, b) { return a.d - b.d; });
-      list = all.filter(function (x) { return x.d <= RADIUS; });
-      if (!list.length && widened && all.length) { list = all.slice(0, 12); note = " (nothing within " + RADIUS + " mi, so these are the closest)"; }
-      count.textContent = list.length ? plural(list.length) + " within " + RADIUS + " mi of " + label + ", closest first" + note + (desc ? " · " + desc : "") : "No rides within " + RADIUS + " mi of " + label + (desc ? " · " + desc : "");
-      widenBtn.hidden = list.length > 0 || !all.length;
+    var P = E.parse(origin ? "" : q.value, RIDES);
+    var code = !origin && P.codes.length && !P.places.length ? P.codes[0].kind : null;
+    var S = E.scope(P, RIDES, origin ? { origin: origin, radius: RADIUS } : {});
+    var ok = function (x) { return !code && E.passes(P, x.r) && passesF(x.r, saved); };
+    var list = S.pool.filter(ok), note = "";
+    var canWiden = !!S.center && !widened && S.all.some(ok);
+    if (!list.length && widened && S.center) {
+      list = S.all.filter(ok).slice(0, 12);
+      if (list.length) note = "widened";
+    }
+    var n = list.length, where = E.where(S), words = E.wordsText(P);
+    var desc = (E.describe(P) + " · " + describeF()).split(" · ").filter(function (b, i, a) { return b && a.indexOf(b) === i; }).join(" · ");
+    var said;
+    if (n) {
+      said = note ? "Nothing " + where + (words ? " " + words : "") + ", so here are the " + plural(n).replace(/ rides?$/, "") + " closest"
+        : plural(n) + (where ? " " + where : "") + (words ? " " + words : "") + (S.center && n > 1 ? ", closest first" : "");
+      said += desc ? " · " + desc : "";
+      count.textContent = said;
+      var ls = placeLinks(P, S);
+      if (!S.center && !S.area && !P.places.length) ls.unshift('<span class="gr-links-hint">That&rsquo;s everywhere. Add a town, or</span> ' + NEAR_BTN);
+      links.innerHTML = ls.join("");
+      links.hidden = !ls.length;
+      empty.hidden = true;
     } else {
-      var t = st || cc ? "" : norm(text);
-      list = RIDES.filter(function (r) { return passes(r, saved) && (st ? r.st === st : cc ? r.co === cc : textMatch(r, t)); }).map(function (r) { return { r: r, d: null }; });
-      count.textContent = plural(list.length) + (st ? " in " + stateAbbr[st] : cc ? " in " + countryName[cc] : text.trim() ? " matching “" + text.trim() + "”" : "") + (desc ? " · " + desc : "");
-      widenBtn.hidden = true;
+      count.textContent = "";
+      links.hidden = true;
+      said = paintEmpty(P, S, code, canWiden);
+      empty.hidden = false;
     }
     if (!opts.more) shown = PAGE;
-    grid.innerHTML = list.slice(0, shown).map(function (x) { return card(x.r, x.d); }).join("");
-    more.hidden = list.length <= shown;
-    more.textContent = "Show " + Math.min(PAGE, list.length - shown) + " more";
-    empty.hidden = list.length > 0;
-    status.textContent = count.textContent;
-    nShown = list.length; paintJump();
+    grid.innerHTML = list.slice(0, shown).map(function (x) { return card(x.r, S.center ? x.d : null, S.world || x.r.co !== "US"); }).join("");
+    more.hidden = n <= shown;
+    more.textContent = "Show " + Math.min(PAGE, n - shown) + " more";
+    tell(said, false);
+    nShown = n; paintJump();
     if (window.CFCSave) window.CFCSave.paint(grid);
     if (opts.scroll) results.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
   }
 
-  // —— search + chips ——
+  // —— search ——
   var timer;
   q.addEventListener("input", function () { origin = null; widened = false; clearTimeout(timer); timer = setTimeout(render, 150); });
-  if (form) form.addEventListener("submit", function (e) { e.preventDefault(); render({ scroll: true }); });
-  chips.forEach(function (ch) {
-    ch.addEventListener("click", function () {
-      var k = ch.dataset.filter, v = ch.dataset.value, i, on = ch.getAttribute("aria-pressed") === "true";
-      if (ch.getAttribute("aria-disabled") === "true" && !on) return;   // a tile that would leave nothing
-      if (k === "disc") { i = f.disc.indexOf(v); if (i > -1) f.disc.splice(i, 1); else f.disc.push(v); }
-      else if (k === "tag") { i = f.tags.indexOf(v); if (i > -1) f.tags.splice(i, 1); else f.tags.push(v); }
-      else if (k === "day" && isDayKey(v)) { i = f.days.indexOf(v); if (i > -1) f.days.splice(i, 1); else f.days.push(v); }
-      else if (k === "day") f.days = on ? [] : expandDay(v);   // the Today / This weekend chips
-      else if (k === "saved") f.saved = !f.saved;
-      render();
-    });
-  });
-  function clearAll() { origin = null; widened = false; q.value = ""; f = { disc: [], tags: [], days: [], pace: "", saved: false }; resetMatch(); render(); }
+  if (form) form.addEventListener("submit", function (e) { e.preventDefault(); clearTimeout(timer); render({ scroll: true }); });
+  function clearAll() { origin = null; widened = false; q.value = ""; f = { disc: [], tags: [], days: [], pace: "", saved: false }; render(); q.focus({ preventScroll: true }); }
   clearBtn.addEventListener("click", clearAll);
-  Array.prototype.forEach.call(document.querySelectorAll("[data-clear]"), function (b) { b.addEventListener("click", clearAll); });
-  widenBtn.addEventListener("click", function () { widened = true; render(); });
   more.addEventListener("click", function () { shown += PAGE; render({ more: true }); });
   document.addEventListener("cfc:saved", function () { if (f.saved) render({ more: true }); });
-  if (geoBtn) geoBtn.addEventListener("click", function () {
-    if (!navigator.geolocation) { status.textContent = "Your browser can't share location. Type a city instead."; return; }
-    status.textContent = "Finding you…";
+  function locate() {
+    if (!navigator.geolocation) { tell("Your browser can't share location. Type a town instead.", true); return; }
+    tell("Finding you…", true);
     navigator.geolocation.getCurrentPosition(function (pos) {
       origin = { lat: pos.coords.latitude, lng: pos.coords.longitude, label: "you" }; widened = false; q.value = "";
       render({ scroll: true });
-    }, function () { status.textContent = "Couldn't get your location. Type a city instead."; }, { timeout: 8000, maximumAge: 600000 });
+    }, function () { tell("Couldn't get your location. Type a town instead.", true); }, { timeout: 8000, maximumAge: 600000 });
+  }
+  if (geoBtn) geoBtn.addEventListener("click", locate);
+  // the buttons written into the results (Near me, Show the closest, Clear)
+  results.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-geo],[data-widen],[data-clear]");
+    if (!b) return;
+    if (b.hasAttribute("data-geo")) locate();
+    else if (b.hasAttribute("data-widen")) { widened = true; render(); }
+    else clearAll();
   });
 
-  // —— three taps ——
-  var groups = Array.prototype.slice.call(document.querySelectorAll(".gr-match fieldset[data-m]"));
-  groups.forEach(function (g) {
-    g.addEventListener("click", function (e) {
-      var b = e.target.closest("button[data-v]"); if (!b) return;
-      Array.prototype.forEach.call(g.querySelectorAll("button[data-v]"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
-    });
-  });
-  function pick(m) { var b = document.querySelector('.gr-match fieldset[data-m="' + m + '"] button[aria-pressed="true"]'); return b ? b.dataset.v : ""; }
-  function resetMatch() {
-    groups.forEach(function (g) { Array.prototype.forEach.call(g.querySelectorAll("button[data-v]"), function (x) { x.setAttribute("aria-pressed", x.dataset.v === "" ? "true" : "false"); }); });
+  // Pass 22: a rider from outside the US met a full US map first; a quiet way out sits by the box
+  if (form && !document.querySelector(".gr-hero-alt")) {
+    form.insertAdjacentHTML("afterend", '<p class="gr-hero-alt"><a href="/rides/world/"><svg class="gr-hero-alt-mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-globe"/></svg>Outside the US &rarr;</a></p>');
   }
-  var go = $("gr-match-go");
-  if (go) go.addEventListener("click", function () {
-    var ride = pick("ride");
-    f.disc = ride ? [ride] : [];
-    f.pace = pick("pace");
-    f.days = expandDay(pick("when"));
-    f.tags = []; f.saved = false;
-    render({ scroll: true });
-  });
+  // Pass 22: at 150% text the long placeholder clipped to "C"; it says less when the box is narrow (once rides.js is here)
+  var PH = ["Town, country or ride", "Town or ride name", "Town or ride", "Search"];
+  script("/rides/rides.js").then(function () { window.CFCFind.fitPlaceholder(q, PH); }).catch(function () {});
 
   // —— restore from the URL ——
   var p = new URLSearchParams(location.search);
@@ -297,11 +317,5 @@
   f.days = expandDay(p.get("day"));
   f.pace = p.get("pace") || "";
   f.saved = p.get("saved") === "1";
-  // today wears a dot on the week strip
-  chips.forEach(function (ch) {
-    if (ch.dataset.filter === "day" && ch.dataset.value === todayKey()) { ch.classList.add("is-today"); ch.insertAdjacentHTML("beforeend", '<span class="visually-hidden"> (today)</span>'); }
-  });
   render();
-  // a shared link that picked something inside "More filters" opens it
-  if (moreBox && moreBox.querySelector('[aria-pressed="true"]')) moreBox.open = true;
 })();

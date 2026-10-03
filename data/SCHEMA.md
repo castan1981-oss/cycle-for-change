@@ -106,9 +106,10 @@ before the build.
 | routes | [route] | the rides. 4–8 for a destination. See below |
 | coffee | [{name, url, address, note, hours_hint, ride_out}] | cafés riders actually roll out from or finish at; `ride_out: true` when a known group ride starts or ends there |
 | culture | [{name, kind, url, address, note}] | off the bike. `kind`: record-store, bookstore, gallery, museum, bar, queer-owned, venue, market, other |
-| clubs | [{name, url, note, inclusive_focus[], ride}] | clubs and collectives (the weekly rides themselves live in `cfc-site/rides/rides.json`); `ride` = the slug of their ride in the directory, rendered as a link |
+| clubs | [{name, url, note, inclusive_focus[], ride_slug}] | clubs and collectives (the weekly rides themselves live in `cfc-site/rides/rides.json`); `ride_slug` = their ride in the directory (see "Naming a ride" below) |
 | bring_your_bike | object | the logistics page. See below |
-| hotels[].bike_policy | string | "Bikes allowed in rooms", "Locked bike room", "No stated policy — ask" |
+| hotels[].bike_policy | string | "Bikes allowed in rooms", "Locked bike room", "No stated policy — ask". Only a policy the hotel states on its own page counts: the strip and the hotels card count "N with a bike policy in writing · M to ask" from this field, and null or "No stated policy …" is "to ask". Nothing on the site says "bike-friendly" without it |
+| (any entry).ride_slug | slug or [slug] | coffee, hotels, routes, clubs, shops, restaurants: the directory ride this place serves or starts. Renders "The ride from here: <name> (<days>, <time>) →" with the day, time and link from rides.json |
 | hotels[].booking_url | url | a booking link when one exists; the plain `url` stays the property's own site |
 | travel_links | [{label, url, kind, note}] | `kind`: official or affiliate. Affiliate links carry the disclosure in the page footer automatically |
 | faq | [{q, a}] | 4–6 questions a visiting rider actually asks ("Should I bring my bike to Los Angeles?"), answered in 1–3 plain sentences from the guide's own data; renders as a Questions section + FAQPage JSON-LD |
@@ -127,7 +128,7 @@ before the build.
 | water | string or null | where to fill up |
 | hazards | string or null | the honest line: traffic, doors, sand, heat |
 | links | {rwgps, strava, komoot, gpx, other} | at least one public route page; null for the rest |
-| ride | string | optional: the slug of the group ride that rides this route, from `cfc-site/rides/rides.json` |
+| ride_slug | string | optional: the slug of the group ride that rides this route, from `cfc-site/rides/rides.json` (the old name `ride` still reads) |
 | sources | [url] | |
 | verified | ISO date | |
 
@@ -142,6 +143,25 @@ before the build.
 | get_around | {car_needed, note, transit_bike_rules, bike_share: {name, url, note}} | `car_needed` is a boolean; `note` says why |
 | rules_and_safety | string | state or city law that matters on the bike (passing distance, e-bike class, helmet rules), and the honest read on traffic |
 | sources | [url] | |
+
+**Naming a ride (Pass 22, Oct 2, 2026).** A guide never types a group ride's day, time or URL
+by hand — the directory is the one source, and it changes (the LA guide said "the Saturday
+Nichols Canyon ride" after the ride's own page had moved it to Sunday, and the link 404'd).
+In any text field write the ride as a token:
+
+    {ride:los-angeles-ca-la-grange-nichols-canyon-ride|La Grange's Nichols Canyon ride}
+    {ride:slug-a,slug-b,slug-c|weekday rides from 26th and San Vicente}
+
+The build renders the label as a link to `/rides/<slug>/` followed by the day and time from
+`rides.json` — "La Grange's Nichols Canyon ride (Sundays, 8:00 am)"; several slugs on one clock
+read "(Tue, Wed, Thu and Fri, 6:30 am)", each day its own link. JSON-LD and meta get the same
+words without the link. Don't write the day or time next to a token. For a whole entry, use
+`ride_slug` (above). `node scripts/build-events.js` **fails** on a slug that isn't in rides.json;
+a ride that's off the lists (stale, paused, ended) prints a warning and renders as its label
+with no link. The town page's "Group rides around <town>" is picked from the directory by day
+(Saturday, Sunday, During the week; the rides the guide names first, then weekly, nearest) — no
+hand-picked list. Phone numbers in any text (`(310) 376-7786`, `520-884-9018`) and every `phone`
+field render as tap-to-call links.
 
 Rules for the guide fields are the same as everything else in this folder
 and stricter where it matters: a route must have a public route page you

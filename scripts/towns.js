@@ -42,15 +42,44 @@ function miles(a, b) {
 // The guide pages a town has, in visitor order. Mirrors guidePages() in build-events.js.
 // Pass 8 marks (cfc-site/rides/marks.svg) on each card, like the event page's strip.
 const mark = (id) => `<svg class="mk mk--strip" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-${id}"/></svg>`;
+// Pass 22 (Oct 2, 2026 — a rider found "6 picks, bike-friendly first" over five hotels that say
+// "No stated policy — ask"): the card lines are counted from the data, never a promise. A hotel has a
+// bike policy only when its `bike_policy` says one in writing; null or "No stated policy …" means ask.
+const plural = (n, one, many) => `${n} ${n === 1 ? one : (many || one + "s")}`;
+const hasBikePolicy = (h) => !!(h && h.bike_policy && !/^\s*(no stated|none stated|unknown|ask\b)/i.test(h.bike_policy));
+const rents = (s) => (s.services || []).some((x) => /^rental/.test(x));
+function hotelLine(t) {
+  const list = t.hotels || [], n = list.length;
+  if (!n) return "Hotels near the start";
+  const yes = list.filter(hasBikePolicy).length, ask = n - yes;
+  if (!yes) return `${plural(n, "pick")} · ask about the bike when you book`;
+  if (!ask) return `${n} with a bike policy in writing`;
+  return `${yes} with a bike policy in writing · ${ask} to ask`;
+}
+function coffeeLine(t) {
+  const list = t.coffee || [], n = list.length, out = list.filter((c) => c.ride_out).length;
+  return out ? `${plural(n, "place")} · ${out} at a ride start` : `${plural(n, "place")} near the riding`;
+}
+function shopLine(t) {
+  const list = t.bike_shops || [], n = list.length, r = list.filter(rents).length;
+  if (!n) return "Open the day before";
+  return r ? `${plural(n, "shop")} · ${r} rent${r === 1 ? "s" : ""} bikes` : `${plural(n, "shop")} for repairs`;
+}
 const PAGES = [
   { seg: "routes", key: "routes", mark: "road", k: "Ride", b: (t) => `Rides in ${t.name}`, s: (n) => `${n} route${n === 1 ? "" : "s"} with maps` },
-  { seg: "coffee", key: "coffee", mark: "ride-day", k: "Coffee", b: (t) => `Coffee in ${t.name}`, s: (n) => `${n} place${n === 1 ? "" : "s"} riders roll out from` },
-  { seg: "bike-shops", key: "bike_shops", mark: "fix", k: "Fix", b: (t) => `Bike shops in ${t.name}`, s: (n) => n ? `${n} shop${n === 1 ? "" : "s"}: repairs, rentals` : "Open the day before", always: true },
-  { seg: "hotels", key: "hotels", mark: "sleep", k: "Sleep", b: (t) => `Hotels in ${t.name}`, s: (n) => n ? `${n} pick${n === 1 ? "" : "s"}, bike-friendly first` : "Hotels near the start", always: true },
+  { seg: "coffee", key: "coffee", mark: "ride-day", k: "Coffee", b: (t) => `Coffee in ${t.name}`, s: (n, t) => coffeeLine(t) },
+  { seg: "bike-shops", key: "bike_shops", mark: "fix", k: "Fix", b: (t) => `Bike shops in ${t.name}`, s: (n, t) => shopLine(t), always: true },
+  { seg: "hotels", key: "hotels", mark: "sleep", k: "Sleep", b: (t) => `Hotels in ${t.name}`, s: (n, t) => hotelLine(t), always: true },
   { seg: "restaurants", key: "restaurants", mark: "eat", k: "Eat", b: (t) => `Restaurants in ${t.name}`, s: (n) => n ? `${n} pick${n === 1 ? "" : "s"}, night before and after` : "Carb night, post-ride, early coffee", always: true },
   { seg: "culture", key: "culture", mark: "town", k: "Off the bike", b: (t) => `${t.name} off the bike`, s: (n) => `${n} place${n === 1 ? "" : "s"} for the afternoon after` },
   { seg: "bring-your-bike", key: "bring_your_bike", mark: "airport", k: "Bring the bike", b: (t) => `Getting your bike to ${t.name}`, s: () => "Fly, ship or rent. The rules." },
 ];
+
+// Pass 22: guide text can name a ride from the directory as `{ride:<slug>|label}` (data/SCHEMA.md,
+// "Town guide fields"); scripts/build-events.js renders it with the ride's day and time from
+// rides.json. Here (the strip's summary line) it reads as the label alone.
+const RIDE_TOKEN = /\{ride:([a-z0-9,\s-]+?)(?:\|([^}]*))?\}/g;
+const textPlain = (s) => String(s == null ? "" : s).replace(RIDE_TOKEN, (m, slugs, label) => label || slugs.split(",")[0].trim());
 
 let cache = null;
 function load() {
@@ -108,13 +137,13 @@ function strip(t, opts = {}) {
   const heading = opts.heading || `Once you&rsquo;re in ${esc(t.name)}`;
   const cards = t.pages.map((p) => {
     const n = p.key === "bring_your_bike" ? null : (t[p.key] || []).length;
-    return `        <a href="${t.url}${p.seg}/">${mark(p.mark)}<span class="eyebrow">${esc(p.k)}</span><b>${esc(p.b(t))}</b><span>${esc(p.s(n))}</span></a>`;
+    return `        <a href="${t.url}${p.seg}/">${mark(p.mark)}<span class="eyebrow">${esc(p.k)}</span><b>${esc(p.b(t))}</b><span>${esc(p.s(n, t))}</span></a>`;
   }).join("\n");
   return `
     <section class="town-box" aria-labelledby="town-h">
       <p class="eyebrow">${t.kind === "destination" ? "The town guide" : "The town"}</p>
       <h2 id="town-h">${heading}</h2>
-      ${opts.compact ? "" : `<p>${esc(t.summary)}</p>`}
+      ${opts.compact ? "" : `<p>${esc(textPlain(t.summary))}</p>`}
       ${opts.lede ? `<p>${opts.lede}</p>` : ""}
       <div class="town-strip">
 ${cards}
@@ -128,4 +157,4 @@ function link(t, text) {
   return `<a class="town-link" href="${t.url}">${text || `${esc(t.name)} guide`} &rarr;</a>`;
 }
 
-module.exports = { load, find, strip, link, PAGES, RADIUS };
+module.exports = { load, find, strip, link, PAGES, RADIUS, hasBikePolicy, hotelLine, coffeeLine, shopLine, textPlain, RIDE_TOKEN };

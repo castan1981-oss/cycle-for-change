@@ -19,6 +19,58 @@
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
 
+## Pass 22 — ten riders used the site (Oct 2–3, 2026)
+Robert: "Create ten agents, each one a biker, ten different ways that would use the site. Let them critique
+it and then let's use that to fix." Ten personas (a Boise rider flying to LA with a bike, a Phoenix first-timer,
+a queer rider new to Chicago, a charity-ride fundraiser, a Boulder gravel rider, a Dallas racer, a Londoner
+visiting Phoenix, a skeptical pledger, a 66-year-old e-bike rider, a Tucson ride organizer) each walked the
+site on a phone and wrote up what broke. The fixes, by area — reports in the session, not the repo:
+- **Rows** (`card()` in build-rides.js, `hub.js`): the mono line is now wait · pace · length · checked.
+  Distance from a point shows only relative to the reader ("3 mi away"), never on static place pages
+  (five riders read "3 mi" as the ride's length). `tools/lib/ride-facts.js` is the one place pace and
+  length text come from (`pc`/`lg` in index.json and live.json; tests in `tools/test/ride-facts.test.js`).
+  A posted average beats a keyword ("13 mph" is never "fast"). "Regroups" → "Pace groups"; the "Bike"
+  filter group → "Kind of ride". E-bike facts come only from the ride's own text, never the host's name.
+- **Ride page:** When / Starts at / Pace sit above the buttons; the first-time fold opens by default on
+  beginner and no-drop rides and describes the easiest group the host posted; "First group ride? Start
+  here →" (`/rides/about/#first-ride`) is on every ride page and beginner/no-drop list.
+- **Search** (`rides.js` `CFCFind`, used by hub.js): every word must match — place (aliases, exonyms,
+  London boroughs/postcodes), tag synonyms (queer → lgbtq, women → wtf…), day words, pace words, whole
+  words of a name/host. A city + words gives the city sub-page's own set. Zero results never dead-end:
+  Near me, the nearest hubs, Outside the US, Every state; a zip says plainly we can't read those yet.
+  A one-city result shows "Narrow these →" (its /all/ page) and the town guide (`hubs.json` now carries
+  `url` and `guide`).
+- **Duplicate hubs:** a hub whose rides are a subset of a bigger hub's is dropped (16 went; Watford was a
+  copy of London) with 301s in netlify.toml. Country tiles name cities by ride count.
+- **Calendar** (`build-calendar.js`): research notes never reach a page — the build fails on "web-search
+  budget", "this session", "provenance", "artifact", "scheduled task", "unverified". Projected dates say
+  "· projected (2026 was Aug 15)" in the fold. Category/month pages link into `/all/` pre-filtered;
+  `calendar.js` keeps filters in the URL (URL beats localStorage). "How far?" filter (`far=`). Charity rows
+  always show the minimum ("Not published yet"). The first tile is "Robert's rides". /races/ says plainly
+  that local amateur races live on USA Cycling's calendar.
+- **Town guides** (`build-events.js`, `towns.js`): a guide names a ride by slug — `{ride:<slug>|label}` in
+  text or `ride_slug` on an entry — and the build fills day/time/link from rides.json and fails on a slug
+  that doesn't exist (the LA guide had the Nichols ride on the wrong day with a 404). Picks sit right under
+  the h1; About/Riding/Getting-there and Sources fold. Strip lines are counted from the data ("1 with a bike
+  policy in writing · 5 to ask") — never claim bike-friendly without a stated policy. Phone numbers are
+  `tel:` links. `/towns/` has a jump row and an A–Z.
+- **Organizer flow** (`blocks.js`, `report.js`, `rides-reports.js`): "I run this ride" (`role=host`);
+  "Something changed" reveals `new_time` + `from_date` (→ a `start_times` row on re-check); "New ride"
+  reveals days/time/start/drop/for/link. A host update with an email raises no public warning and starts no
+  hide clock; it goes to the top of the re-check queue (`rides-freshness.js`) for a person to confirm by
+  reply. The form never stamps `verified_on`.
+- **/tonight/:** LGBTQ+ and women/trans/femme marks and toggles (from live.json `tags`); My week near the
+  top when it has anything; a saved ride with no time shows "Date on the host's calendar →" (live.json `hl`).
+- **Home + /pledge/:** the FAQ grid only applies to a `<dt>` with a mark (the pledge FAQ rendered one word
+  per line); chips read "$500 at 10,000 mi"; the tally line everywhere reads "training miles since June 1 ·
+  the 10,000 start Jan 1" with an ink dot (volt only inside the homepage's live disc); "Find your people"
+  items are links; the town search no longer promises zip codes; "Town guides" is in every menu.
+- **Floor:** small labels are ≥11px in rem (they scale with the phone's text size), small creosote text is
+  creosote-ink, tap targets are 44px (chips, save stars, breadcrumbs, map labels — `map.js` loads on every
+  page with a labelled map), dark buttons show an asphalt focus ring.
+- **Open for Robert:** who gets the money when a pledger's org loses the vote (the copy says it four ways);
+  what a per-mile pledge does past 10,000; how often texts go out. Nothing was decided for him.
+
 ## Search Lab — every page change is an experiment (Oct 2, 2026)
 Robert's brief: track everything search-related on this site as a case study — what moves, what
 lasts, and what we got wrong — on the thesis that SEO is the base under AI answers and social.

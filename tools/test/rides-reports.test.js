@@ -96,3 +96,34 @@ test("matching: page first, then links, then the name", () => {
   assert.equal(R.matchRide({ page: "/rides/spain/barcelona/", ride: "Saturday club ride Rapha" }, rides).slug, "barcelona-es-rapha-saturday");
   assert.equal(R.matchRide({ page: "/rides/", ride: "a ride" }, rides), null);
 });
+
+test("a host's own update (role=host + email): no rider warning, no hide clock, the new time rides along", async () => {
+  const F = require("../lib/rides-freshness.js");
+  const f = files();
+  const fetch = mockFetch([
+    sub("h1", { kind: "changed", role: "host", email: "rosa@example.com", ride: "Desert Dawn Ride", details: "We start at 5:30 pm from Nov 1", new_time: "17:30", from_date: "2026-11-01", page: "/rides/phoenix-az-desert-dawn-ride/" }),
+    sub("h2", { kind: "changed", role: "host", ride: "Bean Café Saturday Social", details: "no email left", new_time: "7:3", page: "/rides/tempe-az-bean-cafe-saturday-social/" }),
+    sub("h3", { kind: "new", role: "host", email: "rosa@example.com", ride: "Sunday Women's Ride", details: "", days: "sun, wed, xyz", time: "08:00", start: "The shop", drop: "no-drop", for: "wtf, beginner", link: "https://www.instagram.com/rosas_shop/", page: "/rides/add/" }),
+  ]);
+  const out = await go(f, fetch);
+  assert.equal(out.host_updates, 2);
+  assert.equal(out.reports, 1, "a host with no email counts as a rider's report");
+  const h = JSON.parse(fs.readFileSync(f.healthFile, "utf8"));
+  const rep = h.rides["phoenix-az-desert-dawn-ride"].reports[0];
+  assert.deepEqual([rep.type, rep.said, rep.new_time, rep.from_date, rep.netlify_id], ["host-update", "changed", "17:30", "2026-11-01", "h1"]);
+  const bean = h.rides["tempe-az-bean-cafe-saturday-social"].reports[0];
+  assert.equal(bean.type, "changed");
+  assert.equal(bean.new_time, undefined, "a malformed time is dropped");
+  // the freshness policy: the host's update raises no warning and starts no clock, even 30 days on
+  const ride = { ...rides[1], verified_on: "2026-09-20", status: "active" };
+  const a = F.assess(ride, h.rides["phoenix-az-desert-dawn-ride"], "2026-11-05");
+  assert.equal(a.state, "fresh");
+  assert.equal(a.listed, true);
+  assert.equal(a.nudge, null);
+  assert.equal(a.banner, null);
+  assert.equal(ride.verified_on, "2026-09-20", "the form never moves verified_on");
+  const s = JSON.parse(fs.readFileSync(f.suggestionsFile, "utf8"));
+  assert.deepEqual(s[0], { id: "h3", date: "2026-10-01", kind: "new", host: true, ride: "Sunday Women's Ride", details: null, page: "/rides/add/",
+    days: ["sun", "wed"], time: "08:00", start: "The shop", drop: "no-drop", for: ["wtf", "beginner"], link: "https://www.instagram.com/rosas_shop/" });
+  assert.doesNotMatch(fs.readFileSync(f.healthFile, "utf8") + fs.readFileSync(f.suggestionsFile, "utf8"), /@example\.com/, "never an email address");
+});

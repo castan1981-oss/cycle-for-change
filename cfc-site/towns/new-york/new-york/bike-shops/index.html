@@ -65,6 +65,7 @@
     <li><a href="/pledge/">Pledge a mile <span>Free</span></a></li>
     <li><a href="/find-a-ride/">Find a ride <span>1407</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>640</span></a></li>
+    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
@@ -74,7 +75,7 @@
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;miles since June 1 &middot; 10,000 in 2027 &middot; all on the bike</span></p>
+<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1 &middot; the 10,000 start Jan 1</span></p>
 <main id="main" class="wrap">
 
   <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/towns/">Towns</a></li><li><a href="/towns/new-york/new-york/">New York</a></li><li><span aria-current="page">Bike shops in New York: repairs, parts, rentals</span></li></ol></nav>
@@ -84,21 +85,22 @@
     <p class="lede">Bike shops in New York that do repairs. If something breaks in transit or the night before, start here. Call ahead on event weekends. Mechanics get slammed.</p>
     <p class="for-events">For: <a href="/events/five-boro-bike-tour/">TD Five Boro Bike Tour</a>.</p>
     <h2 class="visually-hidden">Bike shops in New York: repairs, parts, rentals, listed</h2>
+    
     <ol class="places"><li class="place">
         <h3><a href="https://www.nycvelo.com/" rel="noopener">NYC Velo (East Village)</a></h3>
-        <p class="place-meta">66 2nd Avenue, New York, NY 10003 &middot; (212) 253-7771</p>
+        <p class="place-meta">66 2nd Avenue, New York, NY 10003 &middot; <a class="tel" href="tel:+12122537771">(212) 253-7771</a></p>
         <p class="place-tags"><span>repair</span><span>rental</span><span>parts</span></p>
         <p>Full-service shop about 2.5 miles north of the start; rentals through rentals.nycvelo.com.</p>
         
       </li><li class="place">
         <h3><a href="https://www.bikefixnyc.com/" rel="noopener">BikeFixNYC</a></h3>
-        <p class="place-meta">334 East 6th Street, New York, NY 10003 &middot; (347) 463-3876</p>
+        <p class="place-meta">334 East 6th Street, New York, NY 10003 &middot; <a class="tel" href="tel:+13474633876">(347) 463-3876</a></p>
         <p class="place-tags"><span>repair</span><span>parts</span></p>
         <p>Repair-focused East Village shop, open seven days; no rentals.</p>
         
       </li><li class="place">
         <h3><a href="https://circlesinmotion.com/" rel="noopener">Circles In Motion</a></h3>
-        <p class="place-meta">151 West 19th Street, New York, NY 10011 &middot; (212) 206-7656</p>
+        <p class="place-meta">151 West 19th Street, New York, NY 10011 &middot; <a class="tel" href="tel:+12122067656">(212) 206-7656</a></p>
         <p class="place-tags"><span>repair</span><span>parts</span></p>
         <p>Chelsea repair shop about three miles up from Bowling Green.</p>
         
@@ -117,7 +119,7 @@
 
     <details class="dir-report dir-report--compact" id="fix">
       <summary>Closed, moved, or missing?</summary>
-      <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report>
+      <form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report data-thing="place">
       <input type="hidden" name="form-name" value="ride-report">
       <input type="hidden" name="page" value="" data-page>
       <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
@@ -127,11 +129,35 @@
         <label><input type="radio" name="kind" value="changed" checked> <span>Something changed</span></label>
         <label><input type="radio" name="kind" value="gone"> <span>It's gone</span></label>
       </fieldset>
+      <label class="dir-report-role"><input type="checkbox" name="role" value="host" data-role> <span>I run this place</span></label>
       <label class="lab" for="rr-what-50">Place name or link</label>
       <input class="field" id="rr-what-50" name="ride" type="text" required autocomplete="off" value="Bike shops in New York: repairs, parts, rentals">
-      <label class="lab" for="rr-details-50">What should we know? <small>Day, time, start, pace, who runs it</small></label>
+      <div class="dir-report-more" data-show="never" hidden>
+        <p class="dir-report-note">New time? Both optional.</p>
+        <div class="dir-report-more--two">
+          <div><label class="lab" for="rr-ntime-50">New start time</label>
+          <input class="field" id="rr-ntime-50" name="new_time" type="time"></div>
+          <div><label class="lab" for="rr-from-50">Starting</label>
+          <input class="field" id="rr-from-50" name="from_date" type="date"></div>
+        </div>
+      </div>
+      <div class="dir-report-more" data-show="never" hidden>
+        <fieldset class="dir-report-chips dir-report-chips--days"><legend class="lab">Day(s)</legend><label><input type="checkbox" name="days" value="mon"> <span>Mon</span></label><label><input type="checkbox" name="days" value="tue"> <span>Tue</span></label><label><input type="checkbox" name="days" value="wed"> <span>Wed</span></label><label><input type="checkbox" name="days" value="thu"> <span>Thu</span></label><label><input type="checkbox" name="days" value="fri"> <span>Fri</span></label><label><input type="checkbox" name="days" value="sat"> <span>Sat</span></label><label><input type="checkbox" name="days" value="sun"> <span>Sun</span></label></fieldset>
+        <div class="dir-report-more--two">
+          <div><label class="lab" for="rr-time-50">Start time</label>
+          <input class="field" id="rr-time-50" name="time" type="time"></div>
+          <div><label class="lab" for="rr-start-50">Meeting spot</label>
+          <input class="field" id="rr-start-50" name="start" type="text" autocomplete="off"></div>
+        </div>
+        <fieldset class="dir-report-chips"><legend class="lab">Drop policy</legend><label><input type="radio" name="drop" value="no-drop"> <span>Waits for you</span></label><label><input type="radio" name="drop" value="groups"> <span>Pace groups</span></label><label><input type="radio" name="drop" value="drop"> <span>Drops</span></label></fieldset>
+        <fieldset class="dir-report-chips"><legend class="lab">Made for <small>Only if the ride says so</small></legend><label><input type="checkbox" name="for" value="beginner"> <span>Beginners</span></label><label><input type="checkbox" name="for" value="lgbtq"> <span>LGBTQ+</span></label><label><input type="checkbox" name="for" value="wtf"> <span>Women/trans/femme/nonbinary</span></label><label><input type="checkbox" name="for" value="ebike"> <span>E-bikes welcome</span></label></fieldset>
+        <label class="lab" for="rr-link-50">Link <small>Where you post the ride</small></label>
+        <input class="field" id="rr-link-50" name="link" type="url" inputmode="url" autocomplete="off" placeholder="https://">
+        <p class="dir-report-note">Only on Instagram? Leave your email — we'll confirm with you.</p>
+      </div>
+      <label class="lab" for="rr-details-50">What should we know? <small data-hint-new="Anything else: pace, distance, who runs it">Day, time, start, pace, who runs it</small></label>
       <textarea class="field" id="rr-details-50" name="details" rows="3"></textarea>
-      <label class="lab" for="rr-email-50">Your email <small>Optional. Only if we have a question.</small></label>
+      <label class="lab" for="rr-email-50">Your email <small data-hint-host="We'll reply to confirm it with you before the listing changes.">Optional. We'll tell you when it's live, or ask if we have a question.</small></label>
       <input class="field" id="rr-email-50" name="email" type="email" autocomplete="email" inputmode="email">
       <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
     </form>

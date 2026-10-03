@@ -803,8 +803,44 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .next-up-k{display:inline-flex;align-items:center;gap:7px}
 .mk--inline{width:14px;height:14px;color:var(--creosote-ink)}
 .mk--li{width:18px;height:18px;color:var(--creosote-ink)}
-.faq dt{display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;align-items:start}
+/* Pass 22: the two-column grid only where the dt has its mark — a dt without one was squeezed into the
+   20px column (one word per line on a phone). Without :has the mark just sits above the words. */
+.faq dt:has(> .mk--dt){display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;align-items:start}
 .mk--dt{width:20px;height:20px;margin-top:2px;color:var(--creosote-ink)}
 .plane-facts{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 22px}
 .plane-facts li{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--creosote-ink)}
 .plane-facts .mk{width:18px;height:18px}
+/* Pass 22: the three facts are doors now (/rides/no-drop/, /rides/lgbtq/, /tonight/) — same mark and type,
+   a hairline under the words so they read as tappable, 44px tall for a thumb */
+.plane-facts{gap:0 22px}
+.plane-facts a{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+@media (hover:hover){.plane-facts a:hover{color:var(--asphalt)}}
+
+/* —— Pass 22 (Oct 2, 2026): the ten riders —— */
+/* focus you can see: a dark button's ring was currentColor (bone) on bone. Dark buttons ring in asphalt;
+   bone buttons sit on dark ground (footer, tally bar) and ring in bone; on the creosote field, paper. */
+.btn--ink:focus-visible,.nav .btn--sm:focus-visible,.hero .btn--hero:focus-visible{outline:2px solid var(--asphalt);outline-offset:3px}
+.foot .btn--bone:focus-visible,.bar .btn--bone:focus-visible{outline:2px solid var(--bone);outline-offset:3px}
+.on-creosote .btn--bone:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+/* the tally line's dot is ink: it marks the count, it isn't live (volt only sits on asphalt) */
+.dot--ink{background:var(--asphalt)}
+.dot--ink::after{display:none}
+/* the rate chips say what they total at 10,000 mi, not a price */
+.chip small{letter-spacing:.02em;text-align:center}
+.chip small i{display:block;font-style:normal;letter-spacing:0}
+@media (max-width:479px){
+  .chips--bone{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .chips--bone .chip:last-child{grid-column:1 / -1}
+  .chips--bone .chip:last-child span{min-height:48px}
+}
+.calc-at{white-space:nowrap}
+/* thumbs: the text opt-in, the thank-you links, the vote buttons and the quick links are 44px tall */
+.check{min-height:44px;align-items:center}
+.check input{margin:0}
+.link{position:relative}
+.link::before{content:"";position:absolute;left:0;right:0;top:-10px;bottom:-10px}   /* a text link's hit area is 44px tall; the look doesn't change */
+.org .btn--sm{min-height:44px}
+.dir-quick{row-gap:0;align-items:center}
+.dir-quick a{display:inline-flex;align-items:center;min-height:44px}
+.next-up a{position:relative}
+.next-up a::before{content:"";position:absolute;left:0;right:0;top:-14px;bottom:-14px}

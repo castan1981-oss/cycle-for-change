@@ -62,8 +62,8 @@
     "The city is big enough that this guide names its zones by name: the Westside and the coast (Santa Monica, Venice, the beach path), the Santa Monica Mountains (Latigo, Mulholland, the Rock Store), Griffith Park and the river (Los Feliz, Silver Lake, Frogtown), the San Gabriels by way of Pasadena and Glendora, the South Bay and Palos Verdes, and the Valley. Every listing below says which one it sits in."
   ],
   "riding": [
-    "The ride for the day you land is the beach path: 22 paved miles along the sand, flat, no cars, turn around whenever you want. The signature climb is Latigo Canyon out of Malibu to Mulholland Highway and back down to the coast, about 44 miles and 4,000 feet. Griffith Park's roads above the Observatory are closed to cars and loop with the LA River path for a 26-mile ride you can start from a Los Feliz hotel. Glendora Mountain Road is the steady 5 percent time-trial climb of the San Gabriel foothills, 8.6 miles and 2,300 feet, and the road on to Mt. Baldy makes it a 51-mile, 6,850-foot day. The Donut loop around Palos Verdes is the South Bay's Saturday.",
-    "The group rides are the way in. Velo Club La Grange leaves 26th and San Vicente in Santa Monica at 6:30 every weekday and Westwood at 8 on Saturdays, open to anyone. Big Orange Cycling lists the South Bay's rides: the Donut at 8 on Saturdays from Redondo Beach, the New Pier Ride at 6:40 on Tuesdays and Thursdays. Different Spokes Southern California is the LGBTQ+ club with a Sunday ride. LA Critical Mass gathers at Wilshire and Western on the last Friday of the month. Sidewalk riding is legal in the city; the boulevards between the zones are where you stay alert."
+    "The ride for the day you land is the beach path: 22 paved miles along the sand, flat, no cars, turn around whenever you want. The signature climb is Latigo Canyon out of Malibu to Mulholland Highway and back down to the coast, about 44 miles and 4,000 feet. Griffith Park's roads above the Observatory are closed to cars and loop with the LA River path for a 26-mile ride you can start from a Los Feliz hotel. Glendora Mountain Road is the steady 5 percent time-trial climb of the San Gabriel foothills, 8.6 miles and 2,300 feet, and the road on to Mt. Baldy makes it a 51-mile, 6,850-foot day. The Donut loop around Palos Verdes is the South Bay's Saturday: {ride:redondo-beach-ca-the-donut-ride|the Donut Ride}.",
+    "The group rides are the way in. Velo Club La Grange runs {ride:santa-monica-ca-la-grange-marina-ride,santa-monica-ca-la-grange-gravel-wednesday,santa-monica-ca-la-grange-amalfi-loops,santa-monica-ca-la-grange-marina-lite|weekday rides from 26th and San Vicente in Santa Monica} and {ride:los-angeles-ca-la-grange-nichols-canyon-ride|the Nichols Canyon ride from Westwood}, open to anyone. Big Orange Cycling lists the South Bay's rides: {ride:redondo-beach-ca-the-donut-ride|the Donut} from Redondo Beach and {ride:manhattan-beach-ca-new-pier-ride|the New Pier Ride} from Manhattan Beach. Different Spokes Southern California is the LGBTQ+ club with {ride:los-angeles-ca-different-spokes-sunday-ride|a Sunday ride}. {ride:los-angeles-ca-los-angeles-critical-mass|LA Critical Mass} gathers at Wilshire and Western. Sidewalk riding is legal in the city; the boulevards between the zones are where you stay alert."
   ],
   "getting_there": "Fly into LAX (about 12 miles from downtown, closest to the Westside) or Burbank (about 12 miles, closer to Griffith Park, the Valley and the Pasadena side; a smaller airport that is faster to get out of). Long Beach is the South Bay airport, Ontario the one for Glendora Mountain Road. You will want a car: the zones are 20 to 40 miles apart, and rental offices at LAX are off airport by free shuttle. Ride apps pick up at the LAX-it lot next to Terminal 1; book an XL for the bike case. The Bring-your-bike page has the airline rules, the shipping option and Metro's bike rules.",
   "routes": [
@@ -255,7 +255,7 @@
         "lat": null,
         "lon": null
       },
-      "description": "The South Bay loop around the Palos Verdes peninsula, 28 miles and about 1,950 feet, per the RideWithGPS page, starting in Redondo Beach. It's the loop of the Donut Ride, the South Bay's group ride; the Donut Ride leaves Avenue I and Elena in Redondo Beach at 8 on Saturdays, per Big Orange Cycling's page; the no-drop Friendly Donut leaves Miramar Park the same morning. Komoot has a 55-mile, 2,116-foot version from El Segundo Beach that adds the beach path both ways.",
+      "description": "The South Bay loop around the Palos Verdes peninsula, 28 miles and about 1,950 feet, per the RideWithGPS page, starting in Redondo Beach. It's the loop of the Donut Ride, the South Bay's group ride; {ride:redondo-beach-ca-the-donut-ride|the Donut Ride} leaves Avenue I and Elena in Redondo Beach, per Big Orange Cycling's page; the no-drop {ride:redondo-beach-ca-friendly-donut-ride|Friendly Donut} leaves Miramar Park the same morning. Komoot has a 55-mile, 2,116-foot version from El Segundo Beach that adds the beach path both ways.",
       "water": null,
       "hazards": null,
       "links": {
@@ -269,10 +269,11 @@
         "https://ridewithgps.com/routes/6391692",
         "https://www.komoot.com/smarttour/e1772037750/palos-verdes-classic-donut-loop"
       ],
-      "verified": "2026-09-30"
+      "verified": "2026-09-30",
+      "ride_slug": "redondo-beach-ca-the-donut-ride"
     },
     {
-      "name": "Nichols Canyon – Mulholland (the La Grange Saturday ride)",
+      "name": "Nichols Canyon – Mulholland (the La Grange Nichols ride)",
       "type": "road",
       "miles": 27,
       "elevation_gain_ft": 1950,
@@ -284,7 +285,7 @@
         "lat": 34.0525,
         "lon": -118.4425
       },
-      "description": "Velo Club La Grange's club ride, 8:00 a.m. from Raymond Fouquet Square in Westwood; open to non-members, and fast. East on Santa Monica Blvd and Sunset through Century City and Beverly Hills, three miles of steady climbing up Nichols Canyon to a 100-meter wall at the top, then about ten miles of fast rollers on Mulholland Drive west to Sepulveda, where the group regroups by the 405, and back down to Westwood. 27 miles per the club; about 1,950 feet per a RideWithGPS route of it. Ride it alone any day. With the group, sit at the back if a fast pack is new to you.",
+      "description": "{ride:los-angeles-ca-la-grange-nichols-canyon-ride|Velo Club La Grange's club ride} from Raymond Fouquet Square in Westwood; open to non-members, and fast. East on Santa Monica Blvd and Sunset through Century City and Beverly Hills, three miles of steady climbing up Nichols Canyon to a 100-meter wall at the top, then about ten miles of fast rollers on Mulholland Drive west to Sepulveda, where the group regroups by the 405, and back down to Westwood. 27 miles per the club; about 1,950 feet per a RideWithGPS route of it. Ride it alone any day. With the group, sit at the back if a fast pack is new to you.",
       "water": null,
       "hazards": "The club names them: cars coming down Nichols Canyon, and the crossings at Laurel Canyon, Coldwater Canyon and Beverly Glen on Mulholland. The club says new riders should not ride Mulholland alone.",
       "links": {
@@ -300,7 +301,7 @@
         "https://ridewithgps.com/routes/31929982"
       ],
       "verified": "2026-09-30",
-      "ride": "los-angeles-ca-nichols-canyon-ride-velo-club-la-grange"
+      "ride_slug": "los-angeles-ca-la-grange-nichols-canyon-ride"
     }
   ],
   "coffee": [
@@ -308,9 +309,15 @@
       "name": "Caffe Luxxe (Brentwood Country Mart)",
       "url": "https://www.caffeluxxe.com/pages/brentwood-country-mart",
       "address": "225 26th Street, Santa Monica, CA 90402",
-      "note": "On the corner of 26th and San Vicente in the Brentwood Country Mart, where Velo Club La Grange's weekday rides leave at 6:30 a.m. It opens at 7, after the roll-out, so it is the coffee after. Outdoor tables, per its site. Nothing on either site says bike parking.",
+      "note": "On the corner of 26th and San Vicente in the Brentwood Country Mart, where {ride:santa-monica-ca-la-grange-marina-ride,santa-monica-ca-la-grange-gravel-wednesday,santa-monica-ca-la-grange-amalfi-loops,santa-monica-ca-la-grange-marina-lite|Velo Club La Grange's weekday rides} leave. It opens at 7, after the roll-out, so it is the coffee after. Outdoor tables, per its site. Nothing on either site says bike parking.",
       "hours_hint": "7 a.m. to 6 p.m. daily",
-      "ride_out": true
+      "ride_out": true,
+      "ride_slug": [
+        "santa-monica-ca-la-grange-marina-ride",
+        "santa-monica-ca-la-grange-gravel-wednesday",
+        "santa-monica-ca-la-grange-amalfi-loops",
+        "santa-monica-ca-la-grange-marina-lite"
+      ]
     },
     {
       "name": "Pedalers Fork / 10 Speed Coffee",
@@ -335,7 +342,7 @@
       "url": "https://reddichickbbq.com/contact-us",
       "address": "225 26th Street #23, Santa Monica, CA 90402",
       "cuisine": "Barbecue",
-      "note": "After the ride, on the Westside: a counter in the Brentwood Country Mart, the corner where Velo Club La Grange's weekday rides leave at 6:30. Open 10 to 7 every day, so lunch, not breakfast. Barbecue chicken, ribs and baked potatoes, per its site. Seating and bike parking were not on the page."
+      "note": "After the ride, on the Westside: a counter in the Brentwood Country Mart, the corner where {ride:santa-monica-ca-la-grange-marina-ride,santa-monica-ca-la-grange-gravel-wednesday,santa-monica-ca-la-grange-amalfi-loops,santa-monica-ca-la-grange-marina-lite|Velo Club La Grange's weekday rides} leave. Open 10 to 7 every day, so lunch, not breakfast. Barbecue chicken, ribs and baked potatoes, per its site. Seating and bike parking were not on the page."
     },
     {
       "name": "Pine & Crane Silverlake",
@@ -356,14 +363,14 @@
       "url": "https://brentsdeli.com/locations/",
       "address": "19565 Parthenia Street, Northridge, CA 91324",
       "cuisine": "Deli",
-      "note": "After the ride, in the Valley: the Northridge deli in the same neighborhood as the CSUN lot where SFVBC's Saturday ride leaves at 8. Opens at 8 every day; closes at 8, or 3 on Monday. Outdoor tables and bike parking were not on its page."
+      "note": "After the ride, in the Valley: the Northridge deli in the same neighborhood as the CSUN lot where {ride:northridge-ca-sfvbc-saturday-club-ride|SFVBC's club ride} leaves. Opens at 8 every day; closes at 8, or 3 on Monday. Outdoor tables and bike parking were not on its page."
     },
     {
       "name": "Martha's 22nd Street Grill",
       "url": "https://www.opentable.com/r/marthas-22nd-street-grill-hermosa-beach",
       "address": "25 22nd St, Hermosa Beach, CA 90254",
       "cuisine": "Breakfast",
-      "note": "After the ride, South Bay: breakfast and lunch on a patio in Hermosa Beach with the sand in view, on the beach path and north of the Donut loop's Redondo Beach start. 7 to 3 every day, per OpenTable and a listing with 2026 reviews. No site of its own; (310) 376-7786."
+      "note": "After the ride, South Bay: breakfast and lunch on a patio in Hermosa Beach with the sand in view, on the beach path and north of the Redondo Beach start of {ride:redondo-beach-ca-the-donut-ride|the Donut Ride}. 7 to 3 every day, per OpenTable and a listing with 2026 reviews. No site of its own; (310) 376-7786."
     },
     {
       "name": "The Rock Store",
@@ -404,7 +411,7 @@
       "url": "https://www.ambrosehotel.com/",
       "booking_url": "https://reservations.ambrosehotel.com/3549",
       "address": "1255 20th Street, Santa Monica, CA 90404",
-      "note": "Mid-city Santa Monica on 20th St, the nearest hotel this run found to 26th and San Vicente, where Velo Club La Grange's weekday rides leave at 6:30. Beach cruisers to borrow \"based on availability,\" per the page; nothing about your own bike. No rate shown (Sept 2026).",
+      "note": "Mid-city Santa Monica on 20th St, the nearest hotel this run found to 26th and San Vicente, where {ride:santa-monica-ca-la-grange-marina-ride,santa-monica-ca-la-grange-gravel-wednesday,santa-monica-ca-la-grange-amalfi-loops,santa-monica-ca-la-grange-marina-lite|Velo Club La Grange's weekday rides} leave. Beach cruisers to borrow \"based on availability,\" per the page; nothing about your own bike. No rate shown (Sept 2026).",
       "price_hint": null,
       "bike_policy": "No stated policy — ask when you book"
     },
@@ -413,7 +420,7 @@
       "url": "https://www.ihg.com/kimptonhotels/hotels/us/en/hotel-palomar-la-beverly-hills/laxwp/hoteldetail",
       "booking_url": null,
       "address": "10740 Wilshire Boulevard, Los Angeles, CA 90024",
-      "note": "Wilshire Blvd in Westwood, the same ZIP as Raymond Fouquet Square, where the Saturday La Grange Nichols Canyon ride starts at 8. No bike line on the page. No rate shown; self-parking $55 a day, valet $77 (Sept 2026).",
+      "note": "Wilshire Blvd in Westwood, the same ZIP as Raymond Fouquet Square, the start of {ride:los-angeles-ca-la-grange-nichols-canyon-ride|La Grange's Nichols Canyon ride}. No bike line on the page. No rate shown; self-parking $55 a day, valet $77 (Sept 2026).",
       "price_hint": null,
       "bike_policy": "No stated policy — ask when you book"
     },
@@ -431,7 +438,7 @@
       "url": "https://www.seaspritebeachclub.com/",
       "booking_url": "https://res.windsurfercrs.com/ibe/details.aspx?hotelID=15910",
       "address": "1016 The Strand, Hermosa Beach, CA 90254",
-      "note": "On the Strand in Hermosa Beach; the Strand is the beach path here, and the page says \"direct access to The Strand's 22-mile oceanfront path.\" South, the path leaves the sand at First Ave for the roll to Redondo Pier and the Donut start. The page's only bike line is about rentals. Starting rate $287 (Sept 2026), after a 2025 remodel.",
+      "note": "On the Strand in Hermosa Beach; the Strand is the beach path here, and the page says \"direct access to The Strand's 22-mile oceanfront path.\" South, the path leaves the sand at First Ave for the roll to Redondo Pier and the start of {ride:redondo-beach-ca-the-donut-ride|the Donut Ride}. The page's only bike line is about rentals. Starting rate $287 (Sept 2026), after a 2025 remodel.",
       "price_hint": "$$$",
       "bike_policy": "No stated policy — ask when you book"
     }
@@ -449,7 +456,7 @@
         "rental-road",
         "shop-rides"
       ],
-      "note": "Zone 1, the Westside, about 13 miles west of downtown and a mile or so from the La Grange 6:30 weekday start at 26th and San Vicente. Rents a carbon Cannondale SuperSix EVO CRB 3: $120 for one day, $90 a day for three days, $75 a day for five or more (Sept 2026); pedals, helmet and lock on request, flat kit in the saddle bag, photo ID, reserve by phone. Closed Mondays; Tuesday to Saturday 10 to 6, Sunday 11 to 5; service is call-ahead, not walk-in (standard tune-up $125, Sept 2026). Bike fitting on site; boxes a bike to ship home for $145 (Sept 2026); road and dirt shop rides leave from the door but the site lists the schedule as TBD — check the shop's Strava club."
+      "note": "Zone 1, the Westside, about 13 miles west of downtown and a mile or so from 26th and San Vicente, the start of {ride:santa-monica-ca-la-grange-marina-ride,santa-monica-ca-la-grange-gravel-wednesday,santa-monica-ca-la-grange-amalfi-loops,santa-monica-ca-la-grange-marina-lite|La Grange's weekday rides}. Rents a carbon Cannondale SuperSix EVO CRB 3: $120 for one day, $90 a day for three days, $75 a day for five or more (Sept 2026); pedals, helmet and lock on request, flat kit in the saddle bag, photo ID, reserve by phone. Closed Mondays; Tuesday to Saturday 10 to 6, Sunday 11 to 5; service is call-ahead, not walk-in (standard tune-up $125, Sept 2026). Bike fitting on site; boxes a bike to ship home for $145 (Sept 2026); road and dirt shop rides leave from the door but the site lists the schedule as TBD — check the shop's Strava club."
     },
     {
       "name": "Bike Attack",
@@ -484,7 +491,7 @@
         "fitting",
         "shop-rides"
       ],
-      "note": "Zone 4, Old Pasadena, about 8 miles northeast of downtown; the shop for the San Gabriels side. Retul custom fit, 2.5 hours, $400 (Sept 2026), booked at this store. Runs the FOO CHOW ride from the door, first and third Tuesdays, roll at 7 pm (already in the rides directory). Open every day: Monday 10 to 5, Tuesday to Saturday 10 to 6, Sunday 11 to 5. The chain's service page lists boxed-bike assembly at $70 to $200 (Sept 2026) and does not say the store receives shipped bikes — call."
+      "note": "Zone 4, Old Pasadena, about 8 miles northeast of downtown; the shop for the San Gabriels side. Retul custom fit, 2.5 hours, $400 (Sept 2026), booked at this store. {ride:pasadena-ca-foo-chow-ride|The FOO CHOW ride} rolls from the door. Open every day: Monday 10 to 5, Tuesday to Saturday 10 to 6, Sunday 11 to 5. The chain's service page lists boxed-bike assembly at $70 to $200 (Sept 2026) and does not say the store receives shipped bikes — call."
     },
     {
       "name": "Helen's Cycles Manhattan Beach",
@@ -496,7 +503,7 @@
         "fitting",
         "rental"
       ],
-      "note": "Zone 5, the South Bay, about 13 miles southwest of downtown, for the beach path south and the Palos Verdes loop. Closed Mondays; Tuesday to Saturday 10 to 6, Sunday 11 to 5; call ahead for service. Repair and bike fitting on site. The only rental here is a Cannondale Treadwell 3, a flat-bar fitness bike, $50 a day (Sept 2026) — fine for the beach path, not the bike for the Donut."
+      "note": "Zone 5, the South Bay, about 13 miles southwest of downtown, for the beach path south and the Palos Verdes loop. Closed Mondays; Tuesday to Saturday 10 to 6, Sunday 11 to 5; call ahead for service. Repair and bike fitting on site. The only rental here is a Cannondale Treadwell 3, a flat-bar fitness bike, $50 a day (Sept 2026) — fine for the beach path, not the bike for {ride:redondo-beach-ca-the-donut-ride|the Donut}."
     },
     {
       "name": "C Street Bikes",
@@ -569,22 +576,22 @@
         "lgbtq",
         "no-drop"
       ],
-      "ride": "los-angeles-ca-different-spokes-sunday-ride"
+      "ride_slug": "los-angeles-ca-different-spokes-sunday-ride"
     },
     {
       "name": "Velo Club La Grange",
       "url": "https://www.lagrange.org/rides",
-      "note": "The Westside club. Weekday rides leave 26th and San Vicente in Santa Monica at 6:30 (Marina Ride, Mandeville Canyon, Gravel Wednesday, Amalfi Loops, Marina Lite; 15 to 26 miles) and the Saturday Nichols Canyon ride leaves Westwood at 8. Every one is open to non-members; helmet required, no earphones. A monthly women's ride for female-identifying riders at a social pace where, the club says, no one gets left behind.",
+      "note": "The Westside club. {ride:santa-monica-ca-la-grange-marina-ride,santa-monica-ca-la-grange-gravel-wednesday,santa-monica-ca-la-grange-amalfi-loops,santa-monica-ca-la-grange-marina-lite|Weekday rides} leave 26th and San Vicente in Santa Monica (Marina Ride, Mandeville Canyon, Gravel Wednesday, Amalfi Loops, Marina Lite; 15 to 26 miles) and {ride:los-angeles-ca-la-grange-nichols-canyon-ride|the Nichols Canyon ride} leaves Raymond Fouquet Square in Westwood. Every one is open to non-members; helmet required, no earphones. {ride:los-angeles-ca-la-grange-womens-ride|A monthly women's ride} for female-identifying riders at a social pace where, the club says, no one gets left behind.",
       "inclusive_focus": [
         "women-trans-femme",
         "gravel"
       ],
-      "ride": "los-angeles-ca-nichols-canyon-ride-velo-club-la-grange"
+      "ride_slug": "los-angeles-ca-la-grange-nichols-canyon-ride"
     },
     {
       "name": "Big Orange Cycling",
       "url": "https://www.bigorangecycling.org/local-rides",
-      "note": "The South Bay club, and the one page that lists the South Bay's rides: the Donut (Saturday 8, Avenue I and Elena, Redondo Beach), the New Pier Ride (Tuesday and Thursday 6:40, Manhattan Beach Pier), the Wheatgrass (Sunday 8, Malaga Cove Plaza), plus its own Saturday club ride and Sunday team ride. The Friendly Donut Ride, Saturdays from Miramar Park, is the no-drop one. Show up.",
+      "note": "The South Bay club, and the one page that lists the South Bay's rides: {ride:redondo-beach-ca-the-donut-ride|the Donut} from Avenue I and Elena, Redondo Beach; {ride:manhattan-beach-ca-new-pier-ride|the New Pier Ride} from Manhattan Beach Pier; {ride:palos-verdes-estates-ca-wheatgrass-ride|the Wheatgrass} from Malaga Cove Plaza; plus {ride:redondo-beach-ca-big-orange-club-ride|its own Saturday club ride} and {ride:manhattan-beach-ca-big-orange-team-ride|Sunday team ride}. {ride:redondo-beach-ca-friendly-donut-ride|The Friendly Donut Ride} from Miramar Park is the no-drop one. Show up.",
       "inclusive_focus": [
         "no-drop"
       ]
@@ -620,7 +627,8 @@
       "name": "Los Angeles Wheelmen",
       "url": "https://www.lawheelmen.org/",
       "note": "A recreational club with a ride every Sunday from a different start around LA, Orange and Ventura counties, with easy, moderate and ambitious routes, and a smaller Saturday group on shorter, harder ones. Guests ride with a signed waiver; helmets mandatory; the month's schedule and route sheets are on the site. It puts on the Grand Tour double century in late June.",
-      "inclusive_focus": []
+      "inclusive_focus": [],
+      "ride_slug": "los-angeles-ca-la-wheelmen-sunday-ride"
     }
   ],
   "bring_your_bike": {
@@ -658,7 +666,7 @@
           "note": "About 34 miles southeast of downtown, in Orange County. Alaska, American, Delta, Southwest, United, Frontier, Spirit and others, per the airport's airlines page (Sept 2026). Wrong side of the metro for the Westside, the canyons and the San Gabriels; a fallback fare, not a plan."
         }
       ],
-      "airline_note": "Read on each airline's own page, Sept 2026. Alaska: a non-motorized bike in a soft or hard case or the maker's box is a standard checked bag; the oversize fee is waived and the overweight fee is waived up to 70 lb; over 115 linear inches pays oversize, over 70 lb pays overweight; one bike per case, handlebars sideways, pedals off. First bag $45, second $55 for flights ticketed on or after April 10, 2026. Southwest: a non-motorized single-seat bike is checked baggage at the standard bag fee with oversize fees waived; over 100 lb or 115 linear inches is refused; pedals and handlebars removed and wrapped; a cardboard or soft case flies with a limited release. First bag $45, second $55 for travel booked on or after April 9, 2026 ($35 and $45 before). Delta: a non-motorized touring or single-seat racing bike in a container built for bikes goes at the standard bag allowance and fee; over 50 lb pays the excess weight fee; over 115 linear inches or 100 lb is refused; soft bags sign a limited release. First bag $45, second $55, US domestic Main. American: one non-motorized bike in a hard case, bike bag or box; standard checked bag fee up to 50 lb, standard overweight fee 51 to 70 lb, oversize fees do not apply; handlebars fixed sideways and pedals off or wrapped; not in a hard case it is treated as fragile. First bag $50 ($45 paid online), second $60 ($55 online), updated May 18, 2026. United: its sports-equipment page would not load from this session; not confirmed. Keep a bike case under 50 lb on every one of these and it is one ordinary checked bag."
+      "airline_note": "Read on each airline's own page, Sept 2026. Alaska: a non-motorized bike in a soft or hard case or the maker's box is a standard checked bag; the oversize fee is waived and the overweight fee is waived up to 70 lb; over 115 linear inches pays oversize, over 70 lb pays overweight; one bike per case, handlebars sideways, pedals off. First bag $45, second $55 for flights ticketed on or after April 10, 2026. Southwest: a non-motorized single-seat bike is checked baggage at the standard bag fee with oversize fees waived; over 100 lb or 115 linear inches is refused; pedals and handlebars removed and wrapped; a cardboard or soft case flies with a limited release. First bag $45, second $55 for travel booked on or after April 9, 2026 ($35 and $45 before). Delta: a non-motorized touring or single-seat racing bike in a container built for bikes goes at the standard bag allowance and fee; over 50 lb pays the excess weight fee; over 115 linear inches or 100 lb is refused; soft bags sign a limited release. First bag $45, second $55, US domestic Main. American: one non-motorized bike in a hard case, bike bag or box; standard checked bag fee up to 50 lb, standard overweight fee 51 to 70 lb, oversize fees do not apply; handlebars fixed sideways and pedals off or wrapped; not in a hard case it is treated as fragile. First bag $50 ($45 paid online), second $60 ($55 online), updated May 18, 2026. United: not confirmed; check its sports-equipment page before you book. Keep a bike case under 50 lb on every one of these and it is one ordinary checked bag."
     },
     "ship": {
       "note": "One shop says it on its own site: Bike Shop LA in West Hollywood takes BikeFlights deliveries addressed to the shop and builds the bike; no build fee is published (Sept 2026). Helen's Cycles, Bike Attack and Incycle each publish a fee to assemble a boxed bike ($145, $120 to $300 and $70 to $200, Sept 2026) but none says it will receive a shipment — call before you book. Bike Shop LA's page says BikeFlights typically runs about $100 within the US (Sept 2026). BikeFlights ships by UPS and tells you to allow an extra day or two for weather; its pages do not state a transit-day count (read Sept 2026). ShipBikes, also UPS ground, says no more than 6 business days one way anywhere in the continental US (read Sept 2026). Ship a week ahead and the bike is built before you land.",
@@ -671,7 +679,7 @@
       ]
     },
     "rent": {
-      "note": "Two Westside shops rent a road bike worth the day; neither lists sizes, so call with your height. Helen's Cycles Santa Monica has a carbon Cannondale SuperSix EVO CRB 3 at $120 a day, $90 a day for three days, $75 a day for five or more, with the pedals you ask for (Sept 2026). Bike Attack on Main Street has Bianchi and KHS road bikes at Shimano 105 level, $50 a day or $75 for 24 hours, first come first served (Sept 2026). No gravel or mountain bike rental was confirmed anywhere. Helen's Manhattan Beach rents only a Treadwell fitness bike, $50 a day (Sept 2026), which does the beach path and not much more. The math: flying the bike costs $90 round trip on Alaska, Southwest or Delta and $100 on American (Sept 2026), so renting wins only on a one- or two-day trip, and only if a 105-level bike in a size you did not choose is fine for the Donut or Latigo. Three days or more, bring yours. Gravel: bring yours, nobody rents one.",
+      "note": "Two Westside shops rent a road bike worth the day; neither lists sizes, so call with your height. Helen's Cycles Santa Monica has a carbon Cannondale SuperSix EVO CRB 3 at $120 a day, $90 a day for three days, $75 a day for five or more, with the pedals you ask for (Sept 2026). Bike Attack on Main Street has Bianchi and KHS road bikes at Shimano 105 level, $50 a day or $75 for 24 hours, first come first served (Sept 2026). No gravel or mountain bike rental was confirmed anywhere. Helen's Manhattan Beach rents only a Treadwell fitness bike, $50 a day (Sept 2026), which does the beach path and not much more. The math: flying the bike costs $90 round trip on Alaska, Southwest or Delta and $100 on American (Sept 2026), so renting wins only on a one- or two-day trip, and only if a 105-level bike in a size you did not choose is fine for {ride:redondo-beach-ca-the-donut-ride|the Donut} or Latigo. Three days or more, bring yours. Gravel: bring yours, nobody rents one.",
       "shops": [
         {
           "name": "Helen's Cycles Santa Monica",
@@ -687,7 +695,7 @@
     },
     "get_around": {
       "car_needed": true,
-      "note": "Yes, unless you are staying on the Westside and riding only the coast and the Saturday La Grange ride. The zones sit far apart: the Westwood ride start is about 11 miles from downtown, Pasadena and the San Gabriels are about 18 miles the other way, Glendora Mountain Road is another 20 beyond that, and the canyon climbs start in Malibu. Out of LAX with a bike case: rental car offices are off airport, reached by the free shuttle under the purple Rental Car sign; ride apps and taxis pick up at the LAX-it lot next to Terminal 1, a walk or a free shuttle from the terminals (the airport's ground-transport page, Sept 2026) — book an XL and expect the case to ride in the back. The FlyAway bus runs nonstop to Union Station and Van Nuys, $12.75 one way, contactless card or app only; its pages say nothing about oversize luggage or bike boxes. Metro rail from LAX: a free shuttle from the terminals to the LAX/Metro Transit Center for the C and K Lines, $1.75 a ride with free transfers for two hours (metro.net, Sept 2026); fine with a built bike, not the way to move a case.",
+      "note": "Yes, unless you are staying on the Westside and riding only the coast and {ride:los-angeles-ca-la-grange-nichols-canyon-ride|La Grange's Nichols Canyon ride}. The zones sit far apart: the Westwood ride start is about 11 miles from downtown, Pasadena and the San Gabriels are about 18 miles the other way, Glendora Mountain Road is another 20 beyond that, and the canyon climbs start in Malibu. Out of LAX with a bike case: rental car offices are off airport, reached by the free shuttle under the purple Rental Car sign; ride apps and taxis pick up at the LAX-it lot next to Terminal 1, a walk or a free shuttle from the terminals (the airport's ground-transport page, Sept 2026) — book an XL and expect the case to ride in the back. The FlyAway bus runs nonstop to Union Station and Van Nuys, $12.75 one way, contactless card or app only; its pages say nothing about oversize luggage or bike boxes. Metro rail from LAX: a free shuttle from the terminals to the LAX/Metro Transit Center for the C and K Lines, $1.75 a ride with free transfers for two hours (metro.net, Sept 2026); fine with a built bike, not the way to move a case.",
       "transit_bike_rules": "LA Metro, read Sept 2026: bikes ride on rail at all operating hours; board at the doors marked with the yellow bike sign and stand with the bike in the open area. E-bikes are allowed on trains if they are standard-bike sized and pass inspection; fuel-powered, three-wheeled, tandem, recumbent and over-six-foot bikes, mopeds and trailers are not. Every bus has two or more racks on the front; motorized bikes and any bike over 55 lb cannot go on the rack; folding bikes with wheels 20 inches or smaller ride inside. Metrolink (Burbank airport station, Union Station) has its own bike rules on metrolinktrains.com; not read this run.",
       "bike_share": {
         "name": "Metro Bike Share",
@@ -745,11 +753,11 @@
     },
     {
       "q": "Do I need a car to ride in Los Angeles?",
-      "a": "Yes, unless you stay on the Westside and ride only the coast and the Saturday La Grange ride. The Westwood ride start is about 11 miles from downtown, Pasadena and the San Gabriels about 18 the other way, Glendora Mountain Road another 20 beyond that, and the canyon climbs start in Malibu."
+      "a": "Yes, unless you stay on the Westside and ride only the coast and {ride:los-angeles-ca-la-grange-nichols-canyon-ride|La Grange's Nichols Canyon ride}. The Westwood ride start is about 11 miles from downtown, Pasadena and the San Gabriels about 18 the other way, Glendora Mountain Road another 20 beyond that, and the canyon climbs start in Malibu."
     },
     {
       "q": "Where do group rides start in Los Angeles?",
-      "a": "Velo Club La Grange leaves 26th and San Vicente in Santa Monica at 6:30 a.m. on weekdays and Raymond Fouquet Square in Westwood at 8 on Saturdays, open to non-members. The Donut Ride leaves Avenue I and Elena in Redondo Beach at 8 on Saturdays. Different Spokes, the LGBTQ+ club, rides Sundays from a rotating start. LA Critical Mass gathers at Wilshire and Western at 6:30 p.m. on the last Friday of the month."
+      "a": "Velo Club La Grange leaves 26th and San Vicente in Santa Monica on {ride:santa-monica-ca-la-grange-marina-ride,santa-monica-ca-la-grange-gravel-wednesday,santa-monica-ca-la-grange-amalfi-loops,santa-monica-ca-la-grange-marina-lite|weekday mornings} and Raymond Fouquet Square in Westwood for {ride:los-angeles-ca-la-grange-nichols-canyon-ride|the Nichols Canyon ride}, open to non-members. {ride:redondo-beach-ca-the-donut-ride|The Donut Ride} leaves Avenue I and Elena in Redondo Beach, and {ride:santa-monica-ca-now-ride-saturday|the NOW ride} leaves 701 Montana Ave in Santa Monica. Different Spokes, the LGBTQ+ club, rides {ride:los-angeles-ca-different-spokes-sunday-ride|Sundays} from a rotating start. {ride:los-angeles-ca-los-angeles-critical-mass|LA Critical Mass} gathers at Wilshire and Western."
     },
     {
       "q": "Can I rent a road bike in Los Angeles?",

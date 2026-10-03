@@ -1157,7 +1157,7 @@ function queueMarkdown(doc, health, rides) {
     const why = (q.reports || []).length ? "rider report" : (q.flags || []).some((f) => f.severity === "red") ? "red flag" : (q.flags || []).length ? "amber flag" : q.state;
     const host = q.host ? (q.host.url ? `[${q.host.name}](${q.host.url})` : q.host.name) : "";
     L.push(`${i + 1}. **${why}** — [${q.name}](https://cycleforchange.org/rides/${q.slug}/) · ${place}${host ? ` · ${host}` : ""} · checked ${q.checked_on || "never"}`);
-    for (const r of q.reports || []) L.push(`   - rider says **${r.type}** (${r.date})${r.note ? `: "${clip(r.note, 200)}"` : ""}`);
+    for (const r of q.reports || []) L.push(`   - ${r.type === "host-update" ? `host says **${r.said || "changed"}**${r.new_time ? ` → ${r.new_time}` : ""}${r.from_date ? ` from ${r.from_date}` : ""}` : `rider says **${r.type}**`} (${r.date})${r.note ? `: "${clip(r.note, 200)}"` : ""}`);
     for (const f of q.flags || []) {
       L.push(`   - \`${f.code}\` since ${f.since}${f.detail ? `: ${clip(f.detail, 240)}` : ""}`);
       if (f.was || f.now) L.push(`     - was: "${clip(f.was, 300)}"`, `     - now: "${clip(f.now, 300)}"`);

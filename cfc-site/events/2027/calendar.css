@@ -33,7 +33,7 @@
 .tag .c{color:var(--mute);margin-left:5px}
 .tag[aria-pressed="true"]{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
 .tag[aria-pressed="true"] .c{color:var(--dust)}
-.tag.you[aria-pressed="true"]{background:var(--creosote);border-color:var(--creosote)}
+.tag.you[aria-pressed="true"]{background:var(--creosote-ink);border-color:var(--creosote-ink)}
 .more-f{margin-top:12px;border-top:1px solid var(--dust)}
 .more-f summary{cursor:pointer;list-style:none;padding:12px 0;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
 .more-f summary::-webkit-details-marker{display:none}
@@ -59,7 +59,7 @@
 .d b{color:var(--asphalt);font-weight:700}
 .d .st{display:inline-block;margin-left:2px;font-weight:700}
 .d .st.ok{color:var(--creosote-ink)}
-.ev.you .d b{color:var(--creosote)}
+.ev.you .d b{color:var(--creosote-ink)}
 .nm{min-width:0;display:block}
 .nm .h{display:block;font-weight:500;font-size:1.05rem;line-height:1.3}
 .nm .you-tag{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--creosote-ink);margin-left:8px}
@@ -195,3 +195,35 @@ a.mo-tile:focus-visible,a.cal-door:focus-visible{outline:2px solid var(--asphalt
 .cal-back a{color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px}
 @media (prefers-reduced-motion:reduce){.mo-tile,.cal-door{transition:none}}
 .ev{scroll-margin-top:84px}
+
+/* —— Pass 22 (Oct 2, 2026): ten riders tested the calendar ——
+   One line under the key opens /all/ with the page's pick on; "How far?" and "Where?" are picks
+   that land in /all/ pre-filtered; the count says what's on. Thumb targets are 44px on phones. */
+.cal-narrow{margin:14px 0 0}
+.cal-narrow a{display:flex;align-items:center;min-height:44px;padding:0 2px;border-top:1px solid var(--dust);border-bottom:1px solid var(--dust);font-size:15px;font-weight:500;color:var(--asphalt);text-decoration:none}
+@media (hover:hover){.cal-narrow a:hover{border-color:var(--asphalt)}}
+.cal-picks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:18px 0 0}
+.cal-picks-h{grid-column:1/-1;display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.cal-picks-h::after{content:"";flex:1;height:1px;background:var(--dust)}
+@media (min-width:640px){.cal-picks{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.cal-pick{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:52px;padding:8px 12px;background:var(--paper);border:1px solid var(--dust);color:var(--asphalt);text-decoration:none;font-family:var(--display);font-weight:600;font-size:15px;line-height:1.15}
+.cal-pick b{font-family:var(--mono);font-weight:400;font-size:11px;color:var(--creosote-ink);font-variant-numeric:tabular-nums}
+.cal-picks>.cal-pick:nth-of-type(2n){background:var(--bone-2)}
+@media (hover:hover){.cal-pick:hover{border-color:var(--asphalt);background:var(--bone)}}
+.cal-pick:focus-visible,.cal-narrow a:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px}
+/* many small picks (the regions on /races/): a chip row, not tiles */
+.cal-picks--chips{display:flex;flex-wrap:wrap;gap:6px}
+.cal-picks--chips .cal-picks-h{flex-basis:100%}
+.cal-picks--chips .cal-pick{min-height:44px;padding:6px 10px;gap:10px;font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:transparent}
+.cal-picks--chips>.cal-pick:nth-of-type(2n){background:transparent}
+.bar .picked{order:3;flex-basis:100%;margin:-2px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;line-height:1.5;color:var(--creosote-ink)}
+.bar .picked[hidden]{display:none}
+@media (max-width:640px){
+  .tag,.cal-jump a,.clear{min-height:44px;display:inline-flex;align-items:center}
+  .tag--mk{display:inline-flex}
+  .cal-jump{gap:6px}
+  .cal-jump a{justify-content:center;min-width:52px}
+  .mo-nav a,.cal-back a{display:inline-flex;align-items:center;min-height:44px;padding:0}
+  .more-f summary{min-height:44px;padding:0}
+  .cal-tba a{display:inline-flex;align-items:center;min-height:44px}
+}

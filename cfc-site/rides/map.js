@@ -3,7 +3,43 @@
    cities) or its chip moves the viewBox in to that region's own layer of cities and narrows the
    "Pick a city" tiles to them; "← <place>", the "All" chip, Escape or the button under the tiles
    go back. A pale bubble is a plain link to its city. Wider than 640px, or before this runs, the
-   map is exactly what the build drew. */
+   map is exactly what the build drew.
+   Pass 22 (Oct 2, 2026): a city's dot on a map is a link, and it was 10px across. Every map on the
+   page gets a clear circle under each city link, 44px across on screen (less where two cities sit
+   close, so neither steals the other's tap), redrawn when the map changes size or zooms. */
+var CFCMapHits = (function () {
+  "use strict";
+  var NS = "http://www.w3.org/2000/svg", HALF = 22;
+  function scaleOf(svg) {
+    var vb = (svg.getAttribute("viewBox") || "").split(/\s+/).map(Number), w = svg.getBoundingClientRect().width;
+    return vb.length === 4 && vb[2] > 0 && w > 0 ? w / vb[2] : 0;
+  }
+  // links: [{ a, x, y, min }] in the svg's own units → a clear circle behind each, as big as the room allows
+  function place(svg, links, cls) {
+    var k = scaleOf(svg);
+    if (!k) return;
+    links.forEach(function (p, i) {
+      var near = Infinity;
+      links.forEach(function (o, j) { if (i !== j) near = Math.min(near, Math.hypot(o.x - p.x, o.y - p.y)); });
+      var r = Math.max(p.min || 0, Math.min(HALF / k, near / 2));
+      var c = p.hit;
+      if (!c) { c = p.hit = document.createElementNS(NS, "circle"); c.setAttribute("class", cls); c.setAttribute("cx", p.x); c.setAttribute("cy", p.y); c.setAttribute("aria-hidden", "true"); p.a.insertBefore(c, p.a.firstChild); }
+      c.setAttribute("r", (Math.round(r * 100) / 100).toString());
+    });
+  }
+  function labelLinks(svg) {
+    return [].slice.call(svg.querySelectorAll(".gr-map-labels a")).map(function (a) {
+      var dot = a.querySelector(".gr-map-hub");
+      return dot ? { a: a, x: +dot.getAttribute("cx"), y: +dot.getAttribute("cy"), min: +dot.getAttribute("r") || 0 } : null;
+    }).filter(Boolean);
+  }
+  var maps = [].slice.call(document.querySelectorAll(".gr-map-svg")).map(function (svg) { return { svg: svg, links: labelLinks(svg) }; }).filter(function (m) { return m.links.length; });
+  function all() { maps.forEach(function (m) { place(m.svg, m.links, "gr-map-hit"); }); }
+  all();
+  var t = 0;
+  window.addEventListener("resize", function () { clearTimeout(t); t = setTimeout(all, 120); });
+  return { place: place, scaleOf: scaleOf, HALF: HALF };
+})();
 (function () {
   "use strict";
   var fig = document.querySelector(".gr-map--zoomable");
@@ -27,6 +63,19 @@
   var title = svg.querySelector("title");
 
   function layer(k) { for (var i = 0; i < layers.length; i++) if (layers[i].getAttribute("data-reg") === k) return layers[i]; return null; }
+  // a zoomed region's city dots carry their own clear circle (.gr-map-zhit); at the zoom it can come out
+  // under 44px on screen, so grow it to 44px where the neighbours leave room
+  function zoomHits(L) {
+    var k = CFCMapHits.scaleOf(svg);
+    if (!k) return;
+    var pts = [].slice.call(L.querySelectorAll("a .gr-map-zhit")).map(function (c) { return { c: c, x: +c.getAttribute("cx"), y: +c.getAttribute("cy"), r0: +(c.getAttribute("data-r0") || c.getAttribute("r")) }; });
+    pts.forEach(function (p) {
+      var near = Infinity;
+      pts.forEach(function (o) { if (o !== p) near = Math.min(near, Math.hypot(o.x - p.x, o.y - p.y)); });
+      if (!p.c.hasAttribute("data-r0")) p.c.setAttribute("data-r0", p.r0);
+      p.c.setAttribute("r", (Math.round(Math.max(p.r0, Math.min(CFCMapHits.HALF / k, near / 2)) * 100) / 100).toString());
+    });
+  }
   function setBox(v) { svg.setAttribute("viewBox", v.map(function (n) { return Math.round(n * 100) / 100; }).join(" ")); }
 
   // centre moves straight; width and height move by ratio, so the zoom feels even
@@ -62,6 +111,7 @@
     var to = L ? L.getAttribute("data-vb").split(/\s+/).map(Number) : full;
     move(to, function () {
       if (L && active === k) {
+        zoomHits(L);
         L.classList.add("is-on");
         if (opts.keys) { var first = L.querySelector("a"); if (first) first.focus({ preventScroll: true }); }
       }

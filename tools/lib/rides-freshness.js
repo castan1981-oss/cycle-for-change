@@ -79,6 +79,7 @@ function assess(ride, health = null, today = todayUTC()) {
   const red = flags.filter((f) => f.severity === "red");
   const amber = flags.filter((f) => f.severity !== "red");
   const badReports = reports.filter((r) => r.type === "gone" || r.type === "changed");
+  const hostUpdates = reports.filter((r) => r.type === "host-update");   // Pass 22: the host wrote in — first in the queue, no public warning
   const reasons = [];
 
   const out = {
@@ -149,8 +150,12 @@ function assess(ride, health = null, today = todayUTC()) {
     return out;
   }
 
+  if (hostUpdates.length) {
+    out.priority = QUEUE.report;
+    reasons.push(`host update: ${hostUpdates.map((r) => r.said || "changed").join(", ")}`);
+  }
   if (ride.confidence === "low") {
-    out.priority = QUEUE.low;
+    if (out.priority > QUEUE.low) out.priority = QUEUE.low;
     out.nudge = "We found this ride on one source only. Confirm with the host before you go.";
     reasons.push("low confidence");
   }
