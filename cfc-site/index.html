@@ -25,8 +25,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="/img/hero.jpg" media="(max-width:899px)" fetchpriority="high">
-  <link rel="preload" as="image" href="/img/hero-wide.jpg" media="(min-width:900px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/img/home-hero.jpg" media="(max-width:899px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/img/home-hero-wide.jpg" media="(min-width:900px)" fetchpriority="high">
   <link rel="stylesheet" href="/home.css">
 
   <script type="application/ld+json">
@@ -48,7 +48,8 @@
 <header class="nav" id="nav" data-solid="false">
   <div class="wrap nav-in">
     <a class="brand" href="/" aria-label="Cycle for Change home">
-      <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+      <!-- Pass 23: the wheel sits in an asphalt square (the mark's own ground on any photo); the drawing is unchanged -->
+      <svg class="brand-sq" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
         <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
         <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
         <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
@@ -91,35 +92,43 @@
 
 <main id="main">
 
-<!-- —— hero: one still, the line, the one number (Pass 6: the film is gone; the still is the
-     sunset crew shot from photos/, house grade, phone crop and a wider desktop crop). —— -->
+<!-- —— hero (Pass 23, Oct 3, 2026): one photograph, full bleed. One kicker. The line. Two actions.
+     The photo is the bike against the block wall, helmet hung on the bars, from photos/bike-detail.jpg
+     (2x through tools/sr.py, house grade). It dissolves into the bone the copy sits on; no type over
+     the picture, no scrim. The kicker's mile count is the live one: /home.js paints [data-miles]. —— -->
 <section class="hero" aria-labelledby="line">
   <div class="hero-media">
     <picture>
-      <source media="(min-width:900px)" srcset="/img/hero-wide.jpg" width="2000" height="1428">
-      <img src="/img/hero.jpg" alt="Two riders stopped on a desert road at sunset, saguaros behind them, the sun sitting on the horizon." width="1600" height="1600" fetchpriority="high" decoding="async">
+      <source media="(min-width:900px)" srcset="/img/home-hero-wide.jpg" width="2400" height="1371">
+      <img src="/img/home-hero.jpg" alt="A dark green road bike leaning on a block wall before a ride, the helmet hung from the handlebars." width="1600" height="1600" fetchpriority="high" decoding="async">
     </picture>
   </div>
-  <div class="hero-art" aria-hidden="true"></div>
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <p class="live" id="live"><span class="dot" aria-hidden="true"></span><span><b id="liveWord">Last ride</b> &middot; <span id="lastRide" aria-live="polite">56.0 mi &middot; Sep 27</span></span></p>
+      <p class="kicker" id="kicker"><span>10K</span><i aria-hidden="true">&middot;</i><span>Mile <b class="num" data-miles>3,360</b></span><i aria-hidden="true">&middot;</i><span><abbr title="Phoenix">PHX</abbr></span></p>
       <h1 class="h1" id="line"><span>I do the miles.</span> <span>You decide who they&rsquo;re&nbsp;for.</span></h1>
-      <p class="hero-sub">In 2027 I ride 10,000 miles, all on the bike, for queer communities. You pledge a few cents a mile, free to start, and pick which org it goes to.</p>
-      <!-- Pass 22 (Oct 3, 2026): the first screen asks what you came for. Pledge is the one
-           solid pick; the other three are paper. Counts are hand-kept (see CLAUDE.md). -->
-      <nav class="picks" aria-label="What are you here for?">
-        <a class="pick pick--go" href="/pledge/"><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-pledge"/></svg><span class="pick-name">Pledge</span><span class="pick-sub">A few cents a mile</span></a>
-        <a class="pick" href="/rides/"><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-riders"/></svg><span class="pick-name">Find a ride</span><span class="pick-sub">1,407 group rides</span></a>
-        <a class="pick" href="/events/2027/races/"><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-flag"/></svg><span class="pick-name">Find a race</span><span class="pick-sub">Road, gravel, dirt</span></a>
-        <a class="pick" href="/events/2027/charity-rides/"><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-raise"/></svg><span class="pick-name">Find a fundraiser</span><span class="pick-sub">112 charity rides</span></a>
-      </nav>
+      <div class="hero-acts">
+        <a class="btn btn--ink btn--hero" href="/pledge/">Get on the board</a>
+        <a class="btn btn--ghost btn--hero" href="#road">Read the last ride</a>
+      </div>
     </div>
-    <!-- static numbers are the fallback; /home.js repaints them from the Strava function -->
-    <div class="tally-hero">
-      <p class="tally-big"><b class="num" data-miles>3,360</b><span>training miles since June 1</span></p>
-      <p class="tally-small"><b class="num" id="rideCount">92</b> rides &middot; the year starts Jan 1 &middot; <b class="num" id="daysTo">92</b> days</p>
+  </div>
+</section>
+
+<!-- —— what are you here for (Pass 22, Oct 3, 2026; moved out of the hero in Pass 23): Pledge is the
+     one solid pick; the other three are paper. Counts are hand-kept (see CLAUDE.md). —— -->
+<section class="s s--picks" id="picks" aria-labelledby="picks-h">
+  <div class="wrap">
+    <div class="picks-head">
+      <h2 class="eyebrow" id="picks-h">What are you here for?</h2>
+      <p class="lede picks-lede">In 2027 I ride 10,000 miles, all on the bike, for queer communities. You pledge a few cents a mile, free to start, and pick which org it goes to.</p>
     </div>
+    <nav class="picks" aria-label="What are you here for?">
+      <a class="pick pick--go" href="/pledge/"><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-pledge"/></svg><span class="pick-name">Pledge</span><span class="pick-sub">A few cents a mile</span></a>
+      <a class="pick" href="/rides/"><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-riders"/></svg><span class="pick-name">Find a ride</span><span class="pick-sub">1,407 group rides</span></a>
+      <a class="pick" href="/events/2027/races/"><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-flag"/></svg><span class="pick-name">Find a race</span><span class="pick-sub">Road, gravel, dirt</span></a>
+      <a class="pick" href="/events/2027/charity-rides/"><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-raise"/></svg><span class="pick-name">Find a fundraiser</span><span class="pick-sub">112 charity rides</span></a>
+    </nav>
   </div>
 </section>
 
@@ -161,6 +170,7 @@
       </ol>
     </div>
     <div class="road-side">
+      <p class="road-tally"><b class="num" id="rideCount">92</b> rides since June 1 &middot; the 10,000 start Jan 1 &middot; <b class="num" id="daysTo">92</b> days</p>
       <p class="p">Every ride logs to Strava and lands here within the hour. This is the training; the count starts over on January 1.</p>
       <a class="link" href="/pledge/#feed">The whole log, ride by ride</a>
       <a class="link" id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Follow on Strava</a>

@@ -716,9 +716,14 @@
     }, { passive: true });
   }
   if (hero && nav && "IntersectionObserver" in window) {
+    /* Pass 23: the nav is clear while the hero photo is under it and bone once the photo has
+       scrolled past; the phone bar still waits for the whole hero (its two actions) to leave. */
+    var photo = hero.querySelector(".hero-media") || hero;
+    new IntersectionObserver(function (es) {
+      nav.setAttribute("data-solid", es[0].isIntersecting ? "false" : "true");
+    }, { rootMargin: "-64px 0px 0px 0px" }).observe(photo);
     new IntersectionObserver(function (es) {
       pastHero = !es[0].isIntersecting;
-      nav.setAttribute("data-solid", pastHero ? "true" : "false");
       paintBar();
     }, { rootMargin: "-64px 0px 0px 0px" }).observe(hero);
     if (closeSec) new IntersectionObserver(function (es) { atClose = es[0].isIntersecting; paintBar(); }, { threshold: 0.25 }).observe(closeSec);

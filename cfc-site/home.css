@@ -126,7 +126,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .btn--glass{border-color:rgba(232,223,208,.55);background:rgba(26,29,24,.28);color:var(--bone);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 .btn--sm{min-height:36px;padding:0 14px;font-size:10.5px}
 @media (hover:hover){
-  .btn--ink:hover,.hero .btn--hero:hover{background:var(--volt);border-color:var(--volt);color:var(--asphalt)}
+  .btn--ink:hover{background:var(--volt);border-color:var(--volt);color:var(--asphalt)}   /* volt replaces asphalt; the ghost button fills asphalt instead (volt never on bone) */
   .btn--bone:hover{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}
   .on-creosote .btn--bone:hover{background:var(--asphalt);border-color:var(--asphalt);color:var(--paper)}
   .btn--ghost:hover{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}
@@ -178,10 +178,19 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   border-bottom:1px solid transparent;
 }
 .nav[data-solid="true"]{background:rgba(232,223,208,.94);color:var(--asphalt);border-bottom-color:var(--line);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
-@media (max-width:899px){.nav{background:rgba(232,223,208,.94);border-bottom-color:var(--line);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}}   /* Pass 12: phones have no photo under the nav; it is bone from the start */
+/* Pass 23: the nav is clear over the hero photo on phones (it goes bone once the photo has
+   scrolled past — home.js watches .hero-media); every element on it carries its own asphalt
+   ground, so nothing sits bare on the picture. Desktop has text links, so it is bone from
+   the first pixel there and the photo starts under its edge. */
+@media (max-width:899px){.nav[data-solid="false"] .menu-btn{background:var(--asphalt);color:var(--bone)}.nav[data-solid="false"] .brand-word{display:none}}
+@media (min-width:900px){.nav{background:rgba(232,223,208,.94);border-bottom-color:var(--line);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}}
 .nav-in{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
+.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;min-height:44px}
 .brand svg{width:26px;height:26px;flex:0 0 auto}
+/* the wheel in its asphalt square: the mark's own ground, the drawing untouched. On asphalt the
+   currentColor arc and hub go bone and the creosote arc lifts a step so it still reads. */
+.brand .brand-sq{width:44px;height:44px;padding:9px;background:var(--asphalt);color:var(--bone)}
+.brand-sq path:nth-of-type(2){stroke:var(--creosote-lift)}
 .brand-word{font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
 .brand-word i{color:var(--creosote-ink)}
 .brand-word i{font-style:normal}
@@ -189,8 +198,8 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .nav-links{display:none;gap:clamp(18px,2.4vw,32px);font-family:var(--display);font-size:15px;font-weight:600;letter-spacing:0}
 .nav-links a{text-decoration:none;padding:8px 0;border-bottom:1px solid transparent}
 @media (hover:hover){.nav-links a:hover{border-bottom-color:currentColor}}
-.nav-right{display:flex;align-items:center;gap:4px}
-.nav .btn--sm{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
+.nav-right{display:flex;align-items:center;gap:8px}
+.nav .btn--sm{min-height:44px;background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}   /* Pass 23: the same height as the wheel square and the menu square beside it */
 .menu-btn{width:44px;height:44px;display:grid;place-items:center;background:none;border:0;padding:0;cursor:pointer}
 .menu-btn i{display:block;width:22px;height:2px;background:currentColor;box-shadow:0 7px 0 currentColor;transform:translateY(-3.5px)}
 @media (max-width:359px){.brand-word{display:none}}
@@ -226,12 +235,14 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .menu-foot b{color:var(--asphalt)}
 
 /* —— hero —— */
-/* Pass 5: the hero stops short of the fold so the next section peeks (a full-screen
-   panel reads as the whole page; most people never scroll past one).
-   Pass 6: the film is gone. One still, high-key (the sunset crew shot from photos/,
-   graded by tools/grade.py). Phones: type low on the frame over a soft bottom scrim,
-   nav in asphalt on the bright sky. Desktop: a split — copy on bone at left, the photo
-   at right, no gradient at all. */
+/* Pass 23 (Oct 3, 2026): one photograph, full bleed. One kicker. The line. Two actions.
+   Robert, after the Assos homepage: the restraint is the point. The photo is whole and bright
+   (house grade), runs edge to edge under a clear nav, and dissolves into the bone the copy sits
+   on — no scrim, no type over the picture (Pass 7 and 11 rules hold). Phones: the photo takes
+   just over half the screen, the copy fits under it on the first screen. Desktop: the photo
+   runs the full width and fades in from the left, so the copy keeps bone under it.
+   Pass 12's "no photo above the fold on phones" is lifted by this brief; the wheel in its
+   asphalt square (.brand-sq) is what fixes the logo-over-photo problem that rule came from. */
 .hero{
   position:relative;
   isolation:isolate;
@@ -239,70 +250,57 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   color:var(--asphalt);
   overflow:hidden;
 }
-/* Pass 12 (Sept 30, evening): no photo above the fold on phones. Robert: "that picture is
-   probably not gonna work" there, and the logo over a moving photo looked wrong. Phones get
-   poster type on bone with the Phoenix contour (route art) behind it — the art direction's own
-   fallback: a photo where there's a photo, route art where there isn't. Desktop keeps the split. */
-.hero-media{display:none}
-.hero-art{
-  position:absolute;inset:0;z-index:0;pointer-events:none;
-  background:url(/rides/art/az-phoenix.svg) 50% 30% / 125% auto no-repeat;
-  opacity:.3;
-  -webkit-mask-image:linear-gradient(to bottom,#000 28%,transparent 92%);
-  mask-image:linear-gradient(to bottom,#000 28%,transparent 92%);
+.hero-media{position:relative;z-index:0;height:clamp(300px,54svh,620px);margin:0;background:var(--bone);overflow:hidden}
+.hero-media picture{
+  display:block;width:100%;height:100%;
+  -webkit-mask-image:linear-gradient(to bottom,#000 46%,transparent 90%);
+  mask-image:linear-gradient(to bottom,#000 46%,transparent 90%);
 }
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
-/* Pass 7 (Sept 30): photos sit ON the paper, not on top of it. Every photo's edge that meets
-   bone dissolves into it (mask-image), so there is no seam between picture and page. */
-.hero-media picture{display:block;width:100%;height:100%}
-.hero .btn--hero{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
+/* the square photo in a near-square box: a slight push into the top-left keeps the helmet and the
+   frame and lets the rim fall into the fade */
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 0;transform:scale(1.18);transform-origin:22% 0}
 .hero-in{
   position:relative;
   z-index:2;
+  margin-top:clamp(-80px,-9svh,-48px);   /* the copy starts inside the fade, where the picture is already bone */
+  padding-bottom:clamp(28px,3.4vw,44px);
+}
+.hero-copy{display:flex;flex-direction:column;gap:clamp(16px,1.8vw,24px)}
+/* the kicker: one mono line — the edition, the live mile, the base. Middots, never a slash. */
+.kicker{
   display:flex;
-  flex-direction:column;
-  gap:clamp(20px,2.6vw,32px);
-  padding-top:calc(var(--nav-h) + 40px);
-  padding-bottom:clamp(20px,3vw,36px);
-}
-/* the one number on the first screen; rides and days sit under it in mono */
-.tally-hero{display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:1px solid var(--line)}
-.tally-big{margin:0;display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
-.tally-big b{font-weight:800;font-size:clamp(2.6rem,3.4vw + 1.6rem,4.5rem);line-height:1;letter-spacing:-.035em}
-.tally-big span{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
-.tally-small{margin:0;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
-.tally-small b{font-weight:700;color:var(--asphalt)}
-.hero .link{color:var(--asphalt)}
-.hero-copy{display:flex;flex-direction:column;gap:clamp(14px,1.6vw,22px)}
-/* Pass 13: the live line is a quiet status, not a black slab. An asphalt disc holds the dot; the dot is
-   volt (and pings) only while the last ride is fresh, bone otherwise. Volt stays on asphalt. */
-.live{
-  display:inline-flex;
-  align-items:center;
-  align-self:flex-start;
-  gap:10px;
+  align-items:baseline;
+  flex-wrap:wrap;
+  gap:0 .7em;
   margin:0;
-  padding:0;
-  color:var(--asphalt);
   font-family:var(--mono);
-  font-size:11px;
-  letter-spacing:.14em;
+  font-size:.75rem;   /* 12px; scales with the phone's text size */
+  line-height:1.4;
+  letter-spacing:.18em;
   text-transform:uppercase;
+  color:var(--asphalt);
 }
-.live b{font-weight:700}
-.live .dot{width:22px;height:22px;background:var(--asphalt);overflow:hidden}
-.live .dot::before{content:"";position:absolute;inset:7px;border-radius:50%;background:var(--bone)}
-.live .dot::after{inset:0;border-color:var(--volt);animation:none}
-.live.is-live .dot::before{background:var(--volt)}
-.live.is-live .dot::after{animation:ping 2.4s ease-out infinite}
+.kicker i{font-style:normal;color:var(--mute)}
+.kicker b{font-weight:700}
+.kicker abbr{text-decoration:none}
+/* two actions, equal width; the solid one is the only primary button on the screen */
+.hero-acts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.btn--hero{min-height:52px;padding:0 10px;font-size:.6875rem;letter-spacing:.1em}
+.btn--ghost.btn--hero{border-color:var(--asphalt)}
+@media (max-width:359px){.hero-acts{grid-template-columns:minmax(0,1fr)}}
+.hero .link{color:var(--asphalt)}
 .dot{position:relative;flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:var(--volt)}
 .dot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--volt);opacity:0;animation:ping 2.4s ease-out infinite}
 .dot--bone{background:var(--bone)}
 .dot--bone::after{border-color:var(--bone)}
 @keyframes ping{0%{transform:scale(.4);opacity:.9}70%,100%{transform:scale(1.25);opacity:0}}
-/* Pass 6: on phones the hero is the line, the button and the number; the sub waits for desktop
-   (the facts strip right under the hero carries the mechanism) */
-.hero-sub{display:block;margin:0;text-wrap:pretty;font-size:clamp(1.05rem,.6vw + .95rem,1.35rem);line-height:1.35;color:var(--mute);max-width:30ch}
+
+/* —— what are you here for (Pass 22; its own section since Pass 23) —— */
+.s--picks{padding-block:clamp(40px,5vw,72px);background:var(--bone)}
+.picks-head{display:flex;flex-direction:column;gap:14px;margin-bottom:clamp(20px,2.4vw,32px)}
+.picks-lede{color:var(--mute);max-width:40ch;font-size:clamp(1.05rem,.6vw + .95rem,1.3rem)}
+.road-tally{margin:0 0 14px;font-family:var(--mono);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dust);line-height:1.5}
+.road-tally b{font-weight:700;color:var(--bone)}
 
 .specs{
   display:grid;
@@ -317,29 +315,23 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .specs dt{font-family:var(--mono);font-size:9.5px;line-height:1.35;letter-spacing:.13em;text-transform:uppercase;color:var(--dust)}
 
 @media (min-width:900px){
-  .hero{display:grid;align-items:end;min-height:clamp(600px,78svh,820px)}
-  .hero-art{display:none}
-  .hero-in{padding-top:calc(var(--nav-h) + 28px)}
-  /* the photo runs wide at right and its left and bottom edges fade into the bone the copy
-     sits on; the copy's right end sits inside that fade, so the two share ground */
-  .hero-media{display:block;position:absolute;inset:0;left:auto;height:auto;width:min(60vw,1040px);z-index:-2;background:var(--bone)}
+  .hero{display:grid;align-items:end;min-height:clamp(620px,84svh,880px)}
+  /* the photo runs the full width under the nav; its left edge fades into the bone the copy
+     sits on, its foot into the page */
+  .hero-media{position:absolute;inset:var(--nav-h) 0 0 0;height:auto;z-index:-2}
   .hero-media picture{
-    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 24%),linear-gradient(to bottom,#000 72%,transparent 100%);
+    -webkit-mask-image:linear-gradient(to right,transparent 24%,#000 60%),linear-gradient(to bottom,#000 74%,transparent 100%);
     -webkit-mask-composite:source-in;
-    mask-image:linear-gradient(to right,transparent 0,#000 24%),linear-gradient(to bottom,#000 72%,transparent 100%);
+    mask-image:linear-gradient(to right,transparent 24%,#000 60%),linear-gradient(to bottom,#000 74%,transparent 100%);
     mask-composite:intersect;
   }
-  .hero-media img{object-position:50% 40%}
-  /* the sunset spills into the copy column: a warm wash across the seam */
-  .hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(52% 64% at 44% 46%,rgba(222,168,92,.20),rgba(222,168,92,0) 70%)}
-  .hero .btn--hero{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
-  .hero-sub{display:block;color:var(--mute)}
-  .hero .link{color:var(--asphalt)}
-  .tally-hero{border-top-color:var(--line)}
-  .tally-big span,.tally-small{color:var(--mute)}
-  .tally-small b{color:var(--asphalt)}
-  .hero-copy{max-width:560px}
-  .tally-hero{max-width:560px}   /* Pass 11: its rule stays in the copy column instead of running under the photo */
+  .hero-media img{object-position:62% 44%;transform:none}
+  .hero-in{margin-top:0;padding-top:calc(var(--nav-h) + 48px);padding-bottom:clamp(40px,4.5vw,64px)}
+  .hero-copy{max-width:600px;gap:clamp(20px,2vw,30px)}
+  .kicker{font-size:.8125rem}
+  .hero-acts{max-width:460px}
+  .btn--hero{padding:0 18px;font-size:.71875rem;letter-spacing:.14em}
+  .picks-lede{max-width:52ch}
   .specs{max-width:640px}
   .specs dt{font-size:10.5px}
 }
@@ -723,11 +715,11 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 }
 
 /* —— Pass 22 (Oct 3, 2026): the picks. Robert: "The home page should have options. Pledge /
-   find a ride / find a race / or find a fundraiser." Four doors on the first screen, inside the
-   hero, in place of the button + link. Pledge is the one solid pick (asphalt; volt on hover, like
-   the hero button was); the other three are paper with a hairline. Two by two on every screen.
+   find a ride / find a race / or find a fundraiser." Pledge is the one solid pick (asphalt; volt
+   on hover); the other three are paper with a hairline. Pass 23 moved them out of the hero into
+   their own section right under it (#picks): two by two on phones, four across on desktop.
    The three photo doors ("Start here") left the page: they asked the same question again. */
-.picks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:4px}
+.picks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
 .pick{
   position:relative;
   display:grid;
@@ -757,8 +749,8 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 }
 @media (max-width:399px){.pick{padding-inline:12px}.pick-sub{letter-spacing:.07em}}   /* small phones: the subs stay on one line */
 @media (min-width:900px){
-  .picks{max-width:560px;gap:10px}
-  .pick{min-height:132px;padding:16px 18px 15px}
+  .picks{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+  .pick{min-height:148px;padding:16px 18px 15px}
   .pick-sub{font-size:10.5px}
 }
 
