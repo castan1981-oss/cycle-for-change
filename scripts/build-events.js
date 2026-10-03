@@ -495,7 +495,7 @@ ${BLOCKS.REPORT({ thing: "event", name: e.name, kind: "changed", compact: true, 
   <p class="back"><a href="/events/">All events</a> &middot; <a href="/events/state/${t.state_slug}/">Events in ${esc(t.state)}</a></p>
 `;
   const lds = [ld, crumbs.ld, pageLd].concat(faqLd ? [faqLd] : []).map(stripUndef);
-  const pledgeHtml = isRiding(e) ? CHROME.pledge({ line: "I&rsquo;m riding this one. Pledge a mile.", copy: `${esc(e.short_name || e.name)} is one of the six rides on my 2027 calendar. Every mile of it counts toward 10,000, and every one is for queer communities. You pledge a few cents a mile and vote where the money goes.` }) : CHROME.PLEDGE;
+  const pledgeHtml = isRiding(e) ? CHROME.pledge({ line: "I&rsquo;m riding this one. Pledge a mile.", copy: `${esc(e.short_name || e.name)} is one of the six rides on my 2027 calendar. Every mile of it counts toward 10,000, and every one is for queer communities. You pledge a few cents a mile and pick which org it goes to.` }) : CHROME.PLEDGE;
   return head({ title, description, url: e.url, ld: lds, ogType: "article" }) + body + foot(pledgeHtml);
 }
 

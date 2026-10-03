@@ -316,13 +316,7 @@
     if ($("pcap")) $("pcap").addEventListener("input", paintCalc);
     paintCalc();
   }
-  /* the text opt-in only appears once there's a number to text (Pass 5) */
-  var phone = $("pphone"), okTextRow = $("okTextRow");
-  if (phone && okTextRow) {
-    var showOk = function () { okTextRow.hidden = phone.value.replace(/\D/g, "").length < 7; };
-    phone.addEventListener("input", showOk);
-    showOk();
-  }
+  /* texts: none (Oct 3, 2026 — Robert: no texts) */
 
   /* ————————————————————————————————————————————————
      the board: the newest names, and yours going up as you type it
@@ -386,7 +380,7 @@
 
   /* the pledge in one sentence, for the thank-you and the share line */
   function pledgeLine(p, orgId) {
-    var to = ORG_NAMES[orgId] ? ORG_NAMES[orgId] : "whoever wins the vote";
+    var to = ORG_NAMES[orgId] ? ORG_NAMES[orgId] : "the org you pick";
     if (p.flat) return (p.total ? "$" + fmt(p.total) + ", flat" : "A flat pledge") + ", to " + to + ".";
     var s = p.cents + "¢ a mile. If I ride all 10,000, that’s $" + fmt(p.total);
     if (p.cap && p.cap < p.total) s += ", capped at $" + fmt(p.cap) + ",";
@@ -455,7 +449,7 @@
         : (p.cap && p.cap < p.total) ? (p.cents + "\u00A2 A MILE \u00B7 CAPPED AT $" + fmt(p.cap))
         : (p.cents + "\u00A2 A MILE \u00B7 $" + fmt(p.total) + " IF HE RIDES ALL 10,000");
       spaced(line, M, y + 104, 3);
-      g.fillStyle = CREOSOTE; spaced("FOR " + (ORG_NAMES[orgId] ? ORG_NAMES[orgId].toUpperCase() : "WHOEVER WINS THE VOTE"), M, y + 146, 3);
+      g.fillStyle = CREOSOTE; spaced("FOR " + (ORG_NAMES[orgId] ? ORG_NAMES[orgId].toUpperCase() : "THE ORG YOU PICK"), M, y + 146, 3);
       /* the foot */
       g.font = mono(22); g.fillStyle = ASPHALT; spaced("CYCLEFORCHANGE.ORG/PLEDGE", M, H - M, 3);
       g.fillStyle = MUTE; g.textAlign = "right"; g.fillText("FREE TO JOIN. NO CARD.", W - M, H - M); g.textAlign = "left";
@@ -475,7 +469,7 @@
 
   var shareBtn = $("shareBtn"), shareMsg = $("shareMsg");
   if (shareBtn) shareBtn.addEventListener("click", function () {
-    var text = "I’m on the board. Robert rides 10,000 miles in 2027 for queer communities; you pledge a few cents a mile, free to start, and vote where the money goes.";
+    var text = "I’m on the board. Robert rides 10,000 miles in 2027 for queer communities; you pledge a few cents a mile, free to start, and pick which org it goes to.";
     var url = "https://cycleforchange.org/pledge/";
     /* the card goes with it where the share sheet takes files (phones, mostly) */
     if (cardBlob && navigator.canShare && window.File) {
@@ -498,7 +492,6 @@
     var email = String(data.get("email") || "").trim();
     if (!email || email.indexOf("@") < 1) { var pe = $("pemail"); if (pe) pe.focus(); return; }
     /* "OK to text me" needs a number to text */
-    if (data.get("ok-text") && String(data.get("phone") || "").replace(/\D/g, "").length < 7) { if ($("pphone")) $("pphone").focus(); return; }
     if (onBoard) return;
     var p = pledgeNow();
     if (!data.get("org")) data.set("org", "later");
@@ -581,7 +574,7 @@
       var mine = votedOrg && btns[i].getAttribute("data-vote") === votedOrg;
       btns[i].disabled = false;
       btns[i].setAttribute("aria-pressed", mine ? "true" : "false");
-      btns[i].textContent = mine ? "Your pick ✓" : (votedOrg ? "Switch" : "Vote");
+      btns[i].textContent = mine ? "Your pick ✓" : (votedOrg ? "Switch to this one" : "Pick this one");
     }
     /* the form's radio follows the ballot, so both say the same thing */
     var radio = votedOrg ? document.querySelector('.orgpick input[name="org"][value="' + votedOrg + '"]') : null;
@@ -598,7 +591,7 @@
       var acts = document.createElement("div"); acts.className = "org-acts";
       var a = document.createElement("a"); a.className = "link"; a.textContent = "Visit site";
       if (/^https?:\/\//i.test(o.url || "")) { a.href = o.url; a.target = "_blank"; a.rel = "noopener noreferrer"; }
-      var b = document.createElement("button"); b.className = "btn btn--ghost btn--sm"; b.type = "button"; b.setAttribute("data-vote", o.id); b.setAttribute("aria-label", "Vote for " + o.name); b.textContent = "Vote";
+      var b = document.createElement("button"); b.className = "btn btn--ghost btn--sm"; b.type = "button"; b.setAttribute("data-vote", o.id); b.setAttribute("aria-label", "Pick " + o.name); b.textContent = "Pick this one";
       acts.appendChild(a); acts.appendChild(b);
       art.appendChild(h); art.appendChild(p); art.appendChild(acts);
       orgsEl.appendChild(art);
@@ -618,7 +611,7 @@
     paintVotes();
     if (announce) {
       var n = orgName(id) || ORG_NAMES[id];
-      voteMsg.textContent = n ? (moved ? "Moved. " : "") + "You voted for " + n + ". Final tally closes at year-end." : "Vote recorded.";
+      voteMsg.textContent = n ? (moved ? "Moved. " : "") + "Your miles are for " + n + ". Change it any time before Dec 31, 2027." : "Pick saved.";
       voteMsg.hidden = false;
     }
   }

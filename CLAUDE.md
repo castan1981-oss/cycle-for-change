@@ -68,8 +68,10 @@ site on a phone and wrote up what broke. The fixes, by area — reports in the s
 - **Floor:** small labels are ≥11px in rem (they scale with the phone's text size), small creosote text is
   creosote-ink, tap targets are 44px (chips, save stars, breadcrumbs, map labels — `map.js` loads on every
   page with a labelled map), dark buttons show an asphalt focus ring.
-- **Open for Robert:** who gets the money when a pledger's org loses the vote (the copy says it four ways);
-  what a per-mile pledge does past 10,000; how often texts go out. Nothing was decided for him.
+- **Robert decided (Oct 3, 2026):** a pledger picks their org when they commit and the money goes to that
+  org — there is no vote at year-end (the org buttons say "Pick this one"; the votes function just tallies
+  picks). A per-mile pledge keeps counting past 10,000 unless capped. No texts: the phone field and the
+  text opt-in are gone from the form, home.js and the confirmation email.
 
 ## Search Lab — every page change is an experiment (Oct 2, 2026)
 Robert's brief: track everything search-related on this site as a case study — what moves, what
