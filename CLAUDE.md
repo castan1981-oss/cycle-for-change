@@ -1,8 +1,8 @@
 # Cycle for Change — project context for automated content
 
-> **HOMEPAGE: the redesign is live since 2026-09-27; Pass 6 (Sept 29) brightened it; Pass 23 (Oct 3) is the hero.**
+> **HOMEPAGE: the redesign is live since 2026-09-27; Pass 6 (Sept 29) brightened it; Pass 23 (Oct 3) is the hero; Pass 24 (Oct 4) gave it two films.**
 > `cfc-site/index.html` + `cfc-site/home.css` + `cfc-site/home.js` + `cfc-site/img/` (the
-> house-graded photos; the hero is a still, the film is gone). The Sept 18 coming-soon-based homepage and its files
+> house-graded photos; the hero is a still on phones and a film on desktop — Pass 24). The Sept 18 coming-soon-based homepage and its files
 > (`coming-soon.css/js`, `main.js`, `next/home.css/js`, the feed video and audio) are
 > gone — git history has them. `/next/*` redirects home.
 > `/field-notes`, `/guides`, `/resources` and `/journal` are served; `cfc-site/404.html`
@@ -18,6 +18,28 @@
 > The cream/plum/yellow + Fraunces/Anton look is gone everywhere.
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
+
+## Pass 24 — two films on the homepage (Oct 4, 2026)
+Robert: "go through my video and photos and make a stockpile to grab from for design web pages. We
+should make a cool video or two for the home page." The stockpile lives on his Mac, not in the repo:
+`~/Pictures/CFC Stockpile/` (304 web-ready photos in seven folders, 54 clips, `index.html` to browse,
+`manifest.csv` with each file's Photos ID; `07-group-rides` has other people in it — ask before use).
+- **The hero film** (`/film/home-film.mp4`, 1600×900, 10.5 s, silent, H.264, ~4.6 MB): drone footage
+  following Robert up a desert road in Phoenix, cut to a stretch with no saguaro in frame (Pass 23's
+  brief), graded with the Pass 23b hero grade baked into a LUT (`strength .6, warm .10, sat .95, lift
+  .15`), faded from/to bone at the loop seam. `#heroVid` sits over the still inside `.hero-media` with
+  the same desktop masks; it is `display:none` under 900px, so **phones keep the still** (the floor).
+  home.js (the Pass 5 film code, kept) starts it after `load`, only without reduced motion, pauses it
+  off screen; it fades up on `playing` (`data-on`) and the still steps out (`data-film="on"`) so the
+  fades never show two pictures. The pause control is a quiet text link next to "Read the last ride"
+  (`#filmBtn`, shown once ready) — never chrome on the picture.
+- **The road reel** (`/film/road-film.mp4`, 720×900, 4:5, ~17.5 s, 13 cuts of 1.35 s from his own
+  phone/Osmo/drone clips, house grade LUT, fades from tar; poster `/film/road-film.jpg`): in `#road`
+  above the tally. Desktop plays it while it's on screen; phones wait for a tap ("Play the reel").
+  Its edges dissolve into the tar; the playing dot is volt (it's on tar).
+- Headless Chromium can't decode H.264 — test with VP9 copies served from a scratch folder; never
+  commit those. Recut: `ffmpeg … -vf "crop,scale,lut3d=<grade>.cube"` with a LUT made from
+  `tools/grade.py`'s `grade()` (33-point cube), CRF ~31 slow, `+faststart`, no audio.
 
 ## Pass 23 — the hero: one photograph, one kicker, the line, two actions (Oct 3, 2026)
 Robert, after the Assos homepage (an overcast photo, a mono kicker, one word, two buttons, nothing
