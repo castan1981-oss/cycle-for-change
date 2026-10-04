@@ -11,7 +11,7 @@
 //     so an uploaded ride lands on the site within about a minute.
 //   - Errors are surfaced (reason) and backed off, never reported as 0 miles.
 
-const GOAL = 7500; // legacy field; the coming-soon page ignores goal and pct
+const GOAL = 10000; // legacy field; no page reads goal or pct (the site shows miles only, never a fraction of 10,000)
 const METERS_TO_MILES = 0.000621371;
 const SEASON_START = "2026-06-01";
 const FRESH_MS = 20 * 60 * 1000;      // recompute anyway if the blob is older than this
