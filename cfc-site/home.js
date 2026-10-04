@@ -672,7 +672,7 @@
     vid.muted = true;
     vid.addEventListener("error", function () { vid.hidden = true; if (filmBtn) filmBtn.hidden = true; }, true);
     /* Pass 24: the film comes up over the still only once frames are actually moving */
-    vid.addEventListener("playing", function () { vid.setAttribute("data-on", "true"); });
+    vid.addEventListener("playing", function () { vid.setAttribute("data-on", "true"); if (vid.parentNode) vid.parentNode.setAttribute("data-film", "on"); });
     var startFilm = function () {
       vid.preload = "auto";
       setFilm(true);

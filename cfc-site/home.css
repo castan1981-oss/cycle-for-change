@@ -361,6 +361,8 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
     mask-composite:intersect;
   }
   .hero-film[data-on="true"]{opacity:1}
+  .hero-media picture{transition:opacity 1.2s ease}
+  .hero-media[data-film="on"] picture{opacity:0}   /* one picture at a time under the fades */
   .film-btn[data-ready="true"]{display:inline-flex}
   .hero-in{margin-top:0;padding-top:calc(var(--nav-h) + 48px);padding-bottom:clamp(40px,4.5vw,64px)}
   .hero-copy{max-width:760px;gap:clamp(20px,2vw,30px)}
