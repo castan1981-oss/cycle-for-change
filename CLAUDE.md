@@ -19,6 +19,28 @@
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
 
+## Rider pages — CONCEPT ONLY, do not build yet (Oct 4, 2026)
+Robert, coming down South Mountain: riders post a ride (ride file, photos, a clip, a few words) in two
+minutes, it lands on a rider profile, bots stay out, and Google trusts it. Rides first; hotels and the
+rest later. **Nothing is built and nothing ships until he says so** — this note is so a session that
+touches rides, towns or the board knows the plan and doesn't contradict it.
+- The plan: the "CFC Ride Profiles — Concept" doc (https://claude.ai/code/artifact/bae9be7e-9c4e-4ffc-967b-a68da75a93f6).
+  The mockup (phone draft, ride page, profile, from his Oct 4 ride): https://claude.ai/artifact/16m6iotqqBvnNqUMHvkGZP
+- Decided: pages live under **`/riders/`** (`/riders/<handle>/`, `/riders/<handle>/<date>-<slug>/`) —
+  `/rides/` is the group-ride finder and stays that. Sign-up opens to anyone 18+ (no invite beta).
+  Other riders' miles show only on their own profile; the 10K stays Robert's. Rides from anywhere;
+  only guide towns get "Ridden here" lists.
+- Hard rules when it's built:
+  - **No Strava API data on any public page**, and none through any AI step (Strava API Policy
+    §2.3, §5.3, §6.2). Sources: Garmin Connect Activity API (approved app, Garmin credited on the
+    page), or a .fit/.gpx file the rider drops or emails in. Strava = a plain link out only.
+  - Ride pages are noindex until the rider is Verified/Known AND the page has their own words or
+    original photos; every rider link carries `rel="ugc"`. Rider text is never machine-written.
+  - Privacy by default: first/last half mile cut (slightly random), saved home zones, date only (no
+    start time), photo/video location stripped on upload, Garmin rides arrive as private drafts.
+- Open: apply to the Garmin Connect Developer Program under Cycle for Change LLC when he's ready.
+  The live mile counter reads Strava today — moving it to Garmin settles §2.3 for it too.
+
 ## Pass 24 — two films on the homepage (Oct 4, 2026)
 Robert: "go through my video and photos and make a stockpile to grab from for design web pages. We
 should make a cool video or two for the home page." The stockpile lives on his Mac, not in the repo:
