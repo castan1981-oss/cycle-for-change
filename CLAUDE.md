@@ -55,10 +55,16 @@ should make a cool video or two for the home page." The stockpile lives on his M
   off screen; it fades up on `playing` (`data-on`) and the still steps out (`data-film="on"`) so the
   fades never show two pictures. The pause control is a quiet text link next to "Read the last ride"
   (`#filmBtn`, shown once ready) — never chrome on the picture.
-- **The road reel** (`/film/road-film.mp4`, 720×900, 4:5, ~17.5 s, 13 cuts of 1.35 s from his own
-  phone/Osmo/drone clips, house grade LUT, fades from tar; poster `/film/road-film.jpg`): in `#road`
+- **The road reel** (`/film/road-film.mp4`, 864×1080, 4:5, ~17.5 s, 13 cuts of 1.35 s from his own
+  phone/Osmo/drone clips, fades from tar; poster `/film/road-film.jpg`; see 24b for the grade): in `#road`
   above the tally. Desktop plays it while it's on screen; phones wait for a tap ("Play the reel").
   Its edges dissolve into the tar; the playing dot is volt (it's on tar).
+- **Pass 24b, same day — the reel, fixed.** Robert, on his phone: "This looks kinda off." It filled
+  the screen, faded top and foot with hard sides (a shaded box), its control sat on the picture, and
+  the bone-forward house grade washed it out on tar. Now: square on phones (`aspect-ratio:1/1`, 4:5
+  on desktop), a 2.5% feather on all four edges (6–7% read as an old-TV vignette), the control is a
+  mono line under the picture (dust; bone + volt dot while playing), and the cut is 864×1080 CRF 29
+  (~6.5 MB) in a light grade (`reel-tar`: strength .12, lift .05, stop .1, warm .05).
 - Headless Chromium can't decode H.264 — test with VP9 copies served from a scratch folder; never
   commit those. Recut: `ffmpeg … -vf "crop,scale,lut3d=<grade>.cube"` with a LUT made from
   `tools/grade.py`'s `grade()` (33-point cube), CRF ~31 slow, `+faststart`, no audio.
