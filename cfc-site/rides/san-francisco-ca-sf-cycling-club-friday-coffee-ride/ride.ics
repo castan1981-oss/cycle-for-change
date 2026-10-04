@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-francisco-ca-sf-cycling-club-friday-coffee-ride@cycleforchange.or
+ g
+DTSTAMP:20261003T000000Z
+DTSTART;TZID=America/Los_Angeles:20261009T061500
+DTEND;TZID=America/Los_Angeles:20261009T081500
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270302T235959Z
+SUMMARY:The Coffee Ride (San Francisco Cycling Club) — San Francisco\, 
+ CA
+LOCATION:Fell St & Baker St\, Fell St & Baker St\, San Francisco\, CA
+DESCRIPTION:Pace: a morning spin around the city; the club calls it all i
+ nclusive.\nSchedule: Every Friday\, 6:15 am\, from Fell & Baker; ends wi
+ th coffee at The Mill.\nConfirm with the host before you go.\nhttps://cy
+ cleforchange.org/rides/san-francisco-ca-sf-cycling-club-friday-coffee-ri
+ de/
+URL:https://cycleforchange.org/rides/san-francisco-ca-sf-cycling-club-fri
+ day-coffee-ride/
+END:VEVENT
+END:VCALENDAR

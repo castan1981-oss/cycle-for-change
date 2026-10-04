@@ -34,7 +34,9 @@ const { townsMap } = require("./towns-map.js");   // the tap-a-town US map on /t
 
 const ROOT = path.resolve(__dirname, "..");
 const DATA = path.join(ROOT, "data");
-const OUT = path.join(ROOT, "cfc-site");
+// CFC_OUT=<dir> writes the pages somewhere else (an editor reading a draft guide while another build runs); the
+// art, rides and calendar are still read from the repo. The real build never sets it.
+const OUT = process.env.CFC_OUT ? path.resolve(process.env.CFC_OUT) : path.join(ROOT, "cfc-site");
 const SITE = "https://cycleforchange.org";
 const TODAY = new Date().toISOString().slice(0, 10);
 // One form on these pages: `ride-report` (scripts/blocks.js), for adding or fixing a listing.
