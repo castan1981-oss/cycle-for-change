@@ -82,16 +82,24 @@ function placeNames(items, W, H, FS, { fallback = false, small = null } = {}) {
     const { x, y, rr } = it, text = String(it.text).toUpperCase(), cnt = it.n != null ? ` ${it.n}` : "", g = rr + 5;
     const order = x > W * 0.62 ? ["l", "r", "tl", "bl", "t", "b", "tr", "br"] : ["r", "l", "tr", "br", "t", "b", "tl", "bl"];
     const clear = (b) => b.x0 >= 0 && b.x1 <= W && b.y0 >= 0 && b.y1 <= H && !boxes.some((o) => o.it !== it && b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0);
-    let first = null;
+    // no clear spot: with `fallback`, the spot (and size) that covers the least of what's already placed —
+    // a name that overlaps a little beats a bubble with no name
+    let best = null;
+    const overlapArea = (b) => boxes.reduce((s, o) => o.it === it ? s : s + Math.max(0, Math.min(b.x1, o.x1) - Math.max(b.x0, o.x0)) * Math.max(0, Math.min(b.y1, o.y1) - Math.max(b.y0, o.y0)), 0)
+      + (Math.max(0, -b.x0) + Math.max(0, b.x1 - W) + Math.max(0, -b.y0) + Math.max(0, b.y1 - H)) * (b.y1 - b.y0);
     for (const fs of small ? [FS, small] : [FS]) {
       const w = (text.length + cnt.length) * fs * 0.62 + 6;
       const spots = { r: [x + g, y + fs * 0.35, "start"], l: [x - g, y + fs * 0.35, "end"], t: [x, y - g - 2, "middle"], b: [x, y + g + fs * 0.8, "middle"],
         tr: [x + g * 0.7, y - g * 0.7, "start"], br: [x + g * 0.7, y + g * 0.7 + fs * 0.8, "start"], tl: [x - g * 0.7, y - g * 0.7, "end"], bl: [x - g * 0.7, y + g * 0.7 + fs * 0.8, "end"] };
       const boxOf = ([tx, ty, a]) => ({ x0: a === "start" ? tx - 2 : a === "end" ? tx - w + 2 : tx - w / 2, x1: a === "start" ? tx + w - 2 : a === "end" ? tx + 2 : tx + w / 2, y0: ty - fs * 0.82, y1: ty + fs * 0.25 });
-      first ||= spots[order[0]];
-      for (const k of order) { const b = boxOf(spots[k]); if (clear(b)) { boxes.push({ ...b, it: null }); return { it, text, cnt, spot: spots[k], fs }; } }
+      for (const k of order) {
+        const b = boxOf(spots[k]);
+        if (clear(b)) { boxes.push({ ...b, it: null }); return { it, text, cnt, spot: spots[k], fs }; }
+        if (fallback) { const a = overlapArea(b); if (!best || a < best.a) best = { a, b, spot: spots[k], fs }; }
+      }
     }
-    return { it, text, cnt, spot: fallback ? first : null, fs: FS };
+    if (best) { boxes.push({ ...best.b, it: null }); return { it, text, cnt, spot: best.spot, fs: best.fs }; }
+    return { it, text, cnt, spot: null, fs: FS };
   });
 }
 
@@ -162,7 +170,7 @@ function townsMap(townsIn) {
     for (const b of bubs) { b.x = Math.min(W - b.hit, Math.max(b.hit, b.x)); b.y = Math.min(H - b.hit, Math.max(b.hit, b.y)); }
     if (!moved) break;
   }
-  const named = new Map(placeNames(bubs.map((b) => ({ x: b.x, y: b.y, rr: b.r, text: b.g.name, n: b.g.n, b })), W, H, NAME_FS, { small: 11 * U }).map((p) => [p.it.b, p]));
+  const named = new Map(placeNames(bubs.map((b) => ({ x: b.x, y: b.y, rr: b.r, text: b.g.name, n: b.g.n, b })), W, H, NAME_FS, { small: 11 * U, fallback: true }).map((p) => [p.it.b, p]));
   const regionsSvg = bubs.map((b) => {
     const { g } = b, one = g.n === 1, p = named.get(b);
     const name = p && p.spot ? `<text class="gr-map-reg-name" x="${n1(p.spot[0])}" y="${n1(p.spot[1])}" text-anchor="${p.spot[2]}"${p.fs !== NAME_FS ? ` style="font-size:${n1(p.fs)}px"` : ""}>${esc(p.text)}</text>` : "";
