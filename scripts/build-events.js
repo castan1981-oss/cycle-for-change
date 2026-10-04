@@ -30,6 +30,7 @@ const path = require("path");
 const CHROME = require("./chrome.js"); // shared header, footer, fonts
 const BLOCKS = require("./blocks.js"); // how-it's-built tiles + the ride-report form (Pass 3)
 const TOWNS = require("./towns.js");   // the town layer: the strip every event, calendar row and ride page carries (Sept 30, 2026)
+const { townsMap } = require("./towns-map.js");   // the tap-a-town US map on /towns/ (Oct 3, 2026)
 
 const ROOT = path.resolve(__dirname, "..");
 const DATA = path.join(ROOT, "data");
@@ -942,12 +943,17 @@ function townsIndex() {
   // Pass 22: a traveller finds a town fast — the full guides first, then by state, then a plain A–Z list
   const guides = sorted.filter((t) => t.kind === "destination");
   const az = [...towns].sort((a, b) => a.name.localeCompare(b.name));
+  // Oct 3, 2026 — Robert: "a better USA map showing a way to click on them." The map is the first pick:
+  // every town on it is a link (scripts/towns-map.js); on a phone it zooms by region (/rides/map.js).
+  const map = townsMap(towns);
   const body = `
   <article class="index">
     <p class="eyebrow">${towns.length} towns &middot; ${stateList.length} states${destinations ? ` &middot; ${destinations} full guide${destinations === 1 ? "" : "s"}` : ""}</p>
     <h1>Town guides for cyclists</h1>
     <p class="lede">Where to ride, sleep, eat and get the bike fixed in every town we list.</p>
-    <nav class="towns-jump" aria-label="Find a town">${guides.length ? `<a href="#guides">Full guides</a>` : ""}<a href="#az">A to Z</a><a href="#by-state">By state</a></nav>
+    <nav class="towns-jump" aria-label="Find a town">${map ? `<a href="#map">On the map</a>` : ""}${guides.length ? `<a href="#guides">Full guides</a>` : ""}<a href="#by-state">By state</a><a href="#az">A to Z</a></nav>
+    ${map ? `<section class="tw-map" aria-labelledby="map"><h2 id="map">Where are you going? Tap a town</h2>${map}
+    </section>` : ""}
     ${guides.length ? `<section aria-labelledby="guides"><h2 id="guides">The full guides</h2>
       <p class="mute">Routes, the ride-out coffee, who fixes or rents a bike, where to sleep with it, how to get it there.</p>
       <div class="tiles-p tiles-p--towns">
@@ -967,6 +973,7 @@ function townsIndex() {
     </section>
 ${BLOCKS.REPORT({ thing: "place", compact: true })}
   </article>
+${map ? `<script src="/rides/map.js" defer></script>` : ""}
 `;
   return head({ title, description, url, ld: [] }) + body + foot();
 }
