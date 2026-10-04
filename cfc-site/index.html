@@ -102,6 +102,13 @@
       <source media="(min-width:900px)" srcset="/img/home-hero-wide.jpg" width="2400" height="1371">
       <img src="/img/home-hero.jpg" alt="A dark green road bike leaning on a block wall before a ride, the helmet hung from the handlebars." width="1600" height="1600" fetchpriority="high" decoding="async">
     </picture>
+    <!-- Pass 24 (Oct 4, 2026): the film. Desktop only, after the page has loaded, without reduced
+         motion; it fades in over the still once it is actually playing, so the first paint is the
+         Pass 23 photo. Phones keep the still (the floor). Drone footage of Robert riding a desert
+         road in Phoenix, house grade, no words on the footage. /home.js runs it (#heroVid, #filmBtn). -->
+    <video class="hero-film" id="heroVid" muted loop playsinline disablepictureinpicture preload="none" aria-hidden="true" tabindex="-1">
+      <source src="/film/home-film.mp4" type="video/mp4">
+    </video>
   </div>
   <div class="wrap hero-in">
     <div class="hero-copy">
@@ -116,7 +123,7 @@
         <a class="btn btn--ghost btn--hero" href="/events/2027/races/">Find a race</a>
         <a class="btn btn--ghost btn--hero" href="/events/2027/charity-rides/">Find a fundraiser</a>
       </nav>
-      <a class="link hero-more" href="#road">Read the last ride</a>
+      <p class="hero-more"><a class="link" href="#road">Read the last ride</a><button class="link film-btn" id="filmBtn" type="button">Pause the film</button></p>
     </div>
   </div>
 </section>
@@ -160,6 +167,15 @@
       </ol>
     </div>
     <div class="road-side">
+      <!-- Pass 24 (Oct 4, 2026): the road reel — about sixteen seconds of this year's rides from
+           Robert's own phone, house grade, no words on the footage. Desktop plays it while it is on
+           screen; phones show the still until it's tapped (the floor). /home.js runs it. -->
+      <figure class="road-film">
+        <video id="roadVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/road-film.jpg" width="864" height="1080" aria-label="Sixteen seconds of this year's rides: the road over the bars, the desert, riders up ahead.">
+          <source src="/film/road-film.mp4" type="video/mp4">
+        </video>
+        <button class="road-film-btn" id="roadBtn" type="button">Play the reel</button>
+      </figure>
       <p class="road-tally"><b class="num" id="rideCount">92</b> rides since June 1 &middot; the 10,000 start Jan 1 &middot; <b class="num" id="daysTo">92</b> days</p>
       <p class="p">Every ride logs to Strava and lands here within the hour. This is the training; the count starts over on January 1.</p>
       <a class="link" href="/pledge/#feed">The whole log, ride by ride</a>

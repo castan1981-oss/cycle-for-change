@@ -671,6 +671,8 @@
   if (vid && !reduce && wide) {
     vid.muted = true;
     vid.addEventListener("error", function () { vid.hidden = true; if (filmBtn) filmBtn.hidden = true; }, true);
+    /* Pass 24: the film comes up over the still only once frames are actually moving */
+    vid.addEventListener("playing", function () { vid.setAttribute("data-on", "true"); });
     var startFilm = function () {
       vid.preload = "auto";
       setFilm(true);
@@ -688,6 +690,40 @@
     else window.addEventListener("load", function () { setTimeout(startFilm, 300); });
     if (filmBtn) filmBtn.addEventListener("click", function () { setFilm(!filmOn); });
   } else if (vid) { vid.removeAttribute("loop"); vid.removeAttribute("autoplay"); }
+
+  /* ————————————————————————————————————————————————
+     the road reel (Pass 24): on desktop, without reduced motion, it plays while it is on
+     screen; on phones it waits for a tap (a still, not a film, on phones). Either way the
+     button pauses and plays it. Nothing downloads until it's needed (preload="none").
+     ———————————————————————————————————————————————— */
+
+  var reel = $("roadVid"), reelBtn = $("roadBtn");
+  if (reel && reelBtn) {
+    reel.muted = true;
+    var reelUser = null;   /* null = the page decides; true/false = the reader decided */
+    var reelSeen = false;
+    var paintReel = function () {
+      var on = !reel.paused;
+      reelBtn.textContent = on ? "Pause the reel" : "Play the reel";
+      reelBtn.setAttribute("data-playing", on ? "true" : "false");
+    };
+    var playReel = function () { var q = reel.play(); if (q && q.catch) q.catch(function () {}); };
+    reel.addEventListener("play", paintReel);
+    reel.addEventListener("pause", paintReel);
+    reel.addEventListener("error", function () { reelBtn.hidden = true; }, true);
+    reelBtn.addEventListener("click", function () {
+      if (reel.paused) { reelUser = true; reel.preload = "auto"; playReel(); }
+      else { reelUser = false; reel.pause(); }
+    });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) {
+        reelSeen = es[0].isIntersecting;
+        if (!reelSeen) { if (!reel.paused) reel.pause(); return; }
+        if (reelUser === true || (reelUser === null && wide && !reduce)) { reel.preload = "auto"; playReel(); }
+      }, { threshold: 0.4 }).observe(reel);
+    }
+    paintReel();
+  }
 
   /* ————————————————————————————————————————————————
      nav turns to bone past the film; the tally bar shows up with it

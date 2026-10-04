@@ -304,7 +304,13 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
    they fill asphalt on hover. Pass 23c: four of them — the pledge and the three finds — two by two
    on phones, one row on desktop, all above the fold. The last ride is the quiet link under them. */
 .hero-acts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.hero-more{align-self:flex-start;margin-top:2px;min-height:44px;align-items:flex-end;color:var(--asphalt)}
+.hero-more{display:flex;flex-wrap:wrap;align-items:flex-end;gap:0 28px;margin:2px 0 0}
+.hero-more .link{min-height:44px;align-items:flex-end;color:var(--asphalt)}
+/* Pass 24: the film's pause control is a quiet text link on the bone, never chrome on the picture.
+   It only shows on desktop once the film is running (home.js sets data-ready). */
+.film-btn{display:none;background:none;border-width:0 0 1px;padding:0 0 6px;cursor:pointer;color:var(--mute)}
+.film-btn::after{content:none}
+.hero-film{display:none}
 .btn--hero{min-height:52px;padding:0 10px;font-size:.6875rem;letter-spacing:.1em;background:transparent;color:var(--asphalt);border-color:var(--asphalt)}
 @media (hover:hover){.btn--hero:hover{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}}
 @media (max-width:359px){.hero-acts{grid-template-columns:minmax(0,1fr)}}
@@ -343,6 +349,19 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
     mask-composite:intersect;
   }
   .hero-media img{object-position:62% 44%;transform:none}
+  /* Pass 24: the film sits exactly over the still, wears the same fades, and comes up over it
+     only once it is playing — the first paint is still the Pass 23 photograph. */
+  .hero-film{
+    display:block;position:absolute;left:0;right:0;bottom:0;top:var(--nav-h);
+    width:100%;height:calc(100% - var(--nav-h));object-fit:cover;object-position:70% 50%;
+    opacity:0;transition:opacity 1.2s ease;
+    -webkit-mask-image:linear-gradient(to right,transparent 24%,#000 60%),linear-gradient(to bottom,transparent 0,#000 12%,#000 74%,transparent 100%);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(to right,transparent 24%,#000 60%),linear-gradient(to bottom,transparent 0,#000 12%,#000 74%,transparent 100%);
+    mask-composite:intersect;
+  }
+  .hero-film[data-on="true"]{opacity:1}
+  .film-btn[data-ready="true"]{display:inline-flex}
   .hero-in{margin-top:0;padding-top:calc(var(--nav-h) + 48px);padding-bottom:clamp(40px,4.5vw,64px)}
   .hero-copy{max-width:760px;gap:clamp(20px,2vw,30px)}
   .hero-copy .h1{max-width:600px}
@@ -626,6 +645,16 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .road-side .link{align-self:flex-start;color:var(--bone)}
 .log .when b{color:var(--bone)}
 @media (min-width:900px){.road{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}}
+/* Pass 24: the road reel. 4:5, its edges dissolve into the tar (Pass 7: no hard seams), one
+   hairline control in mono. Volt is allowed here — it's tar — but only as the playing dot. */
+.road-film{position:relative;margin:0 0 6px;width:100%;max-width:min(100%,calc(62svh * .8));aspect-ratio:4/5;background:var(--tar)}
+.road-film video{display:block;width:100%;height:100%;object-fit:cover;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 7%,#000 82%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0,#000 7%,#000 82%,transparent 100%)}
+.road-film-btn{position:absolute;left:0;bottom:4px;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 14px 0 0;background:none;border:0;color:var(--bone);font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+.road-film-btn::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--bone)}
+.road-film-btn[data-playing="true"]::before{background:var(--volt)}
+.road-film-btn:focus-visible{outline:2px solid var(--bone);outline-offset:3px}
 
 /* —— read —— */
 .read-grid{display:grid;gap:clamp(36px,5vw,64px)}
