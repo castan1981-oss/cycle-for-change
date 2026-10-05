@@ -23,6 +23,7 @@ const path = require("path");
 const CHROME = require("./chrome.js"); // shared header, footer, fonts
 const BLOCKS = require("./blocks.js"); // the ride-report form (Pass 3)
 const TOWNS = require("./towns.js");  // the town layer (Sept 30, 2026): a guide link on every row that has one, the strip in its details
+const PH = require("./photos.js");    // Pass 25: Robert's photos (alt text, place, the figure)
 
 const ROOT = path.resolve(__dirname, "..");
 const DATA = path.join(ROOT, "data", "calendar-2027.json");
@@ -464,7 +465,7 @@ function pickRow(label, picks, cls = "") {
 function farPicks(type, list) {
   return pickRow("How far?", FAR.map((f) => ({ name: f.name, n: list.filter((e) => farOf(e).includes(f.id)).length, href: allLink({ type, far: f.id }) })));
 }
-function shortPage({ url, crumb, h1, title, description, list, byMonth: grouped = false, nav = "", lead = "", narrow = "", picks = "" }) {
+function shortPage({ url, crumb, h1, title, description, list, byMonth: grouped = false, nav = "", lead = "", narrow = "", picks = "", after = "" }) {
   let rows;
   if (grouped) {
     const ms = [...new Set(list.map((e) => e.month))].sort((a, b) => (a || 13) - (b || 13));
@@ -486,7 +487,7 @@ ${list.map(eventHtml).join("\n")}
     ${KEY}${lead}${picks}${narrow}${nav}
     <div id="results">
 ${rows}
-    </div>${nav}
+    </div>${nav}${after}
     <p class="cal-back"><a href="${URL}">&larr; The 2027 calendar</a><a href="${URL}all/">All ${events.length}, with filters</a></p>
   </article>
 ` + foot({ filters: false, extra: OPEN_JS });
@@ -537,7 +538,8 @@ for (const c of CATS) {
 if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert&rsquo;s rides", list: riding,
   h1: "The 2027 rides I&rsquo;m doing", title: "The 2027 rides I'm doing for Cycle for Change",
   description: `The ${riding.length} organized rides Robert is riding in 2027 as part of the 10,000-mile pledge, with dates, distances and sign-up links.`,
-  lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one. <a href="/pledge/">Pledge a mile</a>.</p>` });
+  lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one. <a href="/pledge/">Pledge a mile</a>.</p>`,
+  after: `\n    ${PH.figure("robert-peace")}` });
 
 // the calendar's own page: two questions, then the deep pages and the full list
 {
@@ -568,6 +570,7 @@ if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert&rsquo;s ride
           ${doors}
       </div>
     </section>
+    ${PH.figure("sawtooth-road", { cls: "ph--wide" })}
 `;
   home += DEEP_HTML();
   home += `

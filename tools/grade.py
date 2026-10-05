@@ -3,6 +3,7 @@ warm, and a light bone-forward duotone (22%) so phone photos read as one campaig
 The desert at 10 a.m., not 8 p.m. Originals live in cfc-site/photos/; the site loads cfc-site/img/.
 
   python3 tools/grade.py --all                       # regrade the manifest below (photos/ -> img/)
+  python3 tools/grade.py --all --only phx-canal,stanley-dock   # just these outputs
   python3 tools/grade.py IN OUT [--strength 0.22] [--lift 0.13] [--stop 0.5] [--max 1200] [--crop 4:5]
 
 Needs Pillow + numpy. Add a photo: drop the original in cfc-site/photos/, add a line to MANIFEST.
@@ -17,6 +18,13 @@ SHADOW = np.array([0x3A, 0x3E, 0x36]) / 255.0     # warm asphalt, a step above t
 
 # output, source, options. Robert's picks (Sept 29): crew = hero, portrait = the Pledge door, mural = the close.
 # card-south / card-pv have no color original; photos/*-duo.jpg are the old duotone files, re-lifted.
+def _long(k):   # Pass 25: portraits run at most ~460px wide on desktop, so 1440 tall is plenty; landscapes get 1600
+    try:
+        w, h = Image.open(os.path.join(ROOT, 'photos', f'{k}.jpg')).size
+        return 1440 if h > w else 1600
+    except OSError:
+        return 1600
+PASS25_LOOK = {'': {}, 'sun': dict(stop=0.3, lift=0.11), 'dusk': dict(strength=0.10, stop=0.15, lift=0.06, warm=0.04)}
 MANIFEST = [
     # Pass 11 (Sept 30): crew-2x.jpg is crew.jpg super-resolved 2x (EDSR, after a light denoise) so the
     # hero is crisp at 2x screens; a gentler stop so the sunset holds. Re-run tools/sr.py if crew.jpg changes.
@@ -35,7 +43,21 @@ MANIFEST = [
     ('img/vest.jpg',         'photos/vest-ride.jpg',   dict(max=1200, crop='4:5')),
     ('img/crew-haus.jpg',    'photos/crew-haus.jpg',   dict(max=1000)),
     ('img/haus-road.jpg',    'photos/haus-road.jpg',   dict(max=1600)),
-]
+    # Pass 25 (Oct 4, 2026): Robert's own photos through the site, from ~/Pictures/CFC Stockpile/.
+    # Where each one runs and its alt text: scripts/photos.js. Sun-in-frame shots take the Pass 11
+    # sunset settings ('sun') so the sky holds; the /tonight/ dusk keeps its dark ('dusk').
+    # No cars in any of them (Robert, Oct 4): landscapes and riding only. sedona-road is cropped to the butte.
+] + [(f'img/ph/{k}.jpg', f'photos/{k}.jpg', dict(max=_long(k), q=76, **PASS25_LOOK[look])) for k, look in [
+    ('phx-canal', 'sun'), ('pv-camelback-road', ''), ('sedona-road', ''), ('boise-river-path', ''),
+    ('sawtooth-lake', ''), ('seattle-path', ''), ('gravel-pines', ''),
+    ('gravel-road', ''), ('robert-camelback', ''), ('encinitas-beach', ''), ('stanley-dock', ''),
+    ('hood-from-air', ''), ('pv-morning-road', ''), ('sawtooth-road', ''), ('robert-peace', ''),
+    ('robert-desert', ''), ('robert-boise', ''), ('bike-wall', ''), ('robert-selfie-camelback', ''),
+    ('pv-sunrise-bars', 'sun'), ('riders-camelback', ''), ('pv-golden-climb', 'sun'),
+    ('pv-cloud-road', ''), ('canal-sunrise', 'sun'), ('pv-shadow', ''), ('hills-road', ''),
+    ('pv-dusk', 'sun'), ('camelback-sunrise', 'sun'), ('south-mountain', ''), ('phx-skyline', ''),
+    ('flagstaff-dusk', 'dusk'), ('empty-road', ''), ('sawtooth-calm', ''),
+]]
 
 def srgb_to_lin(x): return np.where(x <= 0.04045, x / 12.92, ((x + 0.055) / 1.055) ** 2.4)
 def lin_to_srgb(x): return np.where(x <= 0.0031308, x * 12.92, 1.055 * np.power(np.clip(x, 0, 1), 1 / 2.4) - 0.055)
@@ -81,7 +103,10 @@ def process(src, dst, strength=0.22, lift=0.13, stop=0.5, warm=0.06, sat=1.08, m
 
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == '--all':
+        # --only a,b grades just those outputs (by file stem), so a new photo doesn't re-encode the rest
+        only = set(sys.argv[sys.argv.index('--only') + 1].split(',')) if '--only' in sys.argv else None
         for dst, src, opts in MANIFEST:
+            if only and os.path.splitext(os.path.basename(dst))[0] not in only: continue
             process(os.path.join(ROOT, src), os.path.join(ROOT, dst), **opts)
         sys.exit(0)
     p = argparse.ArgumentParser(); p.add_argument('inp'); p.add_argument('out')

@@ -16,7 +16,7 @@ main{display:block}
 /* Pass 7 (Sept 30, 2026): a hub can open on a photo that dissolves into the words (no wash, no hard edge) */
 .fn-pillar-head--photo{position:relative;isolation:isolate;background:var(--bone);overflow:hidden;padding-top:0}
 .fn-pillar-photo{margin:0 0 -40px;aspect-ratio:4/3;max-height:52vh;overflow:hidden;
-  -webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 55%,transparent 100%)}
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 55%,transparent 100%)}  /* Pass 25: the top dissolves too, no hard edge under the tally line */
 .fn-pillar-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;display:block}
 @media (min-width:900px){
   .fn-pillar-head--photo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;padding:0}
