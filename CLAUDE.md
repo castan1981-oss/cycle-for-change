@@ -21,6 +21,14 @@
 > print, rose bar always rose (smeared on light, powder on dark), the stencil only ever spells
 > CYCLE FOR, everything else goes on a rose plate in Overpass 900. Frozen until Dec 1, 2027.
 > Brand storyboard and the panel review: https://claude.ai/artifact/RoGAUpeAAzk4ktA6zeDqEm
+> **Oct 5 check, after it went live:** the homepage `#orgs` section was being wiped by the old
+> ballot code (home.js now only treats a page with `[data-vote]` buttons as a ballot); Overpass
+> from Google Fonts has a zero-width middle dot, so "one·n·ten" read "onenten" (an `@font-face`
+> per weight in home.css/chrome.css hands U+00B7 to a local face); and `apply-chrome.py` only
+> knew the original `.fn-cta`, so 18 guides/field notes/the journal kept the old "Pledge a mile"
+> close and the resources pages the old note — it now refreshes both on a re-run, and the body
+> copy that said pledge/board/vote on those pages was rewritten. The journal entry (Robert's own
+> words, "your pledge") was left alone.
 
 > **HOMEPAGE: the redesign is live since 2026-09-27; Pass 6 (Sept 29) brightened it; Pass 23 (Oct 3) is the hero; Pass 24 (Oct 4) gave it two films; Pass 25 (Oct 4) put his photos on the inner pages.**
 > `cfc-site/index.html` + `cfc-site/home.css` + `cfc-site/home.js` + `cfc-site/img/` (the

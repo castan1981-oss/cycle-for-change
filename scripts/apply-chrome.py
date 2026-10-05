@@ -82,6 +82,10 @@ def chrome(s: str, page) -> str:
     s = re.sub(r'<main(?![^>]*\bid=)', '<main id="main"', s, count=1)
     # the end-of-page pledge block: one shared component
     s = re.sub(r'<(div|section) class="fn-cta"[^>]*>.*?</\1>(?=\s*(?:<p class="fn-back"|<p class="fn-note"|</main>))', lambda m: C["PLEDGE"], s, count=1, flags=re.S)
+    # ...and a block an earlier run already put there, so re-runs carry the current copy
+    # (Pass 26 changed the words and the buttons; the first regex only knew the original .fn-cta,
+    # so 19 pages kept saying "Pledge a mile" for a day)
+    s = re.sub(r'<section class="pledge" aria-labelledby="pledge-h">.*?</section>', lambda m: C["PLEDGE"], s, count=1, flags=re.S)
     s = re.sub(r'\s*<script src="/(?:events/events|field-notes/field-notes|rides/tally)\.js" defer></script>', "", s)
     for a, b in ANCHORS.items():
         s = s.replace(a, b)
@@ -109,6 +113,7 @@ def resources(s: str) -> str:
         s = s[:m.start()] + s[m.end():]
         s = s.replace("</h1>", "</h1>\n        " + aside, 1)
     s = re.sub(r'<section class="pledge" aria-labelledby="pledge-h">.*?</section>', WHY, s, count=1, flags=re.S)
+    s = re.sub(r'<div class="fn-why">.*?</div>', WHY, s, count=1, flags=re.S)   # refresh the note on a re-run too
     return s
 
 
