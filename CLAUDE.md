@@ -60,6 +60,7 @@ guides, the calendar, /pledge/, /tonight/, /resources/, the 404).
   landscapes 3:2; `ph--wide` = 2:1 band, `ph--frame` = 3:2 the column's width. Mono caption under it.
   `.gr-photo` is gone from rides.css. The guides hub / Phoenix field notes header photo
   (`.fn-pillar-photo`) now fades in at its top on phones too.
+- **No cars (Robert, Oct 4):** "I don't think we should have cars on the website — landscapes or cycling." No car, truck or van in any photo, not even parked in the distance. The Airstream, the van rack, the from-the-car dusk and four street shots with parked cars were swapped out the same day; the Sedona photo is cropped to the butte above the traffic; Portland has no photo until there's one without a car.
 - **Rules:** only Robert is recognisable — riders seen from behind or far off are fine, oncoming riders
   get cropped out (pv-golden-climb was cut above them); nothing from `07-group-rides` without people's
   OK. The caption always says where it was really taken (the Hill Country guide shows a Boise road and

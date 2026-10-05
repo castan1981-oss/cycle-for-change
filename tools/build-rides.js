@@ -1059,8 +1059,8 @@ function photoBand(key, { line = "", cls = "", caption = true } = {}) {
 }
 // Pass 25 (Oct 4, 2026): the places Robert has a photo that is true to them (scripts/photos.js).
 const HUB_PHOTO = {   // hub key → photo; desktop layout follows the photo's shape
-  "az-phoenix": "phx-lane", "az-scottsdale": "pv-camelback-road", "az-sedona": "sedona-road",
-  "ca-carlsbad": "encinitas-beach", "wa-seattle": "seattle-path", "or-portland": "portland-bridge",
+  "az-phoenix": "phx-canal", "az-scottsdale": "pv-camelback-road", "az-sedona": "sedona-road",
+  "ca-carlsbad": "encinitas-beach", "wa-seattle": "seattle-path",
   "id-boise": "boise-river-path",
 };
 const STATE_PHOTO = { AZ: ["crew", "ph--wide"], ID: ["sawtooth-lake", "ph--wide"] };

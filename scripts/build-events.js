@@ -831,7 +831,7 @@ function bringYourBikePage(t) {
     <p class="eyebrow"><a href="${t.url}">${esc(t.name)}, ${esc(t.state)}</a> &middot; bring the bike</p>
     <h1>${esc(r.h(t))}</h1>
     <p class="lede">${rich(b.summary)}</p>
-    ${PH.figure("bike-rack")}
+    ${PH.figure("hood-from-air")}
 
     ${fly.airports && fly.airports.length ? `<section><h2>Flying to ${esc(t.name)} with a bike</h2>
       ${facts(fly.airports.map((a) => [`${a.name}${a.code ? ` (${a.code})` : ""}`, `${a.miles != null ? `${esc(a.miles)} mi` : ""}${a.note ? `${a.miles != null ? " &middot; " : ""}${rich(a.note)}` : ""}`]))}
@@ -960,7 +960,7 @@ function townsIndex() {
         ${guides.map(townTile).join("\n        ")}
       </div>
     </section>` : ""}
-    ${PH.figure("airstream-rig", { cls: "ph--wide" })}
+    ${PH.figure("stanley-dock")}
     <section class="by-state" aria-labelledby="by-state"><h2 id="by-state">Every town, by state</h2>
       <div class="tiles-p tiles-p--towns">
         ${sorted.map(townTile).join("\n        ")}
