@@ -3,7 +3,7 @@ warm, and a light bone-forward duotone (22%) so phone photos read as one campaig
 The desert at 10 a.m., not 8 p.m. Originals live in cfc-site/photos/; the site loads cfc-site/img/.
 
   python3 tools/grade.py --all                       # regrade the manifest below (photos/ -> img/)
-  python3 tools/grade.py --all --only phx-lane,bike-rack   # just these outputs
+  python3 tools/grade.py --all --only phx-canal,stanley-dock   # just these outputs
   python3 tools/grade.py IN OUT [--strength 0.22] [--lift 0.13] [--stop 0.5] [--max 1200] [--crop 4:5]
 
 Needs Pillow + numpy. Add a photo: drop the original in cfc-site/photos/, add a line to MANIFEST.
@@ -46,16 +46,17 @@ MANIFEST = [
     # Pass 25 (Oct 4, 2026): Robert's own photos through the site, from ~/Pictures/CFC Stockpile/.
     # Where each one runs and its alt text: scripts/photos.js. Sun-in-frame shots take the Pass 11
     # sunset settings ('sun') so the sky holds; the /tonight/ dusk keeps its dark ('dusk').
+    # No cars in any of them (Robert, Oct 4): landscapes and riding only. sedona-road is cropped to the butte.
 ] + [(f'img/ph/{k}.jpg', f'photos/{k}.jpg', dict(max=_long(k), q=76, **PASS25_LOOK[look])) for k, look in [
-    ('phx-lane', 'sun'), ('pv-camelback-road', ''), ('sedona-road', ''), ('boise-river-path', ''),
-    ('sawtooth-lake', ''), ('seattle-path', ''), ('portland-bridge', ''), ('gravel-pines', ''),
-    ('gravel-road', ''), ('robert-camelback', ''), ('encinitas-beach', ''), ('airstream-rig', ''),
-    ('bike-rack', ''), ('pv-morning-road', ''), ('sawtooth-road', ''), ('robert-peace', ''),
+    ('phx-canal', 'sun'), ('pv-camelback-road', ''), ('sedona-road', ''), ('boise-river-path', ''),
+    ('sawtooth-lake', ''), ('seattle-path', ''), ('gravel-pines', ''),
+    ('gravel-road', ''), ('robert-camelback', ''), ('encinitas-beach', ''), ('stanley-dock', ''),
+    ('hood-from-air', ''), ('pv-morning-road', ''), ('sawtooth-road', ''), ('robert-peace', ''),
     ('robert-desert', ''), ('robert-boise', ''), ('bike-wall', ''), ('robert-selfie-camelback', ''),
     ('pv-sunrise-bars', 'sun'), ('riders-camelback', ''), ('pv-golden-climb', 'sun'),
-    ('phx-sunset-road', 'sun'), ('canal-sunrise', 'sun'), ('phx-wild-sky', 'sun'), ('hills-road', ''),
+    ('pv-cloud-road', ''), ('canal-sunrise', 'sun'), ('pv-shadow', ''), ('hills-road', ''),
     ('pv-dusk', 'sun'), ('camelback-sunrise', 'sun'), ('south-mountain', ''), ('phx-skyline', ''),
-    ('phx-dusk', 'dusk'), ('empty-road', ''), ('sawtooth-calm', ''),
+    ('flagstaff-dusk', 'dusk'), ('empty-road', ''), ('sawtooth-calm', ''),
 ]]
 
 def srgb_to_lin(x): return np.where(x <= 0.04045, x / 12.92, ((x + 0.055) / 1.055) ** 2.4)
