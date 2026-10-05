@@ -201,7 +201,6 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .brand-word i{font-style:normal}
 @media (max-width:899px){
   .nav .btn--sm{display:none}
-  .nav-in{padding-left:0}                                   /* the stamp sits in the corner; everything else keeps the gutter */
   .brand{gap:16px}
   .brand .brand-mark{height:24px}   /* 64px square, the wheel 28px */
   .menu-btn{margin-right:-9px}                               /* the lines' right edge lands on the gutter */

@@ -10,6 +10,8 @@ const fs = require("fs");
 const path = require("path");
 const CHROME = require("./chrome.js");
 
+// one⋅n⋅ten is written with U+22C5 (&#8901;), not &middot;: Overpass treats U+00B7 as the Catalan
+// l·l mark and swallows it between other letters, so "one·n·ten" set in Overpass reads "onenten".
 const OUT = path.join(__dirname, "..", "cfc-site", "index.html");
 
 // The mark, stacked, as the page's headline. Same glyphs as the one-line mark in chrome.js.
@@ -152,7 +154,7 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
     <div class="why-copy">
       <p class="lede">Cycling changed my life. I&rsquo;d like to say I&rsquo;m cycling for other people. I&rsquo;m really cycling for myself. I&rsquo;m cycling because it changed me. That&rsquo;s the story.</p>
       <p class="lede">So the sign changes. What comes after the word is up to whoever&rsquo;s riding.</p>
-      <p class="plates"><span class="plate">me</span><span class="plate">one&middot;n&middot;ten, on Nov 7</span><span class="plate">change</span></p>
+      <p class="plates"><span class="plate">me</span><span class="plate">one&#8901;n&#8901;ten, on Nov 7</span><span class="plate">change</span></p>
     </div>
   </div>
 </section>
@@ -163,10 +165,10 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
     <div class="s-head"><div class="stack16"><h2 class="h2" id="orgs-h">The orgs I ride for.</h2><p class="lede w38">Each one has a ride. That&rsquo;s where the money goes: you sign up or give on their page, and it never touches me.</p></div></div>
     <div class="orgs">
       <article class="org">
-        <h3 class="h3">one&middot;n&middot;ten</h3>
+        <h3 class="h3">one&#8901;n&#8901;ten</h3>
         <p>Phoenix nonprofit for LGBTQ+ youth ages 11 to 24. Safe spaces, housing, leadership.</p>
-        <p class="org-ride">Cycling 4 one&middot;n&middot;ten, Sat Nov 7, Phoenix</p>
-        <div class="org-acts"><a class="link" href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Give to one&middot;n&middot;ten</a></div>
+        <p class="org-ride">Cycling 4 one&#8901;n&#8901;ten, Sat Nov 7, Phoenix</p>
+        <div class="org-acts"><a class="link" href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Give to one&#8901;n&#8901;ten</a></div>
       </article>
       <article class="org">
         <h3 class="h3">Los Angeles LGBT Center</h3>
@@ -191,9 +193,9 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
     <h2 class="h2" id="ride-h">Ride with me.</h2>
     <div class="ride-in">
       <div class="ride-next">
-        <p class="eyebrow">Next up, a one&middot;n&middot;ten fundraiser</p>
-        <h3 class="h2 ride-h3">Nov 7, I cycle for <span class="plate plate--big">one&middot;n&middot;ten</span></h3>
-        <p>Cycling 4 one&middot;n&middot;ten, Bike Ride &amp; Block Party at Prisma Community Care, Phoenix.</p>
+        <p class="eyebrow">Next up, a one&#8901;n&#8901;ten fundraiser</p>
+        <h3 class="h2 ride-h3">Nov 7, I cycle for <span class="plate plate--big">one&#8901;n&#8901;ten</span></h3>
+        <p>Cycling 4 one&#8901;n&#8901;ten, Bike Ride &amp; Block Party at Prisma Community Care, Phoenix.</p>
         <dl class="facts-dl">
           <div><dt>62 miles</dt><dd>7:00 AM, $100</dd></div>
           <div><dt>20 miles</dt><dd>9:00 AM, $50</dd></div>
@@ -232,7 +234,7 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
     <ol class="steps3">
       <li><h3 class="h3">I ride.</h3><p>10,000 miles in 2027, all on the bike. Group rides, charity rides, the Tuesday ride in whatever town I&rsquo;m in. Every ride logs to Strava and lands here within the hour.</p></li>
       <li><h3 class="h3">I write it down.</h3><p>Every ride gets a line. The big ones get a page: the route, the town, who I met, my own footage. If you&rsquo;re riding somewhere new, start there.</p></li>
-      <li><h3 class="h3">The money goes through the orgs.</h3><p>one&middot;n&middot;ten, the Center and SFAF each run a ride. You sign up or give on their page. Nothing here asks for a card, and nothing touches me.</p></li>
+      <li><h3 class="h3">The money goes through the orgs.</h3><p>one&#8901;n&#8901;ten, the Center and SFAF each run a ride. You sign up or give on their page. Nothing here asks for a card, and nothing touches me.</p></li>
     </ol>
   </div>
 </section>

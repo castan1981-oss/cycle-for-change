@@ -326,7 +326,7 @@
   var countKnown = true;    /* false while the function can't read names back (no NETLIFY_API_TOKEN) */
   var onBoard = false;
   var castVote = null;      /* set by the ballot block below; the pledge form calls it on submit */
-  var ORG_NAMES = { onenten: "one·n·ten", lalgbtcenter: "Los Angeles LGBT Center", sfaf: "San Francisco AIDS Foundation" };
+  var ORG_NAMES = { onenten: "one⋅n⋅ten", lalgbtcenter: "Los Angeles LGBT Center", sfaf: "San Francisco AIDS Foundation" };
   var pname = $("pname"), slots = $("slots"), form = $("pledgeForm"), okmsg = $("okmsg");
   var pad2 = function (n) { return n < 10 ? "0" + n : String(n); };
   if (form && pname && slots) {
@@ -554,98 +554,10 @@
       });
   });
 
-  /* ————————————————————————————————————————————————
-     the ballot: one vote per browser, same keys the live homepage uses
-     ———————————————————————————————————————————————— */
+  /* The ballot is gone (Pass 26: nobody pledges or votes). The old block here fetched the votes
+     function and redrew #orgs — which is now the whole section — as "Pick this one" buttons,
+     wiping the heading, the ride dates and the open-door line. castVote stays null. */
 
-  var orgsEl = $("orgs"), voteMsg = $("voteMsg");
-  var votedOrg = null, fingerprint = null;
-  if (orgsEl) {
-  try {
-    fingerprint = localStorage.getItem("cfc-vote-fp");
-    if (!fingerprint) { fingerprint = "fp_" + Math.random().toString(36).slice(2) + Date.now().toString(36); localStorage.setItem("cfc-vote-fp", fingerprint); }
-    votedOrg = localStorage.getItem("cfc-voted-org");
-  } catch (_) { fingerprint = fingerprint || "session_" + Date.now(); }
-
-  /* the vote can move (Pass 5): the other buttons stay live, so a pick can change */
-  function paintVotes() {
-    var btns = orgsEl.querySelectorAll("[data-vote]");
-    for (var i = 0; i < btns.length; i++) {
-      var mine = votedOrg && btns[i].getAttribute("data-vote") === votedOrg;
-      btns[i].disabled = false;
-      btns[i].setAttribute("aria-pressed", mine ? "true" : "false");
-      btns[i].textContent = mine ? "Your pick ✓" : (votedOrg ? "Switch to this one" : "Pick this one");
-    }
-    /* the form's radio follows the ballot, so both say the same thing */
-    var radio = votedOrg ? document.querySelector('.orgpick input[name="org"][value="' + votedOrg + '"]') : null;
-    if (radio && !radio.checked && !document.querySelector('.orgpick input[name="org"]:checked')) radio.checked = true;
-  }
-
-  function renderOrgs(list) {
-    if (!list || !list.length) return;
-    while (orgsEl.firstChild) orgsEl.removeChild(orgsEl.firstChild);
-    list.forEach(function (o) {
-      var art = document.createElement("article"); art.className = "org"; art.setAttribute("data-id", o.id);
-      var h = document.createElement("h3"); h.className = "h3"; h.textContent = o.name;
-      var p = document.createElement("p"); p.textContent = o.desc || "";
-      var acts = document.createElement("div"); acts.className = "org-acts";
-      var a = document.createElement("a"); a.className = "link"; a.textContent = "Visit site";
-      if (/^https?:\/\//i.test(o.url || "")) { a.href = o.url; a.target = "_blank"; a.rel = "noopener noreferrer"; }
-      var b = document.createElement("button"); b.className = "btn btn--ghost btn--sm"; b.type = "button"; b.setAttribute("data-vote", o.id); b.setAttribute("aria-label", "Pick " + o.name); b.textContent = "Pick this one";
-      acts.appendChild(a); acts.appendChild(b);
-      art.appendChild(h); art.appendChild(p); art.appendChild(acts);
-      orgsEl.appendChild(art);
-    });
-    paintVotes();
-  }
-
-  function orgName(id) {
-    var art = orgsEl.querySelector('[data-id="' + id + '"] .h3');
-    return art ? art.textContent : "";
-  }
-
-  function setVoted(id, announce) {
-    var moved = votedOrg && votedOrg !== id;
-    votedOrg = id;
-    try { localStorage.setItem("cfc-voted-org", id); } catch (_) {}
-    paintVotes();
-    if (announce) {
-      var n = orgName(id) || ORG_NAMES[id];
-      voteMsg.textContent = n ? (moved ? "Moved. " : "") + "Your miles are for " + n + ". Change it any time before Dec 31, 2027." : "Pick saved.";
-      voteMsg.hidden = false;
-    }
-  }
-
-  /* one POST, used by the buttons here and by the pledge form's org pick */
-  function sendVote(id, btn, announce) {
-    if (!id || votedOrg === id) return;
-    if (btn) btn.disabled = true;
-    fetch("/.netlify/functions/votes", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ orgId: id, fingerprint: fingerprint }) })
-      .then(function (r) { return r.json(); })
-      .then(function (d) {
-        if (d && d.error === "already voted") { setVoted(d.votedFor || id, false); return; }
-        if (d && d.error) { if (btn) btn.disabled = false; return; }
-        if (d && d.orgs) renderOrgs(d.orgs);
-        setVoted(id, announce);
-      })
-      .catch(function () { if (btn) btn.disabled = false; });
-  }
-  castVote = function (id) { sendVote(id, null, false); };
-
-  orgsEl.addEventListener("click", function (e) {
-    var btn = e.target.closest ? e.target.closest("[data-vote]") : null;
-    if (!btn || btn.disabled) return;
-    sendVote(btn.getAttribute("data-vote"), btn, true);
-  });
-
-  paintVotes();
-  if (window.fetch) {
-    fetch("/.netlify/functions/votes")
-      .then(function (r) { return r.json(); })
-      .then(function (d) { if (d && d.orgs) renderOrgs(d.orgs); })
-      .catch(function () {});
-  }
-  }
   if (window.fetch) {
     fetch("/.netlify/functions/instagram")
       .then(function (r) { return r.json(); })
@@ -802,7 +714,7 @@
 (function () {
   var plate = document.getElementById("signPlate"), input = document.getElementById("who"), reset = document.getElementById("signReset");
   if (!plate || !input) return;
-  var mine = ["me", "one·n·ten", "me", "change"], i = 0, typed = "";
+  var mine = ["me", "one⋅n⋅ten", "me", "change"], i = 0, typed = "";
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   function paint() { plate.textContent = typed ? typed : mine[i % mine.length]; if (reset) reset.hidden = !typed; }
   input.addEventListener("input", function () { typed = input.value.trim().slice(0, 28); paint(); });

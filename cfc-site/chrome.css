@@ -154,7 +154,6 @@ p{margin:0 0 1em}
 .brand-word{font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
 .brand-word i{font-style:normal;color:var(--creosote-ink)}
 @media (max-width:899px){
-  .nav-in{padding-left:0}
   .brand{gap:16px}
   .brand .brand-mark{height:24px}
   .menu-btn{margin-right:-9px}
