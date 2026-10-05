@@ -11,7 +11,7 @@
    Styled by /chrome.css. Behaviour (menu, tally, signup) in /chrome.js.
 
    Change the chrome here, then: run the three generators + apply-chrome.py.
-   Creosote house: Outfit + Space Mono only. Volt is not used in the chrome. */
+   Lane Paint (Oct 5, 2026): Overpass only; the mark is the drawn CYCLE FOR with its rose bar. */
 
 "use strict";
 
@@ -38,7 +38,7 @@ const attr = (s) => esc(s).replace(/"/g, "&quot;");
 
 const FONTS = `<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">`;
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800;900&display=swap" rel="stylesheet">`;
 
 /* Everything a page's <head> needs besides its own title/description/canonical.
    `styles` = the page's stylesheets after /chrome.css. `ld` = JSON-LD objects. */
@@ -75,11 +75,22 @@ ${json}${extra ? "\n" + extra : ""}`;
 
 /* Pass 23d (Oct 3, 2026): the wheel sits in an asphalt square (.brand-sq); on phones the square is the
    bar's corner. Same drawing as the homepage's. */
-const MARK = `<svg class="brand-sq" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-        <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
-        <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
-        <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
-        <circle cx="60" cy="60" r="6" fill="currentColor"/>
+const MARK = `<svg class="brand-mark" viewBox="0 0 760 150" aria-hidden="true" focusable="false">
+        <defs>
+          <path id="lpC" d="M52 34 V24 Q52 8 36 8 H33 M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 142 H36 Q52 142 52 126 V116"/>
+          <path id="lpY" d="M11 4 L30 68 L49 4 M30 68 V150"/>
+          <path id="lpL" d="M8 0 V150 M22 142 H54"/>
+          <path id="lpE" d="M8 0 V150 M22 8 H54 M22 75 H47 M22 142 H54"/>
+          <path id="lpF" d="M8 0 V150 M22 8 H54 M22 75 H47"/>
+          <path id="lpO" d="M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 8 H36 Q52 8 52 24 V126 Q52 142 36 142 H33"/>
+          <path id="lpR" d="M8 0 V150 M22 8 H36 Q52 8 52 24 V58 Q52 74 36 74 H22 M33 90 L50 150"/>
+          <clipPath id="lpRow"><rect x="-20" y="0" width="900" height="150"/></clipPath>
+        </defs>
+        <g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">
+          <use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/>
+          <use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/>
+        </g>
+        <rect class="lp-bar" x="652" y="114" width="98" height="36" fill="#A84C58"/>
       </svg>`;
 
 const n = (v) => (v == null ? "" : `<span>${v}</span>`);
@@ -89,16 +100,17 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
   <div class="wrap nav-in">
     <a class="brand" href="/" aria-label="Cycle for Change home">
       ${MARK}
-      <span class="brand-word">Cycle <i>For</i> Change</span>
+      <span class="sr">Cycle for Change</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
-      <a href="/guides/">Guides</a>
+      <a href="/towns/">Towns</a>
+      <a href="/field-notes/">Field notes</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/pledge/">Pledge</a>
+      <a class="btn btn--sm" href="/events/2027/riding/">Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -109,7 +121,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/pledge/">Pledge a mile <span>Free</span></a></li>
+    <li><a href="/events/2027/riding/">Ride with me <span>The 2027 rides</span></a></li>
     <li><a href="/find-a-ride/">Find a ride ${n(RIDE_COUNT)}</a></li>
     <li><a href="/events/2027/">2027 calendar ${n(CAL_COUNT)}</a></li>
     <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
@@ -122,7 +134,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1 &middot; the 10,000 start Jan 1</span></p>`;
+<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>`;
 
 const FOOTER = `<footer class="foot site-foot">
   <div class="wrap">
@@ -135,8 +147,8 @@ const FOOTER = `<footer class="foot site-foot">
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
-        <a href="/pledge/">Pledge</a>
-        <a href="/pledge/#questions">Where the money goes</a>
+        <a href="/events/2027/riding/">Ride with me</a>
+        <a href="/#orgs">The orgs I ride for</a>
       </div>
       <div class="foot-col">
         <p class="eyebrow">Read</p>
@@ -154,7 +166,7 @@ const FOOTER = `<footer class="foot site-foot">
         <input type="hidden" name="form-name" value="waitlist">
         <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <p class="eyebrow">Mile updates</p>
-        <p class="note">About once a month. The miles, the money, where it went.</p>
+        <p class="note">About once a month. The miles, the rides, where I went.</p>
         <label class="lab" for="email">Email</label>
         <input class="field" id="email" type="email" name="email" required autocomplete="email" inputmode="email">
         <button class="btn btn--bone btn--sm" type="submit">Send me mile updates</button>
@@ -165,7 +177,7 @@ const FOOTER = `<footer class="foot site-foot">
       <span class="eyebrow">If it&rsquo;s now</span>
       <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
-    <div class="foot-line"><span>Cycle for Change</span><span>Phoenix &middot; bike only</span></div>
+    <div class="foot-line"><span>Cycle for Change</span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
 <script src="/chrome.js" defer></script>`;
@@ -175,9 +187,9 @@ const FOOTER = `<footer class="foot site-foot">
 function pledge({ line, copy } = {}) {
   return `<section class="pledge" aria-labelledby="pledge-h">
   <p class="pledge-num" aria-hidden="true">10000</p>
-  <h2 class="pledge-line" id="pledge-h">${line || "I do the miles. You decide who they&rsquo;re for."}</h2>
-  <p class="pledge-copy">${copy || "In 2027 I ride 10,000 miles, all on the bike, every one of them for queer communities. You pledge a few cents a mile and pick which org it goes to. It starts January 1."}</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/pledge/">Pledge a mile</a><a class="btn btn--ghost" href="/pledge/#vote">See the orgs</a><a class="link" href="/">The live count</a></div>
+  <h2 class="pledge-line" id="pledge-h">${line || "I&rsquo;d like to say I ride for everyone else. I ride because it changed me."}</h2>
+  <p class="pledge-copy">${copy || "In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me."}</p>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/">Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
 </section>`;
 }
 const PLEDGE = pledge();

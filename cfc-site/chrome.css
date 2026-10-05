@@ -7,24 +7,25 @@
    Creosote house: Outfit + Space Mono. Volt = "live" only (the tally dot, hover). */
 
 :root{
-  --bone:#E8DFD0;
-  --bone-2:#E1D7C5;
-  --paper:#F6F1E7;
-  --dust:#C4B7A2;
-  --creosote:#5C6B4A;
-  --creosote-ink:#4A5639;   /* creosote a step darker: small text on bone clears 4.5:1 (Pass 5) */
-  --creosote-lift:#7E8F6A;  /* creosote a step lighter: the green FOR on asphalt clears 3:1 for large type (Pass 6) */
-  --dust-deep:#8A7C66;      /* dust a step darker: a hairline that has to be seen */
-  --asphalt:#2A2E28;
-  --tar:#1A1D18;
-  --volt:#C6FF00;
-  --mute:#5F5E56;
-  --line:rgba(42,46,40,.18);
-  --line-d:rgba(232,223,208,.2);
+  --bone:#E1DFDB;
+  --bone-2:#D7D5D0;
+  --paper:#EFEDEA;
+  --dust:#A9BDB8;
+  --creosote:#A84C58;
+  --creosote-ink:#8F3E4A;   /* creosote a step darker: small text on bone clears 4.5:1 (Pass 5) */
+  --creosote-lift:#D9B1AA;  /* creosote a step lighter: the green FOR on asphalt clears 3:1 for large type (Pass 6) */
+  --dust-deep:#6F8683;      /* dust a step darker: a hairline that has to be seen */
+  --asphalt:#1C1A22;
+  --tar:#141218;
+  --volt:#D9B1AA;
+  --mute:#4A4E55;
+  --line:rgba(28,26,34,.18);
+  --line-d:rgba(239,237,234,.2);
 
-  --display:"Outfit",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --display:"Overpass",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --pool:#2C4F55;
   --body:var(--display);
-  --mono:"Space Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --mono:"Overpass",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
 
   --gut:clamp(16px,4.2vw,56px);
   --gutter:var(--gut);
@@ -148,14 +149,14 @@ p{margin:0 0 1em}
 /* Pass 23d (Oct 3, 2026, from home.css): the wheel in its asphalt square — the drawing untouched; on
    asphalt the currentColor arc and hub go bone and the creosote arc lifts a step. On phones the square
    is the bar's corner: the full bar height, flush to the screen's left edge, the wheel 28px inside. */
-.brand .brand-sq{width:44px;height:44px;padding:9px;background:var(--asphalt);color:var(--bone)}
-.brand-sq path:nth-of-type(2){stroke:var(--creosote-lift)}
+.brand .brand-mark{display:block;height:22px;width:auto;color:var(--asphalt)}
+.brand-mark .lp-bar{fill:var(--creosote)}
 .brand-word{font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
 .brand-word i{font-style:normal;color:var(--creosote-ink)}
 @media (max-width:899px){
   .nav-in{padding-left:0}
   .brand{gap:16px}
-  .brand .brand-sq{width:var(--nav-h);height:var(--nav-h);padding:18px}
+  .brand .brand-mark{height:24px}
   .menu-btn{margin-right:-9px}
 }
 /* Pass 5: nav labels read at body size, same as the homepage */

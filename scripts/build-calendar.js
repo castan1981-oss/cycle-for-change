@@ -516,7 +516,7 @@ for (let m = 0; m <= 12; m++) {
 const otherRaces = ["Gravel", "MTB", "Hill climb", "Ultra / bikepacking"].filter((c) => byCat.get(c));
 const CAT_LEAD = {
   Race: otherRaces.length ? `<p class="cal-lead">Racing off the road? ${otherRaces.map((c) => `<a href="${URL}${CAT_SLUG[c]}/">${esc(CAT_DOOR[c])}</a>`).join(" &middot; ")}</p>` : "",
-  "Charity ride": `<p class="cal-lead">Ride one for a cause, or <a href="/pledge/">pledge a mile</a> on mine.</p>`,
+  "Charity ride": `<p class="cal-lead">Ride one for a cause. The money goes through the ride&rsquo;s own sign-up.</p>`,
 };
 // one page per type, by month
 for (const c of CATS) {
@@ -537,8 +537,8 @@ for (const c of CATS) {
 // the six Robert is riding
 if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert&rsquo;s rides", list: riding,
   h1: "The 2027 rides I&rsquo;m doing", title: "The 2027 rides I'm doing for Cycle for Change",
-  description: `The ${riding.length} organized rides Robert is riding in 2027 as part of the 10,000-mile pledge, with dates, distances and sign-up links.`,
-  lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one. <a href="/pledge/">Pledge a mile</a>.</p>`,
+  description: `The ${riding.length} organized rides Robert is riding in 2027 as part of the 10,000 miles, with dates, distances and sign-up links.`,
+  lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one.</p>`,
   after: `\n    ${PH.figure("robert-peace")}` });
 
 // the calendar's own page: two questions, then the deep pages and the full list

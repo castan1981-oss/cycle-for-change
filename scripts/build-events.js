@@ -502,7 +502,7 @@ ${BLOCKS.REPORT({ thing: "event", name: e.name, kind: "changed", compact: true, 
   <p class="back"><a href="/events/">All events</a> &middot; <a href="/events/state/${t.state_slug}/">Events in ${esc(t.state)}</a></p>
 `;
   const lds = [ld, crumbs.ld, pageLd].concat(faqLd ? [faqLd] : []).map(stripUndef);
-  const pledgeHtml = isRiding(e) ? CHROME.pledge({ line: "I&rsquo;m riding this one. Pledge a mile.", copy: `${esc(e.short_name || e.name)} is one of the six rides on my 2027 calendar. Every mile of it counts toward 10,000, and every one is for queer communities. You pledge a few cents a mile and pick which org it goes to.` }) : CHROME.PLEDGE;
+  const pledgeHtml = isRiding(e) ? CHROME.pledge({ line: "I&rsquo;m riding this one. Come with me.", copy: `${esc(e.short_name || e.name)} is one of the six rides on my 2027 calendar. Every mile of it counts toward the 10,000, and the money goes through the ride&rsquo;s own sign-up, never through me.` }) : CHROME.PLEDGE;
   return head({ title, description, url: e.url, ld: lds, ogType: "article" }) + body + foot(pledgeHtml);
 }
 
@@ -676,7 +676,7 @@ function moreFacts(t) {
 // build, once, on every page of the town that carries them. Nobody pays to be listed.
 function hasAffiliate(t) { return (t.travel_links || []).some((l) => l.kind === "affiliate"); }
 function affiliateNote(t) {
-  return hasAffiliate(t) ? `<p class="verified">Some booking links on these pages pay Cycle for Change a small commission at no cost to you. That money goes where the pledge money goes. It never decides who's listed.</p>` : "";
+  return hasAffiliate(t) ? `<p class="verified">Some booking links on these pages pay Cycle for Change a small commission at no cost to you. That money goes to the orgs I ride for. It never decides who's listed.</p>` : "";
 }
 const affiliateUrls = (t) => new Set((t.travel_links || []).filter((l) => l.kind === "affiliate").map((l) => l.url));
 const outLink = (t, url, text) => `<a href="${attr(url)}" rel="${affiliateUrls(t).has(url) ? "sponsored noopener" : "noopener"}">${text}</a>`;

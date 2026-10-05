@@ -1,5 +1,27 @@
 # Cycle for Change — project context for automated content
 
+> **PASS 26 — LANE PAINT, NO PLEDGE (Oct 5, 2026). Read this before anything below.**
+> The brand is "Lane Paint": the mark is CYCLE FOR drawn as road-stencil letters (SVG paths in
+> `scripts/chrome.js`, never a font) with a rose bar as the blank. Colors are "After Hours" — the old
+> token NAMES were kept so every page keeps working, but they now mean: `--bone` concrete #E1DFDB,
+> `--paper` plaster #EFEDEA, `--dust` patina #A9BDB8, `--creosote` smeared rose #A84C58 (the accent),
+> `--creosote-lift` / `--volt` powder rose #D9B1AA (rose on dark grounds), `--asphalt` bruise #1C1A22,
+> `--tar` #141218, `--mute` gunmetal #4A4E55, `--pool` drained pool #2C4F55 (the footer). Type is
+> Overpass only (`--display` and `--mono` both point at it). The wheel logo is retired. "Creosote
+> house" notes below describe the previous skin; where they talk about green, read rose.
+> **The pledge is gone.** Nobody pledges, votes or pays on the site: `/pledge/` 301s home, the nav
+> button is "Ride with me" (`/events/2027/riding/`), the closing block on every page is the sign
+> (`CHROME.pledge()` still exists by name; its copy and buttons are the no-pledge version). The
+> 10,000 is Robert's own commitment; the money goes through the orgs' own rides (Cycling 4
+> one·n·ten Nov 7 2026, Center Ride Out Apr 2027, Cycle to Zero May 2027). "Pledge" is never a verb
+> for visitors. The homepage is generated: `node scripts/build-home.js` (the sign, the numbers, the
+> last rides, why, the orgs `#orgs`, ride with me `#ride`, how `#how`, read). Its styles are the
+> Pass 26 block at the foot of `/home.css`; the sign's typing lives at the foot of `/home.js`.
+> Logo rules: stroke 16 (18 only under 120px), worn only on the homepage sign / end cards / big
+> print, rose bar always rose (smeared on light, powder on dark), the stencil only ever spells
+> CYCLE FOR, everything else goes on a rose plate in Overpass 900. Frozen until Dec 1, 2027.
+> Brand storyboard and the panel review: https://claude.ai/artifact/RoGAUpeAAzk4ktA6zeDqEm
+
 > **HOMEPAGE: the redesign is live since 2026-09-27; Pass 6 (Sept 29) brightened it; Pass 23 (Oct 3) is the hero; Pass 24 (Oct 4) gave it two films; Pass 25 (Oct 4) put his photos on the inner pages.**
 > `cfc-site/index.html` + `cfc-site/home.css` + `cfc-site/home.js` + `cfc-site/img/` (the
 > house-graded photos; the hero is a still on phones and a film on desktop — Pass 24). The Sept 18 coming-soon-based homepage and its files
