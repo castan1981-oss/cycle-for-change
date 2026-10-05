@@ -1,6 +1,6 @@
 # Cycle for Change — project context for automated content
 
-> **HOMEPAGE: the redesign is live since 2026-09-27; Pass 6 (Sept 29) brightened it; Pass 23 (Oct 3) is the hero; Pass 24 (Oct 4) gave it two films.**
+> **HOMEPAGE: the redesign is live since 2026-09-27; Pass 6 (Sept 29) brightened it; Pass 23 (Oct 3) is the hero; Pass 24 (Oct 4) gave it two films; Pass 25 (Oct 4) put his photos on the inner pages.**
 > `cfc-site/index.html` + `cfc-site/home.css` + `cfc-site/home.js` + `cfc-site/img/` (the
 > house-graded photos; the hero is a still on phones and a film on desktop — Pass 24). The Sept 18 coming-soon-based homepage and its files
 > (`coming-soon.css/js`, `main.js`, `next/home.css/js`, the feed video and audio) are
@@ -40,6 +40,31 @@ touches rides, towns or the board knows the plan and doesn't contradict it.
     start time), photo/video location stripped on upload, Garmin rides arrive as private drafts.
 - Open: apply to the Garmin Connect Developer Program under Cycle for Change LLC when he's ready.
   The live mile counter reads Strava today — moving it to Garmin settles §2.3 for it too.
+
+## Pass 25 — Robert's photos through the site (Oct 4, 2026)
+Robert: "What about having a whole bunch of photos edited throughout the site that I have taken." 34 of
+his photos from the stockpile now run on ~40 pages that had none (guides, field notes, rides hubs, town
+guides, the calendar, /pledge/, /tonight/, /resources/, the 404).
+- **One registry:** `scripts/photos.js` — every photo's src, size, alt text, place · month caption and
+  crop, plus `figure(key, { cls, line, caption })`. The three generators require it (`photoBand()` in
+  build-rides.js is now a wrapper; `HUB_PHOTO`, `STATE_PHOTO`, `FACET_PHOTO` there; `TOWN_PHOTO` in
+  build-events.js; /events/2027/ home + riding in build-calendar.js). The hand pages carry the figure
+  baked in: after editing photos.js run `node scripts/apply-photos.js` to rewrite them.
+- **Files:** originals in `cfc-site/photos/<key>.jpg`, graded copies in `cfc-site/img/ph/` via
+  `python3 tools/grade.py --all --only <key>` (portraits 1440 tall, landscapes 1600 wide, q76; sunrise
+  and sunset shots take the Pass 11 `sun` settings, the /tonight/ dusk a light `dusk` grade). `--only`
+  keeps the run from re-encoding photos already live.
+- **The figure** (`.ph` in /chrome.css; the same block in /home.css for /pledge/): dissolves top and foot
+  into whatever it sits on (bone, or tar on /tonight/), a 2.5% side feather on desktop only; phones run it
+  edge to edge in the photo's own shape (`ph--p` 4:5, `ph--l` 4:3). Desktop: portraits 4:5 at 460px,
+  landscapes 3:2; `ph--wide` = 2:1 band, `ph--frame` = 3:2 the column's width. Mono caption under it.
+  `.gr-photo` is gone from rides.css. The guides hub / Phoenix field notes header photo
+  (`.fn-pillar-photo`) now fades in at its top on phones too.
+- **Rules:** only Robert is recognisable — riders seen from behind or far off are fine, oncoming riders
+  get cropped out (pv-golden-climb was cut above them); nothing from `07-group-rides` without people's
+  OK. The caption always says where it was really taken (the Hill Country guide shows a Boise road and
+  says so). Never the first thing on a phone on a rides hub. Rides output isn't committed — Netlify
+  rebuilds it on deploy; events, towns and the calendar are.
 
 ## Pass 24 — two films on the homepage (Oct 4, 2026)
 Robert: "go through my video and photos and make a stockpile to grab from for design web pages. We

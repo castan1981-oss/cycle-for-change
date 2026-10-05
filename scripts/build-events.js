@@ -30,6 +30,10 @@ const path = require("path");
 const CHROME = require("./chrome.js"); // shared header, footer, fonts
 const BLOCKS = require("./blocks.js"); // how-it's-built tiles + the ride-report form (Pass 3)
 const TOWNS = require("./towns.js");   // the town layer: the strip every event, calendar row and ride page carries (Sept 30, 2026)
+const PH = require("./photos.js");     // Pass 25: Robert's photos (alt text, place, the figure)
+// Pass 25 (Oct 4, 2026): a town guide carries Robert's photo when he has one from the town or right by it
+// (the caption says where it was really taken: Del Mar's is Encinitas, a few miles up the coast).
+const TOWN_PHOTO = { "seattle-wa": "seattle-path", "del-mar-ca": "encinitas-beach" };
 
 const ROOT = path.resolve(__dirname, "..");
 const DATA = path.join(ROOT, "data");
@@ -610,7 +614,7 @@ function townPage(t) {
       ["Nearest airport", t.nearest_airport && t.nearest_airport.name ? `${esc(t.nearest_airport.name)}${t.nearest_airport.code ? ` (${esc(t.nearest_airport.code)})` : ""}${t.nearest_airport.miles ? `, ${t.nearest_airport.miles} mi` : ""}` : null],
       ["Major airport", t.major_airport && t.major_airport.name && (!t.nearest_airport || t.major_airport.code !== t.nearest_airport.code) ? `${esc(t.major_airport.name)}${t.major_airport.code ? ` (${esc(t.major_airport.code)})` : ""}${t.major_airport.miles ? `, ${t.major_airport.miles} mi` : ""}` : null],
       ["Group rides", hub ? `<a href="${hub.path}">${hub.rides} weekly ride${hub.rides === 1 ? "" : "s"} listed</a>` : null],
-    ])}
+    ])}${TOWN_PHOTO[t.id] ? `\n    ${PH.figure(TOWN_PHOTO[t.id])}` : ""}
 
     ${days.length ? `<section class="local-rides" aria-labelledby="local-h">
       <h2 id="local-h">Group rides around ${esc(t.name)}</h2>
@@ -827,6 +831,7 @@ function bringYourBikePage(t) {
     <p class="eyebrow"><a href="${t.url}">${esc(t.name)}, ${esc(t.state)}</a> &middot; bring the bike</p>
     <h1>${esc(r.h(t))}</h1>
     <p class="lede">${rich(b.summary)}</p>
+    ${PH.figure("bike-rack")}
 
     ${fly.airports && fly.airports.length ? `<section><h2>Flying to ${esc(t.name)} with a bike</h2>
       ${facts(fly.airports.map((a) => [`${a.name}${a.code ? ` (${a.code})` : ""}`, `${a.miles != null ? `${esc(a.miles)} mi` : ""}${a.note ? `${a.miles != null ? " &middot; " : ""}${rich(a.note)}` : ""}`]))}
@@ -880,6 +885,7 @@ function eventsIndex() {
     <section><h2>Coming up</h2>
       ${upcoming.length ? `<ul class="tiles-p tiles-p--events">${upcoming.map((e) => eventCard(e)).join("")}</ul>` : `<p>Dates for the next editions are still being announced. Browse by state below.</p>`}
     </section>
+    ${PH.figure("pv-morning-road", { cls: "ph--wide" })}
 
     <section class="by-state"><h2>Cycling events by state</h2>
       ${stateList.map((s) => `<h3 id="${s.slug}"><a href="/events/state/${s.slug}/">${esc(s.name)}</a> <span class="count">${s.events.length}</span></h3>
@@ -954,6 +960,7 @@ function townsIndex() {
         ${guides.map(townTile).join("\n        ")}
       </div>
     </section>` : ""}
+    ${PH.figure("airstream-rig", { cls: "ph--wide" })}
     <section class="by-state" aria-labelledby="by-state"><h2 id="by-state">Every town, by state</h2>
       <div class="tiles-p tiles-p--towns">
         ${sorted.map(townTile).join("\n        ")}
