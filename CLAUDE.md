@@ -21,6 +21,9 @@
 > print, rose bar always rose (smeared on light, powder on dark), the stencil only ever spells
 > CYCLE FOR, everything else goes on a rose plate in Overpass 900. Frozen until Dec 1, 2027.
 > Brand storyboard and the panel review: https://claude.ai/artifact/RoGAUpeAAzk4ktA6zeDqEm
+> **Oct 5, after it went live:** two sessions checked it (PR #98, then Pass 26b below — the one that
+> stands). The hand pages' body copy that still said pledge / board / vote was rewritten with it;
+> the journal entry (Robert's own words, "your pledge") was left alone.
 
 > **HOMEPAGE: the redesign is live since 2026-09-27; Pass 6 (Sept 29) brightened it; Pass 23 (Oct 3) is the hero; Pass 24 (Oct 4) gave it two films; Pass 25 (Oct 4) put his photos on the inner pages.**
 > `cfc-site/index.html` + `cfc-site/home.css` + `cfc-site/home.js` + `cfc-site/img/` (the
