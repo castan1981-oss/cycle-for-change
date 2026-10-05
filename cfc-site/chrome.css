@@ -6,15 +6,12 @@
    /rides/rides.css, /styles.css, /tonight/tonight.css) comes after it.
    Creosote house: Outfit + Space Mono. Volt = "live" only (the tally dot, hover). */
 
-/* Overpass from Google Fonts carries a zero-width middle dot (U+00B7), so "one·n·ten" read as
-   "onenten" everywhere. For that one character the browser is told to use a local face instead;
-   a later @font-face with a matching unicode-range wins the glyph, nothing else changes.
-   One face per weight the site loads: Chrome prefers an exact weight over a range when it picks. */
-@font-face{font-family:"Overpass";font-weight:400;src:local("Helvetica Neue"),local("Helvetica"),local("Arial"),local("Roboto"),local("Segoe UI");unicode-range:U+00B7}
-@font-face{font-family:"Overpass";font-weight:600;src:local("Helvetica Neue"),local("Helvetica"),local("Arial"),local("Roboto"),local("Segoe UI");unicode-range:U+00B7}
-@font-face{font-family:"Overpass";font-weight:700;src:local("Helvetica Neue"),local("Helvetica"),local("Arial"),local("Roboto"),local("Segoe UI");unicode-range:U+00B7}
-@font-face{font-family:"Overpass";font-weight:800;src:local("Helvetica Neue"),local("Helvetica"),local("Arial"),local("Roboto"),local("Segoe UI");unicode-range:U+00B7}
-@font-face{font-family:"Overpass";font-weight:900;src:local("Helvetica Neue"),local("Helvetica"),local("Arial"),local("Roboto"),local("Segoe UI");unicode-range:U+00B7}
+/* Overpass, self-hosted (fonts/, OFL). Google's build marks the middot (U+00B7) as a combining glyph, which
+   swallowed "one·n·ten" and pulled every " · " onto the next word; the latin file here has it reclassified. */
+@font-face{font-family:"Overpass";font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/overpass-latin.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Overpass";font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/overpass-latin-ext.woff2) format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 :root{
   --bone:#E1DFDB;
   --bone-2:#D7D5D0;
@@ -163,7 +160,7 @@ p{margin:0 0 1em}
 .brand-word{font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
 .brand-word i{font-style:normal;color:var(--creosote-ink)}
 @media (max-width:899px){
-  .nav-in{padding-left:0}
+  /* Lane Paint (Oct 5, 2026): the mark keeps the gutter — the flush-left corner stamp went with the wheel */
   .brand{gap:16px}
   .brand .brand-mark{height:24px}
   .menu-btn{margin-right:-9px}
@@ -276,7 +273,9 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 }
 
 /* —— dark pages (/tonight/): same chrome, flipped —— */
-.theme-dark .nav{background:rgba(26,29,24,.94);color:var(--bone);border-bottom-color:var(--line-d)}
+.theme-dark .nav{background:rgba(20,18,24,.94);color:var(--bone);border-bottom-color:var(--line-d)}
+.theme-dark .brand .brand-mark{color:var(--bone)}              /* the stencil reads on tar; the bar goes powder rose (the logo rule for dark grounds) */
+.theme-dark .brand-mark .lp-bar{fill:var(--creosote-lift)}
 .theme-dark .nav .btn--sm{background:var(--bone);color:var(--asphalt);border-color:var(--bone)}
 .theme-dark .tally-line{color:var(--dust);border-bottom-color:var(--line-d)}
 .theme-dark .tally-num{color:var(--bone)}

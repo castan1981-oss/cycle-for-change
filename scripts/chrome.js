@@ -36,9 +36,10 @@ const CAL_COUNT = count("data/calendar-2027.json", (d) => Array.isArray(d.events
 const esc = (s) => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const attr = (s) => esc(s).replace(/"/g, "&quot;");
 
-const FONTS = `<link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800;900&display=swap" rel="stylesheet">`;
+/* Overpass is self-hosted (cfc-site/fonts/, OFL): Google's build classes the middot (·) as a combining mark,
+   so "one·n·ten" rendered as "onenten" and every " · " separator hugged the next word. The latin file has
+   that one glyph reclassified (Oct 5, 2026); the @font-face rules live in /chrome.css and /home.css. */
+const FONTS = `<link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>`;
 
 /* Everything a page's <head> needs besides its own title/description/canonical.
    `styles` = the page's stylesheets after /chrome.css. `ld` = JSON-LD objects. */
