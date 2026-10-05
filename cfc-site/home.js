@@ -30,21 +30,21 @@
   var fmt = function (n) { return Math.round(n).toLocaleString("en-US"); };
 
   /* What the page shows until the feed answers: the function's own output on
-     Oct 1 2026. x = how far through the ride list (0–100), y = cumulative miles. */
+     Oct 5 2026. x = how far through the ride list (0–100), y = cumulative miles. */
   var feed = {
-    miles: 3359.5,
-    rides: 92,
-    updated: "2026-10-01T16:47:04.691Z",
+    miles: 3572.8,
+    rides: 97,
+    updated: "2026-10-05T22:03:10.205Z",
     profileUrl: "https://www.strava.com/athletes/22899089",
     recent: [
-      { discipline: "bike", title: "Somo Sunday", miles: 56, date: "2026-09-27T13:47:01Z" },
-      { discipline: "bike", title: "Morning Ride", miles: 60.2, date: "2026-09-26T12:55:17Z" },
-      { discipline: "bike", title: "Morning Ride", miles: 32.7, date: "2026-09-25T13:18:16Z" },
-      { discipline: "bike", title: "Morning Ride", miles: 36.5, date: "2026-09-23T14:09:32Z" },
-      { discipline: "bike", title: "Morning Ride", miles: 41.6, date: "2026-09-21T14:04:09Z" },
-      { discipline: "bike", title: "Morning Ride", miles: 29, date: "2026-09-20T14:35:05Z" }
+      { discipline: "bike", title: "Morning Ride", miles: 35.7, date: "2026-10-05T13:51:27Z" },
+      { discipline: "bike", title: "Morning Ride", miles: 63.1, date: "2026-10-04T13:34:26Z" },
+      { discipline: "bike", title: "Morning Ride", miles: 42.3, date: "2026-10-03T13:47:06Z" },
+      { discipline: "bike", title: "Morning Ride", miles: 36.6, date: "2026-10-02T13:12:43Z" },
+      { discipline: "bike", title: "Morning Ride", miles: 35.6, date: "2026-09-30T14:12:28Z" },
+      { discipline: "bike", title: "Somo Sunday", miles: 56, date: "2026-09-27T13:47:01Z" }
     ],
-    chart: [[0, 35.2], [9, 278.6], [18, 564.5], [26, 864.8], [35, 1258.9], [44, 1528.7], [53, 1765.8], [62, 2050.5], [70, 2329], [79, 2618.6], [88, 2925.7], [97, 3210.6], [100, 3359.5]]
+    chart: [[0, 35.2], [9, 312], [19, 636.7], [28, 1010.2], [38, 1400.8], [47, 1676.4], [56, 1979.3], [66, 2293.4], [75, 2618.6], [84, 2961.5], [94, 3303.5], [100, 3572.8]]
   };
 
   /* ————————————————————————————————————————————————
@@ -95,6 +95,7 @@
   function paintFeed() {
     rollTo(feed.miles);
     if (feed.rides && $("rideCount")) $("rideCount").textContent = fmt(feed.rides);
+    if (feed.rides && $("roadRides")) $("roadRides").textContent = fmt(feed.rides);
 
     var daysIn = Math.max(1, Math.floor((Date.parse(feed.updated) - SEASON_START) / DAY) + 1);
     if (isFinite(daysIn) && $("pace")) $("pace").textContent = (feed.miles / daysIn).toFixed(1);
@@ -558,10 +559,9 @@
      the ballot: one vote per browser, same keys the live homepage uses
      ———————————————————————————————————————————————— */
 
-  /* The ballot ran on any #orgs. Pass 26 gave the homepage's orgs section that id and no vote
-     buttons, so the votes function was repainting it with the old pick cards. Only a page that
-     actually carries [data-vote] buttons is a ballot. */
-  var orgsEl = document.querySelector("#orgs [data-vote]") ? $("orgs") : null, voteMsg = $("voteMsg");
+  /* Pass 26 (Oct 5, 2026): nobody votes. #orgs is the built "The orgs I ride for" block now, so the ballot
+     only runs where a page still carries a [data-ballot] container — none does. */
+  var orgsEl = document.querySelector("[data-ballot]"), voteMsg = $("voteMsg");
   var votedOrg = null, fingerprint = null;
   if (orgsEl) {
   try {

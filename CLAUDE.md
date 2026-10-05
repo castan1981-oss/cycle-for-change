@@ -41,6 +41,27 @@
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
 
+## Pass 26b — the Lane Paint check (Oct 5, 2026)
+Robert: "Check the new layout." Every page screenshotted at 390 and 1280 after Pass 26 went live. Fixed:
+- **Overpass is self-hosted** (`cfc-site/fonts/`, OFL). Google's build classes the middot (U+00B7) as a
+  combining mark, so "one·n·ten" rendered as "onenten" and every " · " separator hugged the next word, on
+  every page. `overpass-latin.woff2` has that one glyph reclassified (fontTools: GDEF class 3 → 1, dropped
+  from the mark-to-base lookup); `overpass-latin-ext.woff2` is Google's file as served. The `@font-face`
+  rules live at the top of `/chrome.css` and `/home.css` (same unicode-ranges Google uses); `CHROME.FONTS`
+  is now one preload. Never load Overpass from Google again.
+- The header keeps its gutter on phones (`.nav-in{padding-left:0}` was the wheel stamp's corner rule).
+- Dark pages (`/tonight/`): the stencil is bone, the bar powder rose, the nav the new tar.
+- The homepage's `#orgs` was being wiped by the old ballot code in home.js (it keyed on `$("orgs")`) and
+  re-rendered as the vote list with "Pick this one" buttons — the heading and gutter went with it. The
+  ballot now looks for `[data-ballot]`, which nothing carries. `#roadRides` is painted with `#rideCount`.
+- `build-home.js` reads the ride and country counts from live.json/rides.json (it said 1,407 at 1,422).
+- `apply-chrome.py` refreshes an existing closing block (`section.pledge`, and `.fn-why` on resources)
+  on every run — eighteen hand pages had kept the Sept 28 "Pledge a mile" copy. 404's link too.
+- "pledger / pledge page" copy in the Phoenix and SF town guides; ABC Monday (Munroe Falls) runs Apr–Oct
+  (its calendar lists Oct 5), so "next ride" is next Monday, not April.
+Left for Robert: the road reel's poster frame has a car far down the road (the no-cars rule); the guide
+"Pledge-per-mile fundraising, explained" keeps its name (it's about charity rides in general).
+
 ## Rider pages — CONCEPT ONLY, do not build yet (Oct 4, 2026)
 Robert, coming down South Mountain: riders post a ride (ride file, photos, a clip, a few words) in two
 minutes, it lands on a rider profile, bots stay out, and Google trusts it. Rides first; hotels and the
