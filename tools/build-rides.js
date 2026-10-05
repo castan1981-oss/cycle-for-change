@@ -1334,7 +1334,7 @@ function findPage(rides) {
 ${fold("Group ride or organized ride?", `
         <p>A group ride is free and happens every week from the same spot: a shop, a caf&eacute;, a park. No sign-up. You show up and ride. We list ${rides.length} of them in ${nCountries} countries, and every one says when it was last checked at its source.</p>
         <p>An organized ride has a date, a sign-up and usually a fee or a fundraising minimum: charity rides, gran fondos, centuries, gravel races, multi-day tours. The <a href="/events/2027/">2027 calendar</a> has ${CAL.length} of them across the US, and says which dates the organizer has published.</p>
-        <p>I&rsquo;m riding ${riding} of those in 2027 as part of the 10,000 miles. Come ride one, or <a href="/pledge/">pledge a mile</a>.</p>`)}
+        <p>I&rsquo;m riding ${riding} of those in 2027 as part of the 10,000 miles. Come ride one.</p>`)}
 ${FOOTLINE}
 ${CTA}
   </div>

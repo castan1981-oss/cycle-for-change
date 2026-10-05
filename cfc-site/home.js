@@ -794,3 +794,19 @@
   });
   }
 })();
+
+/* ————————————————————————————————————————————————
+   Pass 26 (Oct 5, 2026): the sign. The plate under CYCLE FOR rotates through Robert's own answer
+   until a visitor types; typing changes the sign; nothing is sent anywhere.
+   ———————————————————————————————————————————————— */
+(function () {
+  var plate = document.getElementById("signPlate"), input = document.getElementById("who"), reset = document.getElementById("signReset");
+  if (!plate || !input) return;
+  var mine = ["me", "one·n·ten", "me", "change"], i = 0, typed = "";
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function paint() { plate.textContent = typed ? typed : mine[i % mine.length]; if (reset) reset.hidden = !typed; }
+  input.addEventListener("input", function () { typed = input.value.trim().slice(0, 28); paint(); });
+  if (reset) reset.addEventListener("click", function () { typed = ""; input.value = ""; paint(); input.focus(); });
+  if (!reduce) setInterval(function () { if (!typed) { i++; paint(); } }, 2400);
+  paint();
+})();

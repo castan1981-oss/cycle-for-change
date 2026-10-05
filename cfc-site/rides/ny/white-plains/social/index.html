@@ -25,7 +25,7 @@
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/events/events.css">
   <link rel="stylesheet" href="/rides/rides.css">
@@ -36,22 +36,34 @@
 <header class="nav site-head" id="nav">
   <div class="wrap nav-in">
     <a class="brand" href="/" aria-label="Cycle for Change home">
-      <svg class="brand-sq" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-        <path d="M98.45 71.03 A40 40 0 0 1 50.32 98.81" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
-        <path d="M31.23 87.79 A40 40 0 0 1 31.23 32.21" fill="none" stroke="#5C6B4A" stroke-width="12" stroke-linecap="round"/>
-        <path d="M50.32 21.19 A40 40 0 0 1 98.45 48.97" fill="none" stroke="#C4B7A2" stroke-width="12" stroke-linecap="round"/>
-        <circle cx="60" cy="60" r="6" fill="currentColor"/>
+      <svg class="brand-mark" viewBox="0 0 760 150" aria-hidden="true" focusable="false">
+        <defs>
+          <path id="lpC" d="M52 34 V24 Q52 8 36 8 H33 M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 142 H36 Q52 142 52 126 V116"/>
+          <path id="lpY" d="M11 4 L30 68 L49 4 M30 68 V150"/>
+          <path id="lpL" d="M8 0 V150 M22 142 H54"/>
+          <path id="lpE" d="M8 0 V150 M22 8 H54 M22 75 H47 M22 142 H54"/>
+          <path id="lpF" d="M8 0 V150 M22 8 H54 M22 75 H47"/>
+          <path id="lpO" d="M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 8 H36 Q52 8 52 24 V126 Q52 142 36 142 H33"/>
+          <path id="lpR" d="M8 0 V150 M22 8 H36 Q52 8 52 24 V58 Q52 74 36 74 H22 M33 90 L50 150"/>
+          <clipPath id="lpRow"><rect x="-20" y="0" width="900" height="150"/></clipPath>
+        </defs>
+        <g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">
+          <use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/>
+          <use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/>
+        </g>
+        <rect class="lp-bar" x="652" y="114" width="98" height="36" fill="#A84C58"/>
       </svg>
-      <span class="brand-word">Cycle <i>For</i> Change</span>
+      <span class="sr">Cycle for Change</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
-      <a href="/guides/">Guides</a>
+      <a href="/towns/">Towns</a>
+      <a href="/field-notes/">Field notes</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/pledge/">Pledge</a>
+      <a class="btn btn--sm" href="/events/2027/riding/">Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -62,7 +74,7 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/pledge/">Pledge a mile <span>Free</span></a></li>
+    <li><a href="/events/2027/riding/">Ride with me <span>The 2027 rides</span></a></li>
     <li><a href="/find-a-ride/">Find a ride <span>1422</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>640</span></a></li>
     <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
@@ -75,7 +87,7 @@
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1 &middot; the 10,000 start Jan 1</span></p>
+<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
 
 <main id="main" class="gr-dir gr-sub-page">
   <header class="gr-head wrap gr-head--badge">
@@ -101,7 +113,7 @@
   <a class="gr-card-name" href="/rides/white-plains-ny-westchester-county-parks-bicycle-sundays/">Bicycle Sundays on the Bronx River Parkway<span class="visually-hidden">, Open streets · Social · Road</span></a>
   
   <span class="gr-card-when">Some Sundays, 10:00 am<i class="gr-dot" aria-hidden="true"> · </i>White Plains · Bronx River Parkway</span>
-  <span class="gr-card-meta"><span class="gr-card-pc">Easy pace</span><span class="gr-card-lg">13 mi</span><span class="gr-card-checked">Checked Oct 1</span></span>
+  <span class="gr-card-meta"><span class="gr-card-pc">Easy pace</span><span class="gr-card-lg">13 mi</span><span class="gr-card-checked gr-card-checked--look">Checked Oct 1 · Confirm first</span></span>
   <button type="button" class="gr-save" data-save="white-plains-ny-westchester-county-parks-bicycle-sundays" aria-pressed="false" aria-label="Save Bicycle Sundays on the Bronx River Parkway"><span aria-hidden="true">☆</span></button>
 </div>
 <div class="gr-card" data-slug="hastings-on-hudson-ny-westchester-social-cyclists-rides"
@@ -179,7 +191,7 @@
   <a class="gr-card-name" href="/rides/new-york-ny-critical-mass-last-friday/">NYC Critical Mass<span class="visually-hidden">, Critical Mass · Social</span></a>
   
   <span class="gr-card-when">Last Friday of the month, 7:00 pm<i class="gr-dot" aria-hidden="true"> · </i>New York · Union Square, Manhattan</span>
-  <span class="gr-card-meta"><em class="gr-wait gr-wait--waits">Waits for you</em><span class="gr-card-pc">Easy pace</span><span class="gr-card-checked">Checked Sep 15</span></span>
+  <span class="gr-card-meta"><em class="gr-wait gr-wait--waits">Waits for you</em><span class="gr-card-pc">Easy pace</span><span class="gr-card-checked gr-card-checked--look">Checked Sep 15 · Confirm first</span></span>
   <button type="button" class="gr-save" data-save="new-york-ny-critical-mass-last-friday" aria-pressed="false" aria-label="Save NYC Critical Mass"><span aria-hidden="true">☆</span></button>
 </div>
 <div class="gr-card" data-slug="brooklyn-ny-east-brooklyn-bike-club-wednesday-ride"
@@ -207,9 +219,9 @@
 
 <section class="pledge" aria-labelledby="pledge-h">
   <p class="pledge-num" aria-hidden="true">10000</p>
-  <h2 class="pledge-line" id="pledge-h">I do the miles. You decide who they&rsquo;re for.</h2>
-  <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, every one of them for queer communities. You pledge a few cents a mile and pick which org it goes to. It starts January 1.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/pledge/">Pledge a mile</a><a class="btn btn--ghost" href="/pledge/#vote">See the orgs</a><a class="link" href="/">The live count</a></div>
+  <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
+  <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/">Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
 </section>
 
     </div>
@@ -227,8 +239,8 @@
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
-        <a href="/pledge/">Pledge</a>
-        <a href="/pledge/#questions">Where the money goes</a>
+        <a href="/events/2027/riding/">Ride with me</a>
+        <a href="/#orgs">The orgs I ride for</a>
       </div>
       <div class="foot-col">
         <p class="eyebrow">Read</p>
@@ -246,7 +258,7 @@
         <input type="hidden" name="form-name" value="waitlist">
         <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <p class="eyebrow">Mile updates</p>
-        <p class="note">About once a month. The miles, the money, where it went.</p>
+        <p class="note">About once a month. The miles, the rides, where I went.</p>
         <label class="lab" for="email">Email</label>
         <input class="field" id="email" type="email" name="email" required autocomplete="email" inputmode="email">
         <button class="btn btn--bone btn--sm" type="submit">Send me mile updates</button>
@@ -257,7 +269,7 @@
       <span class="eyebrow">If it&rsquo;s now</span>
       <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
-    <div class="foot-line"><span>Cycle for Change</span><span>Phoenix &middot; bike only</span></div>
+    <div class="foot-line"><span>Cycle for Change</span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
 <script src="/chrome.js" defer></script>

@@ -30,8 +30,8 @@ SECTION_STYLES = {  # stylesheets after /chrome.css, by top-level folder
     "journal": ["/styles.css"], "tonight": ["/tonight/tonight.css"], "": ["/styles.css"],
 }
 ANCHORS = {'href="/#tally"': 'href="/"', 'href="/#rides"': 'href="/#ride"',
-           'href="/#disciplines"': 'href="/pledge/"', 'href="/#pledge"': 'href="/pledge/"',
-           'href="/#board"': 'href="/pledge/"', 'href="/#vote"': 'href="/pledge/#vote"', 'href="#top"': 'href="/"'}
+           'href="/#disciplines"': 'href="/"', 'href="/#pledge"': 'href="/"',
+           'href="/#board"': 'href="/"', 'href="/#vote"': 'href="/#orgs"', 'href="#top"': 'href="/"', 'href="/pledge/"': 'href="/#orgs"', 'href="/pledge/#questions"': 'href="/#how"', 'href="/pledge/#vote"': 'href="/#orgs"'}
 CLASSES = [(r'class="btn btn-y"', 'class="btn btn--bone"'), (r'class="btn btn-solid"', 'class="btn btn--ink"'),
            (r'class="btn btn-dark"', 'class="btn btn--ghost"'), (r'class="btn-link"', 'class="link"'),
            (r'class="btn"', 'class="btn btn--ghost"')]
@@ -96,7 +96,7 @@ def chrome(s: str, page) -> str:
 
 WHY = '''<div class="fn-why">
     <p class="eyebrow">Why this page is here</p>
-    <p>Riding is part of what kept me steady before I had the words for anything. Cycle for Change raises money for the kinds of orgs on this page: in 2027 I ride 10,000 miles and the people who pledge pick which org it goes to. That&rsquo;s the connection, and it&rsquo;s the only ask here. <a href="/pledge/">About the pledge</a></p>
+    <p>Riding is part of what kept me steady before I had the words for anything. Cycle for Change rides for the kinds of orgs on this page: in 2027 I ride 10,000 miles, and the money goes through those orgs&rsquo; own rides. That&rsquo;s the connection, and it&rsquo;s the only ask here. <a href="/#orgs">The orgs I ride for</a></p>
   </div>'''
 
 
