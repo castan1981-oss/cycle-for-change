@@ -5917,5 +5917,96 @@
    "status_note",
    "status_since"
   ]
+ },
+ {
+  "date": "2026-10-04",
+  "slug": "scottsdale-az-scottsdale-cycling-saturday-ride",
+  "outcome": "changed",
+  "summary": "schedule; time_local 5:30 am → 6:00 am; start_hhmm 05:30 → 06:00; description; refresh — Scottsdale Cycling's Strava event page (the same recurring event that showed Oct 3 at 5:30 am) now lists the next Saturday Ride // Fuss Buss for Sat Oct 10, 2026 at 6:00 am from 8977 N Scottsdale Rd, rated Intermediate / Rolling; the club's Tuesday and Thursday events still show 5:30 am (fetched Oct 4, 2026).",
+  "fields": [
+   "verified_on",
+   "last_seen",
+   "evidence",
+   "schedule",
+   "time_local",
+   "start_hhmm",
+   "description",
+   "refresh"
+  ]
+ },
+ {
+  "date": "2026-10-04",
+  "slug": "fountain-hills-az-mcdowell-mountain-cycles-sunday-funday-gravel",
+  "outcome": "changed",
+  "summary": "schedule; time_local 6:00 am → 6:30 am; start_hhmm 06:00 → 06:30 — McDowell Mountain Cycles' MMC Life page (modified Oct 2, 2026) lists \"Sunday Funday Gravel Ride – 6:30 AM – MMC October 4th & 25th\", about 40 miles and three and a half hours, one group, no-drop, and its October calendar shows both dates at 6:30a (fetched Oct 4, 2026).",
+  "fields": [
+   "verified_on",
+   "last_seen",
+   "evidence",
+   "schedule",
+   "time_local",
+   "start_hhmm"
+  ]
+ },
+ {
+  "date": "2026-10-04",
+  "slug": "tucson-az-the-shootout",
+  "outcome": "changed",
+  "summary": "lat; lng; geo_precision; neighborhood; start_times; schedule; refresh — Fair Wheel Bikes' group rides page still gives the Shootout's start table (6:30 am from the first Saturday of September, 7:00 am from the second Saturday of October, 7:30 am from the second Saturday of November, 7:00 am from the first Saturday of March, 6:30 am from the first Saturday of April, 6:00 am from the third Saturday…",
+  "fields": [
+   "verified_on",
+   "last_seen",
+   "evidence",
+   "lat",
+   "lng",
+   "neighborhood",
+   "start_times",
+   "schedule",
+   "refresh"
+  ]
+ },
+ {
+  "date": "2026-10-04",
+  "slug": "tucson-az-bicas-wtf-ride",
+  "outcome": "changed",
+  "summary": "schedule; time_local — → 6:30 pm; start_hhmm 19:00 → 19:00; distance_miles; distance_km; pace; drop_policy; start_location; lat; lng; geo_precision; description; visitor_notes; links; refresh — BICAS's WTF Events page says the group rides run every last Monday of the month, no-drop, around 5–10 miles, gather 6:30 pm and head out at 7 pm right after the Monday 3–7 pm workshop at 2001 N 7th Ave; th…",
+  "fields": [
+   "verified_on",
+   "last_seen",
+   "evidence",
+   "sources",
+   "schedule",
+   "time_local",
+   "distance_miles",
+   "distance_km",
+   "pace",
+   "start_location",
+   "lat",
+   "lng",
+   "description",
+   "visitor_notes",
+   "links",
+   "refresh"
+  ]
+ },
+ {
+  "date": "2026-10-04",
+  "slug": "san-francisco-ca-different-spokes-jersey-ride",
+  "outcome": "changed",
+  "summary": "schedule; start_location; lat; lng; geo_precision; description; visitor_notes; links; refresh — Different Spokes SF's calendar listing for the Oct 10, 2026 Jersey Rides says the Castro group meets 8:45 am and rolls 9:00 am at Jane Warner Plaza, Castro and Market (RideWithGPS route 53843226), and the Sausalito group meets 9:45 am and rolls 10:00 am at Mike's Bikes; the club's standing Jersey Ride …",
+  "fields": [
+   "verified_on",
+   "last_seen",
+   "evidence",
+   "sources",
+   "schedule",
+   "start_location",
+   "lat",
+   "lng",
+   "description",
+   "visitor_notes",
+   "links",
+   "refresh"
+  ]
  }
 ]

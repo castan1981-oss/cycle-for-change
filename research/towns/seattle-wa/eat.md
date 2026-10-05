@@ -1,34 +1,46 @@
-# seattle-wa · eat-scout · 2026-10-03
+# seattle-wa · eat-scout · 2026-10-04
 
-This was a refresh: re-check the six U District restaurants in
-`data/towns/seattle-wa.json`, then add picks across the city. **Neither part
-could be done properly.** WebSearch was spent before this run started (the
-one call came back "200 of 200"). WebFetch opened only pages earlier agents
-had reached this session. Every restaurant site we tried, and the U District
-directory, was refused: the permission request timed out. Nothing was
-fetched any other way.
-
-Where that leaves the six:
-
-- **Keep four, unchanged:** Portage Bay Cafe, Big Time Brewery, Shultzy's and
-  Cedars. Their own sites confirmed them on Sept 15, 2026 (the file's
-  `verified` date and `sources`), 18 days ago. We couldn't re-open them, so
-  nothing in their entries is changed or added. The verifier re-opens each one
-  before this ships.
-- **Drop two until they have a real page:** Thai Tom and Aladdin Gyro-cery.
-  Their `url` is the U District Partnership's food-and-drink category page,
-  not the restaurant or its listing. The rules want an address from the
-  business's own page or its Google listing, and this run could reach neither.
-
-No new restaurant could be confirmed. The Roanoke Inn lead from routes.md and
-the names on club pages are under Couldn't confirm. So the Findings are the four kept entries, all
-in the U District. That's the floor of the 4–8 target, and every other zone is
-empty. Web calls are counted once, for both sections, in coffee.md.
+A refresh with search back on. The Oct 3 run kept four U District places with
+no hours and added nothing. This run adds four confirmed places across the
+city — Mercer Island, West Seattle, Capitol Hill, Ballard — and keeps the four
+U District entries. **The four kept places still could not be re-opened**:
+their sites were refused again (the permission request timed out), so their
+entries are unchanged, still without hours, for the verifier to re-fetch.
+Thai Tom and Aladdin Gyro-cery stay out until they have a page of their own.
+Web calls are counted once, for both sections, in coffee.md.
 
 ## Findings
 
 ```json
 [
+  {
+    "name": "Marination Ma Kai",
+    "url": "https://marinationmobile.com/locations",
+    "address": "1660 Harbor Avenue SW, Seattle, WA 98126",
+    "cuisine": "Hawaiian-Korean",
+    "note": "After the ride, West Seattle: at Seacrest Park, the start of the West Seattle loop and the foot of the water taxi. Tacos, rice bowls and shave ice on a waterfront patio, indoor and outdoor, per its site. 11 to 8 Monday to Thursday, 11 to 9 Friday, from 9 on Saturday (to 9) and Sunday (to 8). Bike parking wasn't on the page."
+  },
+  {
+    "name": "Roanoke Inn",
+    "url": "https://www.tripadvisor.com/Restaurant_Review-g58605-d513230-Reviews-Roanoke_Inn-Mercer_Island_Washington.html",
+    "address": "1825 72nd Ave SE, Mercer Island, WA 98040",
+    "cuisine": "Pub",
+    "note": "On the way, Mercer Island: the tavern Cascade's Mercer Island loop tells riders to stop at, a few blocks off the I-90 trail at the island's north end. Porch, patio and a back yard. No website; the hours we found are a listing's (11 to midnight Tuesday to Saturday, 11 to 10 Sunday, 3 to 10 Monday) with its last review in July 2025, so call (206) 232-0800 before you count on it."
+  },
+  {
+    "name": "Dick's Drive-In (Broadway)",
+    "url": "https://ddir.com/locations/broadway",
+    "address": "115 Broadway East, Seattle, WA 98102",
+    "cuisine": "Burgers",
+    "note": "Late, Capitol Hill: 10:30 a.m. to 2 a.m. every day, per its site, across from the Capitol Hill light rail station. A walk-up window since 1955; stand in line, eat outside or take it away. Cheap. Not the night-before plate, but open when the day ran long and nothing else is."
+  },
+  {
+    "name": "Un Bien (Seaview)",
+    "url": "https://www.unbienseattle.com/",
+    "address": "6226 Seaview Ave NW, Seattle, WA 98107",
+    "cuisine": "Caribbean",
+    "note": "The one you'd go back for, and the night-before sandwich on the Ballard side: a pink shack just off Shilshole Bay, on the road to Golden Gardens. Roast pork sandwiches and plates. 11 to 9 Wednesday to Saturday, 11 to 8 Sunday, closed Monday and Tuesday, per its site. Pick-up orders by phone, (206) 420-7545. The Ballard sibling at 7302.5 15th Ave NW keeps the same hours. Seating and bike parking weren't on the page."
+  },
   { "name": "Portage Bay Cafe", "url": "https://www.portagebaycafe.com/", "address": "4130 Roosevelt Way NE, Seattle, WA 98105", "cuisine": "Breakfast and brunch", "note": "Local, organic breakfast; opens 7:30 a.m. weekdays, 8 a.m. weekends." },
   { "name": "Big Time Brewery & Alehouse", "url": "https://www.bigtimebrewery.com/", "address": "4133 University Way NE, Seattle, WA 98105", "cuisine": "Brewpub", "note": "Seattle's original brewpub, since 1988; family-friendly." },
   { "name": "Shultzy's Bar & Grill", "url": "https://www.shultzys.com/", "address": "4114 University Way NE, Seattle, WA 98105", "cuisine": "Sausages and grill", "note": "House-made sausage since 1988; a plate of carbs and protein the night before." },
@@ -38,58 +50,53 @@ empty. Web calls are counted once, for both sections, in coffee.md.
 
 ## Why these
 
-All four are kept from the Sept 15 check and unchanged here. They're the STP-start places: on Roosevelt Way, University Way and Brooklyn Ave in the U District, near the hotels in the file.
+- **Marination Ma Kai** fills "after the ride" on the water side. Its own locations page gives the address, hours and "indoor and outdoor, waterfront patio seating"; the TripAdvisor listing (reviews to July 2026) says "right off the water taxi" and puts Seacrest Park at 0 miles. Seacrest Pier (1660 Harbor Ave SW) is the West Seattle loop start in routes.md, the same address. Weekend doors at 9 make it brunch after an early loop.
+- **Roanoke Inn** is the on-the-way pick the brief and routes.md asked for. Cascade's Mercer Island ambassador route (read last run): "consider stopping at the Roanoke Tavern for a bite to eat and some wonderful craft brews." A 2019 Seattle Refined piece confirms there's no website, the phone, and "porch, patio or backyard." The hours are TripAdvisor's and more than six months old, so the note says call. The verifier can ring it. If it reads more tavern than kitchen it's also **@culture-scout**'s.
+- **Dick's Drive-In** is the late slot, and the only confirmed 2 a.m. door this run. Address and hours from its own locations page. It's fast food; the note says so.
+- **Un Bien** is the Ballard/Fremont pick, from its own site: three locations, hours by day, phones. Seaview is the one for a rider — "just off Shilshole Bay" (Seattle Met, April 2016, the opening). Its Wednesday-to-Sunday week matters: a Monday or Tuesday night-before needs the U District.
+- **The four kept U District places** (Portage Bay Cafe, Big Time, Shultzy's, Cedars) are the STP-start dinners and breakfast, confirmed Sept 15, 2026 from their own sites. Refused again this run; nothing changed. Hours are the fix the verifier owes them.
 
-- **Portage Bay Cafe**: breakfast. The hours on file (7:30 weekdays, 8 weekends) are after the STP's 5 a.m. roll-out (the town file's `riding`), so it's breakfast the day before or the day after, not the morning of. When its site opens again, the note should say that and add closing time and any outdoor tables.
-- **Big Time Brewery & Alehouse**: the brewpub dinner, all ages per the note on file. Its hours and kitchen hours aren't in the file. When the site opens again, add them so the note says which slot it fills (night before, or late).
-- **Shultzy's Bar & Grill**: the night-before plate, in the note's own words. Its hours and whether it admits under-21s aren't in the file, and both matter for a group.
-- **Cedars Restaurant**: curries and kabobs, the rice-plate dinner. Hours aren't in the file.
-
-The eat-scout record wants hours in plain words in every note. None of the four has full hours on file, and this run couldn't add them. That's the first fix for the verifier's re-fetch.
+Slots: night before = Un Bien, Shultzy's, Cedars · after the ride = Marination, Portage Bay · late = Dick's · on the way = Roanoke Inn · the one = Un Bien. Zones: U District, Capitol Hill, Ballard, West Seattle, Mercer Island. Empty: downtown, the Eastside hills, Bainbridge after the ferry.
 
 ## Rejected
 
-- **Thai Tom** (4543 University Way NE) and **Aladdin Gyro-cery** (4139 University Way NE): dropped from the Findings, for now. Both entries cite https://udistrictseattle.com/business-category/food-drink, a neighborhood directory's category page, as their `url`. That isn't the restaurant's page or its Google listing. The page was refused this run, so nothing confirms either is open. "Cash-friendly" and "open late" on file have no source of their own. Put them back when the verifier finds each one's own page or Google listing with hours.
-- **Chipotle**, where Cascade's {ride:bellevue-wa-cascade-eastside-tours-evening-ride|Eastside Tours Evening Ride} finishes on the first ride of each month (`rides.json`). It's a chain, and no page says which location.
-- **Sammamish Safeway** (Eastside Hills, mile 26.2): a grocery stop.
-- **The Chilly Hilly chili** at the Bainbridge Island Senior Community Center ($10 ahead, $15 at the door, 2026 page): event day only.
-- **RailSpur Studios' pizza lunch** after Sound Break's Oct 7 ride: a one-off.
-- **The Beer Junction** (4511 California Ave SW, West Seattle), where {ride:seattle-wa-beer-junction-bike-club|Beer Junction Bike Club} starts and ends. It's a bar, so it goes to @culture-scout. Same for **The Lumberyard** and **Beer Star** in White Center, the stops on Outspoken's West Seattle Wednesday rides (community.md).
+- **Paseo** (4225 Fremont Ave N, Fremont), Un Bien's cousin. Only a TripAdvisor listing with a June 2025 last review; its own site wasn't in reach. Un Bien covers the same sandwich from its own page, so Paseo waits.
+- **Thai Tom** and **Aladdin Gyro-cery** — still no page of their own; the U District directory page was refused again. Out until the verifier finds each one's own page or Google listing with hours.
+- **Dick's Wallingford** (111 NE 45th St, same hours) — closer to the STP start than Broadway, but one Dick's is enough; the editor can swap it if the U District needs a late door.
+- **Un Bien Queen Anne** (319 W Galer St, 4–9 weekdays) — no reason a rider goes there over the Seaview shack.
+- **Marination's downtown and Columbia City rooms** — the Seacrest one is the rider's.
+- **Chipotle** (Eastside Tours finish), **Sammamish Safeway**, the **Chilly Hilly chili**, **RailSpur's pizza lunch** — chain, grocery, event-day, one-off (unchanged from last run).
+- **The Beer Junction** (4511 California Ave SW), where {ride:seattle-wa-beer-junction-bike-club|Beer Junction Bike Club} starts and ends; **The Lumberyard** and **Beer Star** in White Center — bars, **@culture-scout**'s.
 
 ## Couldn't confirm
 
-- **The re-check of the four kept places.** We couldn't open any of these this run: https://www.portagebaycafe.com/ · https://www.bigtimebrewery.com/ · https://www.shultzys.com/ · https://www.cedarsseattle.com/. For each one we still need today's hours, whether it's still open, outdoor tables and bike parking.
-- **Thai Tom and Aladdin Gyro-cery**: own page or Google listing, hours, open status (above).
-- **Roanoke Inn & Tavern, Mercer Island**: the lead from routes.md. Cascade's Mercer Island ambassador route says: "consider stopping at the Roanoke Tavern for a bite to eat and some wonderful craft brews." It's the on-the-way pick for the Mercer Island loop. That page gives no address or hours, and we couldn't reach the Inn's own page. Where to look: its own site or Google listing. It may also be @culture-scout's if it's more tavern than kitchen.
-- **O Sole Mio Pizza, Vashon**: Cascade Bicycle Studio's Vashon Island Ferry Loop recommends it. We couldn't open its own page.
-- **Bainbridge Island after the ferry ride.** Cascade's midsummer ride page says "multiple food options in downtown Bainbridge Island at the end of the ride" and names none. Where to look: Winslow restaurants near the ferry, with search.
-- **The North Lake Washington loop.** Seattle Bike Blog (July 2023) stopped for pizza and beer near Chainline Station in Feriton Spur Park, Kirkland, on the Eastrail version. The pizza place isn't named. The loop is "peppered with parks, restaurants, breweries and wineries", but the article names none of them.
-- **Cascade's TREATS ride stops** (July 14, 2026 page): "the Stillwater store at about mile 8" and "a lunch/coffee break" in Carnation. Neither is named further. These are on-the-way leads for the Snoqualmie Valley, the area of routes.md's Carnation gravel loop.
-- **The North Shore Senior Center pie stop**, Bothell (in coffee.md).
-- **Slots and zones with nothing:** late (past 10), the night before outside the U District, and after the ride anywhere a listed ride ends. Capitol Hill, Fremont and Ballard, downtown, West Seattle (the Seacrest Pier start of the West Seattle loop) and the Eastside are all empty. A run with search should start there.
+- **The four kept U District places**: refused again — https://www.portagebaycafe.com/ · https://www.bigtimebrewery.com/ · https://www.shultzys.com/ · https://www.cedarsseattle.com/. Still needed: today's hours, kitchen hours, minors (Big Time, Shultzy's), outdoor tables, bike parking.
+- **Roanoke Inn's hours** from a source newer than July 2025. No website. Phone (206) 232-0800.
+- **Paseo Fremont's own hours** (above).
+- **Bainbridge after the ferry.** Cascade's midsummer page says "multiple food options in downtown Bainbridge Island" and names none; **O Sole Mio Pizza, Vashon** from Cascade Bicycle Studio's loop page is still unfetched. Winslow restaurants near the ferry want a search.
+- **The Eastside hills**: nothing confirmed near Zoo Hill, Issaquah or the Snoqualmie Valley. Cascade's TREATS stops ("the Stillwater store at about mile 8", a Carnation lunch) are still unnamed.
+- **The North Lake Washington loop** stops Seattle Bike Blog (July 2023) describes near Chainline Station in Kirkland — unnamed.
+- **A downtown night-before** near the Colman Dock hotels — not searched; the budget went to the picks above.
 
 ## Sources
 
-Fetched and read:
+Fetched and read this run:
 
-- https://ridewithgps.com/ambassador_routes/511-south-bellevue-mercer-island-loop
-- https://www.cascadebicyclestudio.com/local-loops-seattle
-- https://cascade.org/rides-events/81550
-- https://cascade.org/rides-events/chilly-hilly-2026
-- https://cascade.org/rides-events/tuesday-ride-eclectic-athletic-travelers-treats/89978
-- https://cascade.org/rides-events/eastside-hills/90363
-- https://cascade.org/rides-events/82167
-- https://cascade.org/rides-events/83393
-- https://cascade.org/rides-events/89717
-- https://www.seattlebikeblog.com/2023/07/10/biking-the-new-north-lake-washington-trail-loop/
-- https://everydayrides.com/calendar
-- https://everydayrides.com/events/6ab4629bb5b4051957d3f0af-co-working-lunch-ride-with-beija-summer-at-sound-break
+- https://marinationmobile.com/locations
+- https://www.tripadvisor.com/Restaurant_Review-g60878-d3613066-Reviews-Marination_Ma_Kai-Seattle_Washington.html
+- https://www.tripadvisor.com/Restaurant_Review-g58605-d513230-Reviews-Roanoke_Inn-Mercer_Island_Washington.html
+- https://seattlerefined.com/eat-drink/the-roanoke-inn-where-friends-meet-friends-for-more-than-a-century
+- https://ddir.com/locations/broadway
+- https://ddir.com/locations
+- https://www.tripadvisor.com/Restaurant_Review-g60878-d484837-Reviews-Dick_s_Drive_In_Broadway_E-Seattle_Washington.html
+- https://www.unbienseattle.com/
+- https://www.seattlemet.com/eat-and-drink/2016/04/un-bien-s-second-location-is-open-in-shilshole
+- https://www.tripadvisor.com/Restaurant_Review-g60878-d432138-Reviews-Paseo-Seattle_Washington.html
 
-Sources for the four kept entries (the Sept 15 check, in the town file's
-`sources`, not re-opened this run): https://www.portagebaycafe.com/ ·
-https://www.bigtimebrewery.com/ · https://www.shultzys.com/ ·
-https://www.cedarsseattle.com/
+Read last run (Oct 3), relied on here: https://ridewithgps.com/ambassador_routes/511-south-bellevue-mercer-island-loop · https://www.cascadebicyclestudio.com/local-loops-seattle · https://cascade.org/rides-events/chilly-hilly-2026 · https://cascade.org/rides-events/tuesday-ride-eclectic-athletic-travelers-treats/89978
 
-Tried, refused (permission request timed out): https://www.portagebaycafe.com/ · https://www.bigtimebrewery.com/ · https://www.shultzys.com/ · https://www.cedarsseattle.com/ · https://udistrictseattle.com/business-category/food-drink
+Sources for the four kept entries (the Sept 15 check, in the town file's `sources`, not re-opened): https://www.portagebaycafe.com/ · https://www.bigtimebrewery.com/ · https://www.shultzys.com/ · https://www.cedarsseattle.com/
 
-WebSearch: none available (the session's budget was spent before this run; see coffee.md).
+Tried, refused (permission request timed out): the four above. Blocked by robots.txt: https://www.yelp.com/biz/roanoke-inn-mercer-island · https://www.yelp.com/biz/marination-ma-kai-seattle
+
+WebSearch: 12 of 12 for both sections, listed in coffee.md.

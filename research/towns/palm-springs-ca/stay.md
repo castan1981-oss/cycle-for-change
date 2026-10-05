@@ -1,20 +1,80 @@
-# palm-springs-ca · stay-scout · 2026-10-03
+# palm-springs-ca · stay-scout · 2026-10-04
 
-No hotel made the list this run. The Tour de Palm Springs site has a lodging
-page with 19 hotels, grouped by distance from the start. Every one of those
-hotel pages was refused: the permission request for each URL timed out. So
-no property page was read, and nothing about an address, what the place is,
-a bike policy or a rate can go in. WebSearch was spent before this run began
-(the session had used 200 of 200), so there was no second way to find leads.
-The geocoder page for the town centre was refused too, so nothing here is
-measured from 33.8303, -116.5453. What did load: the organizer's pages. They
-give one official link worth carrying (the Tour's hotel list) and the start
-block, which hand-offs below pass on.
+Six places, all read on their own pages this run (the Oct 3 run read none).
+Five sit inside the Tour de Palm Springs organizer's distance bands from the
+start on S. Palm Canyon; the sixth is the splurge farther out. Not one hotel
+page in Palm Springs says a word about a guest's own bike. Two (Ace, Parker)
+lend house bikes, which tells you they have somewhere to put bikes, but that
+is not a policy, so every `bike_policy` below is "No stated policy — ask when
+you book." No rate loaded on any page (the booking engines are scripts), so
+`price_hint` is null everywhere; the notes carry the fees that did show
+(parking, resort fee). Nothing on any hotel page or the Tour's pages says
+hotels fill or set minimum stays on Tour weekend, so the guide shouldn't say
+it. Distances are the organizer's bands plus the block count from the brief's
+centre (Palm Canyon at Tahquitz); no geocoder page was read, so nothing is
+measured in miles. Palm Mountain Resort (the mid-price pick a block from the
+start) was refused again and is in Couldn't confirm. Five WebSearch calls,
+fourteen fetches.
 
 ## Findings
 
 ```json
-[]
+[
+  {
+    "name": "Hilton Palm Springs",
+    "url": "https://www.hilton.com/en/hotels/psppshf-hilton-palm-springs/",
+    "booking_url": null,
+    "address": "400 East Tahquitz Canyon Way, Palm Springs, CA 92262",
+    "note": "Downtown, on Tahquitz Canyon Way four blocks east of Palm Canyon; the Tour de Palm Springs lists it under a mile from the start and names it a lodging sponsor. A full-size hotel: outdoor pool, restaurant, poolside bar, meeting rooms, by its own page. Self-parking $30 a day; check-in 4, out noon; pets $75 (Oct 2026). Nothing about bikes on the page.",
+    "price_hint": null,
+    "bike_policy": "No stated policy — ask when you book"
+  },
+  {
+    "name": "Hyatt Palm Springs",
+    "url": "https://www.hyatt.com/hyatt-hotels/en-US/palms-hyatt-palm-springs",
+    "booking_url": null,
+    "address": "285 North Palm Canyon Drive, Palm Springs, CA 92262",
+    "note": "On Palm Canyon Drive, three blocks north of Tahquitz and under a mile from the Tour start by the organizer's list. All suites: 197 of them, each with a separate parlor and a refrigerator, by its page; outdoor pool. Daily resort fee $20 plus tax (Oct 2026). Nothing about bikes on the page.",
+    "price_hint": null,
+    "bike_policy": "No stated policy — ask when you book"
+  },
+  {
+    "name": "Hotel Zoso",
+    "url": "https://www.hotelzosopalmsprings.com/",
+    "booking_url": null,
+    "address": "150 S Indian Canyon Dr, Palm Springs, CA 92262",
+    "note": "A block east of Palm Canyon on Indian Canyon, a block and a half south of Tahquitz; under a mile from the Tour start by the organizer's list. Its own page sells it as a pool-party hotel downtown (\"party the weekend away\"), with a spa and an airport shuttle folded into a resort fee it doesn't price. Nothing about bikes on the page.",
+    "price_hint": null,
+    "bike_policy": "No stated policy — ask when you book"
+  },
+  {
+    "name": "Caliente Tropics",
+    "url": "http://calientetropics.com/",
+    "booking_url": null,
+    "address": "411 E Palm Canyon Dr, Palm Springs, CA 92264",
+    "note": "On E Palm Canyon (Highway 111) where it bends east, under two miles from the Tour start by the organizer's list. A 1964 tiki-styled motor hotel, updated, with a pool; its own page calls it \"your top choice for Palm Springs hotel rooms at affordable prices.\" The cheap, clean pick on the Tour's list by its own words, but no rate loaded (Oct 2026). Nothing about bikes on the page. Phone (760) 327-1391.",
+    "price_hint": null,
+    "bike_policy": "No stated policy — ask when you book"
+  },
+  {
+    "name": "Ace Hotel & Swim Club",
+    "url": "https://acehotel.com/palm-springs/",
+    "booking_url": null,
+    "address": "701 E Palm Canyon Dr, Palm Springs, CA 92264",
+    "note": "On E Palm Canyon south of downtown, under three miles from the Tour start by the organizer's list. A converted motel with two pools, a diner and a bar. House bikes: \"We've got bikes. They're free, first come, first served,\" per its survival guide; the FAQ folds bike rentals into the $45-a-night resort fee. Parking $10 a day; check-in after 4, out 11; pets $100 a stay, under 25 lbs (Oct 2026). Nothing about bringing your own bike.",
+    "price_hint": null,
+    "bike_policy": "No stated policy — ask when you book"
+  },
+  {
+    "name": "Parker Palm Springs",
+    "url": "https://www.parkerpalmsprings.com/",
+    "booking_url": null,
+    "address": "4200 E. Palm Canyon Drive, Palm Springs, CA 92264",
+    "note": "The splurge: 144 rooms on 13 acres at the Cathedral City end of E Palm Canyon, past the Tour's three-mile band (not measured). Its own cycling page lends \"complimentary bikes\" (beach cruisers with helmets and locks) and hands out the city's cycling map at the concierge desk. Not on the Tour's hotel list. No rate loaded (Oct 2026). Nothing about bringing your own bike.",
+    "price_hint": null,
+    "bike_policy": "No stated policy — ask when you book"
+  }
+]
 ```
 
 travel_links
@@ -25,112 +85,72 @@ travel_links
     "label": "Tour de Palm Springs hotel list",
     "url": "https://tourdepalmsprings.com/event-info/lodging/",
     "kind": "official",
-    "note": "The Tour's own list of 19 Palm Springs hotels, grouped by distance from the start and finish: under 1, 2, 3 and 5 miles. The page says each hotel has special rates and incentives, and the Tour's charities get a donation for every room booked. Book with the hotel directly. Read Oct 3, 2026."
+    "note": "The Tour's own list of 19 Palm Springs hotels, grouped by distance from the start and finish: under 1, 2, 3 and 5 miles. The page says \"Each hotel has special rates and incentives\" and \"For every booked room, the Tour de Palm Springs receives a donation towards our charities.\" Book with the hotel directly. Read Oct 4, 2026."
   }
 ]
 ```
 
 ## Why these
 
-- **No hotels.** None could be read on its own page, and a hotel goes in only
-  after its own page is read. An empty list is better than a guess about
-  where the bike sleeps.
-- **Tour de Palm Springs hotel list (travel link)** — the organizer's own
-  page, and the closest thing to "where riders stay" this run could read. It
-  sorts the hotels by distance from the start on S. Palm Canyon Dr, which
-  sits on the brief's centre intersection. It says nothing about bikes.
+- **Hilton Palm Springs** — the Tour's lodging sponsor, under a mile from the start, a big plain hotel with a pool. Read first, as asked. The only one of the six with a parking price on the page.
+- **Hyatt Palm Springs** — on Palm Canyon itself, three blocks from the start block. Every room is a suite with a parlor: room for a bike case on the floor.
+- **Hotel Zoso** — a block off Palm Canyon. It is a party hotel by its own words; it goes in so a rider who wants quiet knows to pick something else, and a rider who doesn't has the closest bed.
+- **Caliente Tropics** — the cheap pick on the Tour's list, in its own words ("affordable prices"), a 1964 motor hotel with parking at the door. Under two miles from the start.
+- **Ace Hotel & Swim Club** — the mid pick with house bikes to borrow, two pools and a bar, under three miles. The $45 resort fee and $10 parking are on the page.
+- **Parker Palm Springs** — the splurge, with free beach cruisers and the city's bike map at the desk. Farther out; not on the Tour's list.
 
 ## Rejected
 
-Nothing was rejected on merit. No property page loaded, so there was nothing
-to weigh.
-
-- **GranFondoGuide's Tour page** — read. No lodging. It gives the start as
-  "North Palm Canyon," which the organizer's own pages contradict (see
-  Hand-offs). Not a source for this section.
-- **Big Wheel Bikes CV home page** — read. Nothing about hotels, where
-  visiting riders stay, delivery of rentals to a hotel, or receiving a
-  shipped bike.
-- **Tour de Palm Springs parking page** — read. A map image only; no text
-  about bike parking or hotels.
-- **Tour de Palm Springs FAQ, registration, expo and sponsors pages** — read.
-  No host hotel, no room block, no minimum stay, no bike valet or bike check.
-  Nothing on any organizer page says hotels fill or set minimum stays on Tour
-  weekend, so the guide shouldn't say it either.
+- **Drift Palm Springs** (drifthotels.co) — suites with kitchens, "complimentary bikes" first come, first served, downtown. Left out because its amenities page carries no address, and no other page of its own was read. One fetch of its contact page and it can go in as a second mid pick.
+- **Parker's "Cycling in Palm Springs" page as a route source** — it names Big Wheel Tours and the city's map, nothing a rider can follow. Passed to @route-scout.
+- **Tripadvisor "hotels with bike rentals", bikabout's lodging list, naturehotels.org** — third-party lists. bikabout names Ace, Hotel California and Desert Riviera for "complimentary adult bikes," but its links go to Tripadvisor, not the hotels. Leads only; Ace was read on its own page and is in.
+- **Yelp, Expedia, trip.com, guestreservations.com, the *.hotelspalmspringsweb.com clones** — booking and review sites. Not property pages. The zoso clone's "rates from $127" is not the hotel's number.
+- **Facebook page for Caliente Tropics** — the fetcher can't read Facebook, and the chamber listing plus the hotel's own site covered it.
 
 ## Couldn't confirm
 
-**The 19 hotels on the Tour's lodging page.** For each one the property page
-is missing: address, what the place is, bike policy, rate, open status. The
-organizer's distance band is the only fact in hand. The 13 marked "refused"
-were tried on Oct 3, 2026 and the permission request timed out; the other 6
-were not tried after 13 refusals in a row. Where to look: the same URLs, in a
-session where the fetch is approved (or with the URLs pasted into a message),
-then each site's amenities, FAQ and policies pages for "bike."
-
-Under 1 mile from the start/finish (the organizer's band):
-- **Hilton Palm Springs** — https://www.hilton.com/en/hotels/psppshf-hilton-palm-springs/ — refused. Also a Tour lodging sponsor (sponsors page). Read this one first.
-- **Hyatt Palm Springs** — https://www.hyatt.com/hyatt-hotels/en-US/palms-hyatt-palm-springs — refused.
-- **Rowan** — https://www.rowanpalmsprings.com/ — refused.
-- **Hotel Zoso** — https://www.hotelzosopalmsprings.com/ — refused.
-- **Palm Mountain Resort** — https://www.palmmountainresort.com/ — refused.
-- **Holiday House** — https://holidayhouseps.com/ — refused.
-- **Alcazar** — https://alcazarpalmsprings.com/ — not tried.
-- **The Dunes** — https://www.dunesps.com/ — not tried.
-- **Colony Palms** — https://colonypalmshotel.com/ — refused.
-- **Ingleside Estate** — https://inglesideestate.com/ — not tried.
-- **Avalon Hotel** — https://www.avalon-hotel.com/palm-springs/ — refused.
-
-Under 2 miles:
-- **Riviera Palm Springs** — https://rivierapalmsprings.com/ — refused.
-- **Caliente Tropics** — https://calientetropics.com/ — refused. The likeliest cheap pick by name; unread, so no price level.
-
-Under 3 miles:
-- **The Saguaro** — https://thesaguaro.com/palm-springs/ — refused.
-- **Twin Palms Resort** — https://twinpalmsresort.com/ — not tried.
-- **Sparrows Lodge** — https://sparrowslodge.com/ — not tried.
-- **Ace Hotel** — https://acehotel.com/ (the organizer links the chain home page, not the Palm Springs page) — refused.
-- **L'Horizon** — https://lhorizonpalmsprings.com/ — not tried.
-
-Under 5 miles:
-- **Azure Palm Hot Springs** — https://azurepalmhotsprings.com/ — not tried. The only one outside the 3-mile ring.
-
-Also:
-- **Palm Springs Resorts members** — https://www.ps-resorts.com/members, linked from the lodging page as the "PS Resorts Partner" and named a lodging sponsor. Refused. The brief's line about small, adults-only and clothing-optional resorts applies here and to several names above. None was read, so none is described. The next run reads each page, says what the place is in its own plain words, and lists only what suits a rider with a bike.
-- **Courtyard by Marriott** — a Tour lodging sponsor. The sponsors page doesn't say which Courtyard. Where to look: Marriott's Palm Springs listings, then the Tour (info@tourdepalmsprings.com).
-- **Zones 2 and 3 (CV Link, Palm Desert, La Quinta, the Highway 74 climb).** No leads at all; the organizer's list is downtown Palm Springs only, and with no WebSearch there was no way to find more. Where to look: hotels in Palm Desert near Highway 74 and Highway 111; Big Wheel Bikes' Palm Desert shop (74200 Highway 111) may know where visiting riders stay.
-- **A hostel or cyclist-run guesthouse.** Not searched (no WebSearch).
-- **Short-term rentals.** None looked at; none listed.
-- **The town centre.** The brief asks for a geocoder page to confirm 33.8303, -116.5453. The Nominatim query (https://nominatim.openstreetmap.org/search?q=S+Palm+Canyon+Dr+and+Tahquitz+Canyon+Way,+Palm+Springs,+CA&format=json) was refused, so no distance here is measured; the only distances are the organizer's bands.
+- **Palm Mountain Resort & Spa**, 155 S Belardo Rd (address from the search result title, not its page), https://www.palmmountainresort.com/ — refused again (permission request timed out, Oct 4). On the Tour's under-a-mile list and a block west of the start block. The likeliest mid-price pick nearest the start. Missing: what it is, bike line, rate, parking. Where to look: its own site in a session where the fetch is approved.
+- **Rowan, Holiday House, Alcazar, The Dunes, Colony Palms, Ingleside Estate, Avalon** (under a mile), **Riviera** (under two), **The Saguaro, Twin Palms, Sparrows Lodge, L'Horizon** (under three), **Azure Palm Hot Springs** (under five) — on the Tour's list, not fetched this run (the search budget went to the six above). The brief's line on small, adults-only and clothing-optional resorts applies to several of these; none was read, so none is described. Twin Palms redirect-looped on Oct 3.
+- **Hotel California** and **Desert Riviera Hotel** — bikabout says both lend adult bikes. Neither site surfaced in a search, so neither was fetched. Missing everything.
+- **Drift Palm Springs** — address, rate, parking. See Rejected.
+- **Rates.** Not one of the six pages printed a nightly rate. The editor can read the booking engines by hand or leave `price_hint` null; the notes say which fees did load.
+- **Tour weekend minimum stays.** No hotel page and no Tour page says anything. Leave it out of the guide.
+- **Courtyard by Marriott** — a Tour lodging sponsor per the sponsors page (Oct 3 run); the page doesn't say which Courtyard. Not searched this run.
+- **Zones 2 and 3** (Palm Desert, La Quinta, the Highway 74 climb) — no hotel looked at. Every pick is Palm Springs proper, which is where the Tour starts and where the brief's winter rider lands.
+- **The town centre** (33.8303, -116.5453) — no geocoder page read; distances here are the organizer's bands and block counts.
+- **Ace's and Parker's `url`** point at the property landing pages (acehotel.com/palm-springs/, parkerpalmsprings.com). The pages read were Ace's FAQ and survival guide and Parker's cycling page, all under those sites; the landing pages themselves weren't fetched. The verifier's fetch will settle it.
 
 ## Hand-offs
 
-- **@logistics-scout / @town-editor:** the start is "South Palm Canyon between Baristo & Tahquitz" (FAQ), and check-in is at "South Palm Canyon and Baristo (approximately 216 S. Palm Canyon)" (registration page). That block touches the brief's centre (Palm Canyon at Tahquitz). GranFondoGuide says "North Palm Canyon"; the organizer's pages win. Tentative start times from the FAQ: 101 mi 6:30 a.m., 88 mi 7:00, 77 mi 7:30, 64 mi 8:00, 33 mi 9:00, 16 mi 9:30. The expo runs on S. Palm Canyon between Tahquitz and Baristo, Fri Feb 5, 2027, noon to 8 p.m., and Sat Feb 6, 6 a.m. to 5 p.m. The FAQ says parking time limits are waived on ride day; the parking page is a map image with no text.
-- **@shop-scout:** the Tour's bike-shop sponsor is Tri-A-Bike (sponsors page). Big Wheel Bikes CV lists two shops: 74200 Highway 111, Palm Desert, CA 92260, and 1590 South Palm Canyon Drive, Palm Springs, CA 92264.
+- **@route-scout:** Parker's page says the concierge hands out "a cycling map created by the City of Palm Springs" with suggested routes; the city's own bike-map page is worth a fetch. Ace's survival guide calls Indian Canyons "about a 20-minute ride" from 701 E Palm Canyon.
+- **@logistics-scout:** Hotel Zoso's resort fee includes an airport shuttle (amount not on the page). Hilton self-parking $30/day, Ace $10/day (Oct 2026).
+- **@culture-scout:** Hyatt's page names VillageFest as a nearby draw (it's on the culture list). Ace's Swim Club is open to hotel guests 7 a.m. to 2 a.m.; the main pool is 18+.
 - **@community-scout:** nothing here runs rides.
 
 ## Sources
 
-- https://tourdepalmsprings.com/event-info/
 - https://tourdepalmsprings.com/event-info/lodging/
-- https://tourdepalmsprings.com/faq/
-- https://tourdepalmsprings.com/parking/
-- https://tourdepalmsprings.com/registration/
-- https://tourdepalmsprings.com/event-info/vendor-expo/
-- https://tourdepalmsprings.com/event-info/sponsorship-our-sponsors/
-- https://www.granfondoguide.com/Events/Index/2618/tour-de-palm-springs
-- https://www.bigwheelbikescv.com/
+- https://www.hilton.com/en/hotels/psppshf-hilton-palm-springs/
+- https://www.hyatt.com/hyatt-hotels/en-US/palms-hyatt-palm-springs
+- https://www.hotelzosopalmsprings.com/
+- http://calientetropics.com/
+- https://pschamber.org/business-directory/name/caliente-tropics/
+- https://acehotel.com/palm-springs/frequently-asked-questions/
+- https://acehotel.com/palm-springs/survival-guide/
+- https://www.parkerpalmsprings.com/cycling-in-palm-springs
+- https://www.drifthotels.co/palmsprings/amenities
+- https://www.bikabout.com/lodging
 
-Tried and could not open (permission request timed out, Oct 3, 2026):
-https://www.hilton.com/en/hotels/psppshf-hilton-palm-springs/ ·
-https://www.hyatt.com/hyatt-hotels/en-US/palms-hyatt-palm-springs ·
-https://www.rowanpalmsprings.com/ · https://www.hotelzosopalmsprings.com/ ·
-https://www.palmmountainresort.com/ · https://calientetropics.com/ ·
-https://acehotel.com/ · https://holidayhouseps.com/ ·
-https://rivierapalmsprings.com/ · https://thesaguaro.com/palm-springs/ ·
-https://www.avalon-hotel.com/palm-springs/ · https://colonypalmshotel.com/ ·
-https://www.ps-resorts.com/members ·
-https://nominatim.openstreetmap.org/search?q=S+Palm+Canyon+Dr+and+Tahquitz+Canyon+Way,+Palm+Springs,+CA&format=json
+Tried and could not open (Oct 4, 2026): https://calientetropics.com/ (https
+refused; the http address loaded), https://www.palmmountainresort.com/
+(refused). Search results not fetched (review and booking sites):
+tripadvisor.com, yelp.com, expedia.com, trip.com, travelweekly.com,
+guestreservations.com, trivago.com, hotel.info, spasofamerica.com,
+reservationdesk.com, *.hotelspalmspringsweb.com, palmspringsresorts.net,
+hotelsinpalmsprings.net, allhotelscalifornia.com, naturehotels.org,
+spiritofsofia.com, visitgreaterpalmsprings.com (bike rentals page),
+facebook.com/CalienteTropics, palmsprings.gaycities.com.
 
-WebSearch: one call made; it returned no results ("this session has used its
-web search budget (200 of 200 WebSearch calls)").
+WebSearch: 5 calls (bike-friendly hotels; Caliente Tropics; Palm Mountain /
+Zoso / Hyatt; Ace Hotel; Palm Mountain Resort). The culture run used the
+other 7 of the session's 12.

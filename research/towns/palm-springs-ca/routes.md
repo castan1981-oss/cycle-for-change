@@ -420,3 +420,162 @@ Tried and could not open (permission request withdrawn):
 
 WebSearch stopped after three calls: "this session has used its web search
 budget (200 of 200)".
+
+---
+
+# Second pass · route-scout · 2026-10-04 — the climbs
+
+Search was back (14 calls, shared with coffee and eat), and both climbs the
+brief asks for now have a fetched public route page: PJAMM Cycling's climb
+pages for Highway 74 (Pines to Palms) and Tramway Road. Two more pages each
+back the numbers. Add these two to the seven above; the guide now has "the
+climb." Still no geocoder page, so no start has a lat/lon and nothing is
+measured from downtown. The Highway 74 start is the Starbucks the Sunday
+Climbers leave from, address from the club's page (in rides.json).
+
+## Findings
+
+```json
+[
+  {
+    "name": "Highway 74, Palms to Pines (from Palm Desert)",
+    "type": "climb",
+    "miles": 14,
+    "elevation_gain_ft": 3700,
+    "surface": "Paved two-lane state highway, in good condition, with little or no shoulder after the first few miles.",
+    "difficulty": "hard",
+    "start": { "name": "Starbucks at Highway 74 and El Paseo, Palm Desert (the foot of the climb)", "address": "73030 El Paseo, Palm Desert, CA 92260", "lat": null, "lon": null },
+    "description": "The valley's big climb: Highway 74 south out of Palm Desert, 13.9 miles and 3,677 feet at 5.1 percent average, with the steepest quarter mile at 8.3 percent (PJAMM). The road leaves the desert floor, enters the national forest around mile 3.6, and stacks hairpins from mile 4.5 to 8; the Coachella Valley Vista Point at mile 8.4 looks down on all of them. The grade eases near 4,000 feet at the PJAMM finish. Turn there, or keep going toward Pinyon and Idyllwild (Bikemap's 27-mile route to the top of the pass climbs about 4,800 feet). {ride:palm-desert-ca-desert-bicycle-club-sunday-climbers|The Desert Bicycle Club's Sunday Climbers} ride it from the Starbucks at your own pace, regrouping at the Art Smith Trailhead (mile 4) and the Vista Point (mile 8.5).",
+    "water": null,
+    "hazards": "No to minimal shoulder, and traffic at highway speed both ways; PJAMM calls it 'not a ride for the traffic averse cyclist', and one rider there (April 2023) turned around for it. The club's own warning: past mile 4 the road is narrow and winding with no bike lane. Riders descend at 35 to 40 mph with cars passing at 65. No water, store or restroom on the climb is named on any page fetched; the Vista Point is a 16-car lot. June to September highs run 102 to 108 F: PJAMM says don't start after sunrise then.",
+    "links": { "rwgps": null, "strava": null, "komoot": null, "gpx": null, "other": "https://pjammcycling.com/climb/1611.Hwy-74-East" },
+    "ride_slug": "palm-desert-ca-desert-bicycle-club-sunday-climbers",
+    "sources": [
+      "https://pjammcycling.com/climb/1611.Hwy-74-East",
+      "https://www.bikemap.net/en/r/1361661/",
+      "https://cycleclub.clubexpress.com/content.aspx?page_id=4002&club_id=400953&item_id=2911649&event_date_id=456578",
+      "https://www.triabike.com/articles/local-rides-pg196.htm"
+    ],
+    "verified": "2026-10-04"
+  },
+  {
+    "name": "Tramway Road",
+    "type": "climb",
+    "miles": 4,
+    "elevation_gain_ft": 1900,
+    "surface": "Paved road; a separated paved path runs beside it on the south side.",
+    "difficulty": "hard",
+    "start": { "name": "Tramway Road at Highway 111 (the Palm Springs Visitor Center, the west end of CV Link)", "address": null, "lat": null, "lon": null },
+    "description": "The short, steep one, in town: Tramway Road from Highway 111 up to the Palm Springs Aerial Tramway's valley station, 3.8 miles and 1,918 feet at 9.5 percent average (PJAMM), steepening all the way; myCols puts the max at 13.9 percent and Palm Springs Life says the last quarter mile touches 19. The 2013 Tour of California finished Stage 2 here. It starts where CV Link starts, so it pairs with the path: flat miles out, the wall on the way back. RideWithGPS 11063650 is an 18.5-mile loop from downtown that climbs it.",
+    "water": "CVAG lists restrooms at the Palm Springs Visitor Center at the foot (see the CV Link entry). Nothing on the climb is named on any page fetched.",
+    "hazards": "Bikes stop at the tramway's toll gate, about half a mile below the parking lot (Palm Springs Life, 2024; riders on PJAMM and myCols say the same, since about 2014), so the posted 3.8 miles is to a line you can't ride to. The top is 19 percent. Descents pass 50 mph. Rattlesnakes and bighorn sheep on and beside the road. Summer: dawn or not at all.",
+    "links": { "rwgps": "https://ridewithgps.com/routes/11063650", "strava": null, "komoot": null, "gpx": null, "other": "https://pjammcycling.com/climb/1610.Tramway-Road" },
+    "sources": [
+      "https://pjammcycling.com/climb/1610.Tramway-Road",
+      "https://mycols.app/en/climb/tramway-road",
+      "https://ridewithgps.com/routes/11063650",
+      "https://www.palmspringslife.com/palm-springs-aerial-tramway-workout/"
+    ],
+    "verified": "2026-10-04"
+  }
+]
+```
+
+## Why these
+
+- **Highway 74, Palms to Pines.** Zone 3, the climb the brief names first.
+  - **Numbers.** PJAMM: 13.9 miles, 3,677 feet, 5.1% average, 8.3% max
+    (steepest quarter mile), finish elevation read as 3,955 feet. Shown as 14
+    miles and 3,700 feet. The fetch also printed "3,704'" as a start elevation,
+    which can't be right for Palm Desert (the valley floor is a few hundred
+    feet); treat it as a garbled read, not a fact. Graded **hard**: 3,000 to
+    6,000 feet.
+  - **A second page.** Bikemap route 1361661, "Palm Desert to the top of Pines
+    to Palms Highway": 44.2 km, 1,460 m (about 27.5 miles, 4,790 feet), and
+    its own warning, "After the first 5km, there is no (ZERO) paved shoulder."
+    It's ~14 years old, so it's a second number, not the pick. bikeclimbs.com's
+    page was a 404.
+  - **The start.** PJAMM starts in Palm Desert with parking "at the mall to
+    the left adjacent to the start"; the club starts at the Starbucks at
+    Highway 74 and El Paseo (ride page read Oct 3; now rides.json
+    `palm-desert-ca-desert-bicycle-club-sunday-climbers`, so the token and
+    `ride_slug` are live). Those are the same corner, so the Starbucks is the
+    start. **Hand-off:** the start is a café; coffee.md carries it with the
+    same slug.
+  - **Water is null.** No page names a stop. The Vista Point has a lot and
+    nothing else on the pages read. The club's regroups (Art Smith Trailhead,
+    Vista Point) are named in the description, not as water.
+  - **Hazards** are PJAMM's and its riders' words, the club's (mile 4 on, no
+    bike lane) and Tri-A-Bike's ("be careful there is no bike route here",
+    Oct 3). Written plainly on purpose.
+  - **Editor:** the club's own RideWithGPS route is 54218049 (in rides.json
+    `links.other`). It never came back in a search, so it wasn't fetched and
+    `links.rwgps` stays null; a verifier with a browser can add it.
+- **Tramway Road.** Zone 1, the climb you can ride to from a downtown hotel.
+  - **Numbers.** PJAMM: 3.8 miles, 1,918 feet, 9.5% average, finish 2,589
+    feet. Shown as 4 miles and 1,900 feet. myCols: 5.7 km, 490 m, 8.8%
+    average, 13.9% max, 260 m to 751 m. The two disagree a little on length
+    and grade; PJAMM is the climb page, so its numbers lead and myCols' max
+    grade is given as its own. Graded **hard**: a sustained climb well over 6%.
+  - **The gate.** Palm Springs Life (published March 2019, updated May 6,
+    2024): cyclists "can pedal to the tramway's tollgate, positioned about
+    half a mile from the top, where they must stop." A PJAMM rider: a gated
+    entry "about five years ago", bikes stop at the manned booth. myCols:
+    "Since 2014, cyclists are no longer permitted to ride past the toll
+    booth." Three pages, one fact. The hazards line leads with it so nobody
+    plans on the tram car at the top (and the Tramway's own page wasn't
+    fetched, so its current policy isn't confirmed; see Couldn't confirm).
+  - **The path.** RideWithGPS 11063650 (18.5 mi, 2,273 ft from Palm Springs,
+    "Beautiful paved & separated bike trail beside the road"); Palm Springs
+    Life says the paved path on the south side was built in 2012 for
+    pedestrians. The surface line names it; whether bikes are meant to use
+    it isn't on either page.
+  - **The start** is the CV Link west end from the first pass (Palm Springs
+    Visitor Center, Highway 111 at Tramway Road). Address and lat/lon still
+    null: no geocoder.
+  - **Hand-off:** Zone 1 and Zone 2 meet here. The editor can write the path
+    and the climb as one day.
+
+## Rejected
+
+- **bikeclimbs.com, Pines to Palms Hwy climb.** 404.
+- **Bike Forums, RoadBikeReview, the Paceline, Two Wheeled Wanderer, Path
+  Less Pedaled, Tough Ascent (2010), Great Runs.** Forum and blog pages from
+  the search results. Names and colour only; never the source. Not fetched.
+- **Komoot's Palm Desert highlights.** A list page, not a route.
+- **Wikipedia, State Route 74 and the Aerial Tramway.** Background, not a
+  route page.
+
+## Couldn't confirm
+
+- **Highway 74 above the PJAMM finish** (Pinyon, Ribbonwood, the Hwy 371
+  junction, Mountain Center). Bikemap's 27-mile route goes on to "the top";
+  no fetched page says where water is up there or what the road does.
+- **The Tramway's own rule on bikes.** pstramway.com wasn't in a search
+  result and wasn't fetched. Where to look: the Tramway's visit/parking page,
+  or a call. Also whether the separated path is open to bikes.
+- **Strava segments for either climb.** Not searched; PJAMM covered the
+  need. A segment page would add a rider count and a KOM time.
+- **The club's Highway 74 route, RideWithGPS 54218049.** See Why these.
+- **Dillon Road / Desert Hot Springs, Whitewater Canyon, Indian Canyons, the
+  Goat Trails, Palm Canyon Epic, Keys View numbers, the Salton Sea, CV Link's
+  2026 construction status.** Unchanged from the first pass; the budget went
+  to the two climbs.
+- **Coordinates for every start.** No geocoder page fetched.
+
+## Sources (second pass)
+
+- https://pjammcycling.com/climb/1611.Hwy-74-East
+- https://pjammcycling.com/climb/1610.Tramway-Road
+- https://www.bikemap.net/en/r/1361661/
+- https://mycols.app/en/climb/tramway-road
+- https://ridewithgps.com/routes/11063650
+- https://www.palmspringslife.com/palm-springs-aerial-tramway-workout/
+- cfc-site/rides/rides.json: `palm-desert-ca-desert-bicycle-club-sunday-climbers` (start, regroups, the club's "past mile 4" warning, RWGPS 54218049)
+- Read Oct 3 (first pass): https://www.triabike.com/articles/local-rides-pg196.htm · https://www.coachellavalleylink.com/maps/ (Visitor Center restrooms)
+
+404: https://bikeclimbs.com/climb/united-states-of-america/california/palm-desert/palm-desert/pines-to-palms-hwy-climb
+
+Withdrawn on permission (fetched cold, before any search; not fetched another way): https://ridewithgps.com/routes/54218049
+
+WebSearch: 14 calls (the cap), shared across coffee, eat and routes.
