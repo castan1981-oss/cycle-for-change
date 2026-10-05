@@ -1,0 +1,986 @@
+{
+  "id": "san-francisco-ca",
+  "kind": "destination",
+  "name": "San Francisco",
+  "state": "California",
+  "state_code": "CA",
+  "county": "City and County of San Francisco",
+  "lat": 37.7793,
+  "lon": -122.4193,
+  "timezone": "America/Los_Angeles",
+  "population": null,
+  "elevation_ft": null,
+  "tagline": "Over the bridge to the Headlands and Tam, ferry home",
+  "best_months": "Any month. The Golden Gate Bridge is open to bikes every day of the year; in standard time, November to March, the west sidewalk runs a shorter clock (the bridge district's page). The weekly rides in the directory run year-round. For Mt. Tamalpais, Jay's Essential Bike Rides says to pick a day when the bay is clear of fog. The wind on Ridgecrest is strong.",
+  "nearest_airport": {
+    "name": "San Francisco International",
+    "code": "SFO",
+    "miles": 11
+  },
+  "major_airport": {
+    "name": "Oakland San Francisco Bay Airport",
+    "code": "OAK",
+    "miles": 12
+  },
+  "official_url": null,
+  "visitor_url": null,
+  "covers": [
+    "Sausalito",
+    "Mill Valley",
+    "Tiburon",
+    "Fairfax",
+    "Point Reyes Station",
+    "Berkeley",
+    "Oakland",
+    "Emeryville"
+  ],
+  "summary": "San Francisco is a city you ride out of without a car. Over the Golden Gate Bridge to the Marin Headlands and Mt. Tamalpais; along the ocean on Sunset Dunes, the old Great Highway, now closed to cars; by BART to the Berkeley hills and by Caltrain to the Peninsula climbs; home from Marin on the ferry. The bridge is open to bikes around the clock. Alaska, Delta and American check a packed bike as a standard bag, $45 each way (Oct 2026); one North Beach shop builds a shipped bike; two city shops rent carbon road and gravel bikes from $100 a day. Bring yours for three days or more.",
+  "about": [
+    "The riding leaves the city three ways. North, over the Golden Gate Bridge, to Sausalito, the Marin Headlands, Mill Valley and Mt. Tamalpais, with Fairfax and Point Reyes Station beyond. West, along Ocean Beach, where the Upper Great Highway closed to cars in 2025 and became Sunset Dunes. East, by BART, to the Berkeley hills. The Peninsula climbs above Woodside are a Caltrain ride south, and the Palo Alto rides hub on this site covers that side. This guide names its zones: the bridge and the Headlands; Marin; Golden Gate Park and the ocean side; the Peninsula; the East Bay; and the neighborhoods a visitor sleeps in, the Castro, the Mission, North Beach, the Marina and Fort Mason. Every listing says which one it sits in.",
+    "Two of the organized rides on this site's 2027 calendar start here: Cycle to Zero, the San Francisco AIDS Foundation's three-day ride to Guerneville and back (the 2026 edition started at Fort Baker, Sausalito), and the Recovery Ride, Sausalito to Guerneville. Robert is riding both in 2027; the dates are in the 2027 list on this page. The San Francisco AIDS Foundation is one of the organizations a pledger can pick to receive their money. If you are in town for either ride, the bridge and Headlands loop crosses to the Fort Baker side of the bridge, so it is the shakeout for either ride."
+  ],
+  "riding": [
+    "The ride for the day you land is the bridge: out the Embarcadero, across the Golden Gate Bridge, a lap of the Marin Headlands with Hawk Hill in it. 28 miles and about 2,400 feet. If the legs want less, the Presidio Trust's 8-mile Crissy Field loop. The flat, car-free one is Sunset Dunes along Ocean Beach, two miles of old highway and back. The climb is Mt. Tamalpais from Fairfax by Alpine Dam and the Seven Sisters, 38 miles and 4,400 feet. The long day is Point Reyes Station and back, 72 miles, or 70 one way with the Larkspur ferry home. The Headlands have a dirt loop from the bridge. The Peninsula has Old La Honda and Kings Mountain above Woodside. The East Bay has Grizzly Peak and Redwood Road out of Berkeley, a BART ride away. On the bridge you share a sidewalk with people walking: 15 mph, 5 mph at the towers, and which side bikes use changes by day and hour.",
+    "The group rides are the way in. Different Spokes San Francisco, the LGBTQ+ club, rides {ride:san-francisco-ca-different-spokes-jersey-ride|the Jersey Ride} from the Castro over the bridge to Tiburon, guests welcome. Fat Cake Club's dawn rides end at a bakery: {ride:san-francisco-ca-fat-cake-club-monday-ftwnb-ride|the FTWNB ride} for femme, trans, women and non-binary riders from the Conservatory of Flowers, and {ride:san-francisco-ca-fat-cake-club-tuesday-headlands-arsicault|the Headlands and Arsicault ride} from the bridge. {ride:san-francisco-ca-hummingbird-fuels-all-watts-welcome-intervals|Hummingbird's interval ride} goes up Hawk Hill from the bridge Welcome Center. {ride:san-francisco-ca-women-and-non-binary-bike-sf-friday-morning-ride|Women and Non-Binary Bike SF's morning ride} rolls Golden Gate Park's car-free roads out to Sunset Dunes, no RSVP. {ride:san-francisco-ca-sf-cycling-club-friday-coffee-ride|San Francisco Cycling Club's Coffee Ride} from Fell and Baker is the one of that club's rides open to everyone. {ride:san-francisco-ca-butterlap|Butterlap} loops the city from the Ferry Building after dark, no leaders, nobody dropped, and {ride:san-francisco-ca-critical-mass|Critical Mass} gathers at Embarcadero Plaza. Across the bridge, {ride:fairfax-ca-marin-cyclists-fairfax-to-point-reyes-station|Marin Cyclists' Point Reyes Station ride} leaves Fairfax, and Equator Coffees in Mill Valley is the start of {ride:mill-valley-ca-tam-velo-club-saturday-ride,mill-valley-ca-tam-velo-sunday-recovery-ride|Tam Velo Club's rides}. In the East Bay, Peet's on Domingo in Berkeley is the start of {ride:berkeley-ca-berkeley-bicycle-club-friday-coffee-ride,berkeley-ca-berkeley-bicycle-club-sunday-wtfn-ride|Berkeley Bicycle Club's rides}."
+  ],
+  "getting_there": "Fly into SFO (about 11 miles south of City Hall) or Oakland (about 12 miles, across the bay; the door for the East Bay hills). San José is 39 miles out, a fallback fare. From SFO, BART runs from the International Terminal into the city and takes bikes. The airport has bike assembly stands, so you can build the bike there and ride the train in. From Oakland, BART is across the street from the terminals. You don't need a car. The bridge, the Headlands and Golden Gate Park start in the city. BART reaches the Berkeley hills, Caltrain the Peninsula, and the Golden Gate ferries bring you home from Sausalito, Tiburon and Larkspur. The Bring-your-bike page has the airline rules, the shop that builds a shipped bike, and each transit agency's bike rules.",
+  "routes": [
+    {
+      "name": "Golden Gate Bridge and the Marin Headlands (Hawk Hill)",
+      "type": "road",
+      "miles": 28,
+      "elevation_gain_ft": 2400,
+      "surface": "Paved: city streets and the Embarcadero, the bridge's shared sidewalk, and the Headlands roads. About two-thirds of Hawk Hill has a bike lane (PJAMM).",
+      "difficulty": "moderate",
+      "start": {
+        "name": "Near the San Francisco Caltrain station",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "Zone 1, the bridge ride. Out along the Embarcadero, across the Golden Gate Bridge, a clockwise lap of the Marin Headlands and back: 28 miles and about 2,400 feet, per the RideWithGPS page. The climb is Hawk Hill, Conzelman Road from the lot at the north end of the bridge: 1.8 miles and 538 feet at 5.8 percent (PJAMM). For the first day, the Presidio Trust publishes a short version: an 8-mile loop from Sports Basement at Crissy Field up to the bridge and Vista Point, back on the Bay Trail and the Presidio Promenade. {ride:san-francisco-ca-fat-cake-club-tuesday-headlands-arsicault|Fat Cake's Headlands and Arsicault ride} leaves the south end of the bridge and does this climb before the bakery. {ride:san-francisco-ca-hummingbird-fuels-all-watts-welcome-intervals|Hummingbird's interval ride} does its efforts on Hawk Hill from the bridge Welcome Center.",
+      "water": "Round House Café by the bridge Welcome Center; public restrooms at Vista Point, the north end of the bridge (Presidio Trust).",
+      "hazards": "On the bridge you share a sidewalk with people walking. Which side bikes use changes by day, hour and season: on weekdays until 3:30 p.m. it is the east side; after that and on weekends, check the bridge's own table. 15 mph on the sidewalk, 5 mph around the towers, and yield to people walking (Golden Gate Bridge district). Past the top of Hawk Hill, a rider's review on PJAMM puts the drop on Conzelman at up to 18 percent.",
+      "links": {
+        "rwgps": "https://ridewithgps.com/routes/2145313",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://pjammcycling.com/climb/2357.Hawk-Hill"
+      },
+      "ride_slug": [
+        "san-francisco-ca-fat-cake-club-tuesday-headlands-arsicault",
+        "san-francisco-ca-hummingbird-fuels-all-watts-welcome-intervals"
+      ],
+      "sources": [
+        "https://ridewithgps.com/routes/2145313",
+        "https://pjammcycling.com/climb/2357.Hawk-Hill",
+        "https://presidio.gov/explore/itineraries/getting-to-the-golden-gate-bridge-by-bike",
+        "https://www.goldengate.org/bridge/visiting-the-bridge/bikes-pedestrians/"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Sunset Dunes (the old Upper Great Highway)",
+      "type": "path",
+      "miles": 4,
+      "elevation_gain_ft": null,
+      "surface": "A former highway along Ocean Beach, closed to cars: 2 miles of old road (KQED), with entrances from Lincoln Way to Sloat Blvd (the park's own page).",
+      "difficulty": "easy",
+      "start": {
+        "name": "Lincoln Way entrance, the north end (or any cross street down to Sloat Blvd)",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "Zone 3, the easy one. The Upper Great Highway beside Ocean Beach, closed to cars and opened as a park, Sunset Dunes, in April 2025 (KQED). Two miles of old road by the sand; end to end and back is about 4 miles, the course the SF Bicycle Coalition used for its family ride. This is the ride for the evening you land: no cars, and you can turn around whenever you want. {ride:san-francisco-ca-women-and-non-binary-bike-sf-friday-morning-ride|Women and Non-Binary Bike SF's morning ride} comes out here through Golden Gate Park's car-free roads. Its future came up again in 2026. KQED reported (April 2026, updated September 2026) a citizen initiative gathering signatures for a measure to let cars back on weekdays. Whether it made a ballot was not confirmed when we checked, so read the park's page before you plan around it.",
+      "water": "Water fountains by the side path next to the restrooms at Judah and Taraval; restrooms at Sloat Blvd too, open during the day (the park's own page).",
+      "hazards": "The streets in from the Sunset (Kirkham, Ortega, Vicente, Sloat) are signed bike routes with no physical protection; Lincoln Way has a separated bike lane (the park's own page). You share the park with people walking and skating.",
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://sunsetdunes.org/visit"
+      },
+      "ride_slug": "san-francisco-ca-women-and-non-binary-bike-sf-friday-morning-ride",
+      "sources": [
+        "https://sunsetdunes.org/visit",
+        "https://sfbike.org/event/sunset-dunes-family-ride/",
+        "https://www.kqed.org/news/12079238/one-year-of-san-franciscos-controversial-beachside-park",
+        "https://sfbike.org/event/women-and-non-binary-bike-sf-friday-morning-ride-2/2026-10-09/"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "The Tiburon loop (Different Spokes' Jersey Ride)",
+      "type": "road",
+      "miles": 48,
+      "elevation_gain_ft": 2250,
+      "surface": "Paved: city streets, the bridge's shared sidewalk, Marin roads and the Corte Madera-Larkspur path (club pages).",
+      "difficulty": "hard",
+      "start": {
+        "name": "Peet's Coffee, 16th and Market, the Castro (the club's ride page; check the club calendar)",
+        "address": "2257 Market St, San Francisco, CA 94114",
+        "lat": 37.7648,
+        "lon": -122.4319
+      },
+      "description": "Zone 1 by way of the Castro: the route of {ride:san-francisco-ca-different-spokes-jersey-ride|Different Spokes' Jersey Ride}, the club ride of San Francisco's LGBTQ+ cycling club. From the Castro across the Golden Gate Bridge to Sausalito, a small climb over Camino Alto, then out and around the Tiburon peninsula on Paradise Drive. 48 miles and 2,253 feet, per the club. Guests are welcome; there is no sweep, but the club regroups for slower riders. The Short and Sassy version, 24 miles and about 1,050 feet, leaves Mike's Bikes in Sausalito, skips the bridge, and meets the long group for lunch in Tiburon. Woodlands Market was the lunch stop in May 2025. The club's standing ride page puts the start at Peet's on 16th and Market. Its August 2026 ride listing said Jane Warner Plaza, a block away at Castro and Market. Check the club calendar for the day's start.",
+      "water": "Woodlands Market in Tiburon, the lunch stop on the club's ride pages.",
+      "hazards": "The bridge, which the club's own page calls a mosh pit: you share the sidewalk with people walking, the side bikes use changes by day and hour, 15 mph on the sidewalk and 5 mph at the towers (Golden Gate Bridge district). The club cancels for heavy rain.",
+      "links": {
+        "rwgps": "https://ridewithgps.com/routes/53843226",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://www.dssf.org/content.aspx?page_id=22&club_id=17789&module_id=336753"
+      },
+      "ride_slug": "san-francisco-ca-different-spokes-jersey-ride",
+      "sources": [
+        "https://www.dssf.org/content.aspx?page_id=22&club_id=17789&module_id=336753",
+        "https://www.dssf.org/content.aspx?page_id=4002&club_id=17789&item_id=2992657",
+        "https://dssf.org/content.aspx?page_id=4091&club_id=17789&item_id=2864261",
+        "https://www.dssf.org/content.aspx?page_id=4091&club_id=17789&item_id=2527581",
+        "https://www.goldengate.org/bridge/visiting-the-bridge/bikes-pedestrians/"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Mt. Tam from Fairfax: Alpine Dam, the Seven Sisters and East Peak",
+      "type": "climb",
+      "miles": 38,
+      "elevation_gain_ft": 4400,
+      "surface": "Paved, with broken pavement in places (Jay's Essential Bike Rides) and potholes on the first stretch of Fairfax-Bolinas Road (PJAMM).",
+      "difficulty": "hard",
+      "start": {
+        "name": "The public lot in the median of Fairfax's main street",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "Zone 2, the climb. Jay's Essential Bike Rides' loop up Mt. Tamalpais. Fairfax-Bolinas Road over to Alpine Dam, then the climb past the dam to West Ridgecrest Boulevard and its 9 percent rollers, the Seven Sisters. A spur out to East Peak. Then down Pantoll Road and Panoramic Highway and back to Fairfax through Mill Valley, Larkspur, San Anselmo and Ross. 38 miles and 4,400 feet. The climb alone, Alpine Dam to West Peak, is 7.9 miles and 2,053 feet at 4.5 percent, 9.6 at its steepest (PJAMM). Splitrock Tap & Wheel, the bike shop and taproom on Sir Francis Drake in Fairfax, is where {ride:fairfax-ca-marin-cyclists-fairfax-to-point-reyes-station|Marin Cyclists' Point Reyes Station ride} meets.",
+      "water": "East Peak: restrooms, water and a visitor center (Jay's page). Nothing between Alpine Dam and the top (PJAMM).",
+      "hazards": "Broken pavement and launch ramps on the descents, and strong ocean wind along Ridgecrest (Jay's page). The same page says Fairfax-Bolinas Road is often under construction and signed closed; check before you go. It also says to wait for a day when the bay is clear of fog.",
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://bestrides.org/mt-tamalpais/"
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://bestrides.org/mt-tamalpais/",
+        "https://pjammcycling.com/climb/350.Mt.%20Tam%20via%20Alpine%20Dam"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "San Francisco to Point Reyes Station",
+      "type": "road",
+      "miles": 72,
+      "elevation_gain_ft": 4800,
+      "surface": null,
+      "difficulty": "hard",
+      "start": {
+        "name": "San Francisco; the one-way version starts at Embarcadero BART",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "Zone 2, the long day. Out to Sausalito and Mill Valley, Shoreline Highway over to Muir Beach and Stinson Beach, Highway 1 up to Olema and Point Reyes Station. Back by Nicasio, Fairfax, San Anselmo and Ross. 72 miles and about 4,800 feet, per the RideWithGPS page; its description stops after Ross, so check the last miles on the map. A one-way version, 70 miles and about 3,600 feet from Embarcadero BART, comes home on the Larkspur ferry (RideWithGPS). Bovine Bakery on Highway 1 in Point Reyes Station is the turnaround stop (see Coffee). {ride:fairfax-ca-marin-cyclists-fairfax-to-point-reyes-station|Marin Cyclists' ride from Fairfax to Point Reyes Station} does the inland half with a group.",
+      "water": null,
+      "hazards": "The route page says nothing about traffic or shoulders on Shoreline Highway or Highway 1. On the bridge: shared sidewalk, the side bikes use changes by day and hour, 15 mph, 5 mph at the towers, yield to people walking (Golden Gate Bridge district).",
+      "links": {
+        "rwgps": "https://ridewithgps.com/routes/8476160?lang=en",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": null
+      },
+      "ride_slug": "fairfax-ca-marin-cyclists-fairfax-to-point-reyes-station",
+      "sources": [
+        "https://ridewithgps.com/routes/8476160?lang=en",
+        "https://ridewithgps.com/routes/28865102?lang=en",
+        "https://www.goldengate.org/bridge/visiting-the-bridge/bikes-pedestrians/"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Marin Headlands dirt loop",
+      "type": "gravel",
+      "miles": 18,
+      "elevation_gain_ft": 2650,
+      "surface": "Mixed: pavement, fire road and singletrack. The page doesn't give the dirt miles.",
+      "difficulty": "hard",
+      "start": {
+        "name": "Golden Gate Bridge plaza, San Francisco",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "Zone 1, the gravel. RideWithGPS's ambassador route for the Headlands off the pavement: over the bridge, up Conzelman Road, then fire road and singletrack. The climbs are the Miwok Trail, at nearly 10 percent, and Marincello Road, a steady 9. The descents are technical singletrack on Old Springs Trail and the Coastal Trail. 18 miles and about 2,650 feet. Sports Basement in the Presidio and High Trails Cyclery on Polk Street rent a carbon gravel bike (see Bike shops).",
+      "water": "None named on the route page. It says to carry food and water.",
+      "hazards": "Loose gravel in the turns on Bobcat Trail; waterbars across lower Old Springs Trail; walk your bike through the Miwok Livery Stables; much of the loop has no phone signal (route page). On the bridge, 15 mph on the sidewalk, 5 mph at the towers, and yield to people walking (Golden Gate Bridge district).",
+      "links": {
+        "rwgps": "https://ridewithgps.com/routes/9573159",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://ridewithgps.com/ambassador_routes/466-marin-headlands-loop?lang=en"
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://ridewithgps.com/ambassador_routes/466-marin-headlands-loop?lang=en",
+        "https://ridewithgps.com/routes/9573159",
+        "https://www.goldengate.org/bridge/visiting-the-bridge/bikes-pedestrians/"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Old La Honda and Kings Mountain (Woodside)",
+      "type": "road",
+      "miles": 19,
+      "elevation_gain_ft": 2600,
+      "surface": "Paved, narrow; the upper pavement on Old La Honda is bad (RideWithGPS note).",
+      "difficulty": "hard",
+      "start": {
+        "name": "Woodside town center, the main intersection",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "Zone 4, the Peninsula's benchmark climb in a short loop. From Woodside by Whiskey Hill and Sand Hill roads to Old La Honda Road: almost exactly three miles at a touch under 8 percent, with short pitches up to about 14. North on Skyline, then down Kings Mountain Road. 19 miles and 2,600 feet (Bay Area Rides; the page dates from 2010). A 28-mile, 3,200-foot version from Menlo Park climbs Kings Mountain and comes down Old La Honda (RideWithGPS). Alice's Restaurant at Skyline and 84 is the stop (see Restaurants). The Peninsula's group rides are on this site's Palo Alto hub, /rides/ca/palo-alto/, not re-listed here.",
+      "water": "Alice's Restaurant and a general store at Skyline and Route 84 (Bay Area Rides).",
+      "hazards": "Kings Mountain Road is narrow and very twisty, and the descent is fast. Skyline has fast drivers and little shoulder. Old La Honda is very narrow, with bad pavement near the top (Bay Area Rides; RideWithGPS).",
+      "links": {
+        "rwgps": "https://ridewithgps.com/routes/469253",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://www.bayarearides.com/rides/oldlahonda2/"
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://www.bayarearides.com/rides/oldlahonda2/",
+        "https://ridewithgps.com/routes/469253"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Grizzly Peak and Redwood Road (Berkeley hills)",
+      "type": "road",
+      "miles": 44,
+      "elevation_gain_ft": 4500,
+      "surface": "Paved; the corners on Pinehurst Road are often gravelly.",
+      "difficulty": "hard",
+      "start": {
+        "name": "Spruce St and Grizzly Peak Blvd, Berkeley",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "Zone 5, the East Bay, a BART ride from the city. The hills loop from Jay's Essential Bike Rides (updated September 2026): Grizzly Peak Boulevard along the ridge, Skyline, Pinehurst Road and Redwood Road, then down Claremont Avenue. About 44 miles and 4,510 feet. The Three Bears Loop, the other East Bay classic, is 38 miles and about 3,250 feet from Berkeley on its RideWithGPS page. Peet's on Domingo, next to the Claremont Hotel (see Coffee), is the start of {ride:berkeley-ca-berkeley-bicycle-club-friday-coffee-ride,berkeley-ca-berkeley-bicycle-club-sunday-wtfn-ride|Berkeley Bicycle Club's rides}.",
+      "water": "Restrooms and water at Sibley Volcanic Regional Preserve, on Skyline 100 feet south of the Grizzly Peak intersection (Jay's page).",
+      "hazards": "Traffic on the residential stretch of Grizzly Peak is dangerous; Pinehurst's corners are sharp and often gravelly; Claremont Avenue comes down at 10 percent for 2 miles, curvy and very fast (Jay's page).",
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://bestrides.org/grizzly-peak-to-redwood-road/"
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://bestrides.org/grizzly-peak-to-redwood-road/",
+        "https://ridewithgps.com/routes/20947168?lang=en"
+      ],
+      "verified": "2026-10-03"
+    }
+  ],
+  "coffee": [
+    {
+      "name": "Equator Coffees at Proof Lab",
+      "url": "https://www.equatorcoffees.com/blogs/journal/celebrating-10-years-at-proof-lab",
+      "address": "244 Shoreline Hwy, Mill Valley, CA 94941",
+      "note": "Zone 2, Mill Valley, on Highway 1 on the Marin side of the bridge. {ride:mill-valley-ca-tam-velo-club-saturday-ride|Tam Velo Club's Saturday ride} and {ride:mill-valley-ca-tam-velo-sunday-recovery-ride|its Sunday ride} leave from here, per the club's 2026 page. Equator calls it a regular stop for cyclists, with patios front and back; nothing on any page says bike parking. Hours are from a listing updated April 2026.",
+      "hours_hint": "6:30 a.m. to 5 p.m. daily",
+      "ride_out": true,
+      "ride_slug": [
+        "mill-valley-ca-tam-velo-club-saturday-ride",
+        "mill-valley-ca-tam-velo-sunday-recovery-ride"
+      ]
+    },
+    {
+      "name": "Arsicault Bakery",
+      "url": null,
+      "address": "397 Arguello Blvd, San Francisco, CA 94118",
+      "note": "Zone 1 meets Zone 3: on Arguello at Clement in the Inner Richmond, just south of the Presidio. Where {ride:san-francisco-ca-fat-cake-club-tuesday-headlands-arsicault|Fat Cake Club's Headlands ride} ends: over the bridge, up Hawk Hill, back through the Presidio to here, per the club. Expect a line out the door. No site of its own; the hours are from a map listing that isn't dated, so they're a guide, not a promise. Nothing on any page says bike parking.",
+      "hours_hint": "7 a.m. to 1:30 p.m. weekdays, 8 to 2 Saturday, 8 to 3 Sunday",
+      "ride_out": true,
+      "ride_slug": null
+    },
+    {
+      "name": "Peet's Coffee, Domingo",
+      "url": "https://www.peets.com/pages/store/domingo",
+      "address": "2916 Domingo Ave, Berkeley, CA 94705",
+      "note": "Zone 5, the East Bay: the Claremont corner of Berkeley, next to the Claremont Hotel. {ride:berkeley-ca-berkeley-bicycle-club-friday-coffee-ride|Berkeley Bicycle Club's Coffee Ride} and {ride:berkeley-ca-berkeley-bicycle-club-sunday-wtfn-ride|its WTFN ride} meet here. The early one: 5:30 a.m. on weekdays, 6 on weekends, with benches outside, per Peet's. No bike parking on the page.",
+      "hours_hint": "5:30 a.m. to 6 p.m. weekdays, 6 a.m. to 6 p.m. weekends",
+      "ride_out": true,
+      "ride_slug": [
+        "berkeley-ca-berkeley-bicycle-club-friday-coffee-ride",
+        "berkeley-ca-berkeley-bicycle-club-sunday-wtfn-ride"
+      ]
+    },
+    {
+      "name": "Bovine Bakery",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g32908-d935052-Reviews-Bovine_Bakery-Point_Reyes_Station_Point_Reyes_National_Seashore_Marin_County_Califo.html",
+      "address": "11315 Highway 1, Point Reyes Station, CA 94956",
+      "note": "Zone 2, the long day: a bakery on Highway 1 in Point Reyes Station, the turnaround of the Point Reyes route and the town {ride:fairfax-ca-marin-cyclists-fairfax-to-point-reyes-station|Marin Cyclists' ride from Fairfax} rides out to. Opens at 6:30 on weekdays. Two listings agree on the hours and the phone, but neither was dated this year, so call (415) 663-9420 before you plan the day around it.",
+      "hours_hint": "6:30 a.m. weekdays, 7 a.m. weekends; closes at 4 or 5 p.m. (listings differ)",
+      "ride_out": false,
+      "ride_slug": null
+    },
+    {
+      "name": "Java Beach Cafe",
+      "url": "https://javabeachcafe.com/page/locations",
+      "address": "1396 La Playa Street, San Francisco, CA 94122",
+      "note": "Zone 3, the ocean side: in the Outer Sunset, across the Great Highway from Ocean Beach, per its site, at the Sunset Dunes end of a Golden Gate Park loop. Opens at 7, so it's the coffee after a dawn loop of the park and the coast, not before. A second shop, Java Beach at the Zoo on Sloat Blvd, opens at 7 too, per the same page. Nothing on its page says bike parking.",
+      "hours_hint": "7 a.m. to 5 p.m. daily",
+      "ride_out": false,
+      "ride_slug": null
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Woodlands Market Tiburon",
+      "url": "https://www.woodlandsmarket.com/tiburon/",
+      "address": "1550 Tiburon Blvd, Tiburon, CA 94920",
+      "cuisine": "Deli",
+      "note": "After the ride, in Zone 1: a market in Tiburon with a deli counter of hot and cold sandwiches, where {ride:san-francisco-ca-different-spokes-jersey-ride|Different Spokes' Jersey Ride} had its group lunch in May 2025, and the lunch stop of the Tiburon loop. 7 a.m. to 9 p.m. daily, per its site and the Tiburon chamber. Seating and bike parking weren't on any page.",
+      "ride_slug": "san-francisco-ca-different-spokes-jersey-ride"
+    },
+    {
+      "name": "Original Joe's North Beach",
+      "url": "https://www.originaljoes.com/north-beach",
+      "address": "601 Union Street, San Francisco, CA 94133",
+      "cuisine": "Italian-American",
+      "note": "The night before, in Zone 6: North Beach, on the bridge side of the city, a few blocks from Columbus Cyclery. Dinner from 4 Monday to Thursday, lunch from 11:30 Friday and 11 on weekends; it closes at 10, or 9 on Sunday, per its site. Book on its site; the walk-in and group policy wasn't on the page."
+    },
+    {
+      "name": "El Farolito",
+      "url": "https://elfarolitosf.com/about/",
+      "address": "2779 Mission St, San Francisco, CA 94110",
+      "cuisine": "Mexican",
+      "note": "Late, and the night before, in Zone 6: burritos in the Mission, at the original shop, which its site says is open past 3 a.m. most nights. Cash only, and cheap. Seating and bike parking weren't on the page."
+    },
+    {
+      "name": "Alice's Restaurant",
+      "url": "https://alicesrestaurant.com/",
+      "address": "17288 Skyline Boulevard, Woodside, CA 94062",
+      "cuisine": "American",
+      "note": "On the way, in Zone 4: the restaurant on Skyline Boulevard in the redwoods above Woodside, at the top of the Old La Honda and Kings Mountain loop. A stop for motorcyclists and bike teams. 8 a.m. to 8 p.m., to 7 on Sunday, per its site, with tables outside in its photos. (650) 851-0303."
+    }
+  ],
+  "hotels": [
+    {
+      "name": "HI San Francisco Fisherman's Wharf Hostel",
+      "url": "https://www.hiusa.org/find-hostels/california/san-francisco-building240-fortmason",
+      "booking_url": null,
+      "address": "Building 240, Fort Mason, San Francisco, CA 94123",
+      "phone": null,
+      "note": "Fort Mason, on the Marina side of the city (Zone 6). The hostel's own page puts the Golden Gate Bridge 3 miles away. The only place we found with the bike policy in writing: a free indoor bicycle room, first come, first served. Dorms of 4 to 20 beds and private rooms; check-in 3 p.m., out 11 a.m.; no elevator (a historic building; ADA rooms on the main floor); a little free parking, passes first come. HI's own page shows no rate (Oct 2026).",
+      "price_hint": "$",
+      "bike_policy": "Free indoor bicycle storage in the hostel's bicycle room; space is limited, first come, first served (its words). E-bikes only with UL or EN 15194 certification, battery attached, no charging indoors."
+    },
+    {
+      "name": "Lodge at the Presidio",
+      "url": "https://presidiolodging.com/lodge-at-the-presidio/rooms/",
+      "booking_url": "https://lodgeres.presidiolodging.com/",
+      "address": "105 Montgomery Street, San Francisco, CA 94129",
+      "phone": null,
+      "note": "In the Presidio, at the city end of the bridge (Zone 1). The Presidio Trust calls it \"the closest hotel to the Golden Gate Bridge in the entire city.\" Sports Basement, the rental shop, is in the Presidio too, and the bridge's south end is the start of {ride:san-francisco-ca-fat-cake-club-tuesday-headlands-arsicault,san-francisco-ca-hummingbird-fuels-all-watts-welcome-intervals|two weekly rides}. The Trust's page tags it \"Bike Parking\" without saying where; the hotel's own rooms page says nothing about bikes. Parking is a nightly fee; no rate or fee shown (Oct 2026).",
+      "price_hint": null,
+      "bike_policy": null
+    },
+    {
+      "name": "Cavallo Point",
+      "url": "https://www.cavallopoint.com/",
+      "booking_url": null,
+      "address": "601 Murray Circle, Fort Baker, Sausalito, CA 94965",
+      "phone": null,
+      "note": "Fort Baker, at the Marin end of the Golden Gate Bridge below the Headlands (Zone 1). The 2026 Cycle to Zero started at Fort Baker. The lodge lends Vintage Electric e-bikes free to guests at the valet stand, first come. Its own pages say nothing about bringing your own bike; Expedia lists \"bicycle storage,\" so ask. From $866 for one night with taxes and fees on Oct 4, plus a $65 nightly resort fee (Expedia, read Oct 3, 2026).",
+      "price_hint": "$$$$",
+      "bike_policy": null
+    },
+    {
+      "name": "Beck's Motor Lodge",
+      "url": "https://www.becksmotorlodge.com/",
+      "booking_url": "https://reservations.travelclick.com/85196",
+      "address": "2222 Market Street, San Francisco, CA 94114",
+      "phone": null,
+      "note": "Market Street in the Castro (Zone 6), on the block where {ride:san-francisco-ca-different-spokes-jersey-ride|Different Spokes' Jersey Ride} meets, and a mile or so from Valencia Cyclery's walk-in repair. Family-owned since 1958, with free parking on site. Nothing about bikes on its pages. Check-in 3:30 p.m., out 11 a.m. Rooms from $149 for a Superior Queen (its own site, Oct 2026).",
+      "price_hint": "$$",
+      "bike_policy": null
+    },
+    {
+      "name": "Holiday Inn Express Mill Valley San Francisco Area",
+      "url": "https://www.ihg.com/holidayinnexpress/hotels/us/en/mill-valley/sfomv/hoteldetail",
+      "booking_url": null,
+      "address": "160 Shoreline Highway, Mill Valley, CA 94941",
+      "phone": null,
+      "note": "Shoreline Highway in Mill Valley (Zone 2), down the road from Equator Coffees at Proof Lab (244 Shoreline Hwy), the start of {ride:mill-valley-ca-tam-velo-club-saturday-ride,mill-valley-ca-tam-velo-sunday-recovery-ride|Tam Velo Club's rides}. The page puts the Golden Gate Bridge about 7 miles away. Free adult bikes to borrow; nothing about your own bike. Free parking; breakfast from 6:30 a.m. weekdays, 7 a.m. weekends. No rate shown (Oct 2026).",
+      "price_hint": null,
+      "bike_policy": null
+    },
+    {
+      "name": "Mill Valley Inn",
+      "url": "https://millvalleyinn.com/",
+      "booking_url": "https://bookings.travelclick.com/5619?domain=millvalleyinn.com",
+      "address": "165 Throckmorton Avenue, Mill Valley, CA 94941",
+      "phone": null,
+      "note": "Downtown Mill Valley, the Marin town under Mt. Tamalpais (Zone 2), for a rider who wants to walk to dinner after Tam. The inn has \"Bikes available\" for a ride around town, but nothing on its page about your own. Free parking, no resort fee, a breakfast buffet with an espresso bar. No rate shown (Oct 2026).",
+      "price_hint": null,
+      "bike_policy": null
+    }
+  ],
+  "bike_shops": [
+    {
+      "name": "Columbus Cyclery",
+      "url": "https://columbuscyclery.com/",
+      "address": "2011 Mason Street, San Francisco, CA 94133",
+      "phone": "(415) 561-9999",
+      "services": [
+        "repair",
+        "ship-to-shop",
+        "rental",
+        "rental-road",
+        "rental-mtb",
+        "rental-ebike"
+      ],
+      "note": "Zone 6, North Beach, about 1.6 miles north of City Hall; the shop says the Wharf and the bike path to the bridge are a few minutes away. The one confirmed ship-to-shop: ship the bike here and they build and tune it in 24 to 48 hours for $135 ($190 for an e-bike), and box it for the trip home for $115, or $135 with accessories (Oct 2026). Open every day, 10 to 6. Walk-in repair, no appointment, 24 to 48 hours; flat fix $16 labor. It does not service tubeless or tubular tires. Rents what it calls race bikes at $59 a day or $50 a day for three days or more (Oct 2026); no model or size is listed. Its rental page also lists mountain and electric bikes."
+    },
+    {
+      "name": "Sports Basement Presidio",
+      "url": "https://shop.sportsbasement.com/blogs/stores/san-francisco-presidio",
+      "address": "610 Old Mason Street, San Francisco, CA 94129",
+      "phone": "(415) 934-2900",
+      "services": [
+        "repair",
+        "same-day",
+        "fitting",
+        "rental",
+        "rental-road",
+        "rental-gravel",
+        "rental-mtb",
+        "rental-ebike",
+        "box-rental"
+      ],
+      "note": "Zone 1, the Presidio, the closest pick to the bridge and to the Lodge at the Presidio. Rents carbon road bikes (Cannondale Synapse or Scott Addict 30, Shimano 105 or better, 44 to 61 cm) and a Cannondale Topstone Carbon gravel bike (XS to XL): $100 a day, $175 for 2 to 4 days, $300 for 5 to 9 days (Oct 2026). A Synapse Hi-Mod Dura-Ace (51 to 61 cm) is $135, $220 and $380. Helmet, lock and flat kit come with it. Pedals aren't mentioned, so bring yours. A $1,000 hold goes on a physical credit card with matching ID. Reserve online and pick up here, or at the Stonestown or Berkeley stores. Open every day, weekdays 10 to 8 and weekends 9 to 7. The service desk does small jobs and flats on the spot. GURU fit $300. Rents a Thule RoundTrip bike case at $55 a day, $80 for 2 to 4 days or $110 for 5 to 9 days (Oct 2026)."
+    },
+    {
+      "name": "High Trails Cyclery",
+      "url": "https://www.hightrailscycles.com/",
+      "address": "1825 Polk Street, San Francisco, CA 94109",
+      "phone": "(415) 814-3216",
+      "services": [
+        "repair",
+        "rental",
+        "rental-road",
+        "rental-gravel",
+        "rental-mtb",
+        "rental-ebike"
+      ],
+      "note": "Zone 6, Polk Gulch below Russian Hill, about a mile north of City Hall. Rents a carbon road bike with hydraulic discs (Cervelo Caledonia or similar, 48 to 61 cm) at $100 a day and a gravel bike (Cervelo Aspero or similar, 48 to 58 cm) at $125 a day. Pedals of your choice (flat, SPD, SPD-SL or Look Keo), cage, helmet and lock come free (prices read Oct 2026). Opens late: Monday to Friday noon to 6, Saturday 10 to 4, closed Sunday. Its mechanics work on Di2, eTap AXS and Campagnolo; safety check $60, tune-up $180 (Oct 2026). The rental page's images date from May 2024, so call to confirm the fleet and prices."
+    },
+    {
+      "name": "Valencia Cyclery",
+      "url": "https://www.valenciacyclery.com/articles/bike-repair-pg184.htm",
+      "address": "1065 Valencia St., San Francisco, CA 94110",
+      "phone": "(415) 550-6601",
+      "services": [
+        "repair",
+        "same-day"
+      ],
+      "note": "Zone 6, the Mission, about 1.6 miles south of City Hall and about a mile from the Castro start of {ride:san-francisco-ca-different-spokes-jersey-ride|Different Spokes' Jersey Ride}. Repairs are walk-in only, and most simple jobs are done the same day; Level 1 service is $160 (Oct 2026). Monday to Saturday 10 to 6, Sunday 10 to 5. Boxes a bike for BikeFlights from $120; allow four business days between drop-off and pickup (Oct 2026). Its site doesn't say it receives a shipped bike. Use the repair shop at 1065; the sales floor is next door at 1077, (415) 550-6600."
+    },
+    {
+      "name": "Mike's Bikes of Sausalito",
+      "url": "https://mikesbikes.com/pages/sausalito",
+      "address": "#1 Gate 6 Rd., Sausalito, CA 94965",
+      "phone": "(415) 332-3200",
+      "services": [
+        "repair"
+      ],
+      "note": "Zone 2, the Marin City end of Sausalito, about 8 miles north of City Hall, at the start of the Mill Valley-Sausalito bike path (the shop's words), and the start of the short version of {ride:san-francisco-ca-different-spokes-jersey-ride|Different Spokes' Jersey Ride}. Service is open every day; appointments are encouraged and walk-ins are welcome. Monday to Saturday 10 to 6, Sunday 10 to 5. The chain's NorCal price list has a tube or tire install at $15 labor (Oct 2026). This store doesn't rent bikes; the chain's demo and rental fleet in Marin is at Mike's Bikes of San Rafael."
+    },
+    {
+      "name": "Splitrock Tap & Wheel",
+      "url": "https://www.splitrocktapandwheel.com/contact/fairfax-bike-shop-cafe-pg141.htm",
+      "address": "2020 Sir Francis Drake Blvd., Fairfax, CA 94930",
+      "phone": "(415) 721-7644",
+      "services": [
+        "repair",
+        "rental",
+        "rental-mtb",
+        "rental-ebike",
+        "coffee"
+      ],
+      "note": "Zone 2, Fairfax, about 17 miles north-northwest of City Hall; a bike shop with a café and taproom, and the start of {ride:fairfax-ca-marin-cyclists-fairfax-to-point-reyes-station|Marin Cyclists' Point Reyes Station ride}. The shop is open every day, 10 to 6; the café runs 11 a.m. to 8:30 or 9 p.m. Rents full-suspension, hardtail and electric trail bikes for a half day or 24 hours; no prices on the site. Walk-ins are taken, but reserve to get your size. Tune-up $150 (Oct 2026). The business filed for Chapter 11 in April 2026 and said it will keep operating (WhatNow, April 14, 2026), so call before you count on it.",
+      "ride_slug": "fairfax-ca-marin-cyclists-fairfax-to-point-reyes-station"
+    }
+  ],
+  "culture": [
+    {
+      "name": "Amoeba Music San Francisco",
+      "kind": "record-store",
+      "url": "https://www.amoeba.com/our-stores/",
+      "address": "1855 Haight St. San Francisco, CA 94117",
+      "note": "Zone 3, the Upper Haight near Golden Gate Park, inside the old Park Bowl bowling alley. New and used vinyl and CDs, a DVD room it calls the biggest in the Bay Area, and free in-store shows. Open 11 to 7 every day, so it works after a park and Sunset Dunes loop."
+    },
+    {
+      "name": "City Lights Booksellers & Publishers",
+      "kind": "bookstore",
+      "url": "https://citylights.com/",
+      "address": "261 Columbus Avenue, San Francisco, CA 94133",
+      "note": "Zone 6, North Beach, about a mile and a half from City Hall. The bookstore and press the poet Lawrence Ferlinghetti founded in 1953, still selling and publishing. Open 10 a.m. to 10 p.m. every day, so it's the stop after dinner at Original Joe's, a few blocks away."
+    },
+    {
+      "name": "Ferry Plaza Farmers Market",
+      "kind": "market",
+      "url": "https://www.ferrybuildingmarketplace.com/farmers-market/",
+      "address": "One Ferry Building, San Francisco, California 94111",
+      "note": "Zone 6, the Ferry Building on the Embarcadero, about 2 miles from City Hall, where {ride:san-francisco-ca-butterlap|Butterlap} gathers and the Sausalito and Larkspur ferries land. Foodwise runs it year-round, rain or shine: Tuesday and Thursday 10 to 2, Saturday 8 to 2, with about 70 farmers and 50 food makers. Saturday is the big one, out front and on the back plaza over the bay, so it works after a morning ride; no bike parking stated."
+    },
+    {
+      "name": "GLBT Historical Society Museum",
+      "kind": "museum",
+      "url": "https://www.glbthistory.org/museum-about-visitor-info",
+      "address": "4127 18th Street, San Francisco, CA 94114",
+      "note": "Zone 6, the Castro, where {ride:san-francisco-ca-different-spokes-jersey-ride|Different Spokes' Jersey Ride} leaves from. One long-term show, Queer Past Becomes Present, plus rotating ones; the audioguide runs about 35 minutes, so give it an hour. Open 11 to 5 Tuesday to Sunday, closed 1 to 1:30 and all day Monday; $10, $6 discounted, free the first Wednesday of the month (Oct 2026)."
+    },
+    {
+      "name": "Splitrock Tap & Wheel (the taproom)",
+      "kind": "bar",
+      "url": "https://www.splitrocktapandwheel.com/",
+      "address": "2020 Sir Francis Drake Blvd., Fairfax, CA 94930",
+      "note": "Zone 2, Fairfax, the post-ride bar in Marin: the taproom and café side of the bike shop where {ride:fairfax-ca-marin-cyclists-fairfax-to-point-reyes-station|Marin Cyclists' Point Reyes Station ride} meets; the Mt. Tam loop in this guide starts in Fairfax too. The café runs 11 a.m. to 8:30 or 9 p.m., per its own site; the shop is open every day 10 to 6. The business filed for Chapter 11 in April 2026 and said it will keep operating (WhatNow, April 14, 2026), so call (415) 721-7644 before you plan the evening around it."
+    },
+    {
+      "name": "Castro Theatre",
+      "kind": "venue",
+      "url": "https://thecastro.com/",
+      "address": "429 Castro St, San Francisco, CA 94114",
+      "note": "Zone 6, the Castro, about a mile and a half from City Hall. The neighborhood's theater reopened February 6, 2026 after a $41 million renovation. Another Planet runs it, mostly concerts, with films and comedy too. Buy tickets online; the box office opens 30 minutes before doors on show nights. The evening plan for anyone sleeping at Beck's."
+    }
+  ],
+  "clubs": [
+    {
+      "name": "Different Spokes San Francisco",
+      "url": "https://dssf.org/",
+      "note": "The Bay Area's recreational bicycling club for the LGBTQ+ community and friends, in its own words, with routes for every level. {ride:san-francisco-ca-different-spokes-jersey-ride|The Jersey Ride} is the club ride, from the Castro over the bridge to Tiburon, with lunch there; the club's other Saturday rides leave Jane Warner Plaza in the Castro, and the route is on the club calendar. Guests ride three times on a waiver, then join.",
+      "inclusive_focus": [
+        "lgbtq"
+      ],
+      "ride_slug": "san-francisco-ca-different-spokes-jersey-ride"
+    },
+    {
+      "name": "Fat Cake Club",
+      "url": "https://www.fatcake.cc/rides",
+      "note": "Early rides that end at a bakery. {ride:san-francisco-ca-fat-cake-club-monday-ftwnb-ride|The FTWNB ride} from the Conservatory of Flowers is for femme, trans, women and non-binary riders, with allies asked along the first Monday of the month. {ride:san-francisco-ca-fat-cake-club-tuesday-headlands-arsicault|Headlands and Arsicault} and {ride:san-francisco-ca-fat-cake-club-first-thursday-donut-alley|Donut Alley} leave the bridge pavilions. On the other Thursdays the club's rides page lists a ride with the start, the park or the bridge, and the bakery posted on Instagram. Sign the waiver on the site before your first ride; ride calls land on the club's Strava first.",
+      "inclusive_focus": [
+        "women-trans-femme"
+      ],
+      "ride_slug": "san-francisco-ca-fat-cake-club-monday-ftwnb-ride"
+    },
+    {
+      "name": "Women and Non-Binary Bike SF",
+      "url": "https://sfbike.org/events/category/membership-2/women-bike-sf/",
+      "note": "A free social ride for women and non-binary riders, slow enough to talk, and in the host's words no rider left behind. {ride:san-francisco-ca-women-and-non-binary-bike-sf-friday-morning-ride|The ride} leaves McLaren Lodge at the Stanyan Street entrance to Golden Gate Park and takes the park's car-free roads out to Sunset Dunes and back. Show up; no RSVP. It is on the SF Bicycle Coalition calendar but run by riders, not the coalition.",
+      "inclusive_focus": [
+        "women-trans-femme",
+        "no-drop"
+      ],
+      "ride_slug": "san-francisco-ca-women-and-non-binary-bike-sf-friday-morning-ride"
+    },
+    {
+      "name": "Tam Velo Club",
+      "url": "https://www.tamveloclub.com/weeklyrides.html",
+      "note": "Marin's club, on the far side of the bridge. {ride:mill-valley-ca-tam-velo-club-saturday-ride|The club ride} and {ride:mill-valley-ca-tam-velo-sunday-recovery-ride|the recovery ride} leave Equator Coffees at Proof Lab in Mill Valley, per the club's 2026 weekly rides page, and {ride:mill-valley-ca-tam-velo-club-wednesday-training-ride|a training ride} leaves the Mill Valley bike path. Equator opens at 6:30, before either weekend roll-out.",
+      "inclusive_focus": [],
+      "ride_slug": "mill-valley-ca-tam-velo-club-saturday-ride"
+    },
+    {
+      "name": "Berkeley Bicycle Club",
+      "url": "https://berkeleybikeclub.org/friday-coffee-ride",
+      "note": "The East Bay club, a BART ride from the city. {ride:berkeley-ca-berkeley-bicycle-club-friday-coffee-ride|The Coffee Ride} meets at Peet's on Domingo, next to the Claremont Hotel, and rolls sharp, per the club's page; {ride:berkeley-ca-berkeley-bicycle-club-sunday-wtfn-ride|the WTFN ride} from the same corner is for women, trans, femme and non-binary riders. {ride:richmond-ca-berkeley-bicycle-club-saturday-marin-ride|Its Marin ride} leaves Maya Taqueria in Point Richmond.",
+      "inclusive_focus": [
+        "women-trans-femme"
+      ],
+      "ride_slug": "berkeley-ca-berkeley-bicycle-club-friday-coffee-ride"
+    },
+    {
+      "name": "Bike Kitchen",
+      "url": "https://bikekitchen.org/",
+      "note": "The non-profit co-op that teaches bike repair, at 650 Florida St, Suite H, in the Mission between 18th and 19th. Day use is $5; a year's membership is $40 to $100 on a sliding scale, or six volunteer hours (Oct 2026). Open Tuesday and Wednesday 6 to 9 pm and Saturday 9 am to noon; Monday 6:30 to 9 pm is Women/Trans/Fem/Non-Binary Night (hours posted for the week of Jan 25, 2026, so check the site). 415-506-7433.",
+      "inclusive_focus": [
+        "women-trans-femme"
+      ],
+      "ride_slug": null
+    },
+    {
+      "name": "San Francisco Bicycle Coalition",
+      "url": "https://sfbike.org/events/",
+      "note": "The city's bike advocacy group. Its events calendar is where community rides go up; October 2026 has a Filipino-American History Month ride, an accessible ride in Golden Gate Park, a family ride with the fire department and adult learn-to-ride classes. Bike It Forward, a community repair night, runs every Tuesday 5 to 7 pm at the office, 1720 Market St.",
+      "inclusive_focus": [],
+      "ride_slug": null
+    }
+  ],
+  "bring_your_bike": {
+    "summary": "Bring it, unless the trip is a day or two. Alaska, Delta and American check a packed bike as a standard bag, $45 each way (Oct 2026; $50 at the airport on American). SFO has bike assembly stations, so you can build the bike at the airport and take BART into the city. To skip flying with it, Columbus Cyclery in North Beach builds a shipped bike for $135 (Oct 2026). Sports Basement and High Trails rent carbon road and gravel bikes from $100 a day (Oct 2026). You don't need a car: the Golden Gate Bridge is open to bikes around the clock, and BART, Caltrain and the Golden Gate ferries all carry bikes.",
+    "fly": {
+      "airports": [
+        {
+          "name": "San Francisco International",
+          "code": "SFO",
+          "miles": 11,
+          "note": "About 11 miles south of City Hall. Alaska, American, Delta, Frontier, JetBlue and Sun Country use Harvey Milk Terminal 1; Southwest uses Terminal 2; United domestic uses Terminals 2 and 3 (SFO's airline list, Oct 2026). Bike assembly stands are in International Terminal Courtyards A and G and on Level 1 of the Rental Car Center. The Airport Travel Agency, in the International Terminal by the G-gate checkpoint, sells airline-approved bike boxes and has a stand and tools, 6 am to 11 pm daily, 650-877-0422. BART leaves from the International Terminal, reached free on AirTrain. Ride apps pick up on Level 5 of the Domestic Garage. Rental cars are at the Rental Car Center on the AirTrain Blue Line. Riding out: bikes are banned on the main airport roadways; the marked route uses North and South McDonnell Road from San Bruno Avenue or Millbrae Avenue."
+        },
+        {
+          "name": "Oakland San Francisco Bay Airport",
+          "code": "OAK",
+          "miles": 12,
+          "note": "About 12 miles southeast of City Hall, across the bay; the door for the East Bay hills. Alaska, Delta, Frontier, Hawaiian, Southwest, Volaris, JSX and Advanced Air (the airport's airline list, Oct 2026). The BART station is across the street from the terminals, and an 8-minute ride reaches Coliseum and the rest of BART. Bikes are banned on that connector's narrow escalators, so use the elevator. Rental cars are a shuttle ride away at the Rental Car Center; the shuttle stops at the third curb outside Terminals 1 and 2."
+        },
+        {
+          "name": "San José Mineta International",
+          "code": "SJC",
+          "miles": 39,
+          "note": "About 39 miles southeast of City Hall, at the far end of the Peninsula. Alaska, American, Delta, Frontier, Hawaiian, Southwest, United, Volaris and ZIPAIR (the airport's airline list, Oct 2026). A fallback fare for the city. Check the airport's site for ground transport."
+        }
+      ],
+      "airline_note": "Read on each airline's own page, Oct 2026. Alaska: a non-motorized bike is on its list of sports equipment that pays the standard checked-bag fee, with the oversize fee waived and the overweight fee waived up to 70 lb. Over 115 linear inches pays oversize; over 70 lb pays overweight. Pack in a soft or hard bike case or the maker's box, one bike per case, handlebars sideways, pedals off. First bag $45, second $55 for flights ticketed on or after April 10, 2026. Southwest: its fee page says sports equipment on its Help Center list is a standard bag, oversize fees are waived, overweight fees still apply ($100 extra for 51 to 70 lb, $200 for 71 to 100 lb), and a limited release of liability may apply. First bag $45, second $55 for travel booked on or after April 9, 2026. Check that bikes are on its list before you fly. Delta: a non-motorized touring or single-seat racing bike in a container built for bikes goes at the standard bag allowance and fee; over 50 lb pays the excess weight fee; over 115 linear inches or 100 lb is refused; a soft bag means signing a limited release, a hard case doesn't. First bag $45, second $55, US domestic Main and Comfort. American: one non-motorized bike in a hard case, bike bag or box pays the standard checked-bag fee up to 50 lb and the standard overweight fee from 51 to 70 lb; oversize fees don't apply. Handlebars fixed sideways, pedals off or wrapped. Outside a hard case it's treated as fragile. First bag $45 online or $50 at the airport, second $55 or $60 (updated May 18, 2026). United: not confirmed, so it is left off this list. Read its sports-equipment page before you book. Keep the case under 50 lb and on Alaska, Delta and American it's one ordinary checked bag."
+    },
+    "ship": {
+      "note": "One shop says it on its own site: Columbus Cyclery in North Beach takes a bike shipped to the shop and builds and tunes it in 24 to 48 hours for $135, $190 for an e-bike (Oct 2026). It holds the bike free for a few days, then charges $13 a day, and boxes it for the trip home for $115, or $135 with accessories. It doesn't service tubeless or tubular tires, so bring your own sealant. Sports Basement builds a boxed bike bought elsewhere for $155 (new) or $120 (used) and boxes one for $110. Valencia Cyclery boxes for BikeFlights from $120 (Oct 2026). Neither says it will receive a shipment; call first. BikeFlights works out the ship date from your trip dates and says to allow an extra day or two for weather. ShipBikes ships by UPS Ground, no more than 6 business days one way within the continental US (both read Oct 2026). Ship a week ahead.",
+      "shops": [
+        {
+          "name": "Columbus Cyclery",
+          "url": "https://columbuscyclery.com/bike-assembly-tune-up/",
+          "note": "Ship your bike to the shop; they assemble and tune it in 24 to 48 hours. $135, $90 single speed, $190 e-bike (Oct 2026). Free storage for 5 days after assembly per this page (the repair page says 7), then $13 a day. Boxing for the return: $115 bare, $135 with accessories. No tubeless or tubular service. Open every day 10 to 6. 2011 Mason Street, North Beach; (415) 561-9999."
+        }
+      ]
+    },
+    "rent": {
+      "note": "San Francisco rents real bikes, gravel included. Sports Basement Presidio, nearest the bridge, rents a carbon Synapse or Addict road bike (Shimano 105 or better, 44 to 61 cm) or a Topstone Carbon gravel bike for $100 a day, $175 for 2 to 4 days and $300 for 5 to 9 days. A Dura-Ace Synapse is $135 a day. It's open every day and rents a Thule bike case too. High Trails Cyclery on Polk Street has a Caledonia-type carbon road bike at $100 and an Aspero-type gravel bike at $125 a day, with the pedals you choose. It's closed Sundays; call, because its rental page may be dated. Columbus Cyclery rents race bikes at $59 a day with no model listed (all prices Oct 2026). The math: flying the bike as your first bag costs $90 round trip on Alaska, Delta or American (paid online), $110 as a second bag. So a one-day rental is about a wash, and a weekend rental costs $65 to $85 more but skips the case, the build and the haul in from SFO. A week, a fit you depend on, or your own pedals and saddle: bring yours. Tam's trails: Splitrock in Fairfax rents full-suspension and e-MTBs, prices not published.",
+      "shops": [
+        {
+          "name": "Sports Basement Presidio",
+          "url": "https://www.sportsbasement.com/pages/bike-rental-rates",
+          "note": "Carbon road (Cannondale Synapse or Scott Addict 30, Shimano 105 or better, 44 to 61 cm) and Cannondale Topstone Carbon gravel (105, XS to XL): $100 a day, $175 for 2 to 4 days, $300 for 5 to 9 days. Synapse Hi-Mod Dura-Ace (51 to 61 cm): $135, $220, $380. Cannondale Habit 6 full-suspension (S to XL): $100 a day. E-bikes $75 a day (all Oct 2026). Helmet, lock and flat kit included; pedals not stated; $1,000 hold on a physical credit card with matching ID; no sales tax. Reserve online; pick up at Presidio, Stonestown or Berkeley. 610 Old Mason Street; (415) 934-2900."
+        },
+        {
+          "name": "High Trails Cyclery",
+          "url": "https://www.hightrailscycles.com/rentals/rental-and-demo-bikes-pg204.htm",
+          "note": "Premium road (carbon, hydraulic disc, Cervelo Caledonia or similar, 48 to 61 cm) $100 a day; premium gravel (Cervelo Aspero or similar, 48 to 58 cm) $125 a day; full-suspension MTB $150; e-MTB $200 (read Oct 2026; the page's images date from May 2024, so call). Flat, SPD, SPD-SL or Look Keo pedals, cage, helmet and lock included. Reserve by the shop's form; waiver required. Closed Sundays. 1825 Polk Street; (415) 814-3216."
+        },
+        {
+          "name": "Columbus Cyclery",
+          "url": "https://columbuscyclery.com/bike-rental-san-francisco/",
+          "note": "Race bikes: $20 an hour (2-hour minimum), $59 a day, $50 a day for three days or more (Oct 2026). No model, groupset or sizes listed. U-lock, pump, spare tube and free helmet included. No booking; walk in. Open every day 10 to 6. 2011 Mason Street; (415) 561-9999."
+        },
+        {
+          "name": "Splitrock Tap & Wheel",
+          "url": "https://www.splitrocktapandwheel.com/about/demos-rentals-pg231.htm",
+          "note": "Full-suspension, hardtail and electric trail bikes for a half day or 24 hours, minutes from Tamarancho and Mt. Tamalpais State Park (the shop's words). No prices or sizes on the site. Reserve ahead to get your size. Open every day 10 to 6. 2020 Sir Francis Drake Blvd., Fairfax; (415) 721-7644."
+        }
+      ]
+    },
+    "get_around": {
+      "car_needed": false,
+      "note": "The bridge, the Headlands and Golden Gate Park start inside the city. BART carries bikes to the East Bay hills, Caltrain to the Peninsula climbs, and the Golden Gate ferries bring you back from Sausalito, Tiburon and Larkspur. The longest reach is Fairfax, start of {ride:fairfax-ca-marin-cyclists-fairfax-to-point-reyes-station|Marin Cyclists' Point Reyes Station ride}, about 17 miles north of City Hall. A car is also a break-in risk. SFPD's break-in page (updated Oct 2, 2026) tells visitors to put loose items in the trunk before they arrive and to check luggage at the hotel rather than leave it in the car. It says nothing about bikes on racks. Out of SFO with a case: a ride app from Level 5 of the Domestic Garage (book an XL), or a rental car from the Rental Car Center on AirTrain. Or build the bike at an SFO assembly stand (International Terminal Courtyards A and G, or Rental Car Center Level 1) and take BART into the city with it. No BART, AirTrain or SFO page says anything about carrying a boxed bike. Out of OAK: BART is across the street.",
+      "transit_bike_rules": "Read Oct 2026. BART: bikes ride every train at all hours, but never in the first car or a crowded car. Folded bikes go in any car. Hold or secure the bike, yield seats and aisles, and never ride inside a station. Bikes may use most escalators, but not the ten narrow ones at 19th Street Oakland, Antioch and the Oakland Airport Connector. Most bikes need the wide accessible fare gate. Class 1, 2 and 3 e-bikes are allowed. Muni: every bus has a front rack for two or three bikes, first come first served, no charge. Wheels must be 20 inches or larger, tires no wider than 3 inches, bars no wider than 42 inches, and no motorized bikes or loose bags on the bike. Only folding bikes go inside a bus or on Muni Metro, light rail and historic streetcars. No bikes on cable cars. Caltrain: electric trains have two bike cars, 36 bikes each; no extra charge; the bike must fit a 71-inch stall; tag it with your stop. The conductor can turn bikes away on a crowded train. No escalators. Folding bikes up to 32 inches wide ride in any car. Caltrain is reviewing its bike rules in 2026 and has paused enforcement of its bike attachment rules; check before you go. Golden Gate Ferry (Sausalito, Tiburon, Larkspur): bikes and e-bikes are welcome, first come first served, and you may have to carry the bike up or down stairs. A Larkspur catamaran holds up to 30 bikes and the larger Spaulding boats up to 100; Tiburon boats take up to 30. Sausalito boards first come first served and gets busy in summer. No charging e-bikes on board. Folding bikes are stowed under a seat. No bike-share bikes.",
+      "bike_share": {
+        "name": "Bay Wheels",
+        "url": "https://www.lyft.com/bikes/bay-wheels/pricing",
+        "note": "Classic and electric bikes. A single ride is $1 to unlock, then $0.19 a minute on a classic bike or $0.49 a minute on an e-bike. A day pass is $15, with 30 minutes free per classic ride (Oct 2026). Not allowed on Golden Gate Ferry, and BART asks you to leave them outside the station. For the errand or the ride to dinner, not the ride."
+      }
+    },
+    "rules_and_safety": "California, read Oct 2026. Drivers must give three feet when passing a bike (Vehicle Code 21760, the Three Feet for Safety Act). A driver in the same lane must change lanes to pass when another lane is open. The fine is $35, or $220 if a collision injures the rider (text as amended January 1, 2023). Riders have the same rights and duties as drivers (21200), so stop at stop signs and red lights; CalBike's summary of state law lists no stop-as-yield exception. Ride as far right as practicable except when passing, turning left, avoiding a hazard or in a lane too narrow to share (21202). Use the bike lane when slower than traffic (21208). Helmets are required under 18. E-bikes come in three classes (312.5): class 1 pedal-assist to 20 mph, class 2 throttle to 20 mph, class 3 pedal-assist to 28 mph with a speedometer, rider 16 or older and helmeted. At night you need a white front light and reflectors. In San Francisco it's illegal to ride on the sidewalk if you're over 13 (Transportation Code 7.2.12, per the SF Bicycle Coalition). The Golden Gate Bridge: bikes ride the sidewalks free, 24 hours. Speed limit is 15 mph, 5 mph at the towers, and you yield to people walking. All e-bike classes are allowed. Standard time (November to March): weekdays use the east sidewalk 5 am to 3:30 pm and the west sidewalk 3:30 to 6:30 pm; weekends and holidays use the west sidewalk 5 am to 6:30 pm. Daylight time: the west sidewalk opens at 3:30 pm on weekdays until 9 pm, and both sidewalks are open 5 am to 9 pm on weekends. Overnight it's the east sidewalk through gates you buzz to open. Lights at the approach show which side is open; high wind and events can close the west side. The read: the city counted 14 traffic deaths in the first half of 2026, one of them a person on a bike (Vision Zero SF monthly report, data as of July 17, 2026). The city's High Injury Network is 13 percent of its streets, where 74 percent of severe and fatal injuries happened from 2020 to 2024.",
+    "sources": [
+      "https://www.alaskaair.com/content/travel-info/baggage/special-baggage/traveling-with-sporting-equipment",
+      "https://www.alaskaair.com/content/travel-info/baggage/checked-bags",
+      "https://www.southwest.com/html/customer-service/travel-fees.html",
+      "https://www.delta.com/us/en/baggage/special-items/sporting-equipment",
+      "https://www.delta.com/us/en/baggage/overview",
+      "https://www.aa.com/web/i18n/travel-info/baggage/specialty-and-sports.html",
+      "https://www.aa.com/i18n/travel-info/baggage/checked-baggage-policy.jsp",
+      "https://www.flysfo.com/passengers/flight-info/airlines-sfo",
+      "https://www.flysfo.com/passengers/ground-transportation/biking",
+      "https://www.flysfo.com/passengers/ground-transportation/public-transit",
+      "https://www.flysfo.com/passengers/ground-transportation/rental-cars",
+      "https://www.flysfo.com/passengers/ground-transportation/lyft-uber-rides",
+      "https://www.iflyoak.com/fly/buy-tickets/",
+      "https://www.iflyoak.com/ground-transportation/public-transportation/",
+      "https://www.iflyoak.com/ground-transportation/car-rentals/",
+      "https://www.flysanjose.com/airlines",
+      "https://www.bart.gov/guide/bikes",
+      "https://www.bart.gov/guide/bikes/bikeRules",
+      "https://www.bart.gov/guide/bikes/bikeFAQ",
+      "https://www.sfmta.com/getting-around/bike/bikes-muni",
+      "https://www.caltrain.com/rider-information/bicycles",
+      "https://www.caltrain.com/rider-information/bicycles/bikes-train",
+      "https://www.caltrain.com/bike-scooter-rules-update-pilot",
+      "https://www.goldengate.org/ferry/riding-the-ferry/bringing-your-bike/",
+      "https://www.goldengate.org/bridge/visiting-the-bridge/bikes-pedestrians/",
+      "https://www.lyft.com/bikes/bay-wheels/pricing",
+      "https://columbuscyclery.com/bike-assembly-tune-up/",
+      "https://columbuscyclery.com/bike-rental-san-francisco/",
+      "https://www.sportsbasement.com/pages/bike-rental-rates",
+      "https://shop.sportsbasement.com/pages/services-bike",
+      "https://www.valenciacyclery.com/articles/ship-your-bike-pg199.htm",
+      "https://www.hightrailscycles.com/rentals/rental-and-demo-bikes-pg204.htm",
+      "https://www.splitrocktapandwheel.com/about/demos-rentals-pg231.htm",
+      "https://faq.bikeflights.com/support/solutions/articles/13000072445-what-delivery-date-should-i-choose-",
+      "https://www.shipbikes.com/frequently-asked-questions/",
+      "https://california.public.law/codes/vehicle_code_section_21760",
+      "https://www.calbike.org/go_for_a_ride/california_bicycle_laws/",
+      "https://sfbike.org/resources/bicycle-law/rules-of-the-road/",
+      "https://www.sanfranciscopolice.org/prevent-auto-break-ins-know-how-respond",
+      "https://www.visionzerosf.org/maps-data/",
+      "https://www.visionzerosf.org/wp-content/uploads/2026/07/06.2026Fatalities_JuneSummaryMemo.pdf"
+    ]
+  },
+  "travel_links": [],
+  "faq": [
+    {
+      "q": "Should I bring my bike to San Francisco?",
+      "a": "Yes, for three days or more. Alaska, Delta and American check a packed bike as a standard bag, $45 each way (Oct 2026), and Columbus Cyclery in North Beach receives a shipped bike and builds it for $135. Renting only wins on a one- or two-day trip: Sports Basement and High Trails rent carbon road bikes at $100 a day and gravel bikes at $100 to $125 (Oct 2026). Bring your own pedals either way."
+    },
+    {
+      "q": "Do I need a car to ride in San Francisco?",
+      "a": "No. The bridge, the Marin Headlands and Golden Gate Park start inside the city. BART takes bikes to the Berkeley hills, Caltrain to the Peninsula climbs, and the Golden Gate ferries carry bikes home from Sausalito, Tiburon and Larkspur. From SFO, build the bike at an airport assembly stand and ride BART in. A car in the city is a break-in risk, per SFPD's own page."
+    },
+    {
+      "q": "Can I ride a bike across the Golden Gate Bridge?",
+      "a": "Yes, free, 24 hours a day, on the sidewalks, which you share with people walking: 15 mph, 5 mph at the towers, and all e-bike classes are allowed. Which sidewalk bikes use changes with the clock and the season (the bridge district's page, Oct 2026): on weekdays until 3:30 pm it is the east side, after that and on weekends check the bridge's own table, and lights at the approach show which side is open. Overnight it's the east sidewalk through gates you buzz to open, and high wind can close the west side; the full schedule is on the Bring-your-bike page."
+    },
+    {
+      "q": "Where do group rides start in San Francisco?",
+      "a": "{ride:san-francisco-ca-different-spokes-jersey-ride|Different Spokes' Jersey Ride}, the LGBTQ+ club ride, meets in the Castro at 16th and Market. Fat Cake Club's dawn rides leave the Conservatory of Flowers in Golden Gate Park ({ride:san-francisco-ca-fat-cake-club-monday-ftwnb-ride|the FTWNB ride}) and the bridge pavilions ({ride:san-francisco-ca-fat-cake-club-tuesday-headlands-arsicault|Headlands and Arsicault}, {ride:san-francisco-ca-fat-cake-club-first-thursday-donut-alley|Donut Alley}). {ride:san-francisco-ca-hummingbird-fuels-all-watts-welcome-intervals|Hummingbird's interval ride} meets at the bridge Welcome Center. {ride:san-francisco-ca-women-and-non-binary-bike-sf-friday-morning-ride|Women and Non-Binary Bike SF} meets at McLaren Lodge, the Stanyan Street entrance to Golden Gate Park. {ride:san-francisco-ca-butterlap|Butterlap} leaves the Ferry Building and {ride:san-francisco-ca-critical-mass|Critical Mass} gathers at Embarcadero Plaza. In Marin, Equator Coffees in Mill Valley is the start of {ride:mill-valley-ca-tam-velo-club-saturday-ride,mill-valley-ca-tam-velo-sunday-recovery-ride|Tam Velo Club's rides}."
+    },
+    {
+      "q": "Can I rent a road or gravel bike in San Francisco?",
+      "a": "Yes. Sports Basement in the Presidio rents a carbon Cannondale Synapse or Scott Addict road bike and a Topstone Carbon gravel bike at $100 a day, less by the week, with sizes listed (Oct 2026); it also rents a bike travel case. High Trails Cyclery on Polk Street rents a Cervelo Caledonia-type road bike at $100 and an Aspero-type gravel bike at $125 a day with the pedals you ask for (Oct 2026), closed Sundays. For Mt. Tam's trails, Splitrock Tap & Wheel in Fairfax rents full-suspension and electric mountain bikes; prices aren't published."
+    },
+    {
+      "q": "Is the Great Highway closed to cars?",
+      "a": "The Upper Great Highway along Ocean Beach closed to cars and opened as a park, Sunset Dunes, in April 2025 (KQED). Two miles of old road by the sand, with entrances from Lincoln Way to Sloat Blvd and water at Judah and Taraval, per the park's page. KQED reported (April 2026, updated September 2026) a signature drive for a measure to let cars back on weekdays; whether it made a ballot was not confirmed when we checked, so read the park's page before you plan around it."
+    }
+  ],
+  "sources": [
+    "https://ridewithgps.com/routes/2145313",
+    "https://pjammcycling.com/climb/2357.Hawk-Hill",
+    "https://presidio.gov/explore/itineraries/getting-to-the-golden-gate-bridge-by-bike",
+    "https://www.goldengate.org/bridge/visiting-the-bridge/bikes-pedestrians/",
+    "https://sunsetdunes.org/visit",
+    "https://sunsetdunes.org/events",
+    "https://sfbike.org/event/sunset-dunes-family-ride/",
+    "https://www.kqed.org/news/12079238/one-year-of-san-franciscos-controversial-beachside-park",
+    "https://en.wikipedia.org/wiki/Sunset_Dunes",
+    "https://www.dssf.org/content.aspx?page_id=22&club_id=17789&module_id=336753",
+    "https://www.dssf.org/content.aspx?page_id=4002&club_id=17789&item_id=2992657",
+    "https://dssf.org/content.aspx?page_id=4091&club_id=17789&item_id=2864261",
+    "https://www.dssf.org/content.aspx?page_id=4091&club_id=17789&item_id=2527581",
+    "https://www.dssf.org/content.aspx?page_id=4001&club_id=17789",
+    "https://www.dssf.org/",
+    "https://ridewithgps.com/ambassador_routes/466-marin-headlands-loop?lang=en",
+    "https://ridewithgps.com/routes/9573159",
+    "https://bestrides.org/mt-tamalpais/",
+    "https://pjammcycling.com/climb/350.Mt.%20Tam%20via%20Alpine%20Dam",
+    "https://ridewithgps.com/routes/8476160?lang=en",
+    "https://ridewithgps.com/routes/28865102?lang=en",
+    "https://ridewithgps.com/routes/3983888",
+    "https://www.bayarearides.com/rides/oldlahonda2/",
+    "https://ridewithgps.com/routes/469253",
+    "https://bestrides.org/grizzly-peak-to-redwood-road/",
+    "https://ridewithgps.com/routes/20947168?lang=en",
+    "https://www.komoot.com/smarttour/e806610077/hawk-hill-via-golden-gate-park-presidio-and-golden-gate-bridge-loop-san-francisco",
+    "https://www.blazingsaddles.com/san-francisco/routes-and-tours/marin-headlands",
+    "https://shop.sportsbasement.com/blogs/stores/san-francisco-presidio",
+    "https://shop.sportsbasement.com/blogs/stores",
+    "https://www.sportsbasement.com/blogs/stores/berkeley",
+    "https://www.sportsbasement.com/pages/bike-rental-rates",
+    "https://shop.sportsbasement.com/products/sbrents-road-carbon-relaxed-geometry",
+    "https://shop.sportsbasement.com/products/sbrents-topstone-carbon-105",
+    "https://shop.sportsbasement.com/products/sbrents-cannondale-synapse-hi-mod-disc-dura-ace",
+    "https://shop.sportsbasement.com/products/sbrents-mountain-bike-alloy-fs",
+    "https://shop.sportsbasement.com/products/sbrents-rental-electric-bikes",
+    "https://shop.sportsbasement.com/products/sbrents-bike-travel-case",
+    "https://shop.sportsbasement.com/pages/services-bike",
+    "https://www.hightrailscycles.com/",
+    "https://www.hightrailscycles.com/rentals/rental-and-demo-bikes-pg204.htm",
+    "https://www.hightrailscycles.com/contact/contact-pg141.htm",
+    "https://www.hightrailscycles.com/articles/service-department-pg186.htm",
+    "https://columbuscyclery.com/",
+    "https://columbuscyclery.com/bike-assembly-tune-up/",
+    "https://columbuscyclery.com/bike-boxing-shipping/",
+    "https://columbuscyclery.com/bike-rental-san-francisco/",
+    "https://columbuscyclery.com/bike-repair-san-francisco/",
+    "https://columbuscyclery.com/contact/",
+    "https://www.valenciacyclery.com/",
+    "https://www.valenciacyclery.com/articles/bike-repair-pg184.htm",
+    "https://www.valenciacyclery.com/articles/ship-your-bike-pg199.htm",
+    "https://www.valenciacyclery.com/contact/location-pg202.htm",
+    "https://mikesbikes.com/pages/sausalito",
+    "https://mikesbikes.com/pages/bike-demos-rentals",
+    "https://mikesbikes.com/pages/bike-services",
+    "https://mikesbikes.com/pages/fit-services",
+    "https://www.splitrocktapandwheel.com/",
+    "https://www.splitrocktapandwheel.com/contact/fairfax-bike-shop-cafe-pg141.htm",
+    "https://www.splitrocktapandwheel.com/about/demos-rentals-pg231.htm",
+    "https://www.splitrocktapandwheel.com/about/bike-service-pg229.htm",
+    "https://whatnow.com/news/trending/northern-california-bike-shop-and-taproom-files-for-chapter-11/",
+    "https://cyclesport.com/",
+    "https://cyclesport.com/pages/sfcs-store-location",
+    "https://cyclesport.com/pages/bike-rental",
+    "https://abovecategory.com/",
+    "https://abovecategory.com/pages/contact",
+    "https://abovecategory.com/pages/servicing-upgrades",
+    "https://www.livelo.cc/pages/san-francisco-road-bike-hire",
+    "https://faq.bikeflights.com/support/solutions/articles/13000072589-how-do-i-ship-with-a-bike-shop-",
+    "https://www.restaurantji.com/ca/san-francisco/peets-coffee-14/",
+    "https://www.tamveloclub.com/weeklyrides.html",
+    "https://www.equatorcoffees.com/blogs/journal/celebrating-10-years-at-proof-lab",
+    "https://restaurantjump.com/equator-coffees-94941-2/",
+    "https://www.tripadvisor.com/Restaurant_Review-g60909-d16816385-Reviews-Equator_Coffees-Mill_Valley_Marin_County_California.html",
+    "https://enjoymillvalley.com/2025/01/16/tam-velo-clubs-ride-leaders-and-legacy-have-established-the-clubs-evolution-continues-to-build-on-marins-cycling-legacy/",
+    "https://www.peets.com/pages/store/domingo",
+    "https://berkeleybikeclub.org/friday-coffee-ride",
+    "https://www.achieveptc.com/blog/bay-area-group-rides-summary",
+    "https://www.fatcake.cc/tuesdays",
+    "https://www.waze.com/live-map/directions/arsicault-bakery-arguello-blvd-397-san-francisco?to=place.w.155648378.1556745922.4255117",
+    "https://www.timeout.com/san-francisco/restaurants/arsicault-bakery",
+    "https://www.sfbakeryride.com/blog/ride-5",
+    "https://www.tripadvisor.com/Restaurant_Review-g32908-d935052-Reviews-Bovine_Bakery-Point_Reyes_Station_Point_Reyes_National_Seashore_Marin_County_Califo.html",
+    "https://www.restaurantji.com/ca/point-reyes-station/bovine-bakery-/",
+    "https://javabeachcafe.com/page/locations",
+    "https://www.tripadvisor.com/Restaurant_Review-g60713-d2620311-Reviews-Java_Beach_Cafe-San_Francisco_California.html",
+    "https://elfarolitosf.com/about/",
+    "https://www.tripadvisor.com/Restaurant_Review-g60713-d480433-Reviews-El_Farolito-San_Francisco_California.html",
+    "https://www.originaljoes.com/north-beach",
+    "https://en.wikipedia.org/wiki/Original_Joe%27s",
+    "https://www.woodlandsmarket.com/tiburon/",
+    "https://business.tiburonchamber.org/list/member/woodlands-market-419",
+    "https://www.doordash.com/store/woodlands-market-deli-belvedere-tiburon-40357341/",
+    "https://maps.roadtrippers.com/us/tiburon-ca/food-drink/woodlands-market-tiburon",
+    "https://alicesrestaurant.com/",
+    "https://www.tripadvisor.com/Restaurant_Review-g33292-d511424-Reviews-Alice_s_Restaurant-Woodside_California.html",
+    "https://www.hiusa.org/find-hostels/california/san-francisco-building240-fortmason",
+    "https://www.hiusa.org/hi-san-francisco-fishermans-wharf-hostel-faq",
+    "https://www.hihostels.com/hostels/hi-san-francisco-fisherman-s-wharf",
+    "https://www.hostelworld.com/hostels/p/4551/hi-san-francisco-fisherman-s-wharf-hostel/",
+    "https://www.momondo.co.uk/hotels/san-francisco/HI-San-Francisco-Fisherman-s-Wharf-Hostel.mhd743091.ksp",
+    "https://presidiolodging.com/lodge-at-the-presidio/rooms/",
+    "https://presidiolodging.com/journal/hiking-and-biking-in-the-presidio/",
+    "https://presidio.gov/explore/attractions/lodge-at-the-presidio",
+    "https://presidio.gov/explore/attractions/inn-at-the-presidio",
+    "https://www.cavallopoint.com/",
+    "https://www.cavallopoint.com/discover/activities/",
+    "https://www.expedia.com/Sausalito-Hotels-Cavallo-Point.h1886656.Hotel-Information",
+    "https://guide.michelin.com/us/en/hotels-stays/san-francisco-bay-area/cavallo-point-lodge-5433",
+    "https://www.becksmotorlodge.com/",
+    "https://www.becksmotorlodge.com/about-us",
+    "https://www.becksmotorlodge.com/contact-and-location",
+    "https://www.becksmotorlodge.com/offers",
+    "https://www.ihg.com/holidayinnexpress/hotels/us/en/mill-valley/sfomv/hoteldetail",
+    "https://www.ihg.com/holidayinnexpress/hotels/us/en/mill-valley/sfomv/hoteldetail/amenities",
+    "https://millvalleyinn.com/",
+    "https://www.visitmarin.org/hotels/budget/tamalpais-motel/",
+    "https://expedia.com/Marina-District-hotels-Marina-Motel.h41063.Hotel-information",
+    "https://www.bikabout.com/lodging",
+    "https://enjoymillvalley.com/stay-play/",
+    "https://www.amoeba.com/our-stores/",
+    "https://en.wikipedia.org/wiki/Amoeba_Music",
+    "https://www.discogs.com/record-stores/store/amoebasf/",
+    "https://recordbuilds.com/san-francisco-record-stores/",
+    "https://citylights.com/",
+    "https://en.wikipedia.org/wiki/City_Lights_Bookstore",
+    "https://greenapplebooks.com/locations-directions-hours",
+    "https://www.7x7.com/independent-bookstores-san-francisco-2647088372.html",
+    "https://www.glbthistory.org/museum-about-visitor-info",
+    "https://en.wikipedia.org/wiki/GLBT_Historical_Society",
+    "https://thecastro.com/",
+    "https://thecastro.com/venue-info/tickets-box-office/",
+    "https://en.wikipedia.org/wiki/Castro_Theatre",
+    "https://www.ferrybuildingmarketplace.com/farmers-market/",
+    "https://www.ferrybuildingmarketplace.com/shops/the-ferry-plaza-farmers-market/",
+    "https://en.wikipedia.org/wiki/San_Francisco_Ferry_Building",
+    "https://en.wikipedia.org/wiki/El_Rio_(gay_bar)",
+    "https://www.cbsnews.com/sanfrancisco/news/el-rio-popular-lgbtq-bar-in-san-francisco-to-be-preserved-through-city-hall-program/",
+    "https://ma.to/venue/elriosf",
+    "https://outxout.com/venue/elriosanfrancisco",
+    "https://sanfrancisco.gaycities.com/bars/24-el-rio",
+    "https://en.wikipedia.org/wiki/Twin_Peaks_Tavern",
+    "https://outxout.com/blog/guide-to-the-castro",
+    "https://www.afar.com/magazine/the-11-best-gay-bars-in-san-francisco",
+    "https://dssf.org/",
+    "https://dssf.org/content.aspx?page_id=4001&club_id=17789",
+    "https://www.fatcake.cc/rides",
+    "https://tockify.com/sanfranciscorides/detail/11/1778506200000",
+    "https://sfbike.org/events/",
+    "https://sfbike.org/events/category/rides/",
+    "https://sfbike.org/events/category/membership-2/women-bike-sf/",
+    "https://sfbike.org/event/women-and-non-binary-bike-sf-friday-morning-ride-2/2026-10-09/",
+    "https://sfbike.org/event/honoring-comptons-cafeteria-a-pride-history-ride/",
+    "https://bikekitchen.org/",
+    "https://bikekitchen.org/programs-membership/",
+    "https://www.sfcyclingclub.org/",
+    "https://content.rapha.cc/us/en/clubhouses/san-francisco",
+    "https://ti.to/ccsfc/rapha-rides-san-francisco",
+    "https://ti.to/ccsfc/rapha-event-rides",
+    "https://dothebay.com/venues/rapha-cycle-club",
+    "https://bayarearides.org/",
+    "https://bayarearides.org/rides/2956",
+    "https://www.bespokecyclessf.com/rides",
+    "https://sf.funcheap.com/golden-gate-group-bike-ride-sports-basement/",
+    "https://www.alaskaair.com/content/travel-info/baggage/special-baggage/traveling-with-sporting-equipment",
+    "https://www.alaskaair.com/content/travel-info/baggage/checked-bags",
+    "https://www.southwest.com/html/customer-service/travel-fees.html",
+    "https://www.delta.com/us/en/baggage/special-items/sporting-equipment",
+    "https://www.delta.com/us/en/baggage/overview",
+    "https://www.aa.com/web/i18n/travel-info/baggage/specialty-and-sports.html",
+    "https://www.aa.com/i18n/travel-info/baggage/checked-baggage-policy.jsp",
+    "https://www.flysfo.com/passengers/flight-info/airlines-sfo",
+    "https://www.flysfo.com/passengers/ground-transportation/biking",
+    "https://www.flysfo.com/passengers/ground-transportation/public-transit",
+    "https://www.flysfo.com/passengers/ground-transportation/rental-cars",
+    "https://www.flysfo.com/passengers/ground-transportation/lyft-uber-rides",
+    "https://www.iflyoak.com/",
+    "https://www.iflyoak.com/fly/buy-tickets/",
+    "https://www.iflyoak.com/ground-transportation/public-transportation/",
+    "https://www.iflyoak.com/ground-transportation/car-rentals/",
+    "https://www.flysanjose.com/airlines",
+    "https://www.bart.gov/guide/bikes",
+    "https://www.bart.gov/guide/bikes/bikeRules",
+    "https://www.bart.gov/guide/bikes/bikeFAQ",
+    "https://www.sfmta.com/getting-around/bike/bikes-muni",
+    "https://www.sfmta.com/getting-around/bike/bike-education",
+    "https://www.caltrain.com/rider-information/bicycles",
+    "https://www.caltrain.com/rider-information/bicycles/bikes-train",
+    "https://www.caltrain.com/bike-scooter-rules-update-pilot",
+    "https://www.goldengate.org/ferry/riding-the-ferry/",
+    "https://www.goldengate.org/ferry/riding-the-ferry/bringing-your-bike/",
+    "https://www.lyft.com/bikes/bay-wheels/pricing",
+    "https://faq.bikeflights.com/support/solutions/articles/13000072445-what-delivery-date-should-i-choose-",
+    "https://www.shipbikes.com/frequently-asked-questions/",
+    "https://california.public.law/codes/vehicle_code_section_21760",
+    "https://www.calbike.org/go_for_a_ride/california_bicycle_laws/",
+    "https://sfbike.org/resources/bicycle-law/rules-of-the-road/",
+    "https://www.sanfranciscopolice.org/prevent-auto-break-ins-know-how-respond",
+    "https://www.visionzerosf.org/",
+    "https://www.visionzerosf.org/maps-data/",
+    "https://www.visionzerosf.org/wp-content/uploads/2026/07/06.2026Fatalities_JuneSummaryMemo.pdf"
+  ],
+  "verified": "2026-10-03"
+}

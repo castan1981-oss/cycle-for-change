@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:san-francisco-ca-women-and-non-binary-bike-sf-friday-morning-ride@cyc
+ leforchange.org
+DTSTAMP:20261003T000000Z
+DTSTART;TZID=America/Los_Angeles:20261009T073000
+DTEND;TZID=America/Los_Angeles:20261009T084500
+RRULE:FREQ=MONTHLY;BYDAY=2FR,4FR;UNTIL=20270302T235959Z
+SUMMARY:Women and Non-Binary Bike SF Friday Morning Ride — San Francisc
+ o\, CA
+LOCATION:McLaren Lodge\, Golden Gate Park\, 501 Stanyan St\, San Francisc
+ o\, CA 94117
+DESCRIPTION:Pace: social; in the host's words\, slow enough to talk witho
+ ut getting out of breath.\nNo-drop.\nSchedule: Second and fourth Fridays
+  of the month; gather 7:15 am\, depart 7:30 am\, back by 8:45 am.\nConfi
+ rm with the host before you go.\nhttps://cycleforchange.org/rides/san-fr
+ ancisco-ca-women-and-non-binary-bike-sf-friday-morning-ride/
+URL:https://cycleforchange.org/rides/san-francisco-ca-women-and-non-binar
+ y-bike-sf-friday-morning-ride/
+END:VEVENT
+END:VCALENDAR

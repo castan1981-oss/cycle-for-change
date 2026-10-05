@@ -1,0 +1,88 @@
+# san-francisco-ca — verify
+
+@town-verifier · 2026-10-04
+
+**ships** — the script finds 0 fails; every ship-to-shop, rental, route and bike-policy claim I could re-fetch matches its page; nothing is `queer-owned`; no mental-health language, no banned phrase. Four non-blocking fixes below. Several pages could not be re-read this session (permission timeouts, not bot walls — the script got 200 on all of them); the editor should confirm those by hand or on the next refresh.
+
+How this run fetched: `NODE_USE_ENV_PROXY=1 node tools/verify-town.js` for every URL; WebFetch for the sample. WebSearch was unavailable. A URL whose WebFetch permission request timed out was not fetched another way; it is listed under "couldn't verify".
+
+## Script output
+
+```
+ok  data/towns/san-francisco-ca.json  (206 urls, 0 fails, 41 warnings)
+  ! hotels[1..5] (Lodge at the Presidio, Cavallo Point, Beck's, Holiday Inn Express Mill Valley, Mill Valley Inn) have no bike_policy
+  ! routes[0,1,3,4,5,6,7] start has no lat/lon
+  ! 29 source URLs answered 403/429 (bot wall) — sfbike.org (7), tripadvisor (5), aa.com (2), ihg.com (2), restaurantji (2), expedia (2), shop.sportsbasement.com (2), mikesbikes.com/pages/bike-services, javabeachcafe.com, amoeba.com, discogs, greenapplebooks, doordash, dothebay
+  · redirects: hotels[3].booking_url → bookings.travelclick.com/85196 (same business);
+    shop.sportsbasement.com/* → www.sportsbasement.com/* (same pages, 9 URLs);
+    lyft.com/bikes/bay-wheels/pricing → lyftbikes.com/pricing (same page);
+    delta.com baggage pages (2) → ssp.delta.com/.../delta_sorry.html (bot wall)
+1 town checked, 0 failed.
+```
+
+The two alaskaair.com URLs the editor saw fail with 406 answered 200 this run. The banned-phrase lint is clean; a grep of the JSON for the CLAUDE.md list and for mental-health words finds nothing (the word "recovery" appears only in ride names: the Recovery Ride on the 2027 calendar, Tam Velo's Sunday recovery ride).
+
+## Fails
+
+None that block. These don't block; apply with the PR:
+
+- routes[0] hazards — "Conzelman drops at up to 18 percent (PJAMM)". The 18% is from a rider's review on the PJAMM page, not PJAMM's own climb data (the page gives 1.8 mi, 538 ft, 5.8% for the climb). Reword: "a rider's review on PJAMM puts the drop past the top at 18 percent" or drop the number.
+- about[1] — "the bridge and Headlands loop is the shakeout on the same side of the bridge as the start". The loop starts in the city and crosses the bridge; Fort Baker is on the Marin side. Reword: "the loop crosses to the Fort Baker side of the bridge, so it's the shakeout for either ride."
+- bring_your_bike.ship.note / bike_shops[3] (Valencia Cyclery) — the shop's ship page says it packs a bike "for delivery from San Francisco to your desired destination or pick-up at our store too." The guide reads this as "doesn't say it receives a shipped bike," which is defensible, but the line is ambiguous enough that a phone call ((415) 550-6601) could add a second ship-to shop. Not a change to the text; a call for the editor.
+- routes[0] description — the Presidio Trust's 8-mile loop page starts the itinerary at Sports Basement, then along Crissy Field. The guide says "from Crissy Field"; Sports Basement is at Crissy Field, so this holds, but "from Sports Basement at Crissy Field" is closer to the page and points at the rental shop.
+
+## Passes
+
+Ship-to-shop and rentals (every one fetched where the fetch went through):
+- bike_shops[0] / ship.shops[0] / rent.shops[2] Columbus Cyclery — columbuscyclery.com/bike-assembly-tune-up/: "Ship your bike to our shop… We Tune it Up in 24 to 48 hours", $135, $190 eBike, "5-day Free Storage"; /bike-repair-san-francisco/: "Single Speed $90.00", "$13.00/day" storage, "held Seven (7) [days] for free after repair", "Tire or Tube Change: $16. Labor only", "We do NOT service tubeless and tubular tires", "7Days 10am-6pm. No Appointment", "24/48hrs Turnaround"; /bike-boxing-shipping/: "$115 bare bike", "$135 w/Accessories"; /bike-rental-san-francisco/: Race Bikes $20/hr (2-hr min), $59/day, $50/day 3+ days, U-lock, pump, spare tube, free helmet, "No booking required", also comfort hybrids, hardtail and full-suspension MTB, tandems, e-bikes ($69/day). 2011 Mason St, (415) 561-9999. Every number in the guide is on the pages, including the 5-vs-7-day storage discrepancy the guide already notes.
+- bike_shops[2] / rent.shops[1] High Trails Cyclery — hightrailscycles.com/rentals/rental-and-demo-bikes-pg204.htm: Premium Road $100/day (Cervelo Caledonia or similar, 48–61 cm, carbon, hydraulic disc); Premium Gravel $125/day (Cervelo Aspero or similar, 48–58 cm); Premium MTB $150 (Pivot Switchblade or similar); E-MTB $200 (Orbea Wild or similar); "pedals of your choice (Flat, SPD, SPD-SL, Look KEO), water bottle cage, helmet and lock for no additional fee"; Google Form reservation, DocuSign waiver; Mon–Fri 12–6, Sat 10–4, Sun closed; 1825 Polk St, (415) 814-3216. Matches.
+- bike_shops[1] / rent.shops[0] Sports Basement — sportsbasement.com/pages/bike-rental-rates (partial read, the tool cut the page after the road table): Road carbon $100 / $175 / $30[0] (the third figure was truncated mid-number), alloy $75 / $135 / $220, "deposit required". The carbon road price the guide leads with is confirmed; the rest of the fleet is under "couldn't verify".
+- bike_shops[4] Mike's Bikes of Sausalito — mikesbikes.com/pages/sausalito: #1 Gate 6 Rd, 415.332.3200, Mon–Sat 10–6, Sun 10–5, "we encourage you to book an appointment, walk-in service is also welcome", "located at the start of the Mill Valley-Sausalito bike path". Matches; the page doesn't say this store rents, consistent with the guide.
+- bike_shops[3] Valencia Cyclery — valenciacyclery.com/articles/ship-your-bike-pg199.htm: "Boxing and Handling minimum $120", BikeFlights, "allow a minimum of 4 business days between drop off and pickup", 1065 Valencia St, (415) 550-6601, Mon–Sat 10–6, Sun 10–5. Matches (see the ambiguity under Fails).
+
+Hotel bike policy:
+- hotels[0] HI San Francisco Fisherman's Wharf — hiusa.org/hi-san-francisco-fishermans-wharf-hostel-faq: "There is free indoor bicycle storage in our bicycle room. Space is limited and available on a first-come, first-served basis."; powered devices need "UL (Underwriters Laboratories) Certification or EN 15194 Certification", "may not be charged inside the hostel building", "Batteries must remain attached"; "a historic building with no elevator", ADA rooms on "our wheelchair-accessible main level"; "limited free parking… Parking passes… first-come, first-served". The hostel page (hiusa.org/find-hostels/…building240-fortmason): Building 240, Fort Mason, 94123, 1 (415) 771-7277, check-in 3 p.m., out 11 a.m., dorms 4 to 20 beds, "3 mi. away" from the Golden Gate Bridge, no rate shown. The `bike_policy` text is the hostel's own words. Pass. The phone is on the page and `phone` is null in the JSON; the editor can fill it.
+- hotels[2] Cavallo Point — cavallopoint.com/discover/activities/: "Bikes are complimentary for lodge guests to borrow, and may be checked out at the valet stand on a first-come, first-served basis", Vintage Electric, 601 Murray Circle, Fort Baker; nothing on own bikes. Expedia: "As of Sep 26, 2026, prices found for a 1-night stay for 2 adults at Cavallo Point on Oct 4, 2026 start from $866, including taxes and fees"; "Resort fee: USD 65 per accommodation, per night"; "Bicycle storage" in the amenity list. Every figure in the note matches.
+
+Routes (every one with a page I could read):
+- routes[0] — ridewithgps.com/routes/2145313 "Marin Headlands Loop From SF": 28.3 mi, +2,382 ft, starts near the Caltrain station, Embarcadero → bridge → clockwise Headlands. Guide: 28 / 2,400. pjammcycling.com/climb/2357.Hawk-Hill: 1.8 mi, 538 ft, 5.8%, "bike lane for the first 2/3 of the climb until the roundabout", start on Conzelman by the northern lot. presidio.gov itinerary: "This 8-mile loop", Bay Trail and Golden Gate Promenade, "Vista Point has public bathrooms", Round House Café by the Welcome Center.
+- routes[1] — sunsetdunes.org/visit: entrances Lincoln through Sloat; restrooms at "Judah and Taraval Streets, as well as at Sloat Boulevard, which are open during the day"; water fountains "by the side path next to those facilities"; "Lincoln Way, which includes a separated bike lane"; "Kirkham, Ortega, Vicente, and Sloat are city-designated bike routes but do not have physical protection". KQED 12079238: published April 11, 2026, updated Sept 16, 2026; "a 2-mile stretch of road"; opened April 2025; signature drive needs "at least 10,000 signatures to put the fate of Sunset Dunes before voters, again, in November"; the piece does not say whether it qualified. The guide's wording ("not confirmed when we checked") is exactly right.
+- routes[2] — dssf.org standing Jersey Ride page (module_id=336753): "Peets in the Castro (16th and Market St)", meet 8:45, roll 9:00, 48 miles; Short and Sassy from "Mike's Bikes Sausalito", 24 miles, "ditches the moshpit on the Golden Gate Bridge"; "Guests are always welcome". Aug 8, 2026 listing (item_id=2992657): "Jane Warner Plaza at Castro and Market", 48 mi / 2,253 ft, S&S 24 mi / 1,046 ft, sweep "No, but regular regroups for slower riders", "Heavy Rain Cancels", rwgps 53843226 (the guide's link). May 10, 2025 listing: Peet's, 2257 Market St, "We stop at Woodlands Market in Tiburon for lunch". March 14, 2026 S&S: Woodlands Market, "Mikes Bikes Sausalito meet outside the main (south) entrance". Everything the guide says about the ride is on these pages, and the start is described exactly as the club gives it twice over. The Oct 10, 2026 page itself: see "couldn't verify".
+- routes[3] — bestrides.org/mt-tamalpais/ (modified 2026-09-10): "38-mile loop with out and back spur", "Elevation gain: 4400 ft", parking "in a parking lot smack in the divider in the middle of main street" in Fairfax, "broken pavement and launch ramps", "the road from Fairfax to Ridgecrest Rd. is frequently under construction or suffering road damage", "I'd wait for a day when the weather over the Bay is clear", East Peak "bathroom, water, a Visitor Center". pjammcycling.com/climb/350: 7.9 mi, 2,053 ft, 4.5%, 9.6% quarter-mile, Alpine Dam → West Peak, "no stores or facilities with water or food on this route", a reviewer on the first 1.5 miles having "by far the worst pavement". Matches (the potholes line is a reviewer's, attributed to PJAMM; acceptable, same note as Hawk Hill if the editor wants to tighten).
+- routes[4] — ridewithgps.com/routes/8476160 "SF - Point Reyes Loop": 71.8 mi, +4,814 ft, description "SF, Sausalito, Mill Valley, Shoreline to Muir Beach, Stinson Beach, Highway 1 to Olema, Point Reyes Station, Nicasio, Fairfax, San Anselmo, Ross, C…" (cut off, as the guide says); no hazard text. ridewithgps.com/routes/28865102: 69.8 mi, +3,584 ft, Embarcadero BART → Larkspur ferry → Ferry Building. Guide: 72 / 4,800 and 70 / 3,600. Pass.
+- routes[5] — ridewithgps.com/ambassador_routes/466: 18 mi, 2,664 ft, "Start out at the Golden Gate Bridge plaza", Miwok "averages almost 10% for a little over a mile", Marincello "steady 9% climb", Bobcat "cautious in the loose gravel turns", Old Springs waterbars, "walk your bike though the stables area", "many areas are completely without mobile coverage", "Be prepared with food, water, and supplies", route 9573159. Guide: 18 / 2,650. Pass.
+- routes[6] — bayarearides.com/rides/oldlahonda2/ (dated 12 Apr 2010, as the guide says): "19 miles", "2600 feet", start "near the main intersection of the Woodside town center", Old La Honda "almost exactly three miles", "a touch under 8%", spots "less than 14%", Kings Mountain "narrow and very twisty", Skyline "fast drivers… little shoulder", Old La Honda "very narrow", Alice's Restaurant and "a general store". ridewithgps.com/routes/469253: 45.4 km / +972 m (28.2 mi / 3,189 ft), Menlo Park, "The pavement of Old La Honda is bad in the upper sections". Guide: 28 / 3,200. Pass.
+- routes[7] — bestrides.org/grizzly-peak-to-redwood-road/ (modified 2026-09-07): "c. 44 miles", "4510 ft", "Begin where Spruce St. and Grizzly Peak Blvd. intersect", Grizzly Peak "the traffic is dangerous", Pinehurst "corners are sharp and often gravelly", Claremont "2-mile curvy, blisteringly fast… 10% plummet", Sibley "bathrooms and water… on Skyline 100 feet south of the Skyline/Grizzly Peak Blvd intersection". ridewithgps.com/routes/20947168 "Three Bears Loop": 61.3 km / +988 m (38.1 mi / 3,241 ft), Berkeley. Guide: 38 / 3,250. Pass.
+
+Bridge, airlines, clubs:
+- goldengate.org bikes-pedestrians — "toll-free access to the Bridge's sidewalks 24-hours a day"; "15 mph bicycle speed limit… slow to 5 mph around the towers"; "Cyclists MUST yield to pedestrians"; "All classes of eBikes are allowed"; standard time weekdays E 5am–3:30pm / W 3:30–6:30pm, weekends/holidays W 5am–6:30pm; daylight time weekdays W 3:30–9pm, weekends E & W 5am–9pm; overnight east sidewalk via buzzer and camera; indicator lights, "high winds prompt unexpected west sidewalk closures". The schedule in rules_and_safety, faq[2], best_months and every route hazards line matches the table exactly.
+- aa.com specialty-and-sports — one non-motorized bike in "a hard-sided case, bicycle bag or box", "Handlebars are fixed sideways", "Pedals are removed; or Pedals and handlebars are wrapped", standard bag fee to 50 lb, standard overweight 51–70 lb, no oversize charge, "If your bicycle is not in a hard-sided case, it will be treated as a fragile item". aa.com checked-baggage-policy: "updated as of May 18, 2026", first bag $45 online / $50 airport, second $55 / $60. Matches.
+- tamveloclub.com/weeklyrides.html (2026): Saturday "Meet at 8:30am at the Equator Coffees Prooflab, roll out 8:35am", Sunday "Meet 9:30am at the Equator Coffees Prooflab", 244 Shoreline Highway; Wednesday (March–October) "Mill Valley Bike Path Roundabout". The coffee[0] and clubs[3] claims match.
+- dssf.org calendar (page_id=4001): Oct 10, 2026 "DSSF Jersey Rides" is listed; Oct 3 "Decide and Ride" and Oct 17 "Double Hawk Hill" from "Jane Warner Plaza at Castro and Market" — consistent with clubs[0]'s "the club's other Saturday rides leave Jane Warner Plaza".
+
+## Couldn't verify (permission request timed out; not fetched another way)
+
+All of these answered 200 to the script this run, so the pages are alive; what's unconfirmed is the content.
+- Sports Basement detail pages: /products/sbrents-road-carbon-relaxed-geometry, sbrents-topstone-carbon-105, sbrents-cannondale-synapse-hi-mod-disc-dura-ace, sbrents-bike-travel-case, and the Presidio store page. Unconfirmed: the Dura-Ace $135/$220/$380, Topstone sizes XS–XL, Habit $100, e-bike $75, Thule case $55/$80/$110, the $1,000 hold on a physical card with ID, helmet/lock/flat-kit inclusion, store hours (10–8 weekdays, 9–7 weekends), (415) 934-2900, GURU fit $300. (services-bike and sbrents-rental-electric-bikes also 429'd the script.)
+- Splitrock Tap & Wheel demos-rentals page — the whole rental claim (full-suspension, hardtail, e-MTB; half day / 24 h; no prices; reserve for size) and the Chapter 11 status. The editor's note already says to phone it: (415) 721-7644.
+- Transit: bart.gov/guide/bikes/bikeRules, sfmta.com bikes-muni, caltrain.com bikes-train, goldengate.org ferry bringing-your-bike. The whole `transit_bike_rules` string rests on these; read Oct 2026 by the logistics scout.
+- Airlines: alaskaair.com sporting-equipment and checked-bags, southwest.com travel-fees, delta.com sporting-equipment and baggage overview (Delta also bot-walls the script). The $45/$55 figures and the bike rules for these three carriers are the scout's read only. American is confirmed above.
+- ridewithgps.com/routes/53843226 (the Jersey Ride's route page). Its id is confirmed as the club's link on the Aug 2026 listing; the miles/feet come from the club listing (48 / 2,253), not re-read on RWGPS.
+- The Oct 10, 2026 Jersey Ride page (dssf.org item_id=3061126) — the fetch landed on the calendar instead. So the start for the next ride (Peet's vs Jane Warner Plaza) is still open; the guide already says to check the club calendar. Hand-off to @ride-verifier stands.
+- The Highway 1 / Shoreline Highway hazard gap in routes[4]: no WebSearch this session, so no Caltrans or club source for shoulders or traffic. The line says the honest thing; it is thin, not wrong.
+
+## Stale
+
+None. Every `verified` is 2026-10-03.
+
+## Watch
+
+- hotels[2] Cavallo Point — "$866… on Oct 4" is a one-night Expedia read for today; stale tomorrow. Reword to "about $850–900 a night with taxes and fees in early October (Expedia, Oct 2026)" at the next touch, or drop the figure and keep the $65 resort fee.
+- routes[1] Sunset Dunes — the weekday-cars measure: KQED says the drive aimed at the November 2026 ballot. Re-read the park page and KQED in November.
+- Caltrain's bike-rules review (report due Nov/Dec 2026) and its paused enforcement note.
+- Splitrock Tap & Wheel's Chapter 11 (April 2026) — appears in bike_shops[5], culture[4] and rent.shops[3]; one phone call clears all three.
+- The Jersey Ride start for Oct 10 and after; the club's Saturday rides now mostly leave Jane Warner Plaza.
+- Airline fee pages all carry "as of" dates (Alaska Apr 10, 2026; Southwest Apr 9, 2026; American May 18, 2026); re-read on the quarterly refresh.
+- Golden Gate Bridge sidewalk clock flips with the time change (first Sunday in November).
+- High Trails' rental page images date from May 2024; the text read this run matched the guide, but the fleet note ("call") should stay.
+- Tam Velo's Wednesday ride runs March–October; it ends this month.
