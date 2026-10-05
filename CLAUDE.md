@@ -1,8 +1,8 @@
 # Cycle for Change — project context for automated content
 
-> **HOMEPAGE: the redesign is live since 2026-09-27; Pass 6 (Sept 29) brightened it; Pass 23 (Oct 3) is the hero.**
+> **HOMEPAGE: the redesign is live since 2026-09-27; Pass 6 (Sept 29) brightened it; Pass 23 (Oct 3) is the hero; Pass 24 (Oct 4) gave it two films; Pass 25 (Oct 4) put his photos on the inner pages.**
 > `cfc-site/index.html` + `cfc-site/home.css` + `cfc-site/home.js` + `cfc-site/img/` (the
-> house-graded photos; the hero is a still, the film is gone). The Sept 18 coming-soon-based homepage and its files
+> house-graded photos; the hero is a still on phones and a film on desktop — Pass 24). The Sept 18 coming-soon-based homepage and its files
 > (`coming-soon.css/js`, `main.js`, `next/home.css/js`, the feed video and audio) are
 > gone — git history has them. `/next/*` redirects home.
 > `/field-notes`, `/guides`, `/resources` and `/journal` are served; `cfc-site/404.html`
@@ -18,6 +18,82 @@
 > The cream/plum/yellow + Fraunces/Anton look is gone everywhere.
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
+
+## Rider pages — CONCEPT ONLY, do not build yet (Oct 4, 2026)
+Robert, coming down South Mountain: riders post a ride (ride file, photos, a clip, a few words) in two
+minutes, it lands on a rider profile, bots stay out, and Google trusts it. Rides first; hotels and the
+rest later. **Nothing is built and nothing ships until he says so** — this note is so a session that
+touches rides, towns or the board knows the plan and doesn't contradict it.
+- The plan: the "CFC Ride Profiles — Concept" doc (https://claude.ai/code/artifact/bae9be7e-9c4e-4ffc-967b-a68da75a93f6).
+  The mockup (phone draft, ride page, profile, from his Oct 4 ride): https://claude.ai/artifact/16m6iotqqBvnNqUMHvkGZP
+- Decided: pages live under **`/riders/`** (`/riders/<handle>/`, `/riders/<handle>/<date>-<slug>/`) —
+  `/rides/` is the group-ride finder and stays that. Sign-up opens to anyone 18+ (no invite beta).
+  Other riders' miles show only on their own profile; the 10K stays Robert's. Rides from anywhere;
+  only guide towns get "Ridden here" lists.
+- Hard rules when it's built:
+  - **No Strava API data on any public page**, and none through any AI step (Strava API Policy
+    §2.3, §5.3, §6.2). Sources: Garmin Connect Activity API (approved app, Garmin credited on the
+    page), or a .fit/.gpx file the rider drops or emails in. Strava = a plain link out only.
+  - Ride pages are noindex until the rider is Verified/Known AND the page has their own words or
+    original photos; every rider link carries `rel="ugc"`. Rider text is never machine-written.
+  - Privacy by default: first/last half mile cut (slightly random), saved home zones, date only (no
+    start time), photo/video location stripped on upload, Garmin rides arrive as private drafts.
+- Open: apply to the Garmin Connect Developer Program under Cycle for Change LLC when he's ready.
+  The live mile counter reads Strava today — moving it to Garmin settles §2.3 for it too.
+
+## Pass 25 — Robert's photos through the site (Oct 4, 2026)
+Robert: "What about having a whole bunch of photos edited throughout the site that I have taken." 34 of
+his photos from the stockpile now run on ~40 pages that had none (guides, field notes, rides hubs, town
+guides, the calendar, /pledge/, /tonight/, /resources/, the 404).
+- **One registry:** `scripts/photos.js` — every photo's src, size, alt text, place · month caption and
+  crop, plus `figure(key, { cls, line, caption })`. The three generators require it (`photoBand()` in
+  build-rides.js is now a wrapper; `HUB_PHOTO`, `STATE_PHOTO`, `FACET_PHOTO` there; `TOWN_PHOTO` in
+  build-events.js; /events/2027/ home + riding in build-calendar.js). The hand pages carry the figure
+  baked in: after editing photos.js run `node scripts/apply-photos.js` to rewrite them.
+- **Files:** originals in `cfc-site/photos/<key>.jpg`, graded copies in `cfc-site/img/ph/` via
+  `python3 tools/grade.py --all --only <key>` (portraits 1440 tall, landscapes 1600 wide, q76; sunrise
+  and sunset shots take the Pass 11 `sun` settings, the /tonight/ dusk a light `dusk` grade). `--only`
+  keeps the run from re-encoding photos already live.
+- **The figure** (`.ph` in /chrome.css; the same block in /home.css for /pledge/): dissolves top and foot
+  into whatever it sits on (bone, or tar on /tonight/), a 2.5% side feather on desktop only; phones run it
+  edge to edge in the photo's own shape (`ph--p` 4:5, `ph--l` 4:3). Desktop: portraits 4:5 at 460px,
+  landscapes 3:2; `ph--wide` = 2:1 band, `ph--frame` = 3:2 the column's width. Mono caption under it.
+  `.gr-photo` is gone from rides.css. The guides hub / Phoenix field notes header photo
+  (`.fn-pillar-photo`) now fades in at its top on phones too.
+- **No cars (Robert, Oct 4):** "I don't think we should have cars on the website — landscapes or cycling." No car, truck or van in any photo, not even parked in the distance. The Airstream, the van rack, the from-the-car dusk and four street shots with parked cars were swapped out the same day; the Sedona photo is cropped to the butte above the traffic; Portland has no photo until there's one without a car.
+- **Rules:** only Robert is recognisable — riders seen from behind or far off are fine, oncoming riders
+  get cropped out (pv-golden-climb was cut above them); nothing from `07-group-rides` without people's
+  OK. The caption always says where it was really taken (the Hill Country guide shows a Boise road and
+  says so). Never the first thing on a phone on a rides hub. Rides output isn't committed — Netlify
+  rebuilds it on deploy; events, towns and the calendar are.
+
+## Pass 24 — two films on the homepage (Oct 4, 2026)
+Robert: "go through my video and photos and make a stockpile to grab from for design web pages. We
+should make a cool video or two for the home page." The stockpile lives on his Mac, not in the repo:
+`~/Pictures/CFC Stockpile/` (304 web-ready photos in seven folders, 54 clips, `index.html` to browse,
+`manifest.csv` with each file's Photos ID; `07-group-rides` has other people in it — ask before use).
+- **The hero film** (`/film/home-film.mp4`, 1600×900, 10.5 s, silent, H.264, ~4.6 MB): drone footage
+  following Robert up a desert road in Phoenix, cut to a stretch with no saguaro in frame (Pass 23's
+  brief), graded with the Pass 23b hero grade baked into a LUT (`strength .6, warm .10, sat .95, lift
+  .15`), faded from/to bone at the loop seam. `#heroVid` sits over the still inside `.hero-media` with
+  the same desktop masks; it is `display:none` under 900px, so **phones keep the still** (the floor).
+  home.js (the Pass 5 film code, kept) starts it after `load`, only without reduced motion, pauses it
+  off screen; it fades up on `playing` (`data-on`) and the still steps out (`data-film="on"`) so the
+  fades never show two pictures. The pause control is a quiet text link next to "Read the last ride"
+  (`#filmBtn`, shown once ready) — never chrome on the picture.
+- **The road reel** (`/film/road-film.mp4`, 864×1080, 4:5, ~17.5 s, 13 cuts of 1.35 s from his own
+  phone/Osmo/drone clips, fades from tar; poster `/film/road-film.jpg`; see 24b for the grade): in `#road`
+  above the tally. Desktop plays it while it's on screen; phones wait for a tap ("Play the reel").
+  Its edges dissolve into the tar; the playing dot is volt (it's on tar).
+- **Pass 24b, same day — the reel, fixed.** Robert, on his phone: "This looks kinda off." It filled
+  the screen, faded top and foot with hard sides (a shaded box), its control sat on the picture, and
+  the bone-forward house grade washed it out on tar. Now: square on phones (`aspect-ratio:1/1`, 4:5
+  on desktop), a 2.5% feather on all four edges (6–7% read as an old-TV vignette), the control is a
+  mono line under the picture (dust; bone + volt dot while playing), and the cut is 864×1080 CRF 29
+  (~6.5 MB) in a light grade (`reel-tar`: strength .12, lift .05, stop .1, warm .05).
+- Headless Chromium can't decode H.264 — test with VP9 copies served from a scratch folder; never
+  commit those. Recut: `ffmpeg … -vf "crop,scale,lut3d=<grade>.cube"` with a LUT made from
+  `tools/grade.py`'s `grade()` (33-point cube), CRF ~31 slow, `+faststart`, no audio.
 
 ## Pass 23 — the hero: one photograph, one kicker, the line, two actions (Oct 3, 2026)
 Robert, after the Assos homepage (an overcast photo, a mono kicker, one word, two buttons, nothing

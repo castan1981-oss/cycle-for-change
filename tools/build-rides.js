@@ -35,6 +35,7 @@ const TOWNS = require("../scripts/towns.js");  // the town layer (Sept 30, 2026)
 const S = require("./lib/rides-schema.js");       // vocabularies, countries (schema v3)
 const F = require("./lib/rides-freshness.js");    // what's fresh, what hides, the "Checked" line
 const X = require("./lib/ride-facts.js");         // Pass 22: pace, length and e-bike rules read off the ride's own text
+const PH = require("../scripts/photos.js");       // Pass 25: Robert's photos, one registry (alt text, place, the figure)
 
 const ROOT = path.join(__dirname, "..");
 const argOf = (name) => { const i = process.argv.indexOf(name); return i > -1 ? process.argv[i + 1] : null; };
@@ -1050,23 +1051,20 @@ function outlineSvg(shape, { stroke = 1.3 } = {}) {
 function rideBtn({ href, text, markId, ghost = false, back = false, ext = false, attrs = "", cls = "" }) {
   return `<a class="gr-btn${ghost ? " gr-btn--ghost" : ""}${back ? " gr-btn--back" : ""} ${cls}" href="${href}"${ext ? ` rel="noopener nofollow"` : ""}${attrs}><span class="gr-btn-mk" aria-hidden="true">${mark(markId, "gr-btn-mark")}</span><span class="gr-btn-t">${text}</span><span class="gr-btn-go" aria-hidden="true">${back ? "&larr;" : ext ? "&#8599;" : "&rarr;"}</span></a>`;
 }
-// A photo band: the picture dissolves into the paper at both edges (Pass 7). Never the first
-// thing on a phone (Pass 12): every caller puts it after the first set of picks.
-const PHOTOS = {
-  crew: { src: "/img/hero.jpg", w: 1600, h: 1600, alt: "Two riders stopped on a desert road at sunset, saguaros behind them, the sun sitting on the horizon.", pos: "50% 46%" },
-  people: { src: "/img/people.jpg", w: 1600, h: 1600, alt: "Two riders crossing a finish line with their hands joined in the air, a rainbow umbrella in the crowd.", pos: "50% 40%" },
-  south: { src: "/img/card-south.jpg", w: 800, h: 1000, alt: "Handlebars pointed down a mountain road at sunset, the valley lit below.", pos: "50% 55%" },
-  road: { src: "/img/card-pv.jpg", w: 800, h: 1000, alt: "A rider’s shadow on the road, one hand up off the bars, mountains ahead.", pos: "50% 45%" },
-  haus: { src: "/img/haus-road.jpg", w: 1600, h: 1200, alt: "Robert grinning into the camera mid-ride, a canal path and the sun behind him.", pos: "50% 40%" },
-};
-function photoBand(key, { line = "", cls = "" } = {}) {
-  const p = PHOTOS[key]; if (!p) return "";
-  return `
-      <figure class="gr-photo ${cls}">
-        <img src="${p.src}" alt="${attr(p.alt)}" width="${p.w}" height="${p.h}" loading="lazy" decoding="async" style="object-position:${p.pos}">
-        ${line ? `<figcaption>${line}</figcaption>` : ""}
-      </figure>`;
+// A photo band: Robert's photo, dissolving into the paper (Pass 7). Never the first thing on a phone
+// (Pass 12): every caller puts it after the first set of picks. The photos, their alt text and the
+// figure itself live in scripts/photos.js (Pass 25); `.ph` is styled in /chrome.css.
+function photoBand(key, { line = "", cls = "", caption = true } = {}) {
+  return PH.figure(key, { cls, line, caption });
 }
+// Pass 25 (Oct 4, 2026): the places Robert has a photo that is true to them (scripts/photos.js).
+const HUB_PHOTO = {   // hub key → photo; desktop layout follows the photo's shape
+  "az-phoenix": "phx-canal", "az-scottsdale": "pv-camelback-road", "az-sedona": "sedona-road",
+  "ca-carlsbad": "encinitas-beach", "wa-seattle": "seattle-path",
+  "id-boise": "boise-river-path",
+};
+const STATE_PHOTO = { AZ: ["crew", "ph--wide"], ID: ["sawtooth-lake", "ph--wide"] };
+const FACET_PHOTO = { lgbtq: "people", "no-drop": "people", beginner: "people", "women-trans-femme": "people", gravel: "gravel-pines" };
 // The short page's badge: the pick it stands for, drawn big (the mark, or the day's two letters).
 function badge({ markId = null, day = null, sub = "" }) {
   return `<div class="gr-badge" aria-hidden="true">${day ? `<span class="gr-badge-day">${DAY_SHORT[day]}</span>` : mark(markId, "gr-badge-mark")}${sub ? `<span class="gr-badge-sub">${esc(sub)}</span>` : ""}</div>`;
@@ -1254,7 +1252,7 @@ function directory(rides, hubs, worldHubs = []) {
       </div>
       <p class="gr-jumpcities"><span class="gr-jumpcities-l">Or jump to</span>${top.map((h) => `<a class="gr-chip" href="${h.path}">${esc(h.city)}${h === home ? ` <span class="gr-chip-n">home</span>` : ""}</a>`).join("")}</p>
     </section>
-${photoBand("crew", { cls: "gr-photo--wide" })}
+${photoBand("crew", { cls: "ph--wide" })}
 
     <section class="gr-step" aria-labelledby="who-h">
       <h2 class="gr-filter-label" id="who-h">Or pick who&rsquo;s riding</h2>
@@ -1332,6 +1330,7 @@ function findPage(rides) {
       </div>
     </section>
     <p class="gr-all-link">${rideBtn({ href: "/events/2027/", text: `The whole 2027 calendar`, markId: "date", ghost: true })}</p>
+    ${photoBand("robert-camelback")}
 ${fold("Group ride or organized ride?", `
         <p>A group ride is free and happens every week from the same spot: a shop, a caf&eacute;, a park. No sign-up. You show up and ride. We list ${rides.length} of them in ${nCountries} countries, and every one says when it was last checked at its source.</p>
         <p>An organized ride has a date, a sign-up and usually a fee or a fundraising minimum: charity rides, gran fondos, centuries, gravel races, multi-day tours. The <a href="/events/2027/">2027 calendar</a> has ${CAL.length} of them across the US, and says which dates the organizer has published.</p>
@@ -1363,6 +1362,7 @@ function gravelPage(rides) {
           ${kindDoor({ href: "/events/2027/gravel/", name: "One big day", sub: "Gravel races and events, 2027", n: n2g, markId: "gravel" })}
       </div>
     </section>
+    ${photoBand("gravel-road")}
     <p class="back"><a href="/find-a-ride/">&larr; Every kind of ride</a></p>
 ${CTA}
   </div>
@@ -1399,7 +1399,7 @@ ${BLOCKS.BUILT([
       <h2 id="faq-h">First group ride? The ones people ask first</h2>
 ${FAQ.map(([q, a]) => `      <details><summary>${esc(q)}</summary><p>${a}</p></details>`).join("\n")}
     </section>
-${photoBand("people", { cls: "gr-photo--wide" })}
+${photoBand("people", { cls: "ph--wide" })}
     <section class="gr-why">
       <h2>Why Cycle for Change keeps a group ride list</h2>
       <p>A group ride is the cheapest, most reliable way I know to get out of my own head and into a room of people who want you there. Nobody asks what you do. You just ride. In 2027 I&rsquo;m riding 10,000 miles for queer communities, and a lot of them will be on rides like these. This list exists so anyone, anywhere, can find one this week.</p>
@@ -1618,7 +1618,7 @@ function cityPage(h, { pages, notes = null, others = [], areaRides = [], areaHub
         <h2 class="gr-filter-label" id="day-h">Which day</h2>
           ${weekDoors(sub.day, base)}
       </section>
-      <p class="gr-all-link">${rideBtn({ href: `${base}all/`, text: `All ${rides.length} rides, with filters`, markId: "list", ghost: true })}</p>${h.state === "AZ" && h.city === "Phoenix" ? photoBand("road", { cls: "gr-photo--tall" }) : ""}`;
+      <p class="gr-all-link">${rideBtn({ href: `${base}all/`, text: `All ${rides.length} rides, with filters`, markId: "list", ghost: true })}</p>`;
   } else {
     body = `
       <h2 class="gr-list-h">Closest to ${esc(h.city)} first</h2>${rowsHtml(rides)}`;
@@ -1633,7 +1633,9 @@ function cityPage(h, { pages, notes = null, others = [], areaRides = [], areaHub
     ringMiles: world ? WORLD_RADIUS_KM / 1.609344 : METRO_RADIUS, ringAt: h,
     title: `Map of ${areaName}: the ${radius} around ${h.city}, a dot for each ride`,
     caption: `<span>${mark("town", "gr-map-cap-mark")}Where ${esc(h.city)} sits</span><span>Tap a city</span>`, cls: "gr-map--where" });
-  const art = world ? artFor(h.key) : artFor(`${h.state.toLowerCase()}-${slugify(h.city)}`);
+  const hubKey = world ? h.key : `${h.state.toLowerCase()}-${slugify(h.city)}`;
+  const art = artFor(hubKey);
+  const photo = HUB_PHOTO[hubKey] ? photoBand(HUB_PHOTO[hubKey]) : "";
   const near = others.length ? `
       <nav class="gr-near" aria-label="Nearby cities">
         <span class="gr-filter-label">Nearby</span>
@@ -1649,6 +1651,7 @@ function cityPage(h, { pages, notes = null, others = [], areaRides = [], areaHub
   </header>
   <div class="wrap gr-steps" id="gr-list">
 ${body}
+${photo}
 ${world ? countryNotesBlock(h.country, notes) : ""}
 ${town ? TOWNS.strip(town, { compact: true, heading: `Coming to ${esc(town.name)} to ride?`, lede: "Routes, coffee, who fixes a bike, where to sleep with it." }) : ""}
 ${where}
@@ -1716,7 +1719,7 @@ function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, descripti
           ${elsewhereDoor ? posterTile({ href: `${base}other-towns/`, name: "Other towns", count: elsewhere.length, small: "rides", blurb: `${new Set(elsewhere.map((r) => r.city)).size} smaller towns`, markId: "town", cls: "tile-p--country" }) : ""}
         </div>${zoom ? `
         <button type="button" class="gr-chip gr-map-reset">Every city in ${esc(areaWord)}</button>` : ""}
-      </section>${st === "AZ" ? photoBand("crew", { cls: "gr-photo--wide" }) : ""}
+      </section>${STATE_PHOTO[st] ? photoBand(STATE_PHOTO[st][0], { cls: STATE_PHOTO[st][1] }) : ""}
       ${facetDoors ? `<section class="gr-step" aria-labelledby="who-h">
         <h2 class="gr-filter-label" id="who-h">Or pick who&rsquo;s riding</h2>
         <div class="gr-tiles">
@@ -1728,7 +1731,7 @@ function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, descripti
       </section>` : ""}
       <p class="gr-all-link">${rideBtn({ href: `${base}all/`, text: `All ${rides.length} rides, with filters`, markId: "list", ghost: true })}</p>`;
   } else {
-    body = groupedRows(rides, { hubOf });
+    body = groupedRows(rides, { hubOf }) + (STATE_PHOTO[st] ? photoBand(STATE_PHOTO[st][0], { cls: STATE_PHOTO[st][1] }) : "");
   }
   return head({ title, description, canonical, jsonld: pageLd(canonical, h1, description, rides, crumbs) }) + `
 <main id="main" class="gr-dir gr-area${step ? " gr-area--step" : ""}"${step ? ` data-all="${base}all/"` : ""}>
@@ -1874,7 +1877,7 @@ function facetPage(f, all) {
         ${states.map((st) => posterTile({ href: hrefFor(byState[st], `/rides/${st.toLowerCase()}/`), name: st, count: byState[st].length, small: byState[st].length === 1 ? "ride" : "rides", blurb: stateName(st), cls: "tile-p--wide tile-p--code" })).join("\n        ")}
       </div>
     </section>
-${["lgbtq", "no-drop", "beginner", "women-trans-femme"].includes(f.slug) ? photoBand("people", { cls: "gr-photo--wide" }) : ""}
+${FACET_PHOTO[f.slug] ? photoBand(FACET_PHOTO[f.slug], { cls: FACET_PHOTO[f.slug] === "people" ? "ph--wide" : "" }) : ""}
     ${ccs.length ? `<section class="gr-step" aria-labelledby="fc-h">
       <h2 class="gr-filter-label" id="fc-h">Outside the US</h2>
       <div class="tiles-p tiles-p--wide">

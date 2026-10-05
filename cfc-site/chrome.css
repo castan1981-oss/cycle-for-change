@@ -271,3 +271,35 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .theme-dark .tally-line{color:var(--dust);border-bottom-color:var(--line-d)}
 .theme-dark .tally-num{color:var(--bone)}
 .theme-dark .skip{background:var(--bone);color:var(--asphalt)}
+
+/* —— Pass 25 (Oct 4, 2026): Robert's photos through the site ——
+   One figure, from scripts/photos.js: `.ph` + its shape (`--p` portrait, `--l` landscape) + an optional
+   desktop layout (`--wide` a band across the column, `--tall` 4:5 and narrow, `--frame` a 3:2 frame the
+   width of a reading column). The picture dissolves into whatever it sits on, top and foot, and on desktop
+   at its sides by a hair (wider side fades read as an old-TV vignette, Pass 24b) — no frame, no hard edge, no type over it (Pass 7, Pass 23b). On phones it runs edge to
+   edge in its own shape. The place · month line sits under it in mono. The same block is in /home.css. */
+.ph{margin:clamp(36px,6vw,72px) 0;position:relative}
+.ph img{display:block;width:100%;height:auto;object-fit:cover;background:transparent;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%)}
+.ph figcaption{margin-top:4px;font-family:var(--mono);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.theme-dark .ph figcaption{color:var(--dust)}
+@media (max-width:899px){
+  .ph{margin-inline:calc(-1 * var(--gut))}
+  .ph figcaption{padding-inline:var(--gut)}
+  .ph--p img{aspect-ratio:4/5}
+  .ph--l img{aspect-ratio:4/3}
+}
+@media (min-width:900px){
+  .ph img{aspect-ratio:3/2;max-height:620px;
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 2.5%,#000 97.5%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(to right,transparent 0,#000 2.5%,#000 97.5%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%);
+    mask-composite:intersect}
+  .ph--p,.ph--tall{max-width:460px}
+  .ph--p img,.ph--tall img{aspect-ratio:4/5;max-height:none}
+  .ph--wide,.ph--frame{max-width:none}
+  .ph--wide img{aspect-ratio:2/1;max-height:600px}
+  .ph--frame img{aspect-ratio:3/2;max-height:620px}
+  .ph figcaption{padding-left:2.5%}
+}
