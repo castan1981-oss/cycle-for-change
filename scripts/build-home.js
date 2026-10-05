@@ -12,6 +12,19 @@ const CHROME = require("./chrome.js");
 
 const OUT = path.join(__dirname, "..", "cfc-site", "index.html");
 
+// The ride directory's numbers come from the data, like the menu count in chrome.js (Oct 5, 2026: the
+// page said 1407 while the directory held 1422). Listed rides = live.json when it exists.
+function rideNumbers() {
+  const read = (rel) => { try { return JSON.parse(fs.readFileSync(path.join(__dirname, "..", rel), "utf8")); } catch (e) { return null; } };
+  const live = read("cfc-site/rides/live.json");
+  const all = read("cfc-site/rides/rides.json");
+  const rides = Array.isArray(live) ? live : Array.isArray(all) ? all : Array.isArray(all && all.rides) ? all.rides : [];
+  const countries = new Set(rides.map((r) => r.country).filter((c) => c && c !== "US"));
+  return { rides: rides.length || 1407, abroad: countries.size || 18 };
+}
+const RN = rideNumbers();
+const RIDES_N = RN.rides.toLocaleString("en-US");
+
 // The mark, stacked, as the page's headline. Same glyphs as the one-line mark in chrome.js.
 const STACK = (cls = "") => `<svg class="sign-mark ${cls}" viewBox="-10 -10 370 350" aria-hidden="true" focusable="false">
         <g filter="url(#lpWorn)">
@@ -89,7 +102,7 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
   <svg class="sign-grain" aria-hidden="true" focusable="false"><rect width="100%" height="100%" filter="url(#lpGrain)"/></svg>
   <div class="wrap sign-in">
     <div class="sign-left">
-      <p class="sign-kicker">Robert. Phoenix. <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Mile <b class="num" data-miles>3,360</b> of training, on Strava.</a> The 10,000 start Jan 1.</p>
+      <p class="sign-kicker">Robert. Phoenix. <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Mile <b class="num" data-miles>3,573</b> of training, on Strava.</a> The 10,000 start Jan 1.</p>
       <h1 class="sign-h" id="sign-h">
         ${STACK()}
         <span class="sign-plate" id="signPlate">me</span>
@@ -113,8 +126,8 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
 <!-- —— the numbers —— -->
 <section class="s s--paper nums" aria-label="The numbers">
   <div class="wrap nums-in">
-    <div class="num-tile"><b class="num" data-miles>3,360</b><span>miles since June 1</span></div>
-    <div class="num-tile"><b class="num" id="rideCount">92</b><span>rides, <a href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">every one on Strava</a></span></div>
+    <div class="num-tile"><b class="num" data-miles>3,573</b><span>miles since June 1</span></div>
+    <div class="num-tile"><b class="num" id="rideCount">97</b><span>rides, <a href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">every one on Strava</a></span></div>
     <div class="num-tile num-tile--rose"><b class="num">10,000</b><span>miles in 2027. The count restarts in <b class="num" id="daysTo">88</b> days. If I fall behind, this number says so.</span></div>
   </div>
 </section>
@@ -125,10 +138,10 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
     <div>
       <div class="s-head"><div class="stack16"><p class="eyebrow">From the road</p><h2 class="h2" id="road-h">The last rides.</h2></div></div>
       <ol class="log" id="log" data-max="4" aria-live="polite">
-        <li><span class="when">Sun Sep 27<b>Somo Sunday</b></span><span class="bar-mi" style="--w:.93"></span><span class="mi num">56.0<small>MI</small></span></li>
-        <li><span class="when">Sat Sep 26</span><span class="bar-mi" style="--w:1"></span><span class="mi num">60.2<small>MI</small></span></li>
-        <li><span class="when">Fri Sep 25</span><span class="bar-mi" style="--w:.54"></span><span class="mi num">32.7<small>MI</small></span></li>
-        <li><span class="when">Wed Sep 23</span><span class="bar-mi" style="--w:.61"></span><span class="mi num">36.5<small>MI</small></span></li>
+        <li><span class="when">Mon Oct 5</span><span class="bar-mi" style="--w:.57"></span><span class="mi num">35.7<small>MI</small></span></li>
+        <li><span class="when">Sun Oct 4</span><span class="bar-mi" style="--w:1"></span><span class="mi num">63.1<small>MI</small></span></li>
+        <li><span class="when">Sat Oct 3</span><span class="bar-mi" style="--w:.67"></span><span class="mi num">42.3<small>MI</small></span></li>
+        <li><span class="when">Fri Oct 2</span><span class="bar-mi" style="--w:.58"></span><span class="mi num">36.6<small>MI</small></span></li>
       </ol>
       <p class="road-note">Every ride gets a line. The big ones get a page: the route, the town, who was there, the footage. The first pages land here this month.</p>
     </div>
@@ -139,7 +152,7 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
         </video>
         <button class="road-film-btn" id="roadBtn" type="button">Play the reel</button>
       </figure>
-      <p class="road-tally"><b class="num">92</b> rides since June 1. The count starts over on January 1.</p>
+      <p class="road-tally"><b class="num" id="roadRides">97</b> rides since June 1. The count starts over on January 1.</p>
       <a class="link" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Follow on Strava</a>
     </div>
   </div>
@@ -207,7 +220,7 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
       <div class="ride-find">
         <p class="eyebrow">Any day, anywhere</p>
         <h3 class="h2 ride-h3">Find a group ride.</h3>
-        <p>1,407 group rides. Every state, and 18 more countries. Shop rides, no-drop rides, queer rides.</p>
+        <p>${RIDES_N} group rides. Every state, and ${RN.abroad} more countries. Shop rides, no-drop rides, queer rides.</p>
         <form class="find" action="/rides/" method="get" role="search">
           <label class="sr" for="q">Your town or a ride name</label>
           <input class="find-field" id="q" name="q" type="search" placeholder="Your town or a ride name" autocomplete="off">
@@ -215,7 +228,7 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
         </form>
         <p class="find-links"><a class="link" href="/rides/no-drop/">No-drop rides</a><a class="link" href="/rides/lgbtq/">Queer rides</a><a class="link" href="/tonight/">Tonight, near you</a></p>
         <dl class="facts-dl">
-          <div><dt>Group rides</dt><dd><a href="/rides/">1,407</a></dd></div>
+          <div><dt>Group rides</dt><dd><a href="/rides/">${RIDES_N}</a></dd></div>
           <div><dt>On the 2027 calendar</dt><dd><a href="/events/2027/">640</a></dd></div>
           <div><dt>Town guides</dt><dd><a href="/towns/">12</a></dd></div>
           <div><dt>My 2027 rides</dt><dd><a href="/events/2027/riding/">Six, so far</a></dd></div>
@@ -256,7 +269,7 @@ ${CHROME.FOOTER.replace('<script src="/chrome.js" defer></script>', '')}
 
 <!-- —— the tally, everywhere (phone) —— -->
 <div class="bar" id="bar" data-on="false" aria-hidden="true">
-  <div class="bar-tally"><span class="dot dot--bone" aria-hidden="true"></span><b class="num" data-miles>3,360</b><span>mi since<br>June 1</span></div>
+  <div class="bar-tally"><span class="dot dot--bone" aria-hidden="true"></span><b class="num" data-miles>3,573</b><span>mi since<br>June 1</span></div>
   <a class="btn btn--bone" href="#ride" tabindex="-1">Ride with me</a>
 </div>
 
