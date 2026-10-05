@@ -558,7 +558,10 @@
      the ballot: one vote per browser, same keys the live homepage uses
      ———————————————————————————————————————————————— */
 
-  var orgsEl = $("orgs"), voteMsg = $("voteMsg");
+  /* The ballot ran on any #orgs. Pass 26 gave the homepage's orgs section that id and no vote
+     buttons, so the votes function was repainting it with the old pick cards. Only a page that
+     actually carries [data-vote] buttons is a ballot. */
+  var orgsEl = document.querySelector("#orgs [data-vote]") ? $("orgs") : null, voteMsg = $("voteMsg");
   var votedOrg = null, fingerprint = null;
   if (orgsEl) {
   try {
