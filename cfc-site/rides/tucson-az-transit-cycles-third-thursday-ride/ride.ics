@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:tucson-az-transit-cycles-third-thursday-ride@cycleforchange.org
+DTSTAMP:20261003T000000Z
+DTSTART;TZID=America/Phoenix:20261015T181000
+DTEND;TZID=America/Phoenix:20261015T201000
+RRULE:FREQ=MONTHLY;BYDAY=3TH;UNTIL=20270302T235959Z
+SUMMARY:Third Thursday Westside Community Ride — Tucson\, AZ
+LOCATION:MSA Annex (Transit Cycles)\, 267 S Avenida del Convento\, Bldg 1
+ 0\, Tucson\, AZ 85745
+DESCRIPTION:Pace: moderate; about 30 to 40 minutes to the brewery.\nSched
+ ule: Third Thursday of the month. Meet 5:30 pm at the MSA Annex for a pr
+ e-ride drink at Westbound; roll about 6:10 pm. The shop's page says its 
+ monthly ride is getting a refresh\, so check the shop's Instagram before
+  you go..\nConfirm with the host before you go.\nhttps://cycleforchange.
+ org/rides/tucson-az-transit-cycles-third-thursday-ride/
+URL:https://cycleforchange.org/rides/tucson-az-transit-cycles-third-thurs
+ day-ride/
+END:VEVENT
+END:VCALENDAR

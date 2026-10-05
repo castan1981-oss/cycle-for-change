@@ -1,0 +1,949 @@
+{
+  "id": "phoenix-az",
+  "kind": "destination",
+  "name": "Phoenix",
+  "state": "Arizona",
+  "state_code": "AZ",
+  "county": "Maricopa County",
+  "lat": 33.4484,
+  "lon": -112.074,
+  "timezone": "America/Phoenix",
+  "population": null,
+  "elevation_ft": null,
+  "tagline": "South Mountain at dawn, the McDowell loops, the Greenbelt",
+  "best_months": "November to April. Summer highs average 104 to 106 F. On Extreme Heat Warning days the city closes named preserve trails from 8 a.m. to 5 p.m.; in 2026 those closures began March 19. From May to October, ride at first light and carry all your water.",
+  "nearest_airport": {
+    "name": "Phoenix Sky Harbor International",
+    "code": "PHX",
+    "miles": 4
+  },
+  "major_airport": {
+    "name": null,
+    "code": null,
+    "miles": null
+  },
+  "official_url": "https://www.phoenix.gov/",
+  "visitor_url": "https://www.visitphoenix.com/",
+  "covers": [
+    "Scottsdale",
+    "Paradise Valley",
+    "Tempe",
+    "Mesa",
+    "Chandler",
+    "Gilbert",
+    "Fountain Hills",
+    "Cave Creek",
+    "Carefree",
+    "Glendale",
+    "Peoria"
+  ],
+  "summary": "Phoenix is a winter cycling town: the riding runs from November to April, summer highs average 104 to 106 F, and the rides go out at first light. The climb is South Mountain's Summit Road, closed to cars on Sunday mornings. The long loops go around the McDowell Mountains through Scottsdale, Rio Verde and Fountain Hills, and over Usery Pass along the Salt River in the East Valley. The easy day is the 11-mile Indian Bend Wash path through Scottsdale. The riding sits 6 to 25 miles out of downtown in every direction, so you will want a car. American checks a packed bike as a standard bag (Oct 2026); one south Scottsdale shop rents a carbon road bike at $90 a day (Oct 2026); no Valley shop says in writing that it receives a shipped bike. Bring yours for anything longer than a day.",
+  "about": [
+    "Downtown Phoenix is the center for every distance on these pages, and the riding is at the edges of the Valley. This guide names its zones: South Mountain and Ahwatukee on the south edge; Scottsdale and the northeast (Gainey Village, the Indian Bend Wash greenbelt, Fountain Hills, Rio Verde and McDowell Mountain Regional Park); the East Valley (Tempe, Mesa, Usery Pass and the Salt River, Chandler); and the dirt (Trail 100 in the Phoenix Mountains Preserve, the Competitive Track at McDowell Mountain Regional Park, South Mountain's trails). Every listing says which one it sits in and how far it is from downtown.",
+    "Phoenix is Cycle for Change's home base. one·n·ten, the LGBTQ youth organization in Phoenix, is one of the orgs a pledger can pick on the pledge page. Its Cycling 4 one·n·ten ride (in 2026, a metric century or 20 miles from Prisma Community Care on Central Ave) is on the 2027 calendar for November. The rest of the winter calendar: the Valley of the Sun Stage Race in February, Belgian Waffle Ride Arizona on March 7, 2027 and the Cactus Cup at McDowell Mountain in March, and the HonorHealth Tour de Scottsdale on April 10, 2027."
+  ],
+  "riding": [
+    "The ride for the evening you land is the Indian Bend Wash path: 11 miles of concrete path through Scottsdale's greenbelt, with more than 24 underpasses and bridges at the big streets. The climb is South Mountain's Summit Road, 7 miles and about 1,330 feet from the ranger station to the towers. The city closes it to cars for {ride:phoenix-az-city-of-phoenix-silent-sunday-south-mountain|Silent Sunday}, a closed road rather than a led ride. The long loop goes around the McDowell Mountains from the Safeway at DC Ranch, up Pima to Dynamite, over to Rio Verde and down Saguaro to Shea. 50 miles and about 2,750 feet, with no water on the route page. The East Valley's loop is Usery Pass and the Salt River out of Mesa, 27 miles and about 1,500 feet, with the only water at the top of Usery. Dirt is Trail 100 across the Phoenix Mountains Preserve and the Competitive Track at McDowell Mountain Regional Park, where the Four Peaks lot has water, showers and a bike wash.",
+    "The group rides are the way in. Scottsdale Cycling leaves Gainey Village, the southeast corner of Scottsdale Rd and Doubletree Ranch Rd, for {ride:scottsdale-az-scottsdale-cycling-gainey-tuesday,scottsdale-az-scottsdale-cycling-gainey-thursday|two fast weekday rides} and {ride:scottsdale-az-scottsdale-cycling-saturday-ride|the Fuss Buss}. They start in the dark most of the year, so bring lights. TriScottsdale rolls from Village Tavern on the same block for {ride:scottsdale-az-triscottsdale-saturday-group-ride|its long weekend ride}. Phoenix Metro Bicycle Club's {ride:tempe-az-pmbc-saturday-cycling|Saturday Cycling} from Kiwanis Park in Tempe is no-drop with a sweep, the easiest group ride in the Valley for a visitor. Its {ride:phoenix-az-pmbc-granada-sunday-breakfast-ride|Granada Park ride} ends at breakfast. {ride:tempe-az-regroup-coffee-ride|Regroup's coffee ride} leaves the café in Tempe and comes back to it. McDowell Mountain Cycles in Fountain Hills posts {ride:fountain-hills-az-mcdowell-mountain-cycles-saturday-road-ride|a no-drop road ride} and {ride:fountain-hills-az-mcdowell-mountain-cycles-sunday-funday-gravel|Sunday Funday gravel}. On dirt, Valley Epic Rides meets for {ride:phoenix-az-taco-tuesday-south-mountain|Taco Tuesday} on South Mountain and {ride:phoenix-az-valley-epic-rides-night-rider-trail-100|the Night Rider series} on Trail 100. {ride:phoenix-az-downtempo-ride|The Downtempo ride} is the slow, no-drop social ride from Civic Space Park downtown."
+  ],
+  "getting_there": "Fly into Phoenix Sky Harbor (PHX), about 4 miles east of downtown. American and Southwest use Terminal 4; Alaska, Delta, United, Frontier, JetBlue and the rest use Terminal 3 (the airport's airline list, Oct 2026). The free PHX Sky Train runs 24 hours from both terminals to the Rental Car Center, where 14 companies rent, and to the Valley Metro Rail stop at 44th and Washington streets. Reserve a car, because walk-up cars are limited. You will want one: the shops in this guide run from 2 to 23 miles out of downtown, and the riding zones sit further apart than that. Rideshare picks up at marked curbs at Terminals 3 and 4, and a taxi to downtown Phoenix is a $20 flat rate (Oct 2026). The Bring-your-bike page has American's bike rules, the rental math and the shipping gap.",
+  "routes": [
+    {
+      "name": "South Mountain, Summit Road to the towers",
+      "type": "climb",
+      "miles": 7,
+      "elevation_gain_ft": 1330,
+      "surface": "Paved park road. PJAMM calls it adequate and says it is cracked in many places from heat.",
+      "difficulty": "moderate",
+      "start": {
+        "name": "The ranger station at the bottom of Summit Road, South Mountain Park/Preserve",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "The city's climb: Summit Road from the ranger station to the radio towers at the top. PJAMM measures 7 miles and 1,330 feet at 3.2 percent. The road dips on the way up; without those bits it is 4.8 percent, and the steepest quarter-mile is 8.9 percent. Dobbins Lookout, at 2,330 feet, is the highest point in the park open to the public (City of Phoenix). Every Sunday, cars are stopped at the 1.0 mile marker from 5 to 10 a.m. On the 4th Sunday of the month the road is closed to cars all day, 5 a.m. to 7 p.m., and drivers park at the Activity Complex. The park's entrance and parking hours are 5 a.m. to 7 p.m. Valley Epic Rides' Taco Tuesday group rides the park's trails from Ahwatukee, on the far side of the mountain.",
+      "water": "A water fountain, restrooms and a vending machine at the ranger station at the start (PJAMM); nothing on the climb.",
+      "hazards": "PJAMM: minimal shoulder most of the way, blind corners with nowhere to bail out on the descent, and a hole or two to watch for on the way down. Outside the Silent Sunday hours cars use the road; PJAMM calls traffic minimal. Heat, May to October: summer highs average 104 to 106 F (PJAMM). On Extreme Heat Warning days the city closes the Holbert, Mormon and Hau'pal Loop trails, and the National Trail from Pima Canyon, 8 a.m. to 5 p.m. The list does not name Summit Road. Nothing on the climb; fill at the ranger station.",
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://pjammcycling.com/climb/1812.South-Mountain"
+      },
+      "ride_slug": "phoenix-az-city-of-phoenix-silent-sunday-south-mountain",
+      "sources": [
+        "https://pjammcycling.com/climb/1812.South-Mountain",
+        "https://www.phoenix.gov/administration/departments/parks/activities-facilities/trails/south-mountain-parkpreserve.html",
+        "https://www.phoenix.gov/administration/departments/parks/activities-facilities/trails/heat-safety.html",
+        "https://www.azfamily.com/2026/05/11/phoenix-extends-trail-closures-into-tuesday-triple-digit-heat-continues/"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Rio Verde – Fountain Hills loop (around the McDowells)",
+      "type": "road",
+      "miles": 50,
+      "elevation_gain_ft": 2750,
+      "surface": "Road. The route page names Pima, Dynamite, Rio Verde, Saguaro and Shea; it does not describe the surface.",
+      "difficulty": "hard",
+      "start": {
+        "name": "Safeway at DC Ranch, Scottsdale",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "The loop around the north and east side of the McDowell Mountains. From the Safeway at DC Ranch it goes up Pima to Dynamite, over the hill to Rio Verde, then left on Saguaro all the way to Shea, per the route page: 50 miles and about 2,750 feet. The page's note stops at Shea, so check the map for the way back. Saguaro Blvd runs through Fountain Hills past McDowell Mountain Cycles, where {ride:fountain-hills-az-mcdowell-mountain-cycles-saturday-road-ride|the shop's no-drop road ride} leaves, and past Fountain View Coffee half a mile north of it. You can also start in Fountain Hills: a 48-mile, 2,529-foot RideWithGPS loop through the same three towns starts there. The HonorHealth Tour de Scottsdale (April 10, 2027) runs its 54-mile route around the McDowells through the same three towns.",
+      "water": "The Safeway at DC Ranch, at the start and finish. The route page names nothing in between. Fountain View Coffee, 12645 N Saguaro Blvd in Fountain Hills, opens at 6 every day per two listings; call (805) 310-1544 before you count on it.",
+      "hazards": "The route page names no hazards. Heat, May to October: summer highs average 104 to 106 F (PJAMM). That is 50 miles with no water stop on the page, so start at first light and carry all your water.",
+      "links": {
+        "rwgps": "https://ridewithgps.com/routes/50221588",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": null
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://ridewithgps.com/routes/50221588",
+        "https://ridewithgps.com/routes/10851307",
+        "https://www.tourdescottsdale.org/Race/TourdeScottsdale/Page-1",
+        "https://pjammcycling.com/climb/1812.South-Mountain"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Gainey (the Scottsdale Cycling loop)",
+      "type": "road",
+      "miles": 29,
+      "elevation_gain_ft": 1100,
+      "surface": "Road. The route page does not describe the surface.",
+      "difficulty": "moderate",
+      "start": {
+        "name": "Gainey Village, southeast corner of Scottsdale Rd and Doubletree Ranch Rd",
+        "address": "8977 N Scottsdale Rd, Scottsdale, AZ 85253",
+        "lat": 33.5584,
+        "lon": -111.926
+      },
+      "description": "The route of {ride:scottsdale-az-scottsdale-cycling-gainey-thursday|Scottsdale Cycling's Gainey ride}, which clips in at the southeast corner of Doubletree and Scottsdale: 29 miles and about 1,100 feet, per the RideWithGPS page. The club's Strava event names its five hills: Desert Cove, Via Linda, 136th St, 128th St and 124th St. Join the group, or ride the loop on your own any morning.",
+      "water": null,
+      "hazards": "The route page names no hazards. The group starts in the dark most of the year, so bring front and rear lights. Heat, May to October: summer highs average 104 to 106 F (PJAMM). Start at first light and carry all your water.",
+      "links": {
+        "rwgps": "https://ridewithgps.com/routes/29074769",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": null
+      },
+      "ride_slug": "scottsdale-az-scottsdale-cycling-gainey-thursday",
+      "sources": [
+        "https://ridewithgps.com/routes/29074769",
+        "https://www.strava.com/clubs/620243",
+        "https://pjammcycling.com/climb/1812.South-Mountain"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Usery Loop and Salt River",
+      "type": "road",
+      "miles": 27,
+      "elevation_gain_ft": 1500,
+      "surface": "Paved road. The author says it has a good shoulder for the most part.",
+      "difficulty": "moderate",
+      "start": {
+        "name": "Thomas Rd and Power Rd, Mesa (the Walgreens on the corner)",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "East Side Cycling's RideWithGPS ambassador route through the East Valley's desert. North on Power Rd past Red Mountain, down the steep hill locals call Kong, and along the Salt River. Then up Little Kong, about a mile at 5 to 6 percent, and 4 miles at a steady 5 to 6 percent over Usery Pass. It finishes with a descent to McDowell Rd and a short climb up Hawes through Las Sendas: 27 miles and about 1,500 feet. A side trip goes out to the Cliffs just below Saguaro Lake. The author says people have parked behind the Walgreens at the start; ask first.",
+      "water": "The only drinking water on the route is at the top of Usery, near the visitor center, after most of the climbing (East Side Cycling).",
+      "hazards": "Kong is a steep downhill early in the ride. An older Bikemap route along the Salt River on Bush Highway (about 13 years old) warns that boaters use Bush Highway heavily. Heat, May to October: summer highs average 104 to 106 F (PJAMM). There is no water until the top of Usery, so start at first light and carry enough for the river and the pass.",
+      "links": {
+        "rwgps": "https://ridewithgps.com/ambassador_routes/438-usery-loop-and-salt-river?lang=en",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": null
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://ridewithgps.com/ambassador_routes/438-usery-loop-and-salt-river?lang=en",
+        "https://www.bikemap.net/en/r/1822978/",
+        "https://pjammcycling.com/climb/1812.South-Mountain"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Indian Bend Wash path (the Scottsdale Greenbelt)",
+      "type": "path",
+      "miles": 11,
+      "elevation_gain_ft": null,
+      "surface": "Concrete multiuse path (TrailLink), with more than 24 underpasses and bridges (City of Scottsdale).",
+      "difficulty": "easy",
+      "start": {
+        "name": "Chaparral Park, Scottsdale (one of the path's trailheads)",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "An 11-mile path through Scottsdale's greenbelt of parks, lakes and golf courses (City of Scottsdale). More than 24 underpasses and bridges carry it past the big streets. TrailLink measures 12 miles from Venturoso Park in Phoenix to E Curry Rd in Tempe, with trailheads at Chaparral Park and Eldorado Park in Scottsdale. This is the ride for the evening you land: almost no cross traffic, and you can turn around anywhere. {ride:scottsdale-az-the-bike-lane-greenbelt-and-canal-rides|The Bike Lane's social rides} use the greenbelt and the canals, each ride with its own start.",
+      "water": null,
+      "hazards": "TrailLink says underpasses take it under almost all road crossings, so expect a few at street level. It is shared with walkers and runners. TrailLink says to watch for flying golf balls where the path passes the tee boxes. Scottsdale's path rules: keep right and leave the left side for passing. Heat, May to October: summer highs average 104 to 106 F (PJAMM). Neither the city's page nor TrailLink names a water fountain.",
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://www.traillink.com/trail/indian-bend-wash-trail"
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://www.scottsdaleaz.gov/outdoor-activities/paths-trails",
+        "https://www.traillink.com/trail/indian-bend-wash-trail",
+        "https://pjammcycling.com/climb/1812.South-Mountain"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Indian Bend Wash Greenbelt loop (to Tempe Town Lake)",
+      "type": "path",
+      "miles": 52,
+      "elevation_gain_ft": 1000,
+      "surface": "Paved throughout. About 32 of the 52 miles are bike path; about 8 are road and about 6 are state road (Komoot).",
+      "difficulty": "hard",
+      "start": {
+        "name": null,
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "Komoot's 52-mile loop joins the Indian Bend Wash greenbelt to other paths and roads: past Taliesin West and Camelback Park, down to Tempe Town Lake, and on to a viewpoint over the Salt River. About 1,000 feet of climbing, per Komoot. Much of the way crosses streets on underpasses and overpasses. It is the long day on this list, and most of it is away from cars; it is a loop, so start wherever you are staying along it.",
+      "water": null,
+      "hazards": "About 6 miles are on a state road; Komoot does not say which. Heat, May to October: summer highs average 104 to 106 F (PJAMM). It is 52 miles and Komoot names no water stop, so start at first light and plan your refills before you go.",
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": "https://www.komoot.com/smarttour/e1352775357/indian-bend-wash-greenbelt-loop-scottsdale-arizona",
+        "gpx": null,
+        "other": null
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://www.komoot.com/smarttour/e1352775357/indian-bend-wash-greenbelt-loop-scottsdale-arizona",
+        "https://pjammcycling.com/climb/1812.South-Mountain"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Trail 100 (Charles M. Christiansen Memorial Trail)",
+      "type": "mtb",
+      "miles": 11,
+      "elevation_gain_ft": 850,
+      "surface": "Singletrack: mild to moderate, with some steep, short climbs (MTB Project). Rocky, with loose pebbles (Singletracks).",
+      "difficulty": "moderate",
+      "start": {
+        "name": "Dreamy Draw Park, off SR 51 at Northern Ave",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "Phoenix's in-town mountain bike trail runs across the Phoenix Mountains Preserve. MTB Project measures 11.3 miles with 860 feet up, rated intermediate/difficult. Singletracks names the trailheads: Dreamy Draw Park (the main lot), Tatum Blvd at the east end, 7th Ave at the west end, and Mountain View Park. For shorter rides there is MTB Project's West Side Trail 100 Loop (10.9 miles, 743 feet, from the Central Ave lot in North Mountain Park) and Trailforks' 5.3-mile intermediate loop on the east side.",
+      "water": null,
+      "hazards": "Rocky with loose pebbles (Singletracks). The west end near the 7th St lot gets a lot of hikers (MTB Project). A Trailforks review says parts of the Fence Line trail on the east loop are hike-a-bike over boulders. Heat, May to October: summer highs average 104 to 106 F (PJAMM). On Extreme Heat Warning days the city closes the Piestewa Peak Summit Trail and associated trails 8 a.m. to 5 p.m.; that list does not name Trail 100. No page names a place to get water, so carry it all.",
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://www.mtbproject.com/directory/8011919/phoenix-mountains-preserve"
+      },
+      "ride_slug": "phoenix-az-valley-epic-rides-night-rider-trail-100",
+      "sources": [
+        "https://www.mtbproject.com/directory/8011919/phoenix-mountains-preserve",
+        "https://www.mtbproject.com/trail/4873242/west-side-trail-100-loop",
+        "https://www.mtbproject.com/trail/4881161/trail-100-west",
+        "https://www.trailforks.com/route/trail-100-intermediate/",
+        "https://www.singletracks.com/bike-trails/trail-100/",
+        "https://www.phoenix.gov/administration/departments/parks/activities-facilities/trails/heat-safety.html",
+        "https://pjammcycling.com/climb/1812.South-Mountain"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "McDowell Mountain Competitive Track (Long Loop)",
+      "type": "mtb",
+      "miles": 8,
+      "elevation_gain_ft": null,
+      "surface": "Mountain bike race track, ridden one way as marked. Don't 'improve' it, per the county.",
+      "difficulty": "moderate",
+      "start": {
+        "name": "Four Peaks Staging Area, McDowell Mountain Regional Park, Fountain Hills",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "Maricopa County's Competitive Track in McDowell Mountain Regional Park, about 14 to 15 miles of trail in all (15 by the county's web page, 13.7 by its map), has three loops. The 7.9-mile Long Loop is, in the county's words, designed for the average rider and enjoyed by all skill levels. The 3.0-mile Sport Loop suits intermediate and advanced riders, and the 2.7-mile Technical Loop is for experts only. All three start and finish at the Four Peaks Staging Area. {ride:fountain-hills-az-mcdowell-mountain-cycles-tuesday-night-mtb|McDowell Mountain Cycles' night ride} and {ride:fountain-hills-az-mcdowell-mountain-cycles-ladies-mountain-bike-ride|its Ladies Mountain Bike Ride} both leave the Four Peaks lot; the shop rents mountain bikes and delivers them to the park.",
+      "water": "Four Peaks Staging Area: water, restrooms with showers, and a bike wash rack (county map).",
+      "hazards": "Ride it one way only; slower riders yield to faster ones. The Technical Loop is experts only, with steep climbs and technical descents. The county says to carry plenty of water, check conditions, and tell someone your route. Heat, May to October: summer highs average 104 to 106 F (PJAMM). Fill up at Four Peaks before every loop.",
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://www.maricopacountyparks.net/assets/1/6/mcdowell-8x11-competitive-track_combined.pdf"
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://www.maricopacountyparks.net/assets/1/6/mcdowell-8x11-competitive-track_combined.pdf",
+        "https://www.maricopacountyparks.net/park-locator/mcdowell-mountain-regional-park/park-activities/biking/",
+        "https://mcdowellmountaincycles.com/bike-rentals/",
+        "https://pjammcycling.com/climb/1812.South-Mountain"
+      ],
+      "verified": "2026-10-03"
+    }
+  ],
+  "coffee": [
+    {
+      "name": "Regroup Coffee + Bicycles",
+      "url": "https://regroupwithus.com/coffee/",
+      "address": "1205 N Scottsdale Rd, Tempe, AZ 85288",
+      "note": "Tempe, on Scottsdale Rd about 8 miles east of downtown Phoenix: a café and bike shop in one room, and the start and finish of {ride:tempe-az-regroup-coffee-ride|Regroup's coffee ride}, which comes back here for coffee and pastries (Chacónne Patisserie, per the home page). The café door opens at 6:30, so the coffee is after the ride, not before; closed Monday. The café's page says nothing about bike parking or a pump. The bike shop side is under Bike shops.",
+      "hours_hint": "6:30 a.m. to noon Tuesday to Thursday, 6:30 a.m. to 2 p.m. Friday to Sunday; closed Monday",
+      "ride_out": true,
+      "ride_slug": "tempe-az-regroup-coffee-ride"
+    },
+    {
+      "name": "Village Coffee Roastery",
+      "url": "https://joe.coffee/locations/az/scottsdale/village-coffee-roastery-scottsdale/",
+      "address": "8120 N Hayden Rd, Scottsdale, AZ 85258",
+      "note": "Scottsdale, in McCormick Ranch, about a mile and a half east of the Gainey Village corner where {ride:scottsdale-az-scottsdale-cycling-gainey-tuesday,scottsdale-az-scottsdale-cycling-gainey-thursday,scottsdale-az-scottsdale-cycling-saturday-ride|Scottsdale Cycling's rides} leave. It opens at 6 every day, after the dawn rides have rolled, so this is the coffee after. Breakfast and a sidewalk patio, per two listings. Call (480) 905-0881 before you count on it.",
+      "hours_hint": "6 a.m. daily; closes at 2 or 4 p.m. (the listings disagree)",
+      "ride_out": false,
+      "ride_slug": null
+    },
+    {
+      "name": "Fountain View Coffee",
+      "url": "https://joe.coffee/locations/az/fountain-hills/fountain-view-coffee-fountain-hills-cd8925a5-84b1-447d-9ea5-05e251e3c6a4/",
+      "address": "12645 N Saguaro Blvd Ste 17, Fountain Hills, AZ 85268",
+      "note": "Fountain Hills, about 23 miles from downtown Phoenix, on Saguaro Blvd, the road the Rio Verde – Fountain Hills loop follows to Shea. It is about half a mile north of McDowell Mountain Cycles, where {ride:fountain-hills-az-mcdowell-mountain-cycles-saturday-road-ride|the shop's road ride} and {ride:fountain-hills-az-mcdowell-mountain-cycles-sunday-funday-gravel|Sunday Funday gravel} leave. Open 6 to 3 every day, with a back patio facing the fountain, per two listings; no site of its own turned up, so call (805) 310-1544 first.",
+      "hours_hint": "6 a.m. to 3 p.m. daily",
+      "ride_out": false,
+      "ride_slug": null
+    },
+    {
+      "name": "Lux Central",
+      "url": "https://luxcoffee.com/",
+      "address": "4402 N Central Ave, Phoenix, AZ 85012",
+      "note": "Central Phoenix, on Central Avenue about 3.5 miles north of downtown, open 6 a.m. to 10 p.m. every day, per its site. The one early café we confirmed in central Phoenix; it is not at a ride start, and it is still open after an evening ride. TripAdvisor lists outdoor seating; nothing says bikes.",
+      "hours_hint": "6 a.m. to 10 p.m. daily",
+      "ride_out": false,
+      "ride_slug": null
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Matt's Big Breakfast",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g31310-d809958-Reviews-Matt_s_Big_Breakfast-Phoenix_Arizona.html",
+      "address": "825 N 1st St, Phoenix, AZ 85004",
+      "cuisine": "Breakfast",
+      "note": "After the ride, downtown: breakfast and lunch about half a mile north of City Hall, 7 to 2 every day, per two listings. Reviews mention big plates and a wait on weekend mornings, with shade outside to wait in. Its own site was not opened, so call (602) 254-1074 first."
+    },
+    {
+      "name": "Village Tavern",
+      "url": "https://villagetavern11.netwaiter.com/",
+      "address": "8787 N Scottsdale Rd, Scottsdale, AZ 85258",
+      "cuisine": "American",
+      "note": "After the ride, Scottsdale: the restaurant at Gainey Village where {ride:scottsdale-az-triscottsdale-saturday-group-ride|TriScottsdale's long weekend ride} and {ride:scottsdale-az-triscottsdale-tuesday-flat-and-fast,scottsdale-az-triscottsdale-thursday-six-hill-ride|its two weekday rides} start, about 12 miles northeast of downtown Phoenix. Open 11 to 9 Sunday to Thursday and 11 to 10 Friday and Saturday, per its ordering page, so it is lunch after the long Saturday ride, not breakfast. Neither page mentions a patio or bike parking; (480) 951-6445.",
+      "ride_slug": [
+        "scottsdale-az-triscottsdale-saturday-group-ride",
+        "scottsdale-az-triscottsdale-tuesday-flat-and-fast",
+        "scottsdale-az-triscottsdale-thursday-six-hill-ride"
+      ]
+    },
+    {
+      "name": "Los Taquitos (Ahwatukee)",
+      "url": "https://lostaquitosaz.com/ahwatukee",
+      "address": "4747 E Elliot Rd #17, Phoenix, AZ 85044",
+      "cuisine": "Mexican",
+      "note": "After the ride, on the South Mountain side: a Mexican place in Ahwatukee about a mile from the start of {ride:phoenix-az-taco-tuesday-south-mountain|Valley Epic Rides' Taco Tuesday}, a group that names Los Taquitos as one of its after-ride spots. Open 9 to 9 Tuesday to Saturday and 9 to 7 Sunday and Monday, per its site. On a Tuesday it closes at 9, so go straight there.",
+      "ride_slug": "phoenix-az-taco-tuesday-south-mountain"
+    },
+    {
+      "name": "Pizzeria Bianco Heritage Square",
+      "url": "https://www.pizzeriabianco.com/pizzeria-bianco-heritage-square",
+      "address": "623 E Adams St, Phoenix, AZ 85004",
+      "cuisine": "Pizza",
+      "note": "The one you would go back for, and a night-before dinner: wood-fired pizza in Heritage Square, about half a mile east of City Hall. Open 11 to 9 Monday to Saturday, closed Sunday. It takes no reservations and does no take-out, per its site, so a group waits for a table."
+    },
+    {
+      "name": "Pedal Haus Brewery (Tempe)",
+      "url": "https://www.pedalhausbrewery.com/tempe-location",
+      "address": "730 S Mill Ave #102, Tempe, AZ 85281",
+      "cuisine": "Brewpub",
+      "note": "The night before, or late, on Mill Avenue in downtown Tempe, about 8 miles east of downtown Phoenix: burgers, fried chicken and pizza, and what its site calls one of the largest patios downtown. Open 11 a.m. to 11 p.m. Monday to Thursday, to midnight Friday and Saturday, and 9:45 a.m. to 11 p.m. Sunday. No reservations, just a waitlist; bikes are in the name, but no bike parking is stated. The Roosevelt Row brewery is under Off the bike."
+    }
+  ],
+  "hotels": [
+    {
+      "name": "Sonesta Suites Scottsdale Gainey Ranch",
+      "url": "https://www.sonesta.com/sonesta-hotels-resorts/az/scottsdale/sonesta-suites-scottsdale-gainey-ranch",
+      "booking_url": null,
+      "address": "7300 E Gainey Suites Drive, Scottsdale, AZ 85258",
+      "phone": null,
+      "note": "Scottsdale, at Gainey Ranch, about 11 miles northeast of downtown Phoenix. Its own page puts the Gainey Village Health Club 0.3 mile away, and {ride:scottsdale-az-scottsdale-cycling-gainey-tuesday,scottsdale-az-scottsdale-cycling-gainey-thursday,scottsdale-az-scottsdale-cycling-saturday-ride|Scottsdale Cycling's rides} leave from Scottsdale Rd and Doubletree Ranch Rd at Gainey Village. Every suite has a full kitchen, which matters on a training week; breakfast runs 7 to 9, after those rides have left. A $30 plus tax a night destination fee that includes parking (the hotel's page, Oct 2026); about $159 for a late-October Sunday on hotels.com (read Oct 3, 2026). Nothing about your own bike on its pages.",
+      "price_hint": "$$",
+      "bike_policy": null,
+      "ride_slug": [
+        "scottsdale-az-scottsdale-cycling-gainey-tuesday",
+        "scottsdale-az-scottsdale-cycling-gainey-thursday",
+        "scottsdale-az-scottsdale-cycling-saturday-ride"
+      ]
+    },
+    {
+      "name": "Grand Hyatt Scottsdale Resort",
+      "url": "https://www.hyatt.com/grand-hyatt/en-US/scott-grand-hyatt-scottsdale-resort",
+      "booking_url": null,
+      "address": "7500 E. Doubletree Ranch Road, Scottsdale, AZ 85258",
+      "phone": null,
+      "note": "Scottsdale, at Gainey Ranch, on Doubletree Ranch Rd, the road {ride:scottsdale-az-scottsdale-cycling-gainey-tuesday,scottsdale-az-scottsdale-cycling-gainey-thursday,scottsdale-az-scottsdale-cycling-saturday-ride|the Gainey Village rides} start on. It was the Hyatt Regency until a 2024 renovation. The $55 nightly resort fee includes bicycle rentals; those are the resort's bikes, and nothing on its pages covers yours. No rate shown (Oct 2026).",
+      "price_hint": null,
+      "bike_policy": null,
+      "ride_slug": [
+        "scottsdale-az-scottsdale-cycling-gainey-tuesday",
+        "scottsdale-az-scottsdale-cycling-gainey-thursday",
+        "scottsdale-az-scottsdale-cycling-saturday-ride"
+      ]
+    },
+    {
+      "name": "Hampton Inn & Suites Phoenix Tempe",
+      "url": "https://www.hilton.com/en/hotels/phxsuhx-hampton-suites-phoenix-tempe/",
+      "booking_url": null,
+      "address": "1415 N. Scottsdale Road, Tempe, AZ 85288",
+      "phone": null,
+      "note": "North Tempe, about 8 miles east of downtown Phoenix, on the same road as Regroup Coffee + Bicycles, where {ride:tempe-az-regroup-coffee-ride|the Regroup coffee ride} leaves. Free hot breakfast and free self-parking; no airport shuttle. Nothing about bikes on the hotel's pages. $100 to $139 a night on trivago for October nights, and $417 for Saturday, Nov 7 (read Oct 3, 2026), so read a date before you count on the price.",
+      "price_hint": "$$",
+      "bike_policy": null,
+      "ride_slug": "tempe-az-regroup-coffee-ride"
+    },
+    {
+      "name": "Tempe Mission Palms",
+      "url": "https://www.hyatt.com/destination-by-hyatt/en-US/phxdt-tempe-mission-palms",
+      "booking_url": null,
+      "address": "60 E 5th St, Tempe, AZ 85281",
+      "phone": null,
+      "note": "Downtown Tempe, beside A Mountain and \"just steps from Mill Avenue,\" by its own page. The $30 nightly destination fee covers parking and a shuttle to and from Sky Harbor, 5:30 a.m. to 10 p.m.; ask at booking whether the shuttle takes a bike case. It has a rooftop pool. Nothing about bikes on its pages, and no rate shown (Oct 2026).",
+      "price_hint": null,
+      "bike_policy": null,
+      "ride_slug": null
+    },
+    {
+      "name": "Phoenix Hostel & Cultural Center",
+      "url": "https://www.phxhostel.org/",
+      "booking_url": "https://bc7c8d0484748b44.sirvoy.me/",
+      "address": "1026 N. 9th Street, Phoenix, AZ 85006",
+      "phone": null,
+      "note": "Central Phoenix, just northeast of downtown. Its page puts the light rail at Central and Roosevelt a mile's walk away, and {ride:phoenix-az-downtempo-ride|the Downtempo ride} leaves from Civic Space Park downtown. Private rooms $60 to $80 a night for one or two (the hostel's page, Oct 2026). Self check-in at any hour, free street parking. Guests need a government ID and must live outside Maricopa County. Hostelworld lists the same address as HI Phoenix – The Metcalf House. Nothing about bikes on its pages.",
+      "price_hint": "$",
+      "bike_policy": null,
+      "ride_slug": "phoenix-az-downtempo-ride"
+    },
+    {
+      "name": "Arizona Biltmore",
+      "url": "https://www.arizonabiltmore.com/",
+      "booking_url": null,
+      "address": "2400 E. Missouri Ave, Phoenix, AZ 85016",
+      "phone": null,
+      "note": "Central Phoenix, at 24th St and Missouri in the Biltmore area. {ride:phoenix-az-pmbc-granada-sunday-breakfast-ride|PMBC's breakfast ride} leaves Granada Park at 20th St and Maryland, about 6 miles north of downtown. The $45 nightly resort charge includes a one-hour bike rental; nothing on its pages covers your own bike. Parking is $28 a night self, $35 valet. No rate shown (Oct 2026).",
+      "price_hint": null,
+      "bike_policy": null,
+      "ride_slug": "phoenix-az-pmbc-granada-sunday-breakfast-ride"
+    }
+  ],
+  "bike_shops": [
+    {
+      "name": "Bike Emporium",
+      "url": "https://www.bikeemporium.com/",
+      "address": "8443 E. McDonald Dr., Scottsdale, AZ 85250",
+      "phone": "(480) 991-5430",
+      "services": [
+        "repair",
+        "rental",
+        "rental-road",
+        "rental-gravel",
+        "rental-mtb"
+      ],
+      "note": "South Scottsdale, at the southeast corner of Granite Reef and McDonald, in the plaza behind Walgreens; about 11 miles northeast of downtown Phoenix. The one Valley shop that publishes its rental fleet and prices: a 2023 carbon Cannondale SuperSix EVO with Shimano 105 and disc brakes, sizes 48 to 61 cm, $90 per 24 hours; a 2024 Marin Kentfield 1 aluminum gravel bike, 49 to 59 cm, $60; a 2023 Cannondale Habit full-suspension mountain bike, S to XL, $85 (Oct 2026). Helmet, lock and bottle cage with every rental; pedals and a repair kit with the road and mountain bikes (the page doesn't say so for the gravel bike). A $50 non-refundable deposit holds a road, gravel or mountain bike. No e-bikes. Builds bikes bought elsewhere and boxes bikes for shipping, prices not published; it does not say it takes in a carrier delivery. Monday to Friday 9 to 5, Saturday 9 to 3, closed Sunday."
+    },
+    {
+      "name": "McDowell Mountain Cycles",
+      "url": "https://mcdowellmountaincycles.com/",
+      "address": "11879 N. Saguaro Blvd., Fountain Hills, AZ",
+      "phone": "(480) 272-8741",
+      "services": [
+        "repair",
+        "suspension",
+        "rental",
+        "rental-road",
+        "rental-gravel",
+        "rental-mtb",
+        "rental-ebike",
+        "shop-rides"
+      ],
+      "note": "Fountain Hills, about 23 miles northeast of downtown Phoenix; the shop for the northeast loops and McDowell Mountain Regional Park, on Saguaro Blvd where the Rio Verde – Fountain Hills loop passes. Rents road, gravel, mountain and e-bikes with helmet and pedals (a few clipless sets, so say so when you book) and a flat kit. ID at pickup, $25 to cancel, a car rack for $40 a booking, and delivery in Fountain Hills and to McDowell Mountain Regional Park. No rental prices on the site (Oct 2026); call. Service runs Alloy, Carbon and Titanium tune packages, the last with fork and shock service. {ride:fountain-hills-az-mcdowell-mountain-cycles-saturday-road-ride|The shop's road ride} and {ride:fountain-hills-az-mcdowell-mountain-cycles-sunday-funday-gravel|Sunday Funday gravel} leave from the door. Monday to Friday 8 to 5, Saturday 8 to 4, closed Sunday."
+    },
+    {
+      "name": "The Velo",
+      "url": "https://www.thevelo.com/",
+      "address": "2317 N 7th St, Phoenix, AZ 85006",
+      "phone": "(602) 759-8169",
+      "services": [
+        "repair",
+        "fitting",
+        "shop-rides"
+      ],
+      "note": "Phoenix, in the Coronado neighborhood, about 2 miles north of downtown; the closest of these shops to a downtown or Roosevelt Row stay. Walk-ins welcome; a flat fix is $10, tune-ups $90, $150 and $250 (Oct 2026). Fits for road, gravel, mountain, tri and cleats, $90 to $180, 30 to 120 minutes; call or text to book. Custom builds. Runs a weekly shop ride from the door; the day and time are on its Ride With Us page. Open every day: Monday to Friday 10 to 6, Saturday 10 to 4, Sunday 10 to 2."
+    },
+    {
+      "name": "Bike Barn",
+      "url": "https://www.bikebarnaz.com/",
+      "address": "4112 N 36th St, Phoenix, AZ 85018",
+      "phone": "(602) 956-3870",
+      "services": [
+        "repair",
+        "fitting",
+        "rental",
+        "rental-road",
+        "rental-mtb"
+      ],
+      "note": "East Phoenix, on 36th Street, about 5 miles northeast of downtown. \"If we can fix it on the spot, we will\"; pick-up and delivery within 10 miles. Rents road, mountain and city bikes through an online booking page; prices and sizes are not on the shop's own pages (Oct 2026). Specialized Body Geometry fits by appointment: basic $90, comprehensive 2D $150 (Oct 2026). Closed Monday; Tuesday to Saturday 9 to 5, Sunday 11 to 4."
+    },
+    {
+      "name": "Regroup Coffee + Bicycles",
+      "url": "https://regroupwithus.com/",
+      "address": "1205 N Scottsdale Rd, Tempe, AZ 85288",
+      "phone": "(480) 648-8309",
+      "services": [
+        "repair",
+        "fitting",
+        "shop-rides",
+        "coffee"
+      ],
+      "note": "Tempe, on Scottsdale Road, about 8 miles east of downtown Phoenix. A café and a bike shop in one room, and the start of {ride:tempe-az-regroup-coffee-ride|the Regroup coffee ride}. Service is booked, not walk-in: Bronze $125, Silver $250, Gold $400 (Oct 2026); the place to meet the Tempe riders, not the place for an emergency fix. Fits with motion capture, saddle pressure mapping and AiRO; price not published. Bike shop: Monday by appointment, Tuesday to Friday 10 to 6, Saturday 10 to 4, closed Sunday (the shop's own service page shows shorter Friday and Saturday hours; call). The café opens at 6:30 every day but Monday."
+    },
+    {
+      "name": "Global Bikes & E-Bikes Chandler North",
+      "url": "https://www.globalbikes.info/about/chandler-n.-rental-center-pg2498.htm",
+      "address": "2915 West Ray Road #10, Chandler, AZ 85224",
+      "phone": "(480) 899-3625",
+      "services": [
+        "repair",
+        "suspension",
+        "shop-rides"
+      ],
+      "note": "East Valley, at the southeast corner of Ray Road and the 101 next to Whole Foods, about 14 miles southeast of downtown Phoenix. One of five Global Bikes stores (Ahwatukee, Chandler North and South, Gilbert, Mesa); repairs regular bikes and e-bikes, from flats to fork and shock rebuilds and wheel building. The chain runs free rides and clinics every week; {ride:chandler-az-global-bikes-chandler-north-saturday-ride|the Chandler North ride} starts here. Open every day: Monday to Friday 10 to 7, Saturday 10 to 6, Sunday 11 to 4."
+    }
+  ],
+  "culture": [
+    {
+      "name": "Stinkweeds",
+      "kind": "record-store",
+      "url": "https://www.stinkweeds.com/about-us/contact/",
+      "address": "12 W Camelback Rd, Phoenix, AZ 85013",
+      "note": "Central Phoenix, on Camelback Rd across from the light rail. New and used vinyl and CDs since 1987. Open 11 to 8 weekdays, 10 to 8 Saturday, noon to 6 Sunday, so it is the stop after the ride."
+    },
+    {
+      "name": "Changing Hands Bookstore",
+      "kind": "bookstore",
+      "url": "https://changinghands.com/store/1",
+      "address": "6428 S McClintock Dr, Tempe, AZ 85283",
+      "note": "Tempe, on McClintock Dr. Independent, open since 1974. Open 10 to 9 weekdays, 9 to 9 Saturday, 10 to 8 Sunday. The second store, at 300 W Camelback Rd in central Phoenix a few blocks from Stinkweeds, has a bar inside, First Draft, pouring wine, beer and coffee, so a rider can sit with a beer and a book."
+    },
+    {
+      "name": "Boycott Bar",
+      "kind": "queer-owned",
+      "url": "https://www.boycottbarphx.com/",
+      "address": "4301 N 7th Ave, Phoenix, AZ 85013",
+      "note": "Melrose District, on 7th Ave. A bar; its own site calls it \"Arizona's last lesbian-owned bar,\" and its About page says \"proudly LGBTQ+ owned & operated.\" Open 5 p.m. to 2 a.m. Tuesday to Friday, from 3 p.m. Saturday and 10 a.m. Sunday, closed Monday; 21 and over."
+    },
+    {
+      "name": "Heard Museum",
+      "kind": "museum",
+      "url": "https://heard.org/plan/",
+      "address": "2301 N Central Ave, Phoenix, AZ 85004",
+      "note": "Central Phoenix, on Central Ave at the Encanto/Central light rail stop. Two hours of Native American art and history. Open 10 to 4 every day September through May, closed Mondays June through August; free parking. Admission is sold through its ticket portal; the price was not on the pages we read (Oct 2026)."
+    },
+    {
+      "name": "Pedal Haus Brewery (Roosevelt Row)",
+      "kind": "bar",
+      "url": "https://www.pedalhausbrewery.com/phoenix-location",
+      "address": "214 E. Roosevelt St, Phoenix, AZ 85004",
+      "note": "Roosevelt Row, downtown Phoenix. A brewery Julian Wright started in 2015 for beer drinkers and cyclists, per its own story page; rooftop patio with its own bar, open from 3 p.m. weekdays, 11 a.m. Saturday, 9:45 a.m. Sunday. No bike parking is stated. The Tempe taproom on Mill Ave is under Restaurants."
+    },
+    {
+      "name": "Old Town Scottsdale Farmers Market",
+      "kind": "market",
+      "url": "https://calendar.oldtownscottsdaleaz.com/scottsdaleaz_oldtown/214091",
+      "address": "7495 East Bennie Gonzales Way, Scottsdale, AZ",
+      "note": "Old Town Scottsdale. Saturdays 8 a.m. to 1 p.m. October through April, 8 to noon in May, 7 to 10 a.m. in June, closed July through September. Over 100 local growers and food makers, per the city's listing; it moved to this spot on October 3, 2026, so check the operator's page before you ride over. Bike parking is not stated."
+    },
+    {
+      "name": "Scottsdale Stadium (spring training)",
+      "kind": "venue",
+      "url": "https://cactusleague.com/schedule.php",
+      "address": null,
+      "note": "Scottsdale. The San Francisco Giants' spring training park; Cactus League games run February 19 to March 20, 2027, and the Angels play at Tempe Diablo Stadium in Tempe. Tempe Tourism's guide says players sign by the dugouts for about half an hour before the game. The thing to do when a training week lands in March."
+    }
+  ],
+  "clubs": [
+    {
+      "name": "Phoenix Metro Bicycle Club",
+      "url": "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=356095",
+      "note": "The Valley's big road club. {ride:tempe-az-pmbc-saturday-cycling|Saturday Cycling} from Kiwanis Park in Tempe is, in the club's words, the big weekly ride for everyone: no-drop with a sweep, about 25 or 35 miles, beginners and newcomers welcome. The club also runs {ride:phoenix-az-pmbc-granada-sunday-breakfast-ride|the Granada Park breakfast ride} in Phoenix and {ride:chandler-az-pmbc-wednesday-no-drop|a no-drop ride} that moves around the Southeast Valley. Visitors are always welcome; helmet on, no earphones.",
+      "inclusive_focus": [
+        "no-drop",
+        "beginner"
+      ],
+      "ride_slug": "tempe-az-pmbc-saturday-cycling"
+    },
+    {
+      "name": "Scottsdale Cycling",
+      "url": "https://www.strava.com/clubs/620243",
+      "note": "The fast crowd at Gainey Village, Scottsdale Rd and Doubletree Ranch Rd. {ride:scottsdale-az-scottsdale-cycling-gainey-tuesday,scottsdale-az-scottsdale-cycling-gainey-thursday|The two Gainey rides} are rated advanced and start in the dark most of the year, so bring front and rear lights. {ride:scottsdale-az-scottsdale-cycling-saturday-ride|The Fuss Buss} is four to five hours and more relaxed, but still a drop ride, and it ends at coffee. The Strava club is set to invite-only: ask to join there, and expect rain to cancel the ride.",
+      "inclusive_focus": [],
+      "ride_slug": "scottsdale-az-scottsdale-cycling-gainey-thursday"
+    },
+    {
+      "name": "McDowell Mountain Cycles",
+      "url": "https://mcdowellmountaincycles.com/mmc-life/",
+      "note": "The Fountain Hills shop posts a ride for every kind of bike on its monthly calendar. There is {ride:fountain-hills-az-mcdowell-mountain-cycles-saturday-road-ride|a no-drop road ride} of 30-plus miles from the shop, and {ride:fountain-hills-az-mcdowell-mountain-cycles-sunday-funday-gravel|Sunday Funday}, about 40 no-drop miles of gravel, road and singletrack. {ride:fountain-hills-az-mcdowell-mountain-cycles-tuesday-night-mtb|TNR}, 15 to 20 miles of night mountain biking, and {ride:fountain-hills-az-mcdowell-mountain-cycles-ladies-mountain-bike-ride|the Ladies Mountain Bike Ride} both leave the Four Peaks lot in McDowell Mountain Regional Park. The shop says everyone is welcome and to check its Facebook page for times.",
+      "inclusive_focus": [
+        "no-drop",
+        "gravel",
+        "women-trans-femme"
+      ],
+      "ride_slug": "fountain-hills-az-mcdowell-mountain-cycles-saturday-road-ride"
+    },
+    {
+      "name": "Valley Epic Rides",
+      "url": "https://www.meetup.com/valley-epic-rides/",
+      "note": "The weeknight mountain bike group on Meetup: {ride:phoenix-az-taco-tuesday-south-mountain|Taco Tuesday} on South Mountain's trails and {ride:phoenix-az-valley-epic-rides-night-rider-trail-100|the Night Rider series} on Trail 100 in the Phoenix Mountains Preserve, 7 to 12 miles in about two hours. Lights are a must. The group asks you to have five or so mountain bike rides behind you, and points very new riders to the beginner-friendly weekend rides it posts now and then. Join the group and RSVP; a ride with no sign-ups six hours out may be cancelled, and summer rides cancel for heat and dust storms.",
+      "inclusive_focus": [],
+      "ride_slug": "phoenix-az-taco-tuesday-south-mountain"
+    },
+    {
+      "name": "Bike Saviours Bicycle Collective",
+      "url": "https://www.bikesaviours.org/",
+      "note": "The volunteer-run co-op at 420 S Perry Lane, Tempe: an open shop with tools and volunteers who teach, plus repurposed bikes and parts. Open shop Saturday and Sunday noon to 6, Wednesday and Thursday 3 to 9; Monday is donations only, Tuesday and Friday closed (Oct 2026); 602-429-9369. The shop posts a safe-space agreement and says it will always say no to racism, sexism, ageism and homophobia.",
+      "inclusive_focus": [],
+      "ride_slug": null
+    },
+    {
+      "name": "Black Girls Do Bike: Phoenix",
+      "url": "https://www.blackgirlsdobike.org/chapters",
+      "note": "The Phoenix chapter of the national group, which says it centers women of color in cycling. The chapter runs through its Facebook group (facebook.com/groups/BlackGirlsDoBikePhoenix), where rides are posted; join the group and ask for the next one. No ride schedule is published on the site.",
+      "inclusive_focus": [
+        "bipoc",
+        "women-trans-femme"
+      ],
+      "ride_slug": null
+    }
+  ],
+  "bring_your_bike": {
+    "summary": "Bring it for anything longer than a day. American checks a bike in a case as an ordinary bag, $45 each way paid online when it is your only checked bag (Oct 2026). A day on Bike Emporium's carbon road rental in south Scottsdale is $90 (Oct 2026), so renting only wins on a single day. American is the one airline whose rules we could read; check the others' sports-equipment pages yourself. No Valley shop says on its own site that it takes in a shipped bike, so call before you send one. Plan on a car: the shops in this guide sit 2 to 23 miles north, east and southeast of downtown Phoenix.",
+    "fly": {
+      "airports": [
+        {
+          "name": "Phoenix Sky Harbor International",
+          "code": "PHX",
+          "miles": 4,
+          "note": "About 4 miles east of downtown Phoenix. Terminal 3: Alaska, Allegiant, Breeze, Delta, Frontier, JetBlue, Sun Country, United and others; Terminal 4: American and Southwest, plus Aeroméxico, Air France, British Airways, Volaris and WestJet, per the airport's airline list (Oct 2026). The free PHX Sky Train runs 24 hours between both terminals, the Rental Car Center and the Valley Metro Rail stop at 44th and Washington streets."
+        }
+      ],
+      "airline_note": "Read on the airline's own page, Oct 2026. American (Terminal 4): one non-motorized touring, mountain, tandem or racing bike in a hard case, bike bag or box, handlebars fixed sideways, pedals off (or pedals and bars wrapped in foam). Standard checked bag fee up to 50 lb, the standard overweight fee from 51 to 70 lb, and oversize fees do not apply. Not in a hard case, the bike is treated as fragile, and American is liable for damage only when the bike is in a hard case that is visibly damaged. First bag $50 ($45 paid online), second $60 ($55 online), updated May 18, 2026; a standard bag is 62 linear inches and 50 lb. Southwest (the other Terminal 4 carrier), Delta, United, Alaska, Frontier, JetBlue and Allegiant: not confirmed, because their pages would not load when we checked; read each airline's sports-equipment page before you book."
+    },
+    "ship": {
+      "note": "No Valley shop says on its own site that it receives a shipped bike (Oct 2026). BikeFlights lists Moxie Multisport in Scottsdale as a partner to ship to; nothing on the shop's own side confirms it, and its site would not load for us, so call before you book. Bike Emporium in south Scottsdale builds bikes bought elsewhere and boxes bikes for shipping, prices not published (Oct 2026), but does not say it takes in a carrier delivery. BikeFlights prices a shipment from the box's size and weight when you book, bigger and heavier costing more, and takes nothing over 150 lb or 165 inches in total size; its shipping-policy and rates pages give no transit-day count (Oct 2026).",
+      "shops": []
+    },
+    "rent": {
+      "note": "Bike Emporium in south Scottsdale is the one shop that publishes its fleet and prices: a 2023 carbon Cannondale SuperSix EVO with Shimano 105 and disc brakes, 48 to 61 cm, $90 per 24 hours; a 2024 Marin Kentfield 1 aluminum gravel bike, 7-speed, $60; a 2023 Cannondale Habit full-suspension mountain bike, $85 (Oct 2026). Helmet, lock and bottle cage with every rental; pedals and a repair kit with the road and mountain bikes (the page doesn't say so for the gravel bike). A $50 non-refundable deposit holds one; closed Sundays. McDowell Mountain Cycles in Fountain Hills rents road, gravel, mountain and e-bikes and delivers to McDowell Mountain Regional Park, prices not published. Bike Barn in Phoenix rents road and mountain bikes through a booking page; Airpark Bike Co in Scottsdale rents mountain bikes for the dirt and you need a hitch rack. The math: on American a cased bike is $45 each way paid online when it is your only checked bag, $90 round trip (Oct 2026), the price of one day on the carbon rental. Rent for a single day. For a training week or a winter month, bring yours, and bring your gravel bike: the one gravel rental with a published spec is a 7-speed.",
+      "shops": [
+        {
+          "name": "Bike Emporium",
+          "url": "https://www.bikeemporium.com/rentals",
+          "note": "2023 Cannondale SuperSix EVO (carbon road, Shimano 105, disc), 48 to 61 cm, $90 per 24 hours; 2024 Marin Kentfield 1 (aluminum gravel, 7-speed), 49 to 59 cm, $60; 2023 Cannondale Habit (full-suspension MTB), S to XL, $85 (Oct 2026). Helmet, lock and bottle cage with every rental; pedals and a repair kit with the road and mountain bikes (the page doesn't say so for the gravel bike). $50 non-refundable deposit to reserve a road, gravel or MTB. No e-bikes. Closed Sundays; Saturday 9 to 3. 8443 E. McDonald Dr., Scottsdale; (480) 991-5430."
+        },
+        {
+          "name": "McDowell Mountain Cycles",
+          "url": "https://mcdowellmountaincycles.com/bike-rentals/",
+          "note": "Road, gravel, mountain and e-bikes; models, sizes and prices not published (Oct 2026). Helmet, pedals (limited clipless; ask at booking) and flat kit included; ID at pickup; $25 cancellation; car rack $40 a booking; delivers in Fountain Hills and to McDowell Mountain Regional Park, up to four bikes. Closed Sundays. 11879 N. Saguaro Blvd., Fountain Hills; (480) 272-8741."
+        },
+        {
+          "name": "Bike Barn",
+          "url": "https://www.bikebarnaz.com/articles/bike-rentals-pg978.htm",
+          "note": "Road, mountain and city bikes, booked through the shop's online rental system; models, sizes and prices are not on its own pages (Oct 2026). Closed Mondays. 4112 N 36th St, Phoenix; (602) 956-3870."
+        },
+        {
+          "name": "Airpark Bike Co (Scottsdale)",
+          "url": "https://www.airparkbikeco.com/pages/mtb-rental-scottsdale",
+          "note": "Mountain bikes only, from Santa Cruz, Yeti and Rocky Mountain; the current fleet and prices sit in an online booking listing, not on the page (Oct 2026). Photo ID and a matching credit card; pick up at the Scottsdale store; bring a hitch rack. Monday to Friday 9 to 6, Saturday 9 to 2, closed Sunday. 15745 Hayden Rd, Suite 117, Scottsdale; 480-596-6633."
+        }
+      ]
+    },
+    "get_around": {
+      "car_needed": true,
+      "note": "The riding is spread across the Valley. The shops in this guide run from Coronado, about 2 miles north of downtown, to south Scottsdale at about 11 miles, Chandler at about 14 and Fountain Hills at about 23. The ride starts run from Granada Park, about 6 miles north, to the Four Peaks lot at McDowell Mountain, about 23 miles northeast. Out of PHX with a bike case: the free PHX Sky Train runs every 3 to 5 minutes, 24 hours, to the Rental Car Center, where 14 companies rent; reserve, because walk-up cars are limited. Early Bag Check at the Rental Car Center lets you check bags as you drop the car; ask your airline whether it takes a bike case there. Rideshare picks up at marked curbs at Terminals 3 and 4 and at the Rental Car Center visitor lot, and Waymo uses the same terminal spots around the clock. Taxis are $7 for the first mile and $2.60 a mile after, or a $20 flat rate to downtown Phoenix between Roosevelt and Lincoln streets and 7th Avenue and 7th Street (Oct 2026). Riding in or out on a built bike: the airport asks riders to lock up at the free racks at the 44th Street PHX Sky Train station (enter off Washington Street, heading south on 41st Place) and take the train to the terminals; locks left more than five days are removed. That station is also the Valley Metro Rail stop for Phoenix, Tempe and Mesa; bus 44 stops there and bus 13 at the 24th Street Sky Train station. Valley Metro's bike rules were not read for this guide (its pages load as scripts with no text in a fetch, Oct 2026), so check valleymetro.org or call 602-253-5000 before you plan on the train with a bike.",
+      "transit_bike_rules": null,
+      "bike_share": {
+        "name": null,
+        "url": null,
+        "note": null
+      }
+    },
+    "rules_and_safety": "Arizona's traffic law for bikes (passing distance, where to ride in the lane, helmet rules by age, e-bike classes, sidewalk riding) was not read for this guide: the state legislature's and ADOT's pages would not load when we checked (Oct 2026), so read them yourself before you ride. What is confirmed is heat. From the City of Phoenix, read Oct 2026: on days the National Weather Service issues an Extreme Heat Warning, these trails close from 8 a.m. to 5 p.m.: Echo Canyon and Cholla on Camelback Mountain; the Piestewa Peak Summit Trail and its associated trails in the Phoenix Mountains Preserve; and at South Mountain the Holbert, Mormon and Hau'pal Loop trails and the National Trail from the Pima Canyon Trailhead (the National Trail stays open from other trailheads, and the rest of Pima Canyon's trails stay open). The list names trails, not roads; nothing on the page says it covers Summit Road. The city's advice is to do outdoor activity in the coolest part of the day and drink water before, during and after. Valley Epic Rides asks for at least 1.5 liters of water on a summer ride and cancels for heat and dust storms.",
+    "sources": [
+      "https://www.skyharbor.com/flights/passenger-airlines/",
+      "https://www.skyharbor.com/ground-transportation/phx-sky-train/",
+      "https://www.skyharbor.com/ground-transportation/rental-cars/",
+      "https://www.skyharbor.com/ground-transportation/ride-share/",
+      "https://www.skyharbor.com/ground-transportation/taxis-shuttles/",
+      "https://www.skyharbor.com/ground-transportation/public-transportation/",
+      "https://www.skyharbor.com/ground-transportation/biking/",
+      "https://www.aa.com/i18n/travel-info/baggage/specialty-and-sports.jsp",
+      "https://www.aa.com/i18n/travel-info/baggage/checked-baggage-policy.jsp",
+      "https://www.bikeflights.com/",
+      "https://www.bikeflights.com/shippingpolicy",
+      "https://www.bikeflights.com/dimensionsandrates",
+      "https://www.bikeflights.com/partners/Moxie-Multisport",
+      "https://www.bikeemporium.com/rentals",
+      "https://www.bikeemporium.com/service",
+      "https://mcdowellmountaincycles.com/bike-rentals/",
+      "https://www.bikebarnaz.com/articles/bike-rentals-pg978.htm",
+      "https://www.airparkbikeco.com/pages/mtb-rental-scottsdale",
+      "https://www.phoenix.gov/administration/departments/parks/activities-facilities/trails/heat-safety.html",
+      "https://www.phoenix.gov/administration/departments/heat/heat-response-programs/heat-safety.html",
+      "https://www.meetup.com/valley-epic-rides/"
+    ]
+  },
+  "travel_links": [],
+  "faq": [
+    {
+      "q": "Should I bring my bike to Phoenix?",
+      "a": "Yes, for anything longer than a day. American checks a cased bike as a standard bag, $45 each way paid online when it is your only checked bag (Oct 2026). The one shop that publishes a rental price, Bike Emporium in south Scottsdale, charges $90 a day for a carbon road bike (Oct 2026), so renting only wins on a single day. No Valley shop says on its own site that it receives a shipped bike; call before you send one. Bring your gravel bike too: the one gravel rental with a published spec is a 7-speed."
+    },
+    {
+      "q": "When is the riding season in Phoenix?",
+      "a": "November to April. Summer highs average 104 to 106 F, and on Extreme Heat Warning days the city closes named preserve trails from 8 a.m. to 5 p.m.; in 2026 those closures began on March 19. If you come between May and October, ride at first light, carry all your water, and know that the weeknight dirt rides cancel for heat and dust storms."
+    },
+    {
+      "q": "Where do the group rides start in Phoenix?",
+      "a": "Scottsdale Cycling leaves Gainey Village, the southeast corner of Scottsdale Rd and Doubletree Ranch Rd, for {ride:scottsdale-az-scottsdale-cycling-gainey-tuesday,scottsdale-az-scottsdale-cycling-gainey-thursday|two fast weekday rides} and {ride:scottsdale-az-scottsdale-cycling-saturday-ride|the Fuss Buss}; TriScottsdale leaves Village Tavern on the same block for {ride:scottsdale-az-triscottsdale-saturday-group-ride|its long weekend ride}. Phoenix Metro Bicycle Club's no-drop {ride:tempe-az-pmbc-saturday-cycling|Saturday Cycling} leaves Kiwanis Park in Tempe, and {ride:tempe-az-regroup-coffee-ride|Regroup's coffee ride} leaves the café at 1205 N Scottsdale Rd in Tempe. McDowell Mountain Cycles in Fountain Hills posts {ride:fountain-hills-az-mcdowell-mountain-cycles-saturday-road-ride|a road ride} and {ride:fountain-hills-az-mcdowell-mountain-cycles-sunday-funday-gravel|Sunday Funday gravel} from the shop, and Global Bikes' {ride:chandler-az-global-bikes-chandler-north-saturday-ride|Chandler North ride} leaves its Ray Road store. Every ride near Phoenix, with its day and time, is in the rides directory."
+    },
+    {
+      "q": "Can I rent a road or gravel bike in Phoenix?",
+      "a": "Bike Emporium in south Scottsdale publishes its fleet: a carbon Cannondale SuperSix EVO with Shimano 105 in sizes 48 to 61 cm at $90 per 24 hours, a Marin Kentfield 1 aluminum gravel bike at $60 and a Cannondale Habit full-suspension mountain bike at $85, with a helmet, lock and bottle cage on every rental and pedals and a repair kit on the road and mountain bikes, not stated for the gravel bike (Oct 2026). It is closed Sundays. McDowell Mountain Cycles in Fountain Hills rents road, gravel, mountain and e-bikes with no prices on its site and delivers to McDowell Mountain Regional Park. Bike Barn in Phoenix rents road and mountain bikes through a booking page, and Airpark Bike Co in Scottsdale rents mountain bikes if you bring a hitch rack."
+    },
+    {
+      "q": "Do I need a car to ride in Phoenix?",
+      "a": "Yes. The riding sits 6 to 25 miles out of downtown in every direction: Granada Park about 6 miles north, Regroup in Tempe about 8 east, Gainey Village about 11 northeast, Global Bikes in Chandler about 14 southeast and Fountain Hills about 23. From Sky Harbor the free PHX Sky Train runs 24 hours to the Rental Car Center, where 14 companies rent; reserve ahead, because walk-up cars are limited. A taxi to downtown is a $20 flat rate (Oct 2026)."
+    },
+    {
+      "q": "When is South Mountain's Summit Road closed to cars?",
+      "a": "Every Sunday the city stops cars at the 1.0 mile marker from 5 to 10 a.m., and on the 4th Sunday of the month the road is closed to cars all day, 5 a.m. to 7 p.m., with drivers parking at the Activity Complex (City of Phoenix). It is a closed road, not a led ride. The park's entrance and parking hours are 5 a.m. to 7 p.m., and the climb from the ranger station to the towers is 7 miles and about 1,330 feet."
+    }
+  ],
+  "sources": [
+    "https://ridewithgps.com/routes/50221588",
+    "https://ridewithgps.com/routes/10851307",
+    "https://www.tourdescottsdale.org/Race/TourdeScottsdale/Page-1",
+    "https://pjammcycling.com/climb/1812.South-Mountain",
+    "https://www.phoenix.gov/administration/departments/parks/activities-facilities/trails/south-mountain-parkpreserve.html",
+    "https://www.phoenix.gov/administration/departments/parks/activities-facilities/trails/heat-safety.html",
+    "https://www.phoenix.gov/newsroom/parks-news/3256.html",
+    "https://www.azfamily.com/2026/05/11/phoenix-extends-trail-closures-into-tuesday-triple-digit-heat-continues/",
+    "https://www.azfamily.com/2026/03/17/several-popular-hiking-trails-close-extreme-heat-hits-phoenix-area/",
+    "https://www.livelo.cc/pages/phoenix-cycling-routes",
+    "https://ridewithgps.com/ambassador_routes/438-usery-loop-and-salt-river?lang=en",
+    "https://www.bikemap.net/en/r/1822978/",
+    "https://ridewithgps.com/routes/29074769",
+    "https://www.scottsdaleaz.gov/outdoor-activities/paths-trails",
+    "https://www.traillink.com/trail/indian-bend-wash-trail",
+    "https://www.komoot.com/smarttour/e1352775357/indian-bend-wash-greenbelt-loop-scottsdale-arizona",
+    "https://www.mtbproject.com/directory/8011919/phoenix-mountains-preserve",
+    "https://www.mtbproject.com/trail/4873242/west-side-trail-100-loop",
+    "https://www.mtbproject.com/trail/4881161/trail-100-west",
+    "https://www.trailforks.com/route/trail-100-intermediate/",
+    "https://www.singletracks.com/bike-trails/trail-100/",
+    "https://www.maricopacountyparks.net/park-locator/mcdowell-mountain-regional-park/park-activities/biking/",
+    "https://www.maricopacountyparks.net/park-locator/mcdowell-mountain-regional-park/park-activities/trails/",
+    "https://www.maricopacountyparks.net/assets/1/6/mcdowell-8x11-competitive-track_combined.pdf",
+    "https://www.bikeemporium.com/",
+    "https://www.bikeemporium.com/rentals",
+    "https://www.bikeemporium.com/info",
+    "https://www.bikeemporium.com/service",
+    "https://mcdowellmountaincycles.com/",
+    "https://mcdowellmountaincycles.com/bike-rentals/",
+    "https://mcdowellmountaincycles.com/services/",
+    "https://mcdowellmountaincycles.com/mmc-life/",
+    "https://www.thevelo.com/",
+    "https://www.thevelo.com/contact-5",
+    "https://www.thevelo.com/new-services",
+    "https://www.thevelo.com/ride-with-us",
+    "https://www.bikebarnaz.com/",
+    "https://www.bikebarnaz.com/articles/bike-rentals-pg978.htm",
+    "https://www.bikebarnaz.com/articles/bike-service-repair-pg982.htm",
+    "https://www.bikebarnaz.com/articles/bike-fitting-pg845.htm",
+    "https://www.bikebarnaz.com/articles/contact-us-pg823.htm",
+    "https://regroupwithus.com/",
+    "https://regroupwithus.com/the-bike-shop/",
+    "https://regroupwithus.com/the-bike-shop/service/",
+    "https://regroupwithus.com/visit-us/",
+    "https://regroupwithus.com/coffee/",
+    "https://regroupwithus.com/rides-and-events/",
+    "https://www.globalbikes.info/",
+    "https://www.globalbikes.info/about/chandler-n.-rental-center-pg2498.htm",
+    "https://www.globalbikes.info/about/arizona-bike-shops-pg515.htm",
+    "https://www.globalbikes.info/about/chandler-bike-shops-pg514.htm",
+    "https://www.globalbikes.info/articles/ride-and-clinic-calendar-pg2857.htm",
+    "https://www.airparkbikeco.com/",
+    "https://www.airparkbikeco.com/pages/bike-shop-scottsdale",
+    "https://www.airparkbikeco.com/pages/mtb-rental-scottsdale",
+    "https://www.cyclologic.com/fit",
+    "https://www.cyclologic.com/rentals-1",
+    "https://www.cyclologic.com/service",
+    "https://www.cyclologic.com/shoprides",
+    "https://www.landiscyclery.com/",
+    "https://www.landiscyclery.com/about/tempe-north-pg406.htm",
+    "https://www.landiscyclery.com/about/bicycle-maintenance-repair-pg51.htm",
+    "https://www.bikeflights.com/partners/Moxie-Multisport",
+    "https://www.argon18.com/en-us/dealers/united-states/arizona/scottsdale/moxie-multisport-bike-shop",
+    "https://www.dynamitebikelab.com/pages/bike-rentals",
+    "https://bikeaz.org/phoenix-bike-rentals/",
+    "https://www.bicycleranch.com/",
+    "https://www.trekbikes.com/us/en_US/store/61439/",
+    "https://www.strava.com/clubs/scottsdale-cycling-620243",
+    "https://www.komoot.com/highlight/6231884",
+    "https://www.coffeebean.com/store/az/scottsdale",
+    "https://wanderlog.com/place/details/1415442",
+    "https://joe.coffee/locations/az/scottsdale/village-coffee-roastery-scottsdale/",
+    "https://luxcoffee.com/",
+    "https://www.tripadvisor.com/Restaurant_Review-g31310-d4999309-Reviews-LUX_Coffee_Shop-Phoenix_Arizona.html",
+    "https://joe.coffee/locations/az/fountain-hills/fountain-view-coffee-fountain-hills-cd8925a5-84b1-447d-9ea5-05e251e3c6a4/",
+    "https://wanderlog.com/place/details/12049091/fountain-view-coffee",
+    "https://www.trainerroad.com/forum/t/moving-to-phoenix-hoping-to-get-into-the-cycling-community-there/16111",
+    "https://www.pizzeriabianco.com/pizzeria-bianco-heritage-square",
+    "https://www.pedalhausbrewery.com/tempe-location",
+    "https://www.pedalhausbrewery.com/",
+    "https://www.tripadvisor.com/Restaurant_Review-g31310-d809958-Reviews-Matt_s_Big_Breakfast-Phoenix_Arizona.html",
+    "https://mattsbigbreakfast.restaurants-us.com/",
+    "https://www.tripadvisor.com/Restaurant_Review-g31310-d9836403-Reviews-Matt_s_Big_Breakfast-Phoenix_Arizona.html",
+    "https://villagetavern11.netwaiter.com/",
+    "https://scottsdale.com/places/village-tavern/",
+    "https://lostaquitosaz.com/ahwatukee",
+    "https://www.lostaquitosaz.com/location",
+    "https://www.sonesta.com/sonesta-hotels-resorts/az/scottsdale/sonesta-suites-scottsdale-gainey-ranch",
+    "https://www.hyatt.com/grand-hyatt/en-US/scott-grand-hyatt-scottsdale-resort",
+    "https://www.hyatt.com/grand-hyatt/en-US/scott-grand-hyatt-scottsdale-resort/policies",
+    "https://www.hyatt.com/grand-hyatt/en-US/scott-grand-hyatt-scottsdale-resort/faqs",
+    "https://www.hyatt.com/grand-hyatt/en-US/scott-grand-hyatt-scottsdale-resort/fall---winter-activities",
+    "https://newsroom.hyatt.com/2024november11GrandHyattScottsdale",
+    "https://www.experiencescottsdale.com/listing/grand-hyatt-scottsdale-resort/966/",
+    "https://www.resortfeechecker.com/24193-resort_fee_grand_hyatt_scottsdale_resort.html",
+    "https://www.reservationdesk.com/hotel/601fb0d/grand-hyatt-scottsdale-resort",
+    "https://www.hilton.com/en/hotels/phxsuhx-hampton-suites-phoenix-tempe/",
+    "https://www.hilton.com/en/hotels/phxsuhx-hampton-suites-phoenix-tempe/hotel-info/",
+    "https://www.trivago.com/en-US/oar/hotel-hampton-inn-suites-phoenix-tempe?search=100-3504880",
+    "https://www.priceline.com/hotel-deals/en-us/P3000001391/H39821504/hampton-inn-by-hilton-suites-phoenix-tempe.ssp",
+    "https://www.tempetourism.com/where-to-stay/",
+    "https://www.hyatt.com/destination-by-hyatt/en-US/phxdt-tempe-mission-palms",
+    "https://www.hyatt.com/destination-by-hyatt/en-US/phxdt-tempe-mission-palms/faqs",
+    "https://www.hyatt.com/destination-by-hyatt/en-US/phxdt-tempe-mission-palms/rooms",
+    "https://www.hyatt.com/destination-by-hyatt/en-US/phxdt-tempe-mission-palms/parking-and-transportation",
+    "https://www.hilton.com/en/hotels/phxtypy-canopy-tempe-downtown/",
+    "https://www.hilton.com/en/hotels/phxtypy-canopy-tempe-downtown/hotel-info/",
+    "https://www.phxhostel.org/",
+    "https://www.phxhostel.org/faq",
+    "https://www.phxhostel.org/rooms-rates",
+    "https://www.phxhostel.org/visit",
+    "https://www.hostelworld.com/hostels/p/67572/hi-phoenix-the-metcalf-house/",
+    "https://www.arizonabiltmore.com/",
+    "https://www.arizonabiltmore.com/azb-guest/",
+    "https://www.arizonabiltmore.com/pre-arrival/",
+    "https://www.arizonabiltmore.com/stay/resort-amenities/",
+    "https://www.americansouthwest.net/arizona/hotels/phoenix.html",
+    "https://www.stinkweeds.com/about-us/contact/",
+    "https://coppercourier.com/news/vinyl-record-stores-metro-phoenix/",
+    "https://changinghands.com/store/1",
+    "https://changinghands.com/store/2",
+    "https://changinghands.com/about-changing-hands",
+    "https://changinghands.com/page/bookclubs",
+    "https://www.changinghands.com/page/openingfri",
+    "https://www.boycottbarphx.com/",
+    "https://www.boycottbarphx.com/about",
+    "https://www.phoenixnewtimes.com/arts-culture/boycott-bar-lesbian-bar-phoenix-back-in-business-11788654/",
+    "https://outxout.com/blog/lgbtq-guide-phoenix",
+    "https://www.visitphoenix.com/lgbtq/lgbtq-owned-businesses/",
+    "https://www.phoenixmag.com/2024/06/06/pride-spotlight-7-local-lgbtq-owned-businesses-we-love/",
+    "https://bookshop.org/shop/marigoldphx",
+    "https://heard.org/",
+    "https://heard.org/plan/",
+    "https://heard.org/here/",
+    "https://heard.org/tickets/#in-person-discounts",
+    "https://www.pedalhausbrewery.com/phoenix-location",
+    "https://www.pedalhausbrewery.com/our-story",
+    "https://calendar.oldtownscottsdaleaz.com/scottsdaleaz_oldtown/214091",
+    "https://community.scottsdaleaz.gov/scottsdaleaz_main/214091",
+    "https://community.scottsdaleaz.gov/scottsdaleaz_main/260214108",
+    "https://cactusleague.com/",
+    "https://cactusleague.com/schedule.php",
+    "https://cactusleague.com/map.php",
+    "https://www.tempetourism.com/blog/an-insiders-guide-to-the-arizona-cactus-leagues-ballparks/",
+    "https://www.visitphoenix.com/greater-phoenix/phoenix/downtown-phoenix/roosevelt-row/",
+    "https://www.axios.com/local/phoenix/2026/05/01/roosevelt-row-reckoning-first-friday-changes",
+    "https://www.phoenixnewtimes.com/opinion/phoenix-first-friday-artwalk-isnt-ending-its-evolving-40663414/",
+    "https://artinphoenix.com/phoenix-first-friday-september-2026/",
+    "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=356095",
+    "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=364159",
+    "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=364165",
+    "https://www.strava.com/clubs/620243",
+    "https://www.strava.com/clubs/620243/group_events/815123",
+    "https://www.strava.com/clubs/620243/group_events/814572",
+    "https://www.strava.com/clubs/620243/group_events/814036",
+    "https://www.meetup.com/valley-epic-rides/",
+    "https://www.meetup.com/valley-epic-rides/events/316590721/",
+    "https://www.meetup.com/valley-epic-rides/events/316605938/",
+    "https://www.bikesaviours.org/",
+    "https://www.blackgirlsdobike.org/chapters",
+    "https://www.blackgirlsdobike.org/",
+    "https://www.blackgirlsdobike.org/mission",
+    "https://sites.google.com/view/outcyclists/",
+    "https://www.strava.com/clubs/outcyclists",
+    "https://bikinglist.com/organizations/phoenix-gravel-collective",
+    "https://rustyspoke.org/",
+    "https://www.btwphx.com/",
+    "https://www.btwphx.com/c3",
+    "https://onenten.org/",
+    "https://runsignup.com/Race/AZ/Phoenix/c4ont",
+    "https://runsignup.com/Race/c4ont/Page/FA-Qs",
+    "https://www.heylo.com/g/-N4JZ6VUF5uSOLO9zX_T",
+    "https://www.thegayagenda.fyi/phoenix/community-groups/",
+    "https://equalityarizona.substack.com/p/lgbtq-community-events-in-august",
+    "https://www.skyharbor.com/ground-transportation/",
+    "https://www.skyharbor.com/ground-transportation/ride-share/",
+    "https://www.skyharbor.com/ground-transportation/phx-sky-train/",
+    "https://www.skyharbor.com/ground-transportation/rental-cars/",
+    "https://www.skyharbor.com/ground-transportation/taxis-shuttles/",
+    "https://www.skyharbor.com/ground-transportation/public-transportation/",
+    "https://www.skyharbor.com/ground-transportation/biking/",
+    "https://www.skyharbor.com/flights/passenger-airlines/",
+    "https://www.aa.com/i18n/travel-info/baggage/specialty-and-sports.jsp",
+    "https://www.aa.com/i18n/travel-info/baggage/checked-baggage-policy.jsp",
+    "https://www.bikeflights.com/",
+    "https://www.bikeflights.com/shippingpolicy",
+    "https://www.bikeflights.com/dimensionsandrates",
+    "https://www.phoenix.gov/administration/departments/heat/heat-response-programs/heat-safety.html",
+    "https://bikepackingreviews.com/posts/airline-bike-fees-policies"
+  ],
+  "verified": "2026-10-03"
+}

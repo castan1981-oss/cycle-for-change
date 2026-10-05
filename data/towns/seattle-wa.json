@@ -1,67 +1,976 @@
 {
   "id": "seattle-wa",
+  "kind": "destination",
   "name": "Seattle",
   "state": "Washington",
   "state_code": "WA",
   "county": "King County",
   "lat": 47.6039,
-  "lon": -122.3300,
+  "lon": -122.33,
   "timezone": "America/Los_Angeles",
   "population": "737,015 (2020 census)",
   "elevation_ft": 148,
-  "nearest_airport": { "name": "Seattle-Tacoma International", "code": "SEA", "miles": 14 },
-  "major_airport": { "name": "Seattle-Tacoma International", "code": "SEA", "miles": 14 },
+  "tagline": "Rail-trail to the lake, ferry to the island, STP in July",
+  "best_months": "July, the driest month: an average high near 77°F and less than an inch of rain (WeatherSpark). The Seattle to Portland Bicycle Classic leaves the University of Washington the second weekend of July. Cascade Bicycle Club's free group rides go out all year, and the club requires full fenders on its rides when the roads are wet. Its season opens on Bainbridge Island with Chilly Hilly in February; the event page says to wear layers and be ready for rain.",
+  "nearest_airport": {
+    "name": "Seattle-Tacoma International",
+    "code": "SEA",
+    "miles": 14
+  },
+  "major_airport": {
+    "name": "Seattle-Tacoma International",
+    "code": "SEA",
+    "miles": 14
+  },
   "official_url": "https://www.seattle.gov",
   "visitor_url": "https://visitseattle.org",
-  "summary": "Seattle is the largest city in the Pacific Northwest, on Puget Sound in King County, Washington, with about 737,000 residents. It is home to Cascade Bicycle Club and the start of the Seattle to Portland Bicycle Classic, which leaves from the University of Washington each July. Cyclists come for the STP, the club's training rides and a dry, mild summer.",
+  "covers": [
+    "Bellevue",
+    "Kirkland",
+    "Redmond",
+    "Kenmore",
+    "Issaquah",
+    "Mercer Island",
+    "Bainbridge Island"
+  ],
+  "summary": "Seattle is a city you ride out of on trails and ferries. The Burke-Gilman runs from Shilshole Bay past the University of Washington to Bothell, almost all of it off the road. The Lake Washington loop is 50 miles around the lake. The Bainbridge ferry leaves Colman Dock downtown, and the Chilly Hilly course starts at the other end. Cascade Bicycle Club leads free group rides most days of the week, and its Seattle to Portland Bicycle Classic leaves the University of Washington on July 10, 2027. Delta, Southwest and American check a packed bike as a standard bag, $45 each way (Oct 2026). Link light rail takes you and the bike from the airport to downtown in 38 minutes.",
   "about": [
-    "Seattle sits between Puget Sound and Lake Washington, about 14 miles north of Sea-Tac airport. The 2020 census counted 737,015 people in the city proper. The Link light rail connects the airport to downtown and to the University of Washington in under an hour for a few dollars.",
-    "The STP starts in the University District, the neighborhood around the University of Washington campus on the north side of the ship canal. It is a student neighborhood: cheap food on University Way NE ('the Ave'), a handful of mid-priced hotels within a mile of the start lot, and the Montlake and Green Lake bike shops close by.",
-    "Cascade Bicycle Club, which established the STP in 1979, is based here and runs a full season of rides and a training series each spring for riders building up to 206 miles."
+    "The riding leaves the city four ways. North and east on the trails: the Burke-Gilman from Shilshole Bay through Fremont and the University District to Bothell, then the Sammamish River Trail to Redmond. Around Lake Washington: the 50-mile loop, Mercer Island across the I-90 bridge, Seward Park on the Seattle shore. Into the Eastside hills: Zoo Hill on Cougar Mountain above Bellevue, the Issaquah trails, the Snoqualmie Valley Trail's gravel out of Carnation. And onto the water: Alki and the West Seattle loop, the Elliott Bay Trail from the Olympic Sculpture Park, and Bainbridge Island by ferry from Colman Dock. The neighborhoods a visitor sleeps in are the University District (the STP start), Capitol Hill, downtown and the Chinatown–International District; Fremont and Ballard have the trail and the beer garden but no hotel this guide could find. Every listing says which part of town it sits in.",
+    "The Seattle to Portland Bicycle Classic, 206 miles to Portland in one day or two, has started here since Cascade Bicycle Club established it in 1979. The 2027 ride leaves the University of Washington's E-18 lot at 5 a.m. on Saturday, July 10, and Robert is riding it. The club's other big days start in or near town too: Chilly Hilly on Bainbridge Island in February, the Emerald City Ride in spring and RSVP, Seattle to Vancouver, in August; Obliteride rides out of Seattle the same month. The dates are in the 2027 list on this page. If you are here for the STP, the Burke-Gilman runs past the start on campus, and the rest of this guide is what to do with the days before and after."
   ],
   "riding": [
-    "Seattle is hilly and wet most of the year, but July is the driest month, with an average high near 77°F and less than an inch of rain. The STP itself leaves the University of Washington at 5 a.m. and heads south on country roads, so most of the riding out of town is rolling rather than steep.",
-    "If you are here early, Cascade Bicycle Club's spring training series and season schedule are the easiest way to find supported rides on local roads. Gregg's in Green Lake and Montlake Bicycle Shop both rent bikes if you arrive without one."
+    "The ride for the evening you land is the Burke-Gilman. It's a rail-trail from Golden Gardens past the Ballard Locks, Gas Works Park and the University of Washington to Bothell, about 19 miles one way. Turn around whenever you want. The long one is the Lake Washington loop, 50 miles and about 1,900 feet, counter-clockwise from South Bellevue; join it at Seward Park if you're staying in the city. The short lake ride is Mercer Island, 17 miles across the I-90 bridge with one real climb. The climb is Zoo Hill on Cougar Mountain, a 9-mile loop from Lewis Creek Park at 8 to 13 percent most of the way. The gravel is the Snoqualmie Valley Trail from Carnation, 38 miles, half of it on the trail. The ferry day is Bainbridge Island: roll on at Colman Dock and ride the 33-mile Chilly Hilly course. The north end of the lake is an almost-all-trail loop of 35 miles from Log Boom Park in Kenmore, and West Seattle is a 12-mile loop from Seacrest Pier past Lincoln Park and Alki. The trails are shared with everyone on foot, and Cascade's lake-loop page says Seattle's roads are in poor shape; the route pages carry the rest.",
+    "The group rides are the way in, and most of them are Cascade Bicycle Club's: free, posted about a week ahead, register on the site, helmet on, be there for the briefing. {ride:seattle-wa-cascade-lumps-wednesday-ride|LUMPS} leaves Matthews Beach Park on the Burke-Gilman for a pie stop in Bothell; {ride:kenmore-wa-cascade-mumps-monday-ride|MUMPS} leaves Log Boom Park in Kenmore for loops of the lake's north end and Mercer Island; {ride:redmond-wa-cascade-treats-tuesday-ride|TREATS} goes out from the Eastside, often to the Snoqualmie Valley; {ride:seattle-wa-cascade-frumps-friday-ride|FRUMPS} moves its start each week. The hill ride is {ride:kirkland-wa-cascade-eastside-hills|Eastside Hills} from the Kirkland Transit Center, 50 to 60 miles in pace groups; the winter night ride is {ride:redmond-wa-cascade-road-ride-on-after-dark|ROAD} out of Redmond, lights required; {ride:bellevue-wa-cascade-eastside-tours-evening-ride|Eastside Tours} and {ride:issaquah-wa-cascade-issaquah-social|the Issaquah Social} are the Thursdays. Off the club calendar: {ride:seattle-wa-good-weather-sunday-social|Good Weather's Sunday Social} rolls from Tailwind Cafe on Capitol Hill, no-drop, at 10 to 12 mph; {ride:seattle-wa-northstar-sunday-service|NorthStar Cycling Club's Sunday Service} leaves its Central District clubhouse, no-drop, all levels; {ride:seattle-wa-moxie-monday|Moxie Monday} is the monthly ride for femme, trans, non-binary and women riders from Westlake Park; {ride:seattle-wa-mello-fellos-saturday-ride|Mello Fellos' Saturday ride} leaves the downtown shop; {ride:seattle-wa-critical-mass-seattle|Critical Mass} gathers at Westlake Park. Outspoken Cycle Club, Seattle's queer and allied club, posts its rides on Heylo."
   ],
-  "getting_there": "Fly into Seattle-Tacoma International (SEA), about 14 miles south of downtown; the Link light rail runs from the airport to downtown in about 38 minutes for around $3 and continues to the University of Washington. Portland is about three hours south by car or train, which is how most two-day STP riders get home. You do not need a car for the STP start if you stay in the University District.",
-  "hotels": [
-    { "name": "University Inn (Staypineapple)", "url": "https://www.staypineapple.com/university-inn-seattle-wa", "address": "4140 Roosevelt Way NE, Seattle, WA 98105", "note": "A short ride to the STP start lot; mid-priced U District hotel.", "price_hint": "$$" },
-    { "name": "Graduate Seattle", "url": "https://www.graduatehotels.com/seattle/", "address": "4507 Brooklyn Ave NE, Seattle, WA 98105", "note": "Full-service hotel a few blocks from campus with a restaurant and bar.", "price_hint": "$$$" },
-    { "name": "Watertown Hotel (Staypineapple)", "url": "https://www.staypineapple.com/watertown-hotel-seattle-wa", "address": "4242 Roosevelt Way NE, Seattle, WA 98105", "note": "Sister property to University Inn, same distance to the start.", "price_hint": "$$" },
-    { "name": "College Inn Hotel", "url": "https://www.collegeinnseattle.com", "address": "4000 University Way NE, Seattle, WA 98105", "note": "Budget European-style inn on the Ave, closest to campus.", "price_hint": "$" },
-    { "name": "Residence Inn by Marriott Seattle University District", "url": "https://www.marriott.com", "address": "4501 12th Ave NE, Seattle, WA 98105", "note": "Suites with kitchens, useful for an early breakfast before a 5 a.m. start.", "price_hint": "$$$" }
+  "getting_there": "Fly into Seattle-Tacoma International (SEA), about 14 miles south of downtown. Link light rail leaves from the airport garage: trains every 8 to 10 minutes most of the day, 38 minutes to downtown, and on to the University of Washington; bikes roll on free. You don't need a car. The Burke-Gilman, the West Seattle loop and the Bainbridge ferry start in the city, the north-lake loop can start at UW Station, and the lake loop passes Seward Park. Only Zoo Hill and the Carnation gravel loop want a car or a long ride out. Coming home from Portland after the STP, Amtrak Cascades has ten $5 bike racks on every train (Oct 2026), or Cascade's own buses bring riders and bikes back to UW. The Bring-your-bike page has the airline rules, the ferry fare, each transit agency's bike rules and the shops that rent.",
+  "routes": [
+    {
+      "name": "Lake Washington loop",
+      "type": "road",
+      "miles": 50,
+      "elevation_gain_ft": 1900,
+      "surface": "A mix of trail and road, per Cascade's route page.",
+      "difficulty": "hard",
+      "start": {
+        "name": "South Bellevue Park and Ride, off Bellevue Way, Bellevue",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "The lap of the lake: counter-clockwise from Bellevue, north through Kirkland and Kenmore, down the Seattle shore past Seward Park, and back through Renton. 50 miles and about 1,900 feet, per Cascade Bicycle Club's RideWithGPS ambassador route. No steep climbs; most of the climbing is in the first half, on the Eastside. It's a loop, so from Seattle join it on the lakeshore, at Seward Park for one. Some of it is hard to follow, the club says, so study the map first. {ride:kenmore-wa-cascade-mumps-monday-ride|Cascade's MUMPS ride} leaves Log Boom Park, one of the stops the club names, for loops of the lake's north end and Mercer Island.",
+      "water": "Stops the club's page names: Log Boom Park in Kenmore, Seward Park in Seattle and Gene Coulon Park in Renton. It doesn't say which have water.",
+      "hazards": "From the club's page: the downtown Bellevue stretch may be safer on the sidewalk, depending on the time of day. Seattle's roads are in poor shape. Cross the railroad tracks in Renton at 90 degrees. Check the University of Washington section before you go; construction there has meant detours. Don't leave valuables in your car at the South Bellevue lot.",
+      "links": {
+        "rwgps": "https://ridewithgps.com/routes/10708345",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://ridewithgps.com/ambassador_routes/548-full-lake-loop-from-south-bellevue-p-r?lang=en"
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://ridewithgps.com/ambassador_routes/548-full-lake-loop-from-south-bellevue-p-r?lang=en",
+        "https://ridewithgps.com/routes/10708345"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "The Burke-Gilman Trail",
+      "type": "path",
+      "miles": 19,
+      "elevation_gain_ft": null,
+      "surface": "Paved, with a soft-surface shoulder, except an on-road stretch in Ballard.",
+      "difficulty": "easy",
+      "start": {
+        "name": "Gas Works Park, one of the access points King County names",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "Seattle's rail-trail, one of the first in the country, per Cascade. It runs from Golden Gardens and Shilshole Bay past the Ballard Locks, Fremont, Gas Works Park, the University of Washington and Magnuson Park to Bothell, where it meets the Sammamish River Trail. About 19 miles, per Cascade; King County says more than 20. This is the ride for the evening you land: no cars, turn around whenever you want. If you're in town for the STP, it runs past the start on the UW campus. {ride:seattle-wa-cascade-lumps-wednesday-ride|Cascade's LUMPS ride} leaves Matthews Beach Park, on the trail, for a pie stop in Bothell. PIM Bicycles & Coffeehouse in Fremont and Fremont Brewing's beer garden sit a block off it (see Coffee and Off the bike); Matthews Beach is the swim.",
+      "water": null,
+      "hazards": "It's shared with everyone on foot: all non-motorized uses are allowed, King County says. In Ballard the trail leaves the path for a stretch on the road.",
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://kingcounty.gov/en/dept/dnrp/nature-recreation/parks-recreation/king-county-parks/trails/leafline-trails/burke-gilman"
+      },
+      "ride_slug": "seattle-wa-cascade-lumps-wednesday-ride",
+      "sources": [
+        "https://kingcounty.gov/en/dept/dnrp/nature-recreation/parks-recreation/king-county-parks/trails/leafline-trails/burke-gilman",
+        "https://cascade.org/resources/where-ride/trails-bicyclists"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "North Lake Washington trail loop (Burke-Gilman, Sammamish River, 520)",
+      "type": "path",
+      "miles": 35,
+      "elevation_gain_ft": 1100,
+      "surface": "Mostly paved trail, with about 3 miles on roads with traffic, per the club.",
+      "difficulty": "moderate",
+      "start": {
+        "name": "Log Boom Park, Kenmore",
+        "address": "17415 61st Ave NE, Kenmore, WA 98028",
+        "lat": null,
+        "lon": null
+      },
+      "description": "The north end of the lake almost all on trail: the Burke-Gilman to Bothell, the Sammamish River Trail to Redmond, and the SR 520 Trail back over the 520 bridge to Montlake. 35 miles and about 1,100 feet, per Cascade's ride page; the club's ride started at Log Boom Park in Kenmore, with restrooms at the start and along the way. It's a loop, so start where you're staying. Seattle Bike Blog rode a 32-mile version from UW Station, on the light rail, that uses the Eastrail and the Cross Kirkland Corridor on the east side; that version has about 7.5 miles of hard-packed gravel. Log Boom Park is where {ride:kenmore-wa-cascade-mumps-monday-ride|Cascade's MUMPS ride} meets.",
+      "water": null,
+      "hazards": "About 3 miles are on roads with traffic, per the club. On the Seattle Bike Blog's Eastrail version, the blog named the Eastrail crossing at 132nd Ave NE and the stretch of 108th Ave NE near South Kirkland Park and Ride as the weak spots (July 2023).",
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://cascade.org/rides-events/82922"
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://cascade.org/rides-events/82922",
+        "https://www.seattlebikeblog.com/2023/07/10/biking-the-new-north-lake-washington-trail-loop/"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Mercer Island loop",
+      "type": "road",
+      "miles": 17,
+      "elevation_gain_ft": 1000,
+      "surface": "Paved road and trail.",
+      "difficulty": "moderate",
+      "start": {
+        "name": "South Bellevue Park and Ride, off Bellevue Way, Bellevue",
+        "address": null,
+        "lat": null,
+        "lon": null
+      },
+      "description": "Across the I-90 bridge to Mercer Island, a clockwise lap of the island, and back on the Mountains to Sound Greenway trail. 17 miles and about 1,000 feet, per Cascade's RideWithGPS ambassador route (the route page itself says 16.5 miles). Rolling, with one real climb and descent. The club calls the island roads low-traffic, with few turns and a good shoulder. Lid Park, on the I-90 lid, has bathrooms and the view. The Roanoke Inn, the tavern the club's page tells riders to stop at, is a few blocks off the trail at the island's north end (see Restaurants).",
+      "water": "On the route, per the club's points of interest: a QFC grocery and a Starbucks on the island, the Roanoke Inn, and bathrooms at Lid Park.",
+      "hazards": "Stop signs on the island are patrolled; come to a full stop, the club says. Where the trail meets a road, check for cars. Don't leave valuables in your car at the South Bellevue lot; the club says it has no cameras.",
+      "links": {
+        "rwgps": "https://ridewithgps.com/routes/10318567",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://ridewithgps.com/ambassador_routes/511-south-bellevue-mercer-island-loop"
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://ridewithgps.com/ambassador_routes/511-south-bellevue-mercer-island-loop",
+        "https://ridewithgps.com/routes/10318567"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Zoo Hill (Cougar Mountain)",
+      "type": "climb",
+      "miles": 9,
+      "elevation_gain_ft": 1450,
+      "surface": "Paved road.",
+      "difficulty": "hard",
+      "start": {
+        "name": "Lewis Creek Park, upper parking lot, Bellevue",
+        "address": "5808 Lakemont Blvd SE, Bellevue, WA 98006",
+        "lat": null,
+        "lon": null
+      },
+      "description": "The Eastside's climb: Cascade built a ride around Cougar Mountain's Zoo Hill, a 9-mile loop from Lewis Creek Park with about 1,450 feet of climbing. The grade runs from 3 to 18 percent, mostly 8 to 13, and there's no flat: in the club's words, \"you're either going up, or down.\" If you have more in you, the club adds Newport to 164th or the Lakemont hill after. The ride page is from 2018; the hill hasn't moved. To climb with a group, {ride:kirkland-wa-cascade-eastside-hills|Cascade's Eastside Hills ride} picks a new hilly route east of the lake each week.",
+      "water": "Lewis Creek Park at the start (water and bathrooms, per the club).",
+      "hazards": "The club's page says nothing about traffic on the road or the descent; the grade is the hazard. Expect 8 to 13 percent most of the way and pitches to 18.",
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://cascade.org/rides-events/44024"
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://cascade.org/rides-events/44024"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Snoqualmie Valley Trail gravel loop from Carnation",
+      "type": "gravel",
+      "miles": 38,
+      "elevation_gain_ft": 1200,
+      "surface": "About 19 miles of gravel trail, the rest paved road. The club asks for tires of at least 28mm.",
+      "difficulty": "moderate",
+      "start": {
+        "name": "Tolt MacDonald Park, Carnation",
+        "address": "31020 NE 40th St, Carnation, WA 98014",
+        "lat": null,
+        "lon": null
+      },
+      "description": "Cascade's gravel ride in the Snoqualmie Valley: south on the Snoqualmie Valley Trail to North Bend, paved roads to the Snoqualmie Falls viewpoint, back on the trail to Fall City, then paved roads home to Carnation. 38 miles and about 1,200 feet, about half of it gravel, per the club (Sept 2023). Cascade calls the trail an easy first gravel ride, with farmland and river views. On the club's rides, full fenders are required when the roads are wet. {ride:redmond-wa-cascade-treats-tuesday-ride|Cascade's TREATS ride} often heads out to the valley with a lunch stop.",
+      "water": "Restrooms and water at the Snoqualmie Falls viewpoint, about mile 23; restrooms at the start (club page).",
+      "hazards": "The club's page names no hazards. Half the loop is gravel trail, so 28mm tires at least, and fenders when it's wet, per the club. Carnation is out in the Snoqualmie Valley; this one wants a car or a long ride out.",
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://cascade.org/rides-events/82167"
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://cascade.org/rides-events/82167",
+        "https://cascade.org/resources/where-ride/trails-bicyclists"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Bainbridge Island by ferry (the Chilly Hilly course)",
+      "type": "road",
+      "miles": 33,
+      "elevation_gain_ft": 2150,
+      "surface": "Paved public roads.",
+      "difficulty": "moderate",
+      "start": {
+        "name": "Colman Dock, the Seattle ferry terminal",
+        "address": "801 Alaskan Way, Seattle, WA 98104",
+        "lat": null,
+        "lon": null
+      },
+      "description": "Roll onto the Bainbridge ferry at Colman Dock on the downtown waterfront and ride the Chilly Hilly course. It's a 33-mile loop of the island: the shore road with Seattle behind you, back roads through the trees, and the hills it's named for. About 2,150 feet, per Cascade's 2026 event page; a RideWithGPS copy of the course says 32.8 miles and 2,290 feet. It's the course of Cascade's February season opener, and the club has led it as a midsummer ride too. Return ferries run on the regular Washington State Ferries schedule. Pegasus Coffee House in Winslow is the coffee off the boat (see Coffee); Bainbridge Bike Co is steps from the terminal and Classic Cycle a mile up the hill (see Bike shops). The ferry fare and how bikes board are on the Bring-your-bike page.",
+      "water": "Battle Point Park, about mile 14 (restrooms and water, per Cascade's midsummer ride page). Restrooms on the ferry.",
+      "hazards": "All public roads, open to traffic. On event day, traffic officers work the highway crossings; on your own, nobody does. In February, Cascade's page says to wear layers and be ready for rain.",
+      "links": {
+        "rwgps": "https://ridewithgps.com/routes/741387",
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://cascade.org/rides-events/chilly-hilly-2026"
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://cascade.org/rides-events/chilly-hilly-2026",
+        "https://cascade.org/rides-events/81550",
+        "https://ridewithgps.com/routes/741387"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "West Seattle loop (Lincoln Park and Alki)",
+      "type": "road",
+      "miles": 12,
+      "elevation_gain_ft": 450,
+      "surface": "Road and trail, with half a mile of crushed-rock trail that road bikes handle fine, per the club.",
+      "difficulty": "easy",
+      "start": {
+        "name": "Seacrest Pier, West Seattle",
+        "address": "1660 Harbor Ave SW, Seattle, WA 98126",
+        "lat": null,
+        "lon": null
+      },
+      "description": "Cascade's 12-mile clockwise loop of West Seattle from Seacrest Pier, past Lincoln Park and along Alki. The first half climbs; the second half is mostly flat by the water. About 450 feet, per the club. Restrooms at Seacrest Park, start and finish. Cascade also leads a ride that crosses Elliott Bay to West Seattle on the West Seattle Water Taxi from Pioneer Square; the boat has a limited number of bike racks. Marination Ma Kai, at the pier, is lunch after (see Restaurants). {ride:seattle-wa-beer-junction-bike-club|The Beer Junction Bike Club's ride} is the slow, short West Seattle loop from a bar on California Ave.",
+      "water": null,
+      "hazards": "The club's page names no hazards. The first half is the climbing. If you cross on the water taxi, the boat has a limited number of bike racks, per Cascade.",
+      "links": {
+        "rwgps": null,
+        "strava": null,
+        "komoot": null,
+        "gpx": null,
+        "other": "https://cascade.org/rides-events/83393"
+      },
+      "ride_slug": null,
+      "sources": [
+        "https://cascade.org/rides-events/83393",
+        "https://cascade.org/rides-events/87939"
+      ],
+      "verified": "2026-10-03"
+    }
+  ],
+  "coffee": [
+    {
+      "name": "Tailwind Cafe & Bar",
+      "url": "https://tailwindcafe.com/",
+      "address": "1424 11th Ave, Seattle, WA 98122",
+      "note": "Capitol Hill, in the alley at Chophouse Row, with a courtyard. {ride:seattle-wa-good-weather-sunday-social|Good Weather's Sunday Social} meets here and rolls half an hour later; the café opens at 9, so there is time for coffee first. Espresso, breakfast and sandwiches, beer and wine; indoor and outdoor seating, tip-free, per its site. Closed Monday. Nothing on its page says bike parking.",
+      "hours_hint": "9 a.m. to 7 p.m. Tuesday to Sunday, closed Monday",
+      "ride_out": true,
+      "ride_slug": "seattle-wa-good-weather-sunday-social"
+    },
+    {
+      "name": "PIM Bicycles & Coffeehouse",
+      "url": "https://www.cycleandcoffee.com/",
+      "address": "4013 Leary Way NW, Seattle, WA 98107",
+      "note": "A bike shop with a coffee bar \"located right on the Burke-Gilman trail\" in Fremont, in its own words. Opens at 6 on Monday and Friday and 7 on the weekend, the earliest door this guide found near the trail. Walk-ins for quick fixes, per the shop page. Tuesday to Thursday hours weren't listed; call 206-784-2097 first midweek. Nothing on its pages says a pump or bike parking; it has a car lot.",
+      "hours_hint": "6 a.m. to 2 p.m. Monday and Friday, 7 to 2 Saturday and Sunday; Tuesday to Thursday not listed",
+      "ride_out": false,
+      "ride_slug": null
+    },
+    {
+      "name": "Pacha Collective",
+      "url": "https://www.pacha-collective.com/",
+      "address": "7119 Woodlawn Ave NE, Seattle, WA 98115",
+      "note": "Green Lake, on the same street as Gregg's. An all-day café with coffee, bowls and a bar, open to 9 on weeknights. Brevay Cycling's Thursday-morning WTFNB ride met here through September 2026; its series page showed no upcoming date on Oct 4, 2026, so check the ride's own listing before you plan a morning around it. Nothing on the café's page says bike parking.",
+      "hours_hint": "7 a.m. to 9 p.m. Monday to Friday, 7 to 5 Saturday and Sunday",
+      "ride_out": false,
+      "ride_slug": null
+    },
+    {
+      "name": "Cafe Allegro",
+      "url": "https://seattleallegro.com/",
+      "address": "4214 University Way NE, Seattle, WA 98105",
+      "note": "The U District, a block from the STP hotels, with the entrance in the alley. Espresso roasted on site. Opens at 7 on weekdays and 8 on weekends, so it is the coffee the day before the STP and the morning after, not the 5 a.m. start. Nothing on its page says outdoor seating or bike parking.",
+      "hours_hint": "7 a.m. to 6 p.m. weekdays, 8 to 6 weekends",
+      "ride_out": false,
+      "ride_slug": null
+    },
+    {
+      "name": "Pegasus Coffee House",
+      "url": "https://pegasuscoffee.com/pages/original-pegasus-coffee-house-bainbridge",
+      "address": "131 Parfitt Way SW, Bainbridge Island, WA 98110",
+      "note": "The coffee on the ferry-and-island day: Winslow, off the Seattle ferry, on the Chilly Hilly course. Opens at 7 every day; its two pages give the close as 4, 5 or 6 depending on the day, so plan on 4. The same roaster has a weekday coffee bar downtown at 711 3rd Avenue, 6:30 a.m. to 1 p.m. Monday to Friday, on the side of town the ferry leaves from. Bike parking isn't on either page. 206-317-6914.",
+      "hours_hint": "7 a.m. daily; closes 4 to 6 p.m. depending on the day",
+      "ride_out": false,
+      "ride_slug": null
+    }
   ],
   "restaurants": [
-    { "name": "Portage Bay Cafe", "url": "https://www.portagebaycafe.com/", "address": "4130 Roosevelt Way NE, Seattle, WA 98105", "cuisine": "Breakfast and brunch", "note": "Local, organic breakfast; opens 7:30 a.m. weekdays, 8 a.m. weekends." },
-    { "name": "Big Time Brewery & Alehouse", "url": "https://www.bigtimebrewery.com/", "address": "4133 University Way NE, Seattle, WA 98105", "cuisine": "Brewpub", "note": "Seattle's original brewpub, since 1988; family-friendly." },
-    { "name": "Shultzy's Bar & Grill", "url": "https://www.shultzys.com/", "address": "4114 University Way NE, Seattle, WA 98105", "cuisine": "Sausages and grill", "note": "House-made sausage since 1988; a plate of carbs and protein the night before." },
-    { "name": "Thai Tom", "url": "https://udistrictseattle.com/business-category/food-drink", "address": "4543 University Way NE, Seattle, WA 98105", "cuisine": "Thai", "note": "Tiny, cheap, cash-friendly counter spot on the Ave; expect a line." },
-    { "name": "Aladdin Gyro-cery", "url": "https://udistrictseattle.com/business-category/food-drink", "address": "4139 University Way NE, Seattle, WA 98105", "cuisine": "Middle Eastern", "note": "Gyros, falafel and hummus, mostly takeout, open late." },
-    { "name": "Cedars Restaurant", "url": "https://www.cedarsseattle.com/", "address": "4759 Brooklyn Ave NE, Seattle, WA 98105", "cuisine": "Indian and Mediterranean", "note": "In the U District since 1974; curries and kabobs." }
+    {
+      "name": "Un Bien (Seaview)",
+      "url": "https://www.unbienseattle.com/",
+      "address": "6226 Seaview Ave NW, Seattle, WA 98107",
+      "cuisine": "Caribbean",
+      "note": "The night-before sandwich on the Ballard side: a pink shack just off Shilshole Bay, on the road to Golden Gardens, where the Burke-Gilman starts. Roast pork sandwiches and plates. 11 to 9 Wednesday to Saturday, 11 to 8 Sunday, closed Monday and Tuesday, per its site. Pick-up orders by phone, (206) 420-7545. The Ballard sibling at 7302.5 15th Ave NW keeps the same hours. Seating and bike parking weren't on the page."
+    },
+    {
+      "name": "Marination Ma Kai",
+      "url": "https://marinationmobile.com/locations",
+      "address": "1660 Harbor Avenue SW, Seattle, WA 98126",
+      "cuisine": "Hawaiian-Korean",
+      "note": "After the ride, West Seattle: at Seacrest Park, the start of the West Seattle loop and the foot of the water taxi. Tacos, rice bowls and shave ice on a waterfront patio, indoor and outdoor, per its site. 11 to 8 Monday to Thursday, 11 to 9 Friday, from 9 on Saturday (to 9) and Sunday (to 8). Bike parking wasn't on the page."
+    },
+    {
+      "name": "Roanoke Inn",
+      "url": "https://theroanokeinn.com/",
+      "address": "1825 72nd Ave SE, Mercer Island, WA 98040",
+      "cuisine": "Pub",
+      "note": "On the way, Mercer Island: the tavern Cascade's Mercer Island loop tells riders to stop at, a few blocks off the I-90 trail at the island's north end. Porch, patio and a back yard. Open seven days except Thanksgiving and Christmas, per its site: 3 to 10 Monday, 11 to 10 Tuesday, 11 to midnight Wednesday to Saturday, 11 to 10 Sunday (Oct 2026). (206) 232-0800."
+    },
+    {
+      "name": "Shultzy's Bar & Grill",
+      "url": "https://www.shultzys.com/",
+      "address": "4114 University Way NE, Seattle, WA 98105",
+      "cuisine": "Sausages and grill",
+      "note": "The night before the STP, on the Ave in the U District: house-made sausage since 1988, a plate of carbs and protein. Hours not confirmed since Sept 2026; check before you go."
+    },
+    {
+      "name": "Cedars Restaurant",
+      "url": "https://www.cedarsseattle.com/",
+      "address": "4759 Brooklyn Ave NE, Seattle, WA 98105",
+      "cuisine": "Indian and Mediterranean",
+      "note": "The U District, a few blocks from the STP hotels: curries and kabobs, in the neighborhood since 1974. Hours not confirmed since Sept 2026; check before you go."
+    },
+    {
+      "name": "Big Time Brewery & Alehouse",
+      "url": "https://www.bigtimebrewery.com/",
+      "address": "4133 University Way NE, Seattle, WA 98105",
+      "cuisine": "Brewpub",
+      "note": "The U District's brewpub, which calls itself \"Seattle's original brew pub,\" since 1988; family-friendly, per its site. The beer the night before the STP, on the Ave. Hours not confirmed since Sept 2026; check before you go."
+    },
+    {
+      "name": "Portage Bay Cafe",
+      "url": "https://www.portagebaycafe.com/",
+      "address": "4130 Roosevelt Way NE, Seattle, WA 98105",
+      "cuisine": "Breakfast and brunch",
+      "note": "After the ride, the U District: breakfast next door to the University Inn, local and organic in its own words. Opens 7:30 a.m. weekdays, 8 a.m. weekends, per its site (confirmed Sept 2026), so it is the morning after the STP, not the 5 a.m. start."
+    },
+    {
+      "name": "Dick's Drive-In (Broadway)",
+      "url": "https://ddir.com/locations/broadway",
+      "address": "115 Broadway East, Seattle, WA 98102",
+      "cuisine": "Burgers",
+      "note": "Late, Capitol Hill: 10:30 a.m. to 2 a.m. every day, per its site, across from the Capitol Hill light rail station. A walk-up window since 1955; stand in line, eat outside or take it away. Cheap. Not the night-before plate, but open when the day ran long and nothing else is."
+    }
+  ],
+  "hotels": [
+    {
+      "name": "HI Seattle at the American Hotel",
+      "url": "https://www.americanhotelseattle.com/faqs",
+      "booking_url": null,
+      "address": "520 S King St, Seattle, WA 98104",
+      "phone": null,
+      "note": "A hostel in the Chinatown–International District, a block from the King Street light-rail and Amtrak station and about a mile south of the center of downtown; Cascade's 2026 list puts it 4.4 miles from the STP start. Travelers only, it won't take Seattle-area residents, and 14 nights at most. Check-in 3, out 11; luggage storage after check-out is $5 for two bags; a pay lot across the street. The cheap tier for this guide, and the one place in town with the bike rule in writing. No rate shown on its own page (Oct 2026).",
+      "price_hint": "$",
+      "bike_policy": "Bike storage in the basement; the front desk walks you down to store or fetch your bike (its FAQ's words)."
+    },
+    {
+      "name": "College Inn",
+      "url": "https://www.collegeinnseattle.com",
+      "booking_url": null,
+      "address": "4000 University Way NE, Seattle, WA 98105",
+      "phone": null,
+      "note": "On the Ave at NE 40th, 0.6 mile from the STP start lot by Cascade's 2026 list, the closest bed on it. A 1909 building run as a small inn: half the rooms have a new private bath, the rest share; free coffee and tea all day in the loft. Nothing about bikes on its page, and nothing about an elevator. No rate shown (Oct 2026).",
+      "price_hint": null,
+      "bike_policy": null
+    },
+    {
+      "name": "University Inn (Staypineapple)",
+      "url": "https://www.staypineapple.com/university-inn-seattle-wa",
+      "booking_url": null,
+      "address": "4140 Roosevelt Way NE, Seattle, WA 98105",
+      "phone": null,
+      "note": "Roosevelt Way at NE 41st, 1.3 miles from the STP start lot by Cascade's 2026 list, with Portage Bay Cafe next door. The hotel lists beach cruisers to borrow; nothing on its page about where your own bike sleeps. Self-parking on site, fee not shown. No rate shown (Oct 2026).",
+      "price_hint": null,
+      "bike_policy": null
+    },
+    {
+      "name": "Residence Inn by Marriott Seattle University District",
+      "url": "https://www.marriott.com/en-us/hotels/seaud-residence-inn-seattle-university-district/overview/",
+      "booking_url": null,
+      "address": "4501 12th Avenue NE, Seattle, WA 98105",
+      "phone": null,
+      "note": "On 12th Ave NE in the U District, 1.3 miles from the STP start lot by Cascade's 2026 list. The suites have full kitchens, and that matters on STP morning: hotel breakfast starts at 7 a.m. on weekends and the ride leaves at 5. Nothing about bikes on the hotel's page. No rate shown; parking $35 a day (Oct 2026).",
+      "price_hint": null,
+      "bike_policy": null
+    },
+    {
+      "name": "Watertown Hotel (Staypineapple)",
+      "url": "https://www.staypineapple.com/watertown-hotel-seattle-wa",
+      "booking_url": null,
+      "address": "4242 Roosevelt Way NE, Seattle, WA 98105",
+      "phone": null,
+      "note": "A block north of its sister, the University Inn, on Roosevelt Way; Cascade's 2026 list puts it 1.8 miles from the STP start lot, half a mile farther than the University Inn. Beach cruisers to borrow, per the page; nothing about your own bike. No rate shown (Oct 2026).",
+      "price_hint": null,
+      "bike_policy": null
+    },
+    {
+      "name": "Graduate by Hilton Seattle",
+      "url": "https://www.hilton.com/en/hotels/seagsgu-graduate-seattle/",
+      "booking_url": null,
+      "address": "4507 Brooklyn Ave NE, Seattle, WA 98105",
+      "phone": null,
+      "note": "Brooklyn Ave at NE 45th, a few blocks west of campus; not on Cascade's lodging list, so no measured distance to the start. Two restaurants (Poindexter Coffee on the ground floor, the Mountaineering Club bar on the roof). A daily mandatory destination charge covers internet, a $15 food credit and bicycle rentals; nothing on the page about a guest's own bike. Valet only, $46 a day; no rate shown (Oct 2026).",
+      "price_hint": null,
+      "bike_policy": null
+    },
+    {
+      "name": "Hotel Max",
+      "url": "https://www.hotelmaxseattle.com/hotel/",
+      "booking_url": "https://www.expedia.com/Seattle-Hotels-Hotel-Max.h28647.Hotel-Information",
+      "address": "620 Stewart St, Seattle, WA 98101",
+      "phone": null,
+      "note": "Downtown, Stewart St at 7th, half a mile from Pike Place Market and about a mile from the Elliott Bay Trail at the waterfront; Colman Dock and the Bainbridge ferry are a downhill roll away. The hotel's own page says it loans Public bikes to guests; Expedia's listing goes further and puts \"Bicycle storage\" inside the $34.22-a-night resort fee, but that line isn't on the hotel's site, so ask when you book. From $204 for a mid-October night, taxes in; covered valet $55.98 (Expedia, Sept 2026).",
+      "price_hint": "$$",
+      "bike_policy": null
+    },
+    {
+      "name": "Silver Cloud Hotel Seattle – Broadway",
+      "url": "https://www.silvercloud.com/seattlebroadway/",
+      "booking_url": null,
+      "address": "1100 Broadway, Seattle, WA 98122",
+      "phone": null,
+      "note": "Broadway at Madison, where Capitol Hill meets First Hill: the Pike/Pine bars, Métier's rental counter and the start of {ride:seattle-wa-good-weather-sunday-social|Good Weather's Sunday Social} are a short roll north, downtown a long downhill west. Check-in 4, out noon. Nothing about bikes on the hotel's page. No rate shown (Oct 2026).",
+      "price_hint": null,
+      "bike_policy": null
+    }
   ],
   "bike_shops": [
-    { "name": "Montlake Bicycle Shop", "url": "https://www.montlakebike.com/", "address": "2223 24th Ave E, Seattle, WA 98112", "phone": "(206) 329-7333", "services": ["repair", "rental", "parts"], "note": "Closest full-service shop to the STP start; rents city, electric and mountain bikes." },
-    { "name": "R+E Cycles (Rodriguez Bicycle Company)", "url": "https://www.recycles.com/", "address": "5627 University Way NE, Seattle, WA 98105", "phone": "", "services": ["repair", "parts"], "note": "Custom hand-built Rodriguez bikes and tandems, plus repairs, at the north end of the Ave." },
-    { "name": "Gregg's Greenlake Cycle", "url": "https://www.greggscycles.com/", "address": "7007 Woodlawn Ave NE, Seattle, WA 98115", "phone": "(206) 523-1822", "services": ["repair", "parts"], "note": "Large shop with service and bike fitting, about two miles north of campus." },
-    { "name": "Recycled Cycles", "url": "https://www.recycledcycles.com/", "address": "", "phone": "", "services": ["repair", "rental", "parts"], "note": "New and used bikes, rentals bookable online, service packages; in Seattle since 1994. Confirm the street address on their site." }
+    {
+      "name": "Métier Cycling & Café",
+      "url": "https://metier.cc/pages/bike-rental-seattle",
+      "address": "1017 E Union St, Seattle, WA 98122",
+      "phone": "(206) 816-3436",
+      "services": [
+        "repair",
+        "rental",
+        "rental-road",
+        "rental-gravel",
+        "fitting",
+        "shop-rides",
+        "coffee"
+      ],
+      "note": "Capitol Hill. The high-end rental fleet: a Cervélo Caledonia (Ultegra Di2) or Soloist (Ultegra) at $125 a day, a Specialized Tarmac SL8 (SRAM Rival AXS) or a Cervélo Aspero gravel bike (Rival AXS XPLR) at $175 a day, 10% off from four days; your choice of SPD, SPD-SL, Look Keo or flat pedals, a computer mount and a saddle bag with a repair kit; no helmets or shoes to rent; full refund up to 72 hours out (Oct 2026). Service is $150 an hour, an Essential Tune $225, 24-hour rush for $100 more (Oct 2026); nothing on the page about same-day. Bike fits on site. The café opens at 8; closed Mondays, Tuesday to Saturday until 5 or 6, Sunday until 3. The shop's own B2B ride leaves Saturday mornings, 38 miles and 2,400 feet, and you don't have to be a member; the time isn't posted, so join its Strava club."
+    },
+    {
+      "name": "Mello Fellos Bike Shop",
+      "url": "https://www.mellofellos.com/",
+      "address": "2151 6th Ave, Seattle, WA 98121",
+      "phone": "(206) 745-5501",
+      "services": [
+        "repair",
+        "rental",
+        "rental-road",
+        "rental-gravel",
+        "parts",
+        "shop-rides"
+      ],
+      "note": "Downtown, in the Via6 building, the start of {ride:seattle-wa-mello-fellos-saturday-ride|the shop's Saturday ride}. Rents road, gravel and city hybrid bikes for adults, helmet, lock and phone mount included; no price is published, so book or call first (Oct 2026). Rent one and buy a bike within 30 days and up to a week's rental comes off the price. Bring the bike in for an estimate; labor $130 an hour, a basic tune $125, a new bike built from the box $190 (Oct 2026); nothing on the page says it receives shipments. Monday to Friday 10 to 6, Saturday 10 to 5, Sunday noon to 5.",
+      "ride_slug": "seattle-wa-mello-fellos-saturday-ride"
+    },
+    {
+      "name": "Montlake Bicycle Shop",
+      "url": "https://www.montlakebike.com/",
+      "address": "2223 24th Ave E, Seattle, WA 98112",
+      "phone": "(206) 329-7333",
+      "services": [
+        "repair",
+        "rental",
+        "rental-mtb",
+        "rental-ebike",
+        "parts",
+        "suspension"
+      ],
+      "note": "Montlake, the closest full-service shop to the STP start at the University of Washington. Drop the bike off any day, no appointment; a mechanic calls within 24 to 48 hours and most repairs take three to five business days, so this is not the same-day fix. $120 an hour, a check-over and basic adjust $120, a full adjust and lube $200; fork and shock service too (Oct 2026). Rents electric, city and mountain bikes from Giant and Cannondale, no road bikes and no prices on the page; reservations are paid in full and non-refundable, bring government ID. Monday to Friday 10 to 6, Saturday 9 to 5, Sunday 10 to 4."
+    },
+    {
+      "name": "Recycled Cycles",
+      "url": "https://www.recycledcycles.com/",
+      "address": "1007 NE Boat St, Seattle, WA 98105",
+      "phone": "(206) 547-4491",
+      "services": [
+        "repair",
+        "rental",
+        "parts"
+      ],
+      "note": "On Boat Street under the University Bridge, right off the Burke-Gilman and a short ride from the STP start. Drop-in service: some fixes are done within a couple of hours, the rest get a pickup time and a price before you leave. New, used and consignment bikes, and tools if you'd rather do it yourself. Rentals are booked online with insurance offered; the shop's own pages don't say which bikes, so check the booking page (Oct 2026). Tuesday to Friday 11 to 6, Saturday 10 to 6, closed Sunday and Monday."
+    },
+    {
+      "name": "Gregg's Greenlake Cycle",
+      "url": "https://www.greggscycles.com/about/greenlake-pg270.htm",
+      "address": "7007 Woodlawn Ave NE, Seattle, WA 98115",
+      "phone": "(206) 523-1822",
+      "services": [
+        "repair",
+        "fitting",
+        "parts"
+      ],
+      "note": "Green Lake, the big shop, open 10 to 6 every day. A full repair floor: tunes at $165, $275 and $420 ($485 with hydraulic brakes); the Platinum road tune overhauls the bottom bracket, headset and hubs (Oct 2026). Every Gregg's bike fit happens here: a Basic Fit $150, a Foundation Fit $265, cancel with 24 hours or pay half (Oct 2026). Nothing on its site about rentals or shipped bikes. A small lot on the northwest side of the store. Two more stores, in Bellevue (105 Bellevue Way NE, 425-462-1900) and Lynnwood."
+    },
+    {
+      "name": "Cascade Bicycle Studio",
+      "url": "https://www.cascadebicyclestudio.com/bike-service-repair-seattle/schedule",
+      "address": "180 North Canal Street, Seattle, WA 98103",
+      "phone": "(206) 547-4900",
+      "services": [
+        "repair",
+        "fitting",
+        "shop-rides"
+      ],
+      "note": "In Fremont, on North Canal Street at Phinney Ave; the Burke-Gilman runs through the neighborhood. The fit studio: a $350 bike fit, or a $500 fit of two to three hours with motion capture, saddle pressure mapping and shoes, each with one follow-up visit; saddle or shoe-and-insole fits are $125 (Oct 2026). Service is scheduled, not same-day: come by any time for an evaluation, no appointment needed, and they book the work; a tune-up often takes a few days. Road or gravel tune-up about $300, labor $150 an hour, a build from the box $250 and up (Oct 2026). The shop's eight local loops start at the door, and it calls the Magnolia Loop its classic Wednesday group ride route; no ride time is posted. Tuesday to Saturday 10 to 6, closed Sunday and Monday."
+    },
+    {
+      "name": "evo Seattle",
+      "url": "https://www.evo.com/locations/seattle/services/bike-rentals",
+      "address": "1320 N 35th St, Seattle, WA 98103",
+      "phone": "(206) 973-4470",
+      "services": [
+        "rental",
+        "rental-road",
+        "rental-mtb",
+        "rental-ebike"
+      ],
+      "note": "Fremont, a few blocks up from the Burke-Gilman. The cheaper road rental: a carbon road bike $100 for 24 hours or $500 for seven days, a mountain bike demo $130 or $650, an e-mountain bike $150 or $750, a hybrid $60; helmets included, optional damage cover $15 ($25 on e-bikes and full suspension), 20% off when you book online (Oct 2026). No model or size list on the page. Pick up any time from opening; Monday to Saturday 10 to 8, Sunday 10 to 7. The rental counter sits behind the outdoor store, with tune-ups, repairs and assembly at the same desk."
+    },
+    {
+      "name": "Bainbridge Bike Co",
+      "url": "https://www.bainbridgebikeco.com/contact",
+      "address": "124 Bjune Dr SE, Bainbridge Island, WA 98110",
+      "phone": "(206) 842-6413",
+      "services": [
+        "repair",
+        "rental"
+      ],
+      "note": "In Winslow, steps from the Bainbridge ferry terminal, in the shop's words. Sales, service, and rentals of electric and non-electric bikes, booked online; the site doesn't say which bikes or what they cost, so book ahead for a ferry day (Oct 2026). Wednesday to Friday 10 to 6, Saturday 10 to 5, Sunday noon to 4; closed Monday and Tuesday, so a Monday island ride means bringing your own."
+    },
+    {
+      "name": "Classic Cycle",
+      "url": "https://classiccycleus.com/",
+      "address": "617 High School Rd NE, Bainbridge Island, WA 98110",
+      "phone": "(206) 842-9191",
+      "services": [
+        "repair",
+        "fitting"
+      ],
+      "note": "Bainbridge Island, a mile or so up from the ferry on High School Road. Repairs, bike fitting, repair classes and used bikes; Cascade names it as one of the two full-service shops on the island for Chilly Hilly. Nothing about rentals on the pages read (Oct 2026). Tuesday to Saturday 10 to 5, Sunday noon to 4, closed Mondays."
+    },
+    {
+      "name": "Ride Bicycles",
+      "url": "https://ridebicycles.com/pages/bike-rentals",
+      "address": "160 NW Gilman Blvd #102, Issaquah, WA 98027",
+      "phone": "(425) 961-9061",
+      "services": [
+        "rental",
+        "rental-mtb",
+        "rental-ebike"
+      ],
+      "note": "Issaquah, the shop for Duthie Hill, Tiger Mountain and Raging River. Rents mountain bikes and e-mountain bikes only: half day up to four hours, full day over four; helmet, flat or SPD pedals and a safety check included; reservations required, booked online, 48 hours to cancel, riders under 280 lb with gear; no prices on the page (Oct 2026). Weekdays 10 to 6, Saturday and Sunday 9:30 to 5."
+    },
+    {
+      "name": "Bike Works Open Shop",
+      "url": "https://bikeworks.org/adult-programs/open-shop-community-repair-space/",
+      "address": "3715 S Hudson St, Seattle, WA 98118",
+      "phone": null,
+      "services": [
+        "diy"
+      ],
+      "note": "The nonprofit's repair space in its Columbia City warehouse: its stands and tools, with or without a mechanic's help. Second and fourth Saturdays, 1 to 5 pm, year-round; in 2026, May through September moved to the first and third Saturdays. $10 an hour on your own, $15 with some help, $20 and up for a full walkthrough, parts extra (Oct 2026). Adults only, first come first served, four people at a time. For the rider who can fix it with a stand and the right tool; nobody does the work for you."
+    }
+  ],
+  "culture": [
+    {
+      "name": "Fremont Brewing Urban Beer Garden",
+      "kind": "bar",
+      "url": "https://www.fremontbrewing.com/fremont-urban-beer-garden",
+      "address": "1050 N 34th St, Seattle, WA 98103",
+      "note": "The brewery's beer garden on N 34th St in Fremont, a block up from the Burke-Gilman along the ship canal. Open 11 to 9 every day (Oct 2026). No kitchen: free pretzels, sandwiches to buy, a burger truck 1 to 8 Wednesday to Sunday, and they tell you to order in from the neighborhood. Kids and dogs welcome. The post-ride stop on the trail side of town."
+    },
+    {
+      "name": "Charlie's Queer Books",
+      "kind": "queer-owned",
+      "url": "https://www.charliesqueerbooks.com/",
+      "address": "465 N 36th St, Seattle, WA 98103",
+      "note": "A bookstore in Fremont, two blocks from the Burke-Gilman, that sells only books by LGBTQ+ authors or with LGBTQ+ stories, with reading nooks upstairs. The store says so itself on its Bookshop.org storefront: \"Charlie's is a trans-owned bookstore in Seattle that sells queer books of all genres.\" Open Wednesday to Sunday; the site is the place for the day's hours."
+    },
+    {
+      "name": "Elliott Bay Book Company",
+      "kind": "bookstore",
+      "url": "https://www.elliottbaybook.com/",
+      "address": "1521 10th Ave, Seattle, WA 98122",
+      "note": "Capitol Hill's big independent: about 150,000 titles on cedar shelves over several levels, and author events most nights. Open late: 10 to 10 Monday to Thursday, 10 to 11 Friday and Saturday, 10 to 9 Sunday (from a partner's listing, Oct 2026; the store's own site needs JavaScript to read). The bookstore for a rider sleeping on the Hill."
+    },
+    {
+      "name": "The Wildrose",
+      "kind": "bar",
+      "url": "https://www.thewildrosebar.com/",
+      "address": "1021 E Pike St, Seattle, WA 98122",
+      "note": "E Pike at 11th, on Capitol Hill. Calls itself Seattle's only lesbian bar and the oldest in the country, open since 1984. Tuesday 5 to 10, Wednesday 5 to 11, Thursday 5 to midnight, Friday and Saturday 5 to 2, Sunday 4 to 9, closed Monday (Oct 2026). Runs its own Pride weekend at the end of June."
+    },
+    {
+      "name": "Olympic Sculpture Park",
+      "kind": "other",
+      "url": "https://www.seattleartmuseum.org/visit/olympic-sculpture-park",
+      "address": "2901 Western Ave, Seattle, WA 98121",
+      "note": "The Seattle Art Museum's free sculpture park at the north end of the downtown waterfront, where the Elliott Bay Trail sets off north along the Sound. Open every day from half an hour before sunrise to half an hour after sunset; the PACCAR Pavilion 9 to 4 (Oct 2026). Calder's Eagle and Serra's Wake are here. Bike racks at the garage and by the pavilion; walk the bike inside the park."
+    },
+    {
+      "name": "Burke Museum",
+      "kind": "museum",
+      "url": "https://www.burkemuseum.org/hours-admissions",
+      "address": "4303 Memorial Way NE, Seattle, WA 98195",
+      "note": "The University of Washington's natural history and culture museum, on the north edge of campus a few blocks from the STP start lot. Tuesday to Sunday 10 to 5 (last entry 4:30), closed Monday, open to 8 and free on the first Thursday of the month. General admission $24, students $16 (Oct 2026). The two hours the afternoon before a 5 a.m. roll-out."
+    },
+    {
+      "name": "Matthews Beach Park",
+      "kind": "other",
+      "url": "https://www.seattle.gov/parks/parks/matthews-beach-park",
+      "address": null,
+      "note": "Seattle's largest freshwater bathing beach, per Seattle Parks, on Lake Washington in the north end, with the Burke-Gilman running along its west edge; {ride:seattle-wa-cascade-lumps-wednesday-ride|Cascade's LUMPS ride} leaves from here. Lifeguards in summer only; check the Parks page for this year's dates before you count on a swim. The stop on a hot day on the trail."
+    }
+  ],
+  "clubs": [
+    {
+      "name": "Cascade Bicycle Club",
+      "url": "https://cascade.org/rides-events/welcome-free-group-rides/ride-series",
+      "note": "The region's big club and the STP's organizer. Its volunteer-led free group rides go out most days of the week from Seattle and the Eastside, posted about a week ahead on the club's ride calendar: {ride:kenmore-wa-cascade-mumps-monday-ride|MUMPS}, {ride:redmond-wa-cascade-treats-tuesday-ride|TREATS}, {ride:seattle-wa-cascade-lumps-wednesday-ride|LUMPS}, {ride:redmond-wa-cascade-road-ride-on-after-dark|ROAD}, {ride:bellevue-wa-cascade-eastside-tours-evening-ride|Eastside Tours}, {ride:issaquah-wa-cascade-issaquah-social|the Issaquah Social}, {ride:seattle-wa-cascade-frumps-friday-ride|FRUMPS} and {ride:kirkland-wa-cascade-eastside-hills|Eastside Hills}. Free, but register for each ride on the site, wear a helmet and be there for the safety briefing; each pace, from Steady (12–14 mph) up, is its own group.",
+      "inclusive_focus": [],
+      "ride_slug": null
+    },
+    {
+      "name": "Outspoken Cycle Club (Seattle)",
+      "url": "https://www.heylo.com/g/878fc3a9-d8c1-4ac5-8ff5-1cc8d6a52e71",
+      "note": "Seattle's queer and allied cycle club, in its own words. Social rides run from beginner-friendly outings to day-long rides around the region, plus trips to rides elsewhere. Every ride is posted and signed up for on its Heylo page: in 2026 that meant spring and summer weeknight rides (Mercer Mondays from the East Portal Viewpoint, a no-drop West Seattle Wednesday ride from the Seacrest water taxi dock) and, this October, a three-ride chocolate-stop series. Join the Heylo group and pick a ride.",
+      "inclusive_focus": [
+        "lgbtq",
+        "beginner"
+      ],
+      "ride_slug": null
+    },
+    {
+      "name": "NorthStar Cycling Club",
+      "url": "https://northstar-bicycle-club.myshopify.com/pages/when-we-ride",
+      "note": "A Central District club whose aim, in its own intro, is to \"Get Melanated People on Bicycles.\" {ride:seattle-wa-northstar-sunday-service|Sunday Service} leaves the clubhouse at 21st and Union: easy pace, no-drop, all levels invited, with a few bikes to rent. Fill in the club's waiver before you ride; the Wednesday Mercer Island ride is on hold.",
+      "inclusive_focus": [
+        "bipoc",
+        "no-drop"
+      ],
+      "ride_slug": "seattle-wa-northstar-sunday-service"
+    },
+    {
+      "name": "Moxie Monday",
+      "url": "https://everydayrides.com/groups/moxie-monday",
+      "note": "A monthly evening ride \"for folks who are femme, trans, non-binary, gender non-conforming, and/or women,\" on any kind of bike, from Westlake Park downtown. Easy pace, 8 to 15 miles; the group stays together and picks the route before it rolls. Show up; ice or snow cancels. Instagram @moxiemonday.",
+      "inclusive_focus": [
+        "women-trans-femme",
+        "no-drop"
+      ],
+      "ride_slug": "seattle-wa-moxie-monday"
+    },
+    {
+      "name": "Good Weather",
+      "url": "https://everydayrides.com/groups/good-weather",
+      "note": "{ride:seattle-wa-good-weather-sunday-social|The Sunday Social} leaves Tailwind Cafe, 1424 11th Ave, on Capitol Hill: in the group's words, \"our weekly no-drop ride around town,\" with park sits and pastry stops at 10 to 12 mph. It also posts faster rides and the odd campout. Show up.",
+      "inclusive_focus": [
+        "no-drop"
+      ],
+      "ride_slug": "seattle-wa-good-weather-sunday-social"
+    }
+  ],
+  "bring_your_bike": {
+    "summary": "Bring it. Delta, Southwest and American check a packed bike as an ordinary bag, $45 each way as your first bag (Oct 2026). Once you land, Link light rail runs from the airport to downtown in 38 minutes. If the trip is a day or two, Métier on Capitol Hill rents a Cervélo or a Tarmac for $125 to $175 a day and evo in Fremont a carbon road bike for $100 (Oct 2026). For a week, or the STP, ride your own. No Seattle shop says on its site it receives a shipped bike. You don't need a car: the Burke-Gilman, the Lake Washington loop and the Bainbridge ferry all start in the city, and Amtrak Cascades has ten $5 bike racks on every train for the ride home from Portland.",
+    "fly": {
+      "airports": [
+        {
+          "name": "Seattle-Tacoma International",
+          "code": "SEA",
+          "miles": 14,
+          "note": "About 14 miles south of downtown. Link light rail leaves from the parking garage: find baggage carousel 16, go up one floor to the skybridge level, cross Skybridge Six and turn left through the garage to the station; a free electric shuttle covers the same walk. Trains every 8 to 10 minutes most of the day, 38 minutes to downtown; Sound Transit's night bus runs about every 30 minutes from about 15 minutes after the last train (Oct 2026). Ride apps pick up on the 3rd floor of the garage, stalls 1 to 34 on the Ground Transportation Plaza, per the Port of Seattle (Oct 2026). Check the airport's own site for which airlines fly here."
+        }
+      ],
+      "airline_note": "Read on each airline's own page, Oct 2026. Delta: a non-motorized touring or single-seat racing bike must be packed in a durable container built for bikes; the standard baggage allowance and fees apply, excess-weight fees over 50 lb; over 115 linear inches or 100 lb is refused; a soft bag or anything but a hard shell means signing a limited release; some Delta Connection carriers don't take bikes. First bag $45, second $55, US domestic Main, each way. Southwest: a non-motorized single-seat bike is checked baggage at standard checked-bag and overweight fees with oversize fees waived; over 100 lb or 115 inches total is refused; pedals and handlebars off and wrapped; cardboard or soft cases fly only with a limited release. First bag $45, second $55 for travel booked on or after April 9, 2026; 51 to 70 lb is $100 on top, 71 to 100 lb $200. American (read Oct 3, 2026): one non-motorized bike in a hard case, bike bag or bike box pays the standard checked-bag fee up to 50 lb and the standard overweight fee from 51 to 70 lb; oversize fees don't apply; nothing over 70 lb or 115 linear inches; handlebars fixed sideways and pedals off, or both wrapped; outside a hard case it's treated as fragile. First bag $45 online or $50 at the airport, second $55 or $60 (fees updated May 18, 2026). Alaska: read its sports-equipment page before you book; Cascade's STP transportation page says sports equipment including your bike is standard checked baggage with no additional fees (read Oct 2026), and the Los Angeles guide's Sept 2026 read of Alaska's own page said the same, $45 first bag, oversize waived, overweight waived to 70 lb. Confirm on alaskaair.com before you book. United: not confirmed; its page needs JavaScript. Keep the case under 50 lb and on Delta, Southwest and American it is one ordinary checked bag."
+    },
+    "ship": {
+      "note": "No shop in Seattle says on its own site that it receives a bike shipped to the shop, so call before you book a BikeFlights label with a shop as the address. Two publish a build fee for a boxed bike: Mello Fellos downtown, $190 ($250 for an e-bike); Cascade Bicycle Studio in Fremont, $250 and up (both Oct 2026). Métier's tailored builds start at $895 for a frame from any maker, not a boxed-bike rebuild. Ask Mello Fellos or Cascade Bicycle Studio whether they'll sign for the box. BikeFlights' shop FAQ says some shops pack and book the shipment for you and others ask you to book once they've packed it (read Oct 2026); its shipping policy points to UPS's and FedEx's guides and gives no transit-day count. For the STP, Cascade's 2026 transportation page carried a BikeFlights code, STPCLASSIC, 15% off through Aug 12, 2026; watch the 2027 page for the new one.",
+      "shops": []
+    },
+    "rent": {
+      "note": "Seattle rents real bikes, gravel included. Métier on Capitol Hill has a Cervélo Caledonia (Ultegra Di2) or Soloist (Ultegra) at $125 a day and a Specialized Tarmac SL8 or Cervélo Aspero gravel bike (SRAM Rival AXS) at $175, 10% off from four days, your choice of pedals, no helmets to rent, closed Mondays (Oct 2026). evo in Fremont rents a carbon road bike for $100 a day or $500 a week, helmet included, with no model named (Oct 2026). Mello Fellos downtown rents road and gravel bikes with helmet and lock but publishes no price; Ride Bicycles in Issaquah rents mountain and e-mountain bikes for the Tiger Mountain trails, reservations required, no price on the page (Oct 2026). Nobody lists sizes on their own page; call with your height. The math: flying the bike costs $90 round trip as a first bag on Delta, Southwest or American (Oct 2026), so one day on a Métier bike is a wash and two days costs more than the case. From three days, a fit you depend on, or the STP's 206 miles, bring yours. Montlake Bicycle Shop near the STP start rents city, electric and mountain bikes, no road bikes.",
+      "shops": [
+        {
+          "name": "Métier Cycling & Café",
+          "url": "https://metier.cc/pages/bike-rental-seattle",
+          "note": "Capitol Hill. Cervélo Caledonia (Ultegra Di2) or Soloist (Ultegra) $125 a day; Specialized Tarmac SL8 or Cervélo Aspero gravel (SRAM Rival AXS) $175 a day; 10% off from four days; your pedals, no helmets (Oct 2026). Book online; full refund 72 hours out. Closed Mondays. 1017 E Union St; (206) 816-3436 ext. 2."
+        },
+        {
+          "name": "evo Seattle",
+          "url": "https://www.evo.com/locations/seattle/services/bike-rentals",
+          "note": "Fremont. Carbon road bike $100 for 24 hours, $500 for seven days; mountain bike demo $130, e-mountain bike $150 for 24 hours; helmet included; 20% off booked online (Oct 2026). No model or size list. Open every day. 1320 N 35th St; (206) 973-4470."
+        },
+        {
+          "name": "Mello Fellos Bike Shop",
+          "url": "https://www.mellofellos.com/articles/rental-pg233.htm",
+          "note": "Downtown. Road, gravel and city hybrid bikes with helmet, lock and phone mount; no price published, book online or call (Oct 2026). Open every day. 2151 6th Ave; (206) 745-5501."
+        },
+        {
+          "name": "Ride Bicycles",
+          "url": "https://ridebicycles.com/pages/bike-rentals",
+          "note": "Issaquah, for the Tiger Mountain and Duthie trails. Mountain and e-mountain bikes only, half or full day, reservations required, no price on the page (Oct 2026). 160 NW Gilman Blvd #102; (425) 961-9061."
+        }
+      ]
+    },
+    "get_around": {
+      "car_needed": false,
+      "note": "Not for most of it. The Burke-Gilman and the West Seattle loop start in the city, the north-lake trail loop can start at UW Station on Link, the Bainbridge Island loop starts at Colman Dock downtown, and the Lake Washington loop passes Seward Park, so you can join it there. Two rides sit out of town: the Zoo Hill climb from a Bellevue park and the gravel loop from Carnation in the Snoqualmie Valley; for those, a car or a long ride out. The Bainbridge ferry: $11.35 for an adult plus a $1 bicycle surcharge, paid at Seattle only, nothing to pay coming back ($5.65 for 65 and over, under 19 free; fares for Oct 4, 2026). Be there 20 minutes early: bikes load onto the forward end of the car deck and unload ahead of the cars; arrive late and you wait at the rear and leave after them. You can leave the bike on the car deck during the crossing; take your bags, and don't get off without it. The STP starts at the University of Washington's E-18 lot, parking $20 a day Friday to Monday, cash preferred (2026). Getting home from Portland, Cascade sold Bus & Bike for $115 and Bike-Only for $70 by July 5 (2026 prices, the overview page); buses load at the DoubleTree finish on NE 9th Ave Saturday night, Sunday afternoon and Monday morning, standby cash only ($100 bus and bike, $60 bike only). A personal bike box rides Seattle to Portland one way ($20 on the transportation page, $25 on the overview, 2026). Or take the train: Amtrak Cascades has ten bike racks in the baggage car on every train, $5 each, booked as a bicycle space with your ticket; e-bikes under 50 lb are fine; if the racks are sold out, boxing is $15 a box plus a $10 handling fee at staffed stations only, and you take the bike apart yourself (read Oct 2026). Book the bike space early in summer. Portland-based riders: the Portland Bicycling Club runs a Friday bus and bike truck to the UW dorms, sold as an add-on at registration (2026).",
+      "transit_bike_rules": "Link light rail: roll the bike on, free, first come first served; a bike up to 84 inches long, 23 inches wide and 50 lb; no bikes when a car holds more than double its seats; never on an escalator, use the stairs or elevator; e-bikes powered off, no charging, UL-certified batteries (Sound Transit, Oct 2026). Sounder: up to 70 inches long, tires to 3.25 inches, 75 lb. ST Express buses: wheelbase to 48 inches, tires to 3.2 inches, 75 lb. King County Metro buses carry three bikes on the front rack, load and unload at any regular stop; most e-bikes are too heavy for the rack and cargo bikes too long (Oct 2026). The King County Water Taxi to West Seattle and Vashon has racks for 10 to 26 bikes depending on the boat. Bike lockers at most transit centers, park and rides and rail stations, booked through the BikeLink app. Washington State Ferries: standard walk-on fare plus a $1 to $4 stowage surcharge by route, waived with a multi-ride or ORCA card except on the Anacortes and San Juan routes; bikes board the forward end of the car deck and leave first (Oct 2026).",
+      "bike_share": null
+    },
+    "rules_and_safety": "Washington law, from WSDOT's bicyclist laws page (modified Sept 26, 2025; read Oct 2026). Drivers passing a bike must move fully into the left lane or slow to a safe speed and pass at a safe distance, at least three feet where practicable (RCW 46.61.110). Stop signs are yield signs for cyclists, the Safety Stop, except at railroad crossings and school-bus stop signals (RCW 46.61.190). No statewide helmet law; local rules exist (Pierce and Spokane counties in unincorporated areas). E-bikes: Class 1 and 2 (20 mph) may use shared-use paths; Class 3 (28 mph) may not use shared-use paths or non-motorized trails and stays off sidewalks (RCW 46.37.690). Two abreast is legal, not three (RCW 46.61.770). Sidewalk riding is allowed with a pedestrian's duties unless a city bans it (RCW 46.61.755). After dark, a white front light visible 500 feet and a red rear reflector visible 600 feet (RCW 46.61.780). The honest read: SDOT's preliminary 2024 data showed zero bicyclist deaths and ten pedestrian deaths, half the 2021 peak (Seattle Bike Blog, March 2025); its 2026 Vision Zero update said the city is not on a path to zero by 2030 and that 80% of pedestrian collisions happen on streets with multiple lanes in the same direction (Seattle Bike Blog, April 2026). The high-injury network is the arterials: Aurora Ave N, Rainier Ave S, Lake City Way, MLK Way S, Denny Way, 4th Ave S, Northgate Way. Ride the trails and the neighborhood greenways between them, and cross the arterials at lights.",
+    "sources": [
+      "https://www.delta.com/us/en/baggage/special-items/sporting-equipment",
+      "https://www.delta.com/us/en/baggage/overview",
+      "https://support.southwest.com/helpcenter/article/flying-with-a-bike-policy",
+      "https://www.southwest.com/html/customer-service/travel-fees.html",
+      "https://www.aa.com/i18n/travel-info/baggage/specialty-and-sports.jsp",
+      "https://www.aa.com/i18n/travel-info/baggage/checked-baggage-policy.jsp",
+      "https://www.soundtransit.org/ride-with-us/know-before-you-go/bikes-scooters",
+      "https://www.soundtransit.org/ride-with-us/popular-destinations/sea-tac-airport",
+      "https://www.portseattle.org/transportation/lyft",
+      "https://kingcounty.gov/en/dept/metro/rider-tools/bikes-and-transit",
+      "https://wsdot.wa.gov/travel/washington-state-ferries/rider-information/what-you-can-bring-aboard/bicycles",
+      "https://www.wsdot.wa.gov/ferries/fares/faresdetail.aspx?departingterm=7&arrivingterm=3",
+      "https://www.amtrak.com/bikes",
+      "https://amtrakcascades.com/riders-guide/bring-your-bike/",
+      "https://wsdot.wa.gov/travel/bicycling-walking/bicycling-washington/bicyclist-laws-safety",
+      "https://cascade.org/rides-events/seattle-portland-2026",
+      "https://cascade.org/rides-events/seattle-portland-2026/transportation-details",
+      "https://www.bikeflights.com/events/Seattle_to_Portland",
+      "https://faq.bikeflights.com/support/solutions/articles/13000072589-how-do-i-ship-with-a-bike-shop-",
+      "https://www.bikeflights.com/shippingpolicy",
+      "https://metier.cc/pages/bike-rental-seattle",
+      "https://www.evo.com/locations/seattle/services/bike-rentals",
+      "https://www.mellofellos.com/articles/rental-pg233.htm",
+      "https://www.mellofellos.com/articles/service-pg229.htm",
+      "https://ridebicycles.com/pages/bike-rentals",
+      "https://www.montlakebike.com/",
+      "https://www.cascadebicyclestudio.com/bike-service-repair-seattle/schedule",
+      "https://www.seattlebikeblog.com/2025/03/06/early-data-shows-seattle-halved-pedestrian-deaths-and-had-zero-bicycling-deaths-in-2024/",
+      "https://www.seattlebikeblog.com/2026/04/21/vision-zero-update-shows-that-seattle-still-isnt-addressing-the-biggest-causes-of-traffic-deaths-and-injuries/",
+      "https://www.seattlebikeblog.com/2023/07/10/biking-the-new-north-lake-washington-trail-loop/",
+      "https://kingcounty.gov/en/dept/dnrp/nature-recreation/parks-recreation/king-county-parks/trails/leafline-trails/burke-gilman",
+      "https://ridewithgps.com/ambassador_routes/548-full-lake-loop-from-south-bellevue-p-r?lang=en",
+      "https://cascade.org/rides-events/44024",
+      "https://cascade.org/rides-events/82167",
+      "https://cascade.org/rides-events/83393"
+    ]
+  },
+  "travel_links": [
+    {
+      "label": "STP lodging list (Cascade Bicycle Club, 2026)",
+      "url": "https://cascade.org/rides-events/seattle-portland-2026/lodging",
+      "kind": "official",
+      "note": "The organizer's list for the 2026 ride: UW dorm rooms at the start the night before, Seattle hotels by distance from the start lot, the overnight stops near the midpoint (several with bike storage in writing) and the Portland finish hotels. The 2027 page wasn't up in October 2026; look for it before you book."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Should I bring my bike to Seattle?",
+      "a": "Yes, for three days or more. Delta, Southwest and American check a packed bike as a standard bag, $45 each way (Oct 2026). No Seattle shop says on its site that it receives a shipped bike, so flying it is the way. Renting wins only on a one- or two-day trip: Métier on Capitol Hill rents a Cervélo or a Tarmac SL8 at $125 to $175 a day and evo in Fremont a carbon road bike at $100 (Oct 2026). For the STP's 206 miles, ride your own."
+    },
+    {
+      "q": "Do I need a car to ride in Seattle?",
+      "a": "No. The Burke-Gilman, the West Seattle loop and the Bainbridge ferry start in the city, the north-lake trail loop can start at UW Station on Link, and the Lake Washington loop passes Seward Park. Link light rail carries bikes free from the airport, King County Metro buses have a three-bike rack, and Washington State Ferries board bikes first. Only Zoo Hill, from a Bellevue park, and the Carnation gravel loop want a car or a long ride out."
+    },
+    {
+      "q": "Can I take my bike on the ferry to Bainbridge Island?",
+      "a": "Yes. Roll onto the Bainbridge ferry at Colman Dock on the downtown waterfront: $11.35 for an adult plus a $1 bicycle surcharge, paid at Seattle only, nothing to pay coming back (fares for Oct 4, 2026). Be there 20 minutes early; bikes load onto the forward end of the car deck and unload ahead of the cars; you can leave the bike there during the crossing, take your bags, and don't get off without it. The Chilly Hilly course, 33 miles and about 2,150 feet, starts at the other end, and Pegasus Coffee House is the coffee off the boat."
+    },
+    {
+      "q": "Where do group rides start in Seattle?",
+      "a": "Most are Cascade Bicycle Club's free rides, posted a week ahead on its calendar: {ride:seattle-wa-cascade-lumps-wednesday-ride|LUMPS} from Matthews Beach Park on the Burke-Gilman, {ride:kenmore-wa-cascade-mumps-monday-ride|MUMPS} from Log Boom Park in Kenmore, {ride:kirkland-wa-cascade-eastside-hills|Eastside Hills} from the Kirkland Transit Center, {ride:redmond-wa-cascade-road-ride-on-after-dark|ROAD} from Redmond in winter. {ride:seattle-wa-good-weather-sunday-social|Good Weather's Sunday Social} leaves Tailwind Cafe on Capitol Hill; {ride:seattle-wa-northstar-sunday-service|NorthStar's Sunday Service} leaves the clubhouse at 21st and Union; {ride:seattle-wa-moxie-monday|Moxie Monday} and {ride:seattle-wa-critical-mass-seattle|Critical Mass} gather at Westlake Park; {ride:seattle-wa-mello-fellos-saturday-ride|Mello Fellos' Saturday ride} leaves the shop downtown. Outspoken Cycle Club, the queer and allied club, posts its rides on Heylo."
+    },
+    {
+      "q": "Can I rent a road or gravel bike in Seattle?",
+      "a": "Yes. Métier Cycling & Café on Capitol Hill rents a Cervélo Caledonia or Soloist at $125 a day and a Specialized Tarmac SL8 or Cervélo Aspero gravel bike at $175, with the pedals you ask for, closed Mondays (Oct 2026). evo in Fremont rents a carbon road bike at $100 a day or $500 a week, no model named (Oct 2026). Mello Fellos downtown rents road and gravel bikes without a published price. For Tiger Mountain's trails, Ride Bicycles in Issaquah rents mountain and e-mountain bikes. Nobody lists sizes; call with your height."
+    },
+    {
+      "q": "How do I get back to Seattle after the STP?",
+      "a": "Two ways from Portland, both with the bike. Amtrak Cascades has ten bike racks in the baggage car on every train, $5 each, booked as a bicycle space with your ticket; they sell out in summer, so book early (Oct 2026). Or Cascade's own buses: in 2026 Bus & Bike was $115 and Bike-Only $70 by July 5, loading at the Portland finish Saturday night, Sunday afternoon and Monday morning, with bikes back at UW that Sunday or Monday. Watch the 2027 transportation page when registration opens in January."
+    }
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Seattle",
-    "https://udistrictseattle.com/business-category/places-to-stay",
-    "https://udistrictseattle.com/business-category/food-drink",
-    "https://udistrictseattle.com/business-category/shops",
+    "https://weatherspark.com/y/913/Average-Weather-in-Seattle-Washington-United-States-Year-Round",
+    "https://cascade.org/news/2020/01/50-years-and-how-far-weve-come",
+    "https://cascade.org/rides-events/seattle-portland-2027-2027",
+    "https://cascade.org/rides-events/seattle-portland-2026",
+    "https://cascade.org/rides-events/seattle-portland-2026/lodging",
+    "https://cascade.org/rides-events/seattle-portland-2026/transportation-details",
+    "https://ridewithgps.com/ambassador_routes/548-full-lake-loop-from-south-bellevue-p-r?lang=en",
+    "https://ridewithgps.com/routes/10708345",
+    "https://ridewithgps.com/ambassador_routes/511-south-bellevue-mercer-island-loop",
+    "https://ridewithgps.com/routes/10318567",
+    "https://ridewithgps.com/routes/741387",
+    "https://kingcounty.gov/en/dept/dnrp/nature-recreation/parks-recreation/king-county-parks/trails/leafline-trails/burke-gilman",
+    "https://cascade.org/resources/where-ride/trails-bicyclists",
+    "https://cascade.org/rides-events/82922",
+    "https://cascade.org/rides-events/44024",
+    "https://cascade.org/rides-events/82167",
+    "https://cascade.org/rides-events/chilly-hilly-2026",
+    "https://cascade.org/rides-events/81550",
+    "https://cascade.org/rides-events/83393",
+    "https://cascade.org/rides-events/87939",
+    "https://www.seattlebikeblog.com/2023/07/10/biking-the-new-north-lake-washington-trail-loop/",
+    "https://www.cascadebicyclestudio.com/local-loops-seattle",
+    "https://cascade.org/rides-events/welcome-free-group-rides/ride-series",
+    "https://cascade.org/rides-events/ride-event-search",
+    "https://cascade.org/rides-events/84215",
+    "https://cascade.org/rides-events/eastside-hills/90363",
+    "https://cascade.org/rides-events/monday-urban-merry-pedalers-mumps/87109",
+    "https://cascade.org/rides-events/tuesday-ride-eclectic-athletic-travelers-treats/89978",
+    "https://cascade.org/rides-events/leisurely-urbane-matthews-beach-pedalers-lumps/87919",
+    "https://cascade.org/rides-events/ride-after-dark-road/89097",
+    "https://www.heylo.com/g/878fc3a9-d8c1-4ac5-8ff5-1cc8d6a52e71",
+    "https://www.heylo.com/event/f2c73aa7-e2ac-41f8-bbad-98bdde37ed49",
+    "https://www.heylo.com/event/0ec2ab46-33d2-4950-a27e-84b47c54cb42",
+    "https://northstar-bicycle-club.myshopify.com/pages/when-we-ride",
+    "https://www.localgymsandfitness.com/US/Seattle/107319527688971/NorthStar-Cycling-Club",
+    "https://everydayrides.com/groups/moxie-monday",
+    "https://everydayrides.com/groups/good-weather",
+    "https://everydayrides.com/events/6a6b7601691c168ef2cbb3a7-good-weather-sunday-social",
+    "https://everydayrides.com/event-series/690e2a060214ed1d170518b0-brevay-cycling-wtfnb-weekly",
+    "https://everydayrides.com/events/69f81610cdd8e7421494b3a5-wtfnb-weekly-with-brevay",
+    "https://bikeworks.org/adult-programs/open-shop-community-repair-space/",
+    "https://metier.cc/",
+    "https://metier.cc/pages/bike-rental-seattle",
+    "https://metier.cc/pages/contact",
+    "https://metier.cc/pages/seattle-bicycle-builds",
+    "https://metier.cc/pages/seattle-bicycle-repair",
+    "https://metier.cc/pages/metier-group-rides",
+    "https://www.mellofellos.com/",
+    "https://www.mellofellos.com/articles/rental-pg233.htm",
+    "https://www.mellofellos.com/articles/service-pg229.htm",
+    "https://www.mellofellos.com/about/via6-building-pg265.htm",
+    "https://www.montlakebike.com/",
+    "https://www.montlakebike.com/articles/bike-rentals-pg148.htm",
+    "https://www.montlakebike.com/articles/bike-service-pg146.htm",
+    "https://www.recycledcycles.com/",
+    "https://www.recycledcycles.com/rentals/",
+    "https://www.recycledcycles.com/service-center/",
+    "https://www.recycledcycles.com/service/contact/",
+    "https://www.greggscycles.com/",
+    "https://www.greggscycles.com/about/greenlake-pg270.htm",
+    "https://www.greggscycles.com/about/service-repair-pg368.htm",
+    "https://www.greggscycles.com/articles/bike-fit-pg377.htm",
+    "https://www.cascadebicyclestudio.com/bike-service-repair-seattle/schedule",
+    "https://www.cascadebicyclestudio.com/bike-fitting-seattle/schedule",
+    "https://www.evo.com/locations/seattle/services/bike-rentals",
+    "https://www.bainbridgebikeco.com/contact",
+    "https://classiccycleus.com/",
+    "https://classiccycleus.com/rentals/",
+    "https://ridebicycles.com/pages/bike-rentals",
+    "https://www.rodbikes.com/",
+    "https://tailwindcafe.com/",
+    "https://www.chophouserow.com/",
+    "https://www.pacha-collective.com/",
+    "https://joe.coffee/locations/wa/seattle/pacha-collective-seattle/",
+    "https://www.cycleandcoffee.com/",
+    "https://www.cycleandcoffee.com/pages/contact-us",
+    "https://seattleallegro.com/",
+    "https://pegasuscoffee.com/pages/original-pegasus-coffee-house-bainbridge",
+    "https://pegasuscoffee.com/pages/contact",
+    "https://www.unbienseattle.com/",
+    "https://www.seattlemet.com/eat-and-drink/2016/04/un-bien-s-second-location-is-open-in-shilshole",
+    "https://marinationmobile.com/locations",
+    "https://www.tripadvisor.com/Restaurant_Review-g60878-d3613066-Reviews-Marination_Ma_Kai-Seattle_Washington.html",
+    "https://www.tripadvisor.com/Restaurant_Review-g58605-d513230-Reviews-Roanoke_Inn-Mercer_Island_Washington.html",
+    "https://theroanokeinn.com/",
+    "https://seattlerefined.com/eat-drink/the-roanoke-inn-where-friends-meet-friends-for-more-than-a-century",
+    "https://ddir.com/locations/broadway",
+    "https://ddir.com/locations",
     "https://www.portagebaycafe.com/",
     "https://www.bigtimebrewery.com/",
     "https://www.shultzys.com/",
     "https://www.cedarsseattle.com/",
-    "https://www.montlakebike.com/",
-    "https://www.greggscycles.com/",
-    "https://www.recycledcycles.com/",
-    "https://cascade.org/news/2020/01/50-years-and-how-far-weve-come",
-    "https://cascade.org/rides-events/seattle-portland-2027-2027",
-    "https://weatherspark.com/y/913/Average-Weather-in-Seattle-Washington-United-States-Year-Round",
+    "https://www.americanhotelseattle.com/faqs",
+    "https://www.hostelworld.com/hostels/p/36172/american-hotel-hostel/",
+    "https://www.collegeinnseattle.com",
+    "https://www.staypineapple.com/university-inn-seattle-wa",
+    "https://www.staypineapple.com/watertown-hotel-seattle-wa",
+    "https://www.hilton.com/en/hotels/seagsgu-graduate-seattle/",
+    "https://www.marriott.com/en-us/hotels/seaud-residence-inn-seattle-university-district/overview/",
+    "https://www.hotelmaxseattle.com/hotel/",
+    "https://www.expedia.com/Seattle-Hotels-Hotel-Max.h28647.Hotel-Information",
+    "https://www.silvercloud.com/seattlebroadway/",
+    "https://www.silvercloud.com/seattlebroadway/neighborhood/",
+    "https://www.fremontbrewing.com/fremont-urban-beer-garden",
+    "https://www.charliesqueerbooks.com/",
+    "https://bookshop.org/shop/charlies",
+    "https://www.sgn.org/story/330854",
+    "https://nwbooklovers.org/2023/10/27/welcome-to-mams-and-charlies/",
+    "https://www.elliottbaybook.com/",
+    "https://www.teentix.org/venues/the-elliot-bay-book-company/",
+    "https://www.thewildrosebar.com/",
+    "https://www.seattleartmuseum.org/visit/olympic-sculpture-park",
+    "https://www.burkemuseum.org/hours-admissions",
+    "https://www.seattle.gov/parks/parks/matthews-beach-park",
+    "https://www.seattle.gov/parks/recreation/swimming-beaches",
+    "https://www.delta.com/us/en/baggage/special-items/sporting-equipment",
+    "https://www.delta.com/us/en/baggage/overview",
+    "https://support.southwest.com/helpcenter/article/flying-with-a-bike-policy",
+    "https://www.southwest.com/html/customer-service/travel-fees.html",
+    "https://www.aa.com/i18n/travel-info/baggage/specialty-and-sports.jsp",
+    "https://www.aa.com/i18n/travel-info/baggage/checked-baggage-policy.jsp",
+    "https://www.soundtransit.org/ride-with-us/know-before-you-go/bikes-scooters",
     "https://www.soundtransit.org/ride-with-us/popular-destinations/sea-tac-airport",
-    "https://postcardstoseattle.com/seattle-airport-to-downtown-seattle/"
+    "https://www.portseattle.org/transportation/lyft",
+    "https://kingcounty.gov/en/dept/metro/rider-tools/bikes-and-transit",
+    "https://wsdot.wa.gov/travel/washington-state-ferries/rider-information/what-you-can-bring-aboard/bicycles",
+    "https://www.wsdot.wa.gov/ferries/fares/faresdetail.aspx?departingterm=7&arrivingterm=3",
+    "https://www.amtrak.com/bikes",
+    "https://amtrakcascades.com/riders-guide/bring-your-bike/",
+    "https://wsdot.wa.gov/travel/bicycling-walking/bicycling-washington/bicyclist-laws-safety",
+    "https://www.bikeflights.com/events/Seattle_to_Portland",
+    "https://faq.bikeflights.com/support/solutions/articles/13000072589-how-do-i-ship-with-a-bike-shop-",
+    "https://www.bikeflights.com/shippingpolicy",
+    "https://www.seattlebikeblog.com/2025/03/06/early-data-shows-seattle-halved-pedestrian-deaths-and-had-zero-bicycling-deaths-in-2024/",
+    "https://www.seattlebikeblog.com/2026/04/21/vision-zero-update-shows-that-seattle-still-isnt-addressing-the-biggest-causes-of-traffic-deaths-and-injuries/"
   ],
-  "verified": "2026-09-15"
+  "verified": "2026-10-04"
 }

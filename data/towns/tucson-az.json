@@ -1,5 +1,6 @@
 {
   "id": "tucson-az",
+  "kind": "destination",
   "name": "Tucson",
   "state": "Arizona",
   "state_code": "AZ",
@@ -9,42 +10,608 @@
   "timezone": "America/Phoenix",
   "population": "about 543,000 (2020 census: 542,629); metro about 1.04 million",
   "elevation_ft": 2388,
+  "tagline": "Mount Lemmon, the car-free Loop, dry winter roads",
+  "best_months": "October to April, when the roads are dry and the days are mild. Summer highs run near 100 F from June through August. In summer Pima County says to ride the Loop before 9 a.m. or after 5 p.m. The top of Mount Lemmon runs 20 to 30 F colder than town, with ice in the shade from December to February. Winter storms close the road.",
   "nearest_airport": { "name": "Tucson International Airport", "code": "TUS", "miles": 8 },
   "major_airport": { "name": "Phoenix Sky Harbor International", "code": "PHX", "miles": 112 },
   "official_url": "https://www.tucsonaz.gov/",
   "visitor_url": "https://www.visittucson.org/",
-  "summary": "Tucson is Arizona's second-largest city, a desert town of about 543,000 people at 2,400 feet, ringed by five mountain ranges about 110 miles southeast of Phoenix. It is one of the most-ridden cities in the country, with the 131-mile car-free Loop path, the 25-mile Mount Lemmon climb and dry, sunny weather most of the year. El Tour de Tucson, held the Saturday before Thanksgiving, is its biggest ride.",
+  "covers": ["Oro Valley", "Marana", "Vail", "Sahuarita", "Green Valley"],
+  "summary": "Tucson is the winter riding town. A 28-mile paved climb up Mount Lemmon from the desert floor to the pines; Pima County's car-free Loop, a 54-mile circuit, more than 138 miles of path in all; dry, mild roads from October to April. The fast group ride, {ride:tucson-az-the-shootout|the Shootout}, leaves University and Euclid by the university, and GABA posts a social road ride most days of the week. Fly into TUS, eight miles south of downtown. Fair Wheel Bikes rents carbon road bikes and an aluminum gravel bike, Pima Street Bicycle builds a shipped one, and The Tuxon puts bike storage in writing. El Tour de Tucson, the Saturday before Thanksgiving, is the big ride.",
   "about": [
-    "Tucson sits on an alluvial plain in the Sonoran Desert, about 60 miles north of the Mexican border, with the Santa Catalina Mountains to the north and the Santa Ritas to the south. It began as a Spanish fort in 1775, was the territorial capital from 1867 to 1877, and is home to the University of Arizona and Davis-Monthan Air Force Base.",
-    "The city is known for its food. UNESCO named it the first City of Gastronomy in the United States in 2015. Downtown, Fourth Avenue and the Mercado San Agustin district west of the river hold most of the restaurants and small hotels a visiting rider will use, and the Tucson Convention Center, where El Tour starts, sits at the south end of downtown.",
-    "Summers are hot, with average highs near 100 F from June through August. The rest of the year is mild and dry, which is why the cycling calendar runs from fall through spring."
+    "Tucson sits on an alluvial plain in the Sonoran Desert at about 2,400 feet, about 60 miles north of the Mexican border. The Santa Catalina Mountains are to the north and the Santa Ritas to the south. It began as a Spanish fort in 1775, was the territorial capital from 1867 to 1877, and is home to the University of Arizona and Davis-Monthan Air Force Base. It is Arizona's second-largest city, about 543,000 people, 110 miles southeast of Phoenix.",
+    "The city is known for its food: UNESCO named it the first City of Gastronomy in the United States in 2015. Downtown, Fourth Avenue and the Mercado San Agustín district west of the river hold most of the restaurants and small hotels a visiting rider will use. The Tucson Convention Center, where El Tour starts, sits at the south end of downtown. Summers are hot, with average highs near 100 F from June through August. The rest of the year is mild and dry, which is why the riding runs from fall through spring.",
+    "This guide names its zones. Mount Lemmon and the Catalina Highway, northeast of town, with the Tanque Verde Road shop and café at the bottom. The Loop and the west side: the Santa Cruz River path, the Mercado San Agustín, and the Rillito path north of the university. Saguaro National Park East and Old Spanish Trail to the southeast, toward Vail. The Tucson Mountains and Gates Pass to the west. Oro Valley and Catalina State Park to the north. Green Valley, Sahuarita and Madera Canyon to the south. The listings say which side of town they sit on."
   ],
   "riding": [
-    "Pima County's Chuck Huckelberry Loop is about 131-140 miles of paved, car-free shared-use path linking river parks and washes through Tucson, South Tucson, Marana and Oro Valley, open sunrise to sunset with about 50 parking lots along it. Visit Tucson calls the city one of the top cycling cities in the U.S. and lists a TUGO bike-share system for getting around downtown.",
-    "For climbing, the Catalina Highway up Mount Lemmon is the standard: about 25 miles and 5,300 feet of gain from the desert floor to pine forest. El Tour's 102-mile route heads out Old Spanish Trail past Saguaro National Park East and Colossal Cave before looping through Vail, Sahuarita and Green Valley. Mountain bikers have trails on Lemmon (Bug Springs, Molino Basin) and around town."
+    "The climb is the Catalina Highway up Mount Lemmon: 27.8 miles and about 6,770 feet of climbing (Bike Mount Lemmon) from mile marker 0 to the observatory. No water until the Bigelow trailhead past mile 19, and a top that runs 20 to 30 F colder than the bottom. The ride for the day you land is the Loop: Pima County's paved, car-free path along the Santa Cruz, the Rillito and the washes. A 54-mile circuit you can join anywhere and turn around on. Saguaro National Park East has an 8-mile paved loop through the cactus forest. Gates Pass and the McCain Loop are the west side's climb. Sweetwater Preserve is the singletrack about seven miles from downtown. El Tour de Tucson's 102-mile course runs out Old Spanish Trail past the park and through Vail, Sahuarita and Green Valley.",
+    "The group rides are the way in. {ride:tucson-az-the-shootout|The Shootout} leaves University and Euclid by the university and heads south past San Xavier at race pace; {ride:tucson-az-tuesday-morning-fast-ride|the Tuesday Morning Fast Ride} leaves the same corner. {ride:tucson-az-womens-shootout|The Women's Shootout} leaves the Mercado San Agustín. GABA, the big club, posts {ride:tucson-az-gaba-nw-social-rides|no-drop social rides on the north side} and {ride:tucson-az-gaba-tuesday-social-ride|an easier social ride}, much of it on the Loop. Cactus Cycling Club rides B-pace loops {ride:oro-valley-az-cactus-cycling-wednesday-oro-valley-ride|in Oro Valley}, {ride:tucson-az-cactus-cycling-friday-saguaro-east-ride|around Saguaro East} and {ride:tucson-az-cactus-cycling-weekend-b-rides|the weekend B rides} from starts that change by the week. FUGA's free community rides, {ride:tucson-az-fuga-bicis-y-burros-second-sunday-ride|Bicis y Burros} and {ride:tucson-az-fuga-southside-ride|Bicicleteada del Sur}, are posted in English and Spanish. {ride:tucson-az-bicas-wtf-ride|BICAS's women, trans and femme ride} leaves the co-op after its WTF workshop night. {ride:tucson-az-cyclovia-tucson|Cyclovia Tucson} closes a few miles of streets to cars twice a year."
   ],
-  "getting_there": "Tucson International Airport (TUS) is eight miles south of downtown with nonstop service to about two dozen cities on Southwest, American, Delta, United and Alaska. Phoenix Sky Harbor is about 112 miles and under two hours up I-10 and often cheaper to fly into. Downtown is walkable and the fare-free Sun Link streetcar links the convention center, Fourth Avenue, the university and the Mercado district, but you will want a car or a bike for Mount Lemmon and most of the Loop.",
-  "hotels": [
-    { "name": "DoubleTree by Hilton Tucson Downtown Convention Center", "url": "https://www.hilton.com/en/hotels/tusaudt-doubletree-tucson-downtown-at-the-convention-center/", "address": "280 S Church Ave, Tucson, AZ 85701", "note": "Directly beside the Tucson Convention Center, where El Tour starts and packets are picked up; pool and lobby bar", "price_hint": "$$$" },
-    { "name": "The Leo Kent Hotel", "url": "https://www.theleokenthotel.com/", "address": "1 S Church Ave, Tucson, AZ 85701", "note": "Upscale boutique hotel a few blocks north of the convention center, with a restaurant and gym", "price_hint": "$$$" },
-    { "name": "AC Hotel by Marriott Tucson Downtown", "url": "https://www.marriott.com/hotels/travel/tusad-ac-hotel-tucson-downtown/", "address": "151 E Broadway Blvd, Tucson, AZ 85701", "note": "Modern downtown hotel at Fifth and Congress, walkable to the start and the streetcar", "price_hint": "$$$" },
-    { "name": "Hotel Congress", "url": "https://hotelcongress.com/", "address": "311 E Congress St, Tucson, AZ 85701", "note": "Historic downtown hotel with the Cup Cafe downstairs; lively, not quiet, and a short walk to the start", "price_hint": "$$" },
-    { "name": "Hotel McCoy", "url": "https://www.hotelmccoy.com/locations/tucson", "address": "720 W Silverlake Rd, Tucson, AZ 85713", "note": "Retro motor lodge south of downtown with free breakfast, a heated saltwater pool and room-front parking for loading bikes", "price_hint": "$$" }
+  "getting_there": "Fly into Tucson International (TUS), about eight miles south of downtown: Alaska, American, Delta, Southwest, Sun Country and United (Oct 2026), nonstops to about a dozen cities year-round. The Rental Car Center is a walk out the terminal's east exit, and Uber and Lyft pick up on the first island across from baggage claim. Phoenix Sky Harbor is about 112 miles northwest up I-10, the fallback when TUS fares or routes don't work. Groome runs a shared shuttle between the two, but nothing published says it takes a bike box. With a case, a one-way rental car down I-10 is the plain answer. Downtown is walkable and the fare-free Sun Link streetcar carries bikes between the Mercado, downtown, Fourth Avenue and the university. The Bring-your-bike page has the airline rules, the shops that build a shipped bike and the rentals.",
+  "routes": [
+    {
+      "name": "Mount Lemmon (the Catalina Highway)",
+      "type": "climb",
+      "miles": 28,
+      "elevation_gain_ft": 6770,
+      "surface": "Paved. Smooth to about mile 21, then more cracks and bumps; the first three miles were repaved in 2024.",
+      "difficulty": "epic",
+      "start": { "name": "Mile marker 0, Catalina Highway", "address": "5315 Mt Lemmon Hwy, Tucson, AZ 85749", "lat": null, "lon": null },
+      "description": "The climb from the desert floor at mile marker 0 (2,858 feet) to the observatory at the top: 27.8 miles and about 6,770 feet of climbing (Bike Mount Lemmon), the road GABA's Mt. Lemmon Hill Climb climbs (on the 2027 calendar for May 7, projected). The main climb averages 4.7 percent; the last stretch to the observatory is close to 7. Windy Point is at mile 14. At the top, in Summerhaven, Bike Mount Lemmon lists the Mt. Lemmon Cookie Cabin, the general store and Sawmill Run for food. The Cookie Cabin's own page says to check Google Maps for closures before you count on it. If you drive to the bottom, Bike Mount Lemmon points you to the LeBuzz Caffe and Safeway lot at Tanque Verde Road and the Catalina Highway, 4.5 miles from mile 0. LeBuzz opens at 6, and Earlybird Bikes, which rents road bikes, is on the same road. A RideWithGPS version from town is 59.3 miles and 6,866 feet round trip.",
+      "water": "None on the climb until the Bigelow trailhead, past mile marker 19 (Bike Mount Lemmon; the University of Arizona cycling team says mile 19.5). Windy Point, at mile 14, has pit toilets and no water. Before the climb, McDonald Park off Harrison Road is a short detour for water (UA cycling).",
+      "hazards": "The top runs 20 to 30 F colder than the bottom, and gusts over 30 mph come up, mostly in the afternoon. Ice forms in the shade from December to February. Going down, the shoulder is narrower than on the way up, and cars move into it on the curves. Winter weather closes the road: in January 2026 it reopened at noon on Jan 8 to four-wheel-drive, all-wheel-drive or chained vehicles only (KOLD, from the Pima County Sheriff). Pima County's roads hotline is 520-351-3351.",
+      "links": { "rwgps": "https://ridewithgps.com/routes/1725903", "strava": null, "komoot": null, "gpx": null, "other": "https://bikemountlemmon.com/faqs" },
+      "ride_slug": null,
+      "sources": [
+        "https://bikemountlemmon.com/faqs",
+        "https://bikemountlemmon.com/strava",
+        "https://bikemountlemmon.com/2025-events",
+        "https://ridewithgps.com/routes/1725903",
+        "https://uacycling.com/tucson-routes/",
+        "https://www.kold.com/2026/01/08/road-mount-lemmon-closed/"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "The Loop (Chuck Huckelberry Loop)",
+      "type": "path",
+      "miles": 54,
+      "elevation_gain_ft": null,
+      "surface": "Paved shared-use path, with short stretches of buffered bike lane.",
+      "difficulty": "easy",
+      "start": { "name": "Where Congress Street crosses the Loop on the Santa Cruz River, west of downtown", "address": null, "lat": null, "lon": null },
+      "description": "Any length you want. Pima County's car-free path along the Santa Cruz River, the Rillito, the Pantano Wash, Julian Wash, the Harrison Road Greenway and the Cañada del Oro. The full circuit is 53.9 miles; the whole system is more than 138 miles and reaches Marana and Oro Valley. You can join it anywhere and turn around anywhere, so it is the ride for the evening you land. The University of Arizona cycling team calls it fantastic for easy spins, with the quieter east and south sections good for tempo. From downtown, join it where Congress Street crosses the river. The Mercado San Agustín, with Presta's coffee, Seis Kitchen and Transit Cycles, is less than half a mile away, and The Tuxon is two blocks off the path. {ride:tucson-az-gaba-tuesday-social-ride|GABA's social ride} rides much of it; the Heirloom market at Rillito Park sits right on the Rillito stretch.",
+      "water": "Most trailheads have water fountains and restrooms (Visit Tucson).",
+      "hazards": "Open sunrise to sunset; riding it at night is prohibited. In summer, Pima County says carry enough water and ride before 9 a.m. or after 5 p.m. Julian Wash from Kino to Irvington is closed indefinitely while the Mosaic Quarter sports complex is built; the county posts a paved detour along I-10. Storms leave sand in the underpasses: the Julian Wash underpass at Benson Highway closed for it in August 2026. Check Pima County's Loop closures page before a long day.",
+      "links": { "rwgps": null, "strava": null, "komoot": null, "gpx": null, "other": "https://www.pima.gov/162/The-Chuck-Huckelberry-Loop" },
+      "ride_slug": null,
+      "sources": [
+        "https://www.pima.gov/162/The-Chuck-Huckelberry-Loop",
+        "https://www.pima.gov/3864/About-The-Loop",
+        "https://www.pima.gov/250/Notices-Closures",
+        "https://www.visittucson.org/blog/post/loving-the-loop/",
+        "https://uacycling.com/tucson-routes/"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "The Shootout",
+      "type": "road",
+      "miles": 70,
+      "elevation_gain_ft": 1600,
+      "surface": "Paved road.",
+      "difficulty": "hard",
+      "start": { "name": "University Blvd & Euclid Ave, by the University of Arizona", "address": null, "lat": null, "lon": null },
+      "description": "{ride:tucson-az-the-shootout|The Shootout} is Tucson's fast group ride. The groups leave University and Euclid by pace and head south through the San Xavier Mission district, left at Nogales Highway and Sahuarita Road by Helmet Peak, over to Mission Road and back into town on it. Fair Wheel Bikes, which posts the start times and sits nearby on 6th Street, puts it at about 70 miles for the A group (22 to 28+ mph) and the Scootout (19 to 23). The Old-Old Man group (16 to 20) rides a shorter day. A RideWithGPS version from the university is 59.9 miles and 1,595 feet. Ride it alone any day, or start with the slowest group. Time Market on University Boulevard opens at 7 for the coffee after.",
+      "water": null,
+      "hazards": "Self-supported: Fair Wheel says bring water, food and flat repair, and know the route before you go. It has a mid-ride stop. To Be Determined's guide says it's casual until Mission Road crosses Valencia, then race pace. The A group is for racers.",
+      "links": { "rwgps": "https://ridewithgps.com/routes/6748456", "strava": null, "komoot": null, "gpx": null, "other": "https://www.fairwheelbikes.com/service/group-rides/" },
+      "ride_slug": "tucson-az-the-shootout",
+      "sources": [
+        "https://www.fairwheelbikes.com/service/group-rides/",
+        "https://uacycling.com/tucson-routes/",
+        "https://www.tobedetermined.cc/journal/ride-guide-tucson-arizona",
+        "https://ridewithgps.com/routes/6748456"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Gates Pass and the McCain Loop",
+      "type": "road",
+      "miles": 18,
+      "elevation_gain_ft": 1500,
+      "surface": "Paved road; rough pavement on Kinney Road.",
+      "difficulty": "moderate",
+      "start": { "name": null, "address": null, "lat": null, "lon": null },
+      "description": "Over Gates Pass in the Tucson Mountains west of town and around the McCain Loop: 17.9 miles and about 1,500 feet, per the RideWithGPS page. Gates Pass is the main climb on the University of Arizona cycling team's Tuesday route, and the team says the pass is a great ride on its own. A longer RideWithGPS version is 38.7 miles and 2,244 feet, with a food stop at El Guero Canelo near the end. The route pages give the numbers, not the start; read the map before you go. The Arizona-Sonora Desert Museum, on Kinney Road, is the west side's afternoon off the bike.",
+      "water": null,
+      "hazards": "No bike lanes on Gates Pass. Kinney Road has no bike lanes and rough pavement (University of Arizona cycling team, 2020).",
+      "links": { "rwgps": "https://ridewithgps.com/routes/1042796", "strava": null, "komoot": null, "gpx": null, "other": null },
+      "ride_slug": null,
+      "sources": [
+        "https://ridewithgps.com/routes/1042796",
+        "https://ridewithgps.com/routes/54251596",
+        "https://uacycling.com/tucson-routes/"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Cactus Forest Loop Drive (Saguaro National Park East)",
+      "type": "road",
+      "miles": 8,
+      "elevation_gain_ft": null,
+      "surface": "Paved, except the gravel spur to the Mica View picnic area.",
+      "difficulty": "easy",
+      "start": { "name": "Saguaro National Park, Rincon Mountain District Visitor Center", "address": "3693 S Old Spanish Trail, Tucson, AZ 85730", "lat": null, "lon": null },
+      "description": "An 8-mile paved loop through the saguaro forest in the park's east district, per the park service. To Be Determined's Tucson guide calls it mostly rolling, with one 650-foot climb. A rider pays $15 for a 7-day pass; under 16 is free (NPS, Oct 2026). A RideWithGPS version from a hotel in town is 28.5 miles and 1,264 feet. {ride:tucson-az-cactus-cycling-friday-saguaro-east-ride|Cactus Cycling Club's Saguaro East ride} loops the east side of the park and stops at LeBuzz after. El Tour's course runs Old Spanish Trail past the park.",
+      "water": "Outside the visitor center. None on the loop drive or at the picnic areas (NPS).",
+      "hazards": "The park service says the loop is narrow, with tight turns and steep hills, and to slow down before the curves and the hills.",
+      "links": { "rwgps": "https://ridewithgps.com/routes/38013971", "strava": null, "komoot": null, "gpx": null, "other": "https://www.nps.gov/sagu/planyourvisit/bicycling-at-saguaro-national-park.htm" },
+      "ride_slug": null,
+      "sources": [
+        "https://www.nps.gov/sagu/planyourvisit/bicycling-at-saguaro-national-park.htm",
+        "https://www.nps.gov/sagu/planyourvisit/fees.htm",
+        "https://www.nps.gov/sagu/planyourvisit/conditions.htm",
+        "https://www.nps.gov/sagu/planyourvisit/basicinfo.htm",
+        "https://www.tobedetermined.cc/journal/ride-guide-tucson-arizona",
+        "https://ridewithgps.com/routes/38013971"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "El Tour de Tucson century course",
+      "type": "road",
+      "miles": 102,
+      "elevation_gain_ft": 3000,
+      "surface": "Paved road.",
+      "difficulty": "epic",
+      "start": { "name": "Tucson Convention Center", "address": null, "lat": null, "lon": null },
+      "description": "The 102-mile course of El Tour de Tucson, the city's biggest ride, ridden the Saturday before Thanksgiving (Nov 20, 2027, projected). It starts and finishes at the Tucson Convention Center at the south end of downtown. The organizer lists Davis-Monthan Air Force Base, Old Spanish Trail, Colossal Cave, Corona de Tucson, Vail, Sahuarita and Green Valley along the way. The organizer's 2025 route on RideWithGPS is 101.7 miles and 3,007 feet. On event day the century starts at 7 a.m. and the routes close at 4:30 p.m.; the 62- and 32-mile courses start later. GABA runs {ride:tucson-az-gaba-el-tour-training-rides|El Tour training rides} in the weeks before the race, and the DoubleTree next to the convention center is the bed closest to the start.",
+      "water": "On event day, aid stations about every 12 miles (organizer). Nothing published for riding it on another day.",
+      "hazards": "On any other day the roads are open to traffic, and the course runs through Davis-Monthan Air Force Base; check whether you can get through the base before you ride it on your own.",
+      "links": { "rwgps": "https://ridewithgps.com/routes/51686479", "strava": null, "komoot": null, "gpx": null, "other": "https://eltourdetucson.org/el-tour-de-tucson/route/" },
+      "ride_slug": null,
+      "sources": [
+        "https://eltourdetucson.org/el-tour-de-tucson/route/",
+        "https://ridewithgps.com/routes/51686479"
+      ],
+      "verified": "2026-10-03"
+    },
+    {
+      "name": "Sweetwater Preserve trails",
+      "type": "mtb",
+      "miles": 8,
+      "elevation_gain_ft": 500,
+      "surface": "Singletrack.",
+      "difficulty": "moderate",
+      "start": { "name": "Sweetwater Preserve trailhead", "address": null, "lat": 32.2792, "lon": -111.0818 },
+      "description": "The most-ridden loop of the Sweetwater trail system, about 7 miles northwest of downtown: Saguaro Vista, Sun Circle, Black Rock, Lost Arrow, Red Canyon and Red Tail Ridge, then Wildflower Ridge back to the trailhead. 7.7 miles and 479 feet, per MTB Project, which calls it mostly easy with a few intermediate sections. Lost Arrow is a sustained climb that's a stretch for a beginner. Dogs on leash; MTB Project lists e-bikes as not allowed. Sonoran Desert Mountain Bicyclists, the trail club, runs fall trail-work days here.",
+      "water": null,
+      "hazards": "Shared with hikers and horses (MTB Project).",
+      "links": { "rwgps": null, "strava": null, "komoot": null, "gpx": null, "other": "https://www.mtbproject.com/trail/4728806/sweetwater-trail-system" },
+      "ride_slug": null,
+      "sources": [
+        "https://www.mtbproject.com/trail/4728806/sweetwater-trail-system",
+        "https://www.mtbproject.com/directory/8007022"
+      ],
+      "verified": "2026-10-03"
+    }
+  ],
+  "coffee": [
+    {
+      "name": "LeBuzz Caffe (Tanque Verde)",
+      "url": "https://www.lebuzzcaffe.com/locations",
+      "address": "9121 E Tanque Verde Rd, Tucson, AZ",
+      "note": "At Tanque Verde Road and the Catalina Highway, the road up Mount Lemmon, about 11 miles northeast of downtown and 4.5 miles from mile marker 0. Opens at 6 every day, so it is the coffee before the climb, and the lot Bike Mount Lemmon points drivers to. {ride:tucson-az-cactus-cycling-friday-saguaro-east-ride|Cactus Cycling Club's Saguaro East ride} leaves from La Herradura on the same road and stops here after. Nothing says bike parking. (520) 749-3903.",
+      "hours_hint": "6 a.m. to 3 p.m. daily",
+      "ride_out": true,
+      "ride_slug": "tucson-az-cactus-cycling-friday-saguaro-east-ride"
+    },
+    {
+      "name": "Presta Coffee Roasters (Mercado San Agustín)",
+      "url": "https://prestacoffee.com/pages/our-locations",
+      "address": "100 S Avenida del Convento, Tucson, AZ 85745",
+      "note": "Inside the Mercado San Agustín on the west side, less than half a mile from where the Loop crosses Congress Street, where {ride:tucson-az-womens-shootout|the Women's Shootout} meets. Opens at 7, per the Mercado's directory, so it is the coffee before or after depending on the ride's start that week. Bar and patio seating, per Presta. Nothing says bike parking. Seis Kitchen is in the same courtyard and Transit Cycles is in the MSA Annex on the same street.",
+      "hours_hint": "7 a.m. to 2 p.m. daily",
+      "ride_out": true,
+      "ride_slug": "tucson-az-womens-shootout"
+    },
+    {
+      "name": "Ren Coffeehouse",
+      "url": "https://www.rencoffeehouse.com/coffeehouse",
+      "address": "4300 N Campbell Ave, Suite 24, Tucson, AZ",
+      "note": "In St. Philip's Plaza at River and Campbell, off the Rillito stretch of the Loop. The plaza's south lot is one of the two starts of {ride:tucson-az-gaba-nw-social-rides|GABA's NW social rides}, which end with coffee at Ren's or at Bruegger's in Oro Valley; the post for each ride says which start. Opens at 6 every day, with an outdoor patio, per its site. Nothing says bike parking. (520) 638-6290.",
+      "hours_hint": "6 a.m. to 3 p.m. daily",
+      "ride_out": true,
+      "ride_slug": "tucson-az-gaba-nw-social-rides"
+    },
+    {
+      "name": "Bruegger's Bagels (La Cañada)",
+      "url": "https://locations.brueggers.com/us/az/tucson/11165-north-la-canada",
+      "address": "11165 N La Canada Dr, Suite 161, Tucson, AZ 85737",
+      "note": "On the north side, about 13 miles north of downtown, where {ride:oro-valley-az-cactus-cycling-wednesday-oro-valley-ride|Cactus Cycling Club's Oro Valley ride} leaves; the lot south of the shop is the other start of {ride:tucson-az-gaba-nw-social-rides|GABA's NW social rides}. Opens at 5:30 every day, the earliest door on this list. A chain bagel shop; nothing on its page says bike parking or a patio.",
+      "hours_hint": "5:30 a.m. daily; closes 4 p.m., 3 p.m. Sunday",
+      "ride_out": true,
+      "ride_slug": ["oro-valley-az-cactus-cycling-wednesday-oro-valley-ride", "tucson-az-gaba-nw-social-rides"]
+    },
+    {
+      "name": "Time Market",
+      "url": "https://www.timemarket.xyz/",
+      "address": "444 E University Blvd, Tucson, AZ 85705",
+      "note": "On University Boulevard, a few blocks west of the corner where {ride:tucson-az-the-shootout|the Shootout} and {ride:tucson-az-tuesday-morning-fast-ride|the Tuesday Morning Fast Ride} leave. Opens at 7 every day, with bread baked in-house each morning and a patio, per its site, so it is the sure coffee after. It serves breakfast to dinner and stays open till 10. No ride names it as a meet. 520-622-0761.",
+      "hours_hint": "7 a.m. to 10 p.m. daily",
+      "ride_out": false,
+      "ride_slug": null
+    },
+    {
+      "name": "Mt. Lemmon Cookie Cabin",
+      "url": "https://www.thecookiecabin.org/",
+      "address": "12781 N Sabino Canyon Park, Mt Lemmon, AZ 85619",
+      "note": "In Summerhaven near the top of the Mount Lemmon climb, at 8,000 feet: big cookies, New York-style pizza and drinks, per its site. It opens at 11, so an early climb gets there first; the Mt. Lemmon General Store on the same road opens at 10 with warm drinks and snacks, per the store's site. The Cabin says to check Google Maps for closures. 520-576-1010.",
+      "hours_hint": "11 a.m. to 5 p.m. daily",
+      "ride_out": false,
+      "ride_slug": null
+    }
   ],
   "restaurants": [
-    { "name": "El Charro Cafe (Downtown)", "url": "https://www.elcharrocafe.com/locations/downtown/", "address": "311 N Court Ave, Tucson, AZ 85701", "cuisine": "Sonoran Mexican", "note": "Same family since 1922; carne seca is the dish. Open 11 am to 9 pm daily" },
-    { "name": "Cup Cafe at Hotel Congress", "url": "https://hotelcongress.com/restaurants/cup-cafe/", "address": "311 E Congress St, Tucson, AZ 85701", "cuisine": "American cafe", "note": "Breakfast from 8 am and dinner till 9 pm downtown; closes 2-4 pm" },
-    { "name": "BOCA by Chef Maria Mazon", "url": "https://bocatacos.com/", "address": "533 N 4th Ave, Tucson, AZ 85705", "cuisine": "Tacos, modern Mexican", "note": "Scratch tortillas and daily salsas on Fourth Avenue; dog-friendly patio" },
-    { "name": "Seis Kitchen (Mercado San Agustin)", "url": "https://www.seiskitchen.com/", "address": "130 S Avenida del Convento, Tucson, AZ 85745", "cuisine": "Regional Mexican", "note": "Breakfast, lunch and dinner from 8 am daily in the Mercado courtyard, right on the Loop west of downtown" },
-    { "name": "Tumerico", "url": "https://www.tumerico.com/", "address": "2526 E 6th St, Tucson, AZ 85716", "cuisine": "Latin vegan and vegetarian", "note": "Chef Wendy Garcia's changing menu; a midtown stop for plant-based riders" },
-    { "name": "Barrio Bread", "url": "https://barriobread.com/", "address": "18 S Eastbourne Ave, Tucson, AZ 85716", "cuisine": "Bakery", "note": "Don Guerra's James Beard-winning sourdough; Tuesday-Saturday 9 am to 1 pm or until sold out" }
+    {
+      "name": "Seis Kitchen (Mercado San Agustín)",
+      "url": "https://www.seiskitchen.com/locations",
+      "address": "130 S Avenida del Convento #100, Tucson, AZ 85745",
+      "cuisine": "Mexican",
+      "note": "After the ride, west side: in the Mercado San Agustín courtyard where {ride:tucson-az-womens-shootout|the Women's Shootout} meets, less than half a mile from the Loop. Breakfast from 8, until 11 on weekdays and noon on weekends, then lunch and dinner to 9. No reservations; you order, then they seat you, per its site. (520) 622-2002.",
+      "ride_slug": "tucson-az-womens-shootout"
+    },
+    {
+      "name": "5 Points Restaurant",
+      "url": "https://www.5pointstucson.com/",
+      "address": "756 S Stone Ave, Tucson, AZ 85701",
+      "cuisine": "Brunch",
+      "note": "After the ride, just south of downtown in Barrio Viejo and a short way from the convention center hotels: brunch 9 to 2 and dinner 5 to 9, Thursday to Monday, closed Tuesday and Wednesday. Book on Resy, patio tables too; dogs are welcome on the patio, and its site says it is easy to reach by bike. (520) 623-3888."
+    },
+    {
+      "name": "Cup Cafe at Hotel Congress",
+      "url": "https://hotelcongress.com/restaurants/cup-cafe/",
+      "address": "311 E Congress St, Tucson, AZ 85701",
+      "cuisine": "American cafe",
+      "note": "After the ride, downtown: the café inside Hotel Congress, with a dining room and a patio that runs out into the hotel's plaza. No reservations for breakfast or lunch, per its page. The page gave no hours when we checked in October 2026; confirm before you go."
+    },
+    {
+      "name": "El Charro Café (Downtown)",
+      "url": "https://www.elcharrocafe.com/locations/downtown/",
+      "address": "311 N Court Ave, Tucson, AZ 85701",
+      "cuisine": "Sonoran Mexican",
+      "note": "The night before, downtown. Open 11 to 9 every day, and it takes reservations, so a group can book ahead, per its site. (520) 622-1922."
+    },
+    {
+      "name": "BOCA by Chef Maria Mazon",
+      "url": "https://bocatacos.com/",
+      "address": "533 N 4th Ave, Tucson, AZ 85705",
+      "cuisine": "Tacos",
+      "note": "The night before, or late on a weekend, on Fourth Avenue: tacos on corn or flour tortillas with the house salsas, cooked to order. Noon to 9 Monday to Thursday, to 10 Friday and Saturday, to 8 Sunday, per its site. 520-777-8134."
+    },
+    {
+      "name": "El Güero Canelo (Oracle)",
+      "url": "https://elguerocanelo.com/",
+      "address": "2480 N Oracle Rd, Tucson, AZ 85705",
+      "cuisine": "Sonoran hot dogs",
+      "note": "Late, north of downtown on Oracle Road: Sonoran hot dogs, carne asada tacos and burros from a James Beard Award-winning restaurant, per its site. 11 to 10, and to 11 on Friday and Saturday. The two other locations, on East 22nd Street and South 12th Avenue, close at 10. (520) 882-8977."
+    },
+    {
+      "name": "Tumerico",
+      "url": "https://www.tumerico.com/",
+      "address": "2526 E 6th St, Tucson, AZ 85716",
+      "cuisine": "Latin vegan",
+      "note": "The meat-free pick, midtown on Sixth Street: vegetarian and vegan Latin American plates. 11 to 8 Tuesday to Saturday, 10 to 4 Sunday, closed Monday, per its site, so it is an early dinner. 520-240-6947."
+    },
+    {
+      "name": "Barrio Bread",
+      "url": "https://barriobread.com/",
+      "address": "18 S Eastbourne Ave, Tucson, AZ 85716",
+      "cuisine": "Bakery",
+      "note": "The one you'd go back for: Don Guerra's bakery; he won the James Beard Award for Outstanding Baker in 2022, per its site. Open 9 to 1 every day, or until it sells out, so go in the morning. 520-327-1292."
+    }
+  ],
+  "hotels": [
+    {
+      "name": "The Tuxon",
+      "url": "https://www.thetuxonhotel.com/",
+      "booking_url": "https://www.ihg.com/voco/hotels/us/en/tucson/tusvo/hoteldetail",
+      "address": "960 S Freeway Road, Tucson, AZ 85745",
+      "note": "West of downtown by the Santa Cruz: the Loop is two blocks from the door by the hotel's own page, and the convention center, where El Tour starts, is about 0.7 mile by Kayak's map. The one hotel we found with a line about your own bike in writing. Free cruisers from its Bike Shed, free parking, a pool and a 24-hour gym; IHG books it as voco The Tuxon. From $127 a night on Kayak (Oct 3, 2026); El Tour's 2026 room block was $159.",
+      "price_hint": "$$",
+      "bike_policy": "Free storage for your own bike, per the hotel's About page. It doesn't say where, or that the bike can go in the room."
+    },
+    {
+      "name": "Hotel McCoy",
+      "url": "https://www.hotelmccoy.com/locations/tucson",
+      "booking_url": null,
+      "address": "720 West Silverlake Road, Tucson, AZ 85713",
+      "note": "Southwest of downtown: a motor lodge on one level with room-front parking (Hotels.com), so the bike goes from the car to the room with no stairs. The Santa Cruz River Park path, part of the Loop, is about a 10-minute walk by the same listing, and the convention center about 1.4 miles by Kayak's. Free breakfast 6 to 10 a.m., early enough for a ride-out; heated saltwater pool, free parking, dogs stay free. $80 a night before tax for Oct 11, 2026 (Hotels.com). Nothing on its own page about your own bike.",
+      "price_hint": "$",
+      "bike_policy": null
+    },
+    {
+      "name": "DoubleTree by Hilton Tucson Downtown Convention Center",
+      "url": "https://www.hilton.com/en/hotels/tusaudt-doubletree-tucson-downtown-at-the-convention-center/",
+      "booking_url": null,
+      "address": "280 S Church Ave, Tucson, AZ 85701",
+      "note": "Downtown, about 0.1 mile from the convention center, where El Tour starts and finishes (Kayak and Tripadvisor): the closest bed to the start. Outdoor pool and an elevator; self-parking $24 a night, valet $30. $150 a night for Oct 19, 2026, taxes in (Expedia); from $207 on Kayak (Oct 3, 2026). The facts here are from the booking sites; check the hotel's own page.",
+      "price_hint": "$$$",
+      "bike_policy": null
+    },
+    {
+      "name": "The Leo Kent Hotel",
+      "url": "https://www.theleokenthotel.com/",
+      "booking_url": "https://www.marriott.com/en-us/hotels/tustx-the-leo-kent-hotel-tucson-a-tribute-portfolio-hotel/overview/",
+      "address": "1 South Church Avenue, Tucson, AZ 85701",
+      "note": "Downtown, about 0.2 mile from the convention center (Kayak). A Marriott Tribute Portfolio hotel with a gym and an elevator; self-parking $32 a day, valet $39. $175 for Oct 11, 2026, taxes in (Expedia), and from $272 on Kayak (Oct 3, 2026); El Tour's 2026 room block was $235. The highest rate here.",
+      "price_hint": "$$$",
+      "bike_policy": null
+    },
+    {
+      "name": "AC Hotel by Marriott Tucson Downtown",
+      "url": "https://www.marriott.com/en-us/hotels/tusad-ac-hotel-tucson-downtown/overview/",
+      "booking_url": null,
+      "address": "151 E Broadway Blvd, Tucson, AZ 85701",
+      "note": "On Broadway downtown, about 0.4 mile from the convention center (Kayak), on the same block as Pueblo Vida Brewing. From $211 a night on Kayak (Oct 3, 2026); El Tour's 2026 room block was $214. The facts here are from Kayak and El Tour's list, the thinnest record of the six; check the hotel's own page.",
+      "price_hint": "$$$",
+      "bike_policy": null
+    },
+    {
+      "name": "Hotel Congress",
+      "url": "https://hotelcongress.com/",
+      "booking_url": null,
+      "address": "311 E Congress St, Tucson, AZ 85701",
+      "note": "The historic hotel downtown, about 0.5 mile from the convention center (Kayak); where you stay for the town, not for the sleep. The rooms are upstairs: Visit Tucson lists 39 second-floor rooms, so ask about stairs and an elevator before you carry a bike up. The Cup Café, a tap room and Club Congress are downstairs. Visit Tucson mentions the rumble of passing trains: lively, not quiet. From $186 on Trivago and $213 on Kayak (Oct 2026).",
+      "price_hint": "$$$",
+      "bike_policy": null
+    }
   ],
   "bike_shops": [
-    { "name": "Fair Wheel Bikes", "url": "https://www.fairwheelbikes.com/", "address": "1110 E 6th St, Tucson, AZ 85719", "phone": "520-884-9018", "services": ["repair", "rental", "parts", "fitting"], "note": "High-end road and gravel shop near the university; rents road, gravel, mountain and e-bikes and offers route advice" },
-    { "name": "Transit Cycles", "url": "https://www.transitcycles.com/", "address": "267 S Avenida del Convento, Bldg 10, Tucson, AZ 85745", "phone": "520-396-4525", "services": ["repair", "parts"], "note": "Woman-owned shop in the Mercado district beside the Loop; commuter, gravel and mountain focus, services road and most e-bikes. Closed Mondays" },
-    { "name": "Ajo Bikes", "url": "https://www.ajobikes.com/", "address": "1301 E Ajo Way, Ste 117, Tucson, AZ 85713", "phone": "520-294-1434", "services": ["repair", "parts"], "note": "Family shop for 50-plus years on the south side, near the airport; four certified mechanics, recumbents and trikes too" },
-    { "name": "BICAS", "url": "https://bicas.org/", "address": "2001 N 7th Ave, Tucson, AZ 85705", "phone": "520-628-7950", "services": ["repair", "rental", "parts", "diy"], "note": "Nonprofit community bike shop since 1989: DIY stands with mechanic help, used parts, refurbished bikes and rentals. Thursday-Sunday" },
-    { "name": "Bicycle Ranch Tucson", "url": "https://www.bicycleranchtucson.com/", "address": "7090 N Oracle Rd #156, Tucson, AZ 85704", "phone": "520-219-4311", "services": ["repair", "parts", "fitting"], "note": "Full-service shop on the north side near Oro Valley and the Catalina foothills; services all makes. No rentals listed" }
+    {
+      "name": "Fair Wheel Bikes",
+      "url": "https://www.fairwheelbikes.com/our-services/6th-street-location/",
+      "address": "1110 E 6th St, Tucson, AZ 85719",
+      "phone": "(520) 884-9018",
+      "services": ["repair", "parts", "rental", "rental-road", "rental-gravel", "rental-mtb", "rental-ebike", "fitting"],
+      "note": "About a mile northeast of downtown, near University and Euclid, where {ride:tucson-az-the-shootout|the Shootout} and {ride:tucson-az-tuesday-morning-fast-ride|the Tuesday Morning Fast Ride} start; the shop posts both rides' start times. The 6th Street store sells and hands out rentals and is closed Sundays. Repairs and FitWorks fittings happen at the Park Avenue Studio, 503 S Park Ave, (520) 624-3045, Monday to Friday 8 to 5 by call or email (tune-up $120; fit $125 an hour, usually 2 to 3 hours; Oct 2026). Rents a real fleet, first day (Oct 2026): aluminum road $65, carbon Shimano 105 $100, 105 Di2 $115, ENVE with SRAM AXS $135, Trek Checkpoint ALR gravel $75, mountain bikes $65 to $100, e-road and e-gravel $150. Extra days discounted; helmet, flat kit and your choice of pedals included."
+    },
+    {
+      "name": "Pima Street Bicycle",
+      "url": "https://www.pimastreetbicycle.com/",
+      "address": "3400 E Speedway Blvd, Suite 108, Tucson, AZ 85716",
+      "phone": "(520) 326-4044",
+      "services": ["repair", "parts", "ship-to-shop", "suspension"],
+      "note": "Midtown on Speedway, about 3 miles northeast of downtown; a service-first shop that sells Giant and Liv. The one shop whose own site says to call and have your bike shipped straight to it: standard assembly $100, e-bike $149 (Oct 2026). Tune-ups $69 to $239, suspension from $65 (Oct 2026). Tuesday to Friday 10 to 6, Saturday 9 to 5, closed Sunday and Monday."
+    },
+    {
+      "name": "Earlybird Bikes",
+      "url": "https://www.earlybirdbikes.com/",
+      "address": "8969 E Tanque Verde Rd, Suite 213, Tucson, AZ 85749",
+      "phone": "(520) 372-2016",
+      "services": ["repair", "rental", "rental-road", "rental-gravel", "rental-mtb", "rental-ebike"],
+      "note": "Near the base of the Mount Lemmon climb on Tanque Verde Road, about 10 miles northeast of downtown and on the same road as LeBuzz. Services almost every make, e-bikes included; the shop says to just stop by or call. Opens at 8 on Monday, Friday and weekends: Monday and Friday 8 to 5, Tuesday and Thursday 10 to 5, Saturday and Sunday 8 to 4, closed Wednesday (out riding, it says). Rents Bianchi and Cannondale road, e-road and gravel bikes and Transition mountain bikes, one day to a week, with flat pedals, a flat kit and cages. SPD or SPD-SL pedals and a helmet cost extra, and prices show only in the booking system (Oct 2026)."
+    },
+    {
+      "name": "Bicycle Ranch Tucson",
+      "url": "https://www.bicycleranchtucson.com/",
+      "address": "7090 N Oracle Rd #156, Tucson, AZ 85704",
+      "phone": "(520) 219-4311",
+      "services": ["repair", "parts", "fitting", "shop-rides"],
+      "note": "On Oracle Road about 8 miles north of downtown, the shop for Oro Valley, Catalina State Park and the north side; {ride:tucson-az-bicycle-ranch-saturday-roundup|the Saturday Roundup} is the shop's own ride. Open every day: Monday to Saturday 10 to 6, Sunday 11 to 4. Services all makes; standard tune $125, flat repair $20, and it boxes a bike to ship home for $75 with materials (Oct 2026). El Tour de Tucson's shipping page names it the partner shop that receives riders' bikes, $55 to assemble or $90 with repacking after the ride (Oct 2026). The shop's own pages don't say so, so call before you ship.",
+      "ride_slug": "tucson-az-bicycle-ranch-saturday-roundup"
+    },
+    {
+      "name": "Transit Cycles",
+      "url": "https://www.transitcycles.com/",
+      "address": "267 S Avenida del Convento, Bldg 10, Tucson, AZ 85745",
+      "phone": "(520) 396-4525",
+      "services": ["repair", "suspension", "shop-rides"],
+      "note": "In the MSA Annex in the Mercado district, under a mile west of downtown and beside the Loop, on the same street as the Mercado start of {ride:tucson-az-womens-shootout|the Women's Shootout}. Woman-owned, in the shop's own words. Jenna, certified by Shimano, SRAM and Bosch, does flats, brake bleeds, suspension overhauls and wheel builds, and works on Rad Power and Aventon e-bikes. Tuesday to Saturday 10 to 6, Sunday 11 to 4, closed Monday. No rentals, fitting or shipping on the site. Its monthly evening cruise to Dragoon Brewing leaves from here.",
+      "ride_slug": "tucson-az-transit-cycles-third-thursday-ride"
+    },
+    {
+      "name": "Ajo Bikes",
+      "url": "https://www.ajobikes.com/about/location-pg141.htm",
+      "address": "1301 E Ajo Way #117, Tucson, AZ 85713",
+      "phone": "(520) 294-1434",
+      "services": ["repair"],
+      "note": "South side, about 3 to 4 miles south of downtown and the closest pick to the airport for a bike that arrives broken. Tuesday to Friday 10 to 6, Saturday 10 to 5, closed Sunday and Monday. Repair is on the site; prices and turnaround aren't, so call first."
+    }
+  ],
+  "culture": [
+    {
+      "name": "Pueblo Vida Brewing Company",
+      "kind": "bar",
+      "url": "https://www.pueblovidabrewing.com/food-dogs-bikes",
+      "address": "115 East Broadway Boulevard, Tucson, AZ, 85701",
+      "note": "Downtown brewery taproom on Broadway, on the same block as the AC Hotel. A few bike racks by the door, and its own page says to ask the bartender where to put the bike inside if they're full. No kitchen, so bring food in; leashed dogs welcome. Open 3 to 9 Monday to Thursday, noon to 10 Friday and Saturday, noon to 8 Sunday."
+    },
+    {
+      "name": "Heirloom Farmers Market at Rillito Park",
+      "kind": "market",
+      "url": "https://www.heirloomfm.org/",
+      "address": "4502 N 1st Ave, Tucson, AZ 85718",
+      "note": "At Rillito Park on the north side, right on the Rillito stretch of the Loop. Sundays year-round: 80-plus Southern Arizona farmers, ranchers and food makers, three shade pavilions and public restrooms. Visit Tucson lists 9 to 1 in winter and 8 to noon in summer; the market's own site has the switch date. Ride to it, eat, ride on."
+    },
+    {
+      "name": "Wooden Tooth Records (Congress Street)",
+      "kind": "record-store",
+      "url": "https://www.woodentoothrecords.com/locations",
+      "address": "108 E. Congress Street, Tucson, AZ 85701",
+      "note": "Downtown, with a beer and wine bar in the shop. New and used vinyl, CDs, cassettes, books and turntables. Open noon to 8 Monday to Wednesday, noon to 7 Thursday, 11 to 10 Friday and Saturday, 11 to 6 Sunday; the first store, at 426 E. 7th Street, closes at 6 on weekdays."
+    },
+    {
+      "name": "Antigone Books",
+      "kind": "bookstore",
+      "url": "https://gaytucson.com/businesses/antigone-books/",
+      "address": "411 N 4th Ave, Tucson, AZ 85705",
+      "note": "Fourth Avenue's independent feminist bookstore: general, regional and feminist titles, cards and author events. Tuesday to Saturday 10 to 5, Sunday 11 to 4, closed Monday, per its GayTucson listing (June 2026); check the hours on antigonebooks.com. A Sunday afternoon after the long ride."
+    },
+    {
+      "name": "IBT's Bar + Food",
+      "kind": "bar",
+      "url": "https://www.ibtstucson.com/",
+      "address": "616 North 4th Avenue, Tucson, AZ 85705",
+      "note": "Fourth Avenue's gay bar and dance club, open since 1985; its own site says it was voted Tucson's best gay bar. A patio, a big dance floor, drag shows Thursday through Saturday at 9 p.m. and a Sunday show from 1 to 3 p.m. Open noon to 2 a.m. every day."
+    },
+    {
+      "name": "Arizona-Sonora Desert Museum",
+      "kind": "museum",
+      "url": "https://www.desertmuseum.org/visit/",
+      "address": "2021 N. Kinney Rd., Tucson AZ 85743",
+      "note": "West side, on Kinney Road in the Tucson Mountains, on the Gates Pass side of town. Part zoo, part botanical garden, mostly outdoors; it says to plan at least two hours. Open 8:30 to 5 every day October to May; adults $29.95 (Oct 2026). No bike parking stated."
+    }
+  ],
+  "clubs": [
+    {
+      "name": "Greater Arizona Bicycling Association (GABA)",
+      "url": "https://www.bikegaba.org/",
+      "note": "The oldest and largest club in Southern Arizona, in its own words. Leaders post road rides on its Gatherist page most days of the week, from {ride:tucson-az-gaba-tuesday-social-ride|easy social rides} at 12 to 14 mph to {ride:tucson-az-gaba-nw-social-rides|the north-side NW rides} at 14 to 16 mph, which the leaders call no-drop. It also posts {ride:tucson-az-gaba-el-tour-training-rides|El Tour training rides} in the 11 weeks before the race. Rides cap at about 15, so sign up first; the posts ask riders to join GABA ($25 a year, Oct 2026). Its Bike Swap is Sunday, Nov 15, 2026, 7 am to 1 pm, in the El Con Center lot at 3601 E Broadway.",
+      "inclusive_focus": ["no-drop"],
+      "ride_slug": "tucson-az-gaba-nw-social-rides"
+    },
+    {
+      "name": "Cactus Cycling Club",
+      "url": "https://www.cactuscycling.org/Schedule-List",
+      "note": "A road club running mostly B-level rides, 15 to 17 mph, from starts that move around the valley: {ride:oro-valley-az-cactus-cycling-wednesday-oro-valley-ride|the Oro Valley ride}, {ride:tucson-az-cactus-cycling-friday-saguaro-east-ride|the Saguaro East loop} and {ride:tucson-az-cactus-cycling-weekend-b-rides|the weekend B rides}, most with a coffee or brunch stop after. You must be a member to register, so a visitor takes the free Trial membership (one ride a year), signs the waiver and registers on the club's site first. The club cancels for weather by email.",
+      "inclusive_focus": [],
+      "ride_slug": "tucson-az-cactus-cycling-friday-saguaro-east-ride"
+    },
+    {
+      "name": "BICAS",
+      "url": "https://bicas.org/",
+      "note": "The nonprofit community bike shop at 2001 N 7th Ave, under 2 miles north of downtown. They don't fix your bike; they give you a stand, the tools and a mechanic's help to do it yourself, $6 to $12 an hour on a sliding scale, $30 to $60 for the day (Oct 2026). Its rentals are single-speed coaster-brake town bikes, $8 a day (Oct 2026), not for the road. Open Thursday to Sunday, 11 am to 6 pm, per its homepage; Mondays 3 to 7 pm are the Women, Trans and Femme Workshop, with the tools free that night, and {ride:tucson-az-bicas-wtf-ride|the monthly WTF ride} leaves after it. BICAS says it is at risk of closing or pausing for lack of money, so call 520-628-7950 before you go.",
+      "inclusive_focus": ["women-trans-femme"],
+      "ride_slug": "tucson-az-bicas-wtf-ride"
+    },
+    {
+      "name": "FUGA (Familias Unidas Ganando Accesibilidad)",
+      "url": "https://www.fugatucson.org/",
+      "note": "Runs two free monthly community rides, posted in English and Spanish: {ride:tucson-az-fuga-bicis-y-burros-second-sunday-ride|Bicis y Burros} from the Ward 1 Office on the west side and {ride:tucson-az-fuga-southside-ride|Bicicleteada del Sur} from El Pueblo Center on the south side. No bike? FUGA reserves a Tugo bike share for free: 520-261-5446. Free bike repair once a month at the Ward 1 Office, 940 W Alameda St.",
+      "inclusive_focus": [],
+      "ride_slug": "tucson-az-fuga-bicis-y-burros-second-sunday-ride"
+    },
+    {
+      "name": "Sonoran Desert Mountain Bicyclists (SDMB)",
+      "url": "https://www.sdmb.org/",
+      "note": "The mountain bike club: it builds and looks after the singletrack around Tucson with Pima County, Marana, the city and the Coronado National Forest. No weekly ride; its public calendar has fall trail work days at Sweetwater, Tucson Mountain Park and Fantasy Island, a Thirsty Thursday at a bar most months, and an all-ladies skills clinic on Oct 24, 2026 at the new 100-Acre Wood Bike Park, 2801 S Alvernon Way.",
+      "inclusive_focus": []
+    }
+  ],
+  "bring_your_bike": {
+    "summary": "Bring it for a week; rent for a day or two. On American a packed bike under 50 lb is an ordinary checked bag, $45 each way paid online (Oct 2026), and Southwest, Delta and Alaska treat it the same at $45 (read Sept 2026). Tucson rents real bikes: Fair Wheel Bikes has carbon road from $100 and gravel from $75 for the first day, and Earlybird Bikes rents at the foot of Mount Lemmon (Oct 2026). Pima Street Bicycle will take a shipped bike and build it for $100 (Oct 2026). Stay central and you can ride to the Shootout start, the Loop and the bottom of the Mount Lemmon climb. The car is for the airport leg with a case and the far trailheads.",
+    "fly": {
+      "airports": [
+        {
+          "name": "Tucson International",
+          "code": "TUS",
+          "miles": 8,
+          "note": "About 8 miles south of downtown. Six airlines: Alaska, American, Delta, Southwest, Sun Country and United, per the airport's airline page (Oct 2026). Nonstops to Atlanta, Chicago O'Hare, Dallas/Fort Worth, Denver, Houston, Las Vegas, Los Angeles, Portland, Salt Lake City, San Diego, San Francisco and Seattle, plus seasonal Chicago Midway, Dallas Love Field, Minneapolis and Orange County. Small and quick: the Rental Car Center is a walk out the terminal's east exit, and Uber and Lyft pick up on the first island across the roadway from baggage claim."
+        },
+        {
+          "name": "Phoenix Sky Harbor International",
+          "code": "PHX",
+          "miles": 112,
+          "note": "About 112 miles northwest by road up I-10, about 100 in a straight line. The fallback when TUS fares or routes don't work. Groome Transportation runs a shared shuttle between Tucson and Sky Harbor with frequent daily round trips and home pickup and drop-off, per Visit Tucson's listing (Oct 2026); nothing published on bike boxes, so ask before you book it with a case. With a bike, a rental car one way down I-10 is the plain answer."
+        }
+      ],
+      "airline_note": "American, read Oct 2026: one bike in a hard case, a bike bag or a box built for bikes; the standard checked bag fee applies up to 50 lb, the standard overweight fee from 51 to 70 lb, and oversize fees do not apply. Handlebars fixed sideways, pedals off or wrapped; a bike not in a hard case is treated as fragile. First bag $45 online or $50 at the airport, second $55 online or $60, on the bag page updated May 18, 2026. Southwest, Delta and Alaska, read Sept 2026 on their own pages: Southwest checks a non-motorized single-seat bike at the standard bag fee with oversize fees waived, refuses anything over 100 lb or 115 linear inches, wants pedals and handlebars removed and wrapped, and flies a cardboard or soft case with a limited release; first bag $45, second $55 for travel booked on or after April 9, 2026. Delta takes a non-motorized single-seat bike in a container built for bikes at the standard bag allowance and fee, charges excess weight over 50 lb, refuses over 115 linear inches or 100 lb, and has soft bags sign a limited release; first bag $45, second $55 on US domestic Main. Alaska checks a non-motorized bike in a soft or hard case or the maker's box as a standard bag with the oversize fee waived and the overweight fee waived up to 70 lb; over 115 linear inches pays oversize, over 70 lb pays overweight; one bike per case, handlebars sideways, pedals off; first bag $45, second $55 for flights ticketed on or after April 10, 2026. United and Sun Country also fly TUS and were not read: check their sports-equipment pages before you book. Keep the case under 50 lb and it is one ordinary checked bag on every one of these."
+    },
+    "ship": {
+      "note": "One shop says it on its own site: Pima Street Bicycle in midtown says to call and have your bike shipped straight to the shop; standard assembly is $100, e-bikes $149 (Oct 2026). For El Tour de Tucson, the event's shipping page names Bicycle Ranch Tucson on Oracle Road as its partner shop for receiving bikes: $55 to assemble, $90 with repacking after the ride (Oct 2026, for the 2026 ride). The shop's own pages don't say so; call (520) 219-4311 first. El Tour's page also says you can ship to your hotel, a friend's house or a local UPS store instead. BikeFlights says to confirm with the shop that it will receive and hold the box, and to book the build with the shop yourself. For the trip home, Bicycle Ranch boxes a bike for $75 with materials (Oct 2026).",
+      "shops": [
+        {
+          "name": "Pima Street Bicycle",
+          "url": "https://www.pimastreetbicycle.com/bicycle-service-and-repair",
+          "note": "Its assembly section says to call and have your bike shipped directly to the shop. Standard assembly $100, e-bike $149 (Oct 2026). Tuesday to Friday 10 to 6, Saturday 9 to 5, closed Sunday and Monday. 3400 E Speedway Blvd, Suite 108; (520) 326-4044."
+        }
+      ]
+    },
+    "rent": {
+      "note": "Renting a good bike is easy here. Fair Wheel Bikes, about a mile from downtown, rents aluminum road from $65, carbon Shimano 105 from $100, Di2 from $115, ENVE with SRAM AXS from $135, a Trek Checkpoint gravel bike from $75 and mountain bikes from $65 for the first day, with your own choice of pedals (Oct 2026); extra days are discounted but the rates aren't published. Earlybird Bikes, at the foot of the Mount Lemmon climb, rents Bianchi and Cannondale road and gravel bikes and Transition mountain bikes by the day or week; prices only in its booking system. Tucson Bicycle Rentals rents carbon road bikes from pickup points around town at $125 a day or $395 a week, no walk-ins (Oct 2026). The math: flying a bike costs $90 round trip on American, Southwest, Delta or Alaska (Oct and Sept 2026), so a one- or two-day stay favors renting and a week favors your own bike. A rider who needs their own fit should bring it. For El Tour, book early: Fair Wheel's event cancellations are free with 30 days' notice, half the rental between 14 and 30 days and none inside 7, and Tucson Bicycle Rentals sets a three-day minimum (Oct 2026).",
+      "shops": [
+        {
+          "name": "Fair Wheel Bikes",
+          "url": "https://www.fairwheelbikes.com/our-services/rental-bikes/",
+          "note": "First-day prices (Oct 2026): aluminum road (Allez E5, Domane AL, Tiagra or Cues) $65; carbon Cervélo Caledonia or Trek Domane SL with Shimano 105 $100; Caledonia or Madone with 105 Di2 $115; ENVE Melee (SRAM Red AXS, sizes 47 to 60) or Fray (Force AXS with power meter, 52 to 58) $135; Trek Checkpoint ALR gravel (Apex 1x, 50 mm tubeless, sizes 47 to 61) $75; Trek Roscoe hardtail $65, Specialized Chisel FS $85, Trek Fuel EX 8 $100, Fuel+ EX 8 e-MTB $135; Trek Domane+ SLR 7 or Checkpoint+ SL 5 e-bike $150. Extra days discounted; rates not published. Helmet, flat kit, cages and pedals of your choice (SPD-SL, SPD, Speedplay, Look Keo or flat) included; hitch rack $10 first day, $5 after. Book online; free cancellation with 24 hours' notice, but for El Tour and 24 Hours in the Old Pueblo, free with 30 or more days' notice, 50 percent at 14 days and no cancellation inside 7. Pick up and return at 1110 E 6th St; closed Sundays, Monday returns at 9 am. (520) 884-9018."
+        },
+        {
+          "name": "Earlybird Bikes",
+          "url": "https://www.earlybirdbikes.com/rentals-and-demos",
+          "note": "Bianchi and Cannondale road, e-road and gravel bikes and Transition mountain bikes, one day to a week, booked online. Flat pedals, flat kit and cages included; SPD or SPD-SL pedals and a helmet extra. Prices and sizes only in the booking system (Oct 2026). Full refund with 24 hours' notice. At the base of the Mount Lemmon climb, 8969 E Tanque Verde Rd; closed Wednesdays. (520) 372-2016."
+        },
+        {
+          "name": "Tucson Bicycle Rentals",
+          "url": "https://tucsonbicyclerentals.com/rental-road-bikes-tucson/",
+          "note": "A rental outfit, not a repair shop, with pickup points rather than a storefront: central (Prince Rd and I-10), near 6900 N Thornydale on the Loop, and on N Oracle Rd by Catalina State Park. Carbon road (Trek Domane or similar, Tarmac, Emonda, Roubaix, women's Ruby and Amira; sizes 45 to 61): $125 a day, $85 a day for three, $60 a day for five, $395 a week; aluminum road $85 a day (Oct 2026). SPD, SPD-SL or Look Keo pedals free. No walk-ins; book first. Three-day minimum for El Tour. Pickup from 6 am. The site gives two phone numbers, 520-260-8293 and 520-357-1208, and the pickup hours differ between pages; text first."
+        }
+      ]
+    },
+    "get_around": {
+      "car_needed": false,
+      "note": "If you stay central, most of the riding starts from your door. {ride:tucson-az-the-shootout|The Shootout} starts at University and Euclid, about a mile from downtown. Fair Wheel Bikes and its rental fleet are nearby on 6th Street. The Loop crosses Congress Street just west of downtown. The Mount Lemmon climb is a ride away, with LeBuzz and Earlybird Bikes at the bottom, about 10 to 11 miles out on Tanque Verde Road. The Sun Link streetcar carries a bike free between the Mercado, downtown, Fourth Avenue and the university. You'll want a car, or an XL ride, for the airport leg with a bike case, for the far trailheads, and for a daily drive to Saguaro East, Gates Pass or Madera Canyon instead of riding there first. Fair Wheel rents a hitch rack. At TUS the Rental Car Center is a walk out the terminal's east exit: Avis, Budget, Dollar, Enterprise, Hertz, National and Sixt are there, Alamo and Economy by shuttle (Oct 2026). Uber and Lyft pick up on the first island across the roadway from baggage claim. Sun Tran routes 11 and 25 leave the airport about every half hour on weekdays and cost nothing; a built bike can ride the front rack, but the rules bar excessive bags, so not a bike case.",
+      "transit_bike_rules": "Sun Tran and Sun Link, read Oct 2026. Every ride is fare-free and bikes ride at no extra charge. Buses: every vehicle has a front rack for two or three bikes; load into the slot nearest the bus, facing the other way if one is already loaded, and set the tire hook. Bikes don't ride inside the bus. Gas-powered bikes are banned from racks and vehicles; recumbents and bike trailers can't come aboard unless collapsed; no riding on platforms or vehicles. Sun Link streetcar: walk the bike on through the middle double doors and stand with it in the center area; flip the facing seats up with the yellow handle to make room, and keep the doorway clear. The 3.9-mile line has 23 stops through the Mercado San Agustín, downtown, Fourth Avenue, Main Gate Square and the University of Arizona; it runs Monday to Thursday 7 am to 10 pm, Friday 7 am to midnight, Saturday 8 am to midnight and Sunday 8 am to 8 pm, every 10 to 30 minutes (Visit Tucson, Oct 2026).",
+      "bike_share": {
+        "name": "Tugo Bike Share",
+        "url": "https://tugobikeshare.com/",
+        "note": "Stations near many Sun Link streetcar stops, per Sun Tran. Prices not published on the pages read (Oct 2026). For the errand or the ride to dinner, not the ride."
+      }
+    },
+    "rules_and_safety": "Arizona, read Oct 2026. A driver passing a bike must leave at least three feet until safely past (ARS 28-735); if a violation causes a crash with serious injury the civil penalty is up to $500, up to $1,000 for a death, but not when the rider was hurt in a traffic lane with a passable bike lane or path alongside. A rider has a driver's rights and duties, and a civil traffic ticket on a bike can't go against your driver license or your car insurance (28-812). Slower than traffic, ride as close as practicable to the right edge, except to pass, turn left, avoid hazards, or when the lane is too narrow to share; no more than two abreast except on paths and bike-only lanes (28-815). E-bikes are treated as bicycles; class 1 and 2 may use bike and multiuse paths unless the path's owner bans them, and class 3 stays off paths unless the path runs beside a road or the owner allows it (28-819). The Loop: Pima County opens it sunrise to sunset with no night use, bars motorized vehicles and devices (ADA and official vehicles exempt), and asks riders to keep right, pass on the left, go single file when passing, and not ride at a speed that would frighten others; its e-bike answers are in the FAQ, so ask before you take a rental e-bike on it. We found no Tucson crash figures to give you the honest read on traffic, so the law above is what we can tell you; the route notes carry the road-by-road hazards.",
+    "sources": [
+      "https://flytucson.com/airlines_destinations/airlines.php",
+      "https://flytucson.com/airlines_destinations/nonstop_destinations.php",
+      "https://flytucson.com/parking_transportation/rental_cars.php",
+      "https://flytucson.com/parking_transportation/app_based_ride_services.php",
+      "https://flytucson.com/parking_transportation/public_transit.php",
+      "https://flytucson.com/parking_transportation/cars_limos_and_shuttles.php",
+      "https://www.visittucson.org/listing/groome-transportation/26/",
+      "https://www.aa.com/i18n/travel-info/baggage/specialty-and-sports.jsp",
+      "https://www.aa.com/i18n/travel-info/baggage/checked-baggage-policy.jsp",
+      "https://support.southwest.com/helpcenter/article/flying-with-a-bike-policy",
+      "https://www.southwest.com/html/customer-service/travel-fees.html",
+      "https://www.delta.com/us/en/baggage/special-items/sporting-equipment",
+      "https://www.delta.com/us/en/baggage/overview",
+      "https://www.alaskaair.com/content/travel-info/baggage/special-baggage/traveling-with-sporting-equipment",
+      "https://www.alaskaair.com/content/travel-info/baggage/checked-bags",
+      "https://www.pimastreetbicycle.com/bicycle-service-and-repair",
+      "https://eltourdetucson.org/el-tour-de-tucson/https-www-bikeflights-com-events-el-tour-de-tucson/",
+      "https://www.bicycleranchtucson.com/articles/bike-repair-pg63.htm",
+      "https://faq.bikeflights.com/support/solutions/articles/13000072585-how-do-i-ship-to-or-from-a-bike-shop-",
+      "https://www.fairwheelbikes.com/our-services/rental-bikes/",
+      "https://www.fairwheelbikes.com/our-services/rental-bikes/road-bikes/",
+      "https://www.fairwheelbikes.com/rentals/rental-bikes/mountain-bikes/",
+      "https://www.earlybirdbikes.com/rentals-and-demos",
+      "https://tucsonbicyclerentals.com/rental-road-bikes-tucson/",
+      "https://tucsonbicyclerentals.com/bike-rental-locations/",
+      "https://suntran.com/how-to-ride/bike-ride/",
+      "https://www.suntran.com/how-to-ride/bus-basics-rider-rules/",
+      "https://www.suntran.com/routes-services/sunlink/",
+      "https://www.visittucson.org/plan-your-visit/transportation/tucson-streetcar/",
+      "https://www.azleg.gov/ars/28/00735.htm",
+      "https://www.azleg.gov/ars/28/00812.htm",
+      "https://www.azleg.gov/ars/28/00815.htm",
+      "https://www.azleg.gov/ars/28/00819.htm",
+      "https://law.justia.com/codes/arizona/2018/title-28/section-28-819/",
+      "https://www.pima.gov/162/The-Chuck-Huckelberry-Loop",
+      "https://www.pima.gov/3864/About-The-Loop"
+    ]
+  },
+  "travel_links": [
+    {
+      "label": "El Tour de Tucson hotel blocks",
+      "url": "https://eltourdetucson.org/el-tour-de-tucson/accommodations-and-travel/",
+      "kind": "official",
+      "note": "The organizer's room blocks for the 2026 ride weekend (Nov 19 to 22), sorted by distance from the start: about 20 hotels, $89 to $235 a night (Oct 2026). Some blocks close in late October and early November."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Should I bring my bike to Tucson?",
+      "a": "Yes, for a week; rent for a day or two. American checks a packed bike under 50 lb as an ordinary bag, $45 each way paid online (Oct 2026), and Southwest, Delta and Alaska do the same at $45 (read Sept 2026). Pima Street Bicycle in midtown receives a shipped bike and builds it for $100 (Oct 2026). Fair Wheel Bikes rents carbon road bikes from $100 a day and gravel from $75 (Oct 2026), so a short trip can go without the case."
+    },
+    {
+      "q": "When is the best time to ride in Tucson?",
+      "a": "October to April. Summer highs run near 100 F from June through August, and Pima County says to ride the Loop before 9 a.m. or after 5 p.m. then. The top of Mount Lemmon is 20 to 30 F colder than town, with ice in the shade from December to February, and winter storms close the road; Pima County's roads hotline is 520-351-3351."
+    },
+    {
+      "q": "How long is the Mount Lemmon climb?",
+      "a": "27.8 miles and about 6,770 feet of climbing (Bike Mount Lemmon) from mile marker 0 on the Catalina Highway to the observatory at the top, at 4.7 percent on average. There is no water on the climb until the Bigelow trailhead past mile 19; Windy Point at mile 14 has toilets and no water. LeBuzz Caffe at Tanque Verde Road and the Catalina Highway opens at 6 and is 4.5 miles from mile 0."
+    },
+    {
+      "q": "Where do group rides start in Tucson?",
+      "a": "{ride:tucson-az-the-shootout|The Shootout} and {ride:tucson-az-tuesday-morning-fast-ride|the Tuesday Morning Fast Ride} leave University Boulevard and Euclid Avenue by the University of Arizona. {ride:tucson-az-womens-shootout|The Women's Shootout} leaves the Mercado San Agustín west of downtown. GABA's {ride:tucson-az-gaba-nw-social-rides|NW social rides} start at St. Philip's Plaza or at Bruegger's in Oro Valley, and its {ride:tucson-az-gaba-tuesday-social-ride|social ride} moves each week; sign up on Gatherist first. Cactus Cycling Club's rides take a free trial membership."
+    },
+    {
+      "q": "Can I rent a road bike in Tucson?",
+      "a": "Yes. Fair Wheel Bikes on 6th Street rents aluminum road from $65, carbon Shimano 105 from $100, Di2 from $115, ENVE with SRAM AXS from $135, a Trek Checkpoint gravel bike from $75 and mountain bikes from $65 for the first day, pedals of your choice included (Oct 2026). Earlybird Bikes rents road, gravel and mountain bikes at the foot of Mount Lemmon, prices in its booking system. Tucson Bicycle Rentals rents carbon road bikes from pickup points at $125 a day or $395 a week, no walk-ins (Oct 2026). For El Tour, book early."
+    },
+    {
+      "q": "Do I need a car to ride in Tucson?",
+      "a": "Not if you stay central. The Shootout start, Fair Wheel's rental fleet and the Loop are within a mile or so of downtown, and the Mount Lemmon climb is a ride away: LeBuzz at the bottom is about 11 miles northeast. The fare-free Sun Link streetcar carries bikes between the Mercado, downtown, Fourth Avenue and the university. You will want a car, or an XL ride, for the airport leg with a bike case and for the far trailheads."
+    }
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Tucson,_Arizona",
@@ -52,25 +619,189 @@
     "https://www.tucsonaz.gov/",
     "https://www.visittucson.org/",
     "https://www.visittucson.org/things-to-do/outdoors/biking/",
-    "https://www.pima.gov/162/The-Chuck-Huckelberry-Loop",
     "https://www.rome2rio.com/s/Phoenix-Airport-PHX/Tucson",
-    "https://downtowntucson.org/go/doubletree-by-hilton-tucson-downtown-convention-center",
-    "https://downtowntucson.org/go/ac-hotel-by-marriott-tucson-downtown",
-    "https://www.theleokenthotel.com/",
-    "https://hotelcongress.com/about/contact/",
-    "https://www.hotelmccoy.com/locations/tucson",
+    "https://www.fairwheelbikes.com/service/group-rides/",
+    "https://www.pima.gov/162/The-Chuck-Huckelberry-Loop",
+    "https://www.pima.gov/3864/About-The-Loop",
+    "https://www.pima.gov/3780/Parks-on-the-Loop",
+    "https://www.pima.gov/250/Notices-Closures",
+    "https://www.visittucson.org/blog/post/loving-the-loop/",
+    "https://bikemountlemmon.com/",
+    "https://bikemountlemmon.com/faqs",
+    "https://bikemountlemmon.com/strava",
+    "https://bikemountlemmon.com/2025-events",
+    "https://uacycling.com/tucson-routes/",
+    "https://www.tobedetermined.cc/journal/ride-guide-tucson-arizona",
+    "https://ridewithgps.com/routes/1725903",
+    "https://ridewithgps.com/routes/1042796",
+    "https://ridewithgps.com/routes/54251596",
+    "https://ridewithgps.com/routes/6748456",
+    "https://ridewithgps.com/routes/34404552",
+    "https://ridewithgps.com/routes/38013971",
+    "https://ridewithgps.com/routes/51686479",
+    "https://www.nps.gov/sagu/planyourvisit/bicycling-at-saguaro-national-park.htm",
+    "https://www.nps.gov/sagu/planyourvisit/fees.htm",
+    "https://www.nps.gov/sagu/planyourvisit/conditions.htm",
+    "https://www.nps.gov/sagu/planyourvisit/basicinfo.htm",
+    "https://eltourdetucson.org/el-tour-de-tucson/route/",
+    "https://www.kold.com/2026/01/08/road-mount-lemmon-closed/",
+    "https://www.mtbproject.com/directory/8007022",
+    "https://www.mtbproject.com/trail/4728806/sweetwater-trail-system",
+    "https://www.fairwheelbikes.com/our-services/",
+    "https://www.fairwheelbikes.com/our-services/6th-street-location/",
+    "https://www.fairwheelbikes.com/our-services/park-avenue-studio/",
+    "https://www.fairwheelbikes.com/our-services/bike-fitting/",
+    "https://www.fairwheelbikes.com/our-services/rental-bikes/",
+    "https://www.fairwheelbikes.com/our-services/rental-bikes/road-bikes/",
+    "https://www.fairwheelbikes.com/rentals/rental-bikes/mountain-bikes/",
+    "https://www.earlybirdbikes.com/",
+    "https://www.earlybirdbikes.com/about",
+    "https://www.earlybirdbikes.com/service",
+    "https://www.earlybirdbikes.com/rentals-and-demos",
+    "https://www.earlybirdbikes.com/shopridesandevents",
+    "https://www.bicycleranchtucson.com/",
+    "https://www.bicycleranchtucson.com/articles/bike-repair-pg63.htm",
+    "https://www.bicycleranchtucson.com/articles/group-rides-pg68.htm",
+    "https://www.transitcycles.com/",
+    "https://www.transitcycles.com/contact",
+    "https://www.transitcycles.com/about-2",
+    "https://www.transitcycles.com/events-1",
+    "https://www.pimastreetbicycle.com/",
+    "https://www.pimastreetbicycle.com/bicycle-service-and-repair",
+    "https://bicas.org/",
+    "https://bicas.org/bikes/",
+    "https://bicas.org/bikes/community-tools/",
+    "https://bicas.org/bikes/rent-a-bicycle/",
+    "https://bicas.org/women-trans-femme/",
+    "https://bicas.org/wtf-events/",
+    "https://www.ajobikes.com/about/location-pg141.htm",
+    "https://tucsonbicyclerentals.com/",
+    "https://tucsonbicyclerentals.com/rental-road-bikes-tucson/",
+    "https://tucsonbicyclerentals.com/bike-rental-locations/",
+    "https://www.campfirecycling.com/directions",
+    "https://eltourdetucson.org/el-tour-de-tucson/https-www-bikeflights-com-events-el-tour-de-tucson/",
+    "https://eltourdetucson.org/el-tour-de-tucson/bike-shop-partners/",
+    "https://www.bikeflights.com/El-Tour-de-Tucson",
+    "https://uacycling.com/rides/",
+    "https://thejoyofbike.com/shootout-group-ride-tucson/",
+    "https://www.granvillebike.com/marks-cycling-blog/the-tucson-shootout-ride",
+    "https://www.maingatesquare.com/merchant/starbucks/",
+    "https://prestacoffee.com/pages/our-locations",
+    "https://mercadodistrict.com/business/presta-coffee-roasters/",
+    "https://mercadodistrict.com/business/decibel-coffee-works/",
+    "https://www.lebuzzcaffe.com/locations",
+    "https://tucsonfoodie.com/news/le-buzz-caffe",
+    "https://www.bikeaz.org/best-cycling-rides-oro-valley/le-buzz-caffe-coffee-mandatory-cycling-mount-lemon/",
+    "https://locations.brueggers.com/us/az/tucson/11165-north-la-canada",
+    "https://www.thecookiecabin.org/",
+    "https://www.thecookiecabin.org/about",
+    "https://mtlemmon.com/",
+    "https://mtlemmon.com/faqs/",
+    "https://tucsonfoodie.com/guides/eat-drink-mount-lemmon",
+    "https://mtlemmonhotel.com/mt-lemmon-restaurants-dining-guide/",
+    "https://www.rencoffeehouse.com/coffeehouse",
+    "https://www.timemarket.xyz/",
+    "https://joe.coffee/locations/az/tucson/time-market-tucson/",
+    "https://www.beyondbread.com/contact/locations/",
+    "https://tucsonfoodie.com/2018/06/26/cyclist-friendly-cafes/",
+    "https://www.orucase.com/blogs/city-guides/tucson",
+    "https://tucson.com/thisistucson/guides/article_5f7422d6-8e55-11ee-bda4-0f6dd8d06780.html",
+    "https://theradavist.com/hello-bicycle-cafe-and-shop-tucson",
     "https://www.elcharrocafe.com/locations/downtown/",
     "https://hotelcongress.com/restaurants/cup-cafe/",
-    "https://bocatacos.com/",
-    "https://mercadodistrict.com/business/seis-kitchen/",
-    "https://www.tumerico.com/ourstory",
+    "https://hotelcongress.com/about/contact/",
+    "https://bocatacos.com/chef-maria",
+    "https://www.seiskitchen.com/locations",
+    "https://www.tumerico.com/",
     "https://barriobread.com/contact/",
-    "https://www.fairwheelbikes.com/",
-    "https://www.transitcycles.com/contact",
-    "https://www.ajobikes.com/about/location-pg141.htm",
-    "https://bicas.org/",
-    "https://www.bicycleranchtucson.com/",
-    "https://eltourdetucson.org/el-tour-de-tucson/route/"
+    "https://barriobread.com/about/",
+    "https://elguerocanelo.com/",
+    "https://www.5pointstucson.com/location",
+    "https://www.5pointstucson.com/faq",
+    "https://www.thetuxonhotel.com/",
+    "https://www.thetuxonhotel.com/about",
+    "https://www.thetuxonhotel.com/things-to-do-tucson",
+    "https://www.ihg.com/voco/hotels/us/en/tucson/tusvo/hoteldetail",
+    "https://www.expedia.com/Tucson-Hotels-The-Tuxon-Hotel.h206165.Hotel-Information",
+    "https://www.hotelmccoy.com/",
+    "https://www.hotelmccoy.com/locations/tucson",
+    "https://www.hotels.com/ho202768/hotel-mccoy-art-coffee-beer-wine-tucson-united-states-of-america/",
+    "https://www.orbitz.com/Tucson-Hotels-Hotel-McCoy-Art.h188379.Hotel-Information",
+    "https://www.tripadvisor.com/Hotel_Review-g60950-d75243-Reviews-Hotel_Mccoy_Tucson-Tucson_Arizona.html",
+    "https://www.arizonahighways.com/business/hotel-mccoy",
+    "https://www.expedia.com/Tucson-Hotels-DoubleTree-By-Hilton-Tucson-Downtown-Convention-Center.h61523752.Hotel-Information",
+    "https://www.theleokenthotel.com/",
+    "https://www.marriott.com/en-us/hotels/tustx-the-leo-kent-hotel-tucson-a-tribute-portfolio-hotel/overview/",
+    "https://www.expedia.com/Tucson-Hotels-The-Leo-Kent-Hotel.h83978629.Hotel-Information",
+    "https://www.visittucson.org/listing/hotel-congress/145/",
+    "https://www.trivago.com/en-US/oar/hotel-congress-tucson?search=100-1040594",
+    "https://www.kayak.com/Tucson-Hotels_Tucson-Convention-Center.L8769.29704.hotel.ksp",
+    "https://www.tripadvisor.com/HotelsNear-g60950-d561997-Tucson_Convention_Center-Tucson_Arizona.html",
+    "https://downtowntucson.org/explore/hotels",
+    "https://eltourdetucson.org/el-tour-de-tucson/accommodations-and-travel/",
+    "https://www.bikabout.com/tucson",
+    "https://cyclestayguide.com/destinations/tucson-az/",
+    "https://www.tripadvisor.com/HotelsList-Tucson-Hotels-With-Bike-Rentals-zfp18474566.html",
+    "https://www.tripadvisor.com/ShowTopic-g60950-i259-k13459587-Biking_The_Loop_looking_for_close_hotels-Tucson_Arizona.html",
+    "https://www.trainerroad.com/forum/t/tucson-info-where-to-stay/78161",
+    "https://www.pinkbike.com/news/local-flavors-the-complete-guide-to-riding-in-tucson-az.html",
+    "https://tucsonloveletter.com/articles/queer-tucson/",
+    "https://keepthemspinning.com/blogs/record-stores/best-record-stores-tucson",
+    "https://www.woodentoothrecords.com/",
+    "https://www.woodentoothrecords.com/locations",
+    "https://www.ibtstucson.com/",
+    "https://fourthavenue.org/merchant-listings/ibts-bar-food/",
+    "https://localfirstaz.com/news-blog/built-with-intention-lgbtq-friendly-businesses-and-inclusive-communities-across-arizona",
+    "https://gaytucson.com/businesses/antigone-books/",
+    "https://www.newpages.com/bookstore/antigone-books/",
+    "https://www.desertmuseum.org/visit/",
+    "https://www.desertmuseum.org/hours/",
+    "https://www.visittucson.org/listing/heirloom-farmers-markets-rillito-park/25057/",
+    "https://www.heirloomfm.org/",
+    "https://tucsonfoodie.com/2024/10/30/heirloom-farmers-markets-10-years/",
+    "https://tucsonfoodie.com/guides/beer-on-the-loop/",
+    "https://thisistucson.com/bike-friendly-eateries-and-breweries/article_e8030308-8edf-11ee-bcf0-43f62c20ce53.html",
+    "https://www.pueblovidabrewing.com/food-dogs-bikes",
+    "https://www.pueblovidabrewing.com/phonelocationhours",
+    "https://www.bikegaba.org/",
+    "https://www.bikegaba.org/content.aspx?page_id=22&club_id=307669&module_id=780113",
+    "https://www.bikegaba.org/content.aspx?page_id=60&club_id=307669",
+    "https://gatherist.org/groups/greater-arizona-bicycle-association-gaba",
+    "https://gatherist.org/events/1086",
+    "https://gatherist.org/events/1096",
+    "https://www.cactuscycling.org/Guests",
+    "https://www.cactuscycling.org/Schedule-List",
+    "https://www.fugatucson.org/",
+    "https://www.fugatucson.org/events",
+    "https://www.sdmb.org/",
+    "https://www.sdmb.org/events",
+    "https://www.livingstreetsalliance.org/events/cyclovia-tucson-fall-2026",
+    "https://cycloviatucson.org/",
+    "https://flytucson.com/airlines_destinations/airlines.php",
+    "https://flytucson.com/airlines_destinations/nonstop_destinations.php",
+    "https://flytucson.com/parking_transportation/rental_cars.php",
+    "https://flytucson.com/parking_transportation/app_based_ride_services.php",
+    "https://flytucson.com/parking_transportation/public_transit.php",
+    "https://flytucson.com/parking_transportation/cars_limos_and_shuttles.php",
+    "https://www.visittucson.org/listing/groome-transportation/26/",
+    "https://www.visittucson.org/plan-your-visit/transportation/tucson-streetcar/",
+    "https://www.aa.com/i18n/travel-info/baggage/specialty-and-sports.jsp",
+    "https://www.aa.com/i18n/travel-info/baggage/checked-baggage-policy.jsp",
+    "https://support.southwest.com/helpcenter/article/flying-with-a-bike-policy",
+    "https://www.southwest.com/html/customer-service/travel-fees.html",
+    "https://www.delta.com/us/en/baggage/special-items/sporting-equipment",
+    "https://www.delta.com/us/en/baggage/overview",
+    "https://www.alaskaair.com/content/travel-info/baggage/special-baggage/traveling-with-sporting-equipment",
+    "https://www.alaskaair.com/content/travel-info/baggage/checked-bags",
+    "https://suntran.com/how-to-ride/bike-ride/",
+    "https://www.suntran.com/how-to-ride/bus-basics-rider-rules/",
+    "https://www.suntran.com/routes-services/sunlink/",
+    "https://www.azleg.gov/ars/28/00735.htm",
+    "https://www.azleg.gov/ars/28/00812.htm",
+    "https://www.azleg.gov/ars/28/00815.htm",
+    "https://www.azleg.gov/ars/28/00819.htm",
+    "https://law.justia.com/codes/arizona/2018/title-28/section-28-819/",
+    "https://faq.bikeflights.com/support/solutions/articles/13000072585-how-do-i-ship-to-or-from-a-bike-shop-"
   ],
-  "verified": "2026-09-15"
+  "verified": "2026-10-03"
 }

@@ -1,0 +1,168 @@
+[
+  {
+    "slug": "scottsdale-az-scottsdale-cycling-saturday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-04",
+    "last_seen": "2026-10-04",
+    "evidence": "Scottsdale Cycling's Strava event page (the same recurring event that showed Oct 3 at 5:30 am) now lists the next Saturday Ride // Fuss Buss for Sat Oct 10, 2026 at 6:00 am from 8977 N Scottsdale Rd, rated Intermediate / Rolling; the club's Tuesday and Thursday events still show 5:30 am (fetched Oct 4, 2026).",
+    "sources": [
+      "https://www.strava.com/clubs/620243/group_events/814036"
+    ],
+    "changes": {
+      "schedule": "Every Saturday, 6:00 am (5:30 am through Oct 3, 2026), from the same Gainey Village corner as the Tuesday and Thursday rides. Rain usually cancels it.",
+      "time_local": "6:00 am",
+      "start_hhmm": "06:00",
+      "description": "Scottsdale Cycling's Saturday road ride, one step easier than Gainey Thursday: the club rates it intermediate and rolling. Same Gainey Village start as the weekday rides, half an hour later at 6:00 am. The Strava event shows the next date without a login; the route and any notes need a club login.",
+      "refresh": {
+        "notes": "The event page shows the next date and time without a login. The time moved from 5:30 to 6:00 am with the Oct 10, 2026 ride while the Tuesday/Thursday events stayed at 5:30; whether it moves again with the season isn't posted anywhere public."
+      }
+    }
+  },
+  {
+    "slug": "fountain-hills-az-mcdowell-mountain-cycles-sunday-funday-gravel",
+    "outcome": "changed",
+    "checked_on": "2026-10-04",
+    "last_seen": "2026-10-02",
+    "evidence": "McDowell Mountain Cycles' MMC Life page (modified Oct 2, 2026) lists \"Sunday Funday Gravel Ride – 6:30 AM – MMC October 4th & 25th\", about 40 miles and three and a half hours, one group, no-drop, and its October calendar shows both dates at 6:30a (fetched Oct 4, 2026).",
+    "sources": [
+      "https://mcdowellmountaincycles.com/mmc-life/"
+    ],
+    "changes": {
+      "schedule": "Some Sundays, 6:30 am from the shop. Next dates: Oct 4 and Oct 25, 2026.",
+      "time_local": "6:30 am",
+      "start_hhmm": "06:30"
+    }
+  },
+  {
+    "slug": "tucson-az-the-shootout",
+    "outcome": "changed",
+    "checked_on": "2026-10-04",
+    "last_seen": "2026-10-04",
+    "evidence": "Fair Wheel Bikes' group rides page still gives the Shootout's start table (6:30 am from the first Saturday of September, 7:00 am from the second Saturday of October, 7:30 am from the second Saturday of November, 7:00 am from the first Saturday of March, 6:30 am from the first Saturday of April, 6:00 am from the third Saturday of April) and the start near University Boulevard & Euclid Avenue; the listed point was about 2 miles north of that corner, so it is moved to the intersection (OpenStreetMap geometry for E University Blvd and N Euclid Ave, fetched Oct 4, 2026).",
+    "sources": [
+      "https://www.fairwheelbikes.com/service/group-rides/"
+    ],
+    "changes": {
+      "lat": 32.2317,
+      "lng": -110.9595,
+      "geo_precision": "start",
+      "neighborhood": "West University / Main Gate",
+      "start_times": [
+        {
+          "from": "2026-10-10",
+          "start_hhmm": "07:00"
+        },
+        {
+          "from": "2026-11-14",
+          "start_hhmm": "07:30"
+        },
+        {
+          "from": "2027-03-06",
+          "start_hhmm": "07:00"
+        },
+        {
+          "from": "2027-04-03",
+          "start_hhmm": "06:30"
+        },
+        {
+          "from": "2027-04-17",
+          "start_hhmm": "06:00"
+        },
+        {
+          "from": "2027-09-04",
+          "start_hhmm": "06:30"
+        },
+        {
+          "from": "2027-10-09",
+          "start_hhmm": "07:00"
+        },
+        {
+          "from": "2027-11-13",
+          "start_hhmm": "07:30"
+        }
+      ],
+      "schedule": "Every Saturday morning. Fair Wheel Bikes' start table: 6:30 am from the first Saturday of September, 7:00 am from the second Saturday of October (Oct 10, 2026), 7:30 am from the second Saturday of November (Nov 14, 2026), 7:00 am from the first Saturday of March, 6:30 am from the first Saturday of April, 6:00 am from the third Saturday of April. The Scootout leaves five minutes after the A group and the Old-Old Man group ten minutes after.",
+      "refresh": {
+        "notes": "The shop's page carries the whole seasonal start table; the dates in start_times are its Saturdays for 2026–27. The start is the University Blvd & Euclid Ave corner, not the shop."
+      }
+    }
+  },
+  {
+    "slug": "tucson-az-bicas-wtf-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-04",
+    "last_seen": "2026-07-27",
+    "evidence": "BICAS's WTF Events page says the group rides run every last Monday of the month, no-drop, around 5–10 miles, gather 6:30 pm and head out at 7 pm right after the Monday 3–7 pm workshop at 2001 N 7th Ave; the WTF Workshop page, updated July 27, 2026, repeats the last-Monday community events (both fetched Oct 4, 2026).",
+    "sources": [
+      "https://bicas.org/women-trans-femme/wtf-events/",
+      "https://bicas.org/women-trans-femme/"
+    ],
+    "changes": {
+      "schedule": "Last Monday of the month. Gather 6:30 pm at BICAS, roll out 7:00 pm, right after the Monday WTF workshop (3–7 pm).",
+      "time_local": "6:30 pm",
+      "start_hhmm": "19:00",
+      "distance_miles": "5–10",
+      "distance_km": 12,
+      "pace": "No-drop, party pace",
+      "drop_policy": "no-drop",
+      "start_location": {
+        "name": "BICAS",
+        "address": "2001 N 7th Ave, Tucson, AZ 85705"
+      },
+      "lat": 32.24636,
+      "lng": -110.97069,
+      "geo_precision": "start",
+      "description": "A monthly themed night ride for women, trans and femme riders, run out of the BICAS community bike shop. No-drop, around 5 to 10 miles. It follows the weekly WTF workshop, which runs Mondays 3–7 pm, so come early if your bike needs work. The June edition is a Pride ride. All WTF-identifying folks welcome; each month's theme is posted on @bicas_wtf.",
+      "visitor_notes": "Each month's ride and theme is announced on the @bicas_wtf Instagram; the shop's standing page gives the day and time.",
+      "links": {
+        "website": "https://bicas.org/women-trans-femme/wtf-events/",
+        "instagram": "https://www.instagram.com/bicas_wtf/",
+        "other": [
+          "https://bicas.org/women-trans-femme/",
+          "https://bicas.org/one-wtf-pride-ride/",
+          "https://www.instagram.com/bicastucson/"
+        ]
+      },
+      "refresh": {
+        "watch_url": "https://bicas.org/women-trans-femme/wtf-events/",
+        "notes": "The events page carries the time (gather 6:30, roll 7 pm); the workshop page carries the last-Monday rhythm. Month-to-month themes are Instagram-only."
+      }
+    }
+  },
+  {
+    "slug": "san-francisco-ca-different-spokes-jersey-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-04",
+    "last_seen": "2026-10-04",
+    "evidence": "Different Spokes SF's calendar listing for the Oct 10, 2026 Jersey Rides says the Castro group meets 8:45 am and rolls 9:00 am at Jane Warner Plaza, Castro and Market (RideWithGPS route 53843226), and the Sausalito group meets 9:45 am and rolls 10:00 am at Mike's Bikes; the club's standing Jersey Ride page still names Peet's at 16th and Market, so the dated listing wins (fetched Oct 4, 2026).",
+    "sources": [
+      "https://dssf.org/content.aspx?page_id=4091&club_id=17789&item_id=3061126",
+      "https://dssf.org/content.aspx?page_id=22&club_id=17789&module_id=336753",
+      "https://dssf.org/content.aspx?page_id=4001&club_id=17789"
+    ],
+    "changes": {
+      "schedule": "Second Saturday of the month; SF group meets 8:45 am (roll 9:00 am) at Jane Warner Plaza, Castro and Market; Sausalito group meets 9:45 am (roll 10:00 am) at Mike's Bikes.",
+      "start_location": {
+        "name": "Jane Warner Plaza, Castro and Market",
+        "address": "Castro St & Market St, San Francisco, CA 94114"
+      },
+      "lat": 37.76258,
+      "lng": -122.43486,
+      "geo_precision": "start",
+      "description": "The monthly club ride of the Bay Area's LGBTQ+ cycling club. Two groups, one from Jane Warner Plaza in the Castro (48 miles) and one from Mike's Bikes in Sausalito (24 miles), meet in Tiburon for lunch. No sweep, but regular regroups for slower riders. Straight friends are welcome too. Guests can ride three times before joining.",
+      "visitor_notes": "The club's standing Jersey Ride page still says Peet's at 16th and Market; the month's calendar listing gives the current meeting place (Jane Warner Plaza, Castro and Market). Check the listing for the date you're riding.",
+      "links": {
+        "website": "https://dssf.org/content.aspx?page_id=22&club_id=17789&module_id=336753",
+        "other": [
+          "https://dssf.org/content.aspx?page_id=4001&club_id=17789",
+          "https://ridewithgps.com/routes/53843226",
+          "https://ridewithgps.com/routes/38713687"
+        ]
+      },
+      "refresh": {
+        "watch_url": "https://dssf.org/content.aspx?page_id=4001&club_id=17789",
+        "notes": "The ClubExpress calendar (page_id=4001) lists each month's Jersey Rides with the current start; the standing Jersey Ride page (module_id=336753) lags on the meeting place."
+      }
+    }
+  }
+]

@@ -377,3 +377,74 @@ a.tel{white-space:nowrap;text-decoration:underline;text-decoration-color:var(--c
 .towns-az .row-meta{font-family:var(--mono);font-size:11px;letter-spacing:.08em}
 .towns-jump{display:flex;flex-wrap:wrap;gap:0;margin:0 0 18px;border-top:1px solid var(--asphalt);border-left:1px solid var(--asphalt)}
 .towns-jump a{flex:1 1 auto;min-height:44px;display:flex;align-items:center;justify-content:center;padding:0 14px;border-right:1px solid var(--asphalt);border-bottom:1px solid var(--asphalt);font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+
+/* ——— /towns/: the tap-a-town map (Oct 3, 2026; scripts/towns-map.js, zoom by /rides/map.js) ———
+   The map rules are the rides directory's (rides.css, Passes 16–17, 22), copied here because /towns/
+   loads this sheet and not that one. Keep the two in step. The towns map draws every state as a
+   hairline on paper, the states with towns a shade deeper (a link to the state page on desktop),
+   full guides as the solid ring, event towns hollow. Under 640px /rides/map.js trades the labels
+   for a bubble per region: a tap circle 44px across, a name that reads at 12px on a 360px screen. */
+.tw-map{margin:0 0 var(--sec,56px)}
+.tw-map h2{margin-bottom:12px}
+.gr-map{margin:0;position:relative}
+.gr-map-svg{display:block;width:100%;height:auto;overflow:visible}
+.gr-map--us .gr-map-svg{max-height:none}
+.tw-st{fill:var(--paper);stroke:var(--dust-deep);stroke-width:.7;stroke-linejoin:round;vector-effect:non-scaling-stroke;transition:fill .15s ease}
+.tw-st--on{fill:var(--bone-2)}
+.tw-states a:hover .tw-st,.tw-states a:focus-visible .tw-st{fill:var(--dust)}
+.tw-states a:focus{outline:none}
+.gr-map-edge{fill:none;stroke:var(--asphalt);stroke-width:1.2;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
+.gr-map-hub{fill:var(--paper);stroke:var(--asphalt);stroke-width:1.6;vector-effect:non-scaling-stroke}
+.gr-map-hub--here{fill:var(--asphalt)}
+.gr-map-labels text{font-family:var(--mono);font-size:14px;letter-spacing:.02em;fill:var(--asphalt);paint-order:stroke;stroke:var(--paper);stroke-width:4px;stroke-linejoin:round}
+.gr-map-labels .gr-map-name{font-weight:700}
+.gr-map-labels .gr-map-n{fill:var(--creosote-ink)}
+.gr-map-labels a{cursor:pointer}
+.gr-map-labels a:hover .gr-map-name,.gr-map-labels a:focus .gr-map-name{text-decoration:underline}
+.gr-map-labels a:hover .gr-map-hub{fill:var(--asphalt)}
+.gr-map-labels a:focus{outline:none}
+.gr-map-labels a:focus-visible .gr-map-hub{stroke-width:3}
+.gr-map-hit{fill:transparent;stroke:none;pointer-events:all}
+.gr-map figcaption{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:6px 18px;margin-top:10px;font-family:var(--mono);font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.gr-map figcaption span{display:inline-flex;align-items:center;gap:8px}
+.tw-sw{display:inline-block;width:12px;height:12px;border-radius:50%;border:1.5px solid var(--asphalt);background:var(--paper);vertical-align:-1px}
+.tw-sw--full{background:var(--asphalt)}
+.tw-key-hint{margin-left:auto;color:var(--creosote-ink)}
+.gr-map figcaption .tw-key-ph{display:none}
+@media (max-width:640px){.gr-map figcaption .tw-key-desk{display:none}.gr-map figcaption .tw-key-ph{display:inline-flex}}
+.gr-chip{font:400 .6875rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--asphalt);background:var(--bone);border:1px solid var(--dust);border-radius:0;padding:8px 11px;cursor:pointer;text-decoration:none}
+.gr-chip:hover{border-color:var(--asphalt)}
+.gr-chip[aria-pressed="true"]{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
+/* the phone layer: nothing here shows until map.js marks the map .is-live, and it only does that up to 640px */
+.gr-map-regions,.gr-map-zoom,.gr-map-chips,.gr-map-back,.gr-map-reset{display:none}
+@media (max-width:640px){
+  .gr-map--zoomable.is-live .gr-map-svg{overflow:hidden;touch-action:manipulation}
+  .gr-map--zoomable.is-live .gr-map-labels{display:none}
+  .gr-map--zoomable.is-live .tw-states a{pointer-events:none}
+  .gr-map--zoomable.is-live .gr-map-regions{display:inline;transition:opacity .2s ease}
+  .gr-map--zoomable.is-live.is-zoomed .gr-map-regions{opacity:0;pointer-events:none}
+  .gr-map--zoomable.is-live .gr-map-zoom{display:inline;opacity:0;pointer-events:none;transition:opacity .2s ease}
+  .gr-map--zoomable.is-live .gr-map-zoom.is-on{opacity:1;pointer-events:auto}
+  .gr-map--zoomable.is-live .gr-map-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+  .gr-map--zoomable.is-live.is-zoomed .gr-map-back{display:inline-flex;position:absolute;top:0;left:0;background:var(--paper);z-index:1}
+  .gr-map-chips .gr-chip,.gr-map-back{min-height:44px;align-items:center;gap:7px;-webkit-tap-highlight-color:transparent}
+  .gr-map-chip-n{opacity:.7;font-variant-numeric:tabular-nums}
+}
+.gr-map-reg{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.gr-map-reg:focus{outline:none}
+.gr-map-reg-hit,.gr-map-zhit{fill:transparent}
+.gr-map-reg-dot{fill:var(--asphalt);stroke:var(--paper);stroke-width:2;vector-effect:non-scaling-stroke;transition:fill .15s ease}
+.gr-map--towns .gr-map-reg-n{font-family:var(--mono);font-size:40px;font-weight:700;fill:var(--bone);pointer-events:none;font-variant-numeric:tabular-nums}
+.gr-map-reg--one .gr-map-reg-dot{fill:var(--paper);stroke:var(--asphalt);stroke-width:1.6}
+.gr-map-reg--one .gr-map-reg-dot--full{fill:var(--asphalt)}
+.gr-map--towns .gr-map-reg-name{font-family:var(--mono);font-size:34px;font-weight:700;letter-spacing:.02em;fill:var(--asphalt);paint-order:stroke;stroke:var(--paper);stroke-width:10px;stroke-linejoin:round;pointer-events:none}
+.gr-map-reg:active .gr-map-reg-dot,.gr-map-reg:focus-visible .gr-map-reg-dot{fill:var(--creosote-ink)}
+.gr-map-reg--one:active .gr-map-reg-dot,.gr-map-reg--one:focus-visible .gr-map-reg-dot{fill:var(--bone-2);stroke-width:3}
+.gr-map-zoom text{font-family:var(--mono);letter-spacing:.02em;fill:var(--asphalt);paint-order:stroke;stroke:var(--paper);stroke-linejoin:round}
+.gr-map-zoom .gr-map-name{font-weight:700}
+.gr-map-zoom .gr-map-n{fill:var(--creosote-ink);font-weight:400}
+.gr-map-zoom a{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.gr-map-zoom a:focus{outline:none}
+.gr-map-zoom a:active .gr-map-hub,.gr-map-zoom a:focus-visible .gr-map-hub{fill:var(--asphalt)}
+.gr-map-zoom a:focus-visible .gr-map-name{text-decoration:underline}
+@media (prefers-reduced-motion:reduce){.tw-st,.gr-map--zoomable .gr-map-regions,.gr-map--zoomable .gr-map-zoom,.gr-map-reg-dot{transition:none}}

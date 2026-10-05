@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:palm-desert-ca-tri-a-bike-saturday-fun-ride@cycleforchange.org
+DTSTAMP:20261003T000000Z
+DTSTART;TZID=America/Los_Angeles:20261010T103000
+DTEND;TZID=America/Los_Angeles:20261010T123000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270302T235959Z
+SUMMARY:Tri-A-Bike Saturday Fun Ride — Palm Desert\, CA
+LOCATION:In front of Tri-A-Bike\, 44841 San Pablo Ave\, Palm Desert\, CA 
+ 92260
+DESCRIPTION:Pace: a fun ride; the shop says all types of bikes are welcom
+ e.\nSchedule: Saturdays\, 10:30 am\, from the front of the store. The sh
+ op's page says the weekly rides start in October 2026..\nConfirm with th
+ e host before you go.\nhttps://cycleforchange.org/rides/palm-desert-ca-t
+ ri-a-bike-saturday-fun-ride/
+URL:https://cycleforchange.org/rides/palm-desert-ca-tri-a-bike-saturday-f
+ un-ride/
+END:VEVENT
+END:VCALENDAR

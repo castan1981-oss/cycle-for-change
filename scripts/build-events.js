@@ -30,6 +30,7 @@ const path = require("path");
 const CHROME = require("./chrome.js"); // shared header, footer, fonts
 const BLOCKS = require("./blocks.js"); // how-it's-built tiles + the ride-report form (Pass 3)
 const TOWNS = require("./towns.js");   // the town layer: the strip every event, calendar row and ride page carries (Sept 30, 2026)
+const { townsMap } = require("./towns-map.js");   // the tap-a-town US map on /towns/ (Oct 3, 2026)
 const PH = require("./photos.js");     // Pass 25: Robert's photos (alt text, place, the figure)
 // Pass 25 (Oct 4, 2026): a town guide carries Robert's photo when he has one from the town or right by it
 // (the caption says where it was really taken: Del Mar's is Encinitas, a few miles up the coast).
@@ -37,7 +38,9 @@ const TOWN_PHOTO = { "seattle-wa": "seattle-path", "del-mar-ca": "encinitas-beac
 
 const ROOT = path.resolve(__dirname, "..");
 const DATA = path.join(ROOT, "data");
-const OUT = path.join(ROOT, "cfc-site");
+// CFC_OUT=<dir> writes the pages somewhere else (an editor reading a draft guide while another build runs); the
+// art, rides and calendar are still read from the repo. The real build never sets it.
+const OUT = process.env.CFC_OUT ? path.resolve(process.env.CFC_OUT) : path.join(ROOT, "cfc-site");
 const SITE = "https://cycleforchange.org";
 const TODAY = new Date().toISOString().slice(0, 10);
 // One form on these pages: `ride-report` (scripts/blocks.js), for adding or fixing a listing.
@@ -542,16 +545,15 @@ function rideLine(it, where, lead) {
   if (!slugs.length) return "";
   const rs = slugs.map((s) => rideLookup(s, where)).filter((r) => r.listed);
   if (!rs.length) return "";
-  return `<p class="place-meta ride-line">${esc(lead || (rs.length === 1 ? "The ride" : "The rides"))}: ${rs.map((r) => `<a href="/rides/${r.slug}/">${esc(r.name)}</a> <span class="ride-when">(${esc(rideWhen(r))})</span>`).join("; ")} &rarr;</p>`;
+  return `<p class="place-meta ride-line">${esc(lead || (rs.length === 1 ? "The ride" : "The rides"))}: ${rs.map((r) => `<a href="/rides/${r.slug}/">${esc(r.name)}</a>${rideWhen(r) ? ` <span class="ride-when">(${esc(rideWhen(r))})</span>` : ""}`).join("; ")} &rarr;</p>`;
 }
 // The house fold (Pass 15/21): crawled, one tap for a person.
 const fold = (summary, html, cls = "") => `<details class="dir-fold town-fold${cls ? " " + cls : ""}"><summary>${summary}</summary><div class="town-fold-body">${html}</div></details>`;
 
 function townPage(t) {
   const dest = t.kind === "destination";
-  const title = dest
-    ? `${t.name}, ${t.state_code} for cyclists — rides, bike shops, coffee, where to stay, bringing your bike`
-    : `${t.name}, ${t.state_code} for cyclists — bike events, weather, where to stay, bike shops`;
+  // Oct 4, 2026 (search pass): titles under 60 characters with the suffix, the query in the title and the h1
+  const title = dest ? `Cycling in ${t.name}, ${t.state_code}: the guide` : `${t.name}, ${t.state_code} for cyclists`;
   const W = `towns/${t.id}`;
   const description = truncate(plain(t.summary, W), 155);
   const crumbs = breadcrumb([{ name: "Towns", url: "/towns/" }, { name: t.state, url: `/events/state/${t.state_slug}/` }, { name: t.name, url: t.url }]);
@@ -599,14 +601,13 @@ function townPage(t) {
   ${crumbs.html}
   <article class="town">
     <p class="eyebrow">${esc(t.county ? t.county + " · " : "")}${esc(t.state)}${t.elevation_ft ? ` · ${Number(t.elevation_ft).toLocaleString("en-US")} ft` : ""}</p>
-    <h1>${esc(t.name)}, ${esc(t.state)}</h1>
+    <h1>${dest ? `Cycling in ${esc(t.name)}` : `${esc(t.name)}, ${esc(t.state)}`}</h1>
     ${t.tagline ? `<p class="tagline">${esc(t.tagline)}</p>` : ""}
 
     <nav class="res-grid" aria-label="${dest ? "The guide" : "Travel resources"}">
       ${pages.map((r) => { const [k, b, s] = CARD[r.seg](count(t, r)); return `<a class="res-card" href="${t.url}${r.seg}/">${mark(MARK_SEG[r.seg], "mk mk--res")}<span class="res-k">${esc(k)}</span><b>${esc(b)}</b><span>${esc(s)}</span></a>`; }).join("\n      ")}
     </nav>
 
-    <h2 class="visually-hidden">Cycling in ${esc(t.name)}</h2>
     <p class="lede">${rich(t.summary, W + ".summary")}</p>
 
     ${facts([
@@ -681,13 +682,13 @@ const affiliateUrls = (t) => new Set((t.travel_links || []).filter((l) => l.kind
 const outLink = (t, url, text) => `<a href="${attr(url)}" rel="${affiliateUrls(t).has(url) ? "sponsored noopener" : "noopener"}">${text}</a>`;
 
 const RESOURCE = {
-  hotels: { key: "hotels", seg: "hotels", always: true, h: (t) => `Hotels in ${t.name} for cyclists`, title: (t) => `Hotels in ${t.name}, ${t.state_code} for cyclists — where to stay with a bike`, type: "LodgingBusiness", verb: "stay", intro: (t) => `Places to stay in ${t.name} when you are in town to ride. Picked for being near the riding, easy with a bike, or cheap. Book early for event weekends. Rooms go first.` },
-  restaurants: { key: "restaurants", seg: "restaurants", always: true, h: (t) => `Restaurants in ${t.name} for cyclists`, title: (t) => `Restaurants in ${t.name}, ${t.state_code} — where to eat before and after a ride`, type: "Restaurant", verb: "eat", intro: (t) => `Where to eat in ${t.name} the night before a ride and the afternoon after. Nothing fancy. Real food, real portions, places that are open when you need them.` },
-  "bike-shops": { key: "bike_shops", seg: "bike-shops", always: true, h: (t) => `Bike shops in ${t.name}: repairs, parts, rentals`, title: (t) => `Bike shops in ${t.name}, ${t.state_code} — bike repair, rentals, and shops that build a shipped bike`, type: "BikeStore", verb: "fix", intro: (t) => `Bike shops in ${t.name} that do repairs. If something breaks in transit or the night before, start here. Call ahead on event weekends. Mechanics get slammed.` },
-  coffee: { key: "coffee", seg: "coffee", h: (t) => `Coffee in ${t.name} for cyclists`, title: (t) => `Coffee in ${t.name}, ${t.state_code} for cyclists — where the rides start and end`, type: "CafeOrCoffeeShop", verb: "coffee", intro: (t) => `Where riders in ${t.name} start the day and finish the ride. Open early, near the routes, fine with a table of people in bibs. The ones marked ride-out sit at a group ride's start; the note says which ride and when.` },
-  culture: { key: "culture", seg: "culture", h: (t) => `${t.name} off the bike: record stores, bookshops, bars`, title: (t) => `${t.name}, ${t.state_code} off the bike — record stores, bookshops, bars and what to do after the ride`, type: "LocalBusiness", verb: "off the bike", intro: (t) => `What to do in ${t.name} with the afternoon after the ride and the evening before it. A short list, not a city guide: the record store, the bookshop, the bar, the market.` },
-  routes: { key: "routes", seg: "routes", h: (t) => `Rides in ${t.name}: the routes to bring your bike for`, title: (t) => `Bike routes in ${t.name}, ${t.state_code} — road, gravel, the climb and the easy one, with maps`, verb: "ride", intro: (t) => `The rides locals in ${t.name} actually do, each with a public route page you can load on your computer. Real miles, real feet, where it starts, where the water is, and the line about what will get you hurt.` },
-  "bring-your-bike": { key: "bring_your_bike", seg: "bring-your-bike", h: (t) => `Should you bring your bike to ${t.name}?`, title: (t) => `Bringing your bike to ${t.name}, ${t.state_code} — fly, ship or rent, getting around, the rules`, verb: "bring the bike", intro: (t) => `` },
+  hotels: { key: "hotels", seg: "hotels", always: true, h: (t) => `Hotels in ${t.name} for cyclists`, title: (t) => `Hotels in ${t.name}, ${t.state_code} for cyclists`, type: "LodgingBusiness", verb: "stay", intro: (t) => `Places to stay in ${t.name} when you are in town to ride. Picked for being near the riding, easy with a bike, or cheap. Book early for event weekends. Rooms go first.` },
+  restaurants: { key: "restaurants", seg: "restaurants", always: true, h: (t) => `Restaurants in ${t.name} for cyclists`, title: (t) => `Restaurants in ${t.name}, ${t.state_code} for cyclists`, type: "Restaurant", verb: "eat", intro: (t) => `Where to eat in ${t.name} the night before a ride and the afternoon after. Nothing fancy. Real food, real portions, places that are open when you need them.` },
+  "bike-shops": { key: "bike_shops", seg: "bike-shops", always: true, h: (t) => `Bike shops in ${t.name}: repairs, parts, rentals`, title: (t) => `Bike shops in ${t.name}, ${t.state_code}: repair, rentals`, type: "BikeStore", verb: "fix", intro: (t) => `Bike shops in ${t.name} that do repairs. If something breaks in transit or the night before, start here. Call ahead on event weekends. Mechanics get slammed.` },
+  coffee: { key: "coffee", seg: "coffee", h: (t) => `Coffee in ${t.name} for cyclists`, title: (t) => `Coffee in ${t.name}, ${t.state_code} for cyclists`, type: "CafeOrCoffeeShop", verb: "coffee", intro: (t) => `Where riders in ${t.name} start the day and finish the ride. Open early, near the routes, fine with a table of people in bibs. The ones marked ride-out sit at a group ride's start; the note says which ride and when.` },
+  culture: { key: "culture", seg: "culture", h: (t) => `${t.name} off the bike: record stores, bookshops, bars`, title: (t) => `${t.name}, ${t.state_code} off the bike`, type: "LocalBusiness", verb: "off the bike", intro: (t) => `What to do in ${t.name} with the afternoon after the ride and the evening before it. A short list, not a city guide: the record store, the bookshop, the bar, the market.` },
+  routes: { key: "routes", seg: "routes", h: (t) => `Bike routes in ${t.name}`, title: (t) => `Bike routes in ${t.name}, ${t.state_code}`, verb: "ride", intro: (t) => `The rides locals in ${t.name} actually do, each with a public route page you can load on your computer. Real miles, real feet, where it starts, where the water is, and the line about what will get you hurt.` },
+  "bring-your-bike": { key: "bring_your_bike", seg: "bring-your-bike", h: (t) => `Should you bring your bike to ${t.name}?`, title: (t) => `Bringing your bike to ${t.name}, ${t.state_code}`, verb: "bring the bike", intro: (t) => `` },
 };
 
 const FOCUS_LABEL = { lgbtq: "LGBTQ+", "no-drop": "No-drop", beginner: "Beginner friendly", "women-trans-femme": "Women / trans / femme", bipoc: "BIPOC", family: "Family", gravel: "Gravel" };
@@ -948,12 +949,17 @@ function townsIndex() {
   // Pass 22: a traveller finds a town fast — the full guides first, then by state, then a plain A–Z list
   const guides = sorted.filter((t) => t.kind === "destination");
   const az = [...towns].sort((a, b) => a.name.localeCompare(b.name));
+  // Oct 3, 2026 — Robert: "a better USA map showing a way to click on them." The map is the first pick:
+  // every town on it is a link (scripts/towns-map.js); on a phone it zooms by region (/rides/map.js).
+  const map = townsMap(towns);
   const body = `
   <article class="index">
     <p class="eyebrow">${towns.length} towns &middot; ${stateList.length} states${destinations ? ` &middot; ${destinations} full guide${destinations === 1 ? "" : "s"}` : ""}</p>
     <h1>Town guides for cyclists</h1>
     <p class="lede">Where to ride, sleep, eat and get the bike fixed in every town we list.</p>
-    <nav class="towns-jump" aria-label="Find a town">${guides.length ? `<a href="#guides">Full guides</a>` : ""}<a href="#az">A to Z</a><a href="#by-state">By state</a></nav>
+    <nav class="towns-jump" aria-label="Find a town">${map ? `<a href="#map">On the map</a>` : ""}${guides.length ? `<a href="#guides">Full guides</a>` : ""}<a href="#by-state">By state</a><a href="#az">A to Z</a></nav>
+    ${map ? `<section class="tw-map" aria-labelledby="map"><h2 id="map">Where are you going? Tap a town</h2>${map}
+    </section>` : ""}
     ${guides.length ? `<section aria-labelledby="guides"><h2 id="guides">The full guides</h2>
       <p class="mute">Routes, the ride-out coffee, who fixes or rents a bike, where to sleep with it, how to get it there.</p>
       <div class="tiles-p tiles-p--towns">
@@ -974,6 +980,7 @@ function townsIndex() {
     </section>
 ${BLOCKS.REPORT({ thing: "place", compact: true })}
   </article>
+${map ? `<script src="/rides/map.js" defer></script>` : ""}
 `;
   return head({ title, description, url, ld: [] }) + body + foot();
 }
