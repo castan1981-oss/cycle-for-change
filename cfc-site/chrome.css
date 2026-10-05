@@ -6,6 +6,15 @@
    /rides/rides.css, /styles.css, /tonight/tonight.css) comes after it.
    Creosote house: Outfit + Space Mono. Volt = "live" only (the tally dot, hover). */
 
+/* Overpass from Google Fonts carries a zero-width middle dot (U+00B7), so "one·n·ten" read as
+   "onenten" everywhere. For that one character the browser is told to use a local face instead;
+   a later @font-face with a matching unicode-range wins the glyph, nothing else changes.
+   One face per weight the site loads: Chrome prefers an exact weight over a range when it picks. */
+@font-face{font-family:"Overpass";font-weight:400;src:local("Helvetica Neue"),local("Helvetica"),local("Arial"),local("Roboto"),local("Segoe UI");unicode-range:U+00B7}
+@font-face{font-family:"Overpass";font-weight:600;src:local("Helvetica Neue"),local("Helvetica"),local("Arial"),local("Roboto"),local("Segoe UI");unicode-range:U+00B7}
+@font-face{font-family:"Overpass";font-weight:700;src:local("Helvetica Neue"),local("Helvetica"),local("Arial"),local("Roboto"),local("Segoe UI");unicode-range:U+00B7}
+@font-face{font-family:"Overpass";font-weight:800;src:local("Helvetica Neue"),local("Helvetica"),local("Arial"),local("Roboto"),local("Segoe UI");unicode-range:U+00B7}
+@font-face{font-family:"Overpass";font-weight:900;src:local("Helvetica Neue"),local("Helvetica"),local("Arial"),local("Roboto"),local("Segoe UI");unicode-range:U+00B7}
 :root{
   --bone:#E1DFDB;
   --bone-2:#D7D5D0;
