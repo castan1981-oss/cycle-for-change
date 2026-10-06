@@ -27,7 +27,7 @@ const VOCAB = {
 const FIELD_ORDER = [
   "slug", "name", "name_en", "kind", "status", "status_note", "status_since",
   "city", "neighborhood", "region", "state", "country", "lat", "lng", "geo_precision", "tz",
-  "discipline", "schedule", "days", "time_local", "start_hhmm", "start_times", "frequency", "monthly_rule", "season", "season_months",
+  "discipline", "schedule", "days", "time_local", "start_hhmm", "start_hhmm_by_hand", "start_times", "frequency", "monthly_rule", "dates", "season", "season_months",
   "start_location", "distance_km", "distance_miles", "duration", "duration_min", "pace", "drop_policy",
   "host", "founded_year", "founded_note", "cost", "language", "visitor_notes", "description",
   "links", "inclusive_focus", "sources", "verified_on", "last_seen", "evidence", "confidence", "refresh",
