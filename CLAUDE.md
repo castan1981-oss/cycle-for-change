@@ -375,6 +375,14 @@ the form as CSV until Robert picks one.
   `Search Lab: <what should move> · <which measure> · read <date>` (2 weeks out for indexing, 4
   for rankings). The Monday run reads these.
 
+### Analytics
+- Google Analytics 4, property "Cycle for Change", measurement ID `G-DWNR81WXS3`. The tag is added by
+  **Netlify snippet injection** (Site settings → Build & deploy → Post processing), not by the repo —
+  don't add a second copy. Search Console: the `https://cycleforchange.org/` URL-prefix property.
+- Key events, sent from `/chrome.js` and `/home.js` via `cfcTrack()` only when `gtag` exists:
+  `sign_up` (mile-updates signup), `org_ride_click` (a tap to RunSignup / one·n·ten / the Center /
+  SFAF), `ride_host_click` (a tap out to a group ride's host). No personal data in any event.
+
 ## 8. Rider pages — CONCEPT ONLY, do not build (Oct 4, 2026)
 
 Robert's idea: riders post a ride (ride file, photos, a clip, a few words) in two minutes, it lands
