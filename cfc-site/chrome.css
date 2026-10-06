@@ -325,3 +325,9 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .link{font-size:.9375rem;font-weight:700;letter-spacing:0;text-transform:none;gap:6px;padding-bottom:3px;border-bottom-width:1.5px;white-space:normal}
 .link::after{font-weight:400}
 .btn,.btn--sm{font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:.8125rem}
+
+/* —— Pass 33 (Oct 6, 2026): the wordmark is plain type; the footer opens on it. The stencil is retired. —— */
+.brand-word{font-weight:800;font-size:15px;letter-spacing:0;text-transform:none;white-space:nowrap;color:var(--asphalt)}
+.theme-dark .brand-word{color:var(--bone)}
+.foot-word{margin:0 0 clamp(20px,3vw,32px);font-weight:900;font-size:clamp(26px,3vw,40px);letter-spacing:-.02em;line-height:1;color:var(--paper)}
+.foot-sign{display:none}

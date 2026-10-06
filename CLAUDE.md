@@ -81,25 +81,37 @@ scripts/apply-chrome.py`. Never hand-edit one page's chrome.
   first, then 820, 1024, 1440.
 - Headless Chromium can't decode H.264. To test the films, make VP9 copies in a scratch folder and
   serve those; never commit them.
-- After a picture changes, bump the file number (`sign-print-4.jpg` → `-5`). Safari and phones cache
-  images hard.
+- After a picture changes, give the file a new name (`home-robert.jpg` → `home-robert-2.jpg`). Safari
+  and phones cache images hard.
 
 ### Shipping
 - Branch + PR, never push to main. List open PRs first (`gh api repos/castan1981-oss/cycle-for-change/pulls`);
   from the container GraphQL is blocked, so create/merge with `gh api …/pulls` and
   `gh api -X PUT …/pulls/N/merge`. Public-page PRs carry a Search Lab line (§7).
 
-## 3. Brand and design — Lane Paint (frozen until Dec 1, 2027)
+## 3. Brand and design — "direction A" (Pass 33, Oct 6, 2026)
 
 ### The mark
-- **CYCLE FOR** as hand-drawn road-stencil letters — SVG paths in `scripts/chrome.js` (`#lpC`,
-  `#lpY`, …), never a font — followed by a **rose bar: the blank**. The stencil only ever spells
-  CYCLE FOR; anything else goes on a rose plate in Overpass 900.
-- Stroke 16 (18 only under 120px). The bar is always rose: smeared rose on light grounds, powder
-  rose on dark.
-- The homepage sign: CYCLE FOR + the blank; a visitor types and the plate changes. The footer:
-  the stencil with "change" on the powder-rose plate. The wheel (`mark.svg`, `assets/logo.svg`
-  are leftovers) and "10000" are not marks; the kit's mark is 10K.
+- **The wordmark is plain type: "Cycle for Change" in Overpass 800**, sentence case —
+  `<span class="brand-word">` in the header (`scripts/chrome.js` → `MARK`), `.foot-word` opening the
+  footer. No stencil, no bar, no plate, no sign. The road-stencil letters (Lane Paint, Passes 26–32)
+  are retired; chrome.js carries no letter paths. The wheel (`mark.svg`, `assets/logo.svg` are
+  leftovers) and "10000" are not marks; the kit's mark is 10K.
+- How this was decided: after Pass 32 Robert said "I don't love any of it." Three homepage directions
+  went on a canvas (https://claude.ai/artifact/4HsohTHQ7kTxaC9dxKFFVJ); he picked **A, "the picture"**.
+  Design moves of this size go on a canvas first, never straight to the live site.
+
+### The homepage (`scripts/build-home.js`, the Pass 33 block at the foot of `/home.css`)
+- First screen: one photograph fills it (`img/home-robert.jpg` 1500×2000 and `-phone.jpg` 900×1200
+  — Robert on the bridge, untouched), a dark fade at its foot, the h1 "I ride because it changed me.",
+  one sub line, one button (Ride with me) and one text link (The last ride). The nav is clear over
+  the photo (`data-solid="false"`) and bone once scrolled.
+- Then, in order: the numbers (3,573 · 97 · 10,000 as three tiles), the last rides on tar (the log as
+  plain bars; `#log[data-max="4"]`), why ("It always says cycling."), the orgs as a hairline list with
+  the date in rose, next up (one·n·ten details + RunSignup), find a group ride, how this works
+  (numbered 1–3), read, footer. No icons, no graphics, no sign, nothing painted.
+- home.js hooks that must stay: `[data-miles]`, `#rideCount`, `#daysTo`, `#stravaLink`, `#log`,
+  `#bar`, a section with class `hero`.
 
 ### After Hours palette (token names are old; values are new — keep the names, every page uses them)
 `--bone` concrete #E1DFDB · `--bone-2` #D7D5D0 · `--paper` plaster #EFEDEA · `--dust` patina
@@ -108,8 +120,8 @@ the accent · `--creosote-ink` #8F3E4A, small rose text on light (4.5:1) · `--c
 `--volt` powder rose #D9B1AA, rose on dark · `--mute` gunmetal #4A4E55 · `--pool` drained pool
 #2C4F55 (footer) · `--asphalt` bruise #1C1A22 · `--tar` #141218.
 
-Rose means the blank and wet paint. Buttons and links are plaster/ink, not rose. Small rose text
-uses `--creosote-ink`. "Creosote", "volt" and "bone" are only token names now — never colors,
+Rose is the one accent: a date, a figure, one word in a heading. Buttons and links are plaster/ink,
+not rose. Small rose text uses `--creosote-ink`. "Creosote", "volt" and "bone" are only token names now — never colors,
 never words in copy or briefs.
 
 ### Type
@@ -127,12 +139,9 @@ never words in copy or briefs.
 
 ### Graphics
 - **The mark family** — `cfc-site/rides/marks.svg`: a symbol sprite on a 24 grid, one 1.7 stroke,
-  round caps, `currentColor`, `.mk` base class. Pick a mark by meaning, never to decorate. Add new
-  marks to the sprite (homepage ones are inlined in build-home.js as `#mkPhx`, `#mkOjai`, `#mkSF`,
-  `#mkRide`, `#mkWrite`, `#mkOrgs`).
-- Graphics are **drawn clean — never painted, worn or grained.** The only wear on the site is the
-  big desktop hero stencil (`#lpWorn`). `#lpWornSoft` / `#lpRoller` are a small hand edge only (no
-  holes, no streaks); on phones the stencil is clean (`.sign-mark [filter]{filter:none}`).
+  round caps, `currentColor`, `.mk` base class. Used on the inner pages (rides, events, towns,
+  resources). Pick a mark by meaning, never to decorate. The homepage carries no marks.
+- Graphics are **drawn clean — never painted, worn or grained.** No SVG filters anywhere.
 - Square corners, hairlines, no shadows, no pills, no gradient washes or grain over photos. Photo
   edges dissolve into the page (`mask-image`, the `.ph` figure) — no hard seams, no chrome boxed on
   a picture.
@@ -385,7 +394,7 @@ says so** — this note is here so rides/towns work doesn't contradict the plan.
 
 ## 9. Kit
 
-The kit is reopened. It follows Lane Paint (After Hours palette, Overpass, the stencil family).
+The kit is reopened. It follows the site (After Hours palette, Overpass, the plain wordmark); the stencil is retired there too.
 **10K is the wearable mark**; "10000" never goes on kit. Old lock specs (Creosote colors, Outfit,
 volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `kit-handoff/`
 (local); treat anything there that predates Oct 5, 2026 as the previous state.
@@ -396,10 +405,10 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - **Only Robert is recognisable.** Riders from behind or far off are fine; oncoming faces get
   cropped. Other people need their OK.
 - Captions say where the picture was really taken (place · month).
-- The homepage hero (Pass 32) is Robert on the canal path, **clear, crisp, ungraded**:
-  `img/sign-print-4.jpg` (1200×1600) and `-4-phone.jpg` (960×1280). Phones: the photo fills the
-  first screen (`object-position:62% 0`), the sign sits over its lower half under a scrim sized to
-  the picture. A full-resolution export would sharpen desktop at 2x — ask Robert when convenient.
+- The homepage hero (Pass 33) is Robert on the bridge, **clear, crisp, ungraded**:
+  `img/home-robert.jpg` (1500×2000) and `-phone.jpg` (900×1200), from the stockpile
+  (`photos/01-riding/riding-2025-10-23-phoenix-028.jpg`). The freeway cars in that frame sit under
+  the fade on phones and the side fade on desktop; if the crop changes, check them.
   `tools/sr.py` (upscaling) needs opencv-contrib, which the sandbox lacks.
 - Inner-page photos: originals in `cfc-site/photos/<key>.jpg`, graded copies in `cfc-site/img/ph/`,
   registered in `scripts/photos.js`. Never the first thing on a phone on a rides hub.
@@ -441,3 +450,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-05 — Passes 27–29: lane-paint homepage, screenprint (later dropped), type retyped (no tracked caps; buttons keep caps).
 - 2026-10-05 — Pass 30 clean paint, first screen on phones; Pass 31 org/step marks drawn clean; Pass 32 clear ungraded hero photo.
 - 2026-10-06 — Instruction files rewritten to the no-pledge model; ride-recap bot disabled; mile-updates email rebuilt.
+- 2026-10-06 — Pass 33 "direction A": the picture-first homepage Robert picked from a canvas; the stencil retired, plain wordmark on every page.
