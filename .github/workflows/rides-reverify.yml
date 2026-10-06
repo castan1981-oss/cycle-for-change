@@ -17,7 +17,7 @@ on:
     inputs:
       count:
         description: "refresh: how many rides from the top of the queue"
-        default: "40"
+        default: "80"
       mode:
         description: "refresh = re-check the queue · discover = find rides in an area"
         type: choice
@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
-      COUNT: ${{ github.event.inputs.count || '40' }}
+      COUNT: ${{ github.event.inputs.count || '80' }}
       MODE: ${{ github.event.inputs.mode || 'refresh' }}
       AREA: ${{ github.event.inputs.area || '' }}
     steps:

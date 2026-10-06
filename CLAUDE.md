@@ -321,7 +321,7 @@ the form as CSV until Robert picks one.
 - Mondays, Phoenix time: 2 am `rides-watch.yml` (`tools/rides-reports.js` pulls the ride-report
   form, `tools/rides-watch.js` reads every ride's pages and feeds → `data/rides-health.json`,
   `data/rides-queue.json/.md`, the "Rides to re-check" issue); 3 am `rides-reverify.yml` runs
-  `/rides refresh 40` (`.claude/commands/rides.md`, `@ride-verifier`) through
+  `/rides refresh 80` (`.claude/commands/rides.md`, `@ride-verifier`) through
   `tools/rides-apply.js` — the only way a re-check reaches rides.json — and opens a PR labelled
   `rides-upkeep`; 4 am `rides-weekly-rebuild.yml` forces a deploy. `node tools/validate-rides.js`
   gates every change (`rides-check.yml`). Tests: `node --test tools/test/*.test.js`.
