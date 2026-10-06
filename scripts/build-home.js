@@ -119,8 +119,8 @@ const page = `<!doctype html>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   ${CHROME.FONTS}
-  <link rel="preload" as="image" href="/img/sign-print-3-phone.jpg" media="(max-width:759px)">
-  <link rel="preload" as="image" href="/img/sign-print-3.jpg" media="(min-width:760px)">
+  <link rel="preload" as="image" href="/img/sign-print-4-phone.jpg" media="(max-width:759px)">
+  <link rel="preload" as="image" href="/img/sign-print-4.jpg" media="(min-width:760px)">
   <link rel="stylesheet" href="/home.css">
 
   <script type="application/ld+json">
@@ -156,8 +156,8 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
       <p class="sign-kicker">Robert. Phoenix. <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Mile <b class="num" data-miles>3,573</b> of training, on Strava.</a> The 10,000 start Jan 1.</p>
       <h1 class="sign-h" id="sign-h">
         ${STACK()}
-        <span class="sign-plate sign-plate--blank" id="signPlate" data-empty="true"></span>
-        <span class="sr">Cycle for</span>
+        <span class="sign-plate sign-plate--blank" id="signPlate" data-empty="true" aria-hidden="true"></span>
+        <span class="sr" id="signSr">Cycle for</span>
       </h1>
     </div>
     <div class="sign-right">
@@ -176,11 +176,11 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
 <!-- —— the numbers —— -->
 <section class="s s--tar nums nums--bar" aria-label="The numbers">
   <div class="wrap">
-  <svg class="stopbar" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g filter="url(#lpRoller)"><rect x="0" y="12" width="1200" height="46" fill="#EFEDEA"/></g></svg>
+  <svg class="stopbar" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect x="0" y="26" width="1200" height="18" fill="#EFEDEA"/></svg>
   <div class="nums-in">
     <div class="num-tile"><b class="num" data-miles>3,573</b><span>miles since June 1</span></div>
     <div class="num-tile"><b class="num" id="rideCount">97</b><span>rides, <a href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">every one on Strava</a></span></div>
-    <div class="num-tile num-tile--rose"><b class="num">10,000</b><span>miles in 2027. The count restarts in <b class="num" id="daysTo">88</b> days. If I fall behind, this number says so.</span></div>
+    <div class="num-tile num-tile--rose"><b class="num">10,000</b><span>miles in 2027. The count restarts in <b class="num" id="daysTo">88</b> days.</span></div>
   </div>
   </div>
 </section>
@@ -290,10 +290,9 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
         </form>
         <p class="find-links"><a class="link" href="/rides/no-drop/">No-drop rides</a><a class="link" href="/rides/lgbtq/">Queer rides</a><a class="link" href="/tonight/">Tonight</a></p>
         <div class="find-count"><b class="num">${RIDES_N}</b><span>group rides in the directory, each one checked in the last 90 days. Every state, ${RN.abroad} more countries. Shop rides, no-drop rides, queer rides.</span></div>
-        <svg class="lane-dash" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g filter="url(#lpWornSoft)" fill="var(--paper)" stroke="var(--mute)" stroke-width="2"><rect x="0" y="14" width="56" height="8"/><rect x="88" y="14" width="56" height="8"/><rect x="176" y="14" width="56" height="8"/><rect x="264" y="14" width="56" height="8"/><rect x="352" y="14" width="56" height="8"/><rect x="440" y="14" width="56" height="8"/><rect x="528" y="14" width="56" height="8"/></g></svg>
         <dl class="facts-dl">
           <div><dt>Group rides</dt><dd><a href="/rides/">${RIDES_N}</a></dd></div>
-          <div><dt>On the 2027 calendar</dt><dd><a href="/events/2027/">640</a></dd></div>
+          <div><dt>On the 2027 calendar</dt><dd><a href="/events/2027/">639</a></dd></div>
           <div><dt>Town guides</dt><dd><a href="/towns/">12</a></dd></div>
           <div><dt>My 2027 rides</dt><dd><a href="/events/2027/riding/">Six, so far</a></dd></div>
         </dl>
@@ -333,7 +332,7 @@ ${CHROME.FOOTER.replace('<script src="/chrome.js" defer></script>', '')}
 
 <!-- —— the tally, everywhere (phone) —— -->
 <div class="bar" id="bar" data-on="false" aria-hidden="true">
-  <div class="bar-tally"><span class="dot dot--bone" aria-hidden="true"></span><b class="num" data-miles>3,573</b><span>mi since<br>June 1</span></div>
+  <div class="bar-tally"><span class="dot dot--bone" aria-hidden="true"></span><b class="num" data-miles>3,573</b><span>mi since June 1</span></div>
   <a class="btn btn--bone" href="#ride" tabindex="-1">Ride with me</a>
 </div>
 
