@@ -8,14 +8,16 @@
 //        Strava's 2-second callback limit is never a problem.
 //   GET  ?op=status|subscribe|unsubscribe&token=<STRAVA_VERIFY_TOKEN>
 //        One-time management from a browser tab, using the Strava app
-//        credentials already in the environment. Only enabled when
-//        STRAVA_VERIFY_TOKEN is set to something other than the default.
+//        credentials already in the environment.
+//
+// STRAVA_VERIFY_TOKEN must be set (Oct 6, 2026: there is no default any more).
+// Without it the handshake and the management ops are refused; ride POSTs are
+// still acknowledged, since they only mark the tally dirty.
 //
 // Setup once: set STRAVA_VERIFY_TOKEN in Netlify env, deploy, then open
 //   https://cycleforchange.org/.netlify/functions/strava-webhook?op=subscribe&token=<that>
 
-const DEFAULT_VERIFY = "cfc-strava-verify";
-const VERIFY = process.env.STRAVA_VERIFY_TOKEN || DEFAULT_VERIFY;
+const verifyToken = () => String(process.env.STRAVA_VERIFY_TOKEN || "").trim();
 const API = "https://www.strava.com/api/v3/push_subscriptions";
 
 exports.handler = async (event) => {
@@ -28,6 +30,8 @@ exports.handler = async (event) => {
     const q = event.queryStringParameters || {};
 
     if (q["hub.mode"] === "subscribe") {
+      const VERIFY = verifyToken();
+      if (!VERIFY) return json(403, { error: "STRAVA_VERIFY_TOKEN is not set" });
       if (q["hub.verify_token"] === VERIFY) {
         return json(200, { "hub.challenge": q["hub.challenge"] });
       }
@@ -63,7 +67,8 @@ exports.handler = async (event) => {
 };
 
 async function manage(q, event, json) {
-  if (VERIFY === DEFAULT_VERIFY) {
+  const VERIFY = verifyToken();
+  if (!VERIFY) {
     return json(403, { error: "set STRAVA_VERIFY_TOKEN in the environment first" });
   }
   if (q.token !== VERIFY) return json(403, { error: "bad token" });

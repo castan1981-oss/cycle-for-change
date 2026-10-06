@@ -11,7 +11,6 @@ exports.handler = async (event) => {
         body: JSON.stringify({
           miles: data.totalMiles ?? data.miles ?? 0,
           goal: data.goal ?? 10000,
-          pct: data.pct ?? 0,
           updated: data.updated,
           configured: data.configured,
           cached: data.cached,
