@@ -158,6 +158,15 @@ Write like a person, not a brand. Lived experience is experience, not advice.
 Banned words anywhere (copy, meta, alt text, nav, captions): **leverage, synergy, "journey" as a
 buzzword, "passionate about", "thrilled to announce", "excited to share".**
 
+Copy style (content review, Oct 6, 2026 — Robert: grammar is "extremely important"): curly quotes
+and apostrophes in visible text (the three page generators curl them as they write with
+`scripts/curl-quotes.js`, text nodes only; hand pages are written with ’ “ ” directly — never run
+either on Robert's journal, it is his raw writing); an en dash for ranges (Apr 23–25, $125–$300);
+°F; US spelling; thousands separators (1,422); sentence case for eyebrows, kickers and headings;
+day lists as "Tuesdays, Thursdays and Saturdays" / "Second and fourth Saturdays of the month"
+(`dayPhrase` in tools/build-rides.js). Research notes never reach a page ("IMPORTANT:", "per the
+FAQ", "we confirmed", "would not load for us").
+
 ### Never (auto-reject the draft)
 - The "$800 / two suitcases" line. Prescott as an origin. "est. 2008". Robert's age (or a number
   that reads as it). Career bragging or résumé language.
@@ -186,8 +195,8 @@ buzzword, "passionate about", "thrilled to announce", "excited to share".**
 
 Every content page is a self-contained HTML file inside `cfc-site/`, wearing the shared chrome,
 linking `/chrome.css` then `/styles.css` (absolute paths), ending on the shared closing block (no
-page-specific CTA). Titles on hand pages end " — Cycle for Change"; generated ride pages drop the
-suffix. Internal link target: `/` or `/events/2027/riding/`. Point at the org rides (Nov 7 first,
+page-specific CTA). `head()` in scripts/chrome.js adds " — Cycle for Change" only when the whole
+title still fits 60 characters; generated ride pages drop the suffix. Internal link target: `/` or `/events/2027/riding/`. Point at the org rides (Nov 7 first,
 until it has passed) when the money comes up.
 
 ### Field notes (`/field-notes/<slug>/`)
@@ -348,8 +357,10 @@ the form as CSV until Robert picks one.
 
 ## 7. Search and the Search Lab
 
-- One target query per page: in the `<title>`, the `<h1>` and an `<h2>`. Titles under 60
-  characters where possible.
+- One target query per page: in the `<title>`, the `<h1>` and an `<h2>`. Titles fit 60
+  characters (`head()` drops the brand suffix when it won't fit).
+- Event markup only for a date still ahead, and never for a flagged or one-source ride. The rides
+  rebuild runs daily (`rides-weekly-rebuild.yml`) so next-ride dates stay current.
 - Real `<meta name="description">`, `<link rel="canonical">`, clean heading order, descriptive
   `alt` on every image.
 - A short quotable answer near the top (`.fn-lede` / `.lede`) so assistants can cite it.

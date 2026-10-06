@@ -40,7 +40,7 @@ checked the ride at the host's page, feed, Strava event or post. Never because i
 |---|---|---|
 | 2 am | **The watch** (`.github/workflows/rides-watch.yml`). Rider reports come in from the Netlify form. Then every ride's own pages and feeds get read — no AI, about 3 minutes for 700 rides. | `data/rides-health.json`, `data/rides-queue.json`, `data/rides-queue.md`, committed to main. The open issue **"Rides to re-check"** shows the top of the queue. |
 | 3 am | **The re-check** (`rides-reverify.yml`). Claude takes the top 40 of the queue, checks each ride at its source, and applies what it found. | A pull request labelled `rides-upkeep`, with a table: confirmed, changed, ended, couldn't confirm. Merged automatically only if you turned that on. |
-| 4 am | **The rebuild** (`rides-weekly-rebuild.yml`). Netlify rebuilds the site, so dates and warnings are current even in a week when nothing else changed. | The live site. |
+| 4 am | **The rebuild** (`rides-weekly-rebuild.yml`, every day since Oct 6, 2026, not only Mondays). Netlify rebuilds the site, so next-ride dates and warnings are never more than a day old. | The live site. |
 
 GitHub sometimes starts scheduled jobs a little late. The order still holds.
 

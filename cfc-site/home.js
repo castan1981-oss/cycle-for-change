@@ -125,7 +125,7 @@
       if (title && !GENERIC.test(title)) { var b = document.createElement("b"); b.textContent = title; when.appendChild(b); }
       var bar = document.createElement("span"); bar.className = "bar-mi"; bar.style.setProperty("--w", longest ? ((Number(r.miles) || 0) / longest).toFixed(2) : "0");
       var mi = document.createElement("span"); mi.className = "mi num"; mi.textContent = Number(r.miles).toFixed(1);
-      var u = document.createElement("small"); u.textContent = "MI"; mi.appendChild(u);
+      var u = document.createElement("small"); u.textContent = "mi"; mi.appendChild(u);
       li.appendChild(when); li.appendChild(bar); li.appendChild(mi); log.appendChild(li);
     });
 
@@ -393,7 +393,7 @@
      nav turns to bone past the film; the tally bar shows up with it
      ———————————————————————————————————————————————— */
 
-  var nav = $("nav"), bar = $("bar"), hero = document.querySelector(".hero"), closeSec = document.querySelector(".close"), foot = document.querySelector(".foot");
+  var nav = $("nav"), bar = $("bar"), hero = document.querySelector(".hero, .sign"), closeSec = document.querySelector(".close"), foot = document.querySelector(".foot");
   var pastHero = false, atClose = false, atFoot = false, scrollingDown = false;
   function paintBar() {
     if (!bar) return;

@@ -81,7 +81,7 @@ function place(e) {
     const a = e.start_city.split("(")[0].trim(), b = e.end_city.split("(")[0].trim();
     if (a && b && a !== b) return `${a} → ${b}`;
   }
-  const c = (e.city || "").replace(/\s*\(.*?\)\s*/g, " ").trim();
+  const c = (e.city || "").replace(/\s*\(.*?\)/g, "").replace(/\s+/g, " ").trim();
   return c ? `${c}${e.state && !c.includes(e.state) ? ", " + e.state : ""}` : (e.state || e.region);
 }
 function shortDist(s) { s = String(s || ""); return s.length > 60 ? s.slice(0, 58).replace(/[,;|(]?\s*\S*$/, "") + "…" : s; }
@@ -312,8 +312,10 @@ const updatedLong = new Date(data.updated + "T12:00:00Z").toLocaleDateString("en
 
 // ——— chrome (mirrors build-events.js) —————————————————————————————————————
 
-const title = "2027 bike rides and races in the US — the full calendar";
-const description = `${events.length} organized US bike rides and races for 2027 — charity rides, gran fondos, gravel, multi-day tours, ultras and races — with ${nConf} organizer-confirmed dates, projected dates for the rest, distances, causes and sign-up links. Updated ${updatedLong}.`;
+const title = "2027 cycling events calendar: US bike rides and races";
+const description = `${events.length} US bike rides and races in 2027: charity rides, fondos, gravel, tours and races. ${nConf} with the organizer's date. Updated ${updatedLong}.`;
+// Search pass (Oct 5, 2026): a description names as many events as fit in 158 characters, whole names only
+const fitNames = (head, names, tail = " and more.") => { for (let k = Math.min(3, names.length); k > 0; k--) { const s = `${head}${names.slice(0, k).join(", ")}${tail}`; if (s.length <= 158) return s; } return head.replace(/[:,]\s*$/, ".") };
 
 const ld = [
   { "@context": "https://schema.org", "@type": "WebPage", name: title, description, url: SITE + URL, dateModified: data.updated,
@@ -399,6 +401,8 @@ function townFor(e) {
   for (const c of cands) { const t = TOWNS.find({ city: c, state: e.state }); if (t) return t; }
   return null;
 }
+// Oct 6, 2026: a row whose event has its own page (/events/<slug>/) links to it — sign-up, routes, weather, the town
+const DEEP_URL = (() => { try { const d = JSON.parse(fs.readFileSync(path.join(ROOT, "cfc-site", "events", "events.json"), "utf8")); const out = {}; for (const x of (Array.isArray(d) ? d : d.events || [])) { const e = deepMatch(x); if (e && x.url) out[e.slug] = String(x.url).replace(SITE, ""); } return out; } catch (e) { return {}; } })();
 function eventHtml(e) {
   const meta = [`<b>${esc(place(e))}</b>`, esc(e.category.toLowerCase())];
   if (e.cause) meta.push(esc(e.cause));
@@ -419,8 +423,8 @@ function eventHtml(e) {
     ${dn ? `<p class="note"><b>Date</b>${esc(dn)}</p>` : ""}
     ${e.notes ? `<p class="note"><b>Notes</b>${esc(e.notes)}</p>` : ""}
     ${e.unchecked && e.date_note ? `<p class="note"><b>Check</b>${e.date_status === "confirmed" ? "The date is the organizer&rsquo;s. The rest isn&rsquo;t checked with them yet." : "Not checked with the organizer yet."} Look at their site before you plan around it.</p>` : ""}
-    <p class="det-links">${e.url ? `<a class="btn btn--ghost" href="${attr(e.url)}" rel="noopener" target="_blank">Event site</a>` : ""}${src ? `<span class="src">Sources: ${src}</span>` : ""}</p>
-    ${town ? TOWNS.strip(town, { compact: true, heading: `Once you&rsquo;re in ${esc(town.name)}` }) : ""}
+    <p class="det-links">${DEEP_URL[e.slug] ? `<a class="btn btn--ink" href="${attr(DEEP_URL[e.slug])}">The full page</a>` : ""}${e.url ? `<a class="btn btn--ghost" href="${attr(e.url)}" rel="noopener" target="_blank">Event site</a>` : ""}${src ? `<span class="src">Sources: ${src}</span>` : ""}</p>
+    ${town ? TOWNS.strip(town, { compact: true, id: e.slug, heading: `Once you&rsquo;re in ${esc(town.name)}` }) : ""}
   </div>
 </details>`;
 }
@@ -510,8 +514,8 @@ for (let m = 0; m <= 12; m++) {
     narrow: narrowLine({ month: m || "tba" }, "Narrow by type, region, cause, distance"),
     h1: m ? `${MONTHS_LONG[m - 1]} 2027 bike rides &amp; races` : "2027 rides with no date yet",
     title: m ? `${MONTHS_LONG[m - 1]} 2027 bike rides and races in the US` : "2027 bike rides with no date announced yet",
-    description: m ? `${list.length} organized US bike rides and races in ${name}, ${nConfOf(list)} with organizer-confirmed dates: ${list.slice(0, 3).map((e) => e.name).join(", ")} and more. Dates, distances, causes and sign-up links.`
-      : `${list.length} US bike rides and races that run every year but haven't put out a 2027 date yet: ${list.slice(0, 3).map((e) => e.name).join(", ")} and more.`,
+    description: m ? fitNames(`${list.length} US bike rides and races in ${name}, ${nConfOf(list)} with the organizer's date: `, list.map((e) => e.name))
+      : fitNames(`${list.length} US bike rides and races that run every year but haven't put out a 2027 date yet: `, list.map((e) => e.name)),
     lead: m ? "" : `<p class="cal-lead">These run every year but haven&rsquo;t put out a 2026 or 2027 date we could confirm.</p>` });
 }
 // Pass 22 (Oct 3, 2026): the homepage's "Find a race" lands on Races, which is road, crit and stage
@@ -536,7 +540,7 @@ for (const c of CATS) {
   shortPage({ url: `${URL}${CAT_SLUG[c]}/`, crumb: CAT_DOOR[c], list, byMonth: true, lead, picks,
     narrow: narrowLine({ type }, "Narrow by month, region, cause, distance"),
     h1: `2027 ${CAT_H1[c]} in the US`, title: `2027 ${CAT_H1[c]} in the US`,
-    description: `${list.length} ${CAT_H1[c]} in the US in 2027, ${nConfOf(list)} with organizer-confirmed dates, by month: ${list.slice(0, 3).map((e) => e.name).join(", ")} and more.` });
+    description: fitNames(`${list.length} ${CAT_H1[c]} in the US in 2027, ${nConfOf(list)} with the organizer's date, by month: `, list.map((e) => e.name)) });
 }
 // Oct 6, 2026: the first ride is this fall, before 2027 starts — Cycling 4 one·n·ten, Nov 7, 2026.
 // It sits on top of Robert's rides until the day after; the build leaves it out from Nov 8, 2026, and
@@ -563,9 +567,9 @@ const nextLd = TODAY <= NEXT_UNTIL ? [{ "@context": "https://schema.org", "@type
   location: { "@type": "Place", name: "Prisma Community Care", address: { "@type": "PostalAddress", addressLocality: "Phoenix", addressRegion: "AZ", addressCountry: "US" } },
   organizer: { "@type": "Organization", name: "one·n·ten", url: "https://onenten.org" } }] : [];
 // the six Robert is riding
-if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert&rsquo;s rides", list: riding,
+if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert\u2019s rides", list: riding,
   h1: "The 2027 rides I&rsquo;m doing", title: "The 2027 rides I'm doing for Cycle for Change",
-  description: `${nextBlock ? "Cycling 4 one·n·ten in Phoenix on Nov 7, 2026, then the " : "The "}${riding.length} organized rides Robert is riding in 2027 as part of the 10,000 miles, with dates, distances and sign-up links.`,
+  description: `${nextBlock ? "Cycling 4 one·n·ten in Phoenix on Nov 7, 2026, then the " : "The "}${riding.length} rides Robert is doing in 2027 as part of the 10,000 miles: dates, distances, sign-up links.`,
   lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one.</p>`,
   before: nextBlock, ldMore: nextLd, rowsH: nextBlock ? "Then 2027" : "",
   after: `\n    ${PH.figure("robert-peace")}` });
@@ -582,7 +586,7 @@ if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert&rsquo;s ride
   let home = head({ title, description, url: URL, ld: [ld[0], ld[1], { ...ld[2], itemListElement: ld[2].itemListElement.map((x, i) => ({ ...x, url: SITE + monthPath(events.filter((e) => e.date_status === "confirmed")[i].month) + "#" + events.filter((e) => e.date_status === "confirmed")[i].slug })) }] }) + `
   <article class="calendar cal-home">
     ${crumbs()}
-    <h1>2027 bike rides &amp; races in the US</h1>
+    <h1>2027 cycling events calendar</h1>
     <p class="cal-sub lede"><b>${events.length}</b> rides and races &middot; <b>${nConf}</b> with the organizer&rsquo;s date &middot; updated ${esc(shortUpdated)}</p>
 
     <section class="cal-step" aria-labelledby="when-h">
@@ -594,7 +598,7 @@ if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert&rsquo;s ride
     </section>
 
     <section class="cal-step" aria-labelledby="what-h">
-      <h2 class="cal-q" id="what-h">Or pick what</h2>
+      <h2 class="cal-q" id="what-h">Or pick what kind</h2>
       <div class="cal-doors">
           ${doors}
       </div>
@@ -612,13 +616,13 @@ ${BLOCKS.REPORT({ thing: "event", heading: "Missing an event, or a date changed?
 
 // ——— the full list, with every filter: /events/2027/all/ ———————————————————————
 const ALL = URL + "all/";
-let body = head({ title: `All ${events.length} 2027 bike rides and races, with filters`, description, url: ALL, ld: [{ ...ld[0], url: SITE + ALL }, crumbLd("All", ALL)] });
+let body = head({ title: `All ${events.length} 2027 bike rides and races, with filters`, description: `Every one of the ${events.length} US bike rides and races on the 2027 calendar on one page. Filter by month, type, region, cause and distance.`, url: ALL, ld: [{ ...ld[0], url: SITE + ALL }, crumbLd("All", ALL)] });
 body += `
   <article class="calendar">
     ${crumbs("All")}
     <p class="eyebrow" id="eyebrow">${events.length} events &middot; <b>${nConf} confirmed</b> &middot; ${nProj} projected &middot; ${nTba} tba &middot; updated ${esc(updatedLong)}</p>
     <h1>All 2027 bike rides &amp; races</h1>
-    <p class="lede">Every organized ride and race in the US next year that we could pin down: ${events.length} events, ${nConf} with dates published by the organizer. <span class="k key-conf">Confirmed</span> means the organizer has published the 2027 date. <span class="k key-proj">Projected</span> means it is placed on the same weekend as the 2026 edition — check before you register.</p>
+    <p class="lede">Every organized ride and race in the US in 2027 that we could pin down: ${events.length} events, ${nConf} with dates published by the organizer. <span class="k key-conf">Confirmed</span> means the organizer has published the 2027 date. <span class="k key-proj">Projected</span> means it is placed on the same weekend as the 2026 edition — check before you register.</p>
 
     <section class="controls" aria-label="Filters">
       <div class="search">
@@ -651,6 +655,16 @@ ${CAUSE_ORDER.filter((c) => byCause.has(c)).map((c) => `          <button class=
     </section>
 
 ${""}`;
+// The calendar row for an event that has its own page (/events/<slug>/). Names first, then a calendar name that
+// contains the page's ("Seattle to Portland Bicycle Classic (STP)"), then the exact same URL. Oct 6, 2026: matching
+// on the site's host alone gave STP Chilly Hilly's date, BWR California BWR Arizona's, Leadville Silver Rush's.
+function deepMatch(d) {
+  const norm = (x) => String(x || "").toLowerCase().replace(/[^a-z0-9]+/g, "");
+  const bare = (u) => String(u || "").replace(/^https?:\/\/(www\.)?/, "").replace(/\/+$/, "");
+  return events.find((e) => norm(e.name) === norm(d.name) || (d.short_name && norm(e.name) === norm(d.short_name)))
+    || events.find((e) => norm(d.name) && norm(e.name).includes(norm(d.name)))
+    || events.find((e) => d.website && e.url && bare(e.url) === bare(d.website));
+}
 function DEEP_HTML() {
   let deep = null;
   try { deep = JSON.parse(fs.readFileSync(path.join(ROOT, "cfc-site", "events", "events.json"), "utf8")); } catch (e) { return ""; }
@@ -660,7 +674,7 @@ function DEEP_HTML() {
   const norm = (x) => String(x || "").toLowerCase().replace(/[^a-z0-9]+/g, "");
   const tile = (d) => {
     // the 2027 date comes from this calendar (matched by name); the events feed's next_date may still be 2026
-    const cal = events.find((e) => norm(e.name) === norm(d.name) || norm(e.name) === norm(d.short_name) || (d.website && e.url && host(e.url) === host(d.website)));
+    const cal = deepMatch(d);
     const dt = cal && cal.start ? `${cal.start.slice(5, 7)}.${cal.start.slice(8, 10)}` : "TBA";
     const slug = String(d.town || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
     const art = fs.existsSync(path.join(ROOT, "cfc-site", "towns", "art", `${slug}.svg`)) ? `<img class="tile-art" src="/towns/art/${slug}.svg" alt="" loading="lazy" decoding="async" width="200" height="200">` : "";
@@ -716,7 +730,7 @@ function write(rel, s) {
   // Pass 22: research notes never reach a public file
   const leak = s.match(new RegExp(`.{0,60}(?:${LEAK.source}).{0,40}`, "i"));
   if (leak) throw new Error(`Research note in ${rel}: "${leak[0]}" — add the phrase to CORE/EXTRA in build-calendar.js`);
-  const p = path.join(OUT, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, s); return rel;
+  const p = path.join(OUT, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, rel.endsWith(".html") ? require("./curl-quotes.js").curlQuotes(s) : s); return rel;
 }
 for (const [u, html] of pages) write(u.replace(/^\//, "") + "index.html", html);
 // where each event's row lives now, for old /events/2027/#slug links (FIND_JS)

@@ -66,6 +66,9 @@ def new_head(s, page):
     dark = 'content="dark"' in old or 'class="theme-dark"' in s
     spec = {"title": title, "description": desc, "url": url, "ogType": ogtype, "dark": dark,
             "styles": SECTION_STYLES.get(top, ["/styles.css"]), "ld": ld, "extra": extra}
+    if keep and keep[0].startswith('<meta name="robots"'):   # one robots tag: the page's own noindex replaces the default
+        spec["robots"] = re.search(r'content="([^"]*)"', keep[0]).group(1)
+        spec["extra"] = "\n".join("  " + k.strip() for k in keep[1:])
     head = subprocess.check_output(NODE + ["head", json.dumps(spec)]).decode()
     return s.replace("<head>" + old + "</head>", "<head>\n" + head + "\n</head>", 1)
 
@@ -99,7 +102,7 @@ def chrome(s: str, page) -> str:
 
 WHY = '''<div class="fn-why">
     <p class="eyebrow">Why this page is here</p>
-    <p>Riding is part of what kept me steady before I had the words for anything. Cycle for Change rides for the kinds of orgs on this page: in 2027 I ride 10,000 miles, and the money goes through those orgs&rsquo; own rides. That&rsquo;s the connection, and it&rsquo;s the only ask here. <a href="/#orgs">The orgs I ride for</a></p>
+    <p>Riding is part of what kept me steady before I had the words for anything. Cycle for Change rides for the kinds of orgs on this page: in 2027 I ride 10,000 miles, and the money goes through those orgs&rsquo; own rides. That&rsquo;s the connection. <a href="/#orgs">The orgs I ride for</a></p>
   </div>'''
 
 

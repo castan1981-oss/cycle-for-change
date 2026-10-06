@@ -2,8 +2,9 @@ name: Rides weekly rebuild
 
 # The /rides/ pages bake the next ride date into their HTML, structured data
 # and calendar files at build time (tools/build-rides.js runs as part of the
-# Netlify build). Nothing changes in the repo week to week, so this workflow
-# exists only to make Netlify deploy once a week.
+# Netlify build). Nothing changes in the repo day to day, so this workflow
+# exists only to make Netlify deploy once a day (it was weekly until Oct 6, 2026:
+# a ride's startDate in its Event markup went up to a week stale).
 #
 # If the repo secret NETLIFY_BUILD_HOOK is set (Netlify → Site configuration →
 # Build & deploy → Build hooks), it POSTs to the hook. Otherwise it pushes an
@@ -11,7 +12,7 @@ name: Rides weekly rebuild
 
 on:
   schedule:
-    - cron: "0 11 * * 1"       # Mondays 4am Phoenix (UTC-7)
+    - cron: "0 11 * * *"       # every day 4am Phoenix (UTC-7): next-ride dates and Event startDate stay current (Oct 6, 2026; was Mondays)
   workflow_dispatch: {}
 
 permissions:
@@ -27,7 +28,7 @@ jobs:
           HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |
           if [ -n "$HOOK" ]; then
-            curl -fsS -X POST -d '{}' "$HOOK?trigger_title=weekly+rides+rebuild"
+            curl -fsS -X POST -d '{}' "$HOOK?trigger_title=daily+rides+rebuild"
             echo "used=true" >> "$GITHUB_OUTPUT"
           else
             echo "used=false" >> "$GITHUB_OUTPUT"
@@ -41,5 +42,5 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit --allow-empty -m "chore: weekly rides rebuild (refresh next-ride dates)"
+          git commit --allow-empty -m "chore: daily rides rebuild (refresh next-ride dates)"
           git push origin main

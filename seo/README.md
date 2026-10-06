@@ -30,7 +30,7 @@ node seo/crawl.mjs --base http://localhost:8888   # crawl a local `netlify dev`
 1. **Crawl and index** — pages found, answering, indexed. Crawler + Search Console.
 2. **Rank** — position for tracked searches. Search Console.
 3. **Clicks** — clicks and click-through. Search Console.
-4. **Trust** — rides checked in the last 30 days, pledge votes, signups, return visits, links.
+4. **Trust** — rides checked in the last 30 days, signups, return visits, links.
 5. **Reach beyond search** — Google AI-feature impressions; monthly checks in ChatGPT, Perplexity, Google AI and Claude.
 
 A gain in a higher layer only counts when the layers under it held that week.

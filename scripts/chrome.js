@@ -44,14 +44,17 @@ const FONTS = `<link rel="preload" href="/fonts/overpass-latin.woff2" as="font" 
 /* Everything a page's <head> needs besides its own title/description/canonical.
    `styles` = the page's stylesheets after /chrome.css. `ld` = JSON-LD objects. */
 function head({ title, description, url, ogType = "website", styles = [], ld = [], extra = "", dark = false, robots = "index, follow, max-snippet:-1, max-image-preview:large" }) {
+  // Search pass (Oct 5, 2026): Google cuts titles near 60 characters and shows the site name on its own line. The
+  // <title> carries the brand only when the whole title fits; share cards (og:/twitter:title) always carry it.
   const full = /Cycle for Change/.test(title) ? title : `${title} — Cycle for Change`;
+  const shown = /Cycle for Change/.test(title) || title.length > 41 ? title : full;
   const canonical = /^https?:/.test(url) ? url : SITE + url;
   const sheets = ["/chrome.css", ...styles].map((h) => `  <link rel="stylesheet" href="${h}">`).join("\n");
   const json = ld.map((o) => `  <script type="application/ld+json">${JSON.stringify(o)}</script>`).join("\n");
   return `  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="${dark ? "dark" : "light"}">
-  <title>${esc(full)}</title>
+  <title>${esc(shown)}</title>
   <meta name="description" content="${attr(description)}">
   <link rel="canonical" href="${attr(canonical)}">
   <meta name="robots" content="${attr(robots)}">
@@ -123,7 +126,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
   </div>
   <ul class="menu-list">
     <li><a href="/events/2027/riding/">Ride with me <span>The 2027 rides</span></a></li>
-    <li><a href="/find-a-ride/">Find a ride ${n(RIDE_COUNT)}</a></li>
+    <li><a href="/find-a-ride/">Find a ride ${n(RIDE_COUNT == null ? null : RIDE_COUNT.toLocaleString("en-US"))}</a></li>
     <li><a href="/events/2027/">2027 calendar ${n(CAL_COUNT)}</a></li>
     <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
