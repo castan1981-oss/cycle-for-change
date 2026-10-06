@@ -61,7 +61,7 @@
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/">Ride with me</a>
+      <a class="btn btn--sm" href="/#ride" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -72,7 +72,7 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/">Ride with me <span>The 2027 rides</span></a></li>
+    <li><a href="/#ride" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
     <li><a href="/find-a-ride/">Find a ride <span>1,422</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>639</span></a></li>
     <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
@@ -147,7 +147,7 @@
   <p class="pledge-num" aria-hidden="true">10000</p>
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
   <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/">Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="/#ride" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
 </section>
 
     </div>
@@ -155,6 +155,11 @@
 </main>
 
 <footer class="foot site-foot">
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2026-11-07" data-rides="[{&quot;until&quot;:&quot;2026-11-07&quot;,&quot;date&quot;:&quot;Sat Nov 7&quot;,&quot;name&quot;:&quot;Cycling 4 one·n·ten&quot;,&quot;where&quot;:&quot;Phoenix&quot;,&quot;href&quot;:&quot;/#ride&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
+    <a class="ridebar-a" href="/#ride" data-ride-next><span class="ridebar-d">Sat Nov 7</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Cycling 4 one·n·ten, Phoenix</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+    <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
+  </aside>
+  <script src="/ridebar.js?v=36" defer></script>
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -175,7 +180,7 @@
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
-        <a href="/events/2027/riding/">Ride with me</a>
+        <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
       <div class="foot-col">

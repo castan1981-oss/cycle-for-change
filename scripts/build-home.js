@@ -11,6 +11,11 @@ const fs = require("fs");
 const path = require("path");
 const CHROME = require("./chrome.js");
 
+// Pass 36 (Oct 6, 2026): "Ride with me" on the first screen, to the next ride Robert is doing (the list is in
+// scripts/chrome.js; /ridebar.js re-picks it in the browser and shows the bar once this tile scrolls away).
+const NR = CHROME.NEXT_RIDE;
+const HERO_RIDE = `<a class="finder-tile finder-tile--ride" id="heroRide" href="${NR ? (NR.href === "/#ride" ? "#ride" : NR.href) : CHROME.RIDE_HREF}"${NR && NR.href !== "/#ride" ? " data-ride-next" : ""}>${NR ? `<span class="ridebar-d">${NR.date}</span>` : ""}<span class="finder-t">Ride with me</span><span class="finder-s">${NR ? `${NR.name}, ${NR.where}` : "The rides I&rsquo;m doing in 2027"}</span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>`;
+
 const OUT = path.join(__dirname, "..", "cfc-site", "index.html");
 
 // The ride directory's numbers come from the data, like the menu count in chrome.js (Oct 5, 2026: the
@@ -130,7 +135,7 @@ const page = `<!doctype html>
   ${CHROME.FONTS}
   <link rel="preload" as="image" href="/img/sign-print-4-phone.jpg" media="(max-width:759px)">
   <link rel="preload" as="image" href="/img/sign-print-4.jpg" media="(min-width:760px)">
-  <link rel="stylesheet" href="/home.css?v=34">
+  <link rel="stylesheet" href="/home.css?v=36">
 
   <script type="application/ld+json">
   {
@@ -176,11 +181,11 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
       <p class="sign-note">Nothing to pay, nothing to join. <button class="sign-reset" id="signReset" type="button" hidden>Clear the sign</button></p>
       <p class="sign-line">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</p>
       <nav class="finder" aria-label="Find a ride">
+        ${HERO_RIDE}
         <a class="finder-tile" href="/rides/"><svg class="finder-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkGroup"/></svg><span class="finder-t">Group rides</span><span class="finder-s">${RIDES_N} worldwide</span></a>
         <a class="finder-tile" href="/events/2027/"><svg class="finder-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkFinish"/></svg><span class="finder-t">Events</span><span class="finder-s">${CAL_N} in 2027</span></a>
       </nav>
       <div class="sign-acts">
-        <a class="btn btn--plate" href="#ride">Ride with me</a>
         <a class="link link--bone" href="#road">Read the last ride</a>
       </div>
     </div>
@@ -356,7 +361,7 @@ ${CHROME.FOOTER.replace('<script src="/chrome.js" defer></script>', '')}
   <a class="btn btn--bone" href="#ride" tabindex="-1">Ride with me</a>
 </div>
 
-<script src="/home.js?v=34" defer></script>
+<script src="/home.js?v=36" defer></script>
 </body>
 </html>
 `;
