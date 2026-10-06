@@ -11,15 +11,16 @@ through the four inks (a continuous gradient map, with `--crunch` keeping a litt
 print feel), the rose spot has a soft edge, the misregister is 2px, the grain is fine and light,
 and the files are cut at the source's full width so nothing is upscaled on a 3x phone.
 
-    python3 tools/print.py cfc-site/img/hero-wide.jpg cfc-site/img/sign-print.jpg --width 2000 --warmth .10
-    python3 tools/print.py cfc-site/img/hero-wide.jpg cfc-site/img/sign-print-phone.jpg --width 1400 --warmth .10
+    python3 tools/print.py cfc-site/img/hero-wide.jpg cfc-site/img/sign-print-2.jpg --width 2000 --warmth .10
+    python3 tools/print.py cfc-site/img/hero-wide.jpg cfc-site/img/sign-print-2-phone.jpg --width 1400 --warmth .10
     python3 tools/print.py <in> <out> --width 1200 --warmth .10 --crunch .25 --grain .05
 
 The cut that ships (Oct 5, 2026, "it's just too dirty looking"): --crunch 0 --grain 0 --shift 0 0 — the photo
 mapped into the four inks with the rose on the light, nothing stepped, nothing off register, no grain.
 The print knobs stay for end cards and big print.
 
-Deterministic (seeded) so a rebuild gives the same file.
+Deterministic (seeded) so a rebuild gives the same file. The files carry a number (-2) because browsers cached
+the first cut hard; bump it whenever the picture changes.
 """
 import argparse
 import numpy as np

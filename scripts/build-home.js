@@ -115,8 +115,8 @@ const page = `<!doctype html>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   ${CHROME.FONTS}
-  <link rel="preload" as="image" href="/img/sign-print-phone.jpg" media="(max-width:759px)">
-  <link rel="preload" as="image" href="/img/sign-print.jpg" media="(min-width:760px)">
+  <link rel="preload" as="image" href="/img/sign-print-2-phone.jpg" media="(max-width:759px)">
+  <link rel="preload" as="image" href="/img/sign-print-2.jpg" media="(min-width:760px)">
   <link rel="stylesheet" href="/home.css">
 
   <script type="application/ld+json">
@@ -141,8 +141,8 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
      lets a visitor type into it. Nothing is collected. —— -->
 <section class="sign sign--print" id="top" aria-labelledby="sign-h">
   <picture class="sign-ph">
-    <source media="(max-width:759px)" srcset="/img/sign-print-phone.jpg">
-    <img src="/img/sign-print.jpg" width="2000" height="1428" alt="Robert and Caleb with their bikes on a desert road at sunset, printed in four inks." fetchpriority="high">
+    <source media="(max-width:759px)" srcset="/img/sign-print-2-phone.jpg">
+    <img src="/img/sign-print-2.jpg" width="2000" height="1428" alt="Robert and Caleb with their bikes on a desert road at sunset, printed in four inks." fetchpriority="high">
   </picture>
   <div class="sign-scrim" aria-hidden="true"></div>
   <svg class="sign-grain" aria-hidden="true" focusable="false"><rect width="100%" height="100%" filter="url(#lpGrain)"/></svg>

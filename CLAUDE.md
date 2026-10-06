@@ -1,8 +1,8 @@
 # Cycle for Change — project context for automated content
 
 > **PASS 27 — LANE PAINT, ON THE ROAD (Oct 6, 2026).** The homepage's graphics are things a city paints:
-> the sign is the stencil over ONE screenprint of Robert and Caleb (`tools/print.py` → `img/sign-print.jpg`
-> + `-phone.jpg`; four inks + rose spot; the only print on the site, signed with the painter's mark
+> the sign is the stencil over ONE screenprint of Robert and Caleb (`tools/print.py` → `img/sign-print-2.jpg`
+> + `-2-phone.jpg`; bump the number when the picture changes, phones cache it; four inks + rose spot; the only print on the site, signed with the painter's mark
 > `#lpMark` top right — never on a second photo); after FOR there is only the blank (a rose bar) until a
 > visitor types; the numbers sit on a stop bar; the ride log is roller strokes (`.bar-mi` + `#lpRoller`,
 > newest wet in powder rose); the orgs carry the hand-painted PHX–LA–SF route map; "How this works" is a
