@@ -23,8 +23,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" href="/img/sign-print-4-phone.jpg" media="(max-width:759px)">
-  <link rel="preload" as="image" href="/img/sign-print-4.jpg" media="(min-width:760px)">
+  <link rel="preload" as="image" href="/img/home-robert-phone.jpg" media="(max-width:759px)">
+  <link rel="preload" as="image" href="/img/home-robert.jpg" media="(min-width:760px)">
   <link rel="stylesheet" href="/home.css">
 
   <script type="application/ld+json">
@@ -40,82 +40,11 @@
   </script>
 </head>
 <body class="home">
-<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
-  <defs>
-    <filter id="lpWorn" x="-10%" y="-10%" width="120%" height="120%">
-      <!-- Pass 27: worn along the tire line — long horizontal streaks and small chips, not blobs -->
-      <feTurbulence type="fractalNoise" baseFrequency=".012 .11" numOctaves="3" seed="11" result="n"/>
-      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -7 0 0 0 4.9" result="m"/>
-      <feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="2" seed="3" result="c"/>
-      <feColorMatrix in="c" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -3 0 0 0 2.6" result="chips"/>
-      <feComposite in="m" in2="chips" operator="arithmetic" k2="1" k3="1" result="mask"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="edge"/>
-      <feComposite in="edge" in2="mask" operator="in"/>
-    </filter>
-    <filter id="lpGrain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
-    <!-- Pass 27: paint worn along the tire line (long streaks), a roller's drag, and the sprayed mark -->
-    <filter id="lpWornSoft" x="-10%" y="-10%" width="120%" height="120%">
-      <!-- Pass 30: a hand-painted edge only — no chips, no holes; those read as artifacts on a phone -->
-      <feTurbulence type="fractalNoise" baseFrequency=".02 .14" numOctaves="2" seed="5" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
-    <filter id="lpRoller" x="-5%" y="-30%" width="110%" height="160%">
-      <!-- Pass 30: the roller's edge, no streaks through the paint -->
-      <feTurbulence type="fractalNoise" baseFrequency=".02 .5" numOctaves="2" seed="21" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
-    <filter id="lpSpray" x="-30%" y="-30%" width="160%" height="160%">
-      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" result="d"/>
-      <feGaussianBlur in="d" stdDeviation="2.2" result="halo"/>
-      <feColorMatrix in="halo" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 .55 0" result="h2"/>
-      <feMerge><feMergeNode in="h2"/><feMergeNode in="d"/></feMerge>
-    </filter>
-    <!-- the marks a city paints: the lane bicycle, the diamond, the painter's mark -->
-    <!-- Pass 31: the clean marks — the house family (24 grid, one 1.7 stroke, round caps), nothing painted -->
-    <symbol id="mkPhx" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14h20"/><path d="M7.5 14a4.5 4.5 0 0 1 9 0"/><path d="M12 6.5V4.5M6.2 8.7 4.8 7.3M17.8 8.7l1.4-1.4"/><path d="M9.5 20.5 11 14M14.5 20.5 13 14"/></g></symbol>
-    <symbol id="mkOjai" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16.5 7.5 8l3.5 5.5 3-4.5L22 16.5"/><path d="M3 20.5h18"/></g></symbol>
-    <symbol id="mkSF" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20V4M17 20V4"/><path d="M5.5 7h3M15.5 7h3"/><path d="M2 15h20"/><path d="M7 4.5q5 9 10 0"/><path d="M1 14q4-1 6-9.5M23 14q-4-1-6-9.5"/><path d="M12 11v4"/></g></symbol>
-    <symbol id="mkRide" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 7c0 4 1 6.5 3.5 6.5"/><path d="M20 7c0 4-1 6.5-3.5 6.5"/><path d="M12 7v9"/></g></symbol>
-    <symbol id="mkWrite" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2z"/><path d="M5 17a2 2 0 0 1 2-2h11"/><path d="M9 8h5"/></g></symbol>
-    <symbol id="mkOrgs" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="8" r="2.2"/><circle cx="12" cy="6.5" r="2.2"/><circle cx="17.5" cy="8" r="2.2"/><path d="M2.5 19a4 4 0 0 1 8 0M8 19a4 4 0 0 1 8 0M13.5 19a4 4 0 0 1 8 0"/></g></symbol>
-    <symbol id="lpBike" viewBox="0 0 240 160">
-      <g fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="52" cy="112" r="38"/><circle cx="188" cy="112" r="38"/>
-        <path d="M52 112 L92 44 H138 L188 112 M92 44 L120 112 H52 M138 44 L126 24 H150 M80 44 H104"/>
-      </g>
-    </symbol>
-    <symbol id="lpDiamond" viewBox="0 0 60 100"><path d="M30 4 L56 50 L30 96 L4 50 Z" fill="none" stroke="currentColor" stroke-width="9" stroke-linejoin="round"/></symbol>
-    <symbol id="lpOrgs" viewBox="0 0 190 100"><g fill="currentColor"><path d="M30 50 L58 10 L86 50 L58 90 Z"/><path d="M80 50 L108 10 L136 50 L108 90 Z" opacity=".75"/><path d="M130 50 L158 10 L186 50 L158 90 Z" opacity=".5"/></g></symbol>
-    <symbol id="lpStroke" viewBox="0 0 190 100"><g filter="url(#lpRoller)"><rect x="8" y="38" width="174" height="26" fill="currentColor"/></g></symbol>
-    <symbol id="lpMark" viewBox="0 0 150 150">
-      <g fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><path d="M118 46 V34 Q118 18 102 18 H96 M84 18 H52 Q22 18 22 48 V102 Q22 132 52 132 H84 M96 132 H102 Q118 132 118 116 V104"/></g>
-      <rect x="62" y="66" width="70" height="20" fill="#D9B1AA"/>
-    </symbol>
-  </defs>
-</svg>
 <a class="skip" href="#main">Skip to content</a>
-<header class="nav site-head" id="nav">
+<header class="nav site-head" id="nav" data-solid="false">
   <div class="wrap nav-in">
     <a class="brand" href="/" aria-label="Cycle for Change home">
-      <svg class="brand-mark" viewBox="0 0 760 150" aria-hidden="true" focusable="false">
-        <defs>
-          <path id="lpC" d="M52 34 V24 Q52 8 36 8 H33 M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 142 H36 Q52 142 52 126 V116"/>
-          <path id="lpY" d="M11 4 L30 68 L49 4 M30 68 V150"/>
-          <path id="lpL" d="M8 0 V150 M22 142 H54"/>
-          <path id="lpE" d="M8 0 V150 M22 8 H54 M22 75 H47 M22 142 H54"/>
-          <path id="lpF" d="M8 0 V150 M22 8 H54 M22 75 H47"/>
-          <path id="lpO" d="M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 8 H36 Q52 8 52 24 V126 Q52 142 36 142 H33"/>
-          <path id="lpR" d="M8 0 V150 M22 8 H36 Q52 8 52 24 V58 Q52 74 36 74 H22 M33 90 L50 150"/>
-          <clipPath id="lpRow"><rect x="-20" y="0" width="900" height="150"/></clipPath>
-        </defs>
-        <g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">
-          <use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/>
-          <use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/>
-        </g>
-        <rect class="lp-bar" x="652" y="114" width="98" height="36" fill="#A84C58"/>
-      </svg>
-      <span class="sr">Cycle for Change</span>
+      <span class="brand-word">Cycle for Change</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
@@ -153,199 +82,133 @@
 
 <main id="main">
 
-<!-- —— the sign (Pass 26). The mark is the headline; the plate is the blank. /home.js rotates it and
-     lets a visitor type into it. Nothing is collected. —— -->
-<section class="sign sign--print" id="top" aria-labelledby="sign-h">
-  <picture class="sign-ph">
-    <source media="(max-width:759px)" srcset="/img/sign-print-4-phone.jpg">
-    <img src="/img/sign-print-4.jpg" width="1200" height="1600" alt="Robert on his bike on the canal path in Phoenix, morning sun, grinning at the camera." fetchpriority="high">
+<!-- —— 1 · the picture. One photograph fills the first screen; one line; one button. —— -->
+<section class="hero-a hero" id="top" aria-labelledby="hero-h">
+  <picture class="hero-a-ph">
+    <source media="(max-width:759px)" srcset="/img/home-robert-phone.jpg">
+    <img src="/img/home-robert.jpg" width="1500" height="2000" alt="Robert on his bike on the bridge over the freeway in Phoenix, evening light." fetchpriority="high">
   </picture>
-  <div class="sign-scrim" aria-hidden="true"></div>
-  <svg class="sign-grain" aria-hidden="true" focusable="false"><rect width="100%" height="100%" filter="url(#lpGrain)"/></svg>
-  <svg class="sign-sig" viewBox="0 0 150 150" aria-hidden="true" focusable="false"><use href="#lpMark"/></svg>
-  <div class="wrap sign-in">
-    <div class="sign-left">
-      <p class="sign-kicker">Robert. Phoenix. <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Mile <b class="num" data-miles>3,573</b> of training, on Strava.</a> The 10,000 start Jan 1.</p>
-      <h1 class="sign-h" id="sign-h">
-        <svg class="sign-mark " viewBox="-10 -10 370 350" aria-hidden="true" focusable="false">
-        <g filter="url(#lpWorn)">
-          <g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">
-            <use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/>
-          </g>
-          <g transform="translate(0 180)">
-            <g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">
-              <use href="#lpF"/><use href="#lpO" transform="translate(74 0)"/><use href="#lpR" transform="translate(148 0)"/>
-            </g>
-          </g>
-        </g>
-      </svg>
-        <span class="sign-plate sign-plate--blank" id="signPlate" data-empty="true" aria-hidden="true"></span>
-        <span class="sr" id="signSr">Cycle for</span>
-      </h1>
-    </div>
-    <div class="sign-right">
-      <label class="sign-q" for="who">Who do you cycle for?</label>
-      <input class="sign-input" id="who" type="text" maxlength="22" autocomplete="off" placeholder="Type it. The sign changes.">
-      <p class="sign-note">Nothing to pay, nothing to join. <button class="sign-reset" id="signReset" type="button" hidden>Clear the sign</button></p>
-      <p class="sign-line">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</p>
-      <div class="sign-acts">
-        <a class="btn btn--plate" href="#ride">Ride with me</a>
-        <a class="link link--bone" href="#road">Read the last ride</a>
-      </div>
+  <div class="hero-a-scrim" aria-hidden="true"></div>
+  <div class="wrap hero-a-in">
+    <h1 class="hero-a-h" id="hero-h">I ride because it changed me.</h1>
+    <p class="hero-a-sub">10,000 miles in 2027, all on the bike. The money goes to three queer-serving orgs, through their own rides.</p>
+    <div class="hero-a-acts">
+      <a class="btn btn--bone" href="#ride">Ride with me</a>
+      <a class="link link--bone" href="#log-s">The last ride</a>
     </div>
   </div>
 </section>
 
-<!-- —— the numbers —— -->
-<section class="s s--tar nums nums--bar" aria-label="The numbers">
-  <div class="wrap">
-  <svg class="stopbar" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect x="0" y="26" width="1200" height="18" fill="#EFEDEA"/></svg>
-  <div class="nums-in">
+<!-- —— 2 · the numbers —— -->
+<section class="s nums-a" aria-label="The numbers">
+  <div class="wrap nums-a-grid">
     <div class="num-tile"><b class="num" data-miles>3,573</b><span>miles since June 1</span></div>
-    <div class="num-tile"><b class="num" id="rideCount">97</b><span>rides, <a href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">every one on Strava</a></span></div>
-    <div class="num-tile num-tile--rose"><b class="num">10,000</b><span>miles in 2027. The count restarts in <b class="num" id="daysTo">88</b> days.</span></div>
-  </div>
-  </div>
-</section>
-
-<!-- —— the last ride: the reel, the log —— -->
-<section class="s s--tar" id="road" aria-labelledby="road-h">
-  <div class="wrap road">
-    <div>
-      <div class="s-head"><div class="stack16"><p class="eyebrow">From the road</p><h2 class="h2" id="road-h">The last rides.</h2></div></div>
-      <ol class="log" id="log" data-max="4" aria-live="polite">
-        <li><span class="when">Mon Oct 5</span><span class="bar-mi" style="--w:.57"></span><span class="mi num">35.7<small>MI</small></span></li>
-        <li><span class="when">Sun Oct 4</span><span class="bar-mi" style="--w:1"></span><span class="mi num">63.1<small>MI</small></span></li>
-        <li><span class="when">Sat Oct 3</span><span class="bar-mi" style="--w:.67"></span><span class="mi num">42.3<small>MI</small></span></li>
-        <li><span class="when">Fri Oct 2</span><span class="bar-mi" style="--w:.58"></span><span class="mi num">36.6<small>MI</small></span></li>
-      </ol>
-      <p class="road-note">Every ride gets a stroke, as long as the ride. The big ones get a page: the route, the town, who was there, the footage.</p>
-    </div>
-    <div class="road-side">
-      <figure class="road-film">
-        <video id="roadVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/road-film.jpg" width="864" height="1080" aria-label="Eighteen seconds of this year's rides: the road over the bars, a drone overhead, the desert, riders up ahead.">
-          <source src="/film/road-film.mp4" type="video/mp4">
-        </video>
-        <button class="road-film-btn" id="roadBtn" type="button">Watch the last ride</button>
-      </figure>
-      <p class="road-tally"><b class="num" id="roadRides">97</b> rides since June 1. The count starts over on January 1.</p>
-      <a class="link" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Follow on Strava</a>
-    </div>
+    <div class="num-tile"><b class="num" id="rideCount">97</b><span>rides, <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">every one on Strava</a></span></div>
+    <div class="num-tile num-tile--rose num-tile--wide"><b class="num">10,000</b><span>miles in 2027. The count restarts in <b class="num" id="daysTo">87</b> days. If I fall behind, this number says so.</span></div>
   </div>
 </section>
 
-<!-- —— why —— -->
-<section class="s why" id="why" aria-labelledby="why-h">
-  <div class="wrap why-in">
-    <h2 class="h2 why-h" id="why-h">It always says cycling.</h2>
-    <div class="why-copy">
-      <p class="lede">Cycling changed my life. I&rsquo;d like to say I&rsquo;m cycling for other people. I&rsquo;m really cycling for myself. I&rsquo;m cycling because it changed me. That&rsquo;s the story.</p>
-      <p class="lede">So the sign changes. What comes after the word is up to whoever&rsquo;s riding.</p>
-      <p class="plates"><span class="plate">me</span><span class="plate">one&middot;n&middot;ten, on Nov 7</span><span class="plate">change</span></p>
-    </div>
-  </div>
-</section>
-
-<!-- —— the orgs. Pass 31 (Oct 5, late): three clean cards — a mark from the house family, the org in
-     one line, the ride with its date on a plate, two links. No map, no badges, nothing painted. —— -->
-<section class="s s--paper orgs-s" id="orgs" aria-labelledby="orgs-h">
+<!-- —— 3 · the last rides —— -->
+<section class="s s--tar road-a" id="log-s" aria-labelledby="road-h">
   <div class="wrap">
-    <div class="stack16 orgs-head2"><h2 class="h2" id="orgs-h">The orgs I ride for.</h2><p class="lede w38">Three rides. You sign up or give on their page. None of it comes through me.</p></div>
-    <div class="orgs">
-      <article class="org">
-        <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkPhx"/></svg>
-        <div class="org-text">
-          <h3 class="h3">one&middot;n&middot;ten</h3>
-          <p>Phoenix nonprofit for LGBTQ+ youth ages 11 to 24. Safe spaces, housing, leadership.</p>
-          <p class="org-ride"><span class="plate">Sat Nov 7</span><span>Cycling 4 one&middot;n&middot;ten, Phoenix. 20 or 62 miles, one day.</span></p>
-          <div class="org-acts"><a class="link" href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Give to one&middot;n&middot;ten</a></div>
-        </div>
-      </article>
-      <article class="org">
-        <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkOjai"/></svg>
-        <div class="org-text">
-          <h3 class="h3">Los Angeles LGBT Center</h3>
-          <p>Health, housing and advocacy for LGBTQ+ people.</p>
-          <p class="org-ride"><span class="plate">Apr 23 to 25, 2027</span><span>Center Ride Out. Los Angeles to Ojai and back, three days.</span></p>
-          <div class="org-acts"><a class="link" href="https://centerrideout.lalgbtcenter.org/en/" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Give to the Center</a></div>
-        </div>
-      </article>
-      <article class="org">
-        <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkSF"/></svg>
-        <div class="org-text">
-          <h3 class="h3">San Francisco AIDS Foundation</h3>
-          <p>No-cost HIV, harm-reduction and LGBTQ+ health services.</p>
-          <p class="org-ride"><span class="plate">May 21 to 23, 2027</span><span>Cycle to Zero. Three days out of San Francisco.</span></p>
-          <div class="org-acts"><a class="link" href="https://www.sfaf.org/get-involved/cycle-to-zero/" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Give to SFAF</a></div>
-        </div>
-      </article>
-    </div>
-    <p class="lede w38 open-door">You don&rsquo;t have to be queer to ride with me. The rides raise money for queer-serving orgs. That&rsquo;s the point.</p>
+    <p class="eyebrow eyebrow--dust">From the road</p>
+    <h2 class="h2" id="road-h">The last rides.</h2>
+    <ol class="log" id="log" data-max="4" aria-live="polite">
+      <li><span class="when">Mon Oct 5</span><span class="bar-mi" style="--w:.57"></span><span class="mi num">35.7<small>MI</small></span></li>
+      <li><span class="when">Sun Oct 4</span><span class="bar-mi" style="--w:1"></span><span class="mi num">63.1<small>MI</small></span></li>
+      <li><span class="when">Sat Oct 3</span><span class="bar-mi" style="--w:.67"></span><span class="mi num">42.3<small>MI</small></span></li>
+      <li><span class="when">Fri Oct 2</span><span class="bar-mi" style="--w:.58"></span><span class="mi num">36.6<small>MI</small></span></li>
+    </ol>
+    <p class="road-a-note">Every ride gets a line, as long as the ride. The big ones get a page: the route, the town, who was there, the footage.</p>
+    <a class="link link--bone" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Follow on Strava</a>
   </div>
 </section>
 
-<!-- —— ride with me: Nov 7, then the finder —— -->
-<section class="s ridewith" id="ride" aria-labelledby="ride-h">
+<!-- —— 4 · why —— -->
+<section class="s why-a" id="why" aria-labelledby="why-h">
+  <div class="wrap stack16">
+    <h2 class="h2" id="why-h">It always says cycling.</h2>
+    <p class="why-a-p">Cycling changed my life. I&rsquo;d like to say I&rsquo;m cycling for other people. I&rsquo;m really cycling for myself. I&rsquo;m cycling because it changed me. That&rsquo;s the story.</p>
+    <p class="why-a-p mute">So the word after &ldquo;for&rdquo; is up to whoever&rsquo;s riding.</p>
+  </div>
+</section>
+
+<!-- —— 5 · the orgs —— -->
+<section class="s orgs-a" id="orgs" aria-labelledby="orgs-h">
   <div class="wrap">
-    <h2 class="h2" id="ride-h">Ride with me.</h2>
-    <div class="ride-in">
-      <div class="ride-next">
-        <p class="eyebrow">Next up, a one&middot;n&middot;ten fundraiser</p>
-        <h3 class="h2 ride-h3">Nov 7, I cycle for <span class="plate plate--big">one&middot;n&middot;ten</span></h3>
-        <p>Cycling 4 one&middot;n&middot;ten, Bike Ride &amp; Block Party at Prisma Community Care, Phoenix.</p>
-        <dl class="facts-dl">
-          <div><dt>62 miles</dt><dd>7:00 AM, $100</dd></div>
-          <div><dt>20 miles</dt><dd>9:00 AM, $50</dd></div>
-          <div><dt>Block party</dt><dd>10 AM to 2 PM</dd></div>
-          <div><dt>Who</dt><dd>18+, no e-bikes, no fundraising minimum</dd></div>
-          <div><dt>Sign up by</dt><dd>Thu Nov 5</dd></div>
-        </dl>
-        <a class="btn btn--ink" href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer">Sign up on RunSignup</a>
-        <p class="note-sm">Details from RunSignup, checked Oct 5.</p>
-      </div>
-      <div class="ride-find">
-        <p class="eyebrow">Group rides</p>
-        <h3 class="h2 ride-h3">Find a group ride.</h3>
-        <form class="find" action="/rides/" method="get" role="search">
-          <label class="sr" for="q">Your town or a ride name</label>
-          <input class="find-field" id="q" name="q" type="search" placeholder="Your town or a ride name" autocomplete="off">
-          <button class="btn btn--ink" type="submit">Search rides</button>
-        </form>
-        <p class="find-links"><a class="link" href="/rides/no-drop/">No-drop rides</a><a class="link" href="/rides/lgbtq/">Queer rides</a><a class="link" href="/tonight/">Tonight</a></p>
-        <div class="find-count"><b class="num">1,422</b><span>group rides in the directory, each one checked in the last 90 days. Every state, 18 more countries. Shop rides, no-drop rides, queer rides.</span></div>
-        <dl class="facts-dl">
-          <div><dt>Group rides</dt><dd><a href="/rides/">1,422</a></dd></div>
-          <div><dt>On the 2027 calendar</dt><dd><a href="/events/2027/">639</a></dd></div>
-          <div><dt>Town guides</dt><dd><a href="/towns/">12</a></dd></div>
-          <div><dt>My 2027 rides</dt><dd><a href="/events/2027/riding/">Six, so far</a></dd></div>
-        </dl>
-      </div>
-    </div>
+    <h2 class="h2" id="orgs-h">The orgs I ride for.</h2>
+    <p class="lede w38">Three rides. You sign up or give on their page. None of it comes through me.</p>
+    <ul class="orgs-a-list">
+      <li><a href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer"><span class="org-a-text"><b>one&middot;n&middot;ten</b><span>Cycling 4 one&middot;n&middot;ten, Phoenix. 20 or 62 miles.</span></span><span class="org-a-date">Nov 7</span></a></li>
+      <li><a href="https://centerrideout.lalgbtcenter.org/en/" target="_blank" rel="noopener noreferrer"><span class="org-a-text"><b>Los Angeles LGBT Center</b><span>Center Ride Out, LA to Ojai and back. Three days.</span></span><span class="org-a-date">Apr 23</span></a></li>
+      <li><a href="https://www.sfaf.org/get-involved/cycle-to-zero/" target="_blank" rel="noopener noreferrer"><span class="org-a-text"><b>San Francisco AIDS Foundation</b><span>Cycle to Zero, San Francisco. Three days.</span></span><span class="org-a-date">May 21</span></a></li>
+    </ul>
+    <p class="orgs-a-note">You don&rsquo;t have to be queer to ride with me. The rides raise money for queer-serving orgs. That&rsquo;s the point.</p>
+    <p class="orgs-a-give">Give directly: <a href="https://onenten.org" target="_blank" rel="noopener noreferrer">one&middot;n&middot;ten</a> &middot; <a href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">the Center</a> &middot; <a href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">SFAF</a></p>
   </div>
 </section>
 
-<!-- —— how this works —— -->
-<section class="s s--paper how" id="how" aria-labelledby="how-h">
+<!-- —— 6 · next up —— -->
+<section class="s s--paper next-a" id="ride" aria-labelledby="ride-h">
+  <div class="wrap">
+    <p class="eyebrow">Next up</p>
+    <h2 class="h2" id="ride-h">Nov 7, I cycle for <span class="rose">one&middot;n&middot;ten</span>.</h2>
+    <p class="lede w38">Cycling 4 one&middot;n&middot;ten, Bike Ride &amp; Block Party at Prisma Community Care, Phoenix.</p>
+    <dl class="rows-a">
+      <div><dt>62 miles</dt><dd>7:00 AM, $100</dd></div>
+      <div><dt>20 miles</dt><dd>9:00 AM, $50</dd></div>
+      <div><dt>Block party</dt><dd>10 AM to 2 PM</dd></div>
+      <div><dt>Who</dt><dd>18+, no e-bikes, no fundraising minimum</dd></div>
+      <div><dt>Sign up by</dt><dd>Thu Nov 5</dd></div>
+    </dl>
+    <a class="btn btn--ink btn--block" href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer">Sign up on RunSignup</a>
+    <p class="next-a-src">Details from RunSignup, checked Oct 5. <a class="link" href="/events/2027/riding/">All six rides I&rsquo;m doing in 2027</a></p>
+  </div>
+</section>
+
+<!-- —— 7 · find a group ride —— -->
+<section class="s find-a" id="find" aria-labelledby="find-h">
+  <div class="wrap">
+    <h2 class="h2" id="find-h">Find a group ride.</h2>
+    <form class="find-a-form" action="/rides/" method="get" role="search">
+      <label class="sr" for="findQ">Your town or a ride name</label>
+      <input class="find-a-input" id="findQ" name="q" type="search" placeholder="Your town or a ride name" autocomplete="off">
+      <button class="btn btn--ink" type="submit">Search rides</button>
+    </form>
+    <p class="find-a-quick"><a class="link" href="/rides/no-drop/">No-drop rides</a><a class="link" href="/rides/lgbtq/">Queer rides</a><a class="link" href="/tonight/">Tonight</a></p>
+    <dl class="rows-a rows-a--counts">
+      <div><dt>Group rides</dt><dd><a href="/rides/">1,422</a></dd></div>
+      <div><dt>On the 2027 calendar</dt><dd><a href="/events/2027/">640</a></dd></div>
+      <div><dt>Town guides</dt><dd><a href="/towns/">12</a></dd></div>
+      <div><dt>My 2027 rides</dt><dd><a href="/events/2027/riding/">Six, so far</a></dd></div>
+    </dl>
+    <p class="find-a-note">Every ride checked in the last 90 days. Every state, 18 more countries.</p>
+  </div>
+</section>
+
+<!-- —— 8 · how this works —— -->
+<section class="s s--paper how-a" id="how" aria-labelledby="how-h">
   <div class="wrap">
     <h2 class="h2" id="how-h">How this works.</h2>
-    <ol class="steps3 steps3--lane">
-      <li><svg class="step-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkRide"/></svg><h3 class="h3">I ride.</h3><p>10,000 miles in 2027. Every ride lands here from Strava.</p></li>
-      <li><svg class="step-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkWrite"/></svg><h3 class="h3">I write it down.</h3><p>Every ride gets a stroke. The big ones get a page.</p></li>
-      <li><svg class="step-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkOrgs"/></svg><h3 class="h3">The money goes to the orgs.</h3><p>Through their own rides. Nothing here asks for a card.</p></li>
+    <ol class="steps-a">
+      <li><span class="steps-a-n">1</span><h3 class="h3">I ride.</h3><p>10,000 miles in 2027. Every ride lands here from Strava.</p></li>
+      <li><span class="steps-a-n">2</span><h3 class="h3">I write it down.</h3><p>Every ride gets a line. The big ones get a page.</p></li>
+      <li><span class="steps-a-n">3</span><h3 class="h3">The money goes to the orgs.</h3><p>Through their own rides. Nothing here asks for a card.</p></li>
     </ol>
   </div>
 </section>
 
-<!-- —— read —— -->
+<!-- —— 9 · read —— -->
 <section class="s read" id="read" aria-labelledby="read-h">
   <div class="wrap">
-    <div class="s-head"><div class="stack16"><p class="eyebrow">Read</p><h2 class="h2" id="read-h">Field notes, guides, the journal.</h2></div><a class="link" href="/field-notes/">All field notes</a></div>
+    <h2 class="h2" id="read-h">Field notes, guides, the journal.</h2>
     <ul class="read-list">
       <li><a href="/field-notes/south-mountain-climb/"><b>South Mountain at sunset</b><span>Down Central from uptown, through downtown into South Phoenix, up the mountain as the light goes.</span></a></li>
       <li><a href="/field-notes/paradise-valley-loop/"><b>The Paradise Valley loop</b><span>The loop around Camelback and Mummy Mountain. Early, before the heat, with the whole valley below.</span></a></li>
       <li><a href="/journal/the-carrot-cake-theory/"><b>The carrot cake theory</b><span>On why the hard part of a long ride is never the ride.</span></a></li>
       <li><a href="/guides/"><b>All 12 guides</b><span>Your first charity ride, pledge-per-mile fundraising, the packing list, what happened to AIDS/LifeCycle.</span></a></li>
     </ul>
+    <a class="link" href="/field-notes/">All field notes</a>
   </div>
 </section>
 
@@ -353,17 +216,7 @@
 
 <footer class="foot site-foot">
   <div class="wrap">
-    <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
-         The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
-    <div class="foot-sign" role="img" aria-label="Cycle for change">
-      <svg class="foot-stencil" viewBox="-10 -10 370 350" aria-hidden="true" focusable="false">
-        <g fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">
-          <use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/>
-          <use href="#lpF" transform="translate(0 180)"/><use href="#lpO" transform="translate(74 180)"/><use href="#lpR" transform="translate(148 180)"/>
-        </g>
-      </svg>
-      <span class="foot-plate">change</span>
-    </div>
+    <p class="foot-word">Cycle for Change</p>
     <div class="foot-grid">
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
