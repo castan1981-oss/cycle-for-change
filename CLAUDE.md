@@ -1,5 +1,14 @@
 # Cycle for Change — project context for automated content
 
+> **PASS 32 — THE PHOTO (Oct 5, 2026, late).** Robert: "the main photo just needs to be clear and crisp and high
+> quality." He sent a portrait of himself on the canal path (HAÜS jersey, morning sun) — it is the hero now,
+> untouched, no grade: `img/sign-print-4.jpg` (1200×1600, desktop) and `-4-phone.jpg` (960×1280). Phones use the
+> desktop model: the photo fills the first screen (`object-position:62% 0`, his face top right), the sign sits
+> over its lower half under the scrim. The sprayed painter's mark is off everywhere (it read as a scribble).
+> The sunset picture of Robert and Caleb is gone; its original was never in the repo. A full-resolution export
+> of the canal photo would sharpen desktop at 2x — ask when convenient. tools/sr.py needs opencv-contrib
+> (dnn_superres), which this sandbox lacks.
+
 > **PASS 31 — THE ORGS AND THE STEPS, CLEAN (Oct 5, 2026, late).** Robert: "those graphics for the orgs are bad
 > and the icons need to be custom and very classy and easy to understand." The painted route map, the three
 > ride badges and the painted bike lane are gone. Each org card and each How step carries one mark from the

@@ -145,8 +145,8 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
      lets a visitor type into it. Nothing is collected. —— -->
 <section class="sign sign--print" id="top" aria-labelledby="sign-h">
   <picture class="sign-ph">
-    <source media="(max-width:759px)" srcset="/img/sign-print-3-phone.jpg">
-    <img src="/img/sign-print-3.jpg" width="2000" height="1428" alt="Robert and Caleb with their bikes on a desert road at sunset." fetchpriority="high">
+    <source media="(max-width:759px)" srcset="/img/sign-print-4-phone.jpg">
+    <img src="/img/sign-print-4.jpg" width="1200" height="1600" alt="Robert on his bike on the canal path in Phoenix, morning sun, grinning at the camera." fetchpriority="high">
   </picture>
   <div class="sign-scrim" aria-hidden="true"></div>
   <svg class="sign-grain" aria-hidden="true" focusable="false"><rect width="100%" height="100%" filter="url(#lpGrain)"/></svg>
