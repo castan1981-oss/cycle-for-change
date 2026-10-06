@@ -965,3 +965,62 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .read-list span{color:var(--mute)}
 @media (hover:hover){.read-list a:hover b{text-decoration:underline;text-underline-offset:4px}}
 .foot{background:var(--pool)}
+
+/* ————————————————————————————————————————————————————————————————————————
+   Pass 27 — Lane Paint, on the road (Oct 6, 2026). Every graphic is something a city paints:
+   the stencil, a stop bar, roller strokes, a bike lane, a route, a crosswalk. One print, signed,
+   in the sign and nowhere else. Rose is the blank and what's wet; buttons and links are plaster.
+   Worn filters only above 120px. Rules in CLAUDE.md ("Pass 27").
+   ———————————————————————————————————————————————————————————————————————— */
+.sign--print{background:var(--tar);min-height:min(92svh,860px);display:grid;align-content:end;padding-top:var(--nav-h)}
+.sign-ph{position:absolute;inset:0;z-index:0}
+.sign-ph img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
+.sign-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,18,24,0) 0%,rgba(20,18,24,.35) 50%,rgba(20,18,24,.8) 100%),linear-gradient(90deg,rgba(20,18,24,.55) 0%,rgba(20,18,24,.25) 45%,rgba(20,18,24,0) 70%)}
+.sign--print .sign-grain{z-index:2;opacity:.16;mix-blend-mode:overlay}
+.sign--print .sign-in{z-index:3;align-items:end}
+.sign--print .sign-left{--w:clamp(250px,30vw,420px)}
+.sign--print .sign-kicker{color:var(--paper);font-size:16px;text-shadow:0 1px 10px rgba(20,18,24,.7)}
+.sign--print .sign-kicker a{border-bottom-color:var(--paper)}
+.sign-sig{position:absolute;right:var(--gut);top:calc(var(--nav-h) + clamp(16px,3vw,40px));z-index:3;width:clamp(40px,5vw,66px);height:auto;color:var(--paper);filter:url(#lpSpray)}
+/* the blank: a painted rose bar until someone types; then their word on it */
+.sign-plate--blank{min-height:calc(var(--w) * .1);background:var(--creosote-lift);color:var(--asphalt);filter:url(#lpWornSoft)}
+.sign-plate--blank[data-empty="true"]{width:calc(var(--w) * .31);padding-block:0}
+.sign--print .sign-input{background:rgba(20,18,24,.72);border-bottom-color:var(--paper)}
+.sign--print .btn--plate{background:var(--paper);border-color:var(--paper)}
+@media (hover:hover){.sign--print .btn--plate:hover{background:var(--creosote-lift);border-color:var(--creosote-lift)}}
+@media (max-width:759px){
+  .sign--print{min-height:0;align-content:start;padding-top:var(--nav-h)}
+  .sign-ph{position:relative;inset:auto;display:block}
+  .sign-ph img{aspect-ratio:16/11;height:auto;object-position:50% 20%}
+  .sign-scrim{background:linear-gradient(180deg,rgba(20,18,24,0) 0%,rgba(20,18,24,0) 36%,rgba(20,18,24,.85) 50%,rgba(20,18,24,.96) 100%)}
+  .sign--print .sign-in{margin-top:-48px;padding-bottom:clamp(40px,8vw,64px)}
+  .sign-sig{width:40px}
+  .sign--print .sign-kicker{padding-right:56px}
+}
+/* the numbers on a stop bar */
+.nums--bar{background:var(--tar);color:var(--paper);padding-block:clamp(28px,4vw,56px) clamp(32px,5vw,64px)}
+.stopbar{display:block;width:100%;height:auto;margin-bottom:26px}
+.nums--bar .num-tile{border-top:0;padding-top:0}
+.nums--bar .num-tile b{color:var(--paper)}
+.nums--bar .num-tile--rose b{color:var(--creosote-lift)}
+.nums--bar .num-tile span{color:var(--dust)}
+.nums--bar .num-tile a{color:var(--paper);border-bottom-color:var(--paper)}
+/* the log: roller strokes, the newest wet */
+.log li{align-items:center}
+.log .bar-mi{filter:url(#lpRoller);height:14px;background:var(--paper);position:relative}
+.log li:first-child .bar-mi{background:var(--creosote-lift)}
+.log li:first-child .bar-mi::after{content:"";position:absolute;left:14%;top:100%;width:5px;height:14px;background:var(--creosote-lift);border-radius:0 0 3px 3px}
+/* orgs: the route map */
+.orgs-top{display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,64px);align-items:center;margin-bottom:clamp(28px,4vw,56px)}
+.orgs-top .stack16{flex:1 1 300px}
+.route-map{flex:1 1 360px;max-width:560px;width:100%;height:auto;color:var(--asphalt)}
+/* the finder: one field, the count with its source, lane dashes */
+.find-count{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.find-count b{font-weight:900;font-size:clamp(48px,6vw,88px);line-height:.95;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.find-count span{color:var(--mute);font-weight:600;max-width:34ch}
+.lane-dash{display:block;width:100%;height:auto;color:var(--asphalt);margin:4px 0 8px}
+/* how: the bike lane */
+.bike-lane{display:block;width:100%;height:auto;margin:clamp(8px,2vw,24px) 0 4px}
+.steps3--lane{margin-top:0}
+.steps3--lane li{border-top:0;padding-top:0}
+@media (max-width:640px){.bike-lane{display:none}.steps3--lane li{border-top:10px solid var(--creosote-lift);padding-top:16px}}

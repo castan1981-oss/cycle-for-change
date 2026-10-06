@@ -707,7 +707,7 @@
     var reelSeen = false;
     var paintReel = function () {
       var on = !reel.paused;
-      reelBtn.textContent = on ? "Pause the reel" : "Play the reel";
+      reelBtn.textContent = on ? "Pause" : "Watch the last ride";
       reelBtn.setAttribute("data-playing", on ? "true" : "false");
     };
     var playReel = function () { var q = reel.play(); if (q && q.catch) q.catch(function () {}); };
@@ -799,17 +799,20 @@
 })();
 
 /* ————————————————————————————————————————————————
-   Pass 26 (Oct 5, 2026): the sign. The plate under CYCLE FOR rotates through Robert's own answer
-   until a visitor types; typing changes the sign; nothing is sent anywhere.
+   Pass 26/27 (Oct 5–6, 2026): the sign. After CYCLE FOR there is only the blank, a rose bar, until a
+   visitor types; then their word sits on the bar. Nothing is sent anywhere. (The rotating plate went
+   with Pass 27 — the owner's answer is "me", and the sign doesn't invent others.)
    ———————————————————————————————————————————————— */
 (function () {
   var plate = document.getElementById("signPlate"), input = document.getElementById("who"), reset = document.getElementById("signReset");
   if (!plate || !input) return;
-  var mine = ["me", "one·n·ten", "me", "change"], i = 0, typed = "";
-  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function paint() { plate.textContent = typed ? typed : mine[i % mine.length]; if (reset) reset.hidden = !typed; }
-  input.addEventListener("input", function () { typed = input.value.trim().slice(0, 28); paint(); });
+  var typed = "";
+  function paint() {
+    plate.textContent = typed;
+    plate.setAttribute("data-empty", typed ? "false" : "true");
+    if (reset) reset.hidden = !typed;
+  }
+  input.addEventListener("input", function () { typed = input.value.trim().slice(0, 22); paint(); });
   if (reset) reset.addEventListener("click", function () { typed = ""; input.value = ""; paint(); input.focus(); });
-  if (!reduce) setInterval(function () { if (!typed) { i++; paint(); } }, 2400);
   paint();
 })();
