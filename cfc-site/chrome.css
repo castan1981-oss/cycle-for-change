@@ -20,7 +20,7 @@
   --creosote:#A84C58;
   --creosote-ink:#8F3E4A;   /* creosote a step darker: small text on bone clears 4.5:1 (Pass 5) */
   --creosote-lift:#D9B1AA;  /* creosote a step lighter: the green FOR on asphalt clears 3:1 for large type (Pass 6) */
-  --dust-deep:#6F8683;      /* dust a step darker: a hairline that has to be seen */
+  --dust-deep:#687F7C;      /* dust a step darker: a hairline that has to be seen */
   --asphalt:#1C1A22;
   --tar:#141218;
   --volt:#D9B1AA;
@@ -115,7 +115,7 @@ p{margin:0 0 1em}
 .btn--ink,.btn-solid,.btn-dark{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
 .btn--ghost{border-color:currentColor}
 .btn:not([class*="btn--"]):not(.btn-solid):not(.btn-dark){border-color:currentColor}   /* a bare .btn is a ghost */
-.btn--sm{min-height:36px;padding:0 14px;font-size:10.5px}
+.btn--sm{min-height:44px;padding:0 14px;font-size:12px}
 @media (hover:hover){
   .btn--bone:hover,.btn--ink:hover,.btn-solid:hover,.btn-dark:hover{background:var(--volt);border-color:var(--volt);color:var(--asphalt)}
   .btn--ghost:hover,.btn:not([class*="btn--"]):not(.btn-solid):not(.btn-dark):hover{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}
@@ -133,6 +133,8 @@ p{margin:0 0 1em}
   text-decoration:none;
   white-space:nowrap;
 }
+.link{position:relative}
+.link::before{content:"";position:absolute;left:0;right:0;top:-10px;bottom:-10px}   /* a 44px hit area, as on the homepage; the look doesn't change */
 .link::after{content:"\2192";transition:transform .18s ease}
 @media (hover:hover){.link:hover::after{transform:translateX(4px)}}
 .cta-row{display:flex;flex-wrap:wrap;gap:10px}
@@ -172,7 +174,7 @@ p{margin:0 0 1em}
 @media (hover:hover){.nav-links a:hover{border-bottom-color:currentColor}}
 .nav-right{display:flex;align-items:center;gap:8px}
 .nav .btn--sm{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
-@media (max-width:899px){.nav .btn--sm{min-height:40px;background:transparent;color:var(--asphalt);border-color:var(--asphalt)}}   /* Pass 23d: a hairline beside the stamp on phones, not a second block */
+@media (max-width:899px){.nav .btn--sm{min-height:44px;background:transparent;color:var(--asphalt);border-color:var(--asphalt)}}   /* Pass 23d: a hairline beside the stamp on phones, not a second block */
 .menu-btn{width:44px;height:44px;display:grid;place-items:center;background:none;border:0;padding:0;cursor:pointer}
 .menu-btn i{display:block;width:26px;height:2px;background:currentColor;box-shadow:0 8px 0 currentColor;transform:translateY(-4px)}
 @media (max-width:359px){.brand-word{display:none}}
@@ -202,7 +204,7 @@ p{margin:0 0 1em}
 .menu-close::after{transform:rotate(-45deg)}
 .menu-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
 .menu-list a{display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:800;font-size:clamp(2rem,9.5vw,2.75rem);line-height:1;letter-spacing:-.03em}
-.menu-list a span{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:0;color:var(--mute)}
+.menu-list a span{font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:0;color:var(--mute)}
 .menu-foot{margin-top:auto;font-size:15px;color:var(--mute);display:flex;flex-direction:column;gap:6px}
 .menu-foot b{color:var(--asphalt)}
 
@@ -237,14 +239,14 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .foot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 16px}
 .foot-col{display:flex;flex-direction:column;gap:2px}
 .foot-col .eyebrow{color:var(--dust);margin-bottom:10px}
-.foot-col a{padding:6px 0;text-decoration:none;font-size:1.02rem}
+.foot-col a{padding:10px 0;text-decoration:none;font-size:1.02rem}
 @media (hover:hover){.foot-col a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}}
 .signup{grid-column:1 / -1;display:flex;flex-direction:column;gap:8px}
 .lab{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
 .field{
   width:100%;
   margin:0;
-  padding:4px 0 9px;
+  padding:10px 0 9px;
   border:0;
   border-bottom:1px solid var(--asphalt);
   border-radius:0;
@@ -259,6 +261,7 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .ok{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
 .signup .field{border-bottom-color:var(--bone);margin-bottom:10px}
 .signup .field:focus{box-shadow:0 1px 0 var(--bone)}
+.signup .field:focus-visible{outline:2px solid var(--bone);outline-offset:4px}
 .signup .btn{align-self:flex-start}
 .signup .note{margin:0 0 6px;font-size:14.5px;line-height:1.4;color:var(--dust);max-width:32ch}
 .foot-crisis{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;margin-top:clamp(36px,5vw,64px);padding-top:16px;border-top:1px solid var(--line-d);font-size:15px}
@@ -280,6 +283,7 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .theme-dark .brand .brand-mark{color:var(--bone)}              /* the stencil reads on tar; the bar goes powder rose (the logo rule for dark grounds) */
 .theme-dark .brand-mark .lp-bar{fill:var(--creosote-lift)}
 .theme-dark .nav .btn--sm{background:var(--bone);color:var(--asphalt);border-color:var(--bone)}
+.pledge .btn--bone:focus-visible,.foot .btn--bone:focus-visible{outline:2px solid var(--bone);outline-offset:3px}
 .theme-dark .tally-line{color:var(--dust);border-bottom-color:var(--line-d)}
 .theme-dark .tally-num{color:var(--bone)}
 .theme-dark .skip{background:var(--bone);color:var(--asphalt)}

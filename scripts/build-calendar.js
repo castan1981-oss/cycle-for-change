@@ -398,6 +398,8 @@ function townFor(e) {
   for (const c of cands) { const t = TOWNS.find({ city: c, state: e.state }); if (t) return t; }
   return null;
 }
+// Oct 6, 2026: a row whose event has its own page (/events/<slug>/) links to it — sign-up, routes, weather, the town
+const DEEP_URL = (() => { try { const d = JSON.parse(fs.readFileSync(path.join(ROOT, "cfc-site", "events", "events.json"), "utf8")); const out = {}; for (const x of (Array.isArray(d) ? d : d.events || [])) { const e = deepMatch(x); if (e && x.url) out[e.slug] = String(x.url).replace(SITE, ""); } return out; } catch (e) { return {}; } })();
 function eventHtml(e) {
   const meta = [`<b>${esc(place(e))}</b>`, esc(e.category.toLowerCase())];
   if (e.cause) meta.push(esc(e.cause));
@@ -418,8 +420,8 @@ function eventHtml(e) {
     ${dn ? `<p class="note"><b>Date</b>${esc(dn)}</p>` : ""}
     ${e.notes ? `<p class="note"><b>Notes</b>${esc(e.notes)}</p>` : ""}
     ${e.unchecked && e.date_note ? `<p class="note"><b>Check</b>${e.date_status === "confirmed" ? "The date is the organizer&rsquo;s. The rest isn&rsquo;t checked with them yet." : "Not checked with the organizer yet."} Look at their site before you plan around it.</p>` : ""}
-    <p class="det-links">${e.url ? `<a class="btn btn--ghost" href="${attr(e.url)}" rel="noopener" target="_blank">Event site</a>` : ""}${src ? `<span class="src">Sources: ${src}</span>` : ""}</p>
-    ${town ? TOWNS.strip(town, { compact: true, heading: `Once you&rsquo;re in ${esc(town.name)}` }) : ""}
+    <p class="det-links">${DEEP_URL[e.slug] ? `<a class="btn btn--ink" href="${attr(DEEP_URL[e.slug])}">The full page</a>` : ""}${e.url ? `<a class="btn btn--ghost" href="${attr(e.url)}" rel="noopener" target="_blank">Event site</a>` : ""}${src ? `<span class="src">Sources: ${src}</span>` : ""}</p>
+    ${town ? TOWNS.strip(town, { compact: true, id: e.slug, heading: `Once you&rsquo;re in ${esc(town.name)}` }) : ""}
   </div>
 </details>`;
 }
@@ -555,7 +557,7 @@ if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert\u2019s rides
   let home = head({ title, description, url: URL, ld: [ld[0], ld[1], { ...ld[2], itemListElement: ld[2].itemListElement.map((x, i) => ({ ...x, url: SITE + monthPath(events.filter((e) => e.date_status === "confirmed")[i].month) + "#" + events.filter((e) => e.date_status === "confirmed")[i].slug })) }] }) + `
   <article class="calendar cal-home">
     ${crumbs()}
-    <h1>2027 cycling events calendar: US bike rides &amp; races</h1>
+    <h1>2027 cycling events calendar</h1>
     <p class="cal-sub lede"><b>${events.length}</b> rides and races &middot; <b>${nConf}</b> with the organizer&rsquo;s date &middot; updated ${esc(shortUpdated)}</p>
 
     <section class="cal-step" aria-labelledby="when-h">

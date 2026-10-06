@@ -292,7 +292,7 @@ function ics(r, periods) {
   const url = `${SITE}/rides/${r.slug}/`;
   const dur = r.duration_min || 120;
   const loc = r.start_location ? [r.start_location.name, r.start_location.address].filter(Boolean).join(", ") : placeText(r);
-  const desc = [r.pace ? `Pace: ${r.pace}.` : null, r.drop_policy === "no-drop" ? "No-drop." : null, r.schedule ? `Schedule: ${r.schedule}.` : null, "Confirm with the host before you go.", url].filter(Boolean).join("\n");
+  const desc = [r.pace ? `Pace: ${r.pace.replace(/\.$/, "")}.` : null, r.drop_policy === "no-drop" ? "No-drop." : null, r.schedule ? `Schedule: ${r.schedule.replace(/\.$/, "")}.` : null, "Confirm with the host before you go.", url].filter(Boolean).join("\n");
   const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Cycle for Change//Group Rides//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH"];
   for (const { next, rule, uid } of periods) {
     const end = new Date(next.getTime() + dur * 60000);

@@ -732,7 +732,7 @@
      nav turns to bone past the film; the tally bar shows up with it
      ———————————————————————————————————————————————— */
 
-  var nav = $("nav"), bar = $("bar"), hero = document.querySelector(".hero"), closeSec = document.querySelector(".close"), foot = document.querySelector(".foot");
+  var nav = $("nav"), bar = $("bar"), hero = document.querySelector(".hero, .sign"), closeSec = document.querySelector(".close"), foot = document.querySelector(".foot");
   var pastHero = false, atClose = false, atFoot = false, scrollingDown = false;
   function paintBar() {
     if (!bar) return;

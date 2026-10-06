@@ -27,7 +27,7 @@
   --mute:#4A4E55;
   --creosote-ink:#8F3E4A;   /* creosote a step darker: small text on bone clears 4.5:1 (creosote itself is 4.35) */
   --creosote-lift:#D9B1AA;  /* creosote a step lighter: the green FOR on asphalt clears 3:1 for large type (Pass 6) */
-  --dust-deep:#6F8683;      /* dust a step darker: a hairline that has to be seen (3:1 on bone) */
+  --dust-deep:#687F7C;      /* dust a step darker: a hairline that has to be seen (3:1 on bone) */
   --line:rgba(28,26,34,.18);
   --line-d:rgba(239,237,234,.2);
 
@@ -131,7 +131,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .btn--ink{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
 .btn--ghost{border-color:currentColor}
 .btn--glass{border-color:rgba(232,223,208,.55);background:rgba(26,29,24,.28);color:var(--bone);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
-.btn--sm{min-height:36px;padding:0 14px;font-size:10.5px}
+.btn--sm{min-height:44px;padding:0 14px;font-size:12px}
 @media (hover:hover){
   .btn--ink:hover{background:var(--volt);border-color:var(--volt);color:var(--asphalt)}   /* volt replaces asphalt; the ghost button fills asphalt instead (volt never on bone) */
   .btn--bone:hover{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}
@@ -246,7 +246,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .menu-close::after{transform:rotate(-45deg)}
 .menu-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
 .menu-list a{display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:800;font-size:clamp(2rem,9.5vw,2.75rem);line-height:1;letter-spacing:-.03em}
-.menu-list a span{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:0;color:var(--mute)}
+.menu-list a span{font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:0;color:var(--mute)}
 .menu-foot{margin-top:auto;font-size:15px;color:var(--mute);display:flex;flex-direction:column;gap:6px}
 .menu-foot b{color:var(--asphalt)}
 
@@ -456,7 +456,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .field{
   width:100%;
   margin:0;
-  padding:4px 0 9px;
+  padding:10px 0 9px;
   border:0;
   border-bottom:1px solid var(--asphalt);
   border-radius:0;
@@ -636,7 +636,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .log .when{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--dust)}
 .log .when b{display:block;margin-top:4px;font-family:var(--display);font-weight:800;font-size:1.25rem;letter-spacing:-.02em;text-transform:none;color:var(--bone)}
 .log .mi{font-weight:800;font-size:1.6rem;letter-spacing:-.03em}
-.log .mi small{font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:0;margin-left:4px;color:var(--dust)}
+.log .mi small{font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:0;margin-left:4px;color:var(--dust)}
 .chart-card{display:flex;flex-direction:column;gap:14px;min-width:0}
 .chart-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .chart-head p{margin:0}
@@ -731,11 +731,12 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .foot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 16px}
 .foot-col{display:flex;flex-direction:column;gap:2px}
 .foot-col .eyebrow{color:var(--dust);margin-bottom:10px}
-.foot-col a{padding:6px 0;text-decoration:none;font-size:1.02rem}
+.foot-col a{padding:10px 0;text-decoration:none;font-size:1.02rem}
 @media (hover:hover){.foot-col a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}}
 .signup{grid-column:1 / -1;display:flex;flex-direction:column;gap:8px}
 .signup .field{border-bottom-color:var(--bone);margin-bottom:10px}
 .signup .field:focus{box-shadow:0 1px 0 var(--bone)}
+.signup .field:focus-visible{outline:2px solid var(--bone);outline-offset:4px}
 .signup .btn{align-self:flex-start}
 .signup .note{margin:0 0 6px;font-size:14.5px;line-height:1.4;color:var(--dust);max-width:32ch}
 .foot-crisis{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;margin-top:clamp(36px,5vw,64px);padding-top:16px;border-top:1px solid var(--line-d);font-size:15px}
@@ -759,7 +760,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   justify-content:space-between;
   gap:12px;
   padding:10px var(--gut) calc(10px + env(safe-area-inset-bottom,0px));
-  background:rgba(26,29,24,.96);
+  background:rgba(20,18,24,.96);   /* Oct 6, 2026: After Hours tar (#141218); the bar never showed until home.js found .sign, so it kept the Creosote tar */
   color:var(--bone);
   border-top:1px solid var(--line-d);
   transform:translateY(110%);
@@ -916,7 +917,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .sign-right{flex:1 1 340px;display:flex;flex-direction:column;gap:18px;max-width:560px}
 .sign-q{font-weight:900;font-size:clamp(28px,3vw,42px);line-height:1.05;letter-spacing:-.02em}
 .sign-input{min-height:56px;padding:14px 16px 10px;border:0;border-bottom:4px solid var(--creosote-lift);background:#2A2830;color:var(--paper);font:800 22px var(--display);outline-color:var(--creosote-lift)}
-.sign-input::placeholder{color:#8E8A96}
+.sign-input::placeholder{color:#9A96A2}
 .sign-note{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;font-size:14px;font-weight:600;color:var(--dust)}
 .sign-reset{min-height:44px;padding:8px 12px 6px;border:2px solid #6A6670;background:transparent;color:var(--paper);font:800 14px var(--display);cursor:pointer}
 .sign-line{margin:6px 0 0;font-weight:800;font-size:clamp(22px,2.2vw,30px);line-height:1.15;letter-spacing:-.015em}

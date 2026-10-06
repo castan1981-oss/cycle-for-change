@@ -140,9 +140,9 @@ function strip(t, opts = {}) {
     return `        <a href="${t.url}${p.seg}/">${mark(p.mark)}<span class="eyebrow">${esc(p.k)}</span><b>${esc(p.b(t))}</b><span>${esc(p.s(n, t))}</span></a>`;
   }).join("\n");
   return `
-    <section class="town-box" aria-labelledby="town-h">
+    <section class="town-box" aria-labelledby="town-h-${esc(opts.id || t.id)}">
       <p class="eyebrow">${t.kind === "destination" ? "The town guide" : "The town"}</p>
-      <h2 id="town-h">${heading}</h2>
+      <h2 id="town-h-${esc(opts.id || t.id)}">${heading}</h2>
       ${opts.compact ? "" : `<p>${esc(textPlain(t.summary))}</p>`}
       ${opts.lede ? `<p>${opts.lede}</p>` : ""}
       <div class="town-strip">
