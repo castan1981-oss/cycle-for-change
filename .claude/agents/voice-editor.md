@@ -27,9 +27,11 @@ queer-lens sections). That's the whole brief.
 - **Banned phrases, gone**, and the build will reject them anyway:
   leverage, synergy, journey, passionate about, thrilled to announce,
   excited to share, the $800 / two-suitcases line, Prescott, est. 2008,
-  any sober-time count or "sober since," relapse, the 7,500-mile framing.
-- **Hype about the cause, gone.** The pledge is on every page in the
-  shared block. A town note never sells it.
+  any sober-time count or "sober since," relapse, the 7,500-mile or
+  Ironman framing, miles as a fraction of 10,000, and anything that asks a
+  reader to pledge, vote, join a board or "decide who they're for".
+- **Hype about the cause, gone.** The 10,000 and the orgs are on every page
+  in the shared closing block. A town note never sells them.
 - **The queer lens, in proportion.** A queer-owned shop gets the plain
   sentence. Nothing "celebrates," nothing is "proudly," nothing is a
   credential.

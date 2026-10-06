@@ -1,43 +1,41 @@
-# Cycle for Change — deploy + turn on the pledge board
+# Cycle for Change — setup notes
 
-Drag this whole folder onto Netlify and the site goes live. The pledge board and the live mileage each take one short setup step. Both fail gracefully — the site works the whole time, the board just stays empty until step 2 is done.
+The site deploys from GitHub: every push to `main` on `castan1981-oss/cycle-for-change`
+publishes `cfc-site/` on Netlify. Nothing here needs doing for the site to work; these are the
+one-time settings behind the live parts.
 
-## What's in here
-- `index.html` — the site (new palette, route-line tally, board, ride feed, fundraisers)
-- `netlify/functions/pledges.js` — reads saved names back for the board
-- `netlify/functions/mileage.js` — pulls your live miles from Strava
-- `strava-setup.html` — one-time helper to connect Strava
-- `netlify.toml` — tells Netlify where the functions live
+## Live mileage (Strava)
 
----
+The homepage and the tally line on every page show **miles since June 1, 2026** — one number,
+never a percentage. It reads `/api/strava` (the `strava` function).
 
-## Step 1 — Deploy (2 min)
-1. Go to **app.netlify.com → your site → Deploys**.
-2. Drag this entire folder onto the drop zone.
-3. It publishes. The site is live. Pledges submitted now are already being **saved** by Netlify — they just won't show in the roster list until Step 2.
+1. Open `cycleforchange.org/strava-setup.html` and follow its three steps.
+2. Netlify → the site → **Project configuration → Environment variables**: add the three values
+   it gives you.
+3. **Deploys → Trigger deploy.** Environment changes only take effect on a new deploy.
 
-## Step 2 — Show the saved names on the board (5 min)
-The board reads names back through Netlify's own API, which needs a token.
-1. Netlify → your avatar → **User settings → Applications → Personal access tokens → New access token**. Name it (e.g. `cfc pledge board`), pick an expiration, **Generate token**, and copy it — it is shown once.
-2. Your site → **Project configuration → Environment variables → Add a variable**:
-   ```
-   NETLIFY_API_TOKEN = (paste the token)
-   ```
-   (SITE_ID is provided automatically — you don't need to add it.)
-3. **Deploys → Trigger deploy → Deploy project.** Environment variable changes only take effect on a new deploy.
+If the feed fails, the site shows "—", never 0.
 
-Until this is done the homepage hides the "N on the board" line rather than showing 0 — pledges are being saved the whole time. When the token expires the line hides itself again; make a new token and repeat.
-4. Done. Every pledge now appears in "The Crew," newest first.
+Strava data stays on the tally and the ride log. It never goes through an AI step or onto other
+public pages (see `CLAUDE.md` §10).
 
-You'll also see every pledge in **Netlify → Forms → pledges** — that's your master list, exportable to CSV anytime.
+## Mile updates signup
 
-## Step 3 — Live mileage (optional, 15 min)
-Open `yoursite.com/strava-setup.html` and follow its three steps, then add the three values it gives you to Environment Variables (same place as the token). The route-line counter goes live with your real miles. Until then it reads 0, which is correct before 2027.
+The footer signup on every page is the Netlify form **`waitlist`**. Submissions are in
+**Netlify → Forms → waitlist** (exportable as CSV). No list tool or welcome email is wired up
+yet. The email template is `email/mile-updates.html`.
 
----
+Spam protection is the hidden honeypot field. If junk comes in, turn on Netlify's form spam
+filtering in the Forms settings.
 
-## Notes
-- **Spam protection** is built in (a hidden honeypot field). If you ever get junk pledges, turn on Netlify's form spam filtering in the Forms settings.
-- **The board shows names only** — no amounts, exactly as designed.
-- To **moderate** a name, delete that submission in Netlify → Forms; it drops off the board on the next load.
-- Real "Make a pledge / give" links and the Strava profile URL are still placeholders — send them over and I'll wire them in.
+## Rider reports for the ride directory
+
+The `ride-report` form on every ride page feeds the Monday upkeep. Setting it up (GitHub secrets
+`ANTHROPIC_API_KEY`, `NETLIFY_API_TOKEN`, `NETLIFY_SITE_ID`) is in `tools/RIDES-UPKEEP.md`.
+
+## What's gone
+
+There is no pledge board, no votes and no pledge form any more (`/pledge/` redirects home since
+Oct 5, 2026). Don't make or renew a Netlify token for the old `pledges` function — it would
+republish old pledgers' names. Old `pledges` form submissions in Netlify can be exported and
+then deleted.
