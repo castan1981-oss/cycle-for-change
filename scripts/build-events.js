@@ -388,7 +388,15 @@ function sourcesList(srcs) {
 function eventPage(e) {
   const t = e.townRef;
   const when = e.next_date ? fmtRange(e.next_date, e.end_date) : null;
-  const title = `${e.name} — ${t.name}, ${t.state_code}: ${e.next_date ? fmtDate(e.next_date, { weekday: undefined }) : e.typical_timing || "dates"}, routes, sign-up`;
+  // Search pass (Oct 5, 2026): people search "<event> <year> date". Name + year + the date when it fits 60 (chrome.js adds
+  // the brand only if it still fits); never the typical_timing sentence (Hotter'N Hell's title ran to 190 characters).
+  const upcoming = !!e.next_date && (e.end_date || e.next_date) >= TODAY;
+  const md = (iso) => new Date(iso + "T12:00:00Z").toLocaleDateString("en-US", { timeZone: "UTC", month: "short", day: "numeric" });
+  const span = upcoming ? (e.end_date && e.end_date !== e.next_date ? (e.end_date.slice(5, 7) === e.next_date.slice(5, 7) ? `${md(e.next_date)}–${+e.end_date.slice(8)}` : `${md(e.next_date)}–${md(e.end_date)}`) : md(e.next_date)) : null;
+  const yr = upcoming ? e.next_date.slice(0, 4) : null, short = e.short_name || e.name, at = `${t.name}, ${t.state_code}`;
+  const title = (upcoming ? [`${e.name} ${yr}: ${span}, ${at}`, `${e.name} ${yr}: ${span}`, `${short} ${yr}: ${span}, ${at}`, `${short} ${yr}: ${span}`]
+    : e.status === "on-hold" ? [`${e.name}, ${at}: on hold`, `${short}, ${at}: on hold`, `${short}: on hold`]
+    : [`${e.name}, ${at}: dates and routes`, `${e.name}, ${at}`, `${short}, ${at}`, short]).find((s) => s.length <= 60) || short;
   const description = truncate(e.summary, 155);
   const crumbs = breadcrumb([{ name: "Events", url: "/events/" }, { name: t.state, url: `/events/state/${t.state_slug}/` }, { name: e.name, url: e.url }]);
 
@@ -401,8 +409,9 @@ function eventPage(e) {
     sport: "Cycling",
     url: SITE + e.url,
     sameAs: e.website,
-    startDate: e.next_date || undefined,
-    endDate: e.end_date || e.next_date || undefined,
+    // Search pass (Oct 5, 2026): an edition that has already run is not the next one — no dates until the organizer posts them
+    startDate: upcoming ? e.next_date : undefined,
+    endDate: upcoming ? e.end_date || e.next_date : undefined,
     eventStatus: e.status === "on-hold" ? "https://schema.org/EventPostponed" : e.status === "cancelled" ? "https://schema.org/EventCancelled" : "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     location: {
@@ -412,7 +421,7 @@ function eventPage(e) {
       geo: { "@type": "GeoCoordinates", latitude: e.lat, longitude: e.lon },
     },
     organizer: e.organizer && e.organizer.name ? { "@type": "Organization", name: e.organizer.name, url: e.organizer.url || undefined } : undefined,
-    offers: e.register_url ? { "@type": "Offer", url: e.register_url, availability: "https://schema.org/InStock", price: undefined, priceCurrency: "USD" } : undefined,
+    offers: e.register_url && upcoming && e.status !== "on-hold" ? { "@type": "Offer", url: e.register_url } : undefined,
     image: SITE + "/og-cfc.png",
   };
   const faqLd = e.faq && e.faq.length ? {
@@ -501,7 +510,9 @@ ${BLOCKS.REPORT({ thing: "event", name: e.name, kind: "changed", compact: true, 
   ${nearby.length ? `<section class="related"><h2>Nearby events</h2><ul class="tiles-p tiles-p--events">${nearby.map((n) => eventCard(n.e, { distance: n.d })).join("")}</ul></section>` : ""}
   <p class="back"><a href="/events/">All events</a> &middot; <a href="/events/state/${t.state_slug}/">Events in ${esc(t.state)}</a></p>
 `;
-  const lds = [ld, crumbs.ld, pageLd].concat(faqLd ? [faqLd] : []).map(stripUndef);
+  // Search pass (Oct 5, 2026): Event markup only for an edition with a date still ahead (Google requires startDate);
+  // an undated, past or on-hold page keeps its WebPage + FAQ markup
+  const lds = [upcoming ? ld : null, crumbs.ld, pageLd].filter(Boolean).concat(faqLd ? [faqLd] : []).map(stripUndef);
   const pledgeHtml = isRiding(e) ? CHROME.pledge({ line: "I&rsquo;m riding this one. Come with me.", copy: `${esc(e.short_name || e.name)} is one of the six rides on my 2027 calendar. Every mile of it counts toward the 10,000, and the money goes through the ride&rsquo;s own sign-up, never through me.` }) : CHROME.PLEDGE;
   return head({ title, description, url: e.url, ld: lds, ogType: "article" }) + body + foot(pledgeHtml);
 }
@@ -566,7 +577,7 @@ function townPage(t) {
     address: { "@type": "PostalAddress", addressLocality: t.name, addressRegion: t.state_code, addressCountry: "US" },
     geo: { "@type": "GeoCoordinates", latitude: t.lat, longitude: t.lon },
     containedInPlace: { "@type": "State", name: t.state },
-    event: t.events.map((e) => ({ "@type": "SportsEvent", name: e.name, url: SITE + e.url, startDate: e.next_date || undefined })),
+    event: t.events.filter((e) => e.next_date && (e.end_date || e.next_date) >= TODAY).map((e) => ({ "@type": "SportsEvent", name: e.name, url: SITE + e.url, startDate: e.next_date })),
   });
   const pageLd = {
     "@context": "https://schema.org", "@type": "WebPage", url: SITE + t.url, name: title, description,
@@ -870,8 +881,8 @@ ${BLOCKS.REPORT({ thing: "place", name: `Bringing a bike to ${t.name}`, kind: "c
 // ——— indexes ————————————————————————————————————————————————————————————
 function eventsIndex() {
   const url = "/events/";
-  const title = "US cycling events directory — dates, routes, sign-up, weather, where to stay";
-  const description = `Every bike event we have checked, state by state: ${events.length} rides in ${stateList.length} states. Dates, distances, how each one started, the sign-up link, live weather, and a page for the town.`;
+  const title = "US cycling events: dates, routes, sign-up";
+  const description = `Every bike event we have checked, state by state: ${events.length} rides in ${stateList.length} states. Dates, distances, the sign-up link, live weather and a town page.`;
   const upcoming = events.filter((e) => e.next_date && e.next_date >= TODAY).slice(0, 12);
   const ld = {
     "@context": "https://schema.org", "@type": "ItemList", name: "US cycling events", url: SITE + url, numberOfItems: events.length,
@@ -907,7 +918,7 @@ ${BLOCKS.REPORT({ thing: "event", compact: true })}
 
 function statePage(s) {
   const url = `/events/state/${s.slug}/`;
-  const title = `Cycling events in ${s.name} — bike rides, races and tours with dates and sign-up`;
+  const title = `Cycling events in ${s.name}: rides, races, dates`;
   const description = truncate(`${s.events.length} cycling events in ${s.name}: ${s.events.map((e) => e.name).join(", ")}. Dates, distances, sign-up links, weather and town guides.`, 155);
   const crumbs = breadcrumb([{ name: "Events", url: "/events/" }, { name: s.name, url }]);
   const ld = { "@context": "https://schema.org", "@type": "ItemList", name: `Cycling events in ${s.name}`, url: SITE + url, numberOfItems: s.events.length, itemListElement: s.events.map((e, i) => ({ "@type": "ListItem", position: i + 1, url: SITE + e.url, name: e.name })) };
@@ -927,8 +938,8 @@ function statePage(s) {
 
 function townsIndex() {
   const url = "/towns/";
-  const title = "Town guides for cyclists — rides, bike shops, coffee, where to stay, bringing your bike";
-  const description = `Town guides for ${towns.length} places: where to ride, where the ride-out coffee is, who fixes or rents a bike, where to sleep with it, and how to get the bike there. Live weather on every page.`;
+  const title = "Town guides for cyclists: rides, shops, stays";
+  const description = `Town guides for ${towns.length} places: where to ride, the ride-out coffee, who fixes or rents a bike, where to sleep with it, and how to get it there.`;
   // Pass 6 (Sept 29, 2026): every town is a poster tile — the name fills the tile, the count sits
   // at the foot, the town's contour (tools/contour-art.js → cfc-site/towns/art/<slug>.svg) behind it
   // once it has been drawn. Same tile family as /rides/ (styles in events.css).
@@ -1017,10 +1028,16 @@ write("events/events.json", JSON.stringify({
 
 // sitemap
 const urls = written.map((rel) => "/" + rel.replace(/index\.html$/, ""));
+// Search pass (Oct 5, 2026): lastmod = the day the page's facts were checked, never "today" (the rides sitemap's rule)
+const checkedOf = {};
+for (const e of events) checkedOf[e.url] = e.verified;
+for (const t of towns) for (const u of urls) if (u.startsWith(t.url)) checkedOf[u] = t.verified;
+const newest = (list) => list.filter(Boolean).sort().pop() || TODAY;
+const lastmodOf = (u) => checkedOf[u] || (u.startsWith("/events/state/") ? newest(events.filter((e) => u === `/events/state/${e.townRef.state_slug}/`).map((e) => e.verified)) : newest([...events, ...towns].map((x) => x.verified)));
 write("sitemap-events.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated by scripts/build-events.js. Listed in the sitemap index at /sitemap.xml. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${TODAY}</lastmod><changefreq>${u === "/events/" ? "weekly" : "monthly"}</changefreq><priority>${u.split("/").length <= 3 ? "0.8" : "0.6"}</priority></url>`).join("\n")}
+${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${lastmodOf(u)}</lastmod></url>`).join("\n")}
 </urlset>
 `);
 

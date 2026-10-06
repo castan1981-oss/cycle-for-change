@@ -309,8 +309,10 @@ const updatedLong = new Date(data.updated + "T12:00:00Z").toLocaleDateString("en
 
 // ——— chrome (mirrors build-events.js) —————————————————————————————————————
 
-const title = "2027 bike rides and races in the US — the full calendar";
-const description = `${events.length} organized US bike rides and races for 2027 — charity rides, gran fondos, gravel, multi-day tours, ultras and races — with ${nConf} organizer-confirmed dates, projected dates for the rest, distances, causes and sign-up links. Updated ${updatedLong}.`;
+const title = "2027 cycling events calendar: US bike rides and races";
+const description = `${events.length} US bike rides and races in 2027: charity rides, fondos, gravel, tours and races. ${nConf} with the organizer's date. Updated ${updatedLong}.`;
+// Search pass (Oct 5, 2026): a description names as many events as fit in 158 characters, whole names only
+const fitNames = (head, names, tail = " and more.") => { for (let k = Math.min(3, names.length); k > 0; k--) { const s = `${head}${names.slice(0, k).join(", ")}${tail}`; if (s.length <= 158) return s; } return head.replace(/[:,]\s*$/, ".") };
 
 const ld = [
   { "@context": "https://schema.org", "@type": "WebPage", name: title, description, url: SITE + URL, dateModified: data.updated,
@@ -506,8 +508,8 @@ for (let m = 0; m <= 12; m++) {
     narrow: narrowLine({ month: m || "tba" }, "Narrow by type, region, cause, distance"),
     h1: m ? `${MONTHS_LONG[m - 1]} 2027 bike rides &amp; races` : "2027 rides with no date yet",
     title: m ? `${MONTHS_LONG[m - 1]} 2027 bike rides and races in the US` : "2027 bike rides with no date announced yet",
-    description: m ? `${list.length} organized US bike rides and races in ${name}, ${nConfOf(list)} with organizer-confirmed dates: ${list.slice(0, 3).map((e) => e.name).join(", ")} and more. Dates, distances, causes and sign-up links.`
-      : `${list.length} US bike rides and races that run every year but haven't put out a 2027 date yet: ${list.slice(0, 3).map((e) => e.name).join(", ")} and more.`,
+    description: m ? fitNames(`${list.length} US bike rides and races in ${name}, ${nConfOf(list)} with the organizer's date: `, list.map((e) => e.name))
+      : fitNames(`${list.length} US bike rides and races that run every year but haven't put out a 2027 date yet: `, list.map((e) => e.name)),
     lead: m ? "" : `<p class="cal-lead">These run every year but haven&rsquo;t put out a 2026 or 2027 date we could confirm.</p>` });
 }
 // Pass 22 (Oct 3, 2026): the homepage's "Find a race" lands on Races, which is road, crit and stage
@@ -532,10 +534,10 @@ for (const c of CATS) {
   shortPage({ url: `${URL}${CAT_SLUG[c]}/`, crumb: CAT_DOOR[c], list, byMonth: true, lead, picks,
     narrow: narrowLine({ type }, "Narrow by month, region, cause, distance"),
     h1: `2027 ${CAT_H1[c]} in the US`, title: `2027 ${CAT_H1[c]} in the US`,
-    description: `${list.length} ${CAT_H1[c]} in the US in 2027, ${nConfOf(list)} with organizer-confirmed dates, by month: ${list.slice(0, 3).map((e) => e.name).join(", ")} and more.` });
+    description: fitNames(`${list.length} ${CAT_H1[c]} in the US in 2027, ${nConfOf(list)} with the organizer's date, by month: `, list.map((e) => e.name)) });
 }
 // the six Robert is riding
-if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert&rsquo;s rides", list: riding,
+if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert\u2019s rides", list: riding,
   h1: "The 2027 rides I&rsquo;m doing", title: "The 2027 rides I'm doing for Cycle for Change",
   description: `The ${riding.length} organized rides Robert is riding in 2027 as part of the 10,000 miles, with dates, distances and sign-up links.`,
   lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one.</p>`,
@@ -553,7 +555,7 @@ if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert&rsquo;s ride
   let home = head({ title, description, url: URL, ld: [ld[0], ld[1], { ...ld[2], itemListElement: ld[2].itemListElement.map((x, i) => ({ ...x, url: SITE + monthPath(events.filter((e) => e.date_status === "confirmed")[i].month) + "#" + events.filter((e) => e.date_status === "confirmed")[i].slug })) }] }) + `
   <article class="calendar cal-home">
     ${crumbs()}
-    <h1>2027 bike rides &amp; races in the US</h1>
+    <h1>2027 cycling events calendar: US bike rides &amp; races</h1>
     <p class="cal-sub lede"><b>${events.length}</b> rides and races &middot; <b>${nConf}</b> with the organizer&rsquo;s date &middot; updated ${esc(shortUpdated)}</p>
 
     <section class="cal-step" aria-labelledby="when-h">
@@ -583,7 +585,7 @@ ${BLOCKS.REPORT({ thing: "event", heading: "Missing an event, or a date changed?
 
 // ——— the full list, with every filter: /events/2027/all/ ———————————————————————
 const ALL = URL + "all/";
-let body = head({ title: `All ${events.length} 2027 bike rides and races, with filters`, description, url: ALL, ld: [{ ...ld[0], url: SITE + ALL }, crumbLd("All", ALL)] });
+let body = head({ title: `All ${events.length} 2027 bike rides and races, with filters`, description: `Every one of the ${events.length} US bike rides and races on the 2027 calendar on one page. Filter by month, type, region, cause and distance.`, url: ALL, ld: [{ ...ld[0], url: SITE + ALL }, crumbLd("All", ALL)] });
 body += `
   <article class="calendar">
     ${crumbs("All")}

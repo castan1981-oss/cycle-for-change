@@ -121,7 +121,7 @@ const write = (p, s) => {
   fs.writeFileSync(p, s);
 };
 const trunc = (s, n) => (s.length <= n ? s : s.slice(0, n - 1).replace(/\s+\S*$/, "") + "…");
-const lower1 = (s) => s.charAt(0).toLowerCase() + s.slice(1);
+const lower1 = (s) => (/^[A-Z][A-Z0-9+/]/.test(s) ? s : s.charAt(0).toLowerCase() + s.slice(1));   // never "lGBTQ+" or "bCD/2/47"
 const cleanDist = (d) => (d == null ? null : String(d).replace(/^[~≈]\s*/, "").replace(/\s*(mi|miles)$/i, ""));
 // Filter tags: the data's inclusive_focus, plus "no-drop" whenever drop_policy says so
 // (the two disagree on a handful of rides; the page counts and the chips use this).
@@ -744,6 +744,8 @@ const fmtDate = (d) => F.fmt(d, { today: TODAY }) || "";
 // ride. The explaining (how we check, the questions, why) lives on /rides/about/; the form on
 // /rides/add/. The full list with every filter is still one tap away on each place's /all/.
 const LIST_MAX = 12;
+const LINKABLE = new Set();   // Search pass (Oct 5, 2026): the short pages that stay indexed; ride pages link up to them
+const THIN_MIN = 3;          // a pick page with fewer rides is noindex, follow and out of the sitemap (the Search Lab thin-page test)
 const DISC_SLUG = { road:"road", gravel:"gravel", mtb:"mountain-bike", fixed:"fixed-gear", social:"social", cruiser:"cruiser", bmx:"bmx", track:"track", cyclocross:"cyclocross", ebike:"e-bike", mixed:"mixed" };
 const DISC_H1 = { road:"Road", gravel:"Gravel", mtb:"Mountain bike", fixed:"Fixed-gear", social:"Social", cruiser:"Cruiser", bmx:"BMX", track:"Track", cyclocross:"Cyclocross", ebike:"E-bike-friendly", mixed:"Mixed-bike" };
 const TAG_SLUG = { lgbtq:"lgbtq", wtf:"women-trans-femme", bipoc:"bipoc", beginner:"beginner", "no-drop":"no-drop", family:"family", adaptive:"adaptive", youth:"youth" };
@@ -1201,7 +1203,7 @@ function directory(rides, hubs, worldHubs = []) {
   const nStates = states.filter((x) => x !== "DC").length;
   const statesText = `${nStates} states${states.includes("DC") ? " and DC" : ""}`;
   const lastChecked = lastCheckedOf(rides);
-  const description = `Search ${rides.length} recurring bicycle group rides in ${statesText}${worldCCs.length ? ` and ${worldCCs.length} more ${worldCCs.length === 1 ? "country" : "countries"}` : ""} by city. Road, gravel, mountain bike and social rides — day, time, start point, pace, and when each was last checked.`;
+  const description = `Find a group ride near you: ${rides.length.toLocaleString("en-US")} weekly bike rides in ${statesText}${worldCCs.length ? ` and ${worldCCs.length} more ${worldCCs.length === 1 ? "country" : "countries"}` : ""}. Day, time, start, pace, and when each was last checked.`;
   const crumbs = [["Cycle for Change", `${SITE}/`], ["Find a ride", `${SITE}/find-a-ride/`], ["Group rides", `${SITE}/rides/`]];
   const jsonld = { "@context": "https://schema.org", "@graph": [
     { "@type": "CollectionPage", "@id": `${SITE}/rides/`, name: "Find a group ride near you", description, url: `${SITE}/rides/`, dateModified: lastChecked, author: AUTHOR, publisher: PUBLISHER, breadcrumb: breadcrumbLd(crumbs) },
@@ -1298,8 +1300,8 @@ function findPage(rides) {
   const nCountries = new Set(rides.map((r) => r.country || "US")).size;
   const gravelRides = rides.filter((r) => (r.discipline || []).includes("gravel")).length;
   const riding = CAL.filter((e) => e.riding).length;
-  const title = "Find a bike ride: group rides, charity rides, gravel and races";
-  const description = `Find a bike ride near you or worth traveling for: ${rides.length} free weekly group rides in ${nCountries} countries, and ${CAL.length} charity rides, gran fondos, gravel races and tours on the 2027 US calendar.`;
+  const title = "Find a bike ride: group rides, charity rides, gravel, races";
+  const description = `Find a bike ride near you: ${rides.length.toLocaleString("en-US")} free weekly group rides in ${nCountries} countries, and ${CAL.length} charity rides, fondos, gravel races and tours for 2027.`;
   const crumbs = [["Cycle for Change", `${SITE}/`], ["Find a ride", canonical]];
   const kinds = [
     { href: "/rides/", name: "Group ride", sub: "Free, every week. Show up.", n: rides.length, markId: "riders", cls: "gr-kind--ink" },
@@ -1417,7 +1419,7 @@ function addPage(rides) {
   const description = "Add a group ride to the Cycle for Change list, fix one we got wrong, or tell us one is gone. Free to list. We check it at the source first.";
   const crumbs = [["Cycle for Change", `${SITE}/`], ["Group rides", `${SITE}/rides/`], ["Add a ride", canonical]];
   const jsonld = { "@context": "https://schema.org", "@graph": [{ "@type": "WebPage", "@id": canonical, url: canonical, name: "Add a group ride", description, author: AUTHOR, publisher: PUBLISHER, breadcrumb: breadcrumbLd(crumbs) }] };
-  return head({ title: "Add a group ride, or fix one", description, canonical, jsonld }) + `
+  return head({ title: "Add a group ride, or fix one", description, canonical, jsonld, noindex: true }) + `
 <main id="main" class="gr-dir">
   <header class="gr-head wrap">
       ${crumbsHtml(crumbs)}
@@ -1531,8 +1533,8 @@ ${CTA}
 }
 
 // ---------- a short page: one pick inside a place (Road in Phoenix, Saturday in Phoenix, No-drop in Arizona) ----------
-function subPage({ title, h1, crumbs, canonical, description, rides, body, jump = "", upHref, upText, sideHref = null, sideText = null, badgeHtml = "", first = false }) {
-  return head({ title, description, canonical, jsonld: pageLd(canonical, h1, description, rides, crumbs) }) + `
+function subPage({ title, h1, crumbs, canonical, description, rides, body, jump = "", upHref, upText, sideHref = null, sideText = null, badgeHtml = "", first = false, noindex = false }) {
+  return head({ title, description, canonical, jsonld: pageLd(canonical, h1, description, rides, crumbs), noindex }) + `
 <main id="main" class="gr-dir gr-sub-page">
   <header class="gr-head wrap${badgeHtml ? " gr-head--badge" : ""}">
       ${crumbsHtml(crumbs)}
@@ -1587,8 +1589,8 @@ function cityPage(h, { pages, notes = null, others = [], areaRides = [], areaHub
       const xh1 = `${x.h1} in ${world ? h.city : name}`;
       const long = x.kind !== "day" && list.length > 8;
       const dg = long ? dayGrouped(list) : null;
-      pages.push({ path: url, rides: x.rides, html: subPage({
-        title: `${xh1} (${plural(x.rides.length)})`, h1: xh1, crumbs: subCrumbs(x.name, `${SITE}${url}`), canonical: `${SITE}${url}`,
+      pages.push({ path: url, rides: x.rides, thin: x.rides.length < THIN_MIN, html: subPage({ noindex: x.rides.length < THIN_MIN,
+        title: xh1, h1: xh1, crumbs: subCrumbs(x.name, `${SITE}${url}`), canonical: `${SITE}${url}`,
         description: trunc(`${plural(x.rides.length, x.kind === "day" ? `${x.name} group ride` : `${x.h1.replace(/ group rides$/, "").toLowerCase()} group ride`)} within ${radius} of ${name}: ${x.rides.slice(0, 3).map((r) => r.name).join(", ")}. Day, time, start and when each was checked.`, 158),
         rides: list, body: dg ? dg.html : rowsHtml(list), jump: dg ? dg.strip : "",
         badgeHtml: x.kind === "day" ? badge({ day: x.key, sub: h.city }) : badge({ markId: x.markId, sub: h.city }), first: x.kind === "tag" && (x.key === "beginner" || x.key === "no-drop"),
@@ -1678,8 +1680,8 @@ function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, descripti
     if (list.length < 2) continue;
     const url = `${base}${f.slug}/`;
     const xh1 = `${f.h1} in ${areaWord}`;
-    pages.push({ path: url, rides: list, html: subPage({
-      title: `${xh1} (${plural(list.length)})`, h1: xh1, crumbs: [...crumbs, [FACET_DOOR[f.slug], `${SITE}${url}`]], canonical: `${SITE}${url}`,
+    pages.push({ path: url, rides: list, thin: list.length < THIN_MIN, html: subPage({ noindex: list.length < THIN_MIN,
+      title: xh1, h1: xh1, crumbs: [...crumbs, [FACET_DOOR[f.slug], `${SITE}${url}`]], canonical: `${SITE}${url}`,
       description: trunc(`${plural(list.length, `${f.h1.replace(/ group rides$/, "").toLowerCase()} group ride`)} in ${areaWord}: ${list.slice(0, 3).map((r) => r.name).join(", ")}. ${f.intro}`, 158),
       rides: list, badgeHtml: badge({ markId: FACET_MARK[f.slug], sub: areaWord }), body: groupedRows(list, { hubOf, collapse: list.length > LIST_MAX }), jump: list.length > LIST_MAX && new Set(list.map((r) => r.city)).size > 2 ? cityJump(list) : "",
       upHref: base, upText: `All group rides in ${areaWord}`, sideHref: `/rides/${f.slug}/`, sideText: `${FACET_DOOR[f.slug]} rides everywhere`, first: f.slug === "beginner" || f.slug === "no-drop",
@@ -1857,10 +1859,10 @@ function facetPage(f, all) {
   const canonical = `${SITE}/rides/${f.slug}/`;
   const crumbs = [["Cycle for Change", `${SITE}/`], ["Group rides", `${SITE}/rides/`], [FACET_DOOR[f.slug], canonical]];
   const where = `${plural(states.length, "state")}${ccs.length ? ` and ${plural(ccs.length, "more country", "more countries")}` : ""}`;
-  const description = trunc(`${rides.length} ${f.h1.charAt(0).toLowerCase() + f.h1.slice(1)} in ${where}. ${f.intro}`, 158);
+  const description = trunc(`${rides.length} ${lower1(f.h1)} in ${where}. ${f.intro}`, 158);
   const hrefFor = (list, base) => (list.length === 1 ? `/rides/${list[0].slug}/` : `${base}${f.slug}/`);
   const others = FACETS.filter((x) => x !== f).map((x) => { const n = all.filter(x.pick).length; return n ? door({ href: `/rides/${x.slug}/`, name: FACET_DOOR[x.slug], n, markId: FACET_MARK[x.slug] }) : ""; }).join("\n          ");
-  return head({ title: ccs.length ? `${f.h1} (${rides.length} rides, US and ${plural(ccs.length, "more country", "more countries")})` : `${f.h1} in the US (${rides.length} rides, ${states.length} states)`, description, canonical, jsonld: pageLd(canonical, f.h1, description, rides, crumbs) }) + `
+  return head({ title: `${f.h1} by state${ccs.length ? " and country" : ""}`, description, canonical, jsonld: pageLd(canonical, f.h1, description, rides, crumbs) }) + `
 <main id="main" class="gr-dir gr-facet" data-all="/rides/" data-keep="${f.slug === "gravel" ? "bike=gravel" : `for=${FACET_TAG[f.slug]}`}">
   <header class="gr-head wrap gr-head--badge">
       ${crumbsHtml(crumbs)}
@@ -1965,9 +1967,17 @@ function ridePage(r, all, hubFor, hubs) {
   // Pass 15: the page shows the first sentence and the when; the facts below carry the rest
   const ledeShort = lede.split(/(?<=\.)\s+(?=About |Pace: |No-drop\.)/)[0];
   const sw = shortWhen(r);
-  let title = `${r.name} — ${placeText(r)} group ride${sw ? `, ${sw}` : ""}`;
-  if (title.length > 66 && sw) title = `${r.name} — ${placeText(r)} group ride`;
-  if (title.length > 66) title = `${r.name} — ${placeText(r)}`;
+  // Search pass (Oct 5, 2026): the whole <title> fits 60 characters. The ride's name first (it is what people search),
+  // then the place (once: "Critical Mass Atlanta, GA", not "…Atlanta, Atlanta, GA"), then the day. chrome.js head()
+  // adds " — Cycle for Change" only when it still fits. The h1, share title and JSON-LD keep the full name.
+  const named = r.name.toLowerCase().includes(r.city.toLowerCase());   // "Critical Mass Atlanta, GA", not "…Atlanta — Atlanta, GA"
+  const area = isUS(r) ? r.state : countryName(r.country);
+  const lead = named ? `${r.name}, ${area}` : `${r.name} — ${r.city}, ${area}`;
+  const bare = r.name.replace(/\s*\([^)]*\)$/, "");   // "… (Suburban Cyclists Unlimited)": the club goes only when nothing else fits
+  const bareLead = named ? `${bare}, ${area}` : `${bare} — ${r.city}, ${area}`;
+  const title = [sw && `${lead} group ride, ${sw}`, `${lead} group ride`, lead, `${bareLead} group ride`, bareLead, `${bare} — ${r.city}`, bare]
+    .find((s) => s && s.length <= 60) || bare;
+  const shareTitle = `${r.name} — ${placeText(r)} group ride`;
 
   const hub = hubFor[r.slug];
   const areaName = isUS(r) ? stateName(r.state) : countryName(r.country);
@@ -2020,16 +2030,18 @@ function ridePage(r, all, hubFor, hubs) {
 
   // JSON-LD: WebPage (dates, author, breadcrumb) + Event only when the schedule is computable
   const graph = [{
-    "@type": "WebPage", "@id": url, url, name: title, description, dateModified: f.checked_on || r.verified_on, author: AUTHOR, publisher: PUBLISHER,
-    breadcrumb: breadcrumbLd(crumbs), ...(next ? { mainEntity: { "@id": `${url}#event` } } : {}),
+    "@type": "WebPage", "@id": url, url, name: shareTitle, description, dateModified: f.checked_on || r.verified_on, author: AUTHOR, publisher: PUBLISHER,
+    breadcrumb: breadcrumbLd(crumbs), ...(next && f.state !== "flagged" && r.confidence !== "low" ? { mainEntity: { "@id": `${url}#event` } } : {}),
   }];
-  if (next) {
+  // Search pass (Oct 5, 2026): no Event markup while the ride is flagged or found on one source only — the page itself
+  // says "confirm with the host"; a ride we hand Google as scheduled has to be one we'd stand behind today.
+  if (next && f.state !== "flagged" && r.confidence !== "low") {
     const ev = {
       "@type": "Event", "@id": `${url}#event`, name: r.name, description, url,
       startDate: isoWithOffset(next, r.tz),
       ...(r.duration_min ? { endDate: isoWithOffset(new Date(next.getTime() + r.duration_min * 60000), r.tz) } : {}),
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode", eventStatus: "https://schema.org/EventScheduled",
-      isAccessibleForFree: !r.cost || /^free/i.test(r.cost),
+      ...(/^free/i.test(r.cost || "") ? { isAccessibleForFree: true } : /\$\s?\d|membership|fee\b(?! stated)/i.test(r.cost || "") ? { isAccessibleForFree: false } : {}), image: OG_IMAGE,
       location: { "@type": "Place", name: (start && start.name) || placeText(r),
         address: { "@type": "PostalAddress", ...(start && start.address ? { streetAddress: start.address } : {}), addressLocality: r.city, ...(r.state || r.region ? { addressRegion: r.state || r.region } : {}), addressCountry: r.country },
         geo: { "@type": "GeoCoordinates", latitude: r.lat, longitude: r.lng } },
@@ -2141,6 +2153,7 @@ ${BLOCKS.REPORT({ thing: "ride", name: r.name, kind: "changed", compact: true, i
     <h2>${listed ? "Nearby rides" : "Checked rides near here"}</h2>
     ${nearby.map(({ o, d }) => `<a href="/rides/${o.slug}/">${esc(o.name)} <small>· ${esc(placeText(o))} · ${esc(kindLabel(o) || DISC_LABEL[o.discipline[0]] || o.discipline[0])} · ${nearText(d, o)}</small></a>`).join("\n    ")}
     ${hub ? `<a href="${hub.path}">All rides near ${esc(hub.city)} →</a>` : ""}
+    ${listed ? [...(hub ? [...tagsOf(r).map((t) => [TAG_SLUG[t], TAG_H1[t]]), ...r.discipline.map((d) => [DISC_SLUG[d], DISC_H1[d]])].filter(([s]) => s && LINKABLE.has(`${hub.path}${s}/`)).map(([s, h]) => `<a href="${hub.path}${s}/">${esc(h)} group rides in ${esc(hub.city)} →</a>`) : []), ...FACETS.filter((fc) => fc.pick(r) && LINKABLE.has(`${areaPath}${fc.slug}/`)).map((fc) => `<a href="${areaPath}${fc.slug}/">${esc(fc.h1)} in ${esc(areaText)} →</a>`)].join("\n    ") : ""}
     <a href="${areaPath}">All rides in ${esc(areaText)} →</a>
   </nav>
 
@@ -2157,7 +2170,7 @@ function sitemap(rides, states, hubs, worldCCs = [], worldHubs = [], steps = [])
   const maxOf = (list) => lastCheckedOf(list);
   const rows = [[`${SITE}/find-a-ride/`, maxOf(rides)], [`${SITE}/find-a-ride/gravel/`, maxOf(rides)], [`${SITE}/rides/`, maxOf(rides)], [`${SITE}/rides/about/`, maxOf(rides)]];
   if (rides.some((r) => !isUS(r))) rows.push([`${SITE}/rides/world/`, maxOf(rides.filter((r) => !isUS(r)))]);
-  for (const pg of steps) rows.push([`${SITE}${pg.path}`, maxOf(pg.rides)]);
+  for (const pg of steps) if (!pg.thin) rows.push([`${SITE}${pg.path}`, maxOf(pg.rides)]);
   const us = rides.filter(isUS);
   if (us.length) rows.push([`${SITE}/rides/united-states/`, maxOf(us)]);
   for (const st of states) rows.push([`${SITE}/rides/${st.toLowerCase()}/`, maxOf(rides.filter((r) => r.state === st))]);
@@ -2227,6 +2240,7 @@ function main() {
   for (const cc of worldCCs) write(path.join(OUT, countrySlug(cc), "index.html"), countryPage(cc, rides.filter((r) => r.country === cc), world.hubs, notes, steps));
   for (const h of world.hubs) write(path.join(OUT, countrySlug(h.country), h.slug, "index.html"), cityPage(h, { pages: steps, notes, others: nearHubs(h, world.hubs, km, 400), areaRides: rides.filter((r) => r.country === h.country), areaHubs: world.hubs.filter((x) => x.country === h.country) }));
   for (const f of FACETS) write(path.join(OUT, f.slug, "index.html"), facetPage(f, rides));
+  for (const pg of steps) if (!pg.thin) LINKABLE.add(pg.path);
   const taken = new Set([...hubs, ...world.hubs].map((h) => h.path));
   for (const pg of steps) {
     if (taken.has(pg.path)) { console.error(`${pg.path} is claimed twice (a short page on top of a city or another short page)`); process.exit(1); }

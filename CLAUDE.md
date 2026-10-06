@@ -92,7 +92,8 @@
 > field notes, resources, journal, tonight, 404). Styles: `/chrome.css` (tokens,
 > type scale, buttons, nav, menu, pledge, footer — every value copied from
 > `/home.css`) loads first on every inner page, then the section's own sheet.
-> Behaviour: `/chrome.js` (tally, menu, signup). Titles end " — Cycle for Change".
+> Behaviour: `/chrome.js` (tally, menu, signup). Titles end " — Cycle for Change" only when the whole title
+> fits 60 characters — `head()` in scripts/chrome.js decides (Oct 6, 2026).
 > The cream/plum/yellow + Fraunces/Anton look is gone everywhere.
 > The goal is **10,000 miles in 2027, all on the bike**. The count on the site
 > is miles since June 1, 2026; never show it as a fraction of 10,000.
@@ -329,8 +330,10 @@ lasts, and what we got wrong — on the thesis that SEO is the base under AI ans
   4 weeks for rankings). The Monday run reads these.
 - Day 0 facts that should shape new work: single-ride pages earn ~77% of Google clicks; the thin
   city and filter pages earn almost none; 129 pages sit "discovered, not indexed". Titles over 60
-  characters are likely cut off in results (86% of pages). Prefer fewer, fuller pages over more, thinner ones until
-  indexing catches up.
+  characters are likely cut off in results (86% of pages on Day 0; Oct 6, 2026: the generators keep titles to 60 and
+  `head()` drops the brand when it won't fit). Prefer fewer, fuller pages over more, thinner ones until
+  indexing catches up. A pick page with fewer than 3 rides is `noindex, follow` and out of the sitemap (`THIN_MIN`
+  in build-rides.js); ride pages link up to the pick pages that stay indexed. Event markup only for a date still ahead.
 
 ## Pass 22 — the homepage asks what you came for (Oct 3, 2026)
 Robert: "The home page should have options. Pledge/find a ride/find a race/ or find a fundraiser."
@@ -526,7 +529,7 @@ find out it changed or no longer exists."
   `node tools/build-rides.js && node scripts/build-events.js && node scripts/build-calendar.js`.
 - `/tonight/` and `scripts/build-events.js` read `cfc-site/rides/live.json` (listed rides only).
 - The ride-report form on a listed ride page has a fourth choice, "Still on — I rode it" (`still-on`).
-- Netlify runs the rides build on every deploy and the Monday workflow forces a deploy, so rides fall
+- Netlify runs the rides build on every deploy and the daily workflow (`rides-weekly-rebuild.yml`, daily since Oct 6) forces a deploy, so rides fall
   off the lists on schedule even when no data changes. When a hub URL disappears because the data
   grew, add a 301 in `netlify.toml` (Carlsbad → Encinitas is the first).
 - Never list LGBTQ-focused rides in `NO_LGBTQ_LISTING` countries (criminalisation or bans on

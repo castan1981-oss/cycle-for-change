@@ -8,7 +8,7 @@
   <title>Add a group ride, or fix one — Cycle for Change</title>
   <meta name="description" content="Add a group ride to the Cycle for Change list, fix one we got wrong, or tell us one is gone. Free to list. We check it at the source first.">
   <link rel="canonical" href="https://cycleforchange.org/rides/add/">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="robots" content="noindex, follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cycle for Change">
   <meta property="og:url" content="https://cycleforchange.org/rides/add/">
@@ -158,7 +158,17 @@
 
 <footer class="foot site-foot">
   <div class="wrap">
-    <p class="stack" aria-label="Cycle for Change"><span>Cycle</span><span class="for">For</span><span>Change</span></p>
+    <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
+         The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
+    <div class="foot-sign" role="img" aria-label="Cycle for change">
+      <svg class="foot-stencil" viewBox="-10 -10 370 350" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">
+          <use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/>
+          <use href="#lpF" transform="translate(0 180)"/><use href="#lpO" transform="translate(74 180)"/><use href="#lpR" transform="translate(148 180)"/>
+        </g>
+      </svg>
+      <span class="foot-plate">change</span>
+    </div>
     <div class="foot-grid">
       <div class="foot-col">
         <p class="eyebrow">Ride</p>

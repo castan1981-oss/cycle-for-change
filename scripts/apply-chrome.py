@@ -66,6 +66,9 @@ def new_head(s, page):
     dark = 'content="dark"' in old or 'class="theme-dark"' in s
     spec = {"title": title, "description": desc, "url": url, "ogType": ogtype, "dark": dark,
             "styles": SECTION_STYLES.get(top, ["/styles.css"]), "ld": ld, "extra": extra}
+    if keep and keep[0].startswith('<meta name="robots"'):   # one robots tag: the page's own noindex replaces the default
+        spec["robots"] = re.search(r'content="([^"]*)"', keep[0]).group(1)
+        spec["extra"] = "\n".join("  " + k.strip() for k in keep[1:])
     head = subprocess.check_output(NODE + ["head", json.dumps(spec)]).decode()
     return s.replace("<head>" + old + "</head>", "<head>\n" + head + "\n</head>", 1)
 

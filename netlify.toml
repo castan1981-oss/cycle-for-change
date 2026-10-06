@@ -63,6 +63,14 @@
   status = 301
   force = true
 
+# Search pass (Oct 6, 2026): the field-note templates live in cfc-site/ because the content workflows copy them
+# from there; they are never pages. 404 them so Google drops them.
+[[redirects]]
+  from = "/field-notes/_*"
+  to = "/404.html"
+  status = 404
+  force = true
+
 [[redirects]]
   from = "/strava-setup"
   to = "/"

@@ -6,7 +6,7 @@ Drag this whole folder onto Netlify and the site goes live. The pledge board and
 - `index.html` — the site (new palette, route-line tally, board, ride feed, fundraisers)
 - `netlify/functions/pledges.js` — reads saved names back for the board
 - `netlify/functions/mileage.js` — pulls your live miles from Strava
-- `strava-setup.html` — one-time helper to connect Strava
+- `netlify/functions/strava-connect.js` — connects (or re-connects) Strava; the old `strava-setup.html` helper is gone
 - `netlify.toml` — tells Netlify where the functions live
 
 ---
@@ -32,7 +32,7 @@ Until this is done the homepage hides the "N on the board" line rather than show
 You'll also see every pledge in **Netlify → Forms → pledges** — that's your master list, exportable to CSV anytime.
 
 ## Step 3 — Live mileage (optional, 15 min)
-Open `yoursite.com/strava-setup.html` and follow its three steps, then add the three values it gives you to Environment Variables (same place as the token). The route-line counter goes live with your real miles. Until then it reads 0, which is correct before 2027.
+Open `yoursite.com/.netlify/functions/strava-connect` while logged in to Strava and click Authorize (the client ID and secret must already be in Environment Variables). The route-line counter goes live with your real miles. Until then it reads 0, which is correct before 2027.
 
 ---
 

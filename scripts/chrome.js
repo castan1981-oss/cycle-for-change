@@ -44,7 +44,10 @@ const FONTS = `<link rel="preload" href="/fonts/overpass-latin.woff2" as="font" 
 /* Everything a page's <head> needs besides its own title/description/canonical.
    `styles` = the page's stylesheets after /chrome.css. `ld` = JSON-LD objects. */
 function head({ title, description, url, ogType = "website", styles = [], ld = [], extra = "", dark = false, robots = "index, follow, max-snippet:-1, max-image-preview:large" }) {
-  const full = /Cycle for Change/.test(title) ? title : `${title} — Cycle for Change`;
+  // Search pass (Oct 5, 2026): Google cuts titles near 60 characters and shows the site name on its own line. The
+  // brand goes on only when the whole title fits; a page whose own words fill the 60 keeps them (og:site_name and the
+  // homepage's WebSite markup still name the site).
+  const full = /Cycle for Change/.test(title) || title.length > 41 ? title : `${title} — Cycle for Change`;
   const canonical = /^https?:/.test(url) ? url : SITE + url;
   const sheets = ["/chrome.css", ...styles].map((h) => `  <link rel="stylesheet" href="${h}">`).join("\n");
   const json = ld.map((o) => `  <script type="application/ld+json">${JSON.stringify(o)}</script>`).join("\n");
