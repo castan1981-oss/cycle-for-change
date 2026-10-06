@@ -237,15 +237,12 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
         <g fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" filter="url(#lpRoller)">
           <path d="M118 62 C 112 110, 120 170, 158 232 C 250 262, 360 320, 470 392 C 510 416, 540 430, 560 440"/>
         </g>
-        <g fill="none" stroke="var(--paper)" stroke-width="2.5" stroke-dasharray="14 12">
-          <path d="M118 62 C 112 110, 120 170, 158 232 C 250 262, 360 320, 470 392 C 510 416, 540 430, 560 440"/>
-        </g>
         <g filter="url(#lpWornSoft)" style="color:var(--creosote)">
           <use href="#lpDiamond" x="104" y="36" width="30" height="52"/><use href="#lpDiamond" x="144" y="206" width="30" height="52"/><use href="#lpDiamond" x="546" y="414" width="30" height="52"/>
         </g>
         <g font-weight="900" fill="currentColor">
           <text x="150" y="60" font-size="44">SF</text><rect x="150" y="72" width="122" height="46" fill="var(--creosote)"/><text x="162" y="106" font-size="30" font-weight="800" fill="var(--paper)">SFAF</text>
-          <text x="150" y="134" font-size="24" font-weight="700" fill="var(--mute)">May 21 to 23</text>
+          <text x="150" y="146" font-size="24" font-weight="700" fill="var(--mute)">May 21 to 23</text>
           <text x="24" y="296" font-size="44">LA</text><rect x="24" y="308" width="188" height="46" fill="var(--creosote)"/><text x="36" y="342" font-size="30" font-weight="800" fill="var(--paper)">the Center</text>
           <text x="24" y="382" font-size="24" font-weight="700" fill="var(--mute)">Apr 23 to 25</text>
           <text x="440" y="492" font-size="44">PHX</text><rect x="440" y="504" width="212" height="46" fill="var(--creosote)"/><text x="452" y="538" font-size="30" font-weight="800" fill="var(--paper)">one&middot;n&middot;ten</text>
@@ -257,7 +254,7 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
       <article class="org">
         <svg class="org-badge" viewBox="0 0 300 200" role="img" aria-label="Cycling 4 one·n·ten: a loop out of Phoenix, 20 or 62 miles, Saturday November 7">
           <g fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" filter="url(#lpWornSoft)">
-            <path d="M36 140 C 20 96, 44 44, 96 40 C 140 36, 158 70, 150 104 C 142 140, 108 160, 76 152"/>
+            <path d="M36 140 L36 56 Q36 40 52 40 L116 40 Q132 40 132 56 L132 96 L100 128 Q92 136 80 136 L62 136"/>
           </g>
           <g filter="url(#lpWornSoft)" style="color:var(--creosote)"><use href="#lpDiamond" x="22" y="118" width="28" height="48"/></g>
           <g font-weight="900" fill="currentColor"><text x="176" y="92" font-size="56">20</text><text x="176" y="146" font-size="56">62</text><text x="246" y="146" font-size="18" font-weight="700" fill="var(--mute)">MI</text><text x="246" y="92" font-size="18" font-weight="700" fill="var(--mute)">MI</text><text x="176" y="42" font-size="16" font-weight="700" fill="var(--mute)">ONE DAY</text></g>
@@ -371,9 +368,9 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
       </g>
     </svg>
     <ol class="steps3 steps3--lane">
-      <li><h3 class="h3">I ride.</h3><p>10,000 miles in 2027. Every ride lands here from Strava.</p></li>
-      <li><h3 class="h3">I write it down.</h3><p>Every ride gets a stroke. The big ones get a page.</p></li>
-      <li><h3 class="h3">The money goes to the orgs.</h3><p>Through their own rides. Nothing here asks for a card.</p></li>
+      <li><svg class="step-mk" viewBox="0 0 190 100" aria-hidden="true" focusable="false" style="color:var(--creosote)"><g filter="url(#lpWornSoft)"><use href="#lpBike" x="20" y="0" width="150" height="100"/></g></svg><h3 class="h3">I ride.</h3><p>10,000 miles in 2027. Every ride lands here from Strava.</p></li>
+      <li><svg class="step-mk" viewBox="0 0 190 100" aria-hidden="true" focusable="false"><g filter="url(#lpWornSoft)"><use href="#lpStroke" x="0" y="0" width="190" height="100"/></g></svg><h3 class="h3">I write it down.</h3><p>Every ride gets a stroke. The big ones get a page.</p></li>
+      <li><svg class="step-mk" viewBox="0 0 190 100" aria-hidden="true" focusable="false"><g filter="url(#lpWornSoft)"><use href="#lpOrgs" x="0" y="0" width="190" height="100"/></g></svg><h3 class="h3">The money goes to the orgs.</h3><p>Through their own rides. Nothing here asks for a card.</p></li>
     </ol>
   </div>
 </section>

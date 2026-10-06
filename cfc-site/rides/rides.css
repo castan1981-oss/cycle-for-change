@@ -15,8 +15,8 @@
 .gr-search input{flex:1 1 320px;min-width:0;font:500 1.02rem/1.4 var(--body);color:var(--asphalt);background:var(--bone);border:1px solid var(--asphalt);border-radius:0;padding:11px 14px}
 .gr-search input:focus{outline:2px solid var(--asphalt);outline-offset:2px}
 .gr-search .btn{white-space:nowrap}
-.gr-status{font-family:var(--mono);font-size:.71875rem;letter-spacing:.06em;color:var(--creosote-ink);margin:14px 0 0;min-height:1.2em}
-.gr-chip{font:400 .6875rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--asphalt);background:var(--bone);border:1px solid var(--dust);border-radius:0;padding:8px 11px;cursor:pointer;text-decoration:none}
+.gr-status{font-family:var(--mono);font-size:.71875rem;letter-spacing:0;color:var(--creosote-ink);margin:14px 0 0;min-height:1.2em}
+.gr-chip{font:400 .6875rem/1 var(--mono);letter-spacing:0;text-transform:none;color:var(--asphalt);background:var(--bone);border:1px solid var(--dust);border-radius:0;padding:8px 11px;cursor:pointer;text-decoration:none}
 .gr-chip:hover{border-color:var(--asphalt)}
 .gr-chip[aria-pressed="true"]{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
 .gr-chip--mk{display:inline-flex;align-items:center;gap:7px;padding-left:9px}
@@ -33,13 +33,13 @@
 .gr-geo-mark{width:17px;height:17px;flex:none}
 .gr-filters{margin-top:22px;display:grid;gap:22px}
 .gr-group{border:0;margin:0;padding:0;min-width:0}
-.gr-filter-label{display:flex;align-items:center;gap:10px;width:100%;float:none;padding:0;margin:0 0 10px;font-family:var(--mono);font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.gr-filter-label{display:flex;align-items:center;gap:10px;width:100%;float:none;padding:0;margin:0 0 10px;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--mute)}
 .gr-filter-label::after{content:"";flex:1;height:1px;background:var(--dust)}
 .gr-tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px}
 .gr-tile{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:4px;min-height:92px;padding:12px 12px 11px;background:var(--paper);border:1px solid var(--dust);border-radius:0;color:var(--asphalt);text-align:left;cursor:pointer;font:inherit;transition:background-color .15s ease,color .15s ease,border-color .15s ease}
 .gr-tile-mark{width:28px;height:28px;flex:none;margin-bottom:auto;color:currentColor}
 .gr-tile-name{display:block;margin-top:10px;font-family:var(--display);font-weight:600;font-size:15px;line-height:1.12;letter-spacing:-.01em}
-.gr-tile-sub{display:block;font-family:var(--mono);font-size:.6875rem;letter-spacing:.03em;text-transform:uppercase;color:var(--creosote-ink)}
+.gr-tile-sub{display:block;font-family:var(--mono);font-size:.75rem;letter-spacing:.03em;text-transform:none;color:var(--creosote-ink)}
 .gr-tile-n{position:absolute;top:11px;right:11px;font-family:var(--mono);font-size:.6875rem;letter-spacing:.02em;line-height:1;color:var(--creosote-ink);font-variant-numeric:tabular-nums}
 .gr-tile[aria-pressed="true"]{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}
 .gr-tile[aria-pressed="true"] .gr-tile-n,.gr-tile[aria-pressed="true"] .gr-tile-sub{color:var(--dust)}
@@ -66,7 +66,7 @@
 @media (hover:hover){.gr-day:not([aria-pressed="true"]):not([aria-disabled="true"]):hover{background:var(--bone)}}
 @media (prefers-reduced-motion:reduce){.gr-day-bar,.gr-tile{transition:none}}
 
-.gr-tonight{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:4px;font-family:var(--mono);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--asphalt)}
+.gr-tonight{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:4px;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;text-decoration:none;color:var(--asphalt)}
 .gr-tonight:hover{text-decoration:underline;text-decoration-color:var(--creosote)}
 .gr-tonight-mark{width:16px;height:16px;flex:none;color:var(--creosote-ink)}
 
@@ -75,10 +75,10 @@
 .gr-result-line{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px;margin:0;min-width:0}
 .gr-result-n{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,9vw,3.4rem);line-height:.9;letter-spacing:-.04em;color:var(--asphalt);font-variant-numeric:tabular-nums}
 .gr-result .gr-status{margin:0;font-family:var(--display);font-size:1rem;letter-spacing:0;line-height:1.35;color:var(--asphalt);min-height:0}
-.gr-clear{flex:none;display:inline-flex;align-items:center;min-height:44px;font:400 .6875rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--asphalt);background:none;border:0;padding:0 2px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.gr-clear{flex:none;display:inline-flex;align-items:center;min-height:44px;font:400 .6875rem/1 var(--mono);letter-spacing:0;text-transform:none;color:var(--asphalt);background:none;border:0;padding:0 2px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 
 /* while the rides are below the fold: how many, and a way down to them */
-.gr-jump{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:520px;margin:0 auto;min-height:54px;padding:0 18px;background:var(--asphalt);color:var(--bone);text-decoration:none;font-family:var(--mono);font-size:.71875rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.gr-jump{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:520px;margin:0 auto;min-height:54px;padding:0 18px;background:var(--asphalt);color:var(--bone);text-decoration:none;font-family:var(--mono);font-size:.75rem;font-weight:700;letter-spacing:0;text-transform:none}
 .gr-jump-n{font-family:var(--display);font-size:17px;font-weight:700;letter-spacing:-.01em;text-transform:none}
 #gr-list,#results{scroll-margin-top:calc(var(--nav-h) + 12px)}
 
@@ -104,12 +104,12 @@
 .gr-state-head{font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:-.01em;margin:0 0 12px;display:flex;align-items:baseline;gap:10px}
 .gr-state-head a{text-decoration:none}
 .gr-state-head a:hover{text-decoration:underline;text-decoration-color:var(--creosote)}
-.gr-count{font-family:var(--mono);font-size:.6875rem;color:var(--mute);letter-spacing:.1em}
+.gr-count{font-family:var(--mono);font-size:.6875rem;color:var(--mute);letter-spacing:0}
 .gr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
 .gr-card{display:flex;flex-direction:column;gap:5px;padding:16px 18px;background:var(--bone-2);border:1px solid var(--dust);text-decoration:none;color:inherit}
 .gr-card:hover{border-color:var(--asphalt)}
 .gr-card-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
-.gr-disc,.gr-dist{font-family:var(--mono);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;color:var(--creosote-ink)}   /* mute is 4.03 on bone-2; creosote-ink clears */
+.gr-disc,.gr-dist{font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--creosote-ink)}   /* mute is 4.03 on bone-2; creosote-ink clears */
 /* Pass 6: the discipline's mark (cfc-site/rides/marks.svg) opens every card */
 .gr-mark{width:22px;height:22px;flex:0 0 auto;color:var(--asphalt);margin:-3px 0}
 .gr-dist{color:var(--creosote-ink);white-space:nowrap}
@@ -117,12 +117,12 @@
 .gr-card-place{font-size:.9rem}
 .gr-card-when{font-size:.88rem;color:var(--mute)}
 .gr-card-stat{font-family:var(--mono);font-size:.6875rem;color:var(--asphalt)}
-.gr-wait{font-style:normal;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.gr-wait{font-style:normal;font-weight:700;letter-spacing:0;text-transform:none}
 .gr-wait--waits{color:var(--creosote-ink)}
 .gr-wait--regroups{color:var(--asphalt)}
 .gr-wait--drops{color:var(--mute)}
 .gr-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
-.gr-tag{font-family:var(--mono);font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--dust);padding:2px 7px;color:var(--asphalt)}
+.gr-tag{font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;border:1px solid var(--dust);padding:2px 7px;color:var(--asphalt)}
 .gr-tag-warn{border-color:var(--creosote);color:var(--creosote-ink)}
 .gr-tag-ok{background:var(--creosote-ink);border-color:var(--creosote-ink);color:var(--bone)}
 .gr-empty{padding:20px 0;color:var(--mute)}
@@ -141,27 +141,27 @@
 
 /* —— ride page —— */
 .gr-ride .ride{max-width:820px}
-.gr-place{font-family:var(--mono);font-size:.71875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:-.2em 0 .8em}
+.gr-place{font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--mute);margin:-.2em 0 .8em}
 .gr-ride .gr-tags{margin:0 0 1.2em}
 .gr-next{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:0 0 14px;padding:14px 18px;background:var(--asphalt);color:var(--bone)}
-.gr-next-label{font-family:var(--mono);font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dust)}
+.gr-next-label{font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--dust)}
 .gr-next-when{font-family:var(--display);font-weight:700;font-size:1.3rem;line-height:1.15;letter-spacing:-.01em}
 .gr-next-rel{font-size:.88rem;color:var(--dust)}
 .gr-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 26px}
-.gr-minor{font-family:var(--mono);font-size:.6875rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.gr-minor{font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--mute)}
 .gr-share-alt{font-size:.85rem;color:var(--mute)}
 .gr-toast{font-family:var(--mono);font-size:.6875rem;color:var(--creosote-ink)}
 .gr-facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:0;margin:0 0 10px;border-top:1px solid var(--dust);border-left:1px solid var(--dust)}
 .gr-fact{padding:14px 16px;border-right:1px solid var(--dust);border-bottom:1px solid var(--dust)}
-.gr-fact dt{font-family:var(--mono);font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin:0 0 6px}
+.gr-fact dt{font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--mute);margin:0 0 6px}
 .gr-fact dd{margin:0;font-size:.98rem;line-height:1.4;display:flex;flex-direction:column}
 .gr-fact dd small{color:var(--mute);font-size:.85rem}
-.gr-map{font-family:var(--mono);font-size:.6875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--creosote-ink);margin-top:4px;text-decoration:none}
+.gr-map{font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--creosote-ink);margin-top:4px;text-decoration:none}
 .gr-first{margin:34px 0 0;padding:20px 22px;border:1px solid var(--dust);background:var(--bone-2)}
 .gr-first h2{margin:0 0 12px;font-size:1.3rem}
 .gr-first dl{margin:0;display:grid;gap:10px}
 .gr-first dl>div{display:grid;grid-template-columns:74px 1fr;gap:12px;align-items:baseline}
-.gr-first dt{font-family:var(--mono);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;color:var(--creosote-ink)}
+.gr-first dt{font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--creosote-ink)}
 .gr-first dd{margin:0;font-size:.96rem;line-height:1.55}
 .gr-about p{max-width:46em}
 .gr-links h2{margin-top:1.8em}
@@ -209,7 +209,7 @@
 .gr-hub .gr-hero select{background:transparent;color:var(--asphalt);border-color:var(--asphalt)}
 .gr-hub .gr-hero select option{color:var(--asphalt)}
 .gr-more{margin-top:12px}
-.gr-more>summary{cursor:pointer;font-family:var(--mono);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding:8px 0;list-style:none;display:inline-block}
+.gr-more>summary{cursor:pointer;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--mute);padding:8px 0;list-style:none;display:inline-block}
 .gr-more>summary::-webkit-details-marker{display:none}
 .gr-more>summary::after{content:" +"}
 .gr-more[open]>summary::after{content:" −"}
@@ -218,7 +218,7 @@
 
 .gr-hub .gr-results-wrap{padding-block:clamp(24px,4vw,40px) 0;scroll-margin-top:80px}
 .gr-results-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 16px;margin:0 0 14px}
-.gr-results-count{margin:0;font-family:var(--mono);font-size:.75rem;letter-spacing:.06em;color:var(--creosote-ink)}
+.gr-results-count{margin:0;font-family:var(--mono);font-size:.75rem;letter-spacing:0;color:var(--creosote-ink)}
 .gr-more-row{margin:18px 0 0}
 
 .gr-match{margin:clamp(36px,5vw,60px) 0 0;padding:clamp(22px,3.5vw,36px);background:var(--bone-2);border-top:2px solid var(--asphalt);display:flex;flex-direction:column;gap:18px;align-items:flex-start}
@@ -235,13 +235,13 @@
 @media (max-width:640px){
   .gr-hub .gr-search .btn{flex:1 1 100%}
 }
-.gr-hub .gr-hero .gr-tonight{align-self:center;margin:0 0 0 4px;letter-spacing:.08em}
+.gr-hub .gr-hero .gr-tonight{align-self:center;margin:0 0 0 4px;letter-spacing:0}
 .gr-hub .gr-more .gr-filters{margin-top:12px}
 
 /* Freshness (Sept 30, 2026). tools/lib/rides-freshness.js picks the words; these carry them.
    The "Checked" line on every card, the checked block on every ride page, the banner on a
    ride that's off the lists (dark once per page: the Next-ride box is hidden when it shows). */
-.gr-card-checked{font-family:var(--mono);font-size:.6875rem;letter-spacing:.06em;color:var(--creosote-ink);margin-top:2px}
+.gr-card-checked{font-family:var(--mono);font-size:.6875rem;letter-spacing:0;color:var(--creosote-ink);margin-top:2px}
 .gr-card-checked--look{color:var(--asphalt);font-weight:700}
 .gr-checked{display:flex;gap:14px;align-items:flex-start;margin:0 0 14px;padding:14px 18px;border:1px solid var(--dust);border-left:3px solid var(--creosote);background:var(--bone-2)}
 .gr-checked--look{border-left-color:var(--asphalt)}
@@ -255,7 +255,7 @@
 .gr-banner p:last-child{margin:0}
 .gr-banner a,.gr-banner .link{color:var(--bone)}
 /* The world: the English name under a local one, the visitor notes, a country's "what to know" */
-.gr-name-en{font-family:var(--mono);font-size:.71875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:-.3em 0 .5em}
+.gr-name-en{font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--mute);margin:-.3em 0 .5em}
 .gr-visit{margin:34px 0 0;padding:20px 22px;border:1px solid var(--dust);background:var(--bone-2)}
 .gr-visit h2{margin:0 0 10px;font-size:1.3rem}
 .gr-visit p{margin:0;max-width:46em;line-height:1.55}
@@ -269,7 +269,7 @@
 .tile-p--country .n{font-size:1.6rem}
 .gr-checked>div{flex:1;min-width:0}
 .gr-checked .link{white-space:normal}
-.gr-card-en{font-family:var(--mono);font-size:.6875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--creosote-ink);margin-top:-3px}
+.gr-card-en{font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--creosote-ink);margin-top:-3px}
 
 /* —— Pass 15 (Oct 1, 2026): step down, don't scroll ——
    Every page asks one question with a few big picks (tools/build-rides.js: directory,
@@ -281,7 +281,7 @@
 .gr-dot{font-style:normal;color:var(--dust-deep)}
 .gr-steps{display:flex;flex-direction:column;gap:clamp(30px,5vw,48px);padding-top:clamp(20px,3vw,32px)}
 .gr-steps > .pledge,.gr-steps > .back,.gr-steps > .gr-footline{margin-top:0}
-.gr-dir .gr-step > h2.gr-filter-label,.gr-dir h2.gr-list-h{margin:0 0 12px;font-weight:400;font-family:var(--mono);font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);display:flex;align-items:center;gap:10px}
+.gr-dir .gr-step > h2.gr-filter-label,.gr-dir h2.gr-list-h{margin:0 0 12px;font-weight:700;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--mute);display:flex;align-items:center;gap:10px}
 .gr-dir h2.gr-list-h::after{content:"";flex:1;height:1px;background:var(--dust)}
 .gr-wide-doors{margin-top:6px}
 
@@ -300,7 +300,7 @@ a.gr-day{text-decoration:none}
 .gr-picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:8px}
 .gr-pick{position:relative;display:grid;grid-template-columns:30px minmax(0,1fr) auto;column-gap:14px;row-gap:2px;align-items:start;padding:16px 16px 15px;background:var(--paper);border:1px solid var(--dust);border-left:3px solid var(--asphalt);color:var(--asphalt);text-decoration:none}
 .gr-pick-mark{grid-row:1 / span 3;width:28px;height:28px;margin-top:2px}
-.gr-pick-k{font-family:var(--mono);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--creosote-ink)}
+.gr-pick-k{font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--creosote-ink)}
 .gr-pick-name{font-family:var(--display);font-weight:700;font-size:1.2rem;line-height:1.12;letter-spacing:-.01em}
 .gr-pick-when{font-size:.9rem;color:var(--mute)}
 .gr-pick-go{grid-column:3;grid-row:1 / span 3;align-self:center;font-size:1.3rem}
@@ -310,9 +310,9 @@ a.gr-day{text-decoration:none}
 
 /* the way to the full list, the quiet foot line, nearby cities */
 .gr-all-link{margin:0}
-.gr-all-link .link{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.71875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:4px}
+.gr-all-link .link{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:4px}
 .gr-all-mark{width:18px;height:18px;flex:none}
-.gr-footline{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0;font-family:var(--mono);font-size:.6875rem;letter-spacing:.06em;color:var(--mute)}
+.gr-footline{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0;font-family:var(--mono);font-size:.6875rem;letter-spacing:0;color:var(--mute)}
 .gr-footline a{color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--dust-deep);text-underline-offset:3px}
 .gr-footline-mark{width:16px;height:16px;flex:none;color:var(--creosote-ink)}
 .gr-near{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px}
@@ -374,7 +374,7 @@ details.gr-fold>summary::after{content:"+";font-family:var(--mono);font-weight:4
 details.gr-fold[open]>summary::after{content:"\2212"}
 details.gr-fold>dl{padding:0 18px 18px}
 .gr-checked-more{margin-top:4px}
-.gr-checked-more>summary{cursor:pointer;font-family:var(--mono);font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--creosote-ink)}
+.gr-checked-more>summary{cursor:pointer;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--creosote-ink)}
 .gr-checked-more p{margin:6px 0 0;font-size:.92rem;color:var(--mute)}
 .gr-checked-line .link{white-space:normal}
 /* the town strip on a city page: two across on a phone, the card's last line dropped */
@@ -405,7 +405,7 @@ details.gr-fold>dl{padding:0 18px 18px}
 .gr-map-labels a:hover .gr-map-hub{fill:var(--asphalt)}
 .gr-map-labels a:focus{outline:none}
 .gr-map-labels a:focus-visible .gr-map-hub{stroke-width:3}
-.gr-map figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;margin-top:10px;font-family:var(--mono);font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.gr-map figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;margin-top:10px;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--mute)}
 .gr-map figcaption span{display:inline-flex;align-items:center;gap:8px}
 .gr-map figcaption a{color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px}
 .gr-map-cap-mark{width:16px;height:16px;flex:none;color:var(--creosote-ink)}
@@ -504,11 +504,11 @@ details.gr-fold>dl{padding:0 18px 18px}
 .gr-badge{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;width:88px;height:88px;margin:4px 0 12px;background:var(--asphalt);color:var(--bone)}
 .gr-badge-mark{width:44px;height:44px}
 .gr-badge-day{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:.9;letter-spacing:-.04em}
-.gr-badge-sub{max-width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:var(--mono);font-size:.6875rem;letter-spacing:.04em;text-transform:uppercase;color:var(--dust)}
+.gr-badge-sub{max-width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:var(--mono);font-size:.75rem;letter-spacing:.04em;text-transform:none;color:var(--dust)}
 @media (min-width:900px){.gr-head--badge .gr-badge{position:absolute;right:var(--gut);top:24px;width:128px;height:128px}.gr-head--badge .gr-badge-mark{width:62px;height:62px}.gr-head--badge .gr-badge-day{font-size:3.4rem}.gr-head--badge .gr-badge-sub{font-size:.6875rem;max-width:110px}}
 
 /* the ride button: a stamp with the mark, the words, an arrow */
-.gr-btn{display:inline-grid;grid-template-columns:48px minmax(0,auto) 44px;align-items:stretch;min-height:52px;max-width:100%;background:var(--asphalt);color:var(--bone);border:1px solid var(--asphalt);text-decoration:none;font-family:var(--mono);font-size:.71875rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;line-height:1.25}
+.gr-btn{display:inline-grid;grid-template-columns:48px minmax(0,auto) 44px;align-items:stretch;min-height:52px;max-width:100%;background:var(--asphalt);color:var(--bone);border:1px solid var(--asphalt);text-decoration:none;font-family:var(--mono);font-size:.75rem;font-weight:700;letter-spacing:0;text-transform:none;line-height:1.25}
 .gr-btn-mk{display:grid;place-items:center;background:var(--bone);color:var(--asphalt);border-right:1px solid var(--asphalt);transition:background-color .18s ease}
 .gr-btn-mark{width:22px;height:22px}
 .gr-btn-t{display:flex;align-items:center;padding:10px 14px 10px 16px;min-width:0}
@@ -552,7 +552,7 @@ details.gr-fold>dl{padding:0 18px 18px}
 @media (hover:hover){a.gr-kind--ink:hover{background:var(--asphalt);border-color:var(--asphalt)}a.gr-kind--ink:hover .gr-tile-name{text-decoration:underline;text-underline-offset:3px}}
 .gr-find .gr-head{padding-bottom:4px}
 .gr-jumpcities{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:12px 0 0}
-.gr-jumpcities-l{font-family:var(--mono);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-right:4px}
+.gr-jumpcities-l{font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--mute);margin-right:4px}
 .gr-jumpcities .gr-chip{min-height:44px;display:inline-flex;align-items:center;gap:6px}
 .gr-chip-n{font-size:.6875rem;color:var(--creosote-ink)}
 /* the US page's state rows */
@@ -565,7 +565,7 @@ details.gr-fold>dl{padding:0 18px 18px}
 @media (hover:hover){.gr-row-st:hover b{text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px}}
 /* folded: the long lists and the explaining, one tap away (and still in the page for search) */
 .gr-fold{margin-top:14px;border-top:1px solid var(--asphalt)}
-.gr-fold>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;min-height:48px;font-family:var(--mono);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase}
+.gr-fold>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;min-height:48px;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none}
 .gr-fold>summary::-webkit-details-marker{display:none}
 .gr-fold>summary::before{content:"+";font-weight:700;width:1em}
 .gr-fold[open]>summary::before{content:"–"}
@@ -581,7 +581,7 @@ details.gr-fold>dl{padding:0 18px 18px}
 .gr-wide-door{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;min-height:64px;padding:12px 14px;background:var(--paper);border:1px solid var(--dust);color:var(--asphalt);text-decoration:none}
 .gr-wide-door-mk{width:26px;height:26px;color:currentColor}
 .gr-wide-door b{display:block;font-family:var(--display);font-weight:600;font-size:16px;line-height:1.15}
-.gr-wide-door span span{display:block;font-family:var(--mono);font-size:.6875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--creosote-ink);margin-top:3px}
+.gr-wide-door span span{display:block;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--creosote-ink);margin-top:3px}
 .gr-wide-door i{font-style:normal;font-family:var(--mono)}
 @media (hover:hover){a.gr-wide-door:hover{border-color:var(--asphalt);background:var(--bone)}}
 a.gr-wide-door:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px}
@@ -612,7 +612,7 @@ a.gr-wide-door:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px
 .gr-hub .gr-results-count:empty{display:none}
 .gr-hub .gr-results-head .gr-clear{margin:-10px 0 0 auto}
 .gr-links{display:flex;flex-wrap:wrap;align-items:center;gap:0 18px;margin:-6px 0 14px}
-.gr-links a{display:inline-flex;align-items:center;min-height:44px;font-family:var(--mono);font-size:.71875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:4px}
+.gr-links a{display:inline-flex;align-items:center;min-height:44px;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:4px}
 .gr-links .gr-links-hint{font-size:.95rem;color:var(--mute)}
 .gr-links .gr-chip{margin-left:-8px}
 .gr-hub .gr-empty{padding:4px 0 8px;color:var(--asphalt)}
@@ -622,7 +622,7 @@ a.gr-wide-door:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px
 .gr-empty-add{margin:14px 0 0;font-size:.95rem}
 .gr-empty-add a{color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px}
 .gr-hero-alt{margin:10px 0 0}
-.gr-hero-alt a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-family:var(--mono);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--dust-deep);text-underline-offset:4px}
+.gr-hero-alt a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--dust-deep);text-underline-offset:4px}
 .gr-hero-alt-mk{width:16px;height:16px;flex:none;color:var(--creosote-ink)}
 .gr-hub .gr-status.visually-hidden{margin:0}
 /* the search box at 150% text: the field keeps room for its words (in rem, so it grows with the text) and

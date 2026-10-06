@@ -82,11 +82,11 @@ p{margin:0 0 1em}
 .eyebrow{
   margin:0;
   font-family:var(--mono);
-  font-size:11px;
-  font-weight:400;
+  font-size:12px;
+  font-weight:700;
   line-height:1.4;
-  letter-spacing:.16em;
-  text-transform:uppercase;
+  letter-spacing:0;
+  text-transform:none;
 }
 .eyebrow a{text-decoration:none}
 
@@ -102,10 +102,10 @@ p{margin:0 0 1em}
   border-radius:0;
   background:transparent;
   font-family:var(--mono);
-  font-size:11.5px;
+  font-size:12px;
   font-weight:700;
-  letter-spacing:.14em;
-  text-transform:uppercase;
+  letter-spacing:0;
+  text-transform:none;
   text-decoration:none;
   white-space:nowrap;
   cursor:pointer;
@@ -127,9 +127,9 @@ p{margin:0 0 1em}
   padding-bottom:6px;
   border-bottom:1px solid currentColor;
   font-family:var(--mono);
-  font-size:11px;
-  letter-spacing:.16em;
-  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:0;
+  text-transform:none;
   text-decoration:none;
   white-space:nowrap;
 }
@@ -157,7 +157,7 @@ p{margin:0 0 1em}
    is the bar's corner: the full bar height, flush to the screen's left edge, the wheel 28px inside. */
 .brand .brand-mark{display:block;height:22px;width:auto;color:var(--asphalt)}
 .brand-mark .lp-bar{fill:var(--creosote)}
-.brand-word{font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.brand-word{font-weight:800;font-size:12.5px;letter-spacing:0;text-transform:none;white-space:nowrap}
 .brand-word i{font-style:normal;color:var(--creosote-ink)}
 @media (max-width:899px){
   /* Lane Paint (Oct 5, 2026): the mark keeps the gutter — the flush-left corner stamp went with the wheel */
@@ -202,12 +202,12 @@ p{margin:0 0 1em}
 .menu-close::after{transform:rotate(-45deg)}
 .menu-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
 .menu-list a{display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:800;font-size:clamp(2rem,9.5vw,2.75rem);line-height:1;letter-spacing:-.03em}
-.menu-list a span{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.16em;color:var(--mute)}
+.menu-list a span{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:0;color:var(--mute)}
 .menu-foot{margin-top:auto;font-size:15px;color:var(--mute);display:flex;flex-direction:column;gap:6px}
 .menu-foot b{color:var(--asphalt)}
 
 /* —— the running tally, under the nav on every inner page —— */
-.tally-line{margin:0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.tally-line{margin:0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--mute)}
 .tally-line .wrap{display:flex;align-items:center;gap:10px;min-height:38px;padding-block:8px}
 .tally-line .dot{width:8px;height:8px;border-radius:50%;background:var(--asphalt);flex:0 0 auto}
 .tally-num{color:var(--asphalt);font-weight:700}
@@ -228,7 +228,7 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 
 /* —— footer (identical to home) —— */
 .foot{margin-top:var(--sec);background:var(--asphalt);color:var(--bone);padding-block:clamp(48px,7vw,96px) 32px}
-.stack{margin:0 0 clamp(40px,6vw,80px);font-weight:800;font-size:clamp(4.4rem,21.4vw,13rem);line-height:.84;letter-spacing:-.035em;text-transform:uppercase}
+.stack{margin:0 0 clamp(40px,6vw,80px);font-weight:800;font-size:clamp(4.4rem,21.4vw,13rem);line-height:.84;letter-spacing:-.035em;text-transform:none}
 .stack span{display:block}
 .stack .for{color:var(--creosote-lift)}
 .foot-sign{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(14px,2.4vw,26px);margin:0 0 clamp(40px,6vw,80px);--fw:clamp(240px,52vw,440px)}
@@ -240,7 +240,7 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .foot-col a{padding:6px 0;text-decoration:none;font-size:1.02rem}
 @media (hover:hover){.foot-col a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}}
 .signup{grid-column:1 / -1;display:flex;flex-direction:column;gap:8px}
-.lab{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.lab{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
 .field{
   width:100%;
   margin:0;
@@ -256,7 +256,7 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
   appearance:none;
 }
 .field:focus{outline:0;box-shadow:0 1px 0 var(--asphalt)}
-.ok{margin:0;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.ok{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
 .signup .field{border-bottom-color:var(--bone);margin-bottom:10px}
 .signup .field:focus{box-shadow:0 1px 0 var(--bone)}
 .signup .btn{align-self:flex-start}
@@ -264,7 +264,7 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .foot-crisis{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;margin-top:clamp(36px,5vw,64px);padding-top:16px;border-top:1px solid var(--line-d);font-size:15px}
 .foot-crisis .eyebrow{color:var(--dust)}
 .foot-crisis b{font-weight:800}
-.foot-line{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 16px;margin-top:22px;padding-top:12px;border-top:1px solid var(--line-d);font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dust)}
+.foot-line{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 16px;margin-top:22px;padding-top:12px;border-top:1px solid var(--line-d);font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--dust)}
 @media (min-width:900px){
   .foot-grid{grid-template-columns:repeat(3,minmax(0,1fr)) minmax(0,1.4fr);gap:clamp(24px,4vw,56px)}
   .signup{grid-column:auto}
@@ -294,7 +294,7 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .ph img{display:block;width:100%;height:auto;object-fit:cover;background:transparent;
   -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%);
   mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%)}
-.ph figcaption{margin-top:4px;font-family:var(--mono);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.ph figcaption{margin-top:4px;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--mute)}
 .theme-dark .ph figcaption{color:var(--dust)}
 @media (max-width:899px){
   .ph{margin-inline:calc(-1 * var(--gut))}
@@ -315,3 +315,13 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
   .ph--frame img{aspect-ratio:3/2;max-height:620px}
   .ph figcaption{padding-left:2.5%}
 }
+
+/* —— Pass 29 (Oct 5, evening): the type, retyped. Tracked mono caps are gone from every sheet (the
+   mechanical pass above set text-transform:none and letter-spacing:0 on each rule that had them,
+   and lifted anything under 12px to 12px). What stands instead, in Overpass only: labels and kickers
+   in sentence case at 12.5–13px / 700, gunmetal; links at 15px / 700 with the hairline and the arrow;
+   buttons alone keep caps — a road sign — at 13px / 800 with .04em, never more. —— */
+.eyebrow{font-size:.8125rem;font-weight:700;letter-spacing:0;text-transform:none;color:var(--mute)}
+.link{font-size:.9375rem;font-weight:700;letter-spacing:0;text-transform:none;gap:6px;padding-bottom:3px;border-bottom-width:1.5px;white-space:normal}
+.link::after{font-weight:400}
+.btn,.btn--sm{font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:.8125rem}
