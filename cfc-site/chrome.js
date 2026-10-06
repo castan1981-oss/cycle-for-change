@@ -52,6 +52,21 @@
 
   /* —— 3. mile updates —— */
   var emailForm = $("emailForm"), emailOk = $("emailOk");
+
+  /* Key events for Google Analytics (the tag itself is Netlify snippet injection, G-DWNR81WXS3).
+     sign_up = mile-updates signup; org_ride_click = a tap through to an org's ride or give page;
+     ride_host_click = a tap through to a group ride host's page. No personal data is sent. */
+  var ORG_HOSTS = /(^|\.)(runsignup\.com|onenten\.org|lalgbtcenter\.org|sfaf\.org)$/;
+  function cfcTrack(name, params) { try { if (typeof window.gtag === "function") window.gtag("event", name, params || {}); } catch (e) {} }
+  document.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest("a[href^='http']") : null;
+    if (!a) return;
+    var host; try { host = new URL(a.href).hostname; } catch (er) { return; }
+    if (host === location.hostname) return;
+    if (ORG_HOSTS.test(host)) cfcTrack("org_ride_click", { link_domain: host, link_url: a.href });
+    else if (a.closest(".gr-btn, .ride-acts, [data-host-link]") || /\/rides\//.test(location.pathname)) cfcTrack("ride_host_click", { link_domain: host });
+  }, true);
+
   if (emailForm && emailOk) emailForm.addEventListener("submit", function (e) {
     e.preventDefault();
     var f = $("email");
@@ -64,6 +79,7 @@
         if (!res.ok) throw new Error("bad status");
         emailForm.reset();
         emailOk.textContent = "You’re on the list.";
+        cfcTrack("sign_up", { method: "mile_updates" });
         emailOk.hidden = false;
         btn.disabled = false;
       })
