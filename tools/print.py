@@ -13,7 +13,11 @@ and the files are cut at the source's full width so nothing is upscaled on a 3x 
 
     python3 tools/print.py cfc-site/img/hero-wide.jpg cfc-site/img/sign-print.jpg --width 2000 --warmth .10
     python3 tools/print.py cfc-site/img/hero-wide.jpg cfc-site/img/sign-print-phone.jpg --width 1400 --warmth .10
-    python3 tools/print.py <in> <out> --width 1200 --warmth .16 --crunch .25 --grain .05
+    python3 tools/print.py <in> <out> --width 1200 --warmth .10 --crunch .25 --grain .05
+
+The cut that ships (Oct 5, 2026, "it's just too dirty looking"): --crunch 0 --grain 0 --shift 0 0 — the photo
+mapped into the four inks with the rose on the light, nothing stepped, nothing off register, no grain.
+The print knobs stay for end cards and big print.
 
 Deterministic (seeded) so a rebuild gives the same file.
 """
@@ -72,7 +76,8 @@ if __name__ == "__main__":
     p.add_argument("--crunch", type=float, default=0.25)
     p.add_argument("--grain", type=float, default=0.05)
     p.add_argument("--quality", type=int, default=82)
+    p.add_argument("--shift", type=int, nargs=2, default=(2, 1), help="rose misregister in px; 0 0 for a clean cut")
     a = p.parse_args()
-    img = print_image(a.src, a.width, crunch=a.crunch, warmth=a.warmth, grain=a.grain)
+    img = print_image(a.src, a.width, crunch=a.crunch, warmth=a.warmth, grain=a.grain, shift=tuple(a.shift))
     img.save(a.out, quality=a.quality, optimize=True, progressive=True)
     print("wrote", a.out, img.size)
