@@ -118,10 +118,11 @@ const write = (p, s) => {
   fs.mkdirSync(path.dirname(p), { recursive: true });
   // Pass 22: any page with a labelled map loads /rides/map.js, so city labels get a 44px hit area on phones
   if (typeof s === "string" && s.includes('class="gr-map-labels"') && !s.includes("/rides/map.js")) s = s.replace("</body>", '<script src="/rides/map.js" defer></script>\n</body>');
+  if (typeof s === "string" && p.endsWith(".html")) s = require("../scripts/curl-quotes.js").curlQuotes(s);
   fs.writeFileSync(p, s);
 };
 const trunc = (s, n) => (s.length <= n ? s : s.slice(0, n - 1).replace(/\s+\S*$/, "") + "…");
-const lower1 = (s) => (/^[A-Z][A-Z0-9+/]/.test(s) ? s : s.charAt(0).toLowerCase() + s.slice(1));   // never "lGBTQ+" or "bCD/2/47"
+const lower1 = (s) => (/^(?:[A-Z][A-Z0-9+\/\-,]|[A-Z] (?:\d|[A-Z]\b|and\b|groups?\b|level\b|ride\b|on\b))/.test(s) ? s : s.charAt(0).toLowerCase() + s.slice(1));   // never "lGBTQ+" or "bCD/2/47"
 const cleanDist = (d) => (d == null ? null : String(d).replace(/^[~≈]\s*/, "").replace(/\s*(mi|miles)$/i, ""));
 // Filter tags: the data's inclusive_focus, plus "no-drop" whenever drop_policy says so
 // (the two disagree on a handful of rides; the page counts and the chips use this).
@@ -213,20 +214,26 @@ function isoWithOffset(date, tz) {
   return `${p.year}-${String(p.month).padStart(2, "0")}-${String(p.day).padStart(2, "0")}T${String(p.hour).padStart(2, "0")}:${String(p.minute).padStart(2, "0")}:00${sign}${String(Math.floor(a / 60)).padStart(2, "0")}:${String(a % 60).padStart(2, "0")}`;
 }
 function fmtNext(date, tz) {
-  return new Intl.DateTimeFormat("en-US", { timeZone: tz, weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(date);
+  return new Intl.DateTimeFormat("en-US", { timeZone: tz, weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(date).replace(/AM|PM/, (m) => m.toLowerCase());
 }
 function icsLocal(date, tz) { const p = partsIn(date, tz); return `${p.year}${String(p.month).padStart(2, "0")}${String(p.day).padStart(2, "0")}T${String(p.hour).padStart(2, "0")}${String(p.minute).padStart(2, "0")}00`; }
 
 // Human schedule from structured fields ("Every Tuesday", "Second Wednesday of the month")
 function dayPhrase(r) {
   const names = r.days.map((d) => DAY_LONG[d]);
-  if (r.monthly_rule && r.monthly_rule.length) return r.monthly_rule.map((m) => `${ORD_WORD[m.ord]} ${DAY_LONG[m.day]}`).join(" and ") + " of the month";
+  const andList = (a) => (a.length < 3 ? a.join(" and ") : `${a.slice(0, -1).join(", ")} and ${a[a.length - 1]}`);
+  if (r.monthly_rule && r.monthly_rule.length) {
+    const same = r.monthly_rule.length > 1 && r.monthly_rule.every((m) => m.day === r.monthly_rule[0].day);
+    return same
+      ? `${andList(r.monthly_rule.map((m, i) => (i ? ORD_WORD[m.ord].toLowerCase() : ORD_WORD[m.ord])))} ${DAY_LONG[r.monthly_rule[0].day]}s of the month`
+      : andList(r.monthly_rule.map((m) => `${ORD_WORD[m.ord]} ${DAY_LONG[m.day]}`)) + " of the month";
+  }
   if (!names.length) return null;
-  if (r.frequency === "irregular") return "Some " + names.map((n) => n + "s").join(" and ");   // posted date by date: never "Every Monday"
-  if (r.frequency === "biweekly") return "Every other " + names.join(" and ");
+  if (r.frequency === "irregular") return "Some " + andList(names.map((n) => n + "s"));   // posted date by date: never "Every Monday"
+  if (r.frequency === "biweekly") return "Every other " + andList(names);
   if (r.frequency === "monthly") return "Monthly, on a " + names[0];
   if (names.length === 1) return "Every " + names[0];
-  return names.map((n) => n + "s").join(" and ");
+  return andList(names.map((n) => n + "s"));
 }
 function shortWhen(r) {   // for <title>: "Tuesdays 8:30 pm" / "2nd Wednesdays" / "Last Fridays"
   if (r.frequency === "irregular") return null;
@@ -830,7 +837,7 @@ function mapFigure(shape, { dots = [], dim = [], labels = [], focus = null, ring
     const ring = `<circle class="gr-map-hub${l.strong ? " gr-map-hub--here" : ""}" cx="${n1(x)}" cy="${n1(y)}" r="${l.strong ? 7.5 : 6}"/>`;
     const label = spot ? `<text x="${n1(spot[0])}" y="${n1(spot[1])}" text-anchor="${spot[2]}"><tspan class="gr-map-name">${esc(text)}</tspan>${cnt ? `<tspan class="gr-map-n">${cnt}</tspan>` : ""}</text>` : "";
     const inner = ring + label;
-    return l.href ? `<a href="${l.href}" aria-label="${attr(`${l.text}${l.n != null ? `, ${l.n} rides` : ""}`)}">${inner}</a>` : `<g>${inner}</g>`;
+    return l.href ? `<a href="${l.href}" aria-label="${attr(`${l.text}${l.n != null ? `, ${plural(l.n)}` : ""}`)}">${inner}</a>` : `<g>${inner}</g>`;
   }).join("");
   let ring = "";
   if (ringMiles && ringAt) {
@@ -1033,7 +1040,7 @@ function usMap(byState) {
     const n = (byState[st] || []).length, L = lvl(n);
     const path = `<path class="gr-us-st gr-us-st--${L}" d="${s.d}"/>`;
     const label = s.a > 3400 ? `<text class="gr-us-code gr-us-code--${L}" x="${s.c[0]}" y="${s.c[1] + 8}" text-anchor="middle">${st}</text>` : "";
-    return n ? `<a href="/rides/${st.toLowerCase()}/" aria-label="${attr(`${stateName(st)}, ${n} rides`)}">${path}${label}</a>` : `<g aria-hidden="true">${path}</g>`;
+    return n ? `<a href="/rides/${st.toLowerCase()}/" aria-label="${attr(`${stateName(st)}, ${plural(n)}`)}">${path}${label}</a>` : `<g aria-hidden="true">${path}</g>`;
   }).join("\n          ");
   return `
       <figure class="gr-map gr-map--us">
@@ -1114,7 +1121,7 @@ const FIRST_HREF = "/rides/about/#first-ride";
 const firstLink = (cls = "") => `<p class="gr-first-link ${cls}">${mark("beginner", "gr-first-link-mark")}<a href="${FIRST_HREF}">First group ride? Start here &rarr;</a></p>`;
 const FOOTLINE = `
       <p class="gr-footline">${mark("checked", "gr-footline-mark")}<a href="/rides/about/">${ABOUT_TEXT}</a><i class="gr-dot" aria-hidden="true"> · </i><a href="/rides/add/">Add a ride we&rsquo;re missing</a></p>`;
-const subLine = (rides, extra) => `<p class="gr-sub"><b>${rides.length}</b> ${rides.length === 1 ? "ride" : "rides"}${extra ? ` ${extra}` : ""}<i class="gr-dot" aria-hidden="true"> · </i>newest check ${esc(fmtDate(lastCheckedOf(rides)))}</p>`;
+const subLine = (rides, extra) => `<p class="gr-sub"><b>${rides.length.toLocaleString("en-US")}</b> ${rides.length === 1 ? "ride" : "rides"}${extra ? ` ${extra}` : ""}<i class="gr-dot" aria-hidden="true"> · </i>newest check ${esc(fmtDate(lastCheckedOf(rides)))}</p>`;
 const itemList = (rides) => ({ "@type": "ItemList", numberOfItems: rides.length, itemListElement: rides.map((r, i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE}/rides/${r.slug}/`, name: r.name })) });
 const pageLd = (canonical, name, description, rides, crumbs) => ({ "@context": "https://schema.org", "@graph": [
   { "@type": "CollectionPage", "@id": canonical, name, description, url: canonical, dateModified: lastCheckedOf(rides), author: AUTHOR, publisher: PUBLISHER, breadcrumb: breadcrumbLd(crumbs), mainEntity: itemList(rides) },
@@ -1220,7 +1227,7 @@ function directory(rides, hubs, worldHubs = []) {
   <section class="gr-hero" aria-labelledby="gr-h1">
     <div class="wrap">
       ${crumbsHtml([["Cycle for Change", `${SITE}/`], ["Find a ride", `${SITE}/find-a-ride/`], ["Group rides", null]])}
-      <p class="eyebrow">${rides.length} rides &middot; ${nCountries} ${nCountries === 1 ? "country" : "countries"} &middot; newest check ${esc(fmtDate(lastChecked))}</p>
+      <p class="eyebrow">${rides.length.toLocaleString("en-US")} rides &middot; ${nCountries} ${nCountries === 1 ? "country" : "countries"} &middot; newest check ${esc(fmtDate(lastChecked))}</p>
       <h1 id="gr-h1">Find a group ride</h1>
       <form class="gr-search" role="search" id="gr-form" action="/rides/" method="get">
         <label class="visually-hidden" for="gr-q">Search by city, state, country or ride name</label>
@@ -1249,7 +1256,7 @@ function directory(rides, hubs, worldHubs = []) {
       <h2 class="gr-filter-label" id="where-h">Where? Tap a state</h2>
       ${GEO && GEO.us ? usMap(byState) : posterTile({ href: "/rides/united-states/", name: "In the US", count: byCountry.US ? byCountry.US.length : 0, small: "rides", blurb: statesText, markId: "town", cls: "tile-p--country" })}
       <div class="gr-where-more">
-        <a class="gr-wide-door" href="/rides/united-states/">${mark("list", "gr-wide-door-mk")}<span><b>Every state, as a list</b><span>${byCountry.US ? byCountry.US.length : 0} rides in ${statesText}</span></span><i aria-hidden="true">&rarr;</i></a>
+        <a class="gr-wide-door" href="/rides/united-states/">${mark("list", "gr-wide-door-mk")}<span><b>Every state, as a list</b><span>${(byCountry.US ? byCountry.US.length : 0).toLocaleString("en-US")} rides in ${statesText}</span></span><i aria-hidden="true">&rarr;</i></a>
         ${worldN ? `<a class="gr-wide-door" href="/rides/world/">${mark("globe", "gr-wide-door-mk")}<span><b>Outside the US</b><span>${worldN} rides in ${worldCCs.length} ${worldCCs.length === 1 ? "country" : "countries"}</span></span><i aria-hidden="true">&rarr;</i></a>` : ""}
       </div>
       <p class="gr-jumpcities"><span class="gr-jumpcities-l">Or jump to</span>${top.map((h) => `<a class="gr-chip" href="${h.path}">${esc(h.city)}${h === home ? ` <span class="gr-chip-n">home</span>` : ""}</a>`).join("")}</p>
@@ -1286,7 +1293,7 @@ const CAL = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, "da
 const calN = (cat) => CAL.filter((e) => e.category === cat).length;
 const stateRow = (byState) => (st) => `<a class="gr-row-st" href="/rides/${st.toLowerCase()}/"><b>${st}</b><span>${esc(stateName(st))}</span><i>${byState[st].length}</i></a>`;
 function kindDoor({ href, name, sub, n = null, markId, cls = "" }) {
-  return `<a class="gr-tile gr-door gr-kind ${cls}" href="${href}">${mark(markId, "gr-tile-mark")}<span class="gr-tile-name">${esc(name)}</span><span class="gr-tile-sub">${esc(sub)}</span>${n != null ? `<span class="gr-tile-n">${n}</span>` : ""}</a>`;
+  return `<a class="gr-tile gr-door gr-kind ${cls}" href="${href}">${mark(markId, "gr-tile-mark")}<span class="gr-tile-name">${esc(name)}</span><span class="gr-tile-sub">${esc(sub)}</span>${n != null ? `<span class="gr-tile-n">${Number(n).toLocaleString("en-US")}</span>` : ""}</a>`;
 }
 function fold(summary, html) {
   return `
@@ -1334,9 +1341,9 @@ function findPage(rides) {
     <p class="gr-all-link">${rideBtn({ href: "/events/2027/", text: `The whole 2027 calendar`, markId: "date", ghost: true })}</p>
     ${photoBand("robert-camelback")}
 ${fold("Group ride or organized ride?", `
-        <p>A group ride is free and happens every week from the same spot: a shop, a caf&eacute;, a park. No sign-up. You show up and ride. We list ${rides.length} of them in ${nCountries} countries, and every one says when it was last checked at its source.</p>
+        <p>A group ride is free and happens every week from the same spot: a shop, a caf&eacute;, a park. No sign-up. You show up and ride. We list ${rides.length.toLocaleString("en-US")} of them in ${nCountries} countries, and every one says when it was last checked at its source.</p>
         <p>An organized ride has a date, a sign-up and usually a fee or a fundraising minimum: charity rides, gran fondos, centuries, gravel races, multi-day tours. The <a href="/events/2027/">2027 calendar</a> has ${CAL.length} of them across the US, and says which dates the organizer has published.</p>
-        <p>I&rsquo;m riding ${riding} of those in 2027 as part of the 10,000 miles. Come ride one.</p>`)}
+        <p>I&rsquo;m riding ${["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"][riding] || riding} of those in 2027 as part of the 10,000 miles. Come ride one.</p>`)}
 ${FOOTLINE}
 ${CTA}
   </div>
@@ -1398,7 +1405,7 @@ ${BLOCKS.BUILT([
     ["Free", "No paid placement", "Nobody pays to be listed or to rank. Tell us when a ride is gone, changed, or still on."],
   ])}
     <section class="dir-faq" id="first-ride" aria-labelledby="faq-h">
-      <h2 id="faq-h">First group ride? The ones people ask first</h2>
+      <h2 id="faq-h">First group ride? The questions people ask first</h2>
 ${FAQ.map(([q, a]) => `      <details><summary>${esc(q)}</summary><p>${a}</p></details>`).join("\n")}
     </section>
 ${photoBand("people", { cls: "ph--wide" })}
@@ -1806,7 +1813,7 @@ function usPage(usRides, hubs) {
   const nStates = states.filter((x) => x !== "DC").length;
   const canonical = `${SITE}/rides/united-states/`;
   const crumbs = [["Cycle for Change", `${SITE}/`], ["Find a ride", `${SITE}/find-a-ride/`], ["Group rides", `${SITE}/rides/`], ["United States", canonical]];
-  const description = `${usRides.length} recurring bicycle group rides in ${nStates} states${states.includes("DC") ? " and DC" : ""}. Pick a state or a city: day, time, start point, pace, and when each was last checked.`;
+  const description = `${usRides.length.toLocaleString("en-US")} recurring bicycle group rides in ${nStates} states${states.includes("DC") ? " and DC" : ""}. Pick a state or a city: day, time, start point, pace, and when each was last checked.`;
   const jsonld = { "@context": "https://schema.org", "@graph": [
     { "@type": "CollectionPage", "@id": canonical, name: "Group rides in the United States", description, url: canonical, dateModified: lastCheckedOf(usRides), author: AUTHOR, publisher: PUBLISHER, breadcrumb: breadcrumbLd(crumbs) },
   ] };
@@ -2077,7 +2084,7 @@ function ridePage(r, all, hubFor, hubs) {
     <aside class="gr-checked${f.nudge ? " gr-checked--look" : ""}" aria-label="When this ride was last checked">
       ${mark(f.nudge ? "flag" : "checked", "gr-checked-mark")}
       <div>
-        <p class="gr-checked-line"><strong>${esc(f.label)}.</strong> ${f.checked_by === "feed" ? "The host's own calendar lists the next ride." : r.confidence === "high" ? "Confirmed on the host's own page." : "Confirmed against the sources at the foot of this page."}${watch ? ` <a class="link" href="${attr(watch)}" rel="noopener nofollow">Check the host's page before you go</a>` : ""}</p>
+        <p class="gr-checked-line"><strong>${esc(f.label)}.</strong> ${f.checked_by === "feed" ? "The host's own calendar lists the next ride." : r.confidence === "high" ? "Confirmed on the host's own page." : (r.confidence === "low" ? "Found on one source, listed at the foot of this page." : "Confirmed against the sources at the foot of this page.")}${watch ? ` <a class="link" href="${attr(watch)}" rel="noopener nofollow">Check the host's page before you go</a>` : ""}</p>
         ${f.nudge ? `<p class="gr-checked-nudge">${esc(f.nudge)}</p>` : ""}
         ${r.evidence || (r.last_seen && r.last_seen !== f.checked_on) ? `<details class="gr-checked-more"><summary>How we know</summary>${r.evidence ? `<p class="gr-checked-ev">${esc(r.evidence)}</p>` : ""}${r.last_seen && r.last_seen !== f.checked_on ? `<p>Last seen happening ${esc(fmtDate(r.last_seen))}.</p>` : ""}</details>` : ""}
       </div>

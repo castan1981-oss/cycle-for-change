@@ -1,5 +1,17 @@
 # Cycle for Change — project context for automated content
 
+> **CONTENT REVIEW (Oct 6, 2026).** Robert: "a team of content specialists to review the site and make changes …
+> SEO, usability, grammar is extremely important, and making sure things are correct and up to date." Five passes
+> (SEO, freshness, fact-check, usability, copy) — rules that stand from it:
+> - Titles fit 60 characters; `head()` in scripts/chrome.js adds " — Cycle for Change" only when it still fits.
+> - Visible text uses curly quotes. The generators curl them as they write (`scripts/curl-quotes.js`, text nodes only);
+>   hand pages are written with ’ “ ” directly. Robert's journal is his raw writing — never curl or edit it.
+> - Ranges take an en dash (Apr 23–25, $125–$300), degrees are °F, US spelling, thousands separators (1,422).
+> - Eyebrows, kickers and field-note titles are sentence case (Pass 29 removed the uppercase transform).
+> - Day lists read "Tuesdays, Thursdays and Saturdays" / "Second and fourth Saturdays of the month" (`dayPhrase`).
+> - No research notes in page copy ("IMPORTANT:", "per the FAQ", "we confirmed", "would not load for us").
+> - Field-note templates are served as 404 (netlify.toml); the rides rebuild runs daily.
+
 > **PASS 32 — THE PHOTO (Oct 5, 2026, late).** Robert: "the main photo just needs to be clear and crisp and high
 > quality." He sent a portrait of himself on the canal path (HAÜS jersey, morning sun) — it is the hero now,
 > untouched, no grade: `img/sign-print-4.jpg` (1200×1600, desktop) and `-4-phone.jpg` (960×1280). Phones use the

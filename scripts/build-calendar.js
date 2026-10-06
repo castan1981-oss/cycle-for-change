@@ -81,7 +81,7 @@ function place(e) {
     const a = e.start_city.split("(")[0].trim(), b = e.end_city.split("(")[0].trim();
     if (a && b && a !== b) return `${a} → ${b}`;
   }
-  const c = (e.city || "").replace(/\s*\(.*?\)\s*/g, " ").trim();
+  const c = (e.city || "").replace(/\s*\(.*?\)/g, "").replace(/\s+/g, " ").trim();
   return c ? `${c}${e.state && !c.includes(e.state) ? ", " + e.state : ""}` : (e.state || e.region);
 }
 function shortDist(s) { s = String(s || ""); return s.length > 60 ? s.slice(0, 58).replace(/[,;|(]?\s*\S*$/, "") + "…" : s; }
@@ -569,7 +569,7 @@ if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert\u2019s rides
     </section>
 
     <section class="cal-step" aria-labelledby="what-h">
-      <h2 class="cal-q" id="what-h">Or pick what</h2>
+      <h2 class="cal-q" id="what-h">Or pick what kind</h2>
       <div class="cal-doors">
           ${doors}
       </div>
@@ -701,7 +701,7 @@ function write(rel, s) {
   // Pass 22: research notes never reach a public file
   const leak = s.match(new RegExp(`.{0,60}(?:${LEAK.source}).{0,40}`, "i"));
   if (leak) throw new Error(`Research note in ${rel}: "${leak[0]}" — add the phrase to CORE/EXTRA in build-calendar.js`);
-  const p = path.join(OUT, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, s); return rel;
+  const p = path.join(OUT, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, rel.endsWith(".html") ? require("./curl-quotes.js").curlQuotes(s) : s); return rel;
 }
 for (const [u, html] of pages) write(u.replace(/^\//, "") + "index.html", html);
 // where each event's row lives now, for old /events/2027/#slug links (FIND_JS)

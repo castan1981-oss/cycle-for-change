@@ -113,13 +113,13 @@ const page = `<!doctype html>
   <meta property="og:site_name" content="Cycle for Change">
   <meta property="og:url" content="https://cycleforchange.org/">
   <meta property="og:title" content="Cycle for Change — 10,000 miles in 2027, all on the bike">
-  <meta property="og:description" content="Cycling changed my life. I ride 10,000 miles in 2027 and write every one down. The money goes through the orgs' own rides.">
+  <meta property="og:description" content="Cycling changed my life. I ride 10,000 miles in 2027 and write every ride down. The money goes through the orgs' own rides.">
   <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cycle for Change — 10,000 miles in 2027, all on the bike">
-  <meta name="twitter:description" content="Cycling changed my life. I ride 10,000 miles in 2027 and write every one down.">
+  <meta name="twitter:description" content="Cycling changed my life. I ride 10,000 miles in 2027 and write every ride down.">
   <meta name="twitter:image" content="https://cycleforchange.org/og-cfc.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
@@ -197,10 +197,10 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
     <div>
       <div class="s-head"><div class="stack16"><p class="eyebrow">From the road</p><h2 class="h2" id="road-h">The last rides.</h2></div></div>
       <ol class="log" id="log" data-max="4" aria-live="polite">
-        <li><span class="when">Mon Oct 5</span><span class="bar-mi" style="--w:.57"></span><span class="mi num">35.7<small>MI</small></span></li>
-        <li><span class="when">Sun Oct 4</span><span class="bar-mi" style="--w:1"></span><span class="mi num">63.1<small>MI</small></span></li>
-        <li><span class="when">Sat Oct 3</span><span class="bar-mi" style="--w:.67"></span><span class="mi num">42.3<small>MI</small></span></li>
-        <li><span class="when">Fri Oct 2</span><span class="bar-mi" style="--w:.58"></span><span class="mi num">36.6<small>MI</small></span></li>
+        <li><span class="when">Mon Oct 5</span><span class="bar-mi" style="--w:.57"></span><span class="mi num">35.7<small>mi</small></span></li>
+        <li><span class="when">Sun Oct 4</span><span class="bar-mi" style="--w:1"></span><span class="mi num">63.1<small>mi</small></span></li>
+        <li><span class="when">Sat Oct 3</span><span class="bar-mi" style="--w:.67"></span><span class="mi num">42.3<small>mi</small></span></li>
+        <li><span class="when">Fri Oct 2</span><span class="bar-mi" style="--w:.58"></span><span class="mi num">36.6<small>mi</small></span></li>
       </ol>
       <p class="road-note">Every ride gets a stroke, as long as the ride. The big ones get a page: the route, the town, who was there, the footage.</p>
     </div>
@@ -277,8 +277,8 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
         <h3 class="h2 ride-h3">Nov 7, I cycle for <span class="plate plate--big">one&middot;n&middot;ten</span></h3>
         <p>Cycling 4 one&middot;n&middot;ten, Bike Ride &amp; Block Party at Prisma Community Care, Phoenix.</p>
         <dl class="facts-dl">
-          <div><dt>62 miles</dt><dd>7:00 AM, $100</dd></div>
-          <div><dt>20 miles</dt><dd>9:00 AM, $50</dd></div>
+          <div><dt>62 miles</dt><dd>7 AM, $100</dd></div>
+          <div><dt>20 miles</dt><dd>9 AM, $50</dd></div>
           <div><dt>Block party</dt><dd>10 AM to 2 PM</dd></div>
           <div><dt>Who</dt><dd>18+, no e-bikes, no fundraising minimum</dd></div>
           <div><dt>Sign up by</dt><dd>Thu Nov 5 online, or at check-in</dd></div>
@@ -295,7 +295,7 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
           <button class="btn btn--ink" type="submit">Search rides</button>
         </form>
         <p class="find-links"><a class="link" href="/rides/no-drop/">No-drop rides</a><a class="link" href="/rides/lgbtq/">Queer rides</a><a class="link" href="/tonight/">Tonight</a></p>
-        <div class="find-count"><b class="num">${RIDES_N}</b><span>group rides in the directory, each one checked in the last 90 days. Every state, ${RN.abroad} more countries. Shop rides, no-drop rides, queer rides.</span></div>
+        <div class="find-count"><b class="num">${RIDES_N}</b><span>group rides in the directory, each with the date it was last checked. Every state, ${RN.abroad} more countries. Shop rides, no-drop rides, queer rides.</span></div>
         <svg class="lane-dash" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g filter="url(#lpWornSoft)" fill="var(--paper)" stroke="var(--mute)" stroke-width="2"><rect x="0" y="14" width="56" height="8"/><rect x="88" y="14" width="56" height="8"/><rect x="176" y="14" width="56" height="8"/><rect x="264" y="14" width="56" height="8"/><rect x="352" y="14" width="56" height="8"/><rect x="440" y="14" width="56" height="8"/><rect x="528" y="14" width="56" height="8"/></g></svg>
         <dl class="facts-dl">
           <div><dt>Group rides</dt><dd><a href="/rides/">${RIDES_N}</a></dd></div>

@@ -126,7 +126,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
   </div>
   <ul class="menu-list">
     <li><a href="/events/2027/riding/">Ride with me <span>The 2027 rides</span></a></li>
-    <li><a href="/find-a-ride/">Find a ride ${n(RIDE_COUNT)}</a></li>
+    <li><a href="/find-a-ride/">Find a ride ${n(RIDE_COUNT == null ? null : RIDE_COUNT.toLocaleString("en-US"))}</a></li>
     <li><a href="/events/2027/">2027 calendar ${n(CAL_COUNT)}</a></li>
     <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>

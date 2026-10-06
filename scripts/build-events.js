@@ -109,7 +109,7 @@ function readDir(dir) {
 function write(rel, html) {
   const p = path.join(OUT, rel);
   fs.mkdirSync(path.dirname(p), { recursive: true });
-  fs.writeFileSync(p, html);
+  fs.writeFileSync(p, rel.endsWith(".html") ? require("./curl-quotes.js").curlQuotes(html) : html);
   return rel;
 }
 
@@ -925,7 +925,7 @@ function statePage(s) {
   const body = `
   ${crumbs.html}
   <article class="index">
-    <p class="eyebrow">${s.events.length} events &middot; ${s.towns.length} towns</p>
+    <p class="eyebrow">${s.events.length} event${s.events.length === 1 ? "" : "s"} &middot; ${s.towns.length} town${s.towns.length === 1 ? "" : "s"}</p>
     <h1>Cycling events in ${esc(s.name)}</h1>
     <p class="lede">${esc(s.events.length)} bike events in ${esc(s.name)} with a page each: ${esc(s.events.map((e) => e.name).join(", "))}. Every page has the date, the routes, the sign-up link, live weather and a guide to the host town.</p>
     <section><h2>Bike events in ${esc(s.name)}</h2><ul class="tiles-p tiles-p--events">${s.events.map((e) => eventCard(e)).join("")}</ul></section>

@@ -102,7 +102,7 @@ def chrome(s: str, page) -> str:
 
 WHY = '''<div class="fn-why">
     <p class="eyebrow">Why this page is here</p>
-    <p>Riding is part of what kept me steady before I had the words for anything. Cycle for Change rides for the kinds of orgs on this page: in 2027 I ride 10,000 miles, and the money goes through those orgs&rsquo; own rides. That&rsquo;s the connection, and it&rsquo;s the only ask here. <a href="/#orgs">The orgs I ride for</a></p>
+    <p>Riding is part of what kept me steady before I had the words for anything. Cycle for Change rides for the kinds of orgs on this page: in 2027 I ride 10,000 miles, and the money goes through those orgs&rsquo; own rides. That&rsquo;s the connection. <a href="/#orgs">The orgs I ride for</a></p>
   </div>'''
 
 

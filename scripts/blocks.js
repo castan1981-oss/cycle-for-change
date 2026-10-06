@@ -57,7 +57,7 @@ ${items.map(([k, h, t]) => `      <div>${BUILT_MARK(k)}<span class="k">${esc(k)}
    hidden and disabled. */
 const DAY_CHIPS = [["mon", "Mon"], ["tue", "Tue"], ["wed", "Wed"], ["thu", "Thu"], ["fri", "Fri"], ["sat", "Sat"], ["sun", "Sun"]];
 const DROP_CHIPS = [["no-drop", "Waits for you"], ["groups", "Pace groups"], ["drop", "Drops"]];
-const FOR_CHIPS = [["beginner", "Beginners"], ["lgbtq", "LGBTQ+"], ["wtf", "Women/trans/femme/nonbinary"], ["ebike", "E-bikes welcome"]];
+const FOR_CHIPS = [["beginner", "Beginners"], ["lgbtq", "LGBTQ+"], ["wtf", "Women, trans, femme, nonbinary"], ["ebike", "E-bikes welcome"]];
 const chips = (type, name, list, cls = "") => list.map(([v, t]) =>
   `<label${cls ? ` class="${cls}"` : ""}><input type="${type}" name="${name}" value="${v}"> <span>${esc(t)}</span></label>`).join("");
 let uid = 0;
