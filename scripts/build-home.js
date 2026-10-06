@@ -71,6 +71,13 @@ const WORN_DEFS = `<svg aria-hidden="true" focusable="false" style="position:abs
       <feMerge><feMergeNode in="h2"/><feMergeNode in="d"/></feMerge>
     </filter>
     <!-- the marks a city paints: the lane bicycle, the diamond, the painter's mark -->
+    <!-- Pass 31: the clean marks — the house family (24 grid, one 1.7 stroke, round caps), nothing painted -->
+    <symbol id="mkPhx" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14h20"/><path d="M7.5 14a4.5 4.5 0 0 1 9 0"/><path d="M12 6.5V4.5M6.2 8.7 4.8 7.3M17.8 8.7l1.4-1.4"/><path d="M9.5 20.5 11 14M14.5 20.5 13 14"/></g></symbol>
+    <symbol id="mkOjai" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16.5 7.5 8l3.5 5.5 3-4.5L22 16.5"/><path d="M3 20.5h18"/></g></symbol>
+    <symbol id="mkSF" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20V4M17 20V4"/><path d="M5.5 7h3M15.5 7h3"/><path d="M2 15h20"/><path d="M7 4.5q5 9 10 0"/><path d="M1 14q4-1 6-9.5M23 14q-4-1-6-9.5"/><path d="M12 11v4"/></g></symbol>
+    <symbol id="mkRide" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 7c0 4 1 6.5 3.5 6.5"/><path d="M20 7c0 4-1 6.5-3.5 6.5"/><path d="M12 7v9"/></g></symbol>
+    <symbol id="mkWrite" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2z"/><path d="M5 17a2 2 0 0 1 2-2h11"/><path d="M9 8h5"/></g></symbol>
+    <symbol id="mkOrgs" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="8" r="2.2"/><circle cx="12" cy="6.5" r="2.2"/><circle cx="17.5" cy="8" r="2.2"/><path d="M2.5 19a4 4 0 0 1 8 0M8 19a4 4 0 0 1 8 0M13.5 19a4 4 0 0 1 8 0"/></g></symbol>
     <symbol id="lpBike" viewBox="0 0 240 160">
       <g fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="52" cy="112" r="38"/><circle cx="188" cy="112" r="38"/>
@@ -216,86 +223,36 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
   </div>
 </section>
 
-<!-- —— the orgs. Pass 28 (Oct 5, evening): a painted map with the coast on it, and one painted ride
-     badge per org — the route as a roller stroke, a diamond at the start, the date on a plate. Road paint only. —— -->
+<!-- —— the orgs. Pass 31 (Oct 5, late): three clean cards — a mark from the house family, the org in
+     one line, the ride with its date on a plate, two links. No map, no badges, nothing painted. —— -->
 <section class="s s--paper orgs-s" id="orgs" aria-labelledby="orgs-h">
   <div class="wrap">
-    <div class="orgs-top">
-      <div class="stack16"><h2 class="h2" id="orgs-h">The orgs I ride for.</h2><p class="lede w38">Three rides. You sign up or give on their page. None of it comes through me.</p></div>
-      <svg class="route-map" viewBox="0 0 700 560" role="img" aria-label="The three rides on a map of the West: Cycling 4 one·n·ten in Phoenix on Nov 7, the Center Ride Out in Los Angeles in April, Cycle to Zero in San Francisco in May">
-        <!-- the coast and the state lines, painted thin -->
-        <g fill="none" stroke="var(--dust)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#lpWornSoft)">
-          <path d="M40 -10 C 58 30, 86 48, 112 60 C 128 110, 132 170, 158 232 C 182 270, 210 300, 246 322 L 262 338"/>
-          <path d="M262 338 C 340 352, 430 372, 520 402 C 580 422, 640 452, 700 478"/>
-          <path d="M330 -10 L 330 150 L 500 330"/>
-          <path d="M500 330 C 520 300, 560 270, 580 230 L 600 -10"/>
-        </g>
-        <!-- the ride, a roller stroke home from SF -->
-        <g fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" filter="url(#lpRoller)">
-          <path d="M118 62 C 112 110, 120 170, 158 232 C 250 262, 360 320, 470 392 C 510 416, 540 430, 560 440"/>
-        </g>
-        <g filter="url(#lpWornSoft)" style="color:var(--creosote)">
-          <use href="#lpDiamond" x="104" y="36" width="30" height="52"/><use href="#lpDiamond" x="144" y="206" width="30" height="52"/><use href="#lpDiamond" x="546" y="414" width="30" height="52"/>
-        </g>
-        <g font-weight="900" fill="currentColor">
-          <text x="150" y="60" font-size="44">SF</text><rect x="150" y="72" width="122" height="46" fill="var(--creosote)"/><text x="162" y="106" font-size="30" font-weight="800" fill="var(--paper)">SFAF</text>
-          <text x="150" y="146" font-size="24" font-weight="700" fill="var(--mute)">May 21 to 23</text>
-          <text x="24" y="296" font-size="44">LA</text><rect x="24" y="308" width="188" height="46" fill="var(--creosote)"/><text x="36" y="342" font-size="30" font-weight="800" fill="var(--paper)">the Center</text>
-          <text x="24" y="382" font-size="24" font-weight="700" fill="var(--mute)">Apr 23 to 25</text>
-          <text x="440" y="492" font-size="44">PHX</text><rect x="440" y="504" width="212" height="46" fill="var(--creosote)"/><text x="452" y="538" font-size="30" font-weight="800" fill="var(--paper)">one&middot;n&middot;ten</text>
-          <text x="590" y="492" font-size="24" font-weight="700" fill="var(--mute)">Nov 7</text>
-        </g>
-      </svg>
-    </div>
+    <div class="stack16 orgs-head2"><h2 class="h2" id="orgs-h">The orgs I ride for.</h2><p class="lede w38">Three rides. You sign up or give on their page. None of it comes through me.</p></div>
     <div class="orgs">
       <article class="org">
-        <svg class="org-badge" viewBox="0 0 300 200" role="img" aria-label="Cycling 4 one·n·ten: a loop out of Phoenix, 20 or 62 miles, Saturday November 7">
-          <g fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" filter="url(#lpWornSoft)">
-            <path d="M36 140 L36 56 Q36 40 52 40 L116 40 Q132 40 132 56 L132 96 L100 128 Q92 136 80 136 L62 136"/>
-          </g>
-          <g filter="url(#lpWornSoft)" style="color:var(--creosote)"><use href="#lpDiamond" x="22" y="118" width="28" height="48"/></g>
-          <g font-weight="900" fill="currentColor"><text x="176" y="92" font-size="56">20</text><text x="176" y="146" font-size="56">62</text><text x="246" y="146" font-size="18" font-weight="700" fill="var(--mute)">MI</text><text x="246" y="92" font-size="18" font-weight="700" fill="var(--mute)">MI</text><text x="176" y="42" font-size="16" font-weight="700" fill="var(--mute)">ONE DAY</text></g>
-          <rect x="170" y="158" width="118" height="34" fill="var(--creosote)"/><text x="229" y="183" font-size="20" font-weight="800" fill="var(--paper)" text-anchor="middle">Sat Nov 7</text>
-        </svg>
+        <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkPhx"/></svg>
         <div class="org-text">
           <h3 class="h3">one&middot;n&middot;ten</h3>
           <p>Phoenix nonprofit for LGBTQ+ youth ages 11 to 24. Safe spaces, housing, leadership.</p>
-          <p class="org-ride">Cycling 4 one&middot;n&middot;ten, Sat Nov 7, Phoenix</p>
+          <p class="org-ride"><span class="plate">Sat Nov 7</span><span>Cycling 4 one&middot;n&middot;ten, Phoenix. 20 or 62 miles, one day.</span></p>
           <div class="org-acts"><a class="link" href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Give to one&middot;n&middot;ten</a></div>
         </div>
       </article>
       <article class="org">
-        <svg class="org-badge" viewBox="0 0 300 200" role="img" aria-label="Center Ride Out: Los Angeles to Ojai and back, three days, April 23 to 25">
-          <g fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" filter="url(#lpWornSoft)">
-            <path d="M34 168 C 90 160, 150 146, 210 124 C 236 114, 256 108, 272 106"/>
-            <path d="M272 118 C 250 124, 224 134, 196 146 C 150 164, 96 178, 44 182"/>
-          </g>
-          <g filter="url(#lpWornSoft)" style="color:var(--creosote)"><use href="#lpDiamond" x="20" y="150" width="28" height="48"/><use href="#lpDiamond" x="262" y="80" width="28" height="48"/></g>
-          <g font-weight="900" fill="currentColor"><text x="22" y="64" font-size="56">3<tspan font-size="22" font-weight="700" fill="var(--mute)"> days</tspan></text><text x="22" y="94" font-size="16" font-weight="700" fill="var(--mute)">LA TO OJAI AND BACK</text></g>
-          <rect x="162" y="18" width="126" height="34" fill="var(--creosote)"/><text x="225" y="43" font-size="20" font-weight="800" fill="var(--paper)" text-anchor="middle">Apr 23 to 25</text>
-        </svg>
+        <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkOjai"/></svg>
         <div class="org-text">
           <h3 class="h3">Los Angeles LGBT Center</h3>
           <p>Health, housing and advocacy for LGBTQ+ people.</p>
-          <p class="org-ride">Center Ride Out, Apr 23 to 25, 2027</p>
+          <p class="org-ride"><span class="plate">Apr 23 to 25, 2027</span><span>Center Ride Out. Los Angeles to Ojai and back, three days.</span></p>
           <div class="org-acts"><a class="link" href="https://centerrideout.lalgbtcenter.org/en/" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Give to the Center</a></div>
         </div>
       </article>
       <article class="org">
-        <svg class="org-badge" viewBox="0 0 300 200" role="img" aria-label="Cycle to Zero: three days out of San Francisco, May 21 to 23">
-          <g fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" filter="url(#lpWornSoft)">
-            <path d="M34 92 C 60 80, 84 84, 100 104"/>
-            <path d="M118 112 C 140 128, 166 124, 186 102"/>
-            <path d="M204 96 C 224 78, 248 74, 272 84"/>
-          </g>
-          <g filter="url(#lpWornSoft)" style="color:var(--creosote)"><use href="#lpDiamond" x="20" y="70" width="28" height="48"/><use href="#lpDiamond" x="96" y="92" width="28" height="48"/><use href="#lpDiamond" x="180" y="84" width="28" height="48"/></g>
-          <g font-weight="900" fill="currentColor"><text x="22" y="178" font-size="56">3<tspan font-size="22" font-weight="700" fill="var(--mute)"> days</tspan></text><text x="150" y="176" font-size="16" font-weight="700" fill="var(--mute)">SAN FRANCISCO</text></g>
-          <rect x="162" y="18" width="126" height="34" fill="var(--creosote)"/><text x="225" y="43" font-size="20" font-weight="800" fill="var(--paper)" text-anchor="middle">May 21 to 23</text>
-        </svg>
+        <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkSF"/></svg>
         <div class="org-text">
           <h3 class="h3">San Francisco AIDS Foundation</h3>
           <p>No-cost HIV, harm-reduction and LGBTQ+ health services.</p>
-          <p class="org-ride">Cycle to Zero, May 21 to 23, 2027</p>
+          <p class="org-ride"><span class="plate">May 21 to 23, 2027</span><span>Cycle to Zero. Three days out of San Francisco.</span></p>
           <div class="org-acts"><a class="link" href="https://www.sfaf.org/get-involved/cycle-to-zero/" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Give to SFAF</a></div>
         </div>
       </article>
@@ -349,25 +306,10 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
 <section class="s s--paper how" id="how" aria-labelledby="how-h">
   <div class="wrap">
     <h2 class="h2" id="how-h">How this works.</h2>
-    <svg class="bike-lane" viewBox="0 0 1200 170" aria-hidden="true" focusable="false">
-      <g filter="url(#lpWornSoft)" fill="var(--mute)">
-        <rect x="0" y="128" width="1200" height="12"/>
-        <g fill="var(--paper)" stroke="var(--mute)" stroke-width="2">
-          <rect x="0" y="80" width="70" height="8"/><rect x="110" y="80" width="70" height="8"/><rect x="220" y="80" width="70" height="8"/><rect x="330" y="80" width="70" height="8"/>
-          <rect x="440" y="80" width="70" height="8"/><rect x="550" y="80" width="70" height="8"/><rect x="660" y="80" width="70" height="8"/><rect x="770" y="80" width="70" height="8"/>
-          <rect x="880" y="80" width="70" height="8"/><rect x="990" y="80" width="70" height="8"/><rect x="1100" y="80" width="70" height="8"/>
-        </g>
-      </g>
-      <g style="color:var(--asphalt)" filter="url(#lpWornSoft)">
-        <use href="#lpBike" x="40" y="0" width="150" height="100" style="color:var(--creosote)"/>
-        <use href="#lpStroke" x="440" y="0" width="190" height="100"/>
-        <use href="#lpOrgs" x="840" y="0" width="190" height="100"/>
-      </g>
-    </svg>
     <ol class="steps3 steps3--lane">
-      <li><svg class="step-mk" viewBox="0 0 190 100" aria-hidden="true" focusable="false" style="color:var(--creosote)"><g filter="url(#lpWornSoft)"><use href="#lpBike" x="20" y="0" width="150" height="100"/></g></svg><h3 class="h3">I ride.</h3><p>10,000 miles in 2027. Every ride lands here from Strava.</p></li>
-      <li><svg class="step-mk" viewBox="0 0 190 100" aria-hidden="true" focusable="false"><g filter="url(#lpWornSoft)"><use href="#lpStroke" x="0" y="0" width="190" height="100"/></g></svg><h3 class="h3">I write it down.</h3><p>Every ride gets a stroke. The big ones get a page.</p></li>
-      <li><svg class="step-mk" viewBox="0 0 190 100" aria-hidden="true" focusable="false"><g filter="url(#lpWornSoft)"><use href="#lpOrgs" x="0" y="0" width="190" height="100"/></g></svg><h3 class="h3">The money goes to the orgs.</h3><p>Through their own rides. Nothing here asks for a card.</p></li>
+      <li><svg class="step-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkRide"/></svg><h3 class="h3">I ride.</h3><p>10,000 miles in 2027. Every ride lands here from Strava.</p></li>
+      <li><svg class="step-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkWrite"/></svg><h3 class="h3">I write it down.</h3><p>Every ride gets a stroke. The big ones get a page.</p></li>
+      <li><svg class="step-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkOrgs"/></svg><h3 class="h3">The money goes to the orgs.</h3><p>Through their own rides. Nothing here asks for a card.</p></li>
     </ol>
   </div>
 </section>
