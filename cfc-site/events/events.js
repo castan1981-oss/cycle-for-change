@@ -96,4 +96,32 @@
       box.innerHTML = '<p class="wx-status">Forecast unavailable right now. Try <a href="https://forecast.weather.gov/MapClick.php?lat=' + encodeURIComponent(lat) + "&lon=" + encodeURIComponent(lon) + '" rel="noopener">weather.gov</a>.</p>';
     });
   });
+
+  // —— 4. Pass 35: "What do you need?" — show only the cards that do it ——————————————
+  document.querySelectorAll("[data-place-filter]").forEach(function (box) {
+    var list = box.nextElementSibling;
+    while (list && !list.classList.contains("places")) list = list.nextElementSibling;
+    if (!list) return;
+    var cards = list.querySelectorAll(":scope > li");
+    var btns = box.querySelectorAll(".pfil");
+    var note = box.querySelector(".place-filter-note");
+    function apply(key, label) {
+      var n = 0;
+      cards.forEach(function (li) {
+        var on = !key || (" " + (li.getAttribute("data-f") || "") + " ").indexOf(" " + key + " ") > -1;
+        li.hidden = !on; if (on) n++;
+      });
+      btns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-f") === key)); });
+      note.innerHTML = key ? "Showing " + n + " of " + cards.length + " (" + esc(label) + "). <button type=\"button\">Show all</button>" : "";
+      var all = note.querySelector("button");
+      if (all) all.addEventListener("click", function () { apply(null); btns[0].focus(); });
+    }
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var key = b.getAttribute("data-f");
+        apply(b.getAttribute("aria-pressed") === "true" ? null : key, b.querySelector("span").textContent);
+      });
+    });
+    box.hidden = false;
+  });
 })();

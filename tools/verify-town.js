@@ -40,7 +40,7 @@ const ENUM = {
   difficulty: ["easy", "moderate", "hard", "epic"],
   cultureKind: ["record-store", "bookstore", "gallery", "museum", "bar", "queer-owned", "venue", "market", "other"],
   linkKind: ["official", "affiliate"],
-  services: ["repair", "same-day", "parts", "rental", "rental-road", "rental-gravel", "rental-mtb", "rental-ebike", "ship-to-shop", "fitting", "diy", "suspension", "box-storage", "box-rental", "shop-rides", "coffee"],
+  services: ["repair", "same-day", "parts", "rental", "rental-road", "rental-gravel", "rental-mtb", "rental-ebike", "ship-to-shop", "fitting", "diy", "suspension", "box-storage", "box-rental", "shop-rides", "coffee", "builds"],
   focus: ["lgbtq", "no-drop", "beginner", "women-trans-femme", "bipoc", "family", "gravel"],
 };
 const DATED = /\((Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.? \d{4}\)|\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.? \d{4}\b|\b(20\d\d)\b/;

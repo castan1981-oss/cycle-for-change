@@ -462,6 +462,21 @@
   ],
   "bike_shops": [
     {
+      "name": "Bicycle Haüs",
+      "url": "https://www.bicyclehaus.com/",
+      "address": "7113 E 1st Ave, Scottsdale, AZ 85251",
+      "phone": "(480) 994-4287",
+      "services": [
+        "builds",
+        "fitting",
+        "coffee"
+      ],
+      "home_shop": true,
+      "line": "If it’s Scottsdale and it’s bikes, it’s them.",
+      "hours_hint": "Mon–Fri 10–6, Sat 10–4, Sun noon–4",
+      "note": "Old Town Scottsdale, in a glass-and-steel shop on East 1st Ave, about 9 miles northeast of downtown Phoenix. Open since 2004, the first ten years on 5th Ave. They build bikes to order, and a fit starts and finishes every build; they’ll also fit you on a bike you already own. They work with Pinarello, Colnago, Moots, Specialized, Scott, ENVE, Shimano, SRAM and Campagnolo. There’s a cup of coffee waiting on every visit, free. Hours from the shop’s contact page (Oct 2026)."
+    },
+    {
       "name": "Bike Emporium",
       "url": "https://www.bikeemporium.com/",
       "address": "8443 E. McDonald Dr., Scottsdale, AZ 85250",
@@ -942,7 +957,11 @@
     "https://www.bikeflights.com/shippingpolicy",
     "https://www.bikeflights.com/dimensionsandrates",
     "https://www.phoenix.gov/administration/departments/heat/heat-response-programs/heat-safety.html",
-    "https://bikepackingreviews.com/posts/airline-bike-fees-policies"
+    "https://bikepackingreviews.com/posts/airline-bike-fees-policies",
+    "https://www.bicyclehaus.com/",
+    "https://www.bicyclehaus.com/contact",
+    "https://www.bicyclehaus.com/bicycle-fit",
+    "https://www.bicyclehaus.com/about"
   ],
   "verified": "2026-10-03"
 }
