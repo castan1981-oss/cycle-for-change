@@ -116,6 +116,8 @@ article{max-width:820px}
 .place-tags{margin:0 0 8px;display:flex;gap:6px;flex-wrap:wrap}
 .place-tags span{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;border:1px solid var(--dust);padding:2px 7px}
 .place p:last-child{margin:0}
+/* Oct 6, 2026: a raw address in a note (facebook.com/groups/…) pushed the Phoenix guide sideways at 390px */
+.place p{overflow-wrap:anywhere}
 .for-events{font-size:.95rem;color:var(--mute)}
 .res-links-row{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 0}
 .res-links-row a{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;text-decoration:none;border:1px solid var(--dust);padding:8px 12px}
