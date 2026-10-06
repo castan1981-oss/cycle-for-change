@@ -1,4 +1,4 @@
-/* Cycle for Change — the homepage, Pass 26 "Lane Paint" (Oct 5, 2026).
+/* Cycle for Change — the homepage, Pass 26 "Lane Paint" (Oct 5, 2026); Pass 27 "on the road" (Oct 6).
    Writes cfc-site/index.html from the shared chrome (header, menu, tally line, footer) plus the
    page below, so the homepage and every inner page come from one source. Run after any change to
    scripts/chrome.js:   node scripts/build-home.js
@@ -42,11 +42,51 @@ const STACK = (cls = "") => `<svg class="sign-mark ${cls}" viewBox="-10 -10 370 
 const WORN_DEFS = `<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
   <defs>
     <filter id="lpWorn" x="-10%" y="-10%" width="120%" height="120%">
-      <feTurbulence type="fractalNoise" baseFrequency=".14 .03" numOctaves="4" seed="7" result="n"/>
-      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -6 0 0 0 4.3" result="m"/>
-      <feComposite in="SourceGraphic" in2="m" operator="in"/>
+      <!-- Pass 27: worn along the tire line — long horizontal streaks and small chips, not blobs -->
+      <feTurbulence type="fractalNoise" baseFrequency=".012 .11" numOctaves="3" seed="11" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -7 0 0 0 4.9" result="m"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="2" seed="3" result="c"/>
+      <feColorMatrix in="c" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -3 0 0 0 2.6" result="chips"/>
+      <feComposite in="m" in2="chips" operator="arithmetic" k2="1" k3="1" result="mask"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="edge"/>
+      <feComposite in="edge" in2="mask" operator="in"/>
     </filter>
     <filter id="lpGrain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+    <!-- Pass 27: paint worn along the tire line (long streaks), a roller's drag, and the sprayed mark -->
+    <filter id="lpWornSoft" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency=".02 .14" numOctaves="3" seed="5" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -5 0 0 0 4.1" result="m"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.5" xChannelSelector="R" yChannelSelector="G" result="edge"/>
+      <feComposite in="edge" in2="m" operator="in"/>
+    </filter>
+    <filter id="lpRoller" x="-5%" y="-30%" width="110%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency=".02 .5" numOctaves="2" seed="21" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".03 .3" numOctaves="2" seed="8" result="w"/>
+      <feColorMatrix in="w" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -4 0 0 0 3.6" result="m"/>
+      <feComposite in="d" in2="m" operator="in"/>
+    </filter>
+    <filter id="lpSpray" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" result="d"/>
+      <feGaussianBlur in="d" stdDeviation="2.2" result="halo"/>
+      <feColorMatrix in="halo" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 .55 0" result="h2"/>
+      <feMerge><feMergeNode in="h2"/><feMergeNode in="d"/></feMerge>
+    </filter>
+    <!-- the marks a city paints: the lane bicycle, the diamond, the painter's mark -->
+    <symbol id="lpBike" viewBox="0 0 240 160">
+      <g fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="52" cy="112" r="38"/><circle cx="188" cy="112" r="38"/>
+        <path d="M52 112 L92 44 H138 L188 112 M92 44 L120 112 H52 M138 44 L126 24 H150 M80 44 H104"/>
+      </g>
+    </symbol>
+    <symbol id="lpDiamond" viewBox="0 0 60 100"><path d="M30 4 L56 50 L30 96 L4 50 Z" fill="none" stroke="currentColor" stroke-width="9" stroke-linejoin="round"/></symbol>
+    <symbol id="lpOrgs" viewBox="0 0 190 100"><g fill="currentColor"><path d="M30 50 L58 10 L86 50 L58 90 Z"/><path d="M80 50 L108 10 L136 50 L108 90 Z" opacity=".75"/><path d="M130 50 L158 10 L186 50 L158 90 Z" opacity=".5"/></g></symbol>
+    <symbol id="lpStroke" viewBox="0 0 190 100"><g filter="url(#lpRoller)"><rect x="8" y="38" width="174" height="26" fill="currentColor"/></g></symbol>
+    <symbol id="lpMark" viewBox="0 0 150 150">
+      <g fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><path d="M118 46 V34 Q118 18 102 18 H96 M84 18 H52 Q22 18 22 48 V102 Q22 132 52 132 H84 M96 132 H102 Q118 132 118 116 V104"/></g>
+      <rect x="62" y="66" width="70" height="20" fill="#D9B1AA"/>
+    </symbol>
   </defs>
 </svg>`;
 
@@ -75,7 +115,8 @@ const page = `<!doctype html>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   ${CHROME.FONTS}
-  <link rel="preload" as="image" href="/img/home-hero.jpg" media="(max-width:899px)">
+  <link rel="preload" as="image" href="/img/sign-print-phone.jpg" media="(max-width:759px)">
+  <link rel="preload" as="image" href="/img/sign-print.jpg" media="(min-width:760px)">
   <link rel="stylesheet" href="/home.css">
 
   <script type="application/ld+json">
@@ -98,37 +139,45 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
 
 <!-- —— the sign (Pass 26). The mark is the headline; the plate is the blank. /home.js rotates it and
      lets a visitor type into it. Nothing is collected. —— -->
-<section class="sign" id="top" aria-labelledby="sign-h">
+<section class="sign sign--print" id="top" aria-labelledby="sign-h">
+  <picture class="sign-ph">
+    <source media="(max-width:759px)" srcset="/img/sign-print-phone.jpg">
+    <img src="/img/sign-print.jpg" width="1800" height="1285" alt="Robert and Caleb with their bikes on a desert road at sunset, printed in four inks." fetchpriority="high">
+  </picture>
+  <div class="sign-scrim" aria-hidden="true"></div>
   <svg class="sign-grain" aria-hidden="true" focusable="false"><rect width="100%" height="100%" filter="url(#lpGrain)"/></svg>
+  <svg class="sign-sig" viewBox="0 0 150 150" aria-hidden="true" focusable="false"><use href="#lpMark"/></svg>
   <div class="wrap sign-in">
     <div class="sign-left">
       <p class="sign-kicker">Robert. Phoenix. <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Mile <b class="num" data-miles>3,573</b> of training, on Strava.</a> The 10,000 start Jan 1.</p>
       <h1 class="sign-h" id="sign-h">
         ${STACK()}
-        <span class="sign-plate" id="signPlate">me</span>
-        <span class="sr">Cycle for me</span>
+        <span class="sign-plate sign-plate--blank" id="signPlate" data-empty="true"></span>
+        <span class="sr">Cycle for</span>
       </h1>
     </div>
     <div class="sign-right">
       <label class="sign-q" for="who">Who do you cycle for?</label>
-      <input class="sign-input" id="who" type="text" maxlength="28" autocomplete="off" placeholder="Type it. The sign changes.">
-      <p class="sign-note">Mine changes too. Nothing to pay, nothing to join. <button class="sign-reset" id="signReset" type="button" hidden>Back to mine</button></p>
+      <input class="sign-input" id="who" type="text" maxlength="22" autocomplete="off" placeholder="Type it. The sign changes.">
+      <p class="sign-note">Nothing to pay, nothing to join. <button class="sign-reset" id="signReset" type="button" hidden>Clear the sign</button></p>
       <p class="sign-line">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</p>
       <div class="sign-acts">
         <a class="btn btn--plate" href="#ride">Ride with me</a>
         <a class="link link--bone" href="#road">Read the last ride</a>
       </div>
-      <p class="sign-note">The money goes through the orgs&rsquo; own rides. It never touches me.</p>
     </div>
   </div>
 </section>
 
 <!-- —— the numbers —— -->
-<section class="s s--paper nums" aria-label="The numbers">
-  <div class="wrap nums-in">
+<section class="s s--tar nums nums--bar" aria-label="The numbers">
+  <div class="wrap">
+  <svg class="stopbar" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g filter="url(#lpRoller)"><rect x="0" y="12" width="1200" height="46" fill="#EFEDEA"/></g></svg>
+  <div class="nums-in">
     <div class="num-tile"><b class="num" data-miles>3,573</b><span>miles since June 1</span></div>
     <div class="num-tile"><b class="num" id="rideCount">97</b><span>rides, <a href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">every one on Strava</a></span></div>
     <div class="num-tile num-tile--rose"><b class="num">10,000</b><span>miles in 2027. The count restarts in <b class="num" id="daysTo">88</b> days. If I fall behind, this number says so.</span></div>
+  </div>
   </div>
 </section>
 
@@ -143,14 +192,14 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
         <li><span class="when">Sat Oct 3</span><span class="bar-mi" style="--w:.67"></span><span class="mi num">42.3<small>MI</small></span></li>
         <li><span class="when">Fri Oct 2</span><span class="bar-mi" style="--w:.58"></span><span class="mi num">36.6<small>MI</small></span></li>
       </ol>
-      <p class="road-note">Every ride gets a line. The big ones get a page: the route, the town, who was there, the footage. The first pages land here this month.</p>
+      <p class="road-note">Every ride gets a stroke, as long as the ride. The big ones get a page: the route, the town, who was there, the footage.</p>
     </div>
     <div class="road-side">
       <figure class="road-film">
         <video id="roadVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/road-film.jpg" width="864" height="1080" aria-label="Eighteen seconds of this year's rides: the road over the bars, a drone overhead, the desert, riders up ahead.">
           <source src="/film/road-film.mp4" type="video/mp4">
         </video>
-        <button class="road-film-btn" id="roadBtn" type="button">Play the reel</button>
+        <button class="road-film-btn" id="roadBtn" type="button">Watch the last ride</button>
       </figure>
       <p class="road-tally"><b class="num" id="roadRides">97</b> rides since June 1. The count starts over on January 1.</p>
       <a class="link" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Follow on Strava</a>
@@ -173,7 +222,28 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
 <!-- —— the orgs —— -->
 <section class="s s--paper orgs-s" id="orgs" aria-labelledby="orgs-h">
   <div class="wrap">
-    <div class="s-head"><div class="stack16"><h2 class="h2" id="orgs-h">The orgs I ride for.</h2><p class="lede w38">Each one has a ride. That&rsquo;s where the money goes: you sign up or give on their page, and it never touches me.</p></div></div>
+    <div class="orgs-top">
+      <div class="stack16"><h2 class="h2" id="orgs-h">The orgs I ride for.</h2><p class="lede w38">Three rides. You sign up or give on their page. None of it comes through me.</p></div>
+      <svg class="route-map" viewBox="0 0 700 520" role="img" aria-label="The three rides on a map: Cycling 4 one·n·ten in Phoenix, the Center Ride Out in Los Angeles, Cycle to Zero in San Francisco">
+        <g fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" filter="url(#lpWornSoft)">
+          <path d="M548 428 C 470 400, 420 372, 372 340 S 300 290, 250 262 S 190 236, 150 230"/>
+          <path d="M150 230 C 130 190, 118 150, 112 106 S 110 70, 118 48"/>
+        </g>
+        <g fill="none" stroke="var(--paper)" stroke-width="2.5" stroke-dasharray="14 12">
+          <path d="M548 428 C 470 400, 420 372, 372 340 S 300 290, 250 262 S 190 236, 150 230"/>
+          <path d="M150 230 C 130 190, 118 150, 112 106 S 110 70, 118 48"/>
+        </g>
+        <g filter="url(#lpWornSoft)" style="color:var(--creosote)">
+          <use href="#lpDiamond" x="536" y="404" width="26" height="46"/><use href="#lpDiamond" x="138" y="206" width="26" height="46"/><use href="#lpDiamond" x="106" y="24" width="26" height="46"/>
+        </g>
+        <g font-weight="900" fill="currentColor">
+          <text x="574" y="420" font-size="34">PHX</text><rect x="574" y="432" width="150" height="34" fill="var(--creosote)"/><text x="584" y="458" font-size="22" font-weight="800" fill="var(--paper)">one&middot;n&middot;ten</text>
+          <text x="30" y="282" font-size="34">LA</text><rect x="30" y="294" width="128" height="34" fill="var(--creosote)"/><text x="40" y="320" font-size="22" font-weight="800" fill="var(--paper)">the Center</text>
+          <text x="146" y="40" font-size="34">SF</text><rect x="146" y="52" width="86" height="34" fill="var(--creosote)"/><text x="156" y="78" font-size="22" font-weight="800" fill="var(--paper)">SFAF</text>
+          <g font-size="15" font-weight="700" fill="var(--mute)"><text x="574" y="490">Nov 7</text><text x="30" y="352">Apr 23 to 25</text><text x="246" y="78">May 21 to 23</text></g>
+        </g>
+      </svg>
+    </div>
     <div class="orgs">
       <article class="org">
         <h3 class="h3">one&middot;n&middot;ten</h3>
@@ -218,15 +288,16 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
         <p class="note-sm">Details from RunSignup, checked Oct 5.</p>
       </div>
       <div class="ride-find">
-        <p class="eyebrow">Any day, anywhere</p>
+        <p class="eyebrow">Group rides</p>
         <h3 class="h2 ride-h3">Find a group ride.</h3>
-        <p>${RIDES_N} group rides. Every state, and ${RN.abroad} more countries. Shop rides, no-drop rides, queer rides.</p>
         <form class="find" action="/rides/" method="get" role="search">
           <label class="sr" for="q">Your town or a ride name</label>
           <input class="find-field" id="q" name="q" type="search" placeholder="Your town or a ride name" autocomplete="off">
           <button class="btn btn--ink" type="submit">Search rides</button>
         </form>
-        <p class="find-links"><a class="link" href="/rides/no-drop/">No-drop rides</a><a class="link" href="/rides/lgbtq/">Queer rides</a><a class="link" href="/tonight/">Tonight, near you</a></p>
+        <p class="find-links"><a class="link" href="/rides/no-drop/">No-drop rides</a><a class="link" href="/rides/lgbtq/">Queer rides</a><a class="link" href="/tonight/">Tonight</a></p>
+        <div class="find-count"><b class="num">${RIDES_N}</b><span>group rides in the directory, re-checked every week. Every state, ${RN.abroad} more countries. Shop rides, no-drop rides, queer rides.</span></div>
+        <svg class="lane-dash" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g filter="url(#lpWornSoft)" fill="var(--paper)" stroke="var(--mute)" stroke-width="2"><rect x="0" y="14" width="56" height="8"/><rect x="88" y="14" width="56" height="8"/><rect x="176" y="14" width="56" height="8"/><rect x="264" y="14" width="56" height="8"/><rect x="352" y="14" width="56" height="8"/><rect x="440" y="14" width="56" height="8"/><rect x="528" y="14" width="56" height="8"/></g></svg>
         <dl class="facts-dl">
           <div><dt>Group rides</dt><dd><a href="/rides/">${RIDES_N}</a></dd></div>
           <div><dt>On the 2027 calendar</dt><dd><a href="/events/2027/">640</a></dd></div>
@@ -242,10 +313,25 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
 <section class="s s--paper how" id="how" aria-labelledby="how-h">
   <div class="wrap">
     <h2 class="h2" id="how-h">How this works.</h2>
-    <ol class="steps3">
-      <li><h3 class="h3">I ride.</h3><p>10,000 miles in 2027, all on the bike. Group rides, charity rides, the Tuesday ride in whatever town I&rsquo;m in. Every ride logs to Strava and lands here within the hour.</p></li>
-      <li><h3 class="h3">I write it down.</h3><p>Every ride gets a line. The big ones get a page: the route, the town, who I met, my own footage. If you&rsquo;re riding somewhere new, start there.</p></li>
-      <li><h3 class="h3">The money goes through the orgs.</h3><p>one&middot;n&middot;ten, the Center and SFAF each run a ride. You sign up or give on their page. Nothing here asks for a card, and nothing touches me.</p></li>
+    <svg class="bike-lane" viewBox="0 0 1200 170" aria-hidden="true" focusable="false">
+      <g filter="url(#lpWornSoft)" fill="var(--mute)">
+        <rect x="0" y="128" width="1200" height="12"/>
+        <g fill="var(--paper)" stroke="var(--mute)" stroke-width="2">
+          <rect x="0" y="80" width="70" height="8"/><rect x="110" y="80" width="70" height="8"/><rect x="220" y="80" width="70" height="8"/><rect x="330" y="80" width="70" height="8"/>
+          <rect x="440" y="80" width="70" height="8"/><rect x="550" y="80" width="70" height="8"/><rect x="660" y="80" width="70" height="8"/><rect x="770" y="80" width="70" height="8"/>
+          <rect x="880" y="80" width="70" height="8"/><rect x="990" y="80" width="70" height="8"/><rect x="1100" y="80" width="70" height="8"/>
+        </g>
+      </g>
+      <g style="color:var(--asphalt)" filter="url(#lpWornSoft)">
+        <use href="#lpBike" x="40" y="0" width="150" height="100" style="color:var(--creosote)"/>
+        <use href="#lpStroke" x="440" y="0" width="190" height="100"/>
+        <use href="#lpOrgs" x="840" y="0" width="190" height="100"/>
+      </g>
+    </svg>
+    <ol class="steps3 steps3--lane">
+      <li><h3 class="h3">I ride.</h3><p>10,000 miles in 2027. Every ride lands here from Strava.</p></li>
+      <li><h3 class="h3">I write it down.</h3><p>Every ride gets a stroke. The big ones get a page.</p></li>
+      <li><h3 class="h3">The money goes to the orgs.</h3><p>Through their own rides. Nothing here asks for a card.</p></li>
     </ol>
   </div>
 </section>

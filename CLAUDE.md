@@ -1,5 +1,16 @@
 # Cycle for Change — project context for automated content
 
+> **PASS 27 — LANE PAINT, ON THE ROAD (Oct 6, 2026).** The homepage's graphics are things a city paints:
+> the sign is the stencil over ONE screenprint of Robert and Caleb (`tools/print.py` → `img/sign-print.jpg`
+> + `-phone.jpg`; four inks + rose spot; the only print on the site, signed with the painter's mark
+> `#lpMark` top right — never on a second photo); after FOR there is only the blank (a rose bar) until a
+> visitor types; the numbers sit on a stop bar; the ride log is roller strokes (`.bar-mi` + `#lpRoller`,
+> newest wet in powder rose); the orgs carry the hand-painted PHX–LA–SF route map; "How this works" is a
+> bike lane with three marks (bicycle, roller stroke, three diamonds — never an arrow, never an icon set);
+> the finder is one field plus the count with its source and lane dashes. Rules: rose means the blank and
+> wet paint only (buttons and links are plaster); worn filters only above 120px; grain only in the print;
+> no tracked caps with middots. Panel sheet: project doc `claude/panel-lane-paint-homepage-oct-6-2026.md`.
+
 > **PASS 26 — LANE PAINT, NO PLEDGE (Oct 5, 2026). Read this before anything below.**
 > The brand is "Lane Paint": the mark is CYCLE FOR drawn as road-stencil letters (SVG paths in
 > `scripts/chrome.js`, never a font) with a rose bar as the blank. Colors are "After Hours" — the old
