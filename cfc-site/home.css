@@ -1023,6 +1023,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .org-text{display:flex;flex-direction:column;gap:10px}
 .org-text p{margin:0;max-width:44ch}
 @media (max-width:640px){.orgs-s .org{grid-template-columns:1fr}.org-badge{max-width:320px}}
+@media (min-width:900px){.orgs-s .org{grid-template-columns:1fr;align-content:start}.org-badge{max-width:300px}}   /* three across: badge above the words, so the copy gets the full column */
 /* the finder: one field, the count with its source, lane dashes */
 .find-count{display:flex;flex-direction:column;gap:8px;margin-top:8px}
 .find-count b{font-weight:900;font-size:clamp(48px,6vw,88px);line-height:.95;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
