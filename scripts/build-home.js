@@ -82,6 +82,9 @@ const WORN_DEFS = `<svg aria-hidden="true" focusable="false" style="position:abs
     <symbol id="mkSF" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20V4M17 20V4"/><path d="M5.5 7h3M15.5 7h3"/><path d="M2 15h20"/><path d="M7 4.5q5 9 10 0"/><path d="M1 14q4-1 6-9.5M23 14q-4-1-6-9.5"/><path d="M12 11v4"/></g></symbol>
     <symbol id="mkRide" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 7c0 4 1 6.5 3.5 6.5"/><path d="M20 7c0 4-1 6.5-3.5 6.5"/><path d="M12 7v9"/></g></symbol>
     <symbol id="mkWrite" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2z"/><path d="M5 17a2 2 0 0 1 2-2h11"/><path d="M9 8h5"/></g></symbol>
+    <!-- Pass 34: the two finder marks. A bunch on the road, seen from above; the finish banner. -->
+    <symbol id="mkGroup" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 21 8.6 3M20.5 21 15.4 3"/><path d="M12 3v2.2M12 8.2v2.2" opacity=".55"/></g><g fill="currentColor"><circle cx="9.6" cy="17.2" r="1.8"/><circle cx="14.4" cy="17.2" r="1.8"/><circle cx="12" cy="13.2" r="1.5"/></g></symbol>
+    <symbol id="mkFinish" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V4M20 21V4"/><path d="M4 5h16v5H4z"/></g><g fill="currentColor"><rect x="4" y="5" width="4" height="2.5"/><rect x="12" y="5" width="4" height="2.5"/><rect x="8" y="7.5" width="4" height="2.5"/><rect x="16" y="7.5" width="4" height="2.5"/></g></symbol>
     <symbol id="mkOrgs" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="8" r="2.2"/><circle cx="12" cy="6.5" r="2.2"/><circle cx="17.5" cy="8" r="2.2"/><path d="M2.5 19a4 4 0 0 1 8 0M8 19a4 4 0 0 1 8 0M13.5 19a4 4 0 0 1 8 0"/></g></symbol>
     <symbol id="lpBike" viewBox="0 0 240 160">
       <g fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
@@ -171,6 +174,10 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
       <input class="sign-input" id="who" type="text" maxlength="22" autocomplete="off" placeholder="Type it. The sign changes.">
       <p class="sign-note">Nothing to pay, nothing to join. <button class="sign-reset" id="signReset" type="button" hidden>Clear the sign</button></p>
       <p class="sign-line">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</p>
+      <nav class="finder" aria-label="Find a ride">
+        <a class="finder-tile" href="/rides/"><svg class="finder-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkGroup"/></svg><span class="finder-t">Group rides</span><span class="finder-s">${RIDES_N} worldwide</span></a>
+        <a class="finder-tile" href="/events/2027/"><svg class="finder-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkFinish"/></svg><span class="finder-t">Events</span><span class="finder-s">${CAL_N} in 2027</span></a>
+      </nav>
       <div class="sign-acts">
         <a class="btn btn--plate" href="#ride">Ride with me</a>
         <a class="link link--bone" href="#road">Read the last ride</a>
@@ -205,11 +212,17 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
       <p class="road-note">Every ride gets a stroke, as long as the ride. The big ones get a page: the route, the town, who was there, the footage.</p>
     </div>
     <div class="road-side">
-      <figure class="road-film">
-        <video id="roadVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/road-film.jpg" width="864" height="1080" aria-label="Eighteen seconds of my rides: the road over the bars, a drone overhead, the desert, riders up ahead.">
-          <source src="/film/road-film.mp4" type="video/mp4">
-        </video>
-        <button class="road-film-btn" id="roadBtn" type="button">Watch the last ride</button>
+      <figure class="road-film" id="roadFig" data-playing="false">
+        <div class="road-film-frame">
+          <video id="roadVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/road-film-2.jpg" width="864" height="1080" aria-label="Twelve seconds of my rides: the desert road, a drone overhead, riders up ahead, a river canyon, a forest trail, a tunnel.">
+            <source src="/film/road-film-2.mp4" type="video/mp4">
+          </video>
+          <button class="road-play" id="roadPlay" type="button" aria-label="Play the last ride, 12 seconds"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg></button>
+        </div>
+        <figcaption class="road-film-cap">
+          <button class="road-film-btn" id="roadBtn" type="button" data-playing="false"><svg class="rf-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><svg class="rf-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg><span id="roadBtnLabel">Watch the last ride</span></button>
+          <span class="road-film-len">0:12</span>
+        </figcaption>
       </figure>
       <p class="road-tally"><b class="num" id="roadRides">97</b> rides since June 1. The count starts over on January 1.</p>
       <a class="link" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Follow on Strava</a>

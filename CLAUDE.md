@@ -129,7 +129,8 @@ never words in copy or briefs.
 - **The mark family** — `cfc-site/rides/marks.svg`: a symbol sprite on a 24 grid, one 1.7 stroke,
   round caps, `currentColor`, `.mk` base class. Pick a mark by meaning, never to decorate. Add new
   marks to the sprite (homepage ones are inlined in build-home.js as `#mkPhx`, `#mkOjai`, `#mkSF`,
-  `#mkRide`, `#mkWrite`, `#mkOrgs`).
+  `#mkRide`, `#mkWrite`, `#mkOrgs`, and the finder's `#mkGroup` / `#mkFinish`, also in the sprite as
+  `m-group` / `m-finish`).
 - Graphics are **drawn clean — never painted, worn or grained.** The only wear on the site is the
   big desktop hero stencil (`#lpWorn`). `#lpWornSoft` / `#lpRoller` are a small hand edge only (no
   holes, no streaks); on phones the stencil is clean (`.sign-mark [filter]{filter:none}`).
@@ -381,7 +382,8 @@ the form as CSV until Robert picks one.
   don't add a second copy. Search Console: the `https://cycleforchange.org/` URL-prefix property.
 - Key events, sent from `/chrome.js` and `/home.js` via `cfcTrack()` only when `gtag` exists:
   `sign_up` (mile-updates signup), `org_ride_click` (a tap to RunSignup / one·n·ten / the Center /
-  SFAF), `ride_host_click` (a tap out to a group ride's host). No personal data in any event.
+  SFAF), `ride_host_click` (a tap out to a group ride's host), `finder_click` (a homepage finder
+  tile: `group_rides` or `events`). No personal data in any event.
 
 ## 8. Rider pages — CONCEPT ONLY, do not build (Oct 4, 2026)
 
@@ -426,8 +428,10 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
   seven folders, clips, `index.html` to browse, `manifest.csv` with each file's Photos ID).
   `07-group-rides` has other people in it — ask before using any of it.
 - **Bump the image number when a picture changes** — phones and Safari cache hard.
-- Films: `/film/road-film.mp4` (the reel; phones wait for a tap) — its poster frame has a vehicle
-  far down the road and needs a new one. `home-film.mp4` is unused. Recut with `ffmpeg` (CRF ~30,
+- Films: `/film/road-film-2.mp4` (the reel, 12 s; phones wait for a tap). Oct 6, 2026: the four
+  clips with cars in them were cut and the poster is the drone frame (`road-film-2.jpg`). On the
+  homepage it's a crisp 4:5 picture with a round plaster play button on the poster and a
+  play/pause line under it (Robert: the feathered version "looks unfinished"). `home-film.mp4` is unused. Recut with `ffmpeg` (CRF ~30,
   `+faststart`, no audio). Social video cuts never go in git.
 - **Strava:** the tally and the ride log on the site may read Strava. Nothing else: **no Strava API
   data through any AI step or onto public pages beyond the tally / ride log.** Ride write-ups are
@@ -460,3 +464,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-05 — Passes 27–29: lane-paint homepage, screenprint (later dropped), type retyped (no tracked caps; buttons keep caps).
 - 2026-10-05 — Pass 30 clean paint, first screen on phones; Pass 31 org/step marks drawn clean; Pass 32 clear ungraded hero photo.
 - 2026-10-06 — Instruction files rewritten to the no-pledge model; ride-recap bot disabled; mile-updates email rebuilt.
+- 2026-10-06 — Pass 34: the first screen gets two finder tiles (Group rides, Events) with their own marks; the reel is a crisp 4:5 picture with a real play button, recut to 12 s without the car clips.

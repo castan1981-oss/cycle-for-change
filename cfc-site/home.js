@@ -302,6 +302,11 @@
     if (ORG_HOSTS.test(host)) cfcTrack("org_ride_click", { link_domain: host, link_url: a.href });
     else if (a.closest(".gr-btn, .ride-acts, [data-host-link]") || /\/rides\//.test(location.pathname)) cfcTrack("ride_host_click", { link_domain: host });
   }, true);
+  /* Pass 34: which first-screen finder tile gets used (no personal data) */
+  document.addEventListener("click", function (e) {
+    var t = e.target && e.target.closest ? e.target.closest(".finder-tile") : null;
+    if (t) cfcTrack("finder_click", { finder: /\/events\//.test(t.getAttribute("href") || "") ? "events" : "group_rides" });
+  }, true);
 
   if (emailForm && emailOk) emailForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -377,24 +382,29 @@
      button pauses and plays it. Nothing downloads until it's needed (preload="none").
      ———————————————————————————————————————————————— */
 
-  var reel = $("roadVid"), reelBtn = $("roadBtn");
+  var reel = $("roadVid"), reelBtn = $("roadBtn"), reelPlay = $("roadPlay"), reelFig = $("roadFig"), reelLabel = $("roadBtnLabel");
   if (reel && reelBtn) {
     reel.muted = true;
     var reelUser = null;   /* null = the page decides; true/false = the reader decided */
     var reelSeen = false;
     var paintReel = function () {
       var on = !reel.paused;
-      reelBtn.textContent = on ? "Pause" : "Watch the last ride";
+      if (reelLabel) reelLabel.textContent = on ? "Pause" : "Watch the last ride";
       reelBtn.setAttribute("data-playing", on ? "true" : "false");
+      if (reelFig) reelFig.setAttribute("data-playing", on ? "true" : "false");
     };
     var playReel = function () { var q = reel.play(); if (q && q.catch) q.catch(function () {}); };
-    reel.addEventListener("play", paintReel);
-    reel.addEventListener("pause", paintReel);
-    reel.addEventListener("error", function () { reelBtn.hidden = true; }, true);
-    reelBtn.addEventListener("click", function () {
+    /* Pass 34: the big play button, the line under the picture and the picture itself all play and pause */
+    var toggleReel = function () {
       if (reel.paused) { reelUser = true; reel.preload = "auto"; playReel(); }
       else { reelUser = false; reel.pause(); }
-    });
+    };
+    reel.addEventListener("play", paintReel);
+    reel.addEventListener("pause", paintReel);
+    reel.addEventListener("error", function () { reelBtn.hidden = true; if (reelPlay) reelPlay.hidden = true; }, true);
+    reelBtn.addEventListener("click", toggleReel);
+    if (reelPlay) reelPlay.addEventListener("click", function () { toggleReel(); reelBtn.focus({ preventScroll: true }); });
+    reel.addEventListener("click", toggleReel);
     if ("IntersectionObserver" in window) {
       new IntersectionObserver(function (es) {
         reelSeen = es[0].isIntersecting;

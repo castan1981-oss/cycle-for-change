@@ -653,24 +653,28 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .road-side .link{align-self:flex-start;color:var(--bone)}
 .log .when b{color:var(--bone)}
 @media (min-width:900px){.road{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}}
-/* Pass 24: the road reel. Pass 24b (Oct 4, 2026) — Robert, on his phone: "This looks kinda off."
-   It filled the screen, faded at top and foot but kept hard sides (a shaded box), and its control
-   sat on the picture. Now: square on phones, 4:5 on desktop; all four edges go soft on the tar (a
-   2.5% feather — wider read as an old-TV vignette); the control is a quiet mono line under the picture, never on it. The cut itself is
-   864×1080 in a light grade (reel-tar: strength .12, lift .05, stop .1) — the bone-forward house
-   grade washed it out on tar. Volt is allowed here (it's tar), only as the playing dot. */
-.road-film{margin:0 0 4px;width:100%;max-width:min(100%,calc(62svh * .8))}
-.road-film video{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 50%;background:var(--tar);
-  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 2.5%,#000 97.5%,transparent 100%),linear-gradient(to right,transparent 0,#000 2.5%,#000 97.5%,transparent 100%);
-  -webkit-mask-composite:source-in;
-  mask-image:linear-gradient(to bottom,transparent 0,#000 2.5%,#000 97.5%,transparent 100%),linear-gradient(to right,transparent 0,#000 2.5%,#000 97.5%,transparent 100%);
-  mask-composite:intersect}
-@media (min-width:900px){.road-film video{aspect-ratio:4/5}}
-.road-film-btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:6px;padding:0 14px 0 0;background:none;border:0;color:var(--dust);font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;cursor:pointer}
-.road-film-btn::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--dust)}
-.road-film-btn[data-playing="true"]{color:var(--bone)}
-.road-film-btn[data-playing="true"]::before{background:var(--volt)}
-.road-film-btn:focus-visible{outline:2px solid var(--bone);outline-offset:3px}
+/* Pass 24: the road reel. Pass 34 (Oct 6, 2026) — Robert, on his phone: the video "looks unfinished"
+   and the play button "should be better". The feathered edges read as a blur and the dot read as
+   nothing. Now: one clean 4:5 picture with crisp edges, the full column wide; a round plaster play
+   button on the poster until it plays (tap the picture to pause); under it, a plain play/pause line
+   and the length. The cut is 12 seconds: the clips with cars in them are out (§10, no cars). */
+.road-film{margin:0 0 4px;width:100%;max-width:520px}
+.road-film-frame{position:relative;background:var(--tar)}
+.road-film video{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:var(--tar);cursor:pointer}
+.road-play{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;border-radius:50%;background:var(--paper);color:var(--asphalt);display:grid;place-items:center;cursor:pointer;transition:opacity .2s ease,transform .2s ease}
+.road-play svg{width:30px;height:30px;margin-left:5px;fill:currentColor}
+@media (hover:hover){.road-play:hover{transform:scale(1.06)}}
+.road-play:focus-visible{outline:3px solid var(--paper);outline-offset:4px}
+.road-film[data-playing="true"] .road-play{opacity:0;transform:scale(.9);pointer-events:none}
+.road-film-cap{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px}
+.road-film-btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0;background:none;border:0;color:var(--paper);font:700 15px/1.2 var(--display);cursor:pointer}
+.road-film-btn svg{width:16px;height:16px;fill:currentColor;flex:none}
+.road-film-btn .rf-pause,.road-film-btn[data-playing="true"] .rf-play{display:none}
+.road-film-btn[data-playing="true"] .rf-pause{display:block}
+.road-film-btn span{border-bottom:1px solid var(--dust);padding-bottom:2px}
+.road-film-btn:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+.road-film-len{font-size:14px;font-weight:600;color:var(--dust);font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.road-play{transition:none}}
 
 /* —— read —— */
 .read-grid{display:grid;gap:clamp(36px,5vw,64px)}
@@ -1110,3 +1114,20 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   /* Pass 33: on a phone the stencil sat on the jersey's lettering; the dark starts under his face now */
   .sign-scrim{background:linear-gradient(180deg,rgba(20,18,24,0) 0%,rgba(20,18,24,0) 22%,rgba(20,18,24,.74) 36%,rgba(20,18,24,.93) 50%,rgba(20,18,24,.98) 100%)}
 }
+
+/* —— Pass 34 (Oct 6, 2026): find a ride from the first screen ——
+   Robert: "make it easy to find a group ride or event above the fold", with custom icons. Two tiles
+   under the line: Group rides (/rides/) and Events (/events/2027/), each with its own mark (#mkGroup,
+   a bunch on the road seen from above; #mkFinish, the finish banner) and a count from the data.
+   Hairline, square, plaster on hover. On phones they take the place of "Ride with me", which the
+   tally bar carries from the second screen on. */
+.finder{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:4px}
+.finder-tile{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:10px;align-items:center;align-content:center;min-height:64px;padding:11px 10px 10px 11px;border:1px solid rgba(239,237,234,.5);background:rgba(20,18,24,.5);color:var(--paper);text-decoration:none;transition:background .15s ease,color .15s ease,border-color .15s ease}
+.finder-mk{grid-row:1 / span 2;width:28px;height:28px}
+.finder-t{font-weight:800;font-size:16px;line-height:1.2}
+.finder-s{font-size:13px;font-weight:600;line-height:1.3;color:var(--dust);transition:color .15s ease}
+@media (hover:hover){.finder-tile:hover{background:var(--paper);border-color:var(--paper);color:var(--asphalt)}.finder-tile:hover .finder-s{color:var(--mute)}}
+.finder-tile:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+@media (max-width:759px){.sign--print .sign-acts{display:none}}
+@media (min-width:1024px){.finder{max-width:520px}}
+@media (prefers-reduced-motion:reduce){.finder-tile,.finder-s{transition:none}}
