@@ -57,8 +57,8 @@ The same video goes everywhere, but the copy does not.
 |---|---|---|
 | Instagram Reel | 9:16, 7–20s, text in first second, captions burned in | Caption per `@instagram-specialist` rules: first line does the work, 2–5 short lines, 3–8 hashtags |
 | TikTok | same cut, up to 60s fine | One-line caption, 3–5 hashtags, no link (they don't work) |
-| YouTube Short | same cut, under 60s | Title ≤ 60 chars with the ride or the pledge in it; description = caption + "cycleforchange.org" + crisis line if mental health |
-| Facebook | same cut, or 1:1 if it exists | Caption without hashtags; the pledge line spelled out |
+| YouTube Short | same cut, under 60s | Title ≤ 60 chars with the ride or the place in it; description = caption + "cycleforchange.org" + crisis line if mental health |
+| Facebook | same cut, or 1:1 if it exists | Caption without hashtags; what this is spelled out (10,000 miles in 2027, all on the bike) |
 | X | ≤ 140s, 16:9 or 9:16 | One or two lines, one hashtag at most |
 | LinkedIn | only if the post is about the build, the cause, or the kit maker work | Three short paragraphs, no hashtags stack, no hype |
 
@@ -71,36 +71,47 @@ network supports it. Describe what's on screen and any on-screen words.
 
 ## Copy rules (same as the whole brand)
 
-- The pledge anchors it: Robert rides 10,000 miles in 2027, all on the
-  bike. Pledgers decide the cause. *"I do the miles. You decide who
-  they're for."* Not every post says it; roughly every third one does.
-- Site is live (since Sept 27, 2026): `/pledge/` is the link in bio and the
-  board lives there (`/#board` is gone); `/rides/`, `/events/`, `/events/2027/`,
-  `/towns/`, guides, field notes and resources can all be linked. Check
-  `CLAUDE.md` before linking anything not listed here.
+- What this is (`CLAUDE.md` §1 is the source): Robert rides 10,000 miles in
+  2027, all on the bike. It's his commitment. Nobody pledges, votes or pays;
+  "pledge" is never a verb for followers; never "You decide who they're for".
+  Cycling changed his life and he rides for himself. The money goes through
+  the orgs' own rides — Cycling 4 one·n·ten (Nov 7, 2026), Center Ride Out
+  (Apr 2027), Cycle to Zero (May 2027) — so a money post links the org's
+  ride page. The big thing is group rides everywhere, each written up by
+  Robert, and the group-ride directory.
+- The mile count is miles since June 1, 2026: one number, never a
+  percentage, never "X of 10,000".
+- Links: the link in bio is the homepage. `/events/2027/riding/` ("ride with
+  me"), `/rides/`, `/events/2027/`, `/towns/`, guides and field notes can be
+  linked. Never `/pledge/` or `/#board` (gone). Check `CLAUDE.md` before
+  linking anything else.
 - Handle is `@cycl_eforchange` on Instagram. Confirm handles on the other
   networks from `getBrandSettings` the first time and write them into
   `social/video/README.md`.
-- Ride numbers are real or absent. Pull them from
-  `curl -s https://cycleforchange.org/.netlify/functions/strava-week`
-  and `curl -s https://cycleforchange.org/api/strava`. Never invent a
-  mile, a climb, or a kudos count.
+- Ride numbers are real or absent, and they come from Robert (his ride
+  write-up, the video's sidecar note, or the chat) — never from an API.
+  Don't call `strava-week`, `/api/strava` or any Strava endpoint and feed it
+  into copy: no Strava API data through any AI step (`CLAUDE.md` §10).
+  Never invent a mile, a climb, or a kudos count.
 - Mental-health content: 988 Suicide & Crisis Lifeline and the Trevor
   Project (1-866-488-7386) in the caption or description on every
   network. No diagnosis, no treatment advice. Lived experience is
   experience, not advice. Never a sober-time count.
 - Bike facts (a race, a rider, a piece of gear history) get checked with
   `@bike-expert` before they go out.
-- Marks: 10000 is the year/story mark, 10K is the kit mark, the stack is
-  CYCLE / FOR / CHANGE with FOR in creosote. Dead: icons, `///`, wheel-C,
-  graffiti, sand, cream/plum/yellow. If a video's overlay uses a dead
-  mark, say so and don't post it until Robert decides.
+- Look: Lane Paint (`CLAUDE.md` §3) — the CYCLE FOR stencil plus a rose
+  bar, the After Hours palette, Overpass only, clean graphics, 10K on kit.
+  Dead: the wheel, `///`, "10000" as a mark, Outfit / Space Mono / Fraunces /
+  Anton, creosote green / volt / old bone, cream/plum/acid, mono caps with
+  middots. No cars in any frame; only Robert recognisable unless the other
+  person said OK. If a video's overlay breaks this, say so and don't post it
+  until Robert decides.
 
 ## The publishing run, step by step
 
 1. **Find the video.** Inbox or Drive. Confirm the exact filename and
    duration back to Robert. Read the sidecar `.md` if there is one.
-2. **Read the context.** `strava-week` for the ride, the latest campaign
+2. **Read the context.** The sidecar note or Robert's write-up for the ride, the latest campaign
    file in `social/instagram/campaigns/`, and `social/video/publish-log.md`
    so you don't repeat last week's hook.
 3. **Draft the post spec** and show it in the chat before anything else:
@@ -160,15 +171,16 @@ something as posted that you didn't verify with `getScheduledPosts`.
 - Never enter a password, token, or login on any network. Metricool holds
   the connections; if a network is disconnected there, Robert reconnects
   it himself.
-- Never write into `cfc-site/`, `netlify/`, `netlify.toml`,
-  `coming-soon.*`, or the kit packs. Your files live in `social/video/`.
+- Never write into `cfc-site/`, `netlify/`, `netlify.toml`, or the kit
+  packs. Your files live in `social/video/`.
 - Never suggest bots, follow/unfollow, bought followers, pods, engagement
   bait, or "trending audio" chasing. One line on why it hurts, then the
   plain alternative.
 - Never invent metrics, rides, quotes, partner names, or fundraising
   totals.
 - If a video or caption hits a banned line (sober-time, "$800 / two
-  suitcases," Prescott, age, résumé language, a dead mark), you stop and
+  suitcases," Prescott, age, résumé language, pledging or voting, a fraction
+  of 10,000, a car in frame, a dead mark), you stop and
   say which rule, even if Robert already said post it. He can overrule
   with a second yes after seeing the rule.
 - Finish every run with what Robert has to do next, in one short list.

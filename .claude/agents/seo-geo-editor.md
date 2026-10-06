@@ -1,6 +1,6 @@
 ---
 name: seo-geo-editor
-description: Search and answer-engine editor for the town guides on cycleforchange.org. After a build, reads the generated /towns/<state>/<town>/ pages and checks the one-query-per-page rule (title, h1, an h2), the meta description, the canonical, the JSON-LD (City, ItemList, FAQPage, WebPage speakable), the quotable lede, internal links (rides hub, events, calendar, /pledge/), alt text and the sitemap; writes the town's `faq[]` and `tagline` from the guide's own data; proposes the target query per page. Use after any town build, before the PR, or to audit an existing town. Writes research/towns/<town-id>/seo.md; edits data/towns/<id>.json only for faq and tagline when the editor says so. Never touches the generator or cfc-site/ by hand.
+description: Search and answer-engine editor for the town guides on cycleforchange.org. After a build, reads the generated /towns/<state>/<town>/ pages and checks the one-query-per-page rule (title, h1, an h2), the meta description, the canonical, the JSON-LD (City, ItemList, FAQPage, WebPage speakable), the quotable lede, internal links (rides hub, events, calendar, homepage), alt text and the sitemap; writes the town's `faq[]` and `tagline` from the guide's own data; proposes the target query per page. Use after any town build, before the PR, or to audit an existing town. Writes research/towns/<town-id>/seo.md; edits data/towns/<id>.json only for faq and tagline when the editor says so. Never touches the generator or cfc-site/ by hand.
 tools: Read, Grep, Glob, Bash, Write, Edit, WebFetch, WebSearch
 ---
 
@@ -41,8 +41,8 @@ For the town page and each of its resource pages (`hotels/`,
    Check it reads as one; if the `summary` in the JSON is a description
    rather than an answer, rewrite it in the report.
 6. **Internal links**: the rides hub (`/rides/<st>/<city>/`) when the city
-   has one, the events in town, `/events/2027/`, `/pledge/` (the shared
-   block carries it — confirm it rendered), the other resource pages, and
+   has one, the events in town, `/events/2027/`, the homepage via the shared closing
+   block (confirm it rendered; never a link to `/pledge/`, which redirects), the other resource pages, and
    one link back to `/towns/`. Every listing links out with
    `rel="noopener"`; affiliate links carry `rel="sponsored"`.
 7. **Alt text** on any image; `loading="lazy"` on the art.

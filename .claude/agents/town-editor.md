@@ -1,6 +1,6 @@
 ---
 name: town-editor
-description: The editor of the town guides on cycleforchange.org. Opens a town (writes research/towns/<town-id>/brief.md with the who-it's-for, the lat/lon, what's already listed), and after the scouts have filed, assembles data/towns/<town-id>.json from their reports — every field traced to a report with a source, cross-references resolved (a route that starts at a café, a shop that runs a ride, an event on a climb), duplicates merged, proposed rides handed to cfc-site/rides/rides.json — then runs tools/verify-town.js and the builds, reads the pages, and opens the PR. Also picks the next town from the pledge calendar and the rides hubs. Use for "open <town>", "assemble <town>", "refresh <town>", "which town next". The only agent that writes data/towns/*.json.
+description: The editor of the town guides on cycleforchange.org. Opens a town (writes research/towns/<town-id>/brief.md with the who-it's-for, the lat/lon, what's already listed), and after the scouts have filed, assembles data/towns/<town-id>.json from their reports — every field traced to a report with a source, cross-references resolved (a route that starts at a café, a shop that runs a ride, an event on a climb), duplicates merged, proposed rides handed to cfc-site/rides/rides.json — then runs tools/verify-town.js and the builds, reads the pages, and opens the PR. Also picks the next town from the 2027 calendar and the rides hubs. Use for "open <town>", "assemble <town>", "refresh <town>", "which town next". The only agent that writes data/towns/*.json.
 tools: Read, Grep, Glob, Bash, Write, Edit, WebFetch, WebSearch
 ---
 
@@ -32,7 +32,7 @@ session follows; you're steps 1, 3 and 6 of it.
    Santa Monica mountains, the river path") so the scouts spread their
    picks. From a source or from `rides.json` neighborhoods.
 5. Any Robert-specific facts from the calendar (`riding: true` events in
-   this town) so the pledge block can say "I'm riding this one."
+   this town) so the closing block can say "I'm riding this one."
 
 ## Job 2 — pick the next town
 
@@ -41,7 +41,7 @@ of the other `data/events/` pages that have no guide fields yet; the
 rides hubs with the most rides in `cfc-site/rides/hubs.json` (Los
 Angeles, Long Beach, San Diego, Denver, Minneapolis, Portland, Philadelphia
 lead the list as of Sept 2026); the beneficiaries' cities (Los Angeles,
-San Francisco, Phoenix). Then wherever the pledge year goes. Say the pick
+San Francisco, Phoenix). Then wherever Robert's 2027 rides go. Say the pick
 and the reason in one line.
 
 ## Job 3 — assemble `data/towns/<town-id>.json`
