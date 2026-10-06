@@ -64,9 +64,27 @@
   force = true
 
 # Search pass (Oct 6, 2026): the field-note templates live in cfc-site/ because the content workflows copy them
-# from there; they are never pages. 404 them so Google drops them.
+# from there; they are never pages. 404 them so Google drops them (one rule per path: a splat only matches a whole segment).
 [[redirects]]
-  from = "/field-notes/_*"
+  from = "/field-notes/_template.html"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/field-notes/_template"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/field-notes/_pillar-template.html"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/field-notes/_pillar-template"
   to = "/404.html"
   status = 404
   force = true

@@ -284,6 +284,7 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .theme-dark .brand-mark .lp-bar{fill:var(--creosote-lift)}
 .theme-dark .nav .btn--sm{background:var(--bone);color:var(--asphalt);border-color:var(--bone)}
 .pledge .btn--bone:focus-visible,.foot .btn--bone:focus-visible{outline:2px solid var(--bone);outline-offset:3px}
+.theme-dark .tally-line .dot{background:var(--dust)}   /* the asphalt dot vanished on /tonight/'s dark page */
 .theme-dark .tally-line{color:var(--dust);border-bottom-color:var(--line-d)}
 .theme-dark .tally-num{color:var(--bone)}
 .theme-dark .skip{background:var(--bone);color:var(--asphalt)}
