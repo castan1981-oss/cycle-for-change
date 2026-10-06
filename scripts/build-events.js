@@ -577,7 +577,10 @@ function townPage(t) {
     address: { "@type": "PostalAddress", addressLocality: t.name, addressRegion: t.state_code, addressCountry: "US" },
     geo: { "@type": "GeoCoordinates", latitude: t.lat, longitude: t.lon },
     containedInPlace: { "@type": "State", name: t.state },
-    event: t.events.filter((e) => e.next_date && (e.end_date || e.next_date) >= TODAY).map((e) => ({ "@type": "SportsEvent", name: e.name, url: SITE + e.url, startDate: e.next_date })),
+    // Oct 6, 2026: only events with a published date still ahead, each with its place (an Event needs both)
+    event: t.events.some((e) => e.next_date && (e.end_date || e.next_date) >= TODAY) ? t.events.filter((e) => e.next_date && (e.end_date || e.next_date) >= TODAY).map((e) => ({ "@type": "SportsEvent", name: e.name, url: SITE + e.url, startDate: e.next_date, endDate: e.end_date || e.next_date,
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      location: { "@type": "Place", name: e.start_location || `${t.name}, ${t.state_code}`, address: { "@type": "PostalAddress", addressLocality: t.name, addressRegion: t.state_code, addressCountry: "US" } } })) : undefined,
   });
   const pageLd = {
     "@context": "https://schema.org", "@type": "WebPage", url: SITE + t.url, name: title, description,

@@ -5,6 +5,11 @@ on its own, what you set up once, and how to run any of it by hand.
 
 ## The promise
 
+(Why this matters: every ride was checked Sept 15–Oct 4, 2026, so they all age out together. If
+the Monday re-check isn't actually re-checking rides, most of the directory hides itself by
+mid-March 2027. After a Monday run, look for the `rides-upkeep` PR; a green run with no PR means
+it re-checked nothing — usually a missing `ANTHROPIC_API_KEY`.)
+
 Nobody wants to look up a ride, show up at 7:00 on Saturday, and find nobody there. So:
 
 - Every ride on the site says when we last checked it at its source ("Checked Sep 30").
@@ -108,7 +113,7 @@ has to look.
 
 All in GitHub, repo **castan1981-oss/cycle-for-change** → **Settings**.
 
-1. **ANTHROPIC_API_KEY** (needed for the 3 am re-check; the content loop already uses it).
+1. **ANTHROPIC_API_KEY** (needed for the 3 am re-check; the content loop uses it too).
    Settings → Secrets and variables → Actions → **Secrets** tab. If `ANTHROPIC_API_KEY` is in the
    list, you're done. If not: New repository secret → Name `ANTHROPIC_API_KEY` → paste a key from
    console.anthropic.com → Add secret. Without it the re-check job just says it skipped.
@@ -116,8 +121,8 @@ All in GitHub, repo **castan1981-oss/cycle-for-change** → **Settings**.
    tick "Allow GitHub Actions to create and approve pull requests" → Save.
 3. **Rider reports (optional, but this is how riders reach you).**
    - Netlify → your avatar (top right) → User settings → Applications → Personal access tokens →
-     New access token → name it "rides-reports" → Generate → copy it. (The token the pledges
-     function uses is being refused right now, so a new one is due anyway.)
+     New access token → name it "rides-reports" → Generate → copy it. This token is for rider
+     reports only; the old pledges function is retired and never gets one.
    - Netlify → the cycleforchange.org site → Site configuration → General → Site details → copy the
      **Site ID**.
    - Back in GitHub → Settings → Secrets and variables → Actions → New repository secret, twice:

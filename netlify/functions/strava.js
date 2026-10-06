@@ -11,7 +11,7 @@
 //     so an uploaded ride lands on the site within about a minute.
 //   - Errors are surfaced (reason) and backed off, never reported as 0 miles.
 
-const GOAL = 10000; // legacy field; no page reads goal or pct (the site shows miles only, never a fraction of 10,000)
+const GOAL = 10000; // legacy field; the site shows miles only, never a fraction of 10,000 (pct went Oct 6, 2026)
 const METERS_TO_MILES = 0.000621371;
 const SEASON_START = "2026-06-01";
 const FRESH_MS = 20 * 60 * 1000;      // recompute anyway if the blob is older than this
@@ -144,7 +144,10 @@ async function compute(bonus) {
 
   const after = Math.floor(new Date(`${SEASON_START}T00:00:00Z`).getTime() / 1000);
   const activities = await fetchAllActivities(accessToken, after);
+  // Only public activities, Oct 6, 2026: a ride Robert set to private or followers-only never
+  // reaches the site — not its title, not its miles.
   const mapped = activities
+    .filter(isPublic)
     .map((a) => {
       const discipline = mapDiscipline(a);
       if (!discipline) return null;
@@ -154,7 +157,6 @@ async function compute(bonus) {
         discipline,
         title: a.name || "Untitled",
         miles: Math.round(miles * 10) / 10,
-        note: a.description || "",
         date: a.start_date || a.start_date_local,
         start: new Date(a.start_date || a.start_date_local).getTime(),
       };
@@ -164,13 +166,11 @@ async function compute(bonus) {
   mapped.sort((a, b) => b.start - a.start);
 
   const totalMiles = mapped.reduce((s, a) => s + a.miles, 0) + bonus;
-  const pct = Math.min(100, Math.round((totalMiles / GOAL) * 1000) / 10);
   const chartPoints = buildChartPoints(mapped, bonus);
-  const recent = mapped.slice(0, 6).map(({ discipline, title, miles, note, date }) => ({
+  const recent = mapped.slice(0, 6).map(({ discipline, title, miles, date }) => ({
     discipline,
     title,
     miles,
-    note,
     date,
   }));
 
@@ -191,7 +191,6 @@ async function compute(bonus) {
     totalMiles: Math.round(totalMiles),
     miles: Math.round(totalMiles * 10) / 10,
     goal: GOAL,
-    pct,
     chartPoints,
     recent,
     rides: mapped.length,
@@ -220,6 +219,11 @@ async function fetchAllActivities(accessToken, after) {
     if (acts.length < 200) break;
   }
   return all;
+}
+
+function isPublic(a) {
+  if (!a || a.private === true) return false;
+  return !a.visibility || a.visibility === "everyone";
 }
 
 function mapDiscipline(a) {
@@ -263,7 +267,6 @@ function staticFallback(bonus) {
     totalMiles: Math.round(bonus),
     miles: bonus,
     goal: GOAL,
-    pct: Math.min(100, Math.round((bonus / GOAL) * 1000) / 10),
     chartPoints: [
       { x: 0, y: bonus },
       { x: 100, y: bonus },

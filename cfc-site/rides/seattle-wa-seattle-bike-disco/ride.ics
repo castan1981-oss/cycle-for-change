@@ -4,11 +4,24 @@ PRODID:-//Cycle for Change//Group Rides//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:seattle-wa-seattle-bike-disco@cycleforchange.org
+UID:seattle-wa-seattle-bike-disco-2026-10-23@cycleforchange.org
 DTSTAMP:20261001T000000Z
-DTSTART;TZID=America/Los_Angeles:20261009T193000
-DTEND;TZID=America/Los_Angeles:20261009T213000
-RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270228T235959Z
+DTSTART;TZID=America/Los_Angeles:20261023T193000
+DTEND;TZID=America/Los_Angeles:20261023T213000
+SUMMARY:Seattle Bike Disco — Seattle\, WA
+LOCATION:Seattle\, WA
+DESCRIPTION:Pace: no-drop\, non-stop dance party.\nNo-drop.\nSchedule: Mo
+ nthly\, usually a Friday\, rain or shine. Gather 7:00 pm\, ride 7:30 pm.
+  Next: Oct 23 (starts at Red Square)\, Nov 20 (starts at Pratt Park)\, 2
+ 026.\nConfirm with the host before you go.\nhttps://cycleforchange.org/r
+ ides/seattle-wa-seattle-bike-disco/
+URL:https://cycleforchange.org/rides/seattle-wa-seattle-bike-disco/
+END:VEVENT
+BEGIN:VEVENT
+UID:seattle-wa-seattle-bike-disco-2026-11-20@cycleforchange.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261120T193000
+DTEND;TZID=America/Los_Angeles:20261120T213000
 SUMMARY:Seattle Bike Disco — Seattle\, WA
 LOCATION:Seattle\, WA
 DESCRIPTION:Pace: no-drop\, non-stop dance party.\nNo-drop.\nSchedule: Mo

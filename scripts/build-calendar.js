@@ -178,7 +178,10 @@ function publicText(v, flag = (s) => CORE.test(s) || EXTRA.test(s)) {
 }
 const RETIRED_FLAG = (s) => CORE.test(s);
 // the words a public page must never carry (the build fails on them)
-const LEAK = /budget|this session|provenance|fetch tool|artifact|scheduled task|unverified|page read/i;
+// Oct 6, 2026: the research shorthand that reached /events/2027/riding/ ("IMPORTANT: …", "i.e., the
+// 2027 route appears…", "first-year event, so low confidence") fails the build too. Notes for whoever
+// keeps the list go in an event's `private_note`, which never reaches a page or the feed.
+const LEAK = /budget|this session|provenance|fetch tool|artifact|scheduled task|unverified|page read|IMPORTANT:|i\.e\., the\b|low confidence|\bTODO\b/i;
 // the raw notes say the details were never checked against the organizer — one plain line says so instead
 const UNCHECKED = /not verified this session|details unverified|\bunverified\b|could not be verified|not verified in this session|calendar-level verification|organizer site not (?:read|reached)|\bnot read\b|\bwas not read\b|official site could not be fetched/i;
 
@@ -469,7 +472,7 @@ function pickRow(label, picks, cls = "") {
 function farPicks(type, list) {
   return pickRow("How far?", FAR.map((f) => ({ name: f.name, n: list.filter((e) => farOf(e).includes(f.id)).length, href: allLink({ type, far: f.id }) })));
 }
-function shortPage({ url, crumb, h1, title, description, list, byMonth: grouped = false, nav = "", lead = "", narrow = "", picks = "", after = "" }) {
+function shortPage({ url, crumb, h1, title, description, list, byMonth: grouped = false, nav = "", lead = "", narrow = "", picks = "", after = "", before = "", ldMore = [], rowsH = "" }) {
   let rows;
   if (grouped) {
     const ms = [...new Set(list.map((e) => e.month))].sort((a, b) => (a || 13) - (b || 13));
@@ -478,18 +481,19 @@ ${ms.map((m) => { const l = list.filter((e) => e.month === m); return `      <se
         <div class="month-h"><h2>${m ? MONTHS_LONG[m - 1] : "Date to be announced"}</h2><span class="n">${l.length}</span></div>
 ${l.map(eventHtml).join("\n")}
       </section>`; }).join("\n")}`;
-  } else rows = `      <section class="month">
+  } else rows = `      <section class="month">${rowsH ? `
+        <div class="month-h"><h2>${rowsH}</h2><span class="n">${list.length}</span></div>` : ""}
 ${list.map(eventHtml).join("\n")}
       </section>`;
   const html = head({ title, description, url, ld: [
     { "@context": "https://schema.org", "@type": "CollectionPage", name: title, description, url: SITE + url, dateModified: data.updated, isPartOf: { "@type": "WebSite", name: "Cycle for Change", url: SITE + "/" } },
-    crumbLd(crumb, url), listLd(title, url, list) ] }) + `
+    crumbLd(crumb, url), listLd(title, url, list), ...ldMore ] }) + `
   <article class="calendar cal-short">
     ${crumbs(crumb)}
     <h1>${h1}</h1>
     ${sub(list)}
     ${KEY}${lead}${picks}${narrow}${nav}
-    <div id="results">
+    <div id="results">${before}
 ${rows}
     </div>${nav}${after}
     <p class="cal-back"><a href="${URL}">&larr; The 2027 calendar</a><a href="${URL}all/">All ${events.length}, with filters</a></p>
@@ -538,11 +542,36 @@ for (const c of CATS) {
     h1: `2027 ${CAT_H1[c]} in the US`, title: `2027 ${CAT_H1[c]} in the US`,
     description: fitNames(`${list.length} ${CAT_H1[c]} in the US in 2027, ${nConfOf(list)} with the organizer's date, by month: `, list.map((e) => e.name)) });
 }
+// Oct 6, 2026: the first ride is this fall, before 2027 starts — Cycling 4 one·n·ten, Nov 7, 2026.
+// It sits on top of Robert's rides until the day after; the build leaves it out from Nov 8, 2026, and
+// the page hides it on its own if nobody has rebuilt since (data-until).
+const NEXT = { id: 0, slug: "cycling-4-one-n-ten-2026", name: "Cycling 4 one·n·ten", category: "Charity ride",
+  subtype: "Bike ride and block party", start: "2026-11-07", end: "2026-11-07", date_status: "confirmed",
+  city: "Phoenix", state: "AZ", region: "Southwest", days: 1, distances: "20 or 62 miles",
+  cause: "LGBTQ+", beneficiary: "one·n·ten (LGBTQ+ youth and young adults in Arizona)", organizer: "one·n·ten",
+  fundraising_min: "None listed on the sign-up page",
+  cost: "$100 for 62 miles (starts 7 AM), $50 for 20 miles (starts 9 AM)",
+  reg_status: "Open on RunSignup. Closes at the end of Nov 5.",
+  qualification: "18 and up. No e-bikes.",
+  notes: "Starts and finishes at Prisma Community Care in Phoenix. Block party 10 to 2.",
+  url: "https://runsignup.com/Race/AZ/Phoenix/c4ont", sources: ["https://runsignup.com/Race/AZ/Phoenix/c4ont"], riding: true, month: 11 };
+const NEXT_UNTIL = "2026-11-07";
+const nextBlock = TODAY <= NEXT_UNTIL ? `
+      <section class="month" id="next" data-until="${NEXT_UNTIL}">
+        <div class="month-h"><h2>First, this November</h2><span class="n">1</span></div>
+${eventHtml(NEXT)}
+      </section>
+<script>(function(){var s=document.getElementById("next");if(s&&new Date().toISOString().slice(0,10)>s.getAttribute("data-until"))s.remove();})();</script>` : "";
+const nextLd = TODAY <= NEXT_UNTIL ? [{ "@context": "https://schema.org", "@type": "SportsEvent", name: NEXT.name, sport: "Cycling", url: NEXT.url,
+  startDate: NEXT.start, endDate: NEXT.end, eventStatus: "https://schema.org/EventScheduled", eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  location: { "@type": "Place", name: "Prisma Community Care", address: { "@type": "PostalAddress", addressLocality: "Phoenix", addressRegion: "AZ", addressCountry: "US" } },
+  organizer: { "@type": "Organization", name: "one·n·ten", url: "https://onenten.org" } }] : [];
 // the six Robert is riding
 if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert\u2019s rides", list: riding,
   h1: "The 2027 rides I&rsquo;m doing", title: "The 2027 rides I'm doing for Cycle for Change",
-  description: `The ${riding.length} organized rides Robert is riding in 2027 as part of the 10,000 miles, with dates, distances and sign-up links.`,
-  lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one.</p>${TODAY <= "2026-11-07" ? `\n    <p class="cal-lead">Before these: Cycling 4 one&middot;n&middot;ten, Saturday, Nov 7, 2026, in Phoenix. <a href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer">Sign up on RunSignup &#8599;</a></p>` : ""}`,
+  description: `${nextBlock ? "Cycling 4 one·n·ten in Phoenix on Nov 7, 2026, then the " : "The "}${riding.length} rides Robert is doing in 2027 as part of the 10,000 miles: dates, distances, sign-up links.`,
+  lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one.</p>`,
+  before: nextBlock, ldMore: nextLd, rowsH: nextBlock ? "Then 2027" : "",
   after: `\n    ${PH.figure("robert-peace")}` });
 
 // the calendar's own page: two questions, then the deep pages and the full list
@@ -706,7 +735,7 @@ function write(rel, s) {
 for (const [u, html] of pages) write(u.replace(/^\//, "") + "index.html", html);
 // where each event's row lives now, for old /events/2027/#slug links (FIND_JS)
 write("events/2027/where.json", JSON.stringify(Object.fromEntries(events.map((e) => [e.slug, monthPath(e.month)]))));
-write("events/2027/calendar-2027.json", JSON.stringify({ updated: data.updated, source: sourceLine, generated: TODAY, url: SITE + URL, events: events.map((e) => { const o = Object.assign({}, e); delete o.month; delete o.prior; delete o.unchecked; return o; }), retired }, null, 1));
+write("events/2027/calendar-2027.json", JSON.stringify({ updated: data.updated, source: sourceLine, generated: TODAY, url: SITE + URL, events: events.map((e) => { const o = Object.assign({}, e); delete o.month; delete o.prior; delete o.unchecked; delete o.private_note; return o; }), retired }, null, 1));
 write("sitemap-calendar.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated by scripts/build-calendar.js. Listed in the sitemap index at /sitemap.xml. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

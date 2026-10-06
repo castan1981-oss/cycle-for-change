@@ -163,7 +163,7 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
       <h1 class="sign-h" id="sign-h">
         ${STACK()}
         <span class="sign-plate sign-plate--blank" id="signPlate" data-empty="true" aria-hidden="true"></span>
-        <span class="sr">Cycle for Change</span>
+        <span class="sr" id="signSr">Cycle for</span>
       </h1>
     </div>
     <div class="sign-right">
@@ -182,11 +182,11 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
 <!-- —— the numbers —— -->
 <section class="s s--tar nums nums--bar" aria-label="The numbers">
   <div class="wrap">
-  <svg class="stopbar" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g filter="url(#lpRoller)"><rect x="0" y="12" width="1200" height="46" fill="#EFEDEA"/></g></svg>
+  <svg class="stopbar" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect x="0" y="26" width="1200" height="18" fill="#EFEDEA"/></svg>
   <div class="nums-in">
     <div class="num-tile"><b class="num" data-miles>3,573</b><span>miles since June 1</span></div>
     <div class="num-tile"><b class="num" id="rideCount">97</b><span>rides, <a href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">every one on Strava</a></span></div>
-    <div class="num-tile num-tile--rose"><b class="num">10,000</b><span>miles in 2027. The count restarts in <b class="num" id="daysTo">88</b> days. If I fall behind, this number says so.</span></div>
+    <div class="num-tile num-tile--rose"><b class="num">10,000</b><span>miles in 2027. The count restarts in <b class="num" id="daysTo">88</b> days.</span></div>
   </div>
   </div>
 </section>
@@ -296,7 +296,6 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
         </form>
         <p class="find-links"><a class="link" href="/rides/no-drop/">No-drop rides</a><a class="link" href="/rides/lgbtq/">Queer rides</a><a class="link" href="/tonight/">Tonight</a></p>
         <div class="find-count"><b class="num">${RIDES_N}</b><span>group rides in the directory, each with the date it was last checked. Every state, ${RN.abroad} more countries. Shop rides, no-drop rides, queer rides.</span></div>
-        <svg class="lane-dash" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g filter="url(#lpWornSoft)" fill="var(--paper)" stroke="var(--mute)" stroke-width="2"><rect x="0" y="14" width="56" height="8"/><rect x="88" y="14" width="56" height="8"/><rect x="176" y="14" width="56" height="8"/><rect x="264" y="14" width="56" height="8"/><rect x="352" y="14" width="56" height="8"/><rect x="440" y="14" width="56" height="8"/><rect x="528" y="14" width="56" height="8"/></g></svg>
         <dl class="facts-dl">
           <div><dt>Group rides</dt><dd><a href="/rides/">${RIDES_N}</a></dd></div>
           <div><dt>On the 2027 calendar</dt><dd><a href="/events/2027/">${CAL_N}</a></dd></div>

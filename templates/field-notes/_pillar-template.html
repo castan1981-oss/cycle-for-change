@@ -4,11 +4,14 @@
   A pillar is a hub, not an article. It introduces a place/theme and links
   DOWN to the route guides (its "spokes"); each spoke links back UP here.
   To publish a pillar:
-    1. Copy this file to  /field-notes/<slug>/index.html
+    (This file lives in templates/field-notes/, outside cfc-site/, so it is never
+     published. Moved Oct 6, 2026: the old copy under cfc-site/ was live and indexed.)
+    1. Copy this file to  cfc-site/field-notes/<slug>/index.html
     2. Replace every {{...}} field below.
     3. Add one <a class="fn-spoke"> card per spoke (a route-guide slug). Pull
        the spoke's own title + dek so the card matches the post it links to.
-    4. Add a row to /field-notes/index.html (newest first) and update sitemap.xml.
+    4. Add a row to cfc-site/field-notes/index.html (newest first) and add the
+       page to cfc-site/sitemap-pages.xml. Then run python3 scripts/apply-chrome.py.
     5. Make sure each spoke post links back up to this pillar in its .fn-related.
   Guardrails: no medical claims; never imply continuous sober-time or relapse;
   banned words (leverage, synergy, "journey", "passionate about", etc.).
@@ -135,7 +138,8 @@
     </section>
   </article>
 
-  <!-- The funnel. Non-negotiable: follow-the-number + give. Same as posts. -->
+  <!-- The closing block is scripts/chrome.js CHROME.pledge(), as is. Nobody pledges, votes or pays
+       on the site; apply-chrome.py swaps in the current one. Never hand-edit it. -->
   <section class="pledge" aria-labelledby="pledge-h">
   <p class="pledge-num" aria-hidden="true">10000</p>
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>

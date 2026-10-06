@@ -4,18 +4,35 @@ PRODID:-//Cycle for Change//Group Rides//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:ventura-ca-bikevc-ventura-electric-light-parade@cycleforchange.org
+UID:ventura-ca-bikevc-ventura-electric-light-parade-2026-10-17@cycleforch
+ ange.org
 DTSTAMP:20261001T000000Z
-DTSTART;TZID=America/Los_Angeles:20261010T172000
-DTEND;TZID=America/Los_Angeles:20261010T192000
-RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270304T235959Z
+DTSTART;TZID=America/Los_Angeles:20261017T172000
+DTEND;TZID=America/Los_Angeles:20261017T192000
 SUMMARY:Ventura Electric Light Parade (BikeVC) — Ventura\, CA
 LOCATION:Ventura Pier\, Ventura Pier\, Ventura\, CA
 DESCRIPTION:Pace: easy community cruise along the Promenade and through d
  owntown.\nSchedule: One Saturday evening a month. Gather on the Ventura 
- Pier one hour before sunset (Oct 17 at 5:20 pm; Nov 14 is also listed).\
- nConfirm with the host before you go.\nhttps://cycleforchange.org/rides/
- ventura-ca-bikevc-ventura-electric-light-parade/
+ Pier one hour before sunset (Oct 17 at 5:20 pm; Nov 14 is also listed)..
+ \nConfirm with the host before you go.\nhttps://cycleforchange.org/rides
+ /ventura-ca-bikevc-ventura-electric-light-parade/
+URL:https://cycleforchange.org/rides/ventura-ca-bikevc-ventura-electric-l
+ ight-parade/
+END:VEVENT
+BEGIN:VEVENT
+UID:ventura-ca-bikevc-ventura-electric-light-parade-2026-11-14@cycleforch
+ ange.org
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261115
+SUMMARY:Ventura Electric Light Parade (BikeVC) — Ventura\, CA (time on 
+ the host's page)
+LOCATION:Ventura Pier\, Ventura Pier\, Ventura\, CA
+DESCRIPTION:Pace: easy community cruise along the Promenade and through d
+ owntown.\nSchedule: One Saturday evening a month. Gather on the Ventura 
+ Pier one hour before sunset (Oct 17 at 5:20 pm; Nov 14 is also listed)..
+ \nConfirm with the host before you go.\nhttps://cycleforchange.org/rides
+ /ventura-ca-bikevc-ventura-electric-light-parade/
 URL:https://cycleforchange.org/rides/ventura-ca-bikevc-ventura-electric-l
  ight-parade/
 END:VEVENT

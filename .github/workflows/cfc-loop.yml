@@ -1,9 +1,8 @@
 name: CfC Content Loop
 
 on:
-  # PAUSED until December 2026 — the public site is a coming-soon page,
-  # so this content loop would open PRs into a tree nothing publishes.
-  # Uncomment the schedule when the site comes back.
+  # Manual only. The schedule stays off until Robert asks for a weekly draft;
+  # every run opens a PR for his voice pass, never a direct publish.
   # schedule:
   #   - cron: "0 16 * * 1"     # Mondays 9am Phoenix (UTC-7, no DST)
   workflow_dispatch: {}        # manual "Run workflow" button for testing
@@ -27,62 +26,73 @@ jobs:
           claude_args: '--model claude-sonnet-4-6 --max-turns 30 --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh:*),Bash(cp:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*)"'
           prompt: |
             You are running one turn of the Cycle for Change content loop.
-            Follow CLAUDE.md at all times. This is a hand-written STATIC site:
-            Netlify publishes the `cfc-site/` directory, so EVERY new page lives
-            inside `cfc-site/`. Field Notes posts are self-contained HTML files,
-            NOT markdown — nothing renders markdown or a /content folder.
-            Do NOT touch the homepage `cfc-site/index.html`, `cfc-site/home.js`,
-            or anything under `netlify/functions/`. The repo-root `index.html`
-            and `/guides/` folder are an unpublished legacy tree — ignore them.
+            Read CLAUDE.md first and follow it at all times. This is a static site:
+            Netlify publishes `cfc-site/`, so EVERY new page lives inside `cfc-site/`.
+            Field Notes posts are self-contained HTML files, NOT markdown.
+            Do NOT touch `scripts/build-home.js`, `cfc-site/index.html`,
+            `cfc-site/home.js`, or anything under `netlify/functions/`. The repo-root
+            `index.html` and `/guides/` folder are an unpublished legacy tree.
 
-            GOAL: grow organic traffic to cycleforchange.org around
-            cycling/endurance, queer mental health, and the 10,000 miles
-            in 2027, all on the bike. (The 7,500-mile swim/bike/run framing is
-            retired — never write it.)
-            Mission first.
+            WHAT CYCLE FOR CHANGE IS (Oct 2026): Robert Castan rides 10,000 miles in
+            2027, all on the bike. It is HIS commitment. Nobody pledges, votes or pays
+            on the site; "pledge" is never a verb for visitors; there is no board.
+            Cycling changed his life; he rides for himself, and the money goes through
+            the orgs' own rides (Cycling 4 one·n·ten Nov 7 2026, Center Ride Out Apr
+            2027, Cycle to Zero May 2027). Never write "you decide who they're for",
+            the 7,500-mile swim/bike/run or Ironman framing, or miles as a fraction of
+            10,000.
+
+            GOAL: grow organic traffic to cycleforchange.org with useful pages around
+            group rides, charity rides, riding in a new town, and cycling + queer
+            mental health. Helping the reader is the point.
 
             1. READ /loop-state.json. Never repeat anything in "shipped" or
                "do_not_repeat".
-            2. DISCOVER: propose 5 content opportunities (questions people search,
-               training milestones, a timely peg, or a backlog item).
-               Tag each with topic, type, and rough value.
-            3. DECIDE: score by (search demand x mission fit x freshness) / effort.
-               Pick ONE. Show the math briefly.
-            4. DRAFT: copy `cfc-site/field-notes/_template.html` to
-               `cfc-site/field-notes/<slug>/index.html` (<slug> is kebab-case) and
-               fill in every {{PLACEHOLDER}}. Follow the instructions in the
-               template's top comment exactly:
-                 - Tag is exactly "Place + Miles" (chip class `place`) or
-                   "Mind + Miles" (chip class `mind`).
-                 - Mind + Miles posts MUST keep the crisis-line block.
-                 - Keep the `<link rel="stylesheet" href="/styles.css">`, the nav,
-                   the footer, and the JSON-LD BlogPosting block as the template
-                   has them. Fill the JSON-LD fields to match the page.
-                 - Set canonical, og:url, and the JSON-LD url to
+            2. DISCOVER: propose 5 content opportunities (questions people search, a
+               timely peg such as an org ride, or a backlog item). Tag each with
+               topic, type, and rough value.
+            3. DECIDE: score by (search demand x fit x freshness) / effort. Pick ONE.
+               Show the math briefly.
+            4. DRAFT: copy the field-notes template to
+               `cfc-site/field-notes/<slug>/index.html` (<slug> is kebab-case). The
+               template lives at `templates/field-notes/_template.html`; if that
+               folder doesn't exist yet, use `cfc-site/field-notes/_template.html`.
+               Fill every {{PLACEHOLDER}} and follow the template's top comment:
+                 - Tag is exactly "Place + Miles" (chip `place`) or "Mind + Miles"
+                   (chip `mind`). Mind + Miles posts MUST keep the crisis-line block
+                   (988 and the Trevor Project 1-866-488-7386).
+                 - Keep the head, the shared chrome, the closing block and the
+                   JSON-LD BlogPosting block as the template has them; fill the
+                   JSON-LD to match the page.
+                 - canonical, og:url and JSON-LD url =
                    https://cycleforchange.org/field-notes/<slug>/ .
-               WRITE the full body copy yourself in Robert's voice — short
-               sentences, anti-polish, no buzzwords. Do NOT leave a .fn-todo
-               placeholder; the post must be complete and ready to read.
+               Write informational body copy in the house voice: short sentences,
+               plain, anti-polish, no buzzwords. NEVER invent Robert's experiences,
+               rides, numbers or quotes, and never use Strava data. Where the post
+               needs his own story, leave a `.fn-todo` block and open the PR as a
+               DRAFT.
             5. WIRE IT IN:
                  - Add one row to `cfc-site/field-notes/index.html` (newest first).
-                 - Add the new URL to `cfc-site/sitemap-pages.xml`.
-                 - Cross-link 2 related posts at the bottom (same tag where
-                   possible) in the `.fn-related` block.
-            6. VERIFY: run the full checklist from CLAUDE.md (voice, banned-word
-               blocklist, the "never use" list incl. continuous sober-time, YMYL
-               safety + crisis line on Mind + Miles, SEO: target query in
-               <title>/<h1>/<h2> + meta description + canonical, GEO: quotable
-               .fn-lede + filled JSON-LD, brand tokens, at least one internal link
-               to /events/2027/riding/ or /#orgs). Confirm NO {{PLACEHOLDER}} tokens and no .fn-todo
-               remain. Show pass/fail per item. If anything fails and you can't fix
-               it in one pass, open the PR as a DRAFT explaining why.
-            7. UPDATE /loop-state.json: append the new item to "shipped" with
-               status "drafted" (include slug, title, target_query, type, and the
-               page path), and add its target_query to "do_not_repeat".
-            8. Create a new branch, commit your changes, and open a pull request
-               with `gh pr create`. Do NOT push to main. Do NOT merge. The PR body
-               must include the verify checklist results, the live URL the page
-               will have after merge (https://cycleforchange.org/field-notes/<slug>/),
-               and the 3 decisions Robert owns: (a) voice pass y/n, (b) publish
-               y/n, (c) which org to spotlight this cycle (LA LGBT Center /
-               SF AIDS Foundation / one·n·ten).
+                 - Add the new URL to `cfc-site/sitemap.xml`.
+                 - Cross-link 2 related posts in `.fn-related` (same tag if possible).
+            6. VERIFY against CLAUDE.md and show pass/fail per item: voice; banned
+               words; the never-list (no "$800 / two suitcases", Prescott, est. 2008,
+               age, career bragging, sober-time or relapse, 7,500 / Ironman, fraction
+               of 10,000, pledging / board / vote / "you decide"); YMYL safety and the
+               crisis line on Mind + Miles; SEO (target query in <title>/<h1>/<h2>,
+               meta description, canonical); GEO (quotable .fn-lede, filled
+               JSON-LD); brand (After Hours tokens from /chrome.css, Overpass only,
+               sentence-case labels); at least one internal link to `/` or
+               `/events/2027/riding/` (never /pledge/ or /#board). Confirm no
+               {{PLACEHOLDER}} tokens remain. If anything fails and you can't fix it
+               in one pass, open the PR as a DRAFT explaining why.
+            7. UPDATE /loop-state.json: append the new item to "shipped" with status
+               "drafted" (slug, title, target_query, type, page path), and add its
+               target_query to "do_not_repeat".
+            8. Create a new branch, commit, and open a pull request with
+               `gh pr create`. Do NOT push to main. Do NOT merge. The PR body must
+               include the verify results, the live URL after merge
+               (https://cycleforchange.org/field-notes/<slug>/), a Search Lab line
+               (`Search Lab: <what should move> · <which measure> · read <date>`),
+               and the decisions Robert owns: (a) voice pass y/n, (b) publish y/n,
+               (c) anything left in `.fn-todo` for his own words.

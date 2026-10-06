@@ -1,22 +1,21 @@
-/* Cycle for Change — the homepage and the pledge page (Sept 2026).
-   Loaded by cfc-site/index.html and cfc-site/pledge/index.html. No dependencies.
-   Every block below checks for its own elements first, so the same file runs
-   on both pages: the home page has the hero, the vote and the menu; the pledge
-   page has the board, the vote, the rate chips, the ride log and the chart.
+/* Cycle for Change — the homepage (Oct 2026).
+   Loaded by cfc-site/index.html. No dependencies. Every block below checks for
+   its own elements first, so a block whose markup isn't on the page does nothing.
 
-   It talks to the same back end the live homepage uses and changes none of it:
+   It talks to:
      /api/strava  →  /.netlify/functions/strava     miles, rides, last rides, chart
-     /.netlify/functions/votes                       the ballot (GET + POST)
-     /.netlify/functions/pledges                     names on the board
      /.netlify/functions/instagram                   profile link
-     Netlify forms "pledges" and "waitlist"          the board and mile updates
+     Netlify form "waitlist"                         mile updates
+
+   Oct 6, 2026: the pledge model's code is gone — the board, the pledge form and its
+   card, the rate calculator and kit tiers, the ballot (votes) and the pledges fetch.
+   Nobody pledges or votes on the site since Pass 26.
 
    Every number in the HTML is a fallback. If a function is down or unconfigured
    the page keeps the fallback; a broken feed is never painted as 0 miles. */
 (function () {
   "use strict";
 
-  var GOAL = 10000;
   var SEASON_START = Date.UTC(2026, 5, 1, 7);   /* June 1 2026, midnight in Phoenix */
   var YEAR_START = Date.UTC(2027, 0, 1, 7);     /* Jan 1 2027, midnight in Phoenix */
   var DAY = 86400000;
@@ -260,273 +259,29 @@
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
   }
 
+  /* Strava's brand rules: data from their API carries their name. One quiet line under the log. */
+  (function () {
+    var log = $("log");
+    if (!log || !log.parentNode || document.querySelector(".strava-attrib")) return;
+    var p = document.createElement("p");
+    p.className = "strava-attrib";
+    p.style.cssText = "margin:12px 0 0;font-size:13px;line-height:1.4;color:var(--dust);text-transform:none;letter-spacing:0";
+    var a = document.createElement("a");
+    a.href = "https://www.strava.com";
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.textContent = "Powered by Strava";
+    a.style.color = "inherit";
+    p.appendChild(a);
+    log.parentNode.insertBefore(p, log.nextSibling);
+  })();
+
   /* first paint from the fallback, then the live read; re-check every minute
      while the tab is visible, the way the live cover does */
   paintFeed();
   refresh(true);
   setInterval(refresh, POLL_MS);
   document.addEventListener("visibilitychange", function () { if (!document.hidden) refresh(); });
-
-  /* ————————————————————————————————————————————————
-     what's a mile worth?
-     ———————————————————————————————————————————————— */
-
-  function kitFor(total) {
-    if (total >= 2000) return "Jersey and bibs";
-    if (total >= 1000) return "Jersey";
-    if (total >= 200) return "Socks";
-    if (total >= 100) return "Two bottles";
-    return "—";
-  }
-  var money = function (el) { return parseFloat(String(el ? el.value : "").replace(/[^0-9.]/g, "")) || 0; };
-  /* the pledge as chosen right now: {flat, cents, total, cap, org} */
-  function pledgeNow() {
-    var r = document.querySelector('#calc input[name="rate"]:checked');
-    var v = r ? r.value : "2", flat = v === "flat";
-    var cents = flat ? 0 : (parseInt(v, 10) || 2);
-    var total = flat ? money($("pflat")) : cents * GOAL / 100;
-    var cap = flat ? 0 : money($("pcap"));
-    var o = document.querySelector('.orgpick input[name="org"]:checked');
-    return { flat: flat, cents: cents, total: total, cap: cap, org: o ? o.value : "later" };
-  }
-  function paintCalc() {
-    var p = pledgeNow(), flatRow = $("flatRow"), capRow = $("capRow");
-    if (flatRow) flatRow.hidden = !p.flat;
-    if (capRow) capRow.hidden = p.flat;
-    var pays = p.total, at = $("calcAt");
-    /* Pass 22: the total is what the rate comes to AT 10,000 mi — a rider read "5¢ × 10,000 miles $500"
-       as a fixed price. Say the rate, the total, and where that total comes from. */
-    if (at) at.hidden = p.flat || !!(p.cap && p.cap < p.total);
-    if (p.flat) {
-      $("calcEq").textContent = "A flat pledge";
-      $("calcTotal").textContent = p.total ? "$" + fmt(p.total) : "$—";
-    } else if (p.cap && p.cap < p.total) {
-      pays = p.cap;
-      $("calcEq").textContent = p.cents + "¢ a mile, capped at";
-      $("calcTotal").textContent = "$" + fmt(p.cap);
-    } else {
-      $("calcEq").textContent = p.cents + "¢ a mile";
-      $("calcTotal").textContent = "$" + fmt(p.total);
-    }
-    var kit = kitFor(pays);
-    $("calcKit").textContent = kit === "—" ? "the thank-you" : kit.toLowerCase();
-  }
-  if ($("calc")) {
-    $("calc").addEventListener("change", paintCalc);
-    if ($("pflat")) $("pflat").addEventListener("input", paintCalc);
-    if ($("pcap")) $("pcap").addEventListener("input", paintCalc);
-    paintCalc();
-  }
-  /* texts: none (Oct 3, 2026 — Robert: no texts) */
-
-  /* ————————————————————————————————————————————————
-     the board: the newest names, and yours going up as you type it
-     ———————————————————————————————————————————————— */
-
-  var names = [];           /* [{name, ago, org}], newest first, from the pledges function */
-  var countKnown = true;    /* false while the function can't read names back (no NETLIFY_API_TOKEN) */
-  var onBoard = false;
-  var castVote = null;      /* set by the ballot block below; the pledge form calls it on submit */
-  var ORG_NAMES = { onenten: "one·n·ten", lalgbtcenter: "Los Angeles LGBT Center", sfaf: "San Francisco AIDS Foundation" };
-  var pname = $("pname"), slots = $("slots"), form = $("pledgeForm"), okmsg = $("okmsg");
-  var pad2 = function (n) { return n < 10 ? "0" + n : String(n); };
-  if (form && pname && slots) {
-
-  function row(n, text, open, ago, id, org) {
-    var li = document.createElement("li");
-    var b = document.createElement("span"); b.className = "name" + (open ? " open" : ""); b.textContent = text; if (id) b.id = id;
-    if (n === "") { li.className = "nobib"; }   /* the count is unknown: no bib number on the line (Pass 10) */
-    else { var a = document.createElement("span"); a.className = "n"; a.textContent = pad2(n); li.appendChild(a); }
-    li.appendChild(b);
-    if (ago) { var c = document.createElement("span"); c.className = "ago"; c.textContent = ago; li.appendChild(c); }
-    if (org && ORG_NAMES[org]) { var d = document.createElement("span"); d.className = "org"; d.textContent = "for " + ORG_NAMES[org]; li.appendChild(d); }
-    return li;
-  }
-
-  function paintBoard() {
-    var total = names.length + (onBoard ? 1 : 0);
-    $("boardCount").textContent = fmt(total);
-    /* pledges are saved either way, so an unknown count is hidden, never shown as 0 */
-    $("boardCount").parentNode.hidden = !countKnown;
-    while (slots.firstChild) slots.removeChild(slots.firstChild);
-    var typed = pname.value.trim();
-    if (!countKnown) {
-      /* no numbers when we can't see who's already there; the open lines under yours stay unnumbered */
-      slots.appendChild(row("", typed || "Your name here", !typed, onBoard ? "just now" : "", "slotYou"));
-      for (var j = 0; j < 3; j++) slots.appendChild(row("", "Open", true));
-      return;
-    }
-    /* your row sits on top, numbered as the next one up */
-    slots.appendChild(row(names.length + 1, typed || "Your name here", !typed, onBoard ? "just now" : "", "slotYou"));
-    if (!names.length) {
-      /* nobody yet: the next three rows are open */
-      for (var k = 2; k <= 4; k++) slots.appendChild(row(k, "Open", true));
-      return;
-    }
-    /* newest first, counting down; the rest are one line */
-    names.slice(0, 4).forEach(function (p, i) { slots.appendChild(row(names.length - i, p.name, false, p.ago, null, p.org)); });
-    if (names.length > 4) {
-      var more = document.createElement("li"); more.className = "more";
-      more.textContent = "+ " + fmt(names.length - 4) + " more";
-      slots.appendChild(more);
-    }
-  }
-
-  pname.addEventListener("input", function () {
-    if (onBoard) return;
-    var you = $("slotYou"), v = pname.value.trim();
-    you.textContent = v || "Your name here";
-    you.classList.toggle("open", !v);
-  });
-
-  /* the pledge in one sentence, for the thank-you and the share line */
-  function pledgeLine(p, orgId) {
-    var to = ORG_NAMES[orgId] ? ORG_NAMES[orgId] : "the org you pick";
-    if (p.flat) return (p.total ? "$" + fmt(p.total) + ", flat" : "A flat pledge") + ", to " + to + ".";
-    var s = p.cents + "¢ a mile. If I ride all 10,000, that’s $" + fmt(p.total);
-    if (p.cap && p.cap < p.total) s += ", capped at $" + fmt(p.cap) + ",";
-    return s + " to " + to + ".";
-  }
-
-  function showDone(p, orgId) {
-    var done = $("done");
-    if (!done) { okmsg.textContent = "You’re on the board. See you out there."; okmsg.hidden = false; return; }
-    var n = countKnown ? names.length + 1 : 0;
-    $("doneH").textContent = (n ? "#" + n + ". " : "") + "See you out there.";
-    $("doneLine").textContent = pledgeLine(p, orgId);
-    form.hidden = true;
-    done.hidden = false;
-    drawCard(pname.value.trim(), p, orgId, n);
-    try { done.focus({ preventScroll: false }); } catch (_) { done.focus(); }
-  }
-
-  /* ————————————————————————————————————————————————
-     the card (Pass 10, Sept 30 2026): a 1080×1350 poster of the pledge, drawn once the
-     pledge is in — the stack, I'M ON THE BOARD, the name, the pledge line, the link.
-     Shown under the thank-you; the share button sends it as an image where the browser
-     can (iOS/Android share sheet), "Save the card" downloads it. Bone, asphalt, creosote.
-     ———————————————————————————————————————————————— */
-  var cardBlob = null;
-  function drawCard(name, p, orgId, bib) {
-    var wrap = $("cardWrap"), img = $("cardImg"), save = $("cardSave");
-    if (!wrap || !img || !document.createElement("canvas").getContext) return;
-    var W = 1080, H = 1350, M = 72;
-    var cv = document.createElement("canvas"); cv.width = W; cv.height = H;
-    var g = cv.getContext("2d");
-    var BONE = "#E8DFD0", ASPHALT = "#2A2E28", CREOSOTE = "#4A5639", MUTE = "#5F5E56";
-    var disp = function (px) { return "800 " + px + "px Outfit, 'Helvetica Neue', Arial, sans-serif"; };
-    var mono = function (px) { return "400 " + px + "px 'Space Mono', Menlo, monospace"; };
-    var spaced = function (t, x, y, tr) { /* letter-spaced mono, drawn by hand */
-      var cx = x; for (var i = 0; i < t.length; i++) { g.fillText(t[i], cx, y); cx += g.measureText(t[i]).width + tr; } return cx; };
-    var fit = function (t, max, px, floor) { g.font = disp(px); while (g.measureText(t).width > max && px > floor) { px -= 4; g.font = disp(px); } return px; };
-    var paint = function () {
-      g.fillStyle = BONE; g.fillRect(0, 0, W, H);
-      g.textBaseline = "alphabetic"; g.textAlign = "left";
-      /* the stack */
-      g.font = disp(44); g.fillStyle = ASPHALT; g.fillText("CYCLE", M, M + 40);
-      g.fillStyle = CREOSOTE; g.fillText("FOR", M, M + 84);
-      g.fillStyle = ASPHALT; g.fillText("CHANGE", M, M + 128);
-      /* the year, the bib */
-      g.font = mono(26); g.fillStyle = ASPHALT; g.textAlign = "right";
-      g.fillText("2027", W - M, M + 30);
-      g.font = mono(18); g.fillStyle = CREOSOTE;
-      g.fillText("10,000 MILES", W - M, M + 62); g.fillText("ALL ON THE BIKE", W - M, M + 88);
-      if (bib) { g.font = disp(30); g.fillStyle = ASPHALT; var bt = "#" + bib, bw = g.measureText(bt).width + 36; g.lineWidth = 3; g.strokeStyle = ASPHALT; g.strokeRect(W - M - bw, M + 112, bw, 54); g.fillText(bt, W - M - 18, M + 152); }
-      g.textAlign = "left";
-      /* the line */
-      g.fillStyle = ASPHALT; g.font = disp(152);
-      g.fillText("I\u2019M ON", M - 6, 590); g.fillText("THE BOARD.", M - 6, 730);
-      /* the name, fitted; two lines if it has to */
-      var nm = String(name || "").toUpperCase(), px = fit(nm, W - 2 * M, 96, 56), y = 880;
-      if (g.measureText(nm).width > W - 2 * M) {
-        var words = nm.split(" "), a = "", b = "";
-        for (var i = 0; i < words.length; i++) { var t = (a ? a + " " : "") + words[i]; if (g.measureText(t).width <= W - 2 * M || !a) a = t; else b = (b ? b + " " : "") + words[i]; }
-        g.fillStyle = ASPHALT; g.fillText(a, M, y); if (b) { g.fillText(b, M, y + px * 1.02); y += px * 1.02; }
-      } else { g.fillStyle = ASPHALT; g.fillText(nm, M, y); }
-      /* the rule and the pledge */
-      g.fillStyle = ASPHALT; g.fillRect(M, y + 48, W - 2 * M, 2);
-      g.font = mono(24); g.fillStyle = ASPHALT;
-      var line = p.flat ? ((p.total ? "$" + fmt(p.total) + " FLAT" : "A FLAT PLEDGE"))
-        : (p.cap && p.cap < p.total) ? (p.cents + "\u00A2 A MILE \u00B7 CAPPED AT $" + fmt(p.cap))
-        : (p.cents + "\u00A2 A MILE \u00B7 $" + fmt(p.total) + " IF HE RIDES ALL 10,000");
-      spaced(line, M, y + 104, 3);
-      g.fillStyle = CREOSOTE; spaced("FOR " + (ORG_NAMES[orgId] ? ORG_NAMES[orgId].toUpperCase() : "THE ORG YOU PICK"), M, y + 146, 3);
-      /* the foot */
-      g.font = mono(22); g.fillStyle = ASPHALT; spaced("CYCLEFORCHANGE.ORG/PLEDGE", M, H - M, 3);
-      g.fillStyle = MUTE; g.textAlign = "right"; g.fillText("FREE TO JOIN. NO CARD.", W - M, H - M); g.textAlign = "left";
-    };
-    var show = function () {
-      paint();
-      try { img.src = cv.toDataURL("image/png"); } catch (_) { return; }
-      img.alt = "Your pledge card: I\u2019m on the board. " + name + ". " + pledgeLine(p, orgId);
-      wrap.hidden = false;
-      if (save) { save.href = img.src; save.hidden = false; }
-      if (cv.toBlob) cv.toBlob(function (b) { cardBlob = b; }, "image/png");
-    };
-    if (document.fonts && document.fonts.load) {
-      Promise.all([document.fonts.load(disp(100)), document.fonts.load(mono(24))]).then(show, show);
-    } else show();
-  }
-
-  var shareBtn = $("shareBtn"), shareMsg = $("shareMsg");
-  if (shareBtn) shareBtn.addEventListener("click", function () {
-    var text = "I’m on the board. Robert rides 10,000 miles in 2027 for queer communities; you pledge a few cents a mile, free to start, and pick which org it goes to.";
-    var url = "https://cycleforchange.org/pledge/";
-    /* the card goes with it where the share sheet takes files (phones, mostly) */
-    if (cardBlob && navigator.canShare && window.File) {
-      try {
-        var file = new File([cardBlob], "cycle-for-change-pledge.png", { type: "image/png" });
-        if (navigator.canShare({ files: [file] })) { navigator.share({ files: [file], title: "Cycle for Change", text: text + " " + url }).catch(function () {}); return; }
-      } catch (_) {}
-    }
-    if (navigator.share) { navigator.share({ title: "Cycle for Change", text: text, url: url }).catch(function () {}); return; }
-    var say = function (m) { if (shareMsg) { shareMsg.textContent = m; shareMsg.hidden = false; } };
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text + " " + url).then(function () { say("Copied. Paste it anywhere."); }, function () { say(url); });
-    else say(url);
-  });
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var data = new FormData(form);
-    var name = String(data.get("name") || "").trim().slice(0, 40);
-    if (!name) { pname.focus(); return; }
-    var email = String(data.get("email") || "").trim();
-    if (!email || email.indexOf("@") < 1) { var pe = $("pemail"); if (pe) pe.focus(); return; }
-    /* "OK to text me" needs a number to text */
-    if (onBoard) return;
-    var p = pledgeNow();
-    if (!data.get("org")) data.set("org", "later");
-    var btn = form.querySelector("button[type=submit]");
-    btn.disabled = true;
-    fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(data).toString() })
-      .then(function (res) {
-        if (!res.ok) throw new Error("bad status");
-        onBoard = true;
-        paintBoard();
-        showDone(p, p.org);
-        /* the pick in the form is the vote (one per browser); the ballot below is how you change it */
-        if (castVote && ORG_NAMES[p.org]) castVote(p.org);
-      })
-      .catch(function () {
-        btn.disabled = false;
-        okmsg.textContent = "Hmm — try again in a moment.";
-        okmsg.hidden = false;
-      });
-  });
-
-  paintBoard();
-  if (window.fetch) {
-    fetch("/.netlify/functions/pledges")
-      .then(function (r) { return r.json(); })
-      .then(function (d) {
-        if (!d || d.configured === false || d.error || d.form === false) { countKnown = false; paintBoard(); return; }
-        if (!d.names || !d.names.length) return;
-        names = d.names.filter(function (p) { return p && p.name; });
-        paintBoard();
-      })
-      .catch(function () { countKnown = false; paintBoard(); });
-  }
-  }
 
   /* ————————————————————————————————————————————————
      mile updates: the "waitlist" form, kept for real
@@ -555,100 +310,6 @@
       });
   });
 
-  /* ————————————————————————————————————————————————
-     the ballot: one vote per browser, same keys the live homepage uses
-     ———————————————————————————————————————————————— */
-
-  /* Pass 26 (Oct 5, 2026): nobody votes. #orgs is the built "The orgs I ride for" block now, so the ballot
-     only runs where a page still carries a [data-ballot] container — none does. */
-  var orgsEl = document.querySelector("[data-ballot]"), voteMsg = $("voteMsg");
-  var votedOrg = null, fingerprint = null;
-  if (orgsEl) {
-  try {
-    fingerprint = localStorage.getItem("cfc-vote-fp");
-    if (!fingerprint) { fingerprint = "fp_" + Math.random().toString(36).slice(2) + Date.now().toString(36); localStorage.setItem("cfc-vote-fp", fingerprint); }
-    votedOrg = localStorage.getItem("cfc-voted-org");
-  } catch (_) { fingerprint = fingerprint || "session_" + Date.now(); }
-
-  /* the vote can move (Pass 5): the other buttons stay live, so a pick can change */
-  function paintVotes() {
-    var btns = orgsEl.querySelectorAll("[data-vote]");
-    for (var i = 0; i < btns.length; i++) {
-      var mine = votedOrg && btns[i].getAttribute("data-vote") === votedOrg;
-      btns[i].disabled = false;
-      btns[i].setAttribute("aria-pressed", mine ? "true" : "false");
-      btns[i].textContent = mine ? "Your pick ✓" : (votedOrg ? "Switch to this one" : "Pick this one");
-    }
-    /* the form's radio follows the ballot, so both say the same thing */
-    var radio = votedOrg ? document.querySelector('.orgpick input[name="org"][value="' + votedOrg + '"]') : null;
-    if (radio && !radio.checked && !document.querySelector('.orgpick input[name="org"]:checked')) radio.checked = true;
-  }
-
-  function renderOrgs(list) {
-    if (!list || !list.length) return;
-    while (orgsEl.firstChild) orgsEl.removeChild(orgsEl.firstChild);
-    list.forEach(function (o) {
-      var art = document.createElement("article"); art.className = "org"; art.setAttribute("data-id", o.id);
-      var h = document.createElement("h3"); h.className = "h3"; h.textContent = o.name;
-      var p = document.createElement("p"); p.textContent = o.desc || "";
-      var acts = document.createElement("div"); acts.className = "org-acts";
-      var a = document.createElement("a"); a.className = "link"; a.textContent = "Visit site";
-      if (/^https?:\/\//i.test(o.url || "")) { a.href = o.url; a.target = "_blank"; a.rel = "noopener noreferrer"; }
-      var b = document.createElement("button"); b.className = "btn btn--ghost btn--sm"; b.type = "button"; b.setAttribute("data-vote", o.id); b.setAttribute("aria-label", "Pick " + o.name); b.textContent = "Pick this one";
-      acts.appendChild(a); acts.appendChild(b);
-      art.appendChild(h); art.appendChild(p); art.appendChild(acts);
-      orgsEl.appendChild(art);
-    });
-    paintVotes();
-  }
-
-  function orgName(id) {
-    var art = orgsEl.querySelector('[data-id="' + id + '"] .h3');
-    return art ? art.textContent : "";
-  }
-
-  function setVoted(id, announce) {
-    var moved = votedOrg && votedOrg !== id;
-    votedOrg = id;
-    try { localStorage.setItem("cfc-voted-org", id); } catch (_) {}
-    paintVotes();
-    if (announce) {
-      var n = orgName(id) || ORG_NAMES[id];
-      voteMsg.textContent = n ? (moved ? "Moved. " : "") + "Your miles are for " + n + ". Change it any time before Dec 31, 2027." : "Pick saved.";
-      voteMsg.hidden = false;
-    }
-  }
-
-  /* one POST, used by the buttons here and by the pledge form's org pick */
-  function sendVote(id, btn, announce) {
-    if (!id || votedOrg === id) return;
-    if (btn) btn.disabled = true;
-    fetch("/.netlify/functions/votes", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ orgId: id, fingerprint: fingerprint }) })
-      .then(function (r) { return r.json(); })
-      .then(function (d) {
-        if (d && d.error === "already voted") { setVoted(d.votedFor || id, false); return; }
-        if (d && d.error) { if (btn) btn.disabled = false; return; }
-        if (d && d.orgs) renderOrgs(d.orgs);
-        setVoted(id, announce);
-      })
-      .catch(function () { if (btn) btn.disabled = false; });
-  }
-  castVote = function (id) { sendVote(id, null, false); };
-
-  orgsEl.addEventListener("click", function (e) {
-    var btn = e.target.closest ? e.target.closest("[data-vote]") : null;
-    if (!btn || btn.disabled) return;
-    sendVote(btn.getAttribute("data-vote"), btn, true);
-  });
-
-  paintVotes();
-  if (window.fetch) {
-    fetch("/.netlify/functions/votes")
-      .then(function (r) { return r.json(); })
-      .then(function (d) { if (d && d.orgs) renderOrgs(d.orgs); })
-      .catch(function () {});
-  }
-  }
   if (window.fetch) {
     fetch("/.netlify/functions/instagram")
       .then(function (r) { return r.json(); })
@@ -809,6 +470,8 @@
   var typed = "";
   function paint() {
     plate.textContent = typed;
+    var sr = document.getElementById("signSr");
+    if (sr) sr.textContent = "Cycle for" + (typed ? " " + typed : "");
     plate.setAttribute("data-empty", typed ? "false" : "true");
     if (reset) reset.hidden = !typed;
   }

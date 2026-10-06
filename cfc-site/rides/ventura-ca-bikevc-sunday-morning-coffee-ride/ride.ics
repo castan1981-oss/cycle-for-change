@@ -4,19 +4,36 @@ PRODID:-//Cycle for Change//Group Rides//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:ventura-ca-bikevc-sunday-morning-coffee-ride@cycleforchange.org
+UID:ventura-ca-bikevc-sunday-morning-coffee-ride-2026-10-25@cycleforchang
+ e.org
 DTSTAMP:20261001T000000Z
-DTSTART;TZID=America/Los_Angeles:20261011T090000
-DTEND;TZID=America/Los_Angeles:20261011T110000
-RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270304T235959Z
+DTSTART;TZID=America/Los_Angeles:20261025T090000
+DTEND;TZID=America/Los_Angeles:20261025T110000
 SUMMARY:Sunday Morning Coffee Ride (BikeVC) — Ventura\, CA
 LOCATION:Posted on each Meetup event; October's ride is built around coff
  ee next to the Ventura Bike HUB\, 490 N Ventura Ave\, Ventura\, CA 93001
 DESCRIPTION:Pace: easy social pace; adults need to be able to ride about 
  10 miles in an hour (November: 10-13 mph).\nNo-drop.\nSchedule: Once a m
- onth on a Sunday morning: Oct 25 at 9:00 am\, Nov 22 at 8:00 am.\nConfir
- m with the host before you go.\nhttps://cycleforchange.org/rides/ventura
- -ca-bikevc-sunday-morning-coffee-ride/
+ onth on a Sunday morning: Oct 25 at 9:00 am\, Nov 22 at 8:00 am..\nConfi
+ rm with the host before you go.\nhttps://cycleforchange.org/rides/ventur
+ a-ca-bikevc-sunday-morning-coffee-ride/
+URL:https://cycleforchange.org/rides/ventura-ca-bikevc-sunday-morning-cof
+ fee-ride/
+END:VEVENT
+BEGIN:VEVENT
+UID:ventura-ca-bikevc-sunday-morning-coffee-ride-2026-11-22@cycleforchang
+ e.org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Los_Angeles:20261122T080000
+DTEND;TZID=America/Los_Angeles:20261122T100000
+SUMMARY:Sunday Morning Coffee Ride (BikeVC) — Ventura\, CA
+LOCATION:Posted on each Meetup event; October's ride is built around coff
+ ee next to the Ventura Bike HUB\, 490 N Ventura Ave\, Ventura\, CA 93001
+DESCRIPTION:Pace: easy social pace; adults need to be able to ride about 
+ 10 miles in an hour (November: 10-13 mph).\nNo-drop.\nSchedule: Once a m
+ onth on a Sunday morning: Oct 25 at 9:00 am\, Nov 22 at 8:00 am..\nConfi
+ rm with the host before you go.\nhttps://cycleforchange.org/rides/ventur
+ a-ca-bikevc-sunday-morning-coffee-ride/
 URL:https://cycleforchange.org/rides/ventura-ca-bikevc-sunday-morning-cof
  fee-ride/
 END:VEVENT

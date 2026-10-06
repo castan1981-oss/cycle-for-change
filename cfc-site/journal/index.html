@@ -1,44 +1,31 @@
 <!DOCTYPE html>
-<!--
-  FIELD NOTES — POST TEMPLATE
-  To publish a post:
-    1. Copy this file to  /field-notes/<slug>/index.html
-    2. Replace every {{...}} field below.
-    3. Tag is exactly "Place + Miles" or "Mind + Miles" (chip class place|mind).
-    4. Mind + Miles posts MUST keep the crisis line block.
-    5. Add a row to /field-notes/index.html (newest first) and update sitemap.xml.
-    6. Cross-link 2 related posts (same tag where possible) in .fn-related.
-  Guardrails: no medical claims; never imply continuous sober-time or relapse;
-  banned words (leverage, synergy, "journey", "passionate about", etc.).
-  Body copy comes from Robert — leave a .fn-todo block if it isn't ready.
--->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>{{TITLE}} — Field Notes — Cycle for Change</title>
-  <meta name="description" content="{{SEO_DESCRIPTION}}">
-  <link rel="canonical" href="https://cycleforchange.org/field-notes/{{SLUG}}/">
+  <title>Journal — Cycle for Change</title>
+  <meta name="description" content="The Cycle for Change journal: Robert writing about the riding and what it changes. He's riding 10,000 miles in 2027. All on the bike.">
+  <link rel="canonical" href="https://cycleforchange.org/journal/">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cycle for Change">
-  <meta property="og:url" content="https://cycleforchange.org/field-notes/{{SLUG}}/">
-  <meta property="og:title" content="{{TITLE}} — Field Notes — Cycle for Change">
-  <meta property="og:description" content="{{SEO_DESCRIPTION}}">
+  <meta property="og:url" content="https://cycleforchange.org/journal/">
+  <meta property="og:title" content="Journal — Cycle for Change">
+  <meta property="og:description" content="The Cycle for Change journal: Robert writing about the riding and what it changes. He's riding 10,000 miles in 2027. All on the bike.">
   <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{TITLE}} — Field Notes — Cycle for Change">
-  <meta name="twitter:description" content="{{SEO_DESCRIPTION}}">
+  <meta name="twitter:title" content="Journal — Cycle for Change">
+  <meta name="twitter:description" content="The Cycle for Change journal: Robert writing about the riding and what it changes. He's riding 10,000 miles in 2027. All on the bike.">
   <meta name="twitter:image" content="https://cycleforchange.org/og-cfc.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/styles.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"{{TITLE}}","description":"{{SEO_DESCRIPTION}}","datePublished":"{{DATE_ISO}}","url":"https://cycleforchange.org/field-notes/{{SLUG}}/","author":{"@type":"Person","name":"Robert Castan"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/"},"mainEntityOfPage":"https://cycleforchange.org/field-notes/{{SLUG}}/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Journal","description":"The Cycle for Change journal: Robert writing about the riding and what it changes. He’s riding 10,000 miles in 2027. All on the bike.","url":"https://cycleforchange.org/journal/","dateModified":"2026-10-06","isPartOf":{"@type":"WebSite","name":"Cycle for Change","url":"https://cycleforchange.org/"},"author":{"@type":"Person","name":"Robert Castan"},"hasPart":[{"@type":"BlogPosting","headline":"The Carrot Cake Theory","url":"https://cycleforchange.org/journal/the-carrot-cake-theory/","datePublished":"2026-07-23"}]}</script>
 </head>
 <body id="top">
 
@@ -86,7 +73,7 @@
   <ul class="menu-list">
     <li><a href="/events/2027/riding/">Ride with me <span>The 2027 rides</span></a></li>
     <li><a href="/find-a-ride/">Find a ride <span>1,422</span></a></li>
-    <li><a href="/events/2027/">2027 calendar <span>640</span></a></li>
+    <li><a href="/events/2027/">2027 calendar <span>639</span></a></li>
     <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
@@ -99,53 +86,30 @@
 </div>
 <p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
 
-<main id="main" class="fn-post">
-  <article class="fn-article">
-    <p class="fn-meta">
-      <span class="fn-chip {{CHIP_CLASS}}">{{TAG}}</span>
-      <span class="dot">·</span>
-      <time datetime="{{DATE_ISO}}">{{DATE_HUMAN}}</time>
-      <span class="dot">·</span>
-      <span>{{READING_TIME}}</span>
-    </p>
-
-    <h1>{{TITLE}}</h1>
-
-    <p class="fn-lede">{{LEDE}}</p>
-
-    <div class="fn-body">
-      <!-- TODO: body copy from Robert. Headings as <h2>, the signature
-           pull-quote as <blockquote>. Remove this placeholder when filled. -->
-      <p class="fn-todo">TODO — body copy pending from Robert.</p>
+<main id="main">
+  <section class="fn-masthead">
+    <div class="wrap">
+      <span class="eyebrow">Journal</span>
+      <h1>The longer thoughts.</h1>
+      <p class="fn-num-cap">What the riding is doing to me, written down when it&rsquo;s ready</p>
     </div>
+  </section>
 
-    <!-- Mind + Miles only: keep this crisis line. Delete for Place + Miles. -->
-    <aside class="fn-crisis">
-      <strong>If you're struggling:</strong> the <strong>988 Suicide &amp; Crisis Lifeline</strong>
-      is free and 24/7 — call or text <strong>988</strong>. For LGBTQ youth, the
-      <strong>Trevor Project</strong> is at <strong>1-866-488-7386</strong> (or text START to 678-678).
-    </aside>
-  </article>
-
-  <!-- Internal cross-links: 2 related posts, same tag where possible. -->
-  <nav class="fn-related" aria-label="Related Field Notes">
-    <h2>Keep reading</h2>
-    <a href="/field-notes/{{RELATED_1_SLUG}}/">{{RELATED_1_TITLE}}</a>
-    <a href="/field-notes/{{RELATED_2_SLUG}}/">{{RELATED_2_TITLE}}</a>
-  </nav>
-
-  <!-- The funnel. Non-negotiable: follow-the-number + give. -->
-  <section class="pledge" aria-labelledby="pledge-h">
-  <p class="pledge-num" aria-hidden="true">10000</p>
-  <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
-  <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/">Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
-</section>
-
-  <!-- Optional quiet resource footnote (render if the post calls for it). -->
-  <!-- <p class="fn-note">{{FOOTNOTE}}</p> -->
-
-  <p class="fn-back"><a href="/field-notes/">← All Field Notes</a></p>
+  <section class="fn-index">
+    <div class="wrap">
+      <!-- Newest first. One card per entry in /journal/<slug>/, same card as /field-notes/. -->
+      <p class="fn-spokes-head">Entries so far</p>
+      <div class="fn-cards">
+        <a class="fn-card" href="/journal/the-carrot-cake-theory/">
+          <figure><img src="/img/card-journal.jpg" alt="A bike leaned on a painted wall, low sun down the street." width="800" height="1000" loading="lazy" decoding="async"></figure>
+          <span class="fn-chip mind">Journal &middot; Jul 2026</span>
+          <span class="fn-title">The Carrot Cake Theory</span>
+          <p class="fn-dek">Why the handmade thing is the honest thing, and why every one of the 10,000 miles goes through my legs.</p>
+        </a>
+      </div>
+      <p class="fn-back"><a href="/field-notes/">The rides, written from the road: Field Notes &rarr;</a></p>
+    </div>
+  </section>
 </main>
 
 <footer class="foot site-foot">

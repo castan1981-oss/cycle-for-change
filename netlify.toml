@@ -16,14 +16,50 @@
 [functions]
   node_bundler = "esbuild"
 
+# —— Headers (Oct 6, 2026). No CSP on purpose: the pages carry inline scripts and styles. ——
+# geolocation stays (self): Near me on /rides/ and /tonight/ asks for the reader's location.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(self)"
+    X-Frame-Options = "SAMEORIGIN"
+    Strict-Transport-Security = "max-age=31536000"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/film/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/photos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
 [[redirects]]
   from = "/api/strava"
   to = "/.netlify/functions/strava"
-  status = 200
-
-[[redirects]]
-  from = "/api/votes"
-  to = "/.netlify/functions/votes"
   status = 200
 
 [[redirects]]
@@ -61,32 +97,6 @@
   from = "/next/*"
   to = "/"
   status = 301
-  force = true
-
-# Search pass (Oct 6, 2026): the field-note templates live in cfc-site/ because the content workflows copy them
-# from there; they are never pages. 404 them so Google drops them (one rule per path: a splat only matches a whole segment).
-[[redirects]]
-  from = "/field-notes/_template.html"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/field-notes/_template"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/field-notes/_pillar-template.html"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/field-notes/_pillar-template"
-  to = "/404.html"
-  status = 404
   force = true
 
 [[redirects]]

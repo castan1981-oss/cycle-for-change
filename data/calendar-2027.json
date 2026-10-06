@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01",
+  "updated": "2026-10-06",
   "source": "Compiled Sept 15–16, 2026 from organizer sites, BikeReg, USA Cycling, Life Time, the National MS Society, the ADA and GranFondoGuide; per-event URLs in sources. Refreshed twice a month by the \"2027 Ride Directory refresh\" scheduled task (artifact https://claude.ai/artifact/1BhU7ywcW4SBYrg3GitPqC).",
   "events": [
     {
@@ -1529,7 +1529,7 @@
       "beneficiary": "",
       "fundraising_min": "",
       "organizer": "Valley Spokesmen Bicycle Club",
-      "url": "https://www.valleyspokesmen.org/cinderellaclassic",
+      "url": "https://www.valleyspokesmen.org/",
       "reg_status": "Advance registration only; ~600 cap",
       "lottery": "",
       "series": "",
@@ -1538,7 +1538,6 @@
       "notes": "Women and girls only.",
       "sources": [
         "https://www.granfondoguide.com/Events/Index/3937/cinderella-classic-and-challenge",
-        "https://www.valleyspokesmen.org/cinderellaclassic",
         "https://danshryock.substack.com/p/2026-cycling-events-and-century-rides"
       ],
       "slug": "cinderella-classic-challenge",
@@ -2258,13 +2257,13 @@
       "state": "CA",
       "region": "California",
       "start_city": "Los Angeles",
-      "end_city": "Los Angeles (2027 route: LA to Ojai and back; 2026 route was LA to San Diego)",
+      "end_city": "Los Angeles",
       "days": 3,
-      "distances": "200+ miles over 3 days (Day 3 = 80+ miles); Day 2 choose-your-own-adventure loops; 1-Day Rider option (Day 2 only). 2026 route was 285 miles LA-Lake Skinner (Temecula)-San Diego.",
+      "distances": "200+ miles over 3 days: Los Angeles to Ojai, camp, then back along the coast (Day 3 is 80+ miles). 1-day riders ride Day 2 only.",
       "elevation": "",
       "cause": "LGBTQ+",
-      "beneficiary": "Los Angeles LGBT Center (HIV services, housing, youth/senior, gender-affirming care); in 2026, 10% of net proceeds each to San Diego LGBT Community Center and LGBTQ Community Center of the Desert",
-      "fundraising_min": "3-day riders $2,500 by April 2, 2027; 1-day riders (Day 2 only) $250 by April 23; registration $95 (3-day) or $195 (1-day)",
+      "beneficiary": "Los Angeles LGBT Center",
+      "fundraising_min": "$2,500 by April 2, 2027 for 3-day riders; $250 for 1-day riders. Registration $95 (3-day), $195 (1-day).",
       "organizer": "Los Angeles LGBT Center",
       "url": "https://centerrideout.lalgbtcenter.org/en/",
       "reg_status": "Open for 2027 (give.lalgbtcenter.org/event/center-ride-out-2027/e775406); first-come registration, not a lottery (2026 was capped at 525 participants)",
@@ -2272,14 +2271,15 @@
       "series": "",
       "cost": "",
       "qualification": "",
-      "notes": "Successor event to AIDS/LifeCycle on the LA side. The 2027 route runs from Los Angeles to Ojai, two nights of camp by a lake, and back along the coast to an oceanside finish; Day 3 is 80+ miles. The first ride, in 2026, went Los Angeles to San Diego and raised about $830,000.",
+      "notes": "The Los Angeles LGBT Center's own ride. The first one, in April 2026, raised about $830,000 with about 300 riders. In 2027 it goes from LA to Ojai, camps there, and comes back along the coast to an oceanside finish.",
       "sources": [
         "https://centerrideout.lalgbtcenter.org/en/",
         "https://centerrideout.lalgbtcenter.org/events/",
         "https://www.losangelesblade.com/2026/04/28/la-lgbt-centers-first-legacy-cycling-event-raises-over-800k/"
       ],
       "slug": "center-ride-out",
-      "riding": true
+      "riding": true,
+      "private_note": "Moved from public fields Oct 6, 2026. notes: Successor event to AIDS/LifeCycle on the LA side. 2026 inaugural ride raised ~$830,511 with ~300 cyclists. IMPORTANT: official site now describes the route as 'Ride from Los Angeles to Ojai, camp with your friends, and cruise back along the coast' - i.e., the 2027 route appears to be an LA-Ojai-LA loop rather than LA-to-San Diego. Finish-line festival location listed as TBD. Official site (Oct 1, 2026) pitches the Ojai stop as 'Queer Summer Camp' (swimming, canoeing, lakeside DJ set); Register Now buttons live, no sell-out notice seen. || distances: 200+ miles over 3 days (Day 3 = 80+ miles); Day 2 choose-your-own-adventure loops; 1-Day Rider option (Day 2 only). 2026 route was 285 miles LA-Lake Skinner (Temecula)-San Diego. || end_city: Los Angeles (2027 route: LA to Ojai and back; 2026 route was LA to San Diego) || beneficiary: Los Angeles LGBT Center (HIV services, housing, youth/senior, gender-affirming care); in 2026, 10% of net proceeds each to San Diego LGBT Community Center and LGBTQ Community Center of the Desert || fundraising_min: $2,500 (2026 minimum, due April 10, 2026; $95 registration). 2027 minimum not visible on pages fetched - likely unchanged, verify on official FAQ."
     },
     {
       "id": 63,
@@ -2617,7 +2617,7 @@
       "beneficiary": "",
       "fundraising_min": "",
       "organizer": "Mudslinger Events LLC",
-      "url": "https://www.oregontriplecrown.com/index.php/features/oregon-gravel-epic",
+      "url": "https://www.mudslingerevents.com/oregon-triple-crown-series",
       "reg_status": "Open (BikeReg).",
       "lottery": "No lottery.",
       "series": "Oregon Triple Crown",
@@ -2625,6 +2625,7 @@
       "qualification": "",
       "notes": "Sister event West Coast Gravel (Yachats) Apr 25, 2027.",
       "sources": [
+        "https://www.mudslingerevents.com/oregon-triple-crown-series",
         "https://www.gravelcalendar.com/events/oregon-coast-gravel-epic"
       ],
       "slug": "oregon-coast-gravel-epic",
@@ -4252,7 +4253,7 @@
       "beneficiary": "",
       "fundraising_min": "",
       "organizer": "Orange City Chamber of Commerce",
-      "url": "https://www.octulipfestival.com/portfolio-item/tour-de-tulips-bike-ride/",
+      "url": "",
       "reg_status": "2026: $40",
       "lottery": "",
       "series": "",
@@ -5336,8 +5337,8 @@
       "subtype": "two-day criterium weekend in Arlington, VA",
       "start": "2027-06-05",
       "end": "2027-06-06",
-      "date_status": "projected",
-      "date_note": "Held the first weekend of June (Sat Clarendon Cup, Sun Crystal City Cup; e.g., June 1-2, 2024; June 7-8, 2025); 2027 projected June 5-6, 2027. Not yet announced.",
+      "date_status": "confirmed",
+      "date_note": "The organizer published June 5–6, 2027: the challenge ride Saturday, the pro/am races Saturday and Sunday.",
       "city": "Arlington",
       "state": "VA",
       "region": "Mid-Atlantic",
@@ -5350,16 +5351,19 @@
       "beneficiary": "",
       "fundraising_min": "",
       "organizer": "Armed Forces Cycling Classic",
-      "url": "",
+      "url": "https://www.cyclingclassic.org/",
       "reg_status": "",
       "lottery": "",
       "series": "",
       "cost": "",
       "qualification": "USA Cycling license",
       "notes": "",
-      "sources": [],
+      "sources": [
+        "https://www.cyclingclassic.org/"
+      ],
       "slug": "armed-forces-cycling-classic",
-      "riding": false
+      "riding": false,
+      "private_note": "Old date_note: Held the first weekend of June (Sat Clarendon Cup, Sun Crystal City Cup; e.g., June 1-2, 2024; June 7-8, 2025); 2027 projected June 5-6, 2027. Not yet announced."
     },
     {
       "id": 148,
@@ -6425,7 +6429,7 @@
       "beneficiary": "",
       "fundraising_min": "",
       "organizer": "A group of four Lebanon locals (previously the Santiam Spokes Bicycle Club, which stepped back in 2024)",
-      "url": "https://www.lebanonstrawberrycentury.com/",
+      "url": "https://www.bikereg.com/lebanonstrawberrycentury",
       "reg_status": "2027 registration not yet open as of Sept 2026; registration historically via BikeReg",
       "lottery": "",
       "series": "",
@@ -6434,7 +6438,6 @@
       "notes": "The organizer may change: Santiam Spokes Bicycle Club announced it lacked capacity to run the event in 2024 and four local volunteers took it over; it ran successfully in 2024-2025. Confirm the 2027 edition with the organizer. Held in conjunction with the Lebanon Strawberry Festival.",
       "sources": [
         "https://www.granfondoguide.com/Events/Index/8835/strawberry-century",
-        "https://www.lebanonstrawberrycentury.com/about-2",
         "https://www.bikereg.com/lebanonstrawberrycentury?nc=1"
       ],
       "slug": "lebanon-strawberry-century",
@@ -7289,7 +7292,7 @@
       "start": "2027-06-20",
       "end": "2027-06-20",
       "date_status": "projected",
-      "date_note": "Held every Father's Day Sunday in Harlem (June 15, 2025); 2027 Father's Day is June 20, 2027. Not yet announced.",
+      "date_note": "Held on Father’s Day. The 2026 race was Sunday, June 21, 2026. Father’s Day 2027 is June 20.",
       "city": "New York",
       "state": "NY",
       "region": "Northeast",
@@ -7302,16 +7305,19 @@
       "beneficiary": "",
       "fundraising_min": "",
       "organizer": "Harlem Skyscraper Cycling Classic",
-      "url": "",
+      "url": "https://teamunityinc.org/hscc/",
       "reg_status": "",
       "lottery": "",
       "series": "",
       "cost": "",
       "qualification": "USA Cycling license",
       "notes": "",
-      "sources": [],
+      "sources": [
+        "https://teamunityinc.org/hscc/"
+      ],
       "slug": "harlem-skyscraper-cycling-classic",
-      "riding": false
+      "riding": false,
+      "private_note": "Old date_note: Held every Father's Day Sunday in Harlem (June 15, 2025); 2027 Father's Day is June 20, 2027. Not yet announced."
     },
     {
       "id": 203,
@@ -8158,7 +8164,7 @@
       "start": "2027-07-10",
       "end": "2027-07-10",
       "date_status": "projected",
-      "date_note": "Held on the second Saturday of July in downtown Boise (July 13, 2024; July 12, 2025); 2027 projected Sat July 10, 2027. Not yet announced.",
+      "date_note": "The 2026 race was Sat July 11, 2026 (second Saturday of July). 2027 is placed on July 10.",
       "city": "Boise",
       "state": "ID",
       "region": "Mountain",
@@ -8171,14 +8177,16 @@
       "beneficiary": "",
       "fundraising_min": "",
       "organizer": "Boise Twilight Criterium",
-      "url": "",
+      "url": "https://boisetwilightcriterium.com/",
       "reg_status": "",
       "lottery": "",
       "series": "",
       "cost": "",
       "qualification": "USA Cycling license",
       "notes": "",
-      "sources": [],
+      "sources": [
+        "https://boisetwilightcriterium.com/"
+      ],
       "slug": "boise-twilight-criterium",
       "riding": false
     },
@@ -8918,10 +8926,10 @@
       "name": "Manhattan Beach Grand Prix",
       "category": "Race",
       "subtype": "one-day criterium (since 1962)",
-      "start": "2027-07-18",
-      "end": "2027-07-18",
+      "start": "2027-07-11",
+      "end": "2027-07-11",
       "date_status": "projected",
-      "date_note": "Held on the third Sunday of July (e.g., July 21, 2024; July 20, 2025); 2027 projected Sun July 18, 2027. Not yet announced; 2026 date not verified from reachable sources.",
+      "date_note": "The 2026 race was Sunday, July 12, 2026. 2027 is placed on the same Sunday, July 11.",
       "city": "Manhattan Beach",
       "state": "CA",
       "region": "California",
@@ -8934,16 +8942,19 @@
       "beneficiary": "",
       "fundraising_min": "",
       "organizer": "South Bay Wheelmen",
-      "url": "",
+      "url": "https://www.mbgp.org/",
       "reg_status": "",
       "lottery": "",
       "series": "",
       "cost": "",
       "qualification": "USA Cycling license",
       "notes": "",
-      "sources": [],
+      "sources": [
+        "https://socalcycling.com/2026/06/30/manhattan-beach-grand-prix-california-state-criterium-championship-returns-on-july-12th/"
+      ],
       "slug": "manhattan-beach-grand-prix",
-      "riding": false
+      "riding": false,
+      "private_note": "Old date_note: Held on the third Sunday of July (e.g., July 21, 2024; July 20, 2025); 2027 projected Sun July 18, 2027. Not yet announced; 2026 date not verified from reachable sources. || old projection 2027-07-18"
     },
     {
       "id": 250,
@@ -11404,7 +11415,7 @@
       "beneficiary": "",
       "fundraising_min": "",
       "organizer": "Mi Duole",
-      "url": "http://miduole.com/canyons-challenge-event",
+      "url": "",
       "reg_status": "",
       "lottery": "",
       "series": "",
@@ -12038,13 +12049,13 @@
     },
     {
       "id": 337,
-      "name": "The Big Lost (Rebecca's Private Idaho)",
+      "name": "The Big Lost (formerly Rebecca's Private Idaho)",
       "category": "Gravel",
       "subtype": "multi-day gravel festival + Queen's Stage Race",
       "start": "2027-09-08",
       "end": "2027-09-11",
       "date_status": "confirmed",
-      "date_note": "Organizer site lists Sept 8-11, 2027 in Sun Valley. 2026 was Sept 9-12.",
+      "date_note": "The organizer published Sept 8–11, 2027. The ride was Rebecca’s Private Idaho until 2026; it runs as The Big Lost now.",
       "city": "Ketchum / Sun Valley",
       "state": "ID",
       "region": "Mountain",
@@ -12058,7 +12069,7 @@
       "fundraising_min": "",
       "organizer": "Rusch Ventures (Rebecca Rusch) with Bike Monkey",
       "url": "https://biglostidaho.com/",
-      "reg_status": "Organizer site lists Sept 8-11, 2027 with a Register link. No lottery; 2026 was capped at about 1,200–1,500 riders.",
+      "reg_status": "Open for 2027 on the organizer’s site.",
       "lottery": "No lottery.",
       "series": "",
       "cost": "",
@@ -12067,11 +12078,11 @@
       "sources": [
         "https://biglostidaho.com/",
         "https://www.rebeccasprivateidaho.com/dispatches/private-idaho-just-got-more-private",
-        "https://rebeccasprivateidaho.com/event-schedule",
-        "https://strambecco.com/event/rebeccas-private-idaho/"
+        "https://rebeccasprivateidaho.com/event-schedule"
       ],
       "slug": "rebecca-s-private-idaho",
-      "riding": false
+      "riding": false,
+      "private_note": "Old date_note: 2026 edition moved off Labor Day to Sep 9–12, 2026 (Wed–Sat). No 2027 dates published; same-week pattern gives Sep 8–11, 2027. Gran Fondo Guide lists Sep 11, 2027 (aggregator projection). IMPORTANT: rebeccasprivateidaho.com and rebeccarusch.com/track-rpi now 302-redirect to thebiglost.com, which suggests a rebrand to 'The Big Lost'; that site could not be read in this session, so the new name/format is unverified."
     },
     {
       "id": 338,
@@ -12114,10 +12125,10 @@
       "name": "Recovery Ride (Castro Country Club)",
       "category": "Charity ride",
       "subtype": "Addiction-recovery / LGBTQ sober-community multi-day (3-day)",
-      "start": "2027-09-10",
-      "end": "2027-09-12",
-      "date_status": "projected",
-      "date_note": "The first ride was Sept 11–13, 2026. Projected to the same weekend in 2027 (Sept 10–12); the organizer has opened 2027 registration but has not posted dates.",
+      "start": "",
+      "end": "",
+      "date_status": "tba",
+      "date_note": "The 2027 dates aren’t out yet. The first ride was Sept 11–13, 2026.",
       "city": "San Francisco",
       "state": "CA",
       "region": "California",
@@ -12131,18 +12142,19 @@
       "fundraising_min": "$1,500",
       "organizer": "Castro Country Club",
       "url": "https://www.castrocountryclub.org/recovery-ride",
-      "reg_status": "2027 rider and volunteer registration open on the organizer's page; 2027 ride dates not yet published.",
+      "reg_status": "2027 registration now open.",
       "lottery": "",
       "series": "",
       "cost": "",
       "qualification": "",
       "notes": "Fully supported, camping in Guerneville, $1,500 minimum; sober LGBTQ+ community ride benefiting Castro Country Club. SFAF calls it a complementary event to Cycle to Zero. Organizer contact: cccrecoveryride@gmail.com.",
       "sources": [
-        "https://www.ebar.com/story/158688/News/News%20Briefs:%20SFAF%20unveils%20name%20for%20new%20bike%20ride",
+        "https://www.castrocountryclub.org/recovery-ride",
         "https://resources.sfaf.org/collections/breaking-news/complimentary-lgbtq-cycling-events-announced-by-castro-country-club-and-san-francisco-aids-foundation/"
       ],
       "slug": "recovery-ride",
-      "riding": true
+      "riding": true,
+      "private_note": "Old date_note: Inaugural ride was Sept 11–13, 2026 (SFAF/Castro Country Club announcement). Projected to the equivalent weekend in 2027 (Sept 10–12); no 2027 date announced yet — first-year event, so low confidence. Organizer's Recovery Ride page (Oct 1, 2026) now carries Year 2 / 2027 branding and the line 'Registration Opens Friday, October 2' (Oct 2, 2026 is a Friday) but still gives no 2027 ride dates; its Training page is still the 2026 version. || old reg_status: Organizer page says 'Registration Opens Friday, October 2' (no year shown; Oct 2, 2026 is a Friday). Not open as of Oct 1, 2026; 2027 ride dates not yet published. || old projection: 2027-09-10 to 2027-09-12"
     },
     {
       "id": 340,
@@ -12683,7 +12695,7 @@
       "beneficiary": "",
       "fundraising_min": "",
       "organizer": "Akron Bicycle Club",
-      "url": "https://www.akronbike.org/content.aspx?page_id=22&club_id=133645&module_id=32187",
+      "url": "https://akronbike.org/content.aspx?page_id=4002&club_id=133645&item_id=2893346&actr=3",
       "reg_status": "2026: $117 members/$129 non-members; capacity limited by hotel rooms; registration closed Sept 1",
       "lottery": "",
       "series": "",
@@ -13158,7 +13170,7 @@
       "start": "2027-09-17",
       "end": "2027-09-18",
       "date_status": "projected",
-      "date_note": "Gran Fondo Guide lists VeloSano 2026 on Sep 18, 2026 (Cleveland). Projected to the same mid-September weekend in 2027; LOW confidence - official site not reachable this session.",
+      "date_note": "The 2026 ride was Sept 18–19, 2026, in Cleveland. 2027 is placed on the same weekend.",
       "city": "Cleveland",
       "state": "OH",
       "region": "Midwest",
@@ -13171,18 +13183,19 @@
       "beneficiary": "Cleveland Clinic cancer research",
       "fundraising_min": "",
       "organizer": "Cleveland Clinic (VeloSano)",
-      "url": "https://www.granfondoguide.com/Events/GranFondoCalendar/North America/All/All/All",
-      "reg_status": "unverified",
+      "url": "https://www.velosano.org/",
+      "reg_status": "",
       "lottery": "",
       "series": "",
       "cost": "",
       "qualification": "",
-      "notes": "Included from a third-party calendar only; NOT VERIFIED THIS SESSION: web-search budget was exhausted and the official site was not reachable through the fetch tool's provenance rules; confirm on the official site before publishing.",
+      "notes": "Cleveland Clinic’s cancer research ride.",
       "sources": [
-        "https://www.granfondoguide.com/Events/GranFondoCalendar/North America/All/All/All"
+        "https://www.velosano.org/"
       ],
       "slug": "velosano-bike-to-cure",
-      "riding": false
+      "riding": false,
+      "private_note": "Old date_note: Gran Fondo Guide lists VeloSano 2026 on Sep 18, 2026 (Cleveland). Projected to the same mid-September weekend in 2027; LOW confidence - official site not reachable this session. || old notes: Included from a third-party calendar only; NOT VERIFIED THIS SESSION: web-search budget was exhausted and the official site was not reachable through the fetch tool's provenance rules; confirm on the official site before publishing."
     },
     {
       "id": 370,
@@ -13260,33 +13273,34 @@
       "category": "Charity ride",
       "subtype": "Bike MS ride (one-day)",
       "start": "2027-09-18",
-      "end": "2027-09-18",
+      "end": "2027-09-19",
       "date_status": "projected",
-      "date_note": "Gran Fondo Guide lists Sep 19, 2026 (San Francisco); projected to Sat Sep 18, 2027. Official event page not reachable this session; confirm one-day vs two-day format.",
+      "date_note": "The 2026 ride was Sept 19–20, 2026. 2027 is placed on the same weekend.",
       "city": "San Francisco",
       "state": "CA",
       "region": "California",
       "start_city": "San Francisco",
       "end_city": "Sonoma/Marin wine country (verify)",
-      "days": 1,
+      "days": 2,
       "distances": "23, 46, 58, 72, 102 mi",
       "elevation": "",
       "cause": "MS",
       "beneficiary": "National Multiple Sclerosis Society",
       "fundraising_min": "",
       "organizer": "National MS Society",
-      "url": "https://www.granfondoguide.com/Events/GranFondoCalendar/North America/All/All/All",
-      "reg_status": "unverified",
+      "url": "https://events.nationalmssociety.org/pages/11331",
+      "reg_status": "",
       "lottery": "",
       "series": "",
       "cost": "",
       "qualification": "",
-      "notes": "NOT VERIFIED THIS SESSION: web-search budget was exhausted and the official site was not reachable through the fetch tool's provenance rules; confirm on the official site before publishing.",
+      "notes": "Long routes start at Levi’s Plaza in San Francisco; the 23 and 44 mile routes start at SOMO Village.",
       "sources": [
-        "https://www.granfondoguide.com/Events/GranFondoCalendar/North America/All/All/All"
+        "https://events.nationalmssociety.org/pages/11331"
       ],
       "slug": "bike-ms-waves-to-wine",
-      "riding": false
+      "riding": false,
+      "private_note": "Old date_note: Gran Fondo Guide lists Sep 19, 2026 (San Francisco); projected to Sat Sep 18, 2027. Official event page not reachable this session; confirm one-day vs two-day format. || old notes: NOT VERIFIED THIS SESSION: web-search budget was exhausted and the official site was not reachable through the fetch tool's provenance rules; confirm on the official site before publishing."
     },
     {
       "id": 373,
@@ -13450,7 +13464,7 @@
       "beneficiary": "",
       "fundraising_min": "",
       "organizer": "CDA Fondo",
-      "url": "https://coeurdalene.org/events/coeur-dfondo/",
+      "url": "",
       "reg_status": "Not announced for 2027 as of Sept 2026; historically via BikeSignup (bikesignup.com/Race/ID/CoeurDAlene/CoeurdAleneLakeGranFondo)",
       "lottery": "",
       "series": "",
@@ -13458,7 +13472,6 @@
       "qualification": "",
       "notes": "Start on Sherman Avenue at 2nd Street next to the lawn in front of the Coeur d'Alene Resort. Scenic Lake Coeur d'Alene courses. Verify the event is still active - no 2026 edition could be confirmed from published sources.",
       "sources": [
-        "https://coeurdalene.org/events/coeur-dfondo/",
         "https://www.ahotu.com/event/coeur-d-fondo",
         "https://ourtowncda.com/coeur-dfondo/"
       ],
@@ -14863,13 +14876,13 @@
     },
     {
       "id": 417,
-      "name": "Tour de Cure: Silicon Valley (Palo Alto, CA)",
+      "name": "Tour de Cure: Northern California (Palo Alto, CA)",
       "category": "Charity ride",
       "subtype": "diabetes one-day ride",
       "start": "2027-09-26",
       "end": "2027-09-26",
       "date_status": "projected",
-      "date_note": "Gran Fondo Guide lists Sun Sep 27, 2026 (Palo Alto); projected to Sun Sep 26, 2027. ADA site not reachable this session.",
+      "date_note": "The 2026 ride was Sun Sept 27, 2026, at HP in Palo Alto. 2027 is placed on the same Sunday.",
       "city": "Palo Alto",
       "state": "CA",
       "region": "California",
@@ -14882,18 +14895,19 @@
       "beneficiary": "American Diabetes Association",
       "fundraising_min": "",
       "organizer": "American Diabetes Association",
-      "url": "https://www.granfondoguide.com/Events/GranFondoCalendar/North America/All/All/All",
-      "reg_status": "unverified",
+      "url": "https://tour.diabetes.org/745",
+      "reg_status": "",
       "lottery": "",
       "series": "",
       "cost": "",
       "qualification": "",
-      "notes": "NOT VERIFIED THIS SESSION: web-search budget was exhausted and the official site was not reachable through the fetch tool's provenance rules; confirm on the official site before publishing.",
+      "notes": "",
       "sources": [
-        "https://www.granfondoguide.com/Events/GranFondoCalendar/North America/All/All/All"
+        "https://tour.diabetes.org/745"
       ],
       "slug": "tour-de-cure-silicon-valley",
-      "riding": false
+      "riding": false,
+      "private_note": "Old date_note: Gran Fondo Guide lists Sun Sep 27, 2026 (Palo Alto); projected to Sun Sep 26, 2027. ADA site not reachable this session. || old notes: NOT VERIFIED THIS SESSION: web-search budget was exhausted and the official site was not reachable through the fetch tool's provenance rules; confirm on the official site before publishing."
     },
     {
       "id": 418,
@@ -16881,10 +16895,10 @@
       "name": "6-12-24 Hour World Time Trial Championships",
       "category": "Ultra / bikepacking",
       "subtype": "24/12/6-hour timed time trial",
-      "start": "2027-11-05",
-      "end": "2027-11-06",
-      "date_status": "projected",
-      "date_note": "Pattern-based estimate only: the event is held annually on the first Friday-Saturday of November in Borrego Springs, CA (24-hour Friday start, 6/12-hour Saturday). Neither the 2026 nor the 2027 date could be verified from sources reachable in this research.",
+      "start": "",
+      "end": "",
+      "date_status": "tba",
+      "date_note": "No race in 2026. The organizers say they are working toward a return in 2027; no date yet.",
       "city": "Borrego Springs",
       "state": "CA",
       "region": "California",
@@ -16904,9 +16918,12 @@
       "cost": "",
       "qualification": "Open entry; 24-hour is a RAAM qualifier",
       "notes": "",
-      "sources": [],
+      "sources": [
+        "https://www.gotoborregosprings.com/world-time-trial-championships-paused-for-2026"
+      ],
       "slug": "6-12-24-hour-world-time-trial-championships",
-      "riding": false
+      "riding": false,
+      "private_note": "Old date_note: Pattern-based estimate only: the event is held annually on the first Friday-Saturday of November in Borrego Springs, CA (24-hour Friday start, 6/12-hour Saturday). Neither the 2026 nor the 2027 date could be verified from sources reachable in this research. || old projection 2027-11-05"
     },
     {
       "id": 476,
@@ -16957,7 +16974,7 @@
       "start_city": "Phoenix",
       "end_city": "Phoenix",
       "days": 1,
-      "distances": "2026 options: metric century (7:00 AM start) or 20 miles (9:00 AM start)",
+      "distances": "20 or 62 miles (in 2026, 62 at 7 AM and 20 at 9 AM)",
       "elevation": "",
       "cause": "LGBTQ+",
       "beneficiary": "one·n·ten (LGBTQ+ youth and young adults, ages 11-24)",
@@ -20144,7 +20161,7 @@
       "beneficiary": "",
       "fundraising_min": "",
       "organizer": "UCA / Cycling Point Series",
-      "url": "http://cyclingpointseries.com",
+      "url": "",
       "reg_status": "",
       "lottery": "",
       "series": "",
@@ -21776,42 +21793,6 @@
       "riding": false
     },
     {
-      "id": 628,
-      "name": "USA Cycling Gravel National Championships",
-      "category": "Race",
-      "subtype": "gravel road race",
-      "start": "",
-      "end": "",
-      "date_status": "tba",
-      "date_note": "2027 host/dates not yet announced. 2026 edition: Sept 12, 2026, La Crescent, MN.",
-      "city": "TBA",
-      "state": "",
-      "region": "National / multiple",
-      "start_city": "",
-      "end_city": "",
-      "days": 1,
-      "distances": "Elite and age-group gravel races (distances per host)",
-      "elevation": "",
-      "cause": "",
-      "beneficiary": "",
-      "fundraising_min": "",
-      "organizer": "USA Cycling",
-      "url": "https://gravelnats.usacycling.org/",
-      "reg_status": "not open",
-      "lottery": "",
-      "series": "",
-      "cost": "",
-      "qualification": "USAC license; eligibility per Rules & Eligibility",
-      "notes": "",
-      "sources": [
-        "https://www.usacycling.org/national-championships",
-        "https://roadnats.usacycling.org/pro-road",
-        "https://roadnats.usacycling.org/masters-juniors-road"
-      ],
-      "slug": "usa-cycling-gravel-national-championships-2",
-      "riding": false
-    },
-    {
       "id": 629,
       "name": "USA Cycling Masters & Junior Road National Championships (incl. amateur/masters criterium titles)",
       "category": "Race",
@@ -22046,7 +22027,7 @@
       "series": "",
       "cost": "",
       "qualification": "",
-      "notes": "Historically two multi-day rides (East: NJ shore; West: CA coast) plus a virtual ride; current format appears to be one-day. NOT VERIFIED THIS SESSION: web-search budget was exhausted and the official site was not reachable through the fetch tool's provenance rules; confirm on the official site before publishing.",
+      "notes": "It used to be two multi-day rides (the New Jersey shore and the California coast) plus a virtual ride. It looks like one day now. Check the official site before you plan around it.",
       "sources": [
         "https://www.ysctourdepink.org/about",
         "https://www.ysctourdepink.org/registration",

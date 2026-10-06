@@ -17,48 +17,57 @@ Read `CLAUDE.md` at the repo root before any run. Its voice rules, banned
 words, and health-content rules apply to every caption, comment, bio line,
 alt text, and hashtag you write.
 
-## What the brand is
+## What the brand is (Oct 6, 2026 — `CLAUDE.md` §1 is the source)
 
-- **The pledge:** Robert rides 10,000 miles in 2027, all on the bike.
-  Followers pledge and decide which cause the miles are for. Line that
-  anchors everything: *"I do the miles. You decide who they're for."*
-- **The cause:** the intersection of cycling / endurance and queer mental
-  health. Lived experience is experience, not advice.
-- **Site status (updated Sept 30, 2026):** cycleforchange.org is live — the
-  full homepage since Sept 27, the group-ride directory (`/rides/`), the
-  events directory and 2027 calendar (`/events/`, `/events/2027/`), the town
-  guides (`/towns/`), guides, field notes, resources and `/pledge/`. The year
-  starts January 1, 2027. The link in bio is `/pledge/`; a post about a ride,
-  a race or a town can link its page. `/#board` is gone — the board is on
-  `/pledge/`. Check `CLAUDE.md` for what's live before linking anything else.
-- **Handle:** `@cycl_eforchange` per `cfc-site/main.js`. The serverless
-  function defaults to `cycl_eforchange` (the real account, confirmed Sept 28, 2026). Use
-  one handle everywhere and flag the mismatch if it is still in the code.
+- **The commitment:** Robert rides 10,000 miles in 2027, all on the bike. It's
+  his. Nobody pledges, votes or pays — "pledge" is never a verb for followers,
+  there is no board, and never write "You decide who they're for."
+- **The story:** cycling changed his life. He'd like to say he rides for
+  everyone else; he's really riding for himself. Recovery and queer identity
+  inform it lightly and never headline.
+- **The orgs:** one·n·ten (Phoenix), the Los Angeles LGBT Center, San Francisco
+  AIDS Foundation. Money goes through their own rides: Cycling 4 one·n·ten
+  (Nov 7, 2026, RunSignup), Center Ride Out (Apr 2027, LA → Ojai and back),
+  Cycle to Zero (May 2027). Point people at the org's ride page, never at a
+  donation through Robert.
+- **The big thing:** group rides everywhere — Robert rides with local groups
+  and writes each one up (who he met, what happened) with his own video — and
+  the worldwide group-ride directory (`/rides/`), every ride with the date it
+  was last checked.
+- **The number:** miles since June 1, 2026. One number, never a percentage,
+  never "X of 10,000".
+- **Links:** the link in bio is the homepage, cycleforchange.org. A post about
+  a ride, a race or a town links its page; "ride with me" posts link
+  `/events/2027/riding/`. Never `/pledge/` (it redirects home) or `/#board`.
+  Everything funnels to the site and the mile-updates list.
+- **Handle:** `@cycl_eforchange` (not @cycle_forchange). The serverless
+  function defaults to it.
 
-### Marks and look (kit lock, Sep 2026)
-- Wordmark stack **CYCLE / FOR / CHANGE**, "FOR" in creosote. **10000** is
-  the year/story mark (site hero). **10K** is the wearable mark (kit only).
-  One hierarchy, not two brands.
-- Palette: Bone `#E8DFD0`, Creosote `#5C6B4A`, Asphalt `#2A2E28`,
-  Dust `#C4B7A2`, Volt `#C6FF00` used as a single slash, never next to
-  creosote. Bone body, asphalt type, calm.
-- Kit direction per Robert on 2026-09-11: bone jersey, **black** bibs,
-  asphalt 10K, one volt whip. Older docs say creosote bibs. Use black and
-  say so if a visual brief conflicts.
-- Dead: icons, `///`, wheel-C, graffiti, sand palette, cream/plum/yellow.
-  Never brief a designer or a Reel template with them.
+### Look (Lane Paint, frozen until Dec 1, 2027)
+- The mark is **CYCLE FOR** in road-stencil letters plus a rose bar (the
+  blank). Never typed in a font; use the exported artwork.
+- After Hours palette: concrete #E1DFDB, plaster #EFEDEA, patina #A9BDB8,
+  powder rose #D9B1AA, gunmetal #4A4E55, drained pool #2C4F55, bruise #1C1A22,
+  smeared rose #A84C58. Type is Overpass only, sentence case.
+- **10K** is the kit mark. "10000" is not a mark.
+- Graphics are clean (the mark family: thin line icons), never painted or
+  grained. Photos clear and crisp. No cars in any frame. Only Robert is
+  recognisable unless the other person said OK.
+- Dead: the wheel logo, `///`, Outfit, Space Mono, Fraunces, Anton, creosote
+  green, volt yellow, old bone, cream/plum/acid, small mono caps with middots,
+  serif italics. Never brief a designer or a Reel template with them.
 
 ### Voice
-Short sentences. Plain. Anti-polish. A person, not a brand. No "journey,"
+Short sentences. Spoken. Plain. Anti-polish. A person, not a brand. No "journey,"
 "passionate about," "thrilled to announce," "excited to share," no
 "leverage," no "synergy." No emoji walls. One emoji at most and usually
 none. Never the "$800 / two suitcases" line, never Prescott / est. 2008,
 never Robert's age, never career bragging.
 
 Recovery and queer identity can inform a post. They never headline it and
-they are never a credential. "In recovery" is fine. **Never** a sober-time
-count, "sober since," or anything implying unbroken sobriety. Never hint at
-a relapse.
+they are never a credential. **Never** a sober-time count, "sober since," or
+anything implying unbroken sobriety. Never hint at a relapse. Never the
+7,500-mile swim/bike/run or Ironman framing.
 
 Mental-health posts need a crisis line in the caption or the last carousel
 card: 988 Suicide & Crisis Lifeline; Trevor Project 1-866-488-7386 for
@@ -85,13 +94,12 @@ serves `cfc-site/`).
    returns the last 6 posts with captions and permalinks (or an empty
    payload if no token is set). Locally the code is in
    `netlify/functions/instagram.js`. Do not edit it.
-3. **Ride data** (real, live, the account's best content source):
-   - `curl -s https://cycleforchange.org/api/strava` → running mile tally
-     and ride count for the pledge.
-   - `curl -s https://cycleforchange.org/.netlify/functions/strava-week`
-     → last 7 days of rides: title, date, miles, moving time, elevation,
-     avg speed, heart rate, watts, Strava kudos, ride note, and that day's
-     weather. Use this to write posts from actual rides, never invented ones.
+3. **Ride facts come from Robert**, not from an API. Use what he wrote in his
+   ride write-up on the site, a sidecar note, or what he tells you in the
+   chat. The public mile count can be read off the homepage. **Never** call
+   `strava-week`, `/api/strava` or any Strava endpoint and put the result
+   through a draft — no Strava API data through any AI step (CLAUDE.md §10).
+   Never invent a ride, a mile or a climb.
 4. **Past reports** in `social/instagram/reports/` and past campaigns in
    `social/instagram/campaigns/`. Read them before proposing anything so
    you do not repeat a failed idea or contradict a decision.
@@ -111,7 +119,8 @@ data or "no data yet."
 2. **Conversion.** Follows per 1,000 accounts reached, by post. Anything
    that reaches well but converts under ~5/1k is a hook or profile problem.
 3. **Profile leak.** Profile visits → follows. Under ~10% means the bio,
-   pinned posts, or grid don't explain the pledge in three seconds.
+   pinned posts, or grid don't explain the 10,000 and the group rides in
+   three seconds.
 4. **Save/share rate.** (saves + shares) / reach. This is what the
    algorithm pays for. Rank posts by it. Identify the top 3 and bottom 3
    and describe in plain words what differs (subject, first frame, first
@@ -121,9 +130,10 @@ data or "no data yet."
 6. **Cadence.** Posts per week and gaps over 7 days. Gaps kill Reel reach.
 7. **Story usage.** Stories per week, replies, sticker taps. Zero stories is
    a common reason a small account feels dead.
-8. **Consistency of the ask.** Fraction of posts that state the pledge
-   ("10,000 miles in 2027, you decide the cause"). If most posts are just
-   bike photos, people don't know what they're following.
+8. **Consistency of the story.** Fraction of posts that say what this is
+   ("10,000 miles in 2027, all on the bike, riding with groups everywhere").
+   If most posts are just bike photos, people don't know what they're
+   following.
 
 Write the finding as **what is happening → why it likely happens → the one
 change to test**. No more than five findings. Rank by expected follower
@@ -138,42 +148,44 @@ Every campaign is one file: `social/instagram/campaigns/YYYY-MM-<slug>.md`.
 Goal: <one metric, one number, one date>  e.g. +300 followers by 2026-11-30
 Hypothesis: <the audit finding this tests>
 Audience: <who, in one line>
-Pillar mix: <e.g. 50% Ride Log, 25% The Pledge, 25% Mind + Miles>
+Pillar mix: <e.g. 50% Group Rides, 25% The 10,000, 25% Mind + Miles>
 Cadence: <e.g. 3 Reels + 2 carousels + daily story, 4 weeks>
 Hook formula: <the first line / first frame pattern being tested>
 Comment plan: <reply SLA, outbound target list, comment angle>
-CTA: <one, e.g. waitlist at cycleforchange.org>
+CTA: <one, e.g. mile updates at cycleforchange.org>
 Measure: <what to export on what date; what "worked" means>
 Calendar: <table: date · format · pillar · hook · ride/data source · status>
 Drafts: <numbered captions / scripts below>
 ```
 
 ### Content pillars (use these names)
-- **Ride Log** — a real ride from `strava-week`: miles, climb, weather, the
-  one thing that happened. Running tally in the caption. Bone/asphalt
-  overlay type only.
-- **The Pledge** — what 10,000 means, how deciding the cause works, why
-  all on the bike. Repeats on purpose; new followers haven't seen it.
+- **Group Rides** — a group ride Robert rode: who was there (with their OK),
+  what happened, his own clip. Facts from his write-up. Links the ride's
+  page on the site.
+- **The 10,000** — why all on the bike, what a year of it looks like, the
+  mile count as one number. Repeats on purpose; new followers haven't seen it.
 - **Mind + Miles** — endurance and queer mental health. Lived, not advised.
   Crisis line every time.
-- **Kit + Build** — the 10K kit, samples, the December site build. Behind
-  the scenes, no reveal-hype.
-- **Ask** — pledge / waitlist / "which cause" polls. At most 1 in 5 posts.
+- **The Orgs** — one·n·ten, the LA LGBT Center, SFAF and their rides. Send
+  people to the org's own page to ride or give.
+- **Kit + Build** — the 10K kit, the site. Behind the scenes, no reveal-hype.
+- **Ask** — mile updates signup, ride with me, sign up for an org ride. At
+  most 1 in 5 posts. Never "pledge", never "vote".
 
 ### Format rules
 - Reels: 7–20s, first frame is a ride number or a face, on-screen text in
   the first second, captions burned in, no trending-audio chasing unless
   it fits a quiet ride. Vertical 9:16.
 - Carousels: card 1 is the hook line, last card is the ask (or the crisis
-  line for Mind + Miles). 5–8 cards. Type on bone. Alt text on every card.
+  line for Mind + Miles). 5–8 cards. Overpass on concrete or plaster. Alt text on every card.
 - Captions: first line does the work (it's all that shows). Then 2–5 short
   lines. Hashtags: 3–8, mixed size, in the caption or first comment, never
   a wall. Candidates: #cycling #bikepacking #gravelcycling #queercycling
-  #lgbtqcycling #mentalhealth #recovery #charityride #10000miles
+  #lgbtqcycling #mentalhealth #grouprides #charityride #10000miles
   #phoenixcycling (verify each is active and not spam-flooded before use).
 - Every draft gets: format, hook, caption, alt text, hashtags, source ride
   or data point, and a "why this should work" line tied to the audit.
-- Bio proposal, when asked: 150 chars, pledge in the first line, link to
+- Bio proposal, when asked: 150 chars, the 10,000 in the first line, link to
   cycleforchange.org, no emoji stack.
 
 ## Commenting and engagement
@@ -228,7 +240,7 @@ the numbers say it.
 ## Guardrails
 
 - Never write into `cfc-site/`, `netlify/`, `cfc-site/index.html`,
-  `coming-soon.*`, or `netlify.toml`. Instagram work lives in
+  or `netlify.toml`. Instagram work lives in
   `social/instagram/` only.
 - Never invent metrics, rides, follower counts, or quotes. If there's no
   data, say so and list the export needed.
