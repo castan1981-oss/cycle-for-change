@@ -11,11 +11,12 @@ through the four inks (a continuous gradient map, with `--crunch` keeping a litt
 print feel), the rose spot has a soft edge, the misregister is 2px, the grain is fine and light,
 and the files are cut at the source's full width so nothing is upscaled on a 3x phone.
 
-    python3 tools/print.py cfc-site/img/hero-wide.jpg cfc-site/img/sign-print-2.jpg --width 2000 --warmth .10
-    python3 tools/print.py cfc-site/img/hero-wide.jpg cfc-site/img/sign-print-2-phone.jpg --width 1400 --warmth .10
+    python3 tools/print.py cfc-site/img/hero-wide.jpg cfc-site/img/sign-print-3.jpg --width 2000 --warmth .10
+    python3 tools/print.py cfc-site/img/hero-wide.jpg cfc-site/img/sign-print-3-phone.jpg --width 1400 --warmth .10
     python3 tools/print.py <in> <out> --width 1200 --warmth .10 --crunch .25 --grain .05
 
-The cut that ships (Oct 5, 2026, "it's just too dirty looking"): --crunch 0 --grain 0 --shift 0 0 — the photo
+The cut that ships (Oct 5, 2026, after "too dirty" and then "the pics still look off"): --mode grade --mix .6
+--crunch 0 --grain 0 --shift 0 0 — the real photograph with the four inks laid over it as a grade. The flat ink cut was — the photo
 mapped into the four inks with the rose on the light, nothing stepped, nothing off register, no grain.
 The print knobs stay for end cards and big print.
 
@@ -39,7 +40,7 @@ def gradient_map(tone, stops=STOPS):
     return out
 
 
-def print_image(path, width, crunch=0.25, shift=(2, 1), warmth=0.16, grain=0.05, seed=7, contrast=1.15):
+def print_image(path, width, crunch=0.25, shift=(2, 1), warmth=0.10, grain=0.05, seed=7, contrast=1.15, mode="ink", mix=0.55):
     rng = np.random.default_rng(seed)
     im = ImageOps.exif_transpose(Image.open(path).convert("RGB"))
     if width < im.width:
@@ -61,6 +62,10 @@ def print_image(path, width, crunch=0.25, shift=(2, 1), warmth=0.16, grain=0.05,
     light = np.clip((tone - 0.5) * 3, 0, 1)  # the spot only takes on the lighter inks
     spot = (warm * light)[..., None]
     out = out * (1 - spot) + (np.array(PAL["rose"], np.float32) / 255) * spot
+    if mode == "grade":
+        # the photograph stays; the four-ink map sits over it as a grade (mix = how much ink)
+        base = np.asarray(ImageEnhance.Color(im).enhance(0.72)).astype(np.float32) / 255
+        out = base * (1 - mix) + out * mix
     img = Image.fromarray((np.clip(out, 0, 1) * 255).astype(np.uint8))
     # fine, light paper grain
     gr = Image.fromarray((rng.random((H, W)) * 255).astype(np.uint8), "L").filter(ImageFilter.GaussianBlur(0.5))
@@ -78,7 +83,9 @@ if __name__ == "__main__":
     p.add_argument("--grain", type=float, default=0.05)
     p.add_argument("--quality", type=int, default=82)
     p.add_argument("--shift", type=int, nargs=2, default=(2, 1), help="rose misregister in px; 0 0 for a clean cut")
+    p.add_argument("--mode", choices=("ink", "grade"), default="ink", help="ink = four flat inks; grade = the photo with the inks laid over it")
+    p.add_argument("--mix", type=float, default=0.55, help="grade mode: how much ink over the photo (0 = the photo, 1 = the ink cut)")
     a = p.parse_args()
-    img = print_image(a.src, a.width, crunch=a.crunch, warmth=a.warmth, grain=a.grain, shift=tuple(a.shift))
+    img = print_image(a.src, a.width, crunch=a.crunch, warmth=a.warmth, grain=a.grain, shift=tuple(a.shift), mode=a.mode, mix=a.mix)
     img.save(a.out, quality=a.quality, optimize=True, progressive=True)
     print("wrote", a.out, img.size)

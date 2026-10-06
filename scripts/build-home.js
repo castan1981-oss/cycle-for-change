@@ -115,8 +115,8 @@ const page = `<!doctype html>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   ${CHROME.FONTS}
-  <link rel="preload" as="image" href="/img/sign-print-2-phone.jpg" media="(max-width:759px)">
-  <link rel="preload" as="image" href="/img/sign-print-2.jpg" media="(min-width:760px)">
+  <link rel="preload" as="image" href="/img/sign-print-3-phone.jpg" media="(max-width:759px)">
+  <link rel="preload" as="image" href="/img/sign-print-3.jpg" media="(min-width:760px)">
   <link rel="stylesheet" href="/home.css">
 
   <script type="application/ld+json">
@@ -141,8 +141,8 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
      lets a visitor type into it. Nothing is collected. —— -->
 <section class="sign sign--print" id="top" aria-labelledby="sign-h">
   <picture class="sign-ph">
-    <source media="(max-width:759px)" srcset="/img/sign-print-2-phone.jpg">
-    <img src="/img/sign-print-2.jpg" width="2000" height="1428" alt="Robert and Caleb with their bikes on a desert road at sunset, printed in four inks." fetchpriority="high">
+    <source media="(max-width:759px)" srcset="/img/sign-print-3-phone.jpg">
+    <img src="/img/sign-print-3.jpg" width="2000" height="1428" alt="Robert and Caleb with their bikes on a desert road at sunset." fetchpriority="high">
   </picture>
   <div class="sign-scrim" aria-hidden="true"></div>
   <svg class="sign-grain" aria-hidden="true" focusable="false"><rect width="100%" height="100%" filter="url(#lpGrain)"/></svg>
@@ -219,49 +219,91 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
   </div>
 </section>
 
-<!-- —— the orgs —— -->
+<!-- —— the orgs. Pass 28 (Oct 5, evening): a painted map with the coast on it, and one painted ride
+     badge per org — the route as a roller stroke, a diamond at the start, the date on a plate. Road paint only. —— -->
 <section class="s s--paper orgs-s" id="orgs" aria-labelledby="orgs-h">
   <div class="wrap">
     <div class="orgs-top">
       <div class="stack16"><h2 class="h2" id="orgs-h">The orgs I ride for.</h2><p class="lede w38">Three rides. You sign up or give on their page. None of it comes through me.</p></div>
-      <svg class="route-map" viewBox="0 0 700 520" role="img" aria-label="The three rides on a map: Cycling 4 one·n·ten in Phoenix, the Center Ride Out in Los Angeles, Cycle to Zero in San Francisco">
-        <g fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" filter="url(#lpWornSoft)">
-          <path d="M548 428 C 470 400, 420 372, 372 340 S 300 290, 250 262 S 190 236, 150 230"/>
-          <path d="M150 230 C 130 190, 118 150, 112 106 S 110 70, 118 48"/>
+      <svg class="route-map" viewBox="0 0 700 560" role="img" aria-label="The three rides on a map of the West: Cycling 4 one·n·ten in Phoenix on Nov 7, the Center Ride Out in Los Angeles in April, Cycle to Zero in San Francisco in May">
+        <!-- the coast and the state lines, painted thin -->
+        <g fill="none" stroke="var(--dust)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#lpWornSoft)">
+          <path d="M40 -10 C 58 30, 86 48, 112 60 C 128 110, 132 170, 158 232 C 182 270, 210 300, 246 322 L 262 338"/>
+          <path d="M262 338 C 340 352, 430 372, 520 402 C 580 422, 640 452, 700 478"/>
+          <path d="M330 -10 L 330 150 L 500 330"/>
+          <path d="M500 330 C 520 300, 560 270, 580 230 L 600 -10"/>
+        </g>
+        <!-- the ride, a roller stroke home from SF -->
+        <g fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" filter="url(#lpRoller)">
+          <path d="M118 62 C 112 110, 120 170, 158 232 C 250 262, 360 320, 470 392 C 510 416, 540 430, 560 440"/>
         </g>
         <g fill="none" stroke="var(--paper)" stroke-width="2.5" stroke-dasharray="14 12">
-          <path d="M548 428 C 470 400, 420 372, 372 340 S 300 290, 250 262 S 190 236, 150 230"/>
-          <path d="M150 230 C 130 190, 118 150, 112 106 S 110 70, 118 48"/>
+          <path d="M118 62 C 112 110, 120 170, 158 232 C 250 262, 360 320, 470 392 C 510 416, 540 430, 560 440"/>
         </g>
         <g filter="url(#lpWornSoft)" style="color:var(--creosote)">
-          <use href="#lpDiamond" x="536" y="404" width="26" height="46"/><use href="#lpDiamond" x="138" y="206" width="26" height="46"/><use href="#lpDiamond" x="106" y="24" width="26" height="46"/>
+          <use href="#lpDiamond" x="104" y="36" width="30" height="52"/><use href="#lpDiamond" x="144" y="206" width="30" height="52"/><use href="#lpDiamond" x="546" y="414" width="30" height="52"/>
         </g>
         <g font-weight="900" fill="currentColor">
-          <text x="574" y="420" font-size="34">PHX</text><rect x="574" y="432" width="150" height="34" fill="var(--creosote)"/><text x="584" y="458" font-size="22" font-weight="800" fill="var(--paper)">one&middot;n&middot;ten</text>
-          <text x="30" y="282" font-size="34">LA</text><rect x="30" y="294" width="128" height="34" fill="var(--creosote)"/><text x="40" y="320" font-size="22" font-weight="800" fill="var(--paper)">the Center</text>
-          <text x="146" y="40" font-size="34">SF</text><rect x="146" y="52" width="86" height="34" fill="var(--creosote)"/><text x="156" y="78" font-size="22" font-weight="800" fill="var(--paper)">SFAF</text>
-          <g font-size="15" font-weight="700" fill="var(--mute)"><text x="574" y="490">Nov 7</text><text x="30" y="352">Apr 23 to 25</text><text x="246" y="78">May 21 to 23</text></g>
+          <text x="150" y="60" font-size="44">SF</text><rect x="150" y="72" width="122" height="46" fill="var(--creosote)"/><text x="162" y="106" font-size="30" font-weight="800" fill="var(--paper)">SFAF</text>
+          <text x="150" y="134" font-size="24" font-weight="700" fill="var(--mute)">May 21 to 23</text>
+          <text x="24" y="296" font-size="44">LA</text><rect x="24" y="308" width="188" height="46" fill="var(--creosote)"/><text x="36" y="342" font-size="30" font-weight="800" fill="var(--paper)">the Center</text>
+          <text x="24" y="382" font-size="24" font-weight="700" fill="var(--mute)">Apr 23 to 25</text>
+          <text x="440" y="492" font-size="44">PHX</text><rect x="440" y="504" width="212" height="46" fill="var(--creosote)"/><text x="452" y="538" font-size="30" font-weight="800" fill="var(--paper)">one&middot;n&middot;ten</text>
+          <text x="590" y="492" font-size="24" font-weight="700" fill="var(--mute)">Nov 7</text>
         </g>
       </svg>
     </div>
     <div class="orgs">
       <article class="org">
-        <h3 class="h3">one&middot;n&middot;ten</h3>
-        <p>Phoenix nonprofit for LGBTQ+ youth ages 11 to 24. Safe spaces, housing, leadership.</p>
-        <p class="org-ride">Cycling 4 one&middot;n&middot;ten, Sat Nov 7, Phoenix</p>
-        <div class="org-acts"><a class="link" href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Give to one&middot;n&middot;ten</a></div>
+        <svg class="org-badge" viewBox="0 0 300 200" role="img" aria-label="Cycling 4 one·n·ten: a loop out of Phoenix, 20 or 62 miles, Saturday November 7">
+          <g fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" filter="url(#lpWornSoft)">
+            <path d="M36 140 C 20 96, 44 44, 96 40 C 140 36, 158 70, 150 104 C 142 140, 108 160, 76 152"/>
+          </g>
+          <g filter="url(#lpWornSoft)" style="color:var(--creosote)"><use href="#lpDiamond" x="22" y="118" width="28" height="48"/></g>
+          <g font-weight="900" fill="currentColor"><text x="176" y="92" font-size="56">20</text><text x="176" y="146" font-size="56">62</text><text x="246" y="146" font-size="18" font-weight="700" fill="var(--mute)">MI</text><text x="246" y="92" font-size="18" font-weight="700" fill="var(--mute)">MI</text><text x="176" y="42" font-size="16" font-weight="700" fill="var(--mute)">ONE DAY</text></g>
+          <rect x="170" y="158" width="118" height="34" fill="var(--creosote)"/><text x="229" y="183" font-size="20" font-weight="800" fill="var(--paper)" text-anchor="middle">Sat Nov 7</text>
+        </svg>
+        <div class="org-text">
+          <h3 class="h3">one&middot;n&middot;ten</h3>
+          <p>Phoenix nonprofit for LGBTQ+ youth ages 11 to 24. Safe spaces, housing, leadership.</p>
+          <p class="org-ride">Cycling 4 one&middot;n&middot;ten, Sat Nov 7, Phoenix</p>
+          <div class="org-acts"><a class="link" href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Give to one&middot;n&middot;ten</a></div>
+        </div>
       </article>
       <article class="org">
-        <h3 class="h3">Los Angeles LGBT Center</h3>
-        <p>Health, housing and advocacy for LGBTQ+ people.</p>
-        <p class="org-ride">Center Ride Out, Apr 23 to 25, 2027</p>
-        <div class="org-acts"><a class="link" href="https://centerrideout.lalgbtcenter.org/en/" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Give to the Center</a></div>
+        <svg class="org-badge" viewBox="0 0 300 200" role="img" aria-label="Center Ride Out: Los Angeles to Ojai and back, three days, April 23 to 25">
+          <g fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" filter="url(#lpWornSoft)">
+            <path d="M34 168 C 90 160, 150 146, 210 124 C 236 114, 256 108, 272 106"/>
+            <path d="M272 118 C 250 124, 224 134, 196 146 C 150 164, 96 178, 44 182"/>
+          </g>
+          <g filter="url(#lpWornSoft)" style="color:var(--creosote)"><use href="#lpDiamond" x="20" y="150" width="28" height="48"/><use href="#lpDiamond" x="262" y="80" width="28" height="48"/></g>
+          <g font-weight="900" fill="currentColor"><text x="22" y="64" font-size="56">3<tspan font-size="22" font-weight="700" fill="var(--mute)"> days</tspan></text><text x="22" y="94" font-size="16" font-weight="700" fill="var(--mute)">LA TO OJAI AND BACK</text></g>
+          <rect x="162" y="18" width="126" height="34" fill="var(--creosote)"/><text x="225" y="43" font-size="20" font-weight="800" fill="var(--paper)" text-anchor="middle">Apr 23 to 25</text>
+        </svg>
+        <div class="org-text">
+          <h3 class="h3">Los Angeles LGBT Center</h3>
+          <p>Health, housing and advocacy for LGBTQ+ people.</p>
+          <p class="org-ride">Center Ride Out, Apr 23 to 25, 2027</p>
+          <div class="org-acts"><a class="link" href="https://centerrideout.lalgbtcenter.org/en/" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Give to the Center</a></div>
+        </div>
       </article>
       <article class="org">
-        <h3 class="h3">San Francisco AIDS Foundation</h3>
-        <p>No-cost HIV, harm-reduction and LGBTQ+ health services.</p>
-        <p class="org-ride">Cycle to Zero, May 21 to 23, 2027</p>
-        <div class="org-acts"><a class="link" href="https://www.sfaf.org/get-involved/cycle-to-zero/" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Give to SFAF</a></div>
+        <svg class="org-badge" viewBox="0 0 300 200" role="img" aria-label="Cycle to Zero: three days out of San Francisco, May 21 to 23">
+          <g fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" filter="url(#lpWornSoft)">
+            <path d="M34 92 C 60 80, 84 84, 100 104"/>
+            <path d="M118 112 C 140 128, 166 124, 186 102"/>
+            <path d="M204 96 C 224 78, 248 74, 272 84"/>
+          </g>
+          <g filter="url(#lpWornSoft)" style="color:var(--creosote)"><use href="#lpDiamond" x="20" y="70" width="28" height="48"/><use href="#lpDiamond" x="96" y="92" width="28" height="48"/><use href="#lpDiamond" x="180" y="84" width="28" height="48"/></g>
+          <g font-weight="900" fill="currentColor"><text x="22" y="178" font-size="56">3<tspan font-size="22" font-weight="700" fill="var(--mute)"> days</tspan></text><text x="150" y="176" font-size="16" font-weight="700" fill="var(--mute)">SAN FRANCISCO</text></g>
+          <rect x="162" y="18" width="126" height="34" fill="var(--creosote)"/><text x="225" y="43" font-size="20" font-weight="800" fill="var(--paper)" text-anchor="middle">May 21 to 23</text>
+        </svg>
+        <div class="org-text">
+          <h3 class="h3">San Francisco AIDS Foundation</h3>
+          <p>No-cost HIV, harm-reduction and LGBTQ+ health services.</p>
+          <p class="org-ride">Cycle to Zero, May 21 to 23, 2027</p>
+          <div class="org-acts"><a class="link" href="https://www.sfaf.org/get-involved/cycle-to-zero/" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Give to SFAF</a></div>
+        </div>
       </article>
     </div>
     <p class="lede w38 open-door">You don&rsquo;t have to be queer to ride with me. The rides raise money for queer-serving orgs. That&rsquo;s the point.</p>
@@ -296,7 +338,7 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
           <button class="btn btn--ink" type="submit">Search rides</button>
         </form>
         <p class="find-links"><a class="link" href="/rides/no-drop/">No-drop rides</a><a class="link" href="/rides/lgbtq/">Queer rides</a><a class="link" href="/tonight/">Tonight</a></p>
-        <div class="find-count"><b class="num">${RIDES_N}</b><span>group rides in the directory, re-checked every week. Every state, ${RN.abroad} more countries. Shop rides, no-drop rides, queer rides.</span></div>
+        <div class="find-count"><b class="num">${RIDES_N}</b><span>group rides in the directory, each one checked in the last 90 days. Every state, ${RN.abroad} more countries. Shop rides, no-drop rides, queer rides.</span></div>
         <svg class="lane-dash" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g filter="url(#lpWornSoft)" fill="var(--paper)" stroke="var(--mute)" stroke-width="2"><rect x="0" y="14" width="56" height="8"/><rect x="88" y="14" width="56" height="8"/><rect x="176" y="14" width="56" height="8"/><rect x="264" y="14" width="56" height="8"/><rect x="352" y="14" width="56" height="8"/><rect x="440" y="14" width="56" height="8"/><rect x="528" y="14" width="56" height="8"/></g></svg>
         <dl class="facts-dl">
           <div><dt>Group rides</dt><dd><a href="/rides/">${RIDES_N}</a></dd></div>
