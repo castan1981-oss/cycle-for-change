@@ -4,12 +4,13 @@ PRODID:-//Cycle for Change//Group Rides//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:san-diego-ca-gravelstoke-monthly-gravel-ride@cycleforchange.org
+UID:san-diego-ca-gravelstoke-monthly-gravel-ride-2026-12-05@cycleforchang
+ e.org
 DTSTAMP:20261001T000000Z
-DTSTART;TZID=America/Los_Angeles:20261010T083000
-DTEND;TZID=America/Los_Angeles:20261010T103000
-RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
-SUMMARY:Gravelstoke Monthly Gravel Ride — San Diego\, CA
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Gravelstoke Monthly Gravel Ride — San Diego\, CA (time on the h
+ ost's page)
 LOCATION:Different start each month\, posted on the event
 DESCRIPTION:Pace: Varies by month: 43 miles and 3\,700 feet in August\, 5
  7 miles and 8\,000 feet in September.\nSchedule: One Saturday a month\, 

@@ -4,13 +4,13 @@ PRODID:-//Cycle for Change//Group Rides//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:long-beach-ca-sundazies-ftwnb-sunday-ride@cycleforchange.org
+UID:long-beach-ca-sundazies-ftwnb-sunday-ride-2026-10-25@cycleforchange.o
+ rg
 DTSTAMP:20261001T000000Z
-DTSTART;TZID=America/Los_Angeles:20261011T080000
-DTEND;TZID=America/Los_Angeles:20261011T100000
-RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
 SUMMARY:SunDazies Sunday Ride (FTWNB Cycling Collective) — Long Beach\,
-  CA
+  CA (time on the host's page)
 LOCATION:Varies by ride. Sept 27 started at Sports Basement Long Beach\, 
  2100 N Bellflower Blvd\, Long Beach\, CA 90815
 DESCRIPTION:Pace: casual zone 2 pace (the club asks for no race pace)\, w

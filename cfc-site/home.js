@@ -265,7 +265,7 @@
     if (!log || !log.parentNode || document.querySelector(".strava-attrib")) return;
     var p = document.createElement("p");
     p.className = "strava-attrib";
-    p.style.cssText = "margin:12px 0 0;font-size:13px;line-height:1.4;color:var(--mute);text-transform:none;letter-spacing:0";
+    p.style.cssText = "margin:12px 0 0;font-size:13px;line-height:1.4;color:var(--dust);text-transform:none;letter-spacing:0";
     var a = document.createElement("a");
     a.href = "https://www.strava.com";
     a.target = "_blank";
@@ -470,6 +470,8 @@
   var typed = "";
   function paint() {
     plate.textContent = typed;
+    var sr = document.getElementById("signSr");
+    if (sr) sr.textContent = "Cycle for" + (typed ? " " + typed : "");
     plate.setAttribute("data-empty", typed ? "false" : "true");
     if (reset) reset.hidden = !typed;
   }
