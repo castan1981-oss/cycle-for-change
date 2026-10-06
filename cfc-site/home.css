@@ -978,14 +978,14 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
    ———————————————————————————————————————————————————————————————————————— */
 .sign--print{background:var(--tar);min-height:min(92svh,860px);display:grid;align-content:end;padding-top:var(--nav-h)}
 .sign-ph{position:absolute;inset:0;z-index:0}
-.sign-ph img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
+.sign-ph img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
 .sign-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,18,24,0) 0%,rgba(20,18,24,.35) 50%,rgba(20,18,24,.8) 100%),linear-gradient(90deg,rgba(20,18,24,.55) 0%,rgba(20,18,24,.25) 45%,rgba(20,18,24,0) 70%)}
 .sign--print .sign-grain{display:none}
 .sign--print .sign-in{z-index:3;align-items:end}
 .sign--print .sign-left{--w:clamp(250px,30vw,420px)}
 .sign--print .sign-kicker{color:var(--paper);font-size:16px;text-shadow:0 1px 10px rgba(20,18,24,.7)}
 .sign--print .sign-kicker a{border-bottom-color:var(--paper)}
-.sign-sig{position:absolute;right:var(--gut);top:calc(var(--nav-h) + clamp(16px,3vw,40px));z-index:3;width:clamp(40px,5vw,66px);height:auto;color:var(--paper);filter:url(#lpSpray)}
+.sign-sig{display:none;position:absolute;right:var(--gut);top:calc(var(--nav-h) + clamp(16px,3vw,40px));z-index:3;width:clamp(40px,5vw,66px);height:auto;color:var(--paper);filter:url(#lpSpray)}
 /* the blank: a painted rose bar until someone types; then their word on it */
 .sign-plate--blank{min-height:calc(var(--w) * .1);background:var(--creosote-lift);color:var(--asphalt);filter:url(#lpWornSoft)}
 .sign-plate--blank[data-empty="true"]{width:calc(var(--w) * .31);padding-block:0}
@@ -995,11 +995,13 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 @media (max-width:759px){
   /* Pass 30: the first screen is one composed screen — the picture clean (no type on it, no mark),
      then the sign small enough that the question, the field and the button all land before the fold */
-  .sign--print{min-height:0;align-content:start;padding-top:var(--nav-h)}
-  .sign-ph{position:relative;inset:auto;display:block}
-  .sign-ph img{aspect-ratio:16/11;height:auto;object-position:50% 20%}
-  .sign-scrim{top:var(--nav-h);bottom:auto;height:calc(100vw * 11 / 16);background:linear-gradient(180deg,rgba(20,18,24,0) 0%,rgba(20,18,24,0) 42%,rgba(20,18,24,.7) 74%,rgba(20,18,24,1) 96%)}   /* sized to the picture (it used to cover the whole section, so the picture ended in a hard seam): the picture dissolves into the tar before its own edge */
-  .sign--print .sign-in{margin-top:-14px;padding-bottom:28px;gap:18px}
+  /* Pass 32: the picture is a portrait now (Robert on the canal path), so the phone gets the desktop model —
+     one full-screen photograph, the sign over its lower half, his face clear at the top right */
+  .sign--print{min-height:100svh;align-content:end;padding-top:var(--nav-h)}
+  .sign-ph{position:absolute;inset:0;display:block}
+  .sign-ph img{aspect-ratio:auto;height:100%;object-position:62% 0}
+  .sign-scrim{top:0;bottom:0;height:auto;background:linear-gradient(180deg,rgba(20,18,24,0) 0%,rgba(20,18,24,0) 30%,rgba(20,18,24,.6) 46%,rgba(20,18,24,.88) 64%,rgba(20,18,24,.97) 100%)}
+  .sign--print .sign-in{margin-top:0;padding-bottom:28px;gap:18px}
   .sign-sig{display:none}
   .sign--print .sign-kicker{display:none}
   .sign--print .sign-left{--w:176px}
