@@ -768,7 +768,8 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .bar[data-on="true"]{transform:none}
 .bar-tally{display:flex;align-items:center;gap:10px;min-width:0}
 .bar-tally b{font-weight:800;font-size:1.35rem;letter-spacing:-.03em;line-height:1}
-.bar-tally span:last-child{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--dust);line-height:1.3}
+.bar-tally span:last-child{font-size:13px;font-weight:700;letter-spacing:0;text-transform:none;color:var(--dust);line-height:1.2;white-space:nowrap}
+.bar-tally span:last-child br{display:none}
 .bar .btn{min-height:44px;padding:0 18px}
 @media (min-width:900px){.bar{display:none}}
 
@@ -992,13 +993,22 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .sign--print .btn--plate{background:var(--paper);border-color:var(--paper)}
 @media (hover:hover){.sign--print .btn--plate:hover{background:var(--creosote-lift);border-color:var(--creosote-lift)}}
 @media (max-width:759px){
+  /* Pass 30: the first screen is one composed screen — the picture clean (no type on it, no mark),
+     then the sign small enough that the question, the field and the button all land before the fold */
   .sign--print{min-height:0;align-content:start;padding-top:var(--nav-h)}
   .sign-ph{position:relative;inset:auto;display:block}
   .sign-ph img{aspect-ratio:16/11;height:auto;object-position:50% 20%}
-  .sign-scrim{background:linear-gradient(180deg,rgba(20,18,24,0) 0%,rgba(20,18,24,0) 36%,rgba(20,18,24,.85) 50%,rgba(20,18,24,.96) 100%)}
-  .sign--print .sign-in{margin-top:-48px;padding-bottom:clamp(40px,8vw,64px)}
-  .sign-sig{width:40px;color:var(--asphalt)}  /* the phone crop puts the mark on the sky, so it goes bruise there */
-  .sign--print .sign-kicker{padding-right:56px}
+  .sign-scrim{top:var(--nav-h);bottom:auto;height:calc(100vw * 11 / 16);background:linear-gradient(180deg,rgba(20,18,24,0) 0%,rgba(20,18,24,0) 42%,rgba(20,18,24,.7) 74%,rgba(20,18,24,1) 96%)}   /* sized to the picture (it used to cover the whole section, so the picture ended in a hard seam): the picture dissolves into the tar before its own edge */
+  .sign--print .sign-in{margin-top:-14px;padding-bottom:28px;gap:18px}
+  .sign-sig{display:none}
+  .sign--print .sign-kicker{display:none}
+  .sign--print .sign-left{--w:176px}
+  .sign-mark [filter]{filter:none}   /* under 120px of letter the stencil is clean (the rule); the wear read as noise here */
+  .sign-right{gap:12px}
+  .sign-q{font-size:24px}
+  .sign-input{min-height:50px;font-size:19px}
+  .sign-line{margin-top:2px;font-size:19px}
+  .sign-acts{gap:16px}
 }
 /* the numbers on a stop bar */
 .nums--bar{background:var(--tar);color:var(--paper);padding-block:clamp(28px,4vw,56px) clamp(32px,5vw,64px)}

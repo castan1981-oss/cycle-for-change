@@ -55,17 +55,14 @@
     <filter id="lpGrain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
     <!-- Pass 27: paint worn along the tire line (long streaks), a roller's drag, and the sprayed mark -->
     <filter id="lpWornSoft" x="-10%" y="-10%" width="120%" height="120%">
-      <feTurbulence type="fractalNoise" baseFrequency=".02 .14" numOctaves="3" seed="5" result="n"/>
-      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -5 0 0 0 4.1" result="m"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.5" xChannelSelector="R" yChannelSelector="G" result="edge"/>
-      <feComposite in="edge" in2="m" operator="in"/>
+      <!-- Pass 30: a hand-painted edge only — no chips, no holes; those read as artifacts on a phone -->
+      <feTurbulence type="fractalNoise" baseFrequency=".02 .14" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <filter id="lpRoller" x="-5%" y="-30%" width="110%" height="160%">
+      <!-- Pass 30: the roller's edge, no streaks through the paint -->
       <feTurbulence type="fractalNoise" baseFrequency=".02 .5" numOctaves="2" seed="21" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G" result="d"/>
-      <feTurbulence type="fractalNoise" baseFrequency=".03 .3" numOctaves="2" seed="8" result="w"/>
-      <feColorMatrix in="w" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -4 0 0 0 3.6" result="m"/>
-      <feComposite in="d" in2="m" operator="in"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <filter id="lpSpray" x="-30%" y="-30%" width="160%" height="160%">
       <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4" result="n"/>

@@ -1,5 +1,17 @@
 # Cycle for Change — project context for automated content
 
+> **PASS 30 — THE FIRST SCREEN, AND CLEAN PAINT (Oct 5, 2026, later).** Robert, on his phone after Pass 29:
+> "these look very sloppy and the above the fold is bad." What was wrong on a phone: the first screen was a
+> picture with a caption and a scribbled mark on it, then half a stencil cut by the fold — no question, no
+> action; the picture ended in a hard seam (the scrim covered the whole section, not the picture); and the
+> worn filters (chips, holes, roller streaks) read as artifacts at phone size. Now, under 760px: nothing on
+> the picture (kicker and painter's mark hidden), the scrim is sized to the picture and dissolves it into the
+> tar before its own edge, the stencil is 176px and clean (`.sign-mark [filter]{filter:none}`), and the sign,
+> the question, the field, the line and the button all sit on the first screen of an iPhone. Everywhere:
+> `lpWornSoft` and `lpRoller` are a hand edge only — a small displacement, no holes, no streaks. The hero
+> stencil's `lpWorn` stays on desktop. The phone bar's label is one line. Rule: paint on this site is clean;
+> wear is the big desktop stencil only.
+
 > **PASS 29 — THE TYPE, RETYPED (Oct 5, 2026, late).** Robert: "it can't look sloppy, people are using
 > the site." Every sheet (`home.css`, `chrome.css`, `styles.css`, `events.css`, `rides.css`, `calendar.css`,
 > `tonight.css`) lost its tracked mono caps: each rule that had `text-transform:uppercase` now has `none`,
