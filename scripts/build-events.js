@@ -501,7 +501,9 @@ ${BLOCKS.REPORT({ thing: "event", name: e.name, kind: "changed", compact: true, 
   ${nearby.length ? `<section class="related"><h2>Nearby events</h2><ul class="tiles-p tiles-p--events">${nearby.map((n) => eventCard(n.e, { distance: n.d })).join("")}</ul></section>` : ""}
   <p class="back"><a href="/events/">All events</a> &middot; <a href="/events/state/${t.state_slug}/">Events in ${esc(t.state)}</a></p>
 `;
-  const lds = [ld, crumbs.ld, pageLd].concat(faqLd ? [faqLd] : []).map(stripUndef);
+  // Oct 6, 2026: an Event needs a startDate. With no published date the page carries no Event block
+  // (the date is never guessed); the WebPage, breadcrumbs and FAQ still go out.
+  const lds = [e.next_date ? ld : null, crumbs.ld, pageLd].concat(faqLd ? [faqLd] : []).filter(Boolean).map(stripUndef);
   const pledgeHtml = isRiding(e) ? CHROME.pledge({ line: "I&rsquo;m riding this one. Come with me.", copy: `${esc(e.short_name || e.name)} is one of the six rides on my 2027 calendar. Every mile of it counts toward the 10,000, and the money goes through the ride&rsquo;s own sign-up, never through me.` }) : CHROME.PLEDGE;
   return head({ title, description, url: e.url, ld: lds, ogType: "article" }) + body + foot(pledgeHtml);
 }
@@ -566,7 +568,10 @@ function townPage(t) {
     address: { "@type": "PostalAddress", addressLocality: t.name, addressRegion: t.state_code, addressCountry: "US" },
     geo: { "@type": "GeoCoordinates", latitude: t.lat, longitude: t.lon },
     containedInPlace: { "@type": "State", name: t.state },
-    event: t.events.map((e) => ({ "@type": "SportsEvent", name: e.name, url: SITE + e.url, startDate: e.next_date || undefined })),
+    // Oct 6, 2026: only events with a published date, each with its place (an Event needs both)
+    event: t.events.some((e) => e.next_date) ? t.events.filter((e) => e.next_date).map((e) => ({ "@type": "SportsEvent", name: e.name, url: SITE + e.url, startDate: e.next_date, endDate: e.end_date || e.next_date,
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      location: { "@type": "Place", name: e.start_location || `${t.name}, ${t.state_code}`, address: { "@type": "PostalAddress", addressLocality: t.name, addressRegion: t.state_code, addressCountry: "US" } } })) : undefined,
   });
   const pageLd = {
     "@context": "https://schema.org", "@type": "WebPage", url: SITE + t.url, name: title, description,
