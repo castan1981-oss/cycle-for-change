@@ -3,7 +3,8 @@
    page below, so the homepage and every inner page come from one source. Run after any change to
    scripts/chrome.js:   node scripts/build-home.js
    Styles: /home.css (the Pass 26 block at the foot). Behaviour: /home.js (the tally, the log,
-   the reel, the sign). Numbers in the markup are the fallback until the Strava feed answers. */
+   the reel, the sign). Both are linked with ?v=<pass>: bump it whenever either file changes, since
+   phones keep them for an hour (cache-control max-age=3600). Numbers in the markup are the fallback until the Strava feed answers. */
 "use strict";
 
 const fs = require("fs");
@@ -129,7 +130,7 @@ const page = `<!doctype html>
   ${CHROME.FONTS}
   <link rel="preload" as="image" href="/img/sign-print-4-phone.jpg" media="(max-width:759px)">
   <link rel="preload" as="image" href="/img/sign-print-4.jpg" media="(min-width:760px)">
-  <link rel="stylesheet" href="/home.css">
+  <link rel="stylesheet" href="/home.css?v=34">
 
   <script type="application/ld+json">
   {
@@ -355,7 +356,7 @@ ${CHROME.FOOTER.replace('<script src="/chrome.js" defer></script>', '')}
   <a class="btn btn--bone" href="#ride" tabindex="-1">Ride with me</a>
 </div>
 
-<script src="/home.js" defer></script>
+<script src="/home.js?v=34" defer></script>
 </body>
 </html>
 `;
