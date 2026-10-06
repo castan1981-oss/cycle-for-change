@@ -27,6 +27,12 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   `waitlist`). Instagram is **@cycl_eforchange** (not @cycle_forchange).
 - Primary internal link target: the homepage `/` or `/events/2027/riding/` ("Ride with me").
   Never `/pledge/`, never `/#board`.
+- **Ride with me = the next ride Robert is doing** (Pass 36). `NEXT_RIDES` in `scripts/chrome.js` is the one
+  list (date order, `until` = last day, Phoenix time): Cycling 4 one·n·ten (→ `/#ride`), then Center Ride
+  Out, then Cycle to Zero. The nav button, the menu, the closing block, the homepage's first-screen tile
+  (`#heroRide`) and the bar at the foot of every page (`.ridebar`, `/ridebar.js`) all point at the first one
+  still ahead; the script re-picks in the browser. Never on `/resources/` (the 988 bar owns that spot).
+  After Nov 7, 2026: rewrite the homepage `#ride` section for the next ride and rebuild everything.
 
 ## 2. How the site is built
 
@@ -391,7 +397,7 @@ the form as CSV until Robert picks one.
 - Key events, sent from `/chrome.js` and `/home.js` via `cfcTrack()` only when `gtag` exists:
   `sign_up` (mile-updates signup), `org_ride_click` (a tap to RunSignup / one·n·ten / the Center /
   SFAF), `ride_host_click` (a tap out to a group ride's host), `finder_click` (a homepage finder
-  tile: `group_rides` or `events`). No personal data in any event.
+  tile: `group_rides` or `events`), `ride_bar_click` (a tap on the Ride with me bar). No personal data in any event.
 
 ## 8. Rider pages — CONCEPT ONLY, do not build (Oct 4, 2026)
 
@@ -474,3 +480,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-06 — Instruction files rewritten to the no-pledge model; ride-recap bot disabled; mile-updates email rebuilt.
 - 2026-10-06 — Pass 34: the first screen gets two finder tiles (Group rides, Events) with their own marks; the reel is a crisp 4:5 picture with a real play button, recut to 12 s without the car clips.
 - 2026-10-06 — Pass 35: town guide pages as cards with icons, chips, real buttons and folds; "What do you need?" filters; nine new marks (call, clock, box, key, gear, fit, build, watch, effort); coffee's mark is the cup; Bicycle Haüs first in Phoenix as Robert's home shop.
+- 2026-10-06 — Pass 36: Ride with me goes to the next ride (one·n·ten, Nov 7): a tile on the homepage's first screen and a bar at the foot of every page as you scroll.

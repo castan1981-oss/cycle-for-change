@@ -1131,3 +1131,32 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 @media (max-width:759px){.sign--print .sign-acts{display:none}}
 @media (min-width:1024px){.finder{max-width:520px}}
 @media (prefers-reduced-motion:reduce){.finder-tile,.finder-s{transition:none}}
+
+/* —— Pass 36 (Oct 6, 2026): the "Ride with me" bar (markup in scripts/chrome.js, behaviour in /ridebar.js).
+   Robert wanted "ride with me" on every page as you scroll, to the next ride he's doing. Bruise bar, the
+   date on the powder-rose plate (the blank, filled in), plaster type. Phones: across the foot of the screen.
+   Desktop: a box at the bottom right. It slides away while the page's own "Ride with me" is in view.
+   The same block is in /chrome.css and /home.css. —— */
+.ridebar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:stretch;background:var(--asphalt);color:var(--paper);border-top:1px solid var(--line-d);padding-bottom:env(safe-area-inset-bottom);transform:translateY(110%);visibility:hidden;transition:transform .25s ease,visibility 0s linear .25s}
+.ridebar.is-on{transform:none;visibility:visible;transition:transform .25s ease}
+.ridebar[hidden]{display:none}
+.ridebar-a{flex:1 1 auto;display:flex;align-items:center;gap:12px;min-height:60px;min-width:0;padding:8px 8px 8px var(--gut);color:inherit;text-decoration:none}
+.ridebar-d{flex:0 0 auto;background:var(--volt);color:var(--asphalt);font-size:.8125rem;font-weight:800;line-height:1;padding:7px 8px 6px;white-space:nowrap}
+.ridebar-t{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.ridebar-t b{font-size:1rem;font-weight:800}
+.ridebar-n{font-size:.8125rem;font-weight:600;color:var(--dust);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ridebar-go{margin-left:auto;padding-left:4px;font-size:1.25rem;line-height:1}
+.ridebar-x{flex:0 0 48px;position:relative;border:0;border-left:1px solid var(--line-d);background:transparent;color:var(--dust);cursor:pointer}
+.ridebar-x::before,.ridebar-x::after{content:"";position:absolute;left:50%;top:50%;width:16px;height:2px;background:currentColor;transform:translate(-50%,-50%) rotate(45deg)}
+.ridebar-x::after{transform:translate(-50%,-50%) rotate(-45deg)}
+@media (hover:hover){.ridebar-a:hover b{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:var(--volt)}.ridebar-x:hover{color:var(--paper)}}
+.ridebar a:focus-visible,.ridebar button:focus-visible{outline:2px solid var(--paper);outline-offset:-5px}
+@media (min-width:900px){.ridebar{left:auto;right:var(--gut);bottom:20px;width:420px;border:1px solid var(--line-d);padding-bottom:0}.ridebar-a{padding-left:16px}}
+@media (prefers-reduced-motion:reduce){.ridebar,.ridebar.is-on{transition:none}}
+/* the first-screen tile: across both finder tiles, the date on the plate (Pass 36) */
+.finder-tile--ride{grid-column:1 / -1;grid-template-columns:auto minmax(0,1fr) auto;column-gap:12px;border-color:var(--volt)}
+.finder-tile--ride .ridebar-d{grid-row:1 / span 2}
+.finder-tile--ride .finder-t,.finder-tile--ride .finder-s{grid-column:2}
+.finder-tile--ride .finder-s{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.finder-tile--ride .ridebar-go{grid-column:3;grid-row:1 / span 2;font-size:1.25rem}
+@media (hover:hover){.finder-tile--ride:hover{border-color:var(--paper)}}

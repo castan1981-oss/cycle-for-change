@@ -97,6 +97,28 @@ const MARK = `<svg class="brand-mark" viewBox="0 0 760 150" aria-hidden="true" f
         <rect class="lp-bar" x="652" y="114" width="98" height="36" fill="#A84C58"/>
       </svg>`;
 
+// Pass 36 (Oct 6, 2026): Robert: "a thing as you scroll down every single page and the homepage above the
+// fold that says ride with me and that essentially gets you to the next event that I'm doing". One list,
+// in date order; everything that says "Ride with me" points at the first one still ahead (`until` is its
+// last day, Phoenix time). /ridebar.js re-picks in the browser, so a page nobody rebuilt never shows a
+// ride that's over. When the list runs out, "Ride with me" goes back to the 2027 list.
+const NEXT_RIDES = [
+  { until: "2026-11-07", date: "Sat Nov 7", name: "Cycling 4 one\u00b7n\u00b7ten", where: "Phoenix", href: "/#ride" },
+  { until: "2027-04-25", date: "Apr 23\u201325", name: "Center Ride Out", where: "LA to Ojai and back", href: "/events/2027/riding/" },
+  { until: "2027-05-23", date: "May 21\u201323", name: "Cycle to Zero", where: "SF to the Russian River", href: "/events/2027/riding/" },
+];
+const RIDES_LIST = "/events/2027/riding/";
+const phxToday = () => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Phoenix" }).format(new Date());
+const NEXT_RIDE = NEXT_RIDES.find((r) => r.until >= phxToday()) || null;
+const RIDE_HREF = NEXT_RIDE ? NEXT_RIDE.href : RIDES_LIST;
+const escH = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+// the bar: hidden until /ridebar.js shows it (and only once /chrome.css or /home.css has placed it)
+const RIDE_BAR = NEXT_RIDE ? `<aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="${NEXT_RIDE.until}" data-rides="${escH(JSON.stringify(NEXT_RIDES))}" hidden>
+    <a class="ridebar-a" href="${NEXT_RIDE.href}" data-ride-next><span class="ridebar-d">${escH(NEXT_RIDE.date)}</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">${escH(NEXT_RIDE.name)}, ${escH(NEXT_RIDE.where)}</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+    <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
+  </aside>
+  <script src="/ridebar.js?v=36" defer></script>` : "";
+
 const n = (v) => (v == null ? "" : `<span>${v}</span>`);
 
 const HEADER = `<a class="skip" href="#main">Skip to content</a>
@@ -114,7 +136,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/">Ride with me</a>
+      <a class="btn btn--sm" href="${RIDE_HREF}" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -125,7 +147,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/">Ride with me <span>The 2027 rides</span></a></li>
+    <li><a href="${RIDE_HREF}" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
     <li><a href="/find-a-ride/">Find a ride ${n(RIDE_COUNT == null ? null : RIDE_COUNT.toLocaleString("en-US"))}</a></li>
     <li><a href="/events/2027/">2027 calendar ${n(CAL_COUNT)}</a></li>
     <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
@@ -141,6 +163,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
 <p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>`;
 
 const FOOTER = `<footer class="foot site-foot">
+  ${RIDE_BAR}
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -161,7 +184,7 @@ const FOOTER = `<footer class="foot site-foot">
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
-        <a href="/events/2027/riding/">Ride with me</a>
+        <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
       <div class="foot-col">
@@ -203,12 +226,12 @@ function pledge({ line, copy } = {}) {
   <p class="pledge-num" aria-hidden="true">10000</p>
   <h2 class="pledge-line" id="pledge-h">${line || "I&rsquo;d like to say I ride for everyone else. I ride because it changed me."}</h2>
   <p class="pledge-copy">${copy || "In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me."}</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/">Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="${RIDE_HREF}" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
 </section>`;
 }
 const PLEDGE = pledge();
 
-module.exports = { SITE, INSTAGRAM, STRAVA, OG_IMAGE, FONTS, MARK, HEADER, FOOTER, PLEDGE, pledge, head, esc, attr };
+module.exports = { NEXT_RIDES, NEXT_RIDE, RIDE_HREF, SITE, INSTAGRAM, STRAVA, OG_IMAGE, FONTS, MARK, HEADER, FOOTER, PLEDGE, pledge, head, esc, attr };
 
 if (require.main === module) {
   // `node scripts/chrome.js` -> the markup as JSON (apply-chrome.py reads it)
