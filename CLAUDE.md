@@ -1,5 +1,15 @@
 # Cycle for Change — project context for automated content
 
+> **PASS 31 — THE ORGS AND THE STEPS, CLEAN (Oct 5, 2026, late).** Robert: "those graphics for the orgs are bad
+> and the icons need to be custom and very classy and easy to understand." The painted route map, the three
+> ride badges and the painted bike lane are gone. Each org card and each How step carries one mark from the
+> house family (24 grid, one 1.7 stroke, round caps; `m-phx` a sun on the road, `m-ojai` the hills, `m-sf` the
+> bridge — new in `rides/marks.svg` and inlined as `#mkPhx/#mkOjai/#mkSF/#mkRide/#mkWrite/#mkOrgs` in
+> build-home.js) in smeared rose at 48px under a 1px hairline; the ride's date sits on the rose `.plate`.
+> Rule from here: graphics on this site are the mark family, drawn clean — never painted, never worn.
+> Still open: the hero photo needs its original (only the graded copy exists in the repo; the source isn't in
+> the stockpile) — when Robert sends it, put it in clean and sharp, no grade, as `img/sign-print-4*.jpg`.
+
 > **PASS 30 — THE FIRST SCREEN, AND CLEAN PAINT (Oct 5, 2026, later).** Robert, on his phone after Pass 29:
 > "these look very sloppy and the above the fold is bad." What was wrong on a phone: the first screen was a
 > picture with a caption and a scribbled mark on it, then half a stencil cut by the fold — no question, no
