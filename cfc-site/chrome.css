@@ -231,6 +231,9 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .stack{margin:0 0 clamp(40px,6vw,80px);font-weight:800;font-size:clamp(4.4rem,21.4vw,13rem);line-height:.84;letter-spacing:-.035em;text-transform:uppercase}
 .stack span{display:block}
 .stack .for{color:var(--creosote-lift)}
+.foot-sign{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(14px,2.4vw,26px);margin:0 0 clamp(40px,6vw,80px);--fw:clamp(240px,52vw,440px)}
+.foot-stencil{display:block;width:var(--fw);height:auto;color:var(--paper)}
+.foot-plate{display:inline-block;box-sizing:border-box;min-width:calc(var(--fw) * .31);background:var(--creosote-lift);color:var(--asphalt);font-weight:900;font-size:calc(var(--fw) * .1);line-height:1.05;padding:calc(var(--fw) * .028) calc(var(--fw) * .045) calc(var(--fw) * .014);margin-left:calc(var(--fw) * .026)}
 .foot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 16px}
 .foot-col{display:flex;flex-direction:column;gap:2px}
 .foot-col .eyebrow{color:var(--dust);margin-bottom:10px}
