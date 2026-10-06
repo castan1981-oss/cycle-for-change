@@ -1,33 +1,52 @@
 <!DOCTYPE html>
+<!--
+  FIELD NOTES — PILLAR (HUB) TEMPLATE
+  A pillar is a hub, not an article. It introduces a place/theme and links
+  DOWN to the route guides (its "spokes"); each spoke links back UP here.
+  To publish a pillar:
+    (This file lives in templates/field-notes/, outside cfc-site/, so it is never
+     published. Moved Oct 6, 2026: the old copy under cfc-site/ was live and indexed.)
+    1. Copy this file to  cfc-site/field-notes/<slug>/index.html
+    2. Replace every {{...}} field below.
+    3. Add one <a class="fn-spoke"> card per spoke (a route-guide slug). Pull
+       the spoke's own title + dek so the card matches the post it links to.
+    4. Add a row to cfc-site/field-notes/index.html (newest first) and add the
+       page to cfc-site/sitemap-pages.xml. Then run python3 scripts/apply-chrome.py.
+    5. Make sure each spoke post links back up to this pillar in its .fn-related.
+  Guardrails: no medical claims; never imply continuous sober-time or relapse;
+  banned words (leverage, synergy, "journey", "passionate about", etc.).
+  Intro copy comes from Robert — leave a .fn-todo block if it isn't ready.
+-->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark">
-  <title>The Carrot Cake Theory — Cycle for Change</title>
-  <meta name="description" content="AI is about to make everything easy to make. The handmade thing gets rarer — and worth more. A cake shop in Japan, and why I ride every mile myself.">
-  <link rel="canonical" href="https://cycleforchange.org/journal/the-carrot-cake-theory/">
+  <meta name="color-scheme" content="light">
+  <title>{{TITLE}} — Field Notes — Cycle for Change</title>
+  <meta name="description" content="{{SEO_DESCRIPTION}}">
+  <link rel="canonical" href="https://cycleforchange.org/field-notes/{{SLUG}}/">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cycle for Change">
-  <meta property="og:url" content="https://cycleforchange.org/journal/the-carrot-cake-theory/">
-  <meta property="og:title" content="The Carrot Cake Theory — Cycle for Change">
-  <meta property="og:description" content="AI is about to make everything easy to make. The handmade thing gets rarer — and worth more. A cake shop in Japan, and why I ride every mile myself.">
+  <meta property="og:url" content="https://cycleforchange.org/field-notes/{{SLUG}}/">
+  <meta property="og:title" content="{{TITLE}} — Field Notes — Cycle for Change">
+  <meta property="og:description" content="{{SEO_DESCRIPTION}}">
   <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Carrot Cake Theory — Cycle for Change">
-  <meta name="twitter:description" content="AI is about to make everything easy to make. The handmade thing gets rarer — and worth more. A cake shop in Japan, and why I ride every mile myself.">
+  <meta name="twitter:title" content="{{TITLE}} — Field Notes — Cycle for Change">
+  <meta name="twitter:description" content="{{SEO_DESCRIPTION}}">
   <meta name="twitter:image" content="https://cycleforchange.org/og-cfc.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/styles.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"The Carrot Cake Theory","description":"AI is about to make everything easy to make. The handmade thing gets rarer — and worth more. A cake shop in Japan, and why I ride every mile myself.","datePublished":"2026-07-23","url":"https://cycleforchange.org/journal/the-carrot-cake-theory/","author":{"@type":"Person","name":"Robert Castan"},"publisher":{"@type":"Organization","name":"Cycle for Change"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"{{TITLE}}","description":"{{SEO_DESCRIPTION}}","url":"https://cycleforchange.org/field-notes/{{SLUG}}/","author":{"@type":"Person","name":"Robert Castan"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/"}}</script>
 </head>
-<body>
+<body id="top">
+
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav site-head" id="nav">
   <div class="wrap nav-in">
@@ -84,50 +103,53 @@
   </div>
 </div>
 <p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
-<main id="main" class="fn-post">
-  <div class="fn-article">
-    <p class="fn-meta"><span><a href="/journal/">Journal</a></span><span class="dot">&middot;</span><span>001</span><span class="dot">&middot;</span><span>Robert</span><span class="dot">&middot;</span><span>July 2026</span><span class="dot">&middot;</span><span>~4 min read</span></p>
-    <h1>The Carrot<br>Cake Theory</h1>
-    <p class="fn-lede">The machines are about to make everything. Except the thing one person made, with their hands, just for you. That's the thing worth protecting.</p>
-    <div class="fn-body">
-  <p>I watched a video the other night. Sam Smith has a food account now. Calls everyone piggies. It's ridiculous and I love it.</p>
-  <p>In this one, they go to a tiny cake shop in Japan. The baker moved there from Brooklyn. He makes carrot cake. Not a thousand carrot cakes. Just what he can make that day. Then he sells them, and he's done.</p>
-  <p>And people line up for it. Not because it's the most efficient cake. Because it's <em>his</em> cake. You can't get it in another city. You can't get it from a chain. You can barely get it from him, because he runs out.</p>
-  <p>I haven't stopped thinking about it.</p>
-  <h2>Everything is about to get easy</h2>
-  <p>Here's what I believe. AI is going to make making things easy. Ten times easier. A hundred. A thousand. More content, more products, more everything, faster and cheaper than we can imagine right now.</p>
-  <p>And when everything is easy to make, easy stops meaning anything. Perfect stops meaning anything. The flood of flawless stuff becomes wallpaper.</p>
-  <p>What gets rare is the opposite. <span class="hl">The thing one human made, in one place, in limited supply.</span> The thing with fingerprints on it.</p>
-  <h2>The variance is the value</h2>
-  <p>That baker's cake is a little different every time. Maybe the carrots were sweeter this week. Maybe he was tired and heavy-handed with the cinnamon. Maybe he put in one teaspoon instead of two — not on purpose. Because he's human.</p>
-  <div class="jr-ledger" aria-label="Same recipe, different cake">
-    <div class="row"><span>Tuesday's cake</span><span>a little more cinnamon</span></div>
-    <div class="row"><span>Thursday's cake</span><span>sweeter carrots, local</span></div>
-    <div class="row"><span>Saturday's cake</span><span>one teaspoon, not two</span></div>
-    <p class="note">Same recipe. Same hands. Never the same cake. That's not a flaw in the system. That is the system.</p>
-  </div>
-  <p>A machine calls that an error. A person calls it Tuesday. The variance isn't the bug. It's the proof someone was there.</p>
-  <h2>Why this is a cycling post, I promise</h2>
-  <p>This is the whole idea behind Cycle for Change.</p>
-  <p>I could raise money a hundred more efficient ways. Automate the asks. Optimize the funnel. I know how — I did that kind of work for a long time.</p>
-  <blockquote>But you can't automate a mile. Somebody has to ride it.</blockquote>
-  <p>10,000 miles, and every single one goes through my legs. Some in the wind. Some in the heat. Some slow, because I'm human and some days are like that. No two rides the same. That's the point. That's what your pledge is attached to — not a number on a dashboard, but a person out on the road, doing a thing that can't be faked or scaled or copied.</p>
-  <p>And the money lands with queer-community organizations doing the same kind of work. Small rooms. Real people. Care that's a little different every day because humans are giving it. You can't mass-produce a safe place for a queer kid. Somebody has to hold the door.</p>
-  <h2>Protect the handmade</h2>
-  <p>I'm not against the machines. I use them every day. They built parts of this website.</p>
-  <p>But the future I want has both. The abundant stuff, and the scarce stuff. The infinite feed, and the guy in Japan who makes eight cakes and goes home.</p>
-  <p>So find your version of the cake shop. The small thing made by one person. Buy it. Line up for it. Tell people about it. Because in a world where everything can be generated, <span class="hl">the handmade thing is the honest thing.</span></p>
-  <p>Me, I'll be on the bike.</p>
-    </div>
-  </div>
-<section class="pledge" aria-labelledby="pledge-h">
+
+<main id="main" class="fn-pillar">
+  <article>
+    <header class="fn-pillar-head">
+      <div class="wrap">
+        <span class="eyebrow">{{KICKER}}</span>
+        <h1>{{TITLE}}</h1>
+        <p class="fn-pillar-intro">
+          <!-- TODO: short intro from Robert — what this hub gathers and why. -->
+          {{INTRO}}
+        </p>
+        <!-- "the line is the log" — same route line as the index masthead. -->
+        <div class="fn-line" aria-hidden="true"><i data-line></i></div>
+      </div>
+    </header>
+
+    <section class="fn-spokes-wrap">
+      <div class="wrap">
+        <h2 class="fn-spokes-head">The route guides</h2>
+        <div class="fn-spokes">
+
+          <!-- One card per spoke slug. Pull the spoke post's title + dek. -->
+          <a class="fn-spoke" href="/field-notes/{{SPOKE_1_SLUG}}/">
+            <span class="fn-spoke-title">{{SPOKE_1_TITLE}}</span>
+            <p class="fn-spoke-dek">{{SPOKE_1_DEK}}</p>
+            <span class="fn-spoke-more">Read the guide →</span>
+          </a>
+
+          <!-- Repeat the .fn-spoke block for each remaining spoke. -->
+
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- The closing block is scripts/chrome.js CHROME.pledge(), as is. Nobody pledges, votes or pays
+       on the site; apply-chrome.py swaps in the current one. Never hand-edit it. -->
+  <section class="pledge" aria-labelledby="pledge-h">
   <p class="pledge-num" aria-hidden="true">10000</p>
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
   <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
   <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/">Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
 </section>
-  <p class="fn-back"><a href="/field-notes/">&larr; More to read</a></p>
+
+  <p class="fn-back"><a href="/field-notes/">← All Field Notes</a></p>
 </main>
+
 <footer class="foot site-foot">
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
