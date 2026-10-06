@@ -27,7 +27,15 @@
     var last = new Date(Date.UTC(y, mo, 0)); return last.getUTCDate() - ((last.getUTCDay() - dow + 7) % 7);
   }
   function pad(n) { return (n < 10 ? "0" : "") + n; }
+  // A ride posted date by date (Oct 6, 2026): the build writes the host's dates still ahead as
+  // data-dates = [[ISO instant, "label"], ...]; the first one still ahead is the next ride.
+  var dated = []; try { dated = art.dataset.dates ? JSON.parse(art.dataset.dates) : []; } catch (e) { dated = []; }
+  var datedLabel = null;
   function next() {
+    if (dated.length) {
+      for (var q = 0; q < dated.length; q++) { var at = new Date(dated[q][0]); if (at > new Date()) { datedLabel = dated[q][1]; return at; } }
+      return null;
+    }
     var tz = art.dataset.tz, time = art.dataset.time, freq = art.dataset.freq;
     if (!tz || !time || freq === "irregular") return null;
     // the host's table of start-time changes ([[from, "HH:MM"], ...], oldest first): the time in force that day
@@ -72,7 +80,7 @@
   if (box) {
     if (t) {
       var tz = art.dataset.tz;
-      var text = new Intl.DateTimeFormat("en-US", { timeZone: tz, weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(t);
+      var text = datedLabel || new Intl.DateTimeFormat("en-US", { timeZone: tz, weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(t);
       var el = box.querySelector("[data-next-text]"); if (el) { el.textContent = text; el.setAttribute("datetime", t.toISOString()); }
       var r = box.querySelector("[data-next-rel]"); if (r) r.textContent = rel(t) + (art.dataset.freq === "biweekly" ? " \u00b7 every other week, confirm which with the host" : "");
       box.hidden = false;

@@ -7,7 +7,8 @@
 
   For every ride it (re)computes:
     tz             IANA zone from state + longitude (split states handled)
-    start_hhmm     24h roll time, preferring "roll 6:30" over "meet 6:00"
+    start_hhmm     24h roll time, preferring "roll 6:30" over "meet 6:00" (tools/lib/ride-time.js);
+                   never over a hand-set time (start_hhmm_by_hand) or one the text states
     duration_min   from `duration` ("~2 hours")
     season_months  {start,end} from `season` / `schedule` ("Apr–Oct")
     monthly_rule   [{ord,day}] from "Second Wednesday", "Last Friday", …
@@ -50,16 +51,10 @@ function tz(r) {
   }
   return ET;
 }
-function hhmm(m) {
-  if (!m) return null;
-  let h = +m[1], mi = +(m[2] || 0); const ap = (m[3] || "").replace(/\./g, "");
-  if (ap === "pm" && h < 12) h += 12; if (ap === "am" && h === 12) h = 0;
-  if (!ap && h <= 6) h += 12;                                            // bare "6:30" on an evening ride
-  if (h > 23 || mi > 59) return null;
-  return String(h).padStart(2, "0") + ":" + String(mi).padStart(2, "0");
-}
-const rollTime = (s) => s ? hhmm(String(s).toLowerCase().match(/(?:roll|rolls|rolling|depart|departs|leave|leaves|ride at|ride out|roll out|rollout|wheels down)[^0-9]{0,14}(\d{1,2})(?::(\d{2}))?\s*(a\.?m\.?|p\.?m\.?)?/)) : null;
-const anyTime = (s) => { if (!s) return null; s = String(s).toLowerCase(); return hhmm(s.match(/(\d{1,2})(?::(\d{2}))?\s*(a\.?m\.?|p\.?m\.?)/) || s.match(/\b(\d{1,2}):(\d{2})\b/)); };
+// Start times come from tools/lib/ride-time.js (Oct 6, 2026): a clock time needs minutes or am/pm, never a
+// speed or a road ("19-20 mph", "leaves A1A"), am/pm comes from the ride's own words, and a time a person set
+// (start_hhmm_by_hand) or one the text states is never overwritten.
+const RT = require("./lib/ride-time.js");
 function duration(s) {
   if (!s) return null; s = String(s).toLowerCase();
   const h = s.match(/(\d+(?:\.\d+)?)\s*(?:-|–|to)?\s*(\d+(?:\.\d+)?)?\s*(?:h|hr|hrs|hour)/); if (h) return Math.round(+h[1] * 60);
@@ -138,10 +133,8 @@ const out = rides.map((r) => {
   }
   // when it rolls
   r.days = (r.days || []).map((d) => String(d).toLowerCase().slice(0, 3)).filter((d) => /^(mon|tue|wed|thu|fri|sat|sun)$/.test(d));
-  if (us || !validHHMM(r.start_hhmm)) {
-    const had = validHHMM(r.start_hhmm) ? r.start_hhmm : null;
-    r.start_hhmm = rollTime(r.schedule) || rollTime(r.time_local) || anyTime(r.time_local) || anyTime(r.schedule) || had;
-  }
+  if (us || !validHHMM(r.start_hhmm)) r.start_hhmm = RT.chooseStart(r);
+  if (r.start_hhmm_by_hand !== true) delete r.start_hhmm_by_hand;
   const dm = duration(r.duration);
   r.duration_min = dm != null ? dm : (Number.isFinite(r.duration_min) ? r.duration_min : null);
   // year-round means year-round, whatever months the schedule names; a season field says the season;

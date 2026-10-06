@@ -251,7 +251,7 @@ then `node tools/build-rides.js`.
 | `slug` | string | `<city>-<st or cc>-<host>-<ride>`, `a-z 0-9 -`, unique. Never changes once published (it is the URL). |
 | `name` / `name_en` | string / string\|null | The host's name for the ride; `name_en` only when `name` isn't English. |
 | `kind` | `group-ride` · `open-streets` · `critical-mass` · `training-series` | Open streets = a city's car-free program (Bogotá's Ciclovía). Training series = the training rides for a charity event. |
-| `status` | `active` · `seasonal-break` · `paused` · `ended` | `status_note`, `status_since` (YYYY-MM-DD) say what and when. Changed day/time is not a status: edit the fields. |
+| `status` | `active` · `seasonal-break` · `paused` · `ended` | `status_note`, `status_since` (YYYY-MM-DD) say what and when. Changed day/time is not a status: edit the fields. A `seasonal-break` ride stays listed but promises nothing: no next ride, no Event markup, no .ics; its page and row say it's on its break and, when the data says, when it's back (its next `dates` entry, or the month its `season_months` starts). |
 | `city`, `neighborhood`, `region` | string | `region` = state name in the US, first-level division elsewhere (Catalonia, Ontario). |
 | `state` | `AZ`… \| null | US only. `null` everywhere else. |
 | `country` | ISO 3166-1 alpha-2 | `US` for the US. |
@@ -259,9 +259,11 @@ then `node tools/build-rides.js`.
 | `tz` | IANA zone | Derived in the US; from the research elsewhere. Drives next-ride dates and the .ics. |
 | `discipline` | array | `road` `gravel` `mtb` `social` `cruiser` `fixed` `track` `cyclocross` `ebike` `mixed` `bmx` |
 | `schedule` | string | The whole rule in plain words, summer/winter differences included. |
-| `days`, `time_local`, `start_hhmm` | array, string, `HH:MM` | `time_local` 12-hour English ("7:30 am"); `start_hhmm` the 24-hour roll time. |
+| `days`, `time_local`, `start_hhmm` | array, string, `HH:MM` | `time_local` 12-hour English ("7:30 am"); `start_hhmm` the 24-hour roll time. derive reads it from `schedule` / `time_local` (`tools/lib/ride-time.js`): a clock time has minutes or am/pm — never a speed ("19-20 mph") or a road ("A1A") — roll beats meet, and am/pm comes from the ride's own words. It never overwrites a time the text states, or one set by hand. |
+| `start_hhmm_by_hand` | `true`\|absent | A person set `start_hhmm` and derive must keep it, whatever the text reads as. Use it when the text holds several times and the right one isn't the first ("5:30 pm; a second lap leaves at 6:30 pm"). |
 | `start_times` | array\|absent | The host's own table of start-time changes, oldest first: `[{ "from": "2026-10-10", "start_hhmm": "07:00" }]`. From `from` (local date) on, the ride starts at that time; before the first entry, at `start_hhmm`. For rides that move with the heat and the light (Tucson's Shootout: 6:30 from the first Saturday of September, 7:00 from the second Saturday of October, 7:30 from the second Saturday of November) or an announced change ("6:30 pm from Oct 7"). The build shows the time in force at the next ride on cards, titles, JSON-LD and live.json, says the coming changes under "When", writes one .ics VEVENT per stretch; ride.js, /tonight/ and the watcher read the table date by date (`startOn` in tools/lib/rides-schema.js). Only what the host published — never a guess. Leave it out when there's no table. |
-| `frequency`, `monthly_rule` | `weekly`·`biweekly`·`monthly`·`irregular`, `[{ord,day}]` | `ord` 1–4 or -1 (last). |
+| `frequency`, `monthly_rule` | `weekly`·`biweekly`·`monthly`·`irregular`, `[{ord,day}]` | `ord` 1–4 or -1 (last). `monthly_rule` is the week-of-month rule ("third Saturday" → `[{ord:3,day:"sat"}]`): the next ride, the JSON-LD (`byMonthWeek`) and the .ics (`RRULE:FREQ=MONTHLY;BYDAY=3SA`) all read it. Only from the host's own words. A `monthly` ride with no rule is posted date by date: it says "Some Saturdays (about once a month)", never "Every Saturday", and its next ride comes only from `dates`. |
+| `dates` | array\|absent | The host's posted dates, `[{ "date": "2026-11-21", "start_hhmm": "09:00" }]` (`start_hhmm` null when the host hasn't posted the time yet). For rides posted date by date (`irregular`, or `monthly` with no rule). Only dates still ahead ever render — next ride, one Event, one .ics VEVENT per date (all-day when there's no time); past ones are ignored, so a stale list just goes quiet. A rule (`days` + `frequency`, `monthly_rule`) wins when there is one. |
 | `season`, `season_months` | string, `{start,end}`\|null | Months inclusive; southern-hemisphere wraps (`{start:10,end:4}`) are fine. |
 | `start_location` | `{name, address}` | |
 | `distance_km`, `distance_miles` | number\|string\|null | US data keeps display text in `distance_miles` ("10–12"). World records give km as a number; miles is filled from it. |
@@ -279,6 +281,18 @@ then `node tools/build-rides.js`.
 | `evidence` | string\|null | One sentence: what the source showed, and its date. |
 | `confidence` | `high` · `medium` · `low` | High: the host's own page states day/time/start and there's a dated 2026 signal. Medium: host page without a recent date, or a dated secondary source. Low: shown with an "Unconfirmed" line and re-checked first. |
 | `refresh` | `{method, watch_url, feed_url, notes}` | How to re-check it. `watch_url`: the one page that changes when the schedule does. `feed_url`: an ICS/iCal or Meetup feed that lists this ride's dates (the watcher reads it on its own). `method`: `ics` `calendar-page` `meetup` `ridewithgps` `eventbrite` `heylo` `spond` `strava-club` `instagram` `facebook` `static-page` `federation-calendar` `news`. |
+
+### List pages and old hub URLs (Oct 6, 2026)
+
+- A short page (a pick inside a place, or its `/all/` list) with exactly the rides of another list page points
+  its canonical at that page (a state, country or city page when one matches; else the copy under the biggest
+  place), and a city hub with exactly its state's or country's rides points at that page. Pages with 2 rides or
+  fewer (short pages, national facets) are `noindex, follow`. Neither kind is in the sitemap; all of them still work.
+- `data/rides-hubs-history.json` lists every list path the build has ever written (a real
+  `node tools/build-rides.js` adds new ones; commit it). Each path that stops being built gets a 301 — the path
+  and everything under it — to the nearest page above it that is built, in a generated block of
+  `cfc-site/_redirects`. Paths `netlify.toml` already redirects are left to it (their subpaths follow its
+  target). Never remove a path from the history.
 
 ### Freshness — how a ride stays on the site (tools/lib/rides-freshness.js)
 

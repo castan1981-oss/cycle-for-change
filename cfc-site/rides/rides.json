@@ -188,6 +188,12 @@
   "start_hhmm": "18:30",
   "frequency": "monthly",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-10-07",
+    "start_hhmm": "18:30"
+   }
+  ],
   "season": "year-round",
   "season_months": null,
   "start_location": {
@@ -2508,6 +2514,12 @@
   "start_hhmm": "09:00",
   "frequency": "monthly",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-11-21",
+    "start_hhmm": "09:00"
+   }
+  ],
   "season": "year-round",
   "season_months": null,
   "start_location": {
@@ -7251,7 +7263,7 @@
    "tue"
   ],
   "time_local": "5:35 am",
-  "start_hhmm": "17:35",
+  "start_hhmm": "05:35",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -14600,6 +14612,12 @@
   "start_hhmm": "08:00",
   "frequency": "monthly",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-10-25",
+    "start_hhmm": null
+   }
+  ],
   "season": "year-round",
   "season_months": null,
   "start_location": {
@@ -17362,7 +17380,8 @@
    "sat"
   ],
   "time_local": "7:30 am",
-  "start_hhmm": "06:30",
+  "start_hhmm": "07:30",
+  "start_hhmm_by_hand": true,
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "October to March",
@@ -18002,6 +18021,20 @@
   "start_hhmm": null,
   "frequency": "monthly",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-10-10",
+    "start_hhmm": null
+   },
+   {
+    "date": "2026-11-15",
+    "start_hhmm": null
+   },
+   {
+    "date": "2026-12-12",
+    "start_hhmm": null
+   }
+  ],
   "season": "year-round",
   "season_months": null,
   "start_location": {
@@ -20249,6 +20282,12 @@
   "start_hhmm": "08:30",
   "frequency": "monthly",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-12-05",
+    "start_hhmm": null
+   }
+  ],
   "season": "year-round",
   "season_months": null,
   "start_location": {
@@ -22142,7 +22181,8 @@
    "sat"
   ],
   "time_local": "8:00 am",
-  "start_hhmm": "07:00",
+  "start_hhmm": "08:00",
+  "start_hhmm_by_hand": true,
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -22221,7 +22261,8 @@
    "sun"
   ],
   "time_local": "8:00 am",
-  "start_hhmm": "07:00",
+  "start_hhmm": "08:00",
+  "start_hhmm_by_hand": true,
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -22305,6 +22346,12 @@
   "start_hhmm": "10:00",
   "frequency": "monthly",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-10-18",
+    "start_hhmm": "10:00"
+   }
+  ],
   "season": "year-round",
   "season_months": null,
   "start_location": {
@@ -24103,6 +24150,16 @@
   "start_hhmm": "09:00",
   "frequency": "monthly",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-10-25",
+    "start_hhmm": "09:00"
+   },
+   {
+    "date": "2026-11-22",
+    "start_hhmm": "08:00"
+   }
+  ],
   "season": "year-round",
   "season_months": null,
   "start_location": {
@@ -24260,6 +24317,16 @@
   "start_hhmm": "17:20",
   "frequency": "monthly",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-10-17",
+    "start_hhmm": "17:20"
+   },
+   {
+    "date": "2026-11-14",
+    "start_hhmm": null
+   }
+  ],
   "season": "year-round",
   "season_months": null,
   "start_location": {
@@ -30165,7 +30232,7 @@
    "thu"
   ],
   "time_local": "7:15 am",
-  "start_hhmm": "13:00",
+  "start_hhmm": "07:15",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -31185,7 +31252,7 @@
    "tue"
   ],
   "time_local": "6:30 pm",
-  "start_hhmm": "18:00",
+  "start_hhmm": "18:30",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -31344,7 +31411,7 @@
    "mon"
   ],
   "time_local": "7:00 am",
-  "start_hhmm": "19:00",
+  "start_hhmm": "07:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -54952,7 +55019,7 @@
    "tue"
   ],
   "time_local": "7:00 pm",
-  "start_hhmm": "07:00",
+  "start_hhmm": "19:00",
   "frequency": "monthly",
   "monthly_rule": [
    {
@@ -55628,7 +55695,8 @@
    "sat"
   ],
   "time_local": "7:00 pm",
-  "start_hhmm": "18:30",
+  "start_hhmm": "19:00",
+  "start_hhmm_by_hand": true,
   "frequency": "monthly",
   "monthly_rule": null,
   "season": "Jun–Oct",
@@ -64430,6 +64498,12 @@
   "start_hhmm": "11:00",
   "frequency": "monthly",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-10-25",
+    "start_hhmm": "11:00"
+   }
+  ],
   "season": "Apr–Oct",
   "season_months": {
    "start": 4,
@@ -64754,6 +64828,12 @@
   "start_hhmm": "19:00",
   "frequency": "monthly",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-10-09",
+    "start_hhmm": "19:00"
+   }
+  ],
   "season": "Mar–Oct",
   "season_months": {
    "start": 3,
@@ -65799,6 +65879,12 @@
   "start_hhmm": "10:30",
   "frequency": "monthly",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-10-11",
+    "start_hhmm": "10:30"
+   }
+  ],
   "season": "Apr–Oct",
   "season_months": {
    "start": 4,
@@ -68435,6 +68521,12 @@
   "start_hhmm": "19:15",
   "frequency": "monthly",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-10-31",
+    "start_hhmm": "19:15"
+   }
+  ],
   "season": null,
   "season_months": null,
   "start_location": {
@@ -76187,7 +76279,8 @@
    "sat"
   ],
   "time_local": "10:05 am",
-  "start_hhmm": "10:30",
+  "start_hhmm": "10:05",
+  "start_hhmm_by_hand": true,
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -78172,7 +78265,8 @@
    "thu"
   ],
   "time_local": "6:00 pm",
-  "start_hhmm": "17:40",
+  "start_hhmm": "18:00",
+  "start_hhmm_by_hand": true,
   "frequency": "weekly",
   "monthly_rule": null,
   "season": null,
@@ -79990,6 +80084,12 @@
   "start_hhmm": "16:45",
   "frequency": "irregular",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-10-26",
+    "start_hhmm": "16:45"
+   }
+  ],
   "season": "Apr–Oct",
   "season_months": {
    "start": 4,
@@ -83605,6 +83705,12 @@
   "start_hhmm": "09:00",
   "frequency": "monthly",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-11-08",
+    "start_hhmm": "09:00"
+   }
+  ],
   "season": null,
   "season_months": null,
   "start_location": {
@@ -84857,9 +84963,23 @@
    "sat"
   ],
   "time_local": "11:30 pm",
-  "start_hhmm": "11:30",
+  "start_hhmm": "23:30",
   "frequency": "monthly",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-10-24",
+    "start_hhmm": "23:30"
+   },
+   {
+    "date": "2026-11-21",
+    "start_hhmm": "23:30"
+   },
+   {
+    "date": "2026-12-25",
+    "start_hhmm": "23:30"
+   }
+  ],
   "season": "year-round",
   "season_months": null,
   "start_location": {
@@ -85429,7 +85549,7 @@
    "mon"
   ],
   "time_local": "6:00 pm",
-  "start_hhmm": "14:00",
+  "start_hhmm": "18:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -94226,7 +94346,8 @@
    "tue"
   ],
   "time_local": "5:30 pm",
-  "start_hhmm": "18:30",
+  "start_hhmm": "17:30",
+  "start_hhmm_by_hand": true,
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -95972,6 +96093,36 @@
   "start_hhmm": null,
   "frequency": "irregular",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-11-15",
+    "start_hhmm": null
+   },
+   {
+    "date": "2026-12-06",
+    "start_hhmm": null
+   },
+   {
+    "date": "2026-12-27",
+    "start_hhmm": null
+   },
+   {
+    "date": "2027-01-17",
+    "start_hhmm": null
+   },
+   {
+    "date": "2027-02-07",
+    "start_hhmm": null
+   },
+   {
+    "date": "2027-02-28",
+    "start_hhmm": null
+   },
+   {
+    "date": "2027-03-21",
+    "start_hhmm": null
+   }
+  ],
   "season": "Nov–Mar",
   "season_months": {
    "start": 11,
@@ -100595,6 +100746,16 @@
   "start_hhmm": "19:30",
   "frequency": "monthly",
   "monthly_rule": null,
+  "dates": [
+   {
+    "date": "2026-10-23",
+    "start_hhmm": "19:30"
+   },
+   {
+    "date": "2026-11-20",
+    "start_hhmm": "19:30"
+   }
+  ],
   "season": "year-round",
   "season_months": null,
   "start_location": null,
