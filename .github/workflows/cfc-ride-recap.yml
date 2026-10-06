@@ -36,7 +36,7 @@ jobs:
 
             GOAL: turn the past week's real training into one honest "Week in
             Miles" Field Notes post — rides + weather — that ties back to the
-            pledge: 10,000 miles in 2027, all on the bike. (The 7,500-mile
+            10,000 miles in 2027, all on the bike. (The 7,500-mile
             swim/bike/run framing is retired — never write it.) Mission first.
 
             1. FETCH the data:
@@ -70,14 +70,14 @@ jobs:
                Do NOT leave any .fn-todo placeholder.
             5. WIRE IT IN:
                  - Add one row to `cfc-site/field-notes/index.html` (newest first).
-                 - Add the new URL to `cfc-site/sitemap.xml`.
+                 - Add the new URL to `cfc-site/sitemap-pages.xml`.
                  - Cross-link 2 related posts at the bottom (.fn-related), prefer
                    other "Place + Miles" posts.
             6. VERIFY against CLAUDE.md: voice, banned-word blocklist, the "never
                use" list (incl. continuous sober-time), SEO (target query in
                <title>/<h1>/<h2> + meta description + canonical), GEO (quotable
                .fn-lede + filled JSON-LD), brand, at least one internal link to
-               /#board. Confirm NO {{PLACEHOLDER}} and no .fn-todo remain. Show
+               /events/2027/riding/ or /#orgs. Confirm NO {{PLACEHOLDER}} and no .fn-todo remain. Show
                pass/fail per item. If something fails you can't fix in one pass,
                open the PR as a DRAFT explaining why.
             7. UPDATE /loop-state.json: append to "shipped" with status "drafted"

@@ -513,7 +513,7 @@ ${BLOCKS.REPORT({ thing: "event", name: e.name, kind: "changed", compact: true, 
   // Search pass (Oct 5, 2026): Event markup only for an edition with a date still ahead (Google requires startDate);
   // an undated, past or on-hold page keeps its WebPage + FAQ markup
   const lds = [upcoming ? ld : null, crumbs.ld, pageLd].filter(Boolean).concat(faqLd ? [faqLd] : []).map(stripUndef);
-  const pledgeHtml = isRiding(e) ? CHROME.pledge({ line: "I&rsquo;m riding this one. Come with me.", copy: `${esc(e.short_name || e.name)} is one of the six rides on my 2027 calendar. Every mile of it counts toward the 10,000, and the money goes through the ride&rsquo;s own sign-up, never through me.` }) : CHROME.PLEDGE;
+  const pledgeHtml = isRiding(e) ? CHROME.pledge({ line: e.next_date && e.next_date < "2027-01-01" ? "I&rsquo;m riding the 2027 one. Come with me." : "I&rsquo;m riding this one. Come with me.", copy: `${esc(e.short_name || e.name)} is one of the six rides on my 2027 calendar. Every mile of it counts toward the 10,000, and the money goes through the ride&rsquo;s own sign-up, never through me.` }) : CHROME.PLEDGE;
   return head({ title, description, url: e.url, ld: lds, ogType: "article" }) + body + foot(pledgeHtml);
 }
 

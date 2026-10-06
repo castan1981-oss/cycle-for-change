@@ -24,6 +24,11 @@ function rideNumbers() {
 }
 const RN = rideNumbers();
 const RIDES_N = RN.rides.toLocaleString("en-US");
+// Oct 6, 2026: the other counts on the page come from the files too (it said 12 guides with 11, 12 towns with 16)
+const ROOT = path.join(__dirname, "..");
+const CAL_N = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "calendar-2027.json"), "utf8")).events.length.toLocaleString("en-US"); } catch (e) { return "640"; } })();
+const TOWNS_N = fs.readdirSync(path.join(ROOT, "data", "towns")).filter((f) => f.endsWith(".json") && !f.startsWith("_")).length;
+const GUIDES_N = fs.readdirSync(path.join(ROOT, "cfc-site", "guides"), { withFileTypes: true }).filter((d) => d.isDirectory()).length;
 
 // The mark, stacked, as the page's headline. Same glyphs as the one-line mark in chrome.js.
 const STACK = (cls = "") => `<svg class="sign-mark ${cls}" viewBox="-10 -10 370 350" aria-hidden="true" focusable="false">
@@ -201,7 +206,7 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
     </div>
     <div class="road-side">
       <figure class="road-film">
-        <video id="roadVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/road-film.jpg" width="864" height="1080" aria-label="Eighteen seconds of this year's rides: the road over the bars, a drone overhead, the desert, riders up ahead.">
+        <video id="roadVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/road-film.jpg" width="864" height="1080" aria-label="Eighteen seconds of my rides: the road over the bars, a drone overhead, the desert, riders up ahead.">
           <source src="/film/road-film.mp4" type="video/mp4">
         </video>
         <button class="road-film-btn" id="roadBtn" type="button">Watch the last ride</button>
@@ -294,8 +299,8 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
         <svg class="lane-dash" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g filter="url(#lpWornSoft)" fill="var(--paper)" stroke="var(--mute)" stroke-width="2"><rect x="0" y="14" width="56" height="8"/><rect x="88" y="14" width="56" height="8"/><rect x="176" y="14" width="56" height="8"/><rect x="264" y="14" width="56" height="8"/><rect x="352" y="14" width="56" height="8"/><rect x="440" y="14" width="56" height="8"/><rect x="528" y="14" width="56" height="8"/></g></svg>
         <dl class="facts-dl">
           <div><dt>Group rides</dt><dd><a href="/rides/">${RIDES_N}</a></dd></div>
-          <div><dt>On the 2027 calendar</dt><dd><a href="/events/2027/">640</a></dd></div>
-          <div><dt>Town guides</dt><dd><a href="/towns/">12</a></dd></div>
+          <div><dt>On the 2027 calendar</dt><dd><a href="/events/2027/">${CAL_N}</a></dd></div>
+          <div><dt>Town guides</dt><dd><a href="/towns/">${TOWNS_N}</a></dd></div>
           <div><dt>My 2027 rides</dt><dd><a href="/events/2027/riding/">Six, so far</a></dd></div>
         </dl>
       </div>
@@ -322,8 +327,8 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
     <ul class="read-list">
       <li><a href="/field-notes/south-mountain-climb/"><b>South Mountain at sunset</b><span>Down Central from uptown, through downtown into South Phoenix, up the mountain as the light goes.</span></a></li>
       <li><a href="/field-notes/paradise-valley-loop/"><b>The Paradise Valley loop</b><span>The loop around Camelback and Mummy Mountain. Early, before the heat, with the whole valley below.</span></a></li>
-      <li><a href="/journal/the-carrot-cake-theory/"><b>The carrot cake theory</b><span>On why the hard part of a long ride is never the ride.</span></a></li>
-      <li><a href="/guides/"><b>All 12 guides</b><span>Your first charity ride, pledge-per-mile fundraising, the packing list, what happened to AIDS/LifeCycle.</span></a></li>
+      <li><a href="/journal/the-carrot-cake-theory/"><b>The carrot cake theory</b><span>Why the handmade thing is the honest thing.</span></a></li>
+      <li><a href="/guides/"><b>All ${GUIDES_N} guides</b><span>Your first charity ride, the packing list, hitting your fundraising minimum, what happened to AIDS/LifeCycle.</span></a></li>
     </ul>
   </div>
 </section>

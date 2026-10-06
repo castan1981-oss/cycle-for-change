@@ -540,7 +540,7 @@ for (const c of CATS) {
 if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert\u2019s rides", list: riding,
   h1: "The 2027 rides I&rsquo;m doing", title: "The 2027 rides I'm doing for Cycle for Change",
   description: `The ${riding.length} organized rides Robert is riding in 2027 as part of the 10,000 miles, with dates, distances and sign-up links.`,
-  lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one.</p>`,
+  lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one.</p>${TODAY <= "2026-11-07" ? `\n    <p class="cal-lead">Before these: Cycling 4 one&middot;n&middot;ten, Saturday, Nov 7, 2026, in Phoenix. <a href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer">Sign up on RunSignup &#8599;</a></p>` : ""}`,
   after: `\n    ${PH.figure("robert-peace")}` });
 
 // the calendar's own page: two questions, then the deep pages and the full list
@@ -591,7 +591,7 @@ body += `
     ${crumbs("All")}
     <p class="eyebrow" id="eyebrow">${events.length} events &middot; <b>${nConf} confirmed</b> &middot; ${nProj} projected &middot; ${nTba} tba &middot; updated ${esc(updatedLong)}</p>
     <h1>All 2027 bike rides &amp; races</h1>
-    <p class="lede">Every organized ride and race in the US next year that we could pin down: ${events.length} events, ${nConf} with dates published by the organizer. <span class="k key-conf">Confirmed</span> means the organizer has published the 2027 date. <span class="k key-proj">Projected</span> means it is placed on the same weekend as the 2026 edition — check before you register.</p>
+    <p class="lede">Every organized ride and race in the US in 2027 that we could pin down: ${events.length} events, ${nConf} with dates published by the organizer. <span class="k key-conf">Confirmed</span> means the organizer has published the 2027 date. <span class="k key-proj">Projected</span> means it is placed on the same weekend as the 2026 edition — check before you register.</p>
 
     <section class="controls" aria-label="Filters">
       <div class="search">
@@ -624,6 +624,16 @@ ${CAUSE_ORDER.filter((c) => byCause.has(c)).map((c) => `          <button class=
     </section>
 
 ${""}`;
+// The calendar row for an event that has its own page (/events/<slug>/). Names first, then a calendar name that
+// contains the page's ("Seattle to Portland Bicycle Classic (STP)"), then the exact same URL. Oct 6, 2026: matching
+// on the site's host alone gave STP Chilly Hilly's date, BWR California BWR Arizona's, Leadville Silver Rush's.
+function deepMatch(d) {
+  const norm = (x) => String(x || "").toLowerCase().replace(/[^a-z0-9]+/g, "");
+  const bare = (u) => String(u || "").replace(/^https?:\/\/(www\.)?/, "").replace(/\/+$/, "");
+  return events.find((e) => norm(e.name) === norm(d.name) || (d.short_name && norm(e.name) === norm(d.short_name)))
+    || events.find((e) => norm(d.name) && norm(e.name).includes(norm(d.name)))
+    || events.find((e) => d.website && e.url && bare(e.url) === bare(d.website));
+}
 function DEEP_HTML() {
   let deep = null;
   try { deep = JSON.parse(fs.readFileSync(path.join(ROOT, "cfc-site", "events", "events.json"), "utf8")); } catch (e) { return ""; }
@@ -633,7 +643,7 @@ function DEEP_HTML() {
   const norm = (x) => String(x || "").toLowerCase().replace(/[^a-z0-9]+/g, "");
   const tile = (d) => {
     // the 2027 date comes from this calendar (matched by name); the events feed's next_date may still be 2026
-    const cal = events.find((e) => norm(e.name) === norm(d.name) || norm(e.name) === norm(d.short_name) || (d.website && e.url && host(e.url) === host(d.website)));
+    const cal = deepMatch(d);
     const dt = cal && cal.start ? `${cal.start.slice(5, 7)}.${cal.start.slice(8, 10)}` : "TBA";
     const slug = String(d.town || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
     const art = fs.existsSync(path.join(ROOT, "cfc-site", "towns", "art", `${slug}.svg`)) ? `<img class="tile-art" src="/towns/art/${slug}.svg" alt="" loading="lazy" decoding="async" width="200" height="200">` : "";

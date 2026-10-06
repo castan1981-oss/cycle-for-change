@@ -980,7 +980,7 @@ You write content for cycleforchange.org. Follow these rules on every run.
   Fill in the page-specific parts only.
 - Publishing a post = three edits, all by hand (no loader): create the
   `<slug>/index.html`, add one row to `cfc-site/field-notes/index.html` (newest
-  first), and add the URL to `cfc-site/sitemap.xml`.
+  first), and add the URL to `cfc-site/sitemap-pages.xml` (sitemap.xml is the index).
 - Every content page links `/chrome.css` then `/styles.css` (absolute paths) so
   it inherits the brand. Do not inline a different stylesheet.
 - The header, menu, tally line, pledge block and footer are shared: edit
@@ -1029,10 +1029,10 @@ You write content for cycleforchange.org. Follow these rules on every run.
   "excited to share."
 
 ## Mission first
-- Every page ties back to the pledge (10,000 miles, all on the bike, 2027) and the cause.
+- Every page ties back to the 10,000 (miles, all on the bike, 2027) and the orgs.
   The old 7,500-mile swim/bike/run framing is retired — never write it.
-- At least one internal link toward the pledge. The pledge form lives on
-  `/pledge/` (since Sept 27, 2026), so the canonical internal link is `/pledge/`.
+- At least one internal link toward the orgs (`/#orgs`) or Ride with me (`/events/2027/riding/`).
+  `/pledge/` is gone (301 home, Oct 5, 2026); never link it.
 - Topics live at the intersection of cycling/endurance and queer mental health.
 
 ## Health-content safety (queer mental health is YMYL — handle with care)
@@ -1052,7 +1052,7 @@ You write content for cycleforchange.org. Follow these rules on every run.
   match the page (headline, description, datePublished, url, author "Robert
   Castan", publisher Cycle for Change).
 - Cross-link 2 related posts at the bottom of each post (same tag where
-  possible), and link every post from the index. Add new URLs to `sitemap.xml`.
+  possible), and link every post from the index. Add new URLs to `sitemap-pages.xml`.
 
 ## Brand on content pages — Creosote house (Sept 27, 2026)
 - Tokens come from `/chrome.css` and are the homepage's: bone #E8DFD0, bone-2
