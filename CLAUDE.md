@@ -1,5 +1,16 @@
 # Cycle for Change — project context for automated content
 
+> **PASS 29 — THE TYPE, RETYPED (Oct 5, 2026, late).** Robert: "it can't look sloppy, people are using
+> the site." Every sheet (`home.css`, `chrome.css`, `styles.css`, `events.css`, `rides.css`, `calendar.css`,
+> `tonight.css`) lost its tracked mono caps: each rule that had `text-transform:uppercase` now has `none`,
+> positive `letter-spacing` is 0, and nothing is under 12px. What stands (the Pass 29 block at the foot of
+> chrome.css and home.css): eyebrows and kickers in sentence case, 13px / 700, gunmetal; `.link` at 15px /
+> 700 with the hairline and the arrow; **buttons alone keep caps** — a road sign — 13px / 800 / .04em.
+> Never write a new tracked-caps label; put it in sentence case. The homepage's "How this works" shows its
+> three marks on phones too (`.step-mk`, one per step), the one·n·ten badge is a loop on the Phoenix grid
+> with one diagonal (not a ring — the ring is retired), the orgs cards stack badge-over-words at every
+> width, and the SF date clears its plate. All of it lives in `scripts/build-home.js` — rebuild, don't hand-edit.
+
 > **PASS 27 — LANE PAINT, ON THE ROAD (Oct 6, 2026).** The homepage's graphics are things a city paints:
 > the sign is the stencil over ONE screenprint of Robert and Caleb (`tools/print.py` → `img/sign-print-3.jpg`
 > + `-2-phone.jpg`; bump the number when the picture changes, phones cache it; four inks + rose spot; the only print on the site, signed with the painter's mark

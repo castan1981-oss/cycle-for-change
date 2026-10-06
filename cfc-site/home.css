@@ -73,11 +73,11 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .eyebrow{
   margin:0;
   font-family:var(--mono);
-  font-size:11px;
-  font-weight:400;
+  font-size:12px;
+  font-weight:700;
   line-height:1.4;
-  letter-spacing:.16em;
-  text-transform:uppercase;
+  letter-spacing:0;
+  text-transform:none;
 }
 .h1,.h2,.h3{margin:0;font-weight:800;text-wrap:balance}
 .h1{font-size:clamp(2.75rem,4.6vw + 1.4rem,4.75rem);line-height:.94;letter-spacing:-.035em}
@@ -118,10 +118,10 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   border-radius:0;
   background:transparent;
   font-family:var(--mono);
-  font-size:11.5px;
+  font-size:12px;
   font-weight:700;
-  letter-spacing:.14em;
-  text-transform:uppercase;
+  letter-spacing:0;
+  text-transform:none;
   text-decoration:none;
   white-space:nowrap;
   cursor:pointer;
@@ -146,9 +146,9 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   padding-bottom:6px;
   border-bottom:1px solid currentColor;
   font-family:var(--mono);
-  font-size:11px;
-  letter-spacing:.16em;
-  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:0;
+  text-transform:none;
   text-decoration:none;
   white-space:nowrap;
 }
@@ -165,9 +165,9 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   text-decoration:none;
   padding:10px var(--gut);
   font-family:var(--mono);
-  font-size:10.5px;
-  letter-spacing:.14em;
-  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:0;
+  text-transform:none;
   border-bottom:1px solid var(--line-d);
 }
 .announce b{font-weight:700}
@@ -202,7 +202,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
    currentColor arc and hub go bone and the creosote arc lifts a step so it still reads. */
 .brand .brand-mark{display:block;height:22px;width:auto;color:var(--asphalt)}
 .brand-mark .lp-bar{fill:var(--creosote)}
-.brand-word{font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.brand-word{font-weight:800;font-size:12.5px;letter-spacing:0;text-transform:none;white-space:nowrap}
 .brand-word i{color:var(--creosote-ink)}
 .brand-word i{font-style:normal}
 @media (max-width:899px){
@@ -246,7 +246,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .menu-close::after{transform:rotate(-45deg)}
 .menu-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
 .menu-list a{display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:800;font-size:clamp(2rem,9.5vw,2.75rem);line-height:1;letter-spacing:-.03em}
-.menu-list a span{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.16em;color:var(--mute)}
+.menu-list a span{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:0;color:var(--mute)}
 .menu-foot{margin-top:auto;font-size:15px;color:var(--mute);display:flex;flex-direction:column;gap:6px}
 .menu-foot b{color:var(--asphalt)}
 
@@ -299,8 +299,8 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   font-family:var(--mono);
   font-size:.75rem;   /* 12px; scales with the phone's text size */
   line-height:1.4;
-  letter-spacing:.18em;
-  text-transform:uppercase;
+  letter-spacing:0;
+  text-transform:none;
   color:var(--asphalt);
 }
 .kicker i{font-style:normal;color:var(--mute)}
@@ -317,7 +317,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .film-btn{display:none;background:none;border-width:0 0 1px;padding:0 0 6px;cursor:pointer;color:var(--mute)}
 .film-btn::after{content:none}
 .hero-film{display:none}
-.btn--hero{min-height:52px;padding:0 10px;font-size:.6875rem;letter-spacing:.1em;background:transparent;color:var(--asphalt);border-color:var(--asphalt)}
+.btn--hero{min-height:52px;padding:0 10px;font-size:.6875rem;letter-spacing:0;background:transparent;color:var(--asphalt);border-color:var(--asphalt)}
 @media (hover:hover){.btn--hero:hover{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}}
 @media (max-width:359px){.hero-acts{grid-template-columns:minmax(0,1fr)}}
 .hero .link{color:var(--asphalt)}
@@ -328,7 +328,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 @keyframes ping{0%{transform:scale(.4);opacity:.9}70%,100%{transform:scale(1.25);opacity:0}}
 
 .how-lede{color:var(--mute);max-width:48ch;font-size:clamp(1.05rem,.6vw + .95rem,1.3rem)}
-.road-tally{margin:0 0 14px;font-family:var(--mono);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dust);line-height:1.5}
+.road-tally{margin:0 0 14px;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--dust);line-height:1.5}
 .road-tally b{font-weight:700;color:var(--bone)}
 
 .specs{
@@ -341,7 +341,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .specs div + div{padding-left:16px;border-left:1px solid var(--line-d)}
 .specs div:not(:last-child){padding-right:12px}
 .specs dd{margin:0;font-weight:800;font-size:clamp(1.75rem,2.2vw + 1.2rem,3.25rem);line-height:1;letter-spacing:-.03em}
-.specs dt{font-family:var(--mono);font-size:9.5px;line-height:1.35;letter-spacing:.13em;text-transform:uppercase;color:var(--dust)}
+.specs dt{font-family:var(--mono);font-size:12px;line-height:1.35;letter-spacing:0;text-transform:none;color:var(--dust)}
 
 @media (min-width:900px){
   .hero{display:grid;align-items:end;min-height:clamp(620px,84svh,880px)}
@@ -375,7 +375,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   .hero-copy .h1{max-width:600px}
   .kicker{font-size:.8125rem}
   .hero-acts{grid-template-columns:repeat(4,minmax(0,1fr));max-width:760px}
-  .btn--hero{padding:0 18px;font-size:.71875rem;letter-spacing:.14em}
+  .btn--hero{padding:0 18px;font-size:.71875rem;letter-spacing:0}
   .nav .btn--sm{display:inline-flex}
   .specs{max-width:640px}
   .specs dt{font-size:10.5px}
@@ -387,7 +387,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .fact{padding:20px 0;display:flex;flex-direction:column;gap:2px}
 .fact + .fact{padding-left:16px;border-left:1px solid var(--line)}
 .fact b{font-weight:800;font-size:clamp(1.35rem,1.6vw + 1rem,2.25rem);line-height:1;letter-spacing:-.03em}
-.fact span{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.fact span{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute)}
 @media (min-width:900px){.fact{padding:24px 0;flex-direction:row;align-items:baseline;gap:12px}.fact + .fact{padding-left:32px}.fact span{font-size:11px}}
 /* Pass 5: the mechanism in one sentence, right under the three facts (the strongest
    claim the site makes: 100% to the orgs, the money never touches Robert) */
@@ -409,12 +409,12 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 /* —— rows (facts in a list) —— */
 .rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .rows li{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line)}
-.rows .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.rows .k{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute)}
 .rows .v{font-weight:800;font-size:1.2rem;letter-spacing:-.02em;white-space:nowrap}
-.rows .v small{font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;margin-left:4px}
+.rows .v small{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:0;text-transform:none;margin-left:4px}
 
 .chips{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;border:0;margin:0;padding:0;min-width:0}
-.chips legend{padding:0;margin-bottom:10px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dust)}
+.chips legend{padding:0;margin-bottom:10px;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--dust)}
 .chip{position:relative}
 .chip input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
 .chip span{display:grid;place-items:center;min-height:50px;border:1px solid rgba(232,223,208,.4);font-weight:800;font-size:1.2rem;letter-spacing:-.02em;transition:background-color .15s ease,color .15s ease}
@@ -422,21 +422,21 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .chip input:focus-visible + span{outline:2px solid var(--bone);outline-offset:3px}
 .chips--bone .chip span{border-color:var(--asphalt);min-height:56px;font-size:1.05rem;gap:2px;align-content:center}
 /* Pass 5: every chip says what it adds up to */
-.chip small{font-family:var(--mono);font-weight:400;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);line-height:1.2}
+.chip small{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute);line-height:1.2}
 .chips--bone .chip input:checked + span small{color:var(--dust)}
 .chips--bone .chip input:checked + span{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}
 .chips--bone .chip input:focus-visible + span{outline-color:var(--asphalt)}
 .chips--bone legend{color:var(--asphalt)}
-.calc-line{margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.calc-line{margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute)}
 .calc-line b{font-family:var(--display);font-weight:800;letter-spacing:-.03em;text-transform:none}
 .calc-line > b{font-size:1.6rem;color:var(--asphalt)}
-.calc-kit b{font-size:inherit;font-family:var(--mono);font-weight:700;letter-spacing:inherit;text-transform:uppercase;color:var(--asphalt)}
+.calc-kit b{font-size:inherit;font-family:var(--mono);font-weight:700;letter-spacing:inherit;text-transform:none;color:var(--asphalt)}
 
 /* —— how it works: a real sequence, so it's numbered —— */
 .steps{list-style:none;margin:0;padding:0;display:grid;gap:0}
 .steps li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 12px;padding:22px 0;border-top:1px solid var(--asphalt)}
 .steps .mk--big{grid-column:1;grid-row:1 / span 3;width:32px;height:32px;margin:2px 0 0}
-.steps .n{grid-column:2;font-family:var(--mono);font-size:11px;letter-spacing:.16em;padding-top:0}
+.steps .n{grid-column:2;font-family:var(--mono);font-size:11px;letter-spacing:0;padding-top:0}
 .steps p{grid-column:2;margin:0;color:var(--mute);max-width:40ch}
 @media (min-width:900px){
   .steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px)}
@@ -451,8 +451,8 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .board-copy{display:flex;flex-direction:column;gap:18px}
 .form{display:flex;flex-direction:column;gap:22px;max-width:460px;margin-top:10px}
 .f{display:flex;flex-direction:column;gap:6px}
-.lab{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
-.lab i{font-style:normal;color:var(--mute);letter-spacing:.1em}
+.lab{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
+.lab i{font-style:normal;color:var(--mute);letter-spacing:0}
 .field{
   width:100%;
   margin:0;
@@ -471,12 +471,12 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .check{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--mute)}
 .check input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--asphalt)}
 .form .btn{align-self:flex-start;min-width:180px}
-.ok{margin:0;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.ok{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
 /* Pass 5: hints, the org choice, the note under the button, the thank-you state */
 .hint{margin:0;font-size:13.5px;line-height:1.4;color:var(--mute);max-width:40ch}
 .orgpick{border:0;margin:0;padding:0;min-width:0;display:grid;gap:0}
-.orgpick legend{padding:0;margin-bottom:8px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-.orgpick legend i{font-style:normal;color:var(--mute);letter-spacing:.1em}
+.orgpick legend{padding:0;margin-bottom:8px;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
+.orgpick legend i{font-style:normal;color:var(--mute);letter-spacing:0}
 .orgpick label{display:grid;grid-template-columns:20px minmax(0,1fr);gap:0 12px;align-items:start;padding:11px 0;border-top:1px solid var(--line);font-size:16px;line-height:1.3;cursor:pointer}
 .orgpick label:last-of-type{border-bottom:1px solid var(--line)}
 .orgpick input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--asphalt)}
@@ -505,23 +505,23 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .slots li:last-child{border-bottom:0}
 .slots .n{justify-self:start;min-width:40px;padding:5px 0 4px;border:1px solid var(--asphalt);font-weight:800;font-size:13px;line-height:1;letter-spacing:.02em;text-align:center;font-variant-numeric:tabular-nums}   /* the bib */
 .slots li.nobib{grid-template-columns:minmax(0,1fr) auto}
-.slots .name{font-weight:800;font-size:clamp(1.5rem,1.6vw + 1.1rem,2.4rem);line-height:1;letter-spacing:-.03em;text-transform:uppercase;overflow-wrap:anywhere}
+.slots .name{font-weight:800;font-size:clamp(1.5rem,1.6vw + 1.1rem,2.4rem);line-height:1;letter-spacing:-.03em;text-transform:none;overflow-wrap:anywhere}
 .slots .open{color:var(--mute)}   /* dust on paper doesn't read; mute does */
-.slots .open:not(#slotYou){font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.16em;color:var(--mute);align-self:end;padding-bottom:2px}   /* an open line: the number and a quiet word */
-.slots .org{grid-column:2;display:block;padding:0;border:0;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-top:2px}   /* .org is also the vote section's card class; reset it here */
-.slots .more{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
-.slots .ago{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);white-space:nowrap;align-self:start;padding-top:4px}
+.slots .open:not(#slotYou){font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:0;color:var(--mute);align-self:end;padding-bottom:2px}   /* an open line: the number and a quiet word */
+.slots .org{grid-column:2;display:block;padding:0;border:0;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute);margin-top:2px}   /* .org is also the vote section's card class; reset it here */
+.slots .more{display:block;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute)}
+.slots .ago{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute);white-space:nowrap;align-self:start;padding-top:4px}
 /* the swag: four poster tiles */
 .swag{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}
 .swag li{display:flex;flex-direction:column;justify-content:space-between;gap:22px;min-height:150px;padding:14px 14px 12px;background:var(--bone-2)}
 .swag li:nth-child(4n+2),.swag li:nth-child(4n+3){background:var(--paper)}
 .mk--swag{width:36px;height:36px;color:var(--creosote-ink)}
 .swag b{display:block;font-weight:800;font-size:1.7rem;line-height:1;letter-spacing:-.03em}
-.swag span{display:block;margin-top:5px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--creosote-ink)}
+.swag span{display:block;margin-top:5px;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--creosote-ink)}
 .tiers{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--asphalt)}
 .tiers li{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
 .tiers b{font-weight:800;font-size:1.5rem;letter-spacing:-.03em}
-.tiers span{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:right}
+.tiers span{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;text-align:right}
 .tiers-note{margin-top:12px;font-size:15px}
 @media (min-width:900px){.swag{grid-template-columns:repeat(4,minmax(0,1fr))}.swag li:nth-child(4n+2),.swag li:nth-child(4n+3){background:var(--bone-2)}.swag li:nth-child(2n){background:var(--paper)}}
 @media (min-width:900px){.board-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
@@ -533,7 +533,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .org{display:flex;flex-direction:column;gap:10px;padding:24px 0;border-top:1px solid rgba(246,241,231,.34)}
 .org p{margin:0;max-width:44ch;flex:1 0 auto}
 .org-acts{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:10px}
-.vote-msg{margin:20px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.vote-msg{margin:20px 0 0;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
 .orgs-foot{margin-top:clamp(24px,3vw,40px);display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
 .orgs-foot .p{color:rgba(246,241,231,.95);font-size:15.5px;max-width:44ch}
 .org .btn[aria-pressed="true"]{background:var(--paper);border-color:var(--paper);color:var(--creosote);opacity:1}
@@ -572,7 +572,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .dir-row{display:flex;gap:10px;align-items:stretch}
 .dir-row .field{flex:1 1 auto;min-width:0;font-size:18px;padding:8px 0}
 .dir-row .btn{flex:0 0 auto;min-height:46px}
-.dir-quick{margin:0;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);display:flex;flex-wrap:wrap;gap:6px 16px}
+.dir-quick{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute);display:flex;flex-wrap:wrap;gap:6px 16px}
 .dir-quick a{color:var(--asphalt)}
 .tiles{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--asphalt)}
 .tile{display:grid;grid-template-columns:28px 52px minmax(0,1fr);gap:2px 12px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none}
@@ -588,7 +588,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 /* —— 2027: six dates —— */
 .season{margin-top:clamp(40px,6vw,80px)}
 /* the next thing on the calendar (this used to be a bar above the nav) */
-.next-up{margin:0 0 clamp(20px,3vw,32px);display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding:12px 0;border-top:1px solid var(--asphalt);border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.next-up{margin:0 0 clamp(20px,3vw,32px);display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding:12px 0;border-top:1px solid var(--asphalt);border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute)}
 .next-up b{color:var(--asphalt);font-weight:700}
 .next-up a{color:var(--asphalt)}
 /* Pass 8: the 2027 route map (tools/route-map.py), the lower 48 as one stroke, the six rides, Phoenix as home */
@@ -608,11 +608,11 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .ride{border-bottom:1px solid var(--line)}
 .ride a{display:grid;grid-template-columns:86px minmax(0,1fr);gap:4px 14px;padding:18px 0;text-decoration:none}
 .ride .d{grid-row:1 / span 3;font-weight:800;font-size:1.9rem;line-height:1;letter-spacing:-.04em}
-.ride .d small{display:block;margin-top:7px;line-height:1.45;font-family:var(--mono);font-weight:400;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.ride .d small{display:block;margin-top:7px;line-height:1.45;font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute)}
 .ride .what{grid-column:2;display:flex;flex-direction:column;gap:5px;min-width:0}
-.ride .spec{font-family:var(--mono);font-size:10.5px;line-height:1.5;letter-spacing:.1em;text-transform:uppercase}
+.ride .spec{font-family:var(--mono);font-size:12px;line-height:1.5;letter-spacing:0;text-transform:none}
 .ride .for{grid-column:2;font-size:15px;color:var(--mute)}
-.tag{justify-self:start;align-self:start;display:inline-block;margin-top:4px;padding:3px 7px;border:1px solid var(--asphalt);font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.tag{justify-self:start;align-self:start;display:inline-block;margin-top:4px;padding:3px 7px;border:1px solid var(--asphalt);font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;white-space:nowrap}
 .tag--soft{border-style:dashed;color:var(--mute);border-color:var(--mute)}
 .ride .tag{grid-column:2}
 @media (hover:hover){.ride a:hover .h3{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}}
@@ -633,10 +633,10 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 /* Pass 8: the bar is the ride, its length the miles against the longest ride shown; volt on tar is "live" */
 .bar-mi{display:block;height:6px;background:var(--dust);opacity:.45;transform-origin:left;transform:scaleX(var(--w,0))}
 .log li:first-child .bar-mi{background:var(--volt);opacity:1}
-.log .when{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dust)}
+.log .when{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--dust)}
 .log .when b{display:block;margin-top:4px;font-family:var(--display);font-weight:800;font-size:1.25rem;letter-spacing:-.02em;text-transform:none;color:var(--bone)}
 .log .mi{font-weight:800;font-size:1.6rem;letter-spacing:-.03em}
-.log .mi small{font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.12em;margin-left:4px;color:var(--dust)}
+.log .mi small{font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:0;margin-left:4px;color:var(--dust)}
 .chart-card{display:flex;flex-direction:column;gap:14px;min-width:0}
 .chart-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .chart-head p{margin:0}
@@ -644,7 +644,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .chart svg{display:block;width:100%;height:auto;overflow:visible}
 .tip{position:absolute;top:0;left:0;z-index:3;pointer-events:none;padding:8px 10px;background:var(--bone);color:var(--asphalt);white-space:nowrap;transform:translate(-50%,-100%)}
 .tip b{display:block;font-weight:800;font-size:1.05rem;letter-spacing:-.02em;line-height:1.1}
-.tip span{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.tip span{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute)}
 @media (min-width:900px){.log-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:end}}
 /* Pass 5: the homepage's own log — dated rows that change, so the page is never a poster */
 .road{display:grid;gap:clamp(24px,3vw,40px)}
@@ -666,7 +666,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   mask-image:linear-gradient(to bottom,transparent 0,#000 2.5%,#000 97.5%,transparent 100%),linear-gradient(to right,transparent 0,#000 2.5%,#000 97.5%,transparent 100%);
   mask-composite:intersect}
 @media (min-width:900px){.road-film video{aspect-ratio:4/5}}
-.road-film-btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:6px;padding:0 14px 0 0;background:none;border:0;color:var(--dust);font-family:var(--mono);font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+.road-film-btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:6px;padding:0 14px 0 0;background:none;border:0;color:var(--dust);font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;cursor:pointer}
 .road-film-btn::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--dust)}
 .road-film-btn[data-playing="true"]{color:var(--bone)}
 .road-film-btn[data-playing="true"]::before{background:var(--volt)}
@@ -722,7 +722,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 
 /* —— footer —— */
 .foot{background:var(--asphalt);color:var(--bone);padding-block:clamp(48px,7vw,96px) 32px}
-.stack{margin:0 0 clamp(40px,6vw,80px);font-weight:800;font-size:clamp(4.4rem,21.4vw,13rem);line-height:.84;letter-spacing:-.035em;text-transform:uppercase}
+.stack{margin:0 0 clamp(40px,6vw,80px);font-weight:800;font-size:clamp(4.4rem,21.4vw,13rem);line-height:.84;letter-spacing:-.035em;text-transform:none}
 .stack span{display:block}
 .stack .for{color:var(--creosote-lift)}
 .foot-sign{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(14px,2.4vw,26px);margin:0 0 clamp(40px,6vw,80px);--fw:clamp(240px,52vw,440px)}
@@ -741,7 +741,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .foot-crisis{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;margin-top:clamp(36px,5vw,64px);padding-top:16px;border-top:1px solid var(--line-d);font-size:15px}
 .foot-crisis .eyebrow{color:var(--dust)}
 .foot-crisis b{font-weight:800}
-.foot-line{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 16px;margin-top:22px;padding-top:12px;border-top:1px solid var(--line-d);font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dust)}
+.foot-line{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 16px;margin-top:22px;padding-top:12px;border-top:1px solid var(--line-d);font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--dust)}
 @media (min-width:900px){
   .foot-grid{grid-template-columns:repeat(3,minmax(0,1fr)) minmax(0,1.4fr);gap:clamp(24px,4vw,56px)}
   .signup{grid-column:auto}
@@ -768,7 +768,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .bar[data-on="true"]{transform:none}
 .bar-tally{display:flex;align-items:center;gap:10px;min-width:0}
 .bar-tally b{font-weight:800;font-size:1.35rem;letter-spacing:-.03em;line-height:1}
-.bar-tally span:last-child{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dust);line-height:1.3}
+.bar-tally span:last-child{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--dust);line-height:1.3}
 .bar .btn{min-height:44px;padding:0 18px}
 @media (min-width:900px){.bar{display:none}}
 
@@ -796,7 +796,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 
 /* —— the pledge page —— */
 .nav--static{margin-bottom:0}
-.tally-line{margin:0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.tally-line{margin:0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute)}
 .tally-line .wrap{display:flex;align-items:center;gap:10px;min-height:38px;padding-block:8px}
 .tally-num{color:var(--asphalt);font-weight:700}
 .board-s{padding-top:clamp(40px,6vw,80px)}
@@ -828,7 +828,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .faq dt:has(> .mk--dt){display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;align-items:start}
 .mk--dt{width:20px;height:20px;margin-top:2px;color:var(--creosote-ink)}
 .plane-facts{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 22px}
-.plane-facts li{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--creosote-ink)}
+.plane-facts li{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--creosote-ink)}
 .plane-facts .mk{width:18px;height:18px}
 /* Pass 22: the three facts are doors now (/rides/no-drop/, /rides/lgbtq/, /tonight/) — same mark and type,
    a hairline under the words so they read as tappable, 44px tall for a thumb */
@@ -875,7 +875,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .ph img{display:block;width:100%;height:auto;object-fit:cover;background:transparent;
   -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%);
   mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%)}
-.ph figcaption{margin-top:4px;font-family:var(--mono);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.ph figcaption{margin-top:4px;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--mute)}
 .theme-dark .ph figcaption{color:var(--dust)}
 @media (max-width:899px){
   .ph{margin-inline:calc(-1 * var(--gut))}
@@ -1033,4 +1033,22 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .bike-lane{display:block;width:100%;height:auto;margin:clamp(8px,2vw,24px) 0 4px}
 .steps3--lane{margin-top:0}
 .steps3--lane li{border-top:0;padding-top:0}
-@media (max-width:640px){.bike-lane{display:none}.steps3--lane li{border-top:10px solid var(--creosote-lift);padding-top:16px}}
+.step-mk{display:none}
+@media (max-width:640px){
+  .bike-lane{display:none}
+  .steps3--lane{margin-top:22px}
+  .steps3--lane li{border-top:10px solid var(--creosote-lift);padding-top:16px}
+  .step-mk{display:block;width:120px;height:auto;color:var(--asphalt);margin-bottom:6px}   /* the lane's three marks, one per step, where the lane itself is too small to read */
+}
+
+/* —— Pass 29 (Oct 5, evening): the type, retyped. Tracked mono caps are gone from every sheet (the
+   mechanical pass above set text-transform:none and letter-spacing:0 on each rule that had them,
+   and lifted anything under 12px to 12px). What stands instead, in Overpass only: labels and kickers
+   in sentence case at 12.5–13px / 700, gunmetal; links at 15px / 700 with the hairline and the arrow;
+   buttons alone keep caps — a road sign — at 13px / 800 with .04em, never more. —— */
+.eyebrow{font-size:.8125rem;font-weight:700;letter-spacing:0;text-transform:none;color:var(--mute)}
+.link{font-size:.9375rem;font-weight:700;letter-spacing:0;text-transform:none;gap:6px;padding-bottom:3px;border-bottom-width:1.5px;white-space:normal}
+.link::after{font-weight:400}
+.btn,.btn--sm{font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:.8125rem}
+.kicker{font-size:.8125rem;font-weight:700;letter-spacing:0;text-transform:none}
+.kicker b{font-weight:800}
