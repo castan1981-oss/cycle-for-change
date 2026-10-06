@@ -67,7 +67,7 @@ function shopLine(t) {
 }
 const PAGES = [
   { seg: "routes", key: "routes", mark: "road", k: "Ride", b: (t) => `Rides in ${t.name}`, s: (n) => `${n} route${n === 1 ? "" : "s"} with maps` },
-  { seg: "coffee", key: "coffee", mark: "ride-day", k: "Coffee", b: (t) => `Coffee in ${t.name}`, s: (n, t) => coffeeLine(t) },
+  { seg: "coffee", key: "coffee", mark: "social", k: "Coffee", b: (t) => `Coffee in ${t.name}`, s: (n, t) => coffeeLine(t) },
   { seg: "bike-shops", key: "bike_shops", mark: "fix", k: "Fix", b: (t) => `Bike shops in ${t.name}`, s: (n, t) => shopLine(t), always: true },
   { seg: "hotels", key: "hotels", mark: "sleep", k: "Sleep", b: (t) => `Hotels in ${t.name}`, s: (n, t) => hotelLine(t), always: true },
   { seg: "restaurants", key: "restaurants", mark: "eat", k: "Eat", b: (t) => `Restaurants in ${t.name}`, s: (n) => n ? `${n} pick${n === 1 ? "" : "s"}, night before and after` : "Carb night, post-ride, early coffee", always: true },

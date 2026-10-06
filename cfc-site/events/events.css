@@ -450,3 +450,75 @@ a.tel{white-space:nowrap;text-decoration:underline;text-decoration-color:var(--c
 .gr-map-zoom a:active .gr-map-hub,.gr-map-zoom a:focus-visible .gr-map-hub{fill:var(--asphalt)}
 .gr-map-zoom a:focus-visible .gr-map-name{text-decoration:underline}
 @media (prefers-reduced-motion:reduce){.tw-st,.gr-map--zoomable .gr-map-regions,.gr-map--zoomable .gr-map-zoom,.gr-map-reg-dot{transition:none}}
+
+/* —— Pass 35 (Oct 6, 2026): the town guide pages as cards. Robert: the pages were "extremely wordy" and need
+   "custom graphics and icons and buttons so that people find it easier to get what they need". A listing is a
+   card on plaster: its mark, the name, one short line, what it does as icon chips, where and when as icon facts,
+   real buttons (call, directions, website, book), and the scout's full note one tap away under "More". —— */
+.resource .lede{max-width:40ch}
+.places--cards{display:grid;gap:12px;margin:8px 0 0}
+.place--card{background:var(--paper);border:1px solid var(--line);padding:18px 18px 6px;display:flex;flex-direction:column;gap:12px}
+.place--card:last-child{border-bottom:1px solid var(--line)}
+.place--card h3::before{content:none}
+.place-head{display:flex;gap:12px;align-items:flex-start}
+.place-mk{width:28px;height:28px;color:var(--creosote-ink);margin-top:-1px}
+.place-name{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0}
+.place--card h3{margin:0;font-size:clamp(1.3rem,.6vw + 1.12rem,1.55rem);line-height:1.08}
+.place--card h3 a{text-decoration:none}
+@media (hover:hover){.place--card h3 a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}}
+.place-badge{display:inline-block;background:var(--creosote);color:var(--paper);font-size:.8125rem;font-weight:800;line-height:1;padding:6px 9px 5px}
+.place-line{margin:0;font-size:1.02rem;line-height:1.45;max-width:46em}
+.place-line--home{font-size:1.15rem;font-weight:700;line-height:1.3}
+.place-by{font-size:.8125rem;font-weight:700;color:var(--mute);white-space:nowrap}
+.place-by::before{content:"— "}
+.place-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.place-chips li{display:inline-flex;align-items:center;gap:6px;font-size:.8125rem;font-weight:700;line-height:1.2;background:var(--bone);padding:6px 9px 5px 7px}
+.place-chips .mk{width:16px;height:16px;color:var(--creosote-ink)}
+.place-facts{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.place-facts li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;align-items:start;font-size:.95rem;line-height:1.4}
+.place-facts .mk,.place--card .ride-line .mk{width:18px;height:18px;margin-top:1px;color:var(--mute)}
+.place--card .ride-line{display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;margin:0;font-size:.95rem;color:var(--asphalt)}
+.place-btns{display:flex;flex-wrap:wrap;gap:8px}
+.pbtn{flex:1 1 auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 14px;border:1px solid var(--asphalt);color:var(--asphalt);font-size:.8125rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background-color .18s ease,color .18s ease}
+.pbtn .mk{width:18px;height:18px;color:currentColor}
+@media (hover:hover){.pbtn:hover{background:var(--asphalt);color:var(--paper)}}
+.place-more{border-top:1px solid var(--line)}
+.place-more>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;min-height:44px;font-size:.8125rem;font-weight:700;color:var(--mute)}
+.place-more>summary::-webkit-details-marker{display:none}
+.place-more>summary::before{content:"+";font-weight:800;width:1em;color:var(--asphalt)}
+.place-more[open]>summary::before{content:"–"}
+.place-more-body{padding:0 0 14px}
+.place-more-body p{margin:0 0 .8em;font-size:.95rem;line-height:1.5;max-width:46em}
+.place-more-body p:last-child{margin:0}
+.place--home{border-color:var(--creosote)}
+.places--mini{margin-top:14px}
+/* a long section paragraph: its first sentence, the rest folded */
+.resource>.place-line,.resource section>.place-line{font-size:1.08rem;max-width:40em;margin:0 0 6px}
+.resource>.place-more,.resource section>.place-more{max-width:46em;margin:0 0 6px}
+.resource section>.place-facts{margin:10px 0 6px}
+.byb section{margin-top:2.2em}
+.byb section>h3{font-size:1.15rem;margin:1.4em 0 .5em}
+.routes>.for-events{display:flex;gap:10px;align-items:flex-start;margin:0 0 4px;color:var(--asphalt)}
+.mk--inline{width:20px;height:20px;color:var(--creosote-ink);margin-top:1px}
+.routes>.place-more{margin:0 0 6px;max-width:46em}
+/* "What do you need?" — toggles over the cards (events.js; hidden without JS) */
+.place-filter{margin:18px 0 6px}
+.place-filter-q{margin:0 0 8px;font-size:.8125rem;font-weight:700;color:var(--mute)}
+.place-filter-btns{display:flex;flex-wrap:wrap;gap:8px}
+.pfil{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border:1px solid var(--asphalt);background:transparent;color:var(--asphalt);font-size:.8125rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;cursor:pointer}
+.pfil .mk{width:18px;height:18px}
+.pfil-n{font-weight:400;letter-spacing:0;color:var(--mute)}
+.pfil[aria-pressed="true"]{background:var(--asphalt);color:var(--paper)}
+.pfil[aria-pressed="true"] .pfil-n{color:var(--dust)}
+@media (hover:hover){.pfil:hover{background:var(--bone-2)}.pfil[aria-pressed="true"]:hover{background:var(--asphalt)}}
+.place-filter-note{margin:8px 0 0;font-size:.875rem;color:var(--mute);min-height:1.2em}
+.place-filter-note button{font:inherit;font-weight:700;color:var(--asphalt);background:none;border:0;padding:12px 4px;margin:-12px 0;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--creosote);cursor:pointer}
+/* the other pages of the guide: icon tiles, not a row of text links */
+.res-jump{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(150px,100%),1fr));gap:0;margin:32px 0 0;border-top:1px solid var(--asphalt);border-left:1px solid var(--asphalt)}
+.res-jump a{display:flex;align-items:center;gap:10px;min-height:56px;padding:10px 14px;border-right:1px solid var(--asphalt);border-bottom:1px solid var(--asphalt);background:var(--bone-2);text-decoration:none;font-weight:700;font-size:.95rem;line-height:1.15}
+.res-jump .mk{width:22px;height:22px;color:var(--creosote-ink)}
+@media (hover:hover){.res-jump a:hover{background:var(--asphalt);color:var(--paper)}.res-jump a:hover .mk{color:var(--volt)}}
+.res-jump--doors{margin:18px 0 8px}
+@media (max-width:420px){.res-jump{grid-template-columns:1fr 1fr}.res-jump a{padding:10px 12px;font-size:.9rem}}
+@media (prefers-reduced-motion:reduce){.pbtn{transition:none}}
+@media (min-width:760px){.pbtn{flex:0 0 auto;min-width:156px}}

@@ -235,6 +235,14 @@ explained" keeps its name: it's about charity rides in general, not this site.
   and `TOWNS.strip(t)` are the one lookup — event pages, calendar rows, ride pages and city hubs
   all call it. Never hand-write a town strip.
 - The queer lens informs the picks and never headlines a page.
+- Guide pages are cards (Pass 35, `placeCard()` in build-events.js): mark, name, one short line (the
+  optional `line`, else the note's first sentence), icon chips, icon facts, buttons (call · directions ·
+  website · book), the rest of the note under "More". "What do you need?" toggles sit over the cards when
+  two or more filters would split the list. No new prose on these pages; long text folds.
+- **Bicycle Haüs (Scottsdale) is Robert's home shop** (`home_shop: true`, Phoenix guide only): first in
+  the bike shops with the "My home shop" plate and his line. One shop on the whole site; never anywhere
+  else (not the hub tile, not other towns, not the strip). Only what their own site says (no repair or
+  group-ride claims until it says so).
 
 ### 2027 calendar (`/events/2027/`)
 - `data/calendar-2027.json` (600+ US rides and races) → `node scripts/build-calendar.js`. Schema in
@@ -465,3 +473,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-05 — Pass 30 clean paint, first screen on phones; Pass 31 org/step marks drawn clean; Pass 32 clear ungraded hero photo.
 - 2026-10-06 — Instruction files rewritten to the no-pledge model; ride-recap bot disabled; mile-updates email rebuilt.
 - 2026-10-06 — Pass 34: the first screen gets two finder tiles (Group rides, Events) with their own marks; the reel is a crisp 4:5 picture with a real play button, recut to 12 s without the car clips.
+- 2026-10-06 — Pass 35: town guide pages as cards with icons, chips, real buttons and folds; "What do you need?" filters; nine new marks (call, clock, box, key, gear, fit, build, watch, effort); coffee's mark is the cup; Bicycle Haüs first in Phoenix as Robert's home shop.

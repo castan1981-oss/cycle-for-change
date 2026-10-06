@@ -79,7 +79,8 @@ journey, "$800", Prescott, sober-time, 7,500-mile framing, …).
 | getting_there | string | |
 | hotels | [{name, url, address, note, price_hint}] | |
 | restaurants | [{name, url, address, cuisine, note}] | |
-| bike_shops | [{name, url, address, phone, services[], note}] | `services` words: repair, same-day, parts, rental, rental-road, rental-gravel, rental-mtb, rental-ebike, ship-to-shop, fitting, diy, suspension, box-storage, box-rental, shop-rides, coffee |
+| line | string, any listing (optional) | the card's one short line (Pass 35). Without it the card shows the note's first sentence; the rest of the note is one tap away under "More". On the home shop it is Robert's own words, in quotes. |
+| bike_shops | [{name, url, address, phone, services[], note}] | `services` words: repair, same-day, parts, rental, rental-road, rental-gravel, rental-mtb, rental-ebike, ship-to-shop, fitting, diy, suspension, box-storage, box-rental, shop-rides, coffee, builds. Optional `home_shop: true` puts the shop first with a "My home shop" plate — one shop on the whole site, Robert's (Bicycle Haüs, Phoenix guide); never add another. |
 | sources | [url] | |
 | verified | ISO date | |
 
