@@ -489,19 +489,28 @@
    Pass 26/27 (Oct 5–6, 2026): the sign. After CYCLE FOR there is only the blank, a rose bar, until a
    visitor types; then their word sits on the bar. Nothing is sent anywhere. (The rotating plate went
    with Pass 27 — the owner's answer is "me", and the sign doesn't invent others.)
+   Pass 37: there are two places to type now — the first screen (desktop, tablets) and It always says
+   cycling (phones) — and two plates. Every plate shows the one word; typing in either box sets it.
    ———————————————————————————————————————————————— */
 (function () {
-  var plate = document.getElementById("signPlate"), input = document.getElementById("who"), reset = document.getElementById("signReset");
-  if (!plate || !input) return;
+  var plates = document.querySelectorAll("[data-sign-plate]"), inputs = document.querySelectorAll("[data-sign-input]"), resets = document.querySelectorAll("[data-sign-reset]");
+  if (!plates.length || !inputs.length) return;
   var typed = "";
-  function paint() {
-    plate.textContent = typed;
+  var each = function (list, fn) { for (var i = 0; i < list.length; i++) fn(list[i]); };
+  function paint(from) {
+    each(plates, function (p) { p.textContent = typed; p.setAttribute("data-empty", typed ? "false" : "true"); });
+    each(inputs, function (f) { if (f !== from) f.value = typed; });
     var sr = document.getElementById("signSr");
     if (sr) sr.textContent = "Cycle for" + (typed ? " " + typed : "");
-    plate.setAttribute("data-empty", typed ? "false" : "true");
-    if (reset) reset.hidden = !typed;
+    each(resets, function (b) { b.hidden = !typed; });
   }
-  input.addEventListener("input", function () { typed = input.value.trim().slice(0, 22); paint(); });
-  if (reset) reset.addEventListener("click", function () { typed = ""; input.value = ""; paint(); input.focus(); });
-  paint();
+  each(inputs, function (f) { f.addEventListener("input", function () { typed = f.value.trim().slice(0, 22); paint(f); }); });
+  each(resets, function (b) {
+    b.addEventListener("click", function () {
+      typed = ""; paint(null);
+      /* back to the box that's on screen (the other one is display:none at this width) */
+      for (var i = 0; i < inputs.length; i++) if (inputs[i].offsetParent) { inputs[i].focus(); break; }
+    });
+  });
+  paint(null);
 })();

@@ -25,7 +25,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" href="/img/sign-print-4-phone.jpg" media="(max-width:759px)">
   <link rel="preload" as="image" href="/img/sign-print-4.jpg" media="(min-width:760px)">
-  <link rel="stylesheet" href="/home.css?v=36">
+  <link rel="stylesheet" href="/home.css?v=37">
 
   <script type="application/ld+json">
   {
@@ -183,14 +183,16 @@
           </g>
         </g>
       </svg>
-        <span class="sign-plate sign-plate--blank" id="signPlate" data-empty="true" aria-hidden="true"></span>
+        <span class="sign-plate sign-plate--blank" id="signPlate" data-empty="true" data-sign-plate aria-hidden="true"></span>
         <span class="sr" id="signSr">Cycle for</span>
       </h1>
     </div>
     <div class="sign-right">
+      <!-- Pass 37: phones only (desktop and tablets have the kicker above the sign). Who and what, before anything asks a question. -->
+      <p class="sign-intro">I&rsquo;m Robert. In 2027 I ride 10,000 miles, all on the bike.</p>
       <label class="sign-q" for="who">Who do you cycle for?</label>
-      <input class="sign-input" id="who" type="text" maxlength="22" autocomplete="off" placeholder="Type it. The sign changes.">
-      <p class="sign-note">Nothing to pay, nothing to join. <button class="sign-reset" id="signReset" type="button" hidden>Clear the sign</button></p>
+      <input class="sign-input" id="who" type="text" maxlength="22" autocomplete="off" placeholder="Type it. The sign changes." data-sign-input>
+      <p class="sign-note">Nothing to pay, nothing to join. <button class="sign-reset" id="signReset" type="button" data-sign-reset hidden>Clear the sign</button></p>
       <p class="sign-line">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</p>
       <nav class="finder" aria-label="Find a ride">
         <a class="finder-tile finder-tile--ride" id="heroRide" href="#ride"><span class="ridebar-d">Sat Nov 7</span><span class="finder-t">Ride with me</span><span class="finder-s">Cycling 4 one·n·ten, Phoenix</span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
@@ -256,6 +258,14 @@
       <p class="lede">Cycling changed my life. I&rsquo;d like to say I&rsquo;m cycling for other people. I&rsquo;m really cycling for myself. I&rsquo;m cycling because it changed me. That&rsquo;s the story.</p>
       <p class="lede">So the sign changes. What comes after the word is up to whoever&rsquo;s riding.</p>
       <p class="plates"><span class="plate">me</span><span class="plate">one&middot;n&middot;ten, on Nov 7</span><span class="plate">change</span></p>
+      <!-- Pass 37: phones only. The sign's question lives here on a phone, under the words that explain it; its own
+           one-line sign changes as you type, and so does the big one at the top (/home.js keeps them in step). -->
+      <div class="sign-play">
+        <p class="sign-play-sign" aria-hidden="true"><svg class="sign-play-mark" viewBox="0 0 626 150" focusable="false"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/><use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/></g></svg><span class="plate sign-play-plate" data-empty="true" data-sign-plate></span></p>
+        <label class="sign-play-q" for="who2">Who do you cycle for?</label>
+        <input class="sign-play-input" id="who2" type="text" maxlength="22" autocomplete="off" placeholder="Type it. The sign changes." data-sign-input>
+        <button class="sign-reset sign-play-reset" type="button" data-sign-reset hidden>Clear the sign</button>
+      </div>
     </div>
   </div>
 </section>
@@ -426,12 +436,9 @@
 </footer>
 
 
-<!-- —— the tally, everywhere (phone) —— -->
-<div class="bar" id="bar" data-on="false" aria-hidden="true">
-  <div class="bar-tally"><span class="dot dot--bone" aria-hidden="true"></span><b class="num" data-miles>3,573</b><span>mi since June 1</span></div>
-  <a class="btn btn--bone" href="#ride" tabindex="-1">Ride with me</a>
-</div>
+<!-- Pass 37: the old phone tally bar (miles + Ride with me) is gone. It sat on top of the Pass 36 Ride with me bar,
+     so a phone showed two bars at once. The Ride with me bar (scripts/chrome.js, /ridebar.js) does its job. -->
 
-<script src="/home.js?v=36" defer></script>
+<script src="/home.js?v=37" defer></script>
 </body>
 </html>
