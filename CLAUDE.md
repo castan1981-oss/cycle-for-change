@@ -156,6 +156,20 @@ never words in copy or briefs.
 `--creosote-ink`). Tap targets 44px. Visible focus. Labels on every field. A still, not a film, on
 phones. Respect reduced motion. 988 + Trevor wherever mental health comes up.
 
+### The homepage on a phone (Pass 37, Oct 6, 2026)
+Someone Robert trusts found the phone homepage "overwhelming and hard to figure out what it was all about"
+(desktop "much better"). The rules that came out of it, all under 760px (tablets and desktop unchanged):
+- **The first screen says who and what before it asks anything:** the sign, `.sign-intro` ("I'm Robert. In
+  2027 I ride 10,000 miles, all on the bike."), the line, then the Ride with me tile and the two finder
+  tiles. His face stays clear above the sign; the scrim is measured up from the foot of the screen.
+- **"Who do you cycle for?" lives in `#why` on phones** (`.sign-play`, its own one-line sign), under the
+  words that explain the sign. `/home.js` keeps every `[data-sign-plate]` and `[data-sign-input]` in step.
+- **How this works is the second screen** (`main` is a flex column on phones; `#how` has `order:-1`). It has
+  no links, so the tab order doesn't change. Don't put links in it without moving it in the markup instead.
+- **Say it once.** No second bar at the foot (the Ride with me bar is the only one; the old tally `#bar`
+  is gone), no ride count under the reel, no second 1,422 or counts table under the search.
+- Check 390×844, 375×667, 360×640 and 430×932: everything down to the finder tiles on the first screen.
+
 ## 4. Voice, the never-list, health safety
 
 ### Voice
@@ -481,3 +495,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-06 — Pass 34: the first screen gets two finder tiles (Group rides, Events) with their own marks; the reel is a crisp 4:5 picture with a real play button, recut to 12 s without the car clips.
 - 2026-10-06 — Pass 35: town guide pages as cards with icons, chips, real buttons and folds; "What do you need?" filters; nine new marks (call, clock, box, key, gear, fit, build, watch, effort); coffee's mark is the cup; Bicycle Haüs first in Phoenix as Robert's home shop.
 - 2026-10-06 — Pass 36: Ride with me goes to the next ride (one·n·ten, Nov 7): a tile on the homepage's first screen and a bar at the foot of every page as you scroll.
+- 2026-10-06 — Pass 37: the homepage on a phone, said plainly — who and what on the first screen, How this works second, the sign's question moved to It always says cycling, one bar at the foot instead of two, repeats cut (12% shorter). Desktop and tablets pixel-identical.

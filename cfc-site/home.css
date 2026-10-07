@@ -1160,3 +1160,72 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .finder-tile--ride .finder-s{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .finder-tile--ride .ridebar-go{grid-column:3;grid-row:1 / span 2;font-size:1.25rem}
 @media (hover:hover){.finder-tile--ride:hover{border-color:var(--paper)}}
+
+/* —— Pass 37 (Oct 6, 2026): phones, said plainly ——
+   Someone Robert trusts opened the site on a phone: "overwhelming and hard to figure out what it was all
+   about. Desktop is much better." Everything here is under 760px; tablets and desktop are untouched.
+   1. The first screen says who and what before anything asks a question: the sign, "I'm Robert. In 2027 I
+      ride 10,000 miles, all on the bike.", the line, then Ride with me and the two finder tiles. His face is
+      clear above the sign; the dark comes up from the foot of the screen only as far as the words.
+   2. "Who do you cycle for?" moves down to It always says cycling, under the words that explain the sign.
+      It has its own one-line sign that changes as you type (the big one at the top changes with it).
+   3. How this works comes straight after the first screen.
+   4. What was said twice is said once: the old tally bar (gone from the markup — it sat on top of the Ride
+      with me bar), the ride count under the reel, and the second 1,422 and the counts table under the
+      search (the finder tiles on the first screen carry them).
+   5. Tighter: less air between sections, the numbers two across, the orgs and the steps with the mark
+      beside the words. */
+.sign-intro,.sign-play{display:none}
+@media (max-width:759px){
+  :root{--sec:60px}
+
+  /* 1. the first screen */
+  .sign--print .sign-q,.sign--print .sign-input,.sign--print .sign-note{display:none}
+  .sign-intro{display:block;margin:0;max-width:32ch;font-size:18px;font-weight:600;line-height:1.35;color:var(--paper);text-wrap:balance}
+  .sign--print .sign-line{margin:0;text-wrap:balance}   /* no "I" left hanging at the end of a line */
+  .sign--print{padding-bottom:0}
+  .sign--print .sign-in{padding-bottom:24px}
+  .sign-scrim{background:linear-gradient(0deg,rgba(20,18,24,.98) 0,rgba(20,18,24,.95) 360px,rgba(20,18,24,.86) 500px,rgba(20,18,24,0) 615px)}
+
+  /* 3. How this works straight after it (it has no links, so the tab order doesn't change) */
+  main{display:flex;flex-direction:column}
+  main>.sign{order:-2}
+  main>.how{order:-1}
+
+  .read{background:var(--paper)}   /* on a phone it follows Ride with me (How this works moved up), so it takes the lighter ground */
+
+  /* 4. said once */
+  .road-tally{display:none}   /* the numbers band right above says it */
+  .ride-find .find-count,.ride-find .facts-dl{display:none}
+  .ridewith .ride-h3{margin-bottom:0}   /* the h3s carry .h2, so they took the section heading's 28px and left a hole under them */
+  .ride-next>p:not([class]){margin:0}
+
+  /* 5. tighter */
+  .nums-in{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 18px}
+  .num-tile--rose{grid-column:1 / -1}
+  .orgs-s .org{grid-template-columns:36px minmax(0,1fr);column-gap:14px;padding-top:20px}
+  .org-mk{width:36px;height:36px}
+  .steps3--lane{margin-top:20px;gap:0}
+  .steps3--lane li{display:grid;grid-template-columns:36px minmax(0,1fr);column-gap:14px;row-gap:4px;padding:18px 0 20px;border-top:1px solid var(--asphalt)}
+  .steps3--lane .step-mk{grid-column:1;grid-row:1 / span 2;width:36px;height:36px;margin:0}
+  .steps3--lane .h3{grid-column:2;margin:5px 0 0}
+  .steps3--lane p{grid-column:2;margin:0}
+
+  /* 2. the sign's question, where the sign is explained */
+  .sign-play{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:10px;padding-top:24px;border-top:1px solid var(--asphalt)}
+  .sign-play-sign{margin:0 0 6px;display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px}
+  .sign-play-mark{display:block;height:38px;width:auto;color:var(--asphalt)}
+  .sign-play-plate{font-size:20px;line-height:1.05;padding:6px 9px 3px;overflow-wrap:anywhere}
+  .sign-play-plate[data-empty="true"]{width:25px;height:9px;padding:0}   /* empty, it's the header mark's bar */
+  .sign-play-q{font-weight:900;font-size:22px;line-height:1.1;letter-spacing:-.01em}
+  .sign-play-input{align-self:stretch;min-height:52px;padding:12px 14px 9px;border:2px solid var(--asphalt);border-radius:0;background:#fff;color:var(--asphalt);font:800 19px var(--display);appearance:none;-webkit-appearance:none}
+  .sign-play-input::placeholder{color:var(--mute)}
+  .sign-play-input:focus-visible{outline:2px solid var(--asphalt);outline-offset:3px}
+  .sign-play-reset{border-color:var(--asphalt);color:var(--asphalt)}
+}
+@media (max-width:759px) and (max-height:700px){
+  /* short phones (an SE): a smaller sign, so it sits under his face, not on it */
+  .sign--print .sign-left{--w:136px}
+  .sign-intro,.sign--print .sign-line{font-size:17px}
+  .sign-scrim{background:linear-gradient(0deg,rgba(20,18,24,.98) 0,rgba(20,18,24,.95) 320px,rgba(20,18,24,.86) 450px,rgba(20,18,24,0) 550px)}
+}
