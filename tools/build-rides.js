@@ -2094,8 +2094,7 @@ function filmBlock(r) {
   if (!fm) return "";
   const len = lenText(fm.seconds);
   return `
-      <section class="gr-film" aria-labelledby="gr-film-h">
-        <h2 id="gr-film-h">From the ride</h2>
+      <section class="gr-film" aria-label="From the ride">
         <figure class="gr-film-fig" data-film data-playing="false">
           <div class="gr-film-frame">
             <video muted loop playsinline disablepictureinpicture preload="none" poster="${attr(fm.poster)}" width="${fm.width || 864}" height="${fm.height || 1080}" aria-label="${attr(fm.alt || "")}">
@@ -2105,7 +2104,7 @@ function filmBlock(r) {
           </div>
           <figcaption class="gr-film-cap">
             <button class="gr-film-btn" type="button" data-film-btn data-playing="false"><span class="gr-film-ico gr-film-ico--play">${PLAY_SVG}</span><span class="gr-film-ico gr-film-ico--pause">${PAUSE_SVG}</span><span data-film-label>Play</span></button>
-            <span class="gr-film-where">${esc(fm.caption || "")}</span>
+            <span class="gr-film-where">From the ride${fm.caption ? `, ${esc(String(fm.caption).split(" · ").pop())}` : ""}</span>
             <span class="gr-film-len">${len}</span>
           </figcaption>
         </figure>
@@ -2363,7 +2362,7 @@ function ridePage(r, all, hubFor, hubs) {
 
   return head({ title, description, canonical: url, jsonld, ogType: "article", noindex: !listed }) + `
 <main id="main" class="wrap gr-ride">
-  <article class="ride" data-ride
+  <article class="ride${film ? " ride--film" : ""}" data-ride
     data-tz="${attr(listed ? r.tz || "" : "")}" data-time="${attr(next ? r.start_hhmm || "" : "")}" data-days="${r.days.join(" ")}"
     data-dates="${attr(dated.length ? JSON.stringify(dated.map((d) => [d.at.toISOString(), d.allDay ? `${fmtDay(d.ymd)} · time on the host's page` : fmtNext(d.at, r.tz)])) : "")}"
     data-freq="${attr(r.frequency || "")}" data-season="${r.season_months ? `${r.season_months.start}-${r.season_months.end}` : ""}"
@@ -2371,10 +2370,12 @@ function ridePage(r, all, hubFor, hubs) {
     data-times="${attr(listed && Array.isArray(r.start_times) && r.start_times.length ? JSON.stringify(r.start_times.map((e) => [e.from, e.start_hhmm])) : "")}">
     ${crumbsHtml(crumbs)}
 
+    ${film ? `<div class="gr-top"><div class="gr-top-head">` : ""}
     <h1>${esc(r.name)}</h1>
     ${r.name_en ? `<p class="gr-name-en">${esc(r.name_en)}</p>` : ""}
     <p class="gr-place">${esc(placeText(r))}${r.neighborhood ? ` · ${esc(r.neighborhood)}` : ""} · ${esc(discText(r))}</p>
     ${tags ? `<p class="gr-tags">${tags}</p>` : ""}
+    ${film ? `</div>${filmBlock(r)}<div class="gr-top-body">` : ""}
 ${banner}
     ${keyFactsHtml ? `<dl class="gr-facts gr-facts--key">
         ${keyFactsHtml}
@@ -2393,8 +2394,9 @@ ${banner}
       <span class="gr-share-alt" id="gr-share-alt" hidden><a href="sms:?&body=${encodeURIComponent(r.name + " — " + url)}">Text it</a> · <a href="https://wa.me/?text=${encodeURIComponent(r.name + " — " + url)}" rel="noopener">WhatsApp</a> · <a href="mailto:?subject=${encodeURIComponent("Group ride: " + r.name)}&body=${encodeURIComponent(url)}">Email</a></span>
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
     </div>
-${film || revs.length || listed ? `
-    <div class="gr-ridebox${film ? " gr-ridebox--film" : ""}">${filmBlock(r)}${reviewsBlock(r, revs, listed)}
+    ${film ? `</div></div>` : ""}
+${revs.length || listed ? `
+    <div class="gr-ridebox">${reviewsBlock(r, revs, listed)}
     </div>
 ` : ""}
 ${checkedBlock}
