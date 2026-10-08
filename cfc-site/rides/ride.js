@@ -105,4 +105,76 @@
       say(data.url);
     }
   });
+
+  /* Oct 8, 2026 — footage from the ride. Like the homepage reel: on a wide screen without reduced
+     motion it plays while it's on screen; on phones it waits for a tap. Nothing downloads until it's
+     needed (preload="none"). The round button, the line under it and the picture all play and pause. */
+  var fig = document.querySelector("[data-film]");
+  var vid = fig && fig.querySelector("video");
+  if (vid) {
+    var fBtn = fig.querySelector("[data-film-btn]"), fPlay = fig.querySelector("[data-film-play]"), fLabel = fig.querySelector("[data-film-label]");
+    var wide = window.matchMedia && matchMedia("(min-width: 900px) and (hover: hover)").matches;
+    var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var user = null;
+    vid.muted = true;
+    var paint = function () {
+      var on = !vid.paused;
+      fig.setAttribute("data-playing", on ? "true" : "false");
+      if (fBtn) fBtn.setAttribute("data-playing", on ? "true" : "false");
+      if (fLabel) fLabel.textContent = on ? "Pause" : "Play";
+    };
+    var go = function () { vid.preload = "auto"; var q = vid.play(); if (q && q.catch) q.catch(function () {}); };
+    var toggle = function () { if (vid.paused) { user = true; go(); } else { user = false; vid.pause(); } };
+    vid.addEventListener("play", paint);
+    vid.addEventListener("pause", paint);
+    vid.addEventListener("error", function () { if (fBtn) fBtn.hidden = true; if (fPlay) fPlay.hidden = true; }, true);
+    vid.addEventListener("click", toggle);
+    if (fBtn) fBtn.addEventListener("click", toggle);
+    if (fPlay) fPlay.addEventListener("click", function () { toggle(); if (fBtn) fBtn.focus({ preventScroll: true }); });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) {
+        if (!es[0].isIntersecting) { if (!vid.paused) vid.pause(); return; }
+        if (user === true || (user === null && wide && !reduce)) go();
+      }, { threshold: 0.5 }).observe(vid);
+    }
+    paint();
+  }
+
+  /* Oct 8, 2026 — rider reviews. "Review this ride" opens the form (a <details>, so it works without
+     this script); a link to #review opens it straight away. Posts to Netlify Forms like the other
+     forms and says thanks only after Netlify takes it. Nothing shows on the page until a person has
+     read it (tools/reviews-pull.js → an issue → the "post" label → tools/reviews-post.js). */
+  var write = document.getElementById("review");
+  var form = write && write.querySelector("form[data-review]");
+  function openWrite() {
+    if (!write || location.hash !== "#review") return;
+    write.open = true;
+    var first = write.querySelector("input[name=again]");
+    setTimeout(function () { write.scrollIntoView({ block: "start" }); if (first) first.focus({ preventScroll: true }); }, 60);
+  }
+  openWrite();
+  window.addEventListener("hashchange", openWrite);
+  if (form) {
+    var send = form.querySelector("button[type=submit]"), ok = form.querySelector(".gr-rev-ok");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (form.checkValidity && !form.checkValidity()) { if (form.reportValidity) form.reportValidity(); return; }
+      var body = new URLSearchParams();
+      new FormData(form).forEach(function (v, k) { if (typeof v === "string") body.append(k, v); });
+      send.disabled = true;
+      if (ok) { ok.hidden = true; ok.removeAttribute("data-bad"); }
+      fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body.toString() })
+        .then(function (res) {
+          if (!res.ok) throw new Error("bad status");
+          form.reset();
+          if (ok) { ok.textContent = "Got it, thank you. It goes up once we’ve read it."; ok.hidden = false; }
+          send.disabled = false;
+          if (window.cfcTrack) window.cfcTrack("review_sent", { ride: (form.querySelector("[name=ride]") || {}).value || "" });
+        })
+        .catch(function () {
+          if (ok) { ok.textContent = "That didn’t go through. Try again in a minute."; ok.setAttribute("data-bad", ""); ok.hidden = false; }
+          send.disabled = false;
+        });
+    });
+  }
 })();

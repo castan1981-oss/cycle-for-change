@@ -57,6 +57,13 @@
   [headers.values]
     Cache-Control = "public, max-age=3600, must-revalidate"
 
+# Oct 8, 2026: a short link for the reel and the caption — the Friday Shop Ride's film and reviews
+[[redirects]]
+  from = "/shopride"
+  to = "/rides/scottsdale-az-bicycle-haus-friday-shop-ride/#reviews"
+  status = 302
+  force = true
+
 [[redirects]]
   from = "/api/strava"
   to = "/.netlify/functions/strava"

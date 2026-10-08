@@ -124,6 +124,41 @@
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
     </div>
 
+    <div class="gr-ridebox">
+      <section class="gr-reviews" id="reviews" aria-labelledby="gr-rev-h">
+        <h2 id="gr-rev-h">Rider reviews</h2>
+        <p class="gr-rev-none">No reviews yet. Rode it? Tell the next rider how it went.</p>
+        
+        
+        <details class="gr-rev-write" id="review">
+          <summary class="btn btn--ghost gr-rev-open">Review this ride</summary>
+          <form class="gr-rev-form" name="ride-review" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-review>
+            <input type="hidden" name="form-name" value="ride-review">
+            <input type="hidden" name="ride" value="corvallis-or-mvbc-tenners-saturday-ride">
+            <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+            <fieldset class="gr-rev-pick">
+              <legend>Would you ride it again?</legend>
+              <label><input type="radio" name="again" value="yes" required><span>Yes</span></label><label><input type="radio" name="again" value="no"><span>Not for me</span></label>
+            </fieldset>
+            <fieldset class="gr-rev-pick">
+              <legend>The pace <small>(optional)</small></legend>
+              <label><input type="radio" name="pace" value="easier"><span>Easier than it says</span></label><label><input type="radio" name="pace" value="right"><span>About right</span></label><label><input type="radio" name="pace" value="harder"><span>Harder than it says</span></label>
+            </fieldset>
+            <label class="gr-rev-lab" for="rv-words-939">How did it go? <small>Who you rode with, how they treat someone new, what a first-timer should know.</small></label>
+            <textarea class="field" id="rv-words-939" name="words" rows="4" minlength="20" maxlength="600" required></textarea>
+            <div class="gr-rev-two">
+              <div><label class="gr-rev-lab" for="rv-name-939">First name</label><input class="field" id="rv-name-939" name="name" maxlength="30" autocomplete="given-name" required></div>
+              <div><label class="gr-rev-lab" for="rv-from-939">Where you ride from <small>(optional)</small></label><input class="field" id="rv-from-939" name="from" maxlength="40" autocomplete="address-level2"></div>
+            </div>
+            <label class="gr-rev-lab" for="rv-email-939">Email <small>(optional) Only if you want a reply. Never shown.</small></label>
+            <input class="field" id="rv-email-939" type="email" name="email" autocomplete="email">
+            <p class="gr-rev-note">We read every review before it goes up. First name only. Links come out.</p>
+            <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send it</button><p class="gr-rev-ok" role="status" hidden></p></div>
+          </form>
+        </details>
+      </section>
+    </div>
+
 
     <aside class="gr-checked" aria-label="When this ride was last checked">
       <svg class="gr-checked-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-checked"/></svg>

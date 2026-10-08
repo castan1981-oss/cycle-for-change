@@ -372,6 +372,25 @@ the form as CSV until Robert picks one.
 - Commands: `/rides status`, `/rides check <slug>`, `/rides refresh [N]`, `/rides discover <area>`,
   `/rides add <name or URL>`.
 
+### Film and rider reviews on ride pages (Oct 8, 2026)
+- **Film:** `data/ride-films.json` → `{ slug: [{ src, poster, width, height, seconds, caption, alt, added }] }`;
+  the first shows as "From the ride" right under the buttons (a VideoObject in the LD). 4:5, H.264, no
+  audio, `+faststart`, files in `cfc-site/film/` (bump the number on a recut). Plays like the homepage reel.
+  First one: `shop-ride-1.mp4`, the Friday Shop Ride (Robert's TikTok copy, 576 px wide — swap in the
+  original when he sends it; the close-up faces at 1.3–2.6 s are cut until those riders say OK).
+- **Reviews:** "Rider reviews" sits beside the film (or alone): counts, "would ride it again", the pace
+  most riders named, the newest three, the rest folded, and "Review this ride" (the Netlify form
+  `ride-review` — again yes/no, pace, words 20–600, first name, from, optional email). `#review` opens the
+  form; the tag at the top of the page links `#reviews` once there's one. `/shopride` → the shop ride's reviews.
+- **Nothing shows until Robert has read it.** Hourly, `ride-reviews.yml` → `tools/reviews-pull.js` opens
+  one issue per new review (label `review`; links, emails and phone numbers already out; anything to look
+  at twice flagged). He adds the label **`post`** → `ride-review-post.yml` → `tools/reviews-post.js` adds it
+  to `data/ride-reviews.json` on main → the deploy's rides build shows it. Closing the issue drops it.
+  Rules in `tools/lib/reviews.js` (tests: `tools/test/reviews.test.js`). Never edit a rider's words beyond
+  that, never write a review, never post one he hasn't labelled. Emails stay in Netlify.
+- The committed ride pages can lag `data/ride-reviews.json` until the next local rebuild; the deploy is
+  what counts (Netlify runs `tools/build-rides.js` on every deploy).
+
 ### UI rules that still hold
 - **Step down, don't scroll.** Every page asks one question with a few big picks: `/find-a-ride/`
   asks what kind; `/rides/` asks where (the tap-a-state map, Every state, Outside the US, six
@@ -452,7 +471,9 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 
 ## 10. Photos, video, Strava
 
-- **No cars** — no car, truck or van in any photo or video frame, not even parked far away.
+- **No cars** in photos — no car, truck or van in any photo, not even parked far away. **Video from a ride
+  is the exception** (Robert, Oct 8, 2026: "cars are ok in some video"): a parked or passing car in the
+  background of ride footage is fine. The homepage hero and the homepage reel stay car-free.
 - **Only Robert is recognisable.** Riders from behind or far off are fine; oncoming faces get
   cropped. Other people need their OK.
 - Captions say where the picture was really taken (place · month).
@@ -508,3 +529,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-06 — Pass 36: Ride with me goes to the next ride (one·n·ten, Nov 7): a tile on the homepage's first screen and a bar at the foot of every page as you scroll.
 - 2026-10-06 — Pass 37: the homepage on a phone, said plainly — who and what on the first screen, How this works second, the sign's question moved to It always says cycling, one bar at the foot instead of two, repeats cut (12% shorter). Desktop and tablets pixel-identical.
 - 2026-10-08 — `/nov7/`: the shareable page for Cycling 4 one·n·ten with its own share card (`tools/og.py`); every Ride with me points there until Nov 7.
+- 2026-10-08 — Friday Shop Ride (Bicycle Haüs) listed and linked from the home-shop card; ride pages get "From the ride" (film) and "Rider reviews" (form, moderated through issues + the `post` label); cars OK in ride video.

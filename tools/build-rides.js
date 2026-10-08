@@ -37,6 +37,7 @@ const BLOCKS = require("../scripts/blocks.js"); // how-it's-built tiles + the ri
 const TOWNS = require("../scripts/towns.js");  // the town layer (Sept 30, 2026): the strip on every ride page and city hub that has a guide
 const S = require("./lib/rides-schema.js");       // vocabularies, countries (schema v3)
 const F = require("./lib/rides-freshness.js");    // what's fresh, what hides, the "Checked" line
+const RV = require("./lib/reviews.js");          // Oct 8, 2026: rider reviews — the rules and the summary
 const X = require("./lib/ride-facts.js");         // Pass 22: pace, length and e-bike rules read off the ride's own text
 const PH = require("../scripts/photos.js");       // Pass 25: Robert's photos, one registry (alt text, place, the figure)
 
@@ -47,6 +48,8 @@ const OUT = argOf("--out") ? path.resolve(argOf("--out")) : ASSETS;   // where p
 const DATA = argOf("--data") ? path.resolve(argOf("--data")) : path.join(ASSETS, "rides.json");
 const HEALTH = argOf("--health") ? path.resolve(argOf("--health")) : path.join(ROOT, "data", "rides-health.json");
 const COUNTRY_NOTES = path.join(ROOT, "data", "rides-countries.json"); // optional: per-country "what to know"
+const REVIEWS_FILE = argOf("--reviews") ? path.resolve(argOf("--reviews")) : path.join(ROOT, "data", "ride-reviews.json"); // Oct 8, 2026: rider reviews (approved only)
+const FILMS_FILE = path.join(ROOT, "data", "ride-films.json");         // Oct 8, 2026: footage from a ride, by slug
 const EVENTS = path.join(ROOT, "cfc-site", "events", "events.json");
 const SITE = "https://cycleforchange.org";
 const TODAY = /^\d{4}-\d{2}-\d{2}$/.test(argOf("--today") || "") ? argOf("--today") : new Date().toISOString().slice(0, 10);
@@ -2059,6 +2062,120 @@ function firstTimeBlock(r, hostLabel) {
     </details>
     ${firstLink("gr-first-link--ride")}`;
 }
+// ---------- Oct 8, 2026: footage from the ride, and rider reviews ----------
+// data/ride-films.json: { slug: [{ src, poster, width, height, seconds, caption, alt, added }] } — the first one shows.
+// data/ride-reviews.json: approved reviews only (tools/reviews-post.js writes it when Robert labels the issue "post").
+const readJson = (file, fallback) => { try { return JSON.parse(fs.readFileSync(file, "utf8")); } catch (e) { return fallback; } };
+const FILMS = readJson(FILMS_FILE, {});
+let REVIEWS_BY = null;
+function reviewsFor(slug, rides) {
+  if (!REVIEWS_BY) {
+    const slugs = new Set((rides || []).map((x) => x.slug));
+    REVIEWS_BY = new Map();
+    for (const raw of readJson(REVIEWS_FILE, [])) {
+      const rv = RV.valid(raw, slugs);
+      if (!rv) { console.warn(`WARNING data/ride-reviews.json: skipped a review that doesn't pass the rules (${raw && raw.id})`); continue; }
+      if (!REVIEWS_BY.has(rv.slug)) REVIEWS_BY.set(rv.slug, []);
+      REVIEWS_BY.get(rv.slug).push(rv);
+    }
+    for (const list of REVIEWS_BY.values()) list.sort(RV.byNewest);
+  }
+  return REVIEWS_BY.get(slug) || [];
+}
+const REV_MON = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+const monthOf = (ymd) => `${REV_MON[+ymd.slice(5, 7) - 1]} ${ymd.slice(0, 4)}`;
+const lenText = (sec) => `0:${String(Math.max(1, Math.round(sec || 0))).padStart(2, "0")}`;
+const PLAY_SVG = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg>`;
+const PAUSE_SVG = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg>`;
+
+function filmOf(r) { return (FILMS[r.slug] || []).find((x) => x && x.src && x.poster) || null; }
+function filmBlock(r) {
+  const fm = filmOf(r);
+  if (!fm) return "";
+  const len = lenText(fm.seconds);
+  return `
+      <section class="gr-film" aria-labelledby="gr-film-h">
+        <h2 id="gr-film-h">From the ride</h2>
+        <figure class="gr-film-fig" data-film data-playing="false">
+          <div class="gr-film-frame">
+            <video muted loop playsinline disablepictureinpicture preload="none" poster="${attr(fm.poster)}" width="${fm.width || 864}" height="${fm.height || 1080}" aria-label="${attr(fm.alt || "")}">
+              <source src="${attr(fm.src)}" type="video/mp4">
+            </video>
+            <button class="gr-film-play" type="button" data-film-play aria-label="Play the film, ${Math.round(fm.seconds || 0)} seconds">${PLAY_SVG}</button>
+          </div>
+          <figcaption class="gr-film-cap">
+            <button class="gr-film-btn" type="button" data-film-btn data-playing="false"><span class="gr-film-ico gr-film-ico--play">${PLAY_SVG}</span><span class="gr-film-ico gr-film-ico--pause">${PAUSE_SVG}</span><span data-film-label>Play</span></button>
+            <span class="gr-film-where">${esc(fm.caption || "")}</span>
+            <span class="gr-film-len">${len}</span>
+          </figcaption>
+        </figure>
+      </section>`;
+}
+
+function reviewItem(rv) {
+  const tags = [rv.again === "yes" ? "Would ride it again" : "Wouldn’t ride it again", rv.pace ? RV.PACE_TAG[rv.pace] : null].filter(Boolean);
+  return `<li class="gr-rev">
+            <blockquote class="gr-rev-words"><p>“${esc(rv.words)}”</p></blockquote>
+            <p class="gr-rev-by"><b>${esc(rv.name)}</b>${rv.from ? `, ${esc(rv.from)}` : ""} <span>${esc(monthOf(rv.date))}</span></p>
+            <ul class="gr-rev-tags">${tags.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
+          </li>`;
+}
+let REV_UID = 0;
+function reviewForm(r) {
+  const n = ++REV_UID, id = (k) => `rv-${k}-${n}`;
+  const pick = (name, list, required) => list.map(([v, t], i) => `<label><input type="radio" name="${name}" value="${v}"${required && i === 0 ? " required" : ""}><span>${esc(t)}</span></label>`).join("");
+  return `
+        <details class="gr-rev-write" id="review">
+          <summary class="btn btn--ghost gr-rev-open">Review this ride</summary>
+          <form class="gr-rev-form" name="ride-review" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-review>
+            <input type="hidden" name="form-name" value="ride-review">
+            <input type="hidden" name="ride" value="${attr(r.slug)}">
+            <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+            <fieldset class="gr-rev-pick">
+              <legend>Would you ride it again?</legend>
+              ${pick("again", [["yes", "Yes"], ["no", "Not for me"]], true)}
+            </fieldset>
+            <fieldset class="gr-rev-pick">
+              <legend>The pace <small>(optional)</small></legend>
+              ${pick("pace", [["easier", "Easier than it says"], ["right", "About right"], ["harder", "Harder than it says"]], false)}
+            </fieldset>
+            <label class="gr-rev-lab" for="${id("words")}">How did it go? <small>Who you rode with, how they treat someone new, what a first-timer should know.</small></label>
+            <textarea class="field" id="${id("words")}" name="words" rows="4" minlength="${RV.MIN_WORDS}" maxlength="${RV.MAX_WORDS}" required></textarea>
+            <div class="gr-rev-two">
+              <div><label class="gr-rev-lab" for="${id("name")}">First name</label><input class="field" id="${id("name")}" name="name" maxlength="30" autocomplete="given-name" required></div>
+              <div><label class="gr-rev-lab" for="${id("from")}">Where you ride from <small>(optional)</small></label><input class="field" id="${id("from")}" name="from" maxlength="40" autocomplete="address-level2"></div>
+            </div>
+            <label class="gr-rev-lab" for="${id("email")}">Email <small>(optional) Only if you want a reply. Never shown.</small></label>
+            <input class="field" id="${id("email")}" type="email" name="email" autocomplete="email">
+            <p class="gr-rev-note">We read every review before it goes up. First name only. Links come out.</p>
+            <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send it</button><p class="gr-rev-ok" role="status" hidden></p></div>
+          </form>
+        </details>`;
+}
+function reviewsBlock(r, list, listed) {
+  if (!list.length && !listed) return "";
+  const s = RV.summary(list);
+  const SHOW = 3;
+  const stats = s.n ? `
+        <div class="gr-rev-stats">
+          <p class="gr-rev-stat"><b class="num">${s.n}</b><span>${s.n === 1 ? "review" : "reviews"}</span></p>
+          <p class="gr-rev-stat"><b class="num">${s.n === 1 ? (s.yes ? "Yes" : "No") : s.yes === s.n ? "All" : `${s.yes} of ${s.n}`}</b><span>${s.n === 1 ? "would ride it again" : s.yes === s.n ? `${s.n} would ride it again` : "would ride it again"}</span></p>
+          ${s.pace ? `<p class="gr-rev-stat"><b>${esc(RV.PACE_TEXT[s.pace].replace(/^./, (c) => c.toUpperCase()))}</b><span>${s.paceAll === 1 ? "the pace, they said" : s.paceN === s.paceAll ? "the pace, everyone said" : "the pace, most said"}</span></p>` : ""}
+        </div>` : "";
+  const shown = list.slice(0, SHOW), rest = list.slice(SHOW);
+  return `
+      <section class="gr-reviews" id="reviews" aria-labelledby="gr-rev-h">
+        <h2 id="gr-rev-h">Rider reviews</h2>${stats}
+        ${s.n ? `<ol class="gr-rev-list">
+          ${shown.map(reviewItem).join("\n          ")}
+        </ol>` : `<p class="gr-rev-none">No reviews yet. Rode it? Tell the next rider how it went.</p>`}
+        ${rest.length ? `<details class="gr-rev-more"><summary>All ${s.n} reviews</summary><ol class="gr-rev-list">
+          ${rest.map(reviewItem).join("\n          ")}
+        </ol></details>` : ""}
+        ${listed ? reviewForm(r) : ""}
+      </section>`;
+}
+
 function ridePage(r, all, hubFor, hubs) {
   const url = `${SITE}/rides/${r.slug}/`;
   const f = r._f || F.assess(r, null, TODAY);     // freshness: what this page may promise
@@ -2149,8 +2266,13 @@ function ridePage(r, all, hubFor, hubs) {
     watchUrl && ![L.website, L.instagram, L.facebook, L.strava, L.meetup, ...(L.other || [])].includes(watchUrl) && ["Where it's posted", watchUrl],
   ].filter(Boolean).map(([t, u]) => `<a class="btn ${/strava/i.test(t) ? "btn--ink" : "btn--ghost"}" href="${attr(u)}" rel="noopener nofollow">${esc(t)} ↗</a>`).join("\n        ");
 
+  // Oct 8, 2026: rider reviews, seen at the top of the page when there are any
+  const revs = reviewsFor(r.slug, all);
+  const revSum = RV.summary(revs);
   const tags = (r.confidence === "low" ? `<span class="gr-tag gr-tag-warn" title="We found this ride but couldn't confirm every detail">Unconfirmed — check with the host</span>` : "")
-    + (r.host && r.host.claimed ? `<span class="gr-tag gr-tag-ok">Verified by the organizer</span>` : "");
+    + (r.host && r.host.claimed ? `<span class="gr-tag gr-tag-ok">Verified by the organizer</span>` : "")
+    + (revSum.n ? `<a class="gr-tag gr-tag-rev" href="#reviews">${revSum.n} ${revSum.n === 1 ? "review" : "reviews"}, ${esc(RV.againText(revSum))}</a>` : "");
+  const film = filmOf(r);
 
   // JSON-LD: WebPage (dates, author, breadcrumb) + Event only when the schedule is computable
   // Search pass (Oct 5, 2026): no Event markup while the ride is flagged or found on one source only — the page itself
@@ -2196,6 +2318,8 @@ function ridePage(r, all, hubFor, hubs) {
     };
     graph.push(ev);
   }
+  if (film && listed) graph.push({ "@type": "VideoObject", "@id": `${url}#film`, name: `${r.name}, from the ride`, description: film.alt || description,
+    thumbnailUrl: `${SITE}${film.poster}`, contentUrl: `${SITE}${film.src}`, uploadDate: film.added || r.verified_on, ...(film.seconds ? { duration: `PT${Math.round(film.seconds)}S` } : {}) });
   const jsonld = { "@context": "https://schema.org", "@graph": graph };
 
   const calBtns = next && rule ? `
@@ -2269,7 +2393,10 @@ ${banner}
       <span class="gr-share-alt" id="gr-share-alt" hidden><a href="sms:?&body=${encodeURIComponent(r.name + " — " + url)}">Text it</a> · <a href="https://wa.me/?text=${encodeURIComponent(r.name + " — " + url)}" rel="noopener">WhatsApp</a> · <a href="mailto:?subject=${encodeURIComponent("Group ride: " + r.name)}&body=${encodeURIComponent(url)}">Email</a></span>
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
     </div>
-
+${film || revs.length || listed ? `
+    <div class="gr-ridebox${film ? " gr-ridebox--film" : ""}">${filmBlock(r)}${reviewsBlock(r, revs, listed)}
+    </div>
+` : ""}
 ${checkedBlock}
     ${factsHtml ? `<dl class="gr-facts">
         ${factsHtml}
