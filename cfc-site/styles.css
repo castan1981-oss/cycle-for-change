@@ -199,3 +199,26 @@ main{display:block}
 .fn-stage-head .mk--stage{width:36px;height:36px;color:var(--creosote-ink);margin-top:4px}
 .mk--door{width:28px;height:28px;color:var(--creosote-ink);margin-bottom:2px}
 .res-door--now .mk--door{color:var(--bone)}
+
+/* —— Oct 7, 2026: the ride film on a field note. The homepage reel's player (home.css .road-film,
+   Pass 34), carried to the field-notes sheet: one 4:5 picture with crisp edges, a round plaster play
+   button on the poster until it plays, a plain play/pause line and place · month · length under it.
+   Phones wait for a tap (a still, not a film, on phones); reduced motion never autoplays. */
+.fn-film{margin:clamp(28px,5vw,48px) 0 0;width:100%;max-width:460px}
+.fn-film-frame{position:relative;background:var(--tar)}
+.fn-film video{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:var(--tar);cursor:pointer}
+.fn-play{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;border-radius:50%;background:var(--paper);color:var(--asphalt);display:grid;place-items:center;cursor:pointer;transition:opacity .2s ease,transform .2s ease}
+.fn-play svg{width:30px;height:30px;margin-left:5px;fill:currentColor}
+@media (hover:hover){.fn-play:hover{transform:scale(1.06)}}
+.fn-play:focus-visible{outline:3px solid var(--asphalt);outline-offset:4px}
+.fn-film[data-playing="true"] .fn-play{opacity:0;transform:scale(.9);pointer-events:none}
+.fn-film-cap{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px}
+.fn-film-btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0;background:none;border:0;color:var(--asphalt);font:700 15px/1.2 var(--display);cursor:pointer}
+.fn-film-btn svg{width:16px;height:16px;fill:currentColor;flex:none}
+.fn-film-btn .rf-pause,.fn-film-btn[data-playing="true"] .rf-play{display:none}
+.fn-film-btn[data-playing="true"] .rf-pause{display:block}
+.fn-film-btn span{border-bottom:1px solid var(--dust-deep);padding-bottom:2px}
+.fn-film-btn:focus-visible{outline:2px solid var(--asphalt);outline-offset:3px}
+.fn-film-len{font-family:var(--mono);font-size:.75rem;color:var(--mute);font-variant-numeric:tabular-nums}
+@media (max-width:899px){.fn-film{margin-inline:calc(-1 * var(--gut));max-width:none}.fn-film-cap{padding-inline:var(--gut)}}
+@media (prefers-reduced-motion:reduce){.fn-play{transition:none}}
