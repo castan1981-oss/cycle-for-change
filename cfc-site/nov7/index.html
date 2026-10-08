@@ -25,7 +25,7 @@
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/nov7/nov7.css">
+  <link rel="stylesheet" href="/nov7/nov7.css?v=3">
 
 </head>
 <body class="rp">
@@ -94,9 +94,22 @@
 
 <section class="rp-hero" aria-labelledby="rp-h">
   <picture class="rp-ph">
-    <source media="(min-width:900px)" srcset="/img/nov7-1-tall.jpg" width="1200" height="1500">
     <img src="/img/nov7-1.jpg" width="1200" height="900" alt="Robert mid-ride in a red helmet and a purple jersey, Camelback Mountain behind him." fetchpriority="high">
   </picture>
+  <!-- desktop: the film is the hero picture. Phones keep the still up top (a still, not a film, on phones) and get the film in the next section. -->
+  <figure class="rp-film-fig rp-hero-film" data-film data-playing="false">
+    <div class="rp-film-frame">
+      <video id="heroFilm" playsinline disablepictureinpicture preload="none" muted poster="/film/nov7-friends-1.jpg" width="720" height="1280" aria-label="26 seconds of group rides around Phoenix, with words on screen: Most mornings, I don’t ride alone. I ride with my friends. Queer. Not queer. Fast. Slow. Nobody has to shrink to fit in. Somebody always waits at the top. Every queer kid deserves a group like this. Nov 7, come ride with us. It ends on the ride details and bit.ly/c4ontregister.">
+        <source src="/film/nov7-friends-1.mp4" type="video/mp4">
+      </video>
+      <button class="rp-film-play" type="button" data-film-play aria-label="Play the film, 26 seconds"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg></button>
+    </div>
+    <figcaption class="rp-film-cap">
+      <button class="rp-film-btn" type="button" data-film-btn data-playing="false"><span class="rp-film-ico rp-film-ico--play"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg></span><span class="rp-film-ico rp-film-ico--pause"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></span><span data-film-label>Play</span></button>
+      <span class="rp-film-where">Group rides · Phoenix · fall 2026</span>
+      <span class="rp-film-len">0:26</span>
+    </figcaption>
+  </figure>
   <div class="wrap rp-in">
     <p class="eyebrow rp-when">Ride with me. Saturday, November 7, Phoenix.</p>
     <h1 class="rp-sign" id="rp-h">
@@ -116,7 +129,7 @@
   </div>
 </section>
 
-<section class="rp-s rp-film" aria-labelledby="film-h">
+<section class="rp-s rp-film rp-film--below" aria-labelledby="film-h">
   <div class="wrap rp-cols">
     <div class="rp-col-a">
       <h2 id="film-h">Most mornings, I don’t ride alone.</h2>
@@ -257,6 +270,6 @@
   </div>
 </footer>
 <script src="/chrome.js" defer></script>
-<script src="/nov7/nov7.js?v=1" defer></script>
+<script src="/nov7/nov7.js?v=2" defer></script>
 </body>
 </html>
