@@ -379,7 +379,7 @@ the form as CSV until Robert picks one.
 
 ### Film and rider reviews on ride pages (Oct 8, 2026)
 - **Film:** `data/ride-films.json` → `{ slug: [{ src, poster, width, height, seconds, caption, alt, added }] }`;
-  the first shows as "From the ride" right under the buttons (a VideoObject in the LD). 4:5, H.264, no
+  the first shows at the top of the page: beside the name, facts and buttons on desktop, edge to edge under the name on phones (`.ride--film`, `.gr-top`; a VideoObject in the LD). 4:5, H.264, no
   audio, `+faststart`, files in `cfc-site/film/` (bump the number on a recut). Plays like the homepage reel.
   First one: `shop-ride-1.mp4`, the Friday Shop Ride (Robert's TikTok copy, 576 px wide — swap in the
   original when he sends it; the close-up faces at 1.3–2.6 s are cut until those riders say OK).
