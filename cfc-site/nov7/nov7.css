@@ -71,3 +71,28 @@
   .rp-cols{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(32px,5vw,96px);align-items:start}
 }
 .nw{white-space:nowrap}
+
+/* —— the film (Oct 8, 2026): the 26-second cut from the group rides, 9:16 as it was made, words burned in.
+   Same behaviour as "From the ride" on ride pages: no download until it's wanted, phones wait for a tap,
+   wide screens play it muted while it's on screen. No sound on the site (the Instagram cut carries the music). —— */
+.rp-film-line{margin:0;max-width:34ch;font-size:17px;line-height:1.45;color:var(--mute)}
+.rp-film-fig{margin:0;width:100%;max-width:360px}
+.rp-film-frame{position:relative;background:var(--tar)}
+.rp-film-frame video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;background:var(--tar);cursor:pointer}
+.rp-film-play{position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;padding:0;border:0;border-radius:50%;background:var(--paper);color:var(--asphalt);display:grid;place-items:center;cursor:pointer;transition:opacity .2s ease,transform .2s ease}
+.rp-film-play svg{width:28px;height:28px;margin-left:5px;fill:currentColor}
+@media (hover:hover){.rp-film-play:hover{transform:scale(1.06)}}
+.rp-film-play:focus-visible{outline:3px solid var(--asphalt);outline-offset:4px}
+.rp-film-fig[data-playing="true"] .rp-film-play{opacity:0;transform:scale(.9);pointer-events:none}
+.rp-film-cap{display:flex;align-items:center;flex-wrap:wrap;gap:4px 14px;margin-top:8px}
+.rp-film-btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0;background:none;border:0;color:var(--asphalt);font:700 15px/1.2 var(--display);cursor:pointer}
+.rp-film-ico{display:inline-flex}
+.rp-film-ico svg{width:16px;height:16px;fill:currentColor}
+.rp-film-ico--pause,.rp-film-btn[data-playing="true"] .rp-film-ico--play{display:none}
+.rp-film-btn[data-playing="true"] .rp-film-ico--pause{display:inline-flex}
+.rp-film-btn [data-film-label]{border-bottom:1px solid var(--dust-deep);padding-bottom:2px}
+.rp-film-btn:focus-visible{outline:2px solid var(--asphalt);outline-offset:3px}
+.rp-film-where{flex:1 1 auto;font-size:14px;font-weight:600;color:var(--mute)}
+.rp-film-len{font-size:14px;font-weight:600;color:var(--mute);font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.rp-film-play{transition:none}}
+@media (min-width:900px){.rp-film-fig{max-width:400px}}
