@@ -1,0 +1,37 @@
+name: Ride reviews in
+
+# Every hour: new submissions of the ride-review form (on every ride page) → one issue each,
+# labelled "review", for Robert to read. Nothing reaches the site from here.
+# Post one: add the label "post" (ride-review-post.yml). Drop one: close the issue.
+# Needs the NETLIFY_API_TOKEN and NETLIFY_SITE_ID secrets (the rides watch uses the same two).
+
+on:
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: ride-reviews-in
+  cancel-in-progress: false
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: New reviews → issues
+        env:
+          NETLIFY_API_TOKEN: ${{ secrets.NETLIFY_API_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node tools/reviews-pull.js

@@ -320,3 +320,14 @@ Around it: `data/rides-queue.json` / `.md` (the re-check queue, from the watcher
 `data/rides-suggestions.json` (new rides and unmatched reports from the ride-report
 form), `data/rides-changelog.json` (every applied re-check). A re-check reaches
 `rides.json` only through `tools/rides-apply.js`. How it all runs: `tools/RIDES-UPKEEP.md`.
+
+## Rider reviews — `data/ride-reviews.json` (Oct 8, 2026)
+
+Approved reviews only, newest first, written by `tools/reviews-post.js` (never by hand):
+`{ id, slug, name, from|null, again: "yes"|"no", pace: "easier"|"right"|"harder"|null, words, date, posted }`.
+`id` is the Netlify submission id; `date` the day it was sent. Rules: `tools/lib/reviews.js`.
+
+## Ride films — `data/ride-films.json` (Oct 8, 2026)
+
+`{ "<ride slug>": [{ src, poster, width, height, seconds, caption, alt, added }] }` — the first entry shows on
+the ride page as "From the ride". `caption` is place · month; `alt` says what's in it.

@@ -1,0 +1,56 @@
+name: Post a ride review
+
+# Robert adds the label "post" to a review issue (opened by ride-reviews.yml) → the review goes into
+# data/ride-reviews.json on main → Netlify deploys and tools/build-rides.js puts it on the ride page.
+# Only issues the workflow opened, only the "post" label. The body goes in by env, never inline.
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: ride-reviews-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    if: github.event.label.name == 'post' && github.event.issue.user.login == 'github-actions[bot]' && contains(github.event.issue.labels.*.name, 'review')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Add the review
+        id: add
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          out=$(node tools/reviews-post.js)
+          echo "$out"
+          echo "slug=$(node -e 'console.log(JSON.parse(process.argv[1]).slug||"")' "$out")" >> "$GITHUB_OUTPUT"
+      - name: Commit to main
+        env:
+          N: ${{ github.event.issue.number }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ride-reviews.json
+          if git diff --cached --quiet; then echo "Already posted."; exit 0; fi
+          git commit -m "reviews: post #$N"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
+      - name: Close the issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          N: ${{ github.event.issue.number }}
+          SLUG: ${{ steps.add.outputs.slug }}
+        run: |
+          gh issue comment "$N" --repo "$GITHUB_REPOSITORY" --body "Posted. It's on https://cycleforchange.org/rides/$SLUG/#reviews once this deploy finishes (a few minutes)."
+          gh issue close "$N" --repo "$GITHUB_REPOSITORY" --reason completed
