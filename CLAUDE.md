@@ -41,6 +41,11 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   the bar and marks Ride with me as the current page. After the ride the same URL becomes the write-up, in
   Robert's words with his footage; the sign-up buttons come off. `head()` takes `image`, `imageAlt` and
   `ogTitle` for pages like this, and apply-chrome.py keeps a page's own card.
+  Desktop hero (Oct 8, 2026, Robert's ask): the riding wall `/film/nov7-wall-1.mp4` (1600×800, three panels of
+  group-ride footage, muted loop, "Pause the film" under the buttons) edge to edge behind the words, with a light
+  wash over the left side — his call, the one exception to "no gradient washes over photos". The 26 s film with
+  the words (`/film/nov7-friends-1.mp4`, 9:16) is the next section. Phones keep the still; the wall never loads.
+  The sheet is linked as `/nov7/nov7.css?v=N` from apply-chrome.py's SECTION_STYLES — bump N when it changes.
 
 ## 2. How the site is built
 
@@ -534,3 +539,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-06 — Pass 37: the homepage on a phone, said plainly — who and what on the first screen, How this works second, the sign's question moved to It always says cycling, one bar at the foot instead of two, repeats cut (12% shorter). Desktop and tablets pixel-identical.
 - 2026-10-08 — `/nov7/`: the shareable page for Cycling 4 one·n·ten with its own share card (`tools/og.py`); every Ride with me points there until Nov 7.
 - 2026-10-08 — Friday Shop Ride (Bicycle Haüs) listed and linked from the home-shop card; ride pages get "From the ride" (film) and "Rider reviews" (form, moderated through issues + the `post` label); cars OK in ride video.
+- 2026-10-08 — `/nov7/`: the 26 s ride-with-friends film under the first screen; on desktop the hero is the riding wall (three panels of group-ride footage) with a light wash under the words.
