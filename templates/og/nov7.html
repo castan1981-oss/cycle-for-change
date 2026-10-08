@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- The share card for /nov7/ (1200×630). Render: python3 tools/og.py templates/og/nov7.html cfc-site/og-nov7.jpg
+     Served from cfc-site/, so /fonts and /img resolve. Lane Paint: the stencil spells CYCLE FOR, the blank is
+     filled with one·n·ten on the smeared-rose plate (light ground). The photo dissolves into the page; no type on it. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face{font-family:"Overpass";font-weight:100 900;src:url(/fonts/overpass-latin.woff2) format("woff2")}
+*{box-sizing:border-box}
+html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:#E1DFDB;color:#1C1A22;font-family:"Overpass",sans-serif}
+.ph{position:absolute;top:0;right:0;width:660px;height:630px;object-fit:cover;object-position:80% 46%;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%);mask-image:linear-gradient(to right,transparent 0,#000 30%)}
+.txt{position:absolute;left:72px;top:96px;width:640px}
+.sign{display:flex;flex-direction:column;align-items:flex-start}
+.sign svg{display:block;width:318px;height:auto;color:#1C1A22}
+.plate{display:inline-block;margin:-86px 0 0 208px;background:#A84C58;color:#EFEDEA;font-weight:900;font-size:58px;line-height:1;padding:14px 18px 6px;letter-spacing:-.01em}
+.when{margin:44px 0 0;font-weight:900;font-size:50px;line-height:1;letter-spacing:-.03em}
+.what{margin:14px 0 0;font-weight:700;font-size:28px;line-height:1.2;color:#4A4E55}
+</style>
+</head>
+<body>
+<img class="ph" src="/img/nov7-1.jpg" alt="">
+<div class="txt">
+  <div class="sign">
+    <svg viewBox="-10 -10 370 350" aria-hidden="true">
+      <defs>
+        <path id="lpC" d="M52 34 V24 Q52 8 36 8 H33 M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 142 H36 Q52 142 52 126 V116"/>
+        <path id="lpY" d="M11 4 L30 68 L49 4 M30 68 V150"/>
+        <path id="lpL" d="M8 0 V150 M22 142 H54"/>
+        <path id="lpE" d="M8 0 V150 M22 8 H54 M22 75 H47 M22 142 H54"/>
+        <path id="lpF" d="M8 0 V150 M22 8 H54 M22 75 H47"/>
+        <path id="lpO" d="M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 8 H36 Q52 8 52 24 V126 Q52 142 36 142 H33"/>
+        <path id="lpR" d="M8 0 V150 M22 8 H36 Q52 8 52 24 V58 Q52 74 36 74 H22 M33 90 L50 150"/>
+        <clipPath id="lpRow"><rect x="-20" y="0" width="900" height="150"/></clipPath>
+      </defs>
+      <g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">
+        <use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/>
+      </g>
+      <g transform="translate(0 180)"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">
+        <use href="#lpF"/><use href="#lpO" transform="translate(74 0)"/><use href="#lpR" transform="translate(148 0)"/>
+      </g></g>
+    </svg>
+    <span class="plate">one·n·ten</span>
+  </div>
+  <p class="when">Sat, Nov 7. Phoenix.</p>
+  <p class="what">Ride with me. 20 or 62 miles.</p>
+</div>
+</body>
+</html>

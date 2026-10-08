@@ -43,11 +43,15 @@ const FONTS = `<link rel="preload" href="/fonts/overpass-latin.woff2" as="font" 
 
 /* Everything a page's <head> needs besides its own title/description/canonical.
    `styles` = the page's stylesheets after /chrome.css. `ld` = JSON-LD objects. */
-function head({ title, description, url, ogType = "website", styles = [], ld = [], extra = "", dark = false, robots = "index, follow, max-snippet:-1, max-image-preview:large" }) {
+// `image` / `imageAlt` / `ogTitle` (Oct 8, 2026): a page that gets shared on its own (/nov7/) carries its own
+// card; apply-chrome.py keeps a page's own og:image and og:title when they differ from the defaults.
+function head({ title, description, url, ogType = "website", styles = [], ld = [], extra = "", dark = false, robots = "index, follow, max-snippet:-1, max-image-preview:large", image = OG_IMAGE, imageAlt = "", ogTitle = "" }) {
   // Search pass (Oct 5, 2026): Google cuts titles near 60 characters and shows the site name on its own line. The
   // <title> carries the brand only when the whole title fits; share cards (og:/twitter:title) always carry it.
-  const full = /Cycle for Change/.test(title) ? title : `${title} — Cycle for Change`;
-  const shown = /Cycle for Change/.test(title) || title.length > 41 ? title : full;
+  const branded = /Cycle for Change/.test(title) ? title : `${title} — Cycle for Change`;
+  const full = ogTitle || branded;
+  const img = /^https?:/.test(image) ? image : SITE + image;
+  const shown = /Cycle for Change/.test(title) || title.length > 41 ? title : branded;
   const canonical = /^https?:/.test(url) ? url : SITE + url;
   const sheets = ["/chrome.css", ...styles].map((h) => `  <link rel="stylesheet" href="${h}">`).join("\n");
   const json = ld.map((o) => `  <script type="application/ld+json">${JSON.stringify(o)}</script>`).join("\n");
@@ -63,13 +67,13 @@ function head({ title, description, url, ogType = "website", styles = [], ld = [
   <meta property="og:url" content="${attr(canonical)}">
   <meta property="og:title" content="${attr(full)}">
   <meta property="og:description" content="${attr(description)}">
-  <meta property="og:image" content="${OG_IMAGE}">
+  <meta property="og:image" content="${attr(img)}">
   <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image:height" content="630">${imageAlt ? `\n  <meta property="og:image:alt" content="${attr(imageAlt)}">` : ""}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${attr(full)}">
   <meta name="twitter:description" content="${attr(description)}">
-  <meta name="twitter:image" content="${OG_IMAGE}">
+  <meta name="twitter:image" content="${attr(img)}">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   ${FONTS}
@@ -103,7 +107,7 @@ const MARK = `<svg class="brand-mark" viewBox="0 0 760 150" aria-hidden="true" f
 // last day, Phoenix time). /ridebar.js re-picks in the browser, so a page nobody rebuilt never shows a
 // ride that's over. When the list runs out, "Ride with me" goes back to the 2027 list.
 const NEXT_RIDES = [
-  { until: "2026-11-07", date: "Sat Nov 7", name: "Cycling 4 one\u00b7n\u00b7ten", where: "Phoenix", href: "/#ride" },
+  { until: "2026-11-07", date: "Sat Nov 7", name: "Cycling 4 one\u00b7n\u00b7ten", where: "Phoenix", href: "/nov7/" },
   { until: "2027-04-25", date: "Apr 23\u201325", name: "Center Ride Out", where: "LA to Ojai and back", href: "/events/2027/riding/" },
   { until: "2027-05-23", date: "May 21\u201323", name: "Cycle to Zero", where: "SF to the Russian River", href: "/events/2027/riding/" },
 ];
@@ -117,7 +121,7 @@ const RIDE_BAR = NEXT_RIDE ? `<aside class="ridebar" id="rideBar" aria-label="Ri
     <a class="ridebar-a" href="${NEXT_RIDE.href}" data-ride-next><span class="ridebar-d">${escH(NEXT_RIDE.date)}</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">${escH(NEXT_RIDE.name)}, ${escH(NEXT_RIDE.where)}</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=36" defer></script>` : "";
+  <script src="/ridebar.js?v=38" defer></script>` : "";
 
 const n = (v) => (v == null ? "" : `<span>${v}</span>`);
 

@@ -4,7 +4,7 @@
 Run from the repo root:   python3 scripts/apply-chrome.py
 Safe to re-run: it rebuilds each page's <head>, header and footer from the
 current scripts/chrome.js. Pages covered: every .html under cfc-site/guides,
-field-notes, resources, journal and tonight (templates included), plus 404.html.
+field-notes, resources, journal, tonight and nov7 (templates included), plus 404.html.
 
 What it does to each page
   - <head>: keeps the page's title, description, canonical, og:type and JSON-LD,
@@ -27,7 +27,7 @@ C = json.loads(subprocess.check_output(NODE))
 
 SECTION_STYLES = {  # stylesheets after /chrome.css, by top-level folder
     "guides": ["/styles.css"], "field-notes": ["/styles.css"], "resources": ["/styles.css"],
-    "journal": ["/styles.css"], "tonight": ["/tonight/tonight.css"], "": ["/styles.css"],
+    "journal": ["/styles.css"], "tonight": ["/tonight/tonight.css"], "nov7": ["/nov7/nov7.css"], "": ["/styles.css"],
 }
 ANCHORS = {'href="/#tally"': 'href="/"', 'href="/#rides"': 'href="/#ride"',
            'href="/#disciplines"': 'href="/"', 'href="/#pledge"': 'href="/"',
@@ -66,6 +66,14 @@ def new_head(s, page):
     dark = 'content="dark"' in old or 'class="theme-dark"' in s
     spec = {"title": title, "description": desc, "url": url, "ogType": ogtype, "dark": dark,
             "styles": SECTION_STYLES.get(top, ["/styles.css"]), "ld": ld, "extra": extra}
+    # a page with its own share card (/nov7/) keeps it: image, alt, and a share title that isn't "<title> — Cycle for Change"
+    img = meta(old, "og:image", "property")
+    if img and img != C["OG_IMAGE"]:
+        spec["image"] = img
+        spec["imageAlt"] = meta(old, "og:image:alt", "property")
+    ogt = meta(old, "og:title", "property")
+    if ogt and ogt != title and ogt != title + " — Cycle for Change" and "Cycle for Change" not in ogt:
+        spec["ogTitle"] = ogt
     if keep and keep[0].startswith('<meta name="robots"'):   # one robots tag: the page's own noindex replaces the default
         spec["robots"] = re.search(r'content="([^"]*)"', keep[0]).group(1)
         spec["extra"] = "\n".join("  " + k.strip() for k in keep[1:])
@@ -121,7 +129,7 @@ def resources(s: str) -> str:
 
 def main():
     pages = [SITE / "404.html"]
-    for d in ("guides", "field-notes", "resources", "journal", "tonight"):
+    for d in ("guides", "field-notes", "resources", "journal", "tonight", "nov7"):
         pages += sorted((SITE / d).rglob("*.html"))
     for p in pages:
         s = p.read_text()

@@ -137,7 +137,7 @@ const page = `<!doctype html>
   ${CHROME.FONTS}
   <link rel="preload" as="image" href="/img/sign-print-4-phone.jpg" media="(max-width:759px)">
   <link rel="preload" as="image" href="/img/sign-print-4.jpg" media="(min-width:760px)">
-  <link rel="stylesheet" href="/home.css?v=37">
+  <link rel="stylesheet" href="/home.css?v=38">
 
   <script type="application/ld+json">
   {
@@ -315,7 +315,8 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
           <div><dt>Sign up by</dt><dd>Thu Nov 5 online, or at check-in</dd></div>
         </dl>
         <a class="btn btn--ink" href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer">Sign up on RunSignup</a>
-        <p class="note-sm">Details from RunSignup, checked Oct 5.</p>
+        <a class="link" href="/nov7/">The whole day, and where it starts</a>
+        <p class="note-sm">Details from RunSignup, checked Oct 8.</p>
       </div>
       <div class="ride-find">
         <p class="eyebrow">Group rides</p>
