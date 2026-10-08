@@ -381,9 +381,9 @@ the form as CSV until Robert picks one.
 - **Film:** `data/ride-films.json` → `{ slug: [{ src, poster, width, height, seconds, caption, alt, added }] }`;
   the first shows at the top of the page: beside the name, facts and buttons on desktop, edge to edge under the name on phones (`.ride--film`, `.gr-top`; a VideoObject in the LD). 4:5, H.264, no
   audio, `+faststart`, files in `cfc-site/film/` (bump the number on a recut). Plays like the homepage reel.
-  Now: `shop-ride-2.mp4`, a 2 s slowed loop of the rider in Haüs kit from behind (Robert's TikTok copy,
-  576 px wide). The handlebar footage in that clip was Central Ave, not the shop ride, so it's out; the
-  close-up faces stay out until those riders say OK. His Friday footage replaces it.
+  Now: `shop-ride-3.mp4` (7 s, 864×1080), cut from Robert's own iPhone clip of the Sept 25, 2026 shop ride
+  (HDR, tone-mapped with zscale + hable): the group from behind, his selfie in Haüs kit, the handlebar view.
+  Out: the moments where other riders' faces show. The earlier TikTok clip was Central Ave, not this ride.
 - **Reviews:** "Rider reviews" sits beside the film (or alone): counts, "would ride it again", the pace
   most riders named, the newest three, the rest folded, and "Review this ride" (the Netlify form
   `ride-review` — again yes/no, pace, words 20–600, first name, from, optional email). `#review` opens the
