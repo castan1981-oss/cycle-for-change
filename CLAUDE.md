@@ -41,8 +41,8 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   the bar and marks Ride with me as the current page. After the ride the same URL becomes the write-up, in
   Robert's words with his footage; the sign-up buttons come off. `head()` takes `image`, `imageAlt` and
   `ogTitle` for pages like this, and apply-chrome.py keeps a page's own card.
-  Desktop hero (Oct 8, 2026, Robert's ask): the riding wall `/film/nov7-wall-1.mp4` (1600×800, three panels of
-  group-ride footage, muted loop, "Pause the film" under the buttons) edge to edge behind the words, with a light
+  Desktop hero (Oct 8, 2026, Robert's ask): the riding wall `/film/nov7-wall-2.mp4` (1920×960, three panels of
+  group-ride footage feathered into each other, 4 MB, muted loop, "Pause the film" under the buttons) edge to edge behind the words, with a light
   wash over the left side — his call, the one exception to "no gradient washes over photos". The 26 s film with
   the words (`/film/nov7-friends-1.mp4`, 9:16) is the next section. Phones keep the still; the wall never loads.
   The sheet is linked as `/nov7/nov7.css?v=N` from apply-chrome.py's SECTION_STYLES — bump N when it changes.
