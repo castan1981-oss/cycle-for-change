@@ -5,9 +5,9 @@ name: Ride reviews in
 # Post one: add the label "post" (ride-review-post.yml). Drop one: close the issue.
 # Needs the NETLIFY_API_TOKEN and NETLIFY_SITE_ID secrets (the rides watch uses the same two).
 
+# Oct 8, 2026: the email with Post it / Drop it (submission-created.js → review.js) is the way now;
+# this is a manual fallback only (Actions → Ride reviews in → Run workflow).
 on:
-  schedule:
-    - cron: "23 * * * *"
   workflow_dispatch: {}
 
 permissions:
