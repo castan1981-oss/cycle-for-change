@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:scottsdale-az-bicycle-haus-friday-shop-ride@cycleforchange.org
+DTSTAMP:20261008T000000Z
+DTSTART;TZID=America/Phoenix:20261009T070000
+DTEND;TZID=America/Phoenix:20261009T090000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270307T235959Z
+SUMMARY:Friday Shop Ride — Scottsdale\, AZ
+LOCATION:Bicycle Haüs\, 7113 E 1st Ave\, Scottsdale\, AZ 85251
+DESCRIPTION:Pace: Social. Nobody gets dropped.\nNo-drop.\nSchedule: Every
+  Friday\, 7:00 am\, from Bicycle Haüs in Old Town Scottsdale. A loop ar
+ ound Paradise Valley that finishes at La Grande Orange on 40th Street in
+  Phoenix; everyone rides home from there.\nConfirm with the host before 
+ you go.\nhttps://cycleforchange.org/rides/scottsdale-az-bicycle-haus-fri
+ day-shop-ride/
+URL:https://cycleforchange.org/rides/scottsdale-az-bicycle-haus-friday-sh
+ op-ride/
+END:VEVENT
+END:VCALENDAR
