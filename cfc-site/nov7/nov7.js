@@ -2,10 +2,11 @@
    for a tap, a wide screen without reduced motion plays it (muted) while half of it is on screen. The round
    button, the line under the picture and the picture itself all play and pause. Plays once; at the end the
    round button comes back. */
-(function () {
-  var fig = document.querySelector("[data-film]");
-  var vid = fig && fig.querySelector("video");
-  if (!vid) return;
+/* Oct 8, 2026: two copies of the film — the desktop hero (#heroFilm) and the section below for phones. Only the
+   one that's showing does anything; the hidden one never loads (preload="none", and it never intersects). */
+[].forEach.call(document.querySelectorAll("[data-film]"), function (fig) {
+  var vid = fig.querySelector("video");
+  if (!vid || !fig.offsetParent) return;
   var fBtn = fig.querySelector("[data-film-btn]"), fPlay = fig.querySelector("[data-film-play]"), fLabel = fig.querySelector("[data-film-label]");
   var wide = window.matchMedia && matchMedia("(min-width: 900px) and (hover: hover)").matches;
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -34,4 +35,4 @@
     }, { threshold: 0.5 }).observe(vid);
   }
   paint();
-})();
+});
