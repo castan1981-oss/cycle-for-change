@@ -382,12 +382,16 @@ the form as CSV until Robert picks one.
   most riders named, the newest three, the rest folded, and "Review this ride" (the Netlify form
   `ride-review` — again yes/no, pace, words 20–600, first name, from, optional email). `#review` opens the
   form; the tag at the top of the page links `#reviews` once there's one. `/shopride` → the shop ride's reviews.
-- **Nothing shows until Robert has read it.** Hourly, `ride-reviews.yml` → `tools/reviews-pull.js` opens
-  one issue per new review (label `review`; links, emails and phone numbers already out; anything to look
-  at twice flagged). He adds the label **`post`** → `ride-review-post.yml` → `tools/reviews-post.js` adds it
-  to `data/ride-reviews.json` on main → the deploy's rides build shows it. Closing the issue drops it.
+- **Nothing shows until Robert has read it.** Each review is emailed to him the moment it's sent
+  (`netlify/functions/submission-created.js`, via Resend to `REVIEWS_EMAIL`) with **Post it / Drop it**
+  buttons. They open `netlify/functions/review.js`: a confirm page (a GET never changes anything, since mail
+  apps pre-open links), then Post writes the review into `data/ride-reviews.json` on main through the GitHub
+  API → the deploy's rides build shows it. Links are signed (`REVIEWS_SECRET`, `lib/review-link.js`) and
+  carry the review, so nothing is stored in between; they last 60 days. Netlify env needed: `RESEND_API_KEY`,
+  `REVIEWS_EMAIL`, `REVIEWS_SECRET`, `GITHUB_TOKEN` (fine-grained, Contents read/write, this repo only).
+  Fallback, manual only: `ride-reviews.yml` → issues → the `post` label (`ride-review-post.yml`).
   Rules in `tools/lib/reviews.js` (tests: `tools/test/reviews.test.js`). Never edit a rider's words beyond
-  that, never write a review, never post one he hasn't labelled. Emails stay in Netlify.
+  that, never write a review, never post one he hasn't approved. Emails stay in Netlify and his inbox.
 - The committed ride pages can lag `data/ride-reviews.json` until the next local rebuild; the deploy is
   what counts (Netlify runs `tools/build-rides.js` on every deploy).
 
