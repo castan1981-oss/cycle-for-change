@@ -97,12 +97,22 @@
 @media (prefers-reduced-motion:reduce){.rp-film-play{transition:none}}
 @media (min-width:900px){.rp-film-fig{max-width:400px}}
 
-/* —— Oct 8, 2026: on desktop the film is the hero (right column, where the photo was) and plays as soon as the
-   page opens. Phones keep the still and the button on the first screen, and get the film in the section below. —— */
-.rp-hero-film{display:none}
+/* —— Oct 8, 2026 (Robert): on desktop the hero is the riding wall — three panels of group-ride footage edge to
+   edge, the left side washed light so the words sit on it. Phones keep the still, the two rides and the
+   RunSignup button on the first screen (a still, not a film, on phones); the wall never loads there. —— */
+.rp-wall,.rp-wall-btn{display:none}
 @media (min-width:900px){
+  .rp-hero{position:relative;display:flex;align-items:center;max-width:none;margin:0;overflow:hidden;
+    min-height:clamp(600px,calc(100svh - 104px),820px);background:var(--bone)}
   .rp-ph{display:none}
-  .rp-hero-film{display:block;order:2;justify-self:center;width:auto;max-width:none;padding-block:clamp(24px,3vw,40px)}
-  .rp-hero-film .rp-film-frame video{height:min(680px,calc(100svh - 190px));min-height:480px;width:auto;aspect-ratio:9/16}
-  .rp-film--below{display:none}
+  .rp-wall{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%;z-index:0}
+  .rp-hero{--edge:max(var(--gut),calc((100% - var(--maxw)) / 2 + var(--gut)))}
+  .rp-hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(90deg,rgba(225,223,219,.96) 0,rgba(225,223,219,.94) calc(var(--edge) + 540px),rgba(225,223,219,.7) calc(var(--edge) + 640px),rgba(225,223,219,0) calc(var(--edge) + 760px))}
+  .rp-in{position:relative;z-index:2;width:100%}
+  .rp-in > *{max-width:640px}
+  .rp-wall-btn{display:inline-flex;align-items:center;min-height:44px;margin-top:18px;padding:0;background:none;border:0;
+    border-bottom:1px solid var(--dust-deep);color:var(--mute);font:700 14px/1.2 var(--display);cursor:pointer}
+  .rp-wall-btn[hidden]{display:none}
+  .rp-wall-btn:focus-visible{outline:2px solid var(--asphalt);outline-offset:3px}
 }
