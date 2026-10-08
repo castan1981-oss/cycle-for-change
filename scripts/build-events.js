@@ -803,7 +803,10 @@ function placeCard(t, r, it, i) {
     r.key === "hotels" ? ["road", `<b>Bike:</b> ${it.bike_policy ? rich(it.bike_policy, `${where}.bike_policy`) : "No stated policy. Ask when you book."}`]
       : it.bike_policy ? ["road", `<b>Bike:</b> ${rich(it.bike_policy, `${where}.bike_policy`)}`] : null,
   ]);
-  const ride = rideFact(rideLine(it, where, r.key === "coffee" ? "The ride from here" : "Nearby ride"));
+  // Oct 8, 2026: a shop's own ride (its host is the shop) is "The shop ride", not a "Nearby ride"
+  const ownRides = r.key === "bike_shops" ? entryRides(it).filter((s) => { const x = RIDE_BY_SLUG.get(s); return x && x.host && x.host.name === it.name; }) : [];
+  const own = ownRides.length && ownRides.length === entryRides(it).length;
+  const ride = rideFact(rideLine(it, where, r.key === "coffee" ? "The ride from here" : own ? (ownRides.length === 1 ? "The shop ride" : "Shop rides") : "Nearby ride"));
   const btns = [
     it.booking_url ? pbtn(it.booking_url, "date", "Book", { rel: affiliateUrls(t).has(it.booking_url) ? "sponsored noopener" : "noopener", aria: `Book ${it.name}` }) : "",
     it.phone ? pbtn(telHref(it.phone), "call", it.phone, { aria: `Call ${it.name}, ${it.phone}` }) : "",

@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "scottsdale-az-bicycle-haus-friday-shop-ride",
+    "name": "Friday Shop Ride",
+    "name_en": null,
+    "kind": "group-ride",
+    "status": "active",
+    "city": "Scottsdale",
+    "neighborhood": "Old Town",
+    "region": "Arizona",
+    "state": "AZ",
+    "country": "US",
+    "lat": null,
+    "lng": null,
+    "geo_precision": null,
+    "tz": "America/Phoenix",
+    "discipline": ["road"],
+    "schedule": "Every Friday, 7:00 am, from Bicycle Haüs in Old Town Scottsdale. A loop around Paradise Valley that finishes at La Grande Orange on 40th Street in Phoenix; everyone rides home from there.",
+    "days": ["fri"],
+    "time_local": "7:00 am",
+    "start_hhmm": "07:00",
+    "frequency": "weekly",
+    "monthly_rule": null,
+    "season": "year-round",
+    "season_months": null,
+    "start_location": {
+      "name": "Bicycle Haüs",
+      "address": "7113 E 1st Ave, Scottsdale, AZ 85251"
+    },
+    "distance_km": null,
+    "distance_miles": "~20",
+    "duration": null,
+    "duration_min": null,
+    "pace": "Social. Nobody gets dropped.",
+    "drop_policy": "no-drop",
+    "host": { "name": "Bicycle Haüs", "type": "shop" },
+    "founded_year": null,
+    "founded_note": null,
+    "cost": null,
+    "language": ["en"],
+    "visitor_notes": "It ends at La Grande Orange (4410 N 40th St, Phoenix), not back at the shop. Plan your own way home from there.",
+    "description": "Bicycle Haüs's Friday morning shop ride. It rolls from the shop in Old Town Scottsdale at 7:00 am, loops around Paradise Valley and finishes at La Grande Orange in Arcadia, about 20 miles. Social and no-drop.",
+    "links": {
+      "website": "https://www.bicyclehaus.com/",
+      "instagram": "https://www.instagram.com/bicyclehaus/",
+      "facebook": "https://www.facebook.com/BicycleHausScottsdale/",
+      "strava": null,
+      "meetup": null,
+      "other": []
+    },
+    "inclusive_focus": [],
+    "sources": [
+      "https://www.bicyclehaus.com/",
+      "https://enve.com/blogs/journal/shop-check-bicycle-haus"
+    ],
+    "verified_on": "2026-10-08",
+    "last_seen": "2026-10-08",
+    "evidence": "Robert rides it every Friday. On Oct 8, 2026 he confirmed the 7:00 am start at the shop, the Paradise Valley loop to La Grande Orange, about 20 miles, social and no-drop. ENVE's profile of the shop names its Friday Ride; the shop's own site doesn't post a schedule.",
+    "confidence": "medium",
+    "refresh": {
+      "method": "instagram",
+      "watch_url": "https://www.instagram.com/bicyclehaus/",
+      "feed_url": null,
+      "notes": "Not posted on the shop's site. Robert rides it every Friday, so re-check by asking him, or the shop directly. The shop can send changes through \"I run this ride\" on the ride page."
+    }
+  }
+]

@@ -261,8 +261,11 @@ explained" keeps its name: it's about charity rides in general, not this site.
   two or more filters would split the list. No new prose on these pages; long text folds.
 - **Bicycle Haüs (Scottsdale) is Robert's home shop** (`home_shop: true`, Phoenix guide only): first in
   the bike shops with the "My home shop" plate and his line. One shop on the whole site; never anywhere
-  else (not the hub tile, not other towns, not the strip). Only what their own site says (no repair or
-  group-ride claims until it says so).
+  else (not the hub tile, not other towns, not the strip). Only what their own site says (no repair
+  claims until it says so) — with one exception: the **Friday Shop Ride**
+  (`scottsdale-az-bicycle-haus-friday-shop-ride`, Fridays 7:00 am, Paradise Valley loop to La Grande Orange) is
+  listed on Robert's own word (he rides it every Friday, Oct 8, 2026) and linked from the card (`ride_slug`,
+  shown as "The shop ride"). The owner, Kale Keltz, sends changes through "I run this ride" on the ride page.
 
 ### 2027 calendar (`/events/2027/`)
 - `data/calendar-2027.json` (600+ US rides and races) → `node scripts/build-calendar.js`. Schema in
