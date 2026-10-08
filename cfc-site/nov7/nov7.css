@@ -1,0 +1,73 @@
+/* Cycle for Change — /nov7/, the page Robert shares for Cycling 4 one·n·ten (Oct 8, 2026).
+   Loaded after /chrome.css (tokens, type, buttons, header, footer). Light page, Lane Paint:
+   the stencil spells CYCLE FOR, the blank is filled with one·n·ten on the smeared-rose plate.
+   Phones: everything down to the RunSignup button fits the first screen (checked 360×640 up to 430×932).
+   Desktop: the words left, the picture right, its edges dissolving into the page. No type on the photo. */
+
+/* —— first screen —— */
+.rp-ph{display:block}
+.rp-ph img{display:block;width:100%;height:clamp(150px,27svh,240px);object-fit:cover;object-position:64% 60%;
+  -webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent 100%);mask-image:linear-gradient(to bottom,#000 72%,transparent 100%)}
+.rp-in{padding-block:2px clamp(40px,6vw,72px)}
+.rp-when{margin:0 0 12px}
+.rp-sign{--h:clamp(36px,11.2vw,60px);display:flex;flex-wrap:wrap;align-items:flex-end;gap:calc(var(--h) * .24);margin:0 0 16px;line-height:1;letter-spacing:0}
+.rp-mark{display:block;height:var(--h);width:auto;color:var(--asphalt)}
+.rp-plate{display:block;background:var(--creosote);color:var(--paper);font-weight:900;font-size:calc(var(--h) * .56);line-height:1.05;padding:.26em .36em .1em;letter-spacing:-.01em;white-space:nowrap}
+.rp-lede{margin:0 0 18px;max-width:30ch;font-size:clamp(1.1rem,.6vw + 1rem,1.4rem);line-height:1.34}
+.rp-pick{list-style:none;margin:0 0 20px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:460px}
+.rp-pick li{display:flex;flex-direction:column;gap:3px;padding-top:9px;border-top:3px solid var(--asphalt);font-size:15px;line-height:1.3;color:var(--mute)}
+.rp-mi{display:flex;align-items:baseline;gap:5px;color:var(--asphalt);font-weight:800;font-size:17px}
+.rp-mi .num{font-weight:900;font-size:clamp(2rem,2vw + 1.4rem,2.75rem);line-height:.9;letter-spacing:-.035em}
+.rp-acts{display:flex;flex-direction:column;align-items:flex-start;gap:16px;max-width:460px}
+.rp-go{width:100%;min-height:54px}
+
+/* short phones: a smaller picture so the button still makes the first screen */
+@media (max-width:759px) and (max-height:700px){
+  .rp-ph img{height:clamp(120px,21svh,170px)}
+  .rp-lede{margin-bottom:14px}
+  .rp-pick{margin-bottom:16px}
+}
+
+/* —— the sections below —— */
+.rp-s{padding-block:clamp(48px,7vw,96px);border-top:1px solid var(--line)}
+.rp-s h2{margin:0 0 18px;max-width:16ch}
+.rp-cols{display:grid;gap:18px}
+.rp-where{margin:0 0 14px;font-size:17px;line-height:1.45}
+.rp-col-a .link{margin-bottom:28px}
+.rp-day{list-style:none;margin:0 0 32px;padding:0;border-top:3px solid var(--asphalt)}
+.rp-day li{display:grid;gap:2px;padding:13px 0;border-bottom:1px solid var(--dust)}
+.rp-t{font-weight:800}
+.rp-facts{margin:0 0 12px;font-size:16px;border-top:3px solid var(--asphalt)}
+.rp-facts div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--dust)}
+.rp-facts dt{font-weight:800;flex:0 0 auto}
+.rp-facts dd{margin:0;text-align:right;max-width:30ch}
+.rp-checked{margin:0 0 24px;font-size:13px;font-weight:600;color:var(--mute)}
+.rp-col-b > .btn{width:100%;min-height:54px}
+.rp-why{background:var(--paper)}
+.rp-why .lede,.rp-after .lede{margin-bottom:16px}
+.rp-why p{max-width:52ch}
+.rp-links{gap:14px 24px}
+.rp .foot{margin-top:0}   /* the last section runs straight into the footer */
+
+@media (min-width:520px){
+  .rp-day li{grid-template-columns:8.5em minmax(0,1fr);gap:16px}
+}
+
+/* —— desktop: words left, picture right —— */
+@media (min-width:900px){
+  .rp-hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;max-width:var(--maxw);margin-inline:auto}
+  .rp-ph{order:2;padding-right:var(--gut)}
+  .rp-ph img{height:min(720px,calc(100svh - 150px));min-height:520px;aspect-ratio:auto;object-position:50% 40%;
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 14%,#000 97.5%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 6%,#000 88%,transparent 100%);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(to right,transparent 0,#000 14%,#000 97.5%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 6%,#000 88%,transparent 100%);
+    mask-composite:intersect}
+  .rp-in{order:1;padding-block:clamp(40px,5vw,72px)}
+  .rp-sign{--h:clamp(56px,5.2vw,84px);margin-bottom:24px}
+  .rp-lede{margin-bottom:24px;max-width:34ch}
+  .rp-pick{margin-bottom:26px}
+  .rp-acts{flex-direction:row;align-items:center;gap:24px;max-width:none}
+  .rp-go,.rp-col-b > .btn{width:auto;padding-inline:32px}
+  .rp-cols{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(32px,5vw,96px);align-items:start}
+}
+.nw{white-space:nowrap}

@@ -954,6 +954,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .ridewith .h2{margin-bottom:clamp(28px,4vw,48px)}
 .ride-in{display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,80px)}
 .ride-next,.ride-find{flex:1 1 380px;display:flex;flex-direction:column;gap:16px}
+.ride-next > .link{align-self:flex-start}   /* Oct 8, 2026: "The whole day" link to /nov7/ keeps its own width */
 .ride-h3{font-size:clamp(2rem,3vw + 1.1rem,3.5rem);display:flex;flex-wrap:wrap;align-items:center;gap:.3em}
 .facts-dl{margin:0;border-top:3px solid var(--asphalt);font-size:16px}
 .facts-dl div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--dust)}

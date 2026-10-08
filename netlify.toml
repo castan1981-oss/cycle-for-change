@@ -84,6 +84,23 @@
   status = 301
   force = true
 
+# —— Oct 8, 2026: /nov7/ is the link Robert shares for Cycling 4 one·n·ten. Typed by hand, a phone may
+# capitalise it. No force: the real page always wins, so these only catch the misses. ——
+[[redirects]]
+  from = "/Nov7"
+  to = "/nov7/"
+  status = 301
+
+[[redirects]]
+  from = "/NOV7"
+  to = "/nov7/"
+  status = 301
+
+[[redirects]]
+  from = "/nov-7"
+  to = "/nov7/"
+  status = 301
+
 # —— Since 2026-09-24 the redesigned page IS the homepage. ——
 # /next/ (where it was previewed) goes home.
 

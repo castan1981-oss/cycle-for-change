@@ -28,11 +28,19 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 - Primary internal link target: the homepage `/` or `/events/2027/riding/` ("Ride with me").
   Never `/pledge/`, never `/#board`.
 - **Ride with me = the next ride Robert is doing** (Pass 36). `NEXT_RIDES` in `scripts/chrome.js` is the one
-  list (date order, `until` = last day, Phoenix time): Cycling 4 one·n·ten (→ `/#ride`), then Center Ride
+  list (date order, `until` = last day, Phoenix time): Cycling 4 one·n·ten (→ `/nov7/`, its own page), then Center Ride
   Out, then Cycle to Zero. The nav button, the menu, the closing block, the homepage's first-screen tile
   (`#heroRide`) and the bar at the foot of every page (`.ridebar`, `/ridebar.js`) all point at the first one
   still ahead; the script re-picks in the browser. Never on `/resources/` (the 988 bar owns that spot).
   After Nov 7, 2026: rewrite the homepage `#ride` section for the next ride and rebuild everything.
+- **`/nov7/` is the link Robert shares for Cycling 4 one·n·ten** (Oct 8, 2026): a hand page
+  (`cfc-site/nov7/index.html` + `nov7.css`, on apply-chrome.py's list) with its own share card
+  (`/og-nov7.jpg`, rendered by `python3 tools/og.py templates/og/nov7.html cfc-site/og-nov7.jpg`; bump the
+  file number when the card changes, chat apps cache previews). First screen on a phone: the sign filled
+  with one·n·ten, the two rides, the RunSignup button — keep it that way. On that page `/ridebar.js` hides
+  the bar and marks Ride with me as the current page. After the ride the same URL becomes the write-up, in
+  Robert's words with his footage; the sign-up buttons come off. `head()` takes `image`, `imageAlt` and
+  `ogTitle` for pages like this, and apply-chrome.py keeps a page's own card.
 
 ## 2. How the site is built
 
@@ -56,7 +64,7 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 | `node scripts/build-events.js` | `cfc-site/events/<slug>/`, `/events/`, `/towns/…`, `sitemap-events.xml` |
 | `node scripts/build-calendar.js` | `cfc-site/events/2027/` (home, months, categories, `riding/`, `all/`, `where.json`), `sitemap-calendar.xml` |
 | `scripts/chrome.js` | the shared `<head>`, header + phone menu, tally line, closing block (`CHROME.pledge()` — old name, no-pledge copy), footer with the mile-updates signup. Required by every generator. |
-| `python3 scripts/apply-chrome.py` | puts chrome.js onto the hand-written pages (guides, field notes, resources, journal, tonight, 404) and refreshes their closing block (`section.pledge`, `.fn-why` on resources) |
+| `python3 scripts/apply-chrome.py` | puts chrome.js onto the hand-written pages (guides, field notes, resources, journal, tonight, nov7, 404) and refreshes their closing block (`section.pledge`, `.fn-why` on resources) |
 | `scripts/photos.js` + `node scripts/apply-photos.js` | the photo registry (src, size, alt, place · month caption, crop, `figure(key, {cls, line, caption})`); apply-photos rewrites the figures baked into hand pages |
 | `python3 tools/grade.py --all --only <key>` | grades `cfc-site/photos/<key>.jpg` into `cfc-site/img/ph/` (portraits 1440 tall, landscapes 1600 wide, q76). `--only` keeps live photos from re-encoding. |
 | `python3 tools/print.py` | the Pass 27 screenprint. Not used on the hero since Pass 32; kept for reference. |
@@ -499,3 +507,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-06 — Pass 35: town guide pages as cards with icons, chips, real buttons and folds; "What do you need?" filters; nine new marks (call, clock, box, key, gear, fit, build, watch, effort); coffee's mark is the cup; Bicycle Haüs first in Phoenix as Robert's home shop.
 - 2026-10-06 — Pass 36: Ride with me goes to the next ride (one·n·ten, Nov 7): a tile on the homepage's first screen and a bar at the foot of every page as you scroll.
 - 2026-10-06 — Pass 37: the homepage on a phone, said plainly — who and what on the first screen, How this works second, the sign's question moved to It always says cycling, one bar at the foot instead of two, repeats cut (12% shorter). Desktop and tablets pixel-identical.
+- 2026-10-08 — `/nov7/`: the shareable page for Cycling 4 one·n·ten with its own share card (`tools/og.py`); every Ride with me points there until Nov 7.

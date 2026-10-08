@@ -20,7 +20,12 @@
   if (bar && !rides.length) return;   // no list on this page: leave the links as built
 
   var href = next ? next.href : "/events/2027/riding/";
-  document.querySelectorAll("[data-ride-next]").forEach(function (a) { a.setAttribute("href", href); });
+  // Oct 8, 2026: the next ride has its own page (/nov7/). On that page the links say where you are and the bar stays away.
+  var here = location.pathname === href || location.pathname + "/" === href;
+  document.querySelectorAll("[data-ride-next]").forEach(function (a) {
+    a.setAttribute("href", href);
+    if (here) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+  });
   var hero = document.getElementById("heroRide");
   if (hero) {
     hero.setAttribute("href", next && next.href === "/#ride" ? "#ride" : href);
@@ -30,7 +35,7 @@
   }
   if (!bar) return;
   // never on the help pages: they keep the 988 bar at the foot of a phone, and nothing else
-  if (!next || document.querySelector(".help-bar") || /^\/resources\//.test(location.pathname)) { bar.remove(); return; }
+  if (!next || here || document.querySelector(".help-bar") || /^\/resources\//.test(location.pathname)) { bar.remove(); return; }
   if (bar.getAttribute("data-cur") !== next.until) {
     bar.querySelector(".ridebar-d").textContent = next.date;
     bar.querySelector(".ridebar-n").textContent = next.name + ", " + next.where;
