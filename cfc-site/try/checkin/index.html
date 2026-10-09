@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Try the ride check-in — Cycle for Change</title>
+<meta name="description" content="A test of the Cycle for Change ride check-in. Scan a code at a group ride, answer one question, done.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#1C1A22">
+<meta property="og:title" content="Try the ride check-in">
+<meta property="og:description" content="Pretend you’re at a group ride. Scan, one tap, done. Then tell Robert what you think.">
+<meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Ride check-in demo (Oct 9, 2026). A test page Robert shares for feedback: noindex, not in any sitemap,
+   not linked from the site. Nothing is saved or sent except the feedback form (Netlify form "checkin-feedback").
+   Lane Paint: Overpass only, After Hours palette, square corners, no shadows. */
+@font-face{font-family:"Overpass";font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/overpass-latin.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Overpass";font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/overpass-latin-ext.woff2) format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{
+  --concrete:#E1DFDB;--plaster:#EFEDEA;--patina:#A9BDB8;--powder:#D9B1AA;--gunmetal:#4A4E55;
+  --pool:#2C4F55;--bruise:#1C1A22;--rose:#A84C58;--rose-ink:#8F3E4A;--line:rgba(28,26,34,.18);--hair:#687F7C;
+  --f:"Overpass",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--concrete);color:var(--bruise);font-family:var(--f);font-size:17px;line-height:1.4}
+button,input,textarea{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:2px}
+[hidden]{display:none!important}
+
+.demo{position:sticky;top:0;z-index:5;background:var(--bruise);color:var(--plaster);font-size:14px;line-height:1.3}
+.demo__in{max-width:480px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 20px}
+.demo b{font-weight:800}
+.demo button{background:none;border:0;padding:10px 0;min-height:44px;color:var(--powder);font-weight:700;text-decoration:underline;text-underline-offset:3px;cursor:pointer;flex:0 0 auto}
+
+.app{max-width:480px;min-height:calc(100dvh - 64px);margin:0 auto;background:var(--plaster);position:relative}
+.scr{min-height:calc(100dvh - 64px);padding:24px 22px 32px;display:flex;flex-direction:column;gap:22px}
+.scr--dark{background:var(--bruise);color:var(--plaster)}
+.scr:focus{outline:none}
+
+h1{margin:0;font-size:34px;line-height:1.04;font-weight:900;letter-spacing:-.01em}
+h2{margin:0;font-size:24px;line-height:1.12;font-weight:900}
+p{margin:0}
+.sub{color:var(--gunmetal);font-size:16px;line-height:1.45}
+.scr--dark .sub{color:var(--concrete)}
+.small{font-size:14px;line-height:1.45}
+.lab{font-size:13px;font-weight:700;color:var(--gunmetal)}
+.scr--dark .lab{color:var(--patina)}
+.stack{display:flex;flex-direction:column;gap:10px}
+.push{margin-top:auto}
+
+/* buttons: caps, like a road sign (the site's rule), square, 56px tall here because thumbs are cold at 6:58 am */
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:56px;padding:0 18px;border:2px solid var(--bruise);background:var(--bruise);color:var(--plaster);font-weight:800;font-size:15px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer;text-align:center}
+.btn--ghost{background:transparent;color:var(--bruise)}
+.scr--dark .btn{background:var(--plaster);color:var(--bruise);border-color:var(--plaster)}
+.scr--dark .btn--ghost{background:transparent;color:var(--plaster)}
+.link{align-self:center;background:none;border:0;min-height:44px;padding:8px 6px;font-weight:700;font-size:15px;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;cursor:pointer}
+.back{align-self:flex-start;background:none;border:0;min-height:44px;padding:6px 0;font-weight:700;font-size:15px;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;cursor:pointer}
+
+/* the sign */
+.sign{display:flex;flex-direction:column;gap:10px}
+.sign svg{display:block;height:74px;width:auto;align-self:flex-start;color:var(--bruise)}
+.sign__row{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.plate{display:inline-block;background:var(--rose);color:var(--plaster);font-weight:900;font-size:30px;line-height:1;padding:9px 12px 5px;margin-bottom:5px}
+.scr--dark .plate{background:var(--powder);color:var(--bruise)}
+.mini{display:block;width:132px;height:auto;color:var(--bruise)}
+
+/* facts */
+.facts{background:var(--concrete);padding:16px 18px;display:flex;flex-direction:column;gap:11px;font-size:16px;line-height:1.35}
+.fact{display:flex;gap:12px;align-items:flex-start}
+.mk{flex:0 0 22px;width:22px;height:22px;color:var(--pool)}
+.checked{display:flex;gap:8px;align-items:center;font-size:14px;font-weight:700;color:var(--pool)}
+.checked .mk{flex-basis:18px;width:18px;height:18px}
+
+/* door list on the start screen */
+.door{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;min-height:64px;padding:14px 16px;border:2px solid var(--bruise);background:var(--plaster);text-align:left;cursor:pointer;font-weight:800;font-size:17px;line-height:1.2}
+.door small{display:block;font-weight:400;font-size:14px;color:var(--gunmetal);margin-top:3px}
+.door .mk{color:var(--bruise)}
+.door:hover{background:var(--concrete)}
+
+/* ride rows */
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;padding:15px 16px;border:2px solid var(--bruise);background:transparent;text-align:left;cursor:pointer}
+.row--now{background:var(--bruise);color:var(--plaster)}
+.row__name{display:block;font-size:18px;font-weight:800;line-height:1.15}
+.row__where{display:block;font-size:14px;margin-top:3px;color:var(--gunmetal)}
+.row--now .row__where{color:var(--powder)}
+.row__when{flex:0 0 auto;text-align:right;font-weight:800;font-size:16px}
+.row__when small{display:block;font-weight:400;font-size:13px;color:var(--gunmetal)}
+.row--now .row__when small{color:var(--patina)}
+
+/* chips */
+.chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.chip{min-height:72px;padding:0 12px;border:2px solid var(--bruise);background:transparent;font-weight:800;font-size:16px;line-height:1.15;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--bruise);color:var(--plaster)}
+.chip--sm{min-height:52px}
+
+/* fields */
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:15px;font-weight:800}
+.field label span{font-weight:400;color:var(--gunmetal)}
+.field input,.field textarea{width:100%;min-height:52px;border:2px solid var(--hair);background:#fff;padding:12px 14px;font-size:17px;border-radius:0}
+.field textarea{resize:vertical;min-height:96px}
+.field input:focus,.field textarea:focus{border-color:var(--bruise);outline:none}
+
+/* the yes card */
+.got{background:var(--pool);color:var(--plaster);padding:20px;display:flex;flex-direction:column;gap:8px}
+.got__h{display:flex;align-items:center;gap:10px;font-size:30px;font-weight:900;line-height:1}
+.got__h svg{width:28px;height:28px;color:var(--powder)}
+.got p{color:var(--concrete);font-size:16px;line-height:1.45}
+
+/* media picker */
+.pick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.pick label{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:116px;background:var(--concrete);font-weight:800;font-size:16px;cursor:pointer;text-align:center}
+.pick label:focus-within{outline:3px solid var(--rose);outline-offset:2px}
+.pick svg{width:32px;height:32px}
+.pick input{position:absolute;width:1px;height:1px;opacity:0}
+.thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.thumbs img,.thumbs video,.thumbs span{width:100%;aspect-ratio:1;object-fit:cover;background:var(--patina);display:block}
+.thumbs span{display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
+.rules{border-top:2px solid var(--powder);padding-top:14px;display:flex;flex-direction:column;gap:6px;font-size:15px;line-height:1.45}
+
+/* inbox */
+.mail{background:var(--plaster);color:var(--bruise);padding:16px;display:flex;flex-direction:column;gap:10px}
+.mail__top{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--gunmetal)}
+.mail__h{font-size:18px;font-weight:800;line-height:1.2}
+.mail__b{font-size:15px;line-height:1.45;color:var(--gunmetal)}
+.mail__btns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.mail__btns .btn{min-height:48px;font-size:13px;background:var(--bruise);color:var(--plaster);border-color:var(--bruise)}
+.mail__btns .btn--ghost{background:transparent;color:var(--bruise)}
+.mail__done{font-weight:800;font-size:15px;color:var(--pool)}
+.quiet{border:2px dashed var(--patina);padding:14px 16px;font-size:15px;line-height:1.45;color:var(--concrete)}
+
+/* the stickers on the start screen */
+.stickers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.stk{background:var(--bruise);color:var(--plaster);padding:14px 12px;display:flex;flex-direction:column;gap:10px;align-items:center}
+.stk svg.mini{width:100%;max-width:150px;color:var(--plaster)}
+.stk .plate{font-size:15px;padding:5px 7px 3px;margin:0;background:var(--powder);color:var(--bruise)}
+.qr{width:88px;height:88px;background:var(--plaster);padding:6px}
+.qr svg{display:block;width:100%;height:100%}
+.stk p{font-size:13px;font-weight:800;text-align:center;line-height:1.2}
+
+@media (min-width:520px){
+  .demo__in{padding:10px 24px}
+  .app{margin:24px auto;min-height:0}
+  .scr{min-height:780px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" focusable="false"><defs>
+  <path id="lpC" d="M52 34 V24 Q52 8 36 8 H33 M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 142 H36 Q52 142 52 126 V116"/>
+  <path id="lpY" d="M11 4 L30 68 L49 4 M30 68 V150"/>
+  <path id="lpL" d="M8 0 V150 M22 142 H54"/>
+  <path id="lpE" d="M8 0 V150 M22 8 H54 M22 75 H47 M22 142 H54"/>
+  <path id="lpF" d="M8 0 V150 M22 8 H54 M22 75 H47"/>
+  <path id="lpO" d="M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 8 H36 Q52 8 52 24 V126 Q52 142 36 142 H33"/>
+  <path id="lpR" d="M8 0 V150 M22 8 H36 Q52 8 52 24 V58 Q52 74 36 74 H22 M33 90 L50 150"/>
+  <clipPath id="lpRow"><rect x="-20" y="0" width="900" height="150"/></clipPath>
+  <g id="lpCycle" clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/></g>
+  <g id="lpFor" clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpF"/><use href="#lpO" transform="translate(74 0)"/><use href="#lpR" transform="translate(148 0)"/></g>
+  <g id="lpLine"><use href="#lpCycle"/><use href="#lpFor" transform="translate(414 0)"/></g>
+  <g id="qrDots" fill="#1C1A22"></g>
+</defs></svg>
+
+<div class="demo" role="note">
+  <div class="demo__in">
+    <span><b>This is a test.</b> Nothing you tap is saved, except your feedback.</span>
+    <button type="button" data-restart>Start over</button>
+  </div>
+</div>
+
+<main class="app" id="app">
+
+  <!-- START -->
+  <section class="scr" data-screen="start" tabindex="-1" aria-labelledby="h-start">
+    <svg class="mini" viewBox="0 0 760 150" role="img" aria-label="Cycle for Change"><use href="#lpLine"/><rect x="652" y="114" width="98" height="36" fill="#A84C58"/></svg>
+    <div class="stack">
+      <h1 id="h-start">Try the ride check-in.</h1>
+      <p class="sub">Pretend you’re at a group ride. Somebody hands you a sticker, or there’s one on the shop door. Pick how you got here.</p>
+    </div>
+    <div class="stickers" aria-hidden="true">
+      <div class="stk">
+        <svg class="mini" viewBox="0 0 630 150"><use href="#lpLine"/></svg>
+        <span class="plate">the shop ride</span>
+        <div class="qr"><svg viewBox="0 0 25 25"><use href="#qrDots"/></svg></div>
+        <p>On the shop door</p>
+      </div>
+      <div class="stk">
+        <svg class="mini" viewBox="0 0 630 150"><use href="#lpLine"/></svg>
+        <span class="plate">your ride</span>
+        <div class="qr"><svg viewBox="0 0 25 25"><use href="#qrDots"/></svg></div>
+        <p>On Robert’s bike, kit and Reels</p>
+      </div>
+    </div>
+    <div class="stack">
+      <button class="door" type="button" data-go="scan">
+        <span>I scanned the code at the shop<small>Friday, 6:58 am, Bicycle Haüs</small></span>
+        <svg class="mk" aria-hidden="true"><use href="/rides/marks.svg#m-start"/></svg>
+      </button>
+      <button class="door" type="button" data-go="nearby">
+        <span>I scanned the code on Robert’s bike<small>One code for every ride</small></span>
+        <svg class="mk" aria-hidden="true"><use href="/rides/marks.svg#m-locate"/></svg>
+      </button>
+      <button class="door" type="button" data-go="later" data-ride="haus">
+        <span>I scanned the shop code on a Tuesday<small>No ride right now</small></span>
+        <svg class="mk" aria-hidden="true"><use href="/rides/marks.svg#m-clock"/></svg>
+      </button>
+      <button class="door" type="button" data-go="nearby">
+        <span>No code, I just opened the link<small>cycleforchange.org/ride</small></span>
+        <svg class="mk" aria-hidden="true"><use href="/rides/marks.svg#m-search"/></svg>
+      </button>
+    </div>
+    <div class="stack push">
+      <button class="btn btn--ghost" type="button" data-go="inbox">See what Robert gets</button>
+      <button class="link" type="button" data-go="feedback">Skip to telling Robert what you think</button>
+    </div>
+  </section>
+
+  <!-- SCAN: at the ride -->
+  <section class="scr" data-screen="scan" tabindex="-1" aria-labelledby="h-scan" hidden>
+    <p style="font-size:17px;font-weight:700;color:var(--pool)">You’re here. Thanks for scanning.</p>
+    <div class="sign">
+      <svg viewBox="-10 -10 380 170" role="img" aria-label="Cycle"><use href="#lpCycle"/></svg>
+      <div class="sign__row">
+        <svg viewBox="-10 -10 230 170" role="img" aria-label="for"><use href="#lpFor"/></svg>
+        <h1 id="h-scan" class="plate">the shop ride</h1>
+      </div>
+    </div>
+    <div class="facts">
+      <div class="fact"><svg class="mk" aria-hidden="true"><use href="/rides/marks.svg#m-clock"/></svg><b style="font-weight:800">Fridays, 7:00 am</b></div>
+      <div class="fact"><svg class="mk" aria-hidden="true"><use href="/rides/marks.svg#m-start"/></svg><span>Bicycle Haüs, Old Town Scottsdale</span></div>
+      <div class="fact"><svg class="mk" aria-hidden="true"><use href="/rides/marks.svg#m-distance"/></svg><span>About 20 miles around Paradise Valley. Nobody gets dropped.</span></div>
+      <div class="fact"><svg class="mk" aria-hidden="true"><use href="/rides/marks.svg#m-finish"/></svg><span>Ends at La Grande Orange on 40th Street</span></div>
+    </div>
+    <p class="checked"><svg class="mk" aria-hidden="true"><use href="/rides/marks.svg#m-checked"/></svg>Last checked Oct 8</p>
+    <div class="stack push">
+      <h2>Is it how the page says?</h2>
+      <button class="btn" type="button" data-yes>Yes, it’s rolling</button>
+      <button class="btn btn--ghost" type="button" data-go="changed">Something changed</button>
+      <button class="link" type="button" data-go="nearby">Not this ride?</button>
+    </div>
+  </section>
+
+  <!-- LATER: scanned when nothing is rolling -->
+  <section class="scr" data-screen="later" tabindex="-1" aria-labelledby="h-later" hidden>
+    <button class="back" type="button" data-back>Back</button>
+    <svg class="mini" viewBox="0 0 760 150" role="img" aria-label="Cycle for Change"><use href="#lpLine"/><rect x="652" y="114" width="98" height="36" fill="#A84C58"/></svg>
+    <div class="stack">
+      <p class="lab">Not rolling right now</p>
+      <h1 id="h-later" data-f="name">Friday Shop Ride</h1>
+      <p class="sub" data-f="where">Bicycle Haüs, Old Town Scottsdale</p>
+    </div>
+    <div class="got" style="background:var(--bruise)">
+      <p class="lab" style="color:var(--patina)">Next one</p>
+      <p style="font-size:30px;font-weight:900;line-height:1.05;color:var(--plaster)" data-f="next">Friday, 7:00 am</p>
+      <p data-f="pace">About 20 miles. Nobody gets dropped.</p>
+    </div>
+    <p class="small" data-f="robert">Robert rides this one most Fridays. Come say hi.</p>
+    <div class="stack push">
+      <a class="btn" href="/rides/scottsdale-az-bicycle-haus-friday-shop-ride/ride.ics" data-f-href="ics">Put it in my calendar</a>
+      <a class="btn btn--ghost" href="/rides/scottsdale-az-bicycle-haus-friday-shop-ride/" data-f-href="page">See the ride page</a>
+      <button class="link" type="button" data-go="changed">Something’s wrong with this ride</button>
+    </div>
+  </section>
+
+  <!-- NEARBY: no code, or the one-for-everywhere code -->
+  <section class="scr" data-screen="nearby" tabindex="-1" aria-labelledby="h-near" hidden>
+    <button class="back" type="button" data-back>Back</button>
+    <div class="stack">
+      <h1 id="h-near">Which ride are you on?</h1>
+      <p class="sub">For the test, you’re standing at Bicycle Haüs. It’s Friday, 6:58 am.</p>
+    </div>
+    <div class="stack">
+      <p class="lab">Starting now, near you</p>
+      <button class="row row--now" type="button" data-go="scan">
+        <span><span class="row__name">Friday Shop Ride</span><span class="row__where">Bicycle Haüs, Scottsdale</span></span>
+        <span class="row__when">7:00 am<small>Right here</small></span>
+      </button>
+    </div>
+    <div class="stack">
+      <p class="lab">Later, near you</p>
+      <button class="row" type="button" data-go="later" data-ride="cyclologic">
+        <span><span class="row__name">Cyclologic Saturday Morning Group Ride</span><span class="row__where">Cyclologic, Scottsdale</span></span>
+        <span class="row__when">Sat<small>6:30 am</small></span>
+      </button>
+      <button class="row" type="button" data-go="later" data-ride="regroup">
+        <span><span class="row__name">Regroup Saturday Coffee Ride</span><span class="row__where">Regroup Coffee + Bicycles, Tempe</span></span>
+        <span class="row__when">Sat<small>6:30 am</small></span>
+      </button>
+    </div>
+    <button class="btn btn--ghost" type="button" data-go="notlisted">My ride’s not here</button>
+    <div class="facts push" style="flex-direction:row;gap:12px">
+      <svg class="mk" aria-hidden="true"><use href="/rides/marks.svg#m-locate"/></svg>
+      <p class="small" style="color:var(--pool)">Your location finds the ride, then it’s gone. It’s never saved, and nobody sees who checked in where.</p>
+    </div>
+  </section>
+
+  <!-- CHANGED -->
+  <section class="scr" data-screen="changed" tabindex="-1" aria-labelledby="h-chg" hidden>
+    <button class="back" type="button" data-back>Back</button>
+    <div class="stack">
+      <h1 id="h-chg">What changed?</h1>
+      <p class="sub">Tap one. That’s enough.</p>
+    </div>
+    <div class="chips" role="group" aria-label="What changed">
+      <button class="chip" type="button" aria-pressed="false" data-chip="The time">The time</button>
+      <button class="chip" type="button" aria-pressed="false" data-chip="Where it starts">Where it starts</button>
+      <button class="chip" type="button" aria-pressed="false" data-chip="The route">The route</button>
+      <button class="chip" type="button" aria-pressed="false" data-chip="It’s not running">It’s not running</button>
+    </div>
+    <div class="field">
+      <label for="chg-note">Say it in a line <span>(if you want)</span></label>
+      <textarea id="chg-note" rows="3" placeholder="Rolls at 6:30 now"></textarea>
+    </div>
+    <div class="stack push">
+      <button class="btn" type="button" data-send-change>Send</button>
+      <p class="small" style="text-align:center;color:var(--pool)">Robert checks it before the page changes. One tap never takes a ride down.</p>
+    </div>
+  </section>
+
+  <!-- DONE: after yes, or after a change -->
+  <section class="scr" data-screen="done" tabindex="-1" aria-labelledby="h-done" hidden>
+    <div class="got">
+      <div class="got__h"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span id="h-done" data-f="doneH">Got it.</span></div>
+      <p data-f="doneP">The Friday Shop Ride now says checked today. That’s you keeping it real for the next person.</p>
+    </div>
+    <div class="stack">
+      <h2>Got a photo or a clip?</h2>
+      <p class="sub">Totally optional.</p>
+    </div>
+    <div class="pick">
+      <label><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Add photos<input type="file" accept="image/*" multiple data-media></label>
+      <label><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12"/><path d="M16 10l5-3v10l-5-3"/></svg>Add a video<input type="file" accept="video/*" data-media></label>
+    </div>
+    <div class="thumbs" data-thumbs hidden></div>
+    <div class="rules">
+      <p><b style="font-weight:800">Robert sees these first.</b> Nothing goes up without him.</p>
+      <p style="color:var(--gunmetal)">Keep other riders’ faces out unless they said yes. (In this test, your pictures never leave your phone.)</p>
+    </div>
+    <div class="stack push">
+      <button class="btn" type="button" data-go="end">Done</button>
+    </div>
+  </section>
+
+  <!-- NOT LISTED -->
+  <section class="scr" data-screen="notlisted" tabindex="-1" aria-labelledby="h-nl" hidden>
+    <button class="back" type="button" data-back>Back</button>
+    <div class="stack">
+      <h1 id="h-nl">Tell me about it.</h1>
+      <p class="sub">I’ll check it and put it on the map.</p>
+    </div>
+    <div class="stack" style="gap:14px">
+      <div class="field"><label for="nl-name">The ride</label><input id="nl-name" type="text" placeholder="Tuesday coffee ride" autocomplete="off"></div>
+      <div class="field"><label for="nl-when">When it rolls</label><input id="nl-when" type="text" placeholder="Tuesdays, 6:00 pm" autocomplete="off"></div>
+      <div class="field"><label for="nl-where">Where it starts</label><input id="nl-where" type="text" placeholder="Using where you’re standing" autocomplete="off"></div>
+      <div class="field"><label for="nl-who">Who runs it <span>(if you know)</span></label><input id="nl-who" type="text" placeholder="A shop, a club, a person" autocomplete="off"></div>
+    </div>
+    <div class="stack push">
+      <button class="btn" type="button" data-send-ride>Send it to Robert</button>
+    </div>
+  </section>
+
+  <!-- END -->
+  <section class="scr" data-screen="end" tabindex="-1" aria-labelledby="h-end" hidden>
+    <svg class="mini" viewBox="0 0 760 150" role="img" aria-label="Cycle for Change"><use href="#lpLine"/><rect x="652" y="114" width="98" height="36" fill="#A84C58"/></svg>
+    <div class="stack">
+      <h1 id="h-end" data-f="endH">That’s it. Go ride.</h1>
+      <p class="sub" data-f="endP">On a real ride, that took about ten seconds.</p>
+    </div>
+    <div class="stack push">
+      <button class="btn" type="button" data-go="feedback">Tell Robert what you think</button>
+      <button class="btn btn--ghost" type="button" data-go="inbox">See what Robert gets</button>
+      <button class="link" type="button" data-restart>Try another way in</button>
+    </div>
+  </section>
+
+  <!-- INBOX: Robert's side -->
+  <section class="scr scr--dark" data-screen="inbox" tabindex="-1" aria-labelledby="h-inbox" hidden>
+    <button class="back" type="button" data-back style="color:var(--plaster)">Back</button>
+    <div class="stack">
+      <h1 id="h-inbox">What Robert gets</h1>
+      <p class="sub">One email per thing that needs him. One tap and it’s handled. A plain yes never emails him. It just updates the ride.</p>
+    </div>
+    <div class="stack" data-mails></div>
+    <div class="stack push">
+      <button class="btn" type="button" data-go="feedback">Tell Robert what you think</button>
+      <button class="link" type="button" data-restart style="color:var(--plaster)">Start over</button>
+    </div>
+  </section>
+
+  <!-- FEEDBACK -->
+  <section class="scr" data-screen="feedback" tabindex="-1" aria-labelledby="h-fb" hidden>
+    <button class="back" type="button" data-back>Back</button>
+    <div class="stack">
+      <h1 id="h-fb">What did you think?</h1>
+      <p class="sub">Straight to Robert. Be honest, that’s the point.</p>
+    </div>
+    <form class="stack" style="gap:18px" name="checkin-feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-feedback>
+      <input type="hidden" name="form-name" value="checkin-feedback">
+      <input type="hidden" name="path" value="">
+      <p hidden><label>Leave this empty <input name="bot-field"></label></p>
+      <div class="field">
+        <span style="font-size:15px;font-weight:800" id="fb-use-l">Would you use it at a ride?</span>
+        <div class="chips" role="group" aria-labelledby="fb-use-l" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+          <button class="chip chip--sm" type="button" aria-pressed="false" data-use="yes">Yes</button>
+          <button class="chip chip--sm" type="button" aria-pressed="false" data-use="maybe">Maybe</button>
+          <button class="chip chip--sm" type="button" aria-pressed="false" data-use="no">No</button>
+        </div>
+        <input type="hidden" name="would_use" value="">
+      </div>
+      <div class="field">
+        <label for="fb-words">What worked, what didn’t?</label>
+        <textarea id="fb-words" name="words" rows="5" placeholder="Anything. Confusing bits, things you’d add, things to cut."></textarea>
+      </div>
+      <div class="field">
+        <label for="fb-name">Your name <span>(optional)</span></label>
+        <input id="fb-name" name="name" type="text" autocomplete="given-name">
+      </div>
+      <input type="hidden" name="tried" value="">
+      <button class="btn" type="submit">Send it to Robert</button>
+      <p class="small" data-fb-status role="status" style="text-align:center;min-height:20px"></p>
+    </form>
+  </section>
+</main>
+
+<script>
+(function () {
+  "use strict";
+
+  // Real rides from the directory (rides.json, Oct 9, 2026). Nothing here is fetched; it's a test.
+  var RIDES = {
+    haus: { name: "Friday Shop Ride", where: "Bicycle Haüs, Old Town Scottsdale", next: "Friday, 7:00 am",
+      pace: "About 20 miles. Nobody gets dropped.", robert: "Robert rides this one most Fridays. Come say hi.",
+      slug: "scottsdale-az-bicycle-haus-friday-shop-ride" },
+    cyclologic: { name: "Cyclologic Saturday Morning Group Ride", where: "Cyclologic, Scottsdale", next: "Saturday, 6:30 am",
+      pace: "Groups from about 15 to 22+ mph, 35 to 60 miles, on rolling roads.", robert: "",
+      slug: "scottsdale-az-cyclologic-saturday-group-ride" },
+    regroup: { name: "Regroup Saturday Coffee Ride", where: "Regroup Coffee + Bicycles, Tempe", next: "Saturday, 6:30 am",
+      pace: "30 to 50 miles, in groups by ability.", robert: "",
+      slug: "tempe-az-regroup-coffee-ride" }
+  };
+
+  var state, trail, media = [];
+  function fresh() {
+    state = { yes: false, change: null, note: "", ride: null, on: "Friday Shop Ride", tried: [] };
+    media.forEach(function (m) { URL.revokeObjectURL(m.url); });
+    media = [];
+    trail = [];
+  }
+  fresh();
+
+  var screens = document.querySelectorAll("[data-screen]");
+  var current = "start";
+
+  function show(name, push) {
+    if (push !== false && name !== current) trail.push(current);
+    current = name;
+    Array.prototype.forEach.call(screens, function (s) { s.hidden = s.getAttribute("data-screen") !== name; });
+    if (name === "inbox") renderInbox();
+    if (state.tried.indexOf(name) < 0) state.tried.push(name);
+    var el = document.querySelector('[data-screen="' + name + '"]');
+    window.scrollTo(0, 0);
+    if (el) el.focus({ preventScroll: true });
+    if (location.hash.slice(1) !== name) history.replaceState(null, "", name === "start" ? location.pathname : "#" + name);
+  }
+  function back() { show(trail.length ? trail.pop() : "start", false); }
+
+  function fill(scope, key, text) {
+    var el = scope.querySelector('[data-f="' + key + '"]');
+    if (!el) return;
+    el.textContent = text;
+    el.hidden = !text;
+  }
+  function later(id) {
+    var r = RIDES[id] || RIDES.haus, s = document.querySelector('[data-screen="later"]');
+    state.on = r.name;
+    fill(s, "name", r.name); fill(s, "where", r.where); fill(s, "next", r.next); fill(s, "pace", r.pace); fill(s, "robert", r.robert);
+    s.querySelector('[data-f-href="ics"]').href = "/rides/" + r.slug + "/ride.ics";
+    s.querySelector('[data-f-href="page"]').href = "/rides/" + r.slug + "/";
+  }
+
+  document.addEventListener("click", function (e) {
+    var t = e.target.closest("button, a");
+    if (!t) return;
+    if (t.hasAttribute("data-restart")) { fresh(); resetForms(); show("start", false); return; }
+    if (t.hasAttribute("data-back")) { back(); return; }
+    if (t.hasAttribute("data-yes")) {
+      state.yes = true; state.change = null;
+      var d = document.querySelector('[data-screen="done"]');
+      fill(d, "doneH", "Got it.");
+      fill(d, "doneP", "The Friday Shop Ride now says checked today. That’s you keeping it real for the next person.");
+      show("done"); return;
+    }
+    if (t.hasAttribute("data-chip")) {
+      Array.prototype.forEach.call(t.parentNode.querySelectorAll("[data-chip]"), function (c) { c.setAttribute("aria-pressed", c === t ? "true" : "false"); });
+      state.change = t.getAttribute("data-chip"); return;
+    }
+    if (t.hasAttribute("data-send-change")) {
+      if (!state.change) { var first = document.querySelector("[data-chip]"); first.focus(); return; }
+      state.note = document.getElementById("chg-note").value.trim();
+      state.yes = false;
+      var d2 = document.querySelector('[data-screen="done"]');
+      fill(d2, "doneH", "Sent. Thank you.");
+      fill(d2, "doneP", "Robert checks it before the page changes. Until he does, the ride page stays as it is.");
+      show("done"); return;
+    }
+    if (t.hasAttribute("data-send-ride")) {
+      var name = document.getElementById("nl-name").value.trim();
+      if (!name) { document.getElementById("nl-name").focus(); return; }
+      state.ride = { name: name, when: document.getElementById("nl-when").value.trim(), where: document.getElementById("nl-where").value.trim(), who: document.getElementById("nl-who").value.trim() };
+      var en = document.querySelector('[data-screen="end"]');
+      fill(en, "endH", "Got it. Thank you.");
+      fill(en, "endP", "Robert checks it, then it goes on the map with “Checked” and today’s date.");
+      show("end"); return;
+    }
+    if (t.hasAttribute("data-use")) {
+      Array.prototype.forEach.call(t.parentNode.querySelectorAll("[data-use]"), function (c) { c.setAttribute("aria-pressed", c === t ? "true" : "false"); });
+      document.querySelector('[name="would_use"]').value = t.getAttribute("data-use"); return;
+    }
+    if (t.hasAttribute("data-mail")) {
+      var card = t.closest(".mail"), what = t.getAttribute("data-mail");
+      card.querySelector(".mail__btns").outerHTML = '<p class="mail__done">' + esc(what) + '</p>';
+      return;
+    }
+    var go = t.getAttribute("data-go");
+    if (go) {
+      if (go === "later") later(t.getAttribute("data-ride"));
+      if (go === "scan") state.on = "Friday Shop Ride";
+      if (go === "end") {
+        var en2 = document.querySelector('[data-screen="end"]');
+        fill(en2, "endH", "That’s it. Go ride.");
+        fill(en2, "endP", "On a real ride, that took about ten seconds.");
+      }
+      show(go);
+    }
+  });
+
+  // photos and video stay on the phone: shown as thumbnails, never uploaded
+  Array.prototype.forEach.call(document.querySelectorAll("[data-media]"), function (inp) {
+    inp.addEventListener("change", function () {
+      Array.prototype.forEach.call(inp.files || [], function (f) {
+        media.push({ url: URL.createObjectURL(f), video: /^video\//.test(f.type) });
+      });
+      inp.value = "";
+      drawThumbs();
+    });
+  });
+  function drawThumbs() {
+    var box = document.querySelector("[data-thumbs]");
+    box.innerHTML = "";
+    media.slice(0, 8).forEach(function (m) {
+      var el = document.createElement(m.video ? "video" : "img");
+      el.src = m.url;
+      if (m.video) { el.muted = true; el.playsInline = true; el.setAttribute("aria-label", "Your video"); }
+      else el.alt = "Your photo";
+      box.appendChild(el);
+    });
+    if (media.length > 8) { var more = document.createElement("span"); more.textContent = "+" + (media.length - 8); box.appendChild(more); }
+    box.hidden = !media.length;
+  }
+
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+  function count(n, one, many) { return n + " " + (n === 1 ? one : many); }
+  function mail(time, head, body, a, b, extra) {
+    return '<article class="mail"><div class="mail__top"><span>Cycle for Change</span><span>' + time + '</span></div>' +
+      '<h3 class="mail__h" style="margin:0">' + head + '</h3>' + (body ? '<p class="mail__b">' + body + '</p>' : "") + (extra || "") +
+      '<div class="mail__btns"><button class="btn" type="button" data-mail="' + esc(a[1]) + '">' + a[0] + '</button>' +
+      '<button class="btn btn--ghost" type="button" data-mail="' + esc(b[1]) + '">' + b[0] + '</button></div></article>';
+  }
+  function renderInbox() {
+    var out = [], photos = media.filter(function (m) { return !m.video; }).length, vids = media.length - photos;
+    var thumbs = media.length ? '<div class="thumbs">' + media.slice(0, 4).map(function (m) {
+      return m.video ? '<video src="' + m.url + '" muted playsinline aria-label="Their video"></video>' : '<img src="' + m.url + '" alt="Their photo">';
+    }).join("") + "</div>" : "";
+    var bits = [];
+    if (photos) bits.push(count(photos, "photo", "photos"));
+    if (vids) bits.push(count(vids, "video", "videos"));
+
+    if (state.change) {
+      var note = state.note ? (/[.!?]$/.test(state.note) ? state.note : state.note + ".") : "";
+      out.push(mail("7:01 am", esc(state.on) + ": " + esc(state.change.toLowerCase()) + "?",
+        (note ? "“" + esc(note) + "” " : "") + "One report so far. The page stays as it is until you say.",
+        ["Update the page", "Updated. The ride page shows the change."], ["Leave it", "Left as it is."]));
+    }
+    if (media.length) {
+      out.push(mail("7:02 am", esc(state.on) + (state.yes ? " checked in, with " : ": ") + bits.join(" and "), "",
+        ["Post it", "Posted to the ride page."], ["Drop it", "Dropped. Nobody sees it."], thumbs));
+    }
+    if (state.ride) {
+      var r = state.ride, line = [r.when, r.where || "Pinned where they stood", r.who ? "Run by " + r.who : ""].filter(Boolean).map(esc).join(". ");
+      out.push(mail("8:40 am", "New ride: " + esc(r.name), line + ".",
+        ["Add it", "Added. It goes on the map, checked today."], ["Drop it", "Dropped."]));
+    }
+    if (state.yes && !media.length) {
+      out.push('<p class="quiet">Your “yes” didn’t send Robert anything. The Friday Shop Ride just says “Checked today” now. That’s the whole point.</p>');
+    }
+    if (!out.length) {
+      out.push('<p class="quiet">Nothing from you yet. Try a check-in first, or add photos or a missing ride, and it shows up here the way Robert would see it.</p>');
+      out.push(mail("7:02 am", "Shop ride checked in, with 2 photos", "This one’s an example.",
+        ["Post it", "Posted to the ride page."], ["Drop it", "Dropped. Nobody sees it."],
+        '<div class="thumbs"><span style="background:var(--patina)">photo</span><span style="background:var(--powder)">photo</span></div>'));
+    }
+    document.querySelector("[data-mails]").innerHTML = out.join("");
+  }
+
+  // feedback → Netlify Forms ("checkin-feedback"); the only thing on this page that is sent anywhere
+  var form = document.querySelector("[data-feedback]");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var status = form.querySelector("[data-fb-status]"), btn = form.querySelector("button[type=submit]");
+    var words = form.querySelector('[name="words"]').value.trim(), use = form.querySelector('[name="would_use"]').value;
+    if (!words && !use) { status.textContent = "Say something first, even one word."; form.querySelector("#fb-words").focus(); return; }
+    form.querySelector('[name="path"]').value = location.pathname;
+    form.querySelector('[name="tried"]').value = state.tried.join(", ");
+    btn.disabled = true; status.textContent = "Sending…";
+    fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(new FormData(form)).toString() })
+      .then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        status.textContent = "Got it. Thank you. Robert reads every one.";
+        form.querySelector("#fb-words").value = "";
+        btn.textContent = "Sent";
+      })
+      .catch(function () { btn.disabled = false; status.textContent = "That didn’t go through. Try again in a minute?"; });
+  });
+  function resetForms() {
+    Array.prototype.forEach.call(document.querySelectorAll("textarea, input[type=text]"), function (el) { el.value = ""; });
+    Array.prototype.forEach.call(document.querySelectorAll("[aria-pressed]"), function (el) { el.setAttribute("aria-pressed", "false"); });
+    var btn = form.querySelector("button[type=submit]"); btn.disabled = false; btn.textContent = "Send it to Robert";
+    form.querySelector("[data-fb-status]").textContent = "";
+    form.querySelector('[name="would_use"]').value = "";
+    drawThumbs();
+  }
+
+  // a QR-looking pattern for the sticker drawings (not a real code)
+  (function qr() {
+    var g = document.getElementById("qrDots"), n = 25, seed = 11, html = "";
+    function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+    function finder(r, c) {
+      var boxes = [[0, 0], [0, n - 7], [n - 7, 0]];
+      for (var i = 0; i < 3; i++) {
+        var rr = r - boxes[i][0], cc = c - boxes[i][1];
+        if (rr >= 0 && rr < 7 && cc >= 0 && cc < 7) return (rr === 0 || rr === 6 || cc === 0 || cc === 6 || (rr > 1 && rr < 5 && cc > 1 && cc < 5)) ? 1 : 0;
+        if (rr >= -1 && rr < 8 && cc >= -1 && cc < 8) return 0;
+      }
+      return -1;
+    }
+    for (var r = 0; r < n; r++) for (var c = 0; c < n; c++) {
+      var f = finder(r, c), on = f === -1 ? rnd() > 0.52 : f === 1;
+      if (on) html += '<rect x="' + c + '" y="' + r + '" width="1" height="1"/>';
+    }
+    g.innerHTML = html;
+  })();
+
+  window.addEventListener("hashchange", function () {
+    var h = location.hash.slice(1);
+    if (h && h !== current && document.querySelector('[data-screen="' + h + '"]')) show(h);
+  });
+  var start = location.hash.slice(1);
+  if (start === "later") later("haus");
+  show(start && document.querySelector('[data-screen="' + start + '"]') ? start : "start", false);
+})();
+</script>
+</body>
+</html>
