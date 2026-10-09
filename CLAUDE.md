@@ -23,8 +23,9 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   (`/rides/`), where every ride says when it was last checked.
 - **The number:** miles since June 1, 2026. One number, everywhere, never a percentage, never shown
   against 10,000. The count restarts January 1, 2027.
-- **Everything funnels to the site and the mile-updates list** (the footer signup, Netlify form
-  `waitlist`). Instagram is **@cycl_eforchange** (not @cycle_forchange).
+- **Everything funnels to the site and Instagram.** The site sends no email to visitors (Robert, Oct 9,
+  2026): the footer's "Mile updates" column points at Instagram, there is no signup form. Instagram is
+  **@cycl_eforchange** (not @cycle_forchange).
 - Primary internal link target: the homepage `/` or `/events/2027/riding/` ("Ride with me").
   Never `/pledge/`, never `/#board`.
 - **Ride with me = the next ride Robert is doing** (Pass 36). `NEXT_RIDES` in `scripts/chrome.js` is the one
@@ -68,7 +69,7 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 | `node tools/build-rides.js` | everything under `cfc-site/rides/` and `cfc-site/find-a-ride/` (pages, `index.json`, `live.json`, `hubs.json`, `.ics`, maps, sitemap) |
 | `node scripts/build-events.js` | `cfc-site/events/<slug>/`, `/events/`, `/towns/…`, `sitemap-events.xml` |
 | `node scripts/build-calendar.js` | `cfc-site/events/2027/` (home, months, categories, `riding/`, `all/`, `where.json`), `sitemap-calendar.xml` |
-| `scripts/chrome.js` | the shared `<head>`, header + phone menu, tally line, closing block (`CHROME.pledge()` — old name, no-pledge copy), footer with the mile-updates signup. Required by every generator. |
+| `scripts/chrome.js` | the shared `<head>`, header + phone menu, tally line, closing block (`CHROME.pledge()` — old name, no-pledge copy, no "10000" numeral), footer (Mile updates → Instagram). Required by every generator. |
 | `python3 scripts/apply-chrome.py` | puts chrome.js onto the hand-written pages (guides, field notes, resources, journal, tonight, nov7, 404) and refreshes their closing block (`section.pledge`, `.fn-why` on resources) |
 | `scripts/photos.js` + `node scripts/apply-photos.js` | the photo registry (src, size, alt, place · month caption, crop, `figure(key, {cls, line, caption})`); apply-photos rewrites the figures baked into hand pages |
 | `python3 tools/grade.py --all --only <key>` | grades `cfc-site/photos/<key>.jpg` into `cfc-site/img/ph/` (portraits 1440 tall, landscapes 1600 wide, q76). `--only` keeps live photos from re-encoding. |
@@ -293,10 +294,11 @@ explained" keeps its name: it's about charity rides in general, not this site.
 - `/all/` is the only calendar page with filters (`calendar.js`, filters in the URL); `where.json`
   sends old `/events/2027/#slug` links to the right month page.
 
-### Mile-updates email
-`email/mile-updates.html` — table-based, inline styles, After Hours, placeholders listed at the
-top. The signup is the Netlify `waitlist` form; no list tool or welcome email is wired yet — export
-the form as CSV until Robert picks one.
+### Mile-updates email — retired (Oct 9, 2026)
+Robert isn't emailing from the site. The footer signup is gone and `submission-created.js` no longer
+sends a welcome. `email/mile-updates.html` stays as a template only. Old `waitlist` submissions are
+still in Netlify (Forms) if he ever wants them; don't email them without his say-so.
+`cycleforchange.org` has no mail records (no SPF, DKIM, DMARC or MX) — it can't send or receive mail.
 
 ## 6. The group-ride directory (`/rides/`) — the rides system
 
@@ -391,14 +393,15 @@ the form as CSV until Robert picks one.
   most riders named, the newest three, the rest folded, and "Review this ride" (the Netlify form
   `ride-review` — again yes/no, pace, words 20–600, first name, from, optional email). `#review` opens the
   form; the tag at the top of the page links `#reviews` once there's one. `/shopride` → the shop ride's reviews.
-- **Nothing shows until Robert has read it.** Each review is emailed to him the moment it's sent
-  (`netlify/functions/submission-created.js`, via Resend to `REVIEWS_EMAIL`) with **Post it / Drop it**
+- **Nothing shows until Robert has read it.** Every hour `ride-reviews.yml` turns new reviews into GitHub
+  issues (label `post` publishes, close drops) — the path that always works. If Resend is set up in Netlify,
+  each review is also emailed to him (`netlify/functions/submission-created.js`, to `REVIEWS_EMAIL`, from
+  Resend's shared sender `onboarding@resend.dev` unless `REVIEWS_FROM` is set) with **Post it / Drop it**
   buttons. They open `netlify/functions/review.js`: a confirm page (a GET never changes anything, since mail
   apps pre-open links), then Post writes the review into `data/ride-reviews.json` on main through the GitHub
   API → the deploy's rides build shows it. Links are signed (`REVIEWS_SECRET`, `lib/review-link.js`) and
   carry the review, so nothing is stored in between; they last 60 days. Netlify env needed: `RESEND_API_KEY`,
   `REVIEWS_EMAIL`, `REVIEWS_SECRET`, `GITHUB_TOKEN` (fine-grained, Contents read/write, this repo only).
-  Fallback, manual only: `ride-reviews.yml` → issues → the `post` label (`ride-review-post.yml`).
   Rules in `tools/lib/reviews.js` (tests: `tools/test/reviews.test.js`). Never edit a rider's words beyond
   that, never write a review, never post one he hasn't approved. Emails stay in Netlify and his inbox.
 - The committed ride pages can lag `data/ride-reviews.json` until the next local rebuild; the deploy is
@@ -452,7 +455,7 @@ the form as CSV until Robert picks one.
   **Netlify snippet injection** (Site settings → Build & deploy → Post processing), not by the repo —
   don't add a second copy. Search Console: the `https://cycleforchange.org/` URL-prefix property.
 - Key events, sent from `/chrome.js` and `/home.js` via `cfcTrack()` only when `gtag` exists:
-  `sign_up` (mile-updates signup), `org_ride_click` (a tap to RunSignup / one·n·ten / the Center /
+  `sign_up` (retired with the signup, Oct 9, 2026), `org_ride_click` (a tap to RunSignup / one·n·ten / the Center /
   SFAF), `ride_host_click` (a tap out to a group ride's host), `finder_click` (a homepage finder
   tile: `group_rides` or `events`), `ride_bar_click` (a tap on the Ride with me bar). No personal data in any event.
 
@@ -544,3 +547,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-08 — `/nov7/`: the shareable page for Cycling 4 one·n·ten with its own share card (`tools/og.py`); every Ride with me points there until Nov 7.
 - 2026-10-08 — Friday Shop Ride (Bicycle Haüs) listed and linked from the home-shop card; ride pages get "From the ride" (film) and "Rider reviews" (form, moderated through issues + the `post` label); cars OK in ride video.
 - 2026-10-08 — `/nov7/`: the 26 s ride-with-friends film under the first screen; on desktop the hero is the riding wall (three panels of group-ride footage) with a light wash under the words.
+- 2026-10-09 — No site email: the footer signup becomes "Mile updates" → Instagram, the welcome email is gone, reviews come in as hourly GitHub issues (email optional via Resend's shared sender); the "10000" numeral comes off the closing block.

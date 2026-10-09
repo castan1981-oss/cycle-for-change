@@ -2,29 +2,22 @@
 // Netlify runs a function with this exact name after every verified form submission
 // (https://docs.netlify.com/forms/notifications/#event-triggered-functions).
 //
-// Oct 6, 2026: the pledge is gone (Pass 26), so its confirmation email went with it.
-// What's left: one plain welcome for the mile-updates signup (the "waitlist" form).
+// Oct 9, 2026: the site sends no email to visitors (Robert's call). The mile-updates signup is gone
+// from the footer and its welcome email with it. What's left: a "ride-review" submission → an email
+// to Robert only (REVIEWS_EMAIL) with the review and two buttons, Post it / Drop it
+// (netlify/functions/review.js). Needs RESEND_API_KEY, REVIEWS_EMAIL and REVIEWS_SECRET; without them
+// it does nothing and the review waits in Netlify, where the hourly ride-reviews.yml turns it into a
+// GitHub issue (label "post" to publish, close to drop).
 //
-// It does nothing until RESEND_API_KEY exists (Netlify → Project configuration →
-// Environment variables; the cycleforchange.org sending domain has to be verified
-// at resend.com), so deploying it is safe.
+// Sender: cycleforchange.org has no mail records (no SPF/DKIM/MX), so Resend can't send as
+// robert@cycleforchange.org. Default is Resend's shared sender, onboarding@resend.dev, which only
+// delivers to the Resend account's own address — fine here, the only recipient is Robert. Set
+// REVIEWS_FROM once the domain is verified at resend.com.
 //
-// Oct 8, 2026: a "ride-review" submission → an email to Robert (REVIEWS_EMAIL) with the review and
-// two buttons, Post it / Drop it (netlify/functions/review.js). Needs RESEND_API_KEY, REVIEWS_EMAIL
-// and REVIEWS_SECRET; without them it does nothing and the review waits in Netlify.
-//
-// Other forms (ride-report) pass through untouched. Always answers 200 so Netlify
-// never retries: a missed email is not worth a stuck queue.
+// Other forms (ride-report, old waitlist entries) pass through untouched. Always answers 200 so
+// Netlify never retries: a missed email is not worth a stuck queue.
 
-const FROM = "Robert at Cycle for Change <robert@cycleforchange.org>";
-const SUBJECT = "You're on the list";
-const TEXT = [
-  "You're on the list. One email a month: the miles, the rides, what's next.",
-  "",
-  "Reply and say stop and you're off.",
-  "",
-  "— Robert",
-].join("\n");
+const FROM = process.env.REVIEWS_FROM || "Cycle for Change reviews <onboarding@resend.dev>";
 
 exports.handler = async (event) => {
   const ok = (note) => ({ statusCode: 200, body: JSON.stringify({ ok: true, note }) });
@@ -36,24 +29,7 @@ exports.handler = async (event) => {
     return ok("no payload");
   }
   if (payload.form_name === "ride-review") return reviewMail(payload, ok);
-  if (payload.form_name !== "waitlist") return ok("not the waitlist form");
-
-  const KEY = process.env.RESEND_API_KEY;
-  if (!KEY) return ok("email not configured (RESEND_API_KEY)");
-
-  const email = String((payload.data && payload.data.email) || payload.email || "").trim();
-  if (!email || email.indexOf("@") < 1 || email.length > 254) return ok("no email");
-
-  try {
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: { Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" },
-      body: JSON.stringify({ from: FROM, to: [email], subject: SUBJECT, text: TEXT }),
-    });
-    return ok(res.ok ? "sent" : `send failed: ${res.status}`);
-  } catch (_) {
-    return ok("send threw");
-  }
+  return ok("not a review");
 };
 
 // ---------- Oct 8, 2026: rider reviews → one email with Post it / Drop it ----------

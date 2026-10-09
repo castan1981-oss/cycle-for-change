@@ -741,7 +741,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .signup .field{border-bottom-color:var(--bone);margin-bottom:10px}
 .signup .field:focus{box-shadow:0 1px 0 var(--bone)}
 .signup .field:focus-visible{outline:2px solid var(--bone);outline-offset:4px}
-.signup .btn{align-self:flex-start}
+.signup .btn,.signup .link{align-self:flex-start}
 .signup .note{margin:0 0 6px;font-size:14.5px;line-height:1.4;color:var(--dust);max-width:32ch}
 .foot-crisis{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;margin-top:clamp(36px,5vw,64px);padding-top:16px;border-top:1px solid var(--line-d);font-size:15px}
 .foot-crisis .eyebrow{color:var(--dust)}
