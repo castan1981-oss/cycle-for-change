@@ -381,10 +381,7 @@ the form as CSV until Robert picks one.
 - **Film:** `data/ride-films.json` → `{ slug: [{ src, poster, width, height, seconds, caption, alt, added }] }`;
   the first shows at the top of the page: beside the name, facts and buttons on desktop, edge to edge under the name on phones (`.ride--film`, `.gr-top`; a VideoObject in the LD). 4:5, H.264, no
   audio, `+faststart`, files in `cfc-site/film/` (bump the number on a recut). Plays like the homepage reel.
-  Now: `shop-ride-6.mp4` (14 s, 864×1080; opens and closes on Robert's photos of Albus at the shop — his call: beginning or end, never the middle), cut from Robert's own footage of the Oct 9, 2026 shop ride
-  (iPhone HDR tone-mapped with zscale + hable; 360 cam; drone): the group from behind heading for the mountain, his 360 selfie in Haüs kit, the bikes against the shop wall after. Riders are from behind or far off;
-  the Albus-with-rider frame is from the Sept 25 cut (that rider said OK, Oct 8). The Sept 25 cut (`shop-ride-5`) and the earlier TikTok clip (Central Ave, not this ride) are gone. Raw clips and the social reel
-  live outside the repo (social cuts never go in git).
+  Now: `shop-ride-7.mp4` (7 s, 864×1080, silent): Robert's own CapCut cut of the Oct 9, 2026 shop ride ("Weekend / Loading" title baked in), his call over the Claude cut — the CapCut watermark band cropped off, 9:16 cropped to 4:5, metadata stripped. The people in it are Robert's call (he made and chose it, Oct 9). The earlier cuts (`shop-ride-5` Sept 25, `shop-ride-6` Oct 9) and the TikTok clip (Central Ave, not this ride) are gone. Raw clips and social cuts live outside the repo.
 - **Builds from the shop** (Oct 9, 2026): `data/ride-walls.json` → a photo collage edge to edge across the top of
   a ride page (`tiles[]`: src, size, name, one line, alt), credit line under it. The Friday Shop Ride's: six of
   Bicycle Haüs's own build photos from their Instagram in `cfc-site/img/haus/` — **used with the shop's OK**
