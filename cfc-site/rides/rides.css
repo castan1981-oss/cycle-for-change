@@ -753,3 +753,16 @@ a.gr-wide-door:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px
   .gr-top .gr-film{grid-area:film;margin:6px 0 0;width:auto}
   .gr-top .gr-film-cap{padding:0}
 }
+
+/* Oct 9, 2026: the build wall — six builds off the Bicycle Haüs Instagram, drawn as line art, drifting
+   slowly across the top of the Friday Shop Ride page like a shop window. Two copies of the drawing make
+   the loop seamless. Still for reduced motion. Lines in the patina hairline color, labels in gunmetal. */
+.gr-ride .ride>.gr-wall{max-width:none}
+.gr-wall{width:100vw;margin:0 calc(50% - 50vw) 14px;overflow:hidden;color:var(--dust-deep)}
+.gr-wall-track{display:flex;width:max-content;animation:gr-wall 140s linear infinite}
+.gr-wall svg{flex:none;display:block;height:clamp(130px,15vw,210px);width:auto;margin-right:6vw}
+.gr-wall svg text{fill:var(--mute)}
+.gr-wall figcaption{padding:2px var(--gut) 0;font-size:13px;font-weight:600;color:var(--mute);text-align:right}
+@keyframes gr-wall{to{transform:translateX(calc(-50% - 3vw))}}
+@media (hover:hover){.gr-wall:hover .gr-wall-track{animation-play-state:paused}}
+@media (prefers-reduced-motion:reduce){.gr-wall-track{animation:none}}
