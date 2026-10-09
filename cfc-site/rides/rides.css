@@ -755,23 +755,16 @@ a.gr-wide-door:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px
 }
 
 /* Oct 9, 2026: builds from the shop — Bicycle Haüs's own photos (their OK) as a collage across the top of
-   the Friday Shop Ride page, edge to edge. Desktop: one row of six, square corners, hairline gaps, the
-   name under each. Phones: two rows of three, the first tile (Robert's Crux) a little taller. */
+   the Friday Shop Ride page, edge to edge. Desktop: one row of six, square corners, hairline gaps,
+   photos only (no captions). Phones: two rows of three. */
 .gr-ride .ride>.gr-collage{max-width:none}
 .gr-collage{width:100vw;margin:0 calc(50% - 50vw) 22px}
 .gr-col-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:3px}
 .gr-col-tile{margin:0;min-width:0}
 .gr-col-tile img{display:block;width:100%;height:clamp(220px,24vw,340px);object-fit:cover;background:var(--bone-2)}
-.gr-col-cap{margin:8px 0 0;padding:0 10px;font-size:13px;line-height:1.3;color:var(--mute)}
-.gr-col-cap b{display:block;font-size:14px;font-weight:700;color:var(--asphalt)}
-.gr-col-credit{margin:12px 0 0;padding:0 var(--gut);font-size:13px;line-height:1.4;color:var(--mute)}
-.gr-col-credit b{color:var(--asphalt)}
-.gr-col-credit .link{font-size:13px;margin-left:6px}
 @media (max-width:899px){
-  .gr-col-grid{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:14px}
+  .gr-col-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
   .gr-col-tile img{height:clamp(150px,38vw,240px)}
-  .gr-col-cap{padding:0 6px;font-size:12px}
-  .gr-col-cap b{font-size:13px}
 }
 /* Oct 9, 2026: the build wall — six builds off the Bicycle Haüs Instagram, drawn as line art, drifting
    slowly across the top of the Friday Shop Ride page like a shop window. Two copies of the drawing make
