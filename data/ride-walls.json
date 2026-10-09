@@ -1,7 +1,17 @@
 {
   "scottsdale-az-bicycle-haus-friday-shop-ride": {
-    "svg": "cfc-site/rides/art/haus-wall-1.svg",
-    "credit": "Drawn from builds on the Bicycle Haüs Instagram.",
-    "added": "2026-10-09"
+    "title": "Builds from the shop",
+    "credit": "Photos: Bicycle Haüs, used with their OK.",
+    "link": "https://www.instagram.com/bicyclehaus/",
+    "added": "2026-10-09",
+    "saved_drawing": "cfc-site/rides/art/haus-wall-1.svg",
+    "tiles": [
+      { "src": "/img/haus/crux-ltd-1.jpg", "w": 472, "h": 839, "name": "S-Works Crux 5 LTD", "sub": "32 of 55. Mine.", "alt": "A deep red S-Works Crux 5 LTD gravel bike against a yellow wall." },
+      { "src": "/img/haus/seka-exaero-1.jpg", "w": 676, "h": 900, "name": "Seka ExAero GR", "sub": "SRAM Force, Garbaruk bits", "alt": "A blue Seka ExAero GR gravel bike leaning on a pale wall over brick pavers." },
+      { "src": "/img/haus/aethos-keoma-1.jpg", "w": 571, "h": 760, "name": "S-Works Aethos 2", "sub": "Keoma Studio paint", "alt": "An S-Works Aethos 2 with hand-painted color blocks and tan sidewalls against a rusted metal wall." },
+      { "src": "/img/haus/colnago-y1rs-1.jpg", "w": 900, "h": 900, "name": "Colnago Y1Rs", "sub": "ENVE wheels", "alt": "A black and white Colnago Y1Rs aero bike on ENVE wheels against a block wall." },
+      { "src": "/img/haus/sl8-yoon-hyup-1.jpg", "w": 900, "h": 900, "name": "Tarmac SL8", "sub": "Yoon Hyup edition", "alt": "A Tarmac SL8 covered in bright painted shapes, on a wooden stand in the shop." },
+      { "src": "/img/haus/sl8-green-frame-1.jpg", "w": 663, "h": 672, "name": "Tarmac SL8 frame", "sub": "Black Magic Paint green", "alt": "A bare green S-Works Tarmac SL8 frame on the bench in front of the shop's tool wall." }
+    ]
   }
 }
