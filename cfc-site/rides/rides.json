@@ -7238,7 +7238,7 @@
  },
  {
   "slug": "scottsdale-az-scottsdale-cycling-saturday-ride",
-  "name": "The Saturday Ride (Fuss Buss)",
+  "name": "The Saturday Ride (TSR)",
   "name_en": null,
   "kind": "group-ride",
   "status": "active",
@@ -7275,7 +7275,7 @@
   "duration": null,
   "duration_min": null,
   "pace": "Intermediate and rolling, in the club's own rating",
-  "drop_policy": "unknown",
+  "drop_policy": "drop",
   "host": {
    "name": "Scottsdale Cycling (Strava club)",
    "type": "club"
@@ -7287,10 +7287,10 @@
    "en"
   ],
   "visitor_notes": "Request to join the Strava club to see the route and any changes. Early start, so bring lights in the darker months. If it's raining, it's likely cancelled.",
-  "description": "Scottsdale Cycling's Saturday road ride, one step easier than Gainey Thursday: the club rates it intermediate and rolling. Same Gainey Village start as the weekday rides, half an hour later at 6:00 am. The Strava event shows the next date without a login; the route and any notes need a club login.",
+  "description": "TSR, Scottsdale's big Saturday road ride. Same Gainey Village corner as the weekday rides, half an hour later at 6:00 am. Four to five hours, more relaxed than Gainey Thursday but still a drop ride, and it ends at coffee. The route changes every week and the time changes with the season: the ride's Instagram posts the route, and the Strava event shows the next date without a login.",
   "links": {
    "website": null,
-   "instagram": null,
+   "instagram": "https://www.instagram.com/tsr_thesaturdayride/",
    "facebook": null,
    "strava": "https://www.strava.com/clubs/620243",
    "meetup": null,
@@ -7301,11 +7301,12 @@
   "inclusive_focus": [],
   "sources": [
    "https://www.strava.com/clubs/620243/group_events/814036",
-   "https://www.strava.com/clubs/620243"
+   "https://www.strava.com/clubs/620243",
+   "https://www.instagram.com/tsr_thesaturdayride/"
   ],
-  "verified_on": "2026-10-04",
-  "last_seen": "2026-10-04",
-  "evidence": "Scottsdale Cycling's Strava event page (the same recurring event that showed Oct 3 at 5:30 am) now lists the next Saturday Ride // Fuss Buss for Sat Oct 10, 2026 at 6:00 am from 8977 N Scottsdale Rd, rated Intermediate / Rolling; the club's Tuesday and Thursday events still show 5:30 am (fetched Oct 4, 2026).",
+  "verified_on": "2026-10-09",
+  "last_seen": "2026-10-09",
+  "evidence": "The ride's own Instagram, @tsr_thesaturdayride, calls it The Saturday Ride: the SE corner of Scottsdale and Doubletree, route changes weekly, time changes seasonally (Robert, Oct 9, 2026). Scottsdale Cycling's Strava event lists the next one for Sat Oct 10, 2026 at 6:00 am from 8977 N Scottsdale Rd, four to five hours, still a drop ride, ending at coffee (fetched Oct 9, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "strava-club",
