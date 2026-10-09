@@ -203,16 +203,11 @@ const FOOTER = `<footer class="foot site-foot">
         <a href="${INSTAGRAM}" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="${STRAVA}" target="_blank" rel="noopener noreferrer">Strava</a>
       </div>
-      <form class="foot-col signup" name="waitlist" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="emailForm" aria-label="Email signup">
-        <input type="hidden" name="form-name" value="waitlist">
-        <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="foot-col signup" aria-label="Mile updates">
         <p class="eyebrow">Mile updates</p>
-        <p class="note">About once a month. The miles, the rides, where I went.</p>
-        <label class="lab" for="email">Email</label>
-        <input class="field" id="email" type="email" name="email" required autocomplete="email" inputmode="email">
-        <button class="btn btn--bone btn--sm" type="submit">Send me mile updates</button>
-        <p class="ok" id="emailOk" role="status" aria-live="polite" hidden></p>
-      </form>
+        <p class="note">The miles, the rides, where I went. They go up on Instagram.</p>
+        <a class="link" href="${INSTAGRAM}" target="_blank" rel="noopener noreferrer">@cycl_eforchange</a>
+      </div>
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
@@ -224,10 +219,9 @@ const FOOTER = `<footer class="foot site-foot">
 <script src="/chrome.js" defer></script>`;
 
 /* The pledge block that closes every inner page, right before the footer.
-   One component, one copy, everywhere. `10000` is the story mark; prose says 10,000. */
+   One component, one copy, everywhere. No "10000" mark (retired); prose says 10,000. */
 function pledge({ line, copy } = {}) {
   return `<section class="pledge" aria-labelledby="pledge-h">
-  <p class="pledge-num" aria-hidden="true">10000</p>
   <h2 class="pledge-line" id="pledge-h">${line || "I&rsquo;d like to say I ride for everyone else. I ride because it changed me."}</h2>
   <p class="pledge-copy">${copy || "In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me."}</p>
   <div class="cta-row"><a class="btn btn--bone" href="${RIDE_HREF}" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
