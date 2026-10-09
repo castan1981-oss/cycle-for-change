@@ -385,6 +385,10 @@ the form as CSV until Robert picks one.
   (HDR, tone-mapped with zscale + hable): the group from behind, his selfie in Haüs kit with riders behind
   him, the handlebar view. The riders in it said OK to being on the site (Robert, Oct 8, 2026). Only the
   camera spin is cut. The earlier TikTok clip was Central Ave, not this ride.
+- **Build wall** (Oct 9, 2026): `data/ride-walls.json` → a drawn SVG across the top of a ride page that drifts
+  sideways (still with reduced motion). The Friday Shop Ride's is `rides/art/haus-wall-1.svg`, drawn by
+  `python3 tools/draw-haus-wall.py`: six builds off the Bicycle Haüs Instagram as line art (no logos, no copied
+  paint), Robert's S-Works Crux 5 LTD (32 of 55) first. Their photos only with the shop's OK.
 - **Reviews:** "Rider reviews" sits beside the film (or alone): counts, "would ride it again", the pace
   most riders named, the newest three, the rest folded, and "Review this ride" (the Netlify form
   `ride-review` — again yes/no, pace, words 20–600, first name, from, optional email). `#review` opens the
