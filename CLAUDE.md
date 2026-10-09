@@ -388,7 +388,7 @@ the form as CSV until Robert picks one.
 - **Builds from the shop** (Oct 9, 2026): `data/ride-walls.json` → a photo collage edge to edge across the top of
   a ride page (`tiles[]`: src, size, name, one line, alt), credit line under it. The Friday Shop Ride's: six of
   Bicycle Haüs's own build photos from their Instagram in `cfc-site/img/haus/` — **used with the shop's OK**
-  (Robert, Oct 9). Robert's Crux 5 LTD first. Desktop one row of six; phones two rows of three. The line-art
+  (Robert, Oct 9). Robert's Crux 5 LTD first. Photos only — no captions, no credit line (Robert, Oct 9: the labels were cheesy). Desktop one row of six; phones two rows of three. The line-art
   version is saved, not shown: `rides/art/haus-wall-1.svg` (`python3 tools/draw-haus-wall.py`, `saved_drawing`).
 - **Reviews:** "Rider reviews" sits beside the film (or alone): counts, "would ride it again", the pace
   most riders named, the newest three, the rest folded, and "Review this ride" (the Netlify form
