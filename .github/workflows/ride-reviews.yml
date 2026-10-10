@@ -1,4 +1,4 @@
-name: Ride reviews in
+name: Ride reviews and check-ins in
 
 # Every hour: new submissions of the ride-review form (on every ride page) → one issue each,
 # labelled "review", for Robert to read. Nothing reaches the site from here.
@@ -38,3 +38,11 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node tools/reviews-pull.js
+      # Oct 9, 2026: check-ins from /ride/ — a "something changed" or photos → an issue labelled "checkin"
+      - name: New check-ins → issues
+        if: always()
+        env:
+          NETLIFY_API_TOKEN: ${{ secrets.NETLIFY_API_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node tools/checkins-pull.js

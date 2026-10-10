@@ -1,0 +1,13 @@
+{
+  "name": "Ride check-in — Cycle for Change",
+  "short_name": "Ride",
+  "start_url": "/ride/",
+  "scope": "/ride/",
+  "display": "standalone",
+  "background_color": "#EFEDEA",
+  "theme_color": "#1C1A22",
+  "icons": [
+    { "src": "/favicon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
