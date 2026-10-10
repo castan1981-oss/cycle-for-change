@@ -384,6 +384,7 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   the first shows at the top of the page: beside the name, facts and buttons on desktop, edge to edge under the name on phones (`.ride--film`, `.gr-top`; a VideoObject in the LD). 4:5, H.264, no
   audio, `+faststart`, files in `cfc-site/film/` (bump the number on a recut). Plays like the homepage reel.
   Now: `shop-ride-7.mp4` (7 s, 864×1080, silent): Robert's own CapCut cut of the Oct 9, 2026 shop ride ("Weekend / Loading" title baked in), his call over the Claude cut — the CapCut watermark band cropped off, 9:16 cropped to 4:5, metadata stripped. The people in it are Robert's call (he made and chose it, Oct 9). The earlier cuts (`shop-ride-5` Sept 25, `shop-ride-6` Oct 9) and the TikTok clip (Central Ave, not this ride) are gone. Raw clips and social cuts live outside the repo.
+  TSR (`scottsdale-az-scottsdale-cycling-saturday-ride`): `tsr-1.mp4` (11 s, 864×1080, silent), Robert's own clip of his first TSR, Oct 10, 2026 — iPhone HDR (HLG) tone-mapped to SDR, 4:5, metadata stripped. His own review of that ride is the first in `data/ride-reviews.json` (his words, sent in chat, Oct 10).
 - **Builds from the shop** (Oct 9, 2026): `data/ride-walls.json` → a photo collage edge to edge across the top of
   a ride page (`tiles[]`: src, size, name, one line, alt), credit line under it. The Friday Shop Ride's: six of
   Bicycle Haüs's own build photos from their Instagram in `cfc-site/img/haus/` — **used with the shop's OK**
