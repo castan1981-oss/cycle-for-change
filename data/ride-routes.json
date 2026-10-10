@@ -1,0 +1,3 @@
+{
+  "_readme": "Routes on ride pages (Oct 9, 2026). One entry per ride slug: { gpx, posted, from, by, for_date, pace_mph, drop, regroup, cues, note } — field notes in tools/lib/routes.js. Only from the people who run the ride (or Robert's own ride file with their OK); never from Strava's API. After an edit: python3 tools/route-build.py <slug>, then node tools/build-rides.js."
+}

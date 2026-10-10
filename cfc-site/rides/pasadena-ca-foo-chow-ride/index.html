@@ -26,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/rides/rides.css?v=43">
+  <link rel="stylesheet" href="/rides/rides.css?v=44">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cycleforchange.org/rides/pasadena-ca-foo-chow-ride/","url":"https://cycleforchange.org/rides/pasadena-ca-foo-chow-ride/","name":"FOO CHOW Ride — Pasadena, CA group ride, Mondays 6:30 pm","description":"FOO CHOW Ride is a road group ride in Pasadena, CA. It rolls every Monday at 6:30 pm from Incycle Pasadena. About 25–35 miles, medium to spicy, usually 20…","dateModified":"2026-10-01","author":{"@type":"Person","name":"Robert Castan","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":"https://cycleforchange.org/favicon-512.png"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cycle for Change","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Group rides","item":"https://cycleforchange.org/rides/"},{"@type":"ListItem","position":3,"name":"California","item":"https://cycleforchange.org/rides/ca/"},{"@type":"ListItem","position":4,"name":"Los Angeles","item":"https://cycleforchange.org/rides/ca/los-angeles/"},{"@type":"ListItem","position":5,"name":"FOO CHOW Ride","item":"https://cycleforchange.org/rides/pasadena-ca-foo-chow-ride/"}]},"mainEntity":{"@id":"https://cycleforchange.org/rides/pasadena-ca-foo-chow-ride/#event"}},{"@type":"Event","@id":"https://cycleforchange.org/rides/pasadena-ca-foo-chow-ride/#event","name":"FOO CHOW Ride","description":"FOO CHOW Ride is a road group ride in Pasadena, CA. It rolls every Monday at 6:30 pm from Incycle Pasadena. About 25–35 miles, medium to spicy, usually 20…","url":"https://cycleforchange.org/rides/pasadena-ca-foo-chow-ride/","startDate":"2026-10-12T18:30:00-07:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","isAccessibleForFree":true,"image":"https://cycleforchange.org/og-cfc.png","location":{"@type":"Place","name":"Incycle Pasadena","address":{"@type":"PostalAddress","streetAddress":"175 S Fair Oaks Ave, Pasadena, CA 91105","addressLocality":"Pasadena","addressRegion":"CA","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":34.1427,"longitude":-118.1508}},"eventSchedule":{"@type":"Schedule","scheduleTimezone":"America/Los_Angeles","startTime":"18:30","byDay":["https://schema.org/Monday"],"repeatFrequency":"P1W"},"organizer":{"@type":"Organization","name":"Incycle Bicycles Pasadena","url":"https://www.incycle.com/pages/retail-event/foo-chow-ride"},"sameAs":["https://www.incycle.com/pages/retail-event/foo-chow-ride","https://www.strava.com/clubs/315899"]}]}</script>
 </head>
 <body>
@@ -128,6 +128,7 @@
     </div>
     
 
+
     <div class="gr-ridebox">
       <section class="gr-reviews" id="reviews" aria-labelledby="gr-rev-h">
         <h2 id="gr-rev-h">Rider reviews</h2>
@@ -172,6 +173,47 @@
         <details class="gr-checked-more"><summary>How we know</summary><p class="gr-checked-ev">Foo Chow’s Strava club (1,388 members) says “Currently every Monday Night. Meet @ 6p, roll out @ 6:30p” from Incycle Pasadena and posted rides for Mon Sept 14 and Mon Sept 21, 2026, while Incycle’s own page still says 1st and 3rd Tuesday and its event list stops May 26, 2025 (fetched Oct 1, 2026).</p><p>Last seen happening Sep 21, 2026.</p></details>
       </div>
     </aside>
+
+    <section class="gr-route gr-route--none" id="route" aria-labelledby="gr-route-h">
+      <h2 id="gr-route-h">The route</h2>
+      <p>Routes go up in the host’s Strava club. Ask to join there to see them. Once the host sends it to us, it shows here too: a map, a climb chart and a GPX for your bike computer.</p>
+      <p class="gr-route-where"><a class="link" href="https://www.strava.com/clubs/315899" rel="noopener nofollow">Routes on the Strava club</a></p>
+      
+      <details class="gr-rev-write gr-route-send" id="send-route">
+        <summary class="btn btn--ghost gr-rev-open">Run this ride? Send us the route</summary>
+        <form class="gr-rev-form" name="ride-route" method="POST" action="/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-route-send>
+          <input type="hidden" name="form-name" value="ride-route">
+          <input type="hidden" name="ride" value="pasadena-ca-foo-chow-ride">
+          <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <p class="gr-rev-note">For the people who run FOO CHOW Ride. Drop in the file and a couple of numbers. Robert reads every route before it goes up, credits you on the page and links back.</p>
+          <label class="gr-rev-lab" for="rt-file-227">Route file <small>GPX, FIT or TCX</small></label>
+          <input class="field" id="rt-file-227" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
+          <label class="gr-rev-lab" for="rt-link-227">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
+          <input class="field" id="rt-link-227" type="url" name="route_link" inputmode="url" autocomplete="off">
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-lo-227">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-227" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-hi-227">To <small>mph</small></label><input class="field" id="rt-hi-227" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
+          </div>
+          <fieldset class="gr-rev-pick">
+            <legend>If someone comes off the back</legend>
+            <label><input type="radio" name="drop" value="drop"><span>They ride back alone</span></label><label><input type="radio" name="drop" value="regroup"><span>We wait at a regroup</span></label><label><input type="radio" name="drop" value="no-drop"><span>Nobody gets left</span></label>
+          </fieldset>
+          <label class="gr-rev-lab" for="rt-regroup-227">Where you regroup <small>(optional)</small></label>
+          <input class="field" id="rt-regroup-227" name="regroup" maxlength="80">
+          <fieldset class="gr-rev-pick">
+            <legend>This route is</legend>
+            <label><input type="radio" name="weekly" value="every"><span>The route every time</span></label><label><input type="radio" name="weekly" value="once" checked><span>Just for the next ride</span></label>
+          </fieldset>
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-name-227">Your name</label><input class="field" id="rt-name-227" name="name" maxlength="40" autocomplete="name" required></div>
+            <div><label class="gr-rev-lab" for="rt-role-227">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-227" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
+          </div>
+          <label class="gr-rev-lab" for="rt-email-227">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
+          <input class="field" id="rt-email-227" type="email" name="email" autocomplete="email">
+          <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send the route</button><p class="gr-rev-ok" role="status" hidden></p></div>
+        </form>
+      </details>
+    </section>
     <dl class="gr-facts">
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Hosted by</dt><dd>Incycle Bicycles Pasadena<small>Bike shop</small></dd></div>
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-cost"/></svg><dt>Cost</dt><dd>free, waiver required</dd></div>
@@ -368,7 +410,7 @@
 <script src="/chrome.js" defer></script>
 <script src="/rides/save.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script src="/rides/ride.js?v=38" defer></script>
+<script src="/rides/ride.js?v=39" defer></script>
 <script src="/rides/map.js" defer></script>
 </body>
 </html>

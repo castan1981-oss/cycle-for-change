@@ -613,10 +613,12 @@ a.gr-wide-door:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px
 .gr-hub .gr-results-count{font-family:var(--display);font-size:1.05rem;letter-spacing:0;line-height:1.35;color:var(--asphalt);max-width:46ch}
 .gr-hub .gr-results-count:empty{display:none}
 .gr-hub .gr-results-head .gr-clear{margin:-10px 0 0 auto}
-.gr-links{display:flex;flex-wrap:wrap;align-items:center;gap:0 18px;margin:-6px 0 14px}
-.gr-links a{display:inline-flex;align-items:center;min-height:44px;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:4px}
-.gr-links .gr-links-hint{font-size:.95rem;color:var(--mute)}
-.gr-links .gr-chip{margin-left:-8px}
+/* Oct 9, 2026: scoped to the hub results — unscoped, these turned the ride page's ink "Join the Strava club" button
+   asphalt-on-asphalt (blank) under "Where to find them" */
+.gr-hub .gr-links{display:flex;flex-wrap:wrap;align-items:center;gap:0 18px;margin:-6px 0 14px}
+.gr-hub .gr-links a{display:inline-flex;align-items:center;min-height:44px;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:4px}
+.gr-hub .gr-links .gr-links-hint{font-size:.95rem;color:var(--mute)}
+.gr-hub .gr-links .gr-chip{margin-left:-8px}
 .gr-hub .gr-empty{padding:4px 0 8px;color:var(--asphalt)}
 .gr-empty-why{margin:0 0 14px;max-width:52ch;font-size:1.05rem;line-height:1.45}
 .gr-empty-why b{font-weight:700}
@@ -795,3 +797,92 @@ a.gr-wide-door:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px
 @keyframes gr-wall{to{transform:translateX(calc(-50% - 3vw))}}
 @media (hover:hover){.gr-wall:hover .gr-wall-track{animation-play-state:paused}}
 @media (prefers-reduced-motion:reduce){.gr-wall-track{animation:none}}
+
+/* ---------- Oct 9, 2026: the route (tools/route-build.py → build-rides.js routeBlock, /rides/route.js) ----------
+   The map, a climb chart you drag along, the host's turns, a GPX. Square, hairlines, the line in rose paint. */
+.gr-route{margin:30px 0 34px;padding-top:26px;border-top:1px solid var(--dust-deep)}
+.gr-route h2{margin:0;font-size:1.3rem}
+.gr-route-head{display:grid;gap:6px;margin-bottom:14px}
+.gr-route-kicker{margin:0;font-size:13px;font-weight:700;color:var(--mute)}
+.gr-route--none p{margin:10px 0 0;max-width:46em;color:var(--mute)}
+.gr-route--none .gr-route-where{margin-top:6px}
+.gr-route-nums{display:grid;grid-template-columns:1fr 1fr;margin:0 0 16px;border:1px solid var(--dust);background:var(--paper)}
+.gr-route-nums>div{padding:12px 14px 14px;min-width:0;border-right:1px solid var(--dust);border-bottom:1px solid var(--dust)}
+.gr-route-nums>div:nth-child(2n){border-right:0}
+.gr-route-nums--2>div,.gr-route-nums--3>div:nth-child(3),.gr-route-nums--4>div:nth-child(n+3){border-bottom:0}
+.gr-route-nums--3>div:nth-child(3){grid-column:1/-1}
+.gr-route-nums dt{font-size:13px;font-weight:700;color:var(--mute)}
+.gr-route-nums dd{margin:4px 0 0;display:grid;gap:4px}
+.gr-route-nums b{font-family:var(--display);font-weight:800;line-height:1;letter-spacing:-.02em;color:var(--asphalt)}
+.gr-route-nums b.num{font-size:clamp(1.6rem,6vw,2.1rem);font-variant-numeric:tabular-nums}
+.gr-route-nums b.word{font-size:clamp(1.2rem,4.4vw,1.45rem);line-height:1.1}
+.gr-route-nums small{font-size:.5em;font-weight:700;letter-spacing:0;margin-left:3px}
+.gr-route-nums span{font-size:14px;line-height:1.35;color:var(--mute)}
+@media (min-width:760px){
+  .gr-route-nums--3{grid-template-columns:repeat(3,1fr)}.gr-route-nums--4{grid-template-columns:repeat(4,1fr)}
+  .gr-route-nums>div{border-bottom:0!important;border-right:1px solid var(--dust)!important;grid-column:auto!important}
+  .gr-route-nums>div:last-child{border-right:0!important}
+}
+.gr-route-grid{display:grid;gap:20px}
+@media (min-width:980px){.gr-route-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:start}.gr-route-mapcol{position:sticky;top:16px}}
+.gr-route-map{position:relative;margin:0;border:1px solid var(--dust);background:var(--paper)}
+.gr-route-scroll{overflow:auto;overscroll-behavior:contain}
+.gr-route-inner{position:relative;width:100%;transition:width .25s ease}
+.gr-route-map.is-zoomed .gr-route-scroll{max-height:78vh}
+.gr-route-map.is-zoomed .gr-route-inner{width:240%}
+@media (prefers-reduced-motion:reduce){.gr-route-inner{transition:none}}
+.gr-route-inner img{display:block;width:100%;height:auto}
+.gr-route-inner svg{position:absolute;inset:0;width:100%;height:100%;--u:3.4}
+.gr-route-zoom{position:absolute;right:10px;bottom:46px;min-height:44px;padding:0 14px;border:1px solid var(--asphalt);background:var(--paper);color:var(--asphalt);font:800 12px/1 var(--display);letter-spacing:.04em;text-transform:uppercase;cursor:pointer}
+.gr-route-zoom:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px}
+.gr-route-map figcaption{padding:8px 12px;border-top:1px solid var(--dust);font-size:12px;color:var(--mute)}
+.gr-route-map figcaption a{color:inherit}
+.gr-rt-casing{fill:none;stroke:var(--paper);stroke-width:calc(var(--u)*7px);stroke-linejoin:round;stroke-linecap:round}
+.gr-rt-line{fill:none;stroke:var(--creosote);stroke-width:calc(var(--u)*3.5px);stroke-linejoin:round;stroke-linecap:round}
+.gr-rt-sc{transform:scale(var(--u))}
+.gr-rt-mile{fill:var(--asphalt);stroke:var(--paper);stroke-width:2}
+.gr-rt-mile-n{font:800 10px var(--display);fill:var(--paper);text-anchor:middle}
+.gr-rt-start,.gr-rt-end{fill:var(--asphalt);stroke:var(--paper);stroke-width:2}
+.gr-rt-regroup{fill:var(--paper);stroke:var(--creosote);stroke-width:3}
+.gr-rt-lbl{font:800 12px var(--display);fill:var(--asphalt);paint-order:stroke;stroke:var(--paper);stroke-width:3.5px;stroke-linejoin:round}
+.gr-rt-dot{fill:var(--asphalt);stroke:var(--paper);stroke-width:3}
+.gr-rt-you{opacity:0;transition:opacity .15s}
+.gr-rt-you.is-on{opacity:1}
+.gr-route-acts{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:12px}
+.gr-route-acts .btn{min-height:48px}
+.gr-btn-mark{width:20px;height:20px;flex:none}
+.gr-route-note{flex-basis:100%;margin:0;font-size:13px;color:var(--mute)}
+.gr-route-side{display:grid;gap:20px;min-width:0}
+.gr-route-prof{border:1px solid var(--dust);background:var(--paper);padding:12px 12px 8px;position:relative}
+.gr-route-prof-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0}
+.gr-route-prof-head span{font-size:13px;font-weight:700;color:var(--mute)}
+.gr-route-prof-head b{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
+.gr-route-prof svg{display:block;width:100%;height:140px;margin-top:8px;touch-action:none;cursor:crosshair}
+.gr-route-prof svg:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px}
+.gr-prof-grid{stroke:var(--dust);stroke-width:1;vector-effect:non-scaling-stroke}
+.gr-prof-area{fill:var(--dust);fill-opacity:.55}
+.gr-prof-line{fill:none;stroke:var(--asphalt);stroke-width:1.6;vector-effect:non-scaling-stroke}
+.gr-prof-regroup{stroke:var(--creosote);stroke-width:2;stroke-dasharray:3 3;vector-effect:non-scaling-stroke}
+.gr-prof-cursor{stroke:var(--asphalt);stroke-width:1.5;vector-effect:non-scaling-stroke;opacity:0}
+.gr-prof-cursor.is-on{opacity:1}
+.gr-route-prof-axis{position:relative;height:16px;margin:4px 0 0;font-size:12px;font-weight:600;color:var(--mute)}
+.gr-route-prof-axis span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.gr-route-prof-axis span:first-child{transform:none}
+.gr-route-prof-range{display:flex;justify-content:space-between;margin:6px 0 0;font-size:12px;color:var(--mute)}
+.gr-route-turns h3{margin:0 0 10px;font-size:1.05rem}
+.gr-route-cues{list-style:none;margin:0;padding:0;border:1px solid var(--dust);background:var(--paper)}
+.gr-route-cues li+li{border-top:1px solid var(--dust)}
+.gr-route-cues button{all:unset;box-sizing:border-box;display:grid;grid-template-columns:52px 24px minmax(0,1fr);grid-template-rows:auto 1fr;gap:2px 10px;width:100%;padding:12px 14px;cursor:pointer}
+.gr-route-cues button:focus-visible{outline:2px solid var(--asphalt);outline-offset:-2px}
+.gr-route-cues li.is-on{background:var(--bone-2)}
+.gr-cue-mi{grid-row:span 2;font-weight:800;font-size:15px;font-variant-numeric:tabular-nums}
+.gr-cue-mi small{display:block;font-size:12px;font-weight:600;color:var(--mute)}
+.gr-cue-mark{grid-row:span 2;width:22px;height:22px;color:var(--asphalt)}
+.gr-cue-t{font-weight:800;font-size:16px;line-height:1.3}
+.gr-cue-s{grid-column:3;font-size:14px;line-height:1.4;color:var(--mute)}
+.gr-cue--regroup .gr-cue-t,.gr-cue--finish .gr-cue-t{color:var(--creosote-ink)}
+.gr-route-hostnote{margin:16px 0 0;max-width:46em}
+.gr-route-send{margin-top:18px}
+.gr-route-send .gr-rev-note{margin:0 0 4px}
+.gr-route-send input[type=file].field{padding:10px 0;font-size:16px}
+.gr-route-map,.gr-route-send{scroll-margin-top:84px}

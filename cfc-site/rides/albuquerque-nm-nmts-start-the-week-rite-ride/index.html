@@ -26,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/rides/rides.css?v=43">
+  <link rel="stylesheet" href="/rides/rides.css?v=44">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cycleforchange.org/rides/albuquerque-nm-nmts-start-the-week-rite-ride/","url":"https://cycleforchange.org/rides/albuquerque-nm-nmts-start-the-week-rite-ride/","name":"NMTS Start the Week Rite Ride (4th Monday) — Albuquerque, NM","description":"NMTS Start the Week Rite Ride (4th Monday) is a road, social and e-bikes welcome group ride in Albuquerque, NM. It rolls fourth Monday of the month at 9:00…","dateModified":"2026-10-01","author":{"@type":"Person","name":"Robert Castan","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":"https://cycleforchange.org/favicon-512.png"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cycle for Change","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Group rides","item":"https://cycleforchange.org/rides/"},{"@type":"ListItem","position":3,"name":"New Mexico","item":"https://cycleforchange.org/rides/nm/"},{"@type":"ListItem","position":4,"name":"Albuquerque","item":"https://cycleforchange.org/rides/nm/albuquerque/"},{"@type":"ListItem","position":5,"name":"NMTS Start the Week Rite Ride (4th Monday)","item":"https://cycleforchange.org/rides/albuquerque-nm-nmts-start-the-week-rite-ride/"}]},"mainEntity":{"@id":"https://cycleforchange.org/rides/albuquerque-nm-nmts-start-the-week-rite-ride/#event"}},{"@type":"Event","@id":"https://cycleforchange.org/rides/albuquerque-nm-nmts-start-the-week-rite-ride/#event","name":"NMTS Start the Week Rite Ride (4th Monday)","description":"NMTS Start the Week Rite Ride (4th Monday) is a road, social and e-bikes welcome group ride in Albuquerque, NM. It rolls fourth Monday of the month at 9:00…","url":"https://cycleforchange.org/rides/albuquerque-nm-nmts-start-the-week-rite-ride/","startDate":"2026-10-26T09:00:00-06:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","image":"https://cycleforchange.org/og-cfc.png","location":{"@type":"Place","name":"NE corner of San Pedro and Candelaria","address":{"@type":"PostalAddress","streetAddress":"San Pedro Dr NE and Candelaria Rd NE, Albuquerque, NM","addressLocality":"Albuquerque","addressRegion":"NM","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":35.0841,"longitude":-106.65099}},"eventSchedule":{"@type":"Schedule","scheduleTimezone":"America/Denver","startTime":"09:00","byDay":["https://schema.org/Monday"],"byMonthWeek":[4],"repeatFrequency":"P1M"},"organizer":{"@type":"Organization","name":"New Mexico Touring Society","url":"https://www.nmts.org/"},"sameAs":["https://www.nmts.org/"]}]}</script>
 </head>
 <body>
@@ -128,6 +128,7 @@
     </div>
     
 
+
     <div class="gr-ridebox">
       <section class="gr-reviews" id="reviews" aria-labelledby="gr-rev-h">
         <h2 id="gr-rev-h">Rider reviews</h2>
@@ -172,6 +173,47 @@
         <details class="gr-checked-more"><summary>How we know</summary><p class="gr-checked-ev">NMTS’s weekly rides page (copyright 2026, with entries dated Sept 27 and Oct 2, 2026) lists the 4th Monday ‘Start the Week Rite Ride’ at 9:00 am from the NE corner of San Pedro and Candelaria, 20 miles at 13 mph, and calls it a beginner ride (fetched Oct 1, 2026).</p></details>
       </div>
     </aside>
+
+    <section class="gr-route gr-route--none" id="route" aria-labelledby="gr-route-h">
+      <h2 id="gr-route-h">The route</h2>
+      <p>Nobody has sent us this ride’s route yet. When the host does, it shows here: a map, a climb chart and a GPX for your bike computer.</p>
+      
+      
+      <details class="gr-rev-write gr-route-send" id="send-route">
+        <summary class="btn btn--ghost gr-rev-open">Run this ride? Send us the route</summary>
+        <form class="gr-rev-form" name="ride-route" method="POST" action="/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-route-send>
+          <input type="hidden" name="form-name" value="ride-route">
+          <input type="hidden" name="ride" value="albuquerque-nm-nmts-start-the-week-rite-ride">
+          <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <p class="gr-rev-note">For the people who run NMTS Start the Week Rite Ride (4th Monday). Drop in the file and a couple of numbers. Robert reads every route before it goes up, credits you on the page and links back.</p>
+          <label class="gr-rev-lab" for="rt-file-832">Route file <small>GPX, FIT or TCX</small></label>
+          <input class="field" id="rt-file-832" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
+          <label class="gr-rev-lab" for="rt-link-832">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
+          <input class="field" id="rt-link-832" type="url" name="route_link" inputmode="url" autocomplete="off">
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-lo-832">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-832" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-hi-832">To <small>mph</small></label><input class="field" id="rt-hi-832" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
+          </div>
+          <fieldset class="gr-rev-pick">
+            <legend>If someone comes off the back</legend>
+            <label><input type="radio" name="drop" value="drop"><span>They ride back alone</span></label><label><input type="radio" name="drop" value="regroup"><span>We wait at a regroup</span></label><label><input type="radio" name="drop" value="no-drop"><span>Nobody gets left</span></label>
+          </fieldset>
+          <label class="gr-rev-lab" for="rt-regroup-832">Where you regroup <small>(optional)</small></label>
+          <input class="field" id="rt-regroup-832" name="regroup" maxlength="80">
+          <fieldset class="gr-rev-pick">
+            <legend>This route is</legend>
+            <label><input type="radio" name="weekly" value="every" checked><span>The route every time</span></label><label><input type="radio" name="weekly" value="once"><span>Just for the next ride</span></label>
+          </fieldset>
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-name-832">Your name</label><input class="field" id="rt-name-832" name="name" maxlength="40" autocomplete="name" required></div>
+            <div><label class="gr-rev-lab" for="rt-role-832">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-832" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
+          </div>
+          <label class="gr-rev-lab" for="rt-email-832">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
+          <input class="field" id="rt-email-832" type="email" name="email" autocomplete="email">
+          <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send the route</button><p class="gr-rev-ok" role="status" hidden></p></div>
+        </form>
+      </details>
+    </section>
     <dl class="gr-facts">
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Hosted by</dt><dd>New Mexico Touring Society<small>Club</small></dd></div>
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><dt>Kind of ride</dt><dd>Road · Social</dd></div>
@@ -353,7 +395,7 @@
 <script src="/chrome.js" defer></script>
 <script src="/rides/save.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script src="/rides/ride.js?v=38" defer></script>
+<script src="/rides/ride.js?v=39" defer></script>
 <script src="/rides/map.js" defer></script>
 </body>
 </html>

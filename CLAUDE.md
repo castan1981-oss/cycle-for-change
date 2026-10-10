@@ -407,6 +407,31 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
 - The committed ride pages can lag `data/ride-reviews.json` until the next local rebuild; the deploy is
   what counts (Netlify runs `tools/build-rides.js` on every deploy).
 
+### Routes on ride pages (Oct 9, 2026)
+A rider asked TSR on Instagram for "an actual route" because the written directions didn't work on a map, then
+for the pace. Every ride page now answers that, or says where the answer lives.
+- **With a route:** "This week's route" / "The route" right under the buttons: distance · climbing · pace on the
+  flats (mph) · if you come off; the map (OSM tiles, tinted quiet, the line in rose); a climb chart you drag along
+  (or arrow keys) that moves a dot on the map; the host's turns (tap one → the map zooms there); "Download the GPX";
+  "Directions to the start" (the route's own first point). `/rides/route.js` loads only on those pages.
+- **Without one (every ride today):** a short "The route" block: where the host posts routes (Ride with GPS,
+  Komoot, the Strava club — `RT.whereRoutesLive`) or "Nobody has sent us this ride's route yet", and the form.
+- **Where routes come from:** only the people who run the ride, or Robert's own ride file with their OK. Never
+  Strava's API (§8, §10), never a route we drew. "Send us the route" (Netlify form `ride-route`, a file upload,
+  on every listed ride page) → `tools/routes-pull.js` (hourly, in `ride-reviews.yml`) → an issue labelled `route`
+  (no email, no file link; the file stays in Netlify → Forms → ride-route).
+- **Putting one up:** save the file as `data/routes/<slug>/<posted>.gpx`; add the entry to `data/ride-routes.json`
+  (`gpx, posted, from, by, for_date, pace_mph, drop, regroup, cues, note` — rules in `tools/lib/routes.js`);
+  `python3 tools/route-build.py <slug>` (Pillow + network: OSM tiles one ride at a time, opentopodata heights when
+  the GPX has none) writes `cfc-site/rides/routes/<slug>/` (route JSON, map JPG, the GPX); then
+  `node tools/build-rides.js`. The deploy only reads what's committed. `routes/` survives the rides build's wipe.
+- Weekly routes (TSR): `for_date` = the ride's date. After it passes the page says "The route from Sat, Oct 10.
+  Routes change every week; this week's isn't in yet." Turns (`cues`) only in the host's words, with miles.
+- Pins: 485 of 1,423 rides have only a city-level pin (`geo_precision: "city"`). Route pages use the route's
+  first point for directions. Oct 9 fixed the three Gainey Village rides (pin was 0.6 mi south, by Hash Kitchen)
+  and Yuma's Foothills ride, through `rides-apply.js` with `checked_on` = their old `verified_on` (a pin fix
+  isn't a re-check). Batch: `research/rides/upkeep/2026-10-09-start-pins.json`.
+
 ### UI rules that still hold
 - **Step down, don't scroll.** Every page asks one question with a few big picks: `/find-a-ride/`
   asks what kind; `/rides/` asks where (the tap-a-state map, Every state, Outside the US, six
@@ -548,3 +573,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-08 — Friday Shop Ride (Bicycle Haüs) listed and linked from the home-shop card; ride pages get "From the ride" (film) and "Rider reviews" (form, moderated through issues + the `post` label); cars OK in ride video.
 - 2026-10-08 — `/nov7/`: the 26 s ride-with-friends film under the first screen; on desktop the hero is the riding wall (three panels of group-ride footage) with a light wash under the words.
 - 2026-10-09 — No site email: the footer signup becomes "Mile updates" → Instagram, the welcome email is gone, reviews come in as hourly GitHub issues (email optional via Resend's shared sender); the "10000" numeral comes off the closing block.
+- 2026-10-09 — Routes on ride pages: map, climb chart, turns, GPX and pace from the people who run the ride (`data/ride-routes.json` → `tools/route-build.py`); "Send us the route" on every ride page → `route` issues; Gainey Village and Yuma pins fixed; the blank Strava button under "Where to find them" fixed (hub link styles were leaking).

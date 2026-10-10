@@ -1,0 +1,53 @@
+[
+ {
+  "slug": "scottsdale-az-scottsdale-cycling-saturday-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-09",
+  "evidence": "The ride's own Instagram, @tsr_thesaturdayride, calls it The Saturday Ride: the SE corner of Scottsdale and Doubletree, route changes weekly, time changes seasonally (Robert, Oct 9, 2026). Scottsdale Cycling's Strava event lists the next one for Sat Oct 10, 2026 at 6:00 am from 8977 N Scottsdale Rd, four to five hours, still a drop ride, ending at coffee (fetched Oct 9, 2026). Start pin moved Oct 9, 2026 to the southeast corner of Scottsdale Rd and Doubletree Ranch Rd (OpenStreetMap street data puts the intersection at 33.5674, -111.9261); the old pin, geocoded from the street address, sat about 0.6 mi south, by Hash Kitchen.",
+  "changes": {
+   "lat": 33.5671,
+   "lng": -111.92575,
+   "geo_precision": "start"
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ },
+ {
+  "slug": "scottsdale-az-scottsdale-cycling-gainey-thursday",
+  "outcome": "changed",
+  "checked_on": "2026-09-30",
+  "evidence": "Scottsdale Cycling's Strava event page lists the next ride for Thu Oct 1, 2026 at 5:30 am from 8977 N Scottsdale Rd, rated Advanced / Hilly (fetched Sept 30, 2026). Start pin moved Oct 9, 2026 to the southeast corner of Scottsdale Rd and Doubletree Ranch Rd (OpenStreetMap street data puts the intersection at 33.5674, -111.9261); the old pin, geocoded from the street address, sat about 0.6 mi south, by Hash Kitchen.",
+  "changes": {
+   "lat": 33.5671,
+   "lng": -111.92575,
+   "geo_precision": "start"
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ },
+ {
+  "slug": "scottsdale-az-scottsdale-cycling-gainey-tuesday",
+  "outcome": "changed",
+  "checked_on": "2026-09-30",
+  "evidence": "Scottsdale Cycling's Strava event page lists the next ride for Tue Oct 6, 2026 at 5:30 am from 8977 N Scottsdale Rd, rated Advanced / Flat (fetched Sept 30, 2026). Start pin moved Oct 9, 2026 to the southeast corner of Scottsdale Rd and Doubletree Ranch Rd (OpenStreetMap street data puts the intersection at 33.5674, -111.9261); the old pin, geocoded from the street address, sat about 0.6 mi south, by Hash Kitchen.",
+  "changes": {
+   "lat": 33.5671,
+   "lng": -111.92575,
+   "geo_precision": "start"
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ },
+ {
+  "slug": "yuma-az-foothills-bicycle-club-social-rides",
+  "outcome": "changed",
+  "checked_on": "2026-09-18",
+  "evidence": "Start pin moved Oct 9, 2026 from the city-level pin to the Foothills branch library, 13226 S Frontage Rd (OpenStreetMap, 32.66844, -114.40660).",
+  "changes": {
+   "lat": 32.66844,
+   "lng": -114.4066,
+   "geo_precision": "start",
+   "start_location": {
+    "address": "13226 S Frontage Rd, Yuma, AZ 85367"
+   }
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ }
+]

@@ -26,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/rides/rides.css?v=43">
+  <link rel="stylesheet" href="/rides/rides.css?v=44">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cycleforchange.org/rides/colorado-springs-co-buffalo-lodge-saturday-group-ride/","url":"https://cycleforchange.org/rides/colorado-springs-co-buffalo-lodge-saturday-group-ride/","name":"Buffalo Lodge Saturday Group Ride — Colorado Springs, CO","description":"Buffalo Lodge Saturday Group Ride is a road group ride in Colorado Springs, CO. It rolls every Saturday at 10:00 am from Buffalo Lodge Bicycle Resort (park…","dateModified":"2026-10-01","author":{"@type":"Person","name":"Robert Castan","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":"https://cycleforchange.org/favicon-512.png"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cycle for Change","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Group rides","item":"https://cycleforchange.org/rides/"},{"@type":"ListItem","position":3,"name":"Colorado","item":"https://cycleforchange.org/rides/co/"},{"@type":"ListItem","position":4,"name":"Colorado Springs","item":"https://cycleforchange.org/rides/co/colorado-springs/"},{"@type":"ListItem","position":5,"name":"Buffalo Lodge Saturday Group Ride","item":"https://cycleforchange.org/rides/colorado-springs-co-buffalo-lodge-saturday-group-ride/"}]},"mainEntity":{"@id":"https://cycleforchange.org/rides/colorado-springs-co-buffalo-lodge-saturday-group-ride/#event"}},{"@type":"Event","@id":"https://cycleforchange.org/rides/colorado-springs-co-buffalo-lodge-saturday-group-ride/#event","name":"Buffalo Lodge Saturday Group Ride","description":"Buffalo Lodge Saturday Group Ride is a road group ride in Colorado Springs, CO. It rolls every Saturday at 10:00 am from Buffalo Lodge Bicycle Resort (park…","url":"https://cycleforchange.org/rides/colorado-springs-co-buffalo-lodge-saturday-group-ride/","startDate":"2026-10-10T10:00:00-06:00","endDate":"2026-10-10T13:00:00-06:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","isAccessibleForFree":true,"image":"https://cycleforchange.org/og-cfc.png","location":{"@type":"Place","name":"Buffalo Lodge Bicycle Resort (park in back)","address":{"@type":"PostalAddress","streetAddress":"2 El Paso Blvd, Colorado Springs, CO 80904","addressLocality":"Colorado Springs","addressRegion":"CO","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":38.86019,"longitude":-104.8852}},"eventSchedule":{"@type":"Schedule","scheduleTimezone":"America/Denver","startTime":"10:00","byDay":["https://schema.org/Saturday"],"repeatFrequency":"P1W"},"organizer":{"@type":"Organization","name":"Buffalo Lodge Bicycle Resort","url":"https://www.bicycleresort.com/bike-with-us"},"sameAs":["https://www.bicycleresort.com/bike-with-us"]}]}</script>
 </head>
 <body>
@@ -127,6 +127,7 @@
     </div>
     
 
+
     <div class="gr-ridebox">
       <section class="gr-reviews" id="reviews" aria-labelledby="gr-rev-h">
         <h2 id="gr-rev-h">Rider reviews</h2>
@@ -171,6 +172,47 @@
         <details class="gr-checked-more"><summary>How we know</summary><p class="gr-checked-ev">Bike Colorado Springs’ event calendar lists the Buffalo Lodge Saturday Group Ride for Oct 3, 10, 17, 24 and 31, 2026 at 10:00 am, 2 El Paso Blvd (fetched Oct 1, 2026). The listing is a secondary page; the lodge’s own site did not load.</p></details>
       </div>
     </aside>
+
+    <section class="gr-route gr-route--none" id="route" aria-labelledby="gr-route-h">
+      <h2 id="gr-route-h">The route</h2>
+      <p>Nobody has sent us this ride’s route yet. When the host does, it shows here: a map, a climb chart and a GPX for your bike computer.</p>
+      
+      
+      <details class="gr-rev-write gr-route-send" id="send-route">
+        <summary class="btn btn--ghost gr-rev-open">Run this ride? Send us the route</summary>
+        <form class="gr-rev-form" name="ride-route" method="POST" action="/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-route-send>
+          <input type="hidden" name="form-name" value="ride-route">
+          <input type="hidden" name="ride" value="colorado-springs-co-buffalo-lodge-saturday-group-ride">
+          <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <p class="gr-rev-note">For the people who run Buffalo Lodge Saturday Group Ride. Drop in the file and a couple of numbers. Robert reads every route before it goes up, credits you on the page and links back.</p>
+          <label class="gr-rev-lab" for="rt-file-316">Route file <small>GPX, FIT or TCX</small></label>
+          <input class="field" id="rt-file-316" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
+          <label class="gr-rev-lab" for="rt-link-316">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
+          <input class="field" id="rt-link-316" type="url" name="route_link" inputmode="url" autocomplete="off">
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-lo-316">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-316" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-hi-316">To <small>mph</small></label><input class="field" id="rt-hi-316" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
+          </div>
+          <fieldset class="gr-rev-pick">
+            <legend>If someone comes off the back</legend>
+            <label><input type="radio" name="drop" value="drop"><span>They ride back alone</span></label><label><input type="radio" name="drop" value="regroup"><span>We wait at a regroup</span></label><label><input type="radio" name="drop" value="no-drop"><span>Nobody gets left</span></label>
+          </fieldset>
+          <label class="gr-rev-lab" for="rt-regroup-316">Where you regroup <small>(optional)</small></label>
+          <input class="field" id="rt-regroup-316" name="regroup" maxlength="80">
+          <fieldset class="gr-rev-pick">
+            <legend>This route is</legend>
+            <label><input type="radio" name="weekly" value="every" checked><span>The route every time</span></label><label><input type="radio" name="weekly" value="once"><span>Just for the next ride</span></label>
+          </fieldset>
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-name-316">Your name</label><input class="field" id="rt-name-316" name="name" maxlength="40" autocomplete="name" required></div>
+            <div><label class="gr-rev-lab" for="rt-role-316">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-316" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
+          </div>
+          <label class="gr-rev-lab" for="rt-email-316">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
+          <input class="field" id="rt-email-316" type="email" name="email" autocomplete="email">
+          <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send the route</button><p class="gr-rev-ok" role="status" hidden></p></div>
+        </form>
+      </details>
+    </section>
     <dl class="gr-facts">
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Hosted by</dt><dd>Buffalo Lodge Bicycle Resort<small>Brand</small></dd></div>
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-cost"/></svg><dt>Cost</dt><dd>free</dd></div>
@@ -351,7 +393,7 @@
 <script src="/chrome.js" defer></script>
 <script src="/rides/save.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script src="/rides/ride.js?v=38" defer></script>
+<script src="/rides/ride.js?v=39" defer></script>
 <script src="/rides/map.js" defer></script>
 </body>
 </html>
