@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Check in to your ride — Cycle for Change</title>
+<meta name="description" content="At a group ride? Check in, add photos, leave a review. It keeps the ride listing honest for the next person.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1C1A22">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Ride">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta property="og:title" content="Check in to your ride">
+<meta property="og:description" content="At a group ride? One tap tells the next rider it’s still rolling.">
+<meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="manifest" href="/ride/ride.webmanifest">
+<link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/ride/ride.css?v=1">
+</head>
+<body>
+
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" focusable="false"><defs>
+  <path id="lpC" d="M52 34 V24 Q52 8 36 8 H33 M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 142 H36 Q52 142 52 126 V116"/>
+  <path id="lpY" d="M11 4 L30 68 L49 4 M30 68 V150"/>
+  <path id="lpL" d="M8 0 V150 M22 142 H54"/>
+  <path id="lpE" d="M8 0 V150 M22 8 H54 M22 75 H47 M22 142 H54"/>
+  <path id="lpF" d="M8 0 V150 M22 8 H54 M22 75 H47"/>
+  <path id="lpO" d="M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 8 H36 Q52 8 52 24 V126 Q52 142 36 142 H33"/>
+  <path id="lpR" d="M8 0 V150 M22 8 H36 Q52 8 52 24 V58 Q52 74 36 74 H22 M33 90 L50 150"/>
+  <clipPath id="lpRow"><rect x="-20" y="0" width="900" height="150"/></clipPath>
+  <g id="lpCycle" clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/></g>
+  <g id="lpFor" clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpF"/><use href="#lpO" transform="translate(74 0)"/><use href="#lpR" transform="translate(148 0)"/></g>
+  <g id="lpLine"><use href="#lpCycle"/><use href="#lpFor" transform="translate(414 0)"/></g>
+</defs></svg>
+
+<main class="app" id="app">
+
+  <!-- HOME: find the ride -->
+  <section class="scr" data-screen="home" tabindex="-1" aria-labelledby="h-home">
+    <a href="/" class="sign home-link" aria-label="Cycle for Change home">
+      <svg viewBox="-10 -10 380 170" aria-hidden="true"><use href="#lpCycle"/></svg>
+      <div class="sign__row">
+        <svg viewBox="-10 -10 230 170" aria-hidden="true"><use href="#lpFor"/></svg>
+        <span class="plate">this ride</span>
+      </div>
+    </a>
+    <div class="stack">
+      <h1 id="h-home">At a group ride?</h1>
+      <p class="sub">Check in so the next rider knows it’s still rolling. Ten seconds.</p>
+    </div>
+    <div class="stack">
+      <button class="btn" type="button" data-locate>
+        <svg class="mk" aria-hidden="true"><use href="/rides/marks.svg#m-locate"/></svg>Find my ride
+      </button>
+      <p class="small muted" data-locate-note>Your location finds the ride, then it’s gone. It’s never saved.</p>
+    </div>
+    <div class="field">
+      <label for="q">Or type the ride’s name</label>
+      <input id="q" type="search" placeholder="TSR, shop ride, Tempe…" autocomplete="off" enterkeyhint="search" data-q>
+    </div>
+    <div class="stack" data-results aria-live="polite"></div>
+    <button class="link push" type="button" data-go="notlisted">My ride isn’t listed</button>
+  </section>
+
+  <!-- PICK: rides near you -->
+  <section class="scr" data-screen="pick" tabindex="-1" aria-labelledby="h-pick" hidden>
+    <button class="back" type="button" data-back>Back</button>
+    <div class="stack">
+      <h1 id="h-pick">Which ride are you on?</h1>
+      <p class="sub" data-pick-sub></p>
+    </div>
+    <div class="stack" data-pick-now></div>
+    <div class="stack" data-pick-later></div>
+    <button class="btn btn--ghost" type="button" data-go="notlisted">My ride isn’t here</button>
+  </section>
+
+  <!-- RIDE -->
+  <section class="scr" data-screen="ride" tabindex="-1" aria-labelledby="h-ride" hidden>
+    <button class="back" type="button" data-back>Back</button>
+    <p class="hello" data-hello></p>
+    <div class="sign" data-sign>
+      <svg viewBox="-10 -10 380 170" role="img" aria-label="Cycle"><use href="#lpCycle"/></svg>
+      <div class="sign__row">
+        <svg viewBox="-10 -10 230 170" role="img" aria-label="for"><use href="#lpFor"/></svg>
+        <span class="plate" data-plate></span>
+      </div>
+    </div>
+    <h1 id="h-ride" class="ride-name" data-name></h1>
+    <div class="facts" data-facts></div>
+    <p class="checked" data-checked></p>
+    <div class="stack push" data-ride-ask></div>
+  </section>
+
+  <!-- CHANGED -->
+  <section class="scr" data-screen="changed" tabindex="-1" aria-labelledby="h-chg" hidden>
+    <button class="back" type="button" data-back>Back</button>
+    <div class="stack">
+      <h1 id="h-chg">What changed?</h1>
+      <p class="sub">Tap one. That’s enough.</p>
+    </div>
+    <div class="chips" role="group" aria-label="What changed">
+      <button class="chip" type="button" aria-pressed="false" data-what="time">The time</button>
+      <button class="chip" type="button" aria-pressed="false" data-what="start">Where it starts</button>
+      <button class="chip" type="button" aria-pressed="false" data-what="route">The route or pace</button>
+      <button class="chip" type="button" aria-pressed="false" data-what="gone">It’s not running</button>
+    </div>
+    <div class="field">
+      <label for="chg-note">Say it in a line <span>(if you want)</span></label>
+      <textarea id="chg-note" rows="3" maxlength="400" placeholder="Rolls at 6:30 now"></textarea>
+    </div>
+    <div class="stack push">
+      <button class="btn" type="button" data-send-change>Send</button>
+      <p class="small center pool">Robert checks it before the page changes. One report never takes a ride down.</p>
+      <p class="small center err" data-err role="alert"></p>
+    </div>
+  </section>
+
+  <!-- DONE: after a check-in -->
+  <section class="scr" data-screen="done" tabindex="-1" aria-labelledby="h-done" hidden>
+    <div class="got">
+      <div class="got__h"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span id="h-done" data-done-h>Got it.</span></div>
+      <p data-done-p></p>
+    </div>
+    <div class="stack">
+      <h2>Got a photo or a clip?</h2>
+      <p class="sub">Optional. Up to four photos and one short clip.</p>
+    </div>
+    <div class="pick">
+      <label><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Add photos<input type="file" accept="image/*" multiple data-photos></label>
+      <label><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12"/><path d="M16 10l5-3v10l-5-3"/></svg>Add a clip<input type="file" accept="video/*" data-video></label>
+    </div>
+    <div class="thumbs" data-thumbs hidden></div>
+    <p class="small err" data-media-err role="alert"></p>
+    <button class="btn btn--ghost" type="button" data-send-media hidden>Send to Robert</button>
+    <p class="small pool" data-media-ok role="status"></p>
+    <div class="rules">
+      <p><b>Robert sees these first.</b> Nothing goes up without him.</p>
+      <p class="muted">Keep other riders’ faces out unless they said yes. Location is stripped from photos before they leave your phone.</p>
+    </div>
+    <div class="stack push">
+      <button class="btn" type="button" data-go="review">Review this ride</button>
+      <button class="link" type="button" data-go="end">Done</button>
+    </div>
+  </section>
+
+  <!-- REVIEW -->
+  <section class="scr" data-screen="review" tabindex="-1" aria-labelledby="h-rev" hidden>
+    <button class="back" type="button" data-back>Back</button>
+    <div class="stack">
+      <p class="lab" data-rev-ride></p>
+      <h1 id="h-rev">How was it?</h1>
+      <p class="sub">For the next person thinking about showing up. Robert reads it before it goes on the ride page.</p>
+    </div>
+    <form class="stack" style="gap:20px" data-review novalidate>
+      <div class="field">
+        <span class="field__l" id="rv-again-l">Would you ride it again?</span>
+        <div class="chips chips--2" role="group" aria-labelledby="rv-again-l">
+          <button class="chip chip--sm" type="button" aria-pressed="false" data-again="yes">Yes</button>
+          <button class="chip chip--sm" type="button" aria-pressed="false" data-again="no">No</button>
+        </div>
+      </div>
+      <div class="field">
+        <span class="field__l" id="rv-pace-l">The pace <span>(optional)</span></span>
+        <div class="chips chips--3" role="group" aria-labelledby="rv-pace-l">
+          <button class="chip chip--sm" type="button" aria-pressed="false" data-pace="easier">Easier than it says</button>
+          <button class="chip chip--sm" type="button" aria-pressed="false" data-pace="right">About right</button>
+          <button class="chip chip--sm" type="button" aria-pressed="false" data-pace="harder">Harder than it says</button>
+        </div>
+      </div>
+      <div class="field">
+        <label for="rv-words">In your words</label>
+        <textarea id="rv-words" rows="6" maxlength="600" placeholder="Who showed up, how it felt, what a first-timer should know."></textarea>
+        <span class="small muted" data-count>At least 20 characters.</span>
+      </div>
+      <div class="two">
+        <div class="field"><label for="rv-name">First name</label><input id="rv-name" type="text" maxlength="30" autocomplete="given-name"></div>
+        <div class="field"><label for="rv-from">Where you ride from <span>(optional)</span></label><input id="rv-from" type="text" maxlength="40" autocomplete="address-level2"></div>
+      </div>
+      <p class="small muted">Links, emails and phone numbers come out.</p>
+      <button class="btn" type="submit">Send my review</button>
+      <p class="small center err" data-rev-err role="alert"></p>
+    </form>
+  </section>
+
+  <!-- NOT LISTED -->
+  <section class="scr" data-screen="notlisted" tabindex="-1" aria-labelledby="h-nl" hidden>
+    <button class="back" type="button" data-back>Back</button>
+    <div class="stack">
+      <h1 id="h-nl">Tell me about it.</h1>
+      <p class="sub">I’ll check it and put it on the map.</p>
+    </div>
+    <div class="stack" style="gap:14px">
+      <div class="field"><label for="nl-name">The ride</label><input id="nl-name" type="text" maxlength="120" placeholder="Tuesday coffee ride" autocomplete="off"></div>
+      <div class="field"><label for="nl-when">When it rolls</label><input id="nl-when" type="text" maxlength="120" placeholder="Tuesdays, 6:00 pm" autocomplete="off"></div>
+      <div class="field"><label for="nl-where">Where it starts</label><input id="nl-where" type="text" maxlength="160" placeholder="A shop, a park, a corner" autocomplete="off"><span class="small muted" data-nl-pin hidden>Or leave it blank and we’ll use where you’re standing.</span></div>
+      <div class="field"><label for="nl-who">Who runs it <span>(if you know)</span></label><input id="nl-who" type="text" maxlength="120" placeholder="A shop, a club, a person" autocomplete="off"></div>
+    </div>
+    <div class="stack push">
+      <button class="btn" type="button" data-send-ride>Send it to Robert</button>
+      <p class="small center err" data-nl-err role="alert"></p>
+    </div>
+  </section>
+
+  <!-- END -->
+  <section class="scr" data-screen="end" tabindex="-1" aria-labelledby="h-end" hidden>
+    <svg class="mini" viewBox="0 0 760 150" aria-hidden="true"><use href="#lpLine"/><rect x="652" y="114" width="98" height="36" fill="#A84C58"/></svg>
+    <div class="stack">
+      <h1 id="h-end" data-end-h>That’s it. Go ride.</h1>
+      <p class="sub" data-end-p></p>
+    </div>
+    <div class="facts tip" data-tip>
+      <svg class="mk" aria-hidden="true"><use href="/rides/marks.svg#m-pick"/></svg>
+      <p class="small">Keep it handy: in Safari, tap Share, then <b>Add to Home Screen</b>. Next ride, it’s one tap.</p>
+    </div>
+    <div class="stack push">
+      <a class="btn btn--ghost" href="/rides/" data-ride-page>See the ride page</a>
+      <button class="link" type="button" data-restart>Check in somewhere else</button>
+    </div>
+  </section>
+</main>
+
+<!-- Netlify registers these at deploy. The page posts to them with fetch; they're never shown. -->
+<form name="ride-checkin" method="POST" action="/ride/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" hidden aria-hidden="true">
+  <input name="ride"><input name="status"><input name="what"><input name="note"><input name="at"><input name="page">
+  <input type="file" name="photo1"><input type="file" name="photo2"><input type="file" name="photo3"><input type="file" name="photo4"><input type="file" name="video">
+  <input name="bot-field">
+</form>
+<form name="ride-review" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" hidden aria-hidden="true">
+  <input name="ride"><input name="again"><input name="pace"><textarea name="words"></textarea><input name="name"><input name="from"><input name="email"><input name="bot-field">
+</form>
+
+<script src="/ride/ride.js?v=1"></script>
+</body>
+</html>
