@@ -26,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/rides/rides.css?v=43">
+  <link rel="stylesheet" href="/rides/rides.css?v=44">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cycleforchange.org/rides/brookfield-il-cycle-brookfield-first-friday-slow-roll/","url":"https://cycleforchange.org/rides/brookfield-il-cycle-brookfield-first-friday-slow-roll/","name":"Cycle Brookfield First Friday Slow Roll — Brookfield, IL","description":"Cycle Brookfield First Friday Slow Roll is a social group ride in Brookfield, IL. It rolls first Friday of the month at 6:00 pm from The Compassion Factory.…","dateModified":"2026-10-01","author":{"@type":"Person","name":"Robert Castan","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":"https://cycleforchange.org/favicon-512.png"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cycle for Change","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Group rides","item":"https://cycleforchange.org/rides/"},{"@type":"ListItem","position":3,"name":"Illinois","item":"https://cycleforchange.org/rides/il/"},{"@type":"ListItem","position":4,"name":"Chicago","item":"https://cycleforchange.org/rides/il/chicago/"},{"@type":"ListItem","position":5,"name":"Cycle Brookfield First Friday Slow Roll","item":"https://cycleforchange.org/rides/brookfield-il-cycle-brookfield-first-friday-slow-roll/"}]}}]}</script>
 </head>
 <body>
@@ -126,6 +126,7 @@
     </div>
     
 
+
     <div class="gr-ridebox">
       <section class="gr-reviews" id="reviews" aria-labelledby="gr-rev-h">
         <h2 id="gr-rev-h">Rider reviews</h2>
@@ -170,6 +171,47 @@
         <details class="gr-checked-more"><summary>How we know</summary><p class="gr-checked-ev">Cycle Brookfield’s events page lists First Friday Slow Roll Social Ride on May 1, Jun 5, Aug 7, Sep 4 and Oct 2, 2026, and invites riders to the Oct 2 ride at 6:00 PM from The Compassion Factory (fetched Oct 1, 2026).</p></details>
       </div>
     </aside>
+
+    <section class="gr-route gr-route--none" id="route" aria-labelledby="gr-route-h">
+      <h2 id="gr-route-h">The route</h2>
+      <p>Nobody has sent us this ride’s route yet. When the host does, it shows here: a map, a climb chart and a GPX for your bike computer.</p>
+      
+      
+      <details class="gr-rev-write gr-route-send" id="send-route">
+        <summary class="btn btn--ghost gr-rev-open">Run this ride? Send us the route</summary>
+        <form class="gr-rev-form" name="ride-route" method="POST" action="/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-route-send>
+          <input type="hidden" name="form-name" value="ride-route">
+          <input type="hidden" name="ride" value="brookfield-il-cycle-brookfield-first-friday-slow-roll">
+          <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <p class="gr-rev-note">For the people who run Cycle Brookfield First Friday Slow Roll. Drop in the file and a couple of numbers. Robert reads every route before it goes up, credits you on the page and links back.</p>
+          <label class="gr-rev-lab" for="rt-file-488">Route file <small>GPX, FIT or TCX</small></label>
+          <input class="field" id="rt-file-488" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
+          <label class="gr-rev-lab" for="rt-link-488">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
+          <input class="field" id="rt-link-488" type="url" name="route_link" inputmode="url" autocomplete="off">
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-lo-488">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-488" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-hi-488">To <small>mph</small></label><input class="field" id="rt-hi-488" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
+          </div>
+          <fieldset class="gr-rev-pick">
+            <legend>If someone comes off the back</legend>
+            <label><input type="radio" name="drop" value="drop"><span>They ride back alone</span></label><label><input type="radio" name="drop" value="regroup"><span>We wait at a regroup</span></label><label><input type="radio" name="drop" value="no-drop"><span>Nobody gets left</span></label>
+          </fieldset>
+          <label class="gr-rev-lab" for="rt-regroup-488">Where you regroup <small>(optional)</small></label>
+          <input class="field" id="rt-regroup-488" name="regroup" maxlength="80">
+          <fieldset class="gr-rev-pick">
+            <legend>This route is</legend>
+            <label><input type="radio" name="weekly" value="every" checked><span>The route every time</span></label><label><input type="radio" name="weekly" value="once"><span>Just for the next ride</span></label>
+          </fieldset>
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-name-488">Your name</label><input class="field" id="rt-name-488" name="name" maxlength="40" autocomplete="name" required></div>
+            <div><label class="gr-rev-lab" for="rt-role-488">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-488" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
+          </div>
+          <label class="gr-rev-lab" for="rt-email-488">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
+          <input class="field" id="rt-email-488" type="email" name="email" autocomplete="email">
+          <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send the route</button><p class="gr-rev-ok" role="status" hidden></p></div>
+        </form>
+      </details>
+    </section>
     <dl class="gr-facts">
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Hosted by</dt><dd>Cycle Brookfield<small>Club</small></dd></div>
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-social"/></svg><dt>Kind of ride</dt><dd>Social</dd></div>
@@ -356,7 +398,7 @@
 <script src="/chrome.js" defer></script>
 <script src="/rides/save.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script src="/rides/ride.js?v=38" defer></script>
+<script src="/rides/ride.js?v=39" defer></script>
 <script src="/rides/map.js" defer></script>
 </body>
 </html>

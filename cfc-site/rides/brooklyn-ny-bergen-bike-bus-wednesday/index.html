@@ -26,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/rides/rides.css?v=43">
+  <link rel="stylesheet" href="/rides/rides.css?v=44">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cycleforchange.org/rides/brooklyn-ny-bergen-bike-bus-wednesday/","url":"https://cycleforchange.org/rides/brooklyn-ny-bergen-bike-bus-wednesday/","name":"Bergen Bike Bus — Brooklyn, NY, Wednesdays 7:15 am","description":"Bergen Bike Bus is a social group ride in Brooklyn, NY. It rolls every Wednesday at 7:15 am from Thomas Boyland St, one block west of Rockaway Ave (start of…","dateModified":"2026-10-02","author":{"@type":"Person","name":"Robert Castan","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":"https://cycleforchange.org/favicon-512.png"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cycle for Change","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Group rides","item":"https://cycleforchange.org/rides/"},{"@type":"ListItem","position":3,"name":"New York","item":"https://cycleforchange.org/rides/ny/"},{"@type":"ListItem","position":4,"name":"New York","item":"https://cycleforchange.org/rides/ny/new-york/"},{"@type":"ListItem","position":5,"name":"Bergen Bike Bus","item":"https://cycleforchange.org/rides/brooklyn-ny-bergen-bike-bus-wednesday/"}]},"mainEntity":{"@id":"https://cycleforchange.org/rides/brooklyn-ny-bergen-bike-bus-wednesday/#event"}},{"@type":"Event","@id":"https://cycleforchange.org/rides/brooklyn-ny-bergen-bike-bus-wednesday/#event","name":"Bergen Bike Bus","description":"Bergen Bike Bus is a social group ride in Brooklyn, NY. It rolls every Wednesday at 7:15 am from Thomas Boyland St, one block west of Rockaway Ave (start of…","url":"https://cycleforchange.org/rides/brooklyn-ny-bergen-bike-bus-wednesday/","startDate":"2026-10-14T07:15:00-04:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","image":"https://cycleforchange.org/og-cfc.png","location":{"@type":"Place","name":"Thomas Boyland St, one block west of Rockaway Ave (start of the route on Bergen St)","address":{"@type":"PostalAddress","streetAddress":"Bergen Street and Rockaway Avenue, Brooklyn, NY","addressLocality":"Brooklyn","addressRegion":"NY","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":40.6526,"longitude":-73.94972}},"eventSchedule":{"@type":"Schedule","scheduleTimezone":"America/New_York","startTime":"07:15","byDay":["https://schema.org/Wednesday"],"repeatFrequency":"P1W"},"organizer":{"@type":"Organization","name":"Bergen Bike Bus (NYC Bike Bus)","url":"https://www.bikebus.nyc/bergen-bike-bus"},"sameAs":["https://www.bikebus.nyc/bergen-bike-bus","https://www.instagram.com/bergenbikebus/"]}]}</script>
 </head>
 <body>
@@ -127,6 +127,7 @@
     </div>
     
 
+
     <div class="gr-ridebox">
       <section class="gr-reviews" id="reviews" aria-labelledby="gr-rev-h">
         <h2 id="gr-rev-h">Rider reviews</h2>
@@ -171,6 +172,47 @@
         <details class="gr-checked-more"><summary>How we know</summary><p class="gr-checked-ev">bikebus.nyc says the bus restarted Sept 16 for its fall 2026 season and lists every Wednesday through Dec, with Oct 7, 14, 21 and 28 upcoming (fetched Oct 2, 2026); the Get Women Cycling calendar listed the same Wednesday 7:15 am ride on Apr 1, 2026.</p><p>Last seen happening Sep 16, 2026.</p></details>
       </div>
     </aside>
+
+    <section class="gr-route gr-route--none" id="route" aria-labelledby="gr-route-h">
+      <h2 id="gr-route-h">The route</h2>
+      <p>Nobody has sent us this ride’s route yet. When the host does, it shows here: a map, a climb chart and a GPX for your bike computer.</p>
+      
+      
+      <details class="gr-rev-write gr-route-send" id="send-route">
+        <summary class="btn btn--ghost gr-rev-open">Run this ride? Send us the route</summary>
+        <form class="gr-rev-form" name="ride-route" method="POST" action="/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-route-send>
+          <input type="hidden" name="form-name" value="ride-route">
+          <input type="hidden" name="ride" value="brooklyn-ny-bergen-bike-bus-wednesday">
+          <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <p class="gr-rev-note">For the people who run Bergen Bike Bus. Drop in the file and a couple of numbers. Robert reads every route before it goes up, credits you on the page and links back.</p>
+          <label class="gr-rev-lab" for="rt-file-854">Route file <small>GPX, FIT or TCX</small></label>
+          <input class="field" id="rt-file-854" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
+          <label class="gr-rev-lab" for="rt-link-854">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
+          <input class="field" id="rt-link-854" type="url" name="route_link" inputmode="url" autocomplete="off">
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-lo-854">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-854" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-hi-854">To <small>mph</small></label><input class="field" id="rt-hi-854" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
+          </div>
+          <fieldset class="gr-rev-pick">
+            <legend>If someone comes off the back</legend>
+            <label><input type="radio" name="drop" value="drop"><span>They ride back alone</span></label><label><input type="radio" name="drop" value="regroup"><span>We wait at a regroup</span></label><label><input type="radio" name="drop" value="no-drop"><span>Nobody gets left</span></label>
+          </fieldset>
+          <label class="gr-rev-lab" for="rt-regroup-854">Where you regroup <small>(optional)</small></label>
+          <input class="field" id="rt-regroup-854" name="regroup" maxlength="80">
+          <fieldset class="gr-rev-pick">
+            <legend>This route is</legend>
+            <label><input type="radio" name="weekly" value="every" checked><span>The route every time</span></label><label><input type="radio" name="weekly" value="once"><span>Just for the next ride</span></label>
+          </fieldset>
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-name-854">Your name</label><input class="field" id="rt-name-854" name="name" maxlength="40" autocomplete="name" required></div>
+            <div><label class="gr-rev-lab" for="rt-role-854">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-854" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
+          </div>
+          <label class="gr-rev-lab" for="rt-email-854">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
+          <input class="field" id="rt-email-854" type="email" name="email" autocomplete="email">
+          <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send the route</button><p class="gr-rev-ok" role="status" hidden></p></div>
+        </form>
+      </details>
+    </section>
     <dl class="gr-facts">
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Hosted by</dt><dd>Bergen Bike Bus (NYC Bike Bus)<small>Collective</small></dd></div>
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-social"/></svg><dt>Kind of ride</dt><dd>Social</dd></div>
@@ -365,7 +407,7 @@
 <script src="/chrome.js" defer></script>
 <script src="/rides/save.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script src="/rides/ride.js?v=38" defer></script>
+<script src="/rides/ride.js?v=39" defer></script>
 <script src="/rides/map.js" defer></script>
 </body>
 </html>

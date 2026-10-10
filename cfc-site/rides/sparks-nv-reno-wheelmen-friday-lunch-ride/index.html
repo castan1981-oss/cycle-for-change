@@ -26,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/rides/rides.css?v=43">
+  <link rel="stylesheet" href="/rides/rides.css?v=44">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cycleforchange.org/rides/sparks-nv-reno-wheelmen-friday-lunch-ride/","url":"https://cycleforchange.org/rides/sparks-nv-reno-wheelmen-friday-lunch-ride/","name":"The Friday Lunch Ride — Sparks, NV, Fridays 12:00 pm","description":"The Friday Lunch Ride is a road and social group ride in Sparks, NV. It rolls every Friday at 12:00 pm from McClelland Laboratories. About 20 miles, easy to…","dateModified":"2026-10-01","author":{"@type":"Person","name":"Robert Castan","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":"https://cycleforchange.org/favicon-512.png"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cycle for Change","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Group rides","item":"https://cycleforchange.org/rides/"},{"@type":"ListItem","position":3,"name":"Nevada","item":"https://cycleforchange.org/rides/nv/"},{"@type":"ListItem","position":4,"name":"Reno","item":"https://cycleforchange.org/rides/nv/reno/"},{"@type":"ListItem","position":5,"name":"The Friday Lunch Ride","item":"https://cycleforchange.org/rides/sparks-nv-reno-wheelmen-friday-lunch-ride/"}]},"mainEntity":{"@id":"https://cycleforchange.org/rides/sparks-nv-reno-wheelmen-friday-lunch-ride/#event"}},{"@type":"Event","@id":"https://cycleforchange.org/rides/sparks-nv-reno-wheelmen-friday-lunch-ride/#event","name":"The Friday Lunch Ride","description":"The Friday Lunch Ride is a road and social group ride in Sparks, NV. It rolls every Friday at 12:00 pm from McClelland Laboratories. About 20 miles, easy to…","url":"https://cycleforchange.org/rides/sparks-nv-reno-wheelmen-friday-lunch-ride/","startDate":"2026-10-16T12:00:00-07:00","endDate":"2026-10-16T13:00:00-07:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","image":"https://cycleforchange.org/og-cfc.png","location":{"@type":"Place","name":"McClelland Laboratories","address":{"@type":"PostalAddress","streetAddress":"952 Greg St, Sparks, NV 89431","addressLocality":"Sparks","addressRegion":"NV","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":39.52208,"longitude":-119.75489}},"eventSchedule":{"@type":"Schedule","scheduleTimezone":"America/Los_Angeles","startTime":"12:00","byDay":["https://schema.org/Friday"],"repeatFrequency":"P1W"},"organizer":{"@type":"Organization","name":"Reno Wheelmen","url":"https://renowheelmen.org/"},"sameAs":["https://renowheelmen.org/","https://www.facebook.com/RenoWheelmen"]}]}</script>
 </head>
 <body>
@@ -128,6 +128,7 @@
     </div>
     
 
+
     <div class="gr-ridebox">
       <section class="gr-reviews" id="reviews" aria-labelledby="gr-rev-h">
         <h2 id="gr-rev-h">Rider reviews</h2>
@@ -172,6 +173,47 @@
         <details class="gr-checked-more"><summary>How we know</summary><p class="gr-checked-ev">Reno Wheelmen’s calendar feed lists The Friday Lunch Ride for Fri Oct 2, 9, 16, 23 and 30, 2026 at noon from 952 Greg St., Sparks, with a description of 18 to 23 miles at 15 to 18 mph (fetched Oct 1, 2026).</p></details>
       </div>
     </aside>
+
+    <section class="gr-route gr-route--none" id="route" aria-labelledby="gr-route-h">
+      <h2 id="gr-route-h">The route</h2>
+      <p>Nobody has sent us this ride’s route yet. When the host does, it shows here: a map, a climb chart and a GPX for your bike computer.</p>
+      
+      
+      <details class="gr-rev-write gr-route-send" id="send-route">
+        <summary class="btn btn--ghost gr-rev-open">Run this ride? Send us the route</summary>
+        <form class="gr-rev-form" name="ride-route" method="POST" action="/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-route-send>
+          <input type="hidden" name="form-name" value="ride-route">
+          <input type="hidden" name="ride" value="sparks-nv-reno-wheelmen-friday-lunch-ride">
+          <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <p class="gr-rev-note">For the people who run The Friday Lunch Ride. Drop in the file and a couple of numbers. Robert reads every route before it goes up, credits you on the page and links back.</p>
+          <label class="gr-rev-lab" for="rt-file-849">Route file <small>GPX, FIT or TCX</small></label>
+          <input class="field" id="rt-file-849" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
+          <label class="gr-rev-lab" for="rt-link-849">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
+          <input class="field" id="rt-link-849" type="url" name="route_link" inputmode="url" autocomplete="off">
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-lo-849">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-849" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-hi-849">To <small>mph</small></label><input class="field" id="rt-hi-849" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
+          </div>
+          <fieldset class="gr-rev-pick">
+            <legend>If someone comes off the back</legend>
+            <label><input type="radio" name="drop" value="drop"><span>They ride back alone</span></label><label><input type="radio" name="drop" value="regroup"><span>We wait at a regroup</span></label><label><input type="radio" name="drop" value="no-drop"><span>Nobody gets left</span></label>
+          </fieldset>
+          <label class="gr-rev-lab" for="rt-regroup-849">Where you regroup <small>(optional)</small></label>
+          <input class="field" id="rt-regroup-849" name="regroup" maxlength="80">
+          <fieldset class="gr-rev-pick">
+            <legend>This route is</legend>
+            <label><input type="radio" name="weekly" value="every" checked><span>The route every time</span></label><label><input type="radio" name="weekly" value="once"><span>Just for the next ride</span></label>
+          </fieldset>
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-name-849">Your name</label><input class="field" id="rt-name-849" name="name" maxlength="40" autocomplete="name" required></div>
+            <div><label class="gr-rev-lab" for="rt-role-849">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-849" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
+          </div>
+          <label class="gr-rev-lab" for="rt-email-849">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
+          <input class="field" id="rt-email-849" type="email" name="email" autocomplete="email">
+          <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send the route</button><p class="gr-rev-ok" role="status" hidden></p></div>
+        </form>
+      </details>
+    </section>
     <dl class="gr-facts">
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Hosted by</dt><dd>Reno Wheelmen<small>Club</small></dd></div>
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><dt>Kind of ride</dt><dd>Road · Social</dd></div>
@@ -352,7 +394,7 @@
 <script src="/chrome.js" defer></script>
 <script src="/rides/save.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script src="/rides/ride.js?v=38" defer></script>
+<script src="/rides/ride.js?v=39" defer></script>
 <script src="/rides/map.js" defer></script>
 </body>
 </html>

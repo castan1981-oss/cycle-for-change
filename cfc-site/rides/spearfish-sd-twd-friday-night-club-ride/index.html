@@ -26,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/rides/rides.css?v=43">
+  <link rel="stylesheet" href="/rides/rides.css?v=44">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cycleforchange.org/rides/spearfish-sd-twd-friday-night-club-ride/","url":"https://cycleforchange.org/rides/spearfish-sd-twd-friday-night-club-ride/","name":"TWD Friday Night Club Ride — Spearfish, SD, Fridays 5:00 pm","description":"TWD Friday Night Club Ride is a gravel, mountain bike and road group ride in Spearfish, SD. It rolls every Friday at 5:00 pm from Two Wheeler Dealer: Run…","dateModified":"2026-10-01","author":{"@type":"Person","name":"Robert Castan","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":"https://cycleforchange.org/favicon-512.png"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cycle for Change","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Group rides","item":"https://cycleforchange.org/rides/"},{"@type":"ListItem","position":3,"name":"South Dakota","item":"https://cycleforchange.org/rides/sd/"},{"@type":"ListItem","position":4,"name":"TWD Friday Night Club Ride","item":"https://cycleforchange.org/rides/spearfish-sd-twd-friday-night-club-ride/"}]},"mainEntity":{"@id":"https://cycleforchange.org/rides/spearfish-sd-twd-friday-night-club-ride/#event"}},{"@type":"Event","@id":"https://cycleforchange.org/rides/spearfish-sd-twd-friday-night-club-ride/#event","name":"TWD Friday Night Club Ride","description":"TWD Friday Night Club Ride is a gravel, mountain bike and road group ride in Spearfish, SD. It rolls every Friday at 5:00 pm from Two Wheeler Dealer: Run…","url":"https://cycleforchange.org/rides/spearfish-sd-twd-friday-night-club-ride/","startDate":"2026-10-16T17:00:00-06:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","image":"https://cycleforchange.org/og-cfc.png","location":{"@type":"Place","name":"Two Wheeler Dealer: Run Bike Spearfish","address":{"@type":"PostalAddress","streetAddress":"305 N Main St, Suite 1, Spearfish, SD 57783","addressLocality":"Spearfish","addressRegion":"SD","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":44.4905,"longitude":-103.859}},"eventSchedule":{"@type":"Schedule","scheduleTimezone":"America/Denver","startTime":"17:00","byDay":["https://schema.org/Friday"],"repeatFrequency":"P1W"},"organizer":{"@type":"Organization","name":"Two Wheeler Dealer","url":"https://www.twowheelerdealer.com/articles/rides-events-pg147.htm"},"sameAs":["https://www.twowheelerdealer.com/articles/rides-events-pg147.htm","https://www.instagram.com/twdspearfish/","https://www.facebook.com/TwoWheelerDealerCycleFitness","https://www.strava.com/clubs/7568"]}]}</script>
 </head>
 <body>
@@ -126,6 +126,7 @@
     </div>
     
 
+
     <div class="gr-ridebox">
       <section class="gr-reviews" id="reviews" aria-labelledby="gr-rev-h">
         <h2 id="gr-rev-h">Rider reviews</h2>
@@ -170,6 +171,47 @@
         <details class="gr-checked-more"><summary>How we know</summary><p class="gr-checked-ev">Two Wheeler Dealer’s Rides &amp; Events page (2026 footer) lists the Friday Night Club Ride, Fridays 5:00 pm April to October from the shop, rotating canyon, gravel and mountain rides (fetched Oct 1, 2026).</p></details>
       </div>
     </aside>
+
+    <section class="gr-route gr-route--none" id="route" aria-labelledby="gr-route-h">
+      <h2 id="gr-route-h">The route</h2>
+      <p>Routes go up in the host’s Strava club. Ask to join there to see them. Once the host sends it to us, it shows here too: a map, a climb chart and a GPX for your bike computer.</p>
+      <p class="gr-route-where"><a class="link" href="https://www.strava.com/clubs/7568" rel="noopener nofollow">Routes on the Strava club</a></p>
+      
+      <details class="gr-rev-write gr-route-send" id="send-route">
+        <summary class="btn btn--ghost gr-rev-open">Run this ride? Send us the route</summary>
+        <form class="gr-rev-form" name="ride-route" method="POST" action="/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-route-send>
+          <input type="hidden" name="form-name" value="ride-route">
+          <input type="hidden" name="ride" value="spearfish-sd-twd-friday-night-club-ride">
+          <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <p class="gr-rev-note">For the people who run TWD Friday Night Club Ride. Drop in the file and a couple of numbers. Robert reads every route before it goes up, credits you on the page and links back.</p>
+          <label class="gr-rev-lab" for="rt-file-1034">Route file <small>GPX, FIT or TCX</small></label>
+          <input class="field" id="rt-file-1034" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
+          <label class="gr-rev-lab" for="rt-link-1034">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
+          <input class="field" id="rt-link-1034" type="url" name="route_link" inputmode="url" autocomplete="off">
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-lo-1034">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-1034" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-hi-1034">To <small>mph</small></label><input class="field" id="rt-hi-1034" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
+          </div>
+          <fieldset class="gr-rev-pick">
+            <legend>If someone comes off the back</legend>
+            <label><input type="radio" name="drop" value="drop"><span>They ride back alone</span></label><label><input type="radio" name="drop" value="regroup"><span>We wait at a regroup</span></label><label><input type="radio" name="drop" value="no-drop"><span>Nobody gets left</span></label>
+          </fieldset>
+          <label class="gr-rev-lab" for="rt-regroup-1034">Where you regroup <small>(optional)</small></label>
+          <input class="field" id="rt-regroup-1034" name="regroup" maxlength="80">
+          <fieldset class="gr-rev-pick">
+            <legend>This route is</legend>
+            <label><input type="radio" name="weekly" value="every" checked><span>The route every time</span></label><label><input type="radio" name="weekly" value="once"><span>Just for the next ride</span></label>
+          </fieldset>
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-name-1034">Your name</label><input class="field" id="rt-name-1034" name="name" maxlength="40" autocomplete="name" required></div>
+            <div><label class="gr-rev-lab" for="rt-role-1034">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-1034" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
+          </div>
+          <label class="gr-rev-lab" for="rt-email-1034">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
+          <input class="field" id="rt-email-1034" type="email" name="email" autocomplete="email">
+          <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send the route</button><p class="gr-rev-ok" role="status" hidden></p></div>
+        </form>
+      </details>
+    </section>
     <dl class="gr-facts">
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Hosted by</dt><dd>Two Wheeler Dealer<small>Bike shop</small></dd></div>
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-mixed"/></svg><dt>Kind of ride</dt><dd>Mixed · Gravel · Mountain bike · Road</dd></div>
@@ -347,7 +389,7 @@
 <script src="/chrome.js" defer></script>
 <script src="/rides/save.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script src="/rides/ride.js?v=38" defer></script>
+<script src="/rides/ride.js?v=39" defer></script>
 <script src="/rides/map.js" defer></script>
 </body>
 </html>

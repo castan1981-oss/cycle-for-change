@@ -26,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/rides/rides.css?v=43">
+  <link rel="stylesheet" href="/rides/rides.css?v=44">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cycleforchange.org/rides/bowling-green-ky-bikewalkbg-weekly-womens-ride/","url":"https://cycleforchange.org/rides/bowling-green-ky-bikewalkbg-weekly-womens-ride/","name":"BikeWalkBG Weekly Community Women's Bike Ride","description":"BikeWalkBG Weekly Community Women's Bike Ride is a social group ride in Bowling Green, KY. It rolls every Monday at 5:30 pm from Warren County Bike Safety…","dateModified":"2026-10-05","author":{"@type":"Person","name":"Robert Castan","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":"https://cycleforchange.org/favicon-512.png"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cycle for Change","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Group rides","item":"https://cycleforchange.org/rides/"},{"@type":"ListItem","position":3,"name":"Kentucky","item":"https://cycleforchange.org/rides/ky/"},{"@type":"ListItem","position":4,"name":"BikeWalkBG Weekly Community Women's Bike Ride","item":"https://cycleforchange.org/rides/bowling-green-ky-bikewalkbg-weekly-womens-ride/"}]},"mainEntity":{"@id":"https://cycleforchange.org/rides/bowling-green-ky-bikewalkbg-weekly-womens-ride/#event"}},{"@type":"Event","@id":"https://cycleforchange.org/rides/bowling-green-ky-bikewalkbg-weekly-womens-ride/#event","name":"BikeWalkBG Weekly Community Women's Bike Ride","description":"BikeWalkBG Weekly Community Women's Bike Ride is a social group ride in Bowling Green, KY. It rolls every Monday at 5:30 pm from Warren County Bike Safety…","url":"https://cycleforchange.org/rides/bowling-green-ky-bikewalkbg-weekly-womens-ride/","startDate":"2026-10-12T17:30:00-05:00","endDate":"2026-10-12T19:30:00-05:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","isAccessibleForFree":true,"image":"https://cycleforchange.org/og-cfc.png","location":{"@type":"Place","name":"Warren County Bike Safety Park at the Fringe","address":{"@type":"PostalAddress","streetAddress":"717 College St, Bowling Green, KY 42101","addressLocality":"Bowling Green","addressRegion":"KY","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":36.9954,"longitude":-86.4394}},"eventSchedule":{"@type":"Schedule","scheduleTimezone":"America/Chicago","startTime":"17:30","byDay":["https://schema.org/Monday"],"repeatFrequency":"P1W"},"organizer":{"@type":"Organization","name":"BikeWalkBG / City-County Planning Commission of Warren County","url":"https://www.warrenpc.org/series/bikewalkbg-free-weekly-community-womens-bike-rides/"},"sameAs":["https://www.warrenpc.org/series/bikewalkbg-free-weekly-community-womens-bike-rides/","https://www.facebook.com/www.bggreenways.org/"]}]}</script>
 </head>
 <body>
@@ -127,6 +127,7 @@
     </div>
     
 
+
     <div class="gr-ridebox">
       <section class="gr-reviews" id="reviews" aria-labelledby="gr-rev-h">
         <h2 id="gr-rev-h">Rider reviews</h2>
@@ -171,6 +172,47 @@
         <details class="gr-checked-more"><summary>How we know</summary><p class="gr-checked-ev">The Warren County planning commission’s series page lists the next BikeWalkBG weekly community women’s ride for Mon Oct 5, 2026, 5:30-7:30 pm (read Oct 1, 2026).</p></details>
       </div>
     </aside>
+
+    <section class="gr-route gr-route--none" id="route" aria-labelledby="gr-route-h">
+      <h2 id="gr-route-h">The route</h2>
+      <p>Nobody has sent us this ride’s route yet. When the host does, it shows here: a map, a climb chart and a GPX for your bike computer.</p>
+      
+      
+      <details class="gr-rev-write gr-route-send" id="send-route">
+        <summary class="btn btn--ghost gr-rev-open">Run this ride? Send us the route</summary>
+        <form class="gr-rev-form" name="ride-route" method="POST" action="/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-route-send>
+          <input type="hidden" name="form-name" value="ride-route">
+          <input type="hidden" name="ride" value="bowling-green-ky-bikewalkbg-weekly-womens-ride">
+          <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <p class="gr-rev-note">For the people who run BikeWalkBG Weekly Community Women’s Bike Ride. Drop in the file and a couple of numbers. Robert reads every route before it goes up, credits you on the page and links back.</p>
+          <label class="gr-rev-lab" for="rt-file-571">Route file <small>GPX, FIT or TCX</small></label>
+          <input class="field" id="rt-file-571" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
+          <label class="gr-rev-lab" for="rt-link-571">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
+          <input class="field" id="rt-link-571" type="url" name="route_link" inputmode="url" autocomplete="off">
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-lo-571">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-571" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-hi-571">To <small>mph</small></label><input class="field" id="rt-hi-571" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
+          </div>
+          <fieldset class="gr-rev-pick">
+            <legend>If someone comes off the back</legend>
+            <label><input type="radio" name="drop" value="drop"><span>They ride back alone</span></label><label><input type="radio" name="drop" value="regroup"><span>We wait at a regroup</span></label><label><input type="radio" name="drop" value="no-drop"><span>Nobody gets left</span></label>
+          </fieldset>
+          <label class="gr-rev-lab" for="rt-regroup-571">Where you regroup <small>(optional)</small></label>
+          <input class="field" id="rt-regroup-571" name="regroup" maxlength="80">
+          <fieldset class="gr-rev-pick">
+            <legend>This route is</legend>
+            <label><input type="radio" name="weekly" value="every" checked><span>The route every time</span></label><label><input type="radio" name="weekly" value="once"><span>Just for the next ride</span></label>
+          </fieldset>
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-name-571">Your name</label><input class="field" id="rt-name-571" name="name" maxlength="40" autocomplete="name" required></div>
+            <div><label class="gr-rev-lab" for="rt-role-571">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-571" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
+          </div>
+          <label class="gr-rev-lab" for="rt-email-571">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
+          <input class="field" id="rt-email-571" type="email" name="email" autocomplete="email">
+          <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send the route</button><p class="gr-rev-ok" role="status" hidden></p></div>
+        </form>
+      </details>
+    </section>
     <dl class="gr-facts">
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Hosted by</dt><dd>BikeWalkBG / City-County Planning Commission of Warren County<small>Nonprofit</small></dd></div>
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-cost"/></svg><dt>Cost</dt><dd>free</dd></div>
@@ -348,7 +390,7 @@
 <script src="/chrome.js" defer></script>
 <script src="/rides/save.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script src="/rides/ride.js?v=38" defer></script>
+<script src="/rides/ride.js?v=39" defer></script>
 <script src="/rides/map.js" defer></script>
 </body>
 </html>

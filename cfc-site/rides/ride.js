@@ -177,4 +177,40 @@
         });
     });
   }
+
+  /* Oct 9, 2026 — "Send us the route": for the people who run the ride. A file upload, so it posts as
+     multipart (Netlify Forms takes files that way). tools/routes-pull.js → an issue labelled "route";
+     nothing reaches the page until Robert has read it and built it (tools/route-build.py). */
+  var rsend = document.getElementById("send-route");
+  var rform = rsend && rsend.querySelector("form[data-route-send]");
+  function openRoute() {
+    if (!rsend || location.hash !== "#send-route") return;
+    rsend.open = true;
+    setTimeout(function () { rsend.scrollIntoView({ block: "start" }); }, 60);
+  }
+  openRoute();
+  window.addEventListener("hashchange", openRoute);
+  if (rform) {
+    var rbtn = rform.querySelector("button[type=submit]"), rok = rform.querySelector(".gr-rev-ok");
+    var say = function (t, bad) { if (!rok) return; rok.textContent = t; if (bad) rok.setAttribute("data-bad", ""); else rok.removeAttribute("data-bad"); rok.hidden = false; };
+    rform.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (rform.checkValidity && !rform.checkValidity()) { if (rform.reportValidity) rform.reportValidity(); return; }
+      var file = rform.querySelector("[name=route_file]"), link = rform.querySelector("[name=route_link]");
+      var hasFile = file && file.files && file.files.length, hasLink = link && link.value.trim();
+      if (!hasFile && !hasLink) { say("Add the route file or a link to it.", true); return; }
+      if (hasFile && file.files[0].size > 7.5 * 1024 * 1024) { say("That file is over 7.5 MB. Send a link to the route instead.", true); return; }
+      rbtn.disabled = true;
+      if (rok) rok.hidden = true;
+      fetch("/", { method: "POST", body: new FormData(rform) })
+        .then(function (res) {
+          if (!res.ok) throw new Error("bad status");
+          rform.reset();
+          say("Got it, thank you. Robert reads every route before it goes up.");
+          rbtn.disabled = false;
+          if (window.cfcTrack) window.cfcTrack("route_sent", { ride: (rform.querySelector("[name=ride]") || {}).value || "" });
+        })
+        .catch(function () { say("That didn’t go through. Try again in a minute.", true); rbtn.disabled = false; });
+    });
+  }
 })();

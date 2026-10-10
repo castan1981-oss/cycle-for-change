@@ -26,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/rides/rides.css?v=43">
+  <link rel="stylesheet" href="/rides/rides.css?v=44">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cycleforchange.org/rides/grand-forks-nd-sbs-wednesday-mountain-bike-ride/","url":"https://cycleforchange.org/rides/grand-forks-nd-sbs-wednesday-mountain-bike-ride/","name":"Ski & Bike Shop Wednesday Mountain Bike Ride — Grand Forks","description":"Ski & Bike Shop Wednesday Mountain Bike Ride is a mountain bike group ride in Grand Forks, ND. It rolls every Wednesday at 6:00 pm from Lincoln Park.","dateModified":"2026-10-01","author":{"@type":"Person","name":"Robert Castan","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":"https://cycleforchange.org/favicon-512.png"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cycle for Change","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Group rides","item":"https://cycleforchange.org/rides/"},{"@type":"ListItem","position":3,"name":"North Dakota","item":"https://cycleforchange.org/rides/nd/"},{"@type":"ListItem","position":4,"name":"Grand Forks","item":"https://cycleforchange.org/rides/nd/grand-forks/"},{"@type":"ListItem","position":5,"name":"Ski & Bike Shop Wednesday Mountain Bike Ride","item":"https://cycleforchange.org/rides/grand-forks-nd-sbs-wednesday-mountain-bike-ride/"}]},"mainEntity":{"@id":"https://cycleforchange.org/rides/grand-forks-nd-sbs-wednesday-mountain-bike-ride/#event"}},{"@type":"Event","@id":"https://cycleforchange.org/rides/grand-forks-nd-sbs-wednesday-mountain-bike-ride/#event","name":"Ski & Bike Shop Wednesday Mountain Bike Ride","description":"Ski & Bike Shop Wednesday Mountain Bike Ride is a mountain bike group ride in Grand Forks, ND. It rolls every Wednesday at 6:00 pm from Lincoln Park.","url":"https://cycleforchange.org/rides/grand-forks-nd-sbs-wednesday-mountain-bike-ride/","startDate":"2026-10-14T18:00:00-05:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","isAccessibleForFree":true,"image":"https://cycleforchange.org/og-cfc.png","location":{"@type":"Place","name":"Lincoln Park","address":{"@type":"PostalAddress","addressLocality":"Grand Forks","addressRegion":"ND","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":47.91039,"longitude":-97.02031}},"eventSchedule":{"@type":"Schedule","scheduleTimezone":"America/Chicago","startTime":"18:00","byDay":["https://schema.org/Wednesday"],"repeatFrequency":"P1W"},"organizer":{"@type":"Organization","name":"Ski & Bike Shop","url":"https://www.skiandbikeshop.net/articles/local-group-rides-pg195.htm"},"sameAs":["https://www.skiandbikeshop.net/articles/local-group-rides-pg195.htm","https://www.instagram.com/skiandbikeshop_gf/","https://www.facebook.com/skiandbikeshop"]}]}</script>
 </head>
 <body>
@@ -126,6 +126,7 @@
     </div>
     
 
+
     <div class="gr-ridebox">
       <section class="gr-reviews" id="reviews" aria-labelledby="gr-rev-h">
         <h2 id="gr-rev-h">Rider reviews</h2>
@@ -170,6 +171,47 @@
         <details class="gr-checked-more"><summary>How we know</summary><p class="gr-checked-ev">Ski &amp; Bike Shop’s Local Group Rides page (2026 footer) lists the mountain bike group ride ‘Wednesdays 6:00pm’ from Lincoln Park, with no end-of-season notice (fetched Oct 1, 2026).</p></details>
       </div>
     </aside>
+
+    <section class="gr-route gr-route--none" id="route" aria-labelledby="gr-route-h">
+      <h2 id="gr-route-h">The route</h2>
+      <p>Nobody has sent us this ride’s route yet. When the host does, it shows here: a map, a climb chart and a GPX for your bike computer.</p>
+      
+      
+      <details class="gr-rev-write gr-route-send" id="send-route">
+        <summary class="btn btn--ghost gr-rev-open">Run this ride? Send us the route</summary>
+        <form class="gr-rev-form" name="ride-route" method="POST" action="/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-route-send>
+          <input type="hidden" name="form-name" value="ride-route">
+          <input type="hidden" name="ride" value="grand-forks-nd-sbs-wednesday-mountain-bike-ride">
+          <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <p class="gr-rev-note">For the people who run Ski &amp; Bike Shop Wednesday Mountain Bike Ride. Drop in the file and a couple of numbers. Robert reads every route before it goes up, credits you on the page and links back.</p>
+          <label class="gr-rev-lab" for="rt-file-792">Route file <small>GPX, FIT or TCX</small></label>
+          <input class="field" id="rt-file-792" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
+          <label class="gr-rev-lab" for="rt-link-792">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
+          <input class="field" id="rt-link-792" type="url" name="route_link" inputmode="url" autocomplete="off">
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-lo-792">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-792" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-hi-792">To <small>mph</small></label><input class="field" id="rt-hi-792" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
+          </div>
+          <fieldset class="gr-rev-pick">
+            <legend>If someone comes off the back</legend>
+            <label><input type="radio" name="drop" value="drop"><span>They ride back alone</span></label><label><input type="radio" name="drop" value="regroup"><span>We wait at a regroup</span></label><label><input type="radio" name="drop" value="no-drop"><span>Nobody gets left</span></label>
+          </fieldset>
+          <label class="gr-rev-lab" for="rt-regroup-792">Where you regroup <small>(optional)</small></label>
+          <input class="field" id="rt-regroup-792" name="regroup" maxlength="80">
+          <fieldset class="gr-rev-pick">
+            <legend>This route is</legend>
+            <label><input type="radio" name="weekly" value="every" checked><span>The route every time</span></label><label><input type="radio" name="weekly" value="once"><span>Just for the next ride</span></label>
+          </fieldset>
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-name-792">Your name</label><input class="field" id="rt-name-792" name="name" maxlength="40" autocomplete="name" required></div>
+            <div><label class="gr-rev-lab" for="rt-role-792">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-792" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
+          </div>
+          <label class="gr-rev-lab" for="rt-email-792">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
+          <input class="field" id="rt-email-792" type="email" name="email" autocomplete="email">
+          <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send the route</button><p class="gr-rev-ok" role="status" hidden></p></div>
+        </form>
+      </details>
+    </section>
     <dl class="gr-facts">
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Hosted by</dt><dd>Ski &amp; Bike Shop<small>Bike shop</small></dd></div>
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-cost"/></svg><dt>Cost</dt><dd>free</dd></div>
@@ -351,7 +393,7 @@
 <script src="/chrome.js" defer></script>
 <script src="/rides/save.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script src="/rides/ride.js?v=38" defer></script>
+<script src="/rides/ride.js?v=39" defer></script>
 <script src="/rides/map.js" defer></script>
 </body>
 </html>

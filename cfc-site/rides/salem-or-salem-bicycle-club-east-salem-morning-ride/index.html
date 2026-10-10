@@ -26,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/rides/rides.css?v=43">
+  <link rel="stylesheet" href="/rides/rides.css?v=44">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cycleforchange.org/rides/salem-or-salem-bicycle-club-east-salem-morning-ride/","url":"https://cycleforchange.org/rides/salem-or-salem-bicycle-club-east-salem-morning-ride/","name":"East Salem Morning Ride — Salem, OR, Wednesdays 10:00 am","description":"East Salem Morning Ride is a road group ride in Salem, OR. It rolls every Wednesday at 10:00 am from McKay Park, Hollywood Dr between Silverton Rd and…","dateModified":"2026-10-01","author":{"@type":"Person","name":"Robert Castan","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":"https://cycleforchange.org/favicon-512.png"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cycle for Change","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Group rides","item":"https://cycleforchange.org/rides/"},{"@type":"ListItem","position":3,"name":"Oregon","item":"https://cycleforchange.org/rides/or/"},{"@type":"ListItem","position":4,"name":"Keizer","item":"https://cycleforchange.org/rides/or/keizer/"},{"@type":"ListItem","position":5,"name":"East Salem Morning Ride","item":"https://cycleforchange.org/rides/salem-or-salem-bicycle-club-east-salem-morning-ride/"}]},"mainEntity":{"@id":"https://cycleforchange.org/rides/salem-or-salem-bicycle-club-east-salem-morning-ride/#event"}},{"@type":"Event","@id":"https://cycleforchange.org/rides/salem-or-salem-bicycle-club-east-salem-morning-ride/#event","name":"East Salem Morning Ride","description":"East Salem Morning Ride is a road group ride in Salem, OR. It rolls every Wednesday at 10:00 am from McKay Park, Hollywood Dr between Silverton Rd and…","url":"https://cycleforchange.org/rides/salem-or-salem-bicycle-club-east-salem-morning-ride/","startDate":"2026-10-14T10:00:00-07:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","isAccessibleForFree":true,"image":"https://cycleforchange.org/og-cfc.png","location":{"@type":"Place","name":"McKay Park, Hollywood Dr between Silverton Rd and Sunnyview Rd","address":{"@type":"PostalAddress","addressLocality":"Salem","addressRegion":"OR","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":44.93916,"longitude":-123.03312}},"eventSchedule":{"@type":"Schedule","scheduleTimezone":"America/Los_Angeles","startTime":"10:00","byDay":["https://schema.org/Wednesday"],"repeatFrequency":"P1W"},"organizer":{"@type":"Organization","name":"Salem Bicycle Club","url":"https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926"},"sameAs":["https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926"]}]}</script>
 </head>
 <body>
@@ -126,6 +126,7 @@
     </div>
     
 
+
     <div class="gr-ridebox">
       <section class="gr-reviews" id="reviews" aria-labelledby="gr-rev-h">
         <h2 id="gr-rev-h">Rider reviews</h2>
@@ -170,6 +171,47 @@
         <details class="gr-checked-more"><summary>How we know</summary><p class="gr-checked-ev">Salem Bicycle Club’s calendar lists the East Salem Morning Ride for Wed Sept 30 and Oct 7, 14, 21 and 28, 2026 at 10:00 am from McKay Park (fetched Oct 1, 2026).</p></details>
       </div>
     </aside>
+
+    <section class="gr-route gr-route--none" id="route" aria-labelledby="gr-route-h">
+      <h2 id="gr-route-h">The route</h2>
+      <p>Nobody has sent us this ride’s route yet. When the host does, it shows here: a map, a climb chart and a GPX for your bike computer.</p>
+      
+      
+      <details class="gr-rev-write gr-route-send" id="send-route">
+        <summary class="btn btn--ghost gr-rev-open">Run this ride? Send us the route</summary>
+        <form class="gr-rev-form" name="ride-route" method="POST" action="/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-route-send>
+          <input type="hidden" name="form-name" value="ride-route">
+          <input type="hidden" name="ride" value="salem-or-salem-bicycle-club-east-salem-morning-ride">
+          <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <p class="gr-rev-note">For the people who run East Salem Morning Ride. Drop in the file and a couple of numbers. Robert reads every route before it goes up, credits you on the page and links back.</p>
+          <label class="gr-rev-lab" for="rt-file-961">Route file <small>GPX, FIT or TCX</small></label>
+          <input class="field" id="rt-file-961" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
+          <label class="gr-rev-lab" for="rt-link-961">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
+          <input class="field" id="rt-link-961" type="url" name="route_link" inputmode="url" autocomplete="off">
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-lo-961">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-961" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-hi-961">To <small>mph</small></label><input class="field" id="rt-hi-961" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
+          </div>
+          <fieldset class="gr-rev-pick">
+            <legend>If someone comes off the back</legend>
+            <label><input type="radio" name="drop" value="drop"><span>They ride back alone</span></label><label><input type="radio" name="drop" value="regroup"><span>We wait at a regroup</span></label><label><input type="radio" name="drop" value="no-drop"><span>Nobody gets left</span></label>
+          </fieldset>
+          <label class="gr-rev-lab" for="rt-regroup-961">Where you regroup <small>(optional)</small></label>
+          <input class="field" id="rt-regroup-961" name="regroup" maxlength="80">
+          <fieldset class="gr-rev-pick">
+            <legend>This route is</legend>
+            <label><input type="radio" name="weekly" value="every" checked><span>The route every time</span></label><label><input type="radio" name="weekly" value="once"><span>Just for the next ride</span></label>
+          </fieldset>
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-name-961">Your name</label><input class="field" id="rt-name-961" name="name" maxlength="40" autocomplete="name" required></div>
+            <div><label class="gr-rev-lab" for="rt-role-961">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-961" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
+          </div>
+          <label class="gr-rev-lab" for="rt-email-961">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
+          <input class="field" id="rt-email-961" type="email" name="email" autocomplete="email">
+          <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send the route</button><p class="gr-rev-ok" role="status" hidden></p></div>
+        </form>
+      </details>
+    </section>
     <dl class="gr-facts">
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Hosted by</dt><dd>Salem Bicycle Club<small>Club</small></dd></div>
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-cost"/></svg><dt>Cost</dt><dd>free</dd></div>
@@ -350,7 +392,7 @@
 <script src="/chrome.js" defer></script>
 <script src="/rides/save.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script src="/rides/ride.js?v=38" defer></script>
+<script src="/rides/ride.js?v=39" defer></script>
 <script src="/rides/map.js" defer></script>
 </body>
 </html>

@@ -26,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/rides/rides.css?v=43">
+  <link rel="stylesheet" href="/rides/rides.css?v=44">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cycleforchange.org/rides/washington-dc-dc-queer-bike-rides/","url":"https://cycleforchange.org/rides/washington-dc-dc-queer-bike-rides/","name":"DC Queer Bike Rides — Washington, DC, 2nd Saturdays 12:00 pm","description":"DC Queer Bike Rides is a social group ride in Washington, DC. It rolls second Saturday of the month at 12:00 pm. About 5–8 miles, social, 5–8 mph. No-drop.","dateModified":"2026-10-01","author":{"@type":"Person","name":"Robert Castan","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":"https://cycleforchange.org/favicon-512.png"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cycle for Change","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Group rides","item":"https://cycleforchange.org/rides/"},{"@type":"ListItem","position":3,"name":"Washington, DC","item":"https://cycleforchange.org/rides/dc/"},{"@type":"ListItem","position":4,"name":"Washington","item":"https://cycleforchange.org/rides/dc/washington/"},{"@type":"ListItem","position":5,"name":"DC Queer Bike Rides","item":"https://cycleforchange.org/rides/washington-dc-dc-queer-bike-rides/"}]},"mainEntity":{"@id":"https://cycleforchange.org/rides/washington-dc-dc-queer-bike-rides/#event"}},{"@type":"Event","@id":"https://cycleforchange.org/rides/washington-dc-dc-queer-bike-rides/#event","name":"DC Queer Bike Rides","description":"DC Queer Bike Rides is a social group ride in Washington, DC. It rolls second Saturday of the month at 12:00 pm. About 5–8 miles, social, 5–8 mph. No-drop.","url":"https://cycleforchange.org/rides/washington-dc-dc-queer-bike-rides/","startDate":"2026-10-10T12:00:00-04:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","isAccessibleForFree":true,"image":"https://cycleforchange.org/og-cfc.png","location":{"@type":"Place","name":"Washington, DC","address":{"@type":"PostalAddress","addressLocality":"Washington","addressRegion":"DC","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":38.9072,"longitude":-77.0369}},"eventSchedule":{"@type":"Schedule","scheduleTimezone":"America/New_York","startTime":"12:00","byDay":["https://schema.org/Saturday"],"byMonthWeek":[2],"repeatFrequency":"P2W"},"organizer":{"@type":"Organization","name":"DC Queer Bike Rides (QBR)","url":"https://dcqueerbikes.neocities.org/"},"sameAs":["https://dcqueerbikes.neocities.org/"]}]}</script>
 </head>
 <body>
@@ -127,6 +127,7 @@
     </div>
     
 
+
     <div class="gr-ridebox">
       <section class="gr-reviews" id="reviews" aria-labelledby="gr-rev-h">
         <h2 id="gr-rev-h">Rider reviews</h2>
@@ -171,6 +172,47 @@
         <details class="gr-checked-more"><summary>How we know</summary><p class="gr-checked-ev">The group’s 2026 schedule page lists Sat Oct 10 at 12 PM (Smithsonian Metro to Hains Point) and Thu Oct 22 at 6:30 PM (Fort Totten Metro to Union Market); an announcement on the page is dated July 8, 2026. It also says the rides are sober, queer-only and 5-8 miles.</p></details>
       </div>
     </aside>
+
+    <section class="gr-route gr-route--none" id="route" aria-labelledby="gr-route-h">
+      <h2 id="gr-route-h">The route</h2>
+      <p>Nobody has sent us this ride’s route yet. When the host does, it shows here: a map, a climb chart and a GPX for your bike computer.</p>
+      
+      
+      <details class="gr-rev-write gr-route-send" id="send-route">
+        <summary class="btn btn--ghost gr-rev-open">Run this ride? Send us the route</summary>
+        <form class="gr-rev-form" name="ride-route" method="POST" action="/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-route-send>
+          <input type="hidden" name="form-name" value="ride-route">
+          <input type="hidden" name="ride" value="washington-dc-dc-queer-bike-rides">
+          <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <p class="gr-rev-note">For the people who run DC Queer Bike Rides. Drop in the file and a couple of numbers. Robert reads every route before it goes up, credits you on the page and links back.</p>
+          <label class="gr-rev-lab" for="rt-file-361">Route file <small>GPX, FIT or TCX</small></label>
+          <input class="field" id="rt-file-361" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
+          <label class="gr-rev-lab" for="rt-link-361">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
+          <input class="field" id="rt-link-361" type="url" name="route_link" inputmode="url" autocomplete="off">
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-lo-361">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-361" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-hi-361">To <small>mph</small></label><input class="field" id="rt-hi-361" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
+          </div>
+          <fieldset class="gr-rev-pick">
+            <legend>If someone comes off the back</legend>
+            <label><input type="radio" name="drop" value="drop"><span>They ride back alone</span></label><label><input type="radio" name="drop" value="regroup"><span>We wait at a regroup</span></label><label><input type="radio" name="drop" value="no-drop"><span>Nobody gets left</span></label>
+          </fieldset>
+          <label class="gr-rev-lab" for="rt-regroup-361">Where you regroup <small>(optional)</small></label>
+          <input class="field" id="rt-regroup-361" name="regroup" maxlength="80">
+          <fieldset class="gr-rev-pick">
+            <legend>This route is</legend>
+            <label><input type="radio" name="weekly" value="every" checked><span>The route every time</span></label><label><input type="radio" name="weekly" value="once"><span>Just for the next ride</span></label>
+          </fieldset>
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-name-361">Your name</label><input class="field" id="rt-name-361" name="name" maxlength="40" autocomplete="name" required></div>
+            <div><label class="gr-rev-lab" for="rt-role-361">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-361" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
+          </div>
+          <label class="gr-rev-lab" for="rt-email-361">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
+          <input class="field" id="rt-email-361" type="email" name="email" autocomplete="email">
+          <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send the route</button><p class="gr-rev-ok" role="status" hidden></p></div>
+        </form>
+      </details>
+    </section>
     <dl class="gr-facts">
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Hosted by</dt><dd>DC Queer Bike Rides (QBR)<small>Collective</small></dd></div>
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-cost"/></svg><dt>Cost</dt><dd>free</dd></div>
@@ -348,7 +390,7 @@
 <script src="/chrome.js" defer></script>
 <script src="/rides/save.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script src="/rides/ride.js?v=38" defer></script>
+<script src="/rides/ride.js?v=39" defer></script>
 <script src="/rides/map.js" defer></script>
 </body>
 </html>

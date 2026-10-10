@@ -26,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/rides/rides.css?v=43">
+  <link rel="stylesheet" href="/rides/rides.css?v=44">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cycleforchange.org/rides/portland-or-gay-gravel-group/","url":"https://cycleforchange.org/rides/portland-or-gay-gravel-group/","name":"Gay Gravel Group — Portland, OR, Wednesdays 5:30 pm","description":"Gay Gravel Group is a gravel group ride in Portland, OR. It rolls every Wednesday at 5:30 pm from Cycle Town Coffee Roasters. Pace: social, ~1,000 ft of…","dateModified":"2026-10-01","author":{"@type":"Person","name":"Robert Castan","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":"https://cycleforchange.org/favicon-512.png"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cycle for Change","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Group rides","item":"https://cycleforchange.org/rides/"},{"@type":"ListItem","position":3,"name":"Oregon","item":"https://cycleforchange.org/rides/or/"},{"@type":"ListItem","position":4,"name":"Portland","item":"https://cycleforchange.org/rides/or/portland/"},{"@type":"ListItem","position":5,"name":"Gay Gravel Group","item":"https://cycleforchange.org/rides/portland-or-gay-gravel-group/"}]},"mainEntity":{"@id":"https://cycleforchange.org/rides/portland-or-gay-gravel-group/#event"}},{"@type":"Event","@id":"https://cycleforchange.org/rides/portland-or-gay-gravel-group/#event","name":"Gay Gravel Group","description":"Gay Gravel Group is a gravel group ride in Portland, OR. It rolls every Wednesday at 5:30 pm from Cycle Town Coffee Roasters. Pace: social, ~1,000 ft of…","url":"https://cycleforchange.org/rides/portland-or-gay-gravel-group/","startDate":"2026-10-14T17:30:00-07:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","isAccessibleForFree":true,"image":"https://cycleforchange.org/og-cfc.png","location":{"@type":"Place","name":"Cycle Town Coffee Roasters","address":{"@type":"PostalAddress","streetAddress":"NW 16th Ave and NW Thurman St, Portland, OR 97209","addressLocality":"Portland","addressRegion":"OR","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":45.5355,"longitude":-122.6875}},"eventSchedule":{"@type":"Schedule","scheduleTimezone":"America/Los_Angeles","startTime":"17:30","byDay":["https://schema.org/Wednesday"],"repeatFrequency":"P1W"},"organizer":{"@type":"Organization","name":"Gay Gravel Group PDX","url":"https://www.instagram.com/gaygravelgrouppdx/"},"sameAs":["https://www.instagram.com/gaygravelgrouppdx/"]}]}</script>
 </head>
 <body>
@@ -127,6 +127,7 @@
     </div>
     
 
+
     <div class="gr-ridebox">
       <section class="gr-reviews" id="reviews" aria-labelledby="gr-rev-h">
         <h2 id="gr-rev-h">Rider reviews</h2>
@@ -171,6 +172,47 @@
         <details class="gr-checked-more"><summary>How we know</summary><p class="gr-checked-ev">Shift’s calendar feed (fetched Oct 1, 2026) lists the Gay Gravel Group weekly Wednesday ride for Oct 7, 14, 21 and 28 and Nov 4 on: meet 5 pm, ride at 5:30 pm from Cycle Town Coffee Roasters (NW 16th and Thurman), about 1,000 feet of climbing, ‘every Wednesday, regardless of weather’.</p></details>
       </div>
     </aside>
+
+    <section class="gr-route gr-route--none" id="route" aria-labelledby="gr-route-h">
+      <h2 id="gr-route-h">The route</h2>
+      <p>Nobody has sent us this ride’s route yet. When the host does, it shows here: a map, a climb chart and a GPX for your bike computer.</p>
+      
+      
+      <details class="gr-rev-write gr-route-send" id="send-route">
+        <summary class="btn btn--ghost gr-rev-open">Run this ride? Send us the route</summary>
+        <form class="gr-rev-form" name="ride-route" method="POST" action="/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-route-send>
+          <input type="hidden" name="form-name" value="ride-route">
+          <input type="hidden" name="ride" value="portland-or-gay-gravel-group">
+          <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <p class="gr-rev-note">For the people who run Gay Gravel Group. Drop in the file and a couple of numbers. Robert reads every route before it goes up, credits you on the page and links back.</p>
+          <label class="gr-rev-lab" for="rt-file-951">Route file <small>GPX, FIT or TCX</small></label>
+          <input class="field" id="rt-file-951" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
+          <label class="gr-rev-lab" for="rt-link-951">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
+          <input class="field" id="rt-link-951" type="url" name="route_link" inputmode="url" autocomplete="off">
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-lo-951">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-951" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-hi-951">To <small>mph</small></label><input class="field" id="rt-hi-951" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
+          </div>
+          <fieldset class="gr-rev-pick">
+            <legend>If someone comes off the back</legend>
+            <label><input type="radio" name="drop" value="drop"><span>They ride back alone</span></label><label><input type="radio" name="drop" value="regroup"><span>We wait at a regroup</span></label><label><input type="radio" name="drop" value="no-drop"><span>Nobody gets left</span></label>
+          </fieldset>
+          <label class="gr-rev-lab" for="rt-regroup-951">Where you regroup <small>(optional)</small></label>
+          <input class="field" id="rt-regroup-951" name="regroup" maxlength="80">
+          <fieldset class="gr-rev-pick">
+            <legend>This route is</legend>
+            <label><input type="radio" name="weekly" value="every" checked><span>The route every time</span></label><label><input type="radio" name="weekly" value="once"><span>Just for the next ride</span></label>
+          </fieldset>
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-name-951">Your name</label><input class="field" id="rt-name-951" name="name" maxlength="40" autocomplete="name" required></div>
+            <div><label class="gr-rev-lab" for="rt-role-951">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-951" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
+          </div>
+          <label class="gr-rev-lab" for="rt-email-951">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
+          <input class="field" id="rt-email-951" type="email" name="email" autocomplete="email">
+          <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send the route</button><p class="gr-rev-ok" role="status" hidden></p></div>
+        </form>
+      </details>
+    </section>
     <dl class="gr-facts">
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Hosted by</dt><dd>Gay Gravel Group PDX<small>Community-run</small></dd></div>
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-cost"/></svg><dt>Cost</dt><dd>free</dd></div>
@@ -348,7 +390,7 @@
 <script src="/chrome.js" defer></script>
 <script src="/rides/save.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script src="/rides/ride.js?v=38" defer></script>
+<script src="/rides/ride.js?v=39" defer></script>
 <script src="/rides/map.js" defer></script>
 </body>
 </html>

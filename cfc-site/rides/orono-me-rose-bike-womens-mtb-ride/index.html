@@ -26,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/rides/rides.css?v=43">
+  <link rel="stylesheet" href="/rides/rides.css?v=44">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cycleforchange.org/rides/orono-me-rose-bike-womens-mtb-ride/","url":"https://cycleforchange.org/rides/orono-me-rose-bike-womens-mtb-ride/","name":"Rose Bike Women's MTB Ride — Orono, ME, Wednesdays 5:00 pm","description":"Rose Bike Women's MTB Ride is a mountain bike group ride in Orono, ME. It rolls every Wednesday at 5:00 pm from Rose Bike (sometimes meets at other local…","dateModified":"2026-10-01","author":{"@type":"Person","name":"Robert Castan","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":"https://cycleforchange.org/favicon-512.png"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cycle for Change","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Group rides","item":"https://cycleforchange.org/rides/"},{"@type":"ListItem","position":3,"name":"Maine","item":"https://cycleforchange.org/rides/me/"},{"@type":"ListItem","position":4,"name":"Orono","item":"https://cycleforchange.org/rides/me/orono/"},{"@type":"ListItem","position":5,"name":"Rose Bike Women's MTB Ride","item":"https://cycleforchange.org/rides/orono-me-rose-bike-womens-mtb-ride/"}]},"mainEntity":{"@id":"https://cycleforchange.org/rides/orono-me-rose-bike-womens-mtb-ride/#event"}},{"@type":"Event","@id":"https://cycleforchange.org/rides/orono-me-rose-bike-womens-mtb-ride/#event","name":"Rose Bike Women's MTB Ride","description":"Rose Bike Women's MTB Ride is a mountain bike group ride in Orono, ME. It rolls every Wednesday at 5:00 pm from Rose Bike (sometimes meets at other local…","url":"https://cycleforchange.org/rides/orono-me-rose-bike-womens-mtb-ride/","startDate":"2026-10-14T17:00:00-04:00","endDate":"2026-10-14T18:00:00-04:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","image":"https://cycleforchange.org/og-cfc.png","location":{"@type":"Place","name":"Rose Bike (sometimes meets at other local trails)","address":{"@type":"PostalAddress","streetAddress":"9 Pine St, Orono, ME 04473","addressLocality":"Orono","addressRegion":"ME","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":44.8824,"longitude":-68.672}},"eventSchedule":{"@type":"Schedule","scheduleTimezone":"America/New_York","startTime":"17:00","byDay":["https://schema.org/Wednesday"],"repeatFrequency":"P1W"},"organizer":{"@type":"Organization","name":"Rose Bike","url":"https://www.rosebike.com/events/"},"sameAs":["https://www.rosebike.com/events/","https://www.instagram.com/rosebikeshop/","http://www.facebook.com/RoseBike"]}]}</script>
 </head>
 <body>
@@ -127,6 +127,7 @@
     </div>
     
 
+
     <div class="gr-ridebox">
       <section class="gr-reviews" id="reviews" aria-labelledby="gr-rev-h">
         <h2 id="gr-rev-h">Rider reviews</h2>
@@ -171,6 +172,47 @@
         <details class="gr-checked-more"><summary>How we know</summary><p class="gr-checked-ev">Rose Bike’s events page, headed ‘Group Rides 2026’, lists Wednesdays 5 pm Women’s MTB Ride; its public Google Calendar carries the weekly series from May 13, 2026 with no end date, and last year’s series was marked ‘Finished for the Year’ from Oct 22, 2025 (fetched Oct 1, 2026).</p></details>
       </div>
     </aside>
+
+    <section class="gr-route gr-route--none" id="route" aria-labelledby="gr-route-h">
+      <h2 id="gr-route-h">The route</h2>
+      <p>Nobody has sent us this ride’s route yet. When the host does, it shows here: a map, a climb chart and a GPX for your bike computer.</p>
+      
+      
+      <details class="gr-rev-write gr-route-send" id="send-route">
+        <summary class="btn btn--ghost gr-rev-open">Run this ride? Send us the route</summary>
+        <form class="gr-rev-form" name="ride-route" method="POST" action="/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-route-send>
+          <input type="hidden" name="form-name" value="ride-route">
+          <input type="hidden" name="ride" value="orono-me-rose-bike-womens-mtb-ride">
+          <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <p class="gr-rev-note">For the people who run Rose Bike Women’s MTB Ride. Drop in the file and a couple of numbers. Robert reads every route before it goes up, credits you on the page and links back.</p>
+          <label class="gr-rev-lab" for="rt-file-648">Route file <small>GPX, FIT or TCX</small></label>
+          <input class="field" id="rt-file-648" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
+          <label class="gr-rev-lab" for="rt-link-648">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
+          <input class="field" id="rt-link-648" type="url" name="route_link" inputmode="url" autocomplete="off">
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-lo-648">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-648" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-hi-648">To <small>mph</small></label><input class="field" id="rt-hi-648" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
+          </div>
+          <fieldset class="gr-rev-pick">
+            <legend>If someone comes off the back</legend>
+            <label><input type="radio" name="drop" value="drop"><span>They ride back alone</span></label><label><input type="radio" name="drop" value="regroup"><span>We wait at a regroup</span></label><label><input type="radio" name="drop" value="no-drop"><span>Nobody gets left</span></label>
+          </fieldset>
+          <label class="gr-rev-lab" for="rt-regroup-648">Where you regroup <small>(optional)</small></label>
+          <input class="field" id="rt-regroup-648" name="regroup" maxlength="80">
+          <fieldset class="gr-rev-pick">
+            <legend>This route is</legend>
+            <label><input type="radio" name="weekly" value="every" checked><span>The route every time</span></label><label><input type="radio" name="weekly" value="once"><span>Just for the next ride</span></label>
+          </fieldset>
+          <div class="gr-rev-two">
+            <div><label class="gr-rev-lab" for="rt-name-648">Your name</label><input class="field" id="rt-name-648" name="name" maxlength="40" autocomplete="name" required></div>
+            <div><label class="gr-rev-lab" for="rt-role-648">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-648" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
+          </div>
+          <label class="gr-rev-lab" for="rt-email-648">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
+          <input class="field" id="rt-email-648" type="email" name="email" autocomplete="email">
+          <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send the route</button><p class="gr-rev-ok" role="status" hidden></p></div>
+        </form>
+      </details>
+    </section>
     <dl class="gr-facts">
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Hosted by</dt><dd>Rose Bike<small>Bike shop</small></dd></div>
         <div class="gr-fact"><svg class="gr-fact-mark" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-mtb"/></svg><dt>Kind of ride</dt><dd>Mountain bike</dd></div>
@@ -348,7 +390,7 @@
 <script src="/chrome.js" defer></script>
 <script src="/rides/save.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script src="/rides/ride.js?v=38" defer></script>
+<script src="/rides/ride.js?v=39" defer></script>
 <script src="/rides/map.js" defer></script>
 </body>
 </html>
