@@ -64,10 +64,11 @@
   status = 302
   force = true
 
-# Oct 10, 2026: a short link for TSR — opens its ride page on the review form
+# Oct 10, 2026: a short link for TSR (the QR Robert sends riders) — opens TSR in the ride check-in at /ride/,
+# the page built for it: check in, add photos, review it. Was the ride page's review form until later that day.
 [[redirects]]
   from = "/tsr"
-  to = "/rides/scottsdale-az-scottsdale-cycling-saturday-ride/#review"
+  to = "/ride/?r=scottsdale-az-scottsdale-cycling-saturday-ride"
   status = 302
   force = true
 
