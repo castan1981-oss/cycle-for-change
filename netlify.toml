@@ -73,6 +73,13 @@
 
 # Oct 10, 2026: a short link for TSR (the QR Robert sends riders) — opens TSR in the ride check-in at /ride/,
 # the page built for it: check in, add photos, review it. Was the ride page's review form until later that day.
+# The TSR boost graphic's QR (Oct 11, 2026): opens the review form on the TSR page.
+[[redirects]]
+  from = "/tsrreview"
+  to = "/rides/scottsdale-az-scottsdale-cycling-saturday-ride/#review"
+  status = 302
+  force = true
+
 [[redirects]]
   from = "/tsr"
   to = "/ride/?r=scottsdale-az-scottsdale-cycling-saturday-ride"
