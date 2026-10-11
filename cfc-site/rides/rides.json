@@ -6117,6 +6117,84 @@
   }
  },
  {
+  "slug": "phoenix-az-the-velo-wednesday-shop-ride",
+  "name": "Weekly Shop Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Phoenix",
+  "neighborhood": "Coronado",
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 33.47395,
+  "lng": -112.06485,
+  "geo_precision": "start",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Wednesday, 6:00 am, from The Velo Bike Shop on 7th Street in the Coronado neighborhood. The shop's Strava club posts holiday pauses (it skipped Dec 24 and Dec 31, 2025 and resumed Jan 7, 2026).",
+  "days": [
+   "wed"
+  ],
+  "time_local": "6:00 am",
+  "start_hhmm": "06:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "The Velo Bike Shop",
+   "address": "2317 N 7th St, Phoenix, AZ 85006"
+  },
+  "distance_km": null,
+  "distance_miles": null,
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "The Velo Bike Shop",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "It rolls at 6:00 am, four hours before the shop opens, so don't plan on the shop for water or a tube. The shop's page says riders compete on local Strava segments, and points to its Strava club (velophx) for weekly updates. Route, distance and pace aren't posted.",
+  "description": "The Velo's weekly shop ride. It leaves the shop on 7th Street in Phoenix's Coronado neighborhood at 6:00 am on Wednesdays. The shop's page says the ride competes on local segments, supports each other and explores new roads, with weekly updates on its Strava club. Route, distance and pace aren't published.",
+  "links": {
+   "website": "https://www.thevelo.com/ride-with-us",
+   "instagram": "https://www.instagram.com/velophx/",
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/velophx",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.thevelo.com/ride-with-us",
+   "https://www.thevelo.com/contact-5",
+   "https://www.thevelo.com/pages-sitemap.xml",
+   "https://www.strava.com/clubs/velophx"
+  ],
+  "verified_on": "2026-10-10",
+  "last_seen": "2026-07-14",
+  "evidence": "The shop's Ride With Us page says 'Weekly Shop Ride – Wednesdays at 6AM, ride from the shop, based in the Coronado neighborhood' (read Oct 10, 2026; the site's sitemap dates the page Jul 14, 2026), and the shop's Strava club posted on Dec 17, 2025 that the 'Velo Wednesday Ride' paused for Dec 24 and Dec 31 and resumed Jan 7, 2026.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.thevelo.com/ride-with-us",
+   "feed_url": null,
+   "notes": "The shop page has no dates. The Strava club page (strava.com/clubs/velophx, id 265366) loads without a login and shows club posts with dates, including holiday pauses; its event list needs a login. No Strava event page for this ride was found by search."
+  }
+ },
+ {
   "slug": "prescott-az-bike-prescott-thursday-mtb-series",
   "name": "Bike Prescott Thursday Mountain Bike Series",
   "name_en": null,
