@@ -250,6 +250,24 @@ One page per group ride Robert rides: who he met, what happened, his own video a
 **his own words**. Claude can lay out the page, cut the video, fix a typo — not invent the story,
 and not turn Strava data into a recap. People in it are only recognisable with their OK (§10).
 
+### What do you cycle for? (`/cyclefor/`, Oct 12, 2026)
+Robert's idea from a ride: every ride he says who he's riding for that day, and he asks everyone else for five
+or ten seconds on video. The way in is **their own Instagram** (film it, post it, tag @cycl_eforchange). The page's
+form is **the OK** that lets him use their clip in his reels, boosted posts and on the site.
+- Hand page (`cfc-site/cyclefor/index.html` + `cyclefor.css` + `cyclefor.js`, on apply-chrome.py's list). The sign's
+  blank turns through a few answers and shows theirs after they send. The homepage `#why` links here.
+- The Netlify form `cycle-for`: what they cycle for, first name, Instagram, post link, optional clip, optional
+  email, three required boxes (18+, they're in it and anyone else said OK, we can use it), `release`, `agreed_at`.
+  A clip over 7.5 MB is shrunk in the browser (played once into a recorder at 720p, first 20 s); if that can't
+  happen, the page tells them to post it and tag us instead.
+- **The release wording is `data/releases/cyclefor-v1.md`. Never edit it.** New wording = `cyclefor-v2.md` + the
+  form's `release` value + the page text; the test (`tools/test/cyclefor.test.js`) keeps page and file identical.
+- Review: hourly, `tools/cyclefor-pull.js` (in `ride-reviews.yml`) opens one issue per complete OK, labelled
+  `release`: name, handle, answer, release version, time, a checklist. No email, no clip link (public repo); the
+  record and the clip stay in Netlify → Forms → cycle-for. Robert labels `cleared` to use it; closes to drop it.
+  Take-backs come by Instagram DM: within 7 days delete our posts with it, take it off the site, stop any boost.
+- Other people's faces in these clips are fine **with a cleared OK** (§10). Under 18: never.
+
 ### Guides (`/guides/`)
 Sorted by stage: 01 Pick a ride · 02 Get ready · 03 Raise the money, then "From the road" (field
 notes, journal). New guides go in the right stage. The guide "Pledge-per-mile fundraising,
@@ -517,7 +535,8 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
   is the exception** (Robert, Oct 8, 2026: "cars are ok in some video"): a parked or passing car in the
   background of ride footage is fine. The homepage hero and the homepage reel stay car-free.
 - **Only Robert is recognisable.** Riders from behind or far off are fine; oncoming faces get
-  cropped. Other people need their OK.
+  cropped. Other people need their OK — for clips people send about what they cycle for, that's a cleared
+  `/cyclefor/` OK (§5).
 - Captions say where the picture was really taken (place · month).
 - The homepage hero (Pass 32) is Robert on the canal path, **clear, crisp, ungraded**:
   `img/sign-print-4.jpg` (1200×1600) and `-4-phone.jpg` (960×1280). Phones: the photo fills the
@@ -575,3 +594,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-08 — `/nov7/`: the 26 s ride-with-friends film under the first screen; on desktop the hero is the riding wall (three panels of group-ride footage) with a light wash under the words.
 - 2026-10-09 — No site email: the footer signup becomes "Mile updates" → Instagram, the welcome email is gone, reviews come in as hourly GitHub issues (email optional via Resend's shared sender); the "10000" numeral comes off the closing block.
 - 2026-10-09 — Routes on ride pages: map, climb chart, turns, GPX and pace from the people who run the ride (`data/ride-routes.json` → `tools/route-build.py`); "Send us the route" on every ride page → `route` issues; Gainey Village and Yuma pins fixed; the blank Strava button under "Where to find them" fixed (hub link styles were leaking).
+- 2026-10-12 — `/cyclefor/`: "What do you cycle for?" Five seconds on video, post it and tag @cycl_eforchange, give us the OK (Netlify form `cycle-for`, release `data/releases/cyclefor-v1.md`, in-browser clip shrink, hourly `release` issues to review); the homepage question links to it.

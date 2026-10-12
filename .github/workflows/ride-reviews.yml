@@ -54,3 +54,11 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node tools/routes-pull.js
+      # Oct 12, 2026: video OKs from /cyclefor/ ("What do you cycle for?") → an issue labelled "release"; label "cleared" once the clip checks out
+      - name: New video OKs → issues
+        if: always()
+        env:
+          NETLIFY_API_TOKEN: ${{ secrets.NETLIFY_API_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node tools/cyclefor-pull.js
