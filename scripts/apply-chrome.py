@@ -4,7 +4,7 @@
 Run from the repo root:   python3 scripts/apply-chrome.py
 Safe to re-run: it rebuilds each page's <head>, header and footer from the
 current scripts/chrome.js. Pages covered: every .html under cfc-site/guides,
-field-notes, resources, journal, tonight and nov7 (templates included), plus 404.html.
+field-notes, resources, journal, tonight, nov7 and cyclefor (templates included), plus 404.html.
 
 What it does to each page
   - <head>: keeps the page's title, description, canonical, og:type and JSON-LD,
@@ -27,7 +27,7 @@ C = json.loads(subprocess.check_output(NODE))
 
 SECTION_STYLES = {  # stylesheets after /chrome.css, by top-level folder
     "guides": ["/styles.css"], "field-notes": ["/styles.css"], "resources": ["/styles.css"],
-    "journal": ["/styles.css"], "tonight": ["/tonight/tonight.css"], "nov7": ["/nov7/nov7.css?v=4"], "": ["/styles.css"],
+    "journal": ["/styles.css"], "tonight": ["/tonight/tonight.css"], "nov7": ["/nov7/nov7.css?v=4"], "cyclefor": ["/cyclefor/cyclefor.css?v=1"], "": ["/styles.css"],
 }
 ANCHORS = {'href="/#tally"': 'href="/"', 'href="/#rides"': 'href="/#ride"',
            'href="/#disciplines"': 'href="/"', 'href="/#pledge"': 'href="/"',
@@ -129,7 +129,7 @@ def resources(s: str) -> str:
 
 def main():
     pages = [SITE / "404.html"]
-    for d in ("guides", "field-notes", "resources", "journal", "tonight", "nov7"):
+    for d in ("guides", "field-notes", "resources", "journal", "tonight", "nov7", "cyclefor"):
         pages += sorted((SITE / d).rglob("*.html"))
     for p in pages:
         s = p.read_text()

@@ -256,6 +256,8 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
         <input class="sign-play-input" id="who2" type="text" maxlength="22" autocomplete="off" placeholder="Type it. The sign changes." data-sign-input>
         <button class="sign-reset sign-play-reset" type="button" data-sign-reset hidden>Clear the sign</button>
       </div>
+      <!-- Oct 12, 2026: the question goes out on video at /cyclefor/ (five seconds, tag @cycl_eforchange, give us the OK) -->
+      <p class="why-more"><a class="link" href="/cyclefor/">Say it on video. Five seconds.</a></p>
     </div>
   </div>
 </section>

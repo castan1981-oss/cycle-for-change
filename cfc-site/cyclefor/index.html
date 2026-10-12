@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>What do you cycle for? Send us five seconds</title>
+  <meta name="description" content="Your mom, the view, your head, losing weight. It doesn’t matter. Film five or ten seconds saying what you cycle for, post it and tag @cycl_eforchange.">
+  <link rel="canonical" href="https://cycleforchange.org/cyclefor/">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cycle for Change">
+  <meta property="og:url" content="https://cycleforchange.org/cyclefor/">
+  <meta property="og:title" content="What do you cycle for? Send us five seconds — Cycle for Change">
+  <meta property="og:description" content="Your mom, the view, your head, losing weight. It doesn’t matter. Film five or ten seconds saying what you cycle for, post it and tag @cycl_eforchange.">
+  <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What do you cycle for? Send us five seconds — Cycle for Change">
+  <meta name="twitter:description" content="Your mom, the view, your head, losing weight. It doesn’t matter. Film five or ten seconds saying what you cycle for, post it and tag @cycl_eforchange.">
+  <meta name="twitter:image" content="https://cycleforchange.org/og-cfc.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-180.png">
+  <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/chrome.css">
+  <link rel="stylesheet" href="/cyclefor/cyclefor.css?v=1">
+
+</head>
+<body class="cf">
+<!-- /cyclefor/ (Oct 12, 2026): Robert's idea from a ride. Every ride he says who he's riding for that day, and he asks
+     everyone else for five or ten seconds on video: what do you cycle for? The way in is their own Instagram (post it,
+     tag @cycl_eforchange). The form below is the OK that lets him use their clip in his own reels, boosted posts and on
+     this site: the Netlify form "cycle-for", the release text in data/releases/cyclefor-v1.md (never edited; a change is
+     v2), each OK → a GitHub issue labelled "release" (tools/cyclefor-pull.js, hourly). The clips stay in Netlify. -->
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav site-head" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="/" aria-label="Cycle for Change home">
+      <svg class="brand-mark" viewBox="0 0 760 150" aria-hidden="true" focusable="false">
+        <defs>
+          <path id="lpC" d="M52 34 V24 Q52 8 36 8 H33 M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 142 H36 Q52 142 52 126 V116"/>
+          <path id="lpY" d="M11 4 L30 68 L49 4 M30 68 V150"/>
+          <path id="lpL" d="M8 0 V150 M22 142 H54"/>
+          <path id="lpE" d="M8 0 V150 M22 8 H54 M22 75 H47 M22 142 H54"/>
+          <path id="lpF" d="M8 0 V150 M22 8 H54 M22 75 H47"/>
+          <path id="lpO" d="M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 8 H36 Q52 8 52 24 V126 Q52 142 36 142 H33"/>
+          <path id="lpR" d="M8 0 V150 M22 8 H36 Q52 8 52 24 V58 Q52 74 36 74 H22 M33 90 L50 150"/>
+          <clipPath id="lpRow"><rect x="-20" y="0" width="900" height="150"/></clipPath>
+        </defs>
+        <g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">
+          <use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/>
+          <use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/>
+        </g>
+        <rect class="lp-bar" x="652" y="114" width="98" height="36" fill="#A84C58"/>
+      </svg>
+      <span class="sr">Cycle for Change</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/find-a-ride/">Find a ride</a>
+      <a href="/events/2027/">2027 calendar</a>
+      <a href="/towns/">Towns</a>
+      <a href="/field-notes/">Field notes</a>
+      <a href="/resources/">Resources</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn--sm" href="/nov7/" data-ride-next>Ride with me</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
+    </div>
+  </div>
+</header>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="menu-top">
+    <span class="eyebrow">Cycle for Change</span>
+    <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
+  </div>
+  <ul class="menu-list">
+    <li><a href="/nov7/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/find-a-ride/">Find a ride <span>1,423</span></a></li>
+    <li><a href="/events/2027/">2027 calendar <span>639</span></a></li>
+    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
+    <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
+  </ul>
+  <div class="menu-foot">
+    <span class="eyebrow">If it&rsquo;s now</span>
+    <span><b>988</b> call or text, any hour</span>
+    <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
+  </div>
+</div>
+<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<main id="main">
+
+<section class="cf-hero" aria-labelledby="cf-h">
+  <div class="wrap cf-in">
+    <div class="cf-hero-a">
+    <p class="eyebrow cf-kick">Five seconds. Ten, tops.</p>
+    <h1 class="cf-sign" id="cf-h">
+      <svg class="cf-mark" viewBox="0 0 626 150" aria-hidden="true" focusable="false"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/><use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/></g></svg>
+      <span class="cf-plate" aria-hidden="true" data-cf-spin>your mom</span>
+      <span class="sr">What do you cycle for?</span>
+    </h1>
+    <p class="cf-q" aria-hidden="true">What do you cycle for?</p>
+    <p class="cf-lede">Your mom? The view? Your mental health? You want to lose weight? It doesn’t matter. The movement is movement.</p>
+    </div>
+    <div class="cf-hero-b">
+
+    <ol class="cf-steps" aria-label="How to send it">
+      <li>
+        <svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-film"/></svg>
+        <div><b>Film it.</b> <span>Five or ten seconds. Say “I cycle for…” and finish it. On the bike, by the bike, after the ride.</span></div>
+      </li>
+      <li>
+        <svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-at"/></svg>
+        <div><b>Post it and tag us.</b> <span>Your Story, your feed, a reel. Tag <a href="https://www.instagram.com/cycl_eforchange/" target="_blank" rel="noopener noreferrer">@cycl_eforchange</a> so we see it.</span>
+          <button class="cf-copy" type="button" data-cf-copy="@cycl_eforchange">Copy the tag</button><span class="cf-copied" role="status" data-cf-copied></span></div>
+      </li>
+      <li>
+        <svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-checked"/></svg>
+        <div><b>Give us the OK.</b> <span>Then we can share it on ours. One minute, right below.</span></div>
+      </li>
+    </ol>
+    <a class="btn btn--ink cf-go" href="#ok">Give us the OK</a>
+    </div>
+  </div>
+</section>
+
+<section class="cf-s cf-ok" id="ok" aria-labelledby="ok-h">
+  <div class="wrap cf-cols">
+    <div class="cf-col-a">
+      <h2 id="ok-h">Give us the OK.</h2>
+      <p class="cf-why">Tag us and we might share your Story. To put your clip in our reels, our boosted posts or on this site, we need your OK first. This is it.</p>
+      <p class="cf-young">Under 18? We can’t take your video here. Ride on, and thank you.</p>
+    </div>
+    <div class="cf-col-b">
+      <form class="cf-form" name="cycle-for" method="POST" action="/cyclefor/?sent=1#ok" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" data-cf-form>
+        <input type="hidden" name="form-name" value="cycle-for">
+        <input type="hidden" name="release" value="cyclefor-v1">
+        <input type="hidden" name="agreed_at" value="" data-cf-at>
+        <input type="hidden" name="page" value="/cyclefor/">
+        <p class="cf-hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+        <div class="cf-field">
+          <label for="cf-for">I cycle for…</label>
+          <input id="cf-for" name="cycle_for" type="text" maxlength="40" required autocomplete="off" placeholder="my mom" enterkeyhint="next" data-cf-for>
+        </div>
+        <div class="cf-field">
+          <label for="cf-name">First name</label>
+          <input id="cf-name" name="name" type="text" maxlength="30" required autocomplete="given-name">
+        </div>
+        <div class="cf-field">
+          <label for="cf-ig">Your Instagram <span>(so we can find your video)</span></label>
+          <input id="cf-ig" name="instagram" type="text" maxlength="80" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="@yourname">
+        </div>
+        <div class="cf-field">
+          <label for="cf-link">Link to your post <span>(optional)</span></label>
+          <input id="cf-link" name="post_link" type="url" maxlength="300" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="instagram.com/…">
+        </div>
+        <div class="cf-field cf-file">
+          <span class="cf-l" id="cf-clip-l">Your clip <span>(optional)</span></span>
+          <p class="cf-help" id="cf-clip-h">Posted it already? Skip this. Want to send it straight to us instead? Add it here.</p>
+          <label class="btn btn--ghost cf-pick"><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-film"/></svg><span data-cf-pick-label>Add your clip</span><input type="file" name="video" accept="video/*" aria-labelledby="cf-clip-l" aria-describedby="cf-clip-h" data-cf-file></label>
+          <div class="cf-clip" data-cf-clip hidden>
+            <video playsinline muted controls preload="metadata" data-cf-preview aria-label="Your clip"></video>
+            <button class="link cf-clear" type="button" data-cf-clear>Take it off</button>
+          </div>
+          <p class="cf-note" role="status" data-cf-clip-note></p>
+        </div>
+        <div class="cf-field">
+          <label for="cf-email">Email <span>(optional, only if we need to ask you something. No lists, ever.)</span></label>
+          <input id="cf-email" name="email" type="email" maxlength="120" autocomplete="email">
+        </div>
+
+        <fieldset class="cf-checks">
+          <legend>The OK</legend>
+          <label class="cf-check"><input type="checkbox" name="age_ok" value="yes" required><span>I’m 18 or older.</span></label>
+          <label class="cf-check"><input type="checkbox" name="people_ok" value="yes" required><span>I’m in the video. Anyone else you can recognize in it said OK too.</span></label>
+          <label class="cf-check"><input type="checkbox" name="use_ok" value="yes" required><span>Cycle for Change can use my video, my first name, my Instagram and what I cycle for, on Instagram and on this site. I’ve read the OK below.</span></label>
+        </fieldset>
+
+        <details class="cf-release" data-cf-release>
+          <summary>Read the whole OK. It’s short.</summary>
+          <div class="cf-release-body" data-release="cyclefor-v1">
+            <p>When you send this, you’re telling Cycle for Change LLC (Robert Castan):</p>
+            <ul>
+              <li>You’re 18 or older.</li>
+              <li>You’re in the video and you made it, or you have the right to share it. Anyone else you can recognize in it said OK too.</li>
+              <li>Cycle for Change can use your video, your first name, your Instagram handle and what you cycle for. On Instagram: posts, reels, Stories, and boosted posts we pay to show to more people. And on cycleforchange.org.</li>
+              <li>We can trim it, crop it, put words or music on it, and cut it together with other people’s clips.</li>
+            </ul>
+            <p>What we won’t do:</p>
+            <ul>
+              <li>Sell it, or give it to anyone else to use.</li>
+              <li>Use it to say you back a product, a brand or a candidate.</li>
+              <li>Put your last name, your email or where you live on anything.</li>
+              <li>Pay you for it. You don’t pay us anything either.</li>
+            </ul>
+            <p>Changed your mind? Send a DM to @cycl_eforchange on Instagram. Within 7 days we delete our posts that use it, take it off the site, and stop any boost it’s in.</p>
+            <p>We keep a record of your OK (what you sent and when) for as long as we use the video, and a year after.</p>
+          </div>
+        </details>
+
+        <p class="cf-err" role="alert" data-cf-err></p>
+        <button class="btn btn--ink cf-send" type="submit" data-cf-send>Send my OK</button>
+      </form>
+
+      <div class="cf-done" data-cf-done hidden tabindex="-1">
+        <p class="cf-sign cf-sign--done" aria-hidden="true"><svg class="cf-mark" viewBox="0 0 626 150" focusable="false"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/><use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/></g></svg><span class="cf-plate" data-cf-done-plate></span></p>
+        <h3 data-cf-done-h>Got it.</h3>
+        <p data-cf-done-p>Now post it and tag <a href="https://www.instagram.com/cycl_eforchange/" target="_blank" rel="noopener noreferrer">@cycl_eforchange</a>. I watch every one.</p>
+        <button class="link" type="button" data-cf-again>Send another</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cf-s cf-mine" aria-labelledby="mine-h">
+  <div class="wrap cf-cols">
+    <div class="cf-col-a">
+      <h2 id="mine-h">Mine changes every ride.</h2>
+    </div>
+    <div class="cf-col-b">
+      <p class="lede">Some days it’s one·n·ten. Some days I’m just riding to feel free, even if it’s two hours.</p>
+      <p>Every ride, I say who I’m riding for that day. On Instagram. Show me yours.</p>
+      <div class="cta-row cf-links"><a class="link" href="https://www.instagram.com/cycl_eforchange/" target="_blank" rel="noopener noreferrer">Follow @cycl_eforchange</a><a class="link" href="/nov7/">Ride with me on Nov 7</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="foot site-foot">
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2026-11-07" data-rides="[{&quot;until&quot;:&quot;2026-11-07&quot;,&quot;date&quot;:&quot;Sat Nov 7&quot;,&quot;name&quot;:&quot;Cycling 4 one·n·ten&quot;,&quot;where&quot;:&quot;Phoenix&quot;,&quot;href&quot;:&quot;/nov7/&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
+    <a class="ridebar-a" href="/nov7/" data-ride-next><span class="ridebar-d">Sat Nov 7</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Cycling 4 one·n·ten, Phoenix</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+    <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
+  </aside>
+  <script src="/ridebar.js?v=38" defer></script>
+  <div class="wrap">
+    <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
+         The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
+    <div class="foot-sign" role="img" aria-label="Cycle for change">
+      <svg class="foot-stencil" viewBox="-10 -10 370 350" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">
+          <use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/>
+          <use href="#lpF" transform="translate(0 180)"/><use href="#lpO" transform="translate(74 180)"/><use href="#lpR" transform="translate(148 180)"/>
+        </g>
+      </svg>
+      <span class="foot-plate">change</span>
+    </div>
+    <div class="foot-grid">
+      <div class="foot-col">
+        <p class="eyebrow">Ride</p>
+        <a href="/rides/">Group rides</a>
+        <a href="/events/">Events</a>
+        <a href="/events/2027/">2027 calendar</a>
+        <a href="/towns/">Towns</a>
+        <a href="/tonight/">Tonight</a>
+        <a href="/events/2027/riding/">My 2027 rides</a>
+        <a href="/#orgs">The orgs I ride for</a>
+      </div>
+      <div class="foot-col">
+        <p class="eyebrow">Read</p>
+        <a href="/field-notes/">Field notes</a>
+        <a href="/guides/">Guides</a>
+        <a href="/journal/the-carrot-cake-theory/">Journal</a>
+        <a href="/resources/">Resources</a>
+      </div>
+      <div class="foot-col">
+        <p class="eyebrow">Follow</p>
+        <a href="https://www.instagram.com/cycl_eforchange" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Strava</a>
+      </div>
+      <div class="foot-col signup" aria-label="Mile updates">
+        <p class="eyebrow">Mile updates</p>
+        <p class="note">The miles, the rides, where I went. They go up on Instagram.</p>
+        <a class="link" href="https://www.instagram.com/cycl_eforchange" target="_blank" rel="noopener noreferrer">@cycl_eforchange</a>
+      </div>
+    </div>
+    <div class="foot-crisis">
+      <span class="eyebrow">If it&rsquo;s now</span>
+      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+    </div>
+    <div class="foot-line"><span>Cycle for Change</span><span>Phoenix. Bike only.</span></div>
+  </div>
+</footer>
+<script src="/chrome.js" defer></script>
+<script src="/cyclefor/cyclefor.js?v=1" defer></script>
+</body>
+</html>
