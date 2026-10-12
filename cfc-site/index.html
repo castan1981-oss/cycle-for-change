@@ -25,7 +25,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" href="/img/sign-print-4-phone.jpg" media="(max-width:759px)">
   <link rel="preload" as="image" href="/img/sign-print-4.jpg" media="(min-width:760px)">
-  <link rel="stylesheet" href="/home.css?v=38">
+  <link rel="stylesheet" href="/home.css?v=39">
 
   <script type="application/ld+json">
   {
@@ -215,6 +215,39 @@
     <div class="num-tile"><b class="num" id="rideCount">97</b><span>rides, <a href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">every one on Strava</a></span></div>
     <div class="num-tile num-tile--rose"><b class="num">10,000</b><span>miles in 2027. The count restarts in <b class="num" id="daysTo">88</b> days.</span></div>
   </div>
+  </div>
+</section>
+
+<!-- —— today: who I rode for (data/today.json) —— -->
+<section class="s today" id="today" aria-labelledby="today-h">
+  <div class="wrap today-in">
+    <div class="today-words">
+      <p class="eyebrow">Today’s ride. Monday, October 12.</p>
+      <h2 class="today-sign" id="today-h">
+        <svg class="today-mark" viewBox="0 0 626 150" aria-hidden="true" focusable="false"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/><use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/></g></svg>
+        <span class="plate today-plate" aria-hidden="true">mental clarity</span>
+        <span class="sr">Today I rode for mental clarity</span>
+      </h2>
+      <p class="today-line">I rode for mental clarity. Every ride, I say who I’m riding for that day.</p>
+      <a class="link" href="/cyclefor/">What do you cycle for? Say it on video</a>
+    </div>
+    <figure class="today-ph today-ph--main">
+        <img src="/img/today/oct12-gravel-1.jpg" srcset="/img/today/oct12-gravel-1-800.jpg 800w, /img/today/oct12-gravel-1.jpg 1600w" sizes="(min-width: 900px) 56vw, 100vw" width="1600" height="1200" alt="Robert grinning in a white kit and red glasses beside the LOVE mural, his bike against the wall. This morning’s route is painted on the gravel next to him, with CYCLE FOR change." loading="lazy" decoding="async">
+        <figcaption>Phoenix · October</figcaption>
+      </figure>
+    <figure class="today-film" id="todayFig" data-playing="false">
+        <div class="today-film-frame">
+          <video id="todayVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/today-oct12-1.jpg" width="720" height="1280" aria-label="Robert walks up to the LOVE mural in his kit and strikes a pose, hands on his hips.">
+            <source src="/film/today-oct12-1.webm" type="video/webm">
+            <source src="/film/today-oct12-1.mp4" type="video/mp4">
+          </video>
+          <button class="road-play today-play" id="todayPlay" type="button" aria-label="Play, 3 seconds"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg></button>
+        </div>
+      </figure>
+    <figure class="today-ph today-ph--wide">
+        <img src="/img/today/oct12-love-1.jpg" srcset="/img/today/oct12-love-1-800.jpg 800w, /img/today/oct12-love-1.jpg 1600w" sizes="(min-width: 900px) 56vw, 100vw" width="1600" height="900" alt="Robert’s red bike leaning on a wall painted with LOVE in purple, green, yellow and pink." loading="lazy" decoding="async">
+        <figcaption>Phoenix · October</figcaption>
+      </figure>
   </div>
 </section>
 
@@ -437,6 +470,6 @@
 <!-- Pass 37: the old phone tally bar (miles + Ride with me) is gone. It sat on top of the Pass 36 Ride with me bar,
      so a phone showed two bars at once. The Ride with me bar (scripts/chrome.js, /ridebar.js) does its job. -->
 
-<script src="/home.js?v=37" defer></script>
+<script src="/home.js?v=38" defer></script>
 </body>
 </html>

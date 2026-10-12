@@ -415,6 +415,26 @@
     paintReel();
   }
 
+  /* Oct 12, 2026: today's film (#today) plays like the reel: on screen on desktop, a tap on phones */
+  var tv = $("todayVid"), tFig = $("todayFig"), tPlay = $("todayPlay");
+  if (tv) {
+    tv.muted = true;
+    var tUser = null;
+    var tPaint = function () { if (tFig) tFig.setAttribute("data-playing", tv.paused ? "false" : "true"); };
+    var tGo = function () { tv.preload = "auto"; var q = tv.play(); if (q && q.catch) q.catch(function () {}); };
+    var tToggle = function () { if (tv.paused) { tUser = true; tGo(); } else { tUser = false; tv.pause(); } };
+    tv.addEventListener("play", tPaint); tv.addEventListener("pause", tPaint);
+    tv.addEventListener("error", function () { if (tPlay) tPlay.hidden = true; }, true);
+    tv.addEventListener("click", tToggle);
+    if (tPlay) tPlay.addEventListener("click", tToggle);
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) {
+        if (!es[0].isIntersecting) { if (!tv.paused) tv.pause(); return; }
+        if (tUser === true || (tUser === null && wide && !reduce)) tGo();
+      }, { threshold: 0.4 }).observe(tv);
+    }
+  }
+
   /* ————————————————————————————————————————————————
      nav turns to bone past the film; the tally bar shows up with it
      ———————————————————————————————————————————————— */
