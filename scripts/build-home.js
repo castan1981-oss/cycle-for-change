@@ -38,6 +38,52 @@ const CAL_N = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, "
 const TOWNS_N = fs.readdirSync(path.join(ROOT, "data", "towns")).filter((f) => f.endsWith(".json") && !f.startsWith("_")).length;
 const GUIDES_N = fs.readdirSync(path.join(ROOT, "cfc-site", "guides"), { withFileTypes: true }).filter((d) => d.isDirectory()).length;
 
+// Oct 12, 2026: "Today I rode for" — every ride Robert says who he rode for (his idea from a ride, the voice memo
+// behind /cyclefor/). data/today.json holds the day: the plate, his line, his pictures. Light section between the
+// numbers and the road. A still on phones; the film waits for a tap there (home.js, the same rules as the reel).
+const TODAY = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "today.json"), "utf8")); } catch (e) { return null; } })();
+const esc = (t) => String(t == null ? "" : t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+function todaySection() {
+  const T = TODAY;
+  if (!T || !T.for || !T.photo) return "";
+  const d = new Date(T.date + "T12:00:00Z");
+  const day = d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", timeZone: "UTC" });
+  const pic = (p, cls, sizes) => p ? `<figure class="today-ph ${cls}">
+        <img src="${esc(p.src)}" srcset="${esc(p.small)} 800w, ${esc(p.src)} ${p.width}w" sizes="${sizes}" width="${p.width}" height="${p.height}" alt="${esc(p.alt)}" loading="lazy" decoding="async">
+        ${p.where ? `<figcaption>${esc(p.where)}</figcaption>` : ""}
+      </figure>` : "";
+  const F = T.film;
+  const film = F ? `<figure class="today-film" id="todayFig" data-playing="false">
+        <div class="today-film-frame">
+          <video id="todayVid" muted loop playsinline disablepictureinpicture preload="none" poster="${esc(F.poster)}" width="${F.width}" height="${F.height}" aria-label="${esc(F.alt)}">
+            ${F.webm ? `<source src="${esc(F.webm)}" type="video/webm">` : ""}
+            <source src="${esc(F.mp4)}" type="video/mp4">
+          </video>
+          <button class="road-play today-play" id="todayPlay" type="button" aria-label="Play, ${F.seconds} seconds"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg></button>
+        </div>
+      </figure>` : "";
+  return `<!-- —— today: who I rode for (data/today.json) —— -->
+<section class="s today" id="today" aria-labelledby="today-h">
+  <div class="wrap today-in">
+    <div class="today-words">
+      <p class="eyebrow">Today’s ride. ${esc(day)}.</p>
+      <h2 class="today-sign" id="today-h">
+        <svg class="today-mark" viewBox="0 0 626 150" aria-hidden="true" focusable="false"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/><use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/></g></svg>
+        <span class="plate today-plate" aria-hidden="true">${esc(T.for)}</span>
+        <span class="sr">Today I rode for ${esc(T.for)}</span>
+      </h2>
+      <p class="today-line">${esc(T.line)}</p>
+      <a class="link" href="/cyclefor/">What do you cycle for? Say it on video</a>
+    </div>
+    ${pic(T.photo, "today-ph--main", "(min-width: 900px) 56vw, 100vw")}
+    ${film}
+    ${pic(T.photo2, "today-ph--wide", "(min-width: 900px) 56vw, 100vw")}
+  </div>
+</section>
+
+`;
+}
+
 // The mark, stacked, as the page's headline. Same glyphs as the one-line mark in chrome.js.
 const STACK = (cls = "") => `<svg class="sign-mark ${cls}" viewBox="-10 -10 370 350" aria-hidden="true" focusable="false">
         <g filter="url(#lpWorn)">
@@ -137,7 +183,7 @@ const page = `<!doctype html>
   ${CHROME.FONTS}
   <link rel="preload" as="image" href="/img/sign-print-4-phone.jpg" media="(max-width:759px)">
   <link rel="preload" as="image" href="/img/sign-print-4.jpg" media="(min-width:760px)">
-  <link rel="stylesheet" href="/home.css?v=38">
+  <link rel="stylesheet" href="/home.css?v=39">
 
   <script type="application/ld+json">
   {
@@ -208,7 +254,7 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
   </div>
 </section>
 
-<!-- —— the last ride: the reel, the log —— -->
+${todaySection()}<!-- —— the last ride: the reel, the log —— -->
 <section class="s s--tar" id="road" aria-labelledby="road-h">
   <div class="wrap road">
     <div>
@@ -373,7 +419,7 @@ ${CHROME.FOOTER.replace('<script src="/chrome.js" defer></script>', '')}
 <!-- Pass 37: the old phone tally bar (miles + Ride with me) is gone. It sat on top of the Pass 36 Ride with me bar,
      so a phone showed two bars at once. The Ride with me bar (scripts/chrome.js, /ridebar.js) does its job. -->
 
-<script src="/home.js?v=37" defer></script>
+<script src="/home.js?v=38" defer></script>
 </body>
 </html>
 `;

@@ -268,6 +268,14 @@ form is **the OK** that lets him use their clip in his reels, boosted posts and 
   Take-backs come by Instagram DM: within 7 days delete our posts with it, take it off the site, stop any boost.
 - Other people's faces in these clips are fine **with a cleared OK** (§10). Under 18: never.
 
+### Today I rode for (`#today` on the homepage, Oct 12, 2026)
+Every ride Robert says who he rode for that day. `data/today.json` (date, `for` = the plate, `line` = his words,
+`photo`, `photo2`, `film`) → `todaySection()` in `scripts/build-home.js` → a light section between the numbers and
+the road: the sign with the day's word on the plate, his line, a link to `/cyclefor/`, his pictures. Phones: words,
+the big photo, the film (a still until tapped, `/home.js`), the wide photo. Media in `cfc-site/img/today/` and
+`cfc-site/film/today-*` (iPhone HDR tone-mapped to SDR, no audio; bump the number on a recut). His words and his
+pictures only; only Robert recognisable. Change the JSON and run `node scripts/build-home.js`.
+
 ### Guides (`/guides/`)
 Sorted by stage: 01 Pick a ride · 02 Get ready · 03 Raise the money, then "From the road" (field
 notes, journal). New guides go in the right stage. The guide "Pledge-per-mile fundraising,
@@ -595,3 +603,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-09 — No site email: the footer signup becomes "Mile updates" → Instagram, the welcome email is gone, reviews come in as hourly GitHub issues (email optional via Resend's shared sender); the "10000" numeral comes off the closing block.
 - 2026-10-09 — Routes on ride pages: map, climb chart, turns, GPX and pace from the people who run the ride (`data/ride-routes.json` → `tools/route-build.py`); "Send us the route" on every ride page → `route` issues; Gainey Village and Yuma pins fixed; the blank Strava button under "Where to find them" fixed (hub link styles were leaking).
 - 2026-10-12 — `/cyclefor/`: "What do you cycle for?" Five seconds on video, post it and tag @cycl_eforchange, give us the OK (Netlify form `cycle-for`, release `data/releases/cyclefor-v1.md`, in-browser clip shrink, hourly `release` issues to review); the homepage question links to it.
+- 2026-10-12 — Homepage `#today`: "Today I rode for mental clarity" — the sign with the day's word, his line, the route-on-gravel photo, the LOVE-wall bike and a 3 s loop of him at the wall (`data/today.json`).

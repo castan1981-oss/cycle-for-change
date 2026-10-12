@@ -1230,3 +1230,31 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   .sign-intro,.sign--print .sign-line{font-size:17px}
   .sign-scrim{background:linear-gradient(0deg,rgba(20,18,24,.98) 0,rgba(20,18,24,.95) 320px,rgba(20,18,24,.86) 450px,rgba(20,18,24,0) 550px)}
 }
+
+/* —— Oct 12, 2026: #today, "Today I rode for" (data/today.json via scripts/build-home.js). Light, between the
+   numbers and the road. The sign with the day's word on the plate, his line, his pictures. Phones: words, the
+   big photo, the film (a still until tapped), the wide photo. Desktop: words + film left, photos right. —— */
+.today-in{display:grid;gap:22px;grid-template-areas:"words" "main" "film" "wide"}
+.today-words{grid-area:words;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.today-words .eyebrow{margin:0}
+.today-sign{--h:clamp(34px,10.4vw,64px);display:flex;flex-wrap:wrap;align-items:flex-end;gap:calc(var(--h) * .24);margin:0;line-height:1;letter-spacing:0}
+.today-mark{display:block;height:var(--h);width:auto;color:var(--asphalt)}
+.today-plate{font-size:calc(var(--h) * .56);line-height:1.05;padding:.26em .36em .1em;white-space:nowrap;letter-spacing:-.01em}
+.today-line{margin:0;max-width:30ch;font-size:clamp(1.15rem,.7vw + 1rem,1.45rem);line-height:1.36}
+.today-ph{margin:0}
+.today-ph img{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,#000 86%,transparent 100%)}
+.today-ph figcaption{margin-top:6px;font-size:13px;font-weight:700;color:var(--mute)}
+.today-ph--main{grid-area:main}
+.today-ph--wide{grid-area:wide}
+.today-film{grid-area:film;margin:0;width:100%;max-width:260px}
+.today-film-frame{position:relative;background:var(--tar)}
+.today-film video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;background:var(--tar);cursor:pointer}
+.today-film[data-playing="true"] .today-play{opacity:0;transform:scale(.9);pointer-events:none}
+.today-play:focus-visible{outline:3px solid var(--asphalt)}
+@media (min-width:900px){
+  .today-in{grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-rows:auto auto 1fr;grid-template-areas:"words main" "film main" "film wide";column-gap:clamp(40px,5vw,96px);row-gap:clamp(24px,2.6vw,40px);align-items:start}
+  .today-sign{--h:clamp(44px,3.8vw,56px)}
+  .today-film{max-width:300px;align-self:start}
+  .today-ph--main img{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 6%,#000 100%),linear-gradient(to bottom,#000 88%,transparent 100%);-webkit-mask-composite:source-in;
+    mask-image:linear-gradient(to right,transparent 0,#000 6%,#000 100%),linear-gradient(to bottom,#000 88%,transparent 100%);mask-composite:intersect}
+}
