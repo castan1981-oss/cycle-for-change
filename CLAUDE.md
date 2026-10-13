@@ -416,6 +416,11 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   Bicycle Haüs's own build photos from their Instagram in `cfc-site/img/haus/` — **used with the shop's OK**
   (Robert, Oct 9). Robert's Crux 5 LTD first. Photos only — no captions, no credit line, no words baked into a photo (Robert, Oct 9: the labels were cheesy; the Crux's Instagram text was painted out → `crux-ltd-2.jpg`). Laid out as the shop floor: every bike on one hairline, tops stepping up and down, the Crux tallest; phones get the same skyline as a swipe strip. The line-art
   version is saved, not shown: `rides/art/haus-wall-1.svg` (`python3 tools/draw-haus-wall.py`, `saved_drawing`).
+- **"I rode it"** (Oct 13, 2026): Robert's own write-up of a ride he rode, on that ride's page, under the route and
+  above the reviews. `data/ride-notes.json` → `{ slug: [{ id, date, line, paras[] }] }` (`data/SCHEMA.md`), newest
+  first; four paragraphs show, the rest under "The rest of it" (both crawled). **His words only** — never written,
+  tidied or recapped from Strava (§4, §10); people he names are his call. Now: TSR, Sat, Oct 10, 2026, his first one.
+  A review (`data/ride-reviews.json`) is the short form, capped at 600 characters; a write-up is the long one.
 - **Reviews:** "Rider reviews" sits beside the film (or alone): counts, "would ride it again", the pace
   most riders named, the newest three, the rest folded, and "Review this ride" (the Netlify form
   `ride-review` — again yes/no, pace, words 20–600, first name, from, optional email). `#review` opens the
@@ -604,3 +609,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-09 — Routes on ride pages: map, climb chart, turns, GPX and pace from the people who run the ride (`data/ride-routes.json` → `tools/route-build.py`); "Send us the route" on every ride page → `route` issues; Gainey Village and Yuma pins fixed; the blank Strava button under "Where to find them" fixed (hub link styles were leaking).
 - 2026-10-12 — `/cyclefor/`: "What do you cycle for?" Five seconds on video, post it and tag @cycl_eforchange, give us the OK (Netlify form `cycle-for`, release `data/releases/cyclefor-v1.md`, in-browser clip shrink, hourly `release` issues to review); the homepage question links to it.
 - 2026-10-12 — Homepage `#today`: "Today I rode for mental clarity" — the sign with the day's word, his line, the route-on-gravel photo, the LOVE-wall bike and a 3 s loop of him at the wall (`data/today.json`).
+- 2026-10-13 — "I rode it" on ride pages: Robert's own long write-up of a ride, in his words (`data/ride-notes.json`), first one TSR, Oct 10.
