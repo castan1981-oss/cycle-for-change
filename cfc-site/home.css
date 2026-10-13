@@ -1232,29 +1232,55 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 }
 
 /* —— Oct 12, 2026: #today, "Today I rode for" (data/today.json via scripts/build-home.js). Light, between the
-   numbers and the road. The sign with the day's word on the plate, his line, his pictures. Phones: words, the
-   big photo, the film (a still until tapped), the wide photo. Desktop: words + film left, photos right. —— */
-.today-in{display:grid;gap:22px;grid-template-areas:"words" "main" "film" "wide"}
-.today-words{grid-area:words;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
-.today-words .eyebrow{margin:0}
-.today-sign{--h:clamp(34px,10.4vw,64px);display:flex;flex-wrap:wrap;align-items:flex-end;gap:calc(var(--h) * .24);margin:0;line-height:1;letter-spacing:0}
-.today-mark{display:block;height:var(--h);width:auto;color:var(--asphalt)}
-.today-plate{font-size:calc(var(--h) * .56);line-height:1.05;padding:.26em .36em .1em;white-space:nowrap;letter-spacing:-.01em}
-.today-line{margin:0;max-width:30ch;font-size:clamp(1.15rem,.7vw + 1rem,1.45rem);line-height:1.36}
+   numbers and the road. Pass 2 (direction A, "Lead photo"): phones get the words, the lead photo edge to edge, the
+   place, the film (a still until tapped) beside the ask, the closing photo edge to edge. Desktop: the words, then
+   the film + the ask on the left; the lead photo fills the right; the closing photo as a wide band under both; the
+   place last. Every picture has one shape and one place, and the place is said once. —— */
+.today-in{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"words" "lead" "where" "pair" "close"}
+.today-words{grid-area:words;display:flex;flex-direction:column;align-items:flex-start}
+.today-words .eyebrow{margin:0 0 14px}
+.today-sign{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin:0;line-height:1;letter-spacing:0}
+.today-mark{display:block;height:clamp(44px,12.3vw,64px);width:auto;color:var(--asphalt)}
+.today-plate{max-width:100%;font-size:clamp(32px,10.3vw,48px);line-height:1.05;padding:.22em .32em .07em;letter-spacing:-.01em}
+.today-line{margin:18px 0 0;max-width:32ch;font-size:clamp(1.15rem,.7vw + 1rem,1.5rem);line-height:1.38}
 .today-ph{margin:0}
-.today-ph img{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,#000 86%,transparent 100%)}
-.today-ph figcaption{margin-top:6px;font-size:13px;font-weight:700;color:var(--mute)}
-.today-ph--main{grid-area:main}
-.today-ph--wide{grid-area:wide}
-.today-film{grid-area:film;margin:0;width:100%;max-width:260px}
-.today-film-frame{position:relative;background:var(--tar)}
-.today-film video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;background:var(--tar);cursor:pointer}
+.today-ph img{display:block;width:100%;-webkit-mask-image:linear-gradient(to bottom,#000 88%,transparent 100%);mask-image:linear-gradient(to bottom,#000 88%,transparent 100%)}
+.today-ph--lead{grid-area:lead;margin:28px calc(-1 * var(--gut)) 0}
+.today-ph--lead img{height:auto;aspect-ratio:1/1;object-fit:cover;object-position:54% 50%}
+.today-where{grid-area:where;margin:8px 0 0;font-size:13px;font-weight:700;color:var(--mute)}
+.today-pair{grid-area:pair;margin-top:24px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.today-pair > :only-child{grid-column:1 / -1}
+.today-film{margin:0;background:var(--tar)}
+.today-film-frame{position:relative;height:100%;background:var(--tar)}
+.today-film video{display:block;width:100%;height:100%;aspect-ratio:9/16;object-fit:cover;background:var(--tar);cursor:pointer}
+.today-play{width:64px;height:64px;margin:-32px 0 0 -32px}
+.today-play svg{width:24px;height:24px;margin-left:4px}
 .today-film[data-playing="true"] .today-play{opacity:0;transform:scale(.9);pointer-events:none}
-.today-play:focus-visible{outline:3px solid var(--asphalt)}
+.today-ask{display:flex;flex-direction:column;justify-content:space-between;gap:20px;box-sizing:border-box;padding:18px 16px 16px;background:var(--asphalt);color:var(--paper);text-decoration:none}
+.today-ask-q{font-size:clamp(1.45rem,1rem + 2vw,2.15rem);font-weight:800;line-height:1.06;letter-spacing:-.015em;text-wrap:balance}
+.today-ask-go{align-self:flex-start;display:inline-flex;gap:6px;font-size:.9375rem;font-weight:700;line-height:1.3;padding-bottom:4px;border-bottom:1.5px solid var(--dust)}
+.today-ask-go::after{content:"\2192";font-weight:400;transition:transform .18s ease}
+@media (hover:hover){.today-ask:hover{background:var(--tar)}.today-ask:hover .today-ask-go::after{transform:translateX(4px)}}
+.today-ask:focus-visible{outline:3px solid var(--asphalt);outline-offset:3px}
+.today-ph--close{grid-area:close;margin:24px calc(-1 * var(--gut)) 0}
+.today-ph--close img{height:auto;aspect-ratio:16/9;object-fit:cover;object-position:50% 58%}
+@media (min-width:600px) and (max-width:899px){
+  .today-ph--lead img{aspect-ratio:4/3}
+  .today-pair{grid-template-columns:minmax(0,280px) minmax(0,1fr)}
+}
 @media (min-width:900px){
-  .today-in{grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-rows:auto auto 1fr;grid-template-areas:"words main" "film main" "film wide";column-gap:clamp(40px,5vw,96px);row-gap:clamp(24px,2.6vw,40px);align-items:start}
-  .today-sign{--h:clamp(44px,3.8vw,56px)}
-  .today-film{max-width:300px;align-self:start}
-  .today-ph--main img{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 6%,#000 100%),linear-gradient(to bottom,#000 88%,transparent 100%);-webkit-mask-composite:source-in;
-    mask-image:linear-gradient(to right,transparent 0,#000 6%,#000 100%),linear-gradient(to bottom,#000 88%,transparent 100%);mask-composite:intersect}
+  .today-in{grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-rows:auto 1fr;grid-template-areas:"words lead" "pair lead" "close close" "where where";column-gap:clamp(40px,4.4vw,64px)}
+  .today-words .eyebrow{margin-bottom:16px}
+  .today-sign{gap:14px}
+  .today-mark{height:64px}
+  .today-plate{font-size:46px}
+  .today-line{margin-top:22px}
+  .today-ph--lead{margin:0;position:relative;min-height:520px}
+  .today-ph--lead img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-position:56% 50%;-webkit-mask-image:linear-gradient(to bottom,#000 90%,transparent 100%);mask-image:linear-gradient(to bottom,#000 90%,transparent 100%)}
+  .today-pair{margin-top:36px;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:10px;align-self:start}
+  .today-ask{padding:24px 22px 22px}
+  .today-play{width:72px;height:72px;margin:-36px 0 0 -36px}
+  .today-play svg{width:26px;height:26px}
+  .today-ph--close{margin:clamp(40px,4vw,56px) 0 0}
+  .today-ph--close img{aspect-ratio:auto;height:clamp(300px,29vw,440px)}
 }
