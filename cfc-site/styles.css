@@ -199,3 +199,16 @@ main{display:block}
 .fn-stage-head .mk--stage{width:36px;height:36px;color:var(--creosote-ink);margin-top:4px}
 .mk--door{width:28px;height:28px;color:var(--creosote-ink);margin-bottom:2px}
 .res-door--now .mk--door{color:var(--bone)}
+
+/* Bike guides (Oct 13, 2026): a data table, the evidence line, the source list, citation numbers */
+.fn-table{overflow-x:auto;margin:24px 0 0;-webkit-overflow-scrolling:touch}
+.fn-table table{border-collapse:collapse;min-width:100%;font-size:.95rem;line-height:1.45;color:var(--asphalt)}
+.fn-table th,.fn-table td{border-bottom:1px solid var(--dust-deep);padding:10px 12px 10px 0;text-align:left;vertical-align:top}
+.fn-table th{font-size:13px;font-weight:700;color:var(--mute)}
+.fn-table td:first-child{font-weight:700}
+.fn-body .fn-evidence{font-size:15px;font-weight:700;color:var(--mute);margin-top:0}
+.fn-body sup{font-size:.7em;line-height:0;margin-left:1px}
+.fn-body sup a{text-decoration:none;font-weight:700;color:var(--creosote-ink);padding:0 1px}
+.fn-sources ol{font-size:14px;line-height:1.5;padding-left:1.6em}
+.fn-sources li{margin:8px 0 0;color:var(--mute);overflow-wrap:anywhere;scroll-margin-top:90px}
+.fn-sources li:target{background:var(--bone-2)}
