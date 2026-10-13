@@ -40,7 +40,9 @@ const GUIDES_N = fs.readdirSync(path.join(ROOT, "cfc-site", "guides"), { withFil
 
 // Oct 12, 2026: "Today I rode for" — every ride Robert says who he rode for (his idea from a ride, the voice memo
 // behind /cyclefor/). data/today.json holds the day: the plate, his line, his pictures. Light section between the
-// numbers and the road. A still on phones; the film waits for a tap there (home.js, the same rules as the reel).
+// numbers and the road. Pass 2 (Oct 12, direction A "Lead photo", picked on the canvas): the lead photo edge to edge
+// on phones, the film beside the ask (what do you cycle for, say it on video), the closing photo as a wide band, the
+// place said once. A still on phones; the film waits for a tap there (home.js, the same rules as the reel).
 const TODAY = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "today.json"), "utf8")); } catch (e) { return null; } })();
 const esc = (t) => String(t == null ? "" : t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 function todaySection() {
@@ -48,10 +50,8 @@ function todaySection() {
   if (!T || !T.for || !T.photo) return "";
   const d = new Date(T.date + "T12:00:00Z");
   const day = d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", timeZone: "UTC" });
-  const pic = (p, cls, sizes) => p ? `<figure class="today-ph ${cls}">
-        <img src="${esc(p.src)}" srcset="${esc(p.small)} 800w, ${esc(p.src)} ${p.width}w" sizes="${sizes}" width="${p.width}" height="${p.height}" alt="${esc(p.alt)}" loading="lazy" decoding="async">
-        ${p.where ? `<figcaption>${esc(p.where)}</figcaption>` : ""}
-      </figure>` : "";
+  const img = (p, sizes) => `<img src="${esc(p.src)}" srcset="${esc(p.small)} 800w, ${esc(p.src)} ${p.width}w" sizes="${sizes}" width="${p.width}" height="${p.height}" alt="${esc(p.alt)}" loading="lazy" decoding="async">`;
+  const where = (T.photo2 && T.photo2.where) || T.photo.where;
   const F = T.film;
   const film = F ? `<figure class="today-film" id="todayFig" data-playing="false">
         <div class="today-film-frame">
@@ -61,7 +61,8 @@ function todaySection() {
           </video>
           <button class="road-play today-play" id="todayPlay" type="button" aria-label="Play, ${F.seconds} seconds"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg></button>
         </div>
-      </figure>` : "";
+      </figure>
+      ` : "";
   return `<!-- —— today: who I rode for (data/today.json) —— -->
 <section class="s today" id="today" aria-labelledby="today-h">
   <div class="wrap today-in">
@@ -73,11 +74,17 @@ function todaySection() {
         <span class="sr">Today I rode for ${esc(T.for)}</span>
       </h2>
       <p class="today-line">${esc(T.line)}</p>
-      <a class="link" href="/cyclefor/">What do you cycle for? Say it on video</a>
     </div>
-    ${pic(T.photo, "today-ph--main", "(min-width: 900px) 56vw, 100vw")}
-    ${film}
-    ${pic(T.photo2, "today-ph--wide", "(min-width: 900px) 56vw, 100vw")}
+    <figure class="today-ph today-ph--lead">
+      ${img(T.photo, "(min-width: 900px) 56vw, 100vw")}
+    </figure>
+    ${where ? `<p class="today-where">${esc(where)}</p>` : ""}
+    <div class="today-pair">
+      ${film}<a class="today-ask" href="/cyclefor/"><span class="today-ask-q">What do you cycle for?</span><span class="today-ask-go">Say it on video</span></a>
+    </div>
+    ${T.photo2 ? `<figure class="today-ph today-ph--close">
+      ${img(T.photo2, "(min-width: 1360px) 1248px, 100vw")}
+    </figure>` : ""}
   </div>
 </section>
 
@@ -183,7 +190,7 @@ const page = `<!doctype html>
   ${CHROME.FONTS}
   <link rel="preload" as="image" href="/img/sign-print-4-phone.jpg" media="(max-width:759px)">
   <link rel="preload" as="image" href="/img/sign-print-4.jpg" media="(min-width:760px)">
-  <link rel="stylesheet" href="/home.css?v=39">
+  <link rel="stylesheet" href="/home.css?v=40">
 
   <script type="application/ld+json">
   {
