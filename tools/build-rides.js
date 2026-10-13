@@ -51,6 +51,7 @@ const HEALTH = argOf("--health") ? path.resolve(argOf("--health")) : path.join(R
 const COUNTRY_NOTES = path.join(ROOT, "data", "rides-countries.json"); // optional: per-country "what to know"
 const REVIEWS_FILE = argOf("--reviews") ? path.resolve(argOf("--reviews")) : path.join(ROOT, "data", "ride-reviews.json"); // Oct 8, 2026: rider reviews (approved only)
 const FILMS_FILE = path.join(ROOT, "data", "ride-films.json");         // Oct 8, 2026: footage from a ride, by slug
+const NOTES_FILE = path.join(ROOT, "data", "ride-notes.json");         // Oct 13, 2026: Robert's own write-up of a ride he rode
 const EVENTS = path.join(ROOT, "cfc-site", "events", "events.json");
 const SITE = "https://cycleforchange.org";
 const TODAY = /^\d{4}-\d{2}-\d{2}$/.test(argOf("--today") || "") ? argOf("--today") : new Date().toISOString().slice(0, 10);
@@ -2089,6 +2090,46 @@ const lenText = (sec) => `0:${String(Math.max(1, Math.round(sec || 0))).padStart
 const PLAY_SVG = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg>`;
 const PAUSE_SVG = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg>`;
 
+// ---------- Oct 13, 2026: Robert rode it — his own write-up on the ride's page ----------
+// data/ride-notes.json: { slug: [{ id, date, line, paras[] }] } — newest first on the page. His words only,
+// never machine-written and never a recap of Strava numbers (CLAUDE.md §4, §10). The first few paragraphs
+// show; the rest sits under a fold, crawled but one tap away. Shown only on a ride we still list.
+const NOTES = readJson(NOTES_FILE, {});
+const NOTE_SHOW = 4;                   // paragraphs before the fold
+const NOTE_DAY = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const noteDate = (ymd) => {
+  const [y, m, d] = ymd.split("-").map(Number);
+  return `${NOTE_DAY[new Date(Date.UTC(y, m - 1, d)).getUTCDay()]}, ${REV_MON[m - 1]} ${d}, ${y}`;
+};
+function notesFor(slug) {
+  return (NOTES[slug] || [])
+    .filter((n) => n && /^\d{4}-\d{2}-\d{2}$/.test(n.date || "") && Array.isArray(n.paras) && n.paras.some((p) => String(p || "").trim()))
+    .map((n) => ({ ...n, paras: n.paras.map((p) => String(p).trim()).filter(Boolean) }))
+    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+}
+function noteItem(n) {
+  const paras = n.paras.map((p) => `<p>${esc(p)}</p>`);
+  const shown = paras.slice(0, NOTE_SHOW), rest = paras.slice(NOTE_SHOW);
+  return `<article class="gr-note">
+          <p class="gr-note-when"><b>${esc(n.line || "Robert rode it")}</b> <span>${esc(noteDate(n.date))}</span></p>
+          <div class="gr-note-words">
+            ${shown.join("\n            ")}
+          </div>
+          ${rest.length ? `<details class="gr-note-more"><summary>The rest of it</summary><div class="gr-note-words">
+            ${rest.join("\n            ")}
+          </div></details>` : ""}
+        </article>`;
+}
+function notesBlock(r, listed) {
+  const list = listed ? notesFor(r.slug) : [];
+  if (!list.length) return "";
+  return `
+      <section class="gr-notes" id="robert" aria-labelledby="gr-note-h">
+        <h2 id="gr-note-h">I rode it</h2>
+        ${list.map(noteItem).join("\n        ")}
+      </section>`;
+}
+
 // Oct 9, 2026: a drawn "build wall" across the top of a ride page (data/ride-walls.json → an SVG in
 // cfc-site/rides/art/, drawn by a tools/draw-*.py script). It drifts slowly sideways; still with reduced motion.
 const WALLS = readJson(path.join(ROOT, "data", "ride-walls.json"), {});
@@ -2587,6 +2628,7 @@ ${banner}
     </div>
     ${film ? `</div></div>` : ""}
 ${rt ? routeBlock(r, rt, listed) : ""}
+${notesBlock(r, listed)}
 ${revs.length || listed ? `
     <div class="gr-ridebox">${reviewsBlock(r, revs, listed)}
     </div>

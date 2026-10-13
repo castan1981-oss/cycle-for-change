@@ -886,3 +886,23 @@ a.gr-wide-door:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px
 .gr-route-send .gr-rev-note{margin:0 0 4px}
 .gr-route-send input[type=file].field{padding:10px 0;font-size:16px}
 .gr-route-map,.gr-route-send{scroll-margin-top:84px}
+
+/* —— Oct 13, 2026: "I rode it" — Robert's own write-up on a ride page ——
+   His words, set as reading text: one measure, no quote marks, no card. A rose rule at the top so it
+   reads as his, not the directory's. Four paragraphs, then the rest one tap away (crawled either way). */
+.gr-notes{max-width:640px;margin:0 0 34px;padding:26px 0 0;border-top:1px solid var(--dust-deep)}
+.gr-notes h2{margin:0 0 14px;font-size:1.3rem}
+.gr-note{padding:0 0 0 18px;border-left:3px solid var(--creosote)}
+.gr-note + .gr-note{margin-top:28px}
+.gr-note-when{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin:0 0 12px}
+.gr-note-when b{font:700 13px/1.3 var(--display);color:var(--asphalt)}
+.gr-note-when span{font-size:13px;font-weight:700;color:var(--mute);font-variant-numeric:tabular-nums}
+.gr-note-words p{margin:0 0 14px;font-size:1.05rem;line-height:1.6;color:var(--asphalt)}
+.gr-note-words p:last-child{margin-bottom:0}
+.gr-note-more{margin-top:14px}
+.gr-note-more>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;font:700 15px/1.2 var(--display);color:var(--asphalt);border-bottom:1px solid var(--dust-deep)}
+.gr-note-more>summary::-webkit-details-marker{display:none}
+.gr-note-more>summary::after{content:"+";font-family:var(--mono);font-weight:400;font-size:18px;color:var(--mute)}
+.gr-note-more[open]>summary::after{content:"\2212"}
+.gr-note-more>summary:focus-visible{outline:2px solid var(--asphalt);outline-offset:3px}
+.gr-note-more[open]>summary{margin-bottom:14px}
