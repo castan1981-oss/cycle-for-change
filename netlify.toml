@@ -93,6 +93,21 @@
   status = 302
   force = true
 
+# —— Oct 12, 2026: one URL per page. Every page was also served at /…/index.html with a canonical
+# pointing at the clean URL, so Search Console kept reporting "Alternate page with proper canonical tag".
+# These 301s send the duplicate to the clean URL; the root gets its own rule.
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*/index.html"
+  to = "/:splat/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/api/strava"
   to = "/.netlify/functions/strava"
