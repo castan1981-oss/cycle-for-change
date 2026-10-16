@@ -41,7 +41,7 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   they don't need to know): a landing page, "Ride with me in Phoenix" (Robert, Oct 16: "everything above the fold, buttons,
   less verbiage"): the photo, the sign (CYCLE FOR + "me"), four big buttons that all fit a phone's first screen down
   to 375×548 — Find a group ride (ink, → /rides/az/phoenix/), Ride with me in 2027 (→ /events/2027/riding/), Read the
-  blog (→ /field-notes/), Follow on Instagram — then the friends film cut to 15 s (`/film/friends-2.*`, ends on
+  blog (→ his newest write-up, now TSR's `#robert`), Follow on Instagram — then the friends film cut to 15 s (`/film/friends-2.*`, ends on
   "Somebody always waits at the top"). No sliding Ride with me bar there. noindex, not in the sitemap. Never 404 or redirect it; never point anything at it; never write "canceled" on it.
 
 ## 2. How the site is built
