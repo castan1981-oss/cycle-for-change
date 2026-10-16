@@ -6920,6 +6920,85 @@
   }
  },
  {
+  "slug": "scottsdale-az-phxwmn-femmes-friday",
+  "name": "Femmes Friday",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Scottsdale",
+  "neighborhood": "Scottsdale Waterfront",
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 33.50015,
+  "lng": -111.92864,
+  "geo_precision": "start",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road",
+   "social"
+  ],
+  "schedule": "Every Friday, roll-out 6:00 am, from Olive & Ivy at the Scottsdale Waterfront. Coffee after at Arcadia Farms Marketplace.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:00 am",
+  "start_hhmm": "06:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Olive & Ivy, Scottsdale Waterfront",
+   "address": "N Marshall Way, Scottsdale, AZ 85251"
+  },
+  "distance_km": 32,
+  "distance_miles": 20,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Social",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "PhxWmn (Phoenix Women)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "A women's ride. Join the PhxWmn club on Strava to RSVP and get the route. It leaves at 6:00, before sunrise for much of the year, so bring lights.",
+  "description": "A weekly women's road ride from the Scottsdale Waterfront, about 20 miles with around 455 feet of climbing. The hosts call it a social ride: good miles, conversation, then coffee at Arcadia Farms Marketplace. It's posted on Strava by PhxWmn, a cycling community for women in the Phoenix area.",
+  "links": {
+   "website": "https://women.regroupwithus.com/rides",
+   "instagram": "https://www.instagram.com/phxwmn/",
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/PhxWmn",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "wtf"
+  ],
+  "sources": [
+   "https://women.regroupwithus.com/rides",
+   "https://www.strava.com/clubs/PhxWmn"
+  ],
+  "verified_on": "2026-10-16",
+  "last_seen": null,
+  "evidence": "The women's ride calendar lists Femmes Friday every Friday from Oct 23 to Dec 11, 2026, 6:00 am from N Marshall Way, Scottsdale, 20 mi, pulled from the PhxWmn Strava club (fetched Oct 16, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://women.regroupwithus.com/rides",
+   "feed_url": null,
+   "notes": "The calendar reads the Strava club's events and shows the next few weeks. Each date has its own .ics; there is no feed for the whole calendar. The Strava event page itself needs a login."
+  }
+ },
+ {
   "slug": "scottsdale-az-bicycle-haus-friday-shop-ride",
   "name": "Friday Shop Ride",
   "name_en": null,
@@ -7622,6 +7701,89 @@
    "watch_url": "https://www.meetup.com/phoenix-hiking-biking-and-everythinging-group/events/316479853/",
    "feed_url": "https://www.meetup.com/phoenix-hiking-biking-and-everythinging-group/events/ical/",
    "notes": "The ICS lists each Tuesday as its own event with the time in the title. The ICS has no LOCATION lines; the venue is on the event page."
+  }
+ },
+ {
+  "slug": "scottsdale-az-phxwmn-womens-bos",
+  "name": "Women's BOS",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Scottsdale",
+  "neighborhood": "Gainey Ranch",
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 33.56612,
+  "lng": -111.92548,
+  "geo_precision": "start",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "First Saturday of the month, 6:00 am, from Gainey Village. Same route each month; the time can move with the heat.",
+  "days": [
+   "sat"
+  ],
+  "time_local": "6:00 am",
+  "start_hhmm": "06:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "sat"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Gainey Village, Scottsdale Rd",
+   "address": "8877 N Scottsdale Rd, Scottsdale, AZ 85253"
+  },
+  "distance_km": 108,
+  "distance_miles": 67,
+  "duration": null,
+  "duration_min": null,
+  "pace": "Tempo, with zone 2 between the efforts",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "PhxWmn (Phoenix Women)",
+   "type": "club"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Women only. A long training ride: about 67 miles and 2,840 feet, with refuel stops at gas stations on the way. No time-trial or triathlon bikes. Join the PhxWmn club on Strava to RSVP and get the route.",
+  "description": "A monthly women-only training ride from Gainey Village into north Scottsdale and back, about 67 miles with around 2,840 feet of climbing. It rides easy to Happy Valley, then tempo efforts on the climbs toward Pima, Legend Trail and the Towers, with two refuel stops, and ends with coffee back at Gainey. The route is the same every month.",
+  "links": {
+   "website": "https://women.regroupwithus.com/rides",
+   "instagram": "https://www.instagram.com/phxwmn/",
+   "facebook": null,
+   "strava": "https://www.strava.com/clubs/PhxWmn",
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "wtf"
+  ],
+  "sources": [
+   "https://women.regroupwithus.com/rides",
+   "https://www.strava.com/clubs/PhxWmn"
+  ],
+  "verified_on": "2026-10-16",
+  "last_seen": null,
+  "evidence": "The women's ride calendar lists Women's BOS on Sat Nov 7 and Dec 5, 2026 and Jan 2 and Feb 6, 2027, 6:00 am from 8877 N Scottsdale Rd, 67 mi, tempo, pulled from the PhxWmn Strava club (fetched Oct 16, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "calendar-page",
+   "watch_url": "https://women.regroupwithus.com/rides",
+   "feed_url": null,
+   "notes": "Monthly, first Saturday. The host says the time can change with the temperature; check the calendar the week before."
   }
  },
  {
