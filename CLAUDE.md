@@ -35,23 +35,11 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   still ahead; the script re-picks in the browser. Never on `/resources/` (the 988 bar owns that spot).
   The homepage `#ride` section is written for Center Ride Out (since Oct 15, 2026). After Apr 25, 2027: rewrite it for
   the next ride and rebuild everything.
-- **Oct 15, 2026: Cycling 4 one·n·ten is canceled.** `/nov7/` stays up for anyone holding the link: it says the
-  ride is canceled, points to onenten.org and to the next ride, carries `EventCancelled` structured data and the
-  house share card. No sign-up buttons, no day schedule. The riding page carries one line saying so until Nov 7
-  (`NEXT_CANCELED` in build-calendar.js). The notes below describe the page as it was built.
-- **`/nov7/` was the link Robert shared for Cycling 4 one·n·ten** (Oct 8, 2026): a hand page
-  (`cfc-site/nov7/index.html` + `nov7.css`, on apply-chrome.py's list) with its own share card
-  (`/og-nov7.jpg`, rendered by `python3 tools/og.py templates/og/nov7.html cfc-site/og-nov7.jpg`; bump the
-  file number when the card changes, chat apps cache previews). First screen on a phone: the sign filled
-  with one·n·ten, the two rides, the RunSignup button — keep it that way. On that page `/ridebar.js` hides
-  the bar and marks Ride with me as the current page. After the ride the same URL becomes the write-up, in
-  Robert's words with his footage; the sign-up buttons come off. `head()` takes `image`, `imageAlt` and
-  `ogTitle` for pages like this, and apply-chrome.py keeps a page's own card.
-  Desktop hero (Oct 8, 2026, Robert's ask): the riding wall `/film/nov7-wall-2.mp4` (1920×960, three panels of
-  group-ride footage feathered into each other, 4 MB, muted loop, "Pause the film" under the buttons) edge to edge behind the words, with a light
-  wash over the left side — his call, the one exception to "no gradient washes over photos". The 26 s film with
-  the words (`/film/nov7-friends-1.mp4`, 9:16) is the next section. Phones keep the still; the wall never loads.
-  The sheet is linked as `/nov7/nov7.css?v=N` from apply-chrome.py's SECTION_STYLES — bump N when it changes.
+- **Oct 15, 2026: Cycling 4 one·n·ten (Nov 7) is canceled and off the site** (Robert: "get anything for that ride
+  off of the website"). Nothing links to it, the 2027 calendar has it on the retired list, the films and share card
+  are deleted. **`/nov7/` stays** because Robert put the link on social media: one short page (noindex, not in the
+  sitemap) that says the ride is canceled, "Give to one·n·ten" (onenten.org), group rides in Phoenix and the next
+  ride. Never 404 or redirect it; never point anything at it.
 
 ## 2. How the site is built
 
@@ -616,3 +604,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-12 — Homepage `#today`: "Today I rode for mental clarity" — the sign with the day's word, his line, the route-on-gravel photo, the LOVE-wall bike and a 3 s loop of him at the wall (`data/today.json`).
 - 2026-10-13 — "I rode it" on ride pages: Robert's own long write-up of a ride, in his words (`data/ride-notes.json`), first one TSR, Oct 10.
 - 2026-10-15 — Cycling 4 one·n·ten (Nov 7) is canceled: off NEXT_RIDES, the homepage org card and `#ride` (now Center Ride Out), the riding page and the Phoenix town page; `/nov7/` says so.
+- 2026-10-15 — Everything for that ride comes off the site (homepage, riding page, Phoenix guide, the 2027 calendar, films, share card); `/nov7/` is a short noindex "canceled" page for the links already on social.
