@@ -2642,7 +2642,7 @@ ${locator}
 ${visitBlock}
 ${firstTimeBlock(r, hostLabel)}
     <div class="gr-about">
-      <h2>About the ${esc(r.name)} group ride</h2>
+      <h2>About the ${esc(r.name.replace(/^the\s+/i, ""))} group ride</h2>
       <p class="lede gr-about-lede">${esc(ledeShort)}</p>
       ${(r.description || "").split(/\n+/).filter(Boolean).map((p) => `<p>${esc(p)}</p>`).join("\n      ") || "<p>Details are on the host's page below.</p>"}
     </div>
