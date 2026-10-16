@@ -326,8 +326,6 @@ ${todaySection()}<!-- —— the last ride: the reel, the log —— -->
         <div class="org-text">
           <h3 class="h3">one&middot;n&middot;ten</h3>
           <p>Phoenix nonprofit for LGBTQ+ youth ages 11 to 24. Safe spaces, housing, leadership.</p>
-          <!-- Oct 15, 2026: Cycling 4 one·n·ten (Nov 7) is canceled. Giving still goes straight to one·n·ten. -->
-          <p class="org-ride"><span class="plate">Nov 7</span><span>Cycling 4 one&middot;n&middot;ten is canceled.</span></p>
           <div class="org-acts"><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Give to one&middot;n&middot;ten</a></div>
         </div>
       </article>
@@ -354,7 +352,7 @@ ${todaySection()}<!-- —— the last ride: the reel, the log —— -->
   </div>
 </section>
 
-<!-- —— ride with me: the next ride (Center Ride Out since Nov 7 was canceled, Oct 15, 2026), then the finder —— -->
+<!-- —— ride with me: the next ride (Center Ride Out), then the finder —— -->
 <section class="s ridewith" id="ride" aria-labelledby="ride-h">
   <div class="wrap">
     <h2 class="h2" id="ride-h">Ride with me.</h2>
@@ -370,7 +368,7 @@ ${todaySection()}<!-- —— the last ride: the reel, the log —— -->
         </dl>
         <a class="btn btn--ink" href="https://centerrideout.lalgbtcenter.org/en/" target="_blank" rel="noopener noreferrer">Sign up with the Center</a>
         <a class="link" href="/events/2027/riding/">All my 2027 rides</a>
-        <p class="note-sm">Details from the Center, checked Oct 15. Cycling 4 one&middot;n&middot;ten on Nov 7 is canceled.</p>
+        <p class="note-sm">Details from the Center, checked Oct 15.</p>
       </div>
       <div class="ride-find">
         <p class="eyebrow">Group rides</p>
