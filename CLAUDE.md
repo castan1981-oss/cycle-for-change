@@ -15,7 +15,7 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   piece lightly. They never headline it and they are never a credential.
 - **The orgs he rides for:** one·n·ten (Phoenix), the Los Angeles LGBT Center, San Francisco AIDS
   Foundation. The money goes through their own rides, never through Robert or this site:
-  - Cycling 4 one·n·ten — Nov 7, 2026 (RunSignup)
+  - Cycling 4 one·n·ten — Nov 7, 2026 — **canceled** (Robert, Oct 15, 2026). Giving to one·n·ten goes to onenten.org.
   - Center Ride Out — April 2027, LA → Ojai and back (not LA to San Diego)
   - Cycle to Zero — May 2027
 - **The big thing:** group rides everywhere. Robert shows up, rides, and writes up each ride (who
@@ -29,12 +29,17 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 - Primary internal link target: the homepage `/` or `/events/2027/riding/` ("Ride with me").
   Never `/pledge/`, never `/#board`.
 - **Ride with me = the next ride Robert is doing** (Pass 36). `NEXT_RIDES` in `scripts/chrome.js` is the one
-  list (date order, `until` = last day, Phoenix time): Cycling 4 one·n·ten (→ `/nov7/`, its own page), then Center Ride
-  Out, then Cycle to Zero. The nav button, the menu, the closing block, the homepage's first-screen tile
+  list (date order, `until` = last day, Phoenix time): Center Ride Out, then Cycle to Zero (Cycling 4 one·n·ten came
+  off Oct 15, 2026: canceled). The nav button, the menu, the closing block, the homepage's first-screen tile
   (`#heroRide`) and the bar at the foot of every page (`.ridebar`, `/ridebar.js`) all point at the first one
   still ahead; the script re-picks in the browser. Never on `/resources/` (the 988 bar owns that spot).
-  After Nov 7, 2026: rewrite the homepage `#ride` section for the next ride and rebuild everything.
-- **`/nov7/` is the link Robert shares for Cycling 4 one·n·ten** (Oct 8, 2026): a hand page
+  The homepage `#ride` section is written for Center Ride Out (since Oct 15, 2026). After Apr 25, 2027: rewrite it for
+  the next ride and rebuild everything.
+- **Oct 15, 2026: Cycling 4 one·n·ten is canceled.** `/nov7/` stays up for anyone holding the link: it says the
+  ride is canceled, points to onenten.org and to the next ride, carries `EventCancelled` structured data and the
+  house share card. No sign-up buttons, no day schedule. The riding page carries one line saying so until Nov 7
+  (`NEXT_CANCELED` in build-calendar.js). The notes below describe the page as it was built.
+- **`/nov7/` was the link Robert shared for Cycling 4 one·n·ten** (Oct 8, 2026): a hand page
   (`cfc-site/nov7/index.html` + `nov7.css`, on apply-chrome.py's list) with its own share card
   (`/og-nov7.jpg`, rendered by `python3 tools/og.py templates/og/nov7.html cfc-site/og-nov7.jpg`; bump the
   file number when the card changes, chat apps cache previews). First screen on a phone: the sign filled
@@ -231,8 +236,8 @@ FAQ", "we confirmed", "would not load for us").
 Every content page is a self-contained HTML file inside `cfc-site/`, wearing the shared chrome,
 linking `/chrome.css` then `/styles.css` (absolute paths), ending on the shared closing block (no
 page-specific CTA). `head()` in scripts/chrome.js adds " — Cycle for Change" only when the whole
-title still fits 60 characters; generated ride pages drop the suffix. Internal link target: `/` or `/events/2027/riding/`. Point at the org rides (Nov 7 first,
-until it has passed) when the money comes up.
+title still fits 60 characters; generated ride pages drop the suffix. Internal link target: `/` or `/events/2027/riding/`. Point at the org rides (Center Ride Out
+first, until it has passed) when the money comes up.
 
 ### Field notes (`/field-notes/<slug>/`)
 - Templates: **`templates/field-notes/`** (`_template.html`, `_pillar-template.html`), outside the
@@ -610,3 +615,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-12 — `/cyclefor/`: "What do you cycle for?" Five seconds on video, post it and tag @cycl_eforchange, give us the OK (Netlify form `cycle-for`, release `data/releases/cyclefor-v1.md`, in-browser clip shrink, hourly `release` issues to review); the homepage question links to it.
 - 2026-10-12 — Homepage `#today`: "Today I rode for mental clarity" — the sign with the day's word, his line, the route-on-gravel photo, the LOVE-wall bike and a 3 s loop of him at the wall (`data/today.json`).
 - 2026-10-13 — "I rode it" on ride pages: Robert's own long write-up of a ride, in his words (`data/ride-notes.json`), first one TSR, Oct 10.
+- 2026-10-15 — Cycling 4 one·n·ten (Nov 7) is canceled: off NEXT_RIDES, the homepage org card and `#ride` (now Center Ride Out), the riding page and the Phoenix town page; `/nov7/` says so.

@@ -26,9 +26,9 @@ alt text, and hashtag you write.
   everyone else; he's really riding for himself. Recovery and queer identity
   inform it lightly and never headline.
 - **The orgs:** one·n·ten (Phoenix), the Los Angeles LGBT Center, San Francisco
-  AIDS Foundation. Money goes through their own rides: Cycling 4 one·n·ten
-  (Nov 7, 2026, RunSignup), Center Ride Out (Apr 2027, LA → Ojai and back),
-  Cycle to Zero (May 2027). Point people at the org's ride page, never at a
+  AIDS Foundation. Money goes through their own rides: Center Ride Out (Apr
+  2027, LA → Ojai and back) and Cycle to Zero (May 2027). Cycling 4 one·n·ten
+  (Nov 7, 2026) is canceled; giving to one·n·ten goes to onenten.org. Point people at the org's ride page, never at a
   donation through Robert.
 - **The big thing:** group rides everywhere — Robert rides with local groups
   and writes each one up (who he met, what happened) with his own video — and

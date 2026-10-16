@@ -53,8 +53,8 @@ specifically, without hype.
   rides with group rides everywhere and writes each one up; the site runs a
   worldwide group-ride directory (/rides/), the 2027 calendar
   (/events/2027/), town guides (/towns/), guides and field notes. The money
-  goes through the orgs' own rides (Cycling 4 one·n·ten, Center Ride Out,
-  Cycle to Zero). The kit's mark is 10K, in the Lane Paint look. Arizona is
+  goes through the orgs' own rides (Center Ride Out, Cycle to Zero; Cycling 4
+  one·n·ten on Nov 7, 2026 is canceled). The kit's mark is 10K, in the Lane Paint look. Arizona is
   home: heat, Pivot and State and Lectric are local brands, El Tour de Tucson
   and Mt. Lemmon are the local landmarks. Bring bike knowledge back to group
   riding when it's natural; don't force it.

@@ -2,9 +2,9 @@
 
 Robert Castan rides **10,000 miles in 2027, all on the bike**. It's his commitment — nobody
 pledges, votes or pays on the site. Cycling changed his life; he rides with group rides
-everywhere and writes each one up. The money goes through the orgs' own rides: Cycling 4
-one·n·ten (Nov 7, 2026), the Los Angeles LGBT Center's Center Ride Out (Apr 2027) and San
-Francisco AIDS Foundation's Cycle to Zero (May 2027).
+everywhere and writes each one up. The money goes through the orgs' own rides: the Los
+Angeles LGBT Center's Center Ride Out (Apr 2027) and San Francisco AIDS Foundation's Cycle to Zero
+(May 2027). Cycling 4 one·n·ten (Nov 7, 2026) is canceled; giving to one·n·ten goes to onenten.org.
 
 **Status (Oct 2026):** live — the homepage, a worldwide group-ride directory (`/rides/`), the
 2027 ride calendar (`/events/2027/`), town guides (`/towns/`), guides, field notes and

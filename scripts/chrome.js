@@ -106,8 +106,8 @@ const MARK = `<svg class="brand-mark" viewBox="0 0 760 150" aria-hidden="true" f
 // in date order; everything that says "Ride with me" points at the first one still ahead (`until` is its
 // last day, Phoenix time). /ridebar.js re-picks in the browser, so a page nobody rebuilt never shows a
 // ride that's over. When the list runs out, "Ride with me" goes back to the 2027 list.
+// Oct 15, 2026: Cycling 4 one·n·ten (Nov 7, 2026) is canceled (Robert). It's off this list; /nov7/ says so.
 const NEXT_RIDES = [
-  { until: "2026-11-07", date: "Sat Nov 7", name: "Cycling 4 one\u00b7n\u00b7ten", where: "Phoenix", href: "/nov7/" },
   { until: "2027-04-25", date: "Apr 23\u201325", name: "Center Ride Out", where: "LA to Ojai and back", href: "/events/2027/riding/" },
   { until: "2027-05-23", date: "May 21\u201323", name: "Cycle to Zero", where: "SF to the Russian River", href: "/events/2027/riding/" },
 ];

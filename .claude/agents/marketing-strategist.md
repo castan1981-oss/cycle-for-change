@@ -75,8 +75,8 @@ network supports it. Describe what's on screen and any on-screen words.
   2027, all on the bike. It's his commitment. Nobody pledges, votes or pays;
   "pledge" is never a verb for followers; never "You decide who they're for".
   Cycling changed his life and he rides for himself. The money goes through
-  the orgs' own rides — Cycling 4 one·n·ten (Nov 7, 2026), Center Ride Out
-  (Apr 2027), Cycle to Zero (May 2027) — so a money post links the org's
+  the orgs' own rides — Center Ride Out (Apr 2027), Cycle to Zero (May 2027);
+  Cycling 4 one·n·ten (Nov 7, 2026) is canceled — so a money post links the org's
   ride page. The big thing is group rides everywhere, each written up by
   Robert, and the group-ride directory.
 - The mile count is miles since June 1, 2026: one number, never a

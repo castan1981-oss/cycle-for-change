@@ -556,13 +556,15 @@ const NEXT = { id: 0, slug: "cycling-4-one-n-ten-2026", name: "Cycling 4 one·n�
   notes: "Starts and finishes at Prisma Community Care in Phoenix. Block party 10 to 2.",
   url: "https://runsignup.com/Race/AZ/Phoenix/c4ont", sources: ["https://runsignup.com/Race/AZ/Phoenix/c4ont"], riding: true, month: 11 };
 const NEXT_UNTIL = "2026-11-07";
-const nextBlock = TODAY <= NEXT_UNTIL ? `
+// Oct 15, 2026: Robert: the Nov 7 ride is canceled. The block comes off; until the 7th the riding page says so in one line.
+const NEXT_CANCELED = true;
+const nextBlock = !NEXT_CANCELED && TODAY <= NEXT_UNTIL ? `
       <section class="month" id="next" data-until="${NEXT_UNTIL}">
         <div class="month-h"><h2>First, this November</h2><span class="n">1</span></div>
 ${eventHtml(NEXT)}
       </section>
 <script>(function(){var s=document.getElementById("next");if(s&&new Date().toISOString().slice(0,10)>s.getAttribute("data-until"))s.remove();})();</script>` : "";
-const nextLd = TODAY <= NEXT_UNTIL ? [{ "@context": "https://schema.org", "@type": "SportsEvent", name: NEXT.name, sport: "Cycling", url: NEXT.url,
+const nextLd = !NEXT_CANCELED && TODAY <= NEXT_UNTIL ? [{ "@context": "https://schema.org", "@type": "SportsEvent", name: NEXT.name, sport: "Cycling", url: NEXT.url,
   startDate: NEXT.start, endDate: NEXT.end, eventStatus: "https://schema.org/EventScheduled", eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   location: { "@type": "Place", name: "Prisma Community Care", address: { "@type": "PostalAddress", addressLocality: "Phoenix", addressRegion: "AZ", addressCountry: "US" } },
   organizer: { "@type": "Organization", name: "one·n·ten", url: "https://onenten.org" } }] : [];
@@ -570,7 +572,9 @@ const nextLd = TODAY <= NEXT_UNTIL ? [{ "@context": "https://schema.org", "@type
 if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert\u2019s rides", list: riding,
   h1: "The 2027 rides I&rsquo;m doing", title: "The 2027 rides I'm doing for Cycle for Change",
   description: `${nextBlock ? "Cycling 4 one·n·ten in Phoenix on Nov 7, 2026, then the " : "The "}${riding.length} rides Robert is doing in 2027 as part of the 10,000 miles: dates, distances, sign-up links.`,
-  lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one.</p>`,
+  lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one.</p>${NEXT_CANCELED && TODAY <= NEXT_UNTIL ? `
+    <p class="cal-lead" id="nextOff" data-until="${NEXT_UNTIL}">Cycling 4 one&middot;n&middot;ten on Nov 7, 2026 is canceled. <a href="https://onenten.org" rel="noopener" target="_blank">You can still give to one&middot;n&middot;ten &#8599;</a></p>
+    <script>(function(){var s=document.getElementById("nextOff");if(s&&new Date().toISOString().slice(0,10)>s.getAttribute("data-until"))s.remove();})();</script>` : ""}`,
   before: nextBlock, ldMore: nextLd, rowsH: nextBlock ? "Then 2027" : "",
   after: `\n    ${PH.figure("robert-peace")}` });
 
