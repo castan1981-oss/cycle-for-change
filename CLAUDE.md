@@ -36,10 +36,11 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   The homepage `#ride` section is written for Center Ride Out (since Oct 15, 2026). After Apr 25, 2027: rewrite it for
   the next ride and rebuild everything.
 - **Oct 15, 2026: Cycling 4 one·n·ten (Nov 7) is canceled and off the site** (Robert: "get anything for that ride
-  off of the website"). Nothing links to it, the 2027 calendar has it on the retired list, the films and share card
-  are deleted. **`/nov7/` stays** because Robert put the link on social media: one short page (noindex, not in the
-  sitemap) that says the ride is canceled, "Give to one·n·ten" (onenten.org), group rides in Phoenix and the next
-  ride. Never 404 or redirect it; never point anything at it.
+  off of the website"). Nothing links to it and it's not on the 2027 calendar, not even the retired list. **`/nov7/` stays** because
+  Robert put the link on social media, and it **never announces anything** (Robert, Oct 16: few people signed up,
+  they don't need to know): an easy-going "Ride with me in Phoenix" page — the rides he shows up to (Friday shop ride,
+  TSR), the friends film cut to 15 s (`/film/friends-2.*`, ends on "Somebody always waits at the top"), what's next.
+  noindex, not in the sitemap. Never 404 or redirect it; never point anything at it; never write "canceled" on it.
 
 ## 2. How the site is built
 
@@ -605,3 +606,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-13 — "I rode it" on ride pages: Robert's own long write-up of a ride, in his words (`data/ride-notes.json`), first one TSR, Oct 10.
 - 2026-10-15 — Cycling 4 one·n·ten (Nov 7) is canceled: off NEXT_RIDES, the homepage org card and `#ride` (now Center Ride Out), the riding page and the Phoenix town page; `/nov7/` says so.
 - 2026-10-15 — Everything for that ride comes off the site (homepage, riding page, Phoenix guide, the 2027 calendar, films, share card); `/nov7/` is a short noindex "canceled" page for the links already on social.
+- 2026-10-16 — `/nov7/` says nothing about the ride: "Ride with me in Phoenix" (his rides, the friends film cut to 15 s, what's next); the ride is off the retired list too.
