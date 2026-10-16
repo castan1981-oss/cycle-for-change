@@ -1,8 +1,4 @@
-/* Cycle for Change — /nov7/, the page Robert shares for Cycling 4 one·n·ten (Oct 8, 2026).
-   Loaded after /chrome.css (tokens, type, buttons, header, footer). Light page, Lane Paint:
-   the stencil spells CYCLE FOR, the blank is filled with one·n·ten on the smeared-rose plate.
-   Phones: everything down to the RunSignup button fits the first screen (checked 360×640 up to 430×932).
-   Desktop: the words left, the picture right, its edges dissolving into the page. No type on the photo. */
+/* Cycle for Change — /nov7/: "Ride with me in Phoenix" (Oct 16, 2026). A link Robert shared on social media lands here. */
 
 /* —— first screen —— */
 .rp-ph{display:block}
@@ -97,3 +93,8 @@
 @media (prefers-reduced-motion:reduce){.rp-film-play{transition:none}}
 @media (min-width:900px){.rp-film-fig{max-width:400px}}
 
+/* —— Oct 16, 2026: "Where I ride" — the rides Robert shows up to, the name as the link —— */
+.rp-rides{margin-bottom:12px}
+.rp-rides li > span:last-child{line-height:1.45}
+.rp-ride{font-weight:800;color:var(--asphalt);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;margin-right:4px}
+.rp-ride:focus-visible{outline:2px solid var(--asphalt);outline-offset:3px}
