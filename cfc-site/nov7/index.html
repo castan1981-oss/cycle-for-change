@@ -5,32 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>Ride with me in Phoenix — Cycle for Change</title>
-  <meta name="description" content="The group rides I show up to in Phoenix, and fifteen seconds of riding with friends. Pick one and come ride.">
+  <meta name="description" content="Ride with me in Phoenix. Find a group ride, sign up for a ride I'm doing in 2027, read the blog, follow along on Instagram.">
   <link rel="canonical" href="https://cycleforchange.org/nov7/">
   <meta name="robots" content="noindex, follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cycle for Change">
   <meta property="og:url" content="https://cycleforchange.org/nov7/">
   <meta property="og:title" content="Ride with me in Phoenix — Cycle for Change">
-  <meta property="og:description" content="The group rides I show up to in Phoenix, and fifteen seconds of riding with friends. Pick one and come ride.">
+  <meta property="og:description" content="Ride with me in Phoenix. Find a group ride, sign up for a ride I'm doing in 2027, read the blog, follow along on Instagram.">
   <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ride with me in Phoenix — Cycle for Change">
-  <meta name="twitter:description" content="The group rides I show up to in Phoenix, and fifteen seconds of riding with friends. Pick one and come ride.">
+  <meta name="twitter:description" content="Ride with me in Phoenix. Find a group ride, sign up for a ride I'm doing in 2027, read the blog, follow along on Instagram.">
   <meta name="twitter:image" content="https://cycleforchange.org/og-cfc.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/nov7/nov7.css?v=6">
+  <link rel="stylesheet" href="/nov7/nov7.css?v=7">
 
 </head>
 <body class="rp">
-<!-- /nov7/ (Oct 16, 2026): Robert shared this link on social media for a ride that isn't happening. Few people
-     signed up, so the page doesn't announce anything: it's an easy-going "ride with me in Phoenix" page (the rides
-     he shows up to, the friends film, what's next). noindex, not in the sitemap, nothing on the site links here. -->
+<!-- /nov7/ (Oct 16, 2026): a landing page for links Robert shared on social media. On a phone everything is on
+     the first screen: the sign and four big buttons (a group ride, his 2027 rides, the blog, Instagram). The friends
+     film sits below. Nothing about the old ride. noindex, not in the sitemap, nothing on the site links here. -->
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav site-head" id="nav">
   <div class="wrap nav-in">
@@ -90,7 +90,7 @@
 
 <main id="main">
 
-<section class="rp-hero" aria-labelledby="rp-h">
+<section class="rp-hero lp" aria-labelledby="rp-h">
   <picture class="rp-ph">
     <img src="/img/nov7-1.jpg" srcset="/img/nov7-1-800.jpg 800w, /img/nov7-1.jpg 1200w" sizes="(max-width: 760px) 100vw, 60vw" width="1200" height="900" alt="Robert mid-ride in a red helmet and a purple jersey, Camelback Mountain behind him." fetchpriority="high">
   </picture>
@@ -101,11 +101,12 @@
       <span class="rp-plate" aria-hidden="true">me</span>
       <span class="sr">Cycle for me. Ride with me in Phoenix.</span>
     </h1>
-    <p class="rp-lede">These are the group rides I show up to. Come ride one.</p>
-    <div class="rp-acts">
-      <a class="btn btn--ink rp-go" href="#where">Where I ride</a>
-      <a class="link" href="/rides/az/phoenix/">Every group ride in Phoenix</a>
-    </div>
+    <nav class="lp-go" aria-label="Where to next">
+      <a class="lp-tile lp-tile--first" href="/rides/az/phoenix/"><svg class="mk lp-mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-group"/></svg><span class="lp-t">Find a group ride</span><span class="lp-s">Phoenix and everywhere else</span></a>
+      <a class="lp-tile" href="/events/2027/riding/"><svg class="mk lp-mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-ojai"/></svg><span class="lp-t">Ride with me in 2027</span><span class="lp-s">Sign up for a ride I&rsquo;m doing</span></a>
+      <a class="lp-tile" href="/field-notes/"><svg class="mk lp-mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-journal"/></svg><span class="lp-t">Read the blog</span><span class="lp-s">Notes from the road</span></a>
+      <a class="lp-tile" href="https://www.instagram.com/cycl_eforchange/" target="_blank" rel="noopener noreferrer"><svg class="mk lp-mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-at"/></svg><span class="lp-t">Follow on Instagram</span><span class="lp-s">@cycl_eforchange</span></a>
+    </nav>
   </div>
 </section>
 
@@ -113,7 +114,6 @@
   <div class="wrap rp-cols">
     <div class="rp-col-a">
       <h2 id="film-h">Most mornings, I don’t ride alone.</h2>
-      <p class="rp-film-line">Queer, not queer, fast, slow. Somebody always waits at the top. Come ride with us.</p>
     </div>
     <div class="rp-col-b">
       <figure class="rp-film-fig" data-film data-playing="false">
@@ -130,34 +130,6 @@
           <span class="rp-film-len">0:15</span>
         </figcaption>
       </figure>
-    </div>
-  </div>
-</section>
-
-<section class="rp-s" id="where" aria-labelledby="where-h">
-  <div class="wrap rp-cols">
-    <div class="rp-col-a">
-      <h2 id="where-h">Where I ride.</h2>
-    </div>
-    <div class="rp-col-b">
-      <ul class="rp-day rp-rides">
-        <li><span class="rp-t">Fridays, 7 AM</span><span><a class="rp-ride" href="/rides/scottsdale-az-bicycle-haus-friday-shop-ride/">The Friday shop ride</a> Scottsdale. Social. Nobody gets dropped.</span></li>
-        <li><span class="rp-t">Saturdays, 6 AM</span><span><a class="rp-ride" href="/rides/scottsdale-az-scottsdale-cycling-saturday-ride/">The Saturday Ride (TSR)</a> Scottsdale. Intermediate and rolling. My first one was Oct 10, and I wrote it up.</span></li>
-      </ul>
-      <p class="rp-checked">Times, the route and who runs it are on each ride&rsquo;s page.</p>
-      <a class="link" href="/rides/az/phoenix/">Every group ride in Phoenix</a>
-    </div>
-  </div>
-</section>
-
-<section class="rp-s rp-after" aria-labelledby="after-h">
-  <div class="wrap rp-cols">
-    <div class="rp-col-a">
-      <h2 id="after-h">What&rsquo;s next.</h2>
-    </div>
-    <div class="rp-col-b">
-      <p class="lede">Center Ride Out, April 23 to 25, 2027. Los Angeles to Ojai and back, for the Los Angeles LGBT Center.</p>
-      <div class="cta-row rp-links"><a class="link" href="/events/2027/riding/">My 2027 rides</a><a class="link" href="/">Cycle for Change</a></div>
     </div>
   </div>
 </section>
