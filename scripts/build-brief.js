@@ -18,7 +18,7 @@ const fs = require("fs");
 const path = require("path");
 const CHROME = require("./chrome.js");
 
-const V = 3;
+const V = 4;
 const ROOT = path.resolve(__dirname, "..");
 const OUT = path.join(ROOT, "cfc-site", "brief", "index.html");
 
@@ -63,7 +63,8 @@ ${CHROME.HEADER}
   </section>
 
   <section class="bf-plan" id="plan" aria-label="Ride plan" hidden>
-    <div class="bf-plan-grid">
+    <p class="bf-plan-line"><span id="planLine"></span> <button type="button" class="bf-plan-change" id="planChange" aria-expanded="false" aria-controls="planGrid">Change</button></p>
+    <div class="bf-plan-grid" id="planGrid" hidden>
       <label>Ride name<input type="text" id="rideName" maxlength="80" autocomplete="off"></label>
       <label>Start<input type="datetime-local" id="start"></label>
       <label>Flat speed, mph<input type="number" id="speed" min="6" max="30" step="1" value="15" inputmode="numeric"></label>
