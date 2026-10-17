@@ -225,7 +225,8 @@
     const have = rows.filter((r) => !r.missing);
     const day = data[0].daily, dayKey = iso(startW).slice(0, 10), di = Math.max(0, day.time.indexOf(dayKey));
     const sunrise = day.sunrise[di] ? day.sunrise[di].slice(11) : null, sunset = day.sunset[di] ? day.sunset[di].slice(11) : null;
-    const tz = data[0].timezone_abbreviation || data[0].timezone;
+    const abbr = data[0].timezone_abbreviation || "";
+    const tz = /^GMT[+-]/.test(abbr) || !abbr ? (data[0].timezone || abbr).replace(/_/g, " ") : abbr;
 
     el.wx.innerHTML = rows.map((r, i) => {
       const where = r.d === 0 ? "Start" : r.finish ? "Finish" : r.climb ? `Climb ${ride.climbs.indexOf(r.climb) + 1}` : fmt.mile(r.d).replace(/^\w/, (c) => c.toUpperCase());
@@ -257,10 +258,11 @@
     }
     const w = B.wear(have), wa = B.water(have, total / HOUR);
     el.wear.innerHTML = w ? `<dl class="bf-kv"><div><dt>Wear</dt><dd>${esc(w.wear)}</dd></div><div><dt>Carry</dt><dd>${w.carry.map(esc).join("<br>")}</dd></div></dl>` : "";
-    el.water.innerHTML = wa ? `<p><b>${wa.bottles} ${wa.bottles === 1 ? "bottle" : "bottles"}</b> for the ride, about ${wa.per_hour} an hour.${wa.note ? ` ${esc(wa.note)}` : ""}</p>` : "";
+    el.water.innerHTML = wa ? `<p><b>${wa.bottles} ${wa.bottles === 1 ? "bottle" : "bottles"}</b> for the ride: ${perHourWords(wa.per_hour)}.${wa.note ? ` ${esc(wa.note)}` : ""}</p>` : "";
     const issued = data[0].generationtime_ms !== undefined ? new Date() : null;
     ver.textContent = `Forecast from Open-Meteo, read ${issued ? issued.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" }) : "now"}, hourly, ${tz}.`;
   }
+  const perHourWords = (n) => n >= 2 ? "two an hour" : n >= 1.5 ? "one and a half an hour" : n >= 1 ? "a bottle an hour" : n >= 0.75 ? "a bottle every hour and a quarter" : "a bottle every hour and a half";
   const toMin = (hm) => { const [h, m] = hm.split(":").map(Number); return h * 60 + m; };
   const clockStr = (hm) => { const [h, m] = hm.split(":").map(Number); return clock([0, 0, 0, h, m]); };
 
