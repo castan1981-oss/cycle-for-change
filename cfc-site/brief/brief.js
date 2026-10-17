@@ -200,9 +200,15 @@
     });
     let data;
     try {
-      const r = await fetch(`${WX}?${q}`);
-      if (!r.ok) throw new Error(String(r.status));
-      data = await r.json();
+      // one retry after a short wait: a single dropped request shouldn't leave the forecast blank
+      for (let attempt = 0; ; attempt++) {
+        try {
+          const r = await fetch(`${WX}?${q}`);
+          if (!r.ok) throw new Error(String(r.status));
+          data = await r.json();
+          break;
+        } catch (e) { if (attempt >= 1) throw e; await new Promise((res) => setTimeout(res, 1500)); }
+      }
       if (!Array.isArray(data)) data = [data];
     } catch (e) {
       if (req !== wxReq) return;
