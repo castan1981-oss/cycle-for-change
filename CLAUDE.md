@@ -579,6 +579,57 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - Content loops never touch `scripts/build-home.js`, `cfc-site/index.html`, `cfc-site/home.js` or
   `netlify/functions/`.
 
+## 12. The briefing engine and the trust desk (Oct 17, 2026)
+
+Robert's direction from the "most useful cycling websites" reel (RideBriefing, Bike Insights):
+**every ride page tells you what you're riding into, every fact says who checked it and when, and
+nobody needs an account.** The plan (page system, team, funnel, build order):
+https://claude.ai/artifact/QKG9zHH8dYZtjnFcYgLpCv (republish that URL to update).
+
+### `/brief/` — the ride briefing
+- `scripts/build-brief.js` → `cfc-site/brief/index.html`. The engine is `cfc-site/brief/engine.js`
+  (pure functions, tested in `tools/test/brief-engine.test.js`); the page is `brief.js` + `brief.css`.
+  Bump `V` in the build script when any of the three changes, then rebuild.
+- Drop a GPX → distance, climbing, high point, loop; the climb chart coloured by grade (patina → powder
+  rose → smeared rose → rose ink → asphalt, never green-to-red); climbs by a stated rule (3% over 200 m,
+  100 ft of gain, Strava's length × grade categories); times at a flat speed (slower up, faster down,
+  an estimate); **weather at up to eight points at the hour you reach them** (Open-Meteo hourly, °F,
+  wind as head / cross / tail against the route's heading, sunrise); Wear and Carry from the house
+  table (`wear()`); bottles from `water()` with the desert heat lines; a share link that carries the
+  route (a polyline in the hash, so it works for anyone); the GPX back out.
+- **Free, no account, nothing stored.** The file never leaves the browser. The only requests are to
+  Open-Meteo (heights when the file has none; the forecast) and carry sample coordinates. No cookies,
+  no storage, no form. The page says exactly this under "How it's worked out" and in the verification
+  line; keep both true.
+- Heights: the file's, or Open-Meteo's 90 m model when the file has none; never a route we drew,
+  never Strava's API (§10). A sample ride (`cfc-site/brief/sample.gpx`) is Robert's own file or
+  nothing.
+- Words inside a stretched SVG are banned (they squash): the chart's axis, the climb numbers and the
+  map's marks are HTML positioned by percent (`drawProfile()`, `drawMap()` are the pattern).
+- Not yet in the engine: surface and road mix (the `surface-analyst` desk does it offline for site
+  routes), refill points (the `water-heat` desk, per route), hazards. The page doesn't pretend.
+
+### The desks
+Nineteen specialist agents in `.claude/agents/`, cut by what can be wrong, not by page: Route
+(route-analyst, climb-specialist, surface-analyst, pace-timing), Conditions (weather-on-the-road,
+water-heat, wear-carry, hazards), Local (ride-verifier, ride-scout, the town scouts, checkin-steward),
+Money and orgs (orgs-giving, events-analyst), Story (story-editor, brand-ambassador, graphics-maps),
+Trust (editor, consent-legal, search-answers, access-speed, analytics-growth). The roster, who writes
+what, and the freshness table the Editor holds every page to are in `.claude/agents/README.md`.
+`/brief <ride-slug>` runs the desks on a listed ride's route (`.claude/commands/brief.md`).
+
+The one rule: **a fact is a source plus a date, or it isn't on the page.** Every public page ends on
+a verification line (what was checked, by which desk, from which source, on which date). The Editor
+would rather leave a field blank than guess; so would you.
+
+### The page system (to build, in this order; each step ships something a rider can use)
+1. `/brief/` (this PR). 2. Group-ride pages get the engine and this week's weather on their route.
+3. Climb pages (`/climbs/<id>/`) and `/compare/` (two profiles on one scale, the difference in a
+sentence). 4. Org pages (`/for/<org>/`, 990-sourced, the money sentence) and the 2027 event pages
+briefed day by day. 5. Phoenix town page with the climate window and the one-morning ride, then
+Tucson. 6. `/10000/` and the ride log, live by January 1. Each page type has one reader, one shape,
+two exits; the shapes are on the plan canvas.
+
 ## Changelog (one line per pass; details in git history and the claude.ai project docs)
 
 - 2026-09-18 — Coming-soon gate lifted; field notes, guides, resources, journal served.
@@ -611,3 +662,4 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-16 — `/nov7/` says nothing about the ride: "Ride with me in Phoenix" (his rides, the friends film cut to 15 s, what's next); the ride is off the retired list too.
 - 2026-10-16 — `/nov7/` is a landing page: the sign and four big buttons on the first screen (group ride, 2027 rides, blog, Instagram), the friends film below.
 - 2026-10-16 — Two Valley women's rides (Femmes Friday, Women's BOS, PhxWmn); Phoenix guide routes 8 → 12 (Tempe Town Lake loop, Brown's Ranch, Bartlett Dam Rd, Seven Springs, the guide's first gravel); a top-10 city inside the radius now always names the metro hub (two Scottsdale rides had renamed `/rides/az/phoenix/`). Tempe has 3 provable rides, short of a hub (`research/rides/az/az-tempe-mesa-2026-10-16.md`).
+- 2026-10-17 — `/brief/`, the ride briefing (drop a GPX: climbs, weather where you'll be when you get there, wear, water, back by; free, no account, nothing stored); the briefing team and the trust desk (19 agents, the freshness table, the verification line); `/brief` command; the plan canvas.

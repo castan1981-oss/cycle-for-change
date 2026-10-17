@@ -1,0 +1,308 @@
+/*
+  engine.js — the ride briefing engine (Oct 17, 2026). Pure functions, no DOM, no network.
+  Runs in the browser as window.BRIEF (for /brief/brief.js) and in node for tools/test/brief-engine.test.js.
+
+  What it does, in order:
+    parseGPX(text)            → { name, pts: [{lat, lon, ele?, t?}] }           the rider's file, read as text
+    resample(pts, step)       → [{lat, lon, ele, d}]                           one point every `step` metres along the line
+    smooth(series, n)         → the elevation series averaged over n samples    (barometer and SRTM noise both go)
+    stats(series)             → { m, gain_m, loss_m, low_m, high_m, loop }      distance, climbing, the bounds
+    bins(series, bin_m)       → [{ d0, d1, e0, e1, grade }]                     the climb chart's columns
+    climbs(series)            → [{ i0, i1, d0, d1, len_m, gain_m, avg, max, top_m, cat }]
+    timeline(series, mph)     → [seconds at each sample]                        your flat speed, slower up, faster down
+    plan(series, climbs, opts)→ the sample points to ask the forecast for, each with a bearing and an arrival time
+    windWord(bearing, from)   → "head" | "cross" | "tail"
+    wear(forecast)            → { wear, carry[] }                               the house table, temperature bands
+    water(forecast, hours)    → { per_hour, bottles, note }                     Phoenix rules
+    difficulty(stats)         → "easy" | "moderate" | "hard"                    hard: 60+ mi, or 100+ ft/mi, or 40+ mi at 60+ ft/mi; moderate: 25+ mi or 50+ ft/mi
+    encode / decode           → the share link (a Google-style polyline of the line and of the heights)
+
+  Rules the page states, so they live here in one place:
+    CLIMB_MIN_GRADE  3 %   — a climb starts where the rolling grade over 200 m reaches 3 %
+    CLIMB_MIN_GAIN   30 m  — anything smaller is a rise, not a climb (about 100 ft)
+    CAT              Strava's rule: length (m) × average grade (%) → 8,000 cat 4 · 16,000 cat 3 · 32,000 cat 2 · 64,000 cat 1 · 80,000 HC
+    SPEED            v = flat ÷ (1 + 0.12 × grade%) uphill; v = flat × min(1.35, 1 + 0.04 × |grade%|) below −2 %. An estimate.
+*/
+(function (root, factory) {
+  if (typeof module === "object" && module.exports) module.exports = factory();
+  else root.BRIEF = factory();
+})(typeof self !== "undefined" ? self : this, function () {
+  "use strict";
+  const R = 6371008.8;                 // earth radius, metres (IUGG mean)
+  const MI = 1609.344, FT = 0.3048;
+  const rad = (x) => (x * Math.PI) / 180, deg = (x) => (x * 180) / Math.PI;
+
+  function dist(a, b) {                // haversine, metres
+    const dLat = rad(b.lat - a.lat), dLon = rad(b.lon - a.lon);
+    const s = Math.sin(dLat / 2) ** 2 + Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(dLon / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(s));
+  }
+  function bearing(a, b) {             // degrees from north, 0–360
+    const y = Math.sin(rad(b.lon - a.lon)) * Math.cos(rad(b.lat));
+    const x = Math.cos(rad(a.lat)) * Math.sin(rad(b.lat)) - Math.sin(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.cos(rad(b.lon - a.lon));
+    return (deg(Math.atan2(y, x)) + 360) % 360;
+  }
+
+  // ---- the file ----
+  // GPX from a bike computer, Strava, Ride with GPS, Komoot, Garmin: <trkpt> (a recorded ride) or <rtept> (a planned
+  // route). Read with a regex so the same code runs in node; a GPX is simple enough for it.
+  function parseGPX(text) {
+    if (typeof text !== "string" || !/<gpx[\s>]/i.test(text)) throw new Error("That isn’t a GPX file.");
+    const nameM = text.match(/<trk>[\s\S]*?<name>([^<]*)<\/name>/i) || text.match(/<rte>[\s\S]*?<name>([^<]*)<\/name>/i) || text.match(/<metadata>[\s\S]*?<name>([^<]*)<\/name>/i);
+    const name = nameM ? decode(nameM[1].trim()) : "";
+    const pts = [];
+    const re = /<(trkpt|rtept)\b([^>]*)>([\s\S]*?)<\/\1>|<(trkpt|rtept)\b([^>]*)\/>/gi;
+    let m;
+    while ((m = re.exec(text))) {
+      const attrs = m[2] || m[5] || "", inner = m[3] || "";
+      const lat = +(attrs.match(/lat="([^"]+)"/) || [])[1], lon = +(attrs.match(/lon="([^"]+)"/) || [])[1];
+      if (!isFinite(lat) || !isFinite(lon)) continue;
+      const ele = (inner.match(/<ele>([^<]+)<\/ele>/) || [])[1];
+      const t = (inner.match(/<time>([^<]+)<\/time>/) || [])[1];
+      const p = { lat, lon };
+      if (ele !== undefined && isFinite(+ele)) p.ele = +ele;
+      if (t) p.t = t;
+      pts.push(p);
+    }
+    if (pts.length < 2) throw new Error("No track in that file. Export the route as a GPX with the track in it.");
+    return { name, pts };
+  }
+  function decode(s) { return s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&apos;/g, "'"); }
+
+  // ---- the line ----
+  // One point every `step` metres (default 25). Elevation interpolated where the file has it; null where it doesn't,
+  // so the page knows to ask for heights.
+  function resample(pts, step = 25) {
+    const out = [];
+    const hasEle = pts.every((p) => typeof p.ele === "number");
+    let d = 0, carry = 0;
+    out.push({ lat: pts[0].lat, lon: pts[0].lon, ele: hasEle ? pts[0].ele : null, d: 0 });
+    for (let i = 1; i < pts.length; i++) {
+      const a = pts[i - 1], b = pts[i], seg = dist(a, b);
+      if (seg === 0) continue;
+      let pos = step - carry;                                   // distance along this segment to the next sample
+      while (pos <= seg) {
+        const f = pos / seg;
+        out.push({ lat: a.lat + (b.lat - a.lat) * f, lon: a.lon + (b.lon - a.lon) * f, ele: hasEle ? a.ele + (b.ele - a.ele) * f : null, d: d + pos });
+        pos += step;
+      }
+      carry = seg - (pos - step);
+      d += seg;
+    }
+    const last = pts[pts.length - 1];
+    if (out[out.length - 1].d < d - 1) out.push({ lat: last.lat, lon: last.lon, ele: hasEle ? last.ele : null, d });
+    return out;
+  }
+  function smooth(series, n = 5) {         // centred moving average of ele, in place-safe copy
+    const h = Math.floor(n / 2), out = series.map((p) => ({ ...p }));
+    for (let i = 0; i < series.length; i++) {
+      let s = 0, c = 0;
+      for (let j = Math.max(0, i - h); j <= Math.min(series.length - 1, i + h); j++) { s += series[j].ele; c++; }
+      out[i].ele = s / c;
+    }
+    return out;
+  }
+  function stats(series) {
+    let gain = 0, loss = 0, lo = Infinity, hi = -Infinity;
+    let ref = series[0].ele;                                   // 2 m hysteresis: a wobble isn't a climb
+    for (const p of series) {
+      lo = Math.min(lo, p.ele); hi = Math.max(hi, p.ele);
+      const dv = p.ele - ref;
+      if (dv >= 2) { gain += dv; ref = p.ele; } else if (dv <= -2) { loss -= dv; ref = p.ele; }
+    }
+    const a = series[0], b = series[series.length - 1];
+    return { m: series[series.length - 1].d, gain_m: gain, loss_m: loss, low_m: lo, high_m: hi, loop: dist(a, b) < 500 };
+  }
+  // the climb chart: one column per `bin_m` of road, coloured by its grade
+  function bins(series, bin_m = 160.9344) {
+    const out = [];
+    const total = series[series.length - 1].d;
+    for (let d0 = 0; d0 < total; d0 += bin_m) {
+      const d1 = Math.min(total, d0 + bin_m);
+      const e0 = eleAt(series, d0), e1 = eleAt(series, d1);
+      out.push({ d0, d1, e0, e1, grade: d1 > d0 ? ((e1 - e0) / (d1 - d0)) * 100 : 0 });
+    }
+    return out;
+  }
+  function eleAt(series, d) {
+    let lo = 0, hi = series.length - 1;
+    while (lo < hi) { const mid = (lo + hi) >> 1; if (series[mid].d < d) lo = mid + 1; else hi = mid; }
+    const b = series[lo], a = series[Math.max(0, lo - 1)];
+    if (b.d === a.d) return b.ele;
+    const f = (d - a.d) / (b.d - a.d);
+    return a.ele + (b.ele - a.ele) * Math.min(1, Math.max(0, f));
+  }
+  function gradeAt(series, i, win = 200) {   // rolling grade over `win` metres centred on i, in %
+    const d = series[i].d;
+    const e0 = eleAt(series, Math.max(0, d - win / 2)), e1 = eleAt(series, Math.min(series[series.length - 1].d, d + win / 2));
+    const span = Math.min(series[series.length - 1].d, d + win / 2) - Math.max(0, d - win / 2);
+    return span > 0 ? ((e1 - e0) / span) * 100 : 0;
+  }
+  const CLIMB_MIN_GRADE = 3, CLIMB_MIN_GAIN = 30, CLIMB_GAP_M = 300;
+  const CAT = [[80000, "HC"], [64000, "1"], [32000, "2"], [16000, "3"], [8000, "4"]];
+  function category(len_m, avg) { const score = len_m * avg; for (const [n, c] of CAT) if (score >= n) return c; return null; }
+  function climbs(series) {
+    const g = series.map((_, i) => gradeAt(series, i));
+    const runs = [];
+    let i = 0;
+    while (i < series.length) {
+      if (g[i] >= CLIMB_MIN_GRADE) {
+        let j = i;
+        while (j < series.length && g[j] >= CLIMB_MIN_GRADE) j++;
+        runs.push([i, j - 1]);
+        i = j;
+      } else i++;
+    }
+    // join runs separated by a short flat or a short dip (under CLIMB_GAP_M that doesn't fall more than 2 %)
+    const joined = [];
+    for (const r of runs) {
+      const last = joined[joined.length - 1];
+      if (last) {
+        const gap = series[r[0]].d - series[last[1]].d;
+        const drop = (series[r[0]].ele - series[last[1]].ele) / Math.max(1, gap) * 100;
+        if (gap <= CLIMB_GAP_M && drop > -2) { last[1] = r[1]; continue; }
+      }
+      joined.push([r[0], r[1]]);
+    }
+    const out = [];
+    for (const [i0, i1] of joined) {
+      const a = series[i0], b = series[i1];
+      const len = b.d - a.d, gain = b.ele - a.ele;
+      if (gain < CLIMB_MIN_GAIN || len <= 0) continue;
+      const avg = (gain / len) * 100;
+      let max = 0;
+      for (let k = i0; k <= i1; k++) max = Math.max(max, gradeAt(series, k, 100));
+      out.push({ i0, i1, d0: a.d, d1: b.d, len_m: len, gain_m: gain, avg, max, top_m: b.ele, cat: category(len, avg) });
+    }
+    return out;
+  }
+  // seconds from the start at each sample, at `mph` on the flat
+  function timeline(series, mph) {
+    const flat = (mph * MI) / 3600;                            // m/s
+    const t = [0];
+    for (let i = 1; i < series.length; i++) {
+      const seg = series[i].d - series[i - 1].d;
+      const grade = seg > 0 ? ((series[i].ele - series[i - 1].ele) / seg) * 100 : 0;
+      let v = flat;
+      if (grade > 0) v = flat / (1 + 0.12 * grade);
+      else if (grade < -2) v = flat * Math.min(1.35, 1 + 0.04 * -grade);
+      t.push(t[i - 1] + seg / Math.max(0.5, v));
+    }
+    return t;
+  }
+  // where to ask the forecast: the start, every ~`every_m`, each climb's foot, the finish — at most `max` points
+  function plan(series, cl, { every_m = 12 * MI, max = 8 } = {}) {
+    const total = series[series.length - 1].d;
+    const wanted = [0];
+    for (let d = every_m; d < total - every_m / 2; d += every_m) wanted.push(d);
+    for (const c of cl) wanted.push(c.d0);
+    wanted.push(total);
+    const uniq = [...new Set(wanted.map((d) => Math.round(d / 1000)))].sort((a, b) => a - b).map((k) => k * 1000);
+    let picks = uniq.filter((d, i) => i === 0 || d - uniq[i - 1] >= 3000);
+    if (!picks.includes(0)) picks.unshift(0);
+    while (picks.length > max) {       // drop the point nearest its neighbours, never the start or the finish
+      let worst = 1, gap = Infinity;
+      for (let i = 1; i < picks.length - 1; i++) { const g = Math.min(picks[i] - picks[i - 1], picks[i + 1] - picks[i]); if (g < gap) { gap = g; worst = i; } }
+      picks.splice(worst, 1);
+    }
+    return picks.map((d) => {
+      const i = indexAt(series, d), j = Math.min(series.length - 1, i + 20);   // bearing over the next ~500 m
+      const climb = cl.find((c) => Math.abs(c.d0 - d) < 1500);
+      return { d, i, lat: series[i].lat, lon: series[i].lon, bearing: j > i ? bearing(series[i], series[j]) : 0, climb: climb || null, finish: d >= total };
+    });
+  }
+  function indexAt(series, d) { let lo = 0, hi = series.length - 1; while (lo < hi) { const mid = (lo + hi) >> 1; if (series[mid].d < d) lo = mid + 1; else hi = mid; } return lo; }
+  // the wind is reported as the direction it blows FROM; a wind from where you're heading is in your face
+  function windWord(travel, from) {
+    const diff = Math.abs(((from - travel) % 360 + 540) % 360 - 180);  // 0 = wind from straight ahead … 180 = from behind
+    if (diff <= 45) return "head";
+    if (diff >= 135) return "tail";
+    return "cross";
+  }
+  // ---- wear, carry, water (the house table; °F, mph) ----
+  function wear(points) {
+    const temps = points.map((p) => p.temp).filter((x) => typeof x === "number");
+    if (!temps.length) return null;
+    const start = temps[0], peak = Math.max(...temps), low = Math.min(...temps);
+    const rain = Math.max(0, ...points.map((p) => p.rain || 0));
+    const gust = Math.max(0, ...points.map((p) => p.gust || 0));
+    let w;
+    if (low < 40) w = "Winter kit: thermal jacket, tights, winter gloves, shoe covers.";
+    else if (low < 50) w = "Thermal jacket or a long-sleeve jersey with a vest, knee warmers, full-finger gloves.";
+    else if (low < 60) w = "Long sleeves or arm warmers, knee warmers to start.";
+    else if (low < 70) w = peak >= 78 ? "Arm warmers to start, off within the hour." : "Arm warmers, maybe a vest for the first descent.";
+    else if (peak < 90) w = "Summer kit. Nothing extra.";
+    else w = "Summer kit and sun sleeves. Start as early as you can.";
+    const carry = [];
+    if (rain >= 30) carry.push(`Rain jacket (${rain}% chance of rain on the way).`);
+    if (peak - start >= 15 && low < 70) carry.push("Somewhere to stow the warmers; it warms up a lot.");
+    if (gust >= 20) carry.push(`Gusts to ${Math.round(gust)} mph. Hold your line on the open stretches.`);
+    carry.push("Spare tube, pump, multitool.");
+    return { wear: w, carry };
+  }
+  function water(points, hours) {
+    const temps = points.map((p) => p.feels ?? p.temp).filter((x) => typeof x === "number");
+    if (!temps.length || !(hours > 0)) return null;
+    const peak = Math.max(...temps);
+    let per = 0.75, note = "";
+    if (peak >= 100) { per = 2; note = "Over 100° on the road. Not a ride for the afternoon. Start at first light or ride it another day."; }
+    else if (peak >= 90) { per = 1.5; note = "Hot. Refill every chance you get; don’t pass a tap."; }
+    else if (peak >= 80) { per = 1; note = "Warm. Two bottles, and know where the refill is."; }
+    else if (peak >= 70) { per = 0.75; }
+    else { per = 0.6; }
+    return { per_hour: per, bottles: Math.max(1, Math.ceil(per * hours)), note };
+  }
+  function difficulty(st) {
+    const mi = st.m / MI, perMi = (st.gain_m / FT) / Math.max(1, mi);
+    if (mi >= 60 || perMi >= 100 || (mi >= 40 && perMi >= 60)) return "hard";
+    if (mi >= 25 || perMi >= 50) return "moderate";
+    return "easy";
+  }
+  // ---- the share link: a Google-style polyline of the line (5 decimals) and of the heights (metres, whole) ----
+  function encodeNums(nums, scale) {
+    let out = "", prev = 0;
+    for (const n of nums) {
+      let v = Math.round(n * scale) - prev; prev += v;
+      v = v < 0 ? ~(v << 1) : v << 1;
+      while (v >= 0x20) { out += String.fromCharCode((0x20 | (v & 0x1f)) + 63); v >>= 5; }
+      out += String.fromCharCode(v + 63);
+    }
+    return out;
+  }
+  function decodeNums(str, scale) {
+    const out = []; let i = 0, prev = 0;
+    while (i < str.length) {
+      let b, shift = 0, res = 0;
+      do { b = str.charCodeAt(i++) - 63; res |= (b & 0x1f) << shift; shift += 5; } while (b >= 0x20);
+      prev += res & 1 ? ~(res >> 1) : res >> 1;
+      out.push(prev / scale);
+    }
+    return out;
+  }
+  // Douglas–Peucker on (d, ele) and on (lat, lon) is overkill for a share link: keep every k-th sample so the chart
+  // survives, up to `n` points. 600 samples of a 60-mile ride = one every 160 m.
+  function thin(series, n = 600) {
+    const k = Math.max(1, Math.ceil(series.length / n));
+    const out = series.filter((_, i) => i % k === 0);
+    if (out[out.length - 1] !== series[series.length - 1]) out.push(series[series.length - 1]);
+    return out;
+  }
+  function encode(series, meta) {
+    const s = thin(series);
+    const flat = []; for (const p of s) { flat.push(p.lat, p.lon); }
+    return btoa64(JSON.stringify({ ...meta, ver: 1, p: encodeNums(flat, 1e5), e: encodeNums(s.map((p) => p.ele), 1) }));
+  }
+  function decodeShare(hash) {
+    const o = JSON.parse(atob64(hash));
+    if (o.ver !== 1) throw new Error("share link version");
+    const flat = decodeNums(o.p, 1e5), ele = decodeNums(o.e, 1);
+    const pts = [];
+    for (let i = 0; i < flat.length; i += 2) pts.push({ lat: flat[i], lon: flat[i + 1], ele: ele[i / 2] });
+    const { p, e, ver, ...meta } = o;
+    return { pts, meta };
+  }
+  function btoa64(s) { const b = typeof Buffer !== "undefined" ? Buffer.from(s, "utf8").toString("base64") : btoa(unescape(encodeURIComponent(s))); return b.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); }
+  function atob64(s) { const b = s.replace(/-/g, "+").replace(/_/g, "/"); return typeof Buffer !== "undefined" ? Buffer.from(b, "base64").toString("utf8") : decodeURIComponent(escape(atob(b))); }
+
+  return { MI, FT, dist, bearing, parseGPX, resample, smooth, stats, bins, eleAt, gradeAt, climbs, category, timeline, plan, windWord, wear, water, difficulty, encode, decodeShare, encodeNums, decodeNums, thin, CLIMB_MIN_GRADE, CLIMB_MIN_GAIN };
+});
