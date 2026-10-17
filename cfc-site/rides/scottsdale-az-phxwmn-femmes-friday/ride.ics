@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:scottsdale-az-phxwmn-femmes-friday@cycleforchange.org
+DTSTAMP:20261016T000000Z
+DTSTART;TZID=America/Phoenix:20261023T060000
+DTEND;TZID=America/Phoenix:20261023T080000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270315T235959Z
+SUMMARY:Femmes Friday — Scottsdale\, AZ
+LOCATION:Olive & Ivy\, Scottsdale Waterfront\, N Marshall Way\, Scottsdal
+ e\, AZ 85251
+DESCRIPTION:Pace: Social.\nSchedule: Every Friday\, roll-out 6:00 am\, fr
+ om Olive & Ivy at the Scottsdale Waterfront. Coffee after at Arcadia Far
+ ms Marketplace.\nConfirm with the host before you go.\nhttps://cycleforc
+ hange.org/rides/scottsdale-az-phxwmn-femmes-friday/
+URL:https://cycleforchange.org/rides/scottsdale-az-phxwmn-femmes-friday/
+END:VEVENT
+END:VCALENDAR

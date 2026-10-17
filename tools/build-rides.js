@@ -520,7 +520,10 @@ function buildMetros(allRides) {
     // the ten biggest cities hold their name against a busy suburb (Phoenix, not Scottsdale), so the
     // home city's hub URL doesn't move when a suburb gains a few rides
     const covered = list.filter((o) => o.state === c.state && miles(c, o) <= METRO_RADIUS).sort((a, b) => score(b) - score(a) || rank(a.city) - rank(b.city));
-    const best = covered[0] && score(covered[0]) > score(c) ? covered[0] : c;
+    // Oct 16, 2026: a top-10 city inside the radius always names the hub. The +8 bonus alone let two new
+    // Scottsdale rides (13 of its own vs Phoenix's 7) rename the Phoenix hub and take /rides/az/phoenix/ down.
+    const big = covered.find((o) => rank(o.city) < 10);
+    const best = big || (covered[0] && score(covered[0]) > score(c) ? covered[0] : c);
     let center = { lat: best.lat, lng: best.lng }, name = best.city;
     let ridesIn = rides.filter((r) => r.state === c.state && miles(center, r) <= METRO_RADIUS);
     if (ridesIn.length < METRO_MIN) { center = { lat: c.lat, lng: c.lng }; name = c.city; ridesIn = c.rides; }
