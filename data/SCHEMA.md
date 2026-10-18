@@ -331,3 +331,15 @@ Approved reviews only, newest first, written by `tools/reviews-post.js` (never b
 
 `{ "<ride slug>": [{ src, poster, width, height, seconds, caption, alt, added }] }` — the first entry shows on
 the ride page as "From the ride". `caption` is place · month; `alt` says what's in it.
+
+## Ride write-ups — `data/ride-notes.json` (Oct 13, 2026)
+
+`{ "<ride slug>": [{ id, date, line, paras[] }] }` — Robert's own write-up of a ride he rode, shown on the
+ride page as "I rode it", newest first. `date` is the day he rode it (YYYY-MM-DD, printed "Sat, Oct 10, 2026");
+`line` is the short label above it ("My first TSR"); `paras` is one string per paragraph. The first four
+paragraphs show and the rest sits under "The rest of it" — both are in the HTML, so both are crawled.
+
+**His words, nobody else's.** Claude can lay the page out and fix a typo he points at. It never writes the
+write-up, never tidies his sentences, and never turns Strava numbers into prose (CLAUDE.md §4, §10). Other
+people named in a write-up are his call, the same as the people in his footage. A write-up shows only while
+the ride is still listed; a hidden ride's page drops it with everything else.

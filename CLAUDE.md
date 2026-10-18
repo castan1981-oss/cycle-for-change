@@ -250,6 +250,32 @@ One page per group ride Robert rides: who he met, what happened, his own video a
 **his own words**. Claude can lay out the page, cut the video, fix a typo — not invent the story,
 and not turn Strava data into a recap. People in it are only recognisable with their OK (§10).
 
+### What do you cycle for? (`/cyclefor/`, Oct 12, 2026)
+Robert's idea from a ride: every ride he says who he's riding for that day, and he asks everyone else for five
+or ten seconds on video. The way in is **their own Instagram** (film it, post it, tag @cycl_eforchange). The page's
+form is **the OK** that lets him use their clip in his reels, boosted posts and on the site.
+- Hand page (`cfc-site/cyclefor/index.html` + `cyclefor.css` + `cyclefor.js`, on apply-chrome.py's list). The sign's
+  blank turns through a few answers and shows theirs after they send. The homepage `#why` links here.
+- The Netlify form `cycle-for`: what they cycle for, first name, Instagram, post link, optional clip, optional
+  email, three required boxes (18+, they're in it and anyone else said OK, we can use it), `release`, `agreed_at`.
+  A clip over 7.5 MB is shrunk in the browser (played once into a recorder at 720p, first 20 s); if that can't
+  happen, the page tells them to post it and tag us instead.
+- **The release wording is `data/releases/cyclefor-v1.md`. Never edit it.** New wording = `cyclefor-v2.md` + the
+  form's `release` value + the page text; the test (`tools/test/cyclefor.test.js`) keeps page and file identical.
+- Review: hourly, `tools/cyclefor-pull.js` (in `ride-reviews.yml`) opens one issue per complete OK, labelled
+  `release`: name, handle, answer, release version, time, a checklist. No email, no clip link (public repo); the
+  record and the clip stay in Netlify → Forms → cycle-for. Robert labels `cleared` to use it; closes to drop it.
+  Take-backs come by Instagram DM: within 7 days delete our posts with it, take it off the site, stop any boost.
+- Other people's faces in these clips are fine **with a cleared OK** (§10). Under 18: never.
+
+### Today I rode for (`#today` on the homepage, Oct 12, 2026)
+Every ride Robert says who he rode for that day. `data/today.json` (date, `for` = the plate, `line` = his words,
+`photo`, `photo2`, `film`) → `todaySection()` in `scripts/build-home.js` → a light section between the numbers and
+the road: the sign with the day's word on the plate, his line, a link to `/cyclefor/`, his pictures. Phones: words,
+the big photo, the film (a still until tapped, `/home.js`), the wide photo. Media in `cfc-site/img/today/` and
+`cfc-site/film/today-*` (iPhone HDR tone-mapped to SDR, no audio; bump the number on a recut). His words and his
+pictures only; only Robert recognisable. Change the JSON and run `node scripts/build-home.js`.
+
 ### Guides (`/guides/`)
 Sorted by stage: 01 Pick a ride · 02 Get ready · 03 Raise the money, then "From the road" (field
 notes, journal). New guides go in the right stage. The guide "Pledge-per-mile fundraising,
@@ -390,6 +416,11 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   Bicycle Haüs's own build photos from their Instagram in `cfc-site/img/haus/` — **used with the shop's OK**
   (Robert, Oct 9). Robert's Crux 5 LTD first. Photos only — no captions, no credit line, no words baked into a photo (Robert, Oct 9: the labels were cheesy; the Crux's Instagram text was painted out → `crux-ltd-2.jpg`). Laid out as the shop floor: every bike on one hairline, tops stepping up and down, the Crux tallest; phones get the same skyline as a swipe strip. The line-art
   version is saved, not shown: `rides/art/haus-wall-1.svg` (`python3 tools/draw-haus-wall.py`, `saved_drawing`).
+- **"I rode it"** (Oct 13, 2026): Robert's own write-up of a ride he rode, on that ride's page, under the route and
+  above the reviews. `data/ride-notes.json` → `{ slug: [{ id, date, line, paras[] }] }` (`data/SCHEMA.md`), newest
+  first; four paragraphs show, the rest under "The rest of it" (both crawled). **His words only** — never written,
+  tidied or recapped from Strava (§4, §10); people he names are his call. Now: TSR, Sat, Oct 10, 2026, his first one.
+  A review (`data/ride-reviews.json`) is the short form, capped at 600 characters; a write-up is the long one.
 - **Reviews:** "Rider reviews" sits beside the film (or alone): counts, "would ride it again", the pace
   most riders named, the newest three, the rest folded, and "Review this ride" (the Netlify form
   `ride-review` — again yes/no, pace, words 20–600, first name, from, optional email). `#review` opens the
@@ -517,7 +548,8 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
   is the exception** (Robert, Oct 8, 2026: "cars are ok in some video"): a parked or passing car in the
   background of ride footage is fine. The homepage hero and the homepage reel stay car-free.
 - **Only Robert is recognisable.** Riders from behind or far off are fine; oncoming faces get
-  cropped. Other people need their OK.
+  cropped. Other people need their OK — for clips people send about what they cycle for, that's a cleared
+  `/cyclefor/` OK (§5).
 - Captions say where the picture was really taken (place · month).
 - The homepage hero (Pass 32) is Robert on the canal path, **clear, crisp, ungraded**:
   `img/sign-print-4.jpg` (1200×1600) and `-4-phone.jpg` (960×1280). Phones: the photo fills the
@@ -575,3 +607,6 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-08 — `/nov7/`: the 26 s ride-with-friends film under the first screen; on desktop the hero is the riding wall (three panels of group-ride footage) with a light wash under the words.
 - 2026-10-09 — No site email: the footer signup becomes "Mile updates" → Instagram, the welcome email is gone, reviews come in as hourly GitHub issues (email optional via Resend's shared sender); the "10000" numeral comes off the closing block.
 - 2026-10-09 — Routes on ride pages: map, climb chart, turns, GPX and pace from the people who run the ride (`data/ride-routes.json` → `tools/route-build.py`); "Send us the route" on every ride page → `route` issues; Gainey Village and Yuma pins fixed; the blank Strava button under "Where to find them" fixed (hub link styles were leaking).
+- 2026-10-12 — `/cyclefor/`: "What do you cycle for?" Five seconds on video, post it and tag @cycl_eforchange, give us the OK (Netlify form `cycle-for`, release `data/releases/cyclefor-v1.md`, in-browser clip shrink, hourly `release` issues to review); the homepage question links to it.
+- 2026-10-12 — Homepage `#today`: "Today I rode for mental clarity" — the sign with the day's word, his line, the route-on-gravel photo, the LOVE-wall bike and a 3 s loop of him at the wall (`data/today.json`).
+- 2026-10-13 — "I rode it" on ride pages: Robert's own long write-up of a ride, in his words (`data/ride-notes.json`), first one TSR, Oct 10.

@@ -58,6 +58,13 @@
     Cache-Control = "public, max-age=3600, must-revalidate"
 
 # Oct 8, 2026: a short link for the reel and the caption — the Friday Shop Ride's film and reviews
+# The boost graphic's QR (Oct 11, 2026): new riders land on the top of the ride page, not the reviews.
+[[redirects]]
+  from = "/fridayride"
+  to = "/rides/scottsdale-az-bicycle-haus-friday-shop-ride/"
+  status = 302
+  force = true
+
 [[redirects]]
   from = "/shopride"
   to = "/rides/scottsdale-az-bicycle-haus-friday-shop-ride/#reviews"
@@ -66,6 +73,13 @@
 
 # Oct 10, 2026: a short link for TSR (the QR Robert sends riders) — opens TSR in the ride check-in at /ride/,
 # the page built for it: check in, add photos, review it. Was the ride page's review form until later that day.
+# The TSR boost graphic's QR (Oct 11, 2026): opens the review form on the TSR page.
+[[redirects]]
+  from = "/tsrreview"
+  to = "/rides/scottsdale-az-scottsdale-cycling-saturday-ride/#review"
+  status = 302
+  force = true
+
 [[redirects]]
   from = "/tsr"
   to = "/ride/?r=scottsdale-az-scottsdale-cycling-saturday-ride"
@@ -77,6 +91,21 @@
   from = "/try"
   to = "/try/checkin/"
   status = 302
+  force = true
+
+# —— Oct 12, 2026: one URL per page. Every page was also served at /…/index.html with a canonical
+# pointing at the clean URL, so Search Console kept reporting "Alternate page with proper canonical tag".
+# These 301s send the duplicate to the clean URL; the root gets its own rule.
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*/index.html"
+  to = "/:splat/"
+  status = 301
   force = true
 
 [[redirects]]
