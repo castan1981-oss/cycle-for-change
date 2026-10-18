@@ -46,6 +46,15 @@
   for = "/photos/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+    # Oct 18, 2026: the originals (33 MB) are the source for tools/grade.py, not something to index or link.
+    X-Robots-Tag = "noindex, nofollow"
+
+# Oct 18, 2026: the data file behind the directory. Nothing on the site reads it over HTTP (/tonight/ and
+# /ride/ read live.json, hubs read index.json); it carries host contact details. Not for search engines.
+[[headers]]
+  for = "/rides/rides.json"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
 
 [[headers]]
   for = "/*.css"
@@ -375,5 +384,18 @@
 [[redirects]]
   from = "/rides/united-kingdom/watford/*"
   to = "/rides/united-kingdom/london/:splat"
+  status = 301
+
+# Oct 18, 2026 (growth plan, Phase 2): Tempe has 3 provable rides, short of a hub (OWN_MIN is 8), and people search
+# "tempe cycling group ride". Until the hub exists, the city goes to the metro hub it belongs to. Remove when
+# research/rides/az/ proves five more Tempe rides and the build makes the hub.
+[[redirects]]
+  from = "/rides/az/tempe/"
+  to = "/rides/az/phoenix/"
+  status = 301
+
+[[redirects]]
+  from = "/rides/az/tempe/*"
+  to = "/rides/az/phoenix/"
   status = 301
   force = true

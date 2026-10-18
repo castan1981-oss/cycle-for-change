@@ -1453,6 +1453,8 @@ function findPage(rides) {
     { href: "/events/2027/multi-day-tours/", name: "Multi-day tour", sub: "Days in a row", n: calN("Multi-day tour"), markId: "distance" },
     { href: "/events/2027/races/", name: "Race", sub: "Road, crit and stage races", n: calN("Race"), markId: "flag" },
     { href: "/events/2027/riding/", name: "Ride with me", sub: "The six I'm doing in 2027", n: riding, markId: "ride-day" },
+    // Oct 18, 2026: the briefing had no link anywhere on the site (Phase 2 crawl: zero inlinks)
+    { href: "/brief/", name: "Brief a ride", sub: "Drop a GPX: climbs, weather, water", markId: "climb" },
   ].filter((k) => k.n == null || k.n > 0);
   const jsonld = { "@context": "https://schema.org", "@graph": [
     { "@type": "CollectionPage", "@id": canonical, name: "Find a ride", description, url: canonical, author: AUTHOR, publisher: PUBLISHER, breadcrumb: breadcrumbLd(crumbs) },
@@ -2344,6 +2346,7 @@ function routeBlock(r, rt, listed) {
       <h2 id="gr-route-h">The route</h2>
       <p>${where ? `${esc(where.line)} Once the host sends it to us, it shows here too: a map, a climb chart and a GPX for your bike computer.` : "Nobody has sent us this ride’s route yet. When the host does, it shows here: a map, a climb chart and a GPX for your bike computer."}</p>
       ${where ? `<p class="gr-route-where"><a class="link" href="${attr(where.url)}" rel="noopener nofollow">Routes on ${esc(where.label)}</a></p>` : ""}
+      <p class="gr-route-where"><a class="link" href="/brief/">Have the GPX? Brief it yourself</a>: climbs, the weather where you’ll be, water, back by.</p>
       ${send}
     </section>`;
   }
