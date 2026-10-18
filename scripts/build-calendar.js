@@ -542,36 +542,13 @@ for (const c of CATS) {
     h1: `2027 ${CAT_H1[c]} in the US`, title: `2027 ${CAT_H1[c]} in the US`,
     description: fitNames(`${list.length} ${CAT_H1[c]} in the US in 2027, ${nConfOf(list)} with the organizer's date, by month: `, list.map((e) => e.name)) });
 }
-// Oct 6, 2026: the first ride is this fall, before 2027 starts — Cycling 4 one·n·ten, Nov 7, 2026.
-// It sits on top of Robert's rides until the day after; the build leaves it out from Nov 8, 2026, and
-// the page hides it on its own if nobody has rebuilt since (data-until).
-const NEXT = { id: 0, slug: "cycling-4-one-n-ten-2026", name: "Cycling 4 one·n·ten", category: "Charity ride",
-  subtype: "Bike ride and block party", start: "2026-11-07", end: "2026-11-07", date_status: "confirmed",
-  city: "Phoenix", state: "AZ", region: "Southwest", days: 1, distances: "20 or 62 miles",
-  cause: "LGBTQ+", beneficiary: "one·n·ten (LGBTQ+ youth and young adults in Arizona)", organizer: "one·n·ten",
-  fundraising_min: "None listed on the sign-up page",
-  cost: "$100 for 62 miles (starts 7 AM), $50 for 20 miles (starts 9 AM)",
-  reg_status: "Open on RunSignup. Closes at the end of Nov 5.",
-  qualification: "18 and up. No e-bikes.",
-  notes: "Starts and finishes at Prisma Community Care in Phoenix. Block party 10 to 2.",
-  url: "https://runsignup.com/Race/AZ/Phoenix/c4ont", sources: ["https://runsignup.com/Race/AZ/Phoenix/c4ont"], riding: true, month: 11 };
-const NEXT_UNTIL = "2026-11-07";
-const nextBlock = TODAY <= NEXT_UNTIL ? `
-      <section class="month" id="next" data-until="${NEXT_UNTIL}">
-        <div class="month-h"><h2>First, this November</h2><span class="n">1</span></div>
-${eventHtml(NEXT)}
-      </section>
-<script>(function(){var s=document.getElementById("next");if(s&&new Date().toISOString().slice(0,10)>s.getAttribute("data-until"))s.remove();})();</script>` : "";
-const nextLd = TODAY <= NEXT_UNTIL ? [{ "@context": "https://schema.org", "@type": "SportsEvent", name: NEXT.name, sport: "Cycling", url: NEXT.url,
-  startDate: NEXT.start, endDate: NEXT.end, eventStatus: "https://schema.org/EventScheduled", eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-  location: { "@type": "Place", name: "Prisma Community Care", address: { "@type": "PostalAddress", addressLocality: "Phoenix", addressRegion: "AZ", addressCountry: "US" } },
-  organizer: { "@type": "Organization", name: "one·n·ten", url: "https://onenten.org" } }] : [];
+// Oct 15, 2026: the fall ride that used to sit on top of this page (Cycling 4 one·n·ten, Nov 7) was canceled
+// and is off the site. If another ride before 2027 comes up, it goes back here as `before`.
 // the six Robert is riding
 if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert\u2019s rides", list: riding,
   h1: "The 2027 rides I&rsquo;m doing", title: "The 2027 rides I'm doing for Cycle for Change",
-  description: `${nextBlock ? "Cycling 4 one·n·ten in Phoenix on Nov 7, 2026, then the " : "The "}${riding.length} rides Robert is doing in 2027 as part of the 10,000 miles: dates, distances, sign-up links.`,
+  description: `The ${riding.length} rides Robert is doing in 2027 as part of the 10,000 miles: dates, distances, sign-up links.`,
   lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one.</p>`,
-  before: nextBlock, ldMore: nextLd, rowsH: nextBlock ? "Then 2027" : "",
   after: `\n    ${PH.figure("robert-peace")}` });
 
 // the calendar's own page: two questions, then the deep pages and the full list

@@ -1,8 +1,4 @@
-/* Cycle for Change — /nov7/, the page Robert shares for Cycling 4 one·n·ten (Oct 8, 2026).
-   Loaded after /chrome.css (tokens, type, buttons, header, footer). Light page, Lane Paint:
-   the stencil spells CYCLE FOR, the blank is filled with one·n·ten on the smeared-rose plate.
-   Phones: everything down to the RunSignup button fits the first screen (checked 360×640 up to 430×932).
-   Desktop: the words left, the picture right, its edges dissolving into the page. No type on the photo. */
+/* Cycle for Change — /nov7/: "Ride with me in Phoenix" (Oct 16, 2026). A link Robert shared on social media lands here. */
 
 /* —— first screen —— */
 .rp-ph{display:block}
@@ -97,22 +93,38 @@
 @media (prefers-reduced-motion:reduce){.rp-film-play{transition:none}}
 @media (min-width:900px){.rp-film-fig{max-width:400px}}
 
-/* —— Oct 8, 2026 (Robert): on desktop the hero is the riding wall — three panels of group-ride footage edge to
-   edge, the left side washed light so the words sit on it. Phones keep the still, the two rides and the
-   RunSignup button on the first screen (a still, not a film, on phones); the wall never loads there. —— */
-.rp-wall,.rp-wall-btn{display:none}
+/* —— Oct 16, 2026 (Robert): a landing page. Phones get everything on the first screen: the picture, the sign and
+   four big buttons, the first one ink. Rows on a phone, two by two on a wide screen. Marks from the house sprite. —— */
+.lp .rp-ph img{height:clamp(120px,22svh,200px)}
+/* the four buttons already say Ride with me; the sliding bar would only cover them */
+.rp .ridebar{display:none!important}
+.lp .rp-in{padding-bottom:28px}
+.lp .rp-sign{margin-bottom:18px}
+.lp-go{display:grid;gap:8px;max-width:560px}
+.lp-tile{display:grid;grid-template-columns:26px minmax(0,1fr);column-gap:14px;align-items:center;align-content:center;min-height:60px;
+  padding:9px 14px;border:1px solid var(--asphalt);background:var(--paper);color:var(--asphalt);text-decoration:none;
+  transition:background-color .15s ease,color .15s ease,border-color .15s ease}
+.lp-mk{grid-row:1 / span 2;width:26px;height:26px}
+.lp-t{font-weight:800;font-size:16px;line-height:1.2}
+.lp-s{font-size:13px;font-weight:600;line-height:1.3;color:var(--mute)}
+.lp-tile--first{background:var(--asphalt);color:var(--bone)}
+.lp-tile--first .lp-s{color:var(--dust)}
+@media (hover:hover){
+  .lp-tile:hover{background:var(--asphalt);color:var(--bone)}
+  .lp-tile:hover .lp-s{color:var(--dust)}
+  .lp-tile--first:hover{background:var(--volt);border-color:var(--volt);color:var(--asphalt)}
+  .lp-tile--first:hover .lp-s{color:var(--asphalt)}
+}
+.lp-tile:focus-visible{outline:2px solid var(--asphalt);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.lp-tile{transition:none}}
+@media (max-width:759px) and (max-height:600px){
+  .lp .rp-ph img{height:clamp(96px,15svh,130px)}
+  .lp .rp-sign{--h:clamp(32px,10vw,52px);margin-bottom:14px}
+  .lp-tile{min-height:54px;padding-block:7px}
+}
 @media (min-width:900px){
-  .rp-hero{position:relative;display:flex;align-items:center;max-width:none;margin:0;overflow:hidden;
-    min-height:clamp(600px,calc(100svh - 104px),820px);background:var(--bone)}
-  .rp-ph{display:none}
-  .rp-wall{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%;z-index:0}
-  .rp-hero{--edge:max(var(--gut),calc((100% - var(--maxw)) / 2 + var(--gut)))}
-  .rp-hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-    background:linear-gradient(90deg,rgba(225,223,219,.96) 0,rgba(225,223,219,.94) calc(var(--edge) + 540px),rgba(225,223,219,.7) calc(var(--edge) + 640px),rgba(225,223,219,0) calc(var(--edge) + 760px))}
-  .rp-in{position:relative;z-index:2;width:100%}
-  .rp-in > *{max-width:640px}
-  .rp-wall-btn{display:inline-flex;align-items:center;min-height:44px;margin-top:18px;padding:0;background:none;border:0;
-    border-bottom:1px solid var(--dust-deep);color:var(--mute);font:700 14px/1.2 var(--display);cursor:pointer}
-  .rp-wall-btn[hidden]{display:none}
-  .rp-wall-btn:focus-visible{outline:2px solid var(--asphalt);outline-offset:3px}
+  .lp .rp-in{padding-block:clamp(40px,5vw,72px)}
+  .lp-go{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .lp-tile{min-height:76px;padding:12px 16px}
+  .lp .rp-ph img{height:min(620px,calc(100svh - 150px));min-height:460px}
 }

@@ -200,7 +200,7 @@ const page = `<!doctype html>
     "url": "https://cycleforchange.org/",
     "logo": "https://cycleforchange.org/favicon-512.png",
     "sameAs": ["https://www.instagram.com/cycl_eforchange", "https://www.strava.com/athletes/22899089"],
-    "description": "One rider, Robert Castan, in Phoenix, riding 10,000 miles on a bicycle in 2027, every ride written up on cycleforchange.org. The rides raise money for queer-serving organizations through their own events: Cycling 4 one·n·ten, the Center Ride Out and Cycle to Zero. The site also holds a directory of group rides, a 2027 ride calendar and town guides."
+    "description": "One rider, Robert Castan, in Phoenix, riding 10,000 miles on a bicycle in 2027, every ride written up on cycleforchange.org. The rides raise money for queer-serving organizations (one·n·ten, the Los Angeles LGBT Center and San Francisco AIDS Foundation) through their own events, like the Center Ride Out and Cycle to Zero. The site also holds a directory of group rides, a 2027 ride calendar and town guides."
   }
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Cycle for Change","alternateName":"cycleforchange.org","url":"https://cycleforchange.org/"}</script>
@@ -300,7 +300,7 @@ ${todaySection()}<!-- —— the last ride: the reel, the log —— -->
     <div class="why-copy">
       <p class="lede">Cycling changed my life. I&rsquo;d like to say I&rsquo;m cycling for other people. I&rsquo;m really cycling for myself. I&rsquo;m cycling because it changed me. That&rsquo;s the story.</p>
       <p class="lede">So the sign changes. What comes after the word is up to whoever&rsquo;s riding.</p>
-      <p class="plates"><span class="plate">me</span><span class="plate">one&middot;n&middot;ten, on Nov 7</span><span class="plate">change</span></p>
+      <p class="plates"><span class="plate">me</span><span class="plate">one&middot;n&middot;ten</span><span class="plate">change</span></p>
       <!-- Pass 37: phones only. The sign's question lives here on a phone, under the words that explain it; its own
            one-line sign changes as you type, and so does the big one at the top (/home.js keeps them in step). -->
       <div class="sign-play">
@@ -319,15 +319,14 @@ ${todaySection()}<!-- —— the last ride: the reel, the log —— -->
      one line, the ride with its date on a plate, two links. No map, no badges, nothing painted. —— -->
 <section class="s s--paper orgs-s" id="orgs" aria-labelledby="orgs-h">
   <div class="wrap">
-    <div class="stack16 orgs-head2"><h2 class="h2" id="orgs-h">The orgs I ride for.</h2><p class="lede w38">Three rides. You sign up or give on their page. None of it comes through me.</p></div>
+    <div class="stack16 orgs-head2"><h2 class="h2" id="orgs-h">The orgs I ride for.</h2><p class="lede w38">You sign up or give on their page. None of it comes through me.</p></div>
     <div class="orgs">
       <article class="org">
         <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkPhx"/></svg>
         <div class="org-text">
           <h3 class="h3">one&middot;n&middot;ten</h3>
           <p>Phoenix nonprofit for LGBTQ+ youth ages 11 to 24. Safe spaces, housing, leadership.</p>
-          <p class="org-ride"><span class="plate">Sat Nov 7</span><span>Cycling 4 one&middot;n&middot;ten, Phoenix. 20 or 62 miles, one day.</span></p>
-          <div class="org-acts"><a class="link" href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Give to one&middot;n&middot;ten</a></div>
+          <div class="org-acts"><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Give to one&middot;n&middot;ten</a></div>
         </div>
       </article>
       <article class="org">
@@ -353,25 +352,23 @@ ${todaySection()}<!-- —— the last ride: the reel, the log —— -->
   </div>
 </section>
 
-<!-- —— ride with me: Nov 7, then the finder —— -->
+<!-- —— ride with me: the next ride (Center Ride Out), then the finder —— -->
 <section class="s ridewith" id="ride" aria-labelledby="ride-h">
   <div class="wrap">
     <h2 class="h2" id="ride-h">Ride with me.</h2>
     <div class="ride-in">
       <div class="ride-next">
-        <p class="eyebrow">Next up, a one&middot;n&middot;ten fundraiser</p>
-        <h3 class="h2 ride-h3">Nov 7, I cycle for <span class="plate plate--big">one&middot;n&middot;ten</span></h3>
-        <p>Cycling 4 one&middot;n&middot;ten, Bike Ride &amp; Block Party at Prisma Community Care, Phoenix.</p>
+        <p class="eyebrow">Next up, a Los Angeles LGBT Center fundraiser</p>
+        <h3 class="h2 ride-h3">April 23 to 25, I cycle for <span class="plate plate--big">the Center</span></h3>
+        <p>Center Ride Out. Los Angeles to Ojai, camp, then back along the coast to a finish by the ocean.</p>
         <dl class="facts-dl">
-          <div><dt>62 miles</dt><dd>7 AM, $100</dd></div>
-          <div><dt>20 miles</dt><dd>9 AM, $50</dd></div>
-          <div><dt>Block party</dt><dd>10 AM to 2 PM</dd></div>
-          <div><dt>Who</dt><dd>18+, no e-bikes, no fundraising minimum</dd></div>
-          <div><dt>Sign up by</dt><dd>Thu Nov 5 online, or at check-in</dd></div>
+          <div><dt>3 days</dt><dd>200+ miles, Apr 23 to 25, 2027</dd></div>
+          <div><dt>1 day</dt><dd>Day 2 only</dd></div>
+          <div><dt>Money</dt><dd>You raise it on the Center&rsquo;s page</dd></div>
         </dl>
-        <a class="btn btn--ink" href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer">Sign up on RunSignup</a>
-        <a class="link" href="/nov7/">The whole day, and where it starts</a>
-        <p class="note-sm">Details from RunSignup, checked Oct 8.</p>
+        <a class="btn btn--ink" href="https://centerrideout.lalgbtcenter.org/en/" target="_blank" rel="noopener noreferrer">Sign up with the Center</a>
+        <a class="link" href="/events/2027/riding/">All my 2027 rides</a>
+        <p class="note-sm">Details from the Center, checked Oct 15.</p>
       </div>
       <div class="ride-find">
         <p class="eyebrow">Group rides</p>

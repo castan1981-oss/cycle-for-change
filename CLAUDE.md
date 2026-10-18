@@ -15,7 +15,7 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   piece lightly. They never headline it and they are never a credential.
 - **The orgs he rides for:** one·n·ten (Phoenix), the Los Angeles LGBT Center, San Francisco AIDS
   Foundation. The money goes through their own rides, never through Robert or this site:
-  - Cycling 4 one·n·ten — Nov 7, 2026 (RunSignup)
+  - Cycling 4 one·n·ten — Nov 7, 2026 — **canceled** (Robert, Oct 15, 2026). Giving to one·n·ten goes to onenten.org.
   - Center Ride Out — April 2027, LA → Ojai and back (not LA to San Diego)
   - Cycle to Zero — May 2027
 - **The big thing:** group rides everywhere. Robert shows up, rides, and writes up each ride (who
@@ -29,24 +29,20 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 - Primary internal link target: the homepage `/` or `/events/2027/riding/` ("Ride with me").
   Never `/pledge/`, never `/#board`.
 - **Ride with me = the next ride Robert is doing** (Pass 36). `NEXT_RIDES` in `scripts/chrome.js` is the one
-  list (date order, `until` = last day, Phoenix time): Cycling 4 one·n·ten (→ `/nov7/`, its own page), then Center Ride
-  Out, then Cycle to Zero. The nav button, the menu, the closing block, the homepage's first-screen tile
+  list (date order, `until` = last day, Phoenix time): Center Ride Out, then Cycle to Zero (Cycling 4 one·n·ten came
+  off Oct 15, 2026: canceled). The nav button, the menu, the closing block, the homepage's first-screen tile
   (`#heroRide`) and the bar at the foot of every page (`.ridebar`, `/ridebar.js`) all point at the first one
   still ahead; the script re-picks in the browser. Never on `/resources/` (the 988 bar owns that spot).
-  After Nov 7, 2026: rewrite the homepage `#ride` section for the next ride and rebuild everything.
-- **`/nov7/` is the link Robert shares for Cycling 4 one·n·ten** (Oct 8, 2026): a hand page
-  (`cfc-site/nov7/index.html` + `nov7.css`, on apply-chrome.py's list) with its own share card
-  (`/og-nov7.jpg`, rendered by `python3 tools/og.py templates/og/nov7.html cfc-site/og-nov7.jpg`; bump the
-  file number when the card changes, chat apps cache previews). First screen on a phone: the sign filled
-  with one·n·ten, the two rides, the RunSignup button — keep it that way. On that page `/ridebar.js` hides
-  the bar and marks Ride with me as the current page. After the ride the same URL becomes the write-up, in
-  Robert's words with his footage; the sign-up buttons come off. `head()` takes `image`, `imageAlt` and
-  `ogTitle` for pages like this, and apply-chrome.py keeps a page's own card.
-  Desktop hero (Oct 8, 2026, Robert's ask): the riding wall `/film/nov7-wall-2.mp4` (1920×960, three panels of
-  group-ride footage feathered into each other, 4 MB, muted loop, "Pause the film" under the buttons) edge to edge behind the words, with a light
-  wash over the left side — his call, the one exception to "no gradient washes over photos". The 26 s film with
-  the words (`/film/nov7-friends-1.mp4`, 9:16) is the next section. Phones keep the still; the wall never loads.
-  The sheet is linked as `/nov7/nov7.css?v=N` from apply-chrome.py's SECTION_STYLES — bump N when it changes.
+  The homepage `#ride` section is written for Center Ride Out (since Oct 15, 2026). After Apr 25, 2027: rewrite it for
+  the next ride and rebuild everything.
+- **Oct 15, 2026: Cycling 4 one·n·ten (Nov 7) is canceled and off the site** (Robert: "get anything for that ride
+  off of the website"). Nothing links to it and it's not on the 2027 calendar, not even the retired list. **`/nov7/` stays** because
+  Robert put the link on social media, and it **never announces anything** (Robert, Oct 16: few people signed up,
+  they don't need to know): a landing page, "Ride with me in Phoenix" (Robert, Oct 16: "everything above the fold, buttons,
+  less verbiage"): the photo, the sign (CYCLE FOR + "me"), four big buttons that all fit a phone's first screen down
+  to 375×548 — Find a group ride (ink, → /rides/az/phoenix/), Ride with me in 2027 (→ /events/2027/riding/), Read the
+  blog (→ his newest write-up, now TSR's `#robert`), Follow on Instagram — then the friends film cut to 15 s (`/film/friends-2.*`, ends on
+  "Somebody always waits at the top"). No sliding Ride with me bar there. noindex, not in the sitemap. Never 404 or redirect it; never point anything at it; never write "canceled" on it.
 
 ## 2. How the site is built
 
@@ -231,8 +227,8 @@ FAQ", "we confirmed", "would not load for us").
 Every content page is a self-contained HTML file inside `cfc-site/`, wearing the shared chrome,
 linking `/chrome.css` then `/styles.css` (absolute paths), ending on the shared closing block (no
 page-specific CTA). `head()` in scripts/chrome.js adds " — Cycle for Change" only when the whole
-title still fits 60 characters; generated ride pages drop the suffix. Internal link target: `/` or `/events/2027/riding/`. Point at the org rides (Nov 7 first,
-until it has passed) when the money comes up.
+title still fits 60 characters; generated ride pages drop the suffix. Internal link target: `/` or `/events/2027/riding/`. Point at the org rides (Center Ride Out
+first, until it has passed) when the money comes up.
 
 ### Field notes (`/field-notes/<slug>/`)
 - Templates: **`templates/field-notes/`** (`_template.html`, `_pillar-template.html`), outside the
@@ -583,6 +579,71 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - Content loops never touch `scripts/build-home.js`, `cfc-site/index.html`, `cfc-site/home.js` or
   `netlify/functions/`.
 
+## 12. The briefing engine and the trust desk (Oct 17, 2026)
+
+Robert's direction from the "most useful cycling websites" reel (RideBriefing, Bike Insights):
+**every ride page tells you what you're riding into, every fact says who checked it and when, and
+nobody needs an account.** The plan (page system, team, funnel, build order):
+https://claude.ai/artifact/QKG9zHH8dYZtjnFcYgLpCv (republish that URL to update).
+
+### `/brief/` — the ride briefing
+- `scripts/build-brief.js` → `cfc-site/brief/index.html`. The engine is `cfc-site/brief/engine.js`
+  (pure functions, tested in `tools/test/brief-engine.test.js`); the page is `brief.js` + `brief.css`.
+  Bump `V` in the build script when any of the three changes, then rebuild.
+- Drop a GPX → distance, climbing, high point, loop; the climb chart coloured by grade (patina → powder
+  rose → smeared rose → rose ink → asphalt, never green-to-red); climbs by a stated rule (3% over 200 m,
+  100 ft of gain, Strava's length × grade categories); times at a flat speed (slower up, faster down,
+  an estimate); **weather at up to eight points at the hour you reach them** (Open-Meteo hourly, °F,
+  wind as head / cross / tail against the route's heading, sunrise); Wear and Carry from the house
+  table (`wear()`); bottles from `water()` with the desert heat lines; a share link that carries the
+  route (a polyline in the hash, so it works for anyone); the GPX back out.
+- **Free, no account, nothing stored.** The file never leaves the browser. The only requests are to
+  Open-Meteo (heights when the file has none; the forecast) and carry sample coordinates. No cookies,
+  no storage, no form. The page says exactly this under "How it's worked out" and in the verification
+  line; keep both true.
+- Heights: the file's, or Open-Meteo's 90 m model when the file has none; never a route we drew,
+  never Strava's API (§10). A sample ride (`cfc-site/brief/sample.gpx`) is Robert's own file or
+  nothing.
+- Words inside a stretched SVG are banned (they squash): the chart's axis, the climb numbers and the
+  map's marks are HTML positioned by percent (`drawProfile()`, `drawMap()` are the pattern).
+- **The route card** (Oct 18, 2026; Robert's reference: Eat Sleep Cycle Nice's "route of the month" post):
+  `cfc-site/brief/card.js` draws the route as one line with its points named — start and finish, each
+  climb's top with its height and mile, the host's regroup and stops — labels on square plates with
+  hairline leaders, placed clear of the line and of each other, never in the title block. One `layout()`,
+  two painters: `svg()` for pages, `paint()` onto a canvas. It is "The route" on `/brief/` and the
+  **poster** there (1080 × 1350 PNG, title, date, `cycleforchange.org/brief`; optionally over the rider's
+  own photo with a flat asphalt band under the words, no wash, no grain). It is also the drawn route on
+  **every ride page that has a route** (`routeCard()` in build-rides.js, above the street map), with a
+  **"Brief this ride"** button: `/brief/` opened on the host's GPX at the ride's next start and the host's
+  pace, nothing to type. Overpass, sentence case, "Climb 1 · 2,355 ft · mile 8.5"; never a mono-caps label.
+- **Compare** (the Bike Insights idea): drop a second GPX on `/brief/` and both climb charts sit on one
+  distance-and-height scale (patina and powder rose), a seven-row table, and the difference in sentences
+  from `compare()` in the engine (same within 5%; "hillier" is ft per mile; "steepest" is the steepest
+  tenth of a mile; times at one flat speed). The share link carries both rides (`b` in the hash).
+- Not yet in the engine: surface and road mix (the `surface-analyst` desk does it offline for site
+  routes), refill points (the `water-heat` desk, per route), hazards. The page doesn't pretend.
+
+### The desks
+Nineteen specialist agents in `.claude/agents/`, cut by what can be wrong, not by page: Route
+(route-analyst, climb-specialist, surface-analyst, pace-timing), Conditions (weather-on-the-road,
+water-heat, wear-carry, hazards), Local (ride-verifier, ride-scout, the town scouts, checkin-steward),
+Money and orgs (orgs-giving, events-analyst), Story (story-editor, brand-ambassador, graphics-maps),
+Trust (editor, consent-legal, search-answers, access-speed, analytics-growth). The roster, who writes
+what, and the freshness table the Editor holds every page to are in `.claude/agents/README.md`.
+`/brief <ride-slug>` runs the desks on a listed ride's route (`.claude/commands/brief.md`).
+
+The one rule: **a fact is a source plus a date, or it isn't on the page.** Every public page ends on
+a verification line (what was checked, by which desk, from which source, on which date). The Editor
+would rather leave a field blank than guess; so would you.
+
+### The page system (to build, in this order; each step ships something a rider can use)
+1. `/brief/` (done). 2. Group-ride pages get the engine: the route card and "Brief this ride" are on every
+ride page with a route (done, Oct 18); this week's weather inline on the page is still to come.
+3. Climb pages (`/climbs/<id>/`); compare is done on `/brief/`. 4. Org pages (`/for/<org>/`, 990-sourced, the money sentence) and the 2027 event pages
+briefed day by day. 5. Phoenix town page with the climate window and the one-morning ride, then
+Tucson. 6. `/10000/` and the ride log, live by January 1. Each page type has one reader, one shape,
+two exits; the shapes are on the plan canvas.
+
 ## Changelog (one line per pass; details in git history and the claude.ai project docs)
 
 - 2026-09-18 — Coming-soon gate lifted; field notes, guides, resources, journal served.
@@ -610,3 +671,10 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
 - 2026-10-12 — `/cyclefor/`: "What do you cycle for?" Five seconds on video, post it and tag @cycl_eforchange, give us the OK (Netlify form `cycle-for`, release `data/releases/cyclefor-v1.md`, in-browser clip shrink, hourly `release` issues to review); the homepage question links to it.
 - 2026-10-12 — Homepage `#today`: "Today I rode for mental clarity" — the sign with the day's word, his line, the route-on-gravel photo, the LOVE-wall bike and a 3 s loop of him at the wall (`data/today.json`).
 - 2026-10-13 — "I rode it" on ride pages: Robert's own long write-up of a ride, in his words (`data/ride-notes.json`), first one TSR, Oct 10.
+- 2026-10-15 — Cycling 4 one·n·ten (Nov 7) is canceled: off NEXT_RIDES, the homepage org card and `#ride` (now Center Ride Out), the riding page and the Phoenix town page; `/nov7/` says so.
+- 2026-10-15 — Everything for that ride comes off the site (homepage, riding page, Phoenix guide, the 2027 calendar, films, share card); `/nov7/` is a short noindex "canceled" page for the links already on social.
+- 2026-10-16 — `/nov7/` says nothing about the ride: "Ride with me in Phoenix" (his rides, the friends film cut to 15 s, what's next); the ride is off the retired list too.
+- 2026-10-16 — `/nov7/` is a landing page: the sign and four big buttons on the first screen (group ride, 2027 rides, blog, Instagram), the friends film below.
+- 2026-10-16 — Two Valley women's rides (Femmes Friday, Women's BOS, PhxWmn); Phoenix guide routes 8 → 12 (Tempe Town Lake loop, Brown's Ranch, Bartlett Dam Rd, Seven Springs, the guide's first gravel); a top-10 city inside the radius now always names the metro hub (two Scottsdale rides had renamed `/rides/az/phoenix/`). Tempe has 3 provable rides, short of a hub (`research/rides/az/az-tempe-mesa-2026-10-16.md`).
+- 2026-10-17 — `/brief/`, the ride briefing (drop a GPX: climbs, weather where you'll be when you get there, wear, water, back by; free, no account, nothing stored); the briefing team and the trust desk (19 agents, the freshness table, the verification line); `/brief` command; the plan canvas.
+- 2026-10-18 — `/brief/`: the plan folds to one line (start time and speed read from a recorded ride); compare (two rides on one chart, the difference in sentences); the route card (the route drawn with its climbs named) as the map, as a 1080×1350 poster, and on every ride page that has a route, with "Brief this ride" (the briefing at the ride's next start, nothing to type).

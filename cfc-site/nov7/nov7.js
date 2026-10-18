@@ -1,9 +1,7 @@
-/* /nov7/ — the film (Oct 8, 2026). Mirrors "From the ride" in /rides/ride.js: preload="none", phones wait
+/* /nov7/ — the friends film (Oct 8, 2026; cut to 15 s Oct 16). Mirrors "From the ride" in /rides/ride.js: preload="none", phones wait
    for a tap, a wide screen without reduced motion plays it (muted) while half of it is on screen. The round
    button, the line under the picture and the picture itself all play and pause. Plays once; at the end the
    round button comes back. */
-/* Oct 8, 2026: two copies of the film — the desktop hero (#heroFilm) and the section below for phones. Only the
-   one that's showing does anything; the hidden one never loads (preload="none", and it never intersects). */
 [].forEach.call(document.querySelectorAll("[data-film]"), function (fig) {
   var vid = fig.querySelector("video");
   if (!vid || !fig.offsetParent) return;
@@ -36,18 +34,3 @@
   }
   paint();
 });
-
-/* Oct 8, 2026 — the riding wall behind the hero (desktop only). Loads and plays only when it's showing and the
-   reader hasn't asked for less motion; "Pause the film" stops it (it loops, so it needs a way to stop). */
-(function () {
-  var v = document.getElementById("rpWall"), btn = document.getElementById("rpWallBtn");
-  if (!v || !v.offsetParent && getComputedStyle(v).display === "none") return;
-  if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  v.muted = true;
-  var paint = function () { if (!btn) return; var on = !v.paused; btn.textContent = on ? "Pause the film" : "Play the film"; btn.setAttribute("aria-pressed", on ? "false" : "true"); };
-  v.addEventListener("playing", function () { if (btn) btn.hidden = false; paint(); });
-  v.addEventListener("pause", paint);
-  v.addEventListener("error", function () { if (btn) btn.hidden = true; }, true);
-  if (btn) btn.addEventListener("click", function () { if (v.paused) { var q = v.play(); if (q && q.catch) q.catch(function () {}); } else v.pause(); });
-  v.preload = "auto"; var q = v.play(); if (q && q.catch) q.catch(function () {});
-})();

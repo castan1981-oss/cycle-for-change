@@ -35,7 +35,7 @@
     "url": "https://cycleforchange.org/",
     "logo": "https://cycleforchange.org/favicon-512.png",
     "sameAs": ["https://www.instagram.com/cycl_eforchange", "https://www.strava.com/athletes/22899089"],
-    "description": "One rider, Robert Castan, in Phoenix, riding 10,000 miles on a bicycle in 2027, every ride written up on cycleforchange.org. The rides raise money for queer-serving organizations through their own events: Cycling 4 one·n·ten, the Center Ride Out and Cycle to Zero. The site also holds a directory of group rides, a 2027 ride calendar and town guides."
+    "description": "One rider, Robert Castan, in Phoenix, riding 10,000 miles on a bicycle in 2027, every ride written up on cycleforchange.org. The rides raise money for queer-serving organizations (one·n·ten, the Los Angeles LGBT Center and San Francisco AIDS Foundation) through their own events, like the Center Ride Out and Cycle to Zero. The site also holds a directory of group rides, a 2027 ride calendar and town guides."
   }
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Cycle for Change","alternateName":"cycleforchange.org","url":"https://cycleforchange.org/"}</script>
@@ -129,7 +129,7 @@
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/nov7/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -140,9 +140,9 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/nov7/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
     <li><a href="/find-a-ride/">Find a ride <span>1,423</span></a></li>
-    <li><a href="/events/2027/">2027 calendar <span>639</span></a></li>
+    <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
     <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
@@ -195,9 +195,9 @@
       <p class="sign-note">Nothing to pay, nothing to join. <button class="sign-reset" id="signReset" type="button" data-sign-reset hidden>Clear the sign</button></p>
       <p class="sign-line">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</p>
       <nav class="finder" aria-label="Find a ride">
-        <a class="finder-tile finder-tile--ride" id="heroRide" href="/nov7/" data-ride-next><span class="ridebar-d">Sat Nov 7</span><span class="finder-t">Ride with me</span><span class="finder-s">Cycling 4 one·n·ten, Phoenix</span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+        <a class="finder-tile finder-tile--ride" id="heroRide" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="finder-t">Ride with me</span><span class="finder-s">Center Ride Out, LA to Ojai and back</span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
         <a class="finder-tile" href="/rides/"><svg class="finder-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkGroup"/></svg><span class="finder-t">Group rides</span><span class="finder-s">1,423 worldwide</span></a>
-        <a class="finder-tile" href="/events/2027/"><svg class="finder-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkFinish"/></svg><span class="finder-t">Events</span><span class="finder-s">639 in 2027</span></a>
+        <a class="finder-tile" href="/events/2027/"><svg class="finder-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkFinish"/></svg><span class="finder-t">Events</span><span class="finder-s">638 in 2027</span></a>
       </nav>
       <div class="sign-acts">
         <a class="link link--bone" href="#road">Read the last ride</a>
@@ -291,7 +291,7 @@
     <div class="why-copy">
       <p class="lede">Cycling changed my life. I&rsquo;d like to say I&rsquo;m cycling for other people. I&rsquo;m really cycling for myself. I&rsquo;m cycling because it changed me. That&rsquo;s the story.</p>
       <p class="lede">So the sign changes. What comes after the word is up to whoever&rsquo;s riding.</p>
-      <p class="plates"><span class="plate">me</span><span class="plate">one&middot;n&middot;ten, on Nov 7</span><span class="plate">change</span></p>
+      <p class="plates"><span class="plate">me</span><span class="plate">one&middot;n&middot;ten</span><span class="plate">change</span></p>
       <!-- Pass 37: phones only. The sign's question lives here on a phone, under the words that explain it; its own
            one-line sign changes as you type, and so does the big one at the top (/home.js keeps them in step). -->
       <div class="sign-play">
@@ -310,15 +310,14 @@
      one line, the ride with its date on a plate, two links. No map, no badges, nothing painted. —— -->
 <section class="s s--paper orgs-s" id="orgs" aria-labelledby="orgs-h">
   <div class="wrap">
-    <div class="stack16 orgs-head2"><h2 class="h2" id="orgs-h">The orgs I ride for.</h2><p class="lede w38">Three rides. You sign up or give on their page. None of it comes through me.</p></div>
+    <div class="stack16 orgs-head2"><h2 class="h2" id="orgs-h">The orgs I ride for.</h2><p class="lede w38">You sign up or give on their page. None of it comes through me.</p></div>
     <div class="orgs">
       <article class="org">
         <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkPhx"/></svg>
         <div class="org-text">
           <h3 class="h3">one&middot;n&middot;ten</h3>
           <p>Phoenix nonprofit for LGBTQ+ youth ages 11 to 24. Safe spaces, housing, leadership.</p>
-          <p class="org-ride"><span class="plate">Sat Nov 7</span><span>Cycling 4 one&middot;n&middot;ten, Phoenix. 20 or 62 miles, one day.</span></p>
-          <div class="org-acts"><a class="link" href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Give to one&middot;n&middot;ten</a></div>
+          <div class="org-acts"><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Give to one&middot;n&middot;ten</a></div>
         </div>
       </article>
       <article class="org">
@@ -344,25 +343,23 @@
   </div>
 </section>
 
-<!-- —— ride with me: Nov 7, then the finder —— -->
+<!-- —— ride with me: the next ride (Center Ride Out), then the finder —— -->
 <section class="s ridewith" id="ride" aria-labelledby="ride-h">
   <div class="wrap">
     <h2 class="h2" id="ride-h">Ride with me.</h2>
     <div class="ride-in">
       <div class="ride-next">
-        <p class="eyebrow">Next up, a one&middot;n&middot;ten fundraiser</p>
-        <h3 class="h2 ride-h3">Nov 7, I cycle for <span class="plate plate--big">one&middot;n&middot;ten</span></h3>
-        <p>Cycling 4 one&middot;n&middot;ten, Bike Ride &amp; Block Party at Prisma Community Care, Phoenix.</p>
+        <p class="eyebrow">Next up, a Los Angeles LGBT Center fundraiser</p>
+        <h3 class="h2 ride-h3">April 23 to 25, I cycle for <span class="plate plate--big">the Center</span></h3>
+        <p>Center Ride Out. Los Angeles to Ojai, camp, then back along the coast to a finish by the ocean.</p>
         <dl class="facts-dl">
-          <div><dt>62 miles</dt><dd>7 AM, $100</dd></div>
-          <div><dt>20 miles</dt><dd>9 AM, $50</dd></div>
-          <div><dt>Block party</dt><dd>10 AM to 2 PM</dd></div>
-          <div><dt>Who</dt><dd>18+, no e-bikes, no fundraising minimum</dd></div>
-          <div><dt>Sign up by</dt><dd>Thu Nov 5 online, or at check-in</dd></div>
+          <div><dt>3 days</dt><dd>200+ miles, Apr 23 to 25, 2027</dd></div>
+          <div><dt>1 day</dt><dd>Day 2 only</dd></div>
+          <div><dt>Money</dt><dd>You raise it on the Center&rsquo;s page</dd></div>
         </dl>
-        <a class="btn btn--ink" href="https://runsignup.com/Race/AZ/Phoenix/c4ont" target="_blank" rel="noopener noreferrer">Sign up on RunSignup</a>
-        <a class="link" href="/nov7/">The whole day, and where it starts</a>
-        <p class="note-sm">Details from RunSignup, checked Oct 8.</p>
+        <a class="btn btn--ink" href="https://centerrideout.lalgbtcenter.org/en/" target="_blank" rel="noopener noreferrer">Sign up with the Center</a>
+        <a class="link" href="/events/2027/riding/">All my 2027 rides</a>
+        <p class="note-sm">Details from the Center, checked Oct 15.</p>
       </div>
       <div class="ride-find">
         <p class="eyebrow">Group rides</p>
@@ -376,7 +373,7 @@
         <div class="find-count"><b class="num">1,423</b><span>group rides in the directory, each with the date it was last checked. Every state, 18 more countries. Shop rides, no-drop rides, queer rides.</span></div>
         <dl class="facts-dl">
           <div><dt>Group rides</dt><dd><a href="/rides/">1,423</a></dd></div>
-          <div><dt>On the 2027 calendar</dt><dd><a href="/events/2027/">639</a></dd></div>
+          <div><dt>On the 2027 calendar</dt><dd><a href="/events/2027/">638</a></dd></div>
           <div><dt>Town guides</dt><dd><a href="/towns/">16</a></dd></div>
           <div><dt>My 2027 rides</dt><dd><a href="/events/2027/riding/">Six, so far</a></dd></div>
         </dl>
@@ -405,7 +402,7 @@
       <li><a href="/field-notes/south-mountain-climb/"><b>South Mountain at sunset</b><span>Down Central from uptown, through downtown into South Phoenix, up the mountain as the light goes.</span></a></li>
       <li><a href="/field-notes/paradise-valley-loop/"><b>The Paradise Valley loop</b><span>The loop around Camelback and Mummy Mountain. Early, before the heat, with the whole valley below.</span></a></li>
       <li><a href="/journal/the-carrot-cake-theory/"><b>The carrot cake theory</b><span>Why the handmade thing is the honest thing.</span></a></li>
-      <li><a href="/guides/"><b>All 11 guides</b><span>Your first charity ride, the packing list, hitting your fundraising minimum, what happened to AIDS/LifeCycle.</span></a></li>
+      <li><a href="/guides/"><b>All 21 guides</b><span>Your first charity ride, the packing list, hitting your fundraising minimum, what happened to AIDS/LifeCycle.</span></a></li>
     </ul>
   </div>
 </section>
@@ -413,8 +410,8 @@
 </main>
 
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2026-11-07" data-rides="[{&quot;until&quot;:&quot;2026-11-07&quot;,&quot;date&quot;:&quot;Sat Nov 7&quot;,&quot;name&quot;:&quot;Cycling 4 one·n·ten&quot;,&quot;where&quot;:&quot;Phoenix&quot;,&quot;href&quot;:&quot;/nov7/&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
-    <a class="ridebar-a" href="/nov7/" data-ride-next><span class="ridebar-d">Sat Nov 7</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Cycling 4 one·n·ten, Phoenix</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
   <script src="/ridebar.js?v=38" defer></script>

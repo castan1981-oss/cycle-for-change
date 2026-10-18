@@ -848,6 +848,10 @@ a.gr-wide-door:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px
 .gr-rt-dot{fill:var(--asphalt);stroke:var(--paper);stroke-width:3}
 .gr-rt-you{opacity:0;transition:opacity .15s}
 .gr-rt-you.is-on{opacity:1}
+/* Oct 18, 2026: the route drawn with its climbs named, above the street map */
+.gr-route-card{margin:0 0 16px;border:1px solid var(--dust);background:var(--paper)}
+.gr-route-card svg{display:block;width:100%;height:auto}
+.gr-route-card figcaption{padding:8px 12px;border-top:1px solid var(--dust);font-size:13px;color:var(--mute)}
 .gr-route-acts{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:12px}
 .gr-route-acts .btn{min-height:48px}
 .gr-btn-mark{width:20px;height:20px;flex:none}
