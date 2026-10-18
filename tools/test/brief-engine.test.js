@@ -146,7 +146,7 @@ test("the route card names the start, each climb's top and the host's stops, and
   const kinds = L.pts.map((p) => p.kind);
   assert.deepEqual(kinds, ["start", "finish", "climb", "regroup"]);
   assert.match(L.pts[2].lines[1], /^2,0\d\d ft · mile 5\.\d$/);
-  assert.equal(L.pts[3].lines[1], "Regroup at the gas station");
+  assert.deepEqual(L.pts[3].lines, ["Regroup", "at the gas station"]);   // the head word isn’t said twice
   for (const p of L.pts) { const b = p.label; assert.ok(b.bx >= 0 && b.by >= 0 && b.bx + b.bw <= 1000 && b.by + b.bh <= 700, `label inside for ${p.kind}`); }
   const svg = CARD.svg(L, "plaster");
   assert.match(svg, /^<svg viewBox="0 0 1000 700"/);
