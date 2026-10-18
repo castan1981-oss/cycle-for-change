@@ -609,7 +609,8 @@ https://claude.ai/artifact/QKG9zHH8dYZtjnFcYgLpCv (republish that URL to update)
   (pushed rides) is the only "connect" path the rules allow, and only for Robert's own rides, when he applies.
 - Heights: the file's, or Open-Meteo's 90 m model when the file has none; never a route we drew,
   never Strava's API (§10). A sample ride (`cfc-site/brief/sample.gpx`) is Robert's own file or
-  nothing.
+  nothing. Now: his Oct 13, 2026 Garmin ride ("Central Phoenix, a Tuesday", exported from Garmin Connect in his
+  browser), the first and last mile cut so his street isn't on the site, every third point kept (330 KB).
 - Words inside a stretched SVG are banned (they squash): the chart's axis, the climb numbers and the
   map's marks are HTML positioned by percent (`drawProfile()`, `drawMap()` are the pattern).
 - **The route card** (Oct 18, 2026; Robert's reference: Eat Sleep Cycle Nice's "route of the month" post):
