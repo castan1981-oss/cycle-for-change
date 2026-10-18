@@ -2543,9 +2543,13 @@ function ridePage(r, all, hubFor, hubs) {
   const rt = ROUTES.get(r.slug) || null;
 
   // JSON-LD: WebPage (dates, author, breadcrumb) + Event only when the schedule is computable
-  // Search pass (Oct 5, 2026): no Event markup while the ride is flagged or found on one source only — the page itself
-  // says "confirm with the host"; a ride we hand Google as scheduled has to be one we'd stand behind today.
-  const eventOk = f.state !== "flagged" && r.confidence !== "low";
+  // Search pass (Oct 5, 2026): no Event markup while the ride is red-flagged (page gone, "cancelled", a rider says
+  // it's gone) or found on one source only — a ride we hand Google as scheduled has to be one we'd stand behind today.
+  // Oct 18, 2026 (growth plan, Phase 2; Robert's OK): an amber flag — the host's page wording moved, a time went
+  // missing — keeps the "confirm with the host" nudge on the page but not the markup decision. The page still shows
+  // the next date to people, so the Event says the same thing the page says. 174 ride pages (Critical Mass London and
+  // NYC among them) had a date on the page and no Event because nothing clears an amber flag until a re-check.
+  const eventOk = !(f.state === "flagged" && f.severity === "red") && r.confidence !== "low";
   const graph = [{
     "@type": "WebPage", "@id": url, url, name: title, description, dateModified: f.checked_on || r.verified_on, author: AUTHOR, publisher: PUBLISHER,
     breadcrumb: breadcrumbLd(crumbs), ...(eventOk && (next || dated.length) ? { mainEntity: { "@id": `${url}#event` } } : {}),
