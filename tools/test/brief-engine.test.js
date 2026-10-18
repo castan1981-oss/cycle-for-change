@@ -156,3 +156,56 @@ test("the route card names the start, each climb's top and the host's stops, and
   for (const p of poster.pts) assert.ok(p.label.by >= poster.top - poster.fs, "labels stay out of the title block");
   assert.ok(CARD.svg(poster).includes("North &amp; back"));
 });
+
+// ---- FIT, TCX, zip (Oct 18, 2026) ----
+function fitFile({ dev = false, compressed = false } = {}) {
+  // a little-endian FIT with one record definition (timestamp, lat, lon, altitude) and the north-and-back ride in it
+  const recs = [];
+  const def = [0x40 | 0, 0, 0, 20, 0, 4, 253, 4, 134, 0, 4, 133, 1, 4, 133, 2, 2, 132];
+  if (dev) { def[0] |= 0x20; def.push(1, 0, 2, 0); }   // one developer field, 2 bytes, skipped
+  recs.push(...def);
+  const t0 = Math.floor((Date.UTC(2026, 9, 17, 13, 5) - 631065600000) / 1000);
+  for (let m = 0; m <= 18000; m += 50) {
+    let e = 340;
+    if (m > 4000 && m <= 9000) e = 340 + (m - 4000) * 0.06; else if (m > 9000 && m <= 14000) e = 640 - (m - 9000) * 0.06;
+    const lat = 33.45 + m / 111320, lon = -112.07;
+    const b = Buffer.alloc(4 + 4 + 4 + 2 + (dev ? 2 : 0));
+    b.writeUInt32LE(t0 + Math.round(m / 7), 0);
+    b.writeInt32LE(Math.round(lat / (180 / 2147483648)), 4);
+    b.writeInt32LE(Math.round(lon / (180 / 2147483648)), 8);
+    b.writeUInt16LE(Math.round((e + 500) * 5), 12);
+    recs.push(0x00, ...b);
+  }
+  const data = Buffer.from(recs);
+  const head = Buffer.alloc(14); head[0] = 14; head[1] = 0x20; head.writeUInt16LE(2100, 2); head.writeUInt32LE(data.length, 4); head.write(".FIT", 8);
+  return Buffer.concat([head, data, Buffer.alloc(2)]);
+}
+test("parseFIT reads a Garmin record stream: positions, heights, times; developer fields are skipped", () => {
+  for (const dev of [false, true]) {
+    const r = B.parseFIT(fitFile({ dev }));
+    assert.equal(r.pts.length, 361);
+    assert.ok(Math.abs(r.pts[0].lat - 33.45) < 1e-6 && Math.abs(r.pts[0].lon + 112.07) < 1e-6);
+    assert.ok(Math.abs(r.pts[0].ele - 340) < 0.3);
+    assert.equal(r.pts[0].t, "2026-10-17T13:05:00.000Z");
+    const s = B.smooth(B.resample(r.pts));
+    assert.ok(Math.abs(B.stats(s).gain_m - 300) < 8);
+  }
+  assert.throws(() => B.parseFIT(Buffer.from("not a fit file at all")), /isn’t a FIT/);
+});
+test("parseAny opens GPX, TCX, FIT and a zipped FIT the same way", async () => {
+  const file = (name, buf) => ({ name, arrayBuffer: async () => Uint8Array.from(buf).buffer });
+  const g = await B.parseAny(file("ride.gpx", Buffer.from(gpx())));
+  assert.equal(g.pts.length, 361);
+  const tcx = `<?xml version="1.0"?><TrainingCenterDatabase><Activities><Activity Sport="Biking"><Id>x</Id><Lap><Track>` +
+    [0, 1, 2].map((i) => `<Trackpoint><Time>2026-10-17T13:0${i}:00Z</Time><Position><LatitudeDegrees>${33.45 + i / 1000}</LatitudeDegrees><LongitudeDegrees>-112.07</LongitudeDegrees></Position><AltitudeMeters>${340 + i}</AltitudeMeters></Trackpoint>`).join("") +
+    `</Track></Lap></Activity></Activities></TrainingCenterDatabase>`;
+  const t = await B.parseAny(file("ride.tcx", Buffer.from(tcx)));
+  assert.equal(t.pts.length, 3); assert.equal(t.pts[2].ele, 342);
+  const f = await B.parseAny(file("2026-10-17-shop_ride.fit", fitFile()));
+  assert.equal(f.pts.length, 361); assert.equal(f.name, "2026 10 17 shop ride");
+  // a zip with the FIT inside, deflated, the way Garmin Connect exports the original
+  const raw = fitFile(), comp = require("zlib").deflateRawSync(raw), nm = Buffer.from("123456_ACTIVITY.fit");
+  const lh = Buffer.alloc(30); lh.writeUInt32LE(0x04034b50, 0); lh.writeUInt16LE(20, 4); lh.writeUInt16LE(8, 8); lh.writeUInt32LE(comp.length, 18); lh.writeUInt32LE(raw.length, 22); lh.writeUInt16LE(nm.length, 26);
+  const z = await B.parseAny(file("123456.zip", Buffer.concat([lh, nm, comp])));
+  assert.equal(z.pts.length, 361); assert.equal(z.name, "123456 ACTIVITY");
+});
