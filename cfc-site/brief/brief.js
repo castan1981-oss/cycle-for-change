@@ -4,7 +4,7 @@
    and those carry only sample coordinates. No account, no cookies, no storage. */
 (function () {
   "use strict";
-  const B = window.BRIEF;
+  const B = window.BRIEF, CARD = window.CARD;
   const $ = (s, el) => (el || document).querySelector(s);
   const MI = B.MI, FT = B.FT;
   const WX = "https://api.open-meteo.com/v1/forecast";
@@ -16,10 +16,12 @@
     plan: $("#plan"), planLine: $("#planLine"), planChange: $("#planChange"), planGrid: $("#planGrid"), name: $("#rideName"), start: $("#start"), speed: $("#speed"), units: $("#units"), go: $("#go"),
     out: $("#out"), head: $("#outHead"), stats: $("#stats"), map: $("#map"), prof: $("#prof"), brief: $("#brief"),
     wx: $("#wx"), wxNote: $("#wxNote"), climbs: $("#climbs"), climbsNone: $("#climbsNone"), wear: $("#wear"), water: $("#water"),
-    share: $("#share"), shareOut: $("#shareOut"), gpx: $("#gpx"), verify: $("#verify"), top: $("#outTop"),
+    share: $("#share"), shareOut: $("#shareOut"), drop2: $("#drop2"), file2: $("#file2"), compare: $("#compare"), cmpChart: $("#cmpChart"), cmpLegend: $("#cmpLegend"), cmpGrid: $("#cmpGrid"), cmpLines: $("#cmpLines"), cmpClear: $("#cmpClear"), poster: $("#poster"), posterPhoto: $("#posterPhoto"), posterOut: $("#posterOut"), posterImg: $("#posterImg"), posterDl: $("#posterDl"), gpx: $("#gpx"), verify: $("#verify"), top: $("#outTop"),
   };
 
   let ride = null;   // { name, pts, series, st, bins, climbs, t, source: "file"|"share", text }
+  let ride2 = null;  // the ride being compared with, same shape
+  let posterPhoto = null;   // an Image the rider added for the poster; never leaves the browser
   let units = /-(US|LR|MM)$/i.test(navigator.language || "en-US") || !(navigator.language || "").includes("-") ? "mi" : "km";   // miles for US readers, km elsewhere; the toggle is one tap away
 
   // ---- plan defaults: tomorrow 6:30 if it's past 6:30 today, else today ----
@@ -193,7 +195,7 @@
     el.wxNote.textContent = "";
 
     // the share link carries the line, the heights and the plan; the GPX is the file as it came
-    const hash = B.encode(ride.series, { n: name, s: startStr, v: mph, u: units });
+    const hash = B.encode(ride.series, { n: name, s: startStr, v: mph, u: units }, ride2 ? { name: ride2.name, series: ride2.series } : null);
     const url = `${location.origin}${location.pathname}#${hash}`;
     el.shareOut.value = url;
     history.replaceState(null, "", `#${hash}`);
@@ -203,6 +205,79 @@
     el.verify.innerHTML = `Route from your GPX. Heights from ${esc(ride.heightsFrom)}. Times are estimates at your flat speed, slower on the climbs. <span id="wxVerify">Forecast: waiting.</span> Nothing was uploaded; the file stayed in your browser.`;
 
     forecast(t, startStr, ++wxReq, total);
+    renderCompare(mph);
+    el.posterOut.hidden = true;
+  }
+
+  // ---- compare: two rides on one scale ----
+  async function loadSecond(text) {
+    clearErr();
+    let parsed;
+    try { parsed = B.parseGPX(text); } catch (e) { fail(e.message); return; }
+    let series = B.resample(parsed.pts, 25);
+    if (series[0].ele === null) series = await heights(series);
+    series = B.smooth(series, 5);
+    ride2 = { name: parsed.name || "The other ride", pts: parsed.pts, series, st: B.stats(series), bins: B.bins(series), climbs: B.climbs(series) };
+    render();
+    el.compare.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  function renderCompare(mph) {
+    if (!ride2) { el.compare.hidden = true; el.drop2.hidden = false; return; }
+    el.drop2.hidden = true; el.compare.hidden = false;
+    const A = { ...ride, name: ride.name }, Bb = ride2;
+    const c = B.compare(A, Bb, mph);
+    const unit = units === "mi" ? MI : 1000;
+    const W = 1000, H = 200, T = 10, Bt = 2;
+    const total = Math.max(A.st.m, Bb.st.m);
+    const lo = Math.floor(Math.min(A.st.low_m, Bb.st.low_m) / 50) * 50, hi = Math.max(lo + 50, Math.ceil(Math.max(A.st.high_m, Bb.st.high_m) / 50) * 50);
+    const X = (d) => (W * d) / total, Y = (e) => T + (H - T - Bt) * (1 - (e - lo) / (hi - lo));
+    const area = (r) => { const pts = r.series.filter((_, i) => i % 4 === 0); return `M${X(0).toFixed(1)} ${H - Bt} ` + pts.map((p) => `L${X(p.d).toFixed(1)} ${Y(p.ele).toFixed(1)}`).join(" ") + ` L${X(r.st.m).toFixed(1)} ${H - Bt} Z`; };
+    const step = total / unit > 80 ? 20 : total / unit > 40 ? 10 : total / unit > 15 ? 5 : total / unit > 6 ? 2 : 1;
+    const ticks = [];
+    for (let m = 0; m + step * 0.4 <= total / unit; m += step) ticks.push(`<span style="left:${((X(m * unit) / W) * 100).toFixed(2)}%">${m}${m === 0 ? ` ${fmt.distU()}` : ""}</span>`);
+    el.cmpChart.innerHTML = `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Both climb charts on one scale: ${esc(A.name)} and ${esc(Bb.name)}."><path class="bf-cmp-a" d="${area(A)}"/><path class="bf-cmp-b" d="${area(Bb)}"/></svg><p class="bf-prof-axis" aria-hidden="true">${ticks.join("")}</p>`;
+    el.cmpLegend.innerHTML = `<li><i class="ca"></i>${esc(A.name)}</li><li><i class="cb"></i>${esc(Bb.name)}</li><li>Low ${fmt.h(lo)} ${fmt.hU()}, high ${fmt.h(hi)} ${fmt.hU()}</li>`;
+    const row = (k, va, vb) => `<div class="k">${k}</div><div class="v">${va}</div><div class="v">${vb}</div>`;
+    el.cmpGrid.innerHTML = `<div class="k"></div><div class="h">${esc(A.name)}</div><div class="h">${esc(Bb.name)}</div>` +
+      row("Distance", `${fmt.dist(A.st.m)} ${fmt.distU()}`, `${fmt.dist(Bb.st.m)} ${fmt.distU()}`) +
+      row("Climbing", `${fmt.h(A.st.gain_m)} ${fmt.hU()}`, `${fmt.h(Bb.st.gain_m)} ${fmt.hU()}`) +
+      row(units === "mi" ? "Per mile" : "Per km", `${Math.round(units === "mi" ? c.a.perMi : A.st.gain_m / (A.st.m / 1000))} ${fmt.hU()}`, `${Math.round(units === "mi" ? c.b.perMi : Bb.st.gain_m / (Bb.st.m / 1000))} ${fmt.hU()}`) +
+      row("Steepest", `${c.a.steep.toFixed(0)}%`, `${c.b.steep.toFixed(0)}%`) +
+      row("Climbs", String(c.a.climbs), String(c.b.climbs)) +
+      row("Highest", `${fmt.h(c.a.high_m)} ${fmt.hU()}`, `${fmt.h(c.b.high_m)} ${fmt.hU()}`) +
+      row("Riding", hhmm(c.a.sec), hhmm(c.b.sec));
+    el.cmpLines.innerHTML = c.lines.map((l) => `<li>${esc(l)}</li>`).join("");
+  }
+
+  // ---- the poster: the route card as a 1080 by 1350 picture ----
+  async function makePoster() {
+    if (!ride) return;
+    el.poster.disabled = true; el.poster.textContent = "Drawing…";
+    try {
+      try { await document.fonts.load("900 90px Overpass"); await document.fonts.load("800 26px Overpass"); await document.fonts.load("600 26px Overpass"); } catch (e) {}
+      const W = 1080, H = 1350;
+      const startW = wallAt(el.start.value || defaultStart(), 0);
+      const L = CARD.layout(ride.series, ride.climbs, { W, H, units, title: ride.name, sub: `${fmt.dist(ride.st.m)} ${fmt.distU()} · ${fmt.h(ride.st.gain_m)} ${fmt.hU()} of climbing${ride.climbs.length ? ` · ${ride.climbs.length} ${ride.climbs.length === 1 ? "climb" : "climbs"}` : ""}`, date: dayWord(startW), foot: "cycleforchange.org/brief", photo: !!posterPhoto });
+      const cv = document.createElement("canvas"); cv.width = W; cv.height = H;
+      const ctx = cv.getContext("2d");
+      if (posterPhoto) {
+        // the photo fills the poster, cropped to cover; a flat asphalt band under the title and the foot so they read
+        const r = Math.max(W / posterPhoto.width, H / posterPhoto.height);
+        const pw = posterPhoto.width * r, ph = posterPhoto.height * r;
+        ctx.drawImage(posterPhoto, (W - pw) / 2, (H - ph) / 2, pw, ph);
+        ctx.fillStyle = "rgba(28,26,34,.82)";
+        ctx.fillRect(0, 0, W, L.top - L.fs);
+        ctx.fillRect(0, H - L.bottom, W, L.bottom);
+      }
+      CARD.paint(ctx, L, posterPhoto ? "photo" : "plaster");
+      const blob = await new Promise((res) => cv.toBlob(res, "image/png"));
+      if (el.posterDl.href && el.posterDl.href.startsWith("blob:")) URL.revokeObjectURL(el.posterDl.href);
+      const url = URL.createObjectURL(blob);
+      el.posterImg.src = url; el.posterImg.alt = `${ride.name}: the route drawn with its climbs named`;
+      el.posterDl.href = url; el.posterDl.download = `${slug(ride.name) || "route"}-poster.png`;
+      el.posterOut.hidden = false;
+      el.posterOut.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    } finally { el.poster.disabled = false; el.poster.textContent = "Make the poster"; }
   }
 
   // ---- weather on the road ----
@@ -318,31 +393,8 @@
       <p class="bf-prof-axis" aria-hidden="true">${ticks.join("")}</p>`;
   }
   function drawMap() {
-    const s = ride.series, W = 1000;
-    let minLat = Infinity, maxLat = -Infinity, minLon = Infinity, maxLon = -Infinity;
-    for (const p of s) { minLat = Math.min(minLat, p.lat); maxLat = Math.max(maxLat, p.lat); minLon = Math.min(minLon, p.lon); maxLon = Math.max(maxLon, p.lon); }
-    const k = Math.cos(((minLat + maxLat) / 2) * Math.PI / 180);
-    const w = (maxLon - minLon) * k || 1e-6, h = (maxLat - minLat) || 1e-6;
-    const pad = 0.08 * Math.max(w, h);
-    const H = Math.round(W * Math.min(1.2, Math.max(0.45, (h + 2 * pad) / (w + 2 * pad))));
-    const sx = (W - 0) / (w + 2 * pad), sy = H / (h + 2 * pad), sc = Math.min(sx, sy);
-    const ox = (W - (w + 2 * pad) * sc) / 2, oy = (H - (h + 2 * pad) * sc) / 2;
-    const X = (p) => ox + ((p.lon - minLon) * k + pad) * sc, Y = (p) => oy + (maxLat - p.lat + pad) * sc;
-    const path = s.filter((_, i) => i % 2 === 0).map((p, i) => `${i ? "L" : "M"}${X(p).toFixed(1)} ${Y(p).toFixed(1)}`).join(" ");
-    const a = s[0], z = s[s.length - 1];
-    const feet = ride.climbs.map((c, i) => { const p = s[c.i0]; return `<b class="bf-cn-chip" style="left:${((X(p) / W) * 100).toFixed(2)}%;top:${((Y(p) / H) * 100).toFixed(2)}%">${i + 1}</b>`; }).join("");
-    // a scale bar: a round number of miles or km that is about a fifth of the width
-    const unit = units === "mi" ? MI : 1000, degPerM = 1 / 111195;
-    const target = (W / 5) / sc / k * (1 / degPerM) / unit;
-    const nice = [1, 2, 5, 10, 20, 50].reduce((b, n) => (Math.abs(n - target) < Math.abs(b - target) ? n : b), 1);
-    const barPct = ((nice * unit * degPerM * k * sc) / W) * 100;
-    el.map.innerHTML = `<div class="bf-map-box" style="aspect-ratio:${W}/${H}"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="The route drawn as a line${ride.st.loop ? ", a loop" : ""}. Numbered marks are the foot of each climb.">
-      <path class="bf-rt" d="${path}"/></svg>
-      <i class="bf-start" style="left:${((X(a) / W) * 100).toFixed(2)}%;top:${((Y(a) / H) * 100).toFixed(2)}%" title="Start"></i>
-      ${ride.st.loop ? "" : `<i class="bf-finish" style="left:${((X(z) / W) * 100).toFixed(2)}%;top:${((Y(z) / H) * 100).toFixed(2)}%" title="Finish"></i>`}
-      ${feet}
-      <span class="bf-scale" style="width:${barPct.toFixed(2)}%">${nice} ${fmt.distU()}</span>
-    </div>`;
+    const L = CARD.layout(ride.series, ride.climbs, { W: 1000, H: 760, pad: 70, units });
+    el.map.innerHTML = `<div class="bf-card">${CARD.svg(L, "plaster")}</div>`;
   }
   function renderClimbs(t, startStr) {
     el.climbsNone.hidden = ride.climbs.length > 0;
@@ -383,6 +435,20 @@
   el.units.addEventListener("change", () => { units = el.units.value; render(); });
   [el.start, el.speed].forEach((i) => i.addEventListener("change", render));
   el.name.addEventListener("change", render);
+  el.file2.addEventListener("change", () => { const f = el.file2.files[0]; if (f) f.text().then(loadSecond); });
+  ["dragenter", "dragover"].forEach((ev) => el.drop2.addEventListener(ev, (e) => { e.preventDefault(); el.drop2.classList.add("is-over"); }));
+  ["dragleave", "drop"].forEach((ev) => el.drop2.addEventListener(ev, (e) => { e.preventDefault(); el.drop2.classList.remove("is-over"); }));
+  el.drop2.addEventListener("drop", (e) => { const f = e.dataTransfer.files && e.dataTransfer.files[0]; if (f) f.text().then(loadSecond); });
+  el.drop2.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); el.file2.click(); } });
+  el.cmpClear.addEventListener("click", () => { ride2 = null; el.file2.value = ""; render(); });
+  el.poster.addEventListener("click", makePoster);
+  el.posterPhoto.addEventListener("change", () => {
+    const f = el.posterPhoto.files[0]; if (!f) return;
+    const img = new Image();
+    img.onload = () => { posterPhoto = img; makePoster(); };
+    img.onerror = () => fail("That picture didn’t open. Try a JPG or PNG.");
+    img.src = URL.createObjectURL(f);
+  });
   el.share.addEventListener("click", async () => {
     const v = el.shareOut.value;
     try { await navigator.clipboard.writeText(v); el.share.textContent = "Copied"; }
@@ -395,7 +461,11 @@
   // a share link
   if (location.hash.length > 20) {
     try {
-      const { pts, meta } = B.decodeShare(location.hash.slice(1));
+      const { pts, meta, second } = B.decodeShare(location.hash.slice(1));
+      if (second) {
+        let s2 = B.smooth(B.resample(second.pts, 25), 5);
+        ride2 = { name: second.name || "The other ride", pts: second.pts, series: s2, st: B.stats(s2), bins: B.bins(s2), climbs: B.climbs(s2) };
+      }
       build(pts, { name: meta.n, start: meta.s, speed: meta.v, units: meta.u, source: "share" });
     } catch (e) { fail("That share link didn’t open. Ask for it again, or drop the GPX here."); }
   }

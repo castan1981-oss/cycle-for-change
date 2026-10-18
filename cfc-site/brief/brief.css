@@ -129,3 +129,24 @@
 .bf-how dt{font-weight:700}
 .bf-how dd{margin:0;color:var(--mute);line-height:1.5;max-width:68ch}
 @media (prefers-reduced-motion:reduce){.bf-drop,.bf-drop *{transition:none}}
+
+/* compare and the poster (Oct 18, 2026) */
+.bf-drop--sm{padding:16px 18px;border-color:var(--dust);background:transparent}
+.bf-drop--sm p{font-size:13px}
+.bf-cmp-chart svg{display:block;width:100%;height:220px;background:var(--paper);border:1px solid var(--dust)}
+.bf-cmp-a{fill:var(--dust);fill-opacity:.7;stroke:var(--asphalt);stroke-width:1.4;vector-effect:non-scaling-stroke}
+.bf-cmp-b{fill:var(--creosote-lift);fill-opacity:.75;stroke:var(--creosote-ink);stroke-width:1.4;vector-effect:non-scaling-stroke}
+.bf-legend .ca{background:var(--dust)}.bf-legend .cb{background:var(--creosote-lift)}
+.bf-cmp-grid{display:grid;grid-template-columns:auto 1fr 1fr;gap:1px;background:var(--dust);border:1px solid var(--dust);font-size:14px}
+.bf-cmp-grid>*{background:var(--paper);padding:8px 10px;min-width:0}
+.bf-cmp-grid .h{font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bf-cmp-grid .k{font-size:12px;font-weight:700;color:var(--mute)}
+.bf-cmp-grid .v{font-weight:800;font-variant-numeric:tabular-nums}
+.bf-file-btn{position:relative;overflow:hidden;cursor:pointer}
+.bf-file-btn input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.bf-file-btn:focus-within{outline:2px solid var(--asphalt);outline-offset:2px}
+.bf-poster{display:grid;gap:12px;max-width:540px}
+.bf-poster img{display:block;width:100%;height:auto;border:1px solid var(--dust)}
+.bf-poster .bf-actions{margin:0}
+.bf-map .bf-card{display:block;width:100%;height:auto;border:1px solid var(--dust)}
+.bf-map .bf-card svg{display:block;width:100%;height:auto}
