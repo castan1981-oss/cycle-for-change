@@ -14,3 +14,11 @@ social/video/posted/*.mov
 # installed by Netlify on every deploy
 node_modules/
 package-lock.json
+
+# social stills and check images stay local too; only the .md briefs are tracked
+social/video/inbox/*.png
+social/video/inbox/*.jpg
+social/video/inbox/*.jpeg
+social/video/posted/*.png
+social/video/posted/*.jpg
+social/video/posted/*.jpeg
