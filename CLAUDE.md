@@ -590,7 +590,7 @@ https://claude.ai/artifact/QKG9zHH8dYZtjnFcYgLpCv (republish that URL to update)
 - `scripts/build-brief.js` → `cfc-site/brief/index.html`. The engine is `cfc-site/brief/engine.js`
   (pure functions, tested in `tools/test/brief-engine.test.js`); the page is `brief.js` + `brief.css`.
   Bump `V` in the build script when any of the three changes, then rebuild.
-- Drop a GPX → distance, climbing, high point, loop; the climb chart coloured by grade (patina → powder
+- Drop a ride file → distance, climbing, high point, loop; the climb chart coloured by grade (patina → powder
   rose → smeared rose → rose ink → asphalt, never green-to-red); climbs by a stated rule (3% over 200 m,
   100 ft of gain, Strava's length × grade categories); times at a flat speed (slower up, faster down,
   an estimate); **weather at up to eight points at the hour you reach them** (Open-Meteo hourly, °F,
@@ -601,6 +601,12 @@ https://claude.ai/artifact/QKG9zHH8dYZtjnFcYgLpCv (republish that URL to update)
   Open-Meteo (heights when the file has none; the forecast) and carry sample coordinates. No cookies,
   no storage, no form. The page says exactly this under "How it's worked out" and in the verification
   line; keep both true.
+- **Files** (Oct 18, 2026): GPX, TCX, and **FIT** straight off a Garmin, Wahoo or Hammerhead (`parseFIT()`: record
+  messages only, developer fields skipped, no CRC check), and Garmin Connect's "Export original" zip as it comes
+  (`unzipFirst()`, DecompressionStream in the browser, zlib in node). `parseAny(file)` is the one door the page uses.
+  A recorded file gives the start clock and the moving speed, so there is nothing to type. Strava and Garmin stay
+  export-and-drop on purpose: no API, no sign-in, nothing stored (§8, §10). The Garmin Connect Developer Program
+  (pushed rides) is the only "connect" path the rules allow, and only for Robert's own rides, when he applies.
 - Heights: the file's, or Open-Meteo's 90 m model when the file has none; never a route we drew,
   never Strava's API (§10). A sample ride (`cfc-site/brief/sample.gpx`) is Robert's own file or
   nothing.
@@ -678,3 +684,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-16 — Two Valley women's rides (Femmes Friday, Women's BOS, PhxWmn); Phoenix guide routes 8 → 12 (Tempe Town Lake loop, Brown's Ranch, Bartlett Dam Rd, Seven Springs, the guide's first gravel); a top-10 city inside the radius now always names the metro hub (two Scottsdale rides had renamed `/rides/az/phoenix/`). Tempe has 3 provable rides, short of a hub (`research/rides/az/az-tempe-mesa-2026-10-16.md`).
 - 2026-10-17 — `/brief/`, the ride briefing (drop a GPX: climbs, weather where you'll be when you get there, wear, water, back by; free, no account, nothing stored); the briefing team and the trust desk (19 agents, the freshness table, the verification line); `/brief` command; the plan canvas.
 - 2026-10-18 — `/brief/`: the plan folds to one line (start time and speed read from a recorded ride); compare (two rides on one chart, the difference in sentences); the route card (the route drawn with its climbs named) as the map, as a 1080×1350 poster, and on every ride page that has a route, with "Brief this ride" (the briefing at the ride's next start, nothing to type).
+- 2026-10-18 — `/brief/` reads FIT (off the unit) and TCX, and Garmin Connect's zipped export, through one door (`parseAny`); the start time and speed come off the file.

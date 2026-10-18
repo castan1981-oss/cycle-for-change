@@ -66,12 +66,13 @@
   // ---- loading a file ----
   function fail(msg) { el.err.textContent = msg; el.err.hidden = false; }
   function clearErr() { el.err.hidden = true; el.err.textContent = ""; }
-  async function loadText(text, source) {
+  async function loadFile(file, source) {
     clearErr();
-    let parsed;
-    try { parsed = B.parseGPX(text); } catch (e) { fail(e.message); return; }
+    let parsed, text = null;
     el.drop.classList.add("is-busy");
+    try { parsed = await B.parseAny(file); } catch (e) { el.drop.classList.remove("is-busy"); fail(e.message || "That file didn’t open. GPX, TCX or FIT, or a zip with one inside."); return; }
     try {
+      if (/\.gpx$/i.test(file.name || "")) text = await file.text();   // a GPX goes back out as it came; anything else is written fresh
       await build(parsed.pts, { name: parsed.name, source, text });
     } catch (e) {
       fail(e.message || "Something went wrong reading that file.");
@@ -210,10 +211,10 @@
   }
 
   // ---- compare: two rides on one scale ----
-  async function loadSecond(text) {
+  async function loadSecond(file) {
     clearErr();
     let parsed;
-    try { parsed = B.parseGPX(text); } catch (e) { fail(e.message); return; }
+    try { parsed = await B.parseAny(file); } catch (e) { fail(e.message || "That file didn’t open."); return; }
     let series = B.resample(parsed.pts, 25);
     if (series[0].ele === null) series = await heights(series);
     series = B.smooth(series, 5);
@@ -425,20 +426,20 @@
   const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
   // ---- wiring ----
-  el.file.addEventListener("change", () => { const f = el.file.files[0]; if (f) f.text().then((t) => loadText(t, "file")); });
+  el.file.addEventListener("change", () => { const f = el.file.files[0]; if (f) loadFile(f, "file"); });
   ["dragenter", "dragover"].forEach((ev) => el.drop.addEventListener(ev, (e) => { e.preventDefault(); el.drop.classList.add("is-over"); }));
   ["dragleave", "drop"].forEach((ev) => el.drop.addEventListener(ev, (e) => { e.preventDefault(); el.drop.classList.remove("is-over"); }));
-  el.drop.addEventListener("drop", (e) => { const f = e.dataTransfer.files && e.dataTransfer.files[0]; if (f) f.text().then((t) => loadText(t, "file")); });
+  el.drop.addEventListener("drop", (e) => { const f = e.dataTransfer.files && e.dataTransfer.files[0]; if (f) loadFile(f, "file"); });
   el.drop.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); el.file.click(); } });
   el.go.addEventListener("click", () => { render(); el.planGrid.hidden = true; el.planChange.setAttribute("aria-expanded", "false"); el.planChange.focus(); });
   el.planChange.addEventListener("click", () => { const open = el.planGrid.hidden; el.planGrid.hidden = !open; el.planChange.setAttribute("aria-expanded", String(open)); if (open) el.start.focus(); });
   el.units.addEventListener("change", () => { units = el.units.value; render(); });
   [el.start, el.speed].forEach((i) => i.addEventListener("change", render));
   el.name.addEventListener("change", render);
-  el.file2.addEventListener("change", () => { const f = el.file2.files[0]; if (f) f.text().then(loadSecond); });
+  el.file2.addEventListener("change", () => { const f = el.file2.files[0]; if (f) loadSecond(f); });
   ["dragenter", "dragover"].forEach((ev) => el.drop2.addEventListener(ev, (e) => { e.preventDefault(); el.drop2.classList.add("is-over"); }));
   ["dragleave", "drop"].forEach((ev) => el.drop2.addEventListener(ev, (e) => { e.preventDefault(); el.drop2.classList.remove("is-over"); }));
-  el.drop2.addEventListener("drop", (e) => { const f = e.dataTransfer.files && e.dataTransfer.files[0]; if (f) f.text().then(loadSecond); });
+  el.drop2.addEventListener("drop", (e) => { const f = e.dataTransfer.files && e.dataTransfer.files[0]; if (f) loadSecond(f); });
   el.drop2.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); el.file2.click(); } });
   el.cmpClear.addEventListener("click", () => { ride2 = null; el.file2.value = ""; render(); });
   el.poster.addEventListener("click", makePoster);
@@ -457,7 +458,7 @@
   });
   // a sample ride, if one is on the server (Robert's own file; see scripts/build-brief.js)
   fetch("/brief/sample.gpx", { method: "HEAD" }).then((r) => { if (r.ok) el.sample.hidden = false; }).catch(() => {});
-  el.sampleLink.addEventListener("click", (e) => { e.preventDefault(); fetch("/brief/sample.gpx").then((r) => r.text()).then((t) => loadText(t, "file")); });
+  el.sampleLink.addEventListener("click", (e) => { e.preventDefault(); fetch("/brief/sample.gpx").then((r) => r.blob()).then((b) => { b.name = "sample.gpx"; return loadFile(b, "file"); }); });
   // a share link
   if (location.hash.length > 20) {
     try {

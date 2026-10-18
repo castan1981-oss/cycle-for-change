@@ -18,12 +18,12 @@ const fs = require("fs");
 const path = require("path");
 const CHROME = require("./chrome.js");
 
-const V = 5;
+const V = 6;
 const ROOT = path.resolve(__dirname, "..");
 const OUT = path.join(ROOT, "cfc-site", "brief", "index.html");
 
 const title = "Brief the ride";
-const description = "Drop a GPX. Get the climbs, the weather where you’ll be when you get there, what to wear, and when you’re back. Free, no account, nothing stored.";
+const description = "Drop a ride file, GPX or FIT. Get the climbs, the weather where you’ll be when you get there, what to wear, and when you’re back. Free, no account, nothing stored.";
 const url = "/brief/";
 const ld = [{
   "@context": "https://schema.org",
@@ -51,12 +51,12 @@ ${CHROME.HEADER}
   <section class="bf-top">
     <p class="eyebrow">Ride briefing</p>
     <h1>Brief the ride.</h1>
-    <p class="lede">Drop a GPX. Get the climbs, the weather where you’ll be when you get there, what to wear, and when you’re back.</p>
+    <p class="lede">Drop a ride file. Get the climbs, the weather where you’ll be when you get there, what to wear, and when you’re back.</p>
     <ul class="bf-promise"><li>Free</li><li>No account</li><li>Nothing stored. Your file stays in your browser.</li></ul>
     <div class="bf-drop" id="drop" tabindex="0" role="button" aria-label="Choose a GPX file, or drop one here">
-      <input type="file" id="file" accept=".gpx,application/gpx+xml,application/xml,text/xml" aria-label="GPX file">
-      <span class="btn btn--ink" aria-hidden="true">Choose a GPX file</span>
-      <p>Or drop one here. From Strava, Ride with GPS, Komoot, Garmin, your bike computer. A planned route or a ride you recorded.</p>
+      <input type="file" id="file" accept=".gpx,.fit,.tcx,.zip,application/gpx+xml,application/vnd.ant.fit,application/zip,application/xml,text/xml" aria-label="Ride file: GPX, FIT or TCX">
+      <span class="btn btn--ink" aria-hidden="true">Choose a ride file</span>
+      <p>Or drop one here. A GPX from Strava, Ride with GPS or Komoot; a FIT straight off a Garmin, Wahoo or Hammerhead; Garmin Connect’s “Export original” zip as it comes. A planned route or a ride you recorded.</p>
     </div>
     <p class="bf-sample" id="sampleP" hidden><a class="link" href="#" id="sample">Try one of Robert’s rides</a></p>
     <p class="bf-err" id="err" role="alert" hidden></p>
@@ -123,9 +123,9 @@ ${CHROME.HEADER}
       <h3>Compare it</h3>
       <p class="bf-h-note">Two rides on one chart, and the difference said in a sentence.</p>
       <div class="bf-drop bf-drop--sm" id="drop2" tabindex="0" role="button" aria-label="Choose a second GPX file to compare">
-        <input type="file" id="file2" accept=".gpx,application/gpx+xml,application/xml,text/xml" aria-label="Second GPX file">
+        <input type="file" id="file2" accept=".gpx,.fit,.tcx,.zip,application/gpx+xml,application/vnd.ant.fit,application/zip,application/xml,text/xml" aria-label="Second ride file">
         <span class="btn btn--ghost btn--sm" aria-hidden="true">Compare with another ride</span>
-        <p>Drop a second GPX here.</p>
+        <p>Drop a second file here. GPX, FIT or TCX.</p>
       </div>
       <div id="compare" hidden>
         <div class="bf-cmp-chart" id="cmpChart"></div>
@@ -165,15 +165,15 @@ ${CHROME.HEADER}
   <details class="bf-how">
     <summary>How it’s worked out</summary>
     <dl>
-      <dt>The line</dt><dd>Your file, read in the browser, one point every 25 m. Heights from the file; when it has none, from Open-Meteo’s 90 m elevation model. Heights are averaged over 125 m so barometer noise doesn’t count as climbing; climbing adds up only when the road rises 2 m or more.</dd>
+      <dt>The line</dt><dd>Your file, read in the browser, one point every 25 m. GPX, TCX, or the FIT a Garmin, Wahoo or Hammerhead records (a zip with one inside opens too). Heights from the file; when it has none, from Open-Meteo’s 90 m elevation model. Heights are averaged over 125 m so barometer noise doesn’t count as climbing; climbing adds up only when the road rises 2 m or more.</dd>
       <dt>Climbs</dt><dd>A climb starts where the grade over 200 m reaches 3% and ends where it drops below; a dip shorter than 300 m that doesn’t fall more than 2% stays part of the climb. Under 100 ft of gain it’s a rise, not a climb. Category is Strava’s rule: length in metres times average grade. 8,000 is cat 4, 16,000 cat 3, 32,000 cat 2, 64,000 cat 1, 80,000 HC.</dd>
       <dt>Times</dt><dd>Your flat speed, slower on the climbs (divided by 1 + 0.12 × grade), faster on the descents (up to 1.35×). An estimate. No stops are counted; add your coffee.</dd>
       <dt>Weather</dt><dd>Open-Meteo’s hourly forecast at up to eight points: the start, every twelve miles, the foot of each climb, the finish, each at the hour you get there. Headwind means the wind is coming from within 45° of where you’re heading; tailwind, from behind; everything else is a crosswind. Nine days out or less; beyond that there’s no forecast worth printing.</dd>
       <dt>Wear and water</dt><dd>A house table by temperature: winter kit under 40°F, warmers under 60, summer kit over 70, sun sleeves and an early start over 90. Water is about a bottle an hour at 80°F, one and a half at 90, two over 100, and over 100 isn’t an afternoon ride.</dd>
       <dt>Difficulty</dt><dd>Hard: 60 miles or more, 100 ft of climbing a mile or more, or 40 miles at 60 ft a mile. Moderate: 25 miles or 50 ft a mile. Easy: the rest.</dd>
-      <dt>Compare</dt><dd>Both climb charts on the same distance and height scale. The sentences come from the numbers: distance and climbing within 5% count as the same; "hillier" is feet of climbing per mile; "steepest" is the steepest tenth of a mile; times are at the same flat speed.</dd>
+      <dt>Compare</dt><dd>Both climb charts on the same distance and height scale. The sentences come from the numbers: distance and climbing within 5% count as the same; “hillier” is feet of climbing per mile; “steepest” is the steepest tenth of a mile; times are at the same flat speed.</dd>
       <dt>The poster</dt><dd>The route as one line, the start, each climb's top with its height and mile, and anything the host named. Drawn in your browser; a photo you add stays in your browser too. 1080 by 1350, the size a story or a feed post wants.</dd>
-      <dt>What leaves your browser</dt><dd>Nothing but the sample coordinates in the two Open-Meteo requests. No account, no cookies, nothing stored. The share link carries the route itself, so it works for anyone.</dd>
+      <dt>What leaves your browser</dt><dd>Nothing but the sample coordinates in the two Open-Meteo requests. A FIT is read here too; nothing is converted anywhere else. No account, no cookies, nothing stored. The share link carries the route itself, so it works for anyone.</dd>
     </dl>
   </details>
 
