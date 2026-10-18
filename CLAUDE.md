@@ -606,6 +606,20 @@ https://claude.ai/artifact/QKG9zHH8dYZtjnFcYgLpCv (republish that URL to update)
   nothing.
 - Words inside a stretched SVG are banned (they squash): the chart's axis, the climb numbers and the
   map's marks are HTML positioned by percent (`drawProfile()`, `drawMap()` are the pattern).
+- **The route card** (Oct 18, 2026; Robert's reference: Eat Sleep Cycle Nice's "route of the month" post):
+  `cfc-site/brief/card.js` draws the route as one line with its points named — start and finish, each
+  climb's top with its height and mile, the host's regroup and stops — labels on square plates with
+  hairline leaders, placed clear of the line and of each other, never in the title block. One `layout()`,
+  two painters: `svg()` for pages, `paint()` onto a canvas. It is "The route" on `/brief/` and the
+  **poster** there (1080 × 1350 PNG, title, date, `cycleforchange.org/brief`; optionally over the rider's
+  own photo with a flat asphalt band under the words, no wash, no grain). It is also the drawn route on
+  **every ride page that has a route** (`routeCard()` in build-rides.js, above the street map), with a
+  **"Brief this ride"** button: `/brief/` opened on the host's GPX at the ride's next start and the host's
+  pace, nothing to type. Overpass, sentence case, "Climb 1 · 2,355 ft · mile 8.5"; never a mono-caps label.
+- **Compare** (the Bike Insights idea): drop a second GPX on `/brief/` and both climb charts sit on one
+  distance-and-height scale (patina and powder rose), a seven-row table, and the difference in sentences
+  from `compare()` in the engine (same within 5%; "hillier" is ft per mile; "steepest" is the steepest
+  tenth of a mile; times at one flat speed). The share link carries both rides (`b` in the hash).
 - Not yet in the engine: surface and road mix (the `surface-analyst` desk does it offline for site
   routes), refill points (the `water-heat` desk, per route), hazards. The page doesn't pretend.
 
@@ -623,9 +637,9 @@ a verification line (what was checked, by which desk, from which source, on whic
 would rather leave a field blank than guess; so would you.
 
 ### The page system (to build, in this order; each step ships something a rider can use)
-1. `/brief/` (this PR). 2. Group-ride pages get the engine and this week's weather on their route.
-3. Climb pages (`/climbs/<id>/`) and `/compare/` (two profiles on one scale, the difference in a
-sentence). 4. Org pages (`/for/<org>/`, 990-sourced, the money sentence) and the 2027 event pages
+1. `/brief/` (done). 2. Group-ride pages get the engine: the route card and "Brief this ride" are on every
+ride page with a route (done, Oct 18); this week's weather inline on the page is still to come.
+3. Climb pages (`/climbs/<id>/`); compare is done on `/brief/`. 4. Org pages (`/for/<org>/`, 990-sourced, the money sentence) and the 2027 event pages
 briefed day by day. 5. Phoenix town page with the climate window and the one-morning ride, then
 Tucson. 6. `/10000/` and the ride log, live by January 1. Each page type has one reader, one shape,
 two exits; the shapes are on the plan canvas.
@@ -663,3 +677,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-16 — `/nov7/` is a landing page: the sign and four big buttons on the first screen (group ride, 2027 rides, blog, Instagram), the friends film below.
 - 2026-10-16 — Two Valley women's rides (Femmes Friday, Women's BOS, PhxWmn); Phoenix guide routes 8 → 12 (Tempe Town Lake loop, Brown's Ranch, Bartlett Dam Rd, Seven Springs, the guide's first gravel); a top-10 city inside the radius now always names the metro hub (two Scottsdale rides had renamed `/rides/az/phoenix/`). Tempe has 3 provable rides, short of a hub (`research/rides/az/az-tempe-mesa-2026-10-16.md`).
 - 2026-10-17 — `/brief/`, the ride briefing (drop a GPX: climbs, weather where you'll be when you get there, wear, water, back by; free, no account, nothing stored); the briefing team and the trust desk (19 agents, the freshness table, the verification line); `/brief` command; the plan canvas.
+- 2026-10-18 — `/brief/`: the plan folds to one line (start time and speed read from a recorded ride); compare (two rides on one chart, the difference in sentences); the route card (the route drawn with its climbs named) as the map, as a 1080×1350 poster, and on every ride page that has a route, with "Brief this ride" (the briefing at the ride's next start, nothing to type).

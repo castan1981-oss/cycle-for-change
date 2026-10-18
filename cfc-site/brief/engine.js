@@ -287,22 +287,62 @@
     if (out[out.length - 1] !== series[series.length - 1]) out.push(series[series.length - 1]);
     return out;
   }
-  function encode(series, meta) {
+  function packLine(series) {
     const s = thin(series);
     const flat = []; for (const p of s) { flat.push(p.lat, p.lon); }
-    return btoa64(JSON.stringify({ ...meta, ver: 1, p: encodeNums(flat, 1e5), e: encodeNums(s.map((p) => p.ele), 1) }));
+    return { p: encodeNums(flat, 1e5), e: encodeNums(s.map((p) => p.ele), 1) };
+  }
+  function unpackLine(o) {
+    const flat = decodeNums(o.p, 1e5), ele = decodeNums(o.e, 1);
+    const pts = [];
+    for (let i = 0; i < flat.length; i += 2) pts.push({ lat: flat[i], lon: flat[i + 1], ele: ele[i / 2] });
+    return pts;
+  }
+  // `second` (optional): the ride being compared with, { series, name }
+  function encode(series, meta, second) {
+    const o = { ...meta, ver: 1, ...packLine(series) };
+    if (second) o.b = { n: second.name || "", ...packLine(second.series) };
+    return btoa64(JSON.stringify(o));
   }
   function decodeShare(hash) {
     const o = JSON.parse(atob64(hash));
     if (o.ver !== 1) throw new Error("share link version");
-    const flat = decodeNums(o.p, 1e5), ele = decodeNums(o.e, 1);
-    const pts = [];
-    for (let i = 0; i < flat.length; i += 2) pts.push({ lat: flat[i], lon: flat[i + 1], ele: ele[i / 2] });
-    const { p, e, ver, ...meta } = o;
-    return { pts, meta };
+    const pts = unpackLine(o);
+    const { p, e, ver, b, ...meta } = o;
+    const second = b ? { name: b.n, pts: unpackLine(b) } : null;
+    return { pts, meta, second };
   }
+  // ---- compare: two rides on one scale, the difference said in a sentence (the Bike Insights idea) ----
+  function compare(a, b, mph) {
+    const mi = (x) => x.st.m / MI, ft = (x) => x.st.gain_m / FT;
+    const perMi = (x) => ft(x) / Math.max(1, mi(x));
+    const big = (x) => x.climbs.reduce((m, c) => (c.gain_m > (m ? m.gain_m : -1) ? c : m), null);
+    const t = (x) => { const tl = timeline(x.series, mph); return tl[tl.length - 1]; };
+    const steep = (x) => x.bins.reduce((m, bn) => Math.max(m, bn.grade), 0);
+    const r = (n) => Math.round(n);
+    const pct = (x, y) => Math.round(((x - y) / Math.max(1e-9, y)) * 100);
+    const lines = [];
+    const dm = pct(mi(b), mi(a)), dg = pct(ft(b), ft(a));
+    if (Math.abs(dm) < 5 && Math.abs(dg) < 5) lines.push(`${b.name} and ${a.name} are the same ride on paper: within 5% on distance and climbing.`);
+    else {
+      const dist = Math.abs(dm) < 5 ? "about the same distance" : `${Math.abs(dm)}% ${dm > 0 ? "longer" : "shorter"}`;
+      const gain = Math.abs(dg) < 5 ? "about the same climbing" : `${Math.abs(dg)}% ${dg > 0 ? "more" : "less"} climbing`;
+      lines.push(`${b.name} is ${dist} with ${gain}.`);
+    }
+    const pa = perMi(a), pb = perMi(b);
+    if (Math.abs(pa - pb) >= 10) lines.push(`${pb > pa ? b.name : a.name} is the hillier ride: ${r(Math.max(pa, pb))} ft a mile against ${r(Math.min(pa, pb))}.`);
+    const sa = steep(a), sb = steep(b);
+    if (Math.abs(sa - sb) >= 1.5) lines.push(`The steepest stretch is on ${sb > sa ? b.name : a.name}, ${Math.max(sa, sb).toFixed(0)}% against ${Math.min(sa, sb).toFixed(0)}%.`);
+    const ba = big(a), bb = big(b);
+    if (ba && bb) lines.push(`Biggest climb: ${r(ba.gain_m / FT).toLocaleString("en-US")} ft on ${a.name}, ${r(bb.gain_m / FT).toLocaleString("en-US")} ft on ${b.name}.`);
+    else if (ba || bb) lines.push(`${ba ? a.name : b.name} has a climb worth the name; ${ba ? b.name : a.name} doesn't.`);
+    const ta = t(a), tb = t(b);
+    lines.push(`At ${mph} mph on the flats: ${a.name} ${hm(ta)}, ${b.name} ${hm(tb)}.`);
+    return { lines, a: { mi: mi(a), ft: ft(a), perMi: pa, sec: ta, steep: sa, climbs: a.climbs.length, high_m: a.st.high_m }, b: { mi: mi(b), ft: ft(b), perMi: pb, sec: tb, steep: sb, climbs: b.climbs.length, high_m: b.st.high_m } };
+  }
+  function hm(sec) { const h = Math.floor(sec / 3600), m = Math.round((sec % 3600) / 60); return h ? `${h}h${String(m).padStart(2, "0")}` : `${m} min`; }
   function btoa64(s) { const b = typeof Buffer !== "undefined" ? Buffer.from(s, "utf8").toString("base64") : btoa(unescape(encodeURIComponent(s))); return b.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); }
   function atob64(s) { const b = s.replace(/-/g, "+").replace(/_/g, "/"); return typeof Buffer !== "undefined" ? Buffer.from(b, "base64").toString("utf8") : decodeURIComponent(escape(atob(b))); }
 
-  return { MI, FT, dist, bearing, parseGPX, resample, smooth, stats, bins, eleAt, gradeAt, climbs, category, timeline, plan, windWord, wear, water, difficulty, encode, decodeShare, encodeNums, decodeNums, thin, CLIMB_MIN_GRADE, CLIMB_MIN_GAIN };
+  return { MI, FT, dist, bearing, compare, parseGPX, resample, smooth, stats, bins, eleAt, gradeAt, climbs, category, timeline, plan, windWord, wear, water, difficulty, encode, decodeShare, encodeNums, decodeNums, thin, CLIMB_MIN_GRADE, CLIMB_MIN_GAIN };
 });

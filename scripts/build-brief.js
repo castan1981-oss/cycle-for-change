@@ -18,7 +18,7 @@ const fs = require("fs");
 const path = require("path");
 const CHROME = require("./chrome.js");
 
-const V = 4;
+const V = 5;
 const ROOT = path.resolve(__dirname, "..");
 const OUT = path.join(ROOT, "cfc-site", "brief", "index.html");
 
@@ -119,6 +119,36 @@ ${CHROME.HEADER}
       </div>
     </div>
 
+    <div class="bf-sec" id="compareSec">
+      <h3>Compare it</h3>
+      <p class="bf-h-note">Two rides on one chart, and the difference said in a sentence.</p>
+      <div class="bf-drop bf-drop--sm" id="drop2" tabindex="0" role="button" aria-label="Choose a second GPX file to compare">
+        <input type="file" id="file2" accept=".gpx,application/gpx+xml,application/xml,text/xml" aria-label="Second GPX file">
+        <span class="btn btn--ghost btn--sm" aria-hidden="true">Compare with another ride</span>
+        <p>Drop a second GPX here.</p>
+      </div>
+      <div id="compare" hidden>
+        <div class="bf-cmp-chart" id="cmpChart"></div>
+        <ul class="bf-legend" id="cmpLegend"></ul>
+        <div class="bf-cmp-grid" id="cmpGrid"></div>
+        <ul class="bf-brief" id="cmpLines"></ul>
+        <p class="bf-h-note"><button type="button" class="bf-plan-change" id="cmpClear">Remove the second ride</button></p>
+      </div>
+    </div>
+
+    <div class="bf-sec">
+      <h3>The poster</h3>
+      <p class="bf-h-note">The route with its climbs named, as a picture for the group chat or your story. On its own, or over a photo of yours.</p>
+      <div class="bf-actions">
+        <button type="button" class="btn btn--ink" id="poster">Make the poster</button>
+        <label class="btn btn--ghost bf-file-btn">Over my photo<input type="file" id="posterPhoto" accept="image/*" aria-label="A photo for the poster"></label>
+      </div>
+      <div class="bf-poster" id="posterOut" hidden>
+        <img id="posterImg" alt="" width="1080" height="1350">
+        <p class="bf-actions"><a class="btn btn--ink" id="posterDl" href="#" download="route.png">Save the poster</a><span class="bf-h-note">On a phone: press and hold the picture to save it.</span></p>
+      </div>
+    </div>
+
     <div class="bf-sec">
       <h3>Share it</h3>
       <p class="bf-h-note">One link with the whole briefing in it. Drop it in the group chat.</p>
@@ -141,6 +171,8 @@ ${CHROME.HEADER}
       <dt>Weather</dt><dd>Open-Meteo’s hourly forecast at up to eight points: the start, every twelve miles, the foot of each climb, the finish, each at the hour you get there. Headwind means the wind is coming from within 45° of where you’re heading; tailwind, from behind; everything else is a crosswind. Nine days out or less; beyond that there’s no forecast worth printing.</dd>
       <dt>Wear and water</dt><dd>A house table by temperature: winter kit under 40°F, warmers under 60, summer kit over 70, sun sleeves and an early start over 90. Water is about a bottle an hour at 80°F, one and a half at 90, two over 100, and over 100 isn’t an afternoon ride.</dd>
       <dt>Difficulty</dt><dd>Hard: 60 miles or more, 100 ft of climbing a mile or more, or 40 miles at 60 ft a mile. Moderate: 25 miles or 50 ft a mile. Easy: the rest.</dd>
+      <dt>Compare</dt><dd>Both climb charts on the same distance and height scale. The sentences come from the numbers: distance and climbing within 5% count as the same; "hillier" is feet of climbing per mile; "steepest" is the steepest tenth of a mile; times are at the same flat speed.</dd>
+      <dt>The poster</dt><dd>The route as one line, the start, each climb's top with its height and mile, and anything the host named. Drawn in your browser; a photo you add stays in your browser too. 1080 by 1350, the size a story or a feed post wants.</dd>
       <dt>What leaves your browser</dt><dd>Nothing but the sample coordinates in the two Open-Meteo requests. No account, no cookies, nothing stored. The share link carries the route itself, so it works for anyone.</dd>
     </dl>
   </details>
@@ -149,6 +181,7 @@ ${CHROME.PLEDGE}
 </main>
 ${CHROME.FOOTER}
 <script src="/brief/engine.js?v=${V}"></script>
+<script src="/brief/card.js?v=${V}"></script>
 <script src="/brief/brief.js?v=${V}" defer></script>
 </body>
 </html>

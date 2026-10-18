@@ -121,3 +121,38 @@ test("the share link round-trips the line and the heights", () => {
   assert.ok(Math.abs(st.m - 18000) < 60);
   assert.ok(Math.abs(st.gain_m - 300) < 12, `gain after share ${st.gain_m}`);
 });
+
+test("a share link can carry a second ride, and compare says the difference in plain words", () => {
+  const s = B.smooth(B.resample(B.parseGPX(gpx()).pts));
+  const flat = B.smooth(B.resample(B.parseGPX(gpx().replace(/<ele>[^<]*<\/ele>/g, "<ele>340</ele>")).pts));
+  const hash = B.encode(s, { n: "Hilly", v: 15, u: "mi" }, { name: "Flat", series: flat });
+  const back = B.decodeShare(hash);
+  assert.equal(back.second.name, "Flat");
+  assert.ok(back.second.pts.length > 300);
+  const A = { name: "Hilly", series: s, st: B.stats(s), bins: B.bins(s), climbs: B.climbs(s) };
+  const Bf = { name: "Flat", series: flat, st: B.stats(flat), bins: B.bins(flat), climbs: B.climbs(flat) };
+  const c = B.compare(A, Bf, 15);
+  assert.match(c.lines[0], /Flat is about the same distance with 100% less climbing/);
+  assert.ok(c.lines.some((l) => /Hilly is the hillier ride/.test(l)));
+  assert.ok(c.lines.some((l) => /Hilly has a climb worth the name; Flat doesn/.test(l)));
+  assert.match(c.lines[c.lines.length - 1], /At 15 mph on the flats: Hilly \d+ min, Flat \d+ min/);
+  assert.ok(c.a.sec > c.b.sec);
+});
+
+test("the route card names the start, each climb's top and the host's stops, and keeps labels inside the frame", () => {
+  const CARD = require("../../cfc-site/brief/card.js");
+  const s = B.smooth(B.resample(B.parseGPX(gpx()).pts));
+  const L = CARD.layout(s, B.climbs(s), { W: 1000, H: 700, pad: 64, units: "mi", cues: [{ m: 2.5, t: "Regroup at the gas station", k: "regroup" }, { m: 0, t: "Start", k: "start" }] });
+  const kinds = L.pts.map((p) => p.kind);
+  assert.deepEqual(kinds, ["start", "finish", "climb", "regroup"]);
+  assert.match(L.pts[2].lines[1], /^2,0\d\d ft · mile 5\.\d$/);
+  assert.deepEqual(L.pts[3].lines, ["Regroup", "at the gas station"]);   // the head word isn’t said twice
+  for (const p of L.pts) { const b = p.label; assert.ok(b.bx >= 0 && b.by >= 0 && b.bx + b.bw <= 1000 && b.by + b.bh <= 700, `label inside for ${p.kind}`); }
+  const svg = CARD.svg(L, "plaster");
+  assert.match(svg, /^<svg viewBox="0 0 1000 700"/);
+  assert.ok(svg.includes("Climb 1") && svg.includes("Start") && svg.includes("Regroup"));
+  assert.ok(!svg.includes("<image"));
+  const poster = CARD.layout(s, B.climbs(s), { W: 1080, H: 1350, units: "mi", title: "North & back", sub: "11 mi", date: "Sun, Oct 18", foot: "cycleforchange.org/brief" });
+  for (const p of poster.pts) assert.ok(p.label.by >= poster.top - poster.fs, "labels stay out of the title block");
+  assert.ok(CARD.svg(poster).includes("North &amp; back"));
+});
