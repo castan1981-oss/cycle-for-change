@@ -16,6 +16,9 @@
 
 /* the plan: four fields on one hairline */
 .bf-plan{margin-top:36px;padding-top:20px;border-top:1px solid var(--dust)}
+.bf-plan-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:0 0 14px;font-size:15px;font-weight:700}
+.bf-plan-change{appearance:none;background:none;border:0;border-bottom:1px solid currentColor;padding:0 0 2px;font:inherit;font-size:13px;font-weight:700;color:var(--mute);cursor:pointer;min-height:44px;display:inline-flex;align-items:center}
+.bf-plan-change:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px}
 .bf-plan-grid{display:grid;grid-template-columns:2fr 1.4fr .8fr .7fr auto;gap:14px;align-items:end;max-width:960px}
 .bf-plan label{display:grid;gap:6px;font-size:13px;font-weight:700;color:var(--mute);min-width:0}
 .bf-plan input,.bf-plan select{min-height:44px;padding:0 12px;border:1px solid var(--asphalt);border-radius:0;background:var(--paper);color:var(--asphalt);font:inherit;font-size:16px;width:100%;min-width:0}

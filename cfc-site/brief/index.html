@@ -25,7 +25,7 @@
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/brief/brief.css?v=3">
+  <link rel="stylesheet" href="/brief/brief.css?v=4">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Ride briefing","url":"https://cycleforchange.org/brief/","applicationCategory":"SportsApplication","operatingSystem":"Any","browserRequirements":"Runs in the browser. Nothing is uploaded.","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Drop a GPX. Get the climbs, the weather where you’ll be when you get there, what to wear, and when you’re back. Free, no account, nothing stored.","publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org"}}</script>
 </head>
 <body>
@@ -101,7 +101,8 @@
   </section>
 
   <section class="bf-plan" id="plan" aria-label="Ride plan" hidden>
-    <div class="bf-plan-grid">
+    <p class="bf-plan-line"><span id="planLine"></span> <button type="button" class="bf-plan-change" id="planChange" aria-expanded="false" aria-controls="planGrid">Change</button></p>
+    <div class="bf-plan-grid" id="planGrid" hidden>
       <label>Ride name<input type="text" id="rideName" maxlength="80" autocomplete="off"></label>
       <label>Start<input type="datetime-local" id="start"></label>
       <label>Flat speed, mph<input type="number" id="speed" min="6" max="30" step="1" value="15" inputmode="numeric"></label>
@@ -243,7 +244,7 @@
   </div>
 </footer>
 <script src="/chrome.js" defer></script>
-<script src="/brief/engine.js?v=3"></script>
-<script src="/brief/brief.js?v=3" defer></script>
+<script src="/brief/engine.js?v=4"></script>
+<script src="/brief/brief.js?v=4" defer></script>
 </body>
 </html>

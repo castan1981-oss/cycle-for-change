@@ -13,20 +13,20 @@
 
   const el = {
     drop: $("#drop"), file: $("#file"), err: $("#err"), sample: $("#sampleP"), sampleLink: $("#sample"),
-    plan: $("#plan"), name: $("#rideName"), start: $("#start"), speed: $("#speed"), units: $("#units"), go: $("#go"),
+    plan: $("#plan"), planLine: $("#planLine"), planChange: $("#planChange"), planGrid: $("#planGrid"), name: $("#rideName"), start: $("#start"), speed: $("#speed"), units: $("#units"), go: $("#go"),
     out: $("#out"), head: $("#outHead"), stats: $("#stats"), map: $("#map"), prof: $("#prof"), brief: $("#brief"),
     wx: $("#wx"), wxNote: $("#wxNote"), climbs: $("#climbs"), climbsNone: $("#climbsNone"), wear: $("#wear"), water: $("#water"),
     share: $("#share"), shareOut: $("#shareOut"), gpx: $("#gpx"), verify: $("#verify"), top: $("#outTop"),
   };
 
   let ride = null;   // { name, pts, series, st, bins, climbs, t, source: "file"|"share", text }
-  let units = "mi";
+  let units = /-(US|LR|MM)$/i.test(navigator.language || "en-US") || !(navigator.language || "").includes("-") ? "mi" : "km";   // miles for US readers, km elsewhere; the toggle is one tap away
 
   // ---- plan defaults: tomorrow 6:30 if it's past 6:30 today, else today ----
-  function defaultStart() {
+  function defaultStart(h = 6, mi = 30) {
     const now = new Date();
-    const d = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 6, 30);
-    if (now > d) d.setDate(d.getDate() + 1);
+    const d = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, mi);
+    if (now.getTime() + 20 * 60000 > d.getTime()) d.setDate(d.getDate() + 1);   // the next time that clock comes around, with 20 minutes to get out the door
     return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
   }
   const pad = (n) => String(n).padStart(2, "0");
@@ -86,13 +86,37 @@
     const st = B.stats(series);
     ride = { name: meta.name || "Your ride", pts, series, st, bins: B.bins(series), climbs: B.climbs(series), source: meta.source, text: meta.text || null, heightsFrom };
     el.name.value = ride.name;
+    el.units.value = units;
+    // a recorded ride already says when it started and how fast it went; use both so nothing has to be typed
+    const known = fromRecording(pts);
+    ride.known = known;
     if (meta.start) el.start.value = meta.start;
+    else if (known.start) el.start.value = known.start;
+    else el.start.value = defaultStart();
     if (meta.speed) el.speed.value = meta.speed;
+    else if (known.mph) el.speed.value = known.mph;
+    else el.speed.value = 15;
     if (meta.units) { units = meta.units; el.units.value = units; }
     el.plan.hidden = false;
+    el.planGrid.hidden = true; el.planChange.setAttribute("aria-expanded", "false");
     render();
     el.out.hidden = false;
     if (meta.source === "file") el.top.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  // what a recorded ride already tells us: the clock it started at (in this browser's zone) and its moving speed
+  function fromRecording(pts) {
+    const timed = pts.filter((p) => p.t);
+    if (timed.length < 20) return {};
+    const t0 = new Date(timed[0].t);
+    if (isNaN(t0)) return {};
+    let moving = 0, d = 0;
+    for (let i = 1; i < timed.length; i++) {
+      const dt = (new Date(timed[i].t) - new Date(timed[i - 1].t)) / 1000;
+      const dd = B.dist(timed[i - 1], timed[i]);
+      if (dt > 0 && dt < 120 && dd / dt > 0.8) { moving += dt; d += dd; }   // stopped time doesn't count
+    }
+    const mph = moving > 300 ? Math.round((d / moving) * 3600 / MI) : null;
+    return { start: defaultStart(t0.getHours(), Math.round(t0.getMinutes() / 5) * 5 % 60), mph: mph && mph >= 8 && mph <= 25 ? mph : null, recorded: true };
   }
   // heights for a file without them: one point every 200 m, 100 per request, interpolated back onto the 25 m line
   async function heights(series) {
@@ -132,6 +156,8 @@
     ride.name = name;
     document.title = `${name} — ride briefing`;
 
+    const k = ride.known || {};
+    el.planLine.textContent = `${dayWord(startW)}, ${clock(startW)}${k.start && el.start.value === k.start ? " (when you rode it)" : ""} · ${fmt.speed(mph)} on the flats${k.mph && mph === k.mph ? " (your speed that day)" : ""} · ${units === "mi" ? "miles" : "km"}`;
     el.head.innerHTML = `
       <p class="bf-kicker"><span>${esc(dayWord(startW))}, ${clock(startW)}</span><span class="bf-chip bf-chip--${diff}">${diff[0].toUpperCase() + diff.slice(1)}</span></p>
       <h2 class="bf-name">${esc(name)}</h2>
@@ -352,7 +378,8 @@
   ["dragleave", "drop"].forEach((ev) => el.drop.addEventListener(ev, (e) => { e.preventDefault(); el.drop.classList.remove("is-over"); }));
   el.drop.addEventListener("drop", (e) => { const f = e.dataTransfer.files && e.dataTransfer.files[0]; if (f) f.text().then((t) => loadText(t, "file")); });
   el.drop.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); el.file.click(); } });
-  el.go.addEventListener("click", render);
+  el.go.addEventListener("click", () => { render(); el.planGrid.hidden = true; el.planChange.setAttribute("aria-expanded", "false"); el.planChange.focus(); });
+  el.planChange.addEventListener("click", () => { const open = el.planGrid.hidden; el.planGrid.hidden = !open; el.planChange.setAttribute("aria-expanded", String(open)); if (open) el.start.focus(); });
   el.units.addEventListener("change", () => { units = el.units.value; render(); });
   [el.start, el.speed].forEach((i) => i.addEventListener("change", render));
   el.name.addEventListener("change", render);
