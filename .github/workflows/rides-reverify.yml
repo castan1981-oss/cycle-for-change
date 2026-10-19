@@ -87,6 +87,9 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Oct 18, 2026: the Oct 5 and Oct 12 runs went green in ~90 s (17 turns) and opened nothing. Show the
+          # run's own output in the log so the next one says where it stops. Turn off again once it ships PRs.
+          show_full_output: true
           claude_args: '--model claude-sonnet-4-6 --max-turns 150 --allowedTools "Task,Agent,WebFetch,WebSearch,Read,Write,Edit,Glob,Grep,Bash(node:*),Bash(git:*),Bash(gh:*),Bash(curl:*),Bash(python3:*),Bash(grep:*),Bash(head:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*)"'
           prompt: |
             You are running the Cycle for Change group-ride upkeep, unattended. The promise: a ride

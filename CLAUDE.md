@@ -487,8 +487,11 @@ for the pace. Every ride page now answers that, or says where the answer lives.
 
 - One target query per page: in the `<title>`, the `<h1>` and an `<h2>`. Titles fit 60
   characters (`head()` drops the brand suffix when it won't fit).
-- Event markup only for a date still ahead, and never for a flagged or one-source ride. The rides
-  rebuild runs daily (`rides-weekly-rebuild.yml`) so next-ride dates stay current.
+- Event markup only for a date still ahead, and never for a red-flagged, hidden or one-source ride. An
+  amber flag (the host's page wording moved, a time went missing) keeps the "confirm with the host" nudge on
+  the page and keeps the Event: the markup says what the page says (Oct 18, 2026, Robert's OK — 174 pages,
+  Critical Mass London among them, had a date on the page and no Event while their amber flags waited for
+  a re-check). The rides rebuild runs daily (`rides-weekly-rebuild.yml`) so next-ride dates stay current.
 - Real `<meta name="description">`, `<link rel="canonical">`, clean heading order, descriptive
   `alt` on every image.
 - A short quotable answer near the top (`.fn-lede` / `.lede`) so assistants can cite it.
@@ -684,5 +687,6 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-16 — `/nov7/` is a landing page: the sign and four big buttons on the first screen (group ride, 2027 rides, blog, Instagram), the friends film below.
 - 2026-10-16 — Two Valley women's rides (Femmes Friday, Women's BOS, PhxWmn); Phoenix guide routes 8 → 12 (Tempe Town Lake loop, Brown's Ranch, Bartlett Dam Rd, Seven Springs, the guide's first gravel); a top-10 city inside the radius now always names the metro hub (two Scottsdale rides had renamed `/rides/az/phoenix/`). Tempe has 3 provable rides, short of a hub (`research/rides/az/az-tempe-mesa-2026-10-16.md`).
 - 2026-10-17 — `/brief/`, the ride briefing (drop a GPX: climbs, weather where you'll be when you get there, wear, water, back by; free, no account, nothing stored); the briefing team and the trust desk (19 agents, the freshness table, the verification line); `/brief` command; the plan canvas.
+- 2026-10-18 — Phase 2 of the growth plan: /brief/ linked, Tempe → Phoenix, noindex on rides.json and /photos/, the re-check's output shown; an amber flag no longer strips a ride page's Event markup (red flags and one-source rides still do).
 - 2026-10-18 — `/brief/`: the plan folds to one line (start time and speed read from a recorded ride); compare (two rides on one chart, the difference in sentences); the route card (the route drawn with its climbs named) as the map, as a 1080×1350 poster, and on every ride page that has a route, with "Brief this ride" (the briefing at the ride's next start, nothing to type).
 - 2026-10-18 — `/brief/` reads FIT (off the unit) and TCX, and Garmin Connect's zipped export, through one door (`parseAny`); the start time and speed come off the file.

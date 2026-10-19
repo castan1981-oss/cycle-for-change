@@ -1453,6 +1453,8 @@ function findPage(rides) {
     { href: "/events/2027/multi-day-tours/", name: "Multi-day tour", sub: "Days in a row", n: calN("Multi-day tour"), markId: "distance" },
     { href: "/events/2027/races/", name: "Race", sub: "Road, crit and stage races", n: calN("Race"), markId: "flag" },
     { href: "/events/2027/riding/", name: "Ride with me", sub: "The six I'm doing in 2027", n: riding, markId: "ride-day" },
+    // Oct 18, 2026: the briefing had no link anywhere on the site (Phase 2 crawl: zero inlinks)
+    { href: "/brief/", name: "Brief a ride", sub: "Drop a GPX: climbs, weather, water", markId: "climb" },
   ].filter((k) => k.n == null || k.n > 0);
   const jsonld = { "@context": "https://schema.org", "@graph": [
     { "@type": "CollectionPage", "@id": canonical, name: "Find a ride", description, url: canonical, author: AUTHOR, publisher: PUBLISHER, breadcrumb: breadcrumbLd(crumbs) },
@@ -2344,6 +2346,7 @@ function routeBlock(r, rt, listed) {
       <h2 id="gr-route-h">The route</h2>
       <p>${where ? `${esc(where.line)} Once the host sends it to us, it shows here too: a map, a climb chart and a GPX for your bike computer.` : "Nobody has sent us this ride’s route yet. When the host does, it shows here: a map, a climb chart and a GPX for your bike computer."}</p>
       ${where ? `<p class="gr-route-where"><a class="link" href="${attr(where.url)}" rel="noopener nofollow">Routes on ${esc(where.label)}</a></p>` : ""}
+      <p class="gr-route-where"><a class="link" href="/brief/">Have the GPX? Brief it yourself</a>: climbs, the weather where you’ll be, water, back by.</p>
       ${send}
     </section>`;
   }
@@ -2540,9 +2543,13 @@ function ridePage(r, all, hubFor, hubs) {
   const rt = ROUTES.get(r.slug) || null;
 
   // JSON-LD: WebPage (dates, author, breadcrumb) + Event only when the schedule is computable
-  // Search pass (Oct 5, 2026): no Event markup while the ride is flagged or found on one source only — the page itself
-  // says "confirm with the host"; a ride we hand Google as scheduled has to be one we'd stand behind today.
-  const eventOk = f.state !== "flagged" && r.confidence !== "low";
+  // Search pass (Oct 5, 2026): no Event markup while the ride is red-flagged (page gone, "cancelled", a rider says
+  // it's gone) or found on one source only — a ride we hand Google as scheduled has to be one we'd stand behind today.
+  // Oct 18, 2026 (growth plan, Phase 2; Robert's OK): an amber flag — the host's page wording moved, a time went
+  // missing — keeps the "confirm with the host" nudge on the page but not the markup decision. The page still shows
+  // the next date to people, so the Event says the same thing the page says. 174 ride pages (Critical Mass London and
+  // NYC among them) had a date on the page and no Event because nothing clears an amber flag until a re-check.
+  const eventOk = !(f.state === "flagged" && f.severity === "red") && r.confidence !== "low";
   const graph = [{
     "@type": "WebPage", "@id": url, url, name: title, description, dateModified: f.checked_on || r.verified_on, author: AUTHOR, publisher: PUBLISHER,
     breadcrumb: breadcrumbLd(crumbs), ...(eventOk && (next || dated.length) ? { mainEntity: { "@id": `${url}#event` } } : {}),
@@ -2587,11 +2594,14 @@ function ridePage(r, all, hubFor, hubs) {
     thumbnailUrl: `${SITE}${film.poster}`, contentUrl: `${SITE}${film.src}`, uploadDate: film.added || r.verified_on, ...(film.seconds ? { duration: `PT${Math.round(film.seconds)}S` } : {}) });
   const jsonld = { "@context": "https://schema.org", "@graph": graph };
 
+  // Oct 18, 2026 (Phase 2): Google crawled ~335 ride.ics files and listed them as "crawled, not indexed" — a third of
+  // the site's crawl budget on calendar files. The button keeps rel="nofollow" and netlify.toml serves the files with
+  // X-Robots-Tag: noindex. The ICS link is `download`, a file for a calendar app, not a page.
   const calBtns = next && rule ? `
-        ${rideBtn({ href: `/rides/${r.slug}/ride.ics`, text: "Add to calendar", markId: "date", ghost: true, attrs: ` download="${attr(r.slug)}.ics"` })}
+        ${rideBtn({ href: `/rides/${r.slug}/ride.ics`, text: "Add to calendar", markId: "date", ghost: true, attrs: ` download="${attr(r.slug)}.ics" rel="nofollow"` })}
         <a class="gr-minor" href="${attr(gcalUrl(r, next, rule))}" rel="noopener">Google Calendar</a>`
     : dated.length ? `
-        ${rideBtn({ href: `/rides/${r.slug}/ride.ics`, text: dated.length > 1 ? `Add the ${dated.length} dates to calendar` : "Add to calendar", markId: "date", ghost: true, attrs: ` download="${attr(r.slug)}.ics"` })}` : "";
+        ${rideBtn({ href: `/rides/${r.slug}/ride.ics`, text: dated.length > 1 ? `Add the ${dated.length} dates to calendar` : "Add to calendar", markId: "date", ghost: true, attrs: ` download="${attr(r.slug)}.ics" rel="nofollow"` })}` : "";
   // Pass 16: where it is — the state (or country), this ride's dot, the city's ring, the rest of the area light
   const hubR = hubFor[r.slug];
   const locator = mapFigure(shapeOf(isUS(r) ? r.state : null, isUS(r) ? null : r.country), {

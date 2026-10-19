@@ -54,6 +54,10 @@ test("amber flag keeps listing, asks to confirm", () => {
   const h = { flags: [{ code: "schedule-text-changed", severity: "amber", since: "2026-09-28" }] };
   const a = F.assess(ride(), h, T);
   assert.equal(a.state, "flagged"); assert.equal(a.listed, true); assert.match(a.nudge, /changed their page on Sep 28/);
+  // Oct 18, 2026: the page keeps its Event markup on an amber flag; a red flag strips it (build-rides reads `severity`)
+  assert.equal(a.severity, "amber");
+  const r = F.assess(ride(), { flags: [{ code: "page-gone", severity: "red", since: "2026-09-28" }] }, T);
+  assert.equal(r.state, "flagged"); assert.equal(r.severity, "red");
 });
 test("paused and ended are unlisted", () => {
   assert.equal(F.assess(ride({ status: "paused", status_since: "2026-09-01" }), null, T).listed, false);
