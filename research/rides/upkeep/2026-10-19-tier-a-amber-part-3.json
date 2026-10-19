@@ -1,0 +1,108 @@
+[
+ {
+  "slug": "scottsdale-az-cyclologic-saturday-group-ride",
+  "outcome": "changed",
+  "checked_on": "2026-09-30",
+  "evidence": "The shop's rides page still states the Saturday groups and the 6:30 am roll, but its Squarespace data was last edited June 3, 2026 and the page lists no dates, so the ride was not re-confirmed (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city centre to the shop, 9376 E Bahia Dr, Suite D104 (OpenStreetMap, 33.63691, -111.88950): the shop's own 2020 Strava event names Cyclologic as the meeting spot, and the record's start address is the shop's.",
+  "changes": {
+   "lat": 33.63691,
+   "lng": -111.8895,
+   "geo_precision": "start"
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ },
+ {
+  "slug": "tyler-tx-rose-city-cycling-wednesday-urban-ride",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-19",
+  "note": "Ride Tyler's events page still says every Wednesday at 6:00 PM from the back lot of FRESH by Brookshire's; the text that changed was the shop's own Donut Ride date (Sept 5 to Nov 14). Ride Tyler is a shop promoting the ride, not the host. Rose City Cycling's own site (rccyclingtyler.com) sits behind a Cloudflare challenge, so nothing from the host itself and no date for this ride."
+ },
+ {
+  "slug": "wenatchee-wa-wenatchee-valley-velo-saturday-ride",
+  "outcome": "seasonal-break",
+  "checked_on": "2026-10-19",
+  "last_seen": "2026-10-17",
+  "status_note": "No rides on the club's calendar after the Oct 17, 2026 ride. The club says its weekly rides run in the warmer months; in 2026 the first ride was March 28.",
+  "evidence": "Wenatchee Valley Velo's events page lists the Upper Valley Saturday Ride for Sat Oct 17, 2026 at 11:00 am from Yonder Cider House in Cashmere as its last ride, with nothing ahead but a Nov 9 board meeting; the club's home page says its weekly rides run in the warmer-weather months, and its calendar shows last season's rides ending Oct 22, 2025 and this season's starting March 28, 2026 (fetched Oct 19, 2026).",
+  "sources": [
+   "https://wenatcheevalleyvelo.org/events",
+   "https://wenatcheevalleyvelo.org/event-6849032"
+  ]
+ },
+ {
+  "slug": "bethpage-ny-massapequa-park-bicycle-club-rides",
+  "outcome": "changed",
+  "checked_on": "2026-10-19",
+  "last_seen": "2026-10-18",
+  "evidence": "The club's ride calendar lists rides through Sun Oct 18, 2026 (9:00 am from the Bethpage library) and a Sat Oct 24 C ride at 9:00 am, and still says Tue/Thu/Sat/Sun and holidays at 8:30 am in the warmer months and 9 am in the cooler months (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city centre to the Bethpage Public Library, 47 Powell Ave (OpenStreetMap, 40.74264, -73.47821).",
+  "sources": [
+   "https://www.massparkbikeclub.org/ride-calendar/"
+  ],
+  "changes": {
+   "lat": 40.74264,
+   "lng": -73.47821,
+   "geo_precision": "start",
+   "start_location": {
+    "name": "Bethpage Library (the most common start; each ride on the calendar names its own)",
+    "address": "47 Powell Ave, Bethpage, NY 11714"
+   }
+  }
+ },
+ {
+  "slug": "glen-rock-nj-btcnj-club-rides",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "BTCNJ's public ride schedule lists 19 rides in the 31 days from Mon Oct 19, 2026, each with its start time, place and level, including a Sat Oct 24 B* ride at 8:45 am from Asbury, NJ (fetched Oct 19, 2026).",
+  "sources": [
+   "https://btcnj.com/pages/rideSchedulePublic?message"
+  ]
+ },
+ {
+  "slug": "raleigh-nc-green-line-bike-bus",
+  "outcome": "confirmed",
+  "checked_on": "2026-10-19",
+  "last_seen": "2026-10-14",
+  "evidence": "Oaks & Spokes' events calendar lists The Green Line for Wed Oct 21 and Oct 28, 2026 at 7:30 am from Lockwood Park, 1200 Crabtree Blvd, \"April–October 2026, every Wednesday morning\"; the calendar's public ICS feed carries the series weekly on Wednesdays through Oct 28, 2026 (fetched Oct 19, 2026).",
+  "sources": [
+   "https://oaksandspokes.org/events/",
+   "https://calendar.google.com/calendar/ical/oaksandspokes.com_39383735363530333831%40resource.calendar.google.com/public/basic.ics"
+  ],
+  "promote_feed": "https://calendar.google.com/calendar/ical/oaksandspokes.com_39383735363530333831%40resource.calendar.google.com/public/basic.ics"
+ },
+ {
+  "slug": "oakland-ca-waffles-n-wheels-hills-n-sips",
+  "outcome": "unreachable",
+  "checked_on": "2026-10-19",
+  "note": "The Strava event page still shows only Thu Oct 1, 2026, which has passed; the two other event links on the club page now redirect to the club page (deleted), and the club's 'Upcoming Club Event' sits behind the login. No current event found; the club points to Instagram @wafflesnwheels."
+ },
+ {
+  "slug": "ocean-springs-ms-tato-nut-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-19",
+  "last_seen": "2026-10-03",
+  "evidence": "The Gulf Coast Bicycle Club's Ride with GPS calendar lists \"Tri Hard Tatonut in Ocean Springs\" on the first Saturday of every month at 9:00 am, Sat Oct 3 and next Nov 7 and Dec 5, 2026; the event series (created June 16, 2026) says it generally meets at Little Children's Park on the corner of Dewey and Calhoun for 15 or so miles at 12 to 15 mph (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city centre to that corner (OpenStreetMap street data, 30.40898, -88.82638).",
+  "sources": [
+   "https://ridewithgps.com/organizations/14742/calendar.ics",
+   "https://ridewithgps.com/events/487491-tri-hard-tatonut-in-ocean-springs",
+   "https://ridewithgps.com/events/487492-tri-hard-tatonut-in-ocean-springs"
+  ],
+  "changes": {
+   "name": "Tri Hard Tatonut Ride",
+   "schedule": "First Saturday of the month, 9:00 am",
+   "pace": "12 to 15 mph or so, about 15 miles (the host's words)",
+   "distance_miles": "about 15",
+   "lat": 30.40898,
+   "lng": -88.82638,
+   "geo_precision": "start",
+   "start_location": {
+    "name": "Little Children's Park",
+    "address": "Corner of Dewey Ave and Calhoun St, Ocean Springs, MS"
+   },
+   "refresh": {
+    "watch_url": "https://ridewithgps.com/organizations/14742-gulf-coast-bicycle-club",
+    "notes": "The club's Ride with GPS calendar (and its .ics feed) lists the ride month by month as \"Tri Hard Tatonut in Ocean Springs\", 9:00 am, with dates posted years ahead. The 2025 event page (377344) is the old series."
+   }
+  }
+ }
+]
