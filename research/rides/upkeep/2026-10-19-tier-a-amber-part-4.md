@@ -13,4 +13,4 @@ Seven rides: 3 changed (confirmed at the host with corrections) · 4 couldn't co
 
 Pins: none added. Two of the three city-precision records (Missoula, Sioux Falls) have no fixed start; Nashville's start is only in secondary sources that disagree.
 
-WebSearch used three times (Tucson, Corpus Christi, New York, Nashville = four; the New York one found the dated calendar entries). WebFetch blocked once (thebendmag.com).
+WebSearch used four times (Tucson, Corpus Christi, New York, Nashville); only the New York one paid off, turning up the dated calendar entries. WebFetch blocked once (thebendmag.com).
