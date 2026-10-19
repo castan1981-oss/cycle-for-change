@@ -278,6 +278,14 @@ pictures only; only Robert recognisable. Change the JSON and run `node scripts/b
 Sorted by stage: 01 Pick a ride · 02 Get ready · 03 Raise the money, then "From the road" (field
 notes, journal). New guides go in the right stage. The guide "Pledge-per-mile fundraising,
 explained" keeps its name: it's about charity rides in general, not this site.
+- **The tire-and-wheel guides are linked where their question comes up** (Oct 18, 2026; they had 2–7 inlinks
+  each): a ride page's first-time fold gets a "Read" row by discipline (gravel → pressure, tread, tubeless;
+  mountain bike → tubeless, flats, wheel sizes; a fast or drop road ride → width, aero, stiffness; `readRow()`,
+  `GUIDES` in build-rides.js); an event page gets "Get the bike ready" by its kind (`READY`, `G` in
+  build-events.js); a town guide gets one "Get the bike ready" line (`townReady()`, the goathead line in AZ, NM,
+  NV, UT), its bike-shops and bring-your-bike pages a line each; the first-ride FAQ on `/rides/about/` has "What
+  should I check on the bike first?"; the charity guides' "Keep reading" carries two; `/brief/`'s Carry line links
+  the flats guide. Never a boilerplate list on every page.
 
 ### Town guides (`/towns/<state>/<town>/`) — `/town`
 - `/town <City, ST>`, `/town refresh <id>`, `/town next` (`.claude/commands/town.md`; team in
@@ -704,5 +712,6 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-18 — Phase 2 of the growth plan: /brief/ linked, Tempe → Phoenix, noindex on rides.json and /photos/, the re-check's output shown; an amber flag no longer strips a ride page's Event markup (red flags and one-source rides still do).
 - 2026-10-18 — `/brief/`: the plan folds to one line (start time and speed read from a recorded ride); compare (two rides on one chart, the difference in sentences); the route card (the route drawn with its climbs named) as the map, as a 1080×1350 poster, and on every ride page that has a route, with "Brief this ride" (the briefing at the ride's next start, nothing to type).
 - 2026-10-18 — `/brief/` reads FIT (off the unit) and TCX, and Garmin Connect's zipped export, through one door (`parseAny`); the start time and speed come off the file.
+- 2026-10-18 — The tire-and-wheel guides get their inlinks (growth audit): a "Read" row on 285 gravel, mountain-bike and fast-road ride pages, "Get the bike ready" on the 12 event pages and 16 town guides, a line on the shop and bring-your-bike pages, a first-ride FAQ entry, two per charity guide, the brief's Carry line — every one of the ten guides now has 22–220 inlinks, each where its question comes up.
 - 2026-10-18 — Homepage numbers and speed (growth audit): the tally baked from `/api/strava` on every deploy (`scripts/tally.js`; the HTML said 3,573 to crawlers while people saw 3,848) and `/home.js` paints the page's own copy, not one of its own; "The ride on Monday, October 12" instead of "Today's ride"; AVIF/WebP for the hero, the reel poster, the `#today` pictures and every registry photo (mobile Lighthouse 72 → 88 locally, LCP 5.0 → 3.9 s, 959 → 596 KiB); the dead grain filter dropped from the hero.
 - 2026-10-18 — The crawl signals (growth audit, apply-now list): `/llms.txt` and `/feed.xml` (`scripts/build-signals.js`, run by the rides build), the AI crawlers named in robots.txt, `/strava-setup` 301, the footer's Journal link to `/journal/`, an Offer on free rides' Event markup, CollectionPage on the hubs, and a crawlable evening-rides block on `/tonight/`; the `.ics` files out of the index (#183).

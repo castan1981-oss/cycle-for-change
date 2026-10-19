@@ -522,3 +522,11 @@ a.tel{white-space:nowrap;text-decoration:underline;text-decoration-color:var(--c
 @media (max-width:420px){.res-jump{grid-template-columns:1fr 1fr}.res-jump a{padding:10px 12px;font-size:.9rem}}
 @media (prefers-reduced-motion:reduce){.pbtn{transition:none}}
 @media (min-width:760px){.pbtn{flex:0 0 auto;min-width:156px}}
+
+/* Oct 18, 2026: "Get the bike ready" — the tire-and-wheel guides an event or a town raises (growth audit) */
+.ev-ready{margin:28px 0 0}
+.ev-ready .mute{margin:4px 0 10px;max-width:60ch}
+.ev-ready-list{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px 18px}
+.ev-ready-list a{font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;color:inherit}
+.tg-ready{margin:22px 0 0;max-width:68ch;font-size:.98rem;line-height:1.55}
+.tg-ready a{font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;color:inherit}

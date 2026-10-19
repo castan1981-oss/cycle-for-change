@@ -385,6 +385,36 @@ function sourcesList(srcs) {
 }
 
 // ——— event page ————————————————————————————————————————————————————————
+// Oct 18, 2026 (growth audit): the tire-and-wheel guides that answer this event's own question, by its kind —
+// a gravel race asks about pressure and tubeless, a hillclimb about wheels, a tour about flats and hubs.
+const G = {
+  pressure: ["/guides/bike-tire-pressure/", "Tire pressure: what’s actually fastest"],
+  tread: ["/guides/bike-tire-tread/", "Does tread matter on pavement?"],
+  tubeless: ["/guides/tubeless-bike-tires/", "Tubeless: setup, sealant, hookless limits"],
+  flats: ["/guides/prevent-bike-flat-tires/", "How to prevent flats"],
+  width: ["/guides/road-bike-tire-width/", "Road tire width: 25, 28 or 32"],
+  sizes: ["/guides/bike-wheel-sizes/", "Wheel sizes: 29, 27.5 and the rest"],
+  truing: ["/guides/spoke-tension-wheel-truing/", "Spoke tension and truing"],
+  hubs: ["/guides/bike-hub-maintenance/", "Hubs: service before a long one"],
+  aero: ["/guides/are-aero-wheels-worth-it/", "Are aero wheels worth it?"],
+  feel: ["/guides/bike-wheel-stiffness-comfort/", "Wheel stiffness vs comfort"],
+};
+const READY = {
+  gravel: ["pressure", "tubeless", "tread"],
+  mtb: ["tubeless", "sizes", "flats"],
+  road: ["width", "pressure", "aero"],
+  charity: ["width", "pressure", "flats"],
+  tour: ["flats", "hubs", "truing"],
+  hillclimb: ["aero", "feel", "pressure"],
+};
+function readyBlock(e) {
+  const keys = READY[e.type];
+  if (!keys) return "";
+  return `<section class="ev-ready" aria-labelledby="ready-h"><h2 id="ready-h">Get the bike ready</h2>
+      <p class="mute">The questions a ${esc(e.type === "mtb" ? "mountain-bike race" : e.type === "hillclimb" ? "hillclimb" : e.type === "tour" ? "long tour" : e.type + " ride")} raises about tires and wheels, answered from the tests, not the ads.</p>
+      <ul class="ev-ready-list">${keys.map((k) => `<li><a href="${G[k][0]}">${esc(G[k][1])}</a></li>`).join("")}</ul>
+    </section>`;
+}
 function eventPage(e) {
   const t = e.townRef;
   const when = e.next_date ? fmtRange(e.next_date, e.end_date) : null;
@@ -486,6 +516,7 @@ function eventPage(e) {
 
     ${e.history && e.history.length ? `<section><h2>How the ${esc(e.name)} started</h2>${paras(e.history)}</section>` : ""}
     ${e.what_to_expect && e.what_to_expect.length ? `<section><h2>What to expect on the day</h2>${paras(e.what_to_expect)}</section>` : ""}
+    ${readyBlock(e)}
 
     ${weatherBlock(t, { heading: `Weather in ${t.name} for the ${e.name}`, note: e.weather_note, date: e.next_date, endDate: e.end_date })}
 
@@ -561,6 +592,15 @@ function rideLine(it, where, lead) {
 // The house fold (Pass 15/21): crawled, one tap for a person.
 const fold = (summary, html, cls = "") => `<details class="dir-fold town-fold${cls ? " " + cls : ""}"><summary>${summary}</summary><div class="town-fold-body">${html}</div></details>`;
 
+// Oct 18, 2026: the three tire questions a visiting rider asks in this town. Desert towns get the goathead line
+// (the flats guide is written for it); a town with gravel routes gets the pressure and tubeless guides.
+const DESERT = /^(AZ|NM|NV|UT)$/;
+function townReady(t) {
+  const gravel = (t.routes || []).some((r) => /gravel|dirt|mixed/i.test(String(r.surface || r.type || r.name || "")));
+  const keys = DESERT.test(t.state_code) ? ["flats", "pressure", gravel ? "tubeless" : "width"] : gravel ? ["pressure", "tubeless", "flats"] : ["pressure", "width", "flats"];
+  const line = keys.map((k) => `<a href="${G[k][0]}">${esc(G[k][1])}</a>`).join(" &middot; ");
+  return DESERT.test(t.state_code) ? `Goathead country. ${line}.` : `${line}.`;
+}
 function townPage(t) {
   const dest = t.kind === "destination";
   // Oct 4, 2026 (search pass): titles under 60 characters with the suffix, the query in the title and the h1
@@ -664,6 +704,7 @@ ${cal.map((e) => `        <li><a href="/events/2027/${e.start ? ["january","febr
 
     ${explain ? fold(`How ${esc(t.name)} rides: the zones, getting here`, explain, "town-about") : ""}
     ${weatherBlock(t)}
+    <p class="tg-ready"><b>Get the bike ready.</b> ${townReady(t)}</p>
     ${t.faq && t.faq.length ? `<section class="faq"><h2>Questions about riding in ${esc(t.name)}</h2>${t.faq.map((f, i) => `<details><summary>${esc(plain(f.q, W))}</summary><p>${rich(f.a, `${W}.faq[${i}]`)}</p></details>`).join("")}</section>` : ""}
     ${moreFacts(t)}
     ${sourcesList(t.sources)}
@@ -871,7 +912,7 @@ function resourcePage(t, r) {
     ${r.key === "hotels" && items.length ? `<p class="for-events">${esc(TOWNS.hotelLine(t))}.</p>` : ""}
     ${filterRow(r.key, items)}
     ${items.length ? `<ol class="places places--cards">${items.map((it) => placeCard(t, r, it, raw.indexOf(it))).join("")}</ol>` : `<p>Nothing listed yet for ${esc(t.name)}. Check the <a href="${attr(t.visitor_url || t.official_url || "#")}" rel="noopener">local visitor site</a>.</p>`}
-    ${resourceNav(t, r)}
+${r.key === "bike_shops" ? `    <p class="tg-ready"><b>Before you go in.</b> What a shop can fix in an hour, and what you can: <a href="${G.truing[0]}">${esc(G.truing[1])}</a> &middot; <a href="${G.hubs[0]}">${esc(G.hubs[1])}</a> &middot; <a href="${G.flats[0]}">${esc(G.flats[1])}</a>.</p>\n` : ""}${r.key === "bring_your_bike" ? `    <p class="tg-ready"><b>After the flight.</b> A case takes a knock; check the wheels before the first ride: <a href="${G.truing[0]}">${esc(G.truing[1])}</a> &middot; <a href="${G.hubs[0]}">${esc(G.hubs[1])}</a> &middot; <a href="${G.feel[0]}">${esc(G.feel[1])}</a>.</p>\n` : ""}    ${resourceNav(t, r)}
     ${affiliateNote(t)}
     <p class="verified">Checked ${esc(fmtDate(t.verified || TODAY, { weekday: undefined }))}. No paid placements. Businesses open and close; call before you count on anyone.</p>
 ${BLOCKS.REPORT({ thing: "place", name: `${r.h(t)}`, kind: "changed", compact: true, id: "fix" })}
