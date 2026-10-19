@@ -1575,7 +1575,7 @@ ${photoBand("people", { cls: "ph--wide" })}
       <p>A group ride is the cheapest, most reliable way I know to get out of my own head and into a room of people who want you there. Nobody asks what you do. You just ride. In 2027 I&rsquo;m riding 10,000 miles, all on the bike, and a lot of them will be on rides like these. This list exists so anyone, anywhere, can find one this week.</p>
 ${CRISIS}
     </section>
-    <p class="back"><a href="/rides/">&larr; Find a group ride</a> &middot; <a href="/rides/add/">Add a ride we&rsquo;re missing</a></p>
+    <p class="back"><a href="/rides/">&larr; Find a group ride</a> &middot; <a href="/rides/add/">Add a ride we&rsquo;re missing</a> &middot; <a href="/methodology/">How every ride is checked</a></p>
 ${CTA}
     <p class="gr-note">Always confirm with the host before you show up; schedules change with the seasons. This site isn't affiliated with any ride listed.</p>
   </div>
