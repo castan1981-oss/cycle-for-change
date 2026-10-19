@@ -99,6 +99,10 @@ def process(src, dst, strength=0.22, lift=0.13, stop=0.5, warm=0.06, sat=1.08, m
     g = grade(im, strength, lift, stop, warm, sat)
     if os.path.dirname(dst): os.makedirs(os.path.dirname(dst), exist_ok=True)
     g.save(dst, quality=q, optimize=True, progressive=True)
+    # Oct 18, 2026: an AVIF beside every graded JPG (about 45% of the bytes at the same look, quality 52);
+    # scripts/photos.js serves it first when it exists, the JPG stays the fallback.
+    if dst.lower().endswith('.jpg'):
+        g.save(dst[:-4] + '.avif', 'AVIF', quality=52, speed=4)
     print(f'{os.path.relpath(dst, ROOT)}  {g.size[0]}x{g.size[1]}  {os.path.getsize(dst) // 1024} KB')
 
 if __name__ == '__main__':

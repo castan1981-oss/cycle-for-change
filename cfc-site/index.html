@@ -24,8 +24,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" href="/img/sign-print-4-phone.jpg" media="(max-width:759px)">
-  <link rel="preload" as="image" href="/img/sign-print-4.jpg" media="(min-width:760px)">
+  <link rel="preload" as="image" type="image/avif" imagesrcset="/img/sign-print-4-phone.avif" media="(max-width:759px)">
+  <link rel="preload" as="image" type="image/avif" imagesrcset="/img/sign-print-4.avif" media="(min-width:760px)">
   <link rel="stylesheet" href="/home.css?v=40">
 
   <script type="application/ld+json">
@@ -54,7 +54,6 @@
       <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="edge"/>
       <feComposite in="edge" in2="mask" operator="in"/>
     </filter>
-    <filter id="lpGrain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
     <!-- Pass 27: paint worn along the tire line (long streaks), a roller's drag, and the sprayed mark -->
     <filter id="lpWornSoft" x="-10%" y="-10%" width="120%" height="120%">
       <!-- Pass 30: a hand-painted edge only — no chips, no holes; those read as artifacts on a phone -->
@@ -162,15 +161,18 @@
      lets a visitor type into it. Nothing is collected. —— -->
 <section class="sign sign--print" id="top" aria-labelledby="sign-h">
   <picture class="sign-ph">
+    <source media="(max-width:759px)" type="image/avif" srcset="/img/sign-print-4-phone.avif">
+    <source media="(max-width:759px)" type="image/webp" srcset="/img/sign-print-4-phone.webp">
     <source media="(max-width:759px)" srcset="/img/sign-print-4-phone.jpg">
+    <source type="image/avif" srcset="/img/sign-print-4.avif">
+    <source type="image/webp" srcset="/img/sign-print-4.webp">
     <img src="/img/sign-print-4.jpg" width="1200" height="1600" alt="Robert on his bike on the canal path in Phoenix, morning sun, grinning at the camera." fetchpriority="high">
   </picture>
   <div class="sign-scrim" aria-hidden="true"></div>
-  <svg class="sign-grain" aria-hidden="true" focusable="false"><rect width="100%" height="100%" filter="url(#lpGrain)"/></svg>
   <svg class="sign-sig" viewBox="0 0 150 150" aria-hidden="true" focusable="false"><use href="#lpMark"/></svg>
   <div class="wrap sign-in">
     <div class="sign-left">
-      <p class="sign-kicker">Robert. Phoenix. <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Mile <b class="num" data-miles>3,573</b> of training, on Strava.</a> The 10,000 start Jan 1.</p>
+      <p class="sign-kicker">Robert. Phoenix. <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Mile <b class="num" data-miles>3,848</b> of training, on Strava.</a> The 10,000 start Jan 1.</p>
       <h1 class="sign-h" id="sign-h">
         <svg class="sign-mark " viewBox="-10 -10 370 350" aria-hidden="true" focusable="false">
         <g filter="url(#lpWorn)">
@@ -212,7 +214,7 @@
   <div class="wrap">
   <svg class="stopbar" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect x="0" y="26" width="1200" height="18" fill="#EFEDEA"/></svg>
   <div class="nums-in">
-    <div class="num-tile"><b class="num" data-miles>3,573</b><span>miles since June 1</span></div>
+    <div class="num-tile"><b class="num" data-miles>3,848</b><span>miles since June 1</span></div>
     <div class="num-tile"><b class="num" id="rideCount">97</b><span>rides, <a href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">every one on Strava</a></span></div>
     <div class="num-tile num-tile--rose"><b class="num">10,000</b><span>miles in 2027. The count restarts in <b class="num" id="daysTo">88</b> days.</span></div>
   </div>
@@ -223,22 +225,22 @@
 <section class="s today" id="today" aria-labelledby="today-h">
   <div class="wrap today-in">
     <div class="today-words">
-      <p class="eyebrow">Today’s ride. Monday, October 12.</p>
+      <p class="eyebrow">The ride on Monday, October 12.</p>
       <h2 class="today-sign" id="today-h">
         <svg class="today-mark" viewBox="0 0 626 150" aria-hidden="true" focusable="false"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/><use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/></g></svg>
         <span class="plate today-plate" aria-hidden="true">mental clarity</span>
-        <span class="sr">Today I rode for mental clarity</span>
+        <span class="sr">I rode for mental clarity</span>
       </h2>
       <p class="today-line">I rode for mental clarity. Every ride, I say who I’m riding for that day.</p>
     </div>
     <figure class="today-ph today-ph--lead">
-      <img src="/img/today/oct12-gravel-1.jpg" srcset="/img/today/oct12-gravel-1-800.jpg 800w, /img/today/oct12-gravel-1.jpg 1600w" sizes="(min-width: 900px) 56vw, 100vw" width="1600" height="1200" alt="Robert grinning in a white kit and red glasses beside the LOVE mural, his bike against the wall. This morning’s route is painted on the gravel next to him, with CYCLE FOR change." loading="lazy" decoding="async">
+      <picture><source type="image/avif" srcset="/img/today/oct12-gravel-1-800.avif 800w, /img/today/oct12-gravel-1.avif 1600w" sizes="(min-width: 900px) 56vw, 100vw"><img src="/img/today/oct12-gravel-1.jpg" srcset="/img/today/oct12-gravel-1-800.jpg 800w, /img/today/oct12-gravel-1.jpg 1600w" sizes="(min-width: 900px) 56vw, 100vw" width="1600" height="1200" alt="Robert grinning in a white kit and red glasses beside the LOVE mural, his bike against the wall. This morning’s route is painted on the gravel next to him, with CYCLE FOR change." loading="lazy" decoding="async"></picture>
     </figure>
     <p class="today-where">Phoenix · October</p>
     <div class="today-pair">
       <figure class="today-film" id="todayFig" data-playing="false">
         <div class="today-film-frame">
-          <video id="todayVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/today-oct12-1.jpg" width="720" height="1280" aria-label="Robert walks up to the LOVE mural in his kit and strikes a pose, hands on his hips.">
+          <video id="todayVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/today-oct12-1.webp" width="720" height="1280" aria-label="Robert walks up to the LOVE mural in his kit and strikes a pose, hands on his hips.">
             <source src="/film/today-oct12-1.webm" type="video/webm">
             <source src="/film/today-oct12-1.mp4" type="video/mp4">
           </video>
@@ -248,7 +250,7 @@
       <a class="today-ask" href="/cyclefor/"><span class="today-ask-q">What do you cycle for?</span><span class="today-ask-go">Say it on video</span></a>
     </div>
     <figure class="today-ph today-ph--close">
-      <img src="/img/today/oct12-love-1.jpg" srcset="/img/today/oct12-love-1-800.jpg 800w, /img/today/oct12-love-1.jpg 1600w" sizes="(min-width: 1360px) 1248px, 100vw" width="1600" height="900" alt="Robert’s red bike leaning on a wall painted with LOVE in purple, green, yellow and pink." loading="lazy" decoding="async">
+      <picture><source type="image/avif" srcset="/img/today/oct12-love-1-800.avif 800w, /img/today/oct12-love-1.avif 1600w" sizes="(min-width: 1360px) 1248px, 100vw"><img src="/img/today/oct12-love-1.jpg" srcset="/img/today/oct12-love-1-800.jpg 800w, /img/today/oct12-love-1.jpg 1600w" sizes="(min-width: 1360px) 1248px, 100vw" width="1600" height="900" alt="Robert’s red bike leaning on a wall painted with LOVE in purple, green, yellow and pink." loading="lazy" decoding="async"></picture>
     </figure>
   </div>
 </section>
@@ -258,18 +260,19 @@
   <div class="wrap road">
     <div>
       <div class="s-head"><div class="stack16"><p class="eyebrow">From the road</p><h2 class="h2" id="road-h">The last rides.</h2></div></div>
+      <script type="application/json" id="tallyData">{"miles":3848.4,"rides":102,"updated":"2026-10-19T01:41:02.869Z","profileUrl":"https://www.strava.com/athletes/22899089","recent":[{"date":"2026-10-13T14:15:11Z","miles":41.7,"title":"Morning Ride"},{"date":"2026-10-12T13:27:49Z","miles":43.4,"title":"Morning Ride"},{"date":"2026-10-10T11:54:10Z","miles":93,"title":"TSR"},{"date":"2026-10-09T12:55:33Z","miles":32.5,"title":"Friday Shop Ride Bicycle Haüs"},{"date":"2026-10-07T14:17:39Z","miles":65,"title":"Morning Ride"},{"date":"2026-10-05T13:51:27Z","miles":35.7,"title":"Morning Ride"}],"chart":[[0,35.2],[9,312],[18,636.7],[27,1010.2],[36,1400.8],[45,1676.4],[53,1979.3],[62,2293.4],[71,2618.6],[80,2961.5],[89,3303.5],[98,3763.3],[100,3848.4]]}</script>
       <ol class="log" id="log" data-max="4" aria-live="polite">
-        <li><span class="when">Mon Oct 5</span><span class="bar-mi" style="--w:.57"></span><span class="mi num">35.7<small>mi</small></span></li>
-        <li><span class="when">Sun Oct 4</span><span class="bar-mi" style="--w:1"></span><span class="mi num">63.1<small>mi</small></span></li>
-        <li><span class="when">Sat Oct 3</span><span class="bar-mi" style="--w:.67"></span><span class="mi num">42.3<small>mi</small></span></li>
-        <li><span class="when">Fri Oct 2</span><span class="bar-mi" style="--w:.58"></span><span class="mi num">36.6<small>mi</small></span></li>
+        <li><span class="when">Tue Oct 13</span><span class="bar-mi" style="--w:.45"></span><span class="mi num">41.7<small>mi</small></span></li>
+        <li><span class="when">Mon Oct 12</span><span class="bar-mi" style="--w:.47"></span><span class="mi num">43.4<small>mi</small></span></li>
+        <li><span class="when">Sat Oct 10<b>TSR</b></span><span class="bar-mi" style="--w:1"></span><span class="mi num">93.0<small>mi</small></span></li>
+        <li><span class="when">Fri Oct 9<b>Friday Shop Ride Bicycle Haüs</b></span><span class="bar-mi" style="--w:.35"></span><span class="mi num">32.5<small>mi</small></span></li>
       </ol>
       <p class="road-note">Every ride gets a stroke, as long as the ride. The big ones get a page: the route, the town, who was there, the footage.</p>
     </div>
     <div class="road-side">
       <figure class="road-film" id="roadFig" data-playing="false">
         <div class="road-film-frame">
-          <video id="roadVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/road-film-2.jpg" width="864" height="1080" aria-label="Twelve seconds of my rides: the desert road, a drone overhead, riders up ahead, a river canyon, a forest trail, a tunnel.">
+          <video id="roadVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/road-film-2.webp" width="864" height="1080" aria-label="Twelve seconds of my rides: the desert road, a drone overhead, riders up ahead, a river canyon, a forest trail, a tunnel.">
             <source src="/film/road-film-2.mp4" type="video/mp4">
           </video>
           <button class="road-play" id="roadPlay" type="button" aria-label="Play the last ride, 12 seconds"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg></button>
@@ -469,6 +472,6 @@
 <!-- Pass 37: the old phone tally bar (miles + Ride with me) is gone. It sat on top of the Pass 36 Ride with me bar,
      so a phone showed two bars at once. The Ride with me bar (scripts/chrome.js, /ridebar.js) does its job. -->
 
-<script src="/home.js?v=38" defer></script>
+<script src="/home.js?v=39" defer></script>
 </body>
 </html>

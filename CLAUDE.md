@@ -71,6 +71,7 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 | `python3 tools/grade.py --all --only <key>` | grades `cfc-site/photos/<key>.jpg` into `cfc-site/img/ph/` (portraits 1440 tall, landscapes 1600 wide, q76). `--only` keeps live photos from re-encoding. |
 | `python3 tools/print.py` | the Pass 27 screenprint. Not used on the hero since Pass 32; kept for reference. |
 | `scripts/towns.js`, `scripts/blocks.js` | the one town lookup + strip; the shared ride-report form and how-it's-built tiles |
+| `node scripts/tally.js` | the baked tally on the homepage: reads `/api/strava` (the one place the site may read Strava), keeps `data/tally.json`, and rewrites every `[data-miles]`, the four "last rides" rows and the `#tallyData` JSON that `/home.js` paints first. build-home.js applies the copy; build-rides.js refreshes it live on every deploy. Never type the number. Tests: `tools/test/tally.test.js`. |
 | `node scripts/build-signals.js` | `cfc-site/llms.txt` (what the site is, for AI search; counts from the data) and `cfc-site/feed.xml` (RSS of guides, field notes, journal, event and town pages, newest first by the sitemaps' lastmod). build-rides.js runs it last on every build, so the deploy keeps them current. Tests: `tools/test/build-signals.test.js`. |
 
 After a change to `scripts/chrome.js`, regenerate everything that wears it, the same day, in this
@@ -565,6 +566,11 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
   `tools/sr.py` (upscaling) needs opencv-contrib, which the sandbox lacks.
 - Inner-page photos: originals in `cfc-site/photos/<key>.jpg`, graded copies in `cfc-site/img/ph/`,
   registered in `scripts/photos.js`. Never the first thing on a phone on a rides hub.
+- **AVIF beside every JPG** (Oct 18, 2026, the audit's speed pass): `tools/grade.py` writes a `.avif` (quality 52,
+  about 45% of the bytes at the same look) next to each graded JPG, and `figure()` serves it first in a `<picture>`
+  with the JPG as the fallback. The homepage's hero, the reel's poster and the `#today` pictures have `.avif` and
+  `.webp` siblings (Pillow, q52 / q78; `<picture>` sources and `imagesrcset` preloads in build-home.js; video posters
+  use the WebP). A new picture gets its siblings the same way, same file number.
 - **The stockpile** is on Robert's Mac, not in the repo: `~/Pictures/CFC Stockpile/` (photos in
   seven folders, clips, `index.html` to browse, `manifest.csv` with each file's Photos ID).
   `07-group-rides` has other people in it — ask before using any of it.
@@ -698,4 +704,5 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-18 — Phase 2 of the growth plan: /brief/ linked, Tempe → Phoenix, noindex on rides.json and /photos/, the re-check's output shown; an amber flag no longer strips a ride page's Event markup (red flags and one-source rides still do).
 - 2026-10-18 — `/brief/`: the plan folds to one line (start time and speed read from a recorded ride); compare (two rides on one chart, the difference in sentences); the route card (the route drawn with its climbs named) as the map, as a 1080×1350 poster, and on every ride page that has a route, with "Brief this ride" (the briefing at the ride's next start, nothing to type).
 - 2026-10-18 — `/brief/` reads FIT (off the unit) and TCX, and Garmin Connect's zipped export, through one door (`parseAny`); the start time and speed come off the file.
+- 2026-10-18 — Homepage numbers and speed (growth audit): the tally baked from `/api/strava` on every deploy (`scripts/tally.js`; the HTML said 3,573 to crawlers while people saw 3,848) and `/home.js` paints the page's own copy, not one of its own; "The ride on Monday, October 12" instead of "Today's ride"; AVIF/WebP for the hero, the reel poster, the `#today` pictures and every registry photo (mobile Lighthouse 72 → 88 locally, LCP 5.0 → 3.9 s, 959 → 596 KiB); the dead grain filter dropped from the hero.
 - 2026-10-18 — The crawl signals (growth audit, apply-now list): `/llms.txt` and `/feed.xml` (`scripts/build-signals.js`, run by the rides build), the AI crawlers named in robots.txt, `/strava-setup` 301, the footer's Journal link to `/journal/`, an Offer on free rides' Event markup, CollectionPage on the hubs, and a crawlable evening-rides block on `/tonight/`; the `.ics` files out of the index (#183).
