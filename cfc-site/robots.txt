@@ -1,5 +1,43 @@
 # cycleforchange.org
+# Everyone may read the site. The AI search crawlers are named so the choice is plain (Oct 18, 2026):
+# the group-ride directory is meant to be the cited answer to "is there a no-drop ride near me".
 User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckAssistBot
 Allow: /
 
 Sitemap: https://cycleforchange.org/sitemap.xml

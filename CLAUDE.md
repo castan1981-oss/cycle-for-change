@@ -71,6 +71,7 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 | `python3 tools/grade.py --all --only <key>` | grades `cfc-site/photos/<key>.jpg` into `cfc-site/img/ph/` (portraits 1440 tall, landscapes 1600 wide, q76). `--only` keeps live photos from re-encoding. |
 | `python3 tools/print.py` | the Pass 27 screenprint. Not used on the hero since Pass 32; kept for reference. |
 | `scripts/towns.js`, `scripts/blocks.js` | the one town lookup + strip; the shared ride-report form and how-it's-built tiles |
+| `node scripts/build-signals.js` | `cfc-site/llms.txt` (what the site is, for AI search; counts from the data) and `cfc-site/feed.xml` (RSS of guides, field notes, journal, event and town pages, newest first by the sitemaps' lastmod). build-rides.js runs it last on every build, so the deploy keeps them current. Tests: `tools/test/build-signals.test.js`. |
 
 After a change to `scripts/chrome.js`, regenerate everything that wears it, the same day, in this
 order (events and calendar read rides' `live.json`): `node scripts/build-home.js && node
@@ -501,6 +502,13 @@ for the pace. Every ride page now answers that, or says where the answer lives.
   `sitemap-calendar.xml`, `rides/sitemap.xml`). A redirected URL never sits in a sitemap.
 - Prefer fewer, fuller pages over more, thinner ones. Single-ride pages earn most of the clicks;
   thin city and filter pages earn almost none.
+- **AI search is welcome** (Oct 18, 2026): `robots.txt` names the AI crawlers (GPTBot, OAI-SearchBot, ClaudeBot,
+  PerplexityBot, Google-Extended, Applebot-Extended…) with an explicit Allow — the competitors block them, and the
+  directory is meant to be the cited answer. `/llms.txt` and `/feed.xml` come from `scripts/build-signals.js`; every
+  page's `<head>` links the feed. A free ride's Event carries an `Offer` at 0 (`offersLd()` in build-rides.js); the
+  hubs (`/towns/`, `/field-notes/`, `/tonight/`) carry CollectionPage / WebPage markup. `/tonight/` gets a crawlable
+  "Evening rides, by city and day" block (the directory's six cities, rides from 5 pm) written by build-rides.js between
+  the `evenings` markers in `cfc-site/tonight/index.html`.
 - **Search Lab** (`seo/README.md`, `seo/crawl.mjs`, `seo/keywords.json`): every PR that changes
   public pages gets one line in its description —
   `Search Lab: <what should move> · <which measure> · read <date>` (2 weeks out for indexing, 4
@@ -690,3 +698,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-18 — Phase 2 of the growth plan: /brief/ linked, Tempe → Phoenix, noindex on rides.json and /photos/, the re-check's output shown; an amber flag no longer strips a ride page's Event markup (red flags and one-source rides still do).
 - 2026-10-18 — `/brief/`: the plan folds to one line (start time and speed read from a recorded ride); compare (two rides on one chart, the difference in sentences); the route card (the route drawn with its climbs named) as the map, as a 1080×1350 poster, and on every ride page that has a route, with "Brief this ride" (the briefing at the ride's next start, nothing to type).
 - 2026-10-18 — `/brief/` reads FIT (off the unit) and TCX, and Garmin Connect's zipped export, through one door (`parseAny`); the start time and speed come off the file.
+- 2026-10-18 — The crawl signals (growth audit, apply-now list): `/llms.txt` and `/feed.xml` (`scripts/build-signals.js`, run by the rides build), the AI crawlers named in robots.txt, `/strava-setup` 301, the footer's Journal link to `/journal/`, an Offer on free rides' Event markup, CollectionPage on the hubs, and a crawlable evening-rides block on `/tonight/`; the `.ics` files out of the index (#183).

@@ -1187,7 +1187,11 @@ ${BLOCKS.REPORT({ thing: "place", compact: true })}
   </article>
 ${map ? `<script src="/rides/map.js" defer></script>` : ""}
 `;
-  return head({ title, description, url, ld: [] }) + body + foot();
+  // Oct 18, 2026 (growth audit): the hub says what it is — a CollectionPage listing every town guide
+  const ld = [{ "@context": "https://schema.org", "@type": "CollectionPage", name: "Town guides for cyclists", url: SITE + url, description,
+    isPartOf: { "@type": "WebSite", name: "Cycle for Change", url: SITE + "/" },
+    mainEntity: { "@type": "ItemList", numberOfItems: az.length, itemListElement: az.map((t, i) => ({ "@type": "ListItem", position: i + 1, url: SITE + t.url, name: `${t.name}, ${t.state_code}` })) } }];
+  return head({ title, description, url, ld }) + body + foot();
 }
 
 // ——— build ————————————————————————————————————————————————————————————————

@@ -172,6 +172,7 @@ const page = `<!doctype html>
   <title>Cycle for Change: Robert Castan rides 10,000 miles in 2027</title>
   <meta name="description" content="Robert Castan rides 10,000 miles in 2027, all on the bike, and writes every ride down. The money goes through the orgs' own rides. Find a group ride.">
   <link rel="canonical" href="https://cycleforchange.org/">
+  <link rel="alternate" type="application/rss+xml" title="Cycle for Change" href="https://cycleforchange.org/feed.xml">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cycle for Change">

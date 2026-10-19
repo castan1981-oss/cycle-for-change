@@ -49,6 +49,18 @@
     # Oct 18, 2026: the originals (33 MB) are the source for tools/grade.py, not something to index or link.
     X-Robots-Tag = "noindex, nofollow"
 
+# Oct 18, 2026: the feed and llms.txt (scripts/build-signals.js), served as what they are.
+[[headers]]
+  for = "/feed.xml"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+
 # Oct 18, 2026 (Phase 2): the per-ride calendar files. Search Console listed ~335 of them as "crawled, not indexed";
 # they are files for a calendar app, not pages. Keep them out of the index and the crawl budget.
 [[headers]]
@@ -187,13 +199,13 @@
 [[redirects]]
   from = "/strava-setup"
   to = "/"
-  status = 302
+  status = 301
   force = true
 
 [[redirects]]
   from = "/strava-setup.html"
   to = "/"
-  status = 302
+  status = 301
   force = true
 
 # Rides hubs that moved when the data grew. Hub names follow the data (Sept 30: Encinitas took Carlsbad's
