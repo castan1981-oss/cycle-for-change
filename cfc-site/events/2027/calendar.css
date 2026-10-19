@@ -227,3 +227,8 @@ a.mo-tile:focus-visible,a.cal-door:focus-visible{outline:2px solid var(--asphalt
   .more-f summary{min-height:44px;padding:0}
   .cal-tba a{display:inline-flex;align-items:center;min-height:44px}
 }
+
+/* Oct 18, 2026: a light row on /all/ — the links, then the full panel arrives from the month page on open */
+.det--light{padding:2px 0 14px}
+.det--light .det-links{margin:0}
+.det-more{margin-left:4px}

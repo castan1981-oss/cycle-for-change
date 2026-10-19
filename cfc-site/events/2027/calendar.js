@@ -3,10 +3,13 @@
    scripts/build-calendar.js); this script shows and hides them from the
    filters, keeps the counts honest, and remembers the filters.
    Pass 22 (Oct 2, 2026): the filters live in the URL too —
-     /events/2027/all/?type=gravel&far=200   ?type=charity-rides&month=6,7,8&region=northeast&cause=cancer
+     /events/2027/all/#type=gravel&far=200   #type=charity-rides&month=6,7,8&region=northeast&cause=cancer
    so a shortlist can be bookmarked or sent to a phone. The category and month pages link here
    with their pick already on. A URL with filters wins over what this browser remembered.
-   Without JS the page is the full list with native <details> for the facts. */
+   Oct 18, 2026: the filters moved from ?query to #hash (old ? links still read) so Google sees one
+   /all/ page, and the rows are light — the full panel (facts, notes, the town strip) is fetched from
+   the row's month page the first time it opens (data-src), one fetch per month, cached.
+   Without JS the page is the list, and each row links to its month page for the facts. */
 (function () {
   "use strict";
   var $ = function (s, el) { return (el || document).querySelector(s); };
@@ -20,9 +23,11 @@
   function blank() { return { q: "", m: {}, t: {}, r: {}, c: {}, f: {}, conf: false, riding: false }; }
   var state = blank();
 
+  // "#type=gravel&far=200" is filters; "#unbound-gravel" is an event (openHash)
+  function hashIsFilters() { return location.hash.indexOf("=") > 0; }
   function fromUrl() {
     var p;
-    try { p = new URLSearchParams(location.search); } catch (e) { return false; }
+    try { p = new URLSearchParams(location.search || (hashIsFilters() ? location.hash.slice(1) : "")); } catch (e) { return false; }
     var found = false, s = blank();
     var list = function (k) { return (p.get(k) || "").toLowerCase().split(",").map(function (x) { return x.trim(); }).filter(Boolean); };
     list("month").forEach(function (v) {
@@ -61,8 +66,26 @@
     if (state.conf) parts.push("conf=1");
     if (state.riding) parts.push("riding=1");
     if (state.q) parts.push("q=" + encodeURIComponent(state.q));
-    try { history.replaceState(history.state, "", location.pathname + (parts.length ? "?" + parts.join("&") : "") + location.hash); } catch (e) {}
+    // a #slug link (an event) keeps its hash; the filters are written only over a filters hash or none
+    if (location.hash && !hashIsFilters()) return;
+    try { history.replaceState(history.state, "", location.pathname + (parts.length ? "#" + parts.join("&") : "")); } catch (e) {}
   }
+
+  // the full panel, from the month page, the first time a light row opens
+  var monthDocs = {};
+  function fill(el) {
+    var src = el.getAttribute("data-src"), det = $(".det--light", el);
+    if (!src || !det || el.getAttribute("data-filled")) return;
+    el.setAttribute("data-filled", "1");
+    var get = monthDocs[src] || (monthDocs[src] = fetch(src, { credentials: "same-origin" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }).then(function (t) { return new DOMParser().parseFromString(t, "text/html"); }));
+    get.then(function (doc) {
+      var full = doc.getElementById(el.id), panel = full && $(".det", full);
+      if (!panel) return;
+      det.innerHTML = panel.innerHTML;
+      det.classList.remove("det--light");
+    }).catch(function () { el.removeAttribute("data-filled"); });   // the link to the month page is still there
+  }
+  rows.forEach(function (el) { el.addEventListener("toggle", function () { if (el.open) fill(el); }); });
 
   var any = function (o) { for (var k in o) if (o[k]) return true; return false; };
   function anyFilter() { return state.q || any(state.m) || any(state.t) || any(state.r) || any(state.c) || any(state.f) || state.conf || state.riding; }
@@ -151,8 +174,8 @@
   if (clear) clear.addEventListener("click", function () { state = blank(); if (q) q.value = ""; apply(); });
 
   // a hash link (/events/2027/all/#unbound-gravel) opens that event
-  function openHash() { var id = location.hash.slice(1); if (!id) return; var el = document.getElementById(id); if (el && el.classList.contains("ev")) { el.open = true; el.hidden = false; } }
-  window.addEventListener("hashchange", openHash);
+  function openHash() { if (hashIsFilters()) return; var id = location.hash.slice(1); if (!id) return; var el = document.getElementById(id); if (el && el.classList.contains("ev")) { el.open = true; el.hidden = false; fill(el); } }
+  window.addEventListener("hashchange", function () { if (hashIsFilters()) { if (fromUrl()) { if (q) q.value = state.q; apply(false); } } else openHash(); });
   apply(!fromLink);   // a link's own URL stays as it came; remembered picks get written up
   openHash();
 })();

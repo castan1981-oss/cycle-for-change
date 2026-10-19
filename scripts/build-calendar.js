@@ -347,7 +347,7 @@ ${CHROME.PLEDGE}
 </main>
 ${CHROME.FOOTER}
 <script src="/events/events.js" defer></script>
-${filters ? `<script src="/events/2027/calendar.js" defer></script>\n` : ""}${BLOCKS.REPORT_JS}${extra}
+${filters ? `<script src="/events/2027/calendar.js?v=2" defer></script>\n` : ""}${BLOCKS.REPORT_JS}${extra}
 </body>
 </html>
 `;
@@ -403,7 +403,11 @@ function townFor(e) {
 }
 // Oct 6, 2026: a row whose event has its own page (/events/<slug>/) links to it — sign-up, routes, weather, the town
 const DEEP_URL = (() => { try { const d = JSON.parse(fs.readFileSync(path.join(ROOT, "cfc-site", "events", "events.json"), "utf8")); const out = {}; for (const x of (Array.isArray(d) ? d : d.events || [])) { const e = deepMatch(x); if (e && x.url) out[e.slug] = String(x.url).replace(SITE, ""); } return out; } catch (e) { return {}; } })();
-function eventHtml(e) {
+// Oct 18, 2026 (growth audit): /events/2027/all/ was a 1.4 MB page with 30,000 DOM nodes — 638 rows, each carrying
+// the full facts, notes and town strip that the month pages already carry. On /all/ a row is `light`: the summary
+// (what the filters and the crawl need) and a short panel with the links; the full panel is fetched from the
+// month page the first time the row is opened (calendar.js), and without JS the link takes you there.
+function eventHtml(e, { light = false } = {}) {
   const meta = [`<b>${esc(place(e))}</b>`, esc(e.category.toLowerCase())];
   if (e.cause) meta.push(esc(e.cause));
   const kind = dayKind(e);
@@ -416,6 +420,15 @@ function eventHtml(e) {
   const town = townFor(e);
   if (town) meta.push(TOWNS.link(town));
   const dn = dateNote(e);
+  if (light) {
+    const monthUrl = monthPath(e.month);
+    return `<details class="ev${e.riding ? " you" : ""}" id="${attr(e.slug)}" data-m="${e.month}" data-t="${attr(e.category)}" data-r="${attr(e.region)}" data-c="${attr(e.cause)}" data-f="${farOf(e).join(" ")}" data-s="${attr(e.date_status)}" data-y="${e.riding ? 1 : 0}" data-q="${attr(q)}" data-src="${attr(monthUrl)}">
+  <summary class="row">${mark(CAT_MARK[e.category] || "flag", "mk mk--row")}${dateCell(e)}<span class="nm"><span class="h">${esc(e.name)}${e.riding ? `<span class="you-tag">Robert&rsquo;s ride</span>` : ""}</span><span class="meta">${meta.join(" &middot; ")}</span></span><span class="acts">Details</span></summary>
+  <div class="det det--light">
+    <p class="det-links">${DEEP_URL[e.slug] ? `<a class="btn btn--ink" href="${attr(DEEP_URL[e.slug])}">The full page</a>` : ""}${e.url ? `<a class="btn btn--ghost" href="${attr(e.url)}" rel="noopener" target="_blank">Event site</a>` : ""}<a class="link det-more" href="${attr(monthUrl)}#${attr(e.slug)}">Dates, distances, registration</a></p>
+  </div>
+</details>`;
+  }
   return `<details class="ev${e.riding ? " you" : ""}" id="${attr(e.slug)}" data-m="${e.month}" data-t="${attr(e.category)}" data-r="${attr(e.region)}" data-c="${attr(e.cause)}" data-f="${farOf(e).join(" ")}" data-s="${attr(e.date_status)}" data-y="${e.riding ? 1 : 0}" data-q="${attr(q)}">
   <summary class="row">${mark(CAT_MARK[e.category] || "flag", "mk mk--row")}${dateCell(e)}<span class="nm"><span class="h">${esc(e.name)}${e.riding ? `<span class="you-tag">Robert&rsquo;s ride</span>` : ""}</span><span class="meta">${meta.join(" &middot; ")}</span></span><span class="acts">Details</span></summary>
   <div class="det">
@@ -460,7 +473,9 @@ const pages = [];   // [url, html] — every page this build writes, for the sit
 // Pass 22: a short page stays a short list; one line under the key opens the filter page with this
 // page's pick already on (Pat: Northeast + cancer + summer charity rides took 10 taps).
 const ALL_URL = URL + "all/";
-const allLink = (params) => ALL_URL + (Object.keys(params).length ? "?" + Object.entries(params).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&amp;") : "");
+// Oct 18, 2026: the picks ride in the hash (#type=gravel&far=200), so a shortlist is still a link you can send
+// and Google sees one /all/ page instead of fifty query-string copies of it. calendar.js reads ? links too.
+const allLink = (params) => ALL_URL + (Object.keys(params).length ? "#" + Object.entries(params).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&amp;") : "");
 const narrowLine = (params, words) => `\n    <p class="cal-narrow"><a href="${allLink(params)}">${words} &rarr;</a></p>`;
 // a row of picks that are links into /all/ (How far? on the big-day pages, Where? on races)
 function pickRow(label, picks, cls = "") {
@@ -679,7 +694,7 @@ for (let m = 1; m <= 13; m++) {
   if (!list.length) continue;
   body += `      <section class="month" data-m="${mm}">
         <div class="month-h"><h2>${mm ? MONTHS_LONG[mm - 1] : "Date to be announced"}</h2><span class="n" data-n>${list.length}</span></div>
-${list.map(eventHtml).join("\n")}
+${list.map((e) => eventHtml(e, { light: true })).join("\n")}
       </section>
 `;
 }
