@@ -1,0 +1,40 @@
+[
+ {
+  "slug": "mcallen-tx-bicycle-world-tnt-ride",
+  "outcome": "changed",
+  "checked_on": "2026-09-15",
+  "evidence": "Bicycle World RGV's group-rides page says all McAllen shop rides, the Tuesday and Thursday TNT rides at 6:30 pm among them, meet in the McAllen shop parking lot, and the same page gives the McAllen store as 2025 Nolana St, McAllen, TX 78501 (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city pin to the shop (OpenStreetMap, 26.24008, -98.23610).",
+  "sources": [
+   "https://www.bicycleworldrgv.com/articles/group-rides-pg625.htm"
+  ],
+  "changes": {
+   "lat": 26.24008,
+   "lng": -98.2361,
+   "geo_precision": "start",
+   "start_location": {
+    "name": "Bicycle World McAllen (shop parking lot)",
+    "address": "2025 Nolana St, McAllen, TX 78501"
+   }
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ },
+ {
+  "slug": "fort-collins-co-gravel-people",
+  "outcome": "changed",
+  "checked_on": "2026-09-18",
+  "evidence": "Fort Collins Gravel People's own FAQ says they typically meet at 6 pm at the upper lot at Odell Brewing, move the start about once a month, and run the Tuesday night rides from April to early or mid October (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city pin to Odell Brewing, 800 E Lincoln Ave (OpenStreetMap, 40.58948, -105.06322).",
+  "sources": [
+   "https://www.gravelfoco.com/faqs"
+  ],
+  "changes": {
+   "lat": 40.58948,
+   "lng": -105.06322,
+   "geo_precision": "start",
+   "start_location": {
+    "name": "Odell Brewing, upper lot (the usual start; about once a month it moves, check the Strava club)",
+    "address": "800 E Lincoln Ave, Fort Collins, CO 80524"
+   }
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ }
+]

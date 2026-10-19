@@ -1,0 +1,87 @@
+[
+  {
+    "slug": "palo-alto-ca-alto-velo-joy-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-19",
+    "last_seen": "2026-10-07",
+    "evidence": "Alto Velo's Joy Ride page still says once a month on the 2nd Saturday, gather 9:00 am at Summit Bicycles, 392 California Ave, rolling at 9:20 am, and carries a post dated 10/7/26 for the Oct 10, 2026 ride (fetched Oct 19, 2026); the watcher's flag was an ellipsis added to one sentence.",
+    "sources": ["https://www.altovelo.org/joy-ride"]
+  },
+  {
+    "slug": "peoria-az-west-valley-casual-true-beginner-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-19",
+    "last_seen": "2026-10-16",
+    "evidence": "West Valley Casual Bike Rides' Meetup lists the True Beginner Ride on Wednesdays at 6:30 pm from Sweetwater Park, 7460 W Sweetwater Ave (Oct 21, Oct 28, Nov 4 and Nov 11, 2026); the Oct 28 event says \"Every week on Wednesday until December 23, 2026\", and the Oct 21 posting was made Oct 16 (fetched Oct 19, 2026).",
+    "sources": [
+      "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/",
+      "https://www.meetup.com/west-valley-casual-bike-rides/events/316906143/",
+      "https://www.meetup.com/west-valley-casual-bike-rides/events/"
+    ],
+    "changes": {
+      "schedule": "Every Wednesday, 6:30 pm, from Sweetwater Park. The Meetup series runs every Wednesday until Dec 23, 2026; the host says the start moves between 6:30 and 7:30 with the season. It ran on Thursdays for a few weeks in October. Called off above 105°F, in strong wind or lightning.",
+      "days": ["wed"],
+      "time_local": "6:30 pm",
+      "start_hhmm": "18:30",
+      "refresh": { "notes": "Heat cancellations are posted on the Meetup event. The day has moved between Wednesday and Thursday; the feed shows which." }
+    }
+  },
+  {
+    "slug": "prescott-az-bike-prescott-friday-hills-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-19",
+    "last_seen": "2026-10-16",
+    "evidence": "Bike Prescott's Meetup lists the Friday Hills Ride for Fri Oct 16, 2026 at 9:00 am from Pangaea Bakery, 1260 Gail Gardner Way #105 (20 miles, 1,800 ft, helmets and lights required, e-bikes welcome), and the club's weekly series page still lists Friday Hills Rides at 20 to 30 miles with about 100 feet of climbing per mile (fetched Oct 19, 2026); the next Friday's post was not up yet.",
+    "sources": [
+      "https://www.meetup.com/bike-prescott-meetup/events/316999145/",
+      "https://www.meetup.com/bike-prescott-meetup/events/",
+      "https://www.bikeprescott.org/weekly-ride-series"
+    ],
+    "changes": {
+      "schedule": "Every Friday morning. The time and start are posted on each Meetup event a few days ahead and change with the route: Fri Oct 16, 2026 rolled at 9:00 am from Pangaea Bakery; Oct 2 rolled at 8:45 am from a downtown parking garage.",
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00",
+      "start_location": { "name": "Pangaea Bakery (the Oct 16 start; it changes with the route)", "address": "1260 Gail Gardner Way #105, Prescott, AZ 86305" },
+      "pace": "Series: 20 to 30 miles, aiming for about 100 feet of climbing per mile. Everyone rides the hills at their own pace or skips some. Oct 16: 20 miles, 1,800 feet.",
+      "description": "Bike Prescott's Friday road ride around the Prescott and Prescott Valley hills. The series is 20 to 30 miles at roughly 100 feet of climbing per mile, with regroups and stops, and nobody is dropped. Each week's start, time and route are posted on Meetup a few days ahead; the Oct 16 ride was 20 miles and 1,800 feet from Pangaea Bakery. E-bikes are welcome.",
+      "visitor_notes": "Helmet on, light on, e-bikes welcome, per the ride posts. RSVP on Meetup, where each ride's start and route are posted a few days ahead. Guests are welcome, but Bike Prescott's insurance covers club members only, per its Thursday ride posts.",
+      "refresh": { "notes": "The Meetup feed lists each ride a few days ahead with its time, start and route, so the feed only proves the next ride once it's posted (the Oct 23 ride wasn't up on Mon Oct 19). Past events (/events/?type=past) show the ride ran. The club's weekly series page describes the standing rides without a time or start." }
+    }
+  },
+  {
+    "slug": "tucson-az-civano-cycling-club-morning-rides",
+    "outcome": "changed",
+    "checked_on": "2026-10-19",
+    "last_seen": "2026-10-18",
+    "evidence": "The club's home page lists a suggested ride for Sunday, October 18, 2026 at 7:00 A.M. from the Civano/Drexel traffic circle (about 21 miles to CoffeeXChange and back), says rides normally occur Sunday, Tuesday and Thursday mornings with the time and route posted the evening before, and gives the meeting place as Civano Blvd and Drexel Rd (fetched Oct 19, 2026).",
+    "sources": ["https://civanocycling.club/"],
+    "changes": {
+      "schedule": "Sunday, Tuesday and Thursday mornings, around when the temperature reaches 55 degrees. The time and route are posted on the club's home page the evening before. Recent rides left at 7:00 am from the Civano/Drexel traffic circle (Sun Oct 18, Tue Oct 13, 2026).",
+      "start_location": { "name": "Civano/Drexel traffic circle (the club's usual meeting place)", "address": "Civano Blvd & Drexel Rd, Tucson, AZ 85747" },
+      "lat": 32.14804,
+      "lng": -110.76783,
+      "geo_precision": "start",
+      "pace": "Not stated. Each ride's route and distance are posted the evening before; the Oct 18 ride was about 21 miles with longer and shorter options.",
+      "description": "A neighborhood club in southeast Tucson that rides three mornings a week from the traffic circle at Civano Blvd and Drexel Rd. The route goes up the evening before: the Oct 18 ride went west on Drexel to the Harrison Greenway and north on The Loop to CoffeeXChange on Tanque Verde, about 21 miles round trip. The site is still under construction and the club also posts on Facebook."
+    }
+  },
+  {
+    "slug": "london-gb-critical-mass-london",
+    "outcome": "changed",
+    "checked_on": "2026-10-19",
+    "last_seen": "2026-10-19",
+    "evidence": "The ride's own Instagram, @critical_mass_london, mirrored on criticalmass.in in posts dated Oct 5 to Oct 19, 2026, says \"The Last Friday of Every Month, 19:00, South Bank under Waterloo Bridge. Avg. departure 19:30\" and \"hundreds of cyclists gather on the South Bank under Waterloo Bridge (by the BFI/National Theatre) to meet at 19:00\"; criticalmass.in's own entry lists the next ride for Oct 30, 2026 (fetched Oct 19, 2026).",
+    "sources": [
+      "https://criticalmass.in/london/socialnetwork/list-items",
+      "https://criticalmass.in/london",
+      "https://www.criticalmass.bike/ride/london-gb"
+    ],
+    "changes": {
+      "start_location": { "name": "South Bank, under Waterloo Bridge (by the BFI / National Theatre)", "address": "Riverside walk under Waterloo Bridge, by BFI Southbank, Belvedere Road, London SE1 8XT" },
+      "lat": 51.50727,
+      "lng": -0.11554,
+      "geo_precision": "start",
+      "refresh": { "notes": "criticalmass.in mirrors the ride's Instagram posts without a login wall; the ride's bio text (19:00 meet, 19:30 departure) is repeated on every post. criticalmass.bike and criticalmass.in's own ride entry still say 18:00. criticalmasslondon.org.uk sits behind Cloudflare (403 to curl, error to WebFetch, Oct 19, 2026). Next rides: Fri Oct 30, Fri Nov 27, 2026." }
+    }
+  }
+]

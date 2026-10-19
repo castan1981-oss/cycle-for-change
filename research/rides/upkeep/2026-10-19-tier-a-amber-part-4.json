@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "tucson-az-tuesday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-19",
+    "note": "tnr.bike (links.website) is a disconnected Wix domain (404, Oct 19, 2026). The watch page is Cyclovia's Dec 9, 2021 event. Transit Cycles' events page names TNR (\"meet up every Tuesday night\") with no time, start or date. The Daily Wildcat (2015) and KXCI (2017) pages are old. Instagram @tuesdaynightbikeride and the Facebook group are login walls."
+  },
+  {
+    "slug": "corpus-christi-tx-cc-led-saturday-light-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-19",
+    "note": "The Bend article (watch page) is a 403 bot wall for curl and blocked for WebFetch. CC LED's own site getccled.com is live (an Oct 17–21, 2026 office-closure notice) but no page on it mentions the ride; its sitemap has no events page. The ride lives on Instagram @getccled and facebook.com/getCCLED, both login walls. No dated 2026 signal found."
+  },
+  {
+    "slug": "missoula-mt-thursday-night-mountain-bike-group",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-19",
+    "note": "thursdaynightmtbr.org fails over https (certificate name mismatch) but loads over plain http: \"every Thursday night at 6 pm\", new riders welcome, this week's ride in a Twitter embed (@MissoulaTNR) and on the ThursdayNightMTBR Facebook group. Newest dated thing on the page is a 2009 ride map. Twitter's syndication endpoint returned 429; MT Alpha's local-group-rides page is gone (404) and its own rides page lists only its Wednesday rides; mountainbikingmissoula.com now redirects to the Wayback Machine. No fixed start to pin (trailhead changes weekly)."
+  },
+  {
+    "slug": "new-york-ny-critical-mass-last-friday",
+    "outcome": "changed",
+    "checked_on": "2026-10-19",
+    "last_seen": "2026-09-25",
+    "evidence": "Time's Up!'s calendar entry \"Critical Mass Manhattan\" is dated 09/25/2026, 7:00 pm, Union Square Park-North, and its Critical Mass page says 7 pm the last Friday of every month at Union Square Park North (fetched Oct 19, 2026); the Oct 30 entry wasn't posted yet.",
+    "sources": [
+      "https://times-up.org/calendar/critical-mass-manhattan-13/",
+      "https://times-up.org/critical-mass/"
+    ],
+    "changes": {
+      "refresh": {
+        "notes": "Time's Up! posts each month's ride as a dated calendar entry (times-up.org/calendar/critical-mass-manhattan-N/), often only a week or two ahead; the homepage and /critical-mass/ text is static. The site's ?ical=1 feed is a 2012–13 dump, not a live calendar."
+      }
+    }
+  }
+]
