@@ -68,7 +68,7 @@ test("every link inside /rides/ leads to a page that exists", () => {
   for (const d of allPages) {
     for (const m of html(d).matchAll(/href="(\/rides\/[^"#?]*)/g)) {
       const u = m[1];
-      if (/\.(svg|css|js|json|xml|ics|png)$/.test(u)) continue;
+      if (/\.(svg|css|js|json|xml|ics|png|jpg|gpx)$/.test(u)) continue;   // a route’s GPX and map are files, not pages
       const p = path.join(out, u.replace(/^\/rides\//, ""));
       if (!fs.existsSync(path.join(p, "index.html"))) missing.add(`${u} (on ${path.relative(out, d) || "/rides/"})`);
     }

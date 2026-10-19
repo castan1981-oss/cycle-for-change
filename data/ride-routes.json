@@ -1,3 +1,27 @@
 {
-  "_readme": "Routes on ride pages (Oct 9, 2026). One entry per ride slug: { gpx, posted, from, by, for_date, pace_mph, drop, regroup, cues, note } — field notes in tools/lib/routes.js. Only from the people who run the ride (or Robert's own ride file with their OK); never from Strava's API. After an edit: python3 tools/route-build.py <slug>, then node tools/build-rides.js."
+  "_readme": "Routes on ride pages (Oct 9, 2026). One entry per ride slug: { gpx, posted, from, by, for_date, pace_mph, drop, regroup, cues, note } — field notes in tools/lib/routes.js. Only from the people who run the ride (or Robert's own ride file with their OK); never from Strava's API. After an edit: python3 tools/route-build.py <slug>, then node tools/build-rides.js.",
+  "scottsdale-az-scottsdale-cycling-saturday-ride": {
+    "gpx": "data/routes/scottsdale-az-scottsdale-cycling-saturday-ride/2026-10-10.gpx",
+    "posted": "2026-10-10",
+    "from": "robert",
+    "by": "Robert, riding with TSR",
+    "for_date": "2026-10-10",
+    "pace_mph": null,
+    "drop": "drop",
+    "regroup": null,
+    "cues": [],
+    "note": "Robert’s own ride of his first TSR, Oct 10, 2026: from the 6:00 am meet at Gainey Village to where he turned for home at mile 44. His ride that day, not the club’s published route."
+  },
+  "scottsdale-az-bicycle-haus-friday-shop-ride": {
+    "gpx": "data/routes/scottsdale-az-bicycle-haus-friday-shop-ride/2026-10-09.gpx",
+    "posted": "2026-10-09",
+    "from": "robert",
+    "by": "Robert, on the shop ride",
+    "for_date": null,
+    "pace_mph": null,
+    "drop": "no-drop",
+    "regroup": null,
+    "cues": [],
+    "note": "Robert’s own ride of the Friday shop ride, Oct 9, 2026: from the shop to La Grande Orange, the way the group rode it that morning."
+  }
 }
