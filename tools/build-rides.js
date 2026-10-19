@@ -3006,5 +3006,8 @@ function main() {
   console.log("city hubs: " + [...hubs.map((h) => `${h.city} ${h.state} (${h.rides.length})`), ...world.hubs.map((h) => `${h.city} ${h.country} (${h.rides.length})`)].join(", "));
   // Oct 18, 2026: llms.txt and feed.xml last, so their counts and dates follow this build (scripts/build-signals.js).
   if (OUT === ASSETS) require(path.join(ROOT, "scripts", "build-signals.js")).run();
+  // Oct 18, 2026: the homepage's baked tally follows the deploy (scripts/tally.js reads /api/strava; a failed fetch
+  // keeps the last copy, data/tally.json). Async, last, nothing waits on it.
+  if (OUT === ASSETS) require(path.join(ROOT, "scripts", "tally.js")).refreshHome().catch((e) => console.log("tally: " + e.message));
 }
 main();

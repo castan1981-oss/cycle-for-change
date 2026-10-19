@@ -50,12 +50,18 @@ function todaySection() {
   if (!T || !T.for || !T.photo) return "";
   const d = new Date(T.date + "T12:00:00Z");
   const day = d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", timeZone: "UTC" });
-  const img = (p, sizes) => `<img src="${esc(p.src)}" srcset="${esc(p.small)} 800w, ${esc(p.src)} ${p.width}w" sizes="${sizes}" width="${p.width}" height="${p.height}" alt="${esc(p.alt)}" loading="lazy" decoding="async">`;
+  // Oct 18, 2026: the AVIF pair (same names, .avif) goes first when both files exist; the JPGs stay the fallback
+  const avifPair = (p) => { const a = (f) => String(f || "").replace(/\.jpe?g$/i, ".avif"); const big = a(p.src), small = a(p.small); return big !== p.src && small !== p.small && fs.existsSync(path.join(ROOT, "cfc-site", big)) && fs.existsSync(path.join(ROOT, "cfc-site", small)) ? { big, small } : null; };
+  const img = (p, sizes) => {
+    const tag = `<img src="${esc(p.src)}" srcset="${esc(p.small)} 800w, ${esc(p.src)} ${p.width}w" sizes="${sizes}" width="${p.width}" height="${p.height}" alt="${esc(p.alt)}" loading="lazy" decoding="async">`;
+    const av = avifPair(p);
+    return av ? `<picture><source type="image/avif" srcset="${esc(av.small)} 800w, ${esc(av.big)} ${p.width}w" sizes="${sizes}">${tag}</picture>` : tag;
+  };
   const where = (T.photo2 && T.photo2.where) || T.photo.where;
   const F = T.film;
   const film = F ? `<figure class="today-film" id="todayFig" data-playing="false">
         <div class="today-film-frame">
-          <video id="todayVid" muted loop playsinline disablepictureinpicture preload="none" poster="${esc(F.poster)}" width="${F.width}" height="${F.height}" aria-label="${esc(F.alt)}">
+          <video id="todayVid" muted loop playsinline disablepictureinpicture preload="none" poster="${esc(fs.existsSync(path.join(ROOT, "cfc-site", String(F.poster).replace(/\.jpe?g$/i, ".webp"))) ? String(F.poster).replace(/\.jpe?g$/i, ".webp") : F.poster)}" width="${F.width}" height="${F.height}" aria-label="${esc(F.alt)}">
             ${F.webm ? `<source src="${esc(F.webm)}" type="video/webm">` : ""}
             <source src="${esc(F.mp4)}" type="video/mp4">
           </video>
@@ -67,11 +73,11 @@ function todaySection() {
 <section class="s today" id="today" aria-labelledby="today-h">
   <div class="wrap today-in">
     <div class="today-words">
-      <p class="eyebrow">Today’s ride. ${esc(day)}.</p>
+      <p class="eyebrow">The ride on ${esc(day)}.</p>
       <h2 class="today-sign" id="today-h">
         <svg class="today-mark" viewBox="0 0 626 150" aria-hidden="true" focusable="false"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/><use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/></g></svg>
         <span class="plate today-plate" aria-hidden="true">${esc(T.for)}</span>
-        <span class="sr">Today I rode for ${esc(T.for)}</span>
+        <span class="sr">I rode for ${esc(T.for)}</span>
       </h2>
       <p class="today-line">${esc(T.line)}</p>
     </div>
@@ -117,7 +123,6 @@ const WORN_DEFS = `<svg aria-hidden="true" focusable="false" style="position:abs
       <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="edge"/>
       <feComposite in="edge" in2="mask" operator="in"/>
     </filter>
-    <filter id="lpGrain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
     <!-- Pass 27: paint worn along the tire line (long streaks), a roller's drag, and the sprayed mark -->
     <filter id="lpWornSoft" x="-10%" y="-10%" width="120%" height="120%">
       <!-- Pass 30: a hand-painted edge only — no chips, no holes; those read as artifacts on a phone -->
@@ -189,8 +194,8 @@ const page = `<!doctype html>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   ${CHROME.FONTS}
-  <link rel="preload" as="image" href="/img/sign-print-4-phone.jpg" media="(max-width:759px)">
-  <link rel="preload" as="image" href="/img/sign-print-4.jpg" media="(min-width:760px)">
+  <link rel="preload" as="image" type="image/avif" imagesrcset="/img/sign-print-4-phone.avif" media="(max-width:759px)">
+  <link rel="preload" as="image" type="image/avif" imagesrcset="/img/sign-print-4.avif" media="(min-width:760px)">
   <link rel="stylesheet" href="/home.css?v=40">
 
   <script type="application/ld+json">
@@ -216,11 +221,14 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
      lets a visitor type into it. Nothing is collected. —— -->
 <section class="sign sign--print" id="top" aria-labelledby="sign-h">
   <picture class="sign-ph">
+    <source media="(max-width:759px)" type="image/avif" srcset="/img/sign-print-4-phone.avif">
+    <source media="(max-width:759px)" type="image/webp" srcset="/img/sign-print-4-phone.webp">
     <source media="(max-width:759px)" srcset="/img/sign-print-4-phone.jpg">
+    <source type="image/avif" srcset="/img/sign-print-4.avif">
+    <source type="image/webp" srcset="/img/sign-print-4.webp">
     <img src="/img/sign-print-4.jpg" width="1200" height="1600" alt="Robert on his bike on the canal path in Phoenix, morning sun, grinning at the camera." fetchpriority="high">
   </picture>
   <div class="sign-scrim" aria-hidden="true"></div>
-  <svg class="sign-grain" aria-hidden="true" focusable="false"><rect width="100%" height="100%" filter="url(#lpGrain)"/></svg>
   <svg class="sign-sig" viewBox="0 0 150 150" aria-hidden="true" focusable="false"><use href="#lpMark"/></svg>
   <div class="wrap sign-in">
     <div class="sign-left">
@@ -278,7 +286,7 @@ ${todaySection()}<!-- —— the last ride: the reel, the log —— -->
     <div class="road-side">
       <figure class="road-film" id="roadFig" data-playing="false">
         <div class="road-film-frame">
-          <video id="roadVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/road-film-2.jpg" width="864" height="1080" aria-label="Twelve seconds of my rides: the desert road, a drone overhead, riders up ahead, a river canyon, a forest trail, a tunnel.">
+          <video id="roadVid" muted loop playsinline disablepictureinpicture preload="none" poster="${fs.existsSync(path.join(ROOT, "cfc-site", "film", "road-film-2.webp")) ? "/film/road-film-2.webp" : "/film/road-film-2.jpg"}" width="864" height="1080" aria-label="Twelve seconds of my rides: the desert road, a drone overhead, riders up ahead, a river canyon, a forest trail, a tunnel.">
             <source src="/film/road-film-2.mp4" type="video/mp4">
           </video>
           <button class="road-play" id="roadPlay" type="button" aria-label="Play the last ride, 12 seconds"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg></button>
@@ -424,10 +432,13 @@ ${CHROME.FOOTER.replace('<script src="/chrome.js" defer></script>', '')}
 <!-- Pass 37: the old phone tally bar (miles + Ride with me) is gone. It sat on top of the Pass 36 Ride with me bar,
      so a phone showed two bars at once. The Ride with me bar (scripts/chrome.js, /ridebar.js) does its job. -->
 
-<script src="/home.js?v=38" defer></script>
+<script src="/home.js?v=39" defer></script>
 </body>
 </html>
 `;
 
-fs.writeFileSync(OUT, page);
+// Oct 18, 2026: the baked tally (every [data-miles] and "The last rides") comes from data/tally.json, the last
+// fetch of /api/strava (scripts/tally.js); the deploy refreshes it on every rides build. Never a typed number.
+const TALLY = require("./tally.js");
+fs.writeFileSync(OUT, TALLY.applyTally(page, TALLY.loadTally()));
 console.log("wrote", path.relative(process.cwd(), OUT), page.length, "bytes");

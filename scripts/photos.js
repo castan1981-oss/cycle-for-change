@@ -71,11 +71,21 @@ const PHOTOS = {
   "sawtooth-calm": ph("sawtooth-calm", "l", "Stanley, ID · Jun 2024", "A gravel path through tall pines under a blue sky, mountains in the distance.", "50% 55%"),
 };
 
+// Oct 18, 2026 (growth audit, speed): when an AVIF sibling of the JPG exists on disk (python3 tools/grade.py writes
+// both; a one-off: Pillow, quality 52), the figure is a <picture> with the AVIF first and the JPG as the fallback.
+// Same alt, same size, same caption; the .ph styles use descendant selectors, so nothing moves.
+const fs = require("fs");
+const path = require("path");
+const SITE_DIR = path.join(__dirname, "..", "cfc-site");
+const avifOf = (src) => { const a = src.replace(/\.jpe?g$/i, ".avif"); return a !== src && fs.existsSync(path.join(SITE_DIR, a)) ? a : null; };
+
 function figure(key, { cls = "", line = "", caption = true, eager = false } = {}) {
   const p = PHOTOS[key];
   if (!p) throw new Error(`scripts/photos.js: no photo called "${key}"`);
   const cap = caption ? (line || p.where || "") : "";
-  return `<figure class="ph ph--${p.shape || "l"}${cls ? " " + cls : ""}"><img src="${p.src}" alt="${esc(p.alt)}" width="${p.w}" height="${p.h}" ${eager ? `fetchpriority="high"` : `loading="lazy"`} decoding="async"${p.pos ? ` style="object-position:${p.pos}"` : ""}>${cap ? `<figcaption>${esc(cap)}</figcaption>` : ""}</figure>`;
+  const avif = avifOf(p.src);
+  const img = `<img src="${p.src}" alt="${esc(p.alt)}" width="${p.w}" height="${p.h}" ${eager ? `fetchpriority="high"` : `loading="lazy"`} decoding="async"${p.pos ? ` style="object-position:${p.pos}"` : ""}>`;
+  return `<figure class="ph ph--${p.shape || "l"}${cls ? " " + cls : ""}">${avif ? `<picture><source type="image/avif" srcset="${avif}">${img}</picture>` : img}${cap ? `<figcaption>${esc(cap)}</figcaption>` : ""}</figure>`;
 }
 
 module.exports = { PHOTOS, figure };

@@ -28,23 +28,23 @@
   var $ = function (id) { return document.getElementById(id); };
   var fmt = function (n) { return Math.round(n).toLocaleString("en-US"); };
 
-  /* What the page shows until the feed answers: the function's own output on
-     Oct 5 2026. x = how far through the ride list (0–100), y = cumulative miles. */
-  var feed = {
-    miles: 3572.8,
-    rides: 97,
-    updated: "2026-10-05T22:03:10.205Z",
-    profileUrl: "https://www.strava.com/athletes/22899089",
-    recent: [
-      { discipline: "bike", title: "Morning Ride", miles: 35.7, date: "2026-10-05T13:51:27Z" },
-      { discipline: "bike", title: "Morning Ride", miles: 63.1, date: "2026-10-04T13:34:26Z" },
-      { discipline: "bike", title: "Morning Ride", miles: 42.3, date: "2026-10-03T13:47:06Z" },
-      { discipline: "bike", title: "Morning Ride", miles: 36.6, date: "2026-10-02T13:12:43Z" },
-      { discipline: "bike", title: "Morning Ride", miles: 35.6, date: "2026-09-30T14:12:28Z" },
-      { discipline: "bike", title: "Somo Sunday", miles: 56, date: "2026-09-27T13:47:01Z" }
-    ],
-    chart: [[0, 35.2], [9, 312], [19, 636.7], [28, 1010.2], [38, 1400.8], [47, 1676.4], [56, 1979.3], [66, 2293.4], [75, 2618.6], [84, 2961.5], [94, 3303.5], [100, 3572.8]]
-  };
+  /* What the page shows until the feed answers. Oct 18, 2026: the page carries it (#tallyData, baked by
+     scripts/tally.js from the last fetch of /api/strava, refreshed on every deploy) so the script never
+     holds a stale copy of its own. x = how far through the ride list (0–100), y = cumulative miles. */
+  var feed = { miles: 0, rides: 0, updated: "", profileUrl: "https://www.strava.com/athletes/22899089", recent: [], chart: [] };
+  (function () {
+    var el = document.getElementById("tallyData");
+    if (!el) return;
+    try {
+      var t = JSON.parse(el.textContent || "{}");
+      if (typeof t.miles === "number" && t.miles > 0) feed.miles = t.miles;
+      if (typeof t.rides === "number") feed.rides = t.rides;
+      if (t.updated) feed.updated = t.updated;
+      if (t.profileUrl) feed.profileUrl = t.profileUrl;
+      if (t.recent && t.recent.length) feed.recent = t.recent;
+      if (t.chart && t.chart.length) feed.chart = t.chart;
+    } catch (e) { /* the page keeps its baked numbers */ }
+  })();
 
   /* ————————————————————————————————————————————————
      the tally
@@ -278,7 +278,7 @@
 
   /* first paint from the fallback, then the live read; re-check every minute
      while the tab is visible, the way the live cover does */
-  paintFeed();
+  if (feed.miles > 0) paintFeed();   /* a page without baked numbers keeps its dashes until the feed answers */
   refresh(true);
   setInterval(refresh, POLL_MS);
   document.addEventListener("visibilitychange", function () { if (!document.hidden) refresh(); });
