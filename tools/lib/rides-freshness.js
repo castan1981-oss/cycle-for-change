@@ -26,6 +26,7 @@
     nudge       one line for listed rides that need a look, else null
     banner      one line for unlisted rides (stale / paused / ended), else null
     flags       open red/amber flags newer than the last check
+    severity    "red" | "amber" while state is "flagged" (Oct 18, 2026: an amber flag keeps the page's nudge, not its Event markup)
     priority    lower = re-check sooner (see QUEUE)
     reasons     why it's where it is, for the queue
 */
@@ -113,7 +114,7 @@ function assess(ride, health = null, today = todayUTC()) {
       ? (badReports.some((r) => r.type === "gone") ? "A rider told us this ride may have stopped" : "A rider told us something about this ride changed")
       : (red.some((f) => f.code === "page-gone") ? "The host's page for this ride has gone away" : "The host's page may say this ride is cancelled or changed");
     Object.assign(out, {
-      state: "flagged", priority: badReports.length ? QUEUE.report : QUEUE.red,
+      state: "flagged", severity: "red", priority: badReports.length ? QUEUE.report : QUEUE.red,
       listed: !graceOver, indexable: !graceOver,
       nudge: `${what}. We're re-checking it. Confirm with the host before you go.`,
       banner: graceOver ? `${what}, and we haven't been able to confirm it since ${fmt(checkedOn || verified, { today }) || "then"}.` : null,
@@ -138,7 +139,7 @@ function assess(ride, health = null, today = todayUTC()) {
       : codes.has("event-date-past") || codes.has("next-date-far") ? "The host's page doesn't show an upcoming date for this ride. Confirm with them before you go."
       : codes.has("unreachable") ? "We haven't been able to load the host's page lately. Confirm with them before you go."
       : `The host changed their page on ${when}. Confirm the day and time with them before you go.`;
-    Object.assign(out, { state: "flagged", priority: QUEUE.amber, nudge });
+    Object.assign(out, { state: "flagged", severity: "amber", priority: QUEUE.amber, nudge });
     reasons.push(...amber.map((f) => `${f.code}: ${f.detail || ""}`.trim()));
     return out;
   }
