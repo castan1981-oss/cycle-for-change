@@ -5427,9 +5427,9 @@
    "road",
    "social"
   ],
-  "schedule": "Weekly, in the evening. From Oct 8, 2026 the Meetup lists it on Thursdays at 6:30 pm (Oct 8, 15 and 22), plus one Wednesday, Oct 14, at 6:30 pm; it ran Wednesdays at 7:00 pm through Sept 30. Called off above 105°F, in strong wind or lightning.",
+  "schedule": "Every Wednesday, 6:30 pm, from Sweetwater Park. The Meetup series runs every Wednesday until Dec 23, 2026; the host says the start moves between 6:30 and 7:30 with the season. It ran on Thursdays for a few weeks in October. Called off above 105°F, in strong wind or lightning.",
   "days": [
-   "thu"
+   "wed"
   ],
   "time_local": "6:30 pm",
   "start_hhmm": "18:30",
@@ -5474,17 +5474,19 @@
   "sources": [
    "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/",
    "https://www.meetup.com/west-valley-casual-bike-rides/events/316509048/",
-   "https://www.meetup.com/west-valley-casual-bike-rides/"
+   "https://www.meetup.com/west-valley-casual-bike-rides/",
+   "https://www.meetup.com/west-valley-casual-bike-rides/events/316906143/",
+   "https://www.meetup.com/west-valley-casual-bike-rides/events/"
   ],
-  "verified_on": "2026-09-30",
-  "last_seen": "2026-09-30",
-  "evidence": "West Valley Casual Bike Rides' Meetup calendar lists True Beginner on Thu Oct 8, 2026 at 6:30 pm, and the group's events page shows Thursdays Oct 8, 15 and 22 plus Wed Oct 14 at 6:30 pm, after Wednesdays at 7:00 pm through Sept 30 (read Sept 30, 2026).",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-16",
+  "evidence": "West Valley Casual Bike Rides' Meetup lists the True Beginner Ride on Wednesdays at 6:30 pm from Sweetwater Park, 7460 W Sweetwater Ave (Oct 21, Oct 28, Nov 4 and Nov 11, 2026); the Oct 28 event says \"Every week on Wednesday until December 23, 2026\", and the Oct 21 posting was made Oct 16 (fetched Oct 19, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
    "watch_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/",
    "feed_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/",
-   "notes": "Heat cancellations are posted on the Meetup event."
+   "notes": "Heat cancellations are posted on the Meetup event. The day has moved between Wednesday and Thursday; the feed shows which."
   }
  },
  {
@@ -5975,9 +5977,9 @@
   "region": "Arizona",
   "state": "AZ",
   "country": "US",
-  "lat": 33.44844,
-  "lng": -112.07414,
-  "geo_precision": "city",
+  "lat": 33.35341,
+  "lng": -112.07511,
+  "geo_precision": "start",
   "tz": "America/Phoenix",
   "discipline": [
    "social",
@@ -5994,8 +5996,8 @@
   "season": "year-round",
   "season_months": null,
   "start_location": {
-   "name": "South Mountain Park/Preserve, Summit Road. Drivers park at the Activity Complex.",
-   "address": null
+   "name": "South Mountain Park/Preserve main entrance on Central Ave; Summit Road closes to cars from here. Drivers park at the Activity Complex.",
+   "address": "10211 S Central Ave, Phoenix, AZ 85042"
   },
   "distance_km": null,
   "distance_miles": null,
@@ -6030,7 +6032,7 @@
   ],
   "verified_on": "2026-09-30",
   "last_seen": null,
-  "evidence": "The City's South Mountain page describes Silent Sunday: Summit Road closed to cars on Sundays, all day on 4th Sundays and 5 to 10 am on the others. Nothing on the page is dated after April 2026. Its dated notes are a Saturday, Feb 21 closure and an alert for Sept 2 to 18 with no year. The Bullshifters rides page (October 2026) also says Silent Sunday rides leave on the 4th Sunday of each month (fetched Sept 30, 2026).",
+  "evidence": "The City's South Mountain page describes Silent Sunday: Summit Road closed to cars on Sundays, all day on 4th Sundays and 5 to 10 am on the others, with all vehicles turning into the Activity Complex to park; nothing on the page is dated after April 2026 (fetched Sept 30, 2026; unchanged Oct 19). Start pin moved Oct 19, 2026 from the city-level pin to the park's main entrance on Central Ave, which the City's page lists as 10211 S. Central Ave. (OpenStreetMap, 33.35341, -112.07511).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -6213,25 +6215,25 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Every Friday. The Fri Oct 2, 2026 ride rolls at 8:45 am from the parking garage near Wild Iris in downtown Prescott (18 miles, 1,600 feet). Time and start are posted on each Meetup event.",
+  "schedule": "Every Friday morning. The time and start are posted on each Meetup event a few days ahead and change with the route: Fri Oct 16, 2026 rolled at 9:00 am from Pangaea Bakery; Oct 2 rolled at 8:45 am from a downtown parking garage.",
   "days": [
    "fri"
   ],
-  "time_local": "8:45 am",
-  "start_hhmm": "08:45",
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": null,
   "season_months": null,
   "start_location": {
-   "name": "Parking garage near Wild Iris, downtown Prescott (the Oct 2 start; it changes with the route)",
-   "address": null
+   "name": "Pangaea Bakery (the Oct 16 start; it changes with the route)",
+   "address": "1260 Gail Gardner Way #105, Prescott, AZ 86305"
   },
   "distance_km": null,
   "distance_miles": null,
   "duration": null,
   "duration_min": null,
-  "pace": "Series: 20 to 30 miles, aiming for about 100 feet of climbing per mile. Everyone rides the hills at their own pace or skips some. Oct 2: 18 miles, 1,600 feet.",
+  "pace": "Series: 20 to 30 miles, aiming for about 100 feet of climbing per mile. Everyone rides the hills at their own pace or skips some. Oct 16: 20 miles, 1,800 feet.",
   "drop_policy": "no-drop",
   "host": {
    "name": "Bike Prescott",
@@ -6243,8 +6245,8 @@
   "language": [
    "en"
   ],
-  "visitor_notes": "The Oct 2 post says helmet on, light on, e-bikes welcome. RSVP on Meetup, where each ride's start and route are posted. Guests are welcome, but Bike Prescott's insurance covers club members only, per its Thursday ride posts.",
-  "description": "Bike Prescott's Friday road ride around the Prescott and Prescott Valley hills. The series is 20 to 30 miles at roughly 100 feet of climbing per mile, with regroups and stops, and nobody is dropped. The Oct 2 ride is 18 miles and 1,600 feet from a downtown parking garage near Wild Iris. E-bikes are welcome.",
+  "visitor_notes": "Helmet on, light on, e-bikes welcome, per the ride posts. RSVP on Meetup, where each ride's start and route are posted a few days ahead. Guests are welcome, but Bike Prescott's insurance covers club members only, per its Thursday ride posts.",
+  "description": "Bike Prescott's Friday road ride around the Prescott and Prescott Valley hills. The series is 20 to 30 miles at roughly 100 feet of climbing per mile, with regroups and stops, and nobody is dropped. Each week's start, time and route are posted on Meetup a few days ahead; the Oct 16 ride was 20 miles and 1,800 feet from Pangaea Bakery. E-bikes are welcome.",
   "links": {
    "website": "https://www.bikeprescott.org/weekly-ride-series",
    "instagram": null,
@@ -6260,17 +6262,19 @@
   ],
   "sources": [
    "https://www.bikeprescott.org/weekly-ride-series",
-   "https://www.meetup.com/bike-prescott-meetup/events/ical/"
+   "https://www.meetup.com/bike-prescott-meetup/events/ical/",
+   "https://www.meetup.com/bike-prescott-meetup/events/316999145/",
+   "https://www.meetup.com/bike-prescott-meetup/events/"
   ],
-  "verified_on": "2026-09-30",
-  "last_seen": null,
-  "evidence": "Bike Prescott's Meetup feed lists the Friday Hills Ride for Fri Oct 2, 2026 at 8:45 am, posted Sept 30, and the club's weekly series page lists Friday Hills Rides (fetched Sept 30, 2026).",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-16",
+  "evidence": "Bike Prescott's Meetup lists the Friday Hills Ride for Fri Oct 16, 2026 at 9:00 am from Pangaea Bakery, 1260 Gail Gardner Way #105 (20 miles, 1,800 ft, helmets and lights required, e-bikes welcome), and the club's weekly series page still lists Friday Hills Rides at 20 to 30 miles with about 100 feet of climbing per mile (fetched Oct 19, 2026); the next Friday's post was not up yet.",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
    "watch_url": "https://www.meetup.com/bike-prescott-meetup/",
    "feed_url": "https://www.meetup.com/bike-prescott-meetup/events/ical/",
-   "notes": "The Meetup feed lists each ride a few days ahead with its time, start and route. Later weeks aren't posted yet, so the feed only proves the next ride. The club's weekly series page describes the standing rides."
+   "notes": "The Meetup feed lists each ride a few days ahead with its time, start and route, so the feed only proves the next ride once it's posted (the Oct 23 ride wasn't up on Mon Oct 19). Past events (/events/?type=past) show the ride ran. The club's weekly series page describes the standing rides without a time or start."
   }
  },
  {
@@ -6778,9 +6782,9 @@
   "region": "Arizona",
   "state": "AZ",
   "country": "US",
-  "lat": 33.49422,
-  "lng": -111.92602,
-  "geo_precision": "city",
+  "lat": 33.63691,
+  "lng": -111.8895,
+  "geo_precision": "start",
   "tz": "America/Phoenix",
   "discipline": [
    "road"
@@ -6834,7 +6838,7 @@
   ],
   "verified_on": "2026-09-30",
   "last_seen": null,
-  "evidence": "The shop's rides page states the Saturday groups and the 6:30 am start. The page carries a 2026 copyright and was last edited June 3, 2026 (its JSON shows updatedOn); it lists no upcoming dates (fetched Sept 30, 2026).",
+  "evidence": "The shop's rides page still states the Saturday groups and the 6:30 am roll, but its Squarespace data was last edited June 3, 2026 and the page lists no dates, so the ride was not re-confirmed (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city centre to the shop, 9376 E Bahia Dr, Suite D104 (OpenStreetMap, 33.63691, -111.88950): the shop's own 2020 Strava event names Cyclologic as the meeting spot, and the record's start address is the shop's.",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -9009,14 +9013,14 @@
   "region": "Arizona",
   "state": "AZ",
   "country": "US",
-  "lat": 32.22288,
-  "lng": -110.97485,
-  "geo_precision": "city",
+  "lat": 32.14804,
+  "lng": -110.76783,
+  "geo_precision": "start",
   "tz": "America/Phoenix",
   "discipline": [
    "road"
   ],
-  "schedule": "Sunday, Tuesday and Thursday mornings, around when the temperature reaches 55 degrees. The time and route are posted the evening before. The page lists Thu Oct 1, 2026 at 7:00 am from Civano Blvd and Drexel Rd.",
+  "schedule": "Sunday, Tuesday and Thursday mornings, around when the temperature reaches 55 degrees. The time and route are posted on the club's home page the evening before. Recent rides left at 7:00 am from the Civano/Drexel traffic circle (Sun Oct 18, Tue Oct 13, 2026).",
   "days": [
    "sun",
    "tue",
@@ -9029,14 +9033,14 @@
   "season": null,
   "season_months": null,
   "start_location": {
-   "name": "Civano Blvd and Drexel Rd (the club's usual meeting place)",
-   "address": "Civano Blvd & Drexel Rd, Tucson, AZ"
+   "name": "Civano/Drexel traffic circle (the club's usual meeting place)",
+   "address": "Civano Blvd & Drexel Rd, Tucson, AZ 85747"
   },
   "distance_km": null,
   "distance_miles": null,
   "duration": null,
   "duration_min": null,
-  "pace": "Not stated. The Oct 1 ride is about 35 miles to Kino Sports Complex and back.",
+  "pace": "Not stated. Each ride's route and distance are posted the evening before; the Oct 18 ride was about 21 miles with longer and shorter options.",
   "drop_policy": "unknown",
   "host": {
    "name": "Civano Cycling Club",
@@ -9049,7 +9053,7 @@
    "en"
   ],
   "visitor_notes": "The page heading is 'Welcome All Cyclists'. Riders give their phone number and an emergency contact to the ride organizer before the start, by reply or text. The organizer's number is on the club's home page. Time and route go up the evening before, so check the page or the club's Facebook page the night before.",
-  "description": "A neighborhood club in southeast Tucson that rides three mornings a week from the corner of Civano Blvd and Drexel Rd. The October 1 ride is about 35 miles: Julian Wash west to Kino Sports Complex, a rest at Los Niños Park, then north on Rita Rd to Pour My Coffee. The site is still under construction and the club also posts on Facebook.",
+  "description": "A neighborhood club in southeast Tucson that rides three mornings a week from the traffic circle at Civano Blvd and Drexel Rd. The route goes up the evening before: the Oct 18 ride went west on Drexel to the Harrison Greenway and north on The Loop to CoffeeXChange on Tanque Verde, about 21 miles round trip. The site is still under construction and the club also posts on Facebook.",
   "links": {
    "website": "https://civanocycling.club/",
    "instagram": null,
@@ -9062,9 +9066,9 @@
   "sources": [
    "https://civanocycling.club/"
   ],
-  "verified_on": "2026-09-30",
-  "last_seen": null,
-  "evidence": "The club's home page lists a suggested ride for Thu Oct 1, 2026 at 7:00 am from Civano Blvd and Drexel Rd and says rides normally run Sunday, Tuesday and Thursday mornings (fetched Sept 30, 2026).",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-18",
+  "evidence": "The club's home page lists a suggested ride for Sunday, October 18, 2026 at 7:00 A.M. from the Civano/Drexel traffic circle (about 21 miles to CoffeeXChange and back), says rides normally occur Sunday, Tuesday and Thursday mornings with the time and route posted the evening before, and gives the meeting place as Civano Blvd and Drexel Rd (fetched Oct 19, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -10353,9 +10357,9 @@
   "region": "California",
   "state": "CA",
   "country": "US",
-  "lat": 35.3733,
-  "lng": -119.0187,
-  "geo_precision": "city",
+  "lat": 35.37973,
+  "lng": -119.04071,
+  "geo_precision": "start",
   "tz": "America/Los_Angeles",
   "discipline": [
    "social",
@@ -10407,7 +10411,7 @@
   ],
   "verified_on": "2026-10-01",
   "last_seen": null,
-  "evidence": "Bike Bakersfield's home page (copyright 2026) shows its Instagram posts for the July 29 (Wed), August (Thu) and September Full Moon Rides; the September post gives Beach Park, meet 6:30 pm, roll 7:00 pm, to Lengthwise Brewing at The Marketplace, and calls it the last Full Moon Ride of the summer.",
+  "evidence": "Bike Bakersfield's home page shows its Instagram posts for the July 29, Aug 27 and September Full Moon Rides, every one meeting at Beach Park and rolling to Lengthwise Brewing at The Marketplace; the Sept 24, 2026 post gives meet 6:30 pm, roll 7:00 pm and calls it the last Full Moon Ride of the summer (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city centre to Beach Park (OpenStreetMap, 35.37973, -119.04071).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -11292,9 +11296,9 @@
   "region": "California",
   "state": "CA",
   "country": "US",
-  "lat": 39.72849,
-  "lng": -121.83748,
-  "geo_precision": "city",
+  "lat": 39.73538,
+  "lng": -121.82999,
+  "geo_precision": "start",
   "tz": "America/Los_Angeles",
   "discipline": [
    "road"
@@ -11348,7 +11352,7 @@
   ],
   "verified_on": "2026-10-01",
   "last_seen": null,
-  "evidence": "North Rim Adventure Sports' Chico ride page (undated, fetched Oct 1, 2026) lists a fast Saturday road ride at 9:00 am from the One Mile Recreation Area, running October to February.",
+  "evidence": "North Rim Adventure Sports' Chico ride page (undated, fetched Oct 1, 2026) lists a fast Saturday road ride at 9:00 am from the One Mile Recreation Area, running October to February. Start pin moved Oct 19, 2026 to the One-Mile area in Lower Bidwell Park: the page's location column still says \"One Mile Recreation Area\" (fetched Oct 19, 2026); OpenStreetMap puts Sycamore Pool, the One-Mile pool on Peterson Memorial Way, at 39.73538, -121.82999.",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -15242,7 +15246,7 @@
    "social",
    "mixed"
   ],
-  "schedule": "A few Sundays a year, 9 am to 4 pm, on car-free streets. Next: Heart of LA on Sun Oct 11, 2026.",
+  "schedule": "A few Sundays a year, 9 am to 4 pm, on car-free streets. Heart of LA ran Sun Oct 11, 2026; the next Heart of LA date isn't posted yet. CicLAvia's next open-streets event is Pasadena, Sun Nov 15, 2026.",
   "days": [
    "sun"
   ],
@@ -15273,7 +15277,7 @@
    "en"
   ],
   "visitor_notes": "CicLAvia runs a handful of Sundays a year on different routes; each event's route map and hours are on its page.",
-  "description": "CicLAvia closes streets to cars and opens them to bikes and people on foot. The Heart of LA event on Oct 11, 2026 is the 68th and connects about 6.5 miles of open streets through Downtown, Chinatown, Little Tokyo, the Arts District, Boyle Heights and Echo Park. Free, and you can join anywhere on the route.",
+  "description": "CicLAvia closes streets to cars and opens them to bikes and people on foot. Heart of LA, the 68th event on Oct 11, 2026, connected about 6.5 miles of open streets through Downtown, Chinatown, Little Tokyo, the Arts District, Boyle Heights and Echo Park. Free, and you can join anywhere on the route. The next Heart of LA date isn't posted yet; CicLAvia's events page lists what's coming.",
   "links": {
    "website": "https://www.ciclavia.org/",
    "instagram": null,
@@ -15285,17 +15289,19 @@
   "inclusive_focus": [],
   "sources": [
    "https://www.ciclavia.org/",
-   "https://www.bikelb.com/calendar/"
+   "https://www.bikelb.com/calendar/",
+   "https://ciclavia.org/events/",
+   "https://ciclavia.org/events/heart-of-la-2026-10/"
   ],
   "verified_on": "2026-10-01",
   "last_seen": "2026-08-27",
-  "evidence": "CicLAvia's site lists Heart of LA for Sun Oct 11, 2026 from 9 am to 4 pm, and Bike Long Beach's community calendar entry for the 68th event was edited Aug 27, 2026 (fetched Oct 1, 2026).",
+  "evidence": "CicLAvia's Heart of LA page says the Sun Oct 11, 2026 event (9am–4pm, the 68th, about 6.5 miles through Downtown, Chinatown, Little Tokyo, the Arts District, Boyle Heights and Echo Park) has passed, and the site's upcoming list shows only Pasadena on Sun Nov 15, 2026 and the Dena Love Ride on Nov 8; no next Heart of LA date is posted (fetched Oct 19, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
-   "watch_url": "https://www.ciclavia.org/",
+   "watch_url": "https://ciclavia.org/events/",
    "feed_url": null,
-   "notes": "The site blocks scripted fetches with a captcha; the event dates are on the home page and the events page."
+   "notes": "The events page lists the next open-streets dates, each with its own .ics. The site blocks some scripted fetches with a captcha."
   }
  },
  {
@@ -17990,9 +17996,9 @@
   "sources": [
    "https://www.altovelo.org/joy-ride"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-09-09",
-  "evidence": "Alto Velo's Joy Ride page gives the second Saturday monthly, gather 9:00, roll 9:20, Summit Bicycles, no-drop, 40-45 miles, with a post dated 9/9/26 for the Sept 12 ride (fetched Oct 1, 2026).",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-07",
+  "evidence": "Alto Velo's Joy Ride page still says once a month on the 2nd Saturday, gather 9:00 am at Summit Bicycles, 392 California Ave, rolling at 9:20 am, and carries a post dated 10/7/26 for the Oct 10, 2026 ride (fetched Oct 19, 2026); the watcher's flag was an ellipsis added to one sentence.",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -22883,9 +22889,9 @@
   "region": "California",
   "state": "CA",
   "country": "US",
-  "lat": 34.01947,
-  "lng": -118.49123,
-  "geo_precision": "city",
+  "lat": 34.0483,
+  "lng": -118.49118,
+  "geo_precision": "start",
   "tz": "America/Los_Angeles",
   "discipline": [
    "road"
@@ -22937,7 +22943,7 @@
   ],
   "verified_on": "2026-10-01",
   "last_seen": "2026-02-06",
-  "evidence": "La Grange's Weekly Rides page (edited Jan 30, 2026) lists Amalfi Loops, 26 miles, at 6:30AM from 26th and San Vicente, and its Amalfi page (updated Feb 6, 2026) says Thursday, 6:30AM from the same corner (fetched Oct 1, 2026).",
+  "evidence": "La Grange's Weekly Rides page (edited Jan 30, 2026) lists Amalfi Loops, 26 miles, at 6:30AM from 26th and San Vicente, and its Amalfi page (updated Feb 6, 2026) says Thursday, 6:30AM from the same corner (fetched Oct 1, 2026). Start pin moved Oct 19, 2026 to that corner: the club's rides page still says \"6:30AM @ 26th and San Vicente Blvd. in Santa Monica\" and the Marina page names the Blue Bottle Coffee there (fetched Oct 19, 2026); OpenStreetMap puts the Blue Bottle at 34.04830, -118.49118, 55 m from where 26th Street meets San Vicente.",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -23113,9 +23119,9 @@
   "region": "California",
   "state": "CA",
   "country": "US",
-  "lat": 34.01947,
-  "lng": -118.49123,
-  "geo_precision": "city",
+  "lat": 34.0483,
+  "lng": -118.49118,
+  "geo_precision": "start",
   "tz": "America/Los_Angeles",
   "discipline": [
    "road"
@@ -23167,7 +23173,7 @@
   ],
   "verified_on": "2026-10-01",
   "last_seen": "2026-01-30",
-  "evidence": "La Grange's Weekly Rides page (edited Jan 30, 2026) lists the Marina Ride, 26 miles, at 6:30AM from 26th and San Vicente in Santa Monica, and the ride's own page says Tuesday with Junior Varsity and Varsity groups (fetched Oct 1, 2026).",
+  "evidence": "La Grange's Weekly Rides page (edited Jan 30, 2026) lists the Marina Ride, 26 miles, at 6:30AM from 26th and San Vicente in Santa Monica, and the ride's own page says Tuesday with Junior Varsity and Varsity groups (fetched Oct 1, 2026). Start pin moved Oct 19, 2026 to that corner: the ride's page says \"6:30 AM departs from 26th St. and San Vicente Blvd. in Santa Monica (@ Blue Bottle Coffee)\" (fetched Oct 19, 2026); OpenStreetMap puts the Blue Bottle at 34.04830, -118.49118, 55 m from where 26th Street meets San Vicente.",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -26423,9 +26429,9 @@
   "region": "Colorado",
   "state": "CO",
   "country": "US",
-  "lat": 37.27695,
-  "lng": -107.8766,
-  "geo_precision": "city",
+  "lat": 37.2983,
+  "lng": -107.84815,
+  "geo_precision": "start",
   "tz": "America/Denver",
   "discipline": [
    "road",
@@ -26448,7 +26454,7 @@
   "season": "year-round",
   "season_months": null,
   "start_location": {
-   "name": "Bread (daylight-saving-time start; winter start is the Home Depot lot on the south edge of Durango)",
+   "name": "Bread (daylight-saving-time start; Nov 1 to March the start is the Home Depot south lot, 1301 S Camino Del Rio, on the south edge of Durango)",
    "address": "42 County Rd 250, Durango, CO 81301"
   },
   "distance_km": null,
@@ -26483,9 +26489,9 @@
    "https://pedaldurango.com/events/list/?ical=1",
    "https://pedaldurango.com/social-rides-2/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Pedal Durango's events feed lists Church of the High Pines for Sundays Oct 4, 11, 18 and 25, 2026 at 10:00 am from Bread, 42 County Rd 250; the event text gives the winter 11 am start from the Home Depot lot (fetched Oct 1, 2026).",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "Pedal Durango's events feed lists Church of the High Pines for Sun Oct 25, 2026 at 10:00 am from Bread, 42 County Rd 250, Durango, CO 81301, and from Sun Nov 1 through March at 11 am from the Home Depot south lot, 1301 S Camino Del Rio (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 to Bread's address (OpenStreetMap, 37.29830, -107.84815); the winter lot sits 8 km south.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -26666,9 +26672,9 @@
   "region": "Colorado",
   "state": "CO",
   "country": "US",
-  "lat": 40.5853,
-  "lng": -105.0844,
-  "geo_precision": "city",
+  "lat": 40.58948,
+  "lng": -105.06322,
+  "geo_precision": "start",
   "tz": "America/Denver",
   "discipline": [
    "gravel"
@@ -26686,7 +26692,10 @@
    "start": 4,
    "end": 10
   },
-  "start_location": null,
+  "start_location": {
+   "name": "Odell Brewing, upper lot (the usual start; about once a month it moves, check the Strava club)",
+   "address": "800 E Lincoln Ave, Fort Collins, CO 80524"
+  },
   "distance_km": null,
   "distance_miles": "25–30",
   "duration": null,
@@ -26723,11 +26732,12 @@
    "https://yourgroupride.com/fort-collins-gravel-people/",
    "https://yourgroupride.com/group-rides/",
    "https://www.gravelfoco.com",
-   "https://www.strava.com/clubs/FCGP"
+   "https://www.strava.com/clubs/FCGP",
+   "https://www.gravelfoco.com/faqs"
   ],
   "verified_on": "2026-09-18",
   "last_seen": null,
-  "evidence": null,
+  "evidence": "Fort Collins Gravel People's own FAQ says they typically meet at 6 pm at the upper lot at Odell Brewing, move the start about once a month, and run the Tuesday night rides from April to early or mid October (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city pin to Odell Brewing, 800 E Lincoln Ave (OpenStreetMap, 40.58948, -105.06322).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -32027,9 +32037,9 @@
   "region": "Florida",
   "state": "FL",
   "country": "US",
-  "lat": 26.93515,
-  "lng": -82.05121,
-  "geo_precision": "city",
+  "lat": 26.85825,
+  "lng": -81.97505,
+  "geo_precision": "start",
   "tz": "America/New_York",
   "discipline": [
    "gravel"
@@ -32045,7 +32055,7 @@
   "season": "year-round",
   "season_months": null,
   "start_location": {
-   "name": "Babcock Webb Wildlife Management Area (Cecil Webb WMA)",
+   "name": "Babcock Webb Wildlife Management Area (Cecil Webb WMA), entrance off Tuckers Grade",
    "address": "Babcock Webb Wildlife Management Area, Punta Gorda, FL 33982"
   },
   "distance_km": 39,
@@ -32081,11 +32091,13 @@
   ],
   "sources": [
    "https://crbc.clubexpress.com/content.aspx?page_id=4001&club_id=787276",
-   "https://crbc.clubexpress.com/content.aspx?page_id=4091&club_id=787276&item_id=3081665"
+   "https://crbc.clubexpress.com/content.aspx?page_id=4091&club_id=787276&item_id=3081665",
+   "https://crbc.clubexpress.com/content.aspx?page_id=4091&club_id=787276&item_id=3081667",
+   "https://crbc.clubexpress.com/content.aspx?page_id=22&club_id=787276&module_id=644634"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Caloosa Riders' ClubExpress calendar lists Tuesday Gravel Nights for Tue Oct 6, 13, 20 and 27, 2026 at 5:15 PM at Babcock Webb WMA; the event page says no drop, 13-16 mph, 21-28 miles (fetched Oct 1, 2026).",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "Caloosa Riders' ClubExpress calendar lists Tuesday Gravel Nights for Tue Oct 20 and Oct 27, 2026 at 5:15 PM at Cecil Webb Wildlife Mgt Area, Babcock Webb Wildlife Management Area, Punta Gorda, FL 33982, no drop, 13-16 mph, 21-28 miles; the club's gravel page gives directions to \"Cecil Webb WMA - Tuckers Corner\" and says the $3 permit is paid at the kiosk at the entrance (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 to the WMA entrance at the east end of Tuckers Grade (OpenStreetMap road data, 26.85825, -81.97505).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -40118,12 +40130,12 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Every Sunday, 8:00 am",
+  "schedule": "Every Sunday, 9:00 am from October through the winter (it was 8:00 am in September); the start moves with the season. Weather cancellations go out on the team's social media and Discord.",
   "days": [
    "sun"
   ],
-  "time_local": "8:00 am",
-  "start_hhmm": "08:00",
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": null,
@@ -40165,9 +40177,9 @@
    "https://evolution-cycling.org/rides",
    "https://chicagogrouprides.com/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-09-28",
-  "evidence": "Evolution Cycling's rides page, last updated Sept 28, 2026, lists the Sunday Ride at 8:00 am (fall) from the Walgreens lot at 5440 N Clark St: A group 24+ mph fast drop ride, B group 17–19 mph no drop, beginners welcome (read Oct 1, 2026).",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-08",
+  "evidence": "Evolution Cycling's rides page, last updated Oct 8, 2026, lists the Sunday Ride at 9:00 am (fall/winter) from the Walgreens lot at 5440 N Clark St, 45 miles, A group 24+ mph drop ride, B group 17–19 mph no drop, beginners welcome (fetched Oct 19, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -46541,9 +46553,9 @@
   "region": "Kentucky",
   "state": "KY",
   "country": "US",
-  "lat": 38.25,
-  "lng": -85.76,
-  "geo_precision": "city",
+  "lat": 38.24074,
+  "lng": -85.73875,
+  "geo_precision": "start",
   "tz": "America/New_York",
   "discipline": [
    "social",
@@ -46561,7 +46573,7 @@
   "season_months": null,
   "start_location": {
    "name": "Trellis Brewing",
-   "address": null
+   "address": "827 Logan St, Louisville, KY 40204"
   },
   "distance_km": null,
   "distance_miles": "10–20",
@@ -46595,11 +46607,12 @@
   ],
   "sources": [
    "https://outsiderscycling.com/",
-   "https://outsiderscycling.com/rides"
+   "https://outsiderscycling.com/rides",
+   "https://www.trellisbrewing.com/"
   ],
   "verified_on": "2026-10-01",
   "last_seen": "2026-09-02",
-  "evidence": "The Outsiders' rides page logs its 2026 Wednesday rides from March 18 through Sept 2 and says to join every Wednesday; the home page says meet 6:00 PM, roll 6:45 PM from Trellis Brewing, 10-12 mph, no-drop (read Oct 1, 2026).",
+  "evidence": "The Outsiders' rides page logs its 2026 Wednesday rides from March 18 through Sept 2 and says to join every Wednesday; the home page says meet 6:00 pm, roll 6:45 pm from Trellis Brewing, 10-12 mph, no-drop (read Oct 1, 2026; unchanged Oct 19). Start pin moved Oct 19, 2026 from the city-level pin to the brewery, 827 Logan St, the address on the brewery's own site (OpenStreetMap, 38.24074, -85.73875).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -50469,9 +50482,9 @@
    "https://www.abrtcycling.com/about/training-rides/",
    "https://calendar.google.com/calendar/ical/abrtmembership%40gmail.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-10-19",
   "last_seen": null,
-  "evidence": "ABRT's training-rides page gives the Sunday No-Drop Ride as 8 am Memorial Day to Labor Day, 9 am from Labor Day to December and from March to Memorial Day, 10 am December to February, so it is 9:00 am now. The team's Google Calendar, updated in 2026, runs the Saturday ride on the same 9 am autumn schedule from Oct 3.",
+  "evidence": "ABRT's training-rides page still gives the Sunday No-Drop Ride at 8 am Memorial Day to Labor Day, 9 am Labor Day to December and March to Memorial Day, 10 am December to February, from Prince George St at the USNA Barry Gate, 35–45 miles at about 16–18 mph; the page was edited in the first week of October 2026 (the Saturday ride's paragraph) and the team's calendar was updated Sept 9, 2026 (fetched Oct 19, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -50729,9 +50742,9 @@
   "region": "Maryland",
   "state": "MD",
   "country": "US",
-  "lat": 39.00806,
-  "lng": -76.77979,
-  "geo_precision": "city",
+  "lat": 38.95644,
+  "lng": -76.82842,
+  "geo_precision": "start",
   "tz": "America/New_York",
   "discipline": [
    "road"
@@ -50747,8 +50760,8 @@
   "season": "year-round",
   "season_months": null,
   "start_location": {
-   "name": "Not on the event listing; check the Meetup event",
-   "address": null
+   "name": "Jafe Cycling",
+   "address": "10250 Martin Luther King Jr Hwy, Bowie, MD"
   },
   "distance_km": 35,
   "distance_miles": 22,
@@ -50781,11 +50794,12 @@
   ],
   "sources": [
    "https://www.meetup.com/jafe-cycling-bike-shop/events/ical/",
-   "https://www.meetup.com/jafe-cycling-bike-shop/"
+   "https://www.meetup.com/jafe-cycling-bike-shop/",
+   "https://www.meetup.com/jafe-cycling-bike-shop/events/316741049/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Jafe Cycling's Meetup feed lists the Fastchix Thursday Morning Ride ('Thursday Ride & Vibes') on Oct 8, 15 and 22, 2026 at 7:30 am, described as the weekly Thursday ride (feed fetched Oct 1, 2026).",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "Jafe Cycling's Meetup event for Thu Oct 22, 2026 says 7:30 AM to 9:30 AM EDT, every week on Thursday until January 15, 2027, at Jafe Cycling, LLC, 10250 Martin Luther King Jr Hwy, Bowie, MD; the group's feed lists Oct 22, Oct 29, Nov 5 and Nov 12 (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city pin to the shop, using the venue coordinates in the host's own Meetup listing (38.95644, -76.82842).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -58217,95 +58231,6 @@
   }
  },
  {
-  "slug": "ocean-springs-ms-tato-nut-ride",
-  "name": "First Saturday Ocean Springs Community Ride (Tato-Nut)",
-  "name_en": null,
-  "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
-  "city": "Ocean Springs",
-  "neighborhood": null,
-  "region": "Mississippi",
-  "state": "MS",
-  "country": "US",
-  "lat": 30.4113,
-  "lng": -88.8278,
-  "geo_precision": "city",
-  "tz": "America/Chicago",
-  "discipline": [
-   "social"
-  ],
-  "schedule": "First Saturday of the month, about 9:00 am (varies by season)",
-  "days": [
-   "sat"
-  ],
-  "time_local": "9:00 am",
-  "start_hhmm": "09:00",
-  "frequency": "monthly",
-  "monthly_rule": [
-   {
-    "ord": 1,
-    "day": "sat"
-   }
-  ],
-  "season": "year-round",
-  "season_months": null,
-  "start_location": {
-   "name": "Little Children's Park, Ocean Springs",
-   "address": null
-  },
-  "distance_km": null,
-  "distance_miles": "12–15",
-  "duration": null,
-  "duration_min": null,
-  "pace": "about 10 mph",
-  "drop_policy": "unknown",
-  "host": {
-   "name": "TriHard Sports and Gulf Coast Bicycle Club",
-   "type": "shop"
-  },
-  "founded_year": null,
-  "founded_note": null,
-  "cost": "free",
-  "language": [
-   "en"
-  ],
-  "visitor_notes": null,
-  "description": "A relaxed family ride through shaded neighborhoods, along the beachfront road and through Gulf Islands National Seashore. Any bike, any age. It follows the Live Oaks Bicycle Trail and is known locally as the Tato-Nut ride, after the donut shop. Confirm the start time with TriHard Sports.",
-  "links": {
-   "website": null,
-   "instagram": null,
-   "facebook": "https://www.facebook.com/gulfcoastbicycleclub/",
-   "strava": null,
-   "meetup": null,
-   "other": [
-    "https://ridewithgps.com/events/377344-first-saturday-ocean-springs-community-r",
-    "https://www.gulfcoasttrails.org/community-rides/"
-   ]
-  },
-  "inclusive_focus": [
-   "family",
-   "beginner"
-  ],
-  "sources": [
-   "https://ridewithgps.com/events/377344-first-saturday-ocean-springs-community-r",
-   "https://www.gulfcoasttrails.org/community-rides/",
-   "https://ridewithgps.com/organizations/14742-gulf-coast-bicycle-club",
-   "https://www.trihardsports.com/community"
-  ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "The Gulf Coast Bicycle Club's Ride with GPS calendar lists 'Tri Hard Tatonut in Ocean Springs' for Sat Oct 3, 2026 at 9:00 am (and Nov 7), meeting at Little Children's Park, Dewey and Calhoun; Tri Hard Sports' community page says 'Every first Saturday of the month: Tatonut Ride @ 9:00am'. Fetched Oct 1, 2026.",
-  "confidence": "medium",
-  "refresh": {
-   "method": "ridewithgps",
-   "watch_url": "https://ridewithgps.com/events/377344-first-saturday-ocean-springs-community-r",
-   "feed_url": "https://ridewithgps.com/organizations/14742/calendar.ics",
-   "notes": null
-  }
- },
- {
   "slug": "ocean-springs-ms-tri-hard-monday-night-shop-ride",
   "name": "Monday Night Shop Ride (Casual Pace)",
   "name_en": null,
@@ -58380,6 +58305,98 @@
    "watch_url": "https://ridewithgps.com/organizations/14742-gulf-coast-bicycle-club",
    "feed_url": "https://ridewithgps.com/organizations/14742/calendar.ics",
    "notes": "Gulf Coast Bicycle Club's Ride with GPS club calendar lists the shop rides as long weekly series; the .ics and events.json?organization_id=14742 both work without a login. Tri Hard also posts changes on Facebook."
+  }
+ },
+ {
+  "slug": "ocean-springs-ms-tato-nut-ride",
+  "name": "Tri Hard Tatonut Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Ocean Springs",
+  "neighborhood": null,
+  "region": "Mississippi",
+  "state": "MS",
+  "country": "US",
+  "lat": 30.40898,
+  "lng": -88.82638,
+  "geo_precision": "start",
+  "tz": "America/Chicago",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "First Saturday of the month, 9:00 am",
+  "days": [
+   "sat"
+  ],
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
+  "frequency": "monthly",
+  "monthly_rule": [
+   {
+    "ord": 1,
+    "day": "sat"
+   }
+  ],
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Little Children's Park",
+   "address": "Corner of Dewey Ave and Calhoun St, Ocean Springs, MS"
+  },
+  "distance_km": null,
+  "distance_miles": "about 15",
+  "duration": null,
+  "duration_min": null,
+  "pace": "12 to 15 mph or so, about 15 miles (the host's words)",
+  "drop_policy": "unknown",
+  "host": {
+   "name": "TriHard Sports and Gulf Coast Bicycle Club",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": null,
+  "description": "A relaxed family ride through shaded neighborhoods, along the beachfront road and through Gulf Islands National Seashore. Any bike, any age. It follows the Live Oaks Bicycle Trail and is known locally as the Tato-Nut ride, after the donut shop. Confirm the start time with TriHard Sports.",
+  "links": {
+   "website": null,
+   "instagram": null,
+   "facebook": "https://www.facebook.com/gulfcoastbicycleclub/",
+   "strava": null,
+   "meetup": null,
+   "other": [
+    "https://ridewithgps.com/events/377344-first-saturday-ocean-springs-community-r",
+    "https://www.gulfcoasttrails.org/community-rides/"
+   ]
+  },
+  "inclusive_focus": [
+   "family",
+   "beginner"
+  ],
+  "sources": [
+   "https://ridewithgps.com/events/377344-first-saturday-ocean-springs-community-r",
+   "https://www.gulfcoasttrails.org/community-rides/",
+   "https://ridewithgps.com/organizations/14742-gulf-coast-bicycle-club",
+   "https://www.trihardsports.com/community",
+   "https://ridewithgps.com/organizations/14742/calendar.ics",
+   "https://ridewithgps.com/events/487491-tri-hard-tatonut-in-ocean-springs",
+   "https://ridewithgps.com/events/487492-tri-hard-tatonut-in-ocean-springs"
+  ],
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-03",
+  "evidence": "The Gulf Coast Bicycle Club's Ride with GPS calendar lists \"Tri Hard Tatonut in Ocean Springs\" on the first Saturday of every month at 9:00 am, Sat Oct 3 and next Nov 7 and Dec 5, 2026; the event series (created June 16, 2026) says it generally meets at Little Children's Park on the corner of Dewey and Calhoun for 15 or so miles at 12 to 15 mph (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city centre to that corner (OpenStreetMap street data, 30.40898, -88.82638).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "ridewithgps",
+   "watch_url": "https://ridewithgps.com/organizations/14742-gulf-coast-bicycle-club",
+   "feed_url": "https://ridewithgps.com/organizations/14742/calendar.ics",
+   "notes": "The club's Ride with GPS calendar (and its .ics feed) lists the ride month by month as \"Tri Hard Tatonut in Ocean Springs\", 9:00 am, with dates posted years ahead. The 2025 event page (377344) is the old series."
   }
  },
  {
@@ -62264,7 +62281,7 @@
  },
  {
   "slug": "raleigh-nc-crank-arm-wednesday-ride",
-  "name": "Crank Arm Wednesday Bike Ride",
+  "name": "Crank Arm Wednesday Night Ride",
   "name_en": null,
   "kind": "group-ride",
   "status": "active",
@@ -62282,12 +62299,12 @@
   "discipline": [
    "social"
   ],
-  "schedule": "Every Wednesday, 7:00 pm",
+  "schedule": "Every Wednesday, 6:30 pm (about an hour on the bike; back by 8:30)",
   "days": [
    "wed"
   ],
-  "time_local": "7:00 pm",
-  "start_hhmm": "19:00",
+  "time_local": "6:30 pm",
+  "start_hhmm": "18:30",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": null,
@@ -62329,17 +62346,19 @@
   ],
   "sources": [
    "https://www.visitraleigh.com/event/crank-arm-wednesday-bike-ride/104693/",
-   "https://crankarmbrewing.com/events/"
+   "https://crankarmbrewing.com/events/",
+   "https://www.meetup.com/crank-arm-cycling-running-yoga/events/316804702/",
+   "https://www.meetup.com/crank-arm-cycling-running-yoga/events/ical/"
   ],
-  "verified_on": "2026-09-18",
-  "last_seen": null,
-  "evidence": null,
-  "confidence": "medium",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "Crank Arm's own Meetup event \"Crank Arm RALEIGH Wednesday Night Ride\" is set for Wed Oct 21, 2026, 6:30 pm to 8:30 pm, every week on Wednesday until Jan 27, 2027, from Crank Arm Brewing Company, 319 W Davie St, a no-drop 10 to 15 mile ride of about an hour, lights required (fetched Oct 19, 2026); Visit Raleigh's listing still says 7 pm.",
+  "confidence": "high",
   "refresh": {
-   "method": "calendar-page",
-   "watch_url": "https://www.visitraleigh.com/event/crank-arm-wednesday-bike-ride/104693/",
-   "feed_url": null,
-   "notes": null
+   "method": "meetup",
+   "watch_url": "https://www.meetup.com/crank-arm-cycling-running-yoga/events/",
+   "feed_url": "https://www.meetup.com/crank-arm-cycling-running-yoga/events/ical/",
+   "notes": "The brewery runs the Meetup group; each week's Raleigh ride is its own event (the Durham location has a separate Wednesday ride in the same feed). Visit Raleigh's listing lags the Meetup time."
   }
  },
  {
@@ -62492,16 +62511,17 @@
    "beginner"
   ],
   "sources": [
-   "https://oaksandspokes.org/events/"
+   "https://oaksandspokes.org/events/",
+   "https://calendar.google.com/calendar/ical/oaksandspokes.com_39383735363530333831%40resource.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Oaks & Spokes' events page (fetched Oct 1, 2026) lists The Green Line commuter bike bus 'April-October 2026, every Wednesday morning, departs Lockwood Park at 7:30 AM', with dates Oct 7, 14, 21 and 28.",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-14",
+  "evidence": "Oaks & Spokes' events calendar lists The Green Line for Wed Oct 21 and Oct 28, 2026 at 7:30 am from Lockwood Park, 1200 Crabtree Blvd, \"April–October 2026, every Wednesday morning\"; the calendar's public ICS feed carries the series weekly on Wednesdays through Oct 28, 2026 (fetched Oct 19, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
    "watch_url": "https://oaksandspokes.org/events/",
-   "feed_url": null,
+   "feed_url": "https://calendar.google.com/calendar/ical/oaksandspokes.com_39383735363530333831%40resource.calendar.google.com/public/basic.ics",
    "notes": null
   }
  },
@@ -64698,9 +64718,9 @@
    "https://btcnj.com/pages/rideSchedulePublic?message",
    "https://btcnj.com/pages/storyShow?storyset=NewMembers&list&nomenu"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "BTCNJ's public ride schedule lists 28 rides from Thu Oct 1 to Sat Oct 17, 2026, with start times, places and levels (read Oct 1, 2026).",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "BTCNJ's public ride schedule lists 19 rides in the 31 days from Mon Oct 19, 2026, each with its start time, place and level, including a Sat Oct 24 B* ride at 8:45 am from Asbury, NJ (fetched Oct 19, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -67406,12 +67426,12 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Every Wednesday, 7:00 am, from Einstein Bagels on W. Cheyenne Ave. The Meetup series runs to Jan 5, 2027; the route is posted a couple of days ahead.",
+  "schedule": "Every Wednesday, 8:00 am from mid-October 2026 (7:00 am through early October), from Einstein Bagels on W. Cheyenne Ave. The Meetup series runs to Jan 5, 2027; the route is posted a couple of days ahead.",
   "days": [
    "wed"
   ],
-  "time_local": "7:00 am",
-  "start_hhmm": "07:00",
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -67449,11 +67469,12 @@
   "inclusive_focus": [],
   "sources": [
    "https://www.meetup.com/las-vegas-valley-bicycle-club/events/316595875/",
-   "https://www.meetup.com/las-vegas-valley-bicycle-club/events/ical/"
+   "https://www.meetup.com/las-vegas-valley-bicycle-club/events/ical/",
+   "https://www.meetup.com/las-vegas-valley-bicycle-club/events/316796675/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "LVVBC's Meetup feed lists the Wednesday Morning Ride for Oct 7, 14 and 21, 2026 at 7:00 am; the Oct 7 event page says 'Every week on Wednesday until January 5, 2027' from Einstein Bagels, 8300 W. Cheyenne Ave (fetched Oct 1, 2026).",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "LVVBC's Meetup feed lists the Wednesday Morning Ride for Oct 21 and 28 and Nov 4, 2026 at 8:00 am, and the Oct 21 event page says 8:00 to 11:00 am from Einstein Bagels, 8300 W. Cheyenne Ave., every week on Wednesday until January 5, 2027 (fetched Oct 19, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -67784,7 +67805,7 @@
   "name_en": null,
   "kind": "group-ride",
   "status": "seasonal-break",
-  "status_note": "Reno Wheelmen's calendar lists no Wednesday Group Ride for October 2026. The ride is a spring to fall series; the club has not posted a return date.",
+  "status_note": "On its seasonal break. The club's calendar has no Wednesday Group Ride after Sept 16, 2026, and the ride's series page lists no upcoming dates. The club runs it as a seasonal series with one waiver per season and hasn't posted when it's back; look for it on the club calendar in spring.",
   "status_since": "2026-10-01",
   "city": "Reno",
   "neighborhood": "West Reno",
@@ -67842,11 +67863,12 @@
   "sources": [
    "https://renowheelmen.org/event/reno-wheelmen-wednesday-group-ride-3-2-2/2026-09-16/",
    "https://renowheelmen.org/event/mwf-ride/2026-09-16/",
-   "https://renowheelmen.org/events/?ical=1"
+   "https://renowheelmen.org/events/?ical=1",
+   "https://renowheelmen.org/series/reno-wheelmen-wednesday-group-ride/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Reno Wheelmen's calendar feed (fetched Oct 1, 2026) has Wednesday entries for Bike Night Reno and the MWF Ride but no Wednesday Group Ride in October; the club runs it as a seasonal series with a waiver once per season.",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-09-16",
+  "evidence": "Reno Wheelmen's calendar feed (30 events through Nov 18, 2026) has the MWF Ride, Bike Night Reno, the Friday Lunch Ride and the Sparks Group Ride but no Wednesday Group Ride; the ride's series page lists 0 upcoming events, and its last instance is Wed Sept 16, 2026 at 5:30 pm, with one waiver required per season (fetched Oct 19, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -68267,9 +68289,9 @@
   "region": "New York",
   "state": "NY",
   "country": "US",
-  "lat": 40.7443,
-  "lng": -73.4821,
-  "geo_precision": "city",
+  "lat": 40.74264,
+  "lng": -73.47821,
+  "geo_precision": "start",
   "tz": "America/New_York",
   "discipline": [
    "road"
@@ -68288,8 +68310,8 @@
   "season": "year-round",
   "season_months": null,
   "start_location": {
-   "name": "Bethpage Public Library (most common start; others on the calendar)",
-   "address": null
+   "name": "Bethpage Library (the most common start; each ride on the calendar names its own)",
+   "address": "47 Powell Ave, Bethpage, NY 11714"
   },
   "distance_km": null,
   "distance_miles": "40–70",
@@ -68322,9 +68344,9 @@
    "https://www.massparkbikeclub.org/",
    "https://www.massparkbikeclub.org/ride-calendar/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "The club's ride calendar for October 2026 lists Thursday Oct 1 rides at 9:00 am from Borella Field and 9:30 am from the Bethpage library, and a Sat Oct 3 ride at 8:30 am from Mattituck; the page says 8:30 am in warmer months and 9 am in cooler months, and that guests get one free ride (read Oct 1, 2026).",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-18",
+  "evidence": "The club's ride calendar lists rides through Sun Oct 18, 2026 (9:00 am from the Bethpage library) and a Sat Oct 24 C ride at 9:00 am, and still says Tue/Thu/Sat/Sun and holidays at 8:30 am in the warmer months and 9 am in the cooler months (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city centre to the Bethpage Public Library, 47 Powell Ave (OpenStreetMap, 40.74264, -73.47821).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -70452,17 +70474,18 @@
   "inclusive_focus": [],
   "sources": [
    "https://times-up.org/",
-   "https://times-up.org/critical-mass/"
+   "https://times-up.org/critical-mass/",
+   "https://times-up.org/calendar/critical-mass-manhattan-13/"
   ],
-  "verified_on": "2026-09-15",
-  "last_seen": null,
-  "evidence": null,
-  "confidence": "medium",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-09-25",
+  "evidence": "Time's Up!'s calendar entry \"Critical Mass Manhattan\" is dated 09/25/2026, 7:00 pm, Union Square Park-North, and its Critical Mass page says 7 pm the last Friday of every month at Union Square Park North (fetched Oct 19, 2026); the Oct 30 entry wasn't posted yet.",
+  "confidence": "high",
   "refresh": {
    "method": "static-page",
    "watch_url": "https://times-up.org/",
    "feed_url": null,
-   "notes": null
+   "notes": "Time's Up! posts each month's ride as a dated calendar entry (times-up.org/calendar/critical-mass-manhattan-N/), often only a week or two ahead; the homepage and /critical-mass/ text is static. The site's ?ical=1 feed is a 2012–13 dump, not a live calendar."
   }
  },
  {
@@ -72233,14 +72256,14 @@
   "region": "Ohio",
   "state": "OH",
   "country": "US",
-  "lat": 39.63584,
-  "lng": -84.07018,
-  "geo_precision": "city",
+  "lat": 39.66089,
+  "lng": -84.07113,
+  "geo_precision": "start",
   "tz": "America/New_York",
   "discipline": [
    "road"
   ],
-  "schedule": "Tuesdays and Thursdays, 5:30 pm, from Bellbrook Middle School. The club calendar lists Oct 1, 6 and 8, 2026.",
+  "schedule": "Tuesdays and Thursdays, 5:30 pm, from Bellbrook Middle School, spring through late October. The club calendar lists Oct 20, 22, 27 and 29, 2026, and marks Thu Oct 29 the last ride of the season.",
   "days": [
    "tue",
    "thu"
@@ -72249,11 +72272,14 @@
   "start_hhmm": "17:30",
   "frequency": "weekly",
   "monthly_rule": null,
-  "season": "year-round",
-  "season_months": null,
+  "season": "Spring through late October; the club's calendar marks the last ride of the season",
+  "season_months": {
+   "start": 4,
+   "end": 10
+  },
   "start_location": {
    "name": "Bellbrook Middle School",
-   "address": "Bellbrook Middle School, Bellbrook, OH"
+   "address": "3600 Feedwire Rd, Bellbrook, OH 45305"
   },
   "distance_km": null,
   "distance_miles": null,
@@ -72283,17 +72309,18 @@
   },
   "inclusive_focus": [],
   "sources": [
-   "https://www.daytoncyclingclub.org/content.aspx?page_id=4001&club_id=455464&action=cira&vm=Future&sif=0"
+   "https://www.daytoncyclingclub.org/content.aspx?page_id=4001&club_id=455464&action=cira&vm=Future&sif=0",
+   "https://www.daytoncyclingclub.org/content.aspx?page_id=4002&club_id=455464&item_id=3099520"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "The Dayton Cycling Club's calendar lists the BMS ride for Thu Oct 1, Tue Oct 6 and Thu Oct 8, 2026 at 5:30 PM (read Oct 1, 2026).",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "The Dayton Cycling Club's calendar lists the BMS ride for Tue Oct 20, Thu Oct 22, Tue Oct 27 and Thu Oct 29, 2026 at 5:30 PM from Bellbrook Middle School, 3600 Feedwire Rd, Bellbrook, OH 45305, three groups by attendance, and marks Oct 29 \"Last Ride of the Season\" (read Oct 19, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
    "watch_url": "https://www.daytoncyclingclub.org/content.aspx?page_id=4001&club_id=455464&action=cira&vm=Future&sif=0",
    "feed_url": null,
-   "notes": "The club posts each date a week or two ahead; later dates may not be up yet."
+   "notes": "The club posts each date a week or two ahead; later dates may not be up yet. The season's end is on the calendar (Oct 29, 2026, \"Last Ride of the Season\"). The spring start isn't posted anywhere we read; the club's BMS Rides photo album was last updated Apr 29, 2026, so look for the ride on the calendar from April and confirm the first date then."
   }
  },
  {
@@ -72472,7 +72499,7 @@
   "discipline": [
    "social"
   ],
-  "schedule": "Every Tuesday; meet 6:00 pm, roll 6:15 pm",
+  "schedule": "Every Tuesday; meet 6:00 pm, roll 6:15 pm. The Queen City Bike calendar lists the ride through Oct 27, 2026; check it for what follows.",
   "days": [
    "tue"
   ],
@@ -72505,7 +72532,7 @@
   "visitor_notes": null,
   "description": "A casual ride through city streets and alleys on both sides of the river, then back to a bar for a post-ride drink. No one gets dropped. Red Bike station at 14th and Elm if you need wheels.",
   "links": {
-   "website": "https://events.queencity.bike/event/tmaunlkaae5r0iegu8v6jto11o_20260915T220000Z",
+   "website": "https://events.queencity.bike/",
    "instagram": "https://www.instagram.com/ubbc_cincy/",
    "facebook": "https://www.facebook.com/events/washington-park/ubbc-tuesday-night-bike-rides/1384471406782227/",
    "strava": null,
@@ -72518,17 +72545,18 @@
   ],
   "sources": [
    "https://events.queencity.bike/event/tmaunlkaae5r0iegu8v6jto11o_20260915T220000Z",
-   "https://events.queencity.bike/"
+   "https://events.queencity.bike/",
+   "https://calendar.google.com/calendar/ical/ec292r3gr6plg3n57dj9ov86g0%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Queen City Bike's calendar lists the UBBC Tuesday Night Ride for Oct 6, 13, 20 and 27, 2026; the event text says every Tuesday at 6:00 pm from the Washington Park gazebo, roll out 6:15 pm, no one dropped (read Oct 1, 2026).",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-09-09",
+  "evidence": "Queen City Bike's calendar (a public Google Calendar; the entry was updated Sept 9, 2026) lists the UBBC Tuesday Night Ride weekly on Tuesdays at 6:00 pm from the Washington Park Gazebo, 1230 Elm St, through Oct 27, 2026, with Oct 20 and 27 still ahead; the event text says meet 6:00, roll 6:15, no one dropped (fetched Oct 19, 2026).",
   "confidence": "high",
   "refresh": {
-   "method": "calendar-page",
-   "watch_url": "https://events.queencity.bike/event/tmaunlkaae5r0iegu8v6jto11o_20260915T220000Z",
-   "feed_url": null,
-   "notes": null
+   "method": "ics",
+   "watch_url": "https://events.queencity.bike/",
+   "feed_url": "https://calendar.google.com/calendar/ical/ec292r3gr6plg3n57dj9ov86g0%40group.calendar.google.com/public/basic.ics",
+   "notes": "The ride is posted as a recurring series on Queen City Bike's community Google Calendar (the feed); the 2026 series runs Sept 15 to Oct 31. In 2021 it ran late May to early November, so look for a new series in spring."
   }
  },
  {
@@ -74743,6 +74771,18 @@
    {
     "from": "2026-12-01",
     "start_hhmm": "09:30"
+   },
+   {
+    "from": "2027-03-01",
+    "start_hhmm": "09:00"
+   },
+   {
+    "from": "2027-06-01",
+    "start_hhmm": "08:00"
+   },
+   {
+    "from": "2027-09-01",
+    "start_hhmm": "09:00"
    }
   ],
   "frequency": "weekly",
@@ -74783,17 +74823,19 @@
   },
   "inclusive_focus": [],
   "sources": [
-   "https://tulsabicycleclub.clubexpress.com/content.aspx?page_id=22&club_id=539195&module_id=107729"
+   "https://tulsabicycleclub.clubexpress.com/content.aspx?page_id=22&club_id=539195&module_id=107729",
+   "https://tulsabicycleclub.clubexpress.com/content.aspx?page_id=4001&club_id=539195",
+   "https://tulsabicycleclub.clubexpress.com/content.aspx?page_id=4091&club_id=539195&item_id=3073273&event_date_id=493837"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Tulsa Bicycle Club's weekly rides page (fetched Oct 1, 2026) lists the Tuesday-Thursday Morning ride with a start-time table by season (Sep-Nov 9:00 am, Dec-Feb 9:30 am) and says to check the club calendar; the page has no ride dates.",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "Tulsa Bicycle Club's ClubExpress calendar lists the Tuesday/Thursday Ride from Bentley Park, Bixby (8505 E 148th St S) for Tue Oct 20, Thu Oct 22, Tue Oct 27 and Thu Oct 29, 2026 at 9:00 AM, with September's rides from 17th & Riverside, and the weekly rides page keeps the seasonal start table (Dec–Feb 9:30 am, Mar–May 9:00 am, Jun–Aug 8:00 am, Sep–Nov 9:00 am), so the pin stays at city level because the start moves each month (fetched Oct 19, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
    "watch_url": "https://tulsabicycleclub.clubexpress.com/content.aspx?page_id=22&club_id=539195&module_id=107729",
    "feed_url": null,
-   "notes": "The calendar page is built by script and did not load as text; the start location changes monthly."
+   "notes": "The weekly rides page carries the seasonal start table; the club's ClubExpress calendar (content.aspx?page_id=4001&club_id=539195) loads as text and lists each month's start location and the 9:00 AM dates. The start location changes monthly, so the pin stays at city level."
   }
  },
  {
@@ -79127,9 +79169,9 @@
   "region": "Pennsylvania",
   "state": "PA",
   "country": "US",
-  "lat": 39.95272,
-  "lng": -75.16353,
-  "geo_precision": "city",
+  "lat": 39.96896,
+  "lng": -75.18522,
+  "geo_precision": "start",
   "tz": "America/New_York",
   "discipline": [
    "road"
@@ -79182,7 +79224,7 @@
   ],
   "verified_on": "2026-10-02",
   "last_seen": null,
-  "evidence": "The Trellis's Philly Bike Events Calendar, showing events from October to December 2026, lists Vino Velo under Saturday as an A and A- ride from Boathouse Row to Ambler; the ride's Strava club and QCW's Area Rides page give the 9:00 and 9:05 am times (all read Oct 2, 2026; the Strava and QCW pages carry no date).",
+  "evidence": "The Trellis's Philly Bike Events Calendar, showing events from October to December 2026, lists Vino Velo under Saturday as an A and A- ride from Boathouse Row to Ambler; the ride's Strava club and QCW's Area Rides page give the 9:00 and 9:05 am times (all read Oct 2, 2026; the Strava and QCW pages carry no date). Start pin moved Oct 19, 2026 to Lloyd Hall itself: the ride's Strava club page says it leaves \"Lloyd's Hall on Boathouse Row at 9:05 on Saturdays\" and QCW's page says \"from Lloyd Hall\" (both fetched Oct 19, 2026); OpenStreetMap puts the Lloyd Hall Recreation Center at 39.96896, -75.18522.",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -82437,7 +82479,7 @@
    "social",
    "mixed"
   ],
-  "schedule": "One Saturday a month, 9:00 am, March to September",
+  "schedule": "One Saturday a month, 9:00 am, March to October (the host may add a November ride if the weather allows); a different coffee shop each month, posted on FAB's calendar",
   "days": [
    "sat"
   ],
@@ -82445,18 +82487,18 @@
   "start_hhmm": "09:00",
   "frequency": "monthly",
   "monthly_rule": null,
-  "season": "Mar–Sep",
+  "season": "Mar–Oct",
   "season_months": {
    "start": 3,
-   "end": 9
+   "end": 10
   },
   "start_location": null,
   "distance_km": null,
-  "distance_miles": null,
+  "distance_miles": "~10",
   "duration": null,
   "duration_min": null,
-  "pace": null,
-  "drop_policy": "unknown",
+  "pace": "casual, social; nobody gets left behind",
+  "drop_policy": "no-drop",
   "host": {
    "name": "Falls Area Bicyclists",
    "type": "nonprofit"
@@ -82468,7 +82510,7 @@
    "en"
   ],
   "visitor_notes": null,
-  "description": "A monthly Saturday morning ride put on by Falls Area Bicyclists, the local bike advocacy group. Each month it meets at a different coffee shop in town. Check the FAB calendar for that month's spot.",
+  "description": "A monthly Saturday morning ride put on by Falls Area Bicyclists, the local bike advocacy group. Each month it starts and ends at a different coffee shop in town, about 10 easy miles on low-stress streets. Check the FAB calendar for that month's spot; e-bikes are welcome.",
   "links": {
    "website": "https://www.fallsareabicyclists.org/",
    "instagram": null,
@@ -82480,17 +82522,19 @@
   "inclusive_focus": [],
   "sources": [
    "https://www.fallsareabicyclists.org/events",
-   "https://www.fallsareabicyclists.org/"
+   "https://www.fallsareabicyclists.org/",
+   "https://calendar.google.com/calendar/htmlembed?src=Y185ZTk3ZTc0MjVmNDkwZWZiMWYwMmY0NjUzOTI1MjcxYmJiMDQ1ODY4ZjkyYWJiNjFlZGNlNmM1ZGFmMjMxMTZhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&ctz=America%2FChicago&mode=AGENDA",
+   "https://calendar.google.com/calendar/ical/c_9e97e7425f490efb1f02f4653925271bbb045868f92abb61edce6c5daf23116a@group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-09-18",
-  "last_seen": null,
-  "evidence": null,
-  "confidence": "medium",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-17",
+  "evidence": "FAB's own Google Calendar (the one embedded on its events page) lists \"FAB Saturday Coffee Shop Ride\" at 9:00 am on Mar 28, Apr 18, May 30, Jun 20, Jul 18, Aug 22, Sep 19 and Oct 17, 2026, each from a different coffee shop; the Oct 17 entry (Daylily Coffee, ~10 miles, no-drop) says it \"could be our final coffee spin of the year (weather permitting, we might try for November)\" (fetched Oct 19, 2026).",
+  "confidence": "high",
   "refresh": {
-   "method": "calendar-page",
-   "watch_url": "https://www.fallsareabicyclists.org/events",
-   "feed_url": null,
-   "notes": null
+   "method": "ics",
+   "watch_url": "https://calendar.google.com/calendar/htmlembed?src=Y185ZTk3ZTc0MjVmNDkwZWZiMWYwMmY0NjUzOTI1MjcxYmJiMDQ1ODY4ZjkyYWJiNjFlZGNlNmM1ZGFmMjMxMTZhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&ctz=America%2FChicago&mode=AGENDA",
+   "feed_url": "https://calendar.google.com/calendar/ical/c_9e97e7425f490efb1f02f4653925271bbb045868f92abb61edce6c5daf23116a@group.calendar.google.com/public/basic.ics",
+   "notes": "The ride is on FAB's \"Rides & Events\" Google Calendar, not on the Wild Apricot events list (fallsareabicyclists.org/events shows \"No events available\" and never carried it). The htmlembed agenda shows the current month; add &dates=YYYYMMDD/YYYYMMDD to read another. Each month's entry gives that month's coffee shop."
   }
  },
  {
@@ -84260,9 +84304,9 @@
   "region": "Tennessee",
   "state": "TN",
   "country": "US",
-  "lat": 36.1627,
-  "lng": -86.7816,
-  "geo_precision": "city",
+  "lat": 36.16572,
+  "lng": -86.7258,
+  "geo_precision": "start",
   "tz": "America/Chicago",
   "discipline": [
    "social"
@@ -84316,7 +84360,7 @@
   ],
   "verified_on": "2026-09-18",
   "last_seen": null,
-  "evidence": null,
+  "evidence": "Bike Curious's own About page says the group meets every Sunday below the train trestle on Shelby Park's riverfront greenway (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city centre to that trestle: OpenStreetMap shows one rail bridge over the riverfront greenway at Shelby Park, the CSX line, and the Shelby Bottoms Greenway passes under it at 36.16572, -86.72580.",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -85541,9 +85585,9 @@
   "region": "Texas",
   "state": "TX",
   "country": "US",
-  "lat": 30.27113,
-  "lng": -97.7437,
-  "geo_precision": "city",
+  "lat": 30.20047,
+  "lng": -97.87019,
+  "geo_precision": "start",
   "tz": "America/Chicago",
   "discipline": [
    "mtb"
@@ -85559,7 +85603,7 @@
   "season": null,
   "season_months": null,
   "start_location": {
-   "name": "ATX Bikes (MTBATX's list says meet behind the shop)",
+   "name": "ATX Bikes (meet behind the shop)",
    "address": "5701 W Slaughter Ln Ste A110, Austin, TX 78749"
   },
   "distance_km": null,
@@ -85597,7 +85641,7 @@
   ],
   "verified_on": "2026-10-01",
   "last_seen": null,
-  "evidence": "ATX Bikes' Rides & Events page (footer © 2026) describes Crank 'N Drank as a Tuesday evening tradition with wheels down at 6pm; the page shows no ride date (fetched Oct 1, 2026).",
+  "evidence": "ATX Bikes' Rides & Events page (footer © 2026) describes Crank 'N Drank as a Tuesday evening tradition with wheels down at 6pm and sends riders to mtbatx.com for route info; MTBATX's recurring rides list says \"Meet behind ATX Bikes\"; neither page shows a ride date (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city pin to the shop, 5701 W Slaughter Ln Ste A110 (OpenStreetMap, 30.20047, -97.87019).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -92285,9 +92329,9 @@
   "region": "Texas",
   "state": "TX",
   "country": "US",
-  "lat": 26.2034,
-  "lng": -98.23,
-  "geo_precision": "city",
+  "lat": 26.24008,
+  "lng": -98.2361,
+  "geo_precision": "start",
   "tz": "America/Chicago",
   "discipline": [
    "road"
@@ -92305,7 +92349,7 @@
   "season_months": null,
   "start_location": {
    "name": "Bicycle World McAllen (shop parking lot)",
-   "address": null
+   "address": "2025 Nolana St, McAllen, TX 78501"
   },
   "distance_km": null,
   "distance_miles": "22 or 33",
@@ -92339,7 +92383,7 @@
   ],
   "verified_on": "2026-09-15",
   "last_seen": null,
-  "evidence": null,
+  "evidence": "Bicycle World RGV's group-rides page says all McAllen shop rides, the Tuesday and Thursday TNT rides at 6:30 pm among them, meet in the McAllen shop parking lot, and the same page gives the McAllen store as 2025 Nolana St, McAllen, TX 78501 (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city pin to the shop (OpenStreetMap, 26.24008, -98.23610).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -92747,9 +92791,9 @@
   "region": "Texas",
   "state": "TX",
   "country": "US",
-  "lat": 31.83688,
-  "lng": -102.01038,
-  "geo_precision": "city",
+  "lat": 32.03711,
+  "lng": -102.12992,
+  "geo_precision": "start",
   "tz": "America/Chicago",
   "discipline": [
    "road"
@@ -92768,8 +92812,8 @@
    "end": 10
   },
   "start_location": {
-   "name": "Trek Midland",
-   "address": null
+   "name": "Trek Bicycle Midland",
+   "address": "4712 N Midkiff Rd, Midland, TX 79705"
   },
   "distance_km": null,
   "distance_miles": null,
@@ -92799,11 +92843,12 @@
   },
   "inclusive_focus": [],
   "sources": [
-   "https://pbbatx.com/weekly-club-rides"
+   "https://pbbatx.com/weekly-club-rides",
+   "https://www.trekbikes.com/us/en_US/retail/midland/"
   ],
   "verified_on": "2026-10-01",
   "last_seen": null,
-  "evidence": "PBBA's weekly club rides page (2026 season: rides 'begin March 10-11, 2026') lists the Wednesday Trek Shop Ride from Trek Midland at 6:15, 'Begins March 11, 2026', A/B/C groups (fetched Oct 1, 2026).",
+  "evidence": "PBBA's weekly club rides page says the Wednesday Trek Shop Ride rolls out from Trek Midland at 6:15, and Trek's own store page gives Trek Bicycle Midland's address as 4712 N Midkiff Road, Midland, TX 79705 (both fetched Oct 19, 2026); the pin moved there from the Midland city pin on Oct 19, 2026 (OpenStreetMap, 32.03711, -102.12992).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -101615,9 +101660,9 @@
   "name": "Wenatchee Valley Velo Saturday Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "No rides on the club's calendar after the Oct 17, 2026 ride. The club says its weekly rides run in the warmer months; in 2026 the first ride was March 28.",
+  "status_since": "2026-10-19",
   "city": "Wenatchee",
   "neighborhood": "Downtown",
   "region": "Washington",
@@ -101676,11 +101721,12 @@
   "sources": [
    "https://wenatcheevalleyvelo.org/",
    "https://wenatcheevalleyvelo.org/events",
-   "https://wenatcheevalleyvelo.org/page-18101"
+   "https://wenatcheevalleyvelo.org/page-18101",
+   "https://wenatcheevalleyvelo.org/event-6849032"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-09-26",
-  "evidence": "Wenatchee Valley Velo's events page lists a Saturday Sept 26 ride (noon time change) and upcoming Saturday rides on Oct 3 (Monument Ride, 11:30 AM rollout, Plain) and Oct 17 (Upper Valley ride from Yonder Cider House in Cashmere, start set by Oct 12 by temperature); registration is required and each ride's start and place is posted per event.",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-17",
+  "evidence": "Wenatchee Valley Velo's events page lists the Upper Valley Saturday Ride for Sat Oct 17, 2026 at 11:00 am from Yonder Cider House in Cashmere as its last ride, with nothing ahead but a Nov 9 board meeting; the club's home page says its weekly rides run in the warmer-weather months, and its calendar shows last season's rides ending Oct 22, 2025 and this season's starting March 28, 2026 (fetched Oct 19, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "calendar-page",
@@ -103498,9 +103544,9 @@
   "region": "Wisconsin",
   "state": "WI",
   "country": "US",
-  "lat": 44.633,
-  "lng": -88.039,
-  "geo_precision": "city",
+  "lat": 44.59206,
+  "lng": -88.045,
+  "geo_precision": "start",
   "tz": "America/Chicago",
   "discipline": [
    "road"
@@ -103517,7 +103563,7 @@
   "season_months": null,
   "start_location": {
    "name": "Broken Spoke Bike Studio, Suamico",
-   "address": null
+   "address": "1580 Lineville Road, Suamico, WI 54313"
   },
   "distance_km": null,
   "distance_miles": null,
@@ -103548,11 +103594,12 @@
   "inclusive_focus": [],
   "sources": [
    "https://www.brokenspokebikes.com/events/local-rides-pg206.htm",
-   "https://www.brokenspokebikes.com/"
+   "https://www.brokenspokebikes.com/",
+   "https://www.brokenspokebikes.com/about/suamico-pg213.htm"
   ],
   "verified_on": "2026-09-15",
   "last_seen": null,
-  "evidence": null,
+  "evidence": "Broken Spoke's local rides page lists the Monday Night Road Ride every Monday at 6:00 pm from Broken Spoke Bike Studio Suamico, B group pace 18–20 mph, and the shop's own Suamico store page gives the address as 1580 Lineville Road, Suamico, WI 54313 with its map pin at 44.59206, -88.04500 (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city centre to the shop; Nominatim only matched Lineville Road itself, and its nearest segment sits 350 m from the shop's pin.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -104511,9 +104558,9 @@
   "region": "New South Wales",
   "state": null,
   "country": "AU",
-  "lat": -33.86984,
-  "lng": 151.20828,
-  "geo_precision": "city",
+  "lat": -33.85766,
+  "lng": 151.18121,
+  "geo_precision": "start",
   "tz": "Australia/Sydney",
   "discipline": [
    "social"
@@ -104530,7 +104577,7 @@
   "season_months": null,
   "start_location": {
    "name": "Loyalty Square, outside Woolworths, Balmain",
-   "address": "Loyalty Square, Balmain NSW"
+   "address": "Cnr Darling and Beattie Streets, Balmain NSW 2041"
   },
   "distance_km": null,
   "distance_miles": null,
@@ -104565,7 +104612,7 @@
   ],
   "verified_on": "2026-10-01",
   "last_seen": "2026-09-30",
-  "evidence": "The Bike Leichhardt Meetup page lists the Balmain Bike Bus for Wed Sept 23 and Sept 30, 2026, 8:00 am, with the line 'happens every Wednesday from Loyalty Square'; no later Wednesday was posted on Oct 1, 2026.",
+  "evidence": "The Bike Leichhardt Meetup event for Wed Sept 30, 2026 gives the venue as \"Loyalty Square, Cnr. Darling & Beattie streets, Balmain\" with Meetup's own venue pin at -33.857655, 151.18121, which OpenStreetMap places at 274 Darling Street, Balmain; the pin moved there from the Sydney city pin on Oct 19, 2026 (fetched Oct 19, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "meetup",
@@ -107471,9 +107518,9 @@
    "https://events.rapha.cc/rapha-tokyo",
    "https://content.rapha.cc/jp/ja/clubhouses/tokyo"
   ],
-  "verified_on": "2026-09-30",
-  "last_seen": "2026-09-30",
-  "evidence": "Rapha's event page for the ride, headed Japan · October 2026, gives Saturday, meet 9:30 am, 30 to 40 km at 25 km/h, open to all (fetched Sept 30, 2026).",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "Rapha's booking page for the ride, headed Japan · October 2026, gives Saturday, meet 9:30 am at Rapha Tokyo, 30–40 km at about 25 km/h, back about 12:30 pm, and the clubhouse's event list shows it open to book with 3 spots left (fetched Oct 19, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -110514,7 +110561,7 @@
    "road",
    "social"
   ],
-  "schedule": "Mondays and Wednesdays, 6:00–10:00 pm; the cyclists' gate closes at 9:45 pm. A women-only session, TrainYAS Ladies, runs on Tuesdays.",
+  "schedule": "Mondays and Wednesdays, 6:00–10:00 pm on the full GP track. The circuit posts each month's sessions, and some weeks move or drop for track events. A women-only session, TrainYAS Ladies, runs on Tuesdays, 6:00–10:00 pm on the North Circuit.",
   "days": [
    "mon",
    "wed"
@@ -110547,9 +110594,9 @@
    "ar"
   ],
   "visitor_notes": "Free, but register online first to get the TrainYAS barcode. Helmets are compulsory. Free loan bikes and helmets (adult and kids' sizes) from Abu Dhabi Cycling Club, limited numbers. Under-18s must come with an adult.",
-  "description": "Yas Marina Circuit opens its Formula 1 track to cyclists, runners and walkers two evenings a week. You ride laps at your own pace on closed tarmac, and loan bikes are there if you traveled without one. It is free and open to all ages and levels.",
+  "description": "Yas Marina Circuit opens its Formula 1 track to cyclists, runners and walkers two evenings a week. You ride laps at your own pace on closed tarmac, and loan bikes are there if you traveled without one. It is free and open to all ages and levels. There is also TrainAM, a cyclists-only morning session, 6:00–8:00 am on Tuesdays, Thursdays and Fridays.",
   "links": {
-   "website": "https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-detailpage",
+   "website": "https://www.yasmarinacircuit.com/en/healthandfitness",
    "instagram": "https://www.instagram.com/ymcofficial/",
    "facebook": null,
    "strava": null,
@@ -110559,17 +110606,19 @@
   "inclusive_focus": [],
   "sources": [
    "https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-detailpage",
-   "https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-ladies"
+   "https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-ladies",
+   "https://www.yasmarinacircuit.com/en/healthandfitness",
+   "https://www.yasmarinacircuit.com/o/c/healths?pageSize=50"
   ],
-  "verified_on": "2026-09-30",
-  "last_seen": "2025-10-29",
-  "evidence": "The circuit's TrainYAS page gives Monday and Wednesday 6:00–10:00 pm and shows a session dated Oct 29, 2025; nothing on it is dated 2026 (fetched Sept 30, 2026).",
-  "confidence": "medium",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-09-29",
+  "evidence": "Yas Marina Circuit's own session schedule (the data behind its health-and-fitness page, updated Sept 29, 2026) lists TrainYAS evening sessions 18:00–22:00 on the full GP track for Mon Oct 19, Mon Oct 26 and Wed Oct 28, 2026, open to walkers, runners and cyclists, with the Tuesday Ladies session on the North Circuit (fetched Oct 19, 2026).",
+  "confidence": "high",
   "refresh": {
-   "method": "static-page",
-   "watch_url": "https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-detailpage",
+   "method": "calendar-page",
+   "watch_url": "https://www.yasmarinacircuit.com/en/healthandfitness",
    "feed_url": null,
-   "notes": "The page lists upcoming session dates when they are set. The circuit's Ladies page says updates go out on Instagram @ymcofficial."
+   "notes": "The old TrainYAS detail page redirects to the health-and-fitness page, whose schedule table is filled in the browser from the circuit's own data at https://www.yasmarinacircuit.com/o/c/healths?pageSize=50 (JSON: date, category trainyasPm / trainyasAm / trainyasLadies, tIME, configuration). Read that for the dated sessions; the HTML itself carries no times. Updates also go out on Instagram @ymcofficial."
   }
  },
  {
@@ -111529,9 +111578,9 @@
   "region": "England",
   "state": null,
   "country": "GB",
-  "lat": 51.50745,
-  "lng": -0.12777,
-  "geo_precision": "city",
+  "lat": 51.50727,
+  "lng": -0.11554,
+  "geo_precision": "start",
   "tz": "Europe/London",
   "discipline": [
    "social"
@@ -111553,7 +111602,7 @@
   "season_months": null,
   "start_location": {
    "name": "South Bank, under Waterloo Bridge (by the BFI / National Theatre)",
-   "address": null
+   "address": "Riverside walk under Waterloo Bridge, by BFI Southbank, Belvedere Road, London SE1 8XT"
   },
   "distance_km": null,
   "distance_miles": null,
@@ -111589,15 +111638,15 @@
    "https://criticalmass.in/london",
    "https://criticalmass.in/london/socialnetwork/list-items"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "criticalmass.in's mirror of the ride's own Instagram posts, fetched Oct 1, 2026, repeats 'The Last Friday of Every Month, 19:00, South Bank under Waterloo Bridge. Avg. departure 19:30' in posts dated Sept 30 and Oct 1, 2026, plus 'Scenes from' the Sept 25, 2026 ride.",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "The ride's own Instagram, @critical_mass_london, mirrored on criticalmass.in in posts dated Oct 5 to Oct 19, 2026, says \"The Last Friday of Every Month, 19:00, South Bank under Waterloo Bridge. Avg. departure 19:30\" and \"hundreds of cyclists gather on the South Bank under Waterloo Bridge (by the BFI/National Theatre) to meet at 19:00\"; criticalmass.in's own entry lists the next ride for Oct 30, 2026 (fetched Oct 19, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "instagram",
    "watch_url": "https://criticalmass.in/london/socialnetwork/list-items",
    "feed_url": null,
-   "notes": "criticalmass.in mirrors the ride's Instagram posts without a login wall. criticalmass.bike and criticalmass.in's own ride entry still say 18:00. The old network23.org/criticalmasslondon site returned HTTP 500 on Sept 30, 2026. Next rides: Fri Oct 30, Fri Nov 27, 2026."
+   "notes": "criticalmass.in mirrors the ride's Instagram posts without a login wall; the ride's bio text (19:00 meet, 19:30 departure) is repeated on every post. criticalmass.bike and criticalmass.in's own ride entry still say 18:00. criticalmasslondon.org.uk sits behind Cloudflare (403 to curl, error to WebFetch, Oct 19, 2026). Next rides: Fri Oct 30, Fri Nov 27, 2026."
   }
  },
  {
@@ -112272,9 +112321,9 @@
   "region": "England",
   "state": null,
   "country": "GB",
-  "lat": 51.50745,
-  "lng": -0.12777,
-  "geo_precision": "city",
+  "lat": 51.52647,
+  "lng": -0.15402,
+  "geo_precision": "start",
   "tz": "Europe/London",
   "discipline": [
    "road"
@@ -112331,9 +112380,9 @@
    "https://events.rapha.cc/products/rapha-x-steezy-ride",
    "https://content.rapha.cc/gb/en/clubhouses/london"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Rapha's event page for the Women's Chat Laps (read via WebFetch Oct 1, 2026) lists a weekly Tuesday 7:00 am series for September to December 2026 from the Inner Circle (Jubilee Gates): no-drop, easy pace, about 20 km at 22-24 km/h.",
+  "verified_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "Rapha's event page for the Women's Chat Laps (read via WebFetch Oct 19, 2026) lists the weekly Tuesday ride for October 2026 to January 2027: meet 7:00 am at the Inner Circle (Jubilee Gates), Regent's Park, three laps of the Outer Circle at 22–24 km/h, no-drop, finishing at Rapha London, 85 Brewer Street. Start pin moved Oct 19, 2026 from the city pin to Jubilee Gates on the Inner Circle (OpenStreetMap, 51.52647, -0.15402).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",

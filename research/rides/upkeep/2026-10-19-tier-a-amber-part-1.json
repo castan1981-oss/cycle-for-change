@@ -5,7 +5,9 @@
   "checked_on": "2026-10-19",
   "last_seen": "2026-10-08",
   "evidence": "Evolution Cycling's rides page, last updated Oct 8, 2026, lists the Sunday Ride at 9:00 am (fall/winter) from the Walgreens lot at 5440 N Clark St, 45 miles, A group 24+ mph drop ride, B group 17–19 mph no drop, beginners welcome (fetched Oct 19, 2026).",
-  "sources": ["https://evolution-cycling.org/rides"],
+  "sources": [
+   "https://evolution-cycling.org/rides"
+  ],
   "changes": {
    "schedule": "Every Sunday, 9:00 am from October through the winter (it was 8:00 am in September); the start moves with the season. Weather cancellations go out on the team's social media and Discord.",
    "time_local": "9:00 am",
@@ -16,8 +18,10 @@
   "slug": "annapolis-md-abrt-sunday-no-drop-ride",
   "outcome": "confirmed",
   "checked_on": "2026-10-19",
-  "evidence": "ABRT's training-rides page still gives the Sunday No-Drop Ride at 8 am Memorial Day to Labor Day, 9 am Labor Day to December and March to Memorial Day, 10 am December to February, from Prince George St at the USNA Barry Gate, 35–45 miles at about 16–18 mph; the page was edited in the first week of October 2026 (the Saturday ride's paragraph) and the team's calendar was updated Sept 9, 2026 (fetched Oct 19, 2026).",
-  "sources": ["https://www.abrtcycling.com/about/training-rides/"]
+  "evidence": "ABRT's training-rides page still gives the Sunday No-Drop Ride at 8 am Memorial Day to Labor Day, 9 am Labor Day to December and March to Memorial Day, 10 am December to February, from Prince George St at the USNA Barry Gate, 35–45 miles at about 16–18 mph; the page was edited between Sept 30 and Oct 5, 2026 (the Saturday ride's paragraph) and the team's calendar was updated Sept 9, 2026 (fetched Oct 19, 2026).",
+  "sources": [
+   "https://www.abrtcycling.com/about/training-rides/"
+  ]
  },
  {
   "slug": "cincinnati-oh-ubbc-tuesday-night-ride",
@@ -31,7 +35,9 @@
   ],
   "changes": {
    "schedule": "Every Tuesday; meet 6:00 pm, roll 6:15 pm. The Queen City Bike calendar lists the ride through Oct 27, 2026; check it for what follows.",
-   "links": { "website": "https://events.queencity.bike/" },
+   "links": {
+    "website": "https://events.queencity.bike/"
+   },
    "refresh": {
     "method": "ics",
     "watch_url": "https://events.queencity.bike/",
@@ -46,7 +52,9 @@
   "checked_on": "2026-10-19",
   "last_seen": "2026-10-19",
   "evidence": "LVVBC's Meetup feed lists the Wednesday Morning Ride for Oct 21 and 28 and Nov 4, 2026 at 8:00 am, and the Oct 21 event page says 8:00 to 11:00 am from Einstein Bagels, 8300 W. Cheyenne Ave., every week on Wednesday until January 5, 2027 (fetched Oct 19, 2026).",
-  "sources": ["https://www.meetup.com/las-vegas-valley-bicycle-club/events/316796675/"],
+  "sources": [
+   "https://www.meetup.com/las-vegas-valley-bicycle-club/events/316796675/"
+  ],
   "changes": {
    "schedule": "Every Wednesday, 8:00 am from mid-October 2026 (7:00 am through early October), from Einstein Bagels on W. Cheyenne Ave. The Meetup series runs to Jan 5, 2027; the route is posted a couple of days ahead.",
    "time_local": "8:00 am",
@@ -59,7 +67,10 @@
   "checked_on": "2026-10-19",
   "last_seen": "2026-10-19",
   "evidence": "Rapha's booking page for the ride, headed Japan · October 2026, gives Saturday, meet 9:30 am at Rapha Tokyo, 30–40 km at about 25 km/h, back about 12:30 pm, and the clubhouse's event list shows it open to book with 3 spots left (fetched Oct 19, 2026).",
-  "sources": ["https://events.rapha.cc/products/ride-this-city-tokyo", "https://events.rapha.cc/rapha-tokyo"]
+  "sources": [
+   "https://events.rapha.cc/products/ride-this-city-tokyo",
+   "https://events.rapha.cc/rapha-tokyo"
+  ]
  },
  {
   "slug": "abu-dhabi-ae-yas-marina-circuit-trainyas",
@@ -74,7 +85,9 @@
   "changes": {
    "schedule": "Mondays and Wednesdays, 6:00–10:00 pm on the full GP track. The circuit posts each month's sessions, and some weeks move or drop for track events. A women-only session, TrainYAS Ladies, runs on Tuesdays, 6:00–10:00 pm on the North Circuit.",
    "description": "Yas Marina Circuit opens its Formula 1 track to cyclists, runners and walkers two evenings a week. You ride laps at your own pace on closed tarmac, and loan bikes are there if you traveled without one. It is free and open to all ages and levels. There is also TrainAM, a cyclists-only morning session, 6:00–8:00 am on Tuesdays, Thursdays and Fridays.",
-   "links": { "website": "https://www.yasmarinacircuit.com/en/healthandfitness" },
+   "links": {
+    "website": "https://www.yasmarinacircuit.com/en/healthandfitness"
+   },
    "refresh": {
     "method": "calendar-page",
     "watch_url": "https://www.yasmarinacircuit.com/en/healthandfitness",
@@ -88,7 +101,10 @@
   "outcome": "changed",
   "checked_on": "2026-10-01",
   "evidence": "CicLAvia's Heart of LA page says the Sun Oct 11, 2026 event (9am–4pm, the 68th, about 6.5 miles through Downtown, Chinatown, Little Tokyo, the Arts District, Boyle Heights and Echo Park) has passed, and the site's upcoming list shows only Pasadena on Sun Nov 15, 2026 and the Dena Love Ride on Nov 8; no next Heart of LA date is posted (fetched Oct 19, 2026).",
-  "sources": ["https://ciclavia.org/events/", "https://ciclavia.org/events/heart-of-la-2026-10/"],
+  "sources": [
+   "https://ciclavia.org/events/",
+   "https://ciclavia.org/events/heart-of-la-2026-10/"
+  ],
   "changes": {
    "schedule": "A few Sundays a year, 9 am to 4 pm, on car-free streets. Heart of LA ran Sun Oct 11, 2026; the next Heart of LA date isn't posted yet. CicLAvia's next open-streets event is Pasadena, Sun Nov 15, 2026.",
    "description": "CicLAvia closes streets to cars and opens them to bikes and people on foot. Heart of LA, the 68th event on Oct 11, 2026, connected about 6.5 miles of open streets through Downtown, Chinatown, Little Tokyo, the Arts District, Boyle Heights and Echo Park. Free, and you can join anywhere on the route. The next Heart of LA date isn't posted yet; CicLAvia's events page lists what's coming.",
