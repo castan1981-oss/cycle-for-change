@@ -365,7 +365,9 @@
       bullet.className = ""; bullet.textContent = "No forecast hours matched the ride. Check the start date.";
     }
     const w = B.wear(have), wa = B.water(have, total / HOUR);
-    el.wear.innerHTML = w ? `<dl class="bf-kv"><div><dt>Wear</dt><dd>${esc(w.wear)}</dd></div><div><dt>Carry</dt><dd>${w.carry.map(esc).join("<br>")}</dd></div></dl>` : "";
+    // Oct 18, 2026: the one Carry line that never changes links the guide that makes it matter less
+    const carryHtml = w ? w.carry.map((c) => c === "Spare tube, pump, multitool." ? `${esc(c)} <a href="/guides/prevent-bike-flat-tires/">How to need them less.</a>` : esc(c)).join("<br>") : "";
+    el.wear.innerHTML = w ? `<dl class="bf-kv"><div><dt>Wear</dt><dd>${esc(w.wear)}</dd></div><div><dt>Carry</dt><dd>${carryHtml}</dd></div></dl>` : "";
     el.water.innerHTML = wa ? `<p><b>${wa.bottles} ${wa.bottles === 1 ? "bottle" : "bottles"}</b> for the ride: ${perHourWords(wa.per_hour)}.${wa.note ? ` ${esc(wa.note)}` : ""}</p>` : "";
     const issued = data[0].generationtime_ms !== undefined ? new Date() : null;
     ver.textContent = `Forecast from Open-Meteo, read ${issued ? issued.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" }) : "now"}, hourly, ${tz}.`;

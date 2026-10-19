@@ -874,10 +874,26 @@ function liveJson(rides) {
     tags: tagsOf(r), pc: X.paceText(r), lg: X.lengthText(r),   // Pass 22: what the ride is made for, its pace and length
     hl: (r.refresh && r.refresh.watch_url) || (r.links && r.links.website) || (Array.isArray(r.sources) && r.sources[0] && (r.sources[0].url || r.sources[0])) || null }));   // the host's page, for /tonight/'s "Date on the host's calendar"
 }
+// Oct 18, 2026 (growth audit): the ten tire-and-wheel guides had 2–7 inlinks each. A ride page links the ones
+// that answer a question this ride raises — gravel tires, mountain-bike wheels — never a boilerplate list.
+const GUIDES = {
+  pressure: ["/guides/bike-tire-pressure/", "tire pressure"],
+  tread: ["/guides/bike-tire-tread/", "tread"],
+  tubeless: ["/guides/tubeless-bike-tires/", "tubeless"],
+  flats: ["/guides/prevent-bike-flat-tires/", "preventing flats"],
+  width: ["/guides/road-bike-tire-width/", "tire width"],
+  sizes: ["/guides/bike-wheel-sizes/", "wheel sizes"],
+  truing: ["/guides/spoke-tension-wheel-truing/", "truing a wheel"],
+  hubs: ["/guides/bike-hub-maintenance/", "hub service"],
+  aero: ["/guides/are-aero-wheels-worth-it/", "aero wheels"],
+  feel: ["/guides/bike-wheel-stiffness-comfort/", "wheel stiffness and comfort"],
+};
+const guideLinks = (keys) => keys.map((k) => `<a href="${GUIDES[k][0]}">${GUIDES[k][1]}</a>`).join(", ");
 const FAQ = [
   ["What's a no-drop ride?", `The group waits for the slowest rider. If you come off the back on a hill, someone regroups with you. If it's your first group ride, <a href="/rides/no-drop/">start with one of these</a>.`],
   ["Do I need a road bike?", "No. Social rides and slow rolls take whatever bike you have. Road rides are easier on a road bike. Gravel and mountain bike rides need the tires for it. Every ride page says which bike it's for."],
   ["What do I bring?", "A helmet, water, a spare tube or patch kit, lights if it ends after dark, and a card for the coffee stop. Every ride page has a first-time checklist."],
+  ["What should I check on the bike first?", `Tires: the right <a href="${GUIDES.pressure[0]}">pressure</a> for your weight and the road (lower than you think), and no cuts or thorns in the tread — <a href="${GUIDES.flats[0]}">the flats guide</a> has the ten-second check. Brakes grab, wheels spin true, chain has oil. A shop will look it over for the price of a coffee; <a href="/towns/">the town guides</a> list the ones near the start.`],
   ["What if I can't keep up?", `Tell the leader you're new before you roll. Pick a no-drop or <a href="/rides/beginner/">beginner-friendly</a> ride the first time. If a drop ride leaves you, you ride home at your own pace. Nobody minds.`],
 ];
 const lastCheckedOf = (rides) => rides.map((r) => (r._f && r._f.checked_on) || r.verified_on).filter(Boolean).sort().pop() || null;
@@ -2075,10 +2091,20 @@ function firstTimeBlock(r, hostLabel) {
         <div><dt>Bring</dt><dd>${esc(bring.join(", "))}.</dd></div>
         <div><dt>Arrive</dt><dd>Ten or fifteen minutes before ${esc(meet)}. Tell whoever's leading that you're new.</dd></div>
         <div><dt>Pace</dt><dd>${paceLine}${drop ? " " + drop : ""}</dd></div>
-        <div><dt>Check</dt><dd>${hostLabel ? `Look at ${hostLabel} the day of — that's where cancellations, weather calls and start changes get posted.` : "Check the links below the day of for cancellations and weather calls."}</dd></div>
+        <div><dt>Check</dt><dd>${hostLabel ? `Look at ${hostLabel} the day of — that's where cancellations, weather calls and start changes get posted.` : "Check the links below the day of for cancellations and weather calls."}</dd></div>${readRow(r)}
       </dl>
     </details>
     ${firstLink("gr-first-link--ride")}`;
+}
+// the guides that answer this ride's own tire question: gravel → pressure, tread, tubeless; mountain bike → tubeless,
+// flats, wheel sizes; e-bike and road get nothing extra (the first-ride FAQ on /rides/about/ covers the basics)
+function readRow(r) {
+  const d = r.discipline || [];
+  const fastRoad = d.includes("road") && !d.includes("gravel") && !d.includes("mtb") && (X.paceText(r) === "Fast" || r.drop_policy === "drop");
+  const keys = d.includes("gravel") ? ["pressure", "tread", "tubeless"] : d.includes("mtb") ? ["tubeless", "flats", "sizes"] : fastRoad ? ["width", "aero", "feel"] : null;
+  if (!keys) return "";
+  const what = d.includes("gravel") ? "Gravel tires" : d.includes("mtb") ? "Mountain-bike tires and wheels" : "Fast road wheels and tires";
+  return `\n        <div><dt>Read</dt><dd>${what}: ${guideLinks(keys)}.</dd></div>`;
 }
 // ---------- Oct 8, 2026: footage from the ride, and rider reviews ----------
 // data/ride-films.json: { slug: [{ src, poster, width, height, seconds, caption, alt, added }] } — the first one shows.
