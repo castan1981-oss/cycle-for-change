@@ -323,8 +323,11 @@ explained" keeps its name: it's about charity rides in general, not this site.
 - Refresh: `node tools/calendar-from-artifact.js <data.json>` pulls the "2027 Ride Directory"
   artifact's data in (slugs kept by id; dropped events retired with a reason); the twice-monthly
   task runs it, rebuilds, opens a PR — never hand-editing `index.html` or the gone `/pledge/`.
-- `/all/` is the only calendar page with filters (`calendar.js`, filters in the URL); `where.json`
-  sends old `/events/2027/#slug` links to the right month page.
+- `/all/` is the only calendar page with filters (`calendar.js`, filters in the URL's hash —
+  `#type=gravel&far=200`; old `?` links still read); `where.json` sends old `/events/2027/#slug` links to the
+  right month page. Oct 18, 2026: `/all/` rows are **light** (`eventHtml(e, { light: true })`: the summary and
+  the links); the full panel is fetched from the row's month page the first time it opens (`data-src`, one fetch
+  per month). The month pages carry the facts, notes and town strips; `/all/` never duplicates them.
 
 ### Mile-updates email — retired (Oct 9, 2026)
 Robert isn't emailing from the site. The footer signup is gone and `submission-created.js` no longer
@@ -714,4 +717,5 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-18 — `/brief/` reads FIT (off the unit) and TCX, and Garmin Connect's zipped export, through one door (`parseAny`); the start time and speed come off the file.
 - 2026-10-18 — The tire-and-wheel guides get their inlinks (growth audit): a "Read" row on 285 gravel, mountain-bike and fast-road ride pages, "Get the bike ready" on the 12 event pages and 16 town guides, a line on the shop and bring-your-bike pages, a first-ride FAQ entry, two per charity guide, the brief's Carry line — every one of the ten guides now has 22–220 inlinks, each where its question comes up.
 - 2026-10-18 — Homepage numbers and speed (growth audit): the tally baked from `/api/strava` on every deploy (`scripts/tally.js`; the HTML said 3,573 to crawlers while people saw 3,848) and `/home.js` paints the page's own copy, not one of its own; "The ride on Monday, October 12" instead of "Today's ride"; AVIF/WebP for the hero, the reel poster, the `#today` pictures and every registry photo (mobile Lighthouse 72 → 88 locally, LCP 5.0 → 3.9 s, 959 → 596 KiB); the dead grain filter dropped from the hero.
+- 2026-10-18 — `/events/2027/all/` goes light (growth audit): 1.4 MB and 30,000 DOM nodes → 0.77 MB and 12,000; rows carry the summary and links, the full panel arrives from the month page on open; the filters moved from `?query` to `#hash`, so the fifty crawlable copies of the page are gone.
 - 2026-10-18 — The crawl signals (growth audit, apply-now list): `/llms.txt` and `/feed.xml` (`scripts/build-signals.js`, run by the rides build), the AI crawlers named in robots.txt, `/strava-setup` 301, the footer's Journal link to `/journal/`, an Offer on free rides' Event markup, CollectionPage on the hubs, and a crawlable evening-rides block on `/tonight/`; the `.ics` files out of the index (#183).
