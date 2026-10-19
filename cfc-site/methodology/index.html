@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>How rides are checked — Cycle for Change</title>
+  <meta name="description" content="How cycleforchange.org checks every group ride, calendar date, town listing and route: the source, the date, the 90-and-150-day clock, the Monday watcher, what software does and what people do.">
+  <link rel="canonical" href="https://cycleforchange.org/methodology/">
+  <link rel="alternate" type="application/rss+xml" title="Cycle for Change" href="https://cycleforchange.org/feed.xml">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cycle for Change">
+  <meta property="og:url" content="https://cycleforchange.org/methodology/">
+  <meta property="og:title" content="How rides are checked — Cycle for Change">
+  <meta property="og:description" content="How cycleforchange.org checks every group ride, calendar date, town listing and route: the source, the date, the 90-and-150-day clock, the Monday watcher, what software does and what people do.">
+  <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How rides are checked — Cycle for Change">
+  <meta name="twitter:description" content="How cycleforchange.org checks every group ride, calendar date, town listing and route: the source, the date, the 90-and-150-day clock, the Monday watcher, what software does and what people do.">
+  <meta name="twitter:image" content="https://cycleforchange.org/og-cfc.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-180.png">
+  <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/chrome.css">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"How rides are checked","description":"How cycleforchange.org checks every group ride, calendar date, town listing and route: the source, the date, the 90-and-150-day clock, the Monday watcher, what software does and what people do.","url":"https://cycleforchange.org/methodology/","datePublished":"2026-10-19","dateModified":"2026-10-19","publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":{"@type":"ImageObject","url":"https://cycleforchange.org/favicon-512.png"}},"isPartOf":{"@type":"WebSite","name":"Cycle for Change","url":"https://cycleforchange.org/"},"about":{"@type":"Thing","name":"Group ride directory"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav site-head" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="/" aria-label="Cycle for Change home">
+      <svg class="brand-mark" viewBox="0 0 760 150" aria-hidden="true" focusable="false">
+        <defs>
+          <path id="lpC" d="M52 34 V24 Q52 8 36 8 H33 M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 142 H36 Q52 142 52 126 V116"/>
+          <path id="lpY" d="M11 4 L30 68 L49 4 M30 68 V150"/>
+          <path id="lpL" d="M8 0 V150 M22 142 H54"/>
+          <path id="lpE" d="M8 0 V150 M22 8 H54 M22 75 H47 M22 142 H54"/>
+          <path id="lpF" d="M8 0 V150 M22 8 H54 M22 75 H47"/>
+          <path id="lpO" d="M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 8 H36 Q52 8 52 24 V126 Q52 142 36 142 H33"/>
+          <path id="lpR" d="M8 0 V150 M22 8 H36 Q52 8 52 24 V58 Q52 74 36 74 H22 M33 90 L50 150"/>
+          <clipPath id="lpRow"><rect x="-20" y="0" width="900" height="150"/></clipPath>
+        </defs>
+        <g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">
+          <use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/>
+          <use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/>
+        </g>
+        <rect class="lp-bar" x="652" y="114" width="98" height="36" fill="#A84C58"/>
+      </svg>
+      <span class="sr">Cycle for Change</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/find-a-ride/">Find a ride</a>
+      <a href="/events/2027/">2027 calendar</a>
+      <a href="/towns/">Towns</a>
+      <a href="/field-notes/">Field notes</a>
+      <a href="/resources/">Resources</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
+    </div>
+  </div>
+</header>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="menu-top">
+    <span class="eyebrow">Cycle for Change</span>
+    <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
+  </div>
+  <ul class="menu-list">
+    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/find-a-ride/">Find a ride <span>1,423</span></a></li>
+    <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
+    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
+    <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
+  </ul>
+  <div class="menu-foot">
+    <span class="eyebrow">If it&rsquo;s now</span>
+    <span><b>988</b> call or text, any hour</span>
+    <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
+  </div>
+</div>
+<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<main id="main" class="fn-post">
+  <div class="fn-article">
+    <p class="fn-meta"><span>Trust</span><span class="dot">·</span><span>Updated Oct 19, 2026</span></p>
+    <h1>How rides are checked</h1>
+    <p class="fn-lede">A fact on this site is a source plus a date, or it isn’t on the page. Here is what that means for the group-ride list, the 2027 calendar, the town guides, the routes and the ride briefing, who does the checking, and what we don’t do.</p>
+    <div class="fn-body">
+      <h2>The rule</h2>
+      <p>Every ride row says when it was last checked. Every ride page says how: the host’s own page, a calendar feed, a Strava event, a Meetup listing. It quotes what that source showed, and the date. Where a fact can’t be sourced, the field is blank. Blank beats a guess.</p>
+
+      <h2>How a ride gets on the list</h2>
+      <p>A ride is listed from the host’s own page: a club site, a shop calendar, a Strava club event page, Meetup, Ride with GPS, a public calendar feed, a city program. What gets recorded is what that page says, in the host’s words: the day, the start time, the start point, the pace, whether the group waits for the slowest rider, the cost, who the ride is for. The evidence and its date are kept with the record. A ride found on one source only, or with a detail we couldn’t pin down, is marked so the row tells you to confirm with the host first.</p>
+      <p>What doesn’t get listed: a ride with no dated proof it’s still happening; a shop page with no dates, on its own; a ride that lives only on Instagram or Facebook, until a person confirms it with the host. And never an LGBTQ+ ride in a country where a gathering like that is a crime or banned by law, for the riders’ sake.</p>
+      <p>Nobody pays to be listed or to rank. Hosts pay nothing; riders pay nothing; nothing needs an account.</p>
+
+      <h2>The clock</h2>
+      <ul>
+        <li><strong>Checked within 90 days:</strong> listed as fresh.</li>
+        <li><strong>90 to 150 days:</strong> still listed, with “confirm with the host” on the row.</li>
+        <li><strong>Past 150 days:</strong> off every list, the map, the feeds and the calendar files. The page stays up, says why, and asks search engines not to index it.</li>
+      </ul>
+      <p>The checked date moves only when someone confirmed the ride at its source. A ride nobody checked is never stamped as checked: not by software, not by a form, not because it’s probably still on. A rider’s “still on” is kept as a rider’s word; it doesn’t move the date.</p>
+
+      <h2>Every Monday</h2>
+      <p>A watcher reads each ride’s page or feed and compares it with the last reading. A page that vanished, or now says “cancelled” near the ride’s name, raises a red flag: the ride page shows a warning, and if nobody re-checks it within 14 days the ride comes off the lists. A changed schedule paragraph, a start time that went missing or an event date that has passed raises an amber flag: the page says “confirm with the host” until a re-check.</p>
+      <p>Then about 80 rides are re-checked at their source: the ones riders reported first, then the flagged ones, then the oldest checks. Each re-check is written down (what the page showed, the date it was read, the address) and lands as a proposed edit that is read before it goes live. A ride whose host went quiet is marked “couldn’t confirm” and ages off the lists on schedule. Nothing is kept alive by hand.</p>
+      <p>Riders can say a ride is gone, changed or still on with the form on every ride page. A report is a lead, not proof: a “gone” shows a warning while a person checks the source. “I run this ride” with an email jumps the queue, and a person replies to confirm before the listing changes. Ended rides keep their page for a year, marked ended, so an old link still tells the truth. Seasonal breaks say when the ride is back, in the host’s words, and no next date is shown while it’s off.</p>
+
+      <h2>Start points and routes</h2>
+      <p>A pin sits on the start when the host states one, an address or a corner. When all we have is the city, the pin sits on the city centre and the page offers no directions. As of Oct 19, 2026, 940 of the 1,425 listed rides have a start pin; the rest are being worked through, the most-read pages first.</p>
+      <p>Routes come only from the people who run the ride, or from Robert’s own ride file with their OK. Never a route we drew, never one pulled from Strava’s API. A route page says who sent it and the date it was ridden; a ride whose route changes every week says which week’s this is. Pace on a page is the host’s own number when they posted one; a posted average beats a word like “spirited”. What a ride says about e-bikes comes only from the ride’s own text.</p>
+
+      <h2>The 2027 calendar</h2>
+      <p>A date is marked confirmed only when the organizer has published it. Otherwise it says projected and names the year it is projected from. No invented dates, no guessed fees. The deep event pages are written from the organizer’s own page, and say when.</p>
+
+      <h2>Town guides</h2>
+      <p>A shop, café, hotel or restaurant is in a guide because its own page says it’s open, with the hours, address and phone from that page. Unknown stays blank. “Queer-owned” or “bike-friendly” appears only in the business’s own words. A route in a guide has real miles and feet from a public route page. Robert’s home shop is marked as his. Nobody pays to be in a guide.</p>
+
+      <h2>The ride briefing</h2>
+      <p><a href="/brief/">The briefing</a> works on your file, in your browser. Climbs are found by a stated rule (3% over 200 m, 100 ft of gain, Strava’s length-times-grade categories). Times are at one flat speed, slower up and faster down, and the page calls them an estimate. Weather comes from Open-Meteo at the hour you reach each point. Heights come from your file, or from Open-Meteo’s 90 m model when the file has none. Surface, refill points and hazards aren’t in it yet, and the page doesn’t pretend they are.</p>
+
+      <h2>Robert’s own numbers</h2>
+      <p>The mile count is miles since June 1, 2026, from his own Strava, one number, never a percentage of anything. It restarts on January 1, 2027. Every ride write-up on the site is in his own words. No recap is written by software from ride data.</p>
+
+      <h2>Who checks, and what is software</h2>
+      <p>Reading a host’s page and recording what it says, by the rules above, is done by people and by an AI assistant that follows the written rules and records its evidence. The Monday watcher is software. Every change either proposes is a written edit with its evidence and date, read before it goes live. The rules, the watcher, the re-check and the scripts that apply a change are public: <a href="https://github.com/castan1981-oss/cycle-for-change" rel="noopener">github.com/castan1981-oss/cycle-for-change</a>. Robert’s words are only ever his.</p>
+
+      <h2>Tell us when we’re wrong</h2>
+      <p>The form on every ride page, or a DM to <a href="https://www.instagram.com/cycl_eforchange" rel="noopener">@cycl_eforchange</a>. A wrong start time costs someone a Saturday. We’d rather hear it. The rider-facing version of all this, with the questions people ask before a first group ride, is at <a href="/rides/about/">how the list works</a>.</p>
+    </div>
+  </div>
+  <p class="fn-note">Written from the directory’s own rules and tools: the freshness policy, the watcher, the re-check and apply scripts, the calendar and town schemas. Counts are from the data on Oct 19, 2026. <a href="/privacy/">Privacy</a> covers what the site keeps about you.</p>
+  <section class="pledge" aria-labelledby="pledge-h">
+  <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
+  <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+</section>
+  <p class="fn-back"><a href="/rides/">← Find a group ride</a> · <a href="/rides/about/">How the list works</a></p>
+</main>
+<footer class="foot site-foot">
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+    <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
+  </aside>
+  <script src="/ridebar.js?v=38" defer></script>
+  <div class="wrap">
+    <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
+         The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
+    <div class="foot-sign" role="img" aria-label="Cycle for change">
+      <svg class="foot-stencil" viewBox="-10 -10 370 350" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">
+          <use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/>
+          <use href="#lpF" transform="translate(0 180)"/><use href="#lpO" transform="translate(74 180)"/><use href="#lpR" transform="translate(148 180)"/>
+        </g>
+      </svg>
+      <span class="foot-plate">change</span>
+    </div>
+    <div class="foot-grid">
+      <div class="foot-col">
+        <p class="eyebrow">Ride</p>
+        <a href="/rides/">Group rides</a>
+        <a href="/events/">Events</a>
+        <a href="/events/2027/">2027 calendar</a>
+        <a href="/towns/">Towns</a>
+        <a href="/tonight/">Tonight</a>
+        <a href="/events/2027/riding/">My 2027 rides</a>
+        <a href="/#orgs">The orgs I ride for</a>
+      </div>
+      <div class="foot-col">
+        <p class="eyebrow">Read</p>
+        <a href="/field-notes/">Field notes</a>
+        <a href="/guides/">Guides</a>
+        <a href="/journal/">Journal</a>
+        <a href="/resources/">Resources</a>
+      </div>
+      <div class="foot-col">
+        <p class="eyebrow">Follow</p>
+        <a href="https://www.instagram.com/cycl_eforchange" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Strava</a>
+      </div>
+      <div class="foot-col signup" aria-label="Mile updates">
+        <p class="eyebrow">Mile updates</p>
+        <p class="note">The miles, the rides, where I went. They go up on Instagram.</p>
+        <a class="link" href="https://www.instagram.com/cycl_eforchange" target="_blank" rel="noopener noreferrer">@cycl_eforchange</a>
+      </div>
+    </div>
+    <div class="foot-crisis">
+      <span class="eyebrow">If it&rsquo;s now</span>
+      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+    </div>
+    <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
+  </div>
+</footer>
+<script src="/chrome.js" defer></script>
+</body>
+</html>

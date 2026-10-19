@@ -4,7 +4,8 @@
 Run from the repo root:   python3 scripts/apply-chrome.py
 Safe to re-run: it rebuilds each page's <head>, header and footer from the
 current scripts/chrome.js. Pages covered: every .html under cfc-site/guides,
-field-notes, resources, journal, tonight, nov7 and cyclefor (templates included), plus 404.html.
+field-notes, resources, journal, tonight, nov7, cyclefor, privacy, methodology and contact
+(templates included), plus 404.html.
 
 What it does to each page
   - <head>: keeps the page's title, description, canonical, og:type and JSON-LD,
@@ -129,7 +130,7 @@ def resources(s: str) -> str:
 
 def main():
     pages = [SITE / "404.html"]
-    for d in ("guides", "field-notes", "resources", "journal", "tonight", "nov7", "cyclefor"):
+    for d in ("guides", "field-notes", "resources", "journal", "tonight", "nov7", "cyclefor", "privacy", "methodology", "contact"):
         pages += sorted((SITE / d).rglob("*.html"))
     for p in pages:
         s = p.read_text()
