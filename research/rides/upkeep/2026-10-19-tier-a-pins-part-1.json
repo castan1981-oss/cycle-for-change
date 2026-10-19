@@ -1,0 +1,56 @@
+[
+ {
+  "slug": "bowie-md-jafe-cycling-fastchix-thursday-morning-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "Jafe Cycling's Meetup event for Thu Oct 22, 2026 says 7:30 AM to 9:30 AM EDT, every week on Thursday until January 15, 2027, at Jafe Cycling, LLC, 10250 Martin Luther King Jr Hwy, Bowie, MD; the group's feed lists Oct 22, Oct 29, Nov 5 and Nov 12 (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city pin to the shop, using the venue coordinates in the host's own Meetup listing (38.95644, -76.82842).",
+  "sources": [
+   "https://www.meetup.com/jafe-cycling-bike-shop/events/316741049/"
+  ],
+  "changes": {
+   "lat": 38.95644,
+   "lng": -76.82842,
+   "geo_precision": "start",
+   "start_location": {
+    "name": "Jafe Cycling",
+    "address": "10250 Martin Luther King Jr Hwy, Bowie, MD"
+   }
+  }
+ },
+ {
+  "slug": "london-gb-rapha-london-womens-chat-laps",
+  "outcome": "changed",
+  "checked_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "Rapha's event page for the Women's Chat Laps (read via WebFetch Oct 19, 2026) lists the weekly Tuesday ride for October 2026 to January 2027: meet 7:00 am at the Inner Circle (Jubilee Gates), Regent's Park, three laps of the Outer Circle at 22–24 km/h, no-drop, finishing at Rapha London, 85 Brewer Street. Start pin moved Oct 19, 2026 from the city pin to Jubilee Gates on the Inner Circle (OpenStreetMap, 51.52647, -0.15402).",
+  "sources": [
+   "https://events.rapha.cc/products/rapha-x-steezy-ride"
+  ],
+  "changes": {
+   "lat": 51.52647,
+   "lng": -0.15402,
+   "geo_precision": "start"
+  }
+ },
+ {
+  "slug": "austin-tx-atx-bikes-crank-n-drank",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "ATX Bikes' Rides & Events page (footer © 2026) describes Crank 'N Drank as a Tuesday evening tradition with wheels down at 6pm and sends riders to mtbatx.com for route info; MTBATX's recurring rides list says \"Meet behind ATX Bikes\"; neither page shows a ride date (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city pin to the shop, 5701 W Slaughter Ln Ste A110 (OpenStreetMap, 30.20047, -97.87019).",
+  "sources": [
+   "https://www.atxbikes.com/articles/rides-events-pg207.htm",
+   "https://www.mtbatx.com/recurring-weekly-rides"
+  ],
+  "changes": {
+   "lat": 30.20047,
+   "lng": -97.87019,
+   "geo_precision": "start",
+   "start_location": {
+    "name": "ATX Bikes (meet behind the shop)",
+    "address": "5701 W Slaughter Ln Ste A110, Austin, TX 78749"
+   }
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ }
+]

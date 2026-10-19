@@ -5,16 +5,19 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:chicago-il-evolution-cycling-sunday-ride@cycleforchange.org
-DTSTAMP:20261001T000000Z
-DTSTART;TZID=America/Chicago:20261025T080000
-DTEND;TZID=America/Chicago:20261025T100000
-RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270228T235959Z
+DTSTAMP:20261019T000000Z
+DTSTART;TZID=America/Chicago:20261025T090000
+DTEND;TZID=America/Chicago:20261025T110000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270318T235959Z
 SUMMARY:Evolution Cycling Sunday Ride — Chicago\, IL
 LOCATION:Walgreens parking lot\, Andersonville\, 5440 N Clark St\, Chicag
  o\, IL 60640
 DESCRIPTION:Pace: A group 24+ mph (drop)\, B group 17–19 mph.\nSchedule
- : Every Sunday\, 8:00 am.\nConfirm with the host before you go.\nhttps:/
- /cycleforchange.org/rides/chicago-il-evolution-cycling-sunday-ride/
+ : Every Sunday\, 9:00 am from October through the winter (it was 8:00 am
+  in September); the start moves with the season. Weather cancellations g
+ o out on the team's social media and Discord.\nConfirm with the host bef
+ ore you go.\nhttps://cycleforchange.org/rides/chicago-il-evolution-cycli
+ ng-sunday-ride/
 URL:https://cycleforchange.org/rides/chicago-il-evolution-cycling-sunday-
  ride/
 END:VEVENT

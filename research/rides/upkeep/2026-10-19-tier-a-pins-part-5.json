@@ -1,0 +1,37 @@
+[
+ {
+  "slug": "suamico-wi-broken-spoke-monday-night-road-ride",
+  "outcome": "changed",
+  "checked_on": "2026-09-15",
+  "evidence": "Broken Spoke's local rides page lists the Monday Night Road Ride every Monday at 6:00 pm from Broken Spoke Bike Studio Suamico, B group pace 18–20 mph, and the shop's own Suamico store page gives the address as 1580 Lineville Road, Suamico, WI 54313 with its map pin at 44.59206, -88.04500 (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city centre to the shop; Nominatim only matched Lineville Road itself, and its nearest segment sits 350 m from the shop's pin.",
+  "sources": [
+   "https://www.brokenspokebikes.com/events/local-rides-pg206.htm",
+   "https://www.brokenspokebikes.com/about/suamico-pg213.htm"
+  ],
+  "changes": {
+   "lat": 44.59206,
+   "lng": -88.045,
+   "geo_precision": "start",
+   "start_location": {
+    "name": "Broken Spoke Bike Studio, Suamico",
+    "address": "1580 Lineville Road, Suamico, WI 54313"
+   }
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ },
+ {
+  "slug": "nashville-tn-bike-curious-sunday-ride",
+  "outcome": "changed",
+  "checked_on": "2026-09-18",
+  "evidence": "Bike Curious's own About page says the group meets every Sunday below the train trestle on Shelby Park's riverfront greenway (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city centre to that trestle: OpenStreetMap shows one rail bridge over the riverfront greenway at Shelby Park, the CSX line, and the Shelby Bottoms Greenway passes under it at 36.16572, -86.72580.",
+  "sources": [
+   "https://bikecurious.net/about"
+  ],
+  "changes": {
+   "lat": 36.16572,
+   "lng": -86.7258,
+   "geo_precision": "start"
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ }
+]

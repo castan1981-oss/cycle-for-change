@@ -1,0 +1,103 @@
+[
+ {
+  "slug": "philadelphia-pa-vino-velo-saturday-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-02",
+  "evidence": "The Trellis's Philly Bike Events Calendar, showing events from October to December 2026, lists Vino Velo under Saturday as an A and A- ride from Boathouse Row to Ambler; the ride's Strava club and QCW's Area Rides page give the 9:00 and 9:05 am times (all read Oct 2, 2026; the Strava and QCW pages carry no date). Start pin moved Oct 19, 2026 to Lloyd Hall itself: the ride's Strava club page says it leaves \"Lloyd's Hall on Boathouse Row at 9:05 on Saturdays\" and QCW's page says \"from Lloyd Hall\" (both fetched Oct 19, 2026); OpenStreetMap puts the Lloyd Hall Recreation Center at 39.96896, -75.18522.",
+  "sources": [
+   "https://www.strava.com/clubs/1567535",
+   "https://qcwcycling.org/arearides"
+  ],
+  "changes": {
+   "lat": 39.96896,
+   "lng": -75.18522,
+   "geo_precision": "start"
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ },
+ {
+  "slug": "santa-monica-ca-la-grange-amalfi-loops",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "La Grange's Weekly Rides page (edited Jan 30, 2026) lists Amalfi Loops, 26 miles, at 6:30AM from 26th and San Vicente, and its Amalfi page (updated Feb 6, 2026) says Thursday, 6:30AM from the same corner (fetched Oct 1, 2026). Start pin moved Oct 19, 2026 to that corner: the club's rides page still says \"6:30AM @ 26th and San Vicente Blvd. in Santa Monica\" and the Marina page names the Blue Bottle Coffee there (fetched Oct 19, 2026); OpenStreetMap puts the Blue Bottle at 34.04830, -118.49118, 55 m from where 26th Street meets San Vicente.",
+  "sources": [
+   "https://www.lagrange.org/rides",
+   "https://www.lagrange.org/riviera"
+  ],
+  "changes": {
+   "lat": 34.0483,
+   "lng": -118.49118,
+   "geo_precision": "start"
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ },
+ {
+  "slug": "santa-monica-ca-la-grange-marina-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "La Grange's Weekly Rides page (edited Jan 30, 2026) lists the Marina Ride, 26 miles, at 6:30AM from 26th and San Vicente in Santa Monica, and the ride's own page says Tuesday with Junior Varsity and Varsity groups (fetched Oct 1, 2026). Start pin moved Oct 19, 2026 to that corner: the ride's page says \"6:30 AM departs from 26th St. and San Vicente Blvd. in Santa Monica (@ Blue Bottle Coffee)\" (fetched Oct 19, 2026); OpenStreetMap puts the Blue Bottle at 34.04830, -118.49118, 55 m from where 26th Street meets San Vicente.",
+  "sources": [
+   "https://www.lagrange.org/rides",
+   "https://www.lagrange.org/marina-tues"
+  ],
+  "changes": {
+   "lat": 34.0483,
+   "lng": -118.49118,
+   "geo_precision": "start"
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ },
+ {
+  "slug": "chico-ca-saturday-fast-road-ride-october-to-february",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "North Rim Adventure Sports' Chico ride page (undated, fetched Oct 1, 2026) lists a fast Saturday road ride at 9:00 am from the One Mile Recreation Area, running October to February. Start pin moved Oct 19, 2026 to the One-Mile area in Lower Bidwell Park: the page's location column still says \"One Mile Recreation Area\" (fetched Oct 19, 2026); OpenStreetMap puts Sycamore Pool, the One-Mile pool on Peterson Memorial Way, at 39.73538, -121.82999.",
+  "sources": [
+   "https://www.northrimadventure.com/articles/chico-area-rides-and-events-pg37.htm"
+  ],
+  "changes": {
+   "lat": 39.73538,
+   "lng": -121.82999,
+   "geo_precision": "start"
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ },
+ {
+  "slug": "punta-gorda-fl-caloosa-riders-tuesday-gravel-nights",
+  "outcome": "changed",
+  "checked_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "Caloosa Riders' ClubExpress calendar lists Tuesday Gravel Nights for Tue Oct 20 and Oct 27, 2026 at 5:15 PM at Cecil Webb Wildlife Mgt Area, Babcock Webb Wildlife Management Area, Punta Gorda, FL 33982, no drop, 13-16 mph, 21-28 miles; the club's gravel page gives directions to \"Cecil Webb WMA - Tuckers Corner\" and says the $3 permit is paid at the kiosk at the entrance (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 to the WMA entrance at the east end of Tuckers Grade (OpenStreetMap road data, 26.85825, -81.97505).",
+  "sources": [
+   "https://crbc.clubexpress.com/content.aspx?page_id=4091&club_id=787276&item_id=3081667",
+   "https://crbc.clubexpress.com/content.aspx?page_id=22&club_id=787276&module_id=644634"
+  ],
+  "changes": {
+   "lat": 26.85825,
+   "lng": -81.97505,
+   "geo_precision": "start",
+   "start_location": {
+    "name": "Babcock Webb Wildlife Management Area (Cecil Webb WMA), entrance off Tuckers Grade"
+   }
+  }
+ },
+ {
+  "slug": "durango-co-church-of-the-high-pines",
+  "outcome": "changed",
+  "checked_on": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "evidence": "Pedal Durango's events feed lists Church of the High Pines for Sun Oct 25, 2026 at 10:00 am from Bread, 42 County Rd 250, Durango, CO 81301, and from Sun Nov 1 through March at 11 am from the Home Depot south lot, 1301 S Camino Del Rio (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 to Bread's address (OpenStreetMap, 37.29830, -107.84815); the winter lot sits 8 km south.",
+  "sources": [
+   "https://pedaldurango.com/events/list/?ical=1"
+  ],
+  "changes": {
+   "lat": 37.2983,
+   "lng": -107.84815,
+   "geo_precision": "start",
+   "start_location": {
+    "name": "Bread (daylight-saving-time start; Nov 1 to March the start is the Home Depot south lot, 1301 S Camino Del Rio, on the south edge of Durango)",
+    "address": "42 County Rd 250, Durango, CO 81301"
+   }
+  }
+ }
+]

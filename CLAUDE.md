@@ -482,7 +482,12 @@ for the pace. Every ride page now answers that, or says where the answer lives.
 - Pins: 485 of 1,423 rides have only a city-level pin (`geo_precision: "city"`). Route pages use the route's
   first point for directions. Oct 9 fixed the three Gainey Village rides (pin was 0.6 mi south, by Hash Kitchen)
   and Yuma's Foothills ride, through `rides-apply.js` with `checked_on` = their old `verified_on` (a pin fix
-  isn't a re-check). Batch: `research/rides/upkeep/2026-10-09-start-pins.json`.
+  isn't a re-check). Batch: `research/rides/upkeep/2026-10-09-start-pins.json`. Oct 19 (Tier A batch 1, #190):
+  24 more pins, 940 → 964; the part reports list what a person could check by hand. Learned: a `changed` entry flips a
+  `seasonal-break` / `paused` ride back to `active` (rides-apply.js), so a pin on a ride that's off for the season waits
+  for its spring re-check or a pin-only path in the tool; a start that moves every week or month stays at the city pin;
+  Google Calendar embeds need the decoded `c_…@group.calendar.google.com` id for the public .ics (the base64 `src` 404s);
+  parallel verifiers each need their own scratch subfolder.
 
 ### UI rules that still hold
 - **Step down, don't scroll.** Every page asks one question with a few big picks: `/find-a-ride/`
@@ -731,3 +736,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-18 — `/events/2027/all/` goes light (growth audit): 1.4 MB and 30,000 DOM nodes → 0.77 MB and 12,000; rows carry the summary and links, the full panel arrives from the month page on open; the filters moved from `?query` to `#hash`, so the fifty crawlable copies of the page are gone.
 - 2026-10-18 — The crawl signals (growth audit, apply-now list): `/llms.txt` and `/feed.xml` (`scripts/build-signals.js`, run by the rides build), the AI crawlers named in robots.txt, `/strava-setup` 301, the footer's Journal link to `/journal/`, an Offer on free rides' Event markup, CollectionPage on the hubs, and a crawlable evening-rides block on `/tonight/`; the `.ics` files out of the index (#183).
 - 2026-10-19 — Trust pages: `/privacy/`, `/methodology/`, `/contact/` (week 1 of the content plan), linked from every footer and from `/rides/about/`; a Trust section in llms.txt.
+- 2026-10-19 — Rides re-check, Tier A batch 1: the 63 best-earning pages pinned to a city and the 31 amber flags re-checked at their sources; 24 start pins, 5 confirmed, 35 changed, 2 seasonal breaks, 6 unconfirmed; Critical Mass London confirmed and pinned.

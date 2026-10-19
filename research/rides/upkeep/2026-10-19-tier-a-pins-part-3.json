@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "sydney-au-balmain-bike-bus-wednesday",
+    "outcome": "changed",
+    "checked_on": "2026-10-01",
+    "evidence": "The Bike Leichhardt Meetup event for Wed Sept 30, 2026 gives the venue as \"Loyalty Square, Cnr. Darling & Beattie streets, Balmain\" with Meetup's own venue pin at -33.857655, 151.18121, which OpenStreetMap places at 274 Darling Street, Balmain; the pin moved there from the Sydney city pin on Oct 19, 2026 (fetched Oct 19, 2026).",
+    "sources": ["https://www.meetup.com/bike-leichhardt/events/316150340/"],
+    "changes": {
+      "lat": -33.85766,
+      "lng": 151.18121,
+      "geo_precision": "start",
+      "start_location": {
+        "name": "Loyalty Square, outside Woolworths, Balmain",
+        "address": "Cnr Darling and Beattie Streets, Balmain NSW 2041"
+      }
+    },
+    "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+  },
+  {
+    "slug": "midland-tx-trek-wednesday-shop-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-01",
+    "evidence": "PBBA's weekly club rides page says the Wednesday Trek Shop Ride rolls out from Trek Midland at 6:15, and Trek's own store page gives Trek Bicycle Midland's address as 4712 N Midkiff Road, Midland, TX 79705 (both fetched Oct 19, 2026); the pin moved there from the Midland city pin on Oct 19, 2026 (OpenStreetMap, 32.03711, -102.12992).",
+    "sources": ["https://pbbatx.com/weekly-club-rides", "https://www.trekbikes.com/us/en_US/retail/midland/"],
+    "changes": {
+      "lat": 32.03711,
+      "lng": -102.12992,
+      "geo_precision": "start",
+      "start_location": {
+        "name": "Trek Bicycle Midland",
+        "address": "4712 N Midkiff Rd, Midland, TX 79705"
+      }
+    },
+    "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+  },
+  {
+    "slug": "tulsa-ok-tbc-tuesday-thursday-morning-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-19",
+    "last_seen": "2026-10-19",
+    "evidence": "Tulsa Bicycle Club's ClubExpress calendar lists the Tuesday/Thursday Ride from Bentley Park, Bixby (8505 E 148th St S) for Tue Oct 20, Thu Oct 22, Tue Oct 27 and Thu Oct 29, 2026 at 9:00 AM, with September's rides from 17th & Riverside, and the weekly rides page keeps the seasonal start table (Dec–Feb 9:30 am, Mar–May 9:00 am, Jun–Aug 8:00 am, Sep–Nov 9:00 am), so the pin stays at city level because the start moves each month (fetched Oct 19, 2026).",
+    "sources": [
+      "https://tulsabicycleclub.clubexpress.com/content.aspx?page_id=22&club_id=539195&module_id=107729",
+      "https://tulsabicycleclub.clubexpress.com/content.aspx?page_id=4001&club_id=539195",
+      "https://tulsabicycleclub.clubexpress.com/content.aspx?page_id=4091&club_id=539195&item_id=3073273&event_date_id=493837"
+    ],
+    "changes": {
+      "start_times": [
+        { "from": "2026-12-01", "start_hhmm": "09:30" },
+        { "from": "2027-03-01", "start_hhmm": "09:00" },
+        { "from": "2027-06-01", "start_hhmm": "08:00" },
+        { "from": "2027-09-01", "start_hhmm": "09:00" }
+      ],
+      "refresh": {
+        "notes": "The weekly rides page carries the seasonal start table; the club's ClubExpress calendar (content.aspx?page_id=4001&club_id=539195) loads as text and lists each month's start location and the 9:00 AM dates. The start location changes monthly, so the pin stays at city level."
+      }
+    }
+  }
+]

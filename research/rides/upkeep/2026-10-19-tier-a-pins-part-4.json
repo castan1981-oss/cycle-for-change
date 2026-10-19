@@ -1,0 +1,37 @@
+[
+ {
+  "slug": "louisville-ky-outsiders-wednesday-social-ride",
+  "outcome": "changed",
+  "checked_on": "2026-10-01",
+  "evidence": "The Outsiders' rides page logs its 2026 Wednesday rides from March 18 through Sept 2 and says to join every Wednesday; the home page says meet 6:00 pm, roll 6:45 pm from Trellis Brewing, 10-12 mph, no-drop (read Oct 1, 2026; unchanged Oct 19). Start pin moved Oct 19, 2026 from the city-level pin to the brewery, 827 Logan St, the address on the brewery's own site (OpenStreetMap, 38.24074, -85.73875).",
+  "sources": [
+   "https://www.trellisbrewing.com/"
+  ],
+  "changes": {
+   "lat": 38.24074,
+   "lng": -85.73875,
+   "geo_precision": "start",
+   "start_location": {
+    "name": "Trellis Brewing",
+    "address": "827 Logan St, Louisville, KY 40204"
+   }
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ },
+ {
+  "slug": "phoenix-az-city-of-phoenix-silent-sunday-south-mountain",
+  "outcome": "changed",
+  "checked_on": "2026-09-30",
+  "evidence": "The City's South Mountain page describes Silent Sunday: Summit Road closed to cars on Sundays, all day on 4th Sundays and 5 to 10 am on the others, with all vehicles turning into the Activity Complex to park; nothing on the page is dated after April 2026 (fetched Sept 30, 2026; unchanged Oct 19). Start pin moved Oct 19, 2026 from the city-level pin to the park's main entrance on Central Ave, which the City's page lists as 10211 S. Central Ave. (OpenStreetMap, 33.35341, -112.07511).",
+  "changes": {
+   "lat": 33.35341,
+   "lng": -112.07511,
+   "geo_precision": "start",
+   "start_location": {
+    "name": "South Mountain Park/Preserve main entrance on Central Ave; Summit Road closes to cars from here. Drivers park at the Activity Complex.",
+    "address": "10211 S Central Ave, Phoenix, AZ 85042"
+   }
+  },
+  "note": "Pin fix only; the ride itself was not re-checked, so verified_on stays as it was."
+ }
+]
