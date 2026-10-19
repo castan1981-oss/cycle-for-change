@@ -28,8 +28,70 @@
       "https://times-up.org/critical-mass/"
     ],
     "changes": {
+      "confidence": "high",
       "refresh": {
         "notes": "Time's Up! posts each month's ride as a dated calendar entry (times-up.org/calendar/critical-mass-manhattan-N/), often only a week or two ahead; the homepage and /critical-mass/ text is static. The site's ?ical=1 feed is a 2012–13 dump, not a live calendar."
+      }
+    }
+  },
+  {
+    "slug": "nashville-tn-music-city-dope-pedalers-friday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-19",
+    "note": "The group has no page of its own; it posts on Instagram @musiccitydopepedalers (login wall). The Nashville Scene piece (watch page) is dated Oct 9, 2025 and names Frankie Pierce Park; Urbaanite says Friday 6 pm from The Local Distro; WPLN is from 2022; Walk Bike Nashville's groups page is a Cloudflare wall. No dated 2026 signal, and the two readable sources disagree on the start, so no pin."
+  },
+  {
+    "slug": "sioux-falls-sd-fab-saturday-coffee-shop-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-19",
+    "last_seen": "2026-10-17",
+    "evidence": "FAB's own Google Calendar (the one embedded on its events page) lists \"FAB Saturday Coffee Shop Ride\" at 9:00 am on Mar 28, Apr 18, May 30, Jun 20, Jul 18, Aug 22, Sep 19 and Oct 17, 2026, each from a different coffee shop; the Oct 17 entry (Daylily Coffee, ~10 miles, no-drop) says it \"could be our final coffee spin of the year (weather permitting, we might try for November)\" (fetched Oct 19, 2026).",
+    "sources": [
+      "https://calendar.google.com/calendar/htmlembed?src=Y185ZTk3ZTc0MjVmNDkwZWZiMWYwMmY0NjUzOTI1MjcxYmJiMDQ1ODY4ZjkyYWJiNjFlZGNlNmM1ZGFmMjMxMTZhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&ctz=America%2FChicago&mode=AGENDA",
+      "https://calendar.google.com/calendar/ical/c_9e97e7425f490efb1f02f4653925271bbb045868f92abb61edce6c5daf23116a@group.calendar.google.com/public/basic.ics"
+    ],
+    "changes": {
+      "schedule": "One Saturday a month, 9:00 am, March to October (the host may add a November ride if the weather allows); a different coffee shop each month, posted on FAB's calendar",
+      "season": "Mar–Oct",
+      "season_months": {
+        "start": 3,
+        "end": 10
+      },
+      "distance_miles": "~10",
+      "pace": "casual, social; nobody gets left behind",
+      "drop_policy": "no-drop",
+      "description": "A monthly Saturday morning ride put on by Falls Area Bicyclists, the local bike advocacy group. Each month it starts and ends at a different coffee shop in town, about 10 easy miles on low-stress streets. Check the FAB calendar for that month's spot; e-bikes are welcome.",
+      "confidence": "high",
+      "refresh": {
+        "method": "ics",
+        "watch_url": "https://calendar.google.com/calendar/htmlembed?src=Y185ZTk3ZTc0MjVmNDkwZWZiMWYwMmY0NjUzOTI1MjcxYmJiMDQ1ODY4ZjkyYWJiNjFlZGNlNmM1ZGFmMjMxMTZhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&ctz=America%2FChicago&mode=AGENDA",
+        "feed_url": "https://calendar.google.com/calendar/ical/c_9e97e7425f490efb1f02f4653925271bbb045868f92abb61edce6c5daf23116a@group.calendar.google.com/public/basic.ics",
+        "notes": "The ride is on FAB's \"Rides & Events\" Google Calendar, not on the Wild Apricot events list (fallsareabicyclists.org/events shows \"No events available\" and never carried it). The htmlembed agenda shows the current month; add &dates=YYYYMMDD/YYYYMMDD to read another. Each month's entry gives that month's coffee shop."
+      }
+    }
+  },
+  {
+    "slug": "raleigh-nc-crank-arm-wednesday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-19",
+    "last_seen": "2026-10-19",
+    "evidence": "Crank Arm's own Meetup event \"Crank Arm RALEIGH Wednesday Night Ride\" is set for Wed Oct 21, 2026, 6:30 pm to 8:30 pm, every week on Wednesday until Jan 27, 2027, from Crank Arm Brewing Company, 319 W Davie St, a no-drop 10 to 15 mile ride of about an hour, lights required (fetched Oct 19, 2026); Visit Raleigh's listing still says 7 pm.",
+    "sources": [
+      "https://www.meetup.com/crank-arm-cycling-running-yoga/events/316804702/",
+      "https://www.meetup.com/crank-arm-cycling-running-yoga/events/ical/"
+    ],
+    "changes": {
+      "name": "Crank Arm Wednesday Night Ride",
+      "schedule": "Every Wednesday, 6:30 pm (about an hour on the bike; back by 8:30)",
+      "time_local": "6:30 pm",
+      "start_hhmm": "18:30",
+      "duration": "~1 hour",
+      "confidence": "high",
+      "refresh": {
+        "method": "meetup",
+        "watch_url": "https://www.meetup.com/crank-arm-cycling-running-yoga/events/",
+        "feed_url": "https://www.meetup.com/crank-arm-cycling-running-yoga/events/ical/",
+        "notes": "The brewery runs the Meetup group; each week's Raleigh ride is its own event (the Durham location has a separate Wednesday ride in the same feed). Visit Raleigh's listing lags the Meetup time."
       }
     }
   }
