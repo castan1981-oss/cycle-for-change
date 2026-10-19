@@ -310,3 +310,18 @@ main.wrap{padding-top:0}
   .ticker-run{animation:none;padding-left:var(--pad)}
   .flyer{transform:none !important}
 }
+
+/* Oct 18, 2026: the crawlable "Evening rides, by city and day" block (written by tools/build-rides.js) */
+#evenings{margin-top:40px}
+#evenings .fine{margin:6px 0 4px;font-family:var(--body);font-size:.95rem;color:var(--mute)}
+#evenings details.gr-fold{margin:14px 0 0;border:1px solid var(--dust-deep);background:transparent;color:inherit}
+#evenings details.gr-fold>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;font-weight:700;font-size:1.02rem;line-height:1.3;min-height:44px}
+#evenings details.gr-fold>summary .dim{font-weight:400;color:var(--dust);font-size:.9rem}
+#evenings details.gr-fold>summary::-webkit-details-marker{display:none}
+#evenings details.gr-fold>summary::after{content:"+";font-weight:400;font-size:18px;color:var(--dust)}
+#evenings details.gr-fold[open]>summary::after{content:"\2212"}
+#evenings .fold-body{padding:0 16px 16px}
+#evenings .fold-body p{margin:8px 0 0;font-size:.95rem;line-height:1.55;color:var(--bone)}
+#evenings .fold-body p b{color:var(--volt)}
+#evenings .fold-body a{color:inherit;font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+#evenings .fold-body a.link{display:inline-block;margin-top:10px}

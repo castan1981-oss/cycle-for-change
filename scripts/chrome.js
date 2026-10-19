@@ -61,6 +61,7 @@ function head({ title, description, url, ogType = "website", styles = [], ld = [
   <title>${esc(shown)}</title>
   <meta name="description" content="${attr(description)}">
   <link rel="canonical" href="${attr(canonical)}">
+  <link rel="alternate" type="application/rss+xml" title="Cycle for Change" href="${SITE}/feed.xml">
   <meta name="robots" content="${attr(robots)}">
   <meta property="og:type" content="${ogType}">
   <meta property="og:site_name" content="Cycle for Change">
@@ -195,7 +196,7 @@ const FOOTER = `<footer class="foot site-foot">
         <p class="eyebrow">Read</p>
         <a href="/field-notes/">Field notes</a>
         <a href="/guides/">Guides</a>
-        <a href="/journal/the-carrot-cake-theory/">Journal</a>
+        <a href="/journal/">Journal</a>
         <a href="/resources/">Resources</a>
       </div>
       <div class="foot-col">

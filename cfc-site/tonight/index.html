@@ -7,6 +7,7 @@
   <title>Bike rides tonight near you: group rides, next 12 hours</title>
   <meta name="description" content="What's rolling near you tonight. Free group bike rides in the next twelve hours, soonest first, with pace, start spot and a plain go or no-go on the weather.">
   <link rel="canonical" href="https://cycleforchange.org/tonight/">
+  <link rel="alternate" type="application/rss+xml" title="Cycle for Change" href="https://cycleforchange.org/feed.xml">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cycle for Change">
@@ -25,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css">
   <link rel="stylesheet" href="/tonight/tonight.css">
-
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Bike rides tonight near you","url":"https://cycleforchange.org/tonight/","description":"What’s rolling near you in the next twelve hours: free group bike rides, soonest first, with pace, start spot and whether the group waits.","isPartOf":{"@type":"WebSite","name":"Cycle for Change","url":"https://cycleforchange.org/"},"about":{"@type":"Thing","name":"Group bike rides"},"mainEntity":{"@type":"ItemList","name":"Evening group rides, by city and day","url":"https://cycleforchange.org/tonight/#evenings"}}</script>
 </head>
 <body class="theme-dark">
 
@@ -141,6 +142,61 @@
     <div class="lineup" id="lineup"></div>
   </section>
 
+  <!-- evenings:start -->
+  <section id="evenings" aria-labelledby="evenings-head">
+    <div class="sec-row"><h2 class="label" id="evenings-head">Evening rides, by city and day</h2><p class="label dim">83 weekly rides, 5 pm or later</p></div>
+    <p class="fine">The regular rides that roll out at 5 pm or later in six of the busiest cities on the list, each one checked at its source. For what&rsquo;s near you tonight, pick a place above.</p>
+    <details class="gr-fold"><summary>Phoenix, AZ <span class="dim">10 evening rides</span></summary><div class="fold-body">
+        <p><b>Mondays</b> <a href="/rides/peoria-az-monday-night-meander/">Monday Night Meander</a> 7:00 pm, Peoria &middot; <a href="/rides/phoenix-az-downtempo-ride/">Phoenix Downtempo Ride</a> 8:00 pm</p>
+        <p><b>Tuesdays</b> <a href="/rides/chandler-az-global-bikes-wheel-suckers-taco-tuesday/">Taco Tuesday Ride (Wheel Suckers)</a> 6:30 pm, Chandler &middot; <a href="/rides/phoenix-az-taco-tuesday-south-mountain/">Taco Tuesday Ride at South Mountain</a> 6:30 pm &middot; <a href="/rides/fountain-hills-az-mcdowell-mountain-cycles-tuesday-night-mtb/">MMC Tuesday Night Ride</a> 7:00 pm, Fountain Hills &middot; <a href="/rides/scottsdale-az-phoenix-hiking-biking-group-tuesday-night-ride/">Tuesday Night Bike Ride from R.T. O'Sullivan's</a> 7:15 pm, Scottsdale</p>
+        <p><b>Wednesdays</b> <a href="/rides/phoenix-az-global-bikes-ahwatukee-wednesday-ride/">Ahwatukee Climbing Circuit Ride</a> 6:30 pm &middot; <a href="/rides/phoenix-az-valley-epic-rides-night-rider-trail-100/">Night Rider Series @ Trail 100</a> 6:30 pm</p>
+        <p><b>Thursdays</b> <a href="/rides/peoria-az-west-valley-casual-true-beginner-ride/">True Beginner Ride</a> 6:30 pm, Peoria &middot; <a href="/rides/peoria-az-west-valley-casual-thursday-any-bike-ride/">Whatever You Feel Like Ride</a> 7:00 pm, Peoria</p>
+        <p><a class="link" href="/rides/az/phoenix/">Every ride in Phoenix</a></p>
+      </div></details>
+    <details class="gr-fold"><summary>Long Beach, CA <span class="dim">14 evening rides</span></summary><div class="fold-body">
+        <p><b>Mondays</b> <a href="/rides/pasadena-ca-foo-chow-ride/">FOO CHOW Ride</a> 6:30 pm, Pasadena &middot; <a href="/rides/long-beach-ca-two-wheels-one-love-monday-ride/">Two Wheels One Love (Monday Ride)</a> 6:45 pm &middot; <a href="/rides/long-beach-ca-big-orange-hughes-park-crit-practice-monday/">Hughes Park Beginner Crit Practice (Monday)</a> 7:00 pm</p>
+        <p><b>Tuesdays</b> <a href="/rides/los-angeles-ca-major-taylor-tuesday-ride/">Major Taylor (Westchester Parkway laps)</a> 6:00 pm, Los Angeles &middot; <a href="/rides/torrance-ca-telo-tuesday-crit/">Telo (Tuesday practice crit)</a> 6:00 pm, Torrance &middot; <a href="/rides/long-beach-ca-lb-cannonball-run-taco-tuesday/">LB Cannonball Run (Taco Tuesday)</a> 7:00 pm</p>
+        <p><b>Wednesdays</b> <a href="/rides/costa-mesa-ca-the-unlikely-cyclist-wednesday-womens-ride/">The Unlikely Cyclist Wednesday Women's Group Ride</a> 5:30 pm, Costa Mesa &middot; <a href="/rides/costa-mesa-ca-lillordag-wednesday-night-ride/">Lillördag Wednesday Night Ride</a> 6:30 pm, Costa Mesa &middot; <a href="/rides/long-beach-ca-long-beach-bicycling-meetup/">Long Beach Bicycling Meetup Wednesday Ride</a> 7:00 pm &middot; <a href="/rides/long-beach-ca-northside-long-beach-ride-club/">Northside Long Beach Ride Club (Wednesday Ride)</a> 7:00 pm &middot; <a href="/rides/long-beach-ca-vfixii-wednesday-night-ride/">VFIXII Wednesday Night Ride</a> 8:00 pm</p>
+        <p><b>Thursdays</b> <a href="/rides/cerritos-ca-long-beach-riding-club-thursday-squad-ride/">Thursday Squad Ride (Long Beach Riding Club)</a> 5:45 pm, Cerritos</p>
+        <p><b>Fridays</b> <a href="/rides/los-angeles-ca-the-peoples-ride-last-friday/">The People's Ride (LA)</a> 6:30 pm, Los Angeles &middot; <a href="/rides/los-angeles-ca-los-angeles-critical-mass/">Los Angeles Critical Mass</a> 7:29 pm, Los Angeles</p>
+        <p><a class="link" href="/rides/ca/long-beach/">Every ride in Long Beach</a></p>
+      </div></details>
+    <details class="gr-fold"><summary>Chicago, IL <span class="dim">14 evening rides</span></summary><div class="fold-body">
+        <p><b>Mondays</b> <a href="/rides/oak-park-il-oak-park-cycle-club-monday-social-ride/">Oak Park Cycle Club Monday Social Ride</a> 5:00 pm, Oak Park</p>
+        <p><b>Tuesdays</b> <a href="/rides/chicago-il-turin-tubular-tuesday-trot/">Turin Tubular Tuesday Trot</a> 5:30 pm &middot; <a href="/rides/evanston-il-evanston-rides-adult-social-ride/">Evanston Rides! Adult Social Ride</a> 5:30 pm, Evanston &middot; <a href="/rides/tinley-park-il-mtc3-big-ring/">Major Taylor Cycling Club Chicago Big Ring</a> 5:30 pm, Tinley Park</p>
+        <p><b>Wednesdays</b> <a href="/rides/morton-grove-il-lets-ride-wednesday-night-ride/">Let's Ride! Wednesday Night Ride</a> 5:00 pm, Morton Grove &middot; <a href="/rides/wheaton-il-spokes-bikes-wednesday-road-ride/">Spokes Wednesday Road Ride</a> 5:00 pm, Wheaton &middot; <a href="/rides/chicago-il-half-acre-wednesday-night-for-mortals/">Half Acre Cycling Wednesday Night for Mortals</a> 6:00 pm</p>
+        <p><b>Thursdays</b> <a href="/rides/chicago-il-bff-bikes-thursday-wtf-social-ride/">BFF Bikes Thursday WTF Social Ride</a> 6:30 pm &middot; <a href="/rides/chicago-il-streets-calling-bike-club-night-ride/">Streets Calling Bike Club Night Ride</a> 8:00 pm</p>
+        <p><b>Fridays</b> <a href="/rides/brookfield-il-cycle-brookfield-first-friday-slow-roll/">Cycle Brookfield First Friday Slow Roll</a> 6:00 pm, Brookfield &middot; <a href="/rides/chicago-il-chicago-critical-mass/">Chicago Critical Mass</a> 6:00 pm &middot; <a href="/rides/riverside-il-ride-riverside-slow-roll/">Ride Riverside Slow Roll</a> 6:00 pm, Riverside &middot; <a href="/rides/arlington-heights-il-bike-the-heights-slow-roll/">Bike the Heights! Slow Roll</a> 6:15 pm, Arlington Heights &middot; <a href="/rides/chicago-il-southside-critical-mass/">Southside Critical Mass</a> 6:15 pm</p>
+        <p><a class="link" href="/rides/il/chicago/">Every ride in Chicago</a></p>
+      </div></details>
+    <details class="gr-fold"><summary>Plano, TX <span class="dim">24 evening rides</span></summary><div class="fold-body">
+        <p><b>Mondays</b> <a href="/rides/denton-tx-monday-community-ride/">Monday Community Ride</a> 6:00 pm, Denton &middot; <a href="/rides/dallas-tx-monday-moss-mtb-ride/">Monday Moss</a> 6:30 pm, Dallas &middot; <a href="/rides/dallas-tx-shifty-freewheelers-monday-night-ride/">Shifty Freewheelers Monday Night Ride</a> 7:00 pm, Dallas</p>
+        <p><b>Tuesdays</b> <a href="/rides/plano-tx-pba-tuesday-night-ladies-ride/">PBA Tuesday Night Ladies Ride</a> 6:00 pm &middot; <a href="/rides/dallas-tx-dallas-pedals-and-pints-tuesday-back-to-basics/">Tuesday Back to Basics (Dallas Pedals &amp; Pints)</a> 6:30 pm, Dallas &middot; <a href="/rides/dallas-tx-trek-park-cities-tuesday-lake-laps/">Tuesday Lake Laps (Trek Dallas Park Cities)</a> 6:30 pm, Dallas &middot; <a href="/rides/roanoke-tx-velo-cafe-tuesday-night-knob-hills/">Velo Cafe Tuesday Night Group Ride (Knob Hills)</a> 6:30 pm, Roanoke &middot; <a href="/rides/allen-tx-dctr-taco-tuesday-social-ride/">Taco Tuesday Social Ride (Allen)</a> 6:45 pm, Allen &middot; <a href="/rides/denton-tx-denton-women-cyclists-tuesday-ride/">Denton Women Cyclists Tuesday Social Ride</a> 7:00 pm, Denton &middot; <a href="/rides/dallas-tx-taco-tuesday-with-salty-cats/">Taco Tuesday with Salty Cats</a> 8:00 pm, Dallas &middot; <a href="/rides/dallas-tx-tits-tuesday-time-in-the-saddle/">TITS Tuesday (Time in the Saddle)</a> 8:00 pm, Dallas</p>
+        <p><b>Wednesdays</b> <a href="/rides/dallas-tx-the-meteor-womens-ride/">The Meteor Women's Ride</a> 6:00 pm, Dallas &middot; <a href="/rides/flower-mound-tx-dorba-wednesday-night-trail-party-northshore/">Wednesday Night Trail Party (Northshore)</a> 6:30 pm, Flower Mound &middot; <a href="/rides/frisco-tx-dorba-wednesday-group-ride-frisco-nw-community-park/">Wednesday Group Ride (Frisco NW Community Park)</a> 7:00 pm, Frisco &middot; <a href="/rides/dallas-tx-bike-mart-wrl-wednesday-spin-ride/">WRL Wednesday Spin Ride</a> 7:30 pm, Dallas</p>
+        <p><b>Thursdays</b> <a href="/rides/flower-mound-tx-dirt-disciples-thursday-northshore/">Dirt Disciples Thursday Ride (Northshore)</a> 6:00 pm, Flower Mound &middot; <a href="/rides/mesquite-tx-gdb-mesquite-casual/">GDB Mesquite Casual</a> 6:00 pm, Mesquite &middot; <a href="/rides/dallas-tx-gdb-downtown-gelato-ride/">GDB Downtown Gelato Ride</a> 6:30 pm, Dallas &middot; <a href="/rides/dallas-tx-dorba-thursday-group-ride-oak-cliff-nature-preserve/">Thursday Group Ride (Oak Cliff Nature Preserve)</a> 6:30 pm, Dallas &middot; <a href="/rides/dallas-tx-trek-park-cities-thursday-lake-laps/">Thursday Lake Laps (Trek Dallas Park Cities)</a> 6:30 pm, Dallas &middot; <a href="/rides/dallas-tx-femme-pedale-womens-ride/">Femme Pedale Women's Ride</a> 7:00 pm, Dallas &middot; <a href="/rides/denton-tx-east-side-social-ride/">East Side Social Ride</a> 7:30 pm, Denton</p>
+        <p><b>Fridays</b> <a href="/rides/dallas-tx-dallas-critical-mass/">Dallas Critical Mass</a> 8:00 pm, Dallas &middot; <a href="/rides/dallas-tx-hangover-riders-first-friday-ride/">First Friday Ride</a> 8:00 pm, Dallas</p>
+        <p><a class="link" href="/rides/tx/plano/">Every ride in Plano</a></p>
+      </div></details>
+    <details class="gr-fold"><summary>New York, NY <span class="dim">9 evening rides</span></summary><div class="fold-body">
+        <p><b>Mondays</b> <a href="/rides/white-plains-ny-wcc-usi-monday-night-ride/">WCC USI Monday Night Ride</a> 6:00 pm, White Plains &middot; <a href="/rides/brooklyn-ny-nightcap-monday-ride/">NightCAP Ride (Cyclists Against Patriarchy)</a> 6:45 pm, Brooklyn</p>
+        <p><b>Tuesdays</b> <a href="/rides/new-york-ny-achilles-citi-bike-adaptive-cycling-central-park/">Achilles + Citi Bike Adaptive Cycling (Central Park)</a> 5:00 pm &middot; <a href="/rides/brooklyn-ny-queer-joyride-tuesday/">Queer Joyride</a> 7:12 pm, Brooklyn</p>
+        <p><b>Wednesdays</b> <a href="/rides/brooklyn-ny-east-brooklyn-bike-club-wednesday-ride/">East Brooklyn Bike Club Wednesday Ride</a> 5:00 pm, Brooklyn &middot; <a href="/rides/brooklyn-ny-non-binary-bike-club-wednesday/">Non Binary Bike Club Wednesday Ride</a> 7:00 pm, Brooklyn</p>
+        <p><b>Thursdays</b> <a href="/rides/new-york-ny-thursday-night-social-bikeride/">Thursday Night Social Bikeride</a> 7:00 pm</p>
+        <p><b>Fridays</b> <a href="/rides/new-york-ny-critical-mass-last-friday/">NYC Critical Mass</a> 7:00 pm</p>
+        <p><b>Saturdays</b> <a href="/rides/new-york-ny-achilles-citi-bike-adaptive-cycling-central-park/">Achilles + Citi Bike Adaptive Cycling (Central Park)</a> 5:00 pm &middot; <a href="/rides/brooklyn-ny-times-up-prospect-park-moon-and-magic-hour-ride/">Prospect Park Moon &amp; Magic Hour Ride</a> 7:15 pm, Brooklyn</p>
+        <p><a class="link" href="/rides/ny/new-york/">Every ride in New York</a></p>
+      </div></details>
+    <details class="gr-fold"><summary>Atlanta, GA <span class="dim">12 evening rides</span></summary><div class="fold-body">
+        <p><b>Mondays</b> <a href="/rides/brookhaven-ga-brookhaven-bike-alliance-monday-ride/">Brookhaven Bike Alliance Monday Ride</a> 6:00 pm, Brookhaven &middot; <a href="/rides/atlanta-ga-bonafide-motivation-monday/">Motivation Monday (Bonafide CC)</a> 6:15 pm</p>
+        <p><b>Tuesdays</b> <a href="/rides/conyers-ga-ctown-bikes-tuesday-shop-ride/">Tuesday Shop Ride</a> 6:00 pm, Conyers &middot; <a href="/rides/east-point-ga-macc-tuesday-tap-out/">Tuesday Tap-Out</a> 6:30 pm, East Point</p>
+        <p><b>Wednesdays</b> <a href="/rides/roswell-ga-bike-roswell-wednesday-evening-ride/">Bike Roswell! Wednesday Evening Ride</a> 6:30 pm, Roswell &middot; <a href="/rides/atlanta-ga-midweek-roll/">Midweek Roll</a> 7:30 pm</p>
+        <p><b>Thursdays</b> <a href="/rides/avondale-estates-ga-pizza-ride/">Pizza Ride</a> 6:00 pm, Avondale Estates &middot; <a href="/rides/hiram-ga-cycology-thursday-night-group-ride/">Thursday Night Group Ride</a> 6:00 pm, Hiram &middot; <a href="/rides/milton-ga-whitetail-bicycles-thursday-gravel/">Thursday Gravel Shop Ride</a> 6:00 pm, Milton &middot; <a href="/rides/east-point-ga-macc-thursday-tango/">Thursday Tango</a> 6:30 pm, East Point</p>
+        <p><b>Fridays</b> <a href="/rides/roswell-ga-rambo-free-flite-big-creek-group-ride/">Free-Flite Group Ride at Big Creek</a> 6:00 pm, Roswell &middot; <a href="/rides/atlanta-ga-critical-mass-atlanta/">Critical Mass Atlanta</a> 6:30 pm</p>
+        <p><a class="link" href="/rides/ga/atlanta/">Every ride in Atlanta</a></p>
+      </div></details>
+  </section>
+  <!-- evenings:end -->
+
   <figure class="ph ph--l ph--wide"><img src="/img/ph/flagstaff-dusk.jpg" alt="Sunset over a mountain meadow outside Flagstaff, one pine standing in the grass." width="1600" height="1200" loading="lazy" decoding="async" style="object-position:50% 55%"><figcaption>Flagstaff, AZ · Jul 2026</figcaption></figure>
   <section class="addride">
     <p class="addride-big">Know a ride that isn&rsquo;t on the wall?</p>
@@ -181,7 +237,7 @@
         <p class="eyebrow">Read</p>
         <a href="/field-notes/">Field notes</a>
         <a href="/guides/">Guides</a>
-        <a href="/journal/the-carrot-cake-theory/">Journal</a>
+        <a href="/journal/">Journal</a>
         <a href="/resources/">Resources</a>
       </div>
       <div class="foot-col">

@@ -61,6 +61,15 @@ const NOW = argOf("--today") ? new Date(`${TODAY}T12:00:00Z`) : new Date();
 const WORLD_RADIUS_KM = 40;  // a world city hub covers rides within this radius
 const WORLD_HUB_MIN = 2;     // rides needed before a world city gets its own hub
 const OG_IMAGE = `${SITE}/og-cfc.png`;
+// Oct 18, 2026 (growth audit): a free ride's Event carries an Offer at 0 so the rich result can say "Free".
+// Only when the host's own cost line starts with "free"; the currency follows the ride's country.
+const CURRENCY = { US: "USD", CA: "CAD", GB: "GBP", AU: "AUD", NZ: "NZD", MX: "MXN", JP: "JPY", SG: "SGD", AE: "AED", IE: "EUR", DE: "EUR", ES: "EUR", FR: "EUR", IT: "EUR", NL: "EUR", PT: "EUR", BE: "EUR", AT: "EUR", FI: "EUR" };
+function offersLd(r, url) {
+  if (!/^free/i.test(r.cost || "")) return {};
+  const cur = CURRENCY[r.country];
+  if (!cur) return {};
+  return { offers: { "@type": "Offer", price: 0, priceCurrency: cur, availability: "https://schema.org/InStock", url } };
+}
 const METRO_RADIUS = 25;   // miles — a city hub covers rides within this radius
 const METRO_MIN = 3;       // rides needed before a city gets its own hub
 const HUB_GAP = 15;        // miles — two hubs can't sit closer than this (Miami + Fort Lauderdale both survive; suburbs don't)
@@ -2565,7 +2574,7 @@ function ridePage(r, all, hubFor, hubs) {
       startDate: d.allDay ? d.ymd : isoWithOffset(d.at, r.tz),
       ...(!d.allDay && r.duration_min ? { endDate: isoWithOffset(new Date(d.at.getTime() + r.duration_min * 60000), r.tz) } : {}),
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode", eventStatus: "https://schema.org/EventScheduled",
-      ...(/^free/i.test(r.cost || "") ? { isAccessibleForFree: true } : /\$\s?\d|membership|fee\b(?! stated)/i.test(r.cost || "") ? { isAccessibleForFree: false } : {}), location: placeLd,
+      ...(/^free/i.test(r.cost || "") ? { isAccessibleForFree: true } : /\$\s?\d|membership|fee\b(?! stated)/i.test(r.cost || "") ? { isAccessibleForFree: false } : {}), ...offersLd(r, url), location: placeLd,
       ...(r.host ? { organizer: { "@type": "Organization", name: r.host.name, ...(L.website || L.instagram || L.facebook ? { url: L.website || L.instagram || L.facebook } : {}) } } : {}),
       sameAs: [L.website, L.instagram, L.facebook, L.strava, L.meetup].filter(Boolean),
     });
@@ -2576,7 +2585,7 @@ function ridePage(r, all, hubFor, hubs) {
       startDate: isoWithOffset(next, r.tz),
       ...(r.duration_min ? { endDate: isoWithOffset(new Date(next.getTime() + r.duration_min * 60000), r.tz) } : {}),
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode", eventStatus: "https://schema.org/EventScheduled",
-      ...(/^free/i.test(r.cost || "") ? { isAccessibleForFree: true } : /\$\s?\d|membership|fee\b(?! stated)/i.test(r.cost || "") ? { isAccessibleForFree: false } : {}), image: OG_IMAGE,
+      ...(/^free/i.test(r.cost || "") ? { isAccessibleForFree: true } : /\$\s?\d|membership|fee\b(?! stated)/i.test(r.cost || "") ? { isAccessibleForFree: false } : {}), ...offersLd(r, url), image: OG_IMAGE,
       location: { "@type": "Place", name: (start && start.name) || placeText(r),
         address: { "@type": "PostalAddress", ...(start && start.address ? { streetAddress: start.address } : {}), addressLocality: r.city, ...(r.state || r.region ? { addressRegion: r.state || r.region } : {}), addressCountry: r.country },
         geo: { "@type": "GeoCoordinates", latitude: r.lat, longitude: r.lng } },
@@ -2857,6 +2866,48 @@ function hubRedirects(builtPaths) {
 }
 
 // ---------- main ----------
+/* Oct 18, 2026 (growth audit): /tonight/ is a browser tool (your location stays in the browser), so a crawler
+   saw 99 words. This gives the page a crawlable, useful block without pretending to know where the reader is:
+   the weekly rides that roll out at 5 pm or later in the six biggest US cities on the list, by day — written
+   between the markers in cfc-site/tonight/index.html on every build, so it follows the data. */
+const TONIGHT_PAGE = path.join(ROOT, "cfc-site", "tonight", "index.html");
+function eveningsBlock(rides, hubs) {
+  // the same six as the directory's front door: home base, then the biggest hub in each other state
+  const home = hubs.find((h) => h.state === "AZ" && h.city === "Phoenix");
+  const seenSt = new Set(home ? [home.state] : []);
+  const big = [...(home ? [home] : []), ...hubs.filter((h) => h !== home).sort((a, b) => b.rides.length - a.rides.length || a.city.localeCompare(b.city)).filter((h) => !seenSt.has(h.state) && seenSt.add(h.state))].slice(0, 6);
+  const isEvening = (r) => r.start_hhmm && r.start_hhmm >= "17:00" && r.start_hhmm <= "22:00" && r.days && r.days.length && !onBreak(r) && r._f.listed;
+  const sections = [];
+  let total = 0;
+  for (const h of big) {
+    const list = h.rides.filter(isEvening);
+    if (!list.length) continue;
+    total += list.length;
+    const byDay = DAY_ORDER.map((d) => ({ d, rides: list.filter((r) => r.days.includes(d)).sort((a, b) => a.start_hhmm.localeCompare(b.start_hhmm)) })).filter((x) => x.rides.length);
+    const lines = byDay.map(({ d, rides: rs }) => `<p><b>${DAY_LONG[d]}s</b> ${rs.map((r) => `<a href="/rides/${r.slug}/">${esc(r.name)}</a> ${esc(fmtTime(r.start_hhmm))}${r.city && r.city !== h.city ? `, ${esc(r.city)}` : ""}`).join(" &middot; ")}</p>`);
+    sections.push(`<details class="gr-fold"><summary>${esc(h.city)}${h.state ? `, ${esc(h.state)}` : ""} <span class="dim">${list.length} evening ride${list.length === 1 ? "" : "s"}</span></summary><div class="fold-body">
+        ${lines.join("\n        ")}
+        <p><a class="link" href="${h.path}">Every ride in ${esc(h.city)}</a></p>
+      </div></details>`);
+  }
+  if (!sections.length) return "";
+  return `<section id="evenings" aria-labelledby="evenings-head">
+    <div class="sec-row"><h2 class="label" id="evenings-head">Evening rides, by city and day</h2><p class="label dim">${total} weekly rides, 5 pm or later</p></div>
+    <p class="fine">The regular rides that roll out at 5 pm or later in six of the busiest cities on the list, each one checked at its source. For what&rsquo;s near you tonight, pick a place above.</p>
+    ${sections.join("\n    ")}
+  </section>`;
+}
+function writeEvenings(rides, hubs) {
+  if (!fs.existsSync(TONIGHT_PAGE)) return false;
+  const html = fs.readFileSync(TONIGHT_PAGE, "utf8");
+  const m = html.match(/([ \t]*)<!-- evenings:start -->[\s\S]*?<!-- evenings:end -->/);
+  if (!m) return false;
+  const block = eveningsBlock(rides, hubs);
+  const next = html.replace(m[0], `${m[1]}<!-- evenings:start -->\n${m[1]}${block}\n${m[1]}<!-- evenings:end -->`);
+  if (next !== html) fs.writeFileSync(TONIGHT_PAGE, next);
+  return true;
+}
+
 function main() {
   const all = load();
   const health = loadHealth();
@@ -2930,6 +2981,7 @@ function main() {
     ...hubs.map((h) => ({ key: `${h.state.toLowerCase()}-${h.slug}`, city: h.city, state: h.state, country: "US", lat: +h.lat.toFixed(4), lng: +h.lng.toFixed(4), rides: h.rides.length, url: h.path, guide: guideOf(h) })),
     ...world.hubs.map((h) => ({ key: h.key, city: h.city, state: null, country: h.country, lat: +h.lat.toFixed(4), lng: +h.lng.toFixed(4), rides: h.rides.length, url: h.path, guide: null })),
   ]));
+  if (OUT === ASSETS) writeEvenings(rides, hubs);   // Oct 18, 2026: the crawlable block on /tonight/
   ROUTES = RT.load(ROOT, new Set(pages.map((x) => x.slug)));
   let nIcs = 0, nEvent = 0, nBreak = 0;
   for (const r of pages) {
@@ -2952,5 +3004,7 @@ function main() {
   console.log(`list pages: ${marks.canonical} point their canonical at an identical page, ${marks.noindex} thin ones (≤2 rides) are noindex; ${marks.outOfSitemap.size} left out of the sitemap`);
   console.log(`hub history: ${redirects.known} list paths ever built${redirects.added ? ` (${redirects.added} new)` : ""}; ${redirects.vanished} gone → ${redirects.rules} redirects in ${path.relative(ROOT, REDIRECTS_FILE)}${redirects.skipped ? ` (${redirects.skipped} left to netlify.toml)` : ""}`);
   console.log("city hubs: " + [...hubs.map((h) => `${h.city} ${h.state} (${h.rides.length})`), ...world.hubs.map((h) => `${h.city} ${h.country} (${h.rides.length})`)].join(", "));
+  // Oct 18, 2026: llms.txt and feed.xml last, so their counts and dates follow this build (scripts/build-signals.js).
+  if (OUT === ASSETS) require(path.join(ROOT, "scripts", "build-signals.js")).run();
 }
 main();
