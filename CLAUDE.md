@@ -329,6 +329,17 @@ explained" keeps its name: it's about charity rides in general, not this site.
   the links); the full panel is fetched from the row's month page the first time it opens (`data-src`, one fetch
   per month). The month pages carry the facts, notes and town strips; `/all/` never duplicates them.
 
+### Trust pages (`/privacy/`, `/methodology/`, `/contact/`, Oct 19, 2026)
+Hand pages on apply-chrome.py's list, written from the site's own code and rules, never from memory:
+`/privacy/` (GA4 via Netlify, the five Netlify forms and where each entry goes — the review queue is the
+public issue list, emails/files/photos never leave Netlify — browser storage, "near me", the outside
+services a page talks to, the 7-day take-back), `/methodology/` (the source-plus-date rule, the 90/150
+clock, the Monday watcher and re-check, pins and routes, the calendar's confirmed/projected rule, what is
+software and what is a person), `/contact/` (Instagram DM; no email — the domain has no MX). The footer's
+bottom line links all three (`.foot-trust` in chrome.js). When a form, a pull script, an analytics event
+or a policy changes, change the page the same day and bump its "Updated" date. `/about/` waits for
+Robert's words (the guides' Person bylines point there once it exists).
+
 ### Mile-updates email — retired (Oct 9, 2026)
 Robert isn't emailing from the site. The footer signup is gone and `submission-created.js` no longer
 sends a welcome. `email/mile-updates.html` stays as a template only. Old `waitlist` submissions are
@@ -719,3 +730,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-18 — Homepage numbers and speed (growth audit): the tally baked from `/api/strava` on every deploy (`scripts/tally.js`; the HTML said 3,573 to crawlers while people saw 3,848) and `/home.js` paints the page's own copy, not one of its own; "The ride on Monday, October 12" instead of "Today's ride"; AVIF/WebP for the hero, the reel poster, the `#today` pictures and every registry photo (mobile Lighthouse 72 → 88 locally, LCP 5.0 → 3.9 s, 959 → 596 KiB); the dead grain filter dropped from the hero.
 - 2026-10-18 — `/events/2027/all/` goes light (growth audit): 1.4 MB and 30,000 DOM nodes → 0.77 MB and 12,000; rows carry the summary and links, the full panel arrives from the month page on open; the filters moved from `?query` to `#hash`, so the fifty crawlable copies of the page are gone.
 - 2026-10-18 — The crawl signals (growth audit, apply-now list): `/llms.txt` and `/feed.xml` (`scripts/build-signals.js`, run by the rides build), the AI crawlers named in robots.txt, `/strava-setup` 301, the footer's Journal link to `/journal/`, an Offer on free rides' Event markup, CollectionPage on the hubs, and a crawlable evening-rides block on `/tonight/`; the `.ics` files out of the index (#183).
+- 2026-10-19 — Trust pages: `/privacy/`, `/methodology/`, `/contact/` (week 1 of the content plan), linked from every footer and from `/rides/about/`; a Trust section in llms.txt.
