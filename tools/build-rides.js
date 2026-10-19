@@ -2594,11 +2594,14 @@ function ridePage(r, all, hubFor, hubs) {
     thumbnailUrl: `${SITE}${film.poster}`, contentUrl: `${SITE}${film.src}`, uploadDate: film.added || r.verified_on, ...(film.seconds ? { duration: `PT${Math.round(film.seconds)}S` } : {}) });
   const jsonld = { "@context": "https://schema.org", "@graph": graph };
 
+  // Oct 18, 2026 (Phase 2): Google crawled ~335 ride.ics files and listed them as "crawled, not indexed" — a third of
+  // the site's crawl budget on calendar files. The button keeps rel="nofollow" and netlify.toml serves the files with
+  // X-Robots-Tag: noindex. The ICS link is `download`, a file for a calendar app, not a page.
   const calBtns = next && rule ? `
-        ${rideBtn({ href: `/rides/${r.slug}/ride.ics`, text: "Add to calendar", markId: "date", ghost: true, attrs: ` download="${attr(r.slug)}.ics"` })}
+        ${rideBtn({ href: `/rides/${r.slug}/ride.ics`, text: "Add to calendar", markId: "date", ghost: true, attrs: ` download="${attr(r.slug)}.ics" rel="nofollow"` })}
         <a class="gr-minor" href="${attr(gcalUrl(r, next, rule))}" rel="noopener">Google Calendar</a>`
     : dated.length ? `
-        ${rideBtn({ href: `/rides/${r.slug}/ride.ics`, text: dated.length > 1 ? `Add the ${dated.length} dates to calendar` : "Add to calendar", markId: "date", ghost: true, attrs: ` download="${attr(r.slug)}.ics"` })}` : "";
+        ${rideBtn({ href: `/rides/${r.slug}/ride.ics`, text: dated.length > 1 ? `Add the ${dated.length} dates to calendar` : "Add to calendar", markId: "date", ghost: true, attrs: ` download="${attr(r.slug)}.ics" rel="nofollow"` })}` : "";
   // Pass 16: where it is — the state (or country), this ride's dot, the city's ring, the rest of the area light
   const hubR = hubFor[r.slug];
   const locator = mapFigure(shapeOf(isUS(r) ? r.state : null, isUS(r) ? null : r.country), {

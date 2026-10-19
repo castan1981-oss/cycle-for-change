@@ -49,6 +49,14 @@
     # Oct 18, 2026: the originals (33 MB) are the source for tools/grade.py, not something to index or link.
     X-Robots-Tag = "noindex, nofollow"
 
+# Oct 18, 2026 (Phase 2): the per-ride calendar files. Search Console listed ~335 of them as "crawled, not indexed";
+# they are files for a calendar app, not pages. Keep them out of the index and the crawl budget.
+[[headers]]
+  for = "/rides/*/ride.ics"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Content-Type = "text/calendar; charset=utf-8"
+
 # Oct 18, 2026: the data file behind the directory. Nothing on the site reads it over HTTP (/tonight/ and
 # /ride/ read live.json, hubs read index.json); it carries host contact details. Not for search engines.
 [[headers]]
