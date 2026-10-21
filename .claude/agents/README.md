@@ -107,6 +107,30 @@ notes with sources. `brand-ambassador` reads the copy; `consent-legal` reads the
 and publishes or sends it back with the one field that failed. Ride logs and org pages: Robert
 reads them on his phone first. Briefings and directory pages: the Editor's pass is enough.
 
+## The design studio (Oct 21, 2026)
+
+Robert: the site needs "usability and an image that is visually easy to navigate and enjoyable to
+look at … modern and high fashion in the sense that it looks polished." The studio polishes
+**inside** the frozen Lane Paint identity (CLAUDE.md §3) — no new colors, fonts or marks. The bar,
+the eleven moves, the ten-line score and the core tasks: `research/design/STUDIO.md`.
+`/design site | <page> | check <page>` runs it (`.claude/commands/design.md`). Every pass files its
+notes in `research/design/<date>-<pass>/`.
+
+| agent | owns | writes |
+|---|---|---|
+| `art-director` | the bar, the ranked pass brief, who builds what, the sign-off; never adds a color, font, mark or copy | `brief.md` |
+| `ux-architect` | way-finding: header and menu, breadcrumbs, section order, the one primary action, how pages end, the core tasks tap by tap | `ux.md`, nav/IA changes in `scripts/chrome.js` and the builders |
+| `type-layout` | the Overpass scale, measure, rhythm, the spacing scale, the grid, desktop composition | `type-layout.md`, the shared CSS |
+| `design-system` | one button, card, row, tile, chip, fold, field, table, figure; every state; tokens | `system.md`, the shared CSS |
+| `photo-editor` | which picture where, crops per width, clean edges, scale and order, weight, the photo rules | `photo.md`, `scripts/photos.js`, crops, `<picture>` markup |
+| `motion-interaction` | one timing scale and easing, states in motion, folds and menu, film controls, reduced motion | `motion.md`, the shared CSS/JS |
+| `usability-lab` | the core tasks as Playwright tests at 390 and 1440: taps, scroll, first screen, targets; before and after | `lab-before.md`, `lab-after.md` |
+| `design-critic` | fresh eyes: the ten-line score from screenshots alone, the five cheapest things, three that work; never sees the brief | `critic-before.md`, `critic-after.md` |
+
+The gates stay where they are: `brand-ambassador` (pass/block), `access-speed` (the floor),
+`graphics-maps` (anything drawn). A pass ships when the critic's total rises, no line drops, no
+task gets slower, and both gates pass — as one PR Robert checks on his phone before it merges.
+
 ## The rest
 
 | agent | job |

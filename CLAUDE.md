@@ -168,6 +168,17 @@ never words in copy or briefs.
 `--creosote-ink`). Tap targets 44px. Visible focus. Labels on every field. A still, not a film, on
 phones. Respect reduced motion. 988 + Trevor wherever mental health comes up.
 
+### The design studio (Oct 21, 2026)
+Robert: "usability and an image that is visually easy to navigate and enjoyable to look at …
+modern and high fashion in the sense that it looks polished." Eight agents polish the site **inside**
+this frozen identity: `art-director`, `ux-architect`, `type-layout`, `design-system`,
+`photo-editor`, `motion-interaction`, `usability-lab`, `design-critic` (roster in
+`.claude/agents/README.md`). The bar — the eleven moves, the ten-line score, the six core tasks —
+is `research/design/STUDIO.md`. `/design site | <page> | check <page>` runs a pass; notes go in
+`research/design/<date>-<pass>/`. A pass ships only when the critic's cold score rises with no line
+dropping, no core task gets slower, and `brand-ambassador` + `access-speed` pass — as one PR Robert
+checks on his phone before it merges.
+
 ### The homepage on a phone (Pass 37, Oct 6, 2026)
 Someone Robert trusts found the phone homepage "overwhelming and hard to figure out what it was all about"
 (desktop "much better"). The rules that came out of it, all under 760px (tablets and desktop unchanged):
