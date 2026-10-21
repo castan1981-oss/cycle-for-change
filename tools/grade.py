@@ -1,6 +1,12 @@
-"""The house photo grade (Pass 6, Sept 29 2026): high-key. Lifted blacks, half a stop over,
-warm, and a light bone-forward duotone (22%) so phone photos read as one campaign.
-The desert at 10 a.m., not 8 p.m. Originals live in cfc-site/photos/; the site loads cfc-site/img/.
+"""Robert's photos, from the originals in cfc-site/photos/ to what the site loads in cfc-site/img/.
+
+Studio pass 1 (Oct 21, 2026): the registry photos (img/ph/) are served CLEAN, not graded: a plain Lanczos
+resize, a light unsharp (0.6 px, 35%), JPG q76, with an AVIF (q52) and a WebP (q78) beside each, the same
+name. Robert chose the hero "clear, crisp, ungraded" on Oct 5; the Pass 6 high-key grade below (lifted
+blacks, half a stop over, a 22% bone duotone) washed the inner-page photos and pulled skin toward bone.
+To bring the grade back, set CLEAN = False (one setting) and regrade with --all --only <keys>.
+Crops are plain crops of his own file, never extended: `box` (source pixels, after any check for cars and
+faces) or `crop` + `focus`. Every changed picture gets a new file number (-2, -3 …): phones cache hard.
 
   python3 tools/grade.py --all                       # regrade the manifest below (photos/ -> img/)
   python3 tools/grade.py --all --only phx-canal,stanley-dock   # just these outputs
@@ -24,7 +30,15 @@ def _long(k):   # Pass 25: portraits run at most ~460px wide on desktop, so 1440
         return 1440 if h > w else 1600
     except OSError:
         return 1600
+def _long_of(src, box=None):   # the long side for a clean copy: 1440 for a portrait, 1600 for a landscape
+    try:
+        w, h = (box[2] - box[0], box[3] - box[1]) if box else Image.open(os.path.join(ROOT, src)).size
+        return 1440 if h > w else 1600
+    except OSError:
+        return 1600
 PASS25_LOOK = {'': {}, 'sun': dict(stop=0.3, lift=0.11), 'dusk': dict(strength=0.10, stop=0.15, lift=0.06, warm=0.04)}
+CLEAN = True    # studio pass 1: serve the registry photos ungraded (see the note at the top)
+V = 2           # the registry's file number: img/ph/<key>-2.jpg. Bump it when every registry photo changes again.
 MANIFEST = [
     # Pass 11 (Sept 30): crew-2x.jpg is crew.jpg super-resolved 2x (EDSR, after a light denoise) so the
     # hero is crisp at 2x screens; a gentler stop so the sunset holds. Re-run tools/sr.py if crew.jpg changes.
@@ -57,7 +71,40 @@ MANIFEST = [
     ('pv-cloud-road', ''), ('canal-sunrise', 'sun'), ('pv-shadow', ''), ('hills-road', ''),
     ('pv-dusk', 'sun'), ('camelback-sunrise', 'sun'), ('south-mountain', ''), ('phx-skyline', ''),
     ('flagstaff-dusk', 'dusk'), ('empty-road', ''), ('sawtooth-calm', ''),
-]]
+]] + [
+    # —— Studio pass 1 (Oct 21, 2026): clean registry copies, numbered, and the art-directed crops ——
+    # Each box was looked at 1:1 for cars and faces (research/design/2026-10-21-studio-1/, B's reply):
+    #   empty-road     stops at x 1380: two white shapes on the far right horizon (buildings or a trailer) stay out.
+    #   pv-cloud-road  starts at x 560: an SUV parked in the brush on the left, and a pale shape beside it, are out.
+    #   south-mountain-view  the view only, above the valley highway (a white shape on it) and left of the rider.
+    #   love-wall      the left of the Oct 12 LOVE-wall photo: his bike, no car.
+    #   Held, not regraded or placed: pv-camelback-road (a pale shape behind the wall left of the gate may be a parked
+    #   car); south-mountain whole (a rider's face, front on, and a white shape on the valley highway).
+    (f'img/ph/{k}-{V}.jpg', f'{src}', dict(max=_long_of(src, box), box=box, clean=True, q=76)) for k, src, box in [
+        (k, f'photos/{k}.jpg', None) for k in [
+            'phx-canal', 'sedona-road', 'boise-river-path', 'sawtooth-lake', 'seattle-path',
+            'gravel-pines', 'gravel-road', 'robert-camelback', 'encinitas-beach', 'stanley-dock', 'hood-from-air',
+            'pv-morning-road', 'sawtooth-road', 'robert-peace', 'robert-desert', 'robert-boise', 'bike-wall',
+            'robert-selfie-camelback', 'pv-sunrise-bars', 'riders-camelback', 'pv-golden-climb', 'canal-sunrise',
+            'pv-shadow', 'hills-road', 'pv-dusk', 'camelback-sunrise', 'phx-skyline',
+            'flagstaff-dusk', 'sawtooth-calm', 'haus-road']
+    ] + [
+        ('empty-road', 'photos/empty-road.jpg', (220, 300, 1380, 1847)),              # 3:4, as the registry's portraits
+        ('pv-cloud-road', 'photos/pv-cloud-road.jpg', (560, 480, 1800, 2133)),        # 3:4
+        ('south-mountain-view', 'photos/south-mountain.jpg', (0, 20, 880, 1120)),     # 4:5, left of x 1000 (the rider), above y 1140 (the highway)
+        ('love-wall', 'img/today/oct12-love-1.jpg', (0, 0, 719, 899)),                # 4:5
+    ]
+] + [
+    # bands: a 2:1 for desktop (-w) and a 4:3 for phones (-b), used when the figure is a wide band (.ph--wide)
+    (f'img/ph/{k}-{kind}-{V}.jpg', f'photos/{src}.jpg', dict(max=mx, box=box, clean=True, q=76)) for k, src, kind, box, mx in [
+        ('riders-camelback', 'riders-camelback', 'w', (0, 630, 1800, 1530), 1800),
+        ('riders-camelback', 'riders-camelback', 'b', (0, 420, 1800, 1770), 1600),
+        ('empty-road', 'empty-road', 'w', (0, 830, 1380, 1520), 1380),
+        ('empty-road', 'empty-road', 'b', (0, 700, 1380, 1735), 1380),
+        ('sawtooth-calm', 'sawtooth-calm', 'w', (0, 240, 2400, 1440), 2400),          # the 2400 original, crisp at 2x
+        ('phx-skyline', 'phx-skyline', 'w', (0, 120, 2400, 1320), 2400),
+    ]
+]
 
 def srgb_to_lin(x): return np.where(x <= 0.04045, x / 12.92, ((x + 0.055) / 1.055) ** 2.4)
 def lin_to_srgb(x): return np.where(x <= 0.0031308, x * 12.92, 1.055 * np.power(np.clip(x, 0, 1), 1 / 2.4) - 0.055)
@@ -87,8 +134,14 @@ def crop_to(im, ratio, focus=(0.5, 0.5)):
         nw = int(H * target); x0 = int((W - nw) * focus[0]); return im.crop((x0, 0, x0 + nw, H))
     nh = int(W / target); y0 = int((H - nh) * focus[1]); return im.crop((0, y0, W, y0 + nh))
 
-def process(src, dst, strength=0.22, lift=0.13, stop=0.5, warm=0.06, sat=1.08, max=0, up=False, crop=None, focus=(0.5, 0.5), q=82):
+def clean_look(im):
+    """No grade: the photo as he took it, with a light unsharp after the resize (0.6 px, 35%)."""
+    from PIL import ImageFilter
+    return im.convert('RGB').filter(ImageFilter.UnsharpMask(radius=0.6, percent=35, threshold=2))
+
+def process(src, dst, strength=0.22, lift=0.13, stop=0.5, warm=0.06, sat=1.08, max=0, up=False, crop=None, focus=(0.5, 0.5), q=82, box=None, clean=False):
     im = Image.open(src)
+    if box: im = im.crop(box)
     if crop: im = crop_to(im, crop, focus)
     if max:
         if up and im.width < max and im.height < max:
@@ -96,13 +149,15 @@ def process(src, dst, strength=0.22, lift=0.13, stop=0.5, warm=0.06, sat=1.08, m
             im = im.resize((round(im.width * f), round(im.height * f)), Image.LANCZOS)
         else:
             im.thumbnail((max, max), Image.LANCZOS)
-    g = grade(im, strength, lift, stop, warm, sat)
+    g = clean_look(im) if (clean and CLEAN) else grade(im, strength, lift, stop, warm, sat)
     if os.path.dirname(dst): os.makedirs(os.path.dirname(dst), exist_ok=True)
     g.save(dst, quality=q, optimize=True, progressive=True)
     # Oct 18, 2026: an AVIF beside every graded JPG (about 45% of the bytes at the same look, quality 52);
     # scripts/photos.js serves it first when it exists, the JPG stays the fallback.
+    # Studio pass 1: a WebP (q78) too, for the browsers between.
     if dst.lower().endswith('.jpg'):
         g.save(dst[:-4] + '.avif', 'AVIF', quality=52, speed=4)
+        if clean: g.save(dst[:-4] + '.webp', 'WEBP', quality=78, method=6)
     print(f'{os.path.relpath(dst, ROOT)}  {g.size[0]}x{g.size[1]}  {os.path.getsize(dst) // 1024} KB')
 
 if __name__ == '__main__':
