@@ -54,7 +54,7 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 - Netlify build command: `npm install && node tools/build-rides.js`. If the rides build fails, the
   deploy fails and the previous deploy stays live.
 - Functions in `netlify/functions/`: `strava` (behind `/api/strava`, the tally), `strava-webhook`,
-  `strava-connect`, `strava-week`, `mileage`, `instagram`, `submission-created`. The retired
+  `strava-connect`, `strava-week`, `mileage`, `instagram`, `submission-created`, `deploy-succeeded` (IndexNow, §7). The retired
   `votes` / `pledges` functions and the `/api/votes` redirect are being removed — don't call them,
   don't revive them, and never renew a Netlify token for them.
 
@@ -537,6 +537,12 @@ for the pace. Every ride page now answers that, or says where the answer lives.
   hubs (`/towns/`, `/field-notes/`, `/tonight/`) carry CollectionPage / WebPage markup. `/tonight/` gets a crawlable
   "Evening rides, by city and day" block (the directory's six cities, rides from 5 pm) written by build-rides.js between
   the `evenings` markers in `cfc-site/tonight/index.html`.
+- **IndexNow** (Oct 21, 2026): after every production deploy, `netlify/functions/deploy-succeeded.js` reads the live
+  sitemaps and sends Bing (and the other IndexNow engines) the URLs whose lastmod is in the last two days, plus `/`,
+  `/rides/`, `/events/2027/` and `/tonight/`. Bing feeds ChatGPT search and Copilot. The key is public by design:
+  `cfc-site/02fdf11f9a0f2fd20baefc2d59a0addc.txt` — never delete or rename it. Rules in `netlify/functions/lib/indexnow.js`;
+  by hand: `NODE_USE_ENV_PROXY=1 node tools/indexnow.js --dry-run` (or `--all`, `--since <date>`). Only our own sitemap
+  URLs are ever sent. Google doesn't read IndexNow; it reads the sitemaps. Tests: `tools/test/indexnow.test.js`.
 - **Search Lab** (`seo/README.md`, `seo/crawl.mjs`, `seo/keywords.json`): every PR that changes
   public pages gets one line in its description —
   `Search Lab: <what should move> · <which measure> · read <date>` (2 weeks out for indexing, 4
@@ -737,3 +743,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-18 — The crawl signals (growth audit, apply-now list): `/llms.txt` and `/feed.xml` (`scripts/build-signals.js`, run by the rides build), the AI crawlers named in robots.txt, `/strava-setup` 301, the footer's Journal link to `/journal/`, an Offer on free rides' Event markup, CollectionPage on the hubs, and a crawlable evening-rides block on `/tonight/`; the `.ics` files out of the index (#183).
 - 2026-10-19 — Trust pages: `/privacy/`, `/methodology/`, `/contact/` (week 1 of the content plan), linked from every footer and from `/rides/about/`; a Trust section in llms.txt.
 - 2026-10-19 — Rides re-check, Tier A batch 1: the 63 best-earning pages pinned to a city and the 31 amber flags re-checked at their sources; 24 start pins, 5 confirmed, 35 changed, 2 seasonal breaks, 6 unconfirmed; Critical Mass London confirmed and pinned.
+- 2026-10-21 — IndexNow (the 500K plan, AI-search desk): every production deploy tells Bing which pages changed (`deploy-succeeded`), the key file at the root, `tools/indexnow.js` for a full send.
