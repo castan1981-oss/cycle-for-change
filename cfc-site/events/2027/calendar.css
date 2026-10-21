@@ -3,8 +3,8 @@
    Loaded after /events/events.css, which owns the tokens, the chrome, .eyebrow,
    .lede, .btn, .crumbs, .facts, .pledge and .site-foot. This file only adds the
    calendar's own pieces: the filter controls, the month strip, and the event rows.
-   Creosote appears on FOR, on confirmed dates (✓) and on rides Robert is doing.
-   Nothing else on the page is green. Hairlines are dust. */
+   @layer section (studio pass 1). Rose ink marks confirmed dates (✓) and Robert's own rides; nothing else
+   on the page is rose. The one door, pick, link, field and fold come from /chrome.css. */
 
 .calendar .eyebrow b{color:var(--creosote-ink);font-weight:700}
 .key-conf::before,.key-proj::before{font-family:var(--mono);font-weight:700;margin-right:2px}
@@ -17,7 +17,6 @@
 .search{display:flex;flex-direction:column;gap:6px;padding:18px 0 16px;max-width:560px}
 .search label{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
 .search input{width:100%;margin:0;background:transparent;border:0;border-bottom:1px solid var(--asphalt);border-radius:0;padding:0 0 7px;font-family:var(--body);font-size:18px;line-height:1.3;color:var(--asphalt);appearance:none}
-.search input:focus{outline:0;border-bottom-width:2px;padding-bottom:6px}
 .search input::placeholder{color:var(--mute)}
 
 .months{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));border-top:1px solid var(--dust);border-bottom:1px solid var(--dust)}
@@ -34,7 +33,6 @@
 .tag .c{color:var(--mute);margin-left:5px}
 .tag[aria-pressed="true"]{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
 .tag[aria-pressed="true"] .c{color:var(--dust)}
-.tag.you[aria-pressed="true"]{background:var(--creosote-ink);border-color:var(--creosote-ink)}
 .more-f{margin-top:12px;border-top:1px solid var(--dust)}
 .more-f summary{cursor:pointer;list-style:none;padding:12px 0;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;display:flex;align-items:center;gap:10px}
 .more-f summary::-webkit-details-marker{display:none}
@@ -67,7 +65,7 @@
 .nm .meta{display:block;margin:3px 0 0;font-size:.9rem;color:var(--mute);line-height:1.4}
 .nm .meta b{font-weight:500;color:var(--asphalt)}
 .acts{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute);border-bottom:1px solid transparent;padding-bottom:2px}
-.ev>summary:hover .acts{color:var(--asphalt);border-bottom-color:var(--asphalt)}
+@media (hover:hover){.ev>summary:hover .acts{color:var(--asphalt);border-bottom-color:var(--asphalt)}}
 .ev[open]>summary .acts{color:var(--asphalt);border-bottom-color:var(--asphalt)}
 .ev[open]>summary .acts::after{content:" ×"}
 
@@ -114,7 +112,7 @@
 .deep-note{margin:0 0 10px;font-size:.95rem;color:var(--mute)}
 .deep-links{display:flex;flex-wrap:wrap;gap:6px;margin:0}
 .deep-links a{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;text-decoration:none;border:1px solid var(--dust);padding:8px 11px}
-.deep-links a:hover{border-color:var(--asphalt)}
+@media (hover:hover){.deep-links a:hover{border-color:var(--asphalt)}}
 
 /* —— Pass 9 (Sept 30, 2026): the calendar gets its graphics. —— */
 /* the month strip is a bar chart: each bar is the month's share of the busiest month */
@@ -167,9 +165,9 @@
 .mo-tile .mo-bar{display:block;height:6px;margin:0 -12px;background:var(--asphalt);transform-origin:left;transform:scaleX(var(--h));opacity:.85}
 .mo-tile[aria-disabled="true"]{background:transparent;border-style:dashed;color:var(--dust-deep)}
 @media (hover:hover){a.mo-tile:hover{border-color:var(--asphalt);background:var(--bone)}}
-a.mo-tile:focus-visible,a.cal-door:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px}
+a.mo-tile:focus-visible,a.cal-door:focus-visible{outline-offset:2px}
 .cal-tba{margin:10px 0 0;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
-.cal-tba a{color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px}
+.cal-tba a{color:var(--asphalt)}
 
 /* the types: a door each, the mark, the name, the count */
 .cal-doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
@@ -193,8 +191,7 @@ a.mo-tile:focus-visible,a.cal-door:focus-visible{outline:2px solid var(--asphalt
 .mo-nav{display:flex;justify-content:space-between;gap:12px;margin:18px 0 0;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
 .mo-nav a{color:var(--asphalt);text-decoration:none;padding:10px 0;border-bottom:1px solid var(--asphalt)}
 .cal-back{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;margin:28px 0 0;padding-top:14px;border-top:1px solid var(--dust);font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
-.cal-back a{color:var(--asphalt);text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px}
-@media (prefers-reduced-motion:reduce){.mo-tile,.cal-door{transition:none}}
+.cal-back a{color:var(--asphalt)}
 .ev{scroll-margin-top:84px}
 
 /* —— Pass 22 (Oct 2, 2026): ten riders tested the calendar ——
@@ -211,7 +208,7 @@ a.mo-tile:focus-visible,a.cal-door:focus-visible{outline:2px solid var(--asphalt
 .cal-pick b{font-family:var(--mono);font-weight:400;font-size:12px;color:var(--creosote-ink);font-variant-numeric:tabular-nums}
 .cal-picks>.cal-pick:nth-of-type(2n){background:var(--bone-2)}
 @media (hover:hover){.cal-pick:hover{border-color:var(--asphalt);background:var(--bone)}}
-.cal-pick:focus-visible,.cal-narrow a:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px}
+.cal-pick:focus-visible,.cal-narrow a:focus-visible{outline-offset:2px}
 /* many small picks (the regions on /races/): a chip row, not tiles */
 .cal-picks--chips{display:flex;flex-wrap:wrap;gap:6px}
 .cal-picks--chips .cal-picks-h{flex-basis:100%}
@@ -233,5 +230,40 @@ a.mo-tile:focus-visible,a.cal-door:focus-visible{outline:2px solid var(--asphalt
 .det--light{padding:2px 0 14px}
 .det--light .det-links{margin:0}
 .det-more{margin-left:4px}
+
+/* ————————————————————————————————————————————————————————————————————————
+   Studio pass 1 (Oct 21, 2026), the last thing in this sheet's layer: type-layout's block (sizes, the
+   12-column grid) without the fold label (the system's), then B's request R5. ————————————————————————— */
+.cal-q,.mo-n{font-size:var(--fs-label);font-weight:700}
+.cal-door-n,.d .dm,.nm .you-tag,.cal-tba,.tile-p--deep .b,.frow .lab,.cal-picks-h,.month-h .n,.mo .n,.mo .c,.det .note b,.det .src,.empty,.retired>summary span,.bar .picked{font-size:var(--fs-label)}
+.cal-key{font-size:var(--fs-small)}
+.month-h .n,.cal-pick b{font-variant-numeric:lining-nums tabular-nums}
+.cal-door-name,.cal-pick{text-wrap:balance}
+.det .note,.method,.retired li{max-width:var(--measure)}
+@media (min-width:1024px){
+  main.wrap>article.calendar{max-width:none}
+  .calendar:is(.cal-home,.cal-short){display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
+  /* the calendar home: When? on 1–6 beside Or pick what kind on 7–12; months 4×3 */
+  .calendar.cal-home>*{grid-column:1 / -1}
+  .calendar.cal-home>.cal-step[aria-labelledby="when-h"]{grid-column:1 / span 6}
+  .calendar.cal-home>.cal-step[aria-labelledby="what-h"]{grid-column:7 / -1}
+  .calendar.cal-home .mo-tiles{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .calendar.cal-home>.dir-report{grid-column:1 / span 8}
+  /* a short page: rows on 1–8; the riding list's portrait sticky in 9–12 */
+  .calendar.cal-short>*{grid-column:1 / span 8}
+  .calendar.cal-short>#results{grid-column:1 / -1}
+  .calendar.cal-short:has(>.ph)>#results{grid-column:1 / span 8}
+  .calendar.cal-short>.ph{grid-column:9 / -1;grid-row:2 / span 8;width:auto;max-width:none;margin:0;position:sticky;top:calc(var(--nav-h) + var(--s3))}
+  /* a row with the page's width: name | where and what | details */
+  .calendar:not(.cal-home):not(:has(>.ph)) .ev>summary{grid-template-columns:22px 56px minmax(0,5fr) minmax(0,7fr) auto}
+  .calendar:not(.cal-home):not(:has(>.ph)) .ev .nm{display:contents}
+  .calendar:not(.cal-home):not(:has(>.ph)) .ev .nm>*{padding-top:4px;margin:0}
+}
+
+/* R5 — Robert's riding list (/events/2027/riding/): the opened row leads with its links. The links row sits at
+   the top of the panel, its buttons on the panel's left edge, then a hairline and air before the facts. */
+.ev.you .det>.det-links:first-child{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s1) var(--s3);margin:0 0 var(--s3);padding:var(--s1) 0 var(--s3);border-bottom:1px solid var(--line)}
+.ev.you .det>.det-links:first-child .src{flex-basis:100%;margin:0}
+.ev.you .det>.det-links:first-child+.facts{margin-top:0}
 
 }

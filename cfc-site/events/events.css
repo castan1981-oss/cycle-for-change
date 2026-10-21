@@ -1,8 +1,7 @@
 @layer section{
-/* Cycle for Change — events directory (/events/, /towns/), also loaded by
-   /rides/ and /events/2027/. Tokens, base type, header, buttons and footer come
-   from /chrome.css (loaded first); this file only adds what the directory pages
-   need. Creosote once per screen as the accent, dust hairlines. */
+/* Cycle for Change — events directory (/events/, /towns/), also loaded by /rides/ and /events/2027/.
+   @layer section (studio pass 1). Tokens, base type, header, the one button, link, pick, field, door, fold
+   and fact grid, and the footer come from /chrome.css; this file only adds what the directory pages need. */
 
 /* —— type spacing on directory pages —— */
 h1{margin:0 0 .3em}
@@ -86,12 +85,9 @@ article{max-width:820px}
 /* —— resource cards on town page —— */
 .res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:22px 0 10px}
 .res-card{display:grid;gap:4px;padding:18px;border:1px solid var(--asphalt);background:var(--bone-2);text-decoration:none}
-.res-card:hover{background:var(--asphalt);color:var(--bone)}
 .res-k{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--creosote)}
-.res-card:hover .res-k{color:var(--dust)}
 .res-card b{font-family:var(--display);font-size:1.15rem;line-height:1.1}
 .res-card span:last-child{font-size:.9rem;color:var(--mute)}
-.res-card:hover span:last-child{color:var(--dust)}
 
 /* —— lists —— */
 .cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
@@ -166,7 +162,7 @@ article{max-width:820px}
 .dir-tile--sm .n{font-size:1.5rem}
 .dir-tile--sm .t{font-size:.95rem;font-weight:600}
 .dir-tile--sm .s{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--creosote)}
-@media (hover:hover){.dir-tile:hover{background:var(--bone-2)}.dir-tile:hover .t{text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px}}
+@media (hover:hover){.dir-tile:hover{background:var(--bone-2)}.dir-tile:hover .t{text-decoration:underline;text-decoration-color:currentColor;text-underline-offset:3px}}
 .dir-all{margin-top:10px}
 .dir-all>summary,.dir-faq summary,.dir-report--compact>summary{cursor:pointer;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;padding:10px 0;list-style:none}
 .dir-all>summary::-webkit-details-marker,.dir-faq summary::-webkit-details-marker,.dir-report--compact>summary::-webkit-details-marker{display:none}
@@ -199,7 +195,6 @@ article{max-width:820px}
 .dir-report-kind input{position:absolute;opacity:0;pointer-events:none}
 .dir-report-kind span{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;border:1px solid rgba(246,241,231,.5);padding:8px 11px}
 .dir-report-kind input:checked+span{background:var(--paper);color:var(--asphalt);border-color:var(--paper)}
-.dir-report-kind input:focus-visible+span{outline:2px solid var(--paper);outline-offset:2px}
 /* Pass 22 (Oct 2, 2026): thumb-sized picks, "I run this ride", and the short fields each kind reveals */
 .dir-report-kind span,.dir-report-chips span{min-height:44px;display:inline-flex;align-items:center}
 .dir-report-chips{border:0;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;min-width:0}
@@ -209,7 +204,7 @@ article{max-width:820px}
 .dir-report-chips span{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;border:1px solid rgba(246,241,231,.5);padding:0 12px}
 .dir-report-chips--days span{min-width:52px;justify-content:center;padding:0 6px}
 .dir-report-chips input:checked+span{background:var(--paper);color:var(--asphalt);border-color:var(--paper)}
-.dir-report-chips input:focus-visible+span,.dir-report-role input:focus-visible+span{outline:2px solid var(--paper);outline-offset:2px}
+.dir-report-role input:focus-visible+span{outline:2px solid var(--ring);outline-offset:2px}
 .dir-report-role{align-self:flex-start;cursor:pointer;margin-top:6px}
 .dir-report-role span{display:inline-flex;align-items:center;gap:12px;min-height:44px;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
 .dir-report-role span::before{content:"";flex:0 0 auto;width:20px;height:20px;border:1px solid currentColor;box-sizing:border-box}
@@ -223,14 +218,11 @@ article{max-width:820px}
 .dir-report:not(.dir-report--compact) .field{color-scheme:dark}   /* the time and date pickers' icons, on creosote */
 .dir-report-note{margin:6px 0 0;font-size:.95rem;line-height:1.4;opacity:.9}
 .dir-report--compact>summary{min-height:44px;display:flex;align-items:center}
-.dir-report--compact>summary:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px}
 .dir-report--compact .dir-report-chips span{border-color:var(--dust)}
 .dir-report--compact .dir-report-chips input:checked+span,.dir-report--compact .dir-report-role input:checked+span::before{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
-.dir-report--compact .dir-report-kind input:focus-visible+span,.dir-report--compact .dir-report-chips input:focus-visible+span,.dir-report--compact .dir-report-role input:focus-visible+span{outline-color:var(--asphalt)}
 .dir-report--compact .dir-report-role span::before{border-color:var(--asphalt)}
 .dir-report-go{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:14px}
 .dir-report .btn--ink{background:transparent;color:var(--paper);border-color:var(--paper)}   /* Pass 6: ghost on creosote, so the page keeps one filled button per screen */
-@media (hover:hover){.dir-report .btn--ink:hover{background:var(--paper);color:var(--asphalt)}}
 .dir-report .ok{color:var(--paper)}
 /* the compact version on a single ride or event page: quiet, no colour field */
 .dir-report--compact{display:block;margin:1.2em 0 0;padding:0;background:none;color:inherit;border-top:1px solid var(--dust);max-width:820px}
@@ -258,7 +250,7 @@ article{max-width:820px}
   -webkit-mask-image:linear-gradient(to bottom,#000 55%,rgba(0,0,0,.35) 100%);mask-image:linear-gradient(to bottom,#000 55%,rgba(0,0,0,.35) 100%)}   /* thins toward the count row so the small type reads */
 .tile-p--ink .tile-art{opacity:.35;filter:invert(1)}
 .tile-p .t{font-weight:800;line-height:.88;letter-spacing:-.05em;text-transform:none;text-wrap:balance;overflow-wrap:normal;
-  font-size:clamp(.9rem,calc((100cqw - 24px) / (var(--l,8) * .74)),2.4rem)}   /* .74em ≈ the widest Outfit 800 caps; the floor stays under what fits */
+  font-size:clamp(.9rem,calc((100cqw - 24px) / (var(--l,8) * .74)),2.4rem)}   /* .74em ≈ the widest 800 caps; the floor stays under what fits */
 .tile-p--wide .t{font-size:clamp(.85rem,calc((100cqw - 24px) / (var(--l,8) * .74)),1.9rem)}
 /* state tiles: the postal code huge, the name small under it */
 .tile-p--code{aspect-ratio:auto;gap:2px;padding:10px 12px 9px}
@@ -282,9 +274,8 @@ article{max-width:820px}
   .tile-p:hover .t{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
   .tile-p:hover .tile-art{opacity:.7}
 }
-.tile-p:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px}
-.tile-p--ink:focus-visible{outline-color:var(--bone)}
-@media (prefers-reduced-motion:no-preference){.tile-art{transition:opacity .3s ease}}
+.tile-p:focus-visible{outline-offset:2px}
+.tile-art{transition:opacity var(--t-move) var(--ease)}
 
 /* —— Pass 7 (Sept 30, 2026): events are posters. —— */
 /* the tile: date big at the top-left, the town filling the width, the event name, then the specs */
@@ -351,11 +342,9 @@ article{max-width:820px}
 .town .res-grid{grid-template-columns:repeat(auto-fill,minmax(min(168px,100%),1fr));gap:0;margin:14px 0 28px;border-top:1px solid var(--asphalt);border-left:1px solid var(--asphalt)}
 .town .res-card{border:0;border-right:1px solid var(--asphalt);border-bottom:1px solid var(--asphalt);padding:14px 14px 16px;gap:5px;min-height:44px;align-content:start}
 .town .res-k{color:var(--creosote-ink)}
-.town .res-card:hover .res-k{color:var(--dust)}
 .town .res-card b{font-size:1.08rem}
 .town .res-card span:last-child{font-size:.86rem;line-height:1.3}
 .mk--res{width:22px;height:22px;color:var(--creosote-ink);margin-bottom:2px}
-.res-card:hover .mk--res{color:var(--bone)}
 @media (max-width:420px){.town .res-grid{grid-template-columns:1fr 1fr}.town .res-card{padding:12px 12px 14px}.town .res-card b{font-size:1rem}.town .res-card:last-child:nth-child(odd){grid-column:1 / -1}}
 .town .lede{font-size:1.05rem;line-height:1.5}
 .town-fold>summary{font-size:12px}
@@ -367,12 +356,12 @@ article{max-width:820px}
 .ride-day-h{font-size:1.05rem;margin:1.4em 0 .4em;font-family:var(--mono);font-weight:700;letter-spacing:0;text-transform:none}
 .ride-day-h .count{letter-spacing:0;text-transform:none;font-weight:400}
 .local-rides .rows a{min-height:44px;align-items:center}
-.ride-ref{text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px;text-decoration-thickness:1px}
+.ride-ref{text-decoration:underline;text-decoration-color:currentColor;text-underline-offset:3px;text-decoration-thickness:1px}
 .ride-when{white-space:normal}
 .ride-line a{color:var(--asphalt)}
 .bike-policy b{font-weight:700}
 .bike-policy:not(.bike-policy--yes){color:var(--mute)}
-a.tel{white-space:nowrap;text-decoration:underline;text-decoration-color:var(--creosote);text-underline-offset:3px;display:inline-block;padding:4px 0}
+a.tel{white-space:nowrap;text-decoration:underline;text-decoration-color:currentColor;text-underline-offset:3px;display:inline-block;padding:4px 0}
 /* /towns/: the A–Z list under the tiles */
 .towns-az{columns:2 300px;column-gap:24px;list-style:none;margin:0;padding:0;border-top:1px solid var(--dust)}
 .towns-az li{break-inside:avoid;border-bottom:1px solid var(--dust)}
@@ -392,9 +381,10 @@ a.tel{white-space:nowrap;text-decoration:underline;text-decoration-color:var(--c
 .gr-map{margin:0;position:relative}
 .gr-map-svg{display:block;width:100%;height:auto;overflow:visible}
 .gr-map--us .gr-map-svg{max-height:none}
-.tw-st{fill:var(--paper);stroke:var(--dust-deep);stroke-width:.7;stroke-linejoin:round;vector-effect:non-scaling-stroke;transition:fill .15s ease}
+.tw-st{fill:var(--paper);stroke:var(--dust-deep);stroke-width:.7;stroke-linejoin:round;vector-effect:non-scaling-stroke;transition:fill var(--t-color) var(--ease)}
 .tw-st--on{fill:var(--bone-2)}
-.tw-states a:hover .tw-st,.tw-states a:focus-visible .tw-st{fill:var(--dust)}
+.tw-states a:focus-visible .tw-st{fill:var(--dust)}
+@media (hover:hover){.tw-states a:hover .tw-st{fill:var(--dust)}}
 .tw-states a:focus{outline:none}
 .gr-map-edge{fill:none;stroke:var(--asphalt);stroke-width:1.2;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
 .gr-map-hub{fill:var(--paper);stroke:var(--asphalt);stroke-width:1.6;vector-effect:non-scaling-stroke}
@@ -403,8 +393,8 @@ a.tel{white-space:nowrap;text-decoration:underline;text-decoration-color:var(--c
 .gr-map-labels .gr-map-name{font-weight:700}
 .gr-map-labels .gr-map-n{fill:var(--creosote-ink)}
 .gr-map-labels a{cursor:pointer}
-.gr-map-labels a:hover .gr-map-name,.gr-map-labels a:focus .gr-map-name{text-decoration:underline}
-.gr-map-labels a:hover .gr-map-hub{fill:var(--asphalt)}
+.gr-map-labels a:focus-visible .gr-map-name{text-decoration:underline}
+@media (hover:hover){.gr-map-labels a:hover .gr-map-name{text-decoration:underline}.gr-map-labels a:hover .gr-map-hub{fill:var(--asphalt)}}
 .gr-map-labels a:focus{outline:none}
 .gr-map-labels a:focus-visible .gr-map-hub{stroke-width:3}
 .gr-map-hit{fill:transparent;stroke:none;pointer-events:all}
@@ -415,18 +405,16 @@ a.tel{white-space:nowrap;text-decoration:underline;text-decoration-color:var(--c
 .tw-key-hint{margin-left:auto;color:var(--creosote-ink)}
 .gr-map figcaption .tw-key-ph{display:none}
 @media (max-width:640px){.gr-map figcaption .tw-key-desk{display:none}.gr-map figcaption .tw-key-ph{display:inline-flex}}
-.gr-chip{font:400 .75rem/1 var(--mono);letter-spacing:0;text-transform:none;color:var(--asphalt);background:var(--bone);border:1px solid var(--dust);border-radius:0;padding:8px 11px;cursor:pointer;text-decoration:none}
-.gr-chip:hover{border-color:var(--asphalt)}
-.gr-chip[aria-pressed="true"]{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
+.gr-chip{display:inline-flex}   /* the system's pick is the one chip (/chrome.css M4); this sheet kept a copy of rides.css's */
 /* the phone layer: nothing here shows until map.js marks the map .is-live, and it only does that up to 640px */
 .gr-map-regions,.gr-map-zoom,.gr-map-chips,.gr-map-back,.gr-map-reset{display:none}
 @media (max-width:640px){
   .gr-map--zoomable.is-live .gr-map-svg{overflow:hidden;touch-action:manipulation}
   .gr-map--zoomable.is-live .gr-map-labels{display:none}
   .gr-map--zoomable.is-live .tw-states a{pointer-events:none}
-  .gr-map--zoomable.is-live .gr-map-regions{display:inline;transition:opacity .2s ease}
+  .gr-map--zoomable.is-live .gr-map-regions{display:inline;transition:opacity var(--t-move) var(--ease)}
   .gr-map--zoomable.is-live.is-zoomed .gr-map-regions{opacity:0;pointer-events:none}
-  .gr-map--zoomable.is-live .gr-map-zoom{display:inline;opacity:0;pointer-events:none;transition:opacity .2s ease}
+  .gr-map--zoomable.is-live .gr-map-zoom{display:inline;opacity:0;pointer-events:none;transition:opacity var(--t-move) var(--ease)}
   .gr-map--zoomable.is-live .gr-map-zoom.is-on{opacity:1;pointer-events:auto}
   .gr-map--zoomable.is-live .gr-map-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
   .gr-map--zoomable.is-live.is-zoomed .gr-map-back{display:inline-flex;position:absolute;top:0;left:0;background:var(--paper);z-index:1}
@@ -436,12 +424,12 @@ a.tel{white-space:nowrap;text-decoration:underline;text-decoration-color:var(--c
 .gr-map-reg{cursor:pointer;-webkit-tap-highlight-color:transparent}
 .gr-map-reg:focus{outline:none}
 .gr-map-reg-hit,.gr-map-zhit{fill:transparent}
-.gr-map-reg-dot{fill:var(--asphalt);stroke:var(--paper);stroke-width:2;vector-effect:non-scaling-stroke;transition:fill .15s ease}
+.gr-map-reg-dot{fill:var(--asphalt);stroke:var(--paper);stroke-width:2;vector-effect:non-scaling-stroke;transition:fill var(--t-color) var(--ease)}
 .gr-map--towns .gr-map-reg-n{font-family:var(--mono);font-size:40px;font-weight:700;fill:var(--bone);pointer-events:none;font-variant-numeric:tabular-nums}
 .gr-map-reg--one .gr-map-reg-dot{fill:var(--paper);stroke:var(--asphalt);stroke-width:1.6}
 .gr-map-reg--one .gr-map-reg-dot--full{fill:var(--asphalt)}
 .gr-map--towns .gr-map-reg-name{font-family:var(--mono);font-size:34px;font-weight:700;letter-spacing:.02em;fill:var(--asphalt);paint-order:stroke;stroke:var(--paper);stroke-width:10px;stroke-linejoin:round;pointer-events:none}
-.gr-map-reg:active .gr-map-reg-dot,.gr-map-reg:focus-visible .gr-map-reg-dot{fill:var(--creosote-ink)}
+.gr-map-reg:active .gr-map-reg-dot,.gr-map-reg:focus-visible .gr-map-reg-dot{fill:var(--mute)}   /* a press, never rose */
 .gr-map-reg--one:active .gr-map-reg-dot,.gr-map-reg--one:focus-visible .gr-map-reg-dot{fill:var(--bone-2);stroke-width:3}
 .gr-map-zoom text{font-family:var(--mono);letter-spacing:.02em;fill:var(--asphalt);paint-order:stroke;stroke:var(--paper);stroke-linejoin:round}
 .gr-map-zoom .gr-map-name{font-weight:700}
@@ -450,7 +438,6 @@ a.tel{white-space:nowrap;text-decoration:underline;text-decoration-color:var(--c
 .gr-map-zoom a:focus{outline:none}
 .gr-map-zoom a:active .gr-map-hub,.gr-map-zoom a:focus-visible .gr-map-hub{fill:var(--asphalt)}
 .gr-map-zoom a:focus-visible .gr-map-name{text-decoration:underline}
-@media (prefers-reduced-motion:reduce){.tw-st,.gr-map--zoomable .gr-map-regions,.gr-map--zoomable .gr-map-zoom,.gr-map-reg-dot{transition:none}}
 
 /* —— Pass 35 (Oct 6, 2026): the town guide pages as cards. Robert: the pages were "extremely wordy" and need
    "custom graphics and icons and buttons so that people find it easier to get what they need". A listing is a
@@ -480,9 +467,8 @@ a.tel{white-space:nowrap;text-decoration:underline;text-decoration-color:var(--c
 .place-facts .mk,.place--card .ride-line .mk{width:18px;height:18px;margin-top:1px;color:var(--mute)}
 .place--card .ride-line{display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;margin:0;font-size:.95rem;color:var(--asphalt)}
 .place-btns{display:flex;flex-wrap:wrap;gap:8px}
-.pbtn{flex:1 1 auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 14px;border:1px solid var(--asphalt);color:var(--asphalt);font-size:.8125rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background-color .18s ease,color .18s ease}
+.pbtn{flex:1 1 auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 14px;border:1px solid var(--asphalt);color:var(--asphalt);font-size:.8125rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background-color var(--t-color) var(--ease),color var(--t-color) var(--ease)}
 .pbtn .mk{width:18px;height:18px;color:currentColor}
-@media (hover:hover){.pbtn:hover{background:var(--asphalt);color:var(--paper)}}
 .place-more{border-top:1px solid var(--line)}
 .place-more>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;min-height:44px;font-size:.8125rem;font-weight:700;color:var(--mute)}
 .place-more>summary::-webkit-details-marker{display:none}
@@ -511,17 +497,14 @@ a.tel{white-space:nowrap;text-decoration:underline;text-decoration-color:var(--c
 .pfil-n{font-weight:400;letter-spacing:0;color:var(--mute)}
 .pfil[aria-pressed="true"]{background:var(--asphalt);color:var(--paper)}
 .pfil[aria-pressed="true"] .pfil-n{color:var(--dust)}
-@media (hover:hover){.pfil:hover{background:var(--bone-2)}.pfil[aria-pressed="true"]:hover{background:var(--asphalt)}}
 .place-filter-note{margin:8px 0 0;font-size:.875rem;color:var(--mute);min-height:1.2em}
-.place-filter-note button{font:inherit;font-weight:700;color:var(--asphalt);background:none;border:0;padding:12px 4px;margin:-12px 0;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--creosote);cursor:pointer}
+.place-filter-note button{font:inherit;font-weight:700;color:var(--asphalt);background:none;border:0;padding:12px 4px;margin:-12px 0;text-decoration:underline;text-underline-offset:3px;text-decoration-color:currentColor;cursor:pointer}
 /* the other pages of the guide: icon tiles, not a row of text links */
 .res-jump{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(150px,100%),1fr));gap:0;margin:32px 0 0;border-top:1px solid var(--asphalt);border-left:1px solid var(--asphalt)}
 .res-jump a{display:flex;align-items:center;gap:10px;min-height:56px;padding:10px 14px;border-right:1px solid var(--asphalt);border-bottom:1px solid var(--asphalt);background:var(--bone-2);text-decoration:none;font-weight:700;font-size:.95rem;line-height:1.15}
 .res-jump .mk{width:22px;height:22px;color:var(--creosote-ink)}
-@media (hover:hover){.res-jump a:hover{background:var(--asphalt);color:var(--paper)}.res-jump a:hover .mk{color:var(--volt)}}
 .res-jump--doors{margin:18px 0 8px}
 @media (max-width:420px){.res-jump{grid-template-columns:1fr 1fr}.res-jump a{padding:10px 12px;font-size:.9rem}}
-@media (prefers-reduced-motion:reduce){.pbtn{transition:none}}
 @media (min-width:760px){.pbtn{flex:0 0 auto;min-width:156px}}
 
 /* Oct 18, 2026: "Get the bike ready" — the tire-and-wheel guides an event or a town raises (growth audit) */
@@ -531,5 +514,57 @@ a.tel{white-space:nowrap;text-decoration:underline;text-decoration-color:var(--c
 .ev-ready-list a{font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;color:inherit}
 .tg-ready{margin:22px 0 0;max-width:68ch;font-size:.98rem;line-height:1.55}
 .tg-ready a{font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;color:inherit}
+
+/* ————————————————————————————————————————————————————————————————————————
+   Studio pass 1 (Oct 21, 2026), the last thing in this sheet's layer: type-layout's block (sizes, measure,
+   spacing, the 12-column grid) without the lines the system owns (crumb weights, fold labels, fact look),
+   then B's request R8. ———————————————————————————————————————————————————————————————————————— */
+.crumbs{margin:0 0 var(--s3)}
+.facts dt{font-size:var(--fs-label)}
+.dir-report-form .lab,.dir-report-role span,.wx-status,.tile-p .b,.tile-p .s,.ev-spec,.res-k,.ev-poster-kind,.ev-poster-when,.ev-poster-climb,.ev-poster-spec li,.row-date,.countdown,.status-flag,.wx-day .d,.dir-built .k,.card-eyebrow,.place-tags span,.towns-az .row-meta,.towns-jump a,.src-url,.tile-p--code .b,.count{font-size:var(--fs-label)}
+.back,.town-more,.verified,.wx-credit,.row-meta,.gr-map figcaption{font-size:var(--fs-small)}
+.facts dd,.row-meta,.wx-day,.wx-now b,.count,.tile-p--event .d,.ev-poster-date{font-variant-numeric:lining-nums tabular-nums}
+.faq details p,.weather-note,.place p,.place-line,.town-fold-body p,.tg-ready,article.event>section>p,.ev-signup-note{max-width:var(--measure)}
+.town .lede,article.event>.lede{font-size:var(--fs-intro);max-width:var(--measure);line-height:1.5}
+.res-card b,.tagline{text-wrap:balance}
+article:is(.event,.town,.index,.resource,.calendar) h2{margin:0 0 var(--s2)}
+article:is(.event,.town,.index)>:is(section,.dir-fold,.weather,.faq,.town-box,.local-rides,.ph){margin-top:var(--sec)}
+@media (min-width:1024px){
+  /* T3 reference (event, town guide): a reading column on 1–7 and the margin */
+  main.wrap>article:is(.event,.town){max-width:none;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
+  article:is(.event,.town)>*{grid-column:1 / span 7;min-width:0}
+  article.event>:is(.eyebrow,h1){grid-column:1 / -1}
+  article.event>dl.facts{grid-column:9 / -1;grid-row:3 / span 40;grid-template-columns:1fr;margin:0}
+  /* the town doors: a sticky list in 9–12 beside the h1, no hole */
+  article.town>.res-grid{grid-column:9 / -1;grid-row:1 / span 40;position:sticky;top:calc(var(--nav-h) + var(--s3));grid-template-columns:1fr;margin:0}
+  article.town>.res-grid .res-card{display:grid;grid-template-columns:22px minmax(0,1fr);column-gap:12px;row-gap:2px;padding:12px 14px}
+  article.town>.res-grid .res-card>*{grid-column:2}
+  article.town>.res-grid .res-card>.mk{grid-column:1;grid-row:1 / span 3}
+  article:is(.event,.town) .town-strip{grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr))}
+  .related .tiles-p--events{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .tiles-p--towns{grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr))}
+  /* T3b index and list pages (/towns/, /events/, a town's coffee, shops, hotels…) */
+  main.wrap>article:is(.index,.resource){max-width:none}
+  article.index>:is(.lede,.towns-jump,.dir-report),article.resource>:is(.lede,.verified,.dir-report){max-width:calc(var(--maxw) * .6)}
+  article.resource>.places--cards{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+  main.wrap>article.index{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
+  article.index>*{grid-column:1 / -1;min-width:0}
+  article.index>.ph--p{grid-column:1 / span 5;width:auto;max-width:none}
+  article.index>.ph--p+section{grid-column:6 / -1;align-self:center;margin-top:var(--sec)}
+}
+
+/* R8 — the event page's new order: h1 → date → sign-up → poster → lede → facts. On phones the column reads in
+   that order. From 1024px the words keep columns 1–7 and the facts sit in 9–12 from the date line down, so the
+   sign-up and the facts share the first screen. The poster keeps the date and town only (item 15). */
+article.event>.ev-poster{margin:var(--s3) 0 var(--gap)}
+article.event>.ev-signup{margin:var(--s3) 0 0}
+article.event>.ev-poster+.lede,article.event>.ev-signup+.lede{margin-top:0}
+article.event>.date-line+.ev-signup{margin-top:var(--s2)}
+@media (min-width:1024px){
+  article.event>h1{grid-column:1 / -1}
+  article.event>:is(.date-line,.date-note,.ev-signup,.ev-poster,.lede,.status-flag){grid-column:1 / span 7}
+  article.event:has(>.ev-poster)>dl.facts{grid-row:2 / span 40;margin-top:var(--s1)}
+  article.event>.ev-poster{grid-template-columns:1fr}
+}
 
 }

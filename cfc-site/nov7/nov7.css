@@ -2,8 +2,7 @@
 
 /* —— first screen —— */
 .rp-ph{display:block}
-.rp-ph img{display:block;width:100%;height:clamp(150px,27svh,240px);object-fit:cover;object-position:64% 60%;
-  -webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent 100%);mask-image:linear-gradient(to bottom,#000 72%,transparent 100%)}
+.rp-ph img{display:block;width:100%;height:clamp(150px,27svh,240px);object-fit:cover;object-position:64% 60%}   /* studio pass 1: a clean edge, no fade */
 .rp-in{padding-block:2px clamp(40px,6vw,72px)}
 .rp-when{margin:0 0 12px}
 .rp-sign{--h:clamp(36px,11.2vw,60px);display:flex;flex-wrap:wrap;align-items:flex-end;gap:calc(var(--h) * .24);margin:0 0 16px;line-height:1;letter-spacing:0}
@@ -53,11 +52,7 @@
 @media (min-width:900px){
   .rp-hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;max-width:var(--maxw);margin-inline:auto}
   .rp-ph{order:2;padding-right:var(--gut)}
-  .rp-ph img{height:min(720px,calc(100svh - 150px));min-height:520px;aspect-ratio:auto;object-position:50% 40%;
-    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 14%,#000 97.5%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 6%,#000 88%,transparent 100%);
-    -webkit-mask-composite:source-in;
-    mask-image:linear-gradient(to right,transparent 0,#000 14%,#000 97.5%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 6%,#000 88%,transparent 100%);
-    mask-composite:intersect}
+  .rp-ph img{height:min(720px,calc(100svh - 150px));min-height:520px;aspect-ratio:auto;object-position:50% 40%}
   .rp-in{order:1;padding-block:clamp(40px,5vw,72px)}
   .rp-sign{--h:clamp(56px,5.2vw,84px);margin-bottom:24px}
   .rp-lede{margin-bottom:24px;max-width:34ch}
@@ -75,22 +70,21 @@
 .rp-film-fig{margin:0;width:100%;max-width:360px}
 .rp-film-frame{position:relative;background:var(--tar)}
 .rp-film-frame video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;background:var(--tar);cursor:pointer}
-.rp-film-play{position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;padding:0;border:0;border-radius:50%;background:var(--paper);color:var(--asphalt);display:grid;place-items:center;cursor:pointer;transition:opacity .2s ease,transform .2s ease}
+.rp-film-play{position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;padding:0;border:0;border-radius:50%;background:var(--paper);color:var(--asphalt);display:grid;place-items:center;cursor:pointer;transition:opacity var(--t-move,200ms) var(--ease,ease),visibility 0s}
 .rp-film-play svg{width:28px;height:28px;margin-left:5px;fill:currentColor}
-@media (hover:hover){.rp-film-play:hover{transform:scale(1.06)}}
-.rp-film-play:focus-visible{outline:3px solid var(--asphalt);outline-offset:4px}
-.rp-film-fig[data-playing="true"] .rp-film-play{opacity:0;transform:scale(.9);pointer-events:none}
+@media (hover:hover){.rp-film-play:hover{background:var(--bone)}}   /* no scale bounce */
+.rp-film-play:focus-visible{outline:3px solid var(--asphalt);outline-offset:-9px}   /* the ring sits inside the disc */
+.rp-film-fig[data-playing="true"] .rp-film-play{opacity:0;visibility:hidden;pointer-events:none;transition:opacity var(--t-move,200ms) var(--ease,ease),visibility 0s linear var(--t-move,200ms)}   /* out of the tab order while it plays */
 .rp-film-cap{display:flex;align-items:center;flex-wrap:wrap;gap:4px 14px;margin-top:8px}
 .rp-film-btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0;background:none;border:0;color:var(--asphalt);font:700 15px/1.2 var(--display);cursor:pointer}
 .rp-film-ico{display:inline-flex}
 .rp-film-ico svg{width:16px;height:16px;fill:currentColor}
 .rp-film-ico--pause,.rp-film-btn[data-playing="true"] .rp-film-ico--play{display:none}
 .rp-film-btn[data-playing="true"] .rp-film-ico--pause{display:inline-flex}
-.rp-film-btn [data-film-label]{border-bottom:1px solid var(--dust-deep);padding-bottom:2px}
+.rp-film-btn [data-film-label]{display:inline-block;min-width:2.9em;border-bottom:1px solid var(--dust-deep);padding-bottom:2px}
 .rp-film-btn:focus-visible{outline:2px solid var(--asphalt);outline-offset:3px}
 .rp-film-where{flex:1 1 auto;font-size:14px;font-weight:600;color:var(--mute)}
 .rp-film-len{font-size:14px;font-weight:600;color:var(--mute);font-variant-numeric:tabular-nums}
-@media (prefers-reduced-motion:reduce){.rp-film-play{transition:none}}
 @media (min-width:900px){.rp-film-fig{max-width:400px}}
 
 /* —— Oct 16, 2026 (Robert): a landing page. Phones get everything on the first screen: the picture, the sign and
@@ -103,7 +97,7 @@
 .lp-go{display:grid;gap:8px;max-width:560px}
 .lp-tile{display:grid;grid-template-columns:26px minmax(0,1fr);column-gap:14px;align-items:center;align-content:center;min-height:60px;
   padding:9px 14px;border:1px solid var(--asphalt);background:var(--paper);color:var(--asphalt);text-decoration:none;
-  transition:background-color .15s ease,color .15s ease,border-color .15s ease}
+  transition:background-color var(--t-color,120ms) var(--ease,ease),color var(--t-color,120ms) var(--ease,ease),border-color var(--t-color,120ms) var(--ease,ease)}
 .lp-mk{grid-row:1 / span 2;width:26px;height:26px}
 .lp-t{font-weight:800;font-size:16px;line-height:1.2}
 .lp-s{font-size:13px;font-weight:600;line-height:1.3;color:var(--mute)}
@@ -112,11 +106,12 @@
 @media (hover:hover){
   .lp-tile:hover{background:var(--asphalt);color:var(--bone)}
   .lp-tile:hover .lp-s{color:var(--dust)}
-  .lp-tile--first:hover{background:var(--volt);border-color:var(--volt);color:var(--asphalt)}
-  .lp-tile--first:hover .lp-s{color:var(--asphalt)}
+  .lp-tile--first:hover{background:var(--paper);border-color:var(--asphalt);color:var(--asphalt)}   /* no rose on hover: the ink tile inverts */
+  .lp-tile--first:hover .lp-s{color:var(--mute)}
 }
 .lp-tile:focus-visible{outline:2px solid var(--asphalt);outline-offset:3px}
-@media (prefers-reduced-motion:reduce){.lp-tile{transition:none}}
+.lp-tile:active{transition-duration:0s;background:var(--bone-2);color:var(--asphalt)}
+.lp-tile--first:active{background:var(--mute);border-color:var(--mute);color:var(--paper)}
 @media (max-width:759px) and (max-height:600px){
   .lp .rp-ph img{height:clamp(96px,15svh,130px)}
   .lp .rp-sign{--h:clamp(32px,10vw,52px);margin-bottom:14px}

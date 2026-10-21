@@ -1,11 +1,8 @@
 @layer section{
 /* Cycle for Change — content pages: /guides/, /field-notes/, /resources/, /journal/.
-   Creosote house. Loads AFTER /chrome.css, which supplies the tokens, the base
-   type, .btn, .link, .eyebrow, the shared header and footer.
-   This file only adds what long-form reading needs. No new colours, no new
-   fonts: Outfit (display + body) and Space Mono (labels, data).
-   Volt is not used here — it means "live" and nothing else.
-   Rewritten Sept 2026; the cream/plum/acid-yellow + Fraunces/Anton look is retired. */
+   @layer section (studio pass 1). Loads after /chrome.css, which supplies the tokens, the base type, the one
+   button, link, door, fold and the ending, the shared header and footer. This file only adds what long-form
+   reading needs. Lane Paint: Overpass only, After Hours tokens, no new colours. */
 
 .fn-page,main{--read:40rem}                /* reading measure */
 
@@ -14,19 +11,15 @@ main{display:block}
 /* —— masthead band (field notes index, pillar + resources hubs) —— */
 .fn-masthead,.fn-pillar-head{background:var(--bone-2);border-bottom:1px solid var(--line);padding:clamp(48px,7vw,88px) 0 clamp(40px,5vw,64px)}
 .fn-masthead h1,.fn-pillar-head h1{max-width:14ch;margin:6px 0 0}
-/* Pass 7 (Sept 30, 2026): a hub can open on a photo that dissolves into the words (no wash, no hard edge) */
+/* studio pass 1: a hub can open on a photo with a clean edge (photo.md A.1). Phones: edge to edge above the
+   words, no overlap, no fade. Desktop: the right half, to the screen edge, full strength, a hard inner edge. */
 .fn-pillar-head--photo{position:relative;isolation:isolate;background:var(--bone);overflow:hidden;padding-top:0}
-.fn-pillar-photo{margin:0 0 -40px;aspect-ratio:4/3;max-height:52vh;overflow:hidden;
-  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 55%,transparent 100%)}  /* Pass 25: the top dissolves too, no hard edge under the tally line */
+.fn-pillar-photo{margin:0 0 clamp(24px,5vw,40px);aspect-ratio:4/3;overflow:hidden;background:var(--bone-2)}
 .fn-pillar-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;display:block}
 @media (min-width:900px){
   .fn-pillar-head--photo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;padding:0}
   .fn-pillar-head--photo .wrap{grid-column:1;grid-row:1;padding-block:clamp(48px,7vw,88px) clamp(40px,5vw,64px);max-width:none;padding-inline:max(var(--gut),calc((100vw - var(--maxw)) / 2 + var(--gut))) clamp(24px,4vw,64px)}
-  .fn-pillar-photo{grid-column:2;grid-row:1;margin:0;aspect-ratio:5/4;max-height:none;align-self:stretch;
-    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%),linear-gradient(to bottom,#000 78%,transparent 100%);
-    -webkit-mask-composite:source-in;
-    mask-image:linear-gradient(to right,transparent 0,#000 30%),linear-gradient(to bottom,#000 78%,transparent 100%);
-    mask-composite:intersect}
+  .fn-pillar-photo{grid-column:2;grid-row:1;margin:0;aspect-ratio:auto;min-height:clamp(440px,40vw,600px);align-self:stretch}
 }
 .fn-pillar-intro,.res-intro-note{font-size:1.2rem;line-height:1.55;color:var(--asphalt);max-width:56ch;margin:22px 0 0}
 .res-intro-note{font-size:1.05rem}
@@ -38,8 +31,7 @@ main{display:block}
 
 /* —— post list (field notes index) —— */
 .fn-list{border-top:1px solid var(--asphalt);margin-top:8px}
-.fn-row{display:grid;grid-template-columns:1fr auto;gap:6px 24px;align-items:baseline;padding:28px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none;transition:padding-left .16s ease}
-.fn-row:hover{padding-left:10px}
+.fn-row{display:grid;grid-template-columns:1fr auto;gap:6px 24px;align-items:baseline;padding:28px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
 .fn-row .fn-title{grid-column:1;font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,3.2vw,2.1rem);line-height:1.05;letter-spacing:-.02em}
 .fn-row .fn-dek{grid-column:1;margin:0;color:var(--mute);max-width:56ch}
 .fn-row .fn-rdate{grid-column:2;grid-row:1 / span 3;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute);white-space:nowrap;text-align:right}
@@ -75,7 +67,7 @@ main{display:block}
 .fn-related{max-width:var(--read);margin:56px auto 0;padding:24px var(--gutter) 0;border-top:1px solid var(--asphalt)}
 .fn-related h2{margin:0;font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute)}
 .fn-related a{display:block;margin-top:14px;font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:-.01em;text-decoration:none}
-.fn-related a:hover{text-decoration:underline;text-decoration-color:var(--creosote)}
+@media (hover:hover){.fn-related a:hover{text-decoration:underline;text-decoration-color:currentColor}}
 
 
 .fn-note{max-width:var(--read);margin:22px auto 0;padding:0 var(--gutter);font-size:.94rem;line-height:1.6;color:var(--mute)}
@@ -87,8 +79,7 @@ main{display:block}
 .fn-spokes-wrap,.res-wrap{padding-top:52px}
 .fn-spokes-head,.res-head{margin:0 0 20px;font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute)}
 .fn-spokes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:0;border-top:1px solid var(--asphalt);border-left:1px solid var(--line)}
-.fn-spoke{display:flex;flex-direction:column;gap:10px;height:100%;padding:26px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);color:inherit;text-decoration:none;transition:background .16s ease}
-.fn-spoke:hover{background:var(--bone-2)}
+.fn-spoke{display:flex;flex-direction:column;gap:10px;height:100%;padding:26px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
 .fn-spoke .fn-spoke-kicker{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--mute)}
 .fn-spoke .fn-spoke-title{font-family:var(--display);font-weight:800;font-size:1.45rem;line-height:1.05;letter-spacing:-.02em;color:var(--asphalt)}
 .fn-spoke .fn-spoke-dek{margin:0;color:var(--mute);font-size:.98rem;line-height:1.5}
@@ -100,11 +91,11 @@ main{display:block}
 .res-card .res-cat{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--creosote-ink)}
 .res-card h3{margin:0;font-family:var(--display);font-weight:800;font-size:1.4rem;line-height:1.08;letter-spacing:-.02em;color:var(--asphalt)}
 .res-card h3 a{color:inherit;text-decoration:none}
-.res-card h3 a:hover{text-decoration:underline;text-decoration-color:var(--creosote)}
+@media (hover:hover){.res-card h3 a:hover{text-decoration:underline;text-decoration-color:currentColor}}
 .res-card .res-desc{margin:0;color:var(--asphalt);font-size:.98rem;line-height:1.55}
 .res-foot{display:flex;flex-direction:column;gap:7px;margin-top:auto;padding-top:6px}
 .res-foot .res-contact{font-family:var(--mono);font-size:13px;color:var(--asphalt)}
-.res-foot .res-contact a{color:var(--asphalt);text-decoration-color:var(--creosote)}
+.res-foot .res-contact a{color:var(--asphalt)}
 .res-foot .res-out{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--creosote-ink)}
 
 /* —— journal (/journal/<slug>/) —— */
@@ -120,10 +111,7 @@ main{display:block}
   .fn-row .fn-rdate{grid-column:1;grid-row:auto;text-align:left}
 }
 
-/* —— the shared pledge block on content pages (markup in scripts/chrome.js) —— */
-.fn-post>.pledge{max-width:var(--read);margin-inline:auto}
-.fn-pillar>.pledge{margin-inline:max(var(--gut),calc((100% - var(--maxw)) / 2 + var(--gut)))}
-@media (max-width:639px){.fn-post>.pledge,.fn-pillar>.pledge{margin-inline:0}}
+/* —— the shared closing block on content pages: the system's full-width ending (/chrome.css M10) —— */
 .fn-pillar>.fn-note,.fn-pillar>.fn-back{max-width:none;padding:0;margin-inline:max(var(--gut),calc((100% - var(--maxw)) / 2 + var(--gut)))}
 
 /* —— field notes index + "From the road" strips: photo cards —— */
@@ -131,8 +119,8 @@ main{display:block}
 .fn-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:clamp(18px,2.4vw,32px) clamp(16px,1.8vw,28px)}
 .fn-card{display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit}
 .fn-card figure{margin:0;aspect-ratio:4/5;max-width:100%;overflow:hidden;background:var(--bone-2)}
-.fn-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
-@media (hover:hover){.fn-card:hover img{transform:scale(1.035)}.fn-card:hover .fn-title{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}}
+.fn-card img{width:100%;height:100%;object-fit:cover}   /* studio pass 1: no zoom; hover underlines the title */
+@media (hover:hover){.fn-card:hover .fn-title{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}}
 .fn-card .fn-chip{margin-top:4px}
 .fn-card .fn-title{font-weight:800;font-size:clamp(1.3rem,.9vw+1.08rem,1.7rem);line-height:1.06;letter-spacing:-.02em}
 .fn-card .fn-dek{margin:0;color:var(--mute);font-size:15px;line-height:1.42;max-width:36ch}
@@ -182,7 +170,6 @@ main{display:block}
 .res-door--now .fn-spoke-title{color:var(--bone)}
 .res-door--now a:not(.btn){color:var(--bone)}
 .res-door--now .btn{align-self:flex-start;margin-top:4px}
-@media (hover:hover){a.res-door:hover{background:var(--bone-2)}}
 .res-someone{padding:clamp(28px,4vw,48px) 0 0}
 .res-someone-list{margin:0;padding:0;list-style:none;border-top:1px solid var(--asphalt);max-width:820px}
 .res-someone-list li{padding:14px 0;border-bottom:1px solid var(--line);line-height:1.55}
@@ -213,5 +200,48 @@ main{display:block}
 .fn-sources ol{font-size:14px;line-height:1.5;padding-left:1.6em}
 .fn-sources li{margin:8px 0 0;color:var(--mute);overflow-wrap:anywhere;scroll-margin-top:90px}
 .fn-sources li:target{background:var(--bone-2)}
+
+/* ————————————————————————————————————————————————————————————————————————
+   Studio pass 1 (Oct 21, 2026), the last thing in this sheet's layer: type-layout's block (sizes, measure,
+   the 12-column reading grid) without the closing block's width (the system's), then B's request R4.
+   ———————————————————————————————————————————————————————————————————————— */
+.fn-related h2,.fn-spokes-head,.res-head{font-size:var(--fs-label);font-weight:700}
+.fn-spoke .fn-spoke-kicker,.fn-spoke .fn-spoke-more,.res-door .fn-spoke-kicker,.res-door .fn-spoke-more,.fn-chip,.fn-row .fn-rdate,.fn-stage-n,.fn-stage-next,.fn-coming .d,.fn-num .of,.fn-num-cap,.res-card .res-cat,.res-foot .res-out{font-size:var(--fs-label)}
+.fn-meta,.fn-back,.fn-note{font-size:var(--fs-small)}
+.fn-body sup{font-size:max(12px,.7em)}
+.fn-lede,.fn-body p,.fn-pillar-intro,.fn-pillar>.fn-note,.res-someone-list,.fn-stage-intro{max-width:var(--measure)}
+.fn-spoke-title{text-wrap:balance}
+.fn-table td{font-variant-numeric:lining-nums tabular-nums}
+main.fn-post{padding-top:var(--top)}
+/* the reading page's ending: "All guides" and the notes sit above the closing field, never in a sliver
+   under it (the markup moves them in the regeneration; the order holds either way) */
+main.fn-post,main.fn-pillar{display:flex;flex-direction:column}
+:is(.fn-post,.fn-pillar)>.pledge{order:2}
+@media (min-width:1024px){
+  /* T1 reading page: the column on the grid's left edge (the 96px edge at 1440), Keep reading in 9–12 */
+  main.fn-post{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);padding-inline:max(var(--gut),calc((100vw - var(--maxw)) / 2 + var(--gut)));align-items:start}
+  .fn-post>*{grid-column:1 / -1}
+  .fn-post>:is(.fn-article,.fn-back,.fn-note,.fn-why){grid-column:1 / span 7;max-width:none;margin-inline:0;padding-inline:0}
+  .fn-post>.fn-related{grid-column:9 / -1;grid-row:1;position:sticky;top:calc(var(--nav-h) + var(--s5));margin:var(--s5) 0 0;padding-inline:0}
+  /* the note and the back link flow under the article by `order` (above), not by fixed rows, so a page with
+     both (/privacy/) keeps them in order and above the closing field before and after the regeneration */
+  /* T6 hubs: no holes in a spoke row */
+  .fn-spokes{grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr))}
+  .fn-spokes:has(>:nth-child(6):last-child),.fn-spokes:has(>:nth-child(9):last-child){grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (min-width:1200px){.fn-spokes:has(>:nth-child(10):last-child){grid-template-columns:repeat(5,minmax(0,1fr))}}
+
+/* R4 — /resources/: the crisis block right under the h1, on the grid. The Right now door sits under the h1
+   ahead of the intro (markup, item 10); it keeps its tar field and takes the column's full width on phones,
+   so Trevor lands on the first screen at 375×667 and above the 988 bar at 390×844. The doors close up. */
+.fn-pillar-head>.wrap>.res-door--now{margin:var(--s3) 0 0;padding:var(--s3) var(--s2) var(--s3) var(--s3);gap:var(--s1);max-width:640px}
+.fn-pillar-head>.wrap>.res-door--now p{margin:0}
+.fn-pillar-head>.wrap>.res-door--now .btn{margin-top:var(--s1)}
+.fn-pillar-head:has(>.wrap>.res-door--now){padding-top:var(--top)}
+.fn-pillar-head:has(>.wrap>.res-door--now) h1{max-width:20ch}
+@media (max-width:639px){
+  .fn-pillar-head>.wrap>.res-door--now{margin-inline:calc(-1 * var(--gut));padding-inline:var(--gut)}
+  .fn-pillar-head:has(>.wrap>.res-door--now) h1{font-size:clamp(2rem,9vw,2.75rem)}
+}
 
 }
