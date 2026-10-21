@@ -1,3 +1,4 @@
+@layer section{
 /* Cycle for Change — content pages: /guides/, /field-notes/, /resources/, /journal/.
    Creosote house. Loads AFTER /chrome.css, which supplies the tokens, the base
    type, .btn, .link, .eyebrow, the shared header and footer.
@@ -212,3 +213,5 @@ main{display:block}
 .fn-sources ol{font-size:14px;line-height:1.5;padding-left:1.6em}
 .fn-sources li{margin:8px 0 0;color:var(--mute);overflow-wrap:anywhere;scroll-margin-top:90px}
 .fn-sources li:target{background:var(--bone-2)}
+
+}

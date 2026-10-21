@@ -1,3 +1,4 @@
+@layer section{
 /* /brief/ — the ride briefing (Oct 17, 2026). Lane Paint: square corners, hairlines, no shadows. Overpass only.
    The climb chart's grades: patina (flat, down) → powder rose (2–4) → smeared rose (4–7) → rose ink (7–10) → asphalt (10+). */
 .bf-top{display:grid;gap:18px;max-width:760px}
@@ -150,3 +151,5 @@
 .bf-poster .bf-actions{margin:0}
 .bf-map .bf-card{display:block;width:100%;height:auto;border:1px solid var(--dust)}
 .bf-map .bf-card svg{display:block;width:100%;height:auto}
+
+}

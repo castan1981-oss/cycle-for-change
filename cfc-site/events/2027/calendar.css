@@ -1,3 +1,4 @@
+@layer section{
 /* Cycle for Change — /events/2027/ (the 2027 ride calendar).
    Loaded after /events/events.css, which owns the tokens, the chrome, .eyebrow,
    .lede, .btn, .crumbs, .facts, .pledge and .site-foot. This file only adds the
@@ -232,3 +233,5 @@ a.mo-tile:focus-visible,a.cal-door:focus-visible{outline:2px solid var(--asphalt
 .det--light{padding:2px 0 14px}
 .det--light .det-links{margin:0}
 .det-more{margin-left:4px}
+
+}

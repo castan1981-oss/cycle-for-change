@@ -1,3 +1,4 @@
+@layer section{
 /* Cycle for Change — events directory (/events/, /towns/), also loaded by
    /rides/ and /events/2027/. Tokens, base type, header, buttons and footer come
    from /chrome.css (loaded first); this file only adds what the directory pages
@@ -530,3 +531,5 @@ a.tel{white-space:nowrap;text-decoration:underline;text-decoration-color:var(--c
 .ev-ready-list a{font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;color:inherit}
 .tg-ready{margin:22px 0 0;max-width:68ch;font-size:.98rem;line-height:1.55}
 .tg-ready a{font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;color:inherit}
+
+}

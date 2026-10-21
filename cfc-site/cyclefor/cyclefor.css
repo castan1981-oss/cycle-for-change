@@ -1,3 +1,4 @@
+@layer section{
 /* Cycle for Change — /cyclefor/, "What do you cycle for?" (Oct 12, 2026).
    Loaded after /chrome.css. Light page, Lane Paint: the stencil spells CYCLE FOR, the blank on the
    smeared-rose plate turns through a few answers (still under reduced motion), and after someone sends
@@ -100,3 +101,5 @@
   .cf-cols{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(32px,5vw,96px);align-items:start}
 }
 @media (prefers-reduced-motion:reduce){.cf-plate{transition:none}}
+
+}

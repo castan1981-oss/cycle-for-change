@@ -1,3 +1,4 @@
+@layer section{
 /* Cycle for Change — group rides directory (/rides/).
    Loads after /events/events.css and uses its tokens: bone ground, asphalt
    type, creosote once per screen as the accent, dust hairlines. Outfit for
@@ -910,3 +911,5 @@ a.gr-wide-door:focus-visible{outline:2px solid var(--asphalt);outline-offset:2px
 .gr-note-more[open]>summary::after{content:"\2212"}
 .gr-note-more>summary:focus-visible{outline:2px solid var(--asphalt);outline-offset:3px}
 .gr-note-more[open]>summary{margin-bottom:14px}
+
+}
