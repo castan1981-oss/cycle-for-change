@@ -34,7 +34,7 @@ const { townsMap } = require("./towns-map.js");   // the tap-a-town US map on /t
 const PH = require("./photos.js");     // Pass 25: Robert's photos (alt text, place, the figure)
 // Pass 25 (Oct 4, 2026): a town guide carries Robert's photo when he has one from the town or right by it
 // (the caption says where it was really taken: Del Mar's is Encinitas, a few miles up the coast).
-const TOWN_PHOTO = { "seattle-wa": "seattle-path", "del-mar-ca": "encinitas-beach" };
+const TOWN_PHOTO = { "seattle-wa": "seattle-path", "del-mar-ca": "encinitas-beach", "scottsdale-az": "robert-camelback" };
 
 const ROOT = path.resolve(__dirname, "..");
 const DATA = path.join(ROOT, "data");

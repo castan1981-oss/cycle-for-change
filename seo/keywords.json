@@ -23,7 +23,9 @@
     { "id": "k20", "cluster": "Events", "query": "El Tour de Tucson 2026", "target": "/events/el-tour-de-tucson/" },
     { "id": "k21", "cluster": "Events", "query": "Unbound Gravel 2027 date", "target": "/events/unbound-gravel/" },
     { "id": "k22", "cluster": "Towns", "query": "Emporia Kansas cycling where to stay", "target": "/towns/kansas/emporia/" },
-    { "id": "k23", "cluster": "Resources", "query": "LGBTQ mental health resources", "target": "/resources/" }
+    { "id": "k23", "cluster": "Resources", "query": "LGBTQ mental health resources", "target": "/resources/" },
+    { "id": "k24", "cluster": "Towns", "query": "cycling in Scottsdale", "target": "/towns/arizona/scottsdale/" },
+    { "id": "k25", "cluster": "Towns", "query": "Scottsdale bike shops", "target": "/towns/arizona/scottsdale/bike-shops/" }
   ],
   "found": [
     { "id": "d01", "query": "critical mass atlanta", "target": "/rides/atlanta-ga-critical-mass-atlanta/" },
@@ -37,7 +39,9 @@
     { "id": "d09", "query": "leadville 100 mtb 2027 date", "target": "/events/leadville-trail-100-mtb/" },
     { "id": "d10", "query": "assault on mt mitchell 2027", "target": "/events/assault-on-mt-mitchell/" },
     { "id": "d11", "query": "los angeles group rides", "target": "/rides/ca/los-angeles/" },
-    { "id": "d12", "query": "salt lake city group rides", "target": "/rides/ut/salt-lake-city/" }
+    { "id": "d12", "query": "salt lake city group rides", "target": "/rides/ut/salt-lake-city/" },
+    { "id": "d13", "query": "tour de scottsdale 2027", "target": "/events/tour-de-scottsdale/" },
+    { "id": "d14", "query": "tour de scottsdale", "target": "/events/tour-de-scottsdale/" }
   ],
   "aiQuestions": [
     { "id": "a6", "q": "What is Cycle for Change?", "target": "/" },
@@ -45,6 +49,7 @@
     { "id": "a2", "q": "Are there no-drop group rides in Phoenix?", "target": "/rides/az/phoenix/no-drop/" },
     { "id": "a3", "q": "What are the biggest LGBTQ charity bike rides in the US?", "target": "/guides/charity-rides/" },
     { "id": "a1", "q": "What happened to the AIDS LifeCycle ride?", "target": "/guides/what-happened-to-aids-lifecycle/" },
-    { "id": "a5", "q": "How does a pledge-per-mile bike fundraiser work?", "target": "/guides/pledge-per-mile-fundraising/" }
+    { "id": "a5", "q": "How does a pledge-per-mile bike fundraiser work?", "target": "/guides/pledge-per-mile-fundraising/" },
+    { "id": "a7", "q": "When is the Tour de Scottsdale 2027 and how long are the routes?", "target": "/events/tour-de-scottsdale/" }
   ]
 }
