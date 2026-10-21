@@ -107,7 +107,10 @@ notes with sources. `brand-ambassador` reads the copy; `consent-legal` reads the
 and publishes or sends it back with the one field that failed. Ride logs and org pages: Robert
 reads them on his phone first. Briefings and directory pages: the Editor's pass is enough.
 
-## The design studio (Oct 21, 2026)
+## The Wrenches — the design studio (Oct 21, 2026)
+
+The team named itself on Robert's ask; he picked **The Wrenches** (what a shop calls the people in the
+back who make it work).
 
 Robert: the site needs "usability and an image that is visually easy to navigate and enjoyable to
 look at … modern and high fashion in the sense that it looks polished." The studio polishes

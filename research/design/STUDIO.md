@@ -1,4 +1,4 @@
-# The design studio — the bar every page is held to
+# The Wrenches — the bar every page is held to
 
 Robert, Oct 21, 2026: the website needs **usability and an image that is easy to navigate and
 enjoyable to look at. Modern, and high fashion in the sense that it looks polished.**
@@ -10,7 +10,7 @@ ever seen", and "custom and very classy and easy to understand". He also said a 
 "too polished" — well made, but it could have been anyone's. Both are true at once: **finished
 like a fashion house, personal like one man made it.**
 
-This file is the studio's shared bar. The agents in `.claude/agents/` (`art-director`,
+The studio is **The Wrenches** (Robert's pick, Oct 21, 2026). This file is its shared bar. The agents in `.claude/agents/` (`art-director`,
 `ux-architect`, `type-layout`, `design-system`, `photo-editor`, `motion-interaction`,
 `usability-lab`, `design-critic`) read it before they start. `/design` runs them.
 
