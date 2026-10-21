@@ -407,7 +407,10 @@ const DEEP_URL = (() => { try { const d = JSON.parse(fs.readFileSync(path.join(R
 // the full facts, notes and town strip that the month pages already carry. On /all/ a row is `light`: the summary
 // (what the filters and the crawl need) and a short panel with the links; the full panel is fetched from the
 // month page the first time the row is opened (calendar.js), and without JS the link takes you there.
-function eventHtml(e, { light = false } = {}) {
+// Studio pass 1 (Oct 21, 2026): the town link left the row summary (a 20px trap inside a tappable row on 638 rows; the
+// opened panel's town strip carries it). On Robert's own list (`mine`) the row has no "Robert's ride" tag (the page is
+// his list) and its links come first in the opened row, above the facts: Ride with me lands on an open row there.
+function eventHtml(e, { light = false, mine = false } = {}) {
   const meta = [`<b>${esc(place(e))}</b>`, esc(e.category.toLowerCase())];
   if (e.cause) meta.push(esc(e.cause));
   const kind = dayKind(e);
@@ -418,25 +421,27 @@ function eventHtml(e, { light = false } = {}) {
   const q = [e.name, e.city, e.state, e.region, e.category, e.cause, e.beneficiary, e.organizer, e.series].join(" ").toLowerCase().replace(/\s+/g, " ").trim();
   const src = (e.sources || []).slice(0, 2).map((u) => `<a href="${attr(u)}" rel="noopener nofollow" target="_blank">${esc(host(u))}</a>`).join(" ");
   const town = townFor(e);
-  if (town) meta.push(TOWNS.link(town));
   const dn = dateNote(e);
+  const tag = e.riding && !mine ? `<span class="you-tag">Robert&rsquo;s ride</span>` : "";
+  const links = `<p class="det-links">${DEEP_URL[e.slug] ? `<a class="btn btn--ink" href="${attr(DEEP_URL[e.slug])}">The full page</a>` : ""}${e.url ? `<a class="btn btn--ghost" href="${attr(e.url)}" rel="noopener" target="_blank">Event site</a>` : ""}${src ? `<span class="src">Sources: ${src}</span>` : ""}</p>`;
   if (light) {
     const monthUrl = monthPath(e.month);
     return `<details class="ev${e.riding ? " you" : ""}" id="${attr(e.slug)}" data-m="${e.month}" data-t="${attr(e.category)}" data-r="${attr(e.region)}" data-c="${attr(e.cause)}" data-f="${farOf(e).join(" ")}" data-s="${attr(e.date_status)}" data-y="${e.riding ? 1 : 0}" data-q="${attr(q)}" data-src="${attr(monthUrl)}">
-  <summary class="row">${mark(CAT_MARK[e.category] || "flag", "mk mk--row")}${dateCell(e)}<span class="nm"><span class="h">${esc(e.name)}${e.riding ? `<span class="you-tag">Robert&rsquo;s ride</span>` : ""}</span><span class="meta">${meta.join(" &middot; ")}</span></span><span class="acts">Details</span></summary>
+  <summary class="row">${mark(CAT_MARK[e.category] || "flag", "mk mk--row")}${dateCell(e)}<span class="nm"><span class="h">${esc(e.name)}${tag}</span><span class="meta">${meta.join(" &middot; ")}</span></span><span class="acts">Details</span></summary>
   <div class="det det--light">
     <p class="det-links">${DEEP_URL[e.slug] ? `<a class="btn btn--ink" href="${attr(DEEP_URL[e.slug])}">The full page</a>` : ""}${e.url ? `<a class="btn btn--ghost" href="${attr(e.url)}" rel="noopener" target="_blank">Event site</a>` : ""}<a class="link det-more" href="${attr(monthUrl)}#${attr(e.slug)}">Dates, distances, registration</a></p>
   </div>
 </details>`;
   }
   return `<details class="ev${e.riding ? " you" : ""}" id="${attr(e.slug)}" data-m="${e.month}" data-t="${attr(e.category)}" data-r="${attr(e.region)}" data-c="${attr(e.cause)}" data-f="${farOf(e).join(" ")}" data-s="${attr(e.date_status)}" data-y="${e.riding ? 1 : 0}" data-q="${attr(q)}">
-  <summary class="row">${mark(CAT_MARK[e.category] || "flag", "mk mk--row")}${dateCell(e)}<span class="nm"><span class="h">${esc(e.name)}${e.riding ? `<span class="you-tag">Robert&rsquo;s ride</span>` : ""}</span><span class="meta">${meta.join(" &middot; ")}</span></span><span class="acts">Details</span></summary>
-  <div class="det">
+  <summary class="row">${mark(CAT_MARK[e.category] || "flag", "mk mk--row")}${dateCell(e)}<span class="nm"><span class="h">${esc(e.name)}${tag}</span><span class="meta">${meta.join(" &middot; ")}</span></span><span class="acts">Details</span></summary>
+  <div class="det${mine ? " det--mine" : ""}">${mine ? `
+    ${links}` : ""}
     <dl class="facts">${facts(e)}</dl>
     ${dn ? `<p class="note"><b>Date</b>${esc(dn)}</p>` : ""}
     ${e.notes ? `<p class="note"><b>Notes</b>${esc(e.notes)}</p>` : ""}
-    ${e.unchecked && e.date_note ? `<p class="note"><b>Check</b>${e.date_status === "confirmed" ? "The date is the organizer&rsquo;s. The rest isn&rsquo;t checked with them yet." : "Not checked with the organizer yet."} Look at their site before you plan around it.</p>` : ""}
-    <p class="det-links">${DEEP_URL[e.slug] ? `<a class="btn btn--ink" href="${attr(DEEP_URL[e.slug])}">The full page</a>` : ""}${e.url ? `<a class="btn btn--ghost" href="${attr(e.url)}" rel="noopener" target="_blank">Event site</a>` : ""}${src ? `<span class="src">Sources: ${src}</span>` : ""}</p>
+    ${e.unchecked && e.date_note ? `<p class="note"><b>Check</b>${e.date_status === "confirmed" ? "The date is the organizer&rsquo;s. The rest isn&rsquo;t checked with them yet." : "Not checked with the organizer yet."} Look at their site before you plan around it.</p>` : ""}${mine ? "" : `
+    ${links}`}
     ${town ? TOWNS.strip(town, { compact: true, id: e.slug, heading: `Once you&rsquo;re in ${esc(town.name)}` }) : ""}
   </div>
 </details>`;
@@ -487,18 +492,19 @@ function pickRow(label, picks, cls = "") {
 function farPicks(type, list) {
   return pickRow("How far?", FAR.map((f) => ({ name: f.name, n: list.filter((e) => farOf(e).includes(f.id)).length, href: allLink({ type, far: f.id }) })));
 }
-function shortPage({ url, crumb, h1, title, description, list, byMonth: grouped = false, nav = "", lead = "", narrow = "", picks = "", after = "", before = "", ldMore = [], rowsH = "" }) {
+function shortPage({ url, crumb, h1, title, description, list, byMonth: grouped = false, nav = "", lead = "", narrow = "", picks = "", after = "", before = "", ldMore = [], rowsH = "", mine = false }) {
+  const row = (e) => eventHtml(e, { mine });
   let rows;
   if (grouped) {
     const ms = [...new Set(list.map((e) => e.month))].sort((a, b) => (a || 13) - (b || 13));
     rows = `${ms.length > 2 ? `<nav class="cal-jump" aria-label="Jump to a month">${ms.map((m) => `<a href="#m${m}">${m ? MONTHS[m - 1] : "TBA"}</a>`).join("")}</nav>` : ""}
 ${ms.map((m) => { const l = list.filter((e) => e.month === m); return `      <section class="month" id="m${m}">
         <div class="month-h"><h2>${m ? MONTHS_LONG[m - 1] : "Date to be announced"}</h2><span class="n">${l.length}</span></div>
-${l.map(eventHtml).join("\n")}
+${l.map(row).join("\n")}
       </section>`; }).join("\n")}`;
   } else rows = `      <section class="month">${rowsH ? `
         <div class="month-h"><h2>${rowsH}</h2><span class="n">${list.length}</span></div>` : ""}
-${list.map(eventHtml).join("\n")}
+${list.map(row).join("\n")}
       </section>`;
   const html = head({ title, description, url, ld: [
     { "@context": "https://schema.org", "@type": "CollectionPage", name: title, description, url: SITE + url, dateModified: data.updated, isPartOf: { "@type": "WebSite", name: "Cycle for Change", url: SITE + "/" } },
@@ -563,7 +569,7 @@ for (const c of CATS) {
 if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert\u2019s rides", list: riding,
   h1: "The 2027 rides I&rsquo;m doing", title: "The 2027 rides I'm doing for Cycle for Change",
   description: `The ${riding.length} rides Robert is doing in 2027 as part of the 10,000 miles: dates, distances, sign-up links.`,
-  lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one.</p>`,
+  lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one.</p>`, mine: true,
   after: `\n    ${PH.figure("robert-peace")}` });
 
 // the calendar's own page: two questions, then the deep pages and the full list
@@ -595,7 +601,7 @@ if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert\u2019s rides
           ${doors}
       </div>
     </section>
-    ${PH.figure("sawtooth-road", { cls: "ph--wide" })}
+    ${PH.figure("empty-road", { cls: "ph--wide" })}
 `;
   home += DEEP_HTML();
   home += `

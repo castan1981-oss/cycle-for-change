@@ -80,7 +80,8 @@
   if (box) {
     if (t) {
       var tz = art.dataset.tz;
-      var text = datedLabel || new Intl.DateTimeFormat("en-US", { timeZone: tz, weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(t);
+      // studio pass 1: the time reads the way the When cell and the build's fmtNext() write it ("6:00 am", not "6:00 AM")
+      var text = datedLabel || new Intl.DateTimeFormat("en-US", { timeZone: tz, weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(t).replace(/AM|PM/, function (m) { return m.toLowerCase(); });
       var el = box.querySelector("[data-next-text]"); if (el) { el.textContent = text; el.setAttribute("datetime", t.toISOString()); }
       var r = box.querySelector("[data-next-rel]"); if (r) r.textContent = rel(t) + (art.dataset.freq === "biweekly" ? " \u00b7 every other week, confirm which with the host" : "");
       box.hidden = false;

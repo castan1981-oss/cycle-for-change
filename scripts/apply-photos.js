@@ -66,7 +66,10 @@ for (const f of [...HAND.flatMap((d) => htmlFiles(path.join(SITE, d))), path.joi
       return PH.figure(keyOf(src, f), { cls: rest.trim(), caption: m.includes("<figcaption>") });
     })
     .replace(HERO, (m, src) => { seen.heroes++; return hero(keyOf(src, f)); })
-    .replace(CARD, (m, open, src) => { seen.cards++; return open + PH.card(keyOf(src, f)); });
+    .replace(CARD, (m, open, src) => { seen.cards++; return open + PH.card(keyOf(src, f)); })
+    // the page's JSON-LD image names the same registry file the page shows (studio pass 1: south-mountain-climb's
+    // still named the photo with another rider's face in it)
+    .replace(/("image":"https:\/\/cycleforchange\.org)(\/img\/ph\/[a-z0-9-]+\.jpg)"/g, (m, host, src) => { const k = keyOf(src, f); return `${host}${PH.PHOTOS[k].src}"`; });
   if (after !== before) { fs.writeFileSync(f, after); changed++; console.log("updated", path.relative(SITE, f)); }
 }
 console.log(`${seen.figures} photos, ${seen.heroes} heroes, ${seen.cards} cards on the hand-written pages; ${changed} page${changed === 1 ? "" : "s"} updated`);

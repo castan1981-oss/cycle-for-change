@@ -44,6 +44,19 @@ const GUIDES_N = fs.readdirSync(path.join(ROOT, "cfc-site", "guides"), { withFil
 // on phones, the film beside the ask (what do you cycle for, say it on video), the closing photo as a wide band, the
 // place said once. A still on phones; the film waits for a tap there (home.js, the same rules as the reel).
 const TODAY = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, "data", "today.json"), "utf8")); } catch (e) { return null; } })();
+// Studio pass 1 (Oct 21, 2026): his newest write-up (data/ride-notes.json, "I rode it" on that ride's page) is one tap
+// from the homepage: "Read the last ride" goes there, and the log row from that day links there (/home.js).
+const NOTE = (() => {
+  try {
+    const all = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "ride-notes.json"), "utf8"));
+    const list = Object.entries(all).flatMap(([slug, ns]) => (Array.isArray(ns) ? ns : []).filter((n) => n && /^\d{4}-\d{2}-\d{2}$/.test(n.date || "") && Array.isArray(n.paras) && n.paras.some((x) => String(x || "").trim())).map((n) => ({ slug, date: n.date })));
+    list.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+    return list[0] ? { date: list[0].date, href: `/rides/${list[0].slug}/#robert` } : null;
+  } catch (e) { return null; }
+})();
+// the house caption, place · month: "Phoenix · Oct 2026" (the place from the photo's own line, the month from the ride's date)
+const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const placeMonth = (where, ymd) => { const place = String(where || "").split(" · ")[0].trim(); const [y, m] = String(ymd || "").split("-").map(Number); return place && y && m ? `${place} · ${MON[m - 1]} ${y}` : String(where || ""); };
 const esc = (t) => String(t == null ? "" : t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 function todaySection() {
   const T = TODAY;
@@ -57,7 +70,10 @@ function todaySection() {
     const av = avifPair(p);
     return av ? `<picture><source type="image/avif" srcset="${esc(av.small)} 800w, ${esc(av.big)} ${p.width}w" sizes="${sizes}">${tag}</picture>` : tag;
   };
-  const where = (T.photo2 && T.photo2.where) || T.photo.where;
+  // studio pass 1: the place · month line, in the house format ("Phoenix · Oct 2026"), comes right after the lead photo
+  // (.today-where, its own grid area; /home.css puts it under that photo at every width). Said once: the closing photo is
+  // the same place and day.
+  const where = T.photo.where ? placeMonth(T.photo.where, T.date) : "";
   const F = T.film;
   const film = F ? `<figure class="today-film" id="todayFig" data-playing="false">
         <div class="today-film-frame">
@@ -67,6 +83,11 @@ function todaySection() {
           </video>
           <button class="road-play today-play" id="todayPlay" type="button" aria-label="Play, ${F.seconds} seconds"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg></button>
         </div>
+        <!-- studio pass 1: the reel's Play / Pause line, so the film can always be stopped (WCAG 2.2.2) -->
+        <figcaption class="road-film-cap today-film-cap">
+          <button class="road-film-btn today-film-btn" id="todayBtn" type="button" data-playing="false"><svg class="rf-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><svg class="rf-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg><span id="todayBtnLabel">Play</span></button>
+          <span class="road-film-len">0:${String(Math.round(F.seconds || 0)).padStart(2, "0")}</span>
+        </figcaption>
       </figure>
       ` : "";
   return `<!-- —— today: who I rode for (data/today.json) —— -->
@@ -196,7 +217,7 @@ const page = `<!doctype html>
   ${CHROME.FONTS}
   <link rel="preload" as="image" type="image/avif" imagesrcset="/img/sign-print-4-phone.avif" media="(max-width:759px)">
   <link rel="preload" as="image" type="image/avif" imagesrcset="/img/sign-print-4.avif" media="(min-width:760px)">
-  <link rel="stylesheet" href="/home.css?v=40">
+  <link rel="stylesheet" href="/home.css?v=${CHROME.CSS_V}">
 
   <script type="application/ld+json">
   {
@@ -252,7 +273,7 @@ ${CHROME.HEADER.replace('<p class="tally-line">', '<p class="tally-line tally-li
         <a class="finder-tile" href="/events/2027/"><svg class="finder-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkFinish"/></svg><span class="finder-t">Events</span><span class="finder-s">${CAL_N} in 2027</span></a>
       </nav>
       <div class="sign-acts">
-        <a class="link link--bone" href="#road">Read the last ride</a>
+        <a class="link link--bone" href="${NOTE ? NOTE.href : "#road"}">Read the last ride</a>
       </div>
     </div>
   </div>
@@ -275,7 +296,7 @@ ${todaySection()}<!-- —— the last ride: the reel, the log —— -->
   <div class="wrap road">
     <div>
       <div class="s-head"><div class="stack16"><p class="eyebrow">From the road</p><h2 class="h2" id="road-h">The last rides.</h2></div></div>
-      <ol class="log" id="log" data-max="4" aria-live="polite">
+      <ol class="log" id="log" data-max="4" aria-live="polite"${NOTE ? ` data-note-date="${NOTE.date}" data-note-href="${NOTE.href}"` : ""}>
         <li><span class="when">Mon Oct 5</span><span class="bar-mi" style="--w:.57"></span><span class="mi num">35.7<small>mi</small></span></li>
         <li><span class="when">Sun Oct 4</span><span class="bar-mi" style="--w:1"></span><span class="mi num">63.1<small>mi</small></span></li>
         <li><span class="when">Sat Oct 3</span><span class="bar-mi" style="--w:.67"></span><span class="mi num">42.3<small>mi</small></span></li>
@@ -367,8 +388,8 @@ ${todaySection()}<!-- —— the last ride: the reel, the log —— -->
     <h2 class="h2" id="ride-h">Ride with me.</h2>
     <div class="ride-in">
       <div class="ride-next">
-        <p class="eyebrow">Next up, a Los Angeles LGBT Center fundraiser</p>
-        <h3 class="h2 ride-h3">April 23 to 25, I cycle for <span class="plate plate--big">the Center</span></h3>
+        <p class="eyebrow">A Los Angeles LGBT Center fundraiser</p>
+        <h3 class="h2 ride-h3"><span style="white-space:nowrap">April 23 to 25</span>, I cycle for <span class="plate plate--big">the Center</span></h3>
         <p>Center Ride Out. Los Angeles to Ojai, camp, then back along the coast to a finish by the ocean.</p>
         <dl class="facts-dl">
           <div><dt>3 days</dt><dd>200+ miles, Apr 23 to 25, 2027</dd></div>
@@ -427,12 +448,12 @@ ${todaySection()}<!-- —— the last ride: the reel, the log —— -->
 
 </main>
 
-${CHROME.FOOTER.replace('<script src="/chrome.js" defer></script>', '')}
+${CHROME.FOOTER.replace(CHROME.CHROME_JS, '')}
 
 <!-- Pass 37: the old phone tally bar (miles + Ride with me) is gone. It sat on top of the Pass 36 Ride with me bar,
      so a phone showed two bars at once. The Ride with me bar (scripts/chrome.js, /ridebar.js) does its job. -->
 
-<script src="/home.js?v=39" defer></script>
+<script src="/home.js?v=${CHROME.CSS_V}" defer></script>
 </body>
 </html>
 `;

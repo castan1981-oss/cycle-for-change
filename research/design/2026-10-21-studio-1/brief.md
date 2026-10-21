@@ -109,9 +109,9 @@ No task may get slower. Every page must stay at CLS 0.
 
 ## For Robert
 
-1. **Which ride is "next"?** Tour de Palm Springs (Feb 6) is on "The 2027 rides I'm doing" but not in Ride with me. So
-   every Ride with me says Center Ride Out while the list starts with Palm Springs. This pass makes the link open
-   Center Ride Out's row; the list order is yours.
+1. ~~**Which ride is "next"?**~~ **Answered (Robert, Oct 21): Tour de Palm Springs (Feb 6, 2027) is his next ride.** It
+   goes first in `NEXT_RIDES`; every Ride with me opens its row on the riding page until Feb 6, then rolls to Center Ride
+   Out. The homepage `#ride` section stays written for Center Ride Out (where the money goes, §5); its "Next up" was cut.
 2. **The ride film on phones.** Your Oct 8 rule puts it edge to edge under the name. On TSR that puts when, where and
    pace on screen two. UX recommends facts first and the film under the buttons, on phones only. Kept as you have it.
 3. **The long Instagram button** ("@TSR_THESATURDAYRIDE ON INSTAGRAM"). The system desk would shorten it to
@@ -358,6 +358,36 @@ Then:
   - phones two across.
 - **R8, `events.css`.** The event page's new order (h1 → date → sign-up → poster → lede → facts) on the grid, with
   facts in columns 9–12.
+
+B's markup, as built (for the fit-up, step 5):
+- R5: the opened row on Robert's list is `.det.det--mine`, its first child the `p.det-links` (above `dl.facts`). On every
+  other calendar page the links stay after the notes.
+- R6: `/rides/`'s `p.gr-jumpcities` is inside `.gr-hero .wrap`, between `#gr-form` and `#gr-status`; "Outside the US" is
+  its last `a.gr-chip` (no mark). The old `p.gr-hero-alt` is gone from `/rides/` (hub.js still adds it on the hubs).
+- R8: `article.event` now holds, in order, `h1`, `p.date-line`, `p.date-note`, `.ev-signup`, then `section.ev-poster`
+  (date and town only: `.ev-poster-info` is gone), the hidden h2, `p.lede`, `dl.facts`. The eyebrow is gone; its kind
+  is the first fact row ("Type"). The poster used to sit outside the article, before it.
+- R1: "Read the last ride" is still `.sign-acts > a.link.link--bone`, now to `/rides/<slug>/#robert`.
+- R2: today's film has `figcaption.road-film-cap.today-film-cap` with `button.road-film-btn.today-film-btn#todayBtn`
+  (Play / Pause) and `.road-film-len` "0:03", the reel's markup.
+- R3: `.tally-line .wrap > a[href="/#road"]` wraps the number and the words; the `.dot` span is gone from the markup.
+- R4: `/resources/`: h1, then `section.res-doors-wrap` (the three doors, Right now first), then `div.wrap.res-intro`
+  holding the `p.fn-pillar-intro` and the `.fn-line` that used to sit in the header.
+
+### More requests from B to A (new, from the build)
+
+- **R9, `styles.css`.** The guide, field-note and journal cards carry a place · month line under the picture:
+  `.fn-card > span.fn-card-where` (right after the `figure`). It needs the caption look (13px / 700 gunmetal, D6).
+- **R10, `styles.css`.** `/guides/` "From the road": his write-up is a `p.fn-more.fn-road-note > a.link` ("My first TSR")
+  between the "From the road" label and the cards. Spacing only (it reuses `.fn-more` and `.link`).
+- **R11, `styles.css`.** The guide hero and the Phoenix field-notes hero are `figure.fn-pillar-photo > picture > img`
+  now (AVIF / WebP sources): the `.fn-pillar-photo img` rules need `picture` to fill the figure
+  (`.fn-pillar-photo picture{display:block;width:100%;height:100%}`).
+- **R12, `home.css`.** The homepage tally line (`.tally-line--home`, hidden) and the menu now carry links: the menu's
+  "988 call or text" is `.menu-foot a[href="tel:988"]`, the footer's `.foot-crisis a[href="tel:988"]` (inner pages and
+  home). They want the same hairline-underlined link as the Trevor number beside them.
+- **R13, `rides.css`.** The ride page's tag row can now hold two link chips: "I rode it" (`a.gr-tag.gr-tag-rev`
+  to `#robert`) before the reviews chip. Gap only.
 
 ### Sequence and commits (one PR)
 

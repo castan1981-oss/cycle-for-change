@@ -6,7 +6,10 @@
       [data-ride-next] link at it (so a page nobody rebuilt never sends people to a ride that's over);
    2. shows the bar once you scroll (on the homepage, once the first-screen "Ride with me" tile is gone),
       and tucks it away while the page's own "Ride with me" (the closing block, #ride, the footer) is in view;
-   3. lets you hide it for the visit. */
+   3. lets you hide it for the visit.
+   Studio pass 1 (Oct 21, 2026): each ride's href opens its row on the riding page (/events/2027/riding/#<slug>), so
+   "here" compares the path without the hash; the bar's last day is data-until (it was data-cur, which /chrome.js
+   paints the tally into). */
 (function () {
   "use strict";
   var bar = document.getElementById("rideBar");
@@ -21,7 +24,8 @@
 
   var href = next ? next.href : "/events/2027/riding/";
   // Oct 8, 2026: the next ride has its own page (/nov7/). On that page the links say where you are and the bar stays away.
-  var here = location.pathname === href || location.pathname + "/" === href;
+  var path = href.split("#")[0];
+  var here = location.pathname === path || location.pathname + "/" === path;
   document.querySelectorAll("[data-ride-next]").forEach(function (a) {
     a.setAttribute("href", href);
     if (here) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
@@ -36,7 +40,7 @@
   if (!bar) return;
   // never on the help pages: they keep the 988 bar at the foot of a phone, and nothing else
   if (!next || here || document.querySelector(".help-bar") || /^\/resources\//.test(location.pathname)) { bar.remove(); return; }
-  if (bar.getAttribute("data-cur") !== next.until) {
+  if (bar.getAttribute("data-until") !== next.until) {
     bar.querySelector(".ridebar-d").textContent = next.date;
     bar.querySelector(".ridebar-n").textContent = next.name + ", " + next.where;
   }
