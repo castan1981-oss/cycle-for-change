@@ -25,9 +25,9 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/events/2027/calendar.css">
+  <link rel="stylesheet" href="/chrome.css?v=46">
+  <link rel="stylesheet" href="/events/events.css?v=46">
+  <link rel="stylesheet" href="/events/2027/calendar.css?v=46">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"February 2027 bike rides and races in the US","description":"18 US bike rides and races in February 2027, 11 with the organizer's date: BRR – Bike Ride to Rippey, Huracan Bikepacking Challenge and more.","url":"https://cycleforchange.org/events/2027/february/","dateModified":"2026-10-06","isPartOf":{"@type":"WebSite","name":"Cycle for Change","url":"https://cycleforchange.org/"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Events","item":"https://cycleforchange.org/events/"},{"@type":"ListItem","position":3,"name":"2027 calendar","item":"https://cycleforchange.org/events/2027/"},{"@type":"ListItem","position":4,"name":"February","item":"https://cycleforchange.org/events/2027/february/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"February 2027 bike rides and races in the US","url":"https://cycleforchange.org/events/2027/february/","numberOfItems":18,"itemListElement":[{"@type":"ListItem","position":1,"name":"BRR – Bike Ride to Rippey","url":"https://cycleforchange.org/events/2027/february/#brr-bike-ride-to-rippey"},{"@type":"ListItem","position":2,"name":"Huracan Bikepacking Challenge","url":"https://cycleforchange.org/events/2027/february/#huracan-bikepacking-challenge"},{"@type":"ListItem","position":3,"name":"Owl's Head Butte Metric Century (GABA)","url":"https://cycleforchange.org/events/2027/february/#owl-s-head-butte-metric-century"},{"@type":"ListItem","position":4,"name":"Rock Cobbler","url":"https://cycleforchange.org/events/2027/february/#rock-cobbler"},{"@type":"ListItem","position":5,"name":"Tour de Palm Springs","url":"https://cycleforchange.org/events/2027/february/#tour-de-palm-springs"},{"@type":"ListItem","position":6,"name":"BRAG Winter Ride Lux 2027","url":"https://cycleforchange.org/events/2027/february/#brag-winter-ride-lux-2027"},{"@type":"ListItem","position":7,"name":"Old Man Winter Bike Rally & Run","url":"https://cycleforchange.org/events/2027/february/#old-man-winter-bike-rally-run"},{"@type":"ListItem","position":8,"name":"24 Hours in the Old Pueblo","url":"https://cycleforchange.org/events/2027/february/#24-hours-in-the-old-pueblo"},{"@type":"ListItem","position":9,"name":"Valley of the Sun Stage Race","url":"https://cycleforchange.org/events/2027/february/#valley-of-the-sun-stage-race"},{"@type":"ListItem","position":10,"name":"Bike Sebring 6/12/24-Hour Races","url":"https://cycleforchange.org/events/2027/february/#bike-sebring-6-12-24-hour-races"},{"@type":"ListItem","position":11,"name":"Camino Real Double Century","url":"https://cycleforchange.org/events/2027/february/#camino-real-double-century"},{"@type":"ListItem","position":12,"name":"Tour de Cure: Arizona","url":"https://cycleforchange.org/events/2027/february/#tour-de-cure-arizona"},{"@type":"ListItem","position":13,"name":"Tucson Bicycle Classic","url":"https://cycleforchange.org/events/2027/february/#tucson-bicycle-classic"},{"@type":"ListItem","position":14,"name":"Bike the US for MS - Florida Coast","url":"https://cycleforchange.org/events/2027/february/#bike-the-us-for-ms-florida-coast"},{"@type":"ListItem","position":15,"name":"Homegrown Gravel Adventure","url":"https://cycleforchange.org/events/2027/february/#homegrown-gravel-adventure"},{"@type":"ListItem","position":16,"name":"Chilly Hilly","url":"https://cycleforchange.org/events/2027/february/#chilly-hilly"},{"@type":"ListItem","position":17,"name":"Grasshopper Adventure Series – Huffmaster Hopper","url":"https://cycleforchange.org/events/2027/february/#grasshopper-adventure-series-huffmaster-hopper"},{"@type":"ListItem","position":18,"name":"Iditarod Trail Invitational (ITI)","url":"https://cycleforchange.org/events/2027/february/#iditarod-trail-invitational"}]}</script>
@@ -56,15 +56,16 @@
       </svg>
       <span class="sr">Cycle for Change</span>
     </a>
+    <!-- Studio pass 1: one nav list. Guides replaces Field notes (Field notes stays in the footer and on /guides/). -->
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/towns/">Towns</a>
-      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -75,20 +76,20 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
-    <li><a href="/find-a-ride/">Find a ride <span>1,423</span></a></li>
+    <li><a href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/find-a-ride/">Find a ride <span>1,418</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
-    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
-    <span><b>988</b> call or text, any hour</span>
+    <span><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>
 <main id="main" class="wrap">
 
   <article class="calendar cal-short">
@@ -123,7 +124,7 @@
   </div>
 </details>
 <details class="ev" id="owl-s-head-butte-metric-century" data-m="2" data-t="Road" data-r="Southwest" data-c="" data-f="short" data-s="projected" data-y="0" data-q="owl&#39;s head butte metric century (gaba) marana (ora mae harn park) az southwest road greater arizona bicycling association (gaba)">
-  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d"><b class="dd num">6</b><span class="dm">Sat<br>Feb <span class="st" title="Projected from the 2026 edition">~</span></span></span><span class="nm"><span class="h">Owl’s Head Butte Metric Century (GABA)</span><span class="meta"><b>Marana, AZ</b> &middot; road &middot; ~66-69 mi metric and ~36-40 mi &middot; <a class="town-link" href="/towns/arizona/tucson/">Tucson guide &rarr;</a></span></span><span class="acts">Details</span></summary>
+  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d"><b class="dd num">6</b><span class="dm">Sat<br>Feb <span class="st" title="Projected from the 2026 edition">~</span></span></span><span class="nm"><span class="h">Owl’s Head Butte Metric Century (GABA)</span><span class="meta"><b>Marana, AZ</b> &middot; road &middot; ~66-69 mi metric and ~36-40 mi</span></span><span class="acts">Details</span></summary>
   <div class="det">
     <dl class="facts"><div><dt>Dates</dt><dd>Sat, Feb 6, 2027 · projected (2026 was Feb 7)</dd></div><div><dt>Where</dt><dd>Marana (Ora Mae Harn Park), AZ</dd></div><div><dt>Distances</dt><dd>~66-69 mi metric and ~36-40 mi</dd></div><div><dt>Format</dt><dd>club metric century</dd></div><div><dt>Organizer</dt><dd>Greater Arizona Bicycling Association (GABA)</dd></div><div><dt>Registration</dt><dd>Not yet open; limited to ~150 riders</dd></div></dl>
     <p class="note"><b>Date</b>2025: Sun Feb 2; 2026: Sat Feb 7 (listed as ‘Owl’s Head Gran Fondo’, Picacho, 75/36 mi).</p>
@@ -161,7 +162,7 @@
   </div>
 </details>
 <details class="ev you" id="tour-de-palm-springs" data-m="2" data-t="Road" data-r="California" data-c="Various charities" data-f="short 100" data-s="confirmed" data-y="1" data-q="tour de palm springs palm springs ca california road various charities local coachella valley charities (list on site) tdps committee (cvspin) &amp; perimeter bicycling association of america">
-  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d"><b class="dd num">6</b><span class="dm">Sat<br>Feb <span class="st ok" title="Date published by the organizer">✓</span></span></span><span class="nm"><span class="h">Tour de Palm Springs<span class="you-tag">Robert&rsquo;s ride</span></span><span class="meta"><b>Palm Springs, CA</b> &middot; road &middot; Various charities &middot; 101 mi, 88, 77, 64 (metric), 33 (half-metric), 16 mi… &middot; <a class="town-link" href="/towns/california/palm-springs/">Palm Springs guide &rarr;</a></span></span><span class="acts">Details</span></summary>
+  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d"><b class="dd num">6</b><span class="dm">Sat<br>Feb <span class="st ok" title="Date published by the organizer">✓</span></span></span><span class="nm"><span class="h">Tour de Palm Springs<span class="you-tag">Robert&rsquo;s ride</span></span><span class="meta"><b>Palm Springs, CA</b> &middot; road &middot; Various charities &middot; 101 mi, 88, 77, 64 (metric), 33 (half-metric), 16 mi…</span></span><span class="acts">Details</span></summary>
   <div class="det">
     <dl class="facts"><div><dt>Dates</dt><dd>Sat, Feb 6, 2027</dd></div><div><dt>Where</dt><dd>Palm Springs, CA</dd></div><div><dt>Distances</dt><dd>101 mi, 88, 77, 64 (metric), 33 (half-metric), 16 mi; plus 5K run/walk</dd></div><div><dt>Format</dt><dd>mass-participation charity-supporting century (CVSPIN / Perimeter)</dd></div><div><dt>Cause</dt><dd>Various charities — Local Coachella Valley charities (list on site)</dd></div><div><dt>Organizer</dt><dd>TDPS Committee (CVSPIN) &amp; Perimeter Bicycling Association of America</dd></div><div><dt>Registration</dt><dd>Open on BikeReg (bikereg.com/tour-de-palm-springs); tiered pricing $30-$125, final deadline Feb 6, 2027; no refunds</dd></div></dl>
     <p class="note"><b>Date</b>Organizer: Feb 5-6, 2027 (Friday check-in/expo Feb 5; ride Saturday Feb 6, 2027).</p>
@@ -221,7 +222,7 @@
   </div>
 </details>
 <details class="ev" id="valley-of-the-sun-stage-race" data-m="2" data-t="Race" data-r="Southwest" data-c="" data-f="multi" data-s="projected" data-y="0" data-q="valley of the sun stage race phoenix az southwest race valley of the sun stage race">
-  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-flag"/></svg><span class="d"><b class="dd num">12</b><span class="dm">Feb<br>12–14 <span class="st" title="Projected from the 2026 edition">~</span></span></span><span class="nm"><span class="h">Valley of the Sun Stage Race</span><span class="meta"><b>Phoenix, AZ</b> &middot; race &middot; stage race &middot; 3 days &middot; Individual time trial, road race and downtown criterium… &middot; <a class="town-link" href="/towns/arizona/phoenix/">Phoenix guide &rarr;</a></span></span><span class="acts">Details</span></summary>
+  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-flag"/></svg><span class="d"><b class="dd num">12</b><span class="dm">Feb<br>12–14 <span class="st" title="Projected from the 2026 edition">~</span></span></span><span class="nm"><span class="h">Valley of the Sun Stage Race</span><span class="meta"><b>Phoenix, AZ</b> &middot; race &middot; stage race &middot; 3 days &middot; Individual time trial, road race and downtown criterium…</span></span><span class="acts">Details</span></summary>
   <div class="det">
     <dl class="facts"><div><dt>Dates</dt><dd>Fri, Feb 12 – Sun, Feb 14, 2027 · projected (2026 was Feb 13–15)</dd></div><div><dt>Where</dt><dd>Phoenix, AZ</dd></div><div><dt>Distances</dt><dd>Individual time trial, road race and downtown criterium; all USAC categories incl. juniors/masters</dd></div><div><dt>Format</dt><dd>3-day USAC stage race (TT, road race, criterium)</dd></div><div><dt>Organizer</dt><dd>Valley of the Sun Stage Race</dd></div><div><dt>Registration</dt><dd>2027 TBA (usually BikeReg)</dd></div><div><dt>Qualification</dt><dd>USA Cycling license (category fields)</dd></div></dl>
     <p class="note"><b>Date</b>2026 edition Feb 13-15, 2026 (Fri-Sun, Phoenix area). Held the weekend before Presidents’ Day; 2027 projected Feb 12-14, 2027. Not yet announced.</p>
@@ -281,7 +282,7 @@
   </div>
 </details>
 <details class="ev" id="tucson-bicycle-classic" data-m="2" data-t="Race" data-r="Southwest" data-c="" data-f="multi" data-s="confirmed" data-y="0" data-q="tucson bicycle classic tucson az southwest race tucson bicycle classic">
-  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-flag"/></svg><span class="d"><b class="dd num">18</b><span class="dm">Feb<br>18–21 <span class="st ok" title="Date published by the organizer">✓</span></span></span><span class="nm"><span class="h">Tucson Bicycle Classic</span><span class="meta"><b>Tucson, AZ</b> &middot; race &middot; stage race &middot; 4 days &middot; Marana time trial (4.5 mi); Sahuarita road race (20.5… &middot; <a class="town-link" href="/towns/arizona/tucson/">Tucson guide &rarr;</a></span></span><span class="acts">Details</span></summary>
+  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-flag"/></svg><span class="d"><b class="dd num">18</b><span class="dm">Feb<br>18–21 <span class="st ok" title="Date published by the organizer">✓</span></span></span><span class="nm"><span class="h">Tucson Bicycle Classic</span><span class="meta"><b>Tucson, AZ</b> &middot; race &middot; stage race &middot; 4 days &middot; Marana time trial (4.5 mi); Sahuarita road race (20.5…</span></span><span class="acts">Details</span></summary>
   <div class="det">
     <dl class="facts"><div><dt>Dates</dt><dd>Thu, Feb 18 – Sun, Feb 21, 2027</dd></div><div><dt>Where</dt><dd>Tucson, AZ</dd></div><div><dt>Distances</dt><dd>Marana time trial (4.5 mi); Sahuarita road race (20.5 mi); Rio Nuevo Tucson criterium (0.73 mi); Oro Valley circuit race (2.8 mi); all USAC categories</dd></div><div><dt>Format</dt><dd>4-day USAC stage race (time trial, road race, criterium, circuit race)</dd></div><div><dt>Organizer</dt><dd>Tucson Bicycle Classic</dd></div><div><dt>Registration</dt><dd>Registration runs through the BikeReg link on the organizer site.</dd></div><div><dt>Qualification</dt><dd>USA Cycling license</dd></div></dl>
     <p class="note"><b>Date</b>Organizer site (tucsonbicycleclassic.com, checked Oct 1, 2026): February 18-21, 2027.</p>
@@ -330,7 +331,7 @@
   </div>
 </details>
 <details class="ev" id="chilly-hilly" data-m="2" data-t="Road" data-r="Pacific NW" data-c="" data-f="short" data-s="projected" data-y="0" data-q="chilly hilly bainbridge island wa pacific nw road cascade bicycle club cascade bicycle club">
-  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d"><b class="dd num">28</b><span class="dm">Sun<br>Feb <span class="st" title="Projected from the 2026 edition">~</span></span></span><span class="nm"><span class="h">Chilly Hilly</span><span class="meta"><b>Bainbridge Island, WA</b> &middot; road &middot; ~33 miles &middot; <a class="town-link" href="/towns/washington/seattle/">Seattle guide &rarr;</a></span></span><span class="acts">Details</span></summary>
+  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d"><b class="dd num">28</b><span class="dm">Sun<br>Feb <span class="st" title="Projected from the 2026 edition">~</span></span></span><span class="nm"><span class="h">Chilly Hilly</span><span class="meta"><b>Bainbridge Island, WA</b> &middot; road &middot; ~33 miles</span></span><span class="acts">Details</span></summary>
   <div class="det">
     <dl class="facts"><div><dt>Dates</dt><dd>Sun, Feb 28, 2027 · projected (2026 was Feb 22)</dd></div><div><dt>Where</dt><dd>Bainbridge Island, WA</dd></div><div><dt>Distances</dt><dd>~33 miles</dd></div><div><dt>Elevation</dt><dd>~2,675 ft</dd></div><div><dt>Format</dt><dd>season-opener metric / short hilly ride</dd></div><div><dt>Cause</dt><dd>Cascade Bicycle Club</dd></div><div><dt>Organizer</dt><dd>Cascade Bicycle Club</dd></div><div><dt>Registration</dt><dd>2027 registration not yet open as of Sept 2026</dd></div></dl>
     <p class="note"><b>Date</b>Cascade has not published 2027 dates. Chilly Hilly is traditionally the last Sunday in February; 2026 was Sun Feb 22, 2026 (last Sunday). Last Sunday of February 2027 = Sun Feb 28, 2027.</p>
@@ -387,15 +388,15 @@
 <section class="pledge" aria-labelledby="pledge-h">
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
   <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a></div>
 </section>
 </main>
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
-    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2027-02-06" data-rides="[{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Tour de Palm Springs, Palm Springs, CA</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=38" defer></script>
+  <script src="/ridebar.js?v=39" defer></script>
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -412,10 +413,10 @@
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
         <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
+        <a href="/brief/">Brief a ride</a>
         <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
@@ -439,12 +440,12 @@
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
-<script src="/chrome.js" defer></script>
+<script src="/chrome.js?v=46" defer></script>
 <script src="/events/events.js" defer></script>
 <script src="/events/report.js" defer></script>
 <script>(function(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);if(!e||e.tagName!=="DETAILS")return;e.open=true;addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});})();</script>

@@ -25,8 +25,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/events/events.css?v=35">
+  <link rel="stylesheet" href="/chrome.css?v=46">
+  <link rel="stylesheet" href="/events/events.css?v=46">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"City","name":"New York","url":"https://cycleforchange.org/towns/new-york/new-york/","sameAs":"https://www.nyc.gov","description":"New York City is the largest city in the United States, with about 8.8 million people across five boroughs. The TD Five Boro Bike Tour starts at Bowling Green at the southern tip of Manhattan on the first Sunday in May and is the one day a year 40 miles of city streets and bridges are closed to cars. Riders base themselves in the Financial District, a short roll from the start.","address":{"@type":"PostalAddress","addressLocality":"New York","addressRegion":"NY","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":40.7128,"longitude":-74.006},"containedInPlace":{"@type":"State","name":"New York"},"event":[{"@type":"SportsEvent","name":"TD Five Boro Bike Tour","url":"https://cycleforchange.org/events/five-boro-bike-tour/","startDate":"2027-05-02","endDate":"2027-05-02","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Bowling Green, Lower Manhattan (Broadway at the foot of the island), New York, NY 10004","address":{"@type":"PostalAddress","addressLocality":"New York","addressRegion":"NY","addressCountry":"US"}}}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Towns","item":"https://cycleforchange.org/towns/"},{"@type":"ListItem","position":2,"name":"New York","item":"https://cycleforchange.org/events/state/new-york/"},{"@type":"ListItem","position":3,"name":"New York","item":"https://cycleforchange.org/towns/new-york/new-york/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://cycleforchange.org/towns/new-york/new-york/","name":"New York, NY for cyclists","description":"New York City is the largest city in the United States, with about 8.8 million people across five boroughs. The TD Five Boro Bike Tour starts at Bowling…","dateModified":"2026-09-15","speakable":{"@type":"SpeakableSpecification","cssSelector":[".lede"]},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/"},"author":{"@type":"Person","name":"Robert Castan"}}</script>
@@ -55,15 +55,16 @@
       </svg>
       <span class="sr">Cycle for Change</span>
     </a>
+    <!-- Studio pass 1: one nav list. Guides replaces Field notes (Field notes stays in the footer and on /guides/). -->
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/towns/">Towns</a>
-      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -74,20 +75,20 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
-    <li><a href="/find-a-ride/">Find a ride <span>1,423</span></a></li>
+    <li><a href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/find-a-ride/">Find a ride <span>1,418</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
-    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
-    <span><b>988</b> call or text, any hour</span>
+    <span><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>
 <main id="main" class="wrap">
 
   <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/towns/">Towns</a></li><li><a href="/events/state/new-york/">New York</a></li><li><span aria-current="page">New York</span></li></ol></nav>
@@ -104,7 +105,7 @@
 
     <p class="lede">New York City is the largest city in the United States, with about 8.8 million people across five boroughs. The TD Five Boro Bike Tour starts at Bowling Green at the southern tip of Manhattan on the first Sunday in May and is the one day a year 40 miles of city streets and bridges are closed to cars. Riders base themselves in the Financial District, a short roll from the start.</p>
 
-    <dl class="facts"><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-airport"/></svg><dt>Nearest airport</dt><dd>Newark Liberty International (EWR), 13 mi</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-flag"/></svg><dt>Major airport</dt><dd>John F. Kennedy International (JFK), 18 mi</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-flag"/></svg><dt>Group rides</dt><dd><a href="/rides/ny/new-york/">28 weekly rides listed</a></dd></div></dl>
+    <dl class="facts"><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-airport"/></svg><dt>Nearest airport</dt><dd>Newark Liberty International (EWR), 13 mi</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-flag"/></svg><dt>Major airport</dt><dd>John F. Kennedy International (JFK), 18 mi</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-flag"/></svg><dt>Group rides</dt><dd><a href="/rides/ny/new-york/">27 weekly rides listed</a></dd></div></dl>
 
     <section class="local-rides" aria-labelledby="local-h">
       <h2 id="local-h">Group rides around New York</h2>
@@ -117,7 +118,7 @@
         <li><a href="/rides/new-york-ny-achilles-citi-bike-adaptive-cycling-central-park/"><span class="row-name">Achilles + Citi Bike Adaptive Cycling (Central Park)</span><span class="row-meta">Tuesdays and Saturdays, 5:00 pm &middot; New York, NY &middot; 5 mi out</span></a></li>
         <li><a href="/rides/new-york-ny-intandem-central-park-tandem-rides/"><span class="row-name">InTandem Weekly Central Park Rides</span><span class="row-meta">Tuesdays, Wednesdays, Thursdays, Saturdays and Sundays &middot; New York, NY &middot; 5 mi out</span></a></li>
       </ul>
-      <h3 class="ride-day-h" id="rides-sun">Sunday <span class="count">5 of 15</span></h3>
+      <h3 class="ride-day-h" id="rides-sun">Sunday <span class="count">5 of 14</span></h3>
       <ul class="rows">
         <li><a href="/rides/new-york-ny-5bbc-weekend-day-rides/"><span class="row-name">Five Borough Bicycle Club Day Rides</span><span class="row-meta">Saturdays and Sundays, 10:30 am &middot; New York, NY</span></a></li>
         <li><a href="/rides/new-york-ny-nycc-weekend-club-rides/"><span class="row-name">New York Cycle Club Weekend Rides</span><span class="row-meta">Saturdays and Sundays &middot; New York, NY</span></a></li>
@@ -133,7 +134,7 @@
         <li><a href="/rides/brooklyn-ny-dawn-patrol-prospect-park/"><span class="row-name">Dawn Patrol</span><span class="row-meta">Thursdays, 6:45 am &middot; Brooklyn, NY &middot; 3 mi out</span></a></li>
         <li><a href="/rides/brooklyn-ny-queer-joyride-tuesday/"><span class="row-name">Queer Joyride</span><span class="row-meta">Tuesdays, 7:00 pm &middot; Brooklyn, NY &middot; 3 mi out</span></a></li>
       </ul>
-      <p class="town-more"><a href="/rides/ny/new-york/">All 28 group rides in New York &rarr;</a></p>
+      <p class="town-more"><a href="/rides/ny/new-york/">All 27 group rides in New York &rarr;</a></p>
     </section>
 
     <section><h2>Bike events in New York</h2>
@@ -226,15 +227,15 @@
 <section class="pledge" aria-labelledby="pledge-h">
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
   <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a></div>
 </section>
 </main>
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
-    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2027-02-06" data-rides="[{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Tour de Palm Springs, Palm Springs, CA</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=38" defer></script>
+  <script src="/ridebar.js?v=39" defer></script>
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -251,10 +252,10 @@
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
         <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
+        <a href="/brief/">Brief a ride</a>
         <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
@@ -278,12 +279,12 @@
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
-<script src="/chrome.js" defer></script>
+<script src="/chrome.js?v=46" defer></script>
 <script src="/events/events.js?v=35" defer></script>
 <script src="/events/report.js" defer></script>
 </body>

@@ -25,9 +25,9 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/events/2027/calendar.css">
+  <link rel="stylesheet" href="/chrome.css?v=46">
+  <link rel="stylesheet" href="/events/events.css?v=46">
+  <link rel="stylesheet" href="/events/2027/calendar.css?v=46">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"November 2027 bike rides and races in the US","description":"7 US bike rides and races in November 2027, 1 with the organizer's date: Spirit World 100, Bike MS: Arizona, Iceman Cometh Challenge and more.","url":"https://cycleforchange.org/events/2027/november/","dateModified":"2026-10-06","isPartOf":{"@type":"WebSite","name":"Cycle for Change","url":"https://cycleforchange.org/"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Events","item":"https://cycleforchange.org/events/"},{"@type":"ListItem","position":3,"name":"2027 calendar","item":"https://cycleforchange.org/events/2027/"},{"@type":"ListItem","position":4,"name":"November","item":"https://cycleforchange.org/events/2027/november/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"November 2027 bike rides and races in the US","url":"https://cycleforchange.org/events/2027/november/","numberOfItems":7,"itemListElement":[{"@type":"ListItem","position":1,"name":"Spirit World 100","url":"https://cycleforchange.org/events/2027/november/#spirit-world-100"},{"@type":"ListItem","position":2,"name":"Bike MS: Arizona","url":"https://cycleforchange.org/events/2027/november/#bike-ms-arizona"},{"@type":"ListItem","position":3,"name":"Iceman Cometh Challenge","url":"https://cycleforchange.org/events/2027/november/#iceman-cometh-challenge"},{"@type":"ListItem","position":4,"name":"Austin Rattler MTB","url":"https://cycleforchange.org/events/2027/november/#austin-rattler-mtb"},{"@type":"ListItem","position":5,"name":"Death Valley Century","url":"https://cycleforchange.org/events/2027/november/#death-valley-century"},{"@type":"ListItem","position":6,"name":"UCE 24/12/6-Hour Time Trial Championship (Sebring, November)","url":"https://cycleforchange.org/events/2027/november/#uce-24-12-6-hour-time-trial-championship"},{"@type":"ListItem","position":7,"name":"El Tour de Tucson","url":"https://cycleforchange.org/events/2027/november/#el-tour-de-tucson"}]}</script>
@@ -56,15 +56,16 @@
       </svg>
       <span class="sr">Cycle for Change</span>
     </a>
+    <!-- Studio pass 1: one nav list. Guides replaces Field notes (Field notes stays in the footer and on /guides/). -->
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/towns/">Towns</a>
-      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -75,20 +76,20 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
-    <li><a href="/find-a-ride/">Find a ride <span>1,423</span></a></li>
+    <li><a href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/find-a-ride/">Find a ride <span>1,418</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
-    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
-    <span><b>988</b> call or text, any hour</span>
+    <span><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>
 <main id="main" class="wrap">
 
   <article class="calendar cal-short">
@@ -112,7 +113,7 @@
   </div>
 </details>
 <details class="ev" id="bike-ms-arizona" data-m="11" data-t="Charity ride" data-r="Southwest" data-c="MS" data-f="" data-s="projected" data-y="0" data-q="bike ms: arizona fountain hills az southwest charity ride ms national multiple sclerosis society national ms society">
-  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-hundred"/></svg><span class="d"><b class="dd num">6</b><span class="dm">Sat<br>Nov <span class="st" title="Projected from the 2026 edition">~</span></span></span><span class="nm"><span class="h">Bike MS: Arizona</span><span class="meta"><b>Fountain Hills, AZ</b> &middot; charity ride &middot; MS &middot; <a class="town-link" href="/towns/arizona/phoenix/">Phoenix guide &rarr;</a></span></span><span class="acts">Details</span></summary>
+  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-hundred"/></svg><span class="d"><b class="dd num">6</b><span class="dm">Sat<br>Nov <span class="st" title="Projected from the 2026 edition">~</span></span></span><span class="nm"><span class="h">Bike MS: Arizona</span><span class="meta"><b>Fountain Hills, AZ</b> &middot; charity ride &middot; MS</span></span><span class="acts">Details</span></summary>
   <div class="det">
     <dl class="facts"><div><dt>Dates</dt><dd>Sat, Nov 6, 2027 · projected (2026 was Nov 7)</dd></div><div><dt>Where</dt><dd>Fountain Hills, AZ</dd></div><div><dt>Format</dt><dd>Bike MS ride (one-day)</dd></div><div><dt>Cause</dt><dd>MS — National Multiple Sclerosis Society</dd></div><div><dt>Min. fundraising</dt><dd>Not published yet</dd></div><div><dt>Organizer</dt><dd>National MS Society</dd></div></dl>
     <p class="note"><b>Date</b>2026 ride is Saturday Nov 7, 2026 in Fountain Hills (Eventbrite/Visit Arizona); projected to the first Saturday of November 2027. Not yet published.</p>
@@ -183,7 +184,7 @@
   </div>
 </details>
 <details class="ev you" id="el-tour-de-tucson" data-m="11" data-t="Road" data-r="Southwest" data-c="Various charities" data-f="short 100" data-s="projected" data-y="1" data-q="el tour de tucson tucson az southwest road various charities multiple tucson-area nonprofits (e.g., project insight, vfw dept. of arizona); fundraising is optional perimeter bicycling association of america">
-  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d"><b class="dd num">20</b><span class="dm">Sat<br>Nov <span class="st" title="Projected from the 2026 edition">~</span></span></span><span class="nm"><span class="h">El Tour de Tucson<span class="you-tag">Robert&rsquo;s ride</span></span><span class="meta"><b>Tucson, AZ</b> &middot; road &middot; Various charities &middot; 102 mi (160 km), 63 mi metric, 32 mi half-metric, Family… &middot; <a class="town-link" href="/towns/arizona/tucson/">Tucson guide &rarr;</a></span></span><span class="acts">Details</span></summary>
+  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d"><b class="dd num">20</b><span class="dm">Sat<br>Nov <span class="st" title="Projected from the 2026 edition">~</span></span></span><span class="nm"><span class="h">El Tour de Tucson<span class="you-tag">Robert&rsquo;s ride</span></span><span class="meta"><b>Tucson, AZ</b> &middot; road &middot; Various charities &middot; 102 mi (160 km), 63 mi metric, 32 mi half-metric, Family…</span></span><span class="acts">Details</span></summary>
   <div class="det">
     <dl class="facts"><div><dt>Dates</dt><dd>Sat, Nov 20, 2027 · projected (2026 was Nov 21)</dd></div><div><dt>Where</dt><dd>Tucson, AZ</dd></div><div><dt>Distances</dt><dd>102 mi (160 km), 63 mi metric, 32 mi half-metric, Family Fun Ride (1-3 mi), 5K run/walk; Prologue camp &amp; Loop de Loop side events</dd></div><div><dt>Elevation</dt><dd>~2,800 ft (102 mi); ~1,600 ft (63 mi)</dd></div><div><dt>Format</dt><dd>signature timed century (Perimeter Bicycling)</dd></div><div><dt>Cause</dt><dd>Various charities — Multiple Tucson-area nonprofits (e.g., Project Insight, VFW Dept. of Arizona); fundraising is optional</dd></div><div><dt>Organizer</dt><dd>Perimeter Bicycling Association of America</dd></div><div><dt>Registration</dt><dd>2026 registration open on BikeSignup (bikesignup.com/Race/AZ/Tucson/ElTourdeTucson); 2027 registration typically opens in April</dd></div></dl>
     <p class="note"><b>Date</b>2026 = Saturday Nov 21 (43rd edition); El Tour is held the Saturday before Thanksgiving week, so 2027 projects to Nov 20. Registration typically opens in April. Organizer site (Oct 1, 2026) still shows only the Nov 21, 2026 edition (43rd); no 2027 date or registration announced.</p>
@@ -218,15 +219,15 @@
 <section class="pledge" aria-labelledby="pledge-h">
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
   <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a></div>
 </section>
 </main>
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
-    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2027-02-06" data-rides="[{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Tour de Palm Springs, Palm Springs, CA</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=38" defer></script>
+  <script src="/ridebar.js?v=39" defer></script>
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -243,10 +244,10 @@
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
         <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
+        <a href="/brief/">Brief a ride</a>
         <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
@@ -270,12 +271,12 @@
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
-<script src="/chrome.js" defer></script>
+<script src="/chrome.js?v=46" defer></script>
 <script src="/events/events.js" defer></script>
 <script src="/events/report.js" defer></script>
 <script>(function(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);if(!e||e.tagName!=="DETAILS")return;e.open=true;addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});})();</script>

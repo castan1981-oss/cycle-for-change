@@ -25,9 +25,9 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/events/events.css">
-  <link rel="stylesheet" href="/events/2027/calendar.css">
+  <link rel="stylesheet" href="/chrome.css?v=46">
+  <link rel="stylesheet" href="/events/events.css?v=46">
+  <link rel="stylesheet" href="/events/2027/calendar.css?v=46">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"The 2027 rides I'm doing for Cycle for Change","description":"The 6 rides Robert is doing in 2027 as part of the 10,000 miles: dates, distances, sign-up links.","url":"https://cycleforchange.org/events/2027/riding/","dateModified":"2026-10-06","isPartOf":{"@type":"WebSite","name":"Cycle for Change","url":"https://cycleforchange.org/"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cycleforchange.org/"},{"@type":"ListItem","position":2,"name":"Events","item":"https://cycleforchange.org/events/"},{"@type":"ListItem","position":3,"name":"2027 calendar","item":"https://cycleforchange.org/events/2027/"},{"@type":"ListItem","position":4,"name":"Robert’s rides","item":"https://cycleforchange.org/events/2027/riding/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"The 2027 rides I'm doing for Cycle for Change","url":"https://cycleforchange.org/events/2027/riding/","numberOfItems":6,"itemListElement":[{"@type":"ListItem","position":1,"name":"Tour de Palm Springs","url":"https://cycleforchange.org/events/2027/february/#tour-de-palm-springs"},{"@type":"ListItem","position":2,"name":"Center Ride Out","url":"https://cycleforchange.org/events/2027/april/#center-ride-out"},{"@type":"ListItem","position":3,"name":"Cycle to Zero","url":"https://cycleforchange.org/events/2027/may/#cycle-to-zero"},{"@type":"ListItem","position":4,"name":"Seattle to Portland Bicycle Classic (STP)","url":"https://cycleforchange.org/events/2027/july/#seattle-to-portland-bicycle-classic"},{"@type":"ListItem","position":5,"name":"El Tour de Tucson","url":"https://cycleforchange.org/events/2027/november/#el-tour-de-tucson"},{"@type":"ListItem","position":6,"name":"Recovery Ride (Castro Country Club)","url":"https://cycleforchange.org/events/2027/date-tba/#recovery-ride"}]}</script>
@@ -56,15 +56,16 @@
       </svg>
       <span class="sr">Cycle for Change</span>
     </a>
+    <!-- Studio pass 1: one nav list. Guides replaces Field notes (Field notes stays in the footer and on /guides/). -->
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/towns/">Towns</a>
-      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -75,20 +76,20 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
-    <li><a href="/find-a-ride/">Find a ride <span>1,423</span></a></li>
+    <li><a href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/find-a-ride/">Find a ride <span>1,418</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
-    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
-    <span><b>988</b> call or text, any hour</span>
+    <span><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>
 <main id="main" class="wrap">
 
   <article class="calendar cal-short">
@@ -99,13 +100,13 @@
     <div id="results">
       <section class="month">
 <details class="ev you" id="tour-de-palm-springs" data-m="2" data-t="Road" data-r="California" data-c="Various charities" data-f="short 100" data-s="confirmed" data-y="1" data-q="tour de palm springs palm springs ca california road various charities local coachella valley charities (list on site) tdps committee (cvspin) &amp; perimeter bicycling association of america">
-  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d"><b class="dd num">6</b><span class="dm">Sat<br>Feb <span class="st ok" title="Date published by the organizer">✓</span></span></span><span class="nm"><span class="h">Tour de Palm Springs<span class="you-tag">Robert&rsquo;s ride</span></span><span class="meta"><b>Palm Springs, CA</b> &middot; road &middot; Various charities &middot; 101 mi, 88, 77, 64 (metric), 33 (half-metric), 16 mi… &middot; <a class="town-link" href="/towns/california/palm-springs/">Palm Springs guide &rarr;</a></span></span><span class="acts">Details</span></summary>
-  <div class="det">
+  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d"><b class="dd num">6</b><span class="dm">Sat<br>Feb <span class="st ok" title="Date published by the organizer">✓</span></span></span><span class="nm"><span class="h">Tour de Palm Springs</span><span class="meta"><b>Palm Springs, CA</b> &middot; road &middot; Various charities &middot; 101 mi, 88, 77, 64 (metric), 33 (half-metric), 16 mi…</span></span><span class="acts">Details</span></summary>
+  <div class="det det--mine">
+    <p class="det-links"><a class="btn btn--ghost" href="https://tourdepalmsprings.com/event-info/" rel="noopener" target="_blank">Event site</a><span class="src">Sources: <a href="https://tourdepalmsprings.com/event-info/" rel="noopener nofollow" target="_blank">tourdepalmsprings.com</a> <a href="https://tourdepalmsprings.com/registration/" rel="noopener nofollow" target="_blank">tourdepalmsprings.com</a></span></p>
     <dl class="facts"><div><dt>Dates</dt><dd>Sat, Feb 6, 2027</dd></div><div><dt>Where</dt><dd>Palm Springs, CA</dd></div><div><dt>Distances</dt><dd>101 mi, 88, 77, 64 (metric), 33 (half-metric), 16 mi; plus 5K run/walk</dd></div><div><dt>Format</dt><dd>mass-participation charity-supporting century (CVSPIN / Perimeter)</dd></div><div><dt>Cause</dt><dd>Various charities — Local Coachella Valley charities (list on site)</dd></div><div><dt>Organizer</dt><dd>TDPS Committee (CVSPIN) &amp; Perimeter Bicycling Association of America</dd></div><div><dt>Registration</dt><dd>Open on BikeReg (bikereg.com/tour-de-palm-springs); tiered pricing $30-$125, final deadline Feb 6, 2027; no refunds</dd></div></dl>
     <p class="note"><b>Date</b>Organizer: Feb 5-6, 2027 (Friday check-in/expo Feb 5; ride Saturday Feb 6, 2027).</p>
     <p class="note"><b>Notes</b>~10,000 riders; 20+ bands at rest stops; downtown start on S. Palm Canyon Dr.</p>
     
-    <p class="det-links"><a class="btn btn--ghost" href="https://tourdepalmsprings.com/event-info/" rel="noopener" target="_blank">Event site</a><span class="src">Sources: <a href="https://tourdepalmsprings.com/event-info/" rel="noopener nofollow" target="_blank">tourdepalmsprings.com</a> <a href="https://tourdepalmsprings.com/registration/" rel="noopener nofollow" target="_blank">tourdepalmsprings.com</a></span></p>
     
     <section class="town-box" aria-labelledby="town-h-tour-de-palm-springs">
       <p class="eyebrow">The town guide</p>
@@ -126,13 +127,13 @@
   </div>
 </details>
 <details class="ev you" id="center-ride-out" data-m="4" data-t="Charity ride" data-r="California" data-c="LGBTQ+" data-f="multi" data-s="confirmed" data-y="1" data-q="center ride out los angeles ca california charity ride lgbtq+ los angeles lgbt center los angeles lgbt center">
-  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-hundred"/></svg><span class="d"><b class="dd num">23</b><span class="dm">Apr<br>23–25 <span class="st ok" title="Date published by the organizer">✓</span></span></span><span class="nm"><span class="h">Center Ride Out<span class="you-tag">Robert&rsquo;s ride</span></span><span class="meta"><b>Los Angeles, CA</b> &middot; charity ride &middot; LGBTQ+ &middot; 3 days &middot; 200+ miles over 3 days: Los Angeles to Ojai, camp, then… &middot; raise $2,500 &middot; <a class="town-link" href="/towns/california/los-angeles/">Los Angeles guide &rarr;</a></span></span><span class="acts">Details</span></summary>
-  <div class="det">
+  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-hundred"/></svg><span class="d"><b class="dd num">23</b><span class="dm">Apr<br>23–25 <span class="st ok" title="Date published by the organizer">✓</span></span></span><span class="nm"><span class="h">Center Ride Out</span><span class="meta"><b>Los Angeles, CA</b> &middot; charity ride &middot; LGBTQ+ &middot; 3 days &middot; 200+ miles over 3 days: Los Angeles to Ojai, camp, then… &middot; raise $2,500</span></span><span class="acts">Details</span></summary>
+  <div class="det det--mine">
+    <p class="det-links"><a class="btn btn--ghost" href="https://centerrideout.lalgbtcenter.org/en/" rel="noopener" target="_blank">Event site</a><span class="src">Sources: <a href="https://centerrideout.lalgbtcenter.org/en/" rel="noopener nofollow" target="_blank">centerrideout.lalgbtcenter.org</a> <a href="https://centerrideout.lalgbtcenter.org/events/" rel="noopener nofollow" target="_blank">centerrideout.lalgbtcenter.org</a></span></p>
     <dl class="facts"><div><dt>Dates</dt><dd>Fri, Apr 23 – Sun, Apr 25, 2027</dd></div><div><dt>Where</dt><dd>Los Angeles, CA</dd></div><div><dt>Distances</dt><dd>200+ miles over 3 days: Los Angeles to Ojai, camp, then back along the coast (Day 3 is 80+ miles). 1-day riders ride Day 2 only.</dd></div><div><dt>Format</dt><dd>LGBTQ/HIV multi-day (3-day, camping)</dd></div><div><dt>Cause</dt><dd>LGBTQ+ — Los Angeles LGBT Center</dd></div><div><dt>Min. fundraising</dt><dd>$2,500 by April 2, 2027 for 3-day riders; $250 for 1-day riders. Registration $95 (3-day), $195 (1-day).</dd></div><div><dt>Organizer</dt><dd>Los Angeles LGBT Center</dd></div><div><dt>Registration</dt><dd>Open for 2027 (give.lalgbtcenter.org/event/center-ride-out-2027/e775406); first-come registration, not a lottery (2026 was capped at 525 participants)</dd></div></dl>
     <p class="note"><b>Date</b>The Center and SFAF list April 23-25, 2027. Check-in is Thursday, April 22; the Finish Line Festival is Sunday, April 25, 12-8 pm, place to be announced. The 2026 ride was April 24-26.</p>
     <p class="note"><b>Notes</b>The Los Angeles LGBT Center’s own ride. The first one, in April 2026, raised about $830,000 with about 300 riders. In 2027 it goes from LA to Ojai, camps there, and comes back along the coast to an oceanside finish.</p>
     
-    <p class="det-links"><a class="btn btn--ghost" href="https://centerrideout.lalgbtcenter.org/en/" rel="noopener" target="_blank">Event site</a><span class="src">Sources: <a href="https://centerrideout.lalgbtcenter.org/en/" rel="noopener nofollow" target="_blank">centerrideout.lalgbtcenter.org</a> <a href="https://centerrideout.lalgbtcenter.org/events/" rel="noopener nofollow" target="_blank">centerrideout.lalgbtcenter.org</a></span></p>
     
     <section class="town-box" aria-labelledby="town-h-center-ride-out">
       <p class="eyebrow">The town guide</p>
@@ -153,13 +154,13 @@
   </div>
 </details>
 <details class="ev you" id="cycle-to-zero" data-m="5" data-t="Charity ride" data-r="California" data-c="HIV/AIDS" data-f="multi" data-s="confirmed" data-y="1" data-q="cycle to zero san francisco ca california charity ride hiv/aids san francisco aids foundation (hiv care/prevention, sexual health, substance-use and overdose-prevention programs) san francisco aids foundation">
-  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-hundred"/></svg><span class="d"><b class="dd num">21</b><span class="dm">May<br>21–23 <span class="st ok" title="Date published by the organizer">✓</span></span></span><span class="nm"><span class="h">Cycle to Zero<span class="you-tag">Robert&rsquo;s ride</span></span><span class="meta"><b>San Francisco → San Francisco / Sausalito</b> &middot; charity ride &middot; HIV/AIDS &middot; 3 days &middot; Day 1 SF to Guerneville ~85 mi; Day 2… &middot; raise $2,500 &middot; <a class="town-link" href="/towns/california/san-francisco/">San Francisco guide &rarr;</a></span></span><span class="acts">Details</span></summary>
-  <div class="det">
+  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-hundred"/></svg><span class="d"><b class="dd num">21</b><span class="dm">May<br>21–23 <span class="st ok" title="Date published by the organizer">✓</span></span></span><span class="nm"><span class="h">Cycle to Zero</span><span class="meta"><b>San Francisco → San Francisco / Sausalito</b> &middot; charity ride &middot; HIV/AIDS &middot; 3 days &middot; Day 1 SF to Guerneville ~85 mi; Day 2… &middot; raise $2,500</span></span><span class="acts">Details</span></summary>
+  <div class="det det--mine">
+    <p class="det-links"><a class="btn btn--ghost" href="https://2027.cycletozero.org/" rel="noopener" target="_blank">Event site</a><span class="src">Sources: <a href="https://2027.cycletozero.org/" rel="noopener nofollow" target="_blank">2027.cycletozero.org</a> <a href="https://2027.cycletozero.org/faqs/" rel="noopener nofollow" target="_blank">2027.cycletozero.org</a></span></p>
     <dl class="facts"><div><dt>Dates</dt><dd>Fri, May 21 – Sun, May 23, 2027</dd></div><div><dt>Where</dt><dd>San Francisco, CA</dd></div><div><dt>Route</dt><dd>San Francisco (2026 start: Fort Baker, Sausalito) → San Francisco / Sausalito (2026 finish: Martin Luther King Park, Sausalito)</dd></div><div><dt>Distances</dt><dd>Day 1 SF to Guerneville ~85 mi; Day 2 choose-your-own-adventure ~40 mi or ~100-mi century (2026 offered 38/65/104); Day 3 Guerneville to SF ~85 mi. Camping at Camp Russian River and Johnson’s Beach, Guerneville.</dd></div><div><dt>Format</dt><dd>HIV/AIDS multi-day (3-day, camping)</dd></div><div><dt>Cause</dt><dd>HIV/AIDS — San Francisco AIDS Foundation (HIV care/prevention, sexual health, substance-use and overdose-prevention programs)</dd></div><div><dt>Min. fundraising</dt><dd>3-Day Cyclists $500 by March 1, 2027 to hold a spot and $2,500 total by early May (the organizer gives both May 1 and May 4, 2027); Crew $250. Registration: 3-Day $95, 1-Day $225 (no minimum), Crew $95, DIY Squad $45</dd></div><div><dt>Organizer</dt><dd>San Francisco AIDS Foundation</dd></div><div><dt>Registration</dt><dd>Open for 2027 (donate.sfaf.org/event/cycle-to-zero-2027/e804781); limited capacity with waitlist, not a lottery; registrations non-refundable</dd></div></dl>
     <p class="note"><b>Date</b>Official 2027 site and FAQ state May 21-23, 2027 (1-Day option Saturday May 22, 2027). 2026 edition was May 29-31, 2026.</p>
     <p class="note"><b>Notes</b>Successor event to AIDS/LifeCycle on the SF side; 2026 inaugural edition had 700+ cyclists/crew and raised $1.6M+. Includes a DIY Squad remote-participation tier (not counted as an in-person ride option).</p>
     
-    <p class="det-links"><a class="btn btn--ghost" href="https://2027.cycletozero.org/" rel="noopener" target="_blank">Event site</a><span class="src">Sources: <a href="https://2027.cycletozero.org/" rel="noopener nofollow" target="_blank">2027.cycletozero.org</a> <a href="https://2027.cycletozero.org/faqs/" rel="noopener nofollow" target="_blank">2027.cycletozero.org</a></span></p>
     
     <section class="town-box" aria-labelledby="town-h-cycle-to-zero">
       <p class="eyebrow">The town guide</p>
@@ -180,13 +181,13 @@
   </div>
 </details>
 <details class="ev you" id="seattle-to-portland-bicycle-classic" data-m="7" data-t="Road" data-r="Pacific NW" data-c="" data-f="200 multi" data-s="confirmed" data-y="1" data-q="seattle to portland bicycle classic (stp) seattle to portland wa pacific nw road cascade bicycle club (nonprofit advocacy/education) cascade bicycle club">
-  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d"><b class="dd num">10</b><span class="dm">Jul<br>10–11 <span class="st ok" title="Date published by the organizer">✓</span></span></span><span class="nm"><span class="h">Seattle to Portland Bicycle Classic (STP)<span class="you-tag">Robert&rsquo;s ride</span></span><span class="meta"><b>Seattle to Portland, WA</b> &middot; road &middot; 2 days &middot; 205-208 miles total; ride in one day or two days &middot; <a class="town-link" href="/towns/washington/seattle/">Seattle guide &rarr;</a></span></span><span class="acts">Details</span></summary>
-  <div class="det">
+  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d"><b class="dd num">10</b><span class="dm">Jul<br>10–11 <span class="st ok" title="Date published by the organizer">✓</span></span></span><span class="nm"><span class="h">Seattle to Portland Bicycle Classic (STP)</span><span class="meta"><b>Seattle to Portland, WA</b> &middot; road &middot; 2 days &middot; 205-208 miles total; ride in one day or two days</span></span><span class="acts">Details</span></summary>
+  <div class="det det--mine">
+    <p class="det-links"><a class="btn btn--ink" href="/events/seattle-to-portland/">The full page</a><a class="btn btn--ghost" href="https://cascade.org/rides-events/seattle-portland-2027-2027" rel="noopener" target="_blank">Event site</a><span class="src">Sources: <a href="https://cascade.org/rides-events/seattle-portland-2027-2027" rel="noopener nofollow" target="_blank">cascade.org</a> <a href="https://cascade.org/rides-events" rel="noopener nofollow" target="_blank">cascade.org</a></span></p>
     <dl class="facts"><div><dt>Dates</dt><dd>Sat, Jul 10 – Sun, Jul 11, 2027</dd></div><div><dt>Where</dt><dd>Seattle to Portland, WA</dd></div><div><dt>Distances</dt><dd>205-208 miles total; ride in one day or two days</dd></div><div><dt>Elevation</dt><dd>~5,100 ft</dd></div><div><dt>Format</dt><dd>two-day double century / one-day option</dd></div><div><dt>Cause</dt><dd>Cascade Bicycle Club (nonprofit advocacy/education)</dd></div><div><dt>Organizer</dt><dd>Cascade Bicycle Club</dd></div><div><dt>Registration</dt><dd>Closed as of Oct 1, 2026 (early-bird pricing has ended); Cascade states registration re-opens for members in January 2027. Prices listed for 2027: $210 non-member, $165 member, $90 youth (18 and under). No day-of registration.</dd></div></dl>
     <p class="note"><b>Date</b>Cascade Bicycle Club has published the 2027 dates on its dedicated STP 2027 page (Sat-Sun, July 10-11, 2027).</p>
     <p class="note"><b>Notes</b>The largest multi-day bicycle event in the Pacific Northwest (~8,000 riders). Finishes in Portland, OR. Add-ons (parking, bus pass, bike transport) purchased via participant dashboard after registration opens.</p>
     
-    <p class="det-links"><a class="btn btn--ink" href="/events/seattle-to-portland/">The full page</a><a class="btn btn--ghost" href="https://cascade.org/rides-events/seattle-portland-2027-2027" rel="noopener" target="_blank">Event site</a><span class="src">Sources: <a href="https://cascade.org/rides-events/seattle-portland-2027-2027" rel="noopener nofollow" target="_blank">cascade.org</a> <a href="https://cascade.org/rides-events" rel="noopener nofollow" target="_blank">cascade.org</a></span></p>
     
     <section class="town-box" aria-labelledby="town-h-seattle-to-portland-bicycle-classic">
       <p class="eyebrow">The town guide</p>
@@ -207,13 +208,13 @@
   </div>
 </details>
 <details class="ev you" id="el-tour-de-tucson" data-m="11" data-t="Road" data-r="Southwest" data-c="Various charities" data-f="short 100" data-s="projected" data-y="1" data-q="el tour de tucson tucson az southwest road various charities multiple tucson-area nonprofits (e.g., project insight, vfw dept. of arizona); fundraising is optional perimeter bicycling association of america">
-  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d"><b class="dd num">20</b><span class="dm">Sat<br>Nov <span class="st" title="Projected from the 2026 edition">~</span></span></span><span class="nm"><span class="h">El Tour de Tucson<span class="you-tag">Robert&rsquo;s ride</span></span><span class="meta"><b>Tucson, AZ</b> &middot; road &middot; Various charities &middot; 102 mi (160 km), 63 mi metric, 32 mi half-metric, Family… &middot; <a class="town-link" href="/towns/arizona/tucson/">Tucson guide &rarr;</a></span></span><span class="acts">Details</span></summary>
-  <div class="det">
+  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d"><b class="dd num">20</b><span class="dm">Sat<br>Nov <span class="st" title="Projected from the 2026 edition">~</span></span></span><span class="nm"><span class="h">El Tour de Tucson</span><span class="meta"><b>Tucson, AZ</b> &middot; road &middot; Various charities &middot; 102 mi (160 km), 63 mi metric, 32 mi half-metric, Family…</span></span><span class="acts">Details</span></summary>
+  <div class="det det--mine">
+    <p class="det-links"><a class="btn btn--ink" href="/events/el-tour-de-tucson/">The full page</a><a class="btn btn--ghost" href="https://eltourdetucson.org/el-tour-de-tucson/" rel="noopener" target="_blank">Event site</a><span class="src">Sources: <a href="https://www.bikesignup.com/Race/AZ/Tucson/ElTourdeTucson" rel="noopener nofollow" target="_blank">bikesignup.com</a> <a href="https://eltourdetucson.org/el-tour-de-tucson/" rel="noopener nofollow" target="_blank">eltourdetucson.org</a></span></p>
     <dl class="facts"><div><dt>Dates</dt><dd>Sat, Nov 20, 2027 · projected (2026 was Nov 21)</dd></div><div><dt>Where</dt><dd>Tucson, AZ</dd></div><div><dt>Distances</dt><dd>102 mi (160 km), 63 mi metric, 32 mi half-metric, Family Fun Ride (1-3 mi), 5K run/walk; Prologue camp &amp; Loop de Loop side events</dd></div><div><dt>Elevation</dt><dd>~2,800 ft (102 mi); ~1,600 ft (63 mi)</dd></div><div><dt>Format</dt><dd>signature timed century (Perimeter Bicycling)</dd></div><div><dt>Cause</dt><dd>Various charities — Multiple Tucson-area nonprofits (e.g., Project Insight, VFW Dept. of Arizona); fundraising is optional</dd></div><div><dt>Organizer</dt><dd>Perimeter Bicycling Association of America</dd></div><div><dt>Registration</dt><dd>2026 registration open on BikeSignup (bikesignup.com/Race/AZ/Tucson/ElTourdeTucson); 2027 registration typically opens in April</dd></div></dl>
     <p class="note"><b>Date</b>2026 = Saturday Nov 21 (43rd edition); El Tour is held the Saturday before Thanksgiving week, so 2027 projects to Nov 20. Registration typically opens in April. Organizer site (Oct 1, 2026) still shows only the Nov 21, 2026 edition (43rd); no 2027 date or registration announced.</p>
     <p class="note"><b>Notes</b>~7,500-11,000 riders; USA Today ‘best road cycling event’ winner. Start/finish Tucson Convention Center.</p>
     
-    <p class="det-links"><a class="btn btn--ink" href="/events/el-tour-de-tucson/">The full page</a><a class="btn btn--ghost" href="https://eltourdetucson.org/el-tour-de-tucson/" rel="noopener" target="_blank">Event site</a><span class="src">Sources: <a href="https://www.bikesignup.com/Race/AZ/Tucson/ElTourdeTucson" rel="noopener nofollow" target="_blank">bikesignup.com</a> <a href="https://eltourdetucson.org/el-tour-de-tucson/" rel="noopener nofollow" target="_blank">eltourdetucson.org</a></span></p>
     
     <section class="town-box" aria-labelledby="town-h-el-tour-de-tucson">
       <p class="eyebrow">The town guide</p>
@@ -234,13 +235,13 @@
   </div>
 </details>
 <details class="ev you" id="recovery-ride" data-m="0" data-t="Charity ride" data-r="California" data-c="Recovery" data-f="multi" data-s="tba" data-y="1" data-q="recovery ride (castro country club) san francisco ca california charity ride recovery castro country club (sober lgbtq community space in san francisco&#39;s castro district) castro country club">
-  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-hundred"/></svg><span class="d d--tba"><b class="dd">TBA</b><span class="dm">date to<br>come</span></span><span class="nm"><span class="h">Recovery Ride (Castro Country Club)<span class="you-tag">Robert&rsquo;s ride</span></span><span class="meta"><b>San Francisco, CA</b> &middot; charity ride &middot; Recovery &middot; 3 days &middot; Sausalito → Guerneville (Marin/Sonoma hills) day 1… &middot; raise $1,500 &middot; <a class="town-link" href="/towns/california/san-francisco/">San Francisco guide &rarr;</a></span></span><span class="acts">Details</span></summary>
-  <div class="det">
+  <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-hundred"/></svg><span class="d d--tba"><b class="dd">TBA</b><span class="dm">date to<br>come</span></span><span class="nm"><span class="h">Recovery Ride (Castro Country Club)</span><span class="meta"><b>San Francisco, CA</b> &middot; charity ride &middot; Recovery &middot; 3 days &middot; Sausalito → Guerneville (Marin/Sonoma hills) day 1… &middot; raise $1,500</span></span><span class="acts">Details</span></summary>
+  <div class="det det--mine">
+    <p class="det-links"><a class="btn btn--ghost" href="https://www.castrocountryclub.org/recovery-ride" rel="noopener" target="_blank">Event site</a><span class="src">Sources: <a href="https://www.castrocountryclub.org/recovery-ride" rel="noopener nofollow" target="_blank">castrocountryclub.org</a> <a href="https://resources.sfaf.org/collections/breaking-news/complimentary-lgbtq-cycling-events-announced-by-castro-country-club-and-san-francisco-aids-foundation/" rel="noopener nofollow" target="_blank">resources.sfaf.org</a></span></p>
     <dl class="facts"><div><dt>Dates</dt><dd>Not announced yet</dd></div><div><dt>Where</dt><dd>San Francisco, CA</dd></div><div><dt>Route</dt><dd>Sausalito → Sausalito (via Guerneville)</dd></div><div><dt>Distances</dt><dd>Sausalito → Guerneville (Marin/Sonoma hills) day 1; off-bike recovery day (meetings, speakers) day 2; coastal return day 3</dd></div><div><dt>Format</dt><dd>Addiction-recovery / LGBTQ sober-community multi-day (3-day)</dd></div><div><dt>Cause</dt><dd>Recovery — Castro Country Club (sober LGBTQ community space in San Francisco’s Castro district)</dd></div><div><dt>Min. fundraising</dt><dd>$1,500</dd></div><div><dt>Organizer</dt><dd>Castro Country Club</dd></div><div><dt>Registration</dt><dd>2027 registration now open.</dd></div></dl>
     <p class="note"><b>Date</b>The 2027 dates aren’t out yet. The first ride was Sept 11–13, 2026.</p>
     <p class="note"><b>Notes</b>Fully supported, camping in Guerneville, $1,500 minimum; sober LGBTQ+ community ride benefiting Castro Country Club. SFAF calls it a complementary event to Cycle to Zero. Organizer contact: cccrecoveryride@gmail.com.</p>
     
-    <p class="det-links"><a class="btn btn--ghost" href="https://www.castrocountryclub.org/recovery-ride" rel="noopener" target="_blank">Event site</a><span class="src">Sources: <a href="https://www.castrocountryclub.org/recovery-ride" rel="noopener nofollow" target="_blank">castrocountryclub.org</a> <a href="https://resources.sfaf.org/collections/breaking-news/complimentary-lgbtq-cycling-events-announced-by-castro-country-club-and-san-francisco-aids-foundation/" rel="noopener nofollow" target="_blank">resources.sfaf.org</a></span></p>
     
     <section class="town-box" aria-labelledby="town-h-recovery-ride">
       <p class="eyebrow">The town guide</p>
@@ -262,22 +263,22 @@
 </details>
       </section>
     </div>
-    <figure class="ph ph--p"><picture><source type="image/avif" srcset="/img/ph/robert-peace.avif"><img src="/img/ph/robert-peace.jpg" alt="Robert in a red helmet on a desert road with his bike, throwing a peace sign." width="1080" height="1440" loading="lazy" decoding="async" style="object-position:50% 40%"></picture><figcaption>Paradise Valley, AZ · Sep 2025</figcaption></figure>
+    <figure class="ph ph--p"><picture><source type="image/avif" srcset="/img/ph/robert-peace-2.avif"><source type="image/webp" srcset="/img/ph/robert-peace-2.webp"><img src="/img/ph/robert-peace-2.jpg" alt="Robert in a red helmet on a desert road with his bike, throwing a peace sign." width="1080" height="1440" loading="lazy" decoding="async" style="object-position:50% 40%"></picture><figcaption>Paradise Valley, AZ · Sep 2025</figcaption></figure>
     <p class="cal-back"><a href="/events/2027/">&larr; The 2027 calendar</a><a href="/events/2027/all/">All 638, with filters</a></p>
   </article>
 
 <section class="pledge" aria-labelledby="pledge-h">
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
   <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a></div>
 </section>
 </main>
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
-    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2027-02-06" data-rides="[{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Tour de Palm Springs, Palm Springs, CA</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=38" defer></script>
+  <script src="/ridebar.js?v=39" defer></script>
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -294,10 +295,10 @@
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
         <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
+        <a href="/brief/">Brief a ride</a>
         <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
@@ -321,12 +322,12 @@
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
-<script src="/chrome.js" defer></script>
+<script src="/chrome.js?v=46" defer></script>
 <script src="/events/events.js" defer></script>
 <script src="/events/report.js" defer></script>
 <script>(function(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);if(!e||e.tagName!=="DETAILS")return;e.open=true;addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});})();</script>

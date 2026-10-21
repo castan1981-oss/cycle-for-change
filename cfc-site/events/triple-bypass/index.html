@@ -25,8 +25,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/events/events.css?v=35">
+  <link rel="stylesheet" href="/chrome.css?v=46">
+  <link rel="stylesheet" href="/events/events.css?v=46">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Events","item":"https://cycleforchange.org/events/"},{"@type":"ListItem","position":2,"name":"Colorado","item":"https://cycleforchange.org/events/state/colorado/"},{"@type":"ListItem","position":3,"name":"Triple Bypass","item":"https://cycleforchange.org/events/triple-bypass/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://cycleforchange.org/events/triple-bypass/","name":"Triple Bypass, Evergreen, CO: dates and routes","description":"The Triple Bypass is a one-day, 120-mile road ride from Evergreen, Colorado, to Avon in the Vail Valley over Juniper, Loveland and Vail passes, with…","dateModified":"2026-09-15","speakable":{"@type":"SpeakableSpecification","cssSelector":[".lede",".facts"]},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/"},"author":{"@type":"Person","name":"Robert Castan"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When does registration open and does it sell out?","acceptedAnswer":{"@type":"Answer","text":"It opens in early December for the following July. Both the Triple and the Double sold out for 2026 and the waitlist closed, so sign up when it opens."}},{"@type":"Question","name":"Where does it start and finish?","acceptedAnswer":{"@type":"Answer","text":"The Triple starts at Buchanan Park in Evergreen and finishes in Avon, about 118 road miles away. The Double starts in Empire with an 8:00 AM mass start."}},{"@type":"Question","name":"Is there a shorter option?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Double Bypass is 80 miles over Loveland and Vail passes with 6,500 feet of climbing."}},{"@type":"Question","name":"Are there cutoffs?","acceptedAnswer":{"@type":"Answer","text":"Yes, at each aid station. Miss one and you are pulled and shuttled to the finish."}},{"@type":"Question","name":"Can I ride an e-bike?","acceptedAnswer":{"@type":"Answer","text":"Class 1 e-bikes only, no throttles."}},{"@type":"Question","name":"How do I get back to Evergreen from Avon?","acceptedAnswer":{"@type":"Answer","text":"The ride is one way. Arrange a driver or check the organizer's info page for current transport options. Read the road closure notices before planning a pickup."}}]}</script>
@@ -55,15 +55,16 @@
       </svg>
       <span class="sr">Cycle for Change</span>
     </a>
+    <!-- Studio pass 1: one nav list. Guides replaces Field notes (Field notes stays in the footer and on /guides/). -->
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/towns/">Towns</a>
-      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -74,44 +75,28 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
-    <li><a href="/find-a-ride/">Find a ride <span>1,423</span></a></li>
+    <li><a href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/find-a-ride/">Find a ride <span>1,418</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
-    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
-    <span><b>988</b> call or text, any hour</span>
+    <span><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>
 <main id="main" class="wrap">
 
   <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/events/">Events</a></li><li><a href="/events/state/colorado/">Colorado</a></li><li><span aria-current="page">Triple Bypass</span></li></ol></nav>
-  <section class="ev-poster tile-p--art" style="--l:9" aria-label="Triple Bypass, at a glance"><img class="tile-art" src="/towns/art/evergreen.svg" alt="" loading="lazy" decoding="async" width="200" height="200">
-    <div class="ev-poster-top">
-      <span class="ev-poster-date num">TBA</span>
-      <span class="ev-poster-town">Evergreen</span>
-    </div>
-    <div class="ev-poster-info">
-      <p class="ev-poster-kind">Road &middot; since 1988</p>
-      <p class="ev-poster-when">2027 date not yet announced on triplebypass.org. The ride is usually the second Saturday of July (July 12, 2025; July 11, 2026). Registration for 2026 opened December 3, 2025, and both the Triple and the Double sold out with the waitlist closed. <span>@ Buchanan Park, Evergreen, CO (Double Bypass starts in Empire, CO). Finish in Avon, CO</span></p>
-      <ul class="ev-poster-spec"><li><b>Triple Bypass</b><span>Evergreen to Avon over Juniper, Loveland and Vail passes, 10,800 ft of climbing. Start any time up to 8:00 AM; most leave by 6:30.</span></li><li><b>Double Bypass</b><span>Empire to Avon over Loveland and Vail passes, 6,500 ft. Mandatory 8:00 AM mass start.</span></li></ul>
-      <p class="ev-poster-climb">10,800 ft of climbing on the longest route</p>
-    </div>
-  </section>
   <article class="event">
-    <p class="eyebrow">Road &middot; <a href="/towns/colorado/evergreen/">Evergreen, Colorado</a> &middot; since 1988</p>
     <h1>Triple Bypass</h1>
     <p class="date-line">2027 date not yet announced on triplebypass.org. The ride is usually the second Saturday of July (July 12, 2025; July 11, 2026). Registration for 2026 opened December 3, 2025, and both the Triple and the Double sold out with the waitlist closed.</p>
     
     
-
-    <h2 class="visually-hidden">What is the Triple Bypass?</h2>
-    <p class="lede">The Triple Bypass is a one-day, 120-mile road ride from Evergreen, Colorado, to Avon in the Vail Valley over Juniper, Loveland and Vail passes, with about 10,800 feet of climbing. It runs on the second Saturday of July and started in 1988 when a group of local cyclists decided to ride Evergreen to Vail in a day. It now draws several thousand riders, sells out, and closes Loveland Pass to cars for the day; an 80-mile Double Bypass starts in Empire.</p>
 
     <div class="ev-signup">
       <a class="btn btn--ink" href="https://www.bikesignup.com/Race/CO/Evergreen/TripleBypass" rel="noopener">Sign up for Triple Bypass</a>
@@ -119,7 +104,17 @@
       <p class="ev-signup-note">Registration opens in early December (December 3 for the 2026 ride) on BikeSignup/RunSignup. Both distances sold out for 2026 and the waitlist closed. Entries are non-refundable and cannot be transferred; you can defer, and optional third-party cancellation coverage is offered at checkout. Riders must be 12 or older. Class 1 e-bikes only.</p>
     </div>
 
-    <dl class="facts"><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-date"/></svg><dt>Next edition</dt><dd>Second Saturday of July</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-ride-day"/></svg><dt>Usually</dt><dd>Second Saturday of July</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-start"/></svg><dt>Start</dt><dd>Buchanan Park, Evergreen, CO (Double Bypass starts in Empire, CO). Finish in Avon, CO<br><a href="/towns/colorado/evergreen/">Evergreen, Colorado</a></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-distance"/></svg><dt>Distances</dt><dd><ul class="dist"><li><b>Triple Bypass</b> — Evergreen to Avon over Juniper, Loveland and Vail passes, 10,800 ft of climbing. Start any time up to 8:00 AM; most leave by 6:30.</li><li><b>Double Bypass</b> — Empire to Avon over Loveland and Vail passes, 6,500 ft. Mandatory 8:00 AM mass start.</li></ul></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-terrain"/></svg><dt>Terrain</dt><dd>Paved mountain highways with three long passes and long descents; some sections closed to cars for the ride.</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-climb"/></svg><dt>Climbing</dt><dd>10,800 ft on the longest route</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-riders"/></svg><dt>Riders</dt><dd>several thousand riders across the Triple and the Double; both distances sold out in 2026</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-founded"/></svg><dt>Founded</dt><dd>1988 by A group of Evergreen-area cyclists who decided to ride from Evergreen to the Vail Valley in one day</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Organizer</dt><dd><a href="https://www.triplebypass.org/" rel="noopener">Team Evergreen (Shift Events)</a></dd></div></dl>
+    <section class="ev-poster tile-p--art" style="--l:9" aria-label="Triple Bypass, at a glance"><img class="tile-art" src="/towns/art/evergreen.svg" alt="" loading="lazy" decoding="async" width="200" height="200">
+      <div class="ev-poster-top">
+        <span class="ev-poster-date num">TBA</span>
+        <span class="ev-poster-town">Evergreen</span>
+      </div>
+    </section>
+
+    <h2 class="visually-hidden">What is the Triple Bypass?</h2>
+    <p class="lede">The Triple Bypass is a one-day, 120-mile road ride from Evergreen, Colorado, to Avon in the Vail Valley over Juniper, Loveland and Vail passes, with about 10,800 feet of climbing. It runs on the second Saturday of July and started in 1988 when a group of local cyclists decided to ride Evergreen to Vail in a day. It now draws several thousand riders, sells out, and closes Loveland Pass to cars for the day; an 80-mile Double Bypass starts in Empire.</p>
+
+    <dl class="facts"><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><dt>Type</dt><dd>Road</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-date"/></svg><dt>Next edition</dt><dd>Second Saturday of July</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-ride-day"/></svg><dt>Usually</dt><dd>Second Saturday of July</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-start"/></svg><dt>Start</dt><dd>Buchanan Park, Evergreen, CO (Double Bypass starts in Empire, CO). Finish in Avon, CO<br><a href="/towns/colorado/evergreen/">Evergreen, Colorado</a></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-distance"/></svg><dt>Distances</dt><dd><ul class="dist"><li><b>Triple Bypass</b> — Evergreen to Avon over Juniper, Loveland and Vail passes, 10,800 ft of climbing. Start any time up to 8:00 AM; most leave by 6:30.</li><li><b>Double Bypass</b> — Empire to Avon over Loveland and Vail passes, 6,500 ft. Mandatory 8:00 AM mass start.</li></ul></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-terrain"/></svg><dt>Terrain</dt><dd>Paved mountain highways with three long passes and long descents; some sections closed to cars for the ride.</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-climb"/></svg><dt>Climbing</dt><dd>10,800 ft on the longest route</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-riders"/></svg><dt>Riders</dt><dd>several thousand riders across the Triple and the Double; both distances sold out in 2026</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-founded"/></svg><dt>Founded</dt><dd>1988 by A group of Evergreen-area cyclists who decided to ride from Evergreen to the Vail Valley in one day</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Organizer</dt><dd><a href="https://www.triplebypass.org/" rel="noopener">Team Evergreen (Shift Events)</a></dd></div></dl>
 
     <section><h2>How the Triple Bypass started</h2><p>One July day in 1988 a group of Evergreen cyclists decided it would be fun to ride from Evergreen to the Vail Valley. That first ride, over 100 miles with close to 11,000 feet of climbing, became the Triple Bypass. The three passes, Juniper, Loveland and Vail, gave it the name.</p>
 <p>The ride became the signature event of Team Evergreen, a local cycling nonprofit, and grew from a few hundred riders to several thousand. It is now produced by Shift Events operating as Team Evergreen. Registration fees feed the club’s giving, and riders can also fundraise for one of about a dozen approved charities. The organizers say the event has donated millions to nonprofits over the years.</p>
@@ -235,15 +230,15 @@
 <section class="pledge" aria-labelledby="pledge-h">
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
   <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a></div>
 </section>
 </main>
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
-    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2027-02-06" data-rides="[{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Tour de Palm Springs, Palm Springs, CA</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=38" defer></script>
+  <script src="/ridebar.js?v=39" defer></script>
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -260,10 +255,10 @@
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
         <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
+        <a href="/brief/">Brief a ride</a>
         <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
@@ -287,12 +282,12 @@
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
-<script src="/chrome.js" defer></script>
+<script src="/chrome.js?v=46" defer></script>
 <script src="/events/events.js?v=35" defer></script>
 <script src="/events/report.js" defer></script>
 </body>

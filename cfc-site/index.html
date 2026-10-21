@@ -26,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/avif" imagesrcset="/img/sign-print-4-phone.avif" media="(max-width:759px)">
   <link rel="preload" as="image" type="image/avif" imagesrcset="/img/sign-print-4.avif" media="(min-width:760px)">
-  <link rel="stylesheet" href="/home.css?v=40">
+  <link rel="stylesheet" href="/home.css?v=46">
 
   <script type="application/ld+json">
   {
@@ -121,15 +121,16 @@
       </svg>
       <span class="sr">Cycle for Change</span>
     </a>
+    <!-- Studio pass 1: one nav list. Guides replaces Field notes (Field notes stays in the footer and on /guides/). -->
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/towns/">Towns</a>
-      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -140,20 +141,20 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
     <li><a href="/find-a-ride/">Find a ride <span>1,423</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
-    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
-    <span><b>988</b> call or text, any hour</span>
+    <span><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line tally-line--home"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<p class="tally-line tally-line--home"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>
 
 <main id="main">
 
@@ -172,7 +173,7 @@
   <svg class="sign-sig" viewBox="0 0 150 150" aria-hidden="true" focusable="false"><use href="#lpMark"/></svg>
   <div class="wrap sign-in">
     <div class="sign-left">
-      <p class="sign-kicker">Robert. Phoenix. <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Mile <b class="num" data-miles>3,848</b> of training, on Strava.</a> The 10,000 start Jan 1.</p>
+      <p class="sign-kicker">Robert. Phoenix. <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Mile <b class="num" data-miles>4,060</b> of training, on Strava.</a> The 10,000 start Jan 1.</p>
       <h1 class="sign-h" id="sign-h">
         <svg class="sign-mark " viewBox="-10 -10 370 350" aria-hidden="true" focusable="false">
         <g filter="url(#lpWorn)">
@@ -198,12 +199,12 @@
       <p class="sign-note">Nothing to pay, nothing to join. <button class="sign-reset" id="signReset" type="button" data-sign-reset hidden>Clear the sign</button></p>
       <p class="sign-line">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</p>
       <nav class="finder" aria-label="Find a ride">
-        <a class="finder-tile finder-tile--ride" id="heroRide" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="finder-t">Ride with me</span><span class="finder-s">Center Ride Out, LA to Ojai and back</span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+        <a class="finder-tile finder-tile--ride" id="heroRide" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="finder-t">Ride with me</span><span class="finder-s">Tour de Palm Springs, Palm Springs, CA</span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
         <a class="finder-tile" href="/rides/"><svg class="finder-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkGroup"/></svg><span class="finder-t">Group rides</span><span class="finder-s">1,423 worldwide</span></a>
         <a class="finder-tile" href="/events/2027/"><svg class="finder-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkFinish"/></svg><span class="finder-t">Events</span><span class="finder-s">638 in 2027</span></a>
       </nav>
       <div class="sign-acts">
-        <a class="link link--bone" href="#road">Read the last ride</a>
+        <a class="link link--bone" href="/rides/scottsdale-az-scottsdale-cycling-saturday-ride/#robert">Read the last ride</a>
       </div>
     </div>
   </div>
@@ -214,7 +215,7 @@
   <div class="wrap">
   <svg class="stopbar" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect x="0" y="26" width="1200" height="18" fill="#EFEDEA"/></svg>
   <div class="nums-in">
-    <div class="num-tile"><b class="num" data-miles>3,848</b><span>miles since June 1</span></div>
+    <div class="num-tile"><b class="num" data-miles>4,060</b><span>miles since June 1</span></div>
     <div class="num-tile"><b class="num" id="rideCount">97</b><span>rides, <a href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">every one on Strava</a></span></div>
     <div class="num-tile num-tile--rose"><b class="num">10,000</b><span>miles in 2027. The count restarts in <b class="num" id="daysTo">88</b> days.</span></div>
   </div>
@@ -236,7 +237,7 @@
     <figure class="today-ph today-ph--lead">
       <picture><source type="image/avif" srcset="/img/today/oct12-gravel-1-800.avif 800w, /img/today/oct12-gravel-1.avif 1600w" sizes="(min-width: 900px) 56vw, 100vw"><img src="/img/today/oct12-gravel-1.jpg" srcset="/img/today/oct12-gravel-1-800.jpg 800w, /img/today/oct12-gravel-1.jpg 1600w" sizes="(min-width: 900px) 56vw, 100vw" width="1600" height="1200" alt="Robert grinning in a white kit and red glasses beside the LOVE mural, his bike against the wall. This morning’s route is painted on the gravel next to him, with CYCLE FOR change." loading="lazy" decoding="async"></picture>
     </figure>
-    <p class="today-where">Phoenix · October</p>
+    <p class="today-where">Phoenix · Oct 2026</p>
     <div class="today-pair">
       <figure class="today-film" id="todayFig" data-playing="false">
         <div class="today-film-frame">
@@ -246,6 +247,11 @@
           </video>
           <button class="road-play today-play" id="todayPlay" type="button" aria-label="Play, 3 seconds"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg></button>
         </div>
+        <!-- studio pass 1: the reel's Play / Pause line, so the film can always be stopped (WCAG 2.2.2) -->
+        <figcaption class="road-film-cap today-film-cap">
+          <button class="road-film-btn today-film-btn" id="todayBtn" type="button" data-playing="false"><svg class="rf-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><svg class="rf-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg><span id="todayBtnLabel">Play</span></button>
+          <span class="road-film-len">0:03</span>
+        </figcaption>
       </figure>
       <a class="today-ask" href="/cyclefor/"><span class="today-ask-q">What do you cycle for?</span><span class="today-ask-go">Say it on video</span></a>
     </div>
@@ -260,12 +266,12 @@
   <div class="wrap road">
     <div>
       <div class="s-head"><div class="stack16"><p class="eyebrow">From the road</p><h2 class="h2" id="road-h">The last rides.</h2></div></div>
-      <script type="application/json" id="tallyData">{"miles":3848.4,"rides":102,"updated":"2026-10-19T14:40:24.582Z","profileUrl":"https://www.strava.com/athletes/22899089","recent":[{"date":"2026-10-13T14:15:11Z","miles":41.7,"title":"Morning Ride"},{"date":"2026-10-12T13:27:49Z","miles":43.4,"title":"Morning Ride"},{"date":"2026-10-10T11:54:10Z","miles":93,"title":"TSR"},{"date":"2026-10-09T12:55:33Z","miles":32.5,"title":"Friday Shop Ride Bicycle Haüs"},{"date":"2026-10-07T14:17:39Z","miles":65,"title":"Morning Ride"},{"date":"2026-10-05T13:51:27Z","miles":35.7,"title":"Morning Ride"}],"chart":[[0,35.2],[9,312],[18,636.7],[27,1010.2],[36,1400.8],[45,1676.4],[53,1979.3],[62,2293.4],[71,2618.6],[80,2961.5],[89,3303.5],[98,3763.3],[100,3848.4]]}</script>
-      <ol class="log" id="log" data-max="4" aria-live="polite">
-        <li><span class="when">Tue Oct 13</span><span class="bar-mi" style="--w:.45"></span><span class="mi num">41.7<small>mi</small></span></li>
-        <li><span class="when">Mon Oct 12</span><span class="bar-mi" style="--w:.47"></span><span class="mi num">43.4<small>mi</small></span></li>
-        <li><span class="when">Sat Oct 10<b>TSR</b></span><span class="bar-mi" style="--w:1"></span><span class="mi num">93.0<small>mi</small></span></li>
-        <li><span class="when">Fri Oct 9<b>Friday Shop Ride Bicycle Haüs</b></span><span class="bar-mi" style="--w:.35"></span><span class="mi num">32.5<small>mi</small></span></li>
+      <script type="application/json" id="tallyData">{"miles":4059.5,"rides":107,"updated":"2026-10-21T23:31:12.718Z","profileUrl":"https://www.strava.com/athletes/22899089","recent":[{"date":"2026-10-20T13:24:00Z","miles":39.7,"title":"Morning Ride"},{"date":"2026-10-19T13:25:37Z","miles":67.6,"title":"Monday monday"},{"date":"2026-10-18T21:54:12Z","miles":37.8,"title":"Afternoon Ride"},{"date":"2026-10-15T14:35:43Z","miles":41,"title":"Morning Ride"},{"date":"2026-10-14T23:45:09Z","miles":25,"title":"Afternoon Ride"},{"date":"2026-10-13T14:15:11Z","miles":41.7,"title":"Morning Ride"}],"chart":[[0,35.2],[8,312],[17,636.7],[25,1010.2],[34,1400.8],[42,1676.4],[51,1979.3],[59,2293.4],[68,2618.6],[76,2961.5],[85,3303.5],[93,3763.3],[100,4059.5]]}</script>
+      <ol class="log" id="log" data-max="4" aria-live="polite" data-note-date="2026-10-10" data-note-href="/rides/scottsdale-az-scottsdale-cycling-saturday-ride/#robert">
+        <li><span class="when">Tue Oct 20</span><span class="bar-mi" style="--w:.59"></span><span class="mi num">39.7<small>mi</small></span></li>
+        <li><span class="when">Mon Oct 19<b>Monday monday</b></span><span class="bar-mi" style="--w:1"></span><span class="mi num">67.6<small>mi</small></span></li>
+        <li><span class="when">Sun Oct 18</span><span class="bar-mi" style="--w:.56"></span><span class="mi num">37.8<small>mi</small></span></li>
+        <li><span class="when">Thu Oct 15</span><span class="bar-mi" style="--w:.61"></span><span class="mi num">41.0<small>mi</small></span></li>
       </ol>
       <p class="road-note">Every ride gets a stroke, as long as the ride. The big ones get a page: the route, the town, who was there, the footage.</p>
     </div>
@@ -353,8 +359,8 @@
     <h2 class="h2" id="ride-h">Ride with me.</h2>
     <div class="ride-in">
       <div class="ride-next">
-        <p class="eyebrow">Next up, a Los Angeles LGBT Center fundraiser</p>
-        <h3 class="h2 ride-h3">April 23 to 25, I cycle for <span class="plate plate--big">the Center</span></h3>
+        <p class="eyebrow">A Los Angeles LGBT Center fundraiser</p>
+        <h3 class="h2 ride-h3"><span style="white-space:nowrap">April 23 to 25</span>, I cycle for <span class="plate plate--big">the Center</span></h3>
         <p>Center Ride Out. Los Angeles to Ojai, camp, then back along the coast to a finish by the ocean.</p>
         <dl class="facts-dl">
           <div><dt>3 days</dt><dd>200+ miles, Apr 23 to 25, 2027</dd></div>
@@ -414,11 +420,11 @@
 </main>
 
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
-    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2027-02-06" data-rides="[{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Tour de Palm Springs, Palm Springs, CA</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=38" defer></script>
+  <script src="/ridebar.js?v=39" defer></script>
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -435,10 +441,10 @@
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
         <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
+        <a href="/brief/">Brief a ride</a>
         <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
@@ -462,7 +468,7 @@
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
@@ -472,6 +478,6 @@
 <!-- Pass 37: the old phone tally bar (miles + Ride with me) is gone. It sat on top of the Pass 36 Ride with me bar,
      so a phone showed two bars at once. The Ride with me bar (scripts/chrome.js, /ridebar.js) does its job. -->
 
-<script src="/home.js?v=39" defer></script>
+<script src="/home.js?v=46" defer></script>
 </body>
 </html>
