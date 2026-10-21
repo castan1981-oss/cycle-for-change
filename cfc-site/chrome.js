@@ -15,9 +15,9 @@
   var ENDPOINTS = ["/api/strava", "/.netlify/functions/strava"];
   function paintMiles(miles) {
     var n = Math.max(0, Math.round(Number(miles) || 0));
-    document.querySelectorAll("[data-cur]").forEach(function (el) { el.textContent = n.toLocaleString("en-US"); });
+    document.querySelectorAll("[data-cur]:not(.ridebar)").forEach(function (el) { el.textContent = n.toLocaleString("en-US"); });
   }
-  if (document.querySelector("[data-cur]")) (function tryNext(i) {
+  if (document.querySelector("[data-cur]:not(.ridebar)")) (function tryNext(i) {
     if (i >= ENDPOINTS.length) return;
     fetch(ENDPOINTS[i], { cache: "no-store" })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
