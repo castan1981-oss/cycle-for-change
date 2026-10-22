@@ -437,4 +437,92 @@ Ship only if all of these hold:
 
 ## Sign-off
 
-Pending the after shots.
+**SHIP.** Art director, Oct 22, 2026, on `design/studio-pass-1` at d2cb097. I looked at `before/` against `final/`
+and `final-tiles/` at 390 and 1440 (home, `/rides/`, the Phoenix hub, TSR, STP, the Phoenix town guide, `/find-a-ride/`,
+`/events/2027/`, the riding page, `/brief/`, `/guides/`, the tire-pressure guide, `/resources/`), read the five commits
+that landed after the critic's read (b6b390e, a556f88, 0d81ddf, 4ab1676, 25f0412), and checked the three swapped photos
+at 1:1. The critic scored the build at b42f09f, so the 35 is the floor of what ships, not the ceiling.
+
+### The test
+
+| Line | Holds | Evidence |
+|---|---|---|
+| Score rose, no line dropped | Yes | 28 → 35. First screen 4 → 4, way-finding 3 → 4, hierarchy 3 → 3, finish 2 → 3, photography 2 → 3, consistency 2 → 3, desktop 2 → 3, phone 3 → 4, his 4 → 4, reading 3 → 4. One short of the brief's 36 target: the four 2s reached 3, not 4. "His" held at 4. |
+| No task slower; CLS 0 | Yes | No task slower in taps plus screens (lab-after). Task 4: 8 taps / 6.3 screens → 1 / 0 on a phone, 6 → 1 on desktop. Task 2 at 1440: 3 → 2 taps. Task 3: one tap to the open Palm Springs row at both widths, Event site on screen. Task 5 at 1440: 9.3 → 0.5 screens. Task 6: Trevor on the first screen at 375×667 and 360×640. One caveat, said plainly: at 390 a stranger who ignores the new "Jump to 03" line scrolls 2.9 screens where it was 2.8 (the guides intro grew 105px); one who reads it scrolls 0.1. CLS 0 on every path. The Ride with me landing's intermittent shift (3 of 8 loads at 390, max 0.583) is gone since a556f88: 0 of 8 at both widths in the lab's rerun and the access gate's. |
+| Survives: the phone home first screen | Yes | `final/home@390-first` against `before/`: the sign, the intro, the line, Ride with me, the two finder tiles, pixel-identical apart from the tiles sitting 22px higher and "Read the last ride" under them (R1, Robert's call). Tile bottoms 643 → 621 at 375×667, 616 → 594 at 360×640. |
+| Survives: the desktop stencil, the blank, his face | Yes | `final/home@1440-first`: the worn stencil and the rose blank on bruise, his photo edge to edge on the right. Under them, "I'm Robert. In 2027 I ride 10,000 miles, all on the bike.", the three tiles in one row, Read the last ride. |
+| Survives: the TSR route kit and "I rode it" | Yes | `final-tiles/rides_scottsdale-…@1440-02` (the stats row, the drawn route with Climb 1 and 2 named, the climb chart beside it), `@1440-04` ("I rode it", the rose rule, "The rest of it" fold), `@390-first` (the "I rode it" chip in the tag row, the film edge to edge under the name as Robert ruled). |
+| Survives: the guide's reading column | Yes | `final/guides_bike-tire-pressure@1440-first`: the big h1, the answer first, about 70 characters a line, Keep reading in 9–12. The raw "- " list is a real list (`@1440-02`). |
+| Survives: the 988 bar on `/resources/` | Yes | `final/resources@390-first`: the Right now door under the h1 with 988 and Trevor, the bar pinned at the foot. |
+| Survives: `/nov7/`'s four buttons at 375×548 | Yes | The access gate's read: all four on screen. |
+| Floor | Yes | Access gate, pass after 4ab1676: 0 horizontal scroll on 23 pages × 9 sizes; 0 text under 12px outside the US map's state codes (predates the pass); 0 new axe contrast failures and two old ones fixed; 4,208 Tab and menu stops, every one draws a ring; 0 reduced-motion violations; 0 autoplay on phones; the 3 new sub-44 targets all fixed. |
+| Photos | Yes | Brand gate: 41 placed or changed files at 1:1; the three that broke §10 were swapped in 0d81ddf and I looked at them again: stanley-dock (the packing-list guide), gravel-pines (`/find-a-ride/gravel/`), pv-sunrise-bars (the AIDS/LifeCycle guide). No vehicle, no face, `-2` file numbers, the old files unreferenced. Every `.ph` figure carries place · month. The one picture without a line is the `/guides/` hero (`haus`, no `where` in the registry, none before the pass either): For Robert, below. |
+| Identity | Yes | Brand gate: no new color, tint, gradient, mask, shadow, radius or font; rose came out of 28 hover and press rules; the last one (the row's Save star, `rides.css:187`) is asphalt since 0d81ddf. Labels 13 / 700 sentence case; only `.btn` keeps caps. No words written for him: every label already existed; the only new strings are alt text for the new crops and data. |
+| Gates | Yes | `brand-ambassador`: block cleared (83c77f2). `access-speed`: pass (d2cb097). |
+
+### What landed after the critic's read
+
+Not in the 35. Checked in the final shots.
+
+- **The sign's comma.** `final-tiles/home@1440-06` and `home@390-08` read "April 23 to 25, / I cycle for / the Center" at both widths (b6b390e; the critic's worst #2 is gone).
+- **Ride with me lands still.** A short calendar page opened on `#row` hides its list until the row is open (`WAIT_JS` / `OPEN_JS`; `.cal-ph` set by the build instead of `:has(>.ph)`), a556f88. 0 of 8 shifts at 390 and 1440.
+- **The guides hub's 01 / 03 / 04 jumps** have a 44px hit area (they were 21×21, the smallest target on any path). **Keep reading** on every guide looks like a link (hairline, arrow, 45px tall), the lab's "plain-looking links" at the fold at 1440. a556f88.
+- **The tally line's hit area** is biased down so the sticky header never covers it (a556f88).
+- **Three photos swapped and the Save star asphalt** (0d81ddf, above).
+- **Four access fixes** (4ab1676): the ride-report form's helper text on the rose field 3.59:1 → 4.68:1; `/tonight/`'s evening note 2.05:1 → 8.7:1; the footer's Privacy link 47px wide; the "I rode it" and review chips get a 44px hit area. `CSS_V` 47 and the regeneration (25f0412).
+
+### What I saw that nobody scored
+
+- **Rides directory pages on phones: the photo isn't edge to edge, and the caption sits off its edge.** `rides.css:907`,
+  `.gr-steps>.ph{margin:var(--s4) 0}`, the last block in the section layer, resets `margin-inline` to 0, so the base
+  rule's `-gut` bleed is undone on `/rides/`, every hub, state and facet page. The picture sits inset 16px and the
+  caption, which still pads `--gut`, sits 16px in from the picture's left edge (`final-tiles/rides@390-02`,
+  `rides_az_phoenix@390-03`). Desktop is right. One line (`margin-block:var(--s4)`), A's sheet, about 1,500 pages, but
+  it needs a `CSS_V` bump and the regeneration, so it is the first commit of Pass 2, not a hand-fix now.
+- **The guide column changes width mid-section.** Paragraphs wrap at about 610px, lists run to 810
+  (`guides_bike-tire-pressure@1440-02`): `--measure` is on `p` and not on `ul` / `ol`. One line in `styles.css`.
+- **Rose is still spent in bits** on the riding page (the big day numbers, the checks), the brief's and the guide's
+  square bullets, the town subtitle, the TSR "Map ↗". It goes with Pass 2's color-fields rule.
+- **Lone tiles.** The town page's seventh door (`towns_arizona_phoenix@1440-first`), the hub's seven town-guide cards
+  in a four-grid (`rides_az_phoenix@1440-02`), the lone Gravel tile on `/rides/` (`rides@390-03`). No hairline runs
+  under them now, so they are quieter than before, but they are still holes.
+- **The same crosshair marks "Best months" and "Group rides"** on the town page (critic-before's note; still so).
+- **The Ride with me tile at 1440 truncates its ride** ("Tour de Palm Springs, Palm Spring…", `home@1440-first`). The
+  tile is one of three in a row now; its sub-line needs the room, or a shorter form that exists in the data.
+- **The homepage has no closing field** (`home@390-10`, and on desktop): the reading rows go straight to the
+  drained-pool footer. The homepage never carried `CHROME.pledge()`; `#ride` is its ending and Pass 37's "say it
+  once" is the reason. The critic read it as a consistency gap. Decide it in the homepage's own pass (D8).
+- **The homepage footer's trust links are 16px tall** (lab, before and after): `.foot-trust` lives in `chrome.css`,
+  which the homepage doesn't load. Mirror it into `home.css`.
+- **On `/resources/` at 390 the 988 door is full-bleed while the two doors under it are inset boxes**
+  (`resources@390-first`). It makes the crisis door the loudest thing on the screen, which is right. Noted so nobody
+  evens it out the wrong way.
+
+### For Robert, five lines
+
+1. Every page now ends the same way: the dark block with two buttons, then the drained-pool footer. Guides is in the top menu on every page.
+2. Your photos are sharp with a hard edge, no fade, and bigger. On a desktop the words sit beside the picture instead of under a small one.
+3. "Read the last ride" is on the first screen of the homepage and goes straight to your TSR write-up: 8 taps down to 1 on a phone.
+4. Ride with me opens the Tour de Palm Springs row, already open, with the sign-up link on screen. On `/resources/`, 988 and Trevor sit right under the heading, on the first screen of a small phone.
+5. The stranger's score went from 28 to 35 out of 50 with nothing getting worse, and nothing in the identity moved. One PR, one preview; check it on your phone.
+
+### For Robert (new, from the sign-off)
+
+- The `/guides/` hero (the HAUS jersey, the canal) has no place · month line because the registry has none for it. Where and when was it taken? The studio won't guess.
+- The Phoenix town guide's band reads "Paradise Valley, AZ · Apr 2026" (the skyline from PV). Right as it stands; say if you'd rather it name Phoenix.
+- Still open from the brief: items 2 to 6 and 8 under For Robert above (the ride film on phones, the long Instagram button, `/cyclefor/`'s turning word, the Mile updates column, the homepage's two "What do you cycle for?" asks, the pictures the site needs).
+
+### Pass 2
+
+Ranked: what the critic still calls cheap, then the one-line misses from this read, then the gates' leftovers, then the lab's.
+
+1. **Desktop detail pages below the first screen** (critic-after's worst #1): the TSR street map, write-up and reviews stop at x 814; STP's body once the facts end; the town page's band, ride list and clubs; the guide's lists; `/cyclefor/`'s form with 600px empty on its left. Two or three columns past the fold, on the pages search lands on.
+2. **The ride-page restructure** (critic's #4; UX F6; D5): the Next ride bar folded into When, one filled host button, the review and route asks in one section, the dozen caps buttons in one width and two treatments.
+3. **Boxes as the default on directory pages** (critic's #3): the Phoenix hub's five stacked grids before a ride name, `/guides/`' 21 identical cards, the town's seven doors. Space first, a hairline second. The color-fields rule (which section gets plaster, patina, pool) comes with it.
+4. **The events' own graphic system** (critic's #5): the "11.20~" / "04.25✓" tiles over topo, "07.10 Seattle" set bigger than the h1 under it, the rose "Missing an event" field. One date format site-wide: "Sat, Oct 24", "July 10–11, 2027", "07.10" and "Apr 23 to 25" are four.
+5. **The rides-directory photo bleed and caption on phones** (above; one line, the first commit).
+6. **The guide's list measure** (above; one line).
+7. **Access gate's "not fixed on purpose"**: the US map's 8.8px state codes and sub-44 state shapes on `/rides/` (the map's own redesign); the town map's 15px SVG label links on city hubs; `h3` link rows inside place cards taking the card's hit area; the homepage reel's "12 s" label painting in (0.11 shift, before and after).
+8. **The lab's leftovers**: "Cycle for Change" never in readable words on the first screen; typing a city into "Who do you cycle for?" at 1440 only changes the sign; "Event site" as the way to ride it (needs a sourced `reg_status` before a row can say Sign up); the homepage's `#ride` names Center Ride Out while the tile names Palm Springs (by design until Apr 25); the tire guides' 7×16 citation links; the town cards' 48×16 chips; the homepage footer's 16px trust links.
+9. **From this read**: the Ride with me tile's truncated sub-line at 1440; the crosshair on two facts; the lone tiles; the homepage's ending (D8); the breadcrumb rule (F8); one next step at the foot of every page (F13); the dead-class cleanup (M12), which is also the way back down from the CSS weight the access gate measured (chrome.css 51 KB, rides.css 75 KB).
+10. **Pictures**: a per-image AVIF quality in `tools/grade.py` (`phx-skyline` 256 → about 150 KB); the full-resolution hero; a wide photo of him riding; the rest of For Robert 8.
