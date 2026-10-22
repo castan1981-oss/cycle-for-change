@@ -51,8 +51,9 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   the repo root (`netlify.toml` → `publish = "cfc-site"`). Anything outside `cfc-site/` is not
   served. The repo-root `index.html`, `guides/`, `logo.css` and the `cfc-mark-*` / `cfc-roundel-*`
   SVGs are an old unpublished tree; don't build there.
-- Netlify build command: `npm install && node tools/build-rides.js`. If the rides build fails, the
-  deploy fails and the previous deploy stays live.
+- Netlify build command: `npm install && node tools/build-rides.js && node scripts/build-events.js && node
+  scripts/build-calendar.js` (events and calendar since Oct 21, 2026, so a passed event date clears itself). If any of
+  them fails, the deploy fails and the previous deploy stays live.
 - Functions in `netlify/functions/`: `strava` (behind `/api/strava`, the tally), `strava-webhook`,
   `strava-connect`, `strava-week`, `mileage`, `instagram`, `submission-created`, `deploy-succeeded` (IndexNow, §7). The retired
   `votes` / `pledges` functions and the `/api/votes` redirect are being removed — don't call them,
@@ -81,9 +82,9 @@ scripts/apply-chrome.py`. Never hand-edit one page's chrome.
 
 ### Committed vs built on deploy
 - Committed: source, data and every generator's output (homepage, events, towns, calendar, and the
-  rides pages as of your commit). Netlify reruns `tools/build-rides.js` on every deploy, so ride
-  pages, "next ride" dates and freshness hiding are computed at deploy time; a weekly workflow
-  forces a deploy. Commit the rides rebuild with a data change so the diff can be reviewed.
+  rides pages as of your commit). Netlify reruns `tools/build-rides.js`, `scripts/build-events.js` and
+  `scripts/build-calendar.js` on every deploy, so ride pages, event pages, "next ride" dates and freshness
+  hiding are computed at deploy time; a daily workflow forces a deploy. Commit the rides rebuild with a data change so the diff can be reviewed.
 
 ### Styles and behaviour
 - Inner pages load `/chrome.css` (tokens, type, buttons, nav, closing block, footer, `.ph`
@@ -747,3 +748,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-19 — Rides re-check, Tier A batch 1: the 63 best-earning pages pinned to a city and the 31 amber flags re-checked at their sources; 24 start pins, 5 confirmed, 35 changed, 2 seasonal breaks, 6 unconfirmed; Critical Mass London confirmed and pinned.
 - 2026-10-21 — IndexNow (the 500K plan, AI-search desk): every production deploy tells Bing which pages changed (`deploy-succeeded`), the key file at the root, `tools/indexnow.js` for a full send.
 - 2026-10-21 — The Monday re-check actually re-checks: verifiers in the foreground, background tasks off for the step, a red run when nothing ships, 110 rides a week.
+- 2026-10-21 — Event pages and the 2027 calendar rebuild on every deploy, after the rides (a passed event date no longer keeps its Event markup until someone rebuilds by hand).

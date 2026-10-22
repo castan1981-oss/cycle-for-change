@@ -6,7 +6,10 @@
   # weekly GitHub Action (.github/workflows/rides-weekly-rebuild.yml) triggers
   # a deploy so they never go more than a week stale. If the generator fails
   # (bad rides.json) the deploy fails and the previous deploy stays live.
-  command = "npm install && node tools/build-rides.js"
+  # Oct 21, 2026: the event pages and the 2027 calendar rebuild on deploy too (2.5 s), so an event whose date
+  # has passed loses its "upcoming" Event markup the next day (El Tour, Nov 21) instead of waiting for a
+  # hand rebuild. They read rides' live.json, so they run after the rides build.
+  command = "npm install && node tools/build-rides.js && node scripts/build-events.js && node scripts/build-calendar.js"
 
 [dev]
   publish = "cfc-site"
