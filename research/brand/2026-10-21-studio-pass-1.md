@@ -64,3 +64,8 @@ Three photos break §10, one press state is still rose, and one action was added
   - `photos/crew.jpg`, `photos/finish-line.jpg`, `photos/south-mountain.jpg`
 - The `/guides/` hero (`haus-road-2`) has no place and month line, because the registry's `haus` has none to give (`where: ""`).
 - `camelback-sunrise-2` is newly placed on `/rides/az/scottsdale/`. A mailbox number (6043) and the 40th St sign can be read in it. It breaks no rule, but it's Robert's call.
+
+## Resolution (lead, Oct 21, 2026, evening)
+- Lane Paint (rose press state): fixed in 0d81ddf — the row star and the Save button go asphalt when pressed.
+- Photos: fixed in 0d81ddf — bike-wall → stanley-dock, gravel-road → gravel-pines, pv-dusk → pv-sunrise-bars (all three replacements already on the site and cleared by this read).
+- Two actions: **Robert's call, Oct 21: keep "Read the last ride" on the homepage's first screen** (it took his write-up from 8 taps to 1; a quiet text link, not a button). Fallback if it ever looks crowded on his phone: desktop only. Not a block.
