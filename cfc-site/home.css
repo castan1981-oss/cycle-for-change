@@ -1401,3 +1401,10 @@ html{-webkit-tap-highlight-color:transparent;scroll-padding-top:calc(var(--nav-h
 .today-film .road-film-btn{color:var(--paper);font-size:15px}
 .today-film .road-film-btn span,.road-film-btn [data-film-label]{display:inline-block;min-width:2.9em}
 .today-film .road-film-btn:focus-visible{outline:2px solid var(--paper);outline-offset:-2px}
+
+/* R12 — 988 in the phone menu and the footer is a tel: link now (as on inner pages); the hidden tally line's
+   link inherits its line */
+.menu-foot a,.foot-crisis a{position:relative;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:currentColor}
+.menu-foot a::before,.foot-crisis a::before{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;margin-top:-22px}
+.menu-foot a b,.foot-crisis a b{color:inherit}
+.tally-line a{color:inherit;text-decoration:none}

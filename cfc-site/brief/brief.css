@@ -151,9 +151,7 @@
    keeps its space whether or not the HEAD check has un-hidden it yet (motion §11). ————————————————— */
 .bf-drop p{max-width:var(--measure)}
 .bf-sample{min-height:44px;display:flex;align-items:center}
-/* until the script un-hides it, its row is held by the block's own padding (a [hidden] element can't be
-   given a box from this layer: chrome.css's base `[hidden]{display:none!important}` outranks it) */
-.bf-top:has(>.bf-sample[hidden]){padding-bottom:62px}   /* 44px line + the 18px gap */
+/* until the script un-hides it, it keeps its row (/chrome.css base: .bf-sample[hidden]) */
 .bf-how{margin-top:var(--sec)}
 .bf-how dd{max-width:var(--measure)}
 @media (min-width:1024px){
@@ -161,7 +159,6 @@
   .bf-top{max-width:none;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);row-gap:var(--s3);align-items:end}
   .bf-top>*{grid-column:1 / span 6}
   .bf-top>.bf-drop{grid-column:7 / -1;grid-row:2 / span 3;align-self:stretch;align-content:center}
-  .bf-top:has(>.bf-sample[hidden]){padding-bottom:68px}   /* 44px + the 24px row gap */
   .bf-out{max-width:none}
 }
 }

@@ -959,4 +959,20 @@ article.gr-note{font-size:inherit;max-width:none}   /* .gr-note (the hub's small
   .gr-find .gr-kinds{grid-template-columns:repeat(4,minmax(0,1fr))}
 }
 
+/* CLS 0 for what the scripts fill in after load: the next-ride bar's "in 3 days" line (ride.js) wraps under the
+   date on a phone, so its line is held; the area map's zoom chips (map.js, phones up to 640px) keep their row */
+.gr-next-rel:empty{display:inline-block;min-width:1px;min-height:1.2em}
+@media (max-width:640px){
+  .gr-next{min-height:77px;align-content:flex-start}
+}
+/* the area map's zoom chips (map.js, phones up to 640px): laid out from the first paint and shown once the map is
+   live, so they take exactly their own room on every map, however their names wrap (and aren't focusable before) */
+@media (max-width:640px) and (scripting:enabled){
+  .gr-map--zoomable .gr-map-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;visibility:hidden}
+  .gr-map--zoomable.is-live .gr-map-chips{visibility:visible}
+}
+
+/* R13 — the ride page's tag row holds up to two link chips ("I rode it", then the reviews): one gap, one line */
+.gr-tags:has(.gr-tag-rev){display:flex;flex-wrap:wrap;gap:var(--s1)}
+.gr-tags .gr-tag-rev{min-height:32px;padding:6px 10px 5px}
 }

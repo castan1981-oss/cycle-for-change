@@ -231,17 +231,32 @@ main.fn-post,main.fn-pillar{display:flex;flex-direction:column}
 }
 @media (min-width:1200px){.fn-spokes:has(>:nth-child(10):last-child){grid-template-columns:repeat(5,minmax(0,1fr))}}
 
-/* R4 — /resources/: the crisis block right under the h1, on the grid. The Right now door sits under the h1
-   ahead of the intro (markup, item 10); it keeps its tar field and takes the column's full width on phones,
-   so Trevor lands on the first screen at 375×667 and above the 988 bar at 390×844. The doors close up. */
-.fn-pillar-head>.wrap>.res-door--now{margin:var(--s3) 0 0;padding:var(--s3) var(--s2) var(--s3) var(--s3);gap:var(--s1);max-width:640px}
-.fn-pillar-head>.wrap>.res-door--now p{margin:0}
-.fn-pillar-head>.wrap>.res-door--now .btn{margin-top:var(--s1)}
-.fn-pillar-head:has(>.wrap>.res-door--now){padding-top:var(--top)}
-.fn-pillar-head:has(>.wrap>.res-door--now) h1{max-width:20ch}
+/* R4 — /resources/: the crisis line right under the h1. The markup (apply-chrome.py) puts the three doors straight
+   after the header, Right now first, and the intro after them. The header closes up under its h1, the doors
+   follow with no second heading's worth of air, and on phones the Right now door runs edge to edge in its tar
+   field, so Trevor lands on the first screen at 375×667 and above the 988 bar at 390×844. On the grid: the
+   doors keep the page's 12 columns (three across from 900px), the intro sits on the reading measure. */
+.fn-pillar-head:has(+.res-doors-wrap){padding-block:var(--top) var(--s3)}
+.fn-pillar-head:has(+.res-doors-wrap) h1{max-width:20ch}
+.fn-pillar-head+.res-doors-wrap{padding-top:var(--s3)}
+.res-doors-wrap .fn-spokes-head{margin-bottom:var(--s2)}
+.res-door--now{gap:var(--s1)}
+.res-door--now p{margin:0}
+.res-door--now .btn{margin-top:var(--s1)}
+.res-intro{padding-top:var(--gap)}
+.res-intro .fn-pillar-intro{margin:0}
 @media (max-width:639px){
-  .fn-pillar-head>.wrap>.res-door--now{margin-inline:calc(-1 * var(--gut));padding-inline:var(--gut)}
-  .fn-pillar-head:has(>.wrap>.res-door--now) h1{font-size:clamp(2rem,9vw,2.75rem)}
+  .fn-pillar-head:has(+.res-doors-wrap) h1{font-size:clamp(2rem,9vw,2.75rem)}
+  .res-doors-wrap .res-door--now{margin-inline:calc(-1 * var(--gut));padding:var(--s3) var(--gut)}
+  .res-doors-wrap .fn-spokes-head{margin-bottom:var(--s1)}
 }
+@media (min-width:900px){.res-doors{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
+/* R9 — the guide, field-note and journal cards: the place · month line under the picture, the caption look (D6) */
+.fn-card>.fn-card-where{margin:-2px 0 0;font-size:13px;font-weight:700;line-height:1.3;color:var(--mute)}
+/* R10 — /guides/ "From the road": his write-up as one line between the label and the cards */
+.fn-road .fn-road-note{margin:0 0 var(--s3)}
+/* R11 — the guide hero and the Phoenix field-notes hero are a <picture> inside the figure now */
+.fn-pillar-photo picture{display:block;width:100%;height:100%}
+.fn-pillar-head--photo{padding-top:0}   /* the phone masthead padding (640px rule above) left a concrete strip over the photo's now-hard top edge */
 }

@@ -49,6 +49,12 @@
 /* —— base (same as home) —— */
 *,*::before,*::after{box-sizing:border-box}
 [hidden]{display:none !important}
+/* studio pass 1: two boxes a page's script un-hides after load keep their size while hidden, so nothing below them
+   moves (CLS 0). Same layer as [hidden] and more specific, which is the only way past its !important. */
+@media (scripting:enabled){
+  .place-filter[hidden]{display:block!important;visibility:hidden}
+  .bf-sample[hidden]{display:flex!important;visibility:hidden}
+}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:var(--bone)}
 body{
   margin:0;
@@ -611,11 +617,14 @@ details.gr-fold>dl,details.gr-fold>.gr-about-body,.dir-fold>.dir-built-grid,.pla
 /* M9 — one fact grid: the label and the value share a top line in every cell; one rule above, hairlines
    between, no box. (The dd dropped by half the slack: the cell's two grid rows stretched.) */
 .gr-fact,.facts>div{align-content:start}
-.gr-facts,.facts{border:0;border-top:1px solid var(--asphalt);gap:0}
-.gr-fact,.facts>div{border:0;border-bottom:1px solid var(--line);padding:14px 16px 14px 0}
-@media (min-width:640px){.gr-fact+.gr-fact,.facts>div+div{border-left:1px solid var(--line);padding-left:16px}}
+.gr-facts,.facts{border:0;border-top:1px solid var(--asphalt);gap:0 var(--s3)}
+.gr-fact,.facts>div{border:0;border-bottom:1px solid var(--line);padding:14px 0}
+/* cells are separated by air, not a vertical hairline: a divider on "every cell but the first" indented the first
+   cell of each wrapped row, and every cell of a one-column list (the event facts beside the lede) */
 .gr-fact dt,.facts dt,.gr-route-nums dt,.bf-stats dt{font:var(--label);color:var(--mute);letter-spacing:0}
 .gr-fact-mark,.facts>div .mk{color:var(--asphalt)}
+.facts>div:not(:has(>.mk)){grid-template-columns:minmax(0,1fr)}   /* a cell with no mark (the calendar's) doesn't keep the mark's empty column */
+.facts>div:not(:has(>.mk))>*{grid-column:1}
 .gr-route-nums,.det .facts{background:transparent;border:0;border-top:1px solid var(--asphalt)}
 .gr-route-nums>div{border-color:var(--line)}
 .gr-route-nums b.num,.bf-stats dd,.fn-table td,.gr-rev-stat b,.mo-c{font-variant-numeric:lining-nums tabular-nums}
@@ -652,7 +661,6 @@ main:has(.pledge){padding-bottom:0}
 
 /* S3 — the frame's type (type-layout), and R3: the tally line is a link to the live count (/#road), no dot */
 .tally-line{font:400 var(--fs-small)/1.4 var(--display);color:var(--mute)}
-.tally-line .dot{display:none}   /* until the regeneration drops the span (R3); delete in the fit-up */
 .tally-line a{position:relative;color:inherit;text-decoration:underline;text-decoration-color:var(--dust-deep);text-decoration-thickness:1px;text-underline-offset:4px}
 .tally-line a::before{content:"";position:absolute;left:0;right:0;top:50%;height:44px;margin-top:-22px}   /* a 44px hit area; the line keeps its height */
 @media (hover:hover){.tally-line a:hover{text-decoration-color:currentColor}}
@@ -681,3 +689,9 @@ html{scroll-padding-top:calc(var(--nav-h) + 12px)}      /* focus and anchors nev
 .theme-dark .nav .btn--sm{background:transparent;border-color:var(--paper);color:var(--paper)}
 @media (hover:hover){.theme-dark .nav .btn--sm:hover{background:var(--paper);border-color:var(--paper);color:var(--asphalt)}}
 .theme-dark .nav .btn--sm:active{background:var(--paper);border-color:var(--paper);color:var(--asphalt)}
+
+/* R12 — 988 in the phone menu and the footer is a tel: link now; it takes the same hairline as the Trevor number
+   beside it, and a 44px hit area that doesn't change the line */
+.menu-foot a,.foot-crisis a{position:relative;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:currentColor}
+.menu-foot a::before,.foot-crisis a::before{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;margin-top:-22px}
+.menu-foot a b,.foot-crisis a b{color:inherit}

@@ -403,6 +403,11 @@ a.tel{white-space:nowrap;text-decoration:underline;text-decoration-color:current
 .tw-sw{display:inline-block;width:12px;height:12px;border-radius:50%;border:1.5px solid var(--asphalt);background:var(--paper);vertical-align:-1px}
 .tw-sw--full{background:var(--asphalt)}
 .tw-key-hint{margin-left:auto;color:var(--creosote-ink)}
+/* CLS 0 on /towns/: the zoom chips (map.js, phones) are laid out from the first paint and shown once the map is live */
+@media (max-width:640px) and (scripting:enabled){
+  .gr-map--zoomable .gr-map-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;visibility:hidden}
+  .gr-map--zoomable.is-live .gr-map-chips{visibility:visible}
+}
 .gr-map figcaption .tw-key-ph{display:none}
 @media (max-width:640px){.gr-map figcaption .tw-key-desk{display:none}.gr-map figcaption .tw-key-ph{display:inline-flex}}
 .gr-chip{display:inline-flex}   /* the system's pick is the one chip (/chrome.css M4); this sheet kept a copy of rides.css's */

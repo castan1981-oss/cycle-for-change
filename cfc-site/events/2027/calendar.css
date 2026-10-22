@@ -262,8 +262,8 @@ a.mo-tile:focus-visible,a.cal-door:focus-visible{outline-offset:2px}
 
 /* R5 — Robert's riding list (/events/2027/riding/): the opened row leads with its links. The links row sits at
    the top of the panel, its buttons on the panel's left edge, then a hairline and air before the facts. */
-.ev.you .det>.det-links:first-child{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s1) var(--s3);margin:0 0 var(--s3);padding:var(--s1) 0 var(--s3);border-bottom:1px solid var(--line)}
-.ev.you .det>.det-links:first-child .src{flex-basis:100%;margin:0}
-.ev.you .det>.det-links:first-child+.facts{margin-top:0}
+.det--mine>.det-links:first-child{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s1) var(--s3);margin:0 0 var(--s3);padding:var(--s1) 0 var(--s3);border-bottom:1px solid var(--line)}
+.det--mine>.det-links:first-child .src{flex-basis:100%;margin:0}
+.det--mine>.det-links:first-child+.facts{margin-top:0}
 
 }
