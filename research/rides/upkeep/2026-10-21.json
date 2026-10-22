@@ -1,0 +1,175 @@
+[
+  {
+    "slug": "indianapolis-in-bike-line-tuesday-thursday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-21",
+    "note": "The watch URL (about/group-rides-pg439.htm) answers 404 since Sept 30. The Bike Line moved its site to Shopify; a page at /pages/local-rides exists but is JavaScript-rendered and returned 429 Too Many Requests on two attempts; the schedule could not be read from the raw HTML or confirmed via web search. To check by hand: call The Bike Line at 6520 Cornell Ave, Broad Ripple, or check their Instagram @bikelineindiana."
+  },
+  {
+    "slug": "south-bend-in-mba-monday-leisure-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "The Michiana Bicycle Association's weekly rides page at the new URL states: Monday Leisure Ride, 6:00 pm, Pinhook Park, 2801 Riverside Dr, 10–17 miles at 10–13 mph, group stays together, April–September and beyond if weather permits; the old URL (/mba-rides) answers 404 (fetched Oct 21, 2026).",
+    "sources": [
+      "https://www.mbabike.com/MemberOrg/mbabike/Page/MBA-Weekly-Rides"
+    ],
+    "changes": {
+      "links": {
+        "website": "https://www.mbabike.com/MemberOrg/mbabike/Page/MBA-Weekly-Rides"
+      },
+      "refresh": {
+        "watch_url": "https://www.mbabike.com/MemberOrg/mbabike/Page/MBA-Weekly-Rides"
+      }
+    }
+  },
+  {
+    "slug": "delaware-city-de-wcbc-castle-trail-night-rides",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "White Clay Bicycle Club's calendar (huntcal.com) lists Castle Trail Night Rides 2026 on Wednesdays Oct 7, 14, 21 and 28 at 6:00–7:30 pm; the end-words flag was triggered by the Greenville Weekend Warrior Ride being cancelled on Oct 17, not this ride (fetched Oct 21, 2026).",
+    "sources": [
+      "https://www.huntcal.com/cal/view/WCBC/WCBC?vm=r"
+    ]
+  },
+  {
+    "slug": "etowah-nc-brbc-etowah-training-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "Blue Ridge Bicycle Club's calendar lists Trevor's Etowah Training Ride on Tue Oct 27, Thu Oct 29, and Tuesdays and Thursdays through November at 12:00 pm from Etowah Park; calendar notes say the route changed to go through Mills River and Etowah, replacing the Pisgah Forest out-and-back; the end-words flag was from the Jackson Park ride's Oct 24 cancellation, not this ride (fetched Oct 21, 2026).",
+    "sources": [
+      "https://brbcnc.clubexpress.com/content.aspx?page_id=4001&club_id=285841"
+    ],
+    "changes": {
+      "description": "A weekly training ride from Etowah Park on Tuesdays and Thursdays. As of October 2026 the club updated the route: rides now follow a course through Mills River and Etowah at a variety of paces and distances. It is a training series, not a guided ride, and riders split into groups by pace.",
+      "visitor_notes": "Registration is encouraged: you get a cancellation email if the ride is called off. If you are not a club member, sign the BRBC waiver first.",
+      "distance_km": null,
+      "distance_miles": null
+    }
+  },
+  {
+    "slug": "gold-river-ca-bike-hikers-tuesday-evening-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "Sacramento Bike Hikers' ClubExpress calendar shows Tuesday Evening Ride F20 on Oct 29, 2026; the event page confirms 6:00–8:00 pm from the Bel Air parking lot, Gold River, 20 miles at about 15 mph; the end-words flag was triggered by a cancellation of a different ride (Barrio to...?) on the same calendar (fetched Oct 21, 2026).",
+    "sources": [
+      "https://bikehikers.clubexpress.com/content.aspx?page_id=4001&club_id=216251",
+      "https://bikehikers.clubexpress.com/content.aspx?page_id=4091&club_id=216251&item_id=3039336"
+    ]
+  },
+  {
+    "slug": "greenville-de-wcbc-weekend-warrior-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "White Clay Bicycle Club's calendar lists the Greenville Weekend Warrior Ride on Sat Oct 24 and Oct 31, 2026, 9:00 am–1:00 pm, from Janssen's Market; Oct 17 was a single cancellation, not the series (fetched Oct 21, 2026).",
+    "sources": [
+      "https://www.huntcal.com/cal/view/WCBC/WCBC?vm=r"
+    ]
+  },
+  {
+    "slug": "harmony-pa-premier-bicycle-club-harmony-lake-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "Premier Bicycle Club's calendar lists the Harmony Lake Ride for Wed Oct 21 and Oct 28, 2026, 10:00 am–12:30 pm; Oct 14 was a single cancellation (fetched Oct 21, 2026).",
+    "sources": [
+      "https://www.premierbicycleclub.org/content.aspx?page_id=4001&club_id=400812"
+    ]
+  },
+  {
+    "slug": "hendersonville-nc-brbc-jackson-park-training-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "Blue Ridge Bicycle Club's calendar lists Trevor's Jackson Park Training Ride for Sat Oct 31 at 10:00 am and every Saturday from Nov 7 at 12:00 pm from Jackson Park; Oct 24 was cancelled for the Cookie Ride event; the calendar consistently shows 10:00 am (not 9:30 am) as the current start time (fetched Oct 21, 2026).",
+    "sources": [
+      "https://brbcnc.clubexpress.com/content.aspx?page_id=4001&club_id=285841"
+    ],
+    "changes": {
+      "schedule": "Saturdays, 10:00 am, from Jackson Park; noon from Nov 7. The same Apple Pancake loop every week.",
+      "time_local": "10:00 am",
+      "start_hhmm": "10:00"
+    }
+  },
+  {
+    "slug": "keizer-or-keizer-family-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "Salem Bicycle Club's event calendar (fetched Oct 21, 2026) lists the Thursday Night Lights Ride at 6:00 pm on Oct 8, 15, 22 (CCW) and 29 (CW) from Cummings Elementary School; the CANCELED entry nearby is a Zoom meeting cancellation, not the ride.",
+    "sources": [
+      "https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926"
+    ]
+  },
+  {
+    "slug": "keizer-or-salem-bicycle-club-keizer-morning-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "Salem Bicycle Club's event calendar (fetched Oct 21, 2026) lists the Keizer Morning Ride on Tuesdays Oct 6, 13, 20 and 27 at 10:00 am from Keizer Station; the CANCELED entry on the page is a Zoom meeting, not this ride.",
+    "sources": [
+      "https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926"
+    ]
+  },
+  {
+    "slug": "lewes-de-sussex-cyclists-friday-brewery-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "Sussex Cyclists' upcoming events (fetched Oct 21, 2026) lists the Friday Brewery Gravel Trail Ride at 10:00 am on Oct 23 (Lewes Brewery Company, 21 mi), Oct 30 (Crooked Hammock Brewery, 23 mi) and Nov 6 (Lewes Brewery Company, 21 mi); the CANCELED entries on the page are Monday rides cancelled due to high winds, not the Friday ride.",
+    "sources": [
+      "https://www.sussexcyclists.org/Upcoming-Events"
+    ]
+  },
+  {
+    "slug": "millsboro-de-sussex-cyclists-cupola-park-thursday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-21",
+    "note": "Sussex Cyclists' upcoming events page (fetched Oct 21, 2026) lists events through Dec 28, 2026 but shows no Cupola Park Thursday rides; no Thursday events of any kind appear anywhere in the listing. The club and its other rides are active."
+  },
+  {
+    "slug": "milton-de-sussex-cyclists-wednesday-dogfish-head-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "Sussex Cyclists' upcoming events (fetched Oct 21, 2026) lists Wednesday Dogfish Head rides on Oct 21, 28 and Nov 4 at 10:00 am (NEW WINTER START TIME) with 14, 16 and 17 mph pace groups; the CANCELED entries on the page are Monday rides cancelled for high winds.",
+    "sources": [
+      "https://www.sussexcyclists.org/Upcoming-Events"
+    ],
+    "changes": {
+      "pace": "14, 16 and 17 mph groups",
+      "description": "A weekday-morning road ride from the brewery lot in Milton, a few miles inland from Rehoboth and Lewes. Three pace groups: 14, 16 and 17 mph. The club also runs a faster 45-mile Tuesday drop paceline from the same spot."
+    }
+  },
+  {
+    "slug": "new-york-ny-5bbc-weekend-day-rides",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "5BBC's ride calendar (fetched Oct 21, 2026) shows rides on Oct 25 (Pancake Sunday), Oct 30 (Howard Beach Halloween) and Oct 31 (Dyker Heights Halloween), plus a Gettysburg weekend trip Oct 23–25; individual ride cancellations on Oct 11 and Oct 22 do not affect the ongoing program.",
+    "sources": [
+      "https://5bbc.clubexpress.com/content.aspx?page_id=4001&club_id=511565"
+    ]
+  },
+  {
+    "slug": "oakland-ca-air-cc-bff-friday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-21",
+    "note": "The Strava event watch URL was deleted (now redirects to the club page). AIR cc's group rides page at aircc.org describes the BFF Friday ride as ongoing at 6:30 am from Rockridge BART, but shows no upcoming dates or dated evidence. Without a dated signal the ride cannot be confirmed. Check the AIR cc Instagram for weekly ride posts, or join Strava club 1008989 to see new group events."
+  },
+  {
+    "slug": "paxton-ma-seven-hills-wheelmen-tuesday-night-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "status_note": "Seven Hills Wheelmen's home page, under the October 2026 update, says 'Tuesday night rides have ended for the season.' The ride started again in late April 2026; no 2027 return date is posted.",
+    "evidence": "Seven Hills Wheelmen home page (fetched Oct 21, 2026) says under OCTOBER 2026: 'Tuesday night rides have ended for the season.' No 2027 return date is given.",
+    "sources": [
+      "https://sevenhillswheelmen.org/"
+    ]
+  }
+]
