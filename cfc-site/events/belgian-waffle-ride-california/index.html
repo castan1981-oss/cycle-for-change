@@ -25,8 +25,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/events/events.css?v=35">
+  <link rel="stylesheet" href="/chrome.css?v=47">
+  <link rel="stylesheet" href="/events/events.css?v=47">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":["Event","SportsEvent"],"name":"Belgian Waffle Ride California","alternateName":"BWR California","description":"Belgian Waffle Ride California is a mixed-surface 'unroad' race that starts and finishes at the Del Mar Polo Fields at Surf Sports Park in Del Mar, north of San Diego, in late April or early May. The 106.5-mile Waffle carries about 7,500 feet of climbing and 30 sectors of sand, dirt and singletrack; the Wafer (60 miles) and Wanna (32.7 miles) are shorter. Michael Marckx started it in 2012, and it is now the California stop of the Quad-Tripel Crown of Gravel series. The next edition is listed for April 25, 2027.","sport":"Cycling","url":"https://cycleforchange.org/events/belgian-waffle-ride-california/","sameAs":"https://www.belgianwaffleride.bike/pages/belgian-waffle-ride-ca","startDate":"2027-04-25","endDate":"2027-04-25","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Del Mar Polo Fields at Surf Sports Park, Del Mar, CA (near the Del Mar Fairgrounds)","address":{"@type":"PostalAddress","addressLocality":"Del Mar","addressRegion":"CA","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":32.9797,"longitude":-117.228}},"organizer":{"@type":"Organization","name":"Monuments of Cycling","url":"https://www.belgianwaffleride.bike"},"offers":{"@type":"Offer","url":"https://www.belgianwaffleride.bike/pages/belgian-waffle-ride-ca"},"image":"https://cycleforchange.org/og-cfc.png"}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Events","item":"https://cycleforchange.org/events/"},{"@type":"ListItem","position":2,"name":"California","item":"https://cycleforchange.org/events/state/california/"},{"@type":"ListItem","position":3,"name":"Belgian Waffle Ride California","item":"https://cycleforchange.org/events/belgian-waffle-ride-california/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://cycleforchange.org/events/belgian-waffle-ride-california/","name":"Belgian Waffle Ride California 2027: Apr 25, Del Mar, CA","description":"Belgian Waffle Ride California is a mixed-surface 'unroad' race that starts and finishes at the Del Mar Polo Fields at Surf Sports Park in Del Mar, north…","dateModified":"2026-09-15","speakable":{"@type":"SpeakableSpecification","cssSelector":[".lede",".facts"]},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/"},"author":{"@type":"Person","name":"Robert Castan"}}</script>
@@ -56,15 +56,16 @@
       </svg>
       <span class="sr">Cycle for Change</span>
     </a>
+    <!-- Studio pass 1: one nav list. Guides replaces Field notes (Field notes stays in the footer and on /guides/). -->
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/towns/">Towns</a>
-      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -75,44 +76,28 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
     <li><a href="/find-a-ride/">Find a ride <span>1,421</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
-    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
-    <span><b>988</b> call or text, any hour</span>
+    <span><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>
 <main id="main" class="wrap">
 
   <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/events/">Events</a></li><li><a href="/events/state/california/">California</a></li><li><span aria-current="page">Belgian Waffle Ride California</span></li></ol></nav>
-  <section class="ev-poster tile-p--art" style="--l:4" aria-label="Belgian Waffle Ride California, at a glance"><img class="tile-art" src="/towns/art/del-mar.svg" alt="" loading="lazy" decoding="async" width="200" height="200">
-    <div class="ev-poster-top">
-      <span class="ev-poster-date num">04.25</span>
-      <span class="ev-poster-town">Del Mar</span>
-    </div>
-    <div class="ev-poster-info">
-      <p class="ev-poster-kind">Gravel &middot; since 2012</p>
-      <p class="ev-poster-when">Sunday, April 25, 2027 <span>@ Del Mar Polo Fields at Surf Sports Park, Del Mar, CA (near the Del Mar Fairgrounds)</span></p>
-      <ul class="ev-poster-spec"><li><b>Waffle — 106.5 miles</b><span>About 7,500 ft of climbing and roughly 40% ‘unroad’ (dirt, sand, singletrack). The main event; men’s waves started 8:30 a.m. in 2026.</span></li><li><b>Wafer — 60 miles</b><span>About 3,750 ft of climbing.</span></li><li><b>Wanna — 32.7 miles</b><span>About 2,500 ft of climbing; the short option.</span></li></ul>
-      <p class="ev-poster-climb">7,500 ft of climbing on the longest route</p>
-    </div>
-  </section>
   <article class="event">
-    <p class="eyebrow">Gravel &middot; <a href="/towns/california/del-mar/">Del Mar, California</a> &middot; since 2012</p>
     <h1>Belgian Waffle Ride California</h1>
     <p class="date-line"><time datetime="2027-04-25">Sunday, April 25, 2027</time><span class="countdown" data-countdown="2027-04-25"></span></p>
     <p class="date-note">The organizer’s future-dates page lists BWR CA 2027 for April 25 (a Sunday). The 2027 venue and the Saturday expo/Gran Roadie-Oh date have not been posted yet; in 2026 the festival ran Saturday–Sunday at the Del Mar Polo Fields.</p>
     
-
-    <h2 class="visually-hidden">What is the Belgian Waffle Ride California?</h2>
-    <p class="lede">Belgian Waffle Ride California is a mixed-surface ‘unroad’ race that starts and finishes at the Del Mar Polo Fields at Surf Sports Park in Del Mar, north of San Diego, in late April or early May. The 106.5-mile Waffle carries about 7,500 feet of climbing and 30 sectors of sand, dirt and singletrack; the Wafer (60 miles) and Wanna (32.7 miles) are shorter. Michael Marckx started it in 2012, and it is now the California stop of the Quad-Tripel Crown of Gravel series. The next edition is listed for April 25, 2027.</p>
 
     <div class="ev-signup">
       <a class="btn btn--ink" href="https://www.belgianwaffleride.bike/pages/belgian-waffle-ride-ca" rel="noopener">Sign up for BWR California</a>
@@ -120,7 +105,17 @@
       <p class="ev-signup-note">2027 registration was not open as of September 15, 2026. The 2026 edition sold entries through BikeReg (bikereg.com/belgian-waffle-ride-california-2026), and the 2025 series opened registration on October 15, 2024, so expect a mid-October opening for 2027. Check the official CA page for the live link.</p>
     </div>
 
-    <dl class="facts"><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-date"/></svg><dt>Next edition</dt><dd><time datetime="2027-04-25">Sunday, April 25, 2027</time></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-ride-day"/></svg><dt>Usually</dt><dd>Late April or the first weekend of May (2026 was May 2–3; 2025 was April 25–27)</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-start"/></svg><dt>Start</dt><dd>Del Mar Polo Fields at Surf Sports Park, Del Mar, CA (near the Del Mar Fairgrounds)<br><a href="/towns/california/del-mar/">Del Mar, California</a></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-distance"/></svg><dt>Distances</dt><dd><ul class="dist"><li><b>Waffle — 106.5 miles</b> — About 7,500 ft of climbing and roughly 40% ‘unroad’ (dirt, sand, singletrack). The main event; men’s waves started 8:30 a.m. in 2026.</li><li><b>Wafer — 60 miles</b> — About 3,750 ft of climbing.</li><li><b>Wanna — 32.7 miles</b> — About 2,500 ft of climbing; the short option.</li></ul></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-terrain"/></svg><dt>Terrain</dt><dd>Mixed: pavement, gravel, dirt, deep sand, rocky doubletrack, fire roads and singletrack through North San Diego County canyons, with about 30 unroad sectors on the Waffle.</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-climb"/></svg><dt>Climbing</dt><dd>7,500 ft on the longest route</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-founded"/></svg><dt>Founded</dt><dd>2012 by Michael Marckx (MMX), founder of BWR. The 2026 edition was billed as the 15th annual.</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Organizer</dt><dd><a href="https://www.belgianwaffleride.bike" rel="noopener">Monuments of Cycling</a></dd></div></dl>
+    <section class="ev-poster tile-p--art" style="--l:4" aria-label="Belgian Waffle Ride California, at a glance"><img class="tile-art" src="/towns/art/del-mar.svg" alt="" loading="lazy" decoding="async" width="200" height="200">
+      <div class="ev-poster-top">
+        <span class="ev-poster-date num">04.25</span>
+        <span class="ev-poster-town">Del Mar</span>
+      </div>
+    </section>
+
+    <h2 class="visually-hidden">What is the Belgian Waffle Ride California?</h2>
+    <p class="lede">Belgian Waffle Ride California is a mixed-surface ‘unroad’ race that starts and finishes at the Del Mar Polo Fields at Surf Sports Park in Del Mar, north of San Diego, in late April or early May. The 106.5-mile Waffle carries about 7,500 feet of climbing and 30 sectors of sand, dirt and singletrack; the Wafer (60 miles) and Wanna (32.7 miles) are shorter. Michael Marckx started it in 2012, and it is now the California stop of the Quad-Tripel Crown of Gravel series. The next edition is listed for April 25, 2027.</p>
+
+    <dl class="facts"><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-gravel"/></svg><dt>Type</dt><dd>Gravel</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-date"/></svg><dt>Next edition</dt><dd><time datetime="2027-04-25">Sunday, April 25, 2027</time></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-ride-day"/></svg><dt>Usually</dt><dd>Late April or the first weekend of May (2026 was May 2–3; 2025 was April 25–27)</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-start"/></svg><dt>Start</dt><dd>Del Mar Polo Fields at Surf Sports Park, Del Mar, CA (near the Del Mar Fairgrounds)<br><a href="/towns/california/del-mar/">Del Mar, California</a></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-distance"/></svg><dt>Distances</dt><dd><ul class="dist"><li><b>Waffle — 106.5 miles</b> — About 7,500 ft of climbing and roughly 40% ‘unroad’ (dirt, sand, singletrack). The main event; men’s waves started 8:30 a.m. in 2026.</li><li><b>Wafer — 60 miles</b> — About 3,750 ft of climbing.</li><li><b>Wanna — 32.7 miles</b> — About 2,500 ft of climbing; the short option.</li></ul></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-terrain"/></svg><dt>Terrain</dt><dd>Mixed: pavement, gravel, dirt, deep sand, rocky doubletrack, fire roads and singletrack through North San Diego County canyons, with about 30 unroad sectors on the Waffle.</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-climb"/></svg><dt>Climbing</dt><dd>7,500 ft on the longest route</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-founded"/></svg><dt>Founded</dt><dd>2012 by Michael Marckx (MMX), founder of BWR. The 2026 edition was billed as the 15th annual.</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Organizer</dt><dd><a href="https://www.belgianwaffleride.bike" rel="noopener">Monuments of Cycling</a></dd></div></dl>
 
     <section><h2>How the Belgian Waffle Ride California started</h2><p>Michael Marckx started the Belgian Waffle Ride in North San Diego County as a Belgian-classic-style day of pavement and dirt bracketed by waffles and beer. The organizers count 2026 as the 15th annual California edition, which puts the first ride in 2012. It is produced by Monuments of Cycling, which now also runs BWR events in Arizona, Utah, Montana and Mexico.</p>
 <p>For 2025 the California event moved to the Del Mar Polo Fields at Surf Sports Park, next to the Del Mar Fairgrounds and close to the coast, and became a three-day festival with a Saturday road gran fondo (the Gran Roadie-Oh) and an Unroad Expo before Sunday’s main ride. That year BWR also launched the Quad-Tripel Crown of Gravel series and added Bozeman, Montana.</p>
@@ -236,15 +231,15 @@
 <section class="pledge" aria-labelledby="pledge-h">
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
   <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a></div>
 </section>
 </main>
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
-    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2027-02-06" data-rides="[{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Tour de Palm Springs, Palm Springs, CA</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=38" defer></script>
+  <script src="/ridebar.js?v=39" defer></script>
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -261,10 +256,10 @@
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
         <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
+        <a href="/brief/">Brief a ride</a>
         <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
@@ -288,12 +283,12 @@
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
-<script src="/chrome.js" defer></script>
+<script src="/chrome.js?v=47" defer></script>
 <script src="/events/events.js?v=35" defer></script>
 <script src="/events/report.js" defer></script>
 </body>

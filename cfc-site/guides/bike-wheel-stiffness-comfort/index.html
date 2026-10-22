@@ -24,8 +24,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/chrome.css?v=47">
+  <link rel="stylesheet" href="/styles.css?v=47">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wheel stiffness vs comfort: where ride feel comes from","description":"Do stiff wheels ride harsh? Why most comfort comes from the tire and its pressure, and when wheel stiffness does matter.","datePublished":"2026-10-13","dateModified":"2026-10-13","url":"https://cycleforchange.org/guides/bike-wheel-stiffness-comfort/","author":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":{"@type":"ImageObject","url":"https://cycleforchange.org/favicon-512.png"}}}</script>
 </head>
 <body>
@@ -52,15 +52,16 @@
       </svg>
       <span class="sr">Cycle for Change</span>
     </a>
+    <!-- Studio pass 1: one nav list. Guides replaces Field notes (Field notes stays in the footer and on /guides/). -->
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/towns/">Towns</a>
-      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -71,20 +72,20 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
-    <li><a href="/find-a-ride/">Find a ride <span>1,423</span></a></li>
+    <li><a href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/find-a-ride/">Find a ride <span>1,421</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
-    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
-    <span><b>988</b> call or text, any hour</span>
+    <span><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>
 <main id="main" class="fn-post">
   <div class="fn-article">
     <p class="fn-meta"><span>Guides · Wheels and tires</span><span class="dot">·</span><span>October 2026</span></p>
@@ -94,44 +95,48 @@
       <p class="fn-evidence">The evidence here is moderate: real tests, but not many of them. 9 sources, listed at the end.</p>
       <h2>What the tests say</h2>
       <p><em>Most of the figures below come from a wheel maker (SILCA) and independent wheel-test sites, not peer-reviewed studies. The one peer-reviewed study is in Sports Engineering (Lépine, Champoux and Drouet).</em></p>
-<p><strong>Two different stiffnesses.</strong> Wheels have radial (vertical), lateral and torsional stiffness. Lateral stiffness, especially at the front, affects handling <sup><a href="#src-1">1</a></sup>.</p>
-<p>Vertically, wheels barely move. Roues Artisanales measured front wheels at about 1,500–2,500 N/mm, meaning it takes 150–250 kg to deflect them 1mm. That deformation is too small to matter for comfort <sup><a href="#src-2">2</a></sup>. SILCA’s springs-in-series analysis puts the system in order:
-- Wheels are 5–10 times stiffer than the frame and seatpost.
-- The frame and seatpost are 2–5 times stiffer than the inflated tire.
-- So the tire is “the softest spring in the entire bicycle system” <sup><a href="#src-3">3</a></sup>.</p>
-<p>Because the softest spring dominates, halving wheel stiffness improved overall system compliance by “just under 2%”, which slight overinflation would cancel. The spread between the stiffest and softest frame categories was worth less than 1 bar of tire pressure <sup><a href="#src-3">3</a></sup>. A 2020 vibration study found tire filtering substantially reduced vibration above 10 Hz <sup><a href="#src-5">5</a></sup>. A 2025 field study found lower pressure and wider tires reduced vibration at the bars and seatpost <sup><a href="#src-6">6</a></sup>.</p>
-<p><strong>Partial counterpoint.</strong> A 2015 Sports Engineering study (Lépine, Champoux and Drouet) tested several bike components using a factorial design. It found the handlebar and fork dominated vibration at the hands, while “the wheels and frame” dominated at the buttocks <sup><a href="#src-4">4</a></sup>. It’s unclear from the published abstract whether tires were held constant, so wheel construction may matter more for seated comfort than the springs-in-series view suggests. That’s one study, and the question is unresolved.</p>
-<p><strong>What sets lateral stiffness.</strong> Damon Rinard’s tests (115 N lateral load) found <sup><a href="#src-7">7</a></sup>:
-- Stiffness barely changes with spoke tension unless a spoke goes slack.
-- Rear wheels were 40–60% more flexible than similar fronts, mainly because front hubs have wider flange spacing.
-- 650c wheels were about 25% stiffer than 700c.
-- Straight 2.0mm spokes were about 11% stiffer than 2.0/1.45mm butted spokes.
-- Radial lacing (“elbows out”) was about 13% stiffer.
-- An inflated tire added only 5–8%.</p>
-<p>Wikipedia’s summary says more spoke crossings reduce lateral and radial stiffness, and that the angle between spokes and the wheel’s center plane (the bracing angle) is the most significant factor <sup><a href="#src-1">1</a></sup>. Rinard also stresses that stiffness “is not wheel strength” <sup><a href="#src-7">7</a></sup>. Roues Artisanales suggests minimum lateral stiffness by rider weight: about 30 N/mm for 60–70 kg, 35 N/mm for 70–80 kg, and over 40 N/mm for riders above 80 kg. That’s a wheelbuilder’s guideline, not a study <sup><a href="#src-2">2</a></sup>. Mavic engineers, quoted secondhand, said 29” MTB wheels were 39% less stiff than comparable 26” wheels <sup><a href="#src-8">8</a></sup>.</p>
-<p><strong>Carbon vs alloy, and spoke count.</strong> BikeRadar’s 2026 buyer’s guide calls carbon the standard for performance wheels where stiffness, weight and aero matter. It says higher spoke counts are stronger and more durable, with a weight and slight aero penalty <sup><a href="#src-9">9</a></sup>. The same guide says “the deeper a rim gets... the harsher the ride” <sup><a href="#src-9">9</a></sup>. That conflicts with SILCA’s analysis and Roues Artisanales’ vertical-stiffness data <sup><a href="#src-2">2</a></sup><sup><a href="#src-3">3</a></sup>. No controlled test compares comfort between carbon and alloy rims.</p>
+<p><strong>Two different stiffnesses.</strong> Wheels have radial (vertical), lateral and torsional stiffness. Lateral stiffness, especially at the front, affects handling<sup><a href="#src-1">1</a></sup>.</p>
+<p>Vertically, wheels barely move. Roues Artisanales measured front wheels at about 1,500–2,500 N/mm, meaning it takes 150–250 kg to deflect them 1mm. That deformation is too small to matter for comfort<sup><a href="#src-2">2</a></sup>. SILCA’s springs-in-series analysis puts the system in order:</p>
+<ul>
+<li>Wheels are 5–10 times stiffer than the frame and seatpost.</li>
+<li>The frame and seatpost are 2–5 times stiffer than the inflated tire.</li>
+<li>So the tire is “the softest spring in the entire bicycle system”<sup><a href="#src-3">3</a></sup>.</li>
+</ul>
+<p>Because the softest spring dominates, halving wheel stiffness improved overall system compliance by “just under 2%”, which slight overinflation would cancel. The spread between the stiffest and softest frame categories was worth less than 1 bar of tire pressure<sup><a href="#src-3">3</a></sup>. A 2020 vibration study found tire filtering substantially reduced vibration above 10 Hz<sup><a href="#src-5">5</a></sup>. A 2025 field study found lower pressure and wider tires reduced vibration at the bars and seatpost<sup><a href="#src-6">6</a></sup>.</p>
+<p><strong>Partial counterpoint.</strong> A 2015 Sports Engineering study (Lépine, Champoux and Drouet) tested several bike components using a factorial design. It found the handlebar and fork dominated vibration at the hands, while “the wheels and frame” dominated at the buttocks<sup><a href="#src-4">4</a></sup>. It’s unclear from the published abstract whether tires were held constant, so wheel construction may matter more for seated comfort than the springs-in-series view suggests. That’s one study, and the question is unresolved.</p>
+<p><strong>What sets lateral stiffness.</strong> Damon Rinard’s tests (115 N lateral load) found<sup><a href="#src-7">7</a></sup>:</p>
+<ul>
+<li>Stiffness barely changes with spoke tension unless a spoke goes slack.</li>
+<li>Rear wheels were 40–60% more flexible than similar fronts, mainly because front hubs have wider flange spacing.</li>
+<li>650c wheels were about 25% stiffer than 700c.</li>
+<li>Straight 2.0mm spokes were about 11% stiffer than 2.0/1.45mm butted spokes.</li>
+<li>Radial lacing (“elbows out”) was about 13% stiffer.</li>
+<li>An inflated tire added only 5–8%.</li>
+</ul>
+<p>Wikipedia’s summary says more spoke crossings reduce lateral and radial stiffness, and that the angle between spokes and the wheel’s center plane (the bracing angle) is the most significant factor<sup><a href="#src-1">1</a></sup>. Rinard also stresses that stiffness “is not wheel strength”<sup><a href="#src-7">7</a></sup>. Roues Artisanales suggests minimum lateral stiffness by rider weight: about 30 N/mm for 60–70 kg, 35 N/mm for 70–80 kg, and over 40 N/mm for riders above 80 kg. That’s a wheelbuilder’s guideline, not a study<sup><a href="#src-2">2</a></sup>. Mavic engineers, quoted secondhand, said 29” MTB wheels were 39% less stiff than comparable 26” wheels<sup><a href="#src-8">8</a></sup>.</p>
+<p><strong>Carbon vs alloy, and spoke count.</strong> BikeRadar’s 2026 buyer’s guide calls carbon the standard for performance wheels where stiffness, weight and aero matter. It says higher spoke counts are stronger and more durable, with a weight and slight aero penalty<sup><a href="#src-9">9</a></sup>. The same guide says “the deeper a rim gets... the harsher the ride”<sup><a href="#src-9">9</a></sup>. That conflicts with SILCA’s analysis and Roues Artisanales’ vertical-stiffness data<sup><a href="#src-2">2</a></sup><sup><a href="#src-3">3</a></sup>. No controlled test compares comfort between carbon and alloy rims.</p>
       <h2>The numbers</h2>
       <ul>
-<li>Front wheel vertical stiffness: about 1,500–2,500 N/mm <sup><a href="#src-2">2</a></sup></li>
-<li>Wheels are 5–10× stiffer than frame/seatpost, which is 2–5× stiffer than the tire, so wheels are roughly 10–50× stiffer than tires <sup><a href="#src-3">3</a></sup></li>
-<li>Halving wheel stiffness improved system compliance by under 2% <sup><a href="#src-3">3</a></sup></li>
-<li>Rear wheels 40–60% more flexible laterally than fronts <sup><a href="#src-7">7</a></sup></li>
-<li>Radial lacing about 13% stiffer, and straight 2.0mm spokes about 11% stiffer than butted <sup><a href="#src-7">7</a></sup></li>
-<li>Suggested minimum lateral stiffness: 30, 35 and 40+ N/mm for 60–70, 70–80 and 80+ kg riders <sup><a href="#src-2">2</a></sup></li>
+<li>Front wheel vertical stiffness: about 1,500–2,500 N/mm<sup><a href="#src-2">2</a></sup></li>
+<li>Wheels are 5–10× stiffer than frame/seatpost, which is 2–5× stiffer than the tire, so wheels are roughly 10–50× stiffer than tires<sup><a href="#src-3">3</a></sup></li>
+<li>Halving wheel stiffness improved system compliance by under 2%<sup><a href="#src-3">3</a></sup></li>
+<li>Rear wheels 40–60% more flexible laterally than fronts<sup><a href="#src-7">7</a></sup></li>
+<li>Radial lacing about 13% stiffer, and straight 2.0mm spokes about 11% stiffer than butted<sup><a href="#src-7">7</a></sup></li>
+<li>Suggested minimum lateral stiffness: 30, 35 and 40+ N/mm for 60–70, 70–80 and 80+ kg riders<sup><a href="#src-2">2</a></sup></li>
 </ul>
       <h2>Myths and disagreements</h2>
       <ul>
-<li><strong>“Deep carbon rims ride harsh.”</strong> Vertical wheel stiffness is dwarfed by the tire’s <sup><a href="#src-2">2</a></sup><sup><a href="#src-3">3</a></sup>. A harsh ride might often trace back to tire choice or pressure. Controlled data is lacking either way <sup><a href="#src-9">9</a></sup>.</li>
-<li><strong>“Tighter spokes = stiffer wheel.”</strong> Only if spokes were going slack <sup><a href="#src-7">7</a></sup> (see).</li>
-<li><strong>“Stiffer is stronger.”</strong> Stiffness and strength are different properties <sup><a href="#src-7">7</a></sup>.</li>
-<li><strong>Disagreement:</strong> SILCA’s analysis says wheels barely affect comfort <sup><a href="#src-3">3</a></sup>. A peer-reviewed factorial study found wheels and frame dominated vibration at the buttocks <sup><a href="#src-4">4</a></sup>. Test setup and frequency range probably explain some of the gap.</li>
+<li><strong>“Deep carbon rims ride harsh.”</strong> Vertical wheel stiffness is dwarfed by the tire’s<sup><a href="#src-2">2</a></sup><sup><a href="#src-3">3</a></sup>. A harsh ride might often trace back to tire choice or pressure. Controlled data is lacking either way<sup><a href="#src-9">9</a></sup>.</li>
+<li><strong>“Tighter spokes = stiffer wheel.”</strong> Only if spokes were going slack<sup><a href="#src-7">7</a></sup> (see).</li>
+<li><strong>“Stiffer is stronger.”</strong> Stiffness and strength are different properties<sup><a href="#src-7">7</a></sup>.</li>
+<li><strong>Disagreement:</strong> SILCA’s analysis says wheels barely affect comfort<sup><a href="#src-3">3</a></sup>. A peer-reviewed factorial study found wheels and frame dominated vibration at the buttocks<sup><a href="#src-4">4</a></sup>. Test setup and frequency range probably explain some of the gap.</li>
 </ul>
       <h2>What to change for comfort</h2>
       <ul>
-<li>Chasing comfort? Change tire width and pressure first. It’s the largest, cheapest lever <sup><a href="#src-3">3</a></sup><sup><a href="#src-6">6</a></sup>.</li>
-<li>Heavier riders or hard sprinters: prioritize lateral stiffness, especially at the rear. Look for wide flange spacing, adequate spoke count and fewer crosses <sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup><sup><a href="#src-7">7</a></sup>.</li>
-<li>Judge “compliance” marketing skeptically unless it comes with test data <sup><a href="#src-3">3</a></sup>.</li>
-<li>If a wheel feels flexy, check spoke tension for slack spokes before blaming the rim <sup><a href="#src-7">7</a></sup>.</li>
+<li>Chasing comfort? Change tire width and pressure first. It’s the largest, cheapest lever<sup><a href="#src-3">3</a></sup><sup><a href="#src-6">6</a></sup>.</li>
+<li>Heavier riders or hard sprinters: prioritize lateral stiffness, especially at the rear. Look for wide flange spacing, adequate spoke count and fewer crosses<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup><sup><a href="#src-7">7</a></sup>.</li>
+<li>Judge “compliance” marketing skeptically unless it comes with test data<sup><a href="#src-3">3</a></sup>.</li>
+<li>If a wheel feels flexy, check spoke tension for slack spokes before blaming the rim<sup><a href="#src-7">7</a></sup>.</li>
 </ul>
       <h2 id="sources">Sources</h2>
       <div class="fn-sources"><ol>
@@ -151,19 +156,19 @@
     <h2>Keep reading</h2>
     <a href="/guides/spoke-tension-wheel-truing/">Spoke tension and how to true a bike wheel</a><a href="/guides/bike-tire-pressure/">Bike tire pressure: what’s fastest on real roads</a><a href="/guides/road-bike-tire-width/">Road bike tire width: 25, 28 or 32mm?</a><a href="/guides/#wheels">All wheels and tires guides</a>
   </div>
+  <p class="fn-back"><a href="/guides/">← All guides</a></p>
   <section class="pledge" aria-labelledby="pledge-h">
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
   <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a></div>
 </section>
-  <p class="fn-back"><a href="/guides/">← All guides</a></p>
 </main>
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
-    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2027-02-06" data-rides="[{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Tour de Palm Springs, Palm Springs, CA</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=38" defer></script>
+  <script src="/ridebar.js?v=39" defer></script>
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -180,10 +185,10 @@
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
         <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
+        <a href="/brief/">Brief a ride</a>
         <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
@@ -207,11 +212,11 @@
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
-<script src="/chrome.js" defer></script>
+<script src="/chrome.js?v=47" defer></script>
 </body>
 </html>

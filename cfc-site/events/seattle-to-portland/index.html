@@ -25,8 +25,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/events/events.css?v=35">
+  <link rel="stylesheet" href="/chrome.css?v=47">
+  <link rel="stylesheet" href="/events/events.css?v=47">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":["Event","SportsEvent"],"name":"Seattle to Portland Bicycle Classic","alternateName":"STP","description":"The Seattle to Portland Bicycle Classic (STP) is a 206-mile supported ride from the University of Washington in Seattle to Holladay Park in Portland, Oregon, held the second weekend of July. Riders finish in one day or two, with the two-day overnight at Centralia College. Cascade Bicycle Club has run it since 1979, and 6,400 riders took part in 2026. The next edition is July 10–11, 2027.","sport":"Cycling","url":"https://cycleforchange.org/events/seattle-to-portland/","sameAs":"https://cascade.org/rides-events/seattle-portland-2027-2027","startDate":"2027-07-10","endDate":"2027-07-11","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"University of Washington E-18 Lot, Walla Walla Road NE, Seattle, WA 98195","address":{"@type":"PostalAddress","addressLocality":"Seattle","addressRegion":"WA","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":47.6516,"longitude":-122.3}},"organizer":{"@type":"Organization","name":"Cascade Bicycle Club","url":"https://cascade.org"},"offers":{"@type":"Offer","url":"https://cascade.org/rides-events/seattle-portland-2027-2027"},"image":"https://cycleforchange.org/og-cfc.png"}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Events","item":"https://cycleforchange.org/events/"},{"@type":"ListItem","position":2,"name":"Washington","item":"https://cycleforchange.org/events/state/washington/"},{"@type":"ListItem","position":3,"name":"Seattle to Portland Bicycle Classic","item":"https://cycleforchange.org/events/seattle-to-portland/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://cycleforchange.org/events/seattle-to-portland/","name":"Seattle to Portland Bicycle Classic 2027: Jul 10–11","description":"The Seattle to Portland Bicycle Classic (STP) is a 206-mile supported ride from the University of Washington in Seattle to Holladay Park in Portland,…","dateModified":"2026-09-15","speakable":{"@type":"SpeakableSpecification","cssSelector":[".lede",".facts"]},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/"},"author":{"@type":"Person","name":"Robert Castan"}}</script>
@@ -56,15 +56,16 @@
       </svg>
       <span class="sr">Cycle for Change</span>
     </a>
+    <!-- Studio pass 1: one nav list. Guides replaces Field notes (Field notes stays in the footer and on /guides/). -->
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/towns/">Towns</a>
-      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -75,44 +76,28 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
     <li><a href="/find-a-ride/">Find a ride <span>1,421</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
-    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
-    <span><b>988</b> call or text, any hour</span>
+    <span><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>
 <main id="main" class="wrap">
 
   <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/events/">Events</a></li><li><a href="/events/state/washington/">Washington</a></li><li><span aria-current="page">Seattle to Portland Bicycle Classic</span></li></ol></nav>
-  <section class="ev-poster tile-p--art" style="--l:7" aria-label="Seattle to Portland Bicycle Classic, at a glance"><img class="tile-art" src="/towns/art/seattle.svg" alt="" loading="lazy" decoding="async" width="200" height="200">
-    <div class="ev-poster-top">
-      <span class="ev-poster-date num">07.10</span>
-      <span class="ev-poster-town">Seattle</span>
-    </div>
-    <div class="ev-poster-info">
-      <p class="ev-poster-kind">Tour &middot; since 1979</p>
-      <p class="ev-poster-when">July 10–11, 2027 <span>@ University of Washington E-18 Lot, Walla Walla Road NE, Seattle, WA 98195</span></p>
-      <ul class="ev-poster-spec"><li><b>206 miles</b><span>Ride it in one day or two. Two-day riders overnight at the official midpoint in Centralia, WA (mile 101).</span></li></ul>
-      <p class="ev-poster-climb">5,100 ft of climbing on the longest route</p>
-    </div>
-  </section>
   <article class="event">
-    <p class="eyebrow">Tour &middot; <a href="/towns/washington/seattle/">Seattle, Washington</a> &middot; since 1979</p>
     <h1>Seattle to Portland Bicycle Classic</h1>
     <p class="date-line"><time datetime="2027-07-10">July 10–11, 2027</time><span class="countdown" data-countdown="2027-07-10"></span></p>
     <p class="date-note">Saturday, July 10, 2027, 5:00 a.m. through Sunday, July 11, 2027, 7:00 p.m. This is the 48th STP.</p>
     
-
-    <h2 class="visually-hidden">What is the Seattle to Portland Bicycle Classic?</h2>
-    <p class="lede">The Seattle to Portland Bicycle Classic (STP) is a 206-mile supported ride from the University of Washington in Seattle to Holladay Park in Portland, Oregon, held the second weekend of July. Riders finish in one day or two, with the two-day overnight at Centralia College. Cascade Bicycle Club has run it since 1979, and 6,400 riders took part in 2026. The next edition is July 10–11, 2027.</p>
 
     <div class="ev-signup">
       <a class="btn btn--ink" href="https://cascade.org/rides-events/seattle-portland-2027-2027" rel="noopener">Sign up for STP</a>
@@ -120,7 +105,17 @@
       <p class="ev-signup-note">Registration lives on the event page. As of September 2026 it is closed; Cascade says member registration re-opens in January 2027. The 2026 ride sold out before the July 5 registration deadline.</p>
     </div>
 
-    <dl class="facts"><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-date"/></svg><dt>Next edition</dt><dd><time datetime="2027-07-10">July 10–11, 2027</time></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-ride-day"/></svg><dt>Usually</dt><dd>Second weekend of July (2026 was July 11–12)</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-start"/></svg><dt>Start</dt><dd>University of Washington E-18 Lot, Walla Walla Road NE, Seattle, WA 98195<br><a href="/towns/washington/seattle/">Seattle, Washington</a></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-distance"/></svg><dt>Distances</dt><dd><ul class="dist"><li><b>206 miles</b> — Ride it in one day or two. Two-day riders overnight at the official midpoint in Centralia, WA (mile 101).</li></ul></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-terrain"/></svg><dt>Terrain</dt><dd>Country roads and small-town streets between Seattle and Portland, rolling with a few real hills; no Interstate 5.</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-climb"/></svg><dt>Climbing</dt><dd>5,100 ft on the longest route</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-riders"/></svg><dt>Riders</dt><dd>6,400 riders in 2026 (sold out); the record was 10,000 in 1991</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-cost"/></svg><dt>Cost</dt><dd>2027 opening prices: $165 members, $210 non-members, $90 youth 18 and under. 2026 standard-rate pricing later rose to $310 members / $355 non-members.</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-founded"/></svg><dt>Founded</dt><dd>1979 by Cascade Bicycle Club. The first edition was a race, won by Jerry Baker of Seattle. It became a non-competitive ride in 1981.</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Organizer</dt><dd><a href="https://cascade.org" rel="noopener">Cascade Bicycle Club</a></dd></div></dl>
+    <section class="ev-poster tile-p--art" style="--l:7" aria-label="Seattle to Portland Bicycle Classic, at a glance"><img class="tile-art" src="/towns/art/seattle.svg" alt="" loading="lazy" decoding="async" width="200" height="200">
+      <div class="ev-poster-top">
+        <span class="ev-poster-date num">07.10</span>
+        <span class="ev-poster-town">Seattle</span>
+      </div>
+    </section>
+
+    <h2 class="visually-hidden">What is the Seattle to Portland Bicycle Classic?</h2>
+    <p class="lede">The Seattle to Portland Bicycle Classic (STP) is a 206-mile supported ride from the University of Washington in Seattle to Holladay Park in Portland, Oregon, held the second weekend of July. Riders finish in one day or two, with the two-day overnight at Centralia College. Cascade Bicycle Club has run it since 1979, and 6,400 riders took part in 2026. The next edition is July 10–11, 2027.</p>
+
+    <dl class="facts"><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-distance"/></svg><dt>Type</dt><dd>Tour</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-date"/></svg><dt>Next edition</dt><dd><time datetime="2027-07-10">July 10–11, 2027</time></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-ride-day"/></svg><dt>Usually</dt><dd>Second weekend of July (2026 was July 11–12)</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-start"/></svg><dt>Start</dt><dd>University of Washington E-18 Lot, Walla Walla Road NE, Seattle, WA 98195<br><a href="/towns/washington/seattle/">Seattle, Washington</a></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-distance"/></svg><dt>Distances</dt><dd><ul class="dist"><li><b>206 miles</b> — Ride it in one day or two. Two-day riders overnight at the official midpoint in Centralia, WA (mile 101).</li></ul></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-terrain"/></svg><dt>Terrain</dt><dd>Country roads and small-town streets between Seattle and Portland, rolling with a few real hills; no Interstate 5.</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-climb"/></svg><dt>Climbing</dt><dd>5,100 ft on the longest route</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-riders"/></svg><dt>Riders</dt><dd>6,400 riders in 2026 (sold out); the record was 10,000 in 1991</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-cost"/></svg><dt>Cost</dt><dd>2027 opening prices: $165 members, $210 non-members, $90 youth 18 and under. 2026 standard-rate pricing later rose to $310 members / $355 non-members.</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-founded"/></svg><dt>Founded</dt><dd>1979 by Cascade Bicycle Club. The first edition was a race, won by Jerry Baker of Seattle. It became a non-competitive ride in 1981.</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Organizer</dt><dd><a href="https://cascade.org" rel="noopener">Cascade Bicycle Club</a></dd></div></dl>
 
     <section><h2>How the Seattle to Portland Bicycle Classic started</h2><p>Cascade Bicycle Club started the STP in 1979. That first year it was a race, and Jerry Baker of Seattle won it. In 1981 the club changed the format to a recreational ride open to any speed and ability, which is what it has been since.</p>
 <p>The ride grew fast. Cascade reports a record 10,000 participants in 1991, and for years the club capped the field at 10,000 and sold out in spring. In 2018, according to Wikipedia, 1,854 of nearly 8,000 riders attempted the full distance in one day.</p>
@@ -240,15 +235,15 @@
 <section class="pledge" aria-labelledby="pledge-h">
   <h2 class="pledge-line" id="pledge-h">I&rsquo;m riding this one. Come with me.</h2>
   <p class="pledge-copy">STP is one of the six rides on my 2027 calendar. Every mile of it counts toward the 10,000, and the money goes through the ride&rsquo;s own sign-up, never through me.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a></div>
 </section>
 </main>
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
-    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2027-02-06" data-rides="[{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Tour de Palm Springs, Palm Springs, CA</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=38" defer></script>
+  <script src="/ridebar.js?v=39" defer></script>
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -265,10 +260,10 @@
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
         <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
+        <a href="/brief/">Brief a ride</a>
         <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
@@ -292,12 +287,12 @@
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
-<script src="/chrome.js" defer></script>
+<script src="/chrome.js?v=47" defer></script>
 <script src="/events/events.js?v=35" defer></script>
 <script src="/events/report.js" defer></script>
 </body>

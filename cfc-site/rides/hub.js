@@ -301,8 +301,9 @@
     else clearAll();
   });
 
-  // Pass 22: a rider from outside the US met a full US map first; a quiet way out sits by the box
-  if (form && !document.querySelector(".gr-hero-alt")) {
+  // Pass 22: a rider from outside the US met a full US map first; a quiet way out sits by the box.
+  // Studio pass 1: /rides/ carries it as the last of the city chips under the search, so it isn't added twice.
+  if (form && !document.querySelector(".gr-hero-alt, .gr-jumpcities a[href='/rides/world/']")) {
     form.insertAdjacentHTML("afterend", '<p class="gr-hero-alt"><a href="/rides/world/"><svg class="gr-hero-alt-mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-globe"/></svg>Outside the US &rarr;</a></p>');
   }
   // Pass 22: at 150% text the long placeholder clipped to "C"; it says less when the box is narrow (once rides.js is here)

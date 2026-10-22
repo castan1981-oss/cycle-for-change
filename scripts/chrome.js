@@ -22,6 +22,12 @@ const SITE = "https://cycleforchange.org";
 const INSTAGRAM = "https://www.instagram.com/cycl_eforchange";
 const STRAVA = "https://www.strava.com/athletes/22899089";
 const OG_IMAGE = `${SITE}/og-cfc.png`;
+// Studio pass 1 (Oct 21, 2026): ONE version for every stylesheet link on the site (and /chrome.js). head() puts it on
+// /chrome.css and every section sheet a generator passes (any old ?v= is replaced), apply-chrome.py gets it through
+// head(), build-home.js puts it on /home.css. Bump it whenever a stylesheet or /chrome.js changes and regenerate in the
+// §2 order: a page must never pair an old /chrome.css with new section sheets (they share cascade layers).
+const CSS_V = 47;
+const ver = (href) => `${href.split("?")[0]}?v=${CSS_V}`;
 
 // Counts shown in the mobile menu, same as the homepage. Read from the data so
 // they never go stale here (the homepage keeps its own by hand).
@@ -53,7 +59,7 @@ function head({ title, description, url, ogType = "website", styles = [], ld = [
   const img = /^https?:/.test(image) ? image : SITE + image;
   const shown = /Cycle for Change/.test(title) || title.length > 41 ? title : branded;
   const canonical = /^https?:/.test(url) ? url : SITE + url;
-  const sheets = ["/chrome.css", ...styles].map((h) => `  <link rel="stylesheet" href="${h}">`).join("\n");
+  const sheets = ["/chrome.css", ...styles].map((h) => `  <link rel="stylesheet" href="${ver(h)}">`).join("\n");
   const json = ld.map((o) => `  <script type="application/ld+json">${JSON.stringify(o)}</script>`).join("\n");
   return `  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -108,21 +114,25 @@ const MARK = `<svg class="brand-mark" viewBox="0 0 760 150" aria-hidden="true" f
 // last day, Phoenix time). /ridebar.js re-picks in the browser, so a page nobody rebuilt never shows a
 // ride that's over. When the list runs out, "Ride with me" goes back to the 2027 list.
 // Oct 15, 2026: Cycling 4 one·n·ten (Nov 7, 2026) is off this list (Robert). Nothing links to /nov7/ any more.
+// Oct 21, 2026 (studio pass 1): each href opens that ride's row on the riding page (/events/2027/riding/#<slug>;
+// the calendar's OPEN_JS opens a hashed row). Tour de Palm Springs comes first: it's his next ride (Robert, Oct 21).
 const NEXT_RIDES = [
-  { until: "2027-04-25", date: "Apr 23\u201325", name: "Center Ride Out", where: "LA to Ojai and back", href: "/events/2027/riding/" },
-  { until: "2027-05-23", date: "May 21\u201323", name: "Cycle to Zero", where: "SF to the Russian River", href: "/events/2027/riding/" },
+  { until: "2027-02-06", date: "Feb 6", name: "Tour de Palm Springs", where: "Palm Springs, CA", href: "/events/2027/riding/#tour-de-palm-springs" },
+  { until: "2027-04-25", date: "Apr 23\u201325", name: "Center Ride Out", where: "LA to Ojai and back", href: "/events/2027/riding/#center-ride-out" },
+  { until: "2027-05-23", date: "May 21\u201323", name: "Cycle to Zero", where: "SF to the Russian River", href: "/events/2027/riding/#cycle-to-zero" },
 ];
 const RIDES_LIST = "/events/2027/riding/";
 const phxToday = () => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Phoenix" }).format(new Date());
 const NEXT_RIDE = NEXT_RIDES.find((r) => r.until >= phxToday()) || null;
 const RIDE_HREF = NEXT_RIDE ? NEXT_RIDE.href : RIDES_LIST;
 const escH = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-// the bar: hidden until /ridebar.js shows it (and only once /chrome.css or /home.css has placed it)
-const RIDE_BAR = NEXT_RIDE ? `<aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="${NEXT_RIDE.until}" data-rides="${escH(JSON.stringify(NEXT_RIDES))}" hidden>
+// the bar: hidden until /ridebar.js shows it (and only once /chrome.css or /home.css has placed it).
+// data-until (studio pass 1): the bar's last day. It was data-cur, which /chrome.js also paints the tally into.
+const RIDE_BAR = NEXT_RIDE ? `<aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="${NEXT_RIDE.until}" data-rides="${escH(JSON.stringify(NEXT_RIDES))}" hidden>
     <a class="ridebar-a" href="${NEXT_RIDE.href}" data-ride-next><span class="ridebar-d">${escH(NEXT_RIDE.date)}</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">${escH(NEXT_RIDE.name)}, ${escH(NEXT_RIDE.where)}</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=38" defer></script>` : "";
+  <script src="/ridebar.js?v=39" defer></script>` : "";
 
 const n = (v) => (v == null ? "" : `<span>${v}</span>`);
 
@@ -133,11 +143,12 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
       ${MARK}
       <span class="sr">Cycle for Change</span>
     </a>
+    <!-- Studio pass 1: one nav list. Guides replaces Field notes (Field notes stays in the footer and on /guides/). -->
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/towns/">Towns</a>
-      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
@@ -155,17 +166,17 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
     <li><a href="${RIDE_HREF}" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
     <li><a href="/find-a-ride/">Find a ride ${n(RIDE_COUNT == null ? null : RIDE_COUNT.toLocaleString("en-US"))}</a></li>
     <li><a href="/events/2027/">2027 calendar ${n(CAL_COUNT)}</a></li>
-    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
-    <span><b>988</b> call or text, any hour</span>
+    <span><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>`;
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>`;
 
 const FOOTER = `<footer class="foot site-foot">
   ${RIDE_BAR}
@@ -185,10 +196,10 @@ const FOOTER = `<footer class="foot site-foot">
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
         <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
+        <a href="/brief/">Brief a ride</a>
         <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
@@ -212,29 +223,33 @@ const FOOTER = `<footer class="foot site-foot">
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
-<script src="/chrome.js" defer></script>`;
+<script src="/chrome.js?v=${CSS_V}" defer></script>`;
+// the footer's script tag, for the homepage (it loads /home.js instead)
+const CHROME_JS = `<script src="/chrome.js?v=${CSS_V}" defer></script>`;
 
 /* The pledge block that closes every inner page, right before the footer.
-   One component, one copy, everywhere. No "10000" mark (retired); prose says 10,000. */
+   One component, one copy, everywhere. No "10000" mark (retired); prose says 10,000.
+   Studio pass 1: two actions. "The live count" went: the tally line under the header is that link now. Nothing in
+   <main> comes after this block (apply-chrome.py moves a hand page's back link and notes above it). */
 function pledge({ line, copy } = {}) {
   return `<section class="pledge" aria-labelledby="pledge-h">
   <h2 class="pledge-line" id="pledge-h">${line || "I&rsquo;d like to say I ride for everyone else. I ride because it changed me."}</h2>
   <p class="pledge-copy">${copy || "In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me."}</p>
-  <div class="cta-row"><a class="btn btn--bone" href="${RIDE_HREF}" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="${RIDE_HREF}" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a></div>
 </section>`;
 }
 const PLEDGE = pledge();
 
-module.exports = { NEXT_RIDES, NEXT_RIDE, RIDE_HREF, SITE, INSTAGRAM, STRAVA, OG_IMAGE, FONTS, MARK, HEADER, FOOTER, PLEDGE, pledge, head, esc, attr };
+module.exports = { NEXT_RIDES, NEXT_RIDE, RIDE_HREF, SITE, INSTAGRAM, STRAVA, OG_IMAGE, FONTS, MARK, HEADER, FOOTER, CHROME_JS, PLEDGE, pledge, head, esc, attr, CSS_V };
 
 if (require.main === module) {
   // `node scripts/chrome.js` -> the markup as JSON (apply-chrome.py reads it)
   // `node scripts/chrome.js head '{"title":…}'` -> one page's <head> contents
   if (process.argv[2] === "head") process.stdout.write(head(JSON.parse(process.argv[3])));
-  else process.stdout.write(JSON.stringify({ FONTS, HEADER, FOOTER, PLEDGE, SITE, INSTAGRAM, OG_IMAGE }));
+  else process.stdout.write(JSON.stringify({ FONTS, HEADER, FOOTER, PLEDGE, SITE, INSTAGRAM, OG_IMAGE, CSS_V }));
 }

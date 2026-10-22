@@ -1,10 +1,14 @@
+@layer base, section;
 /* Cycle for Change — shared chrome for every page that is NOT the homepage.
    Tokens, base type, the header + mobile menu, the tally line, buttons, eyebrows
    and the footer. Every value here is copied from /home.css so inner pages match
    the homepage exactly. Markup comes from scripts/chrome.js.
    Loaded first on every inner page; a section's own sheet (/events/events.css,
    /rides/rides.css, /styles.css, /tonight/tonight.css) comes after it.
-   Creosote house: Outfit + Space Mono. Volt = "live" only (the tally dot, hover). */
+   Studio pass 1 (Oct 21, 2026): cascade layers. `@layer base` holds the generic base, then the one token
+   block, the element type rules and the reduced-motion guard; the section sheets are `@layer section`; the
+   frame and the system (focus, components, the ending) are unlayered at the foot, so no section sheet can
+   undo them. Lane Paint: Overpass only, After Hours tokens (old names), square corners, hairlines. */
 
 /* Overpass, self-hosted (fonts/, OFL). Google's build marks the middot (U+00B7) as a combining glyph, which
    swallowed "one·n·ten" and pulled every " · " onto the next word; the latin file here has it reclassified. */
@@ -12,6 +16,8 @@
   unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:"Overpass";font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/overpass-latin-ext.woff2) format("woff2");
   unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@layer base{
+
 :root{
   --bone:#E1DFDB;
   --bone-2:#D7D5D0;
@@ -43,6 +49,12 @@
 /* —— base (same as home) —— */
 *,*::before,*::after{box-sizing:border-box}
 [hidden]{display:none !important}
+/* studio pass 1: two boxes a page's script un-hides after load keep their size while hidden, so nothing below them
+   moves (CLS 0). Same layer as [hidden] and more specific, which is the only way past its !important. */
+@media (scripting:enabled){
+  .place-filter[hidden]{display:block!important;visibility:hidden}
+  .bf-sample[hidden]{display:flex!important;visibility:hidden}
+}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:var(--bone)}
 body{
   margin:0;
@@ -59,13 +71,11 @@ img,video{display:block;max-width:100%}
 a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:var(--creosote)}
 @media (hover:hover){a:hover{text-decoration-color:currentColor}}
 button{font:inherit;color:inherit}
-:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+:focus-visible{outline:2px solid var(--ring);outline-offset:3px}
 [id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
 
 .wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
 .sr,.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.skip{position:absolute;left:-9999px;top:0;z-index:90;padding:10px 14px;background:var(--asphalt);color:var(--bone);font-family:var(--mono);font-size:12px}
-.skip:focus{left:0}
 .hp{position:absolute;left:-9999px}
 
 /* —— type scale (home's .h1/.h2/.h3, applied to the elements inner pages use) —— */
@@ -109,7 +119,7 @@ p{margin:0 0 1em}
   text-decoration:none;
   white-space:nowrap;
   cursor:pointer;
-  transition:background-color .18s ease,color .18s ease,border-color .18s ease;
+  transition:background-color var(--t-color) var(--ease),color var(--t-color) var(--ease),border-color var(--t-color) var(--ease);
 }
 .btn--bone{background:var(--bone);color:var(--asphalt);border-color:var(--bone)}
 .btn--ink,.btn-solid,.btn-dark{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
@@ -117,7 +127,8 @@ p{margin:0 0 1em}
 .btn:not([class*="btn--"]):not(.btn-solid):not(.btn-dark){border-color:currentColor}   /* a bare .btn is a ghost */
 .btn--sm{min-height:44px;padding:0 14px;font-size:12px}
 @media (hover:hover){
-  .btn--bone:hover,.btn--ink:hover,.btn-solid:hover,.btn-dark:hover{background:var(--volt);border-color:var(--volt);color:var(--asphalt)}
+  .btn--ink:hover,.btn-solid:hover,.btn-dark:hover{background:transparent;border-color:var(--asphalt);color:var(--asphalt)}
+  .btn--bone:hover{background:transparent;border-color:var(--paper);color:var(--paper)}
   .btn--ghost:hover,.btn:not([class*="btn--"]):not(.btn-solid):not(.btn-dark):hover{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}
 }
 .link{
@@ -135,9 +146,149 @@ p{margin:0 0 1em}
 }
 .link{position:relative}
 .link::before{content:"";position:absolute;left:0;right:0;top:-10px;bottom:-10px}   /* a 44px hit area, as on the homepage; the look doesn't change */
-.link::after{content:"\2192";transition:transform .18s ease}
+.link::after{content:"\2192";transition:transform var(--t-move) var(--ease)}
 @media (hover:hover){.link:hover::after{transform:translateX(4px)}}
 .cta-row{display:flex;flex-wrap:wrap;gap:10px}
+
+/* —— page body spacing —— */
+main{display:block}
+main.wrap{padding-block:clamp(40px,6vw,80px) 0}
+
+/* —— the pledge block that closes every inner page (markup in scripts/chrome.js) —— */
+.pledge{margin:var(--sec) 0 0;padding:clamp(28px,4vw,48px) clamp(22px,3.5vw,48px);background:var(--asphalt);color:var(--bone);max-width:820px}
+.pledge-num{margin:0 0 14px;font-weight:800;font-size:clamp(4rem,12vw,7rem);line-height:.84;letter-spacing:-.045em;color:var(--bone)}
+.pledge-copy{margin:0 0 24px;max-width:52ch;color:var(--bone-2)}
+.pledge .cta-row{align-items:center;gap:12px 20px}
+.pledge .link{color:var(--bone)}
+.wrap>.pledge{margin-inline:calc(-1 * var(--gut))}
+@media (min-width:640px){.wrap>.pledge{margin-inline:0}}
+.lab{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
+.field{
+  width:100%;
+  margin:0;
+  padding:10px 0 9px;
+  border:0;
+  border-bottom:1px solid var(--asphalt);
+  border-radius:0;
+  background:transparent;
+  color:inherit;
+  font-family:var(--display);
+  font-size:20px;
+  line-height:1.3;
+  appearance:none;
+}
+.field:focus{outline:0;box-shadow:0 1px 0 var(--asphalt)}
+.ok{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
+
+
+/* —— Robert's photos: one figure, a clean edge (studio pass 1, Oct 21, 2026; photo.md §A) ——
+   Robert: a feathered photo "looks unfinished"; worn textures "very sloppy". A photo keeps its own hard edge:
+   edge to edge on phones, inset exactly on the grid on desktop. No mask, no fade, no wash, no frame, no shadow,
+   nothing laid over it. `.ph` + its shape (`--p` portrait, `--l` landscape) + an optional desktop layout:
+     --wide   a 2:1 band, the full width of its column
+     --frame  3:2, the full width of a reading column
+     --tall   4:5, five of the twelve columns, on the left edge (also where a lone --p lands)
+   Crops come from the registry's sources (scripts/photos.js), not from object-fit. The place · month line sits
+   under the photo on the photo's own left edge, 13px / 700 gunmetal. The same block is in /chrome.css and /home.css. */
+.ph{margin:clamp(40px,6vw,64px) 0;position:relative}
+.ph picture{display:block}
+.ph img{display:block;width:100%;height:auto;object-fit:cover;background:var(--bone-2)}
+.ph figcaption{margin:8px 0 0;padding:0;font-size:13px;font-weight:700;line-height:1.3;letter-spacing:0;text-transform:none;color:var(--mute)}
+.theme-dark .ph img{background:var(--tar)}
+.theme-dark .ph figcaption{color:var(--dust)}
+@media (max-width:899px){
+  .ph{margin-inline:calc(-1 * var(--gut))}
+  .ph figcaption{padding-inline:var(--gut)}
+  .ph--p img,.ph--tall img{aspect-ratio:4/5}
+  .ph--l img{aspect-ratio:4/3}
+}
+@media (min-width:600px) and (max-width:899px){
+  .ph--wide img,.ph--frame img{aspect-ratio:3/2}       /* tablets take the desktop crop, a little taller */
+}
+@media (min-width:900px){
+  .ph img{aspect-ratio:3/2}
+  .ph--wide img{aspect-ratio:2/1}
+  .ph--frame img{aspect-ratio:3/2}
+  .ph--p:not(.ph--wide):not(.ph--frame) img,.ph--tall img{aspect-ratio:4/5}
+  /* five of twelve grid columns, measured from the grid itself so it lands on a column line in any parent */
+  .ph--p:not(.ph--wide):not(.ph--frame),.ph--tall{
+    width:min(100%,calc((min(100vw,var(--maxw)) - 2 * var(--gut) - 11 * var(--col-gap,24px)) * 5 / 12 + 4 * var(--col-gap,24px)))}
+}
+
+/* —— Pass 29 (Oct 5, evening): the type, retyped. Tracked mono caps are gone from every sheet (the
+   mechanical pass above set text-transform:none and letter-spacing:0 on each rule that had them,
+   and lifted anything under 12px to 12px). What stands instead, in Overpass only: labels and kickers
+   in sentence case at 12.5–13px / 700, gunmetal; links at 15px / 700 with the hairline and the arrow;
+   buttons alone keep caps — a road sign — at 13px / 800 with .04em, never more. —— */
+.eyebrow{font-size:.8125rem;font-weight:700;letter-spacing:0;text-transform:none;color:var(--mute)}
+.link{font-size:.9375rem;font-weight:700;letter-spacing:0;text-transform:none;gap:6px;padding-bottom:3px;border-bottom-width:1.5px;white-space:normal}
+.link::after{font-weight:400}
+.btn,.btn--sm{font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:.8125rem}
+
+/* ————————————————————————————————————————————————————————————————————————
+   Studio pass 1 (Oct 21, 2026), the last things in @layer base.
+   B2 the one token block · B3 the element type rules · B4 the reduced-motion guard.
+   ———————————————————————————————————————————————————————————————————————— */
+
+/* B2 — one token block: space, rhythm, type, measure, the seen hairline, the ring, button heights, the label,
+   motion. It never redeclares --line, --line-d or --pad: /tonight/ re-points those from its own sheet. */
+:root{
+  /* space: 8 16 24 40 64 104 168; fixed steps inside a group, fluid steps between sections */
+  --s1:8px;--s2:16px;--s3:24px;--s4:40px;--s5:64px;--s6:104px;--s7:168px;
+  --top:clamp(24px, 9.14px + 3.81vw, 64px);       /* tally line to breadcrumb, every inner page */
+  --gap:clamp(40px, 31.09px + 2.286vw, 64px);     /* between groups in a section */
+  --sec:clamp(64px, 49.14px + 3.81vw, 104px);     /* between sections (was clamp(64px,9vw,128px)) */
+  --band:clamp(64px, 25.37px + 9.905vw, 168px);   /* a colour band's padding */
+  --col-gap:clamp(16px, 13.03px + .762vw, 24px);  /* the 12-column gutter */
+  /* type: ~1.15 on a phone, ~1.25 at 1440; Overpass 800 display, 400 body, 700 labels */
+  --fs-label:.8125rem;                                        /* 13 */
+  --fs-small:clamp(.875rem, .852rem + .095vw, .9375rem);     /* 14 → 15 */
+  --fs-body:clamp(1.0625rem, 1.039rem + .095vw, 1.125rem);   /* 17 → 18 */
+  --fs-intro:clamp(1.125rem, 1.079rem + .19vw, 1.25rem);     /* 18 → 20, long ledes */
+  --fs-h4:clamp(1.125rem, 1.032rem + .381vw, 1.375rem);      /* 18 → 22 */
+  --fs-lede:clamp(1.25rem, 1.157rem + .381vw, 1.5rem);       /* 20 → 24 */
+  --fs-h3:clamp(1.3125rem, 1.15rem + .667vw, 1.75rem);       /* 21 → 28 */
+  --fs-h2:clamp(1.6875rem, 1.293rem + 1.619vw, 2.75rem);     /* 27 → 44 */
+  --fs-display:clamp(2.25rem, 1.507rem + 3.048vw, 4.25rem); /* 36 → 68 */
+  --fs-h1:clamp(2.75rem, 1.775rem + 4vw, 5.375rem);          /* 44 → 86 */
+  --measure:30em;                                             /* ~66–72 characters of body */
+  /* lines, focus, controls */
+  --line-s:var(--dust-deep);          /* the seen hairline: a fold, a field, a pick (3.2:1 on concrete) */
+  --ring:var(--asphalt);              /* the focus ring; plaster inside the dark rooms (S1) */
+  --btn-h:48px;--btn-h-sm:44px;
+  --label:700 .8125rem/1.35 var(--display);   /* 13px / 700, sentence case, gunmetal */
+  /* motion: one scale, one easing */
+  --t-color:120ms;   /* press, hover fills, any colour or edge change */
+  --t-move:200ms;    /* small movement or reveal: a link's arrow, the play disc fading; closing things */
+  --t-open:320ms;    /* things that open or arrive: folds, the phone menu, the Ride with me bar */
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+
+/* B3 — the element type rules (type-layout). In base, never unlayered, so a section sheet's h2-as-a-label
+   (.gr-filter-label, .cal-q, .fn-related h2) still wins. */
+body{font-size:var(--fs-body);line-height:1.55}
+h1{font-size:var(--fs-h1)}
+h2{font-size:var(--fs-h2);letter-spacing:-.03em}
+h3{font-size:var(--fs-h3);line-height:1.08}
+h4{font-size:var(--fs-h4);line-height:1.15}
+.lede{font-size:var(--fs-lede);line-height:1.4}
+p,li,dd,figcaption,blockquote{text-wrap:pretty}
+main.wrap{padding-top:var(--top)}
+
+/* B4 — the one reduced-motion guard (motion.md §6). In base: a layered !important outranks every other sheet.
+   0s, not .01ms, so not even an `all` transition can fade a ring in. Nothing listens for transitionend. */
+@media (prefers-reduced-motion:reduce){
+  :root{--t-color:0ms;--t-move:0ms;--t-open:0ms}
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:0s!important;transition-delay:0s!important;
+    animation-duration:0s!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
+}
+
+}
+/* the frame: unlayered */
+
+.skip{position:absolute;left:-9999px;top:0;z-index:90;padding:10px 14px;background:var(--asphalt);color:var(--bone);font-family:var(--mono);font-size:12px}
+.skip:focus{left:0}
 
 /* —— header: home's solid nav state, always on —— */
 .nav{
@@ -211,22 +362,8 @@ p{margin:0 0 1em}
 /* —— the running tally, under the nav on every inner page —— */
 .tally-line{margin:0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--mute)}
 .tally-line .wrap{display:flex;align-items:center;gap:10px;min-height:38px;padding-block:8px}
-.tally-line .dot{width:8px;height:8px;border-radius:50%;background:var(--asphalt);flex:0 0 auto}
 .tally-num{color:var(--asphalt);font-weight:700}
-
-/* —— page body spacing —— */
-main{display:block}
-main.wrap{padding-block:clamp(40px,6vw,80px) 0}
-
-/* —— the pledge block that closes every inner page (markup in scripts/chrome.js) —— */
-.pledge{margin:var(--sec) 0 0;padding:clamp(28px,4vw,48px) clamp(22px,3.5vw,48px);background:var(--asphalt);color:var(--bone);max-width:820px}
-.pledge-num{margin:0 0 14px;font-weight:800;font-size:clamp(4rem,12vw,7rem);line-height:.84;letter-spacing:-.045em;color:var(--bone)}
 .pledge-line{margin:0 0 14px;font-size:clamp(1.3rem,.9vw + 1.08rem,1.7rem);line-height:1.06;letter-spacing:-.02em;max-width:24ch}
-.pledge-copy{margin:0 0 24px;max-width:52ch;color:var(--bone-2)}
-.pledge .cta-row{align-items:center;gap:12px 20px}
-.pledge .link{color:var(--bone)}
-.wrap>.pledge{margin-inline:calc(-1 * var(--gut))}
-@media (min-width:640px){.wrap>.pledge{margin-inline:0}}
 
 /* —— footer (identical to home) —— */
 .foot{margin-top:var(--sec);background:var(--asphalt);color:var(--bone);padding-block:clamp(48px,7vw,96px) 32px}
@@ -242,23 +379,6 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .foot-col a{padding:10px 0;text-decoration:none;font-size:1.02rem}
 @media (hover:hover){.foot-col a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}}
 .signup{grid-column:1 / -1;display:flex;flex-direction:column;gap:8px}
-.lab{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
-.field{
-  width:100%;
-  margin:0;
-  padding:10px 0 9px;
-  border:0;
-  border-bottom:1px solid var(--asphalt);
-  border-radius:0;
-  background:transparent;
-  color:inherit;
-  font-family:var(--display);
-  font-size:20px;
-  line-height:1.3;
-  appearance:none;
-}
-.field:focus{outline:0;box-shadow:0 1px 0 var(--asphalt)}
-.ok{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none}
 .signup .field{border-bottom-color:var(--bone);margin-bottom:10px}
 .signup .field:focus{box-shadow:0 1px 0 var(--bone)}
 .signup .field:focus-visible{outline:2px solid var(--bone);outline-offset:4px}
@@ -269,16 +389,11 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .foot-crisis b{font-weight:800}
 .foot-line{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 16px;margin-top:22px;padding-top:12px;border-top:1px solid var(--line-d);font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--dust)}
 .foot-trust{display:flex;flex-wrap:wrap;gap:0 18px}
-.foot-trust a{display:inline-block;padding:13px 0;margin:-13px 0;color:var(--dust);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
-.foot-trust a:hover{color:var(--bone)}
+.foot-trust a{display:inline-block;padding:13px 2px;margin:-13px -2px;color:var(--dust);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+@media (hover:hover){.foot-trust a:hover{color:var(--bone)}}
 @media (min-width:900px){
   .foot-grid{grid-template-columns:repeat(3,minmax(0,1fr)) minmax(0,1.4fr);gap:clamp(24px,4vw,56px)}
   .signup{grid-column:auto}
-}
-
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .btn,.link::after,.nav{transition:none}
 }
 
 /* —— dark pages (/tonight/): same chrome, flipped —— */
@@ -286,61 +401,17 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .theme-dark .brand .brand-mark{color:var(--bone)}              /* the stencil reads on tar; the bar goes powder rose (the logo rule for dark grounds) */
 .theme-dark .brand-mark .lp-bar{fill:var(--creosote-lift)}
 .theme-dark .nav .btn--sm{background:var(--bone);color:var(--asphalt);border-color:var(--bone)}
-.pledge .btn--bone:focus-visible,.foot .btn--bone:focus-visible{outline:2px solid var(--bone);outline-offset:3px}
-.theme-dark .tally-line .dot{background:var(--dust)}   /* the asphalt dot vanished on /tonight/'s dark page */
 .theme-dark .tally-line{color:var(--dust);border-bottom-color:var(--line-d)}
 .theme-dark .tally-num{color:var(--bone)}
 .theme-dark .skip{background:var(--bone);color:var(--asphalt)}
-
-/* —— Pass 25 (Oct 4, 2026): Robert's photos through the site ——
-   One figure, from scripts/photos.js: `.ph` + its shape (`--p` portrait, `--l` landscape) + an optional
-   desktop layout (`--wide` a band across the column, `--tall` 4:5 and narrow, `--frame` a 3:2 frame the
-   width of a reading column). The picture dissolves into whatever it sits on, top and foot, and on desktop
-   at its sides by a hair (wider side fades read as an old-TV vignette, Pass 24b) — no frame, no hard edge, no type over it (Pass 7, Pass 23b). On phones it runs edge to
-   edge in its own shape. The place · month line sits under it in mono. The same block is in /home.css. */
-.ph{margin:clamp(36px,6vw,72px) 0;position:relative}
-.ph img{display:block;width:100%;height:auto;object-fit:cover;background:transparent;
-  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%);
-  mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%)}
-.ph figcaption{margin-top:4px;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--mute)}
-.theme-dark .ph figcaption{color:var(--dust)}
-@media (max-width:899px){
-  .ph{margin-inline:calc(-1 * var(--gut))}
-  .ph figcaption{padding-inline:var(--gut)}
-  .ph--p img{aspect-ratio:4/5}
-  .ph--l img{aspect-ratio:4/3}
-}
-@media (min-width:900px){
-  .ph img{aspect-ratio:3/2;max-height:620px;
-    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 2.5%,#000 97.5%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%);
-    -webkit-mask-composite:source-in;
-    mask-image:linear-gradient(to right,transparent 0,#000 2.5%,#000 97.5%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%);
-    mask-composite:intersect}
-  .ph--p,.ph--tall{max-width:460px}
-  .ph--p img,.ph--tall img{aspect-ratio:4/5;max-height:none}
-  .ph--wide,.ph--frame{max-width:none}
-  .ph--wide img{aspect-ratio:2/1;max-height:600px}
-  .ph--frame img{aspect-ratio:3/2;max-height:620px}
-  .ph figcaption{padding-left:2.5%}
-}
-
-/* —— Pass 29 (Oct 5, evening): the type, retyped. Tracked mono caps are gone from every sheet (the
-   mechanical pass above set text-transform:none and letter-spacing:0 on each rule that had them,
-   and lifted anything under 12px to 12px). What stands instead, in Overpass only: labels and kickers
-   in sentence case at 12.5–13px / 700, gunmetal; links at 15px / 700 with the hairline and the arrow;
-   buttons alone keep caps — a road sign — at 13px / 800 with .04em, never more. —— */
-.eyebrow{font-size:.8125rem;font-weight:700;letter-spacing:0;text-transform:none;color:var(--mute)}
-.link{font-size:.9375rem;font-weight:700;letter-spacing:0;text-transform:none;gap:6px;padding-bottom:3px;border-bottom-width:1.5px;white-space:normal}
-.link::after{font-weight:400}
-.btn,.btn--sm{font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:.8125rem}
 
 /* —— Pass 36 (Oct 6, 2026): the "Ride with me" bar (markup in scripts/chrome.js, behaviour in /ridebar.js).
    Robert wanted "ride with me" on every page as you scroll, to the next ride he's doing. Bruise bar, the
    date on the powder-rose plate (the blank, filled in), plaster type. Phones: across the foot of the screen.
    Desktop: a box at the bottom right. It slides away while the page's own "Ride with me" is in view.
    The same block is in /chrome.css and /home.css. —— */
-.ridebar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:stretch;background:var(--asphalt);color:var(--paper);border-top:1px solid var(--line-d);padding-bottom:env(safe-area-inset-bottom);transform:translateY(110%);visibility:hidden;transition:transform .25s ease,visibility 0s linear .25s}
-.ridebar.is-on{transform:none;visibility:visible;transition:transform .25s ease}
+.ridebar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:stretch;background:var(--asphalt);color:var(--paper);border-top:1px solid var(--line-d);padding-bottom:env(safe-area-inset-bottom);transform:translateY(110%);visibility:hidden;transition:transform var(--t-open) var(--ease),visibility 0s linear var(--t-open)}
+.ridebar.is-on{transform:none;visibility:visible;transition:transform var(--t-open) var(--ease)}
 .ridebar[hidden]{display:none}
 .ridebar-a{flex:1 1 auto;display:flex;align-items:center;gap:12px;min-height:60px;min-width:0;padding:8px 8px 8px var(--gut);color:inherit;text-decoration:none}
 .ridebar-d{flex:0 0 auto;background:var(--volt);color:var(--asphalt);font-size:.8125rem;font-weight:800;line-height:1;padding:7px 8px 6px;white-space:nowrap}
@@ -351,7 +422,276 @@ main.wrap{padding-block:clamp(40px,6vw,80px) 0}
 .ridebar-x{flex:0 0 48px;position:relative;border:0;border-left:1px solid var(--line-d);background:transparent;color:var(--dust);cursor:pointer}
 .ridebar-x::before,.ridebar-x::after{content:"";position:absolute;left:50%;top:50%;width:16px;height:2px;background:currentColor;transform:translate(-50%,-50%) rotate(45deg)}
 .ridebar-x::after{transform:translate(-50%,-50%) rotate(-45deg)}
-@media (hover:hover){.ridebar-a:hover b{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:var(--volt)}.ridebar-x:hover{color:var(--paper)}}
+@media (hover:hover){.ridebar-a:hover b{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:currentColor}.ridebar-x:hover{color:var(--paper)}}
 .ridebar a:focus-visible,.ridebar button:focus-visible{outline:2px solid var(--paper);outline-offset:-5px}
 @media (min-width:900px){.ridebar{left:auto;right:var(--gut);bottom:20px;width:420px;border:1px solid var(--line-d);padding-bottom:0}.ridebar-a{padding-left:16px}}
-@media (prefers-reduced-motion:reduce){.ridebar,.ridebar.is-on{transition:none}}
+
+/* ————————————————————————————————————————————————————————————————————————
+   Studio pass 1 (Oct 21, 2026) — unlayered, in this order: S1 focus, S2 the system, S3 the frame's type,
+   S4 motion and way-finding. Unlayered beats every section sheet at any specificity, so these are the
+   one look of each thing on 2,500 pages without regenerating them. Old classes stay as aliases until a
+   generator touches them. research/design/2026-10-21-studio-1/brief.md has the rulings (D1–D13).
+   ———————————————————————————————————————————————————————————————————————— */
+
+/* S1 — one focus ring per ground. Bruise ink on light grounds; plaster inside the dark rooms. Unlayered,
+   so no section sheet can hide focus. A dark tile that is itself the link (.gr-kind--ink, .cal-door--you)
+   keeps the ink ring: its ring is drawn outside it, on the light page. The round play disc draws its ring
+   inside itself in the disc's own ink (motion §2); it sits on a film, so an outside ring has no ground. */
+:focus-visible{outline:2px solid var(--ring);outline-offset:3px}
+.pledge,.foot,.ridebar,.help-bar,.gr-next,.gr-banner,.gr-jump,.res-door--now,.theme-dark,.s--creosote,.dir-report:not(.dir-report--compact){--ring:var(--paper)}
+.help-bar:focus-visible,.gr-jump:focus-visible{outline-offset:-5px}    /* bars at the screen's edge: the ring draws inside */
+.gr-film-play:focus-visible,.rp-film-play:focus-visible{outline:3px solid currentColor;outline-offset:-9px}
+
+/* S2 — the system (system.md M2–M11) */
+
+/* M2 — one button. .btn is the family; the ride stamp (.gr-btn), the town buttons (.pbtn) and the map's
+   Zoom take its look. Caps 13/800/.04em, one height, square. Hover inverts (filled ↔ line), press fills;
+   no rose on any hover or press (D3). */
+.btn,.gr-btn,.pbtn,.gr-route-zoom{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:var(--btn-h);padding:0 20px;border:1px solid currentColor;border-radius:0;
+  background:transparent;color:var(--asphalt);
+  font:800 .8125rem/1.2 var(--display);letter-spacing:.04em;text-transform:uppercase;
+  text-decoration:none;white-space:nowrap;cursor:pointer;
+  transition:background-color var(--t-color) var(--ease),color var(--t-color) var(--ease),border-color var(--t-color) var(--ease)}
+.btn--sm,.pbtn,.gr-route-zoom{min-height:var(--btn-h-sm);padding:0 14px}
+.btn svg,.btn .mk,.gr-btn-mark,.pbtn .mk{width:18px;height:18px;flex:none;color:currentColor}
+.btn--ink,.gr-btn:not(.gr-btn--ghost){background:var(--asphalt);border-color:var(--asphalt);color:var(--paper)}
+.btn--bone{background:var(--paper);border-color:var(--paper);color:var(--asphalt)}
+/* the ride stamp, unstamped: mark + words + arrow in one cell */
+.gr-btn-mk,.gr-btn--ghost .gr-btn-mk{display:contents;background:none;border:0;color:inherit}
+.gr-btn-t{display:inline;padding:0;min-width:0;white-space:normal;text-align:left}
+.gr-btn-go{display:inline;border:0;font-weight:400;letter-spacing:0;transition:transform var(--t-move) var(--ease)}
+.gr-btn--back .gr-btn-go{order:-1}
+/* one primary per screen: the arbitrary second fill goes to line */
+.gr-linkrow .btn--ink{background:transparent;border-color:var(--asphalt);color:var(--asphalt)}
+/* /cyclefor/'s clip picker: `.cf-field > label span` was thinning its words to 15px/400 grey */
+.cf-field>label.btn{font-size:.8125rem}
+.cf-field>label.btn span{font:inherit;color:inherit}
+@media (hover:hover){
+  .btn:hover,.gr-btn--ghost:hover,.pbtn:hover,.gr-route-zoom:hover{background:var(--asphalt);border-color:var(--asphalt);color:var(--paper)}
+  .btn--ink:hover,.gr-btn:not(.gr-btn--ghost):hover{background:transparent;border-color:var(--asphalt);color:var(--asphalt)}
+  .btn--bone:hover{background:transparent;border-color:var(--paper);color:var(--paper)}
+  .gr-btn:hover .gr-btn-mk{background:none}
+  .gr-linkrow .btn--ink:hover{background:var(--asphalt);color:var(--paper)}
+}
+/* press: at once, on every device (the tap a phone feels) */
+.btn:active,.gr-btn:active,.pbtn:active,.gr-route-zoom:active{transition-duration:0s}
+.btn:active,.gr-btn--ghost:active,.pbtn:active,.gr-route-zoom:active{background:var(--asphalt);border-color:var(--asphalt);color:var(--paper)}
+.btn--ink:active,.gr-btn:not(.gr-btn--ghost):active{background:var(--mute);border-color:var(--mute);color:var(--paper)}
+.btn[aria-pressed="true"]{background:var(--asphalt);border-color:var(--asphalt);color:var(--paper)}   /* Save, saved */
+.btn[aria-disabled="true"],.btn:disabled{border-style:dashed;border-color:var(--dust-deep);background:transparent;color:var(--dust-deep);cursor:default;pointer-events:none}
+.btn[aria-busy="true"]{cursor:progress;opacity:.75}
+/* context: /rides/ hub's Near me is emitted .btn--bone and shown ink (it's that screen's primary); on the rose
+   report form the submit is a ghost so the page keeps one filled button (events.css, Pass 6) */
+.gr-hub .gr-search .btn--bone{background:var(--asphalt);border-color:var(--asphalt);color:var(--paper)}
+.dir-report:not(.dir-report--compact) .btn--ink{background:transparent;border-color:var(--paper);color:var(--paper)}
+@media (hover:hover){.dir-report:not(.dir-report--compact) .btn--ink:hover{background:var(--paper);color:var(--asphalt)}}
+.dir-report:not(.dir-report--compact) .btn--ink:active{background:var(--paper);border-color:var(--paper);color:var(--asphalt)}
+/* on dark ground */
+.pledge .btn--ghost,.foot .btn--ghost,.gr-banner .btn--ghost,.theme-dark .btn--ghost{color:var(--paper);border-color:var(--paper)}
+@media (hover:hover){.pledge .btn--ghost:hover,.foot .btn--ghost:hover,.gr-banner .btn--ghost:hover,.theme-dark .btn--ghost:hover{background:var(--paper);border-color:var(--paper);color:var(--asphalt)}}
+.pledge .btn--ghost:active,.foot .btn--ghost:active,.gr-banner .btn--ghost:active,.theme-dark .btn--ghost:active,.pledge .btn--bone:active,.res-door--now .btn--bone:active{background:var(--paper);border-color:var(--paper);color:var(--asphalt)}
+
+/* M3 — one link. .link (15/700, a hairline, the arrow) is the look for every single "way on" link; the
+   12px mono ones and the 12px grey "Google Calendar" take it. No rose underlines on inner pages. */
+a{text-decoration-color:currentColor}
+.gr-minor,.gr-footline a,.gr-tonight,.back a,.fn-back a,.town-more a,.cal-back a,.mo-nav a,.gr-all-link .link,.gr-hero-alt a,.cal-tba a,.gr-hub .gr-links a,.gr-clear,.clear,.gr-near a{
+  font:700 .9375rem/1.35 var(--display);letter-spacing:0;color:var(--asphalt);
+  text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px;text-decoration-color:currentColor;border:0}
+.gr-minor,.gr-footline a,.gr-tonight,.back a,.fn-back a,.town-more a,.cal-back a,.mo-nav a,.gr-clear,.clear,.gr-near a{display:inline-flex;align-items:center;min-height:44px}
+.gr-clear,.clear{background:none;border:0;padding:0 2px;cursor:pointer}   /* "Clear" was 11px (.6875rem), under the floor */
+.gr-footline,.gr-tonight-row,.back,.fn-back,.town-more,.cal-back,.mo-nav{font:700 .9375rem/1.35 var(--display);letter-spacing:0;color:var(--asphalt)}
+.gr-footline-mark,.gr-tonight-mark{display:none}       /* decoration: it put two of three links off the gutter */
+@media (hover:hover){.gr-minor:hover,.gr-footline a:hover,.gr-tonight:hover,.back a:hover,.fn-back a:hover,.town-more a:hover,.cal-back a:hover,.mo-nav a:hover,.gr-near a:hover{text-decoration-thickness:2.5px}}
+
+/* M4 — one pick: a filter or choice you toggle (sentence case, not a road sign). The ride report's kinds and
+   chips, the review's picks, the town page's "What do you need?", the calendar's tags, the hub's city chips.
+   display stays the section sheets' own (rides.css hides the map's back/reset chips until it zooms). */
+.gr-chip,button.tag,.pfil,.tbtn,.dir-report-kind span,.dir-report-chips span,.gr-rev-pick span,.cal-picks--chips .cal-pick,.cal-jump a{
+  align-items:center;gap:8px;min-height:44px;padding:0 14px;
+  border:1px solid var(--line-s);border-radius:0;background:var(--paper);color:var(--asphalt);
+  font:700 .875rem/1.2 var(--display);letter-spacing:0;text-transform:none;text-decoration:none;cursor:pointer;
+  transition:background-color var(--t-color) var(--ease),color var(--t-color) var(--ease),border-color var(--t-color) var(--ease)}
+.gr-chip-n,.tag .c,.pfil-n,.cal-picks--chips .cal-pick b{font-weight:400;color:var(--mute)}
+@media (hover:hover){.gr-chip:hover,button.tag:hover,.pfil:hover,.tbtn:hover,.dir-report-kind label:hover span,.dir-report-chips label:hover span,.gr-rev-pick label:hover span,.cal-jump a:hover{border-color:var(--asphalt)}}
+.gr-chip:active,button.tag:active,.pfil:active,.tbtn:active,.cal-jump a:active{transition-duration:0s;border-color:var(--asphalt);background:var(--bone-2)}
+.gr-chip[aria-pressed="true"],.tag[aria-pressed="true"],.pfil[aria-pressed="true"],.tbtn[aria-pressed="true"],
+.dir-report-kind input:checked+span,.dir-report-chips input:checked+span,.gr-rev-pick input:checked+span{background:var(--asphalt);border-color:var(--asphalt);color:var(--paper)}
+.gr-chip[aria-pressed="true"] .gr-chip-n,.tag[aria-pressed="true"] .c,.pfil[aria-pressed="true"] .pfil-n{color:var(--dust)}
+.dir-report-kind input:focus-visible+span,.dir-report-chips input:focus-visible+span,.gr-rev-pick input:focus-visible+span{outline:2px solid var(--ring);outline-offset:2px}
+.tag.you[aria-pressed="true"]{background:var(--asphalt);border-color:var(--asphalt)}
+/* on the rose form the pick flips */
+.dir-report:not(.dir-report--compact) .dir-report-kind span,.dir-report:not(.dir-report--compact) .dir-report-chips span{background:transparent;border-color:var(--paper);color:var(--paper)}
+.dir-report:not(.dir-report--compact) .dir-report-kind input:checked+span,.dir-report:not(.dir-report--compact) .dir-report-chips input:checked+span{background:var(--paper);color:var(--asphalt)}
+.theme-dark .tbtn{background:transparent;color:var(--paper);border-color:var(--line-d)}
+@media (hover:hover){.theme-dark .tbtn:hover{border-color:var(--paper)}}
+.theme-dark .tbtn:active{background:transparent;border-color:var(--paper)}
+.theme-dark .tbtn[aria-pressed="true"],.theme-dark .tbtn.solid{background:var(--paper);color:var(--asphalt);border-color:var(--paper)}
+/* a static chip (it says what something is; you can't tap it): no border, a plaster-on-concrete fill */
+.gr-tag,.place-chips li,.gr-rev-tags li{display:inline-flex;align-items:center;gap:6px;padding:5px 9px 4px;border:0;background:var(--bone-2);color:var(--asphalt);font:700 .8125rem/1.2 var(--display);letter-spacing:0}
+.gr-tag-warn{background:transparent;border:1px solid var(--creosote-ink);color:var(--creosote-ink)}   /* the one rose chip: a warning */
+.gr-tag-rev{min-height:32px;background:transparent;border:1px solid var(--asphalt);text-decoration:none}   /* this one is a link (to #reviews) */
+@media (hover:hover){.gr-tag-rev:hover{background:var(--asphalt);color:var(--paper)}}
+
+/* M5 — one field. A box with a 1px ink edge, plaster inside (never #fff), 17px words, 52px tall. */
+.field,.gr-search input,.search input,.cf-field input[type="text"],.cf-field input[type="url"],.cf-field input[type="email"],.bf-plan input,.bf-plan select,.find-field,.sign-play-input{
+  width:100%;min-height:52px;margin:0;padding:12px 14px 10px;
+  border:1px solid var(--asphalt);border-radius:0;background:var(--paper);color:var(--asphalt);
+  font:500 1.0625rem/1.3 var(--display);box-shadow:none;appearance:none;-webkit-appearance:none}
+.gr-field input{padding-left:44px}
+textarea.field{min-height:6em;resize:vertical}
+.field::placeholder,.gr-search input::placeholder,.search input::placeholder,.cf-field input::placeholder{color:var(--mute);opacity:1}
+.field:focus,.gr-search input:focus,.search input:focus,.cf-field input:focus,.bf-plan input:focus,.bf-plan select:focus{outline:0;box-shadow:inset 0 0 0 1px var(--asphalt);border-color:var(--asphalt)}
+.field:focus-visible,.gr-search input:focus-visible,.search input:focus-visible,.cf-field input:focus-visible,.bf-plan input:focus-visible,.bf-plan select:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+.field[aria-invalid="true"],.cf-field input[aria-invalid="true"]{border-color:var(--creosote-ink);box-shadow:inset 0 0 0 1px var(--creosote-ink)}
+.field:disabled{border-style:dashed;border-color:var(--dust-deep);color:var(--dust-deep)}
+.lab,.cf-field>label,.gr-rev-lab,.search label,.bf-plan label{font:var(--label);color:var(--asphalt)}
+.dir-report:not(.dir-report--compact) .field{background:transparent;border-color:var(--paper);color:var(--paper)}
+.dir-report:not(.dir-report--compact) .field::placeholder{color:var(--paper)}
+.dir-report:not(.dir-report--compact) .lab,.dir-report:not(.dir-report--compact) .lab small{color:var(--paper)}
+.dir-report:not(.dir-report--compact) .field:focus{box-shadow:inset 0 0 0 1px var(--paper);border-color:var(--paper)}
+.theme-dark .select{min-height:52px;background:var(--asphalt);color:var(--paper);border-color:var(--paper);font:500 1rem/1.3 var(--display)}
+
+/* M6 — one door (a link tile: mark, name, one line). Plaster, one quiet hairline, 8px of air between —
+   never a shared-border grid (that's what left holes with the hairline running on). One fill: no
+   checkerboards. Ink marks, gunmetal counts. Hover = the edge goes ink and the name underlines. */
+.town .res-grid,.res-grid,.town-strip,.res-jump,.fn-spokes,.res-doors{gap:var(--s1);border:0}
+.res-card,.town .res-card,.town-strip a,.res-jump a,.gr-tile,.gr-pick,.gr-wide-door,.cal-door,.mo-tile,.mo-tiles>.mo-tile:nth-child(2n),.cal-pick,.cal-picks>.cal-pick:nth-of-type(2n),.res-door,.fn-spoke{
+  background:var(--paper);border:1px solid var(--line);color:var(--asphalt);
+  transition:background-color var(--t-color) var(--ease),color var(--t-color) var(--ease),border-color var(--t-color) var(--ease)}
+.gr-pick{border-left-width:1px}
+/* the town-guide tile is one tile everywhere: same columns (two across at 390), sub-line always shown */
+.town-strip,.town .res-grid{grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr))}
+.gr-steps .town-strip a span:last-child{display:block}
+.town-strip a,.town .res-card{padding:14px 14px 16px;gap:4px}
+@media (max-width:420px){.town-strip a:last-child:nth-child(odd){grid-column:1 / -1}}   /* as the town page already does (events.css) */
+.tile-p,.tiles-p>.tile-p:nth-child(3n+2){background:var(--paper)}           /* posters: one fill */
+.tile-p--ink,.tiles-p>.tile-p--ink:nth-child(3n+2){background:var(--asphalt)}
+.res-k,.town .res-k,.town-strip a .eyebrow,.gr-tile-n,.gr-tile-sub,.cal-door-n,.gr-pick-k,.gr-wide-door span span,.cal-pick b,.fn-spoke-more,.res-door .fn-spoke-more,.gr-row-st i,.gr-day-n,.mo-n{color:var(--mute)}
+.mk--res,.mk--strip,.res-jump .mk,.gr-tile-mark,.cal-door-mk,.gr-pick-mark,.mk--door{color:currentColor}
+@media (hover:hover){
+  a.res-card:hover,.town-strip a:hover,.res-jump a:hover,a.gr-tile:hover,a.gr-wide-door:hover,a.cal-door:not(.cal-door--you):hover,a.mo-tile:hover,a.res-door:not(.res-door--now):hover,.fn-spoke:hover,.gr-pick:hover,.cal-pick:hover,button.gr-tile:not([aria-pressed="true"]):not([aria-disabled="true"]):hover{background:var(--paper);border-color:var(--asphalt);color:var(--asphalt)}
+  a.res-card:hover .res-k,a.res-card:hover span:last-child,a.res-card:hover .mk--res,.res-jump a:hover .mk{color:inherit}
+  a.res-card:hover b,.town-strip a:hover b,.res-jump a:hover span,.gr-tile:hover .gr-tile-name,.cal-door:hover .cal-door-name,.fn-spoke:hover .fn-spoke-title,.gr-pick:hover .gr-pick-name,.gr-wide-door:hover b,.cal-pick:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:currentColor}
+}
+a.res-card:active,.town-strip a:active,.res-jump a:active,a.gr-tile:active,.gr-pick:active,a.gr-wide-door:active,.cal-door:not(.cal-door--you):active,.mo-tile:active,a.res-door:not(.res-door--now):active,.fn-spoke:active,.cal-pick:active{transition-duration:0s;border-color:var(--asphalt);background:var(--bone-2)}
+.gr-tile[aria-pressed="true"],.cal-door--you,.gr-kind--ink{background:var(--asphalt);border-color:var(--asphalt);color:var(--paper)}
+.gr-tile[aria-pressed="true"] .gr-tile-n,.gr-tile[aria-pressed="true"] .gr-tile-sub,.cal-door--you .cal-door-n,.gr-kind--ink .gr-tile-sub,.gr-kind--ink .gr-tile-n{color:var(--dust)}
+.gr-tile[aria-pressed="true"] .gr-tile-mark,.cal-door--you .cal-door-mk{color:currentColor}
+.gr-tile[aria-disabled="true"],.mo-tile[aria-disabled="true"]{background:transparent;border-style:dashed;border-color:var(--dust-deep);color:var(--dust-deep)}
+.res-door--now{background:var(--tar);border-color:var(--tar);color:var(--paper)}
+
+/* M7 — one row (the ride row, card() + hub.js): a row on a hairline, not a box. Its small line in
+   gunmetal, untracked. */
+.gr-grid{gap:0 var(--s4);border-top:1px solid var(--asphalt);grid-template-columns:repeat(auto-fill,minmax(min(100%,480px),1fr))}
+.gr-card{background:transparent;border:0;border-bottom:1px solid var(--line);padding:14px 46px 14px 0}
+@media (hover:hover){.gr-card:hover{border-color:var(--line)}.gr-card:hover .gr-card-name{text-decoration:underline;text-decoration-color:currentColor;text-underline-offset:3px}}
+.gr-card:focus-within{border-color:var(--line)}
+.gr-card-meta,.gr-card-meta .gr-wait,.gr-card-checked,.gr-dist,.gr-disc{letter-spacing:0;color:var(--mute)}
+.gr-wait--waits{color:var(--asphalt)}
+
+/* M8 — one fold (D2). A hairline above and below, the question at 16/700, "+" then "−" (U+2212) at the right
+   edge, never rotating, 48px tall, no box, no fill. Fixes the "+ … +" on /find-a-ride/ and the native ▶. */
+details.gr-fold,.dir-fold,.dir-report--compact,.more-f,.place-more,.gr-note-more,.bf-how,.cf-release,.faq details,.dir-faq details,details.gr-country-notes,.retired{
+  margin:var(--s3) 0 0;padding:0;background:transparent;border:0;border-top:1px solid var(--line-s);border-bottom:1px solid var(--line-s)}
+.dir-fold+.dir-report--compact,.faq details+details,.dir-faq details+details,details.gr-fold+details.gr-fold,.place-more:last-child{margin-top:0}
+.dir-fold+.dir-report--compact,.faq details+details,.dir-faq details+details,details.gr-fold+details.gr-fold{border-top:0}
+details.gr-fold>summary,.dir-fold>summary,.dir-report--compact>summary,.more-f>summary,.place-more>summary,.gr-note-more>summary,.bf-how>summary,.cf-release>summary,.faq summary,.dir-faq summary,.gr-checked-more>summary,details.gr-country-notes>summary,.retired>summary{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;padding:12px 0;margin:0;
+  list-style:none;cursor:pointer;text-align:left;border:0;position:static;
+  font:700 1rem/1.3 var(--display);letter-spacing:0;text-transform:none;color:inherit}
+details>summary::-webkit-details-marker{display:none}
+details.gr-fold>summary::before,.dir-fold>summary::before,.dir-report--compact>summary::before,.more-f>summary::before,.place-more>summary::before,.bf-how>summary::before{content:none}
+details.gr-fold>summary::after,.dir-fold>summary::after,.dir-report--compact>summary::after,.more-f>summary::after,.place-more>summary::after,.gr-note-more>summary::after,.bf-how>summary::after,.cf-release>summary::after,.faq summary::after,.dir-faq summary::after,.gr-checked-more>summary::after,details.gr-country-notes>summary::after,.retired>summary::after{
+  content:"+";flex:none;width:1em;margin:0 0 0 auto;border:0;position:static;text-align:center;font:400 20px/1 var(--display);color:currentColor}
+details.gr-fold[open]>summary::after,.dir-fold[open]>summary::after,.dir-report--compact[open]>summary::after,.more-f[open]>summary::after,.place-more[open]>summary::after,.gr-note-more[open]>summary::after,.bf-how[open]>summary::after,.cf-release[open]>summary::after,.faq details[open] summary::after,.dir-faq details[open] summary::after,.gr-checked-more[open]>summary::after,details.gr-country-notes[open]>summary::after,.retired[open]>summary::after{content:"\2212"}
+.gr-rev-write[open]>summary{display:none}   /* the button that opens a form goes away while it's open (rides.css) */
+.gr-checked-more{margin:2px 0 0;border:0}
+.gr-checked-more>summary{min-height:44px;padding:0;justify-content:flex-start;font-size:.875rem;color:var(--asphalt)}
+.gr-checked-more>summary::after{font-size:16px;margin-left:8px}
+@media (hover:hover){details.gr-fold>summary:hover,.dir-fold>summary:hover,.dir-report--compact>summary:hover,.more-f>summary:hover,.place-more>summary:hover,.faq summary:hover,.dir-faq summary:hover,.cf-release>summary:hover,.bf-how>summary:hover,.gr-note-more>summary:hover,.gr-checked-more>summary:hover,.retired>summary:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}}
+details.gr-fold>dl,details.gr-fold>.gr-about-body,.dir-fold>.dir-built-grid,.place-more-body{padding:0 0 var(--s3)}
+.theme-dark details.gr-fold,#evenings details.gr-fold{border-color:var(--line-d)}
+
+/* M9 — one fact grid: the label and the value share a top line in every cell; one rule above, hairlines
+   between, no box. (The dd dropped by half the slack: the cell's two grid rows stretched.) */
+.gr-fact,.facts>div{align-content:start}
+.gr-facts,.facts{border:0;border-top:1px solid var(--asphalt);gap:0 var(--s3)}
+.gr-fact,.facts>div{border:0;border-bottom:1px solid var(--line);padding:14px 0}
+/* cells are separated by air, not a vertical hairline: a divider on "every cell but the first" indented the first
+   cell of each wrapped row, and every cell of a one-column list (the event facts beside the lede) */
+.gr-fact dt,.facts dt,.gr-route-nums dt,.bf-stats dt{font:var(--label);color:var(--mute);letter-spacing:0}
+.gr-fact-mark,.facts>div .mk{color:var(--asphalt)}
+.facts>div:not(:has(>.mk)){grid-template-columns:minmax(0,1fr)}   /* a cell with no mark (the calendar's) doesn't keep the mark's empty column */
+.facts>div:not(:has(>.mk))>*{grid-column:1}
+.gr-route-nums,.det .facts{background:transparent;border:0;border-top:1px solid var(--asphalt)}
+.gr-route-nums>div{border-color:var(--line)}
+.gr-route-nums b.num,.bf-stats dd,.fn-table td,.gr-rev-stat b,.mo-c{font-variant-numeric:lining-nums tabular-nums}
+
+/* M10 — one ending (D7). The closing block is a full-width bruise field: edge to edge, its words on the page's
+   own gutter and max width, the heading left and the actions right from 900px. The footer runs flush under it
+   in drained pool (CLAUDE.md §3: --pool is the footer). Type-layout's numbers: --sec above, --gap inside, the
+   heading at --fs-h2 and 20ch. Nothing sits between the block and the footer: the back links and notes move
+   above it in the markup (apply-chrome.py, build-rides.js), so there is no patch for them here. */
+.pledge,.wrap>.pledge,.fn-post>.pledge,.fn-pillar>.pledge,.gr-steps>.pledge,.gr-dir .gr-steps>.pledge{
+  max-width:none;margin:var(--sec) calc(50% - 50vw) 0;
+  padding:var(--gap) max(var(--gut),calc((100vw - var(--maxw)) / 2 + var(--gut)));
+  background:var(--asphalt);color:var(--paper)}
+.pledge-line{font-size:var(--fs-h2);line-height:1;letter-spacing:-.03em;max-width:20ch;margin:0 0 var(--s3)}
+.pledge-copy{margin:0 0 var(--s4);max-width:52ch;color:var(--bone-2)}
+.pledge .cta-row{align-items:center;gap:12px 20px}
+@media (min-width:900px){
+  .pledge{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:var(--s5);align-items:end}
+  .pledge>*{grid-column:1}
+  .pledge .cta-row{grid-column:2;grid-row:1 / span 2;justify-content:flex-start}
+  .pledge-copy{margin-bottom:0}
+}
+body:has(main .pledge) .foot{margin-top:0;border-top:1px solid var(--line-d)}
+main:has(.pledge){padding-bottom:0}
+.foot{background:var(--pool)}
+.foot-col .eyebrow,.foot-crisis .eyebrow,.foot-line,.foot-trust a,.signup .note{color:var(--dust)}   /* 4.5:1 on pool */
+
+/* M11 — crumbs that read as links (D11): links 13/700 on a patina hairline, the page you're on 13/500 gunmetal */
+.crumbs{font:var(--label);letter-spacing:0;color:var(--asphalt)}
+.crumbs a{text-decoration:underline;text-decoration-color:var(--dust-deep);text-decoration-thickness:1px;text-underline-offset:4px}
+@media (hover:hover){.crumbs a:hover{text-decoration-color:currentColor}}
+.crumbs [aria-current]{color:var(--mute);font-weight:500}
+.crumbs li+li::before{color:var(--dust-deep)}
+
+/* S3 — the frame's type (type-layout), and R3: the tally line is a link to the live count (/#road), no dot */
+.tally-line{font:400 var(--fs-small)/1.4 var(--display);color:var(--mute)}
+.tally-line a{position:relative;color:inherit;text-decoration:underline;text-decoration-color:var(--dust-deep);text-decoration-thickness:1px;text-underline-offset:4px}
+.tally-line a::before{content:"";position:absolute;left:0;right:0;top:50%;height:44px;margin-top:-19px}   /* a 44px hit area, biased down so the sticky header never covers its top; the line keeps its height */
+@media (hover:hover){.tally-line a:hover{text-decoration-color:currentColor}}
+.foot-col a{text-wrap:balance}
+.foot-line{font-size:var(--fs-label)}
+@media (min-width:1024px){
+  .foot>.wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
+  .foot-sign{grid-column:1 / span 5;margin:0;--fw:clamp(300px,30vw,440px)}
+  .foot-grid{grid-column:6 / -1}
+  .foot-crisis,.foot-line{grid-column:1 / -1}
+}
+
+/* S4 — motion and way-finding in the frame */
+html{-webkit-tap-highlight-color:transparent}            /* the press states above are the tap's feedback */
+html{scroll-padding-top:calc(var(--nav-h) + 12px)}      /* focus and anchors never land under the nav */
+@media (max-width:899px){html{scroll-padding-bottom:76px}}   /* …or under the Ride with me bar (61px + safe area) */
+@media (min-width:900px){html{scroll-padding-bottom:96px}}
+.nav-links a{padding:12px 0}                              /* 44px tall */
+.menu-list a span{font-size:var(--fs-label)}
+.menu-list a[aria-current="page"]{border-bottom-color:currentColor}   /* where you are: the desktop nav's own state */
+.menu-list a[aria-current="page"] span{color:var(--asphalt)}
+/* D4: the header's Ride with me is a line on inner pages at every width; it fills on hover */
+.nav .btn--sm{background:transparent;border-color:var(--asphalt);color:var(--asphalt)}
+@media (hover:hover){.nav .btn--sm:hover{background:var(--asphalt);border-color:var(--asphalt);color:var(--paper)}}
+.nav .btn--sm:active{background:var(--asphalt);border-color:var(--asphalt);color:var(--paper)}
+.theme-dark .nav .btn--sm{background:transparent;border-color:var(--paper);color:var(--paper)}
+@media (hover:hover){.theme-dark .nav .btn--sm:hover{background:var(--paper);border-color:var(--paper);color:var(--asphalt)}}
+.theme-dark .nav .btn--sm:active{background:var(--paper);border-color:var(--paper);color:var(--asphalt)}
+
+/* R12 — 988 in the phone menu and the footer is a tel: link now; it takes the same hairline as the Trevor number
+   beside it, and a 44px hit area that doesn't change the line */
+.menu-foot a,.foot-crisis a{position:relative;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:currentColor}
+.menu-foot a::before,.foot-crisis a::before{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;margin-top:-22px}
+.menu-foot a b,.foot-crisis a b{color:inherit}

@@ -5,7 +5,8 @@
    2. The mobile menu: same open/close/focus-trap as /home.js.
    3. "Mile updates": the waitlist form posts to Netlify without leaving the page,
       same copy as the homepage.
-   4. Marks the current section in the nav.
+   4. Marks the current section in the nav and the phone menu (aria-current).
+   5. Press states on touch: iOS only applies :active when a touch listener exists.
    Markup: scripts/chrome.js. Styles: /chrome.css. */
 (function () {
   "use strict";
@@ -90,11 +91,15 @@
       });
   });
 
-  /* —— 4. current section —— */
+  /* —— 4. current section —— studio pass 1: Guides is the nav item for /guides/, /field-notes/ and /journal/;
+     /brief/ is part of Find a ride; the phone menu marks where you are too. */
   var here = location.pathname;
-  var SECTION = { "/find-a-ride/": /^\/(rides|tonight|find-a-ride)\//, "/field-notes/": /^\/(field-notes|guides|journal)\//, "/resources/": /^\/resources\//, "/events/2027/": /^\/events\//, "/towns/": /^\/towns\// };
-  document.querySelectorAll(".nav-links a").forEach(function (a) {
+  var SECTION = { "/find-a-ride/": /^\/(rides|tonight|find-a-ride|brief)\//, "/guides/": /^\/(guides|field-notes|journal)\//, "/resources/": /^\/resources\//, "/events/2027/": /^\/events\//, "/towns/": /^\/towns\// };
+  document.querySelectorAll(".nav-links a, .menu-list a").forEach(function (a) {
     var rx = SECTION[a.getAttribute("href")];
     if (rx && rx.test(here)) a.setAttribute("aria-current", "page");
   });
+
+  /* —— 5. press —— */
+  document.addEventListener("touchstart", function () {}, { passive: true });
 })();

@@ -24,8 +24,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/chrome.css?v=47">
+  <link rel="stylesheet" href="/styles.css?v=47">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Does bike tire tread matter on pavement?","description":"Road, gravel and mountain bike tread patterns: what the tire makers claim, what tests show, and what to choose.","datePublished":"2026-10-13","dateModified":"2026-10-13","url":"https://cycleforchange.org/guides/bike-tire-tread/","author":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":{"@type":"ImageObject","url":"https://cycleforchange.org/favicon-512.png"}}}</script>
 </head>
 <body>
@@ -52,15 +52,16 @@
       </svg>
       <span class="sr">Cycle for Change</span>
     </a>
+    <!-- Studio pass 1: one nav list. Guides replaces Field notes (Field notes stays in the footer and on /guides/). -->
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/towns/">Towns</a>
-      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -71,20 +72,20 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
-    <li><a href="/find-a-ride/">Find a ride <span>1,423</span></a></li>
+    <li><a href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/find-a-ride/">Find a ride <span>1,421</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
-    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
-    <span><b>988</b> call or text, any hour</span>
+    <span><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>
 <main id="main" class="fn-post">
   <div class="fn-article">
     <p class="fn-meta"><span>Guides · Wheels and tires</span><span class="dot">·</span><span>October 2026</span></p>
@@ -93,37 +94,39 @@
     <div class="fn-body">
       <p class="fn-evidence">The evidence here is moderate: real tests, but not many of them. 8 sources, listed at the end.</p>
       <h2>What the tests say</h2>
-      <p><strong>Pavement (contested).</strong> Sheldon Brown’s long-standing explanation is that all tires get slippery on wet metal, paint and rail tracks, and tread features don’t help there <sup><a href="#src-1">1</a></sup>. Bicycles don’t realistically hydroplane, because a narrow, rounded contact patch pushes water aside <sup><a href="#src-1">1</a></sup>. He argues knobby treads grip worse on hard surfaces, since knobs bend under side loads while a smooth tread can’t <sup><a href="#src-1">1</a></sup>, and that fine “file” treads on road tires are mostly cosmetic or marketing <sup><a href="#src-1">1</a></sup>. Wikipedia’s summary agrees: on-road, a tread pattern “offers little to no improvement in traction”, and light tread is often added because of the mistaken belief that slicks are slippery in the wet <sup><a href="#src-2">2</a></sup>. Not everyone agrees. In a Velo technical FAQ, Specialized and Vittoria ranked compound above tread for road traction, but Specialized said “tread does have an influence on traction in road tires”, Vittoria said “a treaded design will deliver the best overall performance in wet conditions”, and Challenge said a slick works on dry roads but a herringbone tread helps once it is wet. Continental called tread patterns “largely aesthetic” <sup><a href="#src-7">7</a></sup>. Rene Herse argues tread matters on the road because it helps the tire interlock with the surface, though its evidence is anecdotal and historical rather than test data <sup><a href="#src-8">8</a></sup>. Pressure does change wet grip: BRR measured the average center-grip coefficient of three 28mm road tires rising from 0.69 at 108 psi to 0.78 at 54 psi (edge grip 0.72 to 0.77) <sup><a href="#src-6">6</a></sup>.</p>
-<p><strong>Rolling resistance: casing vs tread.</strong> Bicycle Rolling Resistance (BRR) runs tires on a diamond-plate drum (one tire, 28.8 km/h, 42.5 kg load) and lists results at each width’s “low” test pressure <sup><a href="#src-3">3</a></sup><sup><a href="#src-5">5</a></sup>. Three comparisons stand out:
-- <strong>Same brand, more tread.</strong> Schwalbe’s lower-tread G-One RS Pro 40 measured 15.7 W, and the knobbier G-One R Pro 40 measured 16.6 W. That’s 0.9 W for more tread <sup><a href="#src-3">3</a></sup>.
-- <strong>Same tread, different casing.</strong> Rene Herse’s Snoqualmie Pass 44 measured 13.5 W in its Extralight casing and 17.4 W in its standard casing. That’s 3.9 W from casing alone, about four times the tread difference above <sup><a href="#src-3">3</a></sup>.
-- <strong>Slick isn’t automatically fastest.</strong> Panaracer’s GravelKing Slick 40 measured 18.4 W, slower than both knobbed Schwalbe tires <sup><a href="#src-3">3</a></sup>. The comparison isn’t clean: it is a different casing, and BRR’s “low” test pressure differs (33 psi vs 36 psi).</p>
-<p>Mountain bike tires show the same pattern. Two low-profile cross-country (XC) tires, Schwalbe’s Thunder Burt Super Race 2.35 (2026) and the 2023 Maxxis Aspen MaxxSpeed EXO/TR 2.4, measured 17.3 W and 29.9 W. The Maxxis had about 73% higher rolling resistance <sup><a href="#src-4">4</a></sup>. Maxxis’s 2024 Aspen ST MaxxSpeed EXO/TR Team Spec 2.4 measured 26.7 W (about 54% higher than the Schwalbe), so the gap depends on which Aspen variant is compared <sup><a href="#src-4">4</a></sup>. Schwalbe’s near-slick G-One Speed Pro 2.35 measured 11.9 W <sup><a href="#src-4">4</a></sup>.</p>
-<p><strong>Construction.</strong> Wikipedia notes that higher thread counts in the casing improve ride quality and lower rolling resistance, but cost durability and puncture resistance <sup><a href="#src-2">2</a></sup>. Tread rubbers mix natural and synthetic rubber with fillers such as carbon black and silica, and some tires use a dual compound that is harder in the middle and grippier on the edges <sup><a href="#src-2">2</a></sup>.</p>
-<p><strong>Off-road.</strong> Here tread does real work: knobs bite into loose surfaces. Some MTB tires are designed specifically for the front or the rear, and some treads are directional <sup><a href="#src-2">2</a></sup>. But BRR’s drum says nothing about traction on loose gravel, sand or mud, and its fixed speed and load don’t match every rider <sup><a href="#src-3">3</a></sup><sup><a href="#src-5">5</a></sup>. No independent, controlled off-road traction tests were found. Advice on loose-vs-hardpack gravel treads and MTB knob layouts (center knobs for rolling and braking, shoulder knobs for cornering) comes mainly from manufacturers and rider experience. Treat it as informed opinion.</p>
+      <p><strong>Pavement (contested).</strong> Sheldon Brown’s long-standing explanation is that all tires get slippery on wet metal, paint and rail tracks, and tread features don’t help there<sup><a href="#src-1">1</a></sup>. Bicycles don’t realistically hydroplane, because a narrow, rounded contact patch pushes water aside<sup><a href="#src-1">1</a></sup>. He argues knobby treads grip worse on hard surfaces, since knobs bend under side loads while a smooth tread can’t<sup><a href="#src-1">1</a></sup>, and that fine “file” treads on road tires are mostly cosmetic or marketing<sup><a href="#src-1">1</a></sup>. Wikipedia’s summary agrees: on-road, a tread pattern “offers little to no improvement in traction”, and light tread is often added because of the mistaken belief that slicks are slippery in the wet<sup><a href="#src-2">2</a></sup>. Not everyone agrees. In a Velo technical FAQ, Specialized and Vittoria ranked compound above tread for road traction, but Specialized said “tread does have an influence on traction in road tires”, Vittoria said “a treaded design will deliver the best overall performance in wet conditions”, and Challenge said a slick works on dry roads but a herringbone tread helps once it is wet. Continental called tread patterns “largely aesthetic”<sup><a href="#src-7">7</a></sup>. Rene Herse argues tread matters on the road because it helps the tire interlock with the surface, though its evidence is anecdotal and historical rather than test data<sup><a href="#src-8">8</a></sup>. Pressure does change wet grip: BRR measured the average center-grip coefficient of three 28mm road tires rising from 0.69 at 108 psi to 0.78 at 54 psi (edge grip 0.72 to 0.77)<sup><a href="#src-6">6</a></sup>.</p>
+<p><strong>Rolling resistance: casing vs tread.</strong> Bicycle Rolling Resistance (BRR) runs tires on a diamond-plate drum (one tire, 28.8 km/h, 42.5 kg load) and lists results at each width’s “low” test pressure<sup><a href="#src-3">3</a></sup><sup><a href="#src-5">5</a></sup>. Three comparisons stand out:</p>
+<ul>
+<li><strong>Same brand, more tread.</strong> Schwalbe’s lower-tread G-One RS Pro 40 measured 15.7 W, and the knobbier G-One R Pro 40 measured 16.6 W. That’s 0.9 W for more tread<sup><a href="#src-3">3</a></sup>.</li>
+<li><strong>Same tread, different casing.</strong> Rene Herse’s Snoqualmie Pass 44 measured 13.5 W in its Extralight casing and 17.4 W in its standard casing. That’s 3.9 W from casing alone, about four times the tread difference above<sup><a href="#src-3">3</a></sup>.</li>
+<li><strong>Slick isn’t automatically fastest.</strong> Panaracer’s GravelKing Slick 40 measured 18.4 W, slower than both knobbed Schwalbe tires<sup><a href="#src-3">3</a></sup>. The comparison isn’t clean: it is a different casing, and BRR’s “low” test pressure differs (33 psi vs 36 psi).</li>
+</ul>
+<p>Mountain bike tires show the same pattern. Two low-profile cross-country (XC) tires, Schwalbe’s Thunder Burt Super Race 2.35 (2026) and the 2023 Maxxis Aspen MaxxSpeed EXO/TR 2.4, measured 17.3 W and 29.9 W. The Maxxis had about 73% higher rolling resistance<sup><a href="#src-4">4</a></sup>. Maxxis’s 2024 Aspen ST MaxxSpeed EXO/TR Team Spec 2.4 measured 26.7 W (about 54% higher than the Schwalbe), so the gap depends on which Aspen variant is compared<sup><a href="#src-4">4</a></sup>. Schwalbe’s near-slick G-One Speed Pro 2.35 measured 11.9 W<sup><a href="#src-4">4</a></sup>.</p>
+<p><strong>Construction.</strong> Wikipedia notes that higher thread counts in the casing improve ride quality and lower rolling resistance, but cost durability and puncture resistance<sup><a href="#src-2">2</a></sup>. Tread rubbers mix natural and synthetic rubber with fillers such as carbon black and silica, and some tires use a dual compound that is harder in the middle and grippier on the edges<sup><a href="#src-2">2</a></sup>.</p>
+<p><strong>Off-road.</strong> Here tread does real work: knobs bite into loose surfaces. Some MTB tires are designed specifically for the front or the rear, and some treads are directional<sup><a href="#src-2">2</a></sup>. But BRR’s drum says nothing about traction on loose gravel, sand or mud, and its fixed speed and load don’t match every rider<sup><a href="#src-3">3</a></sup><sup><a href="#src-5">5</a></sup>. No independent, controlled off-road traction tests were found. Advice on loose-vs-hardpack gravel treads and MTB knob layouts (center knobs for rolling and braking, shoulder knobs for cornering) comes mainly from manufacturers and rider experience. Treat it as informed opinion.</p>
 <p><strong>Desert angle.</strong> On thorny desert routes, how well the casing resists punctures is a separate question from tread. That’s covered.</p>
       <h2>The numbers</h2>
       <ul>
-<li>0.9 W between Schwalbe G-One R Pro 40 (16.6 W) and the lower-tread G-One RS Pro 40 (15.7 W) <sup><a href="#src-3">3</a></sup></li>
-<li>3.9 W between the same Rene Herse tread in Extralight (13.5 W) vs standard (17.4 W) casing <sup><a href="#src-3">3</a></sup></li>
-<li>18.4 W: Panaracer GravelKing Slick 40, slower than the knobbed G-One R and RS <sup><a href="#src-3">3</a></sup></li>
-<li>17.3 W vs 29.9 W: two low-profile XC MTB tires (Thunder Burt Super Race 2026 vs 2023 Aspen MaxxSpeed); the 2024 Aspen Team Spec measured 26.7 W <sup><a href="#src-4">4</a></sup></li>
-<li>BRR test conditions: one tire, 28.8 km/h, 42.5 kg load, diamond-plate drum <sup><a href="#src-5">5</a></sup></li>
-<li>Wet center-grip coefficient 0.78 at 54 psi vs 0.69 at 108 psi, average of three 28mm road tires <sup><a href="#src-6">6</a></sup></li>
+<li>0.9 W between Schwalbe G-One R Pro 40 (16.6 W) and the lower-tread G-One RS Pro 40 (15.7 W)<sup><a href="#src-3">3</a></sup></li>
+<li>3.9 W between the same Rene Herse tread in Extralight (13.5 W) vs standard (17.4 W) casing<sup><a href="#src-3">3</a></sup></li>
+<li>18.4 W: Panaracer GravelKing Slick 40, slower than the knobbed G-One R and RS<sup><a href="#src-3">3</a></sup></li>
+<li>17.3 W vs 29.9 W: two low-profile XC MTB tires (Thunder Burt Super Race 2026 vs 2023 Aspen MaxxSpeed); the 2024 Aspen Team Spec measured 26.7 W<sup><a href="#src-4">4</a></sup></li>
+<li>BRR test conditions: one tire, 28.8 km/h, 42.5 kg load, diamond-plate drum<sup><a href="#src-5">5</a></sup></li>
+<li>Wet center-grip coefficient 0.78 at 54 psi vs 0.69 at 108 psi, average of three 28mm road tires<sup><a href="#src-6">6</a></sup></li>
 </ul>
       <h2>Myths and disagreements</h2>
       <ul>
-<li><strong>“Slicks are dangerous in the rain” vs “tread doesn’t matter on pavement.”</strong> Both are contested. Makers disagree on whether road tread helps in the wet, most rank compound above tread, and no controlled test settles it <sup><a href="#src-7">7</a></sup><sup><a href="#src-8">8</a></sup>. Lower pressure raised wet grip in BRR’s test <sup><a href="#src-6">6</a></sup>.</li>
-<li><strong>“Bike tires can hydroplane.”</strong> Not at realistic speeds: the rounded, narrow contact patch clears water <sup><a href="#src-1">1</a></sup><sup><a href="#src-8">8</a></sup>.</li>
-<li><strong>“Knobs are slow, slicks are fast.”</strong> Casing and compound can outweigh tread, and one slick tested slower than knobbed tires <sup><a href="#src-3">3</a></sup><sup><a href="#src-4">4</a></sup>.</li>
+<li><strong>“Slicks are dangerous in the rain” vs “tread doesn’t matter on pavement.”</strong> Both are contested. Makers disagree on whether road tread helps in the wet, most rank compound above tread, and no controlled test settles it<sup><a href="#src-7">7</a></sup><sup><a href="#src-8">8</a></sup>. Lower pressure raised wet grip in BRR’s test<sup><a href="#src-6">6</a></sup>.</li>
+<li><strong>“Bike tires can hydroplane.”</strong> Not at realistic speeds: the rounded, narrow contact patch clears water<sup><a href="#src-1">1</a></sup><sup><a href="#src-8">8</a></sup>.</li>
+<li><strong>“Knobs are slow, slicks are fast.”</strong> Casing and compound can outweigh tread, and one slick tested slower than knobbed tires<sup><a href="#src-3">3</a></sup><sup><a href="#src-4">4</a></sup>.</li>
 <li><strong>Disagreement: off-road tread choice.</strong> Manufacturer advice on loose vs hardpack treads and knob layouts isn’t backed by independent traction data that could be found.</li>
 </ul>
       <h2>Choosing tread for your riding</h2>
       <ul>
-<li>For road riding, a slick or fine-tread tire is the usual choice. Spend your money on a supple, fast casing and a good compound, which independent tests show matter for speed <sup><a href="#src-3">3</a></sup><sup><a href="#src-7">7</a></sup>.</li>
-<li>For mixed gravel, more tread costs relatively little on pavement (under 1 W in the Schwalbe pair BRR tested), so choose tread for the worst surface you’ll actually ride <sup><a href="#src-3">3</a></sup>.</li>
-<li>Compare tires on BRR’s numbers, where test conditions are the same for every tire, rather than by eye. Similar-looking tires can be far apart <sup><a href="#src-3">3</a></sup><sup><a href="#src-4">4</a></sup>.</li>
-<li>On MTB tires marked front- or rear-specific or directional, mount them as marked <sup><a href="#src-2">2</a></sup>.</li>
+<li>For road riding, a slick or fine-tread tire is the usual choice. Spend your money on a supple, fast casing and a good compound, which independent tests show matter for speed<sup><a href="#src-3">3</a></sup><sup><a href="#src-7">7</a></sup>.</li>
+<li>For mixed gravel, more tread costs relatively little on pavement (under 1 W in the Schwalbe pair BRR tested), so choose tread for the worst surface you’ll actually ride<sup><a href="#src-3">3</a></sup>.</li>
+<li>Compare tires on BRR’s numbers, where test conditions are the same for every tire, rather than by eye. Similar-looking tires can be far apart<sup><a href="#src-3">3</a></sup><sup><a href="#src-4">4</a></sup>.</li>
+<li>On MTB tires marked front- or rear-specific or directional, mount them as marked<sup><a href="#src-2">2</a></sup>.</li>
 </ul>
       <h2 id="sources">Sources</h2>
       <div class="fn-sources"><ol>
@@ -142,19 +145,19 @@
     <h2>Keep reading</h2>
     <a href="/guides/road-bike-tire-width/">Road bike tire width: 25, 28 or 32mm?</a><a href="/guides/bike-tire-pressure/">Bike tire pressure: what’s fastest on real roads</a><a href="/guides/prevent-bike-flat-tires/">How to prevent flat bike tires</a><a href="/guides/#wheels">All wheels and tires guides</a>
   </div>
+  <p class="fn-back"><a href="/guides/">← All guides</a></p>
   <section class="pledge" aria-labelledby="pledge-h">
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
   <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a></div>
 </section>
-  <p class="fn-back"><a href="/guides/">← All guides</a></p>
 </main>
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
-    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2027-02-06" data-rides="[{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Tour de Palm Springs, Palm Springs, CA</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=38" defer></script>
+  <script src="/ridebar.js?v=39" defer></script>
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -171,10 +174,10 @@
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
         <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
+        <a href="/brief/">Brief a ride</a>
         <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
@@ -198,11 +201,11 @@
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
-<script src="/chrome.js" defer></script>
+<script src="/chrome.js?v=47" defer></script>
 </body>
 </html>

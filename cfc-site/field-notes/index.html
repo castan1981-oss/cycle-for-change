@@ -24,8 +24,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/chrome.css?v=47">
+  <link rel="stylesheet" href="/styles.css?v=47">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Field notes","url":"https://cycleforchange.org/field-notes/","description":"Routes and rides from the road, in Robert’s words: place and mind, written down ride by ride.","isPartOf":{"@type":"WebSite","name":"Cycle for Change","url":"https://cycleforchange.org/"},"author":{"@type":"Person","name":"Robert Castan","url":"https://cycleforchange.org/"},"mainEntity":{"@type":"ItemList","numberOfItems":3,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://cycleforchange.org/field-notes/paradise-valley-loop/"},{"@type":"ListItem","position":2,"url":"https://cycleforchange.org/field-notes/south-mountain-climb/"},{"@type":"ListItem","position":3,"url":"https://cycleforchange.org/field-notes/phoenix/"}]}}</script>
 </head>
 <body id="top">
@@ -53,15 +53,16 @@
       </svg>
       <span class="sr">Cycle for Change</span>
     </a>
+    <!-- Studio pass 1: one nav list. Guides replaces Field notes (Field notes stays in the footer and on /guides/). -->
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/towns/">Towns</a>
-      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -72,20 +73,20 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
-    <li><a href="/find-a-ride/">Find a ride <span>1,423</span></a></li>
+    <li><a href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/find-a-ride/">Find a ride <span>1,421</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
-    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
-    <span><b>988</b> call or text, any hour</span>
+    <span><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>
 
 <main id="main">
   <section class="fn-masthead">
@@ -106,25 +107,25 @@
       <p class="fn-spokes-head">Notes so far</p>
       <div class="fn-cards">
         <a class="fn-card" href="/field-notes/paradise-valley-loop/">
-          <figure><img src="/img/card-pv.jpg" alt="A rider&rsquo;s shadow on the road, one hand up off the bars, mountains ahead." width="800" height="1000" loading="lazy" decoding="async"></figure>
+          <figure><picture><source type="image/avif" srcset="/img/ph/pv-shadow-2.avif"><source type="image/webp" srcset="/img/ph/pv-shadow-2.webp"><img src="/img/ph/pv-shadow-2.jpg" alt="Robert’s shadow on the road with one hand up in a peace sign, the bars in front and a mountain ahead." width="1080" height="1440" loading="lazy" decoding="async" style="object-position:50% 55%"></picture></figure><span class="fn-card-where">Paradise Valley, AZ · Jul 2026</span>
           <span class="fn-chip place">Place + Miles &middot; Jun 24, 2026</span>
           <span class="fn-title">The Paradise Valley loop</span>
           <p class="fn-dek">Just under 40 quiet miles through Paradise Valley &mdash; big homes, open desert, and the backside climb to a sunrise view.</p>
         </a>
         <a class="fn-card" href="/field-notes/south-mountain-climb/">
-          <figure><img src="/img/card-south.jpg" alt="Handlebars pointed down a mountain road at sunset, the valley lit below." width="800" height="1000" loading="lazy" decoding="async"></figure>
+          <figure><picture><source type="image/avif" srcset="/img/ph/south-mountain-view-2.avif"><source type="image/webp" srcset="/img/ph/south-mountain-view-2.webp"><img src="/img/ph/south-mountain-view-2.jpg" alt="The view from the South Mountain climb: a far range of mountains over the valley floor." width="880" height="1100" loading="lazy" decoding="async" style="object-position:50% 50%"></picture></figure><span class="fn-card-where">Phoenix, AZ · Oct 2025</span>
           <span class="fn-chip place">Place + Miles &middot; Jun 9, 2026</span>
           <span class="fn-title">South Mountain at sunset</span>
           <p class="fn-dek">Down Central from uptown into South Phoenix &mdash; a short, punchy ride to a sunset view.</p>
         </a>
         <a class="fn-card" href="/field-notes/phoenix/">
-          <figure><img src="/img/people.jpg" alt="Two riders crossing a finish line with their hands joined in the air, a rainbow umbrella in the crowd." width="1600" height="1600" loading="lazy" decoding="async"></figure>
+          <figure><picture><source type="image/avif" srcset="/img/ph/riders-camelback-2.avif"><source type="image/webp" srcset="/img/ph/riders-camelback-2.webp"><img src="/img/ph/riders-camelback-2.jpg" alt="A few riders up the road ahead, a desert ridge and Camelback behind them." width="1080" height="1440" loading="lazy" decoding="async" style="object-position:50% 50%"></picture></figure><span class="fn-card-where">Paradise Valley, AZ · Sep 2025</span>
           <span class="fn-chip place">Hub</span>
           <span class="fn-title">Phoenix</span>
           <p class="fn-dek">The Phoenix riding hub &mdash; every route I log in the valley, and why each mile counts.</p>
         </a>
         <a class="fn-card" href="/journal/the-carrot-cake-theory/">
-          <figure><img src="/img/card-journal.jpg" alt="A bike leaned on a painted wall, low sun down the street." width="800" height="1000" loading="lazy" decoding="async"></figure>
+          <figure><picture><source type="image/avif" srcset="/img/ph/love-wall-2.avif"><source type="image/webp" srcset="/img/ph/love-wall-2.webp"><img src="/img/ph/love-wall-2.jpg" alt="Robert’s red bike leaning on a painted wall, the LOVE mural behind it." width="719" height="899" loading="lazy" decoding="async" style="object-position:50% 50%"></picture></figure><span class="fn-card-where">Phoenix, AZ · Oct 2026</span>
           <span class="fn-chip mind">Journal &middot; Jul 2026</span>
           <span class="fn-title">The carrot cake theory</span>
           <p class="fn-dek">Why the handmade thing is the honest thing, and why every one of the 10,000 miles goes through my legs.</p>
@@ -147,11 +148,11 @@
 </main>
 
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
-    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2027-02-06" data-rides="[{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Tour de Palm Springs, Palm Springs, CA</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=38" defer></script>
+  <script src="/ridebar.js?v=39" defer></script>
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -168,10 +169,10 @@
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
         <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
+        <a href="/brief/">Brief a ride</a>
         <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
@@ -195,11 +196,11 @@
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
-<script src="/chrome.js" defer></script>
+<script src="/chrome.js?v=47" defer></script>
 </body>
 </html>

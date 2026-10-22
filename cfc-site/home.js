@@ -52,26 +52,14 @@
 
   var milesEls = document.querySelectorAll("[data-miles]");
   var shownMiles = feed.miles;
-  var rolled = false, rolling = false;
 
   function paintMiles(n) {
     for (var i = 0; i < milesEls.length; i++) milesEls[i].textContent = fmt(n);
   }
 
-  /* the last few miles roll in once, like a head unit settling */
-  function rollTo(target) {
-    shownMiles = target;
-    if (rolling) return;                      /* the roll in flight converges on the new number */
-    if (reduce || rolled || !window.requestAnimationFrame) { paintMiles(target); return; }
-    rolled = true; rolling = true;
-    var from = Math.max(0, target - 38), t0 = null;
-    requestAnimationFrame(function frame(ts) {
-      if (t0 === null) t0 = ts;
-      var k = Math.min(1, (ts - t0) / 1100), e = 1 - Math.pow(1 - k, 3);
-      paintMiles(from + (shownMiles - from) * e);
-      if (k < 1) requestAnimationFrame(frame); else { rolling = false; paintMiles(shownMiles); }
-    });
-  }
+  /* Studio pass 1 (Oct 21, 2026): the number paints once. It used to roll the last 38 miles in on every load (34
+     different numbers in 800 ms, a wrong one on screen). One number, everywhere (§1). */
+  function rollTo(target) { shownMiles = target; paintMiles(target); }
 
   function dayLabel(iso) {
     var d = new Date(iso);
@@ -113,6 +101,10 @@
     }
 
     var log = $("log");
+    /* Studio pass 1: the row from the day of his newest write-up links to it (build-home.js puts the date and the
+       page on #log from data/ride-notes.json), so the write-up is one tap from the log */
+    var noteDay = log ? log.getAttribute("data-note-date") : "", noteHref = log ? log.getAttribute("data-note-href") : "";
+    var phxDay = function (iso) { try { return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Phoenix" }).format(new Date(iso)); } catch (e) { return String(iso).slice(0, 10); } };
     var logMax = log && log.getAttribute("data-max") ? parseInt(log.getAttribute("data-max"), 10) || 5 : 5;
     if (log) { while (log.firstChild) log.removeChild(log.firstChild); }
     /* Pass 8: each row carries a bar, its length the ride's miles against the longest ride shown */
@@ -122,7 +114,12 @@
       var li = document.createElement("li");
       var when = document.createElement("span"); when.className = "when"; when.textContent = dayLabel(r.date);
       var title = String(r.title || "").trim();
-      if (title && !GENERIC.test(title)) { var b = document.createElement("b"); b.textContent = title; when.appendChild(b); }
+      var noted = noteDay && noteHref && phxDay(r.date) === noteDay;
+      if (title && !GENERIC.test(title)) {
+        var b = document.createElement("b");
+        if (noted) { var a = document.createElement("a"); a.href = noteHref; a.textContent = title; b.appendChild(a); } else b.textContent = title;
+        when.appendChild(b);
+      }
       var bar = document.createElement("span"); bar.className = "bar-mi"; bar.style.setProperty("--w", longest ? ((Number(r.miles) || 0) / longest).toFixed(2) : "0");
       var mi = document.createElement("span"); mi.className = "mi num"; mi.textContent = Number(r.miles).toFixed(1);
       var u = document.createElement("small"); u.textContent = "mi"; mi.appendChild(u);
@@ -415,18 +412,26 @@
     paintReel();
   }
 
-  /* Oct 12, 2026: today's film (#today) plays like the reel: on screen on desktop, a tap on phones */
-  var tv = $("todayVid"), tFig = $("todayFig"), tPlay = $("todayPlay");
+  /* Oct 12, 2026: today's film (#today) plays like the reel: on screen on desktop, a tap on phones.
+     Studio pass 1: it has the reel's Play / Pause line under it (#todayBtn), so it can always be stopped (WCAG 2.2.2). */
+  var tv = $("todayVid"), tFig = $("todayFig"), tPlay = $("todayPlay"), tBtn = $("todayBtn"), tLabel = $("todayBtnLabel");
   if (tv) {
     tv.muted = true;
     var tUser = null;
-    var tPaint = function () { if (tFig) tFig.setAttribute("data-playing", tv.paused ? "false" : "true"); };
+    var tPaint = function () {
+      var on = !tv.paused;
+      if (tFig) tFig.setAttribute("data-playing", on ? "true" : "false");
+      if (tBtn) tBtn.setAttribute("data-playing", on ? "true" : "false");
+      if (tLabel) tLabel.textContent = on ? "Pause" : "Play";
+    };
     var tGo = function () { tv.preload = "auto"; var q = tv.play(); if (q && q.catch) q.catch(function () {}); };
     var tToggle = function () { if (tv.paused) { tUser = true; tGo(); } else { tUser = false; tv.pause(); } };
     tv.addEventListener("play", tPaint); tv.addEventListener("pause", tPaint);
-    tv.addEventListener("error", function () { if (tPlay) tPlay.hidden = true; }, true);
+    tv.addEventListener("error", function () { if (tPlay) tPlay.hidden = true; if (tBtn) tBtn.hidden = true; }, true);
     tv.addEventListener("click", tToggle);
-    if (tPlay) tPlay.addEventListener("click", tToggle);
+    if (tPlay) tPlay.addEventListener("click", function () { tToggle(); if (tBtn) tBtn.focus({ preventScroll: true }); });
+    if (tBtn) tBtn.addEventListener("click", tToggle);
+    tPaint();
     if ("IntersectionObserver" in window) {
       new IntersectionObserver(function (es) {
         if (!es[0].isIntersecting) { if (!tv.paused) tv.pause(); return; }
@@ -477,6 +482,9 @@
   } else if (nav) {
     nav.setAttribute("data-solid", "true");
   }
+
+  /* studio pass 1: press states on touch (iOS only applies :active when a touch listener exists) */
+  document.addEventListener("touchstart", function () {}, { passive: true });
 
   /* ————————————————————————————————————————————————
      menu

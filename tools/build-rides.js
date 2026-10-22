@@ -1222,17 +1222,21 @@ function rideBtn({ href, text, markId, ghost = false, back = false, ext = false,
 // A photo band: Robert's photo, dissolving into the paper (Pass 7). Never the first thing on a phone
 // (Pass 12): every caller puts it after the first set of picks. The photos, their alt text and the
 // figure itself live in scripts/photos.js (Pass 25); `.ph` is styled in /chrome.css.
-function photoBand(key, { line = "", cls = "", caption = true } = {}) {
+function photoBand(key, { line = "", cls = null, caption = true } = {}) {
   return PH.figure(key, { cls, line, caption });
 }
 // Pass 25 (Oct 4, 2026): the places Robert has a photo that is true to them (scripts/photos.js).
 const HUB_PHOTO = {   // hub key → photo; desktop layout follows the photo's shape
-  "az-phoenix": "phx-canal", "az-scottsdale": "pv-camelback-road", "az-sedona": "sedona-road",
+  // studio pass 1: Scottsdale's was pv-camelback-road; a pale shape behind a wall there may be a parked car, so it waits
+  "az-phoenix": "phx-canal", "az-scottsdale": "camelback-sunrise", "az-sedona": "sedona-road",
   "ca-carlsbad": "encinitas-beach", "wa-seattle": "seattle-path",
   "id-boise": "boise-river-path",
 };
-const STATE_PHOTO = { AZ: ["crew", "ph--wide"], ID: ["sawtooth-lake", "ph--wide"] };
-const FACET_PHOTO = { lgbtq: "people", "no-drop": "people", beginner: "people", "women-trans-femme": "people", gravel: "gravel-pines" };
+// Studio pass 1 (Oct 21, 2026): `crew` and `people` are off the site (a second rider's face with no OK on record, no
+// place · month line). Their pages get riders-camelback (riders from behind, Paradise Valley) as a band; /rides/az/
+// gets the Phoenix skyline (pv-camelback-road waits: a pale shape behind a wall there may be a parked car).
+const STATE_PHOTO = { AZ: ["phx-skyline", "ph--wide"], ID: ["sawtooth-lake", "ph--wide"] };
+const FACET_PHOTO = { lgbtq: "riders-camelback", "no-drop": "riders-camelback", beginner: "riders-camelback", "women-trans-femme": "riders-camelback", gravel: "gravel-pines" };
 // The short page's badge: the pick it stands for, drawn big (the mark, or the day's two letters).
 function badge({ markId = null, day = null, sub = "" }) {
   return `<div class="gr-badge" aria-hidden="true">${day ? `<span class="gr-badge-day">${DAY_SHORT[day]}</span>` : mark(markId, "gr-badge-mark")}${sub ? `<span class="gr-badge-sub">${esc(sub)}</span>` : ""}</div>`;
@@ -1394,7 +1398,8 @@ function directory(rides, hubs, worldHubs = []) {
         <datalist id="gr-cities">${cityIndexFor(rides).map(([k]) => `<option value="${attr(k)}">`).join("")}</datalist>
         <button type="button" class="btn btn--bone gr-geo" id="gr-geo">${mark("locate", "gr-geo-mark")}Near me</button>
       </form>
-      <p class="gr-hero-alt"><a href="/rides/world/">${mark("globe", "gr-hero-alt-mk")}Outside the US &rarr;</a></p>
+      <!-- studio pass 1: the big cities on the first screen, under the search; "Outside the US" is their last chip -->
+      <p class="gr-jumpcities"><span class="gr-jumpcities-l">Or jump to</span>${top.map((h) => `<a class="gr-chip" href="${h.path}">${esc(h.city)}${h === home ? ` <span class="gr-chip-n">home</span>` : ""}</a>`).join("")}${worldN ? `<a class="gr-chip" href="/rides/world/">Outside the US</a>` : ""}</p>
       <p class="gr-status" id="gr-status" aria-live="polite" data-total="${rides.length}"></p>
     </div>
   </section>
@@ -1416,11 +1421,9 @@ function directory(rides, hubs, worldHubs = []) {
       ${GEO && GEO.us ? usMap(byState) : posterTile({ href: "/rides/united-states/", name: "In the US", count: byCountry.US ? byCountry.US.length : 0, small: "rides", blurb: statesText, markId: "town", cls: "tile-p--country" })}
       <div class="gr-where-more">
         <a class="gr-wide-door" href="/rides/united-states/">${mark("list", "gr-wide-door-mk")}<span><b>Every state, as a list</b><span>${(byCountry.US ? byCountry.US.length : 0).toLocaleString("en-US")} rides in ${statesText}</span></span><i aria-hidden="true">&rarr;</i></a>
-        ${worldN ? `<a class="gr-wide-door" href="/rides/world/">${mark("globe", "gr-wide-door-mk")}<span><b>Outside the US</b><span>${worldN} rides in ${worldCCs.length} ${worldCCs.length === 1 ? "country" : "countries"}</span></span><i aria-hidden="true">&rarr;</i></a>` : ""}
       </div>
-      <p class="gr-jumpcities"><span class="gr-jumpcities-l">Or jump to</span>${top.map((h) => `<a class="gr-chip" href="${h.path}">${esc(h.city)}${h === home ? ` <span class="gr-chip-n">home</span>` : ""}</a>`).join("")}</p>
     </section>
-${photoBand("crew", { cls: "ph--wide" })}
+${photoBand("riders-camelback", { cls: "ph--wide" })}
 
     <section class="gr-step" aria-labelledby="who-h">
       <h2 class="gr-filter-label" id="who-h">Or pick who&rsquo;s riding</h2>
@@ -1478,8 +1481,8 @@ function findPage(rides) {
     { href: "/events/2027/multi-day-tours/", name: "Multi-day tour", sub: "Days in a row", n: calN("Multi-day tour"), markId: "distance" },
     { href: "/events/2027/races/", name: "Race", sub: "Road, crit and stage races", n: calN("Race"), markId: "flag" },
     { href: "/events/2027/riding/", name: "Ride with me", sub: "The six I'm doing in 2027", n: riding, markId: "ride-day" },
-    // Oct 18, 2026: the briefing had no link anywhere on the site (Phase 2 crawl: zero inlinks)
-    { href: "/brief/", name: "Brief a ride", sub: "Drop a GPX: climbs, weather, water", markId: "climb" },
+    // Studio pass 1 (Oct 21, 2026): "Brief a ride" left the kinds (it's a tool, not a kind of ride; eight tiles, no hole).
+    // /brief/ is linked from the footer's Ride column on every page now, and from every ride page with a route.
   ].filter((k) => k.n == null || k.n > 0);
   const jsonld = { "@context": "https://schema.org", "@graph": [
     { "@type": "CollectionPage", "@id": canonical, name: "Find a ride", description, url: canonical, author: AUTHOR, publisher: PUBLISHER, breadcrumb: breadcrumbLd(crumbs) },
@@ -1532,7 +1535,7 @@ function gravelPage(rides) {
           ${kindDoor({ href: "/events/2027/gravel/", name: "One big day", sub: "Gravel races and events, 2027", n: n2g, markId: "gravel" })}
       </div>
     </section>
-    ${photoBand("gravel-road")}
+    ${photoBand("gravel-pines")}
     <p class="back"><a href="/find-a-ride/">&larr; Every kind of ride</a></p>
 ${CTA}
   </div>
@@ -1569,15 +1572,15 @@ ${BLOCKS.BUILT([
       <h2 id="faq-h">First group ride? The questions people ask first</h2>
 ${FAQ.map(([q, a]) => `      <details><summary>${esc(q)}</summary><p>${a}</p></details>`).join("\n")}
     </section>
-${photoBand("people", { cls: "ph--wide" })}
+${photoBand("riders-camelback", { cls: "ph--wide" })}
     <section class="gr-why">
       <h2>Why Cycle for Change keeps a group ride list</h2>
       <p>A group ride is the cheapest, most reliable way I know to get out of my own head and into a room of people who want you there. Nobody asks what you do. You just ride. In 2027 I&rsquo;m riding 10,000 miles, all on the bike, and a lot of them will be on rides like these. This list exists so anyone, anywhere, can find one this week.</p>
 ${CRISIS}
     </section>
+    <p class="gr-note">Always confirm with the host before you show up; schedules change with the seasons. This site isn't affiliated with any ride listed.</p>
     <p class="back"><a href="/rides/">&larr; Find a group ride</a> &middot; <a href="/rides/add/">Add a ride we&rsquo;re missing</a> &middot; <a href="/methodology/">How every ride is checked</a></p>
 ${CTA}
-    <p class="gr-note">Always confirm with the host before you show up; schedules change with the seasons. This site isn't affiliated with any ride listed.</p>
   </div>
 </main>
 ` + foot();
@@ -2047,7 +2050,7 @@ function facetPage(f, all) {
         ${states.map((st) => posterTile({ href: hrefFor(byState[st], `/rides/${st.toLowerCase()}/`), name: st, count: byState[st].length, small: byState[st].length === 1 ? "ride" : "rides", blurb: stateName(st), cls: "tile-p--wide tile-p--code" })).join("\n        ")}
       </div>
     </section>
-${FACET_PHOTO[f.slug] ? photoBand(FACET_PHOTO[f.slug], { cls: FACET_PHOTO[f.slug] === "people" ? "ph--wide" : "" }) : ""}
+${FACET_PHOTO[f.slug] ? photoBand(FACET_PHOTO[f.slug], { cls: FACET_PHOTO[f.slug] === "riders-camelback" ? "ph--wide" : "" }) : ""}
     ${ccs.length ? `<section class="gr-step" aria-labelledby="fc-h">
       <h2 class="gr-filter-label" id="fc-h">Outside the US</h2>
       <div class="tiles-p tiles-p--wide">
@@ -2194,6 +2197,8 @@ function wallBlock(r) {
   }
   return "";
 }
+// a video poster: its WebP sibling when there is one (same name), the JPG otherwise (studio pass 1; as the homepage)
+const posterOf = (src) => { const w = String(src || "").replace(/\.jpe?g$/i, ".webp"); return w !== src && fs.existsSync(path.join(ROOT, "cfc-site", w)) ? w : src; };
 function filmOf(r) { return (FILMS[r.slug] || []).find((x) => x && x.src && x.poster) || null; }
 function filmBlock(r) {
   const fm = filmOf(r);
@@ -2203,14 +2208,14 @@ function filmBlock(r) {
       <section class="gr-film" aria-label="From the ride">
         <figure class="gr-film-fig" data-film data-playing="false">
           <div class="gr-film-frame">
-            <video muted loop playsinline disablepictureinpicture preload="none" poster="${attr(fm.poster)}" width="${fm.width || 864}" height="${fm.height || 1080}" aria-label="${attr(fm.alt || "")}">
+            <video muted loop playsinline disablepictureinpicture preload="none" poster="${attr(posterOf(fm.poster))}" width="${fm.width || 864}" height="${fm.height || 1080}" aria-label="${attr(fm.alt || "")}">
               <source src="${attr(fm.src)}" type="video/mp4">
             </video>
             <button class="gr-film-play" type="button" data-film-play aria-label="Play the film, ${Math.round(fm.seconds || 0)} seconds">${PLAY_SVG}</button>
           </div>
           <figcaption class="gr-film-cap">
             <button class="gr-film-btn" type="button" data-film-btn data-playing="false"><span class="gr-film-ico gr-film-ico--play">${PLAY_SVG}</span><span class="gr-film-ico gr-film-ico--pause">${PAUSE_SVG}</span><span data-film-label>Play</span></button>
-            <span class="gr-film-where">From the ride${fm.caption ? `, ${esc(String(fm.caption).split(" · ").pop())}` : ""}</span>
+            <span class="gr-film-where">From the ride${fm.caption ? `, ${esc(fm.caption)}` : ""}</span>
             <span class="gr-film-len">${len}</span>
           </figcaption>
         </figure>
@@ -2573,6 +2578,7 @@ function ridePage(r, all, hubFor, hubs) {
   const revSum = RV.summary(revs);
   const tags = (r.confidence === "low" ? `<span class="gr-tag gr-tag-warn" title="We found this ride but couldn't confirm every detail">Unconfirmed — check with the host</span>` : "")
     + (r.host && r.host.claimed ? `<span class="gr-tag gr-tag-ok">Verified by the organizer</span>` : "")
+    + (listed && notesFor(r.slug).length ? `<a class="gr-tag gr-tag-rev" href="#robert">I rode it</a>` : "")   // studio pass 1: his write-up, one tap from the top
     + (revSum.n ? `<a class="gr-tag gr-tag-rev" href="#reviews">${revSum.n} ${revSum.n === 1 ? "review" : "reviews"}, ${esc(RV.againText(revSum))}</a>` : "");
   const film = filmOf(r);
   const rt = ROUTES.get(r.slug) || null;

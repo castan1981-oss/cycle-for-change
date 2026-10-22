@@ -25,8 +25,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/events/events.css?v=35">
+  <link rel="stylesheet" href="/chrome.css?v=47">
+  <link rel="stylesheet" href="/events/events.css?v=47">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Events","item":"https://cycleforchange.org/events/"},{"@type":"ListItem","position":2,"name":"New Hampshire","item":"https://cycleforchange.org/events/state/new-hampshire/"},{"@type":"ListItem","position":3,"name":"Mt. Washington Auto Road Bicycle Hillclimb","item":"https://cycleforchange.org/events/mt-washington-hillclimb/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://cycleforchange.org/events/mt-washington-hillclimb/","name":"Mt. Washington Auto Road Bicycle Hillclimb, Gorham, NH","description":"The Mt. Washington Auto Road Bicycle Hillclimb is a 7.6-mile race up the Mt. Washington Auto Road in Gorham, New Hampshire, to the 6,288-foot summit, the…","dateModified":"2026-09-15","speakable":{"@type":"SpeakableSpecification","cssSelector":[".lede",".facts"]},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/"},"author":{"@type":"Person","name":"Robert Castan"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How steep is it?","acceptedAnswer":{"@type":"Answer","text":"7.6 miles at an average 12% grade, with extended sections at 18% and the last 50 yards at 22%. There are no flat spots."}},{"@type":"Question","name":"Do I need a driver?","acceptedAnswer":{"@type":"Answer","text":"Yes. You must arrange a ride down. Bikes cannot descend the Auto Road. Your driver gets an Auto Pass from your bib and drives up after the road reopens around noon."}},{"@type":"Question","name":"When does registration open?","acceptedAnswer":{"@type":"Answer","text":"January 1 for returning and special-category riders, January 15 for the general public, on BikeReg. It closes in early August."}},{"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"For 2025 it was $350 flat, or $150 plus a fundraising minimum for Tin Mountain Conservation Center. Check BikeReg for current pricing."}},{"@type":"Question","name":"Is there a time limit?","acceptedAnswer":{"@type":"Answer","text":"Yes. Official timing ends 3 hours 5 minutes after the start, at 12:05 PM."}},{"@type":"Question","name":"What if the weather is bad?","acceptedAnswer":{"@type":"Answer","text":"There is a Sunday rain date. The race has been cancelled outright for weather four times since 1973."}}]}</script>
@@ -55,15 +55,16 @@
       </svg>
       <span class="sr">Cycle for Change</span>
     </a>
+    <!-- Studio pass 1: one nav list. Guides replaces Field notes (Field notes stays in the footer and on /guides/). -->
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/towns/">Towns</a>
-      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -74,44 +75,28 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
     <li><a href="/find-a-ride/">Find a ride <span>1,421</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
-    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
-    <span><b>988</b> call or text, any hour</span>
+    <span><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>
 <main id="main" class="wrap">
 
   <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/events/">Events</a></li><li><a href="/events/state/new-hampshire/">New Hampshire</a></li><li><span aria-current="page">Mt. Washington Auto Road Bicycle Hillclimb</span></li></ol></nav>
-  <section class="ev-poster tile-p--art" style="--l:6" aria-label="Mt. Washington Auto Road Bicycle Hillclimb, at a glance"><img class="tile-art" src="/towns/art/gorham.svg" alt="" loading="lazy" decoding="async" width="200" height="200">
-    <div class="ev-poster-top">
-      <span class="ev-poster-date num">TBA</span>
-      <span class="ev-poster-town">Gorham</span>
-    </div>
-    <div class="ev-poster-info">
-      <p class="ev-poster-kind">Hill climb &middot; since 1973</p>
-      <p class="ev-poster-when">2027 date not yet announced. The 2026 race (the 53rd) was Saturday, August 15 with a Sunday rain date. Registration for the following year opens January 1 for returning and special-category riders and January 15 for the general public. <span>@ Base of the Mt. Washington Auto Road, 1 Mt. Washington Auto Road (Route 16), Gorham, NH 03581</span></p>
-      <ul class="ev-poster-spec"><li><b>7.6 miles</b><span>One way, all uphill, base to the 6,288 ft summit. Average grade 12%, extended sections at 18%, last 50 yards at 22%.</span></li></ul>
-      <p class="ev-poster-climb">4,000 ft of climbing on the longest route</p>
-    </div>
-  </section>
   <article class="event">
-    <p class="eyebrow">Hill climb &middot; <a href="/towns/new-hampshire/gorham/">Gorham, New Hampshire</a> &middot; since 1973</p>
     <h1>Mt. Washington Auto Road Bicycle Hillclimb</h1>
     <p class="date-line">2027 date not yet announced. The 2026 race (the 53rd) was Saturday, August 15 with a Sunday rain date. Registration for the following year opens January 1 for returning and special-category riders and January 15 for the general public.</p>
     
     
-
-    <h2 class="visually-hidden">What is the Mt. Washington Auto Road Bicycle Hillclimb?</h2>
-    <p class="lede">The Mt. Washington Auto Road Bicycle Hillclimb is a 7.6-mile race up the Mt. Washington Auto Road in Gorham, New Hampshire, to the 6,288-foot summit, the highest point in the northeastern United States. The road averages 12% with pitches to 22%. It has run since 1973, is held on a Saturday in mid-August, takes up to about 600 riders, and is the main fundraiser for Tin Mountain Conservation Center, which has organized it since 1990. It is the one day a year the road is closed to cars for bikes.</p>
 
     <div class="ev-signup">
       <a class="btn btn--ink" href="https://www.bikereg.com/mwarbh" rel="noopener">Sign up for Mt. Washington Hillclimb</a>
@@ -119,7 +104,17 @@
       <p class="ev-signup-note">Registration is on BikeReg. It opens January 1 for returning and special-category riders and January 15 for everyone else, and closes in early August. Two entry options: a flat fee, or a lower fee plus a fundraising minimum for Tin Mountain, with the shortfall charged to your card on August 1. You must have a driver to bring you and your bike down; riding down is prohibited.</p>
     </div>
 
-    <dl class="facts"><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-date"/></svg><dt>Next edition</dt><dd>A Saturday in mid-August, with a Sunday rain date</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-ride-day"/></svg><dt>Usually</dt><dd>A Saturday in mid-August, with a Sunday rain date</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-start"/></svg><dt>Start</dt><dd>Base of the Mt. Washington Auto Road, 1 Mt. Washington Auto Road (Route 16), Gorham, NH 03581<br><a href="/towns/new-hampshire/gorham/">Gorham, New Hampshire</a></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-distance"/></svg><dt>Distances</dt><dd><ul class="dist"><li><b>7.6 miles</b> — One way, all uphill, base to the 6,288 ft summit. Average grade 12%, extended sections at 18%, last 50 yards at 22%.</li></ul></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-terrain"/></svg><dt>Terrain</dt><dd>Paved mountain toll road, 7.6 miles at an average 12% grade with no flat sections; finishes above treeline.</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-climb"/></svg><dt>Climbing</dt><dd>4,000 ft on the longest route</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-riders"/></svg><dt>Riders</dt><dd>up to about 600 riders</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-cost"/></svg><dt>Cost</dt><dd>$350 flat entry, or $150 plus a fundraising minimum for Tin Mountain (2025 pricing)</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-founded"/></svg><dt>Founded</dt><dd>1973</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Organizer</dt><dd><a href="https://www.mwarbh.org/" rel="noopener">Tin Mountain Conservation Center</a></dd></div></dl>
+    <section class="ev-poster tile-p--art" style="--l:6" aria-label="Mt. Washington Auto Road Bicycle Hillclimb, at a glance"><img class="tile-art" src="/towns/art/gorham.svg" alt="" loading="lazy" decoding="async" width="200" height="200">
+      <div class="ev-poster-top">
+        <span class="ev-poster-date num">TBA</span>
+        <span class="ev-poster-town">Gorham</span>
+      </div>
+    </section>
+
+    <h2 class="visually-hidden">What is the Mt. Washington Auto Road Bicycle Hillclimb?</h2>
+    <p class="lede">The Mt. Washington Auto Road Bicycle Hillclimb is a 7.6-mile race up the Mt. Washington Auto Road in Gorham, New Hampshire, to the 6,288-foot summit, the highest point in the northeastern United States. The road averages 12% with pitches to 22%. It has run since 1973, is held on a Saturday in mid-August, takes up to about 600 riders, and is the main fundraiser for Tin Mountain Conservation Center, which has organized it since 1990. It is the one day a year the road is closed to cars for bikes.</p>
+
+    <dl class="facts"><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-climb"/></svg><dt>Type</dt><dd>Hill climb</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-date"/></svg><dt>Next edition</dt><dd>A Saturday in mid-August, with a Sunday rain date</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-ride-day"/></svg><dt>Usually</dt><dd>A Saturday in mid-August, with a Sunday rain date</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-start"/></svg><dt>Start</dt><dd>Base of the Mt. Washington Auto Road, 1 Mt. Washington Auto Road (Route 16), Gorham, NH 03581<br><a href="/towns/new-hampshire/gorham/">Gorham, New Hampshire</a></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-distance"/></svg><dt>Distances</dt><dd><ul class="dist"><li><b>7.6 miles</b> — One way, all uphill, base to the 6,288 ft summit. Average grade 12%, extended sections at 18%, last 50 yards at 22%.</li></ul></dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-terrain"/></svg><dt>Terrain</dt><dd>Paved mountain toll road, 7.6 miles at an average 12% grade with no flat sections; finishes above treeline.</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-climb"/></svg><dt>Climbing</dt><dd>4,000 ft on the longest route</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-riders"/></svg><dt>Riders</dt><dd>up to about 600 riders</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-cost"/></svg><dt>Cost</dt><dd>$350 flat entry, or $150 plus a fundraising minimum for Tin Mountain (2025 pricing)</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-founded"/></svg><dt>Founded</dt><dd>1973</dd></div><div><svg class="mk" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-organizer"/></svg><dt>Organizer</dt><dd><a href="https://www.mwarbh.org/" rel="noopener">Tin Mountain Conservation Center</a></dd></div></dl>
 
     <section><h2>How the Mt. Washington Auto Road Bicycle Hillclimb started</h2><p>The Auto Road opened in August 1861 as a carriage road to the summit. The bicycle hillclimb started in 1973, 112 years later. The 2026 race was the 53rd.</p>
 <p>In 1990 the Auto Road asked Tin Mountain Conservation Center, a nonprofit environmental education group in the area, to organize the race. It has run it since, and net proceeds fund Tin Mountain’s programs for children, adults and families.</p>
@@ -224,15 +219,15 @@
 <section class="pledge" aria-labelledby="pledge-h">
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
   <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a></div>
 </section>
 </main>
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
-    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2027-02-06" data-rides="[{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Tour de Palm Springs, Palm Springs, CA</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=38" defer></script>
+  <script src="/ridebar.js?v=39" defer></script>
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -249,10 +244,10 @@
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
         <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
+        <a href="/brief/">Brief a ride</a>
         <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
@@ -276,12 +271,12 @@
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
-<script src="/chrome.js" defer></script>
+<script src="/chrome.js?v=47" defer></script>
 <script src="/events/events.js?v=35" defer></script>
 <script src="/events/report.js" defer></script>
 </body>

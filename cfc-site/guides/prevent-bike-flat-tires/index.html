@@ -24,8 +24,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/chrome.css?v=47">
+  <link rel="stylesheet" href="/styles.css?v=47">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to prevent flat bike tires","description":"Tubeless, liners, thorn-resistant tubes and pressure: what lab tests show about stopping flats, goatheads included.","datePublished":"2026-10-13","dateModified":"2026-10-13","url":"https://cycleforchange.org/guides/prevent-bike-flat-tires/","author":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":{"@type":"ImageObject","url":"https://cycleforchange.org/favicon-512.png"}}}</script>
 </head>
 <body>
@@ -52,15 +52,16 @@
       </svg>
       <span class="sr">Cycle for Change</span>
     </a>
+    <!-- Studio pass 1: one nav list. Guides replaces Field notes (Field notes stays in the footer and on /guides/). -->
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/towns/">Towns</a>
-      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -71,20 +72,20 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
-    <li><a href="/find-a-ride/">Find a ride <span>1,423</span></a></li>
+    <li><a href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/find-a-ride/">Find a ride <span>1,421</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
-    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
-    <span><b>988</b> call or text, any hour</span>
+    <span><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>
 <main id="main" class="fn-post">
   <div class="fn-article">
     <p class="fn-meta"><span>Guides · Wheels and tires</span><span class="dot">·</span><span>October 2026</span></p>
@@ -93,13 +94,15 @@
     <div class="fn-body">
       <p class="fn-evidence">The evidence here is moderate: real tests, but not many of them. 13 sources, listed at the end.</p>
       <h2>What the tests say</h2>
-      <p><strong>What causes flats.</strong> Sheldon Brown groups them into three causes <sup><a href="#src-1">1</a></sup>:
-- punctures from glass, wire and thorns
-- pinch flats (“snakebites”): two small holes from hitting an edge while underinflated
-- rim tape failures that expose spoke holes</p>
-<p>He names goathead thorns as a notable hazard in the Southwestern US. He recommends liners, “thornproof” tubes with a thicker outer wall, or sealant <sup><a href="#src-1">1</a></sup>.</p>
-<p><strong>Goatheads.</strong> Goathead, or puncture vine (<em>Tribulus terrestris</em>), is native to warm parts of southern Eurasia and Africa and has been introduced to North America <sup><a href="#src-2">2</a></sup>. Each fruit splits into five burs, each armed with two large spines and sometimes two smaller ones <sup><a href="#src-12">12</a></sup>; Wikipedia gives a spine length of about 10mm <sup><a href="#src-2">2</a></sup>. Extension and weed-board sources say the burs puncture bicycle tires <sup><a href="#src-12">12</a></sup><sup><a href="#src-13">13</a></sup>. Seeds can remain viable in the soil for up to five years <sup><a href="#src-11">11</a></sup><sup><a href="#src-12">12</a></sup>, and one city summary says 5–7 years or longer <sup><a href="#src-13">13</a></sup>. Wikipedia lists the plant as a noxious weed in some US states and recommends removal before or during flowering <sup><a href="#src-2">2</a></sup>. Nobody has studied how often goatheads cause flats.</p>
-<p><strong>Liners (BRR lab test).</strong> Bicycle Rolling Resistance tested liners in a Schwalbe Kojak 35mm tire at 60 psi. The bare tire scored 73 points for tread puncture resistance <sup><a href="#src-3">3</a></sup>:</p>
+      <p><strong>What causes flats.</strong> Sheldon Brown groups them into three causes<sup><a href="#src-1">1</a></sup>:</p>
+      <ul>
+      <li>punctures from glass, wire and thorns</li>
+      <li>pinch flats (“snakebites”): two small holes from hitting an edge while underinflated</li>
+      <li>rim tape failures that expose spoke holes</li>
+      </ul>
+<p>He names goathead thorns as a notable hazard in the Southwestern US. He recommends liners, “thornproof” tubes with a thicker outer wall, or sealant<sup><a href="#src-1">1</a></sup>.</p>
+<p><strong>Goatheads.</strong> Goathead, or puncture vine (<em>Tribulus terrestris</em>), is native to warm parts of southern Eurasia and Africa and has been introduced to North America<sup><a href="#src-2">2</a></sup>. Each fruit splits into five burs, each armed with two large spines and sometimes two smaller ones<sup><a href="#src-12">12</a></sup>; Wikipedia gives a spine length of about 10mm<sup><a href="#src-2">2</a></sup>. Extension and weed-board sources say the burs puncture bicycle tires<sup><a href="#src-12">12</a></sup><sup><a href="#src-13">13</a></sup>. Seeds can remain viable in the soil for up to five years<sup><a href="#src-11">11</a></sup><sup><a href="#src-12">12</a></sup>, and one city summary says 5–7 years or longer<sup><a href="#src-13">13</a></sup>. Wikipedia lists the plant as a noxious weed in some US states and recommends removal before or during flowering<sup><a href="#src-2">2</a></sup>. Nobody has studied how often goatheads cause flats.</p>
+<p><strong>Liners (BRR lab test).</strong> Bicycle Rolling Resistance tested liners in a Schwalbe Kojak 35mm tire at 60 psi. The bare tire scored 73 points for tread puncture resistance<sup><a href="#src-3">3</a></sup>:</p>
 <div class="fn-table"><table>
 <thead>
 <tr>
@@ -136,34 +139,34 @@
 </tr>
 </tbody>
 </table></div>
-<p>Three of the four liners also cut wet grip by 5–6 points; the FlatAway left it unchanged. BRR judged both Mr Tuffy liners the best balance, and said Tannus Armour “will prevent virtually all punctures” at a big speed cost <sup><a href="#src-3">3</a></sup>.</p>
-<p><strong>Tubeless and inserts.</strong> Going tubeless removes the inner tube, which is what gets pinched in a classic snakebite, and lets sealant close small holes. It’s also faster: across eight gravel tires, tubeless averaged 3.9 W less than butyl tubes at low pressure <sup><a href="#src-4">4</a></sup>. In BRR’s insert test, a 40mm tubeless tire without an insert failed at 9 psi, running on the rim edges. With a CushCore (122g) or Vittoria AirLiner (56g) insert, it completed the test. Both inserts added little rolling resistance down to about 27 psi <sup><a href="#src-5">5</a></sup>. Sealant has to be kept fresh, especially in heat (see). Stan’s is reported to say its sealant stays liquid for 2–6 months depending on temperature and humidity <sup><a href="#src-6">6</a></sup>.</p>
-<p><strong>Tubes.</strong> In BRR’s 2026 update, latex was the fastest tube material (9.5 W at 100 psi). The best TPU tubes were close behind (9.7 W), and standard butyl was slower (10.5–12.4 W) <sup><a href="#src-7">7</a></sup>. BRR didn’t systematically measure TPU puncture resistance, so claims that TPU tubes resist punctures better are untested <sup><a href="#src-7">7</a></sup>.</p>
-<p><strong>Casing and belts.</strong> Sheldon Brown says puncture belts add a little weight and rolling resistance, but “probably have some value” against hazards like broken glass <sup><a href="#src-8">8</a></sup>. BRR’s road-tire tests report a “Total Puncture Score” that combines sharp and blunt puncture force with total tire thickness, which makes tires directly comparable <sup><a href="#src-9">9</a></sup>.</p>
-<p><strong>Pressure and pinch flats.</strong> Berto’s 15% tire-drop rule and wider tires both reduce how far the tire squashes, and so cut snakebite risk <sup><a href="#src-10">10</a></sup>. Sheldon names underinflation as a major cause of snakebites <sup><a href="#src-1">1</a></sup>.</p>
+<p>Three of the four liners also cut wet grip by 5–6 points; the FlatAway left it unchanged. BRR judged both Mr Tuffy liners the best balance, and said Tannus Armour “will prevent virtually all punctures” at a big speed cost<sup><a href="#src-3">3</a></sup>.</p>
+<p><strong>Tubeless and inserts.</strong> Going tubeless removes the inner tube, which is what gets pinched in a classic snakebite, and lets sealant close small holes. It’s also faster: across eight gravel tires, tubeless averaged 3.9 W less than butyl tubes at low pressure<sup><a href="#src-4">4</a></sup>. In BRR’s insert test, a 40mm tubeless tire without an insert failed at 9 psi, running on the rim edges. With a CushCore (122g) or Vittoria AirLiner (56g) insert, it completed the test. Both inserts added little rolling resistance down to about 27 psi<sup><a href="#src-5">5</a></sup>. Sealant has to be kept fresh, especially in heat (see). Stan’s is reported to say its sealant stays liquid for 2–6 months depending on temperature and humidity<sup><a href="#src-6">6</a></sup>.</p>
+<p><strong>Tubes.</strong> In BRR’s 2026 update, latex was the fastest tube material (9.5 W at 100 psi). The best TPU tubes were close behind (9.7 W), and standard butyl was slower (10.5–12.4 W)<sup><a href="#src-7">7</a></sup>. BRR didn’t systematically measure TPU puncture resistance, so claims that TPU tubes resist punctures better are untested<sup><a href="#src-7">7</a></sup>.</p>
+<p><strong>Casing and belts.</strong> Sheldon Brown says puncture belts add a little weight and rolling resistance, but “probably have some value” against hazards like broken glass<sup><a href="#src-8">8</a></sup>. BRR’s road-tire tests report a “Total Puncture Score” that combines sharp and blunt puncture force with total tire thickness, which makes tires directly comparable<sup><a href="#src-9">9</a></sup>.</p>
+<p><strong>Pressure and pinch flats.</strong> Berto’s 15% tire-drop rule and wider tires both reduce how far the tire squashes, and so cut snakebite risk<sup><a href="#src-10">10</a></sup>. Sheldon names underinflation as a major cause of snakebites<sup><a href="#src-1">1</a></sup>.</p>
       <h2>The numbers</h2>
       <ul>
-<li>Goathead burs carry two large spines (sometimes two smaller ones); seeds can stay viable in soil up to 5 years, and 5–7 years or longer by one account <sup><a href="#src-11">11</a></sup><sup><a href="#src-12">12</a></sup><sup><a href="#src-13">13</a></sup></li>
-<li>Mr Tuffy liner: puncture score 73 → 136 for +1.9 W <sup><a href="#src-3">3</a></sup></li>
-<li>Tannus Armour: 73 → 245, but +13.6 W and 221g <sup><a href="#src-3">3</a></sup></li>
-<li>Panaracer FlatAway: +14.4 W, the largest penalty tested <sup><a href="#src-3">3</a></sup></li>
-<li>Gravel tubeless vs butyl: −3.9 W per tire at low pressure <sup><a href="#src-4">4</a></sup></li>
-<li>Without an insert, a 40mm tubeless tire failed at 9 psi. With an insert, it held <sup><a href="#src-5">5</a></sup></li>
-<li>Tubes at 100 psi: latex 9.5 W, best TPU 9.7 W, butyl 10.5–12.4 W <sup><a href="#src-7">7</a></sup></li>
+<li>Goathead burs carry two large spines (sometimes two smaller ones); seeds can stay viable in soil up to 5 years, and 5–7 years or longer by one account<sup><a href="#src-11">11</a></sup><sup><a href="#src-12">12</a></sup><sup><a href="#src-13">13</a></sup></li>
+<li>Mr Tuffy liner: puncture score 73 → 136 for +1.9 W<sup><a href="#src-3">3</a></sup></li>
+<li>Tannus Armour: 73 → 245, but +13.6 W and 221g<sup><a href="#src-3">3</a></sup></li>
+<li>Panaracer FlatAway: +14.4 W, the largest penalty tested<sup><a href="#src-3">3</a></sup></li>
+<li>Gravel tubeless vs butyl: −3.9 W per tire at low pressure<sup><a href="#src-4">4</a></sup></li>
+<li>Without an insert, a 40mm tubeless tire failed at 9 psi. With an insert, it held<sup><a href="#src-5">5</a></sup></li>
+<li>Tubes at 100 psi: latex 9.5 W, best TPU 9.7 W, butyl 10.5–12.4 W<sup><a href="#src-7">7</a></sup></li>
 </ul>
       <h2>Myths and disagreements</h2>
       <ul>
-<li><strong>“Tubeless means no flats.”</strong> Sealant dries out, and large cuts or burps still happen <sup><a href="#src-5">5</a></sup><sup><a href="#src-6">6</a></sup>.</li>
-<li><strong>“Liners are basically free.”</strong> Penalties ranged from +1.7 W to +14.4 W <sup><a href="#src-3">3</a></sup>.</li>
-<li><strong>“TPU tubes are more puncture-resistant.”</strong> Not measured by BRR <sup><a href="#src-7">7</a></sup>.</li>
-<li><strong>Gap: real-world rates.</strong> Lab puncture scores use a fixed probe <sup><a href="#src-3">3</a></sup><sup><a href="#src-9">9</a></sup>. There’s no field data comparing puncture rates for tubeless, tubes, liners or tire models.</li>
+<li><strong>“Tubeless means no flats.”</strong> Sealant dries out, and large cuts or burps still happen<sup><a href="#src-5">5</a></sup><sup><a href="#src-6">6</a></sup>.</li>
+<li><strong>“Liners are basically free.”</strong> Penalties ranged from +1.7 W to +14.4 W<sup><a href="#src-3">3</a></sup>.</li>
+<li><strong>“TPU tubes are more puncture-resistant.”</strong> Not measured by BRR<sup><a href="#src-7">7</a></sup>.</li>
+<li><strong>Gap: real-world rates.</strong> Lab puncture scores use a fixed probe<sup><a href="#src-3">3</a></sup><sup><a href="#src-9">9</a></sup>. There’s no field data comparing puncture rates for tubeless, tubes, liners or tire models.</li>
 </ul>
       <h2>Stopping flats</h2>
       <ul>
-<li><strong>Desert gravel or MTB:</strong> run tubeless with fresh sealant (BRR’s gravel tests used 30ml per tire) and check it about monthly in summer. Carry plugs and a spare tube <sup><a href="#src-4">4</a></sup><sup><a href="#src-6">6</a></sup>.</li>
-<li><strong>Staying with tubes in goathead areas:</strong> use a thornproof tube plus a Mr Tuffy-type liner, the best trade-off in BRR’s test <sup><a href="#src-1">1</a></sup><sup><a href="#src-3">3</a></sup>.</li>
-<li><strong>Rocky terrain at low pressure:</strong> consider an insert <sup><a href="#src-5">5</a></sup>.</li>
-<li><strong>Pick tires by puncture score:</strong> compare protected and race casings on BRR’s road and gravel puncture scores, not marketing names <sup><a href="#src-9">9</a></sup>.</li>
+<li><strong>Desert gravel or MTB:</strong> run tubeless with fresh sealant (BRR’s gravel tests used 30ml per tire) and check it about monthly in summer. Carry plugs and a spare tube<sup><a href="#src-4">4</a></sup><sup><a href="#src-6">6</a></sup>.</li>
+<li><strong>Staying with tubes in goathead areas:</strong> use a thornproof tube plus a Mr Tuffy-type liner, the best trade-off in BRR’s test<sup><a href="#src-1">1</a></sup><sup><a href="#src-3">3</a></sup>.</li>
+<li><strong>Rocky terrain at low pressure:</strong> consider an insert<sup><a href="#src-5">5</a></sup>.</li>
+<li><strong>Pick tires by puncture score:</strong> compare protected and race casings on BRR’s road and gravel puncture scores, not marketing names<sup><a href="#src-9">9</a></sup>.</li>
 <li><strong>After a goathead stretch:</strong> stop and check your tires. Pulling a thorn out of a tubeless tire lets the sealant work. That’s practical advice, not a tested method.</li>
 </ul>
       <h2 id="sources">Sources</h2>
@@ -188,19 +191,19 @@
     <h2>Keep reading</h2>
     <a href="/guides/tubeless-bike-tires/">Tubeless bike tires: setup, sealant and hookless rims</a><a href="/guides/bike-tire-pressure/">Bike tire pressure: what’s fastest on real roads</a><a href="/guides/bike-tire-tread/">Does bike tire tread matter on pavement?</a><a href="/guides/#wheels">All wheels and tires guides</a>
   </div>
+  <p class="fn-back"><a href="/guides/">← All guides</a></p>
   <section class="pledge" aria-labelledby="pledge-h">
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
   <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a></div>
 </section>
-  <p class="fn-back"><a href="/guides/">← All guides</a></p>
 </main>
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
-    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2027-02-06" data-rides="[{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Tour de Palm Springs, Palm Springs, CA</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=38" defer></script>
+  <script src="/ridebar.js?v=39" defer></script>
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -217,10 +220,10 @@
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
         <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
+        <a href="/brief/">Brief a ride</a>
         <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
@@ -244,11 +247,11 @@
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
-<script src="/chrome.js" defer></script>
+<script src="/chrome.js?v=47" defer></script>
 </body>
 </html>

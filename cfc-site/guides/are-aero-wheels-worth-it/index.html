@@ -24,8 +24,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/chrome.css">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/chrome.css?v=47">
+  <link rel="stylesheet" href="/styles.css?v=47">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Are aero wheels worth it?","description":"How much time deep aero wheels save, from wind-tunnel and model numbers, and the tire, crosswind and cost catches.","datePublished":"2026-10-13","dateModified":"2026-10-13","url":"https://cycleforchange.org/guides/are-aero-wheels-worth-it/","author":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/"},"publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":{"@type":"ImageObject","url":"https://cycleforchange.org/favicon-512.png"}}}</script>
 </head>
 <body>
@@ -52,15 +52,16 @@
       </svg>
       <span class="sr">Cycle for Change</span>
     </a>
+    <!-- Studio pass 1: one nav list. Guides replaces Field notes (Field notes stays in the footer and on /guides/). -->
     <nav class="nav-links" aria-label="Primary">
       <a href="/find-a-ride/">Find a ride</a>
       <a href="/events/2027/">2027 calendar</a>
       <a href="/towns/">Towns</a>
-      <a href="/field-notes/">Field notes</a>
+      <a href="/guides/">Guides</a>
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/events/2027/riding/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -71,20 +72,20 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/events/2027/riding/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
-    <li><a href="/find-a-ride/">Find a ride <span>1,423</span></a></li>
+    <li><a href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/find-a-ride/">Find a ride <span>1,421</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
-    <li><a href="/towns/">Town guides <span>Riding somewhere new</span></a></li>
+    <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
     <li><a href="/resources/">Resources <span>Help lines, by age</span></a></li>
   </ul>
   <div class="menu-foot">
     <span class="eyebrow">If it&rsquo;s now</span>
-    <span><b>988</b> call or text, any hour</span>
+    <span><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><span class="dot" aria-hidden="true"></span><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</span></p>
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>
 <main id="main" class="fn-post">
   <div class="fn-article">
     <p class="fn-meta"><span>Guides · Wheels and tires</span><span class="dot">·</span><span>October 2026</span></p>
@@ -93,40 +94,42 @@
     <div class="fn-body">
       <p class="fn-evidence">The evidence here is thin: few independent tests, so treat the numbers as a starting point. 15 sources, listed at the end.</p>
       <h2>What the tests say</h2>
-      <p><strong>Why wheels matter.</strong> Wheels are only about 10% of total aerodynamic drag, a figure a 2023 TU Delft paper quotes from Greenwell et al. (1995) <sup><a href="#src-15">15</a></sup>. Air drag takes most of a rider’s effort on the flat <sup><a href="#src-1">1</a></sup>.</p>
-<p><strong>Published time savings.</strong>
-- Jeukendrup &amp; Martin’s peer-reviewed model (2001) puts an aerodynamic wheelset 60–82 s faster over a 40 km time trial than a conventional set. It is a 2001 model, read at abstract level <sup><a href="#src-11">11</a></sup>.
-- Inside Triathlon’s 2012 tunnel test (Scottsdale; bike only) predicted drag for five aero clincher sets from 757 g (best) to 796 g. By the tunnel engineer’s rule (100 g of drag = 1 s per km), the best saved about 70 s over the 112-mile Ironman bike leg <sup><a href="#src-12">12</a></sup>. That is about 16 s per 40 km (our conversion: 0.39 s/km × 40 km), an aero-versus-aero comparison, not aero versus conventional.
-- A power-model estimate in Cyclist: shallow to deep rims at 40 km/h is worth around 10 W, or 30 s over the hour <sup><a href="#src-13">13</a></sup>.</p>
-<p><strong>Tunnel data and tires.</strong> Hunt’s 2019 test of front wheels alone (GST Windkanal, 45 km/h, ±20° yaw, 25mm tire) ran from 15.74 W (Zipp 202 NSW) to 19.74 W (Mavic Cosmic Elite UST), a 4 W spread among shallow-to-mid wheels. It is a manufacturer test with stated ±2.5 W repeatability. A 28mm tire instead of 25mm added 1.54 W on the Hunt 34 Aero Wide Disc (inside that error) and 4.39 W on the Zipp (outside it), enough to erase the Zipp’s 1 W lead <sup><a href="#src-2">2</a></sup>. SILCA’s “rule of 105” says the rim should be at least 105% of the tire’s width <sup><a href="#src-3">3</a></sup>, but AeroCoach’s 2025 chart of nine deep wheels showed “no simple relationship” (highest- and lowest-drag wheels: 112% and 113%) <sup><a href="#src-4">4</a></sup>. A TU Delft tunnel study of a 62mm wheel at 45 km/h reported a 33% wind-averaged drag difference between tires, the extreme being one slick tire with and without its centre seam <sup><a href="#src-15">15</a></sup>.</p>
-<p><strong>Yaw and crosswinds.</strong> About 80% of riding time at 45 km/h is spent at 7.5° yaw or less <sup><a href="#src-4">4</a></sup>. Roues Artisanales’ 2008 test found deep, low-spoke-count rims best, and flat wide-bladed spokes “behave as parachutes” <sup><a href="#src-5">5</a></sup>. A Monash tunnel study (50 km/h, 24–85mm rims plus discs, 0–30° yaw) found wheel type “has a significant effect on both the aerodynamic drag and stability” of the bicycle system, and a disc gave no large drag gain over deep-section wheels at small yaw; per-wheel drag values appear only in its figures <sup><a href="#src-14">14</a></sup>. BikeRadar’s reviewers found a 54mm wheel demanding in crosswinds, a subjective view <sup><a href="#src-6">6</a></sup>. From 1 January 2026, the UCI caps rim height at 65mm for mass-start road racing <sup><a href="#src-7">7</a></sup><sup><a href="#src-8">8</a></sup>.</p>
-<p><strong>Weight vs aero on climbs.</strong> Roues Artisanales found a much lighter wheelset gives a 70 kg rider about 7 W over a 10-second 0–30 km/h sprint <sup><a href="#src-9">9</a></sup>. Cyclist quotes a wheelmaker citing earlier Cervélo testing that aero gains outweigh weight up to about a 5% gradient for an average rider (8% for a pro), and a model putting a 0.5 kg penalty at under 5 W on a 10% climb <sup><a href="#src-13">13</a></sup>. These are expert statements, not tests.</p>
-<p><strong>Wide rims.</strong> At the 2026 Tour, some Visma-Lease a Bike wheels were so wide that 29mm was the narrowest ETRTO-approved tire <sup><a href="#src-10">10</a></sup>.</p>
+      <p><strong>Why wheels matter.</strong> Wheels are only about 10% of total aerodynamic drag, a figure a 2023 TU Delft paper quotes from Greenwell et al. (1995)<sup><a href="#src-15">15</a></sup>. Air drag takes most of a rider’s effort on the flat<sup><a href="#src-1">1</a></sup>.</p>
+<p><strong>Published time savings.</strong></p>
+<ul>
+<li>Jeukendrup &amp; Martin’s peer-reviewed model (2001) puts an aerodynamic wheelset 60–82 s faster over a 40 km time trial than a conventional set. It is a 2001 model, read at abstract level<sup><a href="#src-11">11</a></sup>.</li>
+<li>Inside Triathlon’s 2012 tunnel test (Scottsdale; bike only) predicted drag for five aero clincher sets from 757 g (best) to 796 g. By the tunnel engineer’s rule (100 g of drag = 1 s per km), the best saved about 70 s over the 112-mile Ironman bike leg<sup><a href="#src-12">12</a></sup>. That is about 16 s per 40 km (our conversion: 0.39 s/km × 40 km), an aero-versus-aero comparison, not aero versus conventional.</li>
+<li>A power-model estimate in Cyclist: shallow to deep rims at 40 km/h is worth around 10 W, or 30 s over the hour<sup><a href="#src-13">13</a></sup>.</li>
+</ul>
+<p><strong>Tunnel data and tires.</strong> Hunt’s 2019 test of front wheels alone (GST Windkanal, 45 km/h, ±20° yaw, 25mm tire) ran from 15.74 W (Zipp 202 NSW) to 19.74 W (Mavic Cosmic Elite UST), a 4 W spread among shallow-to-mid wheels. It is a manufacturer test with stated ±2.5 W repeatability. A 28mm tire instead of 25mm added 1.54 W on the Hunt 34 Aero Wide Disc (inside that error) and 4.39 W on the Zipp (outside it), enough to erase the Zipp’s 1 W lead<sup><a href="#src-2">2</a></sup>. SILCA’s “rule of 105” says the rim should be at least 105% of the tire’s width<sup><a href="#src-3">3</a></sup>, but AeroCoach’s 2025 chart of nine deep wheels showed “no simple relationship” (highest- and lowest-drag wheels: 112% and 113%)<sup><a href="#src-4">4</a></sup>. A TU Delft tunnel study of a 62mm wheel at 45 km/h reported a 33% wind-averaged drag difference between tires, the extreme being one slick tire with and without its centre seam<sup><a href="#src-15">15</a></sup>.</p>
+<p><strong>Yaw and crosswinds.</strong> About 80% of riding time at 45 km/h is spent at 7.5° yaw or less<sup><a href="#src-4">4</a></sup>. Roues Artisanales’ 2008 test found deep, low-spoke-count rims best, and flat wide-bladed spokes “behave as parachutes”<sup><a href="#src-5">5</a></sup>. A Monash tunnel study (50 km/h, 24–85mm rims plus discs, 0–30° yaw) found wheel type “has a significant effect on both the aerodynamic drag and stability” of the bicycle system, and a disc gave no large drag gain over deep-section wheels at small yaw; per-wheel drag values appear only in its figures<sup><a href="#src-14">14</a></sup>. BikeRadar’s reviewers found a 54mm wheel demanding in crosswinds, a subjective view<sup><a href="#src-6">6</a></sup>. From 1 January 2026, the UCI caps rim height at 65mm for mass-start road racing<sup><a href="#src-7">7</a></sup><sup><a href="#src-8">8</a></sup>.</p>
+<p><strong>Weight vs aero on climbs.</strong> Roues Artisanales found a much lighter wheelset gives a 70 kg rider about 7 W over a 10-second 0–30 km/h sprint<sup><a href="#src-9">9</a></sup>. Cyclist quotes a wheelmaker citing earlier Cervélo testing that aero gains outweigh weight up to about a 5% gradient for an average rider (8% for a pro), and a model putting a 0.5 kg penalty at under 5 W on a 10% climb<sup><a href="#src-13">13</a></sup>. These are expert statements, not tests.</p>
+<p><strong>Wide rims.</strong> At the 2026 Tour, some Visma-Lease a Bike wheels were so wide that 29mm was the narrowest ETRTO-approved tire<sup><a href="#src-10">10</a></sup>.</p>
       <h2>The numbers</h2>
       <ul>
-<li>76% (32 km/h) and 83% (40 km/h) of a 90 kg rider’s effort goes to aero drag on the flat (Wikipedia figure; not re-checked) <sup><a href="#src-1">1</a></sup></li>
-<li>60–82 s per 40 km: modelled gain of an aero wheelset over a conventional 2001 set <sup><a href="#src-11">11</a></sup></li>
-<li>About 70 s over 112 miles (about 16 s per 40 km, our conversion): best vs worst of five aero wheelsets, bike only <sup><a href="#src-12">12</a></sup></li>
-<li>About 10 W, or 30 s per hour at 40 km/h: shallow to deep rims, modelled <sup><a href="#src-13">13</a></sup></li>
-<li>15.74–19.74 W aerodynamic power across five front wheels at 45 km/h, ±20° yaw (Hunt, 2019) <sup><a href="#src-2">2</a></sup></li>
-<li>+1.54 W to +4.39 W from switching a 25mm to a 28mm tire on the same wheel; Hunt quotes ±2.5 W repeatability <sup><a href="#src-2">2</a></sup></li>
-<li>33% difference in wind-averaged drag between tires (one slick tire with vs without its seam), 62mm wheel <sup><a href="#src-15">15</a></sup></li>
-<li>65mm maximum rim height, UCI mass-start road, from 1 January 2026 <sup><a href="#src-7">7</a></sup></li>
+<li>76% (32 km/h) and 83% (40 km/h) of a 90 kg rider’s effort goes to aero drag on the flat (Wikipedia figure; not re-checked)<sup><a href="#src-1">1</a></sup></li>
+<li>60–82 s per 40 km: modelled gain of an aero wheelset over a conventional 2001 set<sup><a href="#src-11">11</a></sup></li>
+<li>About 70 s over 112 miles (about 16 s per 40 km, our conversion): best vs worst of five aero wheelsets, bike only<sup><a href="#src-12">12</a></sup></li>
+<li>About 10 W, or 30 s per hour at 40 km/h: shallow to deep rims, modelled<sup><a href="#src-13">13</a></sup></li>
+<li>15.74–19.74 W aerodynamic power across five front wheels at 45 km/h, ±20° yaw (Hunt, 2019)<sup><a href="#src-2">2</a></sup></li>
+<li>+1.54 W to +4.39 W from switching a 25mm to a 28mm tire on the same wheel; Hunt quotes ±2.5 W repeatability<sup><a href="#src-2">2</a></sup></li>
+<li>33% difference in wind-averaged drag between tires (one slick tire with vs without its seam), 62mm wheel<sup><a href="#src-15">15</a></sup></li>
+<li>65mm maximum rim height, UCI mass-start road, from 1 January 2026<sup><a href="#src-7">7</a></sup></li>
 </ul>
       <h2>Myths and disagreements</h2>
       <ul>
-<li><strong>“Deep wheels save minutes.”</strong> Among modern shallow-to-deep wheels the data point to seconds over 40 km <sup><a href="#src-2">2</a></sup><sup><a href="#src-12">12</a></sup><sup><a href="#src-13">13</a></sup>. Only the model against a 2001 conventional set reaches 60–82 s <sup><a href="#src-11">11</a></sup>.</li>
-<li><strong>“Any carbon wheel is aero.”</strong> Rim shape, spokes and the tire-rim match matter, and a carbon wheel lost its edge with a wider tire <sup><a href="#src-2">2</a></sup><sup><a href="#src-4">4</a></sup><sup><a href="#src-5">5</a></sup><sup><a href="#src-15">15</a></sup>.</li>
-<li><strong>“Light always beats aero on climbs.”</strong> Weight matters most in accelerations <sup><a href="#src-9">9</a></sup>. The 5%/8% crossover gradients are expert claims, not published tests <sup><a href="#src-13">13</a></sup>.</li>
-<li><strong>Disagreement: yaw.</strong> Some tests weight wide yaw ranges (±20°, 0–35°), while AeroCoach argues most riding happens at low yaw <sup><a href="#src-2">2</a></sup><sup><a href="#src-4">4</a></sup><sup><a href="#src-5">5</a></sup>. Wheels that look good at high yaw may not help most riders much.</li>
+<li><strong>“Deep wheels save minutes.”</strong> Among modern shallow-to-deep wheels the data point to seconds over 40 km<sup><a href="#src-2">2</a></sup><sup><a href="#src-12">12</a></sup><sup><a href="#src-13">13</a></sup>. Only the model against a 2001 conventional set reaches 60–82 s<sup><a href="#src-11">11</a></sup>.</li>
+<li><strong>“Any carbon wheel is aero.”</strong> Rim shape, spokes and the tire-rim match matter, and a carbon wheel lost its edge with a wider tire<sup><a href="#src-2">2</a></sup><sup><a href="#src-4">4</a></sup><sup><a href="#src-5">5</a></sup><sup><a href="#src-15">15</a></sup>.</li>
+<li><strong>“Light always beats aero on climbs.”</strong> Weight matters most in accelerations<sup><a href="#src-9">9</a></sup>. The 5%/8% crossover gradients are expert claims, not published tests<sup><a href="#src-13">13</a></sup>.</li>
+<li><strong>Disagreement: yaw.</strong> Some tests weight wide yaw ranges (±20°, 0–35°), while AeroCoach argues most riding happens at low yaw<sup><a href="#src-2">2</a></sup><sup><a href="#src-4">4</a></sup><sup><a href="#src-5">5</a></sup>. Wheels that look good at high yaw may not help most riders much.</li>
 </ul>
       <h2>Deciding on aero wheels</h2>
       <ul>
 <li>Fix position and tires first. Those numbers are larger than most wheel swaps (see,,).</li>
 <li>Ask for the test conditions behind any aero claim: speed, yaw range, bike only or with rider, front wheel or pair, tire width.</li>
-<li>Run the tire width the wheel maker optimized for, and check what it measures once mounted <sup><a href="#src-2">2</a></sup><sup><a href="#src-3">3</a></sup><sup><a href="#src-4">4</a></sup>.</li>
-<li>Choose a front rim depth you can control in your usual winds. Gusty open desert roads favor caution <sup><a href="#src-6">6</a></sup><sup><a href="#src-14">14</a></sup>.</li>
-<li>Racing UCI mass-start road events? Rims must be 65mm or shallower from 2026, and many current aero wheelsets were already near 60mm <sup><a href="#src-7">7</a></sup><sup><a href="#src-8">8</a></sup>.</li>
+<li>Run the tire width the wheel maker optimized for, and check what it measures once mounted<sup><a href="#src-2">2</a></sup><sup><a href="#src-3">3</a></sup><sup><a href="#src-4">4</a></sup>.</li>
+<li>Choose a front rim depth you can control in your usual winds. Gusty open desert roads favor caution<sup><a href="#src-6">6</a></sup><sup><a href="#src-14">14</a></sup>.</li>
+<li>Racing UCI mass-start road events? Rims must be 65mm or shallower from 2026, and many current aero wheelsets were already near 60mm<sup><a href="#src-7">7</a></sup><sup><a href="#src-8">8</a></sup>.</li>
 </ul>
       <h2 id="sources">Sources</h2>
       <div class="fn-sources"><ol>
@@ -152,19 +155,19 @@
     <h2>Keep reading</h2>
     <a href="/guides/road-bike-tire-width/">Road bike tire width: 25, 28 or 32mm?</a><a href="/guides/bike-wheel-stiffness-comfort/">Wheel stiffness vs comfort: where ride feel comes from</a><a href="/guides/bike-wheel-sizes/">Bike wheel sizes explained: 700c, 650b, 29 and 26</a><a href="/guides/#wheels">All wheels and tires guides</a>
   </div>
+  <p class="fn-back"><a href="/guides/">← All guides</a></p>
   <section class="pledge" aria-labelledby="pledge-h">
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
   <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a><a class="link" href="/">The live count</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a></div>
 </section>
-  <p class="fn-back"><a href="/guides/">← All guides</a></p>
 </main>
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-cur="2027-04-25" data-rides="[{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/&quot;}]" hidden>
-    <a class="ridebar-a" href="/events/2027/riding/" data-ride-next><span class="ridebar-d">Apr 23–25</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Center Ride Out, LA to Ojai and back</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2027-02-06" data-rides="[{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">Tour de Palm Springs, Palm Springs, CA</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
-  <script src="/ridebar.js?v=38" defer></script>
+  <script src="/ridebar.js?v=39" defer></script>
   <div class="wrap">
     <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
          The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
@@ -181,10 +184,10 @@
       <div class="foot-col">
         <p class="eyebrow">Ride</p>
         <a href="/rides/">Group rides</a>
-        <a href="/events/">Events</a>
         <a href="/events/2027/">2027 calendar</a>
         <a href="/towns/">Towns</a>
         <a href="/tonight/">Tonight</a>
+        <a href="/brief/">Brief a ride</a>
         <a href="/events/2027/riding/">My 2027 rides</a>
         <a href="/#orgs">The orgs I ride for</a>
       </div>
@@ -208,11 +211,11 @@
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><b>988</b> call or text, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
-<script src="/chrome.js" defer></script>
+<script src="/chrome.js?v=47" defer></script>
 </body>
 </html>

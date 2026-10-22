@@ -10,6 +10,8 @@
   const WX = "https://api.open-meteo.com/v1/forecast";
   const ELEV = "https://api.open-meteo.com/v1/elevation";
   const HOUR = 3600;
+  // studio pass 1: no smooth scrolling under reduced motion (it ran regardless)
+  const still = () => !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
 
   const el = {
     drop: $("#drop"), file: $("#file"), err: $("#err"), sample: $("#sampleP"), sampleLink: $("#sample"),
@@ -104,7 +106,7 @@
     el.planGrid.hidden = true; el.planChange.setAttribute("aria-expanded", "false");
     render();
     el.out.hidden = false;
-    if (meta.source === "file") el.top.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (meta.source === "file") el.top.scrollIntoView({ behavior: still() ? "auto" : "smooth", block: "start" });
   }
   // what a recorded ride already tells us: the clock it started at (in this browser's zone) and its moving speed
   function fromRecording(pts) {
@@ -220,7 +222,7 @@
     series = B.smooth(series, 5);
     ride2 = { name: parsed.name || "The other ride", pts: parsed.pts, series, st: B.stats(series), bins: B.bins(series), climbs: B.climbs(series) };
     render();
-    el.compare.scrollIntoView({ behavior: "smooth", block: "start" });
+    el.compare.scrollIntoView({ behavior: still() ? "auto" : "smooth", block: "start" });
   }
   function renderCompare(mph) {
     if (!ride2) { el.compare.hidden = true; el.drop2.hidden = false; return; }
@@ -277,7 +279,7 @@
       el.posterImg.src = url; el.posterImg.alt = `${ride.name}: the route drawn with its climbs named`;
       el.posterDl.href = url; el.posterDl.download = `${slug(ride.name) || "route"}-poster.png`;
       el.posterOut.hidden = false;
-      el.posterOut.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      el.posterOut.scrollIntoView({ behavior: still() ? "auto" : "smooth", block: "nearest" });
     } finally { el.poster.disabled = false; el.poster.textContent = "Make the poster"; }
   }
 
@@ -458,8 +460,8 @@
     catch (e) { el.shareOut.hidden = false; el.shareOut.select(); el.share.textContent = "Copy it above"; }
     setTimeout(() => { el.share.textContent = "Copy the share link"; }, 2500);
   });
-  // a sample ride, if one is on the server (Robert's own file; see scripts/build-brief.js)
-  fetch("/brief/sample.gpx", { method: "HEAD" }).then((r) => { if (r.ok) el.sample.hidden = false; }).catch(() => {});
+  // a sample ride: Robert's own file (cfc-site/brief/sample.gpx, committed; see scripts/build-brief.js). Studio pass 1:
+  // the line is built visible, so nothing moves after load (it was hidden until a HEAD request came back: a 46px shift).
   el.sampleLink.addEventListener("click", (e) => { e.preventDefault(); fetch("/brief/sample.gpx").then((r) => r.blob()).then((b) => { b.name = "sample.gpx"; return loadFile(b, "file"); }); });
   // a share link
   if (location.hash.length > 20) {

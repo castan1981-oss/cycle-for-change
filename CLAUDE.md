@@ -29,12 +29,16 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 - Primary internal link target: the homepage `/` or `/events/2027/riding/` ("Ride with me").
   Never `/pledge/`, never `/#board`.
 - **Ride with me = the next ride Robert is doing** (Pass 36). `NEXT_RIDES` in `scripts/chrome.js` is the one
-  list (date order, `until` = last day, Phoenix time): Center Ride Out, then Cycle to Zero (Cycling 4 one·n·ten came
-  off Oct 15, 2026: canceled). The nav button, the menu, the closing block, the homepage's first-screen tile
-  (`#heroRide`) and the bar at the foot of every page (`.ridebar`, `/ridebar.js`) all point at the first one
-  still ahead; the script re-picks in the browser. Never on `/resources/` (the 988 bar owns that spot).
-  The homepage `#ride` section is written for Center Ride Out (since Oct 15, 2026). After Apr 25, 2027: rewrite it for
-  the next ride and rebuild everything.
+  list (date order, `until` = last day, Phoenix time): **Tour de Palm Springs (Feb 6, 2027) first, on Robert's word
+  (Oct 21, 2026)**, then Center Ride Out, then Cycle to Zero (Cycling 4 one·n·ten came off Oct 15, 2026: canceled).
+  Each `href` opens that ride's row on the riding page, open (`/events/2027/riding/#tour-de-palm-springs`,
+  `#center-ride-out`, `#cycle-to-zero`; studio pass 1). The nav button, the menu, the closing block, the homepage's
+  first-screen tile (`#heroRide`) and the bar at the foot of every page (`.ridebar`, `/ridebar.js`, its last day in
+  `data-until`) all point at the first one still ahead; the script re-picks in the browser and rolls to Center Ride Out
+  after Feb 6 on its own. Never on `/resources/` (the 988 bar owns that spot).
+  The homepage `#ride` section stays written for Center Ride Out (since Oct 15, 2026): it's about where the money goes
+  (§5), and Palm Springs isn't one of his three orgs' rides. After Apr 25, 2027: rewrite it for the next org ride and
+  rebuild everything.
 - **Oct 15, 2026: Cycling 4 one·n·ten (Nov 7) is canceled and off the site** (Robert: "get anything for that ride
   off of the website"). Nothing links to it and it's not on the 2027 calendar, not even the retired list. **`/nov7/` stays** because
   Robert put the link on social media, and it **never announces anything** (Robert, Oct 16: few people signed up,
@@ -66,10 +70,11 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 | `node tools/build-rides.js` | everything under `cfc-site/rides/` and `cfc-site/find-a-ride/` (pages, `index.json`, `live.json`, `hubs.json`, `.ics`, maps, sitemap) |
 | `node scripts/build-events.js` | `cfc-site/events/<slug>/`, `/events/`, `/towns/…`, `sitemap-events.xml` |
 | `node scripts/build-calendar.js` | `cfc-site/events/2027/` (home, months, categories, `riding/`, `all/`, `where.json`), `sitemap-calendar.xml` |
-| `scripts/chrome.js` | the shared `<head>`, header + phone menu, tally line, closing block (`CHROME.pledge()` — old name, no-pledge copy, no "10000" numeral), footer (Mile updates → Instagram). Required by every generator. |
+| `scripts/chrome.js` | the shared `<head>`, header + phone menu, tally line, closing block (`CHROME.pledge()` — old name, no-pledge copy, no "10000" numeral), footer (Mile updates → Instagram). Required by every generator. `CSS_V` is the one stylesheet version (below). |
 | `python3 scripts/apply-chrome.py` | puts chrome.js onto the hand-written pages (guides, field notes, resources, journal, tonight, nov7, 404) and refreshes their closing block (`section.pledge`, `.fn-why` on resources) |
-| `scripts/photos.js` + `node scripts/apply-photos.js` | the photo registry (src, size, alt, place · month caption, crop, `figure(key, {cls, line, caption})`); apply-photos rewrites the figures baked into hand pages |
-| `python3 tools/grade.py --all --only <key>` | grades `cfc-site/photos/<key>.jpg` into `cfc-site/img/ph/` (portraits 1440 tall, landscapes 1600 wide, q76). `--only` keeps live photos from re-encoding. |
+| `scripts/photos.js` + `node scripts/apply-photos.js` | the photo registry (src, size, alt, place · month caption, crop, `band` crops, `figure(key, {cls, line, caption})`, `card(key)`); apply-photos rewrites the figures, the pillar heroes, the "From the road" cards and their JSON-LD image baked into hand pages |
+| `python3 tools/grade.py --all --only <key>-2` | writes `cfc-site/photos/<key>.jpg` into `cfc-site/img/ph/<key>-2.jpg` **clean** (ungraded since studio pass 1; portraits 1440 tall, landscapes 1600 wide, q76) with `.avif` and `.webp` beside it; `box` crops are plain crops of his file. `--only` keeps live photos from re-encoding. |
+| `node scripts/build-brief.js` | `cfc-site/brief/index.html` (wears the chrome; bump `V` when the engine, page script or sheet changes) |
 | `python3 tools/print.py` | the Pass 27 screenprint. Not used on the hero since Pass 32; kept for reference. |
 | `scripts/towns.js`, `scripts/blocks.js` | the one town lookup + strip; the shared ride-report form and how-it's-built tiles |
 | `node scripts/tally.js` | the baked tally on the homepage: reads `/api/strava` (the one place the site may read Strava), keeps `data/tally.json`, and rewrites every `[data-miles]`, the four "last rides" rows and the `#tallyData` JSON that `/home.js` paints first. build-home.js applies the copy; build-rides.js refreshes it live on every deploy. Never type the number. Tests: `tools/test/tally.test.js`. |
@@ -77,8 +82,15 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 
 After a change to `scripts/chrome.js`, regenerate everything that wears it, the same day, in this
 order (events and calendar read rides' `live.json`): `node scripts/build-home.js && node
-tools/build-rides.js && node scripts/build-events.js && node scripts/build-calendar.js && python3
-scripts/apply-chrome.py`. Never hand-edit one page's chrome.
+tools/build-rides.js && node scripts/build-events.js && node scripts/build-calendar.js && node
+scripts/build-brief.js && node scripts/apply-photos.js && python3 scripts/apply-chrome.py`, then
+`node --test tools/test/*.test.js && node tools/validate-rides.js`. Never hand-edit one page's chrome.
+
+**One stylesheet version (studio pass 1, Oct 21, 2026).** `CSS_V` in `scripts/chrome.js` goes on every stylesheet link
+(`head()` replaces any old `?v=` on a section sheet), on `/chrome.js`, and on `/home.css` and `/home.js` (build-home.js).
+Bump it whenever a stylesheet or `/chrome.js` changes and run the regeneration above: the sheets share cascade layers,
+so a page must never pair an old `/chrome.css` with new section sheets. `netlify.toml`'s cache headers are untouched.
+Check after: no page links a bare `chrome.css"`. (`/ride/` keeps its own `ride.css?v=`.)
 
 ### Committed vs built on deploy
 - Committed: source, data and every generator's output (homepage, events, towns, calendar, and the
@@ -92,7 +104,14 @@ scripts/apply-chrome.py`. Never hand-edit one page's chrome.
   `events.css`, `calendar.css`, `rides.css`, `tonight.css`). The homepage loads `/home.css` +
   `/home.js`. Share image: `/og-cfc.png`.
 - `/chrome.js` paints the tally into `[data-cur]` from `/api/strava`; a failed feed leaves "—",
-  never 0.
+  never 0. Nothing else carries `data-cur` (the Ride with me bar's date is `data-until`). The tally line under the
+  header is a link to the live count (`/#road`); it has no dot.
+- **Cascade layers (studio pass 1).** `/chrome.css` opens with `@layer base, section;`. The generic base (tokens, type,
+  `.btn`, `.link`, `.field`, `.ph`, `.pledge`, the one token block, the element type rules, the reduced-motion guard)
+  is `@layer base`; every section sheet is wrapped in `@layer section{…}`; the frame (nav, menu, tally line, footer,
+  ridebar, `.theme-dark`) and the system rules (focus, button, link, pick, field, door, row, fold, fact grid, the
+  closing field) are unlayered at the end of `/chrome.css`, so no section sheet can undo them. `/home.css` and
+  `/nov7/nov7.css` are not layered. A new rule in a section sheet goes inside its `@layer section`, at the end.
 
 ### Local preview
 - Serve `cfc-site/` with an **in-process** `http.server` started from the same Python script that
@@ -122,14 +141,23 @@ scripts/apply-chrome.py`. Never hand-edit one page's chrome.
 
 ### After Hours palette (token names are old; values are new — keep the names, every page uses them)
 `--bone` concrete #E1DFDB · `--bone-2` #D7D5D0 · `--paper` plaster #EFEDEA · `--dust` patina
-#A9BDB8 (`--dust-deep` #6F8683 for hairlines that must be seen) · `--creosote` smeared rose #A84C58,
+#A9BDB8 (`--dust-deep` #687F7C for hairlines that must be seen, 3.2:1 on concrete) · `--creosote` smeared rose #A84C58,
 the accent · `--creosote-ink` #8F3E4A, small rose text on light (4.5:1) · `--creosote-lift` and
 `--volt` powder rose #D9B1AA, rose on dark · `--mute` gunmetal #4A4E55 · `--pool` drained pool
 #2C4F55 (footer) · `--asphalt` bruise #1C1A22 · `--tar` #141218.
 
-Rose means the blank and wet paint. Buttons and links are plaster/ink, not rose. Small rose text
-uses `--creosote-ink`. "Creosote", "volt" and "bone" are only token names now — never colors,
-never words in copy or briefs.
+Rose means the blank and wet paint. Buttons and links are plaster/ink, not rose — **no rose on any hover or press**
+(studio pass 1). Small rose text uses `--creosote-ink`. "Creosote", "volt" and "bone" are only token names now — never
+colors, never words in copy or briefs.
+
+**The one token block** (studio pass 1, end of `@layer base` in `/chrome.css`; mirrored at the end of `/home.css` without
+`--sec` / `--band`): space `--s1…--s7` (8, 16, 24, 40, 64, 104, 168) and `--top --gap --sec --band --col-gap`; the fluid
+type scale `--fs-small --fs-label --fs-body --fs-intro --fs-lede --fs-h4 --fs-h3 --fs-h2 --fs-display --fs-h1` and
+`--measure` (30em); `--line-s` (the seen hairline, `--dust-deep`: folds, fields, picks); `--ring` (the focus ring: asphalt,
+plaster inside the dark rooms — the closing block, footer, ridebar, help bar, the 988 door, `.theme-dark`); `--btn-h`
+48 / `--btn-h-sm` 44; `--label` (13px / 700); motion `--t-color` 120ms, `--t-move` 200ms, `--t-open` 320ms, one
+`--ease`. It never redeclares `--line`, `--line-d` or `--pad` (`/tonight/` re-points `--line`). Under reduced motion
+the durations are 0 and one guard in `@layer base` stops every transition and animation.
 
 ### Type
 - **Overpass only**, self-hosted from `cfc-site/fonts/` (OFL). Never load it from Google Fonts:
@@ -153,9 +181,13 @@ never words in copy or briefs.
 - Graphics are **drawn clean — never painted, worn or grained.** The only wear on the site is the
   big desktop hero stencil (`#lpWorn`). `#lpWornSoft` / `#lpRoller` are a small hand edge only (no
   holes, no streaks); on phones the stencil is clean (`.sign-mark [filter]{filter:none}`).
-- Square corners, hairlines, no shadows, no pills, no gradient washes or grain over photos. Photo
-  edges dissolve into the page (`mask-image`, the `.ph` figure) — no hard seams, no chrome boxed on
-  a picture.
+- Square corners, hairlines, no shadows, no pills, no gradient washes or grain over photos.
+- **Photos have a clean edge** (studio pass 1, Oct 21, 2026; Robert: a feathered photo "looks unfinished"). Edge to
+  edge on phones, on the grid on desktop (`.ph` + `--wide` 2:1 band, `--frame` 3:2, `--tall` / a lone portrait 4:5 on
+  five of twelve columns). **No mask, no fade, no wash, no frame, no grade** — anywhere, the homepage hero's inner edge
+  and `#today` included. Nothing laid over a picture except the homepage hero's measured flat scrim. The place · month
+  caption sits under the photo on its left edge, 13px / 700 gunmetal. A wide band uses its own art-directed crops
+  (`band` in `scripts/photos.js`), never `object-fit` guesses.
 
 ### Banned look
 - Serif italic accents; small mono caps with middots; tracked caps labels; Claude's default three
@@ -168,6 +200,34 @@ never words in copy or briefs.
 390px first. WCAG AA (smeared rose on concrete is 4.11:1 — only large text; small rose text is
 `--creosote-ink`). Tap targets 44px. Visible focus. Labels on every field. A still, not a film, on
 phones. Respect reduced motion. 988 + Trevor wherever mental health comes up.
+
+### The Wrenches — the design studio (Oct 21, 2026)
+The design studio is **The Wrenches** (Robert's name for it, Oct 21, 2026). Robert: "usability and an image that is
+visually easy to navigate and enjoyable to look at … modern and high fashion in the sense that it looks polished."
+Eight agents polish the site **inside** this frozen identity: `art-director`, `ux-architect`, `type-layout`, `design-system`,
+`photo-editor`, `motion-interaction`, `usability-lab`, `design-critic` (roster in
+`.claude/agents/README.md`). The bar — the eleven moves, the ten-line score, the six core tasks —
+is `research/design/STUDIO.md`. `/design site | <page> | check <page>` runs a pass; notes go in
+`research/design/<date>-<pass>/`. A pass ships only when the critic's cold score rises with no line
+dropping, no core task gets slower, and `brand-ambassador` + `access-speed` pass — as one PR Robert
+checks on his phone before it merges.
+- **Two builders, no shared file.** A pass's brief names who owns which file: one builder owns the stylesheets, the
+  other the generators, the photo system, the behaviour JS, the hand pages it names, images, tests and CLAUDE.md. They
+  work at the same time, then the markup builder regenerates once (the §2 order) and the CSS builder fits its sheets to
+  the rebuilt pages. Nobody hand-edits generated output. Nobody stashes, resets or `add -A`s in a shared checkout.
+- **Rulings the studio keeps** (pass 1): one primary per screen; inner pages' header Ride with me is a line at ≥900 that
+  fills on hover (the homepage header is its own); one fold marker (right edge, "+" then "−", never rotating); crumbs
+  look like links (13px / 700, a patina hairline; the current page gunmetal); the tally line is `--fs-small`.
+- **One ending.** Every inner page ends on the closing block (`CHROME.pledge()`, two actions: Ride with me and Find a
+  group ride) as a full-width bruise field, with the footer flush under it in **drained pool** — on every page, the
+  homepage included. Nothing in `<main>` comes after the closing block (apply-chrome.py moves a hand page's back link and
+  notes above it). Resources pages close on `.fn-why` instead, as before.
+- **One nav list.** Header: Find a ride · 2027 calendar · Towns · Guides · Resources (Guides replaced Field notes, which
+  stays in the footer and on `/guides/`). The phone menu uses the same names. `/chrome.js` lights Guides on `/guides/`,
+  `/field-notes/` and `/journal/`, Find a ride on `/brief/`, in the nav and the phone menu. 988 is tap-to-call in the
+  menu and the footer. The footer's Ride column has Brief a ride (Events left it).
+- **Copy is never invented by the studio.** Cutting repeated words is fine; every label it uses already exists on the
+  site. A desk that wants one of Robert's rules changed writes it under "For Robert" in its brief.
 
 ### The homepage on a phone (Pass 37, Oct 6, 2026)
 Someone Robert trusts found the phone homepage "overwhelming and hard to figure out what it was all about"
@@ -221,8 +281,9 @@ FAQ", "we confirmed", "would not load for us").
   1-866-488-7386** (LGBTQ youth).
 - Resources pages (apply-chrome.py handles it): crisis line right under the h1, the quiet
   `.fn-why` close instead of the closing block, the phone-only `.help-bar` (tap to call 988) before
-  `</main>`. `/resources/` opens on three doors (Right now · For me · For someone I love). Crisis
-  info is never behind a tap.
+  `</main>`. `/resources/` opens on three doors (Right now · For me · For someone I love), **right under the h1, Right
+  now first, then the intro** (studio pass 1: that satisfies both rules; Trevor is on the first screen at 375×667 and
+  above the 988 bar at 390×844). Crisis info is never behind a tap.
 - No mental-health language on town or ride pages; if any gets in, it needs 988 + Trevor.
 
 ## 5. Content workflow
@@ -433,14 +494,16 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   the first shows at the top of the page: beside the name, facts and buttons on desktop, edge to edge under the name on phones (`.ride--film`, `.gr-top`; a VideoObject in the LD). 4:5, H.264, no
   audio, `+faststart`, files in `cfc-site/film/` (bump the number on a recut). Plays like the homepage reel.
   Now: `shop-ride-7.mp4` (7 s, 864×1080, silent): Robert's own CapCut cut of the Oct 9, 2026 shop ride ("Weekend / Loading" title baked in), his call over the Claude cut — the CapCut watermark band cropped off, 9:16 cropped to 4:5, metadata stripped. The people in it are Robert's call (he made and chose it, Oct 9). The earlier cuts (`shop-ride-5` Sept 25, `shop-ride-6` Oct 9) and the TikTok clip (Central Ave, not this ride) are gone. Raw clips and social cuts live outside the repo.
-  TSR (`scottsdale-az-scottsdale-cycling-saturday-ride`): `tsr-1.mp4` (11 s, 864×1080, silent), Robert's own clip of his first TSR, Oct 10, 2026 — iPhone HDR (HLG) tone-mapped to SDR, 4:5, metadata stripped. His own review of that ride is the first in `data/ride-reviews.json` (his words, sent in chat, Oct 10).
+  TSR (`scottsdale-az-scottsdale-cycling-saturday-ride`): `tsr-1.mp4` (11 s, 864×1080, silent), Robert's own clip of his first TSR, Oct 10, 2026 — iPhone HDR (HLG) tone-mapped to SDR, 4:5, metadata stripped. Poster `tsr-1b.jpg/.webp/.avif` (studio pass 1): the sharp frame at 4.2 s, cut at x ≥ 200 so a car on the far road stays out (the poster is a still, so the no-cars rule holds). Its caption keeps its place: "From the ride, Scottsdale · Oct 2026". His own review of that ride is the first in `data/ride-reviews.json` (his words, sent in chat, Oct 10).
 - **Builds from the shop** (Oct 9, 2026): `data/ride-walls.json` → a photo collage edge to edge across the top of
   a ride page (`tiles[]`: src, size, name, one line, alt), credit line under it. The Friday Shop Ride's: six of
   Bicycle Haüs's own build photos from their Instagram in `cfc-site/img/haus/` — **used with the shop's OK**
   (Robert, Oct 9). Robert's Crux 5 LTD first. Photos only — no captions, no credit line, no words baked into a photo (Robert, Oct 9: the labels were cheesy; the Crux's Instagram text was painted out → `crux-ltd-2.jpg`). Laid out as the shop floor: every bike on one hairline, tops stepping up and down, the Crux tallest; phones get the same skyline as a swipe strip. The line-art
   version is saved, not shown: `rides/art/haus-wall-1.svg` (`python3 tools/draw-haus-wall.py`, `saved_drawing`).
 - **"I rode it"** (Oct 13, 2026): Robert's own write-up of a ride he rode, on that ride's page, under the route and
-  above the reviews. `data/ride-notes.json` → `{ slug: [{ id, date, line, paras[] }] }` (`data/SCHEMA.md`), newest
+  above the reviews. Studio pass 1: the newest one is one tap from the homepage ("Read the last ride", and the log row
+  from that day, both from `data/ride-notes.json` in build-home.js), and the ride page's tag row carries an "I rode it"
+  chip to `#robert`. `data/ride-notes.json` → `{ slug: [{ id, date, line, paras[] }] }` (`data/SCHEMA.md`), newest
   first; four paragraphs show, the rest under "The rest of it" (both crawled). **His words only** — never written,
   tidied or recapped from Strava (§4, §10); people he names are his call. Now: TSR, Sat, Oct 10, 2026, his first one.
   A review (`data/ride-reviews.json`) is the short form, capped at 600 characters; a write-up is the long one.
@@ -600,8 +663,15 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
   first screen (`object-position:62% 0`), the sign sits over its lower half under a scrim sized to
   the picture. A full-resolution export would sharpen desktop at 2x — ask Robert when convenient.
   `tools/sr.py` (upscaling) needs opencv-contrib, which the sandbox lacks.
-- Inner-page photos: originals in `cfc-site/photos/<key>.jpg`, graded copies in `cfc-site/img/ph/`,
-  registered in `scripts/photos.js`. Never the first thing on a phone on a rides hub.
+- Inner-page photos: originals in `cfc-site/photos/<key>.jpg`, **served ungraded** (studio pass 1, Oct 21, 2026: the
+  Pass 6 high-key grade lifted the blacks and pulled skin toward bone; the hero has been "clear, crisp, ungraded" since
+  Oct 5) as `cfc-site/img/ph/<key>-2.jpg` + `.avif` + `.webp`, registered in `scripts/photos.js`. To bring the grade back
+  it's one setting (`CLEAN` in `tools/grade.py`). Never the first thing on a phone on a rides hub.
+- **Off the site until Robert says** (studio pass 1): `crew` (the sunset stop: a second rider's face, no OK on record)
+  and `people` (the finish line: a second man's face and a crowd) — riders-camelback runs in their place;
+  `south-mountain` whole (a rider's face, front on, maybe not him) — `south-mountain-view` runs; `pv-camelback-road` (a
+  pale shape behind a wall that may be a parked car) — Scottsdale's hub shows camelback-sunrise. The old card files
+  (`card-pv`, `card-south`, `card-journal` — a parked car) are replaced by registry crops.
 - **AVIF beside every JPG** (Oct 18, 2026, the audit's speed pass): `tools/grade.py` writes a `.avif` (quality 52,
   about 45% of the bytes at the same look) next to each graded JPG, and `figure()` serves it first in a `<picture>`
   with the JPG as the fallback. The homepage's hero, the reel's poster and the `#today` pictures have `.avif` and
@@ -745,6 +815,7 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-18 — `/events/2027/all/` goes light (growth audit): 1.4 MB and 30,000 DOM nodes → 0.77 MB and 12,000; rows carry the summary and links, the full panel arrives from the month page on open; the filters moved from `?query` to `#hash`, so the fifty crawlable copies of the page are gone.
 - 2026-10-18 — The crawl signals (growth audit, apply-now list): `/llms.txt` and `/feed.xml` (`scripts/build-signals.js`, run by the rides build), the AI crawlers named in robots.txt, `/strava-setup` 301, the footer's Journal link to `/journal/`, an Offer on free rides' Event markup, CollectionPage on the hubs, and a crawlable evening-rides block on `/tonight/`; the `.ics` files out of the index (#183).
 - 2026-10-19 — Trust pages: `/privacy/`, `/methodology/`, `/contact/` (week 1 of the content plan), linked from every footer and from `/rides/about/`; a Trust section in llms.txt.
+- 2026-10-21 — The Wrenches, studio pass 1: photos clean-edged and ungraded (`-2` files, AVIF/WebP), rule-breaking photos swapped for ones that pass; one ending (bruise closing field, drained-pool footer), Guides in the header, the tally line a link; Ride with me opens Tour de Palm Springs' row (Robert: his next ride) on the riding page, links first; his write-up one tap from the homepage; `/rides/` cities in the hero; event pages name, date, sign-up first; `/resources/` opens on its doors; cascade layers and one `CSS_V` on every stylesheet.
 - 2026-10-19 — Rides re-check, Tier A batch 1: the 63 best-earning pages pinned to a city and the 31 amber flags re-checked at their sources; 24 start pins, 5 confirmed, 35 changed, 2 seasonal breaks, 6 unconfirmed; Critical Mass London confirmed and pinned.
 - 2026-10-21 — IndexNow (the 500K plan, AI-search desk): every production deploy tells Bing which pages changed (`deploy-succeeded`), the key file at the root, `tools/indexnow.js` for a full send.
 - 2026-10-21 — The Monday re-check actually re-checks: verifiers in the foreground, background tasks off for the step, a red run when nothing ships, 110 rides a week.

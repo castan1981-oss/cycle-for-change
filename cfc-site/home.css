@@ -1,13 +1,7 @@
-/* Cycle for Change — the homepage (live since Sept 2026; Pass 6 "brighten" Sept 29).
-   Loaded by cfc-site/index.html and cfc-site/pledge/index.html.
-
-   Creosote house tokens, unchanged. Pass 6: tar is no longer a canvas. The page,
-   the hero and the photo planes sit on bone/paper; dark is allowed once (the ride
-   log, where volt reads). Photos wear the high-key house grade (tools/grade.py).
-   No grain. Sections breathe (--sec roughly doubled). --paper is bone a step
-   lighter, for text on the creosote field and the poster tiles.
-   Two families: Outfit for display and body, Space Mono for labels and data.
-   Volt means one thing: live, and only ever sits on tar or asphalt. */
+/* Cycle for Change — the homepage. Loaded by cfc-site/index.html, alone (no /chrome.css, no layers).
+   Lane Paint (Pass 26 on): Overpass only, the After Hours tokens under their old names, square corners,
+   hairlines, no grain. Photos keep a clean edge. Studio pass 1 (Oct 21, 2026) mirrors the inner pages'
+   tokens, focus ring, button states and field at the foot of this sheet, then the desktop first screen. */
 
 /* Overpass, self-hosted (fonts/, OFL). Google's build marks the middot (U+00B7) as a combining glyph, which
    swallowed "one·n·ten" and pulled every " · " onto the next word; the latin file here has it reclassified. */
@@ -59,7 +53,7 @@ body{
 img,video{display:block;max-width:100%}
 a{color:inherit}
 button{font:inherit;color:inherit}
-:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+:focus-visible{outline:2px solid var(--ring);outline-offset:3px}
 [id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
 
 .wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
@@ -125,7 +119,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   text-decoration:none;
   white-space:nowrap;
   cursor:pointer;
-  transition:background-color .18s ease,color .18s ease,border-color .18s ease;
+  transition:background-color var(--t-color) var(--ease),color var(--t-color) var(--ease),border-color var(--t-color) var(--ease);
 }
 .btn--bone{background:var(--bone);color:var(--asphalt);border-color:var(--bone)}
 .btn--ink{background:var(--asphalt);color:var(--bone);border-color:var(--asphalt)}
@@ -133,7 +127,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .btn--glass{border-color:rgba(232,223,208,.55);background:rgba(26,29,24,.28);color:var(--bone);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 .btn--sm{min-height:44px;padding:0 14px;font-size:12px}
 @media (hover:hover){
-  .btn--ink:hover{background:var(--volt);border-color:var(--volt);color:var(--asphalt)}   /* volt replaces asphalt; the ghost button fills asphalt instead (volt never on bone) */
+  .btn--ink:hover{background:transparent;border-color:var(--asphalt);color:var(--asphalt)}   /* studio pass 1: rose is never a hover */
   .btn--bone:hover{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}
   .on-creosote .btn--bone:hover{background:var(--asphalt);border-color:var(--asphalt);color:var(--paper)}
   .btn--ghost:hover{background:var(--asphalt);border-color:var(--asphalt);color:var(--bone)}
@@ -152,7 +146,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   text-decoration:none;
   white-space:nowrap;
 }
-.link::after{content:"\2192";transition:transform .18s ease}
+.link::after{content:"\2192";transition:transform var(--t-move) var(--ease)}
 @media (hover:hover){.link:hover::after{transform:translateX(4px)}}
 .cta-row{display:flex;flex-wrap:wrap;gap:10px}
 
@@ -181,7 +175,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   height:var(--nav-h);
   margin-bottom:calc(-1 * var(--nav-h));
   color:var(--asphalt);
-  transition:background-color .25s ease,color .25s ease,border-color .25s ease;
+  transition:background-color var(--t-move) var(--ease),color var(--t-move) var(--ease),border-color var(--t-move) var(--ease);
   border-bottom:1px solid transparent;
 }
 .nav[data-solid="true"]{background:rgba(225,223,219,.94);color:var(--asphalt);border-bottom-color:var(--line);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
@@ -322,10 +316,8 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 @media (max-width:359px){.hero-acts{grid-template-columns:minmax(0,1fr)}}
 .hero .link{color:var(--asphalt)}
 .dot{position:relative;flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:var(--volt)}
-.dot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--volt);opacity:0;animation:ping 2.4s ease-out infinite}
 .dot--bone{background:var(--bone)}
 .dot--bone::after{border-color:var(--bone)}
-@keyframes ping{0%{transform:scale(.4);opacity:.9}70%,100%{transform:scale(1.25);opacity:0}}
 
 .how-lede{color:var(--mute);max-width:48ch;font-size:clamp(1.05rem,.6vw + .95rem,1.3rem)}
 .road-tally{margin:0 0 14px;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--dust);line-height:1.5}
@@ -661,11 +653,11 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .road-film{margin:0 0 4px;width:100%;max-width:520px}
 .road-film-frame{position:relative;background:var(--tar)}
 .road-film video{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:var(--tar);cursor:pointer}
-.road-play{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;border-radius:50%;background:var(--paper);color:var(--asphalt);display:grid;place-items:center;cursor:pointer;transition:opacity .2s ease,transform .2s ease}
+.road-play{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;border-radius:50%;background:var(--paper);color:var(--asphalt);display:grid;place-items:center;cursor:pointer;transition:opacity var(--t-move) var(--ease),visibility 0s}
 .road-play svg{width:30px;height:30px;margin-left:5px;fill:currentColor}
-@media (hover:hover){.road-play:hover{transform:scale(1.06)}}
-.road-play:focus-visible{outline:3px solid var(--paper);outline-offset:4px}
-.road-film[data-playing="true"] .road-play{opacity:0;transform:scale(.9);pointer-events:none}
+@media (hover:hover){.road-play:hover{background:var(--bone)}}   /* no scale bounce, no rose */
+.road-play:focus-visible{outline:3px solid var(--asphalt);outline-offset:-9px}   /* the ring sits inside the disc */
+.road-film[data-playing="true"] .road-play,.today-film[data-playing="true"] .today-play{opacity:0;visibility:hidden;pointer-events:none;transition:opacity var(--t-move) var(--ease),visibility 0s linear var(--t-move)}   /* out of the tab order while it plays */
 .road-film-cap{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px}
 .road-film-btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0;background:none;border:0;color:var(--paper);font:700 15px/1.2 var(--display);cursor:pointer}
 .road-film-btn svg{width:16px;height:16px;fill:currentColor;flex:none}
@@ -674,7 +666,6 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .road-film-btn span{border-bottom:1px solid var(--dust);padding-bottom:2px}
 .road-film-btn:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
 .road-film-len{font-size:14px;font-weight:600;color:var(--dust);font-variant-numeric:tabular-nums}
-@media (prefers-reduced-motion:reduce){.road-play{transition:none}}
 
 /* —— read —— */
 .read-grid{display:grid;gap:clamp(36px,5vw,64px)}
@@ -778,14 +769,13 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .bar .btn{min-height:44px;padding:0 18px}
 @media (min-width:900px){.bar{display:none}}
 
-/* —— motion: Pass 5 retired the scroll-driven "rise" on sections. Everything is visible
-   at rest; the only motion left is the live dot, the hover states and the desktop film. —— */
+/* —— motion (studio pass 1): one reduced-motion guard. 0s, not .01ms, so not even an `all` transition can
+   fade a ring in. Nothing listens for transitionend. The tokens are at the foot of this sheet. —— */
 @media (prefers-reduced-motion:reduce){
+  :root{--t-color:0ms;--t-move:0ms;--t-open:0ms}
   html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
-  .dot::after{display:none}
-}
-
+  *,*::before,*::after{transition-duration:0s!important;transition-delay:0s!important;
+    animation-duration:0s!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
 }
 
 /* —— questions —— */
@@ -871,36 +861,38 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .next-up a{position:relative}
 .next-up a::before{content:"";position:absolute;left:0;right:0;top:-14px;bottom:-14px}
 
-/* —— Pass 25 (Oct 4, 2026): Robert's photos through the site ——
-   One figure, from scripts/photos.js: `.ph` + its shape (`--p` portrait, `--l` landscape) + an optional
-   desktop layout (`--wide` a band across the column, `--tall` 4:5 and narrow, `--frame` a 3:2 frame the
-   width of a reading column). The picture dissolves into whatever it sits on, top and foot, and on desktop
-   at its sides by a hair (wider side fades read as an old-TV vignette, Pass 24b) — no frame, no hard edge, no type over it (Pass 7, Pass 23b). On phones it runs edge to
-   edge in its own shape. The place · month line sits under it in mono. The same block is in /chrome.css (for /pledge/, which loads only this sheet). */
-.ph{margin:clamp(36px,6vw,72px) 0;position:relative}
-.ph img{display:block;width:100%;height:auto;object-fit:cover;background:transparent;
-  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%);
-  mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%)}
-.ph figcaption{margin-top:4px;font-family:var(--mono);font-size:.75rem;letter-spacing:0;text-transform:none;color:var(--mute)}
+/* —— Robert's photos: one figure, a clean edge (studio pass 1, Oct 21, 2026; photo.md §A) ——
+   Robert: a feathered photo "looks unfinished"; worn textures "very sloppy". A photo keeps its own hard edge:
+   edge to edge on phones, inset exactly on the grid on desktop. No mask, no fade, no wash, no frame, no shadow,
+   nothing laid over it. `.ph` + its shape (`--p` portrait, `--l` landscape) + an optional desktop layout:
+     --wide   a 2:1 band, the full width of its column
+     --frame  3:2, the full width of a reading column
+     --tall   4:5, five of the twelve columns, on the left edge (also where a lone --p lands)
+   Crops come from the registry's sources (scripts/photos.js), not from object-fit. The place · month line sits
+   under the photo on the photo's own left edge, 13px / 700 gunmetal. The same block is in /chrome.css and /home.css. */
+.ph{margin:clamp(40px,6vw,64px) 0;position:relative}
+.ph picture{display:block}
+.ph img{display:block;width:100%;height:auto;object-fit:cover;background:var(--bone-2)}
+.ph figcaption{margin:8px 0 0;padding:0;font-size:13px;font-weight:700;line-height:1.3;letter-spacing:0;text-transform:none;color:var(--mute)}
+.theme-dark .ph img{background:var(--tar)}
 .theme-dark .ph figcaption{color:var(--dust)}
 @media (max-width:899px){
   .ph{margin-inline:calc(-1 * var(--gut))}
   .ph figcaption{padding-inline:var(--gut)}
-  .ph--p img{aspect-ratio:4/5}
+  .ph--p img,.ph--tall img{aspect-ratio:4/5}
   .ph--l img{aspect-ratio:4/3}
 }
+@media (min-width:600px) and (max-width:899px){
+  .ph--wide img,.ph--frame img{aspect-ratio:3/2}       /* tablets take the desktop crop, a little taller */
+}
 @media (min-width:900px){
-  .ph img{aspect-ratio:3/2;max-height:620px;
-    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 2.5%,#000 97.5%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%);
-    -webkit-mask-composite:source-in;
-    mask-image:linear-gradient(to right,transparent 0,#000 2.5%,#000 97.5%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 86%,transparent 100%);
-    mask-composite:intersect}
-  .ph--p,.ph--tall{max-width:460px}
-  .ph--p img,.ph--tall img{aspect-ratio:4/5;max-height:none}
-  .ph--wide,.ph--frame{max-width:none}
-  .ph--wide img{aspect-ratio:2/1;max-height:600px}
-  .ph--frame img{aspect-ratio:3/2;max-height:620px}
-  .ph figcaption{padding-left:2.5%}
+  .ph img{aspect-ratio:3/2}
+  .ph--wide img{aspect-ratio:2/1}
+  .ph--frame img{aspect-ratio:3/2}
+  .ph--p:not(.ph--wide):not(.ph--frame) img,.ph--tall img{aspect-ratio:4/5}
+  /* five of twelve grid columns, measured from the grid itself so it lands on a column line in any parent */
+  .ph--p:not(.ph--wide):not(.ph--frame),.ph--tall{
+    width:min(100%,calc((min(100vw,var(--maxw)) - 2 * var(--gut) - 11 * var(--col-gap,24px)) * 5 / 12 + 4 * var(--col-gap,24px)))}
 }
 
 /* ————————————————————————————————————————————————————————————————————————
@@ -921,9 +913,9 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .sign-right{flex:1 1 340px;display:flex;flex-direction:column;gap:18px;max-width:560px}
 .sign-q{font-weight:900;font-size:clamp(28px,3vw,42px);line-height:1.05;letter-spacing:-.02em}
 .sign-input{min-height:56px;padding:14px 16px 10px;border:0;border-bottom:4px solid var(--creosote-lift);background:#2A2830;color:var(--paper);font:800 22px var(--display);outline-color:var(--creosote-lift)}
-.sign-input::placeholder{color:#9A96A2}
+.sign-input::placeholder{color:var(--dust)}
 .sign-note{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;font-size:14px;font-weight:600;color:var(--dust)}
-.sign-reset{min-height:44px;padding:8px 12px 6px;border:2px solid #6A6670;background:transparent;color:var(--paper);font:800 14px var(--display);cursor:pointer}
+.sign-reset{min-height:44px;padding:8px 12px 6px;border:2px solid var(--dust-deep);background:transparent;color:var(--paper);font:800 14px var(--display);cursor:pointer}
 .sign-line{margin:6px 0 0;font-weight:800;font-size:clamp(22px,2.2vw,30px);line-height:1.15;letter-spacing:-.015em}
 .sign-acts{display:flex;flex-wrap:wrap;gap:22px;align-items:center}
 .btn--plate{background:var(--creosote-lift);border-color:var(--creosote-lift);color:var(--asphalt);min-height:54px;padding:0 26px;font-size:17px;font-weight:900}
@@ -997,7 +989,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .sign-plate--blank[data-empty="true"]{width:calc(var(--w) * .31);padding-block:0}
 .sign--print .sign-input{background:rgba(20,18,24,.72);border-bottom-color:var(--paper)}
 .sign--print .btn--plate{background:var(--paper);border-color:var(--paper)}
-@media (hover:hover){.sign--print .btn--plate:hover{background:var(--creosote-lift);border-color:var(--creosote-lift)}}
+@media (hover:hover){.sign--print .btn--plate:hover{background:transparent;border-color:var(--paper);color:var(--paper)}}   /* no rose on hover (studio pass 1); no markup uses .btn--plate today */
 @media (max-width:759px){
   /* Pass 30: the first screen is one composed screen — the picture clean (no type on it, no mark),
      then the sign small enough that the question, the field and the button all land before the fold */
@@ -1096,7 +1088,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
    The stop bar and the ride log are clean strokes now: no roller edge, no drip. */
 @media (min-width:1024px){
   .sign--print{min-height:min(94svh,900px);align-content:center;padding-block:calc(var(--nav-h) + 48px) 64px}
-  .sign--print .sign-ph{left:auto;right:0;width:min(50%,820px);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 22%);mask-image:linear-gradient(90deg,transparent 0,#000 22%)}
+  .sign--print .sign-ph{left:auto;right:0;width:min(50%,820px)}   /* studio pass 1: a hard inner edge at half the screen, no fade */
   .sign--print .sign-ph img{object-position:58% 18%}
   .sign--print .sign-scrim{display:none}
   .sign--print .sign-in{flex-direction:column;align-items:flex-start;flex-wrap:nowrap;gap:36px}
@@ -1123,23 +1115,22 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
    Hairline, square, plaster on hover. On phones they take the place of "Ride with me", which the
    tally bar carries from the second screen on. */
 .finder{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:4px}
-.finder-tile{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:10px;align-items:center;align-content:center;min-height:64px;padding:11px 10px 10px 11px;border:1px solid rgba(239,237,234,.5);background:rgba(20,18,24,.5);color:var(--paper);text-decoration:none;transition:background .15s ease,color .15s ease,border-color .15s ease}
+.finder-tile{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:10px;align-items:center;align-content:center;min-height:64px;padding:11px 10px 10px 11px;border:1px solid rgba(239,237,234,.5);background:rgba(20,18,24,.5);color:var(--paper);text-decoration:none;transition:background-color var(--t-color) var(--ease),color var(--t-color) var(--ease),border-color var(--t-color) var(--ease)}
 .finder-mk{grid-row:1 / span 2;width:28px;height:28px}
 .finder-t{font-weight:800;font-size:16px;line-height:1.2}
-.finder-s{font-size:13px;font-weight:600;line-height:1.3;color:var(--dust);transition:color .15s ease}
+.finder-s{font-size:13px;font-weight:600;line-height:1.3;color:var(--dust);transition:color var(--t-color) var(--ease)}
 @media (hover:hover){.finder-tile:hover{background:var(--paper);border-color:var(--paper);color:var(--asphalt)}.finder-tile:hover .finder-s{color:var(--mute)}}
 .finder-tile:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
 @media (max-width:759px){.sign--print .sign-acts{display:none}}
 @media (min-width:1024px){.finder{max-width:520px}}
-@media (prefers-reduced-motion:reduce){.finder-tile,.finder-s{transition:none}}
 
 /* —— Pass 36 (Oct 6, 2026): the "Ride with me" bar (markup in scripts/chrome.js, behaviour in /ridebar.js).
    Robert wanted "ride with me" on every page as you scroll, to the next ride he's doing. Bruise bar, the
    date on the powder-rose plate (the blank, filled in), plaster type. Phones: across the foot of the screen.
    Desktop: a box at the bottom right. It slides away while the page's own "Ride with me" is in view.
    The same block is in /chrome.css and /home.css. —— */
-.ridebar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:stretch;background:var(--asphalt);color:var(--paper);border-top:1px solid var(--line-d);padding-bottom:env(safe-area-inset-bottom);transform:translateY(110%);visibility:hidden;transition:transform .25s ease,visibility 0s linear .25s}
-.ridebar.is-on{transform:none;visibility:visible;transition:transform .25s ease}
+.ridebar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:stretch;background:var(--asphalt);color:var(--paper);border-top:1px solid var(--line-d);padding-bottom:env(safe-area-inset-bottom);transform:translateY(110%);visibility:hidden;transition:transform var(--t-open) var(--ease),visibility 0s linear var(--t-open)}
+.ridebar.is-on{transform:none;visibility:visible;transition:transform var(--t-open) var(--ease)}
 .ridebar[hidden]{display:none}
 .ridebar-a{flex:1 1 auto;display:flex;align-items:center;gap:12px;min-height:60px;min-width:0;padding:8px 8px 8px var(--gut);color:inherit;text-decoration:none}
 .ridebar-d{flex:0 0 auto;background:var(--volt);color:var(--asphalt);font-size:.8125rem;font-weight:800;line-height:1;padding:7px 8px 6px;white-space:nowrap}
@@ -1150,10 +1141,9 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .ridebar-x{flex:0 0 48px;position:relative;border:0;border-left:1px solid var(--line-d);background:transparent;color:var(--dust);cursor:pointer}
 .ridebar-x::before,.ridebar-x::after{content:"";position:absolute;left:50%;top:50%;width:16px;height:2px;background:currentColor;transform:translate(-50%,-50%) rotate(45deg)}
 .ridebar-x::after{transform:translate(-50%,-50%) rotate(-45deg)}
-@media (hover:hover){.ridebar-a:hover b{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:var(--volt)}.ridebar-x:hover{color:var(--paper)}}
+@media (hover:hover){.ridebar-a:hover b{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:currentColor}.ridebar-x:hover{color:var(--paper)}}
 .ridebar a:focus-visible,.ridebar button:focus-visible{outline:2px solid var(--paper);outline-offset:-5px}
 @media (min-width:900px){.ridebar{left:auto;right:var(--gut);bottom:20px;width:420px;border:1px solid var(--line-d);padding-bottom:0}.ridebar-a{padding-left:16px}}
-@media (prefers-reduced-motion:reduce){.ridebar,.ridebar.is-on{transition:none}}
 /* the first-screen tile: across both finder tiles, the date on the plate (Pass 36) */
 .finder-tile--ride{grid-column:1 / -1;grid-template-columns:auto minmax(0,1fr) auto;column-gap:12px;border-color:var(--volt)}
 .finder-tile--ride .ridebar-d{grid-row:1 / span 2}
@@ -1244,7 +1234,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .today-plate{max-width:100%;font-size:clamp(32px,10.3vw,48px);line-height:1.05;padding:.22em .32em .07em;letter-spacing:-.01em}
 .today-line{margin:18px 0 0;max-width:32ch;font-size:clamp(1.15rem,.7vw + 1rem,1.5rem);line-height:1.38}
 .today-ph{margin:0}
-.today-ph img{display:block;width:100%;-webkit-mask-image:linear-gradient(to bottom,#000 88%,transparent 100%);mask-image:linear-gradient(to bottom,#000 88%,transparent 100%)}
+.today-ph img{display:block;width:100%}
 .today-ph--lead{grid-area:lead;margin:28px calc(-1 * var(--gut)) 0}
 .today-ph--lead img{height:auto;aspect-ratio:1/1;object-fit:cover;object-position:54% 50%}
 .today-where{grid-area:where;margin:8px 0 0;font-size:13px;font-weight:700;color:var(--mute)}
@@ -1255,11 +1245,10 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
 .today-film video{display:block;width:100%;height:100%;aspect-ratio:9/16;object-fit:cover;background:var(--tar);cursor:pointer}
 .today-play{width:64px;height:64px;margin:-32px 0 0 -32px}
 .today-play svg{width:24px;height:24px;margin-left:4px}
-.today-film[data-playing="true"] .today-play{opacity:0;transform:scale(.9);pointer-events:none}
 .today-ask{display:flex;flex-direction:column;justify-content:space-between;gap:20px;box-sizing:border-box;padding:18px 16px 16px;background:var(--asphalt);color:var(--paper);text-decoration:none}
 .today-ask-q{font-size:clamp(1.45rem,1rem + 2vw,2.15rem);font-weight:800;line-height:1.06;letter-spacing:-.015em;text-wrap:balance}
 .today-ask-go{align-self:flex-start;display:inline-flex;gap:6px;font-size:.9375rem;font-weight:700;line-height:1.3;padding-bottom:4px;border-bottom:1.5px solid var(--dust)}
-.today-ask-go::after{content:"\2192";font-weight:400;transition:transform .18s ease}
+.today-ask-go::after{content:"\2192";font-weight:400;transition:transform var(--t-move) var(--ease)}
 @media (hover:hover){.today-ask:hover{background:var(--tar)}.today-ask:hover .today-ask-go::after{transform:translateX(4px)}}
 .today-ask:focus-visible{outline:3px solid var(--asphalt);outline-offset:3px}
 .today-ph--close{grid-area:close;margin:24px calc(-1 * var(--gut)) 0}
@@ -1276,7 +1265,7 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   .today-plate{font-size:46px}
   .today-line{margin-top:22px}
   .today-ph--lead{margin:0;position:relative;min-height:520px}
-  .today-ph--lead img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-position:56% 50%;-webkit-mask-image:linear-gradient(to bottom,#000 90%,transparent 100%);mask-image:linear-gradient(to bottom,#000 90%,transparent 100%)}
+  .today-ph--lead img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-position:56% 50%}
   .today-pair{margin-top:36px;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:10px;align-self:start}
   .today-ask{padding:24px 22px 22px}
   .today-play{width:72px;height:72px;margin:-36px 0 0 -36px}
@@ -1284,3 +1273,138 @@ table.sr{display:block}   /* a table ignores width:1px otherwise and widens the 
   .today-ph--close{margin:clamp(40px,4vw,56px) 0 0}
   .today-ph--close img{aspect-ratio:auto;height:clamp(300px,29vw,440px)}
 }
+
+/* ————————————————————————————————————————————————————————————————————————
+   Studio pass 1 (Oct 21, 2026), at the end of /home.css, in this order: 1 the token mirror, 2 focus and the
+   ring, 3 the system's home mirror, 4 type-layout's home block, 5 motion's home rules, 6 the desktop first
+   screen (item 13), 7 R1 and R2. The homepage keeps its own --sec and band padding (D8). Phones under 760px
+   keep the Pass 37 first screen; the only changes there are R1 and the sign's reserved space.
+   ———————————————————————————————————————————————————————————————————————— */
+
+/* 1 — the token mirror: /chrome.css's one token block, without --sec and --band (D8) */
+:root{
+  --s1:8px;--s2:16px;--s3:24px;--s4:40px;--s5:64px;--s6:104px;--s7:168px;
+  --top:clamp(24px, 9.14px + 3.81vw, 64px);
+  --gap:clamp(40px, 31.09px + 2.286vw, 64px);
+  --col-gap:clamp(16px, 13.03px + .762vw, 24px);
+  --fs-label:.8125rem;
+  --fs-small:clamp(.875rem, .852rem + .095vw, .9375rem);
+  --fs-body:clamp(1.0625rem, 1.039rem + .095vw, 1.125rem);
+  --fs-intro:clamp(1.125rem, 1.079rem + .19vw, 1.25rem);
+  --fs-h4:clamp(1.125rem, 1.032rem + .381vw, 1.375rem);
+  --fs-lede:clamp(1.25rem, 1.157rem + .381vw, 1.5rem);
+  --fs-h3:clamp(1.3125rem, 1.15rem + .667vw, 1.75rem);
+  --fs-h2:clamp(1.6875rem, 1.293rem + 1.619vw, 2.75rem);
+  --fs-display:clamp(2.25rem, 1.507rem + 3.048vw, 4.25rem);
+  --fs-h1:clamp(2.75rem, 1.775rem + 4vw, 5.375rem);
+  --measure:30em;
+  --line-s:var(--dust-deep);
+  --ring:var(--asphalt);
+  --btn-h:48px;--btn-h-sm:44px;
+  --label:700 .8125rem/1.35 var(--display);
+  --t-color:120ms;--t-move:200ms;--t-open:320ms;--ease:cubic-bezier(.2,.7,.2,1);
+}
+@media (prefers-reduced-motion:reduce){:root{--t-color:0ms;--t-move:0ms;--t-open:0ms}}   /* after the tokens, so it wins */
+
+/* 2 — focus: one ring per ground. Ink on the light sections, plaster in the dark rooms. The play discs draw
+   their ring inside themselves (above, with the reel's rules). */
+:focus-visible{outline:2px solid var(--ring);outline-offset:3px}
+.sign,.nums--bar,.s--tar,.s--creosote,.on-creosote,.foot,.ridebar{--ring:var(--paper)}
+
+/* 3 — the system's home mirror: the button states (no rose on hover or press) and the one field */
+.btn{min-height:var(--btn-h);padding:0 20px}
+.btn--sm{min-height:var(--btn-h-sm);padding:0 14px}
+.btn--bone{background:var(--paper);border-color:var(--paper)}
+@media (hover:hover){
+  .btn--ink:hover{background:transparent;border-color:var(--asphalt);color:var(--asphalt)}
+  .btn--bone:hover{background:transparent;border-color:var(--paper);color:var(--paper)}
+  .btn--ghost:hover{background:var(--asphalt);border-color:var(--asphalt);color:var(--paper)}
+}
+.btn:active{transition-duration:0s;background:var(--asphalt);border-color:var(--asphalt);color:var(--paper)}
+.btn--ink:active{background:var(--mute);border-color:var(--mute)}
+.find-field,.sign-play-input{min-height:52px;padding:12px 14px 10px;border:1px solid var(--asphalt);background:var(--paper);color:var(--asphalt);font:500 1.0625rem/1.3 var(--display)}
+.find-field:focus,.sign-play-input:focus{outline:0;box-shadow:inset 0 0 0 1px var(--asphalt)}
+.find-field:focus-visible,.sign-play-input:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+
+/* 4 — type-layout's home block (the two .s band lines are not this pass, D8) */
+.h2{font-size:var(--fs-display)}
+.h3{font-size:var(--fs-h3)}
+.lede{font-size:var(--fs-lede);line-height:1.4}
+p,li,dd,figcaption{text-wrap:pretty}
+.ride-h3{text-wrap:balance}
+.tally-line,.foot-line{font-size:var(--fs-label)}
+
+/* 5 — motion's home rules: press with no flash, focus never under the nav, and the sign keeps its space while
+   you type (the plate gives back the height it gains; the reset holds its slot) */
+html{-webkit-tap-highlight-color:transparent;scroll-padding-top:calc(var(--nav-h) + 12px)}
+.finder-tile:active{transition-duration:0s;background:var(--paper);border-color:var(--paper);color:var(--asphalt)}
+.finder-tile:active .finder-s{color:var(--mute)}
+.sign-plate--blank[data-empty="false"]{margin-bottom:calc(var(--w) * -.047)}
+.sign-note{min-height:0}
+.sign-note .sign-reset{position:relative;min-height:0;padding:3px 10px 1px;border-width:1px}
+.sign-note .sign-reset::before{content:"";position:absolute;left:0;right:0;top:-10px;bottom:-10px}   /* 44px to a thumb */
+@media (min-width:760px){
+  .sign--print .sign-plate{white-space:nowrap;overflow-wrap:normal;max-width:none}   /* one line, so a long word never adds a row */
+}
+@media (max-width:759px){
+  .sign-play-sign{min-height:78px;align-content:flex-start}                     /* room for stencil + plate on two rows */
+  .sign-play-reset[hidden]{display:inline-flex!important;visibility:hidden}    /* hold its slot, out of the tab order */
+}
+
+/* 6 — item 13: the desktop homepage says what it is and keeps the way in on the first screen.
+   From 760px the line "I'm Robert. In 2027 I ride 10,000 miles, all on the bike." takes the kicker's place;
+   the sign's question moves under the finder row (it only changes the sign); from 1024px the sign is capped by
+   the screen's height, and from 1280px the three finder tiles sit in one row. Phones are untouched. */
+@media (min-width:760px){
+  .sign--print .sign-kicker{display:none}
+  .sign--print .sign-intro{display:block;order:0;margin:0;max-width:32ch;font-size:clamp(18px,1.4vw,21px);font-weight:600;line-height:1.35;color:var(--paper);text-wrap:balance}
+  .sign--print .sign-line{order:1}
+  .sign--print .finder{order:2}
+  .sign--print .sign-acts{order:3}
+  .sign--print .sign-q{order:4;margin-top:var(--s2)}
+  .sign--print .sign-input{order:5}
+  .sign--print .sign-note{order:6}
+}
+@media (min-width:760px) and (max-width:1023px){
+  .sign--print{padding-top:calc(var(--nav-h) + 37px)}   /* the stencil keeps the air the kicker gave it */
+  .sign--print .sign-right{flex:1 1 100%}               /* the words stay under the sign */
+}
+@media (min-width:1024px){
+  .sign--print .sign-left{--w:clamp(250px,min(24vw,calc((100svh - 400px) * .92)),340px)}
+  .sign--print .sign-right{width:min(600px,calc(50vw - max(var(--gut),calc((100vw - var(--maxw)) / 2 + var(--gut))) - 32px));max-width:none}
+  .sign--print .sign-right>*{max-width:none}
+  .sign--print .finder{max-width:none}
+  .sign--print .sign-q,.sign--print .sign-input,.sign--print .sign-note,.sign--print .sign-line{max-width:520px}
+}
+@media (min-width:1280px){
+  /* one row: Ride with me first and widest; its date plate sits over its words so nothing wraps */
+  .sign--print .finder{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr)}
+  .sign--print .finder-tile{padding-right:8px}
+  .sign--print .finder-tile--ride{grid-column:auto;grid-template-columns:minmax(0,1fr) auto;row-gap:4px;padding-right:12px}
+  .sign--print .finder-tile--ride .ridebar-d{grid-row:1;grid-column:1;justify-self:start}
+  .sign--print .finder-tile--ride .ridebar-go{grid-row:1;grid-column:2}
+  .sign--print .finder-tile--ride .finder-t,.sign--print .finder-tile--ride .finder-s{grid-column:1 / -1}
+}
+
+/* 7 — R1: "Read the last ride" shows on phones too, a quiet link under the finder tiles. It takes the sign's
+   bottom padding, so the tiles stay on the first screen at 375×667 and 360×640. */
+@media (max-width:759px){
+  .sign--print .sign-acts{display:flex;margin:0}
+  .sign--print .sign-in{padding-bottom:10px}
+  .sign--print .sign-acts .link{min-height:24px;align-items:center;padding-bottom:1px}   /* its 44px hit area (.link::before) stays clear of the tiles */
+}
+/* R2 — today's film gets the reel's Play / Pause line under the picture (the markup is build-home.js's
+   todaySection()). On the film's tar frame, plaster words, the label held to one width so the line never moves. */
+.today-film{display:flex;flex-direction:column}
+.today-film .today-film-frame{flex:1 1 auto;height:auto;min-height:0}
+.today-film .road-film-cap,.today-film-cap{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0;padding:6px 12px 8px;background:var(--tar)}
+.today-film .road-film-btn{color:var(--paper);font-size:15px}
+.today-film .road-film-btn span,.road-film-btn [data-film-label]{display:inline-block;min-width:2.9em}
+.today-film .road-film-btn:focus-visible{outline:2px solid var(--paper);outline-offset:-2px}
+
+/* R12 — 988 in the phone menu and the footer is a tel: link now (as on inner pages); the hidden tally line's
+   link inherits its line */
+.menu-foot a,.foot-crisis a{position:relative;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:currentColor}
+.menu-foot a::before,.foot-crisis a::before{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;margin-top:-22px}
+.menu-foot a b,.foot-crisis a b{color:inherit}
+.tally-line a{color:inherit;text-decoration:none}
