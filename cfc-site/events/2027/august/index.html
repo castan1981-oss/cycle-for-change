@@ -99,7 +99,7 @@
     <p class="cal-key"><span class="key-conf">organizer&rsquo;s date</span><span class="key-proj">projected from 2026, check first</span></p>
     <p class="cal-narrow"><a href="/events/2027/all/#month=8">Narrow by type, region, cause, distance &rarr;</a></p>
     <nav class="mo-nav" aria-label="Other months"><a href="/events/2027/july/">&larr; July</a><a href="/events/2027/september/">September &rarr;</a></nav>
-    <div id="results">
+    <div id="results"><script>if(location.hash.length>1){var d=document.documentElement;d.classList.add("ev-wait");setTimeout(function(){d.classList.remove("ev-wait")},1500)}</script>
       <section class="month">
 <details class="ev" id="boone-gran-fondo" data-m="8" data-t="Road" data-r="Southeast" data-c="" data-f="short" data-s="projected" data-y="0" data-q="boone gran fondo (gran fondo national series) boone nc southeast road watauga pioneers nica mountain bike team gran fondo national series">
   <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d"><b class="dd num">1</b><span class="dm">Sun<br>Aug <span class="st" title="Projected from the 2026 edition">~</span></span></span><span class="nm"><span class="h">Boone Gran Fondo (Gran Fondo National Series)</span><span class="meta"><b>Boone, NC</b> &middot; road &middot; Gran ~80 mi; Medio ~55 mi; Piccolo ~25 mi</span></span><span class="acts">Details</span></summary>
@@ -881,6 +881,7 @@
 </details>
       </section>
     </div>
+<script>(function(){var d=document.documentElement,h=decodeURIComponent(location.hash.slice(1)),e=h&&document.getElementById(h);if(e&&e.tagName==="DETAILS"){e.open=true;e.scrollIntoView({block:"start"});addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});}d.classList.remove("ev-wait");})();</script>
     <nav class="mo-nav" aria-label="Other months"><a href="/events/2027/july/">&larr; July</a><a href="/events/2027/september/">September &rarr;</a></nav>
     <p class="cal-back"><a href="/events/2027/">&larr; The 2027 calendar</a><a href="/events/2027/all/">All 638, with filters</a></p>
   </article>
@@ -948,6 +949,5 @@
 <script src="/chrome.js?v=46" defer></script>
 <script src="/events/events.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script>(function(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);if(!e||e.tagName!=="DETAILS")return;e.open=true;addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});})();</script>
 </body>
 </html>

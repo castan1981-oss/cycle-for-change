@@ -99,7 +99,7 @@
     <p class="cal-key"><span class="key-conf">organizer&rsquo;s date</span><span class="key-proj">projected from 2026, check first</span></p>
     <nav class="cal-picks" aria-label="How far?"><span class="cal-picks-h">How far?</span><a class="cal-pick" href="/events/2027/all/#type=ultra-and-bikepacking&amp;far=short"><span>Under 60 mi</span><b>2</b></a><a class="cal-pick" href="/events/2027/all/#type=ultra-and-bikepacking&amp;far=100"><span>About 100</span><b>3</b></a><a class="cal-pick" href="/events/2027/all/#type=ultra-and-bikepacking&amp;far=200"><span>200+</span><b>31</b></a><a class="cal-pick" href="/events/2027/all/#type=ultra-and-bikepacking&amp;far=multi"><span>Multi-day or stage</span><b>34</b></a></nav>
     <p class="cal-narrow"><a href="/events/2027/all/#type=ultra-and-bikepacking">Narrow by month, region, cause, distance &rarr;</a></p>
-    <div id="results">
+    <div id="results"><script>if(location.hash.length>1){var d=document.documentElement;d.classList.add("ev-wait");setTimeout(function(){d.classList.remove("ev-wait")},1500)}</script>
 <nav class="cal-jump" aria-label="Jump to a month"><a href="#m1">Jan</a><a href="#m2">Feb</a><a href="#m4">Apr</a><a href="#m5">May</a><a href="#m6">Jun</a><a href="#m7">Jul</a><a href="#m8">Aug</a><a href="#m9">Sep</a><a href="#m10">Oct</a><a href="#m11">Nov</a><a href="#m0">TBA</a></nav>
       <section class="month" id="m1">
         <div class="month-h"><h2>January</h2><span class="n">1</span></div>
@@ -608,6 +608,7 @@
 </details>
       </section>
     </div>
+<script>(function(){var d=document.documentElement,h=decodeURIComponent(location.hash.slice(1)),e=h&&document.getElementById(h);if(e&&e.tagName==="DETAILS"){e.open=true;e.scrollIntoView({block:"start"});addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});}d.classList.remove("ev-wait");})();</script>
     <p class="cal-back"><a href="/events/2027/">&larr; The 2027 calendar</a><a href="/events/2027/all/">All 638, with filters</a></p>
   </article>
 
@@ -674,6 +675,5 @@
 <script src="/chrome.js?v=46" defer></script>
 <script src="/events/events.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script>(function(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);if(!e||e.tagName!=="DETAILS")return;e.open=true;addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});})();</script>
 </body>
 </html>

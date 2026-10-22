@@ -98,7 +98,7 @@
     <p class="cal-sub"><b>146</b> rides and races &middot; <b>0</b> with the organizer&rsquo;s date</p>
     <p class="cal-key"><span class="key-conf">organizer&rsquo;s date</span><span class="key-proj">projected from 2026, check first</span></p><p class="cal-lead">These run every year but haven&rsquo;t put out a 2026 or 2027 date we could confirm.</p>
     <p class="cal-narrow"><a href="/events/2027/all/#month=tba">Narrow by type, region, cause, distance &rarr;</a></p>
-    <div id="results">
+    <div id="results"><script>if(location.hash.length>1){var d=document.documentElement;d.classList.add("ev-wait");setTimeout(function(){d.classList.remove("ev-wait")},1500)}</script>
       <section class="month">
 <details class="ev" id="3-state-3-mountain-challenge" data-m="0" data-t="Road" data-r="Southeast" data-c="" data-f="100" data-s="tba" data-y="0" data-q="3-state 3-mountain challenge chattanooga tn southeast road chattanooga bicycle club">
   <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-road"/></svg><span class="d d--tba"><b class="dd">TBA</b><span class="dm">date to<br>come</span></span><span class="nm"><span class="h">3-State 3-Mountain Challenge</span><span class="meta"><b>Chattanooga, TN</b> &middot; road &middot; Historically 100-mile century plus 62-mile metric</span></span><span class="acts">Details</span></summary>
@@ -1764,6 +1764,7 @@
 </details>
       </section>
     </div>
+<script>(function(){var d=document.documentElement,h=decodeURIComponent(location.hash.slice(1)),e=h&&document.getElementById(h);if(e&&e.tagName==="DETAILS"){e.open=true;e.scrollIntoView({block:"start"});addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});}d.classList.remove("ev-wait");})();</script>
     <p class="cal-back"><a href="/events/2027/">&larr; The 2027 calendar</a><a href="/events/2027/all/">All 638, with filters</a></p>
   </article>
 
@@ -1830,6 +1831,5 @@
 <script src="/chrome.js?v=46" defer></script>
 <script src="/events/events.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script>(function(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);if(!e||e.tagName!=="DETAILS")return;e.open=true;addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});})();</script>
 </body>
 </html>

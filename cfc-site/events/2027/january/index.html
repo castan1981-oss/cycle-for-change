@@ -99,7 +99,7 @@
     <p class="cal-key"><span class="key-conf">organizer&rsquo;s date</span><span class="key-proj">projected from 2026, check first</span></p>
     <p class="cal-narrow"><a href="/events/2027/all/#month=1">Narrow by type, region, cause, distance &rarr;</a></p>
     <nav class="mo-nav" aria-label="Other months"><span></span><a href="/events/2027/february/">February &rarr;</a></nav>
-    <div id="results">
+    <div id="results"><script>if(location.hash.length>1){var d=document.documentElement;d.classList.add("ev-wait");setTimeout(function(){d.classList.remove("ev-wait")},1500)}</script>
       <section class="month">
 <details class="ev" id="cross-florida-the-spanish" data-m="1" data-t="Ultra / bikepacking" data-r="Southeast" data-c="" data-f="200 multi" data-s="confirmed" data-y="0" data-q="cross florida: the spanish (st. augustine to fort desoto) st. augustine fl southeast ultra / bikepacking singletrack samurai (karlos bernart)">
   <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-terrain"/></svg><span class="d"><b class="dd num">3</b><span class="dm">Sun<br>Jan <span class="st ok" title="Date published by the organizer">✓</span></span></span><span class="nm"><span class="h">Cross Florida: The Spanish (St. Augustine to Fort DeSoto)</span><span class="meta"><b>St. Augustine, FL</b> &middot; ultra / bikepacking &middot; 5 days &middot; 520 mi or 420 mi, St. Augustine to Fort DeSoto (St.…</span></span><span class="acts">Details</span></summary>
@@ -125,6 +125,7 @@
 </details>
       </section>
     </div>
+<script>(function(){var d=document.documentElement,h=decodeURIComponent(location.hash.slice(1)),e=h&&document.getElementById(h);if(e&&e.tagName==="DETAILS"){e.open=true;e.scrollIntoView({block:"start"});addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});}d.classList.remove("ev-wait");})();</script>
     <nav class="mo-nav" aria-label="Other months"><span></span><a href="/events/2027/february/">February &rarr;</a></nav>
     <p class="cal-back"><a href="/events/2027/">&larr; The 2027 calendar</a><a href="/events/2027/all/">All 638, with filters</a></p>
   </article>
@@ -192,6 +193,5 @@
 <script src="/chrome.js?v=46" defer></script>
 <script src="/events/events.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script>(function(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);if(!e||e.tagName!=="DETAILS")return;e.open=true;addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});})();</script>
 </body>
 </html>

@@ -99,7 +99,7 @@
     <p class="cal-key"><span class="key-conf">organizer&rsquo;s date</span><span class="key-proj">projected from 2026, check first</span></p>
     <p class="cal-narrow"><a href="/events/2027/all/#month=9">Narrow by type, region, cause, distance &rarr;</a></p>
     <nav class="mo-nav" aria-label="Other months"><a href="/events/2027/august/">&larr; August</a><a href="/events/2027/october/">October &rarr;</a></nav>
-    <div id="results">
+    <div id="results"><script>if(location.hash.length>1){var d=document.documentElement;d.classList.add("ev-wait");setTimeout(function(){d.classList.remove("ev-wait")},1500)}</script>
       <section class="month">
 <details class="ev" id="dalmac-2027-dick-allen-lansing-to-mackinaw" data-m="9" data-t="Multi-day tour" data-r="Midwest" data-c="" data-f="multi" data-s="projected" data-y="0" data-q="dalmac 2027 (56th) - dick allen lansing to mackinaw lansing mi midwest multi-day tour dalmac fund (bicycle safety/infrastructure grants in michigan, $2m+ granted) tri-county bicycle association (all-volunteer)">
   <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-distance"/></svg><span class="d"><b class="dd num">1</b><span class="dm">Sep<br>1–5 <span class="st" title="Projected from the 2026 edition">~</span></span></span><span class="nm"><span class="h">DALMAC 2027 (56th) - Dick Allen Lansing to MACkinaw</span><span class="meta"><b>Lansing → Mackinaw City</b> &middot; multi-day tour &middot; 5 days &middot; 5-Day West 325 mi; 5-Day East 282/308; 5-Day East Gravel…</span></span><span class="acts">Details</span></summary>
@@ -1232,6 +1232,7 @@
 </details>
       </section>
     </div>
+<script>(function(){var d=document.documentElement,h=decodeURIComponent(location.hash.slice(1)),e=h&&document.getElementById(h);if(e&&e.tagName==="DETAILS"){e.open=true;e.scrollIntoView({block:"start"});addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});}d.classList.remove("ev-wait");})();</script>
     <nav class="mo-nav" aria-label="Other months"><a href="/events/2027/august/">&larr; August</a><a href="/events/2027/october/">October &rarr;</a></nav>
     <p class="cal-back"><a href="/events/2027/">&larr; The 2027 calendar</a><a href="/events/2027/all/">All 638, with filters</a></p>
   </article>
@@ -1299,6 +1300,5 @@
 <script src="/chrome.js?v=46" defer></script>
 <script src="/events/events.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script>(function(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);if(!e||e.tagName!=="DETAILS")return;e.open=true;addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});})();</script>
 </body>
 </html>

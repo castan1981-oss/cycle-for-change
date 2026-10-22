@@ -99,7 +99,7 @@
     <p class="cal-key"><span class="key-conf">organizer&rsquo;s date</span><span class="key-proj">projected from 2026, check first</span></p>
     <p class="cal-narrow"><a href="/events/2027/all/#month=7">Narrow by type, region, cause, distance &rarr;</a></p>
     <nav class="mo-nav" aria-label="Other months"><a href="/events/2027/june/">&larr; June</a><a href="/events/2027/august/">August &rarr;</a></nav>
-    <div id="results">
+    <div id="results"><script>if(location.hash.length>1){var d=document.documentElement;d.classList.add("ev-wait");setTimeout(function(){d.classList.remove("ev-wait")},1500)}</script>
       <section class="month">
 <details class="ev" id="best-buddies-challenge-aspen" data-m="7" data-t="Charity ride" data-r="Northeast" data-c="Other" data-f="" data-s="confirmed" data-y="0" data-q="best buddies challenge: aspen aspen co northeast charity ride other best buddies international best buddies international">
   <summary class="row"><svg class="mk mk--row" aria-hidden="true" focusable="false"><use href="/rides/marks.svg#m-hundred"/></svg><span class="d"><b class="dd num">1</b><span class="dm">Thu<br>Jul <span class="st ok" title="Date published by the organizer">✓</span></span></span><span class="nm"><span class="h">Best Buddies Challenge: Aspen</span><span class="meta"><b>Aspen, CO</b> &middot; charity ride &middot; Other &middot; raise $1,500+ (past years)</span></span><span class="acts">Details</span></summary>
@@ -689,6 +689,7 @@
 </details>
       </section>
     </div>
+<script>(function(){var d=document.documentElement,h=decodeURIComponent(location.hash.slice(1)),e=h&&document.getElementById(h);if(e&&e.tagName==="DETAILS"){e.open=true;e.scrollIntoView({block:"start"});addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});}d.classList.remove("ev-wait");})();</script>
     <nav class="mo-nav" aria-label="Other months"><a href="/events/2027/june/">&larr; June</a><a href="/events/2027/august/">August &rarr;</a></nav>
     <p class="cal-back"><a href="/events/2027/">&larr; The 2027 calendar</a><a href="/events/2027/all/">All 638, with filters</a></p>
   </article>
@@ -756,6 +757,5 @@
 <script src="/chrome.js?v=46" defer></script>
 <script src="/events/events.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script>(function(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);if(!e||e.tagName!=="DETAILS")return;e.open=true;addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});})();</script>
 </body>
 </html>

@@ -100,7 +100,7 @@
     <p class="cal-lead">These are the big national races. Local and amateur road races live on each state&rsquo;s racing calendar. <a href="https://usacycling.org/events" rel="noopener" target="_blank">Find them on USA Cycling&rsquo;s event search &#8599;</a></p>
     <nav class="cal-picks cal-picks--chips" aria-label="Where?"><span class="cal-picks-h">Where?</span><a class="cal-pick" href="/events/2027/all/#type=races&amp;region=southwest"><span>Southwest</span><b>3</b></a><a class="cal-pick" href="/events/2027/all/#type=races&amp;region=california"><span>California</span><b>2</b></a><a class="cal-pick" href="/events/2027/all/#type=races&amp;region=pacific-nw"><span>Pacific NW</span><b>1</b></a><a class="cal-pick" href="/events/2027/all/#type=races&amp;region=mountain"><span>Mountain</span><b>1</b></a><a class="cal-pick" href="/events/2027/all/#type=races&amp;region=texas-south-central"><span>Texas &amp; South Central</span><b>2</b></a><a class="cal-pick" href="/events/2027/all/#type=races&amp;region=midwest"><span>Midwest</span><b>4</b></a><a class="cal-pick" href="/events/2027/all/#type=races&amp;region=southeast"><span>Southeast</span><b>1</b></a><a class="cal-pick" href="/events/2027/all/#type=races&amp;region=mid-atlantic"><span>Mid-Atlantic</span><b>2</b></a><a class="cal-pick" href="/events/2027/all/#type=races&amp;region=northeast"><span>Northeast</span><b>4</b></a><a class="cal-pick" href="/events/2027/all/#type=races&amp;region=national-multiple"><span>National / multiple</span><b>6</b></a></nav>
     <p class="cal-narrow"><a href="/events/2027/all/#type=races">Narrow by month, region, cause, distance &rarr;</a></p>
-    <div id="results">
+    <div id="results"><script>if(location.hash.length>1){var d=document.documentElement;d.classList.add("ev-wait");setTimeout(function(){d.classList.remove("ev-wait")},1500)}</script>
 <nav class="cal-jump" aria-label="Jump to a month"><a href="#m2">Feb</a><a href="#m4">Apr</a><a href="#m5">May</a><a href="#m6">Jun</a><a href="#m7">Jul</a><a href="#m9">Sep</a><a href="#m0">TBA</a></nav>
       <section class="month" id="m2">
         <div class="month-h"><h2>February</h2><span class="n">2</span></div>
@@ -470,6 +470,7 @@
 </details>
       </section>
     </div>
+<script>(function(){var d=document.documentElement,h=decodeURIComponent(location.hash.slice(1)),e=h&&document.getElementById(h);if(e&&e.tagName==="DETAILS"){e.open=true;e.scrollIntoView({block:"start"});addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});}d.classList.remove("ev-wait");})();</script>
     <p class="cal-back"><a href="/events/2027/">&larr; The 2027 calendar</a><a href="/events/2027/all/">All 638, with filters</a></p>
   </article>
 
@@ -536,6 +537,5 @@
 <script src="/chrome.js?v=46" defer></script>
 <script src="/events/events.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script>(function(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);if(!e||e.tagName!=="DETAILS")return;e.open=true;addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});})();</script>
 </body>
 </html>

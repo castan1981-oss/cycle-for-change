@@ -470,7 +470,11 @@ const sub = (list, extra = "") => `<p class="cal-sub"><b>${list.length}</b> ${li
 const KEY = `<p class="cal-key"><span class="key-conf">organizer&rsquo;s date</span><span class="key-proj">projected from 2026, check first</span></p>`;
 // a short page opens the row its link points at (/events/2027/may/#unbound-gravel)
 const OPEN_JS = `
-<script>(function(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);if(!e||e.tagName!=="DETAILS")return;e.open=true;addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});})();</script>`;
+<script>(function(){var d=document.documentElement,h=decodeURIComponent(location.hash.slice(1)),e=h&&document.getElementById(h);if(e&&e.tagName==="DETAILS"){e.open=true;e.scrollIntoView({block:"start"});addEventListener("load",function(){requestAnimationFrame(function(){e.scrollIntoView({block:"start"});});});}d.classList.remove("ev-wait");})();</script>`;
+// Oct 21, 2026 (studio pass 1): the row used to open after the page had painted, pushing the rows under it down
+// as a thumb reached for them (layout shift up to 0.58 on a phone). Now the list waits, hidden, for the few
+// milliseconds until OPEN_JS (straight after the rows) has opened its row; WAIT_JS gives up after 1.5 s regardless.
+const WAIT_JS = `<script>if(location.hash.length>1){var d=document.documentElement;d.classList.add("ev-wait");setTimeout(function(){d.classList.remove("ev-wait")},1500)}</script>`;
 // old links (/events/2027/#slug, from before the step-down) go to the row on its month's page
 const FIND_JS = `
 <script>(function(){function go(){var h=decodeURIComponent(location.hash.slice(1));if(!h||document.getElementById(h))return;fetch("${URL}where.json").then(function(r){return r.json();}).then(function(w){location.replace((w[h]||"${URL}all/")+"#"+encodeURIComponent(h));}).catch(function(){location.replace("${URL}all/#"+encodeURIComponent(h));});}go();addEventListener("hashchange",go);})();</script>`;
@@ -509,17 +513,17 @@ ${list.map(row).join("\n")}
   const html = head({ title, description, url, ld: [
     { "@context": "https://schema.org", "@type": "CollectionPage", name: title, description, url: SITE + url, dateModified: data.updated, isPartOf: { "@type": "WebSite", name: "Cycle for Change", url: SITE + "/" } },
     crumbLd(crumb, url), listLd(title, url, list), ...ldMore ] }) + `
-  <article class="calendar cal-short">
+  <article class="calendar cal-short${/class="ph[ "]/.test(after + before + lead) ? " cal-ph" : ""}">
     ${crumbs(crumb)}
     <h1>${h1}</h1>
     ${sub(list)}
     ${KEY}${lead}${picks}${narrow}${nav}
-    <div id="results">${before}
+    <div id="results">${WAIT_JS}${before}
 ${rows}
-    </div>${nav}${after}
+    </div>${OPEN_JS}${nav}${after}
     <p class="cal-back"><a href="${URL}">&larr; The 2027 calendar</a><a href="${URL}all/">All ${events.length}, with filters</a></p>
   </article>
-` + foot({ filters: false, extra: OPEN_JS });
+` + foot({ filters: false });
   pages.push([url, html]);
 }
 

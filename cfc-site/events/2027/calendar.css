@@ -252,12 +252,12 @@ a.mo-tile:focus-visible,a.cal-door:focus-visible{outline-offset:2px}
   /* a short page: rows on 1–8; the riding list's portrait sticky in 9–12 */
   .calendar.cal-short>*{grid-column:1 / span 8}
   .calendar.cal-short>#results{grid-column:1 / -1}
-  .calendar.cal-short:has(>.ph)>#results{grid-column:1 / span 8}
+  .calendar.cal-short.cal-ph>#results{grid-column:1 / span 8}
   .calendar.cal-short>.ph{grid-column:9 / -1;grid-row:2 / span 8;width:auto;max-width:none;margin:0;position:sticky;top:calc(var(--nav-h) + var(--s3))}
   /* a row with the page's width: name | where and what | details */
-  .calendar:not(.cal-home):not(:has(>.ph)) .ev>summary{grid-template-columns:22px 56px minmax(0,5fr) minmax(0,7fr) auto}
-  .calendar:not(.cal-home):not(:has(>.ph)) .ev .nm{display:contents}
-  .calendar:not(.cal-home):not(:has(>.ph)) .ev .nm>*{padding-top:4px;margin:0}
+  .calendar:not(.cal-home):not(.cal-ph) .ev>summary{grid-template-columns:22px 56px minmax(0,5fr) minmax(0,7fr) auto}
+  .calendar:not(.cal-home):not(.cal-ph) .ev .nm{display:contents}
+  .calendar:not(.cal-home):not(.cal-ph) .ev .nm>*{padding-top:4px;margin:0}
 }
 
 /* R5 — Robert's riding list (/events/2027/riding/): the opened row leads with its links. The links row sits at
@@ -265,5 +265,11 @@ a.mo-tile:focus-visible,a.cal-door:focus-visible{outline-offset:2px}
 .det--mine>.det-links:first-child{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s1) var(--s3);margin:0 0 var(--s3);padding:var(--s1) 0 var(--s3);border-bottom:1px solid var(--line)}
 .det--mine>.det-links:first-child .src{flex-basis:100%;margin:0}
 .det--mine>.det-links:first-child+.facts{margin-top:0}
+
+/* Studio pass 1 fix (Oct 21): a short page opened on #row waits, hidden, until its row is open
+   (WAIT_JS / OPEN_JS in scripts/build-calendar.js), so opening it never pushes rows under a thumb. */
+.ev-wait #results{visibility:hidden}
+/* and the photo column is known from the first paint (.cal-ph, set by the build), not from :has(>.ph), which
+   only matched once the parser reached the figure under the list — the list narrowed under a reader's eyes */
 
 }
