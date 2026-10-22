@@ -184,10 +184,10 @@
 .gr-card-name::after{content:"";position:absolute;inset:0}
 .gr-card:focus-within{border-color:var(--asphalt)}
 .gr-save{position:absolute;top:8px;right:8px;z-index:1;width:36px;height:36px;display:grid;place-items:center;background:none;border:0;cursor:pointer;color:var(--mute);font-size:18px;line-height:1}
-.gr-save[aria-pressed="true"]{color:var(--creosote-ink)}
+.gr-save[aria-pressed="true"]{color:var(--asphalt)}
 @media (hover:hover){.gr-save:hover{color:var(--asphalt)}}
 .gr-save:focus-visible{outline-offset:-4px}
-.gr-save-btn[aria-pressed="true"]{border-color:var(--creosote-ink);color:var(--creosote-ink)}
+.gr-save-btn[aria-pressed="true"]{border-color:var(--asphalt);color:var(--asphalt)}
 
 /* Pass 6: the search hero sits on paper, not tar (tar is no longer a canvas) */
 .gr-hub .gr-hero{background:var(--paper);color:var(--asphalt);padding-block:clamp(28px,5vw,64px) clamp(24px,4vw,44px);border-bottom:1px solid var(--line)}

@@ -1535,7 +1535,7 @@ function gravelPage(rides) {
           ${kindDoor({ href: "/events/2027/gravel/", name: "One big day", sub: "Gravel races and events, 2027", n: n2g, markId: "gravel" })}
       </div>
     </section>
-    ${photoBand("gravel-road")}
+    ${photoBand("gravel-pines")}
     <p class="back"><a href="/find-a-ride/">&larr; Every kind of ride</a></p>
 ${CTA}
   </div>
