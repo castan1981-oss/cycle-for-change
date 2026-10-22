@@ -39,7 +39,7 @@ const band = (key, { b = true, bw = 1600, bh = 1200 } = {}) => ({ w: `/img/ph/${
 const PHOTOS = {
   // —— the first five (Passes 6–16). Studio pass 1: crew and people come off the site (a second rider's face with no OK
   //    on record, no place · month). card-south / card-pv / card-journal are rebuilt below from the registry. ——
-  haus: ph("haus-road", "l", "", "Robert grinning into the camera mid-ride, a canal path and the sun behind him.", "50% 40%"),
+  haus: ph("haus-road", "l", "", "Robert grinning into the camera mid-ride, a canal path and the sun behind him.", "50% 40%"),   // Phoenix (Robert, Oct 22, 2026); month not yet given — the where line stays empty until it is, so no half caption shows
 
   // —— Pass 25: the stockpile picks ——
   "phx-skyline": ph("phx-skyline", "l", "Phoenix, AZ · Apr 2026", "Downtown Phoenix seen from the hills to the north, mountains beyond it and green yards below.", "50% 40%", undefined, { band: band("phx-skyline", { b: false }) }),
