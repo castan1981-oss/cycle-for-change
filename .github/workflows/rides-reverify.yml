@@ -147,13 +147,21 @@ jobs:
         if: steps.key.outputs.ok == 'true'
         env:
           BRANCH: ${{ steps.b.outputs.branch }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
-            echo "Branch $BRANCH is on GitHub."
-          else
+          if ! git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
             echo "::error title=Rides re-check shipped nothing::No branch $BRANCH was pushed, so no ride was re-checked. Read the Claude step's output above."
             exit 1
           fi
+          echo "Branch $BRANCH is on GitHub."
+          n=$(gh api "repos/${{ github.repository }}/pulls?state=open&head=${{ github.repository_owner }}:$BRANCH" --jq 'length')
+          if [ "$n" = "0" ]; then
+            # Oct 21, 2026: the first working run pushed its branch and was refused the PR (403) because the repo
+            # setting below was off. The re-check is done; it just needs a PR opened from the branch.
+            echo "::error title=Re-check done, no pull request::The branch $BRANCH is pushed but no PR was opened. If the log says 'GitHub Actions is not permitted to create or approve pull requests', turn on Settings > Actions > General > Workflow permissions > 'Allow GitHub Actions to create and approve pull requests', then open the PR from the branch."
+            exit 1
+          fi
+          echo "PR open for $BRANCH."
 
       - name: Merge when the checks pass (repo variable RIDES_AUTOMERGE = "true")
         if: steps.key.outputs.ok == 'true' && vars.RIDES_AUTOMERGE == 'true'
