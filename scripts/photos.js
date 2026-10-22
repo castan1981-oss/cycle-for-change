@@ -42,7 +42,7 @@ const PHOTOS = {
   haus: ph("haus-road", "l", "", "Robert grinning into the camera mid-ride, a canal path and the sun behind him.", "50% 40%"),
 
   // —— Pass 25: the stockpile picks ——
-  "phx-skyline": ph("phx-skyline", "l", "Paradise Valley, AZ · Apr 2026", "Downtown Phoenix seen from the hills to the north, mountains beyond it and green yards below.", "50% 40%", undefined, { band: band("phx-skyline", { b: false }) }),
+  "phx-skyline": ph("phx-skyline", "l", "Phoenix, AZ · Apr 2026", "Downtown Phoenix seen from the hills to the north, mountains beyond it and green yards below.", "50% 40%", undefined, { band: band("phx-skyline", { b: false }) }),
   "canal-sunrise": ph("canal-sunrise", "p", "Phoenix, AZ · Oct 2025", "The sun coming up over a canal path, seen over the handlebars.", "50% 50%"),
   "phx-canal": ph("phx-canal", "p", "Phoenix, AZ · Aug 2025", "Over the handlebars along a Phoenix canal path, storm clouds lit gold above the palms.", "50% 50%"),
   "pv-shadow": ph("pv-shadow", "p", "Paradise Valley, AZ · Jul 2026", "Robert’s shadow on the road with one hand up in a peace sign, the bars in front and a mountain ahead.", "50% 55%"),
