@@ -419,7 +419,9 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   `rides-upkeep`; 4 am `rides-weekly-rebuild.yml` forces a deploy. `node tools/validate-rides.js`
   gates every change (`rides-check.yml`). Tests: `node --test tools/test/*.test.js`.
 - Every ride was checked Sept 15–Oct 4, 2026, so they all age out together (most hide by mid-March
-  2027). The re-check has to actually run each week, at ~80 rides a week, or the directory empties.
+  2027). The re-check has to actually run each week, at ~110 rides a week, or the directory empties. Until Oct 21,
+  2026 it never did: the verifiers ran in the background and died with the Action. They run in the foreground now, and
+  a run that pushes no branch fails red ("Did it ship?").
 - Organizer flow: "I run this ride" with an email is a host update — no public warning, no hide
   clock, top of the queue for a person to confirm by reply. The form never stamps `verified_on`.
 - Commands: `/rides status`, `/rides check <slug>`, `/rides refresh [N]`, `/rides discover <area>`,
@@ -744,3 +746,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-19 — Trust pages: `/privacy/`, `/methodology/`, `/contact/` (week 1 of the content plan), linked from every footer and from `/rides/about/`; a Trust section in llms.txt.
 - 2026-10-19 — Rides re-check, Tier A batch 1: the 63 best-earning pages pinned to a city and the 31 amber flags re-checked at their sources; 24 start pins, 5 confirmed, 35 changed, 2 seasonal breaks, 6 unconfirmed; Critical Mass London confirmed and pinned.
 - 2026-10-21 — IndexNow (the 500K plan, AI-search desk): every production deploy tells Bing which pages changed (`deploy-succeeded`), the key file at the root, `tools/indexnow.js` for a full send.
+- 2026-10-21 — The Monday re-check actually re-checks: verifiers in the foreground, background tasks off for the step, a red run when nothing ships, 110 rides a week.
