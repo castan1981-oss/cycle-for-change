@@ -186,7 +186,7 @@ article{max-width:820px}
 .dir-report-head p{margin:0;max-width:44ch;line-height:1.5}
 .dir-report-form{display:flex;flex-direction:column;gap:8px;min-width:0}
 .dir-report-form .lab{margin-top:10px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
-.dir-report-form .lab small{font-family:var(--body);text-transform:none;letter-spacing:0;font-size:.85rem;opacity:.8}
+.dir-report-form .lab small{font-family:var(--body);text-transform:none;letter-spacing:0;font-size:.85rem}   /* full strength: at .8 opacity plaster on rose was 3.59:1 (access gate, Oct 22) */
 .dir-report .field{border-bottom-color:var(--paper);font-size:18px}
 .dir-report .field:focus{box-shadow:0 1px 0 var(--paper)}
 .dir-report textarea.field{resize:vertical;min-height:4.2em}

@@ -974,5 +974,6 @@ article.gr-note{font-size:inherit;max-width:none}   /* .gr-note (the hub's small
 
 /* R13 — the ride page's tag row holds up to two link chips ("I rode it", then the reviews): one gap, one line */
 .gr-tags:has(.gr-tag-rev){display:flex;flex-wrap:wrap;gap:var(--s1)}
-.gr-tags .gr-tag-rev{min-height:32px;padding:6px 10px 5px}
+.gr-tags .gr-tag-rev{min-height:32px;padding:6px 10px 5px;position:relative}
+.gr-tags .gr-tag-rev::before{content:"";position:absolute;left:0;right:0;top:50%;height:44px;margin-top:-22px}   /* a 44px hit area on the 32px chip (access gate, Oct 22) */
 }
