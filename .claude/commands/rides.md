@@ -16,14 +16,17 @@ happened in five lines at the end, not a play-by-play.
 
 ## /rides refresh [N]
 
-Re-check the top N rides of the queue (default 40).
+Re-check the top N rides of the queue (default 40 by hand; the Monday workflow does 110).
 
 1. **The queue.** `data/rides-queue.json` → `queue`, top first: rider reports, red flags, amber
    flags, rides due, low confidence, then the oldest checks. If the file is missing or its
    `generated_at` is more than 8 days old, run `node tools/rides-watch.js` first (about 10 minutes).
    Take the first N entries, skipping `ended` rides.
-2. **Verify, in parallel.** Split the slugs into groups of about 8 and launch one @ride-verifier
-   per group, all at once, each with: *"Re-check these rides: <slugs>. Today is <date>. Read
+2. **Verify, in parallel — and wait.** Split the slugs into groups of about 8 and launch one
+   @ride-verifier per group, all at once in one message, **in the foreground**
+   (`run_in_background: false`), and wait for every one to come back before step 3. In CI the run
+   ends when your turn ends, and a verifier still running then is killed (that's why the Oct 5, 12
+   and 19 runs re-checked nothing). Each gets: *"Re-check these rides: <slugs>. Today is <date>. Read
    .claude/agents/ride-verifier.md and follow it. Write your batch to
    research/rides/upkeep/<date>-part-<k>.json, run `node tools/rides-apply.js <that file> --dry`
    until it passes, and stop — don't apply it. Report outcomes per ride and what a person could
