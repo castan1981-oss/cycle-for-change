@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "keizer-or-keizer-family-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "Salem Bicycle Club's event calendar (fetched Oct 21, 2026) lists the Thursday Night Lights Ride at 6:00 pm on Oct 8, 15, 22 (CCW) and 29 (CW) from Cummings Elementary School; the CANCELED entry nearby is a Zoom meeting cancellation, not the ride.",
+    "sources": ["https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926"]
+  },
+  {
+    "slug": "keizer-or-salem-bicycle-club-keizer-morning-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "Salem Bicycle Club's event calendar (fetched Oct 21, 2026) lists the Keizer Morning Ride on Tuesdays Oct 6, 13, 20 and 27 at 10:00 am from Keizer Station; the CANCELED entry on the page is a Zoom meeting, not this ride.",
+    "sources": ["https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926"]
+  },
+  {
+    "slug": "lewes-de-sussex-cyclists-friday-brewery-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "Sussex Cyclists' upcoming events (fetched Oct 21, 2026) lists the Friday Brewery Gravel Trail Ride at 10:00 am on Oct 23 (Lewes Brewery Company, 21 mi), Oct 30 (Crooked Hammock Brewery, 23 mi) and Nov 6 (Lewes Brewery Company, 21 mi); the CANCELED entries on the page are Monday rides cancelled due to high winds, not the Friday ride.",
+    "sources": ["https://www.sussexcyclists.org/Upcoming-Events"]
+  },
+  {
+    "slug": "millsboro-de-sussex-cyclists-cupola-park-thursday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-21",
+    "note": "Sussex Cyclists' upcoming events page (fetched Oct 21, 2026) lists events through Dec 28, 2026 but shows no Cupola Park Thursday rides; no Thursday events of any kind appear anywhere in the listing. The club and its other rides are active."
+  },
+  {
+    "slug": "milton-de-sussex-cyclists-wednesday-dogfish-head-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "Sussex Cyclists' upcoming events (fetched Oct 21, 2026) lists Wednesday Dogfish Head rides on Oct 21, 28 and Nov 4 at 10:00 am (NEW WINTER START TIME) with 14, 16 and 17 mph pace groups; the CANCELED entries on the page are Monday rides cancelled for high winds.",
+    "sources": ["https://www.sussexcyclists.org/Upcoming-Events"],
+    "changes": {
+      "pace": "14, 16 and 17 mph groups",
+      "description": "A weekday-morning road ride from the brewery lot in Milton, a few miles inland from Rehoboth and Lewes. Three pace groups: 14, 16 and 17 mph. The club also runs a faster 45-mile Tuesday drop paceline from the same spot."
+    }
+  },
+  {
+    "slug": "new-york-ny-5bbc-weekend-day-rides",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "evidence": "5BBC's ride calendar (fetched Oct 21, 2026) shows rides on Oct 25 (Pancake Sunday), Oct 30 (Howard Beach Halloween) and Oct 31 (Dyker Heights Halloween), plus a Gettysburg weekend trip Oct 23–25; individual ride cancellations on Oct 11 and Oct 22 do not affect the ongoing program.",
+    "sources": ["https://5bbc.clubexpress.com/content.aspx?page_id=4001&club_id=511565"]
+  },
+  {
+    "slug": "oakland-ca-air-cc-bff-friday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-21",
+    "note": "The Strava event watch URL was deleted (now redirects to the club page). AIR cc's group rides page at aircc.org describes the BFF Friday ride as ongoing at 6:30 am from Rockridge BART, but shows no upcoming dates or dated evidence. Without a dated signal the ride cannot be confirmed. Check the AIR cc Instagram for weekly ride posts, or join Strava club 1008989 to see new group events."
+  },
+  {
+    "slug": "paxton-ma-seven-hills-wheelmen-tuesday-night-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "status_note": "Seven Hills Wheelmen's home page, under the October 2026 update, says 'Tuesday night rides have ended for the season.' The ride started again in late April 2026; no 2027 return date is posted.",
+    "evidence": "Seven Hills Wheelmen home page (fetched Oct 21, 2026) says under OCTOBER 2026: 'Tuesday night rides have ended for the season.' No 2027 return date is given.",
+    "sources": ["https://sevenhillswheelmen.org/"]
+  }
+]

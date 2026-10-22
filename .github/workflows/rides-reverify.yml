@@ -17,7 +17,7 @@ on:
     inputs:
       count:
         description: "refresh: how many rides from the top of the queue"
-        default: "80"
+        default: "110"
       mode:
         description: "refresh = re-check the queue · discover = find rides in an area"
         type: choice
@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
-      COUNT: ${{ github.event.inputs.count || '80' }}
+      COUNT: ${{ github.event.inputs.count || '110' }}
       MODE: ${{ github.event.inputs.mode || 'refresh' }}
       AREA: ${{ github.event.inputs.area || '' }}
     steps:
@@ -82,8 +82,15 @@ jobs:
             echo "branch=upkeep/rides-$d" >> "$GITHUB_OUTPUT"
           fi
 
+      # Oct 21, 2026: the Oct 5, 12 and 19 runs re-checked nothing. The Oct 19 log shows why: Claude started
+      # 10 ride-verifier subagents in the background, ended its turn "waiting for them", and the Action exited
+      # and killed them. The prompt now says to run them in the foreground and wait, background tasks are
+      # switched off for the step, and "Did it ship?" below turns a run that opened no PR red instead of green.
+      # 110 a week (was 80): the floor that keeps the directory fresh through the March cliff.
       - uses: anthropics/claude-code-action@v1
         if: steps.key.outputs.ok == 'true'
+        env:
+          CLAUDE_CODE_DISABLE_BACKGROUND_TASKS: "1"
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -107,6 +114,12 @@ jobs:
               today:  ${{ steps.b.outputs.date }} (Phoenix)
               branch: ${{ steps.b.outputs.branch }}
 
+            THIS RUN IS UNATTENDED AND ENDS WHEN YOUR TURN ENDS. Launch every subagent in the
+            foreground (Agent tool, run_in_background: false), all of a batch in one message so they
+            run in parallel, and wait until every one has returned before the next step. Never end
+            your turn while a subagent is running or "waiting for them to complete": anything still
+            running when you stop is killed and its work is lost.
+
             refresh = "/rides refresh ${{ env.COUNT }}": re-check the top ${{ env.COUNT }} rides of
             data/rides-queue.json with @ride-verifier subagents (.claude/agents/ride-verifier.md),
             write research/rides/upkeep/${{ steps.b.outputs.date }}.json, run
@@ -129,6 +142,26 @@ jobs:
             most important step — do it as soon as the commit is pushed and confirm you got a PR URL.
             Do NOT push to main. Do NOT merge. If something fails that you can't fix in one pass,
             open the PR as a draft and say why.
+
+      - name: Did it ship?
+        if: steps.key.outputs.ok == 'true'
+        env:
+          BRANCH: ${{ steps.b.outputs.branch }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if ! git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
+            echo "::error title=Rides re-check shipped nothing::No branch $BRANCH was pushed, so no ride was re-checked. Read the Claude step's output above."
+            exit 1
+          fi
+          echo "Branch $BRANCH is on GitHub."
+          n=$(gh api "repos/${{ github.repository }}/pulls?state=open&head=${{ github.repository_owner }}:$BRANCH" --jq 'length')
+          if [ "$n" = "0" ]; then
+            # Oct 21, 2026: the first working run pushed its branch and was refused the PR (403) because the repo
+            # setting below was off. The re-check is done; it just needs a PR opened from the branch.
+            echo "::error title=Re-check done, no pull request::The branch $BRANCH is pushed but no PR was opened. If the log says 'GitHub Actions is not permitted to create or approve pull requests', turn on Settings > Actions > General > Workflow permissions > 'Allow GitHub Actions to create and approve pull requests', then open the PR from the branch."
+            exit 1
+          fi
+          echo "PR open for $BRANCH."
 
       - name: Merge when the checks pass (repo variable RIDES_AUTOMERGE = "true")
         if: steps.key.outputs.ok == 'true' && vars.RIDES_AUTOMERGE == 'true'
