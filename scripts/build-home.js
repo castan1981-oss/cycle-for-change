@@ -389,7 +389,7 @@ ${todaySection()}<!-- —— the last ride: the reel, the log —— -->
     <div class="ride-in">
       <div class="ride-next">
         <p class="eyebrow">A Los Angeles LGBT Center fundraiser</p>
-        <h3 class="h2 ride-h3"><span style="white-space:nowrap">April 23 to 25</span>, I cycle for <span class="plate plate--big">the Center</span></h3>
+        <h3 class="h2 ride-h3"><span style="white-space:nowrap">April 23 to 25,</span> I cycle for <span class="plate plate--big">the Center</span></h3>
         <p>Center Ride Out. Los Angeles to Ojai, camp, then back along the coast to a finish by the ocean.</p>
         <dl class="facts-dl">
           <div><dt>3 days</dt><dd>200+ miles, Apr 23 to 25, 2027</dd></div>
