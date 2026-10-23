@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:phoenix-az-heavy-pedal-heavy-saturday@cycleforchange.org
+DTSTAMP:20261023T000000Z
+DTSTART;TZID=America/Phoenix:20261031T070000
+DTEND;TZID=America/Phoenix:20261031T090000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=SA;UNTIL=20270322T235959Z
+SUMMARY:Heavy Saturday — Phoenix\, AZ
+LOCATION:Arcadia Dr at the canal\, 4152 N Arcadia Dr\, Phoenix\, AZ 85018
+DESCRIPTION:Pace: Fast-paced\, in the host's words. The Strava event list
+ s it as Intermediate / Rolling.\nSchedule: Every other Saturday\, 7:00 a
+ m\, from Arcadia Dr at the canal\, just north of Indian School Rd. The h
+ ost says start times move through the year\, so check the club's event p
+ age. Arrive 15 minutes early; it leaves on time.\nConfirm with the host 
+ before you go.\nhttps://cycleforchange.org/rides/phoenix-az-heavy-pedal-
+ heavy-saturday/
+URL:https://cycleforchange.org/rides/phoenix-az-heavy-pedal-heavy-saturda
+ y/
+END:VEVENT
+END:VCALENDAR

@@ -75,7 +75,7 @@
   </div>
   <ul class="menu-list">
     <li><a href="/events/2027/riding/#tour-de-palm-springs" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
-    <li><a href="/find-a-ride/">Find a ride <span>1,425</span></a></li>
+    <li><a href="/find-a-ride/">Find a ride <span>1,423</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>638</span></a></li>
     <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
@@ -93,7 +93,7 @@
   <article class="ride" data-ride
     data-tz="America/New_York" data-time="08:45" data-days="sun"
     data-dates=""
-    data-freq="weekly" data-season=""
+    data-freq="weekly" data-phase="" data-season=""
     data-monthly=""
     data-times="">
 
@@ -152,14 +152,14 @@
               <legend>The pace <small>(optional)</small></legend>
               <label><input type="radio" name="pace" value="easier"><span>Easier than it says</span></label><label><input type="radio" name="pace" value="right"><span>About right</span></label><label><input type="radio" name="pace" value="harder"><span>Harder than it says</span></label>
             </fieldset>
-            <label class="gr-rev-lab" for="rv-words-365">How did it go? <small>Who you rode with, how they treat someone new, what a first-timer should know.</small></label>
-            <textarea class="field" id="rv-words-365" name="words" rows="4" minlength="20" maxlength="600" required></textarea>
+            <label class="gr-rev-lab" for="rv-words-367">How did it go? <small>Who you rode with, how they treat someone new, what a first-timer should know.</small></label>
+            <textarea class="field" id="rv-words-367" name="words" rows="4" minlength="20" maxlength="600" required></textarea>
             <div class="gr-rev-two">
-              <div><label class="gr-rev-lab" for="rv-name-365">First name</label><input class="field" id="rv-name-365" name="name" maxlength="30" autocomplete="given-name" required></div>
-              <div><label class="gr-rev-lab" for="rv-from-365">Where you ride from <small>(optional)</small></label><input class="field" id="rv-from-365" name="from" maxlength="40" autocomplete="address-level2"></div>
+              <div><label class="gr-rev-lab" for="rv-name-367">First name</label><input class="field" id="rv-name-367" name="name" maxlength="30" autocomplete="given-name" required></div>
+              <div><label class="gr-rev-lab" for="rv-from-367">Where you ride from <small>(optional)</small></label><input class="field" id="rv-from-367" name="from" maxlength="40" autocomplete="address-level2"></div>
             </div>
-            <label class="gr-rev-lab" for="rv-email-365">Email <small>(optional) Only if you want a reply. Never shown.</small></label>
-            <input class="field" id="rv-email-365" type="email" name="email" autocomplete="email">
+            <label class="gr-rev-lab" for="rv-email-367">Email <small>(optional) Only if you want a reply. Never shown.</small></label>
+            <input class="field" id="rv-email-367" type="email" name="email" autocomplete="email">
             <p class="gr-rev-note">We read every review before it goes up. First name only. Links come out.</p>
             <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send it</button><p class="gr-rev-ok" role="status" hidden></p></div>
           </form>
@@ -190,30 +190,30 @@
           <input type="hidden" name="ride" value="washington-dc-ncvc-espresso-ride">
           <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
           <p class="gr-rev-note">For the people who run NCVC Espresso Ride. Drop in the file and a couple of numbers. Robert reads every route before it goes up, credits you on the page and links back.</p>
-          <label class="gr-rev-lab" for="rt-file-366">Route file <small>GPX, FIT or TCX</small></label>
-          <input class="field" id="rt-file-366" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
-          <label class="gr-rev-lab" for="rt-link-366">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
-          <input class="field" id="rt-link-366" type="url" name="route_link" inputmode="url" autocomplete="off">
+          <label class="gr-rev-lab" for="rt-file-368">Route file <small>GPX, FIT or TCX</small></label>
+          <input class="field" id="rt-file-368" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
+          <label class="gr-rev-lab" for="rt-link-368">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
+          <input class="field" id="rt-link-368" type="url" name="route_link" inputmode="url" autocomplete="off">
           <div class="gr-rev-two">
-            <div><label class="gr-rev-lab" for="rt-lo-366">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-366" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
-            <div><label class="gr-rev-lab" for="rt-hi-366">To <small>mph</small></label><input class="field" id="rt-hi-366" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-lo-368">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-368" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-hi-368">To <small>mph</small></label><input class="field" id="rt-hi-368" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
           </div>
           <fieldset class="gr-rev-pick">
             <legend>If someone comes off the back</legend>
             <label><input type="radio" name="drop" value="drop"><span>They ride back alone</span></label><label><input type="radio" name="drop" value="regroup"><span>We wait at a regroup</span></label><label><input type="radio" name="drop" value="no-drop"><span>Nobody gets left</span></label>
           </fieldset>
-          <label class="gr-rev-lab" for="rt-regroup-366">Where you regroup <small>(optional)</small></label>
-          <input class="field" id="rt-regroup-366" name="regroup" maxlength="80">
+          <label class="gr-rev-lab" for="rt-regroup-368">Where you regroup <small>(optional)</small></label>
+          <input class="field" id="rt-regroup-368" name="regroup" maxlength="80">
           <fieldset class="gr-rev-pick">
             <legend>This route is</legend>
             <label><input type="radio" name="weekly" value="every" checked><span>The route every time</span></label><label><input type="radio" name="weekly" value="once"><span>Just for the next ride</span></label>
           </fieldset>
           <div class="gr-rev-two">
-            <div><label class="gr-rev-lab" for="rt-name-366">Your name</label><input class="field" id="rt-name-366" name="name" maxlength="40" autocomplete="name" required></div>
-            <div><label class="gr-rev-lab" for="rt-role-366">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-366" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
+            <div><label class="gr-rev-lab" for="rt-name-368">Your name</label><input class="field" id="rt-name-368" name="name" maxlength="40" autocomplete="name" required></div>
+            <div><label class="gr-rev-lab" for="rt-role-368">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-368" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
           </div>
-          <label class="gr-rev-lab" for="rt-email-366">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
-          <input class="field" id="rt-email-366" type="email" name="email" autocomplete="email">
+          <label class="gr-rev-lab" for="rt-email-368">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
+          <input class="field" id="rt-email-368" type="email" name="email" autocomplete="email">
           <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send the route</button><p class="gr-rev-ok" role="status" hidden></p></div>
         </form>
       </details>
@@ -224,10 +224,10 @@
     </dl>
 
       <figure class="gr-map gr-map--ride">
-        <svg class="gr-map-svg" viewBox="0 0 400 497" role="img" aria-labelledby="gm629"><title id="gm629">Map of Washington, DC with this ride's start</title>
-          <path class="gr-map-land" id="gm629-land" d="M8,150.7L147,8L392,248.4L153.7,488.5L153.7,299.3Z"/>
-          <clipPath id="gm629-clip"><use href="#gm629-land"/></clipPath>
-          <g class="gr-map-detail" clip-path="url(#gm629-clip)" aria-hidden="true"><image class="gr-map-pic" href="/rides/maps/detail/dc.svg" x="0" y="0" width="400" height="497" preserveAspectRatio="none"/></g>
+        <svg class="gr-map-svg" viewBox="0 0 400 497" role="img" aria-labelledby="gm631"><title id="gm631">Map of Washington, DC with this ride's start</title>
+          <path class="gr-map-land" id="gm631-land" d="M8,150.7L147,8L392,248.4L153.7,488.5L153.7,299.3Z"/>
+          <clipPath id="gm631-clip"><use href="#gm631-land"/></clipPath>
+          <g class="gr-map-detail" clip-path="url(#gm631-clip)" aria-hidden="true"><image class="gr-map-pic" href="/rides/maps/detail/dc.svg" x="0" y="0" width="400" height="497" preserveAspectRatio="none"/></g>
           <path class="gr-map-edge" d="M8,150.7L147,8L392,248.4L153.7,488.5L153.7,299.3Z"/><circle class="gr-map-ring" cx="155.7" cy="233.3" r="860.3"/>
           <g class="gr-map-dots"><circle class="gr-map-dot gr-map-dot--dim" cx="158.7" cy="243.4" r="3.4"/><circle class="gr-map-dot gr-map-dot--dim" cx="157.7" cy="214.7" r="3.4"/><circle class="gr-map-dot gr-map-dot--dim" cx="165.5" cy="253" r="3.4"/><circle class="gr-map-dot gr-map-dot--dim" cx="223.9" cy="292.7" r="3.4"/><circle class="gr-map-dot gr-map-dot--dim" cx="110.4" cy="219.1" r="3.4"/></g><circle class="gr-map-halo" cx="108.6" cy="222.7" r="13"/><circle class="gr-map-here" cx="108.6" cy="222.7" r="6"/>
           <g class="gr-map-labels"><a href="/rides/dc/washington/" aria-label="Washington, 10 rides"><circle class="gr-map-hub" cx="155.7" cy="233.3" r="6"/><text x="166.7" y="238.9" text-anchor="start"><tspan class="gr-map-name">WASHINGTON</tspan><tspan class="gr-map-n"> 10</tspan></text></a></g>
@@ -287,35 +287,35 @@
         <label><input type="radio" name="kind" value="still-on"> <span>Still on — I rode it</span></label>
       </fieldset>
       <label class="dir-report-role"><input type="checkbox" name="role" value="host" data-role> <span>I run this ride</span></label>
-      <label class="lab" for="rr-what-367">Ride name or link</label>
-      <input class="field" id="rr-what-367" name="ride" type="text" required autocomplete="off" value="NCVC Espresso Ride">
+      <label class="lab" for="rr-what-369">Ride name or link</label>
+      <input class="field" id="rr-what-369" name="ride" type="text" required autocomplete="off" value="NCVC Espresso Ride">
       <div class="dir-report-more" data-show="changed" hidden>
         <p class="dir-report-note">New time? Both optional.</p>
         <div class="dir-report-more--two">
-          <div><label class="lab" for="rr-ntime-367">New start time</label>
-          <input class="field" id="rr-ntime-367" name="new_time" type="time"></div>
-          <div><label class="lab" for="rr-from-367">Starting</label>
-          <input class="field" id="rr-from-367" name="from_date" type="date"></div>
+          <div><label class="lab" for="rr-ntime-369">New start time</label>
+          <input class="field" id="rr-ntime-369" name="new_time" type="time"></div>
+          <div><label class="lab" for="rr-from-369">Starting</label>
+          <input class="field" id="rr-from-369" name="from_date" type="date"></div>
         </div>
       </div>
       <div class="dir-report-more" data-show="new" hidden>
         <fieldset class="dir-report-chips dir-report-chips--days"><legend class="lab">Day(s)</legend><label><input type="checkbox" name="days" value="mon"> <span>Mon</span></label><label><input type="checkbox" name="days" value="tue"> <span>Tue</span></label><label><input type="checkbox" name="days" value="wed"> <span>Wed</span></label><label><input type="checkbox" name="days" value="thu"> <span>Thu</span></label><label><input type="checkbox" name="days" value="fri"> <span>Fri</span></label><label><input type="checkbox" name="days" value="sat"> <span>Sat</span></label><label><input type="checkbox" name="days" value="sun"> <span>Sun</span></label></fieldset>
         <div class="dir-report-more--two">
-          <div><label class="lab" for="rr-time-367">Start time</label>
-          <input class="field" id="rr-time-367" name="time" type="time"></div>
-          <div><label class="lab" for="rr-start-367">Meeting spot</label>
-          <input class="field" id="rr-start-367" name="start" type="text" autocomplete="off"></div>
+          <div><label class="lab" for="rr-time-369">Start time</label>
+          <input class="field" id="rr-time-369" name="time" type="time"></div>
+          <div><label class="lab" for="rr-start-369">Meeting spot</label>
+          <input class="field" id="rr-start-369" name="start" type="text" autocomplete="off"></div>
         </div>
         <fieldset class="dir-report-chips"><legend class="lab">Drop policy</legend><label><input type="radio" name="drop" value="no-drop"> <span>Waits for you</span></label><label><input type="radio" name="drop" value="groups"> <span>Pace groups</span></label><label><input type="radio" name="drop" value="drop"> <span>Drops</span></label></fieldset>
         <fieldset class="dir-report-chips"><legend class="lab">Made for <small>Only if the ride says so</small></legend><label><input type="checkbox" name="for" value="beginner"> <span>Beginners</span></label><label><input type="checkbox" name="for" value="lgbtq"> <span>LGBTQ+</span></label><label><input type="checkbox" name="for" value="wtf"> <span>Women, trans, femme, nonbinary</span></label><label><input type="checkbox" name="for" value="ebike"> <span>E-bikes welcome</span></label></fieldset>
-        <label class="lab" for="rr-link-367">Link <small>Where you post the ride</small></label>
-        <input class="field" id="rr-link-367" name="link" type="url" inputmode="url" autocomplete="off" placeholder="https://">
+        <label class="lab" for="rr-link-369">Link <small>Where you post the ride</small></label>
+        <input class="field" id="rr-link-369" name="link" type="url" inputmode="url" autocomplete="off" placeholder="https://">
         <p class="dir-report-note">Only on Instagram? Leave your email — we’ll confirm with you.</p>
       </div>
-      <label class="lab" for="rr-details-367">What should we know? <small data-hint-new="Anything else: pace, distance, who runs it">Day, time, start, pace, who runs it</small></label>
-      <textarea class="field" id="rr-details-367" name="details" rows="3"></textarea>
-      <label class="lab" for="rr-email-367">Your email <small data-hint-host="We'll reply to confirm it with you before the listing changes.">Optional. We’ll tell you when it’s live, or ask if we have a question.</small></label>
-      <input class="field" id="rr-email-367" name="email" type="email" autocomplete="email" inputmode="email">
+      <label class="lab" for="rr-details-369">What should we know? <small data-hint-new="Anything else: pace, distance, who runs it">Day, time, start, pace, who runs it</small></label>
+      <textarea class="field" id="rr-details-369" name="details" rows="3"></textarea>
+      <label class="lab" for="rr-email-369">Your email <small data-hint-host="We'll reply to confirm it with you before the listing changes.">Optional. We’ll tell you when it’s live, or ask if we have a question.</small></label>
+      <input class="field" id="rr-email-369" name="email" type="email" autocomplete="email" inputmode="email">
       <div class="dir-report-go"><button class="btn btn--ink" type="submit">Send it</button><p class="ok" role="status" aria-live="polite" hidden></p></div>
     </form>
     </details>
@@ -399,7 +399,7 @@
 <script src="/chrome.js?v=47" defer></script>
 <script src="/rides/save.js" defer></script>
 <script src="/events/report.js" defer></script>
-<script src="/rides/ride.js?v=39" defer></script>
+<script src="/rides/ride.js?v=40" defer></script>
 <script src="/rides/map.js" defer></script>
 </body>
 </html>

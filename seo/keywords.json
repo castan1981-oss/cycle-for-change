@@ -23,7 +23,20 @@
     { "id": "k20", "cluster": "Events", "query": "El Tour de Tucson 2026", "target": "/events/el-tour-de-tucson/" },
     { "id": "k21", "cluster": "Events", "query": "Unbound Gravel 2027 date", "target": "/events/unbound-gravel/" },
     { "id": "k22", "cluster": "Towns", "query": "Emporia Kansas cycling where to stay", "target": "/towns/kansas/emporia/" },
-    { "id": "k23", "cluster": "Resources", "query": "LGBTQ mental health resources", "target": "/resources/" }
+    { "id": "k23", "cluster": "Resources", "query": "LGBTQ mental health resources", "target": "/resources/" },
+    { "id": "k24", "cluster": "Heavy Pedal", "query": "heavy pedal phoenix", "target": "/guides/heavy-pedal/" },
+    { "id": "k25", "cluster": "Heavy Pedal", "query": "the heavy pedal", "target": "/guides/heavy-pedal/" },
+    { "id": "k26", "cluster": "Heavy Pedal", "query": "heavy pedal group ride", "target": "/guides/heavy-pedal/" },
+    { "id": "k27", "cluster": "Heavy Pedal", "query": "heavy thursday ride phoenix", "target": "/rides/phoenix-az-heavy-pedal-heavy-thursday/" },
+    { "id": "k28", "cluster": "Heavy Pedal", "query": "heavy saturday ride phoenix", "target": "/rides/phoenix-az-heavy-pedal-heavy-saturday/" },
+    { "id": "k29", "cluster": "Heavy Pedal", "query": "heavy pedal community rides", "target": "/guides/heavy-pedal/" },
+    { "id": "k30", "cluster": "Heavy Pedal", "query": "heavy pedal cycling jersey", "target": "/guides/heavy-pedal/kit/" },
+    { "id": "k31", "cluster": "Heavy Pedal", "query": "heavy pedal $100 kit", "target": "/guides/heavy-pedal/kit/" },
+    { "id": "k32", "cluster": "Heavy Pedal", "query": "heavy pedal sizing", "target": "/guides/heavy-pedal/kit/" },
+    { "id": "k33", "cluster": "Heavy Pedal", "query": "heavy pedal discount code", "target": "/guides/heavy-pedal/kit/" },
+    { "id": "k34", "cluster": "Heavy Pedal", "query": "heavy pedal custom kit", "target": "/guides/heavy-pedal/kit/" },
+    { "id": "k35", "cluster": "Heavy Pedal", "query": "heavy pedal skinsuit", "target": "/guides/heavy-pedal/kit/" },
+    { "id": "k36", "cluster": "Heavy Pedal", "query": "heavy pedal zephyr", "target": "/guides/heavy-pedal/" }
   ],
   "found": [
     { "id": "d01", "query": "critical mass atlanta", "target": "/rides/atlanta-ga-critical-mass-atlanta/" },
@@ -45,6 +58,8 @@
     { "id": "a2", "q": "Are there no-drop group rides in Phoenix?", "target": "/rides/az/phoenix/no-drop/" },
     { "id": "a3", "q": "What are the biggest LGBTQ charity bike rides in the US?", "target": "/guides/charity-rides/" },
     { "id": "a1", "q": "What happened to the AIDS LifeCycle ride?", "target": "/guides/what-happened-to-aids-lifecycle/" },
-    { "id": "a5", "q": "How does a pledge-per-mile bike fundraiser work?", "target": "/guides/pledge-per-mile-fundraising/" }
+    { "id": "a5", "q": "How does a pledge-per-mile bike fundraiser work?", "target": "/guides/pledge-per-mile-fundraising/" },
+    { "id": "a20", "q": "What group rides does The Heavy Pedal run in Phoenix?", "target": "/guides/heavy-pedal/" },
+    { "id": "a21", "q": "Does Heavy Pedal cycling kit run small?", "target": "/guides/heavy-pedal/kit/" }
   ]
 }

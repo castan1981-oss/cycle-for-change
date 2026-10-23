@@ -349,6 +349,12 @@ explained" keeps its name: it's about charity rides in general, not this site.
   should I check on the bike first?"; the charity guides' "Keep reading" carries two; `/brief/`'s Carry line links
   the flats guide. Never a boilerplate list on every page.
 
+- **05 Phoenix crews** (Oct 23, 2026): a hub page per crew that runs group rides here, from its own site, Strava
+  club and Instagram, with a "not connected, nobody paid" line. First: `/guides/heavy-pedal/` (The Heavy Pedal: its two
+  rides, the shop, the events) and `/guides/heavy-pedal/kit/` (lines, prices, fit, policies, from their product pages —
+  we haven't worn it, never a review). Both target the brand's searches (`seo/keywords.json`, cluster "Heavy Pedal").
+  Their ride pages link back through `data/ride-guides.json`. Never their logo or product photos; prices carry the date.
+
 ### Town guides (`/towns/<state>/<town>/`) — `/town`
 - `/town <City, ST>`, `/town refresh <id>`, `/town next` (`.claude/commands/town.md`; team in
   `.claude/agents/README.md`). Only `town-editor` writes `data/towns/<id>.json`. Rules:
@@ -471,6 +477,12 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   Optional `data/rides-countries.json` adds a "Riding in <country>" block.
 - Homepage and menu ride counts come from the data (build-home.js, chrome.js) — rebuild, don't
   hand-type them.
+
+- **Hubs are sticky by a mile** (Oct 23, 2026): a hub in the last build's `hubs.json` keeps its page until it sits
+  `HUB_HOLD` (1 mi) inside `HUB_GAP`. City centroids move as rides are added; two new Phoenix rides moved Phoenix's
+  half a mile and swapped `/rides/az/peoria/` for `/rides/az/goodyear/`. Build from the committed `hubs.json`.
+- **Biweekly rides with a posted date** run on that date's weeks (`dates` on a `biweekly` ride; `data/SCHEMA.md`), so
+  "Next ride" lands on the right Saturday instead of the next one.
 
 ### Upkeep (plain-words version: `tools/RIDES-UPKEEP.md`)
 - Mondays, Phoenix time: 2 am `rides-watch.yml` (`tools/rides-reports.js` pulls the ride-report
@@ -820,3 +832,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-21 — IndexNow (the 500K plan, AI-search desk): every production deploy tells Bing which pages changed (`deploy-succeeded`), the key file at the root, `tools/indexnow.js` for a full send.
 - 2026-10-21 — The Monday re-check actually re-checks: verifiers in the foreground, background tasks off for the step, a red run when nothing ships, 110 rides a week.
 - 2026-10-21 — Event pages and the 2027 calendar rebuild on every deploy, after the rides (a passed event date no longer keeps its Event markup until someone rebuilds by hand).
+- 2026-10-23 — The Heavy Pedal: Heavy Saturday (Arcadia) and Heavy Thursday (Sunnyslope) listed; `/guides/heavy-pedal/` and `/kit/` as the first "Phoenix crews" hub on the brand's searches; biweekly rides take a posted week; hubs hold by a mile.
