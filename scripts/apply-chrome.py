@@ -32,7 +32,7 @@ C = json.loads(subprocess.check_output(NODE))
 
 SECTION_STYLES = {  # stylesheets after /chrome.css, by top-level folder
     "guides": ["/styles.css"], "field-notes": ["/styles.css"], "resources": ["/styles.css"],
-    "journal": ["/styles.css"], "tonight": ["/tonight/tonight.css"], "nov7": ["/nov7/nov7.css"], "cyclefor": ["/cyclefor/cyclefor.css"], "": ["/styles.css"],
+    "journal": ["/styles.css"], "tonight": ["/tonight/tonight.css"], "nov7": ["/nov7/nov7.css"], "cyclefor": ["/cyclefor/cyclefor.css"], "fruitloop": ["/styles.css", "/fruitloop/fruitloop.css"], "": ["/styles.css"],
 }
 ANCHORS = {'href="/#tally"': 'href="/"', 'href="/#rides"': 'href="/#ride"',
            'href="/#disciplines"': 'href="/"', 'href="/#pledge"': 'href="/"',

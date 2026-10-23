@@ -72,3 +72,15 @@ test("the start time: roll beats meet, and the time_local says the rest", () => 
   assert.equal(got(0).start_hhmm, "18:30");
   assert.equal(got(1).start_hhmm, "06:30");
 });
+
+test("duration_min counts the minutes after the hours (Oct 23, 2026)", () => {
+  const got = derive([
+    { duration: "about 2 hours 45 minutes, with stops" },
+    { duration: "~2 hours" },
+    { duration: "1.5 hours" },
+    { duration: "1 hr 30 min" },
+    { duration: "2-3 hours" },
+    { duration: "90 minutes" },
+  ]);
+  assert.deepEqual([0, 1, 2, 3, 4, 5].map((i) => got(i).duration_min), [165, 120, 90, 90, 120, 90]);
+});
