@@ -328,6 +328,22 @@ form is **the OK** that lets him use their clip in his reels, boosted posts and 
   Take-backs come by Instagram DM: within 7 days delete our posts with it, take it off the site, stop any boost.
 - Other people's faces in these clips are fine **with a cleared OK** (§10). Under 18: never.
 
+### The Fruit Loop (`/fruitloop/`, Oct 23, 2026)
+Robert's own ride: a queer social night ride, the first Friday of every month from **Fri, Dec 4, 2026**, meet 6:30 pm,
+roll 7:00, about 13 flat miles from the 2018 rainbow crosswalk at Central and Portland, past eight stops in Phoenix's
+queer history, finishing on the old "Fruit Loop" bar circuit (Roosevelt, 3rd St, Portland, 1st St). Free, no-drop,
+18 and up, no sign-up.
+- Hand page `cfc-site/fruitloop/index.html` (on apply-chrome.py's list, `/styles.css`), in `sitemap-pages.xml`. Short
+  links in `netlify.toml`: `/fl` (the poster's QR, tagged `utm_source=poster`) and `/fruit-loop`. Its directory row is
+  `phoenix-az-cycle-for-change-fruit-loop` (`first_ride: "2026-12-04"`, so nothing before Dec 4 is ever promised).
+- **The history is sourced, never invented**: each stop says only what DTPHX's LGBTQ+ tour, Visit Phoenix, 12News or the
+  Phoenix Pride record says; the sources and the date read are in the page's note. A new stop needs a source.
+- **No route on the page until Robert has ridden it** (§6 Routes: Robert's own ride file, never a route we drew). After
+  his ride, his GPX goes in through `data/ride-routes.json` like any host's.
+- **Photos:** nobody is recognisable unless they took a "Photos OK" sticker at the start, and the ride never posts who
+  came (the page says why: the 1964 raid at 915 N 1st St, when the paper printed the names). §10 holds.
+- No form, no RSVP, no list of names. Questions come by Instagram DM.
+
 ### Today I rode for (`#today` on the homepage, Oct 12, 2026)
 Every ride Robert says who he rode for that day. `data/today.json` (date, `for` = the plate, `line` = his words,
 `photo`, `photo2`, `film`) → `todaySection()` in `scripts/build-home.js` → a light section between the numbers and
@@ -820,3 +836,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-21 — IndexNow (the 500K plan, AI-search desk): every production deploy tells Bing which pages changed (`deploy-succeeded`), the key file at the root, `tools/indexnow.js` for a full send.
 - 2026-10-21 — The Monday re-check actually re-checks: verifiers in the foreground, background tasks off for the step, a red run when nothing ships, 110 rides a week.
 - 2026-10-21 — Event pages and the 2027 calendar rebuild on every deploy, after the rides (a passed event date no longer keeps its Event markup until someone rebuilds by hand).
+- 2026-10-23 — The Fruit Loop: `/fruitloop/` (Robert's queer First Friday night ride from Dec 4, 2026), its directory row tagged LGBTQ+, `/fl` and `/fruit-loop`; `first_ride` in the rides schema so a ride that hasn't started never promises a date before its first (build-rides, live.json, /tonight/, the validator).
