@@ -75,6 +75,8 @@
       var start = startOn(p), mins = off * 1440 + start - today.mins;
       if (mins < -20 || mins > horizonH * 60) continue;
       if (!inSeason(r, p.m)) continue;
+      // a ride that hasn't started yet (first_ride, the host's first date) isn't tonight before then
+      if (r.first_ride && (p.y + "-" + (p.m < 10 ? "0" : "") + p.m + "-" + (p.d < 10 ? "0" : "") + p.d) < r.first_ride) continue;
       var caveat = "";
       if (r.frequency === "monthly") {
         var mm = monthlyMatch(r, p);

@@ -97,6 +97,20 @@
   status = 302
   force = true
 
+# Oct 23, 2026: The Fruit Loop (Robert's queer First Friday night ride, from Dec 4, 2026). /fl is the poster's
+# QR code (tagged so print shows up in GA4); /fruit-loop is the spelled-out link people type.
+[[redirects]]
+  from = "/fl"
+  to = "/fruitloop/?utm_source=poster&utm_medium=print&utm_campaign=fruit-loop"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/fruit-loop"
+  to = "/fruitloop/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/shopride"
   to = "/rides/scottsdale-az-bicycle-haus-friday-shop-ride/#reviews"
