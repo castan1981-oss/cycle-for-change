@@ -111,6 +111,13 @@
   status = 301
   force = true
 
+# /fruity is the handout stickers' QR code (tagged sticker, so stickers and posters read apart in GA4).
+[[redirects]]
+  from = "/fruity"
+  to = "/fruitloop/?utm_source=sticker&utm_medium=print&utm_campaign=fruit-loop"
+  status = 302
+  force = true
+
 [[redirects]]
   from = "/shopride"
   to = "/rides/scottsdale-az-bicycle-haus-friday-shop-ride/#reviews"

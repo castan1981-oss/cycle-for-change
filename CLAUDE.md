@@ -330,10 +330,12 @@ form is **the OK** that lets him use their clip in his reels, boosted posts and 
 
 ### The Fruit Loop (`/fruitloop/`, Oct 23, 2026)
 Robert's own ride: a queer social night ride, the first Friday of every month from **Fri, Dec 4, 2026**, meet 6:30 pm,
-roll 7:00, back about 9:45, **about 24 miles** (Robert: "more like 22 to 25"), from the 2018 rainbow crosswalk at
-Central and Portland: downtown on the 1981 Pride march route to the Capitol, Greenwood Memory Lawn, the old west-side
-neighborhoods, the Melrose Curve and Charlie's, Steele Indian School Park, Coronado, and home on the old "Fruit Loop" bar
-circuit (Roosevelt, 3rd St, Portland, 1st St). Eight stops. Free, no-drop, 18 and up, no sign-up.
+roll 7:00, back about 9:30, **about 21 flat miles** (Robert, Oct 23: "clean the route up… no climbs, I want social
+ride"; it had been about 24), from the 2018 rainbow crosswalk at Central and Portland: downtown on the 1981 Pride march
+route to the Capitol, Greenwood Memory Lawn, Encanto and Willo, the Melrose Curve and Charlie's, Steele Indian School
+Park, the lit Grand Canal path (7th St to 12th St), Coronado, and home on the old "Fruit Loop" bar circuit (Roosevelt,
+3rd St, Portland, 1st St). Eight stops. Free, no-drop, 18 and up, no sign-up. Streets and lit paths only: no dead-end
+detours, no climbs (86 ft of gain on the bare-earth model, nothing over 1%).
 - **Its own page, on purpose** (Robert: "special, not like the rest, with a Fruit Loop logo"): `cfc-site/fruitloop/`
   (`index.html`, `fruitloop.css`, `fruitloop.js`; on apply-chrome.py's list with `/styles.css` + its own sheet; body
   `theme-dark fl-page`). A night page: bruise ground, the ride's wordmark, the next-ride date and countdown
@@ -343,7 +345,8 @@ circuit (Roosevelt, 3rd St, Portland, 1st St). Eight stops. Free, no-drop, 18 an
   The stencil still only ever spells CYCLE FOR. **The one place on the site with color outside After Hours** is the
   six bars of the rainbow crosswalk the ride starts on, muted to sit with the palette (`--fl-red` … `--fl-violet` in
   fruitloop.css, scoped to `.fl`). Never cereal imagery: no rings, no toucan, the loop is the route.
-- Short links in `netlify.toml`: `/fl` (the poster's QR, tagged `utm_source=poster`) and `/fruit-loop`. Its directory row
+- Short links in `netlify.toml`: `/fl` (the poster's QR, tagged `utm_source=poster`), `/fruity` (the handout stickers'
+  QR, tagged `utm_source=sticker`) and `/fruit-loop`. Its directory row
   is `phoenix-az-cycle-for-change-fruit-loop` (`first_ride: "2026-12-04"`, so nothing before Dec 4 is ever promised).
 - **The history is sourced, never invented, and credited**: most of it is Marshall Shore's work (his LGBTQ+ Tour of DTPHX
   and his Fruit Loop walking tour on Clio); the rest is Visit Phoenix, Cronkite News, 12News, KTAR and the Phoenix Pride
@@ -846,4 +849,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-21 — IndexNow (the 500K plan, AI-search desk): every production deploy tells Bing which pages changed (`deploy-succeeded`), the key file at the root, `tools/indexnow.js` for a full send.
 - 2026-10-21 — The Monday re-check actually re-checks: verifiers in the foreground, background tasks off for the step, a red run when nothing ships, 110 rides a week.
 - 2026-10-21 — Event pages and the 2027 calendar rebuild on every deploy, after the rides (a passed event date no longer keeps its Event markup until someone rebuilds by hand).
-- 2026-10-23 — The Fruit Loop: `/fruitloop/` (Robert's queer First Friday night ride from Dec 4, 2026), its directory row tagged LGBTQ+, `/fl` and `/fruit-loop`; `first_ride` in the rides schema so a ride that hasn't started never promises a date before its first (build-rides, live.json, /tonight/, the validator). Same day: the ride grows to about 24 miles and gets its own night page and wordmark; `duration_min` counts the minutes after the hours ("2 hours 45 minutes" = 165; 11 rides corrected).
+- 2026-10-23 — The Fruit Loop: `/fruitloop/` (Robert's queer First Friday night ride from Dec 4, 2026), its directory row tagged LGBTQ+, `/fl` and `/fruit-loop`; `first_ride` in the rides schema so a ride that hasn't started never promises a date before its first (build-rides, live.json, /tonight/, the validator). Same day: its own night page and wordmark, then the route cleaned up for a social ride (about 21 flat miles, the canal path, `/fruity` for the handout stickers); `duration_min` counts the minutes after the hours ("2 hours 45 minutes" = 165; 11 rides corrected).
