@@ -329,8 +329,8 @@ form is **the OK** that lets him use their clip in his reels, boosted posts and 
 - Other people's faces in these clips are fine **with a cleared OK** (§10). Under 18: never.
 
 ### The Fruit Loop (`/fruitloop/`, Oct 23, 2026)
-Robert's own ride: a queer social night ride, the first Friday of every month from **Fri, Dec 4, 2026**, meet 5:00 pm,
-**roll 5:30** (Robert, Oct 23: "I think 5:30 roll out"; it had been 7:00), coffee about 7:15, **about 15 flat miles with one stop** (Robert, Oct 23: "1 stop and then end at a gay
+Robert's own ride: a queer social night ride, the first Friday of every month from **Fri, Dec 4, 2026**, meet 5:30 pm,
+**roll 6:00** (Robert, Oct 23: "lets meet at 5:30 and roll at 6"; it had been 7:00, then 5:30 for a few minutes), coffee about 7:45, **about 15 flat miles with one stop** (Robert, Oct 23: "1 stop and then end at a gay
 coffee shop"; it had been 21 miles with eight stops, and 24 before that: "no climbs, I want social ride"), from the 2018
 rainbow crosswalk at Central and Portland: downtown on the 1981 Pride march route toward the Capitol, Encanto and Willo,
 **the one stop at the Melrose Curve** (7th Ave and Glenrosa, mile 8, about 15 minutes), Steele Indian School Park, the
@@ -343,7 +343,7 @@ climbs (about 60 ft of gain on the bare-earth model).
 - **Its own page, on purpose** (Robert: "special, not like the rest, with a Fruit Loop logo"): `cfc-site/fruitloop/`
   (`index.html`, `fruitloop.css`, `fruitloop.js`; on apply-chrome.py's list with `/styles.css` + its own sheet; body
   `theme-dark fl-page`). A night page: bruise ground, the ride's wordmark, the next-ride date and countdown
-  (`fruitloop.js`, first Fridays from Dec 4, 5:30 pm Phoenix), the loop drawn with the seven place numbers (HTML buttons
+  (`fruitloop.js`, first Fridays from Dec 4, 6:00 pm Phoenix), the loop drawn with the seven place numbers (HTML buttons
   placed by percent over the SVG, the stop's plate bigger, hairline leaders from the start, the finish and the circuit;
   every story is in the list without the script), one light room for "How it works".
 - **The wordmark:** FRUIT LOOP in pavement lettering — drawn SVG strokes (18, square ends), solid, no stencil bridges.
@@ -854,4 +854,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-21 — IndexNow (the 500K plan, AI-search desk): every production deploy tells Bing which pages changed (`deploy-succeeded`), the key file at the root, `tools/indexnow.js` for a full send.
 - 2026-10-21 — The Monday re-check actually re-checks: verifiers in the foreground, background tasks off for the step, a red run when nothing ships, 110 rides a week.
 - 2026-10-21 — Event pages and the 2027 calendar rebuild on every deploy, after the rides (a passed event date no longer keeps its Event markup until someone rebuilds by hand).
-- 2026-10-23 — The Fruit Loop: `/fruitloop/` (Robert's queer First Friday night ride from Dec 4, 2026), its directory row tagged LGBTQ+, `/fl` and `/fruit-loop`; `first_ride` in the rides schema so a ride that hasn't started never promises a date before its first (build-rides, live.json, /tonight/, the validator). Same day: its own night page and wordmark, then the route cleaned up for a social ride (about 21 flat miles, the canal path, `/fruity` for the handout stickers), then one stop and coffee at the end (about 15 flat miles, the Curve, Skoden inside Central Records) and a 5:30 roll-out; `duration_min` counts the minutes after the hours ("2 hours 45 minutes" = 165; 11 rides corrected).
+- 2026-10-23 — The Fruit Loop: `/fruitloop/` (Robert's queer First Friday night ride from Dec 4, 2026), its directory row tagged LGBTQ+, `/fl` and `/fruit-loop`; `first_ride` in the rides schema so a ride that hasn't started never promises a date before its first (build-rides, live.json, /tonight/, the validator). Same day: its own night page and wordmark, then the route cleaned up for a social ride (about 21 flat miles, the canal path, `/fruity` for the handout stickers), then one stop and coffee at the end (about 15 flat miles, the Curve, Skoden inside Central Records) and a 6:00 roll-out; `duration_min` counts the minutes after the hours ("2 hours 45 minutes" = 165; 11 rides corrected).
