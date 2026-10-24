@@ -498,6 +498,9 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   a run that pushes no branch fails red ("Did it ship?").
 - Organizer flow: "I run this ride" with an email is a host update — no public warning, no hide
   clock, top of the queue for a person to confirm by reply. The form never stamps `verified_on`.
+  A link ending in `#fix` (the host emails, Oct 24, 2026) opens the form with "Something changed" and "I run
+  this ride" already picked (`cfc-site/events/report.js`); nothing on the site links to `#fix`, so riders never
+  arrive with it ticked. Keep it that way.
 - Commands: `/rides status`, `/rides check <slug>`, `/rides refresh [N]`, `/rides discover <area>`,
   `/rides add <name or URL>`.
 
@@ -834,3 +837,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-21 — Event pages and the 2027 calendar rebuild on every deploy, after the rides (a passed event date no longer keeps its Event markup until someone rebuilds by hand).
 - 2026-10-23 — The Heavy Pedal: Heavy Saturday (Arcadia) and Heavy Thursday (Sunnyslope) listed; `/guides/heavy-pedal/` and `/kit/` as the first "Phoenix crews" hub on the brand's searches; biweekly rides take a posted week; hubs hold by a mile.
 - 2026-10-24 — Stable form ids on ride pages (`rv-*`, `rt-*`, no build-order counter): a rebuild of the same data now changes 0 files (was ~1,400), so re-check PRs show only what changed.
+- 2026-10-24 — `#fix` opens the report form for hosts ("I run this ride" ticked) for the info-ask emails; the report form's field ids hang off its element id, not a build-order counter.
