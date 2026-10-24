@@ -118,4 +118,11 @@ body.fl-page{background:var(--asphalt);color:var(--bone)}
 .fl-page .fn-note a,.fl-page .fn-back a{color:var(--bone)}
 .fl-page .fn-back{color:var(--dust)}
 .fl-page .pledge{border-top:1px solid var(--line-d)}
+/* —— the one stop is the bigger plate; leaders run from the start, the finish and the circuit to their points —— */
+.fl-lead{fill:none;stroke:var(--dust);stroke-width:3}
+.fl-dot{fill:var(--paper)}
+.fl-plate--stop{width:44px;height:44px;font-size:22px;background:var(--paper)}
+.fl-plate--stop::after{inset:0}
+.fl-plate--stop:hover,.fl-plate--stop.is-on{background:var(--creosote-lift)}
+.fl-stop--stop .fl-stop-n{background:var(--paper)}
 }

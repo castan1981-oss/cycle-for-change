@@ -1,5 +1,5 @@
-/* /fruitloop/ (Oct 23, 2026): the next ride's date, the loop drawing itself, one stop at a time.
-   Without this script the page still works: every stop's story is in the list, in order. */
+/* /fruitloop/ (Oct 23, 2026): the next ride's date, the loop drawing itself, one place at a time.
+   Without this script the page still works: every place's story is in the list, in order. */
 (function () {
   "use strict";
   var doc = document.documentElement;
@@ -45,7 +45,7 @@
     } else map.classList.add("is-drawn");
   }
 
-  /* —— one stop at a time: the numbers on the loop, previous and next —— */
+  /* —— one place at a time: the numbers on the loop, previous and next —— */
   var list = document.querySelector("[data-fl-list]");
   if (!list) return;
   var items = Array.prototype.slice.call(list.querySelectorAll(".fl-stop"));
@@ -56,7 +56,7 @@
   step.className = "fl-step";
   var of = document.createElement("p"); of.className = "fl-step-of"; of.setAttribute("aria-live", "polite");
   var prev = document.createElement("button"); prev.type = "button"; prev.className = "btn btn--ghost btn--sm"; prev.textContent = "Previous";
-  var nxt = document.createElement("button"); nxt.type = "button"; nxt.className = "btn btn--bone btn--sm"; nxt.textContent = "Next stop";
+  var nxt = document.createElement("button"); nxt.type = "button"; nxt.className = "btn btn--bone btn--sm"; nxt.textContent = "Next";
   step.appendChild(of); step.appendChild(prev); step.appendChild(nxt);
   list.parentNode.insertBefore(step, list.nextSibling);
 
@@ -68,9 +68,9 @@
       b.classList.toggle("is-on", on);
       b.setAttribute("aria-pressed", on ? "true" : "false");
     });
-    of.textContent = "Stop " + cur + " of " + total;
+    of.textContent = cur + " of " + total;
     prev.disabled = cur === 1;
-    nxt.textContent = cur === total ? "Back to the start" : "Next stop";
+    nxt.textContent = cur === total ? "Back to the start" : "Next";
     if (from === "plate" && window.matchMedia("(max-width: 899px)").matches) {
       var target = items[cur - 1];
       if (target && target.scrollIntoView) target.scrollIntoView({ block: "nearest" });

@@ -330,17 +330,22 @@ form is **the OK** that lets him use their clip in his reels, boosted posts and 
 
 ### The Fruit Loop (`/fruitloop/`, Oct 23, 2026)
 Robert's own ride: a queer social night ride, the first Friday of every month from **Fri, Dec 4, 2026**, meet 6:30 pm,
-roll 7:00, back about 9:30, **about 21 flat miles** (Robert, Oct 23: "clean the route up… no climbs, I want social
-ride"; it had been about 24), from the 2018 rainbow crosswalk at Central and Portland: downtown on the 1981 Pride march
-route to the Capitol, Greenwood Memory Lawn, Encanto and Willo, the Melrose Curve and Charlie's, Steele Indian School
-Park, the lit Grand Canal path (7th St to 12th St), Coronado, and home on the old "Fruit Loop" bar circuit (Roosevelt,
-3rd St, Portland, 1st St). Eight stops. Free, no-drop, 18 and up, no sign-up. Streets and lit paths only: no dead-end
-detours, no climbs (86 ft of gain on the bare-earth model, nothing over 1%).
+roll 7:00, coffee about 8:45, **about 15 flat miles with one stop** (Robert, Oct 23: "1 stop and then end at a gay
+coffee shop"; it had been 21 miles with eight stops, and 24 before that: "no climbs, I want social ride"), from the 2018
+rainbow crosswalk at Central and Portland: downtown on the 1981 Pride march route toward the Capitol, Encanto and Willo,
+**the one stop at the Melrose Curve** (7th Ave and Glenrosa, mile 8, about 15 minutes), Steele Indian School Park, the
+lit Grand Canal path (7th St to 12th St), Coronado, the old "Fruit Loop" bar circuit (Roosevelt, 3rd St, Portland, 1st
+St), and **coffee at the end: Skoden, inside Central Records, 824 N Central Ave**, three blocks south of the start (its
+co-owner calls it "a queer, Indigenous, femme-led coffee shop", New Times). **Ask Central Records and Skoden before the
+page goes live** (Friday-night hours, ages, where 40 bikes go); The Churchill (901 N 1st St) is the backup. Seven places
+on the drawing, one stop. Free, no-drop, 18 and up, no sign-up. Streets and lit paths only: no dead-end detours, no
+climbs (about 60 ft of gain on the bare-earth model).
 - **Its own page, on purpose** (Robert: "special, not like the rest, with a Fruit Loop logo"): `cfc-site/fruitloop/`
   (`index.html`, `fruitloop.css`, `fruitloop.js`; on apply-chrome.py's list with `/styles.css` + its own sheet; body
   `theme-dark fl-page`). A night page: bruise ground, the ride's wordmark, the next-ride date and countdown
-  (`fruitloop.js`, first Fridays from Dec 4, 7:00 pm Phoenix), the loop drawn with the eight stop numbers (HTML buttons
-  placed by percent over the SVG; every story is in the list without the script), one light room for "How it works".
+  (`fruitloop.js`, first Fridays from Dec 4, 7:00 pm Phoenix), the loop drawn with the seven place numbers (HTML buttons
+  placed by percent over the SVG, the stop's plate bigger, hairline leaders from the start, the finish and the circuit;
+  every story is in the list without the script), one light room for "How it works".
 - **The wordmark:** FRUIT LOOP in pavement lettering — drawn SVG strokes (18, square ends), solid, no stencil bridges.
   The stencil still only ever spells CYCLE FOR. **The one place on the site with color outside After Hours** is the
   six bars of the rainbow crosswalk the ride starts on, muted to sit with the palette (`--fl-red` … `--fl-violet` in
@@ -349,8 +354,8 @@ detours, no climbs (86 ft of gain on the bare-earth model, nothing over 1%).
   QR, tagged `utm_source=sticker`) and `/fruit-loop`. Its directory row
   is `phoenix-az-cycle-for-change-fruit-loop` (`first_ride: "2026-12-04"`, so nothing before Dec 4 is ever promised).
 - **The history is sourced, never invented, and credited**: most of it is Marshall Shore's work (his LGBTQ+ Tour of DTPHX
-  and his Fruit Loop walking tour on Clio); the rest is Visit Phoenix, Cronkite News, 12News, KTAR and the Phoenix Pride
-  record. The sources and the date read are in the page's note. A new stop needs a source.
+  and his Fruit Loop walking tour on Clio); the rest is Visit Phoenix, Cronkite News, Phoenix New Times, 12News, KTAR and the Phoenix Pride
+  record. The sources and the date read are in the page's note. A new place needs a source.
 - **The drawing is not a map.** No route file on the page until Robert has ridden it (§6 Routes: Robert's own ride file,
   never a route we drew). After his ride, his GPX goes in through `data/ride-routes.json` like any host's.
 - **Photos:** nobody is recognisable unless they took a "Photos OK" sticker at the start, and the ride never posts who
@@ -849,4 +854,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-21 — IndexNow (the 500K plan, AI-search desk): every production deploy tells Bing which pages changed (`deploy-succeeded`), the key file at the root, `tools/indexnow.js` for a full send.
 - 2026-10-21 — The Monday re-check actually re-checks: verifiers in the foreground, background tasks off for the step, a red run when nothing ships, 110 rides a week.
 - 2026-10-21 — Event pages and the 2027 calendar rebuild on every deploy, after the rides (a passed event date no longer keeps its Event markup until someone rebuilds by hand).
-- 2026-10-23 — The Fruit Loop: `/fruitloop/` (Robert's queer First Friday night ride from Dec 4, 2026), its directory row tagged LGBTQ+, `/fl` and `/fruit-loop`; `first_ride` in the rides schema so a ride that hasn't started never promises a date before its first (build-rides, live.json, /tonight/, the validator). Same day: its own night page and wordmark, then the route cleaned up for a social ride (about 21 flat miles, the canal path, `/fruity` for the handout stickers); `duration_min` counts the minutes after the hours ("2 hours 45 minutes" = 165; 11 rides corrected).
+- 2026-10-23 — The Fruit Loop: `/fruitloop/` (Robert's queer First Friday night ride from Dec 4, 2026), its directory row tagged LGBTQ+, `/fl` and `/fruit-loop`; `first_ride` in the rides schema so a ride that hasn't started never promises a date before its first (build-rides, live.json, /tonight/, the validator). Same day: its own night page and wordmark, then the route cleaned up for a social ride (about 21 flat miles, the canal path, `/fruity` for the handout stickers), then one stop and coffee at the end (about 15 flat miles, the Curve, Skoden inside Central Records); `duration_min` counts the minutes after the hours ("2 hours 45 minutes" = 165; 11 rides corrected).
