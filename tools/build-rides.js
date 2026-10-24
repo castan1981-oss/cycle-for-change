@@ -2264,9 +2264,10 @@ function reviewItem(rv) {
             <ul class="gr-rev-tags">${tags.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
           </li>`;
 }
-let REV_UID = 0;
+// One review form per ride page, so its ids don't need a counter. (Until Oct 24, 2026 they were numbered in build
+// order, so every rebuild rewrote ~1,400 pages and a re-check PR touched 1,134 files.)
 function reviewForm(r) {
-  const n = ++REV_UID, id = (k) => `rv-${k}-${n}`;
+  const id = (k) => `rv-${k}`;
   const pick = (name, list, required) => list.map(([v, t], i) => `<label><input type="radio" name="${name}" value="${v}"${required && i === 0 ? " required" : ""}><span>${esc(t)}</span></label>`).join("");
   return `
         <details class="gr-rev-write" id="review">
@@ -2475,9 +2476,9 @@ function routeBlock(r, rt, listed) {
 }
 // Oct 9, 2026: the people who run a ride send its route here (Netlify form "ride-route", a file upload).
 // tools/routes-pull.js turns each one into a GitHub issue labelled "route"; nothing shows until Robert has read it.
-let ROUTE_UID = 0;
+
 function routeSend(r, rt) {
-  const n = ++ROUTE_UID, id = (k) => `rt-${k}-${n}`;
+  const id = (k) => `rt-${k}`; // one route form per page; stable ids, no build-order counter
   const weekly = rt ? !!rt.for_date : /route[s]? chang|changes? (every|each) week|weekly route/i.test(`${r.description || ""} ${r.visitor_notes || ""} ${r.schedule || ""}`);
   const open = rt ? (weekly ? "Send next week’s route" : "Route changed? Send the new one") : "Run this ride? Send us the route";
   return `

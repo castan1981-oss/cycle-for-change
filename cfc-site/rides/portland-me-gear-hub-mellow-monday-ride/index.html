@@ -151,14 +151,14 @@
               <legend>The pace <small>(optional)</small></legend>
               <label><input type="radio" name="pace" value="easier"><span>Easier than it says</span></label><label><input type="radio" name="pace" value="right"><span>About right</span></label><label><input type="radio" name="pace" value="harder"><span>Harder than it says</span></label>
             </fieldset>
-            <label class="gr-rev-lab" for="rv-words-655">How did it go? <small>Who you rode with, how they treat someone new, what a first-timer should know.</small></label>
-            <textarea class="field" id="rv-words-655" name="words" rows="4" minlength="20" maxlength="600" required></textarea>
+            <label class="gr-rev-lab" for="rv-words">How did it go? <small>Who you rode with, how they treat someone new, what a first-timer should know.</small></label>
+            <textarea class="field" id="rv-words" name="words" rows="4" minlength="20" maxlength="600" required></textarea>
             <div class="gr-rev-two">
-              <div><label class="gr-rev-lab" for="rv-name-655">First name</label><input class="field" id="rv-name-655" name="name" maxlength="30" autocomplete="given-name" required></div>
-              <div><label class="gr-rev-lab" for="rv-from-655">Where you ride from <small>(optional)</small></label><input class="field" id="rv-from-655" name="from" maxlength="40" autocomplete="address-level2"></div>
+              <div><label class="gr-rev-lab" for="rv-name">First name</label><input class="field" id="rv-name" name="name" maxlength="30" autocomplete="given-name" required></div>
+              <div><label class="gr-rev-lab" for="rv-from">Where you ride from <small>(optional)</small></label><input class="field" id="rv-from" name="from" maxlength="40" autocomplete="address-level2"></div>
             </div>
-            <label class="gr-rev-lab" for="rv-email-655">Email <small>(optional) Only if you want a reply. Never shown.</small></label>
-            <input class="field" id="rv-email-655" type="email" name="email" autocomplete="email">
+            <label class="gr-rev-lab" for="rv-email">Email <small>(optional) Only if you want a reply. Never shown.</small></label>
+            <input class="field" id="rv-email" type="email" name="email" autocomplete="email">
             <p class="gr-rev-note">We read every review before it goes up. First name only. Links come out.</p>
             <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send it</button><p class="gr-rev-ok" role="status" hidden></p></div>
           </form>
@@ -189,30 +189,30 @@
           <input type="hidden" name="ride" value="portland-me-gear-hub-mellow-monday-ride">
           <p class="gr-rev-hp" hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
           <p class="gr-rev-note">For the people who run Mellow Monday Ride. Drop in the file and a couple of numbers. Robert reads every route before it goes up, credits you on the page and links back.</p>
-          <label class="gr-rev-lab" for="rt-file-657">Route file <small>GPX, FIT or TCX</small></label>
-          <input class="field" id="rt-file-657" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
-          <label class="gr-rev-lab" for="rt-link-657">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
-          <input class="field" id="rt-link-657" type="url" name="route_link" inputmode="url" autocomplete="off">
+          <label class="gr-rev-lab" for="rt-file">Route file <small>GPX, FIT or TCX</small></label>
+          <input class="field" id="rt-file" type="file" name="route_file" accept=".gpx,.fit,.tcx,application/gpx+xml">
+          <label class="gr-rev-lab" for="rt-link">Or a link to it <small>Ride with GPS, Strava, Komoot or Garmin</small></label>
+          <input class="field" id="rt-link" type="url" name="route_link" inputmode="url" autocomplete="off">
           <div class="gr-rev-two">
-            <div><label class="gr-rev-lab" for="rt-lo-657">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo-657" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
-            <div><label class="gr-rev-lab" for="rt-hi-657">To <small>mph</small></label><input class="field" id="rt-hi-657" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-lo">Pace on the flats, from <small>mph</small></label><input class="field" id="rt-lo" type="number" name="pace_lo" min="5" max="35" step="0.5" inputmode="decimal"></div>
+            <div><label class="gr-rev-lab" for="rt-hi">To <small>mph</small></label><input class="field" id="rt-hi" type="number" name="pace_hi" min="5" max="35" step="0.5" inputmode="decimal"></div>
           </div>
           <fieldset class="gr-rev-pick">
             <legend>If someone comes off the back</legend>
             <label><input type="radio" name="drop" value="drop"><span>They ride back alone</span></label><label><input type="radio" name="drop" value="regroup"><span>We wait at a regroup</span></label><label><input type="radio" name="drop" value="no-drop"><span>Nobody gets left</span></label>
           </fieldset>
-          <label class="gr-rev-lab" for="rt-regroup-657">Where you regroup <small>(optional)</small></label>
-          <input class="field" id="rt-regroup-657" name="regroup" maxlength="80">
+          <label class="gr-rev-lab" for="rt-regroup">Where you regroup <small>(optional)</small></label>
+          <input class="field" id="rt-regroup" name="regroup" maxlength="80">
           <fieldset class="gr-rev-pick">
             <legend>This route is</legend>
             <label><input type="radio" name="weekly" value="every" checked><span>The route every time</span></label><label><input type="radio" name="weekly" value="once"><span>Just for the next ride</span></label>
           </fieldset>
           <div class="gr-rev-two">
-            <div><label class="gr-rev-lab" for="rt-name-657">Your name</label><input class="field" id="rt-name-657" name="name" maxlength="40" autocomplete="name" required></div>
-            <div><label class="gr-rev-lab" for="rt-role-657">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role-657" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
+            <div><label class="gr-rev-lab" for="rt-name">Your name</label><input class="field" id="rt-name" name="name" maxlength="40" autocomplete="name" required></div>
+            <div><label class="gr-rev-lab" for="rt-role">How you’re involved <small>(optional)</small></label><input class="field" id="rt-role" name="role" maxlength="60" placeholder="I lead it, I run the club"></div>
           </div>
-          <label class="gr-rev-lab" for="rt-email-657">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
-          <input class="field" id="rt-email-657" type="email" name="email" autocomplete="email">
+          <label class="gr-rev-lab" for="rt-email">Email <small>So Robert can say thanks or ask a question. Never shown.</small></label>
+          <input class="field" id="rt-email" type="email" name="email" autocomplete="email">
           <div class="gr-rev-go"><button type="submit" class="btn btn--ink">Send the route</button><p class="gr-rev-ok" role="status" hidden></p></div>
         </form>
       </details>
