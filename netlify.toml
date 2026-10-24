@@ -118,6 +118,21 @@
   status = 302
   force = true
 
+# fruitloopphx.com is the Fruit Loop's own address (Robert, Oct 23, 2026: "its own address"). It's a domain alias on
+# this Netlify site; every path on it lands on the one page, so there's one URL to keep up. No UTM tags: a shared link
+# keeps its real referrer (Instagram, a text) in GA4. Works once the domain is bought and added as an alias.
+[[redirects]]
+  from = "https://fruitloopphx.com/*"
+  to = "https://cycleforchange.org/fruitloop/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.fruitloopphx.com/*"
+  to = "https://cycleforchange.org/fruitloop/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/shopride"
   to = "/rides/scottsdale-az-bicycle-haus-friday-shop-ride/#reviews"

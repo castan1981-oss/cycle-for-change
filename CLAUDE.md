@@ -351,7 +351,9 @@ climbs (about 60 ft of gain on the bare-earth model).
   six bars of the rainbow crosswalk the ride starts on, muted to sit with the palette (`--fl-red` … `--fl-violet` in
   fruitloop.css, scoped to `.fl`). Never cereal imagery: no rings, no toucan, the loop is the route.
 - Short links in `netlify.toml`: `/fl` (the poster's QR, tagged `utm_source=poster`), `/fruity` (the handout stickers'
-  QR, tagged `utm_source=sticker`) and `/fruit-loop`. Its directory row
+  QR, tagged `utm_source=sticker`) and `/fruit-loop`. **Its own address: fruitloopphx.com** (Robert, Oct 23: "its own address") 301s apex and www, every
+  path, to `/fruitloop/` with no UTM tags. It needs the domain bought and added as a domain alias on this Netlify site; until
+  then the rules sit idle. Its directory row
   is `phoenix-az-cycle-for-change-fruit-loop` (`first_ride: "2026-12-04"`, so nothing before Dec 4 is ever promised).
 - **The history is sourced, never invented, and credited**: most of it is Marshall Shore's work (his LGBTQ+ Tour of DTPHX
   and his Fruit Loop walking tour on Clio); the rest is Visit Phoenix, Cronkite News, Phoenix New Times, 12News, KTAR and the Phoenix Pride
