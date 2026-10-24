@@ -5,7 +5,7 @@
   var doc = document.documentElement;
   doc.classList.add("fl-js");
 
-  /* —— the next ride: the first Friday of the month, 7:00 pm in Phoenix (UTC−7 all year), from Dec 4, 2026 —— */
+  /* —— the next ride: the first Friday of the month, 5:30 pm in Phoenix (UTC−7 all year), from Dec 4, 2026 —— */
   var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   var HOUR = 36e5, DAY = 864e5;
   function firstFriday(y, m) {
@@ -16,7 +16,7 @@
     var y = 2026, m = 11;   // December 2026: the first one
     for (var k = 0; k < 36; k++) {
       var d = firstFriday(y, m);
-      var roll = Date.UTC(y, m, d, 19 + 7, 0);   // 7:00 pm Phoenix = 02:00 UTC the next day
+      var roll = Date.UTC(y, m, d, 17 + 7, 30);   // 5:30 pm Phoenix = 00:30 UTC the next day
       if (roll + 2.75 * HOUR > now) return { y: y, m: m, d: d, roll: roll };
       m += 1; if (m > 11) { m = 0; y += 1; }
     }
