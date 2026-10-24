@@ -833,3 +833,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-21 — The Monday re-check actually re-checks: verifiers in the foreground, background tasks off for the step, a red run when nothing ships, 110 rides a week.
 - 2026-10-21 — Event pages and the 2027 calendar rebuild on every deploy, after the rides (a passed event date no longer keeps its Event markup until someone rebuilds by hand).
 - 2026-10-23 — The Heavy Pedal: Heavy Saturday (Arcadia) and Heavy Thursday (Sunnyslope) listed; `/guides/heavy-pedal/` and `/kit/` as the first "Phoenix crews" hub on the brand's searches; biweekly rides take a posted week; hubs hold by a mile.
+- 2026-10-24 — Stable form ids on ride pages (`rv-*`, `rt-*`, no build-order counter): a rebuild of the same data now changes 0 files (was ~1,400), so re-check PRs show only what changed.
