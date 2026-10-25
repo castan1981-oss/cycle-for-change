@@ -302,7 +302,7 @@ first, until it has passed) when the money comes up.
 - Body copy is Robert's. If his words aren't there yet, leave the `.fn-todo` block and open the PR
   as a draft — never write his experiences for him.
 - Publishing = three hand edits: the page, one row in `cfc-site/field-notes/index.html` (newest
-  first), the URL in `cfc-site/sitemap.xml`. Cross-link 2 related posts in `.fn-related`. Then
+  first), the URL in `cfc-site/sitemap-pages.xml`. Cross-link 2 related posts in `.fn-related`. Then
   `python3 scripts/apply-chrome.py`.
 
 ### Ride write-ups
@@ -660,8 +660,10 @@ for the pace. Every ride page now answers that, or says where the answer lives.
 - A short quotable answer near the top (`.fn-lede` / `.lede`) so assistants can cite it.
 - JSON-LD matches the page (field notes: `BlogPosting`, author Robert Castan, publisher Cycle for
   Change). Nothing in the LD that isn't on the page.
-- New URLs go in the right sitemap (`sitemap.xml`, `sitemap-pages.xml`, `sitemap-events.xml`,
-  `sitemap-calendar.xml`, `rides/sitemap.xml`). A redirected URL never sits in a sitemap.
+- New URLs go in the right sitemap (`sitemap-pages.xml`, `sitemap-events.xml`, `sitemap-calendar.xml`,
+  `rides/sitemap.xml`). A redirected URL never sits in a sitemap. `/sitemap.xml` is the index, written from its
+  children by `scripts/sitemap-index.js` (each child's lastmod = the newest inside it; every generator runs it at
+  the end, Oct 25, 2026). Never hand-edit it.
 - Prefer fewer, fuller pages over more, thinner ones. Single-ride pages earn most of the clicks;
   thin city and filter pages earn almost none.
 - **AI search is welcome** (Oct 18, 2026): `robots.txt` names the AI crawlers (GPTBot, OAI-SearchBot, ClaudeBot,
@@ -895,3 +897,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-25 — The Fruit Loop is weekly: every Friday from Dec 11, 2026 (page, countdown, record, `.ics` weekly rule, kit, stickers, plan); the finish stays "over coffee" on the page until the shop says yes; the page goes live (#201 merged) so the posts and stickers have somewhere to point.
 - 2026-10-25 — The Fruit Loop lockup: the Progress chevron and the trans O (Robert's picks) on `/fruitloop/` and across the kit; `CSS_V` 48.
 - 2026-10-25 — Answer-first ride pages: descriptions lead with when, where and cost (1,293 pages); monthly-rule rides carry their next date in the title (Critical Mass, bike parties); city names stop repeating; doubled periods in ledes gone.
+- 2026-10-25 — The sitemap index is written from its children (`scripts/sitemap-index.js`, run by every generator): each child's lastmod is the newest date inside it, not the Oct 6 it said for three weeks.

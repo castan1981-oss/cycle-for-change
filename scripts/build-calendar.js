@@ -744,4 +744,5 @@ write("sitemap-calendar.xml", `<?xml version="1.0" encoding="UTF-8"?>
 ${pages.map(([u]) => `  <url><loc>${SITE}${u}</loc><lastmod>${data.updated}</lastmod><changefreq>weekly</changefreq><priority>${u === URL ? "0.8" : "0.6"}</priority></url>`).join("\n")}
 </urlset>
 `);
+require("./sitemap-index.js").run();
 console.log(`Built /events/2027/ (+ ${pages.length - 1} short pages): ${events.length} events (${nConf} confirmed, ${nProj} projected, ${nTba} tba), ${retired.length} retired. Data updated ${data.updated}.`);

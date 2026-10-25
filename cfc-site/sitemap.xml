@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Sitemap index. Each public section keeps its own sitemap:
-     - sitemap-pages.xml   hand-listed pages (home, field notes, guides, journal, resources)
-     - sitemap-events.xml  /events/ and /towns/, written by scripts/build-events.js
-     - rides/sitemap.xml   /rides/, written by tools/build-rides.js
-     - sitemap-calendar.xml /events/2027/, written by scripts/build-calendar.js -->
+<!-- Sitemap index, written by scripts/sitemap-index.js from its children (each lastmod = the newest
+     lastmod inside that child). Don't hand-edit; run any generator, or node scripts/sitemap-index.js.
+     - sitemap-pages.xml     hand-listed pages (home, field notes, guides, journal, resources)
+     - sitemap-events.xml    /events/ and /towns/, written by scripts/build-events.js
+     - rides/sitemap.xml     /rides/, written by tools/build-rides.js
+     - sitemap-calendar.xml  /events/2027/, written by scripts/build-calendar.js -->
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://cycleforchange.org/sitemap-pages.xml</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://cycleforchange.org/sitemap-events.xml</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-04</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://cycleforchange.org/rides/sitemap.xml</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://cycleforchange.org/sitemap-calendar.xml</loc>

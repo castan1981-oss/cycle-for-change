@@ -1280,4 +1280,5 @@ ${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${lastmodOf(u)}</lastmo
 </urlset>
 `);
 
+require("./sitemap-index.js").run();
 console.log(`Built ${written.length} pages: ${events.length} events, ${towns.length} towns, ${stateList.length} states.`);
