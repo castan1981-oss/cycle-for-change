@@ -175,6 +175,7 @@ function run({ quiet = false } = {}) {
   fs.writeFileSync(path.join(SITE, "llms.txt"), llms(c));
   const items = feedItems();
   fs.writeFileSync(path.join(SITE, "feed.xml"), feed(items, c));
+  require("./sitemap-index.js").run({ quiet });
   if (!quiet) console.log(`signals: llms.txt (${fmt(c.rides)} rides, ${fmt(c.events)} events, ${c.towns} towns, ${c.guides} guides), feed.xml (${items.length} items, newest ${items[0] ? items[0].date : "—"})`);
   return { counts: c, items };
 }
