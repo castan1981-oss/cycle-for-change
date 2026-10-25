@@ -304,14 +304,27 @@ function icsLocal(date, tz) { const p = partsIn(date, tz); return `${p.year}${St
 
 // A ride page's <title>: the ride's name, its town and when — the longest of these that fits in 60 characters
 // ("Mellow Mondays — Austin, TX group ride, Mondays 6:00 pm"), down to the name alone when the name is that long.
-function rideTitle(r) {
+// Oct 25, 2026 (500K plan, answer-first ride pages): a ride that runs on a monthly rule (Critical Mass, bike parties,
+// open streets) puts its next date in the title when it fits ("Critical Mass London — Last Fridays, next Oct 30"),
+// since people search those by name and the date is the answer. A name that already says the city doesn't repeat it,
+// so the time fits ("Critical Mass Atlanta — Last Fridays 7:00 pm" instead of dropping the time).
+function rideTitle(r, next = null) {
   const sw = shortWhen(r);
   const day = sw ? sw.replace(/\s+\d{1,2}:\d{2} [ap]m$/, "") : null;
   const place = placeText(r);
+  const named = r.city && r.name.toLowerCase().includes(r.city.toLowerCase());
+  const monthly = !!(r.monthly_rule && r.monthly_rule.length);
+  const md = next && monthly ? new Intl.DateTimeFormat("en-US", { timeZone: r.tz, month: "short", day: "numeric" }).format(next) : null;
   const cands = [
-    sw && `${r.name} — ${place} group ride, ${sw}`,
-    sw && `${r.name} — ${place}, ${sw}`,
-    day && day !== sw && `${r.name} — ${place}, ${day}`,
+    md && day && !named && `${r.name} — ${place}, ${day}, next ${md}`,
+    md && day && named && `${r.name} — ${day}, next ${md}`,
+    md && !named && `${r.name} — ${place}, next ${md}`,
+    md && named && `${r.name} — next ride ${md}`,
+    sw && !named && `${r.name} — ${place} group ride, ${sw}`,
+    sw && !named && `${r.name} — ${place}, ${sw}`,
+    sw && named && `${r.name} — group ride, ${sw}`,
+    sw && named && `${r.name} — ${sw}`,
+    day && day !== sw && `${r.name} — ${named ? "" : place + ", "}${day}`,
     `${r.name} — ${place} group ride`,
     sw && `${r.name} — ${r.city}, ${sw}`,
     day && `${r.name} — ${r.city}, ${day}`,
@@ -319,6 +332,28 @@ function rideTitle(r) {
     `${r.name} — ${r.city}`,
   ].filter(Boolean);
   return cands.find((t) => t.length <= TITLE_MAX) || (r.name.length <= TITLE_MAX ? r.name : trunc(r.name, TITLE_MAX));
+}
+// The meta description, answer first (Oct 25, 2026; 500K plan): when, from where, what it costs, then what kind of ride.
+// A ride on a monthly rule leads with its next date (it changes once a month and the daily rebuild keeps it current);
+// a weekly ride leads with its day and time, which never go stale in a search snippet. Only what the page itself says.
+function answerDescription(r, { next, dp, tm, start, lede, f }) {
+  const local = isUS(r) ? "" : " local time";
+  // the start's short name: its first clause, and only when that's short enough to leave room for the rest
+  let startShort = start && start.name ? start.name.split(/;|\s\(|\.\s/)[0].trim().replace(/\.+$/, "") : "";
+  if (/^any\b/i.test(startShort)) startShort = startShort.charAt(0).toLowerCase() + startShort.slice(1);   // "from any point on the circuit"
+  const from = startShort && startShort.length <= 48 ? ` from ${startShort}` : "";
+  const monthly = !!(r.monthly_rule && r.monthly_rule.length);
+  const bits = [];
+  if (next && monthly) bits.push(`Next ride ${fmtNext(next, r.tz)}${from}.`, dp ? `${dp}.` : null);
+  else if (dp && tm && !onBreak(r)) bits.push(`${dp} at ${tm}${local}${from}.`);
+  else return trunc(lede, 158);   // no plain schedule to lead with: the lede as before
+  if (/^free\.?$/i.test((r.cost || "").trim())) bits.push("Free.");
+  const kind = r.kind === "open-streets" ? `Open streets in ${placeText(r)}: closed to cars, open to bikes.` : r.kind === "critical-mass" ? `A Critical Mass ride in ${placeText(r)}.` : null;
+  const rest = lede.replace(/^[^.]*\.\s*/, "").replace(/^It (?:rolls|runs) [^.]*\.\s*/, "");   // drop "X is a … ride in …" and the schedule sentence
+  const what = kind || lede.split(/(?<=\.)\s+/)[0].replace(new RegExp("^" + r.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + " is an? "), "A ");
+  bits.push(what, rest);
+  if (f && f.checked_on) bits.push(`Checked ${F.fmt(f.checked_on, { short: true, today: TODAY })}.`);
+  return trunc(bits.filter(Boolean).join(" ").replace(/\s+/g, " ").trim(), 158);
 }
 // Human schedule from structured fields ("Every Tuesday", "Second Wednesday of the month")
 function dayPhrase(r) {
@@ -2558,16 +2593,17 @@ function ridePage(r, all, hubFor, hubs) {
     : r.kind === "training-series" ? `${r.name} is a series of ${ledeDisc} training rides in ${placeText(r)}.`
     : `${r.name} is a ${ledeDisc} group ride in ${placeText(r)}.`;
   if (dp && tm && r.kind === "open-streets") lede += ` It runs ${lower1(dp)} from ${tm}${isUS(r) ? "" : " local time"}.`;
-  else if (dp && tm) lede += ` It rolls ${lower1(dp)} at ${tm}${isUS(r) ? "" : " local time"}${start && start.name ? ` from ${start.name}` : ""}.`;
+  else if (dp && tm) lede += ` It rolls ${lower1(dp)} at ${tm}${isUS(r) ? "" : " local time"}${start && start.name ? ` from ${start.name.replace(/\.+$/, "")}` : ""}.`;
   else if (r.schedule) lede += ` Schedule: ${r.schedule.replace(/\.$/, "")}${start && start.name ? `, from ${start.name}` : ""}.`;
   if (onBreak(r)) lede += " It's on its seasonal break now.";
-  if (dist) lede += ` About ${dist}${r.pace ? `, ${lower1(r.pace)}` : ""}.`;
-  else if (r.pace) lede += ` Pace: ${lower1(r.pace)}.`;
-  if (r.drop_policy === "no-drop" && !/no-drop/i.test(lede)) lede += " No-drop.";
-  const description = trunc(lede, 158);
+  const paceText = r.pace ? lower1(r.pace).replace(/\.+$/, "") : "";   // the host's own pace line, without a doubled period
+  if (dist) lede += ` About ${dist}${paceText ? `, ${paceText}` : ""}.`;
+  else if (paceText) lede += ` Pace: ${paceText}.`;
+  if (r.drop_policy === "no-drop" && !/no-drop|no one gets dropped|nobody gets dropped|nobody is dropped/i.test(lede)) lede += " No-drop.";
+  const description = listed ? answerDescription(r, { next, dp, tm, start, lede, f }) : trunc(lede, 158);
   // Pass 15: the page shows the first sentence and the when; the facts below carry the rest
   const ledeShort = lede.split(/(?<=\.)\s+(?=About |Pace: |No-drop\.)/)[0];
-  const title = rideTitle(r);
+  const title = rideTitle(r, listed ? next : null);
 
   const hub = hubFor[r.slug];
   const areaName = isUS(r) ? stateName(r.state) : countryName(r.country);

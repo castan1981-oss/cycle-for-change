@@ -652,6 +652,11 @@ for the pace. Every ride page now answers that, or says where the answer lives.
   a re-check). The rides rebuild runs daily (`rides-weekly-rebuild.yml`) so next-ride dates stay current.
 - Real `<meta name="description">`, `<link rel="canonical">`, clean heading order, descriptive
   `alt` on every image.
+- **Ride pages answer first** (Oct 25, 2026, the 500K plan): the description leads with when, from where and cost
+  (`answerDescription()` in build-rides.js) — a ride on a monthly rule with its next date ("Next ride Fri, Oct 30, 7:30 pm
+  GMT from South Bank…"), a weekly ride with its day and time, which never go stale in a snippet; then the kind of ride,
+  distance and pace, and the checked date. Monthly-rule rides put "next <Mon D>" in the `<title>` when it fits; a name
+  that already says the city doesn't repeat it. Only what the page says.
 - A short quotable answer near the top (`.fn-lede` / `.lede`) so assistants can cite it.
 - JSON-LD matches the page (field notes: `BlogPosting`, author Robert Castan, publisher Cycle for
   Change). Nothing in the LD that isn't on the page.
@@ -889,3 +894,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-24 — `#fix` opens the report form for hosts ("I run this ride" ticked) for the info-ask emails; the report form's field ids hang off its element id, not a build-order counter.
 - 2026-10-25 — The Fruit Loop is weekly: every Friday from Dec 11, 2026 (page, countdown, record, `.ics` weekly rule, kit, stickers, plan); the finish stays "over coffee" on the page until the shop says yes; the page goes live (#201 merged) so the posts and stickers have somewhere to point.
 - 2026-10-25 — The Fruit Loop lockup: the Progress chevron and the trans O (Robert's picks) on `/fruitloop/` and across the kit; `CSS_V` 48.
+- 2026-10-25 — Answer-first ride pages: descriptions lead with when, where and cost (1,293 pages); monthly-rule rides carry their next date in the title (Critical Mass, bike parties); city names stop repeating; doubled periods in ledes gone.
