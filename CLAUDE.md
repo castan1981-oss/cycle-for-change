@@ -389,6 +389,12 @@ explained" keeps its name: it's about charity rides in general, not this site.
   should I check on the bike first?"; the charity guides' "Keep reading" carries two; `/brief/`'s Carry line links
   the flats guide. Never a boilerplate list on every page.
 
+- **05 Phoenix crews** (Oct 23, 2026): a hub page per crew that runs group rides here, from its own site, Strava
+  club and Instagram, with a "not connected, nobody paid" line. First: `/guides/heavy-pedal/` (The Heavy Pedal: its two
+  rides, the shop, the events) and `/guides/heavy-pedal/kit/` (lines, prices, fit, policies, from their product pages —
+  we haven't worn it, never a review). Both target the brand's searches (`seo/keywords.json`, cluster "Heavy Pedal").
+  Their ride pages link back through `data/ride-guides.json`. Never their logo or product photos; prices carry the date.
+
 ### Town guides (`/towns/<state>/<town>/`) — `/town`
 - `/town <City, ST>`, `/town refresh <id>`, `/town next` (`.claude/commands/town.md`; team in
   `.claude/agents/README.md`). Only `town-editor` writes `data/towns/<id>.json`. Rules:
@@ -512,6 +518,12 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
 - Homepage and menu ride counts come from the data (build-home.js, chrome.js) — rebuild, don't
   hand-type them.
 
+- **Hubs are sticky by a mile** (Oct 23, 2026): a hub in the last build's `hubs.json` keeps its page until it sits
+  `HUB_HOLD` (1 mi) inside `HUB_GAP`. City centroids move as rides are added; two new Phoenix rides moved Phoenix's
+  half a mile and swapped `/rides/az/peoria/` for `/rides/az/goodyear/`. Build from the committed `hubs.json`.
+- **Biweekly rides with a posted date** run on that date's weeks (`dates` on a `biweekly` ride; `data/SCHEMA.md`), so
+  "Next ride" lands on the right Saturday instead of the next one.
+
 ### Upkeep (plain-words version: `tools/RIDES-UPKEEP.md`)
 - Mondays, Phoenix time: 2 am `rides-watch.yml` (`tools/rides-reports.js` pulls the ride-report
   form, `tools/rides-watch.js` reads every ride's pages and feeds → `data/rides-health.json`,
@@ -526,6 +538,9 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   a run that pushes no branch fails red ("Did it ship?").
 - Organizer flow: "I run this ride" with an email is a host update — no public warning, no hide
   clock, top of the queue for a person to confirm by reply. The form never stamps `verified_on`.
+  A link ending in `#fix` (the host emails, Oct 24, 2026) opens the form with "Something changed" and "I run
+  this ride" already picked (`cfc-site/events/report.js`); nothing on the site links to `#fix`, so riders never
+  arrive with it ticked. Keep it that way.
 - Commands: `/rides status`, `/rides check <slug>`, `/rides refresh [N]`, `/rides discover <area>`,
   `/rides add <name or URL>`.
 
@@ -861,4 +876,7 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-21 — The Monday re-check actually re-checks: verifiers in the foreground, background tasks off for the step, a red run when nothing ships, 110 rides a week.
 - 2026-10-21 — Event pages and the 2027 calendar rebuild on every deploy, after the rides (a passed event date no longer keeps its Event markup until someone rebuilds by hand).
 - 2026-10-23 — The Fruit Loop: `/fruitloop/` (Robert's queer First Friday night ride from Dec 4, 2026), its directory row tagged LGBTQ+, `/fl` and `/fruit-loop`; `first_ride` in the rides schema so a ride that hasn't started never promises a date before its first (build-rides, live.json, /tonight/, the validator). Same day: its own night page and wordmark, then the route cleaned up for a social ride (about 21 flat miles, the canal path, `/fruity` for the handout stickers), then one stop and coffee at the end (about 15 flat miles, the Curve, coffee three blocks south) and a 6:00 roll-out; `duration_min` counts the minutes after the hours ("2 hours 45 minutes" = 165; 11 rides corrected).
+- 2026-10-23 — The Heavy Pedal: Heavy Saturday (Arcadia) and Heavy Thursday (Sunnyslope) listed; `/guides/heavy-pedal/` and `/kit/` as the first "Phoenix crews" hub on the brand's searches; biweekly rides take a posted week; hubs hold by a mile.
+- 2026-10-24 — Stable form ids on ride pages (`rv-*`, `rt-*`, no build-order counter): a rebuild of the same data now changes 0 files (was ~1,400), so re-check PRs show only what changed.
+- 2026-10-24 — `#fix` opens the report form for hosts ("I run this ride" ticked) for the info-ask emails; the report form's field ids hang off its element id, not a build-order counter.
 - 2026-10-25 — The Fruit Loop is weekly: every Friday from Dec 11, 2026 (page, countdown, record, `.ics` weekly rule, kit, stickers, plan); the finish stays "over coffee" on the page until the shop says yes; the page goes live (#201 merged) so the posts and stickers have somewhere to point.

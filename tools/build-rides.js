@@ -73,6 +73,7 @@ function offersLd(r, url) {
 const METRO_RADIUS = 25;   // miles — a city hub covers rides within this radius
 const METRO_MIN = 3;       // rides needed before a city gets its own hub
 const HUB_GAP = 15;        // miles — two hubs can't sit closer than this (Miami + Fort Lauderdale both survive; suburbs don't)
+const HUB_HOLD = 1;        // miles — a hub that's live keeps its page until it's this much inside HUB_GAP (no flapping)
 const OWN_MIN = 8;         // …unless the city has this many rides of its own (Scottsdale beside Phoenix)
 const OWN_GAP = 6;         // miles — and sits at least this far from every other hub
 
@@ -198,6 +199,16 @@ function nthWeekdayOfMonth(y, mo, dow, ord) {   // dow 0..6, ord 1..4 or -1
   if (ord > 0) { const first = new Date(Date.UTC(y, mo - 1, 1)).getUTCDay(); return 1 + ((dow - first + 7) % 7) + (ord - 1) * 7; }
   const lastDay = new Date(Date.UTC(y, mo, 0)); const back = (lastDay.getUTCDay() - dow + 7) % 7; return lastDay.getUTCDate() - back;
 }
+// Weeks counted Monday to Sunday from a fixed Monday (1970-01-05), so every day of one ride week shares an index.
+const weekIndex = (utcMs) => Math.floor((utcMs - Date.UTC(1970, 0, 5)) / (7 * 86400000));
+// Which weeks a biweekly ride runs (0 or 1), from the first host-posted date in `dates`; null when there is none.
+function biweeklyPhase(r) {
+  if (r.frequency !== "biweekly" || !Array.isArray(r.dates)) return null;
+  const d = r.dates.map((e) => e && e.date).filter((s) => DATE_RE.test(s || "")).sort()[0];
+  if (!d) return null;
+  const [y, mo, dd] = d.split("-").map(Number);
+  return ((weekIndex(Date.UTC(y, mo - 1, dd)) % 2) + 2) % 2;
+}
 // Next occurrence as a Date, or null when the schedule can't be computed
 const ymdOf = (y, mo, d) => `${y}-${String(mo).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
 const localYmd = (date, tz) => { const p = partsIn(date, tz); return ymdOf(p.year, p.month, p.day); };
@@ -227,9 +238,13 @@ function nextOccurrence(r, from = NOW) {
   }
   if (!r.days.length) return null;
   const want = new Set(r.days.map((d) => DAY_IDX[d]));
+  // Oct 23, 2026: a biweekly ride with a host-posted date runs on that date's weeks, not just the next matching day
+  // (Heavy Saturday: posted for Oct 31, so not Oct 24). No posted date = the old behaviour, with "confirm which week".
+  const phase = biweeklyPhase(r);
   for (let k = 0; k < 400; k++) {
     const dt = new Date(Date.UTC(y0, mo0 - 1, d0 + k));
     if (!want.has(dt.getUTCDay())) continue;
+    if (phase != null && weekIndex(dt.getTime()) % 2 !== phase) continue;
     const t = at(dt.getUTCFullYear(), dt.getUTCMonth() + 1, dt.getUTCDate());
     if (t > from && inSeason(dt.getUTCMonth() + 1, r.season_months)) return t;
   }
@@ -513,6 +528,11 @@ function loadEvents() {
 
 // ---------- metro hubs ----------
 // A city gets a hub when ≥3 rides sit within 25 mi of it and no bigger hub already covers it.
+// Oct 23, 2026: hubs are sticky by a mile. A city's centroid moves whenever a ride is added, so a hub sitting right
+// at HUB_GAP from a bigger one flapped: two new Phoenix rides moved Phoenix's centre half a mile and took
+// /rides/az/peoria/ down for /rides/az/goodyear/. A hub in the last build's hubs.json gets HUB_HOLD miles of grace.
+const LIVE_HUBS = (() => { try { return new Set(JSON.parse(fs.readFileSync(path.join(OUT, "hubs.json"), "utf8")).map((h) => h.url)); } catch (e) { return new Set(); } })();
+const gapFor = (city, state) => HUB_GAP - (LIVE_HUBS.has(`/rides/${state.toLowerCase()}/${slugify(city)}/`) ? HUB_HOLD : 0);
 function buildMetros(allRides) {
   const rides = allRides.filter(isUS);
   const cities = {};
@@ -533,7 +553,7 @@ function buildMetros(allRides) {
   const hubs = [];
   for (const c of list) {
     if (c.rides.length < METRO_MIN) continue;
-    if (hubs.some((h) => h.state === c.state && miles(h, c) <= HUB_GAP)) continue;
+    if (hubs.some((h) => h.state === c.state && miles(h, c) <= gapFor(c.city, c.state))) continue;
     // best = most rides of its own, with a bonus for being a genuinely big city (top ~150)
     // the ten biggest cities hold their name against a busy suburb (Phoenix, not Scottsdale), so the
     // home city's hub URL doesn't move when a suburb gains a few rides
@@ -545,9 +565,9 @@ function buildMetros(allRides) {
     let center = { lat: best.lat, lng: best.lng }, name = best.city;
     let ridesIn = rides.filter((r) => r.state === c.state && miles(center, r) <= METRO_RADIUS);
     if (ridesIn.length < METRO_MIN) { center = { lat: c.lat, lng: c.lng }; name = c.city; ridesIn = c.rides; }
-    if (hubs.some((h) => h.state === c.state && miles(h, center) <= HUB_GAP)) {
+    if (hubs.some((h) => h.state === c.state && miles(h, center) <= gapFor(name, c.state))) {
       // the big city it would be named after already has a hub; keep the candidate as its own hub if it stands clear
-      if (best === c || c.n < METRO_MIN || hubs.some((h) => h.state === c.state && miles(h, c) <= HUB_GAP)) continue;   // only a city with 3+ rides of its own
+      if (best === c || c.n < METRO_MIN || hubs.some((h) => h.state === c.state && miles(h, c) <= gapFor(c.city, c.state))) continue;   // only a city with 3+ rides of its own
       center = { lat: c.lat, lng: c.lng }; name = c.city; ridesIn = c.rides;
     }
     const RENAME = { "Awendaw|SC": "Charleston", "Germantown|TN": "Memphis" };   // metro name when the big city has no ride of its own
@@ -2147,6 +2167,20 @@ const PAUSE_SVG = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"
 // never machine-written and never a recap of Strava numbers (CLAUDE.md §4, §10). The first few paragraphs
 // show; the rest sits under a fold, crawled but one tap away. Shown only on a ride we still list.
 const NOTES = readJson(NOTES_FILE, {});
+// Oct 23, 2026: data/ride-guides.json — { slug: { href, text } }: a guide of ours about the ride's host, linked under
+// "Where to find them" (The Heavy Pedal's two rides → /guides/heavy-pedal/). The build fails on a guide that isn't a page.
+const GUIDES_BY = (() => {
+  const raw = readJson(path.join(ROOT, "data", "ride-guides.json"), {});
+  const out = {};
+  for (const [slug, g] of Object.entries(raw)) {
+    if (slug === "note" || !g || typeof g.href !== "string") continue;
+    const file = path.join(ROOT, "cfc-site", g.href.replace(/^\//, ""), g.href.endsWith("/") ? "index.html" : "");
+    if (!/^\/[a-z0-9/-]+\/$/.test(g.href) || !fs.existsSync(file)) throw new Error(`data/ride-guides.json: ${slug} points at ${g.href}, which isn't a page under cfc-site/`);
+    out[slug] = g;
+  }
+  return out;
+})();
+const guideLine = (r) => { const g = GUIDES_BY[r.slug]; return g ? `\n      <p class="gr-guide"><a class="link" href="${attr(g.href)}">${esc(g.text)}</a></p>` : ""; };
 const NOTE_SHOW = 4;                   // paragraphs before the fold
 const NOTE_DAY = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const noteDate = (ymd) => {
@@ -2237,9 +2271,10 @@ function reviewItem(rv) {
             <ul class="gr-rev-tags">${tags.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
           </li>`;
 }
-let REV_UID = 0;
+// One review form per ride page, so its ids don't need a counter. (Until Oct 24, 2026 they were numbered in build
+// order, so every rebuild rewrote ~1,400 pages and a re-check PR touched 1,134 files.)
 function reviewForm(r) {
-  const n = ++REV_UID, id = (k) => `rv-${k}-${n}`;
+  const id = (k) => `rv-${k}`;
   const pick = (name, list, required) => list.map(([v, t], i) => `<label><input type="radio" name="${name}" value="${v}"${required && i === 0 ? " required" : ""}><span>${esc(t)}</span></label>`).join("");
   return `
         <details class="gr-rev-write" id="review">
@@ -2448,9 +2483,9 @@ function routeBlock(r, rt, listed) {
 }
 // Oct 9, 2026: the people who run a ride send its route here (Netlify form "ride-route", a file upload).
 // tools/routes-pull.js turns each one into a GitHub issue labelled "route"; nothing shows until Robert has read it.
-let ROUTE_UID = 0;
+
 function routeSend(r, rt) {
-  const n = ++ROUTE_UID, id = (k) => `rt-${k}-${n}`;
+  const id = (k) => `rt-${k}`; // one route form per page; stable ids, no build-order counter
   const weekly = rt ? !!rt.for_date : /route[s]? chang|changes? (every|each) week|weekly route/i.test(`${r.description || ""} ${r.visitor_notes || ""} ${r.schedule || ""}`);
   const open = rt ? (weekly ? "Send next week’s route" : "Route changed? Send the new one") : "Run this ride? Send us the route";
   return `
@@ -2689,7 +2724,7 @@ function ridePage(r, all, hubFor, hubs) {
   <article class="ride${film ? " ride--film" : ""}" data-ride
     data-tz="${attr(listed ? r.tz || "" : "")}" data-time="${attr(next ? r.start_hhmm || "" : "")}" data-days="${r.days.join(" ")}"
     data-dates="${attr(dated.length ? JSON.stringify(dated.map((d) => [d.at.toISOString(), d.allDay ? `${fmtDay(d.ymd)} · time on the host's page` : fmtNext(d.at, r.tz)])) : "")}"
-    data-freq="${attr(r.frequency || "")}" data-season="${r.season_months ? `${r.season_months.start}-${r.season_months.end}` : ""}"
+    data-freq="${attr(r.frequency || "")}" data-phase="${biweeklyPhase(r) ?? ""}" data-season="${r.season_months ? `${r.season_months.start}-${r.season_months.end}` : ""}"
     data-monthly="${attr(r.monthly_rule ? JSON.stringify(r.monthly_rule) : "")}"
     data-times="${attr(listed && Array.isArray(r.start_times) && r.start_times.length ? JSON.stringify(r.start_times.map((e) => [e.from, e.start_hhmm])) : "")}">
 ${wallBlock(r)}
@@ -2709,7 +2744,7 @@ ${banner}
     ${listed ? "" : "<!-- off the lists: no next ride -->"}<div class="gr-next" id="gr-next" ${next || dated.length ? "" : "hidden"}${listed ? "" : " data-off"}>
       <span class="gr-next-label">Next ride</span>
       <time class="gr-next-when" data-next-text${next ? ` datetime="${isoWithOffset(next, r.tz)}"` : dated.length ? ` datetime="${dated[0].allDay ? dated[0].ymd : isoWithOffset(dated[0].at, r.tz)}"` : ""}>${next ? esc(fmtNext(next, r.tz)) : dated.length ? esc(dated[0].allDay ? `${fmtDay(dated[0].ymd)} · time on the host's page` : fmtNext(dated[0].at, r.tz)) : ""}</time>
-      <span class="gr-next-rel" data-next-rel>${next && r.frequency === "biweekly" ? "every other week — confirm which week with the host" : ""}</span>
+      <span class="gr-next-rel" data-next-rel>${next && r.frequency === "biweekly" ? (biweeklyPhase(r) != null ? "every other week, on the host’s posted weeks" : "every other week — confirm which week with the host") : ""}</span>
     </div>
 
     <div class="gr-actions">
@@ -2744,7 +2779,7 @@ ${firstTimeBlock(r, hostLabel)}
       <h2>Where to find them</h2>
       <div class="gr-linkrow">
         ${linkBtns}
-      </div>
+      </div>${guideLine(r)}
     </div>
 
 ${(() => { if (!isUS(r)) return ""; const town = TOWNS.find({ city: r.city, state: r.state, lat: r.lat, lng: r.lng }); return town ? TOWNS.strip(town, { compact: true, heading: `Riding ${esc(town.name)} from out of town?`, lede: `Where the routes are, who fixes or rents a bike, where to sleep with it, how to get it here.` }) : ""; })()}
@@ -2768,7 +2803,7 @@ ${BLOCKS.REPORT({ thing: "ride", name: r.name, kind: "changed", compact: true, i
 ${CTA}
 </main>
 ` + foot(`
-<script src="/rides/ride.js?v=39" defer></script>${rt ? `
+<script src="/rides/ride.js?v=40" defer></script>${rt ? `
 <script src="/rides/route.js?v=1" defer></script>` : ""}`);
 }
 

@@ -59,9 +59,12 @@
     }
     if (!days.length) return null;
     var want = {}; days.forEach(function (d) { want[DAY[d]] = true; });
+    // a biweekly ride with a host-posted date runs on that date's weeks (Mon-Sun weeks from 1970-01-05; the build's weekIndex)
+    var phase = art.dataset.phase === "" || art.dataset.phase == null ? null : +art.dataset.phase;
     for (k = 0; k < 400; k++) {
       var dt = new Date(Date.UTC(p.year, p.month - 1, p.day + k));
       if (!want[dt.getUTCDay()]) continue;
+      if (phase !== null && Math.floor((dt.getTime() - Date.UTC(1970, 0, 5)) / 6048e5) % 2 !== phase) continue;
       t = at(dt.getUTCFullYear(), dt.getUTCMonth() + 1, dt.getUTCDate());
       if (t > now && inSeason(dt.getUTCMonth() + 1, season)) return t;
     }
@@ -83,7 +86,7 @@
       // studio pass 1: the time reads the way the When cell and the build's fmtNext() write it ("6:00 am", not "6:00 AM")
       var text = datedLabel || new Intl.DateTimeFormat("en-US", { timeZone: tz, weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(t).replace(/AM|PM/, function (m) { return m.toLowerCase(); });
       var el = box.querySelector("[data-next-text]"); if (el) { el.textContent = text; el.setAttribute("datetime", t.toISOString()); }
-      var r = box.querySelector("[data-next-rel]"); if (r) r.textContent = rel(t) + (art.dataset.freq === "biweekly" ? " \u00b7 every other week, confirm which with the host" : "");
+      var r = box.querySelector("[data-next-rel]"); if (r) r.textContent = rel(t) + (art.dataset.freq === "biweekly" ? (art.dataset.phase ? " \u00b7 every other week, on the host\u2019s posted weeks" : " \u00b7 every other week, confirm which with the host") : "");
       box.hidden = false;
     } else {
       box.hidden = true;
