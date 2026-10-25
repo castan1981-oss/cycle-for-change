@@ -349,10 +349,18 @@ climbs (about 60 ft of gain on the bare-earth model).
   (`fruitloop.js`, every Friday from Dec 11, 2026, 6:00 pm Phoenix), the loop drawn with the seven place numbers (HTML buttons
   placed by percent over the SVG, the stop's plate bigger, hairline leaders from the start, the finish and the circuit;
   every story is in the list without the script), one light room for "How it works".
-- **The wordmark:** FRUIT LOOP in pavement lettering — drawn SVG strokes (18, square ends), solid, no stencil bridges.
-  The stencil still only ever spells CYCLE FOR. **The one place on the site with color outside After Hours** is the
-  six bars of the rainbow crosswalk the ride starts on, muted to sit with the palette (`--fl-red` … `--fl-violet` in
-  fruitloop.css, scoped to `.fl`). Never cereal imagery: no rings, no toucan, the loop is the route.
+- **The lockup** (Robert's picks, Oct 25, 2026: "12 and 13" from the logo studies, then "Show em that design"): the
+  **Progress chevron** (five nested chevrons, the Progress flag's hoist, pointing right) in front of **FRUIT LOOP** in
+  pavement lettering — drawn SVG strokes (18, square ends), solid, no stencil bridges — with **the second O of LOOP in
+  the trans flag's five bands**, wrapped along the stroke from the top centre. One drawing:
+  `scratchpad/logo/lockup.py` (`horizontal()` viewBox `-9 -9 880 208`, `stacked()` without the chevron for narrow
+  spots, `swap_board()` for the kit); the page's copy is `logo/lockup-inline.svg` (CSS vars, `currentColor`), read by
+  `build-fl15.py`. "The" and the kicker start where the letters do (`padding-left: calc(min(100%,1080px) * .2273)`).
+  The stencil still only ever spells CYCLE FOR. **The one place on the site with color outside After Hours** is this
+  page: the six bars of the rainbow crosswalk the ride starts on and the Progress flag's five, all muted to sit with
+  the palette (`--fl-red` … `--fl-violet`, `--fl-tb --fl-tp --fl-tw --fl-br --fl-bk` in fruitloop.css, scoped to
+  `.fl`). On a light ground the trans O gets a bruise halo and the chevron bruise edges. Never cereal imagery: no
+  rings, no toucan, the loop is the route.
 - Short links in `netlify.toml`: `/fl` (the poster's QR, tagged `utm_source=poster`), `/fruity` (the handout stickers'
   QR, tagged `utm_source=sticker`) and `/fruit-loop`. **Its own address: fruitloopphx.com** (Robert, Oct 23: "its own address") 301s apex and www, every
   path, to `/fruitloop/` with no UTM tags. It needs the domain bought and added as a domain alias on this Netlify site; until
@@ -880,3 +888,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-24 — Stable form ids on ride pages (`rv-*`, `rt-*`, no build-order counter): a rebuild of the same data now changes 0 files (was ~1,400), so re-check PRs show only what changed.
 - 2026-10-24 — `#fix` opens the report form for hosts ("I run this ride" ticked) for the info-ask emails; the report form's field ids hang off its element id, not a build-order counter.
 - 2026-10-25 — The Fruit Loop is weekly: every Friday from Dec 11, 2026 (page, countdown, record, `.ics` weekly rule, kit, stickers, plan); the finish stays "over coffee" on the page until the shop says yes; the page goes live (#201 merged) so the posts and stickers have somewhere to point.
+- 2026-10-25 — The Fruit Loop lockup: the Progress chevron and the trans O (Robert's picks) on `/fruitloop/` and across the kit; `CSS_V` 48.
