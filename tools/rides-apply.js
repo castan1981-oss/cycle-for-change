@@ -42,7 +42,7 @@ const { validateRide, validateAll } = require("./validate-rides.js");
 const ROOT = path.join(__dirname, "..");
 const OUTCOMES = ["confirmed", "changed", "seasonal-break", "paused", "ended", "unreachable", "new"];
 const STATUS_OF = { "seasonal-break": "seasonal-break", paused: "paused", ended: "ended" };
-const CHANGEABLE = ["name", "name_en", "schedule", "days", "time_local", "start_hhmm", "start_times", "frequency", "monthly_rule", "season", "season_months",
+const CHANGEABLE = ["name", "name_en", "schedule", "days", "time_local", "start_hhmm", "start_times", "frequency", "monthly_rule", "first_ride", "season", "season_months",
   "start_location", "distance_km", "distance_miles", "duration", "pace", "drop_policy", "host", "cost", "language", "visitor_notes", "description",
   "links", "inclusive_focus", "discipline", "refresh", "lat", "lng", "geo_precision", "neighborhood", "kind", "confidence"];
 const MERGE = new Set(["host", "links", "refresh", "start_location"]);

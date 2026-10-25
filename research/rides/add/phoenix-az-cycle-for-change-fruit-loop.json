@@ -17,20 +17,15 @@
   "discipline": [
    "social"
   ],
-  "schedule": "The first Friday of every month, starting Fri, Dec 4, 2026. Meet 5:30 pm at the rainbow crosswalk at Central Ave and Portland St; it rolls at 6:00 pm and finishes about 7:45 pm three blocks south, for coffee at Central Records (824 N Central Ave).",
+  "schedule": "Every Friday, starting Fri, Dec 11, 2026. Meet 5:30 pm at the rainbow crosswalk at Central Ave and Portland St; it rolls at 6:00 pm and finishes about 7:45 pm three blocks south, over coffee.",
   "days": [
    "fri"
   ],
   "time_local": "6:00 pm",
   "start_hhmm": "18:00",
-  "frequency": "monthly",
-  "monthly_rule": [
-   {
-    "ord": 1,
-    "day": "fri"
-   }
-  ],
-  "first_ride": "2026-12-04",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "first_ride": "2026-12-11",
   "season": "year-round",
   "season_months": null,
   "start_location": {
@@ -48,13 +43,13 @@
    "type": "informal"
   },
   "founded_year": 2026,
-  "founded_note": "The first ride is Fri, Dec 4, 2026.",
+  "founded_note": "The first ride is Fri, Dec 11, 2026.",
   "cost": "free",
   "language": [
    "en"
   ],
   "visitor_notes": "Lights are required: white on the front, red on the back. It's dark by the start from fall to spring. 18 and up. No sign-up. Nobody is in a photo unless they take a \"Photos OK\" sticker at the start.",
-  "description": "A queer social night ride through Phoenix's history, hosted by Robert Castan of Cycle for Change. About 15 flat miles from the 2018 rainbow crosswalk at Central and Portland: down Washington Street on the route of the first Pride march in 1981, through Encanto and Willo to the Melrose Curve (the one stop), Steele Indian School Park, the lit Grand Canal path and Coronado, and back on the old Fruit Loop bar circuit to coffee at Skoden, inside Central Records. No-drop, free.",
+  "description": "A queer social night ride through Phoenix's history, hosted by Robert Castan of Cycle for Change. About 15 flat miles from the 2018 rainbow crosswalk at Central and Portland: down Washington Street on the route of the first Pride march in 1981, through Encanto and Willo to the Melrose Curve (the one stop), Steele Indian School Park, the lit Grand Canal path and Coronado, and back on the old Fruit Loop bar circuit to coffee. No-drop, free.",
   "links": {
    "website": "https://cycleforchange.org/fruitloop/",
    "instagram": "https://www.instagram.com/cycl_eforchange",
@@ -73,7 +68,7 @@
   ],
   "verified_on": "2026-10-23",
   "last_seen": "2026-10-23",
-  "evidence": "Robert Castan, the host, set the times on Oct 23, 2026: meet 5:30 pm, roll 6:00 pm, coffee about 7:45 pm, first Fridays from Dec 4, 2026.",
+  "evidence": "Robert Castan, the host, made it weekly on Oct 25, 2026: every Friday from Fri, Dec 11, 2026, meet 5:30 pm, roll 6:00 pm, coffee about 7:45 pm.",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
