@@ -1,0 +1,128 @@
+@layer section{
+/* Cycle for Change — /fruitloop/ (Oct 23, 2026). The Fruit Loop's own page: a night ride, so a night page.
+   Bruise ground, plaster type, the ride's own wordmark (pavement lettering, drawn, never a font) and the one
+   thing on the site in color: the six bars of the rainbow crosswalk the ride starts on, muted to sit with the
+   After Hours palette. Drawn clean: no grain, no shadows, square corners. Loaded by /fruitloop/ only. */
+
+body.fl-page{background:var(--asphalt);color:var(--bone)}
+.fl{
+  --fl-red:#B04A45;--fl-orange:#C47B3F;--fl-yellow:#C9A54A;--fl-green:#5C8762;--fl-blue:#4E6A9C;--fl-violet:#775A8E;
+  --line:var(--line-d);
+  color:var(--bone);
+}
+.fl h2{margin:0;font:800 var(--fs-h2)/1.02 var(--display);letter-spacing:-.03em;color:var(--paper)}
+.fl h3{margin:0}
+.fl a{color:var(--paper)}
+
+/* —— hero: the wordmark, the next ride, the crosswalk —— */
+.fl-hero{padding-top:clamp(40px,7vw,104px)}
+.fl-hero-in{display:grid;gap:var(--s4)}
+.fl-h1{margin:0;display:flex;flex-direction:column;gap:10px}
+.fl-the{font:800 clamp(22px,2.6vw,36px)/1 var(--display);color:var(--dust)}
+.fl-word{display:block;width:min(100%,1080px);height:auto;color:var(--paper)}
+.fl-kicker{margin-top:10px;font:700 clamp(19px,2.2vw,28px)/1.2 var(--display);color:var(--dust);letter-spacing:-.01em}
+.fl-lede{margin:0;max-width:34em;font-size:var(--fs-intro);line-height:1.45;color:var(--bone)}
+.fl-next{border-top:2px solid var(--paper);padding-top:var(--s2);display:grid;gap:4px;align-content:start}
+.fl-next p{margin:0}
+.fl-next-k{font:var(--label);color:var(--dust)}
+.fl-next-d{font:900 clamp(40px,6vw,76px)/.95 var(--display);letter-spacing:-.035em;color:var(--paper)}
+.fl-next-t{font-size:18px;font-weight:700;color:var(--bone)}
+.fl-next-c{font-size:16px;font-weight:700;color:var(--dust)}
+.fl-cta{display:flex;flex-wrap:wrap;gap:12px}
+@media (min-width:900px){
+  .fl-hero-in{grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:var(--col-gap,24px);row-gap:var(--s5)}
+  .fl-h1{grid-column:1 / -1}
+  .fl-lede{grid-column:1}
+  .fl-next{grid-column:2;grid-row:2 / span 2}
+  .fl-cta{grid-column:1}
+}
+/* the crosswalk: six bars across the foot of the first screen, the colors the city painted, quieted */
+.fl-xwalk{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(10px,2.2vw,32px);
+  width:100%;max-width:var(--maxw);margin:var(--s5) auto 0;padding-inline:var(--gut)}
+.fl-xwalk i{display:block;height:clamp(56px,9vw,128px)}
+.fl-xwalk i:nth-child(1){background:var(--fl-red)}
+.fl-xwalk i:nth-child(2){background:var(--fl-orange)}
+.fl-xwalk i:nth-child(3){background:var(--fl-yellow)}
+.fl-xwalk i:nth-child(4){background:var(--fl-green)}
+.fl-xwalk i:nth-child(5){background:var(--fl-blue)}
+.fl-xwalk i:nth-child(6){background:var(--fl-violet)}
+
+/* —— the eight stops: the loop drawn, a number per stop, the story beside it —— */
+.fl-stops{padding-block:var(--sec)}
+.fl-intro{margin:var(--s2) 0 0;max-width:34em;font-size:var(--fs-body);line-height:1.55;color:var(--bone)}
+.fl-map-wrap{display:grid;gap:var(--s4);margin-top:var(--s4)}
+.fl-map{position:relative;width:100%;max-width:560px;aspect-ratio:1080 / 1270}
+.fl-map svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.fl-line{fill:none;stroke:var(--creosote-lift);stroke-width:12;stroke-linejoin:round;stroke-linecap:round}
+.fl-js .fl-line{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.6s var(--ease)}
+.fl-js .fl-map.is-drawn .fl-line{stroke-dashoffset:0}
+.fl-plate{position:absolute;transform:translate(-50%,-50%);width:34px;height:34px;padding:0;border:0;border-radius:0;
+  background:var(--creosote-lift);color:var(--asphalt);font:900 17px/1 var(--display);display:grid;place-items:center;
+  cursor:pointer;transition:background-color var(--t-color) var(--ease),color var(--t-color) var(--ease)}
+.fl-plate::after{content:"";position:absolute;inset:-5px}
+.fl-plate:hover,.fl-plate.is-on{background:var(--paper);color:var(--asphalt)}
+.fl-plate.is-on{outline:2px solid var(--paper);outline-offset:3px}
+.fl-plate:focus-visible{outline:3px solid var(--ring);outline-offset:3px}
+.fl-list{list-style:none;margin:0;padding:0}
+.fl-stop{border-top:1px solid var(--line-d);padding:var(--s3) 0;display:grid;gap:8px}
+.fl-stop p{margin:0}
+.fl-stop-n{width:72px;height:72px;display:grid;place-items:center;background:var(--creosote-lift);color:var(--asphalt);
+  font:900 44px/1 var(--display);padding-top:6px}
+.fl-stop-meta{display:flex;gap:16px;font:var(--label);color:var(--dust)}
+.fl-stop h3{font:800 clamp(30px,3.6vw,48px)/1 var(--display);letter-spacing:-.03em;color:var(--paper)}
+.fl-stop-where{font-weight:700;color:var(--dust)}
+.fl-stop-story{max-width:34em;font-size:clamp(18px,1.5vw,21px);line-height:1.5;color:var(--bone)}
+.fl-step{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:var(--s2)}
+.fl-step-of{font:var(--label);color:var(--dust);margin-right:auto}
+.fl-js .fl-stop{border-top:2px solid var(--paper)}
+@media (min-width:900px){
+  .fl-map-wrap{grid-template-columns:minmax(0,6fr) minmax(0,6fr);column-gap:var(--s5);align-items:start}
+  .fl-js .fl-list{position:sticky;top:calc(var(--nav-h) + 24px)}
+}
+.fl-mapnote{margin:var(--s3) 0 0;max-width:40em;font-size:var(--fs-small);color:var(--dust)}
+.fl-pass-h{margin-top:var(--s5) !important;font:800 var(--fs-h4)/1.1 var(--display);color:var(--paper)}
+.fl-pass{list-style:none;margin:var(--s2) 0 0;padding:0;display:grid;gap:0}
+.fl-pass li{border-top:1px solid var(--line-d);padding:14px 0;display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;color:var(--bone)}
+.fl-pass b{font:var(--label);color:var(--dust);padding-top:3px}
+
+/* —— how it works: the one light room, read like the poster —— */
+.fl-how{background:var(--bone);color:var(--asphalt);padding-block:var(--sec)}
+.fl-how h2{color:var(--asphalt)}
+.fl-rules{list-style:none;margin:var(--s4) 0 0;padding:0}
+.fl-rules li{border-top:2px solid var(--asphalt);padding:var(--s3) 0;display:grid;gap:6px;position:relative}
+.fl-rules b{font:900 clamp(30px,4.2vw,60px)/1 var(--display);letter-spacing:-.035em}
+.fl-rules span{max-width:36em;font-size:var(--fs-body);line-height:1.5;color:var(--mute)}
+.fl-rule-sticker{padding-right:clamp(0px,14vw,170px)}
+.fl-sticker{display:block;width:120px;height:120px;margin-top:8px;background:var(--creosote);color:var(--paper);
+  font:900 30px/.9 var(--display);font-style:normal;letter-spacing:-.02em;padding:14px;box-sizing:border-box}
+@media (min-width:760px){
+  .fl-sticker{position:absolute;right:0;top:var(--s3);width:150px;height:150px;font-size:36px;margin:0}
+}
+
+/* —— why the name, the basics —— */
+.fl-why{padding-block:var(--sec)}
+.fl-why-in{display:grid;gap:var(--s3)}
+.fl-why-body p{margin:0 0 var(--s2);max-width:34em;font-size:var(--fs-body);line-height:1.6;color:var(--bone)}
+@media (min-width:900px){.fl-why-in{grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:var(--s5)}}
+.fl-basics{padding-bottom:var(--sec)}
+.fl-facts{margin:var(--s3) 0 0;display:grid;gap:0}
+.fl-facts div{border-top:1px solid var(--line-d);padding:16px 0;display:grid;gap:4px}
+.fl-facts dt{font:var(--label);color:var(--dust)}
+.fl-facts dd{margin:0;font-size:var(--fs-body);line-height:1.5;color:var(--bone)}
+@media (min-width:760px){
+  .fl-facts{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--s5)}
+  .fl-facts div{grid-template-columns:120px minmax(0,1fr);gap:16px}
+}
+/* the sources line and the way back sit on the night ground, so they take the light inks */
+.fl-page .fn-note{color:var(--dust)}
+.fl-page .fn-note a,.fl-page .fn-back a{color:var(--bone)}
+.fl-page .fn-back{color:var(--dust)}
+.fl-page .pledge{border-top:1px solid var(--line-d)}
+/* —— the one stop is the bigger plate; leaders run from the start, the finish and the circuit to their points —— */
+.fl-lead{fill:none;stroke:var(--dust);stroke-width:3}
+.fl-dot{fill:var(--paper)}
+.fl-plate--stop{width:44px;height:44px;font-size:22px;background:var(--paper)}
+.fl-plate--stop::after{inset:0}
+.fl-plate--stop:hover,.fl-plate--stop.is-on{background:var(--creosote-lift)}
+.fl-stop--stop .fl-stop-n{background:var(--paper)}
+}

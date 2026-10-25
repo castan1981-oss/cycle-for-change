@@ -1,0 +1,80 @@
+[
+ {
+  "slug": "phoenix-az-cycle-for-change-fruit-loop",
+  "name": "The Fruit Loop",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "city": "Phoenix",
+  "neighborhood": "Roosevelt Row",
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 33.46,
+  "lng": -112.07395,
+  "geo_precision": "start",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "social"
+  ],
+  "schedule": "Every Friday, starting Fri, Dec 11, 2026. Meet 5:30 pm at the rainbow crosswalk at Central Ave and Portland St; it rolls at 6:00 pm and finishes about 7:45 pm three blocks south, over coffee.",
+  "days": [
+   "fri"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "first_ride": "2026-12-11",
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "The rainbow crosswalk at Central Ave and Portland St",
+   "address": "N Central Ave and W Portland St, Phoenix, AZ 85004"
+  },
+  "distance_km": null,
+  "distance_miles": "~15",
+  "duration": "about 1 hour 45 minutes, with one stop",
+  "duration_min": 105,
+  "pace": "About 10 to 12 mph, flat. Nobody gets dropped.",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Cycle for Change",
+   "type": "informal"
+  },
+  "founded_year": 2026,
+  "founded_note": "The first ride is Fri, Dec 11, 2026.",
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Lights are required: white on the front, red on the back. It's dark by the start from fall to spring. 18 and up. No sign-up. Nobody is in a photo unless they take a \"Photos OK\" sticker at the start.",
+  "description": "A queer social night ride through Phoenix's history, hosted by Robert Castan of Cycle for Change. About 15 flat miles from the 2018 rainbow crosswalk at Central and Portland: down Washington Street on the route of the first Pride march in 1981, through Encanto and Willo to the Melrose Curve (the one stop), Steele Indian School Park, the lit Grand Canal path and Coronado, and back on the old Fruit Loop bar circuit to coffee. No-drop, free.",
+  "links": {
+   "website": "https://cycleforchange.org/fruitloop/",
+   "instagram": "https://www.instagram.com/cycl_eforchange",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "lgbtq",
+   "no-drop",
+   "beginner"
+  ],
+  "sources": [
+   "https://cycleforchange.org/fruitloop/"
+  ],
+  "verified_on": "2026-10-23",
+  "last_seen": "2026-10-23",
+  "evidence": "Robert Castan, the host, made it weekly on Oct 25, 2026: every Friday from Fri, Dec 11, 2026, meet 5:30 pm, roll 6:00 pm, coffee about 7:45 pm.",
+  "confidence": "medium",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://cycleforchange.org/fruitloop/",
+   "feed_url": null,
+   "notes": "Robert's own ride. Re-check by asking him; /fruitloop/ is its page."
+  }
+ }
+]

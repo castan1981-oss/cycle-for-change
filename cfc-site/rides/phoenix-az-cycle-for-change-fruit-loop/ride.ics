@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:phoenix-az-cycle-for-change-fruit-loop@cycleforchange.org
+DTSTAMP:20261025T000000Z
+DTSTART;TZID=America/Phoenix:20261211T180000
+DTEND;TZID=America/Phoenix:20261211T194500
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20270324T235959Z
+SUMMARY:The Fruit Loop — Phoenix\, AZ
+LOCATION:The rainbow crosswalk at Central Ave and Portland St\, N Central
+  Ave and W Portland St\, Phoenix\, AZ 85004
+DESCRIPTION:Pace: About 10 to 12 mph\, flat. Nobody gets dropped.\nNo-dro
+ p.\nSchedule: Every Friday\, starting Fri\, Dec 11\, 2026. Meet 5:30 pm 
+ at the rainbow crosswalk at Central Ave and Portland St; it rolls at 6:0
+ 0 pm and finishes about 7:45 pm three blocks south\, over coffee.\nConfi
+ rm with the host before you go.\nhttps://cycleforchange.org/rides/phoeni
+ x-az-cycle-for-change-fruit-loop/
+URL:https://cycleforchange.org/rides/phoenix-az-cycle-for-change-fruit-lo
+ op/
+END:VEVENT
+END:VCALENDAR

@@ -97,6 +97,42 @@
   status = 302
   force = true
 
+# Oct 23, 2026: The Fruit Loop (Robert's queer First Friday night ride, from Dec 4, 2026). /fl is the poster's
+# QR code (tagged so print shows up in GA4); /fruit-loop is the spelled-out link people type.
+[[redirects]]
+  from = "/fl"
+  to = "/fruitloop/?utm_source=poster&utm_medium=print&utm_campaign=fruit-loop"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/fruit-loop"
+  to = "/fruitloop/"
+  status = 301
+  force = true
+
+# /fruity is the handout stickers' QR code (tagged sticker, so stickers and posters read apart in GA4).
+[[redirects]]
+  from = "/fruity"
+  to = "/fruitloop/?utm_source=sticker&utm_medium=print&utm_campaign=fruit-loop"
+  status = 302
+  force = true
+
+# fruitloopphx.com is the Fruit Loop's own address (Robert, Oct 23, 2026: "its own address"). It's a domain alias on
+# this Netlify site; every path on it lands on the one page, so there's one URL to keep up. No UTM tags: a shared link
+# keeps its real referrer (Instagram, a text) in GA4. Works once the domain is bought and added as an alias.
+[[redirects]]
+  from = "https://fruitloopphx.com/*"
+  to = "https://cycleforchange.org/fruitloop/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.fruitloopphx.com/*"
+  to = "https://cycleforchange.org/fruitloop/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/shopride"
   to = "/rides/scottsdale-az-bicycle-haus-friday-shop-ride/#reviews"

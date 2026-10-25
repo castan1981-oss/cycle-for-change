@@ -217,6 +217,13 @@ function nextOccurrence(r, from = NOW) {
   // Oct 6, 2026: a ride on its seasonal break has no next ride (it showed "Next ride Tue, Oct 6" above "PAUSED FOR
   // THE WINTER"), and a monthly ride with no week-of-month rule is posted date by date — it is not weekly.
   if (onBreak(r) || ruleless(r)) return null;
+  // Oct 23, 2026: a ride that hasn't started yet (`first_ride`, the host's first date) promises nothing before it —
+  // The Fruit Loop rides first Fridays from Dec 4, 2026, so it must never show Nov 6.
+  if (r.first_ride && /^\d{4}-\d{2}-\d{2}$/.test(r.first_ride)) {
+    const [fy, fm, fd] = r.first_ride.split("-").map(Number);
+    const f = zoned(fy, fm, fd, 0, 0, r.tz);
+    if (f > from) from = f;
+  }
   // the time in force on that day: start_hhmm, or the host's table of changes (start_times, S.startOn)
   const at = (y, mo, d) => { const [hh, mm] = S.startOn(r, ymdOf(y, mo, d)).split(":").map(Number); return zoned(y, mo, d, hh, mm, r.tz); };
   const p = partsIn(from, r.tz);
@@ -881,7 +888,7 @@ function hubJson(rides) {
 // (They used to read rides.json, which also holds rides we've taken off the lists.)
 function liveJson(rides) {
   const keep = ["slug", "name", "kind", "city", "state", "country", "region", "neighborhood", "lat", "lng", "tz", "schedule", "days", "time_local",
-    "start_hhmm", "start_times", "frequency", "monthly_rule", "season_months", "start_location", "distance_km", "distance_miles", "duration_min", "pace", "drop_policy",
+    "start_hhmm", "start_times", "frequency", "monthly_rule", "first_ride", "season_months", "start_location", "distance_km", "distance_miles", "duration_min", "pace", "drop_policy",
     "discipline", "confidence"];
   // Oct 6, 2026: `status`; a ride on its seasonal break carries no start time (so /tonight/ never shows it rolling);
   // a monthly ride with no week rule carries the host's dates still ahead (`dates`) and `next` (ISO, or null).
