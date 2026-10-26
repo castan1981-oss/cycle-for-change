@@ -5,17 +5,19 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:cherry-valley-il-bbsc-monday-evening-ride@cycleforchange.org
-DTSTAMP:20261001T000000Z
-DTSTART;TZID=America/Chicago:20261026T163000
-DTEND;TZID=America/Chicago:20261026T183000
+DTSTAMP:20261026T000000Z
+DTSTART;TZID=America/Chicago:20261026T160000
+DTEND;TZID=America/Chicago:20261026T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20261130T235959Z
 SUMMARY:Blackhawk Monday Evening Ride — Cherry Valley\, IL
 LOCATION:City parking lot across from Baumann Park
 DESCRIPTION:Pace: leisure (10–13 mph); a fast group may go separately.\
- nSchedule: Mondays\, 4:30 pm in October (5:30 pm in spring\, 6:00 pm Jun
- e through August)\, March to November\, from Baumann Park.\nConfirm with
-  the host before you go.\nhttps://cycleforchange.org/rides/cherry-valley
- -il-bbsc-monday-evening-ride/
+ nSchedule: Mondays\, March to November\, from the city parking lot acros
+ s from Baumann Park\, Cherry Valley; start time changes seasonally — 5
+ :30 pm in spring\, 6:00 pm in summer\, 4:00 pm in late October (club cal
+ endar marks it 'earlier start time').\nConfirm with the host before you 
+ go.\nhttps://cycleforchange.org/rides/cherry-valley-il-bbsc-monday-eveni
+ ng-ride/
 URL:https://cycleforchange.org/rides/cherry-valley-il-bbsc-monday-evening
  -ride/
 END:VEVENT
