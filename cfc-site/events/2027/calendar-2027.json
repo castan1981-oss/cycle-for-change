@@ -1,7 +1,7 @@
 {
- "updated": "2026-10-06",
+ "updated": "2026-10-21",
  "source": "Compiled Sept 15–16, 2026 from organizer sites, BikeReg, USA Cycling, Life Time, the National MS Society, the ADA and GranFondoGuide; per-event URLs in sources.",
- "generated": "2026-10-25",
+ "generated": "2026-10-26",
  "url": "https://cycleforchange.org/events/2027/",
  "events": [
   {
@@ -189,8 +189,8 @@
    "subtype": "'kookiest' mixed-surface race",
    "start": "2027-02-06",
    "end": "2027-02-06",
-   "date_status": "projected",
-   "date_note": "",
+   "date_status": "confirmed",
+   "date_note": "The organizer lists Saturday, February 6, 2027. The 2026 ride was February 7.",
    "city": "Bakersfield (Pyles Boys Camp)",
    "state": "CA",
    "region": "California",
@@ -204,13 +204,14 @@
    "fundraising_min": "",
    "organizer": "Ames Works (Sam Ames)",
    "url": "https://rockcobbler.com/",
-   "reg_status": "~600–760 riders.",
+   "reg_status": "Registration is on Movemint. About 600-760 riders.",
    "lottery": "No lottery.",
    "series": "",
    "cost": "",
    "qualification": "",
    "notes": "Route revealed race week.",
    "sources": [
+    "https://rockcobbler.com/",
     "https://www.gravelcalendar.com/events/the-rock-cobbler",
     "https://strambecco.com/event/rock-cobbler/",
     "https://gravelgodcycling.com/race/rock-cobbler/"
@@ -226,7 +227,7 @@
    "start": "2027-02-06",
    "end": "2027-02-06",
    "date_status": "confirmed",
-   "date_note": "Organizer: Feb 5-6, 2027 (Friday check-in/expo Feb 5; ride Saturday Feb 6, 2027).",
+   "date_note": "The organizer lists Feb 5-6, 2027: check-in and vendor expo Friday, Feb 5; the ride Saturday, Feb 6.",
    "city": "Palm Springs",
    "state": "CA",
    "region": "California",
@@ -249,7 +250,8 @@
    "sources": [
     "https://tourdepalmsprings.com/event-info/",
     "https://tourdepalmsprings.com/registration/",
-    "https://www.granfondoguide.com/Events/Index/2618/tour-de-palm-springs"
+    "https://www.granfondoguide.com/Events/Index/2618/tour-de-palm-springs",
+    "https://www.nbcpalmsprings.com/2026/07/27/registration-opens-for-29th-annual-tour-de-palm-springs"
    ],
    "slug": "tour-de-palm-springs",
    "riding": true
@@ -331,7 +333,7 @@
    "start": "2027-02-12",
    "end": "2027-02-14",
    "date_status": "confirmed",
-   "date_note": "Epic Rides' site (checked Oct 1, 2026) lists Feb 12-14, 2027 and shows 'Registration Now Open!'",
+   "date_note": "",
    "city": "Willow Springs Ranch, north of Tucson",
    "state": "AZ",
    "region": "Southwest",
@@ -437,7 +439,7 @@
    "start": "2027-02-13",
    "end": "2027-02-13",
    "date_status": "confirmed",
-   "date_note": "Planet Ultra homepage and calendar list Feb 13, 2027 (Lake Forest).",
+   "date_note": "Planet Ultra lists Saturday, February 13, 2027, in Lake Forest.",
    "city": "Lake Forest / Irvine",
    "state": "CA",
    "region": "California",
@@ -456,7 +458,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Some ride calendars show February 20; the organizer's date is February 13.",
    "sources": [
     "https://planetultra.com/",
     "https://planetultra.com/calendar/",
@@ -476,7 +478,7 @@
    "date_note": "diabetes.org: Saturday Feb 13, 2027, Goodyear Ballpark.",
    "city": "Goodyear (Goodyear Ballpark)",
    "state": "AZ",
-   "region": "",
+   "region": "Southwest",
    "start_city": "",
    "end_city": "",
    "days": 1,
@@ -507,7 +509,7 @@
    "start": "2027-02-18",
    "end": "2027-02-21",
    "date_status": "confirmed",
-   "date_note": "Organizer site (tucsonbicycleclassic.com, checked Oct 1, 2026): February 18-21, 2027.",
+   "date_note": "Organizer site (tucsonbicycleclassic.com): February 18-21, 2027.",
    "city": "Tucson",
    "state": "AZ",
    "region": "Southwest",
@@ -644,7 +646,7 @@
    "start": "2027-02-28",
    "end": "2027-02-28",
    "date_status": "confirmed",
-   "date_note": "Grasshopper Adventure Series site (checked Oct 1, 2026) lists Huffmaster on Feb. 28, 2027.",
+   "date_note": "Grasshopper Adventure Series site lists Huffmaster on Feb. 28, 2027.",
    "city": "Maxwell",
    "state": "CA",
    "region": "California",
@@ -741,6 +743,42 @@
    "riding": false
   },
   {
+   "id": 24,
+   "name": "Belgian Waffle Ride Arizona",
+   "category": "Gravel",
+   "subtype": "mixed-surface 'unroad' race",
+   "start": "2027-03-05",
+   "end": "2027-03-06",
+   "date_status": "confirmed",
+   "date_note": "The organizer lists March 5-6, 2027; race day is Saturday, March 6, from the McDowell Mountain Park staging area in Fountain Hills.",
+   "city": "Fountain Hills (McDowell Mountain Park)",
+   "state": "AZ",
+   "region": "Southwest",
+   "start_city": "",
+   "end_city": "",
+   "days": 2,
+   "distances": "2026 course: Waffle 101 mi, Wafer 67 mi, Wanna 42 mi; 2027 routes to be announced",
+   "elevation": "",
+   "cause": "",
+   "beneficiary": "",
+   "fundraising_min": "",
+   "organizer": "Belgian Waffle Ride / Monuments of Cycling",
+   "url": "https://www.belgianwaffleride.bike/pages/belgian-waffle-ride-az",
+   "reg_status": "Registration is on BikeReg (BWR AZ 2027); 2027 entry prices not posted yet.",
+   "lottery": "No lottery.",
+   "series": "Belgian Waffle Ride (Quad-Tripel Crown of Gravel; 2027 series opener)",
+   "cost": "",
+   "qualification": "",
+   "notes": "Fifth edition in 2027.",
+   "sources": [
+    "https://www.belgianwaffleride.bike/pages/belgian-waffle-ride-az",
+    "https://www.belgianwaffleride.bike/pages/future-dates",
+    "https://strambecco.com/organizer/belgian-waffle-ride-series/"
+   ],
+   "slug": "belgian-waffle-ride-arizona",
+   "riding": true
+  },
+  {
    "id": 21,
    "name": "Bike the US for MS - Florida Keys",
    "category": "Charity ride",
@@ -782,7 +820,7 @@
    "start": "2027-03-06",
    "end": "2027-03-06",
    "date_status": "confirmed",
-   "date_note": "BikeSignup and Planet Ultra calendar: Saturday March 6, 2027.",
+   "date_note": "BikeSignup and Planet Ultra list Saturday, March 6, 2027.",
    "city": "Buellton",
    "state": "CA",
    "region": "California",
@@ -796,7 +834,7 @@
    "fundraising_min": "",
    "organizer": "Planet Ultra Inc",
    "url": "https://www.bikesignup.com/Race/CA/Buellton/SolvangCentury",
-   "reg_status": "Opens Oct 30-31, 2026; $144-$165; capped at 1,000 riders",
+   "reg_status": "Registration opens Oct 31, 2026 at 12:00 a.m. PT on BikeSignup: century $165.30, metric $154.70, half $144.10 (fees included). Capped at 1,000 riders.",
    "lottery": "",
    "series": "",
    "cost": "",
@@ -845,42 +883,6 @@
    "riding": false
   },
   {
-   "id": 24,
-   "name": "Belgian Waffle Ride Arizona",
-   "category": "Gravel",
-   "subtype": "mixed-surface 'unroad' race",
-   "start": "2027-03-07",
-   "end": "2027-03-07",
-   "date_status": "confirmed",
-   "date_note": "BWR 'Future Dates' page: Arizona – March 7, 2027 (a Sunday; the weekend of Mar 6–7 likely hosts expo/shorter events).",
-   "city": "Cave Creek / Fountain Hills (McDowell Mountain area)",
-   "state": "AZ",
-   "region": "Southwest",
-   "start_city": "",
-   "end_city": "",
-   "days": 2,
-   "distances": "Waffle ~103 mi, Wafer ~68 mi, Wanna ~33 mi",
-   "elevation": "",
-   "cause": "",
-   "beneficiary": "",
-   "fundraising_min": "",
-   "organizer": "Belgian Waffle Ride / Monuments of Cycling",
-   "url": "https://www.belgianwaffleride.bike/pages/belgian-waffle-ride-az",
-   "reg_status": "Registration on BikeReg.",
-   "lottery": "No lottery.",
-   "series": "Belgian Waffle Ride (Quad-Tripel Crown of Gravel; 2027 series opener)",
-   "cost": "",
-   "qualification": "",
-   "notes": "Fifth edition in 2027.",
-   "sources": [
-    "https://www.belgianwaffleride.bike/pages/future-dates",
-    "https://www.belgianwaffleride.bike/pages/belgian-waffle-ride-az",
-    "https://strambecco.com/organizer/belgian-waffle-ride-series/"
-   ],
-   "slug": "belgian-waffle-ride-arizona",
-   "riding": false
-  },
-  {
    "id": 25,
    "name": "The Mid South",
    "category": "Gravel",
@@ -914,7 +916,7 @@
     "https://www.movemint.cc/events/the_mid_south_2027"
    ],
    "slug": "the-mid-south",
-   "riding": false
+   "riding": true
   },
   {
    "id": 26,
@@ -958,8 +960,8 @@
    "subtype": "XC and short-track weekend with stage race and vintage event",
    "start": "2027-03-12",
    "end": "2027-03-14",
-   "date_status": "projected",
-   "date_note": "Organizer site says 'Second Weekend in March' at McDowell Mountain Park, Fountain Hills. Exact 2027 dates not yet posted by the organizer (checked Oct 1, 2026).",
+   "date_status": "confirmed",
+   "date_note": "The organizer's RunSignup page lists March 12-14, 2027 (Friday to Sunday) at McDowell Mountain Regional Park.",
    "city": "Fountain Hills (McDowell Mountain Park)",
    "state": "AZ",
    "region": "Southwest",
@@ -973,7 +975,7 @@
    "fundraising_min": "",
    "organizer": "Cactus Cup",
    "url": "https://thecactuscup.com/stage-race/",
-   "reg_status": "Registration through RunSignUp; the organizer page listed 2027 pricing as 'coming August 2026' and none was shown on Oct 1, 2026. No day-of registration.",
+   "reg_status": "Sign-up is live on RunSignup: two-day Pro Cup $150, Cactus Cup $165, Mini Cup $165; XC 40 or 25 miles $95; XC 10 miles $50; XC Sprint $75; Gravel Shakeout $20. No day-of registration.",
    "lottery": "",
    "series": "",
    "cost": "",
@@ -981,6 +983,7 @@
    "notes": "$7,000 stage-race purse.",
    "sources": [
     "https://thecactuscup.com/stage-race/",
+    "https://runsignup.com/Race/AZ/FountainHills/CactusCup",
     "https://findarace.com/us/cycling/arizona"
    ],
    "slug": "specialized-cactus-cup",
@@ -994,7 +997,7 @@
    "start": "2027-03-13",
    "end": "2027-03-16",
    "date_status": "confirmed",
-   "date_note": "Skinny Tire Events' site (checked Oct 1, 2026): 'March 13th-16th, 2027' with 4-day and 2-day options.",
+   "date_note": "Skinny Tire Events' site: 'March 13th-16th, 2027' with 4-day and 2-day options.",
    "city": "Moab",
    "state": "UT",
    "region": "Mountain",
@@ -1008,7 +1011,7 @@
    "fundraising_min": "",
    "organizer": "Skinny Tire Events",
    "url": "http://skinnytireevents.com",
-   "reg_status": "2027 registration not yet shown on the organizer page (checked Oct 1, 2026).",
+   "reg_status": "2027 registration not open yet on the organizer page.",
    "lottery": "",
    "series": "",
    "cost": "not listed",
@@ -1133,7 +1136,7 @@
    "start": "2027-03-20",
    "end": "2027-03-20",
    "date_status": "confirmed",
-   "date_note": "Grasshopper Adventure Series site (checked Oct 1, 2026) lists King Ridge on Mar. 20, 2027.",
+   "date_note": "Grasshopper Adventure Series site lists King Ridge on Mar. 20, 2027.",
    "city": "Monte Rio",
    "state": "CA",
    "region": "California",
@@ -1432,7 +1435,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "The date is the organizer's; the other details aren't checked with them yet.",
    "sources": [
     "https://www.floridabicycling.com/event/tour-de-cure/",
     "https://diabetes.org/event/2027-tour-de-curer-florida"
@@ -1553,7 +1556,7 @@
    "start": "2027-04-10",
    "end": "2027-04-10",
    "date_status": "confirmed",
-   "date_note": "Grasshopper Adventure Series site (checked Oct 1, 2026) lists Jackson Forest on Apr. 10, 2027.",
+   "date_note": "Grasshopper Adventure Series site lists Jackson Forest on Apr. 10, 2027.",
    "city": "Caspar",
    "state": "CA",
    "region": "California",
@@ -1817,7 +1820,7 @@
    "series": "Life Time Grand Prix",
    "cost": "",
    "qualification": "",
-   "notes": "Announced Aug 12, 2026. Riders must start at least 6 of 7 events; best 6 results count. The Rad Dirt Fest returns to the series in 2027. Prize purse for 2027 not stated in the announcement (2026 purse was $250,000). Exact per-round dates come from the individual event sites, not the series announcement.",
+   "notes": "Announced Aug 12, 2026. Riders must start at least 6 of 7 events; best 6 results count. The Rad Dirt Fest returns to the series in 2027. Prize purse for 2027 not stated in the announcement (2026 purse was $250,000). Round dates come from each event's own site.",
    "sources": [
     "https://www.pinkbike.com/news/life-time-grand-prix-announces-new-performance-driven-qualification-format-and-reveals-2027-calendar.html",
     "https://endurance.biz/2026/industry-news/life-time-grand-prix-unveils-2027-qualification-format-and-calendar/",
@@ -1860,7 +1863,7 @@
     "https://strambecco.com/event/sea-otter-classic/"
    ],
    "slug": "life-time-sea-otter-classic",
-   "riding": false
+   "riding": true
   },
   {
    "id": 50,
@@ -2167,7 +2170,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "The date is the organizer's; the other details aren't checked with them yet.",
    "sources": [
     "https://findarace.com/us/cycling/california",
     "https://socalcycling.com/fun-rides-tours/"
@@ -2643,7 +2646,7 @@
    "date_note": "diabetes.org: Saturday April 24, 2027; venue not yet listed.",
    "city": "Venue TBA (historically Reston, VA)",
    "state": "VA",
-   "region": "",
+   "region": "Mid-Atlantic",
    "start_city": "",
    "end_city": "",
    "days": 1,
@@ -2734,41 +2737,6 @@
     "https://www.belgianwaffleride.bike/pages/belgian-waffle-ride-ca"
    ],
    "slug": "belgian-waffle-ride-california",
-   "riding": false
-  },
-  {
-   "id": 76,
-   "name": "Gorge Gravel Grinder",
-   "category": "Gravel",
-   "subtype": "Oregon Gravel Grinder Series opener",
-   "start": "2027-04-25",
-   "end": "2027-04-25",
-   "date_status": "projected",
-   "date_note": "2026 edition Apr 26, 2026.",
-   "city": "Dufur",
-   "state": "OR",
-   "region": "Pacific NW",
-   "start_city": "",
-   "end_city": "",
-   "days": 1,
-   "distances": "Big Grind 93 mi / 6,100 ft; Medium 67 mi; Small 52 mi",
-   "elevation": "",
-   "cause": "",
-   "beneficiary": "",
-   "fundraising_min": "",
-   "organizer": "Breakaway Promotions",
-   "url": "https://www.oregongravelgrinder.com/gorge-gravel-grinder",
-   "reg_status": "",
-   "lottery": "No lottery.",
-   "series": "Oregon Gravel Grinder Series",
-   "cost": "",
-   "qualification": "",
-   "notes": "",
-   "sources": [
-    "https://strambecco.com/event/gorge-gravel-grinder/",
-    "https://strambecco.com/organizer/oregon-gravel-grinder-series/"
-   ],
-   "slug": "gorge-gravel-grinder",
    "riding": false
   },
   {
@@ -2919,7 +2887,7 @@
    "start": "2027-04-25",
    "end": "2027-04-25",
    "date_status": "confirmed",
-   "date_note": "Official GFNS page: 'APRIL 25, 2027' (2026 was April 19).",
+   "date_note": "The Gran Fondo National Series lists April 25, 2027 (2026 was April 19).",
    "city": "Helen",
    "state": "GA",
    "region": "Southeast",
@@ -2954,7 +2922,7 @@
    "start": "2027-04-28",
    "end": "2027-05-02",
    "date_status": "confirmed",
-   "date_note": "Organizer site (checked Oct 1, 2026): 'Tour of the Gila 2027 Race Dates: April 28th-May 2nd' (Wed-Sun). 2026 edition was Apr 29-May 3.",
+   "date_note": "Organizer site: 'Tour of the Gila 2027 Race Dates: April 28th-May 2nd' (Wed-Sun). 2026 edition was Apr 29-May 3.",
    "city": "Silver City",
    "state": "NM",
    "region": "Southwest",
@@ -3059,7 +3027,7 @@
    "start": "2027-04-30",
    "end": "2027-05-02",
    "date_status": "confirmed",
-   "date_note": "Epic Rides' event page (checked Oct 1, 2026): April 30 - May 2, 2027, Prescott.",
+   "date_note": "Epic Rides lists April 30 to May 2, 2027, in Prescott.",
    "city": "Prescott",
    "state": "AZ",
    "region": "Southwest",
@@ -3073,13 +3041,14 @@
    "fundraising_min": "",
    "organizer": "Epic Rides (Todd Sadow)",
    "url": "https://epicrides.com/events/whiskey-off-road/",
-   "reg_status": "Registration opens Black Friday, Nov 27, 2026 at 6:00 a.m. Arizona time; a pre-registration notify list is open. ~2,000 riders.",
+   "reg_status": "Registration opens Friday, Nov 27, 2026 (Black Friday) at 6 a.m. Arizona time; a pre-registration alert list is open. About 2,000 riders.",
    "lottery": "No lottery.",
    "series": "Epic Rides",
    "cost": "",
    "qualification": "",
    "notes": "",
    "sources": [
+    "https://epicrides.com/events/whiskey-off-road/event-guide/",
     "https://strambecco.com/event/whiskey-off-road/",
     "https://gravelgodcycling.com/race/whiskey-off-road/",
     "https://epicrides.com/events/whiskey-off-road/"
@@ -3200,7 +3169,7 @@
    "start": "2027-05-01",
    "end": "2027-05-03",
    "date_status": "projected",
-   "date_note": "",
+   "date_note": "Placed on May 1-3, 2027, the same weekend as the 2026 edition (May 2-3).",
    "city": "Moab",
    "state": "UT",
    "region": "Mountain",
@@ -3219,7 +3188,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.cyclingwest.com/event-calendars/utah-road-tours-and-century-ride/"
    ],
@@ -3366,6 +3335,42 @@
    "riding": false
   },
   {
+   "id": 76,
+   "name": "Gorge Gravel Grinder",
+   "category": "Gravel",
+   "subtype": "Oregon Gravel Grinder Series opener",
+   "start": "2027-05-02",
+   "end": "2027-05-02",
+   "date_status": "confirmed",
+   "date_note": "The organizer lists Sunday, May 2, 2027, in Dufur. The 2026 ride was April 26.",
+   "city": "Dufur",
+   "state": "OR",
+   "region": "Pacific NW",
+   "start_city": "",
+   "end_city": "",
+   "days": 1,
+   "distances": "45 to 100 miles, 3,500 to 8,300 ft of climbing",
+   "elevation": "",
+   "cause": "",
+   "beneficiary": "",
+   "fundraising_min": "",
+   "organizer": "Breakaway Promotions",
+   "url": "https://www.oregongravelgrinder.com/gorge-gravel-grinder",
+   "reg_status": "Registration is open on BikeReg.",
+   "lottery": "No lottery.",
+   "series": "Oregon Gravel Grinder Series",
+   "cost": "",
+   "qualification": "",
+   "notes": "All routes head west from Dufur into the Cascade foothills and Mount Hood National Forest. Camping at Dufur City Park.",
+   "sources": [
+    "https://www.oregongravelgrinder.com/gorge-gravel-grinder",
+    "https://strambecco.com/event/gorge-gravel-grinder/",
+    "https://strambecco.com/organizer/oregon-gravel-grinder-series/"
+   ],
+   "slug": "gorge-gravel-grinder",
+   "riding": false
+  },
+  {
    "id": 93,
    "name": "Grizzly Peak Century",
    "category": "Road",
@@ -3497,12 +3502,47 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Start McDonald District Park; 4 SAG stops incl. pie at the top.",
+   "notes": "Start McDonald District Park; 4 SAG stops incl. pie at the top. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.bikegaba.org/content.aspx?page_id=22&club_id=307669&module_id=733579",
     "https://www.granfondoguide.com/Events/Index/4706/mt-lemmon-hill-climb-weekend"
    ],
    "slug": "mt-lemmon-hill-climb",
+   "riding": false
+  },
+  {
+   "id": 604,
+   "name": "Santa Fe Century",
+   "category": "Road",
+   "subtype": "classic northern New Mexico century (with gravel fondo)",
+   "start": "2027-05-07",
+   "end": "2027-05-09",
+   "date_status": "confirmed",
+   "date_note": "The organizer lists May 7-9, 2027, the 41st Santa Fe Century.",
+   "city": "Santa Fe",
+   "state": "NM",
+   "region": "Southwest",
+   "start_city": "",
+   "end_city": "",
+   "days": 3,
+   "distances": "Road century and gran fondo options; Saturday gravel: Caja Gravel (55 mi) and Cajita (25 mi) on the Caja del Rio",
+   "elevation": "",
+   "cause": "",
+   "beneficiary": "",
+   "fundraising_min": "",
+   "organizer": "Santa Fe Century",
+   "url": "https://www.santafecentury.com/",
+   "reg_status": "Registration is on BikeReg. First responders and veterans get 10% off with code HEROES2027.",
+   "lottery": "",
+   "series": "",
+   "cost": "",
+   "qualification": "",
+   "notes": "Santa Fe Brewing Company is the home base for the weekend.",
+   "sources": [
+    "https://www.santafecentury.com/",
+    "https://www.cyclingwest.com/event-calendars/regional-road-tours-and-century-rides/"
+   ],
+   "slug": "santa-fe-century",
    "riding": false
   },
   {
@@ -3574,40 +3614,6 @@
    "riding": false
   },
   {
-   "id": 604,
-   "name": "Santa Fe Century",
-   "category": "Road",
-   "subtype": "classic northern New Mexico century (with gravel fondo)",
-   "start": "2027-05-08",
-   "end": "2027-05-09",
-   "date_status": "projected",
-   "date_note": "",
-   "city": "Santa Fe",
-   "state": "NM",
-   "region": "Southwest",
-   "start_city": "",
-   "end_city": "",
-   "days": 2,
-   "distances": "Century, gran fondo and half-century options; road and gravel events",
-   "elevation": "",
-   "cause": "",
-   "beneficiary": "",
-   "fundraising_min": "",
-   "organizer": "Santa Fe Century",
-   "url": "",
-   "reg_status": "",
-   "lottery": "",
-   "series": "",
-   "cost": "",
-   "qualification": "",
-   "notes": "",
-   "sources": [
-    "https://www.cyclingwest.com/event-calendars/regional-road-tours-and-century-rides/"
-   ],
-   "slug": "santa-fe-century",
-   "riding": false
-  },
-  {
    "id": 99,
    "name": "Scenic City Cyclo",
    "category": "Road",
@@ -3634,7 +3640,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "The date is the organizer's; the other details aren't checked with them yet.",
    "sources": [
     "https://findarace.com/us/events/scenic-city-cyclo",
     "https://findarace.com/us/cycling/tennessee"
@@ -3720,7 +3726,7 @@
    "start": "2027-05-13",
    "end": "2027-05-16",
    "date_status": "confirmed",
-   "date_note": "Event page (charity.pledgeit.org/NCAC, checked Oct 1, 2026): May 13-16, 2027. Day 1 starts at Beals Point with basecamp at the Yuba-Sutter Fairgrounds for Days 1-3; Day 4 returns to the Capitol steps in Sacramento.",
+   "date_note": "Event page (charity.pledgeit.org/NCAC): May 13-16, 2027. Day 1 starts at Beals Point with basecamp at the Yuba-Sutter Fairgrounds for Days 1-3; Day 4 returns to the Capitol steps in Sacramento.",
    "city": "Sacramento (Beals Point, Folsom Lake)",
    "state": "CA",
    "region": "California",
@@ -3778,6 +3784,42 @@
     "https://bikepacking.com/event/2026-pinyons-and-pines/"
    ],
    "slug": "pinyons-and-pines",
+   "riding": false
+  },
+  {
+   "id": 170,
+   "name": "Belgian Waffle Ride Utah",
+   "category": "Gravel",
+   "subtype": "mixed-surface 'unroad' race",
+   "start": "2027-05-14",
+   "end": "2027-05-15",
+   "date_status": "confirmed",
+   "date_note": "The organizer lists May 14-15, 2027, in Cedar City, about four weeks earlier than 2026 (June 12-13).",
+   "city": "Cedar City",
+   "state": "UT",
+   "region": "Mountain",
+   "start_city": "",
+   "end_city": "",
+   "days": 2,
+   "distances": "Waffle 117 mi, Wafer 66.5 mi, Wanna 27 mi (2026)",
+   "elevation": "",
+   "cause": "",
+   "beneficiary": "",
+   "fundraising_min": "",
+   "organizer": "Belgian Waffle Ride / Monuments of Cycling",
+   "url": "https://belgianwaffleride.bike/cedarcity",
+   "reg_status": "Registration is on BikeReg.",
+   "lottery": "No lottery.",
+   "series": "Belgian Waffle Ride (Quad-Tripel Crown of Gravel)",
+   "cost": "",
+   "qualification": "",
+   "notes": "Seventh edition was 2026.",
+   "sources": [
+    "https://belgianwaffleride.bike/cedarcity",
+    "https://www.belgianwaffleride.bike/pages/utah",
+    "https://www.belgianwaffleride.bike/pages/future-dates"
+   ],
+   "slug": "belgian-waffle-ride-utah",
    "riding": false
   },
   {
@@ -3843,7 +3885,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Also a UCI Gran Fondo World Series qualifier in recent years.",
+   "notes": "Also a UCI Gran Fondo World Series qualifier in recent years. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://strambecco.com/event/cheaha-challenge-gran-fondo/",
     "https://www.granfondonationalseries.com/partner-events-all"
@@ -3913,7 +3955,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.cyclingwest.com/event-calendars/utah-road-tours-and-century-ride/"
    ],
@@ -3924,7 +3966,7 @@
    "id": 106,
    "name": "Lake Pepin 3-Speed Tour",
    "category": "Road",
-   "subtype": "two-day vintage 3-speed tour (capped)",
+   "subtype": "two-day vintage 3-speed tour (niche, capped)",
    "start": "2027-05-15",
    "end": "2027-05-16",
    "date_status": "projected",
@@ -4046,13 +4088,13 @@
    "beneficiary": "American Lung Association",
    "fundraising_min": "",
    "organizer": "American Lung Association",
-   "url": "https://portlandbicyclingclub.com/non-pbc-event-rides/",
+   "url": "",
    "reg_status": "2027 registration not yet open as of Sept 2026",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "It is nevertheless one of Oregon's largest one-day organized rides, with riders converging on Pacific City from several inland start points.",
+   "notes": "It is nevertheless one of Oregon's largest one-day organized rides, with riders converging on Pacific City from several inland start points. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://portlandbicyclingclub.com/non-pbc-event-rides/",
     "https://www.salembicycleclub.org/content.aspx?page_id=22&club_id=189926&module_id=569331"
@@ -4087,7 +4129,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://bikenewengland.com/2026/02/27/rodman-ride-for-kids/"
    ],
@@ -4121,7 +4163,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/Index/2652/san-diego-century-bicycle-tour",
     "https://www.letsdothis.com/us/e/san-diego-century-161248"
@@ -4210,7 +4252,7 @@
    "date_note": "diabetes.org: Saturday May 15, 2027.",
    "city": "Bothell (The Park at Bothell Landing)",
    "state": "WA",
-   "region": "",
+   "region": "Pacific NW",
    "start_city": "",
    "end_city": "",
    "days": 1,
@@ -4467,7 +4509,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Benefits the YMCA incidentally; identity is the Thunder Ridge climb.",
+   "notes": "Benefits the YMCA incidentally; identity is the Thunder Ridge climb. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://strambecco.com/event/storming-of-thunder-ridge/"
    ],
@@ -4553,7 +4595,7 @@
    "date_note": "Organizer announced May 20–23, 2027 (Bicycle Retailer, July 24, 2026).",
    "city": "Asheville, NC to Greenville, SC",
    "state": "NC",
-   "region": "",
+   "region": "Southeast",
    "start_city": "Asheville, NC",
    "end_city": "Greenville, SC",
    "days": 4,
@@ -4619,7 +4661,7 @@
    "start": "2027-05-21",
    "end": "2027-05-23",
    "date_status": "confirmed",
-   "date_note": "Official 2027 site and FAQ state May 21-23, 2027 (1-Day option Saturday May 22, 2027). 2026 edition was May 29-31, 2026.",
+   "date_note": "SFAF lists May 21-23, 2027; the 1-Day option is Saturday, May 22. The 2026 ride was May 29-31.",
    "city": "San Francisco",
    "state": "CA",
    "region": "California",
@@ -4630,7 +4672,7 @@
    "elevation": "",
    "cause": "HIV/AIDS",
    "beneficiary": "San Francisco AIDS Foundation (HIV care/prevention, sexual health, substance-use and overdose-prevention programs)",
-   "fundraising_min": "3-Day Cyclists $500 by March 1, 2027 to hold a spot and $2,500 total by early May (the organizer gives both May 1 and May 4, 2027); Crew $250. Registration: 3-Day $95, 1-Day $225 (no minimum), Crew $95, DIY Squad $45",
+   "fundraising_min": "3-Day cyclists $500 by March 1, 2027 to hold a spot and $2,500 total by May 1, 2027; Crew $250; Registration: 3-Day $95, 1-Day $225 (no minimum), Crew $95, DIY Squad $45",
    "organizer": "San Francisco AIDS Foundation",
    "url": "https://2027.cycletozero.org/",
    "reg_status": "Open for 2027 (donate.sfaf.org/event/cycle-to-zero-2027/e804781); limited capacity with waitlist, not a lottery; registrations non-refundable",
@@ -4642,7 +4684,8 @@
    "sources": [
     "https://2027.cycletozero.org/",
     "https://2027.cycletozero.org/faqs/",
-    "https://cycletozero.donordrive.com/home"
+    "https://cycletozero.donordrive.com/home",
+    "https://www.sfaf.org/get-involved/cycle-to-zero/"
    ],
    "slug": "cycle-to-zero",
    "riding": true
@@ -4716,6 +4759,41 @@
    "riding": false
   },
   {
+   "id": 141,
+   "name": "Cascade Gravel Grinder",
+   "category": "Gravel",
+   "subtype": "single-day gravel race (former stage race)",
+   "start": "2027-05-22",
+   "end": "2027-05-22",
+   "date_status": "confirmed",
+   "date_note": "The organizer lists Saturday, May 22, 2027, in Sisters.",
+   "city": "Sisters",
+   "state": "OR",
+   "region": "Pacific NW",
+   "start_city": "",
+   "end_city": "",
+   "days": 1,
+   "distances": "44 to 94 miles, 3,500 to 8,600 ft of climbing",
+   "elevation": "",
+   "cause": "",
+   "beneficiary": "",
+   "fundraising_min": "",
+   "organizer": "Breakaway Promotions",
+   "url": "https://www.oregongravelgrinder.com/cascade-gravel-grinder",
+   "reg_status": "Registration is open on BikeReg.",
+   "lottery": "No lottery.",
+   "series": "Oregon Gravel Grinder Series",
+   "cost": "",
+   "qualification": "",
+   "notes": "",
+   "sources": [
+    "https://www.oregongravelgrinder.com/cascade-gravel-grinder",
+    "https://strambecco.com/event/cascade-gravel-grinder/"
+   ],
+   "slug": "cascade-gravel-grinder",
+   "riding": false
+  },
+  {
    "id": 637,
    "name": "Ride 2 End Suicide",
    "category": "Charity ride",
@@ -4723,7 +4801,7 @@
    "start": "2027-05-22",
    "end": "2027-05-22",
    "date_status": "confirmed",
-   "date_note": "Organizer site (ride2endsuicide.com, checked Oct 1, 2026): Saturday, May 22, 2027 at 10:00 AM; the 2027 ride is the 12th annual.",
+   "date_note": "Organizer site (ride2endsuicide.com): Saturday, May 22, 2027 at 10:00 AM; the 2027 ride is the 12th annual.",
    "city": "Shelby Township (Stony Creek Metropark)",
    "state": "MI",
    "region": "Midwest",
@@ -4760,7 +4838,7 @@
    "date_note": "diabetes.org: Saturday May 22, 2027.",
    "city": "Eagan (Viking Lakes)",
    "state": "MN",
-   "region": "",
+   "region": "Midwest",
    "start_city": "",
    "end_city": "",
    "days": 1,
@@ -4826,7 +4904,7 @@
    "start": "2027-05-23",
    "end": "2027-05-23",
    "date_status": "confirmed",
-   "date_note": "Grasshopper Adventure Series site (checked Oct 1, 2026) lists Ukiah Mendo Gravel Epic on May 23, 2027. Series rounds King Ridge (Mar 20) and Jackson Forest (Apr 10) now have their own entries.",
+   "date_note": "Grasshopper Adventure Series site lists Ukiah Mendo Gravel Epic on May 23, 2027. Series rounds King Ridge (Mar 20) and Jackson Forest (Apr 10) now have their own entries.",
    "city": "Ukiah",
    "state": "CA",
    "region": "California",
@@ -4851,40 +4929,6 @@
     "https://www.grasshopperadventureseries.com/"
    ],
    "slug": "grasshopper-adventure-series-ukiah-mendo-gravel-epic",
-   "riding": false
-  },
-  {
-   "id": 132,
-   "name": "Sisters Stampede",
-   "category": "MTB",
-   "subtype": "singletrack XC race (Oregon XC Series)",
-   "start": "2027-05-23",
-   "end": "2027-05-23",
-   "date_status": "projected",
-   "date_note": "",
-   "city": "Sisters (Peterson Ridge)",
-   "state": "OR",
-   "region": "Pacific NW",
-   "start_city": "",
-   "end_city": "",
-   "days": 1,
-   "distances": "27 mi / 1,500 ft; 14 mi; 500-rider cap; $1,000 purse",
-   "elevation": "",
-   "cause": "",
-   "beneficiary": "",
-   "fundraising_min": "",
-   "organizer": "Mudslinger Events",
-   "url": "https://www.mudslingerevents.com/sisters-stampede",
-   "reg_status": "",
-   "lottery": "No lottery.",
-   "series": "Oregon XC Series",
-   "cost": "",
-   "qualification": "",
-   "notes": "",
-   "sources": [
-    "https://strambecco.com/event/sisters-stampede/"
-   ],
-   "slug": "sisters-stampede",
    "riding": false
   },
   {
@@ -5160,40 +5204,6 @@
    "riding": false
   },
   {
-   "id": 141,
-   "name": "Cascade Gravel Grinder",
-   "category": "Gravel",
-   "subtype": "single-day gravel race (former stage race)",
-   "start": "2027-05-30",
-   "end": "2027-05-30",
-   "date_status": "projected",
-   "date_note": "",
-   "city": "Bend / Sisters",
-   "state": "OR",
-   "region": "Pacific NW",
-   "start_city": "",
-   "end_city": "",
-   "days": 1,
-   "distances": "Big 91 mi / 8,533 ft; Medium 63 mi; Small 44 mi",
-   "elevation": "",
-   "cause": "",
-   "beneficiary": "",
-   "fundraising_min": "",
-   "organizer": "Breakaway Promotions",
-   "url": "https://www.oregongravelgrinder.com/cascade-gravel-grinder",
-   "reg_status": "",
-   "lottery": "No lottery.",
-   "series": "Oregon Gravel Grinder Series",
-   "cost": "",
-   "qualification": "",
-   "notes": "",
-   "sources": [
-    "https://strambecco.com/event/cascade-gravel-grinder/"
-   ],
-   "slug": "cascade-gravel-grinder",
-   "riding": false
-  },
-  {
    "id": 142,
    "name": "Chippewa Valley Century Ride",
    "category": "Road",
@@ -5262,6 +5272,41 @@
    "riding": false
   },
   {
+   "id": 132,
+   "name": "Sisters Stampede",
+   "category": "MTB",
+   "subtype": "singletrack XC race (Oregon XC Series)",
+   "start": "2027-05-30",
+   "end": "2027-05-30",
+   "date_status": "confirmed",
+   "date_note": "Mudslinger Events lists Sunday, May 30, 2027.",
+   "city": "Sisters (Peterson Ridge)",
+   "state": "OR",
+   "region": "Pacific NW",
+   "start_city": "",
+   "end_city": "",
+   "days": 1,
+   "distances": "27 mi / 1,500 ft; 14 mi; 500-rider cap; $1,000 purse",
+   "elevation": "",
+   "cause": "",
+   "beneficiary": "",
+   "fundraising_min": "",
+   "organizer": "Mudslinger Events",
+   "url": "https://www.mudslingerevents.com/sisters-stampede",
+   "reg_status": "Usually sells out by February.",
+   "lottery": "No lottery.",
+   "series": "Oregon XC Series",
+   "cost": "",
+   "qualification": "",
+   "notes": "",
+   "sources": [
+    "https://www.mudslingerevents.com/",
+    "https://strambecco.com/event/sisters-stampede/"
+   ],
+   "slug": "sisters-stampede",
+   "riding": false
+  },
+  {
    "id": 144,
    "name": "Life Time UNBOUND Gravel",
    "category": "Gravel",
@@ -5269,7 +5314,7 @@
    "start": "2027-06-03",
    "end": "2027-06-06",
    "date_status": "confirmed",
-   "date_note": "Official site prints 'June 3 – 6, 2027 | Emporia, KS'; the main 200/100/50/25 races are Saturday June 5, 2027 (BikeSignup 2027 CKF listing shows Sat Jun 5 – Sun Jun 6).",
+   "date_note": "The organizer lists June 3-6, 2027, in Emporia; the main 200/100/50/25 races are Saturday, June 5.",
    "city": "Emporia",
    "state": "KS",
    "region": "Midwest",
@@ -5295,7 +5340,7 @@
     "https://www.bikesignup.com/Race/Register/?raceId=158141"
    ],
    "slug": "life-time-unbound-gravel",
-   "riding": false
+   "riding": true
   },
   {
    "id": 145,
@@ -5392,7 +5437,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "The date is the organizer's; the other details aren't checked with them yet.",
    "sources": [
     "https://findarace.com/us/cycling/california"
    ],
@@ -5548,7 +5593,7 @@
    "start": "2027-06-05",
    "end": "2027-06-05",
    "date_status": "confirmed",
-   "date_note": "",
+   "date_note": "Planet Ultra lists Saturday, June 5, 2027, the 25th anniversary edition.",
    "city": "Bishop",
    "state": "CA",
    "region": "California",
@@ -5617,8 +5662,8 @@
    "subtype": "women-only century (Bonneville Cycling Club)",
    "start": "2027-06-05",
    "end": "2027-06-05",
-   "date_status": "projected",
-   "date_note": "2026 edition Sat June 6, 2026 (Lewiston) (first Saturday of June).",
+   "date_status": "confirmed",
+   "date_note": "The organizer lists Saturday, June 5, 2027, at the Lewiston Fairgrounds. The 2026 ride was June 6.",
    "city": "Lewiston (Cache Valley)",
    "state": "UT",
    "region": "Mountain",
@@ -5631,14 +5676,15 @@
    "beneficiary": "Huntsman Cancer Institute (women's cancers)",
    "fundraising_min": "",
    "organizer": "Bonneville Cycling Club",
-   "url": "http://lrrh.org",
-   "reg_status": "Historically sells out within hours of opening (spring)",
+   "url": "https://www.lrrh.org/",
+   "reg_status": "Registration opens Dec 1, 2026. It has sold out within hours in past years.",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Women and girls only; ~3,000 riders.",
+   "notes": "Women and girls only; about 3,000 riders. The 2027 theme is the Wizard of Oz.",
    "sources": [
+    "https://www.lrrh.org/",
     "https://www.cyclingwest.com/event-calendars/utah-road-tours-and-century-ride/"
    ],
    "slug": "little-red-riding-hood",
@@ -5671,7 +5717,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://bikenewengland.com/2026/02/27/ride-to-end-alz-new-england/"
    ],
@@ -5723,7 +5769,7 @@
    "date_note": "diabetes.org: Saturday June 5, 2027.",
    "city": "Scottsville (Stokoe Farms)",
    "state": "NY",
-   "region": "",
+   "region": "Northeast",
    "start_city": "",
    "end_city": "",
    "days": 1,
@@ -5827,7 +5873,7 @@
    "date_note": "2026 ride was Sunday June 7, 2026 (first Sunday of June); projected to Sunday June 6, 2027. LLS page says 2027 registration opens fall 2026.",
    "city": "Lake Tahoe (Stateline/South Lake Tahoe)",
    "state": "NV",
-   "region": "California",
+   "region": "Southwest",
    "start_city": "Lake Tahoe",
    "end_city": "Lake Tahoe",
    "days": 1,
@@ -5835,16 +5881,17 @@
    "elevation": "",
    "cause": "Cancer",
    "beneficiary": "Blood Cancer United (formerly The Leukemia & Lymphoma Society)",
-   "fundraising_min": "Team In Training fundraising commitment",
+   "fundraising_min": "Team In Training fundraising commitment (amount set by the program)",
    "organizer": "Bike the West (ride) / Blood Cancer United Team In Training (charity)",
-   "url": "https://pages.lls.org/events/home/tahoe26",
+   "url": "https://bloodcancerunited.org/AMBBR",
    "reg_status": "2027 registration opens fall 2026 (interest list open)",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Public ride with LLS as official charity.",
+   "notes": "Public ride with Blood Cancer United (formerly LLS) as the official charity; Team In Training is the fundraising program.",
    "sources": [
+    "https://bloodcancerunited.org/AMBBR",
     "https://pages.lls.org/events/home/tahoe26",
     "https://bloodcancerunited.org/resources/newsroom/americas-most-beautiful-bike-ride-unites-cyclists-against-blood"
    ],
@@ -6169,41 +6216,6 @@
    "riding": false
   },
   {
-   "id": 170,
-   "name": "Belgian Waffle Ride Utah",
-   "category": "Gravel",
-   "subtype": "mixed-surface 'unroad' race",
-   "start": "2027-06-12",
-   "end": "2027-06-12",
-   "date_status": "projected",
-   "date_note": "Organizer's future-dates page lists 2027 dates only for Arizona and California; Utah 2026 was Jun 12–13, 2026 (second weekend of June) -> Jun 11–12, 2027 projected. Not yet announced.",
-   "city": "Cedar City",
-   "state": "UT",
-   "region": "Mountain",
-   "start_city": "",
-   "end_city": "",
-   "days": 2,
-   "distances": "Waffle 117 mi, Wafer 66.5 mi, Wanna 27 mi (2026)",
-   "elevation": "",
-   "cause": "",
-   "beneficiary": "",
-   "fundraising_min": "",
-   "organizer": "Belgian Waffle Ride / Monuments of Cycling",
-   "url": "https://www.belgianwaffleride.bike/pages/utah",
-   "reg_status": "2027 not open.",
-   "lottery": "No lottery.",
-   "series": "Belgian Waffle Ride (Quad-Tripel Crown of Gravel)",
-   "cost": "",
-   "qualification": "",
-   "notes": "Seventh edition was 2026.",
-   "sources": [
-    "https://www.belgianwaffleride.bike/pages/utah",
-    "https://www.belgianwaffleride.bike/pages/future-dates"
-   ],
-   "slug": "belgian-waffle-ride-utah",
-   "riding": false
-  },
-  {
    "id": 171,
    "name": "Best Buddies Challenge: Hyannis Port",
    "category": "Charity ride",
@@ -6230,7 +6242,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "The date is the organizer's; the other details aren't checked with them yet.",
    "sources": [
     "https://bikenewengland.com/2026/03/03/best-buddies-challenge/",
     "https://www.bestbuddieschallenge.org/"
@@ -6327,7 +6339,7 @@
    "beneficiary": "",
    "fundraising_min": "",
    "organizer": "Vancouver Bicycle Club / local organizers",
-   "url": "https://portlandbicyclingclub.com/non-pbc-event-rides/",
+   "url": "",
    "reg_status": "2027 registration status not confirmed as of Sept 2026",
    "lottery": "",
    "series": "",
@@ -6525,7 +6537,7 @@
    "date_note": "diabetes.org: Saturday June 12, 2027.",
    "city": "Ballston Spa (Ellms Family Farm)",
    "state": "NY",
-   "region": "",
+   "region": "Northeast",
    "start_city": "",
    "end_city": "",
    "days": 1,
@@ -6674,7 +6686,7 @@
    "beneficiary": "",
    "fundraising_min": "",
    "organizer": "ENVE Composites",
-   "url": "https://www.cyclingweekly.com/news/gravel-riders-ready-here-are-the-registration-dates-for-gravels-biggest-events",
+   "url": "",
    "reg_status": "Not open.",
    "lottery": "No lottery.",
    "series": "",
@@ -6742,7 +6754,7 @@
    "beneficiary": "",
    "fundraising_min": "",
    "organizer": "Leavenworth Bike Fest",
-   "url": "https://www.cyclingnews.com/pro-cycling/teams-riders/leadville-trail-100-mtb-lottery-underway-grasshopper-series-and-leavenworth-bike-fest-open-registrations-for-off-road-events/",
+   "url": "",
    "reg_status": "2027 not open.",
    "lottery": "No lottery (cap 2,000).",
    "series": "",
@@ -6782,7 +6794,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "42nd annual in 2026.",
+   "notes": "42nd annual in 2026. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://bikenewengland.com/2026/03/02/trek-acoss-maine/",
     "https://bikenewengland.com/charity-rides-in-new-england/"
@@ -7184,7 +7196,7 @@
    "start": "2027-06-19",
    "end": "2027-06-19",
    "date_status": "projected",
-   "date_note": "June 19, 2027 is a Saturday, consistent with the ride's usual mid-June Saturday.",
+   "date_note": "Placed on Saturday, June 19, 2027, the ride's usual mid-June Saturday. No 2027 date announced yet; make sure the ride is running before you plan around it.",
    "city": "The Dalles (Historic Columbia River Highway)",
    "state": "OR",
    "region": "Pacific NW",
@@ -7362,7 +7374,7 @@
    "start": "2027-06-25",
    "end": "2027-06-27",
    "date_status": "confirmed",
-   "date_note": "Official site: June 25-27, 2027, Steamboat Springs; ride/race day Sunday June 27, 2027. 2026 was Jun 26-28.",
+   "date_note": "The organizer lists June 25-27, 2027, in Steamboat Springs; race day is Sunday, June 27. 2026 was June 26-28.",
    "city": "Steamboat Springs",
    "state": "CO",
    "region": "Mountain",
@@ -7676,7 +7688,7 @@
    "start": "2027-06-26",
    "end": "2027-06-27",
    "date_status": "confirmed",
-   "date_note": "Organizer site (rideformentalhealth.org, checked Oct 1, 2026): 'June 26 and June 27, 2027'. Rider registration opens October 10, 2026.",
+   "date_note": "Organizer site (rideformentalhealth.org): 'June 26 and June 27, 2027'. Rider registration opens October 10, 2026.",
    "city": "New Paltz",
    "state": "NY",
    "region": "Northeast",
@@ -7715,7 +7727,7 @@
    "date_note": "diabetes.org: Saturday June 26, 2027.",
    "city": "Ann Arbor (Domino's Farms)",
    "state": "MI",
-   "region": "",
+   "region": "Midwest",
    "start_city": "",
    "end_city": "",
    "days": 1,
@@ -7765,7 +7777,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://bikenewengland.com/2026/02/27/tri-state-trek/"
    ],
@@ -7869,7 +7881,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.caltriplecrown.org/volunteer_aspx/default.aspx"
    ],
@@ -8252,7 +8264,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://bikenewengland.com/2026/02/27/new-england-classic/"
    ],
@@ -8370,7 +8382,7 @@
    "start": "2027-07-10",
    "end": "2027-07-11",
    "date_status": "confirmed",
-   "date_note": "Cascade Bicycle Club has published the 2027 dates on its dedicated STP 2027 page (Sat-Sun, July 10-11, 2027).",
+   "date_note": "Cascade Bicycle Club lists Saturday, July 10, 5 a.m., to Sunday, July 11, 2027.",
    "city": "Seattle to Portland",
    "state": "WA",
    "region": "Pacific NW",
@@ -8384,7 +8396,7 @@
    "fundraising_min": "",
    "organizer": "Cascade Bicycle Club",
    "url": "https://cascade.org/rides-events/seattle-portland-2027-2027",
-   "reg_status": "Closed as of Oct 1, 2026 (early-bird pricing has ended); Cascade states registration re-opens for members in January 2027. Prices listed for 2027: $210 non-member, $165 member, $90 youth (18 and under). No day-of registration.",
+   "reg_status": "Closed for now; Cascade says registration reopens for members in January 2027. 2027 prices: $210 non-member, $165 member, $90 youth (18 and under). No day-of registration.",
    "lottery": "",
    "series": "",
    "cost": "",
@@ -8580,7 +8592,7 @@
    "start": "2027-07-11",
    "end": "2027-07-11",
    "date_status": "confirmed",
-   "date_note": "Organizer page lists 'July 11, 2027'; registration opens January 2027.",
+   "date_note": "Organizer page lists 'July 11, 2027' (a Sunday); registration opens January 2027.",
    "city": "Leadville",
    "state": "CO",
    "region": "Mountain",
@@ -9033,7 +9045,7 @@
    "start": "2027-07-23",
    "end": "2027-07-25",
    "date_status": "confirmed",
-   "date_note": "Organizer page: July 23–25, 2027; registration opens January 2027.",
+   "date_note": "The organizer lists July 23-25, 2027.",
    "city": "Leadville",
    "state": "CO",
    "region": "Mountain",
@@ -9047,13 +9059,14 @@
    "fundraising_min": "",
    "organizer": "Life Time (Leadville Race Series)",
    "url": "https://www.leadvilleraceseries.com/mtb/leadville-stage-race/",
-   "reg_status": "Opens January 2027; 2026 reference pricing $650 solo / $975 team-tandem; 14+.",
+   "reg_status": "Registration opens Jan 7, 2027. 2026 pricing: $650 solo, $975 team or tandem; ages 14+.",
    "lottery": "No lottery; minimum 35 LT100 MTB qualifier coins (top finishers + drawing, 11-hour cutoff).",
    "series": "Leadville Race Series (LT100 MTB qualifier)",
    "cost": "",
    "qualification": "",
    "notes": "Buckles for sub-11h (large buckle sub-8.5h).",
    "sources": [
+    "https://leadvilleraceseries.com/mtb-lottery",
     "https://www.leadvilleraceseries.com/mtb/leadville-stage-race/"
    ],
    "slug": "leadville-stage-race",
@@ -9188,7 +9201,7 @@
    "fundraising_min": "",
    "organizer": "Ventures Endurance d/b/a RAGBRAI (Gannett/Des Moines Register heritage)",
    "url": "https://ragbrai.com/",
-   "reg_status": "2027 registration not yet open (2026 cycle opened mid-November; expect ~Nov 2026 for 2027). No lottery since 2021 - first come, first served.",
+   "reg_status": "Registration opens Nov 15, 2026 and stays open; first come, first served (no lottery). Day passes are not sold online after May 31, 2027.",
    "lottery": "",
    "series": "",
    "cost": "2027 fee not yet published (2026 registration opened Nov 15, 2025; late registration from June 1)",
@@ -9421,7 +9434,7 @@
    "start": "2027-07-31",
    "end": "2027-08-01",
    "date_status": "confirmed",
-   "date_note": "Organizer site (downievilleclassic.com, checked Oct 1, 2026): 'July 31st-August 1st, 2027'.",
+   "date_note": "Organizer site (downievilleclassic.com): 'July 31st-August 1st, 2027'.",
    "city": "Downieville",
    "state": "CA",
    "region": "California",
@@ -9585,6 +9598,41 @@
    "riding": false
   },
   {
+   "id": 644,
+   "name": "Friends for Life Bike Rally",
+   "category": "Charity ride",
+   "subtype": "6-day fully supported HIV/AIDS ride, Toronto to Montréal (Canada)",
+   "start": "2027-08-01",
+   "end": "2027-08-06",
+   "date_status": "confirmed",
+   "date_note": "The organizer lists Aug 1–6, 2027: leave Toronto Sunday, Aug 1, arrive in Montréal Friday, Aug 6.",
+   "city": "Toronto",
+   "state": "ON",
+   "region": "Canada",
+   "start_city": "Toronto, ON",
+   "end_city": "Montréal, QC",
+   "days": 6,
+   "distances": "600 km (about 373 mi) over 6 days. Shorter options: 300 km Toronto to Kingston or Kingston to Montréal (3 days), 100 km Toronto to Port Hope (1 day).",
+   "elevation": "",
+   "cause": "HIV/AIDS",
+   "beneficiary": "Rider's choice: PWA Toronto, AIDS Community Care Montréal, Bruce House (Ottawa) or Trellis HIV & Community Care (Kingston area)",
+   "fundraising_min": "$1,950 first year, $2,500 second year, $3,000 third year and on",
+   "organizer": "Friends for Life Bike Rally",
+   "url": "https://bikerally.org/join-us",
+   "reg_status": "Open. Fee $40 through Oct 31, 2026; $55 Nov 1 to Jan 31; $70 Feb 1 to Mar 31; $80 Apr 1 to Aug 2, 2027.",
+   "lottery": "No lottery.",
+   "series": "",
+   "cost": "",
+   "qualification": "",
+   "notes": "Fully supported: gear moves camp to camp and food is provided. In Canada; the organizer has a guide for riders coming from out of town.",
+   "sources": [
+    "https://bikerally.org/",
+    "https://bikerally.org/join-us"
+   ],
+   "slug": "friends-for-life-bike-rally",
+   "riding": true
+  },
+  {
    "id": 267,
    "name": "Two Rivers Century",
    "category": "Road",
@@ -9639,7 +9687,7 @@
    "beneficiary": "",
    "fundraising_min": "",
    "organizer": "Pocatello-area organizers",
-   "url": "https://www.cyclingwest.com/event-calendars/regional-road-tours-and-century-rides/",
+   "url": "",
    "reg_status": "2027 registration not yet open as of Sept 2026",
    "lottery": "",
    "series": "",
@@ -9679,7 +9727,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://bikenewengland.com/2026/02/27/great-maine-getaway-biddeford-me/"
    ],
@@ -9919,7 +9967,7 @@
    "fundraising_min": "$1,250 (17/23/27 mi), $1,500 (46 mi), $2,000 (66/100 mi), $3,000 (two-day)",
    "organizer": "Pelotonia",
    "url": "https://www.pelotonia.org/get-involved/ride-weekend/",
-   "reg_status": "2027 registration opening date not yet posted on pelotonia.org (checked Oct 1, 2026; the page says details will be added).",
+   "reg_status": "2027 registration opening date not posted yet; Pelotonia says details will be added.",
    "lottery": "",
    "series": "",
    "cost": "",
@@ -9953,7 +10001,7 @@
    "beneficiary": "",
    "fundraising_min": "",
    "organizer": "Local La Veta / Huerfano County organizers",
-   "url": "https://www.cyclingwest.com/event-calendars/regional-road-tours-and-century-rides/",
+   "url": "",
    "reg_status": "2027 registration not yet open as of Sept 2026",
    "lottery": "",
    "series": "",
@@ -10065,7 +10113,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "~3,500 riders annually.",
+   "notes": "~3,500 riders annually. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.bikemn.org/events/tour-de-tonka-2026/",
     "https://www.granfondoguide.com/Events/Index/8418/tour-de-tonka",
@@ -10101,7 +10149,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Same organizer as Tour of the Battenkill (mixed-surface, May 8, 2027 unconfirmed).",
+   "notes": "Same organizer as Tour of the Battenkill (mixed-surface, May 8, 2027 unconfirmed). Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://strambecco.com/event/tour-of-the-catskills/",
     "https://www.granfondoguide.com/Series/AnthemSportsTours",
@@ -10209,7 +10257,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Regional event.",
+   "notes": "Regional event. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://bikenewengland.com/2026/02/27/champion-the-cure/"
    ],
@@ -10307,13 +10355,14 @@
    "fundraising_min": "",
    "organizer": "Life Time (Leadville Race Series)",
    "url": "https://www.leadvilleraceseries.com/mtb/leadvilletrail100mtb/",
-   "reg_status": "Lottery Dec 1–15, 2026; all applicants notified January 2027. 2027 pricing not yet posted (2026: $525–$625). 18+ on race day. Camp + Entry packages open Dec 1, 2026 (2026 price reference $2,200). Life Time member guaranteed spots from Nov 24, 2026. Coaching + entry via Boundless.",
+   "reg_status": "Lottery Dec 1-15, 2026; results in early January 2027. 2027 pricing not posted yet (2026: $525-$625). 18+ on race day. Camp + Entry packages open Dec 1, 2026 (2026 price $2,200). Life Time members get guaranteed spots from Nov 24, 2026. Coaching + entry via Boundless.",
    "lottery": "Yes — lottery open 12/1/26–12/15/26, results January 2027. Qualifier events (min. 35 coins each): Sea Otter Fuego XL, Lutsen 99er, Silver Rush 50 MTB, Leadville Stage Race, Little Sugar MTB, Austin Rattler MTB; also Tahoe Trail (2 laps under 8h15).",
    "series": "Life Time Grand Prix (round 3); Leadville Race Series",
    "cost": "",
    "qualification": "",
    "notes": "'Race Across the Sky'. Individual or tandem entries only. 2027 schedule 'subject to change'.",
    "sources": [
+    "https://leadvilleraceseries.com/mtb-lottery",
     "https://www.leadvilleraceseries.com/mtb/leadvilletrail100mtb/",
     "https://www.leadvilleraceseries.com/lottery-qualification/",
     "https://www.leadvilleraceseries.com/charity-entry/"
@@ -10606,7 +10655,7 @@
    "start": "2027-08-15",
    "end": "2027-08-20",
    "date_status": "confirmed",
-   "date_note": "Organizer site (breckepic.com, checked Oct 1, 2026): 'AUG 15-20, 2027'.",
+   "date_note": "Organizer site (breckepic.com): 'AUG 15-20, 2027'.",
    "city": "Breckenridge",
    "state": "CO",
    "region": "Mountain",
@@ -10729,7 +10778,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://bikenewengland.com/2026/02/27/lexington-ma-tour-de-cure/"
    ],
@@ -10936,7 +10985,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Starts in the US (Seattle) and finishes in Canada (Vancouver, BC). Riders need a passport/border documentation. Included per instructions with the cross-border note.",
+   "notes": "Starts in the US (Seattle) and finishes in Canada (Vancouver, BC). Riders need a passport or other border documents.",
    "sources": [
     "https://cascade.org/rides-events/ride-information-support/season-schedule",
     "https://cascade.org/news/2025/12/cascade-rides-are-vibe-save-date-our-2026-rides-tours"
@@ -11661,7 +11710,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Sponsored by Northeast Delta Dental.",
+   "notes": "Sponsored by Northeast Delta Dental. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/Index/4446/race-to-the-top-of-vermont"
    ],
@@ -12385,7 +12434,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://bikenewengland.com/2026/06/03/kelly-brush-century-ride/"
    ],
@@ -12399,8 +12448,8 @@
    "subtype": "200+ mile one-day Logan UT to Jackson Hole WY (race + cyclosportive + relay)",
    "start": "2027-09-11",
    "end": "2027-09-11",
-   "date_status": "projected",
-   "date_note": "44th edition confirmed Sat Sept 12, 2026. LOTOJA is held the Saturday after Labor Day.",
+   "date_status": "confirmed",
+   "date_note": "The organizer lists Saturday, September 11, 2027. The 2026 race was September 12.",
    "city": "Logan (start) to Jackson Hole, WY (finish)",
    "state": "UT",
    "region": "Mountain",
@@ -12413,14 +12462,15 @@
    "beneficiary": "Huntsman Cancer Foundation (fundraising optional)",
    "fundraising_min": "",
    "organizer": "LOTOJA Classic LLC (director Brent Chambers)",
-   "url": "http://lotoja.com",
-   "reg_status": "Registration historically opens in spring with a lottery/first-come sell-out (~1,300-1,500 riders)",
+   "url": "https://lotoja.com/",
+   "reg_status": "Registration opens in mid-April 2027; the 2027 race website goes live March 1, 2027. The field (about 1,300-1,500 riders) has sold out in past years.",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
    "notes": "Includes USAC-licensed race categories; the cyclosportive/relay side makes it a signature mass-participation event.",
    "sources": [
+    "https://lotoja.com/",
     "https://www.cyclingwest.com/racing/road-racing/lotoja-classic/lotoja-classic-returns-for-44th-edition-on-september-12-2026/",
     "https://www.cyclingwest.com/event-calendars/utah-road-racing-calendar/"
    ],
@@ -12434,8 +12484,8 @@
    "subtype": "closed-road high-Sierra gran fondo",
    "start": "2027-09-11",
    "end": "2027-09-11",
-   "date_status": "projected",
-   "date_note": "2026 edition confirmed Sat Sept 12, 2026 (2nd Saturday of September).",
+   "date_status": "confirmed",
+   "date_note": "The organizer lists Saturday, September 11, 2027. The 2026 ride was September 12.",
    "city": "Mammoth Lakes",
    "state": "CA",
    "region": "California",
@@ -12449,13 +12499,14 @@
    "fundraising_min": "",
    "organizer": "Mammoth Mountain Community Foundation (presented by Hyundai)",
    "url": "https://mammothgranfondo.com/",
-   "reg_status": "2026 open; ~1,800-rider cap",
+   "reg_status": "2027 registration is open (Haku). The field has been capped at about 1,800 riders.",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
    "notes": "~75 mi of the Gran route closed to through traffic; mass start from The Village.",
    "sources": [
+    "https://mammothgranfondo.com/",
     "https://www.mammothmountain.com/things-to-do/events/mammoth-gran-fondo",
     "https://www.granfondoguide.com/Events/Index/454/mammoth-gran-fondo",
     "https://www.cyclingwest.com/event-calendars/regional-road-tours-and-century-rides/"
@@ -12762,13 +12813,13 @@
    "beneficiary": "",
    "fundraising_min": "",
    "organizer": "Cabot community event",
-   "url": "https://www.granfondoguide.com/Events/GranFondoCalendar",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Some routes include dirt roads.",
+   "notes": "Some routes include dirt roads. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/GranFondoCalendar"
    ],
@@ -12829,14 +12880,14 @@
    "cause": "",
    "beneficiary": "",
    "fundraising_min": "",
-   "organizer": "Franklin-Hampshire Freewheelers (per event history)",
-   "url": "https://www.granfondoguide.com/Events/GranFondoCalendar",
+   "organizer": "Franklin-Hampshire Freewheelers",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/GranFondoCalendar"
    ],
@@ -13005,14 +13056,14 @@
    "cause": "",
    "beneficiary": "",
    "fundraising_min": "",
-   "organizer": "Shenandoah Valley Bicycle Coalition (per event history)",
-   "url": "https://www.granfondoguide.com/Events/GranFondoCalendar",
+   "organizer": "Shenandoah Valley Bicycle Coalition",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/GranFondoCalendar"
    ],
@@ -13092,7 +13143,7 @@
    "id": 368,
    "name": "Mickelson Trail Trek",
    "category": "Multi-day tour",
-   "subtype": "3-day supported rail-trail ride (multi-day)",
+   "subtype": "3-day supported rail-trail ride (crushed limestone, multi-day)",
    "start": "2027-09-17",
    "end": "2027-09-19",
    "date_status": "projected",
@@ -13115,7 +13166,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Included per brief as a note; multi-day trail ride, not a road event.",
+   "notes": "Multi-day trail ride, not a road event.",
    "sources": [
     "https://raceroster.com/events/2026/117042/28th-annual-mickelson-trail-trek",
     "https://www.travelsouthdakota.com/trip-ideas/biking-and-cycling-events-south-dakota"
@@ -13213,14 +13264,14 @@
    "cause": "",
    "beneficiary": "",
    "fundraising_min": "",
-   "organizer": "Cartersville-Bartow County Chamber / local cycling club (per event history)",
-   "url": "https://www.granfondoguide.com/Events/GranFondoCalendar",
+   "organizer": "Cartersville-Bartow County Chamber / local cycling club",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/GranFondoCalendar"
    ],
@@ -13429,7 +13480,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Start on Sherman Avenue at 2nd Street next to the lawn in front of the Coeur d'Alene Resort. Scenic Lake Coeur d'Alene courses.",
+   "notes": "Start on Sherman Avenue at 2nd Street next to the lawn in front of the Coeur d'Alene Resort. Scenic Lake Coeur d'Alene courses. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.ahotu.com/event/coeur-d-fondo",
     "https://ourtowncda.com/coeur-dfondo/"
@@ -13534,7 +13585,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://bikenewengland.com/2026/02/27/dempsey-challenge/",
     "https://bikenewengland.com/charity-rides-in-new-england/"
@@ -13597,14 +13648,14 @@
    "cause": "",
    "beneficiary": "",
    "fundraising_min": "",
-   "organizer": "South Jersey Wheelmen (per event history)",
-   "url": "https://www.granfondoguide.com/Events/GranFondoCalendar",
+   "organizer": "South Jersey Wheelmen",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/GranFondoCalendar"
    ],
@@ -13666,14 +13717,14 @@
    "cause": "",
    "beneficiary": "Eastern Trail Alliance",
    "fundraising_min": "",
-   "organizer": "Eastern Trail Alliance (per event history)",
-   "url": "https://www.granfondoguide.com/Events/GranFondoCalendar",
+   "organizer": "Eastern Trail Alliance",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/GranFondoCalendar"
    ],
@@ -13695,7 +13746,7 @@
    "start_city": "",
    "end_city": "",
    "days": 3,
-   "distances": "TUFF ~89 mi / 7,500 ft; shorter options",
+   "distances": "TUFF ~89 mi / 7,500 ft; shorter options (20, 40 and 80 km in past years)",
    "elevation": "",
    "cause": "",
    "beneficiary": "",
@@ -13848,7 +13899,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://bikenewengland.com/2026/02/27/defeat-als-ride/"
    ],
@@ -13911,7 +13962,7 @@
    "beneficiary": "",
    "fundraising_min": "",
    "organizer": "Palisade-area organizers",
-   "url": "https://www.cyclingwest.com/event-calendars/regional-road-tours-and-century-rides/",
+   "url": "",
    "reg_status": "2027 registration not yet open as of Sept 2026",
    "lottery": "",
    "series": "",
@@ -13951,7 +14002,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/CenturyRidesCalendar?region=North+America&country=United+States&subregion=All&subsubregion=All"
    ],
@@ -14071,7 +14122,7 @@
    "start": "2027-09-19",
    "end": "2027-09-25",
    "date_status": "confirmed",
-   "date_note": "thejoyrideca.org (checked Oct 1, 2026) now reads '7 day cycling event from San Francisco to Los Angeles September 19th-25th, 2027' and shows registration open. This replaces the earlier 'Coming June 2027' / 6-day copy.",
+   "date_note": "thejoyrideca.org now reads '7 day cycling event from San Francisco to Los Angeles September 19th-25th, 2027' and shows registration open. This replaces the earlier 'Coming June 2027' / 6-day copy.",
    "city": "San Francisco",
    "state": "CA",
    "region": "California",
@@ -14161,7 +14212,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://bikenewengland.com/2026/02/27/autumn-escape-trek/"
    ],
@@ -14202,7 +14253,7 @@
     "https://donordrivecontent.com/cycleforthecause/files/$cms$/100/3D8647A3-E264-1116-6F2AD34E4B72BE55.pdf"
    ],
    "slug": "cycle-for-the-cause",
-   "riding": false
+   "riding": true
   },
   {
    "id": 399,
@@ -14300,7 +14351,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.arthritis.org/californiacoastclassic"
    ],
@@ -14576,7 +14627,7 @@
    "beneficiary": "Telluride-area youth foundation",
    "fundraising_min": "",
    "organizer": "Telluride-area organizers",
-   "url": "https://www.cyclingwest.com/event-calendars/regional-road-tours-and-century-rides/",
+   "url": "",
    "reg_status": "2027 registration not yet open as of Sept 2026",
    "lottery": "",
    "series": "",
@@ -14616,7 +14667,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/CenturyRidesCalendar?region=North+America&country=United+States&subregion=All&subsubregion=All"
    ],
@@ -14644,7 +14695,7 @@
    "beneficiary": "Rogue River Greenway Foundation",
    "fundraising_min": "",
    "organizer": "Rogue River Greenway Foundation",
-   "url": "https://portlandbicyclingclub.com/non-pbc-event-rides/",
+   "url": "",
    "reg_status": "2027 registration not yet open as of Sept 2026",
    "lottery": "",
    "series": "",
@@ -15210,7 +15261,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "29th annual in 2026.",
+   "notes": "29th annual in 2026. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://bikenewengland.com/2026/06/02/cf-cycle-for-life-lexington-ma-oct-3-2026/"
    ],
@@ -15244,7 +15295,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "25th annual in 2026.",
+   "notes": "25th annual in 2026. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://bikenewengland.com/2026/03/18/seacoast-safari/"
    ],
@@ -15306,14 +15357,14 @@
    "cause": "",
    "beneficiary": "",
    "fundraising_min": "",
-   "organizer": "Culpeper Cycling Century (per event history)",
-   "url": "https://www.granfondoguide.com/Events/GranFondoCalendar",
+   "organizer": "Culpeper Cycling Century",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/GranFondoCalendar"
    ],
@@ -15341,13 +15392,13 @@
    "beneficiary": "",
    "fundraising_min": "",
    "organizer": "Cycle Sequatchie",
-   "url": "https://www.granfondoguide.com/Events/GranFondoCalendar",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/GranFondoCalendar"
    ],
@@ -15408,14 +15459,14 @@
    "cause": "",
    "beneficiary": "",
    "fundraising_min": "",
-   "organizer": "White Clay Bicycle Club (per event history)",
-   "url": "https://www.granfondoguide.com/Events/GranFondoCalendar",
+   "organizer": "White Clay Bicycle Club",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/GranFondoCalendar"
    ],
@@ -15512,7 +15563,7 @@
    "beneficiary": "",
    "fundraising_min": "",
    "organizer": "Epic Rides",
-   "url": "https://strambecco.com/event/tour-of-the-white-mountains/",
+   "url": "https://epicrides.com/events/tour/tour-of-the-white-mountains-event-weekend-guide/",
    "reg_status": "",
    "lottery": "No lottery.",
    "series": "Epic Rides",
@@ -15520,6 +15571,7 @@
    "qualification": "",
    "notes": "",
    "sources": [
+    "https://epicrides.com/events/tour/tour-of-the-white-mountains-event-weekend-guide/",
     "https://strambecco.com/explore/?activity=mountain-biking",
     "https://strambecco.com/event/whiskey-off-road/"
    ],
@@ -15547,13 +15599,13 @@
    "beneficiary": "",
    "fundraising_min": "",
    "organizer": "Cadillac Challenge (Acadia region)",
-   "url": "https://www.granfondoguide.com/Events/GranFondoCalendar",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/GranFondoCalendar"
    ],
@@ -15617,7 +15669,7 @@
    "beneficiary": "",
    "fundraising_min": "",
    "organizer": "Cycle Umpqua",
-   "url": "https://portlandbicyclingclub.com/non-pbc-event-rides/",
+   "url": "",
    "reg_status": "2027 registration not yet open as of Sept 2026",
    "lottery": "",
    "series": "",
@@ -15688,14 +15740,14 @@
    "cause": "",
    "beneficiary": "",
    "fundraising_min": "",
-   "organizer": "Anne Arundel County Recreation & Parks (per event history)",
-   "url": "https://www.granfondoguide.com/Events/GranFondoCalendar",
+   "organizer": "Anne Arundel County Recreation & Parks",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/GranFondoCalendar"
    ],
@@ -15729,7 +15781,7 @@
    "series": "",
    "cost": "",
    "qualification": "Open entry",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/GranFondoCalendar",
     "https://danshryock.substack.com/p/2026-cycling-events-and-century-rides",
@@ -15896,7 +15948,7 @@
    "beneficiary": "",
    "fundraising_min": "",
    "organizer": "Amish Country Bike Tour (Dover/Kent County)",
-   "url": "https://www.granfondoguide.com/Events/CenturyRidesCalendar/North%20America/All/All/All",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
@@ -16033,14 +16085,14 @@
    "cause": "",
    "beneficiary": "",
    "fundraising_min": "",
-   "organizer": "Memphis Hightailers (per event history)",
-   "url": "https://www.granfondoguide.com/Events/GranFondoCalendar",
+   "organizer": "Memphis Hightailers",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.granfondoguide.com/Events/GranFondoCalendar"
    ],
@@ -16472,14 +16524,14 @@
    "start": "2027-10-16",
    "end": "2027-10-16",
    "date_status": "projected",
-   "date_note": "2026 edition Oct 17, 2026 (third Saturday of October) -> Oct 16, 2027 projected; not announced.",
+   "date_note": "The 2026 race was Saturday, Oct 17, the third Saturday of October. The same Saturday in 2027 is Oct 16. Not announced yet.",
    "city": "Chino Valley",
    "state": "AZ",
    "region": "Southwest",
    "start_city": "",
    "end_city": "",
    "days": 1,
-   "distances": "~107 mi, 63 mi (101 km), 46 mi (74 km), 23 mi (37 km)",
+   "distances": "107 mi Full Grind, 63 mi Half Grind, 45 mi Fine Grind, 23 mi Fun Grind; 75–95% unpaved, 3,800 to 7,300 ft",
    "elevation": "",
    "cause": "",
    "beneficiary": "",
@@ -16491,13 +16543,15 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Running since 2014.",
+   "notes": "Running since 2014. Starts and finishes at the Chino Valley Community Center; the long route turns at about mile 60 near Whitehorse Lake. Camping at the start the night before. Capped at 600 riders.",
    "sources": [
+    "https://runsignup.com/Race/AZ/ChinoValley/ChinoGrinder",
+    "https://shendocatracing.com/chino-grinder/",
     "https://gravelevents.com/events/chino-grinder",
     "https://gravelgodcycling.com/race/chino-grinder/"
    ],
    "slug": "chino-grinder",
-   "riding": false
+   "riding": true
   },
   {
    "id": 465,
@@ -16875,7 +16929,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17031,7 +17085,7 @@
    "start": "2027-11-20",
    "end": "2027-11-20",
    "date_status": "projected",
-   "date_note": "2026 = Saturday Nov 21 (43rd edition); El Tour is held the Saturday before Thanksgiving week, so 2027 projects to Nov 20. Registration typically opens in April. Organizer site (Oct 1, 2026) still shows only the Nov 21, 2026 edition (43rd); no 2027 date or registration announced.",
+   "date_note": "Projected (2026 is Saturday, Nov 21, the 43rd edition). El Tour runs the Saturday before Thanksgiving week, which puts 2027 on Nov 20. No 2027 date announced yet.",
    "city": "Tucson",
    "state": "AZ",
    "region": "Southwest",
@@ -17086,7 +17140,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.floridabicycling.com/event/breakthrough-t1-ride/",
     "https://www.floridabicycling.com/events/category/charity-ride/page/2/"
@@ -17155,7 +17209,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "3-state-3-mountain-challenge",
    "riding": false
@@ -17221,7 +17275,7 @@
    "series": "",
    "cost": "",
    "qualification": "Historically RAAM qualifier (540)",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "adirondack-540",
    "riding": false
@@ -17253,7 +17307,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "adventure-cycling-association-2027-us-supported-tours",
    "riding": false
@@ -17285,7 +17339,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "almanzo-100",
    "riding": false
@@ -17422,7 +17476,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "big-bam-bicycle-across-missouri-2027",
    "riding": false
@@ -17454,7 +17508,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "bike-florida-spring-tour-2027",
    "riding": false
@@ -17467,7 +17521,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "San Diego area",
    "state": "CA",
    "region": "California",
@@ -17480,13 +17534,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17501,7 +17555,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Delaware",
    "state": "DE",
    "region": "Mid-Atlantic",
@@ -17514,13 +17568,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17535,7 +17589,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "North Carolina",
    "state": "NC",
    "region": "Southeast",
@@ -17548,13 +17602,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17569,7 +17623,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Ohio",
    "state": "OH",
    "region": "Midwest",
@@ -17582,13 +17636,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17603,7 +17657,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Maryland Eastern Shore",
    "state": "MD",
    "region": "Mid-Atlantic",
@@ -17616,13 +17670,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17637,7 +17691,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Florida",
    "state": "FL",
    "region": "Southeast",
@@ -17650,13 +17704,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17671,7 +17725,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Cherry Hill to Ocean City",
    "state": "NJ",
    "region": "Northeast",
@@ -17684,13 +17738,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17705,7 +17759,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Westminster",
    "state": "CO",
    "region": "Mountain",
@@ -17718,13 +17772,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17739,7 +17793,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Georgia",
    "state": "GA",
    "region": "Southeast",
@@ -17752,13 +17806,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17773,7 +17827,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Washington",
    "state": "WA",
    "region": "Pacific NW",
@@ -17786,13 +17840,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17807,7 +17861,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "St. Louis area",
    "state": "MO",
    "region": "Midwest",
@@ -17820,13 +17874,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17841,7 +17895,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Utah",
    "state": "UT",
    "region": "Mountain",
@@ -17854,13 +17908,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17875,7 +17929,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "New Bern",
    "state": "NC",
    "region": "Southeast",
@@ -17888,13 +17942,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17909,7 +17963,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Tennessee",
    "state": "TN",
    "region": "Southeast",
@@ -17922,13 +17976,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17943,7 +17997,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Kansas City area",
    "state": "KS",
    "region": "Midwest",
@@ -17956,13 +18010,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -17977,7 +18031,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Pennsylvania",
    "state": "PA",
    "region": "Northeast",
@@ -17990,13 +18044,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -18011,7 +18065,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Michigan",
    "state": "MI",
    "region": "Midwest",
@@ -18024,13 +18078,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -18045,7 +18099,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "New York City",
    "state": "NY",
    "region": "Northeast",
@@ -18058,13 +18112,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -18079,7 +18133,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Oklahoma",
    "state": "OK",
    "region": "Texas & South Central",
@@ -18092,13 +18146,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -18113,7 +18167,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Sandusky",
    "state": "OH",
    "region": "Midwest",
@@ -18126,13 +18180,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -18147,7 +18201,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Minnesota",
    "state": "MN",
    "region": "Midwest",
@@ -18160,13 +18214,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -18181,7 +18235,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Illinois",
    "state": "IL",
    "region": "Midwest",
@@ -18194,13 +18248,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -18215,7 +18269,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "San Antonio",
    "state": "TX",
    "region": "Texas & South Central",
@@ -18228,13 +18282,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -18249,7 +18303,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Ride name/location from prior-year knowledge; confirm existence and 2027 date on events.nationalmssociety.org.",
+   "date_note": "Held in past years; 2027 date not announced yet. Find it on events.nationalmssociety.org.",
    "city": "Madison area",
    "state": "WI",
    "region": "Midwest",
@@ -18262,13 +18316,13 @@
    "beneficiary": "National Multiple Sclerosis Society",
    "fundraising_min": "",
    "organizer": "National MS Society",
-   "url": "https://events.nationalmssociety.org/pages/1230",
+   "url": "",
    "reg_status": "",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://events.nationalmssociety.org/pages/1230"
    ],
@@ -18302,7 +18356,7 @@
    "series": "",
    "cost": "",
    "qualification": "Open entry",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://transambikerace.com/"
    ],
@@ -18336,7 +18390,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "bike-northwoods-tour-2027",
    "riding": false
@@ -18368,7 +18422,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "GPS-guided routes, SAG, tent camping, showers, yoga, entertainment; 6-day, 3-day weekend, 3-day weekday and 1-day options.",
+   "notes": "GPS-guided routes, SAG, tent camping, showers, yoga, entertainment; 6-day, 3-day weekend, 3-day weekday and 1-day options. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.letsdothis.com/us/e/bike-virginia-tour-209584"
    ],
@@ -18402,7 +18456,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "blue-ridge-breakaway",
    "riding": false
@@ -18434,7 +18488,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "bohemian-sto-mil",
    "riding": false
@@ -18466,7 +18520,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "bon-ton-roulet-2027",
    "riding": false
@@ -18530,7 +18584,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "brasstown-bald-buster",
    "riding": false
@@ -18562,7 +18616,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "brat-bicycle-ride-across-tennessee-2027",
    "riding": false
@@ -18594,7 +18648,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "breakthrough-t1d-ride-other-2027-locations",
    "riding": false
@@ -18662,7 +18716,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "candisc-cycling-around-north-dakota-in-sakakawea-country-202",
    "riding": false
@@ -18694,7 +18748,7 @@
    "series": "",
    "cost": "",
    "qualification": "USAC license",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "cascade-cycling-classic",
    "riding": false
@@ -18726,7 +18780,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "castell-grind",
    "riding": false
@@ -18758,7 +18812,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "cf-cycle-for-life-other-2027-locations",
    "riding": false
@@ -18790,7 +18844,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://bikenewengland.com/2026/03/02/cf-cycle-for-life/",
     "https://bikenewengland.com/charity-rides-in-new-england/"
@@ -18861,7 +18915,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://greatplainsbikeclub.org/other-area-rides/"
    ],
@@ -18895,7 +18949,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "cross-florida-ride",
    "riding": false
@@ -18963,7 +19017,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "cycle-adirondacks-2027",
    "riding": false
@@ -19135,7 +19189,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "cycle-the-erie-canal-2027",
    "riding": false
@@ -19167,7 +19221,7 @@
    "series": "",
    "cost": "",
    "qualification": "Open entry (capped)",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "cycle-to-the-sun",
    "riding": false
@@ -19199,7 +19253,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "cycle-zydeco-2027",
    "riding": false
@@ -19265,7 +19319,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "dc-bike-ride",
    "riding": false
@@ -19332,7 +19386,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "face-of-america",
    "riding": false
@@ -19364,7 +19418,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "firecracker-50",
    "riding": false
@@ -19396,7 +19450,7 @@
    "series": "",
    "cost": "",
    "qualification": "400 historically a RAAM qualifier",
-   "notes": "Ultra-distance event.",
+   "notes": "Ultra-distance event. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "fireweed-400",
    "riding": false
@@ -19428,7 +19482,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "fuller-center-bicycle-adventure",
    "riding": false
@@ -19460,7 +19514,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "fuller-center-bicycle-adventure-2027",
    "riding": false
@@ -19492,7 +19546,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "gitap-grand-illinois-trail-and-parks-ride-2027",
    "riding": false
@@ -19524,7 +19578,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "gowdy-grinder",
    "riding": false
@@ -19663,7 +19717,7 @@
    "series": "Grand Traverse Triple Crown (ski/run/bike)",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "grand-traverse-mountain-bike",
    "riding": false
@@ -19676,7 +19730,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Treat 2027 as unannounced; if held, Saturday before Memorial Day (May 22, 2027).",
+   "date_note": "No 2027 date announced; the 2026 edition was cancelled. If it runs, it is usually the Saturday before Memorial Day (May 22, 2027).",
    "city": "Hico",
    "state": "TX",
    "region": "Texas & South Central",
@@ -19730,7 +19784,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "harpoon-point-to-point",
    "riding": false
@@ -19794,7 +19848,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "horrible-hundred",
    "riding": false
@@ -19826,7 +19880,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "horsey-hundred",
    "riding": false
@@ -19858,7 +19912,7 @@
    "series": "",
    "cost": "",
    "qualification": "USA Cycling license",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "intelligentsia-cup",
    "riding": false
@@ -19930,6 +19984,42 @@
    "riding": false
   },
   {
+   "id": 643,
+   "name": "Jonathan Pon Memorial Ride",
+   "category": "Charity ride",
+   "subtype": "HIV/AIDS multi-day (2-day, camping)",
+   "start": "",
+   "end": "",
+   "date_status": "tba",
+   "date_note": "No 2027 date published yet, and the weekend moves: 2025 ran May 17-18 (sold out), 2026 ran Oct 10-11. Watch pospeds.org/events for the 2027 announcement.",
+   "city": "Sausalito",
+   "state": "CA",
+   "region": "California",
+   "start_city": "Sausalito (overnight parking allowed)",
+   "end_city": "Sausalito (overnight in Guerneville on the Russian River)",
+   "days": 2,
+   "distances": "~180 miles over 2 days (~85-90 mi each way), Sausalito to Guerneville and back via the Sonoma/Marin coast",
+   "elevation": "Rolling hills and a few steep climbs (2026 Day 2 on Strava: ~85 mi / ~4,400 ft)",
+   "cause": "HIV/AIDS",
+   "beneficiary": "Positive Pedalers community ride - remembrance of the AIDS crisis and community for people living with HIV and allies",
+   "fundraising_min": "None - no fundraising required",
+   "organizer": "Positive Pedalers (PosPeds)",
+   "url": "https://www.pospeds.org/events/jonathan-pon-2026-ride/",
+   "reg_status": "2027 not open. 2026 was a Google form + PayPal, $195 per cyclist (+$10 for a 2-person tent). Contact: Curtis Bass, curtis.bass@pospeds.org",
+   "lottery": "No lottery (2025 sold out).",
+   "series": "",
+   "cost": "$195 (2026)",
+   "qualification": "",
+   "notes": "Named for Jonathan Pon, who started Positive Pedalers on the California AIDS Ride in 1995-96 (died 2001). Meet 6:30 am, ride out 7:30 am; rain cancels. Same Russian River country as Cycle to Zero. PosPeds also runs the Paul Hulse Century.",
+   "sources": [
+    "https://www.pospeds.org/events/jonathan-pon-2026-ride/",
+    "https://www.heylo.com/event/-P-BBfRXdSB50i9TxoST",
+    "https://www.aidslifecycle.org/event/norcal"
+   ],
+   "slug": "jonathan-pon-memorial-ride",
+   "riding": false
+  },
+  {
    "id": 572,
    "name": "Katy Trail Ride 2027 (Missouri State Parks)",
    "category": "Multi-day tour",
@@ -19956,7 +20046,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "katy-trail-ride-2027",
    "riding": false
@@ -19969,7 +20059,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Requested in brief. Starts in Canada, finishes in Haines, Alaska.",
+   "date_note": "Starts in Canada, finishes in Haines, Alaska.",
    "city": "Haines (finish); start Haines Junction, Yukon",
    "state": "AK",
    "region": "Alaska & Hawaii",
@@ -19988,7 +20078,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "kluane-chilkat-international-bike-relay",
    "riding": false
@@ -20054,7 +20144,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "Camping tour on Michigan rail-trails; official site michigander.bike per MTGA page.",
+   "notes": "Camping tour on Michigan rail-trails; official site michigander.bike per MTGA page. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://michigantrails.org/michigander/",
     "https://lmb.org/ride-calendar/michigander-bicycle-tour/",
@@ -20106,7 +20196,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Requested in brief. Historically early September.",
+   "date_note": "Historically early September.",
    "city": "Mt. Baldy",
    "state": "CA",
    "region": "California",
@@ -20125,7 +20215,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "mt-baldy-bicycle-hill-climb",
    "riding": false
@@ -20157,7 +20247,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "mt-greylock-hill-climb",
    "riding": false
@@ -20170,7 +20260,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Requested in brief. Historically late April.",
+   "date_note": "Historically late April.",
    "city": "San Jose",
    "state": "CA",
    "region": "California",
@@ -20189,7 +20279,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "mt-hamilton-challenge",
    "riding": false
@@ -20221,7 +20311,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "mt-lemmon-gravel-grinder",
    "riding": false
@@ -20288,7 +20378,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "natchez-trace-century-ride",
    "riding": false
@@ -20320,7 +20410,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "ned-gravel",
    "riding": false
@@ -20352,7 +20442,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "oatbran-one-awesome-tour-bike-ride-across-nevada-2027",
    "riding": false
@@ -20365,7 +20455,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "2025 edition Oct 11-12, 2025 (2nd weekend of October). Could not find a 2026 date on the club calendar; 2027 unknown.",
+   "date_note": "2025 edition Oct 11-12, 2025 (2nd weekend of October). No 2026 date on the club calendar; 2027 unknown.",
    "city": "Lawrence",
    "state": "KS",
    "region": "Midwest",
@@ -20419,7 +20509,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "ok-freewheel-2027",
    "riding": false
@@ -20451,7 +20541,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "old-kentucky-home-tour",
    "riding": false
@@ -20483,7 +20573,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "ore-to-shore-mountain-bike-epic",
    "riding": false
@@ -20515,7 +20605,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "pedal-for-pediatrics",
    "riding": false
@@ -20547,7 +20637,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "pisgah-stage-race",
    "riding": false
@@ -20647,7 +20737,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "project-hero-honor-rides-challenge-series",
    "riding": false
@@ -20679,7 +20769,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "Early June historically.",
+   "notes": "Early June historically. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://greatplainsbikeclub.org/other-area-rides/"
    ],
@@ -20748,7 +20838,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "reston-century",
    "riding": false
@@ -20815,7 +20905,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "ride-ataxia",
    "riding": false
@@ -20847,7 +20937,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "ride-for-world-health",
    "riding": false
@@ -20915,7 +21005,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "ride-to-end-alz-other-2027-locations",
    "riding": false
@@ -20979,7 +21069,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "ruta-del-jefe",
    "riding": false
@@ -21011,7 +21101,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "sagbraw-something-about-great-bike-rides-around-wisconsin-20",
    "riding": false
@@ -21073,9 +21163,9 @@
    "reg_status": "2027 not open",
    "lottery": "",
    "series": "",
-   "cost": "2023: $700 base (7-day); 3-day from ~$230-350",
+   "cost": "2023: $700 base (7-day); 3-day from about $230-350",
    "qualification": "",
-   "notes": "LMB's premier tour along Lake Michigan (Sleeping Bear Dunes, Tunnel of Trees).",
+   "notes": "LMB's premier tour along Lake Michigan (Sleeping Bear Dunes, Tunnel of Trees). Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://lmb.org/ride-calendar/shoreline-west-2023/",
     "https://cycletoursglobal.com/tour/league-of-michigan-bicyclists/shoreline-west",
@@ -21111,7 +21201,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "sierra-to-the-sea-2027",
    "riding": false
@@ -21124,7 +21214,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Requested in brief. Historically mid-August.",
+   "date_note": "Historically mid-August.",
    "city": "Sandy / Snowbird",
    "state": "UT",
    "region": "Mountain",
@@ -21143,7 +21233,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "snowbird-bicycle-hill-climb",
    "riding": false
@@ -21169,13 +21259,13 @@
    "beneficiary": "City of Cheyenne recreation programs",
    "fundraising_min": "",
    "organizer": "City of Cheyenne / Cheyenne Aquatic Center, tied to the Superday festival",
-   "url": "https://www.cyclingwest.com/events/superday-tour-de-prairie-returns-june-22-2024/",
+   "url": "",
    "reg_status": "Not announced as of Sept 2026",
    "lottery": "",
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Wyoming has very few organized one-day road events; this is the main Cheyenne-area ride.",
+   "notes": "Wyoming has very few organized one-day road events; this is the main Cheyenne-area ride. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.cyclingwest.com/events/superday-tour-de-prairie-returns-june-22-2024/",
     "https://www.wyomingnews.com/news/local_news/tour-de-prairie-registration-open-until-june-19/article_225deacf-81fd-5d63-be72-24fe555cd75b.html",
@@ -21243,7 +21333,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Unsupported ride, no official site.",
+   "notes": "Unsupported ride, no official site. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "tour-das-h-gel",
    "riding": false
@@ -21256,7 +21346,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "",
+   "date_note": "Recent host regions have included Silicon Valley, New England, Orlando, the Twin Cities, Colorado, Michigan and Texas. 2027 cities and dates not announced yet.",
    "city": "",
    "state": "",
    "region": "National / multiple",
@@ -21288,10 +21378,10 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Requested in brief.",
+   "date_note": "",
    "city": "Stateline / South Lake Tahoe",
    "state": "NV",
-   "region": "California",
+   "region": "Southwest",
    "start_city": "",
    "end_city": "",
    "days": 1,
@@ -21307,7 +21397,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "tour-de-tahoe-bike-big-blue",
    "riding": false
@@ -21339,7 +21429,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "Organizer web presence appears stale.",
+   "notes": "Organizer web presence appears stale. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.tourdeschutes.org/event-info/ride-overview/",
     "https://www.tourdeschutes.org/about-us/",
@@ -21375,7 +21465,7 @@
    "series": "",
    "cost": "",
    "qualification": "USA Cycling license",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "tour-of-america-s-dairyland",
    "riding": false
@@ -21407,7 +21497,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "tour-of-minnesota-2027",
    "riding": false
@@ -21473,7 +21563,7 @@
    "series": "",
    "cost": "",
    "qualification": "USAC license for race categories",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "tour-of-the-battenkill",
    "riding": false
@@ -21537,7 +21627,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "triri-touring-ride-in-rural-indiana-2027",
    "riding": false
@@ -21569,7 +21659,7 @@
    "series": "",
    "cost": "",
    "qualification": "USA Cycling license",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "tulsa-tough",
    "riding": false
@@ -21582,7 +21672,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Requested in brief. Traditionally the first Saturday of August.",
+   "date_note": "Traditionally the first Saturday of August.",
    "city": "Lehi / Thanksgiving Point",
    "state": "UT",
    "region": "Mountain",
@@ -21601,7 +21691,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "ulcer-utah-lake-century-epic-ride",
    "riding": false
@@ -21758,7 +21848,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "2027 host/dates not yet announced. 2026 edition: June 27-July 1, 2026, Greater Milwaukee area, WI. Criterium titles are awarded within Pro Road (elite) and Masters & Junior Road nationals.",
+   "date_note": "2027 host/dates not yet announced. 2026 edition: June 27-July 1, 2026, Greater Milwaukee area, WI. USA Cycling no longer stages a separate stand-alone Criterium Nationals or Amateur Road Nationals; criterium titles are awarded within Pro Road (elite) and Masters & Junior Road nationals.",
    "city": "TBA",
    "state": "",
    "region": "National / multiple",
@@ -21866,7 +21956,7 @@
    "start": "",
    "end": "",
    "date_status": "tba",
-   "date_note": "Could not reach the organizer site. Historically late February/early March.",
+   "date_note": "Historically late February or early March.",
    "city": "Turkey",
    "state": "TX",
    "region": "Texas & South Central",
@@ -21885,7 +21975,7 @@
    "series": "",
    "cost": "",
    "qualification": "",
-   "notes": "",
+   "notes": "Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [],
    "slug": "valley-of-tears",
    "riding": false
@@ -21917,7 +22007,7 @@
    "series": "",
    "cost": "TBA",
    "qualification": "",
-   "notes": "Partially outside the US.",
+   "notes": "Partially outside the US. Not checked with the organizer yet. Look at their site before you plan around it.",
    "sources": [
     "https://www.bikingbis.com/across-state-bike-tours-idaho/"
    ],
@@ -22029,7 +22119,7 @@
   {
    "name": "Tour de Georgia (pro stage race)",
    "state": "GA",
-   "reason": "Professional stage race last held 2008 — defunct (noted). Not to be confused with the active Tour of Georgia Gran Fondo (Helen, GA; April 25, 2027)."
+   "reason": "Professional stage race last held 2008 — defunct. Not to be confused with the active Tour of Georgia Gran Fondo (Helen, GA; April 25, 2027)."
   },
   {
    "name": "Real Ale Ride (Blanco, TX)",
@@ -22049,7 +22139,7 @@
   {
    "name": "Rasputitsa",
    "state": "VT",
-   "reason": "Organizers are 'not organizing or accepting registrations for a 2026/2027 race' (statement dated Jul 16, 2026 per Gravel God); no 2026 edition was held after co-founder Anthony Moccia died on Mar 13, 2026. Aggregator 2027 dates (e.g., Mar 27, 2027) are placeholders."
+   "reason": "Organizers said on Jul 16, 2026 they are 'not organizing or accepting registrations for a 2026/2027 race'; no 2026 edition was held after co-founder Anthony Moccia died on Mar 13, 2026. 2027 dates seen on listing sites are placeholders."
   },
   {
    "name": "Rooted Vermont",
@@ -22059,7 +22149,7 @@
   {
    "name": "Belgian Waffle Ride North Carolina (Asheville / Hendersonville)",
    "state": "NC",
-   "reason": "Last held Oct 3–4, 2025 (Wag Valley Farm). BWR's own 'Future Dates' page lists only Arizona, California, Utah, Montana and Mexico for 2026 and only Arizona and California for 2027; the Oct 3–4, 2026 date on aggregators is explicitly a projection ('BWR has not yet announced dates for the 2026 edition'). Treat as dropped/on hiatus unless BWR announces a return."
+   "reason": "Last held Oct 3-4, 2025 (Wag Valley Farm). BWR's own future-dates page lists no North Carolina edition for 2026 or 2027. Treat as dropped or on hiatus unless BWR announces a return."
   },
   {
    "name": "Belgian Waffle Ride Kansas (Lawrence)",
@@ -22129,7 +22219,7 @@
   {
    "name": "Ride for Life Chicago (formerly Ride for AIDS Chicago) - TPAN",
    "state": "",
-   "reason": "Discontinued. TPAN is now part of Vivent Health: tpan.com/rideforlife sends you to Vivent Health's Chicago location page, and Vivent Health's 2026-27 events calendar lists no Chicago ride. The last edition was June 18-19, 2022 (2 days, 200 miles)."
+   "reason": "Likely discontinued. tpan.com/rideforlife now redirects to Vivent Health's Chicago page (TPAN joined Vivent Health), and Vivent Health's 2026-27 events calendar lists no Chicago ride. Treat as ended unless Vivent Health says otherwise."
   },
   {
    "name": "Empire State AIDS Ride (NY)",
@@ -22174,7 +22264,7 @@
   {
    "name": "Cherry-Roubaix (Traverse City road race/gran fondo)",
    "state": "MI",
-   "reason": "No 2025/2026 edition found; last documented gran fondo was the Crystal Mountain Cherry Roubaix Gran Fondo (June 4, 2022, Benzie Sunrise Rotary). Note: was a USA Cycling/MBRA-sanctioned road race series anyway."
+   "reason": "No 2025 or 2026 edition; the last gran fondo was the Crystal Mountain Cherry Roubaix Gran Fondo (June 4, 2022, Benzie Sunrise Rotary). It was also a USA Cycling/MBRA-sanctioned road race series."
   },
   {
    "name": "Minnesota Ironman Bike Ride / The Freebike",
@@ -22274,7 +22364,7 @@
   {
    "name": "Elephant Rock Ride (Subaru Elephant Rock Cycling Festival)",
    "state": "CO",
-   "reason": "PERMANENTLY DISCONTINUED after the 2022 edition (final ride June 5, 2022). Event director Scott Olmsted concluded the ride because of Castle Rock's rapid growth, increased traffic and ongoing construction - the town grew from about 10,000 residents in 1987, when Scot Harris founded the ride, to over 80,000. The ride was not relocated. At its peak it offered routes from 7 to 105 miles and could accommodate up to 7,000 riders, serving as Colorado's traditional season-opening cycling festival. Note: a separate 'Sunrise to Sunset Elephant Rock' 12-hour MOUNTAIN BIKE endurance race is run by The Ride Collective at Philip S. Miller Park in Castle Rock (listed for May 29, 2027) - that is an off-road event and not a continuation of the road ride."
+   "reason": "PERMANENTLY DISCONTINUED after the 2022 edition (final ride June 5, 2022). Event director Scott Olmsted concluded the ride because of Castle Rock's rapid growth, increased traffic and ongoing construction - the town grew from about 10,000 residents in 1987, when Scot Harris founded the ride, to over 80,000. The ride was not relocated. At its peak it offered routes from 7 to 105 miles and could accommodate up to 7,000 riders, serving as Colorado's traditional season-opening cycling festival. A separate 'Sunrise to Sunset Elephant Rock' 12-hour MOUNTAIN BIKE endurance race is run by The Ride Collective at Philip S. Miller Park in Castle Rock (listed for May 29, 2027) - that is an off-road event and not a continuation of the road ride."
   },
   {
    "name": "Golden Gran Fondo",
@@ -22294,7 +22384,7 @@
   {
    "name": "Ride the Rockies (The Denver Post Ride The Rockies)",
    "state": "CO",
-   "reason": "CANCELLED AND NOT REVIVED. The 2024 edition was cancelled because of insufficient registration - organizers said 'After much consideration and evaluation of the limited registration, we regret that Ride The Rockies 2024 is canceled' - making 2023 the last completed edition after 37 consecutive years (excluding 2020, lost to the pandemic). Organizers said they were 'assessing the best options for this beloved ride,' but no edition has run since and none is announced for 2027. Note: this was a multi-day tour, outside this one-day category, and a separate multi-day event, Colorado's Ride, has emerged in its place (Aug 9-14, 2026, Crested Butte)."
+   "reason": "CANCELLED AND NOT REVIVED. The 2024 edition was cancelled because of insufficient registration - organizers said 'After much consideration and evaluation of the limited registration, we regret that Ride The Rockies 2024 is canceled' - making 2023 the last completed edition after 37 consecutive years (excluding 2020, lost to the pandemic). Organizers said they were 'assessing the best options for this beloved ride,' but no edition has run since and none is announced for 2027. A separate multi-day event, Colorado's Ride, has emerged in its place (Aug 9-14, 2026, Crested Butte)."
   },
   {
    "name": "Venus de Miles",
@@ -22304,7 +22394,7 @@
   {
    "name": "Cycle Greater Yellowstone",
    "state": "MT",
-   "reason": "DORMANT / APPARENTLY DEFUNCT (and multi-day, so outside this one-day category - listed here for status only). The Greater Yellowstone Coalition's supported multi-day tour through Montana, Wyoming and Idaho gateway communities has no traceable editions after 2019 (Red Lodge, MT) and no 2026 or 2027 edition is announced."
+   "reason": "Dormant: the Greater Yellowstone Coalition's supported multi-day tour through Montana, Wyoming and Idaho gateway towns has no editions after 2019 (Red Lodge, MT), and no 2026 or 2027 edition is announced."
   },
   {
    "name": "TOSRV West (Tour of the Swan River Valley)",
@@ -22384,12 +22474,12 @@
   {
    "name": "Mt. Hood Cycling Classic",
    "state": "OR",
-   "reason": "Defunct/inactive. Treat as not running unless the organizer announces a revival."
+   "reason": "Defunct/inactive: no edition since 2019. Treat it as not running unless the organizer announces a revival."
   },
   {
    "name": "Winston-Salem Cycling Classic",
    "state": "NC",
-   "reason": "Inactive. No 2026 or 2027 edition found."
+   "reason": "Inactive: the UCI road race and criterium have not been held since 2023, and no 2026 or 2027 edition is announced."
   },
   {
    "name": "El Tour de Mesa",
@@ -22439,7 +22529,7 @@
   {
    "name": "Paso Robles Cycling Festival / Great Western Bicycle Rally",
    "state": "CA",
-   "reason": "Needs confirmation."
+   "reason": "Possibly defunct: the last known edition was 2019 and no 2025 or 2026 edition has been listed."
   },
   {
    "name": "Harbor to the Bay",
@@ -22449,7 +22539,7 @@
   {
    "name": "Red Ribbon Ride",
    "state": "MN",
-   "reason": "No 2024–2026 edition found; TeamRaiser page 404s. Confirm with The Aliveness Project before planning around it."
+   "reason": "Dormant: the last edition was Aug 2023 (two days, Willow River, MN); no 2024-2026 edition, and its TeamRaiser page is gone. Check with The Aliveness Project before planning around it."
   },
   {
    "name": "Best Buddies Challenge: Hearst Castle",
@@ -22459,7 +22549,7 @@
   {
    "name": "Terrible Two Double Century",
    "state": "CA",
-   "reason": "On hiatus: Sonoma County's SRCC says the Terrible Two 'will not be held in 2026' and is recruiting volunteers for a possible 2027 return; no 2027 date or registration is posted (checked Oct 1, 2026)."
+   "reason": "On hiatus: Sonoma County's SRCC says the Terrible Two 'will not be held in 2026' and is recruiting volunteers for a possible 2027 return; no 2027 date or registration is posted."
   }
  ]
 }

@@ -57,7 +57,7 @@ const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 const MONTHS_LONG = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const CATS = ["Charity ride", "Road", "Gravel", "MTB", "Multi-day tour", "Ultra / bikepacking", "Race", "Hill climb"];
-const REGIONS = ["Southwest", "California", "Pacific NW", "Mountain", "Texas & South Central", "Midwest", "Southeast", "Mid-Atlantic", "Northeast", "Alaska & Hawaii", "National / multiple"];
+const REGIONS = ["Southwest", "California", "Pacific NW", "Mountain", "Texas & South Central", "Midwest", "Southeast", "Mid-Atlantic", "Northeast", "Alaska & Hawaii", "National / multiple", "Canada"];
 const CAUSE_ORDER = ["LGBTQ+", "HIV/AIDS", "Recovery", "Mental health", "Cancer", "MS", "Diabetes", "Heart", "Children", "Health", "Veterans", "Lung", "ALS", "Arthritis", "Autism", "Cystic fibrosis", "Alzheimer's", "Hunger", "Bike advocacy", "Environment", "Community", "Various charities", "Other"];
 
 function day(iso) { const d = new Date(iso + "T12:00:00Z"); return { m: d.getUTCMonth() + 1, d: d.getUTCDate(), dow: DOW[d.getUTCDay()] }; }
@@ -308,6 +308,10 @@ const count = (fn) => { const m = new Map(); for (const e of events) { const k =
 const byMonth = count((e) => e.month), byCat = count((e) => e.category), byRegion = count((e) => e.region), byCause = count((e) => e.cause), byStatus = count((e) => e.date_status);
 const nConf = byStatus.get("confirmed") || 0, nProj = byStatus.get("projected") || 0, nTba = byStatus.get("tba") || 0;
 const riding = events.filter((e) => e.riding);
+// Oct 25, 2026: the calendar is US only, except the rides outside the US Robert is doing (the Friends for Life Bike
+// Rally, Toronto to Montréal, came in with the Oct 21 refresh, region "Canada"). The lede and the method say so.
+const abroad = events.filter((e) => e.region === "Canada").length;
+const abroadClause = abroad ? `, plus the ${abroad === 1 ? "one ride" : abroad + " rides"} outside the US Robert is doing` : "";
 const updatedLong = new Date(data.updated + "T12:00:00Z").toLocaleDateString("en-US", { timeZone: "UTC", month: "long", day: "numeric", year: "numeric" });
 
 // ——— chrome (mirrors build-events.js) —————————————————————————————————————
@@ -624,7 +628,7 @@ body += `
     ${crumbs("All")}
     <p class="eyebrow" id="eyebrow">${events.length} events &middot; <b>${nConf} confirmed</b> &middot; ${nProj} projected &middot; ${nTba} tba &middot; updated ${esc(updatedLong)}</p>
     <h1>All 2027 bike rides &amp; races</h1>
-    <p class="lede">Every organized ride and race in the US in 2027 that we could pin down: ${events.length} events, ${nConf} with dates published by the organizer. <span class="k key-conf">Confirmed</span> means the organizer has published the 2027 date. <span class="k key-proj">Projected</span> means it is placed on the same weekend as the 2026 edition — check before you register.</p>
+    <p class="lede">Every organized ride and race in the US in 2027 that we could pin down${abroadClause}: ${events.length} events, ${nConf} with dates published by the organizer. <span class="k key-conf">Confirmed</span> means the organizer has published the 2027 date. <span class="k key-proj">Projected</span> means it is placed on the same weekend as the 2026 edition — check before you register.</p>
 
     <section class="controls" aria-label="Filters">
       <div class="search">
@@ -719,7 +723,7 @@ ${retired.slice().sort((a, b) => a.name.localeCompare(b.name)).map((r) => `     
     </details>
 
     <div class="method">
-      <p>Dates marked ✓ are published by the organizer. Dates marked ~ are placed on the same weekend as the 2026 edition; the date note under each event says how. TBA means the event exists but has not put out a 2026 or 2027 date. US only; virtual-only and indoor-only events are left out.</p>
+      <p>Dates marked ✓ are published by the organizer. Dates marked ~ are placed on the same weekend as the 2026 edition; the date note under each event says how. TBA means the event exists but has not put out a 2026 or 2027 date. US only${abroadClause}; virtual-only and indoor-only events are left out.</p>
       <p>Updated ${esc(updatedLong)}. ${esc(sourceLine)} Confirm with the organizer before booking travel. <a href="/events/2027/calendar-2027.json">JSON feed</a>.</p>
     </div>
 ${BLOCKS.REPORT({ thing: "event", heading: "Missing an event, or a date changed?", lede: "Tell us and we'll check it against the organizer's page. Confirmed dates only go up once the organizer publishes them." })}

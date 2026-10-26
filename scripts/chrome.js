@@ -26,7 +26,7 @@ const OG_IMAGE = `${SITE}/og-cfc.png`;
 // /chrome.css and every section sheet a generator passes (any old ?v= is replaced), apply-chrome.py gets it through
 // head(), build-home.js puts it on /home.css. Bump it whenever a stylesheet or /chrome.js changes and regenerate in the
 // §2 order: a page must never pair an old /chrome.css with new section sheets (they share cascade layers).
-const CSS_V = 48;
+const CSS_V = 49;
 const ver = (href) => `${href.split("?")[0]}?v=${CSS_V}`;
 
 // Counts shown in the mobile menu, same as the homepage. Read from the data so
@@ -116,12 +116,41 @@ const MARK = `<svg class="brand-mark" viewBox="0 0 760 150" aria-hidden="true" f
 // Oct 15, 2026: Cycling 4 one·n·ten (Nov 7, 2026) is off this list (Robert). Nothing links to /nov7/ any more.
 // Oct 21, 2026 (studio pass 1): each href opens that ride's row on the riding page (/events/2027/riding/#<slug>;
 // the calendar's OPEN_JS opens a hashed row). Tour de Palm Springs comes first: it's his next ride (Robert, Oct 21).
-const NEXT_RIDES = [
-  { until: "2027-02-06", date: "Feb 6", name: "Tour de Palm Springs", where: "Palm Springs, CA", href: "/events/2027/riding/#tour-de-palm-springs" },
-  { until: "2027-04-25", date: "Apr 23\u201325", name: "Center Ride Out", where: "LA to Ojai and back", href: "/events/2027/riding/#center-ride-out" },
-  { until: "2027-05-23", date: "May 21\u201323", name: "Cycle to Zero", where: "SF to the Russian River", href: "/events/2027/riding/#cycle-to-zero" },
-];
+// Oct 25, 2026: the list is read from the calendar (data/calendar-2027.json, `riding: true`, date order), so the
+// homepage's "The 2027 rides I'm doing" and the bar can never disagree. The bar only ever carries a date the
+// organizer published (`date_status: "confirmed"`); projected and TBA rides are on the homepage list and the riding
+// page, never on the bar. SHORT and WHERE are the house phrasings for the bar and the homepage; everything else is
+// the calendar's own text (`place()` mirrors scripts/build-calendar.js).
+const SHORT = { "life-time-sea-otter-classic": "Sea Otter Classic", "life-time-unbound-gravel": "Unbound Gravel", "seattle-to-portland-bicycle-classic": "Seattle to Portland", "recovery-ride": "Recovery Ride" };
+const WHERE = { "center-ride-out": "LA to Ojai and back", "cycle-to-zero": "SF to the Russian River", "friends-for-life-bike-rally": "Toronto to Montr\u00e9al", "seattle-to-portland-bicycle-classic": "205 to 208 miles, two days", "recovery-ride": "Sausalito to Guerneville and back" };
+const MON3 = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const ymd = (iso) => String(iso || "").split("-").map(Number);
+// "Feb 6", "Apr 23\u201325", "Sep 30\u2013Oct 2"; "" when there is no date
+function dateText(start, end) {
+  const [, m1, d1] = ymd(start); if (!m1) return "";
+  const [, m2, d2] = ymd(end || start);
+  if (m1 === m2 && d1 === d2) return `${MON3[m1 - 1]} ${d1}`;
+  return m1 === m2 ? `${MON3[m1 - 1]} ${d1}\u2013${d2}` : `${MON3[m1 - 1]} ${d1}\u2013${MON3[m2 - 1]} ${d2}`;
+}
+function place(e) {
+  if (e.start_city && e.end_city && e.start_city !== e.end_city && e.days > 1) {
+    const a = e.start_city.split("(")[0].trim(), b = e.end_city.split("(")[0].trim();
+    if (a && b && a !== b) return `${a} to ${b}`;
+  }
+  const c = (e.city || "").replace(/\s*\(.*?\)/g, "").replace(/\s+/g, " ").trim();
+  return c ? `${c}${e.state && !c.includes(e.state) ? ", " + e.state : ""}` : (e.state || e.region || "");
+}
 const RIDES_LIST = "/events/2027/riding/";
+// every ride on the calendar Robert is doing, date order, TBA last \u2014 the homepage list reads this
+const RIDING = (count("data/calendar-2027.json", (d) => (d.events || []).filter((e) => e.riding)) || [])
+  .sort((a, b) => (a.start || "9999").localeCompare(b.start || "9999") || a.name.localeCompare(b.name))
+  .map((e) => ({
+    slug: e.slug, name: SHORT[e.slug] || e.name.replace(/\s*\(.*?\)\s*/g, " ").trim(), full: e.name,
+    start: e.start || "", end: e.end || e.start || "", status: e.date_status || "", date: dateText(e.start, e.end),
+    where: WHERE[e.slug] || place(e), category: e.category || "", days: Number(e.days) || 1, cause: e.cause || "",
+    href: `${RIDES_LIST}#${e.slug}`,
+  }));
+const NEXT_RIDES = RIDING.filter((r) => r.status === "confirmed" && r.end).map((r) => ({ until: r.end, date: r.date, name: r.name, where: r.where, href: r.href }));
 const phxToday = () => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Phoenix" }).format(new Date());
 const NEXT_RIDE = NEXT_RIDES.find((r) => r.until >= phxToday()) || null;
 const RIDE_HREF = NEXT_RIDE ? NEXT_RIDE.href : RIDES_LIST;
@@ -245,7 +274,7 @@ function pledge({ line, copy } = {}) {
 }
 const PLEDGE = pledge();
 
-module.exports = { NEXT_RIDES, NEXT_RIDE, RIDE_HREF, SITE, INSTAGRAM, STRAVA, OG_IMAGE, FONTS, MARK, HEADER, FOOTER, CHROME_JS, PLEDGE, pledge, head, esc, attr, CSS_V };
+module.exports = { RIDING, NEXT_RIDES, NEXT_RIDE, RIDE_HREF, SITE, INSTAGRAM, STRAVA, OG_IMAGE, FONTS, MARK, HEADER, FOOTER, CHROME_JS, PLEDGE, pledge, head, esc, attr, CSS_V };
 
 if (require.main === module) {
   // `node scripts/chrome.js` -> the markup as JSON (apply-chrome.py reads it)
