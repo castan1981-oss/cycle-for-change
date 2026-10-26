@@ -642,6 +642,13 @@ for the pace. Every ride page now answers that, or says where the answer lives.
   it; a door with none is quiet.
 - Explaining text goes under a fold (`fold()` → `<details class="gr-fold">`), crawled but one tap
   away. `/rides/about/` is the explaining page; `/rides/add/` is the form.
+- **The list-page paragraph** (Oct 26, 2026; growth plan Phase 4 "b"): every hub, facet, day, state, country, "all"
+  and other-towns page carries "About these N rides" — one fold, one paragraph written from that page's rides by
+  `tools/lib/list-lede.js` (`aboutList()` in build-rides.js): the days and the big one, the earliest and latest start,
+  weekday evenings, no-drop and beginners, who else they're made for, the bikes, how often, the checked window. A
+  sentence only when the rides back it; numerals, never a sentence that opens on one; no clock, so the same rides write
+  the same words. `focus` keeps a page from repeating itself (a Saturday page doesn't say Saturday). 907 pages.
+  Tests: `tools/test/list-lede.test.js`.
 - The row (`card()` in build-rides.js and `hub.js`, kept in step): mark · name · when · town · one
   line (wait · pace · length · checked). Distance from a point only relative to the reader
   ("3 mi away"), never on static pages.
@@ -915,3 +922,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-25 — The sitemap index is written from its children (`scripts/sitemap-index.js`, run by every generator): each child's lastmod is the newest date inside it, not the Oct 6 it said for three weeks.
 - 2026-10-25 — The 2027 rides on the homepage (`#year`): all 13 Robert is doing, date order, from the calendar; the Oct 21 artifact refresh pulled in (640 events, 11 dates moved to confirmed, the Friends for Life Bike Rally and the Jonathan Pon Memorial Ride added; the Nov 7 ride's 2027 projection left out); `NEXT_RIDES` reads the same list, confirmed dates only; `CSS_V` 49.
 - 2026-10-25 — The year at a glance on `/events/2027/riding/` (`yearPoster()` in build-calendar.js, `.cal-year` in calendar.css): the night poster from the "The 2027 calendar" canvas (https://claude.ai/artifact/QmWdhNccLAoKJNEAaYms5S — Robert: "the first one") above the rows: twelve month grids on bruise, every day he rides a powder-rose square, projected dates outlined, each ride a link that opens its row; `CSS_V` 50. The canvas's lime poster stays a canvas thing.
+- 2026-10-26 — The list-page paragraph: "About these N rides" on all 907 hub, facet, day, state and all pages, written from each page's own rides (days, first and last start, after-work rides, no-drop, beginners, who they're for, bikes, how often, the checked window), folded under the picks.

@@ -35,6 +35,7 @@ const path = require("path");
 const CHROME = require("../scripts/chrome.js"); // shared header, footer, fonts
 const BLOCKS = require("../scripts/blocks.js"); // how-it's-built tiles + the ride-report form
 const TOWNS = require("../scripts/towns.js");  // the town layer (Sept 30, 2026): the strip on every ride page and city hub that has a guide
+const { listLede } = require("./lib/list-lede.js");
 const S = require("./lib/rides-schema.js");       // vocabularies, countries (schema v3)
 const F = require("./lib/rides-freshness.js");    // what's fresh, what hides, the "Checked" line
 const RV = require("./lib/reviews.js");          // Oct 8, 2026: rider reviews — the rules and the summary
@@ -1526,6 +1527,15 @@ function fold(summary, html) {
       <div class="gr-about-body">${html}</div>
     </details>`;
 }
+// The list-page paragraph (Oct 26, 2026; growth plan Phase 4 "b"): one paragraph on every hub, facet, day and state
+// page, written from the rides on it (tools/lib/list-lede.js), folded so the picks stay on the first screen.
+// focus = what the page is already about ({ day }, { tag } or { disc }), so the paragraph doesn't say it again.
+function aboutList(rides, focus = {}) {
+  const said = listLede(rides, { focus, fmtTime });
+  return said.length ? fold(`About these ${rides.length.toLocaleString("en-US")} rides`, `<p>${esc(said.join(" "))}</p>`) : "";
+}
+const focusOf = (x) => (x.kind === "day" ? { day: x.key } : x.kind === "tag" ? { tag: x.key } : x.kind === "disc" ? { disc: x.key } : {});
+const facetFocus = (f) => ({ [f.chip[0]]: f.chip[1] });
 function findPage(rides) {
   const canonical = `${SITE}/find-a-ride/`;
   const nCountries = new Set(rides.map((r) => r.country || "US")).size;
@@ -1739,7 +1749,7 @@ function placeSummary(rides, placeName) {
 }
 
 // ---------- the full list, with every filter: /<place>/all/ ----------
-function allPage({ title, h1, crumbs, canonical, description, rides, sections, hubs, upHref, upText, extraTop = "" }) {
+function allPage({ title, h1, crumbs, canonical, description, rides, sections, hubs, upHref, upText, extraTop = "", about = "" }) {
   return head({ title, description, canonical, jsonld: pageLd(canonical, h1, description, rides, crumbs) }) + `
 <main id="main" class="gr-dir gr-all-page">
   <header class="gr-head wrap">
@@ -1755,7 +1765,7 @@ ${extraTop}
       <div class="gr-empty" id="gr-empty" hidden>
         <p>No rides match here.</p>
         <p class="gr-empty-actions"><button type="button" class="gr-chip" id="gr-widen">Show the closest rides anyway</button> <a class="gr-chip" href="/rides/">Search everywhere</a> <button type="button" class="gr-chip" data-clear>Clear</button></p>
-      </div>
+      </div>${about}
       <p class="back"><a href="${upHref}">&larr; ${esc(upText)}</a></p>
 ${FOOTLINE}
 ${CTA}
@@ -1766,7 +1776,7 @@ ${CTA}
 }
 
 // ---------- a short page: one pick inside a place (Road in Phoenix, Saturday in Phoenix, No-drop in Arizona) ----------
-function subPage({ title, h1, crumbs, canonical, description, rides, body, jump = "", upHref, upText, sideHref = null, sideText = null, badgeHtml = "", first = false, noindex = false }) {
+function subPage({ title, h1, crumbs, canonical, description, rides, body, jump = "", upHref, upText, sideHref = null, sideText = null, badgeHtml = "", first = false, noindex = false, about = "" }) {
   return head({ title, description, canonical, jsonld: pageLd(canonical, h1, description, rides, crumbs), noindex }) + `
 <main id="main" class="gr-dir gr-sub-page">
   <header class="gr-head wrap${badgeHtml ? " gr-head--badge" : ""}">
@@ -1778,7 +1788,7 @@ function subPage({ title, h1, crumbs, canonical, description, rides, body, jump 
   </header>
 ${jump}
   <section class="gr-results-wrap" id="gr-list">
-    <div class="wrap">${body}
+    <div class="wrap">${body}${about}
       <nav class="gr-btn-row" aria-label="Where next">
         ${rideBtn({ href: upHref, text: esc(upText), markId: "town", ghost: true, back: true })}
         ${sideHref ? rideBtn({ href: sideHref, text: esc(sideText), markId: "list", ghost: true }) : ""}
@@ -1828,13 +1838,14 @@ function cityPage(h, { pages, notes = null, others = [], areaRides = [], areaHub
         rides: list, body: dg ? dg.html : rowsHtml(list), jump: dg ? dg.strip : "",
         badgeHtml: x.kind === "day" ? badge({ day: x.key, sub: h.city }) : badge({ markId: x.markId, sub: h.city }), first: x.kind === "tag" && (x.key === "beginner" || x.key === "no-drop"),
         upHref: base, upText: `Every kind of ride in ${h.city}`, sideHref: `${base}all/`, sideText: `All ${rides.length}, with filters`,
+        about: aboutList(list, focusOf(x)),
       }) });
     }
     pages.push({ path: `${base}all/`, rides, html: allPage({
       title: `All group rides in ${name} (${rides.length})`, h1: `All group rides in ${world ? h.city : name}`,
       crumbs: [...crumbs, ["All", `${SITE}${base}all/`]], canonical: `${SITE}${base}all/`,
       description: trunc(`Every recurring group ride within ${radius} of ${name}, ${rides.length} in all, with filters by bike, rider and day.`, 158),
-      rides, sections: rowsHtml(rides), hubs: [], upHref: base, upText: `Group rides in ${h.city}`,
+      rides, sections: rowsHtml(rides), hubs: [], upHref: base, upText: `Group rides in ${h.city}`, about: aboutList(rides),
     }) });
     body = `${picksBlock(rides)}
       <section class="gr-step" aria-labelledby="bike-h">
@@ -1886,6 +1897,7 @@ function cityPage(h, { pages, notes = null, others = [], areaRides = [], areaHub
   </header>
   <div class="wrap gr-steps" id="gr-list">
 ${body}
+${aboutList(rides)}
 ${photo}
 ${world ? countryNotesBlock(h.country, notes) : ""}
 ${town ? TOWNS.strip(town, { compact: true, heading: `Coming to ${esc(town.name)} to ride?`, lede: "Routes, coffee, who fixes a bike, where to sleep with it." }) : ""}
@@ -1918,6 +1930,7 @@ function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, descripti
       description: trunc(`${plural(list.length, `${f.h1.replace(/ group rides$/, "").toLowerCase()} group ride`)} in ${areaWord}: ${list.slice(0, 3).map((r) => r.name).join(", ")}. ${f.intro}`, 158),
       rides: list, badgeHtml: badge({ markId: FACET_MARK[f.slug], sub: areaWord }), body: groupedRows(list, { hubOf, collapse: list.length > LIST_MAX }), jump: list.length > LIST_MAX && new Set(list.map((r) => r.city)).size > 2 ? cityJump(list) : "",
       upHref: base, upText: `All group rides in ${areaWord}`, sideHref: `/rides/${f.slug}/`, sideText: `${FACET_DOOR[f.slug]} rides everywhere`, first: f.slug === "beginner" || f.slug === "no-drop",
+      about: aboutList(list, facetFocus(f)),
     }) });
   }
   // the place's own map: a dot per ride, its cities to tap
@@ -1938,13 +1951,14 @@ function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, descripti
       description: trunc(`${plural(elsewhere.length, "group ride")} in ${areaWord} outside its bigger cities: ${[...new Set(elsewhere.map((r) => r.city))].slice(0, 6).join(", ")}.`, 158),
       rides: elsewhere, body: groupedRows(elsewhere, { collapse: elsewhere.length > LIST_MAX }), jump: elsewhere.length > LIST_MAX ? cityJump(elsewhere) : "",
       upHref: base, upText: `Group rides in ${areaWord}`, sideHref: `${base}all/`, sideText: `All ${rides.length}, with filters`,
+      about: aboutList(elsewhere),
     }) });
     const facetDoors = FACETS.filter((f) => f.slug !== "gravel" && facetN[f.slug].length).map((f) => door({ href: doorHref(base, { slug: f.slug, rides: facetN[f.slug] }), name: FACET_DOOR[f.slug], n: facetN[f.slug].length, markId: FACET_MARK[f.slug] })).join("\n          ");
     pages.push({ path: `${base}all/`, rides, html: allPage({
       title: `All group rides in ${areaWord} (${rides.length})`, h1: `All group rides in ${areaWord}`,
       crumbs: [...crumbs, ["All", `${SITE}${base}all/`]], canonical: `${SITE}${base}all/`,
       description: trunc(`Every recurring group ride in ${areaWord}, ${rides.length} in all, with filters by bike, rider and day.`, 158),
-      rides, sections: groupedRows(rides, { hubOf }), hubs: hubsIn, upHref: base, upText: `Group rides in ${areaWord}`,
+      rides, sections: groupedRows(rides, { hubOf }), hubs: hubsIn, upHref: base, upText: `Group rides in ${areaWord}`, about: aboutList(rides),
     }) });
     body = `
       <section class="gr-step" aria-labelledby="city-h">
@@ -1980,6 +1994,7 @@ function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, descripti
   <div class="wrap gr-steps" id="gr-list">
 ${notes}
 ${body}
+${aboutList(rides)}
       <p class="back"><a href="${world ? "/rides/world/" : "/rides/united-states/"}">&larr; ${world ? "Other countries" : "Every US state"}</a></p>
 ${FOOTLINE}
 ${CTA}
@@ -2074,6 +2089,7 @@ function usPage(usRides, hubs) {
         ${cityList.map((h) => posterTile({ href: h.path, name: h.city, count: h.rides.length, small: h === home ? "rides<br>home base" : `rides<br>${h.state}`, art: artFor(`${h.state.toLowerCase()}-${slugify(h.city)}`), cls: h === home ? "tile-p--ink" : "" })).join("\n        ")}
       </div>
     </section>
+${aboutList(usRides)}
     <p class="back"><a href="/rides/">&larr; Find a group ride</a></p>
 ${FOOTLINE}
 ${CTA}
@@ -2119,6 +2135,7 @@ ${FACET_PHOTO[f.slug] ? photoBand(FACET_PHOTO[f.slug], { cls: FACET_PHOTO[f.slug
         ${ccs.map((cc) => posterTile({ href: hrefFor(byCountry[cc], `/rides/${countrySlug(cc)}/`), name: countryName(cc), count: byCountry[cc].length, small: byCountry[cc].length === 1 ? "ride" : "rides", markId: "globe", cls: "tile-p--country" })).join("\n        ")}
       </div>
     </section>` : ""}
+${aboutList(rides, facetFocus(f))}
     <section class="gr-step" aria-labelledby="fo-h">
       <h2 class="gr-filter-label" id="fo-h">Other ways to look</h2>
       <div class="gr-tiles">
