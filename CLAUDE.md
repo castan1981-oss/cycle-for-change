@@ -544,6 +544,11 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
 - **Hubs are sticky by a mile** (Oct 23, 2026): a hub in the last build's `hubs.json` keeps its page until it sits
   `HUB_HOLD` (1 mi) inside `HUB_GAP`. City centroids move as rides are added; two new Phoenix rides moved Phoenix's
   half a mile and swapped `/rides/az/peoria/` for `/rides/az/goodyear/`. Build from the committed `hubs.json`.
+- **Named-ride hubs** (Oct 26, 2026; growth plan Phase 4 "a"): `/rides/critical-mass/` (`criticalMassPage()` in
+  build-rides.js) lists every listed `kind: "critical-mass"` ride by country, each row with its next date (`card(r, { next })`,
+  worked out at build time from the ride's own rule), the Fridays line from the data, "What Critical Mass is" from two dated
+  sources in a fold, and the list paragraph. Every listed Critical Mass ride page links up to it (`guideLine()`); it's in the
+  rides sitemap. Bike Party and open streets come next, the same way.
 - **Biweekly rides with a posted date** run on that date's weeks (`dates` on a `biweekly` ride; `data/SCHEMA.md`), so
   "Next ride" lands on the right Saturday instead of the next one.
 
@@ -923,3 +928,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-25 — The 2027 rides on the homepage (`#year`): all 13 Robert is doing, date order, from the calendar; the Oct 21 artifact refresh pulled in (640 events, 11 dates moved to confirmed, the Friends for Life Bike Rally and the Jonathan Pon Memorial Ride added; the Nov 7 ride's 2027 projection left out); `NEXT_RIDES` reads the same list, confirmed dates only; `CSS_V` 49.
 - 2026-10-25 — The year at a glance on `/events/2027/riding/` (`yearPoster()` in build-calendar.js, `.cal-year` in calendar.css): the night poster from the "The 2027 calendar" canvas (https://claude.ai/artifact/QmWdhNccLAoKJNEAaYms5S — Robert: "the first one") above the rows: twelve month grids on bruise, every day he rides a powder-rose square, projected dates outlined, each ride a link that opens its row; `CSS_V` 50. The canvas's lime poster stays a canvas thing.
 - 2026-10-26 — The list-page paragraph: "About these N rides" on all 907 hub, facet, day, state and all pages, written from each page's own rides (days, first and last start, after-work rides, no-drop, beginners, who they're for, bikes, how often, the checked window), folded under the picks.
+- 2026-10-26 — `/rides/critical-mass/`: every Critical Mass we list (36 in 35 cities, 7 countries) by country with its next date, a sourced "What Critical Mass is", linked from all 36 ride pages; `/find-a-ride/`'s Ride with me tile no longer says "six".

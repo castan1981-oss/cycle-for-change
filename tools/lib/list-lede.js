@@ -103,8 +103,8 @@ function bikeSentence(rides, focus) {
   const by = {};
   for (const r of rides) for (const d of new Set(r.discipline || [])) if (BIKE[d] && d !== focus.disc) by[d] = (by[d] || 0) + 1;
   const order = Object.keys(by).sort((a, b) => by[b] - by[a] || a.localeCompare(b));
-  const cm = rides.filter((r) => r.kind === "critical-mass").length;
-  const os = rides.filter((r) => r.kind === "open-streets").length;
+  const cm = focus.kind === "critical-mass" ? 0 : rides.filter((r) => r.kind === "critical-mass").length;
+  const os = focus.kind === "open-streets" ? 0 : rides.filter((r) => r.kind === "open-streets").length;
   const extra = [cm && (cm === 1 ? "a Critical Mass" : `${cm} Critical Mass rides`), os && (os === 1 ? "an open-streets day" : `${os} open-streets days`)].filter(Boolean);
   const plus = extra.length ? `, plus ${andList(extra)}` : "";
   if (!order.length) return extra.length ? `The list includes ${andList(extra)}.` : null;
@@ -137,7 +137,7 @@ function checkedSentence(rides) {
  * The paragraph for a list of rides.
  * @param {object[]} rides  the rides on the page (fields: name, days, start_hhmm, frequency, discipline, kind,
  *                          inclusive_focus, drop_policy, verified_on, optional _f.checked_on)
- * @param {object} opts     focus: { day | tag | disc } — what the page is already about, so it isn't said again;
+ * @param {object} opts     focus: { day | tag | disc | kind } — what the page is already about, so it isn't said again;
  *                          fmtTime(hhmm): the build's own time format (the default is the same shape: "6:30 pm")
  * @returns {string[]} the sentences, in reading order; empty under two rides
  */

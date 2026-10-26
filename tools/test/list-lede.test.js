@@ -106,3 +106,9 @@ test("the same rides always write the same words", () => {
   const a = [ride({ name: "X" }), ride({ name: "Y", days: ["sun"] })];
   assert.deepStrictEqual(listLede(a), listLede(a.slice().reverse()));
 });
+
+test("a kind hub doesn't count its own kind", () => {
+  const cm = [ride({ kind: "critical-mass", discipline: ["social"] }), ride({ kind: "critical-mass", discipline: ["social"] })];
+  assert.ok(listLede(cm).some((x) => /Critical Mass/.test(x)));
+  assert.ok(!listLede(cm, { focus: { kind: "critical-mass" } }).some((x) => /Critical Mass/.test(x)));
+});

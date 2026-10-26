@@ -793,7 +793,7 @@ function card(r, opts = {}) {
   ${discMark(r)}
   <a class="gr-card-name" href="/rides/${r.slug}/">${esc(r.name)}<span class="visually-hidden">, ${esc(discText(r))}</span></a>
   ${r.name_en ? `<span class="gr-card-en">${esc(r.name_en)}</span>` : ""}
-  <span class="gr-card-when">${esc(cardWhen(r))}<i class="gr-dot" aria-hidden="true"> · </i>${esc(rowPlace(r))}</span>
+  <span class="gr-card-when">${esc(cardWhen(r))}${opts.next ? `<i class="gr-dot" aria-hidden="true"> · </i>next ${esc(opts.next)}` : ""}<i class="gr-dot" aria-hidden="true"> · </i>${esc(rowPlace(r))}</span>
   <span class="gr-card-meta">${meta}</span>
   <button type="button" class="gr-save" data-save="${r.slug}" aria-pressed="false" aria-label="Save ${attr(r.name)}"><span aria-hidden="true">☆</span></button>
 </div>`;
@@ -1552,7 +1552,7 @@ function findPage(rides) {
     { href: "/events/2027/road/", name: "Fondo or century", sub: "A big organized road day", n: calN("Road"), markId: "hundred" },
     { href: "/events/2027/multi-day-tours/", name: "Multi-day tour", sub: "Days in a row", n: calN("Multi-day tour"), markId: "distance" },
     { href: "/events/2027/races/", name: "Race", sub: "Road, crit and stage races", n: calN("Race"), markId: "flag" },
-    { href: "/events/2027/riding/", name: "Ride with me", sub: "The six I'm doing in 2027", n: riding, markId: "ride-day" },
+    { href: "/events/2027/riding/", name: "Ride with me", sub: "The 2027 rides I'm doing", n: riding, markId: "ride-day" },
     // Studio pass 1 (Oct 21, 2026): "Brief a ride" left the kinds (it's a tool, not a kind of ride; eight tiles, no hole).
     // /brief/ is linked from the footer's Ride column on every page now, and from every ride page with a route.
   ].filter((k) => k.n == null || k.n > 0);
@@ -2150,6 +2150,75 @@ ${CTA}
 ` + foot(STEP_JS);
 }
 
+// ---------- named-ride hubs (Oct 26, 2026; growth plan Phase 4 "a", the 500K plan's named-ride hubs) ----------
+// /rides/critical-mass/: every Critical Mass we list, by country, each row with its next date, worked out from the
+// ride's own rule at build time (the daily rebuild keeps it current). The rest of the page is the rides' own data and
+// a short "What Critical Mass is" from two dated sources. Search clicks on named mass rides come on the ride's name and
+// "critical mass <city>"; this page is the answer to the generic "critical mass bike ride" and links every city.
+// It's a pick already made (the kind), so it's a short page (gr-sub-page): the whole list, no doors in front of it.
+const KIND_HUBS = new Set();
+const CM_READ = "Oct 26, 2026";
+function criticalMassPage(rides) {
+  const list = rides.filter((r) => r.kind === "critical-mass");
+  const N = list.length;
+  const canonical = `${SITE}/rides/critical-mass/`;
+  const crumbs = [["Cycle for Change", `${SITE}/`], ["Group rides", `${SITE}/rides/`], ["Critical Mass", canonical]];
+  const nCities = new Set(list.map((r) => `${r.city}|${r.country}`)).size;
+  const byCountry = {}; for (const r of list) (byCountry[r.country] ||= []).push(r);
+  const ccs = Object.keys(byCountry).sort((a, b) => byCountry[b].length - byCountry[a].length || countryName(a).localeCompare(countryName(b)));
+  const where = `${plural(nCities, "city", "cities")} in ${plural(ccs.length, "country", "countries")}`;
+  // what the rides say about themselves
+  const fridays = list.every((r) => r.days.length && r.days.every((d) => d === "fri"));
+  const lastFri = list.filter((r) => (r.monthly_rule || []).some((m) => String(m.ord) === "-1" && m.day === "fri")).length;
+  const free = list.filter((r) => r.cost === "free").length;
+  const whyLine = [
+    fridays ? `Every one rides on a Friday${lastFri ? `, ${lastFri} of the ${N} on the last Friday of the month` : ""}.` : lastFri ? `The last Friday of the month is the usual night: ${lastFri} of the ${N}.` : "",
+    free ? `The host says it's free on ${free === N ? "every one" : `${free} of the ${N}`}.` : "",
+  ].filter(Boolean).join(" ");
+  const nextShort = (r) => {
+    const n = nextOf(r);
+    if (!n) return null;
+    return n.kind === "date" && n.ymd ? fmtDay(n.ymd) : new Intl.DateTimeFormat("en-US", { timeZone: r.tz, weekday: "short", month: "short", day: "numeric" }).format(n.at);
+  };
+  const nextAt = (r) => { const n = nextOf(r); return n ? +n.at : Infinity; };
+  const groups = ccs.map((cc) => {
+    const rows = [...byCountry[cc]].sort((a, b) => nextAt(a) - nextAt(b) || a.city.localeCompare(b.city));
+    return `
+      <section class="gr-state" id="${countrySlug(cc)}">
+        <h3 class="gr-state-head">${esc(countryName(cc))} <span class="gr-count">${rows.length}</span></h3>
+        <div class="gr-grid">
+${rows.map((r) => card(r, { next: nextShort(r) })).join("\n")}
+        </div>
+      </section>`;
+  }).join("");
+  const title = "Critical Mass rides: every city, next date and start";
+  const description = trunc(`${N} Critical Mass rides in ${where}${lastFri ? `, ${lastFri} on the last Friday of the month` : ""}: next date, start and the day each was checked at the source.`, 158);
+  const whatIs = fold("What Critical Mass is", `
+        <p>Critical Mass started in San Francisco on Friday, September 25, 1992, as a ride called the Commute Clot; it had its name by the second one. It has no leader, no membership and no set route: whoever is at the front picks the turns, or the group does. Most cities ride on the last Friday of the month, after work.</p>
+        <p>The name comes from George Bliss in Ted White&rsquo;s film &ldquo;Return of the Scorcher&rdquo;: at crossings in China, he said, riders and drivers built up until there were enough of them, a critical mass, and then went through together. In 2022 Chris Carlsson told KQED it rides in more than 400 cities.</p>
+        <p>Sources: <a href="https://en.wikipedia.org/wiki/Critical_Mass_(cycling)" rel="noopener">Critical Mass (cycling), Wikipedia</a>; <a href="https://www.kqed.org/news/11927460/a-leaderless-phenomenon-critical-mass-celebrates-30th-anniversary" rel="noopener">KQED, Oct 1, 2022</a>. Read ${CM_READ}.</p>`);
+  return head({ title, description, canonical, jsonld: pageLd(canonical, "Critical Mass rides", description, list, crumbs) }) + `
+<main id="main" class="gr-dir gr-sub-page gr-kind-hub">
+  <header class="gr-head wrap">
+      ${crumbsHtml(crumbs)}
+      <h1>Critical Mass rides</h1>
+      ${subLine(list, `in ${where}`)}
+      ${whyLine ? `<p class="gr-why-line">${esc(whyLine)}</p>` : ""}
+  </header>
+  <div class="wrap gr-steps" id="gr-list">
+    <h2 class="gr-list-h">Critical Mass rides by country, next date on each</h2>
+      <div id="gr-states">${groups}
+      </div>
+${whatIs}
+${aboutList(list, fridays ? { kind: "critical-mass", day: "fri" } : { kind: "critical-mass" })}
+    <p class="back"><a href="/rides/">&larr; Find a group ride</a></p>
+${FOOTLINE}
+${CTA}
+  </div>
+</main>
+` + foot();
+}
+
 // ---------- ride page ----------
 function firstTimeBlock(r, hostLabel) {
   const evening = r.start_hhmm && (+r.start_hhmm.slice(0, 2) >= 17 || +r.start_hhmm.slice(0, 2) < 7);
@@ -2232,7 +2301,13 @@ const GUIDES_BY = (() => {
   }
   return out;
 })();
-const guideLine = (r) => { const g = GUIDES_BY[r.slug]; return g ? `\n      <p class="gr-guide"><a class="link" href="${attr(g.href)}">${esc(g.text)}</a></p>` : ""; };
+const guideLine = (r) => {
+  const g = GUIDES_BY[r.slug];
+  if (g) return `\n      <p class="gr-guide"><a class="link" href="${attr(g.href)}">${esc(g.text)}</a></p>`;
+  // Oct 26, 2026: every listed Critical Mass links up to the hub that lists them all
+  if (r.kind === "critical-mass" && KIND_HUBS.has("critical-mass") && r._f && r._f.listed) return `\n      <p class="gr-guide"><a class="link" href="/rides/critical-mass/">Every Critical Mass we list, next date first</a></p>`;
+  return "";
+};
 const NOTE_SHOW = 4;                   // paragraphs before the fold
 const NOTE_DAY = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const noteDate = (ymd) => {
@@ -2874,6 +2949,7 @@ function sitemap(rides, states, hubs, worldCCs = [], worldHubs = [], steps = [],
   for (const cc of worldCCs) rows.push([`${SITE}/rides/${countrySlug(cc)}/`, maxOf(rides.filter((r) => r.country === cc))]);
   for (const h of worldHubs) rows.push([`${SITE}${h.path}`, maxOf(h.rides)]);
   for (const f of FACETS) { const l = rides.filter(f.pick); if (l.length) rows.push([`${SITE}/rides/${f.slug}/`, maxOf(l)]); }
+  if (KIND_HUBS.has("critical-mass")) rows.push([`${SITE}/rides/critical-mass/`, maxOf(rides.filter((r) => r.kind === "critical-mass"))]);
   for (const r of rides) rows.push([`${SITE}/rides/${r.slug}/`, (r._f && r._f.checked_on) || r.verified_on]);
   const kept = rows.filter(([u]) => !skip.has(u.replace(SITE, "")));   // Oct 6: no duplicates, no thin pages
   rows.length = 0; rows.push(...kept);
@@ -3062,6 +3138,7 @@ function main() {
   claim("about", "how the list works"); claim("add", "the add-a-ride form"); claim("world", "outside the US"); claim("maps", "the outline tiles");
   for (const st of states) claim(st.toLowerCase(), `state ${st}`);
   for (const f of FACETS) claim(f.slug, `facet ${f.slug}`);
+  claim("critical-mass", "the Critical Mass hub");
   for (const cc of worldCCs) claim(countrySlug(cc), `country ${cc}`);
   for (const r of pages) claim(r.slug, `ride ${r.slug}`);
   const clash = pages.filter((r) => /^[a-z]{2}$/.test(r.slug));
@@ -3091,6 +3168,9 @@ function main() {
   for (const cc of worldCCs) { const list = rides.filter((r) => r.country === cc); places.push({ path: `/rides/${countrySlug(cc)}/`, rides: list, rank: 0, html: countryPage(cc, list, world.hubs, notes, steps) }); }
   for (const h of world.hubs) places.push({ path: h.path, rides: h.rides, rank: 1, html: cityPage(h, { pages: steps, notes, others: nearHubs(h, world.hubs, km, 400), areaRides: rides.filter((r) => r.country === h.country), areaHubs: world.hubs.filter((x) => x.country === h.country) }) });
   for (const f of FACETS) places.push({ path: `/rides/${f.slug}/`, rides: rides.filter(f.pick), rank: 2, html: facetPage(f, rides) });
+  const cmRides = rides.filter((r) => r.kind === "critical-mass");
+  if (cmRides.length > THIN_MAX) KIND_HUBS.add("critical-mass");
+  if (KIND_HUBS.has("critical-mass")) places.push({ path: "/rides/critical-mass/", rides: cmRides, rank: 2, html: criticalMassPage(rides) });
   const taken = new Set([...hubs, ...world.hubs].map((h) => h.path));
   for (const pg of steps) {
     if (taken.has(pg.path)) { console.error(`${pg.path} is claimed twice (a short page on top of a city or another short page)`); process.exit(1); }
