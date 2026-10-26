@@ -573,11 +573,59 @@ for (const c of CATS) {
 }
 // Oct 15, 2026: the fall ride that used to sit on top of this page (Cycling 4 one·n·ten, Nov 7) was canceled
 // and is off the site. If another ride before 2027 comes up, it goes back here as `before`.
-// the six Robert is riding
+// Oct 25, 2026 (Robert: "I want this on the ride with me page", then "I want the first one"): the year as a poster above
+// the rows — the night poster from the "The 2027 calendar" canvas: twelve month grids on a bruise ground, every day he
+// rides a powder-rose square, a projected date outlined, each ride a link to its row (the hashchange script opens it).
+// Short names and the where-lines are the chrome's (SHORT / WHERE in chrome.js), so the homepage list and this agree.
+// The lime "brat" poster stays on the canvas only; nothing on the site is outside After Hours but /fruitloop/.
+function yearPoster(list) {
+  const R = new Map((CHROME.RIDING || []).map((r) => [r.slug, r]));
+  const on = new Map(), proj = new Map();
+  for (const e of list) {
+    if (!e.start) continue;
+    const to = e.end || e.start, map = e.date_status === "confirmed" ? on : proj;
+    for (const d = new Date(e.start + "T12:00:00Z"); d.toISOString().slice(0, 10) <= to; d.setUTCDate(d.getUTCDate() + 1)) {
+      const m = d.getUTCMonth() + 1; if (!map.has(m)) map.set(m, new Set()); map.get(m).add(d.getUTCDate());
+    }
+  }
+  const months = MONTHS_LONG.map((name, i) => {
+    const m = i + 1, first = new Date(Date.UTC(2027, i, 1)).getUTCDay(), n = new Date(Date.UTC(2027, i + 1, 0)).getUTCDate();
+    const cells = [];
+    for (let b = 0; b < first; b++) cells.push(`<span aria-hidden="true"></span>`);
+    for (let d = 1; d <= n; d++) {
+      const k = on.get(m)?.has(d) ? " on" : proj.get(m)?.has(d) ? " proj" : "";
+      cells.push(`<span${k ? ` class="${k.trim()}"` : ""}>${d}</span>`);
+    }
+    const rides = list.filter((e) => e.month === m).map((e) => {
+      const r = R.get(e.slug) || {};
+      const forw = e.slug === "center-ride-out" ? "the Center" : e.slug === "cycle-to-zero" ? "SFAF" : "";
+      const status = e.date_status === "projected" ? ", date projected" : "";
+      return `<li><a class="cy-r" href="#${attr(e.slug)}"><b>${esc(r.date || "TBA")}</b> ${esc(r.name || e.name)}${forw ? `<span class="for">for ${forw}</span>` : ""}<span class="where">${esc((r.where || place(e)) + status)}</span></a></li>`;
+    }).join("");
+    return `      <div class="cy-m">
+        <p class="cy-mn">${name}</p>
+        <div class="cy-dow" aria-hidden="true"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+        <div class="cy-days" aria-label="${name} 2027">${cells.join("")}</div>${rides ? `
+        <ul class="cy-rides">${rides}</ul>` : ""}
+      </div>`;
+  }).join("\n");
+  const tba = list.filter((e) => !e.start).map((e) => { const r = R.get(e.slug) || {}; return `${esc(r.name || e.name)}, ${esc(r.where || place(e))}`; });
+  return `
+    <section class="cal-year" aria-label="The year at a glance">
+      <div class="cy-grid">
+${months}
+      </div>
+      <p class="cy-key"><span><i class="cy-k cy-k--on"></i>The organizer&rsquo;s date</span><span><i class="cy-k cy-k--proj"></i>Placed on the 2026 weekend</span>${tba.length ? `<span>${tba.join("; ")}: 2027 dates to come</span>` : ""}</p>
+      <script>addEventListener("hashchange",function(){var e=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(e&&e.tagName==="DETAILS")e.open=true});</script>
+    </section>
+`;
+}
+// the rides Robert is riding
 if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert\u2019s rides", list: riding,
   h1: "The 2027 rides I&rsquo;m doing", title: "The 2027 rides I'm doing for Cycle for Change",
   description: `The ${riding.length} rides Robert is doing in 2027 as part of the 10,000 miles: dates, distances, sign-up links.`,
   lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one.</p>`, mine: true,
+  before: yearPoster(riding),
   after: `\n    ${PH.figure("robert-peace")}` });
 
 // the calendar's own page: two questions, then the deep pages and the full list
