@@ -118,6 +118,47 @@ function todaySection() {
 `;
 }
 
+// Oct 25, 2026 (Robert: "what rides are we doing in 2027, I would like to get them on the home page"): every ride
+// on the calendar he's doing (data/calendar-2027.json, riding: true), date order, read through scripts/chrome.js so
+// the list, the Ride with me bar and /events/2027/riding/ never disagree. One row per ride → that ride's row on the
+// riding page (it opens; the sign-up link is there). The plate carries the blank only on his orgs' rides (§1):
+// the Center's and SFAF's. Dates are the organizers'; a projected or TBA date says so in the row's own line.
+const RIDING = CHROME.RIDING || [];
+const RIDING_N = RIDING.length;
+const FOR = { "center-ride-out": "the Center", "cycle-to-zero": "SFAF" };
+function yearSection() {
+  if (!RIDING_N) return "";
+  // a charity ride's days are riding days ("3 days"); a race's or festival's aren't, so those just say the surface
+  const kind = (r) => (r.category === "Charity ride" ? `${r.days} days` : r.category.toLowerCase());
+  const W = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
+  const word = (n) => (n >= 1 && n <= 20 ? W[n] : String(n));
+  const rows = RIDING.map((r) => {
+    const note = r.status === "projected" ? "date projected" : r.status === "tba" ? "2027 dates to come" : "";
+    const line = [r.where, kind(r), note].filter(Boolean).join(" · ");
+    const d = r.date || "TBA";
+    return `      <li${r.status !== "confirmed" ? ` class="year-soft"` : ""}><a href="${esc(r.href)}"><span class="year-d num">${esc(d)}</span><span class="year-n"><b>${esc(r.name)}</b>${FOR[r.slug] ? ` <span class="plate year-plate">${esc(FOR[r.slug])}</span>` : ""}</span><span class="year-l">${esc(line)}</span></a></li>`;
+  }).join("\n");
+  const nProj = RIDING.filter((r) => r.status === "projected").length, nTba = RIDING.filter((r) => r.status === "tba").length;
+  const dated = RIDING_N - nProj - nTba;
+  const noteBits = [];
+  if (nProj) noteBits.push(`${word(nProj)} ${nProj === 1 ? "sits" : "sit"} on the 2026 weekend until the organizer posts 2027`);
+  if (nTba) noteBits.push(`${word(nTba)} ${nTba === 1 ? "hasn&rsquo;t" : "haven&rsquo;t"} put out 2027 dates yet`);
+  const cap = (t) => t.charAt(0).toUpperCase() + t.slice(1);
+  const note = `${cap(word(dated))} with dates from the organizer${noteBits.length ? "; " + noteBits.join("; ") : ""}.`;
+  return `<!-- —— the 2027 rides (data/calendar-2027.json, riding: true, through chrome.js) —— -->
+<section class="s year" id="year" aria-labelledby="year-h">
+  <div class="wrap">
+    <div class="s-head year-head"><div class="stack16"><p class="eyebrow">${RIDING_N} rides</p><h2 class="h2" id="year-h">The 2027 rides I&rsquo;m doing.</h2></div><p class="lede w38">Part of the 10,000 miles. Come ride one.</p></div>
+    <ol class="year-list">
+${rows}
+    </ol>
+    <div class="year-foot"><a class="link" href="/events/2027/riding/">All my 2027 rides, with sign-up links</a><p class="note-sm">${note}</p></div>
+  </div>
+</section>
+
+`;
+}
+
 // The mark, stacked, as the page's headline. Same glyphs as the one-line mark in chrome.js.
 const STACK = (cls = "") => `<svg class="sign-mark ${cls}" viewBox="-10 -10 370 350" aria-hidden="true" focusable="false">
         <g filter="url(#lpWorn)">
@@ -414,14 +455,14 @@ ${todaySection()}<!-- —— the last ride: the reel, the log —— -->
           <div><dt>Group rides</dt><dd><a href="/rides/">${RIDES_N}</a></dd></div>
           <div><dt>On the 2027 calendar</dt><dd><a href="/events/2027/">${CAL_N}</a></dd></div>
           <div><dt>Town guides</dt><dd><a href="/towns/">${TOWNS_N}</a></dd></div>
-          <div><dt>My 2027 rides</dt><dd><a href="/events/2027/riding/">Six, so far</a></dd></div>
+          <div><dt>My 2027 rides</dt><dd><a href="#year">${RIDING_N}, so far</a></dd></div>
         </dl>
       </div>
     </div>
   </div>
 </section>
 
-<!-- —— how this works —— -->
+${yearSection()}<!-- —— how this works —— -->
 <section class="s s--paper how" id="how" aria-labelledby="how-h">
   <div class="wrap">
     <h2 class="h2" id="how-h">How this works.</h2>

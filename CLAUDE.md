@@ -28,14 +28,26 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   **@cycl_eforchange** (not @cycle_forchange).
 - Primary internal link target: the homepage `/` or `/events/2027/riding/` ("Ride with me").
   Never `/pledge/`, never `/#board`.
-- **Ride with me = the next ride Robert is doing** (Pass 36). `NEXT_RIDES` in `scripts/chrome.js` is the one
-  list (date order, `until` = last day, Phoenix time): **Tour de Palm Springs (Feb 6, 2027) first, on Robert's word
-  (Oct 21, 2026)**, then Center Ride Out, then Cycle to Zero (Cycling 4 one·n·ten came off Oct 15, 2026: canceled).
-  Each `href` opens that ride's row on the riding page, open (`/events/2027/riding/#tour-de-palm-springs`,
-  `#center-ride-out`, `#cycle-to-zero`; studio pass 1). The nav button, the menu, the closing block, the homepage's
-  first-screen tile (`#heroRide`) and the bar at the foot of every page (`.ridebar`, `/ridebar.js`, its last day in
-  `data-until`) all point at the first one still ahead; the script re-picks in the browser and rolls to Center Ride Out
-  after Feb 6 on its own. Never on `/resources/` (the 988 bar owns that spot).
+- **Ride with me = the next ride Robert is doing** (Pass 36). **Oct 25, 2026: the one list is the calendar.**
+  `RIDING` in `scripts/chrome.js` reads `data/calendar-2027.json` (`riding: true`, date order, TBA last); `NEXT_RIDES`
+  is the confirmed-date rides from it (`until` = last day, Phoenix time) — a projected or TBA date never goes on the
+  bar. To add or drop one of his rides: mark it `on_list` in the "2027 Ride Directory" artifact and pull it in
+  (`tools/calendar-from-artifact.js`, §5), or flip `riding` in the JSON if the artifact can't wait — the refresh
+  overwrites `riding` from the artifact's `on_list`, so the artifact has to agree. `SHORT` and `WHERE` in chrome.js are
+  the house phrasings ("Sea Otter Classic", "LA to Ojai and back"); everything else is the calendar's own text.
+  Tour de Palm Springs (Feb 6, 2027) is first because it's first (Robert, Oct 21: his next ride). Each `href` opens
+  that ride's row on the riding page, open (`/events/2027/riding/#<slug>`; studio pass 1). The nav button, the menu,
+  the closing block, the homepage's first-screen tile (`#heroRide`) and the bar at the foot of every page (`.ridebar`,
+  `/ridebar.js`, its last day in `data-until`) all point at the first one still ahead; the script re-picks in the
+  browser and rolls on its own. Never on `/resources/` (the 988 bar owns that spot).
+  **The homepage lists all of them** (`#year`, "The 2027 rides I'm doing", `yearSection()` in build-home.js): one row
+  per ride, date order, the row is the link to its riding-page row; the plate carries the blank only on his orgs' rides
+  (Center Ride Out → "the Center", Cycle to Zero → "SFAF"); a projected or TBA date is greyed and says so in the row's
+  line; the count under Find a group ride ("13, so far") comes from the same list.
+  As of Oct 25, 2026 the list is 13: Tour de Palm Springs (Feb 6), Belgian Waffle Ride Arizona (Mar 5–6), The Mid South
+  (Mar 11–13), Sea Otter Classic (Apr 15–18), Center Ride Out (Apr 23–25), Cycle to Zero (May 21–23), Unbound Gravel
+  (Jun 3–6), Seattle to Portland (Jul 10–11), Friends for Life Bike Rally (Toronto to Montréal, Aug 1–6), Cycle for the
+  Cause (Sep 24–26), Chino Grinder (Oct 16, projected), El Tour de Tucson (Nov 20, projected), Recovery Ride (TBA).
   The homepage `#ride` section stays written for Center Ride Out (since Oct 15, 2026): it's about where the money goes
   (§5), and Palm Springs isn't one of his three orgs' rides. After Apr 25, 2027: rewrite it for the next org ride and
   rebuild everything.
@@ -434,6 +446,9 @@ explained" keeps its name: it's about charity rides in general, not this site.
   `data/SCHEMA.md` ("2027 calendar"). Edit the JSON, run the build, commit both.
 - `confirmed` only when the organizer published it; `projected` keeps its `date_note` and says
   "projected (2026 was …)". No invented dates. Robert's own rides are `riding: true`.
+- US only, except the rides outside the US Robert is doing (Oct 25, 2026: the Friends for Life Bike Rally, Toronto
+  to Montréal, `region: "Canada"`, the one non-US region in `REGIONS`); the `/all/` lede and the method note say so
+  from the count. Cycling 4 one·n·ten's projected 2027 edition (artifact id 477) is left out of every pull (§1).
 - Research notes never reach a page (the build fails on "web-search budget", "this session",
   "provenance", "artifact", "scheduled task", "unverified").
 - Refresh: `node tools/calendar-from-artifact.js <data.json>` pulls the "2027 Ride Directory"
@@ -898,3 +913,5 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-25 — The Fruit Loop lockup: the Progress chevron and the trans O (Robert's picks) on `/fruitloop/` and across the kit; `CSS_V` 48.
 - 2026-10-25 — Answer-first ride pages: descriptions lead with when, where and cost (1,293 pages); monthly-rule rides carry their next date in the title (Critical Mass, bike parties); city names stop repeating; doubled periods in ledes gone.
 - 2026-10-25 — The sitemap index is written from its children (`scripts/sitemap-index.js`, run by every generator): each child's lastmod is the newest date inside it, not the Oct 6 it said for three weeks.
+- 2026-10-25 — The 2027 rides on the homepage (`#year`): all 13 Robert is doing, date order, from the calendar; the Oct 21 artifact refresh pulled in (640 events, 11 dates moved to confirmed, the Friends for Life Bike Rally and the Jonathan Pon Memorial Ride added; the Nov 7 ride's 2027 projection left out); `NEXT_RIDES` reads the same list, confirmed dates only; `CSS_V` 49.
+- 2026-10-25 — The year at a glance on `/events/2027/riding/` (`yearPoster()` in build-calendar.js, `.cal-year` in calendar.css): the night poster from the "The 2027 calendar" canvas (https://claude.ai/artifact/QmWdhNccLAoKJNEAaYms5S — Robert: "the first one") above the rows: twelve month grids on bruise, every day he rides a powder-rose square, projected dates outlined, each ride a link that opens its row; `CSS_V` 50. The canvas's lime poster stays a canvas thing.
