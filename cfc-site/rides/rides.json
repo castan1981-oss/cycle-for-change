@@ -5732,6 +5732,86 @@
   }
  },
  {
+  "slug": "phoenix-az-foos-gone-fixed-wednesday-night-ride",
+  "name": "Foos Gone Fixed Wednesday Night Ride",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Phoenix",
+  "neighborhood": "Central Phoenix",
+  "region": "Arizona",
+  "state": "AZ",
+  "country": "US",
+  "lat": 33.50047,
+  "lng": -112.07406,
+  "geo_precision": "start",
+  "tz": "America/Phoenix",
+  "discipline": [
+   "fixed",
+   "social"
+  ],
+  "schedule": "Every Wednesday night. Meet 8:20 pm at Lux Central on Central Avenue, roll out 8:30 pm. The time comes from a regular, not the crew; check their latest post before you go.",
+  "days": [
+   "wed"
+  ],
+  "time_local": "8:30 pm",
+  "start_hhmm": "20:30",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": "year-round",
+  "season_months": null,
+  "start_location": {
+   "name": "Lux Central",
+   "address": "4402 N Central Ave, Phoenix, AZ 85012"
+  },
+  "distance_km": null,
+  "distance_miles": "~20",
+  "duration": null,
+  "duration_min": null,
+  "pace": null,
+  "drop_policy": "unknown",
+  "host": {
+   "name": "Foos Gone Fixed",
+   "type": "informal"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": null,
+  "language": [
+   "en"
+  ],
+  "visitor_notes": "Fixed-gear and singlespeed crew; all bikes are welcome, in a regular's words. A night ride on city streets, so bring lights. Lux Central is open until 10 pm.",
+  "description": "Foos Gone Fixed is a Phoenix fixed-gear crew that rides Wednesday nights from Lux Central, the coffee shop on Central Avenue north of downtown. It is singlespeed and fixed-gear oriented, but all bikes are welcome. A regular describes it as about a 20-mile loop with a stop for snacks at a convenience store. Many of the same people ride Downtempo on Mondays and Critical Mass.",
+  "links": {
+   "website": null,
+   "instagram": "https://www.instagram.com/foosgonefixed/",
+   "facebook": null,
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [],
+  "sources": [
+   "https://www.instagram.com/foosgonefixed/",
+   "https://www.reddit.com/r/phoenix/comments/1sbpj82/any_bike_groups_here/oe665rj/",
+   "https://www.reddit.com/r/FixedGearBicycle/comments/1lgne3j/whats_the_reason_you_pick_fixed_rather_than_road/myxt0i4/",
+   "https://www.reddit.com/r/phoenix/comments/1f3dr93/is_there_like_chiller_but_still_kinda_competitive/lkd108f/",
+   "https://www.luxcoffee.com/"
+  ],
+  "verified_on": "2026-10-25",
+  "last_seen": "2026-04-04",
+  "evidence": "Their Instagram bio says weekly Wednesday night rides (read Oct 25, 2026). A regular wrote on r/phoenix (Apr 4, 2026) that the crew usually meets Wednesday nights at Lux Central, and on r/FixedGearBicycle (Jun 21, 2025) gave the meet at 8:20, the roll-out at 8:30 and a 20-mile loop. Lux's own site gives the address and the 10 pm close (Oct 25, 2026).",
+  "confidence": "medium",
+  "refresh": {
+   "method": "instagram",
+   "watch_url": "https://www.instagram.com/foosgonefixed/",
+   "feed_url": null,
+   "notes": "Instagram-only host; the profile is a login wall for the watcher and no Strava, Facebook, Meetup or website turned up. Re-check by reading the crew's latest posts by hand (Robert), or ask them through \"I run this ride\". The 8:30 pm roll time is a rider's word from June 2025, not the crew's; confirm that first."
+  }
+ },
+ {
   "slug": "phoenix-az-pmbc-granada-sunday-breakfast-ride",
   "name": "Granada Sunday Breakfast Ride",
   "name_en": null,
