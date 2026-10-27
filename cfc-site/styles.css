@@ -267,5 +267,9 @@ main.fn-post,main.fn-pillar{display:flex;flex-direction:column}
 .fn-related a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;text-decoration-color:var(--dust-deep);padding-block:7px}
 .fn-related a::after{content:"\00a0\2192";font-weight:400}
 @media (hover:hover){.fn-related a:hover{text-decoration-color:currentColor}}
+/* the Right now door: the Trevor number is one tap, never two halves split at a hyphen, with a 44px pad
+   (task 6's answer; the art director's open item 1, Oct 27, 2026). Nothing else in the door is a link, so the pad reaches nothing */
+.res-door--now a[href^="tel"]:not(.btn){position:relative;white-space:nowrap}
+.res-door--now a[href^="tel"]:not(.btn)::before{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;margin-top:-22px}
 
 }
