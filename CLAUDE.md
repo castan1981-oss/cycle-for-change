@@ -368,6 +368,14 @@ the canal, Coronado. Free, no-drop, 18 and up, no sign-up. Streets and lit paths
   (`fruitloop.js`, every Friday from Dec 11, 2026, 6:00 pm Phoenix), the loop drawn from `loop7.json` with the seven place numbers (HTML buttons
   placed by percent over the SVG, the stop's plate bigger, hairline leaders from the start, the finish and the circuit;
   every story is in the list without the script), one light room for "How it works".
+- **The logo (Oct 27, 2026) replaces the lockup below.** Robert's crayon drawing, his pick ("I want this logo. It's
+  perfect."): the rainbow-and-trans arrow, THE FRUIT LOOP in black crayon with an O in the trans flag's colors, the six
+  rainbow dashes and "A QUEER NIGHT RIDE THROUGH PHOENIX HISTORY." Master: `templates/fruitloop/logo-1.png` (1993 × 789);
+  the page serves `cfc-site/fruitloop/logo-1.avif/.webp/.jpg` as the h1 (alt carries the words). Used exactly as given, on
+  its own paper (#F5F3EE, sampled from the file) as a plate on the night ground, edge to edge on phones, 1080 wide on
+  desktop: never redrawn, recolored, re-lettered or traced. It's the one place the site carries a hand-textured mark
+  (the "drawn clean" rule is for everything else). A new version from Robert = `logo-2`. The kit and the stickers
+  still carry the lockup until they're redone.
 - **The lockup** (Robert's picks, Oct 25, 2026: "12 and 13" from the logo studies, then "Show em that design"): the
   **Progress chevron** (five nested chevrons, the Progress flag's hoist, pointing right) in front of **FRUIT LOOP** in
   pavement lettering — drawn SVG strokes (18, square ends), solid, no stencil bridges — with **the second O of LOOP in
@@ -396,12 +404,11 @@ the canal, Coronado. Free, no-drop, 18 and up, no sign-up. Streets and lit paths
 - No form, no RSVP, no list of names. Questions come by Instagram DM.
 - **The poster** (Oct 27, 2026): `#poster` on the page, after the basics — the words first on a phone, the poster beside them
   on desktop with a hairline edge (it's bruise on bruise), "Save the poster" plus the Story size and the 8.5 × 11 print PDF.
-  One poster, three sizes, all from `python3 tools/fruitloop-poster.py <photo> <N>`: it lifts the lockup out of this page's
-  h1 (never redrawn), sets everything in Overpass on flat bruise with the muted crosswalk bars, and keeps words off the
-  photo. Robert made a ChatGPT flyer first; the brand review panel (all ten, Oct 27) kept its words and its photo idea and
+  One poster, three sizes, all from `python3 tools/fruitloop-poster.py <photo> <N>`: his crayon logo on its paper across
+  the top, everything else in Overpass on flat bruise, words off the photo. Photo: his original (the red dress), `-3` files. Robert made a ChatGPT flyer first; the brand review panel (all ten, Oct 27) kept its words and its photo idea and
   rebuilt the rest, because the AI had redrawn the logo (trans bands on the first O, a rainbow chevron with no black or
   brown), chalked everything, added a desert-skyline doodle and re-rendered his photo. Never put an AI-redrawn lockup or an
-  AI-re-rendered photo of Robert on the site. The kicker on the page, the poster and the share card is "A queer night ride
+  AI-re-rendered photo of Robert on the site. The kicker (now inside the logo) is "A queer night ride
   through Phoenix history" (his flyer's line; the page said "…in Phoenix" until Oct 27); the `<title>`, og/twitter titles
   and JSON-LD keep "a queer night ride in Phoenix" for search. Rose stays the blank: dates on the poster are plaster.
 
@@ -948,3 +955,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-26 — The list-page paragraph: "About these N rides" on all 907 hub, facet, day, state and all pages, written from each page's own rides (days, first and last start, after-work rides, no-drop, beginners, who they're for, bikes, how often, the checked window), folded under the picks.
 - 2026-10-26 — `/rides/critical-mass/`: every Critical Mass we list (36 in 35 cities, 7 countries) by country with its next date, a sourced "What Critical Mass is", linked from all 36 ride pages; `/find-a-ride/`'s Ride with me tile no longer says "six".
 - 2026-10-27 — The Fruit Loop poster: Robert's ChatGPT flyer through the brand review panel, rebuilt from the page's own lockup and type (`tools/fruitloop-poster.py`: feed, Story, 8.5 × 11 PDF with the `/fl` QR), on `/fruitloop/#poster`; the page kicker is now "A queer night ride through Phoenix history".
+- 2026-10-27 — The Fruit Loop logo is Robert's crayon drawing (his pick): the page's h1 on its own paper plate, the poster's top band and the share card (`og-fruitloop-2.jpg`); his original photo in the poster (`-3` files).

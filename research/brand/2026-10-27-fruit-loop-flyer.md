@@ -57,3 +57,9 @@ crosswalk at Central and Portland. The six crosswalk bars as an idea. Robert in 
   for search. Left as is, said so in the PR: no `CSS_V` bump (stays clear of #211/#215; sheets cache an hour).
   Later, if the poster becomes a series: one builder for all four sizes, facts read from the ride record, a crop box per
   size, a print file with bleed.
+
+## Robert's call (Oct 27, 9:03 am)
+He picked a crayon version of the logo ("I want this logo. It's perfect."). Owner decision; it replaces the Oct 25
+lockup on the page, the poster and the share card, placed exactly as given on its own paper. Noted for him once: its
+arrow is rainbow plus trans colors (the Progress flag's black and brown stripes aren't in it), and the trans colors are
+on the first O.

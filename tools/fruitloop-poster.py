@@ -10,8 +10,8 @@ comes out soft (it's placed about 3.7 x 4.5 in on the sheet). Bump N when anythi
 phones and Safari cache pictures hard.
 
 The rules (brand review panel, Oct 27, 2026, after a ChatGPT flyer redrew the logo wrong):
-- The lockup is placed, never redrawn: this script lifts the SVG out of the page's own h1. The trans O is the second
-  O; the chevron is the Progress hoist (black, brown, light blue, pink, white).
+- The logo is Robert's crayon drawing (Oct 27, 2026: "I want this logo. It's perfect."), templates/fruitloop/logo-1.png,
+  placed exactly as given on its own paper (#F5F3EE) across the top: never redrawn, recolored or re-lettered.
 - Overpass only, flat bruise ground, the eleven muted colors from fruitloop.css. No chalk, no texture, no doodles.
 - Robert's photo goes in as shot: no AI re-render, no grade. Nothing is laid over it.
 - Every size carries the basics: every Friday from Dec 11, meet 5:30, roll 6:00, the crosswalk, about 14 flat miles,
@@ -31,8 +31,7 @@ shutil.copy(os.path.join(SITE, "fonts/overpass-latin.woff2"), work)
 shutil.copy(photo, os.path.join(work, "photo" + os.path.splitext(photo)[1]))
 PHOTO = "photo" + os.path.splitext(photo)[1]
 
-page_html = open(os.path.join(SITE, "fruitloop/index.html")).read()
-LOCKUP = re.search(r'<svg class="fl-word".*?</svg>', page_html, re.S).group(0).replace('class="fl-word"', 'class="word"')
+shutil.copy(os.path.join(REPO, "templates/fruitloop/logo-1.png"), os.path.join(work, "logo.png"))
 
 # QR for the printed poster only (the /fl short link is "the poster's QR", tagged utm_source=poster)
 import qrcode, qrcode.image.svg
@@ -54,10 +53,8 @@ html,body{background:var(--asphalt)}
 body{width:var(--W);height:var(--H);overflow:hidden;font-family:Overpass,sans-serif;color:var(--bone);
   -webkit-font-smoothing:antialiased;position:relative}
 .sheet{position:absolute;inset:0;padding:var(--pad);display:flex;flex-direction:column}
-.the{font-weight:800;font-size:calc(var(--W) * .038);line-height:1;color:var(--dust);padding-left:calc(var(--lockw) * .2273)}
-.word{display:block;width:var(--lockw);height:auto;color:var(--paper);margin-top:calc(var(--W) * .012)}
-.kick{margin-top:calc(var(--W) * .016);font-weight:700;font-size:calc(var(--W) * .03);line-height:1.15;color:var(--dust);
-  padding-left:calc(var(--lockw) * .2273);letter-spacing:-.005em}
+.logoband{flex:none;margin:calc(-1 * var(--pad)) calc(-1 * var(--pad)) 0;background:#F5F3EE}
+.logoband img{display:block;width:100%;height:auto}
 .mid{flex:1;display:grid;grid-template-columns:minmax(0,1fr) var(--photow);column-gap:var(--gap);margin-top:var(--gap);min-height:0}
 .info{display:flex;flex-direction:column;min-height:0}
 .info>*{flex:none}
@@ -116,23 +113,22 @@ body{{--W:{W}px;--H:{H}px;--pad:{pad}px;--lockw:{lockw}px;--gap:{opts['gap']}px;
   --big:{opts['big']}px;--rgap:{opts['rgap']}px;--qr:{opts.get('qrsize',0)}px;--barh:{opts['barh']}px}}
 {opts.get('extra','')}
 </style></head><body class="{kind}"><div class="sheet">
-  <p class="the">The</p>{LOCKUP}<p class="kick">A queer night ride through Phoenix history</p>
+  <div class="logoband"><img src="logo.png" alt=""></div>
   {mid}
   <p class="why">The Fruit Loop was the circuit of gay bars and drag clubs downtown, mid-1940s to mid-1990s. The ride ends by riding it.</p>
   <div class="foot"><p class="host"><b>Hosted by Robert Castan</b>Cycle for Change</p>{qr_html}</div>
-  <div class="xwalk"><i></i><i></i><i></i><i></i><i></i><i></i></div>
 </div></body></html>"""
 
 JOBS = {
     # the feed post is read at ~390 px wide on a phone (x0.36): the basics are set big enough to read there (14 px+),
-    # so the lockup gives up a little width
-    "post":  (1080, 1350, dict(pad=60, gap=26, photow=430, big=80, rgap=13, barh=30, link="cycleforchange.org/fruitloop",
-                               extra="body{--lockw:840px} .where{font-size:40px} .facts p{font-size:35px;line-height:1.15} .why{font-size:29px} .host,.qrbox p span{font-size:26px} .host b,.qrbox p{font-size:32px}")),
+    # so the photo gives up a little width
+    "post":  (1080, 1350, dict(pad=60, gap=24, photow=430, big=76, rgap=12, barh=30, link="cycleforchange.org/fruitloop",
+                               extra=".where{font-size:40px} .facts p{font-size:35px;line-height:1.15} .why{font-size:29px} .host,.qrbox p span{font-size:26px} .host b,.qrbox p{font-size:32px}")),
     "story": (1080, 1920, dict(pad=64, gap=34, photow=440, big=96, rgap=18, barh=36, link="cycleforchange.org/fruitloop",
-                               extra=".sheet{padding-top:230px;padding-bottom:230px} .where{font-size:42px} .facts p{font-size:35px;line-height:1.15} .why{font-size:31px} .host,.qrbox p span{font-size:27px} .host b,.qrbox p{font-size:33px}")),
-    # 8.5 x 11 in at 96 css px per inch (816 x 1056): saved as a vector PDF (type and lockup stay sharp at any size),
+                               extra=".sheet{padding-top:230px;padding-bottom:230px} .logoband{margin-top:0} .where{font-size:42px} .facts p{font-size:35px;line-height:1.15} .why{font-size:31px} .host,.qrbox p span{font-size:27px} .host b,.qrbox p{font-size:33px}")),
+    # 8.5 x 11 in at 96 css px per inch (816 x 1056): saved as a vector PDF (type stays sharp at any size; the logo is ~234 ppi),
     # plus a 2x PNG preview
-    "print": (816, 1056, dict(pad=54, gap=26, photow=330, big=48, rgap=10, barh=24, qr=True, qrsize=144, link="cycleforchange.org/fl", scale=2, pdf=True)),
+    "print": (816, 1056, dict(pad=54, gap=22, photow=330, big=46, rgap=9, barh=24, qr=True, qrsize=144, link="cycleforchange.org/fl", scale=2, pdf=True)),
 }
 
 class Q(http.server.SimpleHTTPRequestHandler):
