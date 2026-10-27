@@ -229,6 +229,7 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .today-plate{font-size:calc(var(--h) * .58);line-height:1;padding:.12em .3em .04em}
 .today-line{margin:0 0 var(--s2);max-width:30ch;font-size:var(--fs-intro);line-height:1.4}
 .today-ask{margin:0 0 var(--s4)}
+.today-ask .link{align-items:flex-end}   /* when it wraps beside the phone's film, the arrow ends the last line, not the gap between two */
 .today-ph{margin:0}
 .today-ph img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:var(--bone-2)}
 .today-film{margin:0}
