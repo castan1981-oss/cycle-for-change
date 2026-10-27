@@ -34,8 +34,8 @@ crosswalk at Central and Portland. The six crosswalk bars as an idea. Robert in 
    rear lamp is optional. The page said "Arizona law wants both". Fixed and cited.
 
 ## Accepted, still open
-- **His original photo**, as shot, ungraded (6 of 10). v2 uses a crop of the AI render as a stand-in until he sends
-  the file. Nothing merges with the stand-in.
+- **His original photo**, as shot, ungraded (6 of 10): in, Oct 27 (`-2` files), cropped from the copy he sent
+  (1143 × 1552). Checked: no cars, nobody else recognisable.
 - A night photo at the crosswalk with his lights on, after he rides the route this week (3 of 10).
 
 ## Rejected, and why
