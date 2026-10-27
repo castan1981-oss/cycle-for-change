@@ -7,10 +7,11 @@ can't run as it is. It has a parked truck behind him at the overlook and traffic
 homepage hero stays car-free (CLAUDE.md §10). It is 512 px wide and ends in glitch frames. So this is the better
 edit, cut from his real footage only:
 
-  phone  608x1080  one frame, full height, no seams through the type: the homepage reel's shots at their native
-                   sharpness, none shorter than 1 s; the first frame is his face (the poster)
-  wide   1620x960  two panels cut together every 1.2 s: a wide one the words sit in (the sign never crosses a cut)
-                   and a tall one beside it, his face first. The LOVE-wall loop stays #today's, not the hero's
+  phone  608x1080  one frame, full height, no seams through the type: four of the homepage reel's shots at their
+                   native sharpness; the first frame is his face (the poster)
+  wide   1620x960  two panels cut together in pairs that share a light: a wide one the words sit in (the sign never
+                   crosses a cut) and a tall one at the right, his face first; the gutter at 70% clears the nav.
+                   The LOVE-wall loop stays #today's, not the hero's
 
 The first cut (-1, Oct 26) stacked three bands from his reel on phones and three panels on desktop. The Wrenches
 read it cold: the seams ran through the type and three clips fought each other. The brand gate then found a car
@@ -34,7 +35,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FILM = os.path.join(ROOT, "cfc-site", "film")
 TAR = "0x141218"          # --tar, the gutter between frames
 FPS = 30
-L = {"phone": 7.4, "wide": 6.0}   # each film's loop, seconds
+L = {"phone": 4.45, "wide": 2.95}   # each film's loop, seconds
 
 # sources: (path, width, height). "reel" is Robert's three-band reel; its bands are cut out by y range.
 def sources(reel):
@@ -60,11 +61,12 @@ SHOTS = {
     "r_riding":  ("reel", 0.05, 4.25, (0, 285, 512, 302)),      # riding at the camera at sunset (the middle band)
     "r_ledge":   ("reel", 0.40, 3.50, (120, 596, 392, 231)),    # the overlook, cropped right of the parked truck and trailer
     # the homepage reel (road-film-2), one shot each
-    "s1_mint":   ("road", 0.05, 1.35, (0, 0, 864, 1080)),
+    "s1_mint":   ("road", 0.40, 1.35, (0, 0, 864, 1080)),       # from 0.40 s: a rust-red shape behind the post before it (brand gate, v2)
     "s2_drone":  ("road", 1.45, 2.65, (0, 0, 864, 1080)),
     "s3_ahead":  ("road", 2.75, 4.05, (0, 0, 864, 1080)),
     # out (brand gate, Oct 26): s4_river 4.15-5.45 (a shape under the far-bank road), s7_road 8.25-9.55 (a car at the
-    # far end), s9_sun 11.05-11.60 (a parked vehicle on the verge)
+    # far end), s9_sun 11.05-11.60 (a parked vehicle on the verge); v3: s8_bike (pale shapes through the fence that could
+    # be a lot) and s6_tunnel (its fisheye half puts an orange beam on the first screen, louder than the rose)
     "s5_forest": ("road", 5.75, 6.75, (0, 0, 864, 1080)),
     "s6_tunnel": ("road", 6.85, 8.15, (0, 0, 864, 1080)),
     "s8_bike":   ("road", 9.65, 10.95, (0, 0, 864, 1080)),
@@ -76,12 +78,13 @@ SHOTS = {
 # lanes: (slot w, slot h, [(shot, focus 0..1 along the axis the crop slides on), ...]); the last shot of each lane is
 # trimmed to the loop. Order chosen so no shot is in two lanes at the same moment.
 PHONE = [   # one frame, the shots at their own length; frame 0 is his face (the poster and the reduced-motion still)
-    (608, 1080, [("s1_mint", .5), ("s6_tunnel", .5), ("s3_ahead", .5), ("s5_forest", .5), ("s8_bike", .45), ("s2_drone", .55)]),
+    (608, 1080, [("s1_mint", .5), ("s3_ahead", .5), ("s5_forest", .5), ("s2_drone", .55)]),
 ]
-WIDE = [    # the wide panel the words sit in, then the tall one with his face; both cut together every 1.2 s (calmer
-            # than two clocks), never the same shot in both, each shot once per lane per loop
-    (1012, 960, [("s3_ahead", .5, 1.2), ("s2_drone", .5, 1.2), ("s8_bike", .5, 1.2), ("s1_mint", .5, 1.2), ("s6_tunnel", .5, 1.2)]),
-    (602, 960, [("s1_mint", .45, 1.2), ("s6_tunnel", .5, 1.2), ("s3_ahead", .5, 1.2), ("s2_drone", .5, 1.2), ("s8_bike", .5, 1.2)]),
+WIDE = [    # the wide panel the words sit in, then the tall one with his face, cut together in pairs that share a light
+            # (cool with cool, warm with warm). The gutter sits at 70% of the frame, right of the centred nav at every
+            # landscape width from 1024, so no link sits on a seam
+    (1134, 960, [("s3_ahead", .5, .95), ("s2_drone", .5, 1.0), ("s5_forest", .5, 1.0)]),
+    (480, 960, [("s1_mint", .35, .95), ("s5_forest", .5, 1.0), ("s2_drone", .5, 1.0)]),
 ]
 
 def dur(shot): return SHOTS[shot][2] - SHOTS[shot][1]
@@ -170,7 +173,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--reel", default="", help="Robert's three-band reel (cycling-video-no-text.mp4), only if a reel shot is in a lane")
     ap.add_argument("--out", default=FILM)
-    ap.add_argument("--n", type=int, default=2)
+    ap.add_argument("--n", type=int, default=3)
     a = ap.parse_args()
     srcs = sources(os.path.abspath(os.path.expanduser(a.reel)) if a.reel else "")
     used = {SHOTS[e[0]][0] for lanes in (PHONE, WIDE) for (_, _, lane) in lanes for e in lane}

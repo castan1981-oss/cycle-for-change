@@ -101,15 +101,15 @@ const DEFS = `<svg aria-hidden="true" focusable="false" style="position:absolute
 
 // —— 1. the hero: the film, the mark, who and what, one primary ——
 const FILM = {
-  phone: { mp4: "/film/hero-phone-2.mp4", webm: "/film/hero-phone-2.webm", poster: "/film/hero-phone-2", w: 608, h: 1080 },
-  wide: { mp4: "/film/hero-wide-2.mp4", webm: "/film/hero-wide-2.webm", poster: "/film/hero-wide-2", w: 1620, h: 960 },
+  phone: { mp4: "/film/hero-phone-3.mp4", webm: "/film/hero-phone-3.webm", poster: "/film/hero-phone-3", w: 608, h: 1080 },
+  wide: { mp4: "/film/hero-wide-3.mp4", webm: "/film/hero-wide-3.webm", poster: "/film/hero-wide-3", w: 1620, h: 960 },
 };
-// the wide film on a landscape screen at 760 and up; the stacked one on phones and portrait tablets
+// the two-panel film on a landscape screen at 760 and up; the one-frame film on phones and portrait tablets
 const WIDE_Q = "(min-width: 760px) and (min-aspect-ratio: 1/1)";
 const PHONE_Q = "(max-width: 759px), (max-aspect-ratio: 1/1)";
 const heroRide = `<a class="hero-ride" id="heroRide" href="${esc(RIDE_HREF)}"${NR ? " data-ride-next" : ""}>${NR ? `<span class="ridebar-d">${esc(NR.date)}</span>` : ""}<span class="hero-ride-t"><span class="finder-t">Ride with me</span><span class="finder-s">${NR ? `${esc(NR.name)}, ${esc(NR.where)}` : "The rides I&rsquo;m doing in 2027"}</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>`;
 const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools/hero-film.py): one frame on a phone, two panels on a wide
-     screen (the words sit inside the wide one). The poster is the film's first frame and the page's largest paint; /home.js
+     screen (the words sit inside the wide one, the gutter clear of the nav). One primary and one quiet link (CLAUDE.md §3). The poster is the film's first frame and the page's largest paint; /home.js
      starts the film after load, never under reduced motion or Save-Data, and the button always stops it. —— -->
 <section class="hero" id="top" aria-labelledby="hero-h" data-film="off">
   <div class="hero-media">
@@ -131,7 +131,7 @@ const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools
     <p class="hero-line">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</p>
     <div class="hero-acts">
       ${heroRide}
-      <p class="hero-links"><a class="link link--bone" href="/rides/">Find a group ride</a><a class="link link--bone" href="${NOTE ? NOTE.href : "#road"}">Read the last ride</a></p>
+      <p class="hero-links"><a class="link link--bone" href="/rides/">Find a group ride</a></p>
     </div>
   </div>
   <button class="hero-pause" id="heroPause" type="button" aria-pressed="false" hidden><svg class="hp-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg><svg class="hp-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><span class="hp-label">Pause the film</span></button>
@@ -243,7 +243,6 @@ ${logRows}
       </div>
       <div class="miles-side">
         <p class="miles-rides"><b class="num" id="roadRides">${T0 && T0.rides ? fmt(T0.rides) : "&mdash;"}</b> ${seasonText("rides since June 1.", "rides in 2027.")}</p>
-        <p class="miles-note">Every ride gets a stroke, as long as the ride. The big ones get a page: the route, the town, who was there, the footage.</p>
         <p class="miles-acts"><a class="link link--bone" href="${NOTE ? NOTE.href : "/events/2027/riding/"}">Read the last ride</a><a class="link link--bone" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Follow on Strava</a></p>
       </div>
     </div>
@@ -391,12 +390,12 @@ const FIND = `<!-- —— 7. find a group ride —— -->
     <p class="rule find-rule"><span class="rule-l">Group rides</span></p>
     <div class="find-words">
       <h2 class="find-h" id="find-h">Find a group ride.</h2>
-      <p class="find-count"><b class="num">${RIDES_N}</b><span>group rides in the directory, each with the date it was last checked. Every state, ${RN.abroad} more countries. Shop rides, no-drop rides, queer rides.</span></p>
+      <p class="find-count"><b class="num">${RIDES_N}</b> <span>group rides in the directory, each with the date it was last checked. Every state, ${RN.abroad} more countries. Shop rides, no-drop rides, queer rides.</span></p>
     </div>
     <div class="find-tools">
       <form class="find" action="/rides/" method="get" role="search">
         <label class="find-lab" for="q">Your town or a ride name</label>
-        <div class="find-row"><input class="find-field" id="q" name="q" type="search" autocomplete="off"><button class="btn" type="submit">Search rides</button></div>
+        <div class="find-row"><input class="find-field" id="q" name="q" type="search" autocomplete="off"><button class="btn btn--ink" type="submit">Search rides</button></div>
       </form>
       <p class="find-links"><a class="link" href="/rides/no-drop/">No-drop rides</a><a class="link" href="/rides/lgbtq/">Queer rides</a><a class="link" href="/tonight/">Tonight</a></p>
     </div>

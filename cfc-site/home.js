@@ -141,13 +141,15 @@
 
   /* —— the hero film (Oct 26, 2026). The poster is on screen first and is the page's largest paint. After the page has
      loaded, the film for this screen's shape loads and plays muted, inline, on a loop — on phones too (Robert's
-     approved direction) — unless the reader asked for less motion or Save-Data is on. The button always stops it
+     approved direction) — unless the reader asked for less motion, Save-Data is on or the connection is slow. The button always stops it
      (WCAG 2.2.2); a stop is kept for the visit. Off screen it pauses. If anything fails, the still stays. —— */
   (function () {
     var hero = document.querySelector(".hero"), v = $("heroFilm"), btn = $("heroPause");
     if (!hero || !v || !btn || !v.canPlayType) return;
     var label = btn.querySelector(".hp-label");
-    var saveData = !!(navigator.connection && navigator.connection.saveData);
+    /* Save-Data, or a slow connection (2G, 3G): the still stays until the button asks for the film */
+    var conn = navigator.connection || {};
+    var saveData = !!conn.saveData || /(^|-)2g$|^3g$/.test(String(conn.effectiveType || ""));
     var KEY = "cfc-film-off", stopped = false;
     try { stopped = sessionStorage.getItem(KEY) === "1"; } catch (e) {}
     var wideQ = v.getAttribute("data-wide-q"), shape = "";

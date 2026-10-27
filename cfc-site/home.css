@@ -14,6 +14,7 @@
 @layer section{
 
 .home main{display:block}
+@media (max-width:759px){.home main{--sec:52px}}
 .nowrap{white-space:nowrap}
 .note-sm{margin:0;font-size:var(--fs-small);line-height:1.45;color:var(--mute)}
 
@@ -27,14 +28,14 @@
 /* one section opener size, 800 (900 is kept for the 10,000, the plates and the date numerals) */
 .story-h,.year-h,.orgs-h,.find-h{margin:0;font-size:clamp(2.5rem,1.35rem + 4.6vw,5.75rem);font-weight:800;line-height:.92;letter-spacing:-.035em;text-wrap:balance}
 
-/* lane paint: dashes centred in their cells, the run scaled to a whole number of them so both ends match */
-.lane{height:12px;background:url(/img/home/lane-rose-2.svg) 50% 50%/auto 100% round}
-.miles .lane,.sign .lane{background-image:url(/img/home/lane-powder-2.svg)}
-@media (min-width:1024px){.lane{height:16px}}
+/* lane paint: a lane line, long dashes at a fixed size, one centred on the page so both edges cut the same */
+.lane{height:10px;background:url(/img/home/lane-rose-3.svg) 50% 50%/auto 100% repeat-x}
+.miles .lane,.sign .lane{background-image:url(/img/home/lane-powder-3.svg)}
+@media (min-width:1024px){.lane{height:14px}}
 
 /* the two dark rooms: asphalt, felt more than seen */
 .miles,.sign{position:relative;isolation:isolate;background-color:var(--tar);color:var(--paper);--ring:var(--paper)}
-.miles::before,.sign::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url(/img/home/asphalt-1.webp) 0 0/240px 240px repeat;opacity:.2}
+.miles::before,.sign::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url(/img/home/asphalt-2.webp) 0 0/240px 240px repeat;opacity:.24}
 
 .link--bone{color:var(--paper)}
 
@@ -48,11 +49,14 @@
 .hero-poster img{max-width:none}
 .hero-film{opacity:0;transition:opacity var(--t-open) var(--ease)}
 .hero[data-film="on"] .hero-film{opacity:1}
-/* the measured scrim: dark enough at the foot for plaster type over any frame, the top only as dark as the nav needs */
-.hero-scrim{position:absolute;inset:0;background:
-  linear-gradient(0deg,rgba(20,18,24,.94) 0,rgba(20,18,24,.86) 30%,rgba(20,18,24,.62) 50%,rgba(20,18,24,.28) 66%,rgba(20,18,24,0) 80%),
-  linear-gradient(180deg,rgba(20,18,24,.45) 0,rgba(20,18,24,0) 120px)}
+/* the measured scrim (tools: scratchpad need.py, every frame of both films at nine screen sizes): the words need .52 behind
+   the stencil and .62 behind the small type on the brightest frame (3:1 large, 4.5:1 small, 95th-percentile background).
+   So the scrim rides with the words, not the screen: it eases in over the 200px above the stencil, is .6 at the
+   stencil's top and .72 at the foot, whatever the screen's height. The frame itself only gets a band under the nav. */
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,24,.5) 0,rgba(20,18,24,0) 120px)}
 .hero-in{position:relative;display:flex;flex-direction:column;align-items:flex-start;padding-top:calc(var(--nav-h) + 40px);padding-bottom:calc(env(safe-area-inset-bottom,0px) + 24px)}
+.hero-in::before{content:"";position:absolute;z-index:-1;pointer-events:none;left:-100vw;right:-100vw;top:calc(var(--nav-h) + 40px - 200px);bottom:0;
+  background:linear-gradient(180deg,rgba(20,18,24,0) 0,rgba(20,18,24,.1) 60px,rgba(20,18,24,.3) 120px,rgba(20,18,24,.5) 170px,rgba(20,18,24,.6) 200px,rgba(20,18,24,.72) 100%)}
 .hero-h{margin:0;line-height:0}
 .hero-mark{display:block;height:auto;color:var(--paper);overflow:visible}
 .hero-mark .lp-bar{fill:var(--creosote-lift)}
@@ -80,7 +84,7 @@
 .hero-links .link{min-height:44px}
 /* the stop: always there while the film can play (WCAG 2.2.2), at the foot, right */
 .hero-pause{position:absolute;z-index:2;right:var(--gut);bottom:calc(env(safe-area-inset-bottom,0px) + 24px);
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:44px;min-height:44px;padding:0 12px;
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:48px;min-height:48px;padding:0 14px;
   background:rgba(20,18,24,.55);color:var(--paper);border:1px solid rgba(239,237,234,.45);cursor:pointer;
   font:700 .8125rem/1 var(--display);transition:background-color var(--t-color) var(--ease)}
 .hero-pause svg{width:16px;height:16px;fill:currentColor}
@@ -104,12 +108,12 @@
   .hero-pause{bottom:calc(env(safe-area-inset-bottom,0px) + 48px)}
 }
 @media (min-width:760px) and (min-aspect-ratio:1/1){
-  /* two panels; the words sit in the wide left one, and the scrim reads across it as well as up */
+  /* two panels; the words sit in the wide left one. Their scrim fades out over 360px past the stencil's end, so his face
+     in the tall panel stays clear; the band under the nav is as dark as the 15px links need (.62) */
   .hero-poster img,.hero-film{object-position:50% 50%}
-  .hero-scrim{background:
-    linear-gradient(90deg,rgba(20,18,24,.72) 0,rgba(20,18,24,.48) 34%,rgba(20,18,24,0) 56%),
-    linear-gradient(0deg,rgba(20,18,24,.86) 0,rgba(20,18,24,.5) 32%,rgba(20,18,24,0) 60%),
-    linear-gradient(180deg,rgba(20,18,24,.4) 0,rgba(20,18,24,0) 120px)}
+  .hero-scrim{background:linear-gradient(180deg,rgba(20,18,24,.7) 0,rgba(20,18,24,.64) 56px,rgba(20,18,24,0) 160px)}
+  .hero-in::before{right:auto;width:calc(100vw + var(--gut) + 1100px);
+    -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 360px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 360px),transparent)}
 }
 @media (min-width:1024px) and (max-height:760px){.hero-mark--line{width:clamp(380px,38vw,620px)}}
 
@@ -142,14 +146,16 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .story{background:var(--bone);padding-block:0 var(--sec)}
 .how{margin-bottom:var(--sec);padding-top:var(--s4);background:linear-gradient(var(--asphalt),var(--asphalt)) var(--gut) 0/calc(100% - 2 * var(--gut)) 2px no-repeat}
 .how-h{margin:0 0 var(--s4);font-size:var(--fs-h2)}
-.how-steps{list-style:none;margin:0;padding:0;display:grid;gap:var(--s4)}
+.how-steps{list-style:none;margin:0;padding:0;display:grid;gap:var(--s3)}
 .how-steps li{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;align-items:start}
 .how-mk{grid-row:span 2;width:36px;height:36px;color:var(--asphalt)}
 .how-t{margin:4px 0 6px;font-size:var(--fs-h3)}
 .how-steps p{margin:0;max-width:30ch;color:var(--mute)}
 @media (min-width:760px){
-  .how-steps{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto;column-gap:var(--col-gap);row-gap:0}
-  .how-steps li{grid-row:span 2;grid-template-rows:subgrid}
+  .how-steps{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto auto;column-gap:var(--col-gap);row-gap:0}
+  .how-steps li{grid-row:span 3;grid-template-rows:subgrid;grid-template-columns:minmax(0,1fr)}
+  .how-mk{grid-row:auto;margin-bottom:var(--s2)}
+  .how-t{align-self:end;margin-top:0}
 }
 .story-in{display:grid;gap:var(--s5)}
 .story-h{max-width:9ch;margin-bottom:var(--s4)}
@@ -168,16 +174,17 @@ a.strip-cell:focus-visible{outline-offset:6px}
 @media (max-width:759px){.story-ph--b{display:none}}
 @media (min-width:760px) and (max-width:1023px){
   .story-photos{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap)}
+  .story-photos{align-items:end}
   .story-ph--a{grid-column:1 / span 7}
-  .story-ph--b{grid-column:8 / -1;margin-top:var(--s6)}
+  .story-ph--b{grid-column:8 / -1}
 }
 @media (min-width:900px) and (max-width:1023px){.story-ph--a{margin-inline:0}}
 @media (min-width:1024px){
   .story-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
   .story-words{grid-column:1 / span 5;position:sticky;top:calc(var(--nav-h) + var(--s4))}
-  .story-photos{grid-column:6 / -1;display:grid;grid-template-columns:subgrid;align-items:start}
+  .story-photos{grid-column:6 / -1;display:grid;grid-template-columns:subgrid;align-items:end}
   .story-ph--a{grid-column:1 / span 4}
-  .story-ph--b{grid-column:5 / -1;margin-top:var(--s6)}
+  .story-ph--b{grid-column:5 / -1}
 }
 
 /* ——————————————————————————————————————————————————————————
@@ -205,17 +212,18 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .today-film-btn[data-playing="true"] .rf-play,.today-film-btn:not([data-playing="true"]) .rf-pause{display:none}
 .today-film-len{font:var(--label);color:var(--mute)}
 @media (max-width:899px){
-  .today-ph,.today-film{margin-inline:calc(-1 * var(--gut))}
-  .today-film{width:auto}
-  .today-film-cap{padding-inline:var(--gut)}
+  .today-ph{margin-inline:calc(-1 * var(--gut))}
+  .today-film{width:min(62%,280px);margin-inline:0}
+
   .today-words{display:contents}
   .today-ph{order:1}
   .today-film{order:2}
 }
 @media (min-width:1024px){
   .today-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
-  .today-words{grid-column:1 / span 5}
-  .today-ph{grid-column:6 / -1}
+  .today-words{grid-column:1 / span 4}
+  .today-ph{grid-column:5 / -1}
+  .today-film{width:min(100%,230px)}
 }
 
 /* ——————————————————————————————————————————————————————————
@@ -231,6 +239,7 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .log li{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"when mi" "bar bar";gap:10px 16px;padding:16px 0;border-bottom:1px solid var(--line-d)}
 .log .when{grid-area:when;min-height:2.65em;font:700 var(--fs-small)/1.3 var(--display);color:var(--dust)}
 .log .when b{display:block;margin-top:2px;font-size:var(--fs-body);font-weight:800;color:var(--paper)}
+.log .when:not(:has(b)){display:flex;align-items:flex-end;font-size:var(--fs-body);font-weight:800;color:var(--paper)}
 .log .when a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .log .mi{grid-area:mi;align-self:end;font-weight:900;font-size:var(--fs-h3);line-height:1;letter-spacing:-.02em}
 .log .mi small{margin-left:3px;font-size:.55em;font-weight:700;color:var(--dust);letter-spacing:0}
@@ -239,9 +248,8 @@ a.strip-cell:focus-visible{outline-offset:6px}
   clip-path:polygon(0 6%,98.8% 0,100% 40%,99.4% 100%,.4% 94%)}
 .strava-attrib{margin:12px 0 0;font-size:.8125rem;line-height:1.4;color:var(--dust)}
 .strava-attrib a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
-.miles-rides{margin:0 0 var(--s2);font-size:var(--fs-intro);color:var(--dust)}
+.miles-rides{margin:0 0 var(--s4);font-size:var(--fs-intro);color:var(--dust)}
 .miles-rides b{color:var(--paper);font-weight:800}
-.miles-note{margin:0 0 var(--s4);max-width:38ch;color:var(--dust)}
 .miles-acts{display:flex;flex-wrap:wrap;gap:16px 32px;margin:0}
 @media (min-width:1024px){
   .miles-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
@@ -272,7 +280,7 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .yr-key i{width:10px;height:10px;background:var(--asphalt)}
 @media (max-width:759px){.yr-map{display:none}}
 .year-list{list-style:none;margin:0;padding:0;border-top:2px solid var(--asphalt)}
-.yr a{display:grid;grid-template-columns:2ch 64px minmax(0,1fr);align-items:center;gap:16px;min-height:72px;padding:10px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
+.yr a{display:grid;grid-template-columns:2ch 64px minmax(0,1fr);align-items:center;gap:16px;min-height:72px;padding:8px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
 .yr-i{font:800 .8125rem/1 var(--display);color:var(--mute);text-align:right}
 .date{display:flex;flex-direction:column;align-items:center;justify-content:center;width:64px;height:56px;border:1.5px solid var(--asphalt);color:var(--asphalt);line-height:1;text-align:center}
 .date-m{font-size:.8125rem;font-weight:800}
@@ -286,12 +294,11 @@ a.strip-cell:focus-visible{outline-offset:6px}
 @media (hover:hover){.yr a:hover .yr-n b{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}.yr a:hover .date{background:var(--paper)}}
 .yr a:active{background:var(--bone-2);transition-duration:0s}
 .year-foot{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:var(--s4)}
-@media (max-width:759px){.yr a{grid-template-columns:64px minmax(0,1fr);gap:14px}.yr-i{display:none}}
+@media (max-width:759px){.yr a{grid-template-columns:64px minmax(0,1fr);gap:14px;min-height:64px}.yr-i{display:none}}
 @media (min-width:760px) and (max-width:1023px){.yr-map{max-width:640px}}
 @media (min-width:1024px){
-  .year-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
-  .yr-map{grid-column:1 / span 7;position:sticky;top:calc(var(--nav-h) + var(--s4))}
-  .year-list-wrap{grid-column:8 / -1}
+  .yr-map{max-width:1000px}
+  .year-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(7,auto);grid-auto-flow:column;column-gap:var(--col-gap)}
 }
 
 /* ——————————————————————————————————————————————————————————
@@ -305,13 +312,22 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .org-h{margin:var(--s2) 0 var(--s1);font-size:var(--fs-h3)}
 .org p{margin:0 0 var(--s2);max-width:34ch}
 .org-acts{display:flex;flex-wrap:wrap;gap:8px 24px}
-.orgs-door{margin:var(--s6) 0 var(--s5);max-width:24ch;font-size:clamp(1.6rem,1rem + 2.4vw,3rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;text-wrap:balance;hyphens:none}
+.orgs-door{margin:var(--s5) 0 var(--s4);max-width:24ch;font-size:clamp(1.6rem,1rem + 2.4vw,3rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;text-wrap:balance;hyphens:none}
 .orgs-help{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 24px;padding-top:var(--s2);border-top:1px solid var(--asphalt);font-size:var(--fs-small)}
 .orgs-help a[href^="tel"]{position:relative;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .orgs-help a[href^="tel"]::before{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;margin-top:-22px}
+@media (max-width:899px){
+  .org{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:14px;align-items:center}
+  .org-mk{width:32px;height:32px}
+  .org-h{margin:0}
+  .org p{grid-column:1 / -1;margin-top:var(--s1)}
+  .org-acts{grid-column:1 / -1}
+}
 @media (min-width:900px){
+  .orgs-door{margin-top:var(--s6)}
   .orgs-list{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,auto);column-gap:var(--col-gap)}
   .org{display:grid;grid-row:span 4;grid-template-rows:subgrid;align-content:start;padding:var(--s3) var(--s3) var(--s4) 0;border-bottom:0;border-right:1px solid rgba(28,26,34,.28)}
+  .org-h{align-self:end}
   .org:last-child{border-right:0}
 }
 .ridewith{background:var(--paper);padding-block:var(--sec)}
@@ -322,12 +338,13 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .plate--big{font-size:.86em}
 .ridewith-words>p{max-width:40ch}
 .facts-dl{margin:var(--s4) 0;border-top:3px solid var(--asphalt)}
-.facts-dl div{display:grid;grid-template-columns:minmax(5.5rem,8rem) minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.facts-dl div{display:grid;grid-template-columns:minmax(5.5rem,8rem) minmax(0,1fr);align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
 .facts-dl dt{font:var(--label);color:var(--mute)}
 .facts-dl dd{margin:0;font-weight:600}
 .facts-dl dd a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .ridewith-acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin:0 0 var(--s2)}
 @media (max-width:899px){.ridewith-ph{margin-inline:calc(-1 * var(--gut))}}
+@media (max-width:759px){.ridewith-ph img{aspect-ratio:1/1}}
 @media (min-width:900px){.ridewith-ph{width:auto}}
 @media (min-width:1024px){
   .ridewith-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:center}
@@ -343,8 +360,8 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .find-rule{margin-bottom:0}
 .find-h{margin-bottom:var(--s3)}
 .find-count{margin:0}
-.find-count b{display:block;font-size:clamp(3rem,1.9rem + 4.6vw,6rem);font-weight:900;line-height:.86;letter-spacing:-.05em}
-.find-count span{display:block;margin-top:var(--s2);max-width:34ch;color:var(--mute)}
+.find-count{max-width:40ch;color:var(--mute)}
+.find-count b{color:var(--asphalt);font-weight:800}
 .find-lab{display:block;margin-bottom:8px;font:var(--label);color:var(--asphalt)}
 .find-row{display:flex;gap:8px}
 .find-field{flex:1 1 auto;min-width:0}
