@@ -19,9 +19,9 @@ He then sent his own clean footage ("These are without words", Oct 27). This cut
 Wide 9 (the Cadence final pass, research/design/2026-10-27-cadence-final/photo.md): the camera tilts up through the
 road shot, so a fixed full-frame crop let the gate pillar at the roadside sink into the CYCLE | FOR gap under the
 stencil; the road now uses a static region of rows 580-1493 (`road_w`, the desk's fallback, not a tracked crop: nothing
-the gate could read as an effect). The palms shot is cut to its last half second (reel frames 322-336: the warm road,
-the tire's diagonal, the stem's shadow, no grass); the 1.3 s of grass and kerb is gone. The loop is 88 frames
-(road 48, tunnel 25, wheel 15); the tall panel is rail frames 54-141.
+the gate could read as an effect). The palms shot is cut to its last half second (reel frames 322-336, out frames
+73-87: the wheel on the road, with a strip of grass verge and kerb at the top left); the shot's first 1.3 s is gone.
+The loop is 88 frames (road 48, tunnel 25, wheel 15); the tall panel is rail frames 54-141.
 
 The brand gate (research/brand/2026-10-27-home-v9.md) couldn't clear a dark shape in a house's arched opening across
 the street in the palms shot (reel 10.07-10.67 s, x 660-690, y 985-1000): the palms are cropped below y 1030, so the

@@ -253,7 +253,8 @@ homepage only; every other rule in this section still holds there and everywhere
   `hero-wide-9.*` (1620×960, 88 frames: the wide left panel the words sit in, cut on its own clock — the red-rock road
   cropped to its lower part (a static region, rows 580–1493 of the clip, so the ridge and the roadside gate pillar sit
   higher as the camera tilts up; not a tracked crop), then the tunnel cropped low to the bike and his legs, then half a
-  second of the wheel on the warm road (the palms shot's last 15 frames; its 1.3 s of grass and kerb is gone) — and the
+  second of the wheel on the road, with a strip of grass verge and kerb at the top left (the palms shot's last 15
+  frames, out 73–87; the shot's first 1.3 s is gone) — and the
   tall right panel, the rail-yard take uncut (its frames 54–141), so one face on the screen at a time; the gutter at 70%
   so no nav link sits on it; landscape ≥760px; every cut on a frame), cut by `python3 tools/hero-film.py --rail … --hit …`
   (`--n` numbers the phone film, `--wide-n` the wide one: they carry their own numbers, bump the one that was recut) from
@@ -272,15 +273,16 @@ homepage only; every other rule in this section still holds there and everywhere
   tar with a hairline, carrying only the menu (the nav links at ≥900); the mark and the header's Ride with me come back
   once the film has scrolled under it (the hero carries both, so nothing is said twice).
 - **Two textures, small:** a fine asphalt aggregate (`img/home/asphalt-2.webp`, a 2x tile, opacity .24) on the two dark
-  rooms only (`#road` and `#sign`), never on a photo; a worn lane-line dash at the start of a grid column
-  (`img/home/dash-rose-1.svg` on light over the strip's three numbers, `dash-powder-1.svg` on dark over the sign; drawn
-  shapes, no filter) — rose as wet paint, lined up with what it marks.
+  rooms only (`#road` and `#sign`), never on a photo; one lane dash at the head of each of the strip's three numbers
+  only (`img/home/dash-rose-1.svg`, a drawn shape, no filter) — rose as wet paint, lined up with what it marks. The
+  sign's dash is off (Oct 27, 2026: the blank is its bar; `dash-powder-1.svg` is unused).
   `python3 tools/home-art.py` draws them. Torn-paper captions and a drawn bicycle were in the approved direction and were
   cut in review (they read as decoration and no drawing was good enough); captions are plain place · month lines.
 - **Rose on the homepage** is the blank, the plates, the lane paint and the log strokes. Nothing else.
 - **The 2027 rides get a map** (≥760px; `tools/home-map.js` → `data/geo/home-2027.json` → `img/home/map-2027.svg`): a
-  numbered dot per ride at its start town, outlined when the date is projected or TBA, a square for Phoenix, nothing drawn
-  between (never a route we drew), numbers as HTML; the whole lower 48 with a margin, no Canada fill (any box cuts it with a straight edge). Rows are
+  numbered square per ride at its start town (24px ink with a plaster numeral; a plaster square with a dashed patina
+  edge when the date is projected or TBA; no radius, no shadow), the list's numbers in the same style, a small square
+  for Phoenix, nothing drawn between (never a route we drew), numbers as HTML; the whole lower 48 with a margin, no Canada fill (any box cuts it with a straight edge). Rows are
   outlined date blocks (dashed when projected/TBA); from 1024 the map takes eight columns with the key and the dates note
   beside it, and the list runs in two columns under both.
 - **One opener size** for the big section heads (`.story-h .year-h .orgs-h .find-h`, 800), 900 kept for the 10,000, the
@@ -298,9 +300,9 @@ homepage only; every other rule in this section still holds there and everywhere
   `#why` · `#road` · `#today` · `#orgs` · `#year` · `#ride` · `#find` · `#read` · `#sign` (markup order in build-home.js,
   no CSS `order`: the rooms alternate concrete / tar / concrete / patina / concrete / plaster, and the 988 line comes up
   sooner; `ORGS_S` and `RIDE_S` are two constants so the 2027 rides sit between them). The hero carries the second quiet
-  link, Read the last ride (above). `#today` has **one film control**: the disc on the poster (`.today-play`, the site's
-  film control, both glyphs inside it, the figure's `data-playing` picks one, the label says what it does next); the
-  Play · 0:03 line under the film is gone; the film is a sibling of the photo (`.today-lead`, `.today-say`, `.today-ph`,
+  link, Read the last ride (above). How this works is a ledger of three rows (no marks, no numerals). `#today` has **one
+  film control**: the disc at the frame's bottom-left (`.today-play`, the site's film control, both glyphs inside it, the
+  figure's `data-playing` picks one, the label says what it does next); the Play · 0:03 line under the film is gone; the film is a sibling of the photo (`.today-lead`, `.today-say`, `.today-ph`,
   `.today-film` on one grid) with its own place · month caption from `today.json`'s `film.where`. The three plates under
   "It always says cycling" are cut (the sign already changes in `#today` and at the foot). The `#ride` facts are chrome's
   `.facts` grid; the find field carries `#mkSearch`. **The Ride with me bar is hidden at ≥900 on the homepage** (the
@@ -1021,4 +1023,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-26 — `/rides/critical-mass/`: every Critical Mass we list (36 in 35 cities, 7 countries) by country with its next date, a sourced "What Critical Mass is", linked from all 36 ride pages; `/find-a-ride/`'s Ride with me tile no longer says "six".
 - 2026-10-26 — The editorial homepage (Robert and Cadence's approved direction, §3; staged as a PR, not live until Robert approves): his film full screen (one frame on phones, two panels on wide screens, from road-film-2's four clean shots, every frame checked by `tools/hero-contrast.py`), the numbers under lane-paint dashes, the story with his photographs, 10,000 and the last rides, the 2027 rides on a map with date blocks, the orgs on patina, the sign at the foot; `/chrome.css` now loads on the homepage too; `CSS_V` 53. Eight rounds with the Wrenches (the critic's last cold read 40 vs 37 for live, photography held by the footage), the brand gate (passes), the access desk (its five fixes in) and the usability lab (task 4, the latest write-up, slower by the one-button hero: Robert's call); the art director's rulings in `research/design/2026-10-26-editorial-home/sign-off.md`. Fact desk (research/events/2026-10-26-homepage-facts.md): Seattle to Portland is 206 miles, one or two days; The Mid South shows Mar 11 until the organizer posts its last day; SFAF's "No one turned away for cost" is cut (their site doesn't say it).
 - 2026-10-27 — The staged homepage's hero recut from the clean clips Robert sent ("the video needs to be changed"): `hero-phone-8` / `hero-wide-8` — his rail-yard take (one continuous shot: the whole phone film, and the tall panel on wide screens), and the red-rock road, the tunnel and the palms (cropped low) from his Reel Hit v3 in the wide panel; the brand gate's three blocks fixed (an uncleared shape across the street cropped out, a judder from joins off the frame grid, two of him at once); `tools/hero-contrast.py` passes at nine sizes; the critic's blind reads 22 vs 18 for v8 on the first cut, 23 vs 19 on the fixed one (photography level, no line down); still staged, not live.
-- 2026-10-27 — Cadence's final notes on the staged homepage (`research/design/2026-10-27-cadence-final/`): Read the last ride on the first screen (the hero's second quiet link); the sections reordered so the rooms alternate (why · road · today · orgs · year · ride · find · read · sign) and the 988 line comes up sooner; `#today` on one grid with one film control (the disc) and a place · month caption on the film; the three plates under "It always says cycling" cut; the `#ride` facts on chrome's `.facts`, the find field with its mark, the rides count in `#road` as a numeral over its label; the Ride with me bar hidden at ≥900 on the homepage; the wide hero film recut as `hero-wide-9` (88 frames: the road from a static lower region, the tunnel, half a second of the wheel; the grass and kerb gone; the phone film stays 8); `CSS_V` 54; still staged, not live.
+- 2026-10-27 — Cadence's final notes on the staged homepage (`research/design/2026-10-27-cadence-final/`): Read the last ride on the first screen (the hero's second quiet link); the sections reordered so the rooms alternate (why · road · today · orgs · year · ride · find · read · sign) and the 988 line comes up sooner; `#today` on one grid with one film control (the disc) and a place · month caption on the film; the three plates under "It always says cycling" cut; the `#ride` facts on chrome's `.facts`, the find field with its mark, the rides count in `#road` as a numeral over its label; the Ride with me bar hidden at ≥900 on the homepage; the wide hero film recut as `hero-wide-9` (88 frames: the road from a static lower region, the tunnel, half a second of the wheel on the road with a strip of grass verge at the top left; the phone film stays 8); `CSS_V` 54; still staged, not live.

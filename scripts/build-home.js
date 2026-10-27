@@ -261,7 +261,7 @@ const RIDING = CHROME.RIDING || [];
 const FOR = { "center-ride-out": "the Center", "cycle-to-zero": "SFAF" };   // the plate after CYCLE FOR (CLAUDE.md §1)
 const MAP = read("data/geo/home-2027.json");
 const BYSLUG = Object.fromEntries(((CAL && CAL.events) || []).map((e) => [e.slug, e]));
-// where a dot sits on the map when two towns would touch (the dot moves, a hairline goes back to the town), in map units
+// where a ride's square sits on the map when two towns would touch (the square moves, a hairline goes back to the town), in map units
 const NUDGE = { "recovery-ride": [24, -23], "cycle-to-zero": [33, 7], "tour-de-palm-springs": [8, 14], "belgian-waffle-ride-arizona": [30, -4], "chino-grinder": [-6, -14], "el-tour-de-tucson": [6, 10] };
 function yearSection() {
   if (!RIDING.length) return "";
@@ -285,7 +285,8 @@ function yearSection() {
   if (nTba) bits.push(`${word(nTba)} ${nTba === 1 ? "hasn&rsquo;t" : "haven&rsquo;t"} put out 2027 dates yet`);
   const cap = (t) => t.charAt(0).toUpperCase() + t.slice(1);
   const note = `${cap(word(dated))} with dates from the organizer${bits.length ? "; " + bits.join("; ") : ""}.`;
-  // the map: the whole lower 48, a square for home, a numbered dot per ride at its start town, nothing drawn
+  // the map: the whole lower 48, a small square for home, a numbered square per ride at its start town (home.css
+  // .mp-dot: 24px ink, dashed when projected or TBA), nothing drawn
   // between (never a route we drew). The numbers are HTML placed by percent (no words in a stretched SVG); the list is the link.
   let map = "";
   if (MAP) {
@@ -314,7 +315,7 @@ function yearSection() {
       </figure>`;
   }
   return `<!-- —— 5. the 2027 rides (data/calendar-2027.json, riding: true, through chrome.js): where on the map, when in the
-     list. Dates are the organizers'; projected and TBA say so; the rows open the ride on the riding page; the dots carry the rows' numbers and open nothing. —— -->
+     list. Dates are the organizers'; projected and TBA say so; the rows open the ride on the riding page; the map's squares carry the rows' numbers and open nothing. —— -->
 <section class="year" id="year" aria-labelledby="year-h">
   <div class="wrap">
     <p class="rule"><span class="rule-l">${RIDING.length} rides</span></p>
