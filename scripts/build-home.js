@@ -26,6 +26,16 @@ const fs = require("fs");
 const path = require("path");
 const CHROME = require("./chrome.js");
 const PH = require("./photos.js");
+// The words around the number switch at midnight Jan 1, 2027 in Phoenix (training count → the 2027 count). PR #211 adds
+// that switch as tools/lib/season.js; until it lands this is the same markup, so either order of merging is safe.
+let seasonText;
+try { ({ seasonText } = require("../tools/lib/season.js")); } catch (e) {
+  seasonText = (training, year, now = Date.now()) => {
+    const on = now >= Date.UTC(2027, 0, 1, 7) ? "2027" : "training";
+    const span = (key, html) => `<span data-season="${key}"${on === key ? "" : " hidden"}>${html}</span>`;
+    return span("training", training) + span("2027", year);
+  };
+}
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "cfc-site", "index.html");
@@ -133,7 +143,7 @@ const STRIP = `<!-- —— 2. the numbers, on a lane. One number for the miles (
 <section class="strip" aria-label="The numbers">
   <div class="lane lane--top" aria-hidden="true"></div>
   <div class="wrap strip-in">
-    <p class="strip-cell strip-cell--miles"><span class="strip-n"><b class="num" data-miles>${T0 ? fmt(T0.miles) : "&mdash;"}</b></span><span class="strip-l">training miles since June 1, <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">on Strava</a>. The count restarts in <b class="num" id="daysTo">${DAYS_TO}</b> days.</span></p>
+    <p class="strip-cell strip-cell--miles"><span class="strip-n"><b class="num" data-miles>${T0 ? fmt(T0.miles) : "&mdash;"}</b></span><span class="strip-l">${seasonText("training miles since June 1, ", "miles in 2027, ")}<a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">on Strava</a>.${seasonText(` The count restarts in <b class="num" id="daysTo">${DAYS_TO}</b> <span id="daysW">${DAYS_TO === 1 ? "day" : "days"}</span>.`, "")}</span></p>
     <a class="strip-cell finder-tile" href="/rides/"><span class="strip-n num">${RIDES_N}</span><span class="strip-l">group rides worldwide</span></a>
     <a class="strip-cell finder-tile" href="/events/2027/"><span class="strip-n num">${CAL_N}</span><span class="strip-l">events in 2027</span></a>
   </div>
@@ -232,7 +242,7 @@ ${logRows}
         </ol>
       </div>
       <div class="miles-side">
-        <p class="miles-rides"><b class="num" id="roadRides">${T0 && T0.rides ? fmt(T0.rides) : "&mdash;"}</b> rides since June 1.</p>
+        <p class="miles-rides"><b class="num" id="roadRides">${T0 && T0.rides ? fmt(T0.rides) : "&mdash;"}</b> ${seasonText("rides since June 1.", "rides in 2027.")}</p>
         <p class="miles-note">Every ride gets a stroke, as long as the ride. The big ones get a page: the route, the town, who was there, the footage.</p>
         <p class="miles-acts"><a class="link link--bone" href="${NOTE ? NOTE.href : "/events/2027/riding/"}">Read the last ride</a><a class="link link--bone" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Follow on Strava</a></p>
       </div>

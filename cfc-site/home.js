@@ -22,6 +22,10 @@
   var $ = function (id) { return document.getElementById(id); };
   var fmt = function (n) { return Math.round(n).toLocaleString("en-US"); };
 
+  /* the words around the number: training until midnight Jan 1, 2027 in Phoenix, then 2027 (build-home.js, PR #211) */
+  var IN_2027 = Date.now() >= YEAR_START;
+  document.querySelectorAll("[data-season]").forEach(function (el) { el.hidden = el.getAttribute("data-season") !== (IN_2027 ? "2027" : "training"); });
+
   /* —— the tally: what the page carries (#tallyData), then the live read —— */
   var feed = { miles: 0, rides: 0, updated: "", profileUrl: "https://www.strava.com/athletes/22899089", recent: [] };
   (function () {
@@ -101,7 +105,11 @@
     polling = true;
     fetchFeed(0).then(function () { polling = false; }, function () { polling = false; });
   }
-  if ($("daysTo")) $("daysTo").textContent = fmt(Math.max(0, Math.ceil((YEAR_START - Date.now()) / DAY)));
+  if ($("daysTo")) {
+    var left = Math.max(0, Math.ceil((YEAR_START - Date.now()) / DAY));
+    $("daysTo").textContent = fmt(left);
+    if ($("daysW")) $("daysW").textContent = left === 1 ? "day" : "days";
+  }
   /* Strava's brand rules: data from their API carries their name. One quiet line under the log. */
   (function () {
     var log = $("log");
