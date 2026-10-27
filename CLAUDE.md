@@ -248,20 +248,21 @@ the freeze above for it ("Everything is to go you have my permission"): "a blend
 ASSOS's precision, but original to Cycle for Change. Softer/feminine, premium and expressive." The brief is
 `research/design/2026-10-26-editorial-home/` (with the Wrenches' and the desks' reviews). What it changes, on the
 homepage only; every other rule in this section still holds there and everywhere else:
-- **The first screen is his film, full screen** (`100svh`): `cfc-site/film/hero-phone-4.*` (608×1080, one full frame,
-  four shots, his face first; phones and portrait screens) and `hero-wide-4.*` (1620×960, two panels cut together in pairs
-  that share a light (never the hazy dawn beside the blue sky), the words in the wide left one, the gutter at 70% so no nav link sits on it; landscape ≥760px), cut by
+- **The first screen is his film, full screen** (`100svh`): `cfc-site/film/hero-phone-5.*` (608×1080, one full frame,
+  three shots, his face first; phones and portrait screens) and `hero-wide-5.*` (1620×960, two panels cut together in
+  pairs, his face first in the wide one, cropped so it sits above the stencil; the words in the wide left panel, the
+  gutter at 70% so no nav link sits on it; landscape ≥760px), cut by
   `python3 tools/hero-film.py` from his own footage only (the v1 three-band cut put seams through the type and was dropped
   in review), car-free, only him recognisable. **It plays on phones too** (this replaces "a still, not a film, on
   phones" for the hero): muted, inline, looped, after load, never under reduced motion, Save-Data or a 2G/3G connection, paused off screen,
   with a Pause button always there (WCAG 2.2.2). The poster is the film's first frame and the page's LCP. Over it: the
   stencil (clean, no wear: the hero no longer carries `#lpWorn`), who and what, his line, one primary (Ride with me,
-  `#heroRide`, the date on a rose plate) and one quiet link, "Find a group ride" (the approved direction; "Read the last
-  ride" lives in `#road`). The scrim rides with the words, not the screen (`.hero-in::before`): it eases in over the 200px
+  `#heroRide`, the date on a rose plate) and one quiet link, "Find a group ride" (the approved direction). "Read the last
+  ride" is in the strip right under the hero (one scroll) and in `#road`. The scrim rides with the words, not the screen (`.hero-in::before`): it eases in over the 200px
   above the stencil, .6 at its top, .72 at the foot — measured against every frame of both films at nine screen sizes
   (3:1 for the stencil and the intro, 4.5:1 for the line and the links): `python3 tools/hero-contrast.py` after any
-  recut or change to the hero's type or scrim (exits 1 on a fail). Nothing darkens the top of the frame: over the film the
-  menu button (under 900) and the nav links (900 and up) sit on the Pause button's small dark ground. Over the film the header shows only the menu (and the nav
+  recut or change to the hero's type or scrim (exits 1 on a fail). Over the film the header is one flat bar on bruise at .66 with a
+  hairline (no gradient lid, no floating boxes); at 900 and up the mark sits at its left, plaster with the powder bar. Over the film the header shows only the menu (and the nav
   links at ≥900); the mark and the header's Ride with me come back once the film has scrolled under it.
 - **Two textures, small:** a fine asphalt aggregate (`img/home/asphalt-2.webp`, a 2x tile, opacity .24) on the two dark
   rooms only (`#road` and `#sign`), never on a photo; a worn lane-line dash at the start of a grid column
@@ -836,9 +837,9 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
   homepage it's a crisp 4:5 picture with a round plaster play button on the poster and a
   play/pause line under it (Robert: the feathered version "looks unfinished"). `home-film.mp4` is unused. Recut with `ffmpeg` (CRF ~30,
   `+faststart`, no audio). Social video cuts never go in git.
-  Oct 26, 2026 (the editorial homepage): the homepage's film is the hero, `hero-phone-4` / `hero-wide-4`, cut by
+  Oct 26, 2026 (the editorial homepage): the homepage's film is the hero, `hero-phone-5` / `hero-wide-5`, cut by
   `tools/hero-film.py` from four clean shots of road-film-2 (his face first; the mint shot from 0.40 s, the bike and
-  tunnel shots out after the brand gate's second read); the reel player is off the homepage. Every
+  tunnel shots out after the brand gate's second read; the dawn road only in the wide film's narrow panel); the reel player is off the homepage. Every
   shot was looked at for vehicles. **road-film-2 itself is not car-free**: the brand gate found a car at the far end of its
   road shot (8.25–9.55 s) and a parked vehicle in its sun shot (11.05–11.6 s), and couldn't clear a shape under the river
   shot (4.15–5.45 s); none of the three is in the hero. Recut it before it goes on any page again. His three-band reel

@@ -30,9 +30,9 @@
 
 /* lane paint: one worn dash at the start of a grid column, so the paint lines up with what it marks (the strip's three
    numbers, the sign); smeared rose on light, powder on dark */
-.strip-cell::before,.sign-in::before{content:"";display:block;width:min(100%,208px);height:10px;background:url(/img/home/dash-rose-1.svg) 0 0/100% 100% no-repeat}
+.strip-cell::before,.sign-in::before{content:"";display:block;width:136px;height:8px;background:url(/img/home/dash-rose-1.svg) 0 0/100% 100% no-repeat}
 .sign-in::before{background-image:url(/img/home/dash-powder-1.svg)}
-@media (min-width:1024px){.strip-cell::before,.sign-in::before{width:min(100%,272px);height:13px}}
+@media (min-width:1024px){.strip-cell::before,.sign-in::before{width:232px;height:11px}}
 
 /* the two dark rooms: asphalt, felt more than seen */
 .miles,.sign{position:relative;isolation:isolate;background-color:var(--tar);color:var(--paper);--ring:var(--paper)}
@@ -53,8 +53,8 @@
 /* the measured scrim (python3 tools/hero-contrast.py: every frame of both films at nine screen sizes): the words need .52
    behind the stencil and .62 behind the small type on the brightest frame (3:1 large, 4.5:1 small, 95th-percentile
    background). So the scrim rides with the words, not the screen: it eases in over the 200px above the stencil, is .6 at
-   the stencil's top and .72 at the foot, whatever the screen's height. Nothing darkens the top of the frame: the menu
-   button and the nav links carry their own small ground, like the Pause button, so the sky stays clear. */
+   the stencil's top and .72 at the foot, whatever the screen's height. The header over the film is a flat bar (at the
+   foot of this sheet), not a gradient. */
 .hero-scrim{position:absolute;inset:0}
 .hero-in{position:relative;display:flex;flex-direction:column;align-items:flex-start;padding-top:calc(var(--nav-h) + 40px);padding-bottom:calc(env(safe-area-inset-bottom,0px) + 24px)}
 .hero-in::before{content:"";position:absolute;z-index:-1;pointer-events:none;left:-100vw;right:-100vw;top:calc(var(--nav-h) + 40px - 200px);bottom:0;
@@ -129,7 +129,8 @@
 .strip-n{font-weight:900;font-size:clamp(2.5rem,1.6rem + 3.2vw,4.75rem);line-height:.88;letter-spacing:-.045em;font-variant-numeric:lining-nums tabular-nums}
 .strip-n b{font-weight:inherit}
 .strip-l{max-width:30ch;font-size:var(--fs-small);line-height:1.4;color:var(--mute)}
-.strip-l b{color:var(--asphalt);font-weight:800}
+.strip-l b{color:var(--asphalt);font-weight:700}
+.strip-more{margin-top:var(--s1)}
 .strip-l a{color:var(--asphalt);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 a.strip-cell .strip-l{color:var(--asphalt);font-weight:700}
 a.strip-cell .strip-l::after{content:"\2192";display:inline-block;margin-left:.3em;font-weight:400;transition:transform var(--t-move) var(--ease)}
@@ -214,9 +215,8 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .today-film-len{font:var(--label);color:var(--mute)}
 @media (max-width:899px){
   .today-ph{margin-inline:calc(-1 * var(--gut))}
-  /* the film at 62% with its Play line beside it, so the space next to it is the caption, not a hole */
-  .today-film{display:grid;grid-template-columns:minmax(0,62%) minmax(0,1fr);column-gap:var(--s2);align-items:end;width:auto;margin-inline:0}
-  .today-film-cap{flex-direction:column;align-items:flex-start;gap:2px;margin:0}
+  .today-film{width:auto;margin-inline:calc(-1 * var(--gut))}
+  .today-film-cap{padding-inline:var(--gut)}
 
   .today-words{display:contents}
   .today-ph{order:1}
@@ -227,6 +227,7 @@ a.strip-cell:focus-visible{outline-offset:6px}
   .today-words{grid-column:1 / span 4}
   .today-ph{grid-column:5 / -1}
   .today-film{width:min(100%,230px)}
+  .today-ph figcaption{display:flex;align-items:center;min-height:44px;margin-top:6px}
   .today-sign{--h:clamp(48px,5vw,76px)}
 }
 
@@ -234,7 +235,7 @@ a.strip-cell:focus-visible{outline-offset:6px}
    4. the miles: the 10,000, said once, and the last rides
    —————————————————————————————————————————————————————————— */
 .miles{padding-block:var(--sec);overflow:hidden}
-.miles-big{margin:0;font-weight:900;font-size:clamp(5.2rem,.6rem + 22.6vw,21rem);line-height:.78;letter-spacing:-.065em;color:var(--paper);white-space:nowrap}
+.miles-big{margin:0 0 0 -.055em;font-weight:900;font-size:clamp(5.2rem,.6rem + 22.6vw,21rem);line-height:.78;letter-spacing:-.065em;color:var(--paper);white-space:nowrap}
 .miles-sub{margin:var(--s3) 0 0;font-size:var(--fs-h3);font-weight:800;letter-spacing:-.02em}
 .miles-grid{display:grid;gap:var(--s5);margin-top:var(--s6)}
 .miles-k{color:var(--dust);margin-bottom:var(--s1)}
@@ -243,7 +244,7 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .log li{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"when mi" "bar bar";gap:10px 16px;padding:16px 0;border-bottom:1px solid var(--line-d)}
 .log .when{grid-area:when;min-height:2.65em;font:700 var(--fs-small)/1.3 var(--display);color:var(--dust)}
 .log .when b{display:block;margin-top:2px;font-size:var(--fs-body);font-weight:800;color:var(--paper)}
-.log .when:not(:has(b)){display:flex;align-items:flex-end;font-size:var(--fs-body);font-weight:800;color:var(--paper)}
+.log .when:not(:has(b))::after{content:"\2014";display:block;margin-top:2px;font-size:var(--fs-body);font-weight:800;color:var(--dust)}  /* a ride Strava calls "Morning Ride" has no name here (tally.js); the row keeps its shape */
 .log .when a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .log .mi{grid-area:mi;align-self:end;font-weight:900;font-size:var(--fs-h3);line-height:1;letter-spacing:-.02em}
 .log .mi small{margin-left:3px;font-size:.55em;font-weight:700;color:var(--dust);letter-spacing:0}
@@ -279,7 +280,7 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .yr-map{margin:0}
 .yr-map-in{position:relative}
 .yr-map-svg{display:block;width:100%;height:auto}
-.mp-dot{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--asphalt);color:var(--paper);font:800 .8125rem/1 var(--display);pointer-events:none}
+.mp-dot{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--asphalt);color:var(--paper);font:800 .875rem/1 var(--display);pointer-events:none}
 .mp-dot--soft{background:var(--paper);color:var(--mute);box-shadow:inset 0 0 0 2px var(--mute)}
 .yr-key{display:flex;align-items:center;gap:8px;margin:0;font:var(--label);color:var(--mute)}
 .yr-key i{width:10px;height:10px;background:var(--asphalt)}
@@ -432,13 +433,15 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .home .nav{margin-bottom:calc(-1 * var(--nav-h));transition:background-color var(--t-open) var(--ease),color var(--t-open) var(--ease),border-color var(--t-open) var(--ease)}
 /* clear over the film (home.js sets data-solid once the film has scrolled under it); solid without JS. Over the film the
    header shows only the menu: the hero carries the mark and Ride with me, so nothing is said twice */
-.js .home .nav[data-solid="false"]{background:transparent;border-bottom-color:transparent;color:var(--paper);-webkit-backdrop-filter:none;backdrop-filter:none;--ring:var(--paper)}
+.js .home .nav[data-solid="false"]{color:var(--paper);-webkit-backdrop-filter:none;backdrop-filter:none;--ring:var(--paper)}
 .home .nav .brand,.home .nav .btn--sm{transition:opacity var(--t-open) var(--ease),visibility 0s linear 0s}
-.js .home .nav[data-solid="false"] .brand,.js .home .nav[data-solid="false"] .btn--sm{opacity:0;visibility:hidden;transition:opacity var(--t-open) var(--ease),visibility 0s linear var(--t-open)}
-/* over the film, the menu button (under 900) and the nav links (900 and up) get the Pause button's ground, so they read on
-   any sky (the links need .62 on the brightest frame: tools/hero-contrast.py) */
-.js .home .nav[data-solid="false"] .menu-btn{width:48px;height:48px;margin-right:0;background:rgba(20,18,24,.55);border:1px solid rgba(239,237,234,.45)}
-.js .home .nav[data-solid="false"] .nav-links{align-items:center;min-height:48px;padding:0 20px;background:rgba(20,18,24,.66);border:1px solid rgba(239,237,234,.32)}
+.js .home .nav[data-solid="false"] .btn--sm{opacity:0;visibility:hidden;transition:opacity var(--t-open) var(--ease),visibility 0s linear var(--t-open)}
+@media (max-width:899px){.js .home .nav[data-solid="false"] .brand{opacity:0;visibility:hidden;transition:opacity var(--t-open) var(--ease),visibility 0s linear var(--t-open)}}
+/* over the film the header is one flat bar on bruise at .66, a plaster hairline under it: the nav links need .62 on the
+   brightest frame (tools/hero-contrast.py). At 900 and up the mark sits at its left as on every page */
+.js .home .nav[data-solid="false"]{background:rgba(20,18,24,.66);border-bottom-color:rgba(239,237,234,.18)}
+.js .home .nav[data-solid="false"] .brand .brand-mark{color:var(--paper)}       /* the logo rule for dark grounds: plaster stencil, powder bar */
+.js .home .nav[data-solid="false"] .brand-mark .lp-bar{fill:var(--creosote-lift)}
 /* the stencil's clip lives in the header's mark; a hidden header must not hide every CYCLE FOR on the page with it */
 .home #lpRow rect{visibility:visible}
 /* the first screen's Ride with me is the hero's; the header's comes back at 900, as a line, once the film has gone */
