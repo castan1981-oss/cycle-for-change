@@ -394,6 +394,15 @@ the canal, Coronado. Free, no-drop, 18 and up, no sign-up. Streets and lit paths
 - **Photos:** nobody is recognisable unless they took a "Photos OK" sticker at the start, and the ride never posts who
   came (the page says why: the 1964 raid at 915 N 1st St, when the paper printed the names). §10 holds.
 - No form, no RSVP, no list of names. Questions come by Instagram DM.
+- **The poster** (Oct 27, 2026): `#poster` on the page, after the basics — the words first on a phone, the poster beside them
+  on desktop with a hairline edge (it's bruise on bruise), "Save the poster" plus the Story size and the 8.5 × 11 print PDF.
+  One poster, three sizes, all from `python3 tools/fruitloop-poster.py <photo> <N>`: it lifts the lockup out of this page's
+  h1 (never redrawn), sets everything in Overpass on flat bruise with the muted crosswalk bars, and keeps words off the
+  photo. Robert made a ChatGPT flyer first; the brand review panel (all ten, Oct 27) kept its words and its photo idea and
+  rebuilt the rest, because the AI had redrawn the logo (trans bands on the first O, a rainbow chevron with no black or
+  brown), chalked everything, added a desert-skyline doodle and re-rendered his photo. Never put an AI-redrawn lockup or an
+  AI-re-rendered photo of Robert on the site. The kicker everywhere is "A queer night ride through Phoenix history"
+  (his flyer's line; the page said "…in Phoenix" until Oct 27).
 
 ### Today I rode for (`#today` on the homepage, Oct 12, 2026)
 Every ride Robert says who he rode for that day. `data/today.json` (date, `for` = the plate, `line` = his words,
@@ -937,3 +946,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-25 — The year at a glance on `/events/2027/riding/` (`yearPoster()` in build-calendar.js, `.cal-year` in calendar.css): the night poster from the "The 2027 calendar" canvas (https://claude.ai/artifact/QmWdhNccLAoKJNEAaYms5S — Robert: "the first one") above the rows: twelve month grids on bruise, every day he rides a powder-rose square, projected dates outlined, each ride a link that opens its row; `CSS_V` 50. The canvas's lime poster stays a canvas thing.
 - 2026-10-26 — The list-page paragraph: "About these N rides" on all 907 hub, facet, day, state and all pages, written from each page's own rides (days, first and last start, after-work rides, no-drop, beginners, who they're for, bikes, how often, the checked window), folded under the picks.
 - 2026-10-26 — `/rides/critical-mass/`: every Critical Mass we list (36 in 35 cities, 7 countries) by country with its next date, a sourced "What Critical Mass is", linked from all 36 ride pages; `/find-a-ride/`'s Ride with me tile no longer says "six".
+- 2026-10-27 — The Fruit Loop poster: Robert's ChatGPT flyer through the brand review panel, rebuilt from the page's own lockup and type (`tools/fruitloop-poster.py`: feed, Story, 8.5 × 11 PDF with the `/fl` QR), on `/fruitloop/#poster`; the page kicker is now "A queer night ride through Phoenix history".

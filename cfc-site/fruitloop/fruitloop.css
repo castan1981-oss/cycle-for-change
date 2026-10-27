@@ -128,4 +128,19 @@ body.fl-page{background:var(--asphalt);color:var(--bone)}
 .fl-plate--stop::after{inset:0}
 .fl-plate--stop:hover,.fl-plate--stop.is-on{background:var(--creosote-lift)}
 .fl-stop--stop .fl-stop-n{background:var(--paper)}
+
+/* —— the poster (Oct 27, 2026): the ride's poster as a thing to save and pass on. It's bruise on bruise, so it gets
+   the page's hairline as its edge; the words come first on a phone so it never reads as a second hero —— */
+.fl-poster{border-top:1px solid var(--line-d);padding-block:var(--s5) var(--sec)}
+.fl-poster-in{display:grid;gap:var(--s4)}
+.fl-poster-copy p{margin:var(--s2) 0 0;max-width:34em;font-size:var(--fs-body);line-height:1.55;color:var(--bone)}
+.fl-poster-copy .fl-cta{margin-top:var(--s3)}
+.fl-poster-copy .fl-poster-more{display:flex;flex-direction:column;align-items:flex-start;gap:22px;margin-top:var(--s3)}   /* the links' 44px hit areas (.link::before) don't overlap */
+.fl-poster-fig{margin:0;width:min(100%,520px)}
+.fl-poster-fig img{display:block;width:100%;height:auto;border:1px solid var(--line-d)}
+@media (min-width:900px){
+  .fl-poster-in{grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:var(--s5);align-items:start}
+  .fl-poster-fig{grid-column:1;grid-row:1}
+  .fl-poster-copy{grid-column:2;grid-row:1;padding-top:var(--s2)}
+}
 }
