@@ -365,7 +365,7 @@ const ORGS_S = `<!-- —— 6. the orgs. One line each from the site's checked c
     <p class="orgs-door">You don&rsquo;t have to be queer to ride with me. The rides raise money for <span class="nowrap">queer-serving</span> orgs. That&rsquo;s the point.</p>
     <div class="orgs-help">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a class="nowrap" href="tel:18664887386">1-866-488-7386</a> or text START to <span class="nowrap">678-678</span></span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <span class="nowrap"><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span> or text START to <span class="nowrap">678-678</span></span>
       <a class="link" href="/resources/">Help lines, by age</a>
     </div>
   </div>

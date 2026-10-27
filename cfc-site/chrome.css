@@ -699,6 +699,7 @@ html:not(:has(.ridebar.is-on)){scroll-padding-bottom:0}
 .menu-foot a::before,.foot-crisis a::before{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;margin-top:-22px}
 .menu-foot a b,.foot-crisis a b{color:inherit}
 .menu-foot a[href^="tel"],.foot-crisis a[href^="tel"]{white-space:nowrap}   /* the Trevor number never breaks at its hyphen (Oct 27, 2026) */
+.foot-tv{white-space:nowrap}   /* the Trevor Project's name and its number stay on one line (critic, Oct 27, 2026) */
 /* Oct 27, 2026: 988 and the Trevor number sat on lines 22px apart, so their 44px pads overlapped and a tap on 988 could
    call Trevor (the lab, at 360, 375 and 390). A tel link is an inline-block 44px tall: any line that carries a number is
    44px and the pads can't reach each other */
