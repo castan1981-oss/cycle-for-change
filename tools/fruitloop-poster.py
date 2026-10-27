@@ -5,7 +5,8 @@
 
 Writes cfc-site/fruitloop/poster-N.jpg/.webp/.avif (1080x1350, the feed post and the page's figure),
 story-N.jpg (1080x1920, words kept out of the top and bottom 230 px) and print-N.pdf (8.5 x 11 in, vector type,
-QR to /fl, the poster's short link). Bump N when anything changes and update the links in cfc-site/fruitloop/index.html:
+QR to /fl, the poster's short link). The photo should be his original export, at least 1100 x 1350 px, or the print
+comes out soft (it's placed about 3.7 x 4.5 in on the sheet). Bump N when anything changes and update the links in cfc-site/fruitloop/index.html:
 phones and Safari cache pictures hard.
 
 The rules (brand review panel, Oct 27, 2026, after a ChatGPT flyer redrew the logo wrong):
