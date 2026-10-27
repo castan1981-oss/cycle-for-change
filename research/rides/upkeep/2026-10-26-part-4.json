@@ -1,0 +1,78 @@
+[
+  {
+    "slug": "portland-me-gear-hub-thursday-group-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "The Gear Hub's events page (portlandgearhub.org/events) is a rolling calendar that only shows specific upcoming events. Neither the Oct 26 fetch nor the current listing shows a recurring Thursday group ride — the page shows a one-off FLINTA Coffee Ride (Sat Oct 24) and the Maine Gear Share Festival (Oct 17). No other source confirmed the Thursday ride in 2026."
+  },
+  {
+    "slug": "portland-or-ride-safe-pdx-thursdays",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-07-23",
+    "evidence": "Shift2Bikes event #24549 (July 23, 2026) shows the Ride Safe PDX Thursday ride meets at Unthank Park, 3920 N Kerby Ave, Portland OR 97227, at 6:00 pm (roll 6:30 pm); the ride is now described as a Sensory Ride led by neurodivergent organizers, with a slow pace (6–8 mph) and low-traffic routes (fetched Oct 26, 2026).",
+    "sources": ["https://shift2bikes.org/calendar/event-24549"],
+    "changes": {
+      "start_location": {
+        "name": "Unthank Park",
+        "address": "3920 N Kerby Ave, Portland, OR 97227"
+      },
+      "refresh": {
+        "method": "instagram",
+        "watch_url": "https://www.instagram.com/ridesafepdx/",
+        "notes": "Routes posted on Instagram @ridesafepdx before each ride; Shift2Bikes calendar lists individual events under 'Ride Safe PDX' or 'Sensory Ride'."
+      }
+    }
+  },
+  {
+    "slug": "roanoke-va-crank-sisters-social-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "roanokeoutside.com (watch URL) has returned 403 for four consecutive runs. Cardinal Bicycle's own group-rides page (cardinalbicycle.com) no longer lists a Crank Sisters ride at the Grandin Village location — their current Thursday offering is a 'Thursday Drop Bar Ride' at the Orange Ave shop. No other source confirmed the Crank Sisters ride in 2026. To re-check: call Cardinal Bicycle Grandin Village at (540) 900-5020, or search Instagram for 'Crank Sisters Roanoke'."
+  },
+  {
+    "slug": "salem-va-olde-salem-brewery-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "roanokeoutside.com (watch URL) has returned 403 for four consecutive runs. No other source confirmed the ride in 2026 — the Roanoke College cycling team's 2026 athletics page (roanokemaroons.com) mentioned only fall mountain bike races, not the Thursday road ride. To re-check: check Olde Salem Brewing Company's Facebook or Instagram page, or search for the Roanoke College Cycling Club on Strava."
+  },
+  {
+    "slug": "san-diego-ca-shewolves-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "The watch URL (San Diego Magazine article, updated July 2024) still describes Thursday rides at 7:15 pm from Bea Evenson Fountain, Balboa Park — but that article is 15 months old. No 2026 source confirmed the ride is still running. To re-check: visit @sd_shewolves on Instagram for current ride announcements."
+  },
+  {
+    "slug": "scarsdale-ny-dannys-cycles-sunday-road-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Danny's Cycles shop-rides page states the Scarsdale Road Ride 'meets at the Scarsdale every Sunday during the summer at 9 AM and rolling by 9:30 AM' — confirming the ride is seasonal, not year-round weekly (fetched Oct 26, 2026).",
+    "sources": ["https://www.dannyscycles.com/about/shop-rides-pg576.htm"],
+    "changes": {
+      "schedule": "Every Sunday in summer, 9:00 am, rolling by 9:30 am",
+      "season": "summer"
+    }
+  },
+  {
+    "slug": "st-petersburg-fl-critical-mass",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "The watch URL (visitstpeteclearwater.com) has returned 403 for five consecutive runs. The ilovetheburg.com organizer page for St. Pete Critical Mass currently shows 0 upcoming events. A standing recurring event listing on ilovetheburg.com describes 'last Friday of every month, meet 7 pm, ride out 7:30 pm at Williams Park fountain' but the most recent confirmed event found was January 2026, nine months ago. To re-check: check ilovetheburg.com for upcoming St. Pete Critical Mass events, email willeecat@gmail.com (the organizer contact on that page), or search for the ride on social media."
+  },
+  {
+    "slug": "tucson-az-tuesday-night-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Transit Cycles (transitcycles.com/events-1) lists 'The Tuesday Night Ride' as a current recurring ride in its community events section, describing it as 'a group of unaffiliated and independent cyclists that meet up every Tuesday night and go for a bike ride' (fetched Oct 26, 2026). The tnr.bike domain is currently offline (Wix 'ConnectYourDomain Error').",
+    "sources": ["https://www.transitcycles.com/events-1"],
+    "changes": {
+      "refresh": {
+        "method": "static-page",
+        "watch_url": "https://www.transitcycles.com/events-1",
+        "notes": "tnr.bike is offline as of Oct 2026; Transit Cycles events page lists TNR as a current recurring community ride."
+      }
+    }
+  }
+]

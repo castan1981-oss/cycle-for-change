@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "beaverton-or-ride-westside-post-happy-hour-casual-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Shift2Bikes lists the Post Happy Hour Casual Ride (Beaverton) for Mon Oct 26, 2026 at 7:00 pm from BGs Food Cartel, with future dates on every 2nd and 4th Monday through at least Sept 2027 (fetched Oct 26, 2026)."
+  },
+  {
+    "slug": "bellevue-wa-cascade-eastside-tours-evening-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Cascade Bicycle Club's free group rides search lists the Eastside Tours Evening Ride - Winter Location for Tuesday Oct 27, 2026 at 6:20–8:40 pm from Crossroads Park, Bellevue; no Thursday dates appear in the upcoming calendar (fetched Oct 26, 2026).",
+    "changes": {
+      "days": ["tue"],
+      "schedule": "Tuesdays at 6:20 pm (briefing, then roll out); winter location is the east parking lot of Crossroads Park. First ride of each month is burrito night."
+    }
+  },
+  {
+    "slug": "benbrook-tx-fwba-rusty-romp-benbrook-ymca",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "FWBA's homepage banner says 'Ride Start Times are Changing, Please Double Check' and lists Rusty Romp Tuesday Edition for Tue Oct 27 and Thursday Edition for Thu Oct 29, both at 9:00 AM from the Benbrook YMCA (fetched Oct 26, 2026).",
+    "changes": {
+      "schedule": "Tuesdays and Thursdays, 9:00 am, from the Benbrook YMCA. Arrive 30 minutes early.",
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00"
+    }
+  },
+  {
+    "slug": "bentonville-ar-femmes-gravel-monthly-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Femmes Gravel's events page lists Monthly Ride - November 2026 for Sat Nov 21, 2026, 9:00 AM–12:00 PM at Ari Bicycles in Bentonville; schedule unchanged (fetched Oct 26, 2026)."
+  },
+  {
+    "slug": "bentonville-ar-peel-compton-womens-monthly-social-mtb-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "Peel Compton's event pages return 403 or a JavaScript wall; four consecutive bot-wall hits since Oct 19, 2026. The next ride should be Tue Nov 10, 2026 at 5:30 pm at Coler Mountain Bike Preserve. Check peelcompton.org directly or call the Peel Compton Foundation."
+  },
+  {
+    "slug": "boise-id-cbr-tuesday-because-we-can-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-26",
+    "status_note": "CBR's calendar shows no rides after the Oct 24 End of Year Party; the club's site says its weekly rides run April through September.",
+    "evidence": "CBR's homepage shows 'No upcoming events' and the ride calendar's last Tuesday Because We Can Ride was Oct 6, 2026, followed by an End of Year Party on Oct 24; the club website says weekly rides run April through September (fetched Oct 26, 2026)."
+  },
+  {
+    "slug": "boise-id-lactic-acid-saturday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-24",
+    "evidence": "Lactic Acid Cycling's weekly ride info page states the Saturday ride rolls from Lulu's Pizza at 10:00 am October through April, and the Oct 24 announcement confirms A and B groups from Lulu's at 10:00 (fetched Oct 26, 2026)."
+  },
+  {
+    "slug": "boulder-co-bma-gurlz-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-26",
+    "status_since": "2026-10-01",
+    "status_note": "BMA's rides page says the season runs April through September; the Meetup feed shows only special events, no regular Tuesday Gurlz Rides until spring. Per BMA's page, the in-season start time is 6:00 pm, not the 5:00 pm in the schedule.",
+    "evidence": "BMA's group rides page confirms the season runs April through September; the Meetup ICS feed lists only a Halloween Ride (Oct 31 at 11 am) and Nite Rides, no regular Tuesday Gurlz Rides (fetched Oct 26, 2026)."
+  }
+]

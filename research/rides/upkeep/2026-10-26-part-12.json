@@ -1,0 +1,69 @@
+[
+  {
+    "slug": "braintree-ma-landrys-braintree-saturday-road-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-26",
+    "evidence": "Landry's group-rides page now reads 'Ended 10/10' next to the Braintree All Levels Road Ride listing; the ride description remains intact, consistent with the shop's spring/summer schedule (fetched Oct 26, 2026).",
+    "sources": ["https://www.landrys.com/pages/landrys-group-rides"],
+    "status_note": "Season ended Oct 10, 2026. Ride runs April through October on Landry's spring/summer schedule; contact the Braintree store to confirm the spring 2027 return date."
+  },
+  {
+    "slug": "brookfield-il-cycle-brookfield-first-friday-slow-roll",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-02",
+    "evidence": "Cycle Brookfield's events page lists First Friday Slow Roll Social Ride on May 1, Jun 5, Aug 7, Sep 4 and Oct 2, 2026 at 6:00 pm from The Compassion Factory, 9210 Broadway — matching the record exactly; the 2026 season is now over (fetched Oct 26, 2026).",
+    "sources": ["http://cyclebrookfield.com/events/"]
+  },
+  {
+    "slug": "buffalo-grove-il-arlington-heights-bicycle-club-bakery-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Arlington Heights Bicycle Club's ClubExpress calendar lists Bakery Ride on Tuesdays and Thursdays at 9:00 AM from Willow Stream Park through November 26, 2026; in November the calendar also adds a weather-dependent 'Show'n Go' format at 10:00 AM, with early-November rides running both times and late-November runs at 10:00 AM only (fetched Oct 26, 2026).",
+    "sources": ["https://www.cyclearlington.com/content.aspx?page_id=4001&club_id=660709&action=cira&vm=Future&sif=0"],
+    "changes": {
+      "season": "spring through late November",
+      "season_months": { "start": 4, "end": 11 },
+      "schedule": "Tuesdays and Thursdays, 9:00 am from Willow Stream Park through late October; a Show'n Go format at 10:00 am from November through at least late November, weather-dependent."
+    }
+  },
+  {
+    "slug": "cadillac-mi-nmmba-cadillac-pathway-no-drop-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "NMMBA's ClubExpress calendar lists the Cadillac Pathway No Drop Group Ride for Wed, Oct 28, 2026 at 6:30 PM from the Cadillac Pathway Trailhead, matching the record's day, time and start (fetched Oct 26, 2026).",
+    "sources": ["https://nmmba.net/content.aspx?page_id=4001&club_id=533979&action=cira&vm=Future&sif=0"]
+  },
+  {
+    "slug": "calgary-ca-slow-and-steady-hikers-friday-evening-bike-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "The watch_url event page (Oct 2, 2026) has passed; the Meetup group's ICS feed shows 10 upcoming events (Oct 26 onward) with no Friday Evening Bike Ride among them — all are hiking events. The Meetup upcoming-events page also returned no bike ride listings. No new event page found."
+  },
+  {
+    "slug": "cambridge-ma-crw-wednesday-wheelers",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "CRW's Google Calendar ICS feed lists Wednesday Wheelers on Oct 28, Nov 4, Dec 9 and Dec 16, 2026, all at 10:00 am EST, matching the record's day, time and frequency (fetched Oct 26, 2026).",
+    "sources": ["https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics"]
+  },
+  {
+    "slug": "cape-town-za-pedal-power-association-saturday-social-rides",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "PPA's social rides page shows the next ride on Oct 31, 2026 and states every Saturday from 06:30 at 9 Hill Park Lane, Mowbray, free and open to all, with the series running through Feb 21, 2027 — matching the record (fetched Oct 26, 2026).",
+    "sources": ["https://www.pedalpower.org.za/events/ppa-social-rides"]
+  },
+  {
+    "slug": "carlsbad-ca-swamis-friday-coffee-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Swami's event page lists Friday Coffee Ride on Oct 30, Nov 6, 13, 20, 27 and Dec 4, 2026 at 9:00 am from Gelson's Market - La Costa, matching the record's day, time, start and route (fetched Oct 26, 2026).",
+    "sources": ["https://swamis.org/events/event/friday-coffee-ride/"]
+  }
+]

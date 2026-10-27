@@ -1,0 +1,88 @@
+[
+  {
+    "slug": "scottsdale-az-cyclologic-saturday-group-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Cyclologic's shop rides page states the Saturday morning group ride, rolling at 6:30 am sharp, with C, B, A and Ride to the Max groups; copyright line reads 2026 (fetched Oct 26, 2026). The old Strava events from 2019–2020 triggered the flag but are not the freshness source.",
+    "sources": ["https://www.cyclologic.com/shoprides"]
+  },
+  {
+    "slug": "scottsdale-az-the-bike-lane-greenbelt-and-canal-rides",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-10",
+    "evidence": "The group's Meetup ICS feed lists a local Phoenix ride for Sat Oct 31, 2026 at 11:00 AM from Baskin-Robbins, Scottsdale (Arizona Canal to OHSO); the 2026–2027 season kick-off ran Oct 10, 2026 (fetched Oct 26, 2026). The schedule-text flag was the Oct 10 kick-off event's route description updating, not a day or time change to the series.",
+    "sources": ["https://www.meetup.com/the-bike-lane/events/ical/", "https://www.meetup.com/the-bike-lane/"],
+    "promote_feed": "https://www.meetup.com/the-bike-lane/events/ical/"
+  },
+  {
+    "slug": "scottsdale-az-triscottsdale-tuesday-flat-and-fast",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "TriScottsdale's group workouts page lists the Tuesday flat and fast ride at 5:35 am to 7:00 am from Village Tavern, 8787 N. Scottsdale, unchanged; the schedule-text flag was new workouts (Wednesday track, Thursday hills) appearing in the page text around the Tuesday entry (fetched Oct 26, 2026).",
+    "sources": ["https://triscottsdale.com/group-workouts"]
+  },
+  {
+    "slug": "sierra-vista-az-velovets-wednesday-saturday-rides",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "VeloVets' home page now states 'Our ride start time is 8:00 am, arrive in time to be ready to roll!' — up from 7:30 am; an earlier version of the page had announced 'Starting next Wednesday, 14 October, ride start time changes to 0800' (fetched Oct 26, 2026).",
+    "sources": ["https://velovetssierravistaaz.org/"],
+    "changes": {
+      "schedule": "Every Wednesday and Saturday morning, 8:00 am, from the Sierra Vista Golf Center at Pueblo del Sol parking lot. The club rides twice a week all year, with a coffee stop on each ride. Arrive in time to be ready to roll at 8:00.",
+      "time_local": "8:00 am",
+      "start_hhmm": "08:00"
+    }
+  },
+  {
+    "slug": "toronto-ca-batemans-thursday-mtb-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Bateman's group rides page shows 'MTB GROUP RIDES THURSDAYS 6:00PM AT TRAIL SHOP' and 'Group rides leave from Bateman's Trail Shop - 49 Laird Drive. at 6:00pm Thursday nights' with lights required; the schedule-text flag was a minor page reformat with identical content (fetched Oct 26, 2026).",
+    "sources": ["https://batemansbikeco.com/pages/batemans-group-rides-1"]
+  },
+  {
+    "slug": "tucson-az-bicycle-ranch-saturday-roundup",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-10",
+    "evidence": "Bicycle Ranch's group rides page now states 'starting at 7:00 AM Saturday morning As of October 10th, 2026' — up from 6:30 AM as of Sept 19, 2026; the page also describes A/B and B-minus groups, both at 56 miles (fetched Oct 26, 2026).",
+    "sources": ["https://www.bicycleranchtucson.com/articles/group-rides-pg68.htm"],
+    "changes": {
+      "schedule": "Every Saturday, 7:00 am. Main group about 56 miles at 18 to 22+ mph, with splits. A B-minus group runs the same distance at 17 to 19 mph. No set C group but all riders welcome.",
+      "time_local": "7:00 am",
+      "start_hhmm": "07:00",
+      "description": "The Saturday shop ride from Bicycle Ranch on Oracle Rd: about 56 miles of road. The A/B group rides at 18 to 22+ mph; the B-minus group at 17 to 19 mph. As of Oct 10, 2026 the ride starts at 7:00 am. The shop says all levels are welcome and there is no set C group."
+    }
+  },
+  {
+    "slug": "tucson-az-cactus-cycling-friday-saguaro-east-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-23",
+    "evidence": "Cactus Cycling Club's schedule page lists the Friday Saguaro East ride on Oct 30, Nov 6 and Nov 13, 2026 at 8:00 AM from La Herradura Mexican Grill — moved from 7:30 AM; the Oct 23, 2026 ride was the last confirmed past date before the time change took effect (fetched Oct 26, 2026).",
+    "sources": ["https://www.cactuscycling.org/Schedule-List"],
+    "changes": {
+      "schedule": "Every Friday, 8:00 am, from La Herradura Mexican Grill on Tanque Verde Rd. The club's schedule lists the ride on Oct 30, Nov 6 and Nov 13, 2026. Three rotating routes through Saguaro National Park East: 32 miles (Los Reyes), 34 miles (Bear Canyon) and 34 miles (Soldier Trail). Social after at LeBuzz.",
+      "time_local": "8:00 am",
+      "start_hhmm": "08:00"
+    }
+  },
+  {
+    "slug": "tucson-az-cactus-cycling-weekend-b-rides",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-25",
+    "evidence": "Cactus Cycling Club's schedule page lists weekend B rides on Oct 31 (8:00 AM, Vail), Nov 1 and Nov 8 (8:00 AM, Starbucks 22nd St) — the 7:30 AM start no longer appears for upcoming rides; a Colossal Cave ride ran Sun Oct 25, 2026 (the last confirmed past date) (fetched Oct 26, 2026).",
+    "sources": ["https://www.cactuscycling.org/Schedule-List"],
+    "changes": {
+      "schedule": "Every Saturday and Sunday, 8:00 am. The start place changes: see the club's schedule page each week for the current location. October–November 2026: rides from Vail, Starbucks on E 22nd St, Bruegger's Bagels and other starts.",
+      "time_local": "8:00 am",
+      "start_hhmm": "08:00"
+    }
+  }
+]
