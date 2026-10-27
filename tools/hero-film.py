@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cycle for Change: the homepage hero film (Oct 27, 2026, the editorial homepage, v9).
+"""Cycle for Change: the homepage hero film (Oct 27, 2026, the editorial homepage; phone 8, wide 9).
 
 Robert and Cadence approved a full-screen moving hero. Robert, on the staged v8: "the video needs to be changed".
 He then sent his own clean footage ("These are without words", Oct 27). This cuts the hero from two of those clips:
@@ -12,9 +12,16 @@ He then sent his own clean footage ("These are without words", Oct 27). This cut
 
   phone  608x1080  one frame: the rail-yard take, uncut, 4.5 s; frame 0 is his face (the poster). The critic's second
                    blind read found the road shot left "I'm Robert" over an empty street for a third of the loop
-  wide   1620x960  the wide panel the words sit in (the red-rock road, then the tunnel and the palms cropped low: the
-                   bike, his legs, the ground) and the tall one at the right: the rail-yard take, uncut, his face in
-                   frame 0. One face on the screen at a time. The gutter at 70% clears the nav.
+  wide   1620x960  the wide panel the words sit in (the red-rock road cropped to its lower part, then the tunnel, then
+                   half a second of the wheel on the warm road: 88 frames) and the tall one at the right: the rail-yard
+                   take, uncut, his face in frame 0. One face on the screen at a time. The gutter at 70% clears the nav.
+
+Wide 9 (the Cadence final pass, research/design/2026-10-27-cadence-final/photo.md): the camera tilts up through the
+road shot, so a fixed full-frame crop let the gate pillar at the roadside sink into the CYCLE | FOR gap under the
+stencil; the road now uses a static region of rows 580-1493 (`road_w`, the desk's fallback, not a tracked crop: nothing
+the gate could read as an effect). The palms shot is cut to its last half second (reel frames 322-336: the warm road,
+the tire's diagonal, the stem's shadow, no grass); the 1.3 s of grass and kerb is gone. The loop is 88 frames
+(road 48, tunnel 25, wheel 15); the tall panel is rail frames 54-141.
 
 The brand gate (research/brand/2026-10-27-home-v9.md) couldn't clear a dark shape in a house's arched opening across
 the street in the palms shot (reel 10.07-10.67 s, x 660-690, y 985-1000): the palms are cropped below y 1030, so the
@@ -25,11 +32,13 @@ Every frame of every shot used was looked at for vehicles and faces: no car, tru
 recognisable. Nothing is synthetic, nothing is graded and nothing is slowed down. Older cuts (v1-v8: road-film-2, the
 three-band test reel) are in git history; road-film-2 is not car-free (CLAUDE.md §10).
 
-  python3 tools/hero-film.py --rail ~/path/1789929494081.mov --hit ~/path/CFC-Reel-Hit-v3.mp4 [--out cfc-site/film] [--n 8]
+  python3 tools/hero-film.py --rail ~/path/1789929494081.mov --hit ~/path/CFC-Reel-Hit-v3.mp4 [--out cfc-site/film] [--n 8] [--wide-n 9]
 
-writes hero-phone-<n>.mp4/.webm and hero-wide-<n>.mp4/.webm (H.264 High + VP9, no audio, +faststart) and
-a poster for each (frame 0) as .jpg/.webp/.avif. Bump --n on any recut (phones and Safari cache /film/ for a week).
-His clips stay out of git (raw clips and social cuts never go in the repo); the outputs are committed.
+writes hero-phone-<n>.mp4/.webm and hero-wide-<wide-n>.mp4/.webm (H.264 High + VP9, no audio, +faststart) and
+a poster for each (frame 0) as .jpg/.webp/.avif. The two films carry their own numbers (the phone film didn't change
+for wide 9); bump the one you recut (phones and Safari cache /film/ for a week). Write to a scratch --out and copy
+over only the film that changed. His clips stay out of git (raw clips and social cuts never go in the repo); the
+outputs are committed.
 """
 import argparse, os, subprocess, sys, tempfile
 
@@ -38,7 +47,7 @@ FILM = os.path.join(ROOT, "cfc-site", "film")
 TAR = "0x141218"          # --tar, the gutter between frames
 
 FPS = 30
-L = {"phone": 135, "wide": 112}   # each film's loop, in frames at 30 fps (4.5 s, 3.73 s)
+L = {"phone": 135, "wide": 88}   # each film's loop, in frames at 30 fps (4.5 s, 2.93 s)
 
 # sources: (path, width, height). Both are Robert's own clips, passed on the command line.
 def sources(rail, hit):
@@ -60,6 +69,12 @@ for k in ("rail",):
     SHOTS[k + "_p"] = SHOTS[k][:3] + ((90, 250, 900, 1600),)
 # the wide panel's palms: only rows 1030 and down (the bike, his legs, the grass), never the far side of the street
 SHOTS["palms_w"] = SHOTS["palms"][:3] + ((0, 1030, 1080, 890),)
+# wide 9: the wide panel's road is a static region of the lower frame (rows 580-1493), so the ridge and the gate
+# pillar at the roadside stay above the stencil as the camera tilts up (the photo desk's fallback: a crop, no tracking)
+SHOTS["road_w"] = ("hit", 8.24, 9.86, (0, 580, 1080, 914))
+# wide 9: the last half second of the palms shot only (reel frames 322-336): the warm road, the tire's diagonal, the
+# stem's shadow; the same rows as palms_w, so the far side of the street is never in frame
+SHOTS["palms_t"] = ("hit", 10.74, 11.24, (0, 1030, 1080, 890))
 # the tall panel: the rail-yard take a little closer and left of centre, so at 1024x768 (where the panel's right third
 # is off screen) he's still whole
 SHOTS["rail_w"] = SHOTS["rail"][:3] + ((250, 180, 830, 1660),)
@@ -71,8 +86,8 @@ PHONE = [   # one frame; frame 0 is his face (the poster and the reduced-motion 
 ]
 WIDE = [    # the wide panel the words sit in, cut on its own clock; the tall one is the rail-yard take, uncut. Frame 0:
             # the red-rock road beside his face
-    (1134, 960, [("road", .5), ("tunnel", .9), ("palms_w", .5)]),   # the tunnel and the palms cropped low: the bike, his
-                                                                    # legs, the ground; one face on the screen at a time
+    (1134, 960, [("road_w", .5), ("tunnel", .9), ("palms_t", .5)]),  # the road's lower part (48), the tunnel cropped low
+                                                                     # (25), the wheel (15): one face on the screen at a time
     (480, 960, [("rail_w", .5)]),
 ]
 
@@ -176,7 +191,8 @@ def main():
     ap.add_argument("--rail", required=True, help="his rail-yard ride (1789929494081.mov)")
     ap.add_argument("--hit", required=True, help="his reel, CFC-Reel-Hit-v3.mp4")
     ap.add_argument("--out", default=FILM)
-    ap.add_argument("--n", type=int, default=8)
+    ap.add_argument("--n", type=int, default=8, help="the phone film's number (hero-phone-<n>)")
+    ap.add_argument("--wide-n", type=int, default=9, help="the wide film's number (hero-wide-<wide-n>); the two films carry their own")
     a = ap.parse_args()
     srcs = sources(os.path.abspath(os.path.expanduser(a.rail)), os.path.abspath(os.path.expanduser(a.hit)))
     used = {SHOTS[e[0]][0] for lanes in (PHONE, WIDE) for (_, _, lane) in lanes for e in lane}
@@ -191,7 +207,7 @@ def main():
         print("wide")
         m = build(WIDE, 6, 1620, 960, srcs, tmp, "wide")
         if WIDE_START: m = rotate(m, WIDE_START, L["wide"], tmp)
-        encode(m, a.out, f"hero-wide-{a.n}", 32, 46)
+        encode(m, a.out, f"hero-wide-{a.wide_n}", 32, 46)
 
 if __name__ == "__main__":
     main()

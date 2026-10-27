@@ -27,9 +27,9 @@
   <script>document.documentElement.className+=" js"</script>
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/avif" imagesrcset="/film/hero-phone-8.avif" media="(max-width: 759px), (max-aspect-ratio: 1/1)" fetchpriority="high">
-  <link rel="preload" as="image" type="image/avif" imagesrcset="/film/hero-wide-8.avif" media="(min-width: 760px) and (min-aspect-ratio: 1/1)" fetchpriority="high">
-  <link rel="stylesheet" href="/chrome.css?v=53">
-  <link rel="stylesheet" href="/home.css?v=53">
+  <link rel="preload" as="image" type="image/avif" imagesrcset="/film/hero-wide-9.avif" media="(min-width: 760px) and (min-aspect-ratio: 1/1)" fetchpriority="high">
+  <link rel="stylesheet" href="/chrome.css?v=54">
+  <link rel="stylesheet" href="/home.css?v=54">
 
   <script type="application/ld+json">
   {
@@ -55,6 +55,7 @@
     <symbol id="mkOrgs" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="8" r="2.2"/><circle cx="12" cy="6.5" r="2.2"/><circle cx="17.5" cy="8" r="2.2"/><path d="M2.5 19a4 4 0 0 1 8 0M8 19a4 4 0 0 1 8 0M13.5 19a4 4 0 0 1 8 0"/></g></symbol>
     <symbol id="mkGroup" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 21 8.6 3M20.5 21 15.4 3"/><path d="M12 3v2.2M12 8.2v2.2" opacity=".55"/></g><g fill="currentColor"><circle cx="9.6" cy="17.2" r="1.8"/><circle cx="14.4" cy="17.2" r="1.8"/><circle cx="12" cy="13.2" r="1.5"/></g></symbol>
     <symbol id="mkFinish" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V4M20 21V4"/><path d="M4 5h16v5H4z"/></g><g fill="currentColor"><rect x="4" y="5" width="4" height="2.5"/><rect x="12" y="5" width="4" height="2.5"/><rect x="8" y="7.5" width="4" height="2.5"/><rect x="16" y="7.5" width="4" height="2.5"/></g></symbol>
+    <symbol id="mkSearch" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></g></symbol>
   </defs>
 </svg>
 <a class="skip" href="#main">Skip to content</a>
@@ -118,20 +119,21 @@
 <main id="main">
 
 <!-- —— 1. the film. Robert's own footage, cut car-free (tools/hero-film.py): one frame on a phone, two panels on a wide
-     screen (the words sit inside the wide one, the gutter clear of the nav). One primary and one quiet link (CLAUDE.md §3). The poster is the film's first frame and the page's largest paint; /home.js
+     screen (the words sit inside the wide one, the gutter clear of the nav). One primary and two quiet links: Find a group ride, and Read the last ride
+     when there is one (his newest write-up, never the riding page; CLAUDE.md §3). The poster is the film's first frame and the page's largest paint; /home.js
      starts the film after load, never under reduced motion or Save-Data, and the button always stops it. —— -->
 <section class="hero" id="top" aria-labelledby="hero-h" data-film="off">
   <div class="hero-media">
     <picture class="hero-poster">
-      <source media="(min-width: 760px) and (min-aspect-ratio: 1/1)" type="image/avif" srcset="/film/hero-wide-8.avif">
-      <source media="(min-width: 760px) and (min-aspect-ratio: 1/1)" type="image/webp" srcset="/film/hero-wide-8.webp">
-      <source media="(min-width: 760px) and (min-aspect-ratio: 1/1)" srcset="/film/hero-wide-8.jpg">
+      <source media="(min-width: 760px) and (min-aspect-ratio: 1/1)" type="image/avif" srcset="/film/hero-wide-9.avif">
+      <source media="(min-width: 760px) and (min-aspect-ratio: 1/1)" type="image/webp" srcset="/film/hero-wide-9.webp">
+      <source media="(min-width: 760px) and (min-aspect-ratio: 1/1)" srcset="/film/hero-wide-9.jpg">
       <source type="image/avif" srcset="/film/hero-phone-8.avif">
       <source type="image/webp" srcset="/film/hero-phone-8.webp">
       <img src="/film/hero-phone-8.jpg" width="608" height="1080" alt="Robert riding at the camera in a yellow helmet and a pink print jersey, railroad tracks behind him." fetchpriority="high">
     </picture>
     <video class="hero-film" id="heroFilm" muted loop playsinline disablepictureinpicture preload="none" aria-hidden="true" tabindex="-1"
-      data-phone-mp4="/film/hero-phone-8.mp4" data-phone-webm="/film/hero-phone-8.webm" data-wide-mp4="/film/hero-wide-8.mp4" data-wide-webm="/film/hero-wide-8.webm" data-wide-q="(min-width: 760px) and (min-aspect-ratio: 1/1)"></video>
+      data-phone-mp4="/film/hero-phone-8.mp4" data-phone-webm="/film/hero-phone-8.webm" data-wide-mp4="/film/hero-wide-9.mp4" data-wide-webm="/film/hero-wide-9.webm" data-wide-q="(min-width: 760px) and (min-aspect-ratio: 1/1)"></video>
     <div class="hero-scrim" aria-hidden="true"></div>
   </div>
   <div class="wrap hero-in">
@@ -140,7 +142,7 @@
     <p class="hero-line">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</p>
     <div class="hero-acts">
       <a class="hero-ride" id="heroRide" href="/events/2027/riding/#tour-de-palm-springs" data-ride-next><span class="ridebar-d">Feb 6</span><span class="hero-ride-t"><span class="finder-t">Ride with me</span><span class="finder-s">Tour de Palm Springs, Palm Springs, CA</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
-      <p class="hero-links"><a class="link link--bone" href="/rides/">Find a group ride</a></p>
+      <p class="hero-links"><a class="link link--bone" href="/rides/">Find a group ride</a><a class="link link--bone" href="/rides/scottsdale-az-scottsdale-cycling-saturday-ride/#robert">Read the last ride</a></p>
     </div>
   </div>
   <button class="hero-pause" id="heroPause" type="button" hidden><svg class="hp-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg><svg class="hp-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><span class="hp-label">Pause the film</span></button>
@@ -171,7 +173,6 @@
       <h2 class="story-h" id="why-h">It always says cycling.</h2>
       <p class="story-lede">Cycling changed my life. I&rsquo;d like to say I&rsquo;m cycling for other people. I&rsquo;m really cycling for myself. I&rsquo;m cycling because it changed me. That&rsquo;s the story.</p>
       <p class="story-more">So the sign changes. What comes after the word is up to whoever&rsquo;s riding.</p>
-      <p class="plates"><span class="plate">me</span><span class="plate">one&middot;n&middot;ten</span><span class="plate">change</span></p>
     </div>
     <div class="story-photos">
       <figure class="ph story-ph story-ph--a ph--p"><picture><source type="image/avif" srcset="/img/ph/robert-boise-2.avif"><source type="image/webp" srcset="/img/ph/robert-boise-2.webp"><img src="/img/ph/robert-boise-2.jpg" alt="Robert standing with his bike on a bridge, sunglasses on, smiling." width="1080" height="1440" loading="lazy" decoding="async" style="object-position:50% 35%"></picture><figcaption>Boise, ID · May 2025</figcaption></figure>
@@ -180,34 +181,6 @@
   </div>
 </section>
 
-<!-- —— today: who I rode for (data/today.json) —— -->
-<section class="today" id="today" aria-labelledby="today-h">
-  <div class="wrap today-in">
-    <div class="today-words">
-      <p class="eyebrow">The ride on Monday, October 12.</p>
-      <h2 class="today-sign" id="today-h"><svg class="today-mark" viewBox="0 0 626 150" aria-hidden="true" focusable="false"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/><use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/></g></svg><span class="plate today-plate" aria-hidden="true">mental clarity</span><span class="sr">I rode for mental clarity</span></h2>
-      <p class="today-line">I rode for mental clarity. Every ride, I say who I’m riding for that day.</p>
-      <p class="today-ask"><a class="link" href="/cyclefor/">What do you cycle for? Say it on video</a></p>
-      <figure class="today-film" id="todayFig" data-playing="false">
-        <div class="today-film-frame">
-          <video id="todayVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/today-oct12-1.webp" width="720" height="1280" aria-label="Robert walks up to the LOVE mural in his kit and strikes a pose, hands on his hips.">
-            <source src="/film/today-oct12-1.webm" type="video/webm">
-            <source src="/film/today-oct12-1.mp4" type="video/mp4">
-          </video>
-          <button class="today-play" id="todayPlay" type="button" aria-label="Play, 3 seconds"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg></button>
-        </div>
-        <figcaption class="today-film-cap">
-          <button class="today-film-btn" id="todayBtn" type="button" data-playing="false"><svg class="rf-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><svg class="rf-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg><span id="todayBtnLabel">Play</span></button>
-          <span class="today-film-len">0:03</span>
-        </figcaption>
-      </figure>
-    </div>
-    <figure class="today-ph">
-      <picture><source type="image/avif" srcset="/img/today/oct12-gravel-1-800.avif 800w, /img/today/oct12-gravel-1.avif 1600w" sizes="(min-width: 1024px) 50vw, 100vw"><img src="/img/today/oct12-gravel-1.jpg" srcset="/img/today/oct12-gravel-1-800.jpg 800w, /img/today/oct12-gravel-1.jpg 1600w" sizes="(min-width: 1024px) 50vw, 100vw" width="1600" height="1200" alt="Robert grinning in a white kit and red glasses beside the LOVE mural, his bike against the wall. This morning’s route is painted on the gravel next to him, with CYCLE FOR change." loading="lazy" decoding="async"></picture>
-      <figcaption>Phoenix · Oct 2026</figcaption>
-    </figure>
-  </div>
-</section>
 <!-- —— 4. the miles. The 10,000 is the year, said once at this size; the training count lives in the strip, away from
      it. The log is the four last rides from Strava, each a painted stroke as long as the ride. —— -->
 <section class="miles" id="road" aria-labelledby="road-h">
@@ -218,7 +191,7 @@
       <div class="miles-log">
         <p class="eyebrow miles-k">From the road</p>
         <h2 class="miles-h" id="road-h">The last rides.</h2>
-        <script type="application/json" id="tallyData">{"miles":4273.1,"rides":111,"updated":"2026-10-27T08:53:09.817Z","profileUrl":"https://www.strava.com/athletes/22899089","recent":[{"date":"2026-10-25T13:31:30Z","miles":61.7,"title":"Somo sunday"},{"date":"2026-10-24T12:06:11Z","miles":77.8,"title":"Adero"},{"date":"2026-10-23T13:11:35Z","miles":42.4,"title":"Fridays"},{"date":"2026-10-22T22:48:32Z","miles":31.7,"title":"Afternoon Ride"},{"date":"2026-10-20T13:24:00Z","miles":39.7,"title":"Morning Ride"},{"date":"2026-10-19T13:25:37Z","miles":67.6,"title":"Monday monday"}],"chart":[[0,35.2],[9,345.7],[18,717.6],[27,1177.6],[36,1528.7],[45,1836.7],[55,2186.6],[64,2540.9],[73,2925.7],[82,3303.5],[91,3806.7],[100,4273.1]]}</script>
+        <script type="application/json" id="tallyData">{"miles":4273.1,"rides":111,"updated":"2026-10-27T17:37:48.181Z","profileUrl":"https://www.strava.com/athletes/22899089","recent":[{"date":"2026-10-25T13:31:30Z","miles":61.7,"title":"Somo sunday"},{"date":"2026-10-24T12:06:11Z","miles":77.8,"title":"Adero"},{"date":"2026-10-23T13:11:35Z","miles":42.4,"title":"Fridays"},{"date":"2026-10-22T22:48:32Z","miles":31.7,"title":"Afternoon Ride"},{"date":"2026-10-20T13:24:00Z","miles":39.7,"title":"Morning Ride"},{"date":"2026-10-19T13:25:37Z","miles":67.6,"title":"Monday monday"}],"chart":[[0,35.2],[9,345.7],[18,717.6],[27,1177.6],[36,1528.7],[45,1836.7],[55,2186.6],[64,2540.9],[73,2925.7],[82,3303.5],[91,3806.7],[100,4273.1]]}</script>
       <ol class="log" id="log" data-max="4" aria-live="polite" data-note-date="2026-10-10" data-note-href="/rides/scottsdale-az-scottsdale-cycling-saturday-ride/#robert">
         <li><span class="when">Sun Oct 25<b>Somo sunday</b></span><span class="bar-mi" style="--w:.79"></span><span class="mi num">61.7<small>mi</small></span></li>
         <li><span class="when">Sat Oct 24<b>Adero</b></span><span class="bar-mi" style="--w:1"></span><span class="mi num">77.8<small>mi</small></span></li>
@@ -227,9 +200,71 @@
         </ol>
       </div>
       <div class="miles-side">
-        <p class="miles-rides"><b class="num" id="roadRides">111</b> <span data-season="training">rides since June 1.</span><span data-season="2027" hidden>rides in 2027.</span></p>
+        <p class="miles-rides"><b class="num" id="roadRides">111</b> <span class="miles-rides-l"><span data-season="training">rides since June 1.</span><span data-season="2027" hidden>rides in 2027.</span></span></p>
         <p class="miles-acts"><a class="link link--bone" href="/rides/scottsdale-az-scottsdale-cycling-saturday-ride/#robert">Read the last ride</a><a class="link link--bone" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Follow on Strava</a></p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- —— today: who I rode for (data/today.json). The lead (the day, the sign), what he said (his line, the ask), then his
+     pictures: the photo and the film side by side, a place · month line under each. —— -->
+<section class="today" id="today" aria-labelledby="today-h">
+  <div class="wrap today-in">
+    <div class="today-lead">
+      <p class="eyebrow">The ride on Monday, October 12.</p>
+      <h2 class="today-sign" id="today-h"><svg class="today-mark" viewBox="0 0 626 150" aria-hidden="true" focusable="false"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/><use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/></g></svg><span class="plate today-plate" aria-hidden="true">mental clarity</span><span class="sr">I rode for mental clarity</span></h2>
+    </div>
+    <div class="today-say">
+      <p class="today-line">I rode for mental clarity. Every ride, I say who I’m riding for that day.</p>
+      <p class="today-ask"><a class="link" href="/cyclefor/">What do you cycle for? Say it on video</a></p>
+    </div>
+    <figure class="today-ph">
+      <picture><source type="image/avif" srcset="/img/today/oct12-gravel-1-800.avif 800w, /img/today/oct12-gravel-1.avif 1600w" sizes="(min-width: 1024px) 50vw, 100vw"><img src="/img/today/oct12-gravel-1.jpg" srcset="/img/today/oct12-gravel-1-800.jpg 800w, /img/today/oct12-gravel-1.jpg 1600w" sizes="(min-width: 1024px) 50vw, 100vw" width="1600" height="1200" alt="Robert grinning in a white kit and red glasses beside the LOVE mural, his bike against the wall. This morning’s route is painted on the gravel next to him, with CYCLE FOR change." loading="lazy" decoding="async"></picture>
+      <figcaption>Phoenix · Oct 2026</figcaption>
+    </figure>
+    <figure class="today-film" id="todayFig" data-playing="false">
+      <div class="today-film-frame">
+        <video id="todayVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/today-oct12-1.webp" width="720" height="1280" aria-label="Robert walks up to the LOVE mural in his kit and strikes a pose, hands on his hips.">
+          <source src="/film/today-oct12-1.webm" type="video/webm">
+          <source src="/film/today-oct12-1.mp4" type="video/mp4">
+        </video>
+        <button class="today-play" id="todayPlay" type="button" aria-label="Play, 3 seconds" data-seconds="3"><svg class="tp-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><svg class="tp-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>
+      </div>
+      <figcaption>Phoenix · Oct 2026</figcaption>
+    </figure>
+  </div>
+</section>
+<!-- —— 6. the orgs. One line each from the site's checked copy (research/events/2026-10-26-homepage-facts.md); the
+     money goes through their own pages. The help lines sit here because the orgs' work comes up here. —— -->
+<section class="orgs" id="orgs" aria-labelledby="orgs-h">
+  <div class="wrap">
+    <div class="orgs-head"><h2 class="orgs-h" id="orgs-h">The orgs I ride for.</h2><p class="orgs-lede">You sign up or give on their page. None of it comes through me.</p></div>
+    <div class="orgs-list">
+      <article class="org">
+        <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkPhx"/></svg>
+        <h3 class="org-h">one&middot;n&middot;ten</h3>
+        <p>Phoenix nonprofit for LGBTQ+ youth ages 11 to 24. Safe spaces, housing, leadership.</p>
+        <p class="org-acts"><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Give to one&middot;n&middot;ten</a></p>
+      </article>
+      <article class="org">
+        <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkOjai"/></svg>
+        <h3 class="org-h">Los Angeles LGBT Center</h3>
+        <p>Health, housing and advocacy for LGBTQ+ people.</p>
+        <p class="org-acts"><a class="link" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Give to the Center</a></p>
+      </article>
+      <article class="org">
+        <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkSF"/></svg>
+        <h3 class="org-h">San Francisco AIDS Foundation</h3>
+        <p>HIV, sexual health and <span class="nowrap">harm-reduction</span> services.</p>
+        <p class="org-acts"><a class="link" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Give to SFAF</a></p>
+      </article>
+    </div>
+    <p class="orgs-door">You don&rsquo;t have to be queer to ride with me. The rides raise money for <span class="nowrap">queer-serving</span> orgs. That&rsquo;s the point.</p>
+    <div class="orgs-help">
+      <span class="eyebrow">If it&rsquo;s now</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a class="nowrap" href="tel:18664887386">1-866-488-7386</a> or text START to <span class="nowrap">678-678</span></span>
+      <a class="link" href="/resources/">Help lines, by age</a>
     </div>
   </div>
 </section>
@@ -278,40 +313,6 @@
     </div>
   </div>
 </section>
-<!-- —— 6. the orgs. One line each from the site's checked copy (research/events/2026-10-26-homepage-facts.md); the
-     money goes through their own pages. The help lines sit here because the orgs' work comes up here. —— -->
-<section class="orgs" id="orgs" aria-labelledby="orgs-h">
-  <div class="wrap">
-    <div class="orgs-head"><h2 class="orgs-h" id="orgs-h">The orgs I ride for.</h2><p class="orgs-lede">You sign up or give on their page. None of it comes through me.</p></div>
-    <div class="orgs-list">
-      <article class="org">
-        <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkPhx"/></svg>
-        <h3 class="org-h">one&middot;n&middot;ten</h3>
-        <p>Phoenix nonprofit for LGBTQ+ youth ages 11 to 24. Safe spaces, housing, leadership.</p>
-        <p class="org-acts"><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Give to one&middot;n&middot;ten</a></p>
-      </article>
-      <article class="org">
-        <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkOjai"/></svg>
-        <h3 class="org-h">Los Angeles LGBT Center</h3>
-        <p>Health, housing and advocacy for LGBTQ+ people.</p>
-        <p class="org-acts"><a class="link" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Give to the Center</a></p>
-      </article>
-      <article class="org">
-        <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkSF"/></svg>
-        <h3 class="org-h">San Francisco AIDS Foundation</h3>
-        <p>HIV, sexual health and <span class="nowrap">harm-reduction</span> services.</p>
-        <p class="org-acts"><a class="link" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Give to SFAF</a></p>
-      </article>
-    </div>
-    <p class="orgs-door">You don&rsquo;t have to be queer to ride with me. The rides raise money for <span class="nowrap">queer-serving</span> orgs. That&rsquo;s the point.</p>
-    <div class="orgs-help">
-      <span class="eyebrow">If it&rsquo;s now</span>
-      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a class="nowrap" href="tel:18664887386">1-866-488-7386</a> or text START to <span class="nowrap">678-678</span></span>
-      <a class="link" href="/resources/">Help lines, by age</a>
-    </div>
-  </div>
-</section>
-
 <!-- —— ride with me: the org ride (Center Ride Out) —— -->
 <section class="ridewith" id="ride" aria-labelledby="ride-h">
   <div class="wrap ridewith-in">
@@ -320,7 +321,7 @@
       <p class="eyebrow">A Los Angeles LGBT Center fundraiser</p>
       <h2 class="ridewith-big" id="ride-h"><span class="nowrap">April 23&ndash;25,</span> I cycle for <span class="plate plate--big">the Center</span></h2>
       <p>Center Ride Out. Los Angeles to Ojai, camp, then back along the coast to a finish by the ocean.</p>
-      <dl class="facts-dl">
+      <dl class="facts">
         <div><dt>3 days</dt><dd>200+ miles, <span class="nowrap">Apr 23&ndash;25, 2027</span></dd></div>
         <div><dt>1 day</dt><dd>Day 2 only</dd></div>
         <div><dt>Money</dt><dd>You raise it on the Center&rsquo;s page</dd></div>
@@ -342,7 +343,7 @@
     <div class="find-tools">
       <form class="find" action="/rides/" method="get" role="search">
         <label class="find-lab" for="q">Your town or a ride name</label>
-        <div class="find-row"><input class="find-field" id="q" name="q" type="search" autocomplete="off"><button class="btn" type="submit">Search rides</button></div>
+        <div class="find-row"><svg class="find-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkSearch"/></svg><input class="find-field" id="q" name="q" type="search" autocomplete="off"><button class="btn" type="submit">Search rides</button></div>
       </form>
       <p class="find-links"><a class="link" href="/rides/no-drop/">No-drop rides</a><a class="link" href="/rides/lgbtq/">Queer rides</a><a class="link" href="/tonight/">Tonight</a></p>
     </div>
@@ -434,6 +435,6 @@
 </footer>
 
 
-<script src="/home.js?v=53" defer></script>
+<script src="/home.js?v=54" defer></script>
 </body>
 </html>

@@ -1,15 +1,20 @@
-/* Cycle for Change — the homepage (the editorial homepage, Oct 26, 2026). Markup: scripts/build-home.js.
-   Loaded after /chrome.css, which brings the tokens, the type, the frame (nav, menu, footer, the Ride with me bar)
-   and the system (button, link, field, focus). This sheet adds the page in @layer section, then, unlayered at the
-   foot, the frame's homepage states (the nav clear over the film, the hero's date plate).
+/* Cycle for Change — the homepage (the editorial homepage, Oct 26, 2026; the Cadence final pass, Oct 27). Markup:
+   scripts/build-home.js. Loaded after /chrome.css, which brings the tokens, the type, the frame (nav, menu, footer, the
+   Ride with me bar) and the system (button, link, field, focus). This sheet adds the page in @layer section, then,
+   unlayered at the foot, the frame's homepage states (the nav flat over the film and on phones, the hero's date plate,
+   the bar off at 900, the find field's inset for its mark, the film disc's ring).
 
    The approved direction (Robert and Cadence, Oct 26): MAAP's fashion-editorial energy and ASSOS's precision,
    softer, original to Cycle for Change, on the house's own mark, palette and type. After the Wrenches' review
-   (research/design/2026-10-26-editorial-home/) it keeps two textures, both small:
-     asphalt     a fine aggregate (/img/home/asphalt-1.webp), faint, on the two dark rooms only, never on a photo
-     lane paint  road-marking dashes (/img/home/lane-*-2.svg), drawn shapes with worn ends, rose as wet paint, twice
+   (research/design/2026-10-26-editorial-home/, then 2026-10-27-cadence-final/) it keeps two textures, both small:
+     asphalt     a fine aggregate (/img/home/asphalt-2.webp), faint, on the two dark rooms only, never on a photo
+     lane paint  one worn dash (/img/home/dash-rose-1.svg) at the head of each of the strip's three numbers, and the
+                 stroke in the log, as long as the ride, drawn with square clean ends: rose as wet paint, on the column
+                 of what it marks. Nowhere else: the sign's dash came off Oct 27 (two rose bars in one lockup).
    Rose is the blank, the plates, the lane paint and the log strokes; nothing else. Square corners, hairlines, no
-   shadows, no pills, sentence-case labels, buttons alone in caps, one primary per screen, a fact said once. */
+   shadows, no pills, sentence-case labels, buttons alone in caps, one primary per screen, a fact said once.
+   The rooms, in order (Oct 27): the film · concrete (the strip, the story) · tar (the 10,000) · concrete (today) ·
+   patina (the orgs) · concrete (the 2027 rides) · plaster (Center Ride Out, find, read) · tar (the sign). */
 
 @layer section{
 
@@ -28,11 +33,10 @@
 /* one section opener size, 800 (900 is kept for the 10,000, the plates and the date numerals) */
 .story-h,.year-h,.orgs-h,.find-h{margin:0;font-size:clamp(2.5rem,1.35rem + 4.6vw,5.75rem);font-weight:800;line-height:.92;letter-spacing:-.035em;text-wrap:balance}
 
-/* lane paint: one worn dash at the start of a grid column, so the paint lines up with what it marks (the strip's three
-   numbers, the sign); smeared rose on light, powder on dark */
-.strip-cell::before,.sign-in::before{content:"";display:block;width:136px;height:8px;background:url(/img/home/dash-rose-1.svg) 0 0/100% 100% no-repeat}
-.sign-in::before{background-image:url(/img/home/dash-powder-1.svg)}
-@media (min-width:1024px){.strip-cell::before,.sign-in::before{width:232px;height:11px}}
+/* lane paint: one worn dash at the head of each of the strip's three numbers, so the paint lines up with what it marks;
+   smeared rose on concrete */
+.strip-cell::before{content:"";display:block;width:136px;height:8px;background:url(/img/home/dash-rose-1.svg) 0 0/100% 100% no-repeat}
+@media (min-width:1024px){.strip-cell::before{width:232px;height:11px}}
 
 /* the two dark rooms: asphalt, felt more than seen */
 .miles,.sign{position:relative;isolation:isolate;background-color:var(--tar);color:var(--paper);--ring:var(--paper)}
@@ -82,8 +86,13 @@
   .hero-ride:hover .ridebar-go{transform:translateX(4px)}
 }
 .hero-ride:active{transition-duration:0s;background:var(--bone-2)}
-.hero-links{display:flex;flex-wrap:wrap;gap:4px 28px;margin:0;max-width:calc(100% - 60px)}
-.hero-links .link{min-height:44px}
+/* the two quiet links (Find a group ride, Read the last ride; Oct 27). Under 760 a column of 44px rows, left-aligned: each
+   link's own pad (.link::before, 10px over and under the 27px line) meets the next one's across the 20px gap, so no two
+   pads overlap (the 988 lesson); the block is the two rows' 88px (ux.md's table, the stencil under his chin at 360×640).
+   From 760 one row, 28px apart. No min-height on the link: it pushed the hairline 15px under the words. The row keeps
+   60px clear of the Pause button. */
+.hero-links{display:flex;flex-direction:column;align-items:flex-start;gap:20px 28px;margin:0;padding-block:7px;max-width:calc(100% - 60px)}
+.hero-links .link:active{color:var(--dust)}   /* the press, at once (.link has no transition) */
 /* the stop: always there while the film can play (WCAG 2.2.2), at the foot, right */
 .hero-pause{position:absolute;z-index:2;right:max(var(--gut),calc((100vw - var(--maxw)) / 2 + var(--gut)));bottom:calc(env(safe-area-inset-bottom,0px) + 24px);
   display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:48px;min-height:48px;padding:0 14px;
@@ -94,18 +103,21 @@
 .hero[data-playing="true"] .hp-play,.hero:not([data-playing="true"]) .hp-pause{display:none}
 @media (hover:hover){.hero-pause:hover{background:rgba(20,18,24,.85)}}
 .hero-pause:active{transition-duration:0s;background:var(--tar)}
+/* under 700px tall the block reclaims the second link's line, so the stencil stays under his chin at 360, 375, 390 and
+   430 (ux.md §1, measured) */
 @media (max-width:759px) and (max-height:700px){
-  .hero-mark--stack{width:min(38vw,176px)}
-  .hero-intro{margin-top:var(--s2)}
-  .hero-acts{margin-top:var(--s3)}
+  .hero-mark--stack{width:min(32vw,150px)}
+  .hero-intro,.hero-line{margin-top:var(--s1)}
+  .hero-acts{margin-top:var(--s2);gap:8px}
 }
 @media (min-width:760px){
   .hero-mark--stack{display:none}
   .hero-mark--line{display:block;width:clamp(400px,44vw,720px);max-width:100%}
   .hero-intro{margin-top:var(--s4)}
   .hero-ride{width:auto;min-width:380px}
-  .hero-links{max-width:none}
+  .hero-links{flex-direction:row;flex-wrap:wrap;max-width:none}
   .hero-pause .hp-label{position:static;width:auto;height:auto;clip-path:none}
+  .hero-pause{min-width:148px;justify-content:flex-start}   /* "Pause the film" and "Play the film" at one width: no shift when the label swaps */
   .hero-in{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 48px)}
   .hero-pause{bottom:calc(env(safe-area-inset-bottom,0px) + 48px)}
 }
@@ -147,94 +159,110 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .story{background:var(--bone);padding-block:0 var(--sec)}
 .how{margin-bottom:var(--sec);padding-top:var(--s4);background:linear-gradient(var(--asphalt),var(--asphalt)) var(--gut) 0/calc(100% - 2 * var(--gut)) 2px no-repeat}
 .how-h{margin:0 0 var(--s4);font-size:var(--fs-h2)}
-.how-steps{list-style:none;margin:0;padding:0;display:grid;gap:var(--s3)}
-.how-steps li{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;align-items:start}
-.how-mk{grid-row:span 2;width:36px;height:36px;color:var(--asphalt)}
+/* the three steps numbered 1 2 3 by counter (Oct 27): the marks repeated their headline; they stay in the sprite, hidden */
+.how-steps{list-style:none;margin:0;padding:0;display:grid;gap:var(--s3);counter-reset:step}
+.how-steps li{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;align-items:start;counter-increment:step}
+.how-steps li::before{content:counter(step);grid-row:span 2;font:900 var(--fs-h2)/1 var(--display);color:var(--asphalt);font-variant-numeric:lining-nums tabular-nums}
+.how-mk{display:none}
 .how-t{margin:4px 0 6px;font-size:var(--fs-h3)}
-.how-steps p{margin:0;max-width:30ch;color:var(--mute)}
+.how-steps p{margin:0;max-width:30ch;color:var(--asphalt)}
 @media (min-width:760px){
   .how-steps{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto auto;column-gap:var(--col-gap);row-gap:0}
   .how-steps li{grid-row:span 3;grid-template-rows:subgrid;grid-template-columns:minmax(0,1fr)}
-  .how-mk{grid-row:auto;margin-bottom:var(--s2)}
+  .how-steps li::before{grid-row:auto;margin-bottom:var(--s2)}
   .how-t{align-self:end;margin-top:0}
 }
 .story-in{display:grid;gap:var(--s5)}
 .story-h{max-width:9ch;margin-bottom:var(--s4)}
 .story-lede{margin:0 0 var(--s3);max-width:28ch;font-size:var(--fs-lede);font-weight:500;line-height:1.38}
 .story-more{margin:0;max-width:34ch;color:var(--mute)}
-.plates{display:flex;flex-wrap:wrap;gap:10px;margin:var(--s4) 0 0}
-.plates .plate{font-size:clamp(1.2rem,.95rem + 1vw,1.75rem)}
 .story-photos{display:block}
 .story-ph{margin:0;width:auto}
 .story-ph img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
-.story-ph figcaption,.today-ph figcaption,.ridewith-ph figcaption{display:block;margin:var(--s1) 0 0;padding:0;font:var(--label);color:var(--mute)}
-@media (max-width:899px){
+.story-ph figcaption,.today-ph figcaption,.today-film figcaption,.ridewith-ph figcaption{display:block;margin:var(--s1) 0 0;padding:0;font:var(--label);color:var(--mute)}
+@media (max-width:759px){
+  /* the photo second, not fifth (Oct 27): the head, the full-bleed portrait and its caption, then his words. The words'
+     box dissolves (display:contents) and order sets the sequence; nothing focusable is in it, so the tab order holds */
+  .story-in{gap:0}
+  .story-words{display:contents}
+  .story-h{order:1;margin-bottom:var(--s3)}
+  .story-photos{order:2;margin-bottom:var(--s4)}
+  .story-lede{order:3}
+  .story-more{order:4}
   .story-ph--a{margin-inline:calc(-1 * var(--gut))}
-  .story-ph figcaption,.today-ph figcaption,.ridewith-ph figcaption{padding-inline:var(--gut)}
+  .story-ph figcaption{padding-inline:var(--gut)}
+  .story-ph--b{display:none}
 }
-@media (max-width:759px){.story-ph--b{display:none}}
 @media (min-width:760px) and (max-width:1023px){
-  .story-photos{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap)}
-  .story-photos{align-items:end}
+  .story-photos{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
   .story-ph--a{grid-column:1 / span 7}
   .story-ph--b{grid-column:8 / -1}
 }
-@media (min-width:900px) and (max-width:1023px){.story-ph--a{margin-inline:0}}
 @media (min-width:1024px){
-  .story-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
-  .story-words{grid-column:1 / span 5;position:sticky;top:calc(var(--nav-h) + var(--s4))}
-  .story-photos{grid-column:6 / -1;display:grid;grid-template-columns:subgrid;align-items:end}
-  .story-ph--a{grid-column:1 / span 4}
-  .story-ph--b{grid-column:5 / -1}
+  /* one big portrait, one small (Oct 27): the words on five columns, not sticky; Boise on 7–12 the full height of the
+     row; the shadow a square on 1–3 under the words. The grid aligns to its end, so the three feet always meet; when the
+     words run long the big photo starts lower than the head, not the other way round */
+  .story-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
+  .story-words{grid-column:1 / span 5;grid-row:1;position:static}
+  .story-photos{display:contents}
+  .story-ph--a{grid-column:7 / -1;grid-row:1 / 3}
+  .story-ph--b{grid-column:1 / span 3;grid-row:2}
+  .story-ph--b img{aspect-ratio:1 / 1}
 }
 
 /* ——————————————————————————————————————————————————————————
-   today I rode for (concrete, under a hairline)
+   today I rode for (concrete, after the tar room: the room change is the break)
    —————————————————————————————————————————————————————————— */
-.today{background:var(--bone);padding-block:0 var(--sec)}
-.today-in{display:grid;gap:var(--s4);padding-top:var(--s5);background:linear-gradient(var(--line),var(--line)) var(--gut) 0/calc(100% - 2 * var(--gut)) 1px no-repeat}
-.today-sign{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 14px;margin:var(--s2) 0 var(--s3);--h:clamp(48px,12vw,76px)}
+.today{background:var(--bone);padding-block:var(--s5) var(--sec)}
+/* one grid at every width; under 1024 the rows carry no gap and the words' own margins set the rhythm (8 / 16 / 16, then
+   --s4 before the pictures), so the lead and what he said read as one group */
+.today-in{display:grid;gap:0 var(--col-gap)}
+.today-sign{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 14px;margin:var(--s1) 0 var(--s2);--h:clamp(48px,12vw,76px)}
 .today-mark{display:block;height:var(--h);width:auto;max-width:100%;color:var(--asphalt)}
 .today-plate{font-size:calc(var(--h) * .58);line-height:1;padding:.12em .3em .04em}
-.today-line{margin:0 0 var(--s3);max-width:30ch;font-size:var(--fs-intro);line-height:1.4}
+.today-line{margin:0 0 var(--s2);max-width:30ch;font-size:var(--fs-intro);line-height:1.4}
 .today-ask{margin:0 0 var(--s4)}
-.today-ph{margin:0}
+.today-ph{margin:0 0 var(--s4)}
 .today-ph img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:var(--bone-2)}
-.today-film{margin:0;width:min(100%,300px)}
+/* the film: on a phone inset at seven of twelve columns on the right (two scales, two edges, after the full-bleed photo);
+   from 760 the four columns beside the photo */
+.today-film{margin:0 0 0 auto;width:calc(7 / 12 * 100%)}
 .today-film-frame{position:relative;aspect-ratio:4/5;background:var(--tar);overflow:hidden}
 .today-film video{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
-.today-play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;display:grid;place-items:center;border:0;border-radius:50%;background:var(--paper);color:var(--asphalt);cursor:pointer;transition:opacity var(--t-move) var(--ease),visibility 0s linear var(--t-move)}
-.today-play svg{width:24px;height:24px;fill:currentColor;margin-left:3px}
-.today-play:focus-visible{outline:3px solid var(--asphalt);outline-offset:-9px}
-.today-film[data-playing="true"] .today-play{opacity:0;visibility:hidden}
-.today-film-cap{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:6px}
-.today-film-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0;border:0;background:none;color:var(--asphalt);font:700 .9375rem/1 var(--display);cursor:pointer}
-.today-film-btn svg{fill:currentColor}
-.today-film-btn[data-playing="true"] .rf-play,.today-film-btn:not([data-playing="true"]) .rf-pause{display:none}
-.today-film-len{font:var(--label);color:var(--mute)}
-@media (max-width:899px){
+/* the one control: the site's film disc (.gr-film-play on ride pages), plaster, the glyph picked by the figure's
+   data-playing. It never fades: the still with the disc is the play button, the playing film carries its pause. Its ring
+   is drawn inside itself, at the foot of this sheet (S1 is unlayered) */
+.today-play{position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;padding:0;border:0;border-radius:50%;background:var(--paper);color:var(--asphalt);display:grid;place-items:center;cursor:pointer;transition:background-color var(--t-color) var(--ease)}
+.today-play svg{width:28px;height:28px;fill:currentColor}
+.today-play .tp-play{margin-left:5px}
+@media (hover:hover){.today-play:hover{background:var(--bone)}}
+.today-play:active{transition-duration:0s;background:var(--bone-2)}
+.today-film[data-playing="true"] .tp-play,.today-film:not([data-playing="true"]) .tp-pause{display:none}
+@media (max-width:759px){
   .today-ph{margin-inline:calc(-1 * var(--gut))}
-  .today-film{width:auto;margin-inline:calc(-1 * var(--gut))}
-  .today-film-cap{padding-inline:var(--gut)}
-
-  .today-words{display:contents}
-  .today-ph{order:1}
-  .today-film{order:2}
+  .today-ph figcaption{padding-inline:var(--gut)}
+}
+@media (min-width:760px){
+  .today-in{grid-template-columns:repeat(12,minmax(0,1fr));align-items:end}
+  .today-lead,.today-say{grid-column:1 / -1}
+  .today-ph{grid-column:1 / span 8;margin-bottom:0}
+  .today-film{grid-column:9 / -1;width:auto;margin:0}
 }
 @media (min-width:1024px){
-  .today-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
-  .today-words{grid-column:1 / span 4}
-  .today-ph{grid-column:5 / -1}
-  .today-film{width:min(100%,230px)}
-  .today-ph figcaption{display:flex;align-items:center;min-height:44px;margin-top:6px}
-  .today-sign{--h:clamp(48px,5vw,76px)}
+  /* row 1, feet aligned: the sign on 1–6, his line and the ask on 8–12. Row 2, feet aligned: the gravel photo on 1–8,
+     the film on 9–12 at 4:5, a caption under each */
+  .today-in{row-gap:var(--s4)}
+  .today-lead{grid-column:1 / span 6}
+  .today-say{grid-column:8 / -1}
+  .today-sign{margin-bottom:0;--h:clamp(48px,5vw,76px)}
+  .today-ask{margin:0}
 }
 
 /* ——————————————————————————————————————————————————————————
    4. the miles: the 10,000, said once, and the last rides
    —————————————————————————————————————————————————————————— */
 .miles{padding-block:var(--sec);overflow:hidden}
-.miles-big{margin:0 0 0 -.055em;font-weight:900;font-size:clamp(5.2rem,.6rem + 22.6vw,21rem);line-height:.78;letter-spacing:-.065em;color:var(--paper);white-space:nowrap}
+.miles-big{margin:0 0 0 -.055em;font-weight:900;font-size:clamp(5.2rem,.6rem + 22.6vw,21rem);line-height:.78;letter-spacing:-.065em;color:var(--paper);white-space:nowrap;font-variant-numeric:lining-nums tabular-nums}
 .miles-sub{margin:var(--s3) 0 0;font-size:var(--fs-h3);font-weight:800;letter-spacing:-.02em}
 .miles-grid{display:grid;gap:var(--s5);margin-top:var(--s6)}
 .miles-k{color:var(--dust);margin-bottom:var(--s1)}
@@ -245,24 +273,30 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .log .when b{display:block;margin-top:2px;font-size:var(--fs-body);font-weight:800;color:var(--paper)}
 .log .when:not(:has(b))::after{content:"\2014";content:"\2014" / "";display:block;margin-top:2px;font-size:var(--fs-body);font-weight:800;color:var(--dust)}  /* a ride Strava calls "Morning Ride" has no name here (tally.js); the row keeps its shape */
 .log .when a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
-.log .mi{grid-area:mi;align-self:end;font-weight:900;font-size:var(--fs-h3);line-height:1;letter-spacing:-.02em}
+.log .mi{grid-area:mi;align-self:end;font-weight:900;font-size:var(--fs-h3);line-height:1;letter-spacing:-.02em;font-variant-numeric:lining-nums tabular-nums}
 .log .mi small{margin-left:3px;font-size:.55em;font-weight:700;color:var(--dust);letter-spacing:0}
-/* every ride a painted stroke as long as the ride (against the longest one shown); the ends only a little worn */
-.log .bar-mi{grid-area:bar;display:block;height:8px;width:calc(var(--w,0) * 100%);min-width:12px;background:var(--creosote-lift);
-  clip-path:polygon(0 6%,98.8% 0,100% 40%,99.4% 100%,.4% 94%)}
+/* every ride a painted stroke as long as the ride (against the longest one shown), square clean ends: the dash's idea,
+   drawn the one way */
+.log .bar-mi{grid-area:bar;display:block;height:8px;width:calc(var(--w,0) * 100%);min-width:12px;background:var(--creosote-lift)}
 .strava-attrib{margin:12px 0 0;font-size:.8125rem;line-height:1.4;color:var(--dust)}
 .strava-attrib a{position:relative;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .strava-attrib a::before{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;margin-top:-22px}   /* a 44px hit area that doesn't move the line */
-.miles-rides{margin:0 0 var(--s4);font-size:var(--fs-intro);color:var(--dust)}
-.miles-rides b{color:var(--paper);font-weight:800}
+/* the count is the section's numeral (Oct 27): 900 at the display size, tabular, its label 13/700 under it, the two
+   links under that */
+.miles-side{display:flex;flex-direction:column;align-items:flex-start;gap:var(--s2)}
+.miles-rides{display:flex;flex-direction:column;gap:6px;margin:0}
+.miles-rides b{font:900 var(--fs-display)/.9 var(--display);font-variant-numeric:lining-nums tabular-nums;letter-spacing:-.04em;color:var(--paper)}
+.miles-rides-l{font:var(--label);color:var(--dust)}
 .miles-acts{display:flex;flex-wrap:wrap;gap:16px 32px;margin:0}
+@media (max-width:759px){
+  .miles{padding-block:var(--s5)}          /* a colour change gets --s5 both sides on a phone (Oct 27) */
+  .miles-grid{margin-top:var(--s5)}
+}
 @media (min-width:1024px){
-  /* the log on seven columns, its count and links on one line under it (no stranded column beside it) */
+  /* the count in the margin on four columns, the log on seven (Oct 27: nothing stranded beside either) */
   .miles-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);row-gap:var(--s4);align-items:start}
-  .miles-side{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--s2) var(--s5)}
-  .miles-side .miles-rides{margin:0}
-  .miles-log{grid-column:1 / span 7}
-  .miles-side{grid-column:1 / span 7}
+  .miles-side{grid-column:1 / span 4;grid-row:1}
+  .miles-log{grid-column:6 / -1;grid-row:1}
 }
 
 /* ——————————————————————————————————————————————————————————
@@ -282,18 +316,20 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .yr-map{margin:0}
 .yr-map-in{position:relative}
 .yr-map-svg{display:block;width:100%;height:auto}
-.mp-dot{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--asphalt);color:var(--paper);font:800 .875rem/1 var(--display);pointer-events:none}
-.mp-dot--soft{background:var(--paper);color:var(--mute);box-shadow:inset 0 0 0 2px var(--mute)}
+/* one numbered square on the map and in the list (Oct 27): 24px ink, a 13/800 plaster numeral; a projected or TBA date is
+   the plaster square with the dashed patina edge, as the date block is. No radius, no shadow */
+.mp-dot{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:24px;height:24px;background:var(--asphalt);color:var(--paper);font:800 .8125rem/1 var(--display);font-variant-numeric:lining-nums tabular-nums;pointer-events:none}
+.mp-dot--soft{background:var(--paper);color:var(--mute);outline:1.5px dashed var(--dust-deep);outline-offset:-1.5px}
 .yr-key{display:flex;align-items:center;gap:8px;margin:0;font:var(--label);color:var(--mute)}
 .yr-key i{width:10px;height:10px;background:var(--asphalt)}
 @media (max-width:759px){.yr-map,.yr-key{display:none}}
 .year-list{list-style:none;margin:0;padding:0;border-top:2px solid var(--asphalt)}
 .yr{display:flex}
 .yr a{flex:1 1 auto;display:grid;grid-template-columns:2ch 64px minmax(0,1fr);align-items:center;gap:16px;min-height:72px;padding:8px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
-.yr-i{font:800 .8125rem/1 var(--display);color:var(--mute);text-align:right}
+.yr-i{font:800 .8125rem/1 var(--display);font-variant-numeric:lining-nums tabular-nums;color:var(--mute);text-align:right}
 .date{display:flex;flex-direction:column;align-items:center;justify-content:center;width:64px;height:56px;border:1.5px solid var(--asphalt);color:var(--asphalt);line-height:1;text-align:center}
 .date-m{font-size:.8125rem;font-weight:800}
-.date-d{margin-top:4px;font-size:1.125rem;font-weight:900;letter-spacing:-.03em;white-space:nowrap}
+.date-d{margin-top:4px;font-size:1.125rem;font-weight:900;letter-spacing:-.03em;white-space:nowrap;font-variant-numeric:lining-nums tabular-nums}
 .date--soft{border-style:dashed;border-color:var(--dust-deep);color:var(--mute)}
 .yr-n{display:flex;flex-direction:column;align-items:flex-start;gap:3px;min-width:0}
 .yr-n b{font-size:var(--fs-h4);font-weight:800;line-height:1.15}
@@ -308,10 +344,11 @@ a.strip-cell:focus-visible{outline-offset:6px}
 @media (max-width:759px){.yr a{grid-template-columns:64px minmax(0,1fr);gap:14px;min-height:64px}.yr-i{display:none}}
 @media (min-width:760px) and (max-width:1023px){.yr-map{max-width:640px}}
 @media (min-width:1024px){
-  /* the map on eight columns, its key and the dates note on the four beside it, the list in two columns under both */
+  /* the map on eight columns, its key and the dates note on the four beside it, at the top, where a legend sits; the list
+     in two columns under both */
   .year-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);row-gap:var(--s5)}
   .yr-map{grid-column:1 / span 8}
-  .year-aside{grid-column:9 / -1;align-self:end}
+  .year-aside{grid-column:9 / -1;align-self:start}
   .year-list{grid-column:1 / -1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(7,auto);grid-auto-flow:column;column-gap:var(--col-gap)}
   .year-foot{grid-column:1 / -1}
 }
@@ -322,44 +359,58 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .orgs{background:var(--dust);color:var(--asphalt);padding-block:var(--sec)}
 .orgs .eyebrow{color:var(--asphalt)}       /* gunmetal is 4.2:1 on patina; small type goes bruise */
 .orgs-list{display:grid;border-top:2px solid var(--asphalt)}
-.org{padding:var(--s3) 0 var(--s4);border-bottom:1px solid rgba(28,26,34,.28)}
+.org{padding:var(--s3) 0 var(--s4);border-bottom:1px solid var(--line-s)}
 .org-mk{width:40px;height:40px;color:var(--asphalt)}
 .org-h{margin:var(--s2) 0 var(--s1);font-size:var(--fs-h3)}
 .org p{margin:0 0 var(--s2);max-width:34ch}
 .org-acts{display:flex;flex-wrap:wrap;gap:8px 24px}
-.orgs-door{margin:var(--s5) 0 var(--s4);max-width:24ch;font-size:clamp(1.6rem,1rem + 2.4vw,3rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;text-wrap:balance;hyphens:none}
+.orgs-door{margin:var(--s5) 0 var(--s4);max-width:24ch;font-size:var(--fs-display);font-weight:800;line-height:1.08;letter-spacing:-.03em;text-wrap:balance;hyphens:none}
 .orgs-help{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 24px;padding-top:var(--s2);border-top:1px solid var(--asphalt);font-size:var(--fs-small)}
-.orgs-help a[href^="tel"]{position:relative;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+/* a tel link is an inline-block 44px tall (Oct 27): the two numbers sat on lines 22px apart, so their pads overlapped and a
+   tap on 988 could call Trevor. Now any line that carries a number is 44px and the pads can't reach each other */
+.orgs-help a[href^="tel"]{position:relative;display:inline-block;line-height:44px;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .orgs-help a[href^="tel"]::before{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;margin-top:-22px}
 @media (max-width:899px){
-  .org{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:14px;align-items:center}
+  .org{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:14px;align-items:center;padding:var(--s2) 0 var(--s3)}   /* 8/16/24 inside the group (Oct 27); the door at the display size is the room's opener */
   .org-mk{width:32px;height:32px}
   .org-h{margin:0}
   .org p{grid-column:1 / -1;margin-top:var(--s1)}
   .org-acts{grid-column:1 / -1}
 }
+@media (max-width:759px){.orgs{padding-block:var(--s5)}}   /* a colour change gets --s5 both sides on a phone (Oct 27) */
 @media (min-width:900px){
   .orgs-door{margin-top:var(--s6)}
   .orgs-list{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,auto);column-gap:var(--col-gap)}
-  .org{display:grid;grid-row:span 4;grid-template-rows:subgrid;align-content:start;padding:var(--s3) var(--s3) var(--s4) 0;border-bottom:0;border-right:1px solid rgba(28,26,34,.28)}
+  .org{display:grid;grid-row:span 4;grid-template-rows:subgrid;align-content:start;padding:var(--s3) var(--s3) var(--s4) 0;border-bottom:0;border-right:1px solid var(--line-s)}
   .org-h{align-self:end}
   .org:last-child{border-right:0}
+}
+@media (min-width:1024px){
+  /* the door and the help lines on one row under one hairline (Oct 27): the wrap is the 12-grid here, the door on 1–8,
+     the help on 9–12. The door's box runs into the gutter (and pads its words back out of it) so its hairline meets the
+     help's: one line across the row, not two */
+  .orgs>.wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap)}
+  .orgs-head,.orgs-list{grid-column:1 / -1}
+  .orgs-door,.orgs-help{margin:var(--s5) 0 0;padding-top:var(--s3);border-top:1px solid var(--asphalt)}
+  .orgs-door{grid-column:1 / span 8;margin-right:calc(-1 * var(--col-gap));padding-right:var(--col-gap)}
+  .orgs-help{grid-column:9 / -1;flex-direction:column;align-items:flex-start;gap:var(--s1)}
 }
 .ridewith{background:var(--paper);padding-block:var(--sec)}
 .ridewith-in{display:grid;gap:var(--s5)}
 .ridewith-ph{margin:0}
 .ridewith-ph img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
-.ridewith-big{margin:var(--s1) 0 var(--s3);max-width:15ch;font-size:clamp(2rem,1.15rem + 3.6vw,4.5rem);font-weight:900;line-height:1.02;letter-spacing:-.045em;text-wrap:balance}
+.ridewith-big{margin:var(--s1) 0 var(--s3);max-width:15ch;font-size:var(--fs-display);font-weight:800;line-height:1.02;letter-spacing:-.045em;text-wrap:balance}
 .plate--big{font-size:.86em}
 .ridewith-words>p{max-width:40ch}
-.facts-dl{margin:var(--s4) 0;border-top:3px solid var(--asphalt)}
-.facts-dl div{display:grid;grid-template-columns:minmax(5.5rem,8rem) minmax(0,1fr);align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
-.facts-dl dt{font:var(--label);color:var(--mute)}
-.facts-dl dd{margin:0;font-weight:600}
-.facts-dl dd a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+/* the facts are chrome's M9 fact grid (one rule above, hairlines between, the label over the value); this sheet only gives
+   the list its columns and the value its weight */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));margin:var(--s4) 0}
+.facts>div{display:grid;gap:2px 0}
+.facts dd{margin:0;font-weight:600;font-variant-numeric:lining-nums tabular-nums}
+.facts dd a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .ridewith-acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin:0 0 var(--s2)}
-@media (max-width:899px){.ridewith-ph{margin-inline:calc(-1 * var(--gut))}}
-@media (max-width:759px){.ridewith{padding-top:0}.ridewith-ph img{aspect-ratio:1/1}}
+@media (max-width:899px){.ridewith-ph{margin-inline:calc(-1 * var(--gut))}.ridewith-ph figcaption{padding-inline:var(--gut)}}
+@media (max-width:759px){.ridewith-ph img{aspect-ratio:1/1}}
 @media (min-width:900px){.ridewith-ph{width:auto}}
 @media (min-width:1024px){
   .ridewith-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:center}
@@ -378,15 +429,19 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .find-count{max-width:40ch;color:var(--mute)}
 .find-count b{color:var(--asphalt);font-weight:800}
 .find-lab{display:block;margin-bottom:8px;font:var(--label);color:var(--asphalt)}
-.find-row{display:flex;gap:8px}
+/* the field with its mark (the hub's search, M5), the button the same 52px; the field's inset is at the foot of this sheet
+   (chrome's field padding is unlayered). The mark sits on the field's own centre line, so it stays on the field when the
+   row stacks under 480 */
+.find-row{position:relative;display:flex;gap:8px}
+.find-mk{position:absolute;left:14px;top:26px;width:20px;height:20px;margin-top:-10px;color:var(--mute);pointer-events:none}
 .find-field{flex:1 1 auto;min-width:0}
 .find-links{display:flex;flex-wrap:wrap;gap:20px 28px;margin:var(--s3) 0 0}
 @media (max-width:479px){.find-row{flex-direction:column}.find-row .btn{width:100%}}
 @media (min-width:1024px){
-  .find-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
+  .find-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
   .find-rule{grid-column:1 / -1}
   .find-words{grid-column:1 / span 6}
-  .find-tools{grid-column:8 / -1}
+  .find-tools{grid-column:7 / -1}
 }
 .read{background:var(--paper);padding-block:0 var(--sec)}
 .read-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--s2) var(--s4);margin-bottom:var(--s4)}
@@ -394,8 +449,10 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .read-list{list-style:none;margin:0;padding:0;display:grid;border-top:2px solid var(--asphalt)}
 .read-list a{display:flex;flex-direction:column;gap:8px;height:100%;padding:var(--s3) var(--s3) var(--s3) 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
 .read-list b{font-size:var(--fs-h4);font-weight:800;line-height:1.2}
-.read-list span{max-width:34ch;font-size:var(--fs-small);line-height:1.45;color:var(--mute)}
-@media (hover:hover){.read-list a:hover b{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}}
+/* the title carries the link's arrow (Oct 27): the arrow is the affordance, on touch too */
+.read-list b::after{content:"\2192";display:inline-block;margin-left:6px;font-weight:400;transition:transform var(--t-move) var(--ease)}
+.read-list span{max-width:34ch;font-size:var(--fs-small);line-height:1.45;color:var(--asphalt)}
+@media (hover:hover){.read-list a:hover b{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}.read-list a:hover b::after{transform:translateX(4px)}}
 .read-list a:active{background:var(--bone-2)}
 @media (min-width:760px){.read-list{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--col-gap)}}
 @media (min-width:1024px){.read-list{grid-template-columns:repeat(4,minmax(0,1fr))}.read-list a{border-bottom:0}}
@@ -405,7 +462,6 @@ a.strip-cell:focus-visible{outline-offset:6px}
    —————————————————————————————————————————————————————————— */
 .sign{padding:var(--sec) 0}
 .sign-in{display:grid;gap:var(--s5)}
-.sign-in::before{margin-bottom:calc(var(--s2) - var(--s5))}
 .sign-h{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px 18px;margin:0;
   --h:clamp(56px,calc((100vw - 2 * var(--gut) - 20px) / 4.9),236px)}
 .sign-mark{display:block;height:var(--h);width:auto;max-width:100%;color:var(--paper)}
@@ -420,9 +476,9 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .sign-note{margin:var(--s2) 0 0;font-size:var(--fs-small);color:var(--dust)}
 .sign-reset{min-height:44px;padding:0 4px;border:0;background:none;color:var(--paper);font:700 var(--fs-small)/1 var(--display);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .sign-more{margin:var(--s4) 0 0}
+@media (max-width:759px){.sign{padding-block:var(--s5)}}   /* a colour change gets --s5 both sides on a phone (Oct 27) */
 @media (min-width:1024px){
   .sign-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
-  .sign-in::before{grid-column:1 / span 3}
   .sign-h{grid-column:1 / -1}
   .sign-form{grid-column:1 / span 7}
 }
@@ -433,6 +489,8 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .home .tally-line--home{display:none}
 [data-season][hidden]{display:none!important}  /* the two wordings of the count; only one shows */
 .home .nav{margin-bottom:calc(-1 * var(--nav-h));transition:background-color var(--t-open) var(--ease),color var(--t-open) var(--ease),border-color var(--t-open) var(--ease)}
+/* on phones the header is flat (Oct 27): solid concrete, no blur to composite while the page scrolls, no text through it */
+@media (max-width:899px){.home .nav{background:var(--bone);-webkit-backdrop-filter:none;backdrop-filter:none}}
 /* over the film a flat bar (below), solid once the film has scrolled under it (home.js sets data-solid); solid without
    JS. Over the film the header shows only the menu and, from 900, the nav links: the hero carries the mark and Ride with
    me, so nothing is said twice */
@@ -446,6 +504,10 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .home #lpRow rect{visibility:visible}
 /* the first screen's Ride with me is the hero's; the header's comes back at 900, as a line, once the film has gone */
 @media (max-width:899px){.home .nav .btn--sm{display:none}}
+/* the Ride with me bar is off the homepage from 900 (Oct 27, For Robert): once the film has scrolled under, the header's
+   Ride with me line is there on every screen, pointing at the same next ride, and the bar said it again on the right
+   column. Phones keep the bar. With no bar there is nothing to keep the foot of the screen clear of (S4's scroll padding) */
+@media (min-width:900px){.home .ridebar{display:none}html{scroll-padding-bottom:0}}
 /* the hero's date plate: smeared rose on the plaster tile, powder on dark when the tile goes clear on hover */
 .home .hero-ride .ridebar-d{background:var(--creosote);color:var(--paper);font-size:.9375rem;padding:10px 10px 8px}
 @media (hover:hover){.home .hero-ride:hover .ridebar-d{background:var(--creosote-lift);color:var(--asphalt)}}
@@ -455,4 +517,11 @@ a.strip-cell:focus-visible{outline-offset:6px}
 @media (min-width:1024px){.home .foot-grid{grid-column:1 / -1}}
 .home .hero-ride:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
 .home .hero-pause:focus-visible{outline:2px solid var(--paper);outline-offset:-5px}   /* inside its own dark ground: over the film an outside ring fell on bright frames */
+/* the film disc draws its ring inside itself in its own ink (S1: .gr-film-play); it sits on the film, so an outside ring has
+   no ground */
+.home .today-play:focus-visible{outline:3px solid currentColor;outline-offset:-9px}
+/* the find field's inset for its mark, and the button at the field's 52px (M5 sets the field's padding and M2 the
+   button's height, both unlayered) */
+.home .find-row .find-field{padding-left:44px}
+.home .find-row .btn{min-height:52px}
 @media (prefers-reduced-motion:reduce){.hero-film{transition:none}}

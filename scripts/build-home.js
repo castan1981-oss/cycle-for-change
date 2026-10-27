@@ -3,17 +3,20 @@
    site's own mark, palette, type and data. The brief is the handoff Robert sent on Oct 26 (CLAUDE_START_HERE_CFC.md);
    what it changed in the house rules is in CLAUDE.md §3 ("The editorial homepage").
 
-   Writes cfc-site/index.html from the shared chrome (header, menu, footer, the Ride with me bar) plus the page:
-     1  #top    the film, full screen (tools/hero-film.py): the mark, who and what, one primary (Ride with me)
+   Writes cfc-site/index.html from the shared chrome (header, menu, footer, the Ride with me bar) plus the page, in this
+   order (Cadence's final notes, Oct 27, 2026: the rooms alternate light and dark, and the help lines come up sooner):
+     1  #top    the film, full screen (tools/hero-film.py): the mark, who and what, one primary (Ride with me), two quiet links
      2  strip   the numbers on a lane: training miles (live), group rides, events
      3  #why    how this works (#how), then the story in his words and his photographs
-        #today  today I rode for (data/today.json)
      4  #road   10,000 (said once, big), the last rides from Strava (the log)
+        #today  today I rode for (data/today.json)
+     6  #orgs   the orgs I ride for, the line that says why, help lines
      5  #year   the 2027 rides I'm doing: where (data/geo/home-2027.json, tools/home-map.js) and when
-     6  #orgs   the orgs I ride for, the line that says why, help lines; #ride, Center Ride Out (where the money goes)
+        #ride   Center Ride Out (where the money goes)
      7  #find   find a group ride
      8  #read   field notes, guides, the journal
      9  #sign   CYCLE FOR + the blank: type and the sign changes (nothing is sent)
+   (the numbers are the constants' names in this file; the page runs in the order listed)
 
    Run after any change to scripts/chrome.js, data/today.json, data/calendar-2027.json or data/ride-notes.json:
      node scripts/build-home.js
@@ -96,20 +99,23 @@ const DEFS = `<svg aria-hidden="true" focusable="false" style="position:absolute
     <symbol id="mkOrgs" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="8" r="2.2"/><circle cx="12" cy="6.5" r="2.2"/><circle cx="17.5" cy="8" r="2.2"/><path d="M2.5 19a4 4 0 0 1 8 0M8 19a4 4 0 0 1 8 0M13.5 19a4 4 0 0 1 8 0"/></g></symbol>
     <symbol id="mkGroup" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 21 8.6 3M20.5 21 15.4 3"/><path d="M12 3v2.2M12 8.2v2.2" opacity=".55"/></g><g fill="currentColor"><circle cx="9.6" cy="17.2" r="1.8"/><circle cx="14.4" cy="17.2" r="1.8"/><circle cx="12" cy="13.2" r="1.5"/></g></symbol>
     <symbol id="mkFinish" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V4M20 21V4"/><path d="M4 5h16v5H4z"/></g><g fill="currentColor"><rect x="4" y="5" width="4" height="2.5"/><rect x="12" y="5" width="4" height="2.5"/><rect x="8" y="7.5" width="4" height="2.5"/><rect x="16" y="7.5" width="4" height="2.5"/></g></symbol>
+    <symbol id="mkSearch" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></g></symbol>
   </defs>
 </svg>`;
 
 // —— 1. the hero: the film, the mark, who and what, one primary ——
+// the two films carry their own numbers (tools/hero-film.py --n / --wide-n); bump the one that was recut
 const FILM = {
   phone: { mp4: "/film/hero-phone-8.mp4", webm: "/film/hero-phone-8.webm", poster: "/film/hero-phone-8", w: 608, h: 1080 },
-  wide: { mp4: "/film/hero-wide-8.mp4", webm: "/film/hero-wide-8.webm", poster: "/film/hero-wide-8", w: 1620, h: 960 },
+  wide: { mp4: "/film/hero-wide-9.mp4", webm: "/film/hero-wide-9.webm", poster: "/film/hero-wide-9", w: 1620, h: 960 },
 };
 // the two-panel film on a landscape screen at 760 and up; the one-frame film on phones and portrait tablets
 const WIDE_Q = "(min-width: 760px) and (min-aspect-ratio: 1/1)";
 const PHONE_Q = "(max-width: 759px), (max-aspect-ratio: 1/1)";
 const heroRide = `<a class="hero-ride" id="heroRide" href="${esc(RIDE_HREF)}"${NR ? " data-ride-next" : ""}>${NR ? `<span class="ridebar-d">${esc(NR.date)}</span>` : ""}<span class="hero-ride-t"><span class="finder-t">Ride with me</span><span class="finder-s">${NR ? `${esc(NR.name)}, ${esc(NR.where)}` : "The rides I&rsquo;m doing in 2027"}</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>`;
 const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools/hero-film.py): one frame on a phone, two panels on a wide
-     screen (the words sit inside the wide one, the gutter clear of the nav). One primary and one quiet link (CLAUDE.md §3). The poster is the film's first frame and the page's largest paint; /home.js
+     screen (the words sit inside the wide one, the gutter clear of the nav). One primary and two quiet links: Find a group ride, and Read the last ride
+     when there is one (his newest write-up, never the riding page; CLAUDE.md §3). The poster is the film's first frame and the page's largest paint; /home.js
      starts the film after load, never under reduced motion or Save-Data, and the button always stops it. —— -->
 <section class="hero" id="top" aria-labelledby="hero-h" data-film="off">
   <div class="hero-media">
@@ -131,7 +137,7 @@ const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools
     <p class="hero-line">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</p>
     <div class="hero-acts">
       ${heroRide}
-      <p class="hero-links"><a class="link link--bone" href="/rides/">Find a group ride</a></p>
+      <p class="hero-links"><a class="link link--bone" href="/rides/">Find a group ride</a>${NOTE ? `<a class="link link--bone" href="${esc(NOTE.href)}">Read the last ride</a>` : ""}</p>
     </div>
   </div>
   <button class="hero-pause" id="heroPause" type="button" hidden><svg class="hp-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg><svg class="hp-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><span class="hp-label">Pause the film</span></button>
@@ -167,7 +173,6 @@ const STORY = `<!-- —— 3. why. How this works first (the mechanics before th
       <h2 class="story-h" id="why-h">It always says cycling.</h2>
       <p class="story-lede">Cycling changed my life. I&rsquo;d like to say I&rsquo;m cycling for other people. I&rsquo;m really cycling for myself. I&rsquo;m cycling because it changed me. That&rsquo;s the story.</p>
       <p class="story-more">So the sign changes. What comes after the word is up to whoever&rsquo;s riding.</p>
-      <p class="plates"><span class="plate">me</span><span class="plate">one&middot;n&middot;ten</span><span class="plate">change</span></p>
     </div>
     <div class="story-photos">
       ${fig("robert-boise", "story-ph story-ph--a")}
@@ -192,33 +197,35 @@ function todaySection() {
   const where = T.photo.where ? placeMonth(T.photo.where, T.date) : "";
   const F = T.film;
   const poster = F ? (fs.existsSync(path.join(ROOT, "cfc-site", String(F.poster).replace(/\.jpe?g$/i, ".webp"))) ? String(F.poster).replace(/\.jpe?g$/i, ".webp") : F.poster) : "";
+  // one control, the disc on the poster (the site's film control; home.css draws it): a play glyph and a pause glyph,
+  // the figure's data-playing picks one; /home.js keeps the label saying what the button does next (WCAG 2.2.2)
   const film = F ? `<figure class="today-film" id="todayFig" data-playing="false">
-        <div class="today-film-frame">
-          <video id="todayVid" muted loop playsinline disablepictureinpicture preload="none" poster="${esc(poster)}" width="${F.width}" height="${F.height}" aria-label="${esc(F.alt)}">
-            ${F.webm ? `<source src="${esc(F.webm)}" type="video/webm">` : ""}
-            <source src="${esc(F.mp4)}" type="video/mp4">
-          </video>
-          <button class="today-play" id="todayPlay" type="button" aria-label="Play, ${F.seconds} seconds"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg></button>
-        </div>
-        <figcaption class="today-film-cap">
-          <button class="today-film-btn" id="todayBtn" type="button" data-playing="false"><svg class="rf-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><svg class="rf-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg><span id="todayBtnLabel">Play</span></button>
-          <span class="today-film-len">0:${String(Math.round(F.seconds || 0)).padStart(2, "0")}</span>
-        </figcaption>
-      </figure>` : "";
-  return `<!-- —— today: who I rode for (data/today.json) —— -->
+      <div class="today-film-frame">
+        <video id="todayVid" muted loop playsinline disablepictureinpicture preload="none" poster="${esc(poster)}" width="${F.width}" height="${F.height}" aria-label="${esc(F.alt)}">
+          ${F.webm ? `<source src="${esc(F.webm)}" type="video/webm">` : ""}
+          <source src="${esc(F.mp4)}" type="video/mp4">
+        </video>
+        <button class="today-play" id="todayPlay" type="button" aria-label="Play, ${F.seconds} seconds" data-seconds="${F.seconds}"><svg class="tp-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><svg class="tp-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>
+      </div>
+      ${F.where ? `<figcaption>${esc(placeMonth(F.where, T.date))}</figcaption>` : ""}
+    </figure>` : "";
+  return `<!-- —— today: who I rode for (data/today.json). The lead (the day, the sign), what he said (his line, the ask), then his
+     pictures: the photo and the film side by side, a place · month line under each. —— -->
 <section class="today" id="today" aria-labelledby="today-h">
   <div class="wrap today-in">
-    <div class="today-words">
+    <div class="today-lead">
       <p class="eyebrow">The ride on ${esc(day)}.</p>
       <h2 class="today-sign" id="today-h">${MARK_WORD("today-mark")}<span class="plate today-plate" aria-hidden="true">${esc(T.for)}</span><span class="sr">I rode for ${esc(T.for)}</span></h2>
+    </div>
+    <div class="today-say">
       <p class="today-line">${esc(T.line)}</p>
       <p class="today-ask"><a class="link" href="/cyclefor/">What do you cycle for? Say it on video</a></p>
-      ${film}
     </div>
     <figure class="today-ph">
       ${img(T.photo, "(min-width: 1024px) 50vw, 100vw")}
       ${where ? `<figcaption>${esc(where)}</figcaption>` : ""}
     </figure>
+    ${film}
   </div>
 </section>
 `;
@@ -241,7 +248,7 @@ ${logRows}
         </ol>
       </div>
       <div class="miles-side">
-        <p class="miles-rides"><b class="num" id="roadRides">${T0 && T0.rides ? fmt(T0.rides) : "&mdash;"}</b> ${seasonText("rides since June 1.", "rides in 2027.")}</p>
+        <p class="miles-rides"><b class="num" id="roadRides">${T0 && T0.rides ? fmt(T0.rides) : "&mdash;"}</b> <span class="miles-rides-l">${seasonText("rides since June 1.", "rides in 2027.")}</span></p>
         <p class="miles-acts"><a class="link link--bone" href="${NOTE ? NOTE.href : "/events/2027/riding/"}">Read the last ride</a><a class="link link--bone" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Follow on Strava</a></p>
       </div>
     </div>
@@ -324,8 +331,9 @@ ${rows}
 `;
 }
 
-// —— 6. the orgs, and where the money goes (Center Ride Out until it has passed: CLAUDE.md §1) ——
-const ORGS = `<!-- —— 6. the orgs. One line each from the site's checked copy (research/events/2026-10-26-homepage-facts.md); the
+// —— 6. the orgs (ORGS_S), and where the money goes (RIDE_S: Center Ride Out until it has passed, CLAUDE.md §1). Two
+//    sections, two constants: the 2027 rides sit between them in the page (Oct 27, 2026) ——
+const ORGS_S = `<!-- —— 6. the orgs. One line each from the site's checked copy (research/events/2026-10-26-homepage-facts.md); the
      money goes through their own pages. The help lines sit here because the orgs' work comes up here. —— -->
 <section class="orgs" id="orgs" aria-labelledby="orgs-h">
   <div class="wrap">
@@ -358,8 +366,9 @@ const ORGS = `<!-- —— 6. the orgs. One line each from the site's checked cop
     </div>
   </div>
 </section>
+`;
 
-<!-- —— ride with me: the org ride (Center Ride Out) —— -->
+const RIDE_S = `<!-- —— ride with me: the org ride (Center Ride Out) —— -->
 <section class="ridewith" id="ride" aria-labelledby="ride-h">
   <div class="wrap ridewith-in">
     ${PH.figure("robert-desert", { cls: "" }).replace('<figure class="ph ', '<figure class="ph ridewith-ph ')}
@@ -367,7 +376,7 @@ const ORGS = `<!-- —— 6. the orgs. One line each from the site's checked cop
       <p class="eyebrow">A Los Angeles LGBT Center fundraiser</p>
       <h2 class="ridewith-big" id="ride-h"><span class="nowrap">April 23&ndash;25,</span> I cycle for <span class="plate plate--big">the Center</span></h2>
       <p>Center Ride Out. Los Angeles to Ojai, camp, then back along the coast to a finish by the ocean.</p>
-      <dl class="facts-dl">
+      <dl class="facts">
         <div><dt>3 days</dt><dd>200+ miles, <span class="nowrap">Apr 23&ndash;25, 2027</span></dd></div>
         <div><dt>1 day</dt><dd>Day 2 only</dd></div>
         <div><dt>Money</dt><dd>You raise it on the Center&rsquo;s page</dd></div>
@@ -391,7 +400,7 @@ const FIND = `<!-- —— 7. find a group ride —— -->
     <div class="find-tools">
       <form class="find" action="/rides/" method="get" role="search">
         <label class="find-lab" for="q">Your town or a ride name</label>
-        <div class="find-row"><input class="find-field" id="q" name="q" type="search" autocomplete="off"><button class="btn" type="submit">Search rides</button></div>
+        <div class="find-row"><svg class="find-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkSearch"/></svg><input class="find-field" id="q" name="q" type="search" autocomplete="off"><button class="btn" type="submit">Search rides</button></div>
       </form>
       <p class="find-links"><a class="link" href="/rides/no-drop/">No-drop rides</a><a class="link" href="/rides/lgbtq/">Queer rides</a><a class="link" href="/tonight/">Tonight</a></p>
     </div>
@@ -485,8 +494,9 @@ ${CHROME.HEADER.replace('<header class="nav site-head" id="nav">', '<header clas
 ${HERO}
 ${STRIP}
 ${STORY}
-${todaySection()}${ROAD}
-${yearSection()}${ORGS}
+${ROAD}
+${todaySection()}${ORGS_S}
+${yearSection()}${RIDE_S}
 ${FIND}
 ${READ}
 ${SIGN}

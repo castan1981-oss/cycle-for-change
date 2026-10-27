@@ -6,7 +6,8 @@
    the HTML is a fallback baked from the last read (scripts/tally.js); a broken feed is never painted as 0.
 
    Oct 26, 2026: the old page's dead code is gone (the chart, the waitlist form, the Instagram fetch nothing used,
-   the hero film for a #heroVid that no longer existed, the phone tally bar). New: the hero film. */
+   the hero film for a #heroVid that no longer existed, the phone tally bar). New: the hero film.
+   Oct 27, 2026: #today's film has one control, the disc on the poster (the Play / Pause line under it is gone). */
 (function () {
   "use strict";
 
@@ -194,24 +195,25 @@
     else window.addEventListener("load", function () { setTimeout(start, 250); });
   })();
 
-  /* —— today's film (#today): a tap on phones, on screen on desktop; Play / Pause under it (WCAG 2.2.2) —— */
-  var tv = $("todayVid"), tFig = $("todayFig"), tPlay = $("todayPlay"), tBtn = $("todayBtn"), tLabel = $("todayBtnLabel");
+  /* —— today's film (#today): a tap on phones, on screen on desktop. One control, the disc on the poster (Oct 27, 2026):
+     it never hides; the figure's data-playing swaps its glyph (home.css) and its label says what it does next,
+     "Pause" or "Play, N seconds" (WCAG 2.2.2). —— */
+  var tv = $("todayVid"), tFig = $("todayFig"), tPlay = $("todayPlay");
   if (tv) {
     tv.muted = true;
     var tUser = null;
+    var tSecs = tPlay ? tPlay.getAttribute("data-seconds") || "" : "";
     var tPaint = function () {
       var on = !tv.paused;
       if (tFig) tFig.setAttribute("data-playing", on ? "true" : "false");
-      if (tBtn) tBtn.setAttribute("data-playing", on ? "true" : "false");
-      if (tLabel) tLabel.textContent = on ? "Pause" : "Play";
+      if (tPlay) tPlay.setAttribute("aria-label", on ? "Pause" : "Play" + (tSecs ? ", " + tSecs + " seconds" : ""));
     };
     var tGo = function () { tv.preload = "auto"; var q = tv.play(); if (q && q.catch) q.catch(function () {}); };
     var tToggle = function () { if (tv.paused) { tUser = true; tGo(); } else { tUser = false; tv.pause(); } };
     tv.addEventListener("play", tPaint); tv.addEventListener("pause", tPaint);
-    tv.addEventListener("error", function () { if (tPlay) tPlay.hidden = true; if (tBtn) tBtn.hidden = true; }, true);
+    tv.addEventListener("error", function () { if (tPlay) tPlay.hidden = true; }, true);
     tv.addEventListener("click", tToggle);
-    if (tPlay) tPlay.addEventListener("click", function () { tToggle(); if (tBtn) tBtn.focus({ preventScroll: true }); });
-    if (tBtn) tBtn.addEventListener("click", tToggle);
+    if (tPlay) tPlay.addEventListener("click", tToggle);
     tPaint();
     if ("IntersectionObserver" in window) new IntersectionObserver(function (es) {
       if (!es[0].isIntersecting) { if (!tv.paused) tv.pause(); return; }
