@@ -259,7 +259,7 @@ homepage only; every other rule in this section still holds there and everywhere
   stencil (clean, no wear: the hero no longer carries `#lpWorn`), who and what, his line, one primary (Ride with me,
   `#heroRide`, the date on a rose plate) and one quiet link, "Find a group ride" (the approved direction). "Read the last
   ride" is in `#road` (the brand gate holds the strip under the hero to its numbers too; live had it on the first screen,
-  so this is Robert's call) The scrim rides with the words, not the screen (`.hero-in::before`): it eases in over the 200px
+  so this is Robert's call). The scrim rides with the words, not the screen (`.hero-in::before`): it eases in over the 200px
   above the stencil, .6 at its top, .72 at the foot — measured against every frame of both films at nine screen sizes
   (3:1 for the stencil and the intro, 4.5:1 for the line and the links): `python3 tools/hero-contrast.py` after any
   recut or change to the hero's type or scrim (exits 1 on a fail). Over the film the header is one solid bar on tar with a
