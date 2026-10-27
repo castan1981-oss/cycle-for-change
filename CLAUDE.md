@@ -343,22 +343,29 @@ form is **the OK** that lets him use their clip in his reels, boosted posts and 
 ### The Fruit Loop (`/fruitloop/`, Oct 23, 2026)
 Robert's own ride: a queer social night ride, **every Friday from Fri, Dec 11, 2026** (Robert, Oct 25: "Every friday is the
 ride second friday in december it starts"; it had been first Fridays from Dec 4), meet 5:30 pm, **roll 6:00** (Robert, Oct 23:
-"lets meet at 5:30 and roll at 6"; it had been 7:00, then 5:30 for a few minutes), coffee about 7:45, **about 15 flat miles with one stop** (Robert, Oct 23: "1 stop and then end at a gay
-coffee shop"; it had been 21 miles with eight stops, and 24 before that: "no climbs, I want social ride"), from the 2018
-rainbow crosswalk at Central and Portland: downtown on the 1981 Pride march route toward the Capitol, Encanto and Willo,
-**the one stop at the Melrose Curve** (7th Ave and Glenrosa, mile 8, about 15 minutes), Steele Indian School Park, the
-lit Grand Canal path (7th St to 12th St), Coronado, the old "Fruit Loop" bar circuit (Roosevelt, 3rd St, Portland, 1st
-St), and **coffee at the end, three blocks south of the start**. The intended spot is Skoden, inside Central Records, 824 N
-Central Ave (its co-owner calls it "a queer, Indigenous, femme-led coffee shop", New Times), but **the page doesn't name it
-until they've said yes** (Oct 25, 2026: the page went live first; the finish reads "over coffee, the spot gets named here
-once it's set"). Ask Central Records and Skoden (Friday hours at 7:45, ages, where 40 bikes go); The Churchill (901 N 1st
-St) is the backup. Name it in `build-fl15.py`'s place 7, the basics and the ride record once it's set. Seven places
-on the drawing, one stop. Free, no-drop, 18 and up, no sign-up. Streets and lit paths only: no dead-end detours, no
-climbs (about 60 ft of gain on the bare-earth model).
+"lets meet at 5:30 and roll at 6"; it had been 7:00, then 5:30 for a few minutes), coffee about 7:45, **about 14 flat miles with
+one stop** (Robert, Oct 23: "1 stop and then end at a gay coffee shop"; Oct 26: draft 7, "let me see 3" then "add this to all
+the material"). **The loop, draft 7 (14.4 mi, 59 ft of gain, not ridden yet):** from the 2018 rainbow crosswalk at Central and
+Portland, downtown first (2nd St, Monroe past Heritage Square, Washington west past Old City Hall on the 1981 Pride march route
+to 15th Ave, two blocks short of the Capitol), 15th Ave north, Encanto Park and Willo, **3rd Ave north (the Sonoran Bikeway)
+to where it ends above Indian School** (Robert, Oct 25: "up 3rd avenue"; the trans flag's corner, 3rd Ave and Indian School),
+the alley path to 6th Dr and Glenrosa, **the one stop at the Melrose Curve** (7th Ave and Glenrosa, mile 7.6, about 15
+minutes), 7th Ave north through the bend to the Grand Canal, the canal path east past Central and 7th St to 12th St (lit from
+7th St east), 12th St south through Coronado to Roosevelt, Roosevelt west, 1st St north past 915, Portland west to the
+crosswalk, and **coffee at the end, three blocks south of the start**. Draft 6 (8.2 mi, 3rd Ave up, 3rd St down) was the
+short version; draft 5 (15.5 mi) went through Steele park and the Fruit Loop circuit twice. Files: `scratchpad/ride/v4/d7-line.json`,
+`loop7.json` (the page's drawing), `files_d7.py` (GPX/FIT), the map page https://claude.ai/artifact/Y89z6wPyzUKEzDoLgDEFg3.
+The intended finish is Skoden, inside Central Records, 824 N Central Ave (its co-owner calls it "a queer, Indigenous,
+femme-led coffee shop", New Times), but **the page doesn't name it until they've said yes** (Oct 25, 2026: the page went live
+first; the finish reads "over coffee, the spot gets named here once it's set"). Ask Central Records and Skoden (Friday hours at
+7:45, ages, where 40 bikes go); The Churchill (901 N 1st St) is the backup. Name it in `build-fl7.py`'s place 7, the basics
+and the ride record once it's set. Seven places on the drawing (the crosswalk, Old City Hall, the Capitol, the trans flag at
+3rd and Indian School, the Curve, the Fruit Loop, coffee), one stop; passed: Heritage Square, CityScape, Encanto and Willo,
+the canal, Coronado. Free, no-drop, 18 and up, no sign-up. Streets and lit paths only: no dead-end detours, no climbs.
 - **Its own page, on purpose** (Robert: "special, not like the rest, with a Fruit Loop logo"): `cfc-site/fruitloop/`
   (`index.html`, `fruitloop.css`, `fruitloop.js`; on apply-chrome.py's list with `/styles.css` + its own sheet; body
   `theme-dark fl-page`). A night page: bruise ground, the ride's wordmark, the next-ride date and countdown
-  (`fruitloop.js`, every Friday from Dec 11, 2026, 6:00 pm Phoenix), the loop drawn with the seven place numbers (HTML buttons
+  (`fruitloop.js`, every Friday from Dec 11, 2026, 6:00 pm Phoenix), the loop drawn from `loop7.json` with the seven place numbers (HTML buttons
   placed by percent over the SVG, the stop's plate bigger, hairline leaders from the start, the finish and the circuit;
   every story is in the list without the script), one light room for "How it works".
 - **The lockup** (Robert's picks, Oct 25, 2026: "12 and 13" from the logo studies, then "Show em that design"): the
@@ -923,6 +930,7 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-24 — `#fix` opens the report form for hosts ("I run this ride" ticked) for the info-ask emails; the report form's field ids hang off its element id, not a build-order counter.
 - 2026-10-25 — The Fruit Loop is weekly: every Friday from Dec 11, 2026 (page, countdown, record, `.ics` weekly rule, kit, stickers, plan); the finish stays "over coffee" on the page until the shop says yes; the page goes live (#201 merged) so the posts and stickers have somewhere to point.
 - 2026-10-25 — The Fruit Loop lockup: the Progress chevron and the trans O (Robert's picks) on `/fruitloop/` and across the kit; `CSS_V` 48.
+- 2026-10-26 — The Fruit Loop is draft 7, about 14 miles (downtown, up 3rd Ave, the canal to 12th St, down through Coronado): the page's drawing and places, the record, the kit, the stickers, the plan.
 - 2026-10-25 — Answer-first ride pages: descriptions lead with when, where and cost (1,293 pages); monthly-rule rides carry their next date in the title (Critical Mass, bike parties); city names stop repeating; doubled periods in ledes gone.
 - 2026-10-25 — The sitemap index is written from its children (`scripts/sitemap-index.js`, run by every generator): each child's lastmod is the newest date inside it, not the Oct 6 it said for three weeks.
 - 2026-10-25 — The 2027 rides on the homepage (`#year`): all 13 Robert is doing, date order, from the calendar; the Oct 21 artifact refresh pulled in (640 events, 11 dates moved to confirmed, the Friends for Life Bike Rally and the Jonathan Pon Memorial Ride added; the Nov 7 ride's 2027 projection left out); `NEXT_RIDES` reads the same list, confirmed dates only; `CSS_V` 49.
