@@ -467,9 +467,10 @@ the canal, Coronado. Free, no-drop, 18 and up, no sign-up. Streets and lit paths
 
 ### Today I rode for (`#today` on the homepage, Oct 12, 2026)
 Every ride Robert says who he rode for that day. `data/today.json` (date, `for` = the plate, `line` = his words,
-`photo`, `photo2`, `film`) → `todaySection()` in `scripts/build-home.js` → a light section between the numbers and
-the road: the sign with the day's word on the plate, his line, a link to `/cyclefor/`, his pictures. Phones: words,
-the big photo, the film (a still until tapped, `/home.js`), the wide photo. Media in `cfc-site/img/today/` and
+`photo`, `photo2`, `film`) → `todaySection()` in `scripts/build-home.js` → a light section after the 10,000 (`#road`)
+and before the orgs: the sign with the day's word on the plate, his line, a link to `/cyclefor/`, his pictures (§3, the
+editorial homepage, has the grid). Phones: words with the film beside them (a still until tapped, `/home.js`), then the
+big photo full bleed; `photo2` is not shown. Media in `cfc-site/img/today/` and
 `cfc-site/film/today-*` (iPhone HDR tone-mapped to SDR, no audio; bump the number on a recut). His words and his
 pictures only; only Robert recognisable. Change the JSON and run `node scripts/build-home.js`.
 

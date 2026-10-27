@@ -120,3 +120,59 @@ Nothing is blocked.
 
 - "Read the last ride" opens your Oct 10 TSR write-up, the only one so far. The log right under the 10,000 lists rides through Sun Oct 25. That's true of what you've written up, not of what you've ridden. Your words, so your call.
 - If the hero looks crowded on your phone, your Oct 21 fallback still stands: "Read the last ride" on desktop only.
+
+## Final tree (`0791955349`)
+
+Read Tue Oct 27, 2026, by `brand-ambassador`. The tree at `0791955349` (`design/2026-10-27-cadence-final`), clean.
+
+**What I looked at:**
+- `git diff cbbc7224ed..HEAD` on `scripts/`, `home.css`, `home.js`, `chrome.css`, `styles.css`, `data/` and `CLAUDE.md`, and `cfc-site/index.html` as built.
+- Every visible string and attribute on the built homepage, against `cbbc7224ed`.
+- The 26 scrolled screens in `scratchpad/pass/final3/`, at 390 and 1440.
+- The two Trevor fixes, rendered from this tree: the homepage's orgs line and footer at 360, 390 and 1440, and the `/resources/` Right now door at 360, 375, 390 and 1440.
+- The map's squares against its outline, at 824px and 618px wide.
+- The two bands of the shadow photo that its new 4:5 crop shows.
+
+## PASS
+
+1. **Words: pass.**
+   - The only visible change is the directory count, 1,423 to 1,427. It comes from the data (main's Oct 26 re-check, #217).
+   - No new string in the copy, meta, alt text or labels. The film labels are the ones I passed.
+   - No banned word, nothing from the never-list.
+2. **Voice: pass.** No new copy. How this works keeps his three lines.
+3. **Lane Paint: pass.**
+   - The stencil only spells CYCLE FOR (the hero, the header, `#today`, `#sign`), and every blank is rose.
+   - Every value added to the sheets is an existing token. The two 2px rules (`.how`, `.story-in`) are flat asphalt lines, not washes.
+   - The one radius is the `#today` disc, the site's film control. It's 56px now (44 on phones), in the frame's bottom-left corner.
+   - Hover and press: the disc goes to concrete, then `--bone-2`. No rose. The one rose hover in `home.css` (line 544) is the hero tile's date plate going from smeared to powder rose as the tile goes dark. That's a plate following its ground, unchanged since round 1.
+   - The map: 24px ink squares, dashed patina when projected or TBA, hairline leaders in asphalt. The SVG's colours are plaster, `--dust-deep` and asphalt, as before.
+   - One primary per screen, labels in sentence case, buttons in caps: as in round 1.
+4. **The banned look: pass.** No serif, no mono, no tracked caps. No wheel, no 10000, no `///`.
+5. **Too polished: pass.** My round-1 note is closed. How this works is a ledger now: his line on the left, what it means on the right, a hairline under each row. It reads like a ride sheet, not a landing page.
+6. **Photos: pass.**
+   - No new picture or film. Nothing under `img/` or `film/` changed except the map SVG's leaders.
+   - The shadow photo is 4:5 from 1024 (it was square). It now shows rows 50–1399 of its 1440. The new bands are sky, the mountain and his bars. No vehicle.
+   - The `#today` film and photo moved; they didn't change. Only Robert.
+   - Every picture keeps its place · month caption.
+7. **Health: pass.**
+   - "Mental clarity" is still on the homepage only. 988 and Trevor sit in `#orgs`, right after it, and in the footer.
+   - "Trevor Project 1-866-488-7386" stays on one line in the orgs line and the footer at 360, 390 and 1440.
+   - The Right now door's Trevor number is on one line at every width, with a 44px pad. The pad stops at least 41px above the Call 988 button.
+8. **Two actions: pass.** Nothing added. The hero's three are Robert's Oct 21 call and Cadence's must, as ruled in round 1.
+
+**Miles: pass.** 4,273 training miles since June 1, and 111 rides. Never against the 10,000.
+
+## The record: three sentences to fix (not a block)
+
+Round 1's fixes are in: the grass and kerb (`hero-film.py`, CLAUDE.md §3), the sign's dash, the squares. I checked the new comments on How this works, `#today`, `#road` and the story against the screens, and they hold. So do the NUDGE spacing claims: the nearest centres are 40.3px apart at 1440, no squares touch at 1024, and none covers another town or Phoenix.
+
+Three sentences don't say what's in the frame:
+
+- **CLAUDE.md §5, "Today I rode for" (lines 470–472):** "a light section between the numbers and the road" and "Phones: words, the big photo, the film (a still until tapped, `/home.js`), the wide photo."
+  - The section now comes after `#road` and before `#orgs`.
+  - On a phone the film sits beside his line, then the photo.
+  - The wide photo (`photo2` in `today.json`) isn't on the page. `build-home.js` hasn't read it since the editorial pass. I missed this in round 1.
+- **`scripts/build-home.js`, the NUDGE comment:** "every square on land". That's true of the centres. Sea Otter's square (4) and Recovery Ride's (13) are about half over the Pacific at both widths. It should say "every square's centre on land".
+- **`cfc-site/styles.css`, the Right now door:** "Nothing else in the door is a link". The Call 988 button is a link. The pad still reaches nothing (see 7).
+
+None of them changes what a visitor sees, so none blocks. Fix them before merge, the way round 1's were.
