@@ -307,7 +307,7 @@ function yearSection() {
       </figure>`;
   }
   return `<!-- —— 5. the 2027 rides (data/calendar-2027.json, riding: true, through chrome.js): where on the map, when in the
-     list. Dates are the organizers'; projected and TBA say so; the dots and the rows open the ride on the riding page. —— -->
+     list. Dates are the organizers'; projected and TBA say so; the rows open the ride on the riding page; the dots carry the rows' numbers and open nothing. —— -->
 <section class="year" id="year" aria-labelledby="year-h">
   <div class="wrap">
     <p class="rule"><span class="rule-l">${RIDING.length} rides</span></p>

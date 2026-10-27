@@ -6,6 +6,11 @@ finds its target by the words a stranger reads. Nothing on the site was changed.
 - **Live:** the live homepage files (byte-identical to `origin/main`: `index.html`, `home.css`, `home.js`, `chrome.css`,
   `chrome.js`, `ridebar.js`).
 - **Proposed:** `feat/home-editorial-film` at `f1c1f0e382`.
+  - The two commits after it (`ad57de1a59`, `1fbc2c3b73`) are notes only.
+  - Every run finished by 01:51. At 01:52 a builder started uncommitted edits in the shared checkout: 11 lines across
+    `index.html`, `home.css` and `home.js`, one `chrome.css` rule, and a version bump on the pages.
+  - Those edits aren't measured here. From the diff, they don't move "Read the last ride", the map dots or the
+    scroll-padding rule. They do drop `aria-pressed` from the film button.
 - **Setup:**
   - An in-process `http.server` started by the same Python script that drives Playwright.
   - `/api/*` returns 404, so both pages keep their baked numbers.
@@ -175,8 +180,9 @@ Smallest tap target on the first screen, box (hit area):
   proposed page it comes one stop sooner and lands on the film's own control.
 - Keyboard only. Touch is unaffected.
 
-For the access desk: the film button flips its label ("Play the film" / "Pause the film") *and* `aria-pressed`. A screen
-reader hears "Play the film, toggle button, pressed" while it's stopped. One of the two would do.
+For the access desk: at `f1c1f0e382` the film button flips its label ("Play the film" / "Pause the film") *and*
+`aria-pressed`. A screen reader hears "Play the film, toggle button, pressed" while it's stopped. The uncommitted edit
+in progress removes `aria-pressed`, which settles it.
 
 ## Anything that moves under the thumb
 - CLS was 0.000 on every homepage load in both versions: reduced motion on and off, and with the film playing (VP9 plays in
