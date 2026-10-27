@@ -26,7 +26,7 @@ const OG_IMAGE = `${SITE}/og-cfc.png`;
 // /chrome.css and every section sheet a generator passes (any old ?v= is replaced), apply-chrome.py gets it through
 // head(), build-home.js puts it on /home.css. Bump it whenever a stylesheet or /chrome.js changes and regenerate in the
 // §2 order: a page must never pair an old /chrome.css with new section sheets (they share cascade layers).
-const CSS_V = 50;
+const CSS_V = 55;
 const ver = (href) => `${href.split("?")[0]}?v=${CSS_V}`;
 
 // Counts shown in the mobile menu, same as the homepage. Read from the data so
@@ -122,7 +122,7 @@ const MARK = `<svg class="brand-mark" viewBox="0 0 760 150" aria-hidden="true" f
 // page, never on the bar. SHORT and WHERE are the house phrasings for the bar and the homepage; everything else is
 // the calendar's own text (`place()` mirrors scripts/build-calendar.js).
 const SHORT = { "life-time-sea-otter-classic": "Sea Otter Classic", "life-time-unbound-gravel": "Unbound Gravel", "seattle-to-portland-bicycle-classic": "Seattle to Portland", "recovery-ride": "Recovery Ride" };
-const WHERE = { "center-ride-out": "LA to Ojai and back", "cycle-to-zero": "SF to the Russian River", "friends-for-life-bike-rally": "Toronto to Montr\u00e9al", "seattle-to-portland-bicycle-classic": "205 to 208 miles, two days", "recovery-ride": "Sausalito to Guerneville and back" };
+const WHERE = { "center-ride-out": "LA to Ojai and back", "cycle-to-zero": "SF to the Russian River", "friends-for-life-bike-rally": "Toronto to Montr\u00e9al", "seattle-to-portland-bicycle-classic": "206 miles, one or two days", "recovery-ride": "Sausalito to Guerneville and back" };
 const MON3 = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const ymd = (iso) => String(iso || "").split("-").map(Number);
 // "Feb 6", "Apr 23\u201325", "Sep 30\u2013Oct 2"; "" when there is no date
@@ -252,7 +252,7 @@ const FOOTER = `<footer class="foot site-foot">
     </div>
     <div class="foot-crisis">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <span class="foot-tv"><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span> or text START to 678-678</span>
     </div>
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
