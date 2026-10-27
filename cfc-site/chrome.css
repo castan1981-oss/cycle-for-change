@@ -695,3 +695,4 @@ html{scroll-padding-top:calc(var(--nav-h) + 12px)}      /* focus and anchors nev
 .menu-foot a,.foot-crisis a{position:relative;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:currentColor}
 .menu-foot a::before,.foot-crisis a::before{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;margin-top:-22px}
 .menu-foot a b,.foot-crisis a b{color:inherit}
+.menu-foot a[href^="tel"],.foot-crisis a[href^="tel"]{white-space:nowrap}   /* the Trevor number never breaks at its hyphen (Oct 27, 2026) */

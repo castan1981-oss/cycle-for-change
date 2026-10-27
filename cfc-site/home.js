@@ -160,7 +160,7 @@
     }
     function paint() {
       var on = !v.paused && hero.getAttribute("data-film") === "on";
-      btn.setAttribute("aria-pressed", on ? "false" : "true");
+      /* the label says what the button does next ("Pause the film" / "Play the film"); no aria-pressed on top of it (VoiceOver read both) */
       if (label) label.textContent = on ? "Pause the film" : "Play the film";
       hero.setAttribute("data-playing", on ? "true" : "false");
     }

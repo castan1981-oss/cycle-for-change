@@ -251,7 +251,8 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .log .bar-mi{grid-area:bar;display:block;height:8px;width:calc(var(--w,0) * 100%);min-width:12px;background:var(--creosote-lift);
   clip-path:polygon(0 6%,98.8% 0,100% 40%,99.4% 100%,.4% 94%)}
 .strava-attrib{margin:12px 0 0;font-size:.8125rem;line-height:1.4;color:var(--dust)}
-.strava-attrib a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.strava-attrib a{position:relative;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.strava-attrib a::before{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;margin-top:-22px}   /* a 44px hit area that doesn't move the line */
 .miles-rides{margin:0 0 var(--s4);font-size:var(--fs-intro);color:var(--dust)}
 .miles-rides b{color:var(--paper);font-weight:800}
 .miles-acts{display:flex;flex-wrap:wrap;gap:16px 32px;margin:0}
@@ -379,7 +380,7 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .find-lab{display:block;margin-bottom:8px;font:var(--label);color:var(--asphalt)}
 .find-row{display:flex;gap:8px}
 .find-field{flex:1 1 auto;min-width:0}
-.find-links{display:flex;flex-wrap:wrap;gap:10px 28px;margin:var(--s3) 0 0}
+.find-links{display:flex;flex-wrap:wrap;gap:20px 28px;margin:var(--s3) 0 0}
 @media (max-width:479px){.find-row{flex-direction:column}.find-row .btn{width:100%}}
 @media (min-width:1024px){
   .find-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
@@ -452,5 +453,6 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .home .foot{margin-top:0;border-top:1px solid var(--line-d)}
 .home .foot-sign{display:none}
 @media (min-width:1024px){.home .foot-grid{grid-column:1 / -1}}
-.home .hero-ride:focus-visible,.home .hero-pause:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+.home .hero-ride:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+.home .hero-pause:focus-visible{outline:2px solid var(--paper);outline-offset:-5px}   /* inside its own dark ground: over the film an outside ring fell on bright frames */
 @media (prefers-reduced-motion:reduce){.hero-film{transition:none}}
