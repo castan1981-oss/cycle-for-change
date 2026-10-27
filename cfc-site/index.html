@@ -26,8 +26,8 @@
   <meta name="theme-color" content="#141218">
   <script>document.documentElement.className+=" js"</script>
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" type="image/avif" imagesrcset="/film/hero-phone-3.avif" media="(max-width: 759px), (max-aspect-ratio: 1/1)" fetchpriority="high">
-  <link rel="preload" as="image" type="image/avif" imagesrcset="/film/hero-wide-3.avif" media="(min-width: 760px) and (min-aspect-ratio: 1/1)" fetchpriority="high">
+  <link rel="preload" as="image" type="image/avif" imagesrcset="/film/hero-phone-4.avif" media="(max-width: 759px), (max-aspect-ratio: 1/1)" fetchpriority="high">
+  <link rel="preload" as="image" type="image/avif" imagesrcset="/film/hero-wide-4.avif" media="(min-width: 760px) and (min-aspect-ratio: 1/1)" fetchpriority="high">
   <link rel="stylesheet" href="/chrome.css?v=51">
   <link rel="stylesheet" href="/home.css?v=51">
 
@@ -123,15 +123,15 @@
 <section class="hero" id="top" aria-labelledby="hero-h" data-film="off">
   <div class="hero-media">
     <picture class="hero-poster">
-      <source media="(min-width: 760px) and (min-aspect-ratio: 1/1)" type="image/avif" srcset="/film/hero-wide-3.avif">
-      <source media="(min-width: 760px) and (min-aspect-ratio: 1/1)" type="image/webp" srcset="/film/hero-wide-3.webp">
-      <source media="(min-width: 760px) and (min-aspect-ratio: 1/1)" srcset="/film/hero-wide-3.jpg">
-      <source type="image/avif" srcset="/film/hero-phone-3.avif">
-      <source type="image/webp" srcset="/film/hero-phone-3.webp">
-      <img src="/film/hero-phone-3.jpg" width="608" height="1080" alt="Robert riding at the camera in a mint jersey and a yellow helmet, a desert road behind him." fetchpriority="high">
+      <source media="(min-width: 760px) and (min-aspect-ratio: 1/1)" type="image/avif" srcset="/film/hero-wide-4.avif">
+      <source media="(min-width: 760px) and (min-aspect-ratio: 1/1)" type="image/webp" srcset="/film/hero-wide-4.webp">
+      <source media="(min-width: 760px) and (min-aspect-ratio: 1/1)" srcset="/film/hero-wide-4.jpg">
+      <source type="image/avif" srcset="/film/hero-phone-4.avif">
+      <source type="image/webp" srcset="/film/hero-phone-4.webp">
+      <img src="/film/hero-phone-4.jpg" width="608" height="1080" alt="Robert riding at the camera in a mint jersey and a yellow helmet, a desert road behind him." fetchpriority="high">
     </picture>
     <video class="hero-film" id="heroFilm" muted loop playsinline disablepictureinpicture preload="none" aria-hidden="true" tabindex="-1"
-      data-phone-mp4="/film/hero-phone-3.mp4" data-phone-webm="/film/hero-phone-3.webm" data-wide-mp4="/film/hero-wide-3.mp4" data-wide-webm="/film/hero-wide-3.webm" data-wide-q="(min-width: 760px) and (min-aspect-ratio: 1/1)"></video>
+      data-phone-mp4="/film/hero-phone-4.mp4" data-phone-webm="/film/hero-phone-4.webm" data-wide-mp4="/film/hero-wide-4.mp4" data-wide-webm="/film/hero-wide-4.webm" data-wide-q="(min-width: 760px) and (min-aspect-ratio: 1/1)"></video>
     <div class="hero-scrim" aria-hidden="true"></div>
   </div>
   <div class="wrap hero-in">
@@ -148,7 +148,6 @@
 
 <!-- —— 2. the numbers, on a lane. One number for the miles (since June 1); the 10,000 is said once, in #road, never next to it. —— -->
 <section class="strip" aria-label="The numbers">
-  <div class="lane lane--top" aria-hidden="true"></div>
   <div class="wrap strip-in">
     <p class="strip-cell strip-cell--miles"><span class="strip-n"><b class="num" data-miles>4,273</b></span><span class="strip-l"><span data-season="training">training miles since June 1, </span><span data-season="2027" hidden>miles in 2027, </span><a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">on Strava</a>.<span data-season="training"> The count restarts in <b class="num" id="daysTo">66</b> <span id="daysW">days</span>.</span><span data-season="2027" hidden></span></span></p>
     <a class="strip-cell finder-tile" href="/rides/"><span class="strip-n num">1,423</span><span class="strip-l">group rides worldwide</span></a>
@@ -244,25 +243,24 @@
     <div class="year-grid">
       <figure class="yr-map" aria-hidden="true">
         <div class="yr-map-in">
-          <img class="yr-map-svg" src="/img/home/map-2027.svg?v=f97383fe" width="940" height="560" alt="" loading="lazy" decoding="async">
-          <span class="mp-dot" style="left:12.18%;top:66.98%"><span class="num">1</span></span>
-          <span class="mp-dot" style="left:23.87%;top:67.77%"><span class="num">2</span></span>
-          <span class="mp-dot" style="left:49.87%;top:62.50%"><span class="num">3</span></span>
-          <span class="mp-dot" style="left:2.83%;top:49.27%"><span class="num">4</span></span>
-          <span class="mp-dot" style="left:8.16%;top:62.34%"><span class="num">5</span></span>
-          <span class="mp-dot" style="left:6.16%;top:45.41%"><span class="num">6</span></span>
-          <span class="mp-dot" style="left:51.56%;top:53.20%"><span class="num">7</span></span>
-          <span class="mp-dot" style="left:9.32%;top:5.80%"><span class="num">8</span></span>
-          <span class="mp-dot" style="left:80.67%;top:27.54%"><span class="num">9</span></span>
-          <span class="mp-dot" style="left:91.46%;top:36.04%"><span class="num">10</span></span>
-          <span class="mp-dot mp-dot--soft" style="left:19.15%;top:60.91%"><span class="num">11</span></span>
-          <span class="mp-dot mp-dot--soft" style="left:22.27%;top:76.21%"><span class="num">12</span></span>
-          <span class="mp-dot mp-dot--soft" style="left:5.13%;top:39.68%"><span class="num">13</span></span>
+          <img class="yr-map-svg" src="/img/home/map-2027.svg?v=dff24448" width="968" height="620" alt="" loading="lazy" decoding="async">
+          <span class="mp-dot" style="left:12.45%;top:62.76%"><span class="num">1</span></span>
+          <span class="mp-dot" style="left:23.80%;top:63.47%"><span class="num">2</span></span>
+          <span class="mp-dot" style="left:49.05%;top:58.71%"><span class="num">3</span></span>
+          <span class="mp-dot" style="left:3.37%;top:46.76%"><span class="num">4</span></span>
+          <span class="mp-dot" style="left:8.54%;top:58.56%"><span class="num">5</span></span>
+          <span class="mp-dot" style="left:6.60%;top:43.27%"><span class="num">6</span></span>
+          <span class="mp-dot" style="left:50.69%;top:50.31%"><span class="num">7</span></span>
+          <span class="mp-dot" style="left:9.67%;top:7.50%"><span class="num">8</span></span>
+          <span class="mp-dot" style="left:78.96%;top:27.13%"><span class="num">9</span></span>
+          <span class="mp-dot" style="left:89.43%;top:34.81%"><span class="num">10</span></span>
+          <span class="mp-dot mp-dot--soft" style="left:19.21%;top:57.27%"><span class="num">11</span></span>
+          <span class="mp-dot mp-dot--soft" style="left:22.24%;top:71.10%"><span class="num">12</span></span>
+          <span class="mp-dot mp-dot--soft" style="left:5.60%;top:38.10%"><span class="num">13</span></span>
         </div>
-        <p class="yr-key"><i></i>Phoenix</p>
       </figure>
-      <div class="year-list-wrap">
-        <ol class="year-list">
+      <div class="year-aside"><p class="yr-key" aria-hidden="true"><i></i>Phoenix</p><p class="note-sm">Ten with dates from the organizer; two sit on the 2026 weekend until the organizer posts 2027; one hasn&rsquo;t put out 2027 dates yet.</p></div>
+      <ol class="year-list">
       <li class="yr"><a href="/events/2027/riding/#tour-de-palm-springs"><span class="yr-i num" aria-hidden="true">1</span><span class="date"><span class="date-m">Feb</span><span class="date-d num">6</span></span><span class="yr-n"><b>Tour de Palm Springs</b><span class="yr-l">Palm Springs, CA · road</span></span></a></li>
       <li class="yr"><a href="/events/2027/riding/#belgian-waffle-ride-arizona"><span class="yr-i num" aria-hidden="true">2</span><span class="date"><span class="date-m">Mar</span><span class="date-d num">5&ndash;6</span></span><span class="yr-n"><b>Belgian Waffle Ride Arizona</b><span class="yr-l">Fountain Hills, AZ · gravel</span></span></a></li>
       <li class="yr"><a href="/events/2027/riding/#the-mid-south"><span class="yr-i num" aria-hidden="true">3</span><span class="date"><span class="date-m">Mar</span><span class="date-d num">11</span></span><span class="yr-n"><b>The Mid South</b><span class="yr-l">Stillwater, OK · gravel</span></span></a></li>
@@ -276,9 +274,8 @@
       <li class="yr yr--soft"><a href="/events/2027/riding/#chino-grinder"><span class="yr-i num" aria-hidden="true">11</span><span class="date date--soft"><span class="date-m">Oct</span><span class="date-d num">16</span></span><span class="yr-n"><b>Chino Grinder</b><span class="yr-l">Chino Valley, AZ · gravel · date projected</span></span></a></li>
       <li class="yr yr--soft"><a href="/events/2027/riding/#el-tour-de-tucson"><span class="yr-i num" aria-hidden="true">12</span><span class="date date--soft"><span class="date-m">Nov</span><span class="date-d num">20</span></span><span class="yr-n"><b>El Tour de Tucson</b><span class="yr-l">Tucson, AZ · road · date projected</span></span></a></li>
       <li class="yr yr--soft"><a href="/events/2027/riding/#recovery-ride"><span class="yr-i num" aria-hidden="true">13</span><span class="date date--soft"><span class="date-m">2027</span><span class="date-d">TBA</span></span><span class="yr-n"><b>Recovery Ride</b><span class="yr-l">Sausalito to Guerneville and back · 3 days · 2027 dates to come</span></span></a></li>
-        </ol>
-        <div class="year-foot"><a class="link" href="/events/2027/riding/">All my 2027 rides, with sign-up links</a><p class="note-sm">Ten with dates from the organizer; two sit on the 2026 weekend until the organizer posts 2027; one hasn&rsquo;t put out 2027 dates yet.</p></div>
-      </div>
+      </ol>
+      <p class="year-foot"><a class="link" href="/events/2027/riding/">All my 2027 rides, with sign-up links</a></p>
     </div>
   </div>
 </section>
@@ -346,7 +343,7 @@
     <div class="find-tools">
       <form class="find" action="/rides/" method="get" role="search">
         <label class="find-lab" for="q">Your town or a ride name</label>
-        <div class="find-row"><input class="find-field" id="q" name="q" type="search" autocomplete="off"><button class="btn btn--ink" type="submit">Search rides</button></div>
+        <div class="find-row"><input class="find-field" id="q" name="q" type="search" autocomplete="off"><button class="btn" type="submit">Search rides</button></div>
       </form>
       <p class="find-links"><a class="link" href="/rides/no-drop/">No-drop rides</a><a class="link" href="/rides/lgbtq/">Queer rides</a><a class="link" href="/tonight/">Tonight</a></p>
     </div>
@@ -369,7 +366,6 @@
 
 <!-- —— 9. CYCLE FOR + the blank. A visitor types and the plate takes the word; nothing leaves the page. —— -->
 <section class="sign" id="sign" aria-labelledby="sign-h">
-  <div class="lane lane--top" aria-hidden="true"></div>
   <div class="wrap sign-in">
     <h2 class="sign-h" id="sign-h"><svg class="sign-mark" viewBox="0 0 626 150" aria-hidden="true" focusable="false"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/><use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/></g></svg><span class="plate sign-plate" id="signPlate" data-empty="true" data-sign-plate aria-hidden="true"></span><span class="sr" id="signSr">Cycle for</span></h2>
     <div class="sign-form">

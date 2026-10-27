@@ -90,6 +90,7 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 | `python3 tools/print.py` | the Pass 27 screenprint. Not used on the hero since Pass 32; kept for reference. |
 | `scripts/towns.js`, `scripts/blocks.js` | the one town lookup + strip; the shared ride-report form and how-it's-built tiles |
 | `node scripts/tally.js` | the baked tally on the homepage: reads `/api/strava` (the one place the site may read Strava), keeps `data/tally.json`, and rewrites every `[data-miles]`, the four "last rides" rows and the `#tallyData` JSON that `/home.js` paints first. build-home.js applies the copy; build-rides.js refreshes it live on every deploy. Never type the number. Tests: `tools/test/tally.test.js`. |
+| `python3 tools/hero-film.py` + `python3 tools/hero-contrast.py` | the homepage hero films (`cfc-site/film/hero-*-N.*`, from his own footage, car-free) and the check that the hero's type reads on every frame of them (§3, the editorial homepage) |
 | `node scripts/build-signals.js` | `cfc-site/llms.txt` (what the site is, for AI search; counts from the data) and `cfc-site/feed.xml` (RSS of guides, field notes, journal, event and town pages, newest first by the sitemaps' lastmod). build-rides.js runs it last on every build, so the deploy keeps them current. Tests: `tools/test/build-signals.test.js`. |
 
 After a change to `scripts/chrome.js`, regenerate everything that wears it, the same day, in this
@@ -247,9 +248,9 @@ the freeze above for it ("Everything is to go you have my permission"): "a blend
 ASSOS's precision, but original to Cycle for Change. Softer/feminine, premium and expressive." The brief is
 `research/design/2026-10-26-editorial-home/` (with the Wrenches' and the desks' reviews). What it changes, on the
 homepage only; every other rule in this section still holds there and everywhere else:
-- **The first screen is his film, full screen** (`100svh`): `cfc-site/film/hero-phone-3.*` (608×1080, one full frame,
-  four shots, his face first; phones and portrait screens) and `hero-wide-3.*` (1620×960, two panels cut together in pairs
-  that share a light, the words in the wide left one, the gutter at 70% so no nav link sits on it; landscape ≥760px), cut by
+- **The first screen is his film, full screen** (`100svh`): `cfc-site/film/hero-phone-4.*` (608×1080, one full frame,
+  four shots, his face first; phones and portrait screens) and `hero-wide-4.*` (1620×960, two panels cut together in pairs
+  that share a light (never the hazy dawn beside the blue sky), the words in the wide left one, the gutter at 70% so no nav link sits on it; landscape ≥760px), cut by
   `python3 tools/hero-film.py` from his own footage only (the v1 three-band cut put seams through the type and was dropped
   in review), car-free, only him recognisable. **It plays on phones too** (this replaces "a still, not a film, on
   phones" for the hero): muted, inline, looped, after load, never under reduced motion, Save-Data or a 2G/3G connection, paused off screen,
@@ -258,18 +259,22 @@ homepage only; every other rule in this section still holds there and everywhere
   `#heroRide`, the date on a rose plate) and one quiet link, "Find a group ride" (the approved direction; "Read the last
   ride" lives in `#road`). The scrim rides with the words, not the screen (`.hero-in::before`): it eases in over the 200px
   above the stencil, .6 at its top, .72 at the foot — measured against every frame of both films at nine screen sizes
-  (3:1 for the stencil and the intro, 4.5:1 for the line and the links); recut the film, re-measure. Over the film the header shows only the menu (and the nav
+  (3:1 for the stencil and the intro, 4.5:1 for the line and the links): `python3 tools/hero-contrast.py` after any
+  recut or change to the hero's type or scrim (exits 1 on a fail). Nothing darkens the top of the frame: over the film the
+  menu button (under 900) and the nav links (900 and up) sit on the Pause button's small dark ground. Over the film the header shows only the menu (and the nav
   links at ≥900); the mark and the header's Ride with me come back once the film has scrolled under it.
 - **Two textures, small:** a fine asphalt aggregate (`img/home/asphalt-2.webp`, a 2x tile, opacity .24) on the two dark
-  rooms only (`#road` and `#sign`), never on a photo; a worn lane line (`img/home/lane-rose-3.svg` on light,
-  `lane-powder-3.svg` on dark; long dashes at a fixed size, drawn shapes, no filter) — rose as wet paint, twice.
+  rooms only (`#road` and `#sign`), never on a photo; a worn lane-line dash at the start of a grid column
+  (`img/home/dash-rose-1.svg` on light over the strip's three numbers, `dash-powder-1.svg` on dark over the sign; drawn
+  shapes, no filter) — rose as wet paint, lined up with what it marks.
   `python3 tools/home-art.py` draws them. Torn-paper captions and a drawn bicycle were in the approved direction and were
   cut in review (they read as decoration and no drawing was good enough); captions are plain place · month lines.
 - **Rose on the homepage** is the blank, the plates, the lane paint and the log strokes. Nothing else.
 - **The 2027 rides get a map** (≥760px; `tools/home-map.js` → `data/geo/home-2027.json` → `img/home/map-2027.svg`): a
   numbered dot per ride at its start town, outlined when the date is projected or TBA, a square for Phoenix, nothing drawn
-  between (never a route we drew), numbers as HTML. Rows are outlined date blocks (dashed when projected/TBA); from 1024
-  the map sits over the list and the list runs in two columns.
+  between (never a route we drew), numbers as HTML; the whole lower 48 with a margin, no Canada fill (any box cuts it with a straight edge). Rows are
+  outlined date blocks (dashed when projected/TBA); from 1024 the map takes eight columns with the key and the dates note
+  beside it, and the list runs in two columns under both.
 - **One opener size** for the big section heads (`.story-h .year-h .orgs-h .find-h`, 800), 900 kept for the 10,000, the
   plates and the date numerals. Section labels on a hairline (`.rule`) only where the site already had the label.
 - **The orgs sit on patina** (the soft room), with the 988 / Trevor line in the section.
@@ -831,7 +836,7 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
   homepage it's a crisp 4:5 picture with a round plaster play button on the poster and a
   play/pause line under it (Robert: the feathered version "looks unfinished"). `home-film.mp4` is unused. Recut with `ffmpeg` (CRF ~30,
   `+faststart`, no audio). Social video cuts never go in git.
-  Oct 26, 2026 (the editorial homepage): the homepage's film is the hero, `hero-phone-3` / `hero-wide-3`, cut by
+  Oct 26, 2026 (the editorial homepage): the homepage's film is the hero, `hero-phone-4` / `hero-wide-4`, cut by
   `tools/hero-film.py` from four clean shots of road-film-2 (his face first; the mint shot from 0.40 s, the bike and
   tunnel shots out after the brand gate's second read); the reel player is off the homepage. Every
   shot was looked at for vehicles. **road-film-2 itself is not car-free**: the brand gate found a car at the far end of its

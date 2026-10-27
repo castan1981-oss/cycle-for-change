@@ -28,10 +28,11 @@
 /* one section opener size, 800 (900 is kept for the 10,000, the plates and the date numerals) */
 .story-h,.year-h,.orgs-h,.find-h{margin:0;font-size:clamp(2.5rem,1.35rem + 4.6vw,5.75rem);font-weight:800;line-height:.92;letter-spacing:-.035em;text-wrap:balance}
 
-/* lane paint: a lane line, long dashes at a fixed size, one centred on the page so both edges cut the same */
-.lane{height:10px;background:url(/img/home/lane-rose-3.svg) 50% 50%/auto 100% repeat-x}
-.miles .lane,.sign .lane{background-image:url(/img/home/lane-powder-3.svg)}
-@media (min-width:1024px){.lane{height:14px}}
+/* lane paint: one worn dash at the start of a grid column, so the paint lines up with what it marks (the strip's three
+   numbers, the sign); smeared rose on light, powder on dark */
+.strip-cell::before,.sign-in::before{content:"";display:block;width:min(100%,208px);height:10px;background:url(/img/home/dash-rose-1.svg) 0 0/100% 100% no-repeat}
+.sign-in::before{background-image:url(/img/home/dash-powder-1.svg)}
+@media (min-width:1024px){.strip-cell::before,.sign-in::before{width:min(100%,272px);height:13px}}
 
 /* the two dark rooms: asphalt, felt more than seen */
 .miles,.sign{position:relative;isolation:isolate;background-color:var(--tar);color:var(--paper);--ring:var(--paper)}
@@ -49,11 +50,12 @@
 .hero-poster img{max-width:none}
 .hero-film{opacity:0;transition:opacity var(--t-open) var(--ease)}
 .hero[data-film="on"] .hero-film{opacity:1}
-/* the measured scrim (tools: scratchpad need.py, every frame of both films at nine screen sizes): the words need .52 behind
-   the stencil and .62 behind the small type on the brightest frame (3:1 large, 4.5:1 small, 95th-percentile background).
-   So the scrim rides with the words, not the screen: it eases in over the 200px above the stencil, is .6 at the
-   stencil's top and .72 at the foot, whatever the screen's height. The frame itself only gets a band under the nav. */
-.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,24,.5) 0,rgba(20,18,24,0) 120px)}
+/* the measured scrim (python3 tools/hero-contrast.py: every frame of both films at nine screen sizes): the words need .52
+   behind the stencil and .62 behind the small type on the brightest frame (3:1 large, 4.5:1 small, 95th-percentile
+   background). So the scrim rides with the words, not the screen: it eases in over the 200px above the stencil, is .6 at
+   the stencil's top and .72 at the foot, whatever the screen's height. Nothing darkens the top of the frame: the menu
+   button and the nav links carry their own small ground, like the Pause button, so the sky stays clear. */
+.hero-scrim{position:absolute;inset:0}
 .hero-in{position:relative;display:flex;flex-direction:column;align-items:flex-start;padding-top:calc(var(--nav-h) + 40px);padding-bottom:calc(env(safe-area-inset-bottom,0px) + 24px)}
 .hero-in::before{content:"";position:absolute;z-index:-1;pointer-events:none;left:-100vw;right:-100vw;top:calc(var(--nav-h) + 40px - 200px);bottom:0;
   background:linear-gradient(180deg,rgba(20,18,24,0) 0,rgba(20,18,24,.1) 60px,rgba(20,18,24,.3) 120px,rgba(20,18,24,.5) 170px,rgba(20,18,24,.6) 200px,rgba(20,18,24,.72) 100%)}
@@ -109,9 +111,8 @@
 }
 @media (min-width:760px) and (min-aspect-ratio:1/1){
   /* two panels; the words sit in the wide left one. Their scrim fades out over 360px past the stencil's end, so his face
-     in the tall panel stays clear; the band under the nav is as dark as the 15px links need (.62) */
+     in the tall panel stays clear */
   .hero-poster img,.hero-film{object-position:50% 50%}
-  .hero-scrim{background:linear-gradient(180deg,rgba(20,18,24,.7) 0,rgba(20,18,24,.64) 56px,rgba(20,18,24,0) 160px)}
   .hero-in::before{right:auto;width:calc(100vw + var(--gut) + 1100px);
     -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 360px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 360px),transparent)}
 }
@@ -120,9 +121,9 @@
 /* ——————————————————————————————————————————————————————————
    2. the strip: the numbers on a lane (concrete, the light room after the film)
    —————————————————————————————————————————————————————————— */
-.strip{position:relative;background:var(--bone);color:var(--asphalt);padding:calc(var(--s4) + 16px) 0 var(--s5)}
-.strip .lane--top{position:absolute;left:0;right:0;top:24px}
-.strip-in{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s4) var(--col-gap);padding-top:var(--s4)}
+.strip{position:relative;background:var(--bone);color:var(--asphalt);padding:var(--s4) 0 var(--s5)}
+.strip-in{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s4) var(--col-gap)}
+.strip-cell::before{margin-bottom:var(--s3)}
 .strip-cell{margin:0;display:flex;flex-direction:column;align-items:flex-start;gap:10px;color:inherit;text-decoration:none}
 .strip-cell--miles{grid-column:1 / -1}
 .strip-n{font-weight:900;font-size:clamp(2.5rem,1.6rem + 3.2vw,4.75rem);line-height:.88;letter-spacing:-.045em;font-variant-numeric:lining-nums tabular-nums}
@@ -213,7 +214,9 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .today-film-len{font:var(--label);color:var(--mute)}
 @media (max-width:899px){
   .today-ph{margin-inline:calc(-1 * var(--gut))}
-  .today-film{width:min(62%,280px);margin-inline:0}
+  /* the film at 62% with its Play line beside it, so the space next to it is the caption, not a hole */
+  .today-film{display:grid;grid-template-columns:minmax(0,62%) minmax(0,1fr);column-gap:var(--s2);align-items:end;width:auto;margin-inline:0}
+  .today-film-cap{flex-direction:column;align-items:flex-start;gap:2px;margin:0}
 
   .today-words{display:contents}
   .today-ph{order:1}
@@ -224,6 +227,7 @@ a.strip-cell:focus-visible{outline-offset:6px}
   .today-words{grid-column:1 / span 4}
   .today-ph{grid-column:5 / -1}
   .today-film{width:min(100%,230px)}
+  .today-sign{--h:clamp(48px,5vw,76px)}
 }
 
 /* ——————————————————————————————————————————————————————————
@@ -264,23 +268,25 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .year{background:var(--bone);padding-block:var(--sec)}
 .year-head,.orgs-head{display:grid;gap:var(--s3);margin-bottom:var(--s5)}
 .year-h,.orgs-h{max-width:12ch}
-.year-lede,.orgs-lede{margin:0;max-width:26ch;font-size:var(--fs-lede);line-height:1.38;text-wrap:balance}
+.year-lede,.orgs-lede{margin:0;max-width:34ch;font-size:var(--fs-lede);line-height:1.38;text-wrap:pretty}
 @media (min-width:1024px){
   .year-head,.orgs-head{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
   .year-h,.orgs-h{grid-column:1 / span 7}
   .year-lede,.orgs-lede{grid-column:8 / -1;max-width:none}
 }
-.year-grid{display:grid;gap:var(--s5)}
+.year-grid{display:grid;gap:var(--s3)}
+@media (min-width:760px){.year-grid{gap:var(--s4)}}
 .yr-map{margin:0}
 .yr-map-in{position:relative}
 .yr-map-svg{display:block;width:100%;height:auto}
 .mp-dot{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--asphalt);color:var(--paper);font:800 .8125rem/1 var(--display);pointer-events:none}
 .mp-dot--soft{background:var(--paper);color:var(--mute);box-shadow:inset 0 0 0 2px var(--mute)}
-.yr-key{display:flex;align-items:center;gap:8px;margin:var(--s2) 0 0;font:var(--label);color:var(--mute)}
+.yr-key{display:flex;align-items:center;gap:8px;margin:0;font:var(--label);color:var(--mute)}
 .yr-key i{width:10px;height:10px;background:var(--asphalt)}
-@media (max-width:759px){.yr-map{display:none}}
+@media (max-width:759px){.yr-map,.yr-key{display:none}}
 .year-list{list-style:none;margin:0;padding:0;border-top:2px solid var(--asphalt)}
-.yr a{display:grid;grid-template-columns:2ch 64px minmax(0,1fr);align-items:center;gap:16px;min-height:72px;padding:8px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
+.yr{display:flex}
+.yr a{flex:1 1 auto;display:grid;grid-template-columns:2ch 64px minmax(0,1fr);align-items:center;gap:16px;min-height:72px;padding:8px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
 .yr-i{font:800 .8125rem/1 var(--display);color:var(--mute);text-align:right}
 .date{display:flex;flex-direction:column;align-items:center;justify-content:center;width:64px;height:56px;border:1.5px solid var(--asphalt);color:var(--asphalt);line-height:1;text-align:center}
 .date-m{font-size:.8125rem;font-weight:800}
@@ -288,17 +294,23 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .date--soft{border-style:dashed;border-color:var(--dust-deep);color:var(--mute)}
 .yr-n{display:flex;flex-direction:column;align-items:flex-start;gap:3px;min-width:0}
 .yr-n b{font-size:var(--fs-h4);font-weight:800;line-height:1.15}
-.yr-plate{font-size:.8125rem;margin:2px 0}
+.yr-plate{font-size:.875rem;margin:2px 0}
 .yr-l{font-size:var(--fs-small);line-height:1.35;color:var(--mute)}
 .yr--soft .yr-n b{color:var(--mute)}
 @media (hover:hover){.yr a:hover .yr-n b{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}.yr a:hover .date{background:var(--paper)}}
 .yr a:active{background:var(--bone-2);transition-duration:0s}
-.year-foot{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:var(--s4)}
+.year-aside{display:flex;flex-direction:column;align-items:flex-start;gap:var(--s2)}
+.year-aside .note-sm{max-width:40ch}
+.year-foot{margin:0}
 @media (max-width:759px){.yr a{grid-template-columns:64px minmax(0,1fr);gap:14px;min-height:64px}.yr-i{display:none}}
 @media (min-width:760px) and (max-width:1023px){.yr-map{max-width:640px}}
 @media (min-width:1024px){
-  .yr-map{max-width:1000px}
-  .year-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(7,auto);grid-auto-flow:column;column-gap:var(--col-gap)}
+  /* the map on eight columns, its key and the dates note on the four beside it, the list in two columns under both */
+  .year-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);row-gap:var(--s5)}
+  .yr-map{grid-column:1 / span 8}
+  .year-aside{grid-column:9 / -1;align-self:end}
+  .year-list{grid-column:1 / -1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(7,auto);grid-auto-flow:column;column-gap:var(--col-gap)}
+  .year-foot{grid-column:1 / -1}
 }
 
 /* ——————————————————————————————————————————————————————————
@@ -344,7 +356,7 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .facts-dl dd a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .ridewith-acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin:0 0 var(--s2)}
 @media (max-width:899px){.ridewith-ph{margin-inline:calc(-1 * var(--gut))}}
-@media (max-width:759px){.ridewith-ph img{aspect-ratio:1/1}}
+@media (max-width:759px){.ridewith{padding-top:0}.ridewith-ph img{aspect-ratio:1/1}}
 @media (min-width:900px){.ridewith-ph{width:auto}}
 @media (min-width:1024px){
   .ridewith-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:center}
@@ -388,9 +400,9 @@ a.strip-cell:focus-visible{outline-offset:6px}
 /* ——————————————————————————————————————————————————————————
    9. the sign: CYCLE FOR + the blank, and the box that fills it (the page's one sign-off)
    —————————————————————————————————————————————————————————— */
-.sign{padding:calc(var(--sec) + 28px) 0 var(--sec)}
-.sign .lane--top{position:absolute;left:0;right:0;top:28px}
+.sign{padding:var(--sec) 0}
 .sign-in{display:grid;gap:var(--s5)}
+.sign-in::before{margin-bottom:calc(var(--s2) - var(--s5))}
 .sign-h{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px 18px;margin:0;
   --h:clamp(56px,calc((100vw - 2 * var(--gut) - 20px) / 4.9),236px)}
 .sign-mark{display:block;height:var(--h);width:auto;max-width:100%;color:var(--paper)}
@@ -407,6 +419,7 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .sign-more{margin:var(--s4) 0 0}
 @media (min-width:1024px){
   .sign-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
+  .sign-in::before{grid-column:1 / span 3}
   .sign-h{grid-column:1 / -1}
   .sign-form{grid-column:1 / span 7}
 }
@@ -422,6 +435,10 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .js .home .nav[data-solid="false"]{background:transparent;border-bottom-color:transparent;color:var(--paper);-webkit-backdrop-filter:none;backdrop-filter:none;--ring:var(--paper)}
 .home .nav .brand,.home .nav .btn--sm{transition:opacity var(--t-open) var(--ease),visibility 0s linear 0s}
 .js .home .nav[data-solid="false"] .brand,.js .home .nav[data-solid="false"] .btn--sm{opacity:0;visibility:hidden;transition:opacity var(--t-open) var(--ease),visibility 0s linear var(--t-open)}
+/* over the film, the menu button (under 900) and the nav links (900 and up) get the Pause button's ground, so they read on
+   any sky (the links need .62 on the brightest frame: tools/hero-contrast.py) */
+.js .home .nav[data-solid="false"] .menu-btn{width:48px;height:48px;margin-right:0;background:rgba(20,18,24,.55);border:1px solid rgba(239,237,234,.45)}
+.js .home .nav[data-solid="false"] .nav-links{align-items:center;min-height:48px;padding:0 20px;background:rgba(20,18,24,.66);border:1px solid rgba(239,237,234,.32)}
 /* the stencil's clip lives in the header's mark; a hidden header must not hide every CYCLE FOR on the page with it */
 .home #lpRow rect{visibility:visible}
 /* the first screen's Ride with me is the hero's; the header's comes back at 900, as a line, once the film has gone */

@@ -7,9 +7,11 @@ this keeps them small and finished:
 
   img/home/asphalt-2.webp   a 480 px tile of fine aggregate (shown at 240 css px), light stones on clear, for the two
                             dark rooms only (never over a photograph, never under small type at more than a whisper)
-  img/home/lane-rose-3.svg    a lane line in smeared rose (#A84C58), for light grounds: long dashes, the ends and edges
-                              a little worn the way paint on a lane wears; drawn shapes, no filter, so they stay crisp
-  img/home/lane-powder-3.svg  the same in powder rose (#D9B1AA), for dark grounds
+  img/home/dash-rose-1.svg    one lane-line dash in smeared rose (#A84C58), for light grounds, about 21 times as long as it
+                              is wide, the ends and edges a little worn the way paint on a lane wears; a drawn shape, no
+                              filter, so it stays crisp. Each sits at the start of a grid column (v4: a repeating line
+                              ran off the grid)
+  img/home/dash-powder-1.svg  the same in powder rose (#D9B1AA), for dark grounds
   (-3, Oct 27: the -2 dashes were short and read as a perforated divider; -2 asphalt: the 1x tile blurred on phones)
   TORN (printed)            a clip-path polygon for a torn edge; not used since the review (captions are plain)
 
@@ -77,9 +79,15 @@ def lane(fill):
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 12" width="1200" height="12" preserveAspectRatio="none">'
             f'<defs><mask id="w"><rect width="1200" height="12" fill="#fff"/><path d="{"".join(cuts)}" fill="#000"/></mask></defs>'
             f'<path d="{"".join(body)}" fill="{fill}" mask="url(#w)"/></svg>\n')
-for name, fill in (("lane-rose-3.svg", "#A84C58"), ("lane-powder-3.svg", "#D9B1AA")):
+# one dash on its own (v4): each sits at the start of a grid column, so the paint lines up with what it marks
+def one(fill):
     random.seed(11)
-    open(os.path.join(OUT, name), "w").write(lane(fill))
+    d, b = dash(3, 254)
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 12" width="260" height="12" preserveAspectRatio="none">'
+            f'<defs><mask id="w"><rect width="260" height="12" fill="#fff"/><path d="{b}" fill="#000"/></mask></defs>'
+            f'<path d="{d}" fill="{fill}" mask="url(#w)"/></svg>\n')
+for name, fill in (("dash-rose-1.svg", "#A84C58"), ("dash-powder-1.svg", "#D9B1AA")):
+    open(os.path.join(OUT, name), "w").write(one(fill))
 
 # —— the torn edge: a polygon for clip-path, flat on top, torn along the bottom (y in px from the bottom) ——
 random.seed(5)

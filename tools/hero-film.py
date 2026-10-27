@@ -35,7 +35,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FILM = os.path.join(ROOT, "cfc-site", "film")
 TAR = "0x141218"          # --tar, the gutter between frames
 FPS = 30
-L = {"phone": 4.45, "wide": 2.95}   # each film's loop, seconds
+L = {"phone": 4.45, "wide": 3.35}   # each film's loop, seconds
 
 # sources: (path, width, height). "reel" is Robert's three-band reel; its bands are cut out by y range.
 def sources(reel):
@@ -81,10 +81,10 @@ PHONE = [   # one frame, the shots at their own length; frame 0 is his face (the
     (608, 1080, [("s1_mint", .5), ("s3_ahead", .5), ("s5_forest", .5), ("s2_drone", .55)]),
 ]
 WIDE = [    # the wide panel the words sit in, then the tall one with his face, cut together in pairs that share a light
-            # (cool with cool, warm with warm). The gutter sits at 70% of the frame, right of the centred nav at every
+            # (midday with midday, the warm dirt with the warm dawn; v4: the hazy dawn no longer sits beside the blue sky). The gutter sits at 70% of the frame, right of the centred nav at every
             # landscape width from 1024, so no link sits on a seam
-    (1134, 960, [("s3_ahead", .5, .95), ("s2_drone", .5, 1.0), ("s5_forest", .5, 1.0)]),
-    (480, 960, [("s1_mint", .35, .95), ("s5_forest", .5, 1.0), ("s2_drone", .5, 1.0)]),
+    (1134, 960, [("s5_forest", .5, .95), ("s2_drone", .5, 1.2), ("s3_ahead", .5, 1.2)]),
+    (480, 960, [("s1_mint", .35, .95), ("s3_ahead", .5, 1.2), ("s2_drone", .5, 1.2)]),
 ]
 
 def dur(shot): return SHOTS[shot][2] - SHOTS[shot][1]
@@ -173,7 +173,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--reel", default="", help="Robert's three-band reel (cycling-video-no-text.mp4), only if a reel shot is in a lane")
     ap.add_argument("--out", default=FILM)
-    ap.add_argument("--n", type=int, default=3)
+    ap.add_argument("--n", type=int, default=4)
     a = ap.parse_args()
     srcs = sources(os.path.abspath(os.path.expanduser(a.reel)) if a.reel else "")
     used = {SHOTS[e[0]][0] for lanes in (PHONE, WIDE) for (_, _, lane) in lanes for e in lane}

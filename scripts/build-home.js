@@ -101,8 +101,8 @@ const DEFS = `<svg aria-hidden="true" focusable="false" style="position:absolute
 
 // —— 1. the hero: the film, the mark, who and what, one primary ——
 const FILM = {
-  phone: { mp4: "/film/hero-phone-3.mp4", webm: "/film/hero-phone-3.webm", poster: "/film/hero-phone-3", w: 608, h: 1080 },
-  wide: { mp4: "/film/hero-wide-3.mp4", webm: "/film/hero-wide-3.webm", poster: "/film/hero-wide-3", w: 1620, h: 960 },
+  phone: { mp4: "/film/hero-phone-4.mp4", webm: "/film/hero-phone-4.webm", poster: "/film/hero-phone-4", w: 608, h: 1080 },
+  wide: { mp4: "/film/hero-wide-4.mp4", webm: "/film/hero-wide-4.webm", poster: "/film/hero-wide-4", w: 1620, h: 960 },
 };
 // the two-panel film on a landscape screen at 760 and up; the one-frame film on phones and portrait tablets
 const WIDE_Q = "(min-width: 760px) and (min-aspect-ratio: 1/1)";
@@ -141,7 +141,6 @@ const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools
 // —— 2. the strip: the numbers on a lane ——
 const STRIP = `<!-- —— 2. the numbers, on a lane. One number for the miles (since June 1); the 10,000 is said once, in #road, never next to it. —— -->
 <section class="strip" aria-label="The numbers">
-  <div class="lane lane--top" aria-hidden="true"></div>
   <div class="wrap strip-in">
     <p class="strip-cell strip-cell--miles"><span class="strip-n"><b class="num" data-miles>${T0 ? fmt(T0.miles) : "&mdash;"}</b></span><span class="strip-l">${seasonText("training miles since June 1, ", "miles in 2027, ")}<a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">on Strava</a>.${seasonText(` The count restarts in <b class="num" id="daysTo">${DAYS_TO}</b> <span id="daysW">${DAYS_TO === 1 ? "day" : "days"}</span>.`, "")}</span></p>
     <a class="strip-cell finder-tile" href="/rides/"><span class="strip-n num">${RIDES_N}</span><span class="strip-l">group rides worldwide</span></a>
@@ -279,7 +278,7 @@ function yearSection() {
   if (nTba) bits.push(`${word(nTba)} ${nTba === 1 ? "hasn&rsquo;t" : "haven&rsquo;t"} put out 2027 dates yet`);
   const cap = (t) => t.charAt(0).toUpperCase() + t.slice(1);
   const note = `${cap(word(dated))} with dates from the organizer${bits.length ? "; " + bits.join("; ") : ""}.`;
-  // the map: the states and the edge of Canada, a square for home, a numbered dot per ride at its start town, nothing drawn
+  // the map: the whole lower 48, a square for home, a numbered dot per ride at its start town, nothing drawn
   // between (never a route we drew). The numbers are HTML placed by percent (no words in a stretched SVG); the list is the link.
   let map = "";
   if (MAP) {
@@ -296,7 +295,7 @@ function yearSection() {
       dots.push(`<span class="mp-dot${r.status !== "confirmed" ? " mp-dot--soft" : ""}" style="left:${x}%;top:${y}%"><span class="num">${i + 1}</span></span>`);
     });
     // the drawing is a file (it's 40 KB of outline the HTML doesn't need to carry); After Hours values, as card.js does
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${B.x} ${B.y} ${B.w} ${B.h}" width="${B.w}" height="${B.h}"><path d="${MAP.canada}" fill="#D7D5D0" stroke="#687F7C" stroke-width=".7" stroke-linejoin="round"/><path d="${MAP.states}" fill="#EFEDEA" stroke="#687F7C" stroke-width=".7" stroke-linejoin="round"/><g fill="none" stroke="#1C1A22" stroke-width="1.2">${leaders.join("")}</g><g fill="#1C1A22">${ends.join("")}</g><rect x="${MAP.home.xy[0] - 5}" y="${MAP.home.xy[1] - 5}" width="10" height="10" fill="#1C1A22"/></svg>\n`;
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${B.x} ${B.y} ${B.w} ${B.h}" width="${B.w}" height="${B.h}">${MAP.canada ? `<path d="${MAP.canada}" fill="#D7D5D0" stroke="#687F7C" stroke-width=".7" stroke-linejoin="round"/>` : ""}<path d="${MAP.states}" fill="#EFEDEA" stroke="#687F7C" stroke-width=".7" stroke-linejoin="round"/><g fill="none" stroke="#1C1A22" stroke-width="1.2">${leaders.join("")}</g><g fill="#1C1A22">${ends.join("")}</g><rect x="${MAP.home.xy[0] - 5}" y="${MAP.home.xy[1] - 5}" width="10" height="10" fill="#1C1A22"/></svg>\n`;
     fs.mkdirSync(path.join(ROOT, "cfc-site", "img", "home"), { recursive: true });
     fs.writeFileSync(path.join(ROOT, "cfc-site", "img", "home", "map-2027.svg"), svg);
     const hash = require("crypto").createHash("sha1").update(svg).digest("hex").slice(0, 8);
@@ -305,7 +304,6 @@ function yearSection() {
           <img class="yr-map-svg" src="/img/home/map-2027.svg?v=${hash}" width="${B.w}" height="${B.h}" alt="" loading="lazy" decoding="async">
           ${dots.join("\n          ")}
         </div>
-        <p class="yr-key"><i></i>Phoenix</p>
       </figure>`;
   }
   return `<!-- —— 5. the 2027 rides (data/calendar-2027.json, riding: true, through chrome.js): where on the map, when in the
@@ -316,12 +314,11 @@ function yearSection() {
     <div class="year-head"><h2 class="year-h" id="year-h">The 2027 rides I&rsquo;m doing.</h2><p class="year-lede">Part of the 10,000 miles. Come ride one.</p></div>
     <div class="year-grid">
       ${map}
-      <div class="year-list-wrap">
-        <ol class="year-list">
+      <div class="year-aside">${map ? `<p class="yr-key" aria-hidden="true"><i></i>Phoenix</p>` : ""}<p class="note-sm">${note}</p></div>
+      <ol class="year-list">
 ${rows}
-        </ol>
-        <div class="year-foot"><a class="link" href="/events/2027/riding/">All my 2027 rides, with sign-up links</a><p class="note-sm">${note}</p></div>
-      </div>
+      </ol>
+      <p class="year-foot"><a class="link" href="/events/2027/riding/">All my 2027 rides, with sign-up links</a></p>
     </div>
   </div>
 </section>
@@ -395,7 +392,7 @@ const FIND = `<!-- —— 7. find a group ride —— -->
     <div class="find-tools">
       <form class="find" action="/rides/" method="get" role="search">
         <label class="find-lab" for="q">Your town or a ride name</label>
-        <div class="find-row"><input class="find-field" id="q" name="q" type="search" autocomplete="off"><button class="btn btn--ink" type="submit">Search rides</button></div>
+        <div class="find-row"><input class="find-field" id="q" name="q" type="search" autocomplete="off"><button class="btn" type="submit">Search rides</button></div>
       </form>
       <p class="find-links"><a class="link" href="/rides/no-drop/">No-drop rides</a><a class="link" href="/rides/lgbtq/">Queer rides</a><a class="link" href="/tonight/">Tonight</a></p>
     </div>
@@ -422,7 +419,6 @@ const READ = `<!-- —— 8. read —— -->
 // —— 9. the sign: type, and the blank fills. Nothing is collected; /cyclefor/ is where an answer goes out, with the OK ——
 const SIGN = `<!-- —— 9. CYCLE FOR + the blank. A visitor types and the plate takes the word; nothing leaves the page. —— -->
 <section class="sign" id="sign" aria-labelledby="sign-h">
-  <div class="lane lane--top" aria-hidden="true"></div>
   <div class="wrap sign-in">
     <h2 class="sign-h" id="sign-h">${MARK_WORD("sign-mark")}<span class="plate sign-plate" id="signPlate" data-empty="true" data-sign-plate aria-hidden="true"></span><span class="sr" id="signSr">Cycle for</span></h2>
     <div class="sign-form">
