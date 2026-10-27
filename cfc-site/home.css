@@ -130,7 +130,6 @@
 .strip-n b{font-weight:inherit}
 .strip-l{max-width:30ch;font-size:var(--fs-small);line-height:1.4;color:var(--mute)}
 .strip-l b{color:var(--asphalt);font-weight:700}
-.strip-more{margin-top:var(--s1)}
 .strip-l a{color:var(--asphalt);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 a.strip-cell .strip-l{color:var(--asphalt);font-weight:700}
 a.strip-cell .strip-l::after{content:"\2192";display:inline-block;margin-left:.3em;font-weight:400;transition:transform var(--t-move) var(--ease)}
@@ -431,17 +430,15 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .home .tally-line--home{display:none}
 [data-season][hidden]{display:none!important}  /* the two wordings of the count; only one shows */
 .home .nav{margin-bottom:calc(-1 * var(--nav-h));transition:background-color var(--t-open) var(--ease),color var(--t-open) var(--ease),border-color var(--t-open) var(--ease)}
-/* clear over the film (home.js sets data-solid once the film has scrolled under it); solid without JS. Over the film the
-   header shows only the menu: the hero carries the mark and Ride with me, so nothing is said twice */
+/* over the film a flat bar (below), solid once the film has scrolled under it (home.js sets data-solid); solid without
+   JS. Over the film the header shows only the menu and, from 900, the nav links: the hero carries the mark and Ride with
+   me, so nothing is said twice */
 .js .home .nav[data-solid="false"]{color:var(--paper);-webkit-backdrop-filter:none;backdrop-filter:none;--ring:var(--paper)}
 .home .nav .brand,.home .nav .btn--sm{transition:opacity var(--t-open) var(--ease),visibility 0s linear 0s}
-.js .home .nav[data-solid="false"] .btn--sm{opacity:0;visibility:hidden;transition:opacity var(--t-open) var(--ease),visibility 0s linear var(--t-open)}
-@media (max-width:899px){.js .home .nav[data-solid="false"] .brand{opacity:0;visibility:hidden;transition:opacity var(--t-open) var(--ease),visibility 0s linear var(--t-open)}}
+.js .home .nav[data-solid="false"] .brand,.js .home .nav[data-solid="false"] .btn--sm{opacity:0;visibility:hidden;transition:opacity var(--t-open) var(--ease),visibility 0s linear var(--t-open)}
 /* over the film the header is one flat bar on bruise at .66, a plaster hairline under it: the nav links need .62 on the
-   brightest frame (tools/hero-contrast.py). At 900 and up the mark sits at its left as on every page */
+   brightest frame (tools/hero-contrast.py) */
 .js .home .nav[data-solid="false"]{background:rgba(20,18,24,.66);border-bottom-color:rgba(239,237,234,.18)}
-.js .home .nav[data-solid="false"] .brand .brand-mark{color:var(--paper)}       /* the logo rule for dark grounds: plaster stencil, powder bar */
-.js .home .nav[data-solid="false"] .brand-mark .lp-bar{fill:var(--creosote-lift)}
 /* the stencil's clip lives in the header's mark; a hidden header must not hide every CYCLE FOR on the page with it */
 .home #lpRow rect{visibility:visible}
 /* the first screen's Ride with me is the hero's; the header's comes back at 900, as a line, once the film has gone */

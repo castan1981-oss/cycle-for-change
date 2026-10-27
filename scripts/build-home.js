@@ -142,7 +142,7 @@ const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools
 const STRIP = `<!-- —— 2. the numbers, on a lane. One number for the miles (since June 1); the 10,000 is said once, in #road, never next to it. —— -->
 <section class="strip" aria-label="The numbers">
   <div class="wrap strip-in">
-    <p class="strip-cell strip-cell--miles"><span class="strip-n"><b class="num" data-miles>${T0 ? fmt(T0.miles) : "&mdash;"}</b></span><span class="strip-l"><b>${seasonText("training miles since June 1", "miles in 2027")}</b>, <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">on Strava</a>.${seasonText(` The count restarts in <b class="num" id="daysTo">${DAYS_TO}</b> <span id="daysW">${DAYS_TO === 1 ? "day" : "days"}</span>.`, "")}</span>${NOTE ? `<a class="link strip-more" href="${NOTE.href}">Read the last ride</a>` : ""}</p>
+    <p class="strip-cell strip-cell--miles"><span class="strip-n"><b class="num" data-miles>${T0 ? fmt(T0.miles) : "&mdash;"}</b></span><span class="strip-l"><b>${seasonText("training miles since June 1", "miles in 2027")}</b>, <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">on Strava</a>.${seasonText(` The count restarts in <b class="num" id="daysTo">${DAYS_TO}</b> <span id="daysW">${DAYS_TO === 1 ? "day" : "days"}</span>.`, "")}</span></p>
     <a class="strip-cell finder-tile" href="/rides/"><span class="strip-n num">${RIDES_N}</span><span class="strip-l">group rides worldwide</span></a>
     <a class="strip-cell finder-tile" href="/events/2027/"><span class="strip-n num">${CAL_N}</span><span class="strip-l">events in 2027</span></a>
   </div>

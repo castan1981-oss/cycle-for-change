@@ -258,11 +258,12 @@ homepage only; every other rule in this section still holds there and everywhere
   with a Pause button always there (WCAG 2.2.2). The poster is the film's first frame and the page's LCP. Over it: the
   stencil (clean, no wear: the hero no longer carries `#lpWorn`), who and what, his line, one primary (Ride with me,
   `#heroRide`, the date on a rose plate) and one quiet link, "Find a group ride" (the approved direction). "Read the last
-  ride" is in the strip right under the hero (one scroll) and in `#road`. The scrim rides with the words, not the screen (`.hero-in::before`): it eases in over the 200px
+  ride" is in `#road` (the brand gate holds the strip under the hero to its numbers too; live had it on the first screen,
+  so this is Robert's call) The scrim rides with the words, not the screen (`.hero-in::before`): it eases in over the 200px
   above the stencil, .6 at its top, .72 at the foot — measured against every frame of both films at nine screen sizes
   (3:1 for the stencil and the intro, 4.5:1 for the line and the links): `python3 tools/hero-contrast.py` after any
   recut or change to the hero's type or scrim (exits 1 on a fail). Over the film the header is one flat bar on bruise at .66 with a
-  hairline (no gradient lid, no floating boxes); at 900 and up the mark sits at its left, plaster with the powder bar. Over the film the header shows only the menu (and the nav
+  hairline (no gradient lid, no floating boxes), carrying the menu or the nav links only. Over the film the header shows only the menu (and the nav
   links at ≥900); the mark and the header's Ride with me come back once the film has scrolled under it.
 - **Two textures, small:** a fine asphalt aggregate (`img/home/asphalt-2.webp`, a 2x tile, opacity .24) on the two dark
   rooms only (`#road` and `#sign`), never on a photo; a worn lane-line dash at the start of a grid column
