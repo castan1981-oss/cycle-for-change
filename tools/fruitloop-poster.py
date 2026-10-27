@@ -15,7 +15,7 @@ The rules (brand review panel, Oct 27, 2026, after a ChatGPT flyer redrew the lo
 - Overpass only, flat bruise ground, the eleven muted colors from fruitloop.css. No chalk, no texture, no doodles.
 - Robert's photo goes in as shot: no AI re-render, no grade. Nothing is laid over it.
 - Every size carries the basics: every Friday from Dec 11, meet 5:30, roll 6:00, the crosswalk, about 14 flat miles,
-  free, nobody gets dropped, 18 and up, two lights, who hosts, the way in. Never fruitloopphx.com (not bought yet),
+  free, nobody gets dropped, 18 and up, two lights, the way in (Robert, Oct 27: no "hosted by" line). Never fruitloopphx.com (not bought yet),
   never the coffee shop's name (not until it says yes).
 """
 import sys, os, re, shutil, tempfile, threading, http.server, functools, socketserver, html
@@ -74,10 +74,10 @@ body{width:var(--W);height:var(--H);overflow:hidden;font-family:Overpass,sans-se
 .foot{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--gap);margin-top:var(--gap)}
 .host{font-weight:700;font-size:calc(var(--W) * .022);line-height:1.3;color:var(--dust)}
 .host b{display:block;font-weight:800;font-size:calc(var(--W) * .03);color:var(--paper);letter-spacing:-.01em}
-.qrbox{display:flex;align-items:center;gap:calc(var(--W) * .016)}
+.qrbox{flex:1;display:flex;align-items:center;justify-content:space-between;gap:calc(var(--W) * .016)}
 .qrbox .qrw{background:var(--paper);width:var(--qr);height:var(--qr)}   /* the 4-module quiet zone is in the code itself */
 .qr{display:block;width:100%;height:100%}
-.qrbox p{font-weight:800;font-size:calc(var(--W) * .024);line-height:1.25;color:var(--paper);text-align:right}
+.qrbox p{font-weight:800;font-size:calc(var(--W) * .024);line-height:1.25;color:var(--paper);text-align:left}
 .qrbox p span{display:block;font-weight:700;color:var(--dust);font-size:calc(var(--W) * .02)}
 .xwalk{display:grid;grid-template-columns:repeat(6,1fr);gap:calc(var(--W) * .02);margin-top:var(--gap)}
 .xwalk i{display:block;height:var(--barh)}
@@ -115,8 +115,8 @@ body{{--W:{W}px;--H:{H}px;--pad:{pad}px;--lockw:{lockw}px;--gap:{opts['gap']}px;
 </style></head><body class="{kind}"><div class="sheet">
   <div class="logoband"><img src="logo.png" alt=""></div>
   {mid}
-  <p class="why">The Fruit Loop was the circuit of gay bars and drag clubs downtown, mid-1940s to mid-1990s. The ride ends by riding it.</p>
-  <div class="foot"><p class="host"><b>Hosted by Robert Castan</b>Cycle for Change</p>{qr_html}</div>
+  <p class="why">The Fruit Loop was the circuit of gay bars and drag clubs downtown, mid-1940s to mid-1990s.</p>
+  <div class="foot">{qr_html}</div>
 </div></body></html>"""
 
 JOBS = {
