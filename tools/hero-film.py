@@ -10,9 +10,16 @@ He then sent his own clean footage ("These are without words", Oct 27). This cut
          every frame), the bike lane (a white shape that could be a vehicle beyond the far kerb), the overlook (a
          smoke plume over the city, a vignette baked in) and the stills (other people, the finish line)
 
-  phone  608x1080  one frame: the rail-yard take, then the palms and the tunnel. Frame 0 is his face (the poster)
-  wide   1620x960  the wide panel the words sit in (the red-rock road, the tunnel, the palms) and the tall one at
-                   the right: the rail-yard take, uncut, his face in frame 0. The gutter at 70% clears the nav.
+  phone  608x1080  one frame: the rail-yard take, uncut, 4.5 s; frame 0 is his face (the poster). The critic's second
+                   blind read found the road shot left "I'm Robert" over an empty street for a third of the loop
+  wide   1620x960  the wide panel the words sit in (the red-rock road, then the tunnel and the palms cropped low: the
+                   bike, his legs, the ground) and the tall one at the right: the rail-yard take, uncut, his face in
+                   frame 0. One face on the screen at a time. The gutter at 70% clears the nav.
+
+The brand gate (research/brand/2026-10-27-home-v9.md) couldn't clear a dark shape in a house's arched opening across
+the street in the palms shot (reel 10.07-10.67 s, x 660-690, y 985-1000): the palms are cropped below y 1030, so the
+far side of that street is never in frame, and the shot is off the phone film. Every cut is on a frame boundary (the
+clips are constant 30 fps): segments are taken by frame number, so no panel holds or skips a frame.
 
 Every frame of every shot used was looked at for vehicles and faces: no car, truck or van anywhere, and only Robert is
 recognisable. Nothing is synthetic, nothing is graded and nothing is slowed down. Older cuts (v1-v8: road-film-2, the
@@ -31,7 +38,7 @@ FILM = os.path.join(ROOT, "cfc-site", "film")
 TAR = "0x141218"          # --tar, the gutter between frames
 
 FPS = 30
-L = {"phone": 4.65, "wide": 3.75}   # each film's loop, seconds
+L = {"phone": 135, "wide": 112}   # each film's loop, in frames at 30 fps (4.5 s, 3.73 s)
 
 # sources: (path, width, height). Both are Robert's own clips, passed on the command line.
 def sources(rail, hit):
@@ -49,30 +56,36 @@ SHOTS = {
 }
 # phones: the same shots a little closer (900x1600 of the 1080x1920 frame, still downscaled), so his face sits in the
 # top quarter, clear of the stencil, on every phone from 360x640 to 430x932
-for k in ("rail", "palms", "tunnel"):
+for k in ("rail",):
     SHOTS[k + "_p"] = SHOTS[k][:3] + ((90, 250, 900, 1600),)
+# the wide panel's palms: only rows 1030 and down (the bike, his legs, the grass), never the far side of the street
+SHOTS["palms_w"] = SHOTS["palms"][:3] + ((0, 1030, 1080, 890),)
+# the tall panel: the rail-yard take a little closer and left of centre, so at 1024x768 (where the panel's right third
+# is off screen) he's still whole
+SHOTS["rail_w"] = SHOTS["rail"][:3] + ((250, 180, 830, 1660),)
 
 # lanes: (slot w, slot h, [(shot, focus 0..1 along the axis the crop slides on), ...]); the last shot of each lane is
 # trimmed to the loop.
 PHONE = [   # one frame; frame 0 is his face (the poster and the reduced-motion still)
-    (608, 1080, [("rail_p", .5, 2.5), ("palms_p", .5), ("tunnel_p", .5)]),
+    (608, 1080, [("rail_p", .5)]),
 ]
 WIDE = [    # the wide panel the words sit in, cut on its own clock; the tall one is the rail-yard take, uncut. Frame 0:
             # the red-rock road beside his face
-    (1134, 960, [("road", .5), ("tunnel", .42), ("palms", .44)]),   # his face above the stencil in both
-    (480, 960, [("rail", .5)]),
+    (1134, 960, [("road", .5), ("tunnel", .9), ("palms_w", .5)]),   # the tunnel and the palms cropped low: the bike, his
+                                                                    # legs, the ground; one face on the screen at a time
+    (480, 960, [("rail_w", .5)]),
 ]
 
-def dur(shot): return SHOTS[shot][2] - SHOTS[shot][1]
+def dur(shot): return int((SHOTS[shot][2] - SHOTS[shot][1]) * FPS + 1e-6)   # whole frames
 
 def lane_times(lane, L):
-    """[(shot, focus, start_in_loop, length)] trimmed to L"""
-    out, t = [], 0.0
+    """[(shot, focus, start_frame_in_loop, frames)] trimmed to L frames; a cap is in seconds"""
+    out, t = [], 0
     for shot, f, *cap in lane:
-        if t >= L - 1e-6: break
-        d = min(dur(shot), cap[0] if cap else 99, L - t)
+        if t >= L: break
+        d = min(dur(shot), int(round(cap[0] * FPS)) if cap else 10 ** 6, L - t)
         out.append((shot, f, t, d)); t += d
-    if t < L - 1e-3: raise SystemExit(f"lane too short: {t:.2f}s of {L}s")
+    if t < L: raise SystemExit(f"lane too short: {t} of {L} frames")
     return out
 
 def check(lanes, label):
@@ -81,7 +94,7 @@ def check(lanes, label):
     for s1, a1, b1, i1 in spans:
         for s2, a2, b2, i2 in spans:
             if i1 < i2 and s1 == s2 and a1 < b2 and a2 < b1:
-                raise SystemExit(f"{label}: {s1} plays in lanes {i1} and {i2} at once ({a1:.2f}-{b1:.2f} / {a2:.2f}-{b2:.2f})")
+                raise SystemExit(f"{label}: {s1} plays in lanes {i1} and {i2} at once (frames {a1}-{b1} / {a2}-{b2})")
 
 def crop_for(shot, w, h, focus):
     """the crop (x, y, cw, ch) of the shot's region that has the slot's shape"""
@@ -103,11 +116,11 @@ def build(lanes, gap, out_w, out_h, srcs, tmp, name):
         seg_labels = []
         for shot, f, a, d in lane_times(lane, L[name]):
             src = SHOTS[shot][0]; path = srcs[src][0]; t0 = SHOTS[shot][1]
-            args += ["-ss", f"{t0:.3f}", "-t", f"{d:.3f}", "-i", path]
+            f0 = int(round(t0 * FPS)); args += ["-i", path]
             x, y, cw, ch = crop_for(shot, sw, sh, f)
-            chains.append(f"[{n}:v]crop={cw}:{ch}:{x}:{y},scale={sw}:{sh}:flags=lanczos,setsar=1,fps={FPS},format=yuv420p,trim=duration={d:.3f},setpts=PTS-STARTPTS[s{n}]")
+            chains.append(f"[{n}:v]trim=start_frame={f0}:end_frame={f0 + d},setpts=N/({FPS}*TB),crop={cw}:{ch}:{x}:{y},scale={sw}:{sh}:flags=lanczos,setsar=1,format=yuv420p[s{n}]")
             seg_labels.append(f"[s{n}]"); n += 1
-        chains.append(f"{''.join(seg_labels)}concat=n={len(seg_labels)}:v=1:a=0,trim=duration={L[name]:.3f},setpts=PTS-STARTPTS[l{li}]")
+        chains.append(f"{''.join(seg_labels)}concat=n={len(seg_labels)}:v=1:a=0,trim=end_frame={L[name]},setpts=N/({FPS}*TB)[l{li}]")
         lane_labels.append(f"[l{li}]")
     if len(lane_labels) == 1:
         chains.append(f"{lane_labels[0]}setsar=1[out]")
@@ -120,7 +133,7 @@ def build(lanes, gap, out_w, out_h, srcs, tmp, name):
         chains.append(f"{''.join(padded)}hstack=inputs={len(padded)},setsar=1[out]")
     master = os.path.join(tmp, f"{name}-master.mp4")
     cmd = ["ffmpeg", "-v", "error", "-y", *args, "-filter_complex", ";".join(chains), "-map", "[out]", "-an",
-           "-c:v", "libx264", "-crf", "14", "-preset", "veryfast", "-pix_fmt", "yuv420p", master]
+           "-r", str(FPS), "-c:v", "libx264", "-crf", "14", "-preset", "veryfast", "-pix_fmt", "yuv420p", master]
     subprocess.run(cmd, check=True)
     probe = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", master], capture_output=True, text=True).stdout.strip()
     assert probe == f"{out_w},{out_h}", (probe, out_w, out_h)
@@ -129,11 +142,12 @@ def build(lanes, gap, out_w, out_h, srcs, tmp, name):
 # v7 (the art director) started the wide loop 0.35 s in (0 = no turn). Same frames, same pairs, the seam inside the loop moves, and
 # frame 0 (the poster: the LCP and the only picture for reduced motion, Save-Data and slow connections) is his face
 # beside the whole forest rider instead of a rider cut by the clip's own edge
-WIDE_START = 0.0
+WIDE_START = 0   # frames
 def rotate(master, start, length, tmp):
+    """the loop started `start` frames in (of `length`)"""
     out = os.path.join(tmp, "rot-" + os.path.basename(master))
-    fc = (f"[0:v]split[a][b];[a]trim=start={start:.3f}:end={length:.3f},setpts=PTS-STARTPTS[x];"
-          f"[b]trim=start=0:end={start:.3f},setpts=PTS-STARTPTS[y];[x][y]concat=n=2:v=1:a=0[out]")
+    fc = (f"[0:v]split[a][b];[a]trim=start_frame={start}:end_frame={length},setpts=N/({FPS}*TB)[x];"
+          f"[b]trim=start_frame=0:end_frame={start},setpts=N/({FPS}*TB)[y];[x][y]concat=n=2:v=1:a=0[out]")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", master, "-filter_complex", fc, "-map", "[out]", "-an",
                     "-c:v", "libx264", "-crf", "14", "-preset", "veryfast", "-pix_fmt", "yuv420p", out], check=True)
     return out
@@ -173,11 +187,11 @@ def main():
     with tempfile.TemporaryDirectory() as tmp:
         print("phone")
         m = build(PHONE, 6, 608, 1080, srcs, tmp, "phone")
-        encode(m, a.out, f"hero-phone-{a.n}", 29, 43)
+        encode(m, a.out, f"hero-phone-{a.n}", 33, 47)
         print("wide")
         m = build(WIDE, 6, 1620, 960, srcs, tmp, "wide")
         if WIDE_START: m = rotate(m, WIDE_START, L["wide"], tmp)
-        encode(m, a.out, f"hero-wide-{a.n}", 31, 45)
+        encode(m, a.out, f"hero-wide-{a.n}", 32, 46)
 
 if __name__ == "__main__":
     main()

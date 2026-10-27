@@ -249,10 +249,10 @@ ASSOS's precision, but original to Cycle for Change. Softer/feminine, premium an
 `research/design/2026-10-26-editorial-home/` (with the Wrenches' and the desks' reviews). What it changes, on the
 homepage only; every other rule in this section still holds there and everywhere else:
 - **The first screen is his film, full screen** (`100svh`): `cfc-site/film/hero-phone-8.*` (608×1080, one full frame:
-  the rail-yard take, then the palms and the tunnel, his face first and in the top quarter; phones and portrait screens)
-  and `hero-wide-8.*` (1620×960: the wide left panel the words sit in, cut on its own clock — the red-rock road, the
-  tunnel, the palms, his face above the stencil — and the tall right panel, the rail-yard take uncut; the gutter at 70% so
-  no nav link sits on it; landscape ≥760px), cut by `python3 tools/hero-film.py --rail … --hit …` from the clean clips
+  the rail-yard take alone, uncut, 4.5 s, his face in the top quarter; phones and portrait screens) and
+  `hero-wide-8.*` (1620×960: the wide left panel the words sit in, cut on its own clock — the red-rock road, then the
+  tunnel and the palms cropped low to the bike and his legs — and the tall right panel, the rail-yard take uncut, so one
+  face on the screen at a time; the gutter at 70% so no nav link sits on it; landscape ≥760px; every cut on a frame), cut by `python3 tools/hero-film.py --rail … --hit …` from the clean clips
   Robert sent on Oct 27, 2026 after "the video needs to be changed" (v1–v8 used road-film-2; the v1 three-band cut put
   seams through the type), car-free, only him recognisable. **It plays on phones too** (this replaces "a still, not a film, on
   phones" for the hero): muted, inline, looped, after load, never under reduced motion, Save-Data or a 2G/3G connection, paused off screen,
@@ -844,7 +844,9 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
   selfie-mount ride, `1789929494081.mov`, one continuous take; and three moving shots of his "CFC Reel Hit v3": the
   red-rock road with his shadow 8.24–9.86 s, the tunnel 6.32–7.17 s, the palms 9.94–11.26 s). Out of that reel: the
   black-kit ride at the camera (parked cars on the left), the bike lane (a white shape past the far kerb), the overlook
-  (a smoke plume, a baked vignette), the tunnel's first 0.7 s (a red post behind his helmet) and the stills (other people).
+  (a smoke plume, a baked vignette), the tunnel's first 0.7 s (a red post behind his helmet), the far side of the street in the palms shot (a dark shape in an
+  arched opening the brand gate couldn't clear, 10.07–10.67 s: the palms are cropped below it and are off the phone film)
+  and the stills (other people).
   His first batch (Oct 27) had captions burned in or was photo slideshows; none of it is used. The clips stay out of git.
   Every frame of every shot used was looked at for vehicles. The v1–v8 hero was cut from road-film-2: **road-film-2 itself is not car-free**: the brand gate found a car at the far end of its
   road shot (8.25–9.55 s) and a parked vehicle in its sun shot (11.05–11.6 s), and couldn't clear a shape under the river
@@ -1000,4 +1002,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-26 — The list-page paragraph: "About these N rides" on all 907 hub, facet, day, state and all pages, written from each page's own rides (days, first and last start, after-work rides, no-drop, beginners, who they're for, bikes, how often, the checked window), folded under the picks.
 - 2026-10-26 — `/rides/critical-mass/`: every Critical Mass we list (36 in 35 cities, 7 countries) by country with its next date, a sourced "What Critical Mass is", linked from all 36 ride pages; `/find-a-ride/`'s Ride with me tile no longer says "six".
 - 2026-10-26 — The editorial homepage (Robert and Cadence's approved direction, §3; staged as a PR, not live until Robert approves): his film full screen (one frame on phones, two panels on wide screens, from road-film-2's four clean shots, every frame checked by `tools/hero-contrast.py`), the numbers under lane-paint dashes, the story with his photographs, 10,000 and the last rides, the 2027 rides on a map with date blocks, the orgs on patina, the sign at the foot; `/chrome.css` now loads on the homepage too; `CSS_V` 53. Eight rounds with the Wrenches (the critic's last cold read 40 vs 37 for live, photography held by the footage), the brand gate (passes), the access desk (its five fixes in) and the usability lab (task 4, the latest write-up, slower by the one-button hero: Robert's call); the art director's rulings in `research/design/2026-10-26-editorial-home/sign-off.md`. Fact desk (research/events/2026-10-26-homepage-facts.md): Seattle to Portland is 206 miles, one or two days; The Mid South shows Mar 11 until the organizer posts its last day; SFAF's "No one turned away for cost" is cut (their site doesn't say it).
-- 2026-10-27 — The staged homepage's hero recut from the clean clips Robert sent ("the video needs to be changed"): `hero-phone-8` / `hero-wide-8` — his rail-yard take (one continuous shot, his face first), and the red-rock road, the tunnel and the palms from his Reel Hit v3; every frame checked for vehicles, `tools/hero-contrast.py` passes at nine sizes; still staged, not live.
+- 2026-10-27 — The staged homepage's hero recut from the clean clips Robert sent ("the video needs to be changed"): `hero-phone-8` / `hero-wide-8` — his rail-yard take (one continuous shot: the whole phone film, and the tall panel on wide screens), and the red-rock road, the tunnel and the palms (cropped low) from his Reel Hit v3 in the wide panel; the brand gate's three blocks fixed (an uncleared shape across the street cropped out, a judder from joins off the frame grid, two of him at once); `tools/hero-contrast.py` passes at nine sizes; the critic's blind reads 22 vs 18 for v8 on the first cut, 23 vs 19 on the fixed one (photography level, no line down); still staged, not live.
