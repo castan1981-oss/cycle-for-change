@@ -221,11 +221,11 @@ function todaySection() {
       <p class="today-line">${esc(T.line)}</p>
       <p class="today-ask"><a class="link" href="/cyclefor/">What do you cycle for? Say it on video</a></p>
     </div>
+    ${film}
     <figure class="today-ph">
       ${img(T.photo, "(min-width: 1024px) 50vw, 100vw")}
       ${where ? `<figcaption>${esc(where)}</figcaption>` : ""}
     </figure>
-    ${film}
   </div>
 </section>
 `;
@@ -262,7 +262,10 @@ const FOR = { "center-ride-out": "the Center", "cycle-to-zero": "SFAF" };   // t
 const MAP = read("data/geo/home-2027.json");
 const BYSLUG = Object.fromEntries(((CAL && CAL.events) || []).map((e) => [e.slug, e]));
 // where a ride's square sits on the map when two towns would touch (the square moves, a hairline goes back to the town), in map units
-const NUDGE = { "recovery-ride": [24, -23], "cycle-to-zero": [33, 7], "tour-de-palm-springs": [8, 14], "belgian-waffle-ride-arizona": [30, -4], "chino-grinder": [-6, -14], "el-tour-de-tucson": [6, 10] };
+// (Oct 27, 2026: solved, not placed by eye: at 1440 (the map 824px wide) no two centres closer than 40px; at 1024 (618px)
+// no two 24px squares touch; no leader crosses another leader or a square; no square covers another town or Phoenix;
+// every square on land. Sea Otter sits on Monterey; Recovery Ride goes north-west of Sausalito, Cycle to Zero east of SF)
+const NUDGE = { "recovery-ride": [-11, -24], "cycle-to-zero": [34, -13], "tour-de-palm-springs": [14, 6], "belgian-waffle-ride-arizona": [30, -4], "chino-grinder": [-6, -14], "el-tour-de-tucson": [6, 10] };
 function yearSection() {
   if (!RIDING.length) return "";
   const kind = (r) => (r.category === "Charity ride" ? `${r.days} days` : r.category.toLowerCase());
