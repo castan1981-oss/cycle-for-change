@@ -7,18 +7,22 @@ can't run as it is. It has a parked truck behind him at the overlook and traffic
 homepage hero stays car-free (CLAUDE.md §10). It is 512 px wide and ends in glitch frames. So this is the better
 edit, cut from his real footage only:
 
-  phone  540x960   the three stacked bands from his reel (his edit grammar, the look he approved), each band its
-                   own sequence: the clean shots of the reel (the selfie, the jersey, riding at sunset, the
-                   overlook cropped clear of the truck) and the homepage reel's shots cropped to the band
-  wide   1620x960  the same three frames turned sideways: three tall panels from the homepage reel, the TSR
-                   selfie and the LOVE wall loop, at native sharpness (the reel's bands are too small to fill a
-                   desktop screen)
+  phone  608x1080  one frame, full height, no seams through the type: the homepage reel's shots at their native
+                   sharpness, none shorter than 1 s; the first frame is his face (the poster)
+  wide   1620x960  two panels cut together every 1.2 s: a wide one the words sit in (the sign never crosses a cut)
+                   and a tall one beside it, his face first. The LOVE-wall loop stays #today's, not the hero's
+
+The first cut (-1, Oct 26) stacked three bands from his reel on phones and three panels on desktop. The Wrenches
+read it cold: the seams ran through the type and three clips fought each other. The brand gate then found a car
+at the far end of the homepage reel's road shot (8.25-9.55 s) and a parked vehicle in its sun shot (11.05-11.6 s),
+and couldn't clear a shape under the river shot's far-bank road; all three are out. His reel's clean shots are
+landscape slivers 512 px wide, too small for either frame; they come back when he exports the original clips.
 
 Every shot was checked by eye for vehicles and faces: only Robert is recognisable, and riders ahead are
 from behind. Nothing is synthetic, nothing is graded and nothing is slowed down. Each band or panel cuts on
 its own clock, so the frame never jumps all at once except at the loop.
 
-  python3 tools/hero-film.py --reel ~/path/cycling-video-no-text.mp4 [--out cfc-site/film] [--n 1]
+  python3 tools/hero-film.py [--reel ~/path/cycling-video-no-text.mp4] [--out cfc-site/film] [--n 2]
 
 writes hero-phone-<n>.mp4/.webm and hero-wide-<n>.mp4/.webm (H.264 High + VP9, no audio, +faststart) and
 a poster for each (frame 0) as .jpg/.webp/.avif. Bump --n on any recut (phones and Safari cache /film/ for a week).
@@ -30,7 +34,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FILM = os.path.join(ROOT, "cfc-site", "film")
 TAR = "0x141218"          # --tar, the gutter between frames
 FPS = 30
-L = 7.1                   # the loop, seconds
+L = {"phone": 7.4, "wide": 6.0}   # each film's loop, seconds
 
 # sources: (path, width, height). "reel" is Robert's three-band reel; its bands are cut out by y range.
 def sources(reel):
@@ -59,44 +63,42 @@ SHOTS = {
     "s1_mint":   ("road", 0.05, 1.35, (0, 0, 864, 1080)),
     "s2_drone":  ("road", 1.45, 2.65, (0, 0, 864, 1080)),
     "s3_ahead":  ("road", 2.75, 4.05, (0, 0, 864, 1080)),
-    "s4_river":  ("road", 4.15, 5.45, (0, 0, 864, 1080)),
+    # out (brand gate, Oct 26): s4_river 4.15-5.45 (a shape under the far-bank road), s7_road 8.25-9.55 (a car at the
+    # far end), s9_sun 11.05-11.60 (a parked vehicle on the verge)
     "s5_forest": ("road", 5.75, 6.75, (0, 0, 864, 1080)),
     "s6_tunnel": ("road", 6.85, 8.15, (0, 0, 864, 1080)),
-    "s7_road":   ("road", 8.25, 9.55, (0, 0, 864, 1080)),
     "s8_bike":   ("road", 9.65, 10.95, (0, 0, 864, 1080)),
-    "s9_sun":    ("road", 11.05, 11.60, (0, 0, 864, 1080)),
     "t_selfie":  ("tsr", 3.22, 3.72, (0, 0, 864, 1080)),
     "love":      ("love", 0.00, 3.20, (0, 0, 720, 1280)),
+    "love_2":    ("love", 0.30, 2.30, (0, 0, 720, 1280)),       # the pose, without the walk in
 }
 
-# (shot, focus y 0..1 for landscape crops of portrait sources, or focus x for portrait crops) — the last
-# shot of each lane is trimmed to the loop. Order chosen so no shot is in two lanes at the same moment.
-PHONE = [   # three bands, 540x316 each, top to bottom, 6 px of tar between
-    [("r_selfie", .5), ("s6_tunnel", .42), ("r_sunset", .5), ("s1_mint", .3), ("r_wheel", .5), ("t_selfie", .3), ("r_jersey", .5), ("s9_sun", .5), ("love", .2)],
-    [("r_riding", .5), ("s4_river", .45), ("s2_drone", .48), ("s3_ahead", .45)],
-    [("s7_road", .62), ("s5_forest", .5), ("r_ledge", .5), ("s8_bike", .62), ("s1_mint", .3)],
+# lanes: (slot w, slot h, [(shot, focus 0..1 along the axis the crop slides on), ...]); the last shot of each lane is
+# trimmed to the loop. Order chosen so no shot is in two lanes at the same moment.
+PHONE = [   # one frame, the shots at their own length; frame 0 is his face (the poster and the reduced-motion still)
+    (608, 1080, [("s1_mint", .5), ("s6_tunnel", .5), ("s3_ahead", .5), ("s5_forest", .5), ("s8_bike", .45), ("s2_drone", .55)]),
 ]
-WIDE = [    # three panels, 536x960 each, left to right, 6 px of tar between
-    [("s1_mint", .5), ("s4_river", .5), ("t_selfie", .35), ("s7_road", .5), ("s2_drone", .5), ("s9_sun", .5), ("s5_forest", .5)],
-    [("love", .5), ("s6_tunnel", .5), ("s8_bike", .5), ("s3_ahead", .5)],
-    [("s6_tunnel", .5), ("s2_drone", .5), ("s5_forest", .5), ("s1_mint", .5), ("s4_river", .5), ("t_selfie", .5), ("s8_bike", .5)],
+WIDE = [    # the wide panel the words sit in, then the tall one with his face; both cut together every 1.2 s (calmer
+            # than two clocks), never the same shot in both, each shot once per lane per loop
+    (1012, 960, [("s3_ahead", .5, 1.2), ("s2_drone", .5, 1.2), ("s8_bike", .5, 1.2), ("s1_mint", .5, 1.2), ("s6_tunnel", .5, 1.2)]),
+    (602, 960, [("s1_mint", .45, 1.2), ("s6_tunnel", .5, 1.2), ("s3_ahead", .5, 1.2), ("s2_drone", .5, 1.2), ("s8_bike", .5, 1.2)]),
 ]
 
 def dur(shot): return SHOTS[shot][2] - SHOTS[shot][1]
 
-def lane_times(lane):
+def lane_times(lane, L):
     """[(shot, focus, start_in_loop, length)] trimmed to L"""
     out, t = [], 0.0
-    for shot, f in lane:
+    for shot, f, *cap in lane:
         if t >= L - 1e-6: break
-        d = min(dur(shot), L - t)
+        d = min(dur(shot), cap[0] if cap else 99, L - t)
         out.append((shot, f, t, d)); t += d
     if t < L - 1e-3: raise SystemExit(f"lane too short: {t:.2f}s of {L}s")
     return out
 
 def check(lanes, label):
     """no shot plays in two lanes at once"""
-    spans = [(s, a, a + d, i) for i, lane in enumerate(lanes) for (s, f, a, d) in lane_times(lane)]
+    spans = [(s, a, a + d, i) for i, (w, h, lane) in enumerate(lanes) for (s, f, a, d) in lane_times(lane, L[label])]
     for s1, a1, b1, i1 in spans:
         for s2, a2, b2, i2 in spans:
             if i1 < i2 and s1 == s2 and a1 < b2 and a2 < b1:
@@ -115,28 +117,28 @@ def crop_for(shot, w, h, focus):
     cw -= cw % 2; ch -= ch % 2
     return x, y, cw, ch
 
-def build(lanes, slot, gap, stack, out_w, out_h, srcs, tmp, name):
+def build(lanes, gap, out_w, out_h, srcs, tmp, name):
     args, chains, n = [], [], 0
     lane_labels = []
-    for li, lane in enumerate(lanes):
+    for li, (sw, sh, lane) in enumerate(lanes):
         seg_labels = []
-        for shot, f, a, d in lane_times(lane):
+        for shot, f, a, d in lane_times(lane, L[name]):
             src = SHOTS[shot][0]; path = srcs[src][0]; t0 = SHOTS[shot][1]
             args += ["-ss", f"{t0:.3f}", "-t", f"{d:.3f}", "-i", path]
-            x, y, cw, ch = crop_for(shot, slot[0], slot[1], f)
-            chains.append(f"[{n}:v]crop={cw}:{ch}:{x}:{y},scale={slot[0]}:{slot[1]}:flags=lanczos,setsar=1,fps={FPS},format=yuv420p,trim=duration={d:.3f},setpts=PTS-STARTPTS[s{n}]")
+            x, y, cw, ch = crop_for(shot, sw, sh, f)
+            chains.append(f"[{n}:v]crop={cw}:{ch}:{x}:{y},scale={sw}:{sh}:flags=lanczos,setsar=1,fps={FPS},format=yuv420p,trim=duration={d:.3f},setpts=PTS-STARTPTS[s{n}]")
             seg_labels.append(f"[s{n}]"); n += 1
-        chains.append(f"{''.join(seg_labels)}concat=n={len(seg_labels)}:v=1:a=0,trim=duration={L:.3f},setpts=PTS-STARTPTS[l{li}]")
+        chains.append(f"{''.join(seg_labels)}concat=n={len(seg_labels)}:v=1:a=0,trim=duration={L[name]:.3f},setpts=PTS-STARTPTS[l{li}]")
         lane_labels.append(f"[l{li}]")
-    # gutters: pad each lane but the last on its far side, then stack
-    padded = []
-    for li, lab in enumerate(lane_labels):
-        if li < len(lane_labels) - 1:
-            pw, ph = (slot[0], slot[1] + gap) if stack == "v" else (slot[0] + gap, slot[1])
-            chains.append(f"{lab}pad={pw}:{ph}:0:0:color={TAR}[p{li}]"); padded.append(f"[p{li}]")
-        else:
-            padded.append(lab)
-    chains.append(f"{''.join(padded)}{'vstack' if stack == 'v' else 'hstack'}=inputs={len(padded)},setsar=1[out]")
+    if len(lane_labels) == 1:
+        chains.append(f"{lane_labels[0]}setsar=1[out]")
+    else:   # the gutter: pad each lane but the last on its right, then side by side
+        padded = []
+        for li, lab in enumerate(lane_labels):
+            if li < len(lane_labels) - 1:
+                chains.append(f"{lab}pad={lanes[li][0] + gap}:{lanes[li][1]}:0:0:color={TAR}[p{li}]"); padded.append(f"[p{li}]")
+            else: padded.append(lab)
+        chains.append(f"{''.join(padded)}hstack=inputs={len(padded)},setsar=1[out]")
     master = os.path.join(tmp, f"{name}-master.mp4")
     cmd = ["ffmpeg", "-v", "error", "-y", *args, "-filter_complex", ";".join(chains), "-map", "[out]", "-an",
            "-c:v", "libx264", "-crf", "14", "-preset", "veryfast", "-pix_fmt", "yuv420p", master]
@@ -166,21 +168,22 @@ def encode(master, out_dir, base, crf_h264, crf_vp9):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--reel", required=True, help="Robert's three-band reel (cycling-video-no-text.mp4)")
+    ap.add_argument("--reel", default="", help="Robert's three-band reel (cycling-video-no-text.mp4), only if a reel shot is in a lane")
     ap.add_argument("--out", default=FILM)
-    ap.add_argument("--n", type=int, default=1)
+    ap.add_argument("--n", type=int, default=2)
     a = ap.parse_args()
-    srcs = sources(os.path.abspath(os.path.expanduser(a.reel)))
-    for k, (p, *_) in srcs.items():
-        if not os.path.exists(p): sys.exit(f"missing source {k}: {p}")
+    srcs = sources(os.path.abspath(os.path.expanduser(a.reel)) if a.reel else "")
+    used = {SHOTS[e[0]][0] for lanes in (PHONE, WIDE) for (_, _, lane) in lanes for e in lane}
+    for k in used:
+        if not srcs[k][0] or not os.path.exists(srcs[k][0]): sys.exit(f"missing source {k}: {srcs[k][0] or '(pass --reel)'}")
     check(PHONE, "phone"); check(WIDE, "wide")
     os.makedirs(a.out, exist_ok=True)
     with tempfile.TemporaryDirectory() as tmp:
         print("phone")
-        m = build(PHONE, (540, 316), 6, "v", 540, 960, srcs, tmp, "phone")
+        m = build(PHONE, 6, 608, 1080, srcs, tmp, "phone")
         encode(m, a.out, f"hero-phone-{a.n}", 27, 40)
         print("wide")
-        m = build(WIDE, (536, 960), 6, "h", 1620, 960, srcs, tmp, "wide")
+        m = build(WIDE, 6, 1620, 960, srcs, tmp, "wide")
         encode(m, a.out, f"hero-wide-{a.n}", 29, 42)
 
 if __name__ == "__main__":

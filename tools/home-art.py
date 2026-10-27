@@ -7,12 +7,11 @@ this keeps them small and finished:
 
   img/home/asphalt-1.webp   a 240 px tile of fine aggregate, light specks on clear, for the dark fields only
                             (never over a photograph, never under small type at more than a whisper)
-  img/home/lane-1.svg       one strip of road-marking dashes, the edges a little worn the way paint on a lane
-                            wears; drawn shapes, no filter, so they stay crisp on a phone. The fill is
-                            currentColor's stand-in, swapped per ground by the two files below
-  img/home/lane-rose-1.svg    smeared rose (#A84C58), for light grounds
-  img/home/lane-powder-1.svg  powder rose (#D9B1AA), for dark grounds
-  TORN (printed)            the clip-path polygon for a torn plaster tab's bottom edge (home.css .torn)
+  img/home/lane-rose-2.svg    one strip of road-marking dashes in smeared rose (#A84C58), for light grounds: the edges
+                              a little worn the way paint on a lane wears; drawn shapes, no filter, so they stay crisp
+  img/home/lane-powder-2.svg  the same in powder rose (#D9B1AA), for dark grounds
+  (-2, Oct 26: each dash centred in its cell, so a run bleeds evenly at both ends)
+  TORN (printed)            a clip-path polygon for a torn edge; not used since the review (captions are plain)
 
   python3 tools/home-art.py        (Pillow + numpy). Same seed, same pictures; bump the file number on a change.
 """
@@ -71,13 +70,13 @@ def lane(fill):
     x = 0.0
     for _ in range(10):
         L = random.uniform(66, 78)
-        d, b = dash(x + 12, L)
+        d, b = dash(x + (120 - L) / 2, L)          # centred in its 120-unit cell, so a run bleeds evenly at both ends
         body.append(d); cuts.append(b)
         x += 120
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 24" width="1200" height="24" preserveAspectRatio="none">'
             f'<defs><mask id="w"><rect width="1200" height="24" fill="#fff"/><path d="{"".join(cuts)}" fill="#000"/></mask></defs>'
             f'<path d="{"".join(body)}" fill="{fill}" mask="url(#w)"/></svg>\n')
-for name, fill in (("lane-rose-1.svg", "#A84C58"), ("lane-powder-1.svg", "#D9B1AA")):
+for name, fill in (("lane-rose-2.svg", "#A84C58"), ("lane-powder-2.svg", "#D9B1AA")):
     random.seed(11)
     open(os.path.join(OUT, name), "w").write(lane(fill))
 

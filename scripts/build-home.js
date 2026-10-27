@@ -5,10 +5,10 @@
 
    Writes cfc-site/index.html from the shared chrome (header, menu, footer, the Ride with me bar) plus the page:
      1  #top    the film, full screen (tools/hero-film.py): the mark, who and what, one primary (Ride with me)
-     2  strip   the numbers on a lane: training miles (live), 10,000 in 2027, group rides, events
-     3  #why    the story in his words, his photographs, how this works (#how)
+     2  strip   the numbers on a lane: training miles (live), group rides, events
+     3  #why    how this works (#how), then the story in his words and his photographs
         #today  today I rode for (data/today.json)
-     4  #road   10,000, the last rides from Strava (the log), the bike
+     4  #road   10,000 (said once, big), the last rides from Strava (the log)
      5  #year   the 2027 rides I'm doing: where (data/geo/home-2027.json, tools/home-map.js) and when
      6  #orgs   the orgs I ride for, the line that says why, help lines; #ride, Center Ride Out (where the money goes)
      7  #find   find a group ride
@@ -78,16 +78,6 @@ const MARK_WORD = (cls) => `<svg class="${cls}" viewBox="0 0 626 150" aria-hidde
 // —— the house marks on the homepage (24 grid, one 1.7 stroke, round caps), inlined so no sprite request ——
 const DEFS = `<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
   <defs>
-    <!-- the one sanctioned wear: the big desktop hero mark (Pass 27; off under 760px in home.css) -->
-    <filter id="lpWorn" x="-10%" y="-10%" width="120%" height="120%">
-      <feTurbulence type="fractalNoise" baseFrequency=".012 .11" numOctaves="3" seed="11" result="n"/>
-      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -7 0 0 0 4.9" result="m"/>
-      <feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="2" seed="3" result="c"/>
-      <feColorMatrix in="c" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -3 0 0 0 2.6" result="chips"/>
-      <feComposite in="m" in2="chips" operator="arithmetic" k2="1" k3="1" result="mask"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="edge"/>
-      <feComposite in="edge" in2="mask" operator="in"/>
-    </filter>
     <symbol id="mkPhx" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14h20"/><path d="M7.5 14a4.5 4.5 0 0 1 9 0"/><path d="M12 6.5V4.5M6.2 8.7 4.8 7.3M17.8 8.7l1.4-1.4"/><path d="M9.5 20.5 11 14M14.5 20.5 13 14"/></g></symbol>
     <symbol id="mkOjai" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16.5 7.5 8l3.5 5.5 3-4.5L22 16.5"/><path d="M3 20.5h18"/></g></symbol>
     <symbol id="mkSF" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20V4M17 20V4"/><path d="M5.5 7h3M15.5 7h3"/><path d="M2 15h20"/><path d="M7 4.5q5 9 10 0"/><path d="M1 14q4-1 6-9.5M23 14q-4-1-6-9.5"/><path d="M12 11v4"/></g></symbol>
@@ -96,30 +86,20 @@ const DEFS = `<svg aria-hidden="true" focusable="false" style="position:absolute
     <symbol id="mkOrgs" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="8" r="2.2"/><circle cx="12" cy="6.5" r="2.2"/><circle cx="17.5" cy="8" r="2.2"/><path d="M2.5 19a4 4 0 0 1 8 0M8 19a4 4 0 0 1 8 0M13.5 19a4 4 0 0 1 8 0"/></g></symbol>
     <symbol id="mkGroup" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 21 8.6 3M20.5 21 15.4 3"/><path d="M12 3v2.2M12 8.2v2.2" opacity=".55"/></g><g fill="currentColor"><circle cx="9.6" cy="17.2" r="1.8"/><circle cx="14.4" cy="17.2" r="1.8"/><circle cx="12" cy="13.2" r="1.5"/></g></symbol>
     <symbol id="mkFinish" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V4M20 21V4"/><path d="M4 5h16v5H4z"/></g><g fill="currentColor"><rect x="4" y="5" width="4" height="2.5"/><rect x="12" y="5" width="4" height="2.5"/><rect x="8" y="7.5" width="4" height="2.5"/><rect x="16" y="7.5" width="4" height="2.5"/></g></symbol>
-    <!-- the bike, his: a road bike in one line, deep rims, drop bars (drawn for this page, Oct 26, 2026) -->
-    <symbol id="hmBike" viewBox="0 0 480 270"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="100" cy="186" r="78"/><circle cx="100" cy="186" r="60"/><circle cx="100" cy="186" r="5"/>
-      <circle cx="380" cy="186" r="78"/><circle cx="380" cy="186" r="60"/><circle cx="380" cy="186" r="5"/>
-      <path d="M100 186 L214 194 L186 78 Z"/><path d="M186 78 L334 70 L344 106 L214 194"/>
-      <path d="M344 106 L360 160 Q366 180 380 186"/><path d="M186 78 L180 52"/><path d="M150 48 Q160 42 178 44 L212 47"/>
-      <path d="M334 70 L332 62 L364 57"/><path d="M364 57 H376 C391 57 397 69 395 81 C393 93 384 99 371 99 L362 98"/>
-      <path d="M376 57 C381 49 392 50 393 61 L389 82"/>
-      <circle cx="214" cy="194" r="21"/><path d="M214 194 L228 220 M219 222 H238"/>
-    </g></symbol>
   </defs>
 </svg>`;
 
 // —— 1. the hero: the film, the mark, who and what, one primary ——
 const FILM = {
-  phone: { mp4: "/film/hero-phone-1.mp4", webm: "/film/hero-phone-1.webm", poster: "/film/hero-phone-1", w: 540, h: 960 },
-  wide: { mp4: "/film/hero-wide-1.mp4", webm: "/film/hero-wide-1.webm", poster: "/film/hero-wide-1", w: 1620, h: 960 },
+  phone: { mp4: "/film/hero-phone-2.mp4", webm: "/film/hero-phone-2.webm", poster: "/film/hero-phone-2", w: 608, h: 1080 },
+  wide: { mp4: "/film/hero-wide-2.mp4", webm: "/film/hero-wide-2.webm", poster: "/film/hero-wide-2", w: 1620, h: 960 },
 };
 // the wide film on a landscape screen at 760 and up; the stacked one on phones and portrait tablets
 const WIDE_Q = "(min-width: 760px) and (min-aspect-ratio: 1/1)";
 const PHONE_Q = "(max-width: 759px), (max-aspect-ratio: 1/1)";
 const heroRide = `<a class="hero-ride" id="heroRide" href="${esc(RIDE_HREF)}"${NR ? " data-ride-next" : ""}>${NR ? `<span class="ridebar-d">${esc(NR.date)}</span>` : ""}<span class="hero-ride-t"><span class="finder-t">Ride with me</span><span class="finder-s">${NR ? `${esc(NR.name)}, ${esc(NR.where)}` : "The rides I&rsquo;m doing in 2027"}</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>`;
-const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools/hero-film.py): three stacked bands on a phone, three
-     tall panels on a wide screen. The poster is the film's first frame and the page's largest paint; /home.js
+const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools/hero-film.py): one frame on a phone, two panels on a wide
+     screen (the words sit inside the wide one). The poster is the film's first frame and the page's largest paint; /home.js
      starts the film after load, never under reduced motion or Save-Data, and the button always stops it. —— -->
 <section class="hero" id="top" aria-labelledby="hero-h" data-film="off">
   <div class="hero-media">
@@ -129,19 +109,19 @@ const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools
       <source media="${WIDE_Q}" srcset="${FILM.wide.poster}.jpg">
       <source type="image/avif" srcset="${FILM.phone.poster}.avif">
       <source type="image/webp" srcset="${FILM.phone.poster}.webp">
-      <img src="${FILM.phone.poster}.jpg" width="${FILM.phone.w}" height="${FILM.phone.h}" alt="Robert on the bike: a selfie mid-ride, riding at the camera at sunset, the road ahead." fetchpriority="high">
+      <img src="${FILM.phone.poster}.jpg" width="${FILM.phone.w}" height="${FILM.phone.h}" alt="Robert riding at the camera in a mint jersey and a yellow helmet, a desert road behind him." fetchpriority="high">
     </picture>
     <video class="hero-film" id="heroFilm" muted loop playsinline disablepictureinpicture preload="none" aria-hidden="true" tabindex="-1"
       data-phone-mp4="${FILM.phone.mp4}" data-phone-webm="${FILM.phone.webm}" data-wide-mp4="${FILM.wide.mp4}" data-wide-webm="${FILM.wide.webm}" data-wide-q="${WIDE_Q}"></video>
     <div class="hero-scrim" aria-hidden="true"></div>
   </div>
   <div class="wrap hero-in">
+    <h1 class="hero-h" id="hero-h">${MARK_LINE("hero-mark hero-mark--line", false)}${MARK_STACK("hero-mark hero-mark--stack")}<span class="sr">Cycle for Change</span></h1>
     <p class="hero-intro">I&rsquo;m Robert. In 2027 I ride 10,000 miles, all on the bike.</p>
-    <h1 class="hero-h" id="hero-h">${MARK_LINE("hero-mark hero-mark--line", true)}${MARK_STACK("hero-mark hero-mark--stack")}<span class="sr">Cycle for Change</span></h1>
     <p class="hero-line">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</p>
     <div class="hero-acts">
       ${heroRide}
-      <a class="hero-link" href="/rides/">Find a group ride</a>
+      <p class="hero-links"><a class="link link--bone" href="/rides/">Find a group ride</a><a class="link link--bone" href="${NOTE ? NOTE.href : "#road"}">Read the last ride</a></p>
     </div>
   </div>
   <button class="hero-pause" id="heroPause" type="button" aria-pressed="false" hidden><svg class="hp-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg><svg class="hp-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><span class="hp-label">Pause the film</span></button>
@@ -149,26 +129,32 @@ const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools
 `;
 
 // —— 2. the strip: the numbers on a lane ——
-const STRIP = `<!-- —— 2. the numbers, on a lane. One number for the miles (since June 1); the 10,000 is the year, never a share of it. —— -->
+const STRIP = `<!-- —— 2. the numbers, on a lane. One number for the miles (since June 1); the 10,000 is said once, in #road, never next to it. —— -->
 <section class="strip" aria-label="The numbers">
   <div class="lane lane--top" aria-hidden="true"></div>
   <div class="wrap strip-in">
-    <p class="strip-cell"><span class="strip-n"><b class="num" data-miles>${T0 ? fmt(T0.miles) : "&mdash;"}</b></span><span class="strip-l">training miles since June 1, <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">on Strava</a></span></p>
-    <p class="strip-cell strip-cell--year"><b class="strip-n num">10,000</b><span class="strip-l">miles in 2027, all on the bike. The count restarts in <b class="num" id="daysTo">${DAYS_TO}</b> days.</span></p>
-    <a class="strip-cell finder-tile" href="/rides/"><svg class="strip-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkGroup"/></svg><b class="strip-n num">${RIDES_N}</b><span class="strip-l">group rides worldwide</span></a>
-    <a class="strip-cell finder-tile" href="/events/2027/"><svg class="strip-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkFinish"/></svg><b class="strip-n num">${CAL_N}</b><span class="strip-l">events in 2027</span></a>
+    <p class="strip-cell strip-cell--miles"><span class="strip-n"><b class="num" data-miles>${T0 ? fmt(T0.miles) : "&mdash;"}</b></span><span class="strip-l">training miles since June 1, <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">on Strava</a>. The count restarts in <b class="num" id="daysTo">${DAYS_TO}</b> days.</span></p>
+    <a class="strip-cell finder-tile" href="/rides/"><span class="strip-n num">${RIDES_N}</span><span class="strip-l">group rides worldwide</span></a>
+    <a class="strip-cell finder-tile" href="/events/2027/"><span class="strip-n num">${CAL_N}</span><span class="strip-l">events in 2027</span></a>
   </div>
 </section>
 `;
 
 // —— 3. the story: his words, his photographs, how this works ——
 const fig = (key, cls) => PH.figure(key, { cls: "" }).replace('<figure class="ph ', `<figure class="ph ${cls} `);
-const STORY = `<!-- —— 3. why. His words only (CLAUDE.md §4). The photographs keep a clean edge; the place · month line hangs under
-     each one on a torn plaster tab, the paper the caption is printed on, never over the picture. —— -->
+const STORY = `<!-- —— 3. why. How this works first (the mechanics before the photographs, Pass 37), then his words only (CLAUDE.md §4)
+     beside his photographs, clean-edged, the place · month line under each. —— -->
 <section class="story" id="why" aria-labelledby="why-h">
+  <div class="wrap how" id="how">
+    <h2 class="how-h">How this works.</h2>
+    <ol class="how-steps">
+      <li><svg class="how-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkRide"/></svg><h3 class="how-t">I ride.</h3><p>10,000 miles in 2027. Every ride lands here from Strava.</p></li>
+      <li><svg class="how-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkWrite"/></svg><h3 class="how-t">I write it down.</h3><p>Every ride gets a stroke. The big ones get a page.</p></li>
+      <li><svg class="how-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkOrgs"/></svg><h3 class="how-t">The money goes to the orgs.</h3><p>Through their own rides. Nothing here asks for a card.</p></li>
+    </ol>
+  </div>
   <div class="wrap story-in">
     <div class="story-words">
-      <div class="rule"><span class="rule-n">01</span></div>
       <h2 class="story-h" id="why-h">It always says cycling.</h2>
       <p class="story-lede">Cycling changed my life. I&rsquo;d like to say I&rsquo;m cycling for other people. I&rsquo;m really cycling for myself. I&rsquo;m cycling because it changed me. That&rsquo;s the story.</p>
       <p class="story-more">So the sign changes. What comes after the word is up to whoever&rsquo;s riding.</p>
@@ -178,14 +164,6 @@ const STORY = `<!-- —— 3. why. His words only (CLAUDE.md §4). The photograp
       ${fig("robert-boise", "story-ph story-ph--a")}
       ${fig("pv-shadow", "story-ph story-ph--b")}
     </div>
-  </div>
-  <div class="wrap how" id="how">
-    <h2 class="how-h">How this works.</h2>
-    <ol class="how-steps">
-      <li><svg class="how-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkRide"/></svg><h3 class="how-t">I ride.</h3><p>10,000 miles in 2027. Every ride lands here from Strava.</p></li>
-      <li><svg class="how-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkWrite"/></svg><h3 class="how-t">I write it down.</h3><p>Every ride gets a stroke. The big ones get a page.</p></li>
-      <li><svg class="how-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkOrgs"/></svg><h3 class="how-t">The money goes to the orgs.</h3><p>Through their own rides. Nothing here asks for a card.</p></li>
-    </ol>
   </div>
 </section>
 `;
@@ -225,13 +203,13 @@ function todaySection() {
       <p class="eyebrow">The ride on ${esc(day)}.</p>
       <h2 class="today-sign" id="today-h">${MARK_WORD("today-mark")}<span class="plate today-plate" aria-hidden="true">${esc(T.for)}</span><span class="sr">I rode for ${esc(T.for)}</span></h2>
       <p class="today-line">${esc(T.line)}</p>
-      <a class="today-ask" href="/cyclefor/"><span class="today-ask-q">What do you cycle for?</span><span class="today-ask-go">Say it on video</span></a>
+      <p class="today-ask"><a class="link" href="/cyclefor/">What do you cycle for? Say it on video</a></p>
+      ${film}
     </div>
     <figure class="today-ph">
       ${img(T.photo, "(min-width: 1024px) 50vw, 100vw")}
-      ${where ? `<figcaption class="torn">${esc(where)}</figcaption>` : ""}
+      ${where ? `<figcaption>${esc(where)}</figcaption>` : ""}
     </figure>
-    ${film}
   </div>
 </section>
 `;
@@ -239,27 +217,24 @@ function todaySection() {
 
 // —— 4. the miles: 10,000, the last rides (Strava), the bike ——
 const logRows = T0 && T0.recent && T0.recent.length ? TALLY.logRows(T0.recent) : `        <li><span class="when">&mdash;</span><span class="bar-mi" style="--w:0"></span><span class="mi num">&mdash;</span></li>`;
-const ROAD = `<!-- —— 4. the miles. The 10,000 is the year; the number under it is the training count since June 1, one number,
-     never against the 10,000. The log is the four last rides from Strava, each a painted stroke as long as the ride. —— -->
+const ROAD = `<!-- —— 4. the miles. The 10,000 is the year, said once at this size; the training count lives in the strip, away from
+     it. The log is the four last rides from Strava, each a painted stroke as long as the ride. —— -->
 <section class="miles" id="road" aria-labelledby="road-h">
   <div class="wrap miles-in">
-    <div class="rule rule--dark"><span class="rule-n">02</span><span class="rule-l">From the road</span></div>
     <p class="miles-big" aria-hidden="true"><span class="num">10,000</span></p>
     <p class="miles-sub">miles in 2027, all on the bike.</p>
     <div class="miles-grid">
       <div class="miles-log">
+        <p class="eyebrow miles-k">From the road</p>
         <h2 class="miles-h" id="road-h">The last rides.</h2>
         <ol class="log" id="log" data-max="4" aria-live="polite"${NOTE ? ` data-note-date="${NOTE.date}" data-note-href="${NOTE.href}"` : ""}>
 ${logRows}
         </ol>
-        <p class="miles-note">Every ride gets a stroke, as long as the ride. The big ones get a page: the route, the town, who was there, the footage.</p>
-        <p class="miles-acts"><a class="link link--bone" href="${NOTE ? NOTE.href : "/events/2027/riding/"}">Read the last ride</a><a class="link link--bone" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Follow on Strava</a></p>
       </div>
       <div class="miles-side">
-        <svg class="miles-bike" viewBox="0 0 480 270" aria-hidden="true" focusable="false"><use href="#hmBike"/></svg>
-        <div class="lane lane--road" aria-hidden="true"></div>
-        <p class="miles-count"><span class="miles-count-l">Mile</span> <b class="num" data-miles>${T0 ? fmt(T0.miles) : "&mdash;"}</b> <span class="miles-count-l">of training. The 10,000 start Jan 1.</span></p>
-        <p class="miles-rides"><b class="num" id="roadRides">${T0 && T0.rides ? fmt(T0.rides) : "&mdash;"}</b> rides since June 1. The count starts over on January 1.</p>
+        <p class="miles-rides"><b class="num" id="roadRides">${T0 && T0.rides ? fmt(T0.rides) : "&mdash;"}</b> rides since June 1.</p>
+        <p class="miles-note">Every ride gets a stroke, as long as the ride. The big ones get a page: the route, the town, who was there, the footage.</p>
+        <p class="miles-acts"><a class="link link--bone" href="${NOTE ? NOTE.href : "/events/2027/riding/"}">Read the last ride</a><a class="link link--bone" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">Follow on Strava</a></p>
       </div>
     </div>
   </div>
@@ -268,7 +243,7 @@ ${logRows}
 
 // —— 5. the 2027 rides: where, and when ——
 const RIDING = CHROME.RIDING || [];
-const FOR = { "center-ride-out": "the Center", "cycle-to-zero": "SFAF" };
+const FOR = { "center-ride-out": "the Center", "cycle-to-zero": "SFAF" };   // the plate after CYCLE FOR (CLAUDE.md §1)
 const MAP = read("data/geo/home-2027.json");
 const BYSLUG = Object.fromEntries(((CAL && CAL.events) || []).map((e) => [e.slug, e]));
 // where a dot sits on the map when two towns would touch (the dot moves, a hairline goes back to the town), in map units
@@ -286,7 +261,7 @@ function yearSection() {
     const [, m2, d2] = String(r.end || "").split("-").map(Number);
     const days = !m1 ? "" : m1 === m2 && d1 !== d2 ? `${d1}&ndash;${d2}` : m1 === m2 ? `${d1}` : `${d1}&ndash;${MON[m2 - 1]} ${d2}`;
     const plate = m1 ? `<span class="date-m">${MON[m1 - 1]}</span><span class="date-d num">${days}</span>` : `<span class="date-m">2027</span><span class="date-d">TBA</span>`;
-    return `      <li class="yr${r.status !== "confirmed" ? " yr--soft" : ""}"><a href="${esc(r.href)}"><span class="yr-i num" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span><span class="date${r.status !== "confirmed" ? " date--soft" : ""}">${plate}</span><span class="yr-n"><b>${esc(r.name)}</b>${FOR[r.slug] ? ` <span class="plate yr-plate">for ${esc(FOR[r.slug])}</span>` : ""}<span class="yr-l">${esc(line)}</span></span><span class="yr-go" aria-hidden="true">&rarr;</span></a></li>`;
+    return `      <li class="yr${r.status !== "confirmed" ? " yr--soft" : ""}"><a href="${esc(r.href)}"><span class="yr-i num" aria-hidden="true">${i + 1}</span><span class="date${r.status !== "confirmed" ? " date--soft" : ""}">${plate}</span><span class="yr-n"><b>${esc(r.name)}</b>${FOR[r.slug] ? ` <span class="plate yr-plate">${esc(FOR[r.slug])}</span>` : ""}<span class="yr-l">${esc(line)}</span></span></a></li>`;
   }).join("\n");
   const nProj = RIDING.filter((r) => r.status === "projected").length, nTba = RIDING.filter((r) => r.status === "tba").length;
   const dated = RIDING.length - nProj - nTba;
@@ -295,8 +270,8 @@ function yearSection() {
   if (nTba) bits.push(`${word(nTba)} ${nTba === 1 ? "hasn&rsquo;t" : "haven&rsquo;t"} put out 2027 dates yet`);
   const cap = (t) => t.charAt(0).toUpperCase() + t.slice(1);
   const note = `${cap(word(dated))} with dates from the organizer${bits.length ? "; " + bits.join("; ") : ""}.`;
-  // the map: the states and the edge of Canada, a square for home, a numbered dot per ride (start and finish for
-  // the point-to-point ones, nothing drawn between). Labels are HTML placed by percent (no words in a stretched SVG).
+  // the map: the states and the edge of Canada, a square for home, a numbered dot per ride at its start town, nothing drawn
+  // between (never a route we drew). The numbers are HTML placed by percent (no words in a stretched SVG); the list is the link.
   let map = "";
   if (MAP) {
     const B = MAP.box;
@@ -308,30 +283,27 @@ function yearSection() {
       const at = [pts[0].xy[0] + n[0], pts[0].xy[1] + n[1]];
       if (n[0] || n[1]) leaders.push(`<path d="M${pts[0].xy[0]} ${pts[0].xy[1]}L${at[0]} ${at[1]}"/>`);
       ends.push(`<circle cx="${pts[0].xy[0]}" cy="${pts[0].xy[1]}" r="2.6"/>`);
-      if (pts[1]) ends.push(`<circle class="mp-end" cx="${pts[1].xy[0]}" cy="${pts[1].xy[1]}" r="4.5"/>`);
       const [x, y] = pct(at);
-      dots.push(`<a class="mp-dot${r.status !== "confirmed" ? " mp-dot--soft" : ""}" href="${esc(r.href)}" style="left:${x}%;top:${y}%"><span class="num">${i + 1}</span><span class="sr">${esc(r.name)}, ${esc(r.date || "2027 dates to come")}</span></a>`);
+      dots.push(`<span class="mp-dot${r.status !== "confirmed" ? " mp-dot--soft" : ""}" style="left:${x}%;top:${y}%"><span class="num">${i + 1}</span></span>`);
     });
-    const [hx, hy] = pct(MAP.home.xy);
     // the drawing is a file (it's 40 KB of outline the HTML doesn't need to carry); After Hours values, as card.js does
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${B.x} ${B.y} ${B.w} ${B.h}" width="${B.w}" height="${B.h}"><path d="${MAP.canada}" fill="#D7D5D0" stroke="#687F7C" stroke-width=".7" stroke-linejoin="round"/><path d="${MAP.states}" fill="#EFEDEA" stroke="#687F7C" stroke-width=".7" stroke-linejoin="round"/><g fill="none" stroke="#1C1A22" stroke-width="1.2">${leaders.join("")}</g><g fill="#1C1A22">${ends.join("").replace(/class="mp-end"/g, 'fill="#EFEDEA" stroke="#A84C58" stroke-width="2.4"')}</g><rect x="${MAP.home.xy[0] - 5}" y="${MAP.home.xy[1] - 5}" width="10" height="10" fill="#1C1A22"/></svg>\n`;
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${B.x} ${B.y} ${B.w} ${B.h}" width="${B.w}" height="${B.h}"><path d="${MAP.canada}" fill="#D7D5D0" stroke="#687F7C" stroke-width=".7" stroke-linejoin="round"/><path d="${MAP.states}" fill="#EFEDEA" stroke="#687F7C" stroke-width=".7" stroke-linejoin="round"/><g fill="none" stroke="#1C1A22" stroke-width="1.2">${leaders.join("")}</g><g fill="#1C1A22">${ends.join("")}</g><rect x="${MAP.home.xy[0] - 5}" y="${MAP.home.xy[1] - 5}" width="10" height="10" fill="#1C1A22"/></svg>\n`;
     fs.mkdirSync(path.join(ROOT, "cfc-site", "img", "home"), { recursive: true });
     fs.writeFileSync(path.join(ROOT, "cfc-site", "img", "home", "map-2027.svg"), svg);
     const hash = require("crypto").createHash("sha1").update(svg).digest("hex").slice(0, 8);
-    map = `<figure class="yr-map">
+    map = `<figure class="yr-map" aria-hidden="true">
         <div class="yr-map-in">
           <img class="yr-map-svg" src="/img/home/map-2027.svg?v=${hash}" width="${B.w}" height="${B.h}" alt="" loading="lazy" decoding="async">
-          <span class="mp-home-l" style="left:${hx}%;top:${hy}%">Phoenix</span>
           ${dots.join("\n          ")}
         </div>
-        <figcaption>Each dot is a ride, in date order. A ride that ends in another town gets a ring at the finish; the road between isn&rsquo;t drawn.</figcaption>
+        <p class="yr-key"><i></i>Phoenix</p>
       </figure>`;
   }
   return `<!-- —— 5. the 2027 rides (data/calendar-2027.json, riding: true, through chrome.js): where on the map, when in the
      list. Dates are the organizers'; projected and TBA say so; the dots and the rows open the ride on the riding page. —— -->
 <section class="year" id="year" aria-labelledby="year-h">
   <div class="wrap">
-    <div class="rule"><span class="rule-n">03</span><span class="rule-l">${RIDING.length} rides</span></div>
+    <p class="rule"><span class="rule-l">${RIDING.length} rides</span></p>
     <div class="year-head"><h2 class="year-h" id="year-h">The 2027 rides I&rsquo;m doing.</h2><p class="year-lede">Part of the 10,000 miles. Come ride one.</p></div>
     <div class="year-grid">
       ${map}
@@ -352,7 +324,6 @@ const ORGS = `<!-- —— 6. the orgs. One line each from the site's checked cop
      money goes through their own pages. The help lines sit here because the orgs' work comes up here. —— -->
 <section class="orgs" id="orgs" aria-labelledby="orgs-h">
   <div class="wrap">
-    <div class="rule"><span class="rule-n">04</span></div>
     <div class="orgs-head"><h2 class="orgs-h" id="orgs-h">The orgs I ride for.</h2><p class="orgs-lede">You sign up or give on their page. None of it comes through me.</p></div>
     <div class="orgs-list">
       <article class="org">
@@ -365,21 +336,19 @@ const ORGS = `<!-- —— 6. the orgs. One line each from the site's checked cop
         <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkOjai"/></svg>
         <h3 class="org-h">Los Angeles LGBT Center</h3>
         <p>Health, housing and advocacy for LGBTQ+ people.</p>
-        <p class="org-ride"><span class="plate">Apr 23&ndash;25, 2027</span> Center Ride Out. Los Angeles to Ojai and back, three days.</p>
-        <p class="org-acts"><a class="link" href="https://centerrideout.lalgbtcenter.org/en/" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Give to the Center</a></p>
+        <p class="org-acts"><a class="link" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Give to the Center</a></p>
       </article>
       <article class="org">
         <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkSF"/></svg>
         <h3 class="org-h">San Francisco AIDS Foundation</h3>
         <p>HIV, sexual health and harm-reduction services.</p>
-        <p class="org-ride"><span class="plate">May 21&ndash;23, 2027</span> Cycle to Zero. San Francisco to the Russian River and back, three days.</p>
-        <p class="org-acts"><a class="link" href="https://www.sfaf.org/get-involved/cycle-to-zero/" target="_blank" rel="noopener noreferrer">Ride it with me</a><a class="link" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Give to SFAF</a></p>
+        <p class="org-acts"><a class="link" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Give to SFAF</a></p>
       </article>
     </div>
-    <p class="orgs-door">You don&rsquo;t have to be queer to ride with me. The rides raise money for queer-serving orgs. That&rsquo;s the point.</p>
+    <p class="orgs-door">You don&rsquo;t have to be queer to ride with me. The rides raise money for <span class="nowrap">queer-serving</span> orgs. That&rsquo;s the point.</p>
     <div class="orgs-help">
       <span class="eyebrow">If it&rsquo;s now</span>
-      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to 678-678</span>
+      <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <b>Trevor Project</b> <a class="nowrap" href="tel:18664887386">1-866-488-7386</a> or text START to <span class="nowrap">678-678</span></span>
       <a class="link" href="/resources/">Help lines, by age</a>
     </div>
   </div>
@@ -391,11 +360,10 @@ const ORGS = `<!-- —— 6. the orgs. One line each from the site's checked cop
     ${PH.figure("robert-desert", { cls: "" }).replace('<figure class="ph ', '<figure class="ph ridewith-ph ')}
     <div class="ridewith-words">
       <p class="eyebrow">A Los Angeles LGBT Center fundraiser</p>
-      <h2 class="ridewith-h" id="ride-h">Ride with me.</h2>
-      <p class="ridewith-big"><span class="nowrap">April 23&ndash;25,</span> I cycle for <span class="plate plate--big">the Center</span></p>
+      <h2 class="ridewith-big" id="ride-h"><span class="nowrap">April 23&ndash;25,</span> I cycle for <span class="plate plate--big">the Center</span></h2>
       <p>Center Ride Out. Los Angeles to Ojai, camp, then back along the coast to a finish by the ocean.</p>
       <dl class="facts-dl">
-        <div><dt>3 days</dt><dd>200+ miles, Apr 23&ndash;25, 2027</dd></div>
+        <div><dt>3 days</dt><dd>200+ miles, <span class="nowrap">Apr 23&ndash;25, 2027</span></dd></div>
         <div><dt>1 day</dt><dd>Day 2 only</dd></div>
         <div><dt>Money</dt><dd>You raise it on the Center&rsquo;s page</dd></div>
       </dl>
@@ -410,23 +378,17 @@ const ORGS = `<!-- —— 6. the orgs. One line each from the site's checked cop
 const FIND = `<!-- —— 7. find a group ride —— -->
 <section class="find-s" id="find" aria-labelledby="find-h">
   <div class="wrap find-in">
+    <p class="rule find-rule"><span class="rule-l">Group rides</span></p>
     <div class="find-words">
-      <div class="rule"><span class="rule-n">05</span><span class="rule-l">Group rides</span></div>
       <h2 class="find-h" id="find-h">Find a group ride.</h2>
       <p class="find-count"><b class="num">${RIDES_N}</b><span>group rides in the directory, each with the date it was last checked. Every state, ${RN.abroad} more countries. Shop rides, no-drop rides, queer rides.</span></p>
     </div>
     <div class="find-tools">
       <form class="find" action="/rides/" method="get" role="search">
         <label class="find-lab" for="q">Your town or a ride name</label>
-        <div class="find-row"><input class="find-field" id="q" name="q" type="search" placeholder="Your town or a ride name" autocomplete="off"><button class="btn btn--ink" type="submit">Search rides</button></div>
+        <div class="find-row"><input class="find-field" id="q" name="q" type="search" autocomplete="off"><button class="btn" type="submit">Search rides</button></div>
       </form>
       <p class="find-links"><a class="link" href="/rides/no-drop/">No-drop rides</a><a class="link" href="/rides/lgbtq/">Queer rides</a><a class="link" href="/tonight/">Tonight</a></p>
-      <dl class="facts-dl">
-        <div><dt>Group rides</dt><dd><a href="/rides/">${RIDES_N}</a></dd></div>
-        <div><dt>On the 2027 calendar</dt><dd><a href="/events/2027/">${CAL_N}</a></dd></div>
-        <div><dt>Town guides</dt><dd><a href="/towns/">${TOWNS_N}</a></dd></div>
-        <div><dt>My 2027 rides</dt><dd><a href="#year">${RIDING.length}, so far</a></dd></div>
-      </dl>
     </div>
   </div>
 </section>
@@ -436,7 +398,7 @@ const FIND = `<!-- —— 7. find a group ride —— -->
 const READ = `<!-- —— 8. read —— -->
 <section class="read" id="read" aria-labelledby="read-h">
   <div class="wrap">
-    <div class="rule"><span class="rule-n">06</span><span class="rule-l">Read</span></div>
+    <p class="rule"><span class="rule-l">Read</span></p>
     <div class="read-head"><h2 class="read-h" id="read-h">Field notes, guides, the journal.</h2><a class="link" href="/field-notes/">All field notes</a></div>
     <ul class="read-list">
       <li><a href="/field-notes/south-mountain-climb/"><b>South Mountain at sunset</b><span>Down Central from uptown, through downtown into South Phoenix, up the mountain as the light goes.</span></a></li>
@@ -471,7 +433,7 @@ const page = `<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light">
   <title>Cycle for Change: Robert Castan rides 10,000 miles in 2027</title>
-  <meta name="description" content="Robert Castan rides 10,000 miles in 2027, all on the bike, and writes every ride down. The money goes through the orgs' own rides. Find a group ride.">
+  <meta name="description" content="Robert Castan rides 10,000 miles in 2027, all on the bike, and writes every ride down. The money goes through the orgs’ own rides. Find a group ride.">
   <link rel="canonical" href="https://cycleforchange.org/">
   <link rel="alternate" type="application/rss+xml" title="Cycle for Change" href="https://cycleforchange.org/feed.xml">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -479,7 +441,7 @@ const page = `<!doctype html>
   <meta property="og:site_name" content="Cycle for Change">
   <meta property="og:url" content="https://cycleforchange.org/">
   <meta property="og:title" content="Cycle for Change — 10,000 miles in 2027, all on the bike">
-  <meta property="og:description" content="Cycling changed my life. I ride 10,000 miles in 2027 and write every ride down. The money goes through the orgs' own rides.">
+  <meta property="og:description" content="Cycling changed my life. I ride 10,000 miles in 2027 and write every ride down. The money goes through the orgs’ own rides.">
   <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -505,7 +467,7 @@ const page = `<!doctype html>
     "url": "https://cycleforchange.org/",
     "logo": "https://cycleforchange.org/favicon-512.png",
     "sameAs": ["https://www.instagram.com/cycl_eforchange", "https://www.strava.com/athletes/22899089"],
-    "description": "One rider, Robert Castan, in Phoenix, riding 10,000 miles on a bicycle in 2027, every ride written up on cycleforchange.org. The rides raise money for queer-serving organizations (one·n·ten, the Los Angeles LGBT Center and San Francisco AIDS Foundation) through their own events, like the Center Ride Out and Cycle to Zero. The site also holds a directory of group rides, a 2027 ride calendar and town guides."
+    "description": "One rider, Robert Castan, in Phoenix, riding 10,000 miles on a bicycle in 2027. Every ride gets a stroke on cycleforchange.org; the big ones get a page. The rides raise money for queer-serving organizations (one·n·ten, the Los Angeles LGBT Center and San Francisco AIDS Foundation) through their own events, like the Center Ride Out and Cycle to Zero. The site also holds a directory of group rides, a 2027 ride calendar and town guides."
   }
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Cycle for Change","alternateName":"cycleforchange.org","url":"https://cycleforchange.org/"}</script>

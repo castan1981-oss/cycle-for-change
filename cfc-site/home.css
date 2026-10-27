@@ -1,17 +1,15 @@
 /* Cycle for Change — the homepage (the editorial homepage, Oct 26, 2026). Markup: scripts/build-home.js.
    Loaded after /chrome.css, which brings the tokens, the type, the frame (nav, menu, footer, the Ride with me bar)
    and the system (button, link, field, focus). This sheet adds the page in @layer section, then, unlayered at the
-   foot, the frame's homepage states (the nav clear over the film).
+   foot, the frame's homepage states (the nav clear over the film, the hero's date plate).
 
    The approved direction (Robert and Cadence, Oct 26): MAAP's fashion-editorial energy and ASSOS's precision,
-   softer, original to Cycle for Change. On the house's own mark, palette and type. What it allows that the rest
-   of the site doesn't, kept restrained (CLAUDE.md §3, "The editorial homepage"):
-     the film     full screen, playing on phones too, always with a stop; a still under reduced motion
-     asphalt      a fine aggregate (/img/home/asphalt-1.webp) on the three dark fields only, never on a photo
-     lane paint   road-marking dashes (/img/home/lane-*.svg), drawn shapes with worn ends, rose: wet paint
-     torn paper   the plaster tab a caption is printed on, hanging under its photo, never over it
-   Everything else is the house: square corners, hairlines, no shadows, no pills, sentence-case labels,
-   buttons alone in caps, one primary per screen, rose only for the blank and paint. */
+   softer, original to Cycle for Change, on the house's own mark, palette and type. After the Wrenches' review
+   (research/design/2026-10-26-editorial-home/) it keeps two textures, both small:
+     asphalt     a fine aggregate (/img/home/asphalt-1.webp), faint, on the two dark rooms only, never on a photo
+     lane paint  road-marking dashes (/img/home/lane-*-2.svg), drawn shapes with worn ends, rose as wet paint, twice
+   Rose is the blank, the plates, the lane paint and the log strokes; nothing else. Square corners, hairlines, no
+   shadows, no pills, sentence-case labels, buttons alone in caps, one primary per screen, a fact said once. */
 
 @layer section{
 
@@ -19,59 +17,58 @@
 .nowrap{white-space:nowrap}
 .note-sm{margin:0;font-size:var(--fs-small);line-height:1.45;color:var(--mute)}
 
-/* the plate: the blank, filled in. Smeared rose and plaster on light grounds, powder rose and bruise on dark */
+/* the plate: the blank, filled in. Smeared rose and plaster on light grounds */
 .plate{display:inline-block;background:var(--creosote);color:var(--paper);font-weight:900;line-height:1.05;letter-spacing:-.01em;padding:.2em .42em .1em}
 
-/* the editorial rule: a section's number on a bruise hairline (the label, when there is one, is the site's own) */
-.rule{display:flex;align-items:center;gap:12px;margin:0 0 var(--s4);font:var(--label);color:var(--mute)}
+/* a section's label on a hairline to the grid's edge (only where the site already has the label) */
+.rule{display:flex;align-items:center;gap:14px;margin:0 0 var(--s4);font:var(--label);color:var(--mute)}
 .rule::after{content:"";flex:1 1 auto;height:1px;background:var(--asphalt)}
-.rule-n{font-weight:800;color:var(--asphalt);font-variant-numeric:lining-nums tabular-nums}
-.rule--dark{color:var(--dust)}
-.rule--dark .rule-n{color:var(--paper)}
-.rule--dark::after{background:var(--line-d)}
 
-/* lane paint: one strip of dashes, the ends worn; the dark fields get powder rose, light ones smeared rose */
-.lane{height:12px;background:url(/img/home/lane-powder-1.svg) 0 50%/auto 100% repeat-x}
+/* one section opener size, 800 (900 is kept for the 10,000, the plates and the date numerals) */
+.story-h,.year-h,.orgs-h,.find-h{margin:0;font-size:clamp(2.5rem,1.35rem + 4.6vw,5.75rem);font-weight:800;line-height:.92;letter-spacing:-.035em;text-wrap:balance}
+
+/* lane paint: dashes centred in their cells, the run scaled to a whole number of them so both ends match */
+.lane{height:12px;background:url(/img/home/lane-rose-2.svg) 50% 50%/auto 100% round}
+.miles .lane,.sign .lane{background-image:url(/img/home/lane-powder-2.svg)}
 @media (min-width:1024px){.lane{height:16px}}
 
-/* asphalt: the three dark fields (the strip, the miles, the sign) carry a fine aggregate under their words */
-.strip,.miles,.sign{position:relative;isolation:isolate;background-color:var(--tar);color:var(--paper);--ring:var(--paper)}
-.strip::before,.miles::before,.sign::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url(/img/home/asphalt-1.webp) 0 0/240px 240px repeat;opacity:.42}
+/* the two dark rooms: asphalt, felt more than seen */
+.miles,.sign{position:relative;isolation:isolate;background-color:var(--tar);color:var(--paper);--ring:var(--paper)}
+.miles::before,.sign::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url(/img/home/asphalt-1.webp) 0 0/240px 240px repeat;opacity:.2}
 
 .link--bone{color:var(--paper)}
 
 /* ——————————————————————————————————————————————————————————
-   1. the hero: the film full screen, the mark, who and what, one primary
+   1. the hero: the film full screen; the mark, who and what, his line, one primary
    —————————————————————————————————————————————————————————— */
 .hero{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;
   min-height:100vh;min-height:max(560px,100svh);background:var(--tar);color:var(--paper);overflow:hidden;--ring:var(--paper)}
 .hero-media{position:absolute;inset:0;z-index:-1}
-.hero-poster,.hero-poster img,.hero-film{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.hero-poster,.hero-poster img,.hero-film{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0}
 .hero-poster img{max-width:none}
 .hero-film{opacity:0;transition:opacity var(--t-open) var(--ease)}
 .hero[data-film="on"] .hero-film{opacity:1}
-/* the measured scrim: the foot of the screen dark enough for plaster type (≥ 7:1 behind the words), the top only
-   as dark as the nav needs; the middle of the film clear */
+/* the measured scrim: dark enough at the foot for plaster type over any frame, the top only as dark as the nav needs */
 .hero-scrim{position:absolute;inset:0;background:
-  linear-gradient(0deg,rgba(20,18,24,.94) 0,rgba(20,18,24,.84) 30%,rgba(20,18,24,.62) 50%,rgba(20,18,24,.3) 66%,rgba(20,18,24,0) 80%),
-  linear-gradient(180deg,rgba(20,18,24,.5) 0,rgba(20,18,24,0) 132px)}
-.hero-in{position:relative;display:flex;flex-direction:column;padding-top:calc(var(--nav-h) + 40px);padding-bottom:calc(env(safe-area-inset-bottom,0px) + 28px)}
-.hero-intro{margin:0 0 var(--s3);max-width:30ch;font-size:var(--fs-intro);font-weight:600;line-height:1.35}
+  linear-gradient(0deg,rgba(20,18,24,.94) 0,rgba(20,18,24,.86) 30%,rgba(20,18,24,.62) 50%,rgba(20,18,24,.28) 66%,rgba(20,18,24,0) 80%),
+  linear-gradient(180deg,rgba(20,18,24,.45) 0,rgba(20,18,24,0) 120px)}
+.hero-in{position:relative;display:flex;flex-direction:column;align-items:flex-start;padding-top:calc(var(--nav-h) + 40px);padding-bottom:calc(env(safe-area-inset-bottom,0px) + 24px)}
 .hero-h{margin:0;line-height:0}
 .hero-mark{display:block;height:auto;color:var(--paper);overflow:visible}
 .hero-mark .lp-bar{fill:var(--creosote-lift)}
-.hero-mark--stack{width:min(50vw,250px)}
+.hero-mark--stack{width:min(46vw,230px)}
 .hero-mark--line{display:none}
-.hero-line{margin:var(--s3) 0 0;max-width:22ch;font-size:clamp(1.3rem,.95rem + 1.6vw,2.4rem);font-weight:800;line-height:1.1;letter-spacing:-.022em;text-wrap:balance}
-.hero-acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-top:var(--s4)}
-/* the one primary: Ride with me, with the next ride's date on its plate (/ridebar.js keeps it current) */
-.hero-ride{display:flex;align-items:center;gap:14px;flex:1 1 100%;min-width:0;max-width:100%;min-height:64px;padding:10px 18px 10px 10px;
+/* who and what: the loud line. His sentence: the quiet one under it */
+.hero-intro{margin:var(--s3) 0 0;max-width:20ch;font-size:clamp(1.4rem,1rem + 1.7vw,2.5rem);font-weight:800;line-height:1.08;letter-spacing:-.024em;text-wrap:balance}
+.hero-line{margin:var(--s2) 0 0;max-width:34ch;font-size:var(--fs-intro);font-weight:500;line-height:1.4;text-wrap:pretty}
+.hero-acts{display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:100%;margin-top:var(--s4)}
+/* the one primary: Ride with me, the next ride's date on its plate (/ridebar.js keeps it current) */
+.hero-ride{display:flex;align-items:center;gap:14px;width:100%;min-width:0;min-height:64px;padding:10px 18px 10px 10px;
   background:var(--paper);color:var(--asphalt);border:1px solid var(--paper);text-decoration:none;
   transition:background-color var(--t-color) var(--ease),color var(--t-color) var(--ease)}
-.hero-ride .ridebar-d{background:var(--creosote);color:var(--paper);font-size:.9375rem;padding:10px 10px 8px}
 .hero-ride-t{display:flex;flex-direction:column;gap:3px;flex:1 1 auto;min-width:0}
 .hero-ride .finder-t{font:800 .8125rem/1.2 var(--display);letter-spacing:.04em;text-transform:uppercase}
-.hero-ride .finder-s{font-size:var(--fs-small);font-weight:600;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hero-ride .finder-s{font-size:var(--fs-small);font-weight:600;line-height:1.3;color:var(--mute);text-wrap:balance}
 .hero-ride .ridebar-go{margin-left:auto;font-size:1.25rem;transition:transform var(--t-move) var(--ease)}
 @media (hover:hover){
   .hero-ride:hover{background:transparent;color:var(--paper)}
@@ -79,132 +76,125 @@
   .hero-ride:hover .ridebar-go{transform:translateX(4px)}
 }
 .hero-ride:active{transition-duration:0s;background:var(--bone-2)}
-.hero-link{display:inline-flex;align-items:center;min-height:44px;color:var(--paper);font:700 .9375rem/1.3 var(--display);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px}
-@media (hover:hover){.hero-link:hover{text-decoration-thickness:2.5px}}
-/* the stop: always there while the film can play (WCAG 2.2.2); on a phone a square under the nav, on wide screens
-   bottom right with its word */
-.hero-pause{position:absolute;z-index:2;right:var(--gut);top:calc(env(safe-area-inset-top,0px) + var(--nav-h) + 12px);
+.hero-links{display:flex;flex-wrap:wrap;gap:4px 28px;margin:0;max-width:calc(100% - 60px)}
+.hero-links .link{min-height:44px}
+/* the stop: always there while the film can play (WCAG 2.2.2), at the foot, right */
+.hero-pause{position:absolute;z-index:2;right:var(--gut);bottom:calc(env(safe-area-inset-bottom,0px) + 24px);
   display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:44px;min-height:44px;padding:0 12px;
-  background:rgba(20,18,24,.5);color:var(--paper);border:1px solid rgba(239,237,234,.45);cursor:pointer;
+  background:rgba(20,18,24,.55);color:var(--paper);border:1px solid rgba(239,237,234,.45);cursor:pointer;
   font:700 .8125rem/1 var(--display);transition:background-color var(--t-color) var(--ease)}
 .hero-pause svg{width:16px;height:16px;fill:currentColor}
 .hero-pause .hp-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .hero[data-playing="true"] .hp-play,.hero:not([data-playing="true"]) .hp-pause{display:none}
 @media (hover:hover){.hero-pause:hover{background:rgba(20,18,24,.85)}}
 .hero-pause:active{transition-duration:0s;background:var(--tar)}
-
-@media (max-width:759px){
-  .hero-h{order:-1}
-  .hero-intro{margin:var(--s3) 0 0}
-  .hero-line{margin-top:var(--s2)}
-}
 @media (max-width:759px) and (max-height:700px){
-  .hero-mark--stack{width:min(42vw,190px)}
+  .hero-mark--stack{width:min(38vw,176px)}
   .hero-intro{margin-top:var(--s2)}
   .hero-acts{margin-top:var(--s3)}
 }
 @media (min-width:760px){
   .hero-mark--stack{display:none}
-  .hero-mark--line{display:block;width:clamp(520px,64vw,1060px);max-width:100%}
-  .hero-ride{flex:0 1 auto;min-width:360px}
-  .hero-pause{top:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 28px)}
+  .hero-mark--line{display:block;width:clamp(400px,44vw,720px);max-width:100%}
+  .hero-intro{margin-top:var(--s4)}
+  .hero-ride{width:auto;min-width:380px}
+  .hero-links{max-width:none}
   .hero-pause .hp-label{position:static;width:auto;height:auto;clip-path:none}
   .hero-in{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 48px)}
+  .hero-pause{bottom:calc(env(safe-area-inset-bottom,0px) + 48px)}
 }
 @media (min-width:760px) and (min-aspect-ratio:1/1){
-  /* the three panels: the words sit over the left two, the scrim reads left to right as well as up */
+  /* two panels; the words sit in the wide left one, and the scrim reads across it as well as up */
+  .hero-poster img,.hero-film{object-position:50% 50%}
   .hero-scrim{background:
-    linear-gradient(90deg,rgba(20,18,24,.7) 0,rgba(20,18,24,.4) 38%,rgba(20,18,24,0) 66%),
-    linear-gradient(0deg,rgba(20,18,24,.86) 0,rgba(20,18,24,.5) 30%,rgba(20,18,24,0) 58%),
-    linear-gradient(180deg,rgba(20,18,24,.45) 0,rgba(20,18,24,0) 132px)}
+    linear-gradient(90deg,rgba(20,18,24,.72) 0,rgba(20,18,24,.48) 34%,rgba(20,18,24,0) 56%),
+    linear-gradient(0deg,rgba(20,18,24,.86) 0,rgba(20,18,24,.5) 32%,rgba(20,18,24,0) 60%),
+    linear-gradient(180deg,rgba(20,18,24,.4) 0,rgba(20,18,24,0) 120px)}
 }
-@media (min-width:1024px) and (max-height:760px){.hero-mark--line{width:clamp(480px,56vw,860px)}}
+@media (min-width:1024px) and (max-height:760px){.hero-mark--line{width:clamp(380px,38vw,620px)}}
 
 /* ——————————————————————————————————————————————————————————
-   2. the strip: the numbers on a lane
+   2. the strip: the numbers on a lane (concrete, the light room after the film)
    —————————————————————————————————————————————————————————— */
-.strip{padding:calc(var(--s4) + 12px) 0 var(--s5)}
-.strip .lane--top{position:absolute;left:0;right:0;top:20px}
-.strip-in{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s4) var(--s3);padding-top:var(--s4)}
-.strip-cell{margin:0;display:flex;flex-direction:column;align-items:flex-start;gap:8px;color:inherit;text-decoration:none;position:relative}
-.strip-n{font-weight:900;font-size:clamp(2.25rem,1.55rem + 2.9vw,4.5rem);line-height:.88;letter-spacing:-.045em;font-variant-numeric:lining-nums tabular-nums}
+.strip{position:relative;background:var(--bone);color:var(--asphalt);padding:calc(var(--s4) + 16px) 0 var(--s5)}
+.strip .lane--top{position:absolute;left:0;right:0;top:24px}
+.strip-in{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s4) var(--col-gap);padding-top:var(--s4)}
+.strip-cell{margin:0;display:flex;flex-direction:column;align-items:flex-start;gap:10px;color:inherit;text-decoration:none}
+.strip-cell--miles{grid-column:1 / -1}
+.strip-n{font-weight:900;font-size:clamp(2.5rem,1.6rem + 3.2vw,4.75rem);line-height:.88;letter-spacing:-.045em;font-variant-numeric:lining-nums tabular-nums}
 .strip-n b{font-weight:inherit}
-.strip-cell--year .strip-n{color:var(--creosote-lift)}
-.strip-l{max-width:22ch;font-size:var(--fs-small);line-height:1.4;color:var(--dust)}
-.strip-l b{color:var(--paper);font-weight:800}
-.strip-l a{color:var(--paper);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
-.strip-mk{width:26px;height:26px;color:var(--creosote-lift)}
-a.strip-cell .strip-l{color:var(--paper);font-weight:700}
-a.strip-cell .strip-l::after{content:" \2192";font-weight:400;display:inline-block;transition:transform var(--t-move) var(--ease)}
-@media (hover:hover){a.strip-cell:hover .strip-l{text-decoration:underline;text-underline-offset:4px}a.strip-cell:hover .strip-l::after{transform:translateX(4px)}}
+.strip-l{max-width:30ch;font-size:var(--fs-small);line-height:1.4;color:var(--mute)}
+.strip-l b{color:var(--asphalt);font-weight:800}
+.strip-l a{color:var(--asphalt);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+a.strip-cell .strip-l{color:var(--asphalt);font-weight:700}
+a.strip-cell .strip-l::after{content:"\2192";display:inline-block;margin-left:.3em;font-weight:400;transition:transform var(--t-move) var(--ease)}
+@media (hover:hover){a.strip-cell:hover .strip-l{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}a.strip-cell:hover .strip-l::after{transform:translateX(4px)}}
+a.strip-cell:active .strip-l{color:var(--mute)}
 a.strip-cell:focus-visible{outline-offset:6px}
 @media (min-width:1024px){
-  .strip-in{grid-template-columns:minmax(0,1.05fr) minmax(0,1.35fr) minmax(0,1fr) minmax(0,1fr);gap:0}
-  .strip-cell{padding:0 var(--s3);border-left:1px solid var(--line-d)}
-  .strip-cell:first-child{padding-left:0;border-left:0}
+  .strip-in{grid-template-columns:repeat(12,minmax(0,1fr))}
+  .strip-cell,.strip-cell--miles{grid-column:span 4}
 }
 
 /* ——————————————————————————————————————————————————————————
-   3. the story, how this works
+   3. how this works, then the story
    —————————————————————————————————————————————————————————— */
-.story{background:var(--bone);padding-block:var(--sec)}
+.story{background:var(--bone);padding-block:0 var(--sec)}
+.how{margin-bottom:var(--sec);padding-top:var(--s4);background:linear-gradient(var(--asphalt),var(--asphalt)) var(--gut) 0/calc(100% - 2 * var(--gut)) 2px no-repeat}
+.how-h{margin:0 0 var(--s4);font-size:var(--fs-h2)}
+.how-steps{list-style:none;margin:0;padding:0;display:grid;gap:var(--s4)}
+.how-steps li{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;align-items:start}
+.how-mk{grid-row:span 2;width:36px;height:36px;color:var(--asphalt)}
+.how-t{margin:4px 0 6px;font-size:var(--fs-h3)}
+.how-steps p{margin:0;max-width:30ch;color:var(--mute)}
+@media (min-width:760px){
+  .how-steps{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto;column-gap:var(--col-gap);row-gap:0}
+  .how-steps li{grid-row:span 2;grid-template-rows:subgrid}
+}
 .story-in{display:grid;gap:var(--s5)}
-.story-h{margin:0 0 var(--s4);max-width:9ch;font-size:clamp(2.9rem,1.5rem + 5.6vw,7rem);font-weight:900;line-height:.88;letter-spacing:-.05em}
+.story-h{max-width:9ch;margin-bottom:var(--s4)}
 .story-lede{margin:0 0 var(--s3);max-width:28ch;font-size:var(--fs-lede);font-weight:500;line-height:1.38}
 .story-more{margin:0;max-width:34ch;color:var(--mute)}
 .plates{display:flex;flex-wrap:wrap;gap:10px;margin:var(--s4) 0 0}
 .plates .plate{font-size:clamp(1.2rem,.95rem + 1vw,1.75rem)}
 .story-photos{display:block}
-.story-ph{margin:0}
+.story-ph{margin:0;width:auto}
 .story-ph img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
-/* the torn tab: the caption printed on plaster, hanging under the photo */
-.story-ph figcaption,.today-ph figcaption,.ridewith-ph figcaption,.torn{display:inline-block;margin:0;padding:9px 14px 14px;background:var(--paper);color:var(--mute);font:700 .8125rem/1.3 var(--display);
-  clip-path:polygon(0 0,100% 0,96.8% calc(100% - 4.5px),93.1% calc(100% - 5.7px),89.6% calc(100% - 5.5px),87.9% calc(100% - 2.8px),83.9% calc(100% - 3.9px),79.9% calc(100% - .7px),77.1% calc(100% - 1.5px),74.1% calc(100% - 3.4px),72.5% calc(100% - 1.3px),70.1% calc(100% - 5.5px),66.5% calc(100% - 1px),62.9% calc(100% - .8px),59.7% calc(100% - .8px),58.1% calc(100% - 5.2px),55.9% calc(100% - 1.3px),51.8% calc(100% - 5.2px),49.4% calc(100% - 5.8px),46.4% calc(100% - 4.1px),44.3% calc(100% - 5.6px),40.9% calc(100% - 5.8px),36.9% calc(100% - 1.8px),34.4% calc(100% - 1px),32.4% calc(100% - .4px),30% calc(100% - 3.6px),28.4% calc(100% - 4.1px),26% calc(100% - 1.9px),22.2% calc(100% - 2.9px),19.8% calc(100% - 2.9px),16.4% calc(100% - .3px),12.2% calc(100% - .1px),8.7% calc(100% - 5.1px),7% calc(100% - 4.7px),4.5% calc(100% - 3.5px),2.9% calc(100% - .3px),.8% calc(100% - 5.7px),0 calc(100% - 4.5px))}
-.ridewith .ridewith-ph figcaption{background:var(--bone)}
+.story-ph figcaption,.today-ph figcaption,.ridewith-ph figcaption{display:block;margin:var(--s1) 0 0;padding:0;font:var(--label);color:var(--mute)}
 @media (max-width:899px){
-  .story-ph figcaption,.today-ph figcaption,.ridewith-ph figcaption{margin-left:var(--gut)}
-  .story-ph--b{width:64%;margin:var(--s4) calc(-1 * var(--gut)) 0 auto}
+  .story-ph--a{margin-inline:calc(-1 * var(--gut))}
+  .story-ph figcaption,.today-ph figcaption,.ridewith-ph figcaption{padding-inline:var(--gut)}
 }
-@media (min-width:900px){
-  .story-ph{width:auto}
-  .story-photos{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
+@media (max-width:759px){.story-ph--b{display:none}}
+@media (min-width:760px) and (max-width:1023px){
+  .story-photos{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap)}
   .story-ph--a{grid-column:1 / span 7}
-  .story-ph--b{grid-column:8 / -1;margin-top:42%}
+  .story-ph--b{grid-column:8 / -1;margin-top:var(--s6)}
 }
+@media (min-width:900px) and (max-width:1023px){.story-ph--a{margin-inline:0}}
 @media (min-width:1024px){
   .story-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
   .story-words{grid-column:1 / span 5;position:sticky;top:calc(var(--nav-h) + var(--s4))}
-  .story-photos{grid-column:6 / -1}
+  .story-photos{grid-column:6 / -1;display:grid;grid-template-columns:subgrid;align-items:start}
+  .story-ph--a{grid-column:1 / span 4}
+  .story-ph--b{grid-column:5 / -1;margin-top:var(--s6)}
 }
-.how{margin-top:var(--sec);padding-top:var(--s4);background:linear-gradient(var(--asphalt),var(--asphalt)) var(--gut) 0/calc(100% - 2 * var(--gut)) 2px no-repeat}
-.how-h{margin:0 0 var(--s4);font-size:var(--fs-h2)}
-.how-steps{list-style:none;margin:0;padding:0;display:grid;gap:var(--s4)}
-.how-steps li{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;align-items:start}
-.how-mk{grid-row:span 2;width:36px;height:36px;color:var(--creosote)}
-.how-t{margin:4px 0 6px;font-size:var(--fs-h3)}
-.how-steps p{margin:0;max-width:30ch;color:var(--mute)}
-@media (min-width:760px){.how-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s3)}}
 
 /* ——————————————————————————————————————————————————————————
-   today I rode for
+   today I rode for (concrete, under a hairline)
    —————————————————————————————————————————————————————————— */
-.today{background:var(--paper);padding-block:var(--sec)}
-.today-in{display:grid;gap:var(--s4)}
-.today-sign{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px;margin:var(--s2) 0 var(--s3);--h:clamp(44px,11vw,64px)}
-.today-mark{display:block;height:var(--h);width:auto;color:var(--asphalt)}
-.today-plate{font-size:calc(var(--h) * .36);margin-bottom:-1px}
-.today-line{margin:0 0 var(--s4);max-width:30ch;font-size:var(--fs-intro);line-height:1.4}
-.today-ask{display:flex;flex-direction:column;gap:6px;max-width:360px;padding:18px 20px;background:var(--asphalt);color:var(--paper);text-decoration:none;--ring:var(--asphalt)}
-.today-ask-q{font-weight:800;font-size:var(--fs-h4);line-height:1.15}
-.today-ask-go{font:700 .9375rem/1.3 var(--display);color:var(--dust)}
-.today-ask-go::after{content:" \2192";font-weight:400;display:inline-block;transition:transform var(--t-move) var(--ease)}
-@media (hover:hover){.today-ask:hover .today-ask-go{color:var(--paper)}.today-ask:hover .today-ask-go::after{transform:translateX(4px)}}
-.today-ask:active{background:var(--mute)}
+.today{background:var(--bone);padding-block:0 var(--sec)}
+.today-in{display:grid;gap:var(--s4);padding-top:var(--s5);background:linear-gradient(var(--line),var(--line)) var(--gut) 0/calc(100% - 2 * var(--gut)) 1px no-repeat}
+.today-sign{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 14px;margin:var(--s2) 0 var(--s3);--h:clamp(48px,12vw,76px)}
+.today-mark{display:block;height:var(--h);width:auto;max-width:100%;color:var(--asphalt)}
+.today-plate{font-size:calc(var(--h) * .58);line-height:1;padding:.12em .3em .04em}
+.today-line{margin:0 0 var(--s3);max-width:30ch;font-size:var(--fs-intro);line-height:1.4}
+.today-ask{margin:0 0 var(--s4)}
 .today-ph{margin:0}
 .today-ph img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:var(--bone-2)}
-.today-film{margin:0;width:min(62%,320px)}
-.today-film-frame{position:relative;aspect-ratio:9/16;background:var(--tar);overflow:hidden}
-.today-film video{width:100%;height:100%;object-fit:cover}
+.today-film{margin:0;width:min(100%,300px)}
+.today-film-frame{position:relative;aspect-ratio:4/5;background:var(--tar);overflow:hidden}
+.today-film video{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
 .today-play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;display:grid;place-items:center;border:0;border-radius:50%;background:var(--paper);color:var(--asphalt);cursor:pointer;transition:opacity var(--t-move) var(--ease),visibility 0s linear var(--t-move)}
 .today-play svg{width:24px;height:24px;fill:currentColor;margin-left:3px}
 .today-play:focus-visible{outline:3px solid var(--asphalt);outline-offset:-9px}
@@ -214,97 +204,90 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .today-film-btn svg{fill:currentColor}
 .today-film-btn[data-playing="true"] .rf-play,.today-film-btn:not([data-playing="true"]) .rf-pause{display:none}
 .today-film-len{font:var(--label);color:var(--mute)}
-@media (max-width:899px){.today-ph{margin-inline:calc(-1 * var(--gut))}}
+@media (max-width:899px){
+  .today-ph,.today-film{margin-inline:calc(-1 * var(--gut))}
+  .today-film{width:auto}
+  .today-film-cap{padding-inline:var(--gut)}
+  .today-words{display:contents}
+  .today-ph{order:1}
+  .today-film{order:2}
+}
 @media (min-width:1024px){
-  .today-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
-  .today-words{grid-column:1 / span 4}
-  .today-ph{grid-column:5 / span 5}
-  .today-film{grid-column:10 / -1;width:auto}
+  .today-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
+  .today-words{grid-column:1 / span 5}
+  .today-ph{grid-column:6 / -1}
 }
 
 /* ——————————————————————————————————————————————————————————
-   4. the miles: 10,000, the last rides, the bike
+   4. the miles: the 10,000, said once, and the last rides
    —————————————————————————————————————————————————————————— */
 .miles{padding-block:var(--sec);overflow:hidden}
-.miles-big{margin:0;font-weight:900;font-size:clamp(5.2rem,.6rem + 22.6vw,21rem);line-height:.78;letter-spacing:-.065em;color:var(--creosote-lift);white-space:nowrap}
+.miles-big{margin:0;font-weight:900;font-size:clamp(5.2rem,.6rem + 22.6vw,21rem);line-height:.78;letter-spacing:-.065em;color:var(--paper);white-space:nowrap}
 .miles-sub{margin:var(--s3) 0 0;font-size:var(--fs-h3);font-weight:800;letter-spacing:-.02em}
 .miles-grid{display:grid;gap:var(--s5);margin-top:var(--s6)}
+.miles-k{color:var(--dust);margin-bottom:var(--s1)}
 .miles-h{margin:0 0 var(--s3);font-size:var(--fs-h2)}
 .log{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-d)}
 .log li{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"when mi" "bar bar";gap:10px 16px;padding:16px 0;border-bottom:1px solid var(--line-d)}
-.log .when{grid-area:when;font:700 var(--fs-small)/1.3 var(--display);color:var(--dust)}
+.log .when{grid-area:when;min-height:2.65em;font:700 var(--fs-small)/1.3 var(--display);color:var(--dust)}
 .log .when b{display:block;margin-top:2px;font-size:var(--fs-body);font-weight:800;color:var(--paper)}
 .log .when a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .log .mi{grid-area:mi;align-self:end;font-weight:900;font-size:var(--fs-h3);line-height:1;letter-spacing:-.02em}
 .log .mi small{margin-left:3px;font-size:.55em;font-weight:700;color:var(--dust);letter-spacing:0}
-/* every ride a painted stroke as long as the ride (against the longest one shown), the ends worn */
-.log .bar-mi{grid-area:bar;display:block;height:10px;width:calc(var(--w,0) * 100%);min-width:12px;background:var(--creosote-lift);
-  clip-path:polygon(0 12%,1.4% 0,97.5% 6%,100% 34%,98.6% 64%,99.6% 100%,1.2% 92%,0 58%)}
+/* every ride a painted stroke as long as the ride (against the longest one shown); the ends only a little worn */
+.log .bar-mi{grid-area:bar;display:block;height:8px;width:calc(var(--w,0) * 100%);min-width:12px;background:var(--creosote-lift);
+  clip-path:polygon(0 6%,98.8% 0,100% 40%,99.4% 100%,.4% 94%)}
 .strava-attrib{margin:12px 0 0;font-size:.8125rem;line-height:1.4;color:var(--dust)}
 .strava-attrib a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
-.miles-note{margin:var(--s3) 0;max-width:44ch;color:var(--dust)}
-.miles-acts{display:flex;flex-wrap:wrap;gap:16px 32px;margin:0}
-.miles-side{align-self:end}
-.miles-bike{display:block;width:100%;max-width:560px;height:auto;color:var(--paper)}
-.miles-side .lane--road{margin:2px 0 var(--s4)}
-.miles-count{margin:0 0 var(--s2);font-size:var(--fs-intro);line-height:1.3;color:var(--dust)}
-.miles-count b{display:block;margin:6px 0;font-size:clamp(3rem,1.9rem + 4.6vw,6rem);font-weight:900;line-height:.86;letter-spacing:-.05em;color:var(--paper)}
-.miles-rides{margin:0;max-width:36ch;color:var(--dust)}
+.miles-rides{margin:0 0 var(--s2);font-size:var(--fs-intro);color:var(--dust)}
 .miles-rides b{color:var(--paper);font-weight:800}
+.miles-note{margin:0 0 var(--s4);max-width:38ch;color:var(--dust)}
+.miles-acts{display:flex;flex-wrap:wrap;gap:16px 32px;margin:0}
 @media (min-width:1024px){
-  .miles-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap)}
-  .miles-log{grid-column:1 / span 6}
-  .miles-side{grid-column:8 / -1}
+  .miles-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
+  .miles-side{padding-top:calc(var(--s1) + 1.3em + var(--s3) + var(--fs-h2))}
+  .miles-log{grid-column:1 / span 7}
+  .miles-side{grid-column:9 / -1}
 }
 
 /* ——————————————————————————————————————————————————————————
-   5. the 2027 rides: the map and the list
+   5. the 2027 rides: the list (and, from 760, the map beside it)
    —————————————————————————————————————————————————————————— */
 .year{background:var(--bone);padding-block:var(--sec)}
-.year-head{display:grid;gap:var(--s3);margin-bottom:var(--s5)}
-.year-h,.orgs-h{margin:0;max-width:12ch;font-size:clamp(2.5rem,1.35rem + 4.6vw,5.75rem);font-weight:900;line-height:.9;letter-spacing:-.048em}
-.year-lede,.orgs-lede{margin:0;max-width:26ch;font-size:var(--fs-lede);line-height:1.38}
+.year-head,.orgs-head{display:grid;gap:var(--s3);margin-bottom:var(--s5)}
+.year-h,.orgs-h{max-width:12ch}
+.year-lede,.orgs-lede{margin:0;max-width:26ch;font-size:var(--fs-lede);line-height:1.38;text-wrap:balance}
 @media (min-width:1024px){
-  .year-head,.orgs-head{grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:var(--col-gap);align-items:end}
+  .year-head,.orgs-head{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
+  .year-h,.orgs-h{grid-column:1 / span 7}
+  .year-lede,.orgs-lede{grid-column:8 / -1;max-width:none}
 }
 .year-grid{display:grid;gap:var(--s5)}
 .yr-map{margin:0}
 .yr-map-in{position:relative}
 .yr-map-svg{display:block;width:100%;height:auto}
-.mp-us{fill:var(--paper);stroke:var(--dust-deep);stroke-width:.7;stroke-linejoin:round}
-.mp-ca{fill:var(--bone-2);stroke:var(--dust-deep);stroke-width:.7;stroke-linejoin:round}
-.mp-lead path{fill:none;stroke:var(--asphalt);stroke-width:1.2}
-.mp-at circle{fill:var(--asphalt)}
-.mp-at .mp-end{fill:var(--paper);stroke:var(--creosote);stroke-width:2.4}
-.mp-home{fill:var(--asphalt)}
-.mp-home-l{position:absolute;transform:translate(calc(-100% - 10px),-50%);font:var(--label);color:var(--asphalt);pointer-events:none;white-space:nowrap}
-.mp-dot{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:12px;height:12px;background:var(--creosote);border:1.5px solid var(--paper);color:var(--paper);pointer-events:none}
-.mp-dot .num{display:none}
-.mp-dot--soft{background:var(--paper);border:2px solid var(--creosote)}
-.yr-map figcaption{margin-top:var(--s2);max-width:52ch;font:var(--label);color:var(--mute)}
-@media (min-width:760px){
-  .mp-dot{width:26px;height:26px;border-width:1px;font:800 .8125rem/1 var(--display)}
-  .mp-dot .num{display:block}
-  .mp-dot--soft{color:var(--creosote-ink);border-width:2px}
-}
-@media (max-width:759px){.mp-home-l{display:none}}
+.mp-dot{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--asphalt);color:var(--paper);font:800 .8125rem/1 var(--display);pointer-events:none}
+.mp-dot--soft{background:var(--paper);color:var(--mute);box-shadow:inset 0 0 0 2px var(--mute)}
+.yr-key{display:flex;align-items:center;gap:8px;margin:var(--s2) 0 0;font:var(--label);color:var(--mute)}
+.yr-key i{width:10px;height:10px;background:var(--asphalt)}
+@media (max-width:759px){.yr-map{display:none}}
 .year-list{list-style:none;margin:0;padding:0;border-top:2px solid var(--asphalt)}
-.yr a{display:grid;grid-template-columns:2.2ch 64px minmax(0,1fr) auto;align-items:center;gap:14px;min-height:72px;padding:10px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
-.yr-i{font:800 .8125rem/1 var(--display);color:var(--mute)}
-.date{display:flex;flex-direction:column;align-items:center;justify-content:center;width:64px;height:56px;background:var(--creosote);color:var(--paper);line-height:1;text-align:center}
+.yr a{display:grid;grid-template-columns:2ch 64px minmax(0,1fr);align-items:center;gap:16px;min-height:72px;padding:10px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
+.yr-i{font:800 .8125rem/1 var(--display);color:var(--mute);text-align:right}
+.date{display:flex;flex-direction:column;align-items:center;justify-content:center;width:64px;height:56px;border:1.5px solid var(--asphalt);color:var(--asphalt);line-height:1;text-align:center}
 .date-m{font-size:.8125rem;font-weight:800}
-.date-d{margin-top:4px;font-size:1.25rem;font-weight:900;letter-spacing:-.03em;white-space:nowrap}
-.date--soft{background:transparent;color:var(--creosote-ink);box-shadow:inset 0 0 0 2px var(--creosote)}
+.date-d{margin-top:4px;font-size:1.125rem;font-weight:900;letter-spacing:-.03em;white-space:nowrap}
+.date--soft{border-style:dashed;border-color:var(--dust-deep);color:var(--mute)}
 .yr-n{display:flex;flex-direction:column;align-items:flex-start;gap:3px;min-width:0}
 .yr-n b{font-size:var(--fs-h4);font-weight:800;line-height:1.15}
 .yr-plate{font-size:.8125rem;margin:2px 0}
 .yr-l{font-size:var(--fs-small);line-height:1.35;color:var(--mute)}
 .yr--soft .yr-n b{color:var(--mute)}
-.yr-go{font-size:1.2rem;transition:transform var(--t-move) var(--ease)}
-@media (hover:hover){.yr a:hover .yr-n b{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}.yr a:hover .yr-go{transform:translateX(4px)}}
+@media (hover:hover){.yr a:hover .yr-n b{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}.yr a:hover .date{background:var(--paper)}}
 .yr a:active{background:var(--bone-2);transition-duration:0s}
 .year-foot{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:var(--s4)}
-@media (max-width:759px){.yr a{grid-template-columns:64px minmax(0,1fr) auto;gap:12px}.yr-i{display:none}.date-d{font-size:1.125rem}}
+@media (max-width:759px){.yr a{grid-template-columns:64px minmax(0,1fr);gap:14px}.yr-i{display:none}}
+@media (min-width:760px) and (max-width:1023px){.yr-map{max-width:640px}}
 @media (min-width:1024px){
   .year-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
   .yr-map{grid-column:1 / span 7;position:sticky;top:calc(var(--nav-h) + var(--s4))}
@@ -315,35 +298,31 @@ a.strip-cell:focus-visible{outline-offset:6px}
    6. the orgs (patina, the soft room), then Ride with me
    —————————————————————————————————————————————————————————— */
 .orgs{background:var(--dust);color:var(--asphalt);padding-block:var(--sec)}
-.orgs .rule,.orgs .eyebrow{color:var(--asphalt)}       /* gunmetal is 4.2:1 on patina; small type goes bruise */
-.orgs-head{display:grid;gap:var(--s3);margin-bottom:var(--s5)}
+.orgs .eyebrow{color:var(--asphalt)}       /* gunmetal is 4.2:1 on patina; small type goes bruise */
 .orgs-list{display:grid;border-top:2px solid var(--asphalt)}
 .org{padding:var(--s3) 0 var(--s4);border-bottom:1px solid rgba(28,26,34,.28)}
-.org-mk{width:40px;height:40px;color:var(--creosote-ink)}
+.org-mk{width:40px;height:40px;color:var(--asphalt)}
 .org-h{margin:var(--s2) 0 var(--s1);font-size:var(--fs-h3)}
 .org p{margin:0 0 var(--s2);max-width:34ch}
-.org-ride{font-size:var(--fs-small);line-height:1.45}
-.org-ride .plate{margin-right:6px;font-size:.8125rem}
 .org-acts{display:flex;flex-wrap:wrap;gap:8px 24px}
-.orgs-door{margin:var(--s6) 0 var(--s5);max-width:22ch;font-size:clamp(1.75rem,.95rem + 3.2vw,3.75rem);font-weight:800;line-height:1.04;letter-spacing:-.032em;text-wrap:balance}
+.orgs-door{margin:var(--s6) 0 var(--s5);max-width:24ch;font-size:clamp(1.6rem,1rem + 2.4vw,3rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;text-wrap:balance;hyphens:none}
 .orgs-help{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 24px;padding-top:var(--s2);border-top:1px solid var(--asphalt);font-size:var(--fs-small)}
 .orgs-help a[href^="tel"]{position:relative;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .orgs-help a[href^="tel"]::before{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;margin-top:-22px}
 @media (min-width:900px){
-  .orgs-list{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .org{padding:var(--s3) var(--s3) var(--s4);border-bottom:0;border-left:1px solid rgba(28,26,34,.28)}
-  .org:first-child{padding-left:0;border-left:0}
+  .orgs-list{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,auto);column-gap:var(--col-gap)}
+  .org{display:grid;grid-row:span 4;grid-template-rows:subgrid;align-content:start;padding:var(--s3) var(--s3) var(--s4) 0;border-bottom:0;border-right:1px solid rgba(28,26,34,.28)}
+  .org:last-child{border-right:0}
 }
 .ridewith{background:var(--paper);padding-block:var(--sec)}
 .ridewith-in{display:grid;gap:var(--s5)}
 .ridewith-ph{margin:0}
 .ridewith-ph img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
-.ridewith-h{margin:var(--s1) 0 var(--s3);font-size:var(--fs-h2)}
-.ridewith-big{margin:0 0 var(--s3);max-width:15ch;font-size:clamp(2rem,1.15rem + 3.6vw,4.5rem);font-weight:900;line-height:1;letter-spacing:-.045em;text-wrap:balance}
+.ridewith-big{margin:var(--s1) 0 var(--s3);max-width:15ch;font-size:clamp(2rem,1.15rem + 3.6vw,4.5rem);font-weight:900;line-height:1.02;letter-spacing:-.045em;text-wrap:balance}
 .plate--big{font-size:.86em}
 .ridewith-words>p{max-width:40ch}
 .facts-dl{margin:var(--s4) 0;border-top:3px solid var(--asphalt)}
-.facts-dl div{display:grid;grid-template-columns:minmax(7rem,9rem) minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.facts-dl div{display:grid;grid-template-columns:minmax(5.5rem,8rem) minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
 .facts-dl dt{font:var(--label);color:var(--mute)}
 .facts-dl dd{margin:0;font-weight:600}
 .facts-dl dd a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
@@ -357,26 +336,27 @@ a.strip-cell:focus-visible{outline-offset:6px}
 }
 
 /* ——————————————————————————————————————————————————————————
-   7. find a group ride · 8. read
+   7. find a group ride · 8. read (plaster, like Ride with me; the rules divide them)
    —————————————————————————————————————————————————————————— */
-.find-s{background:var(--bone);padding-block:var(--sec)}
-.find-in{display:grid;gap:var(--s5)}
-.find-h{margin:0 0 var(--s4);font-size:var(--fs-display);font-weight:900;line-height:.94;letter-spacing:-.04em}
+.find-s{background:var(--paper);padding-block:0 var(--sec)}
+.find-in{display:grid;gap:var(--s4)}
+.find-rule{margin-bottom:0}
+.find-h{margin-bottom:var(--s3)}
 .find-count{margin:0}
-.find-count b{display:block;font-size:clamp(4rem,2.2rem + 7.4vw,9.5rem);font-weight:900;line-height:.82;letter-spacing:-.055em}
-.find-count span{display:block;margin-top:var(--s3);max-width:34ch;color:var(--mute)}
+.find-count b{display:block;font-size:clamp(3rem,1.9rem + 4.6vw,6rem);font-weight:900;line-height:.86;letter-spacing:-.05em}
+.find-count span{display:block;margin-top:var(--s2);max-width:34ch;color:var(--mute)}
 .find-lab{display:block;margin-bottom:8px;font:var(--label);color:var(--asphalt)}
 .find-row{display:flex;gap:8px}
 .find-field{flex:1 1 auto;min-width:0}
-.find-links{display:flex;flex-wrap:wrap;gap:10px 28px;margin:var(--s3) 0 var(--s4)}
-.find-tools .facts-dl{margin-bottom:0}
+.find-links{display:flex;flex-wrap:wrap;gap:10px 28px;margin:var(--s3) 0 0}
 @media (max-width:479px){.find-row{flex-direction:column}.find-row .btn{width:100%}}
 @media (min-width:1024px){
   .find-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
+  .find-rule{grid-column:1 / -1}
   .find-words{grid-column:1 / span 6}
   .find-tools{grid-column:8 / -1}
 }
-.read{background:var(--paper);padding-block:var(--sec)}
+.read{background:var(--paper);padding-block:0 var(--sec)}
 .read-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--s2) var(--s4);margin-bottom:var(--s4)}
 .read-h{margin:0;font-size:var(--fs-h2)}
 .read-list{list-style:none;margin:0;padding:0;display:grid;border-top:2px solid var(--asphalt)}
@@ -389,13 +369,13 @@ a.strip-cell:focus-visible{outline-offset:6px}
 @media (min-width:1024px){.read-list{grid-template-columns:repeat(4,minmax(0,1fr))}.read-list a{border-bottom:0}}
 
 /* ——————————————————————————————————————————————————————————
-   9. the sign: CYCLE FOR + the blank, and the box that fills it
+   9. the sign: CYCLE FOR + the blank, and the box that fills it (the page's one sign-off)
    —————————————————————————————————————————————————————————— */
-.sign{padding:calc(var(--sec) + 24px) 0 var(--sec)}
+.sign{padding:calc(var(--sec) + 28px) 0 var(--sec)}
 .sign .lane--top{position:absolute;left:0;right:0;top:28px}
 .sign-in{display:grid;gap:var(--s5)}
 .sign-h{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px 18px;margin:0;
-  --h:clamp(62px,calc((100vw - 2 * var(--gut)) / 4.6),164px)}
+  --h:clamp(56px,calc((100vw - 2 * var(--gut) - 20px) / 4.9),236px)}
 .sign-mark{display:block;height:var(--h);width:auto;max-width:100%;color:var(--paper)}
 .sign-plate{background:var(--creosote-lift);color:var(--asphalt);font-size:calc(var(--h) * .34);line-height:1;padding:.14em .32em .04em;max-width:100%;overflow-wrap:anywhere}
 .sign-plate[data-empty="true"]{width:calc(var(--h) * .65);height:calc(var(--h) * .24);padding:0}
@@ -419,15 +399,21 @@ a.strip-cell:focus-visible{outline-offset:6px}
 /* —— the frame on the homepage, unlayered so it outranks /chrome.css's frame by order —— */
 .home .tally-line--home{display:none}
 .home .nav{margin-bottom:calc(-1 * var(--nav-h));transition:background-color var(--t-open) var(--ease),color var(--t-open) var(--ease),border-color var(--t-open) var(--ease)}
-/* clear over the film (home.js sets data-solid once the film has scrolled under it); solid without JS */
-.js .home .nav[data-solid="false"]{background:transparent;border-bottom-color:rgba(239,237,234,.22);color:var(--paper);-webkit-backdrop-filter:none;backdrop-filter:none;--ring:var(--paper)}
-.js .home .nav[data-solid="false"] .brand .brand-mark{color:var(--paper)}
-.js .home .nav[data-solid="false"] .brand-mark .lp-bar{fill:var(--creosote-lift)}
-.js .home .nav[data-solid="false"] .btn--sm{background:transparent;border-color:var(--paper);color:var(--paper)}
-@media (hover:hover){.js .home .nav[data-solid="false"] .btn--sm:hover{background:var(--paper);border-color:var(--paper);color:var(--asphalt)}}
-.js .home .nav[data-solid="false"] .btn--sm:active{background:var(--paper);color:var(--asphalt)}
-/* the first screen's Ride with me is the hero's; the header's comes back at 900, as a line */
+/* clear over the film (home.js sets data-solid once the film has scrolled under it); solid without JS. Over the film the
+   header shows only the menu: the hero carries the mark and Ride with me, so nothing is said twice */
+.js .home .nav[data-solid="false"]{background:transparent;border-bottom-color:transparent;color:var(--paper);-webkit-backdrop-filter:none;backdrop-filter:none;--ring:var(--paper)}
+.home .nav .brand,.home .nav .btn--sm{transition:opacity var(--t-open) var(--ease),visibility 0s linear 0s}
+.js .home .nav[data-solid="false"] .brand,.js .home .nav[data-solid="false"] .btn--sm{opacity:0;visibility:hidden;transition:opacity var(--t-open) var(--ease),visibility 0s linear var(--t-open)}
+/* the stencil's clip lives in the header's mark; a hidden header must not hide every CYCLE FOR on the page with it */
+.home #lpRow rect{visibility:visible}
+/* the first screen's Ride with me is the hero's; the header's comes back at 900, as a line, once the film has gone */
 @media (max-width:899px){.home .nav .btn--sm{display:none}}
+/* the hero's date plate: smeared rose on the plaster tile, powder on dark when the tile goes clear on hover */
+.home .hero-ride .ridebar-d{background:var(--creosote);color:var(--paper);font-size:.9375rem;padding:10px 10px 8px}
+@media (hover:hover){.home .hero-ride:hover .ridebar-d{background:var(--creosote-lift);color:var(--asphalt)}}
+/* the page ends on its own sign; the footer's stencil would be a second one 700px below it */
 .home .foot{margin-top:0;border-top:1px solid var(--line-d)}
+.home .foot-sign{display:none}
+@media (min-width:1024px){.home .foot-grid{grid-column:1 / -1}}
 .home .hero-ride:focus-visible,.home .hero-pause:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){.hero-film{transition:none}}
