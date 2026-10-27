@@ -36,7 +36,7 @@ LOCKUP = re.search(r'<svg class="fl-word".*?</svg>', page_html, re.S).group(0).r
 
 # QR for the printed poster only (the /fl short link is "the poster's QR", tagged utm_source=poster)
 import qrcode, qrcode.image.svg
-qr = qrcode.QRCode(border=0, error_correction=qrcode.constants.ERROR_CORRECT_M)
+qr = qrcode.QRCode(border=4, error_correction=qrcode.constants.ERROR_CORRECT_M)
 qr.add_data("https://cycleforchange.org/fl")
 qr.make(fit=True)
 mods = qr.get_matrix()
@@ -63,7 +63,7 @@ body{width:var(--W);height:var(--H);overflow:hidden;font-family:Overpass,sans-se
 .info>*{flex:none}
 .big{font-weight:900;font-size:var(--big);line-height:.9;letter-spacing:-.035em;color:var(--paper)}
 .time{margin-top:var(--rgap)}
-.from{margin-top:calc(var(--big) * .14);font-weight:800;font-size:calc(var(--big) * .5);line-height:1;letter-spacing:-.02em;color:var(--rose-lift)}
+.from{margin-top:calc(var(--big) * .14);font-weight:800;font-size:calc(var(--big) * .5);line-height:1;letter-spacing:-.02em;color:var(--paper)}   /* rose is the blank, not a date */
 .rule{flex:none;height:3px;background:var(--paper);margin:var(--rgap) 0}
 .time{font-weight:900;font-size:calc(var(--big) * .56);line-height:1.02;letter-spacing:-.025em;color:var(--paper)}
 .lab{font-weight:700;font-size:calc(var(--W) * .022);line-height:1.2;color:var(--dust)}
@@ -78,7 +78,7 @@ body{width:var(--W);height:var(--H);overflow:hidden;font-family:Overpass,sans-se
 .host{font-weight:700;font-size:calc(var(--W) * .022);line-height:1.3;color:var(--dust)}
 .host b{display:block;font-weight:800;font-size:calc(var(--W) * .03);color:var(--paper);letter-spacing:-.01em}
 .qrbox{display:flex;align-items:center;gap:calc(var(--W) * .016)}
-.qrbox .qrw{background:var(--paper);padding:calc(var(--W) * .01);width:var(--qr);height:var(--qr)}
+.qrbox .qrw{background:var(--paper);width:var(--qr);height:var(--qr)}   /* the 4-module quiet zone is in the code itself */
 .qr{display:block;width:100%;height:100%}
 .qrbox p{font-weight:800;font-size:calc(var(--W) * .024);line-height:1.25;color:var(--paper);text-align:right}
 .qrbox p span{display:block;font-weight:700;color:var(--dust);font-size:calc(var(--W) * .02)}
@@ -132,7 +132,7 @@ JOBS = {
                                extra=".sheet{padding-top:230px;padding-bottom:230px} .where{font-size:42px} .facts p{font-size:35px;line-height:1.15} .why{font-size:31px} .host,.qrbox p span{font-size:27px} .host b,.qrbox p{font-size:33px}")),
     # 8.5 x 11 in at 96 css px per inch (816 x 1056): saved as a vector PDF (type and lockup stay sharp at any size),
     # plus a 2x PNG preview
-    "print": (816, 1056, dict(pad=54, gap=26, photow=340, big=56, rgap=11, barh=28, qr=True, qrsize=104, link="cycleforchange.org/fl", scale=2, pdf=True)),
+    "print": (816, 1056, dict(pad=54, gap=26, photow=330, big=48, rgap=10, barh=24, qr=True, qrsize=144, link="cycleforchange.org/fl", scale=2, pdf=True)),
 }
 
 class Q(http.server.SimpleHTTPRequestHandler):

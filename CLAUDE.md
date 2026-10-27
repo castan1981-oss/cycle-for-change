@@ -401,8 +401,9 @@ the canal, Coronado. Free, no-drop, 18 and up, no sign-up. Streets and lit paths
   photo. Robert made a ChatGPT flyer first; the brand review panel (all ten, Oct 27) kept its words and its photo idea and
   rebuilt the rest, because the AI had redrawn the logo (trans bands on the first O, a rainbow chevron with no black or
   brown), chalked everything, added a desert-skyline doodle and re-rendered his photo. Never put an AI-redrawn lockup or an
-  AI-re-rendered photo of Robert on the site. The kicker everywhere is "A queer night ride through Phoenix history"
-  (his flyer's line; the page said "…in Phoenix" until Oct 27).
+  AI-re-rendered photo of Robert on the site. The kicker on the page, the poster and the share card is "A queer night ride
+  through Phoenix history" (his flyer's line; the page said "…in Phoenix" until Oct 27); the `<title>`, og/twitter titles
+  and JSON-LD keep "a queer night ride in Phoenix" for search. Rose stays the blank: dates on the poster are plaster.
 
 ### Today I rode for (`#today` on the homepage, Oct 12, 2026)
 Every ride Robert says who he rode for that day. `data/today.json` (date, `for` = the plate, `line` = his words,

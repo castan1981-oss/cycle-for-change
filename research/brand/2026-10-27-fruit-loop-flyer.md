@@ -49,3 +49,11 @@ crosswalk at Central and Portland. The six crosswalk bars as an idea. Robert in 
 - Dec 25 and Jan 1 are Fridays. Ride, or say "no ride" on the page and the posts? (The countdown can't skip a date yet.)
 - Who leads on the Fridays he's away at events in 2027 (eight of them).
 - Spring: by March the 6:00 roll is in daylight (sunset 6:27 pm on Mar 5). Keep 6:00 or move it later.
+
+## Second look on v2 (the two Kills re-run)
+- Craft 1 → 3: no Kill. Goes to 4 with his original photo at print size (≥ 1100 × 1350 px).
+- System 1 → 4: no Kill. Applied: dates in plaster, not rose (rose is the blank); the share card numbered
+  (`og-fruitloop-1.jpg`); the print QR at 1.5 in with a 4-module quiet zone; CLAUDE.md says the titles keep "in Phoenix"
+  for search. Left as is, said so in the PR: no `CSS_V` bump (stays clear of #211/#215; sheets cache an hour).
+  Later, if the poster becomes a series: one builder for all four sizes, facts read from the ride record, a crop box per
+  size, a print file with bleed.
