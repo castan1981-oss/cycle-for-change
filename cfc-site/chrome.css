@@ -679,8 +679,9 @@ html{scroll-padding-top:calc(var(--nav-h) + 12px)}      /* focus and anchors nev
 @media (max-width:899px){html{scroll-padding-bottom:76px}}   /* …or under the Ride with me bar (61px + safe area) */
 @media (min-width:900px){html{scroll-padding-bottom:96px}}
 /* Oct 27, 2026: that pad exists only while the bar does. Always on, it counted a link whole on the first screen as hidden,
-   and the first Tab scrolled the page to centre it (the lab's jump off the hero) */
-html:not(:has(.ridebar.is-on)){scroll-padding-bottom:0}
+   and the first Tab scrolled the page to centre it (the lab's jump off the hero). The help pages keep it: their 988 bar
+   is always there, and Tab must never land a link under it (access F3) */
+html:not(:has(.ridebar.is-on)):not(:has(.help-bar)){scroll-padding-bottom:0}
 .nav-links a{padding:12px 0}                              /* 44px tall */
 .menu-list a span{font-size:var(--fs-label)}
 .menu-list a[aria-current="page"]{border-bottom-color:currentColor}   /* where you are: the desktop nav's own state */
