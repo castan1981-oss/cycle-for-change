@@ -248,8 +248,8 @@ the freeze above for it ("Everything is to go you have my permission"): "a blend
 ASSOS's precision, but original to Cycle for Change. Softer/feminine, premium and expressive." The brief is
 `research/design/2026-10-26-editorial-home/` (with the Wrenches' and the desks' reviews). What it changes, on the
 homepage only; every other rule in this section still holds there and everywhere else:
-- **The first screen is his film, full screen** (`100svh`): `cfc-site/film/hero-phone-5.*` (608×1080, one full frame,
-  three shots, his face first; phones and portrait screens) and `hero-wide-5.*` (1620×960, two panels cut together in
+- **The first screen is his film, full screen** (`100svh`): `cfc-site/film/hero-phone-6.*` (608×1080, one full frame,
+  three shots, his face first; phones and portrait screens) and `hero-wide-6.*` (1620×960, two panels cut together in
   pairs, his face first in the wide one, cropped so it sits above the stencil; the words in the wide left panel, the
   gutter at 70% so no nav link sits on it; landscape ≥760px), cut by
   `python3 tools/hero-film.py` from his own footage only (the v1 three-band cut put seams through the type and was dropped
@@ -262,7 +262,7 @@ homepage only; every other rule in this section still holds there and everywhere
   so this is Robert's call) The scrim rides with the words, not the screen (`.hero-in::before`): it eases in over the 200px
   above the stencil, .6 at its top, .72 at the foot — measured against every frame of both films at nine screen sizes
   (3:1 for the stencil and the intro, 4.5:1 for the line and the links): `python3 tools/hero-contrast.py` after any
-  recut or change to the hero's type or scrim (exits 1 on a fail). Over the film the header is one flat bar on bruise at .66 with a
+  recut or change to the hero's type or scrim (exits 1 on a fail). Over the film the header is one solid bar on tar with a
   hairline (no gradient lid, no floating boxes), carrying the menu or the nav links only. Over the film the header shows only the menu (and the nav
   links at ≥900); the mark and the header's Ride with me come back once the film has scrolled under it.
 - **Two textures, small:** a fine asphalt aggregate (`img/home/asphalt-2.webp`, a 2x tile, opacity .24) on the two dark
@@ -838,7 +838,7 @@ volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `
   homepage it's a crisp 4:5 picture with a round plaster play button on the poster and a
   play/pause line under it (Robert: the feathered version "looks unfinished"). `home-film.mp4` is unused. Recut with `ffmpeg` (CRF ~30,
   `+faststart`, no audio). Social video cuts never go in git.
-  Oct 26, 2026 (the editorial homepage): the homepage's film is the hero, `hero-phone-5` / `hero-wide-5`, cut by
+  Oct 26, 2026 (the editorial homepage): the homepage's film is the hero, `hero-phone-6` / `hero-wide-6`, cut by
   `tools/hero-film.py` from four clean shots of road-film-2 (his face first; the mint shot from 0.40 s, the bike and
   tunnel shots out after the brand gate's second read; the dawn road only in the wide film's narrow panel); the reel player is off the homepage. Every
   shot was looked at for vehicles. **road-film-2 itself is not car-free**: the brand gate found a car at the far end of its

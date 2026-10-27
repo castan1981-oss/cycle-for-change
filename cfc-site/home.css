@@ -243,7 +243,7 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .log li{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"when mi" "bar bar";gap:10px 16px;padding:16px 0;border-bottom:1px solid var(--line-d)}
 .log .when{grid-area:when;min-height:2.65em;font:700 var(--fs-small)/1.3 var(--display);color:var(--dust)}
 .log .when b{display:block;margin-top:2px;font-size:var(--fs-body);font-weight:800;color:var(--paper)}
-.log .when:not(:has(b))::after{content:"\2014";display:block;margin-top:2px;font-size:var(--fs-body);font-weight:800;color:var(--dust)}  /* a ride Strava calls "Morning Ride" has no name here (tally.js); the row keeps its shape */
+.log .when:not(:has(b))::after{content:"\2014";content:"\2014" / "";display:block;margin-top:2px;font-size:var(--fs-body);font-weight:800;color:var(--dust)}  /* a ride Strava calls "Morning Ride" has no name here (tally.js); the row keeps its shape */
 .log .when a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .log .mi{grid-area:mi;align-self:end;font-weight:900;font-size:var(--fs-h3);line-height:1;letter-spacing:-.02em}
 .log .mi small{margin-left:3px;font-size:.55em;font-weight:700;color:var(--dust);letter-spacing:0}
@@ -256,10 +256,12 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .miles-rides b{color:var(--paper);font-weight:800}
 .miles-acts{display:flex;flex-wrap:wrap;gap:16px 32px;margin:0}
 @media (min-width:1024px){
-  .miles-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
-  .miles-side{padding-top:calc(var(--s1) + 1.3em + var(--s3) + var(--fs-h2))}
+  /* the log on seven columns, its count and links on one line under it (no stranded column beside it) */
+  .miles-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);row-gap:var(--s4);align-items:start}
+  .miles-side{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--s2) var(--s5)}
+  .miles-side .miles-rides{margin:0}
   .miles-log{grid-column:1 / span 7}
-  .miles-side{grid-column:9 / -1}
+  .miles-side{grid-column:1 / span 7}
 }
 
 /* ——————————————————————————————————————————————————————————
@@ -436,9 +438,9 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .js .home .nav[data-solid="false"]{color:var(--paper);-webkit-backdrop-filter:none;backdrop-filter:none;--ring:var(--paper)}
 .home .nav .brand,.home .nav .btn--sm{transition:opacity var(--t-open) var(--ease),visibility 0s linear 0s}
 .js .home .nav[data-solid="false"] .brand,.js .home .nav[data-solid="false"] .btn--sm{opacity:0;visibility:hidden;transition:opacity var(--t-open) var(--ease),visibility 0s linear var(--t-open)}
-/* over the film the header is one flat bar on bruise at .66, a plaster hairline under it: the nav links need .62 on the
-   brightest frame (tools/hero-contrast.py) */
-.js .home .nav[data-solid="false"]{background:rgba(20,18,24,.66);border-bottom-color:rgba(239,237,234,.18)}
+/* over the film the header is one solid bar on tar, a plaster hairline under it: no seam or colour of the film shows
+   through it (the critic, v5), and the nav links read at full contrast */
+.js .home .nav[data-solid="false"]{background:var(--tar);border-bottom-color:rgba(239,237,234,.18)}
 /* the stencil's clip lives in the header's mark; a hidden header must not hide every CYCLE FOR on the page with it */
 .home #lpRow rect{visibility:visible}
 /* the first screen's Ride with me is the hero's; the header's comes back at 900, as a line, once the film has gone */

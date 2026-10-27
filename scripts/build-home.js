@@ -101,8 +101,8 @@ const DEFS = `<svg aria-hidden="true" focusable="false" style="position:absolute
 
 // —— 1. the hero: the film, the mark, who and what, one primary ——
 const FILM = {
-  phone: { mp4: "/film/hero-phone-5.mp4", webm: "/film/hero-phone-5.webm", poster: "/film/hero-phone-5", w: 608, h: 1080 },
-  wide: { mp4: "/film/hero-wide-5.mp4", webm: "/film/hero-wide-5.webm", poster: "/film/hero-wide-5", w: 1620, h: 960 },
+  phone: { mp4: "/film/hero-phone-6.mp4", webm: "/film/hero-phone-6.webm", poster: "/film/hero-phone-6", w: 608, h: 1080 },
+  wide: { mp4: "/film/hero-wide-6.mp4", webm: "/film/hero-wide-6.webm", poster: "/film/hero-wide-6", w: 1620, h: 960 },
 };
 // the two-panel film on a landscape screen at 760 and up; the one-frame film on phones and portrait tablets
 const WIDE_Q = "(min-width: 760px) and (min-aspect-ratio: 1/1)";

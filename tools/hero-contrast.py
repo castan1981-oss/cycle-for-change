@@ -14,7 +14,7 @@ checks every frame (10 a second) of both films at nine screen sizes, the way a p
   python3 tools/hero-contrast.py                 (Playwright + numpy + ffmpeg; exits 1 on a fail)
 
 Run it after a recut (tools/hero-film.py), after the hero's type or scrim changes, and before the PR. The nav links sit
-on the header bar over the film (.nav, rgba .66), so they’re checked against that, not the frame.
+on the header bar over the film (.nav, solid tar), so they’re checked against that, not the frame.
 """
 import functools, http.server, json, os, re, socketserver, subprocess, sys, threading
 import numpy as np
@@ -26,7 +26,7 @@ VIEWS = [(390, 844), (375, 667), (360, 640), (430, 932), (820, 1180), (1024, 768
 # on a wide screen it fades out over its last 360px
 SCRIM = [(0, 0), (60, .1), (120, .3), (170, .5), (200, .6)]
 FOOT, FADE = .72, 360
-NAV_GROUND = .66
+NAV_GROUND = 1.0   # the header bar over the film is solid tar
 TAR = np.array([0x14, 0x12, 0x18], np.float32)
 PLASTER = np.array([0xEF, 0xED, 0xEA], np.float32)
 

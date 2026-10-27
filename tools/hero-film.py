@@ -86,7 +86,7 @@ WIDE = [    # the wide panel the words sit in, then the tall one, cut together i
             # bottom so the rider rides above the words. The gutter sits at 70% of the frame, right of the centred nav
             # at every landscape width from 1024, so no link sits on a seam
     (1134, 960, [("s1_mint", 0, .95), ("s2_drone", 1, 1.2), ("s5_forest", .5, .95)]),
-    (480, 960, [("s5_forest", .5, .95), ("s3_ahead", .5, 1.2), ("s1_mint", .35, .95)]),
+    (480, 960, [("s5_forest", .75, .95), ("s3_ahead", .5, 1.2), ("s1_mint", .35, .95)]),   # v6: the forest rider centred in the narrow panel
 ]
 
 def dur(shot): return SHOTS[shot][2] - SHOTS[shot][1]
@@ -175,7 +175,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--reel", default="", help="Robert's three-band reel (cycling-video-no-text.mp4), only if a reel shot is in a lane")
     ap.add_argument("--out", default=FILM)
-    ap.add_argument("--n", type=int, default=5)
+    ap.add_argument("--n", type=int, default=6)
     a = ap.parse_args()
     srcs = sources(os.path.abspath(os.path.expanduser(a.reel)) if a.reel else "")
     used = {SHOTS[e[0]][0] for lanes in (PHONE, WIDE) for (_, _, lane) in lanes for e in lane}
