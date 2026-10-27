@@ -290,3 +290,18 @@ request, from closing the page.
   the last line of the hero text.
   - The bar keys on `#heroRide`, which is below the fold there.
   - ridebar.js is unchanged by this pass.
+
+## Round 3 re-measure (Oct 27, 2026, after `d9161ddde4`)
+
+Measured by the session in Playwright (Chromium), not a fresh desk read; the numbers are the browser's.
+- No sideways scroll at 360, 375, 390, 430, 820, 1024 or 1440.
+- `#today` reads lead → say → film → photo in the DOM at every width, so the disc comes right after the ask link.
+- The disc is 44×44 at 360–430 and 56×56 from 820; a tap plays the film, `data-playing` turns true and the label
+  becomes "Pause". Under reduced motion neither film starts.
+- On phones the film sits beside his line: 140×200 at 390, 99×166 at 360 (the 8/4 split under 370). Small but whole;
+  the disc stays 44.
+- Nothing in `#today` is under 12px. The `.link` rows read 27px tall in the box model and 47px with the house hit
+  area (`.link::before`, 10px above and below), as before.
+- **M6 fixed:** `home.js` gives the `#today` film the hero's Save-Data / 2G / 3G test. With Save-Data on at 1440 the
+  film stays a still in view and plays on the disc; with it off it plays in view, as before.
+- `python3 tools/hero-contrast.py`: PASS (tightest 6.28:1 at 360×640, the line). Tests 187 pass; validate-rides clean.

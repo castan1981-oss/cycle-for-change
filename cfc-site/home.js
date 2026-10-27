@@ -202,6 +202,9 @@
   if (tv) {
     tv.muted = true;
     var tUser = null;
+    /* the hero's test: Save-Data or a slow connection keeps the still until the disc asks for the film */
+    var tConn = navigator.connection || {};
+    var tSlow = !!tConn.saveData || /(^|-)2g$|^3g$/.test(String(tConn.effectiveType || ""));
     var tSecs = tPlay ? tPlay.getAttribute("data-seconds") || "" : "";
     var tPaint = function () {
       var on = !tv.paused;
@@ -217,7 +220,7 @@
     tPaint();
     if ("IntersectionObserver" in window) new IntersectionObserver(function (es) {
       if (!es[0].isIntersecting) { if (!tv.paused) tv.pause(); return; }
-      if (tUser === true || (tUser === null && wide && !reduce)) tGo();
+      if (tUser === true || (tUser === null && wide && !reduce && !tSlow)) tGo();
     }, { threshold: 0.4 }).observe(tv);
   }
 
