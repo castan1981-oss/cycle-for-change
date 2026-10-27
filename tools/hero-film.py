@@ -1,92 +1,66 @@
 #!/usr/bin/env python3
-"""Cycle for Change: the homepage hero film (Oct 26, 2026, the editorial homepage).
+"""Cycle for Change: the homepage hero film (Oct 27, 2026, the editorial homepage, v9).
 
-Robert and Cadence approved a full-screen moving hero, with "cycling-video-no-text.mp4" (Robert's own
-three-band reel) as the test footage and Robert "open to a better edit from his real footage". The test reel
-can't run as it is. It has a parked truck behind him at the overlook and traffic in the last second, and the
-homepage hero stays car-free (CLAUDE.md §10). It is 512 px wide and ends in glitch frames. So this is the better
-edit, cut from his real footage only:
+Robert and Cadence approved a full-screen moving hero. Robert, on the staged v8: "the video needs to be changed".
+He then sent his own clean footage ("These are without words", Oct 27). This cuts the hero from two of those clips:
 
-  phone  608x1080  one frame, full height, no seams through the type: four of the homepage reel's shots at their
-                   native sharpness; the first frame is his face (the poster)
-  wide   1620x960  two panels cut together in pairs that share a light: a wide one the words sit in (the sign never
-                   crosses a cut) and a tall one at the right, his face first; the gutter at 70% clears the nav.
-                   The LOVE-wall loop stays #today's, not the hero's
+  rail   his selfie-mount ride across the rail yard: one continuous 6 s take, 1080x1920, his face, the pink jersey
+  hit    his "CFC Reel Hit v3" reel, 1080x1920: three of its moving shots (the red-rock road with his shadow, the
+         tunnel, the palms). Its other shots are out: the black-kit ride at the camera (parked cars on the left in
+         every frame), the bike lane (a white shape that could be a vehicle beyond the far kerb), the overlook (a
+         smoke plume over the city, a vignette baked in) and the stills (other people, the finish line)
 
-The first cut (-1, Oct 26) stacked three bands from his reel on phones and three panels on desktop. The Wrenches
-read it cold: the seams ran through the type and three clips fought each other. The brand gate then found a car
-at the far end of the homepage reel's road shot (8.25-9.55 s) and a parked vehicle in its sun shot (11.05-11.6 s),
-and couldn't clear a shape under the river shot's far-bank road; all three are out. His reel's clean shots are
-landscape slivers 512 px wide, too small for either frame; they come back when he exports the original clips.
+  phone  608x1080  one frame: the rail-yard take, then the palms and the tunnel. Frame 0 is his face (the poster)
+  wide   1620x960  the wide panel the words sit in (the red-rock road, the tunnel, the palms) and the tall one at
+                   the right: the rail-yard take, uncut, his face in frame 0. The gutter at 70% clears the nav.
 
-Every shot was checked by eye for vehicles and faces: only Robert is recognisable, and riders ahead are
-from behind. Nothing is synthetic, nothing is graded and nothing is slowed down. Each band or panel cuts on
-its own clock, so the frame never jumps all at once except at the loop.
+Every frame of every shot used was looked at for vehicles and faces: no car, truck or van anywhere, and only Robert is
+recognisable. Nothing is synthetic, nothing is graded and nothing is slowed down. Older cuts (v1-v8: road-film-2, the
+three-band test reel) are in git history; road-film-2 is not car-free (CLAUDE.md §10).
 
-  python3 tools/hero-film.py [--reel ~/path/cycling-video-no-text.mp4] [--out cfc-site/film] [--n 2]
+  python3 tools/hero-film.py --rail ~/path/1789929494081.mov --hit ~/path/CFC-Reel-Hit-v3.mp4 [--out cfc-site/film] [--n 8]
 
 writes hero-phone-<n>.mp4/.webm and hero-wide-<n>.mp4/.webm (H.264 High + VP9, no audio, +faststart) and
 a poster for each (frame 0) as .jpg/.webp/.avif. Bump --n on any recut (phones and Safari cache /film/ for a week).
-The source reel stays out of git (social cuts never go in the repo); the outputs are committed.
+His clips stay out of git (raw clips and social cuts never go in the repo); the outputs are committed.
 """
 import argparse, os, subprocess, sys, tempfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FILM = os.path.join(ROOT, "cfc-site", "film")
 TAR = "0x141218"          # --tar, the gutter between frames
+
 FPS = 30
-L = {"phone": 3.15, "wide": 3.1}   # each film's loop, seconds
+L = {"phone": 4.65, "wide": 3.75}   # each film's loop, seconds
 
-# sources: (path, width, height). "reel" is Robert's three-band reel; its bands are cut out by y range.
-def sources(reel):
-    return {
-        "reel": (reel, 512, 910),
-        "road": (os.path.join(FILM, "road-film-2.mp4"), 864, 1080),   # the homepage reel, car clips cut Oct 6
-        "tsr": (os.path.join(FILM, "tsr-1.mp4"), 864, 1080),          # his first TSR; only the selfie is used
-        "love": (os.path.join(FILM, "today-oct12-1.mp4"), 720, 1280), # the LOVE wall loop, Oct 12
-    }
-
-# the reel's bands (rows of the 512x910 frame): top 0-276, middle 277-594, bottom 596-909
-BAND = {"top": (0, 277), "mid": (277, 318), "bot": (596, 314)}
+# sources: (path, width, height). Both are Robert's own clips, passed on the command line.
+def sources(rail, hit):
+    return {"rail": (rail, 1080, 1920), "hit": (hit, 1080, 1920)}
 
 # shots: name -> (source, t0, t1, region) where region is the part of the source frame the shot may use
 # (x, y, w, h); the crop to the slot's shape is taken from its centre unless the slot gives a focus (fx, fy 0..1).
+# The reel's own cuts (frame diffs): tunnel 5.600-7.199, red-rock road 8.200-9.899, palms 9.900-11.299; each shot
+# keeps a few frames clear of them.
 SHOTS = {
-    # Robert's reel. Times are inside the reel; regions keep to one band.
-    "r_selfie":  ("reel", 1.00, 1.85, (0, 0, 512, 277)),        # the selfie, grinning, the Assos jersey
-    # not used: the tan-jersey peace sign (3.95-4.70) reads as shirtless at a glance on a phone; Robert's call
-    "r_sunset":  ("reel", 0.35, 0.85, (0, 0, 512, 277)),        # sitting up at sunset, the bars
-    "r_wheel":   ("reel", 2.05, 2.85, (0, 0, 512, 277)),        # the wheel on the concrete
-    "r_jersey":  ("reel", 3.05, 3.80, (0, 0, 512, 277)),        # riding, the jersey close
-    "r_riding":  ("reel", 0.05, 4.25, (0, 285, 512, 302)),      # riding at the camera at sunset (the middle band)
-    "r_ledge":   ("reel", 0.40, 3.50, (120, 596, 392, 231)),    # the overlook, cropped right of the parked truck and trailer
-    # the homepage reel (road-film-2), one shot each
-    "s1_mint":   ("road", 0.40, 1.35, (0, 0, 864, 1080)),       # from 0.40 s: a rust-red shape behind the post before it (brand gate, v2)
-    "s2_drone":  ("road", 1.45, 2.65, (0, 0, 864, 1080)),
-    "s3_ahead":  ("road", 2.75, 4.05, (0, 0, 864, 1080)),
-    # out (brand gate, Oct 26): s4_river 4.15-5.45 (a shape under the far-bank road), s7_road 8.25-9.55 (a car at the
-    # far end), s9_sun 11.05-11.60 (a parked vehicle on the verge); v3: s8_bike (pale shapes through the fence that could
-    # be a lot) and s6_tunnel (its fisheye half puts an orange beam on the first screen, louder than the rose)
-    "s5_forest": ("road", 5.75, 6.75, (0, 0, 864, 1080)),
-    "s6_tunnel": ("road", 6.85, 8.15, (0, 0, 864, 1080)),
-    "s8_bike":   ("road", 9.65, 10.95, (0, 0, 864, 1080)),
-    "t_selfie":  ("tsr", 3.22, 3.72, (0, 0, 864, 1080)),
-    "love":      ("love", 0.00, 3.20, (0, 0, 720, 1280)),
-    "love_2":    ("love", 0.30, 2.30, (0, 0, 720, 1280)),       # the pose, without the walk in
+    "rail":   ("rail", 1.80, 6.30, (0, 0, 1080, 1920)),   # from 1.8 s: before it he's looking off to the left
+    "road":   ("hit", 8.24, 9.86, (0, 0, 1080, 1920)),    # a road under a red-rock ridge, his shadow on it
+    "tunnel": ("hit", 6.32, 7.17, (0, 0, 1080, 1920)),    # from 6.32 s: a red post behind his helmet before it
+    "palms":  ("hit", 9.94, 11.26, (0, 0, 1080, 1920)),   # low, at the camera, the palms
 }
+# phones: the same shots a little closer (900x1600 of the 1080x1920 frame, still downscaled), so his face sits in the
+# top quarter, clear of the stencil, on every phone from 360x640 to 430x932
+for k in ("rail", "palms", "tunnel"):
+    SHOTS[k + "_p"] = SHOTS[k][:3] + ((90, 250, 900, 1600),)
 
 # lanes: (slot w, slot h, [(shot, focus 0..1 along the axis the crop slides on), ...]); the last shot of each lane is
-# trimmed to the loop. Order chosen so no shot is in two lanes at the same moment.
-PHONE = [   # one frame, the shots at their own length; frame 0 is his face (the poster and the reduced-motion still).
-            # v5: the dawn road is out of the phone cut (on a tall screen its sky filled the top half with haze)
-    (608, 1080, [("s1_mint", .5), ("s5_forest", .5), ("s2_drone", .55)]),
+# trimmed to the loop.
+PHONE = [   # one frame; frame 0 is his face (the poster and the reduced-motion still)
+    (608, 1080, [("rail_p", .5, 2.5), ("palms_p", .5), ("tunnel_p", .5)]),
 ]
-WIDE = [    # the wide panel the words sit in, then the tall one, cut together in pairs. v5: his face, the sharpest shot,
-            # opens in the wide panel, cropped from the top so it sits above the stencil; the drone cropped from the
-            # bottom so the rider rides above the words. The gutter sits at 70% of the frame, right of the centred nav
-            # at every landscape width from 1024, so no link sits on a seam
-    (1134, 960, [("s1_mint", 0, .95), ("s2_drone", 1, 1.2), ("s5_forest", .5, .95)]),
-    (480, 960, [("s5_forest", .75, .95), ("s3_ahead", .5, 1.2), ("s1_mint", .35, .95)]),   # v6: the forest rider centred in the narrow panel
+WIDE = [    # the wide panel the words sit in, cut on its own clock; the tall one is the rail-yard take, uncut. Frame 0:
+            # the red-rock road beside his face
+    (1134, 960, [("road", .5), ("tunnel", .42), ("palms", .44)]),   # his face above the stencil in both
+    (480, 960, [("rail", .5)]),
 ]
 
 def dur(shot): return SHOTS[shot][2] - SHOTS[shot][1]
@@ -152,10 +126,10 @@ def build(lanes, gap, out_w, out_h, srcs, tmp, name):
     assert probe == f"{out_w},{out_h}", (probe, out_w, out_h)
     return master
 
-# v7 (the art director): the wide loop starts 0.35 s in. Same frames, same pairs, the seam inside the loop moves, and
+# v7 (the art director) started the wide loop 0.35 s in (0 = no turn). Same frames, same pairs, the seam inside the loop moves, and
 # frame 0 (the poster: the LCP and the only picture for reduced motion, Save-Data and slow connections) is his face
 # beside the whole forest rider instead of a rider cut by the clip's own edge
-WIDE_START = 0.35
+WIDE_START = 0.0
 def rotate(master, start, length, tmp):
     out = os.path.join(tmp, "rot-" + os.path.basename(master))
     fc = (f"[0:v]split[a][b];[a]trim=start={start:.3f}:end={length:.3f},setpts=PTS-STARTPTS[x];"
@@ -185,24 +159,25 @@ def encode(master, out_dir, base, crf_h264, crf_vp9):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--reel", default="", help="Robert's three-band reel (cycling-video-no-text.mp4), only if a reel shot is in a lane")
+    ap.add_argument("--rail", required=True, help="his rail-yard ride (1789929494081.mov)")
+    ap.add_argument("--hit", required=True, help="his reel, CFC-Reel-Hit-v3.mp4")
     ap.add_argument("--out", default=FILM)
-    ap.add_argument("--n", type=int, default=7)
+    ap.add_argument("--n", type=int, default=8)
     a = ap.parse_args()
-    srcs = sources(os.path.abspath(os.path.expanduser(a.reel)) if a.reel else "")
+    srcs = sources(os.path.abspath(os.path.expanduser(a.rail)), os.path.abspath(os.path.expanduser(a.hit)))
     used = {SHOTS[e[0]][0] for lanes in (PHONE, WIDE) for (_, _, lane) in lanes for e in lane}
     for k in used:
-        if not srcs[k][0] or not os.path.exists(srcs[k][0]): sys.exit(f"missing source {k}: {srcs[k][0] or '(pass --reel)'}")
+        if not srcs[k][0] or not os.path.exists(srcs[k][0]): sys.exit(f"missing source {k}: {srcs[k][0]}")
     check(PHONE, "phone"); check(WIDE, "wide")
     os.makedirs(a.out, exist_ok=True)
     with tempfile.TemporaryDirectory() as tmp:
         print("phone")
         m = build(PHONE, 6, 608, 1080, srcs, tmp, "phone")
-        encode(m, a.out, f"hero-phone-{a.n}", 27, 40)
+        encode(m, a.out, f"hero-phone-{a.n}", 29, 43)
         print("wide")
         m = build(WIDE, 6, 1620, 960, srcs, tmp, "wide")
-        m = rotate(m, WIDE_START, L["wide"], tmp)
-        encode(m, a.out, f"hero-wide-{a.n}", 29, 42)
+        if WIDE_START: m = rotate(m, WIDE_START, L["wide"], tmp)
+        encode(m, a.out, f"hero-wide-{a.n}", 31, 45)
 
 if __name__ == "__main__":
     main()

@@ -101,8 +101,8 @@ const DEFS = `<svg aria-hidden="true" focusable="false" style="position:absolute
 
 // —— 1. the hero: the film, the mark, who and what, one primary ——
 const FILM = {
-  phone: { mp4: "/film/hero-phone-7.mp4", webm: "/film/hero-phone-7.webm", poster: "/film/hero-phone-7", w: 608, h: 1080 },
-  wide: { mp4: "/film/hero-wide-7.mp4", webm: "/film/hero-wide-7.webm", poster: "/film/hero-wide-7", w: 1620, h: 960 },
+  phone: { mp4: "/film/hero-phone-8.mp4", webm: "/film/hero-phone-8.webm", poster: "/film/hero-phone-8", w: 608, h: 1080 },
+  wide: { mp4: "/film/hero-wide-8.mp4", webm: "/film/hero-wide-8.webm", poster: "/film/hero-wide-8", w: 1620, h: 960 },
 };
 // the two-panel film on a landscape screen at 760 and up; the one-frame film on phones and portrait tablets
 const WIDE_Q = "(min-width: 760px) and (min-aspect-ratio: 1/1)";
@@ -119,7 +119,7 @@ const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools
       <source media="${WIDE_Q}" srcset="${FILM.wide.poster}.jpg">
       <source type="image/avif" srcset="${FILM.phone.poster}.avif">
       <source type="image/webp" srcset="${FILM.phone.poster}.webp">
-      <img src="${FILM.phone.poster}.jpg" width="${FILM.phone.w}" height="${FILM.phone.h}" alt="Robert riding at the camera in a mint jersey and a yellow helmet, a desert road behind him." fetchpriority="high">
+      <img src="${FILM.phone.poster}.jpg" width="${FILM.phone.w}" height="${FILM.phone.h}" alt="Robert riding at the camera in a yellow helmet and a pink print jersey, railroad tracks behind him." fetchpriority="high">
     </picture>
     <video class="hero-film" id="heroFilm" muted loop playsinline disablepictureinpicture preload="none" aria-hidden="true" tabindex="-1"
       data-phone-mp4="${FILM.phone.mp4}" data-phone-webm="${FILM.phone.webm}" data-wide-mp4="${FILM.wide.mp4}" data-wide-webm="${FILM.wide.webm}" data-wide-q="${WIDE_Q}"></video>
