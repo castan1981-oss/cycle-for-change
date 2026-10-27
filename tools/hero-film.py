@@ -152,6 +152,18 @@ def build(lanes, gap, out_w, out_h, srcs, tmp, name):
     assert probe == f"{out_w},{out_h}", (probe, out_w, out_h)
     return master
 
+# v7 (the art director): the wide loop starts 0.35 s in. Same frames, same pairs, the seam inside the loop moves, and
+# frame 0 (the poster: the LCP and the only picture for reduced motion, Save-Data and slow connections) is his face
+# beside the whole forest rider instead of a rider cut by the clip's own edge
+WIDE_START = 0.35
+def rotate(master, start, length, tmp):
+    out = os.path.join(tmp, "rot-" + os.path.basename(master))
+    fc = (f"[0:v]split[a][b];[a]trim=start={start:.3f}:end={length:.3f},setpts=PTS-STARTPTS[x];"
+          f"[b]trim=start=0:end={start:.3f},setpts=PTS-STARTPTS[y];[x][y]concat=n=2:v=1:a=0[out]")
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", master, "-filter_complex", fc, "-map", "[out]", "-an",
+                    "-c:v", "libx264", "-crf", "14", "-preset", "veryfast", "-pix_fmt", "yuv420p", out], check=True)
+    return out
+
 def encode(master, out_dir, base, crf_h264, crf_vp9):
     mp4 = os.path.join(out_dir, base + ".mp4"); webm = os.path.join(out_dir, base + ".webm")
     common = ["-an", "-map_metadata", "-1", "-pix_fmt", "yuv420p"]
@@ -175,7 +187,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--reel", default="", help="Robert's three-band reel (cycling-video-no-text.mp4), only if a reel shot is in a lane")
     ap.add_argument("--out", default=FILM)
-    ap.add_argument("--n", type=int, default=6)
+    ap.add_argument("--n", type=int, default=7)
     a = ap.parse_args()
     srcs = sources(os.path.abspath(os.path.expanduser(a.reel)) if a.reel else "")
     used = {SHOTS[e[0]][0] for lanes in (PHONE, WIDE) for (_, _, lane) in lanes for e in lane}
@@ -189,6 +201,7 @@ def main():
         encode(m, a.out, f"hero-phone-{a.n}", 27, 40)
         print("wide")
         m = build(WIDE, 6, 1620, 960, srcs, tmp, "wide")
+        m = rotate(m, WIDE_START, L["wide"], tmp)
         encode(m, a.out, f"hero-wide-{a.n}", 29, 42)
 
 if __name__ == "__main__":

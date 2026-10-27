@@ -101,8 +101,8 @@ const DEFS = `<svg aria-hidden="true" focusable="false" style="position:absolute
 
 // —— 1. the hero: the film, the mark, who and what, one primary ——
 const FILM = {
-  phone: { mp4: "/film/hero-phone-6.mp4", webm: "/film/hero-phone-6.webm", poster: "/film/hero-phone-6", w: 608, h: 1080 },
-  wide: { mp4: "/film/hero-wide-6.mp4", webm: "/film/hero-wide-6.webm", poster: "/film/hero-wide-6", w: 1620, h: 960 },
+  phone: { mp4: "/film/hero-phone-7.mp4", webm: "/film/hero-phone-7.webm", poster: "/film/hero-phone-7", w: 608, h: 1080 },
+  wide: { mp4: "/film/hero-wide-7.mp4", webm: "/film/hero-wide-7.webm", poster: "/film/hero-wide-7", w: 1620, h: 960 },
 };
 // the two-panel film on a landscape screen at 760 and up; the one-frame film on phones and portrait tablets
 const WIDE_Q = "(min-width: 760px) and (min-aspect-ratio: 1/1)";
@@ -346,7 +346,7 @@ const ORGS = `<!-- —— 6. the orgs. One line each from the site's checked cop
       <article class="org">
         <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkSF"/></svg>
         <h3 class="org-h">San Francisco AIDS Foundation</h3>
-        <p>HIV, sexual health and harm-reduction services.</p>
+        <p>HIV, sexual health and <span class="nowrap">harm-reduction</span> services.</p>
         <p class="org-acts"><a class="link" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Give to SFAF</a></p>
       </article>
     </div>
