@@ -302,8 +302,11 @@ homepage only; every other rule in this section still holds there and everywhere
   sooner; `ORGS_S` and `RIDE_S` are two constants so the 2027 rides sit between them). The hero carries the second quiet
   link, Read the last ride (above). How this works is a ledger of three rows (no marks, no numerals). `#today` has **one
   film control**: the disc at the frame's bottom-left (`.today-play`, the site's film control, both glyphs inside it, the
-  figure's `data-playing` picks one, the label says what it does next); the Play · 0:03 line under the film is gone; the film is a sibling of the photo (`.today-lead`, `.today-say`, `.today-ph`,
-  `.today-film` on one grid) with its own place · month caption from `today.json`'s `film.where`. The three plates under
+  figure's `data-playing` picks one, the label says what it does next); the Play · 0:03 line under the film is gone; the film is a sibling of the photo (`.today-lead`, `.today-say`,
+  `.today-film`, `.today-ph` on one grid, in that DOM order so the disc follows the ask link) with its own place · month
+  caption from `today.json`'s `film.where`. On phones the film sits beside his line and the photo runs full bleed under
+  both; from 1024 the film shares the line's column and the photo's foot. Save-Data or a slow connection keeps both
+  films still until their control asks. The three plates under
   "It always says cycling" are cut (the sign already changes in `#today` and at the foot). The `#ride` facts are chrome's
   `.facts` grid; the find field carries `#mkSearch`. **The Ride with me bar is hidden at ≥900 on the homepage** (the
   header's Ride with me carries it there; phones keep the bar): the one exception to §1's "every page".
