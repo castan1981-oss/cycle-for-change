@@ -478,8 +478,9 @@ Oct 27). Streets and lit paths only: no dead-end detours, no climbs.
   record. The sources and the date read are in the page's note. A new place needs a source.
 - **The drawing is not a map.** No route file on the page until Robert has ridden it (§6 Routes: Robert's own ride file,
   never a route we drew). After his ride, his GPX goes in through `data/ride-routes.json` like any host's.
-- **Photos:** nobody is recognisable unless they took a "Photos OK" sticker at the start, and the ride never posts who
-  came (the page says why: the 1964 raid at 915 N 1st St, when the paper printed the names). §10 holds.
+- **No photo rule in public** (Robert, Oct 27, 2026: "take the photo thing off everything"): no "Photos OK" sticker, no
+  "no sticker, no photo", no "we never post who came" on the page, the kit, the record or anything printed. §10 still
+  holds for what goes on the site and in our posts: only Robert recognisable, anyone else with their OK.
 - No form, no RSVP, no list of names. Questions come by Instagram DM.
 - **The chalk look** (Oct 27, 2026; Robert's "Brand Family Playbook" from ChatGPT: three brands, Cycle for Change the
   platform, the Fruit Loop the gathering, Queers on Bikes the invitation; "Nobody gets dropped" is the promise). **Everything
@@ -1071,3 +1072,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-27 — The Fruit Loop goes chalk (Robert's brand playbook): the flyer rebuilt on his real photo, his logo in white chalk from his own file, Walter Turncoat lettering (`tools/fruitloop-chalk/`, `-5` files on `/fruitloop/#poster`); no free, every Friday, 18 and up or hosted by on the flyer; reel overlays and the chalk kit on the launch kit canvas.
 - 2026-10-27 — The Fruit Loop page drops every Friday, free and 18 and up (Robert); the chalk share card `og-fruitloop-3.jpg`.
 - 2026-10-27 — Ride with me points at the Fruit Loop until Dec 11 (Robert: a button on the homepage's first screen): the homepage tile, the header button, the menu, the closing block and the bar on every page; `CSS_V` 57 for the Fruit Loop sheet.
+- 2026-10-27 — The Fruit Loop's photo rule comes off everything (Robert): the page's How it works and its "why" line, the directory record's visitor notes, place card 6, the how-it-works slide, the Photos OK sticker.

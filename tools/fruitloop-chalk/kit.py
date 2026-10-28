@@ -18,7 +18,7 @@ PLACES={ # point on the loop, label spot, name, when, story (sourced; the page's
  3:((179,1188),(215,1110),'THE CAPITOL','MILE 3, 1981','In 1981 somewhere between 600 and 1,000 people marched from Patriots Square down Washington Street to the Capitol. We ride their route.'),
  4:((414,194),(520,205),'THE TRANS FLAG','MILE 7, 1999','In 1999 Monica Helms, a Navy veteran, designed the trans pride flag at her home near here, Indian School and 3rd Avenue. It flew for the first time at Phoenix Pride in 2000, half a mile east in Steele Indian School Park.'),
  5:((327,115),(250,40),'THE CURVE','THE STOP, MILE 8','Phoenix is a grid of straight lines. Seventh Avenue bends here, in the middle of Melrose, and the city painted the second rainbow crosswalk right in the bend. Our one stop. Charlie’s is under a mile up the street.'),
- 6:((514,949),(650,880),'THE FRUIT LOOP','MILE 14, 1940S TO 1990S','Roosevelt, 3rd, Portland, 1st: the old bar circuit we’re named for. In 1964 police raided 915 N 1st St and the paper printed the names of the 23 people arrested. So we never post who rides with us.'),
+ 6:((514,949),(650,880),'THE FRUIT LOOP','MILE 14, 1940S TO 1990S','Roosevelt, 3rd, Portland, 1st: the old bar circuit we’re named for. In 1964 police raided 915 N 1st St and the paper printed the names of the 23 people arrested.'),
  7:((490,1007),(390,1080),'COFFEE','THE FINISH, MILE 14.5','Three blocks south of the crosswalk, over coffee. The spot gets named once it’s set. Stay for one or roll home. Nobody has to buy anything.'),
 }
 PCOL={1:C['rose'],2:C['cyan'],3:C['orange'],4:C['pink'],5:C['yellow'],6:C['green'],7:C['purple']}
@@ -69,12 +69,11 @@ B['Feed-2-map']=(1080,1350,page(1080,1350,f'''
 B['Feed-3-how']=(1080,1350,page(1080,1350,f'''
 <div class="abs" style="left:56px;top:56px"><img src="{LOGO}" style="width:560px;display:block"></div>
 <div class="abs col" style="left:64px;top:300px">{blk('HOW IT WORKS',92,C['yellow'],201,sw='4.2px')}{scr(560,C['rose'],202,h=22,sw=12)}</div>
-<div class="abs col" style="left:64px;top:470px;gap:26px">'''+''.join(
-  f'''<div class="col">{blk(h_,46,c_,210+i,sw='3px',fit=950)}{para(s_,26,C['white'],220+i,940,mt=6)}</div>''' for i,(h_,c_,s_) in enumerate([
+<div class="abs col" style="left:64px;top:480px;gap:40px">'''+''.join(
+  f'''<div class="col">{blk(h_,54,c_,210+i,sw='3.2px',fit=950)}{para(s_,30,C['white'],220+i,940,mt=8)}</div>''' for i,(h_,c_,s_) in enumerate([
    ('BRING A LIGHT. TWO, ACTUALLY.',C['cyan'],'White on the front, red on the back. It’s dark by 5:30.'),
    ('NOBODY GETS DROPPED.',C['rose'],'About 10 to 12 mph, flat. A sweep rides at the back.'),
    ('WE STOP AT EVERY RED.',C['orange'],'Then we wait for whoever caught it.'),
-   ('NO STICKER, NO PHOTO.',C['green'],'Want to be in the pictures? Grab a Photos OK sticker at the start. Nobody’s name goes anywhere.'),
    ('ANY BIKE.',C['purple'],'About 14 flat miles, one stop, coffee about 7:45. Starts Friday, Dec 11.')]))+f'''</div>
 <div class="abs col" style="left:64px;bottom:52px">{foot(240,440)}</div>'''))
 # ── The seven place cards ───────────────────────────────────────────
@@ -125,9 +124,6 @@ B['Main']=(1056,1632,page(1056,1632,f'''
 # ── Stickers (each board drawn at 3x so it prints sharp) ────────────
 def sticker(W,Hh,inner):
     return page(W,Hh,inner)
-B['Sticker']=(576,576,sticker(576,576,f'''
-<div class="abs col" style="left:52px;top:40px">{blk('PHOTOS',150,C['yellow'],701,sw='6px',lh=.95,fit=470)}{blk('OK',170,C['rose'],702,sw='7px',lh=.95)}{scr(360,C['cyan'],703,h=22,sw=14)}</div>
-<div class="abs" style="left:88px;bottom:40px;width:400px"><img src="{LOGO}" style="width:400px;display:block"></div>'''))
 B['Sticker-Fruity']=(1200,1600,sticker(1200,1600,f'''
 <div class="abs" style="left:60px;top:90px"><img src="{LOGO}" style="width:1080px;display:block"></div>
 <div class="abs col" style="left:90px;top:560px">{blk('FRUITY',230,C['rose'],711,sw='8px',lh=.95)}{blk('FRIDAY',230,C['yellow'],712,sw='8px',lh=.95)}{scr(900,C['cyan'],713,h=30,sw=18)}</div>
