@@ -661,6 +661,7 @@ main:has(.pledge){padding-bottom:0}
 
 /* S3 — the frame's type (type-layout), and R3: the tally line is a link to the live count (/#road), no dot */
 .tally-line{font:400 var(--fs-small)/1.4 var(--display);color:var(--mute)}
+[data-season][hidden]{display:none!important}   /* the two wordings of the count (tools/lib/season.js) */
 .tally-line a{position:relative;color:inherit;text-decoration:underline;text-decoration-color:var(--dust-deep);text-decoration-thickness:1px;text-underline-offset:4px}
 .tally-line a::before{content:"";position:absolute;left:0;right:0;top:50%;height:44px;margin-top:-19px}   /* a 44px hit area, biased down so the sticky header never covers its top; the line keeps its height */
 @media (hover:hover){.tally-line a:hover{text-decoration-color:currentColor}}

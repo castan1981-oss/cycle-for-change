@@ -13,6 +13,10 @@
   var $ = function (id) { return document.getElementById(id); };
 
   /* —— 1. tally —— */
+  /* The words around the number (tools/lib/season.js): training until midnight Jan 1, 2027 in Phoenix, then 2027.
+     The page carries both; this shows the right one even if the page was built before the switch. */
+  var IN_2027 = Date.now() >= Date.UTC(2027, 0, 1, 7);
+  document.querySelectorAll("[data-season]").forEach(function (el) { el.hidden = el.getAttribute("data-season") !== (IN_2027 ? "2027" : "training"); });
   var ENDPOINTS = ["/api/strava", "/.netlify/functions/strava"];
   function paintMiles(miles) {
     var n = Math.max(0, Math.round(Number(miles) || 0));

@@ -17,6 +17,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { seasonText } = require("../tools/lib/season.js");
 
 const SITE = "https://cycleforchange.org";
 const INSTAGRAM = "https://www.instagram.com/cycl_eforchange";
@@ -26,7 +27,7 @@ const OG_IMAGE = `${SITE}/og-cfc.png`;
 // /chrome.css and every section sheet a generator passes (any old ?v= is replaced), apply-chrome.py gets it through
 // head(), build-home.js puts it on /home.css. Bump it whenever a stylesheet or /chrome.js changes and regenerate in the
 // §2 order: a page must never pair an old /chrome.css with new section sheets (they share cascade layers).
-const CSS_V = 58;
+const CSS_V = 59;
 const ver = (href) => `${href.split("?")[0]}?v=${CSS_V}`;
 
 // Counts shown in the mobile menu, same as the homepage. Read from the data so
@@ -209,7 +210,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>`;
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;${seasonText("training miles since June 1. The 10,000 start Jan 1.", "miles in 2027, all on the bike.")}</a></span></p>`;
 
 const FOOTER = `<footer class="foot site-foot">
   ${RIDE_BAR}

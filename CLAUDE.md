@@ -21,8 +21,12 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 - **The big thing:** group rides everywhere. Robert shows up, rides, and writes up each ride (who
   he met, what happened) with his own video. Alongside that, the worldwide group-ride directory
   (`/rides/`), where every ride says when it was last checked.
-- **The number:** miles since June 1, 2026. One number, everywhere, never a percentage, never shown
-  against 10,000. The count restarts January 1, 2027.
+- **The number:** bike miles since June 1, 2026. One number, everywhere, never a percentage, never shown
+  against 10,000. The count restarts January 1, 2027 at midnight in Phoenix, on its own (Oct 26, 2026):
+  `tools/lib/season.js` is the one switch. `netlify/functions/strava.js` counts only rides (never runs or swims) inside
+  the season, and never serves a cached training total as the 2027 number. The words around the number come as two
+  `[data-season]` spans (`seasonText()`): the build sets which one shows, `/chrome.js` and `/home.js` re-set it in the
+  browser, and the deploy's tally pass (`scripts/tally.js`) flips the homepage's. `MANUAL_BONUS_MILES` is training only.
 - **Everything funnels to the site and Instagram.** The site sends no email to visitors (Robert, Oct 9,
   2026): the footer's "Mile updates" column points at Instagram, there is no signup form. Instagram is
   **@cycl_eforchange** (not @cycle_forchange).
@@ -1080,3 +1084,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-27 — Ride with me points at the Fruit Loop until Dec 11 (Robert: a button on the homepage's first screen): the homepage tile, the header button, the menu, the closing block and the bar on every page; `CSS_V` 57 for the Fruit Loop sheet.
 - 2026-10-27 — The Fruit Loop's photo rule comes off everything (Robert): the page's How it works and its "why" line, the directory record's visitor notes, place card 6, the how-it-works slide, the Photos OK sticker.
 - 2026-10-28 — `#road` gets a film again: Robert's drone reel cut to 8 s, silent, 16:9 (`tools/road-film.py`, `road-film-3`: the drone over him on the desert road, the lookout, the mountain road; the sunset bike, the canal path, the bridge and the side-on shot left out), under the 10,000 with today's player (`smallFilm()`); `CSS_V` 58.
+- 2026-10-28 — The count is bike miles only (runs and swims were being added in) and restarts by itself at midnight on Jan 1, 2027 in Phoenix (`tools/lib/season.js`, both wordings on every page, `tools/test/strava-count.test.js`); the `/tonight/` Flyer redrawn in Overpass and After Hours without the never-list line it carried; `CSS_V` 59. (Made Oct 26 as #211, rebuilt on top of the road film.)

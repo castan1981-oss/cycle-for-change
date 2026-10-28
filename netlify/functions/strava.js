@@ -13,7 +13,9 @@
 
 const GOAL = 10000; // legacy field; the site shows miles only, never a fraction of 10,000 (pct went Oct 6, 2026)
 const METERS_TO_MILES = 0.000621371;
-const SEASON_START = "2026-06-01";
+// Which count: training (bike miles since June 1, 2026) until midnight Jan 1, 2027 in Phoenix, then 2027 from zero.
+// Oct 26, 2026: the start is Phoenix midnight (was UTC midnight, 5 pm May 31 in Phoenix), and only rides count.
+const SEASONS = require("../../tools/lib/season.js");
 const FRESH_MS = 20 * 60 * 1000;      // recompute anyway if the blob is older than this
 const ERROR_BACKOFF_MS = 5 * 60 * 1000; // after a Strava error, don't retry for this long
 const MAX_PAGES = 20;
@@ -23,6 +25,8 @@ const KEY = "tally";
 
 const auth = require("./lib/strava-auth");
 
+// Only BIKE counts toward the number, the ride count and the log (Oct 26, 2026: the pledge is all on the bike; runs
+// and swims were being added in). RUN and SWIM stay mapped so the reason a row is left out is readable.
 const BIKE = new Set(["Ride", "VirtualRide", "GravelRide", "MountainBikeRide"]);
 const RUN = new Set(["Run", "TrailRun"]);
 const SWIM = new Set(["Swim", "OpenWaterSwim"]);
@@ -69,8 +73,11 @@ exports.handler = async (event) => {
   }
 
   const now = Date.now();
+  const season = SEASONS.seasonAt(now);
   const record = (await readBlob()) || memo;
-  const have = record && record.data;
+  // a record from the other count is not ours to show: at midnight on Jan 1 the training total must never be
+  // served as the 2027 number, not from the cache, not as a fallback
+  const have = record && record.data && record.data.season && record.data.season.key === season.key;
 
   const fresh =
     have &&
@@ -83,8 +90,9 @@ exports.handler = async (event) => {
     record.errorTs &&
     now - record.errorTs < ERROR_BACKOFF_MS;
 
-  const BONUS = parseFloat(process.env.MANUAL_BONUS_MILES || "0");
-  const fallback = have ? record.data : staticFallback(BONUS);
+  // MANUAL_BONUS_MILES is a training-count offset only; it never carries into 2027 (MANUAL_BONUS_MILES_2027 if ever needed)
+  const BONUS = parseFloat((season.key === "2027" ? process.env.MANUAL_BONUS_MILES_2027 : process.env.MANUAL_BONUS_MILES) || "0");
+  const fallback = have ? record.data : staticFallback(BONUS, season);
 
   // never let an error answer sit in the edge cache: the moment the feed
   // recovers, the next poll should see it
@@ -112,7 +120,7 @@ exports.handler = async (event) => {
   }
 
   try {
-    const data = await compute(BONUS);
+    const data = await compute(BONUS, season);
     await writeBlob({ ts: now, dirty: false, data });
     return { statusCode: 200, headers, body: JSON.stringify(data) };
   } catch (err) {
@@ -139,18 +147,22 @@ exports.markDirty = async (why) => {
   await writeBlob({ ...record, dirty: true, dirtyAt: Date.now(), dirtyWhy: why || "" });
 };
 
-async function compute(bonus) {
+async function compute(bonus, season) {
   const accessToken = await auth.getAccessToken();
 
-  const after = Math.floor(new Date(`${SEASON_START}T00:00:00Z`).getTime() / 1000);
-  const activities = await fetchAllActivities(accessToken, after);
+  const after = Math.floor(season.start / 1000);
+  const activities = (await fetchAllActivities(accessToken, after))
+    .filter((a) => {
+      const t = new Date(a.start_date || a.start_date_local).getTime();
+      return t >= season.start && t < season.end;
+    });
   // Only public activities, Oct 6, 2026: a ride Robert set to private or followers-only never
   // reaches the site — not its title, not its miles.
   const mapped = activities
     .filter(isPublic)
     .map((a) => {
       const discipline = mapDiscipline(a);
-      if (!discipline) return null;
+      if (discipline !== "bike") return null;
       const miles = (a.distance || 0) * METERS_TO_MILES;
       return {
         id: a.id,
@@ -195,6 +207,7 @@ async function compute(bonus) {
     recent,
     rides: mapped.length,
     profileUrl,
+    season: { key: season.key, since: season.since },
     configured: true,
     updated: new Date().toISOString(),
   };
@@ -262,7 +275,7 @@ function buildChartPoints(activities, bonus) {
   return points;
 }
 
-function staticFallback(bonus) {
+function staticFallback(bonus, season) {
   return {
     totalMiles: Math.round(bonus),
     miles: bonus,
@@ -274,6 +287,7 @@ function staticFallback(bonus) {
     recent: [],
     rides: 0,
     profileUrl: null,
+    season: { key: season.key, since: season.since },
     configured: false,
     updated: new Date().toISOString(),
   };
