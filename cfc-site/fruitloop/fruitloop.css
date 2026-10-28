@@ -1,10 +1,10 @@
 @layer section{
 /* Cycle for Change — /fruitloop/ (Oct 23, 2026). The Fruit Loop's own page: a night ride, so a night page.
    Bruise ground, plaster type, the ride's own lockup (pavement lettering, drawn, never a font; the Progress
-   chevron in front and the second O of LOOP in the trans flag's bands, Robert's picks of Oct 25, 2026) and the one
-   place on the site with color: the six bars of the rainbow crosswalk the ride starts on and the Progress flag's
-   five, all muted to sit with the After Hours palette. "The" and the kicker start where the letters do (.2273 =
-   the chevron and its gap, 200 of the lockup's 880 units). Drawn clean: no grain, no shadows, square corners. Loaded by /fruitloop/ only. */
+   chevron in front and the second O of LOOP in the trans flag's bands, Robert's picks of Oct 25, 2026; replaced Oct 27
+   by his crayon logo, below) and the one place on the site with color: the six bars of the rainbow crosswalk the ride
+   starts on and the Progress flag's five, all muted to sit with the After Hours palette. Square corners, no shadows.
+   Loaded by /fruitloop/ only. */
 
 body.fl-page{background:var(--asphalt);color:var(--bone)}
 .fl{
@@ -20,10 +20,12 @@ body.fl-page{background:var(--asphalt);color:var(--bone)}
 /* —— hero: the wordmark, the next ride, the crosswalk —— */
 .fl-hero{padding-top:clamp(40px,7vw,104px)}
 .fl-hero-in{display:grid;gap:var(--s4)}
-.fl-h1{margin:0;display:flex;flex-direction:column;gap:10px}
-.fl-the{font:800 clamp(22px,2.6vw,36px)/1 var(--display);color:var(--dust);padding-left:calc(min(100%,1080px) * .2273)}
-.fl-word{display:block;width:min(100%,1080px);height:auto;color:var(--paper)}
-.fl-kicker{margin-top:10px;font:700 clamp(19px,2.2vw,28px)/1.2 var(--display);color:var(--dust);letter-spacing:-.01em;padding-left:calc(min(100%,1080px) * .2273)}
+/* the logo (Oct 27, 2026): Robert's own crayon drawing, his pick ("I want this logo. It's perfect."). Used exactly as
+   given, on its own paper (#F5F3EE, sampled from the file), so it's never recolored or redrawn for the night ground.
+   Edge to edge on phones, the full column on desktop; square corners, no shadow. */
+.fl-h1{margin:0;width:min(100%,1080px);background:#F5F3EE}
+.fl-logo{display:block;width:100%;height:auto}
+@media (max-width:899px){.fl-h1{width:auto;margin-inline:calc(-1 * var(--gut))}}
 .fl-lede{margin:0;max-width:34em;font-size:var(--fs-intro);line-height:1.45;color:var(--bone)}
 .fl-next{border-top:2px solid var(--paper);padding-top:var(--s2);display:grid;gap:4px;align-content:start}
 .fl-next p{margin:0}
@@ -128,4 +130,19 @@ body.fl-page{background:var(--asphalt);color:var(--bone)}
 .fl-plate--stop::after{inset:0}
 .fl-plate--stop:hover,.fl-plate--stop.is-on{background:var(--creosote-lift)}
 .fl-stop--stop .fl-stop-n{background:var(--paper)}
+
+/* —— the poster (Oct 27, 2026): the ride's poster as a thing to save and pass on. It's bruise on bruise, so it gets
+   the page's hairline as its edge; the words come first on a phone so it never reads as a second hero —— */
+.fl-poster{border-top:1px solid var(--line-d);padding-block:var(--s5) var(--sec)}
+.fl-poster-in{display:grid;gap:var(--s4)}
+.fl-poster-copy p{margin:var(--s2) 0 0;max-width:34em;font-size:var(--fs-body);line-height:1.55;color:var(--bone)}
+.fl-poster-copy .fl-cta{margin-top:var(--s3)}
+.fl-poster-copy .fl-poster-more{display:flex;flex-direction:column;align-items:flex-start;gap:22px;margin-top:var(--s3)}   /* the links' 44px hit areas (.link::before) don't overlap */
+.fl-poster-fig{margin:0;width:min(100%,520px)}
+.fl-poster-fig img{display:block;width:100%;height:auto;border:1px solid var(--line-d)}
+@media (min-width:900px){
+  .fl-poster-in{grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:var(--s5);align-items:start}
+  .fl-poster-fig{grid-column:1;grid-row:1}
+  .fl-poster-copy{grid-column:2;grid-row:1;padding-top:var(--s2)}
+}
 }

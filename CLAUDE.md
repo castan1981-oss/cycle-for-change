@@ -35,6 +35,10 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   (`tools/calendar-from-artifact.js`, §5), or flip `riding` in the JSON if the artifact can't wait — the refresh
   overwrites `riding` from the artifact's `on_list`, so the artifact has to agree. `SHORT` and `WHERE` in chrome.js are
   the house phrasings ("Sea Otter Classic", "LA to Ojai and back"); everything else is the calendar's own text.
+  **Oct 27, 2026: the Fruit Loop heads the bar's list until its first Friday** (`FRUIT_LOOP` in chrome.js, until 2026-12-11,
+  → `/fruitloop/`; Robert wanted it on the homepage's first screen "in case people go to the home page"). It's his own
+  ride, not a calendar event, so it never reaches `RIDING`, the homepage's 2027 list or the riding page. After Dec 11 the bar
+  rolls on to Tour de Palm Springs.
   Tour de Palm Springs (Feb 6, 2027) is first because it's first (Robert, Oct 21: his next ride). Each `href` opens
   that ride's row on the riding page, open (`/events/2027/riding/#<slug>`; studio pass 1). The nav button, the menu,
   the closing block, the homepage's first-screen tile (`#heroRide`) and the bar at the foot of every page (`.ridebar`,
@@ -435,13 +439,22 @@ first; the finish reads "over coffee, the spot gets named here once it's set"). 
 7:45, ages, where 40 bikes go); The Churchill (901 N 1st St) is the backup. Name it in `build-fl7.py`'s place 7, the basics
 and the ride record once it's set. Seven places on the drawing (the crosswalk, Old City Hall, the Capitol, the trans flag at
 3rd and Indian School, the Curve, the Fruit Loop, coffee), one stop; passed: Heritage Square, CityScape, Encanto and Willo,
-the canal, Coronado. Free, no-drop, 18 and up, no sign-up. Streets and lit paths only: no dead-end detours, no climbs.
+the canal, Coronado. No-drop, no sign-up (the page and everything printed leave out free, every Friday and 18 and up, Robert,
+Oct 27). Streets and lit paths only: no dead-end detours, no climbs.
 - **Its own page, on purpose** (Robert: "special, not like the rest, with a Fruit Loop logo"): `cfc-site/fruitloop/`
   (`index.html`, `fruitloop.css`, `fruitloop.js`; on apply-chrome.py's list with `/styles.css` + its own sheet; body
   `theme-dark fl-page`). A night page: bruise ground, the ride's wordmark, the next-ride date and countdown
   (`fruitloop.js`, every Friday from Dec 11, 2026, 6:00 pm Phoenix), the loop drawn from `loop7.json` with the seven place numbers (HTML buttons
   placed by percent over the SVG, the stop's plate bigger, hairline leaders from the start, the finish and the circuit;
   every story is in the list without the script), one light room for "How it works".
+- **The logo (Oct 27, 2026) replaces the lockup below.** Robert's crayon drawing, his pick ("I want this logo. It's
+  perfect."): the rainbow-and-trans arrow, THE FRUIT LOOP in black crayon with an O in the trans flag's colors, the six
+  rainbow dashes and "A QUEER NIGHT RIDE THROUGH PHOENIX HISTORY." Master: `templates/fruitloop/logo-1.png` (1993 × 789);
+  the page serves `cfc-site/fruitloop/logo-1.avif/.webp/.jpg` as the h1 (alt carries the words). Used exactly as given, on
+  its own paper (#F5F3EE, sampled from the file) as a plate on the night ground, edge to edge on phones, 1080 wide on
+  desktop: never redrawn, recolored, re-lettered or traced. It's the one place the site carries a hand-textured mark
+  (the "drawn clean" rule is for everything else). A new version from Robert = `logo-2`. The kit and the stickers
+  still carry the lockup until they're redone.
 - **The lockup** (Robert's picks, Oct 25, 2026: "12 and 13" from the logo studies, then "Show em that design"): the
   **Progress chevron** (five nested chevrons, the Progress flag's hoist, pointing right) in front of **FRUIT LOOP** in
   pavement lettering — drawn SVG strokes (18, square ends), solid, no stencil bridges — with **the second O of LOOP in
@@ -468,6 +481,26 @@ the canal, Coronado. Free, no-drop, 18 and up, no sign-up. Streets and lit paths
 - **Photos:** nobody is recognisable unless they took a "Photos OK" sticker at the start, and the ride never posts who
   came (the page says why: the 1964 raid at 915 N 1st St, when the paper printed the names). §10 holds.
 - No form, no RSVP, no list of names. Questions come by Instagram DM.
+- **The chalk look** (Oct 27, 2026; Robert's "Brand Family Playbook" from ChatGPT: three brands, Cycle for Change the
+  platform, the Fruit Loop the gathering, Queers on Bikes the invitation; "Nobody gets dropped" is the promise). **Everything
+  Fruit Loop is chalk + photo**: his real photo with only the background darkened through his own cut-out masks (nothing in
+  it redrawn, extended or made up), his crayon logo in white chalk on the night ground (`templates/fruitloop/logo-1-night.png`,
+  made from his file by `tools/fruitloop-chalk/night.py`: black crayon to chalk white, colors kept, the white bands filled;
+  never an AI redraw), lettering in Walter Turncoat (Apache 2.0, `templates/fruitloop/walter-turncoat.woff2`), all caps, a
+  little chalk grain, a colored scribble under a line, the colors in `tools/fruitloop-chalk/lib.py` (night #1A181E, chalk
+  white, pink, yellow, sky blue, blue, orange, green, purple). The playbook's own model flyer had an AI-re-rendered Robert
+  (face redone, legs and shoes invented, the background swapped) and "Hosted by"; that one never goes anywhere. The chalk
+  look is the Fruit Loop's only: the rest of the site stays Lane Paint (the playbook says its swatches don't replace the
+  site's tokens). Kit and reel overlays: the launch kit canvas (https://claude.ai/artifact/Y1X1aU1asvEPRAf4P5HPRk).
+- **The poster** (Oct 27, 2026): `#poster` on the page, after the basics — the words first on a phone, the poster beside them
+  on desktop with a hairline edge, "Save the poster" plus the Story size and the 8.5 × 11 print PDF (QR to `/fl`, a third
+  of an inch clear of the paper edge). One poster, three sizes and the reel overlays, all from
+  `python3 tools/fruitloop-chalk/make.py <N>` (`-5` files now). **What the flyer says is Robert's call** (Oct 27): starts
+  Friday, Dec 11; meet 5:30 pm, roll 6:00 pm; the rainbow crosswalk, Central Ave and Portland St; 14 flat miles, 10–12 mph
+  pace; nobody gets dropped; a front and rear light; the link and @cycl_eforchange. **Never on the flyer: "free," "every
+  Friday," "18 and up," "hosted by," or "the ride ends by riding it."** The page leaves them out too (Robert, Oct 27: "take
+  all three off"); its share card is `og-fruitloop-3.jpg` (`tools/fruitloop-chalk/og.py`). The kicker (inside the logo) is "A queer night ride through Phoenix history"; the
+  `<title>`, og/twitter titles and JSON-LD keep "a queer night ride in Phoenix" for search.
 
 ### Today I rode for (`#today` on the homepage, Oct 12, 2026)
 Every ride Robert says who he rode for that day. `data/today.json` (date, `for` = the plate, `line` = his words,
@@ -1033,3 +1066,8 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-27 — The staged homepage's hero recut from the clean clips Robert sent ("the video needs to be changed"): `hero-phone-8` / `hero-wide-8` — his rail-yard take (one continuous shot: the whole phone film, and the tall panel on wide screens), and the red-rock road, the tunnel and the palms (cropped low) from his Reel Hit v3 in the wide panel; the brand gate's three blocks fixed (an uncleared shape across the street cropped out, a judder from joins off the frame grid, two of him at once); `tools/hero-contrast.py` passes at nine sizes; the critic's blind reads 22 vs 18 for v8 on the first cut, 23 vs 19 on the fixed one (photography level, no line down); still staged, not live.
 - 2026-10-27 — Cadence's final notes on the staged homepage (`research/design/2026-10-27-cadence-final/`): Read the last ride on the first screen (the hero's second quiet link); the sections reordered so the rooms alternate (why · road · today · orgs · year · ride · find · read · sign) and the 988 line comes up sooner; `#today` on one grid with one film control (the disc) and a place · month caption on the film; the three plates under "It always says cycling" cut; the `#ride` facts on chrome's `.facts`, the find field with its mark, the rides count in `#road` as a numeral over its label; the Ride with me bar hidden at ≥900 on the homepage; the wide hero film recut as `hero-wide-9` (88 frames: the road from a static lower region, the tunnel, half a second of the wheel on the road with a strip of grass verge at the top left; the phone film stays 8); `CSS_V` 55; still staged, not live.
 - 2026-10-27 — The homepage hero says one thing (Robert and Cadence): "10,000 miles. One year. All on the bike." under the stencil; the two paragraphs come off and his sentence becomes the story's standfirst (across from the head on wide screens); `hero-contrast.py` reads the caption; `CSS_V` 56; staged first.
+- 2026-10-27 — The Fruit Loop poster: Robert's ChatGPT flyer through the brand review panel, rebuilt from the page's own lockup and type (`tools/fruitloop-poster.py`: feed, Story, 8.5 × 11 PDF with the `/fl` QR), on `/fruitloop/#poster`; the page kicker is now "A queer night ride through Phoenix history".
+- 2026-10-27 — The Fruit Loop logo is Robert's crayon drawing (his pick): the page's h1 on its own paper plate, the poster's top band and the share card (`og-fruitloop-2.jpg`); his original photo in the poster (`-4` files; no "hosted by", no "ends by riding it").
+- 2026-10-27 — The Fruit Loop goes chalk (Robert's brand playbook): the flyer rebuilt on his real photo, his logo in white chalk from his own file, Walter Turncoat lettering (`tools/fruitloop-chalk/`, `-5` files on `/fruitloop/#poster`); no free, every Friday, 18 and up or hosted by on the flyer; reel overlays and the chalk kit on the launch kit canvas.
+- 2026-10-27 — The Fruit Loop page drops every Friday, free and 18 and up (Robert); the chalk share card `og-fruitloop-3.jpg`.
+- 2026-10-27 — Ride with me points at the Fruit Loop until Dec 11 (Robert: a button on the homepage's first screen): the homepage tile, the header button, the menu, the closing block and the bar on every page; `CSS_V` 57 for the Fruit Loop sheet.
