@@ -361,7 +361,8 @@ first; the finish reads "over coffee, the spot gets named here once it's set"). 
 7:45, ages, where 40 bikes go); The Churchill (901 N 1st St) is the backup. Name it in `build-fl7.py`'s place 7, the basics
 and the ride record once it's set. Seven places on the drawing (the crosswalk, Old City Hall, the Capitol, the trans flag at
 3rd and Indian School, the Curve, the Fruit Loop, coffee), one stop; passed: Heritage Square, CityScape, Encanto and Willo,
-the canal, Coronado. Free, no-drop, 18 and up, no sign-up. Streets and lit paths only: no dead-end detours, no climbs.
+the canal, Coronado. No-drop, no sign-up (the page and everything printed leave out free, every Friday and 18 and up, Robert,
+Oct 27). Streets and lit paths only: no dead-end detours, no climbs.
 - **Its own page, on purpose** (Robert: "special, not like the rest, with a Fruit Loop logo"): `cfc-site/fruitloop/`
   (`index.html`, `fruitloop.css`, `fruitloop.js`; on apply-chrome.py's list with `/styles.css` + its own sheet; body
   `theme-dark fl-page`). A night page: bruise ground, the ride's wordmark, the next-ride date and countdown
@@ -419,8 +420,8 @@ the canal, Coronado. Free, no-drop, 18 and up, no sign-up. Streets and lit paths
   `python3 tools/fruitloop-chalk/make.py <N>` (`-5` files now). **What the flyer says is Robert's call** (Oct 27): starts
   Friday, Dec 11; meet 5:30 pm, roll 6:00 pm; the rainbow crosswalk, Central Ave and Portland St; 14 flat miles, 10–12 mph
   pace; nobody gets dropped; a front and rear light; the link and @cycl_eforchange. **Never on the flyer: "free," "every
-  Friday," "18 and up," "hosted by," or "the ride ends by riding it."** The page's own basics still say every Friday, free
-  and 18 and up until he says otherwise. The kicker (inside the logo) is "A queer night ride through Phoenix history"; the
+  Friday," "18 and up," "hosted by," or "the ride ends by riding it."** The page leaves them out too (Robert, Oct 27: "take
+  all three off"); its share card is `og-fruitloop-3.jpg` (`tools/fruitloop-chalk/og.py`). The kicker (inside the logo) is "A queer night ride through Phoenix history"; the
   `<title>`, og/twitter titles and JSON-LD keep "a queer night ride in Phoenix" for search.
 
 ### Today I rode for (`#today` on the homepage, Oct 12, 2026)
@@ -968,3 +969,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-27 — The Fruit Loop poster: Robert's ChatGPT flyer through the brand review panel, rebuilt from the page's own lockup and type (`tools/fruitloop-poster.py`: feed, Story, 8.5 × 11 PDF with the `/fl` QR), on `/fruitloop/#poster`; the page kicker is now "A queer night ride through Phoenix history".
 - 2026-10-27 — The Fruit Loop logo is Robert's crayon drawing (his pick): the page's h1 on its own paper plate, the poster's top band and the share card (`og-fruitloop-2.jpg`); his original photo in the poster (`-4` files; no "hosted by", no "ends by riding it").
 - 2026-10-27 — The Fruit Loop goes chalk (Robert's brand playbook): the flyer rebuilt on his real photo, his logo in white chalk from his own file, Walter Turncoat lettering (`tools/fruitloop-chalk/`, `-5` files on `/fruitloop/#poster`); no free, every Friday, 18 and up or hosted by on the flyer; reel overlays and the chalk kit on the launch kit canvas.
+- 2026-10-27 — The Fruit Loop page drops every Friday, free and 18 and up (Robert); the chalk share card `og-fruitloop-3.jpg`.
