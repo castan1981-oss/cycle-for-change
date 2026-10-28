@@ -28,8 +28,8 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/avif" imagesrcset="/film/hero-phone-8.avif" media="(max-width: 759px), (max-aspect-ratio: 1/1)" fetchpriority="high">
   <link rel="preload" as="image" type="image/avif" imagesrcset="/film/hero-wide-9.avif" media="(min-width: 760px) and (min-aspect-ratio: 1/1)" fetchpriority="high">
-  <link rel="stylesheet" href="/chrome.css?v=57">
-  <link rel="stylesheet" href="/home.css?v=57">
+  <link rel="stylesheet" href="/chrome.css?v=58">
+  <link rel="stylesheet" href="/home.css?v=58">
 
   <script type="application/ld+json">
   {
@@ -152,7 +152,7 @@
 <!-- —— 2. the numbers, on a lane. One number for the miles (since June 1); the 10,000 is said once, in #road, never next to it. —— -->
 <section class="strip" aria-label="The numbers">
   <div class="wrap strip-in">
-    <p class="strip-cell strip-cell--miles"><span class="strip-n"><b class="num" data-miles>4,273</b></span><span class="strip-l"><b><span data-season="training">training miles since June 1</span><span data-season="2027" hidden>miles in 2027</span></b>, <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">on Strava</a>.<span data-season="training"> The count restarts in <b class="num" id="daysTo">66</b> <span id="daysW">days</span>.</span><span data-season="2027" hidden></span></span></p>
+    <p class="strip-cell strip-cell--miles"><span class="strip-n"><b class="num" data-miles>4,273</b></span><span class="strip-l"><b><span data-season="training">training miles since June 1</span><span data-season="2027" hidden>miles in 2027</span></b>, <a id="stravaLink" href="https://www.strava.com/athletes/22899089" target="_blank" rel="noopener noreferrer">on Strava</a>.<span data-season="training"> The count restarts in <b class="num" id="daysTo">65</b> <span id="daysW">days</span>.</span><span data-season="2027" hidden></span></span></p>
     <a class="strip-cell finder-tile" href="/rides/"><span class="strip-n num">1,427</span><span class="strip-l">group rides worldwide</span></a>
     <a class="strip-cell finder-tile" href="/events/2027/"><span class="strip-n num">640</span><span class="strip-l">events in 2027</span></a>
   </div>
@@ -189,6 +189,15 @@
   <div class="wrap miles-in">
     <p class="miles-big" aria-hidden="true"><span class="num">10,000</span></p>
     <p class="miles-sub">miles in 2027, all on the bike.</p>
+    <figure class="road-film" id="roadFig" data-playing="false">
+      <div class="road-film-frame">
+        <video id="roadVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/road-film-3.webp" width="1440" height="810" aria-label="Eight seconds of my riding: a drone above me on a desert road, a stop at the lookout, the mountain road from the bars.">
+          <source src="/film/road-film-3.webm" type="video/webm">
+          <source src="/film/road-film-3.mp4" type="video/mp4">
+        </video>
+        <button class="today-play road-play" id="roadPlay" type="button" aria-label="Play, 8 seconds" data-seconds="8"><svg class="tp-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><svg class="tp-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>
+      </div>
+    </figure>
     <div class="miles-grid">
       <div class="miles-log">
         <p class="eyebrow miles-k">From the road</p>
@@ -437,6 +446,6 @@
 </footer>
 
 
-<script src="/home.js?v=57" defer></script>
+<script src="/home.js?v=58" defer></script>
 </body>
 </html>

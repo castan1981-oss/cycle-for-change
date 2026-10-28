@@ -198,8 +198,9 @@
   /* —— today's film (#today): a tap on phones, on screen on desktop. One control, the disc on the poster (Oct 27, 2026):
      it never hides; the figure's data-playing swaps its glyph (home.css) and its label says what it does next,
      "Pause" or "Play, N seconds" (WCAG 2.2.2). —— */
-  var tv = $("todayVid"), tFig = $("todayFig"), tPlay = $("todayPlay");
-  if (tv) {
+  /* the same player for his film under the 10,000 (#road, Oct 28, 2026) */
+  function smallFilm(tv, tFig, tPlay) {
+    if (!tv) return;
     tv.muted = true;
     var tUser = null;
     /* the hero's test: Save-Data or a slow connection keeps the still until the disc asks for the film */
@@ -223,6 +224,8 @@
       if (tUser === true || (tUser === null && wide && !reduce && !tSlow)) tGo();
     }, { threshold: 0.4 }).observe(tv);
   }
+  smallFilm($("todayVid"), $("todayFig"), $("todayPlay"));
+  smallFilm($("roadVid"), $("roadFig"), $("roadPlay"));
 
   /* —— the nav: clear over the film, solid once the film has scrolled under it —— */
   var nav = $("nav"), hero = document.querySelector(".hero");

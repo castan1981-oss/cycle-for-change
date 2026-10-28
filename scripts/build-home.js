@@ -234,13 +234,27 @@ function todaySection() {
 }
 
 // —— 4. the miles: 10,000, the last rides (Strava), the bike ——
+// Oct 28, 2026 (Robert: "This another video that could go below the fold"): his drone reel cut to 8 s by
+// tools/road-film.py, under the 10,000. The today film's player: a still on phones until the disc is tapped, playing
+// on a wide screen while it's on screen (never under reduced motion, Save-Data or a slow connection), the disc always there.
+const ROAD_FILM_N = 3, ROAD_FILM_S = 8;
+const ROAD_FILM = fs.existsSync(path.join(ROOT, "cfc-site", "film", `road-film-${ROAD_FILM_N}.mp4`)) ? `
+    <figure class="road-film" id="roadFig" data-playing="false">
+      <div class="road-film-frame">
+        <video id="roadVid" muted loop playsinline disablepictureinpicture preload="none" poster="/film/road-film-${ROAD_FILM_N}.webp" width="1440" height="810" aria-label="Eight seconds of my riding: a drone above me on a desert road, a stop at the lookout, the mountain road from the bars.">
+          <source src="/film/road-film-${ROAD_FILM_N}.webm" type="video/webm">
+          <source src="/film/road-film-${ROAD_FILM_N}.mp4" type="video/mp4">
+        </video>
+        <button class="today-play road-play" id="roadPlay" type="button" aria-label="Play, ${ROAD_FILM_S} seconds" data-seconds="${ROAD_FILM_S}"><svg class="tp-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><svg class="tp-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>
+      </div>
+    </figure>` : "";
 const logRows = T0 && T0.recent && T0.recent.length ? TALLY.logRows(T0.recent) : `        <li><span class="when">&mdash;</span><span class="bar-mi" style="--w:0"></span><span class="mi num">&mdash;</span></li>`;
 const ROAD = `<!-- —— 4. the miles. The 10,000 is the year, said once at this size; the training count lives in the strip, away from
      it. The log is the four last rides from Strava, each a painted stroke as long as the ride. —— -->
 <section class="miles" id="road" aria-labelledby="road-h">
   <div class="wrap miles-in">
     <p class="miles-big" aria-hidden="true"><span class="num">10,000</span></p>
-    <p class="miles-sub">miles in 2027, all on the bike.</p>
+    <p class="miles-sub">miles in 2027, all on the bike.</p>${ROAD_FILM}
     <div class="miles-grid">
       <div class="miles-log">
         <p class="eyebrow miles-k">From the road</p>

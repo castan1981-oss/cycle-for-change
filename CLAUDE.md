@@ -94,6 +94,7 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 | `python3 tools/print.py` | the Pass 27 screenprint. Not used on the hero since Pass 32; kept for reference. |
 | `scripts/towns.js`, `scripts/blocks.js` | the one town lookup + strip; the shared ride-report form and how-it's-built tiles |
 | `node scripts/tally.js` | the baked tally on the homepage: reads `/api/strava` (the one place the site may read Strava), keeps `data/tally.json`, and rewrites every `[data-miles]`, the four "last rides" rows and the `#tallyData` JSON that `/home.js` paints first. build-home.js applies the copy; build-rides.js refreshes it live on every deploy. Never type the number. Tests: `tools/test/tally.test.js`. |
+| `python3 tools/road-film.py --src …` | the film under the 10,000 in `#road` (`cfc-site/film/road-film-N.*`, from his own footage, car-free; Oct 28, 2026) |
 | `python3 tools/hero-film.py` + `python3 tools/hero-contrast.py` | the homepage hero films (`cfc-site/film/hero-*-N.*`, from his own footage, car-free) and the check that the hero's type reads on every frame of them (§3, the editorial homepage) |
 | `node scripts/build-signals.js` | `cfc-site/llms.txt` (what the site is, for AI search; counts from the data) and `cfc-site/feed.xml` (RSS of guides, field notes, journal, event and town pages, newest first by the sitemaps' lastmod). build-rides.js runs it last on every build, so the deploy keeps them current. Tests: `tools/test/build-signals.test.js`. |
 
@@ -296,7 +297,12 @@ homepage only; every other rule in this section still holds there and everywhere
 - **Said once:** the 10,000 is the big plaster numeral in `#road`; the training count lives in the strip under the hero
   (`[data-miles]`); the page ends on its own sign, so the footer's stencil is hidden on the homepage only.
 - The old road reel is gone from the homepage (the hero carries the footage); "Read the last ride" and the log stay in
-  `#road`. The homepage loads `/chrome.css` then `/home.css` (the page in `@layer section`, the frame's homepage states
+  `#road`. **Oct 28, 2026: `#road` gets a film again** (Robert, sending his drone reel: "This another video that could go
+  below the fold"): `film/road-film-3.*` (1440×810, 8 s, silent; `python3 tools/road-film.py --src …`, three of the reel's
+  shots, what was left out and why in the tool's header), a 16:9 band between "miles in 2027, all on the bike." and the
+  log, edge to edge on phones, with today's player (`smallFilm()` in /home.js: a still on phones until the disc is tapped,
+  playing on a wide screen while it's on screen, never under reduced motion, Save-Data or a slow connection; the disc,
+  `.today-play.road-play`, always there). The homepage loads `/chrome.css` then `/home.css` (the page in `@layer section`, the frame's homepage states
   unlayered at its foot), so its header, footer and bar are the site's own rules. The stencil's clip (`#lpRow`) lives in
   the header's mark; `home.css` keeps its rect visible while the header is hidden, or every CYCLE FOR on the page vanishes.
 - **His sentence is the story's standfirst** (Oct 27, 2026, off the hero): "I'd like to say I ride for everyone else. I ride
@@ -1073,3 +1079,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-27 — The Fruit Loop page drops every Friday, free and 18 and up (Robert); the chalk share card `og-fruitloop-3.jpg`.
 - 2026-10-27 — Ride with me points at the Fruit Loop until Dec 11 (Robert: a button on the homepage's first screen): the homepage tile, the header button, the menu, the closing block and the bar on every page; `CSS_V` 57 for the Fruit Loop sheet.
 - 2026-10-27 — The Fruit Loop's photo rule comes off everything (Robert): the page's How it works and its "why" line, the directory record's visitor notes, place card 6, the how-it-works slide, the Photos OK sticker.
+- 2026-10-28 — `#road` gets a film again: Robert's drone reel cut to 8 s, silent, 16:9 (`tools/road-film.py`, `road-film-3`: the drone over him on the desert road, the lookout, the mountain road; the sunset bike, the canal path, the bridge and the side-on shot left out), under the 10,000 with today's player (`smallFilm()`); `CSS_V` 58.
