@@ -1,0 +1,275 @@
+/* Cycle for Change — /about/, "About me" (Oct 28, 2026). Markup: scripts/build-about.js (his words: data/about.json).
+   Loaded after /chrome.css (tokens, type, the frame, the system: focus, link, button). The page is in @layer section;
+   the frame's states for this page are unlayered at the foot.
+
+   A magazine feature in his own words, on the house's mark, palette and type. Night at the start, day through the
+   middle, dusk at the sign (the Wrenches, Oct 28): tar (the cold open, the letterbox, the opening) · tar → concrete
+   (the bike: his film across the seam) · plaster (the love bubble, the staggered set) · patina (the statement, type
+   only) · plaster (10,000 and the year as a lane) · concrete (the mission, the roll call) · tar (the sign) · bruise (the
+   closing block) · drained pool (the footer). A section of his with no designed room sits in a plain concrete room.
+   Rose is the blank, the plate and the paint on the lane: nothing else. Square corners, hairlines, no shadows, no
+   pills, no texture, nothing laid over a photograph. Sentence-case labels, buttons alone in caps. One opener size. */
+
+@layer section{
+
+.ab-page{--fs-open:clamp(2.5rem,1.35rem + 4.6vw,5.75rem)}   /* the homepage's opener: the chapter heads, the cold open, the mission */
+
+/* —— the rooms —— */
+.ab-open,.ab-bike-top,.ab-sign{background:var(--tar);color:var(--paper);--ring:var(--paper)}
+.ab-bike-low,.ab-mission,.ab-plain{background:var(--bone);color:var(--asphalt)}
+.ab-bubble,.ab-ten{background:var(--paper);color:var(--asphalt)}
+.ab-say{background:var(--dust);color:var(--asphalt)}
+.ab-open .link,.ab-sign .link{color:var(--paper)}
+
+.ab-h2{margin:0;font-size:var(--fs-open);font-weight:800;line-height:.92;letter-spacing:-.035em;text-wrap:balance}
+
+/* his words: the first paragraph a step up, the rest at the reading size, one measure */
+.ab-words{max-width:var(--measure);font-size:var(--fs-intro);line-height:1.58}
+.ab-words p{margin:0 0 1.05em;text-wrap:pretty}
+.ab-words p:first-child{font-size:var(--fs-lede);line-height:1.42}
+.ab-words p:last-child,.ab-words .ab-list:last-child{margin-bottom:0}
+.ab-list{margin:0 0 1.05em;padding-left:1.1em}
+.ab-list li{margin:0 0 .4em}
+@media (min-width:1024px) and (max-width:1279px){.ab-words{font-size:var(--fs-body)}.ab-words p:first-child{font-size:var(--fs-intro)}}
+
+/* a slot: where his words haven't landed yet (staging only; the page is noindex while one is open). Sized like the
+   words it stands for, so the column's width is the real one */
+.ab-slot{padding:var(--s3);border:2px dashed var(--dust-deep);color:var(--mute)}
+.ab-slot p,.ab-slot p:first-child{margin:0;font-size:var(--fs-small);font-weight:700;line-height:1.4}
+.ab-open .ab-slot,.ab-sign .ab-slot{border-color:var(--dust);color:var(--dust)}
+
+/* ——————————————————————————————————————————————————————————
+   the opening: the cold open, the letterbox, his first words
+   —————————————————————————————————————————————————————————— */
+/* the cold open is one title card at the foot of the screen, and the letterbox's top edge shows under it, so the first
+   screen promises a face (the critic and the lab) */
+.ab-open-in{display:flex;flex-direction:column;justify-content:flex-end;gap:var(--s4);
+  min-height:calc(100svh - var(--nav-h) - 44px - clamp(240px,38svh,420px));padding-block:var(--s5)}
+.ab-kick{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px var(--s2)}
+.ab-h1{margin:0;font-size:var(--fs-h3);font-weight:800;line-height:1.1;letter-spacing:-.01em}
+.ab-by{margin:0;font:var(--label);color:var(--dust)}
+.ab-cold-line{margin:0;max-width:13ch;font-size:var(--fs-open);font-weight:800;line-height:.95;letter-spacing:-.035em;text-wrap:balance}
+.ab-cold-line+.ab-cold-line{margin-top:.32em}
+.ab-cold.ab-slot{max-width:28rem}
+
+/* the letterbox: 4:5 on a phone, 2.39:1 from 760, edge to edge. The bars part as it arrives (about.js sets data-in),
+   once, never under reduced motion; without JS it's open */
+.ab-letter{margin:0}
+.ab-letter-frame{overflow:hidden}
+.ab-letter img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:var(--asphalt)}
+.ab-letter figcaption{margin:var(--s1) auto 0;font:var(--label);color:var(--dust)}
+.js .ab-letter-frame{clip-path:inset(0);transition:clip-path var(--t-open) var(--ease)}
+.js .ab-letter[data-in="false"] .ab-letter-frame{clip-path:inset(12% 0);animation:ab-open 0s 2.5s forwards}   /* if about.js never runs, it opens anyway */
+@keyframes ab-open{to{clip-path:inset(0)}}
+@media (min-width:760px){.ab-letter img{aspect-ratio:1800/753}}
+
+.ab-open-body{padding-block:var(--s6) var(--band)}
+.ab-open-body .ab-words{color:var(--paper)}
+.ab-open-h{margin-bottom:var(--s4)}
+/* his opening words start on the cold open's edge: nothing sits beside them (the critic, round 2) */
+@media (min-width:1024px){
+  .ab-open-body{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap)}
+  .ab-open-body>*{grid-column:1 / span 7}
+}
+
+/* ——————————————————————————————————————————————————————————
+   bike: the heading on tar, the film across the seam, his words on concrete
+   —————————————————————————————————————————————————————————— */
+.ab-bike{--pull:58vw}   /* how far the film reaches up into the tar: a bit under half of it (4:5, full width on a phone) */
+.ab-bike-top{padding-top:var(--band);padding-bottom:calc(var(--pull) + var(--s4))}
+.ab-bike-low{padding-bottom:var(--band)}
+.ab-film{position:relative;margin:calc(-1 * var(--pull)) calc(-1 * var(--gut)) 0}
+.ab-film-frame{position:relative;background:var(--tar)}
+.ab-film-v{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;cursor:pointer}
+.ab-film figcaption{margin:var(--s1) 0 0;padding-inline:var(--gut);font:var(--label);color:var(--mute)}
+.ab-bike-words{margin-top:var(--s5)}
+
+/* the site's film control: the disc on the frame's foot, both glyphs inside it, the figure's data-playing picks one */
+.ab-play{position:absolute;left:12px;bottom:12px;width:56px;height:56px;margin:0;padding:0;border:0;border-radius:50%;
+  background:var(--paper);color:var(--asphalt);display:grid;place-items:center;cursor:pointer;transition:background-color var(--t-color) var(--ease)}
+.ab-play svg{width:22px;height:22px;fill:currentColor}
+.ab-play .abp-play{margin-left:3px}
+.ab-film[data-playing="true"] .abp-play,.ab-film:not([data-playing="true"]) .abp-pause{display:none}
+@media (hover:hover){.ab-play:hover{background:var(--bone)}}
+.ab-play:active{transition-duration:0s;background:var(--bone-2)}
+
+@media (min-width:1024px){
+  /* the film on columns 7–12, the same edge as every column of his words on the page */
+  .ab-bike{--pull:calc((min(100vw, var(--maxw)) - 2 * var(--gut)) * .27)}
+  .ab-bike-top{padding-bottom:var(--s5)}
+  .ab-bike-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap)}
+  .ab-bike-head .ab-h2{grid-column:1 / span 6}
+  .ab-bike-in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
+  .ab-film{grid-column:7 / -1;grid-row:1;margin:calc(-1 * var(--pull)) 0 0}
+  .ab-film figcaption{padding-inline:0}
+  .ab-bike-words{grid-column:1 / span 5;grid-row:1;margin-top:var(--s5)}
+}
+
+/* ——————————————————————————————————————————————————————————
+   bubble: his AIDS/LifeCycle photographs, a staggered set on the grid, then his words
+   —————————————————————————————————————————————————————————— */
+.ab-bubble{padding-block:var(--band)}
+.ab-set{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:var(--s1);row-gap:var(--s4);margin:var(--s5) calc(-1 * var(--gut)) 0;align-items:start}
+.ab-set-col,.ab-set-pair{display:contents}   /* on a phone the prints sit on one grid, in his order */
+.ab-p{margin:0;grid-column:span 3}
+.ab-p-frame{overflow:hidden;background:var(--bone)}
+.ab-p img{display:block;width:100%;height:100%;object-fit:cover}
+.ab-p figcaption{margin:var(--s1) 0 0;padding-inline:var(--s1);font:var(--label);color:var(--mute)}
+.ab-p--a{order:1}.ab-p--b{order:2}.ab-p--c{order:3}.ab-p--d{order:4}.ab-p--e{order:5}.ab-p--f{order:6}
+.ab-p--a,.ab-p--f{grid-column:1 / -1}
+.ab-p--a figcaption,.ab-p--f figcaption{padding-inline:var(--gut)}
+.ab-p--a .ab-p-frame{aspect-ratio:4/5}
+.ab-p--b .ab-p-frame,.ab-p--c .ab-p-frame{aspect-ratio:3/4}
+.ab-p--c{margin-top:var(--s5)}          /* the pair steps down, like prints laid by hand */
+.ab-p--d .ab-p-frame,.ab-p--e .ab-p-frame{aspect-ratio:1/1}
+.ab-p--d{margin-top:var(--s5)}
+.ab-p--f .ab-p-frame{aspect-ratio:3/2}
+/* an empty print (staging: the photo hasn't come in yet) */
+.ab-p--empty .ab-p-frame{display:flex;align-items:flex-end;padding:var(--s3) var(--s2) var(--s2);border:2px dashed var(--dust-deep)}
+.ab-p--empty .ab-p-frame p{margin:0;font-size:var(--fs-small);font-weight:700;line-height:1.35;color:var(--mute)}
+.ab-bubble-words{margin-top:var(--s6)}
+
+@media (min-width:640px){
+  .ab-set{margin-inline:0;column-gap:var(--col-gap)}
+  .ab-p figcaption,.ab-p--a figcaption,.ab-p--f figcaption{padding-inline:0}
+}
+@media (min-width:1024px){
+  .ab-bubble-in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap)}
+  .ab-bubble-in>.ab-h2{grid-column:1 / span 8}
+  /* two columns on the page's grid, no overlap, each stepping down on its own: the tall print and a square on the
+     left; on the right a wide print set lower and a pair whose second print steps down again. Then the finish across
+     the page, the set's last word */
+  .ab-set{grid-column:1 / -1;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);row-gap:var(--s5);margin-top:var(--s6)}
+  .ab-set-col{display:flex;flex-direction:column;gap:var(--s5)}
+  .ab-set-col--l{grid-column:1 / span 5}
+  .ab-set-col--r{grid-column:7 / -1;padding-top:var(--s6)}
+  .ab-set-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
+  .ab-set .ab-p{grid-column:auto;order:0;margin-top:0}
+  .ab-set .ab-p--d{margin-top:var(--s6)}
+  .ab-p--b .ab-p-frame{aspect-ratio:3/2}
+  .ab-p--e{width:80%;align-self:flex-end}
+  .ab-set .ab-p--f{grid-column:1 / -1}
+  .ab-p--f .ab-p-frame{aspect-ratio:21/9}
+  .ab-bubble-words{grid-column:1 / span 7}   /* under the finish, on the page's left edge: nothing beside it */
+}
+
+/* ——————————————————————————————————————————————————————————
+   statement: one line, type only
+   —————————————————————————————————————————————————————————— */
+.ab-say{padding-block:var(--band)}
+.ab-say-line{margin:0;max-width:11.2em;font-size:clamp(2.75rem,.6rem + 8vw,9.5rem);font-weight:800;line-height:.9;letter-spacing:-.045em;text-wrap:balance}
+@media (min-width:1024px){.ab-say{min-height:min(88svh,980px);display:flex;align-items:center}}
+
+/* ——————————————————————————————————————————————————————————
+   ten: 10,000 and the year as a lane (plaster: daylight through the middle of the page)
+   —————————————————————————————————————————————————————————— */
+.ab-ten{padding-block:var(--band)}
+.ab-ten-h{margin:0;font-weight:800}
+/* the number as wide as the grid: Overpass 900's "10,000" at this tracking draws 2.914 times its size (measured) */
+.ab-ten-n{display:block;margin-left:-.061em;font-weight:900;font-size:calc((min(100vw, var(--maxw)) - 2 * var(--gut)) * .343);line-height:.8;letter-spacing:-.065em;white-space:nowrap}
+.ab-ten-t{display:block;margin-top:var(--s4);font-size:var(--fs-h2);line-height:1.05;letter-spacing:-.02em}
+.ab-ten-say{margin:var(--s3) 0 0;font-size:var(--fs-lede);font-weight:700}
+
+/* the lane: two edge lines, a dashed centre line, a mark of smeared rose on every ride day (paint on a light ground) */
+.ab-lane{margin:var(--s6) 0 0}
+.ab-lane-road{position:relative;height:56px;border-block:1px solid var(--line-s)}
+.ab-lane-road::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px dashed var(--line)}
+.ab-lane-mark{position:absolute;z-index:1;top:12px;bottom:12px;left:var(--a);width:max(5px,calc(var(--b) - var(--a)));background:var(--creosote)}
+.ab-lane-mark--proj{background:var(--paper);border:2px solid var(--creosote)}
+.ab-lane-months{position:relative;height:28px;margin-top:var(--s1)}
+.ab-lane-m{position:absolute;left:var(--a);top:0;padding:4px 0 0 5px;border-left:1px solid var(--line-s);font:var(--label);line-height:1;color:var(--mute)}
+.ab-lane-m .l{display:none}
+.ab-lane-key{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s3);margin:var(--s3) 0 0;font:var(--label);color:var(--mute)}
+.ab-lane-key span[aria-hidden]{display:inline-flex;align-items:center;gap:var(--s1)}
+.ab-k{display:inline-block;width:16px;height:10px;background:var(--creosote)}
+.ab-k--proj{background:transparent;border:2px solid var(--creosote)}
+.ab-ten-acts{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);margin:var(--s4) 0 0}
+.ab-ten-words{margin-top:var(--s6)}
+@media (min-width:760px){.ab-lane-m .l{display:inline}.ab-lane-m .s{display:none}}
+@media (min-width:1024px){
+  .ab-lane-road{height:96px}
+  .ab-lane-mark{top:16px;bottom:16px}
+  .ab-ten-in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap)}
+  .ab-ten-h,.ab-ten-say,.ab-lane{grid-column:1 / -1}
+  .ab-ten-acts{grid-column:1 / span 5;align-self:start;margin-top:var(--s6);flex-direction:column;align-items:flex-start}
+  .ab-ten-words{grid-column:7 / -1}
+}
+
+/* ——————————————————————————————————————————————————————————
+   mission: the head beside his words, then the orgs as a roll call across the page
+   —————————————————————————————————————————————————————————— */
+.ab-mission{padding-block:var(--band)}
+.ab-mission-words{margin-top:var(--s4)}
+.ab-roll{margin-top:var(--s6)}
+.ab-roll-k{margin:0 0 var(--s2)}
+.ab-roll-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--asphalt)}
+.ab-org{padding:var(--s3) 0 var(--s4);border-bottom:1px solid var(--line-s)}
+.ab-org-h{margin:0 0 var(--s1);font-size:var(--fs-h2);font-weight:800;line-height:1;letter-spacing:-.03em;text-wrap:balance}
+.ab-org-p{margin:0 0 var(--s2);max-width:34em;font-size:var(--fs-body);color:var(--mute)}
+.ab-org-acts{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s4);margin:0}
+.ab-roll-foot{margin-top:var(--s4)}
+.ab-roll-note{margin:0;font-size:var(--fs-body);font-weight:700}
+.ab-help{display:flex;flex-direction:column;align-items:flex-start;gap:0;margin-top:var(--s4);padding-top:var(--s2);border-top:1px solid var(--asphalt);font-size:var(--fs-small);line-height:1.5}
+.ab-help .eyebrow{margin:0 0 var(--s1)}
+.ab-help a[href^="tel"]{display:inline-block;padding-block:11px;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.ab-help-l{display:block}
+.ab-help .link{margin-top:var(--s1)}
+@media (min-width:1024px){
+  .ab-mission-in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
+  .ab-mission-h{grid-column:1 / span 5}
+  .ab-mission-words{grid-column:7 / -1;margin-top:0}
+  .ab-roll{grid-column:1 / -1}
+  /* each org a row across the page: the name on the left half, the line and its links from column 7 */
+  .ab-org{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:baseline}
+  .ab-org-h{grid-column:1 / span 6;margin:0}
+  .ab-org-b{grid-column:7 / -1}
+  .ab-roll-foot{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap)}
+  .ab-roll-foot>*{grid-column:7 / -1}
+}
+
+/* —— a section of his with no designed room —— */
+.ab-plain{padding-block:var(--band)}
+.ab-plain .ab-words{margin-top:var(--s4)}
+@media (min-width:1024px){
+  .ab-plain-in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
+  .ab-plain-in>.ab-h2{grid-column:1 / span 5}
+  .ab-plain-in>.ab-words{grid-column:7 / -1;margin-top:0}
+}
+
+/* ——————————————————————————————————————————————————————————
+   the sign: CYCLE FOR + the blank, and the one way in
+   —————————————————————————————————————————————————————————— */
+.ab-sign{padding-block:var(--band)}
+.ab-sign-in{display:grid;gap:var(--s5)}
+/* the mark as wide as the grid; the h keeps a line for the plate, so typing never moves the field under a thumb */
+.ab-sign-h{display:flex;flex-wrap:wrap;align-items:flex-end;align-content:flex-start;gap:14px 18px;margin:0;
+  --h:calc((min(100vw, var(--maxw)) - 2 * var(--gut) - 26px) / 4.86);   /* mark 4.173h + gap 18 + blank .65h, with a hair to spare */
+  min-height:calc(var(--h) + var(--h) * .34 * 1.2 + 14px)}
+.ab-sign-mark{display:block;height:var(--h);width:auto;max-width:100%;color:var(--paper)}
+.ab-sign-plate{display:inline-block;background:var(--creosote-lift);color:var(--asphalt);font-weight:900;font-size:calc(var(--h) * .34);line-height:1;letter-spacing:-.01em;padding:.14em .32em .04em;max-width:100%;overflow-wrap:anywhere;cursor:text}
+.ab-sign-plate[data-empty="true"]{width:calc(var(--h) * .65);height:calc(var(--h) * .24);padding:0}
+.ab-sign-form{max-width:44rem}
+.ab-sign-q{display:block;margin-bottom:var(--s1);font-size:var(--fs-h3);font-weight:800}
+.ab-sign-input{display:block;width:100%;min-height:64px;padding:12px 0 10px;border:0;border-bottom:3px solid var(--creosote-lift);border-radius:0;background:transparent;color:var(--paper);
+  font:800 clamp(1.4rem,1rem + 1.7vw,2.25rem)/1.2 var(--display);letter-spacing:-.01em}
+.ab-sign-input::placeholder{color:var(--dust);opacity:1}
+.ab-sign-note{margin:var(--s2) 0 0;display:flex;flex-wrap:wrap;align-items:center;column-gap:8px;min-height:44px;font-size:var(--fs-small);color:var(--dust)}   /* room for Clear the sign, so the first letter moves nothing */
+.ab-sign-reset{min-height:44px;padding:0 4px;border:0;background:none;color:var(--paper);font:700 var(--fs-small)/1 var(--display);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.ab-sign-more{margin:var(--s4) 0 0}
+@media (min-width:1024px){
+  .ab-sign-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap)}
+  .ab-sign-h{grid-column:1 / -1}
+  .ab-sign-form{grid-column:1 / span 6}
+}
+
+@media (prefers-reduced-motion:reduce){.js .ab-letter[data-in="false"] .ab-letter-frame{clip-path:none}}
+
+}
+
+/* —— the frame on this page, unlayered so it outranks /chrome.css's frame by order —— */
+/* the page ends on its own sign; the footer's stencil would be a second one under it */
+.ab-page .foot-sign{display:none}
+@media (min-width:1024px){.ab-page .foot-grid{grid-column:1 / -1}}
+.ab-page main>.pledge{margin-top:0;border-top:1px solid var(--line-d)}
+.ab-page .ab-play:focus-visible{outline:3px solid currentColor;outline-offset:-9px}   /* the disc draws its ring inside itself */
+.ab-page .ab-sign-input:focus-visible{outline-offset:6px}
