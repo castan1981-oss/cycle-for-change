@@ -1,0 +1,102 @@
+{
+  "_note": "The /about/ page (scripts/build-about.js). Every `paras` list is Robert's own words from his revised narrative, set word for word: no recovery references (CLAUDE.md §4), nothing invented, nothing tidied. An empty list prints a visible 'his words go here' slot and keeps the whole page noindex and out of the sitemap. `ready` goes true only when every slot is filled and Robert has said go.",
+  "ready": false,
+  "updated": "2026-10-28",
+  "title": "Robert Castan: about me and my mission",
+  "description": "I’m Robert Castan. Cycling changed my life. In 2027 I ride 10,000 miles, all on the bike, and the money goes through the orgs’ own rides.",
+  "opening": {
+    "label": "About me and my mission",
+    "h1": "I’m Robert.",
+    "photo": {
+      "src": "/img/about/open-1.jpg",
+      "w": 768,
+      "h": 1024,
+      "alt": "Robert leaning on his handlebars on a bridge in a white jersey, smiling straight at the camera.",
+      "where": ""
+    },
+    "paras": []
+  },
+  "bike": {
+    "head": "Then came the bike.",
+    "film": {
+      "src": "/film/tsr-1",
+      "poster": "/film/tsr-1b",
+      "w": 864,
+      "h": 1080,
+      "seconds": 11,
+      "alt": "Eleven seconds from Robert’s first TSR on October 10, 2026: riding over in the dark under his bike light, his selfie in kit, then the group in a line along the bike lane at sunrise.",
+      "where": "Scottsdale, AZ · Oct 2026"
+    },
+    "paras": [],
+    "bars": [
+      "phx-canal",
+      "pv-sunrise-bars",
+      "canal-sunrise",
+      "pv-cloud-road",
+      "gravel-pines",
+      "gravel-road"
+    ]
+  },
+  "bubble": {
+    "head": "The love bubble was real.",
+    "where": "",
+    "photos": [
+      {
+        "key": "alc-finish",
+        "src": "/img/about/alc-finish-1.jpg",
+        "w": 800,
+        "h": 1560,
+        "alt": "Robert crossing the AIDS/LifeCycle finish line in a rainbow Hills Angels jersey, one hand held up with his teammate’s."
+      },
+      {
+        "key": "alc-hands",
+        "src": "/img/about/alc-hands-1.jpg",
+        "w": 500,
+        "h": 500,
+        "alt": "Two riders’ hands held up together at the finish, a tattooed forearm and a blue sleeve."
+      },
+      {
+        "key": "alc-banner",
+        "src": "/img/about/alc-banner-1.jpg",
+        "w": 650,
+        "h": 500,
+        "alt": "The AIDS/LifeCycle banner on the finish-line barrier, hands reaching over it."
+      },
+      {
+        "key": "alc-umbrella",
+        "src": "/img/about/alc-umbrella-1.jpg",
+        "w": 620,
+        "h": 440,
+        "alt": "A rainbow umbrella over the crowd at the finish."
+      }
+    ],
+    "paras": []
+  },
+  "statement": {
+    "line": "I found a version of myself I actually liked hanging out with.",
+    "paras": []
+  },
+  "challenge": {
+    "facts": [
+      "One year.",
+      "All on the bike.",
+      "Every ride gets written down."
+    ],
+    "photo": "sawtooth-road",
+    "paras": []
+  },
+  "mission": {
+    "lines": [
+      "I’d like to say I ride for everyone else.",
+      "I ride because it changed me."
+    ],
+    "photo": {
+      "src": "/img/about/crew-1.jpg",
+      "w": 1152,
+      "h": 1440,
+      "alt": "Robert and Caleb with their bikes on a desert road at sunset, the sun low between them.",
+      "where": ""
+    },
+    "paras": []
+  }
+}

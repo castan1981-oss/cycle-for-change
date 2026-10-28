@@ -1,0 +1,258 @@
+/* /about/ — "About me and my mission" (Oct 28, 2026). Markup: scripts/build-about.js from data/about.json.
+   A feature, not a template: one idea per screen, the rooms in fields (tar · concrete · plaster · drained pool · tar ·
+   patina · bruise), photographs with a clean edge, type at two sizes (very big, quiet small). Lane Paint only:
+   Overpass, After Hours tokens, the stencil from the header's defs, rose only as the blank and the lane line.
+   The page rules are @layer section; the frame's states for this page are unlayered at the foot. */
+@layer section{
+
+.ab-main{background:var(--tar)}
+.ab-main section{position:relative}
+.ab-open,.ab-hinge,.ab-say,.ab-ten,.ab-sign{--ring:var(--paper)}
+
+/* —— shared: the reading column, his words, the slot, captions, chapter heads —— */
+.ab-col{padding-block:var(--s5) 0}
+.ab-words{max-width:var(--measure)}
+.ab-words p{margin:0 0 1.1em;font-size:var(--fs-intro);line-height:1.6}
+.ab-words p:last-child{margin-bottom:0}
+.ab-words .ab-first{font-size:var(--fs-lede);line-height:1.45;font-weight:600}
+.ab-slot{max-width:var(--measure);padding:var(--s3);border:1px dashed currentColor;opacity:.72}
+.ab-slot-t{margin:0 0 var(--s2);font:var(--label);color:inherit}
+.ab-slot-l{display:block;height:10px;margin-top:12px;background:currentColor;opacity:.14}
+.ab-slot-l--short{width:58%}
+.ab-main figcaption{margin:8px 0 0;font:var(--label)}
+.ab-chap{font-size:clamp(2.75rem,1.1rem + 6.8vw,7.75rem);font-weight:800;line-height:.9;letter-spacing:-.045em;text-wrap:balance}
+.ab-main img{display:block;width:100%;height:100%;object-fit:cover}
+.ab-main picture{display:block;height:100%}
+
+/* —— 1. the opening (tar): one face, close. The picture opens like a frame of film. —— */
+.ab-open{background:var(--tar);color:var(--paper);padding-bottom:var(--s6)}
+.ab-open-in{display:grid}
+.ab-open-ph{margin:0 calc(-1 * var(--gut));aspect-ratio:3/4;background:var(--asphalt);overflow:hidden}
+.ab-open-ph img{object-position:50% 30%;animation:ab-frame 1.5s var(--ease) .1s both}
+.ab-open-words{padding-top:var(--s4)}
+.ab-open-words > *{animation:ab-rise .9s var(--ease) both}
+.ab-open-words > :nth-child(2){animation-delay:.45s}
+.ab-open-words > :nth-child(3){animation-delay:.6s}
+.ab-label{margin:0 0 var(--s2);font:var(--label);color:var(--dust)}
+.ab-h1{font-size:clamp(3.75rem,1.4rem + 8vw,9rem);font-weight:800;line-height:.86;letter-spacing:-.05em;color:var(--paper)}
+.ab-by{margin:var(--s3) 0 0;font:var(--label);color:var(--dust)}
+.ab-open .ab-col{padding-top:var(--s6)}
+.ab-open .ab-words p{color:var(--bone)}
+.ab-open .ab-words .ab-first{color:var(--paper)}
+@keyframes ab-frame{from{clip-path:inset(34% 0 34% 0)}to{clip-path:inset(0)}}
+@keyframes ab-rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* —— 2. then came the bike: the heading on tar, his film across the line into concrete, the road over his bars —— */
+.ab-bike{--fw:100vw;background:var(--bone);color:var(--asphalt)}
+.ab-hinge{background:var(--tar);color:var(--paper);padding-top:var(--s5)}
+.ab-hinge-in{display:grid;gap:var(--s4)}
+.ab-chap--turn{max-width:9ch;color:var(--paper)}
+.ab-film{position:relative;z-index:1;margin:0 calc(-1 * var(--gut)) calc(var(--fw) * -.625);width:var(--fw)}
+.ab-film-v{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:var(--asphalt)}
+.ab-film figcaption{padding-inline:var(--gut);color:var(--mute)}
+.ab-play{position:absolute;left:var(--s2);top:calc(var(--fw) * 1.25 - 64px);width:48px;height:48px;display:grid;place-items:center;
+  border:0;border-radius:50%;background:var(--paper);color:var(--asphalt);cursor:pointer;transition:transform var(--t-move) var(--ease)}
+.ab-play-i{width:20px;height:20px;fill:currentColor}
+.ab-play-s{display:none}
+.ab-film[data-playing="true"] .ab-play-p{display:none}
+.ab-film[data-playing="true"] .ab-play-s{display:block}
+.ab-play:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+.ab-col--bike{padding-top:calc(var(--fw) * .625 + var(--s5))}
+
+/* the road over his bars, the same frame again and again: a strip you swipe on a phone, a contact sheet on desktop */
+.ab-bars{padding:var(--sec) 0 var(--sec)}
+.ab-bars-list{list-style:none;margin:0;padding:0 var(--gut);display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;
+  scroll-padding-inline:var(--gut);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.ab-bars-list::-webkit-scrollbar{display:none}
+.ab-bars-list li{flex:0 0 64vw;scroll-snap-align:start}
+.ab-bar{margin:0}
+.ab-bar picture{aspect-ratio:3/4;height:auto}
+.ab-bar figcaption{color:var(--mute)}
+
+/* —— 3. the love bubble (plaster): the collage. Type in the grid beside the pictures, never on them. —— */
+.ab-bubble{background:var(--paper);color:var(--asphalt);padding:var(--sec) 0}
+.ab-bubble-in{display:grid;grid-template-columns:minmax(0,1fr)}
+.ab-chap--bubble{max-width:10ch;margin-bottom:var(--s4)}
+/* the mosaic: the three details stacked on the left, the finish on the right, the two columns the same height
+   (1 : 1.27 is where 1 + 500/650 + 440/620 stacked meets 1560/800 tall) */
+.ab-collage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.27fr);gap:6px;margin-inline:calc(-1 * var(--gut))}
+.ab-stack{display:flex;flex-direction:column;gap:6px;min-width:0}
+.ab-tile{margin:0;overflow:hidden;background:var(--bone-2)}
+.ab-stack .ab-tile picture{height:auto}
+.ab-tile--hands picture{aspect-ratio:1}
+.ab-tile--banner picture{aspect-ratio:650/500}
+.ab-tile--umbrella picture{aspect-ratio:620/440}
+.ab-tile--finish{grid-column:2;grid-row:1}
+.ab-tile--finish{position:relative;min-height:100%}
+.ab-tile--finish picture{position:absolute;inset:0;height:100%}
+.ab-more{grid-column:1 / -1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.ab-more .ab-tile picture{aspect-ratio:4/5;height:auto}
+.ab-bubble-cap{margin:var(--s2) 0 0;font:var(--label);color:var(--mute)}
+.ab-col--bubble{grid-column:1 / -1}
+
+/* —— 4. the line (drained pool): his sentence, set big, nothing else —— */
+.ab-say{background:var(--pool);color:var(--paper);padding:var(--band) 0}
+.ab-say-line{max-width:13ch;font-size:clamp(2.6rem,.6rem + 8.4vw,10.5rem);font-weight:800;line-height:.95;letter-spacing:-.04em;color:var(--paper);text-wrap:balance}
+.ab-say-line .w{display:inline-block}
+.ab-say--armed .w{opacity:0;transform:translateY(.35em);transition:opacity .6s var(--ease),transform .6s var(--ease);transition-delay:calc(var(--i) * 45ms)}
+.ab-say--armed.is-in .w{opacity:1;transform:none}
+.ab-say .ab-words p{color:var(--bone)}
+
+/* —— 5. the 10,000 (tar): the number as wide as the page, a lane line under it, three facts, the road —— */
+.ab-ten{background:var(--tar);color:var(--paper);padding-top:var(--sec)}
+.ab-ten-h{display:block;margin:0}
+.ab-ten-num{display:block;font-size:calc((min(100vw, var(--maxw)) - 2 * var(--gut)) * .335);font-weight:900;line-height:.8;
+  letter-spacing:-.06em;font-variant-numeric:tabular-nums lining-nums;margin-left:-.04em;color:var(--paper)}
+.ab-ten-unit{display:block;margin-top:var(--s3);font-size:var(--fs-h2);font-weight:800;letter-spacing:-.03em;line-height:1}
+.ab-lane{height:8px;margin:var(--s5) 0 0;background:repeating-linear-gradient(90deg,var(--creosote-lift) 0 72px,transparent 72px 128px)}
+.ab-facts{list-style:none;margin:var(--s5) 0 0;padding:0;display:grid;gap:0}
+.ab-facts li{padding:var(--s2) 0;border-top:1px solid var(--line-d);font-size:var(--fs-h3);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.ab-ten .ab-words p{color:var(--bone)}
+.ab-ten .ab-words .ab-first{color:var(--paper)}
+.ab-ten-more{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;margin:var(--s5) 0 0}
+.ab-ten .link{color:var(--paper);border-bottom-color:var(--paper)}
+.ab-ten-n{font:var(--label);color:var(--dust)}
+.ab-road{margin:var(--sec) 0 0}
+.ab-road picture{aspect-ratio:4/3;height:auto}
+.ab-road figcaption{padding:0 var(--gut) var(--s5);color:var(--dust)}
+
+/* —— 6. the mission (patina): his sentence in two weights, his picture with Caleb, the orgs and their rides —— */
+.ab-mission{background:var(--dust);color:var(--asphalt);padding:var(--sec) 0}
+.ab-mission-in{display:grid;gap:var(--s5)}
+.ab-mission-h{font-size:clamp(2.25rem,1rem + 5.2vw,6.25rem);line-height:.96;letter-spacing:-.04em;text-wrap:balance}
+.ab-m1{display:block;font-weight:700;color:var(--mute)}
+.ab-m2{display:block;font-weight:900;color:var(--asphalt)}
+.ab-mission-ph{margin:0 calc(-1 * var(--gut))}
+.ab-mission-ph picture{aspect-ratio:4/5;height:auto}
+.ab-mission-ph figcaption{padding-inline:var(--gut);color:var(--asphalt)}
+.ab-mission-words .ab-words p{color:var(--asphalt)}
+.ab-mission-words .ab-slot{color:var(--asphalt)}
+.ab-orgs-h{margin:var(--s5) 0 var(--s1);font-size:var(--fs-h3);font-weight:800;letter-spacing:-.02em}
+.ab-orgs-lede{margin:0 0 var(--s3);font-size:var(--fs-small)}
+.ab-orgs{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--asphalt)}
+.ab-org{padding:var(--s3) 0;border-top:1px solid var(--asphalt)}
+.ab-org-n{margin:0 0 6px;font-size:var(--fs-h4);font-weight:800;letter-spacing:-.015em}
+.ab-org-l{margin:0;font-size:var(--fs-small);line-height:1.45;max-width:40ch}
+.ab-org-ride{margin:10px 0 0;font-size:var(--fs-small);font-weight:700}
+.ab-org-ride a{text-decoration-color:var(--asphalt)}
+.ab-org-ride span{font-weight:400}
+.ab-org-give{margin:12px 0 0}
+.ab-help{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin-top:var(--s4);font-size:var(--fs-small)}
+.ab-help .eyebrow{color:var(--asphalt)}
+.ab-help a{text-decoration-color:var(--asphalt)}
+
+/* —— 7. the sign (bruise) and the ways in —— */
+.ab-sign{background:var(--asphalt);color:var(--paper);padding:var(--sec) 0}
+.ab-sign-in{display:grid;gap:var(--s5)}
+.ab-sign-h{--h:clamp(58px,15.5vw,190px);display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px 18px;margin:0}
+.ab-sign-mark{display:block;height:var(--h);width:auto;max-width:100%;color:var(--paper)}
+.ab-plate{display:inline-block;background:var(--creosote-lift);color:var(--asphalt);font-size:calc(var(--h) * .34);font-weight:900;line-height:1;
+  letter-spacing:-.01em;padding:.14em .32em .04em;max-width:100%;overflow-wrap:anywhere}
+.ab-plate[data-empty="true"]{width:calc(var(--h) * .65);height:calc(var(--h) * .24);padding:0}
+.ab-sign-q{display:block;margin-bottom:var(--s1);font-size:var(--fs-h3);font-weight:800}
+.ab-sign-input{display:block;width:100%;min-height:64px;padding:12px 0 10px;border:0;border-bottom:3px solid var(--creosote-lift);border-radius:0;
+  background:transparent;color:var(--paper);font:700 var(--fs-h3)/1.2 var(--display)}
+.ab-sign-input::placeholder{color:var(--dust);opacity:1}
+.ab-sign-input:focus-visible{outline:2px solid var(--paper);outline-offset:6px}
+.ab-sign-note{margin:var(--s2) 0 0;font-size:var(--fs-small);color:var(--dust)}
+.ab-sign-reset{min-height:44px;padding:0 4px;border:0;background:none;color:var(--paper);font:700 var(--fs-small)/1 var(--display);
+  text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.ab-ways{display:grid;gap:var(--s3)}
+.ab-ride{display:flex;align-items:center;gap:14px;min-height:76px;padding:12px 18px 12px 12px;background:var(--paper);color:var(--asphalt);text-decoration:none;
+  transition:background-color var(--t-color) var(--ease)}
+.ab-ride-d{flex:0 0 auto;background:var(--creosote);color:var(--paper);font-size:.9375rem;font-weight:900;line-height:1;padding:9px 10px 7px;white-space:nowrap}
+.ab-ride-t{display:flex;flex-direction:column;line-height:1.25;flex:1 1 auto;min-width:0}
+.ab-ride-t b{font-size:var(--fs-h4);font-weight:800;text-transform:none}
+.ab-ride-t span{font-size:var(--fs-small);color:var(--mute)}
+.ab-ride::after{content:"\2192";font-size:1.25rem;transition:transform var(--t-move) var(--ease)}
+.ab-ride:active{background:var(--bone)}
+.ab-ride:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+.ab-ways-list{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--line-d)}
+.ab-ways-list li{border-top:1px solid var(--line-d)}
+.ab-ways-list a{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:16px;min-height:64px;padding:12px 0;color:var(--paper);text-decoration:none}
+.ab-ways-list a::after{content:"\2192";grid-column:2;grid-row:1 / span 2;transition:transform var(--t-move) var(--ease)}
+.ab-ways-list b{font-size:var(--fs-h4);font-weight:800;letter-spacing:-.01em;line-height:1.2}
+.ab-ways-list span{font-size:var(--fs-small);color:var(--dust)}
+@media (hover:hover){
+  .ab-ride:hover{background:var(--bone)}
+  .ab-ride:hover::after,.ab-ways-list a:hover::after{transform:translateX(4px)}
+  .ab-ways-list a:hover b{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}
+}
+.ab-ways-list a:focus-visible{outline:2px solid var(--paper);outline-offset:2px}
+
+/* —— tablets and up —— */
+@media (min-width:760px){
+  .ab-open-ph{margin:0;aspect-ratio:auto}
+  .ab-open-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);min-height:calc(100svh - var(--nav-h) - 38px);padding-top:var(--s4)}
+  .ab-open-ph{grid-column:6 / -1;grid-row:1;min-height:560px}
+  .ab-open-words{grid-column:1 / span 5;grid-row:1;align-self:end;padding:0 0 var(--s2)}
+  .ab-open .ab-col{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap)}
+  .ab-open .ab-col > *{grid-column:2 / span 7}
+
+  .ab-bike{--fw:min(40vw,520px)}
+  .ab-hinge-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
+  .ab-chap--turn{grid-column:1 / span 7;padding-bottom:calc(var(--fw) * .625 + var(--s4))}
+  .ab-film{grid-column:8 / -1;justify-self:end;margin:0 0 calc(var(--fw) * -.625)}
+  .ab-film figcaption{padding-inline:0}
+  .ab-play{left:var(--s3);top:calc(var(--fw) * 1.25 - 72px)}
+  .ab-col--bike{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);padding-top:var(--s5);min-height:calc(var(--fw) * .625 + 40px)}
+  .ab-col--bike > *{grid-column:2 / span 6}
+
+  .ab-bars-list li{flex-basis:30vw}
+
+  .ab-bubble-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:start}
+  .ab-chap--bubble{grid-column:1 / span 5;grid-row:1;margin:0}
+  .ab-collage{grid-column:6 / -1;grid-row:1 / span 2;margin:0;gap:var(--col-gap)}
+  .ab-stack{gap:var(--col-gap)}
+  .ab-more{gap:var(--col-gap);grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ab-col--bubble{grid-column:1 / span 5;grid-row:2;padding-top:var(--s5)}
+  .ab-bubble-cap{grid-column:6 / -1}
+
+  .ab-facts{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--col-gap)}
+  .ab-ten .ab-col{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap)}
+  .ab-ten .ab-col > *{grid-column:1 / span 7}
+  .ab-road{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
+  .ab-road picture{aspect-ratio:12/5}
+  .ab-road figcaption{padding-inline:0}
+
+  .ab-mission-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);row-gap:var(--s6)}
+  .ab-mission-h{grid-column:1 / span 11}
+  .ab-mission-ph{grid-column:1 / span 5;margin:0;align-self:start;position:sticky;top:calc(var(--nav-h) + var(--s3))}
+  .ab-mission-ph figcaption{padding-inline:0}
+  .ab-mission-words{grid-column:7 / -1}
+
+  .ab-sign-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);row-gap:var(--s5)}
+  .ab-sign-h{grid-column:1 / -1}
+  .ab-sign-form{grid-column:1 / span 6}
+  .ab-ways{grid-column:8 / -1}
+}
+@media (min-width:1024px){
+  .ab-bars-list li{flex-basis:clamp(300px,25vw,400px)}
+  .ab-bars.is-drift{overflow:hidden}
+  .ab-bars.is-drift .ab-bars-list{overflow:visible;width:max-content;will-change:transform;scroll-snap-type:none}
+}
+
+/* reduced motion: the frame is open, the words are there (the base layer's guard also zeroes every duration) */
+@media (prefers-reduced-motion:reduce){
+  .ab-open-ph img,.ab-open-words > *{animation:none}
+  .ab-say--armed .w{opacity:1;transform:none}
+}
+
+}
+
+/* —— the frame on this page: unlayered, after /chrome.css. The header sits on tar (the opening is a dark room), and the
+   footer's stencil is hidden because the page ends on its own sign (as the homepage does). —— */
+.ab .nav{background:rgba(20,18,24,.94);color:var(--bone);border-bottom-color:var(--line-d)}
+.ab .brand .brand-mark{color:var(--bone)}
+.ab .brand-mark .lp-bar{fill:var(--creosote-lift)}
+.ab .nav .btn--sm{background:transparent;border-color:var(--paper);color:var(--paper)}
+@media (hover:hover){.ab .nav .btn--sm:hover{background:var(--paper);border-color:var(--paper);color:var(--asphalt)}}
+.ab .nav .btn--sm:active{background:var(--paper);border-color:var(--paper);color:var(--asphalt)}
+.ab .nav{--ring:var(--paper)}
+.ab .tally-line{background:var(--tar);color:var(--dust);border-bottom-color:var(--line-d)}
+.ab .tally-line a{color:inherit}
+.ab .tally-num{color:var(--bone)}
+.ab .skip{background:var(--bone);color:var(--asphalt)}
+.ab .foot{margin-top:0;border-top:1px solid var(--line-d)}
+.ab .foot-sign{display:none}
+@media (min-width:1024px){.ab .foot-grid{grid-column:1 / -1}}
