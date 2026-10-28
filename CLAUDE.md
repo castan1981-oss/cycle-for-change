@@ -262,13 +262,14 @@ homepage only; every other rule in this section still holds there and everywhere
   three-band cut put seams through the type), car-free, only him recognisable. **It plays on phones too** (this replaces
   "a still, not a film, on phones" for the hero): muted, inline, looped, after load, never under reduced motion, Save-Data
   or a 2G/3G connection, paused off screen, with a Pause button always there (WCAG 2.2.2). The poster is the film's first
-  frame and the page's LCP. Over it: the stencil (clean, no wear: the hero no longer carries `#lpWorn`), who and what, his
-  line, one primary (Ride with me, `#heroRide`, the date on a rose plate) and two quiet links, "Find a group ride" (the
+  frame and the page's LCP. Over it: the stencil (clean, no wear: the hero no longer carries `#lpWorn`), **one caption, "10,000
+  miles. One year. All on the bike."** (`.hero-cap`, 700, small and quiet; Robert and Cadence, Oct 27, 2026: the two
+  paragraphs came off so the footage carries the screen; each phrase is a no-wrap span so a phone breaks between them), one primary (Ride with me, `#heroRide`, the date on a rose plate) and two quiet links, "Find a group ride" (the
   approved direction) and, when there is a write-up, "Read the last ride" (Cadence's must, Oct 27, 2026: `NOTE.href` in
   build-home.js, his newest write-up, never the riding page; omitted when there is none). "Read the last ride" stays in
   `#road` too. The scrim rides with the words, not the screen (`.hero-in::before`): it eases in over the 200px
   above the stencil, .6 at its top, .72 at the foot — measured against every frame of both films at nine screen sizes
-  (3:1 for the stencil and the intro, 4.5:1 for the line and the links): `python3 tools/hero-contrast.py` after any
+  (3:1 for the stencil, 4.5:1 for the caption and the links): `python3 tools/hero-contrast.py` after any
   recut or change to the hero's type or scrim (exits 1 on a fail). Over the film the header is the site's solid bar on
   tar with a hairline, carrying only the menu (the nav links at ≥900); the mark and the header's Ride with me come back
   once the film has scrolled under it (the hero carries both, so nothing is said twice).
@@ -294,8 +295,11 @@ homepage only; every other rule in this section still holds there and everywhere
   `#road`. The homepage loads `/chrome.css` then `/home.css` (the page in `@layer section`, the frame's homepage states
   unlayered at its foot), so its header, footer and bar are the site's own rules. The stencil's clip (`#lpRow`) lives in
   the header's mark; `home.css` keeps its rect visible while the header is hidden, or every CYCLE FOR on the page vanishes.
-- Pass 37's phone rules below are kept where they still apply (who and what on the first screen, say it once); the sign's
-  question now lives in `#sign` at the foot of the page at every width.
+- **His sentence is the story's standfirst** (Oct 27, 2026, off the hero): "I'd like to say I ride for everyone else. I ride
+  because it changed me." (`.story-say`, `--fs-h3` 800) under "It always says cycling."; on phones head, sentence, portrait,
+  lede; from 1024 it sits across from the head on columns 7–12 with the portrait under it (both boxes `display:contents`).
+- Pass 37's phone rules below are kept where they still apply (say it once; the first screen's "who" is now his face in the
+  film, with his name in the `<title>` and the meta description, not "I'm Robert"); the sign's question now lives in `#sign` at the foot of the page at every width.
 - **Cadence's final notes (Oct 27, 2026; `research/design/2026-10-27-cadence-final/`):** the sections run hero · strip ·
   `#why` · `#road` · `#today` · `#orgs` · `#year` · `#ride` · `#find` · `#read` · `#sign` (markup order in build-home.js,
   no CSS `order`: the rooms alternate concrete / tar / concrete / patina / concrete / plaster, and the 988 line comes up
@@ -314,9 +318,9 @@ homepage only; every other rule in this section still holds there and everywhere
 ### The homepage on a phone (Pass 37, Oct 6, 2026)
 Someone Robert trusts found the phone homepage "overwhelming and hard to figure out what it was all about"
 (desktop "much better"). The rules that came out of it, all under 760px (tablets and desktop unchanged):
-- **The first screen says who and what before it asks anything:** the sign, `.sign-intro` ("I'm Robert. In
-  2027 I ride 10,000 miles, all on the bike."), the line, then the Ride with me tile and the two finder
-  tiles. His face stays clear above the sign; the scrim is measured up from the foot of the screen.
+- **The first screen says what before it asks anything:** the sign, then the caption ("10,000 miles. One year. All on the
+  bike." since Oct 27, 2026; it said "I'm Robert. In 2027 I ride 10,000 miles, all on the bike." and his line before),
+  then the Ride with me tile and the quiet links. His face stays clear above the sign; the scrim is measured up from the foot of the screen.
 - **"Who do you cycle for?" lives in `#why` on phones** (`.sign-play`, its own one-line sign), under the
   words that explain the sign. `/home.js` keeps every `[data-sign-plate]` and `[data-sign-input]` in step.
 - **How this works is the second screen** (`main` is a flex column on phones; `#how` has `order:-1`). It has
@@ -1028,3 +1032,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-26 — The editorial homepage (Robert and Cadence's approved direction, §3; staged as a PR, not live until Robert approves): his film full screen (one frame on phones, two panels on wide screens, from road-film-2's four clean shots, every frame checked by `tools/hero-contrast.py`), the numbers under lane-paint dashes, the story with his photographs, 10,000 and the last rides, the 2027 rides on a map with date blocks, the orgs on patina, the sign at the foot; `/chrome.css` now loads on the homepage too; `CSS_V` 53. Eight rounds with the Wrenches (the critic's last cold read 40 vs 37 for live, photography held by the footage), the brand gate (passes), the access desk (its five fixes in) and the usability lab (task 4, the latest write-up, slower by the one-button hero: Robert's call); the art director's rulings in `research/design/2026-10-26-editorial-home/sign-off.md`. Fact desk (research/events/2026-10-26-homepage-facts.md): Seattle to Portland is 206 miles, one or two days; The Mid South shows Mar 11 until the organizer posts its last day; SFAF's "No one turned away for cost" is cut (their site doesn't say it).
 - 2026-10-27 — The staged homepage's hero recut from the clean clips Robert sent ("the video needs to be changed"): `hero-phone-8` / `hero-wide-8` — his rail-yard take (one continuous shot: the whole phone film, and the tall panel on wide screens), and the red-rock road, the tunnel and the palms (cropped low) from his Reel Hit v3 in the wide panel; the brand gate's three blocks fixed (an uncleared shape across the street cropped out, a judder from joins off the frame grid, two of him at once); `tools/hero-contrast.py` passes at nine sizes; the critic's blind reads 22 vs 18 for v8 on the first cut, 23 vs 19 on the fixed one (photography level, no line down); still staged, not live.
 - 2026-10-27 — Cadence's final notes on the staged homepage (`research/design/2026-10-27-cadence-final/`): Read the last ride on the first screen (the hero's second quiet link); the sections reordered so the rooms alternate (why · road · today · orgs · year · ride · find · read · sign) and the 988 line comes up sooner; `#today` on one grid with one film control (the disc) and a place · month caption on the film; the three plates under "It always says cycling" cut; the `#ride` facts on chrome's `.facts`, the find field with its mark, the rides count in `#road` as a numeral over its label; the Ride with me bar hidden at ≥900 on the homepage; the wide hero film recut as `hero-wide-9` (88 frames: the road from a static lower region, the tunnel, half a second of the wheel on the road with a strip of grass verge at the top left; the phone film stays 8); `CSS_V` 55; still staged, not live.
+- 2026-10-27 — The homepage hero says one thing (Robert and Cadence): "10,000 miles. One year. All on the bike." under the stencil; the two paragraphs come off and his sentence becomes the story's standfirst (across from the head on wide screens); `hero-contrast.py` reads the caption; `CSS_V` 56; staged first.

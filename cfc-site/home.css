@@ -68,9 +68,9 @@
 .hero-mark .lp-bar{fill:var(--creosote-lift)}
 .hero-mark--stack{width:min(46vw,230px)}
 .hero-mark--line{display:none}
-/* who and what: the loud line. His sentence: the quiet one under it */
-.hero-intro{margin:var(--s3) 0 0;max-width:20ch;font-size:clamp(1.4rem,1rem + 1.7vw,2.5rem);font-weight:800;line-height:1.08;letter-spacing:-.024em;text-wrap:balance}
-.hero-line{margin:var(--s2) 0 0;max-width:34ch;font-size:var(--fs-intro);font-weight:500;line-height:1.4;text-wrap:pretty}
+/* one caption under the stencil (Robert and Cadence, Oct 27, 2026): set small and quiet so the film and the stencil carry the
+   screen; his sentence lives in #why now. Two lines on a phone ("10,000 miles. One year." / "All on the bike."), one from 760 */
+.hero-cap{margin:var(--s3) 0 0;max-width:16em;font-size:clamp(1.125rem,.95rem + .7vw,1.5rem);font-weight:700;line-height:1.25;letter-spacing:-.012em;text-wrap:balance}
 .hero-acts{display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:100%;margin-top:var(--s4)}
 /* the one primary: Ride with me, the next ride's date on its plate (/ridebar.js keeps it current) */
 .hero-ride{display:flex;align-items:center;gap:14px;width:100%;min-width:0;min-height:64px;padding:10px 18px 10px 10px;
@@ -103,17 +103,18 @@
 .hero[data-playing="true"] .hp-play,.hero:not([data-playing="true"]) .hp-pause{display:none}
 @media (hover:hover){.hero-pause:hover{background:rgba(20,18,24,.85)}}
 .hero-pause:active{transition-duration:0s;background:var(--tar)}
-/* under 700px tall the block reclaims the second link's line, so the stencil stays under his chin at 360, 375, 390 and
-   430 (ux.md §1, measured) */
+/* under 700px tall the block runs tighter so the stencil stays under his chin at 360×640 and 375×667. With one caption
+   instead of two paragraphs (Oct 27) the stencil steps to 42vw (151px at 360, 158 at 375) instead of 32vw */
 @media (max-width:759px) and (max-height:700px){
-  .hero-mark--stack{width:min(32vw,150px)}
-  .hero-intro,.hero-line{margin-top:var(--s1)}
-  .hero-acts{margin-top:var(--s2);gap:8px}
+  .hero-mark--stack{width:min(42vw,200px)}
+  .hero-cap{margin-top:var(--s2)}
+  .hero-acts{margin-top:var(--s3);gap:8px}
 }
 @media (min-width:760px){
   .hero-mark--stack{display:none}
   .hero-mark--line{display:block;width:clamp(400px,44vw,720px);max-width:100%}
-  .hero-intro{margin-top:var(--s4)}
+  .hero-cap{margin-top:var(--s4);max-width:none}
+  .hero-acts{margin-top:var(--s5)}
   .hero-ride{width:auto;min-width:380px}
   .hero-links{flex-direction:row;flex-wrap:wrap;max-width:none}
   .hero-pause .hp-label{position:static;width:auto;height:auto;clip-path:none}
@@ -176,6 +177,8 @@ a.strip-cell:focus-visible{outline-offset:6px}
    same spacing (the group gap above the rule, --s4 under it), so the two read as two sections in one room */
 .story-in{display:grid;gap:var(--s5);padding-top:var(--s4);background:linear-gradient(var(--asphalt),var(--asphalt)) var(--gut) 0/calc(100% - 2 * var(--gut)) 2px no-repeat}
 .story-h{max-width:9ch;margin-bottom:var(--s4)}
+/* his sentence, moved down from the hero (Oct 27, 2026): the story's standfirst, under the head and over the lede */
+.story-say{margin:0 0 var(--s3);max-width:22ch;font-size:var(--fs-h3);font-weight:800;line-height:1.15;letter-spacing:-.02em;text-wrap:balance}
 .story-lede{margin:0 0 var(--s3);max-width:28ch;font-size:var(--fs-lede);font-weight:500;line-height:1.38}
 .story-more{margin:0;max-width:34ch;color:var(--mute)}
 .story-photos{display:block}
@@ -183,14 +186,15 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .story-ph img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
 .story-ph figcaption,.today-ph figcaption,.today-film figcaption,.ridewith-ph figcaption{display:block;margin:var(--s1) 0 0;padding:0;font:var(--label);color:var(--mute)}
 @media (max-width:759px){
-  /* the photo second, not fifth (Oct 27): the head, the full-bleed portrait and its caption, then his words. The words'
+  /* the head and his sentence, then the full-bleed portrait and its caption, then the rest of his words. The words'
      box dissolves (display:contents) and order sets the sequence; nothing focusable is in it, so the tab order holds */
   .story-in{gap:0}
   .story-words{display:contents}
   .story-h{order:1;margin-bottom:var(--s3)}
-  .story-photos{order:2;margin-bottom:var(--s4)}
-  .story-lede{order:3}
-  .story-more{order:4}
+  .story-say{order:2;margin-bottom:var(--s4)}
+  .story-photos{order:3;margin-bottom:var(--s4)}
+  .story-lede{order:4}
+  .story-more{order:5}
   .story-ph--a{margin-inline:calc(-1 * var(--gut))}
   .story-ph figcaption{padding-inline:var(--gut)}
   .story-ph--b{display:none}
@@ -204,11 +208,18 @@ a.strip-cell:focus-visible{outline-offset:6px}
   /* one big portrait, one smaller (Oct 27): the words on five columns, not sticky; Boise on 7–12 the full height of the
      row; the shadow at 4:5 on 1–4 under the words (a 294px square read as a thumbnail, the critic). The grid aligns to
      its end, so the three feet always meet; the left column runs taller, so the big photo starts lower than the head */
-  .story-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
-  .story-words{grid-column:1 / span 5;grid-row:1;position:static}
+  /* Oct 27: his sentence is the standfirst, across from the head on 7–12 (its last line on the head's), so it fills the
+     top right instead of pushing the words column 110px taller than the portrait. Both boxes dissolve and every piece
+     takes its own cell; the DOM order (head, sentence, lede, more, photos) is the reading and tab order */
+  .story-in{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);row-gap:0;align-items:end}
+  .story-words{display:contents}
+  .story-h{grid-column:1 / span 6;grid-row:1;margin-bottom:var(--s5)}
+  .story-say{grid-column:7 / -1;grid-row:1;align-self:end;margin-bottom:var(--s5);max-width:20ch}
+  .story-lede{grid-column:1 / span 5;grid-row:2;align-self:start}
+  .story-more{grid-column:1 / span 5;grid-row:3;align-self:start;margin-bottom:var(--s5)}
   .story-photos{display:contents}
-  .story-ph--a{grid-column:7 / -1;grid-row:1 / 3}
-  .story-ph--b{grid-column:1 / span 4;grid-row:2}
+  .story-ph--a{grid-column:7 / -1;grid-row:2 / 5}
+  .story-ph--b{grid-column:1 / span 4;grid-row:4}
   .story-ph--b img{aspect-ratio:4 / 5}
 }
 

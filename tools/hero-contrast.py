@@ -4,12 +4,12 @@
 The hero's words sit over Robert's film. A poster that passes says nothing about the frame two seconds later, so this
 checks every frame (10 a second) of both films at nine screen sizes, the way a phone or a laptop would draw them:
 
-  1. serves cfc-site/ and asks Chromium where each line of hero type lands (the stencil, the intro, his line, the
+  1. serves cfc-site/ and asks Chromium where each line of hero type lands (the stencil, the caption, the
      links, and the nav links at 900 and up), and where the words' scrim (.hero-in::before) starts and ends;
   2. lays each film frame under the page as object-fit: cover would (top-anchored on phones, centred on wide screens),
      darkens it by the scrim the CSS draws (keep SCRIM in step with cfc-site/home.css), and reads the background under
      each line: the 95th-percentile luminance, so a few bright pixels count and stray specks don't;
-  3. fails any line under 3:1 (the stencil and the intro: large text) or 4.5:1 (everything else), with a 5% margin.
+  3. fails any line under 3:1 (the stencil: large text) or 4.5:1 (everything else, the caption included), with a 5% margin.
 
   python3 tools/hero-contrast.py                 (Playwright + numpy + ffmpeg; exits 1 on a fail)
 
@@ -56,8 +56,7 @@ def layout():
       document.querySelectorAll('.hero-mark').forEach(e => { const b = e.getBoundingClientRect(); if (b.width && vis(e)) L.push({kind:'large', what:'stencil', x:b.x, y:b.y, w:b.width, h:b.height}); });
       const lines = (el, kind, what) => { if (!el) return; const r = document.createRange(); r.selectNodeContents(el);
         for (const b of r.getClientRects()) if (b.width > 4) L.push({kind, what, x:b.x, y:b.y, w:b.width, h:b.height}); };
-      lines(document.querySelector('.hero-intro'), 'large', 'intro');
-      lines(document.querySelector('.hero-line'), 'small', 'line');
+      lines(document.querySelector('.hero-cap'), 'small', 'caption');   // 18-24px bold: held to 4.5:1, not the large-text 3:1
       document.querySelectorAll('.hero-links a').forEach(a => lines(a, 'small', 'link'));
       document.querySelectorAll('.nav-links a').forEach(a => { if (a.offsetParent) lines(a, 'nav', 'nav'); });
       const hi = document.querySelector('.hero-in'), cs = getComputedStyle(hi, '::before'), r = hi.getBoundingClientRect();

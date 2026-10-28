@@ -116,7 +116,9 @@ const heroRide = `<a class="hero-ride" id="heroRide" href="${esc(RIDE_HREF)}"${N
 const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools/hero-film.py): one frame on a phone, two panels on a wide
      screen (the words sit inside the wide one, the gutter clear of the nav). One primary and two quiet links: Find a group ride, and Read the last ride
      when there is one (his newest write-up, never the riding page; CLAUDE.md §3). The poster is the film's first frame and the page's largest paint; /home.js
-     starts the film after load, never under reduced motion or Save-Data, and the button always stops it. —— -->
+     starts the film after load, never under reduced motion or Save-Data, and the button always stops it. Over it only the
+     stencil and one caption (Robert and Cadence, Oct 27, 2026: "10,000 miles. One year. All on the bike."); his sentence
+     moved to the story, #why. —— -->
 <section class="hero" id="top" aria-labelledby="hero-h" data-film="off">
   <div class="hero-media">
     <picture class="hero-poster">
@@ -133,8 +135,7 @@ const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools
   </div>
   <div class="wrap hero-in">
     <h1 class="hero-h" id="hero-h">${MARK_LINE("hero-mark hero-mark--line", false)}${MARK_STACK("hero-mark hero-mark--stack")}<span class="sr">Cycle for Change</span></h1>
-    <p class="hero-intro">I&rsquo;m Robert. In 2027 I ride 10,000 miles, all on the bike.</p>
-    <p class="hero-line">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</p>
+    <p class="hero-cap"><span class="nowrap">10,000 miles.</span> <span class="nowrap">One year.</span> <span class="nowrap">All on the bike.</span></p>
     <div class="hero-acts">
       ${heroRide}
       <p class="hero-links"><a class="link link--bone" href="/rides/">Find a group ride</a>${NOTE ? `<a class="link link--bone" href="${esc(NOTE.href)}">Read the last ride</a>` : ""}</p>
@@ -171,6 +172,7 @@ const STORY = `<!-- —— 3. why. How this works first (the mechanics before th
   <div class="wrap story-in">
     <div class="story-words">
       <h2 class="story-h" id="why-h">It always says cycling.</h2>
+      <p class="story-say">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</p>
       <p class="story-lede">Cycling changed my life. I&rsquo;d like to say I&rsquo;m cycling for other people. I&rsquo;m really cycling for myself. I&rsquo;m cycling because it changed me. That&rsquo;s the story.</p>
       <p class="story-more">So the sign changes. What comes after the word is up to whoever&rsquo;s riding.</p>
     </div>
