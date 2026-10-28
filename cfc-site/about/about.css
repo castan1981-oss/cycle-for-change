@@ -44,7 +44,7 @@
 /* the cold open is one title card at the foot of the screen, and the letterbox's top edge shows under it, so the first
    screen promises a face (the critic and the lab) */
 .ab-open-in{display:flex;flex-direction:column;justify-content:flex-end;gap:var(--s4);
-  min-height:calc(100svh - var(--nav-h) - 44px - clamp(120px,16svh,180px));padding-block:var(--s5)}
+  min-height:calc(100svh - var(--nav-h) - 44px - clamp(240px,38svh,420px));padding-block:var(--s5)}
 .ab-kick{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px var(--s2)}
 .ab-h1{margin:0;font-size:var(--fs-h3);font-weight:800;line-height:1.1;letter-spacing:-.01em}
 .ab-by{margin:0;font:var(--label);color:var(--dust)}
@@ -66,9 +66,10 @@
 .ab-open-body{padding-block:var(--s6) var(--band)}
 .ab-open-body .ab-words{color:var(--paper)}
 .ab-open-h{margin-bottom:var(--s4)}
+/* his opening words start on the cold open's edge: nothing sits beside them (the critic, round 2) */
 @media (min-width:1024px){
   .ab-open-body{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap)}
-  .ab-open-body>*{grid-column:7 / -1}
+  .ab-open-body>*{grid-column:1 / span 7}
 }
 
 /* ——————————————————————————————————————————————————————————
@@ -149,7 +150,7 @@
   .ab-p--e{width:80%;align-self:flex-end}
   .ab-set .ab-p--f{grid-column:1 / -1}
   .ab-p--f .ab-p-frame{aspect-ratio:21/9}
-  .ab-bubble-words{grid-column:7 / -1}
+  .ab-bubble-words{grid-column:1 / span 7}   /* under the finish, on the page's left edge: nothing beside it */
 }
 
 /* ——————————————————————————————————————————————————————————

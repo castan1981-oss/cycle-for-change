@@ -125,10 +125,10 @@ function openRoom(sec) {
 //   - from 3.6 s his edit cuts between night and day every 5–7 frames, about three flashes a second at the loop, the
 //     WCAG 2.3.1 limit (the access desk): this cut is the calm part, a dip to black about once a second, and it ends on
 //     the night shot, so every loop goes night to day;
-//   - the poster is the night frame at 3.4 s: the group and road frames have a vehicle far off, which a still can't
-//     carry (§10; the photo editor).
+//   - the poster (3b) is his selfie at 1.9 s: the group and road frames have a vehicle far off, which a still can't
+//     carry (§10; the photo editor), and the night frame read as noise on a phone (the critic, round 2).
 const FILM = {
-  mp4: "/film/about-bike-3.mp4", webm: "/film/about-bike-3.webm", poster: "/film/about-bike-3.webp", w: 864, h: 1080, seconds: 4,
+  mp4: "/film/about-bike-3.mp4", webm: "/film/about-bike-3.webm", poster: "/film/about-bike-3b.webp", w: 864, h: 1080, seconds: 4,
   where: "Scottsdale · Oct 2026",
   alt: "Four seconds from Robert’s first TSR, October 10, 2026: the group in a line along the bike lane at sunrise, the road over his bars, his selfie in kit, then riding in the dark under his bike light.",
 };
@@ -260,7 +260,7 @@ function missionRoom(sec) {
         <div class="ab-help">
           <span class="eyebrow">If it&rsquo;s now</span>
           <span class="ab-help-l"><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
-          <span class="ab-help-l"><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to <span class="nowrap">678-678</span></span>
+          <span class="ab-help-l"><b>Trevor Project</b> <a class="nowrap" href="tel:18664887386">1-866-488-7386</a> or text START to <span class="nowrap">678-678</span></span>
           <a class="link" href="/resources/">Help lines, by age</a>
         </div>
       </div>
