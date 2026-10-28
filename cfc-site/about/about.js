@@ -35,6 +35,10 @@
     };
     var play = function () { if (v.preload === "none") v.preload = "auto"; var p = v.play(); if (p && p.catch) p.catch(label); };
     v.addEventListener("play", label); v.addEventListener("pause", label);
+    // the film didn't load: no disc that says it's playing (the error fires on a <source>, so capture it)
+    v.addEventListener("error", function () { btn.hidden = true; fig.setAttribute("data-playing", "false"); }, true);
+    // the picture itself starts and stops it too, as on the homepage's film
+    v.addEventListener("click", function () { btn.click(); });
     btn.addEventListener("click", function () {
       if (v.paused) { userPlayed = true; userStopped = false; play(); } else { userStopped = true; v.pause(); }
     });
@@ -46,11 +50,12 @@
         });
       }, { threshold: [0, 0.4] }).observe(fig);
     }
+    btn.hidden = false;   // without this script the disc stays hidden (it would sit on the browser's own controls)
     label();
   }
 
   // —— the sign: after CYCLE FOR there is only the blank until a visitor types; then their word sits on the plate.
-  //    The plate is the field's label, so tapping the blank puts the cursor in the field. Enter just closes the keyboard. ——
+  //    The plate is the field's label, so tapping the blank puts the cursor in the field. ——
   var plates = document.querySelectorAll("[data-sign-plate]"), inputs = document.querySelectorAll("[data-sign-input]"), resets = document.querySelectorAll("[data-sign-reset]");
   if (plates.length && inputs.length) {
     var typed = "";
@@ -64,7 +69,8 @@
     };
     each(inputs, function (f) {
       f.addEventListener("input", function () { typed = f.value.trim().slice(0, 22); paint(f); });
-      f.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); f.blur(); } });
+      // Enter closes a phone's keyboard; with a keyboard, focus stays where it was
+      f.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); if (mm("(pointer: coarse)")) f.blur(); } });
     });
     each(resets, function (b) { b.addEventListener("click", function () { typed = ""; paint(null); inputs[0].focus(); }); });
     paint(null);

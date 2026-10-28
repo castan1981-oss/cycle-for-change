@@ -151,7 +151,7 @@ function bikeRoom(sec) {
             <source src="${FILM.webm}" type="video/webm">
             <source src="${FILM.mp4}" type="video/mp4">
           </video>
-          <button class="ab-play" type="button" aria-label="Play, ${FILM.seconds} seconds" data-seconds="${FILM.seconds}">${PLAY}</button>
+          <button class="ab-play" type="button" aria-label="Play, ${FILM.seconds} seconds" data-seconds="${FILM.seconds}" hidden>${PLAY}</button>
         </div>
         <figcaption>${esc(FILM.where)}</figcaption>
       </figure>

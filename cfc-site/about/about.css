@@ -58,8 +58,9 @@
 .ab-letter-frame{overflow:hidden}
 .ab-letter img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:var(--asphalt)}
 .ab-letter figcaption{margin:var(--s1) auto 0;font:var(--label);color:var(--dust)}
-.js .ab-letter-frame{clip-path:inset(0);transition:clip-path 1200ms var(--ease)}
-.js .ab-letter[data-in="false"] .ab-letter-frame{clip-path:inset(12% 0)}
+.js .ab-letter-frame{clip-path:inset(0);transition:clip-path var(--t-open) var(--ease)}
+.js .ab-letter[data-in="false"] .ab-letter-frame{clip-path:inset(12% 0);animation:ab-open 0s 2.5s forwards}   /* if about.js never runs, it opens anyway */
+@keyframes ab-open{to{clip-path:inset(0)}}
 @media (min-width:760px){.ab-letter img{aspect-ratio:1800/753}}
 
 .ab-open-body{padding-block:var(--s6) var(--band)}
@@ -78,7 +79,7 @@
 .ab-bike-low{padding-bottom:var(--band)}
 .ab-film{position:relative;margin:calc(-1 * var(--pull)) calc(-1 * var(--gut)) 0}
 .ab-film-frame{position:relative;background:var(--tar)}
-.ab-film-v{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.ab-film-v{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;cursor:pointer}
 .ab-film figcaption{margin:var(--s1) 0 0;padding-inline:var(--gut);font:var(--label);color:var(--mute)}
 .ab-bike-words{margin-top:var(--s5)}
 
@@ -251,7 +252,7 @@
 .ab-sign-input{display:block;width:100%;min-height:64px;padding:12px 0 10px;border:0;border-bottom:3px solid var(--creosote-lift);border-radius:0;background:transparent;color:var(--paper);
   font:800 clamp(1.4rem,1rem + 1.7vw,2.25rem)/1.2 var(--display);letter-spacing:-.01em}
 .ab-sign-input::placeholder{color:var(--dust);opacity:1}
-.ab-sign-note{margin:var(--s2) 0 0;font-size:var(--fs-small);color:var(--dust)}
+.ab-sign-note{margin:var(--s2) 0 0;display:flex;flex-wrap:wrap;align-items:center;column-gap:8px;min-height:44px;font-size:var(--fs-small);color:var(--dust)}   /* room for Clear the sign, so the first letter moves nothing */
 .ab-sign-reset{min-height:44px;padding:0 4px;border:0;background:none;color:var(--paper);font:700 var(--fs-small)/1 var(--display);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .ab-sign-more{margin:var(--s4) 0 0}
 @media (min-width:1024px){
