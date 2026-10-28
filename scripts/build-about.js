@@ -65,8 +65,8 @@ const NOTE = (() => {
 
 // —— 1. the opening ——
 const OPEN_IMG = {
-  wide: { base: "/img/about/open-w-1", w: 2400, h: 1004 },
-  phone: { base: "/img/about/open-p-1", w: 1200, h: 1500 },
+  wide: { base: "/img/about/open-w-2", w: 2060, h: 862 },
+  phone: { base: "/img/about/open-p-2", w: 1200, h: 1500 },
   alt: "Robert mid-ride in a red helmet and a purple jersey, grinning into the camera, Camelback Mountain and a big sky behind him.",
   where: "Paradise Valley, AZ · Oct 2025",
 };
@@ -98,10 +98,10 @@ const OPEN = `<!-- —— 1. the opening: a cold open on dark (the title, his fi
 `;
 
 // —— 2. then came the bike: the page turns from night to day ——
-// his first TSR (Oct 10, 2026), recut for this page from /film/tsr-1.mp4: its first 1.6 s carried the retired halftone
-// print, so the cut starts on the group at sunrise and drops the black tail (ffmpeg -ss 1.6 -t 9.1, CRF 28, + a VP9 copy)
+// his first TSR (Oct 10, 2026), recut for this page from /film/tsr-1.mp4: its first 1.7 s carried the retired halftone
+// print, so the cut starts on the group at sunrise and drops the black tail (ffmpeg -ss 1.7 -t 9, CRF 28, + a VP9 copy; frame 0 checked clean)
 const TSR = {
-  src: "/film/about-bike-1.mp4", webm: "/film/about-bike-1.webm", poster: "/film/about-bike-1.webp", width: 864, height: 1080, seconds: 9,
+  src: "/film/about-bike-2.mp4", webm: "/film/about-bike-2.webm", poster: "/film/about-bike-2.webp", width: 864, height: 1080, seconds: 9,
   caption: "Scottsdale · Oct 2026",
   alt: "Nine seconds from Robert’s first TSR, October 10, 2026: the group in a line along the bike lane at sunrise, the road over his bars, his selfie in kit, riding over in the dark under his bike light.",
 };

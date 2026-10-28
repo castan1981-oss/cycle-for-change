@@ -12,12 +12,13 @@ from PIL import Image, ImageFilter
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "cfc-site" / "photos"
 OUT = ROOT / "cfc-site" / "img" / "about"
-N = 1
+N = 2
 
 # key: (source file, crop box in the source's pixels (l, t, r, b), served width)
 CROPS = {
-    # the opening, wide: a 2.39:1 band of his Camelback selfie, the mountain on the left third, his face on the right
-    "open-w": ("robert-selfie-camelback.jpg", (0, 560, 2400, 1564), 2400),
+    # the opening, wide: a 2.39:1 band of his Camelback selfie, the mountain on the left third, his face on the right.
+    # -2 starts at x 340: a pale box on a driveway at the far left of -1 couldn't be cleared as not a car (the brand gate)
+    "open-w": ("robert-selfie-camelback.jpg", (340, 560, 2400, 1422), 2060),
     # the opening, phone: 4:5 around his face, the edge of Camelback behind him
     "open-p": ("robert-selfie-camelback.jpg", (830, 100, 2190, 1800), 1200),
 }
