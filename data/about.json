@@ -1,0 +1,33 @@
+{
+  "_note": "Robert's own words for /about/ (scripts/build-about.js). Verbatim from his latest revised narrative: no rewriting, no added details, no recovery references (Oct 28, 2026 brief). A paragraph is one string. An empty list is a slot: the page shows it as 'his words go here' and the page stays noindex until every slot is filled.",
+  "title": "About me",
+  "open": {
+    "lines": [],
+    "body": []
+  },
+  "bike": {
+    "heading": "Then came the bike.",
+    "body": []
+  },
+  "bubble": {
+    "heading": "The love bubble was real.",
+    "body": [],
+    "photos": [
+      { "slot": "a", "want": "You at the AIDS/LifeCycle sign wall", "src": "", "alt": "", "where": "" },
+      { "slot": "b", "want": "The coast road, riders strung out ahead", "src": "", "alt": "", "where": "" },
+      { "slot": "c", "want": "Camp: the tents, the line for dinner", "src": "", "alt": "", "where": "" },
+      { "slot": "d", "want": "Halfway to LA", "src": "", "alt": "", "where": "" },
+      { "slot": "e", "want": "A small town you rolled through", "src": "", "alt": "", "where": "" },
+      { "slot": "f", "want": "The finish", "src": "", "alt": "", "where": "" }
+    ]
+  },
+  "statement": "I found a version of myself I actually liked hanging out with.",
+  "miles": {
+    "heading": "",
+    "body": []
+  },
+  "mission": {
+    "heading": "My mission.",
+    "body": []
+  }
+}
