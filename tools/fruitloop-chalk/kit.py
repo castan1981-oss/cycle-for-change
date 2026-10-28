@@ -69,12 +69,11 @@ B['Feed-2-map']=(1080,1350,page(1080,1350,f'''
 B['Feed-3-how']=(1080,1350,page(1080,1350,f'''
 <div class="abs" style="left:56px;top:56px"><img src="{LOGO}" style="width:560px;display:block"></div>
 <div class="abs col" style="left:64px;top:300px">{blk('HOW IT WORKS',92,C['yellow'],201,sw='4.2px')}{scr(560,C['rose'],202,h=22,sw=12)}</div>
-<div class="abs col" style="left:64px;top:470px;gap:26px">'''+''.join(
-  f'''<div class="col">{blk(h_,46,c_,210+i,sw='3px',fit=950)}{para(s_,26,C['white'],220+i,940,mt=6)}</div>''' for i,(h_,c_,s_) in enumerate([
+<div class="abs col" style="left:64px;top:480px;gap:40px">'''+''.join(
+  f'''<div class="col">{blk(h_,54,c_,210+i,sw='3.2px',fit=950)}{para(s_,30,C['white'],220+i,940,mt=8)}</div>''' for i,(h_,c_,s_) in enumerate([
    ('BRING A LIGHT. TWO, ACTUALLY.',C['cyan'],'White on the front, red on the back. It’s dark by 5:30.'),
    ('NOBODY GETS DROPPED.',C['rose'],'About 10 to 12 mph, flat. A sweep rides at the back.'),
    ('WE STOP AT EVERY RED.',C['orange'],'Then we wait for whoever caught it.'),
-   ('NO STICKER, NO PHOTO.',C['green'],'Want to be in the pictures? Grab a Photos OK sticker at the start. Nobody’s name goes anywhere.'),
    ('ANY BIKE.',C['purple'],'About 14 flat miles, one stop, coffee about 7:45. Starts Friday, Dec 11.')]))+f'''</div>
 <div class="abs col" style="left:64px;bottom:52px">{foot(240,440)}</div>'''))
 # ── The seven place cards ───────────────────────────────────────────
