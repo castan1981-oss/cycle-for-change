@@ -298,8 +298,8 @@ homepage only; every other rule in this section still holds there and everywhere
 - **His sentence is the story's standfirst** (Oct 27, 2026, off the hero): "I'd like to say I ride for everyone else. I ride
   because it changed me." (`.story-say`, `--fs-h3` 800) under "It always says cycling."; on phones head, sentence, portrait,
   lede; from 1024 it sits across from the head on columns 7–12 with the portrait under it (both boxes `display:contents`).
-- Pass 37's phone rules below are kept where they still apply (say it once; the first screen's "who" is now the stencil,
-  the caption and the title, not "I'm Robert"); the sign's question now lives in `#sign` at the foot of the page at every width.
+- Pass 37's phone rules below are kept where they still apply (say it once; the first screen's "who" is now his face in the
+  film, with his name in the `<title>` and the meta description, not "I'm Robert"); the sign's question now lives in `#sign` at the foot of the page at every width.
 - **Cadence's final notes (Oct 27, 2026; `research/design/2026-10-27-cadence-final/`):** the sections run hero · strip ·
   `#why` · `#road` · `#today` · `#orgs` · `#year` · `#ride` · `#find` · `#read` · `#sign` (markup order in build-home.js,
   no CSS `order`: the rooms alternate concrete / tar / concrete / patina / concrete / plaster, and the 988 line comes up

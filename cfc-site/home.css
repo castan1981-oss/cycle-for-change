@@ -104,7 +104,7 @@
 @media (hover:hover){.hero-pause:hover{background:rgba(20,18,24,.85)}}
 .hero-pause:active{transition-duration:0s;background:var(--tar)}
 /* under 700px tall the block runs tighter so the stencil stays under his chin at 360×640 and 375×667. With one caption
-   line instead of two paragraphs (Oct 27) the stencil only steps down a little there, not to 150px */
+   instead of two paragraphs (Oct 27) the stencil steps to 42vw (151px at 360, 158 at 375) instead of 32vw */
 @media (max-width:759px) and (max-height:700px){
   .hero-mark--stack{width:min(42vw,200px)}
   .hero-cap{margin-top:var(--s2)}
