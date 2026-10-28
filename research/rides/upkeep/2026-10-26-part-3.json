@@ -1,0 +1,61 @@
+[
+  {
+    "slug": "billings-mt-spoke-shop-monday-road-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Billings TrailNet events calendar (billingstrailnet.org/events-calendar/) lists \"The Spoke Shop : Road bike group ride. Mondays, 6:30PM, The Spoke Shop parking lot, 1910 Broadwater Ave.\" (fetched Oct 26, 2026).",
+    "sources": ["https://billingstrailnet.org/events-calendar/"]
+  },
+  {
+    "slug": "corpus-christi-tx-cc-led-saturday-light-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "BendMag article (watch_url) returns 403 bot-wall; @getccled Instagram requires login. No 2026-dated source found. Check @getccled on Instagram for current schedule."
+  },
+  {
+    "slug": "edmond-ok-phat-tire-tuesday-night-road-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Phat Tire Bike Shop's Oklahoma group rides page (phattirebikeshop.com/articles/oklahoma-group-rides-pg375.htm) lists \"Tuesday Night Road Ride · Tuesdays at 6:10 pm\" and the Edmond start location unchanged (fetched Oct 26, 2026).",
+    "sources": ["https://www.phattirebikeshop.com/articles/oklahoma-group-rides-pg375.htm"]
+  },
+  {
+    "slug": "kalamazoo-mi-pedal-tuesday-queer-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "Pedal Bicycle's events page (watch_url) now shows empty schedule text — the Tuesday queer ride and its 6:00 pm time no longer appear; the page lists only upcoming special events. No other source found with 2026 dates. Check @pedalbicycles on Instagram or call the South store (269) 324-5555."
+  },
+  {
+    "slug": "madison-wi-madison-queer-bike-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "OurLives Wisconsin article (watch_url) returns 403 bot-wall for automated access; GitHub source says active:true, second Wednesday monthly, but carries no 2026-dated ride confirmation. Check @madisonqueerbikeride on Instagram for current dates."
+  },
+  {
+    "slug": "missoula-mt-thursday-night-mountain-bike-group",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "thursdaynightmtbr.org has a TLS certificate error (ERR_TLS_CERT_ALTNAME_INVALID) and no content dated after 2009; Missoula Underground's ride calendar returns 403. A July 2025 Missoula Underground listing confirms the group was riding then. Check missoulaunderground.com/mugevents/category/cycling/, the Facebook group at facebook.com/groups/150671295989, or email thurs@ftml.net."
+  },
+  {
+    "slug": "philadelphia-pa-bcp-sunny-sunday-d-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "phillybikeclub.org returns a Cloudflare JS challenge blocking all automated access; no alternative source found. Check phillybikeclub.org/bcpdo/ride/calendarweekly in a browser or contact the club at info@phillybikeclub.org."
+  },
+  {
+    "slug": "pittsburgh-pa-team-decaf-tuesday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-03-05",
+    "evidence": "Western PA Bicycle Club March 5, 2026 update (wpabikeclub.com) confirms Team Decaf ran in 2026, starting the first Tuesday in April from Highland Park; the 2023 event page at the current watch_url says \"This event has passed\" (fetched Oct 26, 2026).",
+    "sources": ["https://wpabikeclub.com/ride-groups/team-decaf/"],
+    "changes": {
+      "refresh": {
+        "watch_url": "https://wpabikeclub.com/ride-groups/team-decaf/"
+      }
+    }
+  }
+]

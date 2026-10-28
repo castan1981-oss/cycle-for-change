@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "olympia-wa-gravel-happy-hour",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Race Cascadia's Gravel Happy Hour page lists the 2026-27 season starting November 8, 2026 with specific dates through March 2027; casual rides are at 9:00 am, intrepid rides have no time posted yet. Season now starts in November, not October (fetched Oct 26, 2026).",
+    "sources": ["https://www.racecascadia.com/gravel-happy-hour"],
+    "changes": {
+      "schedule": "Specific Sundays, November through March; casual rides at 9:00 am, intrepid-pace rides time posted before each ride. Routes and meeting spots posted before each ride.",
+      "season": "Nov–Mar",
+      "season_months": { "start": 11, "end": 3 },
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00"
+    }
+  },
+  {
+    "slug": "sioux-falls-sd-fab-moon-and-stars-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "FAB events page shows 'No events available' (fetched Oct 26, 2026). The ride runs May to September; the 2026 season is over. No dated signal from the 2026 season found. Check fallsareabicyclists.org/events after May 2027, or the Facebook page https://www.facebook.com/fallsareabicyclists/ for 2026 recap posts or 2027 dates."
+  },
+  {
+    "slug": "abu-dhabi-ae-yas-marina-circuit-trainyas-ladies",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "The TrainYAS Ladies page no longer shows a session time (6:00 pm gone since Oct 5, 2026) and only displays schedule dates from 2025 (August–November 2025). No 2026-27 season dates confirmed. Check Instagram @ymcofficial for a 2026-27 restart announcement, or https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-ladies when new dates appear."
+  },
+  {
+    "slug": "fountain-hills-az-mcdowell-mountain-cycles-tuesday-night-mtb",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-20",
+    "evidence": "MMC's rides page shows the October 2026 calendar with 'TNR 7:00p' on Oct 6, 13, 20 and 27 from the Four Peaks lot, same day, time and start as listed (fetched Oct 26, 2026).",
+    "sources": ["https://mcdowellmountaincycles.com/mmc-life/"]
+  },
+  {
+    "slug": "goodyear-az-west-valley-cycle-saturday-group-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "West Valley Cycle's weekly rides page now shows 'Early miles: 6:00am Main Ride 7:00am' for the Saturday A and B ride, up from the previous 5:30am and 6:30am (fetched Oct 26, 2026).",
+    "sources": ["http://westvalleycycle.net/general/"],
+    "changes": {
+      "schedule": "Every Saturday. Main ride 7:00 am from the Red Robin on McDowell Road, with optional early miles (15) at 6:00 am. The club says times can change with weather and sunrise. Details are posted every Friday on the club's Facebook group. The C and Delta groups post their own start and time there each Friday.",
+      "time_local": "7:00 am",
+      "start_hhmm": "07:00"
+    }
+  },
+  {
+    "slug": "phoenix-az-bullshifters-saturday-club-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Bullshifters' rides page lists October 2026 rides at 7:00 am on Oct 3 and 10 and 7:30 am on Oct 17, 24 and 31 from Moon Valley Park at 7th Ave and Coral Gables, matching the current record (fetched Oct 26, 2026).",
+    "sources": ["https://bullshifters.org/upcoming-bull-shifter-rides-club-events/"]
+  },
+  {
+    "slug": "prescott-az-pmba-8-to-80-sunday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-25",
+    "evidence": "PMBA's event page shows the 8 to 80 Ride at White Rock Trailhead on Oct 25, 2026 at 8:00 am–10:00 am, listed as just passed (fetched Oct 26, 2026).",
+    "sources": ["https://prescottmtb.com/event/pmba-8-to-80-ride-every-sunday-casual-c-group-ride/"]
+  },
+  {
+    "slug": "prescott-valley-az-bike-prescott-thursday-fun-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "Bike Prescott's Meetup ICS feed shows no Thursday Fun Ride in the next four weeks — upcoming events are a Monday road ride, a Wednesday tour, a Saturday road ride and a Tour de Tucson trip in November (fetched Oct 26, 2026). The club's weekly-ride-series page still describes the Thursday Fun Ride. Check meetup.com/bike-prescott-meetup/ closer to a Thursday to see if one is posted."
+  }
+]
