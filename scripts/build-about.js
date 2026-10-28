@@ -3,52 +3,65 @@
 
    The brief (Oct 28, 2026): a magazine feature in his own words, on the house's own mark, palette and type. His
    narrative is the source of truth and it lives in data/about.json, verbatim: Claude lays it out, never writes it
-   (CLAUDE.md §5), and no recovery reference goes on this page. An empty list in that file is a slot: the page shows
-   "his words go here" in its place and stays noindex until every slot is filled.
+   (CLAUDE.md §5), and no recovery reference goes on this page (a line of his that reads as one is flagged to him, never
+   cut or reworded quietly). His sections render in HIS order, under his own headings; each names the room it sits in.
+   A section marked waiting is a slot: the page shows "his words go here" and stays noindex until none is left.
 
-   The rooms, in order, and why:
-     tar       the opening: a cold open (the title and his first lines on dark, nothing else), then his Camelback
-               selfie as a letterbox band (2.39:1 on a wide screen, 4:5 on a phone) that opens as it comes into view
-     tar → concrete   "Then came the bike." The page turns from night to day here: the heading on tar, his TSR film
-               (riding over in the dark under his light, then the group at sunrise) straddling the seam, his words on
-               concrete under it
-     plaster   "The love bubble was real." AIDS/LifeCycle, a collage of his own photographs: prints laid on the grid,
-               overlapping by a column, a plaster edge between them, numbered, the place · month under the set
-     patina    the statement, type only: "I found a version of myself I actually liked hanging out with."
-     tar       10,000. The year as a lane: twelve months, a powder-rose mark on every day of the 13 rides he's doing
-               (outlined when the date is projected), the riding page's own key
-     concrete  "My mission." His words, then the three orgs as a roll call (the homepage's checked lines), the help lines
-     tar       the sign: CYCLE FOR + the blank, a visitor types and the plate takes it; the ways in
+   The rooms (the Wrenches, Oct 28: night at the start, day through the middle, dusk at the sign):
+     tar       the cold open: "About me", his name, his first lines, nothing else; then his Camelback selfie as a
+               letterbox (2.39:1 wide, 4:5 on a phone) whose top edge shows on the first screen and opens as it arrives;
+               then the opening
+     tar → concrete   bike: the page turns from night to day. The heading on tar, his first-TSR film across the seam,
+               his words on concrete
+     plaster   bubble: his AIDS/LifeCycle photographs as a staggered set on the grid (no overlap, nothing over a picture,
+               a place · month line under each), then his words, so the statement lands straight off them
+     patina    statement: one line of his, type only
+     plaster   ten: 10,000 as wide as the grid, and the year as a lane, a smeared-rose mark on every day of his dated
+               2027 rides (outlined when projected; a ride with no date isn't named here)
+     concrete  mission: his words beside the head, then the orgs as a roll call (the homepage's checked lines), help lines
+     tar       the sign: CYCLE FOR + the blank, a visitor types and the plate takes it; one way in under it
      bruise    the closing block, then the footer (its stencil hidden: the page ends on its own sign)
+     plain     a section of his the layout has no room for: a plain concrete room, his heading and words
 
-   Photos: only Robert recognisable, no cars, a place · month line under each (CLAUDE.md §10). The crops are
-   tools/about-art.py's. Styles: /about/about.css (after /chrome.css). Behaviour: /about/about.js. */
+   Photos: only Robert recognisable, no cars, a place · month line under each (CLAUDE.md §10). Crops: tools/about-art.py.
+   Styles: /about/about.css (after /chrome.css). Behaviour: /about/about.js. */
 "use strict";
 const fs = require("fs");
 const path = require("path");
 const CHROME = require("./chrome.js");
 
 const ROOT = path.join(__dirname, "..");
-const OUT = path.join(ROOT, "cfc-site", "about", "index.html");
+// ABOUT_DATA / ABOUT_OUT: a test run with filler text into a scratch copy (never committed); the page itself reads data/about.json
+const OUT = process.env.ABOUT_OUT || path.join(ROOT, "cfc-site", "about", "index.html");
 const V = CHROME.CSS_V;
-const A = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "about.json"), "utf8"));
+const A = JSON.parse(fs.readFileSync(process.env.ABOUT_DATA || path.join(ROOT, "data", "about.json"), "utf8"));
 const esc = CHROME.esc;
 const read = (rel) => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, rel), "utf8")); } catch { return null; } };
-// his words: curly quotes and apostrophes in visible text (CLAUDE.md §4), nothing else touched
+const has = (rel) => rel && fs.existsSync(path.join(ROOT, "cfc-site", rel));
+
+// his words: curly quotes and apostrophes in visible text (CLAUDE.md §4), nothing else touched. An apostrophe before a
+// digit is a closing one ('90s → ’90s), as is one inside a word (don't); an opening one follows a space or a bracket.
 const curl = (s) => esc(String(s))
   .replace(/(^|[\s(\[—–-])"/g, "$1&ldquo;").replace(/"/g, "&rdquo;")
+  .replace(/'(?=\d)/g, "&rsquo;")
   .replace(/(^|[\s(\[—–-])'/g, "$1&lsquo;").replace(/'/g, "&rsquo;");
 
 // —— slots: where his words haven't landed yet ——
 const SLOTS = [];
-function words(list, name, cls = "ab-words") {
-  const paras = (Array.isArray(list) ? list : []).map((p) => String(p || "").trim()).filter(Boolean);
-  if (!paras.length) {
-    SLOTS.push(name);
-    return `<div class="${cls} ab-slot" role="note"><p>Robert&rsquo;s words go here: ${esc(name)}.</p></div>`;
-  }
-  return `<div class="${cls}">${paras.map((p) => `<p>${curl(p)}</p>`).join("\n")}</div>`;
+const slot = (name, cls = "ab-words") => { SLOTS.push(name); return `<div class="${cls} ab-slot" role="note"><p>Robert&rsquo;s words go here: ${esc(name)}.</p></div>`; };
+// one item of his body: a paragraph, his own line breaks, or a list. Never split, merged or reordered.
+function item(x) {
+  if (x && typeof x === "object" && Array.isArray(x.lines)) return `<p>${x.lines.map(curl).join("<br>")}</p>`;
+  if (x && typeof x === "object" && Array.isArray(x.list)) return `<ul class="ab-list">${x.list.map((l) => `<li>${curl(l)}</li>`).join("")}</ul>`;
+  const t = String(x || "").trim();
+  return t ? `<p>${curl(t)}</p>` : "";
 }
+function words(sec, name, cls = "ab-words") {
+  if (!sec || sec.waiting) return slot(name, cls);
+  const out = (sec.body || []).map(item).filter(Boolean);
+  return out.length ? `<div class="${cls}">${out.join("\n")}</div>` : "";
+}
+const headingOf = (sec, fallback = "") => (sec && sec.heading ? curl(sec.heading) : fallback);
 
 // —— the stencil: CYCLE FOR, one line, no bar (the plate after it is HTML). The letter paths are the header mark's
 //    defs (#lpC …), on every page ——
@@ -63,20 +76,27 @@ const NOTE = (() => {
   return list[0] ? { date: list[0].date, href: `/rides/${list[0].slug}/#robert` } : null;
 })();
 
-// —— 1. the opening ——
+// ———————————————————————— the rooms ————————————————————————
+
+// —— the opening: the cold open, the letterbox, his first words ——
 const OPEN_IMG = {
-  wide: { base: "/img/about/open-w-2", w: 2060, h: 862 },
-  phone: { base: "/img/about/open-p-2", w: 1200, h: 1500 },
+  wide: { base: "/img/about/open-w-3", w: 1800, h: 753 },
+  phone: { base: "/img/about/open-p-3", w: 1200, h: 1500 },
   alt: "Robert mid-ride in a red helmet and a purple jersey, grinning into the camera, Camelback Mountain and a big sky behind him.",
   where: "Paradise Valley, AZ · Oct 2025",
 };
 const WIDE = "(min-width: 760px)";
-const lines = (A.open && A.open.lines) || [];
-const OPEN = `<!-- —— 1. the opening: a cold open on dark (the title, his first lines, nothing else), then the letterbox —— -->
+const cold = A.cold || {};
+const coldLines = (cold.lines || []).map((l) => String(l || "").trim()).filter(Boolean);
+function openRoom(sec) {
+  return `<!-- —— the opening: a cold open on dark ("About me", his name, his first lines), then the letterbox, then his words —— -->
 <section class="ab-open" aria-labelledby="ab-h1">
   <div class="wrap ab-open-in">
-    <h1 class="ab-h1" id="ab-h1">${esc(A.title || "About me")}</h1>
-    ${lines.length ? `<div class="ab-cold">${lines.map((l) => `<p class="ab-cold-line">${curl(l)}</p>`).join("")}</div>` : words([], "the opening lines", "ab-cold")}
+    <div class="ab-kick">
+      <h1 class="ab-h1" id="ab-h1">${esc(A.title || "About me")}</h1>
+      <p class="ab-by">Robert Castan, Phoenix</p>
+    </div>
+    ${!cold.waiting && coldLines.length ? `<div class="ab-cold">${coldLines.map((l) => `<p class="ab-cold-line">${curl(l)}</p>`).join("")}</div>` : slot("the opening lines", "ab-cold")}
   </div>
   <figure class="ab-letter" data-in="false">
     <div class="ab-letter-frame">
@@ -86,145 +106,161 @@ const OPEN = `<!-- —— 1. the opening: a cold open on dark (the title, his fi
         <source media="${WIDE}" srcset="${OPEN_IMG.wide.base}.jpg">
         <source type="image/avif" srcset="${OPEN_IMG.phone.base}.avif">
         <source type="image/webp" srcset="${OPEN_IMG.phone.base}.webp">
-        <img src="${OPEN_IMG.phone.base}.jpg" width="${OPEN_IMG.phone.w}" height="${OPEN_IMG.phone.h}" alt="${esc(OPEN_IMG.alt)}" decoding="async">
+        <img src="${OPEN_IMG.phone.base}.jpg" width="${OPEN_IMG.phone.w}" height="${OPEN_IMG.phone.h}" alt="${esc(OPEN_IMG.alt)}" fetchpriority="high" decoding="async">
       </picture>
     </div>
     <figcaption class="wrap">${esc(OPEN_IMG.where)}</figcaption>
   </figure>
-  <div class="wrap ab-open-body">
-    ${words(A.open && A.open.body, "the opening")}
-  </div>
+  ${sec ? `<div class="wrap ab-open-body">
+    ${sec.heading ? `<h2 class="ab-h2 ab-open-h">${headingOf(sec)}</h2>` : ""}
+    ${words(sec, "the opening")}
+  </div>` : ""}
 </section>
 `;
+}
 
-// —— 2. then came the bike: the page turns from night to day ——
-// his first TSR (Oct 10, 2026), recut for this page from /film/tsr-1.mp4: its first 1.7 s carried the retired halftone
-// print, so the cut starts on the group at sunrise and drops the black tail (ffmpeg -ss 1.7 -t 9, CRF 28, + a VP9 copy; frame 0 checked clean)
-const TSR = {
-  src: "/film/about-bike-2.mp4", webm: "/film/about-bike-2.webm", poster: "/film/about-bike-2.webp", width: 864, height: 1080, seconds: 9,
-  caption: "Scottsdale · Oct 2026",
-  alt: "Nine seconds from Robert’s first TSR, October 10, 2026: the group in a line along the bike lane at sunrise, the road over his bars, his selfie in kit, riding over in the dark under his bike light.",
+// —— bike: the page turns from night to day ——
+// his first TSR (Oct 10, 2026), recut from /film/tsr-1.mp4 (ffmpeg -ss 1.7, 110 frames, CRF 26, + a VP9 copy):
+//   - its first 1.7 s carried the retired halftone print (frame 0 checked clean);
+//   - from 3.6 s his edit cuts between night and day every 5–7 frames, about three flashes a second at the loop, the
+//     WCAG 2.3.1 limit (the access desk): this cut is the calm part, a dip to black about once a second, and it ends on
+//     the night shot, so every loop goes night to day;
+//   - the poster is the night frame at 3.4 s: the group and road frames have a vehicle far off, which a still can't
+//     carry (§10; the photo editor).
+const FILM = {
+  mp4: "/film/about-bike-3.mp4", webm: "/film/about-bike-3.webm", poster: "/film/about-bike-3.webp", w: 864, h: 1080, seconds: 4,
+  where: "Scottsdale · Oct 2026",
+  alt: "Four seconds from Robert’s first TSR, October 10, 2026: the group in a line along the bike lane at sunrise, the road over his bars, his selfie in kit, then riding in the dark under his bike light.",
 };
-const posterOf = (p) => p;
 const PLAY = `<svg class="abp-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><svg class="abp-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg>`;
-const FILM = TSR ? `<figure class="ab-film" data-playing="false">
-      <div class="ab-film-frame">
-        <video class="ab-film-v" muted loop playsinline disablepictureinpicture preload="none" poster="${esc(posterOf(TSR.poster))}" width="${TSR.width}" height="${TSR.height}" aria-label="${esc(TSR.alt)}">
-          <source src="${esc(TSR.webm)}" type="video/webm">
-          <source src="${esc(TSR.src)}" type="video/mp4">
-        </video>
-        <button class="ab-play" type="button" aria-label="Play, ${TSR.seconds} seconds" data-seconds="${TSR.seconds}">${PLAY}</button>
-      </div>
-      <figcaption>${esc(TSR.caption)}</figcaption>
-    </figure>` : "";
-const BIKE = `<!-- —— 2. then came the bike. The heading on tar, his film across the seam, his words on concrete: the page turns
-     from night to day here. The film plays muted when it's on screen (never under reduced motion or Save-Data) and the
-     disc always stops it (WCAG 2.2.2). —— -->
+function bikeRoom(sec) {
+  return `<!-- —— bike: the heading on tar, his film across the seam, his words on concrete. The film plays muted on a wide screen
+     when it's in view (never under reduced motion, Save-Data or a slow connection); on a phone it's a still until the
+     disc asks (§3). The disc always stops it (WCAG 2.2.2). —— -->
 <section class="ab-bike" aria-labelledby="ab-bike-h">
   <div class="ab-bike-top">
     <div class="wrap ab-bike-head">
-      <h2 class="ab-h2" id="ab-bike-h">${esc(A.bike.heading)}</h2>
+      <h2 class="ab-h2" id="ab-bike-h">${headingOf(sec)}</h2>
     </div>
   </div>
   <div class="ab-bike-low">
     <div class="wrap ab-bike-in">
-      ${FILM}
-      ${words(A.bike.body, "Then came the bike", "ab-words ab-bike-words")}
+      <figure class="ab-film" data-playing="false">
+        <div class="ab-film-frame">
+          <video class="ab-film-v" muted loop playsinline disablepictureinpicture preload="none" poster="${FILM.poster}" width="${FILM.w}" height="${FILM.h}" aria-label="${esc(FILM.alt)}">
+            <source src="${FILM.webm}" type="video/webm">
+            <source src="${FILM.mp4}" type="video/mp4">
+          </video>
+          <button class="ab-play" type="button" aria-label="Play, ${FILM.seconds} seconds" data-seconds="${FILM.seconds}">${PLAY}</button>
+        </div>
+        <figcaption>${esc(FILM.where)}</figcaption>
+      </figure>
+      ${words(sec, "Then Came the Bike", "ab-words ab-bike-words")}
     </div>
   </div>
 </section>
 `;
+}
 
-// —— 3. the love bubble: AIDS/LifeCycle, his photographs as a collage ——
-const PHOTOS = (A.bubble && A.bubble.photos) || [];
-const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+// —— bubble: AIDS/LifeCycle, his photographs as a staggered set: two columns on a wide screen (1 and 5 on the left; 2 and the pair
+//    3 and 4 on the right), each stepping down on its own, then 6, the finish, across the page; one grid in his order on a phone ——
+const PHOTOS = A.photos || [];
+const SLOT_IDS = ["a", "b", "c", "d", "e", "f"];
 function print(p, i) {
-  const n = i + 1;
-  if (!p.src) {
-    SLOTS.push(`AIDS/LifeCycle photo ${n}`);
-    return `<figure class="ab-c ab-c--${p.slot} ab-c--empty"><div class="ab-c-frame"><p>${esc(p.want)}</p></div><span class="ab-c-n" aria-hidden="true">${n}</span></figure>`;
+  const id = SLOT_IDS[i] || "x";
+  if (!p.src || !p.where || !has(p.src)) {
+    SLOTS.push(`AIDS/LifeCycle photo ${i + 1}`);
+    return `<figure class="ab-p ab-p--${id} ab-p--empty"><div class="ab-p-frame"><p>${esc(p.want)}</p></div></figure>`;
   }
   const av = String(p.src).replace(/\.jpe?g$/i, ".avif"), wb = String(p.src).replace(/\.jpe?g$/i, ".webp");
-  const has = (f) => fs.existsSync(path.join(ROOT, "cfc-site", f));
-  return `<figure class="ab-c ab-c--${p.slot}"><div class="ab-c-frame"><picture>${has(av) ? `<source type="image/avif" srcset="${esc(av)}">` : ""}${has(wb) ? `<source type="image/webp" srcset="${esc(wb)}">` : ""}<img src="${esc(p.src)}"${p.width ? ` width="${p.width}" height="${p.height}"` : ""} alt="${esc(p.alt)}" loading="lazy" decoding="async"></picture></div><span class="ab-c-n" aria-hidden="true">${n}</span></figure>`;
+  return `<figure class="ab-p ab-p--${id}"><div class="ab-p-frame"><picture>${has(av) ? `<source type="image/avif" srcset="${esc(av)}">` : ""}${has(wb) ? `<source type="image/webp" srcset="${esc(wb)}">` : ""}<img src="${esc(p.src)}"${p.width ? ` width="${p.width}" height="${p.height}"` : ""} alt="${esc(p.alt)}" loading="lazy" decoding="async"></picture></div><figcaption>${esc(p.where)}</figcaption></figure>`;
 }
-const BUBBLE = `<!-- —— 3. the love bubble. His AIDS/LifeCycle photographs, laid on the grid like prints on a table: they overlap by a
-     column, a plaster edge between them, a number on each, the place · month for each under the set. —— -->
+function bubbleRoom(sec) {
+  return `<!-- —— bubble: his AIDS/LifeCycle photographs as a staggered set on the grid, each with its own place · month line, then his
+     words, so the statement after this room lands straight off them. Nothing laid over a picture (§3). —— -->
 <section class="ab-bubble" aria-labelledby="ab-bubble-h">
   <div class="wrap ab-bubble-in">
-    <h2 class="ab-h2" id="ab-bubble-h">${esc(A.bubble.heading)}</h2>
-    ${words(A.bubble.body, "The love bubble was real", "ab-words ab-bubble-words")}
-    <div class="ab-collage">
-      ${PHOTOS.map(print).join("\n      ")}
+    <h2 class="ab-h2" id="ab-bubble-h">${headingOf(sec)}</h2>
+    <div class="ab-set">
+      <div class="ab-set-col ab-set-col--l">${[0, 4].map((i) => PHOTOS[i] ? print(PHOTOS[i], i) : "").join("")}</div>
+      <div class="ab-set-col ab-set-col--r">${PHOTOS[1] ? print(PHOTOS[1], 1) : ""}<div class="ab-set-pair">${[2, 3].map((i) => PHOTOS[i] ? print(PHOTOS[i], i) : "").join("")}</div></div>
+      ${PHOTOS[5] ? print(PHOTOS[5], 5) : ""}
     </div>
-    <ol class="ab-c-index">
-      ${PHOTOS.map((p, i) => `<li><span class="ab-c-in num">${i + 1}</span>${esc(p.where || p.want)}</li>`).join("\n      ")}
-    </ol>
+    ${words(sec, "The Love Bubble Was Real", "ab-words ab-bubble-words")}
   </div>
 </section>
 `;
+}
 
-// —— 4. the statement: type only ——
-const SAY = `<!-- —— 4. the statement. One line of his, as big as the screen allows, on patina. Nothing else in the room. —— -->
-<section class="ab-say" aria-label="In my words">
+// —— statement: one line of his, type only. A one-letter word keeps the next word with it on the line ("I actually") ——
+function statementRoom(sec) {
+  const t = curl(String(sec.text || "").trim()).replace(/(^|\s)(I|a|A) /g, "$1$2&nbsp;");
+  return `<!-- —— the statement. One line of his, as big as the screen allows, on patina. Nothing else in the room. —— -->
+<section class="ab-say">
   <div class="wrap">
-    <p class="ab-say-line" data-words>${curl(A.statement)}</p>
+    <p class="ab-say-line">${t}</p>
   </div>
 </section>
 `;
+}
 
-// —— 5. 10,000: the year as a lane ——
+// —— ten: 10,000 and the year as a lane ——
 const RIDING = CHROME.RIDING || [];
+const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const dayOfYear = (ymd) => { const [y, m, d] = ymd.split("-").map(Number); return (Date.UTC(y, m - 1, d) - Date.UTC(y, 0, 1)) / 86400000; };
+// a ride with no 2027 date yet isn't on the lane and isn't named here (no recovery reference on this page)
 const dated = RIDING.filter((r) => /^2027-\d{2}-\d{2}$/.test(r.start));
-// a ride with no 2027 date yet isn't on the lane, and isn't named here: no recovery reference on this page (the brief)
+const pct = (d) => (d / 365 * 100).toFixed(3) + "%";
 const marks = dated.map((r) => {
   const a = dayOfYear(r.start), b = dayOfYear(r.end && /^2027/.test(r.end) ? r.end : r.start) + 1;
-  const proj = r.status !== "confirmed";
-  return `<i class="ab-lane-mark${proj ? " ab-lane-mark--proj" : ""}" style="--a:${(a / 365 * 100).toFixed(3)}%;--b:${(b / 365 * 100).toFixed(3)}%"></i>`;
+  return `<i class="ab-lane-mark${r.status !== "confirmed" ? " ab-lane-mark--proj" : ""}" style="--a:${pct(a)};--b:${pct(b)}"></i>`;
 }).join("");
-// each month's label at its first day, so the marks and the months line up (a short label on a phone)
-const months = MON.map((m, i) => `<span class="ab-lane-m" style="--a:${(dayOfYear(`2027-${String(i + 1).padStart(2, "0")}-01`) / 365 * 100).toFixed(3)}%"><span class="l">${m}</span><span class="s">${m[0]}</span></span>`).join("");
-const TEN = `<!-- —— 5. 10,000. The number once, as wide as the screen; under it the year as a lane, a powder-rose mark on every day of
-     his 2027 rides that have a date (outlined: the date is placed on the 2026 weekend). The training count stays in the tally line,
-     never next to the 10,000 (CLAUDE.md §1). —— -->
+const months = MON.map((m, i) => `<span class="ab-lane-m" style="--a:${pct(dayOfYear(`2027-${String(i + 1).padStart(2, "0")}-01`))}"><span class="l">${m}</span><span class="s">${m[0]}</span></span>`).join("");
+const rideList = dated.map((r) => `<li>${esc(r.name)}, ${esc(r.date)}${r.status !== "confirmed" ? " (placed on the 2026 weekend)" : ""}</li>`).join("");
+function tenRoom(sec) {
+  return `<!-- —— ten. The number once, as wide as the grid; under it the year as a lane, a mark on every day of his dated 2027 rides
+     (outlined: placed on the 2026 weekend). The training count stays in the tally line, never next to the 10,000 (§1). —— -->
 <section class="ab-ten" aria-labelledby="ab-ten-h">
   <div class="wrap ab-ten-in">
     <h2 class="ab-ten-h" id="ab-ten-h"><span class="ab-ten-n num">10,000</span> <span class="ab-ten-t">miles in 2027, all on the bike.</span></h2>
-    ${A.miles && A.miles.heading ? `<p class="ab-ten-say">${curl(A.miles.heading)}</p>` : ""}
-    <figure class="ab-lane" aria-label="The 2027 rides I&rsquo;m doing, across the year">
+    ${sec && sec.heading ? `<p class="ab-ten-say">${headingOf(sec)}</p>` : ""}
+    <figure class="ab-lane">
       <div class="ab-lane-road" aria-hidden="true">${marks}</div>
       <div class="ab-lane-months" aria-hidden="true">${months}</div>
-      <figcaption class="ab-lane-key"><span><i class="ab-k"></i>The organizer&rsquo;s date</span><span><i class="ab-k ab-k--proj"></i>Placed on the 2026 weekend</span></figcaption>
+      <ul class="sr">${rideList}</ul>
+      <figcaption class="ab-lane-key"><span class="sr">The 2027 rides I&rsquo;m doing. </span><span aria-hidden="true"><i class="ab-k"></i>The organizer&rsquo;s date</span><span aria-hidden="true"><i class="ab-k ab-k--proj"></i>Placed on the 2026 weekend</span></figcaption>
     </figure>
-    <p class="ab-ten-acts"><a class="link link--bone" href="/events/2027/riding/">All my 2027 rides</a></p>
-    ${words(A.miles && A.miles.body, "the 10,000-mile year", "ab-words ab-ten-words")}
+    <p class="ab-ten-acts"><a class="link" href="/events/2027/riding/">All my 2027 rides</a>${NOTE ? `<a class="link" href="${esc(NOTE.href)}">Read the last ride</a>` : ""}</p>
+    ${sec ? words(sec, "the 10,000-mile year", "ab-words ab-ten-words") : ""}
   </div>
 </section>
 `;
+}
 
-// —— 6. the mission ——
+// —— mission: his words beside the head, then the orgs as a roll call ——
 const ORGS = [
-  { name: "one&middot;n&middot;ten", line: "Phoenix nonprofit for LGBTQ+ youth ages 11 to 24. Safe spaces, housing, leadership.", href: "https://onenten.org", act: "Give to one&middot;n&middot;ten" },
-  { name: "Los Angeles LGBT Center", line: "Health, housing and advocacy for LGBTQ+ people.", href: "https://www.lalgbtcenter.org", act: "Give to the Center" },
-  { name: "San Francisco AIDS Foundation", line: "HIV, sexual health and <span class=\"nowrap\">harm-reduction</span> services.", href: "https://www.sfaf.org", act: "Give to SFAF" },
+  { name: "one&middot;n&middot;ten", line: "Phoenix nonprofit for LGBTQ+ youth ages 11 to 24. Safe spaces, housing, leadership.", acts: [["https://onenten.org", "Give to one&middot;n&middot;ten"]] },
+  { name: "Los Angeles LGBT Center", line: "Health, housing and advocacy for LGBTQ+ people.", acts: [["https://centerrideout.lalgbtcenter.org/en/", "Sign up with the Center"], ["https://www.lalgbtcenter.org", "Give to the Center"]] },
+  { name: "San Francisco AIDS Foundation", line: "HIV, sexual health and <span class=\"nowrap\">harm-reduction</span> services.", acts: [["https://www.sfaf.org", "Give to SFAF"]] },
 ];
-const MISSION = `<!-- —— 6. the mission. His words beside the head, then the orgs as a roll call: the homepage's checked lines (research/
-     events/2026-10-26-homepage-facts.md), the money through their own pages, the help lines in the room. —— -->
+function missionRoom(sec) {
+  return `<!-- —— mission. His words beside the head, then the orgs as a roll call: the homepage's checked lines (research/events/
+     2026-10-26-homepage-facts.md), the money through their own pages (Center Ride Out first, §5), the help lines. —— -->
 <section class="ab-mission" aria-labelledby="ab-mission-h">
   <div class="wrap ab-mission-in">
-    <h2 class="ab-h2 ab-mission-h" id="ab-mission-h">${esc(A.mission.heading)}</h2>
-    <div class="ab-mission-body">
-      ${words(A.mission.body, "My mission", "ab-words ab-mission-words")}
-      <div class="ab-roll">
-        <p class="eyebrow ab-roll-k">The orgs I ride for.</p>
-        <ul class="ab-roll-list">
-          ${ORGS.map((o) => `<li class="ab-org"><h3 class="ab-org-h">${o.name}</h3><p class="ab-org-p">${o.line}</p><a class="link" href="${o.href}" target="_blank" rel="noopener noreferrer">${o.act}</a></li>`).join("\n          ")}
-        </ul>
+    <h2 class="ab-h2 ab-mission-h" id="ab-mission-h">${headingOf(sec)}</h2>
+    ${words(sec, "My Mission", "ab-words ab-mission-words")}
+    <div class="ab-roll">
+      <p class="eyebrow ab-roll-k">The orgs I ride for.</p>
+      <ul class="ab-roll-list">
+        ${ORGS.map((o) => `<li class="ab-org"><h3 class="ab-org-h">${o.name}</h3><div class="ab-org-b"><p class="ab-org-p">${o.line}</p><p class="ab-org-acts">${o.acts.map(([h, t]) => `<a class="link" href="${h}" target="_blank" rel="noopener noreferrer">${t}</a>`).join("")}</p></div></li>`).join("\n        ")}
+      </ul>
+      <div class="ab-roll-foot">
         <p class="ab-roll-note">You sign up or give on their page. None of it comes through me.</p>
         <div class="ab-help">
           <span class="eyebrow">If it&rsquo;s now</span>
-          <span><a href="tel:988"><b>988</b> call or text</a>, any hour &middot; <span class="nowrap"><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span> or text START to <span class="nowrap">678-678</span></span>
+          <span class="ab-help-l"><a href="tel:988"><b>988</b> call or text</a>, any hour</span>
+          <span class="ab-help-l"><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a> or text START to <span class="nowrap">678-678</span></span>
           <a class="link" href="/resources/">Help lines, by age</a>
         </div>
       </div>
@@ -232,48 +268,59 @@ const MISSION = `<!-- —— 6. the mission. His words beside the head, then the
   </div>
 </section>
 `;
+}
 
-// —— 7. the sign and the ways in ——
-const WAYS = [
-  { href: "/cyclefor/", t: "Say it on video. Five seconds." },
-  { href: CHROME.INSTAGRAM, t: "Follow on Instagram", ext: true },
-  NOTE ? { href: NOTE.href, t: "Read the last ride" } : null,
-  { href: "/events/2027/riding/", t: "All my 2027 rides" },
-].filter(Boolean);
-const SIGN = `<!-- —— 7. CYCLE FOR + the blank. A visitor types and the plate takes the word; nothing leaves the page. Then the ways in;
-     the closing block under it carries Ride with me and Find a group ride. —— -->
-<section class="ab-sign" aria-labelledby="ab-sign-h">
-  <div class="wrap ab-sign-in">
-    <h2 class="ab-sign-h" id="ab-sign-h">${MARK_WORD("ab-sign-mark")}<span class="ab-sign-plate" data-empty="true" data-sign-plate aria-hidden="true"></span><span class="sr" id="signSr">Cycle for</span></h2>
-    <div class="ab-sign-form">
-      <label class="ab-sign-q" for="who">Who do you cycle for?</label>
-      <input class="ab-sign-input" id="who" type="text" maxlength="22" autocomplete="off" placeholder="Type it. The sign changes." data-sign-input>
-      <p class="ab-sign-note">Nothing to pay, nothing to join. <button class="ab-sign-reset" type="button" data-sign-reset hidden>Clear the sign</button></p>
-    </div>
-    <ul class="ab-ways">
-      ${WAYS.map((w) => `<li><a class="ab-way" href="${esc(w.href)}"${w.ext ? ' target="_blank" rel="noopener noreferrer"' : ""}><span>${w.t}</span><span class="ab-way-go" aria-hidden="true">&rarr;</span></a></li>`).join("\n      ")}
-    </ul>
+// —— a section of his the layout has no room for ——
+function plainRoom(sec, i) {
+  return `<section class="ab-plain"${sec.heading ? ` aria-labelledby="ab-plain-${i}"` : ""}>
+  <div class="wrap ab-plain-in">
+    ${sec.heading ? `<h2 class="ab-h2" id="ab-plain-${i}">${headingOf(sec)}</h2>` : ""}
+    ${words(sec, sec.heading || "a section")}
   </div>
 </section>
 `;
+}
+
+// —— the sign: CYCLE FOR + the blank, and one way in. Tapping the blank puts the cursor in the field ——
+const SIGN = `<!-- —— the sign. A visitor types and the plate takes the word; nothing leaves the page. One way in under it (what the sign
+     asks, on video); the closing block under the room carries Ride with me and Find a group ride. —— -->
+<section class="ab-sign" aria-labelledby="ab-sign-h">
+  <div class="wrap ab-sign-in">
+    <h2 class="ab-sign-h" id="ab-sign-h">${MARK_WORD("ab-sign-mark")}<label class="ab-sign-plate" for="who" data-empty="true" data-sign-plate aria-hidden="true"></label><span class="sr" id="signSr">Cycle for</span></h2>
+    <div class="ab-sign-form">
+      <label class="ab-sign-q" for="who">Who do you cycle for?</label>
+      <input class="ab-sign-input" id="who" type="text" maxlength="22" autocomplete="off" enterkeyhint="done" placeholder="Type it. The sign changes." data-sign-input>
+      <p class="ab-sign-note">Nothing to pay, nothing to join. <button class="ab-sign-reset" type="button" data-sign-reset hidden>Clear the sign</button></p>
+      <p class="ab-sign-more"><a class="link" href="/cyclefor/">Say it on video. Five seconds.</a></p>
+    </div>
+  </div>
+</section>
+`;
+
+// ———————————————————————— the page ————————————————————————
+const ROOMS = { open: null, bike: bikeRoom, bubble: bubbleRoom, statement: statementRoom, ten: tenRoom, mission: missionRoom };
+const secs = Array.isArray(A.sections) ? A.sections : [];
+const openSec = secs.find((s) => s.room === "open") || null;
+let body = openRoom(openSec);
+let tenDone = false;
+secs.forEach((s, i) => {
+  if (s.room === "open") return;
+  if (s.room === "ten") tenDone = true;
+  body += "\n" + (ROOMS[s.room] ? ROOMS[s.room](s, i) : plainRoom(s, i));
+});
+if (!tenDone) body += "\n" + tenRoom(null);   // the 10,000 is on the page whether or not he writes a section for it
+body += "\n" + SIGN;
 
 const LD = [
   { "@context": "https://schema.org", "@type": "AboutPage", name: "About me", url: "https://cycleforchange.org/about/", mainEntity: { "@id": "https://cycleforchange.org/about/#robert" }, isPartOf: { "@type": "WebSite", name: "Cycle for Change", url: "https://cycleforchange.org/" } },
   { "@context": "https://schema.org", "@type": "Person", "@id": "https://cycleforchange.org/about/#robert", name: "Robert Castan", url: "https://cycleforchange.org/about/", homeLocation: { "@type": "Place", name: "Phoenix, Arizona" }, sameAs: [CHROME.INSTAGRAM, CHROME.STRAVA] },
 ];
 
-const body = `${OPEN}
-${BIKE}
-${BUBBLE}
-${SAY}
-${TEN}
-${MISSION}
-${SIGN}`;
-
 const noindex = SLOTS.length > 0;
 const head = CHROME.head({
-  title: "About me",
-  description: "Robert Castan, in his own words: how the bike changed his life, the AIDS/LifeCycle years, the 10,000 miles in 2027 and the rides he does them for.",
+  title: "About Robert Castan",
+  // the homepage's share line, word for word (the brand gate: nothing invented)
+  description: "Cycling changed my life. I ride 10,000 miles in 2027 and write every ride down. The money goes through the orgs’ own rides.",
   url: "/about/",
   ogType: "profile",
   styles: ["/about/about.css"],

@@ -28,24 +28,33 @@ test("the never-list (CLAUDE.md §4)", () => {
 });
 
 test("a slot keeps the page out of search; a finished page is indexable", () => {
-  const empty = (l) => !(Array.isArray(l) && l.some((p) => String(p || "").trim()));
-  const open = [A.open.lines, A.open.body, A.bike.body, A.bubble.body, A.miles.body, A.mission.body].some(empty)
-    || (A.bubble.photos || []).some((p) => !p.src);
+  const open = (A.cold && A.cold.waiting) || (A.sections || []).some((x) => x.waiting)
+    || (A.photos || []).some((p) => !p.src || !p.where);
   if (open) {
     assert.match(html, /<meta name="robots" content="noindex, follow">/);
-    assert.match(html, /class="[^"]*ab-slot/);
+    assert.match(html, /class="[^"]*ab-slot|ab-p--empty/);
   } else {
     assert.ok(!/noindex/.test(html));
-    assert.ok(!/ab-slot|ab-c--empty/.test(html), "a slot is still showing");
+    assert.ok(!/ab-slot|ab-p--empty/.test(html), "a slot is still showing");
   }
 });
 
-test("his words are on the page as he wrote them (curly quotes only)", () => {
-  const straight = (s) => s.replace(/&rsquo;|&lsquo;|’|‘/g, "'").replace(/&ldquo;|&rdquo;|“|”/g, '"').replace(/&amp;/g, "&");
+test("his words are on the page as he wrote them (curly quotes only), in his order, under his headings", () => {
+  const straight = (x) => x.replace(/&rsquo;|&lsquo;|’|‘/g, "'").replace(/&ldquo;|&rdquo;|“|”/g, '"').replace(/&amp;/g, "&").replace(/&nbsp;|\u00a0/g, " ");
   const page = straight(visible.replace(/\s+/g, " "));
-  const all = [A.statement, ...A.open.lines, ...A.open.body, ...A.bike.body, ...A.bubble.body, ...A.miles.body, ...A.mission.body]
+  const flat = (b) => (b || []).flatMap((x) => (x && x.lines) || (x && x.list) || [x]);
+  const all = [...((A.cold && A.cold.lines) || []), ...(A.sections || []).flatMap((x) => [x.heading, x.text, ...flat(x.body)])]
     .filter((p) => String(p || "").trim());
-  for (const p of all) assert.ok(page.includes(straight(String(p).replace(/\s+/g, " ").trim())), `missing or changed: ${String(p).slice(0, 60)}`);
+  let at = 0;
+  for (const p of all) {
+    const i = page.indexOf(straight(String(p).replace(/\s+/g, " ").trim()), at);
+    assert.ok(i >= 0, `missing, changed or out of order: ${String(p).slice(0, 60)}`);
+    at = i;
+  }
+});
+
+test("curly quotes: a year keeps its apostrophe the right way round", () => {
+  assert.ok(!/&lsquo;\d/.test(html), "an opening quote before a digit ('90s)");
 });
 
 test("one h1, a Person for the bylines, every picture described and sized", () => {
