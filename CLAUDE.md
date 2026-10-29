@@ -506,9 +506,9 @@ Oct 27). Streets and lit paths only: no dead-end detours, no climbs.
 - **The poster** (Oct 27, 2026): `#poster` on the page, after the basics — the words first on a phone, the poster beside them
   on desktop with a hairline edge, "Save the poster" plus the Story size and the 8.5 × 11 print PDF (QR to `/fl`, a third
   of an inch clear of the paper edge). One poster, three sizes and the reel overlays, all from
-  `python3 tools/fruitloop-chalk/make.py <N>` (`-5` files now). **What the flyer says is Robert's call** (Oct 27): starts
-  Friday, Dec 11; meet 5:30 pm, roll 6:00 pm; the rainbow crosswalk, Central Ave and Portland St; 14 flat miles, 10–12 mph
-  pace; nobody gets dropped; a front and rear light; the link and @cycl_eforchange. **Never on the flyer: "free," "every
+  `python3 tools/fruitloop-chalk/make.py <N>` (`-6` files now). **What the flyer says is Robert's call** (Oct 27): starts
+  Friday, Dec 11; meet 5:30 pm, roll 6:00 pm; the rainbow crosswalk, Central Ave and Portland St; 14 flat miles, 14–16 mph
+  pace (Robert, Oct 29: 10–12 was "way slow"); nobody gets dropped; a front and rear light; the link and @cycl_eforchange. **Never on the flyer: "free," "every
   Friday," "18 and up," "hosted by," or "the ride ends by riding it."** The page leaves them out too (Robert, Oct 27: "take
   all three off"); its share card is `og-fruitloop-3.jpg` (`tools/fruitloop-chalk/og.py`). The kicker (inside the logo) is "A queer night ride through Phoenix history"; the
   `<title>`, og/twitter titles and JSON-LD keep "a queer night ride in Phoenix" for search.
@@ -1085,3 +1085,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-27 — The Fruit Loop's photo rule comes off everything (Robert): the page's How it works and its "why" line, the directory record's visitor notes, place card 6, the how-it-works slide, the Photos OK sticker.
 - 2026-10-28 — `#road` gets a film again: Robert's drone reel cut to 8 s, silent, 16:9 (`tools/road-film.py`, `road-film-3`: the drone over him on the desert road, the lookout, the mountain road; the sunset bike, the canal path, the bridge and the side-on shot left out), under the 10,000 with today's player (`smallFilm()`); `CSS_V` 58.
 - 2026-10-28 — The count is bike miles only (runs and swims were being added in) and restarts by itself at midnight on Jan 1, 2027 in Phoenix (`tools/lib/season.js`, both wordings on every page, `tools/test/strava-count.test.js`); the `/tonight/` Flyer redrawn in Overpass and After Hours without the never-list line it carried; `CSS_V` 59. (Made Oct 26 as #211, rebuilt on top of the road film.)
+- 2026-10-29 — The Fruit Loop's pace is about 14 to 16 mph (Robert: 10 to 12 was "way slow"): the poster in all three sizes (`-6`), the page's basics and How it works, the directory record (host update), the how-it-works slide, the 11 × 17 poster and reel sticker 4. The Story survey's "how fast" choices are left as asked.

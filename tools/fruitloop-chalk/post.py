@@ -32,7 +32,7 @@ def html(bg,logo,W=1080,Hh=1350,logo_top=22,left_top=430,left2_top=915,right_top
     left2=''.join([
       blk('14 FLAT\nMILES',66,C['cyan'],14,fit=LFIT2,sw='3.6px',lh=1.0),
       scr(250,C['cyan'],16),
-      blk('10–12 MPH\nPACE',52,C['orange'],15,fit=LFIT2,sw='3.2px',lh=1.04,mt=6),
+      blk('14–16 MPH\nPACE',52,C['orange'],15,fit=LFIT2,sw='3.2px',lh=1.04,mt=6),
       scr(240,C['purple'],33),
     ])
     foot=''.join([
