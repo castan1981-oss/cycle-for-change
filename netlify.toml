@@ -150,6 +150,27 @@
   status = 301
   force = true
 
+# Oct 29, 2026: the Cycle for Change print and social kit (tools/cfc-kit/). /gr and /2027 are the flyer's QR codes,
+# /2027 is the 11 x 17 poster's too and the link the 2027-rides post prints, /cf is the "Who do you cycle for?" sticker's.
+# Tagged so the kit's scans read apart from everything else in GA4.
+[[redirects]]
+  from = "/gr"
+  to = "/rides/?utm_source=cfc-kit&utm_medium=print&utm_campaign=find-a-ride"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/2027"
+  to = "/events/2027/riding/?utm_source=cfc-kit&utm_medium=short-link&utm_campaign=2027-rides"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/cf"
+  to = "/cyclefor/?utm_source=cfc-kit&utm_medium=sticker&utm_campaign=cyclefor"
+  status = 302
+  force = true
+
 [[redirects]]
   from = "/shopride"
   to = "/rides/scottsdale-az-bicycle-haus-friday-shop-ride/#reviews"
