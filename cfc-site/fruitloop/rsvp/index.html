@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Coming to the Fruit Loop?</title>
+  <meta name="description" content="Tell Robert if you’re riding the Fruit Loop. Meet 5:30 pm at the rainbow crosswalk, Central and Portland. Roll at 6:00.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://cycleforchange.org/fruitloop/rsvp/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cycle for Change">
+  <meta property="og:url" content="https://cycleforchange.org/fruitloop/rsvp/">
+  <meta property="og:title" content="Coming to the Fruit Loop?">
+  <meta property="og:description" content="Meet 5:30 pm at the rainbow crosswalk, Central and Portland. Roll at 6:00. One tap: yes, no, or keep me posted.">
+  <meta property="og:image" content="https://cycleforchange.org/og-fruitloop-3.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Fruit Loop: a queer night ride through Phoenix history. Starts Friday, Dec 11. Meet 5:30 pm at the rainbow crosswalk, Central and Portland.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Coming to the Fruit Loop?">
+  <meta name="twitter:description" content="Meet 5:30 pm at the rainbow crosswalk, Central and Portland. Roll at 6:00. One tap: yes, no, or keep me posted.">
+  <meta name="twitter:image" content="https://cycleforchange.org/og-fruitloop-3.jpg">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-180.png">
+  <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/chrome.css?v=59">
+  <link rel="stylesheet" href="/fruitloop/fruitloop.css?v=59">
+  <link rel="stylesheet" href="/fruitloop/rsvp/rsvp.css?v=1">
+  <script>document.documentElement.classList.add("fl-js")</script>
+</head>
+<body class="theme-dark fl-page fl-rsvp-page">
+<!-- The Fruit Loop RSVP (Oct 30, 2026). Robert: "click this link yes I'm coming. No, I'm not that's it", then a maybe that
+     asks for contact details and nothing else does. Yes and no go straight to the ride page. /rsvp points here.
+     Works without the script: the buttons post to /api/rsvp and land on /fruitloop/; the keep-posted form shows. -->
+<main id="main" class="fl fl-rsvp">
+  <div class="fl-rsvp-in">
+    <a class="fl-rsvp-logo" href="/fruitloop/">
+      <picture>
+        <source type="image/avif" srcset="/fruitloop/logo-1.avif">
+        <source type="image/webp" srcset="/fruitloop/logo-1.webp">
+        <img src="/fruitloop/logo-1.jpg" width="1993" height="789" fetchpriority="high" alt="The Fruit Loop: a queer night ride through Phoenix history">
+      </picture>
+    </a>
+    <div class="fl-xwalk fl-rsvp-xwalk" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+    <div class="fl-rsvp-top">
+      <p class="fl-rsvp-date" data-fl-next>Fri, Dec 11</p>
+      <p class="fl-rsvp-when">Meet 5:30 pm at the rainbow crosswalk, Central and Portland. Roll at 6:00.</p>
+      <h1 class="fl-rsvp-q">You coming?</h1>
+    </div>
+
+    <form class="fl-rsvp-pick" method="post" action="/api/rsvp" data-fl-pick>
+      <input type="hidden" name="d" value="2026-12-11" data-fl-d>
+      <button class="btn btn--bone fl-rsvp-btn" type="submit" name="a" value="going">Yes, I’m coming</button>
+      <button class="btn btn--ghost fl-rsvp-btn" type="submit" name="a" value="not">Can’t make it</button>
+      <a class="btn btn--ghost fl-rsvp-btn" href="#posted" data-fl-maybe>Maybe. Keep me posted</a>
+    </form>
+    <p class="fl-rsvp-said" data-fl-said aria-live="polite" hidden></p>
+
+    <section class="fl-rsvp-posted" id="posted" aria-labelledby="posted-h" data-fl-posted>
+      <h2 id="posted-h">Keep me posted</h2>
+      <p>Leave your first name and an email or a phone number. I’ll let you know when rides are coming up. That’s all it’s for.</p>
+      <form method="post" action="/api/rsvp" novalidate data-fl-form>
+        <input type="hidden" name="a" value="maybe">
+        <input type="hidden" name="d" value="2026-12-11" data-fl-d>
+        <div class="fl-rsvp-f">
+          <label for="fl-name">First name</label>
+          <input class="field" id="fl-name" name="name" type="text" autocomplete="given-name" maxlength="60" required>
+        </div>
+        <div class="fl-rsvp-f">
+          <label for="fl-email">Email</label>
+          <input class="field" id="fl-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" aria-describedby="fl-either">
+        </div>
+        <div class="fl-rsvp-f">
+          <label for="fl-phone">Phone</label>
+          <input class="field" id="fl-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" aria-describedby="fl-either">
+        </div>
+        <p class="fl-rsvp-hint" id="fl-either">Email or phone. One is enough.</p>
+        <div class="fl-rsvp-hp" aria-hidden="true">
+          <label for="fl-website">Leave this empty</label>
+          <input id="fl-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="fl-rsvp-err" role="alert" data-fl-err hidden></p>
+        <button class="btn btn--bone fl-rsvp-btn" type="submit">Keep me posted</button>
+      </form>
+      <p class="fl-rsvp-fine">Only I see it. To come off the list, DM <a href="https://www.instagram.com/cycl_eforchange" rel="noopener">@cycl_eforchange</a>. <a href="/privacy/#fruit-loop">How it’s kept</a>.</p>
+    </section>
+
+    <p class="fl-rsvp-more"><a class="link" href="/fruitloop/">What’s the Fruit Loop?</a></p>
+  </div>
+</main>
+<script src="/fruitloop/rsvp/rsvp.js?v=1" defer></script>
+</body>
+</html>

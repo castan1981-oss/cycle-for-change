@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Fruit Loop RSVPs</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="apple-mobile-web-app-title" content="Fruit Loop">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-180.png">
+  <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/chrome.css?v=59">
+  <link rel="stylesheet" href="/fruitloop/fruitloop.css?v=59">
+  <link rel="stylesheet" href="/fruitloop/rsvp/rsvp.css?v=1">
+</head>
+<body class="theme-dark fl-page">
+<!-- Robert's tally for the Fruit Loop RSVP (Oct 30, 2026). Opens with his private link (/fruitloop/tally/#k=…); the key
+     never leaves the hash except as a header to /api/rsvp, so it isn't in analytics, logs or referrers. Not linked
+     from anywhere, noindex. -->
+<main id="main" class="fl fl-tally">
+  <div class="fl-tally-in">
+    <p class="fl-tally-k">The Fruit Loop</p>
+    <h1>Who’s coming</h1>
+
+    <p class="fl-tally-lock" data-lock hidden>This page opens with your private link. It’s in the Cycle for Change project, in the Fruit Loop RSVP doc.</p>
+
+    <div data-body hidden>
+      <section class="fl-tally-next" aria-labelledby="t-next">
+        <p class="fl-tally-k" id="t-next">Next ride</p>
+        <p class="fl-tally-date" data-next>Fri, Dec 11</p>
+        <div class="fl-tally-nums">
+          <div class="is-going"><b data-n="going">0</b><span>Coming</span></div>
+          <div><b data-n="maybe">0</b><span>Maybe</span></div>
+          <div><b data-n="not">0</b><span>Can’t make it</span></div>
+        </div>
+        <p class="fl-tally-status" data-status aria-live="polite"></p>
+        <div class="fl-tally-acts">
+          <button class="btn btn--bone btn--sm" type="button" data-refresh>Refresh</button>
+          <button class="btn btn--ghost btn--sm" type="button" data-copy-link>Copy the RSVP link</button>
+        </div>
+      </section>
+
+      <section class="fl-tally-sec" aria-labelledby="t-posted">
+        <h2 id="t-posted">Keep me posted <span data-ccount></span></h2>
+        <p class="fl-tally-empty" data-cempty hidden>Nobody yet.</p>
+        <div class="fl-tally-acts" data-cacts hidden>
+          <button class="btn btn--ghost btn--sm" type="button" data-copy="email">Copy the emails</button>
+          <button class="btn btn--ghost btn--sm" type="button" data-copy="phone">Copy the numbers</button>
+        </div>
+        <ul class="fl-tally-rows" data-contacts></ul>
+      </section>
+
+      <section class="fl-tally-sec" aria-labelledby="t-fridays">
+        <h2 id="t-fridays">By Friday</h2>
+        <p class="fl-tally-empty" data-dempty hidden>No answers yet.</p>
+        <ul class="fl-tally-rows" data-dates></ul>
+      </section>
+
+      <p class="fl-tally-note">Coming and can’t make it are just counts, nothing about the person. One answer per phone: a second tap changes it instead of adding one. Maybe asks for a name and an email or a phone, and those show up here. The link you post is cycleforchange.org/rsvp. This page’s link is the key, so keep it to yourself.</p>
+    </div>
+  </div>
+</main>
+<script src="/fruitloop/tally/tally.js?v=1" defer></script>
+</body>
+</html>

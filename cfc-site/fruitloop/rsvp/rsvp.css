@@ -1,0 +1,68 @@
+@layer section{
+/* Cycle for Change — the Fruit Loop RSVP (/fruitloop/rsvp/) and Robert's tally (/fruitloop/tally/), Oct 30, 2026.
+   Loaded after /chrome.css and /fruitloop/fruitloop.css (the night ground, the crosswalk colors). One narrow column,
+   the ride's logo on its own paper, the question and three big taps on a phone's first screen. Square corners, no
+   shadows, Overpass only. */
+
+body.fl-rsvp-page,body:has(.fl-tally){min-height:100vh;min-height:100svh}   /* the night ground runs to the foot of a short page */
+.fl-rsvp-in{width:100%;max-width:560px;margin:0 auto;padding:0 var(--gut) var(--s5)}
+.fl-rsvp-logo{display:block;background:#F5F3EE;margin-inline:calc(-1 * var(--gut))}
+.fl-rsvp-logo img{display:block;width:100%;height:auto}
+@media (min-width:600px){.fl-rsvp-in{padding-top:var(--s4)}.fl-rsvp-logo{margin-inline:0}}
+.fl-rsvp-xwalk{max-width:none;margin:14px 0 0;padding:0;gap:8px}
+.fl-rsvp-xwalk i{height:10px}
+
+.fl-rsvp-top{margin-top:var(--s3)}
+.fl-rsvp-top p{margin:0}
+.fl-rsvp-date{font:900 clamp(44px,12vw,64px)/.95 var(--display);letter-spacing:-.035em;color:var(--paper)}
+.fl-rsvp-when{margin-top:10px !important;font-size:18px;line-height:1.4;font-weight:700;color:var(--bone)}
+.fl-rsvp-q{margin:var(--s3) 0 0;font:800 clamp(34px,9vw,48px)/1 var(--display);letter-spacing:-.03em;color:var(--paper)}
+
+.fl-rsvp-pick{display:grid;gap:12px;margin-top:20px}
+.fl-rsvp-btn{width:100%;min-height:60px;white-space:normal;text-align:center}
+.fl-rsvp-said{margin:14px 0 0;font-size:16px;font-weight:700;color:var(--dust)}
+
+/* keep me posted: opens under the three taps (shown from the start when the script can't run) */
+.fl-js .fl-rsvp-posted{display:none}
+.fl-js .fl-rsvp-posted.is-open{display:block}
+.fl-rsvp-posted{margin-top:var(--s4);border-top:2px solid var(--paper);padding-top:var(--s3);scroll-margin-top:16px}
+.fl-rsvp-posted h2{margin:0;font:800 clamp(28px,7vw,36px)/1.05 var(--display);letter-spacing:-.03em;color:var(--paper)}
+.fl-rsvp-posted > p{margin:12px 0 0;font-size:17px;line-height:1.5;color:var(--bone)}
+.fl-rsvp-posted form{display:grid;gap:16px;margin-top:var(--s3)}
+.fl-rsvp-f{display:grid;gap:6px}
+.fl-rsvp-f label{font:var(--label);color:var(--dust)}
+.fl-rsvp-hint{margin:-6px 0 0;font-size:15px;color:var(--dust)}
+.fl-rsvp-err{margin:0;font-size:16px;font-weight:700;color:var(--creosote-lift)}
+.fl-rsvp-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.fl-rsvp-fine{margin:16px 0 0;font-size:15px;line-height:1.5;color:var(--dust)}
+.fl-rsvp-fine a{color:var(--bone)}
+.fl-rsvp-more{margin:var(--s4) 0 0}
+.fl-rsvp .link{color:var(--paper)}
+
+/* —— the tally: Robert's own page —— */
+.fl-tally-in{width:100%;max-width:720px;margin:0 auto;padding:var(--s4) var(--gut) var(--s6)}
+.fl-tally h1{margin:0;font:800 clamp(30px,7vw,44px)/1 var(--display);letter-spacing:-.03em;color:var(--paper)}
+.fl-tally h2{margin:0;font:800 clamp(24px,5vw,30px)/1.1 var(--display);letter-spacing:-.02em;color:var(--paper)}
+.fl-tally p{margin:0}
+.fl-tally-k{font:var(--label);color:var(--dust)}
+.fl-tally-next{margin-top:var(--s4);border-top:2px solid var(--paper);padding-top:var(--s2)}
+.fl-tally-date{margin-top:4px !important;font:900 clamp(40px,10vw,60px)/.95 var(--display);letter-spacing:-.035em;color:var(--paper)}
+.fl-tally-nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:var(--s3)}
+.fl-tally-nums div{border-top:1px solid var(--line-d);padding-top:12px;display:grid;gap:4px}
+.fl-tally-nums b{font:900 clamp(44px,12vw,72px)/.9 var(--display);letter-spacing:-.04em;color:var(--paper)}
+.fl-tally-nums span{font:var(--label);color:var(--dust)}
+.fl-tally-nums .is-going b{color:var(--creosote-lift)}
+.fl-tally-sec{margin-top:var(--s5)}
+.fl-tally-rows{list-style:none;margin:var(--s2) 0 0;padding:0}
+.fl-tally-rows li{border-top:1px solid var(--line-d);padding:14px 0;display:grid;gap:4px;color:var(--bone)}
+.fl-tally-rows .fl-tally-who{font-size:19px;font-weight:800;color:var(--paper)}
+.fl-tally-rows .fl-tally-meta{font-size:15px;color:var(--dust)}
+.fl-tally-rows a{color:var(--bone);font-weight:700;overflow-wrap:anywhere}
+.fl-tally-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:var(--s2)}
+.fl-tally-row-acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.fl-tally-empty{margin-top:var(--s2) !important;color:var(--dust)}
+.fl-tally-note{margin-top:var(--s5) !important;font-size:15px;line-height:1.5;color:var(--dust);max-width:36em}
+.fl-tally-note a{color:var(--bone)}
+.fl-tally-lock{margin-top:var(--s3) !important;font-size:18px;line-height:1.5;color:var(--bone)}
+.fl-tally-status{margin-top:var(--s2) !important;font-size:15px;color:var(--dust)}
+}
