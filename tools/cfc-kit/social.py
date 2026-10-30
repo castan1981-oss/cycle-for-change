@@ -29,24 +29,31 @@ def foot(color, left="cycleforchange.org", right="@cycl_eforchange"):
     return f'<div class="foot in" style="color:{color}"><span>{esc(left)}</span><span>{esc(right)}</span></div>'
 
 
-def split(size, photo, ph_h, pos, bg, inner, foot_html, foot_gap=None):
-    """A photo edge to edge on top, a solid field under it, the foot at the field's foot (Stories: above the clear zone)."""
+def split(size, ph, ph_h, bg, inner, foot_html, cap_color):
+    """A photo edge to edge on top, its place · month line under it on the field's left edge (CLAUDE.md §10), the
+    words under that, the foot at the field's foot (Stories: above the clear zone). ph = {rel, where, focus | pos}."""
     W, H = SZ[size]
     bottom = 330 if size == "story" else 52
-    return (f'<img class="ph" src="{photo_uri(photo)}" style="height:{ph_h}px;object-position:{pos}">'
-            f'<div class="field" style="top:{ph_h}px;bottom:0;background:{bg};padding:{52 if size=="post" else 64}px 0 {bottom}px">'
-            f'<div style="flex:1">{inner}</div>{foot_html}</div>')
+    cap = f'<p class="in" style="font-weight:700;font-size:22px;color:{cap_color};margin-bottom:{34 if size=="post" else 44}px">{esc(ph["where"])}</p>' if ph.get("where") else ""
+    return (f'{photo(ph["rel"], W, ph_h, focus=ph.get("focus"), pos=ph.get("pos", "50% 50%"))}'
+            f'<div class="field" style="top:{ph_h}px;bottom:0;background:{bg};padding:22px 0 {bottom}px">'
+            f'{cap}<div style="flex:1">{inner}</div>{foot_html}</div>')
 
 
-# —— 1. who: the count and the year, his photo ——
+def reg_photo(key, **kw):
+    r = registry()[key]
+    return dict(rel=f"photos/{key}.jpg", where=r["where"], pos=r.get("pos", "50% 50%"), **kw)
+
+
+# —— 1. who: the count and the year, his photo (cropped to the waist) ——
 def intro(size):
     W, H = SZ[size]
-    ph = 760 if size == "post" else 1060
+    ph = 740 if size == "post" else 1040
     inner = (f'<div class="in">{sign(560, T["plaster"], T["powder"], T["asphalt"], "change")}'
              f'<p class="big" style="color:{T["plaster"]};font-size:{50 if size=="post" else 58}px;margin-top:40px">'
              f'10,000 miles. One year.<br>All on the bike.</p></div>')
-    return page(split(size, "photos/robert-camelback.jpg", ph, "50% 34%", T["asphalt"], inner, foot(T["patina"])),
-                CSS, W, H, T["asphalt"])
+    pic = reg_photo("robert-camelback", focus=(500 if size == "post" else 430, 1480, 0.62))
+    return page(split(size, pic, ph, T["asphalt"], inner, foot(T["patina"]), T["patina"]), CSS, W, H, T["asphalt"])
 
 
 # —— 2. the sign's question ——
@@ -63,14 +70,29 @@ def who(size):
                 f'{foot(T["gunmetal"], "cycleforchange.org/cyclefor", "")}</div>', CSS, W, H, T["concrete"])
 
 
-# —— 3. Today I rode for ___ (the plate is the day's word; word=None leaves it blank to type on) ——
-def today(size, word, photo="img/today/oct12-gravel-1.jpg", pos="26% 50%"):
+# —— 3. the ride and who it was for: the homepage's #today (data/today.json), or --for/--date/--photo ——
+# t = {word, label, photo: {rel, where, pos} | None}. The label is the homepage's dated line ("The ride on Monday,
+# October 12."), never "today", so a post that goes up later still tells the truth. A word about the mind brings
+# 988 and Trevor onto the piece.
+def help_line(color, size_px):
+    return f'<p class="body" style="font-size:{size_px}px;color:{color};margin-top:26px;font-weight:700;max-width:900px">{help_html()}</p>'
+
+
+def today(size, t):
     W, H = SZ[size]
-    ph = 740 if size == "post" else 1000
+    word = t["word"]
     wrap = word is None or len(word) > 8
-    inner = (f'<div class="in"><p class="lab" style="color:{T["patina"]};margin-bottom:26px">Today I rode for</p>'
-             f'{sign(520 if size=="post" else 600, T["plaster"], T["powder"], T["asphalt"], word, wrap=wrap)}</div>')
-    return page(split(size, photo, ph, pos, T["tar"], inner, foot(T["patina"])), CSS, W, H, T["tar"])
+    helps = help_line(T["plaster"], 24 if size == "post" else 28) if about_mind(word) else ""
+    body = (f'<p class="lab" style="color:{T["patina"]};margin-bottom:26px">{esc(t["label"])}</p>'
+            f'{sign(520 if size=="post" else 600, T["plaster"], T["powder"], T["asphalt"], word, wrap=wrap)}{helps}')
+    if t.get("photo"):
+        ph = 720 if size == "post" else 980
+        return page(split(size, t["photo"], ph, T["tar"], f'<div class="in">{body}</div>', foot(T["patina"]), T["patina"]),
+                    CSS, W, H, T["tar"])
+    top = 200 if size == "post" else 420
+    bottom = 52 if size == "post" else 330
+    return page(f'<div class="field" style="top:0;bottom:0;padding-bottom:{bottom}px"><div style="flex:1"><div class="in" style="padding-top:{top}px">'
+                f'{body.replace('class="lab" style="', 'class="lab" style="font-size:40px;')}</div></div>{foot(T["patina"])}</div>', CSS, W, H, T["tar"])
 
 
 # —— 4. a stat from the bank: ground by kind (hard truth on asphalt, what helps on patina, being seen on concrete) ——
@@ -83,7 +105,7 @@ def stat(size, s):
     W, H = SZ[size]
     bg, ink, soft, bar = GROUND[s["type"]]
     top = 96 if size == "post" else 260
-    help_ = f'<p class="body" style="font-size:24px;color:{ink};margin-top:14px;font-weight:700">{esc(HELP)}</p>' if s.get("mh") else ""
+    help_ = f'<p class="body" style="font-size:24px;color:{ink};margin-top:14px;font-weight:700">{help_html()}</p>' if s.get("mh") else ""
     src = f'{s["org"]}, {s["report"]}, {s["year"]}.'
     inner = (f'<div class="in" style="padding-top:{top}px">'
              f'<p class="lab" style="color:{soft}">{esc(TYPE_LABEL[s["type"]])}</p>'
@@ -91,7 +113,8 @@ def stat(size, s):
              f'<p class="big" data-fit="{W-2*M}" data-fith="{330 if size=="post" else 480}" style="color:{ink};font-size:{56 if size=="post" else 64}px;margin-top:52px;font-weight:700;letter-spacing:-.012em;line-height:1.14">{esc(s["stat"])}</p>'
              f'<p class="body" data-fit="{W-2*M}" data-fith="{110 if size=="post" else 150}" style="color:{soft};font-size:{38 if size=="post" else 44}px;margin-top:30px;line-height:1.24">{esc(s["why"])}</p>'
              f'</div>')
-    lower = (f'<div class="in"><p class="body" style="font-size:22px;color:{soft};line-height:1.35">Source: {esc(src)}</p>{help_}'
+    lower = (f'<div class="in"><p class="body" style="font-size:22px;color:{soft};line-height:1.35">Source: {esc(src)}</p>'
+             f'<p class="body" style="font-size:22px;color:{soft};line-height:1.35;margin-top:4px">{esc(s["caveat"])}</p>{help_}'
              f'<div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:36px">'
              f'{stencil(300, ink, bar)}<span style="font-weight:700;font-size:26px;color:{soft}">cycleforchange.org</span></div></div>')
     bottom = 52 if size == "post" else 330
@@ -118,11 +141,11 @@ def kind(r):
 
 def ride(size, r, n_rides):
     W, H = SZ[size]
-    ph = 660 if size == "post" else 920
+    ph = 620 if size == "post" else 880
     mon, days = when(r)
     dow = DOW[date.fromisoformat(r["start"]).weekday()] if r.get("start") else ""
     plate = f'{dow + ", " if dow and r.get("days") == 1 else ""}{mon} {days}'
-    line = " · ".join(x for x in [r["where"], kind(r)] if x)
+    line = " \u00b7 ".join(x for x in [r["where"], kind(r)] if x)
     inner = (f'<div class="in"><p class="lab" style="color:{T["gunmetal"]}">Ride with me</p>'
              f'<p class="big" data-fit="{W-2*M}" style="color:{T["asphalt"]};font-size:{96 if size=="post" else 104}px;margin-top:18px;white-space:nowrap">{esc(r["name"])}</p>'
              f'<div style="display:flex;align-items:center;gap:22px;margin-top:30px">'
@@ -130,8 +153,9 @@ def ride(size, r, n_rides):
              f'<span class="num" style="font-size:52px;color:{T["asphalt"]};letter-spacing:-.02em">2027</span></div>'
              f'<p class="body" style="color:{T["gunmetal"]};font-size:34px;margin-top:26px">{esc(line)}</p>'
              f'<p class="body" style="color:{T["asphalt"]};font-size:30px;margin-top:{20 if size=="post" else 40}px;font-weight:700">'
-             f'All {n_rides} of my 2027 rides are on the site.</p></div>')
-    return page(split(size, "photos/robert-desert.jpg", ph, "50% 30%", T["concrete"], inner, foot(T["gunmetal"])),
+             f'All my 2027 rides, with sign-up links.</p></div>')
+    pic = reg_photo("robert-desert", focus=(560 if size == "post" else 470, 1400, 0.62))
+    return page(split(size, pic, ph, T["concrete"], inner, foot(T["gunmetal"], "cycleforchange.org/2027"), T["gunmetal"]),
                 CSS, W, H, T["concrete"])
 
 
@@ -183,11 +207,9 @@ def find(size, n, abroad):
 # —— 8. the count: one plain number, never against 10,000 ——
 def miles(size, n, words):
     W, H = SZ[size]
-    field_h = 760 if size == "post" else 1020
-    top = 90 if size == "post" else 250
-    inner = (f'<div class="in" style="padding-top:{top}px;color:{T["plaster"]}">'
-             f'<p class="num" style="font-size:{300 if size=="post" else 330}px">{fmt_int(n)}</p>'
+    ph = 560 if size == "post" else 780
+    inner = (f'<div class="in" style="color:{T["plaster"]}">'
+             f'<p class="num" style="font-size:{280 if size=="post" else 320}px">{fmt_int(n)}</p>'
              f'<p class="big" style="font-size:{46 if size=="post" else 54}px;margin-top:30px;font-weight:700;line-height:1.16;max-width:900px">{esc(words)}</p></div>')
-    return page(f'<div class="field" style="top:0;height:{field_h}px;padding-bottom:44px"><div style="flex:1">{inner}</div>{foot(T["patina"])}</div>'
-                f'<img class="ph" src="{photo_uri("img/sign-print-4.jpg")}" style="position:absolute;top:{field_h}px;height:{H-field_h}px;object-position:50% 6%">',
+    return page(split(size, reg_photo("robert-selfie-camelback"), ph, T["asphalt"], inner, foot(T["patina"]), T["patina"]),
                 CSS, W, H, T["asphalt"])

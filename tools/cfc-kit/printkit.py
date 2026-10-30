@@ -18,17 +18,16 @@ def _block(inner, w, h, pad=34):
     return page(f'<div class="blk">{inner}</div>', css, w, h)
 
 
-def reel(word, mi):
+def reel(t, mi):
+    """t is the ride day from make.py (word, the homepage's dated label). Each block shrink-wraps its words."""
     out = {}
-    out["reel-1-the-sign.png"] = (_block(stencil(640, T["plaster"], T["powder"]), 744, 214), 744, 214, True)
-    wrap = len(word) > 8
-    k = 520 / 640
-    plate_w = 0.62 * 150 * k * 0.58 * len(word) + 60   # rough: wide enough for the plate on one line under the stencil
-    w2 = int(max(600, plate_w + 90)) if wrap else int(600 + plate_w)
-    h2 = 380 if wrap else 270
-    out["reel-2-today-i-rode-for.png"] = (_block(
-        f'<p class="label" style="color:{T["patina"]};font-size:30px;margin-bottom:20px">Today I rode for</p>'
-        f'{sign(520, T["plaster"], T["powder"], T["asphalt"], word, wrap=wrap)}', w2, h2), w2, h2, True)
+    out["reel-1-the-sign.png"] = (_block(stencil(640, T["plaster"], T["powder"]), 900, 400), 900, 400, True)
+    word = t["word"]
+    helps = (f'<p style="color:{T["plaster"]};font-weight:700;font-size:22px;margin-top:18px;max-width:600px;line-height:1.3">{help_html()}</p>'
+             if about_mind(word) else "")
+    out["reel-2-the-ride-on.png"] = (_block(
+        f'<p class="label" style="color:{T["patina"]};font-size:30px;margin-bottom:20px">{esc(t["label"])}</p>'
+        f'{sign(520, T["plaster"], T["powder"], T["asphalt"], word, wrap=len(word) > 8)}{helps}', 1080, 800), 1080, 800, True)
     out["reel-3-the-count.png"] = (_block(
         f'<p class="num" style="color:{T["plaster"]};font-size:132px">{fmt_int(mi)}</p>'
         f'<p style="color:{T["patina"]};font-weight:700;font-size:30px;margin-top:16px;max-width:640px;line-height:1.2">{esc(season_words())}</p>',
@@ -55,8 +54,10 @@ def flyer():
     """8.5 x 11. Light ground so it prints well at home; the photo edge to edge on top. QR codes a third of an inch in."""
     n, abroad = ride_counts()
     nrides = len(riding())
-    body = (f'<img class="ph" src="{photo_uri("photos/robert-camelback.jpg")}" style="height:500px;object-position:50% 32%">'
-            f'<div style="position:absolute;left:48px;right:48px;top:540px">'
+    pic = registry()["robert-camelback"]
+    body = (f'{photo("photos/robert-camelback.jpg", 816, 500, focus=(520, 1480, 0.62))}'
+            f'<p style="position:absolute;left:48px;top:512px;font-weight:700;font-size:13px;color:{T["gunmetal"]}">{esc(pic["where"])}</p>'
+            f'<div style="position:absolute;left:48px;right:48px;top:556px">'
             f'{stencil(520, T["asphalt"], T["rose"])}'
             f'<p style="font-weight:800;font-size:40px;color:{T["asphalt"]};letter-spacing:-.018em;line-height:1.06;margin-top:28px">'
             f'10,000 miles. One year.<br>All on the bike.</p>'
@@ -65,7 +66,7 @@ def flyer():
             f'<div class="hair" style="margin:30px 0 26px;opacity:1;border-color:{T["asphalt"]};border-top-width:1.5px"></div>'
             f'<div style="display:flex;justify-content:space-between;gap:24px">'
             f'{qr_block(SHORT + "/gr", 104, "Find a group ride.", f"{fmt_int(n)} group rides, each with the date it was last checked.", T["asphalt"], T["gunmetal"], T["plaster"])}'
-            f'{qr_block(SHORT + "/2027", 104, "Ride with me.", f"The {nrides} rides I’m doing in 2027, with sign-up links.", T["asphalt"], T["gunmetal"], T["plaster"])}'
+            f'{qr_block(SHORT + "/2027", 104, "Ride with me.", "All my 2027 rides, with sign-up links.", T["asphalt"], T["gunmetal"], T["plaster"])}'
             f'</div></div>'
             f'<div style="position:absolute;left:48px;right:48px;bottom:40px;display:flex;justify-content:space-between;font-weight:700;font-size:15px;color:{T["gunmetal"]}">'
             f'<span>cycleforchange.org</span><span>@cycl_eforchange</span></div>')
@@ -140,7 +141,7 @@ def poster(rides, lottery=()):
             f'<ol style="list-style:none;display:grid;grid-template-columns:1fr 1fr;grid-auto-flow:column;grid-template-rows:repeat({half},auto);gap:14px 28px">{"".join(rows)}</ol>'
             f'</div>'
             f'<div style="position:absolute;left:64px;right:64px;bottom:52px;display:flex;justify-content:space-between;align-items:flex-end">'
-            f'{qr_block(SHORT + "/2027", 112, "Dates and sign-up links", "cycleforchange.org/2027", T["asphalt"], T["gunmetal"], T["plaster"])}'
+            f'{qr_block(SHORT + "/2027", 112, "All my 2027 rides, with sign-up links.", "cycleforchange.org/2027", T["asphalt"], T["gunmetal"], T["plaster"])}'
             f'<p style="font-weight:700;font-size:17px;color:{T["gunmetal"]};text-align:right">cycleforchange.org<br>@cycl_eforchange</p></div>')
     return page(body, "", 1056, 1632, T["concrete"], print_size="11in 17in")
 
@@ -152,33 +153,42 @@ CARD_GROUND = {"harm": (T["asphalt"], T["plaster"], T["patina"], T["powder"], T[
 
 def cards(bank):
     """Every stat as a 5 x 7 card to carry on rides: the number, the line, why it matters, the source with its own QR,
-    the catch. Mental-health stats carry 988 and Trevor. One PDF, a page per card, 5.25 x 7.25 in with the bleed."""
+    the catch. Mental-health stats carry 988 and Trevor. One PDF, a page per card, 5.25 x 7.25 in with the bleed.
+    The card is a column (the number and lines at the top, the source block at the foot), so nothing can overlap; if a
+    long stat would push the card over, its line shrinks until it fits."""
     pages = []
     for s in bank:
         bg, ink, soft, bar, tile = CARD_GROUND[s["type"]]
         src = f'{s["org"]}. {s["report"]}. {s["year"]}.'
-        help_ = (f'<p style="font-size:11.5px;font-weight:700;color:{ink};margin-top:8px;line-height:1.3">{esc(HELP)}</p>'
+        help_ = (f'<p style="font-size:13px;font-weight:700;color:{ink};margin-top:10px;line-height:1.3">{help_html()}</p>'
                  if s.get("mh") else "")
         pages.append(
-            f'<section class="card" style="background:{bg}">'
-            f'<div style="position:absolute;left:36px;right:36px;top:40px;color:{ink}">'
+            f'<section class="card" style="background:{bg};color:{ink}">'
             f'<div style="display:flex;justify-content:space-between;align-items:baseline">'
             f'<p style="font-weight:700;font-size:14px;color:{soft}">{esc(TYPE_LABEL[s["type"]])}</p>'
             f'{stencil(110, ink, bar)}</div>'
-            f'<p class="num" data-fit="432" style="font-size:150px;margin-top:30px;white-space:nowrap">{esc(s["number"])}</p>'
-            f'<p data-fit="432" data-fith="176" style="font-weight:700;font-size:23px;line-height:1.22;margin-top:26px;letter-spacing:-.006em">{esc(s["stat"])}</p>'
-            f'<p data-fit="432" data-fith="70" style="font-size:16px;line-height:1.35;margin-top:14px;color:{soft}">{esc(s["why"])}</p></div>'
-            f'<div style="position:absolute;left:36px;right:36px;bottom:38px;color:{ink}">'
+            f'<p class="num" data-fit="432" style="font-size:150px;margin-top:26px;white-space:nowrap">{esc(s["number"])}</p>'
+            f'<p class="sl" style="font-weight:700;font-size:23px;line-height:1.22;margin-top:24px;letter-spacing:-.006em">{esc(s["stat"])}</p>'
+            f'<p class="wl" style="font-size:16px;line-height:1.35;margin-top:12px;color:{soft}">{esc(s["why"])}</p>'
+            f'<div style="margin-top:auto;padding-top:18px">'
             f'<div style="display:flex;gap:14px;align-items:flex-end">'
-            f'<div style="flex:1;min-width:0"><p data-fit="318" data-fith="64" style="font-size:10.5px;line-height:1.38;color:{soft}">Source: {esc(src)}</p>'
-            f'<p style="font-size:10.5px;line-height:1.38;color:{soft};margin-top:4px">{esc(s["caveat"])}</p></div>'
+            f'<div style="flex:1;min-width:0"><p style="font-size:12px;line-height:1.36;color:{soft}">Source: {esc(src)}</p>'
+            f'<p style="font-size:12px;line-height:1.36;color:{soft};margin-top:4px">{esc(s["caveat"])}</p></div>'
             f'{qr_svg(s["url"], dark=T["asphalt"], light=tile, size=100, quiet=2)}</div>{help_}</div>'
             f'</section>')
-    css = (".card{position:relative;width:504px;height:696px;overflow:hidden;break-after:page}"
+    css = (".card{position:relative;width:504px;height:696px;overflow:hidden;break-after:page;display:flex;flex-direction:column;padding:40px 36px 38px}"
            ".card:last-child{break-after:auto}")
-    # one long document: each card is a 5.25 x 7.25 in page
+    shrink = """<script>
+for (const c of document.querySelectorAll('.card')) {
+  for (const sel of ['.sl', '.wl']) {
+    const e = c.querySelector(sel); let f = parseFloat(getComputedStyle(e).fontSize);
+    while (c.scrollHeight > c.clientHeight + 1 && f > 13) { f -= 0.5; e.style.fontSize = f + 'px'; }
+  }
+  if (c.scrollHeight > c.clientHeight + 1) c.dataset.over = '1';
+}
+</script>"""
     return (f'<!doctype html><html><head><meta charset="utf-8"><style>{font_css()}{BASE_CSS}@page{{size:5.25in 7.25in;margin:0}}{css}</style></head>'
-            f'<body>{"".join(pages)}{FIT}</body></html>')
+            f'<body>{"".join(pages)}{shrink}{FIT}</body></html>')
 
 
 # ——————————————————————————— stickers ———————————————————————————
@@ -190,11 +200,12 @@ def stickers():
         f'<div style="position:absolute;left:31px;top:38px">{stencil(220, T["plaster"])}'
         f'<div style="margin-top:14px;width:250px;height:72px;background:{T["powder"]}"></div></div>',
         "", 312, 216, T["asphalt"], print_size="3.25in 2.25in"), 3.25, 2.25)
-    # 10K: the wearable mark, on the rose plate (the stencil only ever spells CYCLE FOR)
+    # 10K: the wearable mark, on its own (CYCLE FOR is never followed by a number; the plate holds a who or a why)
     out["sticker-10k-3x3"] = (page(
-        f'<div style="position:absolute;left:34px;top:36px">{stencil(200, T["plaster"])}'
-        f'<span class="plate" style="background:{T["powder"]};color:{T["asphalt"]};font-size:112px;padding:16px 16px 4px;margin-top:22px;letter-spacing:-.03em">10K</span>'
-        f'<p style="color:{T["patina"]};font-weight:700;font-size:15px;margin-top:16px;line-height:1.3">10,000 miles in 2027.<br>All on the bike.</p></div>',
+        f'<div style="position:absolute;left:34px;right:34px;top:40px;color:{T["plaster"]}">'
+        f'<p class="num" style="font-size:150px;letter-spacing:-.04em">10K</p>'
+        f'<p style="color:{T["patina"]};font-weight:700;font-size:16px;margin-top:26px;line-height:1.3">10,000 miles in 2027.<br>All on the bike.</p>'
+        f'<p style="font-weight:700;font-size:15px;margin-top:22px">cycleforchange.org</p></div>',
         "", 312, 312, T["asphalt"], print_size="3.25in 3.25in"), 3.25, 3.25)
     # Who do you cycle for? with the QR to /cyclefor/
     out["sticker-who-do-you-cycle-for-3x3"] = (page(

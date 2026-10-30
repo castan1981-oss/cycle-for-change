@@ -12,7 +12,7 @@ import pypdfium2 as pdfium
 from lib import OUT, BUILD, SITE, LETTERS, ROW
 
 KIT = BUILD / "kit"
-V = "1"   # bump on a re-publish that changes pictures, so phones don't show the old ones
+V = "2"   # bump on a re-publish that changes pictures, so phones don't show the old ones
 
 
 def thumb(src, name, w=640):
@@ -37,16 +37,16 @@ def thumb(src, name, w=640):
 
 SECTIONS = [
     ("posts", "Posts", "Feed size, 1080 × 1350. The stat posts carry their source; any of the 132 in the stat bank can be made the same way.",
-     [("1-ten-thousand", "10,000 miles"), ("2-who-do-you-cycle-for", "Who do you cycle for?"), ("3-today-i-rode-for", "Today I rode for"),
+     [("1-ten-thousand", "10,000 miles"), ("2-who-do-you-cycle-for", "Who do you cycle for?"), ("3-the-ride-on", "The ride on, and who for"),
       ("4-stat-work-19", "Stat: straight cyclists"), ("4-stat-youth-18", "Stat: unsafe at school"), ("4-stat-screen-13", "Stat: know someone trans"),
       ("5-ride-with-me", "Ride with me"), ("6-the-2027-rides", "The 2027 rides"), ("7-find-a-group-ride", "Find a group ride"), ("8-the-count", "The count")]),
-    ("stories", "Stories", "Full screen, 1080 × 1920. The top and bottom are left clear for Instagram’s bars and stickers. On the blank one, type the day’s word on the pink bar.",
-     [("1-ten-thousand", "10,000 miles"), ("2-who-do-you-cycle-for", "Who do you cycle for?"), ("3-today-i-rode-for", "Today I rode for"),
-      ("3b-today-i-rode-for-blank", "Today I rode for, blank"), ("4-stat-work-19", "Stat: straight cyclists"), ("4-stat-youth-18", "Stat: unsafe at school"),
+    ("stories", "Stories", "Full screen, 1080 × 1920. The top and bottom are left clear for Instagram’s bars and stickers. On the blank one, type who you rode for on the pink bar.",
+     [("1-ten-thousand", "10,000 miles"), ("2-who-do-you-cycle-for", "Who do you cycle for?"), ("3-the-ride-on", "The ride on, and who for"),
+      ("3b-who-i-rode-for-blank", "Who I rode for, blank"), ("4-stat-work-19", "Stat: straight cyclists"), ("4-stat-youth-18", "Stat: unsafe at school"),
       ("4-stat-screen-13", "Stat: know someone trans"), ("5-ride-with-me", "Ride with me"), ("6-the-2027-rides", "The 2027 rides"),
       ("7-find-a-group-ride", "Find a group ride"), ("8-the-count", "The count")]),
     ("reel", "Reel pieces", "The four stickers sit on their own dark block, so they read over any footage. Add one as a photo sticker in Instagram’s reel editor, or as an overlay in CapCut. The end card is the last two seconds.",
-     [("reel-1-the-sign", "The sign"), ("reel-2-today-i-rode-for", "Today I rode for"), ("reel-3-the-count", "The count"),
+     [("reel-1-the-sign", "The sign"), ("reel-2-the-ride-on", "The ride on, and who for"), ("reel-3-the-count", "The count"),
       ("reel-4-the-link", "The link"), ("reel-5-end-card", "End card")]),
     ("print", "To print", "PDFs for a print shop or a home printer. The QR codes are tested and go to short links on the site, so the scans can be counted.",
      [("flyer-8-5x11", "Flyer, 8.5 × 11"), ("poster-11x17", "Poster, 11 × 17"), ("stat-cards-5x7", "Stat cards, 5 × 7")]),

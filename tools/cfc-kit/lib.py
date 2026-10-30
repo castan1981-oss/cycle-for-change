@@ -133,6 +133,57 @@ def photo_uri(rel):
     return (SITE / rel).as_uri()
 
 
+_REG = None
+
+
+def registry():
+    """The site's photo registry (scripts/photos.js PHOTOS): where each picture was taken, its alt, its crop."""
+    global _REG
+    if _REG is None:
+        out = subprocess.run(["node", "-e", "process.stdout.write(JSON.stringify(require('./scripts/photos.js').PHOTOS))"],
+                             cwd=ROOT, capture_output=True, text=True, check=True).stdout
+        _REG = json.loads(out)
+    return _REG
+
+
+def photo(rel, w, h, focus=None, pos="50% 50%"):
+    """A photo filling a w x h box, clean edged. focus = (y0, y1, cx) in the original's pixels: show rows y0..y1
+    (scaled up or down to fill), centred on cx (0-1) across; else object-fit cover at pos."""
+    if focus:
+        from PIL import Image
+        nw, nh = Image.open(SITE / rel).size
+        y0, y1, cx = focus
+        k = max(h / (y1 - y0), w / nw)
+        iw, ih = nw * k, nh * k
+        left = min(0, max(w - iw, w / 2 - cx * iw))
+        top = min(0, max(h - ih, h - y1 * k))
+        return (f'<div style="position:relative;width:{w}px;height:{h}px;overflow:hidden">'
+                f'<img src="{photo_uri(rel)}" style="position:absolute;left:{left:.1f}px;top:{top:.1f}px;width:{iw:.1f}px;height:{ih:.1f}px;max-width:none"></div>')
+    return f'<img class="ph" src="{photo_uri(rel)}" style="width:{w}px;height:{h}px;object-position:{pos}">'
+
+
+MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+
+def place_month(where, ymd):
+    """build-home.js placeMonth: "Phoenix · October" + 2026-10-12 -> "Phoenix · Oct 2026"."""
+    place = str(where or "").split(" \u00b7 ")[0].strip()
+    try:
+        y, m = map(int, str(ymd).split("-")[:2])
+        return f"{place} \u00b7 {MONTHS[m - 1]} {y}"
+    except Exception:
+        return str(where or "")
+
+
+# A day's word about the mind gets 988 and Trevor on the piece itself (CLAUDE.md §4): a Story carries no caption.
+import re as _re
+MIND = _re.compile(r"mental|mind|anxi|depress|grief|griev|suicid|sober|sobriety|recover|therap|panic|trauma|lonel|addict|heal|self[- ]?harm|ptsd|bipolar|eating", _re.I)
+
+
+def about_mind(word):
+    return bool(word) and bool(MIND.search(word))
+
+
 def qr_svg(url, dark=T["asphalt"], light=T["plaster"], size=200, quiet=2):
     """A QR code as inline SVG (vector in the PDFs), modules as one path, its own light tile."""
     import qrcode
@@ -189,3 +240,8 @@ def stats():
 
 TYPE_LABEL = {"harm": "Hard truth", "hope": "What helps", "visibility": "Being seen"}
 HELP = "If it’s now: 988, call or text, any hour. Trevor Project 1-866-488-7386."
+
+
+def help_html():
+    """The help line, escaped, with the phone number kept on one line."""
+    return esc(HELP).replace("1-866-488-7386", '<span style="white-space:nowrap">1-866-488-7386</span>')

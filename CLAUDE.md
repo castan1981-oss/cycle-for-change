@@ -530,8 +530,10 @@ Oct 27). Streets and lit paths only: no dead-end detours, no climbs.
 Robert: "make something like this [the Fruit Loop kit] for Cycle for Change, all our print stuff and social", in the
 site's look (his pick over the chalk). `python3 tools/cfc-kit/make.py` writes, into `tools/cfc-kit/.build/out/` (never
 committed): **posts** (1080 × 1350) and **Stories** (1080 × 1920, top 200 / bottom 330 px left clear for Instagram's
-bars): 10,000 miles · Who do you cycle for? · Today I rode for (the plate is `data/today.json`'s `for`, or `--for "…"`;
-the Story also comes blank, to type the word on the plate) · three stats (`--stat <id>` for any other) · Ride with me
+bars): 10,000 miles · Who do you cycle for? · the ride and who it was for (the homepage's #today: its dated line "The
+ride on Monday, October 12.", never "today", its plate and photo; or `--for "…" --date … --photo … --where …`, no photo
+unless one is given; a word about the mind puts 988 and Trevor on the piece; the Story also comes blank, to type the
+word on the plate) · three stats with their source and catch (`--stat <id>` for any other) · Ride with me
 (the next of his 2027 rides) · the 2027 list · Find a group ride · the count; **reel** overlays (each on a flat tar
 block, so it reads over footage; see-through outside it) and an end card; **print** as vector PDFs (8.5 × 11 flyer,
 11 × 17 poster with the homepage's map, and every stat in the bank as a 5 × 7 card, one PDF, 1/8 in bleed); **stickers**
@@ -540,12 +542,15 @@ Then `python3 tools/cfc-kit/kitpage.py` builds the "CFC Phone Kit" artifact's fi
 a Save button (the downloads capability); republish that artifact, bump `V` when pictures change.
 - **The site's rules, nothing new**: the stencil from chrome.js (only ever CYCLE FOR), the blank as a rose bar or a
   plate in Overpass 900, After Hours, Overpass from `cfc-site/fonts/`, a photo and a solid field one above the other
-  (nothing on a photo), photos only from the registry or `#today` (no cars, only Robert). Every line is a line the site
+  (nothing on a photo) with its place · month line under it, photos only from the registry or `#today` (no cars, only
+  Robert; his photos cropped to the waist). CYCLE FOR is never followed by a number: 10K stands on its own. Every line is a line the site
   already says or comes from data: the count from `/api/strava` (else `data/tally.json`, with `season.js`'s words),
   the rides from chrome.js `RIDING`, the directory count from `rides/live.json` (as build-home.js counts it).
 - **The stat bank** is `data/stats/stat-bank.json`: a copy of Robert's "CFC Stat Bank" artifact (132 stats, each with
   org, report, year, URL, the catch). Fix or add stats in the artifact, then re-copy. The cards print the source, the
-  catch and a QR to the report; `mh: true` ones carry 988 and Trevor. All 132 QR codes decode (zxing, 200 dpi).
+  catch and a QR to the report; `mh: true` ones carry 988 and Trevor (the substance-use stats too, since Oct 30). A card
+is a column, so a long stat shrinks its line instead of running into the source. All 132 QR codes decode (zxing, 200 dpi).
+The brand read: `research/brand/2026-10-29-cfc-kit.md` (its six blocks fixed Oct 30).
 - **Short links** for the QR codes (netlify.toml): `/gr` → `/rides/`, `/2027` → `/events/2027/riding/`, `/cf` →
   `/cyclefor/`, tagged `utm_source=cfc-kit`.
 

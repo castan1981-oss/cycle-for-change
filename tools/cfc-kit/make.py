@@ -2,7 +2,9 @@
 
     python3 tools/cfc-kit/make.py                       # everything
     python3 tools/cfc-kit/make.py posts stories          # just those groups (posts stories reel print stickers)
-    python3 tools/cfc-kit/make.py --for "my mom"         # the Today I rode for pieces carry that word
+    python3 tools/cfc-kit/make.py --for "my mom"         # the ride pieces carry that word, dated today, no photo
+    python3 tools/cfc-kit/make.py --for "my mom" --date 2026-11-02 --photo img/today/x.jpg --where "Phoenix"
+                                                          # ... with that day's own photo (a path under cfc-site/)
     python3 tools/cfc-kit/make.py --stat youth-18        # the stat post and Story use that stat (an id from the bank)
 
 Writes into tools/cfc-kit/.build/out/<group>/ (never committed; the kit's pages are where Robert saves them from):
@@ -57,14 +59,42 @@ def pdf(pg, html, out, w_in, h_in):
     print("  wrote", out.relative_to(OUT))
 
 
+# The homepage's #today crops for its own pictures (the gravel photo keeps the painted CYCLE FOR change whole).
+TODAY_POS = {"/img/today/oct12-gravel-1.jpg": "66% 50%"}
+# The blank Story: his own words from the homepage's #today (data/today.json `line`), the plate left empty to type on.
+BLANK = {"word": None, "label": "Every ride, I say who I\u2019m riding for that day.", "photo": None}
+
+
+def ride_day(today, a):
+    """The ride and who it was for: data/today.json (the homepage's #today), or --for with --date (default today,
+    Phoenix) and an optional --photo. The label is the homepage's dated line, never "today"."""
+    from datetime import date as _d, datetime as _dt
+    if a.word:
+        ymd = a.date or _dt.now(PHX).date().isoformat()
+        ph = dict(rel=a.photo.lstrip("/"), where=place_month(a.where, ymd) if a.where else "", pos=a.pos) if a.photo else None
+        word = a.word
+    else:
+        ymd, word = today["date"], today["for"]
+        p = today["photo"]
+        ph = dict(rel=p["src"].lstrip("/"), where=place_month(p.get("where"), ymd), pos=TODAY_POS.get(p["src"], "50% 50%"))
+    d = _d.fromisoformat(ymd)
+    return {"word": word, "photo": ph, "date": ymd,
+            "label": f"The ride on {d.strftime('%A')}, {d.strftime('%B')} {d.day}."}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("groups", nargs="*", default=GROUPS)
     ap.add_argument("--for", dest="word", default=None)
+    ap.add_argument("--date", default=None)
+    ap.add_argument("--photo", default=None)
+    ap.add_argument("--where", default=None)
+    ap.add_argument("--pos", default="50% 50%")
     ap.add_argument("--stat", default=None)
     a = ap.parse_args()
     today = json.load(open(ROOT / "data" / "today.json"))
-    word = a.word or today["for"]
+    t = ride_day(today, a)
+    word = t["word"]
     bank = {s["id"]: s for s in stats()}
     picks = [a.stat] if a.stat else PICKS
     rides = riding()
@@ -85,9 +115,9 @@ def main():
             shutil.rmtree(d, ignore_errors=True)
             W, H = social.SZ[size]
             boards = [("1-ten-thousand", social.intro(size)), ("2-who-do-you-cycle-for", social.who(size)),
-                      ("3-today-i-rode-for", social.today(size, word))]
+                      ("3-the-ride-on", social.today(size, t))]
             if size == "story":
-                boards.append(("3b-today-i-rode-for-blank", social.today(size, None)))
+                boards.append(("3b-who-i-rode-for-blank", social.today(size, BLANK)))
             boards += [(f"4-stat-{k}", social.stat(size, bank[k])) for k in picks]
             boards += [("5-ride-with-me", social.ride(size, nxt, len(rides))), ("6-the-2027-rides", social.year(size, rides, lottery)),
                        ("7-find-a-group-ride", social.find(size, n, abroad)), ("8-the-count", social.miles(size, mi, season_words()))]
@@ -95,7 +125,7 @@ def main():
                 shoot(pg, html, d / f"{name}.jpg", W, H)
         if "reel" in a.groups:
             d = OUT / "reel"; shutil.rmtree(d, ignore_errors=True)
-            for name, (html, w, h, tr) in printkit.reel(word, mi).items():
+            for name, (html, w, h, tr) in printkit.reel(t, mi).items():
                 shoot(pg, html, d / name, w, h, transparent=tr, sel=".blk" if tr else ".board")
         if "print" in a.groups:
             d = OUT / "print"; shutil.rmtree(d, ignore_errors=True)

@@ -1,6 +1,6 @@
 {
  "_note": "Robert's stat bank: 132 sourced stats for the daily posts and the 5 x 7 cards he carries on rides. A copy of the \"CFC Stat Bank\" artifact (https://claude.ai/code/artifact/d47763f4-6510-4227-b98b-284eb9b60a9e), read Oct 29, 2026; the artifact is where stats get added or fixed, then this file is re-copied. Every stat carries its org, report, year and URL; mh: true means it touches mental health, so anything printed from it carries 988 and the Trevor Project. Read by tools/cfc-kit/.",
- "read_on": "2026-10-29",
+ "read_on": "2026-10-30",
  "stats": [
   {
    "id": "survival-05",
@@ -612,7 +612,7 @@
    "url": "https://www.samhsa.gov/data/sites/default/files/reports/rpt53159/2023-nsduh-pop-slides-lbgplus.pdf",
    "caveat": "The catch: People named their own recovery.",
    "checked": true,
-   "mh": false
+   "mh": true
   },
   {
    "id": "power-05",
@@ -680,7 +680,7 @@
    "url": "https://ustranssurvey.org/wp-content/uploads/2023/11/USTS_2022HealthWellbeingReport_WEB.pdf",
    "caveat": "The catch: People named their own recovery.",
    "checked": true,
-   "mh": false
+   "mh": true
   },
   {
    "id": "youth-16",
@@ -748,7 +748,7 @@
    "url": "https://www.samhsa.gov/data/sites/default/files/reports/rpt53012/2023-nsumhss-annual-report.pdf",
    "caveat": "The catch: Facilities report this themselves. 2023 is the last year it was asked.",
    "checked": true,
-   "mh": false
+   "mh": true
   },
   {
    "id": "youth-17",
@@ -816,7 +816,7 @@
    "url": "https://pubmed.ncbi.nlm.nih.gov/34143248/",
    "caveat": "The catch: 2017 data. Shows a link, not proof of cause.",
    "checked": true,
-   "mh": false
+   "mh": true
   },
   {
    "id": "health-03",
@@ -901,7 +901,7 @@
    "url": "https://www.samhsa.gov/data/sites/default/files/reports/rpt53159/2023-nsduh-pop-slides-lbgplus.pdf",
    "caveat": "The catch: Ages 12 and up, 2023. The last year the federal survey asked.",
    "checked": true,
-   "mh": false
+   "mh": true
   },
   {
    "id": "work-14",
@@ -969,7 +969,7 @@
    "url": "https://www.samhsa.gov/data/sites/default/files/reports/rpt53159/2023-nsduh-pop-slides-lbgplus.pdf",
    "caveat": "The catch: Most of them didn’t feel they needed treatment.",
    "checked": true,
-   "mh": false
+   "mh": true
   },
   {
    "id": "youth-01",
@@ -1037,7 +1037,7 @@
    "url": "https://www.cdc.gov/healthy-youth/lgbtq-youth/health-disparities-among-lgbtq-youth.html",
    "caveat": "The catch: Ever misused, not current use.",
    "checked": true,
-   "mh": false
+   "mh": true
   },
   {
    "id": "health-04",
@@ -1173,7 +1173,7 @@
    "url": "https://www.thetrevorproject.org/research-briefs/substance-use-minority-stress-and-mental-health-among-lgbtq-young-people/",
    "caveat": "The catch: Any use in the past month, not misuse. An online survey.",
    "checked": true,
-   "mh": false
+   "mh": true
   },
   {
    "id": "health-18",
@@ -1241,7 +1241,7 @@
    "url": "https://pubmed.ncbi.nlm.nih.gov/19117902/",
    "caveat": "The catch: From 2009, a small California study.",
    "checked": true,
-   "mh": false
+   "mh": true
   },
   {
    "id": "work-19",
@@ -1938,7 +1938,7 @@
    "url": "https://ustranssurvey.org/wp-content/uploads/2023/11/USTS_2022HealthWellbeingReport_WEB.pdf",
    "caveat": "The catch: Not a random sample, and the comparison isn’t age-matched.",
    "checked": true,
-   "mh": false
+   "mh": true
   },
   {
    "id": "work-17",
