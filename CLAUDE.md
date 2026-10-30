@@ -537,8 +537,9 @@ word on the plate) · three stats with their source and catch (`--stat <id>` for
 (the next of his 2027 rides) · the 2027 list · Find a group ride · the count; **reel** overlays (each on a flat tar
 block, so it reads over footage; see-through outside it) and an end card; **print** as vector PDFs (8.5 × 11 flyer,
 11 × 17 poster with the homepage's map, and every stat in the bank as a 5 × 7 card, one PDF, 1/8 in bleed); **stickers**
-(CYCLE FOR + a blank plate to write on, 10K on the plate, Who do you cycle for? with a QR), PDF with bleed + 300 dpi PNG.
-Then `python3 tools/cfc-kit/kitpage.py` builds the "CFC Phone Kit" artifact's files (`.build/kit/`): every piece with
+(CYCLE FOR + a blank plate to write on, 10K on its own, Who do you cycle for? with a QR), PDF with bleed + 300 dpi PNG.
+Then `python3 tools/cfc-kit/kitpage.py` builds the "CFC Phone Kit" artifact's files (`.build/kit/`;
+https://claude.ai/artifact/Uc4aoGeyh82Q87N2mUZLH1, republish that URL): every piece with
 a Save button (the downloads capability); republish that artifact, bump `V` when pictures change.
 - **The site's rules, nothing new**: the stencil from chrome.js (only ever CYCLE FOR), the blank as a rose bar or a
   plate in Overpass 900, After Hours, Overpass from `cfc-site/fonts/`, a photo and a solid field one above the other
