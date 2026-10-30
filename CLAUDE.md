@@ -880,7 +880,7 @@ says so** — this note is here so rides/towns work doesn't contradict the plan.
 
 ## 9. Kit
 
-The kit is reopened. It follows Lane Paint (After Hours palette, Overpass, the stencil family).
+**Locked Oct 19, 2026 (Colorway A):** `kit-handoff/KIT-LOCK.md` is the kit spec and wins on kit. The kit follows Lane Paint (After Hours palette, Overpass, the stencil family).
 **10K is the wearable mark**; "10000" never goes on kit. Old lock specs (Creosote colors, Outfit,
 volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `kit-handoff/`
 (local); treat anything there that predates Oct 5, 2026 as the previous state.
