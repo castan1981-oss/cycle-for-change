@@ -79,6 +79,16 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
+# Oct 30, 2026: the Fruit Loop RSVP and Robert's private tally are tools, not pages to find in search.
+[[headers]]
+  for = "/fruitloop/rsvp/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+[[headers]]
+  for = "/fruitloop/tally/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
 [[headers]]
   for = "/*.css"
   [headers.values]
@@ -109,6 +119,13 @@
   from = "/fruit-loop"
   to = "/fruitloop/"
   status = 301
+  force = true
+
+# Oct 30, 2026: /rsvp is the link Robert posts for the Fruit Loop ("click this link yes I'm coming. No, I'm not that's it").
+[[redirects]]
+  from = "/rsvp"
+  to = "/fruitloop/rsvp/"
+  status = 302
   force = true
 
 # /fruity is the handout stickers' QR code (tagged sticker, so stickers and posters read apart in GA4).
@@ -184,6 +201,12 @@
 [[redirects]]
   from = "/api/instagram"
   to = "/.netlify/functions/instagram"
+  status = 200
+
+# Oct 30, 2026: the Fruit Loop RSVP (netlify/functions/rsvp.js). Yes, can't make it, or keep me posted.
+[[redirects]]
+  from = "/api/rsvp"
+  to = "/.netlify/functions/rsvp"
   status = 200
 
 # —— Live since 2026-09-18 ——

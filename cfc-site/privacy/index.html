@@ -26,7 +26,7 @@
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/chrome.css?v=59">
   <link rel="stylesheet" href="/styles.css?v=59">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Privacy: what this site keeps","description":"What cycleforchange.org keeps and what it doesn’t: analytics, the five forms, where each entry goes, location, the outside services a page talks to, and how to take something back.","url":"https://cycleforchange.org/privacy/","datePublished":"2026-10-19","dateModified":"2026-10-26","publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":{"@type":"ImageObject","url":"https://cycleforchange.org/favicon-512.png"}},"isPartOf":{"@type":"WebSite","name":"Cycle for Change","url":"https://cycleforchange.org/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Privacy: what this site keeps","description":"What cycleforchange.org keeps and what it doesn’t: analytics, the five forms, where each entry goes, location, the outside services a page talks to, and how to take something back.","url":"https://cycleforchange.org/privacy/","datePublished":"2026-10-19","dateModified":"2026-10-30","publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org/","logo":{"@type":"ImageObject","url":"https://cycleforchange.org/favicon-512.png"}},"isPartOf":{"@type":"WebSite","name":"Cycle for Change","url":"https://cycleforchange.org/"}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -88,13 +88,13 @@
 <p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;<span data-season="training">training miles since June 1. The 10,000 start Jan 1.</span><span data-season="2027" hidden>miles in 2027, all on the bike.</span></a></span></p>
 <main id="main" class="fn-post">
   <div class="fn-article">
-    <p class="fn-meta"><span>Trust</span><span class="dot">·</span><span>Updated Oct 26, 2026</span></p>
+    <p class="fn-meta"><span>Trust</span><span class="dot">·</span><span>Updated Oct 30, 2026</span></p>
     <h1>Privacy</h1>
     <p class="fn-lede">This site keeps as little as it can. No accounts, no email list, no ads. Here is everything it does keep, where that sits, who reads it, and how to get it taken back.</p>
     <div class="fn-body">
       <h2>The short version</h2>
       <ul>
-        <li>There is nothing to sign up for. The site sends no email, and it can’t receive any: cycleforchange.org has no mailbox.</li>
+        <li>There is nothing to sign up for. The site sends no email, and it can’t receive any: cycleforchange.org has no mailbox. The one exception you choose yourself: tap “Keep me posted” on the Fruit Loop RSVP and Robert can reach you about rides.</li>
         <li>Google Analytics counts visits and pages. It never gets your name or anything you type. The few taps it counts are named below.</li>
         <li>Five forms exist. What you send goes to Netlify, which hosts the site. Some of it then goes into the review queue, which is a public list of issues in the site’s code repository on GitHub, and some of it, with your say-so, onto a page. Never your email, never a photo. Each form is spelled out below.</li>
         <li>“Near me” uses your location inside your browser and nowhere else.</li>
@@ -103,7 +103,7 @@
 
       <h2>Analytics</h2>
       <p>Google Analytics 4 is added by Netlify when it serves a page, not by this site’s own code. It counts which pages are read, roughly where visits come from and how long they last, and four taps we named so we can tell what’s useful: a tap out to a ride’s host, a tap to one of the orgs’ own ride registrations, a tap on a homepage finder tile (group rides or events), and a tap on the “Ride with me” bar. No name, no email and nothing you typed goes into any of them. What Google does with its own data is in <a href="https://policies.google.com/privacy" rel="noopener">Google’s privacy policy</a>. If you block analytics with a browser setting or an extension, every part of the site still works.</p>
-      <p>The site’s own code sets no cookies. It uses your browser’s storage for small conveniences that stay on your device: whether you hid the “Ride with me” bar or paused the homepage film this session, your filters on the 2027 calendar, your week on <a href="/tonight/">Tonight</a>, and your details on the ride check-in. The site never reads any of that back from anywhere else.</p>
+      <p>The site’s own code sets no cookies. It uses your browser’s storage for small conveniences that stay on your device: whether you hid the “Ride with me” bar or paused the homepage film this session, your filters on the 2027 calendar, your week on <a href="/tonight/">Tonight</a>, your details on the ride check-in, and your answer on the Fruit Loop RSVP with a random number that lets a second tap change it. The site never reads any of that back from anywhere else.</p>
 
       <h2>The five forms</h2>
       <p>Every form on the site is a Netlify form. What you send lands in Netlify, which stores it under <a href="https://www.netlify.com/privacy/" rel="noopener">Netlify’s privacy policy</a>. From there, a script reads it once an hour (reports once a week) and opens a note in the review queue. The queue is public: it’s the issue list of the site’s code repository on GitHub, and only the fields named below go into it. Emails, files, photos and locations never leave Netlify.</p>
@@ -118,6 +118,13 @@
       <h3>Ride check-in</h3>
       <p>A page we’re testing (<a href="/ride/">the check-in</a>, not linked from the site yet). It asks the ride, the time, how far from the start you are (rounded), what changed, a line, photos or a clip, your first name and an email you can leave blank. The public review queue gets the ride, the time, the rounded distance, the change and your line, with any links, emails and phone numbers stripped out; a plain “still rolling” opens nothing. Photos, clips and your location never leave Netlify.</p>
       <p>Until Oct 9, 2026 the footer had an email signup for mile updates. It’s gone, and the addresses it collected have never been emailed. They sit in Netlify. If yours is one of them and you’d like it deleted, say so (below).</p>
+
+      <h2 id="fruit-loop">The Fruit Loop RSVP</h2>
+      <p>On <a href="/fruitloop/rsvp/">the RSVP page</a> for the Fruit Loop (Robert’s Friday night ride). It isn’t a Netlify form: the answer goes to the site’s own small server and sits in Netlify’s storage for the site. Nothing goes into the public review queue.</p>
+      <ul>
+        <li><strong>Yes or can’t make it:</strong> a count for that Friday and nothing about you. No name, no email, no address. Your browser keeps a random number so a second tap changes your answer instead of adding one.</li>
+        <li><strong>Maybe, keep me posted:</strong> your first name and the email or phone number you give. Only Robert sees them, on a private page. He uses them for one thing: letting you know when rides are coming up, by email or text, himself. Never shared, never sold, never added to anything else.</li>
+      </ul>
 
       <h2>Location</h2>
       <p>“Near me” on <a href="/rides/">the ride finder</a>, the city pages and <a href="/tonight/">Tonight</a> asks your browser for your position once, sorts the rides by distance on the page, and forgets it. Nothing is sent anywhere. Tonight asks for the weather at each ride’s start, not at yours.</p>
@@ -137,7 +144,7 @@
         <li>No accounts, no logins, no paywall.</li>
         <li>No ad networks, no tracking pixels, no retargeting.</li>
         <li>Nothing typed into a form is sold, shared or used for anything but the ride, the review, the route or the clip it was sent for.</li>
-        <li>No email to you. Ever. Mile updates go up on <a href="https://www.instagram.com/cycl_eforchange" rel="noopener">Instagram</a>.</li>
+        <li>No email to you from the site. Mile updates go up on <a href="https://www.instagram.com/cycl_eforchange" rel="noopener">Instagram</a>. The only time anyone gets in touch is when you asked for it on the Fruit Loop RSVP.</li>
         <li>No face on the site or in a post without a cleared OK. Only Robert is recognisable in his own photos and video; riders are from behind or far off, and oncoming faces are cropped.</li>
         <li>Nobody’s Strava but Robert’s own is ever read.</li>
       </ul>
@@ -148,13 +155,14 @@
         <li>A review: it comes off the ride page at the next build, usually the same day.</li>
         <li>A “What do you cycle for?” clip: within 7 days our posts with it are deleted, it comes off the site, and any boost stops.</li>
         <li>A form entry, a photo, an old signup address: deleted from Netlify.</li>
+        <li>Your name and number or email from the Fruit Loop RSVP: off the list the same day.</li>
       </ul>
 
       <h2>Who runs this</h2>
       <p>Cycle for Change LLC, Phoenix, Arizona. Robert Castan. The site’s code is public at <a href="https://github.com/castan1981-oss/cycle-for-change" rel="noopener">github.com/castan1981-oss/cycle-for-change</a>, including the scripts that move form entries into the review queue, so you can read exactly what moves where. <a href="/methodology/">How rides are checked</a> covers the other half of trust: how every fact on the site gets its source and its date.</p>
     </div>
   </div>
-  <p class="fn-note">Written from the site’s own code and settings: the forms, the scripts that read them, the analytics events, the browser storage each page uses. Checked Oct 19, 2026. If this page and the code ever disagree, the code is what happens, and this page gets fixed.</p>
+  <p class="fn-note">Written from the site’s own code and settings: the forms, the scripts that read them, the analytics events, the browser storage each page uses. Checked Oct 19, 2026; the Fruit Loop RSVP added Oct 30, 2026. If this page and the code ever disagree, the code is what happens, and this page gets fixed.</p>
   <p class="fn-back"><a href="/">← Home</a> · <a href="/contact/">Contact</a></p>
   <section class="pledge" aria-labelledby="pledge-h">
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>

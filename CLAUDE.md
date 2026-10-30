@@ -79,7 +79,8 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   scripts/build-calendar.js` (events and calendar since Oct 21, 2026, so a passed event date clears itself). If any of
   them fails, the deploy fails and the previous deploy stays live.
 - Functions in `netlify/functions/`: `strava` (behind `/api/strava`, the tally), `strava-webhook`,
-  `strava-connect`, `strava-week`, `mileage`, `instagram`, `submission-created`, `deploy-succeeded` (IndexNow, §7). The retired
+  `strava-connect`, `strava-week`, `mileage`, `instagram`, `submission-created`, `deploy-succeeded` (IndexNow, §7), `rsvp`
+  (behind `/api/rsvp`, the Fruit Loop RSVP, §5). The retired
   `votes` / `pledges` functions and the `/api/votes` redirect are being removed — don't call them,
   don't revive them, and never renew a Netlify token for them.
 
@@ -491,7 +492,19 @@ Oct 27). Streets and lit paths only: no dead-end detours, no climbs.
 - **No photo rule in public** (Robert, Oct 27, 2026: "take the photo thing off everything"): no "Photos OK" sticker, no
   "no sticker, no photo", no "we never post who came" on the page, the kit, the record or anything printed. §10 still
   holds for what goes on the site and in our posts: only Robert recognisable, anyone else with their OK.
-- No form, no RSVP, no list of names. Questions come by Instagram DM.
+- **The RSVP** (Oct 30, 2026; Robert: "click this link yes I'm coming. No, I'm not that's it", a "maybe but keep me
+  informed on upcoming events", and "I don't wanna try to get their information just the ones that want more
+  information"). `cycleforchange.org/rsvp` → `/fruitloop/rsvp/` (noindex, no chrome, one column): the logo, the next
+  Friday, "You coming?", three taps. **Yes, I'm coming** and **Can't make it** are counted and land on `/fruitloop/`;
+  nothing about the person is sent but a random id the browser keeps, so a second tap changes the answer.
+  **Maybe. Keep me posted** opens a form (first name, email or phone, one is enough), then `/fruitloop/`. Works without the
+  script (plain posts, 303 to the ride page). `netlify/functions/rsvp.js` + `lib/fruitloop-rsvp.js` store it in Netlify Blobs
+  (`fruitloop-rsvp`; deploy previews write to `fruitloop-rsvp-preview`): `r/<friday>/<answer>/<id>` and `c/<id>`. The
+  Friday is the page's next ride on the same clock as `fruitloop.js`. Robert's tally is `/fruitloop/tally/#k=<key>`
+  (counts for the next Friday, every Friday so far, the keep-posted list with Text / Email / Remove, copy all); the key's
+  SHA-256 is in the lib, the key itself only in his link and the project doc "Fruit Loop RSVP" — never in the repo, a
+  PR, an issue or a log. Contacts never go to GitHub; they're used only by Robert, by hand, for ride news (`/privacy/#fruit-loop`).
+  Tests: `tools/test/fruitloop-rsvp.test.js`. Other questions still come by Instagram DM.
 - **The chalk look** (Oct 27, 2026; Robert's "Brand Family Playbook" from ChatGPT: three brands, Cycle for Change the
   platform, the Fruit Loop the gathering, Queers on Bikes the invitation; "Nobody gets dropped" is the promise). **Everything
   Fruit Loop is chalk + photo**: his real photo with only the background darkened through his own cut-out masks (nothing in
@@ -1086,3 +1099,5 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-28 — `#road` gets a film again: Robert's drone reel cut to 8 s, silent, 16:9 (`tools/road-film.py`, `road-film-3`: the drone over him on the desert road, the lookout, the mountain road; the sunset bike, the canal path, the bridge and the side-on shot left out), under the 10,000 with today's player (`smallFilm()`); `CSS_V` 58.
 - 2026-10-28 — The count is bike miles only (runs and swims were being added in) and restarts by itself at midnight on Jan 1, 2027 in Phoenix (`tools/lib/season.js`, both wordings on every page, `tools/test/strava-count.test.js`); the `/tonight/` Flyer redrawn in Overpass and After Hours without the never-list line it carried; `CSS_V` 59. (Made Oct 26 as #211, rebuilt on top of the road film.)
 - 2026-10-29 — The Fruit Loop's pace is about 14 to 16 mph (Robert: 10 to 12 was "way slow"): the poster in all three sizes (`-6`), the page's basics and How it works, the directory record (host update), the how-it-works slide, the 11 × 17 poster and reel sticker 4. The Story survey's "how fast" choices are left as asked.
+- 2026-10-30 — The Fruit Loop RSVP (Robert): `/rsvp` → yes, can't make it, or keep me posted; yes and no are counts and go
+  to `/fruitloop/`, maybe leaves a name and an email or phone; Robert's private tally at `/fruitloop/tally/`; `/privacy/` says what's kept.
