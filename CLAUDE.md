@@ -526,6 +526,35 @@ Oct 27). Streets and lit paths only: no dead-end detours, no climbs.
   all three off"); its share card is `og-fruitloop-3.jpg` (`tools/fruitloop-chalk/og.py`). The kicker (inside the logo) is "A queer night ride through Phoenix history"; the
   `<title>`, og/twitter titles and JSON-LD keep "a queer night ride in Phoenix" for search.
 
+### The print and social kit (`tools/cfc-kit/`, Oct 29, 2026)
+Robert: "make something like this [the Fruit Loop kit] for Cycle for Change, all our print stuff and social", in the
+site's look (his pick over the chalk). `python3 tools/cfc-kit/make.py` writes, into `tools/cfc-kit/.build/out/` (never
+committed): **posts** (1080 × 1350) and **Stories** (1080 × 1920, top 200 / bottom 330 px left clear for Instagram's
+bars): 10,000 miles · Who do you cycle for? · the ride and who it was for (the homepage's #today: its dated line "The
+ride on Monday, October 12.", never "today", its plate and photo; or `--for "…" --date … --photo … --where …`, no photo
+unless one is given; a word about the mind puts 988 and Trevor on the piece; the Story also comes blank, to type the
+word on the plate) · three stats with their source and catch (`--stat <id>` for any other) · Ride with me
+(the next of his 2027 rides) · the 2027 list · Find a group ride · the count; **reel** overlays (each on a flat tar
+block, so it reads over footage; see-through outside it) and an end card; **print** as vector PDFs (8.5 × 11 flyer,
+11 × 17 poster with the homepage's map, and every stat in the bank as a 5 × 7 card, one PDF, 1/8 in bleed); **stickers**
+(CYCLE FOR + a blank plate to write on, 10K on its own, Who do you cycle for? with a QR), PDF with bleed + 300 dpi PNG.
+Then `python3 tools/cfc-kit/kitpage.py` builds the "CFC Phone Kit" artifact's files (`.build/kit/`;
+https://claude.ai/artifact/Uc4aoGeyh82Q87N2mUZLH1, republish that URL): every piece with
+a Save button (the downloads capability); republish that artifact, bump `V` when pictures change.
+- **The site's rules, nothing new**: the stencil from chrome.js (only ever CYCLE FOR), the blank as a rose bar or a
+  plate in Overpass 900, After Hours, Overpass from `cfc-site/fonts/`, a photo and a solid field one above the other
+  (nothing on a photo) with its place · month line under it, photos only from the registry or `#today` (no cars, only
+  Robert; his photos cropped to the waist). CYCLE FOR is never followed by a number: 10K stands on its own. Every line is a line the site
+  already says or comes from data: the count from `/api/strava` (else `data/tally.json`, with `season.js`'s words),
+  the rides from chrome.js `RIDING`, the directory count from `rides/live.json` (as build-home.js counts it).
+- **The stat bank** is `data/stats/stat-bank.json`: a copy of Robert's "CFC Stat Bank" artifact (132 stats, each with
+  org, report, year, URL, the catch). Fix or add stats in the artifact, then re-copy. The cards print the source, the
+  catch and a QR to the report; `mh: true` ones carry 988 and Trevor (the substance-use stats too, since Oct 30). A card
+is a column, so a long stat shrinks its line instead of running into the source. All 132 QR codes decode (zxing, 200 dpi).
+The brand read: `research/brand/2026-10-29-cfc-kit.md` (its six blocks fixed Oct 30).
+- **Short links** for the QR codes (netlify.toml): `/gr` → `/rides/`, `/2027` → `/events/2027/riding/`, `/cf` →
+  `/cyclefor/`, tagged `utm_source=cfc-kit`.
+
 ### Today I rode for (`#today` on the homepage, Oct 12, 2026)
 Every ride Robert says who he rode for that day. `data/today.json` (date, `for` = the plate, `line` = his words,
 `photo`, `photo2`, `film`) → `todaySection()` in `scripts/build-home.js` → a light section after the 10,000 (`#road`)
@@ -1099,5 +1128,6 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-28 — `#road` gets a film again: Robert's drone reel cut to 8 s, silent, 16:9 (`tools/road-film.py`, `road-film-3`: the drone over him on the desert road, the lookout, the mountain road; the sunset bike, the canal path, the bridge and the side-on shot left out), under the 10,000 with today's player (`smallFilm()`); `CSS_V` 58.
 - 2026-10-28 — The count is bike miles only (runs and swims were being added in) and restarts by itself at midnight on Jan 1, 2027 in Phoenix (`tools/lib/season.js`, both wordings on every page, `tools/test/strava-count.test.js`); the `/tonight/` Flyer redrawn in Overpass and After Hours without the never-list line it carried; `CSS_V` 59. (Made Oct 26 as #211, rebuilt on top of the road film.)
 - 2026-10-29 — The Fruit Loop's pace is about 14 to 16 mph (Robert: 10 to 12 was "way slow"): the poster in all three sizes (`-6`), the page's basics and How it works, the directory record (host update), the how-it-works slide, the 11 × 17 poster and reel sticker 4. The Story survey's "how fast" choices are left as asked.
+- 2026-10-29 — The print and social kit (`tools/cfc-kit/`, Robert: "something like this for cyc for all our prints stuff and social"): posts, Stories, reel overlays, the flyer, the 11 × 17 poster, all 132 stats as 5 × 7 cards and three stickers, in the site's look, from the site's data; the stat bank copied to `data/stats/`; short links `/gr`, `/2027`, `/cf`; the "CFC Phone Kit" artifact to save them from.
 - 2026-10-30 — The Fruit Loop RSVP (Robert): `/rsvp` → yes, can't make it, or keep me posted; yes and no are counts and go
   to `/fruitloop/`, maybe leaves a name and an email or phone; Robert's private tally at `/fruitloop/tally/`; `/privacy/` says what's kept.
