@@ -277,7 +277,11 @@ homepage only; every other rule in this section still holds there and everywhere
   paragraphs came off so the footage carries the screen; each phrase is a no-wrap span so a phone breaks between them), one primary (Ride with me, `#heroRide`, the date on a rose plate) and two quiet links, "Find a group ride" (the
   approved direction) and, when there is a write-up, "Read the last ride" (Cadence's must, Oct 27, 2026: `NOTE.href` in
   build-home.js, his newest write-up, never the riding page; omitted when there is none). "Read the last ride" stays in
-  `#road` too. The scrim rides with the words, not the screen (`.hero-in::before`): it eases in over the 200px
+  `#road` too. **Oct 30, 2026: a third quiet link, "Give to my Center Ride Out"** (Robert: his Instagram bio sends people to
+  the homepage, "I would rather they go to cycle for change and then click this link to go to the LGBT center"): his own
+  fundraiser page on the Center's site (`CRO_GIVE` in build-home.js), also `#ride`'s primary ("Give to my ride"), the
+  Center's "Give to the Center" in `#orgs`, and the first button in the Center Ride Out row on the riding page (`GIVE` in
+  build-calendar.js). `hero-contrast.py` passes with it (links 7.8:1 and up). It comes off with the `#ride` rewrite after Apr 25, 2027. The scrim rides with the words, not the screen (`.hero-in::before`): it eases in over the 200px
   above the stencil, .6 at its top, .72 at the foot — measured against every frame of both films at nine screen sizes
   (3:1 for the stencil, 4.5:1 for the caption and the links): `python3 tools/hero-contrast.py` after any
   recut or change to the hero's type or scrim (exits 1 on a fail). Over the film the header is the site's solid bar on
@@ -1129,5 +1133,8 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-28 — The count is bike miles only (runs and swims were being added in) and restarts by itself at midnight on Jan 1, 2027 in Phoenix (`tools/lib/season.js`, both wordings on every page, `tools/test/strava-count.test.js`); the `/tonight/` Flyer redrawn in Overpass and After Hours without the never-list line it carried; `CSS_V` 59. (Made Oct 26 as #211, rebuilt on top of the road film.)
 - 2026-10-29 — The Fruit Loop's pace is about 14 to 16 mph (Robert: 10 to 12 was "way slow"): the poster in all three sizes (`-6`), the page's basics and How it works, the directory record (host update), the how-it-works slide, the 11 × 17 poster and reel sticker 4. The Story survey's "how fast" choices are left as asked.
 - 2026-10-29 — The print and social kit (`tools/cfc-kit/`, Robert: "something like this for cyc for all our prints stuff and social"): posts, Stories, reel overlays, the flyer, the 11 × 17 poster, all 132 stats as 5 × 7 cards and three stickers, in the site's look, from the site's data; the stat bank copied to `data/stats/`; short links `/gr`, `/2027`, `/cf`; the "CFC Phone Kit" artifact to save them from.
+- 2026-10-30 — Give to my Center Ride Out (Robert: the Instagram bio lands on the homepage): his fundraiser page
+  (give.lalgbtcenter.org/fundraiser/7694885) as the hero's third quiet link, `#ride`'s primary, the Center's give link in
+  `#orgs` and the first button in the riding page's Center Ride Out row; "Sign up with the Center" stays as a link.
 - 2026-10-30 — The Fruit Loop RSVP (Robert): `/rsvp` → yes, can't make it, or keep me posted; yes and no are counts and go
   to `/fruitloop/`, maybe leaves a name and an email or phone; Robert's private tally at `/fruitloop/tally/`; `/privacy/` says what's kept.

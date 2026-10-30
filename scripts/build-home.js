@@ -54,6 +54,11 @@ const RN = (() => {
   return { rides: rides.length || 1407, abroad: countries.size || 18 };
 })();
 const RIDES_N = RN.rides.toLocaleString("en-US");
+// Robert's own Center Ride Out fundraiser, on the Center's site (Oct 30, 2026: "I would rather they go to cycle for
+// change and then click this link"). Instagram's bio link lands here, so it's on the first screen (the hero's quiet
+// links), as #ride's primary and as the Center's give link in #orgs. The money goes through the Center's page, never
+// through this site (CLAUDE.md §1). After Apr 25, 2027 it comes off with the #ride rewrite.
+const CRO_GIVE = "https://give.lalgbtcenter.org/fundraiser/7694885";
 const CAL = read("data/calendar-2027.json");
 const CAL_N = CAL && Array.isArray(CAL.events) ? CAL.events.length.toLocaleString("en-US") : "640";
 const TOWNS_N = fs.readdirSync(path.join(ROOT, "data", "towns")).filter((f) => f.endsWith(".json") && !f.startsWith("_")).length;
@@ -114,8 +119,9 @@ const WIDE_Q = "(min-width: 760px) and (min-aspect-ratio: 1/1)";
 const PHONE_Q = "(max-width: 759px), (max-aspect-ratio: 1/1)";
 const heroRide = `<a class="hero-ride" id="heroRide" href="${esc(RIDE_HREF)}"${NR ? " data-ride-next" : ""}>${NR ? `<span class="ridebar-d">${esc(NR.date)}</span>` : ""}<span class="hero-ride-t"><span class="finder-t">Ride with me</span><span class="finder-s">${NR ? `${esc(NR.name)}, ${esc(NR.where)}` : "The rides I&rsquo;m doing in 2027"}</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>`;
 const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools/hero-film.py): one frame on a phone, two panels on a wide
-     screen (the words sit inside the wide one, the gutter clear of the nav). One primary and two quiet links: Find a group ride, and Read the last ride
-     when there is one (his newest write-up, never the riding page; CLAUDE.md §3). The poster is the film's first frame and the page's largest paint; /home.js
+     screen (the words sit inside the wide one, the gutter clear of the nav). One primary and the quiet links: Find a group ride, Read the last ride
+     when there is one (his newest write-up, never the riding page; CLAUDE.md §3), and Give to my Center Ride Out (Oct 30, 2026: the Instagram
+     bio lands here). The poster is the film's first frame and the page's largest paint; /home.js
      starts the film after load, never under reduced motion or Save-Data, and the button always stops it. Over it only the
      stencil and one caption (Robert and Cadence, Oct 27, 2026: "10,000 miles. One year. All on the bike."); his sentence
      moved to the story, #why. —— -->
@@ -138,7 +144,7 @@ const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools
     <p class="hero-cap"><span class="nowrap">10,000 miles.</span> <span class="nowrap">One year.</span> <span class="nowrap">All on the bike.</span></p>
     <div class="hero-acts">
       ${heroRide}
-      <p class="hero-links"><a class="link link--bone" href="/rides/">Find a group ride</a>${NOTE ? `<a class="link link--bone" href="${esc(NOTE.href)}">Read the last ride</a>` : ""}</p>
+      <p class="hero-links"><a class="link link--bone" href="/rides/">Find a group ride</a>${NOTE ? `<a class="link link--bone" href="${esc(NOTE.href)}">Read the last ride</a>` : ""}<a class="link link--bone" href="${CRO_GIVE}" target="_blank" rel="noopener noreferrer">Give to my Center Ride Out</a></p>
     </div>
   </div>
   <button class="hero-pause" id="heroPause" type="button" hidden><svg class="hp-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg><svg class="hp-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><span class="hp-label">Pause the film</span></button>
@@ -369,7 +375,7 @@ const ORGS_S = `<!-- —— 6. the orgs. One line each from the site's checked c
         <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkOjai"/></svg>
         <h3 class="org-h">Los Angeles LGBT Center</h3>
         <p>Health, housing and advocacy for LGBTQ+ people.</p>
-        <p class="org-acts"><a class="link" href="https://www.lalgbtcenter.org" target="_blank" rel="noopener noreferrer">Give to the Center</a></p>
+        <p class="org-acts"><a class="link" href="${CRO_GIVE}" target="_blank" rel="noopener noreferrer">Give to the Center</a></p>
       </article>
       <article class="org">
         <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkSF"/></svg>
@@ -401,7 +407,7 @@ const RIDE_S = `<!-- —— ride with me: the org ride (Center Ride Out) —— 
         <div><dt>1 day</dt><dd>Day 2 only</dd></div>
         <div><dt>Money</dt><dd>You raise it on the Center&rsquo;s page</dd></div>
       </dl>
-      <p class="ridewith-acts"><a class="btn btn--ink" href="https://centerrideout.lalgbtcenter.org/en/" target="_blank" rel="noopener noreferrer">Sign up with the Center</a><a class="link" href="/events/2027/riding/">All my 2027 rides</a></p>
+      <p class="ridewith-acts"><a class="btn btn--ink" href="${CRO_GIVE}" target="_blank" rel="noopener noreferrer">Give to my ride</a><a class="link" href="https://centerrideout.lalgbtcenter.org/en/" target="_blank" rel="noopener noreferrer">Sign up with the Center</a><a class="link" href="/events/2027/riding/">All my 2027 rides</a></p>
       <p class="note-sm">Details from the Center, checked Oct 26.</p>
     </div>
   </div>

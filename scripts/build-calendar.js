@@ -414,6 +414,8 @@ const DEEP_URL = (() => { try { const d = JSON.parse(fs.readFileSync(path.join(R
 // Studio pass 1 (Oct 21, 2026): the town link left the row summary (a 20px trap inside a tappable row on 638 rows; the
 // opened panel's town strip carries it). On Robert's own list (`mine`) the row has no "Robert's ride" tag (the page is
 // his list) and its links come first in the opened row, above the facts: Ride with me lands on an open row there.
+// Robert's own fundraiser page for an org ride (Oct 30, 2026), first in the opened row on his list (the riding page)
+const GIVE = { "center-ride-out": "https://give.lalgbtcenter.org/fundraiser/7694885" };
 function eventHtml(e, { light = false, mine = false } = {}) {
   const meta = [`<b>${esc(place(e))}</b>`, esc(e.category.toLowerCase())];
   if (e.cause) meta.push(esc(e.cause));
@@ -427,7 +429,8 @@ function eventHtml(e, { light = false, mine = false } = {}) {
   const town = townFor(e);
   const dn = dateNote(e);
   const tag = e.riding && !mine ? `<span class="you-tag">Robert&rsquo;s ride</span>` : "";
-  const links = `<p class="det-links">${DEEP_URL[e.slug] ? `<a class="btn btn--ink" href="${attr(DEEP_URL[e.slug])}">The full page</a>` : ""}${e.url ? `<a class="btn btn--ghost" href="${attr(e.url)}" rel="noopener" target="_blank">Event site</a>` : ""}${src ? `<span class="src">Sources: ${src}</span>` : ""}</p>`;
+  const give = mine && GIVE[e.slug];
+  const links = `<p class="det-links">${give ? `<a class="btn btn--ink" href="${attr(give)}" rel="noopener" target="_blank">Give to my ride</a>` : ""}${DEEP_URL[e.slug] ? `<a class="btn ${give ? "btn--ghost" : "btn--ink"}" href="${attr(DEEP_URL[e.slug])}">The full page</a>` : ""}${e.url ? `<a class="btn btn--ghost" href="${attr(e.url)}" rel="noopener" target="_blank">Event site</a>` : ""}${src ? `<span class="src">Sources: ${src}</span>` : ""}</p>`;
   if (light) {
     const monthUrl = monthPath(e.month);
     return `<details class="ev${e.riding ? " you" : ""}" id="${attr(e.slug)}" data-m="${e.month}" data-t="${attr(e.category)}" data-r="${attr(e.region)}" data-c="${attr(e.cause)}" data-f="${farOf(e).join(" ")}" data-s="${attr(e.date_status)}" data-y="${e.riding ? 1 : 0}" data-q="${attr(q)}" data-src="${attr(monthUrl)}">
