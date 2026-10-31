@@ -2421,11 +2421,11 @@ const HOW_STEPS = [
   ["Flat tire?", "Two stay with you.", "The rest roll on and regroup ahead. A whole group stopped is a hazard."],
 ];
 const HOW_FILMS = {
-  ride: { src: "/film/how-we-ride-1.mp4", poster: "/film/how-we-ride-1.jpg", seconds: 75, title: "How we ride",
+  ride: { src: "/film/how-we-ride-2.mp4", poster: "/film/how-we-ride-2.jpg", seconds: 75, title: "How we ride",
     line: "Nine things to know before your first group ride. It runs 1:15 and has no sound.",
     more: ["/rides/about/#how-we-ride", "Read the nine instead"],
     alt: "How we ride: six riders seen from above on a lane, showing nine group-ride habits one at a time, the words on screen. It ends on Cycle for change." },
-  fruitloop: { src: "/film/fruit-loop-how-we-roll-1.mp4", poster: "/film/fruit-loop-how-we-roll-1.jpg", seconds: 84, title: "How we roll",
+  fruitloop: { src: "/film/fruit-loop-how-we-roll-2.mp4", poster: "/film/fruit-loop-how-we-roll-2.jpg", seconds: 84, title: "How we roll",
     line: "Ten things for your first Fruit Loop. It runs 1:24 and has no sound.",
     more: ["/fruitloop/#how-we-roll", "Read the ten instead"],
     alt: "How we roll, in chalk on a night road: six riders in rainbow kits cross the rainbow crosswalk and show ten group-ride habits, lights on. It ends on the Fruit Loop logo, Starts Friday, Dec 11, and the meeting spot." },

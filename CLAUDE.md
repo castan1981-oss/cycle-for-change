@@ -531,9 +531,10 @@ Oct 27). Streets and lit paths only: no dead-end detours, no climbs.
   `<title>`, og/twitter titles and JSON-LD keep "a queer night ride in Phoenix" for search.
 - **How we roll** (Oct 31, 2026): the How we ride film in the Fruit Loop's chalk look (his crayon logo as given on the end
   card, the approved reel end-card lines, ten things with "Lights on" first and "Nobody gets dropped. That's the promise."),
-  `film/fruit-loop-how-we-roll-1.*` (1:24), `#how-we-roll` on the page after the basics and before the poster: words first on
+  `film/fruit-loop-how-we-roll-2.*` (1:24), `#how-we-roll` on the page after the basics and before the poster: words first on
   a phone, the film beside them on desktop, "Save the film", the ten in a fold. Never free, every Friday, 18 and up or
-  hosted by in it. The host rider in it is Robert's red-dress look from the flyer.
+  hosted by in it. The host rider in it is Robert's red-dress look from the flyer. No "3 of 10" on any chapter (Robert,
+  Oct 31: so each one can be shared on its own); `-2` is the cut without it.
 
 ### The print and social kit (`tools/cfc-kit/`, Oct 29, 2026)
 Robert: "make something like this [the Fruit Loop kit] for Cycle for Change, all our print stuff and social", in the
@@ -786,7 +787,8 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   what counts (Netlify runs `tools/build-rides.js` on every deploy).
 - **How we ride** (Oct 31, 2026; Robert: "put the Fruit Loop on that page and the other on the ride pages"): the
   group-ride etiquette film, nine things (question, the answer on the plate, one line on why; the flat rule is "Two stay
-  with you", his Oct 30 call). `film/how-we-ride-1.*` (720×1280, 1:15, silent H.264 + jpg/webp/avif poster), drawn in
+  with you", his Oct 30 call; no "3 of 9" on any chapter, Robert, Oct 31: so each one can be shared on its own).
+  `film/how-we-ride-2.*` (720×1280, 1:15, silent H.264 + jpg/webp/avif poster), drawn in
   code from one clock and rendered frame by frame (source and the render scripts are in the claude.ai project, not here).
   `howWeRideBlock()` in build-rides.js puts it on every **listed** ride page after "First time on this ride?", tap to play
   (`data-film-tap`), with one line and "Read the nine instead" → `/rides/about/#how-we-ride`, where the film sits with all
@@ -1158,3 +1160,5 @@ two exits; the shapes are on the plan canvas.
   `/rides/film.js`; `CSS_V` 60. Same PR: `/chrome.js` and `/home.js` toggle only `[data-season="2027"]` and
   `[data-season="training"]` — the bare `[data-season]` from Oct 28 hid the whole article on every ride page (they carry the
   ride's riding months as `data-season`); `tools/test/season-selector.test.js` keeps it that way.
+- 2026-10-31 — Both films lose the "3 of 9" / "3 of 10" line over each chapter (Robert: share each one on its own): `how-we-ride-2`,
+  `fruit-loop-how-we-roll-2`, new posters.
