@@ -529,6 +529,11 @@ Oct 27). Streets and lit paths only: no dead-end detours, no climbs.
   Friday," "18 and up," "hosted by," or "the ride ends by riding it."** The page leaves them out too (Robert, Oct 27: "take
   all three off"); its share card is `og-fruitloop-3.jpg` (`tools/fruitloop-chalk/og.py`). The kicker (inside the logo) is "A queer night ride through Phoenix history"; the
   `<title>`, og/twitter titles and JSON-LD keep "a queer night ride in Phoenix" for search.
+- **How we roll** (Oct 31, 2026): the How we ride film in the Fruit Loop's chalk look (his crayon logo as given on the end
+  card, the approved reel end-card lines, ten things with "Lights on" first and "Nobody gets dropped. That's the promise."),
+  `film/fruit-loop-how-we-roll-1.*` (1:24), `#how-we-roll` on the page after the basics and before the poster: words first on
+  a phone, the film beside them on desktop, "Save the film", the ten in a fold. Never free, every Friday, 18 and up or
+  hosted by in it. The host rider in it is Robert's red-dress look from the flyer.
 
 ### The print and social kit (`tools/cfc-kit/`, Oct 29, 2026)
 Robert: "make something like this [the Fruit Loop kit] for Cycle for Change, all our print stuff and social", in the
@@ -779,6 +784,16 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   that, never write a review, never post one he hasn't approved. Emails stay in Netlify and his inbox.
 - The committed ride pages can lag `data/ride-reviews.json` until the next local rebuild; the deploy is
   what counts (Netlify runs `tools/build-rides.js` on every deploy).
+- **How we ride** (Oct 31, 2026; Robert: "put the Fruit Loop on that page and the other on the ride pages"): the
+  group-ride etiquette film, nine things (question, the answer on the plate, one line on why; the flat rule is "Two stay
+  with you", his Oct 30 call). `film/how-we-ride-1.*` (720×1280, 1:15, silent H.264 + jpg/webp/avif poster), drawn in
+  code from one clock and rendered frame by frame (source and the render scripts are in the claude.ai project, not here).
+  `howWeRideBlock()` in build-rides.js puts it on every **listed** ride page after "First time on this ride?", tap to play
+  (`data-film-tap`), with one line and "Read the nine instead" → `/rides/about/#how-we-ride`, where the film sits with all
+  nine in words (`HOW_STEPS`): one page carries the text, not 1,300 copies. Not on Critical Mass or open streets, and not
+  in left-hand-traffic countries (`LEFT_TRAFFIC`: the riders keep right). The Fruit Loop's own row gets How we roll
+  instead (`HOW_FILMS.fruitloop`). `/rides/film.js` plays every `[data-film]` on a page (moved out of ride.js so the about
+  page and `/fruitloop/` can use it). A recut bumps the file number.
 
 ### Routes on ride pages (Oct 9, 2026)
 A rider asked TSR on Instagram for "an actual route" because the written directions didn't work on a map, then
@@ -1138,3 +1153,8 @@ two exits; the shapes are on the plan canvas.
   `#orgs` and the first button in the riding page's Center Ride Out row; "Sign up with the Center" stays as a link.
 - 2026-10-30 — The Fruit Loop RSVP (Robert): `/rsvp` → yes, can't make it, or keep me posted; yes and no are counts and go
   to `/fruitloop/`, maybe leaves a name and an email or phone; Robert's private tally at `/fruitloop/tally/`; `/privacy/` says what's kept.
+- 2026-10-31 — How we ride on every listed group-ride page (after "First time on this ride?", tap to play) and on
+  `/rides/about/#how-we-ride` with the nine in words; How we roll on `/fruitloop/#how-we-roll` and the Fruit Loop's row;
+  `/rides/film.js`; `CSS_V` 60. Same PR: `/chrome.js` and `/home.js` toggle only `[data-season="2027"]` and
+  `[data-season="training"]` — the bare `[data-season]` from Oct 28 hid the whole article on every ride page (they carry the
+  ride's riding months as `data-season`); `tools/test/season-selector.test.js` keeps it that way.

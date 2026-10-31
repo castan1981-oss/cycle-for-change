@@ -27,7 +27,7 @@ const OG_IMAGE = `${SITE}/og-cfc.png`;
 // /chrome.css and every section sheet a generator passes (any old ?v= is replaced), apply-chrome.py gets it through
 // head(), build-home.js puts it on /home.css. Bump it whenever a stylesheet or /chrome.js changes and regenerate in the
 // §2 order: a page must never pair an old /chrome.css with new section sheets (they share cascade layers).
-const CSS_V = 59;
+const CSS_V = 60;
 const ver = (href) => `${href.split("?")[0]}?v=${CSS_V}`;
 
 // Counts shown in the mobile menu, same as the homepage. Read from the data so
