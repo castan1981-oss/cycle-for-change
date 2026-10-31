@@ -1640,6 +1640,18 @@ ${BLOCKS.BUILT([
     ["Flagged", `${nLow} marked Unconfirmed`, "Found on one source, or a detail we couldn't pin down. The card tells you to confirm first."],
     ["Free", "No paid placement", "Nobody pays to be listed or to rank. Tell us when a ride is gone, changed, or still on."],
   ])}
+    <section class="gr-how gr-how--about" id="how-we-ride" aria-labelledby="gr-how-h">
+      <h2 id="gr-how-h">How we ride</h2>
+      <div class="gr-how-in">
+        ${howFilmFig(HOW_FILMS.ride, "gr-how-line")}
+        <div class="gr-how-body">
+          <p id="gr-how-line">Nine things to know before your first group ride. The film runs 1:15 and has no sound; here are the same nine, in words.</p>
+          <ol class="gr-how-steps">
+${HOW_STEPS.map(([q, a, why]) => `            <li><b>${esc(q)} ${esc(a)}</b> <span>${esc(why)}</span></li>`).join("\n")}
+          </ol>
+        </div>
+      </div>
+    </section>
     <section class="dir-faq" id="first-ride" aria-labelledby="faq-h">
       <h2 id="faq-h">First group ride? The questions people ask first</h2>
 ${FAQ.map(([q, a]) => `      <details><summary>${esc(q)}</summary><p>${a}</p></details>`).join("\n")}
@@ -1655,7 +1667,8 @@ ${CRISIS}
 ${CTA}
   </div>
 </main>
-` + foot();
+` + foot(`
+<script src="/rides/film.js?v=1" defer></script>`);
 }
 function addPage(rides) {
   const canonical = `${SITE}/rides/add/`;
@@ -2390,6 +2403,73 @@ function filmBlock(r) {
       </section>`;
 }
 
+// ---------- Oct 31, 2026: How we ride, the group-ride film (Robert: "put … the other on the ride pages") ----------
+// One portrait film on every listed group ride's page; the Fruit Loop's own row gets its version, How we roll (the
+// one on /fruitloop/). The riders keep right, so rides in left-hand-traffic countries don't get it, and Critical Mass
+// and open streets aren't this kind of ride. Silent H.264, 720×1280, +faststart, files in cfc-site/film/ (bump the
+// number on a recut). A tap plays it (it's words on screen for over a minute); nothing downloads until then. The words,
+// all nine, are on /rides/about/#how-we-ride: one page carries the text, not 1,300 copies of it.
+const HOW_STEPS = [
+  ["How do we ride?", "Side by side.", "Single file when it’s tight. Never a bunch."],
+  ["Riding next to someone?", "Bars even.", "Don’t creep ahead. Nobody should have to chase."],
+  ["Gap opening up?", "Close it.", "Stay about a wheel back. Short groups are easier to pass."],
+  ["Want to move up?", "Not over the line.", "That lane isn’t ours. Wait for room."],
+  ["See something in the road?", "Point it out.", "See it, signal it. Riders behind do the same. Hole: point down at it. Slowing: palm down, pat the air. Stopping: hand up, open palm. Single up: one finger up."],
+  ["Car coming up behind?", "Call it up the line.", "Back rider says it. Everyone passes it forward."],
+  ["Red light?", "Everyone stops.", "Nobody rolls through. We go on green together."],
+  ["Someone falls behind?", "We wait.", "Regroup after climbs and turns. Nobody rides home alone."],
+  ["Flat tire?", "Two stay with you.", "The rest roll on and regroup ahead. A whole group stopped is a hazard."],
+];
+const HOW_FILMS = {
+  ride: { src: "/film/how-we-ride-1.mp4", poster: "/film/how-we-ride-1.jpg", seconds: 75, title: "How we ride",
+    line: "Nine things to know before your first group ride. It runs 1:15 and has no sound.",
+    more: ["/rides/about/#how-we-ride", "Read the nine instead"],
+    alt: "How we ride: six riders seen from above on a lane, showing nine group-ride habits one at a time, the words on screen. It ends on Cycle for change." },
+  fruitloop: { src: "/film/fruit-loop-how-we-roll-1.mp4", poster: "/film/fruit-loop-how-we-roll-1.jpg", seconds: 84, title: "How we roll",
+    line: "Ten things for your first Fruit Loop. It runs 1:24 and has no sound.",
+    more: ["/fruitloop/#how-we-roll", "Read the ten instead"],
+    alt: "How we roll, in chalk on a night road: six riders in rainbow kits cross the rainbow crosswalk and show ten group-ride habits, lights on. It ends on the Fruit Loop logo, Starts Friday, Dec 11, and the meeting spot." },
+};
+const LEFT_TRAFFIC = new Set(["GB", "IE", "AU", "NZ", "JP", "SG", "ZA", "IN", "HK", "MO", "MY", "TH", "ID", "BN", "MT", "CY", "KE", "UG", "TZ", "ZM", "ZW", "BW", "NA", "MU", "PK", "BD", "LK", "NP", "JM", "BS", "BB", "TT", "FJ"]);
+const FRUIT_LOOP_SLUG = "phoenix-az-cycle-for-change-fruit-loop";
+const clockText = (sec) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).padStart(2, "0")}`;
+function howFilmOf(r) {
+  if (r.slug === FRUIT_LOOP_SLUG) return HOW_FILMS.fruitloop;
+  if (r.kind === "critical-mass" || r.kind === "open-streets" || LEFT_TRAFFIC.has(r.country)) return null;
+  return HOW_FILMS.ride;
+}
+function howFilmFig(fm, describedBy) {
+  const len = clockText(fm.seconds);
+  return `<figure class="gr-film-fig gr-how-fig" data-film data-film-tap data-playing="false">
+          <div class="gr-film-frame">
+            <video muted playsinline disablepictureinpicture preload="none" poster="${attr(posterOf(fm.poster))}" width="720" height="1280" aria-label="${attr(fm.alt)}"${describedBy ? ` aria-describedby="${describedBy}"` : ""}>
+              <source src="${attr(fm.src)}" type="video/mp4">
+            </video>
+            <button class="gr-film-play" type="button" data-film-play aria-label="Play ${attr(fm.title)}, ${len}">${PLAY_SVG}</button>
+          </div>
+          <figcaption class="gr-film-cap">
+            <button class="gr-film-btn" type="button" data-film-btn data-playing="false"><span class="gr-film-ico gr-film-ico--play">${PLAY_SVG}</span><span class="gr-film-ico gr-film-ico--pause">${PAUSE_SVG}</span><span data-film-label>Play</span></button>
+            <span class="gr-film-where">${esc(fm.title)}</span>
+            <span class="gr-film-len">${len}</span>
+          </figcaption>
+        </figure>`;
+}
+function howWeRideBlock(r) {
+  const fm = howFilmOf(r);
+  if (!fm) return "";
+  return `
+    <section class="gr-how" id="how-we-ride" aria-labelledby="gr-how-h">
+      <h2 id="gr-how-h">${esc(fm.title)}</h2>
+      <div class="gr-how-in">
+        ${howFilmFig(fm, "gr-how-line")}
+        <div class="gr-how-body">
+          <p id="gr-how-line">${esc(fm.line)}</p>
+          <p><a class="link" href="${attr(fm.more[0])}">${esc(fm.more[1])}</a></p>
+        </div>
+      </div>
+    </section>`;
+}
+
 function reviewItem(rv) {
   const tags = [rv.again === "yes" ? "Would ride it again" : "Wouldn’t ride it again", rv.pace ? RV.PACE_TAG[rv.pace] : null].filter(Boolean);
   return `<li class="gr-rev">
@@ -2897,6 +2977,7 @@ ${rt ? "" : routeBlock(r, null, listed)}
 ${locator}
 ${visitBlock}
 ${firstTimeBlock(r, hostLabel)}
+${listed ? howWeRideBlock(r) : ""}
     <div class="gr-about">
       <h2>About the ${esc(r.name.replace(/^the\s+/i, ""))} group ride</h2>
       <p class="lede gr-about-lede">${esc(ledeShort)}</p>
@@ -2931,7 +3012,8 @@ ${BLOCKS.REPORT({ thing: "ride", name: r.name, kind: "changed", compact: true, i
 ${CTA}
 </main>
 ` + foot(`
-<script src="/rides/ride.js?v=40" defer></script>${rt ? `
+<script src="/rides/ride.js?v=41" defer></script>${film || (listed && howFilmOf(r)) ? `
+<script src="/rides/film.js?v=1" defer></script>` : ""}${rt ? `
 <script src="/rides/route.js?v=1" defer></script>` : ""}`);
 }
 

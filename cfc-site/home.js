@@ -25,7 +25,7 @@
 
   /* the words around the number: training until midnight Jan 1, 2027 in Phoenix, then 2027 (build-home.js, PR #211) */
   var IN_2027 = Date.now() >= YEAR_START;
-  document.querySelectorAll("[data-season]").forEach(function (el) { el.hidden = el.getAttribute("data-season") !== (IN_2027 ? "2027" : "training"); });
+  document.querySelectorAll('[data-season="2027"], [data-season="training"]').forEach(function (el) { el.hidden = el.getAttribute("data-season") !== (IN_2027 ? "2027" : "training"); });
 
   /* —— the tally: what the page carries (#tallyData), then the live read —— */
   var feed = { miles: 0, rides: 0, updated: "", profileUrl: "https://www.strava.com/athletes/22899089", recent: [] };

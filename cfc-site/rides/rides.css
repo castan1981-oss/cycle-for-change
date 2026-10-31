@@ -976,4 +976,22 @@ article.gr-note{font-size:inherit;max-width:none}   /* .gr-note (the hub's small
 .gr-tags:has(.gr-tag-rev){display:flex;flex-wrap:wrap;gap:var(--s1)}
 .gr-tags .gr-tag-rev{min-height:32px;padding:6px 10px 5px;position:relative}
 .gr-tags .gr-tag-rev::before{content:"";position:absolute;left:0;right:0;top:50%;height:44px;margin-top:-22px}   /* a 44px hit area on the 32px chip (access gate, Oct 22) */
+/* Oct 31, 2026 — How we ride: the group-ride film, portrait, tap to play (ride pages, /rides/about/). It uses the
+   ride film's player and caption line; on a ride page it sits after "First time on this ride?" */
+.gr-how{margin:var(--s5) 0 0}
+.gr-how h2{margin:0 0 var(--s3)}
+.gr-how-in{display:grid;gap:var(--s3)}
+.gr-how .gr-how-fig{max-width:360px}
+.gr-how .gr-film-frame video{aspect-ratio:9/16}
+.gr-how-body p{margin:0 0 var(--s2);max-width:34em;font-size:var(--fs-body);line-height:1.55}
+.gr-how-steps{list-style:none;margin:var(--s3) 0 0;padding:0;max-width:40em}
+.gr-how-steps li{padding:var(--s2) 0;border-top:1px solid var(--line-s);line-height:1.5}
+.gr-how-steps li:last-child{border-bottom:1px solid var(--line-s)}
+.gr-how-steps b{display:block;font-weight:800}
+.gr-how-steps span{display:block;color:var(--mute)}
+.gr-how--about{margin:var(--s5) 0}
+@media (min-width:760px){
+  .gr-how-in{grid-template-columns:minmax(0,320px) minmax(0,1fr);column-gap:var(--s5);align-items:start}
+  .gr-how .gr-how-fig{max-width:none}
+}
 }
