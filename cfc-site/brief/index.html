@@ -178,14 +178,19 @@
 
     <div class="bf-sec">
       <h3>The poster</h3>
-      <p class="bf-h-note">The route with its climbs named, as a picture for the group chat or your story. On its own, or over a photo of yours.</p>
+      <p class="bf-h-note">The route as a picture for the group chat or your story. On its own, or over a photo of yours.</p>
+      <fieldset class="gr-rev-pick bf-look">
+        <legend>Look</legend>
+        <label><input type="radio" name="look" value="card" checked><span>Route card</span></label>
+        <label><input type="radio" name="look" value="bw"><span>Black and white</span></label>
+      </fieldset>
       <div class="bf-actions">
         <button type="button" class="btn btn--ink" id="poster">Make the poster</button>
         <label class="btn btn--ghost bf-file-btn">Over my photo<input type="file" id="posterPhoto" accept="image/*" aria-label="A photo for the poster"></label>
       </div>
       <div class="bf-poster" id="posterOut" hidden>
         <img id="posterImg" alt="" width="1080" height="1350">
-        <p class="bf-actions"><a class="btn btn--ink" id="posterDl" href="#" download="route.png">Save the poster</a><span class="bf-h-note">On a phone: press and hold the picture to save it.</span></p>
+        <p class="bf-actions"><a class="btn btn--ink" id="posterDl" href="#" download="route.png">Save the poster</a><a class="link" id="posterStory" href="#" download="route-story.png" hidden>Story size</a><span class="bf-h-note">On a phone: press and hold the picture to save it.</span></p>
       </div>
     </div>
 
@@ -212,7 +217,7 @@
       <dt>Wear and water</dt><dd>A house table by temperature: winter kit under 40°F, warmers under 60, summer kit over 70, sun sleeves and an early start over 90. Water is about a bottle an hour at 80°F, one and a half at 90, two over 100, and over 100 isn’t an afternoon ride.</dd>
       <dt>Difficulty</dt><dd>Hard: 60 miles or more, 100 ft of climbing a mile or more, or 40 miles at 60 ft a mile. Moderate: 25 miles or 50 ft a mile. Easy: the rest.</dd>
       <dt>Compare</dt><dd>Both climb charts on the same distance and height scale. The sentences come from the numbers: distance and climbing within 5% count as the same; “hillier” is feet of climbing per mile; “steepest” is the steepest tenth of a mile; times are at the same flat speed.</dd>
-      <dt>The poster</dt><dd>The route as one line, the start, each climb's top with its height and mile, and anything the host named. Drawn in your browser; a photo you add stays in your browser too. 1080 by 1350, the size a story or a feed post wants.</dd>
+      <dt>The poster</dt><dd>Two looks. The route card: the route as one line, the start, each climb’s top with its height and mile, and anything the host named, 1080 by 1350. Black and white: your photo turned black and white under a flat 22% shade, the route over it in white with a dot at each end, the distance and climbing up the side, the day and the roll-out time at the foot; a feed post (1080 by 1350) and a Story (1080 by 1920, with Instagram’s bars left clear). Drawn in your browser; a photo you add stays in your browser too.</dd>
       <dt>What leaves your browser</dt><dd>Nothing but the sample coordinates in the two Open-Meteo requests. A FIT is read here too; nothing is converted anywhere else. No account, no cookies, nothing stored. The share link carries the route itself, so it works for anyone.</dd>
     </dl>
   </details>
@@ -278,8 +283,9 @@
   </div>
 </footer>
 <script src="/chrome.js?v=60" defer></script>
-<script src="/brief/engine.js?v=8"></script>
-<script src="/brief/card.js?v=8"></script>
-<script src="/brief/brief.js?v=8" defer></script>
+<script src="/brief/engine.js?v=9"></script>
+<script src="/brief/card.js?v=9"></script>
+<script src="/brief/bw.js?v=9"></script>
+<script src="/brief/brief.js?v=9" defer></script>
 </body>
 </html>

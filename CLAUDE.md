@@ -1049,6 +1049,17 @@ https://claude.ai/artifact/QKG9zHH8dYZtjnFcYgLpCv (republish that URL to update)
   **every ride page that has a route** (`routeCard()` in build-rides.js, above the street map), with a
   **"Brief this ride"** button: `/brief/` opened on the host's GPX at the ride's next start and the host's
   pace, nothing to type. Overpass, sentence case, "Climb 1 · 2,355 ft · mile 8.5"; never a mono-caps label.
+- **The black-and-white poster** (Oct 30, 2026; Robert's pick from a Ventum × Society of Cyclist pop-up-ride post, "goes
+  over a picture well"): the poster's second look on `/brief/` ("Look": Route card · Black and white), `cfc-site/brief/bw.js`
+  (`layout()` tested in `tools/test/brief-bw.test.js`, `paint()` onto a canvas, `gray()` for the photo). The rider's photo
+  in black and white under a flat 22% tar, the route as one white line with a dot at each end (a loop gets one), the ride's
+  name top left, distance and climbing up the right edge, the stencil (powder-rose bar) over the day and the roll-out time
+  bottom right, `cycleforchange.org/brief` bottom left; a feed post (1080 × 1350) and a Story (1080 × 1920, top 200 /
+  bottom 330 clear). **The one place the site's words sit on a photo and run in spaced capitals** (Robert's OK, Oct 30,
+  2026): inside the picture only, never on a page; the page around it keeps every §3 rule. Nothing to fill in: the words
+  come from the briefing. Robert's own fuller version (his Strava rides, a meeting point, "× who you ride with") is the
+  "CFC Route Poster" artifact (https://claude.ai/artifact/J5bb9vQpLMDy2132Pz257y; it reads his Strava as him, in his own
+  Claude — the site never does, §10).
 - **Compare** (the Bike Insights idea): drop a second GPX on `/brief/` and both climb charts sit on one
   distance-and-height scale (patina and powder rose), a seven-row table, and the difference in sentences
   from `compare()` in the engine (same within 5%; "hillier" is ft per mile; "steepest" is the steepest
@@ -1162,3 +1173,6 @@ two exits; the shapes are on the plan canvas.
   ride's riding months as `data-season`); `tools/test/season-selector.test.js` keeps it that way.
 - 2026-10-31 — Both films lose the "3 of 9" / "3 of 10" line over each chapter (Robert: share each one on its own): `how-we-ride-2`,
   `fruit-loop-how-we-roll-2`, new posters.
+- 2026-10-31 — `/brief/`'s poster gets a second look, black and white (Robert's pick from a pop-up-ride post): the rider's
+  photo in black and white, the route in white over it, the words in spaced capitals, a post and a Story size
+  (`cfc-site/brief/bw.js`, `V` 9); the one place the site's words sit on a photo, inside the picture only (§12).
