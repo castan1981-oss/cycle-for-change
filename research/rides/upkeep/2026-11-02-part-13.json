@@ -1,0 +1,69 @@
+[
+  {
+    "slug": "greenville-sc-spinners-sctac-tuesday-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-02",
+    "evidence": "The Spinners' SCTAC page still says the Tuesday Night Rides run from the first Tuesday in April and end in mid-September when daylight dwindles; no dates posted after mid-September 2026 (fetched Nov 2, 2026).",
+    "sources": ["https://www.greenvillespinners.org/sctac-south-carolina-technology-and-aviation-center/"],
+    "status_note": "Back in April; the SCTAC page says the Tuesday rides start the first Tuesday in April and end in mid-September."
+  },
+  {
+    "slug": "hamburg-de-critical-mass-hamburg-last-friday",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-10-30",
+    "evidence": "criticalmass.in API logs the Oct 30, 2026 ride at the Stadtpark with 737 estimated riders over 24.9 km; the page still says the last Friday of each month around 7 pm (fetched Nov 2, 2026).",
+    "sources": [
+      "https://criticalmass.in/hamburg",
+      "https://criticalmass.in/api/ride?citySlug=hamburg&year=2026&month=10"
+    ]
+  },
+  {
+    "slug": "harrisburg-pa-hbc-owens-sunday-sociable",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "The HBC November 2026 calendar shows no Owen's Sunday Sociable on any Sunday; the time 7:15 am no longer appears on the calendar watch page. The October event page lists only Oct 4. Check HBC's December and January calendar at harrisburgbicycleclub.org/content.aspx?page_id=4001 to see if it resumes; or contact ride leader Dick Norford through the HBC contact form."
+  },
+  {
+    "slug": "harrow-gb-harrow-cycle-hub-beginner-bike-ride-kenton",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "The Let's Ride (British Cycling) group page for Harrow Cycle Hub lists Beginner Bike Ride from Kenton on Saturday 14 November 2026 at 2:00 pm, confirming the ride continues on the same day and time (fetched Nov 2, 2026).",
+    "sources": ["https://www.letsride.co.uk/groups/harrow-cycle-hub"]
+  },
+  {
+    "slug": "henrico-va-contes-richmond-sunday-brunch-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-02",
+    "evidence": "The Google Calendar ICS shows no Sunday Brunch Ride events after Oct 25, 2026 and the Conte's rides-and-events page lists no current Richmond ride (fetched Nov 2, 2026).",
+    "sources": [
+      "https://www.contebikes.com/about/rides-events-pg229.htm",
+      "https://calendar.google.com/calendar/ical/bd12907cc714268203a8976992cc1aee49f05891e373d32c6574463eebee7144%40group.calendar.google.com/public/basic.ics"
+    ],
+    "status_note": "The series runs May through October; the last Sunday Brunch Ride of 2026 was Oct 25. Look for a new Conte's Richmond calendar series from May 2027."
+  },
+  {
+    "slug": "holliston-ma-blackstone-valley-nemba-thursday-vietnam-intermediate-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "Blackstone Valley NEMBA's chapter page lists the Vietnam Intermediate Group Ride (With Lights) as a recurring event on Thu Nov 5, 2026, 5:30–8 pm at Adams St Parking Lot, Holliston (fetched Nov 2, 2026).",
+    "sources": ["https://www.nemba.org/chapters/blackstone-valley-nemba"]
+  },
+  {
+    "slug": "houston-tx-bikehouston-first-sunday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-01",
+    "evidence": "BikeHouston's events page lists the First Sunday Ride for Nov 1, 2026 at 8:00 am from Hermann Park and for Dec 6, 2026 at 8:00 am from Market Square Park (fetched Nov 2, 2026).",
+    "sources": ["https://www.bikehouston.org/events"]
+  },
+  {
+    "slug": "houston-tx-nwcc-saturday-zube-park-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "evidence": "NWCC's homepage still shows the Zube Park Ride schedule: October through March starts at 8:00 am, April through September starts at 7:30 am — matching the current record's 8:00 am time (fetched Nov 2, 2026).",
+    "sources": ["https://nwcc.bike/"]
+  }
+]

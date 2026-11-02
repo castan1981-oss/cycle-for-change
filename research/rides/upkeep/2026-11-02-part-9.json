@@ -1,0 +1,61 @@
+[
+  {
+    "slug": "dallas-tx-the-meteor-womens-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "dallasbicyclecoalition.org/social-rides/ returns 403 on every fetch (bot wall, 5 consecutive watcher runs and confirmed again today). No other dated source for the ride found. A person should check The Meteor's own website (themeteordalas.com) or Instagram, and note a possible address change: one listing says it moved from 1950 to 1970 Hi Line Dr."
+  },
+  {
+    "slug": "dallas-tx-trek-park-cities-thursday-lake-laps",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "The shop's Eventbrite series (eventbrite.com/e/trek-dallas-road-rides-tickets-1997717165820) now shows 'Event ended' — the Oct 29, 2026 final session has passed. The Trek Bicycle Dallas Park Cities organizer page shows no upcoming events. No new fall/winter series found on Eventbrite or by web search. A person should call the store (7015 Snider Plaza, Dallas) or check trekbikes.com/us/en_US/store/405498 for a new ride series."
+  },
+  {
+    "slug": "dallas-tx-trek-park-cities-tuesday-lake-laps",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "Same Eventbrite series as Thursday Lake Laps (eventbrite.com/e/trek-dallas-road-rides-tickets-1997717165820) — now shows 'Event ended'. No new series found. A person should call the store or check trekbikes.com/us/en_US/store/405498 for a new ride series."
+  },
+  {
+    "slug": "darien-ct-dannys-cycles-sunday-kids-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "Danny's Cycles shop-rides page lists 'Darien Kids' Ride Every Sunday at 2 PM' with the same details (all skill levels, closed-toed shoes and knee protection, fair weather only) on a page with a 2026 copyright (fetched Nov 2, 2026).",
+    "sources": ["https://www.dannyscycles.com/about/shop-rides-pg576.htm"]
+  },
+  {
+    "slug": "dublin-ca-valley-spokesmen-mellow-monday",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-10-12",
+    "evidence": "The Oct 12, 2026 event page for 'Mellow Monday - Shannon, Sunol, Kilkare' confirms the same schedule: arrive 8:45 am, roll 9:00 am, Shannon Park Dublin, 3L/M no-drop (fetched Nov 2, 2026). The schedule-text-changed flag was triggered by the route subtitle being added and registration closing on the past date — no schedule change.",
+    "sources": ["https://valleyspokesmen.org/event-6770644"]
+  },
+  {
+    "slug": "emeryville-ca-grizzly-peak-cyclists-monday-ti-lap",
+    "outcome": "changed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "Grizzly Peak Cyclists' ride schedule lists the Monday TI Lap repeating weekly through at least December 14, 2026 — same time (meet 5:25 pm, start 5:35 pm) and start (Emeryville, opposite IKEA) — well past the 'Through early Nov 2026' note in the record (fetched Nov 2, 2026).",
+    "sources": ["https://www.grizz.org/rides/index.php"],
+    "changes": {
+      "season": "Through at least mid-December 2026"
+    }
+  },
+  {
+    "slug": "encinitas-ca-swamis-saturday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "Swami's Cadence Cyclery calendar lists the World Famous Swami's Saturday Ride (A/B groups) on Nov 7 (reverse route), Nov 14 and Nov 21, 2026, A group 8:15 am each week from Cadence Cyclery (fetched Nov 2, 2026).",
+    "sources": ["https://swamis.org/events/venues/cadence-cyclery/"]
+  },
+  {
+    "slug": "eugene-or-gears-wtnb-wednesday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "The GEARs November ride schedule is now posted (eugenegears.org/ride-schedules/) and does not include the WTNB Wednesday ride — October 14 at 6:00 PM was the last listed instance. The November schedule lists rides for the week of Nov 2–8 with no WTNB entry. The ride may be off for winter (Eugene's sunset is around 5:00 pm in November) but GEARs has not stated a season end or break. A person should email the GEARs ride director (bob@eugenegears.org per the rides page) or check the December schedule when posted."
+  }
+]

@@ -1,0 +1,75 @@
+[
+  {
+    "slug": "sioux-falls-sd-fab-moon-and-stars-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "The FAB events page shows 'No events available' in November, consistent with the ride's documented May–September season; no 2027 schedule posted (fetched Nov 2, 2026). Check fallsareabicyclists.org/events in spring 2027, or the club's Facebook page @fallsareabicyclists."
+  },
+  {
+    "slug": "abu-dhabi-ae-yas-marina-circuit-trainyas-ladies",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "The YMC TrainYAS Ladies page is live and still lists the program, but the schedule filter only shows months from August–November 2025; no 2026–27 session dates are posted (fetched Nov 2, 2026). Check @ymcofficial on Instagram and the YMC TrainYAS Ladies page for the 2026–27 season restart announcement."
+  },
+  {
+    "slug": "fountain-hills-az-mcdowell-mountain-cycles-ladies-mountain-bike-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-02",
+    "evidence": "McDowell Mountain Cycles' rides page for November 2026 lists 'Ladies MTB Ride – November 14th at 7:30 AM Departs from Four Peaks Lot', up from 7:00 am in October; November 14 is a Saturday (fetched Nov 2, 2026).",
+    "sources": ["https://mcdowellmountaincycles.com/mmc-life/"],
+    "changes": {
+      "schedule": "Posted by date; the day and time move. Next: Saturday, Nov 14, 2026 at 7:30 am, rolling from the Four Peaks lot in McDowell Mountain Regional Park.",
+      "days": ["sat"],
+      "time_local": "7:30 am",
+      "start_hhmm": "07:30"
+    }
+  },
+  {
+    "slug": "fountain-hills-az-mcdowell-mountain-cycles-saturday-road-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-02",
+    "evidence": "McDowell Mountain Cycles' rides page for November 2026 lists 'MMC Road Ride – November 14th & 21st at 7:30 AM Departs from MMC', up from 6:30 am in October (fetched Nov 2, 2026).",
+    "sources": ["https://mcdowellmountaincycles.com/mmc-life/"],
+    "changes": {
+      "schedule": "Saturdays at 7:30 am from the shop, on the dates the shop posts each month. November 2026: the 14th and 21st.",
+      "time_local": "7:30 am",
+      "start_hhmm": "07:30"
+    }
+  },
+  {
+    "slug": "peoria-az-west-valley-casual-bike-rides-stadium-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-02",
+    "evidence": "The host's Meetup ICS calendar lists the Stadium Ride for Sun Nov 8, 2026 at 7:30 am from Rio Vista Community Park; the Oct 25 listing also showed 7:30 am (watcher ICS read, Nov 2, 2026).",
+    "sources": ["https://www.meetup.com/west-valley-casual-bike-rides/events/ical/"],
+    "changes": {
+      "schedule": "Every other Sunday, 7:30 am, from Rio Vista Community Park. About 10 miles out to a Carls Jr for breakfast, then 10 back. It alternates Sundays with the Bear Claw Ride.",
+      "time_local": "7:30 am",
+      "start_hhmm": "07:30"
+    }
+  },
+  {
+    "slug": "prescott-valley-az-bike-prescott-thursday-fun-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-02",
+    "evidence": "Bike Prescott's Meetup page lists the Thursday Fun Ride for Thu Nov 5, 2026 at 10:00 AM MST from the Maverik parking lot at 3576 Glassford Hill Rd, Prescott Valley, with a 'PLEASE NOTE NEW START LOCATION!!!' notice (fetched Nov 2, 2026).",
+    "sources": ["https://www.meetup.com/bike-prescott-meetup/"],
+    "changes": {
+      "schedule": "Every Thursday. The Nov 5, 2026 ride is at 10:00 am from the parking lot near the Maverik on Glassford Hill Rd, Prescott Valley. The series uses four regular routes, two in Prescott Valley and two in Chino Valley. Time and start are posted on each Meetup event.",
+      "time_local": "10:00 am",
+      "start_hhmm": "10:00"
+    }
+  },
+  {
+    "slug": "albany-ny-mhcc-sunday-morning-wake-up-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "The MHCC public ride schedule posts about two weeks ahead and no Sunday Morning Wake Up Ride appears in the Nov 2–16 window; the schedule includes Monday, Tuesday, Wednesday and Saturday rides but no Sunday Wake Up Ride (fetched Nov 2, 2026). Check mohawkhudsoncyclingclub.org/rides/public in the coming week, or use 'Contact Leader' from the public ride listing."
+  },
+  {
+    "slug": "albany-ny-mhcc-women-on-wheels-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "The MHCC public ride schedule posts about two weeks ahead and no WOW ride appears in the Nov 2–16 window (fetched Nov 2, 2026). Check mohawkhudsoncyclingclub.org/rides/public in the coming week, or use 'Contact Leader' from the public ride listing."
+  }
+]

@@ -5,38 +5,18 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:greenlawn-ny-huntington-bicycle-club-weekend-rides@cycleforchange.org
-DTSTAMP:20261001T000000Z
-DTSTART;TZID=America/New_York:20261101T083000
-DTEND;TZID=America/New_York:20261101T103000
-RRULE:FREQ=WEEKLY;BYDAY=SA,SU;UNTIL=20261201T045959Z
+DTSTAMP:20261102T000000Z
+DTSTART;TZID=America/New_York:20261107T090000
+DTEND;TZID=America/New_York:20261107T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA,SU;UNTIL=20270401T235959Z
 SUMMARY:Huntington Bicycle Club Weekend Rides — Greenlawn\, NY
 LOCATION:Smith Street Lot\, 12 Smith St\, Greenlawn\, NY 11743
 DESCRIPTION:Pace: C\, C+\, B and B+ groups.\nSchedule: Saturdays\, Sunday
- s and holidays from the Smith St lot in Greenlawn. 8:30 am in October; t
- he club's page says 9:00 am December to April\, 8:30 am May and October\
- , 8:00 am June to September (it doesn't list November). Each ride on the
-  calendar gives its own start.\nConfirm with the host before you go.\nht
- tps://cycleforchange.org/rides/greenlawn-ny-huntington-bicycle-club-week
- end-rides/
-URL:https://cycleforchange.org/rides/greenlawn-ny-huntington-bicycle-club
- -weekend-rides/
-END:VEVENT
-BEGIN:VEVENT
-UID:greenlawn-ny-huntington-bicycle-club-weekend-rides-from-2026-12-01@cy
- cleforchange.org
-DTSTAMP:20261001T000000Z
-DTSTART;TZID=America/New_York:20261205T090000
-DTEND;TZID=America/New_York:20261205T110000
-RRULE:FREQ=WEEKLY;BYDAY=SA,SU;UNTIL=20270228T235959Z
-SUMMARY:Huntington Bicycle Club Weekend Rides — Greenlawn\, NY
-LOCATION:Smith Street Lot\, 12 Smith St\, Greenlawn\, NY 11743
-DESCRIPTION:Pace: C\, C+\, B and B+ groups.\nSchedule: Saturdays\, Sunday
- s and holidays from the Smith St lot in Greenlawn. 8:30 am in October; t
- he club's page says 9:00 am December to April\, 8:30 am May and October\
- , 8:00 am June to September (it doesn't list November). Each ride on the
-  calendar gives its own start.\nConfirm with the host before you go.\nht
- tps://cycleforchange.org/rides/greenlawn-ny-huntington-bicycle-club-week
- end-rides/
+ s and holidays from the Smith St lot in Greenlawn\, all year. 9:00 am No
+ vember through April (winter schedule); 8:30 am May and October; 8:00 am
+  June through September. Each ride on the calendar gives its own start t
+ ime.\nConfirm with the host before you go.\nhttps://cycleforchange.org/r
+ ides/greenlawn-ny-huntington-bicycle-club-weekend-rides/
 URL:https://cycleforchange.org/rides/greenlawn-ny-huntington-bicycle-club
  -weekend-rides/
 END:VEVENT

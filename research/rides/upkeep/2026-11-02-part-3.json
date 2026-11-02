@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "portland-me-gear-hub-thursday-group-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-08-17",
+    "evidence": "Portland Press Herald group-ride roundup (Aug 17, 2026) lists the Portland Gear Hub ride as every Thursday at 6 pm from 155 Washington Ave., about 20 miles with no sweep, matching the record (fetched Nov 2, 2026).",
+    "sources": ["https://www.pressherald.com/2026/08/17/12-group-bicycle-rides-in-greater-portland/"]
+  },
+  {
+    "slug": "roanoke-va-crank-sisters-social-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "roanokeoutside.com returns 403 on five consecutive watcher runs and via WebFetch; Cardinal Bicycle's own group-rides page lists different Thursday rides and does not mention Crank Sisters. A person could call Cardinal Bicycle Grandin Village (1312 Winborne St SW, Roanoke, VA) or check the host's social media for current status."
+  },
+  {
+    "slug": "salem-va-olde-salem-brewery-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "roanokeoutside.com returns 403 on five consecutive watcher runs and via WebFetch. No standalone page found for the Roanoke College Cycling Team or the brewery's own ride listing. A person could check the Roanoke College Cycling Team's Instagram or Facebook, or call Olde Salem Brewing Company."
+  },
+  {
+    "slug": "san-diego-ca-shewolves-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-10-12",
+    "evidence": "San Diego Magazine page still shows Thursday night rides from Bea Evenson Fountain, Balboa Park at 7:15 pm; the schedule-text-changed flag was a minor HTML change — the schedule excerpt is identical before and after (fetched Nov 2, 2026).",
+    "sources": ["https://sandiegomagazine.com/everything-sd/health-fitness/10-local-group-rides-for-every-type-of-cyclist/"]
+  },
+  {
+    "slug": "st-petersburg-fl-critical-mass",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "visitstpeteclearwater.com lists upcoming dates through October 2028 (next: Nov 28, 2026); last Friday of every month, gather 7 pm, roll 7:30 pm, Williams Park fountain, free (fetched Nov 2, 2026).",
+    "sources": ["https://www.visitstpeteclearwater.com/event/critical-mass-ride-st-pete/49041"]
+  },
+  {
+    "slug": "bentonville-ar-tour-de-coler",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "peelcompton.org returns 403 on all pages (six consecutive watcher runs and via WebFetch). Google search cache shows a March 3, 2026 calendar entry with the same schedule, but that is eight months ago and outside the three-month window. A person could contact programs@peelcompton.org or check the Peel Compton Foundation's social media for current dates. The Amilia activity page (https://app.amilia.com/store/en/peel-compton/shop/activities/5693456) may also list the current season."
+  },
+  {
+    "slug": "brooklyn-ny-dawn-patrol-prospect-park",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "Substack watch URL returns 403 on five consecutive watcher runs and via WebFetch. The watcher's last-OK text (Sept 30, 2026) confirmed every Thursday at 6:45 am from Grand Army Plaza, but no dated signal within the last three months was found. A person could check Instagram @dawnpatrol.pp for recent posts confirming the ride is still running."
+  },
+  {
+    "slug": "brooklyn-ny-nightcap-monday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "Substack watch URL returns 403 on five consecutive watcher runs and via WebFetch. The ride is stated as spring-fall (April-October) and November is outside that window. The watch URL is a static Substack article from early 2026, not a current listing. A person could check Instagram @nightcap_brooklyn to confirm when the 2027 season opens."
+  }
+]

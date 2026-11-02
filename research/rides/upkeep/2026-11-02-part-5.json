@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "dallas-tx-shifty-freewheelers-monday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "dallasbicyclecoalition.org/social-rides/ has been a 403 bot wall for 5 watcher runs; the page loads a JavaScript-rendered calendar that is not accessible without a browser. No Instagram, Strava or Meetup linked. Check the Dallas Bicycle Coalition's Instagram (@dallasbicyclecoalition) or email contact@dallasbicyclecoalition.org; a podcast description places the ride at Cold Beer Company on Monday at 7 pm, which conflicts with the Trinity Cider start in the record — worth confirming which is current."
+  },
+  {
+    "slug": "dallas-tx-taco-tuesday-with-salty-cats",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "dallasbicyclecoalition.org/social-rides/ has been a 403 bot wall for 5 watcher runs. The group's only other listed source is Instagram @_saltycats, which requires a login. Check @_saltycats on Instagram or contact the Dallas Bicycle Coalition to confirm whether the Cold Beer Company Tuesday ride is still running."
+  },
+  {
+    "slug": "dallas-tx-tits-tuesday-time-in-the-saddle",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "dallasbicyclecoalition.org/social-rides/ has been a 403 bot wall for 5 watcher runs. No Instagram or Strava linked. A Reddit thread from 2026 (/r/dfwbike) mentions the ride gathers at the Lakewood Whole Foods on Abrams at 7:30 pm Tuesdays, not 8:00 pm as recorded — worth a person checking the ride's Facebook group or showing up to confirm the current start time."
+  },
+  {
+    "slug": "emporia-ks-babes-on-bikes-wednesday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "visitemporia.com/place/community-group-rides/ returned 403 for 5 watcher runs; WebFetch also gets 403. The group's Facebook page (facebook.com/BabesOnBikesEmporia/) requires a login. Check the Facebook page directly or call a local Emporia shop — High Gear Cyclery, Gravel City Adventure & Supply or Eclectic Bikes — to confirm whether the Wednesday ride from Commercial Street is still running."
+  },
+  {
+    "slug": "gastonia-nc-ride-a-bike-happy-tuesday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-10-13",
+    "evidence": "weeklyrides.com/index.php/group-rides lists the Ride A Bike Bicycle Shop Happy Tuesday Ride as 'Tuesdays (May through August) — a social urban ride through quiet neighborhoods in Gastonia, begins at 6:00pm from the shop, 9 miles, 6–9 mph pace, all are welcome, helmets required, no one is left behind'; the calendar showed it as an upcoming event for Oct 6 and Oct 13, 2026 (fetched Nov 2, 2026).",
+    "sources": ["https://www.weeklyrides.com/index.php/group-rides"]
+  },
+  {
+    "slug": "nashville-tn-music-city-dope-pedalers-friday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "The Nashville Scene article used as the watch URL is an editorial award piece from Oct 9, 2025 — it confirms weekly Friday rides at Frankie Pierce Park but gives no specific time, and 13 months is outside the freshness window. The schedule-text-changed flag was a page-title change (no ride detail change). The group's Instagram (@musiccitydopepedalers) is the live schedule but requires a login. Check @musiccitydopepedalers on Instagram to confirm the current time and meeting point."
+  },
+  {
+    "slug": "nashville-tn-shelby-ave-bicycle-tuesday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "ma.to/venue/shelbybicycle shows 'No upcoming events scheduled' with the Tuesday Night Ride listed only under Past Events; the most recent past dates shown are May 2026. The schedule-text-changed flag was a false alarm (was and now text are identical). The ride may be seasonal (spring/summer only) but no off-season note is published. Check the shop's Instagram @shelbybicycle or call the shop at (615) 924-3274 to confirm whether the Tuesday ride runs in fall and when the 2027 season starts."
+  },
+  {
+    "slug": "providence-ri-providence-bike-jam",
+    "outcome": "changed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "Dash Bicycle's group-rides page (now at /pages/group-rides, redirected from /service/group-rides/) still lists the ride: 'A once-monthly Friday night bike party born out of the Critical Mass advocacy movement. Fun and inclusive, around 10 mph, with the occasional dance party. Details are posted on Instagram at least a day ahead, and rides are often themed. @pvdbikejam' (fetched Nov 2, 2026).",
+    "sources": ["https://www.dashbicycle.com/pages/group-rides"],
+    "changes": {
+      "refresh": {
+        "watch_url": "https://www.dashbicycle.com/pages/group-rides"
+      }
+    }
+  }
+]

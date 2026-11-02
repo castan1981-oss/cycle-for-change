@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "woodbury-mn-freewheel-bike-monday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "The Strava event (3480957573192654492) is deleted and now redirects to the club page (page-gone flag since 2026-10-05). Freewheel Bike's group rides page (freewheelbike.com/events/group-rides-pg1040.htm) says 'Find our rides on Strava' but does not list the Woodbury Monday ride specifically; fetched Nov 2, 2026 and found no Monday Woodbury listing. No new Strava event for this ride found."
+  },
+  {
+    "slug": "leeds-gb-leeds-cycling-saturday-off-road-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "The Meetup group page (meetup.com/leeds-cycling/) returned 'Group not found' (soft-404, page-gone flag since 2026-11-02). The three upcoming events in the ICS feed are all individually marked 'Canceled' on their own Meetup pages: Nov 7 (Penistone to Elsecar), Nov 14 (Coxley, Emley, High Hoyland), and Nov 21 (Leggers Inn), confirmed by fetching each event URL Nov 2, 2026. No alternative platform for the group found."
+  },
+  {
+    "slug": "bend-or-tuesday-night-rubber-mallet",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "bendbikerides.com returns Cloudflare JS challenge (403 for 6 runs since 2026-09-30); WebFetch also returned 403. A Bend Source article confirms the ride exists (Tuesdays, 5:30 pm; listed from WebCyclery in the article — different from the record's Jackson's Outpost start), and the BendGroupRides Strava club mentions Rubber Mallet on Tuesdays, but no 2026-specific confirmation was reachable."
+  },
+  {
+    "slug": "corpus-christi-tx-cc-led-saturday-light-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "The Bend Mag article (watch URL) returns 403 (bot wall for 6 runs since 2026-09-30); WebFetch also returned 403. Instagram @getccled is the only live source; search returned 2023 listings confirming Saturday 7:30 pm from Shoreline Blvd but no 2026-dated evidence was found."
+  },
+  {
+    "slug": "kalamazoo-mi-pedal-tuesday-queer-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "The Pedal Bicycle events page (pedalbicycle.com/articles/events.-sweet-sweet-events-pg213.htm) loads (200) but no longer shows 6:00 pm or any Tuesday queer ride (time-missing and schedule-text-changed flags since 2026-10-05). Current page lists only winter training and Monday events beginning December 7; the schedule text hash is empty. No evidence of the Tuesday queer ride in a 2026 web search."
+  },
+  {
+    "slug": "madison-wi-madison-queer-bike-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "The watch URL (ourliveswisconsin.com/article/madison-queer-bike-ride/) returns 403 for the watcher (5 runs since 2026-10-05) and for WebFetch. A community-maintained GitHub data file (allyrilling/madison-group-rides) marks the ride active: true, second Wednesdays at 6 pm from Law Park, but this is a third-party record and not the host's own page; the source could not be independently verified."
+  },
+  {
+    "slug": "missoula-mt-thursday-night-mountain-bike-group",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "thursdaynightmtbr.org fails with ERR_TLS_CERT_ALTNAME_INVALID (SSL cert mismatch, unreachable for 6 runs since 2026-09-30). Fetched with SSL verification disabled (curl -k): the site loads but displays only content from 2004–2009; the most recent dated ride descriptions are from 2009. No 2026 MTB activity found for the group; Missoula Underground event listings show only TNR hikes in 2026. The site links to a ThursdayNightMTBR Facebook group and Twitter @MissoulaTNR."
+  },
+  {
+    "slug": "philadelphia-pa-bcp-sunny-sunday-d-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "phillybikeclub.org/bcpdo/ride/calendarweekly returns Cloudflare JS challenge (403 for 6 runs since 2026-09-30); WebFetch also returned 403. No 2026 listing for the Sunny Sunday D ride found in web search."
+  }
+]

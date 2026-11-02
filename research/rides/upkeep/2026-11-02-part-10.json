@@ -1,0 +1,73 @@
+[
+  {
+    "slug": "eureka-il-illinois-valley-wheelmn-monday-morning-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-04-14",
+    "evidence": "IVW's April 14, 2026 post on ivwheelmn.org confirms Monday rides at 9:00 am, no-drop, 30–40 miles, from the Eureka Water Tower or Five Points in Washington; the amber flag is a new unrelated post added to the blog, not a change to the ride (fetched Nov 2, 2026). Season Apr–Oct; currently off-season.",
+    "sources": ["https://ivwheelmn.org/wordpress/"]
+  },
+  {
+    "slug": "evanston-il-evanston-rides-family-ride-kidical-mass",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-10-24",
+    "evidence": "Chicago Family Biking events page lists the Oct 24, 2026 Evanston Kidical Mass at Twiggs Park, Meet 1:15 PM, Roll 1:30 PM — matching the record's start_times entry; the season ran May–Oct and has now ended (fetched Nov 2, 2026).",
+    "sources": ["http://www.chicagofamilybiking.org/events"]
+  },
+  {
+    "slug": "exeter-ri-rhode-island-nemba-arcadia-tuesday-night-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "Rhode Island NEMBA's chapter page lists the recurring Arcadia Tuesday Night Ride for Tue, Nov 3, 2026, 5:30–7:30 pm at the Arcadia Management Area Midway Parking, intermediate pace 8–12 miles — same day, time, start and pace as the record (fetched Nov 2, 2026).",
+    "sources": ["https://www.nemba.org/chapters/rhode-island-nemba"]
+  },
+  {
+    "slug": "fairfax-ca-marin-cyclists-fairfax-to-point-reyes-station",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "Marin Cyclists calendar shows the Fairfax to Pt Reyes Station Recurring Ride (38/any pace) on every Saturday in November — Nov 7, 15, 21, 28 — same distance and paces as the record; the amber flag is dates rolling forward (fetched Nov 2, 2026).",
+    "sources": ["https://marincyclists.com/content.aspx?page_id=4001&club_id=525458"]
+  },
+  {
+    "slug": "fargo-nd-gnbc-monday-riding-101",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "GNBC's Group Rides & Events page now says 'OUR WEEKLY GROUP RIDES ARE DONE FOR THE 2026 SEASON! THANK YOU TO ALL THE RIDERS FOR A FUN YEAR!' and still lists Monday 6:00 PM Riding 101 for spring and summer months — confirming the seasonal-break status and existing details (fetched Nov 2, 2026).",
+    "sources": ["https://www.gncycles.com/events/group-rides-events-pg204.htm"]
+  },
+  {
+    "slug": "fargo-nd-gnbc-thursday-wow-road-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "GNBC's Group Rides & Events page says 'OUR WEEKLY GROUP RIDES ARE DONE FOR THE 2026 SEASON!' and lists Thursday 6:00 PM W.O.W. Road Ride (15–18 mph, 20–25 miles, women-only, no-drop) for spring and summer — confirming the seasonal-break status and existing details (fetched Nov 2, 2026).",
+    "sources": ["https://www.gncycles.com/events/group-rides-events-pg204.htm"]
+  },
+  {
+    "slug": "fargo-nd-gnbc-tuesday-social-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "GNBC's Group Rides & Events page says 'OUR WEEKLY GROUP RIDES ARE DONE FOR THE 2026 SEASON! THANK YOU TO ALL THE RIDERS FOR A FUN YEAR!' and lists Tuesday 6:00 PM Social Ride for spring and summer months; the amber flag is the page redesign, not a ride change (fetched Nov 2, 2026).",
+    "sources": ["https://www.gncycles.com/events/group-rides-events-pg204.htm"],
+    "status_note": "Shop confirmed rides are done for the 2026 season. Expect it back in spring 2027."
+  },
+  {
+    "slug": "fort-worth-tx-fwba-saturday-club-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "FWBA's homepage carries a banner 'Ride Start Times are Changing, Please Double Check' and upcoming Saturday rides for November 7 are listed at 9:00 AM; 8:00 AM no longer appears on the page (disappeared around Oct 26, per the watcher). The original evidence noted '8 am in warm months and 9 am in cold months'; the cold-month time is now in effect (fetched Nov 2, 2026).",
+    "sources": ["https://www.fwbaclub.org/"],
+    "changes": {
+      "schedule": "Every Saturday, 8:00 am in warm months, 9:00 am in cold months; start location rotates around the Fort Worth area. Check the home page ride calendar for this week's start and location.",
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00",
+      "visitor_notes": "Start time changes seasonally — 8:00 am in warmer months, 9:00 am in cooler months. Check the FWBA home page calendar for this week's current start time and meeting point."
+    }
+  }
+]

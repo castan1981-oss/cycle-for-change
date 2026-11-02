@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "indianapolis-in-bike-line-tuesday-thursday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "The shop's group-rides page (/about/group-rides-pg439.htm) is 404. The Bike Line has a new Shopify site; its 'Local Rides' page at /pages/local-rides lists Ride with GPS route maps only — no scheduled group rides, no days or times. No web evidence found for the Tue/Thu 7 pm rides on the new site or via search. Instagram (@bikelineindiana) is login-walled (fetched Nov 2, 2026). A person could call (317) 253-2611 or check Instagram @bikelineindiana or the Facebook page /thebikelinebroadripple."
+  },
+  {
+    "slug": "washington-dc-dc-bike-party",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "touchgrassdc.com DNS has failed for two consecutive runs (last OK Oct 19). Instagram and Facebook are login-walled. One web-search result confirms the ride ran in April 2026 (Cherry Blossom Chase), but no current start location or November schedule can be confirmed from a public source (fetched Nov 2, 2026). A person could check @dcbikeparty on Instagram directly or facebook.com/DCBikeParty/ once logged in."
+  },
+  {
+    "slug": "lakewood-ranch-fl-smbc-town-hall-wednesday",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "SMBC's HuntCal calendar lists 'Lakewood Ranch Town Hall: Various Speed Groups' for Wed Nov 4, 11, 18 and 25, 2026, 8:30–11:00 AM; the end-words flag was triggered by a cancellation of the Sunday Legacy Trail and Casey Key ride on Nov 1, not this ride (fetched Nov 2, 2026).",
+    "sources": ["https://www.huntcal.com/cal/view/SMBC/SMBC?vm=r"]
+  },
+  {
+    "slug": "sarasota-fl-smbc-legacy-trail-casey-key-sunday",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "SMBC's HuntCal calendar lists 'Legacy Trail and Casey Key' for Sun Nov 8, 22 and 29, 2026, 8:30–11:00 AM from the Ashton Road Trailhead; Nov 1 is canceled for the club's Ride Across Florida weekend and Nov 15 for the 50th Annual Cyclefest — individual date cancellations, not the ride itself (fetched Nov 2, 2026).",
+    "sources": ["https://www.huntcal.com/cal/view/SMBC/SMBC?vm=r"]
+  },
+  {
+    "slug": "sarasota-fl-smbc-love-the-loop-saturday",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "SMBC's HuntCal calendar lists 'Love the Loop Multi-speed Groups' for Sat Nov 7, 14, 21 and 28, 2026, 8:30–11:30 AM from Old Miakka Church; no cancellations for this ride in November (fetched Nov 2, 2026).",
+    "sources": ["https://www.huntcal.com/cal/view/SMBC/SMBC?vm=r"]
+  },
+  {
+    "slug": "ventura-ca-channel-islands-bicycle-club-saturday-montecito-summerland",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "The club's events calendar still lists the Montecito and Summerland series — 118 sessions, May 2, 2026 through Aug 5, 2028 — at the Museum lot, 8:20 am meet, 8:30 am departure; the end-words flag was triggered by a separate one-time 'Agoura Hills Remote' ride canceled due to rain, not this series (fetched Nov 2, 2026).",
+    "sources": ["https://www.cibike.org/Events-Calendar?EventViewMode=1&EventListViewMode=1"]
+  },
+  {
+    "slug": "ventura-ca-channel-islands-bicycle-club-saturday-up-the-pacific-coast",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "The club's events calendar still lists the Up the Pacific Coast series — 118 sessions, May 2, 2026 through Aug 5, 2028 — at the Museum lot, 7:50 am meet, 8:00 am departure, 47 miles at 16–18 mph; the end-words flag was triggered by a separate one-time 'Agoura Hills Remote' ride canceled due to rain (fetched Nov 2, 2026).",
+    "sources": ["https://www.cibike.org/Events-Calendar?EventViewMode=1&EventListViewMode=1"]
+  },
+  {
+    "slug": "ventura-ca-channel-islands-bicycle-club-sunday-canyon-to-canyon",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "The club's events calendar still lists the Canyon to Canyon series — 119 sessions, May 3, 2026 through Aug 6, 2028 — at Hobert Park in Saticoy, 7:50 am meet, 8:00 am departure, 32 miles at 16–18 mph; the end-words flag was triggered by a separate one-time 'Agoura Hills Remote' ride canceled due to rain (fetched Nov 2, 2026).",
+    "sources": ["https://www.cibike.org/Events-Calendar?EventViewMode=1&EventListViewMode=1"]
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "huntington-beach-ca-hb-velo-coffee-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "The shop's home page lists the Wednesday and Friday morning coffee ride, roll-out 8:30 am sharp, about 25 miles at a 15 mph average; the watcher hits a 403 bot wall but the page loads cleanly with a browser user-agent (fetched Nov 2, 2026).",
+    "sources": ["https://hbvelocyclery.net/"]
+  },
+  {
+    "slug": "huntington-beach-ca-hb-velo-sunday-shop-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "The shop's home page lists the Sunday Morning Shop Ride, roll-out 8:05 am sharp, 25 to 70 miles at an 18 mph average; the watcher hits a 403 bot wall but the page loads cleanly with a browser user-agent (fetched Nov 2, 2026).",
+    "sources": ["https://hbvelocyclery.net/"]
+  },
+  {
+    "slug": "huntington-beach-ca-oc-velo-sunday-turtle-rock-loop",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "OC Velo's rides page lists \"Sunday - Irvine Turtle Rock Loop at 8:00am - Pace can vary\" starting from Huntington Beach Pier; the page also shows the current Saturday dated ride updated to November 7, 2026, confirming the schedule is current (fetched Nov 2, 2026).",
+    "sources": ["https://www.ocvelo.com/ocvelo-rides.html"]
+  },
+  {
+    "slug": "hyannis-ma-sea-sports-coffee-cruise",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "Sea Sports' group-rides page lists \"Saturdays - Coffee Cruise Road Ride, Ride rolls at Rolling 7:30am!\" as a noncompetitive 16–18 mph cruise with a coffee stop, approximately 20–30 miles; the page also announces a new Wednesday Night Lights MTB ride starting October 28, 2026, confirming the page is current (fetched Nov 2, 2026).",
+    "sources": ["https://www.capecodseasports.com/about/group-rides-clubs-and-community-pg85.htm"]
+  },
+  {
+    "slug": "iowa-city-ia-bic-2sday-2wheelers-tuesday-morning-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-10-01",
+    "evidence": "BIC's General Ride Info page states that Tuesday morning rides run April through October and the ride calendar shows no November rides scheduled (fetched Nov 2, 2026).",
+    "sources": [
+      "https://bic.clubexpress.com/content.aspx?page_id=22&club_id=74108&module_id=153871",
+      "https://bic.clubexpress.com/content.aspx?page_id=4001&club_id=74108"
+    ],
+    "status_note": "Off for the winter; back in April 2027, the club says. Note: the General Info page says the ride begins at 9 am, but the October 2026 calendar showed 10:00 AM — confirm the start time when rides resume."
+  },
+  {
+    "slug": "iowa-city-ia-bic-saturday-weekend-rides",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-10-01",
+    "evidence": "BIC's General Ride Info page states that Saturday rides are offered April through October and the ride calendar shows no November rides scheduled (fetched Nov 2, 2026).",
+    "sources": [
+      "https://bic.clubexpress.com/content.aspx?page_id=22&club_id=74108&module_id=153871",
+      "https://bic.clubexpress.com/content.aspx?page_id=4001&club_id=74108"
+    ],
+    "status_note": "Off for the winter; back in April 2027, the club says."
+  }
+]

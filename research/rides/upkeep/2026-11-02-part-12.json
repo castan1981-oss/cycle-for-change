@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "glen-echo-md-potomac-pedalers-usual-monday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "Potomac Pedalers' calendar lists 'A/BB/B (MH) * MD * 30ish *10:00 am* The Usual Monday Ride from Glen Echo' on Mon Nov 2, 9, 16, 23 and 30, 2026; same day and time as recorded (fetched Nov 2, 2026).",
+    "sources": ["https://www.potomacpedalers.org/calendar"]
+  },
+  {
+    "slug": "gold-river-ca-bike-hikers-tuesday-morning-ez-rider",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "Sacramento Bike Hikers' November calendar lists the EZ Rider on Tue Nov 10, 2026 (Nov 3 noted as canceled for Election Day); the Oct 6 event page confirms 9:00 AM from Gold River Town Center, 2111 Golden Centre Lane, Rancho Cordova (fetched Nov 2, 2026).",
+    "sources": [
+      "https://bikehikers.clubexpress.com/content.aspx?page_id=4001&club_id=216251",
+      "https://bikehikers.clubexpress.com/content.aspx?page_id=4091&club_id=216251&item_id=3088682"
+    ]
+  },
+  {
+    "slug": "goshen-oh-cincinnati-cycle-club-saturday-breakfast-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "Cincinnati Cycle Club's Casual and Beginner Rides page states 'Saturday Morning Breakfast Ride... When: Saturdays at 8 AM' from the Goshen Kroger, 6725 Dick Flynn Blvd., led by Bruce Fields, easy/no-drop, 16 or 27 miles (fetched Nov 2, 2026).",
+    "sources": ["https://www.cincinnaticycleclub.org/content.aspx?page_id=22&club_id=772752&module_id=337793"],
+    "changes": {
+      "schedule": "Every Saturday at 8:00 am from the Goshen Kroger parking lot, 6725 Dick Flynn Blvd., Goshen. Easy/no-drop, 16 or 27 miles.",
+      "time_local": "8:00 am",
+      "start_hhmm": "08:00"
+    }
+  },
+  {
+    "slug": "grand-ledge-mi-tcba-saturday-z-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "TCBA's calendar shows no Saturday Z rides for November or beyond; the last listed date was Oct 31, 2026. Tuesday rides continue but Saturdays are empty through the visible calendar. Check biketcba.org in late winter for a returning spring schedule, or contact TCBA via their website."
+  },
+  {
+    "slug": "grand-prairie-tx-fwba-joe-pool-lake-rusty-chain-gang",
+    "outcome": "changed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "FWBA home lists 'Anna May Daulton Joe Pool Lake - Rusty Chain Gang' for Sat Nov 7, 2026 at 9:00 AM; the site banner reads 'Ride Start Times are Changing, Please Double Check'; the event page confirms '9 AM in cold months' (fetched Nov 2, 2026).",
+    "sources": ["https://www.fwbaclub.org/", "https://www.fwbaclub.org/event-6837496"],
+    "changes": {
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00",
+      "start_times": [{"from": "2026-11-07", "start_hhmm": "09:00"}]
+    }
+  },
+  {
+    "slug": "greenlawn-ny-huntington-bicycle-club-weekend-rides",
+    "outcome": "changed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "HBC's November calendar shows 'Crankin' Saturday Smith St. 9 AM' for Sat Nov 7, 2026 at 9:00 AM; the club's ride start locations page says groups start at 9 AM December through April — November follows the winter schedule (fetched Nov 2, 2026).",
+    "sources": [
+      "https://www.hbcli.org/content.aspx?page_id=4001&club_id=312624",
+      "https://www.hbcli.org/content.aspx?page_id=22&club_id=312624&module_id=546621"
+    ],
+    "changes": {
+      "schedule": "Saturdays, Sundays and holidays from the Smith St lot in Greenlawn, all year. 9:00 am November through April (winter schedule); 8:30 am May and October; 8:00 am June through September. Each ride on the calendar gives its own start time.",
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00",
+      "start_times": [{"from": "2026-11-07", "start_hhmm": "09:00"}]
+    }
+  },
+  {
+    "slug": "greensboro-nc-cycles-de-oro-easy-riders-tuesday",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-07-26",
+    "evidence": "Cycles de ORO's Easy Riders 2026 page states the series runs every Tuesday during Daylight Saving Time, 6:00 pm meet and 6:30 pm roll from the shop, last updated July 26, 2026; DST ended Nov 1, 2026 and the ride is in its expected off-season (fetched Nov 2, 2026).",
+    "sources": ["https://cyclesdeoro.com/Easy_Riders_2026.htm"]
+  },
+  {
+    "slug": "greensboro-nc-cycles-de-oro-saturday-social-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-10-25",
+    "evidence": "Cycles de ORO's Saturday Social ride page shows 'THE COOLER WEATHER SCHEDULE: arrive 11:30 AM, off on the ride at 12 NOON,' marked 'Update 10.25.2026' (fetched Nov 2, 2026).",
+    "sources": ["https://cyclesdeoro.com/Sat_Social_ride.htm"],
+    "changes": {
+      "schedule": "Every Saturday; arrive 11:30 am, roll 12:00 pm (cooler-weather schedule; skipped for local charity rides or bad weather)",
+      "time_local": "12:00 pm",
+      "start_hhmm": "12:00"
+    }
+  }
+]

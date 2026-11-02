@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "barre-vt-vermont-bicycle-shop-thursday-millstone-adventure-hour",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-10-28",
+    "evidence": "Vermont Bicycle Club's group rides blog lists 'Last MTB Ride of the season and Nov. 3 Adventure Society Potluck' as an Oct 28, 2026 post; the Thursday Millstone Adventure Hour is off for winter (fetched Nov 2, 2026).",
+    "sources": ["https://vermontbicycleclub.com/category/grouprides/"],
+    "status_note": "Off for winter. The club's blog posted 'Last MTB Ride of the season' on Oct 28, 2026. Based on the 2025–2026 post history, the series runs from May through late October and resumes in spring."
+  },
+  {
+    "slug": "bellingham-wa-rabbit-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-10-25",
+    "evidence": "Mount Baker Bicycle Club's weekly rides page describes the Rabbit Ride as 'Running every Sunday since 2011' at 8:00 am in daylight saving time and 8:30 am in standard time (fetched Nov 2, 2026).",
+    "sources": ["https://www.mtbakerbikeclub.org/content.aspx?page_id=22&club_id=608345&module_id=249583"]
+  },
+  {
+    "slug": "bentonville-ar-peel-compton-womens-monthly-social-mtb-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "peelcompton.org returns 403 on the event pages and the REST API; no upcoming event dates confirmed. The Oct 1, 2026 listing had dates through Dec 8, 2026 (second Tuesdays). Person to check: visit peelcompton.org/events/ directly or call Peel Compton Foundation; the next scheduled date would be Nov 10."
+  },
+  {
+    "slug": "berlin-de-critical-mass-berlin-last-friday",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-10-30",
+    "evidence": "criticalmass.in shows the next Critical Mass Berlin as Nov 27, 2026 at 20:00 at Mariannenplatz — same time and place; the Oct 30 ride is listed in the API as enabled (fetched Nov 2, 2026).",
+    "sources": ["https://criticalmass.in/berlin", "https://criticalmass.in/api/ride?citySlug=berlin&year=2026&month=10"]
+  },
+  {
+    "slug": "calgary-ca-slow-and-steady-hikers-friday-evening-bike-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "The watch URL is the past Oct 2 event page; the group's ICS feed has 10 upcoming events with 0 matching the Friday bike ride; the group's current upcoming events are all hikes and walks with no bike ride listed. Person to check: meetup.com/slow-and-steady-hikers/ for any new Friday bike ride events posted for November 2026 or spring 2027, or message organizer Andy Dragt through Meetup."
+  },
+  {
+    "slug": "chelmsford-ma-merrimack-valley-nemba-rough-riders",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "evidence": "NEMBA's Merrimack Valley chapter page lists the Rough Riders for Tue, Nov 3 2026, 6–8 pm, at Russell Mill Pond and Town Forest, Chelmsford, MA — Intermediate and Advanced/Technical (fetched Nov 2, 2026).",
+    "sources": ["https://www.nemba.org/chapters/merrimack-valley-nemba"]
+  },
+  {
+    "slug": "chicago-il-bff-bikes-beginner-intermediate-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "BFF Bikes' events calendar shows no Beginner/Intermediate Ride in November; current programming is indoor rides, repair classes and off-season training. The only November outdoor Sunday event is an Endurance Ride on Nov 8. Person to check: bffbikes.com/events or call 773-666-5153 to ask when the Beginner/Intermediate Ride resumes."
+  },
+  {
+    "slug": "chicago-il-bff-bikes-thursday-wtf-social-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-02",
+    "note": "No Thursday WTF Social Rides posted since Sep 10, 2026; none in October or November. The shop's calendar shows winter indoor events and the ride runs 'in season' per the host. Person to check: bffbikes.com/events in spring 2027 for the ride's return, or call 773-666-5153."
+  }
+]
