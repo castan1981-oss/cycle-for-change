@@ -596,9 +596,12 @@ it, not here — social cuts never go in git, §10). What the panel and Robert s
   **He rides two bikes in 2027** (the Crux and a Tarmac SL8; Robert, Nov 1), so no reel ever says one of them is *the*
   bike for the 10,000 — "This one's in.", never "This is the bike."; "All on the bike" is the category and stays.
 - **Color held to one look across shots** (Robert, Nov 1): the grey's median at one level in every shot, and the
-  kept red brought to **the bike's own red as measured on the daylight wall footage** (hue 0, saturation about 200,
-  brightness about 120), never a brighter or more saturated red of our choosing (Robert: "pull that color … so it stays
-  true"), so the shop, the wall and the overpass carry the same real red.
+  kept red brought to **the bike's own red as measured on Robert's shop photo of it** (hue 178.4, a hair cool of pure
+  red; saturation about 212; brightness about 68 — deep candy red, darker than the daylight wall footage reads), never a
+  brighter or more saturated red of our choosing (Robert: "pull that color … so it stays true"; then "check the color
+  on the original"), so the shop, the wall and the overpass carry the same real red. In shop footage only red shapes
+  the size of the bike's parts are kept (a 2,500 px floor at 1080 wide): the pegboard's red tool handles and the
+  toolbox's logo go grey, so the bike is the one red object.
 - No month or date on the reveal's labels (Robert, Nov 1: "Don't say September"); the ride's own Strava name ("New
   bike day.") can stand in.
 - A Reel's cover is the frame with the red bike full screen, not a type card.
