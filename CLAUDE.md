@@ -593,6 +593,11 @@ it, not here — social cuts never go in git, §10). What the panel and Robert s
   build footage** ("Built at Bicycle Haüs." / "Scottsdale."), and in the end card's small line only — never a
   partner lockup, never on the blank (Robert, Nov 1: "I'm not riding for Bicycle Haüs"); the shop's logo on a shirt is
   cropped out. Every number comes from Strava for that ride (§10 allows it: it's his own ride, he posts it himself).
+  **He rides two bikes in 2027** (the Crux and a Tarmac SL8; Robert, Nov 1), so no reel ever says one of them is *the*
+  bike for the 10,000 — "This one's in.", never "This is the bike."; "All on the bike" is the category and stays.
+- **Color held to one look across shots** (Robert, Nov 1): the grey's median at one level in every shot, and the
+  kept red centred, tightened and brought to one saturation and brightness, so the shop, the wall and the overpass
+  carry the same candy red.
 - A Reel's cover is the frame with the red bike full screen, not a type card.
 
 ### Today I rode for (`#today` on the homepage, Oct 12, 2026)
