@@ -661,6 +661,7 @@ main:has(.pledge){padding-bottom:0}
 
 /* S3 — the frame's type (type-layout), and R3: the tally line is a link to the live count (/#road), no dot */
 .tally-line{font:400 var(--fs-small)/1.4 var(--display);color:var(--mute)}
+[data-season][hidden]{display:none!important}   /* the two wordings of the count (tools/lib/season.js) */
 .tally-line a{position:relative;color:inherit;text-decoration:underline;text-decoration-color:var(--dust-deep);text-decoration-thickness:1px;text-underline-offset:4px}
 .tally-line a::before{content:"";position:absolute;left:0;right:0;top:50%;height:44px;margin-top:-19px}   /* a 44px hit area, biased down so the sticky header never covers its top; the line keeps its height */
 @media (hover:hover){.tally-line a:hover{text-decoration-color:currentColor}}
@@ -678,6 +679,10 @@ html{-webkit-tap-highlight-color:transparent}            /* the press states abo
 html{scroll-padding-top:calc(var(--nav-h) + 12px)}      /* focus and anchors never land under the nav */
 @media (max-width:899px){html{scroll-padding-bottom:76px}}   /* …or under the Ride with me bar (61px + safe area) */
 @media (min-width:900px){html{scroll-padding-bottom:96px}}
+/* Oct 27, 2026: that pad exists only while the bar does. Always on, it counted a link whole on the first screen as hidden,
+   and the first Tab scrolled the page to centre it (the lab's jump off the hero). The help pages keep it: their 988 bar
+   is always there, and Tab must never land a link under it (access F3) */
+html:not(:has(.ridebar.is-on)):not(:has(.help-bar)){scroll-padding-bottom:0}
 .nav-links a{padding:12px 0}                              /* 44px tall */
 .menu-list a span{font-size:var(--fs-label)}
 .menu-list a[aria-current="page"]{border-bottom-color:currentColor}   /* where you are: the desktop nav's own state */
@@ -695,3 +700,9 @@ html{scroll-padding-top:calc(var(--nav-h) + 12px)}      /* focus and anchors nev
 .menu-foot a,.foot-crisis a{position:relative;color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:currentColor}
 .menu-foot a::before,.foot-crisis a::before{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;margin-top:-22px}
 .menu-foot a b,.foot-crisis a b{color:inherit}
+.menu-foot a[href^="tel"],.foot-crisis a[href^="tel"]{white-space:nowrap}   /* the Trevor number never breaks at its hyphen (Oct 27, 2026) */
+.foot-tv{white-space:nowrap}   /* the Trevor Project's name and its number stay on one line (critic, Oct 27, 2026) */
+/* Oct 27, 2026: 988 and the Trevor number sat on lines 22px apart, so their 44px pads overlapped and a tap on 988 could
+   call Trevor (the lab, at 360, 375 and 390). A tel link is an inline-block 44px tall: any line that carries a number is
+   44px and the pads can't reach each other */
+.menu-foot a[href^="tel"],.foot-crisis a[href^="tel"]{display:inline-block;line-height:44px}

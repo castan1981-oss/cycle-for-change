@@ -1,0 +1,76 @@
+[
+  {
+    "slug": "indianapolis-in-bike-line-tuesday-thursday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "The Bike Line migrated to Shopify; the old group rides page (thebikeline.com/about/group-rides-pg439.htm) is gone (404). The new site's Local Rides page (thebikeline.com/pages/local-rides) links to RideWithGPS routes only, with no group ride schedule. Instagram (@bikelineindiana) and Facebook are login-walled. Call the shop at (317) 253-2611 or check Instagram to confirm whether the Tuesday and Thursday rides still run."
+  },
+  {
+    "slug": "chandler-az-pmbc-mikes-sunday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-25",
+    "evidence": "PMBC's event calendar lists Mike's Sunday Ride every Sunday in October through Oct 25 ('Mike's Sunday Ride--Tour de Scottsdale-45'); the 'Duplicate -- CANCELED' entry on Oct 31 refers to a duplicate Halloween post-ride party event, not the ride itself (fetched Oct 26, 2026).",
+    "sources": ["https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467"]
+  },
+  {
+    "slug": "phoenix-az-pmbc-granada-sunday-breakfast-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-25",
+    "evidence": "PMBC's event calendar lists the Granada Breakfast Ride every Sunday through Oct 25 ('Mi Pueblo'); each entry names a breakfast stop, matching the ride's description; the 'Duplicate -- CANCELED' entry on Oct 31 is a duplicate Halloween party event unrelated to the breakfast ride (fetched Oct 26, 2026).",
+    "sources": ["https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467"]
+  },
+  {
+    "slug": "tempe-az-pmbc-saturday-cycling",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-24",
+    "evidence": "PMBC's event calendar lists Saturday Cycling every Saturday through Oct 31, including 'Mummy Mt' on Oct 24 and the Halloween Trick or Treat Chili Ride on Oct 31; 'Duplicate -- CANCELED' on Oct 31 is a duplicate entry for the post-ride Halloween party, not Saturday Cycling (fetched Oct 26, 2026).",
+    "sources": ["https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467"]
+  },
+  {
+    "slug": "centereach-ny-suffolk-bicycle-riders-association-club-rides",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "SBRA's upcoming rides list shows multiple rides every day through at least Nov 1, with four rides on Nov 1 alone and more on page 2; 'last ride of the SBRA season' is the route title for one Oct 31 ride (Firehouse to Riverhead), not the club's last day of riding (fetched Oct 26, 2026).",
+    "sources": ["https://www.sbraweb.org/upcoming_rides"]
+  },
+  {
+    "slug": "oakland-ca-air-cc-bff-friday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "AIR cc's group rides page at aircc.org/group-rides lists the BFF Friday ride from Rockridge BART at 6:30 am, alternating climbing and flat routes, ending at Mother Tongue Cafe; the Strava event used as the watch URL was deleted and now redirects to the club page, but the ride continues as listed on the host's own site (fetched Oct 26, 2026).",
+    "sources": ["https://www.aircc.org/group-rides"],
+    "changes": {
+      "refresh": {
+        "watch_url": "https://www.aircc.org/group-rides",
+        "method": "static-page",
+        "notes": "Strava event 3539787135806974112 was deleted (redirects to club page); monitoring the host's own group rides page."
+      },
+      "links": {
+        "website": "https://www.aircc.org/group-rides",
+        "strava": "https://www.strava.com/clubs/1008989",
+        "other": []
+      }
+    }
+  },
+  {
+    "slug": "red-bank-nj-jsts-weeknight-rides",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "JSTS's ride calendar shows weekday rides on every weekday through the week of Oct 26 and into November; the schedule-text change reflects a navigation update (clothing store link removed, Discord added) and the 'CANCELLED' labels are for individual ride instances, not the weeknight program (fetched Oct 26, 2026).",
+    "sources": ["https://www.jsts.us/Ride-Calendar"]
+  },
+  {
+    "slug": "salem-or-salem-bicycle-club-east-salem-morning-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-21",
+    "evidence": "Salem Bicycle Club's calendar lists the East Salem Morning Ride every Wednesday through Oct 28 and beyond; the 'CANCELED' entry on Nov 7 refers to a 6:30 pm Rides Committee Meeting via Zoom, not the morning ride, which is also listed for that day (fetched Oct 26, 2026).",
+    "sources": ["https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926"]
+  }
+]

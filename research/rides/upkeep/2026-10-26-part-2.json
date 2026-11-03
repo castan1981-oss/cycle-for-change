@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "wexford-pa-premier-bicycle-club-north-park-loops",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "The Premier Bicycle Club calendar lists North Park Loops (14/Moderate, ~25 mi) for Wed Oct 21 and Oct 28, 2026 at 5:00 pm from the Olympia parking lot at North Park; the 'CANCELED' entries on the Oct 14 row apply to Launch to Lunch and Harmony Lake rides, not to North Park Loops (fetched Oct 26, 2026).",
+    "sources": ["https://www.premierbicycleclub.org/content.aspx?page_id=4001&club_id=400812"]
+  },
+  {
+    "slug": "white-plains-ny-westchester-county-parks-bicycle-sundays",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-26",
+    "evidence": "The 2026 season's last date was Oct 4; the county page (parks.westchestercountyny.gov/bicycle-sundays) returns 404 from Oct 5 onward, consistent with the county taking the page down at season end each year (confirmed Oct 26, 2026).",
+    "status_note": "The 2026 season ended Oct 4; the county page is offline at season end. The program runs May–October each year; 2027 dates are typically announced in April on parks.westchestercountyny.gov/bicycle-sundays."
+  },
+  {
+    "slug": "woodbury-mn-freewheel-bike-monday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "The Strava event was deleted (redirects to the club page since Oct 5). The Freewheel website (freewheelbike.com/events/group-rides-pg1040.htm) says 'Find our rides on Strava' but lists no current Woodbury Monday event; no replacement event found. To check: join or browse the Freewheel Bike Strava club https://www.strava.com/clubs/470025 or call the Woodbury shop (6415 Lake Road Terrace, Woodbury, MN)."
+  },
+  {
+    "slug": "danville-ca-valley-spokesmen-mt-diablo-wednesday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "The Valley Spokesmen calendar shows a named Wednesday ride every week through the end of October and into November; the 'CANCELED' entries flagged near the ride are for 'Easy Riders' and 'Heather Farm W.C.', not the Wednesday ride; no cancellation of the Wednesday Mt. Diablo ride appears in the calendar (fetched Oct 26, 2026).",
+    "sources": ["https://valleyspokesmen.org/ridecalendar"]
+  },
+  {
+    "slug": "kenmore-wa-cascade-mumps-monday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "The Cascade ride-search page shows all three Oct 26 MUMPS pace groups (Brisk, Moderate, Steady) cancelled for today — a one-off, as Oct 12 was also cancelled (Columbus Day) and the flag resolved on Oct 19 when the ride resumed; the series page for MUMPS lists Log Boom Park, 10:00 am, same start and time, with the series ongoing (fetched Oct 26, 2026).",
+    "sources": [
+      "https://cascade.org/rides-events/ride-event-search",
+      "https://cascade.org/rides-events/monday-urban-merry-pedalers-mumps/87109"
+    ]
+  },
+  {
+    "slug": "san-francisco-ca-different-spokes-jersey-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "The DSSF calendar shows 'DSSF Jersey Rides -- CANCELED' on Oct 10, 2026 (Columbus Day weekend), a one-off cancellation of the monthly club ride; the club website and calendar are active, the Jersey Ride page and route links remain unchanged, and the ride structure (second Saturday, Castro and Sausalito groups) is unaltered (fetched Oct 26, 2026).",
+    "sources": [
+      "https://dssf.org/content.aspx?page_id=4001&club_id=17789",
+      "https://dssf.org/content.aspx?page_id=22&club_id=17789&module_id=336753"
+    ]
+  },
+  {
+    "slug": "bellbrook-oh-dayton-cycling-club-bms-tuesday-thursday-evening-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-26",
+    "evidence": "The Dayton Cycling Club calendar lists 'BMS **Last Ride of the Season**' on Thu Oct 29, 2026 at 5:30 pm from Bellbrook Middle School; Tue Oct 27 is listed as a normal BMS at 5:30 pm (fetched Oct 26, 2026).",
+    "status_note": "The Dayton Cycling Club calendar marks Thu Oct 29, 2026 as 'BMS **Last Ride of the Season**' at 5:30 pm. The ride returns in spring; no start date is posted yet — the club's BMS Rides photo album was last updated Apr 29, 2026, so check the calendar from April 2027."
+  },
+  {
+    "slug": "bend-or-tuesday-night-rubber-mallet",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "bendbikerides.com has returned 403 (Cloudflare bot wall) for five weeks running; WebFetch and curl both fail. A web search found the ride listed on the BendGroupRides Strava club (strava.com/clubs/BendGroupRides) as an ongoing Tuesday tempo B-group ride, but with no current dates or times. To check: browse https://www.strava.com/clubs/BendGroupRides or search for the Bend Cycling Google Group where ride leaders post weekly details."
+  }
+]

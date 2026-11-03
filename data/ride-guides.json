@@ -1,0 +1,5 @@
+{
+  "note": "A ride page links a guide about its host under 'Where to find them'. { slug: { href, text } }. Only our own guide pages; tools/build-rides.js fails on an href that isn't a page under cfc-site/.",
+  "phoenix-az-heavy-pedal-heavy-saturday": { "href": "/guides/heavy-pedal/", "text": "The Heavy Pedal: both rides, the shop, the kit" },
+  "phoenix-az-heavy-pedal-heavy-thursday": { "href": "/guides/heavy-pedal/", "text": "The Heavy Pedal: both rides, the shop, the kit" }
+}

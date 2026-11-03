@@ -80,7 +80,7 @@ exports.handler = async (event) => {
       const d = JSON.parse(res.body);
       summary = d.error
         ? `The feed still reports an error: ${escapeHtml(d.reason || "unknown")}.`
-        : `${Number(d.miles || 0).toLocaleString("en-US")} miles across ${d.rides || 0} rides since June 1.`;
+        : `${Number(d.miles || 0).toLocaleString("en-US")} miles across ${d.rides || 0} rides since ${(d.season && d.season.since) || "June 1, 2026"}.`;
     } catch (_) {
       summary = "The tally will refresh on its next read.";
     }

@@ -60,9 +60,10 @@ const DROP_CHIPS = [["no-drop", "Waits for you"], ["groups", "Pace groups"], ["d
 const FOR_CHIPS = [["beginner", "Beginners"], ["lgbtq", "LGBTQ+"], ["wtf", "Women, trans, femme, nonbinary"], ["ebike", "E-bikes welcome"]];
 const chips = (type, name, list, cls = "") => list.map(([v, t]) =>
   `<label${cls ? ` class="${cls}"` : ""}><input type="${type}" name="${name}" value="${v}"> <span>${esc(t)}</span></label>`).join("");
-let uid = 0;
 function REPORT({ thing = "ride", name = "", kind = "new", compact = false, heading, lede, id = "add", stillOn = false } = {}) {
-  const n = ++uid;
+  // One report form per page (its element id is `id`), so its field ids hang off that, not a build-order
+  // counter: a ride added or hidden no longer renumbers every page after it (Oct 24, 2026).
+  const n = id;
   const Thing = thing.charAt(0).toUpperCase() + thing.slice(1);
   const ride = thing === "ride";
   const h = heading || (ride ? "Run a ride? Add it, or fix what we got wrong." : thing === "event" ? "Missing an event, or a date changed?" : "Closed, moved, or missing?");

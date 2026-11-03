@@ -1,0 +1,64 @@
+[
+  {
+    "slug": "chicago-il-evolution-cycling-saturday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-08",
+    "evidence": "Evolution Cycling's rides page (last updated Oct 8, 2026) lists the Saturday Ride at 9:00AM (Fall/Winter) from the Walgreens lot at 5440 N Clark St: 50–70 miles, 17–19 mph, no drop (fetched Oct 26, 2026).",
+    "sources": ["https://evolution-cycling.org/rides"],
+    "changes": {
+      "schedule": "Every Saturday, rolls at 9:00 am on the fall and winter schedule, from the Walgreens lot at 5440 N Clark St in Andersonville.",
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00"
+    }
+  },
+  {
+    "slug": "chicago-il-mtc3-saturday-sunrise-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-10",
+    "status_since": "2026-10-10",
+    "status_note": "MTC3's 2026 season ended with the Oct 10 Apple Orchard Season Finale; the club's events page shows no upcoming rides and no return date has been announced.",
+    "evidence": "MTC3's events page shows no upcoming events after the Oct 10 season finale and the Saturday Sunrise Finale listing (fetched Oct 26, 2026).",
+    "sources": ["https://majortaylorchicago.com/events/"]
+  },
+  {
+    "slug": "chicago-il-mtc3-sunrise-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-09",
+    "status_since": "2026-10-10",
+    "status_note": "MTC3's 2026 season ended with the Oct 10 Apple Orchard Season Finale; the club's events page shows no upcoming events and no return date has been announced.",
+    "evidence": "MTC3's events page shows no upcoming events after the Oct 10 season finale; the last weekday Sunrise Ride listed was Oct 9 (fetched Oct 26, 2026).",
+    "sources": ["https://majortaylorchicago.com/events/"]
+  },
+  {
+    "slug": "cleveland-oh-cycle-canalway-sunday-social-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-26",
+    "status_since": "2026-10-01",
+    "status_note": "Canalway says the Sunday Social Rides run the third Sunday of each month, June through September.",
+    "evidence": "Canalway Partners' event page confirms Sunday Social Rides run the third Sunday of each month, June through September, 10:00 am from Canal Basin Park (fetched Oct 26, 2026).",
+    "sources": ["https://www.canalwaypartners.com/events/2026/06/21/sunday-social-ride"]
+  },
+  {
+    "slug": "conroe-tx-race-ready-repair-saturday-morning-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Race Ready Repair's shop rides page lists Saturday mornings at 8:00am: 50 miles at 20 mph (A, drop), 40 miles at 18 mph (B), 30 miles at 17 mph (C); helmets required; times change by season (fetched Oct 26, 2026).",
+    "sources": ["https://racereadyrepair.com/shop-rides"],
+    "changes": {
+      "schedule": "Every Saturday, 8:00 am from the shop; start times change through the seasons. Three groups: 50, 40 or 30 miles.",
+      "time_local": "8:00 am",
+      "start_hhmm": "08:00",
+      "visitor_notes": "Helmets required. The shop calls the A group a drop ride. Starting times change throughout the seasons."
+    }
+  },
+  {
+    "slug": "conroe-tx-race-ready-repair-thursday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "Race Ready Repair's shop-rides page no longer lists the Thursday Night Ride; only the Saturday ride appears. Bike The Woodlands still lists a Thursday evening ride at 6:15 pm (undated). Check the shop's Facebook page (facebook.com/RaceReadyRepair) or call the shop to confirm it's still running."
+  }
+]

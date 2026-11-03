@@ -12,11 +12,13 @@
      refreshHome()       fetch + apply to cfc-site/index.html; tools/build-rides.js runs it last on every deploy,
                          so the baked number follows the daily rebuild.
 
-   The number is one number, miles since June 1; never a share of 10,000 (§4). */
+   The number is one number, bike miles since June 1, 2026, then from Jan 1, 2027 the 2027 count (tools/lib/season.js);
+   never a share of 10,000 (§4). */
 "use strict";
 const fs = require("fs");
 const path = require("path");
 
+const { flipSeason } = require("../tools/lib/season.js");
 const ROOT = path.join(__dirname, "..");
 const HOME = path.join(ROOT, "cfc-site", "index.html");
 const FILE = path.join(ROOT, "data", "tally.json");
@@ -93,7 +95,9 @@ async function refreshHome({ quiet = false } = {}) {
   try { t = await fetchTally(); } catch (e) { t = loadTally(); how = t ? `data/tally.json (${e.message})` : null; }
   if (!t) { if (!quiet) console.log("tally: no feed and no copy — the homepage keeps its number"); return false; }
   const html = fs.readFileSync(HOME, "utf8");
-  const next = applyTally(html, t);
+  // the words around the number follow the date too (training until Jan 1, 2027 in Phoenix, then 2027): the homepage
+  // isn't rebuilt on deploy, so the deploy's tally pass is what flips them for crawlers
+  const next = flipSeason(applyTally(html, t));
   if (next !== html) fs.writeFileSync(HOME, next);
   if (!quiet) console.log(`tally: ${fmt(t.miles)} miles, last ride ${t.recent[0] ? dayLabel(t.recent[0].date) : "—"} (${how}); homepage ${next !== html ? "updated" : "unchanged"}`);
   return true;

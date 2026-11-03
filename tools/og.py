@@ -21,7 +21,7 @@ def main(src, out):
         # serve the site with the template dropped in at /__og.html
         www = pathlib.Path(tmp) / "www"
         www.mkdir()
-        for d in ("fonts", "img", "photos"):
+        for d in ("fonts", "img", "photos", "fruitloop"):
             (www / d).symlink_to(SITE / d)
         shutil.copy(src, www / "__og.html")
         handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(www))

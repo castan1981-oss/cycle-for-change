@@ -1,0 +1,83 @@
+[
+  {
+    "slug": "albuquerque-nm-nmts-start-the-week-rite-ride",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "NMTS's weekly rides page (fetched Oct 26, 2026) shows the Start the Week Rite Ride with 'NOTE: Ride Start time changed to 10:00 am Local Time' and start location listed as O'Bean's; no longer starts at San Pedro and Candelaria.",
+    "sources": ["https://www.nmts.org/displayWeekly.php"],
+    "changes": {
+      "time_local": "10:00 am",
+      "start_hhmm": "10:00",
+      "schedule": "4th Monday, 10:00 am",
+      "start_location": {
+        "name": "O'Bean's",
+        "address": null
+      },
+      "visitor_notes": "Ride start time changed to 10:00 am local time. The club notes the start time will not shift when clocks change in November."
+    }
+  },
+  {
+    "slug": "albuquerque-nm-nmts-sunday-bosque-trail-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "NMTS's weekly rides page (fetched Oct 26, 2026) lists the Sunday Bosque Trail ride at 9:00 AM from the Open Space Shining River Parking Area, same details as before; the schedule-text-changed flag was a page update with no change to day, time or start.",
+    "sources": ["https://www.nmts.org/displayWeekly.php"]
+  },
+  {
+    "slug": "anchorage-ak-trek-store-coed-cheese-and-crackers-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Trek Store Alaska's ride page (fetched Oct 26, 2026) posts the October ride for Thursday, October 29 at 6:30 pm at Hillside Single Track off Abbott Road; labeled 'RESCHEDULED – October Ride,' consistent with the series' monthly schedule at 6:30 pm.",
+    "sources": ["https://www.trekstorealaska.com/articles/co-ed-cheese-and-crackers-ride-pg1232.htm"]
+  },
+  {
+    "slug": "appleton-wi-wheel-and-sprocket-thursday-night-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "Wheel & Sprocket's event calendar (fetched Oct 26, 2026) lists only winter in-store events and no Thursday night ride; the host-stated season of May–Aug has ended and no 2027 dates are posted, confirming the ride is in its seasonal break.",
+    "sources": ["https://www.wheelandsprocket.com/about/event-calendar-pg76.htm"]
+  },
+  {
+    "slug": "arlington-heights-il-bike-the-heights-slow-roll",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-23",
+    "evidence": "Chicago Family Biking's events page (fetched Oct 26, 2026) lists 'Bike the Heights! Slow Roll Halloween Ride' for Friday, October 23, 2026, Meet 6:00 PM, Roll 6:15 PM, Harmony Park, 7 S Vail Ave, Arlington Heights — same time, same location, 4th Friday pattern confirmed.",
+    "sources": ["http://www.chicagofamilybiking.org/events"]
+  },
+  {
+    "slug": "athens-ga-bikeathens-joy-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-07",
+    "evidence": "BikeAthens' Joy Rides page (fetched Oct 26, 2026) states 'last Friday of the month, starting at 6:00 pm' from 1190 Prince Ave Suite B, and posts 'Save the date: October 30th at 6:00PM' for the next ride; schedule-text-changed flag was a new post about the October ride.",
+    "sources": ["https://www.bikeathens.org/engage/joyrides/"]
+  },
+  {
+    "slug": "austin-tx-atx-full-moon-cruise",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-24",
+    "evidence": "The group's dates page (fetched Oct 26, 2026) now reads 'assembling at 11:30pm and taking off between 11:45pm and 11:59pm (so don't arrive later than 11:45pm!)'; previously said assembly at 11:00pm, takeoff at 11:30pm. The date table still shows 11:30pm as the advertised start; next ride is Sat Nov 21, 2026.",
+    "sources": ["https://cycling.frenzied.us/full-moon-rides"],
+    "changes": {
+      "visitor_notes": "Monthly ride on the weekend night closest to the full moon. Assemble at 11:30 pm at Pfluger Pedestrian Bridge; ride rolls between 11:45 pm and 11:59 pm — don't arrive after 11:45 pm. Ride is unsupported and at your own risk."
+    }
+  },
+  {
+    "slug": "austin-tx-austin-ridge-riders-monthly-group-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-24",
+    "evidence": "Austin Ridge Riders' Ticket Tailor page and events calendar (fetched Oct 26, 2026) list no monthly rides after Oct 24, 2026; the events calendar shows 'Monthly Group Ride: Oct 24 Cameron Park' as the final entry, consistent with the 2024 series also ending in October.",
+    "sources": [
+      "https://www.tickettailor.com/events/austinridgeriders",
+      "https://www.austinridgeriders.com/events"
+    ],
+    "status_note": "The monthly ride series historically runs June through October; no November or December dates are posted. The club expects to resume in summer 2027 based on the same pattern in prior years."
+  }
+]

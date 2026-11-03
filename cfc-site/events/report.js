@@ -6,7 +6,8 @@
    Pass 22 (Oct 2, 2026): on a ride form, picking a kind reveals that kind's short fields
    ([data-show="new"] / [data-show="changed"]); the rest stay hidden and are left out of the
    post. Checkbox chips (days, for) go as one value ("mon, wed") — Netlify keeps only the
-   last of a repeated name. "I run this ride" swaps the email hint. */
+   last of a repeated name. "I run this ride" swaps the email hint. A link ending in #fix opens the form
+   with "I run this ride" ticked (the host emails, Oct 24, 2026). */
 (function () {
   "use strict";
   var forms = document.querySelectorAll("form[data-report]");
@@ -37,6 +38,22 @@
       if (e.target.name === "kind" || e.target === role) sync();
     });
     sync();
+
+    // Oct 24, 2026: a link ending in #fix (the host emails) opens this form with "Something changed" and
+    // "I run this ride" already picked, so a host lands on the form, not on a closed fold. Nothing on the
+    // site links to #fix, so a rider never arrives with the box ticked.
+    var fold = form.closest("details#fix");
+    function openForHost() {
+      if (!fold || location.hash !== "#fix") return;
+      fold.open = true;
+      var changed = form.querySelector("[name=kind][value=changed]");
+      if (changed) changed.checked = true;
+      if (role) role.checked = true;
+      sync();
+      fold.scrollIntoView({ block: "start" });
+    }
+    openForHost();
+    window.addEventListener("hashchange", openForHost);
 
     // the body: disabled (hidden) fields are already out of FormData; repeated chips become one value
     function body() {

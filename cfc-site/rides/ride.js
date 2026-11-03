@@ -59,9 +59,12 @@
     }
     if (!days.length) return null;
     var want = {}; days.forEach(function (d) { want[DAY[d]] = true; });
+    // a biweekly ride with a host-posted date runs on that date's weeks (Mon-Sun weeks from 1970-01-05; the build's weekIndex)
+    var phase = art.dataset.phase === "" || art.dataset.phase == null ? null : +art.dataset.phase;
     for (k = 0; k < 400; k++) {
       var dt = new Date(Date.UTC(p.year, p.month - 1, p.day + k));
       if (!want[dt.getUTCDay()]) continue;
+      if (phase !== null && Math.floor((dt.getTime() - Date.UTC(1970, 0, 5)) / 6048e5) % 2 !== phase) continue;
       t = at(dt.getUTCFullYear(), dt.getUTCMonth() + 1, dt.getUTCDate());
       if (t > now && inSeason(dt.getUTCMonth() + 1, season)) return t;
     }
@@ -83,7 +86,7 @@
       // studio pass 1: the time reads the way the When cell and the build's fmtNext() write it ("6:00 am", not "6:00 AM")
       var text = datedLabel || new Intl.DateTimeFormat("en-US", { timeZone: tz, weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(t).replace(/AM|PM/, function (m) { return m.toLowerCase(); });
       var el = box.querySelector("[data-next-text]"); if (el) { el.textContent = text; el.setAttribute("datetime", t.toISOString()); }
-      var r = box.querySelector("[data-next-rel]"); if (r) r.textContent = rel(t) + (art.dataset.freq === "biweekly" ? " \u00b7 every other week, confirm which with the host" : "");
+      var r = box.querySelector("[data-next-rel]"); if (r) r.textContent = rel(t) + (art.dataset.freq === "biweekly" ? (art.dataset.phase ? " \u00b7 every other week, on the host\u2019s posted weeks" : " \u00b7 every other week, confirm which with the host") : "");
       box.hidden = false;
     } else {
       box.hidden = true;
@@ -107,39 +110,7 @@
     }
   });
 
-  /* Oct 8, 2026 — footage from the ride. Like the homepage reel: on a wide screen without reduced
-     motion it plays while it's on screen; on phones it waits for a tap. Nothing downloads until it's
-     needed (preload="none"). The round button, the line under it and the picture all play and pause. */
-  var fig = document.querySelector("[data-film]");
-  var vid = fig && fig.querySelector("video");
-  if (vid) {
-    var fBtn = fig.querySelector("[data-film-btn]"), fPlay = fig.querySelector("[data-film-play]"), fLabel = fig.querySelector("[data-film-label]");
-    var wide = window.matchMedia && matchMedia("(min-width: 900px) and (hover: hover)").matches;
-    var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var user = null;
-    vid.muted = true;
-    var paint = function () {
-      var on = !vid.paused;
-      fig.setAttribute("data-playing", on ? "true" : "false");
-      if (fBtn) fBtn.setAttribute("data-playing", on ? "true" : "false");
-      if (fLabel) fLabel.textContent = on ? "Pause" : "Play";
-    };
-    var go = function () { vid.preload = "auto"; var q = vid.play(); if (q && q.catch) q.catch(function () {}); };
-    var toggle = function () { if (vid.paused) { user = true; go(); } else { user = false; vid.pause(); } };
-    vid.addEventListener("play", paint);
-    vid.addEventListener("pause", paint);
-    vid.addEventListener("error", function () { if (fBtn) fBtn.hidden = true; if (fPlay) fPlay.hidden = true; }, true);
-    vid.addEventListener("click", toggle);
-    if (fBtn) fBtn.addEventListener("click", toggle);
-    if (fPlay) fPlay.addEventListener("click", function () { toggle(); if (fBtn) fBtn.focus({ preventScroll: true }); });
-    if ("IntersectionObserver" in window) {
-      new IntersectionObserver(function (es) {
-        if (!es[0].isIntersecting) { if (!vid.paused) vid.pause(); return; }
-        if (user === true || (user === null && wide && !reduce)) go();
-      }, { threshold: 0.5 }).observe(vid);
-    }
-    paint();
-  }
+  /* The films (the ride's own and How we ride) are played by /rides/film.js (Oct 31, 2026). */
 
   /* Oct 8, 2026 — rider reviews. "Review this ride" opens the form (a <details>, so it works without
      this script); a link to #review opens it straight away. Posts to Netlify Forms like the other

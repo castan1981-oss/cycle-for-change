@@ -1,0 +1,70 @@
+[
+  {
+    "slug": "austin-tx-austin-ridge-riders-sunday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": null,
+    "evidence": "Austin Ridge Riders' Ticket Tailor page lists upcoming Sunday Group Rides at 9:00 am through Dec 27, 2026 — South Walnut Creek (Nov 1), Georgetown Trails (multiple dates), Circle C (multiple dates) — confirming the same day and time; past October dates no longer shown by Ticket Tailor (fetched Oct 26, 2026).",
+    "sources": ["https://www.tickettailor.com/events/austinridgeriders"]
+  },
+  {
+    "slug": "austin-tx-mellow-johnnys-mellow-mondays",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": null,
+    "evidence": "Mellow Johnny's community page still lists Mellow Mondays on Mondays at 6 pm, a 15–25 mile city ride at 14–16 mph with Anthony; the schedule-text-changed flag was from navigation and page-header HTML, not the ride schedule (fetched Oct 26, 2026).",
+    "sources": ["https://shop.mellowjohnnys.com/pages/community"]
+  },
+  {
+    "slug": "austin-tx-queer-ride-wednesday",
+    "outcome": "changed",
+    "checked_on": "2026-10-26",
+    "last_seen": null,
+    "evidence": "Do512's listing confirms the Queer Ride runs every Wednesday at 7:00 pm from the South Gate of the Texas State Capitol, leaving at 7:30 for a 10–15 mile ride — schedule unchanged. queerride.org has had an SSL error (ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR) for four weeks; updating watch_url to the accessible do512 listing (fetched Oct 26, 2026).",
+    "sources": ["https://do512.com/events/weekly/wed/queer-ride"],
+    "changes": {
+      "refresh": {
+        "watch_url": "https://do512.com/events/weekly/wed/queer-ride",
+        "notes": "queerride.org has had an SSL error for four weeks; do512 is the accessible listing the ride uses."
+      }
+    }
+  },
+  {
+    "slug": "austin-tx-violet-crown-womens-coffee-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": null,
+    "evidence": "Violet Crown's rides page still lists the Women's Coffee Ride as monthly on the first Sunday at 8:00 am from Mañana Coffee, 2 hours at 12–14 mph — unchanged; the schedule-text-changed flag was from updates to other rides on the page (Bagel Ride, Sunday Ride) (fetched Oct 26, 2026).",
+    "sources": ["https://www.violetcrown.org/rides"]
+  },
+  {
+    "slug": "bakersfield-ca-bike-bakersfield-full-moon-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-17",
+    "evidence": "Bike Bakersfield's home page shows a new Instagram post titled 'OCTOBER FULL MOON RIDE!' confirming the ride is continuing in October 2026, near the Oct 17 full moon; the site had a TLS cert error today (ERR_TLS_CERT_ALTNAME_INVALID, started Oct 26) but the page loaded with validation bypassed and shows the October ride post (fetched Oct 26, 2026).",
+    "sources": ["https://bikebakersfield.org/"]
+  },
+  {
+    "slug": "barre-vt-vermont-bicycle-shop-pizza-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-01",
+    "evidence": "Vermont Bicycle Club's Pizza Ride page confirms the ride leaves at 4:00 pm sharp on the first Saturday of each month, April through October, from Vermont Bicycle Shop — matching the record; an Oct 1, 2026 blog post announces the October ride (fetched Oct 26, 2026).",
+    "sources": ["https://vermontbicycleclub.com/pizzaride", "https://vermontbicycleclub.com/"]
+  },
+  {
+    "slug": "barre-vt-vermont-bicycle-shop-thursday-millstone-adventure-hour",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "Vermont Bicycle Club's blog posts weekly go/no-go notices for the Thursday Night Millstone Adventure Hour; the last post about this ride is Aug 27, 2026. No September or October posts about it appear on the group rides page. Cannot confirm the ride is still running."
+  },
+  {
+    "slug": "baton-rouge-la-downtown-east-social-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-12",
+    "evidence": "Downtown East Social Ride's home page still says 'Every Monday at the Electric Depot, 1509 Government Street, we gather at 6 p.m. and ends by 8 p.m.' — schedule unchanged; an Oct 12, 2026 newsletter post confirms the group is active (fetched Oct 26, 2026).",
+    "sources": ["https://www.downtowneastsocialride.com/"]
+  }
+]

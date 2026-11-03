@@ -15,6 +15,7 @@
           cfc-site/rides/<country>/<city>/     (world city hubs where 2+ rides sit within 40 km)
           cfc-site/rides/united-states/        (the US as a country: the states)
           cfc-site/rides/live.json             (the rides on the lists, slim — /tonight/ and build-events read it)
+          cfc-site/rides/az/phoenix/this-week/ (Nov 3, 2026: the Valley's rides for the seven days from today, Phoenix time)
 
   Freshness (tools/lib/rides-freshness.js, data/rides-health.json): every card and page says when
   the ride was last checked. Rides past the policy's window, paused, ended or flagged too long drop
@@ -35,6 +36,7 @@ const path = require("path");
 const CHROME = require("../scripts/chrome.js"); // shared header, footer, fonts
 const BLOCKS = require("../scripts/blocks.js"); // how-it's-built tiles + the ride-report form
 const TOWNS = require("../scripts/towns.js");  // the town layer (Sept 30, 2026): the strip on every ride page and city hub that has a guide
+const { listLede } = require("./lib/list-lede.js");
 const S = require("./lib/rides-schema.js");       // vocabularies, countries (schema v3)
 const F = require("./lib/rides-freshness.js");    // what's fresh, what hides, the "Checked" line
 const RV = require("./lib/reviews.js");          // Oct 8, 2026: rider reviews — the rules and the summary
@@ -73,6 +75,7 @@ function offersLd(r, url) {
 const METRO_RADIUS = 25;   // miles — a city hub covers rides within this radius
 const METRO_MIN = 3;       // rides needed before a city gets its own hub
 const HUB_GAP = 15;        // miles — two hubs can't sit closer than this (Miami + Fort Lauderdale both survive; suburbs don't)
+const HUB_HOLD = 1;        // miles — a hub that's live keeps its page until it's this much inside HUB_GAP (no flapping)
 const OWN_MIN = 8;         // …unless the city has this many rides of its own (Scottsdale beside Phoenix)
 const OWN_GAP = 6;         // miles — and sits at least this far from every other hub
 
@@ -87,7 +90,6 @@ const STATE_NAMES = {
   VT:"Vermont",VA:"Virginia",WA:"Washington",WV:"West Virginia",WI:"Wisconsin",WY:"Wyoming",PR:"Puerto Rico"
 };
 const DAY_LONG = { mon:"Monday", tue:"Tuesday", wed:"Wednesday", thu:"Thursday", fri:"Friday", sat:"Saturday", sun:"Sunday" };
-const DAY_IDX = { sun:0, mon:1, tue:2, wed:3, thu:4, fri:5, sat:6 };
 const DAY_ICS = { mon:"MO", tue:"TU", wed:"WE", thu:"TH", fri:"FR", sat:"SA", sun:"SU" };
 const ORD_WORD = { 1:"First", 2:"Second", 3:"Third", 4:"Fourth", "-1":"Last" };
 const DISC_LABEL = { road:"Road", gravel:"Gravel", mtb:"Mountain bike", fixed:"Fixed gear", social:"Social", cruiser:"Cruiser",
@@ -176,74 +178,14 @@ function fmtTime(hhmm) {
   const h12 = h % 12 || 12;
   return `${h12}:${String(m).padStart(2, "0")} ${ap}`;
 }
-// wall clock in tz -> Date instant
-function zoned(y, mo, d, hh, mm, tz) {
-  const guess = Date.UTC(y, mo - 1, d, hh, mm);
-  const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: tz, hourCycle: "h23",
-    year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric" })
-    .formatToParts(new Date(guess)).filter((x) => x.type !== "literal").map((x) => [x.type, +x.value]));
-  const asIf = Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute);
-  return new Date(guess - (asIf - guess));
-}
-function partsIn(date, tz) {
-  return Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: tz, hourCycle: "h23",
-    year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric", weekday: "short" })
-    .formatToParts(date).filter((x) => x.type !== "literal").map((x) => [x.type, x.type === "weekday" ? x.value : +x.value]));
-}
-function inSeason(month, s) {
-  if (!s) return true;
-  return s.start <= s.end ? month >= s.start && month <= s.end : month >= s.start || month <= s.end;
-}
-function nthWeekdayOfMonth(y, mo, dow, ord) {   // dow 0..6, ord 1..4 or -1
-  if (ord > 0) { const first = new Date(Date.UTC(y, mo - 1, 1)).getUTCDay(); return 1 + ((dow - first + 7) % 7) + (ord - 1) * 7; }
-  const lastDay = new Date(Date.UTC(y, mo, 0)); const back = (lastDay.getUTCDay() - dow + 7) % 7; return lastDay.getUTCDate() - back;
-}
-// Next occurrence as a Date, or null when the schedule can't be computed
-const ymdOf = (y, mo, d) => `${y}-${String(mo).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
-const localYmd = (date, tz) => { const p = partsIn(date, tz); return ymdOf(p.year, p.month, p.day); };
-function nextOccurrence(r, from = NOW) {
-  if (!r.start_hhmm || !r.tz || r.frequency === "irregular") return null;
-  // Oct 6, 2026: a ride on its seasonal break has no next ride (it showed "Next ride Tue, Oct 6" above "PAUSED FOR
-  // THE WINTER"), and a monthly ride with no week-of-month rule is posted date by date — it is not weekly.
-  if (onBreak(r) || ruleless(r)) return null;
-  // the time in force on that day: start_hhmm, or the host's table of changes (start_times, S.startOn)
-  const at = (y, mo, d) => { const [hh, mm] = S.startOn(r, ymdOf(y, mo, d)).split(":").map(Number); return zoned(y, mo, d, hh, mm, r.tz); };
-  const p = partsIn(from, r.tz);
-  const y0 = p.year, mo0 = p.month, d0 = p.day;
-  if (r.monthly_rule && r.monthly_rule.length) {
-    for (let k = 0; k < 4; k++) {
-      let y = y0, mo = mo0 + k; while (mo > 12) { mo -= 12; y += 1; }
-      const cands = r.monthly_rule.map((m) => nthWeekdayOfMonth(y, mo, DAY_IDX[m.day], m.ord)).sort((a, b) => a - b);
-      for (const d of cands) { const t = at(y, mo, d); if (t > from && inSeason(mo, r.season_months)) return t; }
-    }
-    return null;
-  }
-  if (!r.days.length) return null;
-  const want = new Set(r.days.map((d) => DAY_IDX[d]));
-  for (let k = 0; k < 400; k++) {
-    const dt = new Date(Date.UTC(y0, mo0 - 1, d0 + k));
-    if (!want.has(dt.getUTCDay())) continue;
-    const t = at(dt.getUTCFullYear(), dt.getUTCMonth() + 1, dt.getUTCDate());
-    if (t > from && inSeason(dt.getUTCMonth() + 1, r.season_months)) return t;
-  }
-  return null;
-}
-// ---------- Oct 6, 2026: breaks, monthly rides posted date by date, and the host's own dates ----------
-const onBreak = (r) => r.status === "seasonal-break";
-const ruleless = (r) => r.frequency === "monthly" && !(r.monthly_rule && r.monthly_rule.length);
+// Nov 3, 2026: the schedule code (zoned, partsIn, the next occurrence, the host's posted dates) lives in
+// tools/lib/schedule.js, moved unchanged, so /rides/az/phoenix/this-week/ (tools/lib/week.js) asks the same code.
+// The build's clock stays the default here: NOW (or --today).
+const SCH = require("./lib/schedule.js");
+const { zoned, partsIn, inSeason, biweeklyPhase, ymdOf, localYmd, onBreak, ruleless } = SCH;
+const nextOccurrence = (r, from = NOW) => SCH.nextOccurrence(r, from);
+const upcomingDates = (r, from = NOW) => SCH.upcomingDates(r, from);
 const MONTH_LONG = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
-// `dates`: the host's posted dates ([{ date, start_hhmm|null }]). Only the ones still ahead ever render —
-// a date with a time is ahead until it starts, a date with no time until that day ends. Past dates never show.
-function upcomingDates(r, from = NOW) {
-  if (!r.tz || !Array.isArray(r.dates)) return [];
-  return r.dates.filter((e) => e && DATE_RE.test(e.date)).map((e) => {
-    const [y, mo, d] = e.date.split("-").map(Number);
-    const t = typeof e.start_hhmm === "string" && /^\d{2}:\d{2}$/.test(e.start_hhmm) ? e.start_hhmm : null;
-    const [hh, mm] = (t || "23:59").split(":").map(Number);
-    return { at: zoned(y, mo, d, hh, mm, r.tz), allDay: !t, ymd: e.date, hhmm: t };
-  }).filter((x) => x.at > from).sort((a, b) => a.at - b.at);
-}
 // The next ride the build may promise: by the ride's rule, else the host's next posted date. Never on a break.
 function nextOf(r) {
   if (onBreak(r)) return null;
@@ -282,14 +224,27 @@ function icsLocal(date, tz) { const p = partsIn(date, tz); return `${p.year}${St
 
 // A ride page's <title>: the ride's name, its town and when — the longest of these that fits in 60 characters
 // ("Mellow Mondays — Austin, TX group ride, Mondays 6:00 pm"), down to the name alone when the name is that long.
-function rideTitle(r) {
+// Oct 25, 2026 (500K plan, answer-first ride pages): a ride that runs on a monthly rule (Critical Mass, bike parties,
+// open streets) puts its next date in the title when it fits ("Critical Mass London — Last Fridays, next Oct 30"),
+// since people search those by name and the date is the answer. A name that already says the city doesn't repeat it,
+// so the time fits ("Critical Mass Atlanta — Last Fridays 7:00 pm" instead of dropping the time).
+function rideTitle(r, next = null) {
   const sw = shortWhen(r);
   const day = sw ? sw.replace(/\s+\d{1,2}:\d{2} [ap]m$/, "") : null;
   const place = placeText(r);
+  const named = r.city && r.name.toLowerCase().includes(r.city.toLowerCase());
+  const monthly = !!(r.monthly_rule && r.monthly_rule.length);
+  const md = next && monthly ? new Intl.DateTimeFormat("en-US", { timeZone: r.tz, month: "short", day: "numeric" }).format(next) : null;
   const cands = [
-    sw && `${r.name} — ${place} group ride, ${sw}`,
-    sw && `${r.name} — ${place}, ${sw}`,
-    day && day !== sw && `${r.name} — ${place}, ${day}`,
+    md && day && !named && `${r.name} — ${place}, ${day}, next ${md}`,
+    md && day && named && `${r.name} — ${day}, next ${md}`,
+    md && !named && `${r.name} — ${place}, next ${md}`,
+    md && named && `${r.name} — next ride ${md}`,
+    sw && !named && `${r.name} — ${place} group ride, ${sw}`,
+    sw && !named && `${r.name} — ${place}, ${sw}`,
+    sw && named && `${r.name} — group ride, ${sw}`,
+    sw && named && `${r.name} — ${sw}`,
+    day && day !== sw && `${r.name} — ${named ? "" : place + ", "}${day}`,
     `${r.name} — ${place} group ride`,
     sw && `${r.name} — ${r.city}, ${sw}`,
     day && `${r.name} — ${r.city}, ${day}`,
@@ -297,6 +252,28 @@ function rideTitle(r) {
     `${r.name} — ${r.city}`,
   ].filter(Boolean);
   return cands.find((t) => t.length <= TITLE_MAX) || (r.name.length <= TITLE_MAX ? r.name : trunc(r.name, TITLE_MAX));
+}
+// The meta description, answer first (Oct 25, 2026; 500K plan): when, from where, what it costs, then what kind of ride.
+// A ride on a monthly rule leads with its next date (it changes once a month and the daily rebuild keeps it current);
+// a weekly ride leads with its day and time, which never go stale in a search snippet. Only what the page itself says.
+function answerDescription(r, { next, dp, tm, start, lede, f }) {
+  const local = isUS(r) ? "" : " local time";
+  // the start's short name: its first clause, and only when that's short enough to leave room for the rest
+  let startShort = start && start.name ? start.name.split(/;|\s\(|\.\s/)[0].trim().replace(/\.+$/, "") : "";
+  if (/^any\b/i.test(startShort)) startShort = startShort.charAt(0).toLowerCase() + startShort.slice(1);   // "from any point on the circuit"
+  const from = startShort && startShort.length <= 48 ? ` from ${startShort}` : "";
+  const monthly = !!(r.monthly_rule && r.monthly_rule.length);
+  const bits = [];
+  if (next && monthly) bits.push(`Next ride ${fmtNext(next, r.tz)}${from}.`, dp ? `${dp}.` : null);
+  else if (dp && tm && !onBreak(r)) bits.push(`${dp} at ${tm}${local}${from}.`);
+  else return trunc(lede, 158);   // no plain schedule to lead with: the lede as before
+  if (/^free\.?$/i.test((r.cost || "").trim())) bits.push("Free.");
+  const kind = r.kind === "open-streets" ? `Open streets in ${placeText(r)}: closed to cars, open to bikes.` : r.kind === "critical-mass" ? `A Critical Mass ride in ${placeText(r)}.` : null;
+  const rest = lede.replace(/^[^.]*\.\s*/, "").replace(/^It (?:rolls|runs) [^.]*\.\s*/, "");   // drop "X is a … ride in …" and the schedule sentence
+  const what = kind || lede.split(/(?<=\.)\s+/)[0].replace(new RegExp("^" + r.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + " is an? "), "A ");
+  bits.push(what, rest);
+  if (f && f.checked_on) bits.push(`Checked ${F.fmt(f.checked_on, { short: true, today: TODAY })}.`);
+  return trunc(bits.filter(Boolean).join(" ").replace(/\s+/g, " ").trim(), 158);
 }
 // Human schedule from structured fields ("Every Tuesday", "Second Wednesday of the month")
 function dayPhrase(r) {
@@ -506,6 +483,11 @@ function loadEvents() {
 
 // ---------- metro hubs ----------
 // A city gets a hub when ≥3 rides sit within 25 mi of it and no bigger hub already covers it.
+// Oct 23, 2026: hubs are sticky by a mile. A city's centroid moves whenever a ride is added, so a hub sitting right
+// at HUB_GAP from a bigger one flapped: two new Phoenix rides moved Phoenix's centre half a mile and took
+// /rides/az/peoria/ down for /rides/az/goodyear/. A hub in the last build's hubs.json gets HUB_HOLD miles of grace.
+const LIVE_HUBS = (() => { try { return new Set(JSON.parse(fs.readFileSync(path.join(OUT, "hubs.json"), "utf8")).map((h) => h.url)); } catch (e) { return new Set(); } })();
+const gapFor = (city, state) => HUB_GAP - (LIVE_HUBS.has(`/rides/${state.toLowerCase()}/${slugify(city)}/`) ? HUB_HOLD : 0);
 function buildMetros(allRides) {
   const rides = allRides.filter(isUS);
   const cities = {};
@@ -526,7 +508,7 @@ function buildMetros(allRides) {
   const hubs = [];
   for (const c of list) {
     if (c.rides.length < METRO_MIN) continue;
-    if (hubs.some((h) => h.state === c.state && miles(h, c) <= HUB_GAP)) continue;
+    if (hubs.some((h) => h.state === c.state && miles(h, c) <= gapFor(c.city, c.state))) continue;
     // best = most rides of its own, with a bonus for being a genuinely big city (top ~150)
     // the ten biggest cities hold their name against a busy suburb (Phoenix, not Scottsdale), so the
     // home city's hub URL doesn't move when a suburb gains a few rides
@@ -538,9 +520,9 @@ function buildMetros(allRides) {
     let center = { lat: best.lat, lng: best.lng }, name = best.city;
     let ridesIn = rides.filter((r) => r.state === c.state && miles(center, r) <= METRO_RADIUS);
     if (ridesIn.length < METRO_MIN) { center = { lat: c.lat, lng: c.lng }; name = c.city; ridesIn = c.rides; }
-    if (hubs.some((h) => h.state === c.state && miles(h, center) <= HUB_GAP)) {
+    if (hubs.some((h) => h.state === c.state && miles(h, center) <= gapFor(name, c.state))) {
       // the big city it would be named after already has a hub; keep the candidate as its own hub if it stands clear
-      if (best === c || c.n < METRO_MIN || hubs.some((h) => h.state === c.state && miles(h, c) <= HUB_GAP)) continue;   // only a city with 3+ rides of its own
+      if (best === c || c.n < METRO_MIN || hubs.some((h) => h.state === c.state && miles(h, c) <= gapFor(c.city, c.state))) continue;   // only a city with 3+ rides of its own
       center = { lat: c.lat, lng: c.lng }; name = c.city; ridesIn = c.rides;
     }
     const RENAME = { "Awendaw|SC": "Charleston", "Germantown|TN": "Memphis" };   // metro name when the big city has no ride of its own
@@ -692,6 +674,7 @@ function posterTile({ href, name, count, small, art, cls = "", markId = null, bl
 }
 
 // A <div> with one stretched link plus a Save button (a button can't sit inside an <a>).
+// opts.next: "next Sat, Nov 7" after the when (the named-ride hubs); opts.note: a caveat after it (this week's page).
 // The same markup is rendered client-side by hub.js — keep the two in step.
 // a schedule written as prose gives its first sentence on a row (the page has the rest)
 const cardWhenBase = (r) => (dayPhrase(r) && r.start_hhmm ? `${dayPhrase(r)}, ${fmtTime(r.start_hhmm)}` : r.schedule ? trunc(String(r.schedule).split(/(?<=\.)\s+/)[0].replace(/\.$/, ""), 64) : "See the ride's page for schedule");
@@ -730,7 +713,7 @@ function card(r, opts = {}) {
   ${discMark(r)}
   <a class="gr-card-name" href="/rides/${r.slug}/">${esc(r.name)}<span class="visually-hidden">, ${esc(discText(r))}</span></a>
   ${r.name_en ? `<span class="gr-card-en">${esc(r.name_en)}</span>` : ""}
-  <span class="gr-card-when">${esc(cardWhen(r))}<i class="gr-dot" aria-hidden="true"> · </i>${esc(rowPlace(r))}</span>
+  <span class="gr-card-when">${esc(cardWhen(r))}${opts.note ? `<i class="gr-dot" aria-hidden="true"> · </i>${esc(opts.note)}` : ""}${opts.next ? `<i class="gr-dot" aria-hidden="true"> · </i>next ${esc(opts.next)}` : ""}<i class="gr-dot" aria-hidden="true"> · </i>${esc(rowPlace(r))}</span>
   <span class="gr-card-meta">${meta}</span>
   <button type="button" class="gr-save" data-save="${r.slug}" aria-pressed="false" aria-label="Save ${attr(r.name)}"><span aria-hidden="true">☆</span></button>
 </div>`;
@@ -861,7 +844,7 @@ function hubJson(rides) {
 // (They used to read rides.json, which also holds rides we've taken off the lists.)
 function liveJson(rides) {
   const keep = ["slug", "name", "kind", "city", "state", "country", "region", "neighborhood", "lat", "lng", "tz", "schedule", "days", "time_local",
-    "start_hhmm", "start_times", "frequency", "monthly_rule", "season_months", "start_location", "distance_km", "distance_miles", "duration_min", "pace", "drop_policy",
+    "start_hhmm", "start_times", "frequency", "monthly_rule", "first_ride", "season_months", "start_location", "distance_km", "distance_miles", "duration_min", "pace", "drop_policy",
     "discipline", "confidence"];
   // Oct 6, 2026: `status`; a ride on its seasonal break carries no start time (so /tonight/ never shows it rolling);
   // a monthly ride with no week rule carries the host's dates still ahead (`dates`) and `next` (ISO, or null).
@@ -1464,6 +1447,15 @@ function fold(summary, html) {
       <div class="gr-about-body">${html}</div>
     </details>`;
 }
+// The list-page paragraph (Oct 26, 2026; growth plan Phase 4 "b"): one paragraph on every hub, facet, day and state
+// page, written from the rides on it (tools/lib/list-lede.js), folded so the picks stay on the first screen.
+// focus = what the page is already about ({ day }, { tag } or { disc }), so the paragraph doesn't say it again.
+function aboutList(rides, focus = {}) {
+  const said = listLede(rides, { focus, fmtTime });
+  return said.length ? fold(`About these ${rides.length.toLocaleString("en-US")} rides`, `<p>${esc(said.join(" "))}</p>`) : "";
+}
+const focusOf = (x) => (x.kind === "day" ? { day: x.key } : x.kind === "tag" ? { tag: x.key } : x.kind === "disc" ? { disc: x.key } : {});
+const facetFocus = (f) => ({ [f.chip[0]]: f.chip[1] });
 function findPage(rides) {
   const canonical = `${SITE}/find-a-ride/`;
   const nCountries = new Set(rides.map((r) => r.country || "US")).size;
@@ -1480,7 +1472,7 @@ function findPage(rides) {
     { href: "/events/2027/road/", name: "Fondo or century", sub: "A big organized road day", n: calN("Road"), markId: "hundred" },
     { href: "/events/2027/multi-day-tours/", name: "Multi-day tour", sub: "Days in a row", n: calN("Multi-day tour"), markId: "distance" },
     { href: "/events/2027/races/", name: "Race", sub: "Road, crit and stage races", n: calN("Race"), markId: "flag" },
-    { href: "/events/2027/riding/", name: "Ride with me", sub: "The six I'm doing in 2027", n: riding, markId: "ride-day" },
+    { href: "/events/2027/riding/", name: "Ride with me", sub: "The 2027 rides I'm doing", n: riding, markId: "ride-day" },
     // Studio pass 1 (Oct 21, 2026): "Brief a ride" left the kinds (it's a tool, not a kind of ride; eight tiles, no hole).
     // /brief/ is linked from the footer's Ride column on every page now, and from every ride page with a route.
   ].filter((k) => k.n == null || k.n > 0);
@@ -1568,6 +1560,18 @@ ${BLOCKS.BUILT([
     ["Flagged", `${nLow} marked Unconfirmed`, "Found on one source, or a detail we couldn't pin down. The card tells you to confirm first."],
     ["Free", "No paid placement", "Nobody pays to be listed or to rank. Tell us when a ride is gone, changed, or still on."],
   ])}
+    <section class="gr-how gr-how--about" id="how-we-ride" aria-labelledby="gr-how-h">
+      <h2 id="gr-how-h">How we ride</h2>
+      <div class="gr-how-in">
+        ${howFilmFig(HOW_FILMS.ride, "gr-how-line")}
+        <div class="gr-how-body">
+          <p id="gr-how-line">Nine things to know before your first group ride. The film runs 1:15 and has no sound; here are the same nine, in words.</p>
+          <ol class="gr-how-steps">
+${HOW_STEPS.map(([q, a, why]) => `            <li><b>${esc(q)} ${esc(a)}</b> <span>${esc(why)}</span></li>`).join("\n")}
+          </ol>
+        </div>
+      </div>
+    </section>
     <section class="dir-faq" id="first-ride" aria-labelledby="faq-h">
       <h2 id="faq-h">First group ride? The questions people ask first</h2>
 ${FAQ.map(([q, a]) => `      <details><summary>${esc(q)}</summary><p>${a}</p></details>`).join("\n")}
@@ -1583,7 +1587,8 @@ ${CRISIS}
 ${CTA}
   </div>
 </main>
-` + foot();
+` + foot(`
+<script src="/rides/film.js?v=1" defer></script>`);
 }
 function addPage(rides) {
   const canonical = `${SITE}/rides/add/`;
@@ -1677,7 +1682,7 @@ function placeSummary(rides, placeName) {
 }
 
 // ---------- the full list, with every filter: /<place>/all/ ----------
-function allPage({ title, h1, crumbs, canonical, description, rides, sections, hubs, upHref, upText, extraTop = "" }) {
+function allPage({ title, h1, crumbs, canonical, description, rides, sections, hubs, upHref, upText, extraTop = "", about = "" }) {
   return head({ title, description, canonical, jsonld: pageLd(canonical, h1, description, rides, crumbs) }) + `
 <main id="main" class="gr-dir gr-all-page">
   <header class="gr-head wrap">
@@ -1693,7 +1698,7 @@ ${extraTop}
       <div class="gr-empty" id="gr-empty" hidden>
         <p>No rides match here.</p>
         <p class="gr-empty-actions"><button type="button" class="gr-chip" id="gr-widen">Show the closest rides anyway</button> <a class="gr-chip" href="/rides/">Search everywhere</a> <button type="button" class="gr-chip" data-clear>Clear</button></p>
-      </div>
+      </div>${about}
       <p class="back"><a href="${upHref}">&larr; ${esc(upText)}</a></p>
 ${FOOTLINE}
 ${CTA}
@@ -1704,7 +1709,7 @@ ${CTA}
 }
 
 // ---------- a short page: one pick inside a place (Road in Phoenix, Saturday in Phoenix, No-drop in Arizona) ----------
-function subPage({ title, h1, crumbs, canonical, description, rides, body, jump = "", upHref, upText, sideHref = null, sideText = null, badgeHtml = "", first = false, noindex = false }) {
+function subPage({ title, h1, crumbs, canonical, description, rides, body, jump = "", upHref, upText, sideHref = null, sideText = null, badgeHtml = "", first = false, noindex = false, about = "" }) {
   return head({ title, description, canonical, jsonld: pageLd(canonical, h1, description, rides, crumbs), noindex }) + `
 <main id="main" class="gr-dir gr-sub-page">
   <header class="gr-head wrap${badgeHtml ? " gr-head--badge" : ""}">
@@ -1716,7 +1721,7 @@ function subPage({ title, h1, crumbs, canonical, description, rides, body, jump 
   </header>
 ${jump}
   <section class="gr-results-wrap" id="gr-list">
-    <div class="wrap">${body}
+    <div class="wrap">${body}${about}
       <nav class="gr-btn-row" aria-label="Where next">
         ${rideBtn({ href: upHref, text: esc(upText), markId: "town", ghost: true, back: true })}
         ${sideHref ? rideBtn({ href: sideHref, text: esc(sideText), markId: "list", ghost: true }) : ""}
@@ -1766,13 +1771,14 @@ function cityPage(h, { pages, notes = null, others = [], areaRides = [], areaHub
         rides: list, body: dg ? dg.html : rowsHtml(list), jump: dg ? dg.strip : "",
         badgeHtml: x.kind === "day" ? badge({ day: x.key, sub: h.city }) : badge({ markId: x.markId, sub: h.city }), first: x.kind === "tag" && (x.key === "beginner" || x.key === "no-drop"),
         upHref: base, upText: `Every kind of ride in ${h.city}`, sideHref: `${base}all/`, sideText: `All ${rides.length}, with filters`,
+        about: aboutList(list, focusOf(x)),
       }) });
     }
     pages.push({ path: `${base}all/`, rides, html: allPage({
       title: `All group rides in ${name} (${rides.length})`, h1: `All group rides in ${world ? h.city : name}`,
       crumbs: [...crumbs, ["All", `${SITE}${base}all/`]], canonical: `${SITE}${base}all/`,
       description: trunc(`Every recurring group ride within ${radius} of ${name}, ${rides.length} in all, with filters by bike, rider and day.`, 158),
-      rides, sections: rowsHtml(rides), hubs: [], upHref: base, upText: `Group rides in ${h.city}`,
+      rides, sections: rowsHtml(rides), hubs: [], upHref: base, upText: `Group rides in ${h.city}`, about: aboutList(rides),
     }) });
     body = `${picksBlock(rides)}
       <section class="gr-step" aria-labelledby="bike-h">
@@ -1820,10 +1826,12 @@ function cityPage(h, { pages, notes = null, others = [], areaRides = [], areaHub
       ${art ? `<img class="gr-head-art" src="${art}" alt="" width="200" height="200" decoding="async">` : ""}
       ${crumbsHtml(crumbs)}
       <h1>${esc(h1)}</h1>
-      ${subLine(rides, `within ${radius}`)}
+      ${subLine(rides, `within ${radius}`)}${WEEK_ON && isWeekHub(h) ? `
+      <p class="gr-tonight-row"><a class="gr-tonight" href="${WEEK_PATH}">This week, day by day &rarr;</a></p>` : ""}
   </header>
   <div class="wrap gr-steps" id="gr-list">
 ${body}
+${aboutList(rides)}
 ${photo}
 ${world ? countryNotesBlock(h.country, notes) : ""}
 ${town ? TOWNS.strip(town, { compact: true, heading: `Coming to ${esc(town.name)} to ride?`, lede: "Routes, coffee, who fixes a bike, where to sleep with it." }) : ""}
@@ -1856,6 +1864,7 @@ function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, descripti
       description: trunc(`${plural(list.length, `${f.h1.replace(/ group rides$/, "").toLowerCase()} group ride`)} in ${areaWord}: ${list.slice(0, 3).map((r) => r.name).join(", ")}. ${f.intro}`, 158),
       rides: list, badgeHtml: badge({ markId: FACET_MARK[f.slug], sub: areaWord }), body: groupedRows(list, { hubOf, collapse: list.length > LIST_MAX }), jump: list.length > LIST_MAX && new Set(list.map((r) => r.city)).size > 2 ? cityJump(list) : "",
       upHref: base, upText: `All group rides in ${areaWord}`, sideHref: `/rides/${f.slug}/`, sideText: `${FACET_DOOR[f.slug]} rides everywhere`, first: f.slug === "beginner" || f.slug === "no-drop",
+      about: aboutList(list, facetFocus(f)),
     }) });
   }
   // the place's own map: a dot per ride, its cities to tap
@@ -1876,13 +1885,14 @@ function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, descripti
       description: trunc(`${plural(elsewhere.length, "group ride")} in ${areaWord} outside its bigger cities: ${[...new Set(elsewhere.map((r) => r.city))].slice(0, 6).join(", ")}.`, 158),
       rides: elsewhere, body: groupedRows(elsewhere, { collapse: elsewhere.length > LIST_MAX }), jump: elsewhere.length > LIST_MAX ? cityJump(elsewhere) : "",
       upHref: base, upText: `Group rides in ${areaWord}`, sideHref: `${base}all/`, sideText: `All ${rides.length}, with filters`,
+      about: aboutList(elsewhere),
     }) });
     const facetDoors = FACETS.filter((f) => f.slug !== "gravel" && facetN[f.slug].length).map((f) => door({ href: doorHref(base, { slug: f.slug, rides: facetN[f.slug] }), name: FACET_DOOR[f.slug], n: facetN[f.slug].length, markId: FACET_MARK[f.slug] })).join("\n          ");
     pages.push({ path: `${base}all/`, rides, html: allPage({
       title: `All group rides in ${areaWord} (${rides.length})`, h1: `All group rides in ${areaWord}`,
       crumbs: [...crumbs, ["All", `${SITE}${base}all/`]], canonical: `${SITE}${base}all/`,
       description: trunc(`Every recurring group ride in ${areaWord}, ${rides.length} in all, with filters by bike, rider and day.`, 158),
-      rides, sections: groupedRows(rides, { hubOf }), hubs: hubsIn, upHref: base, upText: `Group rides in ${areaWord}`,
+      rides, sections: groupedRows(rides, { hubOf }), hubs: hubsIn, upHref: base, upText: `Group rides in ${areaWord}`, about: aboutList(rides),
     }) });
     body = `
       <section class="gr-step" aria-labelledby="city-h">
@@ -1918,6 +1928,7 @@ function areaPage({ rides, hubsIn, base, h1, title, crumbs, canonical, descripti
   <div class="wrap gr-steps" id="gr-list">
 ${notes}
 ${body}
+${aboutList(rides)}
       <p class="back"><a href="${world ? "/rides/world/" : "/rides/united-states/"}">&larr; ${world ? "Other countries" : "Every US state"}</a></p>
 ${FOOTLINE}
 ${CTA}
@@ -2012,6 +2023,7 @@ function usPage(usRides, hubs) {
         ${cityList.map((h) => posterTile({ href: h.path, name: h.city, count: h.rides.length, small: h === home ? "rides<br>home base" : `rides<br>${h.state}`, art: artFor(`${h.state.toLowerCase()}-${slugify(h.city)}`), cls: h === home ? "tile-p--ink" : "" })).join("\n        ")}
       </div>
     </section>
+${aboutList(usRides)}
     <p class="back"><a href="/rides/">&larr; Find a group ride</a></p>
 ${FOOTLINE}
 ${CTA}
@@ -2057,6 +2069,7 @@ ${FACET_PHOTO[f.slug] ? photoBand(FACET_PHOTO[f.slug], { cls: FACET_PHOTO[f.slug
         ${ccs.map((cc) => posterTile({ href: hrefFor(byCountry[cc], `/rides/${countrySlug(cc)}/`), name: countryName(cc), count: byCountry[cc].length, small: byCountry[cc].length === 1 ? "ride" : "rides", markId: "globe", cls: "tile-p--country" })).join("\n        ")}
       </div>
     </section>` : ""}
+${aboutList(rides, facetFocus(f))}
     <section class="gr-step" aria-labelledby="fo-h">
       <h2 class="gr-filter-label" id="fo-h">Other ways to look</h2>
       <div class="gr-tiles">
@@ -2069,6 +2082,170 @@ ${CTA}
   </div>
 </main>
 ` + foot(STEP_JS);
+}
+
+// ---------- named-ride hubs (Oct 26, 2026; growth plan Phase 4 "a", the 500K plan's named-ride hubs) ----------
+// /rides/critical-mass/: every Critical Mass we list, by country, each row with its next date, worked out from the
+// ride's own rule at build time (the daily rebuild keeps it current). The rest of the page is the rides' own data and
+// a short "What Critical Mass is" from two dated sources. Search clicks on named mass rides come on the ride's name and
+// "critical mass <city>"; this page is the answer to the generic "critical mass bike ride" and links every city.
+// It's a pick already made (the kind), so it's a short page (gr-sub-page): the whole list, no doors in front of it.
+const KIND_HUBS = new Set();
+const CM_READ = "Oct 26, 2026";
+function criticalMassPage(rides) {
+  const list = rides.filter((r) => r.kind === "critical-mass");
+  const N = list.length;
+  const canonical = `${SITE}/rides/critical-mass/`;
+  const crumbs = [["Cycle for Change", `${SITE}/`], ["Group rides", `${SITE}/rides/`], ["Critical Mass", canonical]];
+  const nCities = new Set(list.map((r) => `${r.city}|${r.country}`)).size;
+  const byCountry = {}; for (const r of list) (byCountry[r.country] ||= []).push(r);
+  const ccs = Object.keys(byCountry).sort((a, b) => byCountry[b].length - byCountry[a].length || countryName(a).localeCompare(countryName(b)));
+  const where = `${plural(nCities, "city", "cities")} in ${plural(ccs.length, "country", "countries")}`;
+  // what the rides say about themselves
+  const fridays = list.every((r) => r.days.length && r.days.every((d) => d === "fri"));
+  const lastFri = list.filter((r) => (r.monthly_rule || []).some((m) => String(m.ord) === "-1" && m.day === "fri")).length;
+  const free = list.filter((r) => r.cost === "free").length;
+  const whyLine = [
+    fridays ? `Every one rides on a Friday${lastFri ? `, ${lastFri} of the ${N} on the last Friday of the month` : ""}.` : lastFri ? `The last Friday of the month is the usual night: ${lastFri} of the ${N}.` : "",
+    free ? `The host says it's free on ${free === N ? "every one" : `${free} of the ${N}`}.` : "",
+  ].filter(Boolean).join(" ");
+  const nextShort = (r) => {
+    const n = nextOf(r);
+    if (!n) return null;
+    return n.kind === "date" && n.ymd ? fmtDay(n.ymd) : new Intl.DateTimeFormat("en-US", { timeZone: r.tz, weekday: "short", month: "short", day: "numeric" }).format(n.at);
+  };
+  const nextAt = (r) => { const n = nextOf(r); return n ? +n.at : Infinity; };
+  const groups = ccs.map((cc) => {
+    const rows = [...byCountry[cc]].sort((a, b) => nextAt(a) - nextAt(b) || a.city.localeCompare(b.city));
+    return `
+      <section class="gr-state" id="${countrySlug(cc)}">
+        <h3 class="gr-state-head">${esc(countryName(cc))} <span class="gr-count">${rows.length}</span></h3>
+        <div class="gr-grid">
+${rows.map((r) => card(r, { next: nextShort(r) })).join("\n")}
+        </div>
+      </section>`;
+  }).join("");
+  const title = "Critical Mass rides: every city, next date and start";
+  const description = trunc(`${N} Critical Mass rides in ${where}${lastFri ? `, ${lastFri} on the last Friday of the month` : ""}: next date, start and the day each was checked at the source.`, 158);
+  const whatIs = fold("What Critical Mass is", `
+        <p>Critical Mass started in San Francisco on Friday, September 25, 1992, as a ride called the Commute Clot; it had its name by the second one. It has no leader, no membership and no set route: whoever is at the front picks the turns, or the group does. Most cities ride on the last Friday of the month, after work.</p>
+        <p>The name comes from George Bliss in Ted White&rsquo;s film &ldquo;Return of the Scorcher&rdquo;: at crossings in China, he said, riders and drivers built up until there were enough of them, a critical mass, and then went through together. In 2022 Chris Carlsson told KQED it rides in more than 400 cities.</p>
+        <p>Sources: <a href="https://en.wikipedia.org/wiki/Critical_Mass_(cycling)" rel="noopener">Critical Mass (cycling), Wikipedia</a>; <a href="https://www.kqed.org/news/11927460/a-leaderless-phenomenon-critical-mass-celebrates-30th-anniversary" rel="noopener">KQED, Oct 1, 2022</a>. Read ${CM_READ}.</p>`);
+  return head({ title, description, canonical, jsonld: pageLd(canonical, "Critical Mass rides", description, list, crumbs) }) + `
+<main id="main" class="gr-dir gr-sub-page gr-kind-hub">
+  <header class="gr-head wrap">
+      ${crumbsHtml(crumbs)}
+      <h1>Critical Mass rides</h1>
+      ${subLine(list, `in ${where}`)}
+      ${whyLine ? `<p class="gr-why-line">${esc(whyLine)}</p>` : ""}
+  </header>
+  <div class="wrap gr-steps" id="gr-list">
+    <h2 class="gr-list-h">Critical Mass rides by country, next date on each</h2>
+      <div id="gr-states">${groups}
+      </div>
+${whatIs}
+${aboutList(list, fridays ? { kind: "critical-mass", day: "fri" } : { kind: "critical-mass" })}
+    <p class="back"><a href="/rides/">&larr; Find a group ride</a></p>
+${FOOTLINE}
+${CTA}
+  </div>
+</main>
+` + foot();
+}
+
+// ---------- Phoenix group rides this week (Nov 3, 2026) ----------
+// Robert's weekly Instagram carousel, "Phoenix group rides this week", prints one link: cycleforchange.org/week
+// (netlify.toml → here, tagged for the carousel). This page shows what the carousel showed: every listed ride in the
+// Valley (WEEK.PHOENIX_WEEK: within 45 miles of central Phoenix) for the seven days starting the build's day, Phoenix
+// time, day by day, in time order, each row into the ride's own page. The window comes from tools/lib/week.js, which
+// asks tools/lib/schedule.js (the ride pages' own schedule code), so first_ride, breaks, season months, a biweekly
+// ride's posted weeks, monthly rules and start_times all hold. The daily rebuild rolls it; if a rebuild is missed,
+// the few lines of script under the days hide any day already past in Phoenix (no script: every day shows).
+// A pick already made (the place and the week), so it's a short page (gr-sub-page) like /rides/critical-mass/.
+const WEEK = require("./lib/week.js");
+const WEEK_DAYS = 7;
+const WEEK_PATH = "/rides/az/phoenix/this-week/";
+const isWeekHub = (h) => h.state === "AZ" && h.city === "Phoenix";
+let WEEK_ON = false;      // the Phoenix hub is built, so the page (and the hub's link to it) is too
+let WEEK_RIDES = null;    // the rides on the page, once built (the sitemap's lastmod)
+// a biweekly ride with no posted week: the ride page's own words (gr-next-rel), so a dated row never promises a week
+const BIWEEKLY_ASK = "confirm which week with the host";
+const ymdNoon = (ymd) => new Date(`${ymd}T12:00:00Z`);
+const dayHead = (ymd) => new Intl.DateTimeFormat("en-US", { timeZone: "UTC", weekday: "long", month: "short", day: "numeric" }).format(ymdNoon(ymd));   // "Wednesday, Nov 4"
+const monDay = (ymd) => new Intl.DateTimeFormat("en-US", { timeZone: "UTC", month: "short", day: "numeric" }).format(ymdNoon(ymd));                      // "Nov 4"
+const dayRange = (a, b) => (a.slice(0, 7) === b.slice(0, 7) ? `${monDay(a)}–${+b.slice(8, 10)}` : `${monDay(a)}–${monDay(b)}`);                       // "Nov 4–10", "Nov 28–Dec 4"
+// the row: card() as everywhere, with the start in force that day (S.startOn, or the host's posted time)
+function weekRow(e) {
+  const r = e.ride;
+  const day = e.hhmm !== r.start_hhmm ? { ...r, start_hhmm: e.hhmm } : r;
+  return card(day, { note: r.frequency === "biweekly" && biweeklyPhase(r) == null ? BIWEEKLY_ASK : null });
+}
+// a missed rebuild never shows yesterday (Phoenix has no daylight saving; the zone is named anyway)
+const WEEK_JS = `
+<script>
+(function () {
+  try {
+    var p = {};
+    new Intl.DateTimeFormat("en-US", { timeZone: "${WEEK.PHOENIX_WEEK.tz}", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date()).forEach(function (x) { p[x.type] = x.value; });
+    var today = p.year + "-" + p.month + "-" + p.day, days = document.querySelectorAll("[data-ymd]");
+    for (var i = 0; i < days.length; i++) if (days[i].getAttribute("data-ymd") < today) days[i].hidden = true;
+  } catch (e) {}
+})();
+</script>`;
+function phoenixWeekPage(rides) {
+  const area = rides.filter((r) => WEEK.inArea(r));
+  const start = localYmd(NOW, WEEK.PHOENIX_WEEK.tz);   // the build's day in Phoenix (--today: that day)
+  const week = WEEK.weekOf(area, start, WEEK_DAYS);
+  const shown = week.flatMap((d) => d.rides);
+  const N = shown.length;
+  const onPage = [...new Set(shown.map((e) => e.ride))];
+  const onPageSet = new Set(onPage);
+  // rides with no time the schedule can work out (irregular, posted date by date, no start): the host's own calendar
+  const loose = area.filter((r) => !onBreak(r) && !WEEK.computable(r) && !onPageSet.has(r)).sort((a, b) => a.name.localeCompare(b.name));
+  const first = week[0].ymd, last = week[week.length - 1].ymd;
+  const range = dayRange(first, last);
+  const canonical = `${SITE}${WEEK_PATH}`;
+  const crumbs = [["Cycle for Change", `${SITE}/`], ["Group rides", `${SITE}/rides/`], ["Arizona", `${SITE}/rides/az/`], ["Phoenix", `${SITE}/rides/az/phoenix/`], ["This week", canonical]];
+  const h1 = "Phoenix group rides this week";
+  const lede = N ? `Group rides in the Valley, ${esc(range)}: ${N === 1 ? "just one" : `<b>${N}</b> of them`}. Tap one for where it starts, the pace and the route.`
+    : `No group rides on our list in the Valley for ${esc(range)}.`;
+  const description = trunc(N ? `${N} group rides in the Valley, ${range}, day by day: when each one rolls, where it starts, the pace, and the day it was checked at its source.`
+    : `Group rides in the Valley, ${range}, day by day: when each one rolls, where it starts, the pace, and the day it was checked at its source.`, 158);
+  const days = week.map((d) => `
+      <section class="gr-state gr-day-group" id="${dayHead(d.ymd).split(",")[0].toLowerCase()}" data-ymd="${d.ymd}">
+        <h3 class="gr-state-head">${esc(dayHead(d.ymd))}${d.rides.length ? ` <span class="gr-count">${d.rides.length}</span>` : ""}</h3>
+        ${d.rides.length ? `<div class="gr-grid">
+${d.rides.map(weekRow).join("\n")}
+        </div>` : `<p>No group rides on our list that day.</p>`}
+      </section>`).join("");
+  // fold()'s look with rows inside, the way /rides/united-states/ folds its A-to-Z (fold()'s body is set for prose)
+  const looseFold = loose.length ? `
+    <details class="gr-fold gr-about">
+      <summary>Also in the Valley, on the host&rsquo;s own calendar</summary>
+      <div class="gr-grid">
+${loose.map((r) => card(r)).join("\n")}
+      </div>
+    </details>` : "";
+  WEEK_RIDES = onPage;
+  return head({ title: h1, description, canonical, jsonld: pageLd(canonical, h1, description, onPage, crumbs) }) + `
+<main id="main" class="gr-dir gr-sub-page">
+  <header class="gr-head wrap">
+      ${crumbsHtml(crumbs)}
+      <h1>${esc(h1)}</h1>
+      <p class="gr-sub">${lede}</p>
+  </header>
+  <div class="wrap gr-steps" id="gr-list">
+    <h2 class="gr-list-h">Phoenix group rides this week, day by day</h2>
+      <div id="gr-states">${days}
+      </div>${WEEK_JS}
+${looseFold}
+${onPage.length ? aboutList(onPage) : ""}
+    <p class="back"><a href="/rides/az/phoenix/">&larr; Group rides in Phoenix</a></p>
+${FOOTLINE}
+${CTA}
+  </div>
+</main>
+` + foot();
 }
 
 // ---------- ride page ----------
@@ -2140,6 +2317,26 @@ const PAUSE_SVG = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"
 // never machine-written and never a recap of Strava numbers (CLAUDE.md §4, §10). The first few paragraphs
 // show; the rest sits under a fold, crawled but one tap away. Shown only on a ride we still list.
 const NOTES = readJson(NOTES_FILE, {});
+// Oct 23, 2026: data/ride-guides.json — { slug: { href, text } }: a guide of ours about the ride's host, linked under
+// "Where to find them" (The Heavy Pedal's two rides → /guides/heavy-pedal/). The build fails on a guide that isn't a page.
+const GUIDES_BY = (() => {
+  const raw = readJson(path.join(ROOT, "data", "ride-guides.json"), {});
+  const out = {};
+  for (const [slug, g] of Object.entries(raw)) {
+    if (slug === "note" || !g || typeof g.href !== "string") continue;
+    const file = path.join(ROOT, "cfc-site", g.href.replace(/^\//, ""), g.href.endsWith("/") ? "index.html" : "");
+    if (!/^\/[a-z0-9/-]+\/$/.test(g.href) || !fs.existsSync(file)) throw new Error(`data/ride-guides.json: ${slug} points at ${g.href}, which isn't a page under cfc-site/`);
+    out[slug] = g;
+  }
+  return out;
+})();
+const guideLine = (r) => {
+  const g = GUIDES_BY[r.slug];
+  if (g) return `\n      <p class="gr-guide"><a class="link" href="${attr(g.href)}">${esc(g.text)}</a></p>`;
+  // Oct 26, 2026: every listed Critical Mass links up to the hub that lists them all
+  if (r.kind === "critical-mass" && KIND_HUBS.has("critical-mass") && r._f && r._f.listed) return `\n      <p class="gr-guide"><a class="link" href="/rides/critical-mass/">Every Critical Mass we list, next date first</a></p>`;
+  return "";
+};
 const NOTE_SHOW = 4;                   // paragraphs before the fold
 const NOTE_DAY = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const noteDate = (ymd) => {
@@ -2222,6 +2419,73 @@ function filmBlock(r) {
       </section>`;
 }
 
+// ---------- Oct 31, 2026: How we ride, the group-ride film (Robert: "put … the other on the ride pages") ----------
+// One portrait film on every listed group ride's page; the Fruit Loop's own row gets its version, How we roll (the
+// one on /fruitloop/). The riders keep right, so rides in left-hand-traffic countries don't get it, and Critical Mass
+// and open streets aren't this kind of ride. Silent H.264, 720×1280, +faststart, files in cfc-site/film/ (bump the
+// number on a recut). A tap plays it (it's words on screen for over a minute); nothing downloads until then. The words,
+// all nine, are on /rides/about/#how-we-ride: one page carries the text, not 1,300 copies of it.
+const HOW_STEPS = [
+  ["How do we ride?", "Side by side.", "Single file when it’s tight. Never a bunch."],
+  ["Riding next to someone?", "Bars even.", "Don’t creep ahead. Nobody should have to chase."],
+  ["Gap opening up?", "Close it.", "Stay about a wheel back. Short groups are easier to pass."],
+  ["Want to move up?", "Not over the line.", "That lane isn’t ours. Wait for room."],
+  ["See something in the road?", "Point it out.", "See it, signal it. Riders behind do the same. Hole: point down at it. Slowing: palm down, pat the air. Stopping: hand up, open palm. Single up: one finger up."],
+  ["Car coming up behind?", "Call it up the line.", "Back rider says it. Everyone passes it forward."],
+  ["Red light?", "Everyone stops.", "Nobody rolls through. We go on green together."],
+  ["Someone falls behind?", "We wait.", "Regroup after climbs and turns. Nobody rides home alone."],
+  ["Flat tire?", "Two stay with you.", "The rest roll on and regroup ahead. A whole group stopped is a hazard."],
+];
+const HOW_FILMS = {
+  ride: { src: "/film/how-we-ride-2.mp4", poster: "/film/how-we-ride-2.jpg", seconds: 75, title: "How we ride",
+    line: "Nine things to know before your first group ride. It runs 1:15 and has no sound.",
+    more: ["/rides/about/#how-we-ride", "Read the nine instead"],
+    alt: "How we ride: six riders seen from above on a lane, showing nine group-ride habits one at a time, the words on screen. It ends on Cycle for change." },
+  fruitloop: { src: "/film/fruit-loop-how-we-roll-2.mp4", poster: "/film/fruit-loop-how-we-roll-2.jpg", seconds: 84, title: "How we roll",
+    line: "Ten things for your first Fruit Loop. It runs 1:24 and has no sound.",
+    more: ["/fruitloop/#how-we-roll", "Read the ten instead"],
+    alt: "How we roll, in chalk on a night road: six riders in rainbow kits cross the rainbow crosswalk and show ten group-ride habits, lights on. It ends on the Fruit Loop logo, Starts Friday, Dec 11, and the meeting spot." },
+};
+const LEFT_TRAFFIC = new Set(["GB", "IE", "AU", "NZ", "JP", "SG", "ZA", "IN", "HK", "MO", "MY", "TH", "ID", "BN", "MT", "CY", "KE", "UG", "TZ", "ZM", "ZW", "BW", "NA", "MU", "PK", "BD", "LK", "NP", "JM", "BS", "BB", "TT", "FJ"]);
+const FRUIT_LOOP_SLUG = "phoenix-az-cycle-for-change-fruit-loop";
+const clockText = (sec) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).padStart(2, "0")}`;
+function howFilmOf(r) {
+  if (r.slug === FRUIT_LOOP_SLUG) return HOW_FILMS.fruitloop;
+  if (r.kind === "critical-mass" || r.kind === "open-streets" || LEFT_TRAFFIC.has(r.country)) return null;
+  return HOW_FILMS.ride;
+}
+function howFilmFig(fm, describedBy) {
+  const len = clockText(fm.seconds);
+  return `<figure class="gr-film-fig gr-how-fig" data-film data-film-tap data-playing="false">
+          <div class="gr-film-frame">
+            <video muted playsinline disablepictureinpicture preload="none" poster="${attr(posterOf(fm.poster))}" width="720" height="1280" aria-label="${attr(fm.alt)}"${describedBy ? ` aria-describedby="${describedBy}"` : ""}>
+              <source src="${attr(fm.src)}" type="video/mp4">
+            </video>
+            <button class="gr-film-play" type="button" data-film-play aria-label="Play ${attr(fm.title)}, ${len}">${PLAY_SVG}</button>
+          </div>
+          <figcaption class="gr-film-cap">
+            <button class="gr-film-btn" type="button" data-film-btn data-playing="false"><span class="gr-film-ico gr-film-ico--play">${PLAY_SVG}</span><span class="gr-film-ico gr-film-ico--pause">${PAUSE_SVG}</span><span data-film-label>Play</span></button>
+            <span class="gr-film-where">${esc(fm.title)}</span>
+            <span class="gr-film-len">${len}</span>
+          </figcaption>
+        </figure>`;
+}
+function howWeRideBlock(r) {
+  const fm = howFilmOf(r);
+  if (!fm) return "";
+  return `
+    <section class="gr-how" id="how-we-ride" aria-labelledby="gr-how-h">
+      <h2 id="gr-how-h">${esc(fm.title)}</h2>
+      <div class="gr-how-in">
+        ${howFilmFig(fm, "gr-how-line")}
+        <div class="gr-how-body">
+          <p id="gr-how-line">${esc(fm.line)}</p>
+          <p><a class="link" href="${attr(fm.more[0])}">${esc(fm.more[1])}</a></p>
+        </div>
+      </div>
+    </section>`;
+}
+
 function reviewItem(rv) {
   const tags = [rv.again === "yes" ? "Would ride it again" : "Wouldn’t ride it again", rv.pace ? RV.PACE_TAG[rv.pace] : null].filter(Boolean);
   return `<li class="gr-rev">
@@ -2230,9 +2494,10 @@ function reviewItem(rv) {
             <ul class="gr-rev-tags">${tags.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
           </li>`;
 }
-let REV_UID = 0;
+// One review form per ride page, so its ids don't need a counter. (Until Oct 24, 2026 they were numbered in build
+// order, so every rebuild rewrote ~1,400 pages and a re-check PR touched 1,134 files.)
 function reviewForm(r) {
-  const n = ++REV_UID, id = (k) => `rv-${k}-${n}`;
+  const id = (k) => `rv-${k}`;
   const pick = (name, list, required) => list.map(([v, t], i) => `<label><input type="radio" name="${name}" value="${v}"${required && i === 0 ? " required" : ""}><span>${esc(t)}</span></label>`).join("");
   return `
         <details class="gr-rev-write" id="review">
@@ -2441,9 +2706,9 @@ function routeBlock(r, rt, listed) {
 }
 // Oct 9, 2026: the people who run a ride send its route here (Netlify form "ride-route", a file upload).
 // tools/routes-pull.js turns each one into a GitHub issue labelled "route"; nothing shows until Robert has read it.
-let ROUTE_UID = 0;
+
 function routeSend(r, rt) {
-  const n = ++ROUTE_UID, id = (k) => `rt-${k}-${n}`;
+  const id = (k) => `rt-${k}`; // one route form per page; stable ids, no build-order counter
   const weekly = rt ? !!rt.for_date : /route[s]? chang|changes? (every|each) week|weekly route/i.test(`${r.description || ""} ${r.visitor_notes || ""} ${r.schedule || ""}`);
   const open = rt ? (weekly ? "Send next week’s route" : "Route changed? Send the new one") : "Run this ride? Send us the route";
   return `
@@ -2516,16 +2781,17 @@ function ridePage(r, all, hubFor, hubs) {
     : r.kind === "training-series" ? `${r.name} is a series of ${ledeDisc} training rides in ${placeText(r)}.`
     : `${r.name} is a ${ledeDisc} group ride in ${placeText(r)}.`;
   if (dp && tm && r.kind === "open-streets") lede += ` It runs ${lower1(dp)} from ${tm}${isUS(r) ? "" : " local time"}.`;
-  else if (dp && tm) lede += ` It rolls ${lower1(dp)} at ${tm}${isUS(r) ? "" : " local time"}${start && start.name ? ` from ${start.name}` : ""}.`;
+  else if (dp && tm) lede += ` It rolls ${lower1(dp)} at ${tm}${isUS(r) ? "" : " local time"}${start && start.name ? ` from ${start.name.replace(/\.+$/, "")}` : ""}.`;
   else if (r.schedule) lede += ` Schedule: ${r.schedule.replace(/\.$/, "")}${start && start.name ? `, from ${start.name}` : ""}.`;
   if (onBreak(r)) lede += " It's on its seasonal break now.";
-  if (dist) lede += ` About ${dist}${r.pace ? `, ${lower1(r.pace)}` : ""}.`;
-  else if (r.pace) lede += ` Pace: ${lower1(r.pace)}.`;
-  if (r.drop_policy === "no-drop" && !/no-drop/i.test(lede)) lede += " No-drop.";
-  const description = trunc(lede, 158);
+  const paceText = r.pace ? lower1(r.pace).replace(/\.+$/, "") : "";   // the host's own pace line, without a doubled period
+  if (dist) lede += ` About ${dist}${paceText ? `, ${paceText}` : ""}.`;
+  else if (paceText) lede += ` Pace: ${paceText}.`;
+  if (r.drop_policy === "no-drop" && !/no-drop|no one gets dropped|nobody gets dropped|nobody is dropped/i.test(lede)) lede += " No-drop.";
+  const description = listed ? answerDescription(r, { next, dp, tm, start, lede, f }) : trunc(lede, 158);
   // Pass 15: the page shows the first sentence and the when; the facts below carry the rest
   const ledeShort = lede.split(/(?<=\.)\s+(?=About |Pace: |No-drop\.)/)[0];
-  const title = rideTitle(r);
+  const title = rideTitle(r, listed ? next : null);
 
   const hub = hubFor[r.slug];
   const areaName = isUS(r) ? stateName(r.state) : countryName(r.country);
@@ -2682,7 +2948,7 @@ function ridePage(r, all, hubFor, hubs) {
   <article class="ride${film ? " ride--film" : ""}" data-ride
     data-tz="${attr(listed ? r.tz || "" : "")}" data-time="${attr(next ? r.start_hhmm || "" : "")}" data-days="${r.days.join(" ")}"
     data-dates="${attr(dated.length ? JSON.stringify(dated.map((d) => [d.at.toISOString(), d.allDay ? `${fmtDay(d.ymd)} · time on the host's page` : fmtNext(d.at, r.tz)])) : "")}"
-    data-freq="${attr(r.frequency || "")}" data-season="${r.season_months ? `${r.season_months.start}-${r.season_months.end}` : ""}"
+    data-freq="${attr(r.frequency || "")}" data-phase="${biweeklyPhase(r) ?? ""}" data-season="${r.season_months ? `${r.season_months.start}-${r.season_months.end}` : ""}"
     data-monthly="${attr(r.monthly_rule ? JSON.stringify(r.monthly_rule) : "")}"
     data-times="${attr(listed && Array.isArray(r.start_times) && r.start_times.length ? JSON.stringify(r.start_times.map((e) => [e.from, e.start_hhmm])) : "")}">
 ${wallBlock(r)}
@@ -2702,7 +2968,7 @@ ${banner}
     ${listed ? "" : "<!-- off the lists: no next ride -->"}<div class="gr-next" id="gr-next" ${next || dated.length ? "" : "hidden"}${listed ? "" : " data-off"}>
       <span class="gr-next-label">Next ride</span>
       <time class="gr-next-when" data-next-text${next ? ` datetime="${isoWithOffset(next, r.tz)}"` : dated.length ? ` datetime="${dated[0].allDay ? dated[0].ymd : isoWithOffset(dated[0].at, r.tz)}"` : ""}>${next ? esc(fmtNext(next, r.tz)) : dated.length ? esc(dated[0].allDay ? `${fmtDay(dated[0].ymd)} · time on the host's page` : fmtNext(dated[0].at, r.tz)) : ""}</time>
-      <span class="gr-next-rel" data-next-rel>${next && r.frequency === "biweekly" ? "every other week — confirm which week with the host" : ""}</span>
+      <span class="gr-next-rel" data-next-rel>${next && r.frequency === "biweekly" ? (biweeklyPhase(r) != null ? "every other week, on the host’s posted weeks" : "every other week — confirm which week with the host") : ""}</span>
     </div>
 
     <div class="gr-actions">
@@ -2727,6 +2993,7 @@ ${rt ? "" : routeBlock(r, null, listed)}
 ${locator}
 ${visitBlock}
 ${firstTimeBlock(r, hostLabel)}
+${listed ? howWeRideBlock(r) : ""}
     <div class="gr-about">
       <h2>About the ${esc(r.name.replace(/^the\s+/i, ""))} group ride</h2>
       <p class="lede gr-about-lede">${esc(ledeShort)}</p>
@@ -2737,7 +3004,7 @@ ${firstTimeBlock(r, hostLabel)}
       <h2>Where to find them</h2>
       <div class="gr-linkrow">
         ${linkBtns}
-      </div>
+      </div>${guideLine(r)}
     </div>
 
 ${(() => { if (!isUS(r)) return ""; const town = TOWNS.find({ city: r.city, state: r.state, lat: r.lat, lng: r.lng }); return town ? TOWNS.strip(town, { compact: true, heading: `Riding ${esc(town.name)} from out of town?`, lede: `Where the routes are, who fixes or rents a bike, where to sleep with it, how to get it here.` }) : ""; })()}
@@ -2761,7 +3028,8 @@ ${BLOCKS.REPORT({ thing: "ride", name: r.name, kind: "changed", compact: true, i
 ${CTA}
 </main>
 ` + foot(`
-<script src="/rides/ride.js?v=39" defer></script>${rt ? `
+<script src="/rides/ride.js?v=41" defer></script>${film || (listed && howFilmOf(r)) ? `
+<script src="/rides/film.js?v=1" defer></script>` : ""}${rt ? `
 <script src="/rides/route.js?v=1" defer></script>` : ""}`);
 }
 
@@ -2779,6 +3047,8 @@ function sitemap(rides, states, hubs, worldCCs = [], worldHubs = [], steps = [],
   for (const cc of worldCCs) rows.push([`${SITE}/rides/${countrySlug(cc)}/`, maxOf(rides.filter((r) => r.country === cc))]);
   for (const h of worldHubs) rows.push([`${SITE}${h.path}`, maxOf(h.rides)]);
   for (const f of FACETS) { const l = rides.filter(f.pick); if (l.length) rows.push([`${SITE}/rides/${f.slug}/`, maxOf(l)]); }
+  if (KIND_HUBS.has("critical-mass")) rows.push([`${SITE}/rides/critical-mass/`, maxOf(rides.filter((r) => r.kind === "critical-mass"))]);
+  if (WEEK_ON && WEEK_RIDES && WEEK_RIDES.length) rows.push([`${SITE}${WEEK_PATH}`, maxOf(WEEK_RIDES)]);   // lastmod: its rides' newest check
   for (const r of rides) rows.push([`${SITE}/rides/${r.slug}/`, (r._f && r._f.checked_on) || r.verified_on]);
   const kept = rows.filter(([u]) => !skip.has(u.replace(SITE, "")));   // Oct 6: no duplicates, no thin pages
   rows.length = 0; rows.push(...kept);
@@ -2967,6 +3237,7 @@ function main() {
   claim("about", "how the list works"); claim("add", "the add-a-ride form"); claim("world", "outside the US"); claim("maps", "the outline tiles");
   for (const st of states) claim(st.toLowerCase(), `state ${st}`);
   for (const f of FACETS) claim(f.slug, `facet ${f.slug}`);
+  claim("critical-mass", "the Critical Mass hub");
   for (const cc of worldCCs) claim(countrySlug(cc), `country ${cc}`);
   for (const r of pages) claim(r.slug, `ride ${r.slug}`);
   const clash = pages.filter((r) => /^[a-z]{2}$/.test(r.slug));
@@ -2989,6 +3260,7 @@ function main() {
   if (rides.some(isUS)) write(path.join(OUT, "united-states", "index.html"), usPage(rides.filter(isUS), hubs));
   // Oct 6, 2026: the place pages are collected first (not written straight away) so duplicates and thin pages
   // can be marked before anything is written (dedupePages below).
+  WEEK_ON = hubs.some(isWeekHub);   // Nov 3, 2026: /rides/az/phoenix/this-week/ rides with its hub (the hub links to it)
   const places = [];   // { path, rides, html, rank } — rank: 0 state / country, 1 city, 2 national facet
   for (const st of states) { const list = rides.filter((r) => r.state === st); places.push({ path: `/rides/${st.toLowerCase()}/`, rides: list, rank: 0, html: statePage(st, list, hubs, steps) }); }
   const nearHubs = (h, list, dist, max) => list.filter((x) => x !== h && (x.state || x.country) === (h.state || h.country)).map((x) => ({ x, d: dist(h, x) })).filter((x) => x.d <= max).sort((a, b) => a.d - b.d).slice(0, 5);
@@ -2996,6 +3268,9 @@ function main() {
   for (const cc of worldCCs) { const list = rides.filter((r) => r.country === cc); places.push({ path: `/rides/${countrySlug(cc)}/`, rides: list, rank: 0, html: countryPage(cc, list, world.hubs, notes, steps) }); }
   for (const h of world.hubs) places.push({ path: h.path, rides: h.rides, rank: 1, html: cityPage(h, { pages: steps, notes, others: nearHubs(h, world.hubs, km, 400), areaRides: rides.filter((r) => r.country === h.country), areaHubs: world.hubs.filter((x) => x.country === h.country) }) });
   for (const f of FACETS) places.push({ path: `/rides/${f.slug}/`, rides: rides.filter(f.pick), rank: 2, html: facetPage(f, rides) });
+  const cmRides = rides.filter((r) => r.kind === "critical-mass");
+  if (cmRides.length > THIN_MAX) KIND_HUBS.add("critical-mass");
+  if (KIND_HUBS.has("critical-mass")) places.push({ path: "/rides/critical-mass/", rides: cmRides, rank: 2, html: criticalMassPage(rides) });
   const taken = new Set([...hubs, ...world.hubs].map((h) => h.path));
   for (const pg of steps) {
     if (taken.has(pg.path)) { console.error(`${pg.path} is claimed twice (a short page on top of a city or another short page)`); process.exit(1); }
@@ -3004,6 +3279,12 @@ function main() {
   const marks = dedupePages(places, steps);
   for (const pg of steps) if (!pg.noindex && !pg.canonicalTo) LINKABLE.add(pg.path);   // ride pages link up only to pick pages that stay indexed
   for (const pg of [...places, ...steps]) write(path.join(OUT, ...pg.path.replace(/^\/rides\//, "").split("/").filter(Boolean), "index.html"), pg.html);
+  // Nov 3, 2026: this week in the Valley, written after the wipe like every list page (never a step: its rides change
+  // daily, so it never joins the duplicate-page canonicals)
+  if (WEEK_ON) {
+    if (taken.has(WEEK_PATH)) { console.error(`${WEEK_PATH} is claimed twice (a short page under Phoenix)`); process.exit(1); }
+    write(path.join(OUT, ...WEEK_PATH.replace(/^\/rides\//, "").split("/").filter(Boolean), "index.html"), phoenixWeekPage(rides));
+  }
   write(path.join(OUT, "index.json"), JSON.stringify(hubJson(rides)));
   write(path.join(OUT, "live.json"), JSON.stringify(liveJson(rides)));
   // Pass 6: the hub centres, for tools/contour-art.js (one contour tile per city hub; world keys are <cc>-<city>)
@@ -3028,7 +3309,7 @@ function main() {
     else if (dated.length) { write(path.join(OUT, r.slug, "ride.ics"), icsDated(r, dated)); nIcs++; }
   }
   write(path.join(OUT, "sitemap.xml"), sitemap(rides, states, hubs, worldCCs, world.hubs, steps, marks.outOfSitemap));
-  const redirects = hubRedirects([...places, ...steps].map((pg) => pg.path));
+  const redirects = hubRedirects([...places, ...steps].map((pg) => pg.path).concat(WEEK_ON ? [WEEK_PATH] : []));
   const byState = {}; for (const r of all) byState[r._f.state] = (byState[r._f.state] || 0) + 1;
   console.log(`built ${steps.length} short pages (a pick inside a place, or its full list); ${pages.length} ride pages (${rides.length} on the lists; ${Object.entries(byState).map(([k, n]) => `${n} ${k}`).join(", ")}; ${nEvent} with a next ride, ${nIcs} with .ics, ${nBreak} on a seasonal break), ${states.length} state hubs, ${hubs.length} US city hubs, ${worldCCs.length} other countries, ${world.hubs.length} world city hubs → ${path.relative(ROOT, OUT) || OUT}/`);
   const gone = [...goneUS, ...world.gone];

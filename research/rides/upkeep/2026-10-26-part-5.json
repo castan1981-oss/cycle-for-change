@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "bentonville-ar-tour-de-coler",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "peelcompton.org has been behind a Cloudflare bot-wall (403) since Sep 30, 2026; all paths including the watch URL and ICS exports return a JS challenge. No other source with a dated 2026 confirmation could be fetched."
+  },
+  {
+    "slug": "brooklyn-ny-dawn-patrol-prospect-park",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "legday.substack.com has been 403 since Oct 5, 2026. The last watcher read (Sep 30) captured the schedule text intact. No 2026-specific confirmation could be fetched from any other source; @dawnpatrol.pp on Instagram is the next place to check."
+  },
+  {
+    "slug": "brooklyn-ny-nightcap-monday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "All three queeronthestreet.substack.com sources have been 403 since Oct 5, 2026. The last watcher read (Sep 30) showed the ride listed for Mon Apr 13, 2026 at 6:45 pm. No later confirmation found; @nightcap_brooklyn on Instagram is the next place to check."
+  },
+  {
+    "slug": "charlotte-nc-dirt-divas-tuesday-mtb-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-06",
+    "evidence": "weeklyrides.com/index.php/group-rides lists Dirt Divas at Tue Oct 6, 5:45 pm — same day, time, description and location (varies, see socials) as the record; the flag was a date roll from Sep 1 to Oct 6, not a schedule change (fetched Oct 26, 2026).",
+    "sources": ["https://www.weeklyrides.com/index.php/group-rides"]
+  },
+  {
+    "slug": "charlotte-nc-plaza-midwood-tuesday-night-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-21",
+    "evidence": "cltspokespeople.org/rides/pmtnr/ confirms the ride meets at Common Market at 7:45 pm every Tuesday, rolls at 8:00 pm; Facebook posts embedded on the page report rides on Oct 21, Oct 12 and Oct 5, 2026 (fetched Oct 26, 2026).",
+    "sources": ["https://cltspokespeople.org/rides/pmtnr/"]
+  },
+  {
+    "slug": "cleveland-tn-scotts-thursday-night-road-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "evidence": "scottsbikes.com/news/thursday-night-road-bike-ride-pg196.htm shows: 'Road Ride Paused — It's dark! We have paused the Thursday Night Road Rides for the rest of the year. Check back in the Spring!' (fetched Oct 26, 2026).",
+    "sources": ["https://www.scottsbikes.com/news/thursday-night-road-bike-ride-pg196.htm"],
+    "status_note": "Scott's Bikes has paused the Thursday Night Road Rides for the winter. Back in spring, the shop says."
+  },
+  {
+    "slug": "dallas-tx-femme-pedale-womens-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "dallasbicyclecoalition.org/social-rides/ has been 403 since Oct 5, 2026. No other source for this ride could be found or fetched; the Dallas Bicycle Coalition's Facebook page or direct outreach to the coalition is the next step."
+  },
+  {
+    "slug": "dallas-tx-hangover-riders-first-friday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-10-26",
+    "note": "dallasbicyclecoalition.org/social-rides/ has been 403 since Oct 5, 2026. No other source found; @hangoverriders on Instagram is the next place to check."
+  }
+]

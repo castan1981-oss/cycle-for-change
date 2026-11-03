@@ -4,7 +4,7 @@
 Run from the repo root:   python3 scripts/apply-chrome.py
 Safe to re-run: it rebuilds each page's <head>, header and footer from the
 current scripts/chrome.js. Pages covered: every .html under cfc-site/guides,
-field-notes, resources, journal, tonight, nov7, cyclefor, privacy, methodology and contact
+field-notes, resources, journal, tonight, nov7, cyclefor, privacy, methodology, contact and fruitloop
 (templates included), plus 404.html.
 
 What it does to each page
@@ -32,7 +32,7 @@ C = json.loads(subprocess.check_output(NODE))
 
 SECTION_STYLES = {  # stylesheets after /chrome.css, by top-level folder
     "guides": ["/styles.css"], "field-notes": ["/styles.css"], "resources": ["/styles.css"],
-    "journal": ["/styles.css"], "tonight": ["/tonight/tonight.css"], "nov7": ["/nov7/nov7.css"], "cyclefor": ["/cyclefor/cyclefor.css"], "": ["/styles.css"],
+    "journal": ["/styles.css"], "tonight": ["/tonight/tonight.css"], "nov7": ["/nov7/nov7.css"], "cyclefor": ["/cyclefor/cyclefor.css"], "fruitloop": ["/styles.css", "/fruitloop/fruitloop.css"], "": ["/styles.css"],
 }
 ANCHORS = {'href="/#tally"': 'href="/"', 'href="/#rides"': 'href="/#ride"',
            'href="/#disciplines"': 'href="/"', 'href="/#pledge"': 'href="/"',
@@ -163,7 +163,7 @@ def ending_last(s: str) -> str:
 
 def main():
     pages = [SITE / "404.html"]
-    for d in ("guides", "field-notes", "resources", "journal", "tonight", "nov7", "cyclefor", "privacy", "methodology", "contact"):
+    for d in ("guides", "field-notes", "resources", "journal", "tonight", "nov7", "cyclefor", "privacy", "methodology", "contact", "fruitloop"):
         pages += sorted((SITE / d).rglob("*.html"))
     for p in pages:
         s = p.read_text()

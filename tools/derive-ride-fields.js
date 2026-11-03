@@ -57,7 +57,11 @@ function tz(r) {
 const RT = require("./lib/ride-time.js");
 function duration(s) {
   if (!s) return null; s = String(s).toLowerCase();
-  const h = s.match(/(\d+(?:\.\d+)?)\s*(?:-|–|to)?\s*(\d+(?:\.\d+)?)?\s*(?:h|hr|hrs|hour)/); if (h) return Math.round(+h[1] * 60);
+  const h = s.match(/(\d+(?:\.\d+)?)\s*(?:-|–|to)?\s*(\d+(?:\.\d+)?)?\s*(?:h|hr|hrs|hour)/);
+  if (h) {   // "2 hours 45 minutes" is 165, not 120 (Oct 23, 2026); a range keeps its low end, as before
+    const rest = s.slice(h.index + h[0].length).match(/^[a-z]*\s*(?:and\s*)?(\d+)\s*min/);
+    return Math.round(+h[1] * 60) + (rest && !h[2] ? +rest[1] : 0);
+  }
   const m = s.match(/(\d+)\s*min/); return m ? +m[1] : null;
 }
 const MON = { jan:1, feb:2, mar:3, apr:4, may:5, jun:6, jul:7, aug:8, sep:9, sept:9, oct:10, nov:11, dec:12 };

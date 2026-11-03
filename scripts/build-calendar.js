@@ -57,7 +57,7 @@ const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 const MONTHS_LONG = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const CATS = ["Charity ride", "Road", "Gravel", "MTB", "Multi-day tour", "Ultra / bikepacking", "Race", "Hill climb"];
-const REGIONS = ["Southwest", "California", "Pacific NW", "Mountain", "Texas & South Central", "Midwest", "Southeast", "Mid-Atlantic", "Northeast", "Alaska & Hawaii", "National / multiple"];
+const REGIONS = ["Southwest", "California", "Pacific NW", "Mountain", "Texas & South Central", "Midwest", "Southeast", "Mid-Atlantic", "Northeast", "Alaska & Hawaii", "National / multiple", "Canada"];
 const CAUSE_ORDER = ["LGBTQ+", "HIV/AIDS", "Recovery", "Mental health", "Cancer", "MS", "Diabetes", "Heart", "Children", "Health", "Veterans", "Lung", "ALS", "Arthritis", "Autism", "Cystic fibrosis", "Alzheimer's", "Hunger", "Bike advocacy", "Environment", "Community", "Various charities", "Other"];
 
 function day(iso) { const d = new Date(iso + "T12:00:00Z"); return { m: d.getUTCMonth() + 1, d: d.getUTCDate(), dow: DOW[d.getUTCDay()] }; }
@@ -308,6 +308,10 @@ const count = (fn) => { const m = new Map(); for (const e of events) { const k =
 const byMonth = count((e) => e.month), byCat = count((e) => e.category), byRegion = count((e) => e.region), byCause = count((e) => e.cause), byStatus = count((e) => e.date_status);
 const nConf = byStatus.get("confirmed") || 0, nProj = byStatus.get("projected") || 0, nTba = byStatus.get("tba") || 0;
 const riding = events.filter((e) => e.riding);
+// Oct 25, 2026: the calendar is US only, except the rides outside the US Robert is doing (the Friends for Life Bike
+// Rally, Toronto to Montréal, came in with the Oct 21 refresh, region "Canada"). The lede and the method say so.
+const abroad = events.filter((e) => e.region === "Canada").length;
+const abroadClause = abroad ? `, plus the ${abroad === 1 ? "one ride" : abroad + " rides"} outside the US Robert is doing` : "";
 const updatedLong = new Date(data.updated + "T12:00:00Z").toLocaleDateString("en-US", { timeZone: "UTC", month: "long", day: "numeric", year: "numeric" });
 
 // ——— chrome (mirrors build-events.js) —————————————————————————————————————
@@ -410,6 +414,8 @@ const DEEP_URL = (() => { try { const d = JSON.parse(fs.readFileSync(path.join(R
 // Studio pass 1 (Oct 21, 2026): the town link left the row summary (a 20px trap inside a tappable row on 638 rows; the
 // opened panel's town strip carries it). On Robert's own list (`mine`) the row has no "Robert's ride" tag (the page is
 // his list) and its links come first in the opened row, above the facts: Ride with me lands on an open row there.
+// Robert's own fundraiser page for an org ride (Oct 30, 2026), first in the opened row on his list (the riding page)
+const GIVE = { "center-ride-out": "https://give.lalgbtcenter.org/fundraiser/7694885" };
 function eventHtml(e, { light = false, mine = false } = {}) {
   const meta = [`<b>${esc(place(e))}</b>`, esc(e.category.toLowerCase())];
   if (e.cause) meta.push(esc(e.cause));
@@ -423,7 +429,8 @@ function eventHtml(e, { light = false, mine = false } = {}) {
   const town = townFor(e);
   const dn = dateNote(e);
   const tag = e.riding && !mine ? `<span class="you-tag">Robert&rsquo;s ride</span>` : "";
-  const links = `<p class="det-links">${DEEP_URL[e.slug] ? `<a class="btn btn--ink" href="${attr(DEEP_URL[e.slug])}">The full page</a>` : ""}${e.url ? `<a class="btn btn--ghost" href="${attr(e.url)}" rel="noopener" target="_blank">Event site</a>` : ""}${src ? `<span class="src">Sources: ${src}</span>` : ""}</p>`;
+  const give = mine && GIVE[e.slug];
+  const links = `<p class="det-links">${give ? `<a class="btn btn--ink" href="${attr(give)}" rel="noopener" target="_blank">Give to my ride</a>` : ""}${DEEP_URL[e.slug] ? `<a class="btn ${give ? "btn--ghost" : "btn--ink"}" href="${attr(DEEP_URL[e.slug])}">The full page</a>` : ""}${e.url ? `<a class="btn btn--ghost" href="${attr(e.url)}" rel="noopener" target="_blank">Event site</a>` : ""}${src ? `<span class="src">Sources: ${src}</span>` : ""}</p>`;
   if (light) {
     const monthUrl = monthPath(e.month);
     return `<details class="ev${e.riding ? " you" : ""}" id="${attr(e.slug)}" data-m="${e.month}" data-t="${attr(e.category)}" data-r="${attr(e.region)}" data-c="${attr(e.cause)}" data-f="${farOf(e).join(" ")}" data-s="${attr(e.date_status)}" data-y="${e.riding ? 1 : 0}" data-q="${attr(q)}" data-src="${attr(monthUrl)}">
@@ -569,11 +576,59 @@ for (const c of CATS) {
 }
 // Oct 15, 2026: the fall ride that used to sit on top of this page (Cycling 4 one·n·ten, Nov 7) was canceled
 // and is off the site. If another ride before 2027 comes up, it goes back here as `before`.
-// the six Robert is riding
+// Oct 25, 2026 (Robert: "I want this on the ride with me page", then "I want the first one"): the year as a poster above
+// the rows — the night poster from the "The 2027 calendar" canvas: twelve month grids on a bruise ground, every day he
+// rides a powder-rose square, a projected date outlined, each ride a link to its row (the hashchange script opens it).
+// Short names and the where-lines are the chrome's (SHORT / WHERE in chrome.js), so the homepage list and this agree.
+// The lime "brat" poster stays on the canvas only; nothing on the site is outside After Hours but /fruitloop/.
+function yearPoster(list) {
+  const R = new Map((CHROME.RIDING || []).map((r) => [r.slug, r]));
+  const on = new Map(), proj = new Map();
+  for (const e of list) {
+    if (!e.start) continue;
+    const to = e.end || e.start, map = e.date_status === "confirmed" ? on : proj;
+    for (const d = new Date(e.start + "T12:00:00Z"); d.toISOString().slice(0, 10) <= to; d.setUTCDate(d.getUTCDate() + 1)) {
+      const m = d.getUTCMonth() + 1; if (!map.has(m)) map.set(m, new Set()); map.get(m).add(d.getUTCDate());
+    }
+  }
+  const months = MONTHS_LONG.map((name, i) => {
+    const m = i + 1, first = new Date(Date.UTC(2027, i, 1)).getUTCDay(), n = new Date(Date.UTC(2027, i + 1, 0)).getUTCDate();
+    const cells = [];
+    for (let b = 0; b < first; b++) cells.push(`<span aria-hidden="true"></span>`);
+    for (let d = 1; d <= n; d++) {
+      const k = on.get(m)?.has(d) ? " on" : proj.get(m)?.has(d) ? " proj" : "";
+      cells.push(`<span${k ? ` class="${k.trim()}"` : ""}>${d}</span>`);
+    }
+    const rides = list.filter((e) => e.month === m).map((e) => {
+      const r = R.get(e.slug) || {};
+      const forw = e.slug === "center-ride-out" ? "the Center" : e.slug === "cycle-to-zero" ? "SFAF" : "";
+      const status = e.date_status === "projected" ? ", date projected" : "";
+      return `<li><a class="cy-r" href="#${attr(e.slug)}"><b>${esc(r.date || "TBA")}</b> ${esc(r.name || e.name)}${forw ? `<span class="for">for ${forw}</span>` : ""}<span class="where">${esc((r.where || place(e)) + status)}</span></a></li>`;
+    }).join("");
+    return `      <div class="cy-m">
+        <p class="cy-mn">${name}</p>
+        <div class="cy-dow" aria-hidden="true"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+        <div class="cy-days" aria-label="${name} 2027">${cells.join("")}</div>${rides ? `
+        <ul class="cy-rides">${rides}</ul>` : ""}
+      </div>`;
+  }).join("\n");
+  const tba = list.filter((e) => !e.start).map((e) => { const r = R.get(e.slug) || {}; return `${esc(r.name || e.name)}, ${esc(r.where || place(e))}`; });
+  return `
+    <section class="cal-year" aria-label="The year at a glance">
+      <div class="cy-grid">
+${months}
+      </div>
+      <p class="cy-key"><span><i class="cy-k cy-k--on"></i>The organizer&rsquo;s date</span><span><i class="cy-k cy-k--proj"></i>Placed on the 2026 weekend</span>${tba.length ? `<span>${tba.join("; ")}: 2027 dates to come</span>` : ""}</p>
+      <script>addEventListener("hashchange",function(){var e=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(e&&e.tagName==="DETAILS")e.open=true});</script>
+    </section>
+`;
+}
+// the rides Robert is riding
 if (riding.length) shortPage({ url: `${URL}riding/`, crumb: "Robert\u2019s rides", list: riding,
   h1: "The 2027 rides I&rsquo;m doing", title: "The 2027 rides I'm doing for Cycle for Change",
   description: `The ${riding.length} rides Robert is doing in 2027 as part of the 10,000 miles: dates, distances, sign-up links.`,
   lead: `<p class="cal-lead">Part of the 10,000 miles. Come ride one.</p>`, mine: true,
+  before: yearPoster(riding),
   after: `\n    ${PH.figure("robert-peace")}` });
 
 // the calendar's own page: two questions, then the deep pages and the full list
@@ -624,7 +679,7 @@ body += `
     ${crumbs("All")}
     <p class="eyebrow" id="eyebrow">${events.length} events &middot; <b>${nConf} confirmed</b> &middot; ${nProj} projected &middot; ${nTba} tba &middot; updated ${esc(updatedLong)}</p>
     <h1>All 2027 bike rides &amp; races</h1>
-    <p class="lede">Every organized ride and race in the US in 2027 that we could pin down: ${events.length} events, ${nConf} with dates published by the organizer. <span class="k key-conf">Confirmed</span> means the organizer has published the 2027 date. <span class="k key-proj">Projected</span> means it is placed on the same weekend as the 2026 edition — check before you register.</p>
+    <p class="lede">Every organized ride and race in the US in 2027 that we could pin down${abroadClause}: ${events.length} events, ${nConf} with dates published by the organizer. <span class="k key-conf">Confirmed</span> means the organizer has published the 2027 date. <span class="k key-proj">Projected</span> means it is placed on the same weekend as the 2026 edition — check before you register.</p>
 
     <section class="controls" aria-label="Filters">
       <div class="search">
@@ -719,7 +774,7 @@ ${retired.slice().sort((a, b) => a.name.localeCompare(b.name)).map((r) => `     
     </details>
 
     <div class="method">
-      <p>Dates marked ✓ are published by the organizer. Dates marked ~ are placed on the same weekend as the 2026 edition; the date note under each event says how. TBA means the event exists but has not put out a 2026 or 2027 date. US only; virtual-only and indoor-only events are left out.</p>
+      <p>Dates marked ✓ are published by the organizer. Dates marked ~ are placed on the same weekend as the 2026 edition; the date note under each event says how. TBA means the event exists but has not put out a 2026 or 2027 date. US only${abroadClause}; virtual-only and indoor-only events are left out.</p>
       <p>Updated ${esc(updatedLong)}. ${esc(sourceLine)} Confirm with the organizer before booking travel. <a href="/events/2027/calendar-2027.json">JSON feed</a>.</p>
     </div>
 ${BLOCKS.REPORT({ thing: "event", heading: "Missing an event, or a date changed?", lede: "Tell us and we'll check it against the organizer's page. Confirmed dates only go up once the organizer publishes them." })}
@@ -744,4 +799,5 @@ write("sitemap-calendar.xml", `<?xml version="1.0" encoding="UTF-8"?>
 ${pages.map(([u]) => `  <url><loc>${SITE}${u}</loc><lastmod>${data.updated}</lastmod><changefreq>weekly</changefreq><priority>${u === URL ? "0.8" : "0.6"}</priority></url>`).join("\n")}
 </urlset>
 `);
+require("./sitemap-index.js").run();
 console.log(`Built /events/2027/ (+ ${pages.length - 1} short pages): ${events.length} events (${nConf} confirmed, ${nProj} projected, ${nTba} tba), ${retired.length} retired. Data updated ${data.updated}.`);

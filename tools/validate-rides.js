@@ -146,6 +146,11 @@ function validateRide(r, ctx = {}) {
       if (blank(r.start_hhmm)) err("start_times", "start_times", "start_times needs start_hhmm (the time before the first change)");
     }
   }
+  // the host's first date for a ride that hasn't started yet (Oct 23, 2026): a real date, and a rule to start from
+  if (r.first_ride != null) {
+    if (!realDate(r.first_ride)) err("first_ride", "first_ride", `first_ride "${r.first_ride}" must be a real YYYY-MM-DD date or left out`);
+    if (!(Array.isArray(r.days) && r.days.length) || r.frequency === "irregular") err("first_ride", "first_ride", "first_ride needs a rule (days + a frequency that isn't irregular) to start from");
+  }
   for (const k of ["verified_on", "last_seen", "status_since"]) {
     if (blank(r[k])) continue;
     if (!realDate(r[k])) err("date", k, `${k} "${r[k]}" is not a real YYYY-MM-DD date`);
