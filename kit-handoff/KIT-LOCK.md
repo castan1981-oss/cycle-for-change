@@ -1,36 +1,29 @@
-# 10K kit — PRODUCTION LOCK (2026-09)
-If this file conflicts with older chat, sand palette notes, or slash logos: **this file wins**.
+# 10K kit — PRODUCTION LOCK (2026-10-19, Lane Paint, Colorway A)
+If this file conflicts with older chat, older packs, or any earlier lock: **this file wins** on kit.
+Retired: the Sep 1, 2026 lock (black jersey / creosote bibs / volt whip) and the Sep 11, 2026 draft (bone jersey / black bibs / asphalt 10K). Do not build from either.
+Brand source: repo `CLAUDE.md` §3 (Lane Paint) and §9 (Kit).
 
 ## Marks (do not mix)
 | Mark | Role |
 |------|------|
-| **10K** | Wearable on kit (Outfit ExtraBold 800). Jersey / vest back crop. Tiny on bibs, cap, socks, stem. |
-| **10000** | Year / story. Site hero. Off-bike tee back only if used. **Never on bike kit.** |
-| **CYCLE / FOR / CHANGE** | Stack — hem / gripper / hangtag / site. FOR in creosote. Not a chest graphic. |
-| **CFC** | Later merch left chest only. Not on bib straps. |
-| Icons / `///` / wheel-C | **Dead.** Do not revive. |
+| **10K** | The only wearable mark. Overpass 900, outlined. Oversized crop on jersey front + back. Tiny on cap, socks, bidon. |
+| **10000** | Year / story on the site. **Never on kit.** |
+| **CYCLE FOR stencil + rose bar** | House mark. Hand-drawn stencil paths (`scripts/chrome.js` `#lpC`…), never a font. Jersey hem patch, bib gripper, hangtag only. Small. |
+| Retired | Creosote, volt whip, Outfit, bone `#E8DFD0`, "YOU DECIDE", `///`, icons, wheel. |
 
-## Colors (Creosote house — not "sand")
-- Bone `#E8DFD0`
-- Creosote `#5C6B4A`
-- Asphalt `#2A2E28`
-- Volt `#C6FF00` (collar whip only; PMS 802 C)
-- Dust `#C4B7A2`
+## Colors (Lane Paint)
+- Concrete `#E1DFDB` — jersey body, cap
+- Bruise `#1C1A22` — 10K, stencil on light
+- Tar `#141218` — bibs, cap alt
+- Smeared rose `#A84C58` — **the bar only**; rose appears nowhere else
+- Plaster `#EFEDEA` — flats / packaging ground
+- Pantone / sublimation matches: confirm at strike-off.
 
-"Sand" is outdated naming. Do not audit the kit against sand/black/volt-only.
+## Locked product
+- **Jersey:** concrete short-sleeve **pullover, no zipper**, sublimated. Bruise 10K so large it falls off the chest and back side seams — never shrink to fit. Three unmarked rear pockets. House patch (stencil + rose bar, ~25×18 mm) at hem only.
+- **Bibs:** tar, blank straps, clean unprinted chamois. House mark in the leg gripper only. No 10K or large type on legs.
+- **Cap:** concrete or tar cotton, tiny 10K.
+- Socks / bidon: same hierarchy — tiny 10K, rose only as the bar.
 
-## Locked product (do not redesign)
-- **Jersey:** black short-sleeve **pullover, no zipper**. Bone 10K crops off edges. One volt whip at left collar. Three unmarked pockets. House patch at hem only.
-- **Bibs:** quiet creosote, blank straps, tiny bone 10K + gripper patch.
-- **Cap:** creosote cotton, tiny bone 10K.
-- Vest / socks / bidon / stem: same hierarchy.
-
-## Packs in this folder
-- `CFC-10K-CLAUDE-DESIGN.zip` — lookbooks, on-body, line PNGs, artwork SVGs, colors
-- `CFC-10K-CLAUDE-FACTORY.zip` — maker pack (00-LOCKED.md, tech-pack, brief, refs)
-
-## Next work (allowed)
-1. Read packs; list real conflicts with LIVE coming-soon only.
-2. Kill any remaining `///` / old sand tokens on site if still present.
-3. Draft maker email for men's M jersey + bibs sample.
-4. Do **not** redesign the kit to match a holding page.
+## Packs
+Factory pack: `CFC-10K-LANE-PAINT-FACTORY.zip` (local; not in repo). Next: men's M jersey + bibs sample, then a 20–50 short run after sign-off.
