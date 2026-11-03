@@ -179,7 +179,7 @@ const STORY = `<!-- —— 3. why. How this works first (the mechanics before th
     <div class="story-words">
       <h2 class="story-h" id="why-h">It always says cycling.</h2>
       <p class="story-say">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</p>
-      <p class="story-lede">Cycling changed my life. I&rsquo;d like to say I&rsquo;m cycling for other people. I&rsquo;m really cycling for myself. I&rsquo;m cycling because it changed me. That&rsquo;s the story.</p>
+      <p class="story-lede">Recovery and the bike changed my life. I&rsquo;d like to say I&rsquo;m cycling for other people. I&rsquo;m really cycling for myself. I&rsquo;m cycling because it changed me. That&rsquo;s the story.</p>
       <p class="story-more">So the sign changes. What comes after the word is up to whoever&rsquo;s riding.</p>
     </div>
     <div class="story-photos">
