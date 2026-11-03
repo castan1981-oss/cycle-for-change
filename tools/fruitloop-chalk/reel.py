@@ -30,7 +30,7 @@ jobs={
  'reel-4-miles.png':page('<div class="col glow" style="left:70px;top:1010px">'+''.join([
      blk('14 FLAT MILES',96,C['cyan'],14,fit=860,sw='4px'),
      scr(520,C['cyan'],16),
-     blk('10–12 MPH PACE',80,C['orange'],15,fit=860,sw='3.6px',mt=6),
+     blk('14–16 MPH PACE',80,C['orange'],15,fit=860,sw='3.6px',mt=6),
      scr(460,C['purple'],33),
      blk('NOBODY GETS DROPPED.',52,C['white'],10,fit=860,sw='3px',mt=8),
      scr(520,C['yellow'],11),

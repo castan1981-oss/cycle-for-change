@@ -4,7 +4,7 @@
    and those carry only sample coordinates. No account, no cookies, no storage. */
 (function () {
   "use strict";
-  const B = window.BRIEF, CARD = window.CARD;
+  const B = window.BRIEF, CARD = window.CARD, BW = window.BW;
   const $ = (s, el) => (el || document).querySelector(s);
   const MI = B.MI, FT = B.FT;
   const WX = "https://api.open-meteo.com/v1/forecast";
@@ -18,12 +18,14 @@
     plan: $("#plan"), planLine: $("#planLine"), planChange: $("#planChange"), planGrid: $("#planGrid"), name: $("#rideName"), start: $("#start"), speed: $("#speed"), units: $("#units"), go: $("#go"),
     out: $("#out"), head: $("#outHead"), stats: $("#stats"), map: $("#map"), prof: $("#prof"), brief: $("#brief"),
     wx: $("#wx"), wxNote: $("#wxNote"), climbs: $("#climbs"), climbsNone: $("#climbsNone"), wear: $("#wear"), water: $("#water"),
-    share: $("#share"), shareOut: $("#shareOut"), drop2: $("#drop2"), file2: $("#file2"), compare: $("#compare"), cmpChart: $("#cmpChart"), cmpLegend: $("#cmpLegend"), cmpGrid: $("#cmpGrid"), cmpLines: $("#cmpLines"), cmpClear: $("#cmpClear"), poster: $("#poster"), posterPhoto: $("#posterPhoto"), posterOut: $("#posterOut"), posterImg: $("#posterImg"), posterDl: $("#posterDl"), gpx: $("#gpx"), verify: $("#verify"), top: $("#outTop"),
+    share: $("#share"), shareOut: $("#shareOut"), drop2: $("#drop2"), file2: $("#file2"), compare: $("#compare"), cmpChart: $("#cmpChart"), cmpLegend: $("#cmpLegend"), cmpGrid: $("#cmpGrid"), cmpLines: $("#cmpLines"), cmpClear: $("#cmpClear"), poster: $("#poster"), posterPhoto: $("#posterPhoto"), posterOut: $("#posterOut"), posterImg: $("#posterImg"), posterDl: $("#posterDl"), posterStory: $("#posterStory"), gpx: $("#gpx"), verify: $("#verify"), top: $("#outTop"),
   };
 
   let ride = null;   // { name, pts, series, st, bins, climbs, t, source: "file"|"share", text }
   let ride2 = null;  // the ride being compared with, same shape
   let posterPhoto = null;   // an Image the rider added for the poster; never leaves the browser
+  let posterGray = null;    // the same photo in black and white, for the black-and-white look (made once, kept here)
+  const look = () => { const r = document.querySelector('input[name="look"]:checked'); return r ? r.value : "card"; };
   let units = /-(US|LR|MM)$/i.test(navigator.language || "en-US") || !(navigator.language || "").includes("-") ? "mi" : "km";   // miles for US readers, km elsewhere; the toggle is one tap away
 
   // ---- plan defaults: tomorrow 6:30 if it's past 6:30 today, else today ----
@@ -252,32 +254,63 @@
     el.cmpLines.innerHTML = c.lines.map((l) => `<li>${esc(l)}</li>`).join("");
   }
 
-  // ---- the poster: the route card as a 1080 by 1350 picture ----
+  // ---- the poster, two looks: the route card (1080 by 1350), or black and white (a feed post and a Story) ----
+  async function makeCard() {
+    try { await document.fonts.load("900 90px Overpass"); await document.fonts.load("800 26px Overpass"); await document.fonts.load("600 26px Overpass"); } catch (e) {}
+    const W = 1080, H = 1350;
+    const startW = wallAt(el.start.value || defaultStart(), 0);
+    const L = CARD.layout(ride.series, ride.climbs, { W, H, units, title: ride.name, sub: `${fmt.dist(ride.st.m)} ${fmt.distU()} · ${fmt.h(ride.st.gain_m)} ${fmt.hU()} of climbing${ride.climbs.length ? ` · ${ride.climbs.length} ${ride.climbs.length === 1 ? "climb" : "climbs"}` : ""}`, date: dayWord(startW), foot: "cycleforchange.org/brief", photo: !!posterPhoto });
+    const cv = document.createElement("canvas"); cv.width = W; cv.height = H;
+    const ctx = cv.getContext("2d");
+    if (posterPhoto) {
+      // the photo fills the poster, cropped to cover; a flat asphalt band under the title and the foot so they read
+      const r = Math.max(W / posterPhoto.width, H / posterPhoto.height);
+      const pw = posterPhoto.width * r, ph = posterPhoto.height * r;
+      ctx.drawImage(posterPhoto, (W - pw) / 2, (H - ph) / 2, pw, ph);
+      ctx.fillStyle = "rgba(28,26,34,.82)";
+      ctx.fillRect(0, 0, W, L.top - L.fs);
+      ctx.fillRect(0, H - L.bottom, W, L.bottom);
+    }
+    CARD.paint(ctx, L, posterPhoto ? "photo" : "plaster");
+    return new Promise((res) => cv.toBlob(res, "image/png"));
+  }
+  // Oct 30, 2026 (Robert's pick, /brief/bw.js): the photo in black and white, the route in white over it, the words in
+  // spaced capitals. Nothing to fill in: the name, distance, climbing, day and roll-out time come from the briefing.
+  async function makeBW() {
+    try { await document.fonts.load("400 30px Overpass"); } catch (e) {}
+    const startW = wallAt(el.start.value || defaultStart(), 0);
+    const day = new Date(Date.UTC(startW[0], startW[1] - 1, startW[2])).toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+    const words = {
+      title: ride.name,
+      side: `Route: ${fmt.dist(ride.st.m)} ${fmt.distU()} / ${fmt.h(ride.st.gain_m)} ${fmt.hU()} elevation`,
+      lines: [day, `Roll out: ${clock(startW)}`],
+      foot: "cycleforchange.org/brief",
+    };
+    if (posterPhoto && !posterGray) posterGray = BW.gray(posterPhoto);
+    const out = {};
+    for (const size of ["post", "story"]) {
+      const S = BW.SIZES[size];
+      const cv = document.createElement("canvas"); cv.width = S.W; cv.height = S.H;
+      BW.paint(cv.getContext("2d"), BW.layout(ride.series, { ...S, ...words }), posterGray);
+      out[size] = await new Promise((res) => cv.toBlob(res, "image/png"));
+    }
+    return out;
+  }
   async function makePoster() {
     if (!ride) return;
     el.poster.disabled = true; el.poster.textContent = "Drawing…";
     try {
-      try { await document.fonts.load("900 90px Overpass"); await document.fonts.load("800 26px Overpass"); await document.fonts.load("600 26px Overpass"); } catch (e) {}
-      const W = 1080, H = 1350;
-      const startW = wallAt(el.start.value || defaultStart(), 0);
-      const L = CARD.layout(ride.series, ride.climbs, { W, H, units, title: ride.name, sub: `${fmt.dist(ride.st.m)} ${fmt.distU()} · ${fmt.h(ride.st.gain_m)} ${fmt.hU()} of climbing${ride.climbs.length ? ` · ${ride.climbs.length} ${ride.climbs.length === 1 ? "climb" : "climbs"}` : ""}`, date: dayWord(startW), foot: "cycleforchange.org/brief", photo: !!posterPhoto });
-      const cv = document.createElement("canvas"); cv.width = W; cv.height = H;
-      const ctx = cv.getContext("2d");
-      if (posterPhoto) {
-        // the photo fills the poster, cropped to cover; a flat asphalt band under the title and the foot so they read
-        const r = Math.max(W / posterPhoto.width, H / posterPhoto.height);
-        const pw = posterPhoto.width * r, ph = posterPhoto.height * r;
-        ctx.drawImage(posterPhoto, (W - pw) / 2, (H - ph) / 2, pw, ph);
-        ctx.fillStyle = "rgba(28,26,34,.82)";
-        ctx.fillRect(0, 0, W, L.top - L.fs);
-        ctx.fillRect(0, H - L.bottom, W, L.bottom);
-      }
-      CARD.paint(ctx, L, posterPhoto ? "photo" : "plaster");
-      const blob = await new Promise((res) => cv.toBlob(res, "image/png"));
-      if (el.posterDl.href && el.posterDl.href.startsWith("blob:")) URL.revokeObjectURL(el.posterDl.href);
-      const url = URL.createObjectURL(blob);
-      el.posterImg.src = url; el.posterImg.alt = `${ride.name}: the route drawn with its climbs named`;
-      el.posterDl.href = url; el.posterDl.download = `${slug(ride.name) || "route"}-poster.png`;
+      let post, story = null, alt;
+      if (look() === "bw") {
+        ({ post, story } = await makeBW());
+        alt = `${ride.name}: the route in white over ${posterPhoto ? "your photo in black and white" : "a dark ground"}, with its distance, climbing, day and roll-out time`;
+      } else { post = await makeCard(); alt = `${ride.name}: the route drawn with its climbs named`; }
+      for (const a of [el.posterDl, el.posterStory]) if (a.href && a.href.startsWith("blob:")) URL.revokeObjectURL(a.href);
+      const url = URL.createObjectURL(post), name = slug(ride.name) || "route";
+      el.posterImg.src = url; el.posterImg.alt = alt;
+      el.posterDl.href = url; el.posterDl.download = `${name}-poster.png`;
+      el.posterStory.hidden = !story;
+      if (story) { el.posterStory.href = URL.createObjectURL(story); el.posterStory.download = `${name}-story.png`; }
       el.posterOut.hidden = false;
       el.posterOut.scrollIntoView({ behavior: still() ? "auto" : "smooth", block: "nearest" });
     } finally { el.poster.disabled = false; el.poster.textContent = "Make the poster"; }
@@ -447,10 +480,11 @@
   el.drop2.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); el.file2.click(); } });
   el.cmpClear.addEventListener("click", () => { ride2 = null; el.file2.value = ""; render(); });
   el.poster.addEventListener("click", makePoster);
+  document.querySelectorAll('input[name="look"]').forEach((r) => r.addEventListener("change", () => { if (!el.posterOut.hidden) makePoster(); }));
   el.posterPhoto.addEventListener("change", () => {
     const f = el.posterPhoto.files[0]; if (!f) return;
     const img = new Image();
-    img.onload = () => { posterPhoto = img; makePoster(); };
+    img.onload = () => { posterPhoto = img; posterGray = null; makePoster(); };
     img.onerror = () => fail("That picture didn’t open. Try a JPG or PNG.");
     img.src = URL.createObjectURL(f);
   });

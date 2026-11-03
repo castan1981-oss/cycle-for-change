@@ -110,39 +110,7 @@
     }
   });
 
-  /* Oct 8, 2026 — footage from the ride. Like the homepage reel: on a wide screen without reduced
-     motion it plays while it's on screen; on phones it waits for a tap. Nothing downloads until it's
-     needed (preload="none"). The round button, the line under it and the picture all play and pause. */
-  var fig = document.querySelector("[data-film]");
-  var vid = fig && fig.querySelector("video");
-  if (vid) {
-    var fBtn = fig.querySelector("[data-film-btn]"), fPlay = fig.querySelector("[data-film-play]"), fLabel = fig.querySelector("[data-film-label]");
-    var wide = window.matchMedia && matchMedia("(min-width: 900px) and (hover: hover)").matches;
-    var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var user = null;
-    vid.muted = true;
-    var paint = function () {
-      var on = !vid.paused;
-      fig.setAttribute("data-playing", on ? "true" : "false");
-      if (fBtn) fBtn.setAttribute("data-playing", on ? "true" : "false");
-      if (fLabel) fLabel.textContent = on ? "Pause" : "Play";
-    };
-    var go = function () { vid.preload = "auto"; var q = vid.play(); if (q && q.catch) q.catch(function () {}); };
-    var toggle = function () { if (vid.paused) { user = true; go(); } else { user = false; vid.pause(); } };
-    vid.addEventListener("play", paint);
-    vid.addEventListener("pause", paint);
-    vid.addEventListener("error", function () { if (fBtn) fBtn.hidden = true; if (fPlay) fPlay.hidden = true; }, true);
-    vid.addEventListener("click", toggle);
-    if (fBtn) fBtn.addEventListener("click", toggle);
-    if (fPlay) fPlay.addEventListener("click", function () { toggle(); if (fBtn) fBtn.focus({ preventScroll: true }); });
-    if ("IntersectionObserver" in window) {
-      new IntersectionObserver(function (es) {
-        if (!es[0].isIntersecting) { if (!vid.paused) vid.pause(); return; }
-        if (user === true || (user === null && wide && !reduce)) go();
-      }, { threshold: 0.5 }).observe(vid);
-    }
-    paint();
-  }
+  /* The films (the ride's own and How we ride) are played by /rides/film.js (Oct 31, 2026). */
 
   /* Oct 8, 2026 — rider reviews. "Review this ride" opens the form (a <details>, so it works without
      this script); a link to #review opens it straight away. Posts to Netlify Forms like the other

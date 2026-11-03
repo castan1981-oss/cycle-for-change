@@ -21,8 +21,12 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 - **The big thing:** group rides everywhere. Robert shows up, rides, and writes up each ride (who
   he met, what happened) with his own video. Alongside that, the worldwide group-ride directory
   (`/rides/`), where every ride says when it was last checked.
-- **The number:** miles since June 1, 2026. One number, everywhere, never a percentage, never shown
-  against 10,000. The count restarts January 1, 2027.
+- **The number:** bike miles since June 1, 2026. One number, everywhere, never a percentage, never shown
+  against 10,000. The count restarts January 1, 2027 at midnight in Phoenix, on its own (Oct 26, 2026):
+  `tools/lib/season.js` is the one switch. `netlify/functions/strava.js` counts only rides (never runs or swims) inside
+  the season, and never serves a cached training total as the 2027 number. The words around the number come as two
+  `[data-season]` spans (`seasonText()`): the build sets which one shows, `/chrome.js` and `/home.js` re-set it in the
+  browser, and the deploy's tally pass (`scripts/tally.js`) flips the homepage's. `MANUAL_BONUS_MILES` is training only.
 - **Everything funnels to the site and Instagram.** The site sends no email to visitors (Robert, Oct 9,
   2026): the footer's "Mile updates" column points at Instagram, there is no signup form. Instagram is
   **@cycl_eforchange** (not @cycle_forchange).
@@ -39,6 +43,10 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   → `/fruitloop/`; Robert wanted it on the homepage's first screen "in case people go to the home page"). It's his own
   ride, not a calendar event, so it never reaches `RIDING`, the homepage's 2027 list or the riding page. After Dec 11 the bar
   rolls on to Tour de Palm Springs.
+  **Nov 3, 2026: El Tour de Tucson 2026 (Sat, Nov 21) heads the list until that day** (`EL_TOUR_2026` in chrome.js,
+  → `/events/el-tour-de-tucson/`, "102, 62 or 32 miles"; Robert: "add tour de tucson this month to home page"). He rides
+  it this month; the Fruit Loop takes the first screen back on Nov 22 by itself. The 2027 edition stays on the calendar
+  as before.
   Tour de Palm Springs (Feb 6, 2027) is first because it's first (Robert, Oct 21: his next ride). Each `href` opens
   that ride's row on the riding page, open (`/events/2027/riding/#<slug>`; studio pass 1). The nav button, the menu,
   the closing block, the homepage's first-screen tile (`#heroRide`) and the bar at the foot of every page (`.ridebar`,
@@ -75,7 +83,8 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   scripts/build-calendar.js` (events and calendar since Oct 21, 2026, so a passed event date clears itself). If any of
   them fails, the deploy fails and the previous deploy stays live.
 - Functions in `netlify/functions/`: `strava` (behind `/api/strava`, the tally), `strava-webhook`,
-  `strava-connect`, `strava-week`, `mileage`, `instagram`, `submission-created`, `deploy-succeeded` (IndexNow, §7). The retired
+  `strava-connect`, `strava-week`, `mileage`, `instagram`, `submission-created`, `deploy-succeeded` (IndexNow, §7), `rsvp`
+  (behind `/api/rsvp`, the Fruit Loop RSVP, §5). The retired
   `votes` / `pledges` functions and the `/api/votes` redirect are being removed — don't call them,
   don't revive them, and never renew a Netlify token for them.
 
@@ -94,6 +103,7 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 | `python3 tools/print.py` | the Pass 27 screenprint. Not used on the hero since Pass 32; kept for reference. |
 | `scripts/towns.js`, `scripts/blocks.js` | the one town lookup + strip; the shared ride-report form and how-it's-built tiles |
 | `node scripts/tally.js` | the baked tally on the homepage: reads `/api/strava` (the one place the site may read Strava), keeps `data/tally.json`, and rewrites every `[data-miles]`, the four "last rides" rows and the `#tallyData` JSON that `/home.js` paints first. build-home.js applies the copy; build-rides.js refreshes it live on every deploy. Never type the number. Tests: `tools/test/tally.test.js`. |
+| `python3 tools/road-film.py --src …` | the film under the 10,000 in `#road` (`cfc-site/film/road-film-N.*`, from his own footage, car-free; Oct 28, 2026) |
 | `python3 tools/hero-film.py` + `python3 tools/hero-contrast.py` | the homepage hero films (`cfc-site/film/hero-*-N.*`, from his own footage, car-free) and the check that the hero's type reads on every frame of them (§3, the editorial homepage) |
 | `node scripts/build-signals.js` | `cfc-site/llms.txt` (what the site is, for AI search; counts from the data) and `cfc-site/feed.xml` (RSS of guides, field notes, journal, event and town pages, newest first by the sitemaps' lastmod). build-rides.js runs it last on every build, so the deploy keeps them current. Tests: `tools/test/build-signals.test.js`. |
 
@@ -271,7 +281,11 @@ homepage only; every other rule in this section still holds there and everywhere
   paragraphs came off so the footage carries the screen; each phrase is a no-wrap span so a phone breaks between them), one primary (Ride with me, `#heroRide`, the date on a rose plate) and two quiet links, "Find a group ride" (the
   approved direction) and, when there is a write-up, "Read the last ride" (Cadence's must, Oct 27, 2026: `NOTE.href` in
   build-home.js, his newest write-up, never the riding page; omitted when there is none). "Read the last ride" stays in
-  `#road` too. The scrim rides with the words, not the screen (`.hero-in::before`): it eases in over the 200px
+  `#road` too. **Oct 30, 2026: a third quiet link, "Give to my Center Ride Out"** (Robert: his Instagram bio sends people to
+  the homepage, "I would rather they go to cycle for change and then click this link to go to the LGBT center"): his own
+  fundraiser page on the Center's site (`CRO_GIVE` in build-home.js), also `#ride`'s primary ("Give to my ride"), the
+  Center's "Give to the Center" in `#orgs`, and the first button in the Center Ride Out row on the riding page (`GIVE` in
+  build-calendar.js). `hero-contrast.py` passes with it (links 7.8:1 and up). It comes off with the `#ride` rewrite after Apr 25, 2027. The scrim rides with the words, not the screen (`.hero-in::before`): it eases in over the 200px
   above the stencil, .6 at its top, .72 at the foot — measured against every frame of both films at nine screen sizes
   (3:1 for the stencil, 4.5:1 for the caption and the links): `python3 tools/hero-contrast.py` after any
   recut or change to the hero's type or scrim (exits 1 on a fail). Over the film the header is the site's solid bar on
@@ -296,7 +310,12 @@ homepage only; every other rule in this section still holds there and everywhere
 - **Said once:** the 10,000 is the big plaster numeral in `#road`; the training count lives in the strip under the hero
   (`[data-miles]`); the page ends on its own sign, so the footer's stencil is hidden on the homepage only.
 - The old road reel is gone from the homepage (the hero carries the footage); "Read the last ride" and the log stay in
-  `#road`. The homepage loads `/chrome.css` then `/home.css` (the page in `@layer section`, the frame's homepage states
+  `#road`. **Oct 28, 2026: `#road` gets a film again** (Robert, sending his drone reel: "This another video that could go
+  below the fold"): `film/road-film-3.*` (1440×810, 8 s, silent; `python3 tools/road-film.py --src …`, three of the reel's
+  shots, what was left out and why in the tool's header), a 16:9 band between "miles in 2027, all on the bike." and the
+  log, edge to edge on phones, with today's player (`smallFilm()` in /home.js: a still on phones until the disc is tapped,
+  playing on a wide screen while it's on screen, never under reduced motion, Save-Data or a slow connection; the disc,
+  `.today-play.road-play`, always there). The homepage loads `/chrome.css` then `/home.css` (the page in `@layer section`, the frame's homepage states
   unlayered at its foot), so its header, footer and bar are the site's own rules. The stencil's clip (`#lpRow`) lives in
   the header's mark; `home.css` keeps its rect visible while the header is hidden, or every CYCLE FOR on the page vanishes.
 - **His sentence is the story's standfirst** (Oct 27, 2026, off the hero): "I'd like to say I ride for everyone else. I ride
@@ -481,7 +500,19 @@ Oct 27). Streets and lit paths only: no dead-end detours, no climbs.
 - **No photo rule in public** (Robert, Oct 27, 2026: "take the photo thing off everything"): no "Photos OK" sticker, no
   "no sticker, no photo", no "we never post who came" on the page, the kit, the record or anything printed. §10 still
   holds for what goes on the site and in our posts: only Robert recognisable, anyone else with their OK.
-- No form, no RSVP, no list of names. Questions come by Instagram DM.
+- **The RSVP** (Oct 30, 2026; Robert: "click this link yes I'm coming. No, I'm not that's it", a "maybe but keep me
+  informed on upcoming events", and "I don't wanna try to get their information just the ones that want more
+  information"). `cycleforchange.org/rsvp` → `/fruitloop/rsvp/` (noindex, no chrome, one column): the logo, the next
+  Friday, "You coming?", three taps. **Yes, I'm coming** and **Can't make it** are counted and land on `/fruitloop/`;
+  nothing about the person is sent but a random id the browser keeps, so a second tap changes the answer.
+  **Maybe. Keep me posted** opens a form (first name, email or phone, one is enough), then `/fruitloop/`. Works without the
+  script (plain posts, 303 to the ride page). `netlify/functions/rsvp.js` + `lib/fruitloop-rsvp.js` store it in Netlify Blobs
+  (`fruitloop-rsvp`; deploy previews write to `fruitloop-rsvp-preview`): `r/<friday>/<answer>/<id>` and `c/<id>`. The
+  Friday is the page's next ride on the same clock as `fruitloop.js`. Robert's tally is `/fruitloop/tally/#k=<key>`
+  (counts for the next Friday, every Friday so far, the keep-posted list with Text / Email / Remove, copy all); the key's
+  SHA-256 is in the lib, the key itself only in his link and the project doc "Fruit Loop RSVP" — never in the repo, a
+  PR, an issue or a log. Contacts never go to GitHub; they're used only by Robert, by hand, for ride news (`/privacy/#fruit-loop`).
+  Tests: `tools/test/fruitloop-rsvp.test.js`. Other questions still come by Instagram DM.
 - **The chalk look** (Oct 27, 2026; Robert's "Brand Family Playbook" from ChatGPT: three brands, Cycle for Change the
   platform, the Fruit Loop the gathering, Queers on Bikes the invitation; "Nobody gets dropped" is the promise). **Everything
   Fruit Loop is chalk + photo**: his real photo with only the background darkened through his own cut-out masks (nothing in
@@ -496,12 +527,124 @@ Oct 27). Streets and lit paths only: no dead-end detours, no climbs.
 - **The poster** (Oct 27, 2026): `#poster` on the page, after the basics — the words first on a phone, the poster beside them
   on desktop with a hairline edge, "Save the poster" plus the Story size and the 8.5 × 11 print PDF (QR to `/fl`, a third
   of an inch clear of the paper edge). One poster, three sizes and the reel overlays, all from
-  `python3 tools/fruitloop-chalk/make.py <N>` (`-5` files now). **What the flyer says is Robert's call** (Oct 27): starts
-  Friday, Dec 11; meet 5:30 pm, roll 6:00 pm; the rainbow crosswalk, Central Ave and Portland St; 14 flat miles, 10–12 mph
-  pace; nobody gets dropped; a front and rear light; the link and @cycl_eforchange. **Never on the flyer: "free," "every
+  `python3 tools/fruitloop-chalk/make.py <N>` (`-6` files now). **What the flyer says is Robert's call** (Oct 27): starts
+  Friday, Dec 11; meet 5:30 pm, roll 6:00 pm; the rainbow crosswalk, Central Ave and Portland St; 14 flat miles, 14–16 mph
+  pace (Robert, Oct 29: 10–12 was "way slow"); nobody gets dropped; a front and rear light; the link and @cycl_eforchange. **Never on the flyer: "free," "every
   Friday," "18 and up," "hosted by," or "the ride ends by riding it."** The page leaves them out too (Robert, Oct 27: "take
   all three off"); its share card is `og-fruitloop-3.jpg` (`tools/fruitloop-chalk/og.py`). The kicker (inside the logo) is "A queer night ride through Phoenix history"; the
   `<title>`, og/twitter titles and JSON-LD keep "a queer night ride in Phoenix" for search.
+- **How we roll** (Oct 31, 2026): the How we ride film in the Fruit Loop's chalk look (his crayon logo as given on the end
+  card, the approved reel end-card lines, ten things with "Lights on" first and "Nobody gets dropped. That's the promise."),
+  `film/fruit-loop-how-we-roll-2.*` (1:24), `#how-we-roll` on the page after the basics and before the poster: words first on
+  a phone, the film beside them on desktop, "Save the film", the ten in a fold. Never free, every Friday, 18 and up or
+  hosted by in it. The host rider in it is Robert's red-dress look from the flyer. No "3 of 10" on any chapter (Robert,
+  Oct 31: so each one can be shared on its own); `-2` is the cut without it.
+
+### The print and social kit (`tools/cfc-kit/`, Oct 29, 2026)
+Robert: "make something like this [the Fruit Loop kit] for Cycle for Change, all our print stuff and social", in the
+site's look (his pick over the chalk). `python3 tools/cfc-kit/make.py` writes, into `tools/cfc-kit/.build/out/` (never
+committed): **posts** (1080 × 1350) and **Stories** (1080 × 1920, top 200 / bottom 330 px left clear for Instagram's
+bars): 10,000 miles · Who do you cycle for? · the ride and who it was for (the homepage's #today: its dated line "The
+ride on Monday, October 12.", never "today", its plate and photo; or `--for "…" --date … --photo … --where …`, no photo
+unless one is given; a word about the mind puts 988 and Trevor on the piece; the Story also comes blank, to type the
+word on the plate) · three stats with their source and catch (`--stat <id>` for any other) · Ride with me
+(the next of his 2027 rides) · the 2027 list · Find a group ride · the count; **reel** overlays (each on a flat tar
+block, so it reads over footage; see-through outside it) and an end card; **print** as vector PDFs (8.5 × 11 flyer,
+11 × 17 poster with the homepage's map, and every stat in the bank as a 5 × 7 card, one PDF, 1/8 in bleed); **stickers**
+(CYCLE FOR + a blank plate to write on, 10K on its own, Who do you cycle for? with a QR), PDF with bleed + 300 dpi PNG.
+Then `python3 tools/cfc-kit/kitpage.py` builds the "CFC Phone Kit" artifact's files (`.build/kit/`;
+https://claude.ai/artifact/Uc4aoGeyh82Q87N2mUZLH1, republish that URL): every piece with
+a Save button (the downloads capability); republish that artifact, bump `V` when pictures change.
+- **The site's rules, nothing new**: the stencil from chrome.js (only ever CYCLE FOR), the blank as a rose bar or a
+  plate in Overpass 900, After Hours, Overpass from `cfc-site/fonts/`, a photo and a solid field one above the other
+  (nothing on a photo) with its place · month line under it, photos only from the registry or `#today` (no cars, only
+  Robert; his photos cropped to the waist). CYCLE FOR is never followed by a number: 10K stands on its own. Every line is a line the site
+  already says or comes from data: the count from `/api/strava` (else `data/tally.json`, with `season.js`'s words),
+  the rides from chrome.js `RIDING`, the directory count from `rides/live.json` (as build-home.js counts it).
+- **The stat bank** is `data/stats/stat-bank.json`: a copy of Robert's "CFC Stat Bank" artifact (132 stats, each with
+  org, report, year, URL, the catch). Fix or add stats in the artifact, then re-copy. The cards print the source, the
+  catch and a QR to the report; `mh: true` ones carry 988 and Trevor (the substance-use stats too, since Oct 30). A card
+is a column, so a long stat shrinks its line instead of running into the source. All 132 QR codes decode (zxing, 200 dpi).
+The brand read: `research/brand/2026-10-29-cfc-kit.md` (its six blocks fixed Oct 30).
+- **Short links** for the QR codes (netlify.toml): `/gr` → `/rides/`, `/2027` → `/events/2027/riding/`, `/cf` →
+  `/cyclefor/`, tagged `utm_source=cfc-kit`.
+
+### The weekly ride carousel (`tools/week-kit/`, Nov 3, 2026)
+Robert, sending btwphx's weekly Valley ride round-up: "make something like this but way better and the whole idea is to
+get visits to the website." `python3 tools/week-kit/make.py [--from YYYY-MM-DD] [--skip <slug> …] [--keep <slug> …]` writes into
+`tools/week-kit/.build/out/` (never committed): the feed carousel (1080 × 1350, one wall sliced so it pans as you swipe:
+the cover, a sheet per day, Saturday or any day over nine rows split "Early." / "Less early.", the end card), the Story
+frames (1080 × 1920: the week, then one per day, words clear of the top 200 / bottom 330, room for a link sticker under
+"Tap the link."), `caption.txt` and `left-off.txt`. Every sheet ends on `cycleforchange.org/week` (§6, the this-week page).
+- **Monday mornings, Monday to Sunday** (Robert, Nov 3, 2026: "Maybe we should do it for Monday morning"). The default
+  week is this Monday on a Monday, else the next one, so the post shows the same seven days `/week` shows that morning.
+  The scheduled task "Weekly ride carousel" runs it every Monday at 5:41 am Phoenix (after the 2 am watcher refreshes
+  `data/rides-health.json`), on main, after `node tools/build-rides.js` brings `live.json` up to the day, and sends
+  Robert the slides, the Stories, the caption and what was left off.
+- **The rows are the page's rows**: `tools/week-kit/week.js` runs `tools/lib/week.js` over the listed rides (live.json
+  decides what's listed, rides.json carries the full record), sorted by start then name, so the carousel and `/week`
+  agree. The count on the cover is group rides only (open streets like Silent Sunday get a row, not a count). No key:
+  each row says what it is in the site's own words (Waits for you, Pace groups, Drops, the pace and length from
+  `pc`/`lg`, "Every other week, check first" on a biweekly ride with no posted week).
+- **The post only prints what it can stand behind.** `week.js` gives each row a `doubt` from the site's own upkeep data
+  (`tools/lib/rides-freshness.js` over `data/rides-health.json`): an open red flag; the host's page using ending words
+  or showing no upcoming date; or the host's own calendar feed that used to list the ride and hasn't for 14+ days (a
+  feed that never matched it is not evidence). Those rides stay off the post and go in `left-off.txt` with the reason;
+  `/week` still lists them with its own nudges. `--keep <slug>` puts one back (Robert's call, or after a re-check);
+  `--skip <slug>` leaves one off by hand. The left-off list is the re-check list (`/rides check <slug>`). Nov 9–15,
+  2026: Night Rider Series @ Trail 100, Wednesday Night Roll, Chandler North Saturday Ride, Bear Claw, Stadium Ride
+  (calendars), the R.T. O'Sullivan's Tuesday ride (no upcoming date).
+- **His stamps** (`MINE`): "I ride this one." on the Friday Shop Ride (he rides it every Friday), "I wrote this one up."
+  on TSR (his write-up on its page). Only rides he's said he rides or wrote up.
+- **The look is Left Field paste-up in Lane Paint** (the "We made it." reel's baseline): poured concrete with panel
+  joints and tie holes, day sheets pasted flat (no shadow, the joints show through at 22%), the day on a bruise strip,
+  the date on a powder-rose strip (the hero's date plate), a halftone print of a Valley road in patina with the count
+  overprinted in rose, a clean, ungraded print of Robert taped on (place · month under it), old "Riding season." scraps
+  at the seams, CYCLE FOR sprayed through a card on the end card. Crisp edges, no grain, no filters, no arrows (the
+  swipe cue is "Find your day." across the first seam). Photos only from the registry; only Robert recognisable.
+
+### Reels — the ride series (Nov 1, 2026; updated Nov 3 to Robert's later calls)
+Robert's first reference was a "liminal" TikTok edit (black field, tiny labels at odd positions, glitch bursts, a word
+scrambling into place, a big word on a plain card, scattered tiles, grain). The first CFC reel cut from it is the bike
+reveal, "32 of 55" (the S-Works Crux 5 LTD, built at Bicycle Haüs, ridden the next morning), cut Nov 1, 2026 and put
+through the ten-specialist panel (the `/brand-review` skill; cut and render script in the claude.ai chat that made it,
+not here — social cuts never go in git, §10). Then Robert made two later calls that win over the panel's first draft:
+the final Crux cut came back **with no grain, no glitch and no bolt**, and rebuilt **in the footage's original colors**
+("I want to keep the original video colors", Nov 1); and on Nov 2 he asked for motion that stops looking like the
+flat-vector Film Run style and loved the "Left Field" pilot ("I love this"). What holds now:
+- **The bones** (every CFC Reel and Story, for the whole 2027 series): tar field for cards; Overpass, sentence case;
+  numerals in plaster; **rose only on the blank and the plate**, never on a numeral; footage full screen **in its
+  original color** (black and white with one kept red is retired as the default — only when he asks for it); labels on
+  small tar plates, bottom left, two lines at most; hard cuts; the end is the stencil → the bar → "change" on the plate →
+  `cycleforchange.org`.
+- **No costume by default:** no grain, no glitch, no bolt, no scanlines on a Reel unless Robert asks for them on that
+  piece. Never on the site, stills, kit or print.
+- **Motion direction — Left Field** (Nov 2, 2026; the `left-field` skill is the motion studio): "new aged urban", done
+  with digital but not perfect. The pilot he loved: a paste-up wall, the summer poster torn off, halftone prints of his
+  own photos, words on slapped paper strips, CYCLE FOR sprayed through a stencil card. Handmade-looking but crisp; never
+  the flat-vector Film Run look, never sloppy.
+- **Launch only** (the reveal, not the daily posts): the 3 × 3 number grid, the scattered tiles, the plaster card.
+  The word scramble is out for good (the panel: the most date-stamped move of 2025–26).
+- **Type in motion:** nothing under 28 px at 1080 wide; copy clear of the top 220, bottom 400 and right 140 px.
+- **Copy:** miles as a whole number on screen ("37 miles", never "37.0"); the bike is only ever "the bike" (never
+  "the one", the model name is its dateline once); stats in one order — climbing · time · average speed — and never
+  top speed (the one number that is a flex); the hero line "10,000 miles. One year. All on the bike." whole, never
+  split, never shown twice; his sentence whole, both halves, on plaster, two cards, two seconds; a manufacturer's badge
+  or tagline words never typed (the badge can be in the frame); **Bicycle Haüs is a credit, once, on a plate on the
+  build footage** ("Built at Bicycle Haüs." / "Scottsdale."), and in the end card's small line only — never a
+  partner lockup, never on the blank (Robert, Nov 1: "I'm not riding for Bicycle Haüs"); the shop's logo on a shirt is
+  cropped out. Every number comes from Strava for that ride (§10 allows it: it's his own ride, he posts it himself).
+  **He rides two bikes in 2027** (the Crux and a Tarmac SL8; Robert, Nov 1), so no reel ever says one of them is *the*
+  bike for the 10,000 — "This one's in.", never "This is the bike."; "All on the bike" is the category and stays.
+- **Color held to one look across shots** (Robert, Nov 1): match exposure and white balance so the shop, the wall and the
+  overpass read as one day; no stylised grade. The bike's red stays true to **the bike's own red as measured on Robert's
+  shop photo of it** (hue 178.4, a hair cool of pure red; saturation about 212; brightness about 68 — deep candy red),
+  never a brighter or more saturated red of our choosing (Robert: "pull that color … so it stays true").
+- **Frame the whole bike** when the bike is the subject (Nov 3: every overpass moment shows the whole bike; a tight
+  push-in that crops it was cut).
+- No month or date on the reveal's labels (Robert, Nov 1: "Don't say September"); the ride's own Strava name ("New
+  bike day.") can stand in.
+- A Reel's cover is a frame with the bike full screen, not a type card.
 
 ### Today I rode for (`#today` on the homepage, Oct 12, 2026)
 Every ride Robert says who he rode for that day. `data/today.json` (date, `for` = the plate, `line` = his words,
@@ -665,6 +808,20 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   worked out at build time from the ride's own rule), the Fridays line from the data, "What Critical Mass is" from two dated
   sources in a fold, and the list paragraph. Every listed Critical Mass ride page links up to it (`guideLine()`); it's in the
   rides sitemap. Bike Party and open streets come next, the same way.
+- **Phoenix group rides this week** (Nov 3, 2026; Robert's weekly Instagram carousel): `/rides/az/phoenix/this-week/`
+  (`phoenixWeekPage()` in build-rides.js) lists every listed ride in the Valley (Arizona, within 45 miles of 33.4771,
+  -112.0445: `PHOENIX_WEEK` in `tools/lib/week.js`, the one constant) for the seven days starting the build's day, Phoenix
+  time: one section per day, start-time order, each row the ride's own card with that day's start (`S.startOn`; a biweekly
+  ride with no posted week adds the ride page's "confirm which week with the host"). `weekOf()` steps `nextOccurrence()`
+  through the window and adds the host's posted dates (one row per instant); both live in `tools/lib/schedule.js` (moved
+  out of build-rides.js unchanged), so first_ride (no Fruit Loop before Dec 11), breaks, seasons, biweekly weeks, monthly
+  rules and start_times all hold. Rides with no time the schedule can work out fold under the days ("Also in the Valley, on
+  the host's own calendar"). Each day carries `data-ymd` and a few lines of script hide a day already past in Phoenix, so a
+  missed rebuild never shows yesterday (no script: every day shows). CollectionPage + ItemList, no Event markup (the ride
+  pages carry theirs); in the rides sitemap and the hub history; the Phoenix hub links in ("This week, day by day"). The
+  carousel prints `cycleforchange.org/week` (`netlify.toml`, 302, tagged `utm_source=instagram`). The window rolls with the
+  daily rebuild, so the page matches the carousel on the day it's posted; later that week it has dropped the days gone and
+  added the next ones. Tests: `tools/test/week.test.js`.
 - **Biweekly rides with a posted date** run on that date's weeks (`dates` on a `biweekly` ride; `data/SCHEMA.md`), so
   "Next ride" lands on the right Saturday instead of the next one.
 
@@ -723,6 +880,17 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   that, never write a review, never post one he hasn't approved. Emails stay in Netlify and his inbox.
 - The committed ride pages can lag `data/ride-reviews.json` until the next local rebuild; the deploy is
   what counts (Netlify runs `tools/build-rides.js` on every deploy).
+- **How we ride** (Oct 31, 2026; Robert: "put the Fruit Loop on that page and the other on the ride pages"): the
+  group-ride etiquette film, nine things (question, the answer on the plate, one line on why; the flat rule is "Two stay
+  with you", his Oct 30 call; no "3 of 9" on any chapter, Robert, Oct 31: so each one can be shared on its own).
+  `film/how-we-ride-2.*` (720×1280, 1:15, silent H.264 + jpg/webp/avif poster), drawn in
+  code from one clock and rendered frame by frame (source and the render scripts are in the claude.ai project, not here).
+  `howWeRideBlock()` in build-rides.js puts it on every **listed** ride page after "First time on this ride?", tap to play
+  (`data-film-tap`), with one line and "Read the nine instead" → `/rides/about/#how-we-ride`, where the film sits with all
+  nine in words (`HOW_STEPS`): one page carries the text, not 1,300 copies. Not on Critical Mass or open streets, and not
+  in left-hand-traffic countries (`LEFT_TRAFFIC`: the riders keep right). The Fruit Loop's own row gets How we roll
+  instead (`HOW_FILMS.fruitloop`). `/rides/film.js` plays every `[data-film]` on a page (moved out of ride.js so the about
+  page and `/fruitloop/` can use it). A recut bumps the file number.
 
 ### Routes on ride pages (Oct 9, 2026)
 A rider asked TSR on Instagram for "an actual route" because the written directions didn't work on a map, then
@@ -857,7 +1025,7 @@ says so** — this note is here so rides/towns work doesn't contradict the plan.
 
 ## 9. Kit
 
-The kit is reopened. It follows Lane Paint (After Hours palette, Overpass, the stencil family).
+**Locked Oct 19, 2026 (Colorway A):** `kit-handoff/KIT-LOCK.md` is the kit spec and wins on kit. The kit follows Lane Paint (After Hours palette, Overpass, the stencil family).
 **10K is the wearable mark**; "10000" never goes on kit. Old lock specs (Creosote colors, Outfit,
 volt whip, "YOU DECIDE" hem line) are retired. Packs and working files live in `kit-handoff/`
 (local); treat anything there that predates Oct 5, 2026 as the previous state.
@@ -976,6 +1144,17 @@ https://claude.ai/artifact/QKG9zHH8dYZtjnFcYgLpCv (republish that URL to update)
   **every ride page that has a route** (`routeCard()` in build-rides.js, above the street map), with a
   **"Brief this ride"** button: `/brief/` opened on the host's GPX at the ride's next start and the host's
   pace, nothing to type. Overpass, sentence case, "Climb 1 · 2,355 ft · mile 8.5"; never a mono-caps label.
+- **The black-and-white poster** (Oct 30, 2026; Robert's pick from a Ventum × Society of Cyclist pop-up-ride post, "goes
+  over a picture well"): the poster's second look on `/brief/` ("Look": Route card · Black and white), `cfc-site/brief/bw.js`
+  (`layout()` tested in `tools/test/brief-bw.test.js`, `paint()` onto a canvas, `gray()` for the photo). The rider's photo
+  in black and white under a flat 22% tar, the route as one white line with a dot at each end (a loop gets one), the ride's
+  name top left, distance and climbing up the right edge, the stencil (powder-rose bar) over the day and the roll-out time
+  bottom right, `cycleforchange.org/brief` bottom left; a feed post (1080 × 1350) and a Story (1080 × 1920, top 200 /
+  bottom 330 clear). **The one place the site's words sit on a photo and run in spaced capitals** (Robert's OK, Oct 30,
+  2026): inside the picture only, never on a page; the page around it keeps every §3 rule. Nothing to fill in: the words
+  come from the briefing. Robert's own fuller version (his Strava rides, a meeting point, "× who you ride with") is the
+  "CFC Route Poster" artifact (https://claude.ai/artifact/J5bb9vQpLMDy2132Pz257y; it reads his Strava as him, in his own
+  Claude — the site never does, §10).
 - **Compare** (the Bike Insights idea): drop a second GPX on `/brief/` and both climb charts sit on one
   distance-and-height scale (patina and powder rose), a seven-row table, and the difference in sentences
   from `compare()` in the engine (same within 5%; "hillier" is ft per mile; "steepest" is the steepest
@@ -1073,3 +1252,31 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-27 — The Fruit Loop page drops every Friday, free and 18 and up (Robert); the chalk share card `og-fruitloop-3.jpg`.
 - 2026-10-27 — Ride with me points at the Fruit Loop until Dec 11 (Robert: a button on the homepage's first screen): the homepage tile, the header button, the menu, the closing block and the bar on every page; `CSS_V` 57 for the Fruit Loop sheet.
 - 2026-10-27 — The Fruit Loop's photo rule comes off everything (Robert): the page's How it works and its "why" line, the directory record's visitor notes, place card 6, the how-it-works slide, the Photos OK sticker.
+- 2026-10-28 — `#road` gets a film again: Robert's drone reel cut to 8 s, silent, 16:9 (`tools/road-film.py`, `road-film-3`: the drone over him on the desert road, the lookout, the mountain road; the sunset bike, the canal path, the bridge and the side-on shot left out), under the 10,000 with today's player (`smallFilm()`); `CSS_V` 58.
+- 2026-10-28 — The count is bike miles only (runs and swims were being added in) and restarts by itself at midnight on Jan 1, 2027 in Phoenix (`tools/lib/season.js`, both wordings on every page, `tools/test/strava-count.test.js`); the `/tonight/` Flyer redrawn in Overpass and After Hours without the never-list line it carried; `CSS_V` 59. (Made Oct 26 as #211, rebuilt on top of the road film.)
+- 2026-10-29 — The Fruit Loop's pace is about 14 to 16 mph (Robert: 10 to 12 was "way slow"): the poster in all three sizes (`-6`), the page's basics and How it works, the directory record (host update), the how-it-works slide, the 11 × 17 poster and reel sticker 4. The Story survey's "how fast" choices are left as asked.
+- 2026-10-29 — The print and social kit (`tools/cfc-kit/`, Robert: "something like this for cyc for all our prints stuff and social"): posts, Stories, reel overlays, the flyer, the 11 × 17 poster, all 132 stats as 5 × 7 cards and three stickers, in the site's look, from the site's data; the stat bank copied to `data/stats/`; short links `/gr`, `/2027`, `/cf`; the "CFC Phone Kit" artifact to save them from.
+- 2026-10-30 — Give to my Center Ride Out (Robert: the Instagram bio lands on the homepage): his fundraiser page
+  (give.lalgbtcenter.org/fundraiser/7694885) as the hero's third quiet link, `#ride`'s primary, the Center's give link in
+  `#orgs` and the first button in the riding page's Center Ride Out row; "Sign up with the Center" stays as a link.
+- 2026-10-30 — The Fruit Loop RSVP (Robert): `/rsvp` → yes, can't make it, or keep me posted; yes and no are counts and go
+  to `/fruitloop/`, maybe leaves a name and an email or phone; Robert's private tally at `/fruitloop/tally/`; `/privacy/` says what's kept.
+- 2026-10-31 — How we ride on every listed group-ride page (after "First time on this ride?", tap to play) and on
+  `/rides/about/#how-we-ride` with the nine in words; How we roll on `/fruitloop/#how-we-roll` and the Fruit Loop's row;
+  `/rides/film.js`; `CSS_V` 60. Same PR: `/chrome.js` and `/home.js` toggle only `[data-season="2027"]` and
+  `[data-season="training"]` — the bare `[data-season]` from Oct 28 hid the whole article on every ride page (they carry the
+  ride's riding months as `data-season`); `tools/test/season-selector.test.js` keeps it that way.
+- 2026-10-31 — Both films lose the "3 of 9" / "3 of 10" line over each chapter (Robert: share each one on its own): `how-we-ride-2`,
+  `fruit-loop-how-we-roll-2`, new posters.
+- 2026-11-01 — Reels, the ride series: the "32 of 55" bike reveal, through the ten-specialist panel; the bones every CFC
+  Reel keeps (tar plates, Overpass, the stencil end), what's launch-only, the copy rules; Bicycle Haüs is a credit, not a
+  partner (§5). Updated Nov 3 to Robert's later calls: original color, no grain/glitch/bolt unless asked, Left Field motion.
+- 2026-10-31 — `/brief/`'s poster gets a second look, black and white (Robert's pick from a pop-up-ride post): the rider's
+  photo in black and white, the route in white over it, the words in spaced capitals, a post and a Story size
+  (`cfc-site/brief/bw.js`, `V` 9); the one place the site's words sit on a photo, inside the picture only (§12).
+- 2026-11-03 — `/rides/az/phoenix/this-week/`, "Phoenix group rides this week" (the weekly carousel's `/week` link): every listed Valley ride within 45 miles for the seven days from the build's day, day by day, from the ride pages' own schedule code (now `tools/lib/schedule.js`, used by `tools/lib/week.js`); a past day hides itself if a rebuild is missed; the Phoenix hub links in.
+- 2026-11-03 — The weekly ride carousel (`tools/week-kit/`): "Phoenix group rides this week" for Instagram, feed and Stories, from the same week code as `/week`, in Left Field paste-up; first run Nov 4–10 (42 group rides, Night Rider left off pending a re-check).
+- 2026-11-03 — The weekly carousel moves to Monday mornings, Monday to Sunday (Robert), as a scheduled task; rides the upkeep data doubts stay off the post and are listed with the reason (`doubt` in `tools/week-kit/week.js`, `--keep` to put one back).
+- 2026-11-03 — El Tour de Tucson 2026 (Nov 21) is Ride with me until it's ridden (the homepage tile, header, menu,
+  closing block and bar; the Fruit Loop is back on Nov 22). The story's lede opens "Recovery and the bike changed my
+  life." (Robert's pick of the quiet way to say it: no year, no number, nowhere else on the site).

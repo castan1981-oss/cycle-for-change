@@ -25,7 +25,7 @@
 
   /* the words around the number: training until midnight Jan 1, 2027 in Phoenix, then 2027 (build-home.js, PR #211) */
   var IN_2027 = Date.now() >= YEAR_START;
-  document.querySelectorAll("[data-season]").forEach(function (el) { el.hidden = el.getAttribute("data-season") !== (IN_2027 ? "2027" : "training"); });
+  document.querySelectorAll('[data-season="2027"], [data-season="training"]').forEach(function (el) { el.hidden = el.getAttribute("data-season") !== (IN_2027 ? "2027" : "training"); });
 
   /* —— the tally: what the page carries (#tallyData), then the live read —— */
   var feed = { miles: 0, rides: 0, updated: "", profileUrl: "https://www.strava.com/athletes/22899089", recent: [] };
@@ -198,8 +198,9 @@
   /* —— today's film (#today): a tap on phones, on screen on desktop. One control, the disc on the poster (Oct 27, 2026):
      it never hides; the figure's data-playing swaps its glyph (home.css) and its label says what it does next,
      "Pause" or "Play, N seconds" (WCAG 2.2.2). —— */
-  var tv = $("todayVid"), tFig = $("todayFig"), tPlay = $("todayPlay");
-  if (tv) {
+  /* the same player for his film under the 10,000 (#road, Oct 28, 2026) */
+  function smallFilm(tv, tFig, tPlay) {
+    if (!tv) return;
     tv.muted = true;
     var tUser = null;
     /* the hero's test: Save-Data or a slow connection keeps the still until the disc asks for the film */
@@ -223,6 +224,8 @@
       if (tUser === true || (tUser === null && wide && !reduce && !tSlow)) tGo();
     }, { threshold: 0.4 }).observe(tv);
   }
+  smallFilm($("todayVid"), $("todayFig"), $("todayPlay"));
+  smallFilm($("roadVid"), $("roadFig"), $("roadPlay"));
 
   /* —— the nav: clear over the film, solid once the film has scrolled under it —— */
   var nav = $("nav"), hero = document.querySelector(".hero");

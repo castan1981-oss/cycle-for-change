@@ -14,6 +14,7 @@
 "use strict";
 const fs = require("fs");
 const path = require("path");
+const { seasonAt } = require("../tools/lib/season.js");
 
 const ROOT = path.join(__dirname, "..");
 const SITE = path.join(ROOT, "cfc-site");
@@ -104,7 +105,7 @@ function llms(c) {
   lines.push("");
   lines.push("## The story");
   lines.push("");
-  lines.push(`- [Home](${ORIGIN}/): Robert Castan rides 10,000 miles in 2027, all on the bike. The miles counted on the site are miles since June 1, 2026; the count restarts January 1, 2027. Cycling changed his life; he'd like to say he cycles for everyone else, and he's really cycling for himself. The organizations he rides for: one·n·ten (Phoenix), the Los Angeles LGBT Center, the San Francisco AIDS Foundation.`);
+  lines.push(`- [Home](${ORIGIN}/): Robert Castan rides 10,000 miles in 2027, all on the bike. ${seasonAt().key === "2027" ? "The miles counted on the site are bike miles in 2027." : "The miles counted on the site are bike miles since June 1, 2026; the count restarts January 1, 2027."} Cycling changed his life; he'd like to say he cycles for everyone else, and he's really cycling for himself. The organizations he rides for: one·n·ten (Phoenix), the Los Angeles LGBT Center, the San Francisco AIDS Foundation.`);
   lines.push(`- [What do you cycle for?](${ORIGIN}/cyclefor/): five seconds on video from riders he meets.`);
   lines.push(`- Instagram: https://www.instagram.com/cycl_eforchange/`);
   lines.push("");

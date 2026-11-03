@@ -292,43 +292,42 @@
     if (line) lines.push(line);
     return lines;
   }
+  /* Oct 26, 2026: redrawn in the house look (Overpass, After Hours, sentence case, no tracking, nothing printed off
+     register). The old flyer used retired fonts and colors and a never-list line along its foot. */
   function makeFlyer(r) {
-    var fonts = document.fonts && document.fonts.load ? Promise.all([document.fonts.load('800 200px Outfit'), document.fonts.load('700 40px "Space Mono"')]) : Promise.resolve();
+    var C = { ground: "#1C1A22", band: "#D9B1AA", ink: "#1C1A22", type: "#EFEDEA", quiet: "#A9BDB8" };   /* bruise, powder rose, plaster, patina */
+    var F = '"Overpass", system-ui, sans-serif';
+    var fonts = document.fonts && document.fonts.load ? Promise.all([document.fonts.load("800 200px Overpass"), document.fonts.load("400 40px Overpass")]) : Promise.resolve();
     return fonts.then(function () {
       var W = 1080, H = 1920, c = document.createElement("canvas"); c.width = W; c.height = H;
       var x = c.getContext("2d"), t = timeParts(r), n = nextStart(r, 8 * 24);
-      x.fillStyle = "#2A2E28"; x.fillRect(0, 0, W, H);
-      x.fillStyle = "#C6FF00"; x.fillRect(0, 0, W, 150);
-      x.fillStyle = "#2A2E28"; x.font = '700 40px "Space Mono", monospace'; x.textBaseline = "middle"; track(x, 7);
-      var dayWord = n ? (n.off === 0 ? "TONIGHT" : DAY_LABEL[DAYS[n.p.dow]].toUpperCase()) : (r.days || []).map(function (d) { return DAY_LABEL[d].toUpperCase(); }).join(" / ");
-      x.fillText(dayWord + "  \u00b7  FREE  \u00b7  ALL WELCOME", 70, 78);
+      x.fillStyle = C.ground; x.fillRect(0, 0, W, H);
+      x.fillStyle = C.band; x.fillRect(0, 0, W, 150);
+      x.fillStyle = C.ink; x.font = "800 44px " + F; x.textBaseline = "middle";
+      var FULL = { sun: "Sunday", mon: "Monday", tue: "Tuesday", wed: "Wednesday", thu: "Thursday", fri: "Friday", sat: "Saturday" };
+      var dayWord = n ? (n.off === 0 ? "Tonight" : FULL[DAYS[n.p.dow]]) : (r.days || []).map(function (d) { return FULL[d]; }).join(", ");
+      x.fillText(dayWord + ". Free. All welcome.", 70, 78);
       x.textBaseline = "alphabetic";
-      // time, off register
-      track(x, -12);
-      x.font = "800 330px Outfit, sans-serif";
-      x.fillStyle = "#C6FF00"; x.fillText(t.big, 84, 560);
-      x.fillStyle = "#E8DFD0"; x.fillText(t.big, 66, 544);
-      if (t.small) { x.font = "800 90px Outfit, sans-serif"; x.fillText(t.small, 72 + measure(x, t.big, "800 330px Outfit, sans-serif") + 20, 544); }
-      // name
-      track(x, -3);
-      x.fillStyle = "#E8DFD0"; x.font = "800 118px Outfit, sans-serif";
-      var lines = wrapText(x, r.name.toUpperCase(), W - 140).slice(0, 5), y = 760;
-      lines.forEach(function (l) { x.fillText(l, 66, y); y += 116; });
-      // facts
-      track(x, 6);
-      x.font = '400 40px "Space Mono", monospace'; x.fillStyle = "#C4B7A2"; y += 50;
+      // the time
+      x.fillStyle = C.type; x.font = "800 330px " + F;
+      x.fillText(t.big, 66, 544);
+      if (t.small) { x.font = "800 90px " + F; x.fillText(t.small, 72 + measure(x, t.big, "800 330px " + F) + 20, 544); }
+      // the name, as the host writes it
+      x.font = "800 108px " + F;
+      var lines = wrapText(x, r.name, W - 140).slice(0, 5), y = 760;
+      lines.forEach(function (l) { x.fillText(l, 66, y); y += 112; });
+      // the facts
+      x.font = "400 42px " + F; x.fillStyle = C.quiet; y += 50;
       var spot = r.start_location && r.start_location.name;
       [spot, (r.place || (r.city + ", " + r.state)), [r.distance_miles ? r.distance_miles + " mi" : "", r.pace || ""].filter(Boolean).join(" · "), dropLabel(r)].filter(Boolean).forEach(function (f) {
-        wrapText(x, String(f).toUpperCase(), W - 140).slice(0, 2).forEach(function (l) { x.fillText(l, 70, y); y += 62; });
+        wrapText(x, String(f), W - 140).slice(0, 2).forEach(function (l) { x.fillText(l, 70, y); y += 62; });
       });
-      // foot
-      x.fillStyle = "#E8DFD0"; x.fillRect(66, H - 210, W - 132, 3);
-      x.font = '700 38px "Space Mono", monospace'; x.fillText("CYCLEFORCHANGE.ORG/TONIGHT", 70, H - 130);
-      x.fillStyle = "#C4B7A2"; x.font = '400 32px "Space Mono", monospace'; x.fillText("EVERY MILE FOR QUEER COMMUNITIES", 70, H - 76);
+      // the foot: one hairline and the address
+      x.fillStyle = C.type; x.fillRect(66, H - 210, W - 132, 3);
+      x.font = "700 40px " + F; x.fillText("cycleforchange.org/tonight", 70, H - 120);
       return new Promise(function (res) { c.toBlob(function (b) { res(b); }, "image/png"); });
     });
   }
-  function track(ctx, px) { if ("letterSpacing" in ctx) ctx.letterSpacing = px + "px"; }
   function measure(ctx, text, font) { var f = ctx.font; ctx.font = font; var w = ctx.measureText(text).width; ctx.font = f; return w; }
 
   function shareFlyer(r, btn) {

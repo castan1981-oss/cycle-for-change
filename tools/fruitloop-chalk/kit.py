@@ -72,7 +72,7 @@ B['Feed-3-how']=(1080,1350,page(1080,1350,f'''
 <div class="abs col" style="left:64px;top:480px;gap:40px">'''+''.join(
   f'''<div class="col">{blk(h_,54,c_,210+i,sw='3.2px',fit=950)}{para(s_,30,C['white'],220+i,940,mt=8)}</div>''' for i,(h_,c_,s_) in enumerate([
    ('BRING A LIGHT. TWO, ACTUALLY.',C['cyan'],'White on the front, red on the back. It’s dark by 5:30.'),
-   ('NOBODY GETS DROPPED.',C['rose'],'About 10 to 12 mph, flat. A sweep rides at the back.'),
+   ('NOBODY GETS DROPPED.',C['rose'],'About 14 to 16 mph, flat. A sweep rides at the back.'),
    ('WE STOP AT EVERY RED.',C['orange'],'Then we wait for whoever caught it.'),
    ('ANY BIKE.',C['purple'],'About 14 flat miles, one stop, coffee about 7:45. Starts Friday, Dec 11.')]))+f'''</div>
 <div class="abs col" style="left:64px;bottom:52px">{foot(240,440)}</div>'''))
@@ -113,7 +113,7 @@ B['Main']=(1056,1632,page(1056,1632,f'''
 {blk('FRIDAY\nDEC 11',104,C['rose'],603,sw='4.4px',lh=1.0,fit=420,mt=4)}{scr(320,C['yellow'],604,h=22,sw=12)}
 {blk('MEET 5:30 PM /\nROLL 6:00 PM',46,C['white'],605,sw='3px',lh=1.12,mt=8,fit=420)}{scr(340,C['cyan'],606)}
 {row('pin',C['rose'],blk('THE RAINBOW\nCROSSWALK',38,C['white'],607,sw='2.6px',lh=1.1,fit=330),mt=10)}{blk('CENTRAL AVE & PORTLAND ST,\nPHOENIX',28,C['white'],608,sw='2px',fl=5,lh=1.18,mt=6,fit=420)}{scr(360,C['rose'],609)}
-{blk('14 FLAT MILES',52,C['cyan'],610,sw='3.2px',fit=420,mt=6)}{blk('10–12 MPH PACE',44,C['orange'],611,sw='3px',fit=420,mt=2)}{scr(360,C['purple'],612)}
+{blk('14 FLAT MILES',52,C['cyan'],610,sw='3.2px',fit=420,mt=6)}{blk('14–16 MPH PACE',44,C['orange'],611,sw='3px',fit=420,mt=2)}{scr(360,C['purple'],612)}
 </div>
 <div class="abs" style="left:500px;top:470px">{loop_svg(500,560)}</div>
 <div class="abs col" style="left:540px;top:1060px">{row('bike',C['rose'],blk('NOBODY GETS\nDROPPED.',30,C['white'],613,sw='2px',fl=5,lh=1.18,fit=330),mt=8)}{scr(330,C['yellow'],614)}

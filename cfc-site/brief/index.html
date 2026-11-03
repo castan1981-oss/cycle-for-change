@@ -25,8 +25,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/chrome.css?v=57">
-  <link rel="stylesheet" href="/brief/brief.css?v=57">
+  <link rel="stylesheet" href="/chrome.css?v=61">
+  <link rel="stylesheet" href="/brief/brief.css?v=61">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Ride briefing","url":"https://cycleforchange.org/brief/","applicationCategory":"SportsApplication","operatingSystem":"Any","browserRequirements":"Runs in the browser. Nothing is uploaded.","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Drop a ride file, GPX or FIT. Get the climbs, the weather where you’ll be when you get there, what to wear, and when you’re back. Free, no account, nothing stored.","publisher":{"@type":"Organization","name":"Cycle for Change","url":"https://cycleforchange.org"}}</script>
 </head>
 <body>
@@ -62,7 +62,7 @@
       <a href="/resources/">Resources</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn--sm" href="/fruitloop/" data-ride-next>Ride with me</a>
+      <a class="btn btn--sm" href="/events/el-tour-de-tucson/" data-ride-next>Ride with me</a>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
     </div>
   </div>
@@ -73,8 +73,8 @@
     <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"></button>
   </div>
   <ul class="menu-list">
-    <li><a href="/fruitloop/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
-    <li><a href="/find-a-ride/">Find a ride <span>1,427</span></a></li>
+    <li><a href="/events/el-tour-de-tucson/" data-ride-next>Ride with me <span>The next ride I&rsquo;m doing</span></a></li>
+    <li><a href="/find-a-ride/">Find a ride <span>1,428</span></a></li>
     <li><a href="/events/2027/">2027 calendar <span>640</span></a></li>
     <li><a href="/towns/">Towns <span>Riding somewhere new</span></a></li>
     <li><a href="/guides/">Guides <span>Notes &middot; journal</span></a></li>
@@ -86,7 +86,7 @@
     <span><b>Trevor Project</b> <a href="tel:18664887386">1-866-488-7386</a></span>
   </div>
 </div>
-<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;training miles since June 1. The 10,000 start Jan 1.</a></span></p>
+<p class="tally-line"><span class="wrap"><a href="/#road"><span class="tally-num" data-cur>&mdash;</span>&nbsp;<span data-season="training">training miles since June 1. The 10,000 start Jan 1.</span><span data-season="2027" hidden>miles in 2027, all on the bike.</span></a></span></p>
 <main id="main" class="wrap">
   <section class="bf-top">
     <p class="eyebrow">Ride briefing</p>
@@ -178,14 +178,19 @@
 
     <div class="bf-sec">
       <h3>The poster</h3>
-      <p class="bf-h-note">The route with its climbs named, as a picture for the group chat or your story. On its own, or over a photo of yours.</p>
+      <p class="bf-h-note">The route as a picture for the group chat or your story. On its own, or over a photo of yours.</p>
+      <fieldset class="gr-rev-pick bf-look">
+        <legend>Look</legend>
+        <label><input type="radio" name="look" value="card" checked><span>Route card</span></label>
+        <label><input type="radio" name="look" value="bw"><span>Black and white</span></label>
+      </fieldset>
       <div class="bf-actions">
         <button type="button" class="btn btn--ink" id="poster">Make the poster</button>
         <label class="btn btn--ghost bf-file-btn">Over my photo<input type="file" id="posterPhoto" accept="image/*" aria-label="A photo for the poster"></label>
       </div>
       <div class="bf-poster" id="posterOut" hidden>
         <img id="posterImg" alt="" width="1080" height="1350">
-        <p class="bf-actions"><a class="btn btn--ink" id="posterDl" href="#" download="route.png">Save the poster</a><span class="bf-h-note">On a phone: press and hold the picture to save it.</span></p>
+        <p class="bf-actions"><a class="btn btn--ink" id="posterDl" href="#" download="route.png">Save the poster</a><a class="link" id="posterStory" href="#" download="route-story.png" hidden>Story size</a><span class="bf-h-note">On a phone: press and hold the picture to save it.</span></p>
       </div>
     </div>
 
@@ -212,7 +217,7 @@
       <dt>Wear and water</dt><dd>A house table by temperature: winter kit under 40°F, warmers under 60, summer kit over 70, sun sleeves and an early start over 90. Water is about a bottle an hour at 80°F, one and a half at 90, two over 100, and over 100 isn’t an afternoon ride.</dd>
       <dt>Difficulty</dt><dd>Hard: 60 miles or more, 100 ft of climbing a mile or more, or 40 miles at 60 ft a mile. Moderate: 25 miles or 50 ft a mile. Easy: the rest.</dd>
       <dt>Compare</dt><dd>Both climb charts on the same distance and height scale. The sentences come from the numbers: distance and climbing within 5% count as the same; “hillier” is feet of climbing per mile; “steepest” is the steepest tenth of a mile; times are at the same flat speed.</dd>
-      <dt>The poster</dt><dd>The route as one line, the start, each climb's top with its height and mile, and anything the host named. Drawn in your browser; a photo you add stays in your browser too. 1080 by 1350, the size a story or a feed post wants.</dd>
+      <dt>The poster</dt><dd>Two looks. The route card: the route as one line, the start, each climb’s top with its height and mile, and anything the host named, 1080 by 1350. Black and white: your photo turned black and white under a flat 22% shade, the route over it in white with a dot at each end, the distance and climbing up the side, the day and the roll-out time at the foot; a feed post (1080 by 1350) and a Story (1080 by 1920, with Instagram’s bars left clear). Drawn in your browser; a photo you add stays in your browser too.</dd>
       <dt>What leaves your browser</dt><dd>Nothing but the sample coordinates in the two Open-Meteo requests. A FIT is read here too; nothing is converted anywhere else. No account, no cookies, nothing stored. The share link carries the route itself, so it works for anyone.</dd>
     </dl>
   </details>
@@ -220,12 +225,12 @@
 <section class="pledge" aria-labelledby="pledge-h">
   <h2 class="pledge-line" id="pledge-h">I&rsquo;d like to say I ride for everyone else. I ride because it changed me.</h2>
   <p class="pledge-copy">In 2027 I ride 10,000 miles, all on the bike, and every ride gets written down. The money goes through the orgs&rsquo; own rides. It never touches me.</p>
-  <div class="cta-row"><a class="btn btn--bone" href="/fruitloop/" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a></div>
+  <div class="cta-row"><a class="btn btn--bone" href="/events/el-tour-de-tucson/" data-ride-next>Ride with me</a><a class="btn btn--ghost" href="/rides/">Find a group ride</a></div>
 </section>
 </main>
 <footer class="foot site-foot">
-  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2026-12-11" data-rides="[{&quot;until&quot;:&quot;2026-12-11&quot;,&quot;date&quot;:&quot;Dec 11&quot;,&quot;name&quot;:&quot;The Fruit Loop&quot;,&quot;where&quot;:&quot;Phoenix&quot;,&quot;href&quot;:&quot;/fruitloop/&quot;},{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-03-06&quot;,&quot;date&quot;:&quot;Mar 5–6&quot;,&quot;name&quot;:&quot;Belgian Waffle Ride Arizona&quot;,&quot;where&quot;:&quot;Fountain Hills, AZ&quot;,&quot;href&quot;:&quot;/events/2027/riding/#belgian-waffle-ride-arizona&quot;},{&quot;until&quot;:&quot;2027-03-11&quot;,&quot;date&quot;:&quot;Mar 11&quot;,&quot;name&quot;:&quot;The Mid South&quot;,&quot;where&quot;:&quot;Stillwater, OK&quot;,&quot;href&quot;:&quot;/events/2027/riding/#the-mid-south&quot;},{&quot;until&quot;:&quot;2027-04-18&quot;,&quot;date&quot;:&quot;Apr 15–18&quot;,&quot;name&quot;:&quot;Sea Otter Classic&quot;,&quot;where&quot;:&quot;Monterey, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#life-time-sea-otter-classic&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;},{&quot;until&quot;:&quot;2027-06-06&quot;,&quot;date&quot;:&quot;Jun 3–6&quot;,&quot;name&quot;:&quot;Unbound Gravel&quot;,&quot;where&quot;:&quot;Emporia, KS&quot;,&quot;href&quot;:&quot;/events/2027/riding/#life-time-unbound-gravel&quot;},{&quot;until&quot;:&quot;2027-07-11&quot;,&quot;date&quot;:&quot;Jul 10–11&quot;,&quot;name&quot;:&quot;Seattle to Portland&quot;,&quot;where&quot;:&quot;206 miles, one or two days&quot;,&quot;href&quot;:&quot;/events/2027/riding/#seattle-to-portland-bicycle-classic&quot;},{&quot;until&quot;:&quot;2027-08-06&quot;,&quot;date&quot;:&quot;Aug 1–6&quot;,&quot;name&quot;:&quot;Friends for Life Bike Rally&quot;,&quot;where&quot;:&quot;Toronto to Montréal&quot;,&quot;href&quot;:&quot;/events/2027/riding/#friends-for-life-bike-rally&quot;},{&quot;until&quot;:&quot;2027-09-26&quot;,&quot;date&quot;:&quot;Sep 24–26&quot;,&quot;name&quot;:&quot;Cycle for the Cause&quot;,&quot;where&quot;:&quot;New York, NY&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-for-the-cause&quot;}]" hidden>
-    <a class="ridebar-a" href="/fruitloop/" data-ride-next><span class="ridebar-d">Dec 11</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">The Fruit Loop, Phoenix</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
+  <aside class="ridebar" id="rideBar" aria-label="Ride with me" data-until="2026-11-21" data-rides="[{&quot;until&quot;:&quot;2026-11-21&quot;,&quot;date&quot;:&quot;Nov 21&quot;,&quot;name&quot;:&quot;El Tour de Tucson&quot;,&quot;where&quot;:&quot;102, 62 or 32 miles&quot;,&quot;href&quot;:&quot;/events/el-tour-de-tucson/&quot;},{&quot;until&quot;:&quot;2026-12-11&quot;,&quot;date&quot;:&quot;Dec 11&quot;,&quot;name&quot;:&quot;The Fruit Loop&quot;,&quot;where&quot;:&quot;Phoenix&quot;,&quot;href&quot;:&quot;/fruitloop/&quot;},{&quot;until&quot;:&quot;2027-02-06&quot;,&quot;date&quot;:&quot;Feb 6&quot;,&quot;name&quot;:&quot;Tour de Palm Springs&quot;,&quot;where&quot;:&quot;Palm Springs, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#tour-de-palm-springs&quot;},{&quot;until&quot;:&quot;2027-03-06&quot;,&quot;date&quot;:&quot;Mar 5–6&quot;,&quot;name&quot;:&quot;Belgian Waffle Ride Arizona&quot;,&quot;where&quot;:&quot;Fountain Hills, AZ&quot;,&quot;href&quot;:&quot;/events/2027/riding/#belgian-waffle-ride-arizona&quot;},{&quot;until&quot;:&quot;2027-03-11&quot;,&quot;date&quot;:&quot;Mar 11&quot;,&quot;name&quot;:&quot;The Mid South&quot;,&quot;where&quot;:&quot;Stillwater, OK&quot;,&quot;href&quot;:&quot;/events/2027/riding/#the-mid-south&quot;},{&quot;until&quot;:&quot;2027-04-18&quot;,&quot;date&quot;:&quot;Apr 15–18&quot;,&quot;name&quot;:&quot;Sea Otter Classic&quot;,&quot;where&quot;:&quot;Monterey, CA&quot;,&quot;href&quot;:&quot;/events/2027/riding/#life-time-sea-otter-classic&quot;},{&quot;until&quot;:&quot;2027-04-25&quot;,&quot;date&quot;:&quot;Apr 23–25&quot;,&quot;name&quot;:&quot;Center Ride Out&quot;,&quot;where&quot;:&quot;LA to Ojai and back&quot;,&quot;href&quot;:&quot;/events/2027/riding/#center-ride-out&quot;},{&quot;until&quot;:&quot;2027-05-23&quot;,&quot;date&quot;:&quot;May 21–23&quot;,&quot;name&quot;:&quot;Cycle to Zero&quot;,&quot;where&quot;:&quot;SF to the Russian River&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-to-zero&quot;},{&quot;until&quot;:&quot;2027-06-06&quot;,&quot;date&quot;:&quot;Jun 3–6&quot;,&quot;name&quot;:&quot;Unbound Gravel&quot;,&quot;where&quot;:&quot;Emporia, KS&quot;,&quot;href&quot;:&quot;/events/2027/riding/#life-time-unbound-gravel&quot;},{&quot;until&quot;:&quot;2027-07-11&quot;,&quot;date&quot;:&quot;Jul 10–11&quot;,&quot;name&quot;:&quot;Seattle to Portland&quot;,&quot;where&quot;:&quot;206 miles, one or two days&quot;,&quot;href&quot;:&quot;/events/2027/riding/#seattle-to-portland-bicycle-classic&quot;},{&quot;until&quot;:&quot;2027-08-06&quot;,&quot;date&quot;:&quot;Aug 1–6&quot;,&quot;name&quot;:&quot;Friends for Life Bike Rally&quot;,&quot;where&quot;:&quot;Toronto to Montréal&quot;,&quot;href&quot;:&quot;/events/2027/riding/#friends-for-life-bike-rally&quot;},{&quot;until&quot;:&quot;2027-09-26&quot;,&quot;date&quot;:&quot;Sep 24–26&quot;,&quot;name&quot;:&quot;Cycle for the Cause&quot;,&quot;where&quot;:&quot;New York, NY&quot;,&quot;href&quot;:&quot;/events/2027/riding/#cycle-for-the-cause&quot;}]" hidden>
+    <a class="ridebar-a" href="/events/el-tour-de-tucson/" data-ride-next><span class="ridebar-d">Nov 21</span><span class="ridebar-t"><b>Ride with me</b><span class="ridebar-n">El Tour de Tucson, 102, 62 or 32 miles</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>
     <button class="ridebar-x" type="button" aria-label="Hide this for now"></button>
   </aside>
   <script src="/ridebar.js?v=39" defer></script>
@@ -277,9 +282,10 @@
     <div class="foot-line"><span>Cycle for Change</span><span class="foot-trust"><a href="/methodology/">How rides are checked</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></span><span>Phoenix. Bike only.</span></div>
   </div>
 </footer>
-<script src="/chrome.js?v=57" defer></script>
-<script src="/brief/engine.js?v=8"></script>
-<script src="/brief/card.js?v=8"></script>
-<script src="/brief/brief.js?v=8" defer></script>
+<script src="/chrome.js?v=61" defer></script>
+<script src="/brief/engine.js?v=9"></script>
+<script src="/brief/card.js?v=9"></script>
+<script src="/brief/bw.js?v=9"></script>
+<script src="/brief/brief.js?v=9" defer></script>
 </body>
 </html>

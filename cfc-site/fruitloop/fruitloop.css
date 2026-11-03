@@ -145,4 +145,40 @@ body.fl-page{background:var(--asphalt);color:var(--bone)}
   .fl-poster-fig{grid-column:1;grid-row:1}
   .fl-poster-copy{grid-column:2;grid-row:1;padding-top:var(--s2)}
 }
+/* Oct 31, 2026 — How we roll: the Fruit Loop's group-ride film (chalk, portrait, silent), after the basics and before the
+   poster. Words first on a phone, the film beside them on desktop, like the poster. /rides/film.js plays it: a tap
+   plays it once through, nothing downloads until then. The ten, in words, sit in a fold under the line. */
+.fl-film{border-top:1px solid var(--line-d);padding-block:var(--s5)}
+.fl-film-in{display:grid;gap:var(--s4)}
+.fl-film-copy p{margin:var(--s2) 0 0;max-width:34em;font-size:var(--fs-body);line-height:1.55;color:var(--bone)}
+.fl-film-copy .fl-poster-more{margin-top:var(--s3)}
+.fl-words{margin-top:var(--s4);border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d);max-width:40em}
+.fl-words summary{display:flex;align-items:center;min-height:48px;cursor:pointer;font-weight:800;color:var(--paper);list-style:none}
+.fl-words summary::-webkit-details-marker{display:none}
+.fl-words summary::after{content:"+";margin-left:auto;font-weight:700}
+.fl-words[open] summary::after{content:"−"}
+.fl-film-steps{list-style:none;margin:0 0 var(--s3);padding:0}
+.fl-film-steps li{padding:var(--s2) 0;border-top:1px solid var(--line-d);line-height:1.5}
+.fl-film-steps b{display:block;font-weight:800;color:var(--paper)}
+.fl-film-steps span{display:block;color:var(--bone)}
+.fl-film-fig{margin:0;width:min(100%,400px)}
+.fl-film-frame{position:relative;background:var(--tar)}
+.fl-film-frame video{display:block;width:100%;height:auto;aspect-ratio:9/16;background:var(--tar);border:1px solid var(--line-d);cursor:pointer}
+.fl-film-play{position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;padding:0;border:0;border-radius:50%;background:var(--paper);color:var(--asphalt);display:grid;place-items:center;cursor:pointer;transition:opacity var(--t-move) var(--ease),visibility 0s}
+.fl-film-play svg{width:28px;height:28px;margin-left:5px;fill:currentColor}
+@media (hover:hover){.fl-film-play:hover{background:var(--bone)}}
+.fl-film-fig[data-playing="true"] .fl-film-play{opacity:0;visibility:hidden;pointer-events:none;transition:opacity var(--t-move) var(--ease),visibility 0s linear var(--t-move)}
+.fl-film-cap{display:flex;align-items:center;gap:14px;margin-top:8px}
+.fl-film-btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0;background:none;border:0;color:var(--paper);font:700 15px/1.2 var(--display);cursor:pointer}
+.fl-film-ico{display:inline-flex}
+.fl-film-ico svg{width:16px;height:16px;fill:currentColor}
+.fl-film-ico--pause,.fl-film-btn[data-playing="true"] .fl-film-ico--play{display:none}
+.fl-film-btn[data-playing="true"] .fl-film-ico--pause{display:inline-flex}
+.fl-film-btn [data-film-label]{display:inline-block;min-width:2.9em;border-bottom:1px solid var(--line-d);padding-bottom:2px}
+.fl-film-len{font-size:14px;font-weight:600;color:var(--bone);font-variant-numeric:tabular-nums}
+@media (min-width:900px){
+  .fl-film-in{grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:var(--s5);align-items:start}
+  .fl-film-fig{grid-column:1;grid-row:1;width:min(100%,420px)}
+  .fl-film-copy{grid-column:2;grid-row:1;padding-top:var(--s2)}
+}
 }
