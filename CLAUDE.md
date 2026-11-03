@@ -567,19 +567,29 @@ The brand read: `research/brand/2026-10-29-cfc-kit.md` (its six blocks fixed Oct
 
 ### The weekly ride carousel (`tools/week-kit/`, Nov 3, 2026)
 Robert, sending btwphx's weekly Valley ride round-up: "make something like this but way better and the whole idea is to
-get visits to the website." `python3 tools/week-kit/make.py [--from YYYY-MM-DD] [--skip <slug> …]` writes into
+get visits to the website." `python3 tools/week-kit/make.py [--from YYYY-MM-DD] [--skip <slug> …] [--keep <slug> …]` writes into
 `tools/week-kit/.build/out/` (never committed): the feed carousel (1080 × 1350, one wall sliced so it pans as you swipe:
 the cover, a sheet per day, Saturday or any day over nine rows split "Early." / "Less early.", the end card), the Story
 frames (1080 × 1920: the week, then one per day, words clear of the top 200 / bottom 330, room for a link sticker under
-"Tap the link.") and `caption.txt`. Every sheet ends on `cycleforchange.org/week` (§6, the this-week page).
+"Tap the link."), `caption.txt` and `left-off.txt`. Every sheet ends on `cycleforchange.org/week` (§6, the this-week page).
+- **Monday mornings, Monday to Sunday** (Robert, Nov 3, 2026: "Maybe we should do it for Monday morning"). The default
+  week is this Monday on a Monday, else the next one, so the post shows the same seven days `/week` shows that morning.
+  The scheduled task "Weekly ride carousel" runs it every Monday at 5:41 am Phoenix (after the 2 am watcher refreshes
+  `data/rides-health.json`), on main, after `node tools/build-rides.js` brings `live.json` up to the day, and sends
+  Robert the slides, the Stories, the caption and what was left off.
 - **The rows are the page's rows**: `tools/week-kit/week.js` runs `tools/lib/week.js` over the listed rides (live.json
   decides what's listed, rides.json carries the full record), sorted by start then name, so the carousel and `/week`
   agree. The count on the cover is group rides only (open streets like Silent Sunday get a row, not a count). No key:
   each row says what it is in the site's own words (Waits for you, Pace groups, Drops, the pace and length from
   `pc`/`lg`, "Every other week, check first" on a biweekly ride with no posted week).
-- **`--skip`** leaves a ride off when its own record is in doubt; say so to Robert and re-check it (`/rides check`).
-  Nov 3, 2026: the Night Rider Series @ Trail 100 (its note says the Meetup series ended Oct 27; btwphx lists it Nov 4,
-  7:00 pm).
+- **The post only prints what it can stand behind.** `week.js` gives each row a `doubt` from the site's own upkeep data
+  (`tools/lib/rides-freshness.js` over `data/rides-health.json`): an open red flag; the host's page using ending words
+  or showing no upcoming date; or the host's own calendar feed that used to list the ride and hasn't for 14+ days (a
+  feed that never matched it is not evidence). Those rides stay off the post and go in `left-off.txt` with the reason;
+  `/week` still lists them with its own nudges. `--keep <slug>` puts one back (Robert's call, or after a re-check);
+  `--skip <slug>` leaves one off by hand. The left-off list is the re-check list (`/rides check <slug>`). Nov 9–15,
+  2026: Night Rider Series @ Trail 100, Wednesday Night Roll, Chandler North Saturday Ride, Bear Claw, Stadium Ride
+  (calendars), the R.T. O'Sullivan's Tuesday ride (no upcoming date).
 - **His stamps** (`MINE`): "I ride this one." on the Friday Shop Ride (he rides it every Friday), "I wrote this one up."
   on TSR (his write-up on its page). Only rides he's said he rides or wrote up.
 - **The look is Left Field paste-up in Lane Paint** (the "We made it." reel's baseline): poured concrete with panel
@@ -1216,3 +1226,4 @@ two exits; the shapes are on the plan canvas.
   (`cfc-site/brief/bw.js`, `V` 9); the one place the site's words sit on a photo, inside the picture only (§12).
 - 2026-11-03 — `/rides/az/phoenix/this-week/`, "Phoenix group rides this week" (the weekly carousel's `/week` link): every listed Valley ride within 45 miles for the seven days from the build's day, day by day, from the ride pages' own schedule code (now `tools/lib/schedule.js`, used by `tools/lib/week.js`); a past day hides itself if a rebuild is missed; the Phoenix hub links in.
 - 2026-11-03 — The weekly ride carousel (`tools/week-kit/`): "Phoenix group rides this week" for Instagram, feed and Stories, from the same week code as `/week`, in Left Field paste-up; first run Nov 4–10 (42 group rides, Night Rider left off pending a re-check).
+- 2026-11-03 — The weekly carousel moves to Monday mornings, Monday to Sunday (Robert), as a scheduled task; rides the upkeep data doubts stay off the post and are listed with the reason (`doubt` in `tools/week-kit/week.js`, `--keep` to put one back).

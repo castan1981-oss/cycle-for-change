@@ -1,12 +1,18 @@
 """The weekly group-ride carousel: "Phoenix group rides this week" (Nov 3, 2026).
 
-    python3 tools/week-kit/make.py                         # the seven days from tomorrow, Phoenix time
+    python3 tools/week-kit/make.py                         # Monday to Sunday: this week on a Monday, else the next one
     python3 tools/week-kit/make.py --from 2026-11-11       # the seven days from that date
-    python3 tools/week-kit/make.py --skip <slug> ...       # leave a ride off (its record is in doubt; re-check it)
+    python3 tools/week-kit/make.py --skip <slug> ...       # leave a ride off by hand (say why; re-check it)
+    python3 tools/week-kit/make.py --keep <slug> ...       # put back a ride the doubt check left off
+
+Robert posts it Monday mornings (Nov 3, 2026: "Maybe we should do it for Monday morning"), so the default week is
+Monday to Sunday, the same seven days /week shows that morning. A ride the site's own upkeep data doubts (week.js
+`doubt`: a red flag, ending words or no upcoming date on the host's page, the host's calendar not listing it for two
+weeks) stays off the post and goes in left-off.txt with the reason.
 
 Writes into tools/week-kit/.build/out/ (never committed): post-01..NN.jpg (1080 x 1350, one wall sliced, cover, a
 sheet per day, Saturday or any day over nine rides split "Early." / "Less early.", the end card), story-*.jpg
-(1080 x 1920: the week, then a frame per day, room for a link sticker), caption.txt.
+(1080 x 1920: the week, then a frame per day, room for a link sticker), caption.txt, left-off.txt.
 
 The rows are the page's rows: tools/week-kit/week.js runs tools/lib/week.js over the listed rides, the same code
 /rides/az/phoenix/this-week/ is built from, so the carousel and cycleforchange.org/week always agree (sorted by start,
@@ -156,6 +162,8 @@ def facts(r, full):
 # Left off with --skip <slug> when the directory's own record is in doubt (say why in the post's notes, and re-check it):
 # Nov 3, 2026: phoenix-az-valley-epic-rides-night-rider-trail-100 (its note says the Meetup series ended Oct 27).
 SKIP = set()
+KEEP = set()
+LEFT_OFF = []
 # Lines written from the record's own schedule text where the generic facts would mislead
 LINE = {
     "Silent Sunday at South Mountain": "South Mountain \u00b7 Summit Road closed to cars, 5 to 10 am",
@@ -171,7 +179,11 @@ def load(start, days=7):
         rows = []
         for o in d["rides"]:
             r = o["live"]
-            if r["slug"] in SKIP or o["allDay"]:
+            if o["allDay"]:
+                continue
+            why = "left off by hand" if r["slug"] in SKIP else (o.get("doubt") if r["slug"] not in KEEP else None)
+            if why:
+                LEFT_OFF.append((d["ymd"], r["name"].strip(), r["slug"], why))
                 continue
             at = datetime.fromisoformat(o["at"].replace("Z", "+00:00")).astimezone(PHX)
             rows.append(dict(slug=r["slug"], time=clock(at), at=at.isoformat(), name=r["name"].strip(), kind=r.get("kind"),
@@ -592,11 +604,13 @@ def caption(days, total):
 if __name__ == "__main__":
     from datetime import date as _date
     ap = argparse.ArgumentParser()
-    ap.add_argument("--from", dest="start", default=(datetime.now(PHX).date() + timedelta(days=1)).isoformat())
+    now = datetime.now(PHX).date()
+    ap.add_argument("--from", dest="start", default=(now + timedelta(days=(7 - now.weekday()) % 7)).isoformat())
     ap.add_argument("--skip", nargs="*", default=[])
+    ap.add_argument("--keep", nargs="*", default=[])
     ap.add_argument("--no-stories", action="store_true")
     a = ap.parse_args()
-    SKIP.update(a.skip)
+    SKIP.update(a.skip); KEEP.update(a.keep)
     days = load(a.start)
     total = sum(1 for d in days for r in d["rows"] if r.get("kind") != "open-streets")
     SPAN[0] = span_words(days)
@@ -609,4 +623,10 @@ if __name__ == "__main__":
             print("stories:", " ".join(shoot_stories(pg, days, total)))
         b.close()
     (OUT / "caption.txt").write_text(caption(days, total))
+    seen, lines = set(), []
+    for ymd, name, slug, why in LEFT_OFF:
+        if slug not in seen:
+            seen.add(slug); lines.append(f"{name} ({slug}): {why}")
+    (OUT / "left-off.txt").write_text(("\n".join(lines) + "\n") if lines else "Nothing left off.\n")
+    print("left off:", "; ".join(lines) or "none")
     print(f"{total} group rides, {sum(len(d['rows']) for d in days)} rows; caption in {OUT / 'caption.txt'}")
