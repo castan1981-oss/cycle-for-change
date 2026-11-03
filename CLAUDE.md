@@ -569,6 +569,49 @@ The brand read: `research/brand/2026-10-29-cfc-kit.md` (its six blocks fixed Oct
 - **Short links** for the QR codes (netlify.toml): `/gr` → `/rides/`, `/2027` → `/events/2027/riding/`, `/cf` →
   `/cyclefor/`, tagged `utm_source=cfc-kit`.
 
+### Reels — the ride series (Nov 1, 2026; updated Nov 3 to Robert's later calls)
+Robert's first reference was a "liminal" TikTok edit (black field, tiny labels at odd positions, glitch bursts, a word
+scrambling into place, a big word on a plain card, scattered tiles, grain). The first CFC reel cut from it is the bike
+reveal, "32 of 55" (the S-Works Crux 5 LTD, built at Bicycle Haüs, ridden the next morning), cut Nov 1, 2026 and put
+through the ten-specialist panel (the `/brand-review` skill; cut and render script in the claude.ai chat that made it,
+not here — social cuts never go in git, §10). Then Robert made two later calls that win over the panel's first draft:
+the final Crux cut came back **with no grain, no glitch and no bolt**, and rebuilt **in the footage's original colors**
+("I want to keep the original video colors", Nov 1); and on Nov 2 he asked for motion that stops looking like the
+flat-vector Film Run style and loved the "Left Field" pilot ("I love this"). What holds now:
+- **The bones** (every CFC Reel and Story, for the whole 2027 series): tar field for cards; Overpass, sentence case;
+  numerals in plaster; **rose only on the blank and the plate**, never on a numeral; footage full screen **in its
+  original color** (black and white with one kept red is retired as the default — only when he asks for it); labels on
+  small tar plates, bottom left, two lines at most; hard cuts; the end is the stencil → the bar → "change" on the plate →
+  `cycleforchange.org`.
+- **No costume by default:** no grain, no glitch, no bolt, no scanlines on a Reel unless Robert asks for them on that
+  piece. Never on the site, stills, kit or print.
+- **Motion direction — Left Field** (Nov 2, 2026; the `left-field` skill is the motion studio): "new aged urban", done
+  with digital but not perfect. The pilot he loved: a paste-up wall, the summer poster torn off, halftone prints of his
+  own photos, words on slapped paper strips, CYCLE FOR sprayed through a stencil card. Handmade-looking but crisp; never
+  the flat-vector Film Run look, never sloppy.
+- **Launch only** (the reveal, not the daily posts): the 3 × 3 number grid, the scattered tiles, the plaster card.
+  The word scramble is out for good (the panel: the most date-stamped move of 2025–26).
+- **Type in motion:** nothing under 28 px at 1080 wide; copy clear of the top 220, bottom 400 and right 140 px.
+- **Copy:** miles as a whole number on screen ("37 miles", never "37.0"); the bike is only ever "the bike" (never
+  "the one", the model name is its dateline once); stats in one order — climbing · time · average speed — and never
+  top speed (the one number that is a flex); the hero line "10,000 miles. One year. All on the bike." whole, never
+  split, never shown twice; his sentence whole, both halves, on plaster, two cards, two seconds; a manufacturer's badge
+  or tagline words never typed (the badge can be in the frame); **Bicycle Haüs is a credit, once, on a plate on the
+  build footage** ("Built at Bicycle Haüs." / "Scottsdale."), and in the end card's small line only — never a
+  partner lockup, never on the blank (Robert, Nov 1: "I'm not riding for Bicycle Haüs"); the shop's logo on a shirt is
+  cropped out. Every number comes from Strava for that ride (§10 allows it: it's his own ride, he posts it himself).
+  **He rides two bikes in 2027** (the Crux and a Tarmac SL8; Robert, Nov 1), so no reel ever says one of them is *the*
+  bike for the 10,000 — "This one's in.", never "This is the bike."; "All on the bike" is the category and stays.
+- **Color held to one look across shots** (Robert, Nov 1): match exposure and white balance so the shop, the wall and the
+  overpass read as one day; no stylised grade. The bike's red stays true to **the bike's own red as measured on Robert's
+  shop photo of it** (hue 178.4, a hair cool of pure red; saturation about 212; brightness about 68 — deep candy red),
+  never a brighter or more saturated red of our choosing (Robert: "pull that color … so it stays true").
+- **Frame the whole bike** when the bike is the subject (Nov 3: every overpass moment shows the whole bike; a tight
+  push-in that crops it was cut).
+- No month or date on the reveal's labels (Robert, Nov 1: "Don't say September"); the ride's own Strava name ("New
+  bike day.") can stand in.
+- A Reel's cover is a frame with the bike full screen, not a type card.
+
 ### Today I rode for (`#today` on the homepage, Oct 12, 2026)
 Every ride Robert says who he rode for that day. `data/today.json` (date, `for` = the plate, `line` = his words,
 `photo`, `photo2`, `film`) → `todaySection()` in `scripts/build-home.js` → a light section after the 10,000 (`#road`)
@@ -1177,6 +1220,9 @@ two exits; the shapes are on the plan canvas.
   ride's riding months as `data-season`); `tools/test/season-selector.test.js` keeps it that way.
 - 2026-10-31 — Both films lose the "3 of 9" / "3 of 10" line over each chapter (Robert: share each one on its own): `how-we-ride-2`,
   `fruit-loop-how-we-roll-2`, new posters.
+- 2026-11-01 — Reels, the ride series: the "32 of 55" bike reveal, through the ten-specialist panel; the bones every CFC
+  Reel keeps (tar plates, Overpass, the stencil end), what's launch-only, the copy rules; Bicycle Haüs is a credit, not a
+  partner (§5). Updated Nov 3 to Robert's later calls: original color, no grain/glitch/bolt unless asked, Left Field motion.
 - 2026-10-31 — `/brief/`'s poster gets a second look, black and white (Robert's pick from a pop-up-ride post): the rider's
   photo in black and white, the route in white over it, the words in spaced capitals, a post and a Story size
   (`cfc-site/brief/bw.js`, `V` 9); the one place the site's words sit on a photo, inside the picture only (§12).
