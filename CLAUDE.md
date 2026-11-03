@@ -43,6 +43,10 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   → `/fruitloop/`; Robert wanted it on the homepage's first screen "in case people go to the home page"). It's his own
   ride, not a calendar event, so it never reaches `RIDING`, the homepage's 2027 list or the riding page. After Dec 11 the bar
   rolls on to Tour de Palm Springs.
+  **Nov 3, 2026: El Tour de Tucson 2026 (Sat, Nov 21) heads the list until that day** (`EL_TOUR_2026` in chrome.js,
+  → `/events/el-tour-de-tucson/`, "102, 62 or 32 miles"; Robert: "add tour de tucson this month to home page"). He rides
+  it this month; the Fruit Loop takes the first screen back on Nov 22 by itself. The 2027 edition stays on the calendar
+  as before.
   Tour de Palm Springs (Feb 6, 2027) is first because it's first (Robert, Oct 21: his next ride). Each `href` opens
   that ride's row on the riding page, open (`/events/2027/riding/#<slug>`; studio pass 1). The nav button, the menu,
   the closing block, the homepage's first-screen tile (`#heroRide`) and the bar at the foot of every page (`.ridebar`,
@@ -598,6 +602,49 @@ frames (1080 × 1920: the week, then one per day, words clear of the top 200 / b
   overprinted in rose, a clean, ungraded print of Robert taped on (place · month under it), old "Riding season." scraps
   at the seams, CYCLE FOR sprayed through a card on the end card. Crisp edges, no grain, no filters, no arrows (the
   swipe cue is "Find your day." across the first seam). Photos only from the registry; only Robert recognisable.
+
+### Reels — the ride series (Nov 1, 2026; updated Nov 3 to Robert's later calls)
+Robert's first reference was a "liminal" TikTok edit (black field, tiny labels at odd positions, glitch bursts, a word
+scrambling into place, a big word on a plain card, scattered tiles, grain). The first CFC reel cut from it is the bike
+reveal, "32 of 55" (the S-Works Crux 5 LTD, built at Bicycle Haüs, ridden the next morning), cut Nov 1, 2026 and put
+through the ten-specialist panel (the `/brand-review` skill; cut and render script in the claude.ai chat that made it,
+not here — social cuts never go in git, §10). Then Robert made two later calls that win over the panel's first draft:
+the final Crux cut came back **with no grain, no glitch and no bolt**, and rebuilt **in the footage's original colors**
+("I want to keep the original video colors", Nov 1); and on Nov 2 he asked for motion that stops looking like the
+flat-vector Film Run style and loved the "Left Field" pilot ("I love this"). What holds now:
+- **The bones** (every CFC Reel and Story, for the whole 2027 series): tar field for cards; Overpass, sentence case;
+  numerals in plaster; **rose only on the blank and the plate**, never on a numeral; footage full screen **in its
+  original color** (black and white with one kept red is retired as the default — only when he asks for it); labels on
+  small tar plates, bottom left, two lines at most; hard cuts; the end is the stencil → the bar → "change" on the plate →
+  `cycleforchange.org`.
+- **No costume by default:** no grain, no glitch, no bolt, no scanlines on a Reel unless Robert asks for them on that
+  piece. Never on the site, stills, kit or print.
+- **Motion direction — Left Field** (Nov 2, 2026; the `left-field` skill is the motion studio): "new aged urban", done
+  with digital but not perfect. The pilot he loved: a paste-up wall, the summer poster torn off, halftone prints of his
+  own photos, words on slapped paper strips, CYCLE FOR sprayed through a stencil card. Handmade-looking but crisp; never
+  the flat-vector Film Run look, never sloppy.
+- **Launch only** (the reveal, not the daily posts): the 3 × 3 number grid, the scattered tiles, the plaster card.
+  The word scramble is out for good (the panel: the most date-stamped move of 2025–26).
+- **Type in motion:** nothing under 28 px at 1080 wide; copy clear of the top 220, bottom 400 and right 140 px.
+- **Copy:** miles as a whole number on screen ("37 miles", never "37.0"); the bike is only ever "the bike" (never
+  "the one", the model name is its dateline once); stats in one order — climbing · time · average speed — and never
+  top speed (the one number that is a flex); the hero line "10,000 miles. One year. All on the bike." whole, never
+  split, never shown twice; his sentence whole, both halves, on plaster, two cards, two seconds; a manufacturer's badge
+  or tagline words never typed (the badge can be in the frame); **Bicycle Haüs is a credit, once, on a plate on the
+  build footage** ("Built at Bicycle Haüs." / "Scottsdale."), and in the end card's small line only — never a
+  partner lockup, never on the blank (Robert, Nov 1: "I'm not riding for Bicycle Haüs"); the shop's logo on a shirt is
+  cropped out. Every number comes from Strava for that ride (§10 allows it: it's his own ride, he posts it himself).
+  **He rides two bikes in 2027** (the Crux and a Tarmac SL8; Robert, Nov 1), so no reel ever says one of them is *the*
+  bike for the 10,000 — "This one's in.", never "This is the bike."; "All on the bike" is the category and stays.
+- **Color held to one look across shots** (Robert, Nov 1): match exposure and white balance so the shop, the wall and the
+  overpass read as one day; no stylised grade. The bike's red stays true to **the bike's own red as measured on Robert's
+  shop photo of it** (hue 178.4, a hair cool of pure red; saturation about 212; brightness about 68 — deep candy red),
+  never a brighter or more saturated red of our choosing (Robert: "pull that color … so it stays true").
+- **Frame the whole bike** when the bike is the subject (Nov 3: every overpass moment shows the whole bike; a tight
+  push-in that crops it was cut).
+- No month or date on the reveal's labels (Robert, Nov 1: "Don't say September"); the ride's own Strava name ("New
+  bike day.") can stand in.
+- A Reel's cover is a frame with the bike full screen, not a type card.
 
 ### Today I rode for (`#today` on the homepage, Oct 12, 2026)
 Every ride Robert says who he rode for that day. `data/today.json` (date, `for` = the plate, `line` = his words,
@@ -1221,9 +1268,15 @@ two exits; the shapes are on the plan canvas.
   ride's riding months as `data-season`); `tools/test/season-selector.test.js` keeps it that way.
 - 2026-10-31 — Both films lose the "3 of 9" / "3 of 10" line over each chapter (Robert: share each one on its own): `how-we-ride-2`,
   `fruit-loop-how-we-roll-2`, new posters.
+- 2026-11-01 — Reels, the ride series: the "32 of 55" bike reveal, through the ten-specialist panel; the bones every CFC
+  Reel keeps (tar plates, Overpass, the stencil end), what's launch-only, the copy rules; Bicycle Haüs is a credit, not a
+  partner (§5). Updated Nov 3 to Robert's later calls: original color, no grain/glitch/bolt unless asked, Left Field motion.
 - 2026-10-31 — `/brief/`'s poster gets a second look, black and white (Robert's pick from a pop-up-ride post): the rider's
   photo in black and white, the route in white over it, the words in spaced capitals, a post and a Story size
   (`cfc-site/brief/bw.js`, `V` 9); the one place the site's words sit on a photo, inside the picture only (§12).
 - 2026-11-03 — `/rides/az/phoenix/this-week/`, "Phoenix group rides this week" (the weekly carousel's `/week` link): every listed Valley ride within 45 miles for the seven days from the build's day, day by day, from the ride pages' own schedule code (now `tools/lib/schedule.js`, used by `tools/lib/week.js`); a past day hides itself if a rebuild is missed; the Phoenix hub links in.
 - 2026-11-03 — The weekly ride carousel (`tools/week-kit/`): "Phoenix group rides this week" for Instagram, feed and Stories, from the same week code as `/week`, in Left Field paste-up; first run Nov 4–10 (42 group rides, Night Rider left off pending a re-check).
 - 2026-11-03 — The weekly carousel moves to Monday mornings, Monday to Sunday (Robert), as a scheduled task; rides the upkeep data doubts stay off the post and are listed with the reason (`doubt` in `tools/week-kit/week.js`, `--keep` to put one back).
+- 2026-11-03 — El Tour de Tucson 2026 (Nov 21) is Ride with me until it's ridden (the homepage tile, header, menu,
+  closing block and bar; the Fruit Loop is back on Nov 22). The story's lede opens "Recovery and the bike changed my
+  life." (Robert's pick of the quiet way to say it: no year, no number, nowhere else on the site).

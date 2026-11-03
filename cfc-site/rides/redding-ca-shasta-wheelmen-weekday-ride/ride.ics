@@ -6,25 +6,6 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:redding-ca-shasta-wheelmen-weekday-ride@cycleforchange.org
 DTSTAMP:20261001T000000Z
-DTSTART;TZID=America/Los_Angeles:20261103T083000
-DTEND;TZID=America/Los_Angeles:20261103T103000
-RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20261105T075959Z
-SUMMARY:Shasta Wheelmen Weekday Ride — Redding\, CA
-LOCATION:Sundial Bridge parking lot\, Sundial Bridge Dr\, Redding\, CA 96
- 001
-DESCRIPTION:Pace: club ratings B to C (moderate).\nSchedule: Tuesdays and
-  Thursdays from the Sundial Bridge parking lot; start time shifts by sea
- son (7:00 am in July and August\, 8:00 am in September\, 8:30 am in Octo
- ber\, 9:00 am from Nov 5; one hour earlier when the forecast high is 100
- °F or more).\nConfirm with the host before you go.\nhttps://cycleforcha
- nge.org/rides/redding-ca-shasta-wheelmen-weekday-ride/
-URL:https://cycleforchange.org/rides/redding-ca-shasta-wheelmen-weekday-r
- ide/
-END:VEVENT
-BEGIN:VEVENT
-UID:redding-ca-shasta-wheelmen-weekday-ride-from-2026-11-05@cycleforchang
- e.org
-DTSTAMP:20261001T000000Z
 DTSTART;TZID=America/Los_Angeles:20261105T090000
 DTEND;TZID=America/Los_Angeles:20261105T110000
 RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20270228T235959Z

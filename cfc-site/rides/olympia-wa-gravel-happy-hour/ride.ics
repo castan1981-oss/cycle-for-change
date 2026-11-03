@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:olympia-wa-gravel-happy-hour@cycleforchange.org
+DTSTAMP:20261026T000000Z
+DTSTART;TZID=America/Los_Angeles:20261108T090000
+DTEND;TZID=America/Los_Angeles:20261108T110000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=SU;UNTIL=20270325T235959Z
+SUMMARY:Gravel Happy Hour — Olympia\, WA
+LOCATION:Capitol State Forest (trailhead varies)
+DESCRIPTION:Pace: two groups: a beginner ride and a faster ride.\nSchedul
+ e: Specific Sundays\, November through March; casual rides at 9:00 am\, 
+ intrepid-pace rides time posted before each ride. Routes and meeting spo
+ ts posted before each ride.\nConfirm with the host before you go.\nhttps
+ ://cycleforchange.org/rides/olympia-wa-gravel-happy-hour/
+URL:https://cycleforchange.org/rides/olympia-wa-gravel-happy-hour/
+END:VEVENT
+END:VCALENDAR
