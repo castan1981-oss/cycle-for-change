@@ -569,6 +569,40 @@ The brand read: `research/brand/2026-10-29-cfc-kit.md` (its six blocks fixed Oct
 - **Short links** for the QR codes (netlify.toml): `/gr` → `/rides/`, `/2027` → `/events/2027/riding/`, `/cf` →
   `/cyclefor/`, tagged `utm_source=cfc-kit`.
 
+### The weekly ride carousel (`tools/week-kit/`, Nov 3, 2026)
+Robert, sending btwphx's weekly Valley ride round-up: "make something like this but way better and the whole idea is to
+get visits to the website." `python3 tools/week-kit/make.py [--from YYYY-MM-DD] [--skip <slug> …] [--keep <slug> …]` writes into
+`tools/week-kit/.build/out/` (never committed): the feed carousel (1080 × 1350, one wall sliced so it pans as you swipe:
+the cover, a sheet per day, Saturday or any day over nine rows split "Early." / "Less early.", the end card), the Story
+frames (1080 × 1920: the week, then one per day, words clear of the top 200 / bottom 330, room for a link sticker under
+"Tap the link."), `caption.txt` and `left-off.txt`. Every sheet ends on `cycleforchange.org/week` (§6, the this-week page).
+- **Monday mornings, Monday to Sunday** (Robert, Nov 3, 2026: "Maybe we should do it for Monday morning"). The default
+  week is this Monday on a Monday, else the next one, so the post shows the same seven days `/week` shows that morning.
+  The scheduled task "Weekly ride carousel" runs it every Monday at 5:41 am Phoenix (after the 2 am watcher refreshes
+  `data/rides-health.json`), on main, after `node tools/build-rides.js` brings `live.json` up to the day, and sends
+  Robert the slides, the Stories, the caption and what was left off.
+- **The rows are the page's rows**: `tools/week-kit/week.js` runs `tools/lib/week.js` over the listed rides (live.json
+  decides what's listed, rides.json carries the full record), sorted by start then name, so the carousel and `/week`
+  agree. The count on the cover is group rides only (open streets like Silent Sunday get a row, not a count). No key:
+  each row says what it is in the site's own words (Waits for you, Pace groups, Drops, the pace and length from
+  `pc`/`lg`, "Every other week, check first" on a biweekly ride with no posted week).
+- **The post only prints what it can stand behind.** `week.js` gives each row a `doubt` from the site's own upkeep data
+  (`tools/lib/rides-freshness.js` over `data/rides-health.json`): an open red flag; the host's page using ending words
+  or showing no upcoming date; or the host's own calendar feed that used to list the ride and hasn't for 14+ days (a
+  feed that never matched it is not evidence). Those rides stay off the post and go in `left-off.txt` with the reason;
+  `/week` still lists them with its own nudges. `--keep <slug>` puts one back (Robert's call, or after a re-check);
+  `--skip <slug>` leaves one off by hand. The left-off list is the re-check list (`/rides check <slug>`). Nov 9–15,
+  2026: Night Rider Series @ Trail 100, Wednesday Night Roll, Chandler North Saturday Ride, Bear Claw, Stadium Ride
+  (calendars), the R.T. O'Sullivan's Tuesday ride (no upcoming date).
+- **His stamps** (`MINE`): "I ride this one." on the Friday Shop Ride (he rides it every Friday), "I wrote this one up."
+  on TSR (his write-up on its page). Only rides he's said he rides or wrote up.
+- **The look is Left Field paste-up in Lane Paint** (the "We made it." reel's baseline): poured concrete with panel
+  joints and tie holes, day sheets pasted flat (no shadow, the joints show through at 22%), the day on a bruise strip,
+  the date on a powder-rose strip (the hero's date plate), a halftone print of a Valley road in patina with the count
+  overprinted in rose, a clean, ungraded print of Robert taped on (place · month under it), old "Riding season." scraps
+  at the seams, CYCLE FOR sprayed through a card on the end card. Crisp edges, no grain, no filters, no arrows (the
+  swipe cue is "Find your day." across the first seam). Photos only from the registry; only Robert recognisable.
+
 ### Reels — the ride series (Nov 1, 2026; updated Nov 3 to Robert's later calls)
 Robert's first reference was a "liminal" TikTok edit (black field, tiny labels at odd positions, glitch bursts, a word
 scrambling into place, a big word on a plain card, scattered tiles, grain). The first CFC reel cut from it is the bike
@@ -774,6 +808,20 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   worked out at build time from the ride's own rule), the Fridays line from the data, "What Critical Mass is" from two dated
   sources in a fold, and the list paragraph. Every listed Critical Mass ride page links up to it (`guideLine()`); it's in the
   rides sitemap. Bike Party and open streets come next, the same way.
+- **Phoenix group rides this week** (Nov 3, 2026; Robert's weekly Instagram carousel): `/rides/az/phoenix/this-week/`
+  (`phoenixWeekPage()` in build-rides.js) lists every listed ride in the Valley (Arizona, within 45 miles of 33.4771,
+  -112.0445: `PHOENIX_WEEK` in `tools/lib/week.js`, the one constant) for the seven days starting the build's day, Phoenix
+  time: one section per day, start-time order, each row the ride's own card with that day's start (`S.startOn`; a biweekly
+  ride with no posted week adds the ride page's "confirm which week with the host"). `weekOf()` steps `nextOccurrence()`
+  through the window and adds the host's posted dates (one row per instant); both live in `tools/lib/schedule.js` (moved
+  out of build-rides.js unchanged), so first_ride (no Fruit Loop before Dec 11), breaks, seasons, biweekly weeks, monthly
+  rules and start_times all hold. Rides with no time the schedule can work out fold under the days ("Also in the Valley, on
+  the host's own calendar"). Each day carries `data-ymd` and a few lines of script hide a day already past in Phoenix, so a
+  missed rebuild never shows yesterday (no script: every day shows). CollectionPage + ItemList, no Event markup (the ride
+  pages carry theirs); in the rides sitemap and the hub history; the Phoenix hub links in ("This week, day by day"). The
+  carousel prints `cycleforchange.org/week` (`netlify.toml`, 302, tagged `utm_source=instagram`). The window rolls with the
+  daily rebuild, so the page matches the carousel on the day it's posted; later that week it has dropped the days gone and
+  added the next ones. Tests: `tools/test/week.test.js`.
 - **Biweekly rides with a posted date** run on that date's weeks (`dates` on a `biweekly` ride; `data/SCHEMA.md`), so
   "Next ride" lands on the right Saturday instead of the next one.
 
@@ -1226,6 +1274,9 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-31 — `/brief/`'s poster gets a second look, black and white (Robert's pick from a pop-up-ride post): the rider's
   photo in black and white, the route in white over it, the words in spaced capitals, a post and a Story size
   (`cfc-site/brief/bw.js`, `V` 9); the one place the site's words sit on a photo, inside the picture only (§12).
+- 2026-11-03 — `/rides/az/phoenix/this-week/`, "Phoenix group rides this week" (the weekly carousel's `/week` link): every listed Valley ride within 45 miles for the seven days from the build's day, day by day, from the ride pages' own schedule code (now `tools/lib/schedule.js`, used by `tools/lib/week.js`); a past day hides itself if a rebuild is missed; the Phoenix hub links in.
+- 2026-11-03 — The weekly ride carousel (`tools/week-kit/`): "Phoenix group rides this week" for Instagram, feed and Stories, from the same week code as `/week`, in Left Field paste-up; first run Nov 4–10 (42 group rides, Night Rider left off pending a re-check).
+- 2026-11-03 — The weekly carousel moves to Monday mornings, Monday to Sunday (Robert), as a scheduled task; rides the upkeep data doubts stay off the post and are listed with the reason (`doubt` in `tools/week-kit/week.js`, `--keep` to put one back).
 - 2026-11-03 — El Tour de Tucson 2026 (Nov 21) is Ride with me until it's ridden (the homepage tile, header, menu,
   closing block and bar; the Fruit Loop is back on Nov 22). The story's lede opens "Recovery and the bike changed my
   life." (Robert's pick of the quiet way to say it: no year, no number, nowhere else on the site).
