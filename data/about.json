@@ -1,0 +1,27 @@
+{
+  "_note": [
+    "Robert's own words for /about/ (scripts/build-about.js), verbatim from his latest revised narrative: no rewriting, no added details, no recovery references (Oct 28, 2026 brief). A line that reads as one is flagged to him, never cut or reworded quietly.",
+    "cold: his first lines, moved out of the opening (never copied), for the dark title card. title: the h1.",
+    "sections: in HIS order. heading: his own, exactly as he wrote it (null if he has none). room picks a designed room: open (under the letterbox), bike (his film across the night-to-day seam), bubble (the AIDS/LifeCycle prints), ten (10,000 and the year as a lane), mission (the orgs as a roll call and the help lines), statement (one line, type only), plain (a section the layout has no room for). A section's body is a list; each item is one paragraph as a string, {\"lines\": [...]} for his line breaks or dialogue, or {\"list\": [...]} for a list.",
+    "waiting: true means his words haven't come in (the page shows a slot and stays noindex). A room he doesn't write is left out, not left waiting.",
+    "photos (the bubble room): src is a file under cfc-site/, where is its place · month line. A photo with a src but no where is still a slot."
+  ],
+  "title": "About me",
+  "cold": { "waiting": true, "lines": [] },
+  "sections": [
+    { "room": "open", "heading": null, "waiting": true, "body": [] },
+    { "room": "bike", "heading": "Then Came the Bike", "waiting": true, "body": [] },
+    { "room": "bubble", "heading": "The Love Bubble Was Real", "waiting": true, "body": [] },
+    { "room": "statement", "text": "I found a version of myself I actually liked hanging out with." },
+    { "room": "ten", "heading": null, "waiting": true, "body": [] },
+    { "room": "mission", "heading": "My Mission", "waiting": true, "body": [] }
+  ],
+  "photos": [
+    { "want": "You at the AIDS/LifeCycle sign wall", "src": "", "alt": "", "where": "" },
+    { "want": "The coast road from behind, riders strung out ahead", "src": "", "alt": "", "where": "" },
+    { "want": "Camp: the tents from a distance", "src": "", "alt": "", "where": "" },
+    { "want": "Halfway to LA", "src": "", "alt": "", "where": "" },
+    { "want": "A small town you rolled through", "src": "", "alt": "", "where": "" },
+    { "want": "The finish", "src": "", "alt": "", "where": "" }
+  ]
+}
