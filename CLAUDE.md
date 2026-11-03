@@ -565,6 +565,30 @@ The brand read: `research/brand/2026-10-29-cfc-kit.md` (its six blocks fixed Oct
 - **Short links** for the QR codes (netlify.toml): `/gr` → `/rides/`, `/2027` → `/events/2027/riding/`, `/cf` →
   `/cyclefor/`, tagged `utm_source=cfc-kit`.
 
+### The weekly ride carousel (`tools/week-kit/`, Nov 3, 2026)
+Robert, sending btwphx's weekly Valley ride round-up: "make something like this but way better and the whole idea is to
+get visits to the website." `python3 tools/week-kit/make.py [--from YYYY-MM-DD] [--skip <slug> …]` writes into
+`tools/week-kit/.build/out/` (never committed): the feed carousel (1080 × 1350, one wall sliced so it pans as you swipe:
+the cover, a sheet per day, Saturday or any day over nine rows split "Early." / "Less early.", the end card), the Story
+frames (1080 × 1920: the week, then one per day, words clear of the top 200 / bottom 330, room for a link sticker under
+"Tap the link.") and `caption.txt`. Every sheet ends on `cycleforchange.org/week` (§6, the this-week page).
+- **The rows are the page's rows**: `tools/week-kit/week.js` runs `tools/lib/week.js` over the listed rides (live.json
+  decides what's listed, rides.json carries the full record), sorted by start then name, so the carousel and `/week`
+  agree. The count on the cover is group rides only (open streets like Silent Sunday get a row, not a count). No key:
+  each row says what it is in the site's own words (Waits for you, Pace groups, Drops, the pace and length from
+  `pc`/`lg`, "Every other week, check first" on a biweekly ride with no posted week).
+- **`--skip`** leaves a ride off when its own record is in doubt; say so to Robert and re-check it (`/rides check`).
+  Nov 3, 2026: the Night Rider Series @ Trail 100 (its note says the Meetup series ended Oct 27; btwphx lists it Nov 4,
+  7:00 pm).
+- **His stamps** (`MINE`): "I ride this one." on the Friday Shop Ride (he rides it every Friday), "I wrote this one up."
+  on TSR (his write-up on its page). Only rides he's said he rides or wrote up.
+- **The look is Left Field paste-up in Lane Paint** (the "We made it." reel's baseline): poured concrete with panel
+  joints and tie holes, day sheets pasted flat (no shadow, the joints show through at 22%), the day on a bruise strip,
+  the date on a powder-rose strip (the hero's date plate), a halftone print of a Valley road in patina with the count
+  overprinted in rose, a clean, ungraded print of Robert taped on (place · month under it), old "Riding season." scraps
+  at the seams, CYCLE FOR sprayed through a card on the end card. Crisp edges, no grain, no filters, no arrows (the
+  swipe cue is "Find your day." across the first seam). Photos only from the registry; only Robert recognisable.
+
 ### Today I rode for (`#today` on the homepage, Oct 12, 2026)
 Every ride Robert says who he rode for that day. `data/today.json` (date, `for` = the plate, `line` = his words,
 `photo`, `photo2`, `film`) → `todaySection()` in `scripts/build-home.js` → a light section after the 10,000 (`#road`)
@@ -1191,3 +1215,4 @@ two exits; the shapes are on the plan canvas.
   photo in black and white, the route in white over it, the words in spaced capitals, a post and a Story size
   (`cfc-site/brief/bw.js`, `V` 9); the one place the site's words sit on a photo, inside the picture only (§12).
 - 2026-11-03 — `/rides/az/phoenix/this-week/`, "Phoenix group rides this week" (the weekly carousel's `/week` link): every listed Valley ride within 45 miles for the seven days from the build's day, day by day, from the ride pages' own schedule code (now `tools/lib/schedule.js`, used by `tools/lib/week.js`); a past day hides itself if a rebuild is missed; the Phoenix hub links in.
+- 2026-11-03 — The weekly ride carousel (`tools/week-kit/`): "Phoenix group rides this week" for Instagram, feed and Stories, from the same week code as `/week`, in Left Field paste-up; first run Nov 4–10 (42 group rides, Night Rider left off pending a re-check).
