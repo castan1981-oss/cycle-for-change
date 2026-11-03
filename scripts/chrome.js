@@ -155,7 +155,12 @@ const RIDING = (count("data/calendar-2027.json", (d) => (d.events || []).filter(
 // Fruit Loop, is the next ride he's doing, so it heads the bar's list until its first Friday (Dec 11, 2026). It isn't on the
 // 2027 calendar, so it never reaches RIDING (the homepage's 2027 list) or the riding page. After Dec 11 the bar rolls on.
 const FRUIT_LOOP = { until: "2026-12-11", date: "Dec 11", name: "The Fruit Loop", where: "Phoenix", href: "/fruitloop/" };
-const NEXT_RIDES = [FRUIT_LOOP, ...RIDING.filter((r) => r.status === "confirmed" && r.end).map((r) => ({ until: r.end, date: r.date, name: r.name, where: r.where, href: r.href }))];
+// Nov 3, 2026 (Robert: "add tour de tucson this month to home page"): he rides El Tour de Tucson 2026 (Sat, Nov 21, the
+// organizer's date), so it heads the list until that day, and the Fruit Loop takes over on Nov 22 by itself (ridebar.js
+// re-picks in the browser). Its link is the 2026 event page (/events/el-tour-de-tucson/), not the riding page: the 2027
+// edition is the one on the calendar.
+const EL_TOUR_2026 = { until: "2026-11-21", date: "Nov 21", name: "El Tour de Tucson", where: "102, 62 or 32 miles", href: "/events/el-tour-de-tucson/" };
+const NEXT_RIDES = [EL_TOUR_2026, FRUIT_LOOP, ...RIDING.filter((r) => r.status === "confirmed" && r.end).map((r) => ({ until: r.end, date: r.date, name: r.name, where: r.where, href: r.href }))];
 const phxToday = () => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Phoenix" }).format(new Date());
 const NEXT_RIDE = NEXT_RIDES.find((r) => r.until >= phxToday()) || null;
 const RIDE_HREF = NEXT_RIDE ? NEXT_RIDE.href : RIDES_LIST;

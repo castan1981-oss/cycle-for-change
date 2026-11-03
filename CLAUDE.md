@@ -43,6 +43,10 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   → `/fruitloop/`; Robert wanted it on the homepage's first screen "in case people go to the home page"). It's his own
   ride, not a calendar event, so it never reaches `RIDING`, the homepage's 2027 list or the riding page. After Dec 11 the bar
   rolls on to Tour de Palm Springs.
+  **Nov 3, 2026: El Tour de Tucson 2026 (Sat, Nov 21) heads the list until that day** (`EL_TOUR_2026` in chrome.js,
+  → `/events/el-tour-de-tucson/`, "102, 62 or 32 miles"; Robert: "add tour de tucson this month to home page"). He rides
+  it this month; the Fruit Loop takes the first screen back on Nov 22 by itself. The 2027 edition stays on the calendar
+  as before.
   Tour de Palm Springs (Feb 6, 2027) is first because it's first (Robert, Oct 21: his next ride). Each `href` opens
   that ride's row on the riding page, open (`/events/2027/riding/#<slug>`; studio pass 1). The nav button, the menu,
   the closing block, the homepage's first-screen tile (`#heroRide`) and the bar at the foot of every page (`.ridebar`,
@@ -1176,3 +1180,6 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-31 — `/brief/`'s poster gets a second look, black and white (Robert's pick from a pop-up-ride post): the rider's
   photo in black and white, the route in white over it, the words in spaced capitals, a post and a Story size
   (`cfc-site/brief/bw.js`, `V` 9); the one place the site's words sit on a photo, inside the picture only (§12).
+- 2026-11-03 — El Tour de Tucson 2026 (Nov 21) is Ride with me until it's ridden (the homepage tile, header, menu,
+  closing block and bar; the Fruit Loop is back on Nov 22). The story's lede opens "Recovery and the bike changed my
+  life." (Robert's pick of the quiet way to say it: no year, no number, nowhere else on the site).
