@@ -171,6 +171,13 @@
   status = 302
   force = true
 
+# Nov 3, 2026: the weekly Instagram carousel's link ("Phoenix group rides this week" prints cycleforchange.org/week).
+[[redirects]]
+  from = "/week"
+  to = "/rides/az/phoenix/this-week/?utm_source=instagram&utm_medium=social&utm_campaign=weekly-rides"
+  status = 302
+  force = true
+
 [[redirects]]
   from = "/shopride"
   to = "/rides/scottsdale-az-bicycle-haus-friday-shop-ride/#reviews"

@@ -727,6 +727,20 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   worked out at build time from the ride's own rule), the Fridays line from the data, "What Critical Mass is" from two dated
   sources in a fold, and the list paragraph. Every listed Critical Mass ride page links up to it (`guideLine()`); it's in the
   rides sitemap. Bike Party and open streets come next, the same way.
+- **Phoenix group rides this week** (Nov 3, 2026; Robert's weekly Instagram carousel): `/rides/az/phoenix/this-week/`
+  (`phoenixWeekPage()` in build-rides.js) lists every listed ride in the Valley (Arizona, within 45 miles of 33.4771,
+  -112.0445: `PHOENIX_WEEK` in `tools/lib/week.js`, the one constant) for the seven days starting the build's day, Phoenix
+  time: one section per day, start-time order, each row the ride's own card with that day's start (`S.startOn`; a biweekly
+  ride with no posted week adds the ride page's "confirm which week with the host"). `weekOf()` steps `nextOccurrence()`
+  through the window and adds the host's posted dates (one row per instant); both live in `tools/lib/schedule.js` (moved
+  out of build-rides.js unchanged), so first_ride (no Fruit Loop before Dec 11), breaks, seasons, biweekly weeks, monthly
+  rules and start_times all hold. Rides with no time the schedule can work out fold under the days ("Also in the Valley, on
+  the host's own calendar"). Each day carries `data-ymd` and a few lines of script hide a day already past in Phoenix, so a
+  missed rebuild never shows yesterday (no script: every day shows). CollectionPage + ItemList, no Event markup (the ride
+  pages carry theirs); in the rides sitemap and the hub history; the Phoenix hub links in ("This week, day by day"). The
+  carousel prints `cycleforchange.org/week` (`netlify.toml`, 302, tagged `utm_source=instagram`). The window rolls with the
+  daily rebuild, so the page matches the carousel on the day it's posted; later that week it has dropped the days gone and
+  added the next ones. Tests: `tools/test/week.test.js`.
 - **Biweekly rides with a posted date** run on that date's weeks (`dates` on a `biweekly` ride; `data/SCHEMA.md`), so
   "Next ride" lands on the right Saturday instead of the next one.
 
@@ -1176,3 +1190,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-10-31 — `/brief/`'s poster gets a second look, black and white (Robert's pick from a pop-up-ride post): the rider's
   photo in black and white, the route in white over it, the words in spaced capitals, a post and a Story size
   (`cfc-site/brief/bw.js`, `V` 9); the one place the site's words sit on a photo, inside the picture only (§12).
+- 2026-11-03 — `/rides/az/phoenix/this-week/`, "Phoenix group rides this week" (the weekly carousel's `/week` link): every listed Valley ride within 45 miles for the seven days from the build's day, day by day, from the ride pages' own schedule code (now `tools/lib/schedule.js`, used by `tools/lib/week.js`); a past day hides itself if a rebuild is missed; the Phoenix hub links in.
