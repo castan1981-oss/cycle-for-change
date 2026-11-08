@@ -84,14 +84,16 @@ const NOTE = (() => {
 const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const placeMonth = (where, ymd) => { const place = String(where || "").split(" · ")[0].trim(); const [y, m] = String(ymd || "").split("-").map(Number); return place && y && m ? `${place} · ${MON[m - 1]} ${y}` : String(where || ""); };
 
-// —— the mark. The letters are the header's defs (#lpC …, scripts/chrome.js), so every copy is the one drawing ——
-const LETTERS = (row2) => `<use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/>${row2 ? `</g><g transform="translate(0 180)"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpF"/><use href="#lpO" transform="translate(74 0)"/><use href="#lpR" transform="translate(148 0)"/></g>` : `<use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/>`}`;
-// one line, with the blank (the logo as the header draws it)
-const MARK_LINE = (cls, worn) => `<svg class="${cls}" viewBox="0 0 760 150" aria-hidden="true" focusable="false"><g${worn ? ` filter="url(#lpWorn)"` : ""}><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">${LETTERS(false)}</g><rect class="lp-bar" x="652" y="114" width="98" height="36"/></g></svg>`;
-// stacked, CYCLE over FOR, the blank after the R
-const MARK_STACK = (cls) => `<svg class="${cls}" viewBox="-10 -10 370 350" aria-hidden="true" focusable="false"><g><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">${LETTERS(true)}</g><rect class="lp-bar" x="238" y="294" width="98" height="36"/></g></svg>`;
-// one line, no bar: the plate after it is HTML (it carries a word)
-const MARK_WORD = (cls) => `<svg class="${cls}" viewBox="0 0 626 150" aria-hidden="true" focusable="false"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">${LETTERS(false)}</g></svg>`;
+// —— the mark. Nov 8, 2026 preview: the 2027 lettering from the ASSOS proof (scripts/mark-2027.js). Its letters are
+//    defs in the header's copy (swapped in below), so every copy on the page is the one drawing. The Lane Paint
+//    stencil (#lpC …, scripts/chrome.js) stays on every other page until Robert says roll it out. ——
+const NEW_MARK = require("./mark-2027.js");
+// one line, with the plate (the logo as the header draws it)
+const MARK_LINE = (cls) => NEW_MARK.LINE(cls, false);
+// stacked, cycle over for, the plate after the r
+const MARK_STACK = (cls) => NEW_MARK.STACK(cls);
+// one line, no plate: the plate after it is HTML (it carries a word)
+const MARK_WORD = (cls) => NEW_MARK.WORD(cls);
 
 // —— the house marks on the homepage (24 grid, one 1.7 stroke, round caps), inlined so no sprite request ——
 const DEFS = `<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -513,7 +515,7 @@ const page = `<!doctype html>
 </head>
 <body class="home">
 ${DEFS}
-${CHROME.HEADER.replace('<header class="nav site-head" id="nav">', '<header class="nav site-head" id="nav" data-solid="false">').replace('<p class="tally-line">', '<p class="tally-line tally-line--home">')}
+${CHROME.HEADER.replace(CHROME.MARK, NEW_MARK.LINE("brand-mark", true)).replace('<header class="nav site-head" id="nav">', '<header class="nav site-head" id="nav" data-solid="false">').replace('<p class="tally-line">', '<p class="tally-line tally-line--home">')}
 
 <main id="main">
 
