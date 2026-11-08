@@ -578,23 +578,15 @@ a.strip-cell:focus-visible{outline-offset:6px}
 /* ——————————————————————————————————————————————————————————
    Nov 8, 2026 PREVIEW: the 2027 lettering and the kit's pink (Robert: "the new logo is that lettering", "I like the
    pink"). The letters are traced from the ASSOS proof (scripts/mark-2027.js). One pink, Pantone 7419 C, on every plate,
-   light ground or dark, with paper type and a rivet in each corner, the way the kit prints it. Homepage only for now.
+   light ground or dark, with paper type, the way the kit prints it (no rivets). Homepage only for now.
    —————————————————————————————————————————————————————————— */
 :root{--creosote:#B04A5B;--plate:#B04A5B}
 .cf-plate{fill:var(--plate)}
-.cf-rivet{fill:var(--paper)}
 .brand .brand-mark{height:30px}
 @media (max-width:899px){.brand .brand-mark{height:28px}}
-/* the type plates: pink, paper type, rivets, set a touch off square like the proof's */
-.today-plate,.sign-plate{
-  background:
-    radial-gradient(circle at .28em .28em,var(--paper) 0 .055em,transparent .07em),
-    radial-gradient(circle at calc(100% - .28em) .28em,var(--paper) 0 .055em,transparent .07em),
-    radial-gradient(circle at .28em calc(100% - .28em),var(--paper) 0 .055em,transparent .07em),
-    radial-gradient(circle at calc(100% - .28em) calc(100% - .28em),var(--paper) 0 .055em,transparent .07em),
-    var(--plate);
-  color:var(--paper);border-radius:.07em;transform:rotate(-2.5deg);transform-origin:0 100%;
-  padding:.2em .55em .12em;margin-bottom:calc(var(--h) * .15)}
+/* the type plates: pink, paper type, set a touch off square like the proof's. No rivets (Robert, Nov 8) */
+.today-plate,.sign-plate{background:var(--plate);color:var(--paper);border-radius:.07em;transform:rotate(-2.5deg);transform-origin:0 100%;
+  padding:.18em .36em .1em;margin-bottom:calc(var(--h) * .15)}
 .today-sign,.sign-h{column-gap:calc(var(--h) * .15)}
 /* the empty sign is the proof's blank plate (a little wider than tall), sized to sit after "for" on the same line */
 .sign-plate[data-empty="true"]{width:calc(var(--h) * .58);height:calc(var(--h) * .46);padding:0;font-size:calc(var(--h) * .34)}
