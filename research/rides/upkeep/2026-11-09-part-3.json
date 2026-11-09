@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "harmony-pa-premier-bicycle-club-harmony-lake-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Premier Bicycle Club's November 2026 calendar lists 'Harmony Lake Ride 14+/Moderate/30' on Wed Nov 4, 11, 18, and 25, 2026; the 'CANCELED' entry in the same calendar applies to 'Moraine and Beyond' (a Saturday ride on Nov 7), not to this ride (fetched Nov 9, 2026).",
+    "sources": ["https://www.premierbicycleclub.org/content.aspx?page_id=4001&club_id=400812"]
+  },
+  {
+    "slug": "braintree-ma-landrys-braintree-saturday-road-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-10-10",
+    "evidence": "Landry's group-rides page reads 'Landry's Group Rides have ended for the season. Thank you for riding with us this past year! Check back in early spring to see what we have planned for the 2027 season.' (fetched Nov 9, 2026).",
+    "sources": ["https://www.landrys.com/pages/landrys-group-rides"],
+    "status_note": "Back in early spring 2027, Landry's says on their group-rides page."
+  },
+  {
+    "slug": "wexford-pa-premier-bicycle-club-north-park-loops",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "No North Park Loops listing appears on the Premier Bicycle Club's November 2026 calendar (premierbicycleclub.org/content.aspx?page_id=4001&club_id=400812). The 'CANCELED' entry in the schedule text near this ride's name applies to a different Saturday ride ('Moraine and Beyond'), not North Park Loops. The ride meets at 5:00 pm — now dark well before 7:00 pm in Pennsylvania — and may not run in winter. The club's calendar did not show any December instances; check again in spring 2027."
+  },
+  {
+    "slug": "leeds-gb-leeds-cycling-saturday-off-road-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The Leeds Cycling Meetup group page (meetup.com/leeds-cycling/) shows 'Group not found' (soft-404). The ICS feed (meetup.com/leeds-cycling/events/ical/) returns three upcoming events, but each one — Nov 14, Nov 21, and Nov 28 — is individually marked 'This event was canceled' on its own event page. No alternate platform for Leeds Cycling found. Check in December whether the ICS lists new unlisted events, or search for the group on other platforms."
+  },
+  {
+    "slug": "bend-or-tuesday-night-rubber-mallet",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The watch URL (bendbikerides.com) returns 403 and blocks all requests. The ride is announced on the BendCycling Google Group (groups.google.com/g/bendcycling); the most recent 2026 post found announced a spring season start on March 24, rolling from Webcyclery at 157 NW Franklin Ave, Bend — the start location may differ from the current record. No fall 2026 schedule found; the 2025 season ended in October. Check the BendCycling Google Group for the current season's schedule and end date."
+  },
+  {
+    "slug": "chandler-az-global-bikes-chandler-north-saturday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Global Bikes' Meetup page lists 'The Chandler North Saturday Circuit Ride ** 7 am **' as an upcoming event on Sat Nov 14, 2026 (and shows it ran Nov 7) with 'NEW START TIME 7:00 AM'; the description says meet 6:45 am, begin the ride at 7:00 am MST from Global Bikes & E-Bikes, 2915 W Ray Rd #10, Chandler, AZ (fetched Nov 9, 2026).",
+    "sources": ["https://www.meetup.com/global-bikes-meetup/"],
+    "changes": {
+      "name": "Chandler North Saturday Circuit Ride",
+      "schedule": "Every Saturday, meet 6:45 am, roll 7:00 am",
+      "time_local": "7:00 am",
+      "start_hhmm": "07:00"
+    }
+  },
+  {
+    "slug": "corpus-christi-tx-cc-led-saturday-light-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The watch URL (thebendmag.com article) returns 403 and blocks all requests. No other public source with a dated 2026 schedule was found. The only remaining channel is Instagram at @getccled, which requires a login to read. Check Instagram @getccled for current status."
+  },
+  {
+    "slug": "flagstaff-az-vvcc-mormon-lake-thursday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "VVCC Road Bike Rides' Meetup page and ICS feed list 'Mormon Lake Lodge out and back.' as a recurring Thursday event next on Thu, Nov 12, 2026 at 10:00 AM MST from Lake Mary Rd & Forest Service Road 132, Coconino, AZ (fetched Nov 9, 2026).",
+    "sources": ["https://www.meetup.com/vvcc-road-bike-rides/"],
+    "changes": {
+      "schedule": "Every Thursday, 10:00 am",
+      "time_local": "10:00 am",
+      "start_hhmm": "10:00",
+      "refresh": {
+        "watch_url": "https://www.meetup.com/vvcc-road-bike-rides/",
+        "feed_url": "https://www.meetup.com/vvcc-road-bike-rides/events/ical/"
+      }
+    }
+  }
+]

@@ -1,0 +1,69 @@
+[
+  {
+    "slug": "charlottesville-va-blue-wheel-tuesday-shop-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "status_note": "Paused for the winter; no return date given on Blue Wheel's page.",
+    "evidence": "Blue Wheel's group rides page reads 'THE TUESDAY SHOP RIDE - Rolling at 6:15 PM - PAUSED FOR THE WINTER' (fetched Nov 9, 2026).",
+    "sources": ["https://www.bluewheel.com/articles/group-rides-pg216.htm"]
+  },
+  {
+    "slug": "charlottesville-va-blue-wheel-winter-gravel-series",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Blue Wheel's group rides page confirms the Winter Gravel Series with venues: #1 Nov 15 at Fleetwood Community Center, Massies Mill VA (9am/75mi, 10am/50mi, 11am/25mi); #2 Dec 6 Three Notch'd Brewery, Nelson County; #3 Dec 27 Xmas Wild Card; #4 Jan 17 Stony Point — Southwest Mountain Vineyards; #5 Feb 7 Free Union — Tiffin Farm; #6 Feb 28 Rocktown Bicycles; #7 Mar 21 Love Ridge — Series Finale (fetched Nov 9, 2026).",
+    "sources": ["https://www.bluewheel.com/articles/group-rides-pg216.htm"],
+    "changes": {
+      "schedule": "Seven Sundays, November to March: Nov 15 (Fleetwood Community Center, Massies Mill VA; 9am for 75mi, 10am for 50mi, 11am for 25mi), Dec 6 (Three Notch'd Brewery, Nelson County), Dec 27 (Xmas Wild Card — destination TBA), Jan 17 (Stony Point — Southwest Mountain Vineyards), Feb 7 (Free Union — Tiffin Farm), Feb 28 (Rocktown Bicycles), Mar 21 (Series Finale — Love Ridge Mountain Lodging)",
+      "start_location": {
+        "name": "Varies by ride; Nov 15 at Fleetwood Community Center, Massies Mill, VA",
+        "address": null
+      }
+    }
+  },
+  {
+    "slug": "chicago-il-bff-bikes-beginner-intermediate-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "BFF Bikes events page (bffbikes.com/events) shows no Beginner/Intermediate Ride through December 2026; a 'Beginner Gravel Ride or Endurance Ride' on Nov 8 is a 5.5-hour gravel event from a different start location, not the monthly beginner ride; last confirmed date was Oct 4."
+  },
+  {
+    "slug": "chicago-il-bff-bikes-thursday-wtf-social-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "BFF Bikes events page (bffbikes.com/events) shows no Thursday WTF Social Rides in November or December 2026; the shop's outdoor rides appear to have wrapped for the season; last confirmed date was Sep 10."
+  },
+  {
+    "slug": "chicago-il-windy-city-cycling-club-sunday-morning",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "WCCC Meetup events page (meetup.com/windy-city-cycling-club/events/) shows 0 upcoming events; the ICS feed also shows 0 events; last Meetup event was Oct 31. Check Instagram @wcccrolls or windycitycyclingclub.com for winter schedule."
+  },
+  {
+    "slug": "cincinnati-oh-ride-pleasant-streets",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Queen City Bike calendar lists Ride Pleasant Streets 3rd Saturday Long Edition for Sat Nov 21, 2026, and 1st Saturday Short Edition for Sat Dec 5, both from Community Happens Here, 6238 Montgomery Rd; event description confirms gather 1:45 pm, rolling by 2:05 pm (fetched Nov 9, 2026).",
+    "sources": ["https://events.queencity.bike/event/_8oo44gpo68pj0b9o8or32b9k6923eba16gq44b9l6p0jeg9o8ksk8h9m8c_20261121T190000Z"],
+    "changes": {
+      "refresh": {
+        "watch_url": "https://events.queencity.bike/event/_8oo44gpo68pj0b9o8or32b9k6923eba16gq44b9l6p0jeg9o8ksk8h9m8c_20261121T190000Z"
+      }
+    }
+  },
+  {
+    "slug": "cold-spring-ky-cincinnati-cycle-club-aterhamtning-thursday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "Cincinnati Cycle Club calendar (cincinnaticycleclub.org) shows November 2026 events but no Återhämtning's Thursday Ride listed; last calendar date was Oct 29. Check the CCC calendar at cincinnaticycleclub.org for new dates."
+  },
+  {
+    "slug": "columbus-oh-thursday-night-central-columbus-metro-parks-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "Outdoor Pursuits event page shows Sep 17, 2026 as the last event date; the weekly training rides calendar (outdoor-pursuits.org/weekly-training-rides/) shows no Thursday events for the week of Nov 9–15. Check outdoor-pursuits.org or @outdoor_pursuits on Instagram for winter schedule."
+  }
+]

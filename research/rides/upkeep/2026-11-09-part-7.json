@@ -1,0 +1,73 @@
+[
+  {
+    "slug": "emporia-ks-babes-on-bikes-wednesday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "visitemporia.com has returned 403 for 6 consecutive watcher runs since Oct 5. WebFetch also returns 403. No 2026 confirmation of the Wednesday ride found in search. The host says to follow the Babes on Bikes Facebook page for updates."
+  },
+  {
+    "slug": "gastonia-nc-ride-a-bike-happy-tuesday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "weeklyrides.com still lists the ride: \"Tuesdays (May through August) — A social urban ride through quiet neighborhoods in Gastonia. The ride begins at 6:00pm from the shop. 9 miles. 6-9 mph pace.\" The flag was the upcoming-events section rolling to November rides; the ride description is unchanged (fetched Nov 9, 2026).",
+    "sources": ["https://www.weeklyrides.com/index.php/group-rides"]
+  },
+  {
+    "slug": "lubbock-tx-wtca-saturday-ransom",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "WTCA's club-rides page shows Saturday Ransom at Ransom Canyon Center Parking Lot, Saturday 7:00 AM, 40 miles, 16–19 mph pace — the start time changed from 8:00 am to 7:00 am and the distance options simplified to 40 miles (fetched Nov 9, 2026).",
+    "sources": ["https://bikewtca.org/club-rides/"],
+    "changes": {
+      "schedule": "Every Saturday, 7:00 am from Ransom Canyon Center Parking Lot (8312 E FM 3523). 40 miles, 16–19 mph, challenging hills, not a beginner ride. Follow WTCA on Facebook for pop-up ride updates.",
+      "time_local": "7:00 am",
+      "start_hhmm": "07:00"
+    }
+  },
+  {
+    "slug": "lubbock-tx-wtca-tuesday-thursday-ransom-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "WTCA's club-rides page lists Tuesday/Thursday Ransom Ride at Ransom Canyon Center Parking Lot, 8:00 AM (morning group, 15–17 mph, no-drop) and 5:30 PM (afternoon group, 17–19 mph, drop ride) — same days, times and location as our record (fetched Nov 9, 2026).",
+    "sources": ["https://bikewtca.org/club-rides/"]
+  },
+  {
+    "slug": "nashville-tn-music-city-dope-pedalers-friday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "Watch page (Nashville Scene article) returns 429 bot-wall. The ride has no website — Instagram only. walkbikenashville.org returns 403. urbaanite.com source is undated, circa 2022. The Nashville Scene article confirms weekly rides at Frankie Pierce Park but gives no day or time. The group's 2026 training page shows Saturday rides in April/May for Tour de Nash prep, not a regular Friday ride. Friday 6pm schedule cannot be confirmed at the host's own source. Check Instagram @musiccitydopepedalers."
+  },
+  {
+    "slug": "nashville-tn-ride615-sylvan-park-tuesday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "ride615.com/articles/local-rides-pg195.htm loaded OK but the Sylvan Park Tuesday Night Ride at 6:15pm no longer appears. The page now lists only \"11 Smiles Per Hour\" (Thursdays at 6:00pm from Sylvan Park). No 2026 evidence of the Tuesday ride in search results. Call Ride615 Sylvan Park at 615-922-6511 or check their Facebook page."
+  },
+  {
+    "slug": "nashville-tn-shelby-ave-bicycle-tuesday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "ma.to/venue/shelbybicycle says \"No upcoming events scheduled.\" The last listed Tuesday Night Ride is dated May 19, 2026 — no events in nearly 6 months. The shop's own website (greenfleetbikes.com) makes no mention of group rides. Check Instagram @shelbybicycle or call 615-924-3274."
+  },
+  {
+    "slug": "pensacola-fl-bike-pensacola-slow-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "bikepensacola.org shows the next Slow Ride on Saturday, Nov 21, 3PM–4:30PM at The Burrow (1010 N 12th Ave, Pensacola) — the day, time and location vary each month; May 2026 was Friday at 6pm, November 2026 is Saturday at 3pm (fetched Nov 9, 2026).",
+    "sources": ["https://www.bikepensacola.org/"],
+    "changes": {
+      "schedule": "Monthly; day, time and start location vary each month. Check bikepensacola.org or the Bike Pensacola Facebook page for the next ride. Rides are about an hour long, 5–6 miles, all levels welcome.",
+      "days": ["sat"],
+      "time_local": "3:00 pm",
+      "start_hhmm": "15:00",
+      "start_location": {
+        "name": "varies by month — check bikepensacola.org",
+        "address": null
+      }
+    }
+  }
+]

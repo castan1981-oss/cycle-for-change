@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "st-petersburg-fl-critical-mass",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "visitstpeteclearwater.com lists the ride on the last Friday of every month, meeting at the Williams Park fountain at 7 pm and departing at 7:30 pm, with upcoming dates through October 2028 (fetched Nov 9, 2026 via WebFetch).",
+    "sources": ["https://www.visitstpeteclearwater.com/event/critical-mass-ride-st-pete/49041"]
+  },
+  {
+    "slug": "bentonville-ar-tour-de-coler",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "visitbentonville.com (page dated Nov 9, 2026) lists Tour de Coler at The Grove parking lot every Tuesday at 5:30 pm, free, no registration needed; the peelcompton.org event page has been returning 403 for seven weeks (fetched Nov 9, 2026).",
+    "sources": ["https://www.visitbentonville.com/blog/stories/post/bentonville-group-rides-your-guide-to-the-citys-cycling-scene/"],
+    "changes": {
+      "refresh": {
+        "watch_url": "https://www.visitbentonville.com/blog/stories/post/bentonville-group-rides-your-guide-to-the-citys-cycling-scene/"
+      }
+    }
+  },
+  {
+    "slug": "bismarck-nd-701-womens-mtb-group-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-08-04",
+    "evidence": "701cycleandsport.com events page shows Women's MTB Group Ride on Monday evenings at 6 pm, with 2026 season dates on Aug 4 (Harmon Lake), July 14 (Valley Trails) and July 21 (Fort Lincoln); ride is in its off-season (Jun–Aug) (fetched Nov 9, 2026).",
+    "sources": ["https://www.701cycleandsport.com/blogs/races-events/701-cycle-sport-monthly-event-calendar/"]
+  },
+  {
+    "slug": "brooklyn-ny-dawn-patrol-prospect-park",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "legday.substack.com watch page returns 403 on every fetch (six consecutive runs); WebFetch also blocked. Instagram @dawnpatrol.pp is the only remaining lead."
+  },
+  {
+    "slug": "brooklyn-ny-nightcap-monday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "All three Substack source pages return 403 on every fetch (six consecutive runs); WebFetch also blocked. Instagram @nightcap_brooklyn is the only remaining lead."
+  },
+  {
+    "slug": "charlotte-nc-charlotte-bike-party",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "weeklyrides.com lists Charlotte Bike Party on Nov 13, 2026 at 7:00 PM, described as 'Second Friday of the month at 7 pm from Birdsong Brewing. All bikes and all riders welcome.' (fetched Nov 9, 2026).",
+    "sources": ["https://www.weeklyrides.com/index.php/group-rides"]
+  },
+  {
+    "slug": "charlotte-nc-spoke-easy-wednesday-urban-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "weeklyrides.com lists The Spoke Easy - Easy Urban Ride on Nov 4, 2026 at 7:00 PM, rolling out at 7:00 PM from The Spoke Easy, 1530 Elizabeth Ave #100, Charlotte (fetched Nov 9, 2026).",
+    "sources": ["https://www.weeklyrides.com/index.php/group-rides"]
+  },
+  {
+    "slug": "columbia-sc-cola-wtfnb-cyclists-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "colatownbikes.com homepage no longer shows the ride schedule (day and time absent from page); columbiasc.gov shows only a past May 6, 2026 event marked 'This event has passed'; no upcoming dates found. Instagram @Cola_WTFNB_Cyclist is the only remaining lead."
+  }
+]

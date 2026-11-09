@@ -1,0 +1,64 @@
+[
+  {
+    "slug": "indianapolis-in-bike-line-tuesday-thursday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The old group rides page (pg439.htm) returned 404 since Sept 30, 2026. The shop relaunched on Shopify; /pages/local-rides is about GPS routes, not a group ride schedule. No Tuesday/Thursday ride schedule found on the site or in search. Check @bikelineindiana on Instagram or call the Broad Ripple shop at (317) 253-2611."
+  },
+  {
+    "slug": "washington-dc-dc-bike-party",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "touchgrassdc.com has not resolved (DNS) since Oct 26, 2026, three Mondays running. Facebook and Instagram are login walls. No other fetchable page shows the ride is currently scheduled. Check @dcbikeparty on Instagram or the DCBikeParty Facebook page."
+  },
+  {
+    "slug": "westwood-ma-landrys-needham-womens-nonbinary-mtb-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Landry's group rides page (fetched Nov 9, 2026) says 'Landry's Group Rides have ended for the season. Thank you for riding with us this past year! Check back in early spring to see what we have planned for the 2027 season.'",
+    "sources": ["https://www.landrys.com/pages/landrys-group-rides"],
+    "status_note": "Landry's posted that all group rides have ended for the season; the page says to check back in early spring for 2027."
+  },
+  {
+    "slug": "boston-ma-landrys-boston-slow-roll-social-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Landry's group rides page (fetched Nov 9, 2026) says 'Landry's Group Rides have ended for the season. Thank you for riding with us this past year! Check back in early spring to see what we have planned for the 2027 season.'",
+    "sources": ["https://www.landrys.com/pages/landrys-group-rides"],
+    "status_note": "Landry's posted that all group rides have ended for the season; the page says to check back in early spring for 2027."
+  },
+  {
+    "slug": "estero-fl-estero-bicycle-cafe-sunday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Caloosa Riders' calendar (fetched Nov 9, 2026) lists the Estero Bicycle Cafe Ride on Nov 1, 8, 15, 22 and 29, 2026; the 'Canceled' entry on Nov 2 is for Monday Minions, not this ride.",
+    "sources": ["https://crbc.clubexpress.com/content.aspx?page_id=4001&club_id=787276"]
+  },
+  {
+    "slug": "fort-myers-fl-caloosa-riders-monday-minions",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Caloosa Riders' calendar (fetched Nov 9, 2026) shows Monday Minions on Nov 2 as a single-week cancellation, then running on Nov 9, 16, 23 and 30 without cancellation.",
+    "sources": ["https://crbc.clubexpress.com/content.aspx?page_id=4001&club_id=787276"]
+  },
+  {
+    "slug": "glen-echo-md-potomac-pedalers-glen-echo-loops-thursday",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Potomac Pedalers' calendar (fetched Nov 9, 2026) shows the Glen Echo Loops C ride on Nov 12, 19, 26 and Dec 3; only Nov 5 carries 'CANCELED', a single skipped date.",
+    "sources": ["https://www.potomacpedalers.org/calendar"]
+  },
+  {
+    "slug": "glen-echo-md-potomac-pedalers-usual-monday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Potomac Pedalers' calendar (fetched Nov 9, 2026) lists the Usual Monday Ride from Glen Echo on Nov 2, 9, 16, 23 and 30, 2026, at 10:00 am.",
+    "sources": ["https://www.potomacpedalers.org/calendar"]
+  }
+]

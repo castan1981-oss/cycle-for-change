@@ -1,0 +1,63 @@
+[
+  {
+    "slug": "albany-ny-mhcc-sunday-morning-wake-up-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "MHCC's public schedule (fetched Nov 9, 2026) shows rides for Mon Nov 9, Tue Nov 10, Wed Nov 11 and Sat Nov 21 but no Sunday rides through Nov 21. The 8:00 am time no longer appears on the page. Ride leaders post each week's ride about two weeks ahead; the absence may mean no leader has posted for upcoming Sundays rather than the season having ended."
+  },
+  {
+    "slug": "albany-ny-mhcc-women-on-wheels-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "MHCC's public schedule (fetched Nov 9, 2026) shows no WOW or Women on Wheels rides posted through Nov 21. The 9:30 am time no longer appears. WOW rides are posted one at a time by ride leaders; absence may mean no upcoming ride has been posted yet rather than the series having stopped."
+  },
+  {
+    "slug": "auburn-al-camp-super-sunday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "Trek Bicycle Auburn's events page and the CAMP website (camp-sorba.org) both show no Super Sunday Ride for November 2026 (fetched Nov 9, 2026). The ride was listed for October. November shows Tuesday Night Rides and a Ladies Ride but no Sunday ride at Chewacla. No seasonal-end notice found on either site."
+  },
+  {
+    "slug": "barre-vt-vermont-bicycle-shop-thursday-millstone-adventure-hour",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-10-28",
+    "evidence": "Vermont Bicycle Club blog's group-rides category shows the most recent post (dated Oct 28, 2026) is titled 'Last MTB Ride of the season and Nov. 3 Adventure Society Potluck', confirming the Thursday night Millstone series ended for 2026 (fetched Nov 9, 2026).",
+    "sources": ["https://vermontbicycleclub.com/category/grouprides/"],
+    "status_note": "The 2026 Thursday night MTB season closed around Oct 28, per the Vermont Bicycle Club blog. Expected to resume in summer 2027."
+  },
+  {
+    "slug": "bellingham-wa-rabbit-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Mount Baker Bicycle Club's Weekly Rides page says 'Sunday Fairhaven Rabbit Ride … Running every Sunday since 2011. Start: in front of Fairhaven Bikes, 1108 11th St. Time: 8:00 a.m. in daylight saving time, 8:30 a.m. in standard time' (fetched Nov 9, 2026).",
+    "sources": ["https://www.mtbakerbikeclub.org/content.aspx?page_id=22&club_id=608345&module_id=249583"],
+    "changes": {
+      "refresh": {
+        "watch_url": "https://www.mtbakerbikeclub.org/content.aspx?page_id=22&club_id=608345&module_id=249583"
+      }
+    }
+  },
+  {
+    "slug": "bentonville-ar-peel-compton-womens-monthly-social-mtb-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "Peel Compton Foundation's website returns 403 (Cloudflare) on all pages including the events list, the specific event URLs and the Coler category ICS feed — six consecutive watcher failures and confirmed again Nov 9, 2026. The ride was originally scheduled through Dec 8, 2026."
+  },
+  {
+    "slug": "broomfield-co-trek-womens-tuesday-group-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-10-13",
+    "evidence": "The Trek Broomfield Meetup group shows zero upcoming events (fetched Nov 9, 2026); the Meetup event record for the ride stated 'every week on Tuesday until October 13, 2026', confirming the season ended after Oct 13.",
+    "sources": ["https://www.meetup.com/trek-broomfield-group-ride/"],
+    "status_note": "Women's Tuesday Group Ride ran weekly through Oct 13, 2026 per the Meetup event. No events posted for the rest of 2026. Expected to return in spring 2027 on the Trek Broomfield Meetup group."
+  },
+  {
+    "slug": "calgary-ca-slow-and-steady-hikers-friday-evening-bike-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The Slow and Steady Hikers Meetup group shows zero upcoming events (fetched Nov 9, 2026); the ICS feed has 10 events but all are hikes, none matched the Friday Evening Bike Ride. The specific event page (Oct 2) is in the past and no new bike ride events are listed. Unclear whether the ride is on a winter break or has ended."
+  }
+]
