@@ -2437,7 +2437,7 @@ const HOW_STEPS = [
   ["Flat tire?", "Two stay with you.", "The rest roll on and regroup ahead. A whole group stopped is a hazard."],
 ];
 const HOW_FILMS = {
-  ride: { src: "/film/how-we-ride-2.mp4", poster: "/film/how-we-ride-2.jpg", seconds: 75, title: "How we ride",
+  ride: { src: "/film/how-we-ride-3.mp4", poster: "/film/how-we-ride-3.jpg", seconds: 75, title: "How we ride",
     line: "Nine things to know before your first group ride. It runs 1:15 and has no sound.",
     more: ["/rides/about/#how-we-ride", "Read the nine instead"],
     alt: "How we ride: six riders seen from above on a lane, showing nine group-ride habits one at a time, the words on screen. It ends on Cycle for change." },
