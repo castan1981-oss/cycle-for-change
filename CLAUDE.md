@@ -199,10 +199,12 @@ pass brings no new mark, palette or typeface. What he changed is written here; e
   Instagram and Facebook stay as they are (he is archiving most of them).
   The print and social kit moved too (§5): `tools/cfc-kit/` draws the mark from `mark-2027.js`, and the "CFC Phone
   Kit" artifact was republished with every piece redone.
-- **Not moved yet** (each is its own pass): the weekly ride carousel (`tools/week-kit/` and its Monday task still make
-  the paste-up look with the old stencil; he has a new look in review and the switch waits on his word);
-  `templates/og/nov7.html` (unused); `kit-handoff/KIT-LOCK.md`; the reels and end cards made before Nov 11 (their
-  render scripts are in the claude.ai project). Sections of this file about those still describe the stencil.
+  The weekly carousel tool (`tools/week-kit/make.py`) draws the mark and the pink family too, so Monday's slides
+  never carry the old logo; its look is still the paste-up.
+- **Not moved yet** (each is its own pass): the weekly carousel's **look** (Robert doesn't like the paste-up, Nov 8; he
+  has a new one in review, the poster version of Nov 9, and the switch of the tool and the Monday task waits on his
+  word); `templates/og/nov7.html` (unused); `kit-handoff/KIT-LOCK.md`; the reels and end cards made before Nov 11
+  (their render scripts are in the claude.ai project). Sections of this file about those still describe the stencil.
 
 ### After Hours palette (token names are old; values are new — keep the names, every page uses them)
 `--bone` concrete #E1DFDB · `--bone-2` #D7D5D0 · `--paper` plaster #EFEDEA · `--dust` patina
@@ -647,12 +649,16 @@ frames (1080 × 1920: the week, then one per day, words clear of the top 200 / b
   (calendars), the R.T. O'Sullivan's Tuesday ride (no upcoming date).
 - **His stamps** (`MINE`): "I ride this one." on the Friday Shop Ride (he rides it every Friday), "I wrote this one up."
   on TSR (his write-up on its page). Only rides he's said he rides or wrote up.
-- **The look is Left Field paste-up in Lane Paint** (the "We made it." reel's baseline): poured concrete with panel
+- **The look is Left Field paste-up** (the "We made it." reel's baseline): poured concrete with panel
   joints and tie holes, day sheets pasted flat (no shadow, the joints show through at 22%), the day on a bruise strip,
-  the date on a powder-rose strip (the hero's date plate), a halftone print of a Valley road in patina with the count
-  overprinted in rose, a clean, ungraded print of Robert taped on (place · month under it), old "Riding season." scraps
-  at the seams, CYCLE FOR sprayed through a card on the end card. Crisp edges, no grain, no filters, no arrows (the
+  the date on a lifted-pink strip (the hero's date plate), a halftone print of a Valley road in patina with the count
+  overprinted in pink, a clean, ungraded print of Robert taped on (place · month under it), old "Riding season." scraps
+  at the seams, the mark sprayed through a card on the end card. Crisp edges, no grain, no filters, no arrows (the
   swipe cue is "Find your day." across the first seam). Photos only from the registry; only Robert recognisable.
+  **Nov 11, 2026:** the mark on the end card is cycle for and its pink plate (`mark_svg()`, from `mark-2027.js`) and the
+  rose family is the site's pink family. The look is otherwise unchanged, and it is on its way out: Robert said on
+  Nov 8 he doesn't like the paste-up and has the Nov 9 poster version in review (the claude.ai project doc
+  "Weekly ride carousel: the new look"). Moving the tool and the Monday task to that look is his call.
 
 ### Reels — the ride series (Nov 1, 2026; updated Nov 3 to Robert's later calls)
 Robert's first reference was a "liminal" TikTok edit (black field, tiny labels at odd positions, glitch bursts, a word
@@ -1355,4 +1361,4 @@ two exits; the shapes are on the plan canvas.
   The field-note templates wear the current chrome (`apply-chrome.py` keeps them).
 - 2026-11-11 — The print and social kit makes the mark (`tools/cfc-kit/`: `mark()` and `sign()` from `mark-2027.js`, the
   pink family, a whole-page `kitpage.py`); the "CFC Phone Kit" artifact republished with all 35 pieces redone.
-  The weekly carousel waits on Robert's word on its new look.
+  The weekly carousel tool gets the mark and the pinks (`mark_svg()`); its new look still waits on Robert's word.

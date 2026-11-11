@@ -19,6 +19,13 @@ test("the kit carries no copy of a mark and nothing retired", () => {
   }
 });
 
+test("the weekly carousel tool draws the mark from the one drawing too", () => {
+  const s = fs.readFileSync(path.join(ROOT, "tools/week-kit/make.py"), "utf8");
+  assert.ok(!/M52 34 V24 Q52 8 36 8|M11 4 L30 68 L49 4/.test(s), "the Lane Paint stencil's letters are retired");
+  assert.ok(!/#A84C58|#8F3E4A|#D9B1AA|#B04A5B/i.test(s), "smeared rose, rose ink, powder rose and 7419 C are retired");
+  assert.ok(/scripts\/mark-2027\.js/.test(s) && s.includes(`PLATE = "${MARK.PINK}"`), "the mark and its pink come from scripts/mark-2027.js");
+});
+
 test("the kit's pinks are the site's", () => {
   const lib = fs.readFileSync(path.join(DIR, "lib.py"), "utf8");
   const css = fs.readFileSync(path.join(ROOT, "cfc-site/chrome.css"), "utf8");

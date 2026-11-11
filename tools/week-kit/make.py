@@ -16,9 +16,11 @@ sheet per day, Saturday or any day over nine rides split "Early." / "Less early.
 
 The rows are the page's rows: tools/week-kit/week.js runs tools/lib/week.js over the listed rides, the same code
 /rides/az/phoenix/this-week/ is built from, so the carousel and cycleforchange.org/week always agree (sorted by start,
-then name). The look is Left Field paste-up in Lane Paint: poured concrete, pasted day sheets (no shadow, the joints
-show through), words on slapped strips, a halftone road print with the count overprinted in rose, a clean print of
-Robert taped on, CYCLE FOR sprayed through a card on the end card. Crisp edges, no grain, no filters; Overpass only.
+then name). The look is Left Field paste-up: poured concrete, pasted day sheets (no shadow, the joints show through),
+words on slapped strips, a halftone road print with the count overprinted in pink, a clean print of Robert taped on,
+the mark sprayed through a card on the end card. Crisp edges, no grain; Overpass only. Nov 11, 2026: the mark is
+cycle for and its pink plate, from scripts/mark-2027.js (it was the caps stencil), and the rose family is the site's
+pink family. The look itself is still the paste-up: Robert has a new one in review, and that switch is his call.
 Needs Playwright (Chromium), Pillow, numpy.
 """
 import argparse, subprocess
@@ -35,7 +37,8 @@ BUILD = HERE / ".build"
 OUT = BUILD / "out"
 CACHE = BUILD / "cache"
 
-INK = "#1C1A22"; PLASTER = "#EFEDEA"; GUN = "#4A4E55"; ROSE = "#A84C58"; ROSE_INK = "#8F3E4A"; POWDER = "#D9B1AA"
+# ROSE is the pink a step down (the site's accent), ROSE_INK its ink, POWDER the lifted pink; PLATE is the mark's plate
+INK = "#1C1A22"; PLASTER = "#EFEDEA"; GUN = "#4A4E55"; ROSE = "#B1406C"; ROSE_INK = "#983359"; POWDER = "#E3ABC0"; PLATE = "#C2557F"
 PATINA = "#A9BDB8"; POOL = "#2C4F55"; CONCRETE = "#E1DFDB"
 WALL = "#BCB9B2"; JOINT = "#A3A099"; TIE = "#8E8B84"; WHITE = "#F8F7F4"; CORE = "#F4F1EA"; TAPE = "#E3D6B4"; KRAFT = "#C7AC84"
 SHADOW = "42,38,32"
@@ -43,14 +46,9 @@ SHADOW = "42,38,32"
 W, HH = 1080, 1350
 URL = "cycleforchange.org/week"
 SPAN = ["this week"]
-STENCIL = {
-    "C": "M52 34 V24 Q52 8 36 8 H33 M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 142 H36 Q52 142 52 126 V116",
-    "Y": "M11 4 L30 68 L49 4 M30 68 V150", "L": "M8 0 V150 M22 142 H54",
-    "E": "M8 0 V150 M22 8 H54 M22 75 H47 M22 142 H54", "F": "M8 0 V150 M22 8 H54 M22 75 H47",
-    "O": "M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 8 H36 Q52 8 52 24 V126 Q52 142 36 142 H33",
-    "R": "M8 0 V150 M22 8 H36 Q52 8 52 24 V58 Q52 74 36 74 H22 M33 90 L50 150",
-}
-ROWX = [("C", 0), ("Y", 74), ("C", 148), ("L", 222), ("E", 296), ("F", 414), ("O", 488), ("R", 562)]
+# the mark, from the one drawing
+MARK = json.loads(subprocess.run(["node", "scripts/mark-2027.js"], cwd=ROOT, capture_output=True, text=True, check=True).stdout)
+assert MARK["PINK"].upper() == PLATE
 
 
 def esc(s):
@@ -321,27 +319,25 @@ def wall(width, height, seed=7):
     return base + through
 
 
-def stencil_svg(width, color=INK, bar=ROSE, spray=False, seed=3):
-    """CYCLE FOR in the road-stencil letters (the site's paths, stroke 16) + the rose bar. spray = painted through a
-    card onto the wall: crisp, with overspray only on two letters where the card lifted and a few spatter dots."""
+def mark_svg(width, color=INK, spray=False, seed=3):
+    """The mark, one line with its pink plate (scripts/mark-2027.js). spray = painted through a card onto the wall:
+    crisp, with overspray only where the card lifted (the word "for") and a few spatter dots."""
     rng = random.Random(seed)
-    letters = "".join(f'<path d="{STENCIL[ch]}" transform="translate({x} 0)"/>' for ch, x in ROWX)
-    h = width * 168 / 768
+    h = width * 97 / 514
     extra = ""
     if spray:
-        lifted = [ROWX[1], ROWX[6]]
-        halo = "".join(f'<path d="{STENCIL[ch]}" transform="translate({x+1.5} 1)"/>' for ch, x in lifted)
-        extra += (f'<filter id="os{seed}" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="5"/></filter>'
-                  f'<g fill="none" stroke="{color}" stroke-width="26" stroke-linejoin="round" opacity=".16" filter="url(#os{seed})">{halo}</g>')
+        extra += (f'<filter id="os{seed}" x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="3.4"/></filter>'
+                  f'<g fill="{color}" stroke="{color}" stroke-width="6" stroke-linejoin="round" opacity=".16" filter="url(#os{seed})" '
+                  f'transform="translate(1 .7)">{MARK["FOR_PATHS"]}</g>')
         dots = ""
         for _ in range(26):
-            cx, cy = rng.uniform(-20, 780), rng.uniform(-24, 175); r = rng.choice([.9, 1.2, 1.6, 2.2, 3])
-            if rng.random() < .8 and not (0 < cx < 640 and 0 < cy < 150 and rng.random() < .5):
+            cx, cy = rng.uniform(-14, 528), rng.uniform(-16, 114); r = rng.choice([.6, .8, 1.1, 1.5, 2])
+            if rng.random() < .8 and not (0 < cx < 404 and 0 < cy < 97 and rng.random() < .5):
                 dots += f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}"/>'
         extra += f'<g fill="{color}" opacity=".85">{dots}</g>'
-    return (f'<svg viewBox="-9 -9 768 168" width="{width:.0f}" height="{h:.0f}" style="overflow:visible;display:block" role="img" aria-label="Cycle for">'
-            f'{extra}<g fill="none" stroke="{color}" stroke-width="16" stroke-linejoin="round">{letters}</g>'
-            f'<rect x="652" y="114" width="98" height="36" fill="{bar}"/></svg>')
+    return (f'<svg viewBox="0 0 514 97" width="{width:.0f}" height="{h:.0f}" style="overflow:visible;display:block" role="img" aria-label="Cycle for">'
+            f'{extra}<g fill="{color}">{MARK["CYCLE_PATHS"]}{MARK["FOR_PATHS"]}</g>'
+            f'<path fill="{PLATE}" d="{MARK["PLATE_D"]}"/></svg>')
 
 
 # ---------- the halftone print (Left Field move 5) ----------
@@ -466,7 +462,7 @@ def cover(x0, total, days, story=False):
 def end_card(x0, story=False):
     s = ""
     top = 110 if not story else 300
-    s += f'<div class="abs" style="left:{x0+70}px;top:{top}px;z-index:2">{stencil_svg(930, spray=True)}</div>'
+    s += f'<div class="abs" style="left:{x0+70}px;top:{top}px;z-index:2">{mark_svg(930, spray=True)}</div>'
     y = top + 300
     s += strip("Every ride has a page.", x0 + 70, y, 72, -1.2, 201, slap=True)
     lines = ["Where it starts.", "How fast.", "If they wait.", "When we last checked."]
