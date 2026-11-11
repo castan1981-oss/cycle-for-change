@@ -1,4 +1,4 @@
-"""The Cycle for Change print and social kit, in the site's look (Lane Paint).
+"""The Cycle for Change print and social kit, in the site's look (the mark, After Hours, Overpass).
 
     python3 tools/cfc-kit/make.py                       # everything
     python3 tools/cfc-kit/make.py posts stories          # just those groups (posts stories reel print stickers)

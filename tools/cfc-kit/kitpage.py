@@ -2,17 +2,18 @@
 
     python3 tools/cfc-kit/kitpage.py      # after make.py; writes tools/cfc-kit/.build/kit/ (index.html, th/, full/)
 
-Published as the "CFC Phone Kit" artifact (it declares the downloads capability, so Save hands the file to the phone).
-Lane Paint like the site: concrete and asphalt, the stencil, Overpass (the site's own file, inlined), rose only for the blank.
+Published as the "CFC Phone Kit" artifact (it declares the downloads capability, so Save hands the file to the phone):
+republish that artifact from the files in .build/kit/ (index.html is a whole page; th/ and full/ keep their names).
+Like the site: concrete and asphalt, the mark, Overpass (the site's own file, inlined), the pink only for the blank.
 """
 import base64, shutil, html
 from pathlib import Path
 from PIL import Image
 import pypdfium2 as pdfium
-from lib import OUT, BUILD, SITE, LETTERS, ROW
+from lib import OUT, BUILD, SITE, T, mark_paths
 
 KIT = BUILD / "kit"
-V = "2"   # bump on a re-publish that changes pictures, so phones don't show the old ones
+V = "3"   # bump on a re-publish that changes pictures, so phones don't show the old ones
 
 
 def thumb(src, name, w=640):
@@ -40,7 +41,7 @@ SECTIONS = [
      [("1-ten-thousand", "10,000 miles"), ("2-who-do-you-cycle-for", "Who do you cycle for?"), ("3-the-ride-on", "The ride on, and who for"),
       ("4-stat-work-19", "Stat: straight cyclists"), ("4-stat-youth-18", "Stat: unsafe at school"), ("4-stat-screen-13", "Stat: know someone trans"),
       ("5-ride-with-me", "Ride with me"), ("6-the-2027-rides", "The 2027 rides"), ("7-find-a-group-ride", "Find a group ride"), ("8-the-count", "The count")]),
-    ("stories", "Stories", "Full screen, 1080 × 1920. The top and bottom are left clear for Instagram’s bars and stickers. On the blank one, type who you rode for on the pink bar.",
+    ("stories", "Stories", "Full screen, 1080 × 1920. The top and bottom are left clear for Instagram’s bars and stickers. On the blank one, type who you rode for on the pink plate.",
      [("1-ten-thousand", "10,000 miles"), ("2-who-do-you-cycle-for", "Who do you cycle for?"), ("3-the-ride-on", "The ride on, and who for"),
       ("3b-who-i-rode-for-blank", "Who I rode for, blank"), ("4-stat-work-19", "Stat: straight cyclists"), ("4-stat-youth-18", "Stat: unsafe at school"),
       ("4-stat-screen-13", "Stat: know someone trans"), ("5-ride-with-me", "Ride with me"), ("6-the-2027-rides", "The 2027 rides"),
@@ -51,7 +52,7 @@ SECTIONS = [
     ("print", "To print", "PDFs for a print shop or a home printer. The QR codes are tested and go to short links on the site, so the scans can be counted.",
      [("flyer-8-5x11", "Flyer, 8.5 × 11"), ("poster-11x17", "Poster, 11 × 17"), ("stat-cards-5x7", "Stat cards, 5 × 7")]),
     ("stickers", "Stickers", "Each has 1/8 inch of extra edge for the cutter (the PDF is for a print shop, the PNG is 300 dpi for sticker sites). Write on the blank one with a marker.",
-     [("sticker-cycle-for-blank-3x2", "CYCLE FOR ___, 3 × 2 in"), ("sticker-10k-3x3", "10K, 3 × 3 in"), ("sticker-who-do-you-cycle-for-3x3", "Who do you cycle for?, 3 × 3 in")]),
+     [("sticker-cycle-for-blank-3x2", "cycle for ___, 3 × 2 in"), ("sticker-10k-3x3", "10K, 3 × 3 in"), ("sticker-who-do-you-cycle-for-3x3", "Who do you cycle for?, 3 × 3 in")]),
 ]
 LINES = {
     "stat-cards-5x7": "All 132 stats, one per page, with 1/8 in bleed. Each has its source, its catch and a QR to the report. The mental-health ones carry 988 and Trevor.",
@@ -103,11 +104,11 @@ def card(group, stem, label):
 SECTION_NAME = {g: n for g, n, _, _ in SECTIONS}
 
 
-def stencil_svg():
-    uses = "".join(f'<path d="{LETTERS[ch]}" transform="translate({x} 0)"/>' for ch, x in ROW)
-    return (f'<svg class="mark" viewBox="-9 -9 768 168" role="img" aria-label="Cycle for">'
-            f'<g fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">{uses}</g>'
-            f'<rect class="blank" x="652" y="114" width="98" height="36"/></svg>')
+def mark_svg():
+    """The page's own mark: the logo, one line with its plate (scripts/mark-2027.js)."""
+    m = mark_paths()
+    return (f'<svg class="mark" viewBox="0 0 514 97" role="img" aria-label="Cycle for">'
+            f'<g fill="currentColor">{m["CYCLE_PATHS"]}{m["FOR_PATHS"]}</g><path class="blank" d="{m["PLATE_D"]}"/></svg>')
 
 
 def main():
@@ -119,32 +120,41 @@ def main():
         chips.append(f'<a class="chip" href="#{g}">{name} <span>{len(items)}</span></a>')
         secs.append(f'<section id="{g}" class="sec"><h2>{name}</h2><p class="note">{note}</p>'
                     f'<div class="grid">{"".join(card(g, s, l) for s, l in items)}</div></section>')
-    page = TEMPLATE.replace("%FONT%", font).replace("%MARK%", stencil_svg()).replace("%CHIPS%", "".join(chips)).replace("%SECTIONS%", "".join(secs))
+    page = TEMPLATE.replace("%FONT%", font).replace("%MARK%", mark_svg()).replace("%PLATE%", T["plate"]).replace("%INK_PINK%", T["rose_ink"]).replace("%LIFT%", T["powder"]).replace("%CHIPS%", "".join(chips)).replace("%SECTIONS%", "".join(secs))
     (KIT / "index.html").write_text(page)
     n = sum(1 for _ in (KIT / "full").iterdir())
     print(f"kit page: {n} files, {sum(f.stat().st_size for f in KIT.rglob('*') if f.is_file())/1e6:.1f} MB → {KIT}")
 
 
-TEMPLATE = """<title>CFC Phone Kit</title>
+TEMPLATE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>CFC Phone Kit</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <style>
-/* Lane Paint, as the site: concrete and asphalt grounds, hairlines, square corners, Overpass; rose is only the blank. */
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;padding:0}
+img{max-width:100%}
+/* As the site: concrete and asphalt grounds, hairlines, square corners, Overpass; the pink is only the blank. */
 @font-face{font-family:"Overpass CFC";font-weight:100 900;font-display:swap;src:url(data:font/woff2;base64,%FONT%) format("woff2")}
 :root{
   --ground:#E1DFDB; --ground-2:#D7D5D0; --ink:#1C1A22; --mute:#4A4E55; --line:rgba(28,26,34,.22); --line-seen:#687F7C;
-  --blank:#A84C58; --btn:#1C1A22; --btn-ink:#EFEDEA; --ok:#2C4F55; --warn:#8F3E4A; --tile:#EFEDEA;
+  --blank:%PLATE%; --btn:#1C1A22; --btn-ink:#EFEDEA; --ok:#2C4F55; --warn:%INK_PINK%; --tile:#EFEDEA;
   --type:"Overpass CFC","Overpass",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --ground:#1C1A22; --ground-2:#24212A; --ink:#EFEDEA; --mute:#A9BDB8; --line:rgba(239,237,234,.18); --line-seen:#687F7C;
-  --blank:#D9B1AA; --btn:#EFEDEA; --btn-ink:#1C1A22; --ok:#A9BDB8; --warn:#D9B1AA; --tile:#2E2A35; color-scheme:dark}}
+  --blank:%PLATE%; --btn:#EFEDEA; --btn-ink:#1C1A22; --ok:#A9BDB8; --warn:%LIFT%; --tile:#2E2A35; color-scheme:dark}}
 :root[data-theme="dark"]{
   --ground:#1C1A22; --ground-2:#24212A; --ink:#EFEDEA; --mute:#A9BDB8; --line:rgba(239,237,234,.18); --line-seen:#687F7C;
-  --blank:#D9B1AA; --btn:#EFEDEA; --btn-ink:#1C1A22; --ok:#A9BDB8; --warn:#D9B1AA; --tile:#2E2A35; color-scheme:dark}
+  --blank:%PLATE%; --btn:#EFEDEA; --btn-ink:#1C1A22; --ok:#A9BDB8; --warn:%LIFT%; --tile:#2E2A35; color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--ground);color:var(--ink);font-family:var(--type);font-size:16px;line-height:1.45;-webkit-text-size-adjust:100%;font-variant-numeric:lining-nums}
 .wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 64px}
-.mark{display:block;width:min(100%,420px);height:auto;color:var(--ink)} .mark .blank{fill:var(--blank)}
+.mark{display:block;width:min(100%,360px);height:auto;color:var(--ink)} .mark .blank{fill:var(--blank)}
 h1{font-weight:800;font-size:clamp(30px,8vw,48px);line-height:1.04;letter-spacing:-.02em;margin:22px 0 0;text-wrap:balance}
 .how{margin:12px 0 0;max-width:36em;color:var(--mute);font-size:17px}
 .how b{color:var(--ink)}
@@ -180,6 +190,8 @@ figcaption .line{margin-top:2px;line-height:1.35}
 footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
+</head>
+<body>
 <div class="wrap">
 <header>
 %MARK%
@@ -223,6 +235,8 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
   });
 })();
 </script>
+</body>
+</html>
 """
 
 if __name__ == "__main__":

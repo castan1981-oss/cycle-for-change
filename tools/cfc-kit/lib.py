@@ -1,8 +1,9 @@
 """Shared pieces for the Cycle for Change print and social kit (tools/cfc-kit/).
 
-Everything here is the site's own Lane Paint: the CYCLE FOR stencil from scripts/chrome.js (the same paths, stroke 16),
-the blank as a rose bar or a rose plate, the After Hours tokens, Overpass from cfc-site/fonts/ (never Google's build:
-it breaks the middot). Square corners, hairlines, no shadows, no grain, nothing laid over a photo. CLAUDE.md §3.
+Everything here is the site's own: the mark from scripts/mark-2027.js (cycle for, lowercase, and its pink plate; the
+one drawing, never a copy), the blank as that plate, empty or carrying a word, the After Hours tokens, Overpass from
+cfc-site/fonts/ (never Google's build: it breaks the middot). Square corners, hairlines, no shadows, no grain, nothing
+laid over a photo. CLAUDE.md §3.
 
 Boards are HTML at their real size in CSS px (96 px = 1 in for print), rendered by Chromium: PNG/JPG screenshots for
 social, page.pdf() for print, so the type stays vector.
@@ -16,24 +17,25 @@ SITE = ROOT / "cfc-site"
 BUILD = HERE / ".build"
 OUT = BUILD / "out"
 
-# After Hours (CLAUDE.md §3). Token names are the site's; values are what they mean now.
+# After Hours (CLAUDE.md §3). The names are this kit's; since Nov 11, 2026 the rose family is the mark's pink:
+# plate = the mark's plate (a word on it is 19 px bold or bigger), rose = the pink a step down (the accent, and a plate
+# with small type: a date, an org), rose_ink = small pink text on light, powder = the lifted pink, pink on dark.
 T = dict(
     concrete="#E1DFDB", concrete2="#D7D5D0", plaster="#EFEDEA", patina="#A9BDB8", patina_deep="#687F7C",
-    rose="#A84C58", rose_ink="#8F3E4A", powder="#D9B1AA", gunmetal="#4A4E55", pool="#2C4F55",
+    plate="#C2557F", rose="#B1406C", rose_ink="#983359", powder="#E3ABC0", gunmetal="#4A4E55", pool="#2C4F55",
     asphalt="#1C1A22", tar="#141218",
 )
 
-# The stencil's letters, exactly as scripts/chrome.js draws them (the header mark's defs).
-LETTERS = {
-    "C": "M52 34 V24 Q52 8 36 8 H33 M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 142 H36 Q52 142 52 126 V116",
-    "Y": "M11 4 L30 68 L49 4 M30 68 V150",
-    "L": "M8 0 V150 M22 142 H54",
-    "E": "M8 0 V150 M22 8 H54 M22 75 H47 M22 142 H54",
-    "F": "M8 0 V150 M22 8 H54 M22 75 H47",
-    "O": "M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 8 H36 Q52 8 52 24 V126 Q52 142 36 142 H33",
-    "R": "M8 0 V150 M22 8 H36 Q52 8 52 24 V58 Q52 74 36 74 H22 M33 90 L50 150",
-}
-ROW = [("C", 0), ("Y", 74), ("C", 148), ("L", 222), ("E", 296), ("F", 414), ("O", 488), ("R", 562)]
+_MARK = None
+
+
+def mark_paths():
+    """The mark's paths, from the one drawing (scripts/mark-2027.js): CYCLE_PATHS, FOR_PATHS, PLATE_D, PINK."""
+    global _MARK
+    if _MARK is None:
+        _MARK = json.loads(subprocess.run(["node", "scripts/mark-2027.js"], cwd=ROOT, capture_output=True, text=True, check=True).stdout)
+        assert _MARK["PINK"].upper() == T["plate"], "the kit's plate is not the mark's pink"
+    return _MARK
 
 
 def curl(s):
@@ -52,40 +54,43 @@ def esc(s):
     return _html.escape(curl(s), quote=True)
 
 
-def stencil(width, color, bar=None, stacked=False, label="Cycle for"):
-    """CYCLE FOR in the road-stencil letters. bar = the blank's color (a rose bar after FOR), or None.
-    One line: viewBox 0 0 760 150 with the bar (the header mark), 0 0 622 150 without.
-    Stacked: CYCLE over FOR, the bar running from the R to the E's right edge (the share card)."""
+def mark(width, ink, plate=True, stacked=False, label="Cycle for"):
+    """The mark, `width` px wide. One line with its plate (the logo: 514 x 97), the words alone (plate=False: 404 x 97,
+    for a sign whose plate is type), or stacked for a square space (cycle / for + the plate: 252 x 196). The letters
+    take the ground's ink; the plate is always the pink."""
+    m = mark_paths()
+    words = lambda t="": f'<g fill="{ink}">{m["CYCLE_PATHS"]}<g{t}>{m["FOR_PATHS"]}</g></g>'
+    blank = lambda t="": f'<path fill="{T["plate"]}" d="{m["PLATE_D"]}"{t}/>'
     if stacked:
-        uses = "".join(f'<path d="{LETTERS[ch]}" transform="translate({x} 0)"/>' for ch, x in ROW[:5])
-        uses += "".join(f'<path d="{LETTERS[ch]}" transform="translate({x - 414} 180)"/>' for ch, x in ROW[5:])
-        vb, h = "-9 -9 368 348", width * 348 / 368
-        rect = f'<rect x="236" y="294" width="114" height="36" fill="{bar}"/>' if bar else ""
+        down = ' transform="translate(-261.7 112)"'
+        vw, vh, body = 252, 196, words(down) + blank(down)
+    elif plate:
+        vw, vh, body = 514, 97, words() + blank()
     else:
-        uses = "".join(f'<path d="{LETTERS[ch]}" transform="translate({x} 0)"/>' for ch, x in ROW)
-        if bar:
-            vb, h = "-9 -9 768 168", width * 168 / 768
-            rect = f'<rect x="652" y="114" width="98" height="36" fill="{bar}"/>'
-        else:
-            vb, h = "-9 -9 640 168", width * 168 / 640
-            rect = ""
-    return (f'<svg class="stencil" viewBox="{vb}" width="{width:.0f}" height="{h:.0f}" role="img" aria-label="{esc(label)}">'
-            f'<g fill="none" stroke="{color}" stroke-width="16" stroke-linejoin="round">{uses}</g>{rect}</svg>')
+        vw, vh, body = 404, 97, words()
+    return (f'<svg class="mark" viewBox="0 0 {vw} {vh}" width="{width:.1f}" height="{width * vh / vw:.1f}" role="img" '
+            f'aria-label="{esc(label)}">{body}</svg>')
 
 
-def sign(width, ink, plate_bg, plate_ink, word, wrap=False):
-    """The sign: CYCLE FOR and the blank as a plate carrying a word (Overpass 900), like the homepage and the footer.
-    The plate's cap height matches the stencil's; a long word drops the plate under the stencil (wrap=True)."""
-    k = width / 640          # stencil px per unit
-    cap = 150 * k
-    fs = cap * 0.62
-    plate = (f'<span class="plate" style="background:{plate_bg};color:{plate_ink};font-size:{fs:.0f}px;'
-             f'padding:{fs*0.16:.0f}px {fs*0.26:.0f}px {fs*0.08:.0f}px">{esc(word)}</span>') if word is not None else \
-            f'<span class="plate plate--empty" style="background:{plate_bg};width:{(width*0.9 if wrap else 98*k*1.6):.0f}px;height:{(fs*1.24 if wrap else 36*k*1.3):.0f}px"></span>'
+def sign(width, ink, word, wrap=False):
+    """The sign: the mark's words, `width` px wide, and the blank as a plate carrying a word, as on the site (CLAUDE.md
+    §3): the pink, plaster type in Overpass 900 at 0.58 of the mark's height (as tall as the mark's own plate), a 0.07em
+    corner, 2.5 degrees off square, lifted 0.15 of the mark's height. A long word puts the plate under the words
+    (wrap=True, as /cyclefor/ does). word=None leaves the plate empty, to write or type on."""
+    h = width * 97 / 404
+    fs = h * 0.58
+    tilt = "border-radius:.07em;transform:rotate(-2.5deg);transform-origin:0 100%"
+    if word is not None:
+        plate = (f'<span class="plate" style="display:block;background:{T["plate"]};color:{T["plaster"]};font-size:{fs:.1f}px;'
+                 f'padding:.18em .36em .1em;{tilt}">{esc(word)}</span>')
+    else:
+        plate = (f'<span class="plate plate--empty" style="display:block;font-size:{fs:.1f}px;background:{T["plate"]};'
+                 f'width:{(width * 0.9 if wrap else h * 0.96):.0f}px;height:{fs * 1.28:.0f}px;{tilt}"></span>')
     if wrap:
-        return f'<div class="sign sign--wrap">{stencil(width, ink)}<div style="margin-top:{cap*0.16:.0f}px">{plate}</div></div>'
-    return (f'<div class="sign" style="gap:{22*k:.0f}px">{stencil(width, ink)}'
-            f'<div style="align-self:flex-end;margin-bottom:{9*k:.0f}px">{plate}</div></div>')
+        return (f'<div class="sign sign--wrap">{mark(width, ink, plate=False)}'
+                f'<div style="margin-top:{h * 0.2:.0f}px">{plate}</div></div>')
+    return (f'<div class="sign" style="gap:{h * 0.16:.1f}px">{mark(width, ink, plate=False)}'
+            f'<div style="margin-bottom:{h * 0.15:.1f}px">{plate}</div></div>')
 
 
 def font_css():
@@ -102,9 +107,10 @@ BASE_CSS = """
 html,body{background:transparent}
 body{font-family:"Overpass",system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-kerning:normal;font-variant-numeric:lining-nums}
 .board{position:relative;overflow:hidden}
-.stencil{display:block}
+.mark{display:block;flex:none}
 .sign{display:flex;align-items:flex-end;flex-wrap:nowrap}
 .sign--wrap{display:block}
+.sign--wrap .plate{width:max-content}
 .plate{display:inline-block;font-weight:900;line-height:1;white-space:nowrap;letter-spacing:-.005em}
 .ph{display:block;width:100%;object-fit:cover}
 .label{font-weight:700;letter-spacing:0}
