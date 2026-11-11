@@ -21,13 +21,13 @@ def _block(inner, w, h, pad=34):
 def reel(t, mi):
     """t is the ride day from make.py (word, the homepage's dated label). Each block shrink-wraps its words."""
     out = {}
-    out["reel-1-the-sign.png"] = (_block(stencil(640, T["plaster"], T["powder"]), 900, 400), 900, 400, True)
+    out["reel-1-the-sign.png"] = (_block(mark(700, T["plaster"]), 900, 400), 900, 400, True)
     word = t["word"]
     helps = (f'<p style="color:{T["plaster"]};font-weight:700;font-size:22px;margin-top:18px;max-width:600px;line-height:1.3">{help_html()}</p>'
              if about_mind(word) else "")
     out["reel-2-the-ride-on.png"] = (_block(
         f'<p class="label" style="color:{T["patina"]};font-size:30px;margin-bottom:20px">{esc(t["label"])}</p>'
-        f'{sign(520, T["plaster"], T["powder"], T["asphalt"], word, wrap=len(word) > 8)}{helps}', 1080, 800), 1080, 800, True)
+        f'{sign(520, T["plaster"], word, wrap=len(word) > 8)}{helps}', 1080, 800), 1080, 800, True)
     out["reel-3-the-count.png"] = (_block(
         f'<p class="num" style="color:{T["plaster"]};font-size:132px">{fmt_int(mi)}</p>'
         f'<p style="color:{T["patina"]};font-weight:700;font-size:30px;margin-top:16px;max-width:640px;line-height:1.2">{esc(season_words())}</p>',
@@ -35,7 +35,7 @@ def reel(t, mi):
     out["reel-4-the-link.png"] = (_block(
         f'<p style="color:{T["plaster"]};font-weight:800;font-size:46px;letter-spacing:-.01em">cycleforchange.org</p>'
         f'<p style="color:{T["patina"]};font-weight:700;font-size:32px;margin-top:10px">@cycl_eforchange</p>', 560, 190), 560, 190, True)
-    end = (f'<div style="position:absolute;left:72px;top:520px">{stencil(700, T["plaster"], T["powder"], stacked=True)}'
+    end = (f'<div style="position:absolute;left:72px;top:520px">{mark(780, T["plaster"], stacked=True)}'
            f'<p style="color:{T["plaster"]};font-weight:800;font-size:62px;letter-spacing:-.018em;line-height:1.04;margin-top:96px">'
            f'10,000 miles. One year.<br>All on the bike.</p>'
            f'<p style="color:{T["patina"]};font-weight:700;font-size:36px;margin-top:48px">cycleforchange.org<br>@cycl_eforchange</p></div>')
@@ -58,7 +58,7 @@ def flyer():
     body = (f'{photo("photos/robert-camelback.jpg", 816, 500, focus=(520, 1480, 0.62))}'
             f'<p style="position:absolute;left:48px;top:512px;font-weight:700;font-size:13px;color:{T["gunmetal"]}">{esc(pic["where"])}</p>'
             f'<div style="position:absolute;left:48px;right:48px;top:556px">'
-            f'{stencil(520, T["asphalt"], T["rose"])}'
+            f'{mark(560, T["asphalt"])}'
             f'<p style="font-weight:800;font-size:40px;color:{T["asphalt"]};letter-spacing:-.018em;line-height:1.06;margin-top:28px">'
             f'10,000 miles. One year.<br>All on the bike.</p>'
             f'<p style="font-size:17px;color:{T["gunmetal"]};margin-top:16px;max-width:600px;line-height:1.4">'
@@ -130,7 +130,7 @@ def poster(rides, lottery=()):
     if n_tba: bits.append(f'{w(n_tba).lower()} {"hasn\u2019t" if n_tba == 1 else "haven\u2019t"} put out 2027 dates yet')
     note = f'{w(len(rides) - n_proj - n_tba)} with dates from the organizer' + ("; " + "; ".join(bits) if bits else "") + "."
     body = (f'<div style="position:absolute;left:64px;right:64px;top:60px;color:{T["asphalt"]}">'
-            f'{stencil(440, T["asphalt"], T["rose"])}'
+            f'{mark(480, T["asphalt"])}'
             f'<p style="font-weight:800;font-size:70px;letter-spacing:-.022em;line-height:1;margin-top:44px">The 2027 rides<br>I\u2019m doing.</p>'
             f'<p style="font-size:23px;color:{T["gunmetal"]};margin-top:18px">Part of the 10,000 miles. Come ride one.</p>'
             f'<div style="display:flex;gap:28px;align-items:flex-start;margin-top:34px">{_map_html(rides, 690)}'
@@ -146,9 +146,10 @@ def poster(rides, lottery=()):
     return page(body, "", 1056, 1632, T["concrete"], print_size="11in 17in")
 
 
-CARD_GROUND = {"harm": (T["asphalt"], T["plaster"], T["patina"], T["powder"], T["plaster"]),
-               "hope": (T["patina"], T["asphalt"], T["pool"], T["rose"], T["plaster"]),
-               "visibility": (T["concrete"], T["asphalt"], T["gunmetal"], T["rose"], T["plaster"])}
+# ground, ink, soft ink, the QR's tile
+CARD_GROUND = {"harm": (T["asphalt"], T["plaster"], T["patina"], T["plaster"]),
+               "hope": (T["patina"], T["asphalt"], T["pool"], T["plaster"]),
+               "visibility": (T["concrete"], T["asphalt"], T["gunmetal"], T["plaster"])}
 
 
 def cards(bank):
@@ -158,7 +159,7 @@ def cards(bank):
     long stat would push the card over, its line shrinks until it fits."""
     pages = []
     for s in bank:
-        bg, ink, soft, bar, tile = CARD_GROUND[s["type"]]
+        bg, ink, soft, tile = CARD_GROUND[s["type"]]
         src = f'{s["org"]}. {s["report"]}. {s["year"]}.'
         help_ = (f'<p style="font-size:13px;font-weight:700;color:{ink};margin-top:10px;line-height:1.3">{help_html()}</p>'
                  if s.get("mh") else "")
@@ -166,7 +167,7 @@ def cards(bank):
             f'<section class="card" style="background:{bg};color:{ink}">'
             f'<div style="display:flex;justify-content:space-between;align-items:baseline">'
             f'<p style="font-weight:700;font-size:14px;color:{soft}">{esc(TYPE_LABEL[s["type"]])}</p>'
-            f'{stencil(110, ink, bar)}</div>'
+            f'{mark(124, ink)}</div>'
             f'<p class="num" data-fit="432" style="font-size:150px;margin-top:26px;white-space:nowrap">{esc(s["number"])}</p>'
             f'<p class="sl" style="font-weight:700;font-size:23px;line-height:1.22;margin-top:24px;letter-spacing:-.006em">{esc(s["stat"])}</p>'
             f'<p class="wl" style="font-size:16px;line-height:1.35;margin-top:12px;color:{soft}">{esc(s["why"])}</p>'
@@ -195,12 +196,13 @@ for (const c of document.querySelectorAll('.card')) {
 def stickers():
     """3 x 2 and 3 x 3 in, each with 1/8 in of bleed (so the page is 3.25 x 2.25 / 3.25 x 3.25)."""
     out = {}
-    # CYCLE FOR ___ : a blank plate to write on with a marker
+    # cycle for ___ : the mark's words and a wide blank plate under them, to write on with a marker
     out["sticker-cycle-for-blank-3x2"] = (page(
-        f'<div style="position:absolute;left:31px;top:38px">{stencil(220, T["plaster"])}'
-        f'<div style="margin-top:14px;width:250px;height:72px;background:{T["powder"]}"></div></div>',
+        f'<div style="position:absolute;left:31px;top:34px">{mark(232, T["plaster"], plate=False)}'
+        f'<div style="margin-top:22px;width:250px;height:70px;background:{T["plate"]};border-radius:4px;'
+        f'transform:rotate(-2.5deg);transform-origin:0 100%"></div></div>',
         "", 312, 216, T["asphalt"], print_size="3.25in 2.25in"), 3.25, 2.25)
-    # 10K: the wearable mark, on its own (CYCLE FOR is never followed by a number; the plate holds a who or a why)
+    # 10K: the wearable mark, on its own (cycle for is never followed by a number; the plate holds a who or a why)
     out["sticker-10k-3x3"] = (page(
         f'<div style="position:absolute;left:34px;right:34px;top:40px;color:{T["plaster"]}">'
         f'<p class="num" style="font-size:150px;letter-spacing:-.04em">10K</p>'
@@ -210,7 +212,7 @@ def stickers():
     # Who do you cycle for? with the QR to /cyclefor/
     out["sticker-who-do-you-cycle-for-3x3"] = (page(
         f'<div style="position:absolute;left:34px;right:34px;top:34px;color:{T["asphalt"]}">'
-        f'{stencil(120, T["asphalt"], T["rose"])}'
+        f'{mark(140, T["asphalt"])}'
         f'<p style="font-weight:800;font-size:31px;letter-spacing:-.015em;line-height:1.04;margin-top:16px">Who do you<br>cycle for?</p>'
         f'<div style="display:flex;gap:12px;align-items:flex-end;margin-top:14px">{qr_svg(SHORT + "/cf", light=T["plaster"], size=96)}'
         f'<p style="font-size:12.5px;font-weight:700;line-height:1.3;color:{T["gunmetal"]}">Say it on video.<br>Five seconds.</p></div></div>',

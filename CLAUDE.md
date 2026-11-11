@@ -197,10 +197,12 @@ pass brings no new mark, palette or typeface. What he changed is written here; e
   pixels. The How we ride film is `how-we-ride-3` (§6: the answers on the pink plate, the end on cycle for + change);
   the `#today` photo is `oct12-gravel-2` (§5). The field-note templates wear the current chrome. Posts already on
   Instagram and Facebook stay as they are (he is archiving most of them).
-- **Not moved yet** (each is its own pass): the print and social kit (`tools/cfc-kit/`, the "CFC Phone Kit" artifact);
-  the weekly ride carousel (`tools/week-kit/` and its Monday task; he has a new look in review);
-  `templates/og/nov7.html` (unused); `kit-handoff/KIT-LOCK.md`. Sections of this file about those still describe the
-  stencil.
+  The print and social kit moved too (§5): `tools/cfc-kit/` draws the mark from `mark-2027.js`, and the "CFC Phone
+  Kit" artifact was republished with every piece redone.
+- **Not moved yet** (each is its own pass): the weekly ride carousel (`tools/week-kit/` and its Monday task still make
+  the paste-up look with the old stencil; he has a new look in review and the switch waits on his word);
+  `templates/og/nov7.html` (unused); `kit-handoff/KIT-LOCK.md`; the reels and end cards made before Nov 11 (their
+  render scripts are in the claude.ai project). Sections of this file about those still describe the stencil.
 
 ### After Hours palette (token names are old; values are new — keep the names, every page uses them)
 `--bone` concrete #E1DFDB · `--bone-2` #D7D5D0 · `--paper` plaster #EFEDEA · `--dust` patina
@@ -596,14 +598,18 @@ word on the plate) · three stats with their source and catch (`--stat <id>` for
 (the next of his 2027 rides) · the 2027 list · Find a group ride · the count; **reel** overlays (each on a flat tar
 block, so it reads over footage; see-through outside it) and an end card; **print** as vector PDFs (8.5 × 11 flyer,
 11 × 17 poster with the homepage's map, and every stat in the bank as a 5 × 7 card, one PDF, 1/8 in bleed); **stickers**
-(CYCLE FOR + a blank plate to write on, 10K on its own, Who do you cycle for? with a QR), PDF with bleed + 300 dpi PNG.
+(cycle for + a wide blank plate to write on, 10K on its own, Who do you cycle for? with a QR), PDF with bleed + 300 dpi PNG.
 Then `python3 tools/cfc-kit/kitpage.py` builds the "CFC Phone Kit" artifact's files (`.build/kit/`;
 https://claude.ai/artifact/Uc4aoGeyh82Q87N2mUZLH1, republish that URL): every piece with
-a Save button (the downloads capability); republish that artifact, bump `V` when pictures change.
-- **The site's rules, nothing new**: the stencil from chrome.js (only ever CYCLE FOR), the blank as a rose bar or a
-  plate in Overpass 900, After Hours, Overpass from `cfc-site/fonts/`, a photo and a solid field one above the other
+a Save button (the downloads capability); republish that artifact from those files (index.html is a whole page;
+`full/` and `th/` keep their names), bump `V` when pictures change. `V` 3 is the kit with the mark (Nov 11, 2026).
+- **The site's rules, nothing new**: the mark from `scripts/mark-2027.js` (`mark()` in lib.py: the logo on one line,
+  the words alone, or stacked; only ever cycle for; Nov 11, 2026, it was the stencil), the blank as the mark's pink
+  plate, empty or carrying a word in Overpass 900 (`sign()`: the site's plate, 2.5° off square; a date or an org on a
+  small plate is the pink a step down), After Hours, Overpass from `cfc-site/fonts/`, a photo and a solid field one above the other
   (nothing on a photo) with its place · month line under it, photos only from the registry or `#today` (no cars, only
-  Robert; his photos cropped to the waist). CYCLE FOR is never followed by a number: 10K stands on its own. Every line is a line the site
+  Robert; his photos cropped to the waist). cycle for is never followed by a number: 10K stands on its own.
+  `tools/test/kit-mark.test.js` keeps the kit's pinks the site's. Every line is a line the site
   already says or comes from data: the count from `/api/strava` (else `data/tally.json`, with `season.js`'s words),
   the rides from chrome.js `RIDING`, the directory count from `rides/live.json` (as build-home.js counts it).
 - **The stat bank** is `data/stats/stat-bank.json`: a copy of Robert's "CFC Stat Bank" artifact (132 stats, each with
@@ -1347,3 +1353,6 @@ two exits; the shapes are on the plan canvas.
   (the answers on the pink plate, the end on cycle for + change; its source and render are now `tools/how-we-ride/`),
   and the `#today` photo is `oct12-gravel-2` (the old stencil taken off the gravel, the mark painted in its place).
   The field-note templates wear the current chrome (`apply-chrome.py` keeps them).
+- 2026-11-11 — The print and social kit makes the mark (`tools/cfc-kit/`: `mark()` and `sign()` from `mark-2027.js`, the
+  pink family, a whole-page `kitpage.py`); the "CFC Phone Kit" artifact republished with all 35 pieces redone.
+  The weekly carousel waits on Robert's word on its new look.

@@ -49,7 +49,7 @@ def reg_photo(key, **kw):
 def intro(size):
     W, H = SZ[size]
     ph = 740 if size == "post" else 1040
-    inner = (f'<div class="in">{sign(560, T["plaster"], T["powder"], T["asphalt"], "change")}'
+    inner = (f'<div class="in">{sign(560, T["plaster"], "change")}'
              f'<p class="big" style="color:{T["plaster"]};font-size:{50 if size=="post" else 58}px;margin-top:40px">'
              f'10,000 miles. One year.<br>All on the bike.</p></div>')
     pic = reg_photo("robert-camelback", focus=(500 if size == "post" else 430, 1480, 0.62))
@@ -61,7 +61,7 @@ def who(size):
     W, H = SZ[size]
     top = 120 if size == "post" else 300
     q = 100 if size == "post" else 112
-    inner = (f'<div class="in" style="padding-top:{top}px">{stencil(660 if size=="post" else 760, T["asphalt"], T["rose"], stacked=True)}'
+    inner = (f'<div class="in" style="padding-top:{top}px">{mark(700 if size=="post" else 800, T["asphalt"], stacked=True)}'
              f'<p class="big" style="color:{T["asphalt"]};font-size:{q}px;margin-top:{70 if size=="post" else 110}px">Who do you<br>cycle for?</p>'
              f'<p class="body" style="color:{T["gunmetal"]};font-size:{36 if size=="post" else 42}px;margin-top:28px;max-width:860px">'
              f'Say it on video. Five seconds. Post it and tag @cycl_eforchange.</p></div>')
@@ -84,7 +84,7 @@ def today(size, t):
     wrap = word is None or len(word) > 8
     helps = help_line(T["plaster"], 24 if size == "post" else 28) if about_mind(word) else ""
     body = (f'<p class="lab" style="color:{T["patina"]};margin-bottom:26px">{esc(t["label"])}</p>'
-            f'{sign(520 if size=="post" else 600, T["plaster"], T["powder"], T["asphalt"], word, wrap=wrap)}{helps}')
+            f'{sign(520 if size=="post" else 600, T["plaster"], word, wrap=wrap)}{helps}')
     if t.get("photo"):
         ph = 720 if size == "post" else 980
         return page(split(size, t["photo"], ph, T["tar"], f'<div class="in">{body}</div>', foot(T["patina"]), T["patina"]),
@@ -96,14 +96,15 @@ def today(size, t):
 
 
 # —— 4. a stat from the bank: ground by kind (hard truth on asphalt, what helps on patina, being seen on concrete) ——
-GROUND = {"harm": (T["asphalt"], T["plaster"], T["patina"], T["powder"]),
-          "hope": (T["patina"], T["asphalt"], T["pool"], T["rose"]),
-          "visibility": (T["concrete"], T["asphalt"], T["gunmetal"], T["rose"])}
+# ground, ink, soft ink. The mark's plate is the one pink on every ground.
+GROUND = {"harm": (T["asphalt"], T["plaster"], T["patina"]),
+          "hope": (T["patina"], T["asphalt"], T["pool"]),
+          "visibility": (T["concrete"], T["asphalt"], T["gunmetal"])}
 
 
 def stat(size, s):
     W, H = SZ[size]
-    bg, ink, soft, bar = GROUND[s["type"]]
+    bg, ink, soft = GROUND[s["type"]]
     top = 96 if size == "post" else 260
     help_ = f'<p class="body" style="font-size:24px;color:{ink};margin-top:14px;font-weight:700">{help_html()}</p>' if s.get("mh") else ""
     src = f'{s["org"]}, {s["report"]}, {s["year"]}.'
@@ -116,7 +117,7 @@ def stat(size, s):
     lower = (f'<div class="in"><p class="body" style="font-size:22px;color:{soft};line-height:1.35">Source: {esc(src)}</p>'
              f'<p class="body" style="font-size:22px;color:{soft};line-height:1.35;margin-top:4px">{esc(s["caveat"])}</p>{help_}'
              f'<div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:36px">'
-             f'{stencil(300, ink, bar)}<span style="font-weight:700;font-size:26px;color:{soft}">cycleforchange.org</span></div></div>')
+             f'{mark(340, ink)}<span style="font-weight:700;font-size:26px;color:{soft}">cycleforchange.org</span></div></div>')
     bottom = 52 if size == "post" else 330
     return page(f'<div class="field" style="top:0;bottom:0;padding-bottom:{bottom}px"><div style="flex:1">{inner}</div>{lower}</div>',
                 CSS, W, H, bg)
