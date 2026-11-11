@@ -23,13 +23,17 @@
   --bone-2:#D7D5D0;
   --paper:#EFEDEA;
   --dust:#A9BDB8;
-  --creosote:#A84C58;
-  --creosote-ink:#8F3E4A;   /* creosote a step darker: small text on bone clears 4.5:1 (Pass 5) */
-  --creosote-lift:#D9B1AA;  /* creosote a step lighter: the green FOR on asphalt clears 3:1 for large type (Pass 6) */
+  /* Nov 11, 2026: the rose family is the mark's pink now (Robert, Nov 10: "Use the pink not the red going forward").
+     Same token names, same jobs, and each one sits at the luminance the rose it replaces had, so every contrast that
+     passed still passes: smeared rose #A84C58 -> #B1406C, rose ink #8F3E4A -> #983359, powder rose #D9B1AA -> #E3ABC0. */
+  --plate:#C2557F;          /* the pink: the mark's plate, and a plate whose word is 19px bold or bigger (paper on it is 3.67:1, large text only) */
+  --creosote:#B1406C;       /* the pink a step down: the accent, and a plate that carries small type (paper on it is 4.7:1) */
+  --creosote-ink:#983359;   /* the pink two steps down: small pink text on a light ground clears 4.5:1 */
+  --creosote-lift:#E3ABC0;  /* the pink lifted: pink on a dark ground */
   --dust-deep:#687F7C;      /* dust a step darker: a hairline that has to be seen */
   --asphalt:#1C1A22;
   --tar:#141218;
-  --volt:#D9B1AA;
+  --volt:#E3ABC0;
   --mute:#4A4E55;
   --line:rgba(28,26,34,.18);
   --line-d:rgba(239,237,234,.2);
@@ -305,17 +309,16 @@ main.wrap{padding-top:var(--top)}
 .nav-in{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:inline-flex;align-items:center;gap:14px;text-decoration:none;min-height:44px}
 .brand svg{width:26px;height:26px;flex:0 0 auto}
-/* Pass 23d (Oct 3, 2026, from home.css): the wheel in its asphalt square — the drawing untouched; on
-   asphalt the currentColor arc and hub go bone and the creosote arc lifts a step. On phones the square
-   is the bar's corner: the full bar height, flush to the screen's left edge, the wheel 28px inside. */
-.brand .brand-mark{display:block;height:22px;width:auto;color:var(--asphalt)}
-.brand-mark .lp-bar{fill:var(--creosote)}
+/* The mark (Nov 11, 2026): the lowercase "cycle for" and its plate (scripts/mark-2027.js). The letters take the bar's
+   ink; the plate is the one pink on a light ground or a dark one. Lowercase, so it's set taller than the caps stencil was. */
+.brand .brand-mark{display:block;height:30px;width:auto;color:var(--asphalt)}
+.mark-plate{fill:var(--plate)}
 .brand-word{font-weight:800;font-size:12.5px;letter-spacing:0;text-transform:none;white-space:nowrap}
 .brand-word i{font-style:normal;color:var(--creosote-ink)}
 @media (max-width:899px){
-  /* Lane Paint (Oct 5, 2026): the mark keeps the gutter — the flush-left corner stamp went with the wheel */
+  /* the mark keeps the gutter — the flush-left corner stamp went with the wheel */
   .brand{gap:16px}
-  .brand .brand-mark{height:24px}
+  .brand .brand-mark{height:28px}
   .menu-btn{margin-right:-9px}
 }
 /* Pass 5: nav labels read at body size, same as the homepage */
@@ -329,6 +332,13 @@ main.wrap{padding-top:var(--top)}
 .menu-btn{width:44px;height:44px;display:grid;place-items:center;background:none;border:0;padding:0;cursor:pointer}
 .menu-btn i{display:block;width:26px;height:2px;background:currentColor;box-shadow:0 8px 0 currentColor;transform:translateY(-4px)}
 @media (max-width:359px){.brand-word{display:none}}
+/* under 360 the bar is the mark, Ride with me and the menu in 288px: the mark steps down and the gaps tighten so nothing
+   runs off the screen (Nov 11, 2026: the lowercase mark is wider than the caps stencil was; the old bar ran 10px over at 320) */
+@media (max-width:359px){
+  .nav-in{gap:12px}
+  .brand .brand-mark{height:21px}
+  .nav .btn--sm{padding-inline:10px}
+}
 @media (min-width:900px){
   .nav-links{display:flex}
   .menu-btn{display:none}
@@ -370,9 +380,14 @@ main.wrap{padding-top:var(--top)}
 .stack{margin:0 0 clamp(40px,6vw,80px);font-weight:800;font-size:clamp(4.4rem,21.4vw,13rem);line-height:.84;letter-spacing:-.035em;text-transform:none}
 .stack span{display:block}
 .stack .for{color:var(--creosote-lift)}
-.foot-sign{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(14px,2.4vw,26px);margin:0 0 clamp(40px,6vw,80px);--fw:clamp(240px,52vw,440px)}
-.foot-stencil{display:block;width:var(--fw);height:auto;color:var(--paper)}
-.foot-plate{display:inline-block;box-sizing:border-box;min-width:calc(var(--fw) * .31);background:var(--creosote-lift);color:var(--asphalt);font-weight:900;font-size:calc(var(--fw) * .1);line-height:1.05;padding:calc(var(--fw) * .028) calc(var(--fw) * .045) calc(var(--fw) * .014);margin-left:calc(var(--fw) * .026)}
+/* the footer's sign (Nov 11, 2026): cycle / for, then "change" on the plate. --fw is the width of "cycle" and --u one unit
+   of the drawing (cycle is 236 wide), so the rows keep the mark's own spacing. The second row is the wider one (about
+   1.33 x --fw), so --fw is held to what a narrow phone and the five-column slot can take. */
+.foot-sign{--fw:min(clamp(240px,52vw,440px),66vw);--u:calc(var(--fw) / 236);display:flex;flex-direction:column;align-items:flex-start;gap:calc(var(--u) * 16);margin:0 0 clamp(40px,6vw,80px)}
+.foot-cycle{display:block;width:var(--fw);height:auto;color:var(--paper)}
+.foot-row{display:flex;align-items:flex-end;gap:calc(var(--u) * 15)}
+.foot-for{display:block;flex:0 0 auto;width:calc(var(--u) * 143);height:auto;color:var(--paper)}
+.foot-plate{display:block;background:var(--plate);color:var(--paper);font-weight:900;font-size:calc(var(--u) * 36);line-height:1;padding:.2em .36em .1em;border-radius:.07em;white-space:nowrap;transform:rotate(-2.5deg);transform-origin:0 100%}
 .foot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 16px}
 .foot-col{display:flex;flex-direction:column;gap:2px}
 .foot-col .eyebrow{color:var(--dust);margin-bottom:10px}
@@ -398,8 +413,7 @@ main.wrap{padding-top:var(--top)}
 
 /* —— dark pages (/tonight/): same chrome, flipped —— */
 .theme-dark .nav{background:rgba(20,18,24,.94);color:var(--bone);border-bottom-color:var(--line-d)}
-.theme-dark .brand .brand-mark{color:var(--bone)}              /* the stencil reads on tar; the bar goes powder rose (the logo rule for dark grounds) */
-.theme-dark .brand-mark .lp-bar{fill:var(--creosote-lift)}
+.theme-dark .brand .brand-mark{color:var(--bone)}              /* the letters read on tar; the plate is the same pink on a dark ground */
 .theme-dark .nav .btn--sm{background:var(--bone);color:var(--asphalt);border-color:var(--bone)}
 .theme-dark .tally-line{color:var(--dust);border-bottom-color:var(--line-d)}
 .theme-dark .tally-num{color:var(--bone)}
@@ -407,14 +421,14 @@ main.wrap{padding-top:var(--top)}
 
 /* —— Pass 36 (Oct 6, 2026): the "Ride with me" bar (markup in scripts/chrome.js, behaviour in /ridebar.js).
    Robert wanted "ride with me" on every page as you scroll, to the next ride he's doing. Bruise bar, the
-   date on the powder-rose plate (the blank, filled in), plaster type. Phones: across the foot of the screen.
+   date on a pink plate (the blank, filled in: small type, so the pink a step down), plaster type. Phones: across the foot of the screen.
    Desktop: a box at the bottom right. It slides away while the page's own "Ride with me" is in view.
    The same block is in /chrome.css and /home.css. —— */
 .ridebar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:stretch;background:var(--asphalt);color:var(--paper);border-top:1px solid var(--line-d);padding-bottom:env(safe-area-inset-bottom);transform:translateY(110%);visibility:hidden;transition:transform var(--t-open) var(--ease),visibility 0s linear var(--t-open)}
 .ridebar.is-on{transform:none;visibility:visible;transition:transform var(--t-open) var(--ease)}
 .ridebar[hidden]{display:none}
 .ridebar-a{flex:1 1 auto;display:flex;align-items:center;gap:12px;min-height:60px;min-width:0;padding:8px 8px 8px var(--gut);color:inherit;text-decoration:none}
-.ridebar-d{flex:0 0 auto;background:var(--volt);color:var(--asphalt);font-size:.8125rem;font-weight:800;line-height:1;padding:7px 8px 6px;white-space:nowrap}
+.ridebar-d{flex:0 0 auto;background:var(--creosote);color:var(--paper);font-size:.8125rem;font-weight:800;line-height:1;padding:7px 8px 6px;white-space:nowrap}
 .ridebar-t{display:flex;flex-direction:column;min-width:0;line-height:1.25}
 .ridebar-t b{font-size:1rem;font-weight:800}
 .ridebar-n{font-size:.8125rem;font-weight:600;color:var(--dust);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -669,7 +683,7 @@ main:has(.pledge){padding-bottom:0}
 .foot-line{font-size:var(--fs-label)}
 @media (min-width:1024px){
   .foot>.wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);align-items:end}
-  .foot-sign{grid-column:1 / span 5;margin:0;--fw:clamp(300px,30vw,440px)}
+  .foot-sign{grid-column:1 / span 5;margin:0;--fw:clamp(260px,24vw,360px)}
   .foot-grid{grid-column:6 / -1}
   .foot-crisis,.foot-line{grid-column:1 / -1}
 }

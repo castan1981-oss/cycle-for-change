@@ -103,9 +103,9 @@
 
   const THEMES = {
     // plaster ground, asphalt line: the ride pages and the plain poster
-    plaster: { bg: "#EFEDEA", line: "#1C1A22", lineW: 6, point: "#1C1A22", pointFg: "#EFEDEA", plate: "#EFEDEA", plateLine: "#1C1A22", text: "#1C1A22", mute: "#4A4E55", leader: "#1C1A22", accent: "#A84C58" },
+    plaster: { bg: "#EFEDEA", line: "#1C1A22", lineW: 6, point: "#1C1A22", pointFg: "#EFEDEA", plate: "#EFEDEA", plateLine: "#1C1A22", text: "#1C1A22", mute: "#4A4E55", leader: "#1C1A22", accent: "#B1406C" },
     // over a photo: plaster line, plates on asphalt
-    photo: { bg: "#1C1A22", line: "#EFEDEA", lineW: 7, point: "#EFEDEA", pointFg: "#1C1A22", plate: "#1C1A22", plateLine: "#EFEDEA", text: "#EFEDEA", mute: "#A9BDB8", leader: "#EFEDEA", accent: "#D9B1AA" },
+    photo: { bg: "#1C1A22", line: "#EFEDEA", lineW: 7, point: "#EFEDEA", pointFg: "#1C1A22", plate: "#1C1A22", plateLine: "#EFEDEA", text: "#EFEDEA", mute: "#A9BDB8", leader: "#EFEDEA", accent: "#E3ABC0" },
   };
 
   function svg(L, themeName) {

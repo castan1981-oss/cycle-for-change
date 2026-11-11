@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<!--
+  How we ride: the group-ride film on every listed ride page and on /rides/about/#how-we-ride (CLAUDE.md §6).
+  One ride, six riders, nine things. Everything on screen is a pure function of the clock t (seconds), so the film is
+  this page shot frame by frame: python3 tools/how-we-ride/render.py --n <file number> writes cfc-site/film/how-we-ride-<n>.*
+  The font and the asphalt tile are the site's own files; {{MARK}} is the mark's words from scripts/mark-2027.js (render.py
+  puts them in, so the film never carries its own drawing of the mark). Open .build/film.html to watch it in a browser.
+  The words: Robert's (the flat rule is his Oct 30, 2026 call; no "3 of 9" over a chapter, Oct 31). The same nine are in
+  tools/build-rides.js HOW_STEPS for /rides/about/. Change a line in both.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How we ride</title>
+<style>
+@font-face{font-family:"Overpass";font-style:normal;font-weight:100 900;font-display:block;src:url(../../cfc-site/fonts/overpass-latin.woff2) format("woff2")}
+:root{
+  --concrete:#E1DFDB; --plaster:#EFEDEA; --patina:#A9BDB8; --patina-deep:#687F7C; --powder:#E3ABC0; --plate:#C2557F;
+  --gunmetal:#4A4E55; --pool:#2C4F55; --bruise:#1C1A22; --rose:#B1406C; --tar:#141218;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--concrete);color:var(--bruise);font-family:Overpass,system-ui,sans-serif;-webkit-font-smoothing:antialiased;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+button{font:inherit;color:inherit}
+
+.hwr{display:flex;flex-direction:column;align-items:center}
+.stage{position:relative;margin:0;width:min(100%, calc((100svh - env(safe-area-inset-top) - env(safe-area-inset-bottom)) * 9 / 16));container-type:inline-size}
+.panel{width:100%;max-width:34rem;padding:28px 16px 40px}
+@media (min-width:900px){
+  .hwr{flex-direction:row;align-items:flex-start;justify-content:center;gap:clamp(40px,5vw,88px);padding:32px}
+  .stage{width:min(calc((100svh - 64px) * 9 / 16), 500px);flex:none;position:sticky;top:32px}
+  .panel{padding:8px 0 40px;max-width:27rem}
+}
+
+/* the frame: a 1080 x 1920 design, scaled with container units */
+.frame{--u:calc(100cqw / 1080);position:relative;width:100%;aspect-ratio:9 / 16;overflow:hidden;background:var(--bruise);user-select:none;-webkit-user-select:none}
+.frame > svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+
+/* words: inside the Reels safe zone (top 200, right 150, nothing below 1440) */
+.words{position:absolute;left:calc(var(--u) * 72);right:calc(var(--u) * 150);top:calc(var(--u) * 196)}
+.mark{font-size:calc(var(--u) * 38);font-weight:700;color:var(--patina);line-height:1;margin:0 0 calc(var(--u) * 22)}
+.q{font-size:calc(var(--u) * 80);font-weight:800;color:var(--plaster);line-height:1.04;letter-spacing:-.01em;margin:0}
+.q span{display:inline-block;white-space:pre}
+.plate{display:inline-block;background:var(--plate);color:var(--plaster);border-radius:.07em;transform:rotate(-2.5deg);transform-origin:0 100%;font-size:calc(var(--u) * 80);font-weight:900;line-height:1;
+  letter-spacing:-.01em;padding:calc(var(--u) * 16) calc(var(--u) * 24) calc(var(--u) * 6);margin:calc(var(--u) * 27) 0 0}
+.plate span{display:inline-block}
+.why{font-size:calc(var(--u) * 44);font-weight:700;color:var(--patina);line-height:1.24;margin:calc(var(--u) * 28) 0 0;max-width:calc(var(--u) * 820)}
+.lock{margin-top:calc(var(--u) * 48);display:block}
+.lock[hidden]{display:none}
+.lock-sign{--h:calc(var(--u) * 120);display:flex;align-items:flex-end;gap:calc(var(--h) * .16)}
+.lock-word{display:block;flex:none;height:var(--h);width:auto;color:var(--plaster)}
+.lock-plate{display:block;background:var(--plate);color:var(--plaster);font-weight:900;font-size:calc(var(--h) * .58);line-height:1;padding:.18em .36em .1em;border-radius:.07em;white-space:nowrap;transform:rotate(-2.5deg);transform-origin:0 100%;margin-bottom:calc(var(--h) * .15)}
+.lock p{margin:calc(var(--u) * 26) 0 0;font-size:calc(var(--u) * 46);font-weight:700;color:var(--patina);line-height:1.2}
+
+.sig{position:absolute;left:calc(var(--u) * 72);top:calc(var(--u) * 760);opacity:0}
+.sig b{display:block;font-size:calc(var(--u) * 76);font-weight:900;color:var(--plaster);line-height:1}
+.sig i{display:block;font-style:normal;font-size:calc(var(--u) * 42);font-weight:700;color:var(--patina);line-height:1.25;margin-top:calc(var(--u) * 12)}
+
+/* scene labels: plates, square, sentence case */
+.lab{position:absolute;left:0;top:0;transform:translateY(-50%);white-space:nowrap;font-size:calc(var(--u) * 38);line-height:1;
+  padding:calc(var(--u) * 14) calc(var(--u) * 20) calc(var(--u) * 10);opacity:0}
+.lab--good{background:var(--plaster);color:var(--bruise);font-weight:800}
+.lab--nope{border:calc(var(--u) * 4) solid var(--powder);color:var(--powder);font-weight:800;padding:calc(var(--u) * 10) calc(var(--u) * 16) calc(var(--u) * 6)}
+.lab--call{background:var(--powder);color:var(--bruise);font-weight:900}
+.lab--note{background:var(--gunmetal);color:var(--plaster);font-weight:700}
+
+/* the film control: the site's disc */
+.disc{position:absolute;left:12px;bottom:12px;width:56px;height:56px;margin:0;padding:0;border:0;border-radius:50%;background:var(--plaster);color:var(--bruise);
+  display:grid;place-items:center;cursor:pointer;transition:background-color 120ms var(--ease);-webkit-tap-highlight-color:transparent}
+.disc svg{width:22px;height:22px;fill:currentColor;display:none}
+.disc[data-state="playing"] .i-pause,.disc[data-state="paused"] .i-play,.disc[data-state="ended"] .i-again{display:block}
+.disc .i-play{margin-left:3px}
+.disc:focus-visible{outline:3px solid var(--bruise);outline-offset:-9px}
+@media (hover:hover){.disc:hover{background:var(--concrete)}}
+.disc:active{transition-duration:0s;background:#D7D5D0}
+@media (max-width:599px){.disc{left:8px;bottom:8px;width:44px;height:44px}.disc svg{width:18px;height:18px}}
+
+/* panel */
+.kicker{margin:0 0 10px;font-size:13px;font-weight:700;color:var(--gunmetal);line-height:1.3}
+.panel h1{margin:0;font-size:clamp(34px,8vw,44px);font-weight:800;line-height:1;letter-spacing:-.01em}
+.lede{margin:14px 0 24px;font-size:18px;font-weight:600;line-height:1.45}
+.steps{list-style:none;margin:0 0 24px;padding:0;border-top:1px solid var(--patina-deep)}
+.steps li{border-bottom:1px solid var(--patina-deep)}
+.step{display:grid;grid-template-columns:2.6em 1fr;column-gap:10px;width:100%;min-height:44px;margin:0;padding:12px 0 10px;background:none;border:0;
+  text-align:left;cursor:pointer;position:relative;-webkit-tap-highlight-color:transparent}
+.step .n{font-size:13px;font-weight:700;color:var(--gunmetal);padding-top:3px;font-variant-numeric:tabular-nums}
+.step .t{font-size:17px;font-weight:800;line-height:1.25}
+.step .t em{font-style:normal;background:var(--plate);color:var(--plaster);padding:1px 6px 0;margin-left:4px}
+.step .w{grid-column:2;font-size:15px;font-weight:500;line-height:1.4;color:var(--gunmetal);margin-top:3px}
+.step::after{content:"";position:absolute;left:0;bottom:-1px;height:3px;width:calc(var(--p, 0) * 100%);background:var(--bruise)}
+.step[aria-current="step"] .n{color:var(--bruise)}
+.step:focus-visible{outline:3px solid var(--bruise);outline-offset:2px}
+.ctl{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border:2px solid var(--bruise);background:transparent;color:var(--bruise);
+  font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:background-color 120ms var(--ease),color 120ms var(--ease)}
+.btn:focus-visible{outline:3px solid var(--bruise);outline-offset:3px}
+@media (hover:hover){.btn:hover{background:var(--bruise);color:var(--plaster)}}
+.btn:active{transition-duration:0s;background:var(--gunmetal);border-color:var(--gunmetal);color:var(--plaster)}
+.rm-note{margin:0 0 18px;font-size:15px;font-weight:600;line-height:1.4;color:var(--gunmetal)}
+.rm-note[hidden]{display:none}
+.fine{margin:24px 0 0;font-size:13px;font-weight:700;color:var(--gunmetal);line-height:1.4}
+.export .disc{display:none!important}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main class="hwr">
+  <figure class="stage" aria-labelledby="hwrTitle" aria-describedby="hwrSteps">
+    <div class="frame" id="frame" aria-hidden="true">
+      <svg id="svg" viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <defs>
+          <image id="asphTile" href="../../cfc-site/img/home/asphalt-2.webp" width="560" height="560"/>
+          <linearGradient id="dimG" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="1920"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".34" stop-color="#fff" stop-opacity=".22"/><stop offset=".45" stop-color="#fff" stop-opacity="1"/></linearGradient>
+          <mask id="dim" maskUnits="userSpaceOnUse" x="0" y="0" width="1080" height="1920"><rect width="1080" height="1920" fill="url(#dimG)"/></mask>
+        </defs>
+        <!-- top-down world -->
+        <g id="top">
+          <g id="asph" opacity=".22"></g>
+          <path id="verge" fill="#2C4F55"/>
+          <path id="edge" mask="url(#dim)" fill="none" stroke="#A9BDB8" stroke-width="10" stroke-linejoin="round"/>
+          <g id="dashesM" mask="url(#dim)"><g id="dashes" fill="#A9BDB8"></g></g>
+          <rect id="wall" mask="url(#dim)" x="324" y="0" width="12" height="1920" fill="#E3ABC0" opacity="0"/>
+          <g id="props"></g>
+          <g id="lights"></g>
+          <g id="riders"></g>
+          <g id="car"></g>
+        </g>
+        <!-- front view, for the hand signals -->
+        <g id="front" opacity="0"></g>
+      </svg>
+      <div class="words" id="words">
+        <p class="mark" id="mark"></p>
+        <p class="q" id="q"></p>
+        <p class="plate" id="plate"><span id="ans"></span></p>
+        <p class="why" id="why"></p>
+        <div class="lock" id="lock" hidden>
+          <div class="lock-sign">{{MARK}}<span class="lock-plate">change</span></div>
+          <p>Find a group ride at cycleforchange.org</p>
+        </div>
+      </div>
+      <div class="sig" id="sig"><b id="sigName"></b><i id="sigHow"></i></div>
+      <div id="labs"></div>
+    </div>
+    <button class="disc" id="disc" type="button" data-state="paused" aria-label="Play">
+      <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>
+      <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5h4.2v15H6zM13.8 4.5H18v15h-4.2z"/></svg>
+      <svg class="i-again" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5a7.5 7.5 0 1 1-7.1 5.1l2.2.7A5.2 5.2 0 1 0 12 6.8V9.6L7.6 5.7 12 1.8z"/></svg>
+    </button>
+  </figure>
+
+  <section class="panel">
+    <p class="kicker">Cycle for Change · Group rides</p>
+    <h1 id="hwrTitle">How we ride</h1>
+    <p class="lede">Nine things for your first group ride. Tap one to jump to it.</p>
+    <p class="rm-note" id="rmNote" hidden>Reduced motion is on. Tap a step to see it, or press play.</p>
+    <ol class="steps" id="hwrSteps"></ol>
+    <div class="ctl"><button class="btn" id="again" type="button">Play from the start</button></div>
+    <p class="fine">The group-ride film on cycleforchange.org. python3 tools/how-we-ride/render.py makes the files.</p>
+  </section>
+</main>
+
+<script>
+/* ============================================================
+   How we ride. One ride, six riders, nine things.
+   Everything on screen is a pure function of the clock t (seconds):
+   play, pause, jump, reduced-motion stills and the frame-by-frame
+   export all come from render(t).
+   ============================================================ */
+const HWR_DATA = {
+  chapters: [
+    { id: "intro",  dur: 3.8, q: "First group ride?",          a: "Here’s how it works.", why: "Nine things. That’s it.", still: 2.6 },
+    { id: "pairs",  dur: 9.8, n: 1, name: "Side by side", q: "How do we ride?",         a: "Side by side.",       why: "Single file when it’s tight. Never a bunch.", still: 4.2 },
+    { id: "bars",   dur: 6.0, n: 2, name: "Bars even",    q: "Riding next to someone?", a: "Bars even.",          why: "Don’t creep ahead. Nobody should have to chase.", still: 5.0 },
+    { id: "gaps",   dur: 6.0, n: 3, name: "No gaps",      q: "Gap opening up?",         a: "Close it.",           why: "Stay about a wheel back. Short groups are easier to pass.", still: 2.2 },
+    { id: "line",   dur: 6.0, n: 4, name: "The line",     q: "Want to move up?",        a: "Not over the line.",  why: "That lane isn’t ours. Wait for room.", still: 2.6 },
+    { id: "signal", dur: 9.0, n: 5, name: "Signals",      q: "See something in the road?", a: "Point it out.",    why: "See it, signal it. Riders behind do the same.", still: 2.6 },
+    { id: "car",    dur: 7.0, n: 6, name: "Car back",     q: "Car coming up behind?",   a: "Call it up the line.", why: "Back rider says it. Everyone passes it forward.", still: 2.9 },
+    { id: "light",  dur: 7.0, n: 7, name: "Red light",    q: "Red light?",              a: "Everyone stops.",     why: "Nobody rolls through. We go on green together.", still: 4.2 },
+    { id: "wait",   dur: 7.5, n: 8, name: "No drop",      q: "Someone falls behind?",   a: "We wait.",            why: "Regroup after climbs and turns. Nobody rides home alone.", still: 3.6 },
+    { id: "flat",   dur: 8.0, n: 9, name: "Flats",        q: "Flat tire?",              a: "Two stay with you.",   why: "The rest roll on and regroup ahead. A whole group stopped is a hazard.", still: 3.2 },
+    { id: "outro",  dur: 5.0, q: "That’s how we ride.",     a: "Together.",           why: "", still: 4.6, lock: true }
+  ],
+  // hand signals, ch "signal" local times
+  signals: [
+    { at: 1.7, name: "Hole",      how: "Point down at it.",   pose: "point" },
+    { at: 3.5, name: "Slowing",   how: "Palm down. Pat the air.", pose: "pat" },
+    { at: 5.2, name: "Stopping",  how: "Hand up, open palm.", pose: "palm" },
+    { at: 6.9, name: "Single up", how: "One finger up.",      pose: "finger" }
+  ]
+};
+
+(() => {
+  const NS = "http://www.w3.org/2000/svg", W = 1080, H = 1920;
+  const $ = id => document.getElementById(id);
+  const RM = matchMedia("(prefers-reduced-motion: reduce)");
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const sm = s => s * s * s * (s * (s * 6 - 15) + 10);
+  const ramp = (t, a, b) => sm(clamp((t - a) / (b - a)));
+  const win = (t, a, b, f = .28) => Math.min(ramp(t, a, a + f), 1 - ramp(t, b - f, b));  // in at a, out by b
+  const el = (tag, attrs = {}, parent) => { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); if (parent) parent.appendChild(n); return n; };
+  const keyAt = (keys, t) => {
+    if (t <= keys[0][0]) return keys[0][1];
+    for (let i = 1; i < keys.length; i++) { const [t1, v1] = keys[i]; if (t <= t1) { const [t0, v0] = keys[i - 1]; return t1 === t0 ? v1 : v0 + (v1 - v0) * sm((t - t0) / (t1 - t0)); } }
+    return keys[keys.length - 1][1];
+  };
+
+  /* ---------- chapters on one clock ---------- */
+  const CH = HWR_DATA.chapters; let acc = 0;
+  CH.forEach(c => { c.start = acc; acc += c.dur; });
+  const D = acc, S = Object.fromEntries(CH.map(c => [c.id, c.start]));
+  const chapterAt = t => { let i = 0; CH.forEach((c, k) => { if (t >= c.start) i = k; }); return i; };
+
+  /* ---------- the road: speed keys -> scroll (integrated once) ---------- */
+  const V = 380;
+  const speedKeys = [[0, V],
+    [S.light + 1.2, V], [S.light + 3.2, 0], [S.light + 5.2, 0], [S.light + 6.6, V],
+    [S.wait + 1.6, V], [S.wait + 3.0, 0], [S.wait + 5.6, 0], [S.wait + 6.8, V], [D, V]];
+  const DT = 1 / 240, table = [0];
+  for (let i = 1; i <= Math.ceil(D / DT) + 2; i++) table.push(table[i - 1] + keyAt(speedKeys, (i - .5) * DT) * DT);
+  const scroll = t => { const f = clamp(t, 0, D + DT) / DT, i = Math.floor(f); return table[i] + (table[i + 1] - table[i]) * (f - i); };
+  // a thing painted on the road that is at screen y=Y at time T
+  const anchor = (T, Y) => scroll(T) + H - Y;
+  const yOf = (d, t) => H - d + scroll(t);
+
+  const CENTER = 330, WIDE = 920, NARROW = 770;
+  // the road narrows in "Side by side" and opens again for "Bars even"
+  const nA = anchor(S.pairs + 1.7, 0), nB = nA + 450, wA = anchor(S.pairs + 5.9, 0), wB = wA + 450;
+  const edgeAt = d => d < nA ? WIDE : d < nB ? WIDE + (NARROW - WIDE) * sm((d - nA) / (nB - nA)) : d < wA ? NARROW : d < wB ? NARROW + (WIDE - NARROW) * sm((d - wA) / (wB - wA)) : WIDE;
+
+  const TILE = 560, DP = 200, DL = 100;
+  const asph = $("asph");
+  for (let r = -1; r < 4; r++) for (let c = 0; c < 2; c++) el("use", { href: "#asphTile", x: c * TILE, y: r * TILE }, asph);
+  const dashes = $("dashes");
+  for (let y = -DP; y < H + DP; y += DP) el("rect", { x: CENTER - 6, y, width: 12, height: DL }, dashes);
+  function drawRoad(t) {
+    const s = scroll(t);
+    asph.setAttribute("transform", `translate(0 ${(s % TILE).toFixed(2)})`);
+    dashes.setAttribute("transform", `translate(0 ${(s % DP).toFixed(2)})`);
+    let line = "", verge = "";
+    for (let y = -40; y <= H + 40; y += 40) {
+      const x = edgeAt(s + H - y);
+      line += (y === -40 ? "M" : "L") + x.toFixed(1) + " " + y;
+      verge += (y === -40 ? "M" : "L") + (x + 5).toFixed(1) + " " + y;
+    }
+    $("edge").setAttribute("d", line);
+    $("verge").setAttribute("d", verge + `L1100 ${H + 40}L1100 -40Z`);
+    $("wall").setAttribute("opacity", (.95 * win(t, S.line + 2.0, S.line + 5.4, .35)).toFixed(3));
+  }
+
+  /* ---------- props painted on the road / beside it ---------- */
+  const props = $("props");
+  // stop line + traffic light ("Red light")
+  const stopD = anchor(S.light + 3.2, 790);
+  const stopLine = el("rect", { x: CENTER + 8, width: WIDE - CENTER - 12, height: 26, fill: "#EFEDEA" }, props);
+  const light = el("g", {}, $("lights"));
+  el("rect", { x: -44, y: -118, width: 88, height: 236, fill: "#141218", stroke: "#4A4E55", "stroke-width": 4 }, light);
+  const lamps = [-70, 0, 70].map(y => el("circle", { cx: 0, cy: y, r: 27, fill: "#2B2A33" }, light));
+  // top of the climb ("We wait")
+  const topD = anchor(S.wait + 3.0, 800);
+  const topLine = el("rect", { x: CENTER + 8, width: WIDE - CENTER - 12, height: 6, fill: "#A9BDB8" }, props);
+  // the wheel off the bike ("Flats")
+  const wheel = el("g", { opacity: 0 }, props);
+  el("circle", { cx: 0, cy: 0, r: 30, fill: "none", stroke: "#E1DFDB", "stroke-width": 7 }, wheel);
+  el("circle", { cx: 0, cy: 0, r: 5, fill: "#E1DFDB" }, wheel);
+  function drawProps(t) {
+    const ys = yOf(stopD, t);
+    stopLine.setAttribute("y", (ys - 13).toFixed(1));
+    const lightOn = t > S.light + .2 && t < S.light + 7.0;
+    light.setAttribute("transform", `translate(1000 ${(ys - 140).toFixed(1)})`);
+    light.setAttribute("opacity", lightOn ? 1 : 0);
+    const green = t >= S.light + 4.8;
+    lamps[0].setAttribute("fill", green ? "#2B2A33" : "#B1406C");
+    lamps[2].setAttribute("fill", green ? "#A9BDB8" : "#2B2A33");
+    stopLine.setAttribute("opacity", t > S.light && t < S.wait ? 1 : 0);
+    topLine.setAttribute("y", (yOf(topD, t) - 3).toFixed(1));
+    topLine.setAttribute("opacity", t > S.wait && t < S.flat ? 1 : 0);
+    wheel.setAttribute("transform", "translate(1046 1036)");
+    wheel.setAttribute("opacity", 0);
+  }
+
+  /* ---------- the six riders (overhead, heading up) ---------- */
+  const SC = .72;
+  const riderMarkup = c => `
+    <line class="tf" x1="0" y1="-100" x2="0" y2="-50" stroke="#4A4E55" stroke-width="10" stroke-linecap="round"/>
+    <line x1="0" y1="46" x2="0" y2="100" stroke="#4A4E55" stroke-width="10" stroke-linecap="round"/>
+    <line x1="0" y1="-56" x2="0" y2="48" stroke="#4A4E55" stroke-width="7" stroke-linecap="round"/>
+    <line class="kl" x1="-24" y1="-4" x2="-25" y2="16" stroke="#4A4E55" stroke-width="15" stroke-linecap="round"/>
+    <line class="kr" x1="24" y1="-4" x2="25" y2="16" stroke="#4A4E55" stroke-width="15" stroke-linecap="round"/>
+    <line x1="-44" y1="-70" x2="44" y2="-70" stroke="#E1DFDB" stroke-width="7" stroke-linecap="round"/>
+    <path d="M-24 -32 L-36 -66 M24 -32 L36 -66" stroke="#1C1A22" stroke-width="18" stroke-linecap="round" fill="none"/>
+    <path d="M-24 -32 L-36 -66 M24 -32 L36 -66" stroke="${c}" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path d="M-29 -31 Q-32 -43 -16 -45 L16 -45 Q32 -43 29 -31 L18 26 Q0 35 -18 26 Z" fill="${c}" stroke="#1C1A22" stroke-width="3.5"/>
+    <circle cx="-36" cy="-69" r="7.5" fill="#4A4E55"/><circle cx="36" cy="-69" r="7.5" fill="#4A4E55"/>
+    <ellipse cx="0" cy="-50" rx="19" ry="24" fill="#EFEDEA" stroke="#1C1A22" stroke-width="3.5"/>
+    <path d="M0 -69 V-31 M-9 -64 V-37 M9 -64 V-37" stroke="#4A4E55" stroke-width="4" stroke-linecap="round"/>`;
+  const JERSEY = { A: "#EFEDEA", B: "#E3ABC0", C: "#A9BDB8", D: "#B1406C", E: "#E3ABC0", F: "#A9BDB8" };
+  const IDS = Object.keys(JERSEY);
+  const XR = 690, XL = 580;
+  const FORM = {
+    pairs:  { A: [XR, 920], B: [XL, 920], C: [XR, 1080], D: [XL, 1080], E: [XR, 1240], F: [XL, 1240] },
+    single: { A: [XR, 655], B: [XR, 825], C: [XR, 995], D: [XR, 1165], E: [XR, 1335], F: [XR, 1505] },
+    bunch:  { A: [640, 925], B: [500, 972], C: [768, 1075], D: [600, 1112], E: [722, 1252], F: [452, 1228] },
+    verge:  { A: [975, 700], B: [975, 850], C: [975, 1000], D: [975, 1150], E: [975, 1300], F: [975, 1450] }
+  };
+  // keyframes per rider: [t, value]; a move is (t0 -> t1) to a new value
+  const OVR = {};  // id -> [{a, b, y(t)}]: y follows a function inside [a, b)
+  const TR = Object.fromEntries(IDS.map(id => [id, { x: [[0, FORM.pairs[id][0]]], y: [[0, FORM.pairs[id][1]]] }]));
+  const mv = (id, ax, t0, t1, v) => { const k = TR[id][ax]; k.push([t0, k[k.length - 1][1]], [t1, v]); };
+  const to = (form, t0, t1, ids = IDS, axes = "xy") => ids.forEach(id => { if (axes.includes("x")) mv(id, "x", t0, t1, FORM[form][id][0]); if (axes.includes("y")) mv(id, "y", t0, t1, FORM[form][id][1]); });
+  const pairsToSingle = s => {      // front rolls ahead, the left line tucks in, the back eases off
+    mv("A", "y", s + 0.0, s + 1.4, FORM.single.A[1]);
+    mv("C", "y", s + 0.2, s + 1.6, FORM.single.C[1]);
+    mv("E", "y", s + 0.2, s + 1.6, FORM.single.E[1]);
+    mv("B", "y", s + 0.2, s + 1.5, FORM.single.B[1]); mv("B", "x", s + 0.9, s + 2.0, XR);
+    mv("D", "y", s + 0.3, s + 1.6, FORM.single.D[1]); mv("D", "x", s + 1.0, s + 2.1, XR);
+    mv("F", "y", s + 0.2, s + 1.7, FORM.single.F[1]); mv("F", "x", s + 1.1, s + 2.2, XR);
+  };
+  const singleToPairs = s => {      // the left line slides out first, then everyone settles
+    ["B", "D", "F"].forEach((id, i) => mv(id, "x", s + 0.0 + i * .1, s + 1.0 + i * .1, XL));
+    IDS.forEach(id => mv(id, "y", s + 0.6, s + 2.0, FORM.pairs[id][1]));
+  };
+  // intro: pairs.  1 Side by side
+  to("bunch", S.pairs + 0.15, S.pairs + 1.2, ["F"]); to("bunch", S.pairs + 0.4, S.pairs + 1.5, ["C", "D", "E"]); to("bunch", S.pairs + 0.6, S.pairs + 1.7, ["A", "B"]);
+  to("pairs", S.pairs + 2.5, S.pairs + 3.6, ["A", "B"]); to("pairs", S.pairs + 2.7, S.pairs + 3.8, ["C", "D"]); to("pairs", S.pairs + 3.2, S.pairs + 4.3, ["E", "F"]);
+  pairsToSingle(S.pairs + 4.6);
+  singleToPairs(S.pairs + 7.6);
+  // 2 Bars even
+  mv("B", "y", S.bars + 2.2, S.bars + 2.9, 846); mv("B", "y", S.bars + 3.9, S.bars + 4.6, 920);
+  // 3 No gaps
+  mv("E", "y", S.gaps + 0.5, S.gaps + 2.0, 1480); mv("F", "y", S.gaps + 0.6, S.gaps + 2.1, 1480);
+  mv("E", "y", S.gaps + 3.0, S.gaps + 4.2, 1240); mv("F", "y", S.gaps + 3.1, S.gaps + 4.3, 1240);
+  // 4 The line
+  mv("D", "x", S.line + 1.0, S.line + 2.2, 292); mv("D", "y", S.line + 1.0, S.line + 2.4, 1000);
+  mv("D", "y", S.line + 3.0, S.line + 3.8, 1080); mv("D", "x", S.line + 3.3, S.line + 4.4, XL);
+  // 6 Car back: single up once the call reaches the front
+  pairsToSingle(S.car + 2.8);
+  // 7 Red light: two by two to wait at the line
+  singleToPairs(S.light + 0.0);
+  // 8 No drop: two fall back, the group waits at the top, they ride up
+  mv("F", "y", S.wait + 0.4, S.wait + 2.4, 1580); mv("E", "y", S.wait + 0.8, S.wait + 2.6, 1580);
+  mv("F", "y", S.wait + 3.1, S.wait + 5.1, 1240); mv("E", "y", S.wait + 3.2, S.wait + 5.2, 1240);
+  // Flats: the flat (C) and one helper (E) pull off and stop; the rest roll on and close up; the two catch back up
+  mv("C", "x", S.flat + 1.0, S.flat + 1.9, 975); mv("E", "x", S.flat + 1.3, S.flat + 2.2, 975);
+  mv("D", "x", S.flat + 2.4, S.flat + 3.4, XR);  mv("F", "y", S.flat + 3.2, S.flat + 4.3, 1080);
+  const dropY = (t0, y0) => t => { const T = 1.5, a = V / T, u = t - t0; return u <= T ? y0 + .5 * a * u * u : y0 + .5 * a * T * T + V * (u - T); };
+  OVR.C = [{ a: S.flat + 1.2, b: S.flat + 5.0, y: dropY(S.flat + 1.2, 1080) }];
+  OVR.E = [{ a: S.flat + 1.05, b: S.flat + 5.2, y: dropY(S.flat + 1.05, 1240) }];
+  TR.C.y.push([S.flat + 1.2, 1080], [S.flat + 5.0, dropY(S.flat + 1.2, 1080)(S.flat + 5.0)], [S.flat + 6.8, 1240]); TR.C.x.push([S.flat + 5.6, 975], [S.flat + 6.6, XR]);
+  TR.E.y.push([S.flat + 1.05, 1240], [S.flat + 5.2, dropY(S.flat + 1.05, 1240)(S.flat + 5.2)], [S.flat + 7.2, 1240]); TR.E.x.push([S.flat + 5.6, 975], [S.flat + 6.6, XL]);
+
+  const pos = (id, t) => { for (const o of OVR[id] || []) if (t >= o.a && t < o.b) return [keyAt(TR[id].x, t), o.y(t)]; return [keyAt(TR[id].x, t), keyAt(TR[id].y, t)]; };
+  const ridersG = $("riders");
+  const riders = IDS.map((id, i) => {
+    const g = el("g", {}, ridersG); g.innerHTML = riderMarkup(JERSEY[id]);
+    return { id, g, kl: g.querySelector(".kl"), kr: g.querySelector(".kr"), tf: g.querySelector(".tf"), ph: i * .37, y0: FORM.pairs[id][1] };
+  });
+  const CAD = 1.45;
+  function drawRiders(t) {
+    const s = scroll(t);
+    for (const r of riders) {
+      const [x, y] = pos(r.id, t);
+      const travel = s + (r.y0 - y);          // road + own moves up the screen
+      const ph = 6.2832 * (CAD * travel / V + r.ph);
+      const knee = 10 * Math.sin(ph), sway = 1.4 * Math.sin(ph) * clamp(keyAt(speedKeys, t) / V);
+      r.g.setAttribute("transform", `translate(${(x + sway).toFixed(2)} ${y.toFixed(2)}) scale(${SC})`);
+      r.kl.setAttribute("y1", (-4 - knee).toFixed(2)); r.kl.setAttribute("y2", (16 - knee).toFixed(2));
+      r.kr.setAttribute("y1", (-4 + knee).toFixed(2)); r.kr.setAttribute("y2", (16 + knee).toFixed(2));
+    }
+    // the flat: C's front wheel is off while it's fixed
+  }
+
+  /* ---------- the car ("Car back") ---------- */
+  const car = $("car");
+  car.innerHTML = `<rect x="-76" y="-148" width="152" height="296" rx="34" fill="#4A4E55"/>
+    <path d="M-58 -78 Q0 -96 58 -78 L50 -34 Q0 -44 -50 -34 Z" fill="#141218" opacity=".85"/>
+    <rect x="-52" y="-24" width="104" height="110" rx="16" fill="#5A5E66"/>
+    <path d="M-50 96 Q0 104 50 96 L46 120 Q0 126 -46 120 Z" fill="#141218" opacity=".85"/>`;
+  const carKeys = { x: [[0, 640], [S.car + 4.4, 640], [S.car + 5.2, 440]], y: [[0, 2200], [S.car + 0.2, 2200], [S.car + 1.6, 1800], [S.car + 4.8, 1800], [S.car + 6.8, -400]] };
+  const carPos = t => [keyAt(carKeys.x, t), keyAt(carKeys.y, t)];
+  function drawCar(t) {
+    const on = t > S.car && t < S.car + 7.0;
+    const [x, y] = carPos(t);
+    car.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)})`);
+    car.setAttribute("opacity", on ? 1 : 0);
+  }
+
+  /* ---------- the front view: one rider, the signals ---------- */
+  const front = $("front");
+  front.innerHTML = `
+    <rect x="0" y="0" width="1080" height="1920" fill="#1C1A22"/>
+    <g mask="url(#dim)"><g id="fRoad" stroke="#A9BDB8" fill="none" stroke-linecap="butt"></g></g>
+    <g id="fHole" opacity="0"><ellipse cx="0" cy="0" rx="78" ry="20" fill="#141218"/><ellipse cx="0" cy="0" rx="92" ry="27" fill="none" stroke="#E3ABC0" stroke-width="4" stroke-dasharray="12 10"/></g>
+    <g id="fRider" transform="translate(520 1790) scale(1.72)">
+      <ellipse cx="0" cy="0" rx="120" ry="14" fill="#141218" opacity=".7"/>
+      <g id="fLegs" fill="none" stroke-linecap="round" stroke-linejoin="round"></g>
+      <rect x="-8" y="-206" width="16" height="206" rx="8" fill="#4A4E55"/>
+      <rect x="-3" y="-196" width="2.5" height="186" fill="#6E727A"/>
+      <path d="M-11 -100 L-7 -232 M11 -100 L7 -232" stroke="#4A4E55" stroke-width="7" stroke-linecap="round"/>
+      <rect x="-10" y="-298" width="20" height="70" fill="#4A4E55"/>
+      <path d="M-30 -330 L-62 -305 L-50 -300 M30 -330 L62 -305 L50 -300" fill="none" stroke="#4A4E55" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M-58 -404 L58 -404 L50 -316 Q0 -300 -50 -316 Z" fill="#B1406C" stroke="#1C1A22" stroke-width="4"/>
+      <path d="M-55 -372 L55 -372 L53 -352 L-53 -352 Z" fill="#E3ABC0"/>
+      <path d="M0 -404 V-326" stroke="#EFEDEA" stroke-width="3"/>
+      <path d="M-78 -292 H78 M-78 -292 Q-90 -292 -88 -270 Q-86 -254 -72 -256 M78 -292 Q90 -292 88 -270 Q86 -254 72 -256" fill="none" stroke="#E1DFDB" stroke-width="8" stroke-linecap="round"/>
+      <g id="fArmR" fill="none" stroke-linecap="round" stroke-linejoin="round"></g>
+      <g id="fArmL" fill="none" stroke-linecap="round" stroke-linejoin="round"></g>
+      <path d="M-14 -404 L-12 -420 L12 -420 L14 -404 Z" fill="#E1DFDB"/>
+      <path d="M-30 -428 Q-30 -396 0 -394 Q30 -396 30 -428 Z" fill="#E1DFDB" stroke="#1C1A22" stroke-width="3"/>
+      <rect x="-33" y="-446" width="66" height="18" rx="9" fill="#141218"/>
+      <path d="M-44 -436 Q-46 -488 0 -490 Q46 -488 44 -436 Z" fill="#EFEDEA" stroke="#1C1A22" stroke-width="4"/>
+      <path d="M-16 -484 V-450 M0 -489 V-452 M16 -484 V-450" stroke="#4A4E55" stroke-width="5" stroke-linecap="round"/>
+      <path d="M-44 -438 H44" stroke="#1C1A22" stroke-width="4"/>
+    </g>`;
+  const fRoad = $("fRoad"), fLegs = $("fLegs"), fArmR = $("fArmR"), fArmL = $("fArmL"), fHole = $("fHole");
+  const VP = [600, 660], RB = [-60, 1920], CB = [1300, 1920];
+  el("line", { x1: VP[0], y1: VP[1], x2: RB[0], y2: RB[1], "stroke-width": 9 }, fRoad);
+  const fDash = []; for (let i = 0; i < 9; i++) fDash.push(el("line", {}, fRoad));
+  const legParts = ["tl", "cl", "sl", "tr", "cr", "sr"].map(k => el("path", {}, fLegs));
+  const arm = g => ({ up: el("path", { stroke: "#1C1A22", "stroke-width": 30 }, g), upc: el("path", { stroke: "#B1406C", "stroke-width": 24 }, g),
+                      fo: el("path", { stroke: "#4A4E55", "stroke-width": 19 }, g), hand: el("g", {}, g) });
+  const AR = arm(fArmR), AL = arm(fArmL);
+  AR.hand.innerHTML = `<circle r="13" fill="#141218" stroke="#4A4E55" stroke-width="3"/>`;
+  AL.hand.innerHTML = `<g class="h-fist"><circle r="13" fill="#141218" stroke="#4A4E55" stroke-width="3"/></g>
+    <g class="h-point"><path d="M0 0 L0 30" stroke="#141218" stroke-width="8" stroke-linecap="round"/><circle r="13" fill="#141218" stroke="#4A4E55" stroke-width="3"/></g>
+    <g class="h-pat"><rect x="-22" y="-9" width="44" height="18" rx="8" fill="#141218" stroke="#4A4E55" stroke-width="3"/></g>
+    <g class="h-palm"><rect x="-15" y="-24" width="30" height="40" rx="9" fill="#141218" stroke="#4A4E55" stroke-width="3"/><path d="M-8 -24 V-34 M0 -24 V-37 M8 -24 V-34" stroke="#141218" stroke-width="6" stroke-linecap="round"/></g>
+    <g class="h-finger"><path d="M0 0 L0 -32" stroke="#141218" stroke-width="8" stroke-linecap="round"/><circle r="13" fill="#141218" stroke="#4A4E55" stroke-width="3"/></g>`;
+  const HANDS = ["fist", "point", "pat", "palm", "finger"].map(k => [k, AL.hand.querySelector(".h-" + k)]);
+  const SH_R = [-56, -394], SH_L = [56, -394], L1 = 96, L2 = 104;
+  const POSE = { rest: [70, -296], point: [148, -168], pat: [196, -262], palm: [150, -492], finger: [96, -588] };
+  const ik = (S, Hd, outward) => {
+    let dx = Hd[0] - S[0], dy = Hd[1] - S[1], d = Math.hypot(dx, dy); const max = L1 + L2 - .5;
+    if (d > max) { Hd = [S[0] + dx / d * max, S[1] + dy / d * max]; d = max; }
+    const a = Math.atan2(dy, dx), b = Math.acos(clamp((L1 * L1 + d * d - L2 * L2) / (2 * L1 * d), -1, 1));
+    const e1 = [S[0] + L1 * Math.cos(a + b), S[1] + L1 * Math.sin(a + b)], e2 = [S[0] + L1 * Math.cos(a - b), S[1] + L1 * Math.sin(a - b)];
+    return [(outward > 0 ? e1[0] > e2[0] : e1[0] < e2[0]) ? e1 : e2, Hd];
+  };
+  const setArm = (A, S0, Hd, out) => {
+    const [E, Hn] = ik(S0, Hd, out);
+    const up = `M${S0[0]} ${S0[1]}L${E[0].toFixed(1)} ${E[1].toFixed(1)}`;
+    A.up.setAttribute("d", up); A.upc.setAttribute("d", up);
+    A.fo.setAttribute("d", `M${E[0].toFixed(1)} ${E[1].toFixed(1)}L${Hn[0].toFixed(1)} ${Hn[1].toFixed(1)}`);
+    A.hand.setAttribute("transform", `translate(${Hn[0].toFixed(1)} ${Hn[1].toFixed(1)})`);
+  };
+  const SIG = HWR_DATA.signals;
+  function drawFront(t) {
+    const lt = t - S.signal, s = scroll(t), ph = 6.2832 * CAD * s / V;
+    // road rushing toward us: dashes on the centre line, closer = longer and wider
+    const u0 = (s / 900) % 1;
+    fDash.forEach((ln, i) => {
+      const u = ((i / fDash.length) + u0) % 1, a = u * u, b = Math.min(1, (u + .05) * (u + .05));
+      const P = k => [VP[0] + (CB[0] - VP[0]) * k, VP[1] + (CB[1] - VP[1]) * k];
+      const [x1, y1] = P(a), [x2, y2] = P(b);
+      ln.setAttribute("x1", x1.toFixed(1)); ln.setAttribute("y1", y1.toFixed(1)); ln.setAttribute("x2", x2.toFixed(1)); ln.setAttribute("y2", y2.toFixed(1));
+      ln.setAttribute("stroke-width", (2 + 22 * u * u).toFixed(1));
+    });
+    // legs: knees and feet alternate
+    const leg = (side, p, i) => {
+      const sx = side, k = 30 * Math.sin(p), f = 34 * Math.sin(p);
+      const hip = [sx * 40, -318], knee = [sx * 66, -238 + k], ank = [sx * 52, -112 + f], toe = [sx * 52, -82 + f];
+      legParts[i].setAttribute("d", `M${hip[0]} ${hip[1]}L${knee[0]} ${knee[1].toFixed(1)}`);
+      legParts[i].setAttribute("stroke", "#4A4E55"); legParts[i].setAttribute("stroke-width", 36);
+      legParts[i + 1].setAttribute("d", `M${knee[0]} ${knee[1].toFixed(1)}L${ank[0]} ${ank[1].toFixed(1)}`);
+      legParts[i + 1].setAttribute("stroke", "#4A4E55"); legParts[i + 1].setAttribute("stroke-width", 26);
+      legParts[i + 2].setAttribute("d", `M${ank[0]} ${(ank[1] - 6).toFixed(1)}L${toe[0]} ${toe[1].toFixed(1)}`);
+      legParts[i + 2].setAttribute("stroke", "#EFEDEA"); legParts[i + 2].setAttribute("stroke-width", 24);
+    };
+    leg(-1, ph, 0); leg(1, ph + Math.PI, 3);
+    $("fRider").setAttribute("transform", `translate(${(520 + 3 * Math.sin(ph)).toFixed(2)} ${(1790 + 2 * Math.sin(2 * ph)).toFixed(2)}) scale(1.72)`);
+    // the signalling arm: move to each pose, hold, back to the bars at the end
+    let target = POSE.rest, hand = "fist", cur = null;
+    SIG.forEach((g, i) => { if (lt >= g.at) cur = i; });
+    if (lt >= 8.5) cur = null;
+    if (cur != null) {
+      const g = SIG[cur], from = cur > 0 ? POSE[SIG[cur - 1].pose] : POSE.rest, k = ramp(lt, g.at, g.at + .42);
+      target = [from[0] + (POSE[g.pose][0] - from[0]) * k, from[1] + (POSE[g.pose][1] - from[1]) * k];
+      if (g.pose === "pat") target = [target[0], target[1] + 12 * Math.sin(6.2832 * 2.4 * (lt - g.at)) * ramp(lt, g.at + .3, g.at + .5)];
+      hand = k > .6 ? g.pose : (cur > 0 ? SIG[cur - 1].pose : "fist");
+    } else if (lt >= 8.5) {
+      const from = POSE[SIG[SIG.length - 1].pose], k = ramp(lt, 8.5, 8.9);
+      target = [from[0] + (POSE.rest[0] - from[0]) * k, from[1] + (POSE.rest[1] - from[1]) * k];
+      hand = k > .4 ? "fist" : "finger";
+    }
+    setArm(AR, SH_R, POSE.rest, -1);
+    setArm(AL, SH_L, target, 1);
+    HANDS.forEach(([k, n]) => n.style.display = k === hand ? "" : "none");
+    fHole.setAttribute("transform", "translate(838 1330)");
+    fHole.setAttribute("opacity", win(lt, SIG[0].at + .1, SIG[1].at + .1).toFixed(3));
+    // the name of the signal, left of the rider
+    let si = -1; SIG.forEach((g, i) => { if (lt >= g.at) si = i; });
+    const sig = $("sig");
+    if (si >= 0) { setText("sigName", SIG[si].name); setText("sigHow", SIG[si].how);
+      const next = si + 1 < SIG.length ? SIG[si + 1].at : 8.6;
+      sig.style.opacity = win(lt, SIG[si].at + .15, next + .02, .22).toFixed(3); }
+    else { setText("sigName", ""); setText("sigHow", ""); sig.style.opacity = 0; }
+  }
+
+  /* ---------- labels in the scene ---------- */
+  const LABS = [
+    // [chapter, t0, t1, kind, text, x, y]
+    ["pairs", 0.9, 2.6, "nope", "Not a bunch", 96, 1000],
+    ["pairs", 3.4, 4.8, "good", "Room? Two by two", 72, 1000],
+    ["pairs", 5.6, 7.3, "good", "Tight? Single file", 72, 1000],
+    ["pairs", 8.3, 9.7, "good", "Room again? Two by two", 72, 1000],
+    ["bars",  2.6, 3.9, "nope", "Creeping ahead", 96, 846],
+    ["bars",  4.4, 5.9, "good", "Bars even", 236, 920],
+    ["gaps",  1.6, 3.0, "nope", "Strung out", 96, 1360],
+    ["gaps",  4.1, 5.9, "good", "About a wheel back", 72, 1240],
+    ["line",  1.9, 3.1, "nope", "Over the line", 36, 860],
+    ["line",  4.0, 5.9, "good", "Wait on our side", 36, 1180],
+    ["car",   1.5, 2.6, "call", "Car back", 290, 1240],
+    ["car",   2.0, 3.1, "call", "Car back", 290, 1080],
+    ["car",   2.5, 3.6, "call", "Car back", 290, 920],
+    ["car",   4.6, 6.6, "good", "Let it by", 72, 1080],
+    ["light", 3.3, 4.8, "note", "Wait at the line", 72, 1080],
+    ["light", 4.9, 6.2, "good", "Green. Go together.", 72, 1080],
+    ["wait",  1.2, 3.4, "note", "Sweeper stays back", 72, 1420],
+    ["wait",  3.1, 5.5, "note", "Top of the climb", 36, 800],
+    ["flat",  0.3, 1.7, "call", "Flat!", 780, 1080],
+    ["flat",  1.9, 3.6, "note", "Two stay", 712, 1520],
+    ["flat",  2.9, 4.9, "good", "The rest roll on", 60, 1000],
+    ["flat",  5.6, 7.7, "good", "Regroup up the road", 60, 1000]
+  ].map(([c, a, b, kind, text, x, y]) => {
+    const d = document.createElement("div"); d.className = "lab lab--" + kind; d.textContent = text;
+    d.style.left = `calc(var(--u) * ${x})`; d.style.top = `calc(var(--u) * ${y})`;
+    $("labs").appendChild(d);
+    return { t0: S[c] + a, t1: S[c] + b, d };
+  });
+  const drawLabels = t => LABS.forEach(l => l.d.style.opacity = win(t, l.t0, l.t1, .22).toFixed(3));
+
+  /* ---------- the words ---------- */
+  const textCache = {};
+  function setText(id, s) { if (textCache[id] !== s) { $(id).textContent = s; textCache[id] = s; } }
+  let wordsFor = -1, qSpans = [];
+  function drawWords(t, still) {
+    const i = chapterAt(t), c = CH[i], lt = t - c.start;
+    if (wordsFor !== i) {
+      wordsFor = i;
+      setText("mark", c.n ? "\u00a0" : "");
+      const q = $("q"); q.textContent = ""; qSpans = c.q.split(" ").map((w, k, a) => { const s = document.createElement("span"); s.textContent = w + (k < a.length - 1 ? " " : ""); q.appendChild(s); return s; });
+      setText("ans", c.a); setText("why", c.why);
+      $("lock").hidden = !c.lock;
+    }
+    const L = still ? 99 : lt, out = still ? 1 : (i === CH.length - 1 ? 1 : 1 - ramp(lt, c.dur - .32, c.dur - .02));
+    $("words").style.opacity = out.toFixed(3);
+    $("mark").style.opacity = ramp(L, 0, .25).toFixed(3);
+    qSpans.forEach((s, k) => { const a = ramp(L, .05 + k * .09, .3 + k * .09); s.style.opacity = a.toFixed(3); s.style.transform = `translateY(${((1 - a) * 18).toFixed(1)}%)`; });
+    const qEnd = .3 + qSpans.length * .09;
+    const w = ramp(L, qEnd, qEnd + .28);
+    $("plate").style.clipPath = `inset(0 ${((1 - w) * 100).toFixed(2)}% 0 0)`;
+    const a = ramp(L, qEnd + .2, qEnd + .45);
+    $("ans").style.opacity = a.toFixed(3); $("ans").style.transform = `translateY(${((1 - a) * -30).toFixed(1)}%)`;
+    $("why").style.opacity = ramp(L, qEnd + .7, qEnd + 1.0).toFixed(3);
+    $("lock").style.opacity = ramp(L, qEnd + .9, qEnd + 1.3).toFixed(3);
+  }
+
+  /* ---------- render: everything from t ---------- */
+  function render(t, opt = {}) {
+    const still = !!opt.still;
+    drawRoad(t); drawProps(t); drawRiders(t); drawCar(t); drawLabels(t);
+    // cross to the front view for the signals and back
+    const f = Math.min(ramp(t, S.signal - .1, S.signal + .3), 1 - ramp(t, S.car - .3, S.car + .1));
+    $("front").setAttribute("opacity", f.toFixed(3));
+    // out of the picture when it isn't shown: left in at opacity 0, its paths changed how Chromium drew the lane's
+    // edges in every frame after the signals, so a frame was no longer the same whichever frame came before it
+    $("front").style.display = f > 0 ? "" : "none";
+    $("top").setAttribute("opacity", (1 - f).toFixed(3));
+    if (f > 0) drawFront(t); else $("sig").style.opacity = 0;
+    $("sig").style.display = f > 0 ? "" : "none";    // the same: a signal's name left behind at opacity 0 changed the drawing under it
+    drawWords(t, still);
+  }
+
+  /* ---------- the panel ---------- */
+  const steps = CH.map((c, i) => {
+    const li = document.createElement("li");
+    li.innerHTML = `<button class="step" type="button"><span class="n">${c.n || ""}</span><span class="t">${c.q} <em>${c.a}</em></span>${c.why ? `<span class="w">${c.why}</span>` : ""}</button>`;
+    $("hwrSteps").appendChild(li);
+    li.firstChild.addEventListener("click", () => goChapter(i));
+    return li.firstChild;
+  });
+
+  /* ---------- the player ---------- */
+  let t = 0, playing = false, ended = false, userPaused = false, offscreen = false, last = 0, stillCh = null;
+  function sync() {
+    const state = playing ? "playing" : ended ? "ended" : "paused", disc = $("disc");
+    disc.dataset.state = state;
+    disc.setAttribute("aria-label", state === "playing" ? "Pause" : state === "ended" ? "Play again" : "Play");
+    const cur = stillCh != null ? stillCh : chapterAt(t);
+    steps.forEach((s, i) => {
+      const c = CH[i], p = stillCh != null ? (i <= stillCh ? 1 : 0) : clamp((t - c.start) / c.dur);
+      s.style.setProperty("--p", p.toFixed(3));
+      if (i === cur) s.setAttribute("aria-current", "step"); else s.removeAttribute("aria-current");
+    });
+  }
+  function tick(now) {
+    if (!playing) return;
+    t += Math.min(.1, (now - last) / 1000); last = now;
+    if (t >= D) { t = D; playing = false; ended = true; }
+    render(t); sync();
+    if (playing) requestAnimationFrame(tick);
+  }
+  function play() { if (ended || t >= D) { t = 0; ended = false; } stillCh = null; playing = true; userPaused = false; last = performance.now(); requestAnimationFrame(tick); sync(); }
+  function pause(byUser) { playing = false; if (byUser) userPaused = true; sync(); }
+  function showStill(i) { const c = CH[i]; stillCh = i; t = c.start; playing = false; ended = false; render(c.start + c.still, { still: true }); sync(); }
+  function goChapter(i) { if (RM.matches && !playing) { showStill(i); return; } t = CH[i].start; ended = false; render(t); if (!playing) play(); else sync(); }
+  $("disc").addEventListener("click", () => playing ? pause(true) : play());
+  $("again").addEventListener("click", () => { t = 0; ended = false; play(); });
+  new IntersectionObserver(es => {
+    const vis = es[0].intersectionRatio > .35;
+    if (!vis && playing) { offscreen = true; pause(false); }
+    else if (vis && offscreen) { offscreen = false; if (!userPaused && !ended && !RM.matches) play(); }
+  }, { threshold: [0, .35, .6] }).observe($("frame"));
+  document.addEventListener("visibilitychange", () => { if (document.hidden && playing) { offscreen = true; pause(false); } });
+  function start() { $("rmNote").hidden = !RM.matches; if (RM.matches) { showStill(0); return; } render(0); sync(); play(); }
+  RM.addEventListener?.("change", () => { if (RM.matches) { pause(false); showStill(chapterAt(t)); } $("rmNote").hidden = !RM.matches; });
+
+  window.HWR = { CH, D, S, pos, IDS, carPos, render, scroll,
+    seek: tt => { pause(false); t = tt; render(tt); sync(); }, still: i => showStill(i),
+    exportMode: on => document.documentElement.classList.toggle("export", on) };
+  render(0); sync();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(start); else start();
+})();
+</script>
+</body>
+</html>

@@ -455,7 +455,7 @@ function eventPage(e) {
     },
     organizer: e.organizer && e.organizer.name ? { "@type": "Organization", name: e.organizer.name, url: e.organizer.url || undefined } : undefined,
     offers: e.register_url && upcoming && e.status !== "on-hold" ? { "@type": "Offer", url: e.register_url } : undefined,
-    image: SITE + "/og-cfc.png",
+    image: CHROME.OG_IMAGE,
   };
   const faqLd = e.faq && e.faq.length ? {
     "@context": "https://schema.org", "@type": "FAQPage",

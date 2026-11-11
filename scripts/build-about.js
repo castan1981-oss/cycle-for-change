@@ -20,7 +20,7 @@
                2027 rides (outlined when projected; a ride with no date isn't named here)
      concrete  mission: his words beside the head, then the orgs as a roll call (the homepage's checked lines), help lines
      tar       the sign: CYCLE FOR + the blank, a visitor types and the plate takes it; one way in under it
-     bruise    the closing block, then the footer (its stencil hidden: the page ends on its own sign)
+     bruise    the closing block, then the footer (its sign hidden: the page ends on its own sign)
      plain     a section of his the layout has no room for: a plain concrete room, his heading and words
 
    Photos: only Robert recognisable, no cars, a place · month line under each (CLAUDE.md §10). Crops: tools/about-art.py.
@@ -63,10 +63,9 @@ function words(sec, name, cls = "ab-words") {
 }
 const headingOf = (sec, fallback = "") => (sec && sec.heading ? curl(sec.heading) : fallback);
 
-// —— the stencil: CYCLE FOR, one line, no bar (the plate after it is HTML). The letter paths are the header mark's
-//    defs (#lpC …), on every page ——
-const LETTERS = `<use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/><use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/>`;
-const MARK_WORD = (cls) => `<svg class="${cls}" viewBox="0 0 626 150" aria-hidden="true" focusable="false"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">${LETTERS}</g></svg>`;
+// —— the mark's words: cycle for, one line, no plate (the plate after it is HTML). The paths are the header mark's
+//    defs (#cfCycle, #cfFor; scripts/mark-2027.js), on every page ——
+const MARK_WORD = (cls) => require("./mark-2027.js").WORD(cls);
 
 // his newest write-up (data/ride-notes.json), as on the homepage
 const NOTE = (() => {

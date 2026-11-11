@@ -96,7 +96,7 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 | `node scripts/build-events.js` | `cfc-site/events/<slug>/`, `/events/`, `/towns/…`, `sitemap-events.xml` |
 | `node scripts/build-calendar.js` | `cfc-site/events/2027/` (home, months, categories, `riding/`, `all/`, `where.json`), `sitemap-calendar.xml` |
 | `scripts/chrome.js` | the shared `<head>`, header + phone menu, tally line, closing block (`CHROME.pledge()` — old name, no-pledge copy, no "10000" numeral), footer (Mile updates → Instagram). Required by every generator. `CSS_V` is the one stylesheet version (below). |
-| `python3 scripts/apply-chrome.py` | puts chrome.js onto the hand-written pages (guides, field notes, resources, journal, tonight, nov7, 404) and refreshes their closing block (`section.pledge`, `.fn-why` on resources) |
+| `python3 scripts/apply-chrome.py` | puts chrome.js onto the hand-written pages (guides, field notes, resources, journal, tonight, nov7, 404) and refreshes their closing block (`section.pledge`, `.fn-why` on resources); the two field-note templates in `templates/field-notes/` get the same chrome (Nov 11, 2026), so a new note never starts from an old header |
 | `scripts/photos.js` + `node scripts/apply-photos.js` | the photo registry (src, size, alt, place · month caption, crop, `band` crops, `figure(key, {cls, line, caption})`, `card(key)`); apply-photos rewrites the figures, the pillar heroes, the "From the road" cards and their JSON-LD image baked into hand pages |
 | `python3 tools/grade.py --all --only <key>-2` | writes `cfc-site/photos/<key>.jpg` into `cfc-site/img/ph/<key>-2.jpg` **clean** (ungraded since studio pass 1; portraits 1440 tall, landscapes 1600 wide, q76) with `.avif` and `.webp` beside it; `box` crops are plain crops of his file. `--only` keeps live photos from re-encoding. |
 | `node scripts/build-brief.js` | `cfc-site/brief/index.html` (wears the chrome; bump `V` when the engine, page script or sheet changes) |
@@ -105,10 +105,14 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 | `node scripts/tally.js` | the baked tally on the homepage: reads `/api/strava` (the one place the site may read Strava), keeps `data/tally.json`, and rewrites every `[data-miles]`, the four "last rides" rows and the `#tallyData` JSON that `/home.js` paints first. build-home.js applies the copy; build-rides.js refreshes it live on every deploy. Never type the number. Tests: `tools/test/tally.test.js`. |
 | `python3 tools/road-film.py --src …` | the film under the 10,000 in `#road` (`cfc-site/film/road-film-N.*`, from his own footage, car-free; Oct 28, 2026) |
 | `python3 tools/hero-film.py` + `python3 tools/hero-contrast.py` | the homepage hero films (`cfc-site/film/hero-*-N.*`, from his own footage, car-free) and the check that the hero's type reads on every frame of them (§3, the editorial homepage) |
+| `scripts/mark-2027.js` | the mark (§3): the traced "cycle for" and its plate, as `LINE` / `STACK` / `WORD` / `CYCLE` / `FOR` for pages and `FILE()` for a file of its own. Required by chrome.js, build-home.js and build-about.js. Change the mark here and nowhere else, then regenerate (below) and run `python3 tools/brand-files.py`. |
+| `python3 tools/brand-files.py` | the files that carry the mark with no page around them: `cfc-site/favicon.svg`, `favicon-180.png`, `favicon-512.png` and the share card `og-cfc-N.png` (it writes `templates/og/cfc.html` too). A changed card gets a new number (`--n`) and `OG_IMAGE` moves in chrome.js and build-rides.js; a changed icon keeps its name and `ICON_V` in chrome.js goes up. |
+| `node scripts/build-about.js` | `cfc-site/about/index.html` from `data/about.json` (his words; noindex while a section is waiting). Wears the chrome. |
+| `python3 tools/how-we-ride/render.py --n N` | How we ride, the film on the ride pages (§6): `cfc-site/film/how-we-ride-N.mp4` and its jpg / webp / avif poster, shot frame by frame from `tools/how-we-ride/film.html` (the mark from mark-2027.js, the font and the asphalt tile from `cfc-site/`). A new cut takes the next number; `HOW_FILMS` in build-rides.js follows and the old files go. Tests: `tools/test/how-we-ride.test.js`. |
 | `node scripts/build-signals.js` | `cfc-site/llms.txt` (what the site is, for AI search; counts from the data) and `cfc-site/feed.xml` (RSS of guides, field notes, journal, event and town pages, newest first by the sitemaps' lastmod). build-rides.js runs it last on every build, so the deploy keeps them current. Tests: `tools/test/build-signals.test.js`. |
 
 After a change to `scripts/chrome.js`, regenerate everything that wears it, the same day, in this
-order (events and calendar read rides' `live.json`): `node scripts/build-home.js && node
+order (events and calendar read rides' `live.json`): `node scripts/build-home.js && node scripts/build-about.js && node
 tools/build-rides.js && node scripts/build-events.js && node scripts/build-calendar.js && node
 scripts/build-brief.js && node scripts/apply-photos.js && python3 scripts/apply-chrome.py`, then
 `node --test tools/test/*.test.js && node tools/validate-rides.js`. Never hand-edit one page's chrome.
@@ -117,7 +121,8 @@ scripts/build-brief.js && node scripts/apply-photos.js && python3 scripts/apply-
 (`head()` replaces any old `?v=` on a section sheet), on `/chrome.js`, and on `/home.css` and `/home.js` (build-home.js).
 Bump it whenever a stylesheet or `/chrome.js` changes and run the regeneration above: the sheets share cascade layers,
 so a page must never pair an old `/chrome.css` with new section sheets. `netlify.toml`'s cache headers are untouched.
-Check after: no page links a bare `chrome.css"`. (`/ride/` keeps its own `ride.css?v=`.)
+Check after: no page links a bare `chrome.css"`. (`/ride/` keeps its own `ride.css?v=`; it and `/try/checkin/` are
+hand pages with no site chrome, so a change to the mark or the pink is made in them by hand.)
 
 ### Committed vs built on deploy
 - Committed: source, data and every generator's output (homepage, events, towns, calendar, and the
@@ -154,26 +159,64 @@ Check after: no page links a bare `chrome.css"`. (`/ride/` keeps its own `ride.c
   from the container GraphQL is blocked, so create/merge with `gh api …/pulls` and
   `gh api -X PUT …/pulls/N/merge`. Public-page PRs carry a Search Lab line (§7).
 
-## 3. Brand and design — Lane Paint (frozen until Dec 1, 2027)
+## 3. Brand and design — the mark, After Hours, Overpass
 
-### The mark
-- **CYCLE FOR** as hand-drawn road-stencil letters — SVG paths in `scripts/chrome.js` (`#lpC`,
-  `#lpY`, …), never a font — followed by a **rose bar: the blank**. The stencil only ever spells
-  CYCLE FOR; anything else goes on a rose plate in Overpass 900.
-- Stroke 16 (18 only under 120px). The bar is always rose: smeared rose on light grounds, powder
-  rose on dark.
-- The homepage sign: CYCLE FOR + the blank; a visitor types and the plate changes. The footer:
-  the stencil with "change" on the powder-rose plate. The wheel (`mark.svg`, `assets/logo.svg`
-  are leftovers) and "10000" are not marks; the kit's mark is 10K.
+The identity was frozen until Dec 1, 2027 (Oct 18, 2026). Robert has opened it twice himself: the homepage direction
+(Oct 26, below) and the mark and its pink (Nov 8–11, 2026, next). The freeze still holds for everyone else: a design
+pass brings no new mark, palette or typeface. What he changed is written here; everything else stands.
+
+### The mark (Nov 8, 2026; on every page since Nov 11)
+- **cycle for**, lowercase, a rounded stencil, then **a pink plate: the blank**. Robert, Nov 8, 2026, on the ASSOS CORE
+  kit proof (Nov 4): "the new logo is that lettering". The letters and the plate are traced from that proof: filled SVG
+  paths in `scripts/mark-2027.js` (`#cfCycle`, `#cfFor`, `#cfPlate`), never a font, never redrawn. A plain plate, no
+  rivets ("I don't like the rivet look").
+- **The plate is the pink, #C2557F** (`--plate`). The proof's Pantone 7419 C (#B04A5B) read red on his phone (Nov 9: "Can
+  we move to the more pink than red"; Nov 10: "Use the pink not the red going forward"; Nov 11, shown the homepage with
+  it: "Yes!"). One pink on a light ground or a dark one; the letters take the ground's ink (bruise on light, plaster on
+  dark).
+- **One drawing, five cuts** (`mark-2027.js`): `LINE` (the logo: one line with the plate), `STACK` (cycle / for + the plate,
+  for a square space), `WORD` (the words alone, for a sign whose plate is type), `CYCLE` and `FOR` (the two rows, for a
+  stacked sign whose plate is type), and `FILE()` (a file of its own: the favicon, the share card). The paths sit once a
+  page, in the header's mark (`CHROME.MARK`); every other copy is `<use>`. `/ride/` and `/try/checkin/` have no site
+  header and carry their own copy. `cfc-site/brief/bw.js` draws the mark on a canvas from its own copy of the paths;
+  `tools/test/brief-bw.test.js` keeps that copy identical.
+- **A plate that carries a word** is HTML after the words: the pink, plaster type in Overpass 900, a 0.07em corner, set
+  2.5° off square (`transform-origin:0 100%`), lifted 0.15 of the mark's height so it sits where the mark's own plate
+  sits; it is as tall as that plate when its type is 0.58 of the mark's height. Plaster on the pink is 3.67:1, so a word
+  on a `--plate` plate is **19px bold or bigger**; a plate with smaller type (the Ride with me date, the 2027 rows) is
+  `--creosote`, the pink a step down (4.7:1).
+- The mark only ever spells cycle for. The header: `LINE`, 30px tall (28 under 900, 21 under 360 so the bar fits a
+  320px phone). The footer: cycle / for with "change" on the plate. The homepage's signs, `/about/`'s, `/cyclefor/`'s,
+  `/nov7/`'s and `/ride/`'s: the words and a type plate (`/cyclefor/`'s plate sits under the words, because its word
+  turns). The icons and the share card: `python3 tools/brand-files.py`.
+- **Retired:** the Lane Paint stencil (the caps CYCLE FOR drawn as road-stencil strokes with a rose bar, `#lpC` …; Oct 5
+  to Nov 11, 2026), its worn filters, and the bar that was smeared rose on light and powder rose on dark. The wheel
+  (`mark.svg`, `assets/logo.svg` are leftovers) and "10000" are not marks; the kit's mark is 10K.
+- **Moved the same day** (Robert, Nov 11, 2026, after "Yes!": "Let's merge it. update anything that would be part of
+  visibility … Just anything on the website"): the two things on the site that had the old logo baked into their
+  pixels. The How we ride film is `how-we-ride-3` (§6: the answers on the pink plate, the end on cycle for + change);
+  the `#today` photo is `oct12-gravel-2` (§5). The field-note templates wear the current chrome. Posts already on
+  Instagram and Facebook stay as they are (he is archiving most of them).
+- **Not moved yet** (each is its own pass): the print and social kit (`tools/cfc-kit/`, the "CFC Phone Kit" artifact);
+  the weekly ride carousel (`tools/week-kit/` and its Monday task; he has a new look in review);
+  `templates/og/nov7.html` (unused); `kit-handoff/KIT-LOCK.md`. Sections of this file about those still describe the
+  stencil.
 
 ### After Hours palette (token names are old; values are new — keep the names, every page uses them)
 `--bone` concrete #E1DFDB · `--bone-2` #D7D5D0 · `--paper` plaster #EFEDEA · `--dust` patina
-#A9BDB8 (`--dust-deep` #687F7C for hairlines that must be seen, 3.2:1 on concrete) · `--creosote` smeared rose #A84C58,
-the accent · `--creosote-ink` #8F3E4A, small rose text on light (4.5:1) · `--creosote-lift` and
-`--volt` powder rose #D9B1AA, rose on dark · `--mute` gunmetal #4A4E55 · `--pool` drained pool
-#2C4F55 (footer) · `--asphalt` bruise #1C1A22 · `--tar` #141218.
+#A9BDB8 (`--dust-deep` #687F7C for hairlines that must be seen, 3.2:1 on concrete) · `--plate` the pink #C2557F, the
+mark's plate · `--creosote` the pink a step down #B1406C, the accent · `--creosote-ink` #983359, small pink text on
+light (4.5:1) · `--creosote-lift` and `--volt` the lifted pink #E3ABC0, pink on dark · `--mute` gunmetal #4A4E55 ·
+`--pool` drained pool #2C4F55 (footer) · `--asphalt` bruise #1C1A22 · `--tar` #141218.
 
-Rose means the blank and wet paint. Buttons and links are plaster/ink, not rose — **no rose on any hover or press**
+**Nov 11, 2026: the rose family is the mark's pink** (Robert, Nov 10: "Use the pink not the red going forward"). The same
+three tokens do the same three jobs, moved from rose (hue 351°) to the plate's pink (hue 337°), each at the luminance the
+rose it replaces had, so every contrast that passed still passes: smeared rose #A84C58 → #B1406C, rose ink #8F3E4A →
+#983359, powder rose #D9B1AA → #E3ABC0. "Smeared rose" and "powder rose" are retired as colors; where this file still
+says rose, read the pink. Hand pages with their own tokens (`/ride/`, `/try/checkin/`) and the few scripts that write a
+color (`brief/card.js`, `brief/bw.js`, `tonight/tonight.js`, `img/home/dash-rose-2.svg`) carry the same values.
+
+The pink means the blank and wet paint. Buttons and links are plaster/ink, not pink — **no pink on any hover or press**
 (studio pass 1). Small rose text uses `--creosote-ink`. "Creosote", "volt" and "bone" are only token names now — never
 colors, never words in copy or briefs.
 
@@ -205,9 +248,8 @@ the durations are 0 and one guard in `@layer base` stops every transition and an
   marks to the sprite (homepage ones are inlined in build-home.js as `#mkPhx`, `#mkOjai`, `#mkSF`,
   `#mkRide`, `#mkWrite`, `#mkOrgs`, and the finder's `#mkGroup` / `#mkFinish`, also in the sprite as
   `m-group` / `m-finish`).
-- Graphics are **drawn clean — never painted, worn or grained.** The only wear on the site is the
-  big desktop hero stencil (`#lpWorn`). `#lpWornSoft` / `#lpRoller` are a small hand edge only (no
-  holes, no streaks); on phones the stencil is clean (`.sign-mark [filter]{filter:none}`).
+- Graphics are **drawn clean — never painted, worn or grained.** Nothing on the site wears a filter (the stencil's worn
+  edges went with the stencil, Nov 11, 2026).
 - Square corners, hairlines, no shadows, no pills, no gradient washes or grain over photos.
 - **Photos have a clean edge** (studio pass 1, Oct 21, 2026; Robert: a feathered photo "looks unfinished"). Edge to
   edge on phones, on the grid on desktop (`.ph` + `--wide` 2:1 band, `--frame` 3:2, `--tall` / a lone portrait 4:5 on
@@ -221,11 +263,12 @@ the durations are 0 and one guard in `@layer base` stops every transition and an
   fonts.
 - Retired forever: Outfit, Space Mono, Space Grotesk, Fraunces, JetBrains Mono, Anton; creosote
   green / volt yellow / old bone as colors; plum / cream / acid yellow; the `///` mark; the wheel;
-  "10000" as a mark.
+  "10000" as a mark; the caps CYCLE FOR stencil and its rose bar; smeared rose, powder rose and Pantone 7419 C on a
+  screen (they read red; the pink is #C2557F).
 
 ### Accessibility floor (check at the end of every design pass)
-390px first. WCAG AA (smeared rose on concrete is 4.11:1 — only large text; small rose text is
-`--creosote-ink`). Tap targets 44px. Visible focus. Labels on every field. A still, not a film, on
+390px first. WCAG AA (the accent pink on concrete is 4.13:1 — only large text; small pink text is
+`--creosote-ink`; plaster on the plate's pink is 3.67:1 — a word on it is 19px bold or bigger). Tap targets 44px. Visible focus. Labels on every field. A still, not a film, on
 phones. Respect reduced motion. 988 + Trevor wherever mental health comes up.
 
 ### The Wrenches — the design studio (Oct 21, 2026)
@@ -276,7 +319,7 @@ homepage only; every other rule in this section still holds there and everywhere
   three-band cut put seams through the type), car-free, only him recognisable. **It plays on phones too** (this replaces
   "a still, not a film, on phones" for the hero): muted, inline, looped, after load, never under reduced motion, Save-Data
   or a 2G/3G connection, paused off screen, with a Pause button always there (WCAG 2.2.2). The poster is the film's first
-  frame and the page's LCP. Over it: the stencil (clean, no wear: the hero no longer carries `#lpWorn`), **one caption, "10,000
+  frame and the page's LCP. Over it: the mark (the lowercase cycle for and its plate since Nov 8, 2026; it was the stencil), **one caption, "10,000
   miles. One year. All on the bike."** (`.hero-cap`, 700, small and quiet; Robert and Cadence, Oct 27, 2026: the two
   paragraphs came off so the footage carries the screen; each phrase is a no-wrap span so a phone breaks between them), one primary (Ride with me, `#heroRide`, the date on a rose plate) and two quiet links, "Find a group ride" (the
   approved direction) and, when there is a write-up, "Read the last ride" (Cadence's must, Oct 27, 2026: `NOTE.href` in
@@ -293,8 +336,8 @@ homepage only; every other rule in this section still holds there and everywhere
   once the film has scrolled under it (the hero carries both, so nothing is said twice).
 - **Two textures, small:** a fine asphalt aggregate (`img/home/asphalt-2.webp`, a 2x tile, opacity .24) on the two dark
   rooms only (`#road` and `#sign`), never on a photo; one lane dash at the head of each of the strip's three numbers
-  only (`img/home/dash-rose-1.svg`, a drawn shape, no filter) — rose as wet paint, lined up with what it marks. The
-  sign's dash is off (Oct 27, 2026: the blank is its bar; `dash-powder-1.svg` is unused).
+  only (`img/home/dash-rose-2.svg`, a drawn shape, no filter; -2 is the pink, Nov 11, 2026) — pink as wet paint, lined up with what it marks. The
+  sign's dash is off (Oct 27, 2026: the blank is its plate; `dash-powder-2.svg` is unused).
   `python3 tools/home-art.py` draws them. Torn-paper captions and a drawn bicycle were in the approved direction and were
   cut in review (they read as decoration and no drawing was good enough); captions are plain place · month lines.
 - **Rose on the homepage** is the blank, the plates, the lane paint and the log strokes. Nothing else.
@@ -308,7 +351,7 @@ homepage only; every other rule in this section still holds there and everywhere
   plates and the date numerals. Section labels on a hairline (`.rule`) only where the site already had the label.
 - **The orgs sit on patina** (the soft room), with the 988 / Trevor line in the section.
 - **Said once:** the 10,000 is the big plaster numeral in `#road`; the training count lives in the strip under the hero
-  (`[data-miles]`); the page ends on its own sign, so the footer's stencil is hidden on the homepage only.
+  (`[data-miles]`); the page ends on its own sign, so the footer's sign is hidden on the homepage (and on `/about/`).
 - The old road reel is gone from the homepage (the hero carries the footage); "Read the last ride" and the log stay in
   `#road`. **Oct 28, 2026: `#road` gets a film again** (Robert, sending his drone reel: "This another video that could go
   below the fold"): `film/road-film-3.*` (1440×810, 8 s, silent; `python3 tools/road-film.py --src …`, three of the reel's
@@ -316,8 +359,9 @@ homepage only; every other rule in this section still holds there and everywhere
   log, edge to edge on phones, with today's player (`smallFilm()` in /home.js: a still on phones until the disc is tapped,
   playing on a wide screen while it's on screen, never under reduced motion, Save-Data or a slow connection; the disc,
   `.today-play.road-play`, always there). The homepage loads `/chrome.css` then `/home.css` (the page in `@layer section`, the frame's homepage states
-  unlayered at its foot), so its header, footer and bar are the site's own rules. The stencil's clip (`#lpRow`) lives in
-  the header's mark; `home.css` keeps its rect visible while the header is hidden, or every CYCLE FOR on the page vanishes.
+  unlayered at its foot), so its header, footer and bar are the site's own rules. The mark's paths live in the header's
+  copy and every other copy on the page is a `<use>` of them; they are plain fills (no clip), so they draw while the
+  header is hidden over the film.
 - **His sentence is the story's standfirst** (Oct 27, 2026, off the hero): "I'd like to say I ride for everyone else. I ride
   because it changed me." (`.story-say`, `--fs-h3` 800) under "It always says cycling."; on phones head, sentence, portrait,
   lede; from 1024 it sits across from the head on columns 7–12 with the portrait under it (both boxes `display:contents`).
@@ -406,6 +450,7 @@ first, until it has passed) when the money comes up.
 ### Field notes (`/field-notes/<slug>/`)
 - Templates: **`templates/field-notes/`** (`_template.html`, `_pillar-template.html`), outside the
   published folder (if they're still in `cfc-site/field-notes/`, that move hasn't landed yet).
+  `python3 scripts/apply-chrome.py` keeps their head, header, footer and closing block current (Nov 11, 2026).
   Copy to `cfc-site/field-notes/<slug>/index.html`, fill every `{{PLACEHOLDER}}`. Tag is exactly
   "Place + Miles" (`place`) or "Mind + Miles" (`mind`, keeps the crisis-line block).
 - Body copy is Robert's. If his words aren't there yet, leave the `.fn-todo` block and open the PR
@@ -654,6 +699,12 @@ editorial homepage, has the grid). Phones: words with the film beside them (a st
 big photo full bleed; `photo2` is not shown. Media in `cfc-site/img/today/` and
 `cfc-site/film/today-*` (iPhone HDR tone-mapped to SDR, no audio; bump the number on a recut). His words and his
 pictures only; only Robert recognisable. Change the JSON and run `node scripts/build-home.js`.
+**The Oct 12 photo is `oct12-gravel-2`** (Nov 11, 2026): the picture has that morning's route painted on the gravel
+with the logo under it, and the logo was the old stencil. The old letters and plate came out, the hole was filled with
+the photo's own gravel (patches copied from the clean gravel around it), and cycle for + change on the pink plate was
+painted in the same spot at the same angle, in the route line's white. Nothing else in the photo was touched. If Robert
+sends the original, redo it from that (the scripts are in the claude.ai project doc for this pass). A new day's photo
+with paint on it uses the mark from `scripts/mark-2027.js`, never a redrawn one.
 
 ### Guides (`/guides/`)
 Sorted by stage: 01 Pick a ride · 02 Get ready · 03 Raise the money, then "From the road" (field
@@ -883,8 +934,12 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
 - **How we ride** (Oct 31, 2026; Robert: "put the Fruit Loop on that page and the other on the ride pages"): the
   group-ride etiquette film, nine things (question, the answer on the plate, one line on why; the flat rule is "Two stay
   with you", his Oct 30 call; no "3 of 9" on any chapter, Robert, Oct 31: so each one can be shared on its own).
-  `film/how-we-ride-2.*` (720×1280, 1:15, silent H.264 + jpg/webp/avif poster), drawn in
-  code from one clock and rendered frame by frame (source and the render scripts are in the claude.ai project, not here).
+  `film/how-we-ride-3.*` (720×1280, 1:15, silent H.264 + jpg/webp/avif poster), drawn in
+  code from one clock and rendered frame by frame. **Nov 11, 2026: the source is in the repo**, `tools/how-we-ride/`
+  (`film.html`, the page that draws it; `python3 tools/how-we-ride/render.py --n N` shoots and encodes it; `-3` is the cut
+  with the mark: each answer on the pink plate in plaster type, 2.5° off square, the riders and labels in the pink
+  family, the end on cycle for + change. A frame is the same whichever frame was drawn before it, so the workers'
+  seams don't show. The "speed + slices" reel for Instagram is a separate cut and still has the old look).
   `howWeRideBlock()` in build-rides.js puts it on every **listed** ride page after "First time on this ride?", tap to play
   (`data-film-tap`), with one line and "Read the nine instead" → `/rides/about/#how-we-ride`, where the film sits with all
   nine in words (`HOW_STEPS`): one page carries the text, not 1,300 copies. Not on Critical Mass or open streets, and not
@@ -1148,7 +1203,7 @@ https://claude.ai/artifact/QKG9zHH8dYZtjnFcYgLpCv (republish that URL to update)
   over a picture well"): the poster's second look on `/brief/` ("Look": Route card · Black and white), `cfc-site/brief/bw.js`
   (`layout()` tested in `tools/test/brief-bw.test.js`, `paint()` onto a canvas, `gray()` for the photo). The rider's photo
   in black and white under a flat 22% tar, the route as one white line with a dot at each end (a loop gets one), the ride's
-  name top left, distance and climbing up the right edge, the stencil (powder-rose bar) over the day and the roll-out time
+  name top left, distance and climbing up the right edge, the mark (cycle for and its pink plate) over the day and the roll-out time
   bottom right, `cycleforchange.org/brief` bottom left; a feed post (1080 × 1350) and a Story (1080 × 1920, top 200 /
   bottom 330 clear). **The one place the site's words sit on a photo and run in spaced capitals** (Robert's OK, Oct 30,
   2026): inside the picture only, never on a page; the page around it keeps every §3 rule. Nothing to fill in: the words
@@ -1280,3 +1335,15 @@ two exits; the shapes are on the plan canvas.
 - 2026-11-03 — El Tour de Tucson 2026 (Nov 21) is Ride with me until it's ridden (the homepage tile, header, menu,
   closing block and bar; the Fruit Loop is back on Nov 22). The story's lede opens "Recovery and the bike changed my
   life." (Robert's pick of the quiet way to say it: no year, no number, nowhere else on the site).
+- 2026-11-11 — The mark on every page (Robert, Nov 8: "the new logo is that lettering"; Nov 10: "Use the pink not the red
+  going forward"; Nov 11, on the homepage with it: "Yes!"): the lowercase cycle for and its plate (`scripts/mark-2027.js`)
+  in the header and the footer of every page, the signs on the homepage, `/about/`, `/cyclefor/`, `/nov7/`, `/ride/` and
+  `/try/checkin/`, the black-and-white poster on `/brief/`, the favicon, the touch icons and a new share card
+  (`og-cfc-2.png`, `tools/brand-files.py`). The plate is the pink #C2557F (it was Pantone 7419 C on the Nov 8 homepage
+  preview), and the rose tokens moved to the same pink family at the luminance they had. The Lane Paint stencil is
+  retired. The header fits a 320px phone (it ran 10px over before). `CSS_V` 62, `/brief/` `V` 10, `ICON_V` 2.
+- 2026-11-11 — The old logo comes out of the two things that had it baked in (Robert: "update anything that would be part
+  of visibility … Just anything on the website"): How we ride is `how-we-ride-3` on 1,308 ride pages and `/rides/about/`
+  (the answers on the pink plate, the end on cycle for + change; its source and render are now `tools/how-we-ride/`),
+  and the `#today` photo is `oct12-gravel-2` (the old stencil taken off the gravel, the mark painted in its place).
+  The field-note templates wear the current chrome (`apply-chrome.py` keeps them).

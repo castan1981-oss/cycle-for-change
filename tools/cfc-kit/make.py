@@ -59,8 +59,8 @@ def pdf(pg, html, out, w_in, h_in):
     print("  wrote", out.relative_to(OUT))
 
 
-# The homepage's #today crops for its own pictures (the gravel photo keeps the painted CYCLE FOR change whole).
-TODAY_POS = {"/img/today/oct12-gravel-1.jpg": "66% 50%"}
+# The homepage's #today crops for its own pictures (the gravel photo keeps the painted cycle for change whole).
+TODAY_POS = {"/img/today/oct12-gravel-2.jpg": "66% 50%"}
 # The blank Story: his own words from the homepage's #today (data/today.json `line`), the plate left empty to type on.
 BLANK = {"word": None, "label": "Every ride, I say who I\u2019m riding for that day.", "photo": None}
 

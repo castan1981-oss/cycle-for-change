@@ -295,7 +295,7 @@
   /* Oct 26, 2026: redrawn in the house look (Overpass, After Hours, sentence case, no tracking, nothing printed off
      register). The old flyer used retired fonts and colors and a never-list line along its foot. */
   function makeFlyer(r) {
-    var C = { ground: "#1C1A22", band: "#D9B1AA", ink: "#1C1A22", type: "#EFEDEA", quiet: "#A9BDB8" };   /* bruise, powder rose, plaster, patina */
+    var C = { ground: "#1C1A22", band: "#E3ABC0", ink: "#1C1A22", type: "#EFEDEA", quiet: "#A9BDB8" };   /* bruise, the lifted pink (it was powder rose until Nov 11, 2026), plaster, patina */
     var F = '"Overpass", system-ui, sans-serif';
     var fonts = document.fonts && document.fonts.load ? Promise.all([document.fonts.load("800 200px Overpass"), document.fonts.load("400 40px Overpass")]) : Promise.resolve();
     return fonts.then(function () {

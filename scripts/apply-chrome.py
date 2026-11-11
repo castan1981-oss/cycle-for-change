@@ -4,8 +4,8 @@
 Run from the repo root:   python3 scripts/apply-chrome.py
 Safe to re-run: it rebuilds each page's <head>, header and footer from the
 current scripts/chrome.js. Pages covered: every .html under cfc-site/guides,
-field-notes, resources, journal, tonight, nov7, cyclefor, privacy, methodology, contact and fruitloop
-(templates included), plus 404.html.
+field-notes, resources, journal, tonight, nov7, cyclefor, privacy, methodology, contact and fruitloop,
+plus 404.html, and the two field-note templates in templates/field-notes/ (outside the published folder).
 
 What it does to each page
   - <head>: keeps the page's title, description, canonical, og:type and JSON-LD,
@@ -40,6 +40,9 @@ ANCHORS = {'href="/#tally"': 'href="/"', 'href="/#rides"': 'href="/#ride"',
 CLASSES = [(r'class="btn btn-y"', 'class="btn btn--bone"'), (r'class="btn btn-solid"', 'class="btn btn--ink"'),
            (r'class="btn btn-dark"', 'class="btn btn--ghost"'), (r'class="btn-link"', 'class="link"'),
            (r'class="btn"', 'class="btn btn--ghost"')]
+# share cards that used to be the site default (tools/brand-files.py): a page still carrying one takes the current card,
+# it is not that page's own
+RETIRED_OG = {"https://cycleforchange.org/og-cfc.png", "https://cycleforchange.org/og-image.png"}
 RETIRED_INLINE = [
     ' style="color:var(--cream);border-bottom-color:var(--cream);"',
     ' style="color:var(--yellow);border-bottom:1px solid var(--yellow);"',
@@ -73,7 +76,7 @@ def new_head(s, page):
             "styles": SECTION_STYLES.get(top, ["/styles.css"]), "ld": ld, "extra": extra}
     # a page with its own share card (/nov7/) keeps it: image, alt, and a share title that isn't "<title> — Cycle for Change"
     img = meta(old, "og:image", "property")
-    if img and img != C["OG_IMAGE"]:
+    if img and img != C["OG_IMAGE"] and img not in RETIRED_OG:
         spec["image"] = img
         spec["imageAlt"] = meta(old, "og:image:alt", "property")
     ogt = meta(old, "og:title", "property")
@@ -168,6 +171,15 @@ def main():
     for p in pages:
         s = p.read_text()
         t = chrome(s, p)
+        if t != s:
+            p.write_text(t)
+        print(("updated " if t != s else "same    ") + str(p.relative_to(ROOT)))
+    # the field-note templates live outside the published folder (templates/field-notes/, Oct 6, 2026). They wear the
+    # chrome too, as a page at /field-notes/<slug>/ would, so a new note never starts from an old header or mark
+    # (Nov 11, 2026: they still carried the Oct 5 header and the retired stencil).
+    for p in sorted((ROOT / "templates" / "field-notes").glob("*.html")):
+        s = p.read_text()
+        t = chrome(s, SITE / "field-notes" / "slug" / "index.html")
         if t != s:
             p.write_text(t)
         print(("updated " if t != s else "same    ") + str(p.relative_to(ROOT)))

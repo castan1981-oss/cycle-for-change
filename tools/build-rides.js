@@ -62,7 +62,7 @@ const TODAY = /^\d{4}-\d{2}-\d{2}$/.test(argOf("--today") || "") ? argOf("--toda
 const NOW = argOf("--today") ? new Date(`${TODAY}T12:00:00Z`) : new Date();
 const WORLD_RADIUS_KM = 40;  // a world city hub covers rides within this radius
 const WORLD_HUB_MIN = 2;     // rides needed before a world city gets its own hub
-const OG_IMAGE = `${SITE}/og-cfc.png`;
+const OG_IMAGE = `${SITE}/og-cfc-2.png`;   // keep in step with scripts/chrome.js (tools/brand-files.py)
 // Oct 18, 2026 (growth audit): a free ride's Event carries an Offer at 0 so the rich result can say "Free".
 // Only when the host's own cost line starts with "free"; the currency follows the ride's country.
 const CURRENCY = { US: "USD", CA: "CAD", GB: "GBP", AU: "AUD", NZ: "NZD", MX: "MXN", JP: "JPY", SG: "SGD", AE: "AED", IE: "EUR", DE: "EUR", ES: "EUR", FR: "EUR", IT: "EUR", NL: "EUR", PT: "EUR", BE: "EUR", AT: "EUR", FI: "EUR" };
@@ -2437,7 +2437,7 @@ const HOW_STEPS = [
   ["Flat tire?", "Two stay with you.", "The rest roll on and regroup ahead. A whole group stopped is a hazard."],
 ];
 const HOW_FILMS = {
-  ride: { src: "/film/how-we-ride-2.mp4", poster: "/film/how-we-ride-2.jpg", seconds: 75, title: "How we ride",
+  ride: { src: "/film/how-we-ride-3.mp4", poster: "/film/how-we-ride-3.jpg", seconds: 75, title: "How we ride",
     line: "Nine things to know before your first group ride. It runs 1:15 and has no sound.",
     more: ["/rides/about/#how-we-ride", "Read the nine instead"],
     alt: "How we ride: six riders seen from above on a lane, showing nine group-ride habits one at a time, the words on screen. It ends on Cycle for change." },
