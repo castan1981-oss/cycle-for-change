@@ -84,14 +84,15 @@ const NOTE = (() => {
 const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const placeMonth = (where, ymd) => { const place = String(where || "").split(" · ")[0].trim(); const [y, m] = String(ymd || "").split("-").map(Number); return place && y && m ? `${place} · ${MON[m - 1]} ${y}` : String(where || ""); };
 
-// —— the mark. The letters are the header's defs (#lpC …, scripts/chrome.js), so every copy is the one drawing ——
-const LETTERS = (row2) => `<use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/>${row2 ? `</g><g transform="translate(0 180)"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"><use href="#lpF"/><use href="#lpO" transform="translate(74 0)"/><use href="#lpR" transform="translate(148 0)"/></g>` : `<use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/>`}`;
-// one line, with the blank (the logo as the header draws it)
-const MARK_LINE = (cls, worn) => `<svg class="${cls}" viewBox="0 0 760 150" aria-hidden="true" focusable="false"><g${worn ? ` filter="url(#lpWorn)"` : ""}><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">${LETTERS(false)}</g><rect class="lp-bar" x="652" y="114" width="98" height="36"/></g></svg>`;
-// stacked, CYCLE over FOR, the blank after the R
-const MARK_STACK = (cls) => `<svg class="${cls}" viewBox="-10 -10 370 350" aria-hidden="true" focusable="false"><g><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">${LETTERS(true)}</g><rect class="lp-bar" x="238" y="294" width="98" height="36"/></g></svg>`;
-// one line, no bar: the plate after it is HTML (it carries a word)
-const MARK_WORD = (cls) => `<svg class="${cls}" viewBox="0 0 626 150" aria-hidden="true" focusable="false"><g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">${LETTERS(false)}</g></svg>`;
+// —— the mark: the lowercase "cycle for" and its plate (scripts/mark-2027.js; Nov 8, 2026, sitewide Nov 11). Its
+//    paths are defs in the header's copy (scripts/chrome.js), so every copy on the page is the one drawing. ——
+const NEW_MARK = require("./mark-2027.js");
+// one line, with the plate (the logo as the header draws it)
+const MARK_LINE = (cls) => NEW_MARK.LINE(cls, false);
+// stacked, cycle over for, the plate after the r
+const MARK_STACK = (cls) => NEW_MARK.STACK(cls);
+// one line, no plate: the plate after it is HTML (it carries a word)
+const MARK_WORD = (cls) => NEW_MARK.WORD(cls);
 
 // —— the house marks on the homepage (24 grid, one 1.7 stroke, round caps), inlined so no sprite request ——
 const DEFS = `<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -481,15 +482,15 @@ const page = `<!doctype html>
   <meta property="og:url" content="https://cycleforchange.org/">
   <meta property="og:title" content="Cycle for Change — 10,000 miles in 2027, all on the bike">
   <meta property="og:description" content="Cycling changed my life. I ride 10,000 miles in 2027 and write every ride down. The money goes through the orgs’ own rides.">
-  <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
+  <meta property="og:image" content="${CHROME.OG_IMAGE}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cycle for Change — 10,000 miles in 2027, all on the bike">
   <meta name="twitter:description" content="Cycling changed my life. I ride 10,000 miles in 2027 and write every ride down.">
-  <meta name="twitter:image" content="https://cycleforchange.org/og-cfc.png">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/favicon-180.png">
+  <meta name="twitter:image" content="${CHROME.OG_IMAGE}">
+  <link rel="icon" href="/favicon.svg?v=${CHROME.ICON_V}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-180.png?v=${CHROME.ICON_V}">
   <meta name="theme-color" content="#141218">
   <script>document.documentElement.className+=" js"</script>
   ${CHROME.FONTS}

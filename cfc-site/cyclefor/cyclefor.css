@@ -1,16 +1,20 @@
 @layer section{
 /* Cycle for Change — /cyclefor/, "What do you cycle for?" (Oct 12, 2026).
-   Loaded after /chrome.css. Light page, Lane Paint: the stencil spells CYCLE FOR, the blank on the
-   smeared-rose plate turns through a few answers (still under reduced motion), and after someone sends
+   Loaded after /chrome.css. Light page. The mark's words (cycle for, scripts/mark-2027.js) and, after them, the
+   pink plate, which turns through a few answers (still under reduced motion); after someone sends
    their OK it shows theirs. Phones: the sign, the question, the three steps and the button on the first
    screens; the form is one column, big fields, 44px+ targets. No photos on this page. */
 
 /* —— first screen —— */
 .cf-in{padding-block:clamp(28px,5vw,72px) clamp(40px,6vw,80px)}
 .cf-kick{margin:0 0 14px}
-.cf-sign{--h:clamp(36px,11.2vw,72px);display:flex;flex-wrap:wrap;align-items:flex-end;gap:calc(var(--h) * .24);margin:0 0 14px;line-height:1;letter-spacing:0}
+/* the sign: the words, then the plate on its own line under them. The plate's word turns (your mom, the view, the morning…),
+   and a row that fits some answers and wraps others would move the page each time it turns. */
+.cf-sign{--h:clamp(44px,12.6vw,78px);display:flex;flex-direction:column;align-items:flex-start;gap:calc(var(--h) * .1);margin:0 0 14px;line-height:1;letter-spacing:0}
 .cf-mark{display:block;height:var(--h);width:auto;color:var(--asphalt)}
-.cf-plate{display:block;min-width:2.6em;background:var(--creosote);color:var(--paper);font-weight:900;font-size:calc(var(--h) * .56);line-height:1.05;padding:.26em .36em .1em;letter-spacing:-.01em;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+/* the plate (Nov 11, 2026): the mark's pink, paper type, as tall as the mark's own plate, set a touch off square and lifted
+   to sit where that plate sits. The word is 25px bold and up, which paper on the pink (3.67:1) needs. */
+.cf-plate{display:block;min-width:2.6em;background:var(--plate);color:var(--paper);font-weight:900;font-size:calc(var(--h) * .58);line-height:1;padding:.18em .36em .1em;letter-spacing:-.01em;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;border-radius:.07em;transform:rotate(-2.5deg);transform-origin:0 100%;margin-bottom:calc(var(--h) * .1)}
 .cf-q{margin:0 0 10px;font-weight:800;font-size:clamp(1.6rem,1.6vw + 1.1rem,2.4rem);line-height:1;letter-spacing:-.028em}
 .cf-lede{margin:0 0 26px;max-width:34ch;font-size:clamp(1.1rem,.6vw + 1rem,1.4rem);line-height:1.36}
 
@@ -76,7 +80,7 @@
 .cf-done{max-width:560px}
 .cf-done[hidden]{display:none}
 .cf-done:focus{outline:none}
-.cf-sign--done{--h:clamp(30px,9vw,56px);margin-bottom:22px}
+.cf-sign--done{--h:clamp(36px,10vw,60px);margin-bottom:22px}
 .cf-done h3{margin:0 0 10px;font-size:clamp(1.4rem,1vw + 1.1rem,1.9rem);line-height:1.05;letter-spacing:-.02em}
 .cf-done p{margin:0 0 16px;font-size:17px;line-height:1.45}
 .cf-done a{color:var(--asphalt);font-weight:700}
@@ -86,7 +90,7 @@
 @media (min-width:900px){
   .cf-in{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(40px,6vw,120px);align-items:end}
   .cf-steps{margin-bottom:24px}
-  .cf-sign{--h:clamp(60px,5.6vw,92px);margin-bottom:20px}
+  .cf-sign{--h:clamp(64px,5.8vw,96px);margin-bottom:20px}
   .cf-go{width:auto;padding-inline:32px}
   .cf-send{width:auto;padding-inline:40px;align-self:flex-start}
   .cf-cols{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(32px,5vw,96px);align-items:start}

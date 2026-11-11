@@ -8,7 +8,7 @@
    softer, original to Cycle for Change, on the house's own mark, palette and type. After the Wrenches' review
    (research/design/2026-10-26-editorial-home/, then 2026-10-27-cadence-final/) it keeps two textures, both small:
      asphalt     a fine aggregate (/img/home/asphalt-2.webp), faint, on the two dark rooms only, never on a photo
-     lane paint  one worn dash (/img/home/dash-rose-1.svg) at the head of each of the strip's three numbers, and the
+     lane paint  one worn dash (/img/home/dash-rose-2.svg) at the head of each of the strip's three numbers, and the
                  stroke in the log, as long as the ride, drawn with square clean ends: rose as wet paint, on the column
                  of what it marks. Nowhere else: the sign's dash came off Oct 27 (two rose bars in one lockup).
    Rose is the blank, the plates, the lane paint and the log strokes; nothing else. Square corners, hairlines, no
@@ -23,7 +23,7 @@
 .nowrap{white-space:nowrap}
 .note-sm{margin:0;font-size:var(--fs-small);line-height:1.45;color:var(--mute)}
 
-/* the plate: the blank, filled in. Smeared rose and plaster on light grounds */
+/* the plate: the blank, filled in. Small type, so the pink a step down (--creosote), and plaster */
 .plate{display:inline-block;background:var(--creosote);color:var(--paper);font-weight:900;line-height:1.05;letter-spacing:-.01em;padding:.2em .42em .1em}
 
 /* a section's label on a hairline to the grid's edge (only where the site already has the label) */
@@ -35,7 +35,7 @@
 
 /* lane paint: one worn dash at the head of each of the strip's three numbers, so the paint lines up with what it marks;
    smeared rose on concrete */
-.strip-cell::before{content:"";display:block;width:136px;height:8px;background:url(/img/home/dash-rose-1.svg) 0 0/100% 100% no-repeat}
+.strip-cell::before{content:"";display:block;width:136px;height:8px;background:url(/img/home/dash-rose-2.svg) 0 0/100% 100% no-repeat}
 @media (min-width:1024px){.strip-cell::before{width:232px;height:11px}}
 
 /* the two dark rooms: asphalt, felt more than seen */
@@ -65,7 +65,6 @@
   background:linear-gradient(180deg,rgba(20,18,24,0) 0,rgba(20,18,24,.1) 60px,rgba(20,18,24,.3) 120px,rgba(20,18,24,.5) 170px,rgba(20,18,24,.6) 200px,rgba(20,18,24,.72) 100%)}
 .hero-h{margin:0;line-height:0}
 .hero-mark{display:block;height:auto;color:var(--paper);overflow:visible}
-.hero-mark .lp-bar{fill:var(--creosote-lift)}
 .hero-mark--stack{width:min(46vw,230px)}
 .hero-mark--line{display:none}
 /* one caption under the stencil (Robert and Cadence, Oct 27, 2026): set small and quiet so the film and the stencil carry the
@@ -549,18 +548,17 @@ a.strip-cell:focus-visible{outline-offset:6px}
 /* over the film the header is one solid bar on tar, a plaster hairline under it: no seam or colour of the film shows
    through it (the critic, v5), and the nav links read at full contrast */
 .js .home .nav[data-solid="false"]{background:var(--tar);border-bottom-color:rgba(239,237,234,.18)}
-/* the stencil's clip lives in the header's mark; a hidden header must not hide every CYCLE FOR on the page with it */
-.home #lpRow rect{visibility:visible}
 /* the first screen's Ride with me is the hero's; the header's comes back at 900, as a line, once the film has gone */
 @media (max-width:899px){.home .nav .btn--sm{display:none}}
 /* the Ride with me bar is off the homepage from 900 (Oct 27, For Robert): once the film has scrolled under, the header's
    Ride with me line is there on every screen, pointing at the same next ride, and the bar said it again on the right
    column. Phones keep the bar. With no bar there is nothing to keep the foot of the screen clear of (S4's scroll padding) */
 @media (min-width:900px){.home .ridebar{display:none}html{scroll-padding-bottom:0}}
-/* the hero's date plate: smeared rose on the plaster tile, powder on dark when the tile goes clear on hover */
+/* the hero's date plate: small type, so the pink a step down on the plaster tile; the lifted pink on dark when the tile
+   goes clear on hover */
 .home .hero-ride .ridebar-d{background:var(--creosote);color:var(--paper);font-size:.9375rem;padding:10px 10px 8px}
 @media (hover:hover){.home .hero-ride:hover .ridebar-d{background:var(--creosote-lift);color:var(--asphalt)}}
-/* the page ends on its own sign; the footer's stencil would be a second one 700px below it */
+/* the page ends on its own sign; the footer's sign would be a second one 700px below it */
 .home .foot{margin-top:0;border-top:1px solid var(--line-d)}
 .home .foot-sign{display:none}
 @media (min-width:1024px){.home .foot-grid{grid-column:1 / -1}}
@@ -574,3 +572,18 @@ a.strip-cell:focus-visible{outline-offset:6px}
 .home .find-row .find-field{padding-left:44px}
 .home .find-row .btn{min-height:52px}
 @media (prefers-reduced-motion:reduce){.hero-film{transition:none}}
+
+/* ——————————————————————————————————————————————————————————
+   The mark's plates on this page (Nov 8, 2026; every page since Nov 11). The lettering and its plate come from
+   scripts/mark-2027.js and are styled in /chrome.css (.mark-plate, the header's size). Here: the two signs whose plate
+   is type. One pink (--plate) on a light ground or a dark one, paper type, set a touch off square like the proof's; no
+   rivets (Robert, Nov 8). Paper on the pink is 3.67:1, so a word on it is 19px bold or bigger: both of these are, at
+   every width (today's is 27px and up, the sign's 19px and up).
+   —————————————————————————————————————————————————————————— */
+.today-plate,.sign-plate{background:var(--plate);color:var(--paper);border-radius:.07em;transform:rotate(-2.5deg);transform-origin:0 100%;
+  padding:.18em .36em .1em;margin-bottom:calc(var(--h) * .15)}
+.today-sign,.sign-h{column-gap:calc(var(--h) * .15)}
+/* the empty sign is the proof's blank plate (a little wider than tall), sized to sit after "for" on the same line */
+.sign-plate[data-empty="true"]{width:calc(var(--h) * .58);height:calc(var(--h) * .46);padding:0;font-size:calc(var(--h) * .34)}
+/* the field's rule under the sign: the same pink */
+.sign-input{border-bottom-color:var(--plate)}

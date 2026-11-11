@@ -1,12 +1,13 @@
 /*
   bw.js — the black-and-white poster (Oct 30, 2026). Robert's pick from a Ventum × Society of Cyclist pop-up ride
   post ("goes over a picture well"): the rider's photo in black and white, the route as one white line with a dot at
-  each end, the ride's name top left, the distance and climbing up the right edge, CYCLE FOR over the day and the
-  roll-out time bottom right, the link bottom left.
+  each end, the ride's name top left, the distance and climbing up the right edge, the mark (cycle for and its plate)
+  over the day and the roll-out time bottom right, the link bottom left.
 
   The one place the site's words sit on a photo and run in spaced capitals: inside this picture, never on a page
-  (Robert's OK, Oct 30, 2026; CLAUDE.md §12). Everything else is the house's: Overpass, the stencil from chrome.js,
-  powder rose for the blank, no wash, no grain, no shadow.
+  (Robert's OK, Oct 30, 2026; CLAUDE.md §12). Everything else is the house's: Overpass, the mark from
+  scripts/mark-2027.js with its pink plate (Nov 11, 2026; it was the caps stencil with a powder-rose bar), no wash, no
+  grain, no shadow.
 
     layout(series, opts) → the line, the dots and where every word goes, for one size (no canvas needed: tested in node)
     paint(ctx, L, photo) → onto a canvas; photo is a canvas from gray(), or null for the plain tar ground
@@ -22,23 +23,33 @@
   else root.BW = factory();
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
-  const WHITE = "#FFFFFF", TAR = "#141218", ROSE = "#D9B1AA";   // powder rose: the blank on a dark ground
+  const WHITE = "#FFFFFF", TAR = "#141218", PINK = "#C2557F";   // the pink: the mark's plate, on a light ground or a dark one
   const DIM = 0.22;                                               // the photo under a flat 22% tar so white words read
   const CAP = 0.7;                                                // Overpass cap height, in em
   const SIZES = { post: { W: 1080, H: 1350, safeTop: 0, safeBot: 0 }, story: { W: 1080, H: 1920, safeTop: 200, safeBot: 330 } };
 
-  // the stencil's letter paths, as chrome.js draws them (MARK): CYCLE FOR on a 150-high grid, then the blank
-  const LP = {
-    C: "M52 34 V24 Q52 8 36 8 H33 M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 142 H36 Q52 142 52 126 V116",
-    Y: "M11 4 L30 68 L49 4 M30 68 V150",
-    L: "M8 0 V150 M22 142 H54",
-    E: "M8 0 V150 M22 8 H54 M22 75 H47 M22 142 H54",
-    F: "M8 0 V150 M22 8 H54 M22 75 H47",
-    O: "M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 8 H36 Q52 8 52 24 V126 Q52 142 36 142 H33",
-    R: "M8 0 V150 M22 8 H36 Q52 8 52 24 V58 Q52 74 36 74 H22 M33 90 L50 150",
+  // the mark's paths, as scripts/mark-2027.js draws them (traced from the ASSOS proof; never a font): "cycle", "for",
+  // then the plate, on a 514 × 97 drawing. tools/test/brief-bw.test.js keeps this copy the same as that file's.
+  const MARK = {
+    w: 514, h: 97,
+    cycle: [
+      "M 202.2 48L 225 47.9C 222.5 38.5 212 33.9 203.4 38C 194.5 42.2 191.8 53.4 197.6 61.2C 203.4 69.1 215 69.7 221.7 62.3C 223.3 60.5 226.1 60.7 227.6 62.4C 229.2 64.1 228.9 66.4 227.3 68.2C 219.5 76.5 206.9 78 197.4 71.9C 187.8 65.8 183.8 53.7 188.3 43C 192.6 32.6 203.7 26.5 215 28.9C 225.7 31.2 233.8 40.7 233.7 52.1C 233.6 54.3 231.8 56 229.5 56L 202.2 56C 200 56 198.4 54 198.3 52.1C 198.3 50.1 199.8 48 202.2 48",
+      "M 140.1 40.6C 133.8 35 124.4 35.1 118.5 40.9C 112.5 46.8 112.4 56.5 118.1 62.6C 124 68.9 133.6 69.2 140 63.4C 141.7 61.9 144.3 62.4 145.6 64C 147.2 65.8 146.7 68.2 144.9 69.8C 135.3 78.2 121 77.3 112.3 68.2C 103.6 59.1 103.7 44.7 112.4 35.6C 121.2 26.5 135.7 25.9 145.2 34.5C 146.9 36 146.9 38.3 145.6 40C 144.5 41.4 141.9 42.2 140.1 40.6",
+      "M 36.6 40.6C 30.2 35 20.8 35.1 14.8 41.1C 9 47 8.9 56.6 14.6 62.7C 20.4 68.7 29.9 69.2 36.4 63.5C 38.1 62 40.6 62.3 42 64C 43.5 65.7 43.3 68.1 41.5 69.7C 31.9 78.2 17.5 77.4 8.8 68.3C 0.1 59.1 0.1 44.7 8.9 35.5C 17.7 26.5 32.3 25.9 41.7 34.5C 43.4 36 43.4 38.3 42.1 40C 41 41.4 38.4 42.2 36.6 40.6",
+      "M 174.8 67.5C 177.2 67.5 179 69.4 179 71.5C 179 73.7 177.3 75.6 175 75.6L 169.7 75.6C 163.5 75.6 157.8 70.5 157.8 63.9L 157.8 4C 157.8 1.6 159.9 -0 161.8 0C 164.1 0.1 165.8 1.8 165.8 4.2L 165.8 63.4C 165.8 65.8 167.8 67.5 170 67.5L 174.8 67.5",
+      "M 69.8 93.7C 68.8 95.8 66.2 96.2 64.6 95.5C 62.6 94.6 61.5 92.3 62.5 90.2L 90.5 31C 91.6 28.8 93.9 27.8 96 28.8C 98.2 29.9 98.9 32.2 97.8 34.5L 69.8 93.7",
+      "M 73.9 56.6C 75 59 74.2 61.3 72.1 62.4C 70 63.4 67.6 62.3 66.6 60.1L 54.7 34.3C 53.7 32.2 54.5 29.8 56.5 28.8C 58.5 27.9 61 28.6 62 30.8L 73.9 56.6",
+    ],
+    for: [
+      "M 326.1 37.2C 319.6 39.4 315.3 45.2 315.3 51.8C 315.2 58.6 319.4 64.5 325.9 66.8C 328.2 67.6 329.1 70.1 328.2 72.1C 327.2 74.2 325 75 322.8 74.2C 313.4 70.8 307.2 61.9 307.2 52C 307.2 42.1 313.4 33.1 322.8 29.7C 324.5 29.2 325.9 29.5 327.3 30.4C 328.1 29.3 329.2 28.4 330.8 28.4C 342.4 28.3 352.3 36.8 354.1 48.2C 356 59.4 349.4 70.7 338.4 74.3C 336.4 75 334.2 74 333.4 72.1C 332.7 70.3 333.3 67.6 335.5 66.9C 342.8 64.3 347.3 57.4 346.2 49.7C 345.1 42.4 338.9 36.7 331.2 36.5C 330.1 36.5 329 36 328 35.4C 327.6 36 326.9 36.9 326.1 37.2",
+      "M 370 71.7C 370 74.2 367.7 75.6 365.9 75.6C 363.7 75.5 361.9 73.8 361.9 71.4L 361.9 32.2C 361.9 29.9 364 28.4 366.1 28.4C 367.8 28.4 370 29.9 370 32.3L 370 71.7",
+      "M 279.3 14.8L 279.2 19.7C 279.2 21.9 277.4 23.5 275.4 23.6C 273.2 23.6 271.2 22 271.2 19.7L 271.2 14.4C 271.2 6.7 277.5 0.3 285.3 0.1L 295.7 0C 297.9 0 299.6 1.8 299.7 3.8C 299.8 6 298.1 8 295.8 8L 286.4 8.1C 282.6 8.1 279.4 10.7 279.3 14.8",
+      "M 279.2 71.6C 279.2 73.9 277.3 75.5 275.4 75.6C 273.3 75.6 271.2 74 271.2 71.7L 271.2 45.2C 271.2 42.8 273.2 41.2 275.4 41.2C 277.6 41.3 279.3 43.1 279.3 45.4L 279.2 71.6",
+      "M 395.9 40.6C 391.6 36.4 385.6 35.4 380.1 37.5C 378 38.4 375.7 37.1 375 35.1C 374.3 33.1 375.2 30.9 377.3 30C 385.7 26.6 395.1 28.6 401.6 34.9C 403.3 36.5 403.3 39 401.7 40.7C 400.2 42.2 397.7 42.3 395.9 40.6",
+      "M 287.4 36.4L 265.8 36.4C 263.5 36.4 261.8 34.4 261.8 32.3C 261.9 30.1 263.7 28.4 266 28.4L 287.5 28.4C 289.7 28.4 291.4 30.4 291.4 32.3C 291.4 34.4 289.8 36.4 287.4 36.4",
+    ],
+    plate: "M 420.2 42.3L 419.6 35.8L 419.1 30.4L 418.6 24.1C 418.2 19.6 420.9 15.3 425.5 14.9L 432.1 14.3L 437.9 13.8L 443.7 13.3L 448.9 12.8L 455.1 12.3L 460.6 11.8L 466.6 11.3L 471.9 10.8L 477.9 10.3L 483.9 9.8L 489.4 9.3L 494.9 8.8L 497.6 8.5C 501.8 8.1 506.5 10.6 506.9 15.3L 510.4 53.4L 510.9 60.1L 511.4 65.8C 512.2 71 508.9 75.2 503.6 75.6L 498.5 76L 491.9 76.6L 481.2 77.5L 474.6 78.1L 469.1 78.6L 435.8 81.5L 433 81.8C 430.4 82 427.8 81.8 425.9 80C 424.4 78.6 423.2 77 423.1 74.9L 422.2 64.9L 421.6 58.3L 420.2 42.3",
   };
-  const ROW = [["C", 0], ["Y", 74], ["C", 148], ["L", 222], ["E", 296], ["F", 414], ["O", 488], ["R", 562]];
-  const STENCIL_W = 750;   // the stencil and its bar, in the 150-high drawing
 
   const up = (s) => String(s || "").trim().toUpperCase();
 
@@ -50,7 +61,7 @@
     const footTop = foot ? bottom - SP.size * CAP : bottom;
     const infoLast = foot ? footTop - 66 : bottom;                       // baseline of the last info line
     const infoTop = lines.length ? infoLast - (lines.length - 1) * IN.lh - IN.size * CAP : infoLast + 34;
-    const logoH = 44, logoTop = infoTop - 36 - logoH;
+    const logoH = 58, logoTop = infoTop - 36 - logoH;   // the mark is lowercase: 58 tall puts its x-height near the lines' capitals
     const box = { x: M + 4, y: top + 84, w: W - 2 * M - 70, h: logoTop - 52 - (top + 84) };
 
     // the line: lat/lon onto the page, fitted to the box and centred in it
@@ -75,7 +86,7 @@
       W, H, M, top, bottom, box, line, lineW, dots, dot,
       title: { text: up(opts.title), x: M, y: top + 30 * CAP, size: 30, track: 0.06, maxW: W - 2 * M },
       side: { text: up(opts.side), x: W - M, y: top + 70, size: 26, track: 0.06, maxW: logoTop - 40 - (top + 70) },
-      logo: { x: W - M - STENCIL_W * logoH / 150, y: logoTop, h: logoH },
+      logo: { x: W - M - MARK.w * logoH / MARK.h, y: logoTop, h: logoH },
       lines: lines.map((t, i) => ({ text: t, x: W - M, y: infoTop + IN.size * CAP + i * IN.lh, size: IN.size, track: IN.track, maxW: W - 2 * M })),
       foot: foot ? { text: foot, x: M, y: footTop + SP.size * CAP, size: SP.size, track: SP.track, maxW: W - 2 * M } : null,
     };
@@ -108,14 +119,12 @@
     ctx.fillStyle = WHITE; words(ctx, T, align); ctx.restore();
   }
   let P2 = null;
-  function stencil(ctx, x, y, h) {
-    if (!P2) { P2 = {}; for (const k in LP) P2[k] = new Path2D(LP[k]); }
-    const k = h / 150;
+  function mark(ctx, x, y, h) {
+    if (!P2) P2 = { word: MARK.cycle.concat(MARK.for).map((d) => new Path2D(d)), plate: new Path2D(MARK.plate) };
+    const k = h / MARK.h;
     ctx.save(); ctx.translate(x, y); ctx.scale(k, k);
-    ctx.beginPath(); ctx.rect(-20, 0, 900, 150); ctx.clip();
-    ctx.strokeStyle = WHITE; ctx.lineWidth = 18; ctx.lineJoin = "round"; ctx.lineCap = "butt";   // stroke 18 under 120px
-    for (const [l, dx] of ROW) { ctx.save(); ctx.translate(dx, 0); ctx.stroke(P2[l]); ctx.restore(); }
-    ctx.fillStyle = ROSE; ctx.fillRect(652, 114, 98, 36);
+    ctx.fillStyle = WHITE; for (const p of P2.word) ctx.fill(p);
+    ctx.fillStyle = PINK; ctx.fill(P2.plate);
     ctx.restore();
   }
 
@@ -134,7 +143,7 @@
     for (const [x, y] of L.dots) { ctx.beginPath(); ctx.arc(x, y, L.dot, 0, Math.PI * 2); ctx.fill(); }
     if (L.title.text) at(ctx, L.title, "left");
     if (L.side.text) at(ctx, L.side, "right", true);
-    stencil(ctx, L.logo.x, L.logo.y, L.logo.h);
+    mark(ctx, L.logo.x, L.logo.y, L.logo.h);
     for (const T of L.lines) at(ctx, T, "right");
     if (L.foot) at(ctx, L.foot, "left");
   }
@@ -150,5 +159,5 @@
     return c;
   }
 
-  return { layout, paint, gray, SIZES };
+  return { layout, paint, gray, SIZES, MARK };
 });

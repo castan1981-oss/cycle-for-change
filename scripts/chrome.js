@@ -11,23 +11,28 @@
    Styled by /chrome.css. Behaviour (menu, tally, signup) in /chrome.js.
 
    Change the chrome here, then: run the three generators + apply-chrome.py.
-   Lane Paint (Oct 5, 2026): Overpass only; the mark is the drawn CYCLE FOR with its rose bar. */
+   Overpass only. The mark (Nov 11, 2026) is the lowercase "cycle for" with its pink plate, from scripts/mark-2027.js;
+   the Lane Paint stencil (the caps CYCLE FOR with a rose bar, Oct 5, 2026) is retired. */
 
 "use strict";
 
 const fs = require("fs");
 const path = require("path");
 const { seasonText } = require("../tools/lib/season.js");
+const MARK27 = require("./mark-2027.js");
 
 const SITE = "https://cycleforchange.org";
 const INSTAGRAM = "https://www.instagram.com/cycl_eforchange";
 const STRAVA = "https://www.strava.com/athletes/22899089";
-const OG_IMAGE = `${SITE}/og-cfc.png`;
+// The share card and the icons carry the mark (tools/brand-files.py draws them from scripts/mark-2027.js). A changed card
+// gets a new number: chat apps keep a preview for weeks. A changed icon keeps its name: bump ICON_V.
+const OG_IMAGE = `${SITE}/og-cfc-2.png`;
+const ICON_V = 2;
 // Studio pass 1 (Oct 21, 2026): ONE version for every stylesheet link on the site (and /chrome.js). head() puts it on
 // /chrome.css and every section sheet a generator passes (any old ?v= is replaced), apply-chrome.py gets it through
 // head(), build-home.js puts it on /home.css. Bump it whenever a stylesheet or /chrome.js changes and regenerate in the
 // §2 order: a page must never pair an old /chrome.css with new section sheets (they share cascade layers).
-const CSS_V = 61;
+const CSS_V = 62;
 const ver = (href) => `${href.split("?")[0]}?v=${CSS_V}`;
 
 // Counts shown in the mobile menu, same as the homepage. Read from the data so
@@ -82,32 +87,16 @@ function head({ title, description, url, ogType = "website", styles = [], ld = [
   <meta name="twitter:title" content="${attr(full)}">
   <meta name="twitter:description" content="${attr(description)}">
   <meta name="twitter:image" content="${attr(img)}">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/favicon-180.png">
+  <link rel="icon" href="/favicon.svg?v=${ICON_V}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-180.png?v=${ICON_V}">
   ${FONTS}
 ${sheets}
 ${json}${extra ? "\n" + extra : ""}`;
 }
 
-/* Pass 23d (Oct 3, 2026): the wheel sits in an asphalt square (.brand-sq); on phones the square is the
-   bar's corner. Same drawing as the homepage's. */
-const MARK = `<svg class="brand-mark" viewBox="0 0 760 150" aria-hidden="true" focusable="false">
-        <defs>
-          <path id="lpC" d="M52 34 V24 Q52 8 36 8 H33 M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 142 H36 Q52 142 52 126 V116"/>
-          <path id="lpY" d="M11 4 L30 68 L49 4 M30 68 V150"/>
-          <path id="lpL" d="M8 0 V150 M22 142 H54"/>
-          <path id="lpE" d="M8 0 V150 M22 8 H54 M22 75 H47 M22 142 H54"/>
-          <path id="lpF" d="M8 0 V150 M22 8 H54 M22 75 H47"/>
-          <path id="lpO" d="M27 8 H24 Q8 8 8 24 V126 Q8 142 24 142 H27 M33 8 H36 Q52 8 52 24 V126 Q52 142 36 142 H33"/>
-          <path id="lpR" d="M8 0 V150 M22 8 H36 Q52 8 52 24 V58 Q52 74 36 74 H22 M33 90 L50 150"/>
-          <clipPath id="lpRow"><rect x="-20" y="0" width="900" height="150"/></clipPath>
-        </defs>
-        <g clip-path="url(#lpRow)" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">
-          <use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/>
-          <use href="#lpF" transform="translate(414 0)"/><use href="#lpO" transform="translate(488 0)"/><use href="#lpR" transform="translate(562 0)"/>
-        </g>
-        <rect class="lp-bar" x="652" y="114" width="98" height="36" fill="#A84C58"/>
-      </svg>`;
+/* The header's mark: cycle for + the plate, one line. It carries the drawing's paths for the whole page (the footer's
+   sign and every page's own sign <use> them), so it comes first in the body and is never removed. */
+const MARK = MARK27.LINE("brand-mark", true);
 
 // Pass 36 (Oct 6, 2026): Robert: "a thing as you scroll down every single page and the homepage above the
 // fold that says ride with me and that essentially gets you to the next event that I'm doing". One list,
@@ -220,16 +209,11 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
 const FOOTER = `<footer class="foot site-foot">
   ${RIDE_BAR}
   <div class="wrap">
-    <!-- the footer answers the sign: the stencil (clean, no wear — it's under big print) and "change" on the plate.
-         The letter paths are the header mark's defs (#lpC …), on every page. No wordmark in a font (the Oct 6 panel). -->
+    <!-- the footer answers the sign: cycle / for, and "change" on the plate. The letters are the header mark's paths
+         (#cfCycle, #cfFor), on every page. No wordmark in a font (the Oct 6 panel). -->
     <div class="foot-sign" role="img" aria-label="Cycle for change">
-      <svg class="foot-stencil" viewBox="-10 -10 370 350" aria-hidden="true" focusable="false">
-        <g fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round">
-          <use href="#lpC"/><use href="#lpY" transform="translate(74 0)"/><use href="#lpC" transform="translate(148 0)"/><use href="#lpL" transform="translate(222 0)"/><use href="#lpE" transform="translate(296 0)"/>
-          <use href="#lpF" transform="translate(0 180)"/><use href="#lpO" transform="translate(74 180)"/><use href="#lpR" transform="translate(148 180)"/>
-        </g>
-      </svg>
-      <span class="foot-plate">change</span>
+      ${MARK27.CYCLE("foot-cycle")}
+      <span class="foot-row">${MARK27.FOR("foot-for")}<span class="foot-plate">change</span></span>
     </div>
     <div class="foot-grid">
       <div class="foot-col">
@@ -284,7 +268,7 @@ function pledge({ line, copy } = {}) {
 }
 const PLEDGE = pledge();
 
-module.exports = { RIDING, NEXT_RIDES, NEXT_RIDE, RIDE_HREF, SITE, INSTAGRAM, STRAVA, OG_IMAGE, FONTS, MARK, HEADER, FOOTER, CHROME_JS, PLEDGE, pledge, head, esc, attr, CSS_V };
+module.exports = { RIDING, NEXT_RIDES, NEXT_RIDE, RIDE_HREF, SITE, INSTAGRAM, STRAVA, OG_IMAGE, ICON_V, FONTS, MARK, HEADER, FOOTER, CHROME_JS, PLEDGE, pledge, head, esc, attr, CSS_V };
 
 if (require.main === module) {
   // `node scripts/chrome.js` -> the markup as JSON (apply-chrome.py reads it)

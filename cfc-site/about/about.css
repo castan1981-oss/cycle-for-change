@@ -243,14 +243,16 @@
 .ab-sign-in{display:grid;gap:var(--s5)}
 /* the mark as wide as the grid; the h keeps a line for the plate, so typing never moves the field under a thumb */
 .ab-sign-h{display:flex;flex-wrap:wrap;align-items:flex-end;align-content:flex-start;gap:14px 18px;margin:0;
-  --h:calc((min(100vw, var(--maxw)) - 2 * var(--gut) - 26px) / 4.86);   /* mark 4.173h + gap 18 + blank .65h, with a hair to spare */
-  min-height:calc(var(--h) + var(--h) * .34 * 1.2 + 14px)}
+  --h:calc((min(100vw, var(--maxw)) - 2 * var(--gut) - 26px) / 4.86);   /* the words 4.165h + gap 18 + the blank plate .58h, with a hair to spare */
+  min-height:calc(var(--h) * 1.6 + 14px)}   /* the words, then a line for the plate (.34h type, its padding and its lift) */
 .ab-sign-mark{display:block;height:var(--h);width:auto;max-width:100%;color:var(--paper)}
-.ab-sign-plate{display:inline-block;background:var(--creosote-lift);color:var(--asphalt);font-weight:900;font-size:calc(var(--h) * .34);line-height:1;letter-spacing:-.01em;padding:.14em .32em .04em;max-width:100%;overflow-wrap:anywhere;cursor:text}
-.ab-sign-plate[data-empty="true"]{width:calc(var(--h) * .65);height:calc(var(--h) * .24);padding:0}
+/* the plate (Nov 11, 2026): the mark's pink, paper type, set a touch off square, lifted to sit where the mark's own plate
+   sits. Paper on the pink is 3.67:1, so the word never drops under 19px bold. Empty, it's the mark's blank plate. */
+.ab-sign-plate{display:inline-block;background:var(--plate);color:var(--paper);font-weight:900;font-size:max(19px,calc(var(--h) * .34));line-height:1;letter-spacing:-.01em;padding:.18em .36em .1em;border-radius:.07em;transform:rotate(-2.5deg);transform-origin:0 100%;margin-bottom:calc(var(--h) * .15);max-width:100%;overflow-wrap:anywhere;cursor:text}
+.ab-sign-plate[data-empty="true"]{width:calc(var(--h) * .58);height:calc(var(--h) * .46);padding:0}
 .ab-sign-form{max-width:44rem}
 .ab-sign-q{display:block;margin-bottom:var(--s1);font-size:var(--fs-h3);font-weight:800}
-.ab-sign-input{display:block;width:100%;min-height:64px;padding:12px 0 10px;border:0;border-bottom:3px solid var(--creosote-lift);border-radius:0;background:transparent;color:var(--paper);
+.ab-sign-input{display:block;width:100%;min-height:64px;padding:12px 0 10px;border:0;border-bottom:3px solid var(--plate);border-radius:0;background:transparent;color:var(--paper);
   font:800 clamp(1.4rem,1rem + 1.7vw,2.25rem)/1.2 var(--display);letter-spacing:-.01em}
 .ab-sign-input::placeholder{color:var(--dust);opacity:1}
 .ab-sign-note{margin:var(--s2) 0 0;display:flex;flex-wrap:wrap;align-items:center;column-gap:8px;min-height:44px;font-size:var(--fs-small);color:var(--dust)}   /* room for Clear the sign, so the first letter moves nothing */
@@ -267,7 +269,7 @@
 }
 
 /* —— the frame on this page, unlayered so it outranks /chrome.css's frame by order —— */
-/* the page ends on its own sign; the footer's stencil would be a second one under it */
+/* the page ends on its own sign; the footer's sign would be a second one under it */
 .ab-page .foot-sign{display:none}
 @media (min-width:1024px){.ab-page .foot-grid{grid-column:1 / -1}}
 .ab-page main>.pledge{margin-top:0;border-top:1px solid var(--line-d)}

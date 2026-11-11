@@ -40,6 +40,9 @@ ANCHORS = {'href="/#tally"': 'href="/"', 'href="/#rides"': 'href="/#ride"',
 CLASSES = [(r'class="btn btn-y"', 'class="btn btn--bone"'), (r'class="btn btn-solid"', 'class="btn btn--ink"'),
            (r'class="btn btn-dark"', 'class="btn btn--ghost"'), (r'class="btn-link"', 'class="link"'),
            (r'class="btn"', 'class="btn btn--ghost"')]
+# share cards that used to be the site default (tools/brand-files.py): a page still carrying one takes the current card,
+# it is not that page's own
+RETIRED_OG = {"https://cycleforchange.org/og-cfc.png", "https://cycleforchange.org/og-image.png"}
 RETIRED_INLINE = [
     ' style="color:var(--cream);border-bottom-color:var(--cream);"',
     ' style="color:var(--yellow);border-bottom:1px solid var(--yellow);"',
@@ -73,7 +76,7 @@ def new_head(s, page):
             "styles": SECTION_STYLES.get(top, ["/styles.css"]), "ld": ld, "extra": extra}
     # a page with its own share card (/nov7/) keeps it: image, alt, and a share title that isn't "<title> — Cycle for Change"
     img = meta(old, "og:image", "property")
-    if img and img != C["OG_IMAGE"]:
+    if img and img != C["OG_IMAGE"] and img not in RETIRED_OG:
         spec["image"] = img
         spec["imageAlt"] = meta(old, "og:image:alt", "property")
     ogt = meta(old, "og:title", "property")
