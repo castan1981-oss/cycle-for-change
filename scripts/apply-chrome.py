@@ -4,8 +4,8 @@
 Run from the repo root:   python3 scripts/apply-chrome.py
 Safe to re-run: it rebuilds each page's <head>, header and footer from the
 current scripts/chrome.js. Pages covered: every .html under cfc-site/guides,
-field-notes, resources, journal, tonight, nov7, cyclefor, privacy, methodology, contact and fruitloop
-(templates included), plus 404.html.
+field-notes, resources, journal, tonight, nov7, cyclefor, privacy, methodology, contact and fruitloop,
+plus 404.html, and the two field-note templates in templates/field-notes/ (outside the published folder).
 
 What it does to each page
   - <head>: keeps the page's title, description, canonical, og:type and JSON-LD,
@@ -171,6 +171,15 @@ def main():
     for p in pages:
         s = p.read_text()
         t = chrome(s, p)
+        if t != s:
+            p.write_text(t)
+        print(("updated " if t != s else "same    ") + str(p.relative_to(ROOT)))
+    # the field-note templates live outside the published folder (templates/field-notes/, Oct 6, 2026). They wear the
+    # chrome too, as a page at /field-notes/<slug>/ would, so a new note never starts from an old header or mark
+    # (Nov 11, 2026: they still carried the Oct 5 header and the retired stencil).
+    for p in sorted((ROOT / "templates" / "field-notes").glob("*.html")):
+        s = p.read_text()
+        t = chrome(s, SITE / "field-notes" / "slug" / "index.html")
         if t != s:
             p.write_text(t)
         print(("updated " if t != s else "same    ") + str(p.relative_to(ROOT)))
