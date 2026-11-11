@@ -106,7 +106,7 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 | `python3 tools/road-film.py --src …` | the film under the 10,000 in `#road` (`cfc-site/film/road-film-N.*`, from his own footage, car-free; Oct 28, 2026) |
 | `python3 tools/hero-film.py` + `python3 tools/hero-contrast.py` | the homepage hero films (`cfc-site/film/hero-*-N.*`, from his own footage, car-free) and the check that the hero's type reads on every frame of them (§3, the editorial homepage) |
 | `scripts/mark-2027.js` | the mark (§3): the traced "cycle for" and its plate, as `LINE` / `STACK` / `WORD` / `CYCLE` / `FOR` for pages and `FILE()` for a file of its own. Required by chrome.js, build-home.js and build-about.js. Change the mark here and nowhere else, then regenerate (below) and run `python3 tools/brand-files.py`. |
-| `python3 tools/brand-files.py` | the files that carry the mark with no page around them: `cfc-site/favicon.svg`, `favicon-180.png`, `favicon-512.png` and the share card `og-cfc-N.png` (it writes `templates/og/cfc.html` too). A changed card gets a new number (`--n`) and `OG_IMAGE` moves in chrome.js and build-rides.js; a changed icon keeps its name and `ICON_V` in chrome.js goes up. |
+| `python3 tools/brand-files.py` | the files that carry the mark with no page around them: `cfc-site/favicon.svg`, `favicon-180.png`, `favicon-512.png` and the share card `og-cfc-N.png` (it writes `templates/og/cfc.html` too). A changed card gets a new number (`--n`) and `OG_IMAGE` moves in chrome.js and build-rides.js; a changed icon keeps its name and `ICON_V` in chrome.js goes up. The addresses that used to serve an old card or an old logo are rewritten with the current one (`og-cfc.png`, `og-image.png`; `mark.svg`, `assets/logo.svg`), so a link from last year never shows a retired mark (`tools/test/brand-files.test.js`). |
 | `node scripts/build-about.js` | `cfc-site/about/index.html` from `data/about.json` (his words; noindex while a section is waiting). Wears the chrome. |
 | `python3 tools/how-we-ride/render.py --n N` | How we ride, the film on the ride pages (§6): `cfc-site/film/how-we-ride-N.mp4` and its jpg / webp / avif poster, shot frame by frame from `tools/how-we-ride/film.html` (the mark from mark-2027.js, the font and the asphalt tile from `cfc-site/`). A new cut takes the next number; `HOW_FILMS` in build-rides.js follows and the old files go. Tests: `tools/test/how-we-ride.test.js`. |
 | `node scripts/build-signals.js` | `cfc-site/llms.txt` (what the site is, for AI search; counts from the data) and `cfc-site/feed.xml` (RSS of guides, field notes, journal, event and town pages, newest first by the sitemaps' lastmod). build-rides.js runs it last on every build, so the deploy keeps them current. Tests: `tools/test/build-signals.test.js`. |
@@ -191,7 +191,9 @@ pass brings no new mark, palette or typeface. What he changed is written here; e
   turns). The icons and the share card: `python3 tools/brand-files.py`.
 - **Retired:** the Lane Paint stencil (the caps CYCLE FOR drawn as road-stencil strokes with a rose bar, `#lpC` …; Oct 5
   to Nov 11, 2026), its worn filters, and the bar that was smeared rose on light and powder rose on dark. The wheel
-  (`mark.svg`, `assets/logo.svg` are leftovers) and "10000" are not marks; the kit's mark is 10K.
+  and "10000" are not marks; the kit's mark is 10K. The wheel's old address (`/mark.svg`) and the three strokes'
+  (`/assets/logo.svg`) serve the icon since Nov 11, 2026 (`tools/brand-files.py`): nothing links to them, and an old
+  link must never show a retired mark.
 - **Moved the same day** (Robert, Nov 11, 2026, after "Yes!": "Let's merge it. update anything that would be part of
   visibility … Just anything on the website"): the two things on the site that had the old logo baked into their
   pixels. The How we ride film is `how-we-ride-3` (§6: the answers on the pink plate, the end on cycle for + change);
@@ -1362,3 +1364,6 @@ two exits; the shapes are on the plan canvas.
 - 2026-11-11 — The print and social kit makes the mark (`tools/cfc-kit/`: `mark()` and `sign()` from `mark-2027.js`, the
   pink family, a whole-page `kitpage.py`); the "CFC Phone Kit" artifact republished with all 35 pieces redone.
   The weekly carousel tool gets the mark and the pinks (`mark_svg()`); its new look still waits on Robert's word.
+- 2026-11-11 — The last two old-logo addresses: `/mark.svg` (the wheel) and `/assets/logo.svg` (the three strokes, with a
+  swim, bike, run label) were still served, linked from nowhere. They serve the icon now, written by
+  `tools/brand-files.py` with the old share cards' addresses; `tools/test/brand-files.test.js` keeps them current.

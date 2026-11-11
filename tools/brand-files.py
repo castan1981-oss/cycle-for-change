@@ -5,6 +5,9 @@
   cfc-site/favicon-180.png    the same, for phones' home screens
   cfc-site/favicon-512.png    the same, the logo in the pages' JSON-LD and /ride/'s manifest
   cfc-site/og-cfc-N.png       the site's share card, 1200 x 630 (templates/og/cfc.html, written here too)
+  cfc-site/mark.svg, cfc-site/assets/logo.svg
+                              two addresses that used to serve retired marks (the wheel, the three strokes): nothing on
+                              the site links to them, but they are out in the world, so they serve the icon now
 
 Everything is drawn from scripts/mark-2027.js, so these can't drift from the header's mark.
 
@@ -24,6 +27,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = ROOT / "cfc-site"
 BRUISE, PLASTER, PATINA = "#1C1A22", "#EFEDEA", "#A9BDB8"
 OLD_CARDS = ["og-cfc.png", "og-image.png"]          # addresses already out in the world: kept, with the current picture
+OLD_MARKS = ["mark.svg", "assets/logo.svg"]         # the same for two retired marks' addresses: they serve the icon
 
 
 def mark(**opts):
@@ -39,6 +43,8 @@ def main():
     # the icon: the stacked mark is 252 x 196; a 300 square gives it a 24-unit margin at the sides
     icon = mark(stack=True, ink=PLASTER, ground=BRUISE, box="-24 -52 300 300") + "\n"
     (SITE / "favicon.svg").write_text(icon)
+    for name in OLD_MARKS:
+        (SITE / name).write_text(icon)
 
     # the share card: the stacked mark on bruise, the question, what this is, the address. Overpass from the site.
     card = f"""<!doctype html>
@@ -85,7 +91,7 @@ html,body{{margin:0;width:1200px;height:630px;overflow:hidden;background:{BRUISE
     subprocess.check_call([sys.executable, str(ROOT / "tools" / "og.py"), str(tpl), str(out)])
     for name in OLD_CARDS:
         (SITE / name).write_bytes(out.read_bytes())
-    for f in ["favicon.svg", "favicon-180.png", "favicon-512.png", out.name] + OLD_CARDS:
+    for f in ["favicon.svg", "favicon-180.png", "favicon-512.png", out.name] + OLD_CARDS + OLD_MARKS:
         print(f"{f:20s} {(SITE / f).stat().st_size:>7,} bytes")
 
 
