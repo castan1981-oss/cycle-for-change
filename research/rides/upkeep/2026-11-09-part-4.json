@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "roanoke-va-crank-sisters-social-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Roanoke Outside's group-rides page lists the Crank Sisters Social Ride, Thursdays at 6:00 pm from Cardinal Bicycle Grandin, a 10-mile no-drop ride on the Greenway and quiet streets for women, trans, and non-binary riders (page updated June 8, 2026; fetched Nov 9, 2026).",
+    "sources": ["https://roanokeoutside.com/group-bike-rides-for-every-day-of-the-week/"]
+  },
+  {
+    "slug": "salem-va-olde-salem-brewery-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Roanoke Outside's group-rides page lists the Olde Salem Brewery Ride, Thursdays at 5:30 pm from Olde Salem Brewery's back parking lot, 21 miles and 1,200 feet of climbing hosted by the Roanoke College Cycling Team (page updated June 8, 2026; fetched Nov 9, 2026).",
+    "sources": ["https://roanokeoutside.com/group-bike-rides-for-every-day-of-the-week/"]
+  },
+  {
+    "slug": "san-diego-ca-shewolves-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The San Diego Magazine article (July 2024) still describes Thursday rides at 7:15 pm from Balboa Park, unchanged from our record, but the article is 16 months old with no dated signal from the last three months; the schedule-text-changed flag was a false alarm (was and now texts are identical). Check the host's Instagram @sd_shewolves for current dates."
+  },
+  {
+    "slug": "kalamazoo-mi-pedal-tuesday-queer-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "PEDAL Bicycle's events page (pedalbicycle.com) no longer lists the Tuesday Queer Ride or its 6:00 pm start time; the page now shows only winter training content starting December 7. The ride record says the ride runs through mid-September; the host's page gives no indication it resumes. Check @pedalbicycles on Instagram or call PEDAL's Portage shop at (269) 324-5555."
+  },
+  {
+    "slug": "madison-wi-madison-queer-bike-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The watch URL (ourliveswisconsin.com/article/madison-queer-bike-ride/) returns 403 to both the watcher and WebFetch; last loaded Sep 30, 2026. Check the host's Instagram @madisonqueerbikeride for current dates."
+  },
+  {
+    "slug": "missoula-mt-thursday-night-mountain-bike-group",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The watch URL (thursdaynightmtbr.org) has a TLS certificate mismatch (hosted on user.fm, cert covers *.user.fm not the domain) and cannot load. May 2026 TNR rides were listed on Missoula Underground (missoulaunderground.com) but the group's Nov 2025 announcement said they move to hiking and skiing for winter. Check missoulaunderground.com or the TNR Facebook group (facebook.com/groups/150671295989) for the 2026-27 season return date."
+  },
+  {
+    "slug": "philadelphia-pa-bcp-sunny-sunday-d-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The BCP weekly calendar (phillybikeclub.org/bcpdo/ride/calendarweekly) is behind a Cloudflare JavaScript challenge and returns 403 to all automated requests; it must be opened in a browser. The BCP calendar reportedly lists about 35 rides a week, so the Sunny Sunday D Ride likely still appears there."
+  },
+  {
+    "slug": "portland-me-gear-hub-thursday-group-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The Portland Gear Hub events page (portlandgearhub.org/events) loads but lists no Thursday group ride; the two current events are Cranksgiving (Nov 7) and an Oxbow winter kickoff (Nov 8), suggesting the Thursday ride is off for the season. The schedule-text-changed flag was a cosmetic change (a hiring notice added to the nav, not a schedule update). Call the shop at (207) 761-7632 or email pghinfo@ketchaoutdoors.org to confirm whether the Thursday ride resumes in spring."
+  }
+]

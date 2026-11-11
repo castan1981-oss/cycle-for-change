@@ -1,0 +1,71 @@
+[
+  {
+    "slug": "evanston-il-evanston-rides-family-ride-kidical-mass",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-10-24",
+    "evidence": "Chicago Family Biking's events page shows Evanston Kidical Mass on Sat Oct 24, 2026 (meet 1:15 PM, roll 1:30 PM, Twiggs Park) as the last ride of the season; no November or later Evanston dates are listed, confirming the season ends in October as recorded. The Oct 24 special start time has passed and start_times is cleared back to the standard 10:00 am (fetched Nov 9, 2026).",
+    "sources": ["http://www.chicagofamilybiking.org/events"],
+    "changes": {
+      "schedule": "Last Saturday of the month, May–October, rolls at 10:00 am. Start park varies by ride; check the host's calendar for the location.",
+      "start_times": null,
+      "visitor_notes": "Free; helmets required. Each month's starting park varies — check Chicago Family Biking's events page for the current location before riding.",
+      "description": "Evanston's monthly family ride, led by Kidical Mass volunteers. Runs last Saturday of the month, May through October; start park changes each month."
+    }
+  },
+  {
+    "slug": "exeter-ri-rhode-island-nemba-arcadia-tuesday-night-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Rhode Island NEMBA's chapter page lists the Arcadia Night Ride Series recurring event for Tue, Nov 10, 2026, 5:30–7:30 pm at Arcadia Management Area Midway Parking, Exeter, RI, Intermediate pace, 8–12 miles (fetched Nov 9, 2026)."
+  },
+  {
+    "slug": "fair-oaks-ca-sac-wheelmen-tuesday-coffee-ride-old-fair-oaks",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Sacramento Wheelmen's ride calendar shows Tuesday Coffee Ride on Nov 11, 18, 25 and Dec 2, 2026; the Nov 4 entry was a one-off rain cancellation, not a schedule change (fetched Nov 9, 2026)."
+  },
+  {
+    "slug": "fairfax-ca-marin-cyclists-fairfax-to-point-reyes-station",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-07",
+    "evidence": "Marin Cyclists' calendar lists Fairfax to Pt Reyes Station Recurring Ride (38/any pace) on Nov 7, 21, 28, 2026 and Dec 5, 2026 (fetched Nov 9, 2026)."
+  },
+  {
+    "slug": "fargo-nd-gnbc-monday-riding-101",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "GNBC's Group Rides & Events page states 'OUR WEEKLY GROUP RIDES ARE DONE FOR THE 2026 SEASON!' and continues to list the Monday 6:00 pm Riding 101 as a spring and summer ride, confirming the seasonal break status (fetched Nov 9, 2026)."
+  },
+  {
+    "slug": "fargo-nd-gnbc-thursday-wow-road-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "GNBC's Group Rides & Events page states 'OUR WEEKLY GROUP RIDES ARE DONE FOR THE 2026 SEASON!' and continues to list the Thursday 6:00 pm W.O.W. Road Ride as a spring and summer ride, confirming the seasonal break status (fetched Nov 9, 2026)."
+  },
+  {
+    "slug": "fargo-nd-gnbc-tuesday-social-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "GNBC's Group Rides & Events page states 'OUR WEEKLY GROUP RIDES ARE DONE FOR THE 2026 SEASON!' and continues to list the Tuesday 6:00 pm Social Ride as a spring and summer ride, confirming the seasonal break status (fetched Nov 9, 2026)."
+  },
+  {
+    "slug": "fort-worth-tx-fwba-saturday-club-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "FWBA's home page carries a banner 'Ride Start Times are Changing, Please Double Check' and all upcoming Saturday rides (Nov 14 and beyond) are listed at 9:00 AM; 8:00 AM no longer appears anywhere on the page (fetched Nov 9, 2026).",
+    "sources": ["https://www.fwbaclub.org/"],
+    "changes": {
+      "schedule": "Every Saturday, 8:00 am in warmer months, 9:00 am in cooler months; start location rotates around the Fort Worth area. Confirm the time on the host's calendar before you go.",
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00"
+    }
+  }
+]

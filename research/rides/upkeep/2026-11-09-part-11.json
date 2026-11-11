@@ -1,0 +1,69 @@
+[
+  {
+    "slug": "conroe-tx-race-ready-repair-thursday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "Race Ready Repair's shop-rides page (racereadyrepair.com/shop-rides, fetched Nov 9, 2026) no longer shows the Thursday Night Ride at all — the section about 'Thursday nights at 6:00 for a fun 23 mile ride' has been removed. Only the Saturday Morning Ride is now listed. No other source (Facebook, search) confirms the Thursday ride is continuing. A person should call the shop at (936) 499-7941 or check their Facebook page (facebook.com/RaceReadyRepair) to ask if Thursday nights are still running."
+  },
+  {
+    "slug": "coral-gables-fl-everglades-bicycle-club-saturday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "EBC's home page (fetched Nov 9, 2026) states 'Saturday Training Rides Rides start at 7:30 AM from Ponce Winter Schedule from Oct 2026 - April 2027' and the November 2026 calendar shows EBC TRAINING RIDES on all four Saturdays.",
+    "sources": ["https://www.evergladesbc.com/"],
+    "changes": {
+      "start_times": [
+        { "from": "2026-10-03", "start_hhmm": "07:30" }
+      ]
+    }
+  },
+  {
+    "slug": "corte-madera-ca-marin-cyclists-china-camp-loop",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-04",
+    "evidence": "Marin Cyclists' calendar (fetched Nov 9, 2026) lists China Camp Loop on Nov 4, 11, 18 and 25, 2026 at 9:00 AM, 27 miles, Social Pace, +1,500 ft.",
+    "sources": ["https://marincyclists.com/content.aspx?page_id=4001&club_id=525458"]
+  },
+  {
+    "slug": "costa-mesa-ca-the-unlikely-cyclist-wednesday-womens-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The shop's events page (theunlikelycyclist.com/new-events, fetched Nov 9, 2026) lists only TUC ZWIFT Meetup! for every Wednesday through December 2026 (Nov 4, 11, 18, Dec 2, 9, 16) with no in-person Wednesday women's group ride posted since Sep 30, 2026. The shop appears to have moved Wednesdays to Zwift for the season. A person should check the shop's Instagram (@theunlikelycyclist) or contact the shop directly to confirm whether the in-person Wednesday ride will return."
+  },
+  {
+    "slug": "costa-mesa-ca-unlikely-cyclist-saturday-womens-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-07",
+    "evidence": "The shop's events page (fetched Nov 9, 2026) lists Saturday Women's Group Ride on Nov 7 (8:00 AM), Nov 14 (7:45 AM), Oct 31, Oct 24 and Oct 10, with multiple entries stating 'meet at 745am for an 8am roll' or 'Roll at 8am' — the roll time is 8:00 am, not 8:15 am as listed.",
+    "sources": ["https://www.theunlikelycyclist.com/new-events"],
+    "changes": {
+      "schedule": "Every Saturday, meet 7:45 am, roll 8:00 am",
+      "time_local": "8:00 am",
+      "start_hhmm": "08:00"
+    }
+  },
+  {
+    "slug": "covington-ky-ridethecov-wednesday-series",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-10-28",
+    "evidence": "The QCB event page (fetched Nov 9, 2026) states the series runs '2nd and 4th Wednesday of the month Starting 3/25/2026 through. October.' The last 2026 ride was Oct 28. No 2027 dates are posted.",
+    "sources": ["https://events.queencity.bike/event/c6s1hoheb0egceahvs9f0q9vvs_20260923T220000Z"],
+    "status_note": "The 2026 season ended in October per the QCB event page. The series typically starts in late March; watch the QCB calendar (events.queencity.bike) for 2027 dates."
+  },
+  {
+    "slug": "dallas-tx-dbc-second-saturday-coffee-social-and-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The Dallas Bicycle Coalition's social-rides page (dallasbicyclecoalition.org/social-rides/) returns a 403 bot wall on every request (six Monday runs plus direct fetch and WebFetch today, Nov 9, 2026). An Action Network listing confirms the DBC Coffee Social ran on Sep 12, 2026 at 8:30 am, so the ride was active at least through September. No October or November 2026 dates were found. A person should check the DBC Action Network page (actionnetwork.org/groups/dallas-bicycle-coalition) or their Bluesky (@bikedallas.bsky.social) for upcoming dates."
+  },
+  {
+    "slug": "dallas-tx-the-meteor-womens-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The Dallas Bicycle Coalition's social-rides page (the only source for this ride) returns a 403 bot wall (six Monday runs plus fetches today). The Meteor Cafe's own website (themeteorcafe.com/dallas) does not list a women's ride or any ride schedule. The domain themeteordallas.com does not resolve. No search result confirms the ride after the original DBC listing from Feb 4, 2026. A person should check The Meteor Cafe Dallas's Instagram (@themeteorcafe) for current ride dates."
+  }
+]

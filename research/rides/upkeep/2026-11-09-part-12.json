@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "dallas-tx-trek-park-cities-thursday-lake-laps",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The Eventbrite series ended Oct 29, 2026; the organizer page (fetched Nov 9) shows 'Nothing planned right now' for November. No new series found on the organizer page or the shop's Trek store page. Check https://www.eventbrite.com/o/trek-bicycle-dallas-park-cities-46367112593 for a new series, or call the shop at 214-363-2025."
+  },
+  {
+    "slug": "dallas-tx-trek-park-cities-tuesday-lake-laps",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The Eventbrite series ended Oct 29, 2026; the organizer page (fetched Nov 9) shows 'Nothing planned right now' for November. No new series found on the organizer page or the shop's Trek store page. Check https://www.eventbrite.com/o/trek-bicycle-dallas-park-cities-46367112593 for a new series, or call the shop at 214-363-2025."
+  },
+  {
+    "slug": "darien-ct-dannys-cycles-sunday-kids-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Danny's Cycles shop-rides page still lists 'Darien Kids' Ride - Every Sunday at 2 PM' with the same description and location (fetched Nov 9, 2026).",
+    "sources": ["https://www.dannyscycles.com/about/shop-rides-pg576.htm"]
+  },
+  {
+    "slug": "dublin-ca-valley-spokesmen-mellow-monday",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Valley Spokesmen homepage lists Mellow Monday for Mon Nov 9, 2026 at 9:00 AM from Shannon Park, Dublin — same day, time and start as the record (fetched Nov 9, 2026).",
+    "sources": ["https://valleyspokesmen.org/"],
+    "changes": {
+      "refresh": {
+        "watch_url": "https://valleyspokesmen.org/"
+      }
+    }
+  },
+  {
+    "slug": "emeryville-ca-grizzly-peak-cyclists-monday-ti-lap",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Grizzly Peak Cyclists' schedule lists the Monday TI Lap for Mon Nov 9 and Mon Nov 16, 2026, same time (meet 5:25 pm, start 5:35 pm) and location (Emeryville, opposite IKEA) (fetched Nov 9, 2026).",
+    "sources": ["https://www.grizz.org/rides/index.php"]
+  },
+  {
+    "slug": "encinitas-ca-swamis-saturday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Swami's Cadence Cyclery events page lists the World Famous Saturday Ride (A/B groups, 8:15 am) for Nov 14, Nov 21, Nov 28, Dec 5, Dec 12 and Dec 19, 2026 from Cadence Cyclery, Encinitas (fetched Nov 9, 2026).",
+    "sources": ["https://swamis.org/events/venues/cadence-cyclery/"]
+  },
+  {
+    "slug": "eugene-or-gears-wtnb-wednesday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "GEARs November 2026 schedule (fetched Nov 9) does not list the WTNB Wednesday ride; the October schedule did. The schedule is posted monthly. Check https://eugenegears.org/ride-schedules/ when the December schedule is posted (around Nov 25) to see if the ride resumes, or contact GEARs at eugenegears.org."
+  },
+  {
+    "slug": "eureka-il-illinois-valley-wheelmn-monday-morning-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-10-01",
+    "evidence": "Illinois Valley Wheelm'n site shows an Oct 28 post for an end-of-year celebration on Nov 7 and an Oct 2 post saying EP!C rides are done for the year; the April 2026 Monday rides announcement says rides start in spring after the Spring Breakout Ride, consistent with the Apr–Oct season (fetched Nov 9, 2026).",
+    "sources": ["https://www.ivwheelmn.org/"],
+    "status_note": "The club's season runs April through October. Back in spring, per the annual schedule and April ride announcement."
+  }
+]

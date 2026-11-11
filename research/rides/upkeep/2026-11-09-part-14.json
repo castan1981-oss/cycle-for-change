@@ -1,0 +1,81 @@
+[
+  {
+    "slug": "fort-worth-tx-trek-fort-worth-south-thursday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Trek Bicycle Fort Worth South's Eventbrite organizer page (fetched Nov 9, 2026) lists 'Ride Club Thursday Night Gravel Ride' for Thursdays at 6:00 PM; the event page (eventbrite.com/e/ride-club-thursday-night-gravel-ride-tickets-1983077361772) names Maple Branch Craft Brewery, 2628 Whitmore St, Fort Worth as the primary start and Crystal Springs Hideaway as the alternate, with two pace groups (14–16 mph and 16–18 mph) and a no-drop back group. The original 'The Thursday Ride' series ended Oct 29, 2026.",
+    "sources": [
+      "https://www.eventbrite.com/e/ride-club-thursday-night-gravel-ride-tickets-1983077361772",
+      "https://www.eventbrite.com/o/trek-bicycle-fort-worth-south-49087200853"
+    ],
+    "changes": {
+      "name": "Ride Club Thursday Night Gravel Ride",
+      "schedule": "Every Thursday, 6:00 pm. Start rotates between Maple Branch Craft Brewery and Crystal Springs Hideaway; check Trek Ride Club DFW on Instagram for the weekly location.",
+      "time_local": "6:00 pm",
+      "start_hhmm": "18:00",
+      "start_location": {
+        "name": "Maple Branch Craft Brewery",
+        "address": "2628 Whitmore Street, Fort Worth, TX 76107"
+      },
+      "distance_miles": null,
+      "pace": "14–16 mph (mild group) or 16–18 mph (spicy group)",
+      "drop_policy": "no-drop",
+      "discipline": ["gravel"],
+      "visitor_notes": "Start location rotates between Maple Branch Craft Brewery and Crystal Springs Hideaway each week. Check @TrekRideClubDFW on Instagram before you go. Two pace groups to pick from.",
+      "description": "A Thursday night gravel ride organized by Trek Bicycle Fort Worth South. Two pace groups run each week: 14–16 mph (mild) and 16–18 mph (spicy). No-drop: the slower group sweeps. The evening ends with a beer at the patio.",
+      "inclusive_focus": [],
+      "links": {
+        "website": "https://www.eventbrite.com/e/ride-club-thursday-night-gravel-ride-tickets-1983077361772",
+        "other": []
+      },
+      "refresh": {
+        "method": "eventbrite",
+        "watch_url": "https://www.eventbrite.com/e/ride-club-thursday-night-gravel-ride-tickets-1983077361772",
+        "notes": "Start location rotates weekly; check Eventbrite listing or @TrekRideClubDFW on Instagram."
+      }
+    }
+  },
+  {
+    "slug": "framingham-ma-blackstone-valley-nemba-nobscot-friday-rides",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "NEMBA's Blackstone Valley chapter page lists 'Blackstone Valley NEMBA - Nobscot Friday Rides' as a recurring event for Fri Nov 13, 2026, 1:30–4 pm at 1234 Edgell Rd, Framingham, MA (fetched Nov 9, 2026).",
+    "sources": ["https://www.nemba.org/chapters/blackstone-valley-nemba"]
+  },
+  {
+    "slug": "franklin-tn-harpeth-bike-club-sunday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Harpeth Bike Club's events calendar lists 'HBC Sunday Ride!' for Nov 15 and Nov 22, 2026 at 9:00 AM from Westhaven Parking Lot, 1025 Westhaven Blvd, Franklin, TN (fetched Nov 9, 2026).",
+    "sources": ["https://www.harpethbikeclub.com/events"]
+  },
+  {
+    "slug": "franklin-tn-harpeth-bike-club-thursday-evening-hunters-bend",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-10-29",
+    "evidence": "Harpeth Bike Club's events calendar (fetched Nov 9, 2026) shows Thursday Evening HBC Ride from Hunters Bend through Oct 29, 2026 at 5:30 PM (note: later entries read 5:30 PM, not 5:45 PM), and no Thursday evening rides for November. No return date is listed.",
+    "sources": ["https://www.harpethbikeclub.com/events"],
+    "status_note": "Off for the winter. The club's calendar shows Thursday evening rides from Hunters Bend through Oct 29, 2026, then none. The October entries showed 5:30 PM, not 5:45 PM as in the record — worth verifying the time when the ride returns. No return date given."
+  },
+  {
+    "slug": "gladeville-tn-veloteers-girls-morning-out",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-10-23",
+    "evidence": "Veloteers' home page (fetched Nov 9, 2026) lists no Girls' Morning Out for November; the club states it runs a full weekday calendar April to September and weekend rides in the off-season.",
+    "sources": ["http://www.veloteers.org/"],
+    "status_note": "Off for the winter. The club runs a full weekday calendar April to September; no Friday morning rides are listed for November. Expected back in April 2027."
+  },
+  {
+    "slug": "glasgow-gb-ctc-glasgow-saturday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-07",
+    "evidence": "CTC Glasgow's Meetup page (fetched Nov 9, 2026) shows 'Saturday morning ride, going eastwards' on Sat Nov 7, 2026 at 9:30 AM from McLennan Arch, Glasgow Green (Saltmarket entrance), with 5 attendees listed in past events.",
+    "sources": ["https://www.meetup.com/ctc-glasgow-rides/"]
+  }
+]

@@ -1,0 +1,89 @@
+[
+  {
+    "slug": "providence-ri-providence-bike-jam",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Dash Bicycle's group rides page (now at https://www.dashbicycle.com/pages/group-rides) lists the Providence Bike Jam as 'a once-monthly Friday night bike party born out of the Critical Mass advocacy movement. Fun and inclusive, around 10 mph, with the occasional dance party. Details are posted on Instagram at least a day ahead, and rides are often themed. @pvdbikejam' — the description was reworded but the ride is unchanged in day, pace and posting channel (fetched Nov 9, 2026).",
+    "sources": ["https://www.dashbicycle.com/pages/group-rides"]
+  },
+  {
+    "slug": "sioux-falls-sd-fab-moon-and-stars-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "Falls Area Bicyclists' events page shows 'No events available' (fetched Nov 9, 2026). The ride runs May through September; no Moon and Stars dates are on the calendar in November, which is consistent with the season having ended. No dated 2026 signal for the ride found on the FAB site. Check https://www.fallsareabicyclists.org/events in spring 2027."
+  },
+  {
+    "slug": "abu-dhabi-ae-yas-marina-circuit-trainyas-ladies",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The TrainYAS Ladies page shows a schedule widget with tabs for August through November 2025 only — no 2026 dates are visible and the 6:00 pm time no longer appears on the page (fetched Nov 9, 2026). The UAE's cycling season should be open in November, but no current schedule is confirmed. Check @ymcofficial on Instagram for the 2026–27 season dates."
+  },
+  {
+    "slug": "fountain-hills-az-mcdowell-mountain-cycles-ladies-mountain-bike-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "McDowell Mountain Cycles' rides page lists the Ladies MTB Ride under November's Saturday section: 'Ladies MTB Ride — November 14th at 7:30 AM. Departs from Four Peaks Lot' (fetched Nov 9, 2026). In October the ride was on Monday the 12th at 7:00 am; November shows it on Saturday.",
+    "sources": ["https://mcdowellmountaincycles.com/mmc-life/"],
+    "changes": {
+      "days": ["sat"],
+      "time_local": "7:30 am",
+      "start_hhmm": "07:30",
+      "schedule": "Posted by date each month; the day and time shift seasonally. Next: Saturday, Nov 14, 2026 at 7:30 am, departing the Four Peaks lot in McDowell Mountain Regional Park."
+    }
+  },
+  {
+    "slug": "fountain-hills-az-mcdowell-mountain-cycles-saturday-road-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "McDowell Mountain Cycles' rides page lists the Saturday Morning Road Ride for Nov 14 and Nov 21, 2026, departing MMC at 7:30 AM — 'This fun, no drop ride will be about 30+ miles' (fetched Nov 9, 2026). In October the ride started at 6:30 am.",
+    "sources": ["https://mcdowellmountaincycles.com/mmc-life/"],
+    "changes": {
+      "time_local": "7:30 am",
+      "start_hhmm": "07:30",
+      "schedule": "Saturdays at 7:30 am from the shop, on the dates the shop posts each month. November 2026: the 14th and 21st."
+    }
+  },
+  {
+    "slug": "peoria-az-west-valley-casual-bike-rides-bear-claw-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "The group's Meetup ICS feed lists the Bear Claw Ride for Sun Nov 15, 2026, 7:30 AM to 10:30 AM, from Rio Vista Community Park — '6 miles from Rio Vista Park to a bakery... then we ride 4 miles back. Average speed 10–13 mph. VERY CASUAL!' (fetched Nov 9, 2026). The previous occurrence on Nov 1 was also at 7:30 am.",
+    "sources": ["https://www.meetup.com/west-valley-casual-bike-rides/events/ical/"],
+    "changes": {
+      "time_local": "7:30 am",
+      "start_hhmm": "07:30",
+      "schedule": "Every other Sunday, 7:30 am, from Rio Vista Community Park. It alternates Sundays with the Stadium Ride."
+    }
+  },
+  {
+    "slug": "prescott-valley-az-bike-prescott-thursday-fun-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "Bike Prescott's weekly ride series page lists Thursday Fun Rides as an ongoing regular series: 'Road rides designed for less experienced riders or anyone who wants a less challenging ride. Most rides are under 20 miles. Four regular routes: two in Prescott Valley and two in Chino Valley' (fetched Nov 9, 2026). The club is actively posting many Meetup events this week.",
+    "sources": ["https://www.bikeprescott.org/weekly-ride-series", "https://www.meetup.com/bike-prescott-meetup/events/ical/"]
+  },
+  {
+    "slug": "scottsdale-az-phoenix-hiking-biking-group-tuesday-night-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "The group's Meetup ICS feed lists the Tuesday Night Bike Ride from RT O'Sullivan's on Nov 10, 17, 24 and Dec 1 and 8, 2026, at 6:45 PM — 'Ready to pedal at 6:45PM. Biking the Scottsdale Green Belt to Tempe Town Lake' (fetched Nov 9, 2026). The ride moved from 7:15 pm to 6:45 pm.",
+    "sources": [
+      "https://www.meetup.com/phoenix-hiking-biking-and-everythinging-group/events/ical/",
+      "https://www.meetup.com/phoenix-hiking-biking-and-everythinging-group/events/317127213/"
+    ],
+    "changes": {
+      "time_local": "6:45 pm",
+      "start_hhmm": "18:45",
+      "schedule": "Every Tuesday, 6:45 to 8:45 pm, from R.T. O'Sullivan's Sports Grill. The Meetup series runs through December 2026.",
+      "refresh": {
+        "watch_url": "https://www.meetup.com/phoenix-hiking-biking-and-everythinging-group/events/ical/"
+      }
+    }
+  }
+]

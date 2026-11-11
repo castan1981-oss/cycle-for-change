@@ -1,0 +1,69 @@
+[
+  {
+    "slug": "houston-tx-nwcc-saturday-zube-park-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "NWCC's events list shows the Zube Park ride for Sat Nov 14 and Nov 21, 2026 at 8:00 am; the ride page confirms every Saturday rain or shine, 8:00 am October through March; the word 'cancelled' on the homepage refers to the unrelated 2027 Bluebonnet Express Bike Ride (fetched Nov 9, 2026).",
+    "sources": ["https://nwcc.bike/", "https://nwcc.bike/nwcc-cycling-club-events-list/", "https://nwcc.bike/road-cycling-nwcc-saturday-zube-park-ride/"]
+  },
+  {
+    "slug": "lakewood-ranch-fl-smbc-town-hall-wednesday",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-04",
+    "evidence": "SMBC's November calendar lists 'Lakewood Ranch Town Hall: Various Speed Groups' on Wed Nov 4, 11, 18 and 25, 2026 at 8:30–11:00 AM (fetched Nov 9, 2026).",
+    "sources": ["https://www.huntcal.com/cal/view/SMBC/SMBC?vm=r"]
+  },
+  {
+    "slug": "sarasota-fl-smbc-legacy-trail-casey-key-sunday",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-08",
+    "evidence": "SMBC's November calendar lists 'Legacy Trail and Casey Key' on Sun Nov 8, 22 and 29 at 8:30–11:00 AM; Nov 1 is cancelled for the club's Ride Across Florida pre-ride and Nov 15 for Cyclefest, but the series continues (fetched Nov 9, 2026).",
+    "sources": ["https://www.huntcal.com/cal/view/SMBC/SMBC?vm=r"]
+  },
+  {
+    "slug": "sarasota-fl-smbc-love-the-loop-saturday",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-07",
+    "evidence": "SMBC's November calendar lists 'Love the Loop Multi-speed Groups' on Sat Nov 7, 14, 21 and 28, 2026 at 8:30–11:30 AM from Old Miakka Church (fetched Nov 9, 2026).",
+    "sources": ["https://www.huntcal.com/cal/view/SMBC/SMBC?vm=r"]
+  },
+  {
+    "slug": "tomball-tx-nwcc-saturday-coffee-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "NWCC's events list shows the Saturday Coffee Ride for Sat Nov 14 and Nov 21, 2026 at 8:00 am; the ride page confirms year-round 8:00 AM start from Wildwood Elementary; the word 'cancelled' on the homepage refers to the unrelated 2027 Bluebonnet Express Bike Ride (fetched Nov 9, 2026).",
+    "sources": ["https://nwcc.bike/", "https://nwcc.bike/nwcc-cycling-club-events-list/"]
+  },
+  {
+    "slug": "woodbury-mn-freewheel-bike-monday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-09",
+    "note": "The Strava event (3480957573192654492) redirects to the club page and has been gone since Oct 5. Freewheel's website says rides are posted on Strava but lists no Woodbury Monday schedule. Strava club events require a login to see."
+  },
+  {
+    "slug": "tucson-az-gaba-tuesday-social-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "evidence": "GABA's Gatherist group page shows 'Tom's Ride to Redington Pass (C/2/34)' for Tue Nov 10, 2026 at 8:00 AM from Udall Dog Park, described as a social ride — confirming the Tuesday ride series continues; the previous watch URL pointed to the ended Oct 6 event (fetched Nov 9, 2026).",
+    "sources": ["https://gatherist.org/groups/greater-arizona-bicycle-association-gaba", "https://gatherist.org/events/1303"],
+    "changes": {
+      "refresh": {
+        "watch_url": "https://gatherist.org/groups/greater-arizona-bicycle-association-gaba"
+      }
+    }
+  },
+  {
+    "slug": "delaware-city-de-wcbc-castle-trail-night-rides",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-09",
+    "last_seen": "2026-11-04",
+    "evidence": "WCBC's November calendar lists 'Castle Trail Night Rides 2026' on Wed Nov 4, 11 and 18, 2026 at 6:00–7:30 PM; the word 'cancelled' near the ride's name in the schedule refers to 'Unionville Hills - CANCELED' on a different day (fetched Nov 9, 2026).",
+    "sources": ["https://www.huntcal.com/cal/view/WCBC/WCBC?vm=r"]
+  }
+]
