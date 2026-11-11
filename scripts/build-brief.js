@@ -19,7 +19,7 @@ const fs = require("fs");
 const path = require("path");
 const CHROME = require("./chrome.js");
 
-const V = 9;
+const V = 10;
 const ROOT = path.resolve(__dirname, "..");
 const OUT = path.join(ROOT, "cfc-site", "brief", "index.html");
 

@@ -6,9 +6,26 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:houston-tx-nwcc-sunday-starbucks-ride@cycleforchange.org
 DTSTAMP:20261001T000000Z
-DTSTART;TZID=America/Chicago:20261108T080000
-DTEND;TZID=America/Chicago:20261108T100000
+DTSTART;TZID=America/Chicago:20261115T080000
+DTEND;TZID=America/Chicago:20261115T100000
 RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270401T045959Z
+SUMMARY:Sunday Starbucks Ride (NWCC\, No Drop) — Houston\, TX
+LOCATION:Starbucks\, Vintage Park\, 10805 Louetta Rd\, Houston\, TX 77070
+DESCRIPTION:Pace: Easy\, Zone 2. Routes of 21\, 32 or 42 miles; splits in
+ to speed groups if the turnout is big.\nNo-drop.\nSchedule: Every Sunday
+ \, 8:00 am Oct-Mar\, 7:30 am Apr-Sep\, from the Starbucks at Vintage Par
+ k (10805 Louetta Rd).\nConfirm with the host before you go.\nhttps://cyc
+ leforchange.org/rides/houston-tx-nwcc-sunday-starbucks-ride/
+URL:https://cycleforchange.org/rides/houston-tx-nwcc-sunday-starbucks-rid
+ e/
+END:VEVENT
+BEGIN:VEVENT
+UID:houston-tx-nwcc-sunday-starbucks-ride-from-2027-04-01@cycleforchange.
+ org
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Chicago:20270404T073000
+DTEND;TZID=America/Chicago:20270404T093000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20270408T235959Z
 SUMMARY:Sunday Starbucks Ride (NWCC\, No Drop) — Houston\, TX
 LOCATION:Starbucks\, Vintage Park\, 10805 Louetta Rd\, Houston\, TX 77070
 DESCRIPTION:Pace: Easy\, Zone 2. Routes of 21\, 32 or 42 miles; splits in

@@ -84,9 +84,8 @@ const NOTE = (() => {
 const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const placeMonth = (where, ymd) => { const place = String(where || "").split(" · ")[0].trim(); const [y, m] = String(ymd || "").split("-").map(Number); return place && y && m ? `${place} · ${MON[m - 1]} ${y}` : String(where || ""); };
 
-// —— the mark. Nov 8, 2026 preview: the 2027 lettering from the ASSOS proof (scripts/mark-2027.js). Its letters are
-//    defs in the header's copy (swapped in below), so every copy on the page is the one drawing. The Lane Paint
-//    stencil (#lpC …, scripts/chrome.js) stays on every other page until Robert says roll it out. ——
+// —— the mark: the lowercase "cycle for" and its plate (scripts/mark-2027.js; Nov 8, 2026, sitewide Nov 11). Its
+//    paths are defs in the header's copy (scripts/chrome.js), so every copy on the page is the one drawing. ——
 const NEW_MARK = require("./mark-2027.js");
 // one line, with the plate (the logo as the header draws it)
 const MARK_LINE = (cls) => NEW_MARK.LINE(cls, false);
@@ -483,15 +482,15 @@ const page = `<!doctype html>
   <meta property="og:url" content="https://cycleforchange.org/">
   <meta property="og:title" content="Cycle for Change — 10,000 miles in 2027, all on the bike">
   <meta property="og:description" content="Cycling changed my life. I ride 10,000 miles in 2027 and write every ride down. The money goes through the orgs’ own rides.">
-  <meta property="og:image" content="https://cycleforchange.org/og-cfc.png">
+  <meta property="og:image" content="${CHROME.OG_IMAGE}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cycle for Change — 10,000 miles in 2027, all on the bike">
   <meta name="twitter:description" content="Cycling changed my life. I ride 10,000 miles in 2027 and write every ride down.">
-  <meta name="twitter:image" content="https://cycleforchange.org/og-cfc.png">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/favicon-180.png">
+  <meta name="twitter:image" content="${CHROME.OG_IMAGE}">
+  <link rel="icon" href="/favicon.svg?v=${CHROME.ICON_V}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-180.png?v=${CHROME.ICON_V}">
   <meta name="theme-color" content="#141218">
   <script>document.documentElement.className+=" js"</script>
   ${CHROME.FONTS}
@@ -515,7 +514,7 @@ const page = `<!doctype html>
 </head>
 <body class="home">
 ${DEFS}
-${CHROME.HEADER.replace(CHROME.MARK, NEW_MARK.LINE("brand-mark", true)).replace('<header class="nav site-head" id="nav">', '<header class="nav site-head" id="nav" data-solid="false">').replace('<p class="tally-line">', '<p class="tally-line tally-line--home">')}
+${CHROME.HEADER.replace('<header class="nav site-head" id="nav">', '<header class="nav site-head" id="nav" data-solid="false">').replace('<p class="tally-line">', '<p class="tally-line tally-line--home">')}
 
 <main id="main">
 

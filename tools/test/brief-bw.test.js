@@ -30,7 +30,7 @@ test("the line stays inside its box, clear of the words, in both sizes", () => {
       assert.ok(x >= L.box.x - 0.01 && x <= L.box.x + L.box.w + 0.01, `${size}: x ${x}`);
       assert.ok(y >= L.box.y - 0.01 && y <= L.box.y + L.box.h + 0.01, `${size}: y ${y}`);
     }
-    assert.ok(L.box.y + L.box.h < L.logo.y, `${size}: the line ends above CYCLE FOR`);
+    assert.ok(L.box.y + L.box.h < L.logo.y, `${size}: the line ends above the mark`);
     assert.ok(L.box.x + L.box.w < L.side.x - L.side.size, `${size}: the line stays left of the side words`);
   }
 });
@@ -47,10 +47,22 @@ test("two ends get two dots; a loop gets one", () => {
   assert.equal(BW.layout(line(true), { ...BW.SIZES.post, ...words }).dots.length, 1);
 });
 
-test("with no lines and no foot, CYCLE FOR drops to the foot of the poster", () => {
+test("with no lines and no foot, the mark drops to the foot of the poster", () => {
   const L = BW.layout(line(), { ...BW.SIZES.post, title: "A ride" });
   assert.equal(L.foot, null);
   assert.equal(L.lines.length, 0);
   assert.ok(L.logo.y + L.logo.h <= L.bottom + 0.01);
   assert.ok(L.logo.y + L.logo.h > L.bottom - 60);
+});
+
+// Nov 11, 2026: the poster draws the mark from its own copy of the paths (a browser file can't require the generator's).
+// The two copies are one drawing.
+test("the poster's mark is scripts/mark-2027.js's drawing, path for path", () => {
+  const M = require("../../scripts/mark-2027.js");
+  const ds = (paths) => [...paths.matchAll(/ d="([^"]+)"/g)].map((m) => m[1]);
+  assert.deepEqual(BW.MARK.cycle, ds(M.CYCLE_PATHS));
+  assert.deepEqual(BW.MARK.for, ds(M.FOR_PATHS));
+  assert.equal(BW.MARK.plate, M.PLATE_D);
+  assert.match(M.LINE("x"), /viewBox="0 0 514 97"/);
+  assert.equal(BW.MARK.w, 514); assert.equal(BW.MARK.h, 97);
 });

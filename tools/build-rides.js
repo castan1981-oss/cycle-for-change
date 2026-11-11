@@ -62,7 +62,7 @@ const TODAY = /^\d{4}-\d{2}-\d{2}$/.test(argOf("--today") || "") ? argOf("--toda
 const NOW = argOf("--today") ? new Date(`${TODAY}T12:00:00Z`) : new Date();
 const WORLD_RADIUS_KM = 40;  // a world city hub covers rides within this radius
 const WORLD_HUB_MIN = 2;     // rides needed before a world city gets its own hub
-const OG_IMAGE = `${SITE}/og-cfc.png`;
+const OG_IMAGE = `${SITE}/og-cfc-2.png`;   // keep in step with scripts/chrome.js (tools/brand-files.py)
 // Oct 18, 2026 (growth audit): a free ride's Event carries an Offer at 0 so the rich result can say "Free".
 // Only when the host's own cost line starts with "free"; the currency follows the ride's country.
 const CURRENCY = { US: "USD", CA: "CAD", GB: "GBP", AU: "AUD", NZ: "NZD", MX: "MXN", JP: "JPY", SG: "SGD", AE: "AED", IE: "EUR", DE: "EUR", ES: "EUR", FR: "EUR", IT: "EUR", NL: "EUR", PT: "EUR", BE: "EUR", AT: "EUR", FI: "EUR" };
