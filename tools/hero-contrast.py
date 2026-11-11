@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Cycle for Change: is the homepage hero's type readable on every frame of its film? (Oct 27, 2026)
 
+Nov 11, 2026: the hero shows the film's first frame as a still (the opening took the film's place; CLAUDE.md §3), so
+frame one is the frame that matters. This still reads every frame of the film each picture was cut from, found from the
+picture's own file name, so the answer holds if the film ever plays again. The opening's tiles never sit under the words.
+
 The hero's words sit over Robert's film. A poster that passes says nothing about the frame two seconds later, so this
 checks every frame (10 a second) of both films at nine screen sizes, the way a phone or a laptop would draw them:
 
@@ -61,8 +65,11 @@ def layout():
       document.querySelectorAll('.nav-links a').forEach(a => { if (a.offsetParent) lines(a, 'nav', 'nav'); });
       const hi = document.querySelector('.hero-in'), cs = getComputedStyle(hi, '::before'), r = hi.getBoundingClientRect();
       return { boxes: L, before: { top: r.top + parseFloat(cs.top), bottom: r.bottom, left: r.left + parseFloat(cs.left), width: parseFloat(cs.width) },
-               wide: matchMedia(document.getElementById('heroFilm').getAttribute('data-wide-q')).matches,
-               films: { phone: document.getElementById('heroFilm').getAttribute('data-phone-mp4'), wide: document.getElementById('heroFilm').getAttribute('data-wide-mp4') } };
+               // Nov 11, 2026: the page has no <video> any more (the opening; CLAUDE.md §3). The picture is each film's first
+               // frame, so the films are found from the picture's own files (/film/hero-phone-8.jpg -> hero-phone-8.mp4)
+               wide: matchMedia(document.querySelector('.hero-poster source[media]').media).matches,
+               films: { phone: document.querySelector('.hero-poster img').getAttribute('src').replace(/\.\w+$/, '.mp4'),
+                        wide: document.querySelector('.hero-poster source[media]').getAttribute('srcset').replace(/\.\w+$/, '.mp4') } };
     }"""
     with sync_playwright() as p:
         b = p.chromium.launch()

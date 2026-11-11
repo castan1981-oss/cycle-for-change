@@ -5,7 +5,8 @@
 
    Writes cfc-site/index.html from the shared chrome (header, menu, footer, the Ride with me bar) plus the page, in this
    order (Cadence's final notes, Oct 27, 2026: the rooms alternate light and dark, and the help lines come up sooner):
-     1  #top    the film, full screen (tools/hero-film.py): the mark, who and what, one primary (Ride with me), two quiet links
+     1  #top    the picture, full screen, after the opening (data/hero-open.json, tools/hero-open.py): the mark, who and what,
+                one primary (Ride with me), the quiet links
      2  strip   the numbers on a lane: training miles (live), group rides, events
      3  #why    how this works (#how), then the story in his words and his photographs
      4  #road   10,000 (said once, big), the last rides from Strava (the log)
@@ -22,7 +23,8 @@
      node scripts/build-home.js
    Styles: /chrome.css (the frame and the system, shared with every page) then /home.css (this page, in
    @layer section, and the frame's homepage states unlayered at its foot). Behaviour: /home.js. Both carry
-   CSS_V (scripts/chrome.js). Numbers in the markup are the fallback until the Strava feed answers. */
+   CSS_V (scripts/chrome.js), plus HOME_REV while a homepage change is in review. Numbers in the markup are the
+   fallback until the Strava feed answers. */
 "use strict";
 
 const fs = require("fs");
@@ -43,6 +45,12 @@ try { ({ seasonText } = require("../tools/lib/season.js")); } catch (e) {
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "cfc-site", "index.html");
 const V = CHROME.CSS_V;
+// The homepage's own two files (/home.css, /home.js) while a homepage change is in review: a step on top of CSS_V, so a
+// phone that has already opened the preview never pairs the new page with the hour-old sheet it cached. Every other
+// stylesheet link keeps CSS_V. When the change ships: bump CSS_V (scripts/chrome.js), regenerate everything in
+// CLAUDE.md §2's order, and set this back to 0.
+const HOME_REV = 1;
+const HV = HOME_REV ? `${V}.${HOME_REV}` : V;
 const esc = (t) => String(t == null ? "" : t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const read = (rel) => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, rel), "utf8")); } catch (e) { return null; } };
 
@@ -109,24 +117,67 @@ const DEFS = `<svg aria-hidden="true" focusable="false" style="position:absolute
   </defs>
 </svg>`;
 
-// —— 1. the hero: the film, the mark, who and what, one primary ——
-// the two films carry their own numbers (tools/hero-film.py --n / --wide-n); bump the one that was recut
+// —— 1. the hero: the opening, then the picture; the mark, who and what, one primary ——
+// The picture is the first frame of each hero film (tools/hero-film.py numbers them; bump the one that was recut). Since
+// the opening (Nov 11, 2026) the page shows the frame and never loads the film: nothing on the first screen loops, so
+// nothing needs a pause button (CLAUDE.md §3). The films stay in cfc-site/film/.
 const FILM = {
-  phone: { mp4: "/film/hero-phone-8.mp4", webm: "/film/hero-phone-8.webm", poster: "/film/hero-phone-8", w: 608, h: 1080 },
-  wide: { mp4: "/film/hero-wide-9.mp4", webm: "/film/hero-wide-9.webm", poster: "/film/hero-wide-9", w: 1620, h: 960 },
+  phone: { poster: "/film/hero-phone-8", w: 608, h: 1080 },
+  wide: { poster: "/film/hero-wide-9", w: 1620, h: 960 },
 };
-// the two-panel film on a landscape screen at 760 and up; the one-frame film on phones and portrait tablets
+// the two-panel picture on a landscape screen at 760 and up; the one-frame picture on phones and portrait tablets
 const WIDE_Q = "(min-width: 760px) and (min-aspect-ratio: 1/1)";
 const PHONE_Q = "(max-width: 759px), (max-aspect-ratio: 1/1)";
+
+// —— the opening (Nov 11, 2026; data/hero-open.json, tools/hero-open.py) ——
+// Robert sent a reel (tiles of his rides flicking through on black, the count running up on a pink card) and asked for
+// "something like this" on the homepage: "I don't want any kind of play buttons. I want it to look super clean, not like
+// a YouTube or a video. I want it to be blended in with the above the fold hero." So it isn't a film: his photos are
+// drawn by the page as tiles on the hero's own tar, the number is the page's live count, and the hero's picture cuts in
+// when it lands. Start to finish it runs under five seconds and never repeats, which is what lets the Pause button go
+// (WCAG 2.2.2 asks for one only when movement runs longer than five seconds). The words are on screen and tappable the
+// whole time. The inline script in <head> decides before the first paint whether it runs (never under reduced motion,
+// Save-Data or a slow connection, never on a phone screen too short to have room above the mark, never on a link to a
+// section, once a visit unless the page is reloaded) and starts fetching the tiles; /home.js runs it. If the tiles
+// aren't in and the opening under way two seconds after that script ran, it gives up, stops the fetches and the page is
+// simply the hero: a slow connection never waits on a dark screen. The same without the script at all.
+const OPEN = read("data/hero-open.json");
+const openSrc = (t) => `/img/home/open/${t.id}-${OPEN.n}.webp`;
+// where a tile goes (data/hero-open.json): on a phone the strip above the mark (a box in percent of it) or the side, the
+// room to the right of the mark (the tile fills its width, as tall as the room or k times its width); on a wide screen a box in percent
+// of the stage to the right of the words
+const openWide = (t) => `--X:${t.wide.box[0]}%;--Y:${t.wide.box[1]}%;--W:${t.wide.box[2]}%;--H:${t.wide.box[3]}%`;
+const openPhone = (t) => (t.phone.zone === "side" ? `--k:${t.phone.k}` : `--x:${t.phone.box[0]}%;--y:${t.phone.box[1]}%;--w:${t.phone.box[2]}%;--h:${t.phone.box[3]}%`);
+const openPos = (t) => `--p:${t.phone.pos};--P:${t.wide.pos}`;
+const openTile = (t) => `<img class="ho-t${t.phone.zone === "side" ? " ho-t--side" : ""}" alt="" data-src="${openSrc(t)}" data-in="${t.in}" data-out="${t.out}" style="${openPhone(t)};${openWide(t)};${openPos(t)}">`;
+const OPEN_COVER = OPEN ? `\n    <div class="hero-open" aria-hidden="true"></div>` : "";
+// the last beat is his miles card: the photo, then the plate with the page's count. On a phone too short for both in the
+// strip, the plate takes the strip and the photo goes to the side (the second <img>, the same file).
+const OPEN_STAGE = OPEN ? `
+  <div class="wrap ho-wrap" aria-hidden="true">
+    <div class="ho-stage" id="heroOpen" data-end="${OPEN.end}" data-count="${OPEN.count.join(" ")}">
+${OPEN.tiles.map((t) => `      ${openTile(t)}`).join("\n")}
+      <div class="ho-card" data-in="${OPEN.card.in}" style="${openPhone(OPEN.card)};${openWide(OPEN.card)}">
+        <img class="ho-card-ph" alt="" data-src="${openSrc(OPEN.card)}" style="${openPos(OPEN.card)}">
+        <p class="ho-card-pl"><b class="ho-n num" id="heroOpenN"></b><span class="ho-l" data-in="${OPEN.card.label}">${seasonText("training miles since June 1.", "miles in 2027.")}</span></p>
+      </div>
+      <img class="ho-t ho-t--side ho-t--shadow" alt="" data-src="${openSrc(OPEN.card)}" data-in="${OPEN.card.in}" style="--p:${OPEN.card.phone.side.pos}">
+    </div>
+  </div>` : "";
+// the <head>'s one inline script: the js class, then the opening's go / no-go and its tiles
+const HEAD_JS = OPEN
+  ? `<script>(function(d,c){d.className+=" js";try{var n=((performance.getEntriesByType&&performance.getEntriesByType("navigation")[0])||{}).type,seen=0;try{seen=sessionStorage.getItem("cfc-open")==="1"}catch(e){}if(matchMedia("(prefers-reduced-motion: reduce)").matches||c.saveData||/(^|-)2g$|^3g$/.test(String(c.effectiveType||""))||(innerHeight>0&&innerHeight<(innerWidth<760?650:480))||(location.hash&&location.hash!=="#top")||n==="back_forward"||(seen&&n!=="reload"))return;d.className+=" hero-opening";window.cfcOpen=${JSON.stringify(OPEN.tiles.concat([OPEN.card]).map(openSrc))}.map(function(u){var i=new Image;i.src=u;return i});setTimeout(function(){if(!window.cfcOpenGo){d.classList.remove("hero-opening");(window.cfcOpen||[]).forEach(function(i){i.src=""});window.cfcOpen=null}},2000)}catch(e){d.className=d.className.replace(" hero-opening","")}})(document.documentElement,navigator.connection||{})</script>`
+  : `<script>document.documentElement.className+=" js"</script>`;
+
 const heroRide = `<a class="hero-ride" id="heroRide" href="${esc(RIDE_HREF)}"${NR ? " data-ride-next" : ""}>${NR ? `<span class="ridebar-d">${esc(NR.date)}</span>` : ""}<span class="hero-ride-t"><span class="finder-t">Ride with me</span><span class="finder-s">${NR ? `${esc(NR.name)}, ${esc(NR.where)}` : "The rides I&rsquo;m doing in 2027"}</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>`;
-const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools/hero-film.py): one frame on a phone, two panels on a wide
+const HERO = `<!-- —— 1. the hero. Robert's own picture, car-free (the first frame of his film, tools/hero-film.py): one frame on a phone, two panels on a wide
      screen (the words sit inside the wide one, the gutter clear of the nav). One primary and the quiet links: Find a group ride, Read the last ride
      when there is one (his newest write-up, never the riding page; CLAUDE.md §3), and Give to my Center Ride Out (Oct 30, 2026: the Instagram
-     bio lands here). The poster is the film's first frame and the page's largest paint; /home.js
-     starts the film after load, never under reduced motion or Save-Data, and the button always stops it. Over it only the
-     stencil and one caption (Robert and Cadence, Oct 27, 2026: "10,000 miles. One year. All on the bike."); his sentence
-     moved to the story, #why. —— -->
-<section class="hero" id="top" aria-labelledby="hero-h" data-film="off">
+     bio lands here). The picture is the page's largest paint. Over it only the mark and one caption (Robert and Cadence, Oct 27, 2026:
+     "10,000 miles. One year. All on the bike."); his sentence moved to the story, #why.
+     The opening (Nov 11, 2026): on arrival his photos flick through as tiles on the hero's own ground, the count runs up, and this
+     picture cuts in. Under five seconds, once, nothing to pause, no button; /home.js runs it and takes its markup away when it ends. —— -->
+<section class="hero" id="top" aria-labelledby="hero-h">
   <div class="hero-media">
     <picture class="hero-poster">
       <source media="${WIDE_Q}" type="image/avif" srcset="${FILM.wide.poster}.avif">
@@ -135,11 +186,9 @@ const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools
       <source type="image/avif" srcset="${FILM.phone.poster}.avif">
       <source type="image/webp" srcset="${FILM.phone.poster}.webp">
       <img src="${FILM.phone.poster}.jpg" width="${FILM.phone.w}" height="${FILM.phone.h}" alt="Robert riding at the camera in a yellow helmet and a pink print jersey, railroad tracks behind him." fetchpriority="high">
-    </picture>
-    <video class="hero-film" id="heroFilm" muted loop playsinline disablepictureinpicture preload="none" aria-hidden="true" tabindex="-1"
-      data-phone-mp4="${FILM.phone.mp4}" data-phone-webm="${FILM.phone.webm}" data-wide-mp4="${FILM.wide.mp4}" data-wide-webm="${FILM.wide.webm}" data-wide-q="${WIDE_Q}"></video>
+    </picture>${OPEN_COVER}
     <div class="hero-scrim" aria-hidden="true"></div>
-  </div>
+  </div>${OPEN_STAGE}
   <div class="wrap hero-in">
     <h1 class="hero-h" id="hero-h">${MARK_LINE("hero-mark hero-mark--line", false)}${MARK_STACK("hero-mark hero-mark--stack")}<span class="sr">Cycle for Change</span></h1>
     <p class="hero-cap"><span class="nowrap">10,000 miles.</span> <span class="nowrap">One year.</span> <span class="nowrap">All on the bike.</span></p>
@@ -148,7 +197,6 @@ const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools
       <p class="hero-links"><a class="link link--bone" href="/rides/">Find a group ride</a>${NOTE ? `<a class="link link--bone" href="${esc(NOTE.href)}">Read the last ride</a>` : ""}<a class="link link--bone" href="${CRO_GIVE}" target="_blank" rel="noopener noreferrer">Give to my Center Ride Out</a></p>
     </div>
   </div>
-  <button class="hero-pause" id="heroPause" type="button" hidden><svg class="hp-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg><svg class="hp-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><span class="hp-label">Pause the film</span></button>
 </section>
 `;
 
@@ -492,12 +540,12 @@ const page = `<!doctype html>
   <link rel="icon" href="/favicon.svg?v=${CHROME.ICON_V}" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png?v=${CHROME.ICON_V}">
   <meta name="theme-color" content="#141218">
-  <script>document.documentElement.className+=" js"</script>
+  ${HEAD_JS}
   ${CHROME.FONTS}
   <link rel="preload" as="image" type="image/avif" imagesrcset="${FILM.phone.poster}.avif" media="${PHONE_Q}" fetchpriority="high">
   <link rel="preload" as="image" type="image/avif" imagesrcset="${FILM.wide.poster}.avif" media="${WIDE_Q}" fetchpriority="high">
   <link rel="stylesheet" href="/chrome.css?v=${V}">
-  <link rel="stylesheet" href="/home.css?v=${V}">
+  <link rel="stylesheet" href="/home.css?v=${HV}">
 
   <script type="application/ld+json">
   {
@@ -531,7 +579,7 @@ ${SIGN}
 
 ${CHROME.FOOTER.replace(CHROME.CHROME_JS, "")}
 
-<script src="/home.js?v=${V}" defer></script>
+<script src="/home.js?v=${HV}" defer></script>
 </body>
 </html>
 `;

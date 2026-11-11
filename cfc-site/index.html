@@ -24,12 +24,12 @@
   <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png?v=2">
   <meta name="theme-color" content="#141218">
-  <script>document.documentElement.className+=" js"</script>
+  <script>(function(d,c){d.className+=" js";try{var n=((performance.getEntriesByType&&performance.getEntriesByType("navigation")[0])||{}).type,seen=0;try{seen=sessionStorage.getItem("cfc-open")==="1"}catch(e){}if(matchMedia("(prefers-reduced-motion: reduce)").matches||c.saveData||/(^|-)2g$|^3g$/.test(String(c.effectiveType||""))||(innerHeight>0&&innerHeight<(innerWidth<760?650:480))||(location.hash&&location.hash!=="#top")||n==="back_forward"||(seen&&n!=="reload"))return;d.className+=" hero-opening";window.cfcOpen=["/img/home/open/grin-1.webp","/img/home/open/road-1.webp","/img/home/open/canal-1.webp","/img/home/open/wall-1.webp","/img/home/open/clouds-1.webp","/img/home/open/pines-1.webp","/img/home/open/bars-1.webp","/img/home/open/bike-1.webp","/img/home/open/riders-1.webp","/img/home/open/dusk-1.webp","/img/home/open/shadow-1.webp"].map(function(u){var i=new Image;i.src=u;return i});setTimeout(function(){if(!window.cfcOpenGo){d.classList.remove("hero-opening");(window.cfcOpen||[]).forEach(function(i){i.src=""});window.cfcOpen=null}},2000)}catch(e){d.className=d.className.replace(" hero-opening","")}})(document.documentElement,navigator.connection||{})</script>
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/avif" imagesrcset="/film/hero-phone-8.avif" media="(max-width: 759px), (max-aspect-ratio: 1/1)" fetchpriority="high">
   <link rel="preload" as="image" type="image/avif" imagesrcset="/film/hero-wide-9.avif" media="(min-width: 760px) and (min-aspect-ratio: 1/1)" fetchpriority="high">
   <link rel="stylesheet" href="/chrome.css?v=62">
-  <link rel="stylesheet" href="/home.css?v=62">
+  <link rel="stylesheet" href="/home.css?v=62.1">
 
   <script type="application/ld+json">
   {
@@ -102,14 +102,14 @@
 
 <main id="main">
 
-<!-- —— 1. the film. Robert's own footage, cut car-free (tools/hero-film.py): one frame on a phone, two panels on a wide
+<!-- —— 1. the hero. Robert's own picture, car-free (the first frame of his film, tools/hero-film.py): one frame on a phone, two panels on a wide
      screen (the words sit inside the wide one, the gutter clear of the nav). One primary and the quiet links: Find a group ride, Read the last ride
      when there is one (his newest write-up, never the riding page; CLAUDE.md §3), and Give to my Center Ride Out (Oct 30, 2026: the Instagram
-     bio lands here). The poster is the film's first frame and the page's largest paint; /home.js
-     starts the film after load, never under reduced motion or Save-Data, and the button always stops it. Over it only the
-     stencil and one caption (Robert and Cadence, Oct 27, 2026: "10,000 miles. One year. All on the bike."); his sentence
-     moved to the story, #why. —— -->
-<section class="hero" id="top" aria-labelledby="hero-h" data-film="off">
+     bio lands here). The picture is the page's largest paint. Over it only the mark and one caption (Robert and Cadence, Oct 27, 2026:
+     "10,000 miles. One year. All on the bike."); his sentence moved to the story, #why.
+     The opening (Nov 11, 2026): on arrival his photos flick through as tiles on the hero's own ground, the count runs up, and this
+     picture cuts in. Under five seconds, once, nothing to pause, no button; /home.js runs it and takes its markup away when it ends. —— -->
+<section class="hero" id="top" aria-labelledby="hero-h">
   <div class="hero-media">
     <picture class="hero-poster">
       <source media="(min-width: 760px) and (min-aspect-ratio: 1/1)" type="image/avif" srcset="/film/hero-wide-9.avif">
@@ -119,9 +119,27 @@
       <source type="image/webp" srcset="/film/hero-phone-8.webp">
       <img src="/film/hero-phone-8.jpg" width="608" height="1080" alt="Robert riding at the camera in a yellow helmet and a pink print jersey, railroad tracks behind him." fetchpriority="high">
     </picture>
-    <video class="hero-film" id="heroFilm" muted loop playsinline disablepictureinpicture preload="none" aria-hidden="true" tabindex="-1"
-      data-phone-mp4="/film/hero-phone-8.mp4" data-phone-webm="/film/hero-phone-8.webm" data-wide-mp4="/film/hero-wide-9.mp4" data-wide-webm="/film/hero-wide-9.webm" data-wide-q="(min-width: 760px) and (min-aspect-ratio: 1/1)"></video>
+    <div class="hero-open" aria-hidden="true"></div>
     <div class="hero-scrim" aria-hidden="true"></div>
+  </div>
+  <div class="wrap ho-wrap" aria-hidden="true">
+    <div class="ho-stage" id="heroOpen" data-end="4.6" data-count="2.62 3.62">
+      <img class="ho-t ho-t--side" alt="" data-src="/img/home/open/grin-1.webp" data-in="0" data-out="0.44" style="--k:1.7;--X:0%;--Y:14%;--W:100%;--H:52%;--p:70% 46%;--P:62% 60%">
+      <img class="ho-t" alt="" data-src="/img/home/open/road-1.webp" data-in="0.44" data-out="0.86" style="--x:0%;--y:0%;--w:100%;--h:100%;--X:16%;--Y:44%;--W:84%;--H:28%;--p:50% 46%;--P:50% 50%">
+      <img class="ho-t ho-t--side" alt="" data-src="/img/home/open/canal-1.webp" data-in="0.86" data-out="1.3" style="--k:1.7;--X:0%;--Y:10%;--W:70%;--H:50%;--p:46% 72%;--P:50% 70%">
+      <img class="ho-t" alt="" data-src="/img/home/open/wall-1.webp" data-in="1.3" data-out="1.72" style="--x:38%;--y:0%;--w:62%;--h:100%;--X:30%;--Y:6%;--W:70%;--H:60%;--p:50% 66%;--P:50% 62%">
+      <img class="ho-t ho-t--side" alt="" data-src="/img/home/open/clouds-1.webp" data-in="1.72" data-out="2.14" style="--k:1.25;--X:0%;--Y:34%;--W:100%;--H:40%;--p:50% 46%;--P:50% 30%">
+      <img class="ho-t" alt="" data-src="/img/home/open/pines-1.webp" data-in="2.14" data-out="2.62" style="--x:0%;--y:0%;--w:18.4%;--h:100%;--X:0%;--Y:30%;--W:31%;--H:22%;--p:50% 60%;--P:50% 60%">
+      <img class="ho-t" alt="" data-src="/img/home/open/bars-1.webp" data-in="2.2" data-out="2.62" style="--x:20.4%;--y:0%;--w:18.4%;--h:100%;--X:34.5%;--Y:30%;--W:31%;--H:22%;--p:50% 35%;--P:50% 35%">
+      <img class="ho-t" alt="" data-src="/img/home/open/bike-1.webp" data-in="2.26" data-out="2.62" style="--x:40.8%;--y:0%;--w:18.4%;--h:100%;--X:69%;--Y:30%;--W:31%;--H:22%;--p:40% 50%;--P:45% 50%">
+      <img class="ho-t" alt="" data-src="/img/home/open/riders-1.webp" data-in="2.32" data-out="2.62" style="--x:61.2%;--y:0%;--w:18.4%;--h:100%;--X:17%;--Y:54%;--W:31%;--H:22%;--p:60% 45%;--P:60% 45%">
+      <img class="ho-t" alt="" data-src="/img/home/open/dusk-1.webp" data-in="2.38" data-out="2.62" style="--x:81.6%;--y:0%;--w:18.4%;--h:100%;--X:51.5%;--Y:54%;--W:31%;--H:22%;--p:50% 35%;--P:50% 35%">
+      <div class="ho-card" data-in="2.62" style="--x:0%;--y:0%;--w:100%;--h:100%;--X:0%;--Y:0%;--W:100%;--H:100%">
+        <img class="ho-card-ph" alt="" data-src="/img/home/open/shadow-1.webp" style="--p:50% 72%;--P:50% 62%">
+        <p class="ho-card-pl"><b class="ho-n num" id="heroOpenN"></b><span class="ho-l" data-in="3.62"><span data-season="training">training miles since June 1.</span><span data-season="2027" hidden>miles in 2027.</span></span></p>
+      </div>
+      <img class="ho-t ho-t--side ho-t--shadow" alt="" data-src="/img/home/open/shadow-1.webp" data-in="2.62" style="--p:50% 60%">
+    </div>
   </div>
   <div class="wrap hero-in">
     <h1 class="hero-h" id="hero-h"><svg class="hero-mark hero-mark--line" viewBox="0 0 514 97" aria-hidden="true" focusable="false"><g class="mark-word" fill="currentColor"><use href="#cfCycle"/><use href="#cfFor"/></g><use href="#cfPlate"/></svg><svg class="hero-mark hero-mark--stack" viewBox="0 0 252 196" aria-hidden="true" focusable="false"><g class="mark-word" fill="currentColor"><use href="#cfCycle"/><use href="#cfFor" transform="translate(-261.7 112)"/></g><use href="#cfPlate" transform="translate(-261.7 112)"/></svg><span class="sr">Cycle for Change</span></h1>
@@ -131,7 +149,6 @@
       <p class="hero-links"><a class="link link--bone" href="/rides/">Find a group ride</a><a class="link link--bone" href="/rides/scottsdale-az-scottsdale-cycling-saturday-ride/#robert">Read the last ride</a><a class="link link--bone" href="https://give.lalgbtcenter.org/fundraiser/7694885" target="_blank" rel="noopener noreferrer">Give to my Center Ride Out</a></p>
     </div>
   </div>
-  <button class="hero-pause" id="heroPause" type="button" hidden><svg class="hp-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg><svg class="hp-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><span class="hp-label">Pause the film</span></button>
 </section>
 
 <!-- —— 2. the numbers, on a lane. One number for the miles (since June 1); the 10,000 is said once, in #road, never next to it. —— -->
@@ -426,6 +443,6 @@
 </footer>
 
 
-<script src="/home.js?v=62" defer></script>
+<script src="/home.js?v=62.1" defer></script>
 </body>
 </html>

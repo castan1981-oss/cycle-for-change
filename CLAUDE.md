@@ -105,6 +105,7 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 | `node scripts/tally.js` | the baked tally on the homepage: reads `/api/strava` (the one place the site may read Strava), keeps `data/tally.json`, and rewrites every `[data-miles]`, the four "last rides" rows and the `#tallyData` JSON that `/home.js` paints first. build-home.js applies the copy; build-rides.js refreshes it live on every deploy. Never type the number. Tests: `tools/test/tally.test.js`. |
 | `python3 tools/road-film.py --src …` | the film under the 10,000 in `#road` (`cfc-site/film/road-film-N.*`, from his own footage, car-free; Oct 28, 2026) |
 | `python3 tools/hero-film.py` + `python3 tools/hero-contrast.py` | the homepage hero films (`cfc-site/film/hero-*-N.*`, from his own footage, car-free) and the check that the hero's type reads on every frame of them (§3, the editorial homepage) |
+| `python3 tools/hero-open.py` | the tiles of the homepage hero's opening (`cfc-site/img/home/open/<id>-N.webp`), from `data/hero-open.json`: each a plain resize of a registry photo's cleared copy in `img/ph/`. Then `node scripts/build-home.js`. Rules: `tools/test/hero-open.test.js` (§3, the opening) |
 | `scripts/mark-2027.js` | the mark (§3): the traced "cycle for" and its plate, as `LINE` / `STACK` / `WORD` / `CYCLE` / `FOR` for pages and `FILE()` for a file of its own. Required by chrome.js, build-home.js and build-about.js. Change the mark here and nowhere else, then regenerate (below) and run `python3 tools/brand-files.py`. |
 | `python3 tools/brand-files.py` | the files that carry the mark with no page around them: `cfc-site/favicon.svg`, `favicon-180.png`, `favicon-512.png` and the share card `og-cfc-N.png` (it writes `templates/og/cfc.html` too). A changed card gets a new number (`--n`) and `OG_IMAGE` moves in chrome.js and build-rides.js; a changed icon keeps its name and `ICON_V` in chrome.js goes up. |
 | `node scripts/build-about.js` | `cfc-site/about/index.html` from `data/about.json` (his words; noindex while a section is waiting). Wears the chrome. |
@@ -122,6 +123,10 @@ Bump it whenever a stylesheet or `/chrome.js` changes and run the regeneration a
 so a page must never pair an old `/chrome.css` with new section sheets. `netlify.toml`'s cache headers are untouched.
 Check after: no page links a bare `chrome.css"`. (`/ride/` keeps its own `ride.css?v=`; it and `/try/checkin/` are
 hand pages with no site chrome, so a change to the mark or the pink is made in them by hand.)
+**While a homepage-only change is in review** (Nov 11, 2026): `HOME_REV` in build-home.js puts a step on `/home.css` and
+`/home.js` alone (`?v=62.1`), so a phone that has opened the preview never pairs the new page with the sheet it cached an
+hour ago, and no other page is touched. The PR that ships it bumps `CSS_V`, regenerates everything in the order above
+and sets `HOME_REV` back to 0.
 
 ### Committed vs built on deploy
 - Committed: source, data and every generator's output (homepage, events, towns, calendar, and the
@@ -329,6 +334,36 @@ homepage only; every other rule in this section still holds there and everywhere
   recut or change to the hero's type or scrim (exits 1 on a fail). Over the film the header is the site's solid bar on
   tar with a hairline, carrying only the menu (the nav links at ≥900); the mark and the header's Ride with me come back
   once the film has scrolled under it (the hero carries both, so nothing is said twice).
+- **The opening (Nov 11, 2026; staged as a PR, not live until Robert says).** Robert sent a reel he cut (tiles of his
+  rides flicking through on black, then the mile count running up on a pink card) and asked: "Could something like this go
+  on the home page. I don't want any kind of play buttons. I want it to look super clean, not like a YouTube or a video. I
+  want it to be blended in with the above the fold hero." The reel itself can't go on the site (two shots show other
+  riders' faces, it glitches, its type isn't Overpass, its card is the retired red, and its number is typed), so the
+  opening is the reel **made of the page**: on arrival his photos flick through as tiles on the hero's own tar, the count
+  runs up on a pink plate over the site's own words ("training miles since June 1."), and the hero's picture cuts in.
+  - **It is not a film.** No `<video>`, so no phone can put a play button on it. Tiles are `<img>`, drawn clean with a
+    hard edge: no fade, no grain, no glitch, no grade, nothing laid over them; cuts are cuts. Every tile is a registry
+    photo, read from its cleared copy (`data/hero-open.json` → `python3 tools/hero-open.py` → `img/home/open/`).
+  - **Under five seconds, once, and nothing on the first screen loops**, so there is nothing to pause and **the Pause
+    button is gone** (WCAG 2.2.2 asks for one only when movement runs longer than five seconds). No more than three
+    tiles change in a second (2.3.1). **This replaces "muted, inline, looped … with a Pause button always there" above:
+    the hero's picture is the film's first frame and the film is never loaded.** The films stay in `cfc-site/film/`. If
+    Robert wants the film moving again, it needs a stop control again (a word is enough; it doesn't have to be a disc).
+  - **The count is the page's own** (`feed.miles` in /home.js, the same tally the strip paints; `seasonText()` for the
+    words). Never typed, never a 0: with no tally the card is skipped. It is a beat of the opening, not furniture: the
+    training count still lives in the strip, said once.
+  - **The words never move and stay tappable.** The opening is `aria-hidden`; the hero under it is the page.
+  - **When it runs:** the `<head>`'s inline script decides before the first paint (`<html class="hero-opening">`) and
+    starts fetching the tiles; /home.js runs it and removes its markup at the end. Never under reduced motion,
+    Save-Data or a slow connection, on a link to a section (`/#road`), on a back/forward, or on a screen with no room
+    for tiles; once a visit unless the page is reloaded (`sessionStorage` `cfc-open`, named on `/privacy/`). If the
+    tiles aren't in within two seconds, a tile is broken, or the script never comes, the cover lifts by itself, the
+    fetches stop and the page is the hero: a slow connection never waits on a dark screen.
+  - **Where the tiles go.** A phone has two rooms: the strip between the header and the mark (about 100px tall in
+    Safari with its bars showing, so check **393×660 and 430×740** as well as the sizes below) and the side, to the right
+    of the mark down to the mark's foot. A wide screen has the room to the right of the words, from under the header to
+    the foot of the Ride with me tile; there the last beat is his card whole (photo over plate). No tile ever touches the
+    words. The studio's gates (critic, brand, access) have not been run on it yet; they come before it ships.
 - **Two textures, small:** a fine asphalt aggregate (`img/home/asphalt-2.webp`, a 2x tile, opacity .24) on the two dark
   rooms only (`#road` and `#sign`), never on a photo; one lane dash at the head of each of the strip's three numbers
   only (`img/home/dash-rose-2.svg`, a drawn shape, no filter; -2 is the pink, Nov 11, 2026) — pink as wet paint, lined up with what it marks. The
@@ -1326,3 +1361,7 @@ two exits; the shapes are on the plan canvas.
   (`og-cfc-2.png`, `tools/brand-files.py`). The plate is the pink #C2557F (it was Pantone 7419 C on the Nov 8 homepage
   preview), and the rose tokens moved to the same pink family at the luminance they had. The Lane Paint stencil is
   retired. The header fits a 320px phone (it ran 10px over before). `CSS_V` 62, `/brief/` `V` 10, `ICON_V` 2.
+- 2026-11-11 — The hero's opening (staged as a PR, not live): Robert's reel made of the page. His photos flick through as
+  tiles on the hero's ground, the page's own count runs up on a pink plate, the picture cuts in; under five seconds,
+  once. No `<video>` and no Pause button on the first screen: the hero film no longer plays, its first frame is the
+  picture (`data/hero-open.json`, `tools/hero-open.py`, `tools/test/hero-open.test.js`; `HOME_REV` 1 until it ships).

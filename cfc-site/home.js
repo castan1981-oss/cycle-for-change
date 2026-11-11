@@ -7,6 +7,7 @@
 
    Oct 26, 2026: the old page's dead code is gone (the chart, the waitlist form, the Instagram fetch nothing used,
    the hero film for a #heroVid that no longer existed, the phone tally bar). New: the hero film.
+   Nov 11, 2026: the hero film and its Pause button are gone; the first screen has the opening instead (below).
    Oct 27, 2026: #today's film has one control, the disc on the poster (the Play / Pause line under it is gone). */
 (function () {
   "use strict";
@@ -140,59 +141,85 @@
     if (t) cfcTrack("finder_click", { finder: /\/events\//.test(t.getAttribute("href") || "") ? "events" : "group_rides" });
   }, true);
 
-  /* —— the hero film (Oct 26, 2026). The poster is on screen first and is the page's largest paint. After the page has
-     loaded, the film for this screen's shape loads and plays muted, inline, on a loop — on phones too (Robert's
-     approved direction) — unless the reader asked for less motion, Save-Data is on or the connection is slow. The button always stops it
-     (WCAG 2.2.2); a stop is kept for the visit. Off screen it pauses. If anything fails, the still stays. —— */
+  /* —— the opening (Nov 11, 2026; data/hero-open.json, scripts/build-home.js). Robert's reel, made of the page: his
+     photos flick through as tiles on the hero's own ground, the count runs up on a pink plate, and the hero's picture
+     cuts in. It is not a film: there is no <video>, so no phone can put a play button on it. It runs once, ends inside
+     five seconds and never loops, so there is nothing to pause and no button (WCAG 2.2.2).
+     The <head> decided before the first paint whether it runs (<html class="hero-opening">: never under reduced motion,
+     Save-Data or a slow connection, never on a link to a section, once a visit unless the page is reloaded) and began
+     fetching the tiles. This shows each [data-in] element from its second to its [data-out], counts the number up to
+     the page's own tally, and at the end takes the class and the opening's markup away, which leaves the hero. If a
+     tile is broken, the tiles aren't in two seconds after the <head> asked for them (its timer), the tab is in the
+     background, or the screen has no room for tiles, it ends at once. —— */
   (function () {
-    var hero = document.querySelector(".hero"), v = $("heroFilm"), btn = $("heroPause");
-    if (!hero || !v || !btn || !v.canPlayType) return;
-    var label = btn.querySelector(".hp-label");
-    /* Save-Data, or a slow connection (2G, 3G): the still stays until the button asks for the film */
-    var conn = navigator.connection || {};
-    var saveData = !!conn.saveData || /(^|-)2g$|^3g$/.test(String(conn.effectiveType || ""));
-    var KEY = "cfc-film-off", stopped = false;
-    try { stopped = sessionStorage.getItem(KEY) === "1"; } catch (e) {}
-    var wideQ = v.getAttribute("data-wide-q"), shape = "";
-    function srcFor() {
-      var s = mq(wideQ) ? "wide" : "phone";
-      var mp4 = v.getAttribute("data-" + s + "-mp4"), webm = v.getAttribute("data-" + s + "-webm");
-      return { shape: s, src: v.canPlayType('video/mp4; codecs="avc1.640028"') ? mp4 : v.canPlayType('video/webm; codecs="vp9"') ? webm : "" };
+    var root = document.documentElement, stage = $("heroOpen"), over = false;
+    function end() {
+      if (over) return; over = true;
+      root.classList.remove("hero-opening");
+      /* tiles still on their way are let go, so a reader who never sees the opening doesn't pay for the rest of it */
+      (window.cfcOpen || []).forEach(function (im) { im.src = ""; });
+      if (stage) [].forEach.call(stage.querySelectorAll("img[src]"), function (im) { im.removeAttribute("src"); });
+      var wrap = stage && stage.parentNode, cover = document.querySelector(".hero-open");
+      if (wrap && wrap.parentNode) wrap.parentNode.removeChild(wrap);
+      if (cover && cover.parentNode) cover.parentNode.removeChild(cover);
+      window.cfcOpen = null;
     }
-    function paint() {
-      var on = !v.paused && hero.getAttribute("data-film") === "on";
-      /* the label says what the button does next ("Pause the film" / "Play the film"); no aria-pressed on top of it (VoiceOver read both) */
-      if (label) label.textContent = on ? "Pause the film" : "Play the film";
-      hero.setAttribute("data-playing", on ? "true" : "false");
-    }
-    function go() { var q = v.play(); if (q && q.catch) q.catch(function () { paint(); }); }
-    function load() {
-      var s = srcFor(); if (!s.src) return false;
-      if (s.shape === shape) return true;
-      shape = s.shape; v.src = s.src; v.preload = "auto"; v.load(); return true;
-    }
-    v.addEventListener("playing", function () { hero.setAttribute("data-film", "on"); paint(); });
-    v.addEventListener("pause", paint);
-    v.addEventListener("error", function () { hero.setAttribute("data-film", "off"); btn.hidden = true; }, true);
-    btn.addEventListener("click", function () {
-      if (v.paused) { stopped = false; try { sessionStorage.removeItem(KEY); } catch (e) {} if (load()) go(); }
-      else { stopped = true; try { sessionStorage.setItem(KEY, "1"); } catch (e) {} v.pause(); }
-      paint();
+    if (!stage || !root.classList.contains("hero-opening")) return;
+    if (!window.Promise || !window.requestAnimationFrame || !window.performance || document.hidden) return end();
+    var END = parseFloat(stage.getAttribute("data-end")) || 0;
+    var count = (stage.getAttribute("data-count") || "").split(" ").map(parseFloat);
+    var num = $("heroOpenN"), card = stage.querySelector(".ho-card");
+    var total = feed.miles > 0 ? Math.round(feed.miles) : 0;
+    /* no count to show (the page carries none): stop where the card would have come in. Never a 0. */
+    if (!total && card) END = Math.min(END, parseFloat(card.getAttribute("data-in")) || END);
+    var beats = [].map.call(stage.querySelectorAll("[data-in]"), function (el) {
+      var out = parseFloat(el.getAttribute("data-out"));
+      return { el: el, t0: parseFloat(el.getAttribute("data-in")) || 0, t1: isNaN(out) ? Infinity : out, on: false };
     });
-    var inView = true;
-    if ("IntersectionObserver" in window) new IntersectionObserver(function (es) {
-      inView = es[0].isIntersecting;
-      if (!inView) { if (!v.paused) v.pause(); }
-      else if (!stopped && v.src && hero.getAttribute("data-auto") === "true") go();
-    }, { threshold: 0.15 }).observe(hero);
-    /* a phone turned on its side gets the other film */
-    if (window.matchMedia) { var m = matchMedia(wideQ); var swap = function () { if (!v.src) return; var was = !v.paused; if (load() && was) go(); }; if (m.addEventListener) m.addEventListener("change", swap); else if (m.addListener) m.addListener(swap); }
-    btn.hidden = false;
-    paint();
-    if (reduce || saveData || stopped) return;          /* the still stays; the button plays it */
-    function start() { if (!load()) { btn.hidden = true; return; } hero.setAttribute("data-auto", "true"); if (inView) go(); }
-    if (document.readyState === "complete") setTimeout(start, 250);
-    else window.addEventListener("load", function () { setTimeout(start, 250); });
+    var imgs = [].slice.call(stage.querySelectorAll("img[data-src]"));
+    var ready = Promise.all(imgs.map(function (im) {
+      im.src = im.getAttribute("data-src");
+      if (im.decode) return im.decode();
+      return new Promise(function (ok, no) { if (im.complete && im.naturalWidth) return ok(); im.onload = ok; im.onerror = no; });
+    }));
+    ready.then(function () {
+      /* the <head>'s timer gave up, the tab went away, or there is no room for tiles on this screen (under 88px
+         above the mark on a phone, under 200px beside the words on a wide one, or a hero taller than the screen) */
+      var heroEl = document.querySelector(".hero");
+      if (over || !END || !root.classList.contains("hero-opening") || document.hidden || stage.clientHeight < 88 || stage.clientWidth < 200 ||
+          (heroEl && heroEl.offsetHeight > window.innerHeight + 80)) return end();
+      window.cfcOpenGo = true;
+      try { sessionStorage.setItem("cfc-open", "1"); } catch (e) {}
+      /* a phone's second room for tiles: to the right of the mark, from the top of the strip to the foot of the mark
+         (home.css, .ho-t--side). Measured once, here, in px from the stage's own box. */
+      var mark = null, sr = stage.getBoundingClientRect();
+      [].forEach.call(document.querySelectorAll(".hero-mark"), function (m) { if (m.getBoundingClientRect().width) mark = m; });
+      if (mark) {
+        var mr = mark.getBoundingClientRect();
+        stage.style.setProperty("--side-l", Math.round(mr.right - sr.left + 24) + "px");
+        stage.style.setProperty("--side-w", Math.max(0, Math.round(sr.right - mr.right - 24)) + "px");
+        stage.style.setProperty("--side-d", Math.max(0, Math.round(mr.bottom - sr.bottom)) + "px");
+        stage.style.setProperty("--mark-h", Math.round(mr.height) + "px");
+      }
+      var t0 = performance.now(), shown = -1;
+      setTimeout(end, (END + 1) * 1000);          /* a tab put in the background stops drawing frames: this still ends it */
+      (function frame(now) {
+        if (over) return;
+        var t = (now - t0) / 1000;
+        if (t >= END) return end();
+        for (var i = 0; i < beats.length; i++) {
+          var b = beats[i], on = t >= b.t0 && t < b.t1;
+          if (on !== b.on) { b.on = on; if (on) b.el.setAttribute("data-on", ""); else b.el.removeAttribute("data-on"); }
+        }
+        if (num && total && t >= count[0]) {
+          /* the reel's count: it starts a third of the way up and eases onto the real number */
+          var p = Math.min(1, (t - count[0]) / Math.max(.01, count[1] - count[0]));
+          var n = Math.round(total * (.36 + .64 * (1 - Math.pow(1 - p, 3))));
+          if (n !== shown) { shown = n; num.textContent = fmt(n); }
+        }
+        requestAnimationFrame(frame);
+      })(t0);
+    }, end);
   })();
 
   /* —— today's film (#today): a tap on phones, on screen on desktop. One control, the disc on the poster (Oct 27, 2026):
