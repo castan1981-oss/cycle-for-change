@@ -26,6 +26,14 @@ test("the weekly carousel tool draws the mark from the one drawing too", () => {
   assert.ok(/scripts\/mark-2027\.js/.test(s) && s.includes(`PLATE = "${MARK.PINK}"`), "the mark and its pink come from scripts/mark-2027.js");
 });
 
+test("the weekly carousel runs on what the Monday task already has", () => {
+  const s = fs.readFileSync(path.join(ROOT, "tools/week-kit/make.py"), "utf8");
+  assert.ok(!/^\s*(import|from)\s+(scipy|rembg|cv2)\b/m.test(s), "make.py needs only Playwright, Pillow and numpy");
+  assert.ok(fs.existsSync(path.join(ROOT, "tools/week-kit/assets/print-robert-peace.png")), "Robert's print is committed (print.py makes it)");
+  for (const name of ["post-", "story-", "caption.txt", "left-off.txt"]) assert.ok(s.includes(name), `the Monday task reads ${name}`);
+  assert.ok(s.includes("cycleforchange.org/week"), "every slide ends on the link");
+});
+
 test("the kit's pinks are the site's", () => {
   const lib = fs.readFileSync(path.join(DIR, "lib.py"), "utf8");
   const css = fs.readFileSync(path.join(ROOT, "cfc-site/chrome.css"), "utf8");

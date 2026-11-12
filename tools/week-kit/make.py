@@ -1,4 +1,4 @@
-"""The weekly group-ride carousel: "Phoenix group rides this week" (Nov 3, 2026).
+"""The weekly group-ride carousel: "Phoenix group rides this week" (Nov 3, 2026; the poster look since Nov 11).
 
     python3 tools/week-kit/make.py                         # Monday to Sunday: this week on a Monday, else the next one
     python3 tools/week-kit/make.py --from 2026-11-11       # the seven days from that date
@@ -10,24 +10,28 @@ Monday to Sunday, the same seven days /week shows that morning. A ride the site'
 `doubt`: a red flag, ending words or no upcoming date on the host's page, the host's calendar not listing it for two
 weeks) stays off the post and goes in left-off.txt with the reason.
 
-Writes into tools/week-kit/.build/out/ (never committed): post-01..NN.jpg (1080 x 1350, one wall sliced, cover, a
-sheet per day, Saturday or any day over nine rides split "Early." / "Less early.", the end card), story-*.jpg
-(1080 x 1920: the week, then a frame per day, room for a link sticker), caption.txt, left-off.txt.
+Writes into tools/week-kit/.build/out/ (never committed): post-01..NN.jpg (1080 x 1350: the cover, a slide per day,
+Saturday or any day over nine rides split "Early." / "Less early.", the end card), story-*.jpg (1080 x 1920: the week,
+then a frame per day, room for a link sticker), caption.txt, left-off.txt.
 
 The rows are the page's rows: tools/week-kit/week.js runs tools/lib/week.js over the listed rides, the same code
 /rides/az/phoenix/this-week/ is built from, so the carousel and cycleforchange.org/week always agree (sorted by start,
-then name). The look is Left Field paste-up: poured concrete, pasted day sheets (no shadow, the joints show through),
-words on slapped strips, a halftone road print with the count overprinted in pink, a clean print of Robert taped on,
-the mark sprayed through a card on the end card. Crisp edges, no grain; Overpass only. Nov 11, 2026: the mark is
-cycle for and its pink plate, from scripts/mark-2027.js (it was the caps stencil), and the rose family is the site's
-pink family. The look itself is still the paste-up: Robert has a new one in review, and that switch is his call.
-Needs Playwright (Chromium), Pillow, numpy.
+then name).
+
+The look is the poster (Robert, Nov 9, 2026, sending SLC Fixed's November ride poster: "Can we use some of these
+elements for design"; Nov 11, asked whether to switch Monday's slides to it: "Can you just do it for me"). A crumpled
+teal paper ground with new creases on every slide, one big word across the top in rough marker capitals (drawn as
+strokes here, not a font), the one-liner on a paper strip, taped paper cards with a pink header band and rows with the
+name on the left and the time on the right, Robert as a one-color print (assets/print-robert-peace.png, made once by
+print.py), a checkered flag, and the mark (scripts/mark-2027.js) as a square badge. Overpass for every word that isn't
+hand-lettered; sentence case; caps only in the lettering. The paste-up wall it replaces is in git history.
+Needs Playwright (Chromium), Pillow, numpy. Nothing else: no model download, no scipy.
 """
 import argparse, subprocess
-import json, math, random, pathlib, base64, io, sys, html as H
+import json, math, random, pathlib, re, sys, html as H
 from datetime import datetime, timezone, timedelta
 import numpy as np
-from PIL import Image, ImageOps, ImageFilter, ImageDraw
+from PIL import Image
 from playwright.sync_api import sync_playwright
 
 HERE = pathlib.Path(__file__).resolve().parent
@@ -36,23 +40,20 @@ SITE = ROOT / "cfc-site"
 BUILD = HERE / ".build"
 OUT = BUILD / "out"
 CACHE = BUILD / "cache"
+ASSETS = HERE / "assets"
+W, PH, SH = 1080, 1350, 1920
 
-# ROSE is the pink a step down (the site's accent), ROSE_INK its ink, POWDER the lifted pink; PLATE is the mark's plate
-INK = "#1C1A22"; PLASTER = "#EFEDEA"; GUN = "#4A4E55"; ROSE = "#B1406C"; ROSE_INK = "#983359"; POWDER = "#E3ABC0"; PLATE = "#C2557F"
-PATINA = "#A9BDB8"; POOL = "#2C4F55"; CONCRETE = "#E1DFDB"
-WALL = "#BCB9B2"; JOINT = "#A3A099"; TIE = "#8E8B84"; WHITE = "#F8F7F4"; CORE = "#F4F1EA"; TAPE = "#E3D6B4"; KRAFT = "#C7AC84"
-SHADOW = "42,38,32"
+# the site's inks, the mark's pink, and the poster's own paper, teal and lettering pink (Nov 9, 2026)
+INK = "#1C1A22"; GUN = "#4A4E55"; PLATE = "#C2557F"
+PAPER = "#F4F2ED"; LETTER = "#F4AFC6"; TAPE = "rgba(232,222,196,.86)"; TEAL = (44, 104, 113)
 
-W, HH = 1080, 1350
 URL = "cycleforchange.org/week"
-SPAN = ["this week"]
-# the mark, from the one drawing
+
 MARK = json.loads(subprocess.run(["node", "scripts/mark-2027.js"], cwd=ROOT, capture_output=True, text=True, check=True).stdout)
-assert MARK["PINK"].upper() == PLATE
+assert MARK["PINK"].upper() == PLATE, "the plate is the mark's pink (scripts/mark-2027.js)"
 
 
 def esc(s):
-    import re
     s = str(s)
     s = re.sub(r"(?<=\w)'(?=\w)", "’", s)
     s = s.replace("'", "’")
@@ -63,33 +64,6 @@ def font_css():
     a = (SITE / "fonts" / "overpass-latin.woff2").as_uri(); b = (SITE / "fonts" / "overpass-latin-ext.woff2").as_uri()
     return (f'@font-face{{font-family:"Overpass";font-weight:100 900;src:url("{a}") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}}'
             f'@font-face{{font-family:"Overpass";font-weight:100 900;src:url("{b}") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+2113}}')
-
-
-CSS = """
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Overpass",system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-kerning:normal;font-variant-numeric:lining-nums;background:#000}
-.board{position:relative;overflow:hidden}
-.abs{position:absolute}
-.paper{width:100%;height:100%}
-.strip{display:inline-block;white-space:nowrap;line-height:1}
-.row{display:grid;grid-template-columns:var(--tc) 1fr;column-gap:22px;align-items:baseline;border-top:2px solid rgba(28,26,34,.16)}
-.row:first-child{border-top:0}
-.t{font-weight:800;color:#1C1A22;letter-spacing:-.01em;white-space:nowrap}
-.t small{font-weight:700;font-size:.66em;margin-left:.18em;color:#4A4E55}
-.n{font-weight:800;color:#1C1A22;letter-spacing:-.012em;white-space:nowrap;display:block;line-height:1.08}
-.l{font-weight:600;color:#4A4E55;display:block;margin-top:.3em;line-height:1.2;white-space:nowrap}
-"""
-
-FIT = """<script>
-document.fonts.load('800 40px Overpass').then(() => document.fonts.ready).then(() => {
-  for (const e of document.querySelectorAll('[data-fit]')) {
-    const w = +e.dataset.fit; let s = parseFloat(getComputedStyle(e).fontSize); const min = +(e.dataset.min || 8);
-    while (e.scrollWidth > w && s > min) { s -= 0.5; e.style.fontSize = s + 'px'; }
-    if (e.scrollWidth > w && e.dataset.wrap) { e.style.whiteSpace = 'normal'; e.style.maxWidth = w + 'px'; }
-  }
-  document.body.dataset.ready = '1';
-});
-</script>"""
 
 
 PHX = timezone(timedelta(hours=-7))
@@ -191,395 +165,414 @@ def load(start, days=7):
     return week
 
 
-# ---------- edges ----------
-def jag(rng, n=3, amp=2.2):
-    return [(rng.uniform(-amp, amp)) for _ in range(n)]
+# ---------------------------------------------------------------- the ground: crumpled paper, teal
+def gauss(a, sigma):
+    """A Gaussian blur in numpy (mirrored edges), so the tool needs nothing beyond numpy and Pillow."""
+    r = max(1, int(4 * sigma + .5))
+    k = np.exp(-(np.arange(-r, r + 1, dtype=np.float32) ** 2) / (2 * sigma * sigma)); k /= k.sum()
+    for ax in (0, 1):
+        n = a.shape[ax]
+        p = np.pad(a, [(r, r) if i == ax else (0, 0) for i in range(a.ndim)], mode="symmetric")
+        a = sum(k[i] * np.take(p, np.arange(i, i + n), axis=ax) for i in range(2 * r + 1))
+    return a.astype(np.float32)
 
 
-def cut_clip(rng, amp=2.4, jogs=3):
-    """A scissor-cut sheet as a clip-path polygon in calc(% + px): nearly straight sides, a couple of tiny jogs."""
-    pts = []
-    corners = [(0, 0), (100, 0), (100, 100), (0, 100)]
-    for i in range(4):
-        (ax, ay), (bx, by) = corners[i], corners[(i + 1) % 4]
-        pts.append((ax, ay, rng.uniform(-amp, amp), rng.uniform(-amp, amp)))
-        for k in range(1, jogs + 1):
-            f = k / (jogs + 1) + rng.uniform(-.06, .06)
-            px, py = ax + (bx - ax) * f, ay + (by - ay) * f
-            o = rng.uniform(-amp * .7, amp * .7)
-            ox, oy = (0, o) if ay == by else (o, 0)
-            pts.append((px, py, ox, oy))
-    return "polygon(" + ",".join(f"calc({x:.2f}% + {dx:.1f}px) calc({y:.2f}% + {dy:.1f}px)" for x, y, dx, dy in pts) + ")"
+def ground(w, h, seed):
+    """Crumpled paper: creases laid at random, lit from the top left. A new pattern for every seed."""
+    p = CACHE / f"ground-{w}x{h}-{seed}.png"
+    if p.exists():
+        return p
+    rng = np.random.default_rng(seed)
+    s = 4  # work small, then scale up
+    gw, gh = w // s, h // s
+    yy, xx = np.mgrid[0:gh, 0:gw].astype(np.float32)
+    hmap = np.zeros((gh, gw), np.float32)
+    for _ in range(140):
+        px, py = rng.uniform(-.1, 1.1) * gw, rng.uniform(-.1, 1.1) * gh
+        a = rng.uniform(0, math.pi)
+        nx, ny = math.cos(a), math.sin(a)
+        d = (xx - px) * nx + (yy - py) * ny
+        reach = rng.uniform(.25, .7) * max(gw, gh)
+        fall = np.exp(-(((xx - px) ** 2 + (yy - py) ** 2) / (2 * reach ** 2)))
+        hmap += rng.uniform(.4, 1.2) * -np.abs(d) / 40 * fall * rng.choice([-1, 1])
+    hmap += gauss(rng.standard_normal((gh, gw)).astype(np.float32), 6) * 6
+    hmap = gauss(hmap, .8)
+    gy, gx = np.gradient(hmap)
+    shade = np.clip(.5 + (gx * -.7 + gy * -.7) * 3.4, 0, 1)
+    img = np.array(TEAL, np.float32)[None, None, :] * (.70 + .56 * shade[..., None])
+    CACHE.mkdir(parents=True, exist_ok=True)
+    Image.fromarray(np.clip(img, 0, 255).astype(np.uint8)).resize((w, h), Image.LANCZOS).save(p)
+    return p
 
 
-def torn_path(rng, w, h, sides="tblr", amp=9, step=6, inset=0.0):
-    """A torn-paper outline (SVG path) for a w x h piece; torn sides wander, others are cut straight."""
-    def noise(seed):
-        r = random.Random(seed); v = [r.random() for _ in range(256)]
-        def f(x):
-            i = int(math.floor(x)); t = x - i; u = t * t * (3 - 2 * t)
-            return v[i % 256] + (v[(i + 1) % 256] - v[i % 256]) * u - .5
-        return f
-    n1, n2, n3 = noise(rng.random() * 1e6), noise(rng.random() * 1e6), noise(rng.random() * 1e6)
-
-    def edge(p, q, torn):
-        (x0, y0), (x1, y1) = p, q
-        L = math.hypot(x1 - x0, y1 - y0); nx, ny = -(y1 - y0) / L, (x1 - x0) / L
-        out = []
-        steps = max(2, int(L / step)) if torn else 3
-        for i in range(steps + 1):
-            k = i / steps; s = k * L
-            o = (amp * (1.4 * n1(s / 90) + .7 * n2(s / 22) + .35 * n3(s / 6)) if torn else rng.uniform(-1, 1)) - inset
-            out.append((x0 + (x1 - x0) * k + nx * o, y0 + (y1 - y0) * k + ny * o))
-        return out
-    c = [(0, 0), (w, 0), (w, h), (0, h)]
-    keys = ["t", "r", "b", "l"]
-    pts = []
-    for i in range(4):
-        e = edge(c[i], c[(i + 1) % 4], keys[i] in sides)
-        pts += e[:-1]
-    return "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in pts) + "Z"
+def robert():
+    """Robert as a one-color print, cut out, to the waist. Made once by print.py and committed."""
+    p = ASSETS / "print-robert-peace.png"
+    assert p.exists(), "tools/week-kit/assets/print-robert-peace.png is missing (python3 tools/week-kit/print.py)"
+    return p
 
 
-# ---------- materials ----------
-def sheet(x, y, w, h, rot, seed, inner="", bg=PLASTER, z=2, shadow=None):
-    rng = random.Random(seed)
-    sh = f"filter:drop-shadow({shadow});" if shadow else ""
-    return (f'<div class="abs" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px;transform:rotate({rot}deg);z-index:{z};{sh}">'
-            f'<div class="paper" style="background:{bg};clip-path:{cut_clip(rng)};position:relative">{inner}</div></div>')
+def flag(w, h, seed=3, cell=58):
+    """The checkered flag, waving: ink and paper."""
+    p = CACHE / f"flag-{w}x{h}-{seed}.png"
+    if p.exists():
+        return p
+    ss = 2
+    W2, H2 = w * ss, h * ss
+    yy, xx = np.mgrid[0:H2, 0:W2].astype(np.float32) / ss
+    ang = math.radians(-24)
+    u = xx * math.cos(ang) - yy * math.sin(ang)
+    v = xx * math.sin(ang) + yy * math.cos(ang)
+    lam, A = w * .55, cell * .9
+    wave = A * np.sin(2 * math.pi * u / lam + 1.3)
+    v2 = v - wave - h * .25
+    band = (v2 > 0) & (v2 < cell * 4)
+    cx = np.floor(u / cell); cy = np.floor(v2 / cell)
+    dark = ((cx + cy) % 2) == 0
+    shade = .82 + .18 * np.cos(2 * math.pi * u / lam + 1.3)
+    rgb = np.where(dark[..., None], np.array([28, 26, 34]), np.array([244, 242, 237])).astype(np.float32) * shade[..., None]
+    out = np.zeros((H2, W2, 4), np.uint8)
+    out[..., :3] = np.clip(rgb, 0, 255)
+    out[..., 3] = band.astype(np.uint8) * 255
+    CACHE.mkdir(parents=True, exist_ok=True)
+    Image.fromarray(out).resize((w, h), Image.LANCZOS).save(p)
+    return p
 
 
-def strip(text, x, y, size, rot, seed, bg=WHITE, fg=INK, weight=900, pad=(.24, .34, .14), z=6, slap=False, extra=""):
-    """Words on a cut paper strip, stuck flat with a small contact shadow (slap = the deeper first-frame shadow)."""
-    rng = random.Random(seed)
-    sh = f"drop-shadow(6px 10px 8px rgba({SHADOW},.26))" if slap else f"drop-shadow(1.5px 2.5px 1.6px rgba({SHADOW},.24))"
-    pt, ps, pb = pad
-    return (f'<div class="abs" style="left:{x}px;top:{y}px;transform:rotate({rot}deg);transform-origin:0 50%;z-index:{z};filter:{sh}">'
-            f'<div class="strip" style="background:{bg};color:{fg};font-size:{size}px;font-weight:{weight};letter-spacing:-.012em;'
-            f'padding:{size*pt:.0f}px {size*ps:.0f}px {size*pb:.0f}px;clip-path:{cut_clip(rng, amp=2.0, jogs=2)};{extra}">{text}</div></div>')
+# ---------------------------------------------------------------- hand lettering (drawn strokes, not a font)
+def ell(cx, cy, rx, ry, n=22, a0=0, a1=2 * math.pi):
+    return [(cx + rx * math.sin(a0 + (a1 - a0) * i / n), cy - ry * math.cos(a0 + (a1 - a0) * i / n)) for i in range(n + 1)]
 
 
-def tape(x, y, w, h, rot, seed, z=7, color=TAPE, alpha=.9):
-    rng = random.Random(seed)
-    teeth = 7
-    left = [(0, 0)] + [(rng.uniform(0, 5), (i + .5) / teeth * 100) for i in range(teeth)] + [(0, 100)]
-    right = [(100, 100)] + [(100 - rng.uniform(0, 5) * 100 / w, 100 - (i + .5) / teeth * 100) for i in range(teeth)] + [(100, 0)]
-    pts = ",".join(f"calc({px if px in (0,100) else 0}% + {(px if px not in (0,100) else 0):.1f}px) {py:.1f}%" for px, py in left)
-    pts2 = ",".join(f"{px:.2f}% {py:.1f}%" for px, py in right)
-    return (f'<div class="abs" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px;transform:rotate({rot}deg);z-index:{z};'
-            f'filter:drop-shadow(1px 1.5px 1px rgba({SHADOW},.18))"><div class="paper" style="background:{color};opacity:{alpha};'
-            f'clip-path:polygon({pts},{pts2})"></div></div>')
-
-
-def stamp(text, x, y, rot, size=46, z=8, seed=1, color=ROSE, static=False):
-    """A rubber stamp: rose ink multiplied onto the paper, a darker rim, a pressure mask (tilt + two light spots)."""
-    rng = random.Random(seed)
-    w = int(len(text) * size * .56 + size * 1.1); h = int(size * 1.75)
-    sx, sy = rng.uniform(.25, .7) * w, rng.uniform(.3, .7) * h
-    pos = "position:relative;display:inline-block" if static else f"position:absolute;left:{x}px;top:{y}px"
-    return (f'<svg style="{pos};transform:rotate({rot}deg);z-index:{z};mix-blend-mode:multiply;overflow:visible" width="{w}" height="{h}" viewBox="0 0 {w} {h}">'
-            f'<defs><linearGradient id="sg{seed}" x1="0" x2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#c4c4c4"/></linearGradient>'
-            f'<filter id="sb{seed}"><feGaussianBlur stdDeviation="{size*.22:.1f}"/></filter>'
-            f'<mask id="sm{seed}"><rect width="{w}" height="{h}" fill="url(#sg{seed})"/>'
-            f'<ellipse cx="{sx:.0f}" cy="{sy:.0f}" rx="{size*.5:.0f}" ry="{size*.32:.0f}" fill="#000" opacity=".55" filter="url(#sb{seed})"/>'
-            f'<ellipse cx="{w-sx*.6:.0f}" cy="{h-sy*.5:.0f}" rx="{size*.36:.0f}" ry="{size*.22:.0f}" fill="#000" opacity=".4" filter="url(#sb{seed})"/></mask></defs>'
-            f'<g mask="url(#sm{seed})"><rect x="5" y="5" width="{w-10}" height="{h-10}" rx="{size*.18:.0f}" fill="none" stroke="{color}" stroke-width="{max(5, size*.13):.1f}"/>'
-            f'<text x="{w/2:.0f}" y="{h*.64:.0f}" text-anchor="middle" font-family="Overpass" font-weight="800" font-size="{size}" fill="{color}" stroke="{ROSE_INK}" stroke-width="1.4">{esc(text)}</text></g></svg>')
-
-
-def scrap(x, y, w, h, rot, seed, color, inner_svg="", z=1, sides="tblr"):
-    """An older poster's leftover piece, pasted flat (no shadow), torn with the white paper core showing."""
-    rng = random.Random(seed)
-    core = torn_path(random.Random(seed + 11), w, h, sides, amp=8, step=5, inset=-3)
-    face = torn_path(random.Random(seed + 11), w, h, sides, amp=8, step=5, inset=rng.uniform(1.5, 4))
-    face2 = torn_path(random.Random(seed + 23), w, h, sides, amp=3, step=5, inset=2)
-    cid = f"sc{seed}"
-    return (f'<svg class="abs" style="left:{x}px;top:{y}px;transform:rotate({rot}deg);z-index:{z};overflow:visible" width="{w}" height="{h}" viewBox="0 0 {w} {h}">'
-            f'<defs><clipPath id="{cid}"><path d="{face}"/></clipPath></defs>'
-            f'<path d="{core}" fill="{CORE}"/><g clip-path="url(#{cid})"><rect x="-20" y="-20" width="{w+40}" height="{h+40}" fill="{color}"/>{inner_svg}</g></svg>')
-
-
-def wall(width, height, seed=7):
-    """Poured concrete: flat color, form-panel joints, tie holes in a grid. Nothing painted, nothing grained."""
-    rng = random.Random(seed)
-    joints_v = [x for x in range(330, width, 1440)]
-    joints_h = [height - 170] if height < 1500 else [430, height - 470]
-    ties = []
-    for jx in [-1110] + joints_v:
-        for cx in (jx + 300, jx + 720, jx + 1140):
-            if 0 < cx < width:
-                for cy in range(150, height, 330):
-                    ties.append((cx + rng.uniform(-3, 3), cy + rng.uniform(-3, 3)))
-    lines = "".join(f'<rect x="{x-1.5}" y="0" width="3" height="{height}" fill="{JOINT}"/>' for x in joints_v)
-    lines += "".join(f'<rect x="0" y="{y-1.5}" width="{width}" height="3" fill="{JOINT}"/>' for y in joints_h)
-    holes = "".join(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="8.5" fill="{TIE}"/><path d="M{x-7:.0f} {y+5:.0f} A9 9 0 0 0 {x+7:.0f} {y+5:.0f}" stroke="#D0CDC6" stroke-width="2" fill="none"/>' for x, y in ties)
-    base = (f'<svg class="abs" style="left:0;top:0;z-index:0" width="{width}" height="{height}"><rect width="{width}" height="{height}" fill="{WALL}"/>{lines}{holes}</svg>')
-    through = (f'<svg class="abs" style="left:0;top:0;z-index:3;mix-blend-mode:multiply;opacity:.22;pointer-events:none" width="{width}" height="{height}">'
-               f'{lines.replace(JOINT, "#8a877f")}</svg>')
-    return base + through
-
-
-def mark_svg(width, color=INK, spray=False, seed=3):
-    """The mark, one line with its pink plate (scripts/mark-2027.js). spray = painted through a card onto the wall:
-    crisp, with overspray only where the card lifted (the word "for") and a few spatter dots."""
-    rng = random.Random(seed)
-    h = width * 97 / 514
-    extra = ""
-    if spray:
-        extra += (f'<filter id="os{seed}" x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="3.4"/></filter>'
-                  f'<g fill="{color}" stroke="{color}" stroke-width="6" stroke-linejoin="round" opacity=".16" filter="url(#os{seed})" '
-                  f'transform="translate(1 .7)">{MARK["FOR_PATHS"]}</g>')
-        dots = ""
-        for _ in range(26):
-            cx, cy = rng.uniform(-14, 528), rng.uniform(-16, 114); r = rng.choice([.6, .8, 1.1, 1.5, 2])
-            if rng.random() < .8 and not (0 < cx < 404 and 0 < cy < 97 and rng.random() < .5):
-                dots += f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}"/>'
-        extra += f'<g fill="{color}" opacity=".85">{dots}</g>'
-    return (f'<svg viewBox="0 0 514 97" width="{width:.0f}" height="{h:.0f}" style="overflow:visible;display:block" role="img" aria-label="Cycle for">'
-            f'{extra}<g fill="{color}">{MARK["CYCLE_PATHS"]}{MARK["FOR_PATHS"]}</g>'
-            f'<path fill="{PLATE}" d="{MARK["PLATE_D"]}"/></svg>')
-
-
-# ---------- the halftone print (Left Field move 5) ----------
-def halftone_png(src, w, h, cell=16, angle=15, ink=POOL, focus=(.5, .4), lo=40, hi=215, box=None):
-    key = CACHE / f"ht-{pathlib.Path(src).stem}-{w}x{h}-{cell}-{angle}-{ink[1:]}-{box}-{lo}-{hi}.png"
-    if key.exists():
-        return key
-    CACHE.mkdir(exist_ok=True)
-    im = Image.open(src).convert("L")
-    if box: im = im.crop(box)
-    g = ImageOps.autocontrast(ImageOps.fit(im, (w, h), Image.LANCZOS, centering=focus), cutoff=1)
-    a = np.asarray(g).astype(np.float32)
-    g = Image.fromarray((np.clip((a - lo) / (hi - lo), 0, 1) * 255).astype(np.uint8))
-    scale = 4; big = Image.new("L", (w * scale, h * scale), 0); d = ImageDraw.Draw(big)
-    A = np.asarray(g.filter(ImageFilter.GaussianBlur(cell / 3))).astype(np.float32) / 255.0
-    th = math.radians(angle); c, s = math.cos(th), math.sin(th); R = int(max(w, h) * 1.5)
-    for i in range(-R // cell, R // cell):
-        for j in range(-R // cell, R // cell):
-            x = (i * c - j * s) * cell + w / 2; y = (i * s + j * c) * cell + h / 2
-            if 0 <= x < w and 0 <= y < h:
-                r = cell * .62 * math.sqrt(max(0, 1 - A[int(y), int(x)]))
-                if r > .6:
-                    d.ellipse([(x - r) * scale, (y - r) * scale, (x + r) * scale, (y + r) * scale], fill=255)
-    mask = big.resize((w, h), Image.LANCZOS)
-    rgb = tuple(int(ink[i:i + 2], 16) for i in (1, 3, 5))
-    out = Image.new("RGBA", (w, h), (0, 0, 0, 0)); out.paste(Image.new("RGB", (w, h), rgb), (0, 0), mask)
-    out.save(key)
-    return key
-
-
-def photo_print(src, x, y, w, h, rot, seed, caption="", pos="50% 50%", z=5):
-    """A real photo print, clean and ungraded, white border, taped at two corners (a print, so a light lift shadow)."""
-    b = 18; cap_h = 44 if caption else 0
-    img = (SITE / src).as_uri()
-    t1 = tape(x - 26, y - 14, 120, 40, rot - 34, seed + 1, z=z + 1)
-    t2 = tape(x + w + 2 * b - 96, y + h + 2 * b + cap_h - 24, 120, 40, rot - 30, seed + 2, z=z + 1)
-    cap = (f'<div style="font-size:24px;font-weight:700;color:{GUN};padding:8px 2px 0">{esc(caption)}</div>') if caption else ""
-    return (f'<div class="abs" style="left:{x}px;top:{y}px;transform:rotate({rot}deg);z-index:{z};filter:drop-shadow(2px 4px 3px rgba({SHADOW},.26))">'
-            f'<div style="background:{WHITE};padding:{b}px {b}px {b if not caption else 10}px;clip-path:{cut_clip(random.Random(seed), amp=1.4, jogs=1)}">'
-            f'<img src="{img}" style="display:block;width:{w}px;height:{h}px;object-fit:cover;object-position:{pos}">{cap}</div></div>') + t1 + t2
-
-
-# ---------- the day sheet ----------
-def row_scale(n, avail, story=False):
-    per = min(170, avail / max(n, 1))
-    name = min(52 if story else 50, (per - 24) / 2.16)
-    return per, name
-
-
-def day_rows(rows, width, avail, story=False):
-    n = len(rows)
-    mine_n = sum(1 for r in rows if r.get("mine"))
-    per, name = row_scale(n, avail - mine_n * 58 - n * 6, story)
-    line = min(name * .72, 31); tsz = name * 1.0
-    pad = max(9, (per - name * 1.08 - line * 1.5) / 2)
-    tc = tsz * 4.3
-    out = []
-    for r in rows:
-        hh, ap = r["time"].split(" ")
-        mine = r.get("mine")
-        st = ""
-        if mine:
-            st = (f'<span style="display:block;margin:10px 0 0 -4px;line-height:0">'
-                  f'{stamp(mine, 0, 0, -3, size=30, seed=sum(map(ord, mine)), z=9, static=True)}</span>')
-        out.append(f'<div class="row" style="--tc:{tc:.0f}px;padding:{pad:.0f}px 0;position:relative">'
-                   f'<span class="t" style="font-size:{tsz:.1f}px">{hh}<small>{ap}</small></span>'
-                   f'<span style="display:flex;flex-direction:column;align-items:flex-start;min-width:0"><span class="n" style="font-size:{name:.1f}px" data-fit="{width - tc - 22:.0f}" data-min="{name*.64:.0f}" data-wrap="1">{esc(r["name"])}</span>'
-                   f'<span class="l" style="font-size:{line:.1f}px" data-fit="{width - tc - 22:.0f}" data-min="{line*.8:.0f}">{esc(r["line"])}</span>{st}</span>'
-                   + '</div>')
-    return "".join(out)
-
-
-def sheet_height(n, story=False, avail_max=None):
-    head, foot = 150, 104
-    per = 170 if n <= 3 else None
-    if per:
-        return head + n * per + foot
-    return avail_max
-
-
-def day_sheet(x0, d, title, date, rows, seed, y=150, h=1090, story=False, foot=True, note=None):
-    """A pasted day sheet: the rows printed on it, the day on a slapped bruise strip, the date on a powder-rose strip."""
-    sx, sw = x0 + 64, 952
-    inner_w = sw - 96
-    head_h = 205 if note else 150
-    foot_h = 74 if foot else 26
-    rows_html = day_rows(rows, inner_w, h - head_h - foot_h - 24, story=story)
-    count = f'{len(rows)} ride{"s" if len(rows) != 1 else ""}'
-    footer = (f'<div class="abs" style="left:48px;right:48px;bottom:26px;font-size:25px;font-weight:700;color:{GUN};white-space:nowrap">'
-              f'Where they start, how fast, the route: <span style="color:{INK};font-weight:800">{URL}</span></div>') if foot else ""
-    inner = (f'<div class="abs" style="right:48px;top:{head_h - 58}px;font-size:28px;font-weight:700;color:{GUN}">{count}</div>'
-             f'<div class="abs" style="left:48px;right:48px;top:{head_h}px">{rows_html}</div>{footer}')
-    rot = random.Random(seed).uniform(-.3, .3)
-    s = sheet(sx, y, sw, h, rot, seed, inner)
-    s += strip(esc(title), sx - 18, y - 52, 118, -1.6, seed + 3, bg=INK, fg=PLASTER, slap=True, z=6)
-    tw = len(title) * 118 * .6
-    s += strip(esc(date), sx + tw + 64, y - 34, 60, 2.2, seed + 5, bg=POWDER, fg=INK, weight=800, z=7)
-    if note:
-        s += strip(esc(note), sx + 34, y + 118, 50, 1.6, seed + 7, bg=WHITE, fg=INK, weight=900, z=8)
-    return s
-
-
-# ---------- slides ----------
-def cover(x0, total, days, story=False):
-    """Slide 1: a halftone print of a Valley road pasted up, the number overprinted in rose, a clean print of Robert
-    taped on, the words on strips."""
-    s = ""
-    pw, ph = 960, 860
-    px, py = x0 + 60, (60 if not story else 236)
-    ht = halftone_png(SITE / "img/ph/pv-morning-road-2.jpg", pw - 40, ph - 40, cell=16, angle=15, ink=PATINA, focus=(.5, .5), box=(0, 260, 1080, 1440), lo=50, hi=235)
-    inner = (f'<img src="{ht.as_uri()}" style="position:absolute;left:20px;top:20px;width:{pw-40}px;height:{ph-40}px">'
-             f'<div class="abs" style="left:22px;bottom:12px;font-size:470px;font-weight:900;line-height:.74;letter-spacing:-.055em;color:{ROSE};mix-blend-mode:multiply;transform:translate(8px,6px)">{total}</div>')
-    s += sheet(px, py, pw, ph, -1.0, 101, inner, bg=PLASTER)
-    s += photo_print("img/ph/robert-selfie-camelback-2.jpg", x0 + 548, py + 40, 400, 300, 3.2, 131, "Paradise Valley \u00b7 Oct 2025", "62% 45%", z=6)
-    y0 = py + ph - 30
-    s += strip("group rides", x0 + 64, y0, 112, -2.0, 111, slap=True)
-    s += strip("this week.", x0 + 360, y0 + 132, 112, 1.3, 112)
-    s += strip(f"In the Valley, {SPAN[0]}.", x0 + 86, y0 + 290, 54, -.8, 113, bg=POWDER, weight=800, z=7)
-    return s
-
-
-def end_card(x0, story=False):
-    s = ""
-    top = 110 if not story else 300
-    s += f'<div class="abs" style="left:{x0+70}px;top:{top}px;z-index:2">{mark_svg(930, spray=True)}</div>'
-    y = top + 300
-    s += strip("Every ride has a page.", x0 + 70, y, 72, -1.2, 201, slap=True)
-    lines = ["Where it starts.", "How fast.", "If they wait.", "When we last checked."]
-    for i, t in enumerate(lines):
-        s += strip(t, x0 + 92 + (i % 2) * 36, y + 128 + i * 82, 52, [1.1, -.9, 1.6, -.6][i], 210 + i, weight=800)
-    yu = y + 128 + 4 * 82 + 40
-    s += strip("cycleforchange.org", x0 + 64, yu, 92, -.9, 221, bg=TAPE, weight=800, slap=True, z=8)
-    s += strip("/week", x0 + 520, yu + 104, 150, 1.8, 222, bg=INK, fg=PLASTER, weight=900, z=9)
-    s += stamp("Save this.", x0 + 120, yu + 150, -9, size=50, seed=231, z=9)
-    s += strip("Run a ride that\u2019s not here? DM me.", x0 + 70, yu + 332, 40, -.6, 241, weight=800, z=8)
-    return s
-
-
-def build_feed(days, total):
-    """Ten slides on one wall: cover, a sheet per day (Saturday split early / less early), the end card."""
-    slides = []
-    order = []
-    for d in days:
-        if d["day"] == "Saturday" or len(d["rows"]) > 9:
-            early = [r for r in d["rows"] if r["at"][11:13] < "07"]
-            late = [r for r in d["rows"] if r not in early]
-            if early and late:
-                order.append((d["day"] + ".", "Early.", early, d))
-                order.append((d["day"] + ".", "Less early.", late, d))
-            else:
-                order.append((d["day"] + ".", None, d["rows"], d))
-        else:
-            order.append((d["day"] + ".", None, d["rows"], d))
-    n = 2 + len(order)
-    width = W * n
-    body = wall(width, HH)
-    # old posters: scraps of the last one ("Riding season.") left at a few seams, under everything
-    rid = f'<text x="18" y="148" font-family="Overpass" font-weight="900" font-size="150" fill="{INK}" letter-spacing="-4">Riding</text>'
-    sea = f'<text x="-40" y="120" font-family="Overpass" font-weight="900" font-size="120" fill="{ROSE}" letter-spacing="-3">season.</text>'
-    body += scrap(4 * W - 170, 1262, 340, 200, 2, 301, PATINA, rid)
-    body += scrap(3 * W - 120, 1250, 250, 150, -3, 302, POWDER, sides="tbr")
-    body += scrap(8 * W - 110, 30, 230, 150, -2, 304, CONCRETE)
-    body += scrap(4 * W - 60, -60, 160, 150, 4, 305, PATINA)
-    body += cover(0, total, days)
-    # a strip across the first seam: the swipe cue, no arrow
-    body += strip("Find your day.", W - 250, 1262, 54, -1.2, 120, bg=WHITE, weight=900, slap=True, z=9)
-    for i, (title, note, rows, d) in enumerate(order):
-        x0 = W * (i + 1)
-        if len(rows) <= 3:
-            h = sheet_height(len(rows))
-            body += day_sheet(x0, d, title, d["date"], rows, 400 + i * 17, h=h, note=note)
-            ph = PHOTOS.get(d["day"])
-            if ph:
-                body += photo_print(ph["src"], x0 + ph["x"], 150 + h + 44, ph["w"], ph["h"], ph["rot"], 500 + i, ph["cap"], ph.get("pos", "50% 50%"))
-        else:
-            body += day_sheet(x0, d, title, d["date"], rows, 400 + i * 17, note=note, h=1160 if len(rows) >= 8 else 1090)
-    body += end_card(W * (n - 1))
-    return width, body, n, [o[:3] for o in order]
-
-
-PHOTOS = {
-    "Friday": dict(src="img/ph/pv-shadow-2.jpg", x=330, w=560, h=330, rot=2.0, cap="Paradise Valley · Jul 2026", pos="50% 62%"),
-    "Monday": dict(src="img/ph/riders-camelback-2.jpg", x=150, w=600, h=420, rot=-1.6, cap="Paradise Valley · Sep 2025", pos="50% 58%"),
+G = {  # skeletons on a 100-high box: (width, [strokes])
+    "A": (78, [[(0, 100), (39, 0), (78, 100)], [(17, 64), (61, 64)]]),
+    "D": (70, [[(0, 0), (0, 100)], [(0, 2), (30, 0), (56, 10), (70, 50), (56, 90), (30, 100), (0, 98)]]),
+    "E": (60, [[(60, 2), (0, 0), (0, 100), (60, 98)], [(0, 50), (46, 50)]]),
+    "F": (58, [[(58, 0), (0, 0), (0, 100)], [(0, 50), (44, 50)]]),
+    "H": (70, [[(0, 0), (0, 100)], [(70, 0), (70, 100)], [(0, 52), (70, 50)]]),
+    "I": (8, [[(4, 0), (4, 100)]]),
+    "K": (66, [[(0, 0), (0, 100)], [(66, 0), (2, 62)], [(24, 44), (66, 100)]]),
+    "M": (86, [[(0, 100), (2, 0), (43, 66), (84, 0), (86, 100)]]),
+    "N": (70, [[(0, 100), (0, 0), (70, 100), (70, 0)]]),
+    "O": (76, [ell(38, 50, 38, 50, 26)]),
+    "R": (66, [[(0, 100), (0, 0), (34, 0), (56, 6), (64, 24), (56, 42), (34, 50), (0, 50)], [(30, 50), (66, 100)]]),
+    "S": (64, [[(62, 14), (50, 3), (32, 0), (12, 5), (2, 20), (6, 36), (30, 48), (56, 58), (64, 76), (56, 94), (34, 100), (14, 96), (0, 84)]]),
+    "T": (74, [[(0, 2), (74, 0)], [(37, 0), (37, 100)]]),
+    "U": (68, [[(0, 0), (0, 70), (6, 90), (20, 100), (34, 100), (50, 100), (63, 90), (68, 70), (68, 0)]]),
+    "V": (74, [[(0, 0), (37, 100), (74, 0)]]),
+    "W": (106, [[(0, 0), (22, 100), (53, 28), (84, 100), (106, 0)]]),
+    "Y": (74, [[(0, 0), (37, 50), (74, 0)], [(37, 50), (37, 100)]]),
+    ".": (10, [[(5, 92), (5, 100)]]),
+    " ": (34, []),
 }
+
+
+def smooth(pts, n=6):
+    out = []
+    for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
+        for k in range(n):
+            out.append((x0 + (x1 - x0) * k / n, y0 + (y1 - y0) * k / n))
+    return out + [pts[-1]]
+
+
+def hand(word, width, height, seed, color=LETTER, sw=None, cond=.72):
+    """A word in rough marker capitals that fills `width` at about `height`, drawn as wobbling strokes."""
+    rng = random.Random(seed)
+    gap = 16
+    letters = [c for c in word.upper()]
+    nat = sum(G[c][0] * cond for c in letters) + gap * (len(letters) - 1)
+    k = height / 100
+    sw = sw or height * .16
+    width = width - sw * 2.6
+    sx = min(1.0, width / (nat * k))  # squeeze sideways if the word is long
+    paths, x = [], 0.0
+    for c in letters:
+        gw, strokes = G[c]
+        rot = math.radians(rng.uniform(-3.5, 3.5)); sc = rng.uniform(.94, 1.06); dy = rng.uniform(-.035, .035) * height
+        cxl = gw * cond / 2
+        for st in strokes:
+            P = []
+            for (px, py) in smooth(st, 5):
+                px = (px * cond - cxl) * sc; py = (py - 50) * sc
+                qx = px * math.cos(rot) - py * math.sin(rot); qy = px * math.sin(rot) + py * math.cos(rot)
+                X = (x + cxl + qx) * k * sx + rng.uniform(-.012, .012) * height
+                Y = (50 + qy) * k + dy + rng.uniform(-.012, .012) * height
+                P.append((X, Y))
+            d = "M" + " L".join(f"{a:.1f} {b:.1f}" for a, b in P)
+            paths.append(f'<path d="{d}" stroke-width="{sw:.1f}"/>')
+            for _ in range(2):  # the brush's uneven edge: two thinner passes, nudged
+                ox, oy = rng.uniform(-.24, .24) * sw, rng.uniform(-.24, .24) * sw
+                d2 = "M" + " L".join(f"{a+ox:.1f} {b+oy:.1f}" for a, b in P)
+                paths.append(f'<path d="{d2}" stroke-width="{sw*rng.uniform(.5,.7):.1f}"/>')
+        x += gw * cond + gap
+    vw = (x - gap) * k * sx
+    fid = f"rough{seed}"
+    return (f'<svg width="{vw + sw*2:.0f}" height="{height + sw*2:.0f}" viewBox="{-sw:.1f} {-sw:.1f} {vw + sw*2:.1f} {height + sw*2:.1f}" style="overflow:visible;display:block">'
+            f'<defs><filter id="{fid}" x="-10%" y="-10%" width="120%" height="120%">'
+            f'<feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="{seed}" result="n"/>'
+            f'<feDisplacementMap in="SourceGraphic" in2="n" scale="{sw*.32:.1f}" xChannelSelector="R" yChannelSelector="G" result="d"/>'
+            f'<feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="1" seed="{seed+7}" result="g"/>'
+            f'<feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -10 7.6" result="m"/>'
+            f'<feComposite in="d" in2="m" operator="in"/></filter></defs>'
+            f'<g fill="none" stroke="{color}" stroke-linecap="round" stroke-linejoin="round" filter="url(#{fid})">{"".join(paths)}</g></svg>')
+
+
+# ---------------------------------------------------------------- pieces
+GROUP = ('<svg viewBox="0 0 24 24" class="mk"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">'
+         '<path d="M3.5 21 8.6 3M20.5 21 15.4 3"/><path d="M12 3v2.2M12 8.2v2.2" opacity=".55"/></g><g fill="currentColor">'
+         '<circle cx="9.6" cy="17.2" r="1.8"/><circle cx="14.4" cy="17.2" r="1.8"/><circle cx="12" cy="13.2" r="1.5"/></g></svg>')
+
+# the mark, stacked (cycle / for + the plate), for the square badge
+STACK = (f'<svg viewBox="0 0 252 196" aria-hidden="true"><g fill="currentColor">{MARK["CYCLE_PATHS"]}'
+         f'<g transform="translate(-261.7 112)">{MARK["FOR_PATHS"]}</g></g>'
+         f'<path transform="translate(-261.7 112)" fill="{PLATE}" d="{MARK["PLATE_D"]}"/></svg>')
+
+CSS = f"""
+*{{box-sizing:border-box;margin:0;padding:0}}
+html,body{{background:#000}}
+body{{font-family:"Overpass",system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-kerning:normal;font-variant-numeric:lining-nums tabular-nums;color:{INK}}}
+.s{{position:relative;overflow:hidden}}
+.a{{position:absolute}}
+.strip{{position:absolute;background:{PAPER};font-weight:900;letter-spacing:-.01em;line-height:1;white-space:nowrap;padding:.32em .5em .2em;
+  clip-path:polygon(0 4%,22% 0,58% 3%,100% 0,99.4% 52%,100% 100%,64% 97%,30% 100%,0 96%,.6% 50%)}}
+.tape{{position:absolute;background:{TAPE};clip-path:polygon(3% 0,97% 4%,100% 22%,96% 48%,100% 74%,97% 100%,3% 96%,0 78%,4% 50%,0 24%)}}
+.card{{position:absolute;background:{PAPER};display:flex;flex-direction:column}}
+.band{{background:{PLATE};color:{PAPER};display:flex;align-items:center;justify-content:center;gap:22px;font-weight:900;letter-spacing:-.01em;padding:.28em .4em .14em;line-height:1}}
+.band .mk{{width:1em;height:1em;flex:0 0 auto;margin-top:-.12em}}
+.rows{{--s:1;flex:1 1 auto;min-height:0;overflow:hidden;display:flex;flex-direction:column;padding:0 30px}}
+.r{{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:22px;align-items:baseline;
+   padding:calc(18px * var(--s) * var(--p,1)) 0;border-bottom:3px solid rgba(194,85,127,.30)}}
+.r:last-child{{border-bottom:0}}
+.n{{font-size:calc(44px * var(--s));font-weight:800;line-height:1.04;letter-spacing:-.012em;text-wrap:balance}}
+.t{{font-size:calc(44px * var(--s));font-weight:900;color:{PLATE};white-space:nowrap;letter-spacing:-.02em;line-height:1}}
+.t small{{font-size:.62em;font-weight:800;margin-left:.12em}}
+.l{{grid-column:1 / 3;white-space:nowrap;font-size:calc(27px * var(--s));font-weight:600;color:{GUN};line-height:1.2;margin-top:calc(6px * var(--s))}}
+.mine{{display:inline-block;background:{PLATE};color:{PAPER};font-weight:900;font-size:calc(25px * var(--s));line-height:1;
+   padding:.22em .36em .12em;transform:rotate(-2.5deg);margin-top:calc(10px * var(--s));border-radius:.07em}}
+.badge{{position:absolute;background:{INK};display:flex;align-items:center;justify-content:center;border-radius:14px}}
+.badge svg{{display:block;width:72%;height:auto;color:{PAPER}}}
+"""
+
+FIT = """<script>
+document.fonts.load('800 40px Overpass').then(() => document.fonts.ready).then(() => {
+  for (const e of document.querySelectorAll('[data-fitw]')) { const w = +e.dataset.fitw; let fs = parseFloat(getComputedStyle(e).fontSize);
+    while (e.scrollWidth > w && fs > 18) { fs -= 1; e.style.fontSize = fs + 'px'; } }
+  const fitLines = (root) => { for (const l of root.querySelectorAll('.l')) { l.style.fontSize = '';
+      let fs = parseFloat(getComputedStyle(l).fontSize);
+      while (l.scrollWidth > l.clientWidth && fs > 20) { fs -= .5; l.style.fontSize = fs + 'px'; }
+      if (l.scrollWidth > l.clientWidth) { l.style.whiteSpace = 'normal'; } } };
+  const used = (e) => e.lastElementChild ? e.lastElementChild.getBoundingClientRect().bottom - e.getBoundingClientRect().top : 0;
+  const lines = (e) => [...e.querySelectorAll('.n')].map(n => Math.round(n.getBoundingClientRect().height / (parseFloat(getComputedStyle(n).fontSize) * 1.04))).join();
+  for (const e of document.querySelectorAll('.rows')) {
+    let s = 1; fitLines(e);
+    while (used(e) > e.clientHeight + 1 && s > 0.6) { s -= 0.01; e.style.setProperty('--s', s.toFixed(2)); fitLines(e); }
+    if (s === 1) { const base = lines(e);
+      while (s < 1.14) { s += 0.01; e.style.setProperty('--s', s.toFixed(2)); fitLines(e);
+        if (used(e) > e.clientHeight || lines(e) !== base) { s -= 0.01; e.style.setProperty('--s', s.toFixed(2)); fitLines(e); break; } }
+      let q = 1; while (q < 2.2) { q += 0.02; e.style.setProperty('--p', q.toFixed(2)); if (used(e) > e.clientHeight) { q -= 0.02; e.style.setProperty('--p', q.toFixed(2)); break; } } }
+    e.dataset.s = s.toFixed(2); if (used(e) > e.clientHeight + 1) e.dataset.over = '1';
+  }
+  document.body.dataset.ready = '1';
+});
+</script>"""
+
+
+def nobreak(t):
+    return re.sub(r"(\S+-\S+)", r'<span style="white-space:nowrap">\1</span>', t)
+
+
+def strip(text, x, y, size, rot, z=6, extra=""):
+    return f'<div class="strip" style="left:{x}px;top:{y}px;font-size:{size}px;transform:rotate({rot}deg);z-index:{z};{extra}">{text}</div>'
+
+
+def tape(x, y, w, h, rot, z=9):
+    return f'<div class="tape" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px;transform:rotate({rot}deg);z-index:{z}"></div>'
+
+
+def badge(x, y, size, rot=0, z=7):
+    return f'<div class="badge" style="left:{x}px;top:{y}px;width:{size}px;height:{size}px;transform:rotate({rot}deg);z-index:{z}">{STACK}</div>'
+
+
+def img(p, x, y, w, h=None, z=3, extra=""):
+    hh = f"height:{h}px;" if h else ""
+    return f'<img src="{pathlib.Path(p).as_uri()}" alt="" class="a" style="left:{x}px;top:{y}px;width:{w}px;{hh}z-index:{z};{extra}">'
+
+
+def card(x, y, w, h, rot, band, rows_html, z=5, band_size=46):
+    return (f'<div class="card" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px;transform:rotate({rot}deg);z-index:{z}">'
+            f'<div class="band" style="font-size:{band_size}px">{GROUP}<span>{band}</span>{GROUP}</div>'
+            f'<div class="rows" style="padding-top:8px;padding-bottom:8px">{rows_html}</div></div>')
+
+
+def ride_row(r):
+    t, ap = r["time"].split(" ")
+    mine = f'<div style="grid-column:1/3"><span class="mine">{esc(r["mine"])}</span></div>' if r.get("mine") else ""
+    return (f'<div class="r"><div class="n">{nobreak(esc(r["name"]))}</div><div class="t">{t}<small>{ap}</small></div>'
+            f'<div class="l">{esc(r["line"])}</div>{mine}</div>')
+
+
+def count(n):
+    return f"{n} ride" + ("" if n == 1 else "s")
 
 
 def page(body, w, h):
     return (f'<!doctype html><html><head><meta charset="utf-8"><style>{font_css()}{CSS}</style></head>'
-            f'<body><div class="board" style="width:{w}px;height:{h}px">{body}</div>{FIT}</body></html>')
+            f'<body style="width:{w}px;height:{h}px">{body}{FIT}</body></html>')
 
 
-def shoot_feed(pg, days, total):
-    width, body, n, order = build_feed(days, total)
-    f = BUILD / "feed.html"; f.write_text(page(body, width, HH))
-    pg.set_viewport_size({"width": width, "height": HH})
-    pg.goto(f.as_uri()); pg.wait_for_function("document.body.dataset.ready === '1'")
-    OUT.mkdir(exist_ok=True)
-    pg.screenshot(path=str(OUT / "wall-strip.png"), clip={"x": 0, "y": 0, "width": width, "height": HH})
-    full = Image.open(OUT / "wall-strip.png").convert("RGB")
-    names = []
-    for i in range(n):
-        p = OUT / f"post-{i+1:02d}.jpg"
-        full.crop((i * W, 0, (i + 1) * W, HH)).save(p, quality=93, subsampling=0, optimize=True)
-        names.append(p.name)
-    return names, order
+# ---------------------------------------------------------------- slides
+def cover(days, total, span, story=False):
+    h = SH if story else PH
+    top = 236 if story else 34
+    s = f'<div class="s" style="width:{W}px;height:{h}px;background:url({ground(W, h, 21 if story else 11).as_uri()})">'
+    s += f'<div class="a" style="left:40px;top:{top}px;z-index:4">{hand("THIS WEEK", 1000, 190, 5)}</div>'
+    y = top + 250
+    s += strip(f"{total} group rides in the Valley. {span}.", 34, y, 46, -1.2)
+    cy = y + 104
+    rows = "".join(f'<div class="r"><div class="n">{d["day"]}<span style="font-weight:600;color:{GUN}">, {d["date"]}</span></div>'
+                   f'<div class="t">{count(len(d["rows"]))}</div></div>' for d in days)
+    ch = 900 if story else 690
+    s += card(40, cy, 650, ch, -1.0, "The week", rows, band_size=44)
+    s += tape(40 - 34, cy - 16, 150, 44, -30) + tape(650 - 70, cy - 8, 150, 44, 24)
+    # Robert, the print, on the right, standing on the flag
+    pw = 560 if story else 520
+    ph_ = int(pw * (530 / 580))
+    py = cy + (170 if story else 120)
+    s += img(robert(), 1080 - pw + 30, py, pw, z=3)
+    s += img(flag(560, 420), 1080 - 470, py + ph_ - 150, 560, z=2)
+    s += badge(880, cy - 30, 160, 3) if story else badge(40, h - 196, 160, -3)
+    fy = cy + ch + (60 if story else 36)
+    if story:
+        s += strip("Every ride, every day.", 40, fy, 44, -1, z=8)
+        s += strip(f'<span style="color:{PAPER}">Tap the link.</span>', 74, fy + 82, 46, 1.2, z=8, extra=f"background:{PLATE}")
+    else:
+        s += strip("Find your day.", 236, h - 120, 52, 1.2, z=8)
+    return s + "</div>"
 
 
-def story_frames(days, total):
-    SH = 1920
-    cue = lambda k: (strip("Where they start, how fast, the route.", 64, 1404, 44, -1, 720 + k, weight=800)
-                     + strip("Tap the link.", 120, 1474, 44, 1.4, 730 + k, bg=POWDER, weight=900))
-    frames = [("story-00-week", wall(W, SH, seed=9) + cover(0, total, days, story=True)
-               + strip("Every ride, every day. Tap the link.", 64, 1474, 44, -1, 140, bg=POWDER, weight=900))]
-    k = 0
-    for d in days:
-        parts = [(d["day"] + ".", None, d["rows"])]
-        if len(d["rows"]) > 9:
-            early = [r for r in d["rows"] if r["at"][11:13] < "07"]
-            parts = [(d["day"] + ".", "Early.", early), (d["day"] + ".", "Less early.", [r for r in d["rows"] if r not in early])]
-        for title, note, rows in parts:
-            k += 1
-            body = wall(W, SH, seed=9 + k)
-            h = sheet_height(len(rows)) if len(rows) <= 3 else 1080
-            body += day_sheet(0, d, title, d["date"], rows, 700 + k * 13, y=290, h=h, story=True, foot=False, note=note)
-            body += cue(k)
-            slug = d["day"].lower() + ("-" + note.strip(".").lower().replace(" ", "-") if note else "")
-            frames.append((f"story-{k:02d}-{slug}", body))
-    return frames
+def day_slide(d, note, rows, story=False, seed=0):
+    h = SH if story else PH
+    top = 236 if story else 34
+    s = f'<div class="s" style="width:{W}px;height:{h}px;background:url({ground(W, h, 40 + seed).as_uri()})">'
+    s += f'<div class="a" style="left:40px;top:{top}px;z-index:4">{hand(d["day"], 1000, 200, 100 + seed)}</div>'
+    y = top + 258
+    s += strip(f'{d["date"]}.' + (f" {note}" if note else ""), 34, y, 50, -1.4)
+    cy = y + 106
+    few = len(rows) <= 3
+    cw = 640 if few else 1000
+    bottom = (1540 - 120) if story else (h - 150)
+    if few:
+        ch = min(bottom - cy, 170 * len(rows) + 120 + (60 if any(r.get("mine") for r in rows) else 0))
+    else:
+        ch = bottom - cy
+    s += card(40, cy, cw, ch, -.8 if seed % 2 else .7, count(len(rows)), "".join(ride_row(r) for r in rows))
+    s += tape(40 - 30, cy - 18, 150, 44, -28) + tape(40 + cw - 110, cy - 14, 150, 44, 26)
+    if few:  # room for the print and the flag
+        s += img(robert(), 1080 - 470, cy + 40, 500, z=3)
+        s += img(flag(560, 420), 1080 - 470, cy + 40 + 457 - 140, 560, z=2)
+    if story:
+        s += strip("Where they start, how fast, the route.", 40, 1540 - 92, 40, -1, z=8)
+        s += strip(f'<span style="color:{PAPER}">Tap the link.</span>', 74, 1540 - 26, 44, 1.2, z=8, extra=f"background:{PLATE}")
+        s += badge(870, 1540 - 100, 150, -3)
+    else:
+        s += strip(URL, 34, h - 112, 52, -1.0, z=8)
+        s += badge(888, h - 176, 150, -3)
+    return s + "</div>"
 
 
-def shoot_stories(pg, days, total):
-    SH = 1920
-    out = []
-    for name, body in story_frames(days, total):
-        f = BUILD / "story.html"; f.write_text(page(body, W, SH))
-        pg.set_viewport_size({"width": W, "height": SH})
-        pg.goto(f.as_uri()); pg.wait_for_function("document.body.dataset.ready === '1'")
-        png = OUT / f"{name}.png"
-        pg.screenshot(path=str(png), clip={"x": 0, "y": 0, "width": W, "height": SH})
-        Image.open(png).convert("RGB").save(OUT / f"{name}.jpg", quality=93, subsampling=0, optimize=True); png.unlink()
-        out.append(name + ".jpg")
-    return out
+def end_card(story=False):
+    h = SH if story else PH
+    top = 236 if story else 34
+    s = f'<div class="s" style="width:{W}px;height:{h}px;background:url({ground(W, h, 78 if story else 77).as_uri()})">'
+    s += f'<div class="a" style="left:40px;top:{top}px;z-index:4">{hand("SAVE THIS.", 1000, 200, 9)}</div>'
+    y = top + 258
+    s += strip("Every ride has a page.", 34, y, 56, -1.4)
+    cy = y + 116
+    lines = "".join(f'<div class="r"><div class="n">{t}</div><div></div></div>' for t in ["Where it starts.", "How fast.", "If they wait.", "When we last checked."])
+    s += card(40, cy, 600, 470, -1.0, "Every page", lines, band_size=44)
+    s += tape(10, cy - 18, 150, 44, -28) + tape(560, cy - 10, 150, 44, 26)
+    s += img(robert(), 1080 - 470, cy - 40, 500, z=3)
+    s += img(flag(560, 420), 1080 - 470, cy - 40 + 457 - 140, 560, z=2)
+    s += strip("cycleforchange.org", 34, cy + 520, 76, -1.2, z=8)
+    s += strip(f'<span style="color:{PAPER}">/week</span>', 560, cy + 620, 96, 2.0, z=9, extra=f"background:{PLATE}")
+    s += strip("Run a ride that’s not here? DM me.", 40, cy + 760, 38, -.6, z=8)
+    s += badge(860, (1440 - 150) if story else (h - 210), 170, -3)
+    return s + "</div>"
+
+
+def parts(d, story=False, cap=9):
+    """A day's slides as (note, rows). One, or two ("Early." before 7 am / "Less early.") when it's Saturday on the
+    feed or the day runs past `cap` rows. If the 7 am line doesn't do it, even runs in start order: two keep the
+    same two words, three or more are named by their first start."""
+    rows = d["rows"]
+    if not rows:
+        return []
+    if (d["day"] == "Saturday" and not story) or len(rows) > cap:
+        early = [r for r in rows if r["at"][11:13] < "07"]
+        late = [r for r in rows if r not in early]
+        if early and late and max(len(early), len(late)) <= cap:
+            return [("Early.", early), ("Less early.", late)]
+        if len(rows) > cap:
+            n = -(-len(rows) // cap)
+            size = -(-len(rows) // n)
+            runs = [rows[i:i + size] for i in range(0, len(rows), size)]
+            if len(runs) == 2:
+                return [("Early.", runs[0]), ("Less early.", runs[1])]
+            return [(f'From {run[0]["time"]}.', run) for run in runs]
+    return [(None, rows)]
+
+
+def shoot(pg, body, h, png):
+    """Load one slide, let it fit its rows, save it. Returns False when a card still can't hold its rows."""
+    f = BUILD / "slide.html"; f.write_text(page(body, W, h))
+    pg.set_viewport_size({"width": W, "height": h})
+    pg.goto(f.as_uri()); pg.wait_for_function("document.body.dataset.ready === '1'", timeout=60000)
+    over = pg.evaluate("[...document.querySelectorAll('.rows')].some(e => e.dataset.over)")
+    pg.screenshot(path=str(png), clip={"x": 0, "y": 0, "width": W, "height": h})
+    return not over
+
+
+def day_shots(pg, di, d, story):
+    """A day's slides, split further until every card holds its rows."""
+    h = SH if story else PH
+    for cap in (9, 7, 5, 4, 3):
+        ps = parts(d, story, cap)
+        shots, ok = [], True
+        for pi, (note, rows) in enumerate(ps):
+            png = CACHE / f"{'story' if story else 'post'}-{di}-{pi}.png"
+            ok = shoot(pg, day_slide(d, note, rows, story=story, seed=(20 if story else 0) + 3 * di + pi), h, png) and ok
+            shots.append((note, png))
+        if ok:
+            return shots
+    raise SystemExit(f'{d["day"]}: the rows do not fit a slide')
+
+
+def save(png, name):
+    Image.open(png).convert("RGB").save(OUT / f"{name}.jpg", quality=93, subsampling=0, optimize=True)
+    return f"{name}.jpg"
+
+
+def make(days, total, span, stories=True):
+    OUT.mkdir(parents=True, exist_ok=True); CACHE.mkdir(parents=True, exist_ok=True)
+    for p in list(OUT.glob("post-*.jpg")) + list(OUT.glob("story-*.jpg")) + list(OUT.glob("wall-strip.png")):
+        p.unlink()
+    feed, story = [], []
+    with sync_playwright() as pw:
+        b = pw.chromium.launch(); pg = b.new_page()
+        tmp = CACHE / "one.png"
+        shoot(pg, cover(days, total, span), PH, tmp); feed.append(save(tmp, "post-01"))
+        for di, d in enumerate(days):
+            for note, png in day_shots(pg, di, d, False):
+                feed.append(save(png, f"post-{len(feed) + 1:02d}"))
+        shoot(pg, end_card(), PH, tmp); feed.append(save(tmp, f"post-{len(feed) + 1:02d}"))
+        if stories:
+            shoot(pg, cover(days, total, span, story=True), SH, tmp); story.append(save(tmp, "story-00-week"))
+            for di, d in enumerate(days):
+                for note, png in day_shots(pg, di, d, True):
+                    slug = d["day"].lower() + ("-" + re.sub(r"[^a-z0-9]+", "-", note.lower()).strip("-") if note else "")
+                    story.append(save(png, f"story-{len(story):02d}-{slug}"))
+        b.close()
+    return feed, story
 
 
 def span_words(days):
@@ -598,7 +591,6 @@ def caption(days, total):
 
 
 if __name__ == "__main__":
-    from datetime import date as _date
     ap = argparse.ArgumentParser()
     now = datetime.now(PHX).date()
     ap.add_argument("--from", dest="start", default=(now + timedelta(days=(7 - now.weekday()) % 7)).isoformat())
@@ -609,15 +601,10 @@ if __name__ == "__main__":
     SKIP.update(a.skip); KEEP.update(a.keep)
     days = load(a.start)
     total = sum(1 for d in days for r in d["rows"] if r.get("kind") != "open-streets")
-    SPAN[0] = span_words(days)
-    OUT.mkdir(parents=True, exist_ok=True)
-    with sync_playwright() as p:
-        b = p.chromium.launch(); pg = b.new_page()
-        names, order = shoot_feed(pg, days, total)
-        print("feed:", " ".join(names))
-        if not a.no_stories:
-            print("stories:", " ".join(shoot_stories(pg, days, total)))
-        b.close()
+    feed, story = make(days, total, span_words(days), stories=not a.no_stories)
+    print("feed:", " ".join(feed))
+    if story:
+        print("stories:", " ".join(story))
     (OUT / "caption.txt").write_text(caption(days, total))
     seen, lines = set(), []
     for ymd, name, slug, why in LEFT_OFF:
