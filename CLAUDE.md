@@ -203,9 +203,13 @@ pass brings no new mark, palette or typeface. What he changed is written here; e
   Kit" artifact was republished with every piece redone.
   The weekly carousel tool (`tools/week-kit/make.py`) draws the mark and the pink family too, and its look is the
   poster since the same day (§5).
-- **Not moved yet** (each is its own pass): `templates/og/nov7.html` (unused); `kit-handoff/KIT-LOCK.md`; the reels and
-  end cards made before Nov 11 (their render scripts are in the claude.ai project). Sections of this file about those
-  still describe the stencil.
+- **Redone for posting the same day** (Robert, asked which old pieces to redo: "Can you just do it for me"): the How we
+  ride reel for Instagram (speed + slices) with its five clips and cover, and the Oct 29 end card (cycle for change on
+  the lane, Who do you cycle for?, 10,000). The files went to Robert in chat and their sources are in the claude.ai
+  project docs; social cuts never go in git (§10).
+- **Not moved yet** (each is its own pass): `templates/og/nov7.html` (unused); `kit-handoff/KIT-LOCK.md` (§9 still says
+  the stencil family); the Nov 6 cover end cards and the other reels made before Nov 8 (their sources were session
+  scratch built on Robert's own clips; the posted ones stay as they are).
 
 ### After Hours palette (token names are old; values are new — keep the names, every page uses them)
 `--bone` concrete #E1DFDB · `--bone-2` #D7D5D0 · `--paper` plaster #EFEDEA · `--dust` patina
@@ -678,8 +682,8 @@ flat-vector Film Run style and loved the "Left Field" pilot ("I love this"). Wha
 - **The bones** (every CFC Reel and Story, for the whole 2027 series): tar field for cards; Overpass, sentence case;
   numerals in plaster; **rose only on the blank and the plate**, never on a numeral; footage full screen **in its
   original color** (black and white with one kept red is retired as the default — only when he asks for it); labels on
-  small tar plates, bottom left, two lines at most; hard cuts; the end is the stencil → the bar → "change" on the plate →
-  `cycleforchange.org`.
+  small tar plates, bottom left, two lines at most; hard cuts; the end is cycle for → the pink plate → "change" on it →
+  `cycleforchange.org` (the mark since Nov 11, 2026; it was the stencil and its bar).
 - **No costume by default:** no grain, no glitch, no bolt, no scanlines on a Reel unless Robert asks for them on that
   piece. Never on the site, stills, kit or print.
 - **Motion direction — Left Field** (Nov 2, 2026; the `left-field` skill is the motion studio): "new aged urban", done
@@ -957,7 +961,8 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   (`film.html`, the page that draws it; `python3 tools/how-we-ride/render.py --n N` shoots and encodes it; `-3` is the cut
   with the mark: each answer on the pink plate in plaster type, 2.5° off square, the riders and labels in the pink
   family, the end on cycle for + change. A frame is the same whichever frame was drawn before it, so the workers'
-  seams don't show. The "speed + slices" reel for Instagram is a separate cut and still has the old look).
+  seams don't show. The "speed + slices" reel for Instagram is a separate cut; it was redone with the mark the same
+  day, and its source and render are in the claude.ai project docs).
   `howWeRideBlock()` in build-rides.js puts it on every **listed** ride page after "First time on this ride?", tap to play
   (`data-film-tap`), with one line and "Read the nine instead" → `/rides/about/#how-we-ride`, where the film sits with all
   nine in words (`HOW_STEPS`): one page carries the text, not 1,300 copies. Not on Critical Mass or open streets, and not
@@ -1375,3 +1380,5 @@ two exits; the shapes are on the plan canvas.
   the Nov 9 poster look (teal paper, marker lettering, taped cards, Robert as a one-color print, the mark on a badge)
   from the same rows, caption and left-off list, with nothing new for the Monday task to install; the paste-up wall
   is retired.
+- 2026-11-11 — For posting, redone with the mark: the How we ride reel (speed + slices, its five clips and cover) and
+  the Oct 29 end card. Nothing in the repo but these notes; the sources are in the claude.ai project docs.
