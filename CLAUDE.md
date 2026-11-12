@@ -201,12 +201,11 @@ pass brings no new mark, palette or typeface. What he changed is written here; e
   Instagram and Facebook stay as they are (he is archiving most of them).
   The print and social kit moved too (§5): `tools/cfc-kit/` draws the mark from `mark-2027.js`, and the "CFC Phone
   Kit" artifact was republished with every piece redone.
-  The weekly carousel tool (`tools/week-kit/make.py`) draws the mark and the pink family too, so Monday's slides
-  never carry the old logo; its look is still the paste-up.
-- **Not moved yet** (each is its own pass): the weekly carousel's **look** (Robert doesn't like the paste-up, Nov 8; he
-  has a new one in review, the poster version of Nov 9, and the switch of the tool and the Monday task waits on his
-  word); `templates/og/nov7.html` (unused); `kit-handoff/KIT-LOCK.md`; the reels and end cards made before Nov 11
-  (their render scripts are in the claude.ai project). Sections of this file about those still describe the stencil.
+  The weekly carousel tool (`tools/week-kit/make.py`) draws the mark and the pink family too, and its look is the
+  poster since the same day (§5).
+- **Not moved yet** (each is its own pass): `templates/og/nov7.html` (unused); `kit-handoff/KIT-LOCK.md`; the reels and
+  end cards made before Nov 11 (their render scripts are in the claude.ai project). Sections of this file about those
+  still describe the stencil.
 
 ### After Hours palette (token names are old; values are new — keep the names, every page uses them)
 `--bone` concrete #E1DFDB · `--bone-2` #D7D5D0 · `--paper` plaster #EFEDEA · `--dust` patina
@@ -627,8 +626,8 @@ The brand read: `research/brand/2026-10-29-cfc-kit.md` (its six blocks fixed Oct
 ### The weekly ride carousel (`tools/week-kit/`, Nov 3, 2026)
 Robert, sending btwphx's weekly Valley ride round-up: "make something like this but way better and the whole idea is to
 get visits to the website." `python3 tools/week-kit/make.py [--from YYYY-MM-DD] [--skip <slug> …] [--keep <slug> …]` writes into
-`tools/week-kit/.build/out/` (never committed): the feed carousel (1080 × 1350, one wall sliced so it pans as you swipe:
-the cover, a sheet per day, Saturday or any day over nine rows split "Early." / "Less early.", the end card), the Story
+`tools/week-kit/.build/out/` (never committed): the feed carousel (1080 × 1350: the cover, a slide per day, Saturday
+or any day over nine rows split "Early." / "Less early.", the end card), the Story
 frames (1080 × 1920: the week, then one per day, words clear of the top 200 / bottom 330, room for a link sticker under
 "Tap the link."), `caption.txt` and `left-off.txt`. Every sheet ends on `cycleforchange.org/week` (§6, the this-week page).
 - **Monday mornings, Monday to Sunday** (Robert, Nov 3, 2026: "Maybe we should do it for Monday morning"). The default
@@ -651,16 +650,21 @@ frames (1080 × 1920: the week, then one per day, words clear of the top 200 / b
   (calendars), the R.T. O'Sullivan's Tuesday ride (no upcoming date).
 - **His stamps** (`MINE`): "I ride this one." on the Friday Shop Ride (he rides it every Friday), "I wrote this one up."
   on TSR (his write-up on its page). Only rides he's said he rides or wrote up.
-- **The look is Left Field paste-up** (the "We made it." reel's baseline): poured concrete with panel
-  joints and tie holes, day sheets pasted flat (no shadow, the joints show through at 22%), the day on a bruise strip,
-  the date on a lifted-pink strip (the hero's date plate), a halftone print of a Valley road in patina with the count
-  overprinted in pink, a clean, ungraded print of Robert taped on (place · month under it), old "Riding season." scraps
-  at the seams, the mark sprayed through a card on the end card. Crisp edges, no grain, no filters, no arrows (the
-  swipe cue is "Find your day." across the first seam). Photos only from the registry; only Robert recognisable.
-  **Nov 11, 2026:** the mark on the end card is cycle for and its pink plate (`mark_svg()`, from `mark-2027.js`) and the
-  rose family is the site's pink family. The look is otherwise unchanged, and it is on its way out: Robert said on
-  Nov 8 he doesn't like the paste-up and has the Nov 9 poster version in review (the claude.ai project doc
-  "Weekly ride carousel: the new look"). Moving the tool and the Monday task to that look is his call.
+- **The look is the poster** (Nov 11, 2026). Robert, Nov 8: he doesn't like the paste-up wall. Nov 9, sending SLC Fixed's
+  November ride poster: "Can we use some of these elements for design". Nov 11, asked whether to switch Monday's slides
+  to it: "Can you just do it for me". A crumpled teal paper ground with new creases on every slide; one big word
+  across the top in rough marker capitals, drawn as strokes in code, never a font (THIS WEEK, the day, SAVE THIS.); the
+  one-liner on a paper strip ("38 group rides in the Valley. Nov 16–22."); taped paper cards with a header band in the
+  plate's pink and the house `m-group` mark, rows with the name on the left, the time on the right in pink and the
+  facts line under; Robert as a one-color print in bruise ink, cut out of `robert-peace` and cropped to the waist
+  (`tools/week-kit/assets/print-robert-peace.png`, made once by `print.py`, which needs rembg; the Monday run doesn't),
+  on the cover, the end card and any day with three rides or fewer; a waving checkered flag; the mark stacked on a
+  square bruise badge; the link on a paper strip at the foot. Overpass for every word that isn't hand-lettered,
+  sentence case, caps only in the lettering. The teal (44, 104, 113), the paper #F4F2ED and the lettering pink #F4AFC6
+  are this piece's own; the plate pink is the site's. A card that can't hold its rows splits the day again (`parts()`,
+  `day_shots()`), so a busy day never stops the run. Needs Playwright, Pillow and numpy only
+  (`tools/test/kit-mark.test.js`). Photos only from the registry; only Robert recognisable. The paste-up wall (Nov 3
+  to Nov 11) is in git history.
 
 ### Reels — the ride series (Nov 1, 2026; updated Nov 3 to Robert's later calls)
 Robert's first reference was a "liminal" TikTok edit (black field, tiny labels at odd positions, glitch bursts, a word
@@ -1367,3 +1371,7 @@ two exits; the shapes are on the plan canvas.
 - 2026-11-11 — The last two old-logo addresses: `/mark.svg` (the wheel) and `/assets/logo.svg` (the three strokes, with a
   swim, bike, run label) were still served, linked from nowhere. They serve the icon now, written by
   `tools/brand-files.py` with the old share cards' addresses; `tools/test/brand-files.test.js` keeps them current.
+- 2026-11-11 — Monday's ride slides are the poster (Robert: "Can you just do it for me"): `tools/week-kit/make.py` makes
+  the Nov 9 poster look (teal paper, marker lettering, taped cards, Robert as a one-color print, the mark on a badge)
+  from the same rows, caption and left-off list, with nothing new for the Monday task to install; the paste-up wall
+  is retired.
