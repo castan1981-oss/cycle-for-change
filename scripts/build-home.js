@@ -123,7 +123,8 @@ const WIDE_Q = "(min-width: 760px) and (min-aspect-ratio: 1/1)";
 const PHONE_Q = "(max-width: 759px), (max-aspect-ratio: 1/1)";
 const heroRide = `<a class="hero-ride" id="heroRide" href="${esc(RIDE_HREF)}"${NR ? " data-ride-next" : ""}>${NR ? `<span class="ridebar-d">${esc(NR.date)}</span>` : ""}<span class="hero-ride-t"><span class="finder-t">Ride with me</span><span class="finder-s">${NR ? `${esc(NR.name)}, ${esc(NR.where)}` : "The rides I&rsquo;m doing in 2027"}</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>`;
 // The first screen's two gives (Robert, Nov 13, 2026): one tile per ride he has signed up for and is raising money on,
-// dates from the calendar, each straight to that ride's own page. Ride with me sits under them, quieter.
+// dates from the calendar, each straight to that ride's own page. Ride with me sits under them, quieter. Each tile is an
+// answer to the sign over it: the org on the pink plate, the ride, its dates, and a Give strip along the foot.
 const GMON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 function giveDates(slug) {
   const e = CAL && Array.isArray(CAL.events) ? CAL.events.find((x) => x.slug === slug) : null;
@@ -132,8 +133,10 @@ function giveDates(slug) {
   if (a[1] === b[1]) return a[2] === b[2] ? `${GMON[a[1] - 1]} ${a[2]}` : `${GMON[a[1] - 1]} ${a[2]}&ndash;${b[2]}`;
   return `${GMON[a[1] - 1]} ${a[2]}&ndash;${GMON[b[1] - 1]} ${b[2]}`;
 }
-const giveTile = (href, name, org, slug) => `<a class="hero-give-a" href="${href}" target="_blank" rel="noopener noreferrer"><span class="hero-give-k">Give to my</span><span class="hero-give-n">${name}</span><span class="hero-give-s"><span class="hero-give-o">${org}</span>${giveDates(slug) ? `<span class="hero-give-d">${giveDates(slug)}</span>` : ""}</span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>`;
-const heroGive = `<div class="hero-give" role="group" aria-label="Give to one of my rides">${giveTile(CRO_GIVE, "Center Ride Out", "LA LGBT Center", "center-ride-out")}${giveTile(CTZ_GIVE, "Cycle to Zero", "SF AIDS Foundation", "cycle-to-zero")}</div>`;
+const giveTile = (href, name, plate, slug) => `<a class="hero-give-a" href="${href}" target="_blank" rel="noopener noreferrer"><span class="hero-give-p">${plate}</span><span class="hero-give-n">${name}</span>${giveDates(slug) ? `<span class="hero-give-d">${giveDates(slug)}</span>` : ""}<span class="hero-give-go"><span>Give</span><span class="ridebar-go" aria-hidden="true">&rarr;</span></span></a>`;
+// the plate after "cycle for", the same words the 2027 rows carry (FOR, below)
+const FOR_GIVE = { "center-ride-out": "the Center", "cycle-to-zero": "SFAF" };
+const heroGive = `<div class="hero-give" role="group" aria-label="Give to one of my rides">${giveTile(CRO_GIVE, "Center Ride Out", FOR_GIVE["center-ride-out"], "center-ride-out")}${giveTile(CTZ_GIVE, "Cycle to Zero", FOR_GIVE["cycle-to-zero"], "cycle-to-zero")}</div>`;
 const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools/hero-film.py): one frame on a phone, two panels on a wide
      screen (the words sit inside the wide one, the gutter clear of the nav). One primary and the quiet links: Find a group ride, Read the last ride
      when there is one (his newest write-up, never the riding page; CLAUDE.md §3), and Give to my Center Ride Out (Oct 30, 2026: the Instagram
