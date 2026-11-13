@@ -59,6 +59,9 @@ const RIDES_N = RN.rides.toLocaleString("en-US");
 // links), as #ride's primary and as the Center's give link in #orgs. The money goes through the Center's page, never
 // through this site (CLAUDE.md §1). After Apr 25, 2027 it comes off with the #ride rewrite.
 const CRO_GIVE = "https://give.lalgbtcenter.org/fundraiser/7694885";
+// Cycle to Zero (Robert, Nov 13, 2026: signed up Nov 12; "donate to this ride or donate to that ride" on the first screen):
+// his own fundraiser page on SFAF's site, sent the same day.
+const CTZ_GIVE = "https://donate.sfaf.org/fundraiser/7720349";
 const CAL = read("data/calendar-2027.json");
 const CAL_N = CAL && Array.isArray(CAL.events) ? CAL.events.length.toLocaleString("en-US") : "640";
 const TOWNS_N = fs.readdirSync(path.join(ROOT, "data", "towns")).filter((f) => f.endsWith(".json") && !f.startsWith("_")).length;
@@ -119,6 +122,21 @@ const FILM = {
 const WIDE_Q = "(min-width: 760px) and (min-aspect-ratio: 1/1)";
 const PHONE_Q = "(max-width: 759px), (max-aspect-ratio: 1/1)";
 const heroRide = `<a class="hero-ride" id="heroRide" href="${esc(RIDE_HREF)}"${NR ? " data-ride-next" : ""}>${NR ? `<span class="ridebar-d">${esc(NR.date)}</span>` : ""}<span class="hero-ride-t"><span class="finder-t">Ride with me</span><span class="finder-s">${NR ? `${esc(NR.name)}, ${esc(NR.where)}` : "The rides I&rsquo;m doing in 2027"}</span></span><span class="ridebar-go" aria-hidden="true">&rarr;</span></a>`;
+// The first screen's two gives (Robert, Nov 13, 2026): one tile per ride he has signed up for and is raising money on,
+// dates from the calendar, each straight to that ride's own page. Ride with me sits under them, quieter. Each tile is an
+// answer to the sign over it: the org on the pink plate, the ride, its dates, and a Give strip along the foot.
+const GMON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+function giveDates(slug) {
+  const e = CAL && Array.isArray(CAL.events) ? CAL.events.find((x) => x.slug === slug) : null;
+  if (!e || !e.start || e.date_status !== "confirmed") return "";
+  const a = e.start.split("-").map(Number), b = (e.end || e.start).split("-").map(Number);
+  if (a[1] === b[1]) return a[2] === b[2] ? `${GMON[a[1] - 1]} ${a[2]}` : `${GMON[a[1] - 1]} ${a[2]}&ndash;${b[2]}`;
+  return `${GMON[a[1] - 1]} ${a[2]}&ndash;${GMON[b[1] - 1]} ${b[2]}`;
+}
+const giveTile = (href, name, plate, slug) => `<a class="hero-give-a" href="${href}" target="_blank" rel="noopener noreferrer"><span class="hero-give-p">${plate}</span><span class="hero-give-n">${name}</span>${giveDates(slug) ? `<span class="hero-give-d">${giveDates(slug)}</span>` : ""}<span class="hero-give-go"><span>Give</span><span class="ridebar-go" aria-hidden="true">&rarr;</span></span></a>`;
+// the plate after "cycle for", the same words the 2027 rows carry (FOR, below)
+const FOR_GIVE = { "center-ride-out": "the Center", "cycle-to-zero": "SFAF" };
+const heroGive = `<div class="hero-give" role="group" aria-label="Give to one of my rides">${giveTile(CRO_GIVE, "Center Ride Out", FOR_GIVE["center-ride-out"], "center-ride-out")}${giveTile(CTZ_GIVE, "Cycle to Zero", FOR_GIVE["cycle-to-zero"], "cycle-to-zero")}</div>`;
 const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools/hero-film.py): one frame on a phone, two panels on a wide
      screen (the words sit inside the wide one, the gutter clear of the nav). One primary and the quiet links: Find a group ride, Read the last ride
      when there is one (his newest write-up, never the riding page; CLAUDE.md §3), and Give to my Center Ride Out (Oct 30, 2026: the Instagram
@@ -143,9 +161,10 @@ const HERO = `<!-- —— 1. the film. Robert's own footage, cut car-free (tools
   <div class="wrap hero-in">
     <h1 class="hero-h" id="hero-h">${MARK_LINE("hero-mark hero-mark--line", false)}${MARK_STACK("hero-mark hero-mark--stack")}<span class="sr">Cycle for Change</span></h1>
     <p class="hero-cap"><span class="nowrap">10,000 miles.</span> <span class="nowrap">One year.</span> <span class="nowrap">All on the bike.</span></p>
-    <div class="hero-acts">
+    <div class="hero-acts hero-acts--give">
+      ${heroGive}
       ${heroRide}
-      <p class="hero-links"><a class="link link--bone" href="/rides/">Find a group ride</a>${NOTE ? `<a class="link link--bone" href="${esc(NOTE.href)}">Read the last ride</a>` : ""}<a class="link link--bone" href="${CRO_GIVE}" target="_blank" rel="noopener noreferrer">Give to my Center Ride Out</a></p>
+      <p class="hero-links"><a class="link link--bone" href="/rides/">Find a group ride</a>${NOTE ? `<a class="link link--bone" href="${esc(NOTE.href)}">Read the last ride</a>` : ""}</p>
     </div>
   </div>
   <button class="hero-pause" id="heroPause" type="button" hidden><svg class="hp-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg><svg class="hp-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2v13.6L19 12z"/></svg><span class="hp-label">Pause the film</span></button>
@@ -367,12 +386,6 @@ const ORGS_S = `<!-- —— 6. the orgs. One line each from the site's checked c
     <div class="orgs-head"><h2 class="orgs-h" id="orgs-h">The orgs I ride for.</h2><p class="orgs-lede">You sign up or give on their page. None of it comes through me.</p></div>
     <div class="orgs-list">
       <article class="org">
-        <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkPhx"/></svg>
-        <h3 class="org-h">one&middot;n&middot;ten</h3>
-        <p>Phoenix nonprofit for LGBTQ+ youth ages 11 to 24. Safe spaces, housing, leadership.</p>
-        <p class="org-acts"><a class="link" href="https://onenten.org" target="_blank" rel="noopener noreferrer">Give to one&middot;n&middot;ten</a></p>
-      </article>
-      <article class="org">
         <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkOjai"/></svg>
         <h3 class="org-h">Los Angeles LGBT Center</h3>
         <p>Health, housing and advocacy for LGBTQ+ people.</p>
@@ -382,7 +395,7 @@ const ORGS_S = `<!-- —— 6. the orgs. One line each from the site's checked c
         <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkSF"/></svg>
         <h3 class="org-h">San Francisco AIDS Foundation</h3>
         <p>HIV, sexual health and <span class="nowrap">harm-reduction</span> services.</p>
-        <p class="org-acts"><a class="link" href="https://www.sfaf.org" target="_blank" rel="noopener noreferrer">Give to SFAF</a></p>
+        <p class="org-acts"><a class="link" href="${CTZ_GIVE}" target="_blank" rel="noopener noreferrer">Give to SFAF</a></p>
       </article>
     </div>
     <p class="orgs-door">You don&rsquo;t have to be queer to ride with me. The rides raise money for <span class="nowrap">queer-serving</span> orgs. That&rsquo;s the point.</p>
@@ -507,7 +520,7 @@ const page = `<!doctype html>
     "url": "https://cycleforchange.org/",
     "logo": "https://cycleforchange.org/favicon-512.png",
     "sameAs": ["https://www.instagram.com/cycl_eforchange", "https://www.strava.com/athletes/22899089"],
-    "description": "One rider, Robert Castan, in Phoenix, riding 10,000 miles on a bicycle in 2027. Every ride gets a stroke on cycleforchange.org; the big ones get a page. The rides raise money for queer-serving organizations (one·n·ten, the Los Angeles LGBT Center and San Francisco AIDS Foundation) through their own events, like the Center Ride Out and Cycle to Zero. The site also holds a directory of group rides, a 2027 ride calendar and town guides."
+    "description": "One rider, Robert Castan, in Phoenix, riding 10,000 miles on a bicycle in 2027. Every ride gets a stroke on cycleforchange.org; the big ones get a page. The rides raise money for queer-serving organizations (the Los Angeles LGBT Center and San Francisco AIDS Foundation) through their own events, like the Center Ride Out and Cycle to Zero. The site also holds a directory of group rides, a 2027 ride calendar and town guides."
   }
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Cycle for Change","alternateName":"cycleforchange.org","url":"https://cycleforchange.org/"}</script>
