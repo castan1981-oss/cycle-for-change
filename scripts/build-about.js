@@ -238,7 +238,6 @@ function tenRoom(sec) {
 
 // —— mission: his words beside the head, then the orgs as a roll call ——
 const ORGS = [
-  { name: "one&middot;n&middot;ten", line: "Phoenix nonprofit for LGBTQ+ youth ages 11 to 24. Safe spaces, housing, leadership.", acts: [["https://onenten.org", "Give to one&middot;n&middot;ten"]] },
   { name: "Los Angeles LGBT Center", line: "Health, housing and advocacy for LGBTQ+ people.", acts: [["https://centerrideout.lalgbtcenter.org/en/", "Sign up with the Center"], ["https://www.lalgbtcenter.org", "Give to the Center"]] },
   { name: "San Francisco AIDS Foundation", line: "HIV, sexual health and <span class=\"nowrap\">harm-reduction</span> services.", acts: [["https://www.sfaf.org", "Give to SFAF"]] },
 ];
