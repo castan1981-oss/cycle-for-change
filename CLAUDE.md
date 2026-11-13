@@ -1386,5 +1386,5 @@ two exits; the shapes are on the plan canvas.
   comes off, "I don't want people to donate to them unless they have a ride"): two plaster tiles in the hero, Give to my Center
   Ride Out and Give to my Cycle to Zero (dates from the calendar, `giveTile()` in build-home.js), Ride with me under them as a
   clear tile, then Find a group ride and Read the last ride. one·n·ten is off the homepage's orgs (now two), `/about/`'s roll
-  call and llms.txt; his own line on `/cyclefor/` is left as he wrote it. `CTZ_GIVE` is SFAF's ride page until Robert sends
-  his own Cycle to Zero fundraiser page: swap it before this goes live. `CSS_V` 63. Staged as a preview PR.
+  call and llms.txt; his own line on `/cyclefor/` is left as he wrote it. `CTZ_GIVE` is his own Cycle to Zero fundraiser page
+  (donate.sfaf.org/fundraiser/7720349, sent the same day), on the hero tile, `#orgs` and the riding page's Cycle to Zero row. `CSS_V` 63. Staged as a preview PR.

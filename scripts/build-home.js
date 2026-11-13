@@ -59,9 +59,9 @@ const RIDES_N = RN.rides.toLocaleString("en-US");
 // links), as #ride's primary and as the Center's give link in #orgs. The money goes through the Center's page, never
 // through this site (CLAUDE.md §1). After Apr 25, 2027 it comes off with the #ride rewrite.
 const CRO_GIVE = "https://give.lalgbtcenter.org/fundraiser/7694885";
-// Cycle to Zero (Robert, Nov 13, 2026: signed up Nov 12; "donate to this ride or donate to that ride" on the first screen).
-// UNTIL HE SENDS HIS OWN FUNDRAISER PAGE this is SFAF's page for the ride: swap in his page before this goes live.
-const CTZ_GIVE = "https://www.sfaf.org/get-involved/cycle-to-zero/";
+// Cycle to Zero (Robert, Nov 13, 2026: signed up Nov 12; "donate to this ride or donate to that ride" on the first screen):
+// his own fundraiser page on SFAF's site, sent the same day.
+const CTZ_GIVE = "https://donate.sfaf.org/fundraiser/7720349";
 const CAL = read("data/calendar-2027.json");
 const CAL_N = CAL && Array.isArray(CAL.events) ? CAL.events.length.toLocaleString("en-US") : "640";
 const TOWNS_N = fs.readdirSync(path.join(ROOT, "data", "towns")).filter((f) => f.endsWith(".json") && !f.startsWith("_")).length;

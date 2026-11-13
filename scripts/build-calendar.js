@@ -415,7 +415,7 @@ const DEEP_URL = (() => { try { const d = JSON.parse(fs.readFileSync(path.join(R
 // opened panel's town strip carries it). On Robert's own list (`mine`) the row has no "Robert's ride" tag (the page is
 // his list) and its links come first in the opened row, above the facts: Ride with me lands on an open row there.
 // Robert's own fundraiser page for an org ride (Oct 30, 2026), first in the opened row on his list (the riding page)
-const GIVE = { "center-ride-out": "https://give.lalgbtcenter.org/fundraiser/7694885" };
+const GIVE = { "center-ride-out": "https://give.lalgbtcenter.org/fundraiser/7694885", "cycle-to-zero": "https://donate.sfaf.org/fundraiser/7720349" };
 function eventHtml(e, { light = false, mine = false } = {}) {
   const meta = [`<b>${esc(place(e))}</b>`, esc(e.category.toLowerCase())];
   if (e.cause) meta.push(esc(e.cause));
