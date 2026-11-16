@@ -773,6 +773,28 @@ explained" keeps its name: it's about charity rides in general, not this site.
   listed on Robert's own word (he rides it every Friday, Oct 8, 2026) and linked from the card (`ride_slug`,
   shown as "The shop ride"). The owner, Kale Keltz, sends changes through "I run this ride" on the ride page.
 
+- **Just ask** (Nov 15, 2026; Robert, on the Ojai pilot: "I like just ask"): a town that sets `ask: true` gets a question
+  box under its tagline ("Ask about Ojai"). It answers from that guide's own places, the facts on their cards and its
+  `faq`, matched in the browser (`cfc-site/events/ask.js`, data in the page as `#askData`, `askBlock()` in
+  build-events.js). Nothing is sent anywhere and nothing typed is tracked; the line under the box says so, keep it
+  true. No script: the tries are links to the guide's pages. Crisis words show 988 and the Trevor Project first. It
+  never writes an answer of its own: an AI-written answer needs a function on the site's key with a spending cap,
+  which is Robert's call and isn't built. Ojai only for now. Tests: `tools/test/town-ask.test.js`; bump `ASK_V` when
+  ask.js changes.
+- **A small town sets its reach** (`radius`, miles; Ojai is 8): the 25-mile lookup would have put Ojai's guide on
+  Ventura's ride pages.
+
+### Event pages (`/events/<slug>/`): the line (Nov 15, 2026)
+- Robert, on the Ojai pilot: "I like just ask but also the line, yes let's build this." A multi-day event lists its
+  stops in order (`line` in `data/events/<slug>.json`, `lineBlock()` in build-events.js): "The route, stop by stop",
+  a numbered square and a fold per stop with when you're there and, where the stop has a town guide, that guide's
+  pages with the strip's own counts. A leg between stops is a line of text. Only what the organizer published; a
+  stop with no guide says so by having no links. Never a drawn route (§6). Works without script.
+- **Center Ride Out is an event page now** (`/events/center-ride-out/`, the first with a line: Los Angeles, Ojai, the
+  coast near Santa Monica). `/guides/center-ride-out/` 301s to it (growth plan, Phase 3 action 6). The camp's
+  location isn't published: never name or guess it. After the Center posts routes, the finish and the camp, re-read
+  and update the event file and the line.
+
 ### 2027 calendar (`/events/2027/`)
 - `data/calendar-2027.json` (600+ US rides and races) → `node scripts/build-calendar.js`. Schema in
   `data/SCHEMA.md` ("2027 calendar"). Edit the JSON, run the build, commit both.
@@ -1388,3 +1410,8 @@ two exits; the shapes are on the plan canvas.
   clear tile, then Find a group ride and Read the last ride. one·n·ten is off the homepage's orgs (now two), `/about/`'s roll
   call and llms.txt; his own line on `/cyclefor/` is left as he wrote it. `CTZ_GIVE` is his own Cycle to Zero fundraiser page
   (donate.sfaf.org/fundraiser/7720349, sent the same day), on the hero tile, `#orgs` and the riding page's Cycle to Zero row. `CSS_V` 63. Staged as a preview PR.
+- 2026-11-15 — The Ojai pilot (Robert: "I like just ask but also the line, yes let's build this"): the Ojai town guide
+  (`/towns/california/ojai/`, every place read at its own page), Just ask on it, Center Ride Out moved from a guide to
+  the event template with the first route line, and a town's own `radius`. Search Console's read behind it (town
+  pages: 405 impressions, 0 clicks in 90 days; the bike-specific questions rank, the plain ones don't) is in the
+  claude.ai project doc "ojai-pilot-town-traffic-nov-15-2026".

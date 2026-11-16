@@ -241,6 +241,19 @@
 # The coming-soon gate is gone: /field-notes, /guides, /resources and /journal
 # are served again. Real files win; anything else gets cfc-site/404.html.
 
+# —— Nov 15, 2026: Center Ride Out moved from a guide to the event template (growth plan, Phase 3 action 6). ——
+[[redirects]]
+  from = "/guides/center-ride-out"
+  to = "/events/center-ride-out/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/center-ride-out/*"
+  to = "/events/center-ride-out/"
+  status = 301
+  force = true
+
 # —— Pass 26 (Oct 5, 2026): the pledge is gone. /pledge/ goes home. ——
 [[redirects]]
   from = "/pledge"

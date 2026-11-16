@@ -288,6 +288,12 @@ for (const e of events) {
   e.lat = e.start_lat != null ? e.start_lat : t.lat;
   e.lon = e.start_lon != null ? e.start_lon : t.lon;
   t.events.push(e);
+  // The line (Nov 15, 2026): a multi-day event's stops, in order. A stop names a town guide by id or carries none.
+  (e.line || []).forEach((s, i) => {
+    if (s.leg) return;
+    if (!s.name) throw new Error(`events/${e.slug}.line[${i}] has no name`);
+    if (s.town && !townById[s.town]) throw new Error(`events/${e.slug}.line[${i}] references unknown town ${s.town}`);
+  });
 }
 
 const states = {};
@@ -418,6 +424,42 @@ function readyBlock(e) {
       <ul class="ev-ready-list">${keys.map((k) => `<li><a href="${G[k][0]}">${esc(G[k][1])}</a></li>`).join("")}</ul>
     </section>`;
 }
+// The line (Nov 15, 2026; Robert, on the Ojai pilot: "I like just ask but also the line, yes let's build this"): the
+// route is the menu. A multi-day event lists its stops in order (`line` in data/events/<slug>.json, data/SCHEMA.md);
+// each stop is a fold with when you're there and, where the stop has a town guide, that guide's own pages with the
+// strip's own counts (TOWNS.PAGES). A leg between two stops is a line of text. No map: never a route we drew (§6).
+// Works without script. The stop with a guide that isn't the event's start opens by itself, so the page is whole at rest.
+function lineBlock(e) {
+  if (!e.line || !e.line.length) return "";
+  let n = 0;
+  const items = e.line.map((s) => {
+    if (s.leg) return `        <li class="ev-leg"><span>${esc(s.leg)}</span>${s.when ? `<span class="ev-leg-when">${esc(s.when)}</span>` : ""}</li>`;
+    n += 1;
+    const t = s.town ? TOWNS.load().find((x) => x.id === s.town) : null;
+    const pages = t ? `
+            <ul class="ev-stop-pages">
+${t.pages.map((p) => `              <li><a href="${t.url}${p.seg}/">${mark(p.mark)}<b>${esc(p.k)}</b><span>${esc(p.s(p.key === "bring_your_bike" ? null : (t[p.key] || []).length, t))}</span></a></li>`).join("\n")}
+            </ul>
+            <p class="town-more">${TOWNS.link(t, `The ${esc(t.name)} town guide`)}</p>` : "";
+    return `        <li class="ev-stop">
+          <details class="dir-fold"${t && s.town !== e.town ? " open" : ""}>
+            <summary><span class="ev-stop-head"><span class="ev-stop-n num">${n}</span><span class="ev-stop-name">${esc(s.name)}</span></span></summary>
+            <div class="ev-stop-body">
+            ${s.when ? `<p class="ev-stop-when">${esc(s.when)}</p>` : ""}
+            ${s.note ? `<p>${esc(s.note)}</p>` : ""}${pages}
+            </div>
+          </details>
+        </li>`;
+  }).join("\n");
+  return `<section class="ev-line" aria-labelledby="line-h">
+      <h2 id="line-h">The route, stop by stop</h2>
+      <p class="mute">Tap a stop for where to sleep, eat and fix the bike there.</p>
+      <ol class="ev-line-list">
+${items}
+      </ol>
+    </section>`;
+}
+
 function eventPage(e) {
   const t = e.townRef;
   const when = e.next_date ? fmtRange(e.next_date, e.end_date) : null;
@@ -514,6 +556,8 @@ function eventPage(e) {
       ["Organizer", e.organizer && e.organizer.name ? (e.organizer.url ? `<a href="${attr(e.organizer.url)}" rel="noopener">${esc(e.organizer.name)}</a>` : esc(e.organizer.name)) : null],
     ])}
 
+    ${lineBlock(e)}
+
     ${e.history && e.history.length ? `<section><h2>How the ${esc(e.name)} started</h2>${paras(e.history)}</section>` : ""}
     ${e.what_to_expect && e.what_to_expect.length ? `<section><h2>What to expect on the day</h2>${paras(e.what_to_expect)}</section>` : ""}
     ${readyBlock(e)}
@@ -601,6 +645,60 @@ function townReady(t) {
   const line = keys.map((k) => `<a href="${G[k][0]}">${esc(G[k][1])}</a>`).join(" &middot; ");
   return DESERT.test(t.state_code) ? `Goathead country. ${line}.` : `${line}.`;
 }
+// Just ask (Nov 15, 2026; Robert, on the Ojai pilot: "I like just ask"): a question box on a town guide that sets `ask`.
+// It answers from the guide's own checked facts and nowhere else: the places, the facts on their cards and the guide's
+// questions go into the page as #askData, and /events/ask.js matches the question to them in the browser. Nothing is
+// sent anywhere. No script: the tries are plain links to the guide's pages. Tests: tools/test/town-ask.test.js.
+const ASK_V = 1;
+const ASK_TRIES = [
+  ["coffee", "Where can I get coffee early?"],
+  ["hotels", "Where can I stay with a bike?"],
+  ["bike-shops", "Who can fix my bike?"],
+  ["routes", "What should I ride?"],
+  ["culture", "What is there to do off the bike?"],
+  ["bring-your-bike", "How do I get my bike there?"],
+];
+const NO_POLICY = /^no stated policy/i;
+function askData(t) {
+  const W = `towns/${t.id}`;
+  const pages = guidePages(t).map((r) => { const P = TOWNS.PAGES.find((x) => x.seg === r.seg); return stripUndef({ s: r.seg, k: P.k, b: P.b(t), c: count(t, r) || undefined }); });
+  const places = [];
+  for (const r of guidePages(t)) {
+    if (r.key === "bring_your_bike") continue;
+    (t[r.key] || []).forEach((it) => {
+      const [lead] = it.line ? [it.line] : splitLead(it.description || it.note);
+      places.push(stripUndef({
+        s: r.seg, n: it.name, l: lead ? plain(lead, W) : undefined,
+        h: it.hours_hint || undefined,
+        b: it.bike_policy && !NO_POLICY.test(it.bike_policy) ? plain(it.bike_policy, W) : undefined,
+        f: [it.cuisine, it.kind, it.type, it.surface, it.price_hint, ...(it.services || [])].filter(Boolean),
+      }));
+    });
+  }
+  const faq = (t.faq || []).map((f) => ({ q: plain(f.q, W), a: plain(f.a, W) }));
+  return { url: t.url, town: t.name, pages, places, faq };
+}
+function askBlock(t) {
+  if (!t.ask) return "";
+  const have = new Set(guidePages(t).map((r) => r.seg));
+  const tries = ASK_TRIES.filter(([seg]) => have.has(seg));
+  return `<section class="town-ask" data-ask aria-labelledby="ask-h">
+      <h2 id="ask-h">Ask about ${esc(t.name)}</h2>
+      <form class="ask-form" role="search" action="${t.url}" method="get">
+        <label class="visually-hidden" for="askq">Your question about ${esc(t.name)}</label>
+        <input class="field" id="askq" name="q" type="search" autocomplete="off" enterkeyhint="search" placeholder="Is there coffee before 7?">
+        <button class="btn btn--ink" type="submit">Ask</button>
+      </form>
+      <ul class="ask-tries" aria-label="Try one">
+${tries.map(([seg, q]) => `        <li><a href="${t.url}${seg}/" data-q="${attr(q)}">${esc(q)}</a></li>`).join("\n")}
+      </ul>
+      <div class="ask-out" aria-live="polite" hidden></div>
+      <p class="mute ask-note">Answers come from this guide&rsquo;s own checked places and nowhere else. What you type stays on your phone.</p>
+      <script type="application/json" id="askData">${JSON.stringify(askData(t)).replace(/</g, "\\u003c")}</script>
+      <script src="/events/ask.js?v=${ASK_V}" defer></script>
+    </section>`;
+}
+
 function townPage(t) {
   const dest = t.kind === "destination";
   // Oct 4, 2026 (search pass): titles under 60 characters with the suffix, the query in the title and the h1
@@ -657,6 +755,8 @@ function townPage(t) {
     <p class="eyebrow">${esc(t.county ? t.county + " · " : "")}${esc(t.state)}${t.elevation_ft ? ` · ${Number(t.elevation_ft).toLocaleString("en-US")} ft` : ""}</p>
     <h1>${dest ? `Cycling in ${esc(t.name)}` : `${esc(t.name)}, ${esc(t.state)}`}</h1>
     ${t.tagline ? `<p class="tagline">${esc(t.tagline)}</p>` : ""}
+
+    ${askBlock(t)}
 
     <nav class="res-grid" aria-label="${dest ? "The guide" : "Travel resources"}">
       ${pages.map((r) => { const [k, b, s] = CARD[r.seg](count(t, r)); return `<a class="res-card" href="${t.url}${r.seg}/">${mark(MARK_SEG[r.seg], "mk mk--res")}<span class="res-k">${esc(k)}</span><b>${esc(b)}</b><span>${esc(s)}</span></a>`; }).join("\n      ")}
@@ -1239,7 +1339,7 @@ ${map ? `<script src="/rides/map.js" defer></script>` : ""}
 // Clear stale output first. Everything under events/ and towns/ is generated
 // except events.css, events.js and 2027/ (the calendar, owned by
 // scripts/build-calendar.js, holds hand-written calendar.css and calendar.js).
-const KEEP = new Set(["events.css", "events.js", "report.js", "2027"]);
+const KEEP = new Set(["events.css", "events.js", "report.js", "ask.js", "2027"]);
 const evDir = path.join(OUT, "events");
 if (fs.existsSync(evDir)) for (const f of fs.readdirSync(evDir)) if (!KEEP.has(f)) fs.rmSync(path.join(evDir, f), { recursive: true, force: true });
 // towns/art/ is drawn by tools/contour-art.js and survives the rebuild
