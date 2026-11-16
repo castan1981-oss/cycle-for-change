@@ -123,7 +123,8 @@ function find({ city, state, lat, lng, lon } = {}) {
     for (const t of towns) {
       if (t.kind !== "destination") continue;
       const d = miles({ lat: y, lon: x }, { lat: t.lat, lon: t.lon });
-      if (d <= d0) { best = t; d0 = d; }
+      // Nov 15, 2026: a small town sets its own reach (`radius`, miles), so Ojai's guide doesn't land on Ventura's rides 12 miles off
+      if (d <= d0 && d <= (typeof t.radius === "number" ? t.radius : RADIUS)) { best = t; d0 = d; }
     }
     if (best) return best;
   }
