@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "hayward-ca-bike-east-bay-bike-hayward-wednesday-rides",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "Bike East Bay's event page at the watch URL says 'This event has passed' — the series ran Sep 23 to Oct 14, 2026 as a fixed program. The group rides calendar and the full events calendar (fetched Nov 16, 2026) show no new instances of weekly Bike Hayward Wednesday rides through December 2026. The only Hayward ride listed is the unrelated monthly 'Wayward in Hayward' on 3rd Wednesdays."
+  },
+  {
+    "slug": "henrico-va-contes-richmond-sunday-brunch-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The ICS feed (fetched Nov 16, 2026) shows the Sunday Brunch series with RRULE UNTIL=20261027 — the host explicitly ended the series Oct 27, 2026. The Conte's rides page no longer shows any Richmond ride details. No 2027 edition has been posted. The shop is still active; the 2026 season ran May 31 to Oct 27."
+  },
+  {
+    "slug": "holliston-ma-blackstone-valley-nemba-thursday-vietnam-intermediate-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "NEMBA's Blackstone Valley chapter page lists the Vietnam Intermediate Group Ride (With Lights) as a recurring event next scheduled Thu Nov 19, 2026, 5:30-8pm, Adams St. Parking Lot, Holliston, MA — same details as before (fetched Nov 16, 2026).",
+    "sources": ["https://www.nemba.org/chapters/blackstone-valley-nemba"]
+  },
+  {
+    "slug": "houston-tx-bikehouston-first-sunday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "BikeHouston's events page and the Dec 2026 event page show the First Sunday Ride for Dec 6, 2026 at 8:00 AM at Market Square Park, 301 Milam St, Houston; location changes monthly as the record notes (fetched Nov 16, 2026).",
+    "sources": ["https://www.bikehouston.org/events", "https://www.bikehouston.org/events/first-sunday-ride-dec-2026"]
+  },
+  {
+    "slug": "huntington-beach-ca-hb-velo-coffee-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "hbvelocyclery.net returns 403 on all fetches (bot wall, 7 consecutive weekly fails). WebFetch also returns 403. The Facebook page (https://www.facebook.com/HBVeloCyclery/) posts current changes per the shop's own note; the shop phone is (714) 587-9043."
+  },
+  {
+    "slug": "huntington-beach-ca-hb-velo-sunday-shop-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "hbvelocyclery.net returns 403 on all fetches (bot wall, 7 consecutive weekly fails). WebFetch also returns 403. The Facebook page (https://www.facebook.com/HBVeloCyclery/) posts current changes per the shop's own note; the shop phone is (714) 587-9043."
+  },
+  {
+    "slug": "huntington-beach-ca-oc-velo-sunday-turtle-rock-loop",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "OC Velo's rides page lists the Saturday Nov 21, 2026 club rides and states 'Sunday - Irvine Turtle Rock Loop at 8:00am - Pace can vary' among the ongoing weekly rides from Huntington Beach Pier (fetched Nov 16, 2026).",
+    "sources": ["https://www.ocvelo.com/ocvelo-rides.html"]
+  },
+  {
+    "slug": "hyannis-ma-sea-sports-coffee-cruise",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "Sea Sports' group rides page still lists 'Saturdays - Coffee Cruise Road Ride · Ride rolls at Rolling 7:30am!' at 16-18 mph for approximately 20-30 miles; the page shows updated 2026 content including a new Wednesday Night Lights ride starting Oct 28 (fetched Nov 16, 2026).",
+    "sources": ["https://www.capecodseasports.com/about/group-rides-clubs-and-community-pg85.htm"]
+  }
+]

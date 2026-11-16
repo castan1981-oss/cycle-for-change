@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "cold-spring-ky-cincinnati-cycle-club-aterhamtning-thursday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "Återhämtning's ride does not appear in the Cincinnati Cycle Club's calendar for November or December 2026; the last listed occurrence was Thu Oct 29, 2026 at 5:45 PM. All Thursday slots in November and December show the WSIM Woolies Tomb Ride instead. Check cincinnaticycleclub.org/content.aspx?page_id=4001&club_id=772752&action=cira&vm=Future&sif=0 in spring for the resumption date."
+  },
+  {
+    "slug": "columbus-oh-thursday-night-central-columbus-metro-parks-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The specific Outdoor Pursuits event page (mc_id=5453) now returns 404; the ride description page (outdoor-pursuits.org/?p=3853) still exists but shows Sep 17, 2026 as its date. No Thursday events appear in Outdoor Pursuits' weekly-training-rides calendar for the week of Nov 16, 2026. Other Columbus Thursday evening rides at Outdoor Pursuits run April through October. Check outdoor-pursuits.org/weekly-training-rides/ in spring."
+  },
+  {
+    "slug": "conroe-tx-race-ready-repair-thursday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The Thursday Night Ride section was removed from Race Ready Repair's shop-rides page as of Oct 26, 2026; only the Saturday Morning Ride now appears. Bike The Woodlands describes it as a seasonal ride. Check racereadyrepair.com/shop-rides or the shop Facebook at facebook.com/RaceReadyRepair for a return date; call the shop at (936) 499-7941."
+  },
+  {
+    "slug": "costa-mesa-ca-the-unlikely-cyclist-wednesday-womens-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The outdoor Wednesday Women's Group Ride last ran Sep 30, 2026; every Wednesday through mid-December 2026 is now a TUC ZWIFT indoor meetup at 5:45 PM. The Saturday outdoor Women's Group Ride continues. No future outdoor Wednesday ride is posted. Check theunlikelycyclist.com/new-events in spring for the outdoor Wednesday ride to resume."
+  },
+  {
+    "slug": "dallas-tx-dbc-second-saturday-coffee-social-and-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "dallasbicyclecoalition.org/social-rides/ returns 403 on every watcher run; an Action Network listing confirms the ride ran Sep 12, 2026 at 9:00 am (summer schedule). November 2026 dates could not be found. Check the DBC's Action Network group (actionnetwork.org/groups/dallas-bicycle-coalition) or Instagram @dallasbicyclecoalition for the November and December dates."
+  },
+  {
+    "slug": "dallas-tx-gdb-sunday-roll",
+    "outcome": "changed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "Greater Dallas Bicyclists' Meetup ICS feed lists GDB Sunday Roll for Sun Nov 22 and Nov 29, 2026 at 9:00 am (fetched Nov 16, 2026).",
+    "sources": ["https://www.meetup.com/greater-dallas-bicyclists/events/ical/"],
+    "changes": {
+      "schedule": "Every Sunday, 9:00 am. The route changes weekly. Optional lunch after.",
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00"
+    }
+  },
+  {
+    "slug": "dallas-tx-make-the-healthy-choice-community-bike-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "makethc.org/activities lists Group Bike Ride (Runyon Creek Trail, Glendale Park) on Sat Nov 28, 2026 at 10:00 am (fetched Nov 16, 2026).",
+    "sources": ["https://www.makethc.org/activities"],
+    "changes": {
+      "schedule": "About every two weeks, 10:00 am, on a Saturday or Sunday. Each ride is posted as its own event; check makethc.org/activities for the current date and start.",
+      "time_local": "10:00 am",
+      "start_hhmm": "10:00",
+      "refresh": {
+        "watch_url": "https://www.makethc.org/activities"
+      }
+    }
+  },
+  {
+    "slug": "dallas-tx-the-meteor-womens-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "dallasbicyclecoalition.org/social-rides/ (the main source) returns 403; The Meteor's events page (themeteorcafe.com/events) returned 404. No November 2026 Women's Ride schedule for The Meteor Dallas found via web search. Check The Meteor Dallas directly at 1950 Hi Line Dr, Dallas or on the DBC social-rides page when it becomes accessible."
+  }
+]

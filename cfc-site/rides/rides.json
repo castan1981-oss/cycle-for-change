@@ -3154,12 +3154,12 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Every Thursday, 8:30 am from the Little Rock side of the Big Dam Bridge",
+  "schedule": "Every Thursday, 9:00 am from the Little Rock side of the Big Dam Bridge",
   "days": [
    "thu"
   ],
-  "time_local": "8:30 am",
-  "start_hhmm": "08:30",
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -3201,9 +3201,9 @@
    "https://arkansasbicycleclub.org/Standing-Rides-(every-week)",
    "https://arkansasbicycleclub.org/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Arkansas Bicycle Club's Standing Rides page lists the Thursday ride at 8:30 am from the Big Dam Bridge (Little Rock side); the club's home page (fetched Oct 1, 2026) shows upcoming events on Oct 3 and Oct 10, 2026. The City of Little Rock's list shows the same ride at 9:00 am.",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Arkansas Bicycle Club's Standing Rides page lists Thursday at 9:00 am from the Little Rock side of the Big Dam Bridge (fetched Nov 16, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -3232,12 +3232,12 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Every Tuesday, 8:30 am from the Little Rock side of the Big Dam Bridge",
+  "schedule": "Every Tuesday, 9:00 am from the Little Rock side of the Big Dam Bridge",
   "days": [
    "tue"
   ],
-  "time_local": "8:30 am",
-  "start_hhmm": "08:30",
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -3279,9 +3279,9 @@
    "https://arkansasbicycleclub.org/Standing-Rides-(every-week)",
    "https://arkansasbicycleclub.org/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Arkansas Bicycle Club's Standing Rides page lists the Tuesday ride at 8:30 am from the Big Dam Bridge (Little Rock side); the club's home page (fetched Oct 1, 2026) shows upcoming events on Oct 3 and Oct 10, 2026. The City of Little Rock's list shows the same ride at 9:00 am.",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Arkansas Bicycle Club's Standing Rides page lists Tuesday at 9:00 am from the Little Rock side of the Big Dam Bridge (fetched Nov 16, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -5263,15 +5263,15 @@
    "road",
    "social"
   ],
-  "schedule": "Every other Sunday, 6:30 am, from Rio Vista Community Park. Next rides: Oct 11 and Oct 25, 2026. About 10 miles out to a Carls Jr for breakfast, then 10 back. It alternates Sundays with the Bear Claw Ride.",
+  "schedule": "Every other Sunday, 7:30 am, from Rio Vista Community Park. About 10 miles to a Carl's Jr for breakfast, then 10 back. Alternates Sundays with the Bear Claw Ride.",
   "days": [
    "sun"
   ],
-  "time_local": "6:30 am",
-  "start_hhmm": "06:30",
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
   "frequency": "biweekly",
   "monthly_rule": null,
-  "season": "Meetup series runs to Jan 2, 2027",
+  "season": null,
   "season_months": null,
   "start_location": {
    "name": "Rio Vista Community Park",
@@ -5309,16 +5309,17 @@
    "no-drop"
   ],
   "sources": [
-   "https://www.meetup.com/west-valley-casual-bike-rides/events/"
+   "https://www.meetup.com/west-valley-casual-bike-rides/events/",
+   "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/"
   ],
-  "verified_on": "2026-09-30",
-  "last_seen": "2026-09-27",
-  "evidence": "The group's Meetup events page lists the Sun Sept 27 Stadium Ride as past (7 RSVPs) and the next two, Sun Oct 11 and Sun Oct 25, at 6:30 am from Rio Vista Community Park (fetched Sept 30, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "The group's Meetup ICS feed lists the Stadium Ride on Sun Nov 22, 2026 at 7:30 am (20261122T073000); three consecutive watcher flags (Oct 25, Nov 8, Nov 22) have all shown 7:30 am against our listed 6:30 am (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
    "watch_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/",
-   "feed_url": null,
+   "feed_url": "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/",
    "notes": "The group's feed holds only the next ten events for the whole group, so this ride shows up there about a week ahead. Use the events page."
   }
  },
@@ -11910,9 +11911,9 @@
    "https://marincyclists.com/content.aspx?page_id=4001&club_id=525458",
    "https://marincyclists.com/content.aspx?page_id=4091&club_id=525458&item_id=3058093"
   ],
-  "verified_on": "2026-11-09",
-  "last_seen": "2026-11-04",
-  "evidence": "Marin Cyclists' calendar (fetched Nov 9, 2026) lists China Camp Loop on Nov 4, 11, 18 and 25, 2026 at 9:00 AM, 27 miles, Social Pace, +1,500 ft.",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Marin Cyclists' calendar (fetched Nov 16, 2026) lists China Camp Loop at 9:00 am on Nov 4, 11, 18, 25 and Dec 2; the CANCELED label near the ride dates is for Fridays on Paradise (a different ride on a different day).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -13393,9 +13394,9 @@
    "https://bikehikers.clubexpress.com/content.aspx?page_id=4091&club_id=216251&item_id=3088682",
    "https://bikehikers.clubexpress.com/content.aspx?page_id=4001&club_id=216251"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "The Sacramento Bike Hikers calendar lists EZ Rider 20D-, 26D-, 31D- on Tue Oct 6, 2026 at 9:00 am from Gold River Town Center, after a Tuesday AM Ride at 10:00 am on Sept 29 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-10",
+  "evidence": "Sacramento Bike Hikers' November 2026 calendar lists 'EZ Rider 20D-, 26D-, 31D-(SM)' on Nov 10 without cancellation (Nov 3 was specifically canceled for Election Day); the event description page confirms the same route and Gold River Town Center start (fetched Nov 16, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "calendar-page",
@@ -13937,9 +13938,9 @@
   "sources": [
    "https://www.ocvelo.com/ocvelo-rides.html"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "The club's rides page, which lists Saturday Oct 3, 2026, also lists \"Sunday - Irvine Turtle Rock Loop at 8:00am\" among the Sunday and weekday rides from Huntington Beach Pier (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "OC Velo's rides page lists the Saturday Nov 21, 2026 club rides and states 'Sunday - Irvine Turtle Rock Loop at 8:00am - Pace can vary' among the ongoing weekly rides from Huntington Beach Pier (fetched Nov 16, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -14016,9 +14017,9 @@
    "https://www.bikeirvine.org/",
    "https://www.bikeirvine.org/rides-events?category=Saturday%20Rides"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "The club's calendar lists Saturday Rides at 9:00 am from Deerfield Park for Oct 10, 17 and 24, 2026, and the 1st Saturday Jersey Day Rides at 9:00 am on Oct 3 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "BCI's calendar lists Saturday Rides (#38) for Nov 21 and Saturday Rides (#31+) for Nov 28, both at 9:00 am from Deerfield Park (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -14091,11 +14092,12 @@
   "sources": [
    "http://www.bikeirvine.org/rides-events/2026/10/1",
    "https://www.bikeirvine.org/rides-events?category=Thursday%20Rides",
-   "http://www.bikeirvine.org/ridewithus"
+   "http://www.bikeirvine.org/ridewithus",
+   "http://www.bikeirvine.org/rides-events"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "The club's calendar lists Thursday Ride Th23 for Oct 1, Th24 for Oct 8 and Th25 for Oct 15, 2026, each at 9:00 am from Deerfield Park (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "BCI's calendar lists Thursday Ride (#24L) for Dec 3 at 9:00 am from Deerfield Park; Nov 26 is listed as 'NO Thursday Ride' for Thanksgiving (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -14168,11 +14170,13 @@
   "sources": [
    "http://www.bikeirvine.org/rides-events/2026/10/6",
    "http://www.bikeirvine.org/rides-events?category=Tuesday%20Rides",
-   "http://www.bikeirvine.org/ridewithus"
+   "http://www.bikeirvine.org/ridewithus",
+   "http://www.bikeirvine.org/rides-events",
+   "https://www.bikeirvine.org/rides-events?category=Tuesday%20Rides"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "The club's calendar lists Tuesday Rides Tu16, Tu17 and Tu18 at 9:15 am from University Park for Oct 6, 13 and 20, 2026 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "BCI's calendar lists Tuesday Rides (Tu1) for Nov 17 at 9:15 am and (Tu2) for Nov 24 at 9:15 am, both from University Park (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -17042,9 +17046,9 @@
    "https://www.bcccsb.org/Ride-Calendar",
    "https://www.bcccsb.org/Ride-Start-Locations-Join-Us-Page"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "BCCC's Weekly Activities page (rev. July 15, 2026) lists the Thursday Social Ride at 9 AM from the Manhattan Beach Pier, and its October 2026 calendar shows it every Thursday from Oct 1 to Oct 29 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-13",
+  "evidence": "BCCC's November 2026 calendar at bcccsb.org/Ride-Calendar lists 'Thursday Social Ride: Marina del Rey-Westchester' every Thursday through December; the 'CANCELLED' elsewhere in the same calendar refers only to 'Thursday Gravel' on Nov 13, a separate ride (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -19928,9 +19932,9 @@
    "https://www.bcccsb.org/Ride-Calendar",
    "https://www.bcccsb.org/Ride-Start-Locations-Join-Us-Page"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "BCCC's Weekly Activities page (rev. July 15, 2026) lists the Sunday FunDay Whale Watch Ride at 9 AM, and its October 2026 calendar shows it on Oct 11, 18 and 25, with the club's Jackson Market ride on Sun Oct 4 and Nov 1 instead (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-15",
+  "evidence": "BCCC's November 2026 calendar at bcccsb.org/Ride-Calendar lists 'Sunday FunDay Ride Up to Whale Watch (PV Interpretive Center)' on Nov 8, 15, 22 and 29; Nov 1 has the Jackson Market ride instead, matching the existing record (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -22644,9 +22648,9 @@
    "https://marincyclists.com/content.aspx?page_id=4001&club_id=525458",
    "https://marincyclists.com/content.aspx?page_id=4091&club_id=525458&item_id=3014905"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Marin Cyclists' calendar lists Easy Like Sunday Morning (Red Whale) for Sunday Oct 4 and its event page gives 9:45 meet, 10:00 roll, Redwood Cafe lot, 30-35 miles, 12-13.9 mph (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-15",
+  "evidence": "Marin Cyclists' November 2026 calendar lists 'Easy Like Sunday Morning--aka. Red Whale--Participant Led/Leaderless' on Nov 1, 8, 15, 22 and 29; the 'CANCELED' in the same calendar refers to 'Fridays on Paradise' on Nov 13, a different ride on a different day (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -22785,7 +22789,7 @@
   "visitor_notes": null,
   "description": "Out through Summerland and up to Lake Casitas and back, 40 to 50 miles with regroups at the top of the climbs. Riders meet afterward at Handlebar Coffee near the shop. Fastrack also lists Tuesday and Thursday 7:00 am rides and the spirited Sunday Echelon ride.",
   "links": {
-   "website": "http://www.fastrackbicycles.com/rides",
+   "website": "https://fastrackbicycles.com/",
    "instagram": "https://www.instagram.com/fastrack9/",
    "facebook": null,
    "strava": null,
@@ -22794,15 +22798,16 @@
   },
   "inclusive_focus": [],
   "sources": [
-   "http://www.fastrackbicycles.com/rides"
+   "http://www.fastrackbicycles.com/rides",
+   "https://fastrackbicycles.com/"
   ],
-  "verified_on": "2026-09-15",
-  "last_seen": null,
-  "evidence": null,
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-10-10",
+  "evidence": "Fastrack's site (now at fastrackbicycles.com) lists the Saturday Lake Ride at 8:00 am from the Dolphin Fountain at Stearns Wharf; a stock-list entry dated Oct 10, 2026 on the page confirms it is actively maintained (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
-   "watch_url": "http://www.fastrackbicycles.com/rides",
+   "watch_url": "https://fastrackbicycles.com/",
    "feed_url": null,
    "notes": null
   }
@@ -36434,7 +36439,7 @@
   "visitor_notes": "The summer and winter start dates are not published, so the 7:00 am start may be 7:30 am by now. Casual meet-ups listed on the Hawaii Cycling Club's weekly-rides page as a courtesy; the club says they are not club-organized and times and places can change. Check the club's Facebook, Instagram or Strava.",
   "description": "A Hilo group road ride three mornings a week from Mid-Pacific Wheels. The start moves from 7:00 am in summer to 7:30 am in winter; the page does not say which date it changes.",
   "links": {
-   "website": "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "website": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
    "instagram": null,
    "facebook": null,
    "strava": null,
@@ -36443,15 +36448,16 @@
   },
   "inclusive_focus": [],
   "sources": [
-   "http://www.hawaiicyclingclub.com/weekly-rides.html"
+   "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "https://www.hawaiicyclingclub.com/public-service-announcements.html"
   ],
-  "verified_on": "2026-10-02",
+  "verified_on": "2026-11-16",
   "last_seen": null,
-  "evidence": "The Hawaii Cycling Club's weekly-rides page (undated, fetched Oct 2, 2026) lists East Hawaii Riders on Tuesday, Thursday and Saturday, 7:00 am summer and 7:30 am winter, from Mid-Pacific Wheels, 1133 Manono St #4, Hilo.",
+  "evidence": "Hawaii Cycling Club's public-service-announcements page (undated, fetched Nov 16, 2026) lists East Hawaii Riders on Tuesday, Thursday and Saturday, 7:00 am summer / 7:30 am winter from Mid-Pacific Wheels, 1133 Manono St #4 Hilo — same schedule as before; watch page moved from weekly-rides.html.",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
-   "watch_url": "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "watch_url": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
    "feed_url": null,
    "notes": "Static, undated page that says all recurring rides are subject to change. A second listing (Historic Kailua Village's events calendar) shows club rides from the Old Airport Playground, so Kona starts may have moved."
   }
@@ -36514,7 +36520,7 @@
   "visitor_notes": "Casual meet-ups listed on the Hawaii Cycling Club's weekly-rides page as a courtesy; the club says they are not club-organized and times and places can change. Check the club's Facebook, Instagram or Strava.",
   "description": "A monthly climb up the Mauna Loa Access Road to the road's end, starting from the Pu'u Huluhulu parking lot.",
   "links": {
-   "website": "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "website": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
    "instagram": null,
    "facebook": null,
    "strava": null,
@@ -36523,15 +36529,16 @@
   },
   "inclusive_focus": [],
   "sources": [
-   "http://www.hawaiicyclingclub.com/weekly-rides.html"
+   "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "https://www.hawaiicyclingclub.com/public-service-announcements.html"
   ],
-  "verified_on": "2026-10-02",
+  "verified_on": "2026-11-16",
   "last_seen": null,
-  "evidence": "The Hawaii Cycling Club's weekly-rides page (undated, fetched Oct 2, 2026) lists the first Saturday of the month ride at 7:45 am up the Mauna Loa Access Road from the Pu'u Huluhulu parking lot.",
+  "evidence": "Hawaii Cycling Club's public-service-announcements page (undated, fetched Nov 16, 2026) lists the first Saturday of the month at 7:45 am up the Mauna Loa Access Road from the Pu'u Huluhulu parking lot — same schedule as before; watch page moved from weekly-rides.html.",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
-   "watch_url": "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "watch_url": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
    "feed_url": null,
    "notes": "Static, undated page that says all recurring rides are subject to change. A second listing (Historic Kailua Village's events calendar) shows club rides from the Old Airport Playground, so Kona starts may have moved."
   }
@@ -36589,7 +36596,7 @@
   "visitor_notes": "Casual meet-ups listed on the Hawaii Cycling Club's weekly-rides page as a courtesy; the club says they are not club-organized and times and places can change. Check the club's Facebook, Instagram or Strava.",
   "description": "A Friday-afternoon mountain bike ride at the Kulani Forest bike park off Stainback Highway.",
   "links": {
-   "website": "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "website": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
    "instagram": null,
    "facebook": null,
    "strava": null,
@@ -36598,15 +36605,16 @@
   },
   "inclusive_focus": [],
   "sources": [
-   "http://www.hawaiicyclingclub.com/weekly-rides.html"
+   "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "https://www.hawaiicyclingclub.com/public-service-announcements.html"
   ],
-  "verified_on": "2026-10-02",
+  "verified_on": "2026-11-16",
   "last_seen": null,
-  "evidence": "The Hawaii Cycling Club's weekly-rides page (undated, fetched Oct 2, 2026) lists a mountain bike ride every Friday at 4:00 pm from the Kulani Forest mountain bike park off Stainback Highway.",
+  "evidence": "Hawaii Cycling Club's public-service-announcements page (undated, fetched Nov 16, 2026) lists a mountain bike ride every Friday afternoon at 4:00 pm from the Kulani Forest mountain bike park off Stainback Highway — same schedule as before; watch page moved from weekly-rides.html.",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
-   "watch_url": "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "watch_url": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
    "feed_url": null,
    "notes": "Static, undated page that says all recurring rides are subject to change. A second listing (Historic Kailua Village's events calendar) shows club rides from the Old Airport Playground, so Kona starts may have moved."
   }
@@ -37357,7 +37365,7 @@
   "visitor_notes": "Casual meet-ups listed on the Hawaii Cycling Club's weekly-rides page as a courtesy; the club says they are not club-organized and times and places can change. Check the club's Facebook, Instagram or Strava.",
   "description": "A casual, no-drop ride north up the highway with turn-around options of 14, 27 or 40 miles round trip. E-bikes are welcome. There is no-host coffee at Kona Mountain Coffee afterward.",
   "links": {
-   "website": "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "website": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
    "instagram": null,
    "facebook": null,
    "strava": null,
@@ -37368,15 +37376,16 @@
    "no-drop"
   ],
   "sources": [
-   "http://www.hawaiicyclingclub.com/weekly-rides.html"
+   "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "https://www.hawaiicyclingclub.com/public-service-announcements.html"
   ],
-  "verified_on": "2026-10-02",
+  "verified_on": "2026-11-16",
   "last_seen": null,
-  "evidence": "The Hawaii Cycling Club's weekly-rides page (undated, fetched Oct 2, 2026) lists the Thursday and Saturday 7:00 am recreational ride from Hulikoa Drive at Patricio's, 14, 27 or 40 miles, no-drop, 13 to 20 mph.",
+  "evidence": "Hawaii Cycling Club's public-service-announcements page (undated, fetched Nov 16, 2026) lists the Thursday and Saturday 7:00 am no-drop recreational ride from Hulikoa Drive at Patricio's Mexican Taqueria — same schedule as before; watch page moved from weekly-rides.html.",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
-   "watch_url": "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "watch_url": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
    "feed_url": null,
    "notes": "Static, undated page that says all recurring rides are subject to change. A second listing (Historic Kailua Village's events calendar) shows club rides from the Old Airport Playground, so Kona starts may have moved."
   }
@@ -37515,7 +37524,7 @@
   "visitor_notes": "Casual meet-ups listed on the Hawaii Cycling Club's weekly-rides page as a courtesy; the club says they are not club-organized and times and places can change. Check the club's Facebook, Instagram or Strava.",
   "description": "A recreational ride south from Ali'i Drive of 12 to 40 miles round trip, with long steep hills and fast descents (1,200 to 4,000 feet of climbing, by how far you go).",
   "links": {
-   "website": "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "website": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
    "instagram": null,
    "facebook": null,
    "strava": null,
@@ -37524,15 +37533,16 @@
   },
   "inclusive_focus": [],
   "sources": [
-   "http://www.hawaiicyclingclub.com/weekly-rides.html"
+   "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "https://www.hawaiicyclingclub.com/public-service-announcements.html"
   ],
-  "verified_on": "2026-10-02",
+  "verified_on": "2026-11-16",
   "last_seen": null,
-  "evidence": "The Hawaii Cycling Club's weekly-rides page (undated, fetched Oct 2, 2026) lists the Thursday 7:30 am recreational ride south from Kam III and Ali'i Drive, 12 to 40 miles, 1,200 to 4,000 ft.",
+  "evidence": "Hawaii Cycling Club's public-service-announcements page (undated, fetched Nov 16, 2026) lists the Thursday 7:30 am recreational ride south from the intersection of Kam III and Ali'i Drive — same schedule as before; watch page moved from weekly-rides.html.",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
-   "watch_url": "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "watch_url": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
    "feed_url": null,
    "notes": "Static, undated page that says all recurring rides are subject to change. A second listing (Historic Kailua Village's events calendar) shows club rides from the Old Airport Playground, so Kona starts may have moved."
   }
@@ -37590,7 +37600,7 @@
   "visitor_notes": "Casual meet-ups listed on the Hawaii Cycling Club's weekly-rides page as a courtesy; the club says they are not club-organized and times and places can change. Check the club's Facebook, Instagram or Strava.",
   "description": "An A/B-paced ride south on the Bypass to Captain Cook. Expect steep hills and a robust pace.",
   "links": {
-   "website": "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "website": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
    "instagram": null,
    "facebook": null,
    "strava": null,
@@ -37599,15 +37609,16 @@
   },
   "inclusive_focus": [],
   "sources": [
-   "http://www.hawaiicyclingclub.com/weekly-rides.html"
+   "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "https://www.hawaiicyclingclub.com/public-service-announcements.html"
   ],
-  "verified_on": "2026-10-02",
+  "verified_on": "2026-11-16",
   "last_seen": null,
-  "evidence": "The Hawaii Cycling Club's weekly-rides page (undated, fetched Oct 2, 2026) lists the Tuesday 8:00 am A/B ride from the Keauhou Shopping Center lot, south on the Bypass to Captain Cook, steep hills, robust pace.",
+  "evidence": "Hawaii Cycling Club's public-service-announcements page (undated, fetched Nov 16, 2026) lists the Tuesday 8:00 am A/B ride from the Keauhou Shopping Center parking lot south to Captain Cook — same schedule as before; watch page moved from weekly-rides.html.",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
-   "watch_url": "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "watch_url": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
    "feed_url": null,
    "notes": "Static, undated page that says all recurring rides are subject to change. A second listing (Historic Kailua Village's events calendar) shows club rides from the Old Airport Playground, so Kona starts may have moved."
   }
@@ -37908,7 +37919,7 @@
   "visitor_notes": "Casual meet-ups listed on the Hawaii Cycling Club's weekly-rides page as a courtesy; the club says they are not club-organized and times and places can change. Check the club's Facebook, Instagram or Strava.",
   "description": "A Waikoloa group ride at an average of 13 to 18 mph, starting behind Bike Works Beach & Sports at Queens' Marketplace.",
   "links": {
-   "website": "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "website": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
    "instagram": null,
    "facebook": null,
    "strava": null,
@@ -37917,15 +37928,16 @@
   },
   "inclusive_focus": [],
   "sources": [
-   "http://www.hawaiicyclingclub.com/weekly-rides.html"
+   "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "https://www.hawaiicyclingclub.com/public-service-announcements.html"
   ],
-  "verified_on": "2026-10-02",
+  "verified_on": "2026-11-16",
   "last_seen": null,
-  "evidence": "The Hawaii Cycling Club's weekly-rides page (undated, fetched Oct 2, 2026) lists a Tuesday and Sunday 8:00 am ride from the lot behind Bike Works Beach & Sports at Queens' Marketplace, average 13 to 18 mph.",
+  "evidence": "Hawaii Cycling Club's public-service-announcements page (undated, fetched Nov 16, 2026) lists the Tuesday and Sunday 8:00 am ride from the parking lot behind Bike Works Beach & Sports at Queens' Marketplace — same schedule as before; watch page moved from weekly-rides.html.",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
-   "watch_url": "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "watch_url": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
    "feed_url": null,
    "notes": "Static, undated page that says all recurring rides are subject to change. A second listing (Historic Kailua Village's events calendar) shows club rides from the Old Airport Playground, so Kona starts may have moved."
   }
@@ -38261,9 +38273,9 @@
   "name": "BIC 2sday 2wheelers Tuesday Morning Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Season runs April to October. No rides planned for November; possible weather-permitting rides are announced on the BIC Facebook page the day before. Back in April 2027.",
+  "status_since": "2026-11-16",
   "city": "Iowa City",
   "neighborhood": null,
   "region": "Iowa",
@@ -38326,9 +38338,9 @@
    "https://bic.clubexpress.com/content.aspx?page_id=4001&club_id=74108",
    "https://bic.clubexpress.com/content.aspx?page_id=22&club_id=74108&module_id=153871"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "BIC's ride calendar (fetched Oct 1, 2026) lists T2W rides on Tuesdays Oct 6, 13, 20 and 27, 2026 at 10:00 AM from Waterworks Prairie Park; the club's ride info says Tuesday rides run April through October.",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-10-27",
+  "evidence": "BIC's November calendar shows placeholder entries for Nov 3 and Nov 24 saying 'No rides are planned for November, but we will ride if the weather permits. Check the BIC Facebook page for ride announcements'; the season runs April through October per the club's calendar (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -38342,9 +38354,9 @@
   "name": "BIC Saturday Rides",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Season runs April to October. No Saturday rides listed for November. Back in April 2027.",
+  "status_since": "2026-11-16",
   "city": "Iowa City",
   "neighborhood": null,
   "region": "Iowa",
@@ -38407,9 +38419,9 @@
    "https://bic.clubexpress.com/content.aspx?page_id=4001&club_id=74108",
    "https://bic.clubexpress.com/content.aspx?page_id=22&club_id=74108&module_id=153871"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "BIC's ride calendar (fetched Oct 1, 2026) lists Saturday rides on Oct 3 at 10:00 AM (Crosspark Hy-Vee, ride to Amana) and Oct 17 at 10:00 AM (Big Grove Brewery, 37 miles); the club says Saturday rides run April through October.",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-10-17",
+  "evidence": "BIC's November 2026 calendar lists no Saturday rides; the season runs April through October per the club's calendar (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -38423,9 +38435,9 @@
   "name": "Bicyclists of Iowa City Wednesday Night Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Season runs April to October, with the last Wednesday rides in mid-October. No November rides listed. Back in April 2027.",
+  "status_since": "2026-11-16",
   "city": "Iowa City",
   "neighborhood": null,
   "region": "Iowa",
@@ -38487,9 +38499,9 @@
    "https://bikeiowacity.com/event-calendar/",
    "https://bic.clubexpress.com/content.aspx?page_id=4001&club_id=74108"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "BIC's ride calendar (fetched Oct 1, 2026) lists Wednesday Oct 7 and Oct 14 as short rides at 5:30 PM from El Señor Cactus, 1534 S Gilbert St, Iowa City, 'weather and daylight permitting'; no Wednesday rides listed after Oct 14.",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-10-14",
+  "evidence": "BIC's November 2026 calendar lists no Wednesday rides; the last listed Wednesdays were Oct 7 and Oct 14 at 5:30 pm with no rides posted after that (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -41915,9 +41927,9 @@
   "name": "Illinois Valley Wheelm'n Tuesday Evening Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Season runs April through October. The 2026 season ended Oct 6. Resumes April per the club's posted schedule.",
+  "status_since": "2026-11-16",
   "city": "Dunlap",
   "neighborhood": null,
   "region": "Illinois",
@@ -41979,9 +41991,9 @@
   "sources": [
    "https://www.ivwheelmn.org/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Illinois Valley Wheelm'n's post dated April 14, 2026 gives the Tuesday evening ride from Dunlap Grade School as 5:30 pm Apr 7 to May 5, 6:00 pm May 12 to Sept 1, and 5:30 pm Sept 8 to Oct 6 (read Oct 1, 2026). Oct 6 is the last ride.",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-10-01",
+  "evidence": "Illinois Valley Wheelm'n's website still shows the same April 7–October 6 schedule with Oct 6 as the last ride; the club posted an 'End of Year Celebration' for November 7, 2026, confirming the season is over (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -45050,12 +45062,12 @@
   "discipline": [
    "social"
   ],
-  "schedule": "Every Wednesday, 6:00 pm sharp (2026 season started March 11)",
+  "schedule": "Every Wednesday, 5:00 pm sharp",
   "days": [
    "wed"
   ],
-  "time_local": "6:00 pm",
-  "start_hhmm": "18:00",
+  "time_local": "5:00 pm",
+  "start_hhmm": "17:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "Mar–fall",
@@ -45100,13 +45112,13 @@
    "https://centralincycling.org/",
    "https://centralincycling.org/rides/neighborhood-rides/"
   ],
-  "verified_on": "2026-09-18",
-  "last_seen": null,
-  "evidence": null,
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-11",
+  "evidence": "Central Indiana Cycling's neighborhood rides page lists the Near Eastside Ride as 'Wednesdays, 5:00 pm – SHARP, Centerpoint Brewing, 1125 E Brookside Ave'; the homepage showed Nov 11, 2026 as the most recent listed date (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
-   "watch_url": "https://centralincycling.org/",
+   "watch_url": "https://centralincycling.org/rides/neighborhood-rides/",
    "feed_url": null,
    "notes": null
   }
@@ -46702,9 +46714,9 @@
    "https://www.pedalpowerbikeshop.com/articles/group-rides-pg490.htm",
    "https://www.lexingtonky.gov/government/departments-programs/environmental-quality-public-works/environmental-services/live-green-lexington/bike-walk-month"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Pedal Power's group rides page lists the community ride every 2nd and 4th Wednesday, meet 6:15 PM, roll 6:30 PM from Country Boy at 436 Chair Ave, no-drop (read Oct 1, 2026). The page also posts rides for July 24 and 26, whose weekdays match 2026; the community ride itself is undated.",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Pedal Power's group rides page lists the Country Boy Community Bike Ride every 2nd and 4th Wednesday, meet 6:15 PM, roll 6:30 PM from 436 Chair Ave, 8–10 miles no-drop, same schedule as recorded (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -49026,9 +49038,9 @@
    "https://crw.org/event-6814253",
    "https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics"
   ],
-  "verified_on": "2026-10-26",
-  "last_seen": "2026-10-26",
-  "evidence": "CRW's Google Calendar ICS feed lists Wednesday Wheelers on Oct 28, Nov 4, Dec 9 and Dec 16, 2026, all at 10:00 am EST, matching the record's day, time and frequency (fetched Oct 26, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "CRW's Google Calendar ICS feed (fetched Nov 16, 2026) lists Wednesday Wheelers on Nov 18, 25, Dec 2, 9, 16, 23 and 30, all at 10:00 am EST; the CANCELED entries near Wednesday Wheelers on the events page apply to other rides.",
   "confidence": "high",
   "refresh": {
    "method": "ics",
@@ -49337,9 +49349,9 @@
   "sources": [
    "https://www.nemba.org/chapters/blackstone-valley-nemba"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Blackstone Valley NEMBA's chapter page lists the recurring Vietnam Intermediate Group Ride (With Lights) for Thu Oct 1, 2026, 5:30-7:30 pm at the Adams St lot, Holliston (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "NEMBA's Blackstone Valley chapter page lists the Vietnam Intermediate Group Ride (With Lights) as a recurring event next scheduled Thu Nov 19, 2026, 5:30-8pm, Adams St. Parking Lot, Holliston, MA — same details as before (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -49414,9 +49426,9 @@
   "sources": [
    "https://www.capecodseasports.com/about/group-rides-clubs-and-community-pg85.htm"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Sea Sports' group-rides page lists the Saturday Coffee Cruise Road Ride, rolling 7:30 am from the shop, on a page with a 2026 copyright that also lists Oct 2026 events (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Sea Sports' group rides page still lists 'Saturdays - Coffee Cruise Road Ride · Ride rolls at Rolling 7:30am!' at 16-18 mph for approximately 20-30 miles; the page shows updated 2026 content including a new Wednesday Night Lights ride starting Oct 28 (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -51547,12 +51559,18 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Sundays, 9:30 am",
+  "schedule": "Sundays year-round; 9:30 am through spring and summer, 11:00 am starting Oct 31 each year for the winter session. Check the ride calendar for the spring return date.",
   "days": [
    "sun"
   ],
-  "time_local": "9:30 am",
-  "start_hhmm": "09:30",
+  "time_local": "11:00 am",
+  "start_hhmm": "11:00",
+  "start_times": [
+   {
+    "from": "2026-10-31",
+    "start_hhmm": "11:00"
+   }
+  ],
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -51595,10 +51613,10 @@
    "https://frederickpedalers.org/ride-info/",
    "https://frederickpedalers.org/events/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Frederick Pedalers' ride-info page lists the Monocacy Middle School Ride on Sundays Oct 4 through Nov 29, 2026 at 9:30 am ('Sundays (year-round)', C pace, 20-25 miles). Last year the club moved the Sunday start to 11:00 am on Oct 31, 2025, so watch for the same in 2026.",
-  "confidence": "medium",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Frederick Pedalers' ride-info page and calendar show the Sunday Monocacy Middle School ride moved to 11:00 am for the winter session starting Oct 31, 2026; the calendar lists it at 11:00 am on Nov 22, 29, Dec 6, 13, 20, 2026, with a blog post titled 'SUNDAY RIDE TIME CHANGE (Happy Halloween 10/31/2026)' confirming the shift (fetched Nov 16, 2026).",
+  "confidence": "high",
   "refresh": {
    "method": "static-page",
    "watch_url": "https://frederickpedalers.org/ride-info/",
@@ -54677,9 +54695,9 @@
   "name": "KBC Sunday LGBTQIA+ Allies Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "seasonal-break",
-  "status_note": "The club's page says the ride runs May through September.",
-  "status_since": "2026-10-01",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
   "city": "Kalamazoo",
   "neighborhood": null,
   "region": "Michigan",
@@ -54745,9 +54763,9 @@
    "https://kalamazoobicycleclub.org/rides/club-rides/",
    "https://kalamazoobicycleclub.org/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "The Kalamazoo Bicycle Club's 2026 club rides page says the Sunday LGBTQIA+ Allies Ride will run May through September, rolling at 10:00 am, no drop (read Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Kalamazoo Bicycle Club's rides page still lists the Sunday LGBTQIA+ Allies Ride running May through September, roll 10:00 am, no-drop, same schedule as recorded; the schedule-text-changed flag reflects a page restructure, not a ride change (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -62278,9 +62296,9 @@
    "https://cyclesdeoro.com/",
    "https://cyclesdeoro.com/Easy_Riders_2026.htm"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-16",
   "last_seen": "2026-07-26",
-  "evidence": "Cycles de ORO's Easy Riders page, marked 'Updated 7.26.2026' (fetched Oct 1, 2026), says the 5th annual series runs every Tuesday during Daylight Saving Time: 6 PM meet, 6:15 briefing, 6:30 roll from the shop, free, no one left behind.",
+  "evidence": "Cycles de ORO's Easy Riders page at cyclesdeoro.com/Easy_Riders_2026.htm, marked 'Updated 7.26.2026', says the 5th annual series runs every Tuesday during Daylight Saving Time, 6:00 pm meet, 6:15 pm briefing, 6:30 pm roll, free, no one left behind — same schedule as the record (fetched Nov 16, 2026). DST ended Nov 1 so the ride is in its natural off-season.",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -62309,12 +62327,12 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Every Saturday; arrive 9:30 am, roll 10:00 am (warm-weather schedule; skipped for local charity rides or bad weather)",
+  "schedule": "Every Saturday; 11:30 am arrive, roll 12:00 pm on the cooler-weather schedule (warm-weather schedule is 9:30 am arrive, 10:00 am roll; skipped for local charity rides or bad weather)",
   "days": [
    "sat"
   ],
-  "time_local": "10:00 am",
-  "start_hhmm": "10:00",
+  "time_local": "12:00 pm",
+  "start_hhmm": "12:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": null,
@@ -62356,9 +62374,9 @@
    "https://cyclesdeoro.com/",
    "https://cyclesdeoro.com/Sat_Social_ride.htm"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-08-26",
-  "evidence": "Cycles de ORO's Saturday Social ride page, marked 'Update 8.26.2026' (fetched Oct 1, 2026), says every Saturday: 9:30 AM arrive, 10 AM off, on the warm weather schedule, free, except for local charity rides or bad weather.",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-10-25",
+  "evidence": "Cycles de ORO's Saturday Social ride page at cyclesdeoro.com/Sat_Social_ride.htm now says 'THE COOLER WEATHER SCHEDULE': 11:30 AM arrive, 12 NOON ride off, updated 10.25.2026 (fetched Nov 16, 2026). The warm-weather start (9:30 am arrive, 10:00 am roll) is off for the season.",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -66432,9 +66450,9 @@
    "https://www.jsts.us/event-6732545",
    "https://www.jsts.us/event-6732524"
   ],
-  "verified_on": "2026-10-26",
-  "last_seen": "2026-10-26",
-  "evidence": "JSTS's ride calendar shows weekday rides on every weekday through the week of Oct 26 and into November; the schedule-text change reflects a navigation update (clothing store link removed, Discord added) and the 'CANCELLED' labels are for individual ride instances, not the weeknight program (fetched Oct 26, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "JSTS's ride calendar (fetched Nov 16, 2026) shows weekday rides on every weekday through November 2026; individual CANCELLED labels appear on specific instances but not the weekday program as a whole.",
   "confidence": "medium",
   "refresh": {
    "method": "calendar-page",
@@ -69153,9 +69171,9 @@
   "sources": [
    "https://nb.bike/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-09-30",
-  "evidence": "nb.bike says the club's most recent ride was Sept 30, 2026 and that its regular rides currently meet Wednesdays at 7:00 pm at Fort Greene Park; the next ride was 'not yet scheduled' on the page (read Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-10",
+  "evidence": "nb.bike states 'Our regular group rides currently meet Wednesdays at 7:00 pm, starting at Fort Greene Park, just inside the park near the Willoughby Av / Washington Pk entrance' and lists the next ride as 2026-11-18; a Nov 10 site update shows the page is current; the schedule-text-changed flag is from that update (dark mode added), not a schedule change (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -69766,7 +69784,7 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Saturdays, Sundays and holidays from the Smith St lot in Greenlawn. 8:30 am in October; the club's page says 9:00 am December to April, 8:30 am May and October, 8:00 am June to September (it doesn't list November). Each ride on the calendar gives its own start.",
+  "schedule": "Saturdays, Sundays and holidays from the Smith St lot in Greenlawn. 9:00 am November through April, 8:30 am May and October, 8:00 am June through September. Each ride on the calendar gives its own start.",
   "days": [
    "sat",
    "sun"
@@ -69775,7 +69793,7 @@
   "start_hhmm": "08:30",
   "start_times": [
    {
-    "from": "2026-12-01",
+    "from": "2026-11-01",
     "start_hhmm": "09:00"
    },
    {
@@ -69826,9 +69844,9 @@
    "https://www.hbcli.org/content.aspx?page_id=22&club_id=312624&module_id=546621",
    "https://www.hbcli.org/content.aspx?page_id=4001&club_id=312624"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "The club's ride-start page gives the weekend start by month (9:00 am December to April, 8:30 am May and October, 8:00 am June to September, nothing for November) and its calendar lists Crankin' Saturday from Smith St at 8:30 am on Sat Oct 3, 2026 (read Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "HBC's ClubExpress calendar shows Crankin' Saturday Smith St. 9 AM for Sat Nov 21, 2026 at 9:00 AM; the club's start-locations page says 9:00 am December through April and 8:30 am May and October, with November not listed — but Nov calendar entries confirm 9:00 am (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -69920,7 +69938,7 @@
   "name_en": null,
   "kind": "group-ride",
   "status": "seasonal-break",
-  "status_note": "Host runs these social weekend rides from May to September. The last one on the events feed was Sat Sept 26, 2026. No 2027 date posted.",
+  "status_note": "Season is May to September. Last ride was Sept 26, 2026; no events posted for October or later. Back in May 2027 if the club continues the program; check the FLCC events page in April.",
   "status_since": "2026-09-27",
   "city": "Ithaca",
   "neighborhood": null,
@@ -69984,11 +70002,12 @@
   ],
   "sources": [
    "https://fingerlakescycling.org/event/flcc-saturday-social-ride-2-2026-09-26/",
-   "https://fingerlakescycling.org/flccpage/group-rides/weekend-rides/"
+   "https://fingerlakescycling.org/flccpage/group-rides/weekend-rides/",
+   "https://fingerlakescycling.org/events/"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-16",
   "last_seen": "2026-09-26",
-  "evidence": "FLCC's event page lists the FLCC Saturday Social Ride for Sat Sept 26, 2026, 10:00 am to 2:00 pm, and says social weekend rides run May to September (fetched Oct 1, 2026); nothing is posted after that date.",
+  "evidence": "FLCC's events page shows no upcoming events; the club's weekend-rides page says social rides run May to September, and the last listed ride was Sept 26, 2026 (fetched Nov 16, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -70002,9 +70021,9 @@
   "name": "FLCC Thursday Group Gravel Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "No events posted after Oct 1, 2026. The club's gravel page frames rides as a seasonal program with no 2027 dates yet. Back in spring 2027 based on past seasons; check the FLCC events page in April.",
+  "status_since": "2026-11-16",
   "city": "Ithaca",
   "neighborhood": null,
   "region": "New York",
@@ -70065,11 +70084,12 @@
   "sources": [
    "https://fingerlakescycling.org/events/?ical=1",
    "https://fingerlakescycling.org/event/flcc-group-gravel-ride-2026-10-01/",
-   "https://fingerlakescycling.org/flccpage/group-rides/gravel-rides/"
+   "https://fingerlakescycling.org/flccpage/group-rides/gravel-rides/",
+   "https://fingerlakescycling.org/events/"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-16",
   "last_seen": "2026-10-01",
-  "evidence": "FLCC's events feed and event page list the FLCC Group Gravel Ride for Thu Oct 1, 2026, 6:00 to 8:00 pm, 'Rides are no-drop and start at 6pm' (fetched Oct 1, 2026); the club's gravel page links to a Sept 24 event too.",
+  "evidence": "FLCC's events page shows no upcoming events; the last gravel ride listed was Oct 1, 2026, and the club's gravel page describes these as seasonal — 'Rides during the 2025 season are held on Thursdays at 6:00pm' (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "ics",
@@ -73609,9 +73629,9 @@
    "https://www.cincinnaticycleclub.org/content.aspx?page_id=4001&club_id=772752&action=cira&vm=Future&sif=0",
    "https://www.cincinnaticycleclub.org/content.aspx?page_id=22&club_id=772752&module_id=337793"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "The Cincinnati Cycle Club's calendar lists the Saturday Breakfast Ride from the Goshen Kroger for Oct 3 (9:00 AM), Oct 17, 24 and 31 (8:00 AM) and Oct 10, 2026 (read Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "CCC's future-events calendar lists 'Saturday Breakfast Ride - Time Varies' at Goshen Kroger Parking Lot for Nov 21 and Nov 28, 2026; the club's casual rides page confirms 'Saturdays at 8 AM' from Goshen Kroger (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -76135,9 +76155,9 @@
    "https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926",
    "https://www.salembicycleclub.org/content.aspx?page_id=4091&club_id=189926&item_id=2953887"
   ],
-  "verified_on": "2026-10-21",
-  "last_seen": "2026-10-21",
-  "evidence": "Salem Bicycle Club's event calendar (fetched Oct 21, 2026) lists the Keizer Morning Ride on Tuesdays Oct 6, 13, 20 and 27 at 10:00 am from Keizer Station; the CANCELED entry on the page is a Zoom meeting, not this ride.",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Salem Bicycle Club's calendar (fetched Nov 16, 2026) lists the Keizer Morning Ride at 10:00 am on Nov 3, 17, 24 and Dec 1; the Nov 10 entry reads 'CANCELED' for a single instance, and the ride resumes Nov 17.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -76215,9 +76235,9 @@
    "https://www.salembicycleclub.org/content.aspx?page_id=4091&club_id=189926&item_id=3066880",
    "https://www.salembicycleclub.org/content.aspx?page_id=4091&club_id=189926&item_id=3066876"
   ],
-  "verified_on": "2026-10-21",
-  "last_seen": "2026-10-21",
-  "evidence": "Salem Bicycle Club's event calendar (fetched Oct 21, 2026) lists the Thursday Night Lights Ride at 6:00 pm on Oct 8, 15, 22 (CCW) and 29 (CW) from Cummings Elementary School; the CANCELED entry nearby is a Zoom meeting cancellation, not the ride.",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Salem Bicycle Club's calendar (fetched Nov 16, 2026) lists Thursday Night Lights Ride at 6:00 pm on Nov 5, 12 and 19 and Dec 3; the 'CANCELED' on Nov 10 is for the Keizer Morning Ride (a different ride on a different day), not this one.",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -77491,9 +77511,9 @@
    "https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926",
    "https://www.salembicycleclub.org/content.aspx?page_id=4091&club_id=189926&item_id=3086068"
   ],
-  "verified_on": "2026-10-26",
-  "last_seen": "2026-10-21",
-  "evidence": "Salem Bicycle Club's calendar lists the East Salem Morning Ride every Wednesday through Oct 28 and beyond; the 'CANCELED' entry on Nov 7 refers to a 6:30 pm Rides Committee Meeting via Zoom, not the morning ride, which is also listed for that day (fetched Oct 26, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Salem Bicycle Club's calendar (fetched Nov 16, 2026) lists the East Salem Morning Ride on Nov 4, 11, 18 and 25; the 'CANCELED' near it on the calendar refers to the Keizer Morning Ride on Nov 10 (a different ride and day), not this one.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -80451,9 +80471,9 @@
   "name": "North Park Loops (Premier Bicycle Club)",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The Wednesday evening ride at North Park is not listed after Oct 28; the club has posted morning Wednesday rides (Harmony Lake) for November and December. The evening ride is likely to resume in spring, but the club has not stated a return date.",
+  "status_since": "2026-11-16",
   "city": "Wexford",
   "neighborhood": "North Park",
   "region": "Pennsylvania",
@@ -80511,9 +80531,9 @@
    "https://www.premierbicycleclub.org/content.aspx?page_id=4091&club_id=400812&item_id=3088337",
    "https://www.premierbicycleclub.org/content.aspx?page_id=4001&club_id=400812"
   ],
-  "verified_on": "2026-10-26",
-  "last_seen": "2026-10-26",
-  "evidence": "The Premier Bicycle Club calendar lists North Park Loops (14/Moderate, ~25 mi) for Wed Oct 21 and Oct 28, 2026 at 5:00 pm from the Olympia parking lot at North Park; the 'CANCELED' entries on the Oct 14 row apply to Launch to Lunch and Harmony Lake rides, not to North Park Loops (fetched Oct 26, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-10-28",
+  "evidence": "Premier Bicycle Club's calendar (fetched Nov 16, 2026) shows no North Park Loops listed in November or December; Wednesday rides in November are morning rides (Harmony Lake, 10:00 am), replacing the 5:00 pm evening ride.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -81932,9 +81952,9 @@
   "name": "Greenville Spinners SCTAC Tuesday Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "seasonal-break",
-  "status_note": "Host says the Tuesday night SCTAC rides run from the first Tuesday in April to mid-September, when daylight dwindles. They start again next April (first Tuesday: April 6, 2027).",
-  "status_since": "2026-09-15",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
   "city": "Greenville",
   "neighborhood": "SCTAC / Donaldson",
   "region": "South Carolina",
@@ -81993,9 +82013,9 @@
    "https://www.greenvillespinners.org/sctac-south-carolina-technology-and-aviation-center/",
    "https://www.greenvillespinners.org/"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-16",
   "last_seen": null,
-  "evidence": "The Spinners' SCTAC page says the Tuesday night rides run weekly from the first Tuesday in April and end in mid-September when daylight dwindles; the club's 2026 pages list only the monthly Saturday SCTAC ride after that (fetched Oct 1, 2026).",
+  "evidence": "Greenville Spinners' SCTAC page at greenvillespinners.org/sctac-south-carolina-technology-and-aviation-center/ says rides begin the first Tuesday in April and end mid-September when daylight dwindles; the club's homepage shows 'November No Events' — consistent with the current seasonal-break record (fetched Nov 16, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -82803,9 +82823,9 @@
   "name": "FAB Moon & Stars Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Runs near the full moon, May through September. Currently off-season; next rides expected May 2027, per the club's standard season.",
+  "status_since": "2026-11-16",
   "city": "Sioux Falls",
   "neighborhood": null,
   "region": "South Dakota",
@@ -82861,9 +82881,9 @@
    "https://www.fallsareabicyclists.org/events",
    "https://www.fallsareabicyclists.org/"
   ],
-  "verified_on": "2026-09-18",
-  "last_seen": null,
-  "evidence": null,
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "FAB's events page shows 'No events available'; the organization's homepage is active with news from August 2026. The Moon & Stars Ride runs May through September near the full moon; it is currently off-season (fetched Nov 16, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "calendar-page",
@@ -84706,6 +84726,83 @@
   }
  },
  {
+  "slug": "nashville-tn-ride615-sylvan-park-tuesday-night-ride",
+  "name": "11 Smiles Per Hour",
+  "name_en": null,
+  "kind": "group-ride",
+  "status": "active",
+  "status_note": null,
+  "status_since": null,
+  "city": "Nashville",
+  "neighborhood": "Sylvan Park",
+  "region": "Tennessee",
+  "state": "TN",
+  "country": "US",
+  "lat": 36.152,
+  "lng": -86.8419,
+  "geo_precision": "start",
+  "tz": "America/Chicago",
+  "discipline": [
+   "road"
+  ],
+  "schedule": "Every Thursday, 6:00 pm; weather permitting",
+  "days": [
+   "thu"
+  ],
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
+  "frequency": "weekly",
+  "monthly_rule": null,
+  "season": null,
+  "season_months": null,
+  "start_location": {
+   "name": "Ride615 Sylvan Park",
+   "address": "4511 Charlotte Ave, Nashville, TN 37209"
+  },
+  "distance_km": 35,
+  "distance_miles": 22,
+  "duration": null,
+  "duration_min": null,
+  "pace": "no-drop, 14–16 mph",
+  "drop_policy": "no-drop",
+  "host": {
+   "name": "Ride615 Bicycle Shop",
+   "type": "shop"
+  },
+  "founded_year": null,
+  "founded_note": null,
+  "cost": "free",
+  "language": [
+   "en"
+  ],
+  "visitor_notes": null,
+  "description": "A friendly social ride from Ride615's Sylvan Park store, every Thursday at 6:00 pm. The route covers about 21.7 miles of quiet neighborhood streets with two optional out-and-back climbs. The group sets its pace to whoever shows up; riders of every level are welcome.",
+  "links": {
+   "website": "https://www.ride615.com/articles/local-rides-pg195.htm",
+   "instagram": null,
+   "facebook": "https://www.facebook.com/Ride615/",
+   "strava": null,
+   "meetup": null,
+   "other": []
+  },
+  "inclusive_focus": [
+   "no-drop"
+  ],
+  "sources": [
+   "https://www.ride615.com/articles/local-rides-pg195.htm"
+  ],
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Ride615's local rides page at ride615.com/articles/local-rides-pg195.htm no longer lists the Tuesday Night Ride; it now lists '11 Smiles Per Hour' on Thursdays at 6:00 pm from the same Sylvan Park store, a friendly social ride of about 21.7 miles (fetched Nov 16, 2026).",
+  "confidence": "high",
+  "refresh": {
+   "method": "static-page",
+   "watch_url": "https://www.ride615.com/articles/local-rides-pg195.htm",
+   "feed_url": null,
+   "notes": null
+  }
+ },
+ {
   "slug": "nashville-tn-bike-curious-sunday-ride",
   "name": "Bike Curious Sunday Ride",
   "name_en": null,
@@ -85094,83 +85191,6 @@
   "refresh": {
    "method": "static-page",
    "watch_url": "https://ma.to/venue/shelbybicycle",
-   "feed_url": null,
-   "notes": null
-  }
- },
- {
-  "slug": "nashville-tn-ride615-sylvan-park-tuesday-night-ride",
-  "name": "Sylvan Park Tuesday Night Ride",
-  "name_en": null,
-  "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
-  "city": "Nashville",
-  "neighborhood": "Sylvan Park",
-  "region": "Tennessee",
-  "state": "TN",
-  "country": "US",
-  "lat": 36.152,
-  "lng": -86.8419,
-  "geo_precision": "start",
-  "tz": "America/Chicago",
-  "discipline": [
-   "road"
-  ],
-  "schedule": "Every Tuesday, 6:15 pm, weather permitting",
-  "days": [
-   "tue"
-  ],
-  "time_local": "6:15 pm",
-  "start_hhmm": "18:15",
-  "frequency": "weekly",
-  "monthly_rule": null,
-  "season": null,
-  "season_months": null,
-  "start_location": {
-   "name": "Ride615 Sylvan Park",
-   "address": "4511 Charlotte Ave, Nashville, TN 37209"
-  },
-  "distance_km": null,
-  "distance_miles": null,
-  "duration": null,
-  "duration_min": null,
-  "pace": "no-drop, 14–16 mph",
-  "drop_policy": "no-drop",
-  "host": {
-   "name": "Ride615 Bicycle Shop",
-   "type": "shop"
-  },
-  "founded_year": null,
-  "founded_note": null,
-  "cost": "free",
-  "language": [
-   "en"
-  ],
-  "visitor_notes": null,
-  "description": "A no-drop road ride that leaves the Ride615 shop in Sylvan Park. The shop lists the pace at 14 to 16 mph average. It runs weather permitting, so check with the shop first.",
-  "links": {
-   "website": "https://www.ride615.com/articles/local-rides-pg195.htm",
-   "instagram": null,
-   "facebook": "https://www.facebook.com/Ride615/",
-   "strava": null,
-   "meetup": null,
-   "other": []
-  },
-  "inclusive_focus": [
-   "no-drop"
-  ],
-  "sources": [
-   "https://www.ride615.com/articles/local-rides-pg195.htm"
-  ],
-  "verified_on": "2026-09-18",
-  "last_seen": null,
-  "evidence": null,
-  "confidence": "high",
-  "refresh": {
-   "method": "static-page",
-   "watch_url": "https://www.ride615.com/articles/local-rides-pg195.htm",
    "feed_url": null,
    "notes": null
   }
@@ -88870,12 +88890,12 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Every Sunday, 8:00 am. The route changes weekly. Optional lunch after.",
+  "schedule": "Every Sunday, 9:00 am. The route changes weekly. Optional lunch after.",
   "days": [
    "sun"
   ],
-  "time_local": "8:00 am",
-  "start_hhmm": "08:00",
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": null,
@@ -88917,9 +88937,9 @@
    "https://www.meetup.com/greater-dallas-bicyclists/events/316552634/",
    "https://www.meetup.com/greater-dallas-bicyclists/events/ical/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Greater Dallas Bicyclists' Meetup feed lists GDB Sunday Roll for Sun Oct 4, Oct 11 and Oct 18, 2026 at 8:00 am (read Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Greater Dallas Bicyclists' Meetup ICS feed lists GDB Sunday Roll for Sun Nov 22 and Nov 29, 2026 at 9:00 am (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -88948,13 +88968,13 @@
   "discipline": [
    "social"
   ],
-  "schedule": "About every two weeks, 9:00 am, on a Saturday or Sunday. Each ride is its own Eventbrite event with its own trail and start: Sat Oct 10 from Glendale Park (Oak Cliff), Sun Oct 25 from the Trinity River Audubon Center.",
+  "schedule": "About every two weeks, 10:00 am, on a Saturday or Sunday. Each ride is posted as its own event; check makethc.org/activities for the current date and start.",
   "days": [
    "sat",
    "sun"
   ],
-  "time_local": "9:00 am",
-  "start_hhmm": "09:00",
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
   "frequency": "biweekly",
   "monthly_rule": null,
   "season": null,
@@ -88999,13 +89019,13 @@
    "https://www.eventbrite.com/e/group-bike-ride-runyon-creek-trail-glendale-park-to-unt-dallas-tickets-2002297930009",
    "https://www.eventbrite.com/e/group-bike-ride-great-trinity-forest-att-trail-tickets-2002299056378"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Make The Healthy Choice's Eventbrite organizer page lists group bike rides at 9:00 am on Sat Oct 10, 2026 (Glendale Park, Oak Cliff) and Sun Oct 25, 2026 (Trinity River Audubon Center, Great Trinity Forest AT&T Trail), each posted as its own event (read Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "makethc.org/activities lists Group Bike Ride (Runyon Creek Trail, Glendale Park) on Sat Nov 28, 2026 at 10:00 am (fetched Nov 16, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "eventbrite",
-   "watch_url": "https://www.eventbrite.com/o/make-the-healthy-choice-33450140319",
+   "watch_url": "https://www.makethc.org/activities",
    "feed_url": null,
    "notes": "Each ride is posted as its own event on the organizer page; the start changes ride to ride."
   }
@@ -91237,12 +91257,12 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Saturdays, 8:00 am in the warm months and 9:00 am in the cold months (check the FWBA calendar for the week's time). Arrive 30 minutes early. Next: Sat Oct 3, 2026 at 8:00 am.",
+  "schedule": "Saturdays, 9:00 am in the cold months and 8:00 am in the warm months (check the FWBA calendar for the week's time). Arrive 30 minutes early.",
   "days": [
    "sat"
   ],
-  "time_local": "8:00 am",
-  "start_hhmm": "08:00",
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": null,
@@ -91286,9 +91306,9 @@
    "https://www.fwbaclub.org/event-6837496",
    "https://www.fwbaclub.org/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "FWBA's calendar lists the Joe Pool Lake Rusty Chain Gang for Sat Oct 3, 2026 at 8:00 am, and the event page says 8 am in warm months and 9 am in cold months (read Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "FWBA's homepage lists the Anna May Daulton Joe Pool Lake – Rusty Chain Gang for Sat Nov 21, 2026 at 9:00 AM, and the site's banner says 'Ride Start Times are Changing, Please Double Check' (fetched Nov 16, 2026). Current cold-month start is 9:00 AM.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -91838,11 +91858,12 @@
   "sources": [
    "https://www.bikehouston.org/events",
    "https://www.bikehouston.org/events/first-sunday-ride-oct-2026",
-   "https://www.bikehouston.org/events/first-sunday-ride-sep-2026"
+   "https://www.bikehouston.org/events/first-sunday-ride-sep-2026",
+   "https://www.bikehouston.org/events/first-sunday-ride-dec-2026"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "BikeHouston's events page lists the First Sunday Ride for Sun Oct 4, 2026, 8:00 am at Terry Hershey Park; the Sept 6 ride was posted from Townwood Park (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "BikeHouston's events page and the Dec 2026 event page show the First Sunday Ride for Dec 6, 2026 at 8:00 AM at Market Square Park, 301 Milam St, Houston; location changes monthly as the record notes (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -94380,9 +94401,9 @@
    "https://www.awesomefoundation.org/en/projects/66510-satx-social-ride-safety-and-education",
    "https://www.facebook.com/groups/SATNBC/"
   ],
-  "verified_on": "2026-09-15",
-  "last_seen": null,
-  "evidence": null,
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "bike-san-antonio.org/sa-bike-groups/ lists the SATX Social Ride as a weekly community ride that meets at 6:30 pm and rolls out at 7 pm every Tuesday night, rotating locations downtown, 9 to 14 miles, no-drop (fetched Nov 16, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -111577,9 +111598,9 @@
    "https://www.letsride.co.uk/groups/west-london-breeze",
    "https://www.letsride.co.uk/rides?location=London&lat=51.5074&lng=-0.1278&radius=15"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "The group's Let's Ride page lists rides from Ealing Town Hall at 9:15 am on Fri Oct 2 and Fri Oct 23, 2026, and weekly Friday rides from Aug 7 to Sep 25 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "The West London Breeze Let's Ride page lists future Friday rides: 'Sir John Soane's discovery rid... Friday 20th November 2026 9:15am W5 5AL' and 'Chiswick Art & History Friday 4th December 2026 9:15am W5 2BY' (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "federation-calendar",
@@ -111814,9 +111835,9 @@
    "https://www.letsride.co.uk/groups/harrow-cycle-hub",
    "https://www.letsride.co.uk/rides?location=London&lat=51.5074&lng=-0.1278&radius=15"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "The charity's Let's Ride group page lists Beginner Bike Ride from Kenton on Sat Oct 3, 17, 24 and 31 and Nov 14 and 21, 2026 at 2:00 pm, and the same ride most Saturdays in September (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Let's Ride (letsride.co.uk/groups/harrow-cycle-hub) lists Beginner Bike Ride from Kenton on Sat Nov 14 and Nov 21, 2026 at 2:00 pm, and Sat Nov 28 at 2:15 pm — same day and time as the record (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "federation-calendar",
@@ -111964,16 +111985,17 @@
   },
   "inclusive_focus": [],
   "sources": [
-   "https://www.meetup.com/leeds-cycling/"
+   "https://www.meetup.com/leeds-cycling/",
+   "https://www.meetup.com/leeds-cycling/events/ical/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "The group's Meetup page lists four Saturday rides, Oct 3, 10, 17 and 24, 2026, and Saturday rides on Sep 5, 12, 19 and 26 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Leeds Cycling's Meetup ICS feed (fetched Nov 16, 2026) lists Saturday off-road rides on Nov 21 (09:45 am, Leggers Inn – Stoneycliffe Nature Reserve) and Nov 28; the Meetup group page returns 'Group not found' for non-members but the ICS calendar is public and working.",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
    "watch_url": "https://www.meetup.com/leeds-cycling/",
-   "feed_url": null,
+   "feed_url": "https://www.meetup.com/leeds-cycling/events/ical/",
    "notes": "Meetup's iCal feed returns 'Invalid feed signature'; the group page shows the next four rides."
   }
  },
@@ -112412,12 +112434,12 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Fridays, 7:00 am: laps of Richmond Park then coffee. Auster's Meetup lists 'Chilled B Richmond Morning Laps & Coffee' for Fri Oct 2, 2026 at 7:00 am, plus a 6:45 am gravel-laps group. The club's intro rides for new riders have met at Colicci Roehampton Gate Café on Friday mornings at 7:00.",
+  "schedule": "Fridays, 7:15 am (winter, GMT): laps of Richmond Park then coffee. In summer (BST) the ride was at 7:00 am.",
   "days": [
    "fri"
   ],
-  "time_local": "7:00 am",
-  "start_hhmm": "07:00",
+  "time_local": "7:15 am",
+  "start_hhmm": "07:15",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -112460,9 +112482,9 @@
    "https://www.meetup.com/auster-cc/",
    "https://www.meetup.com/auster-intros/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Auster's Meetup page lists a Friday Richmond Morning Laps & Coffee for Oct 2, 2026 at 7:00 am, the club's Rides page says it has regular Friday morning Richmond Park laps, and the Auster Intro Rides group listed Friday 7:00 am intro laps on Aug 28 and Sep 18, 2026 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Auster CC's Meetup page lists 'Chilled B Richmond Morning Laps & Coffee' on Fri Nov 20 at 7:15 AM GMT and Fri Nov 27 at 7:15 AM GMT (fetched Nov 16, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "meetup",
@@ -112869,9 +112891,9 @@
    "https://cycleclub.london/our-rides/",
    "https://cycleclub.london/wp-json/wp/v2/pages?slug=our-rides"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-06-15",
-  "evidence": "The club's Our rides page, modified 2026-06-15 per its WordPress API (fetched Oct 1, 2026), still lists Wednesdays and Fridays 7:00 am as one hour of chat laps around the Outer Circle then coffee, from the Inner Circle gates at the end of York Bridge; it calls them open, member-led rides. Dated rides live in the members' Spond app, so nothing newer is public.",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Cycle Club London's Our Rides page states Wednesdays and Fridays 7:00 am for 1 hour of chat laps around the Outer Circle, followed by coffee and buns, from the big gates of the inner circle at the end of York Bridge (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -112959,7 +112981,7 @@
  },
  {
   "slug": "london-gb-cycle-club-london-saturday-steady-club-ride",
-  "name": "Saturday Steady Club Ride",
+  "name": "Saturday Pigeons Club Ride",
   "name_en": null,
   "kind": "group-ride",
   "status": "active",
@@ -112977,18 +112999,18 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Every Saturday: from 8:30 am for pre-ride coffee in Winchmore Hill, depart 9:00 am sharp. A Faster group leaves at the same time; the Sparrows group leaves East Finchley at 6:30 am.",
+  "schedule": "Every Saturday, 8:00 am from various locations in North London (location determined the week prior); about 45 miles at 13–15 mph / 21–23 km/h",
   "days": [
    "sat"
   ],
-  "time_local": "9:00 am",
-  "start_hhmm": "09:00",
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
   "season_months": null,
   "start_location": {
-   "name": "Winchmore Hill (café posted in the club app)",
+   "name": "Various locations in North London (determined the week prior)",
    "address": null
   },
   "distance_km": 72,
@@ -113007,8 +113029,8 @@
   "language": [
    "en"
   ],
-  "visitor_notes": "Non-members can join on trial rides — contact the club first; the exact café is shared in Spond.",
-  "description": "A steady, no-drop Saturday club run from north London out into Hertfordshire and Essex lanes, about 45 miles. The club says: 'All of our Club Rides are no-drop. We won't leave anyone behind.' A good first club run for a visitor who can hold 21–23 km/h.",
+  "visitor_notes": "Contact the club first (cycleclub.london/how-to-join) to find the week's start location and confirm your place. The exact location is shared in Spond.",
+  "description": "A Saturday club run from various North London locations into Hertfordshire and Essex, about 45 miles. The start is posted each week in the club's Spond app. All club rides are no-drop.",
   "links": {
    "website": "https://cycleclub.london/our-rides/",
    "instagram": null,
@@ -113024,9 +113046,9 @@
    "https://cycleclub.london/our-rides/",
    "https://cycleclub.london/wp-json/wp/v2/pages?slug=our-rides"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-06-15",
-  "evidence": "The club's Our rides page, modified 2026-06-15 per its WordPress API (fetched Oct 1, 2026), lists the Saturday Steady Club Ride: pre-ride coffee from 8:30 in Winchmore Hill, depart 9:00 sharp, about 45 miles at 13-15 mph, and says all club rides are no-drop.",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Cycle Club London's Our Rides page no longer lists 'Saturday Steady Club Ride'; the equivalent slower Saturday ride is now called 'Saturday Pigeons Club Ride', leaving at 8:00 am from various North London locations (determined the week prior), about 45 miles at 13–15 mph (fetched Nov 16, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -113181,9 +113203,9 @@
    "https://cycleclub.london/our-rides/",
    "https://cycleclub.london/wp-json/wp/v2/pages?slug=our-rides"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "The club's Our rides page, modified 2026-06-15 per its WordPress API, lists the Sunday Classic Club Ride at 8:30 am from East Finchley and says all club rides are no-drop (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-16",
+  "last_seen": "2026-11-16",
+  "evidence": "Cycle Club London's Our Rides page lists the Sunday Classic Club Ride: pre-ride coffee from 8:00 am in East Finchley, depart 8:30 am sharp, 60 miles at 15–16 mph, all rides no-drop (fetched Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
