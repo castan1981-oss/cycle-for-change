@@ -773,16 +773,21 @@ explained" keeps its name: it's about charity rides in general, not this site.
   listed on Robert's own word (he rides it every Friday, Oct 8, 2026) and linked from the card (`ride_slug`,
   shown as "The shop ride"). The owner, Kale Keltz, sends changes through "I run this ride" on the ride page.
 
-- **Just ask** (Nov 15, 2026; Robert, on the Ojai pilot: "I like just ask"): a town that sets `ask: true` gets a question
-  box under its tagline ("Ask about Ojai"). It answers from that guide's own places, the facts on their cards and its
+- **Just ask** (Nov 15, 2026; Robert, on the Ojai pilot: "I like just ask"; every destination guide since Nov 16, "build
+  the rest"): a `destination` guide gets a question box under its tagline ("Ask about Ojai") unless it sets `ask: false`. It answers from that guide's own places, the facts on their cards and its
   `faq`, matched in the browser (`cfc-site/events/ask.js`, data in the page as `#askData`, `askBlock()` in
   build-events.js). Nothing is sent anywhere and nothing typed is tracked; the line under the box says so, keep it
   true. No script: the tries are links to the guide's pages. Crisis words show 988 and the Trevor Project first. It
   never writes an answer of its own: an AI-written answer needs a function on the site's key with a spending cap,
-  which is Robert's call and isn't built. Ojai only for now. Tests: `tools/test/town-ask.test.js`; bump `ASK_V` when
+  which is Robert's call and isn't built. `/privacy/#ask` says what it does; keep the two in step. Tests: `tools/test/town-ask.test.js`; bump `ASK_V` when
   ask.js changes.
 - **A small town sets its reach** (`radius`, miles; Ojai is 8): the 25-mile lookup would have put Ojai's guide on
-  Ventura's ride pages.
+  Ventura's ride pages. Guerneville sets one too (Santa Rosa's ride is 16 miles off).
+- **A list page says what its own listings say** (Nov 16, 2026, the Ojai search pass): the hotels description counts the
+  ones that state loaner bikes (`LENDS`), the coffee description names the first three, the shops title leads with
+  rental when a shop rents, the off-the-bike h1 lists the kinds the town has, the bring-your-bike title is its question,
+  and the guide's FAQ heading is "Questions about cycling in <town>". Counts and names come from the data
+  (`hotelDesc()`, `coffeeDesc()`, `shopDesc()`, `cultureTail()` in build-events.js), never typed.
 
 ### Event pages (`/events/<slug>/`): the line (Nov 15, 2026)
 - Robert, on the Ojai pilot: "I like just ask but also the line, yes let's build this." A multi-day event lists its
@@ -791,7 +796,9 @@ explained" keeps its name: it's about charity rides in general, not this site.
   pages with the strip's own counts. A leg between stops is a line of text. Only what the organizer published; a
   stop with no guide says so by having no links. Never a drawn route (§6). Works without script.
 - **Center Ride Out is an event page now** (`/events/center-ride-out/`, the first with a line: Los Angeles, Ojai, the
-  coast near Santa Monica). `/guides/center-ride-out/` 301s to it (growth plan, Phase 3 action 6). The camp's
+  coast near Santa Monica). `/guides/center-ride-out/` 301s to it (growth plan, Phase 3 action 6). **Cycle to Zero
+  followed on Nov 16** (`/events/cycle-to-zero/`: San Francisco, Guerneville, San Francisco; its guide 301s too; the
+  camp is named because the foundation names it: Camp Russian River and Johnson's Beach). The camp's
   location isn't published: never name or guess it. After the Center posts routes, the finish and the camp, re-read
   and update the event file and the line.
 
@@ -1415,3 +1422,6 @@ two exits; the shapes are on the plan canvas.
   the event template with the first route line, and a town's own `radius`. Search Console's read behind it (town
   pages: 405 impressions, 0 clicks in 90 days; the bike-specific questions rank, the plain ones don't) is in the
   claude.ai project doc "ojai-pilot-town-traffic-nov-15-2026".
+- 2026-11-16 — The rest of the Ojai pilot (Robert: "Push and build the rest"; #245 merged first): Just ask on every
+  destination guide; the Guerneville town guide (`/towns/california/guerneville/`); Cycle to Zero on the event template
+  with its route line; list pages' titles and descriptions written from their own listings; `/privacy/#ask`. No stylesheet changed.
