@@ -260,6 +260,7 @@ for (const t of towns) {
   t.slug = slugify(t.name);
   t.url = `/towns/${t.state_slug}/${t.slug}/`;
   t.events = [];
+  t.through = []; // events whose line stops here but starts somewhere else (Nov 16, 2026)
   t.kind = t.kind || "event-host";
   inEnum(`towns/${t.id}.kind`, t.kind, ENUM.kind);
   (t.routes || []).forEach((r, i) => {
@@ -293,6 +294,8 @@ for (const e of events) {
     if (s.leg) return;
     if (!s.name) throw new Error(`events/${e.slug}.line[${i}] has no name`);
     if (s.town && !townById[s.town]) throw new Error(`events/${e.slug}.line[${i}] references unknown town ${s.town}`);
+    const st = s.town && townById[s.town];
+    if (st && st !== t && !st.through.includes(e)) st.through.push(e);
   });
 }
 
@@ -558,7 +561,7 @@ function eventPage(e) {
 
     ${lineBlock(e)}
 
-    ${e.history && e.history.length ? `<section><h2>How the ${esc(e.name)} started</h2>${paras(e.history)}</section>` : ""}
+    ${e.history && e.history.length ? `<section><h2>How ${e.article === false ? "" : "the "}${esc(e.name)} started</h2>${paras(e.history)}</section>` : ""}
     ${e.what_to_expect && e.what_to_expect.length ? `<section><h2>What to expect on the day</h2>${paras(e.what_to_expect)}</section>` : ""}
     ${readyBlock(e)}
 
@@ -679,7 +682,7 @@ function askData(t) {
   return { url: t.url, town: t.name, pages, places, faq };
 }
 function askBlock(t) {
-  if (!t.ask) return "";
+  if (t.kind !== "destination" || t.ask === false) return "";
   const have = new Set(guidePages(t).map((r) => r.seg));
   const tries = ASK_TRIES.filter(([seg]) => have.has(seg));
   return `<section class="town-ask" data-ask aria-labelledby="ask-h">
@@ -736,7 +739,7 @@ function townPage(t) {
   const CARD = {
     hotels: () => [`Stay`, `Hotels in ${t.name}`, TOWNS.hotelLine(t)],
     restaurants: (n) => [`Eat`, `Restaurants in ${t.name}`, `${n} places for the night before and after`],
-    "bike-shops": () => [`Fix`, `Bike shops in ${t.name}`, TOWNS.shopLine(t)],
+    "bike-shops": () => [`Fix`, `Bike shops ${shopPrep(t)} ${t.name}`, TOWNS.shopLine(t)],
     routes: (n) => [`Ride`, `Rides in ${t.name}`, `${n} routes with a route page each`],
     coffee: () => [`Coffee`, `Coffee in ${t.name}`, TOWNS.coffeeLine(t)],
     culture: (n) => [`Off the bike`, `${t.name} off the bike`, `${n} places for the afternoon after`],
@@ -781,8 +784,8 @@ ${g.rides.map(rideRow).join("\n")}
       <p class="town-more"><a href="${hub ? hub.path : `/rides/${t.state_code.toLowerCase()}/`}">${hub ? `All ${hub.rides} group rides in ${esc(t.name)}` : `All group rides in ${esc(t.state)}`} &rarr;</a></p>
     </section>` : ""}
 
-    ${t.events.length || !cal.length ? `<section><h2>Bike events in ${esc(t.name)}</h2>
-      ${t.events.length ? `<ul class="tiles-p tiles-p--events">${t.events.map((e) => eventCard(e)).join("")}</ul>` : `<p>No events with their own page here yet.</p>`}
+    ${t.events.length || t.through.length || !cal.length ? `<section><h2>Bike events in ${esc(t.name)}</h2>
+      ${t.events.length || t.through.length ? `<ul class="tiles-p tiles-p--events">${[...t.events, ...t.through].map((e) => eventCard(e)).join("")}</ul>` : `<p>No events with their own page here yet.</p>`}
     </section>` : ""}
     ${cal.length ? `<section class="local-rides" aria-labelledby="cal-h">
       <h2 id="cal-h">Organized rides in ${esc(t.name)} in 2027</h2>
@@ -805,7 +808,7 @@ ${cal.map((e) => `        <li><a href="/events/2027/${e.start ? ["january","febr
     ${explain ? fold(`How ${esc(t.name)} rides: the zones, getting here`, explain, "town-about") : ""}
     ${weatherBlock(t)}
     <p class="tg-ready"><b>Get the bike ready.</b> ${townReady(t)}</p>
-    ${t.faq && t.faq.length ? `<section class="faq"><h2>Questions about riding in ${esc(t.name)}</h2>${t.faq.map((f, i) => `<details><summary>${esc(plain(f.q, W))}</summary><p>${rich(f.a, `${W}.faq[${i}]`)}</p></details>`).join("")}</section>` : ""}
+    ${t.faq && t.faq.length ? `<section class="faq"><h2>Questions about cycling in ${esc(t.name)}</h2>${t.faq.map((f, i) => `<details><summary>${esc(plain(f.q, W))}</summary><p>${rich(f.a, `${W}.faq[${i}]`)}</p></details>`).join("")}</section>` : ""}
     ${moreFacts(t)}
     ${sourcesList(t.sources)}
     ${affiliateNote(t)}
@@ -967,14 +970,43 @@ function placeCard(t, r, it, i) {
       </li>`;
 }
 
+// Nov 16, 2026 (the Ojai search pass, research/towns/ojai-ca/seo.md): a list page's title, h1 and description say what
+// its own listings say. Search Console's read: the specific question ranks ("hotels with complimentary bicycles for
+// guests", position 1), the plain one doesn't ("bike shops tucson", 40–99). Every count and name comes from the data.
+const LENDS = /complimentary (linus )?(bicycle|bike)|loaner bike|bikes? (for|to) (its |their )?guests|free bikes|bicycles, locks/i;
+const listNames = (items, n) => { const a = items.slice(0, n).map((x) => x.name); return a.length > 1 ? `${a.slice(0, -1).join(", ")} and ${a[a.length - 1]}` : a[0] || ""; };
+const rentCount = (items) => items.filter(rents).length;
+const shopPrep = TOWNS.shopPrep; // "in" or "near": scripts/towns.js
+const num = (n) => ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"][n] || String(n);
+function hotelDesc(t, items) {
+  const n = items.filter((h) => LENDS.test([h.note, h.description, h.line, h.bike_policy].filter(Boolean).join(" "))).length;
+  return n ? `Hotels in ${t.name} for cyclists. ${num(n)} ${n === 1 ? "says it lends" : "say they lend"} bikes to guests, in ${n === 1 ? "its" : "their"} own words. ${items.length} listed.` : null;
+}
+// A listing the site carries but never leads with (Robert, Oct 16, 2026) stays out of the description's three names.
+const QUIET = /regroup/i;
+function coffeeDesc(t, items) {
+  const named = items.filter((x) => !QUIET.test(x.name));
+  return named.length ? `Coffee in ${t.name} for cyclists: ${listNames(named, 3)}. ${items.length} listed, with hours.` : null;
+}
+function shopDesc(t, items) {
+  const r = rentCount(items), fix = items.filter((x) => (x.services || []).includes("repair")).length;
+  return items.length ? `Bike shops ${shopPrep(t)} ${t.name}: ${fix} do repairs${r ? `, ${r} rent bikes` : ""}. Hours, phone and what each one does. Call ahead on event weekends.` : null;
+}
+const CULTURE_WORDS = { "record-store": "record stores", bookstore: "bookshops", gallery: "galleries", museum: "museums", bar: "bars", venue: "venues", market: "markets" };
+function cultureTail(items) {
+  const kinds = [];
+  for (const it of items) { const w = CULTURE_WORDS[it.kind]; if (w && !kinds.includes(w)) kinds.push(w); }
+  return kinds.length >= 2 ? `: ${kinds.slice(0, 3).join(", ")}` : "";
+}
+
 const RESOURCE = {
-  hotels: { key: "hotels", seg: "hotels", always: true, h: (t) => `Hotels in ${t.name} for cyclists`, title: (t) => `Hotels in ${t.name}, ${t.state_code} for cyclists`, type: "LodgingBusiness", verb: "stay", intro: (t) => `Where to sleep in ${t.name} when you're here to ride. Book early for event weekends.` },
+  hotels: { key: "hotels", seg: "hotels", always: true, h: (t) => `Hotels in ${t.name} for cyclists`, desc: hotelDesc, title: (t) => `Hotels in ${t.name}, ${t.state_code} for cyclists`, type: "LodgingBusiness", verb: "stay", intro: (t) => `Where to sleep in ${t.name} when you're here to ride. Book early for event weekends.` },
   restaurants: { key: "restaurants", seg: "restaurants", always: true, h: (t) => `Restaurants in ${t.name} for cyclists`, title: (t) => `Restaurants in ${t.name}, ${t.state_code} for cyclists`, type: "Restaurant", verb: "eat", intro: (t) => `Where to eat in ${t.name} the night before and the afternoon after. Real food, open when you need it.` },
-  "bike-shops": { key: "bike_shops", seg: "bike-shops", always: true, h: (t) => `Bike shops in ${t.name}: repairs, parts, rentals`, title: (t) => `Bike shops in ${t.name}, ${t.state_code}: repair, rentals`, type: "BikeStore", verb: "fix", intro: (t) => `Repairs, rentals and fits in ${t.name}. Call ahead on event weekends.` },
-  coffee: { key: "coffee", seg: "coffee", h: (t) => `Coffee in ${t.name} for cyclists`, title: (t) => `Coffee in ${t.name}, ${t.state_code} for cyclists`, type: "CafeOrCoffeeShop", verb: "coffee", intro: (t) => `Where riders in ${t.name} start the day and finish the ride.` },
-  culture: { key: "culture", seg: "culture", h: (t) => `${t.name} off the bike: record stores, bookshops, bars`, title: (t) => `${t.name}, ${t.state_code} off the bike`, type: "LocalBusiness", verb: "off the bike", intro: (t) => `What to do in ${t.name} with the afternoon after the ride.` },
+  "bike-shops": { key: "bike_shops", seg: "bike-shops", always: true, h: (t) => `Bike shops ${shopPrep(t)} ${t.name}: repairs, parts, rentals`, title: (t) => rentCount(t.bike_shops || []) ? `Bike rental and bike shops ${shopPrep(t)} ${t.name}, ${t.state_code}` : `Bike shops ${shopPrep(t)} ${t.name}, ${t.state_code}: repair, rentals`, desc: shopDesc, type: "BikeStore", verb: "fix", intro: (t) => `Repairs, rentals and fits ${shopPrep(t)} ${t.name}. Call ahead on event weekends.` },
+  coffee: { key: "coffee", seg: "coffee", h: (t) => `Coffee in ${t.name} for cyclists`, desc: coffeeDesc, title: (t) => `Coffee in ${t.name}, ${t.state_code} for cyclists`, type: "CafeOrCoffeeShop", verb: "coffee", intro: (t) => `Where riders in ${t.name} start the day and finish the ride.` },
+  culture: { key: "culture", seg: "culture", h: (t) => `${t.name} off the bike${cultureTail(t.culture || [])}`, title: (t) => `${t.name}, ${t.state_code} off the bike`, type: "LocalBusiness", verb: "off the bike", intro: (t) => `What to do in ${t.name} with the afternoon after the ride.` },
   routes: { key: "routes", seg: "routes", h: (t) => `Bike routes in ${t.name}`, title: (t) => `Bike routes in ${t.name}, ${t.state_code}`, verb: "ride", intro: (t) => `The rides locals in ${t.name} actually do, each with a route you can load.` },
-  "bring-your-bike": { key: "bring_your_bike", seg: "bring-your-bike", h: (t) => `Should you bring your bike to ${t.name}?`, title: (t) => `Bringing your bike to ${t.name}, ${t.state_code}`, verb: "bring the bike", intro: (t) => `` },
+  "bring-your-bike": { key: "bring_your_bike", seg: "bring-your-bike", h: (t) => `Should you bring your bike to ${t.name}?`, title: (t) => `Should you bring your bike to ${t.name}, ${t.state_code}?`, verb: "bring the bike", intro: (t) => `` },
 };
 
 const FOCUS_LABEL = { lgbtq: "LGBTQ+", "no-drop": "No-drop", beginner: "Beginner friendly", "women-trans-femme": "Women / trans / femme", bipoc: "BIPOC", family: "Family", gravel: "Gravel" };
@@ -988,7 +1020,7 @@ function resourcePage(t, r) {
   const items = raw.slice().sort((a, b) => (b.home_shop ? 1 : 0) - (a.home_shop ? 1 : 0));
   const url = `${t.url}${r.seg}/`;
   const title = r.title(t);
-  const description = truncate(`${r.intro(t)} ${items.length} listed.`, 155);
+  const description = truncate((r.desc && r.desc(t, items)) || `${r.intro(t)} ${items.length} listed.`, 155);
   const crumbs = breadcrumb([{ name: "Towns", url: "/towns/" }, { name: t.name, url: t.url }, { name: r.h(t), url }]);
   const ld = stripUndef({
     "@context": "https://schema.org", "@type": "ItemList", name: r.h(t), url: SITE + url, numberOfItems: items.length,
@@ -1007,7 +1039,7 @@ function resourcePage(t, r) {
     <p class="eyebrow"><a href="${t.url}">${esc(t.name)}, ${esc(t.state)}</a> &middot; ${esc(r.verb)}</p>
     <h1>${esc(r.h(t))}</h1>
     <p class="lede">${esc(r.intro(t))}</p>
-    ${t.events.length ? `<p class="for-events">For: ${t.events.map((e) => `<a href="${e.url}">${esc(e.name)}</a>`).join(", ")}.</p>` : ""}
+    ${t.events.length || t.through.length ? `<p class="for-events">For: ${[...t.events, ...t.through].map((e) => `<a href="${e.url}">${esc(e.name)}</a>`).join(", ")}.</p>` : ""}
     <h2 class="visually-hidden">${esc(r.h(t))}, listed</h2>
     ${r.key === "hotels" && items.length ? `<p class="for-events">${esc(TOWNS.hotelLine(t))}.</p>` : ""}
     ${filterRow(r.key, items)}
@@ -1182,7 +1214,7 @@ function bringYourBikePage(t) {
       ${shopCards(ship.shops, "box")}
     </section>` : ""}
 
-    ${hasRent ? `<section id="rent" aria-labelledby="rent-h">${h2("rent", "key", `Renting a bike in ${esc(t.name)}`)}
+    ${hasRent ? `<section id="rent" aria-labelledby="rent-h">${h2("rent", "key", `Renting a bike ${shopPrep(t)} ${esc(t.name)}`)}
       ${leadFold(rent.note, W + ".rent", "What renting costs and what you get")}
       ${shopCards(rent.shops, "key")}
     </section>` : ""}

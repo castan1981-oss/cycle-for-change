@@ -243,6 +243,18 @@
 
 # —— Nov 15, 2026: Center Ride Out moved from a guide to the event template (growth plan, Phase 3 action 6). ——
 [[redirects]]
+  from = "/guides/cycle-to-zero"
+  to = "/events/cycle-to-zero/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/cycle-to-zero/*"
+  to = "/events/cycle-to-zero/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/guides/center-ride-out"
   to = "/events/center-ride-out/"
   status = 301

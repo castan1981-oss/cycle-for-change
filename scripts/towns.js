@@ -65,10 +65,12 @@ function shopLine(t) {
   if (!n) return "Open the day before";
   return r ? `${plural(n, "shop")} · ${r} rent${r === 1 ? "s" : ""} bikes` : `${plural(n, "shop")} for repairs`;
 }
+// "in" only when a shop's own address is in the town; a town with none of its own (Guerneville) says "near" (Nov 16, 2026)
+const shopPrep = (t) => (t.bike_shops || []).some((x) => (x.address || "").includes(`, ${t.name},`)) ? "in" : "near";
 const PAGES = [
   { seg: "routes", key: "routes", mark: "road", k: "Ride", b: (t) => `Rides in ${t.name}`, s: (n) => `${n} route${n === 1 ? "" : "s"} with maps` },
   { seg: "coffee", key: "coffee", mark: "social", k: "Coffee", b: (t) => `Coffee in ${t.name}`, s: (n, t) => coffeeLine(t) },
-  { seg: "bike-shops", key: "bike_shops", mark: "fix", k: "Fix", b: (t) => `Bike shops in ${t.name}`, s: (n, t) => shopLine(t), always: true },
+  { seg: "bike-shops", key: "bike_shops", mark: "fix", k: "Fix", b: (t) => `Bike shops ${shopPrep(t)} ${t.name}`, s: (n, t) => shopLine(t), always: true },
   { seg: "hotels", key: "hotels", mark: "sleep", k: "Sleep", b: (t) => `Hotels in ${t.name}`, s: (n, t) => hotelLine(t), always: true },
   { seg: "restaurants", key: "restaurants", mark: "eat", k: "Eat", b: (t) => `Restaurants in ${t.name}`, s: (n) => n ? `${n} pick${n === 1 ? "" : "s"}, night before and after` : "Carb night, post-ride, early coffee", always: true },
   { seg: "culture", key: "culture", mark: "town", k: "Off the bike", b: (t) => `${t.name} off the bike`, s: (n) => `${n} place${n === 1 ? "" : "s"} for the afternoon after` },
@@ -158,4 +160,4 @@ function link(t, text) {
   return `<a class="town-link" href="${t.url}">${text || `${esc(t.name)} guide`} &rarr;</a>`;
 }
 
-module.exports = { load, find, strip, link, PAGES, RADIUS, hasBikePolicy, hotelLine, coffeeLine, shopLine, textPlain, RIDE_TOKEN };
+module.exports = { load, find, strip, link, PAGES, RADIUS, shopPrep, hasBikePolicy, hotelLine, coffeeLine, shopLine, textPlain, RIDE_TOKEN };
