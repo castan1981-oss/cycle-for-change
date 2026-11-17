@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "bend-or-tuesday-night-rubber-mallet",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "bendbikerides.com returns a Cloudflare challenge on every fetch (403); bendbikerides.com/event does the same. The BendSource article confirms the ride but dates from 2016. Google Groups (groups.google.com/g/bendcycling) has posts through June 9, 2026, nothing after. The ride appears seasonal but no host statement found. A person could: join the BendCycling Google Group, or call WebCyclery (the listed start location) to ask if the Tuesday ride is still running and when it resumes."
+  },
+  {
+    "slug": "corpus-christi-tx-cc-led-saturday-light-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The watch page (thebendmag.com article, Aug 2022) loads but provides no 2026 evidence. Instagram (@getccled) is the host's current channel but requires a login. No 2026 posts or listings found. A person could check instagram.com/getccled or facebook.com/getCCLED for recent ride posts."
+  },
+  {
+    "slug": "kalamazoo-mi-pedal-tuesday-queer-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The watch page (pedalbicycle.com/articles/events) loads but no longer shows the Tuesday queer ride or any recurring Tuesday evening ride — it shows only winter training starting December 7. The original schedule says 'through mid-September' so the absence in November is expected, but the host's page gives no confirmation the ride will return in spring. A person could call PEDAL Bicycle (Downtown: 269-56-PEDAL, South: 269-324-5555) or check instagram.com/pedalbicycles to ask if the queer Tuesday ride returns in spring 2027."
+  },
+  {
+    "slug": "madison-wi-madison-queer-bike-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The watch page (ourliveswisconsin.com/article/madison-queer-bike-ride/) returns 403 on every attempt. A third-party GitHub file (allyrilling/madison-group-rides) lists the ride as active and year-round but that is not the host's own page. Instagram @madisonqueerbikeride is the host's channel but requires a login. A person could check instagram.com/madisonqueerbikeride directly for a recent post confirming the next second-Wednesday ride."
+  },
+  {
+    "slug": "missoula-mt-thursday-night-mountain-bike-group",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "thursdaynightmtbr.org returns ERR_TLS_CERT_ALTNAME_INVALID on every fetch. The secondary source mtalphacycling.org/local-group-rides.html returns 404. missoulaunderground.com (which lists TNR rides) returns 403. Search found missoulaunderground.com posts for the ride through May and June 2026, and a November 2025 post stating the group stops bike rides in late fall for winter hiking and skiing, returning to bikes in March. So the ride is likely in its usual winter break, but the host's own page cannot be reached to confirm. A person could try missoulaunderground.com directly in a browser or check the Facebook group (facebook.com/group.php?gid=150671295989) for a November 2026 post."
+  },
+  {
+    "slug": "philadelphia-pa-bcp-sunny-sunday-d-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "phillybikeclub.org returns a Cloudflare managed challenge on every attempt (403 on curl, 403 on WebFetch). No 2026-specific listings for the Sunny Sunday D Ride found via search. The BCP is known to run year-round rides, but the specific ride cannot be confirmed. A person could visit phillybikeclub.org/bcpdo/ride/calendarweekly in a browser to see the current Sunday rides, or search the BCP's Meetup group for upcoming events."
+  },
+  {
+    "slug": "portland-me-gear-hub-thursday-group-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The watch page (portlandgearhub.org/events) loads and shows only 'No Upcoming events' — no Thursday group ride listed. The schedule-text-changed flag reflects only a job-posting addition to the navigation. November in Maine may mean a seasonal gap, but the page gives no confirmation the Thursday ride will return nor does it say the ride has ended. A person could email pghinfo@ketchaoutdoors.org or call (207) 761-7632 to ask whether the Thursday group ride resumes and when."
+  },
+  {
+    "slug": "san-antonio-tx-satx-social-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "bike-san-antonio.org/sa-bike-groups/ lists the SATX Social Ride as a weekly community ride that meets at 6:30 pm and rolls out at 7 pm every Tuesday night, rotating locations downtown, 9 to 14 miles, no-drop (fetched Nov 16, 2026).",
+    "sources": ["https://www.bike-san-antonio.org/sa-bike-groups/"]
+  }
+]

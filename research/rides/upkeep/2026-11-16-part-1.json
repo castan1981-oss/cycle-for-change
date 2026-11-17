@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "indianapolis-in-bike-line-tuesday-thursday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The old URL (thebikeline.com/about/group-rides-pg439.htm) gives 404, flagged since Sept 30. The shop's current page (/pages/local-rides) lists mapped routes and a store phone number but no group ride schedule. No other accessible source found."
+  },
+  {
+    "slug": "kailua-kona-hi-saturday-recreational-north-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The weekly rides page (hawaiicyclingclub.com/weekly-rides.html) answers 404 as of Nov 16, 2026 (last OK Nov 9). The HCC homepage is live but has no link to weekly rides. No other accessible source for the Saturday recreational ride found."
+  },
+  {
+    "slug": "washington-dc-dc-bike-party",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "touchgrassdc.com has not resolved for four consecutive runs (since Oct 26). The ride's own website (dcbikeparty.com) has an expired TLS certificate. Facebook and Instagram require login. No accessible source found."
+  },
+  {
+    "slug": "manhattan-beach-ca-beach-cities-cycling-club-thursday-social-ride-marina-del-rey",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-13",
+    "evidence": "BCCC's November 2026 calendar at bcccsb.org/Ride-Calendar lists 'Thursday Social Ride: Marina del Rey-Westchester' every Thursday through December; the 'CANCELLED' elsewhere in the same calendar refers only to 'Thursday Gravel' on Nov 13, a separate ride (fetched Nov 16, 2026).",
+    "sources": ["https://www.bcccsb.org/Ride-Calendar"]
+  },
+  {
+    "slug": "redondo-beach-ca-beach-cities-cycling-club-sunday-funday-whale-watch",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-15",
+    "evidence": "BCCC's November 2026 calendar at bcccsb.org/Ride-Calendar lists 'Sunday FunDay Ride Up to Whale Watch (PV Interpretive Center)' on Nov 8, 15, 22 and 29; Nov 1 has the Jackson Market ride instead, matching the existing record (fetched Nov 16, 2026).",
+    "sources": ["https://www.bcccsb.org/Ride-Calendar"]
+  },
+  {
+    "slug": "san-rafael-ca-marin-cyclists-easy-like-sunday-morning",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-15",
+    "evidence": "Marin Cyclists' November 2026 calendar lists 'Easy Like Sunday Morning--aka. Red Whale--Participant Led/Leaderless' on Nov 1, 8, 15, 22 and 29; the 'CANCELED' in the same calendar refers to 'Fridays on Paradise' on Nov 13, a different ride on a different day (fetched Nov 16, 2026).",
+    "sources": ["https://marincyclists.com/content.aspx?page_id=4001&club_id=525458"]
+  },
+  {
+    "slug": "tucker-ga-atlptn-tucker",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "atlptn.com has not resolved for two consecutive runs (since Nov 9, last OK Nov 2). No accessible alternative source found; the ride's Instagram and Facebook require login."
+  },
+  {
+    "slug": "vinings-ga-atlptn-beyond-six-flags",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "atlptn.com has not resolved for two consecutive runs (since Nov 9, last OK Nov 2). No accessible alternative source found; the ride's Instagram and Facebook require login."
+  }
+]

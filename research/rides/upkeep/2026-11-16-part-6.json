@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "nashville-tn-music-city-dope-pedalers-friday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "Watch URL (nashvillescene.com article) returns 429 bot wall. The urbaanite.com article confirms Friday 6pm rides but carries no 2026 date. The Walk Bike Nashville page requires JavaScript. Instagram @musiccitydopepedalers is the primary source for the current schedule but requires login."
+  },
+  {
+    "slug": "nashville-tn-ride615-sylvan-park-tuesday-night-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "Ride615's local rides page at ride615.com/articles/local-rides-pg195.htm no longer lists the Tuesday Night Ride; it now lists '11 Smiles Per Hour' on Thursdays at 6:00 pm from the same Sylvan Park store, a friendly social ride of about 21.7 miles (fetched Nov 16, 2026).",
+    "sources": ["https://www.ride615.com/articles/local-rides-pg195.htm"],
+    "changes": {
+      "name": "11 Smiles Per Hour",
+      "days": ["thu"],
+      "time_local": "6:00 pm",
+      "start_hhmm": "18:00",
+      "schedule": "Every Thursday, 6:00 pm; weather permitting",
+      "distance_miles": 22,
+      "distance_km": 35,
+      "description": "A friendly social ride from Ride615's Sylvan Park store, every Thursday at 6:00 pm. The route covers about 21.7 miles of quiet neighborhood streets with two optional out-and-back climbs. The group sets its pace to whoever shows up; riders of every level are welcome."
+    }
+  },
+  {
+    "slug": "nashville-tn-shelby-ave-bicycle-tuesday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The ma.to watch URL shows 'No upcoming events scheduled'; its last past event entry is May 19, 2026. The shop still exists (greenfleetbikes.com). Instagram @shelbybicycle or the Strava club (club ID 464369) are the best next checks."
+  },
+  {
+    "slug": "sioux-falls-sd-fab-moon-and-stars-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "FAB's events page shows 'No events available'; the organization's homepage is active with news from August 2026. The Moon & Stars Ride runs May through September near the full moon; it is currently off-season (fetched Nov 16, 2026).",
+    "sources": ["https://www.fallsareabicyclists.org/events", "https://www.fallsareabicyclists.org/"],
+    "status_note": "Runs near the full moon, May through September. Currently off-season; next rides expected May 2027, per the club's standard season."
+  },
+  {
+    "slug": "abu-dhabi-ae-yas-marina-circuit-trainyas-ladies",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The TrainYAS Ladies page is live but its schedule widget shows only August–November 2025 tabs; no 2026–27 season dates are posted. The 6:00 pm time vanished from the page in October 2026. Instagram @ymcofficial is the stated channel for season restart news but requires login. The circuit's customer line is 800 927."
+  },
+  {
+    "slug": "peoria-az-west-valley-casual-bike-rides-stadium-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "The group's Meetup ICS feed lists the Stadium Ride on Sun Nov 22, 2026 at 7:30 am (20261122T073000); three consecutive watcher flags (Oct 25, Nov 8, Nov 22) have all shown 7:30 am against our listed 6:30 am (fetched Nov 16, 2026).",
+    "sources": ["https://www.meetup.com/west-valley-casual-bike-rides/events/ical/"],
+    "promote_feed": "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/",
+    "changes": {
+      "time_local": "7:30 am",
+      "start_hhmm": "07:30",
+      "schedule": "Every other Sunday, 7:30 am, from Rio Vista Community Park. About 10 miles to a Carl's Jr for breakfast, then 10 back. Alternates Sundays with the Bear Claw Ride.",
+      "season": null
+    }
+  },
+  {
+    "slug": "albany-ny-mhcc-sunday-morning-wake-up-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The MHCC public ride schedule is accessible (Nov 17–21 rides visible) but no Sunday Morning Wake Up Ride appears in the current two-week window. The club posts rides about two weeks ahead; check the schedule page at mohawkhudsoncyclingclub.org/rides/public in spring 2027."
+  },
+  {
+    "slug": "albany-ny-mhcc-women-on-wheels-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The MHCC public ride schedule shows active club rides (Nov 17–21) but no WOW or Women on Wheels entries in the current two-week window; none have appeared since at least Nov 2. Check the schedule page at mohawkhudsoncyclingclub.org/rides/public for entries beginning 'WOW' in spring 2027."
+  }
+]

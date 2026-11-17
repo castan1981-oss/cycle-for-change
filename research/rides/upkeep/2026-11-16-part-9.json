@@ -1,0 +1,70 @@
+[
+  {
+    "slug": "dallas-tx-trek-park-cities-thursday-lake-laps",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The Eventbrite series (Aug 13–Oct 29, 2026) shows 'Event ended' and the organizer page shows 'Nothing planned right now' for November 2026. No new series posted. Check the organizer page https://www.eventbrite.com/o/trek-bicycle-dallas-park-cities-46367112593 or call the store at (214) 363-2025 for the next series."
+  },
+  {
+    "slug": "dallas-tx-trek-park-cities-tuesday-lake-laps",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The Eventbrite series (Aug 13–Oct 29, 2026) shows 'Event ended' and the organizer page shows 'Nothing planned right now' for November 2026. No new series posted. Check the organizer page https://www.eventbrite.com/o/trek-bicycle-dallas-park-cities-46367112593 or call the store at (214) 363-2025 for the next series."
+  },
+  {
+    "slug": "dunlap-il-ivw-tuesday-evening-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-10-01",
+    "evidence": "Illinois Valley Wheelm'n's website still shows the same April 7–October 6 schedule with Oct 6 as the last ride; the club posted an 'End of Year Celebration' for November 7, 2026, confirming the season is over (fetched Nov 16, 2026).",
+    "sources": ["https://www.ivwheelmn.org/"],
+    "status_note": "Season runs April through October. The 2026 season ended Oct 6. Resumes April per the club's posted schedule."
+  },
+  {
+    "slug": "ealing-gb-west-london-breeze-friday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "The West London Breeze Let's Ride page lists future Friday rides: 'Sir John Soane's discovery rid... Friday 20th November 2026 9:15am W5 5AL' and 'Chiswick Art & History Friday 4th December 2026 9:15am W5 2BY' (fetched Nov 16, 2026).",
+    "sources": ["https://www.letsride.co.uk/groups/west-london-breeze"]
+  },
+  {
+    "slug": "eugene-or-gears-wtnb-wednesday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "GEARs posted their full November 2026 ride schedule but it does not include the WTNB Wednesday ride. The October schedule had it (Wed Oct 14 at 6:00 PM). The ride likely only runs in lighter-evening months. Check eugenegears.org/ride-schedules/ in spring 2027 for the next season's schedule."
+  },
+  {
+    "slug": "frederick-md-frederick-pedalers-sunday-monocacy-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "Frederick Pedalers' ride-info page and calendar show the Sunday Monocacy Middle School ride moved to 11:00 am for the winter session starting Oct 31, 2026; the calendar lists it at 11:00 am on Nov 22, 29, Dec 6, 13, 20, 2026, with a blog post titled 'SUNDAY RIDE TIME CHANGE (Happy Halloween 10/31/2026)' confirming the shift (fetched Nov 16, 2026).",
+    "sources": ["https://frederickpedalers.org/ride-info/", "https://frederickpedalers.org/events/"],
+    "changes": {
+      "schedule": "Sundays year-round; 9:30 am through spring and summer, 11:00 am starting Oct 31 each year for the winter session. Check the ride calendar for the spring return date.",
+      "time_local": "11:00 am",
+      "start_hhmm": "11:00",
+      "start_times": [
+        { "from": "2026-10-31", "start_hhmm": "11:00" }
+      ],
+      "confidence": "high"
+    }
+  },
+  {
+    "slug": "gold-river-ca-bike-hikers-tuesday-morning-ez-rider",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-10",
+    "evidence": "Sacramento Bike Hikers' November 2026 calendar lists 'EZ Rider 20D-, 26D-, 31D-(SM)' on Nov 10 without cancellation (Nov 3 was specifically canceled for Election Day); the event description page confirms the same route and Gold River Town Center start (fetched Nov 16, 2026).",
+    "sources": ["https://bikehikers.clubexpress.com/content.aspx?page_id=4001&club_id=216251"]
+  },
+  {
+    "slug": "goshen-oh-cincinnati-cycle-club-saturday-breakfast-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "CCC's future-events calendar lists 'Saturday Breakfast Ride - Time Varies' at Goshen Kroger Parking Lot for Nov 21 and Nov 28, 2026; the club's casual rides page confirms 'Saturdays at 8 AM' from Goshen Kroger (fetched Nov 16, 2026).",
+    "sources": ["https://www.cincinnaticycleclub.org/content.aspx?page_id=4001&club_id=772752&action=cira&vm=Future&sif=0", "https://www.cincinnaticycleclub.org/content.aspx?page_id=22&club_id=772752&module_id=337793"]
+  }
+]
