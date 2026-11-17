@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "grand-ledge-mi-tcba-saturday-z-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "TCBA's ClubExpress calendar (biketcba.org) was fetched in full; no Grand Ledge Z Ride appears after Oct 31, 2026. The calendar runs through early 2028 (board meetings, DALMAC, NorthWest Tour, SummerTour) with no Class Z or Grand Ledge entry. One B Ride on Nov 17 shows the club still posts individual rides, but no Z rides are scheduled. Check the TCBA calendar again in spring (the ride may run April–October in Michigan) at http://www.biketcba.org/content.aspx?page_id=4001&club_id=604795&action=cira&vm=Future&sif=0"
+  },
+  {
+    "slug": "grand-prairie-tx-fwba-joe-pool-lake-rusty-chain-gang",
+    "outcome": "changed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "FWBA's homepage lists the Anna May Daulton Joe Pool Lake – Rusty Chain Gang for Sat Nov 21, 2026 at 9:00 AM, and the site's banner says 'Ride Start Times are Changing, Please Double Check' (fetched Nov 16, 2026). Current cold-month start is 9:00 AM.",
+    "sources": ["https://www.fwbaclub.org/"],
+    "changes": {
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00",
+      "schedule": "Saturdays, 9:00 am in the cold months and 8:00 am in the warm months (check the FWBA calendar for the week's time). Arrive 30 minutes early."
+    }
+  },
+  {
+    "slug": "greenlawn-ny-huntington-bicycle-club-weekend-rides",
+    "outcome": "changed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "HBC's ClubExpress calendar shows Crankin' Saturday Smith St. 9 AM for Sat Nov 21, 2026 at 9:00 AM; the club's start-locations page says 9:00 am December through April and 8:30 am May and October, with November not listed — but Nov calendar entries confirm 9:00 am (fetched Nov 16, 2026).",
+    "sources": [
+      "https://www.hbcli.org/content.aspx?page_id=4001&club_id=312624",
+      "https://www.hbcli.org/content.aspx?page_id=22&club_id=312624&module_id=546621"
+    ],
+    "changes": {
+      "schedule": "Saturdays, Sundays and holidays from the Smith St lot in Greenlawn. 9:00 am November through April, 8:30 am May and October, 8:00 am June through September. Each ride on the calendar gives its own start.",
+      "start_times": [
+        { "from": "2026-11-01", "start_hhmm": "09:00" },
+        { "from": "2027-05-01", "start_hhmm": "08:30" },
+        { "from": "2027-06-01", "start_hhmm": "08:00" }
+      ]
+    }
+  },
+  {
+    "slug": "greensboro-nc-cycles-de-oro-easy-riders-tuesday",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-07-26",
+    "evidence": "Cycles de ORO's Easy Riders page at cyclesdeoro.com/Easy_Riders_2026.htm, marked 'Updated 7.26.2026', says the 5th annual series runs every Tuesday during Daylight Saving Time, 6:00 pm meet, 6:15 pm briefing, 6:30 pm roll, free, no one left behind — same schedule as the record (fetched Nov 16, 2026). DST ended Nov 1 so the ride is in its natural off-season.",
+    "sources": ["https://cyclesdeoro.com/Easy_Riders_2026.htm"]
+  },
+  {
+    "slug": "greensboro-nc-cycles-de-oro-saturday-social-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-10-25",
+    "evidence": "Cycles de ORO's Saturday Social ride page at cyclesdeoro.com/Sat_Social_ride.htm now says 'THE COOLER WEATHER SCHEDULE': 11:30 AM arrive, 12 NOON ride off, updated 10.25.2026 (fetched Nov 16, 2026). The warm-weather start (9:30 am arrive, 10:00 am roll) is off for the season.",
+    "sources": ["https://cyclesdeoro.com/Sat_Social_ride.htm"],
+    "changes": {
+      "time_local": "12:00 pm",
+      "start_hhmm": "12:00",
+      "schedule": "Every Saturday; 11:30 am arrive, roll 12:00 pm on the cooler-weather schedule (warm-weather schedule is 9:30 am arrive, 10:00 am roll; skipped for local charity rides or bad weather)"
+    }
+  },
+  {
+    "slug": "greenville-sc-spinners-sctac-tuesday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-16",
+    "last_seen": null,
+    "evidence": "Greenville Spinners' SCTAC page at greenvillespinners.org/sctac-south-carolina-technology-and-aviation-center/ says rides begin the first Tuesday in April and end mid-September when daylight dwindles; the club's homepage shows 'November No Events' — consistent with the current seasonal-break record (fetched Nov 16, 2026).",
+    "sources": [
+      "https://www.greenvillespinners.org/sctac-south-carolina-technology-and-aviation-center/",
+      "https://www.greenvillespinners.org/"
+    ]
+  },
+  {
+    "slug": "harrisburg-pa-hbc-owens-sunday-sociable",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The Harrisburg Bicycle Club's ClubExpress calendar shows the full November 2026 grid with no instance of Owen's Sunday Sociable on any Sunday (Nov 1, 8, 15, 22, 29). Other Sunday rides appear (First Sunday Greenbelt Ride on Nov 1) so the calendar is current. No indication of a winter break or return date. Check the HBC calendar in spring at https://harrisburgbicycleclub.org/content.aspx?page_id=4001&club_id=750678 or contact ride leader Dick Norford through the club at harrisburgbicycleclub.org."
+  },
+  {
+    "slug": "harrow-gb-harrow-cycle-hub-beginner-bike-ride-kenton",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "evidence": "Let's Ride (letsride.co.uk/groups/harrow-cycle-hub) lists Beginner Bike Ride from Kenton on Sat Nov 14 and Nov 21, 2026 at 2:00 pm, and Sat Nov 28 at 2:15 pm — same day and time as the record (fetched Nov 16, 2026).",
+    "sources": ["https://www.letsride.co.uk/groups/harrow-cycle-hub"]
+  }
+]

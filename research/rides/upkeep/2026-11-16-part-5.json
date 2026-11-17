@@ -1,0 +1,64 @@
+[
+  {
+    "slug": "san-diego-ca-shewolves-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "SD Magazine article is behind a 403 bot-wall (last OK Nov 9). No accessible source confirms the ride is currently running. Check Instagram @sd_shewolves for the next scheduled date."
+  },
+  {
+    "slug": "santa-barbara-ca-fastrack-saturday-lake-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-10-10",
+    "evidence": "Fastrack's site (now at fastrackbicycles.com) lists the Saturday Lake Ride at 8:00 am from the Dolphin Fountain at Stearns Wharf; a stock-list entry dated Oct 10, 2026 on the page confirms it is actively maintained (fetched Nov 16, 2026).",
+    "sources": ["https://fastrackbicycles.com/"],
+    "changes": {
+      "links": { "website": "https://fastrackbicycles.com/" },
+      "refresh": { "watch_url": "https://fastrackbicycles.com/" }
+    }
+  },
+  {
+    "slug": "birmingham-al-le-tour-de-ham",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "Watch page is a 2018 article with no current dated signal. The Strava club (strava.com/clubs/332778) shows the Tuesday 6:00 pm schedule but no upcoming dated events. Check the Facebook group (facebook.com/groups/309449166066745) for the current start location and next ride."
+  },
+  {
+    "slug": "brooklyn-ny-dawn-patrol-prospect-park",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The Legday Substack source is behind a 403 bot-wall and has been unreachable for 7 consecutive weeks. No accessible 2026 source confirms the ride is still running. Check Instagram @dawnpatrol.pp for the current Thursday schedule."
+  },
+  {
+    "slug": "brooklyn-ny-nightcap-monday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "The Queer on the Street Substack source is behind a 403 bot-wall for 7 consecutive weeks. The ride's season runs April to October; it may be on its usual winter break. Check Instagram @nightcap_brooklyn to confirm the spring return date."
+  },
+  {
+    "slug": "columbia-sc-cola-wtfnb-cyclists-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "colatownbikes.com no longer shows any ride schedule (time and day both absent). The City of Columbia events page shows only a passed May 6 listing and directs to Instagram @cola_wtfnb_cyclist for updates."
+  },
+  {
+    "slug": "emporia-ks-babes-on-bikes-wednesday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-16",
+    "note": "visitemporia.com is behind a 403 bot-wall and has been unreachable for 7 consecutive weeks. No 2026 evidence of the Wednesday ride was found. Check the Facebook page (facebook.com/BabesOnBikesEmporia) for the current schedule."
+  },
+  {
+    "slug": "indianapolis-in-near-eastside-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-16",
+    "last_seen": "2026-11-11",
+    "evidence": "Central Indiana Cycling's neighborhood rides page lists the Near Eastside Ride as 'Wednesdays, 5:00 pm – SHARP, Centerpoint Brewing, 1125 E Brookside Ave'; the homepage showed Nov 11, 2026 as the most recent listed date (fetched Nov 16, 2026).",
+    "sources": ["https://centralincycling.org/rides/neighborhood-rides/"],
+    "changes": {
+      "schedule": "Every Wednesday, 5:00 pm sharp",
+      "time_local": "5:00 pm",
+      "start_hhmm": "17:00",
+      "refresh": { "watch_url": "https://centralincycling.org/rides/neighborhood-rides/" }
+    }
+  }
+]
