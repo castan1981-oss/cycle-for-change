@@ -143,7 +143,9 @@ const RIDING = (count("data/calendar-2027.json", (d) => (d.events || []).filter(
 // Oct 27, 2026 (Robert: a button on the homepage's first screen "in case people go to the home page"): his own ride, the
 // Fruit Loop, is the next ride he's doing, so it heads the bar's list until its first Friday (Dec 11, 2026). It isn't on the
 // 2027 calendar, so it never reaches RIDING (the homepage's 2027 list) or the riding page. After Dec 11 the bar rolls on.
-const FRUIT_LOOP = { until: "2026-12-11", date: "Dec 11", name: "The Fruit Loop", where: "Phoenix", href: "/fruitloop/" };
+// Nov 17, 2026 (Robert: "Yes please" to moving it): the first ride moves from Dec 11 to this spring, no date yet. The bar
+// says "Spring" until Dec 11, so anyone who planned on that Friday sees it moved, then rolls on to Tour de Palm Springs.
+const FRUIT_LOOP = { until: "2026-12-11", date: "Spring", name: "The Fruit Loop", where: "Phoenix, moved from Dec 11", href: "/fruitloop/" };
 // Nov 3, 2026 (Robert: "add tour de tucson this month to home page"): he rides El Tour de Tucson 2026 (Sat, Nov 21, the
 // organizer's date), so it heads the list until that day, and the Fruit Loop takes over on Nov 22 by itself (ridebar.js
 // re-picks in the browser). Its link is the 2026 event page (/events/el-tour-de-tucson/), not the riding page: the 2027
