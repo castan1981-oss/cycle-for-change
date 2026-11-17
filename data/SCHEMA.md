@@ -60,6 +60,8 @@ journey, "$800", Prescott, sober-time, 7,500-mile framing, …).
 | what_to_expect | [string] | 2–3 paragraphs |
 | weather_note | string | typical conditions with a number |
 | faq | [{q, a}] | 4–6 |
+| article | boolean, optional | `false` when the name takes no "the" ("How Cycle to Zero started"). |
+| line | [stop or leg], optional | a multi-day event's route as a list, in order (Nov 15, 2026). A stop is `{ name, town, when, note }`: `town` is a town `id` or null; `when` and `note` only from the organizer. A leg between two stops is `{ leg, when }`. The page renders "The route, stop by stop": a fold per stop with that town guide's pages. The build fails on a town id that doesn't exist. Never a drawn route. |
 | sources | [url] | |
 | verified | ISO date | |
 
@@ -137,6 +139,8 @@ before the build.
 
 | field | type | notes |
 |---|---|---|
+| radius | number, optional | miles. How far this guide reaches when a ride or event has no town of its own (default 25, `RADIUS` in scripts/towns.js). A small town next to a bigger one sets it lower. |
+| ask | boolean, optional | `false` takes the question box ("Ask about <town>") off a `destination` guide; every destination guide has it otherwise. It answers from this file's own places and `faq` in the browser (`cfc-site/events/ask.js`); nothing is sent anywhere. |
 | summary | string | the quotable 2–4 sentence answer to "should I bring my bike to <town>" |
 | fly | {airports: [{name, code, miles, note}], airline_note} | `airline_note`: what bikes cost or count as on the airlines that serve it, with the date you checked |
 | ship | {note, shops: [{name, url, note}]} | shops confirmed (on their own site) to receive and build a shipped bike; the carriers people use |

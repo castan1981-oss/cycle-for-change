@@ -572,4 +572,47 @@ article.event>.date-line+.ev-signup{margin-top:var(--s2)}
   article.event>.ev-poster{grid-template-columns:1fr}
 }
 
+
+/* The line (Nov 15, 2026): a multi-day event's stops in order, the road down the left, a numbered square per stop
+   (the homepage map's square), a fold per stop (the system fold, M8). Legs are text between two stops. */
+.ev-line{margin:var(--s4) 0 0}
+.ev-line .mute{margin:4px 0 var(--s2);max-width:60ch}
+.ev-line-list{list-style:none;margin:0;padding:0;position:relative}
+.ev-line-list::before{content:"";position:absolute;left:14px;top:24px;bottom:24px;width:4px;background:var(--asphalt)}
+.ev-stop{position:relative}
+.ev-stop>details.dir-fold{margin:0;border-top:0;border-bottom:0}
+.ev-stop-head{display:flex;align-items:center;gap:14px;min-width:0}
+.ev-stop-n{flex:none;width:32px;height:32px;display:grid;place-items:center;background:var(--asphalt);color:var(--paper);font:900 1rem/1 var(--display);position:relative}
+.ev-stop>details[open] .ev-stop-n{background:var(--plate)}
+.ev-stop-name{font:800 var(--fs-h4)/1.15 var(--display)}
+.ev-stop-body{padding:0 0 var(--s3) 46px}
+.ev-stop-body p{margin:0 0 10px;max-width:60ch}
+.ev-stop-when{font-weight:700}
+.ev-stop-pages{list-style:none;margin:var(--s2) 0 0;padding:0;border-top:1px solid var(--line-s)}
+.ev-stop-pages a{display:grid;grid-template-columns:24px auto 1fr;align-items:center;gap:4px 12px;min-height:48px;padding:10px 0;border-bottom:1px solid var(--line-s);text-decoration:none;color:inherit}
+.ev-stop-pages a b{font-weight:800}
+.ev-stop-pages a span{color:var(--mute);font-size:var(--fs-small);text-align:right}
+@media (hover:hover){.ev-stop-pages a:hover b{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}}
+.ev-leg{display:flex;flex-direction:column;gap:2px;padding:10px 0 10px 46px;color:var(--mute);font-size:var(--fs-small);position:relative}
+.ev-leg::before{content:"";position:absolute;left:14px;top:0;bottom:0;width:4px;background:repeating-linear-gradient(var(--bone) 0 6px,transparent 6px 14px)}
+.ev-leg-when{font-weight:700}
+@media (min-width:1024px){article.event>.ev-line{grid-column:1 / span 7}}
+
+
+/* Just ask (Nov 15, 2026): the question box on a town guide that sets `ask`. The field and the button are chrome's;
+   the tries are quiet outlined picks; the answer is rows (the directory's row). */
+.town-ask{margin:var(--s2) 0 var(--s3);padding:var(--s3) var(--s2);background:var(--bone-2)}
+.town-ask h2{margin:0 0 var(--s2)}
+.ask-form{display:grid;grid-template-columns:1fr auto;gap:8px}
+.ask-form .field{min-width:0;width:100%}
+.ask-tries{list-style:none;margin:var(--s2) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.ask-tries a{display:flex;align-items:center;min-height:44px;padding:8px 12px;border:1px solid var(--line-s);background:var(--paper);color:inherit;text-decoration:none;font:700 var(--fs-small)/1.25 var(--display)}
+@media (hover:hover){.ask-tries a:hover{border-color:var(--asphalt)}}
+.ask-out{margin:var(--s2) 0 0;padding:var(--s2);background:var(--paper);border-left:4px solid var(--plate)}
+.ask-out .ask-a{margin:0 0 10px;max-width:60ch}
+.ask-out .rows{margin:0}
+.ask-out .town-more{margin:10px 0 0}
+.ask-note{margin:var(--s2) 0 0;font-size:var(--fs-small)}
+@media (min-width:1024px){article.town>.town-ask{max-width:46rem}}
+
 }

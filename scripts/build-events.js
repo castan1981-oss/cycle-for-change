@@ -260,6 +260,7 @@ for (const t of towns) {
   t.slug = slugify(t.name);
   t.url = `/towns/${t.state_slug}/${t.slug}/`;
   t.events = [];
+  t.through = []; // events whose line stops here but starts somewhere else (Nov 16, 2026)
   t.kind = t.kind || "event-host";
   inEnum(`towns/${t.id}.kind`, t.kind, ENUM.kind);
   (t.routes || []).forEach((r, i) => {
@@ -288,6 +289,14 @@ for (const e of events) {
   e.lat = e.start_lat != null ? e.start_lat : t.lat;
   e.lon = e.start_lon != null ? e.start_lon : t.lon;
   t.events.push(e);
+  // The line (Nov 15, 2026): a multi-day event's stops, in order. A stop names a town guide by id or carries none.
+  (e.line || []).forEach((s, i) => {
+    if (s.leg) return;
+    if (!s.name) throw new Error(`events/${e.slug}.line[${i}] has no name`);
+    if (s.town && !townById[s.town]) throw new Error(`events/${e.slug}.line[${i}] references unknown town ${s.town}`);
+    const st = s.town && townById[s.town];
+    if (st && st !== t && !st.through.includes(e)) st.through.push(e);
+  });
 }
 
 const states = {};
@@ -418,6 +427,42 @@ function readyBlock(e) {
       <ul class="ev-ready-list">${keys.map((k) => `<li><a href="${G[k][0]}">${esc(G[k][1])}</a></li>`).join("")}</ul>
     </section>`;
 }
+// The line (Nov 15, 2026; Robert, on the Ojai pilot: "I like just ask but also the line, yes let's build this"): the
+// route is the menu. A multi-day event lists its stops in order (`line` in data/events/<slug>.json, data/SCHEMA.md);
+// each stop is a fold with when you're there and, where the stop has a town guide, that guide's own pages with the
+// strip's own counts (TOWNS.PAGES). A leg between two stops is a line of text. No map: never a route we drew (§6).
+// Works without script. The stop with a guide that isn't the event's start opens by itself, so the page is whole at rest.
+function lineBlock(e) {
+  if (!e.line || !e.line.length) return "";
+  let n = 0;
+  const items = e.line.map((s) => {
+    if (s.leg) return `        <li class="ev-leg"><span>${esc(s.leg)}</span>${s.when ? `<span class="ev-leg-when">${esc(s.when)}</span>` : ""}</li>`;
+    n += 1;
+    const t = s.town ? TOWNS.load().find((x) => x.id === s.town) : null;
+    const pages = t ? `
+            <ul class="ev-stop-pages">
+${t.pages.map((p) => `              <li><a href="${t.url}${p.seg}/">${mark(p.mark)}<b>${esc(p.k)}</b><span>${esc(p.s(p.key === "bring_your_bike" ? null : (t[p.key] || []).length, t))}</span></a></li>`).join("\n")}
+            </ul>
+            <p class="town-more">${TOWNS.link(t, `The ${esc(t.name)} town guide`)}</p>` : "";
+    return `        <li class="ev-stop">
+          <details class="dir-fold"${t && s.town !== e.town ? " open" : ""}>
+            <summary><span class="ev-stop-head"><span class="ev-stop-n num">${n}</span><span class="ev-stop-name">${esc(s.name)}</span></span></summary>
+            <div class="ev-stop-body">
+            ${s.when ? `<p class="ev-stop-when">${esc(s.when)}</p>` : ""}
+            ${s.note ? `<p>${esc(s.note)}</p>` : ""}${pages}
+            </div>
+          </details>
+        </li>`;
+  }).join("\n");
+  return `<section class="ev-line" aria-labelledby="line-h">
+      <h2 id="line-h">The route, stop by stop</h2>
+      <p class="mute">Tap a stop for where to sleep, eat and fix the bike there.</p>
+      <ol class="ev-line-list">
+${items}
+      </ol>
+    </section>`;
+}
+
 function eventPage(e) {
   const t = e.townRef;
   const when = e.next_date ? fmtRange(e.next_date, e.end_date) : null;
@@ -514,7 +559,9 @@ function eventPage(e) {
       ["Organizer", e.organizer && e.organizer.name ? (e.organizer.url ? `<a href="${attr(e.organizer.url)}" rel="noopener">${esc(e.organizer.name)}</a>` : esc(e.organizer.name)) : null],
     ])}
 
-    ${e.history && e.history.length ? `<section><h2>How the ${esc(e.name)} started</h2>${paras(e.history)}</section>` : ""}
+    ${lineBlock(e)}
+
+    ${e.history && e.history.length ? `<section><h2>How ${e.article === false ? "" : "the "}${esc(e.name)} started</h2>${paras(e.history)}</section>` : ""}
     ${e.what_to_expect && e.what_to_expect.length ? `<section><h2>What to expect on the day</h2>${paras(e.what_to_expect)}</section>` : ""}
     ${readyBlock(e)}
 
@@ -601,6 +648,60 @@ function townReady(t) {
   const line = keys.map((k) => `<a href="${G[k][0]}">${esc(G[k][1])}</a>`).join(" &middot; ");
   return DESERT.test(t.state_code) ? `Goathead country. ${line}.` : `${line}.`;
 }
+// Just ask (Nov 15, 2026; Robert, on the Ojai pilot: "I like just ask"): a question box on a town guide that sets `ask`.
+// It answers from the guide's own checked facts and nowhere else: the places, the facts on their cards and the guide's
+// questions go into the page as #askData, and /events/ask.js matches the question to them in the browser. Nothing is
+// sent anywhere. No script: the tries are plain links to the guide's pages. Tests: tools/test/town-ask.test.js.
+const ASK_V = 1;
+const ASK_TRIES = [
+  ["coffee", "Where can I get coffee early?"],
+  ["hotels", "Where can I stay with a bike?"],
+  ["bike-shops", "Who can fix my bike?"],
+  ["routes", "What should I ride?"],
+  ["culture", "What is there to do off the bike?"],
+  ["bring-your-bike", "How do I get my bike there?"],
+];
+const NO_POLICY = /^no stated policy/i;
+function askData(t) {
+  const W = `towns/${t.id}`;
+  const pages = guidePages(t).map((r) => { const P = TOWNS.PAGES.find((x) => x.seg === r.seg); return stripUndef({ s: r.seg, k: P.k, b: P.b(t), c: count(t, r) || undefined }); });
+  const places = [];
+  for (const r of guidePages(t)) {
+    if (r.key === "bring_your_bike") continue;
+    (t[r.key] || []).forEach((it) => {
+      const [lead] = it.line ? [it.line] : splitLead(it.description || it.note);
+      places.push(stripUndef({
+        s: r.seg, n: it.name, l: lead ? plain(lead, W) : undefined,
+        h: it.hours_hint || undefined,
+        b: it.bike_policy && !NO_POLICY.test(it.bike_policy) ? plain(it.bike_policy, W) : undefined,
+        f: [it.cuisine, it.kind, it.type, it.surface, it.price_hint, ...(it.services || [])].filter(Boolean),
+      }));
+    });
+  }
+  const faq = (t.faq || []).map((f) => ({ q: plain(f.q, W), a: plain(f.a, W) }));
+  return { url: t.url, town: t.name, pages, places, faq };
+}
+function askBlock(t) {
+  if (t.kind !== "destination" || t.ask === false) return "";
+  const have = new Set(guidePages(t).map((r) => r.seg));
+  const tries = ASK_TRIES.filter(([seg]) => have.has(seg));
+  return `<section class="town-ask" data-ask aria-labelledby="ask-h">
+      <h2 id="ask-h">Ask about ${esc(t.name)}</h2>
+      <form class="ask-form" role="search" action="${t.url}" method="get">
+        <label class="visually-hidden" for="askq">Your question about ${esc(t.name)}</label>
+        <input class="field" id="askq" name="q" type="search" autocomplete="off" enterkeyhint="search" placeholder="Is there coffee before 7?">
+        <button class="btn btn--ink" type="submit">Ask</button>
+      </form>
+      <ul class="ask-tries" aria-label="Try one">
+${tries.map(([seg, q]) => `        <li><a href="${t.url}${seg}/" data-q="${attr(q)}">${esc(q)}</a></li>`).join("\n")}
+      </ul>
+      <div class="ask-out" aria-live="polite" hidden></div>
+      <p class="mute ask-note">Answers come from this guide&rsquo;s own checked places and nowhere else. What you type stays on your phone.</p>
+      <script type="application/json" id="askData">${JSON.stringify(askData(t)).replace(/</g, "\\u003c")}</script>
+      <script src="/events/ask.js?v=${ASK_V}" defer></script>
+    </section>`;
+}
+
 function townPage(t) {
   const dest = t.kind === "destination";
   // Oct 4, 2026 (search pass): titles under 60 characters with the suffix, the query in the title and the h1
@@ -638,7 +739,7 @@ function townPage(t) {
   const CARD = {
     hotels: () => [`Stay`, `Hotels in ${t.name}`, TOWNS.hotelLine(t)],
     restaurants: (n) => [`Eat`, `Restaurants in ${t.name}`, `${n} places for the night before and after`],
-    "bike-shops": () => [`Fix`, `Bike shops in ${t.name}`, TOWNS.shopLine(t)],
+    "bike-shops": () => [`Fix`, `Bike shops ${shopPrep(t)} ${t.name}`, TOWNS.shopLine(t)],
     routes: (n) => [`Ride`, `Rides in ${t.name}`, `${n} routes with a route page each`],
     coffee: () => [`Coffee`, `Coffee in ${t.name}`, TOWNS.coffeeLine(t)],
     culture: (n) => [`Off the bike`, `${t.name} off the bike`, `${n} places for the afternoon after`],
@@ -657,6 +758,8 @@ function townPage(t) {
     <p class="eyebrow">${esc(t.county ? t.county + " · " : "")}${esc(t.state)}${t.elevation_ft ? ` · ${Number(t.elevation_ft).toLocaleString("en-US")} ft` : ""}</p>
     <h1>${dest ? `Cycling in ${esc(t.name)}` : `${esc(t.name)}, ${esc(t.state)}`}</h1>
     ${t.tagline ? `<p class="tagline">${esc(t.tagline)}</p>` : ""}
+
+    ${askBlock(t)}
 
     <nav class="res-grid" aria-label="${dest ? "The guide" : "Travel resources"}">
       ${pages.map((r) => { const [k, b, s] = CARD[r.seg](count(t, r)); return `<a class="res-card" href="${t.url}${r.seg}/">${mark(MARK_SEG[r.seg], "mk mk--res")}<span class="res-k">${esc(k)}</span><b>${esc(b)}</b><span>${esc(s)}</span></a>`; }).join("\n      ")}
@@ -681,8 +784,8 @@ ${g.rides.map(rideRow).join("\n")}
       <p class="town-more"><a href="${hub ? hub.path : `/rides/${t.state_code.toLowerCase()}/`}">${hub ? `All ${hub.rides} group rides in ${esc(t.name)}` : `All group rides in ${esc(t.state)}`} &rarr;</a></p>
     </section>` : ""}
 
-    ${t.events.length || !cal.length ? `<section><h2>Bike events in ${esc(t.name)}</h2>
-      ${t.events.length ? `<ul class="tiles-p tiles-p--events">${t.events.map((e) => eventCard(e)).join("")}</ul>` : `<p>No events with their own page here yet.</p>`}
+    ${t.events.length || t.through.length || !cal.length ? `<section><h2>Bike events in ${esc(t.name)}</h2>
+      ${t.events.length || t.through.length ? `<ul class="tiles-p tiles-p--events">${[...t.events, ...t.through].map((e) => eventCard(e)).join("")}</ul>` : `<p>No events with their own page here yet.</p>`}
     </section>` : ""}
     ${cal.length ? `<section class="local-rides" aria-labelledby="cal-h">
       <h2 id="cal-h">Organized rides in ${esc(t.name)} in 2027</h2>
@@ -705,7 +808,7 @@ ${cal.map((e) => `        <li><a href="/events/2027/${e.start ? ["january","febr
     ${explain ? fold(`How ${esc(t.name)} rides: the zones, getting here`, explain, "town-about") : ""}
     ${weatherBlock(t)}
     <p class="tg-ready"><b>Get the bike ready.</b> ${townReady(t)}</p>
-    ${t.faq && t.faq.length ? `<section class="faq"><h2>Questions about riding in ${esc(t.name)}</h2>${t.faq.map((f, i) => `<details><summary>${esc(plain(f.q, W))}</summary><p>${rich(f.a, `${W}.faq[${i}]`)}</p></details>`).join("")}</section>` : ""}
+    ${t.faq && t.faq.length ? `<section class="faq"><h2>Questions about cycling in ${esc(t.name)}</h2>${t.faq.map((f, i) => `<details><summary>${esc(plain(f.q, W))}</summary><p>${rich(f.a, `${W}.faq[${i}]`)}</p></details>`).join("")}</section>` : ""}
     ${moreFacts(t)}
     ${sourcesList(t.sources)}
     ${affiliateNote(t)}
@@ -867,14 +970,43 @@ function placeCard(t, r, it, i) {
       </li>`;
 }
 
+// Nov 16, 2026 (the Ojai search pass, research/towns/ojai-ca/seo.md): a list page's title, h1 and description say what
+// its own listings say. Search Console's read: the specific question ranks ("hotels with complimentary bicycles for
+// guests", position 1), the plain one doesn't ("bike shops tucson", 40–99). Every count and name comes from the data.
+const LENDS = /complimentary (linus )?(bicycle|bike)|loaner bike|bikes? (for|to) (its |their )?guests|free bikes|bicycles, locks/i;
+const listNames = (items, n) => { const a = items.slice(0, n).map((x) => x.name); return a.length > 1 ? `${a.slice(0, -1).join(", ")} and ${a[a.length - 1]}` : a[0] || ""; };
+const rentCount = (items) => items.filter(rents).length;
+const shopPrep = TOWNS.shopPrep; // "in" or "near": scripts/towns.js
+const num = (n) => ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"][n] || String(n);
+function hotelDesc(t, items) {
+  const n = items.filter((h) => LENDS.test([h.note, h.description, h.line, h.bike_policy].filter(Boolean).join(" "))).length;
+  return n ? `Hotels in ${t.name} for cyclists. ${num(n)} ${n === 1 ? "says it lends" : "say they lend"} bikes to guests, in ${n === 1 ? "its" : "their"} own words. ${items.length} listed.` : null;
+}
+// A listing the site carries but never leads with (Robert, Oct 16, 2026) stays out of the description's three names.
+const QUIET = /regroup/i;
+function coffeeDesc(t, items) {
+  const named = items.filter((x) => !QUIET.test(x.name));
+  return named.length ? `Coffee in ${t.name} for cyclists: ${listNames(named, 3)}. ${items.length} listed, with hours.` : null;
+}
+function shopDesc(t, items) {
+  const r = rentCount(items), fix = items.filter((x) => (x.services || []).includes("repair")).length;
+  return items.length ? `Bike shops ${shopPrep(t)} ${t.name}: ${fix} do repairs${r ? `, ${r} rent bikes` : ""}. Hours, phone and what each one does. Call ahead on event weekends.` : null;
+}
+const CULTURE_WORDS = { "record-store": "record stores", bookstore: "bookshops", gallery: "galleries", museum: "museums", bar: "bars", venue: "venues", market: "markets" };
+function cultureTail(items) {
+  const kinds = [];
+  for (const it of items) { const w = CULTURE_WORDS[it.kind]; if (w && !kinds.includes(w)) kinds.push(w); }
+  return kinds.length >= 2 ? `: ${kinds.slice(0, 3).join(", ")}` : "";
+}
+
 const RESOURCE = {
-  hotels: { key: "hotels", seg: "hotels", always: true, h: (t) => `Hotels in ${t.name} for cyclists`, title: (t) => `Hotels in ${t.name}, ${t.state_code} for cyclists`, type: "LodgingBusiness", verb: "stay", intro: (t) => `Where to sleep in ${t.name} when you're here to ride. Book early for event weekends.` },
+  hotels: { key: "hotels", seg: "hotels", always: true, h: (t) => `Hotels in ${t.name} for cyclists`, desc: hotelDesc, title: (t) => `Hotels in ${t.name}, ${t.state_code} for cyclists`, type: "LodgingBusiness", verb: "stay", intro: (t) => `Where to sleep in ${t.name} when you're here to ride. Book early for event weekends.` },
   restaurants: { key: "restaurants", seg: "restaurants", always: true, h: (t) => `Restaurants in ${t.name} for cyclists`, title: (t) => `Restaurants in ${t.name}, ${t.state_code} for cyclists`, type: "Restaurant", verb: "eat", intro: (t) => `Where to eat in ${t.name} the night before and the afternoon after. Real food, open when you need it.` },
-  "bike-shops": { key: "bike_shops", seg: "bike-shops", always: true, h: (t) => `Bike shops in ${t.name}: repairs, parts, rentals`, title: (t) => `Bike shops in ${t.name}, ${t.state_code}: repair, rentals`, type: "BikeStore", verb: "fix", intro: (t) => `Repairs, rentals and fits in ${t.name}. Call ahead on event weekends.` },
-  coffee: { key: "coffee", seg: "coffee", h: (t) => `Coffee in ${t.name} for cyclists`, title: (t) => `Coffee in ${t.name}, ${t.state_code} for cyclists`, type: "CafeOrCoffeeShop", verb: "coffee", intro: (t) => `Where riders in ${t.name} start the day and finish the ride.` },
-  culture: { key: "culture", seg: "culture", h: (t) => `${t.name} off the bike: record stores, bookshops, bars`, title: (t) => `${t.name}, ${t.state_code} off the bike`, type: "LocalBusiness", verb: "off the bike", intro: (t) => `What to do in ${t.name} with the afternoon after the ride.` },
+  "bike-shops": { key: "bike_shops", seg: "bike-shops", always: true, h: (t) => `Bike shops ${shopPrep(t)} ${t.name}: repairs, parts, rentals`, title: (t) => rentCount(t.bike_shops || []) ? `Bike rental and bike shops ${shopPrep(t)} ${t.name}, ${t.state_code}` : `Bike shops ${shopPrep(t)} ${t.name}, ${t.state_code}: repair, rentals`, desc: shopDesc, type: "BikeStore", verb: "fix", intro: (t) => `Repairs, rentals and fits ${shopPrep(t)} ${t.name}. Call ahead on event weekends.` },
+  coffee: { key: "coffee", seg: "coffee", h: (t) => `Coffee in ${t.name} for cyclists`, desc: coffeeDesc, title: (t) => `Coffee in ${t.name}, ${t.state_code} for cyclists`, type: "CafeOrCoffeeShop", verb: "coffee", intro: (t) => `Where riders in ${t.name} start the day and finish the ride.` },
+  culture: { key: "culture", seg: "culture", h: (t) => `${t.name} off the bike${cultureTail(t.culture || [])}`, title: (t) => `${t.name}, ${t.state_code} off the bike`, type: "LocalBusiness", verb: "off the bike", intro: (t) => `What to do in ${t.name} with the afternoon after the ride.` },
   routes: { key: "routes", seg: "routes", h: (t) => `Bike routes in ${t.name}`, title: (t) => `Bike routes in ${t.name}, ${t.state_code}`, verb: "ride", intro: (t) => `The rides locals in ${t.name} actually do, each with a route you can load.` },
-  "bring-your-bike": { key: "bring_your_bike", seg: "bring-your-bike", h: (t) => `Should you bring your bike to ${t.name}?`, title: (t) => `Bringing your bike to ${t.name}, ${t.state_code}`, verb: "bring the bike", intro: (t) => `` },
+  "bring-your-bike": { key: "bring_your_bike", seg: "bring-your-bike", h: (t) => `Should you bring your bike to ${t.name}?`, title: (t) => `Should you bring your bike to ${t.name}, ${t.state_code}?`, verb: "bring the bike", intro: (t) => `` },
 };
 
 const FOCUS_LABEL = { lgbtq: "LGBTQ+", "no-drop": "No-drop", beginner: "Beginner friendly", "women-trans-femme": "Women / trans / femme", bipoc: "BIPOC", family: "Family", gravel: "Gravel" };
@@ -888,7 +1020,7 @@ function resourcePage(t, r) {
   const items = raw.slice().sort((a, b) => (b.home_shop ? 1 : 0) - (a.home_shop ? 1 : 0));
   const url = `${t.url}${r.seg}/`;
   const title = r.title(t);
-  const description = truncate(`${r.intro(t)} ${items.length} listed.`, 155);
+  const description = truncate((r.desc && r.desc(t, items)) || `${r.intro(t)} ${items.length} listed.`, 155);
   const crumbs = breadcrumb([{ name: "Towns", url: "/towns/" }, { name: t.name, url: t.url }, { name: r.h(t), url }]);
   const ld = stripUndef({
     "@context": "https://schema.org", "@type": "ItemList", name: r.h(t), url: SITE + url, numberOfItems: items.length,
@@ -907,7 +1039,7 @@ function resourcePage(t, r) {
     <p class="eyebrow"><a href="${t.url}">${esc(t.name)}, ${esc(t.state)}</a> &middot; ${esc(r.verb)}</p>
     <h1>${esc(r.h(t))}</h1>
     <p class="lede">${esc(r.intro(t))}</p>
-    ${t.events.length ? `<p class="for-events">For: ${t.events.map((e) => `<a href="${e.url}">${esc(e.name)}</a>`).join(", ")}.</p>` : ""}
+    ${t.events.length || t.through.length ? `<p class="for-events">For: ${[...t.events, ...t.through].map((e) => `<a href="${e.url}">${esc(e.name)}</a>`).join(", ")}.</p>` : ""}
     <h2 class="visually-hidden">${esc(r.h(t))}, listed</h2>
     ${r.key === "hotels" && items.length ? `<p class="for-events">${esc(TOWNS.hotelLine(t))}.</p>` : ""}
     ${filterRow(r.key, items)}
@@ -1082,7 +1214,7 @@ function bringYourBikePage(t) {
       ${shopCards(ship.shops, "box")}
     </section>` : ""}
 
-    ${hasRent ? `<section id="rent" aria-labelledby="rent-h">${h2("rent", "key", `Renting a bike in ${esc(t.name)}`)}
+    ${hasRent ? `<section id="rent" aria-labelledby="rent-h">${h2("rent", "key", `Renting a bike ${shopPrep(t)} ${esc(t.name)}`)}
       ${leadFold(rent.note, W + ".rent", "What renting costs and what you get")}
       ${shopCards(rent.shops, "key")}
     </section>` : ""}
@@ -1239,7 +1371,7 @@ ${map ? `<script src="/rides/map.js" defer></script>` : ""}
 // Clear stale output first. Everything under events/ and towns/ is generated
 // except events.css, events.js and 2027/ (the calendar, owned by
 // scripts/build-calendar.js, holds hand-written calendar.css and calendar.js).
-const KEEP = new Set(["events.css", "events.js", "report.js", "2027"]);
+const KEEP = new Set(["events.css", "events.js", "report.js", "ask.js", "2027"]);
 const evDir = path.join(OUT, "events");
 if (fs.existsSync(evDir)) for (const f of fs.readdirSync(evDir)) if (!KEEP.has(f)) fs.rmSync(path.join(evDir, f), { recursive: true, force: true });
 // towns/art/ is drawn by tools/contour-art.js and survives the rebuild
