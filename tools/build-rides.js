@@ -2444,7 +2444,7 @@ const HOW_FILMS = {
   fruitloop: { src: "/film/fruit-loop-how-we-roll-2.mp4", poster: "/film/fruit-loop-how-we-roll-2.jpg", seconds: 84, title: "How we roll",
     line: "Ten things for your first Fruit Loop. It runs 1:24 and has no sound.",
     more: ["/fruitloop/#how-we-roll", "Read the ten instead"],
-    alt: "How we roll, in chalk on a night road: six riders in rainbow kits cross the rainbow crosswalk and show ten group-ride habits, lights on. It ends on the Fruit Loop logo, Starts Friday, Dec 11, and the meeting spot." },
+    alt: "How we roll, in chalk on a night road: six riders in rainbow kits cross the rainbow crosswalk and show ten group-ride habits, lights on. It ends on the Fruit Loop logo, the old start date, Friday, Dec 11, and the meeting spot." },
 };
 const LEFT_TRAFFIC = new Set(["GB", "IE", "AU", "NZ", "JP", "SG", "ZA", "IN", "HK", "MO", "MY", "TH", "ID", "BN", "MT", "CY", "KE", "UG", "TZ", "ZM", "ZW", "BW", "NA", "MU", "PK", "BD", "LK", "NP", "JM", "BS", "BB", "TT", "FJ"]);
 const FRUIT_LOOP_SLUG = "phoenix-az-cycle-for-change-fruit-loop";

@@ -63,12 +63,14 @@ test("a first_ride after the window shows nothing; from that day on it shows", (
   assert.deepEqual(daysOf(W.weekOf([r], "2026-12-09", 7), r.slug), ["2026-12-11"]);
 });
 
-test("the Fruit Loop (the real record) never shows before Fri, Dec 11, 2026", () => {
+// Nov 17, 2026: Robert moved the first ride from Dec 11 to this spring (no date yet), so the record is on its break and
+// shows on no week, Dec 11 included. When the spring date is set, put the first-ride check back with that date.
+test("the Fruit Loop (the real record) shows on no week while it's moved to spring", () => {
   const all = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "..", "cfc-site", "rides", "rides.json"), "utf8"));
   const fl = (Array.isArray(all) ? all : all.rides).find((r) => r.slug === "phoenix-az-cycle-for-change-fruit-loop");
   assert.ok(fl, "the Fruit Loop is in rides.json");
-  for (const start of ["2026-11-04", "2026-11-27", "2026-12-04"]) assert.deepEqual(daysOf(W.weekOf([fl], start, 7), fl.slug), [], start);
-  assert.deepEqual(daysOf(W.weekOf([fl], "2026-12-08", 7), fl.slug), ["2026-12-11"]);
+  assert.equal(fl.status, "seasonal-break");
+  for (const start of ["2026-11-04", "2026-11-27", "2026-12-04", "2026-12-08", "2027-01-06"]) assert.deepEqual(daysOf(W.weekOf([fl], start, 7), fl.slug), [], start);
 });
 
 test("a monthly-rule ride shows only on its date", () => {

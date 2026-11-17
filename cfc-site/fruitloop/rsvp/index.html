@@ -4,24 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>Coming to the Fruit Loop? — Cycle for Change</title>
-  <meta name="description" content="Tell Robert if you’re riding the Fruit Loop. Meet 5:30 pm at the rainbow crosswalk, Central and Portland. Roll at 6:00.">
+  <title>The Fruit Loop is moving to spring — Cycle for Change</title>
+  <meta name="description" content="The Fruit Loop is moving to spring. Leave a name and an email or phone, and Robert will tell you the new date first.">
   <link rel="canonical" href="https://cycleforchange.org/fruitloop/rsvp/">
   <link rel="alternate" type="application/rss+xml" title="Cycle for Change" href="https://cycleforchange.org/feed.xml">
   <meta name="robots" content="noindex, nofollow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cycle for Change">
   <meta property="og:url" content="https://cycleforchange.org/fruitloop/rsvp/">
-  <meta property="og:title" content="Coming to the Fruit Loop? — Cycle for Change">
-  <meta property="og:description" content="Tell Robert if you’re riding the Fruit Loop. Meet 5:30 pm at the rainbow crosswalk, Central and Portland. Roll at 6:00.">
-  <meta property="og:image" content="https://cycleforchange.org/og-fruitloop-3.jpg">
+  <meta property="og:title" content="The Fruit Loop is moving to spring — Cycle for Change">
+  <meta property="og:description" content="The Fruit Loop is moving to spring. Leave a name and an email or phone, and Robert will tell you the new date first.">
+  <meta property="og:image" content="https://cycleforchange.org/og-fruitloop-4.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="The Fruit Loop: a queer night ride through Phoenix history. Starts Friday, Dec 11. Meet 5:30 pm at the rainbow crosswalk, Central and Portland.">
+  <meta property="og:image:alt" content="The Fruit Loop: a queer night ride through Phoenix history. Moving to spring. Meet 5:30 pm at the rainbow crosswalk, Central and Portland.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Coming to the Fruit Loop? — Cycle for Change">
-  <meta name="twitter:description" content="Tell Robert if you’re riding the Fruit Loop. Meet 5:30 pm at the rainbow crosswalk, Central and Portland. Roll at 6:00.">
-  <meta name="twitter:image" content="https://cycleforchange.org/og-fruitloop-3.jpg">
+  <meta name="twitter:title" content="The Fruit Loop is moving to spring — Cycle for Change">
+  <meta name="twitter:description" content="The Fruit Loop is moving to spring. Leave a name and an email or phone, and Robert will tell you the new date first.">
+  <meta name="twitter:image" content="https://cycleforchange.org/og-fruitloop-4.jpg">
   <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon-180.png?v=2">
   <link rel="preload" href="/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -32,7 +32,9 @@
   <script>document.documentElement.classList.add("fl-js")</script>
 </head>
 <body class="theme-dark fl-page fl-rsvp-page">
-<!-- The Fruit Loop RSVP (Oct 30, 2026). Robert: "click this link yes I'm coming. No, I'm not that's it", then a maybe that
+<!-- Nov 17, 2026 (Robert: "Yes please" to moving the first ride to spring): the yes/no pick is off until there's a new
+     date, and the keep-posted form shows on its own. Put the pick back with the new date.
+     The Fruit Loop RSVP (Oct 30, 2026). Robert: "click this link yes I'm coming. No, I'm not that's it", then a maybe that
      asks for contact details and nothing else does. Yes and no go straight to the ride page. /rsvp points here.
      Works without the script: the buttons post to /api/rsvp and land on /fruitloop/; the keep-posted form shows. -->
 <main id="main" class="fl fl-rsvp">
@@ -47,22 +49,14 @@
     <div class="fl-xwalk fl-rsvp-xwalk" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
 
     <div class="fl-rsvp-top">
-      <p class="fl-rsvp-date" data-fl-next>Fri, Dec 11</p>
-      <p class="fl-rsvp-when">Meet 5:30 pm at the rainbow crosswalk, Central and Portland. Roll at 6:00.</p>
-      <h1 class="fl-rsvp-q">You coming?</h1>
+      <p class="fl-rsvp-date">Moved to spring</p>
+      <p class="fl-rsvp-when">I’m sorry. The first ride won’t be Dec 11. I’m moving it to this spring, and so many of you said you’re in. That part isn’t going anywhere.</p>
+      <h1 class="fl-rsvp-q">Want the new date first?</h1>
     </div>
 
-    <form class="fl-rsvp-pick" method="post" action="/api/rsvp" data-fl-pick>
-      <input type="hidden" name="d" value="2026-12-11" data-fl-d>
-      <button class="btn btn--bone fl-rsvp-btn" type="submit" name="a" value="going">Yes, I’m coming</button>
-      <button class="btn btn--ghost fl-rsvp-btn" type="submit" name="a" value="not">Can’t make it</button>
-      <a class="btn btn--ghost fl-rsvp-btn" href="#posted" data-fl-maybe>Maybe. Keep me posted</a>
-    </form>
-    <p class="fl-rsvp-said" data-fl-said aria-live="polite" hidden></p>
-
-    <section class="fl-rsvp-posted" id="posted" aria-labelledby="posted-h" data-fl-posted>
+    <section class="fl-rsvp-posted is-open" id="posted" aria-labelledby="posted-h" data-fl-posted>
       <h2 id="posted-h">Keep me posted</h2>
-      <p>Leave your first name and an email or a phone number. I’ll let you know when rides are coming up. That’s all it’s for.</p>
+      <p>Leave your first name and an email or a phone number. I’ll tell you the new date, and when rides are coming up. That’s all it’s for.</p>
       <form method="post" action="/api/rsvp" novalidate data-fl-form>
         <input type="hidden" name="a" value="maybe">
         <input type="hidden" name="d" value="2026-12-11" data-fl-d>
