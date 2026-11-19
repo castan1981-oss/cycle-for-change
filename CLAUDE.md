@@ -492,6 +492,11 @@ release, a product review or a paper. He writes five or six at a time and wants 
   are never on the live site; a Netlify deploy preview shows all of them with a banner, noindex.
 - **Pictures (Robert, Nov 18, 2026): his bikes, him, or a graphic.** Never a shop's or a brand's own photo, even for a
   piece about that shop. The registry key goes in `photo`.
+- **The graphic** (`python3 tools/opinion-art.py [slug]`, committed; the deploy can't draw it): one line of his own
+  (front matter `line`, else `dek`) big on the bruise ground in Overpass 800, the set-up in patina and the last sentence
+  in plaster, the mark and "Opinion" under it. Two files in `cfc-site/img/op/`: `<slug>-og-N.png` (1200 × 630) is every
+  piece's own share card; with `photo: graphic` it is also the picture on the page, and `<slug>-N.jpg` (1080 × 1350) is
+  its card. Change the line, raise `art` (N) and redraw. No pink on the words: the pink is the plate.
 - The chip is "Opinion" (the plain `.fn-chip`, no new color). No stylesheet of its own: `.fn-*` in `/styles.css`.
 
 ### Ride write-ups

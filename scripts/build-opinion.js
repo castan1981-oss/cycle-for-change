@@ -118,7 +118,9 @@ function lint(piece, { photos = null } = {}) {
   if (!lede) errors.push("the body starts with a paragraph (the lede)");
   if (!blocks.some((b) => b.type === "p")) errors.push("no body under the lede");
   if (!meta.photo) warnings.push("no photo: the card and the page run without a picture");
+  else if (meta.photo === "graphic") { if (piece.art === null) errors.push("photo: graphic, and the graphic isn't drawn yet (python3 tools/opinion-art.py)"); }
   else if (photos && !photos[meta.photo]) errors.push(`photo "${meta.photo}" is not in scripts/photos.js`);
+  if (piece.art === null && meta.photo !== "graphic") warnings.push("no share card of its own yet (python3 tools/opinion-art.py); it shares the site's card");
   const all = [meta.title, meta.description, meta.dek, plain, sources.map((s) => s.label).join(" ")].join(" ");
   for (const [re, why] of BANNED) if (re.test(all)) errors.push(why);
   const cited = new Set([...plain.matchAll(/\[(\d+)\]/g)].map((x) => Number(x[1])));
@@ -137,6 +139,15 @@ function lint(piece, { photos = null } = {}) {
   if (!sources.length) warnings.push("no sources: fine for pure opinion, wrong if the piece states facts");
   return { errors, warnings };
 }
+
+/* —— the graphic (tools/opinion-art.py draws it; this script only uses the files) ——
+   Robert, Nov 18, 2026: a piece's picture is his bikes, him, or a graphic. The graphic is one line of his own. */
+const artLine = (piece) => piece.meta.line || piece.meta.dek || "";
+const artN = (piece) => Number(piece.meta.art) || 1;
+const art = (piece, siteDir) => {
+  const og = `/img/op/${piece.meta.slug}-og-${artN(piece)}.png`, tall = `/img/op/${piece.meta.slug}-${artN(piece)}.jpg`;
+  return fs.existsSync(path.join(siteDir, og)) && fs.existsSync(path.join(siteDir, tall)) ? { og, tall } : null;
+};
 
 /* —— when a piece shows —— */
 function stateOf(piece, today) {
@@ -195,12 +206,15 @@ ${sources.map((s) => `<li id="src-${s.n}"><a href="${esc(s.url)}" rel="noopener"
   };
   const head = CHROME.head({
     title: meta.title, description: meta.description, url, ogType: "article", styles: ["/styles.css"], ld: [ld],
+    ...(piece.art ? { image: piece.art.og, imageAlt: curlText(artLine(piece)) } : {}),
     ...(piece.state === "live" ? {} : { robots: "noindex, nofollow" }),
   });
   const next = others.slice(0, 2).map((o) => `    <a href="/field-notes/${o.meta.slug}/">${esc(curlText(o.meta.title))}</a>`);
   if (next.length < 2) next.push(`    <a href="/rides/">Find a group ride</a>`);
   if (next.length < 2) next.push(`    <a href="/field-notes/">Field notes</a>`);
-  const fig = meta.photo && PHOTOS.PHOTOS[meta.photo] ? `\n\n    ${PHOTOS.figure(meta.photo, { cls: PHOTOS.PHOTOS[meta.photo].shape === "p" ? "" : null })}` : "";
+  const fig = meta.photo === "graphic" && piece.art
+    ? `\n\n    <figure class="ph ph--l"><img src="${piece.art.og}" alt="${esc(curlText(artLine(piece)))}" width="1200" height="630" loading="lazy" decoding="async"></figure>`
+    : meta.photo && PHOTOS.PHOTOS[meta.photo] ? `\n\n    ${PHOTOS.figure(meta.photo, { cls: PHOTOS.PHOTOS[meta.photo].shape === "p" ? "" : null })}` : "";
   return `<!DOCTYPE html>
 ${MARK}${meta.slug}.md -->
 <html lang="en">
@@ -249,7 +263,9 @@ ${CHROME.FOOTER}
 
 function card(piece, { PHOTOS, curlText }) {
   const { meta } = piece;
-  const pic = meta.photo && PHOTOS.PHOTOS[meta.photo] ? `\n          ${PHOTOS.card(meta.photo)}` : "";
+  const pic = meta.photo === "graphic" && piece.art
+    ? `\n          <figure><img src="${piece.art.tall}" alt="${esc(curlText(artLine(piece)))}" width="1080" height="1350" loading="lazy" decoding="async"></figure>`
+    : meta.photo && PHOTOS.PHOTOS[meta.photo] ? `\n          ${PHOTOS.card(meta.photo)}` : "";
   const tag = piece.state === "live" ? `Opinion &middot; ${human(meta.publish)}` : `Opinion &middot; ${piece.state === "scheduled" ? "scheduled " + human(meta.publish) : piece.state}`;
   return `        <a class="fn-card" href="/field-notes/${meta.slug}/">${pic}
           <span class="fn-chip">${tag}</span>
@@ -316,11 +332,12 @@ function between(text, [a, b], inner, plant) {
   return plant(text, block);
 }
 
-function load(dataDir, { photos = null, today }) {
+function load(dataDir, { photos = null, today, siteDir = null }) {
   if (!fs.existsSync(dataDir)) return [];
   return fs.readdirSync(dataDir).filter((f) => f.endsWith(".md") && !f.startsWith("_")).sort().map((f) => {
     const file = path.join(dataDir, f);
     const piece = { file, today, ...parse(fs.readFileSync(file, "utf8"), f) };
+    piece.art = siteDir && piece.meta.slug ? art(piece, siteDir) : undefined;   // undefined: not looked for
     piece.lint = lint(piece, { photos });
     piece.state = stateOf(piece, today);
     return piece;
@@ -329,7 +346,7 @@ function load(dataDir, { photos = null, today }) {
 
 function run({ dataDir = path.join(ROOT, "data", "opinion"), siteDir = path.join(ROOT, "cfc-site"), today = phxToday(), preview = false, deps = null, log = console.log } = {}) {
   deps = deps || { CHROME: require("./chrome.js"), PHOTOS: require("./photos.js"), curlText: require("./curl-quotes.js").curlText };
-  const pieces = load(dataDir, { photos: deps.PHOTOS.PHOTOS, today });
+  const pieces = load(dataDir, { photos: deps.PHOTOS.PHOTOS, today, siteDir });
   const byDate = (a, b) => (b.meta.publish || "9999").localeCompare(a.meta.publish || "9999") || a.meta.slug.localeCompare(b.meta.slug);
   const shown = pieces.filter((p) => p.state === "live" || preview).sort(byDate);
   const live = pieces.filter((p) => p.state === "live").sort(byDate);
@@ -379,13 +396,13 @@ function run({ dataDir = path.join(ROOT, "data", "opinion"), siteDir = path.join
   return { pieces, shown, live };
 }
 
-module.exports = { parse, lint, stateOf, inline, renderPage, renderHub, card, between, run, load, BANNED, OPINION_LINE, HUB, MARK };
+module.exports = { artLine, artN, parse, lint, stateOf, inline, renderPage, renderHub, card, between, run, load, BANNED, OPINION_LINE, HUB, MARK };
 
 if (require.main === module) {
   const args = new Set(process.argv.slice(2));
   const today = phxToday();
   if (args.has("--check") || args.has("--queue")) {
-    const pieces = load(path.join(ROOT, "data", "opinion"), { photos: require("./photos.js").PHOTOS, today });
+    const pieces = load(path.join(ROOT, "data", "opinion"), { photos: require("./photos.js").PHOTOS, today, siteDir: path.join(ROOT, "cfc-site") });
     let bad = 0;
     for (const p of pieces) {
       console.log(`${p.state.padEnd(9)} ${p.meta.slug}${p.meta.publish ? "  " + p.meta.publish : ""}  (${p.words} words, ${p.sources.length} sources)`);

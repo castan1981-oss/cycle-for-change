@@ -104,3 +104,16 @@ test("the pieces in the repo: no ready piece is failing, and the committed site 
   const index = fs.readFileSync(path.join(ROOT, "cfc-site", "field-notes", "index.html"), "utf8");
   assert.ok(!/Opinion &middot; (draft|held|scheduled)/.test(index), "a preview card is on /field-notes/");
 });
+
+test("the graphic: a piece with files gets its own share card; photo: graphic without files is held back", () => {
+  const s = site({ "a-plain-title.md": piece({ photo: "graphic" }) });
+  assert.equal(s.go("2027-01-01").pieces[0].state, "held");
+  const op = path.join(s.data, "..", "site", "img", "op");
+  fs.mkdirSync(op, { recursive: true });
+  fs.writeFileSync(path.join(op, "a-plain-title-og-1.png"), ""); fs.writeFileSync(path.join(op, "a-plain-title-1.jpg"), "");
+  assert.equal(s.go("2027-01-01").pieces[0].state, "live");
+  const html = s.read("field-notes/a-plain-title/index.html");
+  assert.match(html, /og:image" content="https:\/\/cycleforchange.org\/img\/op\/a-plain-title-og-1.png"/);
+  assert.match(html, /<figure class="ph ph--l"><img src="\/img\/op\/a-plain-title-og-1.png" alt="One line for the card\."/);
+  assert.match(s.read("field-notes/index.html"), /<figure><img src="\/img\/op\/a-plain-title-1.jpg"/);
+});
