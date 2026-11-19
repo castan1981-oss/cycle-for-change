@@ -383,7 +383,7 @@ const ORGS_S = `<!-- —— 6. the orgs. One line each from the site's checked c
      money goes through their own pages. The help lines sit here because the orgs' work comes up here. —— -->
 <section class="orgs" id="orgs" aria-labelledby="orgs-h">
   <div class="wrap">
-    <div class="orgs-head"><h2 class="orgs-h" id="orgs-h">The orgs I ride for.</h2><p class="orgs-lede">You sign up or give on their page. None of it comes through me.</p></div>
+    <div class="orgs-head"><h2 class="orgs-h" id="orgs-h">The orgs I ride for.</h2><p class="orgs-lede">You sign up or give on their page. None of it comes through me. I already paid the minimums for both rides, so every dollar you give goes to them.</p></div>
     <div class="orgs-list">
       <article class="org">
         <svg class="org-mk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#mkOjai"/></svg>

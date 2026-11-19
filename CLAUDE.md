@@ -1434,3 +1434,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-11-19 — `/contact/` gets a form (Netlify form `contact`: topic, name, email, message; entries stay in Netlify
   and reach Robert, never the public queue); `/privacy/` says six forms and what this one keeps. No sheet of the
   site's changed (`/contact/contact.css` is new), so `CSS_V` stays.
+- 2026-11-19 — The homepage orgs lede says the minimums are paid (Robert, on his two-rides reel: "I've already paid for all the minimums. So every dollar you donate goes straight to those organizations."): "I already paid the minimums for both rides, so every dollar you give goes to them." One sentence in `ORGS_S` (build-home.js); no sheet changed.
