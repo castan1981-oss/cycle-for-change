@@ -112,7 +112,7 @@ function llms(c) {
   lines.push("## Trust");
   lines.push("");
   lines.push(`- [How rides are checked](${ORIGIN}/methodology/): the source-plus-date rule, the 90-and-150-day clock, the Monday watcher, what software does and what people do.`);
-  lines.push(`- [Privacy](${ORIGIN}/privacy/): what the site keeps (analytics, five forms), where it goes, and how to take something back. No accounts, no email list, no ads.`);
+  lines.push(`- [Privacy](${ORIGIN}/privacy/): what the site keeps (analytics, six forms), where it goes, and how to take something back. No accounts, no email list, no ads.`);
   lines.push(`- [Contact](${ORIGIN}/contact/): Instagram DM; the domain takes no mail.`);
   lines.push("");
   lines.push("## Machine-readable");
