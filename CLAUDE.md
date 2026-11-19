@@ -823,11 +823,17 @@ explained" keeps its name: it's about charity rides in general, not this site.
 
 ### Trust pages (`/privacy/`, `/methodology/`, `/contact/`, Oct 19, 2026)
 Hand pages on apply-chrome.py's list, written from the site's own code and rules, never from memory:
-`/privacy/` (GA4 via Netlify, the five Netlify forms and where each entry goes — the review queue is the
+`/privacy/` (GA4 via Netlify, the six Netlify forms and where each entry goes — the review queue is the
 public issue list, emails/files/photos never leave Netlify — browser storage, "near me", the outside
 services a page talks to, the 7-day take-back), `/methodology/` (the source-plus-date rule, the 90/150
 clock, the Monday watcher and re-check, pins and routes, the calendar's confirmed/projected rule, what is
-software and what is a person), `/contact/` (Instagram DM; no email — the domain has no MX). The footer's
+software and what is a person), `/contact/` (the form, or an Instagram DM). **Nov 19, 2026: `/contact/` has a form** (Robert: "go"): the Netlify form
+`contact` (topic, name, email, message, honeypot; `contact.css`, `contact.js`; works without script, back at `#sent`).
+Entries stay in Netlify → Forms → contact and never go to the review queue, an issue or a page; Robert gets them by a
+Netlify form notification he sets to his own inbox (the domain still has no MX, so no @cycleforchange.org address is
+printed or promised). The site still sends no email: a reply is Robert's own. The page carries the no-list line, the
+giving line and 988 + Trevor. `/contact/?about=listing&page=<path>` arrives with that topic picked; listing fixes for
+one ride still belong to the ride page's own report form (no second "fix this" link on directory pages). The footer's
 bottom line links all three (`.foot-trust` in chrome.js). When a form, a pull script, an analytics event
 or a policy changes, change the page the same day and bump its "Updated" date. `/about/` waits for
 Robert's words (the guides' Person bylines point there once it exists).
@@ -1425,3 +1431,6 @@ two exits; the shapes are on the plan canvas.
 - 2026-11-16 — The rest of the Ojai pilot (Robert: "Push and build the rest"; #245 merged first): Just ask on every
   destination guide; the Guerneville town guide (`/towns/california/guerneville/`); Cycle to Zero on the event template
   with its route line; list pages' titles and descriptions written from their own listings; `/privacy/#ask`. No stylesheet changed.
+- 2026-11-19 — `/contact/` gets a form (Netlify form `contact`: topic, name, email, message; entries stay in Netlify
+  and reach Robert, never the public queue); `/privacy/` says six forms and what this one keeps. No sheet of the
+  site's changed (`/contact/contact.css` is new), so `CSS_V` stays.

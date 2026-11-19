@@ -1,0 +1,23 @@
+/* /contact/ — the form (Nov 19, 2026). Fields are chrome.css's .field; this sheet is spacing and the topic picks. */
+@layer section{
+.ct-form{margin:var(--s4) 0 0;max-width:var(--measure)}
+.ct-topics{margin:0;padding:0;border:0;display:grid;gap:8px}
+.ct-topics legend,.ct-field>label{padding:0;margin:0 0 8px;font:800 .9375rem/1.3 var(--display);color:var(--asphalt)}
+.ct-field>label{display:block}
+.ct-field>label span{font-weight:500;color:var(--mute)}
+.ct-topics label{position:relative;display:block;cursor:pointer}
+.ct-topics input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.ct-topics span{display:flex;align-items:center;min-height:48px;padding:10px 14px;border:1px solid var(--line-s);background:var(--paper);color:var(--asphalt);font:700 1rem/1.3 var(--display)}
+.ct-topics input:checked+span{background:var(--asphalt);border-color:var(--asphalt);color:var(--paper)}
+.ct-topics input:focus-visible+span{outline:2px solid var(--ring);outline-offset:2px}
+@media (hover:hover){.ct-topics label:hover span{border-color:var(--asphalt)}}
+.ct-field{margin:var(--s3) 0 0}
+.ct-form .btn{margin:var(--s3) 0 0}
+.ct-hint,.ct-small,.ct-err{margin:var(--s2) 0 0;font-size:var(--fs-small);line-height:1.5;color:var(--mute)}
+.ct-hint{color:var(--asphalt)}
+.ct-err{color:var(--creosote-ink);font-weight:700}
+.ct-small a,.ct-hint a{color:var(--asphalt)}
+.ct-ok{display:none;margin:var(--s4) 0 0;padding:var(--s2) var(--s3);max-width:var(--measure);background:var(--asphalt);color:var(--paper);font:800 var(--fs-h4)/1.3 var(--display)}
+.ct-ok:target,.ct-ok.is-on{display:block}
+.ct-ok:target~.ct-form,.ct-ok.is-on~.ct-form{display:none}
+}
