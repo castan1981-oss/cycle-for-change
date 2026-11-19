@@ -5,7 +5,7 @@ status: draft
 publish:
 description: Big bike brands are changing how they treat the shops that fix your bike. Why your local bike shop matters, and what to ask before you buy.
 dek: You can skip the shop when you buy. You can't skip it when something breaks.
-photo: bike-wall
+photo: haus
 ---
 Not all bike shops are created equal. I want to say that first, because it's true, and because this isn't a love letter to every shop with a repair stand.
 

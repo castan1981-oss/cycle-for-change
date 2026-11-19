@@ -490,6 +490,8 @@ release, a product review or a paper. He writes five or six at a time and wants 
   date at the 4 am deploy, joins `/field-notes/`, the series page, the sitemap and the feed, and links to the two newest
   others under "Keep reading". Nothing else to touch. A draft, a piece before its date and a piece that fails a check
   are never on the live site; a Netlify deploy preview shows all of them with a banner, noindex.
+- **Pictures (Robert, Nov 18, 2026): his bikes, him, or a graphic.** Never a shop's or a brand's own photo, even for a
+  piece about that shop. The registry key goes in `photo`.
 - The chip is "Opinion" (the plain `.fn-chip`, no new color). No stylesheet of its own: `.fn-*` in `/styles.css`.
 
 ### Ride write-ups

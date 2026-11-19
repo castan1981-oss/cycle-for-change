@@ -5,7 +5,7 @@ status: draft
 publish:
 description: 70 to 160 characters. What the piece argues, in plain words, with the phrase people would search for.
 dek: One line for the card. One of Robert's own sentences from the piece works best.
-photo: a key from scripts/photos.js
+photo: a key from scripts/photos.js (his bikes, him, or a graphic)
 ---
 The first paragraph is the lede. It runs bigger than the rest.
 
