@@ -126,7 +126,7 @@ function llms(c) {
 
 /* —— feed.xml —— */
 const FEED_PREFIXES = ["/guides/", "/field-notes/", "/journal/", "/events/", "/towns/", "/resources/", "/brief/", "/cyclefor/"];
-const SKIP = new Set(["/guides/", "/field-notes/", "/journal/", "/events/", "/towns/", "/resources/", "/events/2027/"]);
+const SKIP = new Set(["/guides/", "/field-notes/", "/field-notes/opinion/", "/journal/", "/events/", "/towns/", "/resources/", "/events/2027/"]);
 function feedItems() {
   const mods = lastmods();
   const items = [];

@@ -107,6 +107,7 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
 | `python3 tools/hero-film.py` + `python3 tools/hero-contrast.py` | the homepage hero films (`cfc-site/film/hero-*-N.*`, from his own footage, car-free) and the check that the hero's type reads on every frame of them (§3, the editorial homepage) |
 | `scripts/mark-2027.js` | the mark (§3): the traced "cycle for" and its plate, as `LINE` / `STACK` / `WORD` / `CYCLE` / `FOR` for pages and `FILE()` for a file of its own. Required by chrome.js, build-home.js and build-about.js. Change the mark here and nowhere else, then regenerate (below) and run `python3 tools/brand-files.py`. |
 | `python3 tools/brand-files.py` | the files that carry the mark with no page around them: `cfc-site/favicon.svg`, `favicon-180.png`, `favicon-512.png` and the share card `og-cfc-N.png` (it writes `templates/og/cfc.html` too). A changed card gets a new number (`--n`) and `OG_IMAGE` moves in chrome.js and build-rides.js; a changed icon keeps its name and `ICON_V` in chrome.js goes up. The addresses that used to serve an old card or an old logo are rewritten with the current one (`og-cfc.png`, `og-image.png`; `mark.svg`, `assets/logo.svg`), so a link from last year never shows a retired mark (`tools/test/brand-files.test.js`). |
+| `node scripts/build-opinion.js` | the opinion series (§5): `cfc-site/field-notes/<slug>/` for each live piece in `data/opinion/`, the series page `cfc-site/field-notes/opinion/`, its cards on `/field-notes/` and its URLs in `sitemap-pages.xml` (both between marker comments). Runs first on every deploy. `--preview` shows drafts (never commit that), `--check` runs the rules, `--queue` lists what is live, scheduled and in draft. Tests: `tools/test/opinion.test.js`. |
 | `node scripts/build-about.js` | `cfc-site/about/index.html` from `data/about.json` (his words; noindex while a section is waiting). Wears the chrome. |
 | `python3 tools/how-we-ride/render.py --n N` | How we ride, the film on the ride pages (§6): `cfc-site/film/how-we-ride-N.mp4` and its jpg / webp / avif poster, shot frame by frame from `tools/how-we-ride/film.html` (the mark from mark-2027.js, the font and the asphalt tile from `cfc-site/`). A new cut takes the next number; `HOW_FILMS` in build-rides.js follows and the old files go. Tests: `tools/test/how-we-ride.test.js`. |
 | `node scripts/build-signals.js` | `cfc-site/llms.txt` (what the site is, for AI search; counts from the data) and `cfc-site/feed.xml` (RSS of guides, field notes, journal, event and town pages, newest first by the sitemaps' lastmod). build-rides.js runs it last on every build, so the deploy keeps them current. Tests: `tools/test/build-signals.test.js`. |
@@ -467,6 +468,29 @@ first, until it has passed) when the money comes up.
 - Publishing = three hand edits: the page, one row in `cfc-site/field-notes/index.html` (newest
   first), the URL in `cfc-site/sitemap-pages.xml`. Cross-link 2 related posts in `.fn-related`. Then
   `python3 scripts/apply-chrome.py`.
+
+### Opinion (`/field-notes/<slug>/`, series page `/field-notes/opinion/`, Nov 18, 2026)
+Robert's brief: first-person opinion backed by reporting, "a cyclist speaking honestly to other cyclists". Not a press
+release, a product review or a paper. He writes five or six at a time and wants them out close together.
+- **One file a piece: `data/opinion/<slug>.md`** (start from `data/opinion/_template.md`; files starting `_` are
+  skipped). Front matter: `title` (sentence case), `slug`, `status` (`draft` | `ready`), `publish` (YYYY-MM-DD),
+  `description` (70–160 characters), `dek` (the card line, one of his own sentences), `photo` (a key in
+  scripts/photos.js), optional `updated`. Body: paragraphs, `## headings`, `> one pulled line`, `- lists`, `[n]` after a
+  fact, and `## Sources` last, one a line as `n. What it is, who, when | https://…`.
+- **The words are his.** He drafts in a claude.ai doc; the file carries that text as he left it. Claude lays it out,
+  numbers the sources, fixes a typo. A change to a fact goes to him as a suggestion on the doc first, never straight
+  into the file. Every page opens on the same line: "Opinion. The take is mine. The facts are sourced at the end."
+- **Before a piece is marked ready, fact-check it**: open every source; a number carries its year in the sentence
+  (an old figure is never stated as today's); a claim says no more than its source does (a panel of nine shops is
+  "some shops told…", not "shops are…"); a manufacturer's policy is read off its own current page and the source line
+  says "read <month year>"; one short quote a source at most. A brand or shop named in a piece is never a partner
+  (Bicycle Haüs is his shop and stays named; it is a credit, never a co-brand).
+- **Releasing a batch**: set each piece `status: ready` with its own `publish` date (two or three days apart reads as
+  momentum), run `node scripts/build-opinion.js --check`, open one PR. Once he merges it, each piece goes live on its
+  date at the 4 am deploy, joins `/field-notes/`, the series page, the sitemap and the feed, and links to the two newest
+  others under "Keep reading". Nothing else to touch. A draft, a piece before its date and a piece that fails a check
+  are never on the live site; a Netlify deploy preview shows all of them with a banner, noindex.
+- The chip is "Opinion" (the plain `.fn-chip`, no new color). No stylesheet of its own: `.fn-*` in `/styles.css`.
 
 ### Ride write-ups
 One page per group ride Robert rides: who he met, what happened, his own video and photos, in
@@ -1425,3 +1449,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-11-16 — The rest of the Ojai pilot (Robert: "Push and build the rest"; #245 merged first): Just ask on every
   destination guide; the Guerneville town guide (`/towns/california/guerneville/`); Cycle to Zero on the event template
   with its route line; list pages' titles and descriptions written from their own listings; `/privacy/#ask`. No stylesheet changed.
+- 2026-11-18 — The opinion series: `data/opinion/<slug>.md` → `scripts/build-opinion.js` → `/field-notes/<slug>/`, the series page `/field-notes/opinion/`, cards, sitemap; runs first on every deploy so a ready piece goes live on its `publish` date. First piece in draft: "Your bike shop is your home".

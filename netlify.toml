@@ -9,7 +9,10 @@
   # Oct 21, 2026: the event pages and the 2027 calendar rebuild on deploy too (2.5 s), so an event whose date
   # has passed loses its "upcoming" Event markup the next day (El Tour, Nov 21) instead of waiting for a
   # hand rebuild. They read rides' live.json, so they run after the rides build.
-  command = "npm install && node tools/build-rides.js && node scripts/build-events.js && node scripts/build-calendar.js"
+  # Nov 18, 2026: the opinion series runs first (scripts/build-opinion.js), so a piece marked ready goes live on its
+  # publish date at the next morning's deploy, and the feed the rides build writes last already has it. A piece that
+  # fails its checks is held back and logged; it never fails the deploy.
+  command = "npm install && node scripts/build-opinion.js && node tools/build-rides.js && node scripts/build-events.js && node scripts/build-calendar.js"
 
 [dev]
   publish = "cfc-site"
