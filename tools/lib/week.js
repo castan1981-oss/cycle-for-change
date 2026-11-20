@@ -43,7 +43,7 @@ function weekOf(rides, start, days = 7, { tz = PHOENIX_WEEK.tz } = {}) {
   const before = new Date(t0.getTime() - 1);   // a ride at 00:00 on day 1 still counts (nextOccurrence wants t > from)
   const by = new Map(ymds.map((y) => [y, []]));
   for (const ride of rides) {
-    if (SCH.onBreak(ride)) continue;           // a seasonal break promises nothing, not even a posted date (nextOf)
+    if (SCH.onBreak(ride) || SCH.undated(ride)) continue;   // a seasonal break promises nothing, not even a posted date (nextOf); nor does a ride whose date was taken down
     const seen = new Set(), daysOn = new Set();
     const add = (ymd, at, hhmm, allDay) => {
       if (!by.has(ymd) || seen.has(+at) || (allDay && daysOn.has(ymd))) return;
