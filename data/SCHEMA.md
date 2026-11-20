@@ -335,8 +335,10 @@ fails on an `href` that isn't a page under `cfc-site/`.
 ## Community calendars — `data/ride-calendars.json` (Nov 19, 2026)
 
 A local calendar, kept by riders in that place, that carries rides we list (first: msp.bike, the Twin Cities).
-`calendars.<id>`: `name`, `what` (the words after "Listed on <name>,"), `home`, `hosts` (hostnames), `feeds` (its raw
-feed URLs). `rides.<slug>`: `calendar`, `event` (the ride's own page on the calendar, opened that day; `null` only when
+`calendars.<id>`: `name`, `home`, `hosts` (hostnames), and optionally `feeds` (its raw feed URLs), `what` (the words
+after "Listed on <name>,": only what the site or our dated notes say), `adds` (its event pages have their own
+add-to-calendar, so the button says "Add to calendar on <name>"; otherwise "See it on <name>"), `first` (a change shows
+up there first; the credit line says so) and `own_hosts` (host names that run the site: their rides need no row). `rides.<slug>`: `calendar`, `event` (the ride's own page on the calendar, opened that day; `null` only when
 the calendar has no page for it right now, never the calendar's front page), `checked` (YYYY-MM-DD). For these rides the
 build links the event page by the calendar's name, never calls the calendar the host, writes no `ride.ics` and no
 Google Calendar link ("Add to calendar on <name>" goes to their page), and names the calendar in the sources line.
