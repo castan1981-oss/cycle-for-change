@@ -13,7 +13,7 @@ import pypdfium2 as pdfium
 from lib import OUT, BUILD, SITE, T, mark_paths
 
 KIT = BUILD / "kit"
-V = "3"   # bump on a re-publish that changes pictures, so phones don't show the old ones
+V = "4"   # bump on a re-publish that changes pictures, so phones don't show the old ones
 
 
 def thumb(src, name, w=640):
