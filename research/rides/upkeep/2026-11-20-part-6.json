@@ -1,0 +1,131 @@
+[
+  {
+    "slug": "roswell-ga-rambo-free-flite-big-creek-group-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "RAMBO's events page and the Dec 4 event page both list the Freeflite Group Ride for Fri Dec 4, 2026, 6:00 to 8:00 pm at Big Creek Park, 1600 Old Alabama Rd, Roswell, GA — same day, time and location as before (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.rambo-mtb.org/events",
+      "https://www.rambo-mtb.org/events/2026/12/4/freeflite-group-ride"
+    ],
+    "changes": {
+      "refresh": {
+        "watch_url": "https://www.rambo-mtb.org/events/2026/12/4/freeflite-group-ride",
+        "notes": "Squarespace events page; each event has its own URL. The ride lands on the first Friday of each month. Update watch_url to the current month's event after each re-check."
+      }
+    }
+  },
+  {
+    "slug": "san-antonio-tx-storm-all-level-ride-op-schnabel",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-05",
+    "evidence": "STORM's Meetup page shows 'STORM Thursday night ride · Thu, Nov 5 · 6:30 PM CST · McAllister Park, 13102 Jones Maltsberger' as a recent past event; in fall and winter the ride moves from O.P. Schnabel Park to McAllister Park at the same 6:30 pm time (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.meetup.com/storm-mountain-biking/"
+    ],
+    "changes": {
+      "start_location": {
+        "name": "McAllister Park in fall/winter; O.P. Schnabel Park/Leon Creek Greenway in spring/summer",
+        "address": "McAllister Park, 13102 Jones Maltsberger, San Antonio, TX 78216"
+      },
+      "schedule": "Every Thursday, 6:30 pm; McAllister Park in fall/winter, O.P. Schnabel Park/Leon Creek Greenway in spring/summer. Dirt trails, 10+ miles, 2–3 hours. Rain or poor trail conditions cancel it.",
+      "description": "STORM's weekly Thursday evening mountain bike ride on dirt trails. All skill levels, no-drop, with leads and sweeps keeping everyone together. The start location changes with the season: McAllister Park in fall and winter, O.P. Schnabel Park/Leon Creek Greenway in spring and summer. About 10 miles over 2 to 3 hours.",
+      "visitor_notes": "Dirt trails only: bring a trail-worthy mountain bike, helmet, closed-toe shoes, water and lights. Free; RSVP on Meetup. Check the Meetup event for the current location."
+    }
+  },
+  {
+    "slug": "st-louis-mo-south-side-cyclery-saturday-training-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "South Side Cyclery's rides page, now at a new URL, shows 'South Side Training Rides: Saturdays through October 31st @ 8am' with A, B and C groups (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.southsidecyclery.com/articles/south-side-rides-pg1293.htm"
+    ],
+    "changes": {
+      "schedule": "Saturdays through October 31 at 8:00 am from the shop; A, B and C groups",
+      "season": "Through October",
+      "refresh": {
+        "watch_url": "https://www.southsidecyclery.com/articles/south-side-rides-pg1293.htm",
+        "notes": "The page moved from /articles/rides-events-pg243.htm to this URL. Re-read in spring for the new season start date."
+      }
+    }
+  },
+  {
+    "slug": "toronto-ca-tbn-saturday-morning-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-31",
+    "evidence": "TBN's Saturday Morning Rides page shows 'Program Season: Early April – Late Oct.' and 'Next Saturday Morning Rides: No Events Scheduled' (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.tbn.ca/programs/cycling/smr"
+    ],
+    "status_note": "Back in early April, per the program's posted season (Early April – Late October). The page shows no events scheduled; 2027 dates will appear on the same page in spring."
+  },
+  {
+    "slug": "ventura-ca-bikevc-sunday-morning-coffee-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "BikeVC's Meetup ICS feed lists the Sunday Morning Coffee Ride for Sun Nov 22, 2026 at 8:00 am, an intermediate no-drop ride of about 10 miles out and back to Rabalais in Santa Paula (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.meetup.com/bikeventura/events/ical/",
+      "https://www.meetup.com/bikeventura/events/315818928/"
+    ],
+    "changes": {
+      "schedule": "Once a month on a Sunday morning; time and location posted on each Meetup event. November 2026: 8:00 am.",
+      "time_local": "8:00 am",
+      "start_hhmm": "08:00",
+      "start_location": {
+        "name": "Varies per event; posted on each Meetup event. November 2026: S Saticoy Ave & N Bank Rd Bike Path Entrance",
+        "address": "S Saticoy Ave & N Bank Rd, Ventura, CA"
+      }
+    }
+  },
+  {
+    "slug": "ventura-ca-bikevc-ventura-electric-light-parade",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "BikeVC's Meetup ICS feed lists the Ventura Electric Light Parade for Sat Dec 19, 2026 at 4:00 pm PST and Sat Jan 9, 2027 at 4:00 pm PST, both at Ventura Pier (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.meetup.com/bikeventura/events/ical/",
+      "https://www.meetup.com/bikeventura/events/317106323/"
+    ],
+    "changes": {
+      "schedule": "One Saturday evening a month. Gather on the Ventura Pier one hour before sunset (Dec 19, 2026 at 4:00 pm; Jan 9, 2027 at 4:00 pm).",
+      "start_hhmm": "16:00"
+    }
+  },
+  {
+    "slug": "chicago-il-specialized-chicago-sunday-smr",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-25",
+    "evidence": "The ride's posted season runs April to late October; the previous check confirmed Oct 25, 2026 as the final SMR of the season, and the Specialized Fulton Market Eventbrite page shows no events in November 2026 (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.eventbrite.co.uk/o/specialized-fulton-market-75605367663"
+    ],
+    "status_note": "Back in April. The ride's posted season is April to late October. The current watch URL points to a 2024 launch event rather than the SMR series; a person will need to locate the correct SMR Strava event when the season resumes."
+  },
+  {
+    "slug": "durham-nc-black-spoke-society-fourth-sunday-social-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "Downtown Durham Inc's event series page lists Fourth Sunday Social Rides on Nov 22 and Dec 27, 2026 and every fourth Sunday through Aug 22, 2027 at 10:00 am to 12:00 pm, free, at CCB Plaza, 201 Corcoran St, Durham (fetched Nov 20, 2026).",
+    "sources": [
+      "https://downtowndurham.com/event/fourth-sunday-social-rides/"
+    ],
+    "changes": {
+      "links": {
+        "website": "https://downtowndurham.com/event/fourth-sunday-social-rides/"
+      },
+      "refresh": {
+        "watch_url": "https://downtowndurham.com/event/fourth-sunday-social-rides/"
+      }
+    }
+  }
+]

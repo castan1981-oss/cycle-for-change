@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "keizer-or-keizer-family-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "Salem Bicycle Club's calendar (fetched Nov 20, 2026) shows Thursday Night Lights Ride at 6:00 pm on Nov 19 and Dec 3; Nov 26 is skipped for Thanksgiving; the 'CANCELED' near the ride name refers to the Nov 10 Keizer Morning Ride (a different ride).",
+    "sources": ["https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926"]
+  },
+  {
+    "slug": "keizer-or-salem-bicycle-club-keizer-morning-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "Salem Bicycle Club's calendar (fetched Nov 20, 2026) shows Keizer Morning Ride at 10:00 am on Nov 17, 24 and Dec 1; Nov 10 is a single-instance cancellation, and the ride resumes Nov 17.",
+    "sources": ["https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926"]
+  },
+  {
+    "slug": "cambridge-ma-crw-wednesday-wheelers",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "CRW's events page (fetched Nov 20, 2026) lists Wednesday Wheelers on Nov 18, 25 and Dec 2; the ICS feed shows the ride continuing through Dec 30; 'CANCELED' and 'last ride' labels nearby refer to other CRW rides, not this one.",
+    "sources": ["https://crw.org/events", "https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics"]
+  },
+  {
+    "slug": "red-bank-nj-jsts-weeknight-rides",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "JSTS's ride calendar (fetched Nov 20, 2026) shows weekday rides at MJT, MR, BCC and other locations on every weekday through November and into December; individual *CANCELLED* labels appear on specific instances but the weekday program continues.",
+    "sources": ["https://www.jsts.us/Ride-Calendar"]
+  },
+  {
+    "slug": "salem-or-salem-bicycle-club-east-salem-morning-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "Salem Bicycle Club's calendar (fetched Nov 20, 2026) shows East Salem Morning Ride on Nov 18 and 25; the 'CANCELED' near the ride name refers to the Nov 10 Keizer Morning Ride (a different ride and day).",
+    "sources": ["https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926"]
+  },
+  {
+    "slug": "wexford-pa-premier-bicycle-club-north-park-loops",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-28",
+    "status_note": "The Wednesday evening ride at North Park is not listed after Oct 28; the club has posted morning Wednesday rides (Harmony Lake) for November and December. The evening ride is likely to resume in spring, but the club has not stated a return date.",
+    "evidence": "Premier Bicycle Club's calendar (fetched Nov 20, 2026) shows no North Park Loops listed in November or December; Wednesday rides are morning rides (Harmony Lake, Moraine).",
+    "sources": ["https://www.premierbicycleclub.org/content.aspx?page_id=4001&club_id=400812"]
+  },
+  {
+    "slug": "corte-madera-ca-marin-cyclists-china-camp-loop",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "Marin Cyclists' calendar (fetched Nov 20, 2026) lists China Camp Loop at 9:00 am on Nov 18, 25 and Dec 2; the 'CANCELED' label nearby is for 'Fridays on Paradise' (a different ride on a different day).",
+    "sources": ["https://marincyclists.com/content.aspx?page_id=4001&club_id=525458"]
+  },
+  {
+    "slug": "leeds-gb-leeds-cycling-saturday-off-road-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "Leeds Cycling's Meetup ICS feed (fetched Nov 20, 2026) confirms two upcoming Saturday off-road rides: Nov 21 (Leggers Inn, Stoneycliffe Nature Reserve, 09:45 am, Dewsbury) and Nov 28 (Manvers Lake, 10:00 am).",
+    "sources": ["https://www.meetup.com/leeds-cycling/events/ical/"]
+  }
+]
