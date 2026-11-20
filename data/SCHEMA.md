@@ -332,6 +332,17 @@ form), `data/rides-changelog.json` (every applied re-check). A re-check reaches
 the ride page (The Heavy Pedal's two rides → `/guides/heavy-pedal/`). Only our own pages; `tools/build-rides.js`
 fails on an `href` that isn't a page under `cfc-site/`.
 
+## Community calendars — `data/ride-calendars.json` (Nov 19, 2026)
+
+A local calendar, kept by riders in that place, that carries rides we list (first: msp.bike, the Twin Cities).
+`calendars.<id>`: `name`, `what` (the words after "Listed on <name>,"), `home`, `hosts` (hostnames), `feeds` (its raw
+feed URLs). `rides.<slug>`: `calendar`, `event` (the ride's own page on the calendar, opened that day; `null` only when
+the calendar has no page for it right now, never the calendar's front page), `checked` (YYYY-MM-DD). For these rides the
+build links the event page by the calendar's name, never calls the calendar the host, writes no `ride.ics` and no
+Google Calendar link ("Add to calendar on <name>" goes to their page), and names the calendar in the sources line.
+The build fails on a ride that has a link, source or feed on a calendar's host and no row. Rules and tests:
+`tools/lib/ride-calendars.js`, `tools/test/ride-calendars.test.js`.
+
 ## Rider reviews — `data/ride-reviews.json` (Oct 8, 2026)
 
 Approved reviews only, newest first, written by `tools/reviews-post.js` (never by hand):

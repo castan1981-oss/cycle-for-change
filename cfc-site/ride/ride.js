@@ -286,7 +286,8 @@
     } else {
       var n = t.next, cv = caveat(r);
       ask += '<div class="note"><span class="lab">Not rolling right now. Next one</span><span class="note__big">' + esc(n ? whenNext(n) : "No date posted") + "</span>" + (cv ? "<p>" + esc(cv) + "</p>" : "") + "</div>" +
-        '<a class="btn" href="/rides/' + encodeURIComponent(r.slug) + '/ride.ics">Put it in my calendar</a>' +
+        (r.cal ? '<a class="btn" href="' + esc(r.cal.u) + '" rel="noopener nofollow">Put it in my calendar, on ' + esc(r.cal.n) + "</a>"
+          : '<a class="btn" href="/rides/' + encodeURIComponent(r.slug) + '/ride.ics">Put it in my calendar</a>') +
         '<button class="btn btn--ghost" type="button" data-go="review">Ridden it? Review it</button>' +
         '<button class="link" type="button" data-go="changed">Something’s wrong with this ride</button>';
     }

@@ -1,0 +1,31 @@
+{
+ "note": "Community calendars that carry rides we list (tools/lib/ride-calendars.js). A ride here links its own page on the calendar by name and gets no ride.ics from us: the calendar entry comes from them, so it hears about their changes. event is null only when the calendar has no page for the ride right now.",
+ "calendars": {
+  "msp.bike": {
+   "name": "msp.bike",
+   "what": "the Twin Cities’ community cycling calendar, kept by riders there",
+   "home": "https://msp.bike/events",
+   "hosts": ["msp.bike"],
+   "feeds": ["https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"]
+  }
+ },
+ "rides": {
+  "golden-valley-mn-ez-cycle-club-monthly-community-ride": { "calendar": "msp.bike", "event": "https://msp.bike/events/ez-cycle-club-monthly-community-ride-44a7c858", "checked": "2026-11-19" },
+  "minneapolis-mn-all-bodies-on-bikes-mpls-monthly-ride": { "calendar": "msp.bike", "event": null, "checked": "2026-11-19" },
+  "minneapolis-mn-angry-catfish-first-wednesday-social-ride": { "calendar": "msp.bike", "event": "https://msp.bike/events/fall-winter-angry-catfish-social-rides-712e453d", "checked": "2026-11-19" },
+  "minneapolis-mn-angry-catfish-thursday-ftw-social-ride": { "calendar": "msp.bike", "event": "https://msp.bike/events/acf-thursday-ftw-ride-ce93d5dd", "checked": "2026-11-19" },
+  "minneapolis-mn-bonesaw-cycling-collective-tuesday-ride": { "calendar": "msp.bike", "event": "https://msp.bike/events/bonesaw-summer-tuesday-rides-b37ecb12", "checked": "2026-11-19" },
+  "minneapolis-mn-geno-atb-buddy-systems-first-monday": { "calendar": "msp.bike", "event": "https://msp.bike/events/buddy-systems-5d9b15f5", "checked": "2026-11-19" },
+  "minneapolis-mn-perennial-cycle-fall-ftw-saturday-ride": { "calendar": "msp.bike", "event": "https://msp.bike/events/fall-ftw-ride-mill-city-farmers-market-ba6e9154", "checked": "2026-11-19" },
+  "minneapolis-mn-fast-casual-francis-burger-ride": { "calendar": "msp.bike", "event": null, "checked": "2026-11-19" },
+  "minneapolis-mn-behind-bars-fixie-friday": { "calendar": "msp.bike", "event": "https://msp.bike/events/fixie-friday-lake-of-isles-laps-5fab06b5", "checked": "2026-11-19" },
+  "minneapolis-mn-freewheel-wednesday-night-ride": { "calendar": "msp.bike", "event": "https://msp.bike/events/freewheel-mpls-wednesday-night-rides-f60de410", "checked": "2026-11-19" },
+  "minneapolis-mn-geno-atb-sunday-community-grocery-ride": { "calendar": "msp.bike", "event": null, "checked": "2026-11-19" },
+  "minneapolis-mn-joyful-riders-club-monthly-ride": { "calendar": "msp.bike", "event": "https://msp.bike/events/joyful-riders-monthly-ride-fulton-beer-0ae92ff4", "checked": "2026-11-19" },
+  "minneapolis-mn-joyful-riders-dj-dance-ride": { "calendar": "msp.bike", "event": null, "checked": "2026-11-19" },
+  "minneapolis-mn-behind-bars-mellow-morning-ride": { "calendar": "msp.bike", "event": "https://msp.bike/events/mellow-morning-ride-5a8ad751", "checked": "2026-11-19" },
+  "minneapolis-mn-sociable-cider-recovery-wednesday-social-ride": { "calendar": "msp.bike", "event": "https://msp.bike/events/sociable-cider-x-recovery-bike-shop-wednesday-social-rides-d5c0a581", "checked": "2026-11-19" },
+  "minneapolis-mn-utepils-cycling-sunday-rides": { "calendar": "msp.bike", "event": "https://msp.bike/events/utepils-cycling-road-mtb-rides-67830d1e", "checked": "2026-11-19" },
+  "minnetonka-mn-freewheel-bike-monday-gravel-mtb-rides": { "calendar": "msp.bike", "event": "https://msp.bike/events/freewheel-minnetonka-monday-gravel-mtb-rides-2bd228ef", "checked": "2026-11-19" }
+ }
+}

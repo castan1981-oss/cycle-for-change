@@ -40,6 +40,7 @@ const { listLede } = require("./lib/list-lede.js");
 const S = require("./lib/rides-schema.js");       // vocabularies, countries (schema v3)
 const F = require("./lib/rides-freshness.js");    // what's fresh, what hides, the "Checked" line
 const RV = require("./lib/reviews.js");          // Oct 8, 2026: rider reviews — the rules and the summary
+const RC = require("./lib/ride-calendars.js");  // Nov 19, 2026: community calendars (msp.bike): their page, their calendar entry
 const X = require("./lib/ride-facts.js");         // Pass 22: pace, length and e-bike rules read off the ride's own text
 const PH = require("../scripts/photos.js");       // Pass 25: Robert's photos, one registry (alt text, place, the figure)
 const RT = require("./lib/routes.js");           // Oct 9, 2026: the route on a ride page (data/ride-routes.json → tools/route-build.py)
@@ -55,6 +56,7 @@ const HEALTH = argOf("--health") ? path.resolve(argOf("--health")) : path.join(R
 const COUNTRY_NOTES = path.join(ROOT, "data", "rides-countries.json"); // optional: per-country "what to know"
 const REVIEWS_FILE = argOf("--reviews") ? path.resolve(argOf("--reviews")) : path.join(ROOT, "data", "ride-reviews.json"); // Oct 8, 2026: rider reviews (approved only)
 const FILMS_FILE = path.join(ROOT, "data", "ride-films.json");         // Oct 8, 2026: footage from a ride, by slug
+const CALS_FILE = path.join(ROOT, "data", "ride-calendars.json");   // Nov 19, 2026: community calendars (tools/lib/ride-calendars.js)
 const NOTES_FILE = path.join(ROOT, "data", "ride-notes.json");         // Oct 13, 2026: Robert's own write-up of a ride he rode
 const EVENTS = path.join(ROOT, "cfc-site", "events", "events.json");
 const SITE = "https://cycleforchange.org";
@@ -855,7 +857,8 @@ function liveJson(rides) {
     next: (() => { const n = nextOf(r); return n ? (n.allDay ? n.ymd : isoWithOffset(n.at, r.tz)) : null; })(),
     place: placeText(r), checked: r._f ? r._f.label_short : null,
     tags: tagsOf(r), pc: X.paceText(r), lg: X.lengthText(r),   // Pass 22: what the ride is made for, its pace and length
-    hl: (r.refresh && r.refresh.watch_url) || (r.links && r.links.website) || (Array.isArray(r.sources) && r.sources[0] && (r.sources[0].url || r.sources[0])) || null }));   // the host's page, for /tonight/'s "Date on the host's calendar"
+    ...(CALS.of(r) ? { cal: { n: CALS.of(r).name, u: CALS.of(r).url } } : {}),   // a community calendar carries it: the calendar entry comes from them (/ride/)
+    hl: (CALS.of(r) && CALS.of(r).url) || (r.refresh && r.refresh.watch_url) || (r.links && r.links.website) || (Array.isArray(r.sources) && r.sources[0] && (r.sources[0].url || r.sources[0])) || null }));   // the host's page, for /tonight/'s "Date on the host's calendar"
 }
 // Oct 18, 2026 (growth audit): the ten tire-and-wheel guides had 2–7 inlinks each. A ride page links the ones
 // that answer a question this ride raises — gravel tires, mountain-bike wheels — never a boilerplate list.
@@ -2317,6 +2320,8 @@ const PAUSE_SVG = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"
 // never machine-written and never a recap of Strava numbers (CLAUDE.md §4, §10). The first few paragraphs
 // show; the rest sits under a fold, crawled but one tap away. Shown only on a ride we still list.
 const NOTES = readJson(NOTES_FILE, {});
+// data/ride-calendars.json: the community calendars that carry rides we list, and each ride's own page on one
+const CALS = RC.make(readJson(CALS_FILE, {}));
 // Oct 23, 2026: data/ride-guides.json — { slug: { href, text } }: a guide of ours about the ride's host, linked under
 // "Where to find them" (The Heavy Pedal's two rides → /guides/heavy-pedal/). The build fails on a guide that isn't a page.
 const GUIDES_BY = (() => {
@@ -2757,8 +2762,11 @@ function ridePage(r, all, hubFor, hubs) {
   const startName = start ? [start.name, start.address].filter(Boolean).join(", ") : null;
   const mapQ = start && (start.address || start.name) ? encodeURIComponent([start.name, start.address].filter(Boolean).join(", ")) : `${r.lat},${r.lng}`;
   const mapUrl = `https://www.google.com/maps/search/?api=1&query=${mapQ}`;
-  const L = r.links;
-  const watchUrl = (r.refresh && r.refresh.watch_url) || null;
+  // Nov 19, 2026: a ride a community calendar carries (msp.bike) links its own page there, by name. The calendar is
+  // never "the host's website", and its front page or raw feed is never the link when the ride has a page of its own.
+  const cal = CALS.of(r);
+  const L = CALS.links(r);
+  const watchUrl = cal ? cal.url : (r.refresh && r.refresh.watch_url) || null;
   const primary = L.website ? ["Host's website", L.website] : L.instagram ? [`${handle(L.instagram) || "Instagram"} on Instagram`, L.instagram] : L.facebook ? ["Host on Facebook", L.facebook] : L.strava ? ["Strava club", L.strava] : L.meetup ? ["Meetup group", L.meetup] : watchUrl ? ["Where it's posted", watchUrl] : r.sources[0] ? ["Where it's posted", r.sources[0]] : null;
   const hostLabel = L.instagram ? `<a href="${attr(L.instagram)}" rel="noopener nofollow">${esc(handle(L.instagram) || "their Instagram")}</a>` : L.facebook ? `<a href="${attr(L.facebook)}" rel="noopener nofollow">their Facebook page</a>` : L.website ? `<a href="${attr(L.website)}" rel="noopener nofollow">the host's website</a>` : L.strava ? `<a href="${attr(L.strava)}" rel="noopener nofollow">the Strava club</a>` : null;
 
@@ -2830,13 +2838,14 @@ function ridePage(r, all, hubFor, hubs) {
   const factsHtml = facts.filter(([k]) => !KEY.has(k)).map(factHtml).join("\n        ");
 
   const linkBtns = [
+    cal && [cal.name, cal.url],
     L.website && ["Website", L.website],
     L.instagram && [handle(L.instagram) || "Instagram", L.instagram],
     L.facebook && ["Facebook", L.facebook],
     L.strava && ["Join the Strava club", L.strava],
     L.meetup && ["Meetup group", L.meetup],
     ...(L.other || []).map((u) => ["More", u]),
-    watchUrl && ![L.website, L.instagram, L.facebook, L.strava, L.meetup, ...(L.other || [])].includes(watchUrl) && ["Where it's posted", watchUrl],
+    watchUrl && !cal && ![L.website, L.instagram, L.facebook, L.strava, L.meetup, ...(L.other || [])].includes(watchUrl) && ["Where it's posted", watchUrl],
   ].filter(Boolean).map(([t, u]) => `<a class="btn ${/strava/i.test(t) ? "btn--ink" : "btn--ghost"}" href="${attr(u)}" rel="noopener nofollow">${esc(t)} ↗</a>`).join("\n        ");
 
   // Oct 8, 2026: rider reviews, seen at the top of the page when there are any
@@ -2904,7 +2913,11 @@ function ridePage(r, all, hubFor, hubs) {
   // Oct 18, 2026 (Phase 2): Google crawled ~335 ride.ics files and listed them as "crawled, not indexed" — a third of
   // the site's crawl budget on calendar files. The button keeps rel="nofollow" and netlify.toml serves the files with
   // X-Robots-Tag: noindex. The ICS link is `download`, a file for a calendar app, not a page.
-  const calBtns = next && rule ? `
+  // Nov 19, 2026: no calendar file of ours for a ride on a community calendar. A copy never hears about their changes;
+  // their page has the calendar entry that does.
+  const calBtns = cal ? ((next && rule) || dated.length ? `
+        ${rideBtn({ href: attr(cal.url), text: `Add to calendar on ${esc(cal.name)}`, markId: "date", ghost: true, ext: true })}` : "")
+    : next && rule ? `
         ${rideBtn({ href: `/rides/${r.slug}/ride.ics`, text: "Add to calendar", markId: "date", ghost: true, attrs: ` download="${attr(r.slug)}.ics" rel="nofollow"` })}
         <a class="gr-minor" href="${attr(gcalUrl(r, next, rule))}" rel="noopener">Google Calendar</a>`
     : dated.length ? `
@@ -2917,7 +2930,7 @@ function ridePage(r, all, hubFor, hubs) {
     title: `Map of ${isUS(r) ? stateName(r.state) : countryName(r.country)} with this ride's start`,
     caption: `<span>${mark("start", "gr-map-cap-mark")}${esc(placeText(r))}</span>${hubR ? `<a href="${hubR.path}">All rides near ${esc(hubR.city)} &rarr;</a>` : ""}`, cls: "gr-map--ride" });
 
-  const watch = (r.refresh && r.refresh.watch_url) || r.sources[0] || L.website || null;
+  const watch = cal ? cal.url : (r.refresh && r.refresh.watch_url) || r.sources[0] || L.website || null;
   const bannerHead = { ended: "This ride has ended", paused: "Paused", stale: "Not confirmed lately", flagged: "We're re-checking this ride" }[f.state] || "Check first";
   const banner = !listed && f.banner ? `
     <div class="gr-banner" role="note">
@@ -2932,7 +2945,7 @@ function ridePage(r, all, hubFor, hubs) {
     <aside class="gr-checked${f.nudge ? " gr-checked--look" : ""}" aria-label="When this ride was last checked">
       ${mark(f.nudge ? "flag" : "checked", "gr-checked-mark")}
       <div>
-        <p class="gr-checked-line"><strong>${esc(f.label)}.</strong> ${f.checked_by === "feed" ? "The host's own calendar lists the next ride." : r.confidence === "high" ? "Confirmed on the host's own page." : (r.confidence === "low" ? "Found on one source, listed at the foot of this page." : "Confirmed against the sources at the foot of this page.")}${watch ? ` <a class="link" href="${attr(watch)}" rel="noopener nofollow">Check the host's page before you go</a>` : ""}</p>
+        <p class="gr-checked-line"><strong>${esc(f.label)}.</strong> ${f.checked_by === "feed" ? (cal ? `${esc(cal.name)} lists the next ride.` : "The host's own calendar lists the next ride.") : r.confidence === "high" ? "Confirmed on the host's own page." : (r.confidence === "low" ? "Found on one source, listed at the foot of this page." : "Confirmed against the sources at the foot of this page.")}${watch ? ` <a class="link" href="${attr(watch)}" rel="noopener nofollow">${cal ? `Check ${esc(cal.name)} before you go` : "Check the host's page before you go"}</a>` : ""}</p>
         ${f.nudge ? `<p class="gr-checked-nudge">${esc(f.nudge)}</p>` : ""}
         ${r.evidence || (r.last_seen && r.last_seen !== f.checked_on) ? `<details class="gr-checked-more"><summary>How we know</summary>${r.evidence ? `<p class="gr-checked-ev">${esc(r.evidence)}</p>` : ""}${r.last_seen && r.last_seen !== f.checked_on ? `<p>Last seen happening ${esc(fmtDate(r.last_seen))}.</p>` : ""}</details>` : ""}
       </div>
@@ -3004,13 +3017,14 @@ ${listed ? howWeRideBlock(r) : ""}
       <h2>Where to find them</h2>
       <div class="gr-linkrow">
         ${linkBtns}
-      </div>${guideLine(r)}
+      </div>${cal ? `
+      <p class="verified gr-verify gr-cal">Listed on <a href="${attr(cal.url)}" rel="noopener nofollow">${esc(cal.name)}</a>, ${esc(cal.what)}. Changes show up there first.</p>` : ""}${guideLine(r)}
     </div>
 
 ${(() => { if (!isUS(r)) return ""; const town = TOWNS.find({ city: r.city, state: r.state, lat: r.lat, lng: r.lng }); return town ? TOWNS.strip(town, { compact: true, heading: `Riding ${esc(town.name)} from out of town?`, lede: `Where the routes are, who fixes or rents a bike, where to sleep with it, how to get it here.` }) : ""; })()}
 
     <p class="verified gr-verify">
-      ${r.verified_on ? `Checked ${esc(fmtDate(r.verified_on))} against` : "Found on"} ${r.sources.length ? r.sources.map((s, i) => `<a href="${attr(s)}" rel="noopener nofollow">source ${i + 1}</a>`).join(", ") : "the links above"}.
+      ${r.verified_on ? `Checked ${esc(fmtDate(r.verified_on))} against` : "Found on"} ${r.sources.length ? CALS.sources(r).map((s) => `<a href="${attr(s.url)}" rel="noopener nofollow">${esc(s.text)}</a>`).join(", ") : "the links above"}.
       Schedules change. Confirm with the host before you go.
     </p>
 ${BLOCKS.REPORT({ thing: "ride", name: r.name, kind: "changed", compact: true, id: "fix", stillOn: listed })}
@@ -3212,6 +3226,8 @@ function writeEvenings(rides, hubs) {
 
 function main() {
   const all = load();
+  const calErrors = CALS.check(all);
+  if (calErrors.length) throw new Error(`data/ride-calendars.json:\n  ${calErrors.join("\n  ")}`);
   const health = loadHealth();
   const notes = loadCountryNotes();
   for (const r of all) r._f = F.assess(r, health[r.slug] || null, TODAY);
@@ -3305,6 +3321,7 @@ function main() {
     const dated = !next && !onBreak(r) ? upcomingDates(r) : [];
     if (next || dated.length) nEvent++;
     if (onBreak(r)) nBreak++;
+    if (CALS.of(r)) continue;   // on a community calendar: the calendar entry is theirs (Nov 19, 2026)
     if (periods.length) { write(path.join(OUT, r.slug, "ride.ics"), ics(r, periods)); nIcs++; }
     else if (dated.length) { write(path.join(OUT, r.slug, "ride.ics"), icsDated(r, dated)); nIcs++; }
   }

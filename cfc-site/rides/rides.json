@@ -55337,9 +55337,9 @@
   "name": "EZ Cycle Club Monthly Community Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The host called Oct 6, 2026 the last monthly ride of the season.",
+  "status_since": "2026-11-19",
   "city": "Golden Valley",
   "neighborhood": "Theodore Wirth Park",
   "region": "Minnesota",
@@ -55410,9 +55410,9 @@
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "https://msp.bike/events/ez-cycle-club-monthly-community-ride-44a7c858"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-05-29",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited May 29, 2026) lists the ride on the first Tuesday monthly from June 2 through Oct 6, 2026, social meet 6:30 PM, ride out 7:15, no-drop.",
+  "verified_on": "2026-11-19",
+  "last_seen": "2026-10-06",
+  "evidence": "msp.bike's page for the ride (read Nov 19, 2026) dates it Tue Oct 6, 2026 and calls it the last monthly community ride of the 2026 season; msp.bike's upcoming list shows no later date.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -55426,9 +55426,9 @@
   "name": "All Bodies on Bikes MPLS Monthly Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "No date is posted after the Oct 5, 2026 ride. Dates go up one at a time.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": null,
   "region": "Minnesota",
@@ -55490,9 +55490,9 @@
    "https://msp.bike/groups",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-02",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-18",
-  "evidence": "The msp.bike public calendar lists the ABOB Fall Colors Ride for Mon Oct 5, 2026 (meet 6:00 pm, roll 6:30, 11.8 miles, Angry Catfish Bicycle) and a postponed ABOB bikepacking trip dated Sep 18, 2026; earlier 2026 entries are Jul 7 and Aug 3 (fetched Oct 2, 2026).",
+  "evidence": "msp.bike's groups page and its events list (both read Nov 19, 2026) show no upcoming All Bodies on Bikes Minneapolis ride.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -55521,7 +55521,7 @@
   "discipline": [
    "social"
   ],
-  "schedule": "First Wednesday of the month, 6:00 pm from Angry Catfish. The first one is Oct 7, 2026; the summer weekly Wednesday series ended Sept 30.",
+  "schedule": "First Wednesday of the month, October through April: roll 6:00 pm from Angry Catfish (meet from 5:45 pm). Lights required.",
   "days": [
    "wed"
   ],
@@ -55534,10 +55534,10 @@
     "day": "wed"
    }
   ],
-  "season": "Oct–spring",
+  "season": "Oct–Apr",
   "season_months": {
    "start": 10,
-   "end": 5
+   "end": 4
   },
   "start_location": {
    "name": "Angry Catfish Bicycle + Coffee Bar",
@@ -55579,13 +55579,13 @@
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "https://msp.bike/events/fall-winter-angry-catfish-social-rides-712e453d"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-10",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited Sept 10, 2026) says Wednesday social rides move to the first Wednesday of the month, first on Oct 7, beginning at Angry Catfish at 6pm, tagged nodrop.",
+  "evidence": "msp.bike's page for the series (read Nov 19, 2026) shows the next ride on Wed Dec 2, 2026, meet 5:45 pm, roll 6:00 pm, on the first Wednesday of every month, October through April, no-drop, lights required.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
-   "watch_url": "https://msp.bike/events",
+   "watch_url": "https://msp.bike/events/fall-winter-angry-catfish-social-rides-712e453d",
    "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "notes": "Monthly first-Wednesday series; the shop's Discord has the details each month."
   }
@@ -55596,7 +55596,7 @@
   "name_en": null,
   "kind": "group-ride",
   "status": "seasonal-break",
-  "status_note": "The calendar's weekly Thursday FTW series stops after Sept 24, 2026 and no fall dates are posted. Angry Catfish's own page (2025 text) is out of date, and the ACF Discord has current word. Check before going.",
+  "status_note": "The weekly Thursday series last ran Sept 24, 2026. Over the winter the shop lists a monthly FTW ride on the second Thursday instead.",
   "status_since": "2026-09-25",
   "city": "Minneapolis",
   "neighborhood": "Standish / Hiawatha",
@@ -55662,11 +55662,12 @@
    "https://msp.bike/events",
    "https://www.angrycatfishbicycle.com/",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
-   "https://msp.bike/events/acf-thursday-ftw-ride-ce93d5dd"
+   "https://msp.bike/events/acf-thursday-ftw-ride-ce93d5dd",
+   "https://msp.bike/events/acf-ftw-group-ride-40bdd645"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-24",
-  "evidence": "The msp.bike Twin Cities calendar feed (fetched Oct 1, 2026) has the ACF Thursday FTW Ride as a weekly series, 6:00 pm (meet 5:30), that ends Sept 24, 2026; nothing for October. The ACF Wednesday social moves to the first Wednesday monthly from Oct 7.",
+  "evidence": "msp.bike's page for the weekly ride (read Nov 19, 2026) shows no date after Thu Sept 24, 2026; a separate msp.bike entry, Angry Catfish FTW Group Rides, lists a monthly no-drop ride on the second Thursday, next Dec 10, 2026, meet 5:45 pm, roll 6:00 pm.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -55680,9 +55681,9 @@
   "name": "Bonesaw Cycling Collective Summer Tuesday Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "This winter's dates aren't posted yet. Last winter's series ran the last Tuesday of the month, November through March.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": "Phillips",
   "region": "Minnesota",
@@ -55752,9 +55753,9 @@
    "https://bonesawcycling.bike/events",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-29",
-  "evidence": "Bonesaw's own events page (fetched Oct 1, 2026) lists the monthly Tuesday social ride, last Tuesday April–September, meet 6:30 pm at CEPRO Park, roll 7:00, plus a winter series last Tuesday November–March, meet 6:45 at Sabo Bridge; the msp.bike calendar shows the Sept 29 ride postponed to Tue Oct 6, 6:45 pm meet, 7:00 roll.",
+  "evidence": "Bonesaw's events page (read Nov 19, 2026) lists no Tuesday ride after Sept 29, 2026; its only upcoming event is MPLS Cranksgiving on Nov 22. msp.bike's page for the summer Tuesday series is marked postponed.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -55768,9 +55769,9 @@
   "name": "Buddy Systems Neighborhood Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The series ran on the first Monday of the month through Nov 2, 2026. No later date is posted.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": "Gold Medal Park",
   "region": "Minnesota",
@@ -55836,11 +55837,12 @@
   "inclusive_focus": [],
   "sources": [
    "https://msp.bike/groups",
-   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "https://msp.bike/events/buddy-systems-5d9b15f5"
   ],
-  "verified_on": "2026-10-02",
-  "last_seen": "2026-09-07",
-  "evidence": "The msp.bike public calendar lists Buddy Systems at Gold Medal Park on the first Monday of each month (Oct 5 at 6:30 PM on the groups page; entries last edited June 23, 2026), after a first gathering on Mon June 1 at 6:30 PM (fetched Oct 2, 2026).",
+  "verified_on": "2026-11-19",
+  "last_seen": "2026-11-02",
+  "evidence": "msp.bike's page for Buddy Systems (read Nov 19, 2026) is dated Mon Nov 2, 2026, 6:30 pm at Gold Medal Park, with no later date; msp.bike's upcoming list shows none.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -55854,9 +55856,9 @@
   "name": "Fall FTW Ride Series at Perennial Cycle",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The series ran every Saturday in October 2026. No later series is posted.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": "Uptown",
   "region": "Minnesota",
@@ -55920,9 +55922,9 @@
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "https://msp.bike/events/fall-ftw-ride-mill-city-farmers-market-ba6e9154"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-09-17",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited Sept 17, 2026) lists the Fall FTW Ride Series every Saturday through Oct 31, meet 10 AM, rollout 10:15, tagged no-drop and FTW. Perennial's own site is behind a bot wall.",
+  "verified_on": "2026-11-19",
+  "last_seen": "2026-10-31",
+  "evidence": "msp.bike's page for the Fall FTW Ride Series (read Nov 19, 2026) says every Saturday in October and shows its last date, Sat Oct 31, 2026; msp.bike's upcoming list shows no later one.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -55936,9 +55938,9 @@
   "name": "Fast Casual x Francis Burger Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The 2026 series ran April through October. The last ride on the calendar was Oct 20.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": null,
   "region": "Minnesota",
@@ -56006,9 +56008,9 @@
    "https://msp.bike/events",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-06-15",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited June 15, 2026) lists the ride on the third Tuesday monthly through Oct 20, 2026, meet 6:15 PM, roll 6:30, 14-16 mph, tagged drop.",
+  "evidence": "msp.bike's events list (read Nov 19, 2026) shows no Fast Casual x Francis Burger ride among upcoming events; the calendar series ended with Oct 20, 2026.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -56022,9 +56024,9 @@
   "name": "Fixie Friday",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "No Fixie Friday is on the calendar right now. The last one listed was Nov 6, 2026.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": "Northeast",
   "region": "Minnesota",
@@ -56085,9 +56087,9 @@
    "https://msp.bike/events",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-25",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) lists Fixie Friday, meet 6:45 pm, roll 7:00 from Behind Bars, on Sept 25, Oct 2, Oct 30 and Nov 6, 2026 (fixed gear only, signed waiver); Oct 9, 16 and 23 are not posted yet.",
+  "evidence": "msp.bike's events list (read Nov 19, 2026) shows no Fixie Friday among upcoming events; its page for the ride is dated Fri Oct 2, 2026, and the calendar feed last listed one for Nov 6.",
   "confidence": "medium",
   "refresh": {
    "method": "calendar-page",
@@ -56102,7 +56104,7 @@
   "name_en": null,
   "kind": "group-ride",
   "status": "seasonal-break",
-  "status_note": "The calendar's weekly Wednesday series ended Sept 16, 2026 and nothing is posted for fall. It should come back in spring; Freewheel's Strava club and Instagram would say.",
+  "status_note": "The weekly series ran spring through September. No date is posted now.",
   "status_since": "2026-09-17",
   "city": "Minneapolis",
   "neighborhood": "Marcy-Holmes",
@@ -56167,9 +56169,9 @@
    "https://msp.bike/events/freewheel-mpls-wednesday-night-rides-f60de410",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-16",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) carries Freewheel MPLS Wednesday Night Rides as a weekly 6 pm series from May 6 that ends Sept 16, 2026; no October dates.",
+  "evidence": "msp.bike's page for the ride (read Nov 19, 2026) shows no date after September 2026; msp.bike's upcoming list shows no Wednesday night ride from Freewheel Minneapolis.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -56183,9 +56185,9 @@
   "name": "Geno ATB Community Grocery Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The calendar's dates ended Oct 18, 2026. No later ride is posted.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": null,
   "region": "Minnesota",
@@ -56252,9 +56254,9 @@
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "https://msp.bike/events/atb-grocery-ride-84c96838"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-10-01",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited Oct 1, 2026) lists the Geno ATB Community Grocery Ride every Sunday 10:00 AM from Sept 27 through Oct 18, 2026, tagged nodrop.",
+  "evidence": "msp.bike's events list (read Nov 19, 2026) shows no ATB grocery ride among upcoming events; the ride's own page on msp.bike would not load that day.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -56326,7 +56328,9 @@
    "facebook": "https://www.facebook.com/thejoyfulriders/",
    "strava": null,
    "meetup": null,
-   "other": []
+   "other": [
+    "https://msp.bike/events/joyful-riders-monthly-ride-fulton-beer-0ae92ff4"
+   ]
   },
   "inclusive_focus": [
    "no-drop",
@@ -56340,13 +56344,13 @@
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "https://msp.bike/events/joyful-riders-monthly-ride-fulton-beer-0ae92ff4"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-05",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) lists the Joyful Riders monthly ride at Fulton Beer Taproom on the second Thursday, next Thu Oct 8, 2026 at 6:00 pm (spooky theme), and a Nov 27 Joyfulton social.",
+  "evidence": "msp.bike's page for the ride (read Nov 19, 2026) shows the next one on Thu Dec 10, 2026, 6:00 pm at Fulton Beer Taproom, on the second Thursday of every month, no-drop, 8 to 10 mph.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
-   "watch_url": "https://msp.bike/events/2gllle8uet9h6uckcgmvb4iics_20260514T230000Z",
+   "watch_url": "https://msp.bike/events/joyful-riders-monthly-ride-fulton-beer-0ae92ff4",
    "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "notes": null
   }
@@ -56356,9 +56360,9 @@
   "name": "Joyful Riders DJ Dance Ride at Perennial Cycle",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The last DJ ride on the calendar was Oct 25, 2026. Next season isn't posted.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": "Uptown",
   "region": "Minnesota",
@@ -56424,11 +56428,12 @@
    "https://msp.bike/events/7afc66ijljklug3nl7c6vpddba",
    "https://www.mprnews.org/story/2026/07/10/joyful-riders-club-spins-up-beats-for-minneapolis-bike-dance-party",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
-   "https://msp.bike/events"
+   "https://msp.bike/events",
+   "https://msp.bike/events/joyful-riders-club-spooky-parade-dj-ride-e2b74e2b"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-16",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) lists 'Bikes. Beats. Bonfire.', the final DJ Ride of the 2026 season, on Sat Oct 3 (meet 6 pm, roll 6:30 from Perennial Cycle); earlier 2026 rides were Jun 6 and Jul 11 from Perennial and Aug 22 from Lowertown in St. Paul. Perennial's own page is behind a bot wall.",
+  "evidence": "msp.bike's groups page (read Nov 19, 2026) lists one Joyful Riders DJ ride, the Spooky Parade DJ Ride on Sun Oct 25, 2026, and no later date; msp.bike's upcoming list shows none.",
   "confidence": "medium",
   "refresh": {
    "method": "calendar-page",
@@ -56442,9 +56447,9 @@
   "name": "Mellow Morning Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The Saturday series ran through Oct 31, 2026 on the calendar. No later date is posted.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": "Northeast",
   "region": "Minnesota",
@@ -56510,9 +56515,9 @@
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "https://msp.bike/events/mellow-morning-ride-5a8ad751"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-17",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited Sept 17, 2026) lists Mellow Morning Ride every Saturday from June 6 until Oct 31, 2026, meet 10:15 AM, depart 10:45, tagged no-drop.",
+  "evidence": "msp.bike's events list (read Nov 19, 2026) shows no Mellow Morning Ride among upcoming events; its page for the ride shows no date after 2026's series, which the calendar ended on Oct 31.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -56580,7 +56585,7 @@
    "strava": null,
    "meetup": null,
    "other": [
-    "https://msp.bike/events/akq6he9k0demi7ao18fh45gddk_20260506T230000Z"
+    "https://msp.bike/events/sociable-cider-x-recovery-bike-shop-wednesday-social-rides-d5c0a581"
    ]
   },
   "inclusive_focus": [
@@ -56594,13 +56599,13 @@
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "https://msp.bike/events/sociable-cider-x-recovery-bike-shop-wednesday-social-rides-d5c0a581"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-30",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) carries a weekly Wednesday 6:00 pm series at Sociable Cider Werks with no end date; Oct 7, 14, 21 and 28 are all on it, last edited Aug 24, 2026.",
+  "evidence": "msp.bike's page for the ride (read Nov 19, 2026) shows the next one on Wed Nov 25, 2026, 6:00 pm at Sociable Cider Werks, weekly and year-round, no-drop, 8 to 10 miles; it says to check Recovery Bike Shop's Instagram for weather and holiday cancellations.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
-   "watch_url": "https://msp.bike/events/akq6he9k0demi7ao18fh45gddk_20260506T230000Z",
+   "watch_url": "https://msp.bike/events/sociable-cider-x-recovery-bike-shop-wednesday-social-rides-d5c0a581",
    "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "notes": null
   }
@@ -56610,9 +56615,9 @@
   "name": "Utepils Cycling Sunday Road and MTB Rides",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "No Sunday ride is posted now. The calendar's dates ran into late October 2026.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": "Bryn Mawr",
   "region": "Minnesota",
@@ -56673,9 +56678,9 @@
    "https://msp.bike/events/utepils-cycling-road-mtb-rides-67830d1e",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-27",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) carries a weekly Sunday series at Utepils Brewing, 9:45 am meet, no end date, last edited Sept 21, 2026; Oct 4, 11, 18 and 25 are on it.",
+  "evidence": "msp.bike's events list (read Nov 19, 2026) shows no Utepils Sunday ride among upcoming events; its page for the ride shows Sun Oct 18, 2026 and one more date after it.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -56827,7 +56832,7 @@
    "strava": "https://www.strava.com/clubs/470025",
    "meetup": null,
    "other": [
-    "https://msp.bike/events"
+    "https://msp.bike/events/freewheel-minnetonka-monday-gravel-mtb-rides-2bd228ef"
    ]
   },
   "inclusive_focus": [
@@ -56836,15 +56841,16 @@
   "sources": [
    "https://msp.bike/events",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
-   "https://www.strava.com/clubs/470025"
+   "https://www.strava.com/clubs/470025",
+   "https://msp.bike/events/freewheel-minnetonka-monday-gravel-mtb-rides-2bd228ef"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-10-01",
-  "evidence": "The msp.bike Twin Cities calendar feed (fetched Oct 1, 2026) carries this as a weekly Monday series with no end date and lists Oct 5, 12, 19 and 26, 2026; the entry says 'every Monday year round'.",
+  "evidence": "msp.bike's page for the ride (read Nov 19, 2026) shows the next one on Mon Nov 23, 2026, weekly and year-round, weather permitting; the calendar entry starts at 6:00 pm and the text says roll at 6:30 pm, about 90 minutes, food and drinks around 8 pm. It says to check the Strava club the day of.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
-   "watch_url": "https://msp.bike/events",
+   "watch_url": "https://msp.bike/events/freewheel-minnetonka-monday-gravel-mtb-rides-2bd228ef",
    "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "notes": "Weekly Monday series with no end date on the msp.bike Google calendar; Freewheel posts changes on its Strava club."
   }
