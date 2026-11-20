@@ -201,7 +201,7 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:v
 <nav class="chips" aria-label="Sections">%CHIPS%</nav>
 </header>
 <main>%SECTIONS%</main>
-<footer>Every number comes from the site’s own data: the count from Strava, the rides from the 2027 calendar, the stats from the stat bank with their sources. cycleforchange.org · @cycl_eforchange</footer>
+<footer>Every number comes from the site’s own data: the count from Strava, the rides from the 2027 calendar, the stats from the stat bank with their sources. cycleforchange.org · @cyclefor_</footer>
 </div>
 <script>
 (function(){

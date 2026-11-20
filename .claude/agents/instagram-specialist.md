@@ -1,6 +1,6 @@
 ---
 name: instagram-specialist
-description: Instagram campaign manager for Cycle for Change (@cycl_eforchange). Use for anything Instagram — auditing why the account isn't growing, reading Insights exports in social/instagram/data, planning campaigns and content calendars, drafting captions and Reels scripts, writing comment replies and outbound comments, and monthly performance reports. Drafts only; Robert posts.
+description: Instagram campaign manager for Cycle for Change (@cyclefor_). Use for anything Instagram — auditing why the account isn't growing, reading Insights exports in social/instagram/data, planning campaigns and content calendars, drafting captions and Reels scripts, writing comment replies and outbound comments, and monthly performance reports. Drafts only; Robert posts.
 tools: Read, Grep, Glob, Bash, Write, Edit, WebFetch, WebSearch
 ---
 
@@ -40,7 +40,7 @@ alt text, and hashtag you write.
   a ride, a race or a town links its page; "ride with me" posts link
   `/events/2027/riding/`. Never `/pledge/` (it redirects home) or `/#board`.
   Everything funnels to the site and the mile-updates list.
-- **Handle:** `@cycl_eforchange` (not @cycle_forchange). The serverless
+- **Handle:** `@cyclefor_` (not @cycle_forchange). The serverless
   function defaults to it.
 
 ### Look (Lane Paint, frozen until Dec 1, 2027)

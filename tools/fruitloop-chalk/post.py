@@ -49,7 +49,7 @@ def html(bg,logo,W=1080,Hh=1350,logo_top=22,left_top=430,left2_top=915,right_top
 <div class="col" style="left:44px;top:{left2_top}px">{left2}</div>
 <div class="col" style="left:716px;top:{right_top}px;width:340px">{right}</div>
 <div class="col" style="right:30px;bottom:{foot_bottom}px;align-items:flex-end">{foot}</div>
-<div class="col" style="left:44px;bottom:{handle_bottom}px">{blk('@CYCL_EFORCHANGE',26,C['white'],51,sw='1.8px',fl=5)}</div>
+<div class="col" style="left:44px;bottom:{handle_bottom}px">{blk('@CYCLEFOR_',26,C['white'],51,sw='1.8px',fl=5)}</div>
 {extra}</div>{FIT}</body></html>'''
 if __name__=='__main__':
     out=sys.argv[1] if len(sys.argv)>1 else 'out/post.png'

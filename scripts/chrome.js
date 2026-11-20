@@ -22,7 +22,7 @@ const { seasonText } = require("../tools/lib/season.js");
 const MARK27 = require("./mark-2027.js");
 
 const SITE = "https://cycleforchange.org";
-const INSTAGRAM = "https://www.instagram.com/cycl_eforchange";
+const INSTAGRAM = "https://www.instagram.com/cyclefor_";
 const STRAVA = "https://www.strava.com/athletes/22899089";
 // The share card and the icons carry the mark (tools/brand-files.py draws them from scripts/mark-2027.js). A changed card
 // gets a new number: chat apps keep a preview for weeks. A changed icon keeps its name: bump ICON_V.
@@ -243,7 +243,7 @@ const FOOTER = `<footer class="foot site-foot">
       <div class="foot-col signup" aria-label="Mile updates">
         <p class="eyebrow">Mile updates</p>
         <p class="note">The miles, the rides, where I went. They go up on Instagram.</p>
-        <a class="link" href="${INSTAGRAM}" target="_blank" rel="noopener noreferrer">@cycl_eforchange</a>
+        <a class="link" href="${INSTAGRAM}" target="_blank" rel="noopener noreferrer">@cyclefor_</a>
       </div>
     </div>
     <div class="foot-crisis">

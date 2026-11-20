@@ -9,7 +9,7 @@
   Runs hourly beside the reviews (.github/workflows/ride-reviews.yml). An issue carries <!-- release-id: … -->
   so an OK is opened once. Where the record lives:
     - the OK itself (every answer, the time, the clip): Netlify → Forms → cycle-for. That's the record to keep.
-    - the words people agreed to: data/releases/cyclefor-v1.md (never edited; a new wording is v2).
+    - the words people agreed to: data/releases/cyclefor-v1.md and cyclefor-v2.md (never edited; a new wording is the next number).
     - this issue: what Robert needs to match the clip to the person. This repo is public, so the issue never
       carries an email, the clip, or a link to it. First name, Instagram handle and the answer are fine: those
       are what the person said we can post.
@@ -69,7 +69,7 @@ function issueFor(sub) {
   const when = phoenix(sub.created_at) || phoenix(d.agreed_at) || String(sub.created_at || "");
   const where = [
     clip ? `**Clip:** sent with the OK. Watch it in [Netlify → Forms → ${FORM}](${FORMS_PAGE}) (signed in). It isn't linked here because this repo is public.`
-         : `**Clip:** not sent here. It should be on their Instagram${ig ? ` (@${ig})` : ""}, tagged @cycl_eforchange.`,
+         : `**Clip:** not sent here. It should be on their Instagram${ig ? ` (@${ig})` : ""}, tagged @cyclefor_.`,
     link ? `**Their post:** ${link}` : "",
   ].filter(Boolean);
   return {

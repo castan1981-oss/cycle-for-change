@@ -15,7 +15,7 @@ notes on a page ("we confirmed", "per the site"). The Editor (`@editor`) publish
 
   ## Rules
   - **Faces.** Only Robert is recognisable without an OK (CLAUDE.md §10). Anyone else needs a
-    cleared `/cyclefor/` release (`data/releases/cyclefor-v1.md`, the `release` → `cleared` issue
+    cleared `/cyclefor/` release (`data/releases/cyclefor-v2.md`; v1 is what people agreed to before Nov 19, 2026, the `release` → `cleared` issue
     path) or a written OK in the record. Under 18: never. Take-backs: within 7 days, off everything.
   - **Orgs.** A logo or a photo from one·n·ten, the Center or SFAF needs an email on file saying we
     may. Until then the page runs with their name in text.

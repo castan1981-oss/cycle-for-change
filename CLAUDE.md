@@ -29,7 +29,8 @@ Where an older doc, comment or agent file disagrees with this one, this one wins
   browser, and the deploy's tally pass (`scripts/tally.js`) flips the homepage's. `MANUAL_BONUS_MILES` is training only.
 - **Everything funnels to the site and Instagram.** The site sends no email to visitors (Robert, Oct 9,
   2026): the footer's "Mile updates" column points at Instagram, there is no signup form. Instagram is
-  **@cycl_eforchange** (not @cycle_forchange).
+  **@cyclefor_** (Robert renamed the account on Nov 19, 2026; it was @cycl_eforchange, and never @cycle_forchange).
+  The handle lives in `INSTAGRAM` in `scripts/chrome.js` and the Netlify env var `INSTAGRAM_HANDLE`; after a change, regenerate (§2).
 - Primary internal link target: the homepage `/` or `/events/2027/riding/` ("Ride with me").
   Never `/pledge/`, never `/#board`.
 - **Ride with me = the next ride Robert is doing** (Pass 36). **Oct 25, 2026: the one list is the calendar.**
@@ -475,7 +476,7 @@ and not turn Strava data into a recap. People in it are only recognisable with t
 
 ### What do you cycle for? (`/cyclefor/`, Oct 12, 2026)
 Robert's idea from a ride: every ride he says who he's riding for that day, and he asks everyone else for five
-or ten seconds on video. The way in is **their own Instagram** (film it, post it, tag @cycl_eforchange). The page's
+or ten seconds on video. The way in is **their own Instagram** (film it, post it, tag @cyclefor_). The page's
 form is **the OK** that lets him use their clip in his reels, boosted posts and on the site.
 - Hand page (`cfc-site/cyclefor/index.html` + `cyclefor.css` + `cyclefor.js`, on apply-chrome.py's list). The sign's
   blank turns through a few answers and shows theirs after they send. The homepage `#why` links here.
@@ -483,7 +484,8 @@ form is **the OK** that lets him use their clip in his reels, boosted posts and 
   email, three required boxes (18+, they're in it and anyone else said OK, we can use it), `release`, `agreed_at`.
   A clip over 7.5 MB is shrunk in the browser (played once into a recorder at 720p, first 20 s); if that can't
   happen, the page tells them to post it and tag us instead.
-- **The release wording is `data/releases/cyclefor-v1.md`. Never edit it.** New wording = `cyclefor-v2.md` + the
+- **The release wording is `data/releases/cyclefor-v2.md`** (Nov 19, 2026: the DM handle became @cyclefor_; v1 is what
+  people agreed to before that and stays as it is). **Never edit either.** New wording = `cyclefor-v3.md` + the
   form's `release` value + the page text; the test (`tools/test/cyclefor.test.js`) keeps page and file identical.
 - Review: hourly, `tools/cyclefor-pull.js` (in `ride-reviews.yml`) opens one issue per complete OK, labelled
   `release`: name, handle, answer, release version, time, a checklist. No email, no clip link (public repo); the
@@ -583,7 +585,7 @@ Oct 27). Streets and lit paths only: no dead-end detours, no climbs.
   of an inch clear of the paper edge). One poster, three sizes and the reel overlays, all from
   `python3 tools/fruitloop-chalk/make.py <N>` (`-6` files now). **What the flyer says is Robert's call** (Oct 27): starts
   Friday, Dec 11; meet 5:30 pm, roll 6:00 pm; the rainbow crosswalk, Central Ave and Portland St; 14 flat miles, 14–16 mph
-  pace (Robert, Oct 29: 10–12 was "way slow"); nobody gets dropped; a front and rear light; the link and @cycl_eforchange. **Never on the flyer: "free," "every
+  pace (Robert, Oct 29: 10–12 was "way slow"); nobody gets dropped; a front and rear light; the link and @cyclefor_. **Never on the flyer: "free," "every
   Friday," "18 and up," "hosted by," or "the ride ends by riding it."** The page leaves them out too (Robert, Oct 27: "take
   all three off"); its share card is `og-fruitloop-3.jpg` (`tools/fruitloop-chalk/og.py`). The kicker (inside the logo) is "A queer night ride through Phoenix history"; the
   `<title>`, og/twitter titles and JSON-LD keep "a queer night ride in Phoenix" for search.
@@ -1434,3 +1436,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-11-19 — `/contact/` gets a form (Netlify form `contact`: topic, name, email, message; entries stay in Netlify
   and reach Robert, never the public queue); `/privacy/` says six forms and what this one keeps. No sheet of the
   site's changed (`/contact/contact.css` is new), so `CSS_V` stays.
+- 2026-11-19 — Instagram is @cyclefor_ (Robert renamed the account; it was @cycl_eforchange): every link and mention on the site, the JSON-LD `sameAs`, llms.txt, the function's default, the kit and Fruit Loop tools, the Fruit Loop's spring poster (`spring-2`, the handle repainted on the same ground); the `/cyclefor/` release is `cyclefor-v2` (the DM handle is in its wording). Posts already on Instagram keep the old handle in their pixels. The Netlify env var `INSTAGRAM_HANDLE` is Robert's to change.

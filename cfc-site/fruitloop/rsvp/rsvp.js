@@ -79,7 +79,7 @@
     contact: "Add an email or a phone number. One is enough.",
     email: "That email doesn’t look right.",
     phone: "That phone number doesn’t look right.",
-    other: "That didn’t go through. Try again, or DM @cycl_eforchange."
+    other: "That didn’t go through. Try again, or DM @cyclefor_."
   };
   function open(focus) {
     if (!posted) return;

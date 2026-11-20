@@ -45,7 +45,7 @@ jobs={
      scr(620,C['blue'],6),
      blk('CYCLEFORCHANGE.ORG/FRUITLOOP',44,C['white'],41,fit=860,sw='2.6px',mt=26,fl=5),
      scr(640,C['rose'],42,h=16,sw=8),
-     blk('@CYCL_EFORCHANGE',38,C['white'],51,fit=860,sw='2.2px',mt=10,fl=5),
+     blk('@CYCLEFOR_',38,C['white'],51,fit=860,sw='2.2px',mt=10,fl=5),
    ])+'</div>',bg='#1A181E'),
 }
 async def main():

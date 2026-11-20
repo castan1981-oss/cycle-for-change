@@ -34,11 +34,11 @@ def reel(t, mi):
         720, 320), 720, 320, True)
     out["reel-4-the-link.png"] = (_block(
         f'<p style="color:{T["plaster"]};font-weight:800;font-size:46px;letter-spacing:-.01em">cycleforchange.org</p>'
-        f'<p style="color:{T["patina"]};font-weight:700;font-size:32px;margin-top:10px">@cycl_eforchange</p>', 560, 190), 560, 190, True)
+        f'<p style="color:{T["patina"]};font-weight:700;font-size:32px;margin-top:10px">@cyclefor_</p>', 560, 190), 560, 190, True)
     end = (f'<div style="position:absolute;left:72px;top:520px">{mark(780, T["plaster"], stacked=True)}'
            f'<p style="color:{T["plaster"]};font-weight:800;font-size:62px;letter-spacing:-.018em;line-height:1.04;margin-top:96px">'
            f'10,000 miles. One year.<br>All on the bike.</p>'
-           f'<p style="color:{T["patina"]};font-weight:700;font-size:36px;margin-top:48px">cycleforchange.org<br>@cycl_eforchange</p></div>')
+           f'<p style="color:{T["patina"]};font-weight:700;font-size:36px;margin-top:48px">cycleforchange.org<br>@cyclefor_</p></div>')
     out["reel-5-end-card.jpg"] = (page(end, "", 1080, 1920, T["asphalt"]), 1080, 1920, False)
     return out
 
@@ -69,7 +69,7 @@ def flyer():
             f'{qr_block(SHORT + "/2027", 104, "Ride with me.", "All my 2027 rides, with sign-up links.", T["asphalt"], T["gunmetal"], T["plaster"])}'
             f'</div></div>'
             f'<div style="position:absolute;left:48px;right:48px;bottom:40px;display:flex;justify-content:space-between;font-weight:700;font-size:15px;color:{T["gunmetal"]}">'
-            f'<span>cycleforchange.org</span><span>@cycl_eforchange</span></div>')
+            f'<span>cycleforchange.org</span><span>@cyclefor_</span></div>')
     return page(body, "", 816, 1056, T["concrete"], print_size="8.5in 11in")
 
 
@@ -142,7 +142,7 @@ def poster(rides, lottery=()):
             f'</div>'
             f'<div style="position:absolute;left:64px;right:64px;bottom:52px;display:flex;justify-content:space-between;align-items:flex-end">'
             f'{qr_block(SHORT + "/2027", 112, "All my 2027 rides, with sign-up links.", "cycleforchange.org/2027", T["asphalt"], T["gunmetal"], T["plaster"])}'
-            f'<p style="font-weight:700;font-size:17px;color:{T["gunmetal"]};text-align:right">cycleforchange.org<br>@cycl_eforchange</p></div>')
+            f'<p style="font-weight:700;font-size:17px;color:{T["gunmetal"]};text-align:right">cycleforchange.org<br>@cyclefor_</p></div>')
     return page(body, "", 1056, 1632, T["concrete"], print_size="11in 17in")
 
 

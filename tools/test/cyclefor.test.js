@@ -46,13 +46,13 @@ test("handles and post links are read the way people paste them", () => {
   assert.strictEqual(postLink("instagram.com/reel/C9xYz123AbC/?igsh=1"), "https://www.instagram.com/reel/C9xYz123AbC/");
   assert.strictEqual(postLink("https://evil.example/p/abc"), "");
 });
-test("the page says exactly what data/releases/cyclefor-v1.md says", () => {
+test("the page says exactly what data/releases/cyclefor-v2.md says", () => {
   const text = (s) => s.replace(/<[^>]+>/g, " ").replace(/^\s*-\s+/gm, " ").replace(/\s+/g, " ").trim();
-  const md = fs.readFileSync(path.join(ROOT, "data/releases/cyclefor-v1.md"), "utf8").split("<!-- release:start -->")[1].split("<!-- release:end -->")[0];
+  const md = fs.readFileSync(path.join(ROOT, "data/releases/cyclefor-v2.md"), "utf8").split("<!-- release:start -->")[1].split("<!-- release:end -->")[0];
   const html = fs.readFileSync(path.join(ROOT, "cfc-site/cyclefor/index.html"), "utf8");
-  const body = html.match(/<div class="cf-release-body" data-release="cyclefor-v1">([\s\S]*?)<\/div>/)[1];
+  const body = html.match(/<div class="cf-release-body" data-release="cyclefor-v2">([\s\S]*?)<\/div>/)[1];
   assert.strictEqual(text(body), text(md));
-  assert.match(html, /name="release" value="cyclefor-v1"/);
+  assert.match(html, /name="release" value="cyclefor-v2"/);
 });
 test("the Netlify form names every field the page sends", () => {
   const html = fs.readFileSync(path.join(ROOT, "cfc-site/cyclefor/index.html"), "utf8");
