@@ -46,6 +46,9 @@ test("check: a ride leaning on a calendar needs a row; a row needs a real ride, 
   assert.match(C.check([ride("a"), ride("b"), ride("c", { sources: ["https://town.bike/events/c"] })]).join("\n"), /c: leans on town\.bike/);
   assert.match(C.check([ride("a"), ride("b"), ride("d", { refresh: { feed_url: FEED } })]).join("\n"), /d: leans on town\.bike/);
   assert.match(C.check([ride("a")]).join("\n"), /b: no ride with this slug/);
+  // the site's own rides need no row
+  const own = RC.make({ ...config, calendars: { town: { ...config.calendars.town, own_hosts: ["Town Bike Coalition"] } } });
+  assert.deepStrictEqual(own.check([ride("a"), ride("b"), ride("c", { host: { name: "Town Bike Coalition" }, sources: ["https://town.bike/events/c"] })]), []);
   const front = RC.make({ ...config, rides: { a: { calendar: "town", event: "https://town.bike/events/", checked: "2026-11-19" } } });
   assert.match(front.check([ride("a")]).join("\n"), /front page/);
   const off = RC.make({ ...config, rides: { a: { calendar: "town", event: "https://elsewhere.example/a", checked: "nope" } } });
@@ -63,6 +66,7 @@ test("the site's own data passes, and no built page of a calendar ride offers ou
     assert.ok(!html.includes("/ride.ics"), `${slug}: links our calendar file`);
     assert.ok(!/calendar\.google\.com\/calendar\/(ical|render)/.test(html), `${slug}: links a raw feed or our Google Calendar copy`);
     assert.ok(html.includes(`href="${C.of({ slug }).url}"`), `${slug}: doesn't link its page on the calendar`);
-    assert.ok(/Listed on <a [^>]*>msp\.bike<\/a>/.test(html), `${slug}: no credit line`);
+    const name = C.of({ slug }).name.replace(/\./g, "\\.");
+    assert.ok(new RegExp(`Listed on <a [^>]*>${name}</a>`).test(html), `${slug}: no credit line`);
   }
 });

@@ -12,7 +12,11 @@
     - the calendar is never called "the host": the host is whoever runs the ride
 
   data/ride-calendars.json
-    { "calendars": { "<id>": { name, what, home, hosts: [hostname…], feeds: [url…] } },
+    { "calendars": { "<id>": { name, home, hosts: [hostname…], feeds?: [url…],
+                               what?:  the words after "Listed on <name>," (only what the site or our dated notes say),
+                               adds?:  true when its event pages carry their own add-to-calendar (the button says so),
+                               first?: true when it is where a change shows up first (the credit line says so),
+                               own_hosts?: [host names that run the site itself: their rides need no row] } },
       "rides":     { "<slug>": { calendar: "<id>", event: "<the ride's own page on it>" | null, checked: "YYYY-MM-DD" } } }
 
   `event` is null only when the calendar has no page for the ride right now; the page then links the calendar's `home`.
@@ -68,7 +72,7 @@ function make(config) {
     const row = rows[r.slug];
     if (!row) return null;
     const cal = cals[row.calendar];
-    return { id: row.calendar, name: cal.name, what: cal.what, home: cal.home, event: row.event || null, url: row.event || cal.home, checked: row.checked || null,
+    return { id: row.calendar, name: cal.name, what: cal.what || null, adds: !!cal.adds, first: !!cal.first, home: cal.home, event: row.event || null, url: row.event || cal.home, checked: row.checked || null,
       mine: (u) => onCal(cal, u) };
   }
 
@@ -85,7 +89,7 @@ function make(config) {
     const c = of(r);
     const all = (r.sources || []).map((s) => (s && s.url) || s);
     if (!c) return all.map((url, i) => ({ url, text: `source ${i + 1}` }));
-    const rest = all.filter((u) => !c.mine(u));
+    const rest = all.filter((u) => !c.mine(u) && !isFeed(u));   // a calendar ride cites the calendar's page, never a raw feed
     return [{ url: c.url, text: c.name }, ...rest.map((url, i) => ({ url, text: `source ${i + 2}` }))];
   }
 
@@ -94,7 +98,7 @@ function make(config) {
     const errors = [];
     const bySlug = new Map(rides.map((r) => [r.slug, r]));
     for (const [id, cal] of Object.entries(cals)) {
-      for (const k of ["name", "what", "home"]) if (!(typeof cal[k] === "string" && cal[k].trim())) errors.push(`calendar ${id}: ${k} is missing`);
+      for (const k of ["name", "home"]) if (!(typeof cal[k] === "string" && cal[k].trim())) errors.push(`calendar ${id}: ${k} is missing`);
       if (!Array.isArray(cal.hosts) || !cal.hosts.length) errors.push(`calendar ${id}: hosts is missing`);
       else if (!cal.hosts.includes(hostOf(cal.home))) errors.push(`calendar ${id}: home isn't on one of its hosts`);
     }
@@ -109,8 +113,9 @@ function make(config) {
       if (!isDate(row.checked)) errors.push(`${slug}: checked must be the YYYY-MM-DD the link was opened`);
     }
     for (const r of rides) {
-      if (rows[r.slug]) continue;
+      if (rows[r.slug] || r.status === "ended") continue;
       const id = urlsOf(r).map(calOfUrl).find(Boolean);
+      if (id && (cals[id].own_hosts || []).includes((r.host && r.host.name) || "")) continue;   // the site's own ride
       if (id) errors.push(`${r.slug}: leans on ${cals[id].name} and has no row in data/ride-calendars.json`);
     }
     return errors;

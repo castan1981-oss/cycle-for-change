@@ -920,6 +920,15 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   the schedule text and left them `active`; the page then promised a "Next ride" in November. A re-check of a series
   whose last posted date has passed is `seasonal-break` with the plain reason, until the next dates are posted.
 - `/methodology/` says this in "Rides from a community calendar"; keep the two in step.
+- **Nov 20, 2026: fifteen more calendars** (Robert: "Start the longer run"): shift2bikes.org, chicagogrouprides.com,
+  sadlebred.com, dallasbicyclecoalition.org, hbl.org, bikelb.com, weeklyrides.com, everydayrides.com,
+  longbeachbikerides.com, themiamibikescene.com, yourgroupride.com, detroitgreenways.org, wisconsinbikefed.org,
+  events.queencity.bike, austinbikegroups.com: 135 more rides. These were picked from our own dated notes and the
+  sites' names, **not opened that day** (web fetches needed an approval nobody was there to give), so: `what` is only
+  what our notes already said (else the line is just "Listed on <name>."), `checked` is the ride's own last check,
+  and the button says "See it on <name>" (only msp.bike has `adds` and `first`, because its pages were read).
+  `own_hosts` exempts a site's own rides (the Dallas coalition's, Bike Long Beach's). The other shared sites still
+  wait for someone to open them; `node tools/audit-ride-sources.js` lists them.
 - **Shared sites** (Nov 19, 2026): a site that carries rides for three or more different hosts
   (`RC.sharedSites()`, worked out from the data on every build; the big platforms excepted) is never "the host's
   website" on a ride page. Its button, the first-time fold and "Check … before you go" carry the site's own name
@@ -1480,3 +1489,7 @@ two exits; the shapes are on the plan canvas.
   hosts' rides is never called the host's website (197 pages), a raw calendar feed is never a button, and undated
   rides go to the top of Monday's re-check. 69 shared sites and the re-check backlog are written up in
   `research/rides/audit/2026-11-19-sources.md`.
+- 2026-11-20 — Fifteen more community calendars get the msp.bike treatment (135 rides: a credit line, the ride's own
+  page there when it has one, no calendar copy from us), from our own dated notes; `what`, `adds`, `first` and
+  `own_hosts` in `data/ride-calendars.json`. The queue file re-sorted so the rides whose date came down go first, and
+  the re-check job run by hand on 125 of them.

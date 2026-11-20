@@ -2922,7 +2922,7 @@ function ridePage(r, all, hubFor, hubs) {
   // Nov 19, 2026: no calendar file of ours for a ride on a community calendar. A copy never hears about their changes;
   // their page has the calendar entry that does.
   const calBtns = cal ? ((next && rule) || dated.length ? `
-        ${rideBtn({ href: attr(cal.url), text: `Add to calendar on ${esc(cal.name)}`, markId: "date", ghost: true, ext: true })}` : "")
+        ${rideBtn({ href: attr(cal.url), text: `${cal.adds ? "Add to calendar on" : "See it on"} ${esc(cal.name)}`, markId: "date", ghost: true, ext: true })}` : "")
     : next && rule ? `
         ${rideBtn({ href: `/rides/${r.slug}/ride.ics`, text: "Add to calendar", markId: "date", ghost: true, attrs: ` download="${attr(r.slug)}.ics" rel="nofollow"` })}
         <a class="gr-minor" href="${attr(gcalUrl(r, next, rule))}" rel="noopener">Google Calendar</a>`
@@ -3024,7 +3024,7 @@ ${listed ? howWeRideBlock(r) : ""}
       <div class="gr-linkrow">
         ${linkBtns}
       </div>${cal ? `
-      <p class="verified gr-verify gr-cal">Listed on <a href="${attr(cal.url)}" rel="noopener nofollow">${esc(cal.name)}</a>, ${esc(cal.what)}. Changes show up there first.</p>` : ""}${guideLine(r)}
+      <p class="verified gr-verify gr-cal">Listed on <a href="${attr(cal.url)}" rel="noopener nofollow">${esc(cal.name)}</a>${cal.what ? `, ${esc(cal.what)}` : ""}.${cal.first ? " Changes show up there first." : ""}</p>` : ""}${guideLine(r)}
     </div>
 
 ${(() => { if (!isUS(r)) return ""; const town = TOWNS.find({ city: r.city, state: r.state, lat: r.lat, lng: r.lng }); return town ? TOWNS.strip(town, { compact: true, heading: `Riding ${esc(town.name)} from out of town?`, lede: `Where the routes are, who fixes or rents a bike, where to sleep with it, how to get it here.` }) : ""; })()}
