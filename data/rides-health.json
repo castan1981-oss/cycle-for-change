@@ -23097,7 +23097,10 @@
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-11-09",
-     "detail": "6:30 pm no longer appears on https://msp.bike/groups"
+     "detail": "6:30 pm no longer appears on https://msp.bike/groups",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23199,7 +23202,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-11-09",
-     "detail": "the host's page dates this ride Fri Oct 2, 2026, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Fri Oct 2, 2026, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23247,7 +23253,10 @@
      "since": "2026-11-02",
      "detail": "the schedule text on https://msp.bike/events changed",
      "was": "ble Cider x Recovery Bike Shop Wednesday social rides · Sociable Cider Werks Group Ride (No Drop) Weekly · Friday, Oct 30 · 6:45 PM · Fixie Friday - Parking Ramp Crits · Behind Bars Bicycle Shop Group Ride (No Drop) · Saturday, Oct 31 · 10:00 AM · Angry Catfish Fall Open House: The EXPO · Angry Catfish Bicycle Social Gathering · 10:00 AM · Fall FTW Ride Ser…",
-     "now": "oup Ride (No Drop) Weekly · Wednesday, Nov 18 · 6:00 PM · Sociable Cider x Recovery Bike Shop Wednesday social rides · Sociable Cider Werks Group Ride (No Drop) Weekly · Saturday, Nov 21 · 12:00 PM · St Paul Cranksgiving · 1697 Lafond Ave Alleycat Race · 4:00 PM · Light on Lake Glow Roll · Venture Bikes Midtown Social Gather … h Bicycle Group Ride (No Drop)…"
+     "now": "oup Ride (No Drop) Weekly · Wednesday, Nov 18 · 6:00 PM · Sociable Cider x Recovery Bike Shop Wednesday social rides · Sociable Cider Werks Group Ride (No Drop) Weekly · Saturday, Nov 21 · 12:00 PM · St Paul Cranksgiving · 1697 Lafond Ave Alleycat Race · 4:00 PM · Light on Lake Glow Roll · Venture Bikes Midtown Social Gather … h Bicycle Group Ride (No Drop)…",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23343,13 +23352,19 @@
      "since": "2026-10-26",
      "detail": "the schedule text on https://msp.bike/events changed",
      "was": "y Bike Ride · Roseville City Hall Group Ride (No Drop) · 6:00 PM · Freewheel Minnetonka Monday gravel/MTB rides · Freewheel Bike Minnetonka Group Ride (No Drop) Weekly · Tuesday, Oct 20 · 5:30 PM · Roadrunner CX Cup · The Loppet Foundation Cyclocross Race Weekly · 6:15 PM · Fast Casual x Francis Burger ride · Martin Olav Sabo Bridge Group Ride (Drop) Recurr…",
-     "now": "speed Day · Angry Catfish Bicycle Group Ride (No Drop) · 6:00 PM · Freewheel Minnetonka Monday gravel/MTB rides · Freewheel Bike Minnetonka Group Ride (No Drop) Weekly · 6:30 PM · Buddy Systems · Gold Medal Park Social Gathering Recurring · Wednesday, Nov 4 · 5:45 PM · Fall/Winter Angry Catfish Social Rides · Angry Catfish Bicycle Group Ride (No D"
+     "now": "speed Day · Angry Catfish Bicycle Group Ride (No Drop) · 6:00 PM · Freewheel Minnetonka Monday gravel/MTB rides · Freewheel Bike Minnetonka Group Ride (No Drop) Weekly · 6:30 PM · Buddy Systems · Gold Medal Park Social Gathering Recurring · Wednesday, Nov 4 · 5:45 PM · Fall/Winter Angry Catfish Social Rides · Angry Catfish Bicycle Group Ride (No D",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     },
     {
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-11-09",
-     "detail": "6:30 pm no longer appears on https://msp.bike/events"
+     "detail": "6:30 pm no longer appears on https://msp.bike/events",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23397,13 +23412,19 @@
      "since": "2026-10-05",
      "detail": "the schedule text on https://msp.bike/events/freewheel-mpls-wednesday-night-rides-f60de410 changed",
      "was": "Freewheel MPLS Wednesday Night Rides | Minneapolis Cycling Events · msp.bike · Home Events Groups · ← Back to …",
-     "now": "Freewheel MPLS Wednesday Night Rides - msp.bike · msp.bike · Home Events Groups · ← Back to …"
+     "now": "Freewheel MPLS Wednesday Night Rides - msp.bike · msp.bike · Home Events Groups · ← Back to …",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     },
     {
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-10-12",
-     "detail": "the host's page dates this ride Wed Sep 16, 2026, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Wed Sep 16, 2026, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23442,7 +23463,10 @@
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-11-09",
-     "detail": "6:30 pm no longer appears on https://msp.bike/groups"
+     "detail": "6:30 pm no longer appears on https://msp.bike/groups",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     },
     {
      "code": "schedule-text-changed",
@@ -23450,7 +23474,10 @@
      "since": "2026-11-09",
      "detail": "the schedule text on https://msp.bike/groups changed",
      "was": "… feel the same way.\" · ACF hosts a Monday speedy traini … facebook · Fast Casual · Social · \"Racing, riding, and goofing around. Home of the Fast Casual Ride & more!\" · Rides posted on instagram and this website. · 🌅 instagram · Geno ATB · Social · 📅 Upcoming Events · Buddy Systems Monday, November 2 at 6:30 PM · \"Our events are for people who love exper…",
-     "now": "… feel the same way.\" · ACF hosts a Monday speedy training ride, a wednesday social open ride, and a thursday FTW socia … facebook · Fast Casual · Social · \"Racing, riding, and goofing around. Home of the Fast Casual Ride & more!\" · Rides posted on instagram and this website. · 🌅 instagram · Geno ATB · Social · \"Our events are for people who love experienc…"
+     "now": "… feel the same way.\" · ACF hosts a Monday speedy training ride, a wednesday social open ride, and a thursday FTW socia … facebook · Fast Casual · Social · \"Racing, riding, and goofing around. Home of the Fast Casual Ride & more!\" · Rides posted on instagram and this website. · 🌅 instagram · Geno ATB · Social · \"Our events are for people who love experienc…",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23503,7 +23530,10 @@
      "since": "2026-10-19",
      "detail": "the schedule text on https://msp.bike/events changed",
      "was": "eekly · Friday, Oct 16 · 5:30 PM · Bandit Dash on the River Bottoms (Versus CX Weekend) · Angry Cat … wn Exchange Park Group Ride (No Drop) · 2:00 PM · Versus CX Pre-Reg Party & Group Ride (Modist Brewing) · Angry Catfish Bicycle Group Ride (No Drop) Social Gathering · Sunday, Oct 18 · 9:00 AM · Versus CX 2026 (VSCX4) · Huset Park Cyclocross Race · 9:45 AM …",
-     "now": "rop) Weekly · Saturday, Nov 21 · 12:00 PM · St Paul Cranksgiving · 1697 Lafond Ave Alleycat Race · 4:00 PM · Light on Lake Glow Roll · Venture Bikes Midtown Social Gathering · Sunday, Nov 22 · 10:00 AM · Coffee (Outside) by Recovery Bike Shop · Social Gathering Weekly · 12:00 PM · Minneapolis Cranksgiving · Angry Catfish Bicycle Alleycat Race · Friday, Nov …"
+     "now": "rop) Weekly · Saturday, Nov 21 · 12:00 PM · St Paul Cranksgiving · 1697 Lafond Ave Alleycat Race · 4:00 PM · Light on Lake Glow Roll · Venture Bikes Midtown Social Gathering · Sunday, Nov 22 · 10:00 AM · Coffee (Outside) by Recovery Bike Shop · Social Gathering Weekly · 12:00 PM · Minneapolis Cranksgiving · Angry Catfish Bicycle Alleycat Race · Friday, Nov …",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23603,13 +23633,19 @@
      "since": "2026-10-12",
      "detail": "the schedule text on https://msp.bike/events changed",
      "was": "Community Ride · The Trailhead Group Ride (No Drop) Recurring · 6:45 PM · Bonesaw End of Summer Tuesday Ride · Cepro Site Group R … ial Gathering Recurring · Friday, Oct 9 · 5:00 PM · Spin and Sip Ride to Violet Wine & Spirits · Behind Bars Bicycle Shop to Violet Wine & Spirits Group Ride (No Drop) · Saturday, Oct 10 · 8:00 AM · Twin Cities Bike Tour · Wabu…",
-     "now": "oup Ride (No Drop) Weekly · Wednesday, Nov 18 · 6:00 PM · Sociable Cider x Recovery Bike Shop Wednesday social rides · Socia … Group Ride (No Drop) Recurring · Sunday, Dec 6 · 12:45 PM · No name alleycat · Father Hennepin Bluff Park Alleycat Race Monthly · Thursday, Dec 10 · 5:45 PM · Angry Catfish FTW Group Rides · Angry Catfish Bicycle Group Ride (No Drop…"
+     "now": "oup Ride (No Drop) Weekly · Wednesday, Nov 18 · 6:00 PM · Sociable Cider x Recovery Bike Shop Wednesday social rides · Socia … Group Ride (No Drop) Recurring · Sunday, Dec 6 · 12:45 PM · No name alleycat · Father Hennepin Bluff Park Alleycat Race Monthly · Thursday, Dec 10 · 5:45 PM · Angry Catfish FTW Group Rides · Angry Catfish Bicycle Group Ride (No Drop…",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     },
     {
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-11-02",
-     "detail": "10:15 am no longer appears on https://msp.bike/events"
+     "detail": "10:15 am no longer appears on https://msp.bike/events",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23698,7 +23734,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-11-16",
-     "detail": "the host's page dates this ride Sun Oct 25, 2026, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Sun Oct 25, 2026, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23763,7 +23802,10 @@
      "since": "2026-10-05",
      "detail": "The host's calendar shows Mon Nov 16, 2026 6:00 pm (\"Freewheel Minnetonka Monday gravel/MTB rides\"); we list Monday 6:30 pm",
      "was": "Monday 6:30 pm",
-     "now": "Mon Nov 16, 2026 6:00 pm (\"Freewheel Minnetonka Monday gravel/MTB rides\")"
+     "now": "Mon Nov 16, 2026 6:00 pm (\"Freewheel Minnetonka Monday gravel/MTB rides\")",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [

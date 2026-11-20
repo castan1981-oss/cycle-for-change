@@ -894,6 +894,23 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   `medium` at best. Instagram/Facebook-only leads go in the area report for Robert to confirm.
 - The WebSearch cap is shared by every agent in a session; plan scout waves around it.
 
+### Community calendars (Nov 19, 2026)
+- A maintainer of msp.bike (the Twin Cities' community calendar) wrote to Robert: our Twin Cities pages linked
+  `msp.bike/events` or Instagram instead of each event's own page, our `.ics` files copied their calendar and so never
+  heard about their changes, and some pages were out of date. All three were true. Robert: fix what we said we'd fix.
+- **A ride a community calendar carries** has a row in `data/ride-calendars.json` (`data/SCHEMA.md`;
+  `tools/lib/ride-calendars.js`). Its page links the ride's own page on the calendar, by the calendar's name; never the
+  calendar's front page when the ride has a page of its own; never the raw Google Calendar feed. The calendar is never
+  "the host". **No `ride.ics` and no Google Calendar link from us**: "Add to calendar on msp.bike" goes to their page.
+  One credit line under "Where to find them". `/ride/` reads the same thing from `live.json` (`cal`).
+- The build fails on a ride that leans on a calendar and has no row, so a scout's new Twin Cities ride can't ship without
+  it. A new calendar in another town: add it under `calendars`, then a row per ride, each event page opened that day.
+- We still read their public calendar to re-check (that's what keeps our page honest); we don't republish it.
+- **A dated series that has run out is on a break, not "active".** The Oct 1 check listed fall series with end dates in
+  the schedule text and left them `active`; the page then promised a "Next ride" in November. A re-check of a series
+  whose last posted date has passed is `seasonal-break` with the plain reason, until the next dates are posted.
+- `/methodology/` says this in "Rides from a community calendar"; keep the two in step.
+
 ### Hubs and redirects
 - Hub names follow the data. The ten biggest cities keep their hub name against a busy suburb; a
   city with 8+ rides of its own gets its own hub 6+ miles out (`OWN_MIN`, `OWN_GAP`). A hub whose
@@ -1434,3 +1451,7 @@ two exits; the shapes are on the plan canvas.
 - 2026-11-19 — `/contact/` gets a form (Netlify form `contact`: topic, name, email, message; entries stay in Netlify
   and reach Robert, never the public queue); `/privacy/` says six forms and what this one keeps. No sheet of the
   site's changed (`/contact/contact.css` is new), so `CSS_V` stays.
+- 2026-11-19 — Community calendars (msp.bike wrote in): the 17 Twin Cities rides link their own event page on msp.bike
+  by name with a credit line, get no `.ics` or Google Calendar copy from us ("Add to calendar on msp.bike"), and were
+  re-checked at the source that day: 4 still running, 13 on a seasonal break (four of them had been
+  promising a November date for a series that had ended). `data/ride-calendars.json`, `/methodology/`, `/ride/` v2.

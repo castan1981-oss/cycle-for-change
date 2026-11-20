@@ -1,0 +1,95 @@
+/*
+  ride-calendars.js — community calendars: a local calendar, kept by riders in that place, that carries a ride we list.
+
+  Nov 19, 2026. A maintainer of msp.bike (the Twin Cities' calendar) wrote to Robert: our pages linked msp.bike/events
+  or Instagram instead of the event's own page, and our "Add to calendar" file was a copy of their calendar that never
+  hears about their changes. Both true. Since then, for a ride a community calendar carries:
+
+    - the page links that ride's own page on the calendar, by name (never the calendar's front page when the ride has
+      a page of its own), and says whose calendar it is
+    - we write no ride.ics and no Google Calendar link for it: "Add to calendar" goes to their page, where the
+      calendar entry stays in step with their changes
+    - the calendar is never called "the host": the host is whoever runs the ride
+
+  data/ride-calendars.json
+    { "calendars": { "<id>": { name, what, home, hosts: [hostname…], feeds: [url…] } },
+      "rides":     { "<slug>": { calendar: "<id>", event: "<the ride's own page on it>" | null, checked: "YYYY-MM-DD" } } }
+
+  `event` is null only when the calendar has no page for the ride right now; the page then links the calendar's `home`.
+  check() fails the build when a ride leans on a calendar (a link or a source on one of its hosts, or its feed)
+  and has no row, so a new ride from a calendar can't be listed without the credit.
+*/
+"use strict";
+
+const hostOf = (u) => { try { return new URL(String(u)).hostname.replace(/^www\./, ""); } catch (e) { return null; } };
+const isDate = (s) => typeof s === "string" && /^\d{4}-\d{2}-\d{2}$/.test(s);
+
+function urlsOf(r) {
+  const L = r.links || {};
+  return [L.website, ...(Array.isArray(L.other) ? L.other : []), r.refresh && r.refresh.watch_url, r.refresh && r.refresh.feed_url,
+    ...(Array.isArray(r.sources) ? r.sources.map((s) => (s && s.url) || s) : [])].filter((u) => typeof u === "string" && u);
+}
+
+function make(config) {
+  const cals = (config && config.calendars) || {};
+  const rows = (config && config.rides) || {};
+  const onCal = (cal, u) => cal.hosts.includes(hostOf(u)) || (cal.feeds || []).includes(u);
+  const calOfUrl = (u) => Object.keys(cals).find((id) => onCal(cals[id], u)) || null;
+
+  // the calendar a ride is on, and where its link goes; null for every other ride
+  function of(r) {
+    const row = rows[r.slug];
+    if (!row) return null;
+    const cal = cals[row.calendar];
+    return { id: row.calendar, name: cal.name, what: cal.what, home: cal.home, event: row.event || null, url: row.event || cal.home, checked: row.checked || null,
+      mine: (u) => onCal(cal, u) };
+  }
+
+  // the ride's links with the calendar's taken out: it gets its own named link, and it isn't the host's website
+  function links(r) {
+    const c = of(r);
+    const L = r.links || {};
+    if (!c) return L;
+    return { ...L, website: L.website && c.mine(L.website) ? null : L.website, other: (L.other || []).filter((u) => !c.mine(u)) };
+  }
+
+  // the sources line: the ride's page on the calendar once, by name, then everything that isn't the calendar
+  function sources(r) {
+    const c = of(r);
+    const all = (r.sources || []).map((s) => (s && s.url) || s);
+    if (!c) return all.map((url, i) => ({ url, text: `source ${i + 1}` }));
+    const rest = all.filter((u) => !c.mine(u));
+    return [{ url: c.url, text: c.name }, ...rest.map((url, i) => ({ url, text: `source ${i + 2}` }))];
+  }
+
+  // errors as strings; the build throws on any
+  function check(rides) {
+    const errors = [];
+    const bySlug = new Map(rides.map((r) => [r.slug, r]));
+    for (const [id, cal] of Object.entries(cals)) {
+      for (const k of ["name", "what", "home"]) if (!(typeof cal[k] === "string" && cal[k].trim())) errors.push(`calendar ${id}: ${k} is missing`);
+      if (!Array.isArray(cal.hosts) || !cal.hosts.length) errors.push(`calendar ${id}: hosts is missing`);
+      else if (!cal.hosts.includes(hostOf(cal.home))) errors.push(`calendar ${id}: home isn't on one of its hosts`);
+    }
+    for (const [slug, row] of Object.entries(rows)) {
+      const cal = cals[row && row.calendar];
+      if (!bySlug.has(slug)) { errors.push(`${slug}: no ride with this slug`); continue; }
+      if (!cal) { errors.push(`${slug}: calendar "${row && row.calendar}" isn't defined`); continue; }
+      if (row.event != null) {
+        if (!cal.hosts.includes(hostOf(row.event))) errors.push(`${slug}: event isn't a page on ${cal.name}`);
+        else if (row.event.replace(/\/$/, "") === cal.home.replace(/\/$/, "")) errors.push(`${slug}: event is the calendar's front page; give the ride's own page, or null`);
+      }
+      if (!isDate(row.checked)) errors.push(`${slug}: checked must be the YYYY-MM-DD the link was opened`);
+    }
+    for (const r of rides) {
+      if (rows[r.slug]) continue;
+      const id = urlsOf(r).map(calOfUrl).find(Boolean);
+      if (id) errors.push(`${r.slug}: leans on ${cals[id].name} and has no row in data/ride-calendars.json`);
+    }
+    return errors;
+  }
+
+  return { of, links, sources, check, calendars: cals, rides: rows };
+}
+
+module.exports = { make, hostOf };
