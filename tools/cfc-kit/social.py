@@ -25,7 +25,7 @@ CSS = f"""
 """
 
 
-def foot(color, left="cycleforchange.org", right="@cycl_eforchange"):
+def foot(color, left="cycleforchange.org", right="@cyclefor_"):
     return f'<div class="foot in" style="color:{color}"><span>{esc(left)}</span><span>{esc(right)}</span></div>'
 
 
@@ -64,7 +64,7 @@ def who(size):
     inner = (f'<div class="in" style="padding-top:{top}px">{mark(700 if size=="post" else 800, T["asphalt"], stacked=True)}'
              f'<p class="big" style="color:{T["asphalt"]};font-size:{q}px;margin-top:{70 if size=="post" else 110}px">Who do you<br>cycle for?</p>'
              f'<p class="body" style="color:{T["gunmetal"]};font-size:{36 if size=="post" else 42}px;margin-top:28px;max-width:860px">'
-             f'Say it on video. Five seconds. Post it and tag @cycl_eforchange.</p></div>')
+             f'Say it on video. Five seconds. Post it and tag @cyclefor_.</p></div>')
     bottom = 52 if size == "post" else 330
     return page(f'<div class="field" style="top:0;bottom:0;padding-bottom:{bottom}px"><div style="flex:1">{inner}</div>'
                 f'{foot(T["gunmetal"], "cycleforchange.org/cyclefor", "")}</div>', CSS, W, H, T["concrete"])

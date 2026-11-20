@@ -1,7 +1,7 @@
 /* /cyclefor/ — "What do you cycle for?" (Oct 12, 2026)
    - the blank on the sign turns through a few answers (still under reduced motion)
    - "Copy the tag"
-   - the OK form (Netlify form "cycle-for", release cyclefor-v1): checks it, shrinks a clip that's over what
+   - the OK form (Netlify form "cycle-for", release cyclefor-v2): checks it, shrinks a clip that's over what
      Netlify takes in one send (8 MB) by playing it once into a recorder at 720p, then posts it to Netlify.
      A clip that still won't fit gets a plain way out: post it and tag us; the OK covers it.
    Nothing here stores anything in the browser. */
@@ -81,7 +81,7 @@
     document.body.appendChild(v);   // some browsers won't hand frames from a clip that isn't on the page
     clip.el = v;
     v.addEventListener("loadedmetadata", function () { if (clip && clip.url === url) { clip.video = v; clip.duration = v.duration || 0; } }, { once: true });
-    v.addEventListener("error", function () { if (clip && clip.url === url) note.textContent = "This one is too big to send from here, and we can’t shrink it. Post it and tag @cycl_eforchange instead. Your OK covers it."; }, { once: true });
+    v.addEventListener("error", function () { if (clip && clip.url === url) note.textContent = "This one is too big to send from here, and we can’t shrink it. Post it and tag @cyclefor_ instead. Your OK covers it."; }, { once: true });
     v.load();
   });
 
@@ -238,7 +238,7 @@
     }, function (x) {
       if (x === null) return;
       busy(false);
-      err.textContent = "That didn’t go through. Try again, or send a DM to @cycl_eforchange.";
+      err.textContent = "That didn’t go through. Try again, or send a DM to @cyclefor_.";
     });
   });
 

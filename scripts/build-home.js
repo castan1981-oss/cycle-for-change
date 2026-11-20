@@ -519,7 +519,7 @@ const page = `<!doctype html>
     "name": "Cycle for Change",
     "url": "https://cycleforchange.org/",
     "logo": "https://cycleforchange.org/favicon-512.png",
-    "sameAs": ["https://www.instagram.com/cycl_eforchange", "https://www.strava.com/athletes/22899089"],
+    "sameAs": ["https://www.instagram.com/cyclefor_", "https://www.strava.com/athletes/22899089"],
     "description": "One rider, Robert Castan, in Phoenix, riding 10,000 miles on a bicycle in 2027. Every ride gets a stroke on cycleforchange.org; the big ones get a page. The rides raise money for queer-serving organizations (the Los Angeles LGBT Center and San Francisco AIDS Foundation) through their own events, like the Center Ride Out and Cycle to Zero. The site also holds a directory of group rides, a 2027 ride calendar and town guides."
   }
   </script>

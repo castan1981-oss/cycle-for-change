@@ -120,7 +120,7 @@ B['Main']=(1056,1632,page(1056,1632,f'''
 {row('light',C['green'],blk('BRING A FRONT\nAND REAR LIGHT',30,C['white'],615,sw='2px',fl=5,lh=1.18,fit=330),mt=8)}{scr(330,C['blue'],616)}</div>
 <div class="abs" style="left:64px;bottom:64px;display:flex;gap:28px;align-items:center">
 <img src="{qr_png('https://cycleforchange.org/fl')}" style="width:190px;height:190px;image-rendering:pixelated;display:block">
-<div class="col">{blk('THE SEVEN PLACES,\nAND WHY THEY MATTER',34,C['yellow'],650,sw='2.4px',lh=1.15)}{scr(380,C['rose'],651)}{blk('CYCLEFORCHANGE.ORG/FL',40,C['white'],652,sw='2.6px',mt=6)}{blk('@CYCL_EFORCHANGE',28,MUTE,653,sw='1.8px',fl=5,mt=6)}</div></div>'''))
+<div class="col">{blk('THE SEVEN PLACES,\nAND WHY THEY MATTER',34,C['yellow'],650,sw='2.4px',lh=1.15)}{scr(380,C['rose'],651)}{blk('CYCLEFORCHANGE.ORG/FL',40,C['white'],652,sw='2.6px',mt=6)}{blk('@CYCLEFOR_',28,MUTE,653,sw='1.8px',fl=5,mt=6)}</div></div>'''))
 # ── Stickers (each board drawn at 3x so it prints sharp) ────────────
 def sticker(W,Hh,inner):
     return page(W,Hh,inner)
@@ -143,7 +143,7 @@ def soon(W,Hh,top):
     rows=[('DAY','FRIDAY',C['rose']),('TIME','6 PM',C['yellow']),('ROUTE','COMING SOON',C['cyan']),('WHEN','DECEMBER',C['orange'])]
     return page(W,Hh,f'''<div class="abs col" style="left:70px;top:{top}px">{blk('A NEW GROUP RIDE',96,C['white'],801,sw='4.2px',fit=940)}{blk('IN PHOENIX',96,C['yellow'],802,sw='4.2px',fit=940)}{scr(640,C['rose'],803,h=24,sw=14)}
 <div class="col" style="gap:26px;margin-top:50px">'''+''.join(f'<div class="col">{blk(k,36,MUTE,810+i,sw="2px",fl=5)}{blk(v,92,c,820+i,sw="4px",fit=940)}{scr(420,c,830+i)}</div>' for i,(k,v,c) in enumerate(rows))+f'''</div>
-{blk('NO-DROP. LIGHTS ON.',52,C['green'],840,sw='3px',mt=40)}{blk('@CYCL_EFORCHANGE',44,C['white'],841,sw='2.6px',fl=5,mt=24)}</div>''')
+{blk('NO-DROP. LIGHTS ON.',52,C['green'],840,sw='3px',mt=40)}{blk('@CYCLEFOR_',44,C['white'],841,sw='2.6px',fl=5,mt=24)}</div>''')
 B['Soon-Feed']=(1080,1350,soon(1080,1350,70))
 B['Soon-Story']=(1080,1920,soon(1080,1920,280))
 # ── The survey: the poll sticker goes in the empty band ─────────────

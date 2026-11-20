@@ -85,7 +85,7 @@ network supports it. Describe what's on screen and any on-screen words.
   me"), `/rides/`, `/events/2027/`, `/towns/`, guides and field notes can be
   linked. Never `/pledge/` or `/#board` (gone). Check `CLAUDE.md` before
   linking anything else.
-- Handle is `@cycl_eforchange` on Instagram. Confirm handles on the other
+- Handle is `@cyclefor_` on Instagram. Confirm handles on the other
   networks from `getBrandSettings` the first time and write them into
   `social/video/README.md`.
 - Ride numbers are real or absent, and they come from Robert (his ride
