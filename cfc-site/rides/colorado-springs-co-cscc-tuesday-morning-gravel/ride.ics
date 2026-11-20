@@ -1,0 +1,41 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cycle for Change//Group Rides//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:colorado-springs-co-cscc-tuesday-morning-gravel@cycleforchange.org
+DTSTAMP:20261120T000000Z
+DTSTART;TZID=America/Denver:20261124T100000
+DTEND;TZID=America/Denver:20261124T120000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261201T065959Z
+SUMMARY:Tuesday Morning Gravel — Colorado Springs\, CO
+LOCATION:Varies weekly; Oct 6 start is Calhan Baseball Park
+DESCRIPTION:Pace: Intermediate\, 12-16 mph\, 25-40 miles.\nNo-drop.\nSche
+ dule: Every Tuesday\, 9:00 am from spring through late October; 10:00 am
+  from December through early April. Brief gap in November. Start locatio
+ n varies each week; the leader posts the route on Meetup the weekend bef
+ ore.\nConfirm with the host before you go.\nhttps://cycleforchange.org/r
+ ides/colorado-springs-co-cscc-tuesday-morning-gravel/
+URL:https://cycleforchange.org/rides/colorado-springs-co-cscc-tuesday-mor
+ ning-gravel/
+END:VEVENT
+BEGIN:VEVENT
+UID:colorado-springs-co-cscc-tuesday-morning-gravel-from-2026-12-01@cycle
+ forchange.org
+DTSTAMP:20261120T000000Z
+DTSTART;TZID=America/Denver:20261201T100000
+DTEND;TZID=America/Denver:20261201T120000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20270419T235959Z
+SUMMARY:Tuesday Morning Gravel — Colorado Springs\, CO
+LOCATION:Varies weekly; Oct 6 start is Calhan Baseball Park
+DESCRIPTION:Pace: Intermediate\, 12-16 mph\, 25-40 miles.\nNo-drop.\nSche
+ dule: Every Tuesday\, 9:00 am from spring through late October; 10:00 am
+  from December through early April. Brief gap in November. Start locatio
+ n varies each week; the leader posts the route on Meetup the weekend bef
+ ore.\nConfirm with the host before you go.\nhttps://cycleforchange.org/r
+ ides/colorado-springs-co-cscc-tuesday-morning-gravel/
+URL:https://cycleforchange.org/rides/colorado-springs-co-cscc-tuesday-mor
+ ning-gravel/
+END:VEVENT
+END:VCALENDAR

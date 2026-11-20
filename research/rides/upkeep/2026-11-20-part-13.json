@@ -1,0 +1,116 @@
+[
+  {
+    "slug": "charlotte-nc-critical-mass",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-30",
+    "evidence": "Charlotte Urbanists website (clturban.ist, fetched Nov 20, 2026) states 'We meet at First Ward Park on the last Friday of every month at 6:45. Charlotte's largest group ride!' Schedule unchanged; the Meetup ICS feed confirmed Critical Mass on October 30, 2026.",
+    "sources": [
+      "https://www.clturban.ist",
+      "https://www.meetup.com/charlotte-urbanists/events/ical/"
+    ]
+  },
+  {
+    "slug": "colorado-springs-co-cscc-tuesday-morning-gravel",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "CSCC Meetup event 317245994 (fetched Nov 20, 2026) lists 'Tuesday Morning Gravel, Every week on Tuesday until April 4, 2027' at 10:00 AM MST from Homestead Ranch Park, Peyton, CO; the time shifted from 9:00 AM to 10:00 AM and the winter series now runs December 1 through April 4.",
+    "sources": [
+      "https://www.meetup.com/colorado-springs-cycling-club/events/317245994/",
+      "https://www.meetup.com/colorado-springs-cycling-club/events/ical/"
+    ],
+    "changes": {
+      "schedule": "Every Tuesday, 9:00 am from spring through late October; 10:00 am from December through early April. Brief gap in November. Start location varies each week; the leader posts the route on Meetup the weekend before.",
+      "time_local": "10:00 am",
+      "start_hhmm": "10:00",
+      "season": "year-round",
+      "season_months": null,
+      "start_times": [
+        {
+          "from": "2026-12-01",
+          "start_hhmm": "10:00"
+        }
+      ],
+      "refresh": {
+        "notes": "Winter series Dec\u2013Apr at 10:00 am, spring/fall series May\u2013Oct at 9:00 am, brief November gap."
+      }
+    }
+  },
+  {
+    "slug": "colorado-springs-co-cscc-wednesday-morning-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "CSCC Meetup event 317301427 (fetched Nov 20, 2026) lists 'Wednesday Morning Ride, Every week on Wednesday until April 27, 2027' at 10:00 AM MST from Legacy Loop Plaza; the time shifted from 9:00 AM to 10:00 AM for the winter series starting November 25, 2026.",
+    "sources": [
+      "https://www.meetup.com/colorado-springs-cycling-club/events/317301427/",
+      "https://www.meetup.com/colorado-springs-cycling-club/events/ical/"
+    ],
+    "changes": {
+      "schedule": "Wednesdays at 9:00 am (summer and fall) or 10:00 am (winter), from Legacy Loop Plaza unless the event says otherwise. The leader posts the route and start location on Meetup the weekend before.",
+      "time_local": "10:00 am",
+      "start_hhmm": "10:00",
+      "start_times": [
+        {
+          "from": "2026-11-25",
+          "start_hhmm": "10:00"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "detroit-mi-pedalup-riderz-friday-night-groove",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-30",
+    "evidence": "Detroit Greenways Community Calendar ICS (fetched Nov 20, 2026) has no Friday Night Groove entries after October 30, 2026; previous seasons started in late May.",
+    "sources": [
+      "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
+      "https://detroitgreenways.org/events-calendar/"
+    ],
+    "status_note": "The Detroit Greenways Community Calendar ran Friday Night Groove through October 30, 2026 as listed; no November through April entries exist in the calendar (checked Nov 20, 2026). Previous seasons started in late May. Check detroitgreenways.org/events-calendar/ or PedalUp Riderz social media in spring 2027."
+  },
+  {
+    "slug": "detroit-mi-soul-roll-detroit-monday-saturday",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-31",
+    "evidence": "Detroit Greenways Community Calendar ICS (fetched Nov 20, 2026) has no Soul Roll Detroit entries after October 31, 2026; previous seasons (2023, 2025, 2026) started in mid-May.",
+    "sources": [
+      "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
+      "https://detroitgreenways.org/events-calendar/"
+    ],
+    "status_note": "The Detroit Greenways Community Calendar ran Soul Roll Detroit through October 31, 2026 as listed; no November through April entries exist in the calendar (checked Nov 20, 2026). Previous seasons started in mid-May. Check detroitgreenways.org/events-calendar/ or the Soul Roll Detroit Facebook group in spring 2027."
+  },
+  {
+    "slug": "greenwood-village-co-denver-outdoor-adventures-crappy-road-bikes-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-03",
+    "evidence": "Denver Outdoor Adventures Meetup events page and ICS feed (fetched Nov 20, 2026) show 0 upcoming bike rides; only Friday Night Social entries appear in the feed through January 2027, and no Thursday Crappy Road Bikes events have been posted for 2027.",
+    "sources": [
+      "https://www.meetup.com/denver-outdoor-fun/events/",
+      "https://www.meetup.com/denver-outdoor-fun/events/ical/"
+    ],
+    "status_note": "The Meetup series ran through November 3, 2026 as listed. Denver Outdoor Adventures now shows 0 upcoming ride events (checked Nov 20, 2026); no 2027 season has been posted. Check meetup.com/denver-outdoor-fun/ in spring 2027."
+  },
+  {
+    "slug": "lancaster-pa-lbc-thursday-evening-special",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-29",
+    "evidence": "LBC Meetup events page (fetched Nov 20, 2026) shows 0 upcoming events; the ICS feed has no Thursday Evening Special in November; last Meetup-confirmed event was October 29 at 5:30 pm, consistent with the 2025 series ending October 30.",
+    "sources": [
+      "https://www.meetup.com/lancaster-bicycle-club/events/",
+      "https://www.meetup.com/lancaster-bicycle-club/events/ical/"
+    ],
+    "status_note": "The 2026 Meetup series last ran October 29; the 2025 series also ended in late October. No November events are posted on LBC Meetup (checked Nov 20, 2026). Note: the last event ran at 5:30 pm (the watcher flagged a time change from 6:00 pm; a person should confirm the time when the ride resumes). Expected back in spring; check meetup.com/lancaster-bicycle-club/ for the 2027 series."
+  },
+  {
+    "slug": "lancaster-pa-lbc-wednesday-breakfast-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "LBC Meetup events page and ICS feed (fetched Nov 20, 2026) show 0 upcoming events for this ride; last confirmed Oct 28, 2026. The club says rides run year-round, but no November Wednesday Breakfast Ride events are posted. Check meetup.com/lancaster-bicycle-club/ directly."
+  }
+]

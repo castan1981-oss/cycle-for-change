@@ -1,0 +1,111 @@
+[
+  {
+    "slug": "long-beach-ca-lightning-velo-saturday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "Lightning Velo's Meetup ICS feed lists the C-Group Saturday ride at 7:30 am for Nov 21, Nov 28, Dec 5, Dec 12, Dec 19, Dec 26, 2026 and Jan 2, 2027; the club's website confirms 8:00 am in standard time, consistent with the existing start_times entry (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.meetup.com/Lightning-Velo-Cycling-Club/events/ical/",
+      "https://www.lightningvelo.org/"
+    ]
+  },
+  {
+    "slug": "morton-grove-il-lets-ride-wednesday-night-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-28",
+    "evidence": "The Let's Ride! Meetup feed shows only one upcoming event, a Sunday Social Ride on Nov 22, 2026 \u2014 no further Wednesday Night rides. The Oct 28 Meetup event was labelled 'the very last ride of the year.' The group is active with other events; this ride runs April through October (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.meetup.com/lets-ride-ages-40-fun-fit-social-riding/events/ical/"
+    ],
+    "status_note": "The Wednesday Night Ride on the North Branch Trail ended for the season on Oct 28, 2026. The ride runs April through October; it resumes in spring."
+  },
+  {
+    "slug": "phoenix-az-pmbc-granada-sunday-breakfast-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "PMBC's Granada ride page states 6:30 am April through September and 7:30 am October through March; the PMBC calendar lists Granada Breakfast Ride every Sunday in November and December 2026 with named breakfast stops (Hope's Brunch House Nov 1 \u2014 weather cancellation that day, NY Bagels & Bialys Nov 8, Sip Coffee Nov 15, The Henry 44th St Nov 22, Moon Valley Cafe Nov 29, through December) (fetched Nov 20, 2026).",
+    "sources": [
+      "https://pmbc.clubexpress.com/content.aspx?page_id=22&club_id=943467&module_id=364277",
+      "https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467"
+    ],
+    "changes": {
+      "schedule": "Every Sunday, year-round. 7:30 am October through March, 6:30 am April through September. Each week's calendar entry names the breakfast stop.",
+      "time_local": "7:30 am",
+      "start_hhmm": "07:30",
+      "start_times": [
+        {
+          "from": "2027-04-01",
+          "start_hhmm": "06:30"
+        },
+        {
+          "from": "2027-10-01",
+          "start_hhmm": "07:30"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "rochester-mn-rasc-dirty-rascals-thursday-gravel",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-29",
+    "evidence": "RASC's RideWithGPS calendar shows no Thursday gravel events after Oct 29, 2026; the RASC website says the Thursday gravel ride runs 'throughout the summer.' No 2027 dates are posted (fetched Nov 20, 2026).",
+    "sources": [
+      "https://ridewithgps.com/organizations/7265/calendar.ics",
+      "https://www.rasc-mn.org/road-gravel-biking"
+    ],
+    "status_note": "The Thursday gravel ride runs spring through October per RASC's website ('throughout the summer'). The last 2026 date was Oct 29. No 2027 dates are posted yet."
+  },
+  {
+    "slug": "rock-hill-sc-rhbc-thursday-night-rocks-gravel",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-29",
+    "evidence": "The Rock Hill Bicycle Club website lists Thursday Night Rocks as 'Starting back March 12, 2026'; the RideWithGPS calendar has no events after Oct 29, 2026. No 2027 start date is posted (fetched Nov 20, 2026).",
+    "sources": [
+      "https://rockhillbicycleclub.com/",
+      "https://ridewithgps.com/organizations/12871/calendar.ics"
+    ],
+    "status_note": "Thursday Night Rocks runs approximately March through October. The club's site noted it started back March 12 for 2026. No events are listed after Oct 29. No 2027 dates are posted yet."
+  },
+  {
+    "slug": "santa-cruz-ca-santa-cruz-county-cycling-club-sunday-d-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "The club's public Google Calendar lists Sunday D rides at 10:00 am for Nov 22, Nov 29, Dec 6 and Dec 20, 2026, plus a Saturday D ride on Dec 12 at 10:30 am (fetched Nov 20, 2026).",
+    "sources": [
+      "https://calendar.google.com/calendar/ical/c_4bba064d65c47d3eaa6e9f4908753a4733f5ef5ffdaff2591999643cd97f42e9%40group.calendar.google.com/public/basic.ics"
+    ]
+  },
+  {
+    "slug": "springfield-il-springfield-bicycle-club-wednesday-show-and-go-social-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-28",
+    "evidence": "The Springfield Bicycle Club's Google Calendar shows no Wednesday Show & Go events after Oct 28, 2026; the club's ride page describes the season as 'typically April\u2013October.' Other club events continue through the winter (fetched Nov 20, 2026).",
+    "sources": [
+      "https://calendar.google.com/calendar/ical/c_70b758d11239668809108c39c0097096d58a9a40dde8370dafa80e9c2119eeb5%40group.calendar.google.com/public/basic.ics",
+      "https://www.springfieldbicycleclub.com/ride-with-us/"
+    ],
+    "status_note": "The Wednesday Show & Go Social Ride ended for the 2026 season on Oct 28. The club runs rides typically April through October; no 2027 Wednesday ride dates are posted yet."
+  },
+  {
+    "slug": "vancouver-ca-out-n-about-cycling-weekday-rides",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "The group's Meetup ICS feed lists rides on Nov 21, Nov 23, Nov 25, Nov 27, Nov 30 and Dec 4, 2026, all with DTSTART;TZID=America/Vancouver at 09:00 and DTEND at 14:30 \u2014 9:00 am start, consistent with the ride's 5 to 5.5 hour duration; this is the America/Vancouver standard-time equivalent of the October 10:00 am PDT start (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.meetup.com/out-and-about-cycling-in-metro-vancouver/events/ical/"
+    ],
+    "changes": {
+      "schedule": "Mostly Mondays, Wednesdays and Fridays at 9:00 am Pacific Standard Time (Saturdays occasionally), a different route and start each ride, roughly 9:00 am to 2:30 pm with stops.",
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00"
+    }
+  }
+]

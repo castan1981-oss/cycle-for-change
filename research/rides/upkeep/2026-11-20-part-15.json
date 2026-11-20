@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "breinigsville-pa-fitness-central-cycling-club-thursday-java-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-16",
+    "evidence": "Fitness Central Cycling Club's Meetup ICS feed matched 6 upcoming Thursday Java Ride dates including Nov 19, 2026 at 7:30 am (feed read Nov 16, 2026).",
+    "sources": ["https://www.meetup.com/fc-cycling-club/events/ical/"]
+  },
+  {
+    "slug": "cambridge-ma-crw-speedy-croissant-women-nb-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "CRW's events calendar lists Speedy Croissant Women/NB Ride on Tuesdays Nov 4, 11, 17, 25 and Dec 1, 2026 at 6:00 am, running past the Oct 6 end date in the record (fetched Nov 20, 2026).",
+    "sources": ["https://crw.org/events", "https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics"],
+    "changes": {
+      "schedule": "Tuesdays at 6:00 am, May through early December. Rain calls by 10 pm the night before and again at 5 am.",
+      "season": null,
+      "season_months": { "start": 5, "end": 12 }
+    }
+  },
+  {
+    "slug": "sydney-au-bikeast-supasaturday-ramsgate",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-16",
+    "evidence": "BIKEast's Meetup ICS feed matched 6 upcoming SupaSaturday dates including Nov 21, 2026 at 7:30 am (feed read Nov 16, 2026).",
+    "sources": ["https://www.meetup.com/bikeast/events/ical/"]
+  },
+  {
+    "slug": "bend-or-tuesday-night-rubber-mallet",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-07",
+    "evidence": "A BendCycling Google Group post from Oct 7, 2026 announces the Rubber Mallet at 5:00 PM from Webcyclery, 157 NW Franklin Ave — a different start from Jackson's Outpost listed in the record.",
+    "sources": ["https://groups.google.com/a/obra.org/g/obra-chat/c/ZH7KNJSc1ag", "https://groups.google.com/g/bendcycling/c/wPkqMG025R0"],
+    "changes": {
+      "start_location": { "name": "Webcyclery", "address": "157 NW Franklin Ave, Bend, OR 97701" },
+      "schedule": "Every Tuesday from about March through October; 5:15 pm in spring, 5:30 pm in summer, 5:00 pm in fall. Ride is not affiliated with Webcyclery.",
+      "season": null,
+      "season_months": { "start": 3, "end": 10 },
+      "links": { "website": null, "other": ["https://bendbikerides.com/event", "https://groups.google.com/g/bendcycling"] },
+      "refresh": { "method": "calendar-page", "watch_url": "https://groups.google.com/g/bendcycling", "feed_url": null, "notes": "Ride announced each week on the BendCycling Google Group; the bendbikerides.com site returns a Cloudflare 403." }
+    }
+  },
+  {
+    "slug": "corpus-christi-tx-cc-led-saturday-light-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "Watch page (The Bend Mag article) returns 403 eight runs running. No 2026 schedule found. Only active source is Instagram @getccled, which requires a login."
+  },
+  {
+    "slug": "kalamazoo-mi-pedal-tuesday-queer-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "PEDAL Bicycle's events page (fetched Nov 20, 2026) now lists winter training programming starting December 7, 2026; the Tuesday Queer Ride is not listed and no 2027 season dates are posted.",
+    "sources": ["https://www.pedalbicycle.com/articles/events.-sweet-sweet-events-pg213.htm"],
+    "status_note": "The ride schedule says through mid-September; PEDAL's page has moved to winter programming (starting Dec 7, 2026) with no 2027 queer-ride dates posted yet."
+  },
+  {
+    "slug": "madison-wi-madison-queer-bike-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "Watch page (ourliveswisconsin.com) returns 403 seven runs running; last loaded Sept 30. No 2026 ride dates found. Only remaining source is Instagram @madisonqueerbikeride, which requires a login."
+  },
+  {
+    "slug": "missoula-mt-thursday-night-mountain-bike-group",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "Main site (thursdaynightmtbr.org) fails with SSL cert mismatch (cert is for user.fm, not the domain) every run since Sep 30. Backup source (mtalphacycling.org/local-group-rides.html) returns 404. Missoula Underground bicycle-club-rides calendar shows no current events. Facebook group (facebook.com/group.php?gid=150671295989) requires login."
+  }
+]
