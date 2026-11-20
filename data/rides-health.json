@@ -2619,7 +2619,10 @@
      "code": "unreachable",
      "severity": "amber",
      "since": "2026-10-12",
-     "detail": "no page for this ride has loaded for 8 runs (403)"
+     "detail": "no page for this ride has loaded for 8 runs (403)",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -3729,7 +3732,10 @@
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-10-26",
-     "detail": "7:30 am no longer appears on https://www.meetup.com/jafe-cycling-bike-shop/"
+     "detail": "7:30 am no longer appears on https://www.meetup.com/jafe-cycling-bike-shop/",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     },
     {
      "code": "schedule-text-changed",
@@ -3737,7 +3743,10 @@
      "since": "2026-11-02",
      "detail": "the schedule text on https://www.meetup.com/jafe-cycling-bike-shop/ changed",
      "was": "… with fellow cyclists throughout the region. · Upcoming events · 66 · See all · Thursday Ride & Vibes · Thu, Oct 22 · 7:30 AM EDT · Jafe Cycling, LLC, 10250 martin luther king jr hwy, bowie, MD, US · Fastchix Thursday Morning Ride · Join the Ladies of Fastchix, led by Yvonne Spencer, for our weekly Thursday morning group ride! This welcoming ride covers ap…",
-     "now": "… with fellow cyclists throughout the region. · Upcoming events · 62 · See all · Thursday Ride & Vibes · Thu, Nov 19 · 8:30 AM EST · Jafe Cycling, LLC, 10250 martin luther king jr hwy, bowie, MD, US · Fastchix Thursday Morning Ride · ** New Start times** · Meetup at 8a · Rolling at 8:30a · Join the Ladies of Fastchix, led by Yvonne Spencer, for our weekly T…"
+     "now": "… with fellow cyclists throughout the region. · Upcoming events · 62 · See all · Thursday Ride & Vibes · Thu, Nov 19 · 8:30 AM EST · Jafe Cycling, LLC, 10250 martin luther king jr hwy, bowie, MD, US · Fastchix Thursday Morning Ride · ** New Start times** · Meetup at 8a · Rolling at 8:30a · Join the Ladies of Fastchix, led by Yvonne Spencer, for our weekly T…",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -6572,7 +6581,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-10-05",
-     "detail": "the Strava event's date is Wed May 15, 2024, which has passed; the ride may have ended"
+     "detail": "the Strava event's date is Wed May 15, 2024, which has passed; the ride may have ended",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -8410,7 +8422,10 @@
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-11-02",
-     "detail": "8:00 am no longer appears on https://www.meetup.com/vvcc-road-bike-rides/"
+     "detail": "8:00 am no longer appears on https://www.meetup.com/vvcc-road-bike-rides/",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -8460,7 +8475,10 @@
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-11-02",
-     "detail": "8:00 am no longer appears on https://www.meetup.com/vvcc-road-bike-rides/"
+     "detail": "8:00 am no longer appears on https://www.meetup.com/vvcc-road-bike-rides/",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -10359,14 +10377,20 @@
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-11-02",
-     "detail": "5:00 pm no longer appears on https://pedaldurango.com/events/"
+     "detail": "5:00 pm no longer appears on https://pedaldurango.com/events/",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     },
     {
      "code": "schedule-text-changed",
      "severity": "amber",
      "since": "2026-11-02",
      "detail": "the schedule text on https://pedaldurango.com/events/ changed",
-     "was": "er Keyword. Search for Events by Keyword. · Find Events · Event Views Navigation · List · List · Month · Day · Today · Now · Now · - · 12/5/2026 · December 5 · Select date. · October 2026 · Tue · 27 · Tuesday Night Worlds – The A Ride · October 27 @ 5:00 pm - 7:30 pm · Bread · 42 County Rd 250, Durango, CO, United States · Valley CCW No Climbs - Start at Br…"
+     "was": "er Keyword. Search for Events by Keyword. · Find Events · Event Views Navigation · List · List · Month · Day · Today · Now · Now · - · 12/5/2026 · December 5 · Select date. · October 2026 · Tue · 27 · Tuesday Night Worlds – The A Ride · October 27 @ 5:00 pm - 7:30 pm · Bread · 42 County Rd 250, Durango, CO, United States · Valley CCW No Climbs - Start at Br…",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -10449,7 +10473,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-11-16",
-     "detail": "the host's page dates this ride Sun Oct 25, 2026, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Sun Oct 25, 2026, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -13535,7 +13562,10 @@
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-10-26",
-     "detail": "9:00 am no longer appears on https://www.meetup.com/rocky-mountain-cycling-club-rmcc/"
+     "detail": "9:00 am no longer appears on https://www.meetup.com/rocky-mountain-cycling-club-rmcc/",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     },
     {
      "code": "schedule-text-changed",
@@ -13543,7 +13573,10 @@
      "since": "2026-10-26",
      "detail": "the schedule text on https://www.meetup.com/rocky-mountain-cycling-club-rmcc/ changed",
      "was": "… Homepage · Rocky Mountain Cycling Club RMCC · 4.9 • 1218 ratings · Denver, CO, US · 2,030 members · Share · About · Events · Members · Photos · Discussions · About us · Ro … ly] rides out of various locations until snow and cold puts a stop to it! This ride will start out of Beverly Heights Park at the base of Lookout at 8:45 for a 9:00 departure. · These…",
-     "now": "… Homepage · Rocky Mountain Cycling Club RMCC · 4.9 • 1219 ratings · Denver, CO, US · 2,037 members · Share · About · Events · Members · Photos · Discussions · About us · Rocky Mountain Cycling Club is a Colorado community of cyclists who share a love for adventurous, challenging rides. We offer a year-round series of club rides and events and support each …"
+     "now": "… Homepage · Rocky Mountain Cycling Club RMCC · 4.9 • 1219 ratings · Denver, CO, US · 2,037 members · Share · About · Events · Members · Photos · Discussions · About us · Rocky Mountain Cycling Club is a Colorado community of cyclists who share a love for adventurous, challenging rides. We offer a year-round series of club rides and events and support each …",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -13596,7 +13629,10 @@
      "since": "2026-11-09",
      "detail": "The host's calendar shows Tue Nov 17, 2026 5:30 pm (\"RMCC Tuesday Night Climbing After Dark!\"); we list Thursday 5:30 pm",
      "was": "Thursday 5:30 pm",
-     "now": "Tue Nov 17, 2026 5:30 pm (\"RMCC Tuesday Night Climbing After Dark!\")"
+     "now": "Tue Nov 17, 2026 5:30 pm (\"RMCC Tuesday Night Climbing After Dark!\")",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -14915,7 +14951,10 @@
      "since": "2026-10-12",
      "detail": "the schedule text on https://www.contebikes.com/about/rides-events-pg229.htm changed",
      "was": "Rides and Events - Conte's Bike Shop | Since 1957 · Skip to main content · Free Shipping on Orders of $49 or More! · Toggle navigation · Find Us · Stores · My Account · My Account · Cart · Cart · Cart · Mob … mart Trainers · Parts · Parts · Components · …",
-     "now": "Rides and Events - Conte's Bike Shop · Skip to main content · Free Shipping on Orders of $49 or More! · Toggle navigation · Find Us · Stores · My Account · My Account · Cart · Cart · Cart · Mobile Cart Link … mart Trainers · Parts · Parts · Components · …"
+     "now": "Rides and Events - Conte's Bike Shop · Skip to main content · Free Shipping on Orders of $49 or More! · Toggle navigation · Find Us · Stores · My Account · My Account · Cart · Cart · Cart · Mobile Cart Link … mart Trainers · Parts · Parts · Components · …",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -17080,14 +17119,20 @@
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-10-05",
-     "detail": "6:00 pm no longer appears on https://www.pedalbicycle.com/articles/events.-sweet-sweet-events-pg213.htm"
+     "detail": "6:00 pm no longer appears on https://www.pedalbicycle.com/articles/events.-sweet-sweet-events-pg213.htm",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     },
     {
      "code": "schedule-text-changed",
      "severity": "amber",
      "since": "2026-10-05",
      "detail": "the schedule text on https://www.pedalbicycle.com/articles/events.-sweet-sweet-events-pg213.htm changed",
-     "was": "lp you learn about bikes and help you participate in the fun! · Lady Parts Rides · Date: April through September · In addition to Monday night mountain bike rides at 6pm at Ft. Custer, Lady Parts will host multiple weekend rides throughout the summer! · LEARN MORE! · Road Trip! MTB + Camping + Fun! · October 2-4, 2026 · Join Pedal and"
+     "was": "lp you learn about bikes and help you participate in the fun! · Lady Parts Rides · Date: April through September · In addition to Monday night mountain bike rides at 6pm at Ft. Custer, Lady Parts will host multiple weekend rides throughout the summer! · LEARN MORE! · Road Trip! MTB + Camping + Fun! · October 2-4, 2026 · Join Pedal and",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -21241,7 +21286,10 @@
      "since": "2026-10-12",
      "detail": "the schedule text on https://www.letsride.co.uk/groups/debdale-cycling-for-health-group changed",
      "was": "… more than two and a half hours but don't worry",
-     "now": "… more than two and a half hours but don't worry"
+     "now": "… more than two and a half hours but don't worry",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -21728,7 +21776,10 @@
      "since": "2026-11-09",
      "detail": "The host's calendar shows Fri Nov 20, 2026 10:00 am (\"Fran's Usual Friday C/C+ Ride\"); we list Friday 9:00 am",
      "was": "Friday 9:00 am",
-     "now": "Fri Nov 20, 2026 10:00 am (\"Fran's Usual Friday C/C+ Ride\")"
+     "now": "Fri Nov 20, 2026 10:00 am (\"Fran's Usual Friday C/C+ Ride\")",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23097,7 +23148,10 @@
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-11-09",
-     "detail": "6:30 pm no longer appears on https://msp.bike/groups"
+     "detail": "6:30 pm no longer appears on https://msp.bike/groups",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23199,7 +23253,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-11-09",
-     "detail": "the host's page dates this ride Fri Oct 2, 2026, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Fri Oct 2, 2026, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23247,7 +23304,10 @@
      "since": "2026-11-02",
      "detail": "the schedule text on https://msp.bike/events changed",
      "was": "ble Cider x Recovery Bike Shop Wednesday social rides · Sociable Cider Werks Group Ride (No Drop) Weekly · Friday, Oct 30 · 6:45 PM · Fixie Friday - Parking Ramp Crits · Behind Bars Bicycle Shop Group Ride (No Drop) · Saturday, Oct 31 · 10:00 AM · Angry Catfish Fall Open House: The EXPO · Angry Catfish Bicycle Social Gathering · 10:00 AM · Fall FTW Ride Ser…",
-     "now": "oup Ride (No Drop) Weekly · Wednesday, Nov 18 · 6:00 PM · Sociable Cider x Recovery Bike Shop Wednesday social rides · Sociable Cider Werks Group Ride (No Drop) Weekly · Saturday, Nov 21 · 12:00 PM · St Paul Cranksgiving · 1697 Lafond Ave Alleycat Race · 4:00 PM · Light on Lake Glow Roll · Venture Bikes Midtown Social Gather … h Bicycle Group Ride (No Drop)…"
+     "now": "oup Ride (No Drop) Weekly · Wednesday, Nov 18 · 6:00 PM · Sociable Cider x Recovery Bike Shop Wednesday social rides · Sociable Cider Werks Group Ride (No Drop) Weekly · Saturday, Nov 21 · 12:00 PM · St Paul Cranksgiving · 1697 Lafond Ave Alleycat Race · 4:00 PM · Light on Lake Glow Roll · Venture Bikes Midtown Social Gather … h Bicycle Group Ride (No Drop)…",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23343,13 +23403,19 @@
      "since": "2026-10-26",
      "detail": "the schedule text on https://msp.bike/events changed",
      "was": "y Bike Ride · Roseville City Hall Group Ride (No Drop) · 6:00 PM · Freewheel Minnetonka Monday gravel/MTB rides · Freewheel Bike Minnetonka Group Ride (No Drop) Weekly · Tuesday, Oct 20 · 5:30 PM · Roadrunner CX Cup · The Loppet Foundation Cyclocross Race Weekly · 6:15 PM · Fast Casual x Francis Burger ride · Martin Olav Sabo Bridge Group Ride (Drop) Recurr…",
-     "now": "speed Day · Angry Catfish Bicycle Group Ride (No Drop) · 6:00 PM · Freewheel Minnetonka Monday gravel/MTB rides · Freewheel Bike Minnetonka Group Ride (No Drop) Weekly · 6:30 PM · Buddy Systems · Gold Medal Park Social Gathering Recurring · Wednesday, Nov 4 · 5:45 PM · Fall/Winter Angry Catfish Social Rides · Angry Catfish Bicycle Group Ride (No D"
+     "now": "speed Day · Angry Catfish Bicycle Group Ride (No Drop) · 6:00 PM · Freewheel Minnetonka Monday gravel/MTB rides · Freewheel Bike Minnetonka Group Ride (No Drop) Weekly · 6:30 PM · Buddy Systems · Gold Medal Park Social Gathering Recurring · Wednesday, Nov 4 · 5:45 PM · Fall/Winter Angry Catfish Social Rides · Angry Catfish Bicycle Group Ride (No D",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     },
     {
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-11-09",
-     "detail": "6:30 pm no longer appears on https://msp.bike/events"
+     "detail": "6:30 pm no longer appears on https://msp.bike/events",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23397,13 +23463,19 @@
      "since": "2026-10-05",
      "detail": "the schedule text on https://msp.bike/events/freewheel-mpls-wednesday-night-rides-f60de410 changed",
      "was": "Freewheel MPLS Wednesday Night Rides | Minneapolis Cycling Events · msp.bike · Home Events Groups · ← Back to …",
-     "now": "Freewheel MPLS Wednesday Night Rides - msp.bike · msp.bike · Home Events Groups · ← Back to …"
+     "now": "Freewheel MPLS Wednesday Night Rides - msp.bike · msp.bike · Home Events Groups · ← Back to …",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     },
     {
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-10-12",
-     "detail": "the host's page dates this ride Wed Sep 16, 2026, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Wed Sep 16, 2026, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23442,7 +23514,10 @@
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-11-09",
-     "detail": "6:30 pm no longer appears on https://msp.bike/groups"
+     "detail": "6:30 pm no longer appears on https://msp.bike/groups",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     },
     {
      "code": "schedule-text-changed",
@@ -23450,7 +23525,10 @@
      "since": "2026-11-09",
      "detail": "the schedule text on https://msp.bike/groups changed",
      "was": "… feel the same way.\" · ACF hosts a Monday speedy traini … facebook · Fast Casual · Social · \"Racing, riding, and goofing around. Home of the Fast Casual Ride & more!\" · Rides posted on instagram and this website. · 🌅 instagram · Geno ATB · Social · 📅 Upcoming Events · Buddy Systems Monday, November 2 at 6:30 PM · \"Our events are for people who love exper…",
-     "now": "… feel the same way.\" · ACF hosts a Monday speedy training ride, a wednesday social open ride, and a thursday FTW socia … facebook · Fast Casual · Social · \"Racing, riding, and goofing around. Home of the Fast Casual Ride & more!\" · Rides posted on instagram and this website. · 🌅 instagram · Geno ATB · Social · \"Our events are for people who love experienc…"
+     "now": "… feel the same way.\" · ACF hosts a Monday speedy training ride, a wednesday social open ride, and a thursday FTW socia … facebook · Fast Casual · Social · \"Racing, riding, and goofing around. Home of the Fast Casual Ride & more!\" · Rides posted on instagram and this website. · 🌅 instagram · Geno ATB · Social · \"Our events are for people who love experienc…",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23503,7 +23581,10 @@
      "since": "2026-10-19",
      "detail": "the schedule text on https://msp.bike/events changed",
      "was": "eekly · Friday, Oct 16 · 5:30 PM · Bandit Dash on the River Bottoms (Versus CX Weekend) · Angry Cat … wn Exchange Park Group Ride (No Drop) · 2:00 PM · Versus CX Pre-Reg Party & Group Ride (Modist Brewing) · Angry Catfish Bicycle Group Ride (No Drop) Social Gathering · Sunday, Oct 18 · 9:00 AM · Versus CX 2026 (VSCX4) · Huset Park Cyclocross Race · 9:45 AM …",
-     "now": "rop) Weekly · Saturday, Nov 21 · 12:00 PM · St Paul Cranksgiving · 1697 Lafond Ave Alleycat Race · 4:00 PM · Light on Lake Glow Roll · Venture Bikes Midtown Social Gathering · Sunday, Nov 22 · 10:00 AM · Coffee (Outside) by Recovery Bike Shop · Social Gathering Weekly · 12:00 PM · Minneapolis Cranksgiving · Angry Catfish Bicycle Alleycat Race · Friday, Nov …"
+     "now": "rop) Weekly · Saturday, Nov 21 · 12:00 PM · St Paul Cranksgiving · 1697 Lafond Ave Alleycat Race · 4:00 PM · Light on Lake Glow Roll · Venture Bikes Midtown Social Gathering · Sunday, Nov 22 · 10:00 AM · Coffee (Outside) by Recovery Bike Shop · Social Gathering Weekly · 12:00 PM · Minneapolis Cranksgiving · Angry Catfish Bicycle Alleycat Race · Friday, Nov …",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23603,13 +23684,19 @@
      "since": "2026-10-12",
      "detail": "the schedule text on https://msp.bike/events changed",
      "was": "Community Ride · The Trailhead Group Ride (No Drop) Recurring · 6:45 PM · Bonesaw End of Summer Tuesday Ride · Cepro Site Group R … ial Gathering Recurring · Friday, Oct 9 · 5:00 PM · Spin and Sip Ride to Violet Wine & Spirits · Behind Bars Bicycle Shop to Violet Wine & Spirits Group Ride (No Drop) · Saturday, Oct 10 · 8:00 AM · Twin Cities Bike Tour · Wabu…",
-     "now": "oup Ride (No Drop) Weekly · Wednesday, Nov 18 · 6:00 PM · Sociable Cider x Recovery Bike Shop Wednesday social rides · Socia … Group Ride (No Drop) Recurring · Sunday, Dec 6 · 12:45 PM · No name alleycat · Father Hennepin Bluff Park Alleycat Race Monthly · Thursday, Dec 10 · 5:45 PM · Angry Catfish FTW Group Rides · Angry Catfish Bicycle Group Ride (No Drop…"
+     "now": "oup Ride (No Drop) Weekly · Wednesday, Nov 18 · 6:00 PM · Sociable Cider x Recovery Bike Shop Wednesday social rides · Socia … Group Ride (No Drop) Recurring · Sunday, Dec 6 · 12:45 PM · No name alleycat · Father Hennepin Bluff Park Alleycat Race Monthly · Thursday, Dec 10 · 5:45 PM · Angry Catfish FTW Group Rides · Angry Catfish Bicycle Group Ride (No Drop…",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     },
     {
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-11-02",
-     "detail": "10:15 am no longer appears on https://msp.bike/events"
+     "detail": "10:15 am no longer appears on https://msp.bike/events",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23698,7 +23785,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-11-16",
-     "detail": "the host's page dates this ride Sun Oct 25, 2026, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Sun Oct 25, 2026, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -23763,7 +23853,10 @@
      "since": "2026-10-05",
      "detail": "The host's calendar shows Mon Nov 16, 2026 6:00 pm (\"Freewheel Minnetonka Monday gravel/MTB rides\"); we list Monday 6:30 pm",
      "was": "Monday 6:30 pm",
-     "now": "Mon Nov 16, 2026 6:00 pm (\"Freewheel Minnetonka Monday gravel/MTB rides\")"
+     "now": "Mon Nov 16, 2026 6:00 pm (\"Freewheel Minnetonka Monday gravel/MTB rides\")",
+     "resolved": true,
+     "resolved_at": "2026-11-19",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -24009,7 +24102,10 @@
      "since": "2026-11-02",
      "detail": "The host's calendar shows Sat Nov 21, 2026 8:00 am (\"Montclair Bikery Shop Ride\"); we list Friday 9:00 am",
      "was": "Friday 9:00 am",
-     "now": "Sat Nov 21, 2026 8:00 am (\"Montclair Bikery Shop Ride\")"
+     "now": "Sat Nov 21, 2026 8:00 am (\"Montclair Bikery Shop Ride\")",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -25615,7 +25711,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-11-02",
-     "detail": "the host's page dates this ride Tue Oct 6, 2026, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Tue Oct 6, 2026, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -26986,14 +27085,20 @@
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-11-09",
-     "detail": "9:00 am no longer appears on https://obcrides.ca/events"
+     "detail": "9:00 am no longer appears on https://obcrides.ca/events",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     },
     {
      "code": "schedule-text-changed",
      "severity": "amber",
      "since": "2026-11-09",
      "detail": "the schedule text on https://obcrides.ca/events changed",
-     "was": "ltertrigger'))\" · class=\"btn position-absolute border-0 p-0 text-muted\" · style=\"right: 0.75rem; top: 50%; transform: translateY(-50%);\" · aria-label=\"Clear search\"> · Saturday, November 7 · Announced — registration coming soon · 9:00 AM - 12:00 PM · Gravel Ride - TBD · 🪨 Gravel · 11° · Monday, November 23 · 7:00 PM - 9:00 PM · OBC Annual General Meeting ·…"
+     "was": "ltertrigger'))\" · class=\"btn position-absolute border-0 p-0 text-muted\" · style=\"right: 0.75rem; top: 50%; transform: translateY(-50%);\" · aria-label=\"Clear search\"> · Saturday, November 7 · Announced — registration coming soon · 9:00 AM - 12:00 PM · Gravel Ride - TBD · 🪨 Gravel · 11° · Monday, November 23 · 7:00 PM - 9:00 PM · OBC Annual General Meeting ·…",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -30776,7 +30881,10 @@
      "since": "2026-11-02",
      "detail": "the schedule text on https://oaksandspokes.org/events/ changed",
      "was": "ce to get started with biking around Raleigh on trails and streets. · Register on Rec Link: here . · Cost is $20 resident, $35 nonresident. · Add to Calendar · 6 · 7 · THE GREEN LINE: A Commuter Bike Bus for Working Adults · THE GREEN LINE: A Commuter Bike Bus for Working Adults · October 7, 2026 7:30 AM - 9:00 AM · Lockwood Park, 1200 Crabtree Blvd, Raleig…",
-     "now": "onate · Shop · Events · Home / Events · Did you come here to find more about Bike Month Raleigh? · Go to: · BikeMonthRaleigh.org · Events Calendar: · November 2026 · Sun · Mon · Tue · Wed · Thu · Fri · Sat · 1 · 2 · 3 · 4 · 5 · Monthly Oaks and Spokes Advocacy Committee Meeting · Monthly Oaks and Spo … ess to the shop requires getting through a locked gate …"
+     "now": "onate · Shop · Events · Home / Events · Did you come here to find more about Bike Month Raleigh? · Go to: · BikeMonthRaleigh.org · Events Calendar: · November 2026 · Sun · Mon · Tue · Wed · Thu · Fri · Sat · 1 · 2 · 3 · 4 · 5 · Monthly Oaks and Spokes Advocacy Committee Meeting · Monthly Oaks and Spo … ess to the shop requires getting through a locked gate …",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -31300,7 +31408,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-10-12",
-     "detail": "the Strava event's date is Sun Oct 4, 2026, which has passed; the ride may have ended"
+     "detail": "the Strava event's date is Sun Oct 4, 2026, which has passed; the ride may have ended",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -32278,7 +32389,10 @@
      "since": "2026-10-12",
      "detail": "the schedule text on https://reconnectrochester.org/our-weekly-rides/ changed",
      "was": "Our Weekly Rides – Reconnect Rochester · 0 items · Search for: · Search for: · 0 items · About Us · Our Mission & Vision · 2025 Impact Report · Frequently Asked Questions · Leadership · Staff · What We Do · Bike … g Classes · Shop · Contact · Donate · Monthly Donation · One Time Donation · Other Ways To Give · Subscribe · Our Weekly Rides · This free commun…",
-     "now": "ycling Classes · Shop · Contact · Donate · Monthly Donation · One Time Donation · Other Ways To Give · Subscribe · Our Weekly Rides · We held our last weekly ride of the year on Wednesday, October 7th 2026. Thank you to all who joined us! We will see you in May 2027! · This free community ride sponsored by the City’s Recreation Department has a different ro…"
+     "now": "ycling Classes · Shop · Contact · Donate · Monthly Donation · One Time Donation · Other Ways To Give · Subscribe · Our Weekly Rides · We held our last weekly ride of the year on Wednesday, October 7th 2026. Thank you to all who joined us! We will see you in May 2027! · This free community ride sponsored by the City’s Recreation Department has a different ro…",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -32617,13 +32731,19 @@
      "since": "2026-10-12",
      "detail": "the schedule text on https://www.rambo-mtb.org/events/2026/10/2/freeflite-group-ride-at-big-creek changed",
      "was": "… Bike Organization · Roswell-Alpharetta Mountain Bike Organization · Home · Turbo Levo 4 Giveaway · Trails · Big Creek XC · Big Creek Freeride · Charleston Park · Haw Creek Park · Matt Park · Mt. Adams · Rides · Join Rambo · Events · RAMBO · Membership · About Us · Contact · Ramblings · 2026 Quick Six Enduro · Shop · Partners · Bike Patrol · Meeting Minute…",
-     "now": "… Bike Organization · Roswell-Alpharetta Mountain Bike Organization · Home · Trails · Big Creek XC · Big Creek Freeride · Charleston Park · Haw Creek Park · Matt Park · Mt. Adams · Rides · Join Rambo · Events · RAMBO · Membership · About Us · Contact · Ramblings · 2026 Quick Six Enduro · Shop · Partners · Bike Patrol · Meeting Minutes · Home / · Trails / · …"
+     "now": "… Bike Organization · Roswell-Alpharetta Mountain Bike Organization · Home · Trails · Big Creek XC · Big Creek Freeride · Charleston Park · Haw Creek Park · Matt Park · Mt. Adams · Rides · Join Rambo · Events · RAMBO · Membership · About Us · Contact · Ramblings · 2026 Quick Six Enduro · Shop · Partners · Bike Patrol · Meeting Minutes · Home / · Trails / · …",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     },
     {
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-10-26",
-     "detail": "the host's page dates this ride Fri Oct 2, 2026, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Fri Oct 2, 2026, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -33166,7 +33286,10 @@
      "since": "2026-10-26",
      "detail": "the schedule text on https://www.meetup.com/storm-mountain-biking/ changed",
      "was": "… to do so. · 1 attendee · Past events · 169 · See all · STORM Trail Workday (2026-10-17) - Olmos Basin Park Trails · Sat, Oct 17 · 9:00 AM CDT · 599 Devine Rd, 599 Devine Rd, San Antonio, TX 78212, USA, San Antonio, TX, US · 1 attendee · STORM All-Level Ride - O.P. Schnabel Park · Thu, Oct 15 · 6:30 PM CDT · O. P. Schnabel Park, 9",
-     "now": "… to do so. · 1 attendee · Past events · 174 · See all · STORM Kids Ride · Sat, Nov 7 · 9:00 AM CST · McAllister Park, 13102 Jones Maltsberger, San Antonio, TX, US · 1 attendee · STORM Thursday night ride · Thu, Nov 5 · 6:30 PM CST · McAllister Park, 13102 Jones Maltsberger, San Antonio, TX, US · 2 attendees · Group links · Organizers · So"
+     "now": "… to do so. · 1 attendee · Past events · 174 · See all · STORM Kids Ride · Sat, Nov 7 · 9:00 AM CST · McAllister Park, 13102 Jones Maltsberger, San Antonio, TX, US · 1 attendee · STORM Thursday night ride · Thu, Nov 5 · 6:30 PM CST · McAllister Park, 13102 Jones Maltsberger, San Antonio, TX, US · 2 attendees · Group links · Organizers · So",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -35021,7 +35144,10 @@
      "code": "event-date-past",
      "severity": "amber",
      "since": "2026-11-02",
-     "detail": "the host's page dates this ride Sat Oct 10, 2026, which has passed; it may not be running now"
+     "detail": "the host's page dates this ride Sat Oct 10, 2026, which has passed; it may not be running now",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -35491,7 +35617,10 @@
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-11-02",
-     "detail": "8:00 am no longer appears on https://www.meetup.com/vvcc-road-bike-rides/"
+     "detail": "8:00 am no longer appears on https://www.meetup.com/vvcc-road-bike-rides/",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     },
     {
      "code": "schedule-text-changed",
@@ -35499,7 +35628,10 @@
      "since": "2026-11-02",
      "detail": "The host's calendar shows Sat Nov 21, 2026 9:00 am (\"Sedona VOC ride\"); we list Saturday 8:00 am",
      "was": "Saturday 8:00 am",
-     "now": "Sat Nov 21, 2026 9:00 am (\"Sedona VOC ride\")"
+     "now": "Sat Nov 21, 2026 9:00 am (\"Sedona VOC ride\")",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -35552,7 +35684,10 @@
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-11-02",
-     "detail": "8:00 am no longer appears on https://www.meetup.com/vvcc-road-bike-rides/"
+     "detail": "8:00 am no longer appears on https://www.meetup.com/vvcc-road-bike-rides/",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     },
     {
      "code": "schedule-text-changed",
@@ -35560,7 +35695,10 @@
      "since": "2026-11-02",
      "detail": "The host's calendar shows Thu Nov 19, 2026 9:00 am (\"Sedona Area Rides\"); we list Thursday 8:00 am",
      "was": "Thursday 8:00 am",
-     "now": "Thu Nov 19, 2026 9:00 am (\"Sedona Area Rides\")"
+     "now": "Thu Nov 19, 2026 9:00 am (\"Sedona Area Rides\")",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -36533,7 +36671,10 @@
      "since": "2026-11-02",
      "detail": "The host's calendar shows Mon Nov 16, 2026 5:45 pm (\"Dust at Dusk (Centennial Park)\"); we list Saturday / Sunday 8:00 am",
      "was": "Saturday / Sunday 8:00 am",
-     "now": "Mon Nov 16, 2026 5:45 pm (\"Dust at Dusk (Centennial Park)\")"
+     "now": "Mon Nov 16, 2026 5:45 pm (\"Dust at Dusk (Centennial Park)\")",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -36668,13 +36809,19 @@
      "since": "2026-10-12",
      "detail": "the schedule text on https://www.southsidecyclery.com/articles/rides-events-pg243.htm changed",
      "was": "Location · Waiver · Synchrony Freedom To Ride Financing · Sponsored Teams · News · About · About Us · News · Meet our Team · Careers · Job Application · Contact Us · Email Us · Location · South Side Cycling Club group rides are free to join, but require a waiver. · Complete Waiver · South Side Training Rides: Saturdays through October 31st @ 8am · Get faste…",
-     "now": "Calendar - South Side Cyclery | St Louis, MO · Skip to main content · Mon - Fri: 10:00am - 6:00pm Sat: 10:00am - 5:00pm Sun: Closed · Store · Store · Account · Account · Cart · Cart · (0) · Subtotal : $ 0.00 · Checkout · Cart · Toggle navigation · Search · Search · Menu · x · Store · Store · Acco … · Bike Fitting · Bike Trade-In · SSCC Coaching · Fitness in…"
+     "now": "Calendar - South Side Cyclery | St Louis, MO · Skip to main content · Mon - Fri: 10:00am - 6:00pm Sat: 10:00am - 5:00pm Sun: Closed · Store · Store · Account · Account · Cart · Cart · (0) · Subtotal : $ 0.00 · Checkout · Cart · Toggle navigation · Search · Search · Menu · x · Store · Store · Acco … · Bike Fitting · Bike Trade-In · SSCC Coaching · Fitness in…",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     },
     {
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-10-26",
-     "detail": "8:00 am no longer appears on https://www.southsidecyclery.com/articles/rides-events-pg243.htm"
+     "detail": "8:00 am no longer appears on https://www.southsidecyclery.com/articles/rides-events-pg243.htm",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -38275,7 +38422,10 @@
      "since": "2026-11-02",
      "detail": "the schedule text on https://www.tbn.ca/programs/cycling/smr changed",
      "was": "… so that we do not cover the same roads or",
-     "now": "… so that we do not cover the same roads or"
+     "now": "… so that we do not cover the same roads or",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -39448,13 +39598,19 @@
      "since": "2026-10-26",
      "detail": "the schedule text on https://www.meetup.com/bikeventura/ changed",
      "was": "llow riders, and leave with a bike that’s road-ready and a big boost of confidence! · More info at bikeventura.org/ladies-wrench-night · 8 attendees · Sunday Morning Coffee Ride · Sun, Oct 25 · 9:00 AM PDT · Ventura Bike HUB, 490 N. Ventura Ave., Ventura, ca, US · Sunday morning just got better ! Once a month we ride a handful of miles on an easy paced soci…",
-     "now": "rk and back. There will be music, art and food options when we return. Bring lights and a jacket since this is the first BNO starting after sunset. · 7 attendees · Sunday Morning Coffee Ride · Sun, Nov 22 · 8:00 AM PST · S Saticoy Ave & N Bank Rd Bike Path Entrance, 34.274036, -119.153797 , VENTURA, CA, US · Sunday morning just got better ! This month is a…"
+     "now": "rk and back. There will be music, art and food options when we return. Bring lights and a jacket since this is the first BNO starting after sunset. · 7 attendees · Sunday Morning Coffee Ride · Sun, Nov 22 · 8:00 AM PST · S Saticoy Ave & N Bank Rd Bike Path Entrance, 34.274036, -119.153797 , VENTURA, CA, US · Sunday morning just got better ! This month is a…",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     },
     {
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-11-02",
-     "detail": "9:00 am no longer appears on https://www.meetup.com/bikeventura/"
+     "detail": "9:00 am no longer appears on https://www.meetup.com/bikeventura/",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [
@@ -39507,13 +39663,19 @@
      "since": "2026-10-19",
      "detail": "the schedule text on https://www.meetup.com/bikeventura/ changed",
      "was": "resher, this is the perfect low-pressure way to learn the basics and leave with a bike that’s road-ready. · Cost: Completely FREE · Sponsored by: City of Ventura & BikeVC Education · 5 attendees · Ventura Electric Light Parade · Sat, Nov 14 · 7:00 PM PST · Ventura Pier, Ventura, CA, US · Join us for a fun, free community ride! · We meet on the Ventura Pier …",
-     "now": "asic guidelines including: road rules, group behavoir, safety measures, and no drop practices. · Come build community on bikes (with coffee!) · 7 attendees · Ventura Electric Light Parade - Christmas Special · Sat, Dec 19 · 4:00 PM PST · Ventura Pier, Ventura, CA, US · Ho Ho Ho! Ventura Electric Light Parade is a free community bicycle ride complete with mu…"
+     "now": "asic guidelines including: road rules, group behavoir, safety measures, and no drop practices. · Come build community on bikes (with coffee!) · 7 attendees · Ventura Electric Light Parade - Christmas Special · Sat, Dec 19 · 4:00 PM PST · Ventura Pier, Ventura, CA, US · Ho Ho Ho! Ventura Electric Light Parade is a free community bicycle ride complete with mu…",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     },
     {
      "code": "time-missing",
      "severity": "amber",
      "since": "2026-10-26",
-     "detail": "5:20 pm no longer appears on https://www.meetup.com/bikeventura/"
+     "detail": "5:20 pm no longer appears on https://www.meetup.com/bikeventura/",
+     "resolved": true,
+     "resolved_at": "2026-11-20",
+     "resolved_by": "re-check"
     }
    ],
    "urls": [

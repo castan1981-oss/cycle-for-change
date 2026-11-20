@@ -5,17 +5,18 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:el-paso-tx-saturday-road-ride@cycleforchange.org
-DTSTAMP:20261001T000000Z
-DTSTART;TZID=America/Denver:20261121T070000
-DTEND;TZID=America/Denver:20261121T090000
-RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270228T235959Z
+DTSTAMP:20261120T000000Z
+DTSTART;TZID=America/Denver:20261121T074500
+DTEND;TZID=America/Denver:20261121T094500
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20270419T235959Z
 SUMMARY:El Paso Bicycle Club Saturday Road Ride — El Paso\, TX
 LOCATION:Grace Gardens Event Center\, 6701 Westside Dr\, El Paso\, TX 799
  32
 DESCRIPTION:Pace: A group 14–16 mph\, B group faster.\nSchedule: Every 
- Saturday\, 7:00 am (start time shifts with the season).\nConfirm with th
- e host before you go.\nhttps://cycleforchange.org/rides/el-paso-tx-satur
- day-road-ride/
+ Saturday; meet 7:45 am\, ride out 8:00 am (time adjusts with the season;
+  check the host's Meetup calendar the night before).\nConfirm with the h
+ ost before you go.\nhttps://cycleforchange.org/rides/el-paso-tx-saturday
+ -road-ride/
 URL:https://cycleforchange.org/rides/el-paso-tx-saturday-road-ride/
 END:VEVENT
 END:VCALENDAR

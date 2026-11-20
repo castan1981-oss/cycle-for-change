@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "indianapolis-in-bike-line-tuesday-thursday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "The Bike Line's group rides page (thebikeline.com/about/group-rides-pg439.htm) returns 404 and has been gone since Sept 30, 2026. The shop's new 'Local Rides' page (thebikeline.com/pages/local-rides) lists RideWithGPS mapped routes only — no group ride schedule. No group rides listed anywhere on the site. Check Instagram @bikelineindiana or call the shop at (317) 253-2611."
+  },
+  {
+    "slug": "kailua-kona-hi-saturday-recreational-north-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "hawaiicyclingclub.com/weekly-rides.html returns 404; the page has been removed from the site's navigation. The club's membership page (hawaiicyclingclub.com/membership.html) confirms weekly training and recreational group rides exist in 2026 as a membership benefit, but no schedule page was found. Check the club Facebook (facebook.com/groups/hawaiicyclingclub) or Instagram @hawaiicyclingclub for the current schedule."
+  },
+  {
+    "slug": "washington-dc-dc-bike-party",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "touchgrassdc.com has not resolved (DNS failure) for 4+ weeks and appears permanently offline. dcbikeparty.com loads over HTTP (HTTPS cert expired) but its last blog post is from June 2017; no 2026 schedule found. DC Bike Party posts monthly start locations on Instagram @dcbikeparty and Facebook facebook.com/DCBikeParty/ — the watch_url needs updating from the dead touchgrassdc.com to one of those; a person with social media access can confirm the ride and update the source."
+  },
+  {
+    "slug": "manhattan-beach-ca-beach-cities-cycling-club-thursday-social-ride-marina-del-rey",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "BCCC's calendar at bcccsb.org/Ride-Calendar lists 'Thursday Social Ride: Marina del Rey-Westchester' on Nov 7, 14, 20, 27 and Dec 4 and 11 at 9:00 am from the Manhattan Beach Pier; the Weekly Activities page confirms the 9 am time; the 'CANCELLED' entries in the same calendar refer to Thursday Gravel on specific dates, a different ride (fetched Nov 20, 2026).",
+    "sources": ["https://www.bcccsb.org/Ride-Calendar", "https://www.bcccsb.org/Weekly-Activities-Description"]
+  },
+  {
+    "slug": "redondo-beach-ca-beach-cities-cycling-club-sunday-funday-whale-watch",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-15",
+    "evidence": "BCCC's calendar at bcccsb.org/Ride-Calendar lists 'Sunday FunDay Ride Up to Whale Watch (PV Interpretive Center)' on Nov 8, 15, 22 and 29 at 9:00 am from Captain Kidd's Plaza; Nov 1 and Dec 6 have the Jackson Market ride instead on the first Sundays, matching the existing record (fetched Nov 20, 2026).",
+    "sources": ["https://www.bcccsb.org/Ride-Calendar", "https://www.bcccsb.org/Weekly-Activities-Description"]
+  },
+  {
+    "slug": "san-rafael-ca-marin-cyclists-easy-like-sunday-morning",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-15",
+    "evidence": "Marin Cyclists' November 2026 calendar at marincyclists.com lists 'Easy Like Sunday Morning--aka. Red Whale--Participant Led/Leaderless' on Nov 1, 8, 15, 22 and 29; the 'CANCELED' in the same calendar refers to 'Fridays on Paradise' on Nov 13, a different ride on a different day (fetched Nov 20, 2026).",
+    "sources": ["https://marincyclists.com/content.aspx?page_id=4001&club_id=525458"]
+  },
+  {
+    "slug": "tucker-ga-atlptn-tucker",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "atlptn.com has not resolved (DNS failure) for 2+ weeks; last OK was Nov 2, 2026. The sadlebred.com community listing still shows the Tucker ride with consistent times but is a secondary source, not the host's own page. Check Instagram @theatlantapeloton or Facebook facebook.com/ATLPTN/ for the current status of the site and ride."
+  },
+  {
+    "slug": "vinings-ga-atlptn-beyond-six-flags",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "atlptn.com has not resolved (DNS failure) for 2+ weeks; last OK was Nov 2, 2026. sadlebred.com still lists 'Beyond Six Flags, 9:00 am year round (8:30 June-Aug.)' but is a secondary source. Check Instagram @theatlantapeloton or Facebook facebook.com/ATLPTN/ for the current status of the site and ride."
+  }
+]

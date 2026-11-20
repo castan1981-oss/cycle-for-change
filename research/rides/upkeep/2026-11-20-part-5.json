@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "lihue-hi-kauai-path-bikes-on-rice",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "Kauai Path's homepage shows 'No events at the moment'; the Nov 14 event page shows 'Registration is closed' with no future dates. The HBL calendar has no upcoming Bikes on Rice entries. The ride may skip December — one historical source mentions the monthly series runs except in December. Check kauaipath.org in early December for a Dec 12 event."
+  },
+  {
+    "slug": "long-beach-ca-sundazies-ftwnb-sunday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "The Sep 27 Strava event still shows the past date with no next-occurrence date. The Strava club events list requires a login. No other public source lists an upcoming SunDazies Sunday ride. Check the Strava club at strava.com/clubs/1090056 (requires joining) or search Instagram for @sundazies."
+  },
+  {
+    "slug": "manchester-gb-debdale-cycling-for-health-monday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-16",
+    "evidence": "Let's Ride lists the most recent ride as Monday Nov 16, 2026 at 10:15 am from Debdale Park M18 7LJ; the group description is unchanged (fetched Nov 20, 2026).",
+    "sources": ["https://www.letsride.co.uk/groups/debdale-cycling-for-health-group"]
+  },
+  {
+    "slug": "medford-nj-outdoor-club-of-south-jersey-fran-friday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "Meetup event for Fri Nov 20, 2026 lists Fran's Usual Friday C/C+ Ride at 10:00 AM from Taunton Forge Shopping Center, Medford, NJ; the Oct 30 event was also at 10:00 AM (fetched Nov 20, 2026).",
+    "sources": ["https://www.meetup.com/outdoor-club-of-south-jersey/events/317404722/", "https://www.meetup.com/outdoor-club-of-south-jersey/events/ical/"],
+    "changes": {
+      "schedule": "Fridays, 10:00 am from Taunton Forge Shopping Center; 25 to 30 miles at 13 to 14 mph, no-drop and social",
+      "time_local": "10:00 am",
+      "start_hhmm": "10:00"
+    }
+  },
+  {
+    "slug": "newport-ky-tuesday-night-worlds-tnw",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-27",
+    "evidence": "Queen City Bike's calendar lists Oct 27, 2026 (Biketoberfest) as the last TNW event of the season; no events appear after that date and no 2027 start date is posted (fetched Nov 20, 2026).",
+    "sources": ["https://events.queencity.bike/", "https://events.queencity.bike/event/ltu2svo0dnaoj2uorasu5o162s_20261006T220000Z"],
+    "status_note": "Ended the 2026 season Oct 27 with Biketoberfest; no 2027 dates are posted on the Queen City Bike calendar."
+  },
+  {
+    "slug": "oakland-ca-waffles-n-wheels-hills-n-sips",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "The Strava event 'Hills n Sips Countdown to Dark' (Oct 1) still shows the past date with no next occurrence. The Strava club page requires a login. No public source confirms the ride is running in November. The 'Countdown to Dark' name suggests a fall-only program. Check the Strava club at strava.com/clubs/1000022 (requires joining) or look for a winter Thursday ride on their page."
+  },
+  {
+    "slug": "redwood-city-ca-sports-basement-sunday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "Sports Basement's SB x Strava page lists 'REDWOOD CITY Sundays at 9am' for cycling under their active store ride programs (fetched Nov 20, 2026).",
+    "sources": ["https://www.sportsbasement.com/pages/sb-x-strava-groups"]
+  },
+  {
+    "slug": "rochester-ny-reconnect-rochester-flower-city-feeling-good-wednesday",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-07",
+    "evidence": "Reconnect Rochester's weekly-rides page reads: 'We held our last weekly ride of the year on Wednesday, October 7th 2026. Thank you to all who joined us! We will see you in May 2027!' (fetched Nov 20, 2026).",
+    "sources": ["https://reconnectrochester.org/our-weekly-rides/"],
+    "status_note": "Back in May 2027, the host's site says."
+  }
+]

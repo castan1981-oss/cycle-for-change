@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "lancaster-pa-lbc-tuesday-training-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "No upcoming Tuesday Training Rides in the LBC Meetup ICS feed (10 events, 0 match) or on the Meetup group page. The Nov 17 Meetup listing shows a CoffeeTue morning ride from Bird-in-Hand instead. The training ride last appeared in the feed on Oct 26 for Oct 27, 2026 (5:30 PM EDT from Calvary Church). The ride likely pauses for winter. Check meetup.com/lancaster-bicycle-club/events/ in spring for the return of Tuesday evening training rides."
+  },
+  {
+    "slug": "montclair-nj-montclair-bikery-friday-ladies-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "Montclair Bikery's group rides page states 'Friday Ladies rides leave the shop at 9 am' under 'Rides listed below are held weekly April through October' — confirming the same schedule, now suspended for winter (fetched Nov 20, 2026).",
+    "sources": ["https://www.montclairbikery.com/about/about-the-montclair-bikery-group-rides-pg207.htm"],
+    "status_note": "The Montclair Bikery's rides page says Friday Ladies rides run April through October. The ride is off for winter and resumes in April."
+  },
+  {
+    "slug": "oakland-ca-bike-east-bay-slowkland",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "The watch URL (bikeeastbay.org/event/slowkland-6/) shows 'This event has passed' — that is the September 29 event. No October 27 or November 24 Slowkland events appear on bikeeastbay.org/events/category/group-rides/ for October or November 2026. The ICS feed candidate has 13 events but 0 match. Check bikeeastbay.org/events/ for the next monthly event page and update watch_url to point at it."
+  },
+  {
+    "slug": "ottawa-ca-obc-saturday-gravel-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "The OBC events page (obcrides.ca/events) shows only the Annual General Meeting on Nov 23; no gravel rides are listed for November. The ICS feed carries only 2020 entries. The 2026 calendar ended October 31 as the ride record states (fetched Nov 20, 2026).",
+    "sources": ["https://obcrides.ca/events", "https://ottawabicycleclub.ca/gravel-rides/"],
+    "status_note": "The Ottawa Bicycle Club's 2026 gravel season ended October 31. No 2027 dates are posted on obcrides.ca yet. The ride is expected to resume in spring."
+  },
+  {
+    "slug": "raleigh-nc-green-line-bike-bus",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "The Oaks & Spokes events calendar for November 2026 shows no Green Line Bike Bus events; the ride was described as 'April–October 2026, every Wednesday morning' on its own event listing (fetched Nov 20, 2026).",
+    "sources": ["https://oaksandspokes.org/events/"],
+    "status_note": "The 2026 pilot ran April through October. No 2027 dates are listed on the Oaks & Spokes events page."
+  },
+  {
+    "slug": "scottsdale-az-the-bike-lane-greenbelt-and-canal-rides",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "The Bike Lane AZ Meetup page lists upcoming local Phoenix rides on Nov 29, Dec 5, Dec 13 and Dec 22, 2026, confirming the 2026-2027 season continues; the Oct 10 kick-off event URL used as the watch URL is now a past event (fetched Nov 20, 2026).",
+    "sources": ["https://www.meetup.com/the-bike-lane/"],
+    "changes": {
+      "refresh": {
+        "watch_url": "https://www.meetup.com/the-bike-lane/"
+      }
+    }
+  },
+  {
+    "slug": "sedona-az-vvcc-saturday-voc-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "VVCC Meetup and ICS feed list the Sedona VOC ride for Sat Nov 21, 2026 at 9:00 AM MST from The Collective Sedona; the Oct 24 ride was at 8:00 AM MST — the winter start time is now 9:00 am (fetched Nov 20, 2026).",
+    "sources": ["https://www.meetup.com/vvcc-road-bike-rides/", "https://www.meetup.com/vvcc-road-bike-rides/events/ical/"],
+    "changes": {
+      "schedule": "Every Saturday, 9:00 am, from The Collective Sedona on Arizona 179 in the Village of Oak Creek. The group usually stops at Fire Creek for coffee and food. Start times may shift earlier in summer.",
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00"
+    }
+  },
+  {
+    "slug": "sedona-az-vvcc-thursday-sedona-area-road-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-19",
+    "evidence": "VVCC Meetup shows Sedona Area Rides ran Thu Nov 19, 2026 at 9:00 AM MST from McDonald's Sedona with 2 attendees; earlier events were at 8:00 AM MST — the winter start time is now 9:00 am (fetched Nov 20, 2026).",
+    "sources": ["https://www.meetup.com/vvcc-road-bike-rides/", "https://www.meetup.com/vvcc-road-bike-rides/events/ical/"],
+    "changes": {
+      "schedule": "Every Thursday, 9:00 am, from the McDonald's on W Hwy 89A in West Sedona. The host says the ride usually draws no riders or very few from April to mid October, and 4 to 8 from late October through March. Start times may shift earlier in summer.",
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00"
+    }
+  }
+]

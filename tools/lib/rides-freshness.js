@@ -27,6 +27,8 @@
     banner      one line for unlisted rides (stale / paused / ended), else null
     flags       open red/amber flags newer than the last check
     severity    "red" | "amber" while state is "flagged" (Oct 18, 2026: an amber flag keeps the page's nudge, not its Event markup)
+    undated     why the page may not promise a next date, else null (Nov 19, 2026; see undatedReason):
+                "flagged" | "no-upcoming-date" | "feed-stopped" | "ran-out"
     priority    lower = re-check sooner (see QUEUE)
     reasons     why it's where it is, for the queue
 */
@@ -40,7 +42,8 @@ const POLICY = {
 };
 
 // Queue order: rider reports, red flags, amber flags, visible-and-aging, low confidence, hidden, then the oldest fresh ones.
-const QUEUE = { report: 0, red: 1, amber: 2, due: 3, low: 4, stale: 5, paused: 6, fresh: 7, ended: 9 };
+// Nov 19, 2026: a ride whose next date we had to take down (undated) goes ahead of the other amber flags.
+const QUEUE = { report: 0, red: 1, undated: 1.5, amber: 2, due: 3, low: 4, stale: 5, paused: 6, fresh: 7, ended: 9 };
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const isDate = (s) => typeof s === "string" && /^\d{4}-\d{2}-\d{2}$/.test(s);
@@ -67,7 +70,69 @@ function openReports(health, checkedOn) {
   return reps.filter((r) => r && (!checkedOn || !isDate(r.date) || r.date > checkedOn));
 }
 
+/*
+  Nov 19, 2026 — when a page may not promise a next date.
+
+  msp.bike's maintainer told Robert some of our Twin Cities pages were out of date. Four were showing a "Next ride"
+  for a series that had ended: the Oct 1 check wrote the end date into the schedule text and left the ride active, the
+  watcher raised an amber flag, and an amber flag only ever added a "confirm with the host" line. The date stayed up.
+  The weekly Instagram post already left such rides off (tools/week-kit/week.js, `doubt`); the pages didn't.
+
+  A listed, active ride loses its next date (no "Next ride", no Event markup, no calendar file, nothing on /week or
+  /tonight) while any of these holds, and it says why in the checked block:
+    flagged           an open red flag or a rider's gone/changed report (the grace period keeps it listed, not dated)
+    no-upcoming-date  the watcher saw the host's page date the ride in the past
+    feed-stopped      the host's own calendar feed used to list the ride and hasn't for FEED_QUIET_DAYS, and nobody
+                      has checked it at the source since the feed last showed it
+    ran-out           our own schedule text names an end date (with its year) that has passed, and nobody has
+                      checked it since
+  The ride stays listed. A re-check through tools/rides-apply.js (confirmed, changed, seasonal-break…) clears it.
+*/
+const FEED_QUIET_DAYS = 14;
+const MON = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
+const END_RE = /\b(through|thru|until|ends?(?:\s+(?:on|with))?|ending|last\s+(?:ride|one|date)(?:\s+(?:is|on|was|of\s+this\s+series\s+is))?|finale(?:\s+is)?|runs?\s+to|to)\s+(?:(?:mon|tue|wed|thu|fri|sat|sun)[a-z]*,?\s+)?(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(\d{1,2}),?\s+(20\d\d)\b/gi;
+// the last end date the ride's own schedule text names; a date with no year is not evidence, and "paused until",
+// "back", "returns", "resumes" name a start, not an end
+function seriesEnd(ride) {
+  const text = [ride.schedule, ride.refresh && ride.refresh.notes].filter(Boolean).join(" ");
+  let m, best = null;
+  END_RE.lastIndex = 0;
+  while ((m = END_RE.exec(text))) {
+    const before = text.slice(Math.max(0, m.index - 24), m.index).toLowerCase();
+    if (/(paused|break|off|closed|back|returns?|resumes?|starts?|begins?)\s*$/.test(before)) continue;
+    if (m[1].toLowerCase() === "to" && !/\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2}\s*$/i.test(before)) continue;   // "May 21 to Oct 29, 2026" only
+    const d = `${m[4]}-${String(MON[m[2].toLowerCase().slice(0, 3)]).padStart(2, "0")}-${String(+m[3]).padStart(2, "0")}`;
+    if (isDate(d) && new Date(`${d}T00:00:00Z`).toISOString().slice(0, 10) === d && (!best || d > best)) best = d;
+  }
+  return best;
+}
+function undatedReason(ride, health, today, a) {
+  if (!a.listed || (ride.status || "active") !== "active") return null;
+  const verified = isDate(ride.verified_on) ? ride.verified_on : null;
+  if (a.state === "flagged" && a.severity === "red") return { code: "flagged", say: null };
+  if ((a.flags || []).some((f) => f.code === "event-date-past")) return { code: "no-upcoming-date", say: "The host's page doesn't show an upcoming date for this ride." };
+  const feed = ((health && health.urls) || []).find((u) => u.role === "feed" && u.feed && u.feed.events > 0);
+  if (feed && feed.feed.matched === 0 && health && isDate(health.feed_seen) && daysBetween(health.feed_seen, today) > FEED_QUIET_DAYS && !(verified && verified > health.feed_seen)) {
+    return { code: "feed-stopped", say: `The calendar this ride is posted on hasn't listed it since ${fmt(health.feed_seen, { today })}.` };
+  }
+  const end = seriesEnd(ride);
+  if (end && end < today && !(verified && verified > end)) return { code: "ran-out", say: `The dates the host posted ran through ${fmt(end, { today })}.` };
+  return null;
+}
+
 function assess(ride, health = null, today = todayUTC()) {
+  const out = assessBase(ride, health, today);
+  const u = undatedReason(ride, health, today, out);
+  out.undated = u ? u.code : null;
+  if (u) {
+    if (u.say) out.nudge = `${u.say} We've taken the next date down until we've checked. Confirm with the host before you go.`;
+    if (out.priority > QUEUE.undated) out.priority = QUEUE.undated;
+    out.reasons.push(`undated: ${u.code}`);
+  }
+  return out;
+}
+
+function assessBase(ride, health = null, today = todayUTC()) {
   const status = ride.status || "active";
   const verified = isDate(ride.verified_on) ? ride.verified_on : null;
   const feedSeen = health && isDate(health.feed_seen) && daysBetween(health.feed_seen, today) <= POLICY.FEED_FRESH_DAYS
@@ -174,4 +239,4 @@ function queue(rides, healthBySlug = {}, today = todayUTC()) {
       watch_url: (ride.refresh && ride.refresh.watch_url) || (ride.sources || [])[0] || (ride.links || {}).website || null }));
 }
 
-module.exports = { POLICY, QUEUE, assess, queue, fmt, daysBetween, isDate };
+module.exports = { POLICY, QUEUE, FEED_QUIET_DAYS, assess, queue, seriesEnd, fmt, daysBetween, isDate };

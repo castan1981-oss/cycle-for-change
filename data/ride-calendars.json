@@ -1,0 +1,908 @@
+{
+ "note": "Community calendars that carry rides we list (tools/lib/ride-calendars.js). A ride here links its own page on the calendar by name and gets no ride.ics from us. event is null only when the calendar has no page for the ride. checked is the day that link was opened: for the Nov 20, 2026 rows, the ride’s own last check, when a scout read that source.",
+ "calendars": {
+  "msp.bike": {
+   "name": "msp.bike",
+   "what": "the Twin Cities’ community cycling calendar, kept by riders there",
+   "home": "https://msp.bike/events",
+   "hosts": [
+    "msp.bike"
+   ],
+   "feeds": [
+    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
+   ],
+   "adds": true,
+   "first": true
+  },
+  "shift2bikes.org": {
+   "name": "shift2bikes.org",
+   "home": "https://www.shift2bikes.org/calendar/",
+   "hosts": [
+    "shift2bikes.org"
+   ]
+  },
+  "bikelb.com": {
+   "name": "bikelb.com",
+   "what": "Bike Long Beach’s community calendar",
+   "home": "https://www.bikelb.com/calendar/",
+   "hosts": [
+    "bikelb.com"
+   ],
+   "feeds": [
+    "https://calendar.google.com/calendar/ical/c_ecf405d39e53c2549e061b8e50c9bdd2192bec672418a2e49428428ece8d210a%40group.calendar.google.com/public/basic.ics",
+    "https://calendar.google.com/calendar/ical/c_74a00fbd136eaad93850107be04fb2d309ee442b55f3b2ef908c66a37d0d07e3%40group.calendar.google.com/public/basic.ics"
+   ],
+   "own_hosts": [
+    "Bike Long Beach"
+   ]
+  },
+  "sadlebred.com": {
+   "name": "sadlebred.com",
+   "home": "https://sadlebred.com/rides/",
+   "hosts": [
+    "sadlebred.com"
+   ]
+  },
+  "hbl.org": {
+   "name": "hbl.org",
+   "what": "the Hawaii Bicycling League’s group ride listings",
+   "home": "https://hbl.org/group-ride-listings/",
+   "hosts": [
+    "hbl.org"
+   ]
+  },
+  "weeklyrides.com": {
+   "name": "weeklyrides.com",
+   "home": "https://www.weeklyrides.com/index.php/group-rides",
+   "hosts": [
+    "weeklyrides.com"
+   ]
+  },
+  "everydayrides.com": {
+   "name": "everydayrides.com",
+   "home": "https://everydayrides.com/calendar",
+   "hosts": [
+    "everydayrides.com"
+   ]
+  },
+  "detroitgreenways.org": {
+   "name": "detroitgreenways.org",
+   "what": "a community calendar the Detroit Greenways Coalition keeps",
+   "home": "https://detroitgreenways.org/events-calendar/",
+   "hosts": [
+    "detroitgreenways.org"
+   ],
+   "feeds": [
+    "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics"
+   ]
+  },
+  "dallasbicyclecoalition.org": {
+   "name": "dallasbicyclecoalition.org",
+   "what": "the Dallas Bicycle Coalition’s social rides calendar",
+   "home": "https://dallasbicyclecoalition.org/social-rides/",
+   "hosts": [
+    "dallasbicyclecoalition.org"
+   ],
+   "own_hosts": [
+    "Dallas Bicycle Coalition"
+   ]
+  },
+  "events.queencity.bike": {
+   "name": "events.queencity.bike",
+   "home": "https://events.queencity.bike/",
+   "hosts": [
+    "events.queencity.bike"
+   ]
+  },
+  "chicagogrouprides.com": {
+   "name": "chicagogrouprides.com",
+   "home": "https://chicagogrouprides.com/",
+   "hosts": [
+    "chicagogrouprides.com"
+   ]
+  },
+  "yourgroupride.com": {
+   "name": "yourgroupride.com",
+   "what": "a ride directory",
+   "home": "https://yourgroupride.com/group-rides/",
+   "hosts": [
+    "yourgroupride.com"
+   ]
+  },
+  "longbeachbikerides.com": {
+   "name": "longbeachbikerides.com",
+   "home": "https://www.longbeachbikerides.com/",
+   "hosts": [
+    "longbeachbikerides.com"
+   ],
+   "feeds": [
+    "https://calendar.google.com/calendar/ical/c_ecf405d39e53c2549e061b8e50c9bdd2192bec672418a2e49428428ece8d210a%40group.calendar.google.com/public/basic.ics"
+   ]
+  },
+  "themiamibikescene.com": {
+   "name": "themiamibikescene.com",
+   "home": "https://www.themiamibikescene.com/",
+   "hosts": [
+    "themiamibikescene.com"
+   ]
+  },
+  "wisconsinbikefed.org": {
+   "name": "wisconsinbikefed.org",
+   "what": "the Wisconsin Bike Fed’s event listings",
+   "home": "https://wisconsinbikefed.org/events/",
+   "hosts": [
+    "wisconsinbikefed.org"
+   ]
+  },
+  "austinbikegroups.com": {
+   "name": "austinbikegroups.com",
+   "what": "a directory of Austin bike groups",
+   "home": "https://austinbikegroups.com/",
+   "hosts": [
+    "austinbikegroups.com"
+   ]
+  }
+ },
+ "rides": {
+  "golden-valley-mn-ez-cycle-club-monthly-community-ride": {
+   "calendar": "msp.bike",
+   "event": "https://msp.bike/events/ez-cycle-club-monthly-community-ride-44a7c858",
+   "checked": "2026-11-19"
+  },
+  "minneapolis-mn-all-bodies-on-bikes-mpls-monthly-ride": {
+   "calendar": "msp.bike",
+   "event": null,
+   "checked": "2026-11-19"
+  },
+  "minneapolis-mn-angry-catfish-first-wednesday-social-ride": {
+   "calendar": "msp.bike",
+   "event": "https://msp.bike/events/fall-winter-angry-catfish-social-rides-712e453d",
+   "checked": "2026-11-19"
+  },
+  "minneapolis-mn-angry-catfish-thursday-ftw-social-ride": {
+   "calendar": "msp.bike",
+   "event": "https://msp.bike/events/acf-thursday-ftw-ride-ce93d5dd",
+   "checked": "2026-11-19"
+  },
+  "minneapolis-mn-bonesaw-cycling-collective-tuesday-ride": {
+   "calendar": "msp.bike",
+   "event": "https://msp.bike/events/bonesaw-summer-tuesday-rides-b37ecb12",
+   "checked": "2026-11-19"
+  },
+  "minneapolis-mn-geno-atb-buddy-systems-first-monday": {
+   "calendar": "msp.bike",
+   "event": "https://msp.bike/events/buddy-systems-5d9b15f5",
+   "checked": "2026-11-19"
+  },
+  "minneapolis-mn-perennial-cycle-fall-ftw-saturday-ride": {
+   "calendar": "msp.bike",
+   "event": "https://msp.bike/events/fall-ftw-ride-mill-city-farmers-market-ba6e9154",
+   "checked": "2026-11-19"
+  },
+  "minneapolis-mn-fast-casual-francis-burger-ride": {
+   "calendar": "msp.bike",
+   "event": null,
+   "checked": "2026-11-19"
+  },
+  "minneapolis-mn-behind-bars-fixie-friday": {
+   "calendar": "msp.bike",
+   "event": "https://msp.bike/events/fixie-friday-lake-of-isles-laps-5fab06b5",
+   "checked": "2026-11-19"
+  },
+  "minneapolis-mn-freewheel-wednesday-night-ride": {
+   "calendar": "msp.bike",
+   "event": "https://msp.bike/events/freewheel-mpls-wednesday-night-rides-f60de410",
+   "checked": "2026-11-19"
+  },
+  "minneapolis-mn-geno-atb-sunday-community-grocery-ride": {
+   "calendar": "msp.bike",
+   "event": null,
+   "checked": "2026-11-19"
+  },
+  "minneapolis-mn-joyful-riders-club-monthly-ride": {
+   "calendar": "msp.bike",
+   "event": "https://msp.bike/events/joyful-riders-monthly-ride-fulton-beer-0ae92ff4",
+   "checked": "2026-11-19"
+  },
+  "minneapolis-mn-joyful-riders-dj-dance-ride": {
+   "calendar": "msp.bike",
+   "event": null,
+   "checked": "2026-11-19"
+  },
+  "minneapolis-mn-behind-bars-mellow-morning-ride": {
+   "calendar": "msp.bike",
+   "event": "https://msp.bike/events/mellow-morning-ride-5a8ad751",
+   "checked": "2026-11-19"
+  },
+  "minneapolis-mn-sociable-cider-recovery-wednesday-social-ride": {
+   "calendar": "msp.bike",
+   "event": "https://msp.bike/events/sociable-cider-x-recovery-bike-shop-wednesday-social-rides-d5c0a581",
+   "checked": "2026-11-19"
+  },
+  "minneapolis-mn-utepils-cycling-sunday-rides": {
+   "calendar": "msp.bike",
+   "event": "https://msp.bike/events/utepils-cycling-road-mtb-rides-67830d1e",
+   "checked": "2026-11-19"
+  },
+  "minnetonka-mn-freewheel-bike-monday-gravel-mtb-rides": {
+   "calendar": "msp.bike",
+   "event": "https://msp.bike/events/freewheel-minnetonka-monday-gravel-mtb-rides-2bd228ef",
+   "checked": "2026-11-19"
+  },
+  "beaverton-or-ride-westside-post-happy-hour-casual-ride": {
+   "calendar": "shift2bikes.org",
+   "event": "https://www.shift2bikes.org/calendar/event-13811",
+   "checked": "2026-10-26"
+  },
+  "beaverton-or-ride-westside-sunset-happy-hour-post-ride": {
+   "calendar": "shift2bikes.org",
+   "event": "https://www.shift2bikes.org/calendar/event-14975",
+   "checked": "2026-10-01"
+  },
+  "portland-or-corvidae-bc-monthly-ride": {
+   "calendar": "shift2bikes.org",
+   "event": "https://www.shift2bikes.org/calendar/event-8132",
+   "checked": "2026-10-01"
+  },
+  "portland-or-foster-night-ride-tuesday-night-ride": {
+   "calendar": "shift2bikes.org",
+   "event": "https://www.shift2bikes.org/calendar/event-13844",
+   "checked": "2026-10-01"
+  },
+  "portland-or-friday-night-ride-at-ladds-friday-night-ride": {
+   "calendar": "shift2bikes.org",
+   "event": "https://www.shift2bikes.org/calendar/event-8727",
+   "checked": "2026-10-01"
+  },
+  "portland-or-gay-gravel-group": {
+   "calendar": "shift2bikes.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "portland-or-team-apuggalypse-king-farmers-market-ride": {
+   "calendar": "shift2bikes.org",
+   "event": "https://www.shift2bikes.org/calendar/event-14044",
+   "checked": "2026-10-01"
+  },
+  "portland-or-nopo-night-riders-thursday-night-ride": {
+   "calendar": "shift2bikes.org",
+   "event": "https://www.shift2bikes.org/calendar/event-14549",
+   "checked": "2026-10-01"
+  },
+  "portland-or-overlook-neighborhood-association-overlook-bike-ride": {
+   "calendar": "shift2bikes.org",
+   "event": "https://www.shift2bikes.org/calendar/event-13809",
+   "checked": "2026-10-01"
+  },
+  "portland-or-psu-farmers-market-ride-saturday-market-ride": {
+   "calendar": "shift2bikes.org",
+   "event": "https://www.shift2bikes.org/calendar/event-12379",
+   "checked": "2026-10-01"
+  },
+  "portland-or-ride-safe-pdx-thursdays": {
+   "calendar": "shift2bikes.org",
+   "event": "https://shift2bikes.org/calendar/event-24549",
+   "checked": "2026-10-26"
+  },
+  "portland-or-thursday-night-ride": {
+   "calendar": "shift2bikes.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "tigard-or-tigard-bike-happy-hour-short-ride": {
+   "calendar": "shift2bikes.org",
+   "event": "https://www.shift2bikes.org/calendar/event-13816",
+   "checked": "2026-10-01"
+  },
+  "cerritos-ca-long-beach-riding-club-thursday-squad-ride": {
+   "calendar": "longbeachbikerides.com",
+   "event": null,
+   "checked": "2026-10-02"
+  },
+  "long-beach-ca-bixby-knolls-kidical-mass": {
+   "calendar": "bikelb.com",
+   "event": null,
+   "checked": "2026-10-02"
+  },
+  "long-beach-ca-lb-cannonball-run-taco-tuesday": {
+   "calendar": "longbeachbikerides.com",
+   "event": null,
+   "checked": "2026-10-02"
+  },
+  "long-beach-ca-lbians-queer-wtfnb-ride": {
+   "calendar": "longbeachbikerides.com",
+   "event": null,
+   "checked": "2026-10-02"
+  },
+  "long-beach-ca-northside-long-beach-ride-club": {
+   "calendar": "bikelb.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "long-beach-ca-sports-basement-long-beach-group-ride": {
+   "calendar": "bikelb.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "long-beach-ca-two-wheels-one-love-monday-ride": {
+   "calendar": "bikelb.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "long-beach-ca-vfixii-wednesday-night-ride": {
+   "calendar": "longbeachbikerides.com",
+   "event": null,
+   "checked": "2026-10-02"
+  },
+  "los-angeles-ca-ciclavia-heart-of-la": {
+   "calendar": "bikelb.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "los-angeles-ca-the-peoples-ride-last-friday": {
+   "calendar": "bikelb.com",
+   "event": null,
+   "checked": "2026-10-02"
+  },
+  "atlanta-ga-midweek-roll": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-09-15"
+  },
+  "atlanta-ga-bonafide-motivation-monday": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-09-15"
+  },
+  "avondale-estates-ga-pizza-ride": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "brookhaven-ga-brookhaven-bike-alliance-monday-ride": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-09-15"
+  },
+  "conyers-ga-ctown-bikes-thursday-horse-park-ride": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "conyers-ga-ctown-bikes-tuesday-shop-ride": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "east-cobb-ga-free-flite-saturday-group-road-ride": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "hiram-ga-cycology-thursday-night-group-ride": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "marietta-ga-free-flite-saturday-group-road-ride": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "milton-ga-whitetail-bicycles-saturday-road-ride": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "milton-ga-whitetail-bicycles-thursday-gravel": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "roswell-ga-bike-roswell-saturday-morning-ride": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "roswell-ga-bike-roswell-wednesday-evening-ride": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "senoia-ga-senoia-bicycle-thursday-night-gravel-ride": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "tucker-ga-atlptn-tucker": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "vinings-ga-atlptn-beyond-six-flags": {
+   "calendar": "sadlebred.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "aiea-hi-red-hot-diabetes-riders-pearl-harbor-path": {
+   "calendar": "hbl.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "honolulu-hi-808-lowriders-thursday-night-cruise": {
+   "calendar": "hbl.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "honolulu-hi-outta-bounds-pau-hana-wednesday": {
+   "calendar": "hbl.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "honolulu-hi-red-hot-ladies-roving-ride": {
+   "calendar": "hbl.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "honolulu-hi-red-hot-ladies-thursday-kahala-kailua": {
+   "calendar": "hbl.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "honolulu-hi-hbl-start-the-week-off-right-monday-ride": {
+   "calendar": "hbl.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "honolulu-hi-tradewind-saturday-ride": {
+   "calendar": "hbl.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "honolulu-hi-tradewind-sunday-spin": {
+   "calendar": "hbl.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "honolulu-hi-wolfpack-tuesday-night-ride": {
+   "calendar": "hbl.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "kailua-hi-windward-cycling-team-thursday-night-worlds": {
+   "calendar": "hbl.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "kapolei-hi-sunday-morning-coffee-jam": {
+   "calendar": "hbl.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "charlotte-nc-charlotte-bike-party": {
+   "calendar": "weeklyrides.com",
+   "event": null,
+   "checked": "2026-11-09"
+  },
+  "charlotte-nc-critical-mass": {
+   "calendar": "weeklyrides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "charlotte-nc-charlotte-thrives-queer-ride": {
+   "calendar": "weeklyrides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "charlotte-nc-dirt-divas-tuesday-mtb-ride": {
+   "calendar": "weeklyrides.com",
+   "event": null,
+   "checked": "2026-10-26"
+  },
+  "charlotte-nc-plaza-midwood-tuesday-night-ride": {
+   "calendar": "weeklyrides.com",
+   "event": null,
+   "checked": "2026-10-26"
+  },
+  "charlotte-nc-spoke-easy-wednesday-urban-ride": {
+   "calendar": "weeklyrides.com",
+   "event": null,
+   "checked": "2026-11-09"
+  },
+  "gastonia-nc-ride-a-bike-happy-tuesday-ride": {
+   "calendar": "weeklyrides.com",
+   "event": null,
+   "checked": "2026-11-09"
+  },
+  "rock-hill-sc-rhbc-slow-spokes": {
+   "calendar": "weeklyrides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "rock-hill-sc-rhbc-womens-wednesday-ride": {
+   "calendar": "weeklyrides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "seattle-wa-beer-junction-bike-club": {
+   "calendar": "everydayrides.com",
+   "event": "https://everydayrides.com/event-series/69f900c7dfa02246876a0807-beer-junction-bike-club",
+   "checked": "2026-10-01"
+  },
+  "seattle-wa-cogs-wednesday-evening-ride": {
+   "calendar": "everydayrides.com",
+   "event": "https://everydayrides.com/groups/cyclists-of-greater-seattle-cogs",
+   "checked": "2026-10-01"
+  },
+  "seattle-wa-good-weather-sunday-social": {
+   "calendar": "everydayrides.com",
+   "event": "https://everydayrides.com/event-series/6a6b75d827f0f18ef3e161f0-good-weather-sunday-social",
+   "checked": "2026-10-01"
+  },
+  "seattle-wa-mello-fellos-saturday-ride": {
+   "calendar": "everydayrides.com",
+   "event": "https://everydayrides.com/events/6ab5af7780459b2004507bf3-a-route-to-be-named-but-we-re-riding-on-saturday",
+   "checked": "2026-10-01"
+  },
+  "seattle-wa-moxie-monday": {
+   "calendar": "everydayrides.com",
+   "event": "https://everydayrides.com/groups/moxie-monday",
+   "checked": "2026-10-01"
+  },
+  "seattle-wa-northstar-sunday-service": {
+   "calendar": "everydayrides.com",
+   "event": null,
+   "checked": "2026-09-15"
+  },
+  "seattle-wa-seattle-bike-disco": {
+   "calendar": "everydayrides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "seattle-wa-wtfnb-weekly-with-brevay": {
+   "calendar": "everydayrides.com",
+   "event": "https://everydayrides.com/event-series/690e2a060214ed1d170518b0-brevay-cycling-wtfnb-weekly",
+   "checked": "2026-10-01"
+  },
+  "detroit-mi-pedalup-riderz-friday-night-groove": {
+   "calendar": "detroitgreenways.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "detroit-mi-saturday-night-roll-outs-on-the-joe": {
+   "calendar": "detroitgreenways.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "detroit-mi-soul-roll-detroit-monday-saturday": {
+   "calendar": "detroitgreenways.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "detroit-mi-lane-bangerz-westside-wednesday-ride": {
+   "calendar": "detroitgreenways.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "detroit-mi-where-we-at-wednesdays": {
+   "calendar": "detroitgreenways.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "hamtramck-mi-hamtramck-parks-conservancy-community-bike-rides": {
+   "calendar": "detroitgreenways.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "dallas-tx-community-beer-co-cycling-group-ride": {
+   "calendar": "dallasbicyclecoalition.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "dallas-tx-pull-through-friday-coffee-ride": {
+   "calendar": "dallasbicyclecoalition.org",
+   "event": null,
+   "checked": "2026-11-09"
+  },
+  "dallas-tx-femme-pedale-womens-ride": {
+   "calendar": "dallasbicyclecoalition.org",
+   "event": null,
+   "checked": "2026-11-09"
+  },
+  "dallas-tx-hangover-riders-first-friday-ride": {
+   "calendar": "dallasbicyclecoalition.org",
+   "event": null,
+   "checked": "2026-11-09"
+  },
+  "dallas-tx-make-the-healthy-choice-community-bike-ride": {
+   "calendar": "dallasbicyclecoalition.org",
+   "event": null,
+   "checked": "2026-11-16"
+  },
+  "dallas-tx-monday-moss-mtb-ride": {
+   "calendar": "dallasbicyclecoalition.org",
+   "event": null,
+   "checked": "2026-11-09"
+  },
+  "dallas-tx-shifty-freewheelers-monday-night-ride": {
+   "calendar": "dallasbicyclecoalition.org",
+   "event": null,
+   "checked": "2026-11-09"
+  },
+  "dallas-tx-south-loop-weekend-ride": {
+   "calendar": "dallasbicyclecoalition.org",
+   "event": null,
+   "checked": "2026-09-18"
+  },
+  "dallas-tx-taco-tuesday-with-salty-cats": {
+   "calendar": "dallasbicyclecoalition.org",
+   "event": null,
+   "checked": "2026-11-09"
+  },
+  "dallas-tx-the-meteor-womens-ride": {
+   "calendar": "dallasbicyclecoalition.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "dallas-tx-tits-tuesday-time-in-the-saddle": {
+   "calendar": "dallasbicyclecoalition.org",
+   "event": null,
+   "checked": "2026-11-09"
+  },
+  "dallas-tx-white-rock-ramble": {
+   "calendar": "dallasbicyclecoalition.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "dallas-tx-pull-through-womens-monthly-shop-ride": {
+   "calendar": "dallasbicyclecoalition.org",
+   "event": null,
+   "checked": "2026-11-09"
+  },
+  "dallas-tx-bike-mart-wrl-wednesday-spin-ride": {
+   "calendar": "dallasbicyclecoalition.org",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "covington-ky-ridethecov-wednesday-series": {
+   "calendar": "events.queencity.bike",
+   "event": "https://events.queencity.bike/event/c6s1hoheb0egceahvs9f0q9vvs_20260923T220000Z",
+   "checked": "2026-11-09"
+  },
+  "newport-ky-tuesday-night-worlds-tnw": {
+   "calendar": "events.queencity.bike",
+   "event": "https://events.queencity.bike/event/ltu2svo0dnaoj2uorasu5o162s_20261006T220000Z",
+   "checked": "2026-10-01"
+  },
+  "cincinnati-oh-ride-pleasant-streets": {
+   "calendar": "events.queencity.bike",
+   "event": "https://events.queencity.bike/event/_8oo44gpo68pj0b9o8or32b9k6923eba16gq44b9l6p0jeg9o8ksk8h9m8c_20260919T140000Z",
+   "checked": "2026-11-09"
+  },
+  "cincinnati-oh-ubbc-tuesday-night-ride": {
+   "calendar": "events.queencity.bike",
+   "event": "https://events.queencity.bike/event/tmaunlkaae5r0iegu8v6jto11o_20260915T220000Z",
+   "checked": "2026-10-19"
+  },
+  "chicago-il-chicago-critical-mass": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-09-15"
+  },
+  "chicago-il-chicago-united-saturday-ride": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-09-18"
+  },
+  "chicago-il-evolution-cycling-spiteful-thursday": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "chicago-il-evolution-cycling-sunday-ride": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-10-19"
+  },
+  "chicago-il-femmes-thems-bike-chi-monthly-social-ride": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "chicago-il-half-acre-wednesday-night-for-mortals": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "chicago-il-mtc3-saturday-sunrise-ride": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-10-26"
+  },
+  "chicago-il-mtc3-sunrise-ride": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-10-26"
+  },
+  "chicago-il-southside-critical-mass": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-09-18"
+  },
+  "chicago-il-spidermonkey-saturday-ride": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "chicago-il-streets-calling-bike-club-night-ride": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-09-18"
+  },
+  "chicago-il-turin-tubular-tuesday-trot": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "chicago-il-windy-city-cycling-club-casual-saturday": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "chicago-il-windy-city-cycling-club-sunday-morning": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "chicago-il-xxx-racing-saturday-team-ride": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-09-18"
+  },
+  "matteson-il-mtc3-monday-night-malarkey": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "park-ridge-il-monday-night-social-ride": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "tinley-park-il-mtc3-big-ring": {
+   "calendar": "chicagogrouprides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "fort-collins-co-gravel-people": {
+   "calendar": "yourgroupride.com",
+   "event": "https://yourgroupride.com/fort-collins-gravel-people/",
+   "checked": "2026-09-18"
+  },
+  "fort-collins-co-incycle-mtb-ride": {
+   "calendar": "yourgroupride.com",
+   "event": "https://yourgroupride.com/events/incycle-mtb-ride/",
+   "checked": "2026-10-01"
+  },
+  "fort-collins-co-omba-singletrack-social": {
+   "calendar": "yourgroupride.com",
+   "event": "https://yourgroupride.com/ombc-wednesday-social-rides/",
+   "checked": "2026-10-01"
+  },
+  "fort-collins-co-riobase-mile-ride": {
+   "calendar": "yourgroupride.com",
+   "event": "https://yourgroupride.com/riobasemile-ride/",
+   "checked": "2026-10-01"
+  },
+  "fort-collins-co-saturday-open-ride": {
+   "calendar": "yourgroupride.com",
+   "event": "https://yourgroupride.com/saturday-leaving-from-provelo/",
+   "checked": "2026-10-01"
+  },
+  "fort-collins-co-the-oval": {
+   "calendar": "yourgroupride.com",
+   "event": "https://yourgroupride.com/the-oval/",
+   "checked": "2026-10-01"
+  },
+  "fort-collins-co-wor-wednesday-open-ride": {
+   "calendar": "yourgroupride.com",
+   "event": "https://yourgroupride.com/wor-wednesday-open-ride/",
+   "checked": "2026-10-01"
+  },
+  "long-beach-ca-bike-long-beach-bikes-and-coffee": {
+   "calendar": "longbeachbikerides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "long-beach-ca-queercicles-c-u-next-tuesday": {
+   "calendar": "longbeachbikerides.com",
+   "event": null,
+   "checked": "2026-09-15"
+  },
+  "long-beach-ca-long-beach-bicycling-meetup": {
+   "calendar": "longbeachbikerides.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "coral-gables-fl-ebc-bike305-beginner-ride": {
+   "calendar": "themiamibikescene.com",
+   "event": null,
+   "checked": "2026-09-15"
+  },
+  "coral-gables-fl-everglades-bicycle-club-saturday-ride": {
+   "calendar": "themiamibikescene.com",
+   "event": null,
+   "checked": "2026-11-09"
+  },
+  "fort-lauderdale-fl-critical-mass": {
+   "calendar": "themiamibikescene.com",
+   "event": "https://www.themiamibikescene.com/p/miami-critical-mass-guidelines.html",
+   "checked": "2026-09-15"
+  },
+  "fort-lauderdale-fl-goonie-prowl": {
+   "calendar": "themiamibikescene.com",
+   "event": null,
+   "checked": "2026-09-15"
+  },
+  "miami-fl-miami-critical-mass": {
+   "calendar": "themiamibikescene.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "sunrise-fl-south-broward-wheelers-saturday-ride": {
+   "calendar": "themiamibikescene.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "west-palm-beach-fl-critical-mass": {
+   "calendar": "themiamibikescene.com",
+   "event": "https://www.themiamibikescene.com/p/palm-beach-group-rides.html",
+   "checked": "2026-09-18"
+  },
+  "madison-wi-motorless-motion-taco-ride": {
+   "calendar": "wisconsinbikefed.org",
+   "event": "https://wisconsinbikefed.org/events/motorless-motion-taco-ride/",
+   "checked": "2026-10-01"
+  },
+  "milwaukee-wi-mke-rec-saturday-community-bike-rides": {
+   "calendar": "wisconsinbikefed.org",
+   "event": "https://wisconsinbikefed.org/events/mke-rec-saturday-community-bike-rides-2/",
+   "checked": "2026-10-01"
+  },
+  "milwaukee-wi-mke-rec-thursday-night-rides": {
+   "calendar": "wisconsinbikefed.org",
+   "event": "https://wisconsinbikefed.org/events/mke-rec-thursday-night-rides/",
+   "checked": "2026-10-01"
+  },
+  "milwaukee-wi-mke-rec-tuesday-good-morning-hank": {
+   "calendar": "wisconsinbikefed.org",
+   "event": "https://wisconsinbikefed.org/events/mke-rec-tuesday-rides-good-morning-hank/",
+   "checked": "2026-10-01"
+  },
+  "slinger-wi-bay-view-bicycle-club-saturday-big-cedar-lake": {
+   "calendar": "wisconsinbikefed.org",
+   "event": "https://wisconsinbikefed.org/events/bay-view-bicycle-club-weekly-sat-ride-big-cedar-lake/",
+   "checked": "2026-10-01"
+  },
+  "waukesha-wi-bay-view-bicycle-club-sunday-3-trails-west": {
+   "calendar": "wisconsinbikefed.org",
+   "event": "https://wisconsinbikefed.org/events/bay-view-bicycle-club-weekly-sun-ride-3-trails-west/",
+   "checked": "2026-10-01"
+  },
+  "austin-tx-critical-mass-austin-last-friday": {
+   "calendar": "austinbikegroups.com",
+   "event": null,
+   "checked": "2026-10-01"
+  },
+  "austin-tx-ride-bikes-austin-friday-night-ride": {
+   "calendar": "austinbikegroups.com",
+   "event": null,
+   "checked": "2026-10-02"
+  },
+  "austin-tx-mellow-johnnys-scout-a-route": {
+   "calendar": "austinbikegroups.com",
+   "event": null,
+   "checked": "2026-09-15"
+  }
+ }
+}

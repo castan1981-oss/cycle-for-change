@@ -3811,12 +3811,12 @@
   "discipline": [
    "social"
   ],
-  "schedule": "Every Sunday, wheels down 6:00 am, from the Panera Bread on Germann Rd. The Meetup post lists a 6:00 start every week from Aug 9 through Oct 4, 2026.",
+  "schedule": "Every Sunday, wheels down 7:00 am, from the Panera Bread on Germann Rd. Time may change seasonally; check the Meetup event.",
   "days": [
    "sun"
   ],
-  "time_local": "6:00 am",
-  "start_hhmm": "06:00",
+  "time_local": "7:00 am",
+  "start_hhmm": "07:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": null,
@@ -3859,17 +3859,18 @@
   "sources": [
    "https://www.meetup.com/southeast-chandler-cycling/events/",
    "https://www.meetup.com/southeast-chandler-cycling/events/316764826/",
-   "https://www.meetup.com/southeast-chandler-cycling/events/ical/"
+   "https://www.meetup.com/southeast-chandler-cycling/events/ical/",
+   "https://www.meetup.com/southeast-chandler-cycling/events/317470888/"
   ],
-  "verified_on": "2026-09-30",
-  "last_seen": "2026-09-27",
-  "evidence": "The group's Meetup calendar lists this ride every Sunday from Aug 9 to Sep 27, 2026 and the next one for Sun Oct 4, 2026 at 6:00 am (fetched Sept 30, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "Southeast Chandler Cycling Meetup shows 'Sunday Social Ride. 7:00 wheels down.' for Sun Nov 22, 2026 at 7:00 AM at Panera Bread (formerly Paradise Bakery), 2970 E Germann Rd, Chandler, AZ (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
    "watch_url": "https://www.meetup.com/southeast-chandler-cycling/events/",
    "feed_url": "https://www.meetup.com/southeast-chandler-cycling/events/ical/",
-   "notes": "Meetup posts one Sunday at a time. The title has carried 'new start time 6:00' since at least August, so watch for a winter time change."
+   "notes": "Winter time is 7:00 am; watch for a spring time change back to 6:00 am."
   }
  },
  {
@@ -4074,12 +4075,12 @@
    "road",
    "social"
   ],
-  "schedule": "Every Friday, 8:00 am, from The Neighborhood Coffee Shop in Cottonwood. Two rides leave together: a regular ride of about 20 miles and 2 hours at 10 to 14 mph, and a casual ride of 8 to 10 miles at 8 to 10 mph for people new to group rides. The Meetup series runs to Jan 1, 2027. Meetup lists Oct 2 and Oct 9, 2026.",
+  "schedule": "Every Friday, 9:00 am, from The Neighborhood Coffee Shop in Cottonwood. Two rides leave together: a regular ride of about 20 miles and 2 hours at 10 to 14 mph, and a casual ride of 8 to 10 miles at 8 to 10 mph for people new to group rides. The Meetup series runs to Jan 1, 2027.",
   "days": [
    "fri"
   ],
-  "time_local": "8:00 am",
-  "start_hhmm": "08:00",
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": null,
@@ -4124,11 +4125,12 @@
    "https://www.meetup.com/vvcc-road-bike-rides/events/316528037/",
    "https://www.meetup.com/vvcc-road-bike-rides/events/ical/",
    "https://www.meetup.com/vvcc-road-bike-rides/",
-   "https://vvcc.us/Road-Rides"
+   "https://vvcc.us/Road-Rides",
+   "https://www.meetup.com/vvcc-road-bike-rides/events/317221207/"
   ],
-  "verified_on": "2026-09-30",
-  "last_seen": null,
-  "evidence": "VVCC's Meetup lists this ride as 'Every week on Friday until January 1, 2027', with Fri Oct 2 and Fri Oct 9, 2026 at 8:00 am from The Neighborhood Coffee Shop (fetched Sept 30, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "VVCC's Meetup event page (317221207) states 'Friday, Nov 20 · 9:00 AM to 11:00 AM MST · Every week on Friday until January 1, 2027' from The Neighborhood Coffee Shop; previously 8:00 am (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -4157,12 +4159,12 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Every Wednesday, 8:00 am",
+  "schedule": "Every Wednesday, 9:00 am, from The Neighborhood Coffee Shop in Cottonwood. The current Meetup series runs through December 30, 2026.",
   "days": [
    "wed"
   ],
-  "time_local": "8:00 am",
-  "start_hhmm": "08:00",
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": null,
@@ -4200,11 +4202,12 @@
   "inclusive_focus": [],
   "sources": [
    "https://www.meetup.com/vvcc-road-bike-rides/",
-   "https://www.vvcc.us/Road-Rides"
+   "https://www.vvcc.us/Road-Rides",
+   "https://www.meetup.com/vvcc-road-bike-rides/events/317300119/"
   ],
-  "verified_on": "2026-09-15",
-  "last_seen": null,
-  "evidence": null,
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "VVCC's Meetup event page (317300119) states 'Wednesday, Nov 25 · 9:00 AM to 12:00 PM MST · Every week on Wednesday until December 30, 2026' from The Neighborhood Coffee Shop; previously 8:00 am (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -5832,12 +5835,22 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Every Sunday. The club's ride description says 7:30 am October through March, but its RideWithGPS calendar lists 6:30 am every Sunday from Sept 27 to Nov 8, 2026, so come at 6:30 or check the calendar that week. The calendar names each week's breakfast stop.",
+  "schedule": "Every Sunday, year-round. 7:30 am October through March, 6:30 am April through September. Each week's calendar entry names the breakfast stop.",
   "days": [
    "sun"
   ],
-  "time_local": "6:30 am",
-  "start_hhmm": "06:30",
+  "time_local": "7:30 am",
+  "start_hhmm": "07:30",
+  "start_times": [
+   {
+    "from": "2027-04-01",
+    "start_hhmm": "06:30"
+   },
+   {
+    "from": "2027-10-01",
+    "start_hhmm": "07:30"
+   }
+  ],
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -5878,9 +5891,9 @@
    "https://pmbc.clubexpress.com/content.aspx?page_id=4001&club_id=943467",
    "https://ridewithgps.com/organizations/3053-phoenix-metro-bicycle-club/events"
   ],
-  "verified_on": "2026-10-26",
-  "last_seen": "2026-10-25",
-  "evidence": "PMBC's event calendar lists the Granada Breakfast Ride every Sunday through Oct 25 ('Mi Pueblo'); each entry names a breakfast stop, matching the ride's description; the 'Duplicate -- CANCELED' entry on Oct 31 is a duplicate Halloween party event unrelated to the breakfast ride (fetched Oct 26, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "PMBC's Granada ride page states 6:30 am April through September and 7:30 am October through March; the PMBC calendar lists Granada Breakfast Ride every Sunday in November and December 2026 with named breakfast stops (Hope's Brunch House Nov 1 — weather cancellation that day, NY Bagels & Bialys Nov 8, Sip Coffee Nov 15, The Henry 44th St Nov 22, Moon Valley Cafe Nov 29, through December) (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -6057,7 +6070,7 @@
  },
  {
   "slug": "phoenix-az-valley-epic-rides-night-rider-trail-100",
-  "name": "Night Rider Series @ Trail 100",
+  "name": "Night Rider Series - North Phoenix",
   "name_en": null,
   "kind": "group-ride",
   "status": "active",
@@ -6075,12 +6088,12 @@
   "discipline": [
    "mtb"
   ],
-  "schedule": "Wednesdays, 6:30 pm, on Trail 100, in a Meetup series that ends Oct 27, 2026: Oct 14 is off, so the last ride of this series is Oct 21. The meet spot can change; check the Meetup event.",
+  "schedule": "Every Wednesday, 6:00 pm, at Trail 100 (1418 E Sunnyside Dr). Series runs until November 3, 2027. The meet spot can change; check the Meetup event.",
   "days": [
    "wed"
   ],
-  "time_local": "6:30 pm",
-  "start_hhmm": "18:30",
+  "time_local": "6:00 pm",
+  "start_hhmm": "18:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -6118,17 +6131,18 @@
   "inclusive_focus": [],
   "sources": [
    "https://www.meetup.com/valley-epic-rides/events/ical/",
-   "https://www.meetup.com/valley-epic-rides/events/316509061/"
+   "https://www.meetup.com/valley-epic-rides/events/316509061/",
+   "https://www.meetup.com/valley-epic-rides/events/317307933/"
   ],
-  "verified_on": "2026-09-30",
-  "last_seen": "2026-09-30",
-  "evidence": "Valley Epic Rides' Meetup shows the Night Rider series at 6:30 pm from 1418 E Sunnyside Dr, with Oct 14 cancelled and the series ending Oct 27, 2026 (read Sept 30, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "Valley Epic Rides Meetup shows 'Night Rider Series - North Phoenix (Updated meet location)' every Wednesday at 6:00 PM until November 3, 2027, at 1418 E Sunnyside Dr, Phoenix, AZ; next ride November 25, 2026 (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
    "watch_url": "https://www.meetup.com/valley-epic-rides/events/",
    "feed_url": "https://www.meetup.com/valley-epic-rides/events/ical/",
-   "notes": "The current Meetup series runs to Oct 27, 2026; watch for the next one."
+   "notes": "Current series event: meetup.com/valley-epic-rides/events/317307933/; runs through Nov 3, 2027. Check the event for any location changes."
   }
  },
  {
@@ -7713,13 +7727,13 @@
    "https://www.meetup.com/the-bike-lane/",
    "https://www.awildadventure.com/the-bike-lane-az"
   ],
-  "verified_on": "2026-10-26",
-  "last_seen": "2026-10-10",
-  "evidence": "The group's Meetup ICS feed lists a local Phoenix ride for Sat Oct 31, 2026 at 11:00 AM from Baskin-Robbins, Scottsdale (Arizona Canal to OHSO); the 2026–2027 season kick-off ran Oct 10, 2026 (fetched Oct 26, 2026). The schedule-text flag was the Oct 10 kick-off event's route description updating, not a day or time change to the series.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "The Bike Lane AZ Meetup page lists upcoming local Phoenix rides on Nov 29, Dec 5, Dec 13 and Dec 22, 2026, confirming the 2026-2027 season continues; the Oct 10 kick-off event URL used as the watch URL is now a past event (fetched Nov 20, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "meetup",
-   "watch_url": "https://www.meetup.com/the-bike-lane/events/316264005/",
+   "watch_url": "https://www.meetup.com/the-bike-lane/",
    "feed_url": "https://www.meetup.com/the-bike-lane/events/ical/",
    "notes": "The ICS shows only the next few events, and the local rides are mixed with the group's paid trips (Oceanside, Amsterdam, Scotland). Filter to events in the Phoenix area. The ICS has no LOCATION lines."
   }
@@ -8297,12 +8311,12 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Every Saturday, 8:00 am, from The Collective Sedona on Arizona 179 in the Village of Oak Creek. Meetup lists Sat Oct 3, 2026. The group usually stops at Fire Creek for coffee and food.",
+  "schedule": "Every Saturday, 9:00 am, from The Collective Sedona on Arizona 179 in the Village of Oak Creek. The group usually stops at Fire Creek for coffee and food. Start times may shift earlier in summer.",
   "days": [
    "sat"
   ],
-  "time_local": "8:00 am",
-  "start_hhmm": "08:00",
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": null,
@@ -8348,9 +8362,9 @@
    "https://www.meetup.com/vvcc-road-bike-rides/",
    "https://vvcc.us/Road-Rides"
   ],
-  "verified_on": "2026-09-30",
-  "last_seen": null,
-  "evidence": "VVCC's Meetup lists this ride as 'Every week on Saturday', with Sat Oct 3, 2026 at 8:00 am from The Collective Sedona (fetched Sept 30, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "VVCC Meetup and ICS feed list the Sedona VOC ride for Sat Nov 21, 2026 at 9:00 AM MST from The Collective Sedona; the Oct 24 ride was at 8:00 AM MST — the winter start time is now 9:00 am (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -8457,12 +8471,12 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Every Thursday, 8:00 am, from the McDonald's on W Hwy 89A in West Sedona. Meetup lists Oct 1 and Oct 8, 2026. The host says the ride usually draws no riders or very few from April to mid October, and 4 to 8 from late October through March.",
+  "schedule": "Every Thursday, 9:00 am, from the McDonald's on W Hwy 89A in West Sedona. The host says the ride usually draws no riders or very few from April to mid October, and 4 to 8 from late October through March. Start times may shift earlier in summer.",
   "days": [
    "thu"
   ],
-  "time_local": "8:00 am",
-  "start_hhmm": "08:00",
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": null,
@@ -8506,9 +8520,9 @@
    "https://www.meetup.com/vvcc-road-bike-rides/",
    "https://vvcc.us/Road-Rides"
   ],
-  "verified_on": "2026-09-30",
-  "last_seen": null,
-  "evidence": "VVCC's Meetup lists this ride as 'Every week on Thursday', with Thu Oct 1 and Thu Oct 8, 2026 at 8:00 am from McDonald's Sedona (fetched Sept 30, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-19",
+  "evidence": "VVCC Meetup shows Sedona Area Rides ran Thu Nov 19, 2026 at 9:00 AM MST from McDonald's Sedona with 2 attendees; earlier events were at 8:00 AM MST — the winter start time is now 9:00 am (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -11911,9 +11925,9 @@
    "https://marincyclists.com/content.aspx?page_id=4001&club_id=525458",
    "https://marincyclists.com/content.aspx?page_id=4091&club_id=525458&item_id=3058093"
   ],
-  "verified_on": "2026-11-16",
-  "last_seen": "2026-11-16",
-  "evidence": "Marin Cyclists' calendar (fetched Nov 16, 2026) lists China Camp Loop at 9:00 am on Nov 4, 11, 18, 25 and Dec 2; the CANCELED label near the ride dates is for Fridays on Paradise (a different ride on a different day).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "Marin Cyclists' calendar (fetched Nov 20, 2026) lists China Camp Loop at 9:00 am on Nov 18, 25 and Dec 2; the 'CANCELED' label nearby is for 'Fridays on Paradise' (a different ride on a different day).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -14903,9 +14917,9 @@
    "https://www.lightningvelo.org/content.aspx?page_id=4001&club_id=333987",
    "https://www.meetup.com/Lightning-Velo-Cycling-Club/events/ical/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-09-27",
-  "evidence": "Lightning Velo's Meetup feed lists the Saturday C-Group (36 miles, 15 to 18 mph) at 7:30 am for Oct 3, 10 and 17, 2026 (events edited Sept 13 to 27), while the club's home page says \"During standard time we start at 8am\" and that every ride starts from 6460 E Marina Dr since May 10, 2026 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "Lightning Velo's Meetup ICS feed lists the C-Group Saturday ride at 7:30 am for Nov 21, Nov 28, Dec 5, Dec 12, Dec 19, Dec 26, 2026 and Jan 2, 2027; the club's website confirms 8:00 am in standard time, consistent with the existing start_times entry (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -17046,9 +17060,9 @@
    "https://www.bcccsb.org/Ride-Calendar",
    "https://www.bcccsb.org/Ride-Start-Locations-Join-Us-Page"
   ],
-  "verified_on": "2026-11-16",
-  "last_seen": "2026-11-13",
-  "evidence": "BCCC's November 2026 calendar at bcccsb.org/Ride-Calendar lists 'Thursday Social Ride: Marina del Rey-Westchester' every Thursday through December; the 'CANCELLED' elsewhere in the same calendar refers only to 'Thursday Gravel' on Nov 13, a separate ride (fetched Nov 16, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "BCCC's calendar at bcccsb.org/Ride-Calendar lists 'Thursday Social Ride: Marina del Rey-Westchester' on Nov 7, 14, 20, 27 and Dec 4 and 11 at 9:00 am from the Manhattan Beach Pier; the Weekly Activities page confirms the 9 am time; the 'CANCELLED' entries in the same calendar refer to Thursday Gravel on specific dates, a different ride (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -19932,9 +19946,9 @@
    "https://www.bcccsb.org/Ride-Calendar",
    "https://www.bcccsb.org/Ride-Start-Locations-Join-Us-Page"
   ],
-  "verified_on": "2026-11-16",
+  "verified_on": "2026-11-20",
   "last_seen": "2026-11-15",
-  "evidence": "BCCC's November 2026 calendar at bcccsb.org/Ride-Calendar lists 'Sunday FunDay Ride Up to Whale Watch (PV Interpretive Center)' on Nov 8, 15, 22 and 29; Nov 1 has the Jackson Market ride instead, matching the existing record (fetched Nov 16, 2026).",
+  "evidence": "BCCC's calendar at bcccsb.org/Ride-Calendar lists 'Sunday FunDay Ride Up to Whale Watch (PV Interpretive Center)' on Nov 8, 15, 22 and 29 at 9:00 am from Captain Kidd's Plaza; Nov 1 and Dec 6 have the Jackson Market ride instead on the first Sundays, matching the existing record (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -20088,9 +20102,9 @@
    "https://www.strava.com/clubs/555296/group_events/3540631717152196660",
    "https://www.sportsbasement.com/pages/sb-x-strava-groups"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Sports Basement Redwood City's Strava event page shows Sun Oct 4, 2026: meet 9:00, roll 9:30, front doors, Alpine climb loop of 31 miles or 25 without the climb, casual no-drop (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "Sports Basement's SB x Strava page lists 'REDWOOD CITY Sundays at 9am' for cycling under their active store ride programs (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "strava-club",
@@ -22648,9 +22662,9 @@
    "https://marincyclists.com/content.aspx?page_id=4001&club_id=525458",
    "https://marincyclists.com/content.aspx?page_id=4091&club_id=525458&item_id=3014905"
   ],
-  "verified_on": "2026-11-16",
+  "verified_on": "2026-11-20",
   "last_seen": "2026-11-15",
-  "evidence": "Marin Cyclists' November 2026 calendar lists 'Easy Like Sunday Morning--aka. Red Whale--Participant Led/Leaderless' on Nov 1, 8, 15, 22 and 29; the 'CANCELED' in the same calendar refers to 'Fridays on Paradise' on Nov 13, a different ride on a different day (fetched Nov 16, 2026).",
+  "evidence": "Marin Cyclists' November 2026 calendar at marincyclists.com lists 'Easy Like Sunday Morning--aka. Red Whale--Participant Led/Leaderless' on Nov 1, 8, 15, 22 and 29; the 'CANCELED' in the same calendar refers to 'Fridays on Paradise' on Nov 13, a different ride on a different day (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -22801,9 +22815,9 @@
    "http://www.fastrackbicycles.com/rides",
    "https://fastrackbicycles.com/"
   ],
-  "verified_on": "2026-11-16",
+  "verified_on": "2026-11-20",
   "last_seen": "2026-10-10",
-  "evidence": "Fastrack's site (now at fastrackbicycles.com) lists the Saturday Lake Ride at 8:00 am from the Dolphin Fountain at Stearns Wharf; a stock-list entry dated Oct 10, 2026 on the page confirms it is actively maintained (fetched Nov 16, 2026).",
+  "evidence": "fastrackbicycles.com lists 'Saturday 8:00 am · Saturday lake ride · Meet at the Dolphin Fountain in front of Stearns Wharf'; the shop's stock list is dated Oct 10, 2026 (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -23200,9 +23214,9 @@
    "https://www.sc3.club/club-calendar",
    "https://calendar.google.com/calendar/ical/c_4bba064d65c47d3eaa6e9f4908753a4733f5ef5ffdaff2591999643cd97f42e9%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-09-27",
-  "evidence": "The club's public calendar lists the Sunday D ride at 10:00 am on Sept 20 and 27 and on Oct 4, 11, 18 and 25 and Nov 8, 2026 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "The club's public Google Calendar lists Sunday D rides at 10:00 am for Nov 22, Nov 29, Dec 6 and Dec 20, 2026, plus a Saturday D ride on Dec 12 at 10:30 am (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "ics",
@@ -24378,9 +24392,9 @@
   "name": "BikeVC Brew Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "No upcoming dates on the Meetup group as of Nov 20, 2026. BikeVC says the ride is seasonal, running spring through fall. Back in spring, the host says.",
+  "status_since": "2026-11-20",
   "city": "Ventura",
   "neighborhood": "Westside",
   "region": "California",
@@ -24450,9 +24464,9 @@
    "https://www.bikeventura.org/community-rides/",
    "https://www.meetup.com/bikeventura/events/ical/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "BikeVC's Meetup feed lists the Brew Ride for Sun Oct 11, 2026 at 1:00 pm, and its Brew Ride page says second Sundays, 1:00 pm from the Ventura Bike Hub, spring through fall (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-11",
+  "evidence": "BikeVC's brew ride page says 'seasonal (Spring, Summer and Fall)'; the Meetup group ICS shows no upcoming Brew Ride dates — the last in the feed was Oct 11, 2026 (checked Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -24798,12 +24812,12 @@
    "social",
    "mixed"
   ],
-  "schedule": "Once a month on a Sunday morning: Oct 25 at 9:00 am, Nov 22 at 8:00 am.",
+  "schedule": "Once a month on a Sunday morning; time and location posted on each Meetup event. November 2026: 8:00 am.",
   "days": [
    "sun"
   ],
-  "time_local": "9:00 am",
-  "start_hhmm": "09:00",
+  "time_local": "8:00 am",
+  "start_hhmm": "08:00",
   "frequency": "monthly",
   "monthly_rule": null,
   "dates": [
@@ -24819,8 +24833,8 @@
   "season": "year-round",
   "season_months": null,
   "start_location": {
-   "name": "Posted on each Meetup event; October's ride is built around coffee next to the Ventura Bike HUB",
-   "address": "490 N Ventura Ave, Ventura, CA 93001"
+   "name": "Varies per event; posted on each Meetup event. November 2026: S Saticoy Ave & N Bank Rd Bike Path Entrance",
+   "address": "S Saticoy Ave & N Bank Rd, Ventura, CA"
   },
   "distance_km": null,
   "distance_miles": null,
@@ -24853,11 +24867,12 @@
   ],
   "sources": [
    "https://www.meetup.com/bikeventura/events/ical/",
-   "https://www.meetup.com/bikeventura/events/315818896/"
+   "https://www.meetup.com/bikeventura/events/315818896/",
+   "https://www.meetup.com/bikeventura/events/315818928/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-07-24",
-  "evidence": "BikeVC's Meetup feed lists the Sunday Morning Coffee Ride for Sun Oct 25, 2026 at 9:00 am and Sun Nov 22 at 8:00 am (events posted July 24, 2026), each described as a monthly easy, no-drop ride (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "BikeVC's Meetup ICS feed lists the Sunday Morning Coffee Ride for Sun Nov 22, 2026 at 8:00 am, an intermediate no-drop ride of about 10 miles out and back to Rabalais in Santa Paula (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -24965,12 +24980,12 @@
    "social",
    "mixed"
   ],
-  "schedule": "One Saturday evening a month. Gather on the Ventura Pier one hour before sunset (Oct 17 at 5:20 pm; Nov 14 is also listed).",
+  "schedule": "One Saturday evening a month. Gather on the Ventura Pier one hour before sunset (Dec 19, 2026 at 4:00 pm; Jan 9, 2027 at 4:00 pm).",
   "days": [
    "sat"
   ],
   "time_local": null,
-  "start_hhmm": "17:20",
+  "start_hhmm": "16:00",
   "frequency": "monthly",
   "monthly_rule": null,
   "dates": [
@@ -25018,11 +25033,12 @@
   "inclusive_focus": [],
   "sources": [
    "https://www.meetup.com/bikeventura/events/ical/",
-   "https://www.meetup.com/bikeventura/events/316241059/"
+   "https://www.meetup.com/bikeventura/events/316241059/",
+   "https://www.meetup.com/bikeventura/events/317106323/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-08-23",
-  "evidence": "BikeVC's Meetup feed lists the Ventura Electric Light Parade for Sat Oct 17, 2026 at 5:20 pm and Sat Nov 14 (events posted Aug 17 and Aug 23, 2026), all gathering on the Ventura Pier (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "BikeVC's Meetup ICS feed lists the Ventura Electric Light Parade for Sat Dec 19, 2026 at 4:00 pm PST and Sat Jan 9, 2027 at 4:00 pm PST, both at Ventura Pier (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -25993,9 +26009,9 @@
   "name": "RAR Front Range See You Next Tuesday Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The ride is listed as seasonal (April–October). The club's Google Calendar shows the recurring second-Tuesday event with no end date but no November or later instances; the RAR Front Range website lists no group rides for fall or winter. Back in April.",
+  "status_since": "2026-11-20",
   "city": "Colorado Springs",
   "neighborhood": null,
   "region": "Colorado",
@@ -26073,9 +26089,9 @@
    "https://rarfrontrange.com/calendar.html",
    "https://calendar.google.com/calendar/ical/e91b2be3bc199aa52fd012f5b87b263feda9b09ae19000da16fca398021f9680%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-08-20",
-  "evidence": "RAR Front Range's public Google calendar (fetched Oct 1, 2026) carries 'See U Next Tuesday Ride' as a monthly 2nd-Tuesday event at 6:00 pm at Building Three Coffee, 2727 N Cascade Ave, no end date, last edited Aug 20, 2026. Next one: Tue Oct 13.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-13",
+  "evidence": "RAR Front Range's Google Calendar ICS shows the See U Next Tuesday Ride as a recurring second-Tuesday monthly event with no end date; the RAR Front Range website and calendar page list no SYNT events for fall or winter 2026 — the only upcoming event is Boulder Cranksgiving on Nov 21, 2026 (fetched Nov 20, 2026).",
   "confidence": "low",
   "refresh": {
    "method": "static-page",
@@ -26352,19 +26368,22 @@
   "discipline": [
    "gravel"
   ],
-  "schedule": "Every Tuesday, 9:00 am, through Oct 27, 2026. A different start each week; the leader posts a Ride with GPS route with the start the weekend before (Oct 6: Calhan Baseball Park).",
+  "schedule": "Every Tuesday, 9:00 am from spring through late October; 10:00 am from December through early April. Brief gap in November. Start location varies each week; the leader posts the route on Meetup the weekend before.",
   "days": [
    "tue"
   ],
-  "time_local": "9:00 am",
-  "start_hhmm": "09:00",
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "start_times": [
+   {
+    "from": "2026-12-01",
+    "start_hhmm": "10:00"
+   }
+  ],
   "frequency": "weekly",
   "monthly_rule": null,
-  "season": "spring–Oct",
-  "season_months": {
-   "start": 4,
-   "end": 10
-  },
+  "season": "year-round",
+  "season_months": null,
   "start_location": {
    "name": "Varies weekly; Oct 6 start is Calhan Baseball Park",
    "address": null
@@ -26400,17 +26419,18 @@
   ],
   "sources": [
    "https://www.meetup.com/colorado-springs-cycling-club/events/316681836/",
-   "https://www.meetup.com/colorado-springs-cycling-club/events/ical/"
+   "https://www.meetup.com/colorado-springs-cycling-club/events/ical/",
+   "https://www.meetup.com/colorado-springs-cycling-club/events/317245994/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Colorado Springs Cycling Club's Meetup event for Tue Oct 6, 2026 says 'Every week on Tuesday until October 27, 2026', 9:00 am from Calhan Baseball Park; the feed lists Oct 6 and Oct 13 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "CSCC Meetup event 317245994 (fetched Nov 20, 2026) lists 'Tuesday Morning Gravel, Every week on Tuesday until April 4, 2027' at 10:00 AM MST from Homestead Ranch Park, Peyton, CO; the time shifted from 9:00 AM to 10:00 AM and the winter series now runs December 1 through April 4.",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
    "watch_url": "https://www.meetup.com/colorado-springs-cycling-club/events/",
    "feed_url": "https://www.meetup.com/colorado-springs-cycling-club/events/ical/",
-   "notes": "Series ends Oct 27."
+   "notes": "Winter series Dec–Apr at 10:00 am, spring/fall series May–Oct at 9:00 am, brief November gap."
   }
  },
  {
@@ -26433,12 +26453,18 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Wednesdays at 9:00 am, from Legacy Loop Plaza unless the event says otherwise. The leader posts the route and start the weekend before.",
+  "schedule": "Wednesdays at 9:00 am (summer and fall) or 10:00 am (winter), from Legacy Loop Plaza unless the event says otherwise. The leader posts the route and start location on Meetup the weekend before.",
   "days": [
    "wed"
   ],
-  "time_local": "9:00 am",
-  "start_hhmm": "09:00",
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
+  "start_times": [
+   {
+    "from": "2026-11-25",
+    "start_hhmm": "10:00"
+   }
+  ],
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -26478,11 +26504,12 @@
   ],
   "sources": [
    "https://www.meetup.com/colorado-springs-cycling-club/events/316787575/",
-   "https://www.meetup.com/colorado-springs-cycling-club/events/ical/"
+   "https://www.meetup.com/colorado-springs-cycling-club/events/ical/",
+   "https://www.meetup.com/colorado-springs-cycling-club/events/317301427/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Colorado Springs Cycling Club's Meetup lists the Wednesday Morning Ride for Wed Oct 7, 2026 at 9:00 am from Legacy Loop Plaza, 1800 Recreation Way (fetched Oct 1, 2026). Later Wednesdays are not posted yet.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "CSCC Meetup event 317301427 (fetched Nov 20, 2026) lists 'Wednesday Morning Ride, Every week on Wednesday until April 27, 2027' at 10:00 AM MST from Legacy Loop Plaza; the time shifted from 9:00 AM to 10:00 AM for the winter series starting November 25, 2026.",
   "confidence": "medium",
   "refresh": {
    "method": "meetup",
@@ -26995,9 +27022,9 @@
   "name": "Tuesday Night Worlds (A, B and C rides)",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Pedal Durango listed the last 2026 date as Oct 27; the ride runs spring to the fall time change. Check pedaldurango.com in spring for 2027 dates.",
+  "status_since": "2026-11-20",
   "city": "Durango",
   "neighborhood": null,
   "region": "Colorado",
@@ -27058,11 +27085,12 @@
    "https://pedaldurango.com/event/tuesday-night-worlds-the-a-ride-132/",
    "https://pedaldurango.com/event/tuesday-night-worlds-the-b-ride-132/",
    "https://pedaldurango.com/event/tuesday-night-worlds-the-c-ride-98/",
-   "https://pedaldurango.com/events/list/?ical=1"
+   "https://pedaldurango.com/events/list/?ical=1",
+   "https://pedaldurango.com/events/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Pedal Durango's events feed lists Tuesday Night Worlds A, B and C rides at 5:00 pm on Oct 6, 13, 20 and 27, 2026, with start addresses (fetched Oct 1, 2026). Pedal Durango says it only passes the information on.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-27",
+  "evidence": "Pedal Durango's events calendar lists no Tuesday Night Worlds after Oct 27, 2026; the schedule runs spring to the fall time change and the fall change was Nov 1, 2026. No 2027 dates posted yet (fetched Nov 20, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -27801,9 +27829,9 @@
   "name": "RMCC Saturday Fall Road Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The fall series ended when snow and cold arrived; RMCC is now running weekend winter road rides instead. The fall road ride typically resumes in fall.",
+  "status_since": "2026-11-20",
   "city": "Golden",
   "neighborhood": null,
   "region": "Colorado",
@@ -27861,9 +27889,9 @@
    "https://www.meetup.com/rocky-mountain-cycling-club-rmcc/",
    "https://www.meetup.com/rocky-mountain-cycling-club-rmcc/events/ical/"
   ],
-  "verified_on": "2026-10-02",
+  "verified_on": "2026-11-20",
   "last_seen": "2026-10-02",
-  "evidence": "RMCC's Meetup group lists the Golden Fall Road Ride for Sat Oct 3 and the Fall Road Ride (North) for Sat Oct 10, 2026, both 8:45 am for a 9:00 departure, and the Oct 3 post says weekly rides run until snow stops them (fetched Oct 2, 2026).",
+  "evidence": "RMCC's Meetup ICS feed lists Northside Winter Road Ride (Sat Nov 21, 9:45 AM) and Southeast Winter Ride (Sat Nov 28, 9:45 AM) but no Fall Road Ride; the Meetup page says 'through the winter months we are doing a mix of rides on the north and south side of the metro area on weekends' (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -27874,7 +27902,7 @@
  },
  {
   "slug": "golden-co-rmcc-thursday-night-climbing",
-  "name": "RMCC Thursday Night Climbing",
+  "name": "RMCC Tuesday Night Climbing After Dark!",
   "name_en": null,
   "kind": "group-ride",
   "status": "active",
@@ -27892,18 +27920,18 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Every Thursday through Oct 29, 2026: group up at 5:25 pm, roll at 5:30 pm, from Beverly Heights Park at the base of Lookout Mountain.",
+  "schedule": "Every Tuesday, Nov 24, 2026 through March 22, 2027: group up 5:25 pm, roll 5:30 pm, from Beverly Heights Park. The Sunset Series runs Thursdays in spring and summer.",
   "days": [
-   "thu"
+   "tue"
   ],
   "time_local": "5:30 pm",
   "start_hhmm": "17:30",
   "frequency": "weekly",
   "monthly_rule": null,
-  "season": "spring–Oct",
+  "season": "Nov–Mar",
   "season_months": {
-   "start": 4,
-   "end": 10
+   "start": 11,
+   "end": 3
   },
   "start_location": {
    "name": "Beverly Heights Park, base of Lookout Mountain",
@@ -27938,17 +27966,18 @@
   "inclusive_focus": [],
   "sources": [
    "https://www.meetup.com/rocky-mountain-cycling-club-rmcc/events/316521000/",
-   "https://www.meetup.com/rocky-mountain-cycling-club-rmcc/events/ical/"
+   "https://www.meetup.com/rocky-mountain-cycling-club-rmcc/events/ical/",
+   "https://www.meetup.com/rocky-mountain-cycling-club-rmcc/events/317292675/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "RMCC's Meetup event for Thu Oct 1, 2026 says 'Every week on Thursday until October 29, 2026', 5:30 pm from Beverly Heights Park; the feed lists Oct 1, 8, 15, 22 and 29 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "RMCC's Meetup event page (317292675) states 'Tuesday, Nov 24 · 5:30 PM to 7:30 PM MST · Every week on Tuesday until March 22, 2027' from Beverly Heights Park, 2151 Lookout Mountain Rd, Golden, CO; the Thursday Sunset Series ended Oct 29, 2026 (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
-   "watch_url": "https://www.meetup.com/rocky-mountain-cycling-club-rmcc/events/",
+   "watch_url": "https://www.meetup.com/rocky-mountain-cycling-club-rmcc/events/317292675/",
    "feed_url": "https://www.meetup.com/rocky-mountain-cycling-club-rmcc/events/ical/",
-   "notes": "Series ends Oct 29; the club posts the next season in spring."
+   "notes": "Tuesday After Dark series runs Nov–Mar; the Thursday Sunset Series runs spring–Oct. The club posts each season's series separately."
   }
  },
  {
@@ -28031,9 +28060,9 @@
   "name": "Crappy Road Bikes Group Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The Meetup series ran through November 3, 2026 as listed. Denver Outdoor Adventures now shows 0 upcoming ride events (checked Nov 20, 2026); no 2027 season has been posted. Check meetup.com/denver-outdoor-fun/ in spring 2027.",
+  "status_since": "2026-11-20",
   "city": "Greenwood Village",
   "neighborhood": "Denver Tech Center",
   "region": "Colorado",
@@ -28092,11 +28121,12 @@
   "inclusive_focus": [],
   "sources": [
    "https://www.meetup.com/denver-outdoor-fun/events/316520888/",
-   "https://www.meetup.com/denver-outdoor-fun/events/ical/"
+   "https://www.meetup.com/denver-outdoor-fun/events/ical/",
+   "https://www.meetup.com/denver-outdoor-fun/events/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Denver Outdoor Adventures' Meetup event page for Thu Oct 1, 2026 says 'Every week on Thursday until November 3, 2026', 5:15 pm at Illegal Pete's DTC; the feed lists Oct 1, 8 and 15 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-03",
+  "evidence": "Denver Outdoor Adventures Meetup events page and ICS feed (fetched Nov 20, 2026) show 0 upcoming bike rides; only Friday Night Social entries appear in the feed through January 2027, and no Thursday Crappy Road Bikes events have been posted for 2027.",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -31809,9 +31839,9 @@
   "name": "Village Idiots Wednesday Night Worlds",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Off for the season; the ride runs March through October. No 2027 start date posted yet.",
+  "status_since": "2026-11-20",
   "city": "Lakewood Ranch",
   "neighborhood": null,
   "region": "Florida",
@@ -31876,9 +31906,9 @@
    "https://calendar.google.com/calendar/ical/viccboard%40gmail.com/public/basic.ics",
    "https://villageidiotscycling.com/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-08-26",
-  "evidence": "VICC's public Google Calendar (fetched Oct 1, 2026) has Wednesday Night Worlds weekly at 6:00 pm from Aug 26 through Oct 28, 2026 (rule ends Oct 29 UTC), leaving the north parking lot of Lakewood Ranch Main Street, 101 Boardwalk Loop; the club's home page (2026) also gives 6:00 PM from Lakewood Ranch Main Street. The site had Village Bikes as the start.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-28",
+  "evidence": "VICC's website (fetched Nov 20, 2026) describes Wednesday Night Worlds at 6:00 PM from Lakewood Ranch Main Street and mentions an End of Season Party; the Google Calendar ICS that listed the ride through Oct 28, 2026 shows no upcoming Wednesday Night Worlds events.",
   "confidence": "high",
   "refresh": {
    "method": "ics",
@@ -35832,17 +35862,19 @@
   "inclusive_focus": [],
   "sources": [
    "https://www.rambo-mtb.org/events/2026/10/2/freeflite-group-ride-at-big-creek",
-   "https://www.rambo-mtb.org/rides"
+   "https://www.rambo-mtb.org/rides",
+   "https://www.rambo-mtb.org/events",
+   "https://www.rambo-mtb.org/events/2026/12/4/freeflite-group-ride"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-09-04",
-  "evidence": "RAMBO's events calendar lists the ride for Fri Oct 2, Nov 6 and Dec 4, 2026, 6:00 to 8:00 pm, and shows the Sept 4 ride just before (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "RAMBO's events page and the Dec 4 event page both list the Freeflite Group Ride for Fri Dec 4, 2026, 6:00 to 8:00 pm at Big Creek Park, 1600 Old Alabama Rd, Roswell, GA — same day, time and location as before (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
-   "watch_url": "https://www.rambo-mtb.org/events/2026/10/2/freeflite-group-ride-at-big-creek",
+   "watch_url": "https://www.rambo-mtb.org/events/2026/12/4/freeflite-group-ride",
    "feed_url": null,
-   "notes": "Squarespace events page; each event has its own date and an ICS link. The recurring ride keeps landing on the first Friday."
+   "notes": "Squarespace events page; each event has its own URL. The ride lands on the first Friday of each month. Update watch_url to the current month's event after each re-check."
   }
  },
  {
@@ -38108,9 +38140,9 @@
   "name": "Prairie Burner Weekly Gravel Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Off for the winter. The host's page says the ride returns when the time changes in spring.",
+  "status_since": "2026-11-20",
   "city": "Grinnell",
   "neighborhood": null,
   "region": "Iowa",
@@ -38176,9 +38208,9 @@
    "https://www.imaginegrinnell.org/",
    "https://www.imaginegrinnell.org/events/weekly-prairie-burner-rides"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-09-15",
-  "evidence": "Imagine Grinnell's events page (fetched Oct 1, 2026) lists Weekly Prairie Burner Rides every Tuesday, Mar 10 to Oct 27, 2026, leave 5:30 pm from Bikes To You, 20-25 miles; BikeIowa's recurring listing shows an instance on Sep 15, 2026.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-27",
+  "evidence": "Imagine Grinnell's event page (fetched Nov 20, 2026) shows the Prairie Burner weekly rides ran March 10 to October 27, 2026, and says 'The Prairie Burner weekly gravel rides return when the time changes'; no 2027 dates are posted.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -38192,9 +38224,9 @@
   "name": "Thursday Night Gravel, Gravel Curious Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Off for the winter. The host's page says rides begin in April.",
+  "status_since": "2026-11-20",
   "city": "Grinnell",
   "neighborhood": null,
   "region": "Iowa",
@@ -38257,9 +38289,9 @@
    "https://www.imaginegrinnell.org/events/thursday-night-gravel-gravel-curious-ride",
    "https://www.imaginegrinnell.org/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Imagine Grinnell's events page (fetched Oct 1, 2026) lists the Thursday Night Gravel Gravel Curious ride from Apr 2 to Oct 29, 2026, leave 5:30 pm from 921 Broad St, about 13-15 miles, with an ICS link.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-29",
+  "evidence": "Imagine Grinnell's event page (fetched Nov 20, 2026) shows the Thursday Night Gravel Gravel Curious Ride ran April 2 to October 29, 2026, and says 'Thursday night gravel rides begin in April'; no 2027 dates are posted.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -41294,9 +41326,9 @@
   "name": "Specialized Chicago Fulton Market Sunday SMR",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Back in April. The ride's posted season is April to late October. The current watch URL points to a 2024 launch event rather than the SMR series; a person will need to locate the correct SMR Strava event when the season resumes.",
+  "status_since": "2026-11-20",
   "city": "Chicago",
   "neighborhood": "Fulton Market",
   "region": "Illinois",
@@ -41355,11 +41387,12 @@
   "inclusive_focus": [],
   "sources": [
    "https://www.strava.com/clubs/1060518",
-   "https://www.strava.com/clubs/1060518/group_events/1650834"
+   "https://www.strava.com/clubs/1060518/group_events/1650834",
+   "https://www.eventbrite.co.uk/o/specialized-fulton-market-75605367663"
   ],
-  "verified_on": "2026-10-02",
-  "last_seen": "2026-09-19",
-  "evidence": "The Specialized Chicago Strava club's Aug 18 ride-schedule post (edited Sept 10) lists SMR on Oct 11, 18 and 25; a Sept 19 post cancels that Sunday's SMR for weather; the Apr 7 post gives 7:15 am sharp and the Fulton Market start (fetched Oct 2, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-25",
+  "evidence": "The ride's posted season runs April to late October; the previous check confirmed Oct 25, 2026 as the final SMR of the season, and the Specialized Fulton Market Eventbrite page shows no events in November 2026 (fetched Nov 20, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "strava-club",
@@ -42070,9 +42103,9 @@
    "https://elmhurstbc.clubexpress.com/content.aspx?page_id=4001&club_id=695056&action=cira&vm=Future&sif=0",
    "https://www.elmhurstbicycling.org/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Elmhurst Bicycle Club's ClubExpress calendar lists the Monday and Thursday 9:00 AM morning ride from the Whole Foods lot on West Ave, about 35 miles at 13-15 mph, dated through Nov 5, 2026 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "Elmhurst Bicycle Club ClubExpress calendar lists Jeff's Morning Ride (35 mi, 13-15 mph) on Mondays and Thursdays at 9:00 AM from the Whole Foods lot on West Ave, Elmhurst, with upcoming dates Nov 26 (Thu) and Nov 30 (Mon) and Dec 3 (Thu), 2026 (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -42422,9 +42455,9 @@
   "name": "Bicycle Club of Lake County Bikes and 'Bucks Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Off for the season. BCLC's website says rides resume June 13, 2027.",
+  "status_since": "2026-11-20",
   "city": "Gurnee",
   "neighborhood": null,
   "region": "Illinois",
@@ -42488,11 +42521,12 @@
   ],
   "sources": [
    "https://www.meetup.com/bicycle-club-of-lake-county/events/ical/",
-   "https://www.meetup.com/bicycle-club-of-lake-county/events/316552589/"
+   "https://www.meetup.com/bicycle-club-of-lake-county/events/316552589/",
+   "https://www.bikebclc.com"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Bicycle Club of Lake County's Meetup lists Bikes and 'Bucks Ride every Sunday 9:00 AM from the Gurnee Starbucks, 40 miles, no drop, through Oct 25, 2026 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-25",
+  "evidence": "BCLC's website (fetched Nov 20, 2026) says 'See You on June 13, 2027'; the Meetup ICS shows Saturday gravel and Monday night rides through December but no Sunday Bikes and Bucks rides; the season ran through Oct 25, 2026.",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -42506,9 +42540,9 @@
   "name": "Bicycle Club of Lake County Tuesday Night Social Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Off for the season. BCLC's website says rides resume June 13, 2027.",
+  "status_since": "2026-11-20",
   "city": "Lake Bluff",
   "neighborhood": null,
   "region": "Illinois",
@@ -42570,11 +42604,12 @@
   ],
   "sources": [
    "https://www.meetup.com/bicycle-club-of-lake-county/events/ical/",
-   "https://www.meetup.com/bicycle-club-of-lake-county/events/316587785/"
+   "https://www.meetup.com/bicycle-club-of-lake-county/events/316587785/",
+   "https://www.bikebclc.com"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Bicycle Club of Lake County's Meetup lists the Tuesday Night Road Ride, C pace about 15 mph for about 15 miles, social no drop, every Tuesday 5:30 PM from the Lake Bluff Metra station until Oct 27, 2026 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-27",
+  "evidence": "BCLC's website (fetched Nov 20, 2026) says 'See You on June 13, 2027'; the Meetup ICS shows Saturday gravel and Monday night rides through December but no Tuesday Lake Bluff rides; the season ran through Oct 27, 2026.",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -42905,9 +42940,9 @@
   "name": "Let's Ride! Wednesday Night Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The Wednesday Night Ride on the North Branch Trail ended for the season on Oct 28, 2026. The ride runs April through October; it resumes in spring.",
+  "status_since": "2026-11-20",
   "city": "Morton Grove",
   "neighborhood": null,
   "region": "Illinois",
@@ -42976,9 +43011,9 @@
    "https://www.meetup.com/lets-ride-ages-40-fun-fit-social-riding/events/316718264/",
    "https://www.meetup.com/lets-ride-ages-40-fun-fit-social-riding/events/316718708/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "The group's Meetup feed lists Weekly Wednesday Night Let's Ride! on Oct 7, 14, 21 and 28, 2026: roll 5:15 pm through Oct 14, 5:00 pm from Oct 21; Oct 28 is marked the very last ride of the year (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-28",
+  "evidence": "The Let's Ride! Meetup feed shows only one upcoming event, a Sunday Social Ride on Nov 22, 2026 — no further Wednesday Night rides. The Oct 28 Meetup event was labelled 'the very last ride of the year.' The group is active with other events; this ride runs April through October (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -43721,9 +43756,9 @@
   "name": "V-Park Weekend Rides",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "V-Park Weekend Rides run April through October; the Springfield Bicycle Club's website states the season is typically April–October. No rides are listed after October 31, 2026. Back in spring.",
+  "status_since": "2026-11-20",
   "city": "Springfield",
   "neighborhood": null,
   "region": "Illinois",
@@ -43784,11 +43819,12 @@
    "no-drop"
   ],
   "sources": [
-   "https://calendar.google.com/calendar/ical/c_70b758d11239668809108c39c0097096d58a9a40dde8370dafa80e9c2119eeb5%40group.calendar.google.com/public/basic.ics"
+   "https://calendar.google.com/calendar/ical/c_70b758d11239668809108c39c0097096d58a9a40dde8370dafa80e9c2119eeb5%40group.calendar.google.com/public/basic.ics",
+   "https://www.springfieldbicycleclub.com/ride-with-us/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "The Springfield Bicycle Club's public Google Calendar lists V-Park Fast Rides at 8:00 AM Saturdays through Oct 31 and Sundays through Nov 1, 2026, both no drop (read Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-31",
+  "evidence": "Springfield Bicycle Club ICS feed shows V-Park Fast Rides on Oct 4 and Oct 31, 2026 as the last entries, with no V-Park events listed after October; the club's website states the season is 'typically April–October' (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "ics",
@@ -43802,9 +43838,9 @@
   "name": "Wednesday Show & Go Social Ride from Springfield Beer",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The Wednesday Show & Go Social Ride ended for the 2026 season on Oct 28. The club runs rides typically April through October; no 2027 Wednesday ride dates are posted yet.",
+  "status_since": "2026-11-20",
   "city": "Springfield",
   "neighborhood": null,
   "region": "Illinois",
@@ -43865,9 +43901,9 @@
    "https://calendar.google.com/calendar/ical/c_70b758d11239668809108c39c0097096d58a9a40dde8370dafa80e9c2119eeb5%40group.calendar.google.com/public/basic.ics",
    "https://www.springfieldbicycleclub.com/ride-with-us/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "The Springfield Bicycle Club's public Google Calendar lists the Show & Go Social Ride from Springfield Beer every Wednesday at 5:30 pm through Oct 28, 2026, and the Slow C version through Oct 7 (read Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-28",
+  "evidence": "The Springfield Bicycle Club's Google Calendar shows no Wednesday Show & Go events after Oct 28, 2026; the club's ride page describes the season as 'typically April–October.' Other club events continue through the winter (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "ics",
@@ -47123,9 +47159,9 @@
   "name": "Tuesday Night Worlds (TNW)",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Ended the 2026 season Oct 27 with Biketoberfest; no 2027 dates are posted on the Queen City Bike calendar.",
+  "status_since": "2026-11-20",
   "city": "Newport",
   "neighborhood": null,
   "region": "Kentucky",
@@ -47183,9 +47219,9 @@
    "https://events.queencity.bike/event/ltu2svo0dnaoj2uorasu5o162s_20261006T220000Z",
    "https://events.queencity.bike/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Queen City Bike's calendar lists Tuesday Night Worlds for Oct 6, 13, 20 and 27, 2026 from the Newport lot; the event text says Oct 13 is the last regular ride (read Oct 1, 2026). The calendar prints times in UTC: 10:00 PM UTC is 6:00 pm Eastern.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-27",
+  "evidence": "Queen City Bike's calendar lists Oct 27, 2026 (Biketoberfest) as the last TNW event of the season; no events appear after that date and no 2027 start date is posted (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -48908,7 +48944,7 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Tuesdays at 6:00 am in season (listed every Tuesday from May 5 to Oct 6, 2026). Rain calls go up by 10 pm the night before and again at 5 am.",
+  "schedule": "Tuesdays at 6:00 am, May through early December. Rain calls by 10 pm the night before and again at 5 am.",
   "days": [
    "tue"
   ],
@@ -48916,10 +48952,10 @@
   "start_hhmm": "06:00",
   "frequency": "weekly",
   "monthly_rule": null,
-  "season": "seasonal (listed May 5 to Oct 6, 2026)",
+  "season": null,
   "season_months": {
    "start": 5,
-   "end": 10
+   "end": 12
   },
   "start_location": {
    "name": "Minuteman Bikeway trailhead, Alewife",
@@ -48961,9 +48997,9 @@
    "https://crw.org/events",
    "https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "CRW's calendar and Google feed list Speedy Croissant Women/NB Ride on Tue Sept 29 and Tue Oct 6, 2026 at 6:00 am from the Alewife trailhead; Oct 6 is the last date listed (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "CRW's events calendar lists Speedy Croissant Women/NB Ride on Tuesdays Nov 4, 11, 17, 25 and Dec 1, 2026 at 6:00 am, running past the Oct 6 end date in the record (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "ics",
@@ -49038,9 +49074,9 @@
    "https://crw.org/event-6814253",
    "https://calendar.google.com/calendar/ical/calendar%40crw.org/public/basic.ics"
   ],
-  "verified_on": "2026-11-16",
-  "last_seen": "2026-11-16",
-  "evidence": "CRW's Google Calendar ICS feed (fetched Nov 16, 2026) lists Wednesday Wheelers on Nov 18, 25, Dec 2, 9, 16, 23 and 30, all at 10:00 am EST; the CANCELED entries near Wednesday Wheelers on the events page apply to other rides.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "CRW's events page (fetched Nov 20, 2026) lists Wednesday Wheelers on Nov 18, 25 and Dec 2; the ICS feed shows the ride continuing through Dec 30; 'CANCELED' and 'last ride' labels nearby refer to other CRW rides, not this one.",
   "confidence": "high",
   "refresh": {
    "method": "ics",
@@ -51171,12 +51207,12 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Thursdays, 7:30 am",
+  "schedule": "Every Thursday, meet 8:00 am, roll 8:30 am",
   "days": [
    "thu"
   ],
-  "time_local": "7:30 am",
-  "start_hhmm": "07:30",
+  "time_local": "8:30 am",
+  "start_hhmm": "08:30",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -51219,9 +51255,9 @@
    "https://www.meetup.com/jafe-cycling-bike-shop/",
    "https://www.meetup.com/jafe-cycling-bike-shop/events/316741049/"
   ],
-  "verified_on": "2026-10-19",
-  "last_seen": "2026-10-19",
-  "evidence": "Jafe Cycling's Meetup event for Thu Oct 22, 2026 says 7:30 AM to 9:30 AM EDT, every week on Thursday until January 15, 2027, at Jafe Cycling, LLC, 10250 Martin Luther King Jr Hwy, Bowie, MD; the group's feed lists Oct 22, Oct 29, Nov 5 and Nov 12 (fetched Oct 19, 2026). Start pin moved Oct 19, 2026 from the city pin to the shop, using the venue coordinates in the host's own Meetup listing (38.95644, -76.82842).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-19",
+  "evidence": "Jafe Cycling's Meetup shows the Fastchix Thursday Morning Ride for Thu Nov 26, 2026 at 8:30 AM EST with '** New Start times** Meetup at 8a Rolling at 8:30a'; the Dec 3 and past Nov 19 listings show the same new time (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -53591,9 +53627,9 @@
   "name": "Friday Night Groove",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The Detroit Greenways Community Calendar ran Friday Night Groove through October 30, 2026 as listed; no November through April entries exist in the calendar (checked Nov 20, 2026). Previous seasons started in late May. Check detroitgreenways.org/events-calendar/ or PedalUp Riderz social media in spring 2027.",
+  "status_since": "2026-11-20",
   "city": "Detroit",
   "neighborhood": null,
   "region": "Michigan",
@@ -53651,9 +53687,9 @@
    "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
    "https://detroitgreenways.org/events-calendar/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "The Detroit Greenways Coalition's community calendar, edited in May 2026, lists Friday Night Groove (Pedal Up Riderz) Fridays from Eastern Market Shed 5 through Oct 30, 2026 (read Oct 1, 2026). The 2023 entry for the ride gives meet 6:30, roll 7:00.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-30",
+  "evidence": "Detroit Greenways Community Calendar ICS (fetched Nov 20, 2026) has no Friday Night Groove entries after October 30, 2026; previous seasons started in late May.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -53987,9 +54023,9 @@
   "name": "Soul Roll Detroit",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The Detroit Greenways Community Calendar ran Soul Roll Detroit through October 31, 2026 as listed; no November through April entries exist in the calendar (checked Nov 20, 2026). Previous seasons started in mid-May. Check detroitgreenways.org/events-calendar/ or the Soul Roll Detroit Facebook group in spring 2027.",
+  "status_since": "2026-11-20",
   "city": "Detroit",
   "neighborhood": null,
   "region": "Michigan",
@@ -54052,9 +54088,9 @@
    "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
    "https://detroitgreenways.org/events-calendar/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "The Detroit Greenways Coalition's community calendar, with entries edited in April 2026, lists Soul Roll Detroit Mondays and Saturdays at 7:00 pm from Eastern Market Shed 5 through Oct 31, 2026 (read Oct 1, 2026). The coalition says it does not host these rides.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-31",
+  "evidence": "Detroit Greenways Community Calendar ICS (fetched Nov 20, 2026) has no Soul Roll Detroit entries after October 31, 2026; previous seasons (2023, 2025, 2026) started in mid-May.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -55013,9 +55049,9 @@
   "name": "PEDAL Tuesday Queer Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The ride schedule says through mid-September; PEDAL's page has moved to winter programming (starting Dec 7, 2026) with no 2027 queer-ride dates posted yet.",
+  "status_since": "2026-11-20",
   "city": "Portage",
   "neighborhood": null,
   "region": "Michigan",
@@ -55076,9 +55112,9 @@
    "https://www.pedalbicycle.com/articles/events.-sweet-sweet-events-pg213.htm",
    "http://pedalbicycle.com/"
   ],
-  "verified_on": "2026-09-15",
-  "last_seen": null,
-  "evidence": null,
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "PEDAL Bicycle's events page (fetched Nov 20, 2026) now lists winter training programming starting December 7, 2026; the Tuesday Queer Ride is not listed and no 2027 season dates are posted.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -55337,9 +55373,9 @@
   "name": "EZ Cycle Club Monthly Community Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The host called Oct 6, 2026 the last monthly ride of the season.",
+  "status_since": "2026-11-19",
   "city": "Golden Valley",
   "neighborhood": "Theodore Wirth Park",
   "region": "Minnesota",
@@ -55410,9 +55446,9 @@
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "https://msp.bike/events/ez-cycle-club-monthly-community-ride-44a7c858"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-05-29",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited May 29, 2026) lists the ride on the first Tuesday monthly from June 2 through Oct 6, 2026, social meet 6:30 PM, ride out 7:15, no-drop.",
+  "verified_on": "2026-11-19",
+  "last_seen": "2026-10-06",
+  "evidence": "msp.bike's page for the ride (read Nov 19, 2026) dates it Tue Oct 6, 2026 and calls it the last monthly community ride of the 2026 season; msp.bike's upcoming list shows no later date.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -55426,9 +55462,9 @@
   "name": "All Bodies on Bikes MPLS Monthly Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "No date is posted after the Oct 5, 2026 ride. Dates go up one at a time.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": null,
   "region": "Minnesota",
@@ -55490,9 +55526,9 @@
    "https://msp.bike/groups",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-02",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-18",
-  "evidence": "The msp.bike public calendar lists the ABOB Fall Colors Ride for Mon Oct 5, 2026 (meet 6:00 pm, roll 6:30, 11.8 miles, Angry Catfish Bicycle) and a postponed ABOB bikepacking trip dated Sep 18, 2026; earlier 2026 entries are Jul 7 and Aug 3 (fetched Oct 2, 2026).",
+  "evidence": "msp.bike's groups page and its events list (both read Nov 19, 2026) show no upcoming All Bodies on Bikes Minneapolis ride.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -55521,7 +55557,7 @@
   "discipline": [
    "social"
   ],
-  "schedule": "First Wednesday of the month, 6:00 pm from Angry Catfish. The first one is Oct 7, 2026; the summer weekly Wednesday series ended Sept 30.",
+  "schedule": "First Wednesday of the month, October through April: roll 6:00 pm from Angry Catfish (meet from 5:45 pm). Lights required.",
   "days": [
    "wed"
   ],
@@ -55534,10 +55570,10 @@
     "day": "wed"
    }
   ],
-  "season": "Oct–spring",
+  "season": "Oct–Apr",
   "season_months": {
    "start": 10,
-   "end": 5
+   "end": 4
   },
   "start_location": {
    "name": "Angry Catfish Bicycle + Coffee Bar",
@@ -55579,13 +55615,13 @@
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "https://msp.bike/events/fall-winter-angry-catfish-social-rides-712e453d"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-10",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited Sept 10, 2026) says Wednesday social rides move to the first Wednesday of the month, first on Oct 7, beginning at Angry Catfish at 6pm, tagged nodrop.",
+  "evidence": "msp.bike's page for the series (read Nov 19, 2026) shows the next ride on Wed Dec 2, 2026, meet 5:45 pm, roll 6:00 pm, on the first Wednesday of every month, October through April, no-drop, lights required.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
-   "watch_url": "https://msp.bike/events",
+   "watch_url": "https://msp.bike/events/fall-winter-angry-catfish-social-rides-712e453d",
    "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "notes": "Monthly first-Wednesday series; the shop's Discord has the details each month."
   }
@@ -55596,7 +55632,7 @@
   "name_en": null,
   "kind": "group-ride",
   "status": "seasonal-break",
-  "status_note": "The calendar's weekly Thursday FTW series stops after Sept 24, 2026 and no fall dates are posted. Angry Catfish's own page (2025 text) is out of date, and the ACF Discord has current word. Check before going.",
+  "status_note": "The weekly Thursday series last ran Sept 24, 2026. Over the winter the shop lists a monthly FTW ride on the second Thursday instead.",
   "status_since": "2026-09-25",
   "city": "Minneapolis",
   "neighborhood": "Standish / Hiawatha",
@@ -55662,11 +55698,12 @@
    "https://msp.bike/events",
    "https://www.angrycatfishbicycle.com/",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
-   "https://msp.bike/events/acf-thursday-ftw-ride-ce93d5dd"
+   "https://msp.bike/events/acf-thursday-ftw-ride-ce93d5dd",
+   "https://msp.bike/events/acf-ftw-group-ride-40bdd645"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-24",
-  "evidence": "The msp.bike Twin Cities calendar feed (fetched Oct 1, 2026) has the ACF Thursday FTW Ride as a weekly series, 6:00 pm (meet 5:30), that ends Sept 24, 2026; nothing for October. The ACF Wednesday social moves to the first Wednesday monthly from Oct 7.",
+  "evidence": "msp.bike's page for the weekly ride (read Nov 19, 2026) shows no date after Thu Sept 24, 2026; a separate msp.bike entry, Angry Catfish FTW Group Rides, lists a monthly no-drop ride on the second Thursday, next Dec 10, 2026, meet 5:45 pm, roll 6:00 pm.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -55680,9 +55717,9 @@
   "name": "Bonesaw Cycling Collective Summer Tuesday Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "This winter's dates aren't posted yet. Last winter's series ran the last Tuesday of the month, November through March.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": "Phillips",
   "region": "Minnesota",
@@ -55752,9 +55789,9 @@
    "https://bonesawcycling.bike/events",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-29",
-  "evidence": "Bonesaw's own events page (fetched Oct 1, 2026) lists the monthly Tuesday social ride, last Tuesday April–September, meet 6:30 pm at CEPRO Park, roll 7:00, plus a winter series last Tuesday November–March, meet 6:45 at Sabo Bridge; the msp.bike calendar shows the Sept 29 ride postponed to Tue Oct 6, 6:45 pm meet, 7:00 roll.",
+  "evidence": "Bonesaw's events page (read Nov 19, 2026) lists no Tuesday ride after Sept 29, 2026; its only upcoming event is MPLS Cranksgiving on Nov 22. msp.bike's page for the summer Tuesday series is marked postponed.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -55768,9 +55805,9 @@
   "name": "Buddy Systems Neighborhood Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The series ran on the first Monday of the month through Nov 2, 2026. No later date is posted.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": "Gold Medal Park",
   "region": "Minnesota",
@@ -55836,11 +55873,12 @@
   "inclusive_focus": [],
   "sources": [
    "https://msp.bike/groups",
-   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
+   "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
+   "https://msp.bike/events/buddy-systems-5d9b15f5"
   ],
-  "verified_on": "2026-10-02",
-  "last_seen": "2026-09-07",
-  "evidence": "The msp.bike public calendar lists Buddy Systems at Gold Medal Park on the first Monday of each month (Oct 5 at 6:30 PM on the groups page; entries last edited June 23, 2026), after a first gathering on Mon June 1 at 6:30 PM (fetched Oct 2, 2026).",
+  "verified_on": "2026-11-19",
+  "last_seen": "2026-11-02",
+  "evidence": "msp.bike's page for Buddy Systems (read Nov 19, 2026) is dated Mon Nov 2, 2026, 6:30 pm at Gold Medal Park, with no later date; msp.bike's upcoming list shows none.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -55854,9 +55892,9 @@
   "name": "Fall FTW Ride Series at Perennial Cycle",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The series ran every Saturday in October 2026. No later series is posted.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": "Uptown",
   "region": "Minnesota",
@@ -55920,9 +55958,9 @@
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "https://msp.bike/events/fall-ftw-ride-mill-city-farmers-market-ba6e9154"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-09-17",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited Sept 17, 2026) lists the Fall FTW Ride Series every Saturday through Oct 31, meet 10 AM, rollout 10:15, tagged no-drop and FTW. Perennial's own site is behind a bot wall.",
+  "verified_on": "2026-11-19",
+  "last_seen": "2026-10-31",
+  "evidence": "msp.bike's page for the Fall FTW Ride Series (read Nov 19, 2026) says every Saturday in October and shows its last date, Sat Oct 31, 2026; msp.bike's upcoming list shows no later one.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -55936,9 +55974,9 @@
   "name": "Fast Casual x Francis Burger Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The 2026 series ran April through October. The last ride on the calendar was Oct 20.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": null,
   "region": "Minnesota",
@@ -56006,9 +56044,9 @@
    "https://msp.bike/events",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-06-15",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited June 15, 2026) lists the ride on the third Tuesday monthly through Oct 20, 2026, meet 6:15 PM, roll 6:30, 14-16 mph, tagged drop.",
+  "evidence": "msp.bike's events list (read Nov 19, 2026) shows no Fast Casual x Francis Burger ride among upcoming events; the calendar series ended with Oct 20, 2026.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -56022,9 +56060,9 @@
   "name": "Fixie Friday",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "No Fixie Friday is on the calendar right now. The last one listed was Nov 6, 2026.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": "Northeast",
   "region": "Minnesota",
@@ -56085,9 +56123,9 @@
    "https://msp.bike/events",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-25",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) lists Fixie Friday, meet 6:45 pm, roll 7:00 from Behind Bars, on Sept 25, Oct 2, Oct 30 and Nov 6, 2026 (fixed gear only, signed waiver); Oct 9, 16 and 23 are not posted yet.",
+  "evidence": "msp.bike's events list (read Nov 19, 2026) shows no Fixie Friday among upcoming events; its page for the ride is dated Fri Oct 2, 2026, and the calendar feed last listed one for Nov 6.",
   "confidence": "medium",
   "refresh": {
    "method": "calendar-page",
@@ -56102,7 +56140,7 @@
   "name_en": null,
   "kind": "group-ride",
   "status": "seasonal-break",
-  "status_note": "The calendar's weekly Wednesday series ended Sept 16, 2026 and nothing is posted for fall. It should come back in spring; Freewheel's Strava club and Instagram would say.",
+  "status_note": "The weekly series ran spring through September. No date is posted now.",
   "status_since": "2026-09-17",
   "city": "Minneapolis",
   "neighborhood": "Marcy-Holmes",
@@ -56167,9 +56205,9 @@
    "https://msp.bike/events/freewheel-mpls-wednesday-night-rides-f60de410",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-16",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) carries Freewheel MPLS Wednesday Night Rides as a weekly 6 pm series from May 6 that ends Sept 16, 2026; no October dates.",
+  "evidence": "msp.bike's page for the ride (read Nov 19, 2026) shows no date after September 2026; msp.bike's upcoming list shows no Wednesday night ride from Freewheel Minneapolis.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -56183,9 +56221,9 @@
   "name": "Geno ATB Community Grocery Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The calendar's dates ended Oct 18, 2026. No later ride is posted.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": null,
   "region": "Minnesota",
@@ -56252,9 +56290,9 @@
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "https://msp.bike/events/atb-grocery-ride-84c96838"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-10-01",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited Oct 1, 2026) lists the Geno ATB Community Grocery Ride every Sunday 10:00 AM from Sept 27 through Oct 18, 2026, tagged nodrop.",
+  "evidence": "msp.bike's events list (read Nov 19, 2026) shows no ATB grocery ride among upcoming events; the ride's own page on msp.bike would not load that day.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -56326,7 +56364,9 @@
    "facebook": "https://www.facebook.com/thejoyfulriders/",
    "strava": null,
    "meetup": null,
-   "other": []
+   "other": [
+    "https://msp.bike/events/joyful-riders-monthly-ride-fulton-beer-0ae92ff4"
+   ]
   },
   "inclusive_focus": [
    "no-drop",
@@ -56340,13 +56380,13 @@
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "https://msp.bike/events/joyful-riders-monthly-ride-fulton-beer-0ae92ff4"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-05",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) lists the Joyful Riders monthly ride at Fulton Beer Taproom on the second Thursday, next Thu Oct 8, 2026 at 6:00 pm (spooky theme), and a Nov 27 Joyfulton social.",
+  "evidence": "msp.bike's page for the ride (read Nov 19, 2026) shows the next one on Thu Dec 10, 2026, 6:00 pm at Fulton Beer Taproom, on the second Thursday of every month, no-drop, 8 to 10 mph.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
-   "watch_url": "https://msp.bike/events/2gllle8uet9h6uckcgmvb4iics_20260514T230000Z",
+   "watch_url": "https://msp.bike/events/joyful-riders-monthly-ride-fulton-beer-0ae92ff4",
    "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "notes": null
   }
@@ -56356,9 +56396,9 @@
   "name": "Joyful Riders DJ Dance Ride at Perennial Cycle",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The last DJ ride on the calendar was Oct 25, 2026. Next season isn't posted.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": "Uptown",
   "region": "Minnesota",
@@ -56424,11 +56464,12 @@
    "https://msp.bike/events/7afc66ijljklug3nl7c6vpddba",
    "https://www.mprnews.org/story/2026/07/10/joyful-riders-club-spins-up-beats-for-minneapolis-bike-dance-party",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
-   "https://msp.bike/events"
+   "https://msp.bike/events",
+   "https://msp.bike/events/joyful-riders-club-spooky-parade-dj-ride-e2b74e2b"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-16",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) lists 'Bikes. Beats. Bonfire.', the final DJ Ride of the 2026 season, on Sat Oct 3 (meet 6 pm, roll 6:30 from Perennial Cycle); earlier 2026 rides were Jun 6 and Jul 11 from Perennial and Aug 22 from Lowertown in St. Paul. Perennial's own page is behind a bot wall.",
+  "evidence": "msp.bike's groups page (read Nov 19, 2026) lists one Joyful Riders DJ ride, the Spooky Parade DJ Ride on Sun Oct 25, 2026, and no later date; msp.bike's upcoming list shows none.",
   "confidence": "medium",
   "refresh": {
    "method": "calendar-page",
@@ -56442,9 +56483,9 @@
   "name": "Mellow Morning Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The Saturday series ran through Oct 31, 2026 on the calendar. No later date is posted.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": "Northeast",
   "region": "Minnesota",
@@ -56510,9 +56551,9 @@
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "https://msp.bike/events/mellow-morning-ride-5a8ad751"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-17",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026; entry edited Sept 17, 2026) lists Mellow Morning Ride every Saturday from June 6 until Oct 31, 2026, meet 10:15 AM, depart 10:45, tagged no-drop.",
+  "evidence": "msp.bike's events list (read Nov 19, 2026) shows no Mellow Morning Ride among upcoming events; its page for the ride shows no date after 2026's series, which the calendar ended on Oct 31.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
@@ -56580,7 +56621,7 @@
    "strava": null,
    "meetup": null,
    "other": [
-    "https://msp.bike/events/akq6he9k0demi7ao18fh45gddk_20260506T230000Z"
+    "https://msp.bike/events/sociable-cider-x-recovery-bike-shop-wednesday-social-rides-d5c0a581"
    ]
   },
   "inclusive_focus": [
@@ -56594,13 +56635,13 @@
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "https://msp.bike/events/sociable-cider-x-recovery-bike-shop-wednesday-social-rides-d5c0a581"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-30",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) carries a weekly Wednesday 6:00 pm series at Sociable Cider Werks with no end date; Oct 7, 14, 21 and 28 are all on it, last edited Aug 24, 2026.",
+  "evidence": "msp.bike's page for the ride (read Nov 19, 2026) shows the next one on Wed Nov 25, 2026, 6:00 pm at Sociable Cider Werks, weekly and year-round, no-drop, 8 to 10 miles; it says to check Recovery Bike Shop's Instagram for weather and holiday cancellations.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
-   "watch_url": "https://msp.bike/events/akq6he9k0demi7ao18fh45gddk_20260506T230000Z",
+   "watch_url": "https://msp.bike/events/sociable-cider-x-recovery-bike-shop-wednesday-social-rides-d5c0a581",
    "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "notes": null
   }
@@ -56610,9 +56651,9 @@
   "name": "Utepils Cycling Sunday Road and MTB Rides",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "No Sunday ride is posted now. The calendar's dates ran into late October 2026.",
+  "status_since": "2026-11-19",
   "city": "Minneapolis",
   "neighborhood": "Bryn Mawr",
   "region": "Minnesota",
@@ -56673,9 +56714,9 @@
    "https://msp.bike/events/utepils-cycling-road-mtb-rides-67830d1e",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-09-27",
-  "evidence": "The msp.bike calendar feed (fetched Oct 1, 2026) carries a weekly Sunday series at Utepils Brewing, 9:45 am meet, no end date, last edited Sept 21, 2026; Oct 4, 11, 18 and 25 are on it.",
+  "evidence": "msp.bike's events list (read Nov 19, 2026) shows no Utepils Sunday ride among upcoming events; its page for the ride shows Sun Oct 18, 2026 and one more date after it.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -56827,7 +56868,7 @@
    "strava": "https://www.strava.com/clubs/470025",
    "meetup": null,
    "other": [
-    "https://msp.bike/events"
+    "https://msp.bike/events/freewheel-minnetonka-monday-gravel-mtb-rides-2bd228ef"
    ]
   },
   "inclusive_focus": [
@@ -56836,15 +56877,16 @@
   "sources": [
    "https://msp.bike/events",
    "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
-   "https://www.strava.com/clubs/470025"
+   "https://www.strava.com/clubs/470025",
+   "https://msp.bike/events/freewheel-minnetonka-monday-gravel-mtb-rides-2bd228ef"
   ],
-  "verified_on": "2026-10-01",
+  "verified_on": "2026-11-19",
   "last_seen": "2026-10-01",
-  "evidence": "The msp.bike Twin Cities calendar feed (fetched Oct 1, 2026) carries this as a weekly Monday series with no end date and lists Oct 5, 12, 19 and 26, 2026; the entry says 'every Monday year round'.",
+  "evidence": "msp.bike's page for the ride (read Nov 19, 2026) shows the next one on Mon Nov 23, 2026, weekly and year-round, weather permitting; the calendar entry starts at 6:00 pm and the text says roll at 6:30 pm, about 90 minutes, food and drinks around 8 pm. It says to check the Strava club the day of.",
   "confidence": "medium",
   "refresh": {
    "method": "ics",
-   "watch_url": "https://msp.bike/events",
+   "watch_url": "https://msp.bike/events/freewheel-minnetonka-monday-gravel-mtb-rides-2bd228ef",
    "feed_url": "https://calendar.google.com/calendar/ical/6a256e25e316cc67771b99bd499dfa57d2780d51f6eb5f9df1a9d84299a1b3c2%40group.calendar.google.com/public/basic.ics",
    "notes": "Weekly Monday series with no end date on the msp.bike Google calendar; Freewheel posts changes on its Strava club."
   }
@@ -56854,9 +56896,9 @@
   "name": "Dirty RASCals Thursday Gravel",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The Thursday gravel ride runs spring through October per RASC's website ('throughout the summer'). The last 2026 date was Oct 29. No 2027 dates are posted yet.",
+  "status_since": "2026-11-20",
   "city": "Rochester",
   "neighborhood": null,
   "region": "Minnesota",
@@ -56917,11 +56959,12 @@
   "inclusive_focus": [],
   "sources": [
    "https://ridewithgps.com/events.json?organization_id=7265",
-   "https://www.rasc-mn.org/road-gravel-biking"
+   "https://www.rasc-mn.org/road-gravel-biking",
+   "https://ridewithgps.com/organizations/7265/calendar.ics"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "RASC's RideWithGPS club calendar (fetched Oct 1, 2026) lists Dirty RASCals Gravel at 6:00 pm on Thu Oct 1 from Pine Island and every Thursday through Oct 29, 2026.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-29",
+  "evidence": "RASC's RideWithGPS calendar shows no Thursday gravel events after Oct 29, 2026; the RASC website says the Thursday gravel ride runs 'throughout the summer.' No 2027 dates are posted (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "ridewithgps",
@@ -57628,9 +57671,9 @@
    "https://www.bigshark.com/articles/group-training-rides-pg334.htm",
    "https://www.bigshark.com/articles/rides-races-event-calendar-pg22.htm"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Big Shark's Group Rides calendar (Google Calendar ICS) has a weekly Saturday 7:30 am shop group road ride at 1155 S Big Bend running to Oct 3, 2026, and its rides page lists the 7:30 Long Route with a ride leader March 1 to Oct 31 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "Big Shark's rides page says the Long Route (7:30 am, 31 miles) runs every Saturday year-round; 'Starting on Nov. 1st — You are welcome to meet and ride, we just will not have a ride leader present' (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "ics",
@@ -57898,7 +57941,7 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Saturdays through October 31, 2026, 8:00 am from the shop; A, B and C groups",
+  "schedule": "Saturdays through October 31 at 8:00 am from the shop; A, B and C groups",
   "days": [
    "sat"
   ],
@@ -57906,7 +57949,7 @@
   "start_hhmm": "08:00",
   "frequency": "weekly",
   "monthly_rule": null,
-  "season": "Through Oct 31, 2026",
+  "season": "Through October",
   "season_months": null,
   "start_location": {
    "name": "South Side Cyclery",
@@ -57940,17 +57983,18 @@
   },
   "inclusive_focus": [],
   "sources": [
-   "https://www.southsidecyclery.com/articles/rides-events-pg243.htm"
+   "https://www.southsidecyclery.com/articles/rides-events-pg243.htm",
+   "https://www.southsidecyclery.com/articles/south-side-rides-pg1293.htm"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "South Side Cyclery's rides page lists 'South Side Training Rides: Saturdays through October 31st @ 8am' with A, B and C groups, next to Wednesday dates (Apr 1 to Oct 28, Nov 11 to Mar 17) that match the 2026 calendar (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "South Side Cyclery's rides page, now at a new URL, shows 'South Side Training Rides: Saturdays through October 31st @ 8am' with A, B and C groups (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
-   "watch_url": "https://www.southsidecyclery.com/articles/rides-events-pg243.htm",
+   "watch_url": "https://www.southsidecyclery.com/articles/south-side-rides-pg1293.htm",
    "feed_url": null,
-   "notes": "The page switches to winter Saturday coffee and conditioning rides after Oct 31; re-read it in November."
+   "notes": "The page moved from /articles/rides-events-pg243.htm to this URL. Re-read in spring for the new season start date."
   }
  },
  {
@@ -60555,11 +60599,12 @@
   "sources": [
    "https://www.clturban.ist",
    "https://www.weeklyrides.com/index.php/group-rides",
-   "https://www.meetup.com/charlotte-urbanists/events/"
+   "https://www.meetup.com/charlotte-urbanists/events/",
+   "https://www.meetup.com/charlotte-urbanists/events/ical/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-08-28",
-  "evidence": "Charlotte Urbanists' Meetup (fetched Oct 1, 2026) lists 'Charlotte Critical Mass - August 2026' for Fri Aug 28, 2026 at 7:00 PM, describing the last Friday of every month; the group's site says it meets at First Ward Park on the last Friday at 6:45. Meetup has no post for September yet.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-30",
+  "evidence": "Charlotte Urbanists website (clturban.ist, fetched Nov 20, 2026) states 'We meet at First Ward Park on the last Friday of every month at 6:45. Charlotte's largest group ride!' Schedule unchanged; the Meetup ICS feed confirmed Critical Mass on October 30, 2026.",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -61441,7 +61486,7 @@
   "visitor_notes": "Free. Water and snack stops when needed. Check the group's Instagram (@blackspokesociety) for updates; Bike Durham says some rides are seasonal or cancel in bad weather.",
   "description": "A no-drop, social-paced ride from downtown Durham led by Black Spoke Society. The organizer says you can be brand new to cycling and that no one gets left behind. Helmets required, lights encouraged. Bike Durham's ride guide lists the group as for Black and queer folks.",
   "links": {
-   "website": "https://downtowndurham.com/event/fourth-sunday-social-rides/2026-10-25/",
+   "website": "https://downtowndurham.com/event/fourth-sunday-social-rides/",
    "instagram": "https://www.instagram.com/blackspokesociety/",
    "facebook": null,
    "strava": null,
@@ -61460,15 +61505,16 @@
    "https://downtowndurham.com/event/fourth-sunday-social-rides/2026-10-25/",
    "https://downtowndurham.com/events/category/lgbtq/",
    "https://bikedurham.org/events",
-   "https://static1.squarespace.com/static/5848723e4402430583905527/t/67e46f6bafa8c16b15cedade/1743023979714/Durham-based+Bike+Rides+List.pdf"
+   "https://static1.squarespace.com/static/5848723e4402430583905527/t/67e46f6bafa8c16b15cedade/1743023979714/Durham-based+Bike+Rides+List.pdf",
+   "https://downtowndurham.com/event/fourth-sunday-social-rides/"
   ],
-  "verified_on": "2026-10-02",
-  "last_seen": "2026-10-02",
-  "evidence": "Downtown Durham Inc's event page lists the Fourth Sunday Social Rides for Oct 25, 2026, 10:00 am to 12:00 pm at CCB Plaza, organizer Black Spoke Society; Bike Durham's ride calendar graphic updated Sept 2026 shows it too (fetched Oct 2, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "Downtown Durham Inc's event series page lists Fourth Sunday Social Rides on Nov 22 and Dec 27, 2026 and every fourth Sunday through Aug 22, 2027 at 10:00 am to 12:00 pm, free, at CCB Plaza, 201 Corcoran St, Durham (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
-   "watch_url": "https://downtowndurham.com/event/fourth-sunday-social-rides/2026-10-25/",
+   "watch_url": "https://downtowndurham.com/event/fourth-sunday-social-rides/",
    "feed_url": null,
    "notes": "Downtown Durham Inc runs The Events Calendar; the event page carries the next date. Its sitewide ICS did not return this series when tried."
   }
@@ -62874,9 +62920,9 @@
   "name": "The Green Line Commuter Bike Bus",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The 2026 pilot ran April through October. No 2027 dates are listed on the Oaks & Spokes events page.",
+  "status_since": "2026-11-20",
   "city": "Raleigh",
   "neighborhood": null,
   "region": "North Carolina",
@@ -62942,9 +62988,9 @@
    "https://oaksandspokes.org/events/",
    "https://calendar.google.com/calendar/ical/oaksandspokes.com_39383735363530333831%40resource.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-19",
-  "last_seen": "2026-10-14",
-  "evidence": "Oaks & Spokes' events calendar lists The Green Line for Wed Oct 21 and Oct 28, 2026 at 7:30 am from Lockwood Park, 1200 Crabtree Blvd, \"April–October 2026, every Wednesday morning\"; the calendar's public ICS feed carries the series weekly on Wednesdays through Oct 28, 2026 (fetched Oct 19, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "The Oaks & Spokes events calendar for November 2026 shows no Green Line Bike Bus events; the ride was described as 'April–October 2026, every Wednesday morning' on its own event listing (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -65596,12 +65642,12 @@
    "road",
    "social"
   ],
-  "schedule": "Fridays, 9:00 am from Taunton Forge Shopping Center in Medford (8:30 am on Sept 25); 25 to 30 miles at 13 to 14 mph, no-drop and social.",
+  "schedule": "Fridays, 10:00 am from Taunton Forge Shopping Center; 25 to 30 miles at 13 to 14 mph, no-drop and social",
   "days": [
    "fri"
   ],
-  "time_local": "9:00 am",
-  "start_hhmm": "09:00",
+  "time_local": "10:00 am",
+  "start_hhmm": "10:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": null,
@@ -65641,11 +65687,13 @@
   ],
   "sources": [
    "https://www.meetup.com/outdoor-club-of-south-jersey/events/316758786/",
-   "https://www.meetup.com/outdoor-club-of-south-jersey/events/"
+   "https://www.meetup.com/outdoor-club-of-south-jersey/events/",
+   "https://www.meetup.com/outdoor-club-of-south-jersey/events/317404722/",
+   "https://www.meetup.com/outdoor-club-of-south-jersey/events/ical/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-09-25",
-  "evidence": "The Outdoor Club of South Jersey's Meetup lists Fran's Usual Friday C/C+ Ride for Fri Sept 25 (8:30 am) and Fri Oct 2, 2026 (9:00 am) from Taunton Forge Shopping Center (read Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "Meetup event for Fri Nov 20, 2026 lists Fran's Usual Friday C/C+ Ride at 10:00 AM from Taunton Forge Shopping Center, Medford, NJ; the Oct 30 event was also at 10:00 AM (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -65659,9 +65707,9 @@
   "name": "Friday Ladies Ride (Montclair Bikery)",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The Montclair Bikery's rides page says Friday Ladies rides run April through October. The ride is off for winter and resumes in April.",
+  "status_since": "2026-11-20",
   "city": "Montclair",
   "neighborhood": null,
   "region": "New Jersey",
@@ -65725,9 +65773,9 @@
    "https://www.montclairbikery.com/about/calendar-pg165.htm",
    "https://calendar.google.com/calendar/ical/v0bqmc4elji6e1lub4fh5tttd0%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-09-26",
-  "evidence": "Montclair Bikery's public ride calendar (last updated Sept 26, 2026) lists the Ladies Ride every Friday at 9:00 am from 148 Valley Rd, next on Fri Oct 2, and keeps listing it weekly through at least June 2027 (read Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "Montclair Bikery's group rides page states 'Friday Ladies rides leave the shop at 9 am' under 'Rides listed below are held weekly April through October' — confirming the same schedule, now suspended for winter (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "ics",
@@ -66450,9 +66498,9 @@
    "https://www.jsts.us/event-6732545",
    "https://www.jsts.us/event-6732524"
   ],
-  "verified_on": "2026-11-16",
-  "last_seen": "2026-11-16",
-  "evidence": "JSTS's ride calendar (fetched Nov 16, 2026) shows weekday rides on every weekday through November 2026; individual CANCELLED labels appear on specific instances but not the weekday program as a whole.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "JSTS's ride calendar (fetched Nov 20, 2026) shows weekday rides at MJT, MR, BCC and other locations on every weekday through November and into December; individual *CANCELLED* labels appear on specific instances but the weekday program continues.",
   "confidence": "medium",
   "refresh": {
    "method": "calendar-page",
@@ -71635,9 +71683,9 @@
   "name": "Flower City Feeling Good Wednesday Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Back in May 2027, the host's site says.",
+  "status_since": "2026-11-20",
   "city": "Rochester",
   "neighborhood": null,
   "region": "New York",
@@ -71701,9 +71749,9 @@
    "https://reconnectrochester.org/cyclingcalendar/",
    "https://calendar.google.com/calendar/ical/c_8dstjm2qg2l45fbhg5n7ht8thg%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Reconnect Rochester's public community calendar lists the ride for Wed Sept 30 and Wed Oct 7, 2026 (Schiller Park, 'Gather at 5:30pm for a prompt 6pm roll-out'), and its weekly-rides page says rides leave at 7 pm May to August and 6 pm in September and October (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-07",
+  "evidence": "Reconnect Rochester's weekly-rides page reads: 'We held our last weekly ride of the year on Wednesday, October 7th 2026. Thank you to all who joined us! We will see you in May 2027!' (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "ics",
@@ -75605,7 +75653,7 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Every Tuesday, 5:30 pm",
+  "schedule": "Every Tuesday from about March through October; 5:15 pm in spring, 5:30 pm in summer, 5:00 pm in fall. Ride is not affiliated with Webcyclery.",
   "days": [
    "tue"
   ],
@@ -75616,8 +75664,8 @@
   "season": null,
   "season_months": null,
   "start_location": {
-   "name": "Jackson's Outpost at The Grove",
-   "address": "921 NW Mt Washington Dr Ste 170, Bend, OR 97703"
+   "name": "Webcyclery",
+   "address": "157 NW Franklin Ave, Bend, OR 97701"
   },
   "distance_km": null,
   "distance_miles": "34",
@@ -75638,30 +75686,33 @@
   "visitor_notes": null,
   "description": "A spirited Tuesday road ride that rotates three routes. Not a no-drop ride, but the group regroups two or three times and teaches cooperative riding instead of a free-for-all. Riders should be self-sufficient. It is not affiliated with WebCyclery even though it used to start there.",
   "links": {
-   "website": "https://bendbikerides.com/group/tuesday-night-rubber-mallet/event/rubber-mallet",
+   "website": null,
    "instagram": null,
    "facebook": null,
    "strava": null,
    "meetup": null,
    "other": [
-    "https://bendbikerides.com/event"
+    "https://bendbikerides.com/event",
+    "https://groups.google.com/g/bendcycling"
    ]
   },
   "inclusive_focus": [],
   "sources": [
    "https://bendbikerides.com/group/tuesday-night-rubber-mallet/event/rubber-mallet",
    "https://bendbikerides.com/event",
-   "https://www.bendsource.com/news/rollin-with-the-homies-23085920/"
+   "https://www.bendsource.com/news/rollin-with-the-homies-23085920/",
+   "https://groups.google.com/a/obra.org/g/obra-chat/c/ZH7KNJSc1ag",
+   "https://groups.google.com/g/bendcycling/c/wPkqMG025R0"
   ],
-  "verified_on": "2026-09-15",
-  "last_seen": null,
-  "evidence": null,
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-07",
+  "evidence": "A BendCycling Google Group post from Oct 7, 2026 announces the Rubber Mallet at 5:00 PM from Webcyclery, 157 NW Franklin Ave — a different start from Jackson's Outpost listed in the record.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
-   "watch_url": "https://bendbikerides.com/group/tuesday-night-rubber-mallet/event/rubber-mallet",
+   "watch_url": "https://groups.google.com/g/bendcycling",
    "feed_url": null,
-   "notes": null
+   "notes": "Ride announced each week on the BendCycling Google Group; the bendbikerides.com site returns a Cloudflare 403."
   }
  },
  {
@@ -76155,9 +76206,9 @@
    "https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926",
    "https://www.salembicycleclub.org/content.aspx?page_id=4091&club_id=189926&item_id=2953887"
   ],
-  "verified_on": "2026-11-16",
-  "last_seen": "2026-11-16",
-  "evidence": "Salem Bicycle Club's calendar (fetched Nov 16, 2026) lists the Keizer Morning Ride at 10:00 am on Nov 3, 17, 24 and Dec 1; the Nov 10 entry reads 'CANCELED' for a single instance, and the ride resumes Nov 17.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "Salem Bicycle Club's calendar (fetched Nov 20, 2026) shows Keizer Morning Ride at 10:00 am on Nov 17, 24 and Dec 1; Nov 10 is a single-instance cancellation, and the ride resumes Nov 17.",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -76235,9 +76286,9 @@
    "https://www.salembicycleclub.org/content.aspx?page_id=4091&club_id=189926&item_id=3066880",
    "https://www.salembicycleclub.org/content.aspx?page_id=4091&club_id=189926&item_id=3066876"
   ],
-  "verified_on": "2026-11-16",
-  "last_seen": "2026-11-16",
-  "evidence": "Salem Bicycle Club's calendar (fetched Nov 16, 2026) lists Thursday Night Lights Ride at 6:00 pm on Nov 5, 12 and 19 and Dec 3; the 'CANCELED' on Nov 10 is for the Keizer Morning Ride (a different ride on a different day), not this one.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "Salem Bicycle Club's calendar (fetched Nov 20, 2026) shows Thursday Night Lights Ride at 6:00 pm on Nov 19 and Dec 3; Nov 26 is skipped for Thanksgiving; the 'CANCELED' near the ride name refers to the Nov 10 Keizer Morning Ride (a different ride).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -77511,9 +77562,9 @@
    "https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926",
    "https://www.salembicycleclub.org/content.aspx?page_id=4091&club_id=189926&item_id=3086068"
   ],
-  "verified_on": "2026-11-16",
-  "last_seen": "2026-11-16",
-  "evidence": "Salem Bicycle Club's calendar (fetched Nov 16, 2026) lists the East Salem Morning Ride on Nov 4, 11, 18 and 25; the 'CANCELED' near it on the calendar refers to the Keizer Morning Ride on Nov 10 (a different ride and day), not this one.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "Salem Bicycle Club's calendar (fetched Nov 20, 2026) shows East Salem Morning Ride on Nov 18 and 25; the 'CANCELED' near the ride name refers to the Nov 10 Keizer Morning Ride (a different ride and day).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -77836,11 +77887,12 @@
   "inclusive_focus": [],
   "sources": [
    "https://www.meetup.com/fc-cycling-club/events/316707967/",
-   "https://www.meetup.com/fc-cycling-club/events/"
+   "https://www.meetup.com/fc-cycling-club/events/",
+   "https://www.meetup.com/fc-cycling-club/events/ical/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Fitness Central Cycling Club's Meetup lists the Thursday Java Ride for Oct 1, 8, 15, 22 and 29, 2026 at 7:30 am from 1151 Mosser Road (read Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-16",
+  "evidence": "Fitness Central Cycling Club's Meetup ICS feed matched 6 upcoming Thursday Java Ride dates including Nov 19, 2026 at 7:30 am (feed read Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -78646,9 +78698,9 @@
   "name": "Thursday Evening Special (Lancaster Bicycle Club)",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The 2026 Meetup series last ran October 29; the 2025 series also ended in late October. No November events are posted on LBC Meetup (checked Nov 20, 2026). Note: the last event ran at 5:30 pm (the watcher flagged a time change from 6:00 pm; a person should confirm the time when the ride resumes). Expected back in spring; check meetup.com/lancaster-bicycle-club/ for the 2027 series.",
+  "status_since": "2026-11-20",
   "city": "Lancaster",
   "neighborhood": "Landis Valley",
   "region": "Pennsylvania",
@@ -78706,11 +78758,12 @@
   "inclusive_focus": [],
   "sources": [
    "https://www.meetup.com/lancaster-bicycle-club/events/316519444/",
-   "https://www.meetup.com/lancaster-bicycle-club/events/"
+   "https://www.meetup.com/lancaster-bicycle-club/events/",
+   "https://www.meetup.com/lancaster-bicycle-club/events/ical/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Lancaster Bicycle Club's Meetup lists the Thursday Evening Special (A and A+) for Oct 1, 8 and 15, 2026 at 6:00 pm from Calvary Church, 1051 Landis Valley Rd (read Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-29",
+  "evidence": "LBC Meetup events page (fetched Nov 20, 2026) shows 0 upcoming events; the ICS feed has no Thursday Evening Special in November; last Meetup-confirmed event was October 29 at 5:30 pm, consistent with the 2025 series ending October 30.",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -80078,9 +80131,9 @@
   "name": "Thursday Mountain Bike Ride in Frick Park (3 Rivers Outdoor Co)",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "2026 season ended Oct 29. The ride runs May through October each year; 2027 dates not yet posted on the shop's events page. Back in May, the shop's pattern says.",
+  "status_since": "2026-11-20",
   "city": "Pittsburgh",
   "neighborhood": "Regent Square",
   "region": "Pennsylvania",
@@ -80139,11 +80192,12 @@
   "inclusive_focus": [],
   "sources": [
    "https://3riversoutdoor.com/events/mtnbikerides",
-   "https://pghbabesonbikes.com/events"
+   "https://pghbabesonbikes.com/events",
+   "https://3riversoutdoor.com/blogs/events"
   ],
-  "verified_on": "2026-10-02",
-  "last_seen": "2026-10-02",
-  "evidence": "The shop's event page lists a weekly Frick Park ride, Thursday May 21 to Thursday Oct 29, 2026, 6:00 to 8:00 pm, from 1130 S. Braddock Ave (read Oct 2, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-29",
+  "evidence": "3 Rivers Outdoor Co event page shows 'Thursday, May 21, 2026 — Thursday, October 29, 2026 (weather permitting)'; the shop's events overview still lists it as a recurring event, but no 2027 dates are posted (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -80531,9 +80585,9 @@
    "https://www.premierbicycleclub.org/content.aspx?page_id=4091&club_id=400812&item_id=3088337",
    "https://www.premierbicycleclub.org/content.aspx?page_id=4001&club_id=400812"
   ],
-  "verified_on": "2026-11-16",
+  "verified_on": "2026-11-20",
   "last_seen": "2026-10-28",
-  "evidence": "Premier Bicycle Club's calendar (fetched Nov 16, 2026) shows no North Park Loops listed in November or December; Wednesday rides in November are morning rides (Harmony Lake, 10:00 am), replacing the 5:00 pm evening ride.",
+  "evidence": "Premier Bicycle Club's calendar (fetched Nov 20, 2026) shows no North Park Loops listed in November or December; Wednesday rides are morning rides (Harmony Lake, Moraine).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -82432,9 +82486,9 @@
   "name": "Thursday Night Rocks (Gravel)",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Thursday Night Rocks runs approximately March through October. The club's site noted it started back March 12 for 2026. No events are listed after Oct 29. No 2027 dates are posted yet.",
+  "status_since": "2026-11-20",
   "city": "Rock Hill",
   "neighborhood": null,
   "region": "South Carolina",
@@ -82491,11 +82545,12 @@
   "sources": [
    "https://ridewithgps.com/events.json?organization_id=12871",
    "https://rockhillbicycleclub.com/content.aspx?page_id=0&club_id=269880",
-   "https://ridewithgps.com/organizations/12871/calendar.ics"
+   "https://ridewithgps.com/organizations/12871/calendar.ics",
+   "https://rockhillbicycleclub.com/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "The club's RideWithGPS events show Thursday Night Rocks for Oct 1, 8, 15, 22 and 29, 2026 at 6:00 pm, and the club's home page lists it as a drop ride (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-29",
+  "evidence": "The Rock Hill Bicycle Club website lists Thursday Night Rocks as 'Starting back March 12, 2026'; the RideWithGPS calendar has no events after Oct 29, 2026. No 2027 start date is posted (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "ridewithgps",
@@ -90321,12 +90376,12 @@
   "discipline": [
    "road"
   ],
-  "schedule": "Every Saturday, 7:00 am (start time shifts with the season)",
+  "schedule": "Every Saturday; meet 7:45 am, ride out 8:00 am (time adjusts with the season; check the host's Meetup calendar the night before)",
   "days": [
    "sat"
   ],
-  "time_local": "7:00 am",
-  "start_hhmm": "07:00",
+  "time_local": "7:45 am",
+  "start_hhmm": "07:45",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round",
@@ -90366,11 +90421,12 @@
    "https://elpasobicycleclub.com/club-rides/",
    "https://www.meetup.com/ElPasoBicycleClub/",
    "https://elpasobicycleclub.com/",
-   "https://www.meetup.com/ElPasoBicycleClub/events/ical/"
+   "https://www.meetup.com/ElPasoBicycleClub/events/ical/",
+   "https://www.meetup.com/elpasobicycleclub/events/317238980/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "El Paso Bicycle Club's Meetup iCal feed lists Saturday Road Ride at 7:00 am for Oct 3, 10, 17, 24 and 31, 2026 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "El Paso Bicycle Club Meetup shows Saturday Road Ride on Nov 21, 2026 at 7:45 AM — the event description reads 'meet at 7:45 at Grace Gardens, ride out at 8:00; time adjusts with the seasons' — with dates running through Dec 19, 2026 (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "static-page",
@@ -94349,7 +94405,7 @@
   "discipline": [
    "social"
   ],
-  "schedule": "Every Tuesday, 7:00 pm",
+  "schedule": "Every Tuesday, meet 6:30 pm, roll 7:00 pm; location rotates weekly—check Facebook for the week's start",
   "days": [
    "tue"
   ],
@@ -94360,11 +94416,11 @@
   "season": "year-round",
   "season_months": null,
   "start_location": {
-   "name": "Burleson Beer Garden",
-   "address": "430 Austin St, San Antonio, TX 78215"
+   "name": "Downtown San Antonio (location rotates weekly)",
+   "address": "Downtown San Antonio, TX"
   },
   "distance_km": null,
-  "distance_miles": null,
+  "distance_miles": "9–14",
   "duration": null,
   "duration_min": null,
   "pace": "social, level 1–2",
@@ -94379,7 +94435,7 @@
   "language": [
    "en"
   ],
-  "visitor_notes": null,
+  "visitor_notes": "Location rotates weekly; check Facebook (facebook.com/groups/SATNBC/) for each week's start.",
   "description": "A big Tuesday night social ride through San Antonio. It grew from six riders to close to 300 a week, with about 30 volunteer marshals handling mechanicals and traffic. No-drop and follows the rules of the road so new riders are not stressed.",
   "links": {
    "website": null,
@@ -94401,9 +94457,9 @@
    "https://www.awesomefoundation.org/en/projects/66510-satx-social-ride-safety-and-education",
    "https://www.facebook.com/groups/SATNBC/"
   ],
-  "verified_on": "2026-11-16",
-  "last_seen": "2026-11-16",
-  "evidence": "bike-san-antonio.org/sa-bike-groups/ lists the SATX Social Ride as a weekly community ride that meets at 6:30 pm and rolls out at 7 pm every Tuesday night, rotating locations downtown, 9 to 14 miles, no-drop (fetched Nov 16, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "bike-san-antonio.org/sa-bike-groups/ lists the SATX Social Ride as meeting at 6:30 pm and rolling at 7:00 pm every Tuesday, location rotates weekly between downtown spots and businesses, 9 to 14 miles, no-drop (fetched Nov 20, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -94432,7 +94488,7 @@
   "discipline": [
    "mtb"
   ],
-  "schedule": "Every Thursday, meet about 6:00 pm, wheels down 6:30 pm at O.P. Schnabel Park (main pavilion by the play area). Dirt trails, 10+ miles, 2–3 hours. Rain or poor trail conditions cancel it.",
+  "schedule": "Every Thursday, 6:30 pm; McAllister Park in fall/winter, O.P. Schnabel Park/Leon Creek Greenway in spring/summer. Dirt trails, 10+ miles, 2–3 hours. Rain or poor trail conditions cancel it.",
   "days": [
    "thu"
   ],
@@ -94443,8 +94499,8 @@
   "season": "year-round",
   "season_months": null,
   "start_location": {
-   "name": "O.P. Schnabel Park, main pavilion by the play area",
-   "address": "O.P. Schnabel Park, San Antonio, TX"
+   "name": "McAllister Park in fall/winter; O.P. Schnabel Park/Leon Creek Greenway in spring/summer",
+   "address": "McAllister Park, 13102 Jones Maltsberger, San Antonio, TX 78216"
   },
   "distance_km": null,
   "distance_miles": 10,
@@ -94462,8 +94518,8 @@
   "language": [
    "en"
   ],
-  "visitor_notes": "This is not a paved trail ride: it's all dirt trails on a trail-worthy mountain bike. Bring a helmet, closed-toe shoes, water and lights if it will be dark before you finish. Free to join the ride; RSVP on Meetup.",
-  "description": "STORM's weekly Thursday evening mountain bike ride on the OP Schnabel Park and Leon Creek Greenway dirt trails. All skill levels, no-drop, with leads and sweeps keeping everyone together. About 10 miles over 2 to 3 hours.",
+  "visitor_notes": "Dirt trails only: bring a trail-worthy mountain bike, helmet, closed-toe shoes, water and lights. Free; RSVP on Meetup. Check the Meetup event for the current location.",
+  "description": "STORM's weekly Thursday evening mountain bike ride on dirt trails. All skill levels, no-drop, with leads and sweeps keeping everyone together. The start location changes with the season: McAllister Park in fall and winter, O.P. Schnabel Park/Leon Creek Greenway in spring and summer. About 10 miles over 2 to 3 hours.",
   "links": {
    "website": "https://stormmtb.org/groups",
    "instagram": null,
@@ -94478,11 +94534,12 @@
   ],
   "sources": [
    "https://www.meetup.com/storm-mountain-biking/events/ical/",
-   "https://stormmtb.org/groups"
+   "https://stormmtb.org/groups",
+   "https://www.meetup.com/storm-mountain-biking/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "STORM's Meetup feed lists the All-Level Ride at O.P. Schnabel Park for Thu Oct 1, Oct 8, Oct 15 and Oct 22, 2026 at 6:30 pm (read Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-05",
+  "evidence": "STORM's Meetup page shows 'STORM Thursday night ride · Thu, Nov 5 · 6:30 PM CST · McAllister Park, 13102 Jones Maltsberger' as a recent past event; in fall and winter the ride moves from O.P. Schnabel Park to McAllister Park at the same 6:30 pm time (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -97204,9 +97261,9 @@
   "name": "Sunday Brunch Ride (Conte's Richmond)",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Series ended Oct 25, 2026; the ride runs May through October. No 2027 season posted yet; back in May 2027.",
+  "status_since": "2026-11-20",
   "city": "Henrico",
   "neighborhood": null,
   "region": "Virginia",
@@ -97270,9 +97327,9 @@
    "https://www.contebikes.com/about/rides-events-pg229.htm",
    "https://calendar.google.com/calendar/ical/bd12907cc714268203a8976992cc1aee49f05891e373d32c6574463eebee7144%40group.calendar.google.com/public/basic.ics"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "Conte's Southern Virginia ride calendar lists the Sunday Brunch ride weekly on Sundays at 8:00 am from 12256 W Broad St, Henrico, with a series end of Oct 25, 2026 (feed fetched Oct 1, 2026; event created May 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-25",
+  "evidence": "Conte's Southern Virginia Google Calendar feed (fetched Nov 20, 2026) contains 27 events but no Sunday Brunch Ride at the Henrico location; the series ran weekly Sundays through Oct 25, 2026 per the original Oct 1 feed data, consistent with the ride's stated May–October season.",
   "confidence": "high",
   "refresh": {
    "method": "ics",
@@ -103565,9 +103622,9 @@
   "name": "MKE REC Saturday Community Bike Rides",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "2026 season ended Oct 24. The Wisconsin Bike Fed listing says rides run mid-April through end of October; 2027 dates not yet posted. Back in mid-April, the listing says.",
+  "status_since": "2026-11-20",
   "city": "Milwaukee",
   "neighborhood": null,
   "region": "Wisconsin",
@@ -103631,9 +103688,9 @@
    "https://wisconsinbikefed.org/events/mke-rec-saturday-community-bike-rides-2/",
    "https://www.milwaukeebikerides.com/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Wisconsin Bike Fed's event page (fetched Oct 1, 2026) lists MKE REC Saturday Community Bike Rides, Apr 18 to Oct 24 (2026 dates), 10:00 am, no-drop social slow rolls; the Milwaukee Bike Rides directory says rides are free with registration.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-24",
+  "evidence": "Wisconsin Bike Fed event page shows 'Apr 18 - Oct 24, 10:00 am' and says rides run 'from mid-April through the end of October'; no 2027 dates posted (fetched Nov 20, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -103647,9 +103704,9 @@
   "name": "MKE REC Thursday Night Rides",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "2026 season ended Oct 29. The Wisconsin Bike Fed listing says rides run mid-April through end of October; 2027 dates not yet posted. Back in mid-April, the listing says.",
+  "status_since": "2026-11-20",
   "city": "Milwaukee",
   "neighborhood": null,
   "region": "Wisconsin",
@@ -103715,9 +103772,9 @@
    "https://wisconsinbikefed.org/events/mke-rec-thursday-night-rides/",
    "https://www.milwaukeebikerides.com/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Wisconsin Bike Fed's event page (fetched Oct 1, 2026) lists MKE REC Thursday Night Rides, Apr 16 to Oct 29 (2026 dates), 6:00 pm, 'every Thursday evening at 6:00 PM from mid-April through the end of October'; no-drop and beginner-friendly.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-29",
+  "evidence": "Wisconsin Bike Fed event page shows 'Apr 16 - Oct 29, 6:00 pm' and says rides run 'every Thursday evening at 6:00 PM from mid-April through the end of October'; no 2027 dates posted (fetched Nov 20, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -103731,9 +103788,9 @@
   "name": "MKE REC Tuesday Rides, Good Morning Hank",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "2026 season ended Oct 27. The Wisconsin Bike Fed listing says rides run mid-April through end of October; 2027 dates not yet posted. Back in mid-April, the listing says.",
+  "status_since": "2026-11-20",
   "city": "Milwaukee",
   "neighborhood": null,
   "region": "Wisconsin",
@@ -103793,9 +103850,9 @@
   "sources": [
    "https://wisconsinbikefed.org/events/mke-rec-tuesday-rides-good-morning-hank/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Wisconsin Bike Fed's event page (fetched Oct 1, 2026) lists MKE REC Tuesday Rides 'Good Morning Hank', Apr 14 to Oct 27 (2026 dates), 9:00 am from Juneau Playfield, suitable for all levels.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-27",
+  "evidence": "Wisconsin Bike Fed event page shows 'Apr 14 - Oct 27, 9:00 am' from Juneau Playfield; no 2027 dates posted (fetched Nov 20, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -103809,9 +103866,9 @@
   "name": "Bay View Bicycle Club Saturday Ride, Big Cedar Lake",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "2026 season ended Oct 31. The Wisconsin Bike Fed listing says rides run May through October; 2027 dates not yet posted. Back in May, the listing says.",
+  "status_since": "2026-11-20",
   "city": "Slinger",
   "neighborhood": null,
   "region": "Wisconsin",
@@ -103872,9 +103929,9 @@
    "https://wisconsinbikefed.org/events/bay-view-bicycle-club-weekly-sat-ride-big-cedar-lake/",
    "https://wisconsinbikefed.org/events/bay-view-bicycle-club/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Wisconsin Bike Fed's event page (fetched Oct 1, 2026) lists the Bay View Bicycle Club Weekly Sat Ride, May 1 to Oct 31 (2026 dates), 9:00 am from Slinger Rotary Park, 'Ride as a guest'.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-31",
+  "evidence": "Wisconsin Bike Fed event page shows 'May 1 - Oct 31, 9:00 am' from Slinger Rotary Park; no 2027 dates posted (fetched Nov 20, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -104046,9 +104103,9 @@
   "name": "Bay View Bicycle Club Sunday Ride, 3 Trails West",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "2026 season ended Oct 25. The Wisconsin Bike Fed listing says rides run May through October; 2027 dates not yet posted. Back in May, the listing says.",
+  "status_since": "2026-11-20",
   "city": "Waukesha",
   "neighborhood": null,
   "region": "Wisconsin",
@@ -104109,9 +104166,9 @@
    "https://wisconsinbikefed.org/events/bay-view-bicycle-club-weekly-sun-ride-3-trails-west/",
    "https://wisconsinbikefed.org/events/bay-view-bicycle-club/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": null,
-  "evidence": "Wisconsin Bike Fed's event page (fetched Oct 1, 2026) lists the Bay View Bicycle Club Weekly Sun Ride, May 3 to Oct 25 (2026 dates), 9:00 am from Fox River Sanctuary, 'Ride as a guest'.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-25",
+  "evidence": "Wisconsin Bike Fed event page shows 'May 3 - Oct 25, 9:00 am' from Fox River Sanctuary; no 2027 dates posted (fetched Nov 20, 2026).",
   "confidence": "medium",
   "refresh": {
    "method": "static-page",
@@ -105358,9 +105415,9 @@
    "https://www.meetup.com/bikeast/events/316728162/",
    "https://www.meetup.com/bikeast/events/ical/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-09-26",
-  "evidence": "BIKEast's Meetup page lists this ride on Sat Sept 12, 19 and 26 and upcoming Oct 3 and 10, 2026, 7:30 am; its rides page (copyright 2026) names the Saturday ride (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-16",
+  "evidence": "BIKEast's Meetup ICS feed matched 6 upcoming SupaSaturday dates including Nov 21, 2026 at 7:30 am (feed read Nov 16, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -105939,9 +105996,9 @@
   "name": "Saturday Gravel Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "The Ottawa Bicycle Club's 2026 gravel season ended October 31. No 2027 dates are posted on obcrides.ca yet. The ride is expected to resume in spring.",
+  "status_since": "2026-11-20",
   "city": "Ottawa",
   "neighborhood": null,
   "region": "Ontario",
@@ -106009,9 +106066,9 @@
    "https://ottawabicycleclub.ca/gravel-rides/",
    "https://ottawabicycleclub.ca/ride-with-us/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-09-26",
-  "evidence": "OBC's ride calendar lists Gravel Ride 'Waba Ramble II' for Sat Oct 3, 2026, 9:00 AM to noon (56 km, 7 registered) and Saturday gravel slots to Oct 31; the .ics feed shows gravel rides on Sept 5, 12, 19 and 26 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "The OBC events page (obcrides.ca/events) shows only the Annual General Meeting on Nov 23; no gravel rides are listed for November. The ICS feed carries only 2020 entries. The 2026 calendar ended October 31 as the ride record states (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "ics",
@@ -106526,9 +106583,9 @@
   "name": "Saturday Morning Ride",
   "name_en": null,
   "kind": "group-ride",
-  "status": "active",
-  "status_note": null,
-  "status_since": null,
+  "status": "seasonal-break",
+  "status_note": "Back in early April, per the program's posted season (Early April – Late October). The page shows no events scheduled; 2027 dates will appear on the same page in spring.",
+  "status_since": "2026-11-20",
   "city": "Toronto",
   "neighborhood": null,
   "region": "Ontario",
@@ -106592,9 +106649,9 @@
    "https://www.tbn.ca/Next20events",
    "https://www.tbn.ca/join/faq"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "The Saturday Morning Rides page lists 9:30 AM rides on Oct 3, 10, 17, 24 and 31, 2026, with Oct 31 marked FINAL RIDE of 2026 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-10-31",
+  "evidence": "TBN's Saturday Morning Rides page shows 'Program Season: Early April – Late Oct.' and 'Next Saturday Morning Rides: No Events Scheduled' (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "calendar-page",
@@ -106786,14 +106843,14 @@
   "discipline": [
    "mixed"
   ],
-  "schedule": "Mostly Mondays, Wednesdays and Fridays at 10:00 am (a few Saturdays), a different route and start each ride, roughly 10:00 am to 3:30 pm. Next: Fri Oct 2 (Peace Arch loop from Bakerview Park, Surrey), Mon Oct 5, Wed Oct 7, Fri Oct 9, Mon Oct 12.",
+  "schedule": "Mostly Mondays, Wednesdays and Fridays at 9:00 am Pacific Standard Time (Saturdays occasionally), a different route and start each ride, roughly 9:00 am to 2:30 pm with stops.",
   "days": [
    "mon",
    "wed",
    "fri"
   ],
-  "time_local": "10:00 am",
-  "start_hhmm": "10:00",
+  "time_local": "9:00 am",
+  "start_hhmm": "09:00",
   "frequency": "weekly",
   "monthly_rule": null,
   "season": "year-round on the Meetup listing; weather-dependent",
@@ -106835,9 +106892,9 @@
    "https://www.meetup.com/out-and-about-cycling-in-metro-vancouver/events/ical/",
    "https://www.meetup.com/out-and-about-cycling-in-metro-vancouver/events/316384878/"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "The group's Meetup feed lists ten weekday rides from Fri Oct 2 to Fri Oct 23, 2026, all at 10:00 am (Mon, Wed, Fri), with start, distance and difficulty in each (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "The group's Meetup ICS feed lists rides on Nov 21, Nov 23, Nov 25, Nov 27, Nov 30 and Dec 4, 2026, all with DTSTART;TZID=America/Vancouver at 09:00 and DTEND at 14:30 — 9:00 am start, consistent with the ride's 5 to 5.5 hour duration; this is the America/Vancouver standard-time equivalent of the October 10:00 am PDT start (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -111988,9 +112045,9 @@
    "https://www.meetup.com/leeds-cycling/",
    "https://www.meetup.com/leeds-cycling/events/ical/"
   ],
-  "verified_on": "2026-11-16",
-  "last_seen": "2026-11-16",
-  "evidence": "Leeds Cycling's Meetup ICS feed (fetched Nov 16, 2026) lists Saturday off-road rides on Nov 21 (09:45 am, Leggers Inn – Stoneycliffe Nature Reserve) and Nov 28; the Meetup group page returns 'Group not found' for non-members but the ICS calendar is public and working.",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-20",
+  "evidence": "Leeds Cycling's Meetup ICS feed (fetched Nov 20, 2026) confirms two upcoming Saturday off-road rides: Nov 21 (Leggers Inn, Stoneycliffe Nature Reserve, 09:45 am, Dewsbury) and Nov 28 (Manvers Lake, 10:00 am).",
   "confidence": "high",
   "refresh": {
    "method": "meetup",
@@ -113746,9 +113803,9 @@
   "sources": [
    "https://www.letsride.co.uk/groups/debdale-cycling-for-health-group"
   ],
-  "verified_on": "2026-10-01",
-  "last_seen": "2026-10-01",
-  "evidence": "The group's Let's Ride page lists a Monday ride on Oct 5, 2026 at 10:15 am and weekly Monday rides on Sep 7, 14, 21 and 28 (fetched Oct 1, 2026).",
+  "verified_on": "2026-11-20",
+  "last_seen": "2026-11-16",
+  "evidence": "Let's Ride lists the most recent ride as Monday Nov 16, 2026 at 10:15 am from Debdale Park M18 7LJ; the group description is unchanged (fetched Nov 20, 2026).",
   "confidence": "high",
   "refresh": {
    "method": "federation-calendar",

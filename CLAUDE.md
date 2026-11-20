@@ -874,6 +874,16 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
 - A red flag (`data/rides-health.json`) or a rider's gone/changed report shows a warning for 14
   days, then hides the ride until a person re-checks it. Ended rides keep a page for a year. .ics
   files stop at the hide date.
+- **A date we can't stand behind comes down** (Nov 19, 2026; Robert, after msp.bike: "fix anything like this
+  anywhere"). `assess()` sets `undated` on a listed, active ride when a red flag or rider report is open (`flagged`),
+  the watcher saw the host's page date it in the past (`no-upcoming-date`), the calendar that used to list it hasn't
+  for 14 days and nobody has checked at the source since (`feed-stopped`), or our own schedule text names an end date,
+  with its year, that has passed and nobody has checked since (`ran-out`, `seriesEnd()`). An undated ride stays
+  listed and keeps its schedule line, but has no "Next ride", no Event markup, no `ride.ics`, no row on `/week` (it
+  folds under "on the host's own calendar") or `/tonight/`, and its checked block says why. It goes up the re-check
+  queue (`QUEUE.undated`). Only a re-check through `rides-apply.js` clears it. The Oct 18 rule still stands for a
+  page whose wording moved or lost a time: those keep the date with a nudge. 92 rides lost a date the day this
+  shipped, 66 of them promising a ride within a month. Tests: `tools/test/undated.test.js`.
 - **`verified_on` is the clock. Never stamp it on a ride nobody checked.**
 - Seasonal-break rides must not show a "Next ride" or `EventScheduled`.
 
@@ -895,6 +905,42 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   nonce), ClubExpress, NEMBA chapter pages, `criticalmass.in`. Shop pages with no dates are
   `medium` at best. Instagram/Facebook-only leads go in the area report for Robert to confirm.
 - The WebSearch cap is shared by every agent in a session; plan scout waves around it.
+
+### Community calendars (Nov 19, 2026)
+- A maintainer of msp.bike (the Twin Cities' community calendar) wrote to Robert: our Twin Cities pages linked
+  `msp.bike/events` or Instagram instead of each event's own page, our `.ics` files copied their calendar and so never
+  heard about their changes, and some pages were out of date. All three were true. Robert: fix what we said we'd fix.
+- **A ride a community calendar carries** has a row in `data/ride-calendars.json` (`data/SCHEMA.md`;
+  `tools/lib/ride-calendars.js`). Its page links the ride's own page on the calendar, by the calendar's name; never the
+  calendar's front page when the ride has a page of its own; never the raw Google Calendar feed. The calendar is never
+  "the host". **No `ride.ics` and no Google Calendar link from us**: "Add to calendar on msp.bike" goes to their page.
+  One credit line under "Where to find them". `/ride/` reads the same thing from `live.json` (`cal`).
+- The build fails on a ride that leans on a calendar and has no row, so a scout's new Twin Cities ride can't ship without
+  it. A new calendar in another town: add it under `calendars`, then a row per ride, each event page opened that day.
+- We still read their public calendar to re-check (that's what keeps our page honest); we don't republish it.
+- **A dated series that has run out is on a break, not "active".** The Oct 1 check listed fall series with end dates in
+  the schedule text and left them `active`; the page then promised a "Next ride" in November. A re-check of a series
+  whose last posted date has passed is `seasonal-break` with the plain reason, until the next dates are posted.
+- `/methodology/` says this in "Rides from a community calendar"; keep the two in step.
+- **Nov 20, 2026: fifteen more calendars** (Robert: "Start the longer run"): shift2bikes.org, chicagogrouprides.com,
+  sadlebred.com, dallasbicyclecoalition.org, hbl.org, bikelb.com, weeklyrides.com, everydayrides.com,
+  longbeachbikerides.com, themiamibikescene.com, yourgroupride.com, detroitgreenways.org, wisconsinbikefed.org,
+  events.queencity.bike, austinbikegroups.com: 135 more rides. These were picked from our own dated notes and the
+  sites' names, **not opened that day** (web fetches needed an approval nobody was there to give), so: `what` is only
+  what our notes already said (else the line is just "Listed on <name>."), `checked` is the ride's own last check,
+  and the button says "See it on <name>" (only msp.bike has `adds` and `first`, because its pages were read).
+  `own_hosts` exempts a site's own rides (the Dallas coalition's, Bike Long Beach's). The other shared sites still
+  wait for someone to open them; `node tools/audit-ride-sources.js` lists them.
+- **Shared sites** (Nov 19, 2026): a site that carries rides for three or more different hosts
+  (`RC.sharedSites()`, worked out from the data on every build; the big platforms excepted) is never "the host's
+  website" on a ride page. Its button, the first-time fold and "Check … before you go" carry the site's own name
+  (`hbl.org ↗`). 197 pages. **A raw calendar feed is never a button or the check link** (`RC.isFeed()`).
+- **The audit**: `node tools/audit-ride-sources.js` reads the data and the watcher's file (it fetches nothing) and lists
+  shared sites not yet in `data/ride-calendars.json`, raw-feed links, undated rides, run-out series and the re-check
+  backlog. The Nov 19 run is `research/rides/audit/2026-11-19-sources.md` (+ `.json`). 69 shared sites are waiting
+  for a person's call on which are community calendars like msp.bike (credit line, no calendar copy): add those to
+  `data/ride-calendars.json` one at a time, each event page opened that day. Not every shared site is one (NEMBA's
+  chapters and Rapha's clubhouses are the host's own).
 
 ### Hubs and redirects
 - Hub names follow the data. The ten biggest cities keep their hub name against a busy suburb; a
@@ -1436,4 +1482,17 @@ two exits; the shapes are on the plan canvas.
 - 2026-11-19 — `/contact/` gets a form (Netlify form `contact`: topic, name, email, message; entries stay in Netlify
   and reach Robert, never the public queue); `/privacy/` says six forms and what this one keeps. No sheet of the
   site's changed (`/contact/contact.css` is new), so `CSS_V` stays.
+- 2026-11-19 — Community calendars (msp.bike wrote in): the 17 Twin Cities rides link their own event page on msp.bike
+  by name with a credit line, get no `.ics` or Google Calendar copy from us ("Add to calendar on msp.bike"), and were
+  re-checked at the source that day: 4 still running, 13 on a seasonal break (four of them had been
+  promising a November date for a series that had ended). `data/ride-calendars.json`, `/methodology/`, `/ride/` v2.
+- 2026-11-19 — The audit after msp.bike (`tools/audit-ride-sources.js`): a date our own upkeep data doubts comes down
+  (`undated` in rides-freshness: 92 rides, 66 promising a ride within a month), a site that carries three or more
+  hosts' rides is never called the host's website (197 pages), a raw calendar feed is never a button, and undated
+  rides go to the top of Monday's re-check. 69 shared sites and the re-check backlog are written up in
+  `research/rides/audit/2026-11-19-sources.md`.
+- 2026-11-20 — Fifteen more community calendars get the msp.bike treatment (135 rides: a credit line, the ride's own
+  page there when it has one, no calendar copy from us), from our own dated notes; `what`, `adds`, `first` and
+  `own_hosts` in `data/ride-calendars.json`. The queue file re-sorted so the rides whose date came down go first, and
+  the re-check job run by hand on 125 of them.
 - 2026-11-19 — Instagram is @cyclefor_ (Robert renamed the account; it was @cycl_eforchange): every link and mention on the site, the JSON-LD `sameAs`, llms.txt, the function's default, the kit and Fruit Loop tools, the Fruit Loop's spring poster (`spring-2`, the handle repainted on the same ground); the `/cyclefor/` release is `cyclefor-v2` (the DM handle is in its wording). Posts already on Instagram keep the old handle in their pixels. The Netlify env var `INSTAGRAM_HANDLE` is Robert's to change.

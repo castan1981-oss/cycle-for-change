@@ -1,0 +1,104 @@
+[
+  {
+    "slug": "springfield-il-springfield-bicycle-club-v-park-weekend-rides",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-31",
+    "evidence": "Springfield Bicycle Club ICS feed shows V-Park Fast Rides on Oct 4 and Oct 31, 2026 as the last entries, with no V-Park events listed after October; the club's website states the season is 'typically April–October' (fetched Nov 20, 2026).",
+    "sources": [
+      "https://calendar.google.com/calendar/ical/c_70b758d11239668809108c39c0097096d58a9a40dde8370dafa80e9c2119eeb5%40group.calendar.google.com/public/basic.ics",
+      "https://www.springfieldbicycleclub.com/ride-with-us/"
+    ],
+    "status_note": "V-Park Weekend Rides run April through October; the Springfield Bicycle Club's website states the season is typically April–October. No rides are listed after October 31, 2026. Back in spring."
+  },
+  {
+    "slug": "colorado-springs-co-rar-front-range-see-you-next-tuesday-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-13",
+    "evidence": "RAR Front Range's Google Calendar ICS shows the See U Next Tuesday Ride as a recurring second-Tuesday monthly event with no end date; the RAR Front Range website and calendar page list no SYNT events for fall or winter 2026 — the only upcoming event is Boulder Cranksgiving on Nov 21, 2026 (fetched Nov 20, 2026).",
+    "sources": [
+      "https://calendar.google.com/calendar/ical/e91b2be3bc199aa52fd012f5b87b263feda9b09ae19000da16fca398021f9680%40group.calendar.google.com/public/basic.ics",
+      "https://rarfrontrange.com/calendar.html"
+    ],
+    "status_note": "The ride is listed as seasonal (April–October). The club's Google Calendar shows the recurring second-Tuesday event with no end date but no November or later instances; the RAR Front Range website lists no group rides for fall or winter. Back in April."
+  },
+  {
+    "slug": "chandler-az-southeast-chandler-cycling-sunday-social-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "Southeast Chandler Cycling Meetup shows 'Sunday Social Ride. 7:00 wheels down.' for Sun Nov 22, 2026 at 7:00 AM at Panera Bread (formerly Paradise Bakery), 2970 E Germann Rd, Chandler, AZ (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.meetup.com/southeast-chandler-cycling/events/317470888/",
+      "https://www.meetup.com/southeast-chandler-cycling/events/ical/"
+    ],
+    "changes": {
+      "schedule": "Every Sunday, wheels down 7:00 am, from the Panera Bread on Germann Rd. Time may change seasonally; check the Meetup event.",
+      "time_local": "7:00 am",
+      "start_hhmm": "07:00",
+      "refresh": {
+        "notes": "Winter time is 7:00 am; watch for a spring time change back to 6:00 am."
+      }
+    }
+  },
+  {
+    "slug": "phoenix-az-valley-epic-rides-night-rider-trail-100",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "Valley Epic Rides Meetup shows 'Night Rider Series - North Phoenix (Updated meet location)' every Wednesday at 6:00 PM until November 3, 2027, at 1418 E Sunnyside Dr, Phoenix, AZ; next ride November 25, 2026 (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.meetup.com/valley-epic-rides/events/317307933/",
+      "https://www.meetup.com/valley-epic-rides/events/ical/"
+    ],
+    "changes": {
+      "name": "Night Rider Series - North Phoenix",
+      "schedule": "Every Wednesday, 6:00 pm, at Trail 100 (1418 E Sunnyside Dr). Series runs until November 3, 2027. The meet spot can change; check the Meetup event.",
+      "time_local": "6:00 pm",
+      "start_hhmm": "18:00",
+      "refresh": {
+        "watch_url": "https://www.meetup.com/valley-epic-rides/events/",
+        "notes": "Current series event: meetup.com/valley-epic-rides/events/317307933/; runs through Nov 3, 2027. Check the event for any location changes."
+      }
+    }
+  },
+  {
+    "slug": "queen-creek-az-santan-shredders-wednesday-night-roll",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "The Meetup series ended October 28, 2026. The Santan Shredders Meetup feed shows no upcoming Wednesday Night Roll events; current events are other rides (El Tour countdown, Trail Essentials, weekend MTB rides). No new Wednesday Night Roll series has been posted. The club website says they hold road events on Fridays and Sundays."
+  },
+  {
+    "slug": "detroit-mi-lane-bangerz-westside-wednesday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "The Detroit Greenways Coalition community calendar shows no Westside Wednesday Ride after October 28, 2026. The next Wednesday-related event in the calendar is 'Where We At Wednesdays' on May 5, 2027. No Lane Bangerz website or social media links are in the record to confirm the ride has resumed or when it returns."
+  },
+  {
+    "slug": "el-paso-tx-saturday-road-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "El Paso Bicycle Club Meetup shows Saturday Road Ride on Nov 21, 2026 at 7:45 AM — the event description reads 'meet at 7:45 at Grace Gardens, ride out at 8:00; time adjusts with the seasons' — with dates running through Dec 19, 2026 (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.meetup.com/elpasobicycleclub/events/317238980/",
+      "https://www.meetup.com/ElPasoBicycleClub/events/ical/"
+    ],
+    "changes": {
+      "schedule": "Every Saturday; meet 7:45 am, ride out 8:00 am (time adjusts with the season; check the host's Meetup calendar the night before)",
+      "time_local": "7:45 am",
+      "start_hhmm": "07:45"
+    }
+  },
+  {
+    "slug": "elmhurst-il-elmhurst-bicycle-club-morning-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "Elmhurst Bicycle Club ClubExpress calendar lists Jeff's Morning Ride (35 mi, 13-15 mph) on Mondays and Thursdays at 9:00 AM from the Whole Foods lot on West Ave, Elmhurst, with upcoming dates Nov 26 (Thu) and Nov 30 (Mon) and Dec 3 (Thu), 2026 (fetched Nov 20, 2026).",
+    "sources": [
+      "https://elmhurstbc.clubexpress.com/content.aspx?page_id=4001&club_id=695056&action=cira&vm=Future&sif=0"
+    ]
+  }
+]

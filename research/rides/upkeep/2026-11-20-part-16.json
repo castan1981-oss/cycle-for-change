@@ -1,0 +1,45 @@
+[
+  {
+    "slug": "philadelphia-pa-bcp-sunny-sunday-d-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "phillybikeclub.org has been a 403 bot wall for 8 consecutive watcher runs; WebFetch also returns 403. The club is active in 2026 (National Ride A Bike Day, May 2, 2026 at the Azalea Garden) but the specific Sunday D ride schedule cannot be confirmed from any accessible source."
+  },
+  {
+    "slug": "portland-me-gear-hub-thursday-group-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "portlandgearhub.org/events shows 'No Upcoming events' (fetched Nov 20, 2026). The schedule-text-changed flag reflects a job posting added to the nav banner, not a ride schedule change. No Thursday group ride is listed for fall/winter 2026."
+  },
+  {
+    "slug": "san-antonio-tx-satx-social-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "bike-san-antonio.org/sa-bike-groups/ lists the SATX Social Ride as meeting at 6:30 pm and rolling at 7:00 pm every Tuesday, location rotates weekly between downtown spots and businesses, 9 to 14 miles, no-drop (fetched Nov 20, 2026).",
+    "sources": ["https://www.bike-san-antonio.org/sa-bike-groups/"],
+    "changes": {
+      "schedule": "Every Tuesday, meet 6:30 pm, roll 7:00 pm; location rotates weekly—check Facebook for the week's start",
+      "start_location": {
+        "name": "Downtown San Antonio (location rotates weekly)",
+        "address": "Downtown San Antonio, TX"
+      },
+      "visitor_notes": "Location rotates weekly; check Facebook (facebook.com/groups/SATNBC/) for each week's start.",
+      "distance_miles": "9–14"
+    }
+  },
+  {
+    "slug": "san-diego-ca-shewolves-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "Watch URL (sandiegomagazine.com) returned 403. Instagram @sd_shewolves requires login. No accessible primary source confirms the ride is still running."
+  },
+  {
+    "slug": "santa-barbara-ca-fastrack-saturday-lake-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-10",
+    "evidence": "fastrackbicycles.com lists 'Saturday 8:00 am · Saturday lake ride · Meet at the Dolphin Fountain in front of Stearns Wharf'; the shop's stock list is dated Oct 10, 2026 (fetched Nov 20, 2026).",
+    "sources": ["https://fastrackbicycles.com/"]
+  }
+]

@@ -1,0 +1,3350 @@
+{
+ "today": "2026-11-19",
+ "rides": 1430,
+ "listed": 1427,
+ "A_shared_calendars": [
+  {
+   "domain": "chicagogrouprides.com",
+   "rides": 18,
+   "hosts": 14,
+   "examples": [
+    "chicago-il-chicago-critical-mass",
+    "chicago-il-chicago-united-saturday-ride",
+    "chicago-il-evolution-cycling-spiteful-thursday",
+    "chicago-il-evolution-cycling-sunday-ride"
+   ]
+  },
+  {
+   "domain": "dallasbicyclecoalition.org",
+   "rides": 15,
+   "hosts": 14,
+   "examples": [
+    "dallas-tx-community-beer-co-cycling-group-ride",
+    "dallas-tx-dbc-second-saturday-coffee-social-and-ride",
+    "dallas-tx-pull-through-friday-coffee-ride",
+    "dallas-tx-femme-pedale-womens-ride"
+   ]
+  },
+  {
+   "domain": "shift2bikes.org",
+   "rides": 13,
+   "hosts": 12,
+   "examples": [
+    "beaverton-or-ride-westside-post-happy-hour-casual-ride",
+    "beaverton-or-ride-westside-sunset-happy-hour-post-ride",
+    "portland-or-corvidae-bc-monthly-ride",
+    "portland-or-foster-night-ride-tuesday-night-ride"
+   ]
+  },
+  {
+   "domain": "bikelb.com",
+   "rides": 11,
+   "hosts": 11,
+   "examples": [
+    "cerritos-ca-long-beach-riding-club-thursday-squad-ride",
+    "long-beach-ca-bike-long-beach-bikes-and-coffee",
+    "long-beach-ca-bixby-knolls-kidical-mass",
+    "long-beach-ca-lb-cannonball-run-taco-tuesday"
+   ]
+  },
+  {
+   "domain": "sadlebred.com",
+   "rides": 16,
+   "hosts": 10,
+   "examples": [
+    "atlanta-ga-midweek-roll",
+    "atlanta-ga-bonafide-motivation-monday",
+    "avondale-estates-ga-pizza-ride",
+    "brookhaven-ga-brookhaven-bike-alliance-monday-ride"
+   ]
+  },
+  {
+   "domain": "bigorangecycling.org",
+   "rides": 12,
+   "hosts": 10,
+   "examples": [
+    "long-beach-ca-big-orange-hughes-park-crit-practice-monday",
+    "los-angeles-ca-lunch-rush-san-pedro",
+    "los-angeles-ca-major-taylor-tuesday-ride",
+    "los-angeles-ca-la-grange-nichols-canyon-ride"
+   ]
+  },
+  {
+   "domain": "hbl.org",
+   "rides": 11,
+   "hosts": 9,
+   "examples": [
+    "aiea-hi-red-hot-diabetes-riders-pearl-harbor-path",
+    "honolulu-hi-808-lowriders-thursday-night-cruise",
+    "honolulu-hi-outta-bounds-pau-hana-wednesday",
+    "honolulu-hi-red-hot-ladies-roving-ride"
+   ]
+  },
+  {
+   "domain": "static1.squarespace.com",
+   "rides": 10,
+   "hosts": 9,
+   "examples": [
+    "durham-nc-bike-durham-community-ride",
+    "durham-nc-black-spoke-society-first-tuesday-ride",
+    "durham-nc-black-spoke-society-fourth-sunday-social-ride",
+    "durham-nc-first-friday-ride"
+   ]
+  },
+  {
+   "domain": "bikedurham.org",
+   "rides": 9,
+   "hosts": 9,
+   "examples": [
+    "durham-nc-bike-durham-community-ride",
+    "durham-nc-black-spoke-society-fourth-sunday-social-ride",
+    "durham-nc-first-friday-ride",
+    "durham-nc-ponysaurus-pony-ride"
+   ]
+  },
+  {
+   "domain": "nemba.org",
+   "rides": 17,
+   "hosts": 8,
+   "examples": [
+    "chelmsford-ma-merrimack-valley-nemba-rough-riders",
+    "falmouth-ma-cape-cod-nemba-monthly-chapter-ride",
+    "framingham-ma-blackstone-valley-nemba-nobscot-friday-rides",
+    "holliston-ma-blackstone-valley-nemba-thursday-vietnam-intermediate-ride"
+   ]
+  },
+  {
+   "domain": "lasillarota.com",
+   "rides": 10,
+   "hosts": 8,
+   "examples": [
+    "mexico-city-mx-chirimixquics-bike-friday-ride",
+    "mexico-city-mx-libertad-en-bici-wednesday-night-ride",
+    "mexico-city-mx-ohtli-chiquxs-lgbt-rides",
+    "mexico-city-mx-paseo-de-todos-night-ride"
+   ]
+  },
+  {
+   "domain": "weeklyrides.com",
+   "rides": 9,
+   "hosts": 8,
+   "examples": [
+    "charlotte-nc-charlotte-bike-party",
+    "charlotte-nc-critical-mass",
+    "charlotte-nc-charlotte-thrives-queer-ride",
+    "charlotte-nc-dirt-divas-tuesday-mtb-ride"
+   ]
+  },
+  {
+   "domain": "nolasocialride.org",
+   "rides": 8,
+   "hosts": 8,
+   "examples": [
+    "new-orleans-la-gretna-social-riders-friday",
+    "new-orleans-la-critical-mass-nola-last-friday",
+    "new-orleans-la-getupnride-tuesday-ride",
+    "new-orleans-la-heat-index-wednesday-ride"
+   ]
+  },
+  {
+   "domain": "roanokeoutside.com",
+   "rides": 8,
+   "hosts": 8,
+   "examples": [
+    "roanoke-va-but-coffee-first-saturday-ride",
+    "roanoke-va-crank-sisters-social-ride",
+    "roanoke-va-m-and-m-mtb-sunday-ride-carvins-cove",
+    "roanoke-va-roanoke-valley-riveters-wednesday-mountain-bike-ride"
+   ]
+  },
+  {
+   "domain": "everydayrides.com",
+   "rides": 8,
+   "hosts": 8,
+   "examples": [
+    "seattle-wa-beer-junction-bike-club",
+    "seattle-wa-cogs-wednesday-evening-ride",
+    "seattle-wa-good-weather-sunday-social",
+    "seattle-wa-mello-fellos-saturday-ride"
+   ]
+  },
+  {
+   "domain": "events.rapha.cc",
+   "rides": 14,
+   "hosts": 7,
+   "examples": [
+    "melbourne-au-rapha-melbourne-mt-pleasant-ride",
+    "melbourne-au-rapha-melbourne-social-saturday-ride",
+    "melbourne-au-rapha-melbourne-southside-ride",
+    "sydney-au-rapha-sydney-thursday-ladies-open-ride"
+   ]
+  },
+  {
+   "domain": "bikethewoodlands.org",
+   "rides": 8,
+   "hosts": 7,
+   "examples": [
+    "conroe-tx-race-ready-repair-saturday-morning-ride",
+    "conroe-tx-race-ready-repair-thursday-night-ride",
+    "magnolia-tx-love-and-coffee-friday-ride",
+    "spring-tx-sun-and-ski-sunday-shop-ride"
+   ]
+  },
+  {
+   "domain": "longbeachbikerides.com",
+   "rides": 7,
+   "hosts": 7,
+   "examples": [
+    "cerritos-ca-long-beach-riding-club-thursday-squad-ride",
+    "long-beach-ca-bike-long-beach-bikes-and-coffee",
+    "long-beach-ca-queercicles-c-u-next-tuesday",
+    "long-beach-ca-lb-cannonball-run-taco-tuesday"
+   ]
+  },
+  {
+   "domain": "themiamibikescene.com",
+   "rides": 7,
+   "hosts": 7,
+   "examples": [
+    "coral-gables-fl-ebc-bike305-beginner-ride",
+    "coral-gables-fl-everglades-bicycle-club-saturday-ride",
+    "fort-lauderdale-fl-critical-mass",
+    "fort-lauderdale-fl-goonie-prowl"
+   ]
+  },
+  {
+   "domain": "hawaiicyclingclub.com",
+   "rides": 8,
+   "hosts": 6,
+   "examples": [
+    "hilo-hi-east-hawaii-riders",
+    "hilo-hi-first-saturday-mauna-loa-access-road-ride",
+    "hilo-hi-friday-mtb-kulani-forest",
+    "kailua-kona-hi-kona-recreational-ride-north-patricios"
+   ]
+  },
+  {
+   "domain": "detroitgreenways.org",
+   "rides": 6,
+   "hosts": 6,
+   "examples": [
+    "detroit-mi-pedalup-riderz-friday-night-groove",
+    "detroit-mi-saturday-night-roll-outs-on-the-joe",
+    "detroit-mi-soul-roll-detroit-monday-saturday",
+    "detroit-mi-lane-bangerz-westside-wednesday-ride"
+   ]
+  },
+  {
+   "domain": "thetrellisphilly.com",
+   "rides": 6,
+   "hosts": 5,
+   "examples": [
+    "philadelphia-pa-philly-gravel-club-apres-gravel",
+    "philadelphia-pa-papertrail-gravel-espresso",
+    "philadelphia-pa-laurel-hill-fridays",
+    "philadelphia-pa-papertrail-mountain-espresso"
+   ]
+  },
+  {
+   "domain": "milwaukeebikerides.com",
+   "rides": 6,
+   "hosts": 5,
+   "examples": [
+    "milwaukee-wi-cream-city-cycle-club-wednesday-morning-ride",
+    "milwaukee-wi-critical-mass-milwaukee-last-friday",
+    "milwaukee-wi-mke-rec-saturday-community-bike-rides",
+    "milwaukee-wi-mke-rec-thursday-night-rides"
+   ]
+  },
+  {
+   "domain": "transitcycles.com",
+   "rides": 5,
+   "hosts": 5,
+   "examples": [
+    "tucson-az-fuga-bicis-y-burros-second-sunday-ride",
+    "tucson-az-fuga-southside-ride",
+    "tucson-az-transit-cycles-third-thursday-ride",
+    "tucson-az-tuesday-night-ride"
+   ]
+  },
+  {
+   "domain": "chicagofamilybiking.org",
+   "rides": 5,
+   "hosts": 5,
+   "examples": [
+    "arlington-heights-il-bike-the-heights-slow-roll",
+    "chicago-il-chicago-family-biking-hyde-park-kidical-mass",
+    "chicago-il-chicago-family-biking-lakeview-east-kidical-mass",
+    "chicago-il-chicago-family-biking-logan-square-kidical-mass"
+   ]
+  },
+  {
+   "domain": "vvcc.us",
+   "rides": 7,
+   "hosts": 4,
+   "examples": [
+    "cottonwood-az-vvcc-friday-social-ride",
+    "cottonwood-az-vvcc-wednesday-cottonwood-ride",
+    "flagstaff-az-vvcc-mormon-lake-thursday-ride",
+    "sedona-az-absolute-bikes-shop-rides"
+   ]
+  },
+  {
+   "domain": "yourgroupride.com",
+   "rides": 7,
+   "hosts": 4,
+   "examples": [
+    "fort-collins-co-gravel-people",
+    "fort-collins-co-incycle-mtb-ride",
+    "fort-collins-co-omba-singletrack-social",
+    "fort-collins-co-riobase-mile-ride"
+   ]
+  },
+  {
+   "domain": "altovelo.org",
+   "rides": 6,
+   "hosts": 4,
+   "examples": [
+    "alviso-ca-alviso-noon-ride",
+    "los-altos-ca-alto-velo-coffee-and-cake-ride",
+    "palo-alto-ca-alto-velo-joy-ride",
+    "palo-alto-ca-alto-velo-womens-wtfnb-ride"
+   ]
+  },
+  {
+   "domain": "pbbatx.com",
+   "rides": 6,
+   "hosts": 4,
+   "examples": [
+    "midland-tx-pbba-sunday-crepes-and-cranks",
+    "midland-tx-energy-city-bikes-saturday-shop-ride",
+    "midland-tx-trek-saturday-coffee-ride",
+    "midland-tx-trek-wednesday-shop-ride"
+   ]
+  },
+  {
+   "domain": "lcc.org.uk",
+   "rides": 6,
+   "hosts": 4,
+   "examples": [
+    "london-gb-cycle-islington-womens-ride",
+    "london-gb-ealing-cycling-campaign-leisurely-ride",
+    "london-gb-ealing-cycling-campaign-womens-ride",
+    "london-gb-camden-anchor-kentish-town-pedals"
+   ]
+  },
+  {
+   "domain": "bikeeastbay.org",
+   "rides": 5,
+   "hosts": 4,
+   "examples": [
+    "el-cerrito-ca-bikes-burgers-brews-tuesday-night-ride",
+    "hayward-ca-bike-east-bay-bike-hayward-wednesday-rides",
+    "oakland-ca-red-bike-and-green-community-rides",
+    "oakland-ca-bike-east-bay-slowkland"
+   ]
+  },
+  {
+   "domain": "renowheelmen.org",
+   "rides": 5,
+   "hosts": 4,
+   "examples": [
+    "reno-nv-bike-night-reno",
+    "reno-nv-mwf-ride-dolce-caffe",
+    "reno-nv-reno-wheelmen-wednesday-group-ride",
+    "sparks-nv-reno-wheelmen-sparks-group-ride"
+   ]
+  },
+  {
+   "domain": "visitbentonville.com",
+   "rides": 4,
+   "hosts": 4,
+   "examples": [
+    "bentonville-ar-social-ride-bentonville-monday",
+    "bentonville-ar-vittoria-tired-but-inspired-thursday",
+    "bentonville-ar-tour-de-coler",
+    "bentonville-ar-trackstand-cyclery-friday-shop-mtb-ride"
+   ]
+  },
+  {
+   "domain": "events.queencity.bike",
+   "rides": 4,
+   "hosts": 4,
+   "examples": [
+    "covington-ky-ridethecov-wednesday-series",
+    "newport-ky-tuesday-night-worlds-tnw",
+    "cincinnati-oh-ride-pleasant-streets",
+    "cincinnati-oh-ubbc-tuesday-night-ride"
+   ]
+  },
+  {
+   "domain": "abrtcycling.com",
+   "rides": 4,
+   "hosts": 4,
+   "examples": [
+    "annapolis-md-dam-good-watts-monday-mtb-ride",
+    "annapolis-md-abrt-sunday-no-drop-ride",
+    "davidsonville-md-abrt-saturday-ride",
+    "edgewater-md-parvilla-cycles-thursday-shop-ride"
+   ]
+  },
+  {
+   "domain": "reconnectrochester.org",
+   "rides": 4,
+   "hosts": 4,
+   "examples": [
+    "rochester-ny-reconnect-rochester-flower-city-feeling-good-wednesday",
+    "rochester-ny-just-for-giggles-monday-night-brewery-ride",
+    "rochester-ny-rochester-bicycling-club-weekend-supported-rides",
+    "rochester-ny-rochester-bike-gang-thursday-ride"
+   ]
+  },
+  {
+   "domain": "wisconsinbikefed.org",
+   "rides": 6,
+   "hosts": 3,
+   "examples": [
+    "madison-wi-motorless-motion-taco-ride",
+    "milwaukee-wi-mke-rec-saturday-community-bike-rides",
+    "milwaukee-wi-mke-rec-thursday-night-rides",
+    "milwaukee-wi-mke-rec-tuesday-good-morning-hank"
+   ]
+  },
+  {
+   "domain": "orca.bike",
+   "rides": 5,
+   "hosts": 3,
+   "examples": [
+    "anchorage-ak-trek-store-coed-cheese-and-crackers-ride",
+    "anchorage-ak-tuesday-night-social-road-ride",
+    "anchorage-ak-trek-store-womens-hot-chocolate-ride",
+    "palmer-ak-backcountry-bike-casual-road-friday"
+   ]
+  },
+  {
+   "domain": "mobilebayrcc.org",
+   "rides": 5,
+   "hosts": 3,
+   "examples": [
+    "fairhope-al-pro-cycle-saturday-morning-ride",
+    "mobile-al-mobile-bay-riders-callaghans-tuesday-ride",
+    "mobile-al-mobile-bay-riders-greers-market-sunday-ride",
+    "mobile-al-mobile-bay-riders-iron-hand-thursday-ride"
+   ]
+  },
+  {
+   "domain": "littlerock.gov",
+   "rides": 5,
+   "hosts": 3,
+   "examples": [
+    "little-rock-ar-abc-sunday-two-rivers-ride",
+    "little-rock-ar-abc-thursday-morning-ride",
+    "little-rock-ar-abc-tuesday-morning-ride",
+    "little-rock-ar-heels-on-wheels-monday-ride"
+   ]
+  },
+  {
+   "domain": "fallsareabicyclists.org",
+   "rides": 5,
+   "hosts": 3,
+   "examples": [
+    "sioux-falls-sd-fab-moon-and-stars-ride",
+    "sioux-falls-sd-fab-saturday-coffee-shop-ride",
+    "sioux-falls-sd-sfbc-first-friday-mtb-ride",
+    "sioux-falls-sd-spoke-n-sport-donut-ride"
+   ]
+  },
+  {
+   "domain": "dorba.org",
+   "rides": 5,
+   "hosts": 3,
+   "examples": [
+    "dallas-tx-dorba-thursday-group-ride-oak-cliff-nature-preserve",
+    "flower-mound-tx-dirt-disciples-thursday-northshore",
+    "flower-mound-tx-dorba-wednesday-night-trail-party-northshore",
+    "frisco-tx-dorba-wednesday-group-ride-frisco-nw-community-park"
+   ]
+  },
+  {
+   "domain": "trekbicycleauburn.com",
+   "rides": 4,
+   "hosts": 3,
+   "examples": [
+    "auburn-al-camp-super-sunday-ride",
+    "auburn-al-second-sunday-ride",
+    "auburn-al-thursday-night-dirtbags",
+    "auburn-al-camp-tuesday-night-ride-and-grill"
+   ]
+  },
+  {
+   "domain": "northrimadventure.com",
+   "rides": 4,
+   "hosts": 3,
+   "examples": [
+    "chico-ca-north-rim-easy-does-it-sunday-ride",
+    "chico-ca-fast-fit-fun-50-wednesday-evening-ride",
+    "chico-ca-north-rim-friday-morning-no-drop-road-ride",
+    "chico-ca-saturday-fast-road-ride-october-to-february"
+   ]
+  },
+  {
+   "domain": "radicaladventureriders.com",
+   "rides": 4,
+   "hosts": 3,
+   "examples": [
+    "colorado-springs-co-rar-front-range-see-you-next-tuesday-ride",
+    "denver-co-rar-front-range-see-you-next-tuesday",
+    "philadelphia-pa-rar-philadelphia-group-rides",
+    "richmond-va-rar-richmond-monday-night-ride"
+   ]
+  },
+  {
+   "domain": "landrys.com",
+   "rides": 4,
+   "hosts": 3,
+   "examples": [
+    "boston-ma-landrys-boston-slow-roll-social-ride",
+    "braintree-ma-landrys-braintree-saturday-road-ride",
+    "milton-ma-southeast-ma-nemba-thursduro-blue-hills",
+    "westwood-ma-landrys-needham-womens-nonbinary-mtb-ride"
+   ]
+  },
+  {
+   "domain": "trihardsports.com",
+   "rides": 4,
+   "hosts": 3,
+   "examples": [
+    "biloxi-ms-tri-hard-friday-fun-ride",
+    "biloxi-ms-biloxi-bicycle-works-wednesday-urban-assault",
+    "ocean-springs-ms-tri-hard-monday-night-shop-ride",
+    "ocean-springs-ms-tato-nut-ride"
+   ]
+  },
+  {
+   "domain": "pghbabesonbikes.com",
+   "rides": 4,
+   "hosts": 3,
+   "examples": [
+    "pittsburgh-pa-pittsburgh-critical-mass-second-friday",
+    "pittsburgh-pa-pgh-babes-on-bikes-frigid-witch-training-rides",
+    "pittsburgh-pa-3-rivers-outdoor-co-thursday-frick-park-mtb-ride",
+    "pittsburgh-pa-pgh-babes-on-bikes-whatever-weds"
+   ]
+  },
+  {
+   "domain": "mtbakerbikeclub.org",
+   "rides": 4,
+   "hosts": 3,
+   "examples": [
+    "bellingham-wa-rabbit-ride",
+    "bellingham-wa-mount-baker-bicycle-club-saturday-donut-ride",
+    "bellingham-wa-mount-baker-bicycle-club-saturday-gravel-ride-series",
+    "bellingham-wa-mount-baker-bicycle-club-wednesday-trail-ride"
+   ]
+  },
+  {
+   "domain": "velocity-cycles.com",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "tuscaloosa-al-druid-city-bicycle-club-tuesday-ride",
+    "tuscaloosa-al-velocity-casual-campus-cruise",
+    "tuscaloosa-al-wamba-monday-beginner-ride"
+   ]
+  },
+  {
+   "domain": "fairwheelbikes.com",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "tucson-az-the-shootout",
+    "tucson-az-tuesday-morning-fast-ride",
+    "tucson-az-womens-shootout"
+   ]
+  },
+  {
+   "domain": "oldtownbikeshop.com",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "colorado-springs-co-buffalo-lodge-bike-tribe-saturday-group-ride",
+    "colorado-springs-co-buffalo-lodge-saturday-group-ride",
+    "colorado-springs-co-the-wednesday-ride"
+   ]
+  },
+  {
+   "domain": "bikeiowacity.com",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "iowa-city-ia-bic-wednesday-night-social-ride",
+    "iowa-city-ia-gatos-en-ronda-friday-night-ride",
+    "north-liberty-ia-sugar-bottom-bikes-wednesday-night-gravel"
+   ]
+  },
+  {
+   "domain": "centralincycling.org",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "indianapolis-in-bikeparty-indianapolis",
+    "indianapolis-in-riverside-riders",
+    "indianapolis-in-near-eastside-ride"
+   ]
+  },
+  {
+   "domain": "sevenhillswheelmen.org",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "leominster-ma-wachusett-nemba-monday-night-ride",
+    "millbury-ma-sutton-bike-works-monday-rides",
+    "paxton-ma-seven-hills-wheelmen-tuesday-night-ride"
+   ]
+  },
+  {
+   "domain": "cyclemania1.com",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "portland-me-cyclemania-thursday-night-mountain-bike-ride",
+    "portland-me-single-track-sisters-wednesday-womens-mtb-ride",
+    "south-portland-me-pvc-wednesday-night-ride"
+   ]
+  },
+  {
+   "domain": "bridgedetroit.com",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "detroit-mi-cruise-detroit",
+    "detroit-mi-metropolis-cycles-monday-night-ride",
+    "detroit-mi-soul-roll-detroit-monday-saturday"
+   ]
+  },
+  {
+   "domain": "bikewalkkc.org",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "kansas-city-mo-girl-bike-gang-monday-ride",
+    "kansas-city-mo-kc-family-bike-ride",
+    "kansas-city-mo-women-led-cycling-wednesday-ride"
+   ]
+  },
+  {
+   "domain": "gulfcoasttrails.org",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "biloxi-ms-bike-biloxi-monthly-ride",
+    "ocean-springs-ms-tato-nut-ride",
+    "pass-christian-ms-bay-night-ride"
+   ]
+  },
+  {
+   "domain": "bikethetriangle.com",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "durham-nc-ponysaurus-pony-ride",
+    "durham-nc-rescue-racing-daily-beer-bar-ride",
+    "durham-nc-scrappy-tuesday-ride"
+   ]
+  },
+  {
+   "domain": "seacoastbikes.org",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "dover-nh-dover-cyclery-thirsty-turtle",
+    "portsmouth-nh-mama-wheelies-wednesday-ladies-ride",
+    "portsmouth-nh-papa-wheelies-monday-night-road-ride"
+   ]
+  },
+  {
+   "domain": "citibikenyc.com",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "brooklyn-ny-east-brooklyn-bike-club-wednesday-ride",
+    "jackson-heights-ny-34th-ave-citi-bike-saturday-ride",
+    "new-york-ny-achilles-citi-bike-adaptive-cycling-central-park"
+   ]
+  },
+  {
+   "domain": "bikeerie.org",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "edinboro-pa-814-outdoor-sports-wednesday-night-rides",
+    "erie-pa-slow-roll-erie",
+    "fairview-pa-girls-gone-cycle-monday-ride"
+   ]
+  },
+  {
+   "domain": "bikepgh.org",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "pittsburgh-pa-pmtcc-wednesday-ride",
+    "pittsburgh-pa-pgh-babes-on-bikes-frigid-witch-training-rides",
+    "pittsburgh-pa-team-decaf-tuesday-ride"
+   ]
+  },
+  {
+   "domain": "austinbikegroups.com",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "austin-tx-critical-mass-austin-last-friday",
+    "austin-tx-ride-bikes-austin-friday-night-ride",
+    "austin-tx-mellow-johnnys-scout-a-route"
+   ]
+  },
+  {
+   "domain": "bikedenton.org",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "denton-tx-denton-women-cyclists-tuesday-ride",
+    "denton-tx-east-side-social-ride",
+    "denton-tx-monday-community-ride"
+   ]
+  },
+  {
+   "domain": "velorepublicbikes.com",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "denton-tx-denton-women-cyclists-tuesday-ride",
+    "denton-tx-east-side-social-ride",
+    "denton-tx-monday-community-ride"
+   ]
+  },
+  {
+   "domain": "raw.githubusercontent.com",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "madison-wi-madison-queer-bike-ride",
+    "madison-wi-madison-womens-cycling-club-tuesday-ride",
+    "middleton-wi-capital-brewery-bike-club-rides"
+   ]
+  },
+  {
+   "domain": "laramiebikenet.org",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "laramie-wy-spinderellas",
+    "laramie-wy-laramie-bikenet-tuesday-night-hammer-ride",
+    "laramie-wy-pedal-house-wednesday-night-ride"
+   ]
+  }
+ ],
+ "A_shared_feeds": [
+  {
+   "feed": "https://calendar.google.com/calendar/ical/c_s4s5tn1ra5f364pl3vvrvtack0%40group.calendar.google.com/public/basic.ics",
+   "rides": 6,
+   "hosts": 6,
+   "examples": [
+    "detroit-mi-pedalup-riderz-friday-night-groove",
+    "detroit-mi-saturday-night-roll-outs-on-the-joe",
+    "detroit-mi-soul-roll-detroit-monday-saturday",
+    "detroit-mi-lane-bangerz-westside-wednesday-ride"
+   ]
+  },
+  {
+   "feed": "https://calendar.google.com/calendar/ical/c_ecf405d39e53c2549e061b8e50c9bdd2192bec672418a2e49428428ece8d210a%40group.calendar.google.com/public/basic.ics",
+   "rides": 5,
+   "hosts": 5,
+   "examples": [
+    "cerritos-ca-long-beach-riding-club-thursday-squad-ride",
+    "long-beach-ca-lb-cannonball-run-taco-tuesday",
+    "long-beach-ca-northside-long-beach-ride-club",
+    "long-beach-ca-two-wheels-one-love-monday-ride"
+   ]
+  },
+  {
+   "feed": "https://calendar.google.com/calendar/ical/c_74a00fbd136eaad93850107be04fb2d309ee442b55f3b2ef908c66a37d0d07e3%40group.calendar.google.com/public/basic.ics",
+   "rides": 4,
+   "hosts": 4,
+   "examples": [
+    "long-beach-ca-bike-long-beach-bikes-and-coffee",
+    "long-beach-ca-bixby-knolls-kidical-mass",
+    "long-beach-ca-lbians-queer-wtfnb-ride",
+    "los-angeles-ca-the-peoples-ride-last-friday"
+   ]
+  },
+  {
+   "feed": "https://calendar.google.com/calendar/ical/3gp47l8ftrpp8812vhfnp9j9s4%40group.calendar.google.com/public/basic.ics",
+   "rides": 4,
+   "hosts": 3,
+   "examples": [
+    "auburn-al-james-bros-saturday-shop-ride",
+    "millbrook-al-mbc-old-and-slow-ride",
+    "prattville-al-mbc-tuesday-prattville-loop",
+    "prattville-al-mbc-thursday-night-ride"
+   ]
+  },
+  {
+   "feed": "https://nolasocialride.org/events/?ical=1",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "new-orleans-la-heat-index-wednesday-ride",
+    "new-orleans-la-nola-fixed-wednesday-night-ride",
+    "new-orleans-la-friday-sugar-rush"
+   ]
+  },
+  {
+   "feed": "https://ridewithgps.com/organizations/14742/calendar.ics",
+   "rides": 4,
+   "hosts": 3,
+   "examples": [
+    "biloxi-ms-tri-hard-friday-fun-ride",
+    "biloxi-ms-biloxi-bicycle-works-wednesday-urban-assault",
+    "ocean-springs-ms-tri-hard-monday-night-shop-ride",
+    "ocean-springs-ms-tato-nut-ride"
+   ]
+  },
+  {
+   "feed": "https://www.bikethetriangle.com/events/?ical=1",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "durham-nc-ponysaurus-pony-ride",
+    "durham-nc-rescue-racing-daily-beer-bar-ride",
+    "durham-nc-scrappy-tuesday-ride"
+   ]
+  },
+  {
+   "feed": "https://calendar.google.com/calendar/ical/c_8dstjm2qg2l45fbhg5n7ht8thg%40group.calendar.google.com/public/basic.ics",
+   "rides": 3,
+   "hosts": 3,
+   "examples": [
+    "rochester-ny-reconnect-rochester-flower-city-feeling-good-wednesday",
+    "rochester-ny-just-for-giggles-monday-night-brewery-ride",
+    "rochester-ny-rochester-bike-gang-thursday-ride"
+   ]
+  },
+  {
+   "feed": "https://lcc.org.uk/events/list/?ical=1",
+   "rides": 4,
+   "hosts": 3,
+   "examples": [
+    "london-gb-ealing-cycling-campaign-womens-ride",
+    "london-gb-camden-anchor-kentish-town-pedals",
+    "london-gb-camden-anchor-kilburn-pedals",
+    "london-gb-southwark-cyclists-healthy-rides"
+   ]
+  },
+  {
+   "feed": "https://orca.bike/calendar/?ical=1",
+   "rides": 4,
+   "hosts": 2,
+   "examples": [
+    "anchorage-ak-trek-store-coed-cheese-and-crackers-ride",
+    "anchorage-ak-trek-store-womens-hot-chocolate-ride",
+    "palmer-ak-backcountry-bike-casual-road-friday",
+    "palmer-ak-backcountry-bike-spicy-sunday-road-ride"
+   ]
+  },
+  {
+   "feed": "https://www.meetup.com/global-bikes-meetup/events/ical/",
+   "rides": 3,
+   "hosts": 2,
+   "examples": [
+    "chandler-az-global-bikes-best-saturday-training",
+    "gilbert-az-global-bikes-sunday-funday-ride",
+    "phoenix-az-global-bikes-ahwatukee-wednesday-ride"
+   ]
+  },
+  {
+   "feed": "https://www.meetup.com/vvcc-road-bike-rides/events/ical/",
+   "rides": 4,
+   "hosts": 2,
+   "examples": [
+    "cottonwood-az-vvcc-friday-social-ride",
+    "flagstaff-az-vvcc-mormon-lake-thursday-ride",
+    "sedona-az-vvcc-saturday-voc-ride",
+    "sedona-az-vvcc-thursday-sedona-area-road-ride"
+   ]
+  },
+  {
+   "feed": "https://www.meetup.com/west-valley-casual-bike-rides/events/ical/",
+   "rides": 4,
+   "hosts": 2,
+   "examples": [
+    "peoria-az-west-valley-casual-bike-rides-bear-claw-ride",
+    "peoria-az-west-valley-casual-bike-rides-stadium-ride",
+    "peoria-az-west-valley-casual-true-beginner-ride",
+    "peoria-az-west-valley-casual-thursday-any-bike-ride"
+   ]
+  },
+  {
+   "feed": "https://bikeeastbay.org/events/category/group-rides/?ical=1",
+   "rides": 2,
+   "hosts": 2,
+   "examples": [
+    "el-cerrito-ca-bikes-burgers-brews-tuesday-night-ride",
+    "pleasant-hill-ca-concord-thursday-night-rides"
+   ]
+  },
+  {
+   "feed": "https://pedaldurango.com/events/list/?ical=1",
+   "rides": 2,
+   "hosts": 2,
+   "examples": [
+    "durango-co-church-of-the-high-pines",
+    "durango-co-tuesday-night-worlds"
+   ]
+  },
+  {
+   "feed": "https://majortaylorchicago.com/events/?ical=1",
+   "rides": 4,
+   "hosts": 2,
+   "examples": [
+    "chicago-il-mtc3-saturday-sunrise-ride",
+    "chicago-il-mtc3-sunrise-ride",
+    "matteson-il-mtc3-monday-night-malarkey",
+    "tinley-park-il-mtc3-big-ring"
+   ]
+  },
+  {
+   "feed": "https://calendar.google.com/calendar/ical/abrtmembership%40gmail.com/public/basic.ics",
+   "rides": 2,
+   "hosts": 2,
+   "examples": [
+    "annapolis-md-dam-good-watts-monday-mtb-ride",
+    "davidsonville-md-abrt-saturday-ride"
+   ]
+  },
+  {
+   "feed": "https://calendar.google.com/calendar/ical/avp9pdcdec7ptjencp2m66bsk4%40group.calendar.google.com/public/basic.ics",
+   "rides": 2,
+   "hosts": 2,
+   "examples": [
+    "portsmouth-nh-mama-wheelies-wednesday-ladies-ride",
+    "portsmouth-nh-papa-wheelies-monday-night-road-ride"
+   ]
+  },
+  {
+   "feed": "https://renowheelmen.org/events/?ical=1",
+   "rides": 2,
+   "hosts": 2,
+   "examples": [
+    "reno-nv-mwf-ride-dolce-caffe",
+    "sparks-nv-reno-wheelmen-friday-lunch-ride"
+   ]
+  },
+  {
+   "feed": "https://tockify.com/api/feeds/ics/commevents",
+   "rides": 2,
+   "hosts": 2,
+   "examples": [
+    "dallas-tx-dallas-critical-mass",
+    "dallas-tx-eastside-taco-ride"
+   ]
+  },
+  {
+   "feed": "https://calendar.google.com/calendar/ical/bd12907cc714268203a8976992cc1aee49f05891e373d32c6574463eebee7144%40group.calendar.google.com/public/basic.ics",
+   "rides": 3,
+   "hosts": 2,
+   "examples": [
+    "henrico-va-contes-richmond-sunday-brunch-ride",
+    "virginia-beach-va-tripower-saturday-group-ride",
+    "virginia-beach-va-tripower-tuesday-thursday-morning-ride"
+   ]
+  }
+ ],
+ "B_feed_buttons": [
+  {
+   "slug": "auburn-al-james-bros-saturday-shop-ride",
+   "url": "https://calendar.google.com/calendar/embed?src=3gp47l8ftrpp8812vhfnp9j9s4%40group.calendar.google.com&ctz=America%2FChicago&mode=AGENDA"
+  },
+  {
+   "slug": "millbrook-al-mbc-old-and-slow-ride",
+   "url": "https://calendar.google.com/calendar/embed?src=3gp47l8ftrpp8812vhfnp9j9s4%40group.calendar.google.com&ctz=America%2FChicago&mode=AGENDA"
+  },
+  {
+   "slug": "prattville-al-mbc-tuesday-prattville-loop",
+   "url": "https://calendar.google.com/calendar/embed?src=3gp47l8ftrpp8812vhfnp9j9s4%40group.calendar.google.com&ctz=America%2FChicago&mode=AGENDA"
+  },
+  {
+   "slug": "prattville-al-mbc-thursday-night-ride",
+   "url": "https://calendar.google.com/calendar/embed?src=3gp47l8ftrpp8812vhfnp9j9s4%40group.calendar.google.com&ctz=America%2FChicago&mode=AGENDA"
+  },
+  {
+   "slug": "lihue-hi-kauai-path-bikes-on-rice",
+   "url": "https://calendar.google.com/calendar/ical/hbl.org_jsh32i71qaqsjip8h24s54oj8c%40group.calendar.google.com/public/basic.ics"
+  },
+  {
+   "slug": "pittsburgh-pa-pmtcc-wednesday-ride",
+   "url": "https://calendar.google.com/calendar/embed?src=pmtccrides%40gmail.com&ctz=America/New_York"
+  },
+  {
+   "slug": "milwaukee-wi-friends-with-bikes-thursday-ride",
+   "url": "https://calendar.google.com/calendar/embed?src=e6e63d65e2b10ef28b478898ac26893a2b98937ac50372d834d964d325c049d4@group.calendar.google.com"
+  }
+ ],
+ "B_third_party_as_host": [
+  {
+   "slug": "anchorage-ak-tuesday-night-social-road-ride",
+   "url": "https://orca.bike/event/weekly-taco-tuesdays-or-pizza-road-ride/",
+   "host": "Anchorage weekly road rides"
+  },
+  {
+   "slug": "auburn-al-camp-super-sunday-ride",
+   "url": "https://www.trekbicycleauburn.com/events",
+   "host": "Central Alabama Mountain Pedalers (CAMP)"
+  },
+  {
+   "slug": "auburn-al-thursday-night-dirtbags",
+   "url": "https://www.trekbicycleauburn.com/journal",
+   "host": "Trek Bicycle Auburn"
+  },
+  {
+   "slug": "mobile-al-mobile-bay-riders-callaghans-tuesday-ride",
+   "url": "https://www.mobilebayrcc.org/",
+   "host": "Mobile Bay Riders Cycling Club"
+  },
+  {
+   "slug": "mobile-al-mobile-bay-riders-greers-market-sunday-ride",
+   "url": "https://www.mobilebayrcc.org/",
+   "host": "Mobile Bay Riders Cycling Club"
+  },
+  {
+   "slug": "mobile-al-mobile-bay-riders-iron-hand-thursday-ride",
+   "url": "https://www.mobilebayrcc.org/",
+   "host": "Mobile Bay Riders Cycling Club"
+  },
+  {
+   "slug": "tuscaloosa-al-velocity-casual-campus-cruise",
+   "url": "https://www.velocity-cycles.com/articles/group-rides-clubs-pg302.htm",
+   "host": "VeloCity Cycles"
+  },
+  {
+   "slug": "tuscaloosa-al-wamba-monday-beginner-ride",
+   "url": "https://www.velocity-cycles.com/articles/group-rides-clubs-pg302.htm",
+   "host": "West Alabama Mountain Bike Association"
+  },
+  {
+   "slug": "cottonwood-az-vvcc-friday-social-ride",
+   "url": "https://vvcc.us/Road-Rides",
+   "host": "Verde Valley Cyclists Coalition (VVCC)"
+  },
+  {
+   "slug": "cottonwood-az-vvcc-wednesday-cottonwood-ride",
+   "url": "https://www.vvcc.us/Road-Rides",
+   "host": "Verde Valley Cyclists Coalition"
+  },
+  {
+   "slug": "flagstaff-az-vvcc-mormon-lake-thursday-ride",
+   "url": "https://www.vvcc.us/Road-Rides",
+   "host": "Verde Valley Cyclists Coalition"
+  },
+  {
+   "slug": "sedona-az-vvcc-saturday-voc-ride",
+   "url": "https://vvcc.us/Road-Rides",
+   "host": "Verde Valley Cyclists Coalition (VVCC)"
+  },
+  {
+   "slug": "sedona-az-wednesday-evening-mtb-ride",
+   "url": "https://www.vvcc.us/MTB-Rides",
+   "host": "Verde Valley Cyclists Coalition / Sedona MTB Facebook group"
+  },
+  {
+   "slug": "sedona-az-vvcc-thursday-sedona-area-road-ride",
+   "url": "https://vvcc.us/Road-Rides",
+   "host": "Verde Valley Cyclists Coalition (VVCC)"
+  },
+  {
+   "slug": "tucson-az-the-shootout",
+   "url": "https://www.fairwheelbikes.com/service/group-rides/",
+   "host": "The Shootout (documented by Fair Wheel Bikes)"
+  },
+  {
+   "slug": "tucson-az-transit-cycles-third-thursday-ride",
+   "url": "https://www.transitcycles.com/events-1",
+   "host": "Transit Cycles (with Dragoon Brewing Company)"
+  },
+  {
+   "slug": "tucson-az-tuesday-morning-fast-ride",
+   "url": "https://www.fairwheelbikes.com/service/group-rides/",
+   "host": "Tuesday Morning Fast Ride (documented by Fair Wheel Bikes)"
+  },
+  {
+   "slug": "alviso-ca-alviso-noon-ride",
+   "url": "https://www.altovelo.org/other-group-rides",
+   "host": "Alviso Noon Ride"
+  },
+  {
+   "slug": "chico-ca-north-rim-easy-does-it-sunday-ride",
+   "url": "https://www.northrimadventure.com/articles/chico-area-rides-and-events-pg37.htm",
+   "host": "North Rim Adventure Sports"
+  },
+  {
+   "slug": "chico-ca-fast-fit-fun-50-wednesday-evening-ride",
+   "url": "https://www.northrimadventure.com/articles/chico-area-rides-and-events-pg37.htm",
+   "host": "Fast, Fit and Fun 50 (listed on North Rim Adventure Sports' page)"
+  },
+  {
+   "slug": "chico-ca-north-rim-friday-morning-no-drop-road-ride",
+   "url": "https://www.northrimadventure.com/articles/chico-area-rides-and-events-pg37.htm",
+   "host": "North Rim Adventure Sports"
+  },
+  {
+   "slug": "chico-ca-saturday-fast-road-ride-october-to-february",
+   "url": "https://www.northrimadventure.com/articles/chico-area-rides-and-events-pg37.htm",
+   "host": "Chico Saturday road ride (listed on North Rim Adventure Sports' page)"
+  },
+  {
+   "slug": "hayward-ca-bike-east-bay-bike-hayward-wednesday-rides",
+   "url": "https://bikeeastbay.org/event/bike-hayward-rides-3/",
+   "host": "Bike East Bay"
+  },
+  {
+   "slug": "long-beach-ca-bike-long-beach-bikes-and-coffee",
+   "url": "https://www.bikelb.com/rides/",
+   "host": "Bike Long Beach"
+  },
+  {
+   "slug": "long-beach-ca-big-orange-hughes-park-crit-practice-monday",
+   "url": "https://www.bigorangecycling.org/more-local-rides",
+   "host": "Big Orange Cycling"
+  },
+  {
+   "slug": "los-altos-ca-alto-velo-coffee-and-cake-ride",
+   "url": "https://www.altovelo.org/other-group-rides",
+   "host": "Alto Velo Racing Club"
+  },
+  {
+   "slug": "los-angeles-ca-lunch-rush-san-pedro",
+   "url": "https://www.bigorangecycling.org/more-local-rides",
+   "host": "Lunch Rush"
+  },
+  {
+   "slug": "los-angeles-ca-major-taylor-tuesday-ride",
+   "url": "https://www.bigorangecycling.org/local-rides",
+   "host": "Major Taylor ride"
+  },
+  {
+   "slug": "manhattan-beach-ca-big-orange-team-ride",
+   "url": "https://www.bigorangecycling.org/local-rides",
+   "host": "Big Orange Cycling"
+  },
+  {
+   "slug": "manhattan-beach-ca-new-pier-ride",
+   "url": "https://www.bigorangecycling.org/local-rides",
+   "host": "New Pier Ride"
+  },
+  {
+   "slug": "oakland-ca-bike-east-bay-slowkland",
+   "url": "https://bikeeastbay.org/event/slowkland-6/",
+   "host": "Bike East Bay"
+  },
+  {
+   "slug": "palo-alto-ca-alto-velo-joy-ride",
+   "url": "https://www.altovelo.org/other-group-rides",
+   "host": "Alto Velo Racing Club"
+  },
+  {
+   "slug": "palo-alto-ca-alto-velo-womens-wtfnb-ride",
+   "url": "https://www.altovelo.org/other-group-rides",
+   "host": "Alto Velo Racing Club"
+  },
+  {
+   "slug": "palo-alto-ca-the-morning-ride-tmr",
+   "url": "https://www.altovelo.org/other-group-rides",
+   "host": "The Morning Ride (TMR)"
+  },
+  {
+   "slug": "palos-verdes-estates-ca-wheatgrass-ride",
+   "url": "https://www.bigorangecycling.org/local-rides",
+   "host": "Wheatgrass Ride"
+  },
+  {
+   "slug": "redondo-beach-ca-big-orange-club-ride",
+   "url": "https://www.bigorangecycling.org/local-rides",
+   "host": "Big Orange Cycling"
+  },
+  {
+   "slug": "redondo-beach-ca-friendly-donut-ride",
+   "url": "https://www.bigorangecycling.org/local-rides",
+   "host": "Friendly Donut Ride"
+  },
+  {
+   "slug": "redondo-beach-ca-the-donut-ride",
+   "url": "https://www.bigorangecycling.org/local-rides",
+   "host": "The Donut Ride"
+  },
+  {
+   "slug": "santa-monica-ca-now-ride-saturday",
+   "url": "https://www.bigorangecycling.org/more-local-rides",
+   "host": "NOW ride"
+  },
+  {
+   "slug": "sunnyvale-ca-spectrum-ride",
+   "url": "https://www.altovelo.org/other-group-rides",
+   "host": "Spectrum Ride"
+  },
+  {
+   "slug": "torrance-ca-telo-tuesday-crit",
+   "url": "https://www.bigorangecycling.org/local-rides",
+   "host": "Telo practice crit"
+  },
+  {
+   "slug": "fort-collins-co-incycle-mtb-ride",
+   "url": "https://yourgroupride.com/events/incycle-mtb-ride/",
+   "host": "Incycle (Incycle South)"
+  },
+  {
+   "slug": "fort-collins-co-riobase-mile-ride",
+   "url": "https://yourgroupride.com/riobasemile-ride/",
+   "host": "NoCo Cycling / Your Group Ride"
+  },
+  {
+   "slug": "fort-collins-co-saturday-open-ride",
+   "url": "https://yourgroupride.com/saturday-leaving-from-provelo/",
+   "host": "NoCo Cycling / Your Group Ride"
+  },
+  {
+   "slug": "fort-collins-co-the-oval",
+   "url": "https://yourgroupride.com/the-oval/",
+   "host": "NoCo Cycling / Your Group Ride"
+  },
+  {
+   "slug": "fort-collins-co-wor-wednesday-open-ride",
+   "url": "https://yourgroupride.com/wor-wednesday-open-ride/",
+   "host": "NoCo Cycling / Your Group Ride"
+  },
+  {
+   "slug": "miami-fl-miami-critical-mass",
+   "url": "https://www.themiamibikescene.com/",
+   "host": "Miami Critical Mass (info via The Miami Bike Scene)"
+  },
+  {
+   "slug": "aiea-hi-red-hot-diabetes-riders-pearl-harbor-path",
+   "url": "https://hbl.org/group-ride-listings/",
+   "host": "Red Hot Diabetes Riders"
+  },
+  {
+   "slug": "hilo-hi-east-hawaii-riders",
+   "url": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
+   "host": "East Hawaii Riders (listed by Hawaii Cycling Club)"
+  },
+  {
+   "slug": "hilo-hi-first-saturday-mauna-loa-access-road-ride",
+   "url": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
+   "host": "Hilo riders (listed by Hawaii Cycling Club)"
+  },
+  {
+   "slug": "hilo-hi-friday-mtb-kulani-forest",
+   "url": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
+   "host": "Hilo mountain bikers (listed by Hawaii Cycling Club)"
+  },
+  {
+   "slug": "honolulu-hi-808-lowriders-thursday-night-cruise",
+   "url": "https://hbl.org/group-ride-listings/",
+   "host": "808 Lowriders"
+  },
+  {
+   "slug": "honolulu-hi-red-hot-ladies-roving-ride",
+   "url": "https://hbl.org/group-ride-listings/",
+   "host": "Red Hot Ladies (Hawaii Bicycling League)"
+  },
+  {
+   "slug": "honolulu-hi-red-hot-ladies-thursday-kahala-kailua",
+   "url": "https://hbl.org/group-ride-listings/",
+   "host": "Red Hot Ladies (Hawaii Bicycling League)"
+  },
+  {
+   "slug": "honolulu-hi-hbl-start-the-week-off-right-monday-ride",
+   "url": "https://hbl.org/group-ride-listings/",
+   "host": "Hawaii Bicycling League"
+  },
+  {
+   "slug": "honolulu-hi-wolfpack-tuesday-night-ride",
+   "url": "https://hbl.org/group-ride-listings/",
+   "host": "Wolfpack"
+  },
+  {
+   "slug": "kailua-hi-windward-cycling-team-thursday-night-worlds",
+   "url": "https://hbl.org/group-ride-listings/",
+   "host": "Windward Cycling Team"
+  },
+  {
+   "slug": "kailua-kona-hi-kona-recreational-ride-north-patricios",
+   "url": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
+   "host": "Big Island riders (listed by Hawaii Cycling Club)"
+  },
+  {
+   "slug": "kailua-kona-hi-saturday-recreational-north-ride",
+   "url": "http://www.hawaiicyclingclub.com/weekly-rides.html",
+   "host": "Kona recreational riders (listed by Hawaii Cycling Club)"
+  },
+  {
+   "slug": "kailua-kona-hi-kona-thursday-recreational-ride-south",
+   "url": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
+   "host": "Big Island riders (listed by Hawaii Cycling Club)"
+  },
+  {
+   "slug": "kailua-kona-hi-kona-tuesday-a-b-ride-keauhou",
+   "url": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
+   "host": "Big Island riders (listed by Hawaii Cycling Club)"
+  },
+  {
+   "slug": "kapolei-hi-sunday-morning-coffee-jam",
+   "url": "https://hbl.org/group-ride-listings/",
+   "host": "Sunday Morning Coffee Jam"
+  },
+  {
+   "slug": "waikoloa-hi-queens-marketplace-ride",
+   "url": "https://www.hawaiicyclingclub.com/public-service-announcements.html",
+   "host": "Waikoloa riders (listed by Hawaii Cycling Club)"
+  },
+  {
+   "slug": "iowa-city-ia-gatos-en-ronda-friday-night-ride",
+   "url": "https://bikeiowacity.com/event-calendar/",
+   "host": "Iowa City Bike Library"
+  },
+  {
+   "slug": "arlington-heights-il-bike-the-heights-slow-roll",
+   "url": "http://www.chicagofamilybiking.org/events",
+   "host": "Bike the Heights!"
+  },
+  {
+   "slug": "chicago-il-chicago-family-biking-hyde-park-kidical-mass",
+   "url": "http://www.chicagofamilybiking.org/events",
+   "host": "Hyde Park Kidical Mass (Chicago Family Biking)"
+  },
+  {
+   "slug": "chicago-il-chicago-family-biking-lakeview-east-kidical-mass",
+   "url": "http://www.chicagofamilybiking.org/events",
+   "host": "Lakeview East Kidical Mass (Chicago Family Biking)"
+  },
+  {
+   "slug": "chicago-il-chicago-family-biking-logan-square-kidical-mass",
+   "url": "http://www.chicagofamilybiking.org/events",
+   "host": "Logan Square Kidical Mass (Chicago Family Biking)"
+  },
+  {
+   "slug": "indianapolis-in-bikeparty-indianapolis",
+   "url": "https://centralincycling.org/rides/neighborhood-rides/",
+   "host": "BikeParty Indianapolis"
+  },
+  {
+   "slug": "indianapolis-in-riverside-riders",
+   "url": "https://centralincycling.org/rides/neighborhood-rides/",
+   "host": "Riverside Riders"
+  },
+  {
+   "slug": "indianapolis-in-near-eastside-ride",
+   "url": "https://centralincycling.org/rides/neighborhood-rides/",
+   "host": "Central Indiana Cycling"
+  },
+  {
+   "slug": "covington-ky-ridethecov-wednesday-series",
+   "url": "https://events.queencity.bike/event/c6s1hoheb0egceahvs9f0q9vvs_20260923T220000Z",
+   "host": "RideTheCov"
+  },
+  {
+   "slug": "new-orleans-la-gretna-social-riders-friday",
+   "url": "https://nolasocialride.org/new-orleans-metro-social-rides/",
+   "host": "Gretna Social Riders"
+  },
+  {
+   "slug": "new-orleans-la-critical-mass-nola-last-friday",
+   "url": "https://nolasocialride.org/ride/fete-ghisallo/",
+   "host": "Critical Mass NOLA"
+  },
+  {
+   "slug": "new-orleans-la-heat-index-wednesday-ride",
+   "url": "https://nolasocialride.org/ride/heat-index-wednesday-ride/2026-10-07/",
+   "host": "Heat Index Wednesday Ride (on the NOLA Social Ride calendar)"
+  },
+  {
+   "slug": "new-orleans-la-nola-fixed-wednesday-night-ride",
+   "url": "https://nolasocialride.org/ride/nola-fixed/2026-10-07/",
+   "host": "NOLA Fixed (NOLA Fixed Cycling Club)"
+  },
+  {
+   "slug": "new-orleans-la-nola-social-ride-happy-thursday",
+   "url": "https://nolasocialride.org/",
+   "host": "NOLA Social Ride"
+  },
+  {
+   "slug": "new-orleans-la-sistahs-on-wheels-first-friday",
+   "url": "https://nolasocialride.org/new-orleans-metro-social-rides/",
+   "host": "Sistahs on Wheels"
+  },
+  {
+   "slug": "new-orleans-la-friday-sugar-rush",
+   "url": "https://nolasocialride.org/ride/the-friday-sugar-rush/2026-10-02/",
+   "host": "The Friday Sugar Rush (on the NOLA Social Ride calendar)"
+  },
+  {
+   "slug": "boston-ma-landrys-boston-slow-roll-social-ride",
+   "url": "https://www.landrys.com/events/landrys-group-rides-pg163.htm",
+   "host": "Landry's Bicycles"
+  },
+  {
+   "slug": "braintree-ma-landrys-braintree-saturday-road-ride",
+   "url": "https://www.landrys.com/pages/landrys-group-rides",
+   "host": "Landry's Bicycles"
+  },
+  {
+   "slug": "chelmsford-ma-merrimack-valley-nemba-rough-riders",
+   "url": "https://www.nemba.org/chapters/merrimack-valley-nemba",
+   "host": "Merrimack Valley NEMBA"
+  },
+  {
+   "slug": "framingham-ma-blackstone-valley-nemba-nobscot-friday-rides",
+   "url": "https://www.nemba.org/chapters/blackstone-valley-nemba",
+   "host": "Blackstone Valley NEMBA"
+  },
+  {
+   "slug": "holliston-ma-blackstone-valley-nemba-thursday-vietnam-intermediate-ride",
+   "url": "https://www.nemba.org/chapters/blackstone-valley-nemba",
+   "host": "Blackstone Valley NEMBA"
+  },
+  {
+   "slug": "leominster-ma-wachusett-nemba-monday-night-ride",
+   "url": "https://www.nemba.org/chapters/wachusett-nemba",
+   "host": "Wachusett NEMBA"
+  },
+  {
+   "slug": "lexington-ma-merrimack-valley-nemba-easy-rider",
+   "url": "https://www.nemba.org/chapters/merrimack-valley-nemba",
+   "host": "Merrimack Valley NEMBA"
+  },
+  {
+   "slug": "marshfield-ma-southeast-ma-nemba-manic-monday-ride",
+   "url": "https://www.nemba.org/chapters/southeast-ma-nemba",
+   "host": "Southeast MA NEMBA"
+  },
+  {
+   "slug": "milton-ma-southeast-ma-nemba-thursduro-blue-hills",
+   "url": "https://www.nemba.org/chapters/southeast-ma-nemba",
+   "host": "Southeast MA NEMBA"
+  },
+  {
+   "slug": "paxton-ma-seven-hills-wheelmen-tuesday-night-ride",
+   "url": "https://sevenhillswheelmen.org/resources/recurring-rides/",
+   "host": "Seven Hills Wheelmen"
+  },
+  {
+   "slug": "randolph-ma-southeast-ma-nemba-weekly-dirt-therapy-ride",
+   "url": "https://www.nemba.org/chapters/southeast-ma-nemba",
+   "host": "Southeast MA NEMBA"
+  },
+  {
+   "slug": "uxbridge-ma-blackstone-valley-nemba-dam-nice-ride",
+   "url": "https://www.nemba.org/chapters/blackstone-valley-nemba",
+   "host": "Blackstone Valley NEMBA"
+  },
+  {
+   "slug": "waltham-ma-gbnemba-tuesday-western-greenway-social-ride",
+   "url": "https://www.nemba.org/chapters/greater-boston-nemba",
+   "host": "Greater Boston NEMBA"
+  },
+  {
+   "slug": "westwood-ma-landrys-needham-womens-nonbinary-mtb-ride",
+   "url": "https://www.landrys.com/events/landrys-group-rides-pg163.htm",
+   "host": "Landry's Bicycles with SE MA NEMBA"
+  },
+  {
+   "slug": "annapolis-md-dam-good-watts-monday-mtb-ride",
+   "url": "https://www.abrtcycling.com/about/training-rides/",
+   "host": "Dam Good Watts"
+  },
+  {
+   "slug": "annapolis-md-abrt-sunday-no-drop-ride",
+   "url": "https://www.abrtcycling.com/about/training-rides/",
+   "host": "ABRT Cycling"
+  },
+  {
+   "slug": "davidsonville-md-abrt-saturday-ride",
+   "url": "https://www.abrtcycling.com/about/training-rides/",
+   "host": "ABRT Cycling (Annapolis Bicycle Racing Team)"
+  },
+  {
+   "slug": "edgewater-md-parvilla-cycles-thursday-shop-ride",
+   "url": "https://www.abrtcycling.com/about/training-rides/",
+   "host": "Parvilla Cycles / ABRT Cycling"
+  },
+  {
+   "slug": "portland-me-cyclemania-thursday-night-mountain-bike-ride",
+   "url": "https://www.cyclemania1.com/articles/routes-rides-pg193.htm",
+   "host": "CycleMania"
+  },
+  {
+   "slug": "south-portland-me-pvc-wednesday-night-ride",
+   "url": "https://www.cyclemania1.com/articles/routes-rides-pg193.htm",
+   "host": "Portland Velo Club"
+  },
+  {
+   "slug": "biloxi-ms-tri-hard-friday-fun-ride",
+   "url": "https://www.trihardsports.com/community",
+   "host": "Tri Hard Sports"
+  },
+  {
+   "slug": "ocean-springs-ms-tri-hard-monday-night-shop-ride",
+   "url": "https://www.trihardsports.com/community",
+   "host": "Tri Hard Sports"
+  },
+  {
+   "slug": "durham-nc-bike-durham-community-ride",
+   "url": "https://bikedurham.org/events",
+   "host": "Bike Durham"
+  },
+  {
+   "slug": "durham-nc-ponysaurus-pony-ride",
+   "url": "https://bikedurham.org/events",
+   "host": "Ponysaurus Brewing Co. (listed by Bike Durham)"
+  },
+  {
+   "slug": "durham-nc-rescue-racing-daily-beer-bar-ride",
+   "url": "https://www.bikethetriangle.com/event/rescue-racing-daily-beer-bar-ride-76/",
+   "host": "Rescue Racing"
+  },
+  {
+   "slug": "nashua-nh-southern-nh-nemba-thursday-at-yudicky",
+   "url": "https://www.nemba.org/chapters/southern-nh-nemba",
+   "host": "Southern NH NEMBA"
+  },
+  {
+   "slug": "nashua-nh-southern-nh-nemba-tuesday-at-mine-falls",
+   "url": "https://www.nemba.org/chapters/southern-nh-nemba",
+   "host": "Southern NH NEMBA"
+  },
+  {
+   "slug": "nashua-nh-southern-nh-nemba-wednesday-at-yudicky",
+   "url": "https://www.nemba.org/chapters/southern-nh-nemba",
+   "host": "Southern NH NEMBA"
+  },
+  {
+   "slug": "reno-nv-bike-night-reno",
+   "url": "https://renowheelmen.org/event/bike-night-reno/2026-09-16/",
+   "host": "Bike Night Reno"
+  },
+  {
+   "slug": "reno-nv-reno-wheelmen-wednesday-group-ride",
+   "url": "https://renowheelmen.org/event/reno-wheelmen-wednesday-group-ride-3-2-2/2026-09-16/",
+   "host": "Reno Wheelmen"
+  },
+  {
+   "slug": "sparks-nv-reno-wheelmen-sparks-group-ride",
+   "url": "https://renowheelmen.org/event/pedal-sports-ride-2/2026-08-01/",
+   "host": "Reno Wheelmen (Pedal Sports ride series)"
+  },
+  {
+   "slug": "sparks-nv-reno-wheelmen-friday-lunch-ride",
+   "url": "https://renowheelmen.org/",
+   "host": "Reno Wheelmen"
+  },
+  {
+   "slug": "brooklyn-ny-east-brooklyn-bike-club-wednesday-ride",
+   "url": "https://citibikenyc.com/community-programs/programs",
+   "host": "East Brooklyn Bike Club with Citi Bike"
+  },
+  {
+   "slug": "jackson-heights-ny-34th-ave-citi-bike-saturday-ride",
+   "url": "https://citibikenyc.com/community-programs/programs",
+   "host": "34th Avenue Open Streets Coalition with Citi Bike"
+  },
+  {
+   "slug": "rochester-ny-reconnect-rochester-flower-city-feeling-good-wednesday",
+   "url": "https://reconnectrochester.org/our-weekly-rides/",
+   "host": "Reconnect Rochester, with the City of Rochester Recreation Department and EE Pathways"
+  },
+  {
+   "slug": "rochester-ny-just-for-giggles-monday-night-brewery-ride",
+   "url": "https://reconnectrochester.org/bike-scene-overview/",
+   "host": "Just for Giggles Cycling"
+  },
+  {
+   "slug": "rochester-ny-rochester-bike-gang-thursday-ride",
+   "url": "https://reconnectrochester.org/bike-scene-overview/",
+   "host": "Rochester Bike Gang"
+  },
+  {
+   "slug": "cincinnati-oh-ride-pleasant-streets",
+   "url": "https://events.queencity.bike/event/_8oo44gpo68pj0b9o8or32b9k6923eba16gq44b9l6p0jeg9o8ksk8h9m8c_20260919T140000Z",
+   "host": "Ride Pleasant Streets"
+  },
+  {
+   "slug": "cincinnati-oh-ubbc-tuesday-night-ride",
+   "url": "https://events.queencity.bike/",
+   "host": "Urban Basin Bicycle Club"
+  },
+  {
+   "slug": "portland-or-thursday-night-ride",
+   "url": "https://www.shift2bikes.org/calendar/",
+   "host": "Thursday Night Ride (TNR)"
+  },
+  {
+   "slug": "erie-pa-slow-roll-erie",
+   "url": "https://bikeerie.org/slow-roll/",
+   "host": "Slow Roll Erie"
+  },
+  {
+   "slug": "fairview-pa-girls-gone-cycle-monday-ride",
+   "url": "https://bikeerie.org/get-involved/rides-groups-activities/",
+   "host": "Girls Gone Cycle"
+  },
+  {
+   "slug": "philadelphia-pa-rar-philadelphia-group-rides",
+   "url": "https://radicaladventureriders.com/chapters/philadelphia",
+   "host": "Radical Adventure Riders Philadelphia"
+  },
+  {
+   "slug": "pittsburgh-pa-pgh-babes-on-bikes-frigid-witch-training-rides",
+   "url": "https://pghbabesonbikes.com/",
+   "host": "Pittsburgh Babes on Bikes"
+  },
+  {
+   "slug": "pittsburgh-pa-pgh-babes-on-bikes-whatever-weds",
+   "url": "https://pghbabesonbikes.com/events",
+   "host": "Pittsburgh Babes on Bikes"
+  },
+  {
+   "slug": "exeter-ri-rhode-island-nemba-arcadia-tuesday-night-ride",
+   "url": "https://www.nemba.org/chapters/rhode-island-nemba",
+   "host": "Rhode Island NEMBA"
+  },
+  {
+   "slug": "west-greenwich-ri-rhode-island-nemba-big-river-thursday-night-ride",
+   "url": "https://www.nemba.org/chapters/rhode-island-nemba",
+   "host": "Rhode Island NEMBA"
+  },
+  {
+   "slug": "westerly-ri-rhode-island-nemba-woody-hill-monday-night-ride",
+   "url": "https://www.nemba.org/chapters/rhode-island-nemba",
+   "host": "Rhode Island NEMBA"
+  },
+  {
+   "slug": "sioux-falls-sd-fab-moon-and-stars-ride",
+   "url": "https://www.fallsareabicyclists.org/",
+   "host": "Falls Area Bicyclists"
+  },
+  {
+   "slug": "sioux-falls-sd-fab-saturday-coffee-shop-ride",
+   "url": "https://www.fallsareabicyclists.org/",
+   "host": "Falls Area Bicyclists"
+  },
+  {
+   "slug": "dallas-tx-dbc-second-saturday-coffee-social-and-ride",
+   "url": "https://dallasbicyclecoalition.org/social-rides/",
+   "host": "Dallas Bicycle Coalition"
+  },
+  {
+   "slug": "dallas-tx-pull-through-friday-coffee-ride",
+   "url": "https://dallasbicyclecoalition.org/social-rides/",
+   "host": "Pull Through Coffee Bar"
+  },
+  {
+   "slug": "dallas-tx-femme-pedale-womens-ride",
+   "url": "https://dallasbicyclecoalition.org/social-rides/",
+   "host": "Femme Pedale"
+  },
+  {
+   "slug": "dallas-tx-hangover-riders-first-friday-ride",
+   "url": "https://dallasbicyclecoalition.org/social-rides/",
+   "host": "Hangover Riders"
+  },
+  {
+   "slug": "dallas-tx-monday-moss-mtb-ride",
+   "url": "https://dallasbicyclecoalition.org/social-rides/",
+   "host": "Harry Moss DORBA Trail Maintainers and Riders"
+  },
+  {
+   "slug": "dallas-tx-shifty-freewheelers-monday-night-ride",
+   "url": "https://dallasbicyclecoalition.org/social-rides/",
+   "host": "Shifty Freewheelers"
+  },
+  {
+   "slug": "dallas-tx-taco-tuesday-with-salty-cats",
+   "url": "https://dallasbicyclecoalition.org/social-rides/",
+   "host": "Salty Cats"
+  },
+  {
+   "slug": "dallas-tx-the-meteor-womens-ride",
+   "url": "https://dallasbicyclecoalition.org/social-rides/",
+   "host": "The Meteor"
+  },
+  {
+   "slug": "dallas-tx-dorba-thursday-group-ride-oak-cliff-nature-preserve",
+   "url": "https://dorba.org/content.aspx?page_id=22&club_id=600794&module_id=647759",
+   "host": "Dallas Off-Road Bicycle Association (DORBA)"
+  },
+  {
+   "slug": "dallas-tx-tits-tuesday-time-in-the-saddle",
+   "url": "https://dallasbicyclecoalition.org/social-rides/",
+   "host": "TITS Tuesday"
+  },
+  {
+   "slug": "dallas-tx-white-rock-ramble",
+   "url": "https://dallasbicyclecoalition.org/social-rides/",
+   "host": "White Rock Ramble"
+  },
+  {
+   "slug": "dallas-tx-pull-through-womens-monthly-shop-ride",
+   "url": "https://dallasbicyclecoalition.org/social-rides/",
+   "host": "Pull Through Coffee Bar"
+  },
+  {
+   "slug": "denton-tx-denton-women-cyclists-tuesday-ride",
+   "url": "https://www.bikedenton.org/resources/group-rides",
+   "host": "Denton Women Cyclists"
+  },
+  {
+   "slug": "denton-tx-east-side-social-ride",
+   "url": "https://www.bikedenton.org/resources/group-rides",
+   "host": "Denton Social Cyclists / Corinth Cycling"
+  },
+  {
+   "slug": "denton-tx-monday-community-ride",
+   "url": "https://www.bikedenton.org/resources/group-rides",
+   "host": "Denton Community Rides"
+  },
+  {
+   "slug": "flower-mound-tx-dirt-disciples-thursday-northshore",
+   "url": "https://www.dorba.org/content.aspx?page_id=22&club_id=600794&module_id=647759",
+   "host": "Dirt Disciples"
+  },
+  {
+   "slug": "flower-mound-tx-dorba-wednesday-night-trail-party-northshore",
+   "url": "https://dorba.org/content.aspx?page_id=22&club_id=600794&module_id=647759",
+   "host": "Dallas Off-Road Bicycle Association (DORBA)"
+  },
+  {
+   "slug": "frisco-tx-dorba-wednesday-group-ride-frisco-nw-community-park",
+   "url": "https://dorba.org/content.aspx?page_id=22&club_id=600794&module_id=647759",
+   "host": "Dallas Off-Road Bicycle Association (DORBA)"
+  },
+  {
+   "slug": "magnolia-tx-love-and-coffee-friday-ride",
+   "url": "https://www.bikethewoodlands.org/rides",
+   "host": "Community ride (Magnolia and The Woodlands)"
+  },
+  {
+   "slug": "midland-tx-pbba-sunday-crepes-and-cranks",
+   "url": "https://pbbatx.com/weekly-club-rides",
+   "host": "Permian Basin Bicycle Association"
+  },
+  {
+   "slug": "midland-tx-energy-city-bikes-saturday-shop-ride",
+   "url": "https://pbbatx.com/weekly-club-rides",
+   "host": "Energy City Bikes"
+  },
+  {
+   "slug": "midland-tx-trek-saturday-coffee-ride",
+   "url": "https://pbbatx.com/weekly-club-rides",
+   "host": "Permian Basin Bicycle Association"
+  },
+  {
+   "slug": "midland-tx-trek-wednesday-shop-ride",
+   "url": "https://pbbatx.com/weekly-club-rides",
+   "host": "Trek Midland"
+  },
+  {
+   "slug": "midland-tx-tuesday-night-worlds",
+   "url": "https://pbbatx.com/weekly-club-rides",
+   "host": "Permian Basin Bicycle Association"
+  },
+  {
+   "slug": "odessa-tx-mission-and-monday",
+   "url": "https://pbbatx.com/weekly-club-rides",
+   "host": "West Texas Gazelles Odessa"
+  },
+  {
+   "slug": "roanoke-tx-velo-cafe-tuesday-night-knob-hills",
+   "url": "https://www.dorba.org/content.aspx?page_id=22&club_id=600794&module_id=647759",
+   "host": "Velo Cafe (Keller)"
+  },
+  {
+   "slug": "the-woodlands-tx-woodlands-tuesday-night-ride",
+   "url": "https://www.bikethewoodlands.org/rides",
+   "host": "Community ride (The Woodlands)"
+  },
+  {
+   "slug": "richmond-va-rar-richmond-monday-night-ride",
+   "url": "https://radicaladventureriders.com/chapters/richmond",
+   "host": "Radical Adventure Riders Richmond"
+  },
+  {
+   "slug": "roanoke-va-but-coffee-first-saturday-ride",
+   "url": "https://roanokeoutside.com/group-bike-rides-for-every-day-of-the-week/",
+   "host": "But Coffee First"
+  },
+  {
+   "slug": "roanoke-va-crank-sisters-social-ride",
+   "url": "https://roanokeoutside.com/group-bike-rides-for-every-day-of-the-week/",
+   "host": "Crank Sisters"
+  },
+  {
+   "slug": "roanoke-va-m-and-m-mtb-sunday-ride-carvins-cove",
+   "url": "https://roanokeoutside.com/group-bike-rides-for-every-day-of-the-week/",
+   "host": "M&M MTB"
+  },
+  {
+   "slug": "roanoke-va-roanoke-valley-riveters-wednesday-mountain-bike-ride",
+   "url": "https://roanokeoutside.com/group-bike-rides-for-every-day-of-the-week/",
+   "host": "Roanoke Valley Riveters"
+  },
+  {
+   "slug": "roanoke-va-roanoke-mountain-adventures-thursday-road-gravel-ride",
+   "url": "https://roanokeoutside.com/group-bike-rides-for-every-day-of-the-week/",
+   "host": "Roanoke Mountain Adventures"
+  },
+  {
+   "slug": "salem-va-trek-roanoke-monday-funday-salem-group-ride",
+   "url": "https://roanokeoutside.com/group-bike-rides-for-every-day-of-the-week/",
+   "host": "Trek Bicycle Roanoke"
+  },
+  {
+   "slug": "salem-va-olde-salem-brewery-ride",
+   "url": "https://roanokeoutside.com/group-bike-rides-for-every-day-of-the-week/",
+   "host": "Roanoke College Cycling Team"
+  },
+  {
+   "slug": "bellingham-wa-rabbit-ride",
+   "url": "https://www.mtbakerbikeclub.org/content.aspx?page_id=22&club_id=608345&module_id=249583",
+   "host": "Rabbit Ride (self-organized)"
+  },
+  {
+   "slug": "bellingham-wa-mount-baker-bicycle-club-saturday-donut-ride",
+   "url": "https://www.mtbakerbikeclub.org/content.aspx?page_id=4001&club_id=608345",
+   "host": "Saturday Donut Ride (self-organized; listed by the Mount Baker Bicycle Club)"
+  },
+  {
+   "slug": "bellingham-wa-mount-baker-bicycle-club-saturday-gravel-ride-series",
+   "url": "https://www.mtbakerbikeclub.org/content.aspx?page_id=4001&club_id=608345",
+   "host": "Mount Baker Bicycle Club"
+  },
+  {
+   "slug": "bellingham-wa-mount-baker-bicycle-club-wednesday-trail-ride",
+   "url": "https://www.mtbakerbikeclub.org/content.aspx?page_id=4001&club_id=608345",
+   "host": "Mount Baker Bicycle Club"
+  },
+  {
+   "slug": "seattle-wa-good-weather-sunday-social",
+   "url": "https://everydayrides.com/event-series/6a6b75d827f0f18ef3e161f0-good-weather-sunday-social",
+   "host": "Good Weather"
+  },
+  {
+   "slug": "seattle-wa-moxie-monday",
+   "url": "https://everydayrides.com/groups/moxie-monday",
+   "host": "Moxie Monday"
+  },
+  {
+   "slug": "seattle-wa-wtfnb-weekly-with-brevay",
+   "url": "https://everydayrides.com/event-series/690e2a060214ed1d170518b0-brevay-cycling-wtfnb-weekly",
+   "host": "Brevay Cycling"
+  },
+  {
+   "slug": "milwaukee-wi-mke-rec-saturday-community-bike-rides",
+   "url": "https://wisconsinbikefed.org/events/mke-rec-saturday-community-bike-rides-2/",
+   "host": "Milwaukee Recreation (MKE REC)"
+  },
+  {
+   "slug": "milwaukee-wi-mke-rec-thursday-night-rides",
+   "url": "https://wisconsinbikefed.org/events/mke-rec-thursday-night-rides/",
+   "host": "Milwaukee Recreation (MKE REC)"
+  },
+  {
+   "slug": "milwaukee-wi-mke-rec-tuesday-good-morning-hank",
+   "url": "https://wisconsinbikefed.org/events/mke-rec-tuesday-rides-good-morning-hank/",
+   "host": "Milwaukee Recreation (MKE REC)"
+  },
+  {
+   "slug": "slinger-wi-bay-view-bicycle-club-saturday-big-cedar-lake",
+   "url": "https://wisconsinbikefed.org/events/bay-view-bicycle-club-weekly-sat-ride-big-cedar-lake/",
+   "host": "Bay View Bicycle Club"
+  },
+  {
+   "slug": "south-milwaukee-wi-south-milwaukee-critical-mass",
+   "url": "https://www.milwaukeebikerides.com/style/casual/",
+   "host": "South Milwaukee Critical Mass"
+  },
+  {
+   "slug": "waukesha-wi-bay-view-bicycle-club-sunday-3-trails-west",
+   "url": "https://wisconsinbikefed.org/events/bay-view-bicycle-club-weekly-sun-ride-3-trails-west/",
+   "host": "Bay View Bicycle Club"
+  },
+  {
+   "slug": "wauwatosa-wi-tosa-full-moon-bicycle-ride",
+   "url": "https://www.milwaukeebikerides.com/",
+   "host": "Milwaukee Bike Rides"
+  },
+  {
+   "slug": "laramie-wy-spinderellas",
+   "url": "https://www.laramiebikenet.org/group-rides",
+   "host": "Laramie BikeNet (led by Jenn Hess)"
+  },
+  {
+   "slug": "laramie-wy-laramie-bikenet-tuesday-night-hammer-ride",
+   "url": "https://www.laramiebikenet.org/group-rides",
+   "host": "Laramie BikeNet"
+  },
+  {
+   "slug": "laramie-wy-pedal-house-wednesday-night-ride",
+   "url": "https://www.laramiebikenet.org/group-rides",
+   "host": "Pedal House"
+  },
+  {
+   "slug": "melbourne-au-rapha-melbourne-mt-pleasant-ride",
+   "url": "https://events.rapha.cc/products/rapha-melbourne-mt-pleasant-ride",
+   "host": "Rapha Melbourne Clubhouse"
+  },
+  {
+   "slug": "melbourne-au-rapha-melbourne-social-saturday-ride",
+   "url": "https://events.rapha.cc/products/rapha-melbourne-social-saturday-ride",
+   "host": "Rapha Melbourne Clubhouse"
+  },
+  {
+   "slug": "melbourne-au-rapha-melbourne-southside-ride",
+   "url": "https://events.rapha.cc/products/rapha-melbourne-southside-ride",
+   "host": "Rapha Melbourne Clubhouse"
+  },
+  {
+   "slug": "sydney-au-rapha-sydney-thursday-ladies-open-ride",
+   "url": "https://events.rapha.cc/products/rapha-sydney-thursday-ladies-open-ride",
+   "host": "Rapha Sydney Clubhouse"
+  },
+  {
+   "slug": "sydney-au-rapha-sydney-wednesday-open-ride",
+   "url": "https://events.rapha.cc/products/rapha-sydney-wednesday-open-ride",
+   "host": "Rapha Sydney Clubhouse"
+  },
+  {
+   "slug": "berlin-de-rapha-berlin-wednesday-early-bird",
+   "url": "https://events.rapha.cc/products/rapha-berlin-wednesday-early-bird",
+   "host": "Rapha Berlin Clubhouse"
+  },
+  {
+   "slug": "tokyo-jp-rapha-tokyo-ride-this-city",
+   "url": "https://events.rapha.cc/products/ride-this-city-tokyo",
+   "host": "Rapha Tokyo"
+  },
+  {
+   "slug": "singapore-sg-rapha-singapore-friday-social",
+   "url": "https://events.rapha.cc/products/rapha-singapore-friday-social",
+   "host": "Rapha Singapore Clubhouse"
+  },
+  {
+   "slug": "singapore-sg-rapha-singapore-raphalolowednesday",
+   "url": "https://events.rapha.cc/products/raphalolowednesday",
+   "host": "Rapha Singapore Clubhouse"
+  },
+  {
+   "slug": "palma-es-rapha-mallorca-easy-ride",
+   "url": "https://events.rapha.cc/products/easy-ride",
+   "host": "Rapha Mallorca Clubhouse"
+  },
+  {
+   "slug": "palma-es-rapha-mallorca-social-ride",
+   "url": "https://events.rapha.cc/products/social-ride",
+   "host": "Rapha Mallorca Clubhouse"
+  },
+  {
+   "slug": "palma-es-rapha-mallorca-spicy-ride",
+   "url": "https://events.rapha.cc/products/spicy-ride",
+   "host": "Rapha Mallorca Clubhouse"
+  },
+  {
+   "slug": "london-gb-camden-anchor-kentish-town-pedals",
+   "url": "https://lcc.org.uk/events/kentish-town-pedals-13/2026-10-03/",
+   "host": "Camden Anchor (Camden Cyclists)"
+  },
+  {
+   "slug": "london-gb-camden-anchor-kilburn-pedals",
+   "url": "https://lcc.org.uk/events/kilburn-pedals/2026-10-17/",
+   "host": "Camden Anchor (Camden Cyclists)"
+  },
+  {
+   "slug": "london-gb-rapha-london-friday-chat-laps",
+   "url": "https://events.rapha.cc/products/regents-park-friday-chat-laps",
+   "host": "Rapha London Clubhouse"
+  },
+  {
+   "slug": "london-gb-rapha-london-womens-chat-laps",
+   "url": "https://events.rapha.cc/products/rapha-x-steezy-ride",
+   "host": "Rapha London Clubhouse"
+  }
+ ],
+ "C_promised_doubted": [
+  {
+   "slug": "sedona-az-vvcc-thursday-sedona-area-road-ride",
+   "name": "Thursday Sedona Area Road Ride",
+   "place": "Sedona, AZ",
+   "next": "2026-11-19",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-02",
+   "verified_on": "2026-09-30"
+  },
+  {
+   "slug": "elmhurst-il-elmhurst-bicycle-club-morning-ride",
+   "name": "Elmhurst Bicycle Club Morning Ride",
+   "place": "Elmhurst, IL",
+   "next": "2026-11-19",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "cold-spring-ky-cincinnati-cycle-club-aterhamtning-thursday-ride",
+   "name": "Återhämtning's Thursday Ride",
+   "place": "Cold Spring, KY",
+   "next": "2026-11-19",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "bowie-md-jafe-cycling-fastchix-thursday-morning-ride",
+   "name": "Fastchix Thursday Morning Ride (Jafe Cycling)",
+   "place": "Bowie, MD",
+   "next": "2026-11-19",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-10-26",
+   "verified_on": "2026-10-19"
+  },
+  {
+   "slug": "columbus-oh-thursday-night-central-columbus-metro-parks-ride",
+   "name": "Thursday Night Central Columbus & Metro Parks Ride",
+   "place": "Columbus, OH",
+   "next": "2026-11-19",
+   "why": "no-upcoming-date",
+   "say": "the host's page dates it in the past",
+   "since": "2026-11-09",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "milford-oh-bishops-thursday-casual-ride",
+   "name": "Thursday Bishop's Casual Ride",
+   "place": "Milford, OH",
+   "next": "2026-11-19",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "breinigsville-pa-fitness-central-cycling-club-thursday-java-ride",
+   "name": "FC Thursday Java Ride",
+   "place": "Breinigsville, PA",
+   "next": "2026-11-19",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "lancaster-pa-lbc-thursday-evening-special",
+   "name": "Thursday Evening Special (Lancaster Bicycle Club)",
+   "place": "Lancaster, PA",
+   "next": "2026-11-19",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "rock-hill-sc-rhbc-thursday-night-rocks-gravel",
+   "name": "Thursday Night Rocks (Gravel)",
+   "place": "Rock Hill, SC",
+   "next": "2026-11-19",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "cottonwood-az-vvcc-friday-social-ride",
+   "name": "Friday Social Ride (regular and casual)",
+   "place": "Cottonwood, AZ",
+   "next": "2026-11-20",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-02",
+   "verified_on": "2026-09-30"
+  },
+  {
+   "slug": "oakland-ca-waffles-n-wheels-hills-n-sips",
+   "name": "Waffles n Wheels Hills n Sips",
+   "place": "Oakland, CA",
+   "next": "2026-11-20",
+   "why": "no-upcoming-date",
+   "say": "the host's page dates it in the past",
+   "since": "2026-10-05",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "greenwood-village-co-denver-outdoor-adventures-crappy-road-bikes-ride",
+   "name": "Crappy Road Bikes Group Ride",
+   "place": "Greenwood Village, CO",
+   "next": "2026-11-20",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "bowie-md-jafe-cycling-fridays-at-jafes",
+   "name": "Fridays at Jafe's",
+   "place": "Bowie, MD",
+   "next": "2026-11-20",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "medford-nj-outdoor-club-of-south-jersey-fran-friday-ride",
+   "name": "Fran's Usual Friday C/C+ Ride (Outdoor Club of South Jersey)",
+   "place": "Medford, NJ",
+   "next": "2026-11-20",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-09",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "dallas-tx-trek-park-cities-thursday-lake-laps",
+   "name": "Thursday Lake Laps (Trek Dallas Park Cities)",
+   "place": "Dallas, TX",
+   "next": "2026-11-20",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "san-antonio-tx-storm-all-level-ride-op-schnabel",
+   "name": "STORM All-Level Ride",
+   "place": "San Antonio, TX",
+   "next": "2026-11-20",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-10-26",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "sydney-au-bikeast-supasaturday-ramsgate",
+   "name": "SupaSaturday Ride: Moore Park to Ramsgate",
+   "place": "Sydney, AU",
+   "next": "2026-11-20",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "vancouver-ca-out-n-about-cycling-weekday-rides",
+   "name": "Weekday Rides (Out-n-About Cycling)",
+   "place": "Vancouver, CA",
+   "next": "2026-11-20",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "prescott-valley-az-bike-prescott-saturday-casual-road-ride",
+   "name": "Saturday Casual Road Ride",
+   "place": "Prescott Valley, AZ",
+   "next": "2026-11-21",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-09-30"
+  },
+  {
+   "slug": "sedona-az-vvcc-saturday-voc-ride",
+   "name": "Saturday VOC Ride",
+   "place": "Sedona, AZ",
+   "next": "2026-11-21",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-02",
+   "verified_on": "2026-09-30"
+  },
+  {
+   "slug": "long-beach-ca-lightning-velo-saturday-ride",
+   "name": "Lightning Velo Saturday Ride",
+   "place": "Long Beach, CA",
+   "next": "2026-11-21",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "golden-co-rmcc-saturday-fall-road-ride",
+   "name": "RMCC Saturday Fall Road Ride",
+   "place": "Golden, CO",
+   "next": "2026-11-21",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-10-26",
+   "verified_on": "2026-10-02"
+  },
+  {
+   "slug": "tucker-ga-atlptn-tucker",
+   "name": "Tucker (TUK)",
+   "place": "Tucker, GA",
+   "next": "2026-11-21",
+   "why": "flagged",
+   "say": "a red flag or a rider's report is open",
+   "since": "2026-11-16",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "vinings-ga-atlptn-beyond-six-flags",
+   "name": "Beyond Six Flags (BSF)",
+   "place": "Vinings, GA",
+   "next": "2026-11-21",
+   "why": "flagged",
+   "say": "a red flag or a rider's report is open",
+   "since": "2026-11-16",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "kailua-kona-hi-saturday-recreational-north-ride",
+   "name": "Kona Saturday Recreational Ride",
+   "place": "Kailua-Kona, HI",
+   "next": "2026-11-21",
+   "why": "flagged",
+   "say": "a red flag or a rider's report is open",
+   "since": "2026-11-16",
+   "verified_on": "2026-09-15"
+  },
+  {
+   "slug": "detroit-mi-pedalup-riderz-friday-night-groove",
+   "name": "Friday Night Groove",
+   "place": "Detroit, MI",
+   "next": "2026-11-21",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "richmond-heights-mo-big-shark-saturday-long-route-shop-ride",
+   "name": "Big Shark Long Route Shop Ride",
+   "place": "Richmond Heights, MO",
+   "next": "2026-11-21",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "st-louis-mo-south-side-cyclery-saturday-training-ride",
+   "name": "South Side Training Ride",
+   "place": "St. Louis, MO",
+   "next": "2026-11-21",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": "2026-10-12",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "el-paso-tx-saturday-road-ride",
+   "name": "El Paso Bicycle Club Saturday Road Ride",
+   "place": "El Paso, TX",
+   "next": "2026-11-21",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "calgary-ca-slow-and-steady-hikers-friday-evening-bike-ride",
+   "name": "Friday Evening Bike Ride",
+   "place": "Calgary, CA",
+   "next": "2026-11-21",
+   "why": "no-upcoming-date",
+   "say": "the host's page dates it in the past",
+   "since": "2026-10-26",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "chandler-az-southeast-chandler-cycling-sunday-social-ride",
+   "name": "Sunday Social Ride",
+   "place": "Chandler, AZ",
+   "next": "2026-11-22",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-09-30"
+  },
+  {
+   "slug": "phoenix-az-pmbc-granada-sunday-breakfast-ride",
+   "name": "Granada Sunday Breakfast Ride",
+   "place": "Phoenix, AZ",
+   "next": "2026-11-22",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-26"
+  },
+  {
+   "slug": "redwood-city-ca-sports-basement-sunday-ride",
+   "name": "Sports Basement Redwood City Sunday Ride",
+   "place": "Redwood City, CA",
+   "next": "2026-11-22",
+   "why": "no-upcoming-date",
+   "say": "the host's page dates it in the past",
+   "since": "2026-10-12",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "santa-cruz-ca-santa-cruz-county-cycling-club-sunday-d-ride",
+   "name": "Santa Cruz County Cycling Club Sunday D Ride",
+   "place": "Santa Cruz, CA",
+   "next": "2026-11-22",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "ventura-ca-bikevc-sunday-morning-coffee-ride",
+   "name": "Sunday Morning Coffee Ride (BikeVC)",
+   "place": "Ventura, CA",
+   "next": "2026-11-22",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-10-26",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "detroit-mi-soul-roll-detroit-monday-saturday",
+   "name": "Soul Roll Detroit",
+   "place": "Detroit, MI",
+   "next": "2026-11-22",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "durham-nc-black-spoke-society-fourth-sunday-social-ride",
+   "name": "Black Spoke Society Fourth Sunday Social Ride",
+   "place": "Durham, NC",
+   "next": "2026-11-22",
+   "why": "no-upcoming-date",
+   "say": "the host's page dates it in the past",
+   "since": "2026-11-16",
+   "verified_on": "2026-10-02"
+  },
+  {
+   "slug": "macungie-pa-lvcc-a-sunday-ride",
+   "name": "A Sunday Ride (Lehigh Valley Cycling Club)",
+   "place": "Macungie, PA",
+   "next": "2026-11-22",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "lexington-ky-bluegrass-cycling-club-masterson-mondays",
+   "name": "Bluegrass Cycling Club Masterson Mondays",
+   "place": "Lexington, KY",
+   "next": "2026-11-23",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-02"
+  },
+  {
+   "slug": "manchester-gb-debdale-cycling-for-health-monday-ride",
+   "name": "Monday Cycling for Health",
+   "place": "Manchester, GB",
+   "next": "2026-11-23",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": "2026-10-12",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "san-francisco-ca-hummingbird-fuels-all-watts-welcome-intervals",
+   "name": "Hummingbird All Watts Welcome (intervals)",
+   "place": "San Francisco, CA",
+   "next": "2026-11-24",
+   "why": "no-upcoming-date",
+   "say": "the host's page dates it in the past",
+   "since": "2026-10-12",
+   "verified_on": "2026-10-02"
+  },
+  {
+   "slug": "longmont-co-st-vrain-cyclists-tuesday-morning-ride",
+   "name": "Tuesday Morning Road Ride (St. Vrain Cyclists)",
+   "place": "Longmont, CO",
+   "next": "2026-11-24",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "lexington-ky-bluegrass-cycling-club-horse-park-tuesday",
+   "name": "Bluegrass Cycling Club Horse Park Tuesday",
+   "place": "Lexington, KY",
+   "next": "2026-11-24",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": "2026-10-12",
+   "verified_on": "2026-10-02"
+  },
+  {
+   "slug": "newport-ky-tuesday-night-worlds-tnw",
+   "name": "Tuesday Night Worlds (TNW)",
+   "place": "Newport, KY",
+   "next": "2026-11-24",
+   "why": "no-upcoming-date",
+   "say": "the host's page dates it in the past",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "cincinnati-oh-ubbc-tuesday-night-ride",
+   "name": "UBBC Tuesday Night Ride",
+   "place": "Cincinnati, OH",
+   "next": "2026-11-24",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-19"
+  },
+  {
+   "slug": "horsham-pa-scu-tuesday-evening-ride",
+   "name": "Tuesday Evening Ride (Suburban Cyclists Unlimited)",
+   "place": "Horsham, PA",
+   "next": "2026-11-24",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "lancaster-pa-lbc-tuesday-training-ride",
+   "name": "Tuesday Training Ride (Lancaster Bicycle Club)",
+   "place": "Lancaster, PA",
+   "next": "2026-11-24",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-10-05",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "arlington-va-nova-cbg-tuesday-night-ride",
+   "name": "Tuesday Night Ride (NoVA Casual Bicycling Group)",
+   "place": "Arlington, VA",
+   "next": "2026-11-24",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "la-crosse-wi-smiths-bike-shop-tnwc-tuesday-night-world-champs",
+   "name": "TNWC (Tuesday Night World Champs)",
+   "place": "La Crosse, WI",
+   "next": "2026-11-24",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "chandler-az-global-bikes-wheel-suckers-taco-tuesday",
+   "name": "Taco Tuesday Ride (Wheel Suckers)",
+   "place": "Chandler, AZ",
+   "next": "2026-11-25",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-09-30"
+  },
+  {
+   "slug": "cottonwood-az-vvcc-wednesday-cottonwood-ride",
+   "name": "VVCC Wednesday Cottonwood Ride",
+   "place": "Cottonwood, AZ",
+   "next": "2026-11-25",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-02",
+   "verified_on": "2026-09-15"
+  },
+  {
+   "slug": "oakland-ca-bike-east-bay-slowkland",
+   "name": "Slowkland",
+   "place": "Oakland, CA",
+   "next": "2026-11-25",
+   "why": "no-upcoming-date",
+   "say": "the host's page dates it in the past",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "colorado-springs-co-cscc-wednesday-morning-ride",
+   "name": "Wednesday Morning Ride",
+   "place": "Colorado Springs, CO",
+   "next": "2026-11-25",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "springfield-il-springfield-bicycle-club-wednesday-show-and-go-social-ride",
+   "name": "Wednesday Show & Go Social Ride from Springfield Beer",
+   "place": "Springfield, IL",
+   "next": "2026-11-25",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "midway-ky-bluegrass-cycling-club-midway-wednesday",
+   "name": "Bluegrass Cycling Club Midway Wednesday",
+   "place": "Midway, KY",
+   "next": "2026-11-25",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-02"
+  },
+  {
+   "slug": "lancaster-pa-lbc-wednesday-breakfast-ride",
+   "name": "Wednesday Morning Breakfast Ride (Lancaster Bicycle Club)",
+   "place": "Lancaster, PA",
+   "next": "2026-11-25",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "allen-tx-dctr-taco-tuesday-social-ride",
+   "name": "Taco Tuesday Social Ride (Allen)",
+   "place": "Allen, TX",
+   "next": "2026-11-25",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-09",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "dallas-tx-trek-park-cities-tuesday-lake-laps",
+   "name": "Tuesday Lake Laps (Trek Dallas Park Cities)",
+   "place": "Dallas, TX",
+   "next": "2026-11-25",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "phoenix-az-valley-epic-rides-night-rider-trail-100",
+   "name": "Night Rider Series @ Trail 100",
+   "place": "Phoenix, AZ",
+   "next": "2026-11-26",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-09-30"
+  },
+  {
+   "slug": "queen-creek-az-santan-shredders-wednesday-night-roll",
+   "name": "Wednesday Night Roll: No Drop",
+   "place": "Queen Creek, AZ",
+   "next": "2026-11-26",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-09-30"
+  },
+  {
+   "slug": "hayward-ca-bike-east-bay-bike-hayward-wednesday-rides",
+   "name": "Bike Hayward Wednesday Rides",
+   "place": "Hayward, CA",
+   "next": "2026-11-26",
+   "why": "no-upcoming-date",
+   "say": "the host's page dates it in the past",
+   "since": "2026-11-09",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "detroit-mi-lane-bangerz-westside-wednesday-ride",
+   "name": "Westside Wednesday Ride",
+   "place": "Detroit, MI",
+   "next": "2026-11-26",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "charlotte-nc-critical-mass",
+   "name": "Charlotte Critical Mass",
+   "place": "Charlotte, NC",
+   "next": "2026-11-28",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "roswell-ga-rambo-free-flite-big-creek-group-ride",
+   "name": "Free-Flite Group Ride at Big Creek",
+   "place": "Roswell, GA",
+   "next": "2026-12-04",
+   "why": "no-upcoming-date",
+   "say": "the host's page dates it in the past",
+   "since": "2026-10-12",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "pittsburgh-pa-pittsburgh-critical-mass-second-friday",
+   "name": "Critical Mass Pittsburgh",
+   "place": "Pittsburgh, PA",
+   "next": "2026-12-11",
+   "why": "no-upcoming-date",
+   "say": "the host's page dates it in the past",
+   "since": "2026-10-05",
+   "verified_on": "2026-10-02"
+  },
+  {
+   "slug": "lihue-hi-kauai-path-bikes-on-rice",
+   "name": "Bikes on Rice Slow Roll",
+   "place": "Lihue, HI",
+   "next": "2026-12-13",
+   "why": "no-upcoming-date",
+   "say": "the host's page dates it in the past",
+   "since": "2026-10-05",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "grinnell-ia-prairie-burner-tuesday-gravel-ride",
+   "name": "Prairie Burner Weekly Gravel Ride",
+   "place": "Grinnell, IA",
+   "next": "2027-03-02",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "durango-co-tuesday-night-worlds",
+   "name": "Tuesday Night Worlds (A, B and C rides)",
+   "place": "Durango, CO",
+   "next": "2027-03-03",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "lakewood-ranch-fl-vicc-wednesday-night-worlds",
+   "name": "Village Idiots Wednesday Night Worlds",
+   "place": "Lakewood Ranch, FL",
+   "next": "2027-03-03",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "golden-co-rmcc-thursday-night-climbing",
+   "name": "RMCC Thursday Night Climbing",
+   "place": "Golden, CO",
+   "next": "2027-04-01",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-09",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "grinnell-ia-imagine-grinnell-thursday-gravel-curious-ride",
+   "name": "Thursday Night Gravel, Gravel Curious Ride",
+   "place": "Grinnell, IA",
+   "next": "2027-04-01",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "rochester-mn-rasc-dirty-rascals-thursday-gravel",
+   "name": "Dirty RASCals Thursday Gravel",
+   "place": "Rochester, MN",
+   "next": "2027-04-01",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "milwaukee-wi-mke-rec-thursday-night-rides",
+   "name": "MKE REC Thursday Night Rides",
+   "place": "Milwaukee, WI",
+   "next": "2027-04-01",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "dublin-ie-dublin-easy-wheelers-killakee-thursday",
+   "name": "Killakee Viewpoint (Thursday evening)",
+   "place": "Dublin, IE",
+   "next": "2027-04-01",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "montclair-nj-montclair-bikery-friday-ladies-ride",
+   "name": "Friday Ladies Ride (Montclair Bikery)",
+   "place": "Montclair, NJ",
+   "next": "2027-04-02",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "springfield-il-springfield-bicycle-club-v-park-weekend-rides",
+   "name": "V-Park Weekend Rides",
+   "place": "Springfield, IL",
+   "next": "2027-04-03",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "milwaukee-wi-mke-rec-saturday-community-bike-rides",
+   "name": "MKE REC Saturday Community Bike Rides",
+   "place": "Milwaukee, WI",
+   "next": "2027-04-03",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "toronto-ca-tbn-saturday-morning-ride",
+   "name": "Saturday Morning Ride",
+   "place": "Toronto, CA",
+   "next": "2027-04-03",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "chicago-il-specialized-chicago-sunday-smr",
+   "name": "Specialized Chicago Fulton Market Sunday SMR",
+   "place": "Chicago, IL",
+   "next": "2027-04-04",
+   "why": "no-upcoming-date",
+   "say": "the host's page dates it in the past",
+   "since": "2026-10-05",
+   "verified_on": "2026-10-02"
+  },
+  {
+   "slug": "gurnee-il-bicycle-club-of-lake-county-bikes-and-bucks-ride",
+   "name": "Bicycle Club of Lake County Bikes and 'Bucks Ride",
+   "place": "Gurnee, IL",
+   "next": "2027-04-04",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "colorado-springs-co-cscc-tuesday-morning-gravel",
+   "name": "Tuesday Morning Gravel",
+   "place": "Colorado Springs, CO",
+   "next": "2027-04-06",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "lake-bluff-il-bicycle-club-of-lake-county-tuesday-night-social-ride",
+   "name": "Bicycle Club of Lake County Tuesday Night Social Ride",
+   "place": "Lake Bluff, IL",
+   "next": "2027-04-06",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "milwaukee-wi-mke-rec-tuesday-good-morning-hank",
+   "name": "MKE REC Tuesday Rides, Good Morning Hank",
+   "place": "Milwaukee, WI",
+   "next": "2027-04-06",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "morton-grove-il-lets-ride-wednesday-night-ride",
+   "name": "Let's Ride! Wednesday Night Ride",
+   "place": "Morton Grove, IL",
+   "next": "2027-04-07",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "raleigh-nc-green-line-bike-bus",
+   "name": "The Green Line Commuter Bike Bus",
+   "place": "Raleigh, NC",
+   "next": "2027-04-07",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-02",
+   "verified_on": "2026-10-19"
+  },
+  {
+   "slug": "slinger-wi-bay-view-bicycle-club-saturday-big-cedar-lake",
+   "name": "Bay View Bicycle Club Saturday Ride, Big Cedar Lake",
+   "place": "Slinger, WI",
+   "next": "2027-05-01",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "henrico-va-contes-richmond-sunday-brunch-ride",
+   "name": "Sunday Brunch Ride (Conte's Richmond)",
+   "place": "Henrico, VA",
+   "next": "2027-05-02",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": "2026-10-12",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "waukesha-wi-bay-view-bicycle-club-sunday-3-trails-west",
+   "name": "Bay View Bicycle Club Sunday Ride, 3 Trails West",
+   "place": "Waukesha, WI",
+   "next": "2027-05-02",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "cambridge-ma-crw-speedy-croissant-women-nb-ride",
+   "name": "Speedy Croissant Women/NB Ride",
+   "place": "Cambridge, MA",
+   "next": "2027-05-04",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "rochester-ny-reconnect-rochester-flower-city-feeling-good-wednesday",
+   "name": "Flower City Feeling Good Wednesday Ride",
+   "place": "Rochester, NY",
+   "next": "2027-05-05",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-10-12",
+   "verified_on": "2026-10-01"
+  },
+  {
+   "slug": "pittsburgh-pa-3-rivers-outdoor-co-thursday-frick-park-mtb-ride",
+   "name": "Thursday Mountain Bike Ride in Frick Park (3 Rivers Outdoor Co)",
+   "place": "Pittsburgh, PA",
+   "next": "2027-05-06",
+   "why": "ran-out",
+   "say": "our own schedule text names an end date that has passed",
+   "since": null,
+   "verified_on": "2026-10-02"
+  },
+  {
+   "slug": "ottawa-ca-obc-saturday-gravel-ride",
+   "name": "Saturday Gravel Ride",
+   "place": "Ottawa, CA",
+   "next": "2027-10-02",
+   "why": "feed-stopped",
+   "say": "the host's calendar stopped listing it",
+   "since": "2026-11-09",
+   "verified_on": "2026-10-01"
+  }
+ ],
+ "D_ran_out": [
+  {
+   "slug": "richmond-heights-mo-big-shark-saturday-long-route-shop-ride",
+   "name": "Big Shark Long Route Shop Ride",
+   "place": "Richmond Heights, MO",
+   "ended": "2026-10-03",
+   "next": "2026-11-21",
+   "verified_on": "2026-10-01",
+   "text": "Every Saturday, 7:30 am from Big Shark Big Bend; ride leader March 1 to Oct 31, after that riders still meet without a leader The calendar series ends Oct 3, 2026; the page says there is no ride leader from Nov 1 to Mar "
+  },
+  {
+   "slug": "chandler-az-southeast-chandler-cycling-sunday-social-ride",
+   "name": "Sunday Social Ride",
+   "place": "Chandler, AZ",
+   "ended": "2026-10-04",
+   "next": "2026-11-22",
+   "verified_on": "2026-09-30",
+   "text": "Every Sunday, wheels down 6:00 am, from the Panera Bread on Germann Rd. The Meetup post lists a 6:00 start every week from Aug 9 through Oct 4, 2026. Meetup posts one Sunday at a time. The title has carried 'new start ti"
+  },
+  {
+   "slug": "manchester-gb-debdale-cycling-for-health-monday-ride",
+   "name": "Monday Cycling for Health",
+   "place": "Manchester, GB",
+   "ended": "2026-10-05",
+   "next": "2026-11-23",
+   "verified_on": "2026-10-01",
+   "text": "Mondays, meet near the tennis courts in Debdale Park (M18 7LJ) from 10:00 am; Let's Ride lists the ride at 10:15 am and the group says a 10:30 am start. 8 to 15 miles with a coffee stop halfway, no more than two and a ha"
+  },
+  {
+   "slug": "cambridge-ma-crw-speedy-croissant-women-nb-ride",
+   "name": "Speedy Croissant Women/NB Ride",
+   "place": "Cambridge, MA",
+   "ended": "2026-10-06",
+   "next": "2027-05-04",
+   "verified_on": "2026-10-01",
+   "text": "Tuesdays at 6:00 am in season (listed every Tuesday from May 5 to Oct 6, 2026). Rain calls go up by 10 pm the night before and again at 5 am. Seasonal early-morning series; the new season appears in the feed each spring."
+  },
+  {
+   "slug": "sydney-au-bikeast-supasaturday-ramsgate",
+   "name": "SupaSaturday Ride: Moore Park to Ramsgate",
+   "place": "Sydney, AU",
+   "ended": "2026-10-11",
+   "next": "2026-11-20",
+   "verified_on": "2026-10-01",
+   "text": "Every Saturday, meet 7:30 am at the Dacey Avenue bus shelter, Kensington (or 7:45 am at The Grounds, Alexandria); back about 10:30 am. The Meetup series was posted to Oct 11, 2026. The Saturday series is posted a few wee"
+  },
+  {
+   "slug": "milford-oh-bishops-thursday-casual-ride",
+   "name": "Thursday Bishop's Casual Ride",
+   "place": "Milford, OH",
+   "ended": "2026-10-22",
+   "next": "2026-11-19",
+   "verified_on": "2026-10-01",
+   "text": "Thursdays, 6:15 pm, from Bishop's Bike Shop in Milford. The club calendar lists it through Oct 22, 2026."
+  },
+  {
+   "slug": "milwaukee-wi-mke-rec-saturday-community-bike-rides",
+   "name": "MKE REC Saturday Community Bike Rides",
+   "place": "Milwaukee, WI",
+   "ended": "2026-10-24",
+   "next": "2027-04-03",
+   "verified_on": "2026-10-01",
+   "text": "Every Saturday, 10:00 am, April 18 to October 24, 2026 (not on holidays); the start changes around Milwaukee County. Season dates on the Bike Fed listing; registration on Milwaukee Recreation's site."
+  },
+  {
+   "slug": "gurnee-il-bicycle-club-of-lake-county-bikes-and-bucks-ride",
+   "name": "Bicycle Club of Lake County Bikes and 'Bucks Ride",
+   "place": "Gurnee, IL",
+   "ended": "2026-10-25",
+   "next": "2027-04-04",
+   "verified_on": "2026-10-01",
+   "text": "Sundays, 9:00 am from the Starbucks lot off Grand Avenue, through Oct 25, 2026. Meetup feed shows the next ten club events."
+  },
+  {
+   "slug": "henrico-va-contes-richmond-sunday-brunch-ride",
+   "name": "Sunday Brunch Ride (Conte's Richmond)",
+   "place": "Henrico, VA",
+   "ended": "2026-10-25",
+   "next": "2027-05-02",
+   "verified_on": "2026-10-01",
+   "text": "Sundays, 8:00 am, from Conte's Bike Shop in West Broad Marketplace; calendar runs through Oct 25 The calendar series ends Oct 25, 2026; look for a winter schedule."
+  },
+  {
+   "slug": "waukesha-wi-bay-view-bicycle-club-sunday-3-trails-west",
+   "name": "Bay View Bicycle Club Sunday Ride, 3 Trails West",
+   "place": "Waukesha, WI",
+   "ended": "2026-10-25",
+   "next": "2027-05-02",
+   "verified_on": "2026-10-01",
+   "text": "Every Sunday, 9:00 am, May 3 to October 25, 2026, from Fox River Sanctuary in Waukesha. Out and back on the Glacial Drumlin, Cushing Park and Lake Country trails. Season dates on the Bike Fed listing."
+  },
+  {
+   "slug": "lexington-ky-bluegrass-cycling-club-masterson-mondays",
+   "name": "Bluegrass Cycling Club Masterson Mondays",
+   "place": "Lexington, KY",
+   "ended": "2026-10-26",
+   "next": "2026-11-23",
+   "verified_on": "2026-10-02",
+   "text": "Every Monday, 5:30 pm. The club calendar lists it through Oct 26, 2026. ClubExpress calendar, Future view. The 5:30 pm start gets earlier as the days shorten."
+  },
+  {
+   "slug": "phoenix-az-valley-epic-rides-night-rider-trail-100",
+   "name": "Night Rider Series @ Trail 100",
+   "place": "Phoenix, AZ",
+   "ended": "2026-10-27",
+   "next": "2026-11-26",
+   "verified_on": "2026-09-30",
+   "text": "Wednesdays, 6:30 pm, on Trail 100, in a Meetup series that ends Oct 27, 2026: Oct 14 is off, so the last ride of this series is Oct 21. The meet spot can change; check the Meetup event. The current Meetup series runs to "
+  },
+  {
+   "slug": "colorado-springs-co-cscc-tuesday-morning-gravel",
+   "name": "Tuesday Morning Gravel",
+   "place": "Colorado Springs, CO",
+   "ended": "2026-10-27",
+   "next": "2027-04-06",
+   "verified_on": "2026-10-01",
+   "text": "Every Tuesday, 9:00 am, through Oct 27, 2026. A different start each week; the leader posts a Ride with GPS route with the start the weekend before (Oct 6: Calhan Baseball Park). Series ends Oct 27."
+  },
+  {
+   "slug": "grinnell-ia-prairie-burner-tuesday-gravel-ride",
+   "name": "Prairie Burner Weekly Gravel Ride",
+   "place": "Grinnell, IA",
+   "ended": "2026-10-27",
+   "next": "2027-03-02",
+   "verified_on": "2026-10-01",
+   "text": "Every Tuesday, leave 5:30 pm from Bikes To You, March 10 to October 27, 2026 (returns when the clocks change in spring) Host's event page gives the season dates and an ICS link."
+  },
+  {
+   "slug": "lake-bluff-il-bicycle-club-of-lake-county-tuesday-night-social-ride",
+   "name": "Bicycle Club of Lake County Tuesday Night Social Ride",
+   "place": "Lake Bluff, IL",
+   "ended": "2026-10-27",
+   "next": "2027-04-06",
+   "verified_on": "2026-10-01",
+   "text": "Tuesdays, 5:30 pm from the Lake Bluff Metra station, through Oct 27, 2026. Meetup feed shows the next ten club events."
+  },
+  {
+   "slug": "lexington-ky-bluegrass-cycling-club-horse-park-tuesday",
+   "name": "Bluegrass Cycling Club Horse Park Tuesday",
+   "place": "Lexington, KY",
+   "ended": "2026-10-27",
+   "next": "2026-11-24",
+   "verified_on": "2026-10-02",
+   "text": "Every Tuesday, 5:30 pm. The club calendar lists it through Oct 27, 2026. ClubExpress calendar, Future view."
+  },
+  {
+   "slug": "cincinnati-oh-ubbc-tuesday-night-ride",
+   "name": "UBBC Tuesday Night Ride",
+   "place": "Cincinnati, OH",
+   "ended": "2026-10-27",
+   "next": "2026-11-24",
+   "verified_on": "2026-10-19",
+   "text": "Every Tuesday; meet 6:00 pm, roll 6:15 pm. The Queen City Bike calendar lists the ride through Oct 27, 2026; check it for what follows. The ride is posted as a recurring series on Queen City Bike's community Google Calen"
+  },
+  {
+   "slug": "milwaukee-wi-mke-rec-tuesday-good-morning-hank",
+   "name": "MKE REC Tuesday Rides, Good Morning Hank",
+   "place": "Milwaukee, WI",
+   "ended": "2026-10-27",
+   "next": "2027-04-06",
+   "verified_on": "2026-10-01",
+   "text": "Every Tuesday, 9:00 am, April 14 to October 27, 2026, from Juneau Playfield. Season dates on the Bike Fed listing."
+  },
+  {
+   "slug": "queen-creek-az-santan-shredders-wednesday-night-roll",
+   "name": "Wednesday Night Roll: No Drop",
+   "place": "Queen Creek, AZ",
+   "ended": "2026-10-28",
+   "next": "2026-11-26",
+   "verified_on": "2026-09-30",
+   "text": "Every Wednesday, 7:00 pm, listed through Oct 28, 2026. Meet at the flagpole parking and arrive 10 minutes early. The series ends Oct 28. Watch for the next series or a winter time."
+  },
+  {
+   "slug": "lakewood-ranch-fl-vicc-wednesday-night-worlds",
+   "name": "Village Idiots Wednesday Night Worlds",
+   "place": "Lakewood Ranch, FL",
+   "ended": "2026-10-28",
+   "next": "2027-03-03",
+   "verified_on": "2026-10-01",
+   "text": "Every Wednesday, 6:00 pm, March through October (last ride Oct 28, 2026), from the north parking lot of Lakewood Ranch Main Street. Lights required: it gets dark before the ride ends."
+  },
+  {
+   "slug": "springfield-il-springfield-bicycle-club-wednesday-show-and-go-social-ride",
+   "name": "Wednesday Show & Go Social Ride from Springfield Beer",
+   "place": "Springfield, IL",
+   "ended": "2026-10-28",
+   "next": "2026-11-25",
+   "verified_on": "2026-10-01",
+   "text": "Wednesdays, meet 5:30 pm in the lot behind Freddy's at Springfield Beer Company. The club calendar lists it through Oct 28, 2026. The club's Google Calendar lists every ride and cancellations. Weather changes are posted "
+  },
+  {
+   "slug": "midway-ky-bluegrass-cycling-club-midway-wednesday",
+   "name": "Bluegrass Cycling Club Midway Wednesday",
+   "place": "Midway, KY",
+   "ended": "2026-10-28",
+   "next": "2026-11-25",
+   "verified_on": "2026-10-02",
+   "text": "Every Wednesday, 5:30 pm. The club calendar lists it through Oct 28, 2026. ClubExpress calendar, Future view."
+  },
+  {
+   "slug": "detroit-mi-lane-bangerz-westside-wednesday-ride",
+   "name": "Westside Wednesday Ride",
+   "place": "Detroit, MI",
+   "ended": "2026-10-28",
+   "next": "2026-11-26",
+   "verified_on": "2026-10-01",
+   "text": "Wednesdays, meet 6:00 pm, roll out 7:00 pm, from Gordon Park. The calendar runs it through Oct 28, 2026. A community calendar the Detroit Greenways Coalition keeps; it does not host the rides. The meeting spot has moved "
+  },
+  {
+   "slug": "golden-co-rmcc-thursday-night-climbing",
+   "name": "RMCC Thursday Night Climbing",
+   "place": "Golden, CO",
+   "ended": "2026-10-29",
+   "next": "2027-04-01",
+   "verified_on": "2026-10-01",
+   "text": "Every Thursday through Oct 29, 2026: group up at 5:25 pm, roll at 5:30 pm, from Beverly Heights Park at the base of Lookout Mountain. Series ends Oct 29; the club posts the next season in spring."
+  },
+  {
+   "slug": "grinnell-ia-imagine-grinnell-thursday-gravel-curious-ride",
+   "name": "Thursday Night Gravel, Gravel Curious Ride",
+   "place": "Grinnell, IA",
+   "ended": "2026-10-29",
+   "next": "2027-04-01",
+   "verified_on": "2026-10-01",
+   "text": "Every Thursday, leave 5:30 pm from Bikes to You, April 2 to October 29, 2026, weather permitting. Event page has Google Calendar and ICS links."
+  },
+  {
+   "slug": "cold-spring-ky-cincinnati-cycle-club-aterhamtning-thursday-ride",
+   "name": "Återhämtning's Thursday Ride",
+   "place": "Cold Spring, KY",
+   "ended": "2026-10-29",
+   "next": "2026-11-19",
+   "verified_on": "2026-10-01",
+   "text": "Thursdays, 5:45 pm, from the parking lot at East Alexandria Pike and Route 27 in Campbell County, Kentucky. The club calendar lists it through Oct 29, 2026. The club calendar lists each Thursday. The town is taken from t"
+  },
+  {
+   "slug": "rochester-mn-rasc-dirty-rascals-thursday-gravel",
+   "name": "Dirty RASCals Thursday Gravel",
+   "place": "Rochester, MN",
+   "ended": "2026-10-29",
+   "next": "2027-04-01",
+   "verified_on": "2026-10-01",
+   "text": "Every Thursday, 6:00 pm, summer through Oct 29, 2026; start location changes weekly (calendar posts it). Bring lights in the fall. events.json?organization_id=7265 lists current and upcoming events; routes and start spot"
+  },
+  {
+   "slug": "breinigsville-pa-fitness-central-cycling-club-thursday-java-ride",
+   "name": "FC Thursday Java Ride",
+   "place": "Breinigsville, PA",
+   "ended": "2026-10-29",
+   "next": "2026-11-19",
+   "verified_on": "2026-10-01",
+   "text": "Every Thursday, 7:30 am, from the velodrome parking lot; coffee stop at Market Café in Topton. Listed weekly through Oct 29, 2026. One Meetup event per Thursday."
+  },
+  {
+   "slug": "pittsburgh-pa-3-rivers-outdoor-co-thursday-frick-park-mtb-ride",
+   "name": "Thursday Mountain Bike Ride in Frick Park (3 Rivers Outdoor Co)",
+   "place": "Pittsburgh, PA",
+   "ended": "2026-10-29",
+   "next": "2027-05-06",
+   "verified_on": "2026-10-02",
+   "text": "Every Thursday, 6:00 pm (meet at the shop), May 21 to Oct 29, 2026, weather and trail conditions permitting. Ride leaders are needed. The listing runs to Oct 29, 2026. Expect it to roll over in May 2027. Cancellations go"
+  },
+  {
+   "slug": "rock-hill-sc-rhbc-thursday-night-rocks-gravel",
+   "name": "Thursday Night Rocks (Gravel)",
+   "place": "Rock Hill, SC",
+   "ended": "2026-10-29",
+   "next": "2026-11-19",
+   "verified_on": "2026-10-01",
+   "text": "Thursdays, wheels up 6:00 pm from the SCDOT lot at Ogden and Robertson Rd. The club's calendar lists it every Thursday through Oct 29, 2026. RWGPS org 12871 lists each Thursday as its own event. The club's description sa"
+  },
+  {
+   "slug": "dallas-tx-trek-park-cities-thursday-lake-laps",
+   "name": "Thursday Lake Laps (Trek Dallas Park Cities)",
+   "place": "Dallas, TX",
+   "ended": "2026-10-29",
+   "next": "2026-11-20",
+   "verified_on": "2026-10-01",
+   "text": "Thursdays, wheels down 6:30 pm, weather permitting. The shop's Eventbrite series runs Aug 13 to Oct 29, 2026. The shop posts a new Eventbrite series each season; the current one ends Oct 29, 2026, so look for the next on"
+  },
+  {
+   "slug": "dallas-tx-trek-park-cities-tuesday-lake-laps",
+   "name": "Tuesday Lake Laps (Trek Dallas Park Cities)",
+   "place": "Dallas, TX",
+   "ended": "2026-10-29",
+   "next": "2026-11-25",
+   "verified_on": "2026-10-01",
+   "text": "Tuesdays, wheels down 6:30 pm, weather permitting. The shop's Eventbrite series runs Aug 13 to Oct 29, 2026. The shop posts a new Eventbrite series each season; the current one ends Oct 29, 2026, so look for the next one"
+  },
+  {
+   "slug": "milwaukee-wi-mke-rec-thursday-night-rides",
+   "name": "MKE REC Thursday Night Rides",
+   "place": "Milwaukee, WI",
+   "ended": "2026-10-29",
+   "next": "2027-04-01",
+   "verified_on": "2026-10-01",
+   "text": "Every Thursday, 6:00 pm, April 16 to October 29, 2026 (not on holidays); the park changes weekly around Milwaukee County. Registration and parks are on Milwaukee Recreation's site; the Bike Fed listing carries the season"
+  },
+  {
+   "slug": "detroit-mi-pedalup-riderz-friday-night-groove",
+   "name": "Friday Night Groove",
+   "place": "Detroit, MI",
+   "ended": "2026-10-30",
+   "next": "2026-11-21",
+   "verified_on": "2026-10-01",
+   "text": "Fridays, meet 6:30 pm, roll out 7:00 pm, from Eastern Market Shed 5. The calendar runs it through Oct 30, 2026. A community calendar the Detroit Greenways Coalition keeps; it does not host the rides. Check the club's soc"
+  },
+  {
+   "slug": "detroit-mi-soul-roll-detroit-monday-saturday",
+   "name": "Soul Roll Detroit",
+   "place": "Detroit, MI",
+   "ended": "2026-10-31",
+   "next": "2026-11-22",
+   "verified_on": "2026-10-01",
+   "text": "Mondays and Saturdays, rolling out at 7:00 pm from Eastern Market Shed 5. The calendar runs both through Oct 31, 2026; earlier entries say meet at 6:00, roll at 7:00. Sometimes canceled for weather. A community calendar "
+  },
+  {
+   "slug": "st-louis-mo-south-side-cyclery-saturday-training-ride",
+   "name": "South Side Training Ride",
+   "place": "St. Louis, MO",
+   "ended": "2026-10-31",
+   "next": "2026-11-21",
+   "verified_on": "2026-10-01",
+   "text": "Saturdays through October 31, 2026, 8:00 am from the shop; A, B and C groups The page switches to winter Saturday coffee and conditioning rides after Oct 31; re-read it in November."
+  },
+  {
+   "slug": "slinger-wi-bay-view-bicycle-club-saturday-big-cedar-lake",
+   "name": "Bay View Bicycle Club Saturday Ride, Big Cedar Lake",
+   "place": "Slinger, WI",
+   "ended": "2026-10-31",
+   "next": "2027-05-01",
+   "verified_on": "2026-10-01",
+   "text": "Every Saturday, 9:00 am, May 1 to October 31, 2026, from Slinger Rotary Park. Moderately hilly loop around Big Cedar Lake; the long route continues to Kewaskum. Season dates on the Bike Fed listing; the club's Strava or "
+  },
+  {
+   "slug": "toronto-ca-tbn-saturday-morning-ride",
+   "name": "Saturday Morning Ride",
+   "place": "Toronto, CA",
+   "ended": "2026-10-31",
+   "next": "2027-04-03",
+   "verified_on": "2026-10-01",
+   "text": "Saturdays, early April to late October, 9:30 am sharp, back by 12:30 or 1:00 pm. The start changes weekly and is on each calendar event, usually near a subway or transit stop. 2026 dates left: Oct 3, 10, 17, 24 and 31 (t"
+  },
+  {
+   "slug": "springfield-il-springfield-bicycle-club-v-park-weekend-rides",
+   "name": "V-Park Weekend Rides",
+   "place": "Springfield, IL",
+   "ended": "2026-11-01",
+   "next": "2027-04-03",
+   "verified_on": "2026-10-01",
+   "text": "Saturdays and Sundays, 8:00 am, from Vredenburg Park. The club calendar lists Saturdays through Oct 31 and Sundays through Nov 1, 2026. The club's Google Calendar lists the ride and the ride leader's notes."
+  },
+  {
+   "slug": "greenwood-village-co-denver-outdoor-adventures-crappy-road-bikes-ride",
+   "name": "Crappy Road Bikes Group Ride",
+   "place": "Greenwood Village, CO",
+   "ended": "2026-11-03",
+   "next": "2026-11-20",
+   "verified_on": "2026-10-01",
+   "text": "Every Thursday, 5:15 pm, from Illegal Pete's in the Denver Tech Center. The Meetup series runs to Nov 3, 2026. The group also posts non-ride events; match on the title."
+  },
+  {
+   "slug": "horsham-pa-scu-tuesday-evening-ride",
+   "name": "Tuesday Evening Ride (Suburban Cyclists Unlimited)",
+   "place": "Horsham, PA",
+   "ended": "2026-11-03",
+   "next": "2026-11-24",
+   "verified_on": "2026-10-01",
+   "text": "Every Tuesday, 5:30 pm from the Horsham Township Library; 17 to 19 mph. Listed weekly through Nov 3, 2026. Weekly Tuesday event."
+  },
+  {
+   "slug": "elmhurst-il-elmhurst-bicycle-club-morning-ride",
+   "name": "Elmhurst Bicycle Club Morning Ride",
+   "place": "Elmhurst, IL",
+   "ended": "2026-11-05",
+   "next": "2026-11-19",
+   "verified_on": "2026-10-01",
+   "text": "Mondays and Thursdays, 9:00 am from the rear lot at Whole Foods along West Ave. Listed through Nov 5, 2026. ClubExpress event list."
+  },
+  {
+   "slug": "phoenix-az-pmbc-granada-sunday-breakfast-ride",
+   "name": "Granada Sunday Breakfast Ride",
+   "place": "Phoenix, AZ",
+   "ended": "2026-11-08",
+   "next": "2026-11-22",
+   "verified_on": "2026-10-26",
+   "text": "Every Sunday. The club's ride description says 7:30 am October through March, but its RideWithGPS calendar lists 6:30 am every Sunday from Sept 27 to Nov 8, 2026, so come at 6:30 or check the calendar that week. The cale"
+  }
+ ],
+ "E_backlog": [
+  {
+   "code": "schedule-text-changed",
+   "severity": "amber",
+   "rides": 272,
+   "over14": 199,
+   "over28": 122,
+   "oldest": "2026-10-05"
+  },
+  {
+   "code": "time-missing",
+   "severity": "amber",
+   "rides": 95,
+   "over14": 74,
+   "over28": 18,
+   "oldest": "2026-10-05"
+  },
+  {
+   "code": "unreachable",
+   "severity": "amber",
+   "rides": 53,
+   "over14": 49,
+   "over28": 40,
+   "oldest": "2026-10-12"
+  },
+  {
+   "code": "event-date-past",
+   "severity": "amber",
+   "rides": 17,
+   "over14": 14,
+   "over28": 9,
+   "oldest": "2026-10-05"
+  },
+  {
+   "code": "page-gone",
+   "severity": "red",
+   "rides": 3,
+   "over14": 0,
+   "over28": 0,
+   "oldest": "2026-11-16"
+  },
+  {
+   "code": "moved",
+   "severity": "amber",
+   "rides": 1,
+   "over14": 1,
+   "over28": 1,
+   "oldest": "2026-10-05"
+  }
+ ],
+ "E_checked": {
+  "listed": 1427,
+  "within30": 228,
+  "over45": 1168,
+  "over60": 220
+ },
+ "ics": {
+  "ours": 973,
+  "over_a_host_feed": 168
+ }
+}

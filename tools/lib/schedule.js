@@ -51,13 +51,16 @@ const ymdOf = (y, mo, d) => `${y}-${String(mo).padStart(2, "0")}-${String(d).pad
 const localYmd = (date, tz) => { const p = partsIn(date, tz); return ymdOf(p.year, p.month, p.day); };
 // Oct 6, 2026: breaks, and monthly rides posted date by date
 const onBreak = (r) => r.status === "seasonal-break";
+// Nov 19, 2026: the freshness policy took this ride's next date down (rides-freshness.js, `undated`). Only the build
+// sets `_f`; a caller without it gets the plain schedule.
+const undated = (r) => !!(r && r._f && r._f.undated);
 const ruleless = (r) => r.frequency === "monthly" && !(r.monthly_rule && r.monthly_rule.length);
 // Next occurrence after `from` as a Date, or null when the schedule can't be computed
 function nextOccurrence(r, from = new Date()) {
   if (!r.start_hhmm || !r.tz || r.frequency === "irregular") return null;
   // Oct 6, 2026: a ride on its seasonal break has no next ride (it showed "Next ride Tue, Oct 6" above "PAUSED FOR
   // THE WINTER"), and a monthly ride with no week-of-month rule is posted date by date — it is not weekly.
-  if (onBreak(r) || ruleless(r)) return null;
+  if (onBreak(r) || undated(r) || ruleless(r)) return null;
   // Oct 23, 2026: a ride that hasn't started yet (`first_ride`, the host's first date) promises nothing before it —
   // The Fruit Loop rides first Fridays from Dec 4, 2026, so it must never show Nov 6.
   if (r.first_ride && /^\d{4}-\d{2}-\d{2}$/.test(r.first_ride)) {
@@ -94,7 +97,7 @@ function nextOccurrence(r, from = new Date()) {
 // `dates`: the host's posted dates ([{ date, start_hhmm|null }]). Only the ones still ahead ever render —
 // a date with a time is ahead until it starts, a date with no time until that day ends. Past dates never show.
 function upcomingDates(r, from = new Date()) {
-  if (!r.tz || !Array.isArray(r.dates)) return [];
+  if (!r.tz || !Array.isArray(r.dates) || undated(r)) return [];
   return r.dates.filter((e) => e && DATE_RE.test(e.date)).map((e) => {
     const [y, mo, d] = e.date.split("-").map(Number);
     const t = typeof e.start_hhmm === "string" && /^\d{2}:\d{2}$/.test(e.start_hhmm) ? e.start_hhmm : null;
@@ -104,4 +107,4 @@ function upcomingDates(r, from = new Date()) {
 }
 
 module.exports = { DAY_IDX, DATE_RE, zoned, partsIn, inSeason, nthWeekdayOfMonth, weekIndex, biweeklyPhase, ymdOf, localYmd,
-  onBreak, ruleless, nextOccurrence, upcomingDates };
+  onBreak, undated, ruleless, nextOccurrence, upcomingDates };
