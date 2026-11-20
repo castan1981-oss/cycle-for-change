@@ -30,6 +30,33 @@ function urlsOf(r) {
     ...(Array.isArray(r.sources) ? r.sources.map((s) => (s && s.url) || s) : [])].filter((u) => typeof u === "string" && u);
 }
 
+// A raw calendar feed is for a calendar app, never a button on a page (Nov 19, 2026).
+const isFeed = (u) => /\.ics(\?|$)|calendar\.google\.com\/calendar\/(ical|embed)|[?&]ical=1\b|\/ical\/?(\?|$)|^webcal:/i.test(String(u || ""));
+
+/*
+  Shared sites (Nov 19, 2026, the audit after msp.bike). A site that carries rides for three or more different hosts
+  is somebody's calendar, club network or roundup, and the ride page must not call it "the host's website": the
+  button and the "check before you go" link carry the site's own name instead. That is true whoever runs the site,
+  so it needs no list kept by hand. Places everyone posts (Strava, Meetup, Instagram…) are not sites in this sense.
+  Which of these are community calendars like msp.bike, owed a credit line and no calendar copy, is a person's call:
+  they go in data/ride-calendars.json one at a time. `node tools/audit-ride-sources.js` lists the candidates.
+*/
+const PLATFORM = /(^|\.)(strava\.com|meetup\.com|facebook\.com|fb\.me|instagram\.com|ridewithgps\.com|eventbrite\.[a-z.]+|google\.com|goo\.gl|linktr\.ee|linkin\.bio|x\.com|twitter\.com|youtube\.com|komoot\.[a-z]+|discord\.gg|discord\.com|clubexpress\.com|wildapricot\.org|bikereg\.com|runsignup\.com|tiktok\.com|threads\.net|apple\.com|whatsapp\.com|t\.me|criticalmass\.in|letsride\.co\.uk|britishcycling\.org\.uk|nextdoor\.com|wikipedia\.org|reddit\.com|squarespace\.com|githubusercontent\.com|wixsite\.com|wordpress\.com|blogspot\.com|substack\.com)$/i;
+const SHARED_MIN = 3;
+const hostKey = (r) => String((r.host && r.host.name) || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+function sharedSites(rides) {
+  const by = new Map();
+  for (const r of rides) {
+    if (r.status === "ended") continue;
+    for (const d of new Set(urlsOf(r).filter((u) => !isFeed(u)).map(hostOf).filter(Boolean))) {
+      if (PLATFORM.test(d)) continue;
+      if (!by.has(d)) by.set(d, { domain: d, rides: [], hosts: new Set() });
+      const x = by.get(d); x.rides.push(r.slug); if (hostKey(r)) x.hosts.add(hostKey(r));
+    }
+  }
+  return new Map([...by].filter(([, x]) => x.hosts.size >= SHARED_MIN).map(([d, x]) => [d, { domain: d, rides: x.rides, hosts: x.hosts.size }]));
+}
+
 function make(config) {
   const cals = (config && config.calendars) || {};
   const rows = (config && config.rides) || {};
@@ -92,4 +119,4 @@ function make(config) {
   return { of, links, sources, check, calendars: cals, rides: rows };
 }
 
-module.exports = { make, hostOf };
+module.exports = { make, hostOf, isFeed, sharedSites, PLATFORM, SHARED_MIN };

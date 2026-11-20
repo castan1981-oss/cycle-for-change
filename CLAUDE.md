@@ -872,6 +872,16 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
 - A red flag (`data/rides-health.json`) or a rider's gone/changed report shows a warning for 14
   days, then hides the ride until a person re-checks it. Ended rides keep a page for a year. .ics
   files stop at the hide date.
+- **A date we can't stand behind comes down** (Nov 19, 2026; Robert, after msp.bike: "fix anything like this
+  anywhere"). `assess()` sets `undated` on a listed, active ride when a red flag or rider report is open (`flagged`),
+  the watcher saw the host's page date it in the past (`no-upcoming-date`), the calendar that used to list it hasn't
+  for 14 days and nobody has checked at the source since (`feed-stopped`), or our own schedule text names an end date,
+  with its year, that has passed and nobody has checked since (`ran-out`, `seriesEnd()`). An undated ride stays
+  listed and keeps its schedule line, but has no "Next ride", no Event markup, no `ride.ics`, no row on `/week` (it
+  folds under "on the host's own calendar") or `/tonight/`, and its checked block says why. It goes up the re-check
+  queue (`QUEUE.undated`). Only a re-check through `rides-apply.js` clears it. The Oct 18 rule still stands for a
+  page whose wording moved or lost a time: those keep the date with a nudge. 92 rides lost a date the day this
+  shipped, 66 of them promising a ride within a month. Tests: `tools/test/undated.test.js`.
 - **`verified_on` is the clock. Never stamp it on a ride nobody checked.**
 - Seasonal-break rides must not show a "Next ride" or `EventScheduled`.
 
@@ -910,6 +920,16 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
   the schedule text and left them `active`; the page then promised a "Next ride" in November. A re-check of a series
   whose last posted date has passed is `seasonal-break` with the plain reason, until the next dates are posted.
 - `/methodology/` says this in "Rides from a community calendar"; keep the two in step.
+- **Shared sites** (Nov 19, 2026): a site that carries rides for three or more different hosts
+  (`RC.sharedSites()`, worked out from the data on every build; the big platforms excepted) is never "the host's
+  website" on a ride page. Its button, the first-time fold and "Check … before you go" carry the site's own name
+  (`hbl.org ↗`). 197 pages. **A raw calendar feed is never a button or the check link** (`RC.isFeed()`).
+- **The audit**: `node tools/audit-ride-sources.js` reads the data and the watcher's file (it fetches nothing) and lists
+  shared sites not yet in `data/ride-calendars.json`, raw-feed links, undated rides, run-out series and the re-check
+  backlog. The Nov 19 run is `research/rides/audit/2026-11-19-sources.md` (+ `.json`). 69 shared sites are waiting
+  for a person's call on which are community calendars like msp.bike (credit line, no calendar copy): add those to
+  `data/ride-calendars.json` one at a time, each event page opened that day. Not every shared site is one (NEMBA's
+  chapters and Rapha's clubhouses are the host's own).
 
 ### Hubs and redirects
 - Hub names follow the data. The ten biggest cities keep their hub name against a busy suburb; a
@@ -1455,3 +1475,8 @@ two exits; the shapes are on the plan canvas.
   by name with a credit line, get no `.ics` or Google Calendar copy from us ("Add to calendar on msp.bike"), and were
   re-checked at the source that day: 4 still running, 13 on a seasonal break (four of them had been
   promising a November date for a series that had ended). `data/ride-calendars.json`, `/methodology/`, `/ride/` v2.
+- 2026-11-19 — The audit after msp.bike (`tools/audit-ride-sources.js`): a date our own upkeep data doubts comes down
+  (`undated` in rides-freshness: 92 rides, 66 promising a ride within a month), a site that carries three or more
+  hosts' rides is never called the host's website (197 pages), a raw calendar feed is never a button, and undated
+  rides go to the top of Monday's re-check. 69 shared sites and the re-check backlog are written up in
+  `research/rides/audit/2026-11-19-sources.md`.

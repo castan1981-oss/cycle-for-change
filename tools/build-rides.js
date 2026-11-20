@@ -184,13 +184,13 @@ function fmtTime(hhmm) {
 // tools/lib/schedule.js, moved unchanged, so /rides/az/phoenix/this-week/ (tools/lib/week.js) asks the same code.
 // The build's clock stays the default here: NOW (or --today).
 const SCH = require("./lib/schedule.js");
-const { zoned, partsIn, inSeason, biweeklyPhase, ymdOf, localYmd, onBreak, ruleless } = SCH;
+const { zoned, partsIn, inSeason, biweeklyPhase, ymdOf, localYmd, onBreak, undated, ruleless } = SCH;
 const nextOccurrence = (r, from = NOW) => SCH.nextOccurrence(r, from);
 const upcomingDates = (r, from = NOW) => SCH.upcomingDates(r, from);
 const MONTH_LONG = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 // The next ride the build may promise: by the ride's rule, else the host's next posted date. Never on a break.
 function nextOf(r) {
-  if (onBreak(r)) return null;
+  if (onBreak(r) || undated(r)) return null;
   const n = nextOccurrence(r);
   if (n) return { at: n, allDay: false, kind: "rule" };
   const d = upcomingDates(r)[0];
@@ -852,7 +852,7 @@ function liveJson(rides) {
   // a monthly ride with no week rule carries the host's dates still ahead (`dates`) and `next` (ISO, or null).
   return rides.map((r) => ({ ...Object.fromEntries(keep.map((k) => [k, r[k] ?? null])),
     status: r.status || "active",
-    ...(onBreak(r) ? { start_hhmm: null, start_times: null } : {}),
+    ...(onBreak(r) || undated(r) ? { start_hhmm: null, start_times: null } : {}),   // undated (Nov 19, 2026): /tonight/ and /ride/ promise nothing either
     dates: onBreak(r) ? [] : upcomingDates(r).map((d) => ({ date: d.ymd, start_hhmm: d.hhmm })),
     next: (() => { const n = nextOf(r); return n ? (n.allDay ? n.ymd : isoWithOffset(n.at, r.tz)) : null; })(),
     place: placeText(r), checked: r._f ? r._f.label_short : null,
@@ -2204,7 +2204,7 @@ function phoenixWeekPage(rides) {
   const onPage = [...new Set(shown.map((e) => e.ride))];
   const onPageSet = new Set(onPage);
   // rides with no time the schedule can work out (irregular, posted date by date, no start): the host's own calendar
-  const loose = area.filter((r) => !onBreak(r) && !WEEK.computable(r) && !onPageSet.has(r)).sort((a, b) => a.name.localeCompare(b.name));
+  const loose = area.filter((r) => !onBreak(r) && (!WEEK.computable(r) || undated(r)) && !onPageSet.has(r)).sort((a, b) => a.name.localeCompare(b.name));
   const first = week[0].ymd, last = week[week.length - 1].ymd;
   const range = dayRange(first, last);
   const canonical = `${SITE}${WEEK_PATH}`;
@@ -2322,6 +2322,10 @@ const PAUSE_SVG = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"
 const NOTES = readJson(NOTES_FILE, {});
 // data/ride-calendars.json: the community calendars that carry rides we list, and each ride's own page on one
 const CALS = RC.make(readJson(CALS_FILE, {}));
+// Nov 19, 2026: sites that carry rides for three or more hosts (set in main()). A ride page never calls one "the host's
+// website": the link carries the site's name. And a raw calendar feed is never a button.
+let SHARED = new Map();
+const sharedName = (u) => { const d = RC.hostOf(u); return d && SHARED.has(d) ? d : null; };
 // Oct 23, 2026: data/ride-guides.json — { slug: { href, text } }: a guide of ours about the ride's host, linked under
 // "Where to find them" (The Heavy Pedal's two rides → /guides/heavy-pedal/). The build fails on a guide that isn't a page.
 const GUIDES_BY = (() => {
@@ -2765,10 +2769,12 @@ function ridePage(r, all, hubFor, hubs) {
   // Nov 19, 2026: a ride a community calendar carries (msp.bike) links its own page there, by name. The calendar is
   // never "the host's website", and its front page or raw feed is never the link when the ride has a page of its own.
   const cal = CALS.of(r);
-  const L = CALS.links(r);
+  const L0 = CALS.links(r);
+  const L = { ...L0, website: L0.website && RC.isFeed(L0.website) ? null : L0.website, other: (L0.other || []).filter((u) => !RC.isFeed(u)) };
   const watchUrl = cal ? cal.url : (r.refresh && r.refresh.watch_url) || null;
-  const primary = L.website ? ["Host's website", L.website] : L.instagram ? [`${handle(L.instagram) || "Instagram"} on Instagram`, L.instagram] : L.facebook ? ["Host on Facebook", L.facebook] : L.strava ? ["Strava club", L.strava] : L.meetup ? ["Meetup group", L.meetup] : watchUrl ? ["Where it's posted", watchUrl] : r.sources[0] ? ["Where it's posted", r.sources[0]] : null;
-  const hostLabel = L.instagram ? `<a href="${attr(L.instagram)}" rel="noopener nofollow">${esc(handle(L.instagram) || "their Instagram")}</a>` : L.facebook ? `<a href="${attr(L.facebook)}" rel="noopener nofollow">their Facebook page</a>` : L.website ? `<a href="${attr(L.website)}" rel="noopener nofollow">the host's website</a>` : L.strava ? `<a href="${attr(L.strava)}" rel="noopener nofollow">the Strava club</a>` : null;
+  const siteName = L.website ? sharedName(L.website) : null;     // a shared site: its own name, never "the host's"
+  const primary = L.website ? [siteName || "Host's website", L.website] : L.instagram ? [`${handle(L.instagram) || "Instagram"} on Instagram`, L.instagram] : L.facebook ? ["Host on Facebook", L.facebook] : L.strava ? ["Strava club", L.strava] : L.meetup ? ["Meetup group", L.meetup] : watchUrl ? ["Where it's posted", watchUrl] : r.sources[0] ? ["Where it's posted", r.sources[0]] : null;
+  const hostLabel = L.instagram ? `<a href="${attr(L.instagram)}" rel="noopener nofollow">${esc(handle(L.instagram) || "their Instagram")}</a>` : L.facebook ? `<a href="${attr(L.facebook)}" rel="noopener nofollow">their Facebook page</a>` : L.website ? `<a href="${attr(L.website)}" rel="noopener nofollow">${siteName ? esc(siteName) : "the host's website"}</a>` : L.strava ? `<a href="${attr(L.strava)}" rel="noopener nofollow">the Strava club</a>` : null;
 
   // schedule, next occurrence, calendar
   const dp = dayPhrase(r); const tm = fmtTime(r.start_hhmm);
@@ -2839,12 +2845,12 @@ function ridePage(r, all, hubFor, hubs) {
 
   const linkBtns = [
     cal && [cal.name, cal.url],
-    L.website && ["Website", L.website],
+    L.website && [siteName || "Website", L.website],
     L.instagram && [handle(L.instagram) || "Instagram", L.instagram],
     L.facebook && ["Facebook", L.facebook],
     L.strava && ["Join the Strava club", L.strava],
     L.meetup && ["Meetup group", L.meetup],
-    ...(L.other || []).map((u) => ["More", u]),
+    ...(L.other || []).map((u) => [sharedName(u) || "More", u]),
     watchUrl && !cal && ![L.website, L.instagram, L.facebook, L.strava, L.meetup, ...(L.other || [])].includes(watchUrl) && ["Where it's posted", watchUrl],
   ].filter(Boolean).map(([t, u]) => `<a class="btn ${/strava/i.test(t) ? "btn--ink" : "btn--ghost"}" href="${attr(u)}" rel="noopener nofollow">${esc(t)} ↗</a>`).join("\n        ");
 
@@ -2930,7 +2936,7 @@ function ridePage(r, all, hubFor, hubs) {
     title: `Map of ${isUS(r) ? stateName(r.state) : countryName(r.country)} with this ride's start`,
     caption: `<span>${mark("start", "gr-map-cap-mark")}${esc(placeText(r))}</span>${hubR ? `<a href="${hubR.path}">All rides near ${esc(hubR.city)} &rarr;</a>` : ""}`, cls: "gr-map--ride" });
 
-  const watch = cal ? cal.url : (r.refresh && r.refresh.watch_url) || r.sources[0] || L.website || null;
+  const watch = cal ? cal.url : [r.refresh && r.refresh.watch_url, ...r.sources.map((x) => (x && x.url) || x), L.website].find((u) => u && !RC.isFeed(u)) || null;
   const bannerHead = { ended: "This ride has ended", paused: "Paused", stale: "Not confirmed lately", flagged: "We're re-checking this ride" }[f.state] || "Check first";
   const banner = !listed && f.banner ? `
     <div class="gr-banner" role="note">
@@ -2945,7 +2951,7 @@ function ridePage(r, all, hubFor, hubs) {
     <aside class="gr-checked${f.nudge ? " gr-checked--look" : ""}" aria-label="When this ride was last checked">
       ${mark(f.nudge ? "flag" : "checked", "gr-checked-mark")}
       <div>
-        <p class="gr-checked-line"><strong>${esc(f.label)}.</strong> ${f.checked_by === "feed" ? (cal ? `${esc(cal.name)} lists the next ride.` : "The host's own calendar lists the next ride.") : r.confidence === "high" ? "Confirmed on the host's own page." : (r.confidence === "low" ? "Found on one source, listed at the foot of this page." : "Confirmed against the sources at the foot of this page.")}${watch ? ` <a class="link" href="${attr(watch)}" rel="noopener nofollow">${cal ? `Check ${esc(cal.name)} before you go` : "Check the host's page before you go"}</a>` : ""}</p>
+        <p class="gr-checked-line"><strong>${esc(f.label)}.</strong> ${f.checked_by === "feed" ? (cal ? `${esc(cal.name)} lists the next ride.` : "The host's own calendar lists the next ride.") : r.confidence === "high" ? "Confirmed on the host's own page." : (r.confidence === "low" ? "Found on one source, listed at the foot of this page." : "Confirmed against the sources at the foot of this page.")}${watch ? ` <a class="link" href="${attr(watch)}" rel="noopener nofollow">${cal ? `Check ${esc(cal.name)} before you go` : sharedName(watch) ? `Check ${esc(sharedName(watch))} before you go` : "Check the host's page before you go"}</a>` : ""}</p>
         ${f.nudge ? `<p class="gr-checked-nudge">${esc(f.nudge)}</p>` : ""}
         ${r.evidence || (r.last_seen && r.last_seen !== f.checked_on) ? `<details class="gr-checked-more"><summary>How we know</summary>${r.evidence ? `<p class="gr-checked-ev">${esc(r.evidence)}</p>` : ""}${r.last_seen && r.last_seen !== f.checked_on ? `<p>Last seen happening ${esc(fmtDate(r.last_seen))}.</p>` : ""}</details>` : ""}
       </div>
@@ -3192,7 +3198,7 @@ function eveningsBlock(rides, hubs) {
   const home = hubs.find((h) => h.state === "AZ" && h.city === "Phoenix");
   const seenSt = new Set(home ? [home.state] : []);
   const big = [...(home ? [home] : []), ...hubs.filter((h) => h !== home).sort((a, b) => b.rides.length - a.rides.length || a.city.localeCompare(b.city)).filter((h) => !seenSt.has(h.state) && seenSt.add(h.state))].slice(0, 6);
-  const isEvening = (r) => r.start_hhmm && r.start_hhmm >= "17:00" && r.start_hhmm <= "22:00" && r.days && r.days.length && !onBreak(r) && r._f.listed;
+  const isEvening = (r) => r.start_hhmm && r.start_hhmm >= "17:00" && r.start_hhmm <= "22:00" && r.days && r.days.length && !onBreak(r) && !undated(r) && r._f.listed;
   const sections = [];
   let total = 0;
   for (const h of big) {
@@ -3226,6 +3232,7 @@ function writeEvenings(rides, hubs) {
 
 function main() {
   const all = load();
+  SHARED = RC.sharedSites(all);
   const calErrors = CALS.check(all);
   if (calErrors.length) throw new Error(`data/ride-calendars.json:\n  ${calErrors.join("\n  ")}`);
   const health = loadHealth();
