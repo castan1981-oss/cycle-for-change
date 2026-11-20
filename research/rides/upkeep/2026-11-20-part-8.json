@@ -1,0 +1,93 @@
+[
+  {
+    "slug": "arlington-va-nova-cbg-tuesday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "NoVA CBG's Meetup feed shows no Tuesday Night Ride events for November 2026 or later; 17 upcoming events are all weekend and holiday rides. The schedule-text-changed flag reflects a member-count change only, not a schedule change. The ride likely ends each fall when the evenings shorten, but the group's page does not say when it resumes."
+  },
+  {
+    "slug": "bowie-md-jafe-cycling-fridays-at-jafes",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "Jafe Cycling's Meetup page (meetup.com/jafe-cycling-bike-shop) lists 61 upcoming events, all Thursday morning (8:30 am) or Sunday morning (9:00 am) rides; no Friday rides appear in the feed or on the page. The 6:00 pm Friday ride has not been listed since at least Nov 2, 2026. Contact the shop at 10250 Martin Luther King Jr Hwy, Bowie, MD to ask if Fridays at Jafe's is still running."
+  },
+  {
+    "slug": "brooklyn-ny-times-up-prospect-park-moon-and-magic-hour-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "Times Up calendar (times-up.org/calendar) shows no Moon & Magic Hour Ride for November or December 2026; the Oct 31 event page is the most recent. The feed has 27 events, none matching. Time's Up posts one ride at a time; no next date has been created. Check times-up.org/calendar or @timesupnyc on Instagram for the next date."
+  },
+  {
+    "slug": "cincinnati-oh-ubbc-tuesday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "The 2026 series on the Queen City Bike calendar (events.queencity.bike) ran through Oct 27, 2026; no new UBBC Tuesday Night Ride dates appear in November or December. The Google Calendar feed has 45 events, none for this ride going forward. Check events.queencity.bike in spring; the ride has historically run May through October."
+  },
+  {
+    "slug": "cottonwood-az-vvcc-friday-social-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "VVCC's Meetup event page (317221207) states 'Friday, Nov 20 \u00b7 9:00 AM to 11:00 AM MST \u00b7 Every week on Friday until January 1, 2027' from The Neighborhood Coffee Shop; previously 8:00 am (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.meetup.com/vvcc-road-bike-rides/events/317221207/"
+    ],
+    "changes": {
+      "schedule": "Every Friday, 9:00 am, from The Neighborhood Coffee Shop in Cottonwood. Two rides leave together: a regular ride of about 20 miles and 2 hours at 10 to 14 mph, and a casual ride of 8 to 10 miles at 8 to 10 mph for people new to group rides. The Meetup series runs to Jan 1, 2027.",
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00"
+    }
+  },
+  {
+    "slug": "cottonwood-az-vvcc-wednesday-cottonwood-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "VVCC's Meetup event page (317300119) states 'Wednesday, Nov 25 \u00b7 9:00 AM to 12:00 PM MST \u00b7 Every week on Wednesday until December 30, 2026' from The Neighborhood Coffee Shop; previously 8:00 am (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.meetup.com/vvcc-road-bike-rides/events/317300119/"
+    ],
+    "changes": {
+      "schedule": "Every Wednesday, 9:00 am, from The Neighborhood Coffee Shop in Cottonwood. The current Meetup series runs through December 30, 2026.",
+      "time_local": "9:00 am",
+      "start_hhmm": "09:00"
+    }
+  },
+  {
+    "slug": "durango-co-tuesday-night-worlds",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-27",
+    "evidence": "Pedal Durango's events calendar lists no Tuesday Night Worlds after Oct 27, 2026; the schedule runs spring to the fall time change and the fall change was Nov 1, 2026. No 2027 dates posted yet (fetched Nov 20, 2026).",
+    "sources": [
+      "https://pedaldurango.com/events/"
+    ],
+    "status_note": "Pedal Durango listed the last 2026 date as Oct 27; the ride runs spring to the fall time change. Check pedaldurango.com in spring for 2027 dates."
+  },
+  {
+    "slug": "golden-co-rmcc-thursday-night-climbing",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "evidence": "RMCC's Meetup event page (317292675) states 'Tuesday, Nov 24 \u00b7 5:30 PM to 7:30 PM MST \u00b7 Every week on Tuesday until March 22, 2027' from Beverly Heights Park, 2151 Lookout Mountain Rd, Golden, CO; the Thursday Sunset Series ended Oct 29, 2026 (fetched Nov 20, 2026).",
+    "sources": [
+      "https://www.meetup.com/rocky-mountain-cycling-club-rmcc/events/317292675/"
+    ],
+    "changes": {
+      "name": "RMCC Tuesday Night Climbing After Dark!",
+      "schedule": "Every Tuesday, Nov 24, 2026 through March 22, 2027: group up 5:25 pm, roll 5:30 pm, from Beverly Heights Park. The Sunset Series runs Thursdays in spring and summer.",
+      "days": [
+        "tue"
+      ],
+      "season": "Nov\u2013Mar",
+      "season_months": {
+        "start": 11,
+        "end": 3
+      },
+      "refresh": {
+        "watch_url": "https://www.meetup.com/rocky-mountain-cycling-club-rmcc/events/317292675/",
+        "notes": "Tuesday After Dark series runs Nov\u2013Mar; the Thursday Sunset Series runs spring\u2013Oct. The club posts each season's series separately."
+      }
+    }
+  }
+]

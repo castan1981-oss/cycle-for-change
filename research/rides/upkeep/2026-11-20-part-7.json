@@ -1,0 +1,60 @@
+[
+  {
+    "slug": "golden-co-rmcc-saturday-fall-road-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-10-02",
+    "evidence": "RMCC's Meetup ICS feed lists Northside Winter Road Ride (Sat Nov 21, 9:45 AM) and Southeast Winter Ride (Sat Nov 28, 9:45 AM) but no Fall Road Ride; the Meetup page says 'through the winter months we are doing a mix of rides on the north and south side of the metro area on weekends' (fetched Nov 20, 2026).",
+    "sources": ["https://www.meetup.com/rocky-mountain-cycling-club-rmcc/"],
+    "status_note": "The fall series ended when snow and cold arrived; RMCC is now running weekend winter road rides instead. The fall road ride typically resumes in fall."
+  },
+  {
+    "slug": "lexington-ky-bluegrass-cycling-club-horse-park-tuesday",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "BG Cycling Club's future calendar shows no upcoming Horse Park Tuesday instances; the last listed date was Oct 27, 2026. The ride description notes distances depend on available daylight, suggesting it stops in fall. The club announcements forum (bgcycling.net/content.aspx?page_id=2154) or club Facebook page would confirm whether and when it resumes."
+  },
+  {
+    "slug": "lexington-ky-bluegrass-cycling-club-masterson-mondays",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "BG Cycling Club's future calendar shows no upcoming Masterson Mondays instances; the last listed date was Oct 26, 2026. The club announcements forum (bgcycling.net/content.aspx?page_id=2154) or club Facebook page would confirm whether and when it resumes."
+  },
+  {
+    "slug": "midway-ky-bluegrass-cycling-club-midway-wednesday",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "BG Cycling Club's future calendar shows no upcoming Midway Wednesday instances; the last listed date was Oct 28, 2026. The ride description notes distances depend on available daylight. The club announcements forum (bgcycling.net/content.aspx?page_id=2154) or club Facebook page would confirm whether and when it resumes."
+  },
+  {
+    "slug": "oakland-ca-air-cc-wxmns-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "AIR cc's Strava event still shows Apr 9, 2026 and hasn't updated to show a newer occurrence; the group-rides page at aircc.org gives no dates or start location for WXMNS. Check @a.i.r_cc on Instagram or the Strava club at strava.com/clubs/1008989 for current scheduling."
+  },
+  {
+    "slug": "pittsburgh-pa-pittsburgh-critical-mass-second-friday",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "Ike's Basement Bike Shop's event page lists Critical Mass dates only through May 8, 2026 with no fall or winter dates added. No other source confirmed a November 2026 date. Check @ikesbasementbikeshop on Instagram or search for a Pittsburgh Critical Mass social media account."
+  },
+  {
+    "slug": "san-francisco-ca-hummingbird-fuels-all-watts-welcome-intervals",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-20",
+    "note": "Hummingbird Fuels' Strava event shows Oct 6, 2026 and hasn't updated to a newer Tuesday; no other source listed upcoming dates. Check @hummingbird.fuels on Instagram or the Strava club at strava.com/clubs/1384021 for current scheduling."
+  },
+  {
+    "slug": "bowie-md-jafe-cycling-fastchix-thursday-morning-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-20",
+    "last_seen": "2026-11-19",
+    "evidence": "Jafe Cycling's Meetup shows the Fastchix Thursday Morning Ride for Thu Nov 26, 2026 at 8:30 AM EST with '** New Start times** Meetup at 8a Rolling at 8:30a'; the Dec 3 and past Nov 19 listings show the same new time (fetched Nov 20, 2026).",
+    "sources": ["https://www.meetup.com/jafe-cycling-bike-shop/"],
+    "changes": {
+      "schedule": "Every Thursday, meet 8:00 am, roll 8:30 am",
+      "time_local": "8:30 am",
+      "start_hhmm": "08:30"
+    }
+  }
+]
