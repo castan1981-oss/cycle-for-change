@@ -38,6 +38,8 @@ ${items.map(([k, h, t]) => `      <div>${BUILT_MARK(k)}<span class="k">${esc(k)}
    opts.name    prefill for the "which one" field (a ride or event page)
    opts.kind    default radio: "new" | "changed" | "gone"
    opts.compact true on a single ride/event page: tucked into a <details>
+   opts.takeDown true on a ride page (Nov 23, 2026): a last choice, "Take it off the site" (kind "remove"), for the
+                people who run the ride and would rather not be listed. "You run this ride?" links to it (#takedown).
    opts.stillOn true on a ride page that's on the lists: a fourth choice, "Still on — I rode it"
                 (kind "still-on") — a rider's word that the ride is still happening (Sept 30, 2026)
 
@@ -60,7 +62,7 @@ const DROP_CHIPS = [["no-drop", "Waits for you"], ["groups", "Pace groups"], ["d
 const FOR_CHIPS = [["beginner", "Beginners"], ["lgbtq", "LGBTQ+"], ["wtf", "Women, trans, femme, nonbinary"], ["ebike", "E-bikes welcome"]];
 const chips = (type, name, list, cls = "") => list.map(([v, t]) =>
   `<label${cls ? ` class="${cls}"` : ""}><input type="${type}" name="${name}" value="${v}"> <span>${esc(t)}</span></label>`).join("");
-function REPORT({ thing = "ride", name = "", kind = "new", compact = false, heading, lede, id = "add", stillOn = false } = {}) {
+function REPORT({ thing = "ride", name = "", kind = "new", compact = false, heading, lede, id = "add", stillOn = false, takeDown = false } = {}) {
   // One report form per page (its element id is `id`), so its field ids hang off that, not a build-order
   // counter: a ride added or hidden no longer renumbers every page after it (Oct 24, 2026).
   const n = id;
@@ -68,7 +70,7 @@ function REPORT({ thing = "ride", name = "", kind = "new", compact = false, head
   const ride = thing === "ride";
   const h = heading || (ride ? "Run a ride? Add it, or fix what we got wrong." : thing === "event" ? "Missing an event, or a date changed?" : "Closed, moved, or missing?");
   const l = lede || `Tell us what's new or what changed. We check it against the ${thing}'s own page before it goes up. Listing is free and always will be.`;
-  const kinds = [["new", `New ${thing}`], ["changed", "Something changed"], ["gone", "It's gone"], ...(stillOn ? [["still-on", "Still on — I rode it"]] : [])];
+  const kinds = [["new", `New ${thing}`], ["changed", "Something changed"], ["gone", "It's gone"], ...(stillOn ? [["still-on", "Still on — I rode it"]] : []), ...(takeDown ? [["remove", "Take it off the site"]] : [])];
   // data-show only on a ride form: report.js reveals the group for that kind. Elsewhere it never shows.
   const show = (k) => ` data-show="${ride ? k : "never"}"`;
   const form = `<form class="dir-report-form" name="ride-report" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-report data-thing="${esc(thing)}">

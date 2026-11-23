@@ -2757,6 +2757,35 @@ function routeSend(r, rt) {
       </details>`;
 }
 
+// Nov 23, 2026 (Robert: people don't fully understand the site; "really cool, very interactive and easy to use"): the
+// ride page steps down too. Three doors under the buttons, each to a part of this page: the route, who rode it, and
+// the people who run it. Design: the "Ride page, your stats, training" canvas (claude.ai project doc, Nov 23).
+function rideDoors(r, { rt, notes, revN }) {
+  const b = rt && rt.built;
+  const rode = [notes ? `${notes} ${notes === 1 ? "write-up" : "write-ups"}` : null, revN ? `${revN} ${revN === 1 ? "review" : "reviews"}` : null].filter(Boolean).join(", ");
+  return `
+    <nav class="gr-tiles gr-ride-doors" aria-label="On this page">
+      ${kindDoor({ href: "#route", name: "The route", sub: b ? "The map, the climbs, the file for your bike computer" : "Where the host posts it", markId: "distance" })}
+      ${kindDoor({ href: notes ? "#robert" : "#reviews", name: "Who rode it", sub: rode || "Rode it? Say how it went", markId: "riders" })}
+      ${kindDoor({ href: "#host", name: "You run this ride?", sub: "Fix it, send the route, or take it down", markId: "organizer" })}
+    </nav>`;
+}
+// "You run this ride?": the three things a host can do, each a door to the form that does it. Robert, Nov 23, 2026:
+// if a ride isn't right or you don't want it listed, tell us what you want changed or removed and we'll do that; if
+// you're the admin on the ride, there's a place to fill in the proper information.
+function hostBlock(r) {
+  return `
+    <section class="gr-host" id="host" aria-labelledby="gr-host-h">
+      <h2 id="gr-host-h">You run this ride?</h2>
+      <p>Then this page is yours to fix. Robert reads every one and checks it against the ride’s own page before anything changes.</p>
+      <div class="gr-tiles gr-host-doors">
+        ${kindDoor({ href: "#fix", name: "Fix something", sub: "The day, the time, the start, the pace", markId: "checked" })}
+        ${kindDoor({ href: "#send-route", name: "Send the route", sub: "The file, so nobody ends up at the wrong corner", markId: "distance" })}
+        ${kindDoor({ href: "#takedown", name: "Take it down", sub: "You’d rather it wasn’t listed. That’s fine.", markId: "flag" })}
+      </div>
+    </section>`;
+}
+
 function ridePage(r, all, hubFor, hubs) {
   const url = `${SITE}/rides/${r.slug}/`;
   const f = r._f || F.assess(r, null, TODAY);     // freshness: what this page may promise
@@ -2998,6 +3027,7 @@ ${banner}
       <span class="gr-toast" id="gr-toast" role="status" aria-live="polite"></span>
     </div>
     ${film ? `</div></div>` : ""}
+${listed ? rideDoors(r, { rt, notes: notesFor(r.slug).length, revN: revSum.n }) : ""}
 ${rt ? routeBlock(r, rt, listed) : ""}
 ${notesBlock(r, listed)}
 ${revs.length || listed ? `
@@ -3033,7 +3063,8 @@ ${(() => { if (!isUS(r)) return ""; const town = TOWNS.find({ city: r.city, stat
       ${r.verified_on ? `Checked ${esc(fmtDate(r.verified_on))} against` : "Found on"} ${r.sources.length ? CALS.sources(r).map((s) => `<a href="${attr(s.url)}" rel="noopener nofollow">${esc(s.text)}</a>`).join(", ") : "the links above"}.
       Schedules change. Confirm with the host before you go.
     </p>
-${BLOCKS.REPORT({ thing: "ride", name: r.name, kind: "changed", compact: true, id: "fix", stillOn: listed })}
+${listed ? hostBlock(r) : ""}
+${BLOCKS.REPORT({ thing: "ride", name: r.name, kind: "changed", compact: true, id: "fix", stillOn: listed, takeDown: true })}
   </article>
 
   <nav class="related gr-related" id="nearby" aria-label="Nearby group rides">

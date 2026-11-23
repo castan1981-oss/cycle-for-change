@@ -156,17 +156,19 @@ async function run(o = {}) {
     const host = isHost(d);
     const times = timeChange(d);
     const hit = kind === "new" ? null : matchRide({ page: d.page, ride: d.ride }, rides);
-    if (hit && ["gone", "changed", "still-on"].includes(kind)) {
+    // Nov 23, 2026: "remove" = take this ride off the site ("You run this ride?" on the ride page). It is filed like a
+    // host's update whoever sent it: first in the queue for a person, never a public warning, never the hide clock.
+    if (hit && ["gone", "changed", "still-on", "remove"].includes(kind)) {
       if (seenReport.has(id)) { out.already++; continue; }
       const h = health.rides[hit.slug] || (health.rides[hit.slug] = {});
       // a host's update waits for a person to reply and confirm: no warning, no hide clock (rides-freshness.js
       // only warns on "gone" / "changed")
-      const rep = host ? { id, date, type: "host-update", said: kind, ...times, ...(note ? { note } : {}), netlify_id: id }
+      const rep = host || kind === "remove" ? { id, date, type: "host-update", said: kind === "remove" && !host ? "remove (not marked as the host)" : kind, ...times, ...(note ? { note } : {}), netlify_id: id }
         : { id, date, type: kind, ...times, ...(note ? { note } : {}) };
       h.reports = [...(h.reports || []), rep].sort((a, b) => a.date.localeCompare(b.date)).slice(-KEEP_REPORTS);
       health.rides[hit.slug] = order(h);
       seenReport.add(id);
-      if (host) out.host_updates++; else if (kind === "still-on") out.still_on++; else out.reports++;
+      if (host || kind === "remove") out.host_updates++; else if (kind === "still-on") out.still_on++; else out.reports++;
       continue;
     }
     if (seenSuggestion.has(id)) { out.already++; continue; }

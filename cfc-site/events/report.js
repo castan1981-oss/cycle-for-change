@@ -44,9 +44,11 @@
     // site links to #fix, so a rider never arrives with the box ticked.
     var fold = form.closest("details#fix");
     function openForHost() {
-      if (!fold || location.hash !== "#fix") return;
+      // Nov 23, 2026: #takedown is the same door for "Take it off the site" ("You run this ride?" on the ride page).
+      var down = location.hash === "#takedown";
+      if (!fold || (location.hash !== "#fix" && !down)) return;
       fold.open = true;
-      var changed = form.querySelector("[name=kind][value=changed]");
+      var changed = form.querySelector(down ? "[name=kind][value=remove]" : "[name=kind][value=changed]");
       if (changed) changed.checked = true;
       if (role) role.checked = true;
       sync();
@@ -87,6 +89,7 @@
           if (ok) {
             var first = "Got it. A person checks it, usually within a week.";
             ok.textContent = k === "still-on" ? "Thanks for telling us it's still on."
+              : k === "remove" ? "Got it. A person reads it and takes the ride off the site." + (gaveEmail ? " We'll tell you when it's down." : "")
               : k === "new" ? first + (gaveEmail ? " We'll tell you when it's live." : " Leave your email and we'll tell you when it's live.")
               : host && gaveEmail ? first + " We'll reply to confirm it with you before the page changes."
               : first + (gaveEmail ? " We'll tell you when the page is fixed." : "");
