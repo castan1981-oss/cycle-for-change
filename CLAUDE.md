@@ -1544,3 +1544,10 @@ two exits; the shapes are on the plan canvas.
 - 2026-11-23 — Ride pages get doors (The route, Who rode it, You run this ride?) and the host's section: fix something, send the route, or take it down ("Take it off the site", kind `remove`, filed like a host update).
 - 2026-11-23 — `/training/`: a private page with its own sign-in for Robert and his coach (two invite links, no sign-up): the day's workout and the week from his TrainingPeaks calendar link, rides dropped from the Garmin file, the coach's note, the next ride on the calendar; `/api/training`, `/privacy/#training`.
 - 2026-11-23 — The training team: eleven specialist agents, the bar (`research/training/TRAINING.md`) and the `/training` command, for the product at `/training/`.
+- 2026-11-23 — The shared sites were opened (Robert: "go"). Eleven more community calendars, 52 rides, each site and
+  event page opened that day: nolasocialride.org, bikedurham.org, bikethewoodlands.org, milwaukeebikerides.com,
+  reconnectrochester.org, bikeeastbay.org, thetrellisphilly.com, orca.bike, bikeiowacity.com, renowheelmen.org,
+  fallsareabicyclists.org. The line: a calendar or directory whose job is listing the place's rides gets rows; a
+  roundup on a club's, shop's, city's or paper's site does not. Every call is in
+  `research/rides/audit/2026-11-23-shared-sites.md`. The 36 rides whose date had come down were re-checked
+  (`research/rides/upkeep/2026-11-23-undated.json`): 26 on a seasonal break, 6 still unconfirmed.
