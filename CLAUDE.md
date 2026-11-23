@@ -996,8 +996,19 @@ still in Netlify (Forms) if he ever wants them; don't email them without his say
 - Organizer flow: "I run this ride" with an email is a host update — no public warning, no hide
   clock, top of the queue for a person to confirm by reply. The form never stamps `verified_on`.
   A link ending in `#fix` (the host emails, Oct 24, 2026) opens the form with "Something changed" and "I run
-  this ride" already picked (`cfc-site/events/report.js`); nothing on the site links to `#fix`, so riders never
-  arrive with it ticked. Keep it that way.
+  this ride" already picked (`cfc-site/events/report.js`). The only links to it on the site are the host's own doors
+  under "You run this ride?" (below), so a rider never arrives with it ticked by accident. Keep it that way.
+- **The ride page's doors and "You run this ride?"** (Nov 23, 2026; Robert: people don't fully understand the site, and
+  a host who doesn't like a listing or sees it's wrong should be able to change it or have it removed). Every listed
+  ride page has three doors under its buttons (`rideDoors()` in build-rides.js: The route → `#route`, Who rode it →
+  `#robert` or `#reviews`, You run this ride? → `#host`) and, above the report form, the host's section (`hostBlock()`,
+  `#host`): Fix something → `#fix`, Send the route → `#send-route`, Take it down → `#takedown`. `#takedown` opens the
+  report form on a new kind, **"Take it off the site" (`remove`)**, with "I run this ride" ticked. `tools/rides-reports.js`
+  files every `remove` like a host update (first in the queue for a person, never a public warning, never the hide
+  clock; one not ticked as the host says so in `said`). A person takes the ride down; nothing comes down by itself.
+  The doors reuse the tile styles (`kindDoor()`), no new CSS. The fuller design (the page folding behind the doors,
+  a rider's own ride file and numbers, training) is the "Ride page, your stats, training" canvas
+  (https://claude.ai/artifact/NzwjCR2mVZiiSmPxvHbC5Y); rider stats and training are §8 territory and not built.
 - Commands: `/rides status`, `/rides check <slug>`, `/rides refresh [N]`, `/rides discover <area>`,
   `/rides add <name or URL>`.
 
@@ -1496,3 +1507,4 @@ two exits; the shapes are on the plan canvas.
   `own_hosts` in `data/ride-calendars.json`. The queue file re-sorted so the rides whose date came down go first, and
   the re-check job run by hand on 125 of them.
 - 2026-11-19 — Instagram is @cyclefor_ (Robert renamed the account; it was @cycl_eforchange): every link and mention on the site, the JSON-LD `sameAs`, llms.txt, the function's default, the kit and Fruit Loop tools, the Fruit Loop's spring poster (`spring-2`, the handle repainted on the same ground); the `/cyclefor/` release is `cyclefor-v2` (the DM handle is in its wording). Posts already on Instagram keep the old handle in their pixels. The Netlify env var `INSTAGRAM_HANDLE` is Robert's to change.
+- 2026-11-23 — Ride pages get doors (The route, Who rode it, You run this ride?) and the host's section: fix something, send the route, or take it down ("Take it off the site", kind `remove`, filed like a host update).

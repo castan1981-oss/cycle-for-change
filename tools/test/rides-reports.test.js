@@ -127,3 +127,20 @@ test("a host's own update (role=host + email): no rider warning, no hide clock, 
     days: ["sun", "wed"], time: "08:00", start: "The shop", drop: "no-drop", for: ["wtf", "beginner"], link: "https://www.instagram.com/rosas_shop/" });
   assert.doesNotMatch(fs.readFileSync(f.healthFile, "utf8") + fs.readFileSync(f.suggestionsFile, "utf8"), /@example\.com/, "never an email address");
 });
+
+// Nov 23, 2026: "Take it off the site" ("You run this ride?" on the ride page) is a note for a person, never a public warning
+test("a take-it-down ask is filed like a host update, whoever sent it", async () => {
+  const f = files();
+  const out = await go(f, mockFetch([
+    sub("s-rm-1", { kind: "remove", role: "host", ride: "Desert Dawn Ride", page: "/rides/phoenix-az-desert-dawn-ride/", email: "lead@saguaro.example", details: "Please take us off." }),
+    sub("s-rm-2", { kind: "remove", ride: "Saturday Club Ride", page: "/rides/barcelona-es-rapha-saturday/" }),
+  ]));
+  assert.strictEqual(out.host_updates, 2);
+  assert.strictEqual(out.reports, 0);
+  const h = JSON.parse(fs.readFileSync(f.healthFile, "utf8")).rides;
+  const a = h["phoenix-az-desert-dawn-ride"].reports.find((r) => r.id === "s-rm-1");
+  const b = h["barcelona-es-rapha-saturday"].reports.find((r) => r.id === "s-rm-2");
+  assert.strictEqual(a.type, "host-update"); assert.strictEqual(a.said, "remove");
+  assert.strictEqual(b.type, "host-update"); assert.match(b.said, /^remove \(not marked/);
+  assert.ok(!JSON.stringify(h).includes("lead@saguaro.example"));
+});
