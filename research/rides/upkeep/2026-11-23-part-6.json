@@ -1,0 +1,53 @@
+[
+  {
+    "slug": "san-francisco-ca-hummingbird-fuels-all-watts-welcome-intervals",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Strava event page (the watch URL) shows Oct 6, 2026 and has not rolled forward to a new date, which raises the event-date-past flag. The Hummingbird Fuels Strava club is active (posts in November 2026, an upcoming club event visible to logged-in members) but the Tuesday 'All Watts Welcome' interval series cannot be confirmed without a login. The brand's own website has no events page and no mention of the weekly ride. Check https://www.strava.com/clubs/1384021 (login required) or search Instagram for @hummingbirdfuels to see if the Tuesday interval ride is still listed."
+  },
+  {
+    "slug": "cincinnati-oh-ubbc-tuesday-night-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-10-27",
+    "evidence": "The Queen City Bike Google Calendar ICS feed has 41 events but no UBBC Tuesday Night Ride after Oct 27, 2026; the events.queencity.bike November calendar shows no UBBC rides (fetched Nov 23, 2026).",
+    "sources": ["https://calendar.google.com/calendar/ical/ec292r3gr6plg3n57dj9ov86g0%40group.calendar.google.com/public/basic.ics", "https://events.queencity.bike/"],
+    "status_note": "The 2026 season ended with the Oct 27 ride; the Queen City Bike calendar shows no UBBC rides in November. The ride historically runs late May to early November. Check events.queencity.bike for a spring 2027 announcement."
+  },
+  {
+    "slug": "allen-tx-dctr-taco-tuesday-social-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Meetup events page shows 0 public upcoming events for the group. The ICS feed contains 2 events but neither is the Taco Tuesday Social Ride from Allen — only White Rock laps on Saturdays are listed. The Tuesday 6:45 pm ride from Velvet Taco cannot be confirmed. The group may have made events members-only or changed its programming. Check https://www.meetup.com/dallas-cycling-trail-riders-and-weekend-pub-crawlers/ (login may be required to see events)."
+  },
+  {
+    "slug": "corpus-christi-tx-cc-led-saturday-light-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The watch URL (thebendmag.com article) returns 403 and the article dates from August 2022 with no 2026 information. No other fetchable source exists. Check Instagram @getccled for current ride announcements."
+  },
+  {
+    "slug": "madison-wi-madison-queer-bike-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The watch URL (ourliveswisconsin.com article) returns 403 bot-wall. A Madison community ride catalog on GitHub (last updated Sept 11, 2026) lists the ride as active, but that is a third-party secondary source, not the host's own page. The ride posts its start time and route on Instagram each month. Check Instagram @madisonqueerbikeride for the next second-Wednesday date and time."
+  },
+  {
+    "slug": "missoula-mt-thursday-night-mountain-bike-group",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The HTTPS watch URL (thursdaynightmtbr.org) fails with a TLS certificate error. The HTTP version (http://thursdaynightmtbr.org/) loads but contains no dated 2026 events — it uses Twitter for weekly ride announcements. Missoula Underground listed TNR rides in May 2026 and noted in a November 2025 post that the group takes a winter break and returns in March. It is likely on its seasonal break now. Check http://thursdaynightmtbr.org/ or the group's Facebook page (facebook.com/group.php?gid=150671295989) in spring, and update the watch URL to the HTTP address."
+  },
+  {
+    "slug": "philadelphia-pa-bcp-sunny-sunday-d-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The watch URL (phillybikeclub.org/bcpdo/ride/calendarweekly) is behind a Cloudflare challenge and returns 403 for automated requests. No 2026 evidence of the Sunny Sunday D Ride was found in a web search. Check https://phillybikeclub.org/bcpdo/ride/calendarweekly directly in a browser."
+  },
+  {
+    "slug": "portland-me-gear-hub-thursday-group-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Portland Gear Hub events page loaded and displayed 'No Upcoming events' — no Thursday group rides are posted for any future date (fetched Nov 23, 2026). The page added a Thanksgiving closure notice (Nov 26–28) but that is unrelated to the missing ride listings. Check https://www.portlandgearhub.org/events in winter or spring for new group ride announcements."
+  }
+]

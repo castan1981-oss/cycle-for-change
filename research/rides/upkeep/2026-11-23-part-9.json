@@ -1,0 +1,61 @@
+[
+  {
+    "slug": "chicago-il-bff-bikes-beginner-intermediate-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "BFF Bikes' events calendar shows only indoor rides (Indoor Ride + Movie Club) on upcoming Sundays through December. The last outdoor group ride on the calendar was November 8, 2026. No upcoming Beginner/Intermediate outdoor ride is posted; the shop appears to be running indoor rides for winter. Check bffbikes.com/events in spring, or call 773-666-5153."
+  },
+  {
+    "slug": "chicago-il-bff-bikes-thursday-wtf-social-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "BFF Bikes' events calendar shows no Thursday WTF Social Rides in upcoming events. The last confirmed WTF ride was September 10, 2026; a ticketed Thursday Social Ride ran September 24. Indoor events (training demos, movie club) now fill the calendar through December. Check bffbikes.com/events in spring, or follow @bffbikes on Instagram."
+  },
+  {
+    "slug": "chicago-il-windy-city-cycling-club-casual-saturday",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "WCCC's Meetup page shows 0 upcoming events posted as of November 23, 2026, and the ICS feed is empty. The last past event visible was Casual Saturday on October 31 at 10:00 AM CDT — different from the 9:00 AM we have on record. Check meetup.com/windy-city-cycling-club/ or windycitycyclingclub.com once events are posted for the next season."
+  },
+  {
+    "slug": "chicago-il-windy-city-cycling-club-sunday-morning",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "WCCC's Meetup page shows 0 upcoming events posted as of November 23, 2026, and the ICS feed is empty. The last past event visible was the Sunday Morning ride on October 18 at 8:00 AM CDT, matching our record. Check meetup.com/windy-city-cycling-club/ once events are posted for the next season."
+  },
+  {
+    "slug": "columbia-sc-cycle-center-sunday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Cycle Center's rides page now lists the Sunday morning ride at 10:00 AM, changed from 9:00 AM; description and location unchanged (fetched November 23, 2026).",
+    "sources": ["https://www.cyclecenter.com/events/rides-events-pg19.htm"],
+    "changes": {
+      "schedule": "Every Sunday, 10:00 am",
+      "time_local": "10:00 am",
+      "start_hhmm": "10:00"
+    }
+  },
+  {
+    "slug": "columbus-ga-standing-boy-trails-sunday-group-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Standing Boy Trails' home page lists group rides Sundays at 3 PM and Thursdays at 6:00 PM in the Upper Lot, alongside a December 4–6 archery hunt notice, showing the page is current (fetched November 23, 2026).",
+    "sources": ["https://www.standingboy.org/"]
+  },
+  {
+    "slug": "columbus-ga-standing-boy-trails-thursday-group-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Standing Boy Trails' home page lists group rides Sundays at 3 PM and Thursdays at 6:00 PM in the Upper Lot, alongside a December 4–6 archery hunt notice, showing the page is current (fetched November 23, 2026).",
+    "sources": ["https://www.standingboy.org/"]
+  },
+  {
+    "slug": "conroe-tx-race-ready-repair-thursday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Thursday Night Ride section was removed from racereadyrepair.com/shop-rides as of October 26, 2026; the page now lists only the Saturday Morning Ride. No other source lists the ride. Check the shop's Facebook page (facebook.com/RaceReadyRepair) or call (936) 499-7941 to confirm whether the Thursday ride has ended or is on a seasonal break."
+  }
+]

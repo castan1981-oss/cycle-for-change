@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "nashville-tn-shelby-ave-bicycle-tuesday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The MATO venue page (ma.to/venue/shelbybicycle) shows no upcoming events; only 1 past event (Tue 19 May 2026). Green Fleet Bikes (greenfleetbikes.com/pages/shelby-ave-bicycle-co) makes no mention of group rides. Strava club 464369 and Instagram @shelbybicycle require login. Check @shelbybicycle on Instagram, or call Shelby Ave Bicycle Co. at (615) 924-3274."
+  },
+  {
+    "slug": "abu-dhabi-ae-yas-marina-circuit-trainyas-ladies",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Yas Marina Circuit TrainYAS Ladies page (yasmarinacircuit.com/en/healthandfitness/trainyas-ladies) shows only the 2025 season (Aug–Nov 2025 month tabs); no 2026 dates are listed and the 6:00 pm time is no longer visible. No 2026–27 schedule has been published as of Nov 23, 2026. Check Instagram @ymcofficial or call 800 YAS (800 927)."
+  },
+  {
+    "slug": "cave-creek-az-dfmba-saturday-group-rides",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "DFMBA's events data file (dfmba.org/_data/events.json) lists 'Saturday Group Rides' as a weekly Saturday event with '6:30 AM (summer) · 8:00 AM (winter)' at rotating trailheads, confirmed by fetching the JSON on Nov 23, 2026.",
+    "sources": ["https://www.dfmba.org/_data/events.json"]
+  },
+  {
+    "slug": "albany-ny-mhcc-sunday-morning-wake-up-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "MHCC's public ride schedule (mohawkhudsoncyclingclub.org/rides/public, fetched Nov 23) shows no Sunday rides in the upcoming two-week window; the 8:00 am time is no longer visible on the page. Albany NY late November — the riding season may have ended. Check the MHCC schedule page in spring, or join MHCC (mohawkhudsoncyclingclub.org) to see the full member schedule."
+  },
+  {
+    "slug": "albany-ny-mhcc-women-on-wheels-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "MHCC's public ride schedule (mohawkhudsoncyclingclub.org/rides/public, fetched Nov 23) shows no WOW/Women on Wheels rides in the upcoming two-week window; the 9:30 am time has been absent since Nov 2. Albany NY late November — the riding season may have ended. Check the same MHCC schedule page in spring."
+  },
+  {
+    "slug": "auburn-al-camp-super-sunday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Trek Bicycle Auburn's November 2026 events page (trekbicycleauburn.com/events) lists no Super Sunday Ride; other CAMP rides (Tuesday Night Ride and Grill, Ladies Ride) appear but not Super Sundays. The ride was last listed Oct 11, 2026. The CAMP website (camp-sorba.org) requires JavaScript and would not load. Call Trek Auburn at 334-329-5004 or check camp-sorba.org with a browser."
+  },
+  {
+    "slug": "bentonville-ar-peel-compton-womens-monthly-social-mtb-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Peel Compton Foundation (peelcompton.org) is fully blocked by Cloudflare (403) on all requests — specific event pages, the events ICS calendar, and the Events Calendar API all return 403; eight consecutive watcher runs have failed. The ride was scheduled for Oct 13, Nov 10, and Dec 8, 2026. Email info@peelcompton.org, or visit peelcompton.org with a full browser. The watch_url (the specific Oct 13 event page) will also need updating to a series URL after the site becomes reachable."
+  },
+  {
+    "slug": "cambridge-wi-corp-trails-thursday-camrock-group-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "CORP Trails' events page (corptrails.org/events, fetched Nov 23) shows no upcoming CamRock rides; the last listed Camrock Group Ride was September 24, 2026 at 6:00 PM. The page lists New Glarus Woods group rides in October and November instead. No cancellation or seasonal-break notice is posted. Check corptrails.org/events for new CamRock listings, or contact CORP Trails through their website."
+  }
+]

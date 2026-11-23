@@ -1,0 +1,891 @@
+[
+  {
+    "slug": "indianapolis-in-bike-line-tuesday-thursday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL (thebikeline.com/about/group-rides-pg439.htm) has returned 404 since Sept 30, 2026. The shop's new /pages/local-rides page lists only self-guided RideWithGPS routes, no group ride schedule. No other public non-login source found. Check @bikelineindiana on Instagram or call the Broad Ripple shop at (317) 253-2611 to ask if Tuesday and Thursday rides still run."
+  },
+  {
+    "slug": "kailua-kona-hi-saturday-recreational-north-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL (hawaiicyclingclub.com/weekly-rides.html) returned 404 as of Nov 16, 2026; it was last OK Nov 9. The main site (hawaiicyclingclub.com) loads but has no weekly-rides page at any alternate path tried. No other public non-login source found for this specific ride. Check @hawaiicyclingclub on Instagram or the HCC Facebook group."
+  },
+  {
+    "slug": "washington-dc-dc-bike-party",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL's domain (touchgrassdc.com) has failed DNS resolution since Oct 26, 2026 (5 consecutive runs). dcbikeparty.com returned no content (SSL certificate expired). No other accessible non-login source found. Check @dcbikeparty on Instagram or the DC Bike Party Facebook page (facebook.com/DCBikeParty)."
+  },
+  {
+    "slug": "albuquerque-nm-nmts-saturday-easy-group-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "NMTS's weekly rides page still lists the Saturday Easy Group Ride as \"RESUMES March 6, 2027\" at 9:00 am from the Alameda Open Space Parking Lot (fetched Nov 23, 2026). The end-words flag was triggered by the separate East Mountain Ride (Thursday) saying \"last ride till next spring\", not by the Saturday Easy Group Ride.",
+    "sources": [
+      "https://www.nmts.org/displayWeekly.php"
+    ]
+  },
+  {
+    "slug": "tucker-ga-atlptn-tucker",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Host domain atlptn.com has failed DNS resolution since Nov 9, 2026 (3 consecutive runs). sadlebred.com (a secondary source, updated Nov 22, 2026) still lists the Tucker ride on Saturdays at 9:00 am DST / 10:00 am standard time from downtown Tucker, with no note of cancellation. The host's page cannot be confirmed from a primary source. Check the Atlanta Peloton Facebook page (facebook.com/ATLPTN) or Instagram (@theatlantapeloton)."
+  },
+  {
+    "slug": "vinings-ga-atlptn-beyond-six-flags",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Host domain atlptn.com has failed DNS resolution since Nov 9, 2026 (3 consecutive runs). sadlebred.com (a secondary source, updated Nov 22, 2026) still lists Beyond Six Flags on Saturdays at 9:00 am (8:30 am June through August) from Atlanta Cycling Vinings, with no note of cancellation. The host's page cannot be confirmed from a primary source. Check the Atlanta Peloton Facebook page (facebook.com/ATLPTN) or Instagram (@theatlantapeloton)."
+  },
+  {
+    "slug": "woodbury-mn-freewheel-bike-monday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Strava club event (3480957573192654492) was deleted as of Oct 5, 2026 and now redirects to the club page. freewheelbike.com/events/group-rides-pg1040.htm says only \"Find our rides on Strava\" with a 2025 waiver reference, no specific ride schedule. No other non-login source found. Call the Freewheel Woodbury shop or check the Freewheel Bike Strava club (strava.com/clubs/470025) for a current event listing."
+  },
+  {
+    "slug": "bethpage-ny-massapequa-park-bicycle-club-rides",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-22",
+    "evidence": "MPBC's ride calendar lists rides through Nov 22, 2026, with Tue/Thu/Sat/Sun rides still running from Bethpage Library and Borella Field; individual route cancellations (\"Sea Cliff Canceled\", \"TBD Canceled\") are for specific outings, not the club schedule (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.massparkbikeclub.org/ride-calendar/"
+    ]
+  },
+  {
+    "slug": "albuquerque-nm-nmts-start-the-week-rite-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "NMTS's weekly rides page lists the Start the Week Rite Ride for Mon Nov 23, 2026 (4th Monday) at 10:00 AM, 13 mph, 11 miles average; the 'last ride till next spring' note on the same page belongs to the Thursday East Mountain Ride, not this one (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.nmts.org/displayWeekly.php"
+    ],
+    "changes": {
+      "distance_miles": 11,
+      "visitor_notes": "Start location changes each month; check nmts.org the week before for the current route and start. Start time is 10:00 am year-round.",
+      "description": "A monthly easy-pace ride of about 11 miles on roads and trails in the Albuquerque area, led by Tom Sullivan. It began as a birthday ride for the club treasurer in 2013. The route and start location vary each month; check nmts.org for the current week's details."
+    }
+  },
+  {
+    "slug": "albuquerque-nm-nmts-sunday-bosque-trail-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "NMTS's weekly rides page lists the Sunday Bosque Trail at 9:00 AM from the Open Space Shining River Parking Area, same day, time and start as before; the 'last ride till next spring' note on the page belongs to the Thursday East Mountain Ride, not this one (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.nmts.org/displayWeekly.php"
+    ]
+  },
+  {
+    "slug": "fairfax-ca-marin-cyclists-fairfax-to-point-reyes-station",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-21",
+    "evidence": "Marin Cyclists' calendar shows Fairfax to Pt Reyes Station Recurring Ride (38/any pace) on Nov 21, Nov 28 and Dec 5, 2026; the 'CANCELED' on Nov 21 belongs to the Morgan Territory Loop (a different ride), not the Fairfax ride (fetched Nov 23, 2026).",
+    "sources": [
+      "https://marincyclists.com/content.aspx?page_id=4001&club_id=525458"
+    ]
+  },
+  {
+    "slug": "queen-creek-az-santan-shredders-wednesday-night-roll",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Meetup group shows 0 upcoming events; the previous series ran through Oct 28, 2026 and no new series has been posted. The Santan Shredders website still says 'weekly events on Wednesday evenings' but points to Meetup for details."
+  },
+  {
+    "slug": "arlington-va-nova-cbg-tuesday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "NoVA CBG's Meetup ICS feed has 20 upcoming events (Nov 26–Mar 2027) but none are Tuesday Night Rides; all visible upcoming rides are special holiday events (Thanksgiving Trek, Holiday Boat Parade, O' Christmas Tree Ride). No regular Tuesday schedule is posted for November–December."
+  },
+  {
+    "slug": "bowie-md-jafe-cycling-fridays-at-jafes",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Jafe Cycling's Meetup ICS feed shows no Friday rides in upcoming events; all upcoming rides are Thursday and Sunday. The last confirmed Friday ride was Oct 1, 2026. The Friday ride may have shifted to Thursday or ended for the season."
+  },
+  {
+    "slug": "calgary-ca-slow-and-steady-hikers-friday-evening-bike-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Slow and Steady Hikers Meetup group shows 0 upcoming events, and the ICS feed's 10 upcoming events are all hiking events with no bike rides. The watch page (the Oct 2 event) is still accessible but shows no future dates."
+  },
+  {
+    "slug": "cold-spring-ky-cincinnati-cycle-club-aterhamtning-thursday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Cincinnati Cycle Club's future events calendar lists November and December Thursday rides but none at East Alexandria Pike and Route 27, Cold Spring, KY; Återhämtning's last listed date was Oct 29, 2026 and the ride's start time went missing from the calendar on Nov 2."
+  },
+  {
+    "slug": "colorado-springs-co-mmb-thursday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Monument Mountain Bikers' Meetup shows zero upcoming events (fetched Nov 23, 2026). The ICS feed has only one event: the Black Friday Happy Hour on Nov 27, a one-off social, not a regular Thursday ride. Prior seasons show a last-official-Thursday-ride event in fall before the club pauses until spring. No Thursday rides are scheduled for winter 2026–2027. Check meetup.com/monument-mountain-bikers/ for the 2027 ride schedule."
+  },
+  {
+    "slug": "columbus-oh-thursday-night-central-columbus-metro-parks-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Outdoor Pursuits' event page for this ride still shows September 17, 2026 as its date with no future instances (fetched Nov 23, 2026). The OP weekly training rides calendar for the week of Nov 16 lists no Thursday rides. OP's cycling series runs May through September; the Thursday evening ride appears to end in fall. Check outdoor-pursuits.org/weekly-training-rides/ for spring 2027 schedule."
+  },
+  {
+    "slug": "dallas-tx-trek-park-cities-thursday-lake-laps",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Trek Dallas Park Cities Eventbrite series (Aug 13 – Oct 29, 2026) ended and now shows \"Event ended\" (fetched Nov 23, 2026). The organizer page shows nothing planned for November. No new winter or spring series has been posted. The shop posts a new series each season; watch the Eventbrite organizer page at eventbrite.com/o/trek-bicycle-dallas-park-cities-46367112593, or call the shop at (214) 363-2025."
+  },
+  {
+    "slug": "dallas-tx-trek-park-cities-tuesday-lake-laps",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Same Eventbrite series as the Thursday Lake Laps (Aug 13 – Oct 29, 2026); the page shows \"Event ended\" and the organizer page has nothing planned for November (fetched Nov 23, 2026). No new winter or spring series posted. Watch the Eventbrite organizer page at eventbrite.com/o/trek-bicycle-dallas-park-cities-46367112593, or call the shop at (214) 363-2025."
+  },
+  {
+    "slug": "detroit-mi-lane-bangerz-westside-wednesday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The ride's season ended Oct 28, 2026 as the schedule stated. The Detroit Greenways Google Calendar ICS (the ride's source) has 44 upcoming events but none match the Westside Wednesday Ride; no new Lane Bangerz Wednesday dates appear for winter or early 2027. A separate event, \"Where We At Wednesdays,\" appears on May 5, 2027 in the same calendar but may be a different ride. Check detroitgreenways.org/events-calendar/ in spring 2027."
+  },
+  {
+    "slug": "fort-worth-tx-trek-fort-worth-south-thursday-night-gravel-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Trek Fort Worth South Eventbrite series (Feb 19 – Nov 19, 2026) ended four days ago and now shows \"Event ended\" (fetched Nov 23, 2026). The organizer page shows only a continuing Saturday ride and a Ride Club End of Year Celebration on Dec 11, confirming the season is over. No 2027 Thursday gravel series has been posted. Check the Trek Fort Worth South Eventbrite organizer page at eventbrite.com/o/49087200853 in spring 2027."
+  },
+  {
+    "slug": "hayward-ca-bike-east-bay-bike-hayward-wednesday-rides",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Bike East Bay event page says \"This event has passed\" with October 14, 2026 as the last date. The Bike East Bay group rides page labels this series the \"2026 Ride Series\" and shows zero upcoming events (fetched Nov 23, 2026). No 2027 Bike Hayward ride dates are posted. Check bikeeastbay.org/group-rides/ in spring 2027, or email info@bikeeastbay.org."
+  },
+  {
+    "slug": "horsham-pa-scu-tuesday-evening-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "SCU's Meetup shows zero upcoming events at the page level (fetched Nov 23, 2026). The ICS feed has 10 upcoming SCU events (Souderton ride, Turkey Point, slow-paced rides) but not the fast Tuesday Evening Ride from the Horsham library. The ride was listed only through Nov 3, 2026. SCU runs year-round rides at slower paces; the 17–19 mph Tuesday Evening Ride is seasonal. Check meetup.com/suburban-cyclists-unlimited-meetup/ in spring 2027."
+  },
+  {
+    "slug": "la-crosse-wi-smiths-bike-shop-tnwc-tuesday-night-world-champs",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-10-27",
+    "evidence": "Smith's Bike Shop's group rides page (smithsbikes.com/group-bike-rides/) lists TNWC at Tuesday 5:30 pm with no seasonal caveat; shop calendar had entries through Oct 27, 2026 (fetched Nov 23, 2026).",
+    "sources": [
+      "https://smithsbikes.com/group-bike-rides/"
+    ]
+  },
+  {
+    "slug": "lancaster-pa-lbc-tuesday-training-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "LBC Meetup shows 27 upcoming events but no Tuesday Training Rides; ICS feed has 10 events, none are Tuesday Training Rides. Last listed date was Oct 27, 2026 at 5:30 PM EDT. Check the LBC Meetup group (meetup.com/lancaster-bicycle-club) for spring 2027 listings."
+  },
+  {
+    "slug": "lancaster-pa-lbc-wednesday-breakfast-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "LBC Meetup ICS feed lists 'Wednesday Late Mornings Brunch Rides' on Wed Nov 25 and Dec 2, 2026 at 11:00 AM from 2883 Weaver Rd; the event description says 'As the mornings grow colder it is time to ride later in the mornings' (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.meetup.com/lancaster-bicycle-club/",
+      "https://www.meetup.com/lancaster-bicycle-club/events/ical/"
+    ],
+    "changes": {
+      "time_local": "11:00 am",
+      "start_hhmm": "11:00",
+      "schedule": "Every Wednesday; 11:00 am in late fall and winter, 9:00 am in warmer months; from Manheim Township Athletic Complex. Casual pace, variable distance, food stop.",
+      "refresh": {
+        "watch_url": "https://www.meetup.com/lancaster-bicycle-club/",
+        "feed_url": "https://www.meetup.com/lancaster-bicycle-club/events/ical/"
+      }
+    }
+  },
+  {
+    "slug": "lihue-hi-kauai-path-bikes-on-rice",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Kauai Path's event page (the Sept 12 watch URL) no longer lists future dates; the Nov 14 ride has passed and no Dec 2026 date has been posted. The kauaipath.org homepage shows no upcoming events. Check kauaipath.org for the December event (expected second Saturday, Dec 12). The watch URL should be updated to a stable series page when one is posted."
+  },
+  {
+    "slug": "long-beach-ca-sundazies-ftwnb-sunday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Strava event page shows only the past Sept 27, 2026 event; the Strava club page (strava.com/clubs/1090056) requires login. No public website or calendar found. Try logging into the Strava club page or searching Instagram for the FTWNB Cycling Collective."
+  },
+  {
+    "slug": "macungie-pa-lvcc-a-sunday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "LVCC Meetup events page shows 0 upcoming events; ICS feed has 10 club events but no A Sunday Ride. Last listed A Sunday Ride was Nov 15, 2026. The schedule notes rides are posted 'while the weather holds.' Check the LVCC Meetup (meetup.com/lehigh-valley-cycling-club) for spring 2027 postings."
+  },
+  {
+    "slug": "milford-oh-bishops-thursday-casual-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Cincinnati Cycle Club's Casual and Beginner Rides page lists the Thursday Bishop's Casual Ride at Thursdays 6:15 PM from Bishop's Bicycles, 313 Main St, Milford with no end date or seasonal caveat (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.cincinnaticycleclub.org/content.aspx?page_id=22&club_id=772752&module_id=337793"
+    ]
+  },
+  {
+    "slug": "monument-co-mmb-tuesday-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-23",
+    "evidence": "Monument Mountain Bikers' Meetup page (fetched Nov 23, 2026) says the regular ride series runs 'May thru October'; November through April rides are weather-permitting and posted ad hoc.",
+    "sources": [
+      "https://www.meetup.com/monument-mountain-bikers/"
+    ],
+    "status_note": "Regular Tuesday series runs May through October. The Meetup page says November through April rides are weather-permitting with some fat bike rides posted as conditions allow. Back in May."
+  },
+  {
+    "slug": "oakland-ca-waffles-n-wheels-hills-n-sips",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Strava event (Hills n Sips Countdown to Dark, Oct 1, 2026) has passed and no future event date is visible without a login. The Waffles n Wheels Strava club page shows an upcoming event but login is required to see the details. Check @wafflesnwheels on Instagram or join the Strava club (club 1000022) to confirm the next Hills n Sips date."
+  },
+  {
+    "slug": "portland-or-team-apuggalypse-king-farmers-market-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The last listed date on Shift2Bikes was Nov 22, 2026 (yesterday), following the King Farmers Market season (May through November). No 2027 dates appear on Shift2Bikes. The watch URL is also hardcoded through Dec 20, 2026 and will not pick up spring dates. Re-check on Shift2Bikes in spring for 2027 season dates."
+  },
+  {
+    "slug": "brooklyn-ny-times-up-prospect-park-moon-and-magic-hour-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Times Up! calendar at times-up.org/calendar/ and its ICS feed show no Prospect Park Moon & Magic Hour Ride in November or December 2026. The last confirmed date was Oct 31, 2026. The host posts one date at a time and no next date has been posted. The ICS feed has 23 events but zero matches for the Moon ride (fetched Nov 23, 2026)."
+  },
+  {
+    "slug": "lexington-ky-bluegrass-cycling-club-horse-park-tuesday",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The BCC calendar future view at bgcycling.net shows no upcoming events at all. The ride detail page shows only the Oct 6, 2026 instance, with distances listed as dependent on daylight. The last listed Horse Park Tuesday date was Oct 27, 2026; the club has posted nothing beyond that. Re-check on bgcycling.net in spring for the next season's dates."
+  },
+  {
+    "slug": "lexington-ky-bluegrass-cycling-club-masterson-mondays",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The BCC calendar future view at bgcycling.net shows no upcoming events at all. The ride detail page shows only the Oct 5, 2026 instance. The last listed Masterson Mondays date was Oct 26, 2026; the club has posted nothing beyond that. Re-check on bgcycling.net in spring for the next season's dates."
+  },
+  {
+    "slug": "midway-ky-bluegrass-cycling-club-midway-wednesday",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The BCC calendar future view at bgcycling.net shows no upcoming events at all. The ride detail page shows only the Oct 7, 2026 instance and explicitly notes that ride distances depend on daylight availability. The last listed Midway Wednesday date was Oct 28, 2026; the club has posted nothing beyond that. Re-check on bgcycling.net in spring for the next season's dates."
+  },
+  {
+    "slug": "oakland-ca-air-cc-wxmns-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The last public Strava event for WXMNS was Apr 9, 2026 (seven months ago). The AIR cc website (aircc.org/group-rides) describes WXMNS rides as ongoing but lists no dates, pointing riders to the Strava page. The AIR cc Strava club (club 1008989) shows an upcoming event but the date and details require a login. Check @a.i.r_cc on Instagram or join the AIR cc Strava club to confirm the next WXMNS date."
+  },
+  {
+    "slug": "pittsburgh-pa-pittsburgh-critical-mass-second-friday",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Ike's Basement Bike Shop calendar (ike.bike/event/pgh-critical-mass-2/) still says '2nd Friday of every month (rain or shine!)' but lists only Jan through May 8, 2026 — no dates have been added since. criticalmass.in shows Dec 11, 2026 at 6:00 pm from Friendship Park, but that is a third-party aggregator, not the host's own page. Check @pgh_critical_mass on Instagram to confirm the December ride is happening."
+  },
+  {
+    "slug": "san-francisco-ca-hummingbird-fuels-all-watts-welcome-intervals",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Strava event page (the watch URL) shows Oct 6, 2026 and has not rolled forward to a new date, which raises the event-date-past flag. The Hummingbird Fuels Strava club is active (posts in November 2026, an upcoming club event visible to logged-in members) but the Tuesday 'All Watts Welcome' interval series cannot be confirmed without a login. The brand's own website has no events page and no mention of the weekly ride. Check https://www.strava.com/clubs/1384021 (login required) or search Instagram for @hummingbirdfuels to see if the Tuesday interval ride is still listed."
+  },
+  {
+    "slug": "cincinnati-oh-ubbc-tuesday-night-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-10-27",
+    "evidence": "The Queen City Bike Google Calendar ICS feed has 41 events but no UBBC Tuesday Night Ride after Oct 27, 2026; the events.queencity.bike November calendar shows no UBBC rides (fetched Nov 23, 2026).",
+    "sources": [
+      "https://calendar.google.com/calendar/ical/ec292r3gr6plg3n57dj9ov86g0%40group.calendar.google.com/public/basic.ics",
+      "https://events.queencity.bike/"
+    ],
+    "status_note": "The 2026 season ended with the Oct 27 ride; the Queen City Bike calendar shows no UBBC rides in November. The ride historically runs late May to early November. Check events.queencity.bike for a spring 2027 announcement."
+  },
+  {
+    "slug": "allen-tx-dctr-taco-tuesday-social-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Meetup events page shows 0 public upcoming events for the group. The ICS feed contains 2 events but neither is the Taco Tuesday Social Ride from Allen — only White Rock laps on Saturdays are listed. The Tuesday 6:45 pm ride from Velvet Taco cannot be confirmed. The group may have made events members-only or changed its programming. Check https://www.meetup.com/dallas-cycling-trail-riders-and-weekend-pub-crawlers/ (login may be required to see events)."
+  },
+  {
+    "slug": "corpus-christi-tx-cc-led-saturday-light-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The watch URL (thebendmag.com article) returns 403 and the article dates from August 2022 with no 2026 information. No other fetchable source exists. Check Instagram @getccled for current ride announcements."
+  },
+  {
+    "slug": "madison-wi-madison-queer-bike-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The watch URL (ourliveswisconsin.com article) returns 403 bot-wall. A Madison community ride catalog on GitHub (last updated Sept 11, 2026) lists the ride as active, but that is a third-party secondary source, not the host's own page. The ride posts its start time and route on Instagram each month. Check Instagram @madisonqueerbikeride for the next second-Wednesday date and time."
+  },
+  {
+    "slug": "missoula-mt-thursday-night-mountain-bike-group",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The HTTPS watch URL (thursdaynightmtbr.org) fails with a TLS certificate error. The HTTP version (http://thursdaynightmtbr.org/) loads but contains no dated 2026 events — it uses Twitter for weekly ride announcements. Missoula Underground listed TNR rides in May 2026 and noted in a November 2025 post that the group takes a winter break and returns in March. It is likely on its seasonal break now. Check http://thursdaynightmtbr.org/ or the group's Facebook page (facebook.com/group.php?gid=150671295989) in spring, and update the watch URL to the HTTP address."
+  },
+  {
+    "slug": "philadelphia-pa-bcp-sunny-sunday-d-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The watch URL (phillybikeclub.org/bcpdo/ride/calendarweekly) is behind a Cloudflare challenge and returns 403 for automated requests. No 2026 evidence of the Sunny Sunday D Ride was found in a web search. Check https://phillybikeclub.org/bcpdo/ride/calendarweekly directly in a browser."
+  },
+  {
+    "slug": "portland-me-gear-hub-thursday-group-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Portland Gear Hub events page loaded and displayed 'No Upcoming events' — no Thursday group rides are posted for any future date (fetched Nov 23, 2026). The page added a Thanksgiving closure notice (Nov 26–28) but that is unrelated to the missing ride listings. Check https://www.portlandgearhub.org/events in winter or spring for new group ride announcements."
+  },
+  {
+    "slug": "san-diego-ca-moment-bicycles-saturday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Moment Bicycles rides page states 'We are currently riding from the shop on Tuesday mornings, Thursday mornings, Saturday mornings and Sunday mornings' with 'Point Loma Saturdays 8:30am' (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.momentbikes.com/events/moment-san-diego-bike-rides-pg369.htm"
+    ]
+  },
+  {
+    "slug": "san-diego-ca-shewolves-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL (SD Magazine article) now returns 403; host's own channel is Instagram only. The article confirmed Thursday 7:15 pm from Bea Evenson Fountain in its last OK load (Nov 9, 2026) but no dated 2026 event from the host's own page. Check @sd_shewolves on Instagram."
+  },
+  {
+    "slug": "birmingham-al-le-tour-de-ham",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Le Tour de Ham's Strava club page (strava.com/clubs/332778, 459 members) states 'Every Tuesday evening at 6:00 - Roll at 6:15 (Check Facebook Group for current starting location)' (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.strava.com/clubs/332778"
+    ],
+    "changes": {
+      "refresh": {
+        "watch_url": "https://www.strava.com/clubs/332778",
+        "method": "strava-club",
+        "notes": "Club description lists the Tuesday 6:00/6:15 schedule. Start point varies; check the Facebook group at facebook.com/groups/309449166066745."
+      }
+    }
+  },
+  {
+    "slug": "brooklyn-ny-dawn-patrol-prospect-park",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL (Leg Day Substack article) has returned 403 for 8 consecutive runs since Oct 5. Instagram @dawnpatrol.pp exists but requires a login. No 2026 search results found. Check @dawnpatrol.pp on Instagram or the Continental Ostroy team's channels."
+  },
+  {
+    "slug": "brooklyn-ny-nightcap-monday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL (Queer on the Street Substack) has returned 403 for 8 consecutive runs since Oct 5. Season is April–October; November is off-season, but no source confirms the 2026 season ran or that the ride resumes in 2027. Check @nightcap_brooklyn on Instagram."
+  },
+  {
+    "slug": "columbia-sc-cola-wtfnb-cyclists-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Cola Town Bikes homepage (schedule-text-changed flag) now shows only shop news; no ride schedule is visible. The city of Columbia's calendar showed a matching ride on May 6, 2026 (passed, labeled as a National Bike Month event). No post-May 2026 event found. Check @Cola_WTFNB_Cyclist on Instagram or call Cola Town Bike Collective at 803-216-5106."
+  },
+  {
+    "slug": "emporia-ks-babes-on-bikes-wednesday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL (visitemporia.com) returned 403 for 8 runs; loaded with curl today and still mentions 'follow the Babes on Bikes Facebook page for updates on their weekly ride' but gives no specific day or time. Check the Babes on Bikes Emporia Facebook page at facebook.com/BabesOnBikesEmporia."
+  },
+  {
+    "slug": "nashville-tn-music-city-dope-pedalers-friday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL (Nashville Scene article) returns 429 since Nov 9; the article text that loaded did not contain the ride schedule. Group confirmed active in spring 2026 (Tour de Nash training series at Frankie Pierce Park, Apr–May 2026) but no current dated source for the weekly Friday 6 pm ride. Check @musiccitydopepedalers on Instagram."
+  },
+  {
+    "slug": "nashville-tn-shelby-ave-bicycle-tuesday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The MATO venue page (ma.to/venue/shelbybicycle) shows no upcoming events; only 1 past event (Tue 19 May 2026). Green Fleet Bikes (greenfleetbikes.com/pages/shelby-ave-bicycle-co) makes no mention of group rides. Strava club 464369 and Instagram @shelbybicycle require login. Check @shelbybicycle on Instagram, or call Shelby Ave Bicycle Co. at (615) 924-3274."
+  },
+  {
+    "slug": "abu-dhabi-ae-yas-marina-circuit-trainyas-ladies",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Yas Marina Circuit TrainYAS Ladies page (yasmarinacircuit.com/en/healthandfitness/trainyas-ladies) shows only the 2025 season (Aug–Nov 2025 month tabs); no 2026 dates are listed and the 6:00 pm time is no longer visible. No 2026–27 schedule has been published as of Nov 23, 2026. Check Instagram @ymcofficial or call 800 YAS (800 927)."
+  },
+  {
+    "slug": "cave-creek-az-dfmba-saturday-group-rides",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "DFMBA's events data file (dfmba.org/_data/events.json) lists 'Saturday Group Rides' as a weekly Saturday event with '6:30 AM (summer) · 8:00 AM (winter)' at rotating trailheads, confirmed by fetching the JSON on Nov 23, 2026.",
+    "sources": [
+      "https://www.dfmba.org/_data/events.json"
+    ]
+  },
+  {
+    "slug": "albany-ny-mhcc-sunday-morning-wake-up-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "MHCC's public ride schedule (mohawkhudsoncyclingclub.org/rides/public, fetched Nov 23) shows no Sunday rides in the upcoming two-week window; the 8:00 am time is no longer visible on the page. Albany NY late November — the riding season may have ended. Check the MHCC schedule page in spring, or join MHCC (mohawkhudsoncyclingclub.org) to see the full member schedule."
+  },
+  {
+    "slug": "albany-ny-mhcc-women-on-wheels-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "MHCC's public ride schedule (mohawkhudsoncyclingclub.org/rides/public, fetched Nov 23) shows no WOW/Women on Wheels rides in the upcoming two-week window; the 9:30 am time has been absent since Nov 2. Albany NY late November — the riding season may have ended. Check the same MHCC schedule page in spring."
+  },
+  {
+    "slug": "auburn-al-camp-super-sunday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Trek Bicycle Auburn's November 2026 events page (trekbicycleauburn.com/events) lists no Super Sunday Ride; other CAMP rides (Tuesday Night Ride and Grill, Ladies Ride) appear but not Super Sundays. The ride was last listed Oct 11, 2026. The CAMP website (camp-sorba.org) requires JavaScript and would not load. Call Trek Auburn at 334-329-5004 or check camp-sorba.org with a browser."
+  },
+  {
+    "slug": "bentonville-ar-peel-compton-womens-monthly-social-mtb-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Peel Compton Foundation (peelcompton.org) is fully blocked by Cloudflare (403) on all requests — specific event pages, the events ICS calendar, and the Events Calendar API all return 403; eight consecutive watcher runs have failed. The ride was scheduled for Oct 13, Nov 10, and Dec 8, 2026. Email info@peelcompton.org, or visit peelcompton.org with a full browser. The watch_url (the specific Oct 13 event page) will also need updating to a series URL after the site becomes reachable."
+  },
+  {
+    "slug": "cambridge-wi-corp-trails-thursday-camrock-group-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "CORP Trails' events page (corptrails.org/events, fetched Nov 23) shows no upcoming CamRock rides; the last listed Camrock Group Ride was September 24, 2026 at 6:00 PM. The page lists New Glarus Woods group rides in October and November instead. No cancellation or seasonal-break notice is posted. Check corptrails.org/events for new CamRock listings, or contact CORP Trails through their website."
+  },
+  {
+    "slug": "chicago-il-bff-bikes-beginner-intermediate-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "BFF Bikes' events calendar shows only indoor rides (Indoor Ride + Movie Club) on upcoming Sundays through December. The last outdoor group ride on the calendar was November 8, 2026. No upcoming Beginner/Intermediate outdoor ride is posted; the shop appears to be running indoor rides for winter. Check bffbikes.com/events in spring, or call 773-666-5153."
+  },
+  {
+    "slug": "chicago-il-bff-bikes-thursday-wtf-social-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "BFF Bikes' events calendar shows no Thursday WTF Social Rides in upcoming events. The last confirmed WTF ride was September 10, 2026; a ticketed Thursday Social Ride ran September 24. Indoor events (training demos, movie club) now fill the calendar through December. Check bffbikes.com/events in spring, or follow @bffbikes on Instagram."
+  },
+  {
+    "slug": "chicago-il-windy-city-cycling-club-casual-saturday",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "WCCC's Meetup page shows 0 upcoming events posted as of November 23, 2026, and the ICS feed is empty. The last past event visible was Casual Saturday on October 31 at 10:00 AM CDT — different from the 9:00 AM we have on record. Check meetup.com/windy-city-cycling-club/ or windycitycyclingclub.com once events are posted for the next season."
+  },
+  {
+    "slug": "chicago-il-windy-city-cycling-club-sunday-morning",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "WCCC's Meetup page shows 0 upcoming events posted as of November 23, 2026, and the ICS feed is empty. The last past event visible was the Sunday Morning ride on October 18 at 8:00 AM CDT, matching our record. Check meetup.com/windy-city-cycling-club/ once events are posted for the next season."
+  },
+  {
+    "slug": "columbia-sc-cycle-center-sunday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Cycle Center's rides page now lists the Sunday morning ride at 10:00 AM, changed from 9:00 AM; description and location unchanged (fetched November 23, 2026).",
+    "sources": [
+      "https://www.cyclecenter.com/events/rides-events-pg19.htm"
+    ],
+    "changes": {
+      "schedule": "Every Sunday, 10:00 am",
+      "time_local": "10:00 am",
+      "start_hhmm": "10:00"
+    }
+  },
+  {
+    "slug": "columbus-ga-standing-boy-trails-sunday-group-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Standing Boy Trails' home page lists group rides Sundays at 3 PM and Thursdays at 6:00 PM in the Upper Lot, alongside a December 4–6 archery hunt notice, showing the page is current (fetched November 23, 2026).",
+    "sources": [
+      "https://www.standingboy.org/"
+    ]
+  },
+  {
+    "slug": "columbus-ga-standing-boy-trails-thursday-group-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Standing Boy Trails' home page lists group rides Sundays at 3 PM and Thursdays at 6:00 PM in the Upper Lot, alongside a December 4–6 archery hunt notice, showing the page is current (fetched November 23, 2026).",
+    "sources": [
+      "https://www.standingboy.org/"
+    ]
+  },
+  {
+    "slug": "conroe-tx-race-ready-repair-thursday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Thursday Night Ride section was removed from racereadyrepair.com/shop-rides as of October 26, 2026; the page now lists only the Saturday Morning Ride. No other source lists the ride. Check the shop's Facebook page (facebook.com/RaceReadyRepair) or call (936) 499-7941 to confirm whether the Thursday ride has ended or is on a seasonal break."
+  },
+  {
+    "slug": "costa-mesa-ca-the-unlikely-cyclist-wednesday-womens-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "The shop's events page for November 2026 lists Saturday Women's Group Rides (Nov 7, 14, 21, 28) at 7:45–8:00 am from the shop and TUC ZWIFT Meetups on Wednesdays (Nov 4, 11, 18) at 5:45 pm; no outdoor Wednesday group rides are listed (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.theunlikelycyclist.com/new-events"
+    ],
+    "changes": {
+      "name": "The Unlikely Cyclist Women's Group Ride",
+      "schedule": "Saturdays, most weeks, outdoor Women's Group Ride at 7:45–8:00 am from the shop. Wednesday evenings (5:45 pm) are ZWIFT virtual meetups at the shop.",
+      "days": [
+        "sat"
+      ],
+      "time_local": "8:00 am",
+      "start_hhmm": "08:00",
+      "frequency": "weekly",
+      "refresh": {
+        "notes": "Shop posts each Saturday ride a week ahead on the events page. Wednesday slots are now ZWIFT meetups, not outdoor rides."
+      }
+    }
+  },
+  {
+    "slug": "dallas-tx-dbc-second-saturday-coffee-social-and-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-14",
+    "evidence": "The Dallas Bicycle Coalition social rides calendar lists 'DBC Second Saturday Coffee Social and Ride' on November 14, 2026 (the second Saturday) at 9:00 am CST; event data shows monthly recurrence starting January 10, 2026 (fetched Nov 23, 2026).",
+    "sources": [
+      "https://dallasbicyclecoalition.org/social-rides/"
+    ]
+  },
+  {
+    "slug": "dallas-tx-the-meteor-womens-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-11",
+    "evidence": "The Dallas Bicycle Coalition social rides calendar lists 'The Meteor Womens Ride' on November 11, 2026 at 6:00 pm CST; event data shows second-Wednesday monthly recurrence (RRULE BYDAY=+2WE) through December 2026 (fetched Nov 23, 2026).",
+    "sources": [
+      "https://dallasbicyclecoalition.org/social-rides/"
+    ]
+  },
+  {
+    "slug": "eastcote-gb-breeze-hillingdon-sunday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-22",
+    "evidence": "The Breeze Hillingdon group page on Let's Ride (British Cycling) lists 'Chiswick House and Gardens' as a future ride on Sunday 29th November 2026 at 9:00am from HA5 1RL; past rides show Sunday morning rides from HA5 1RL in Oct and Nov 2026 (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.letsride.co.uk/groups/breeze-hillingdon"
+    ]
+  },
+  {
+    "slug": "eugene-or-gears-wtnb-wednesday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The GEARs November schedule page shows no WTNB Wednesday evening ride; the October schedule had it on Oct 14 at 6:00 pm but the November schedule replaced detailed ride listings with Gatherist registration instructions. No Wednesday evening rides appear in November. Check eugenegears.org for the December+ Gatherist schedule and the club's Instagram @eugeneGEARs."
+  },
+  {
+    "slug": "grand-ledge-mi-tcba-saturday-z-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The TCBA upcoming calendar shows the last Grand Ledge Z Ride was Oct 31, 2026; no future Grand Ledge Z Ride dates appear through 2027. Other TCBA Z rides at different locations (West Saginaw Meijer, DeWitt Meijer) continue in November. Check biketcba.org in spring for the 2027 season schedule."
+  },
+  {
+    "slug": "harrisburg-pa-hbc-owens-sunday-sociable",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Owen's Sunday Sociable last appeared on the HBC calendar in October 2026 (Oct 4, 11, 18; Oct 25 canceled); the HBC upcoming events calendar through 2027 shows no future dates for this ride. Check the HBC calendar at harrisburgbicycleclub.org in spring."
+  },
+  {
+    "slug": "huntington-beach-ca-hb-velo-coffee-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-07-28",
+    "evidence": "The shop's website states 'Wednesday & Friday Morning Coffee Ride · Meet at the Shop · Roll-Out @ 8:30 am SHARP · ~25 miles · 15mph average pace'; note that the page directs to the shop's Facebook for the most current updates (fetched Nov 23, 2026).",
+    "sources": [
+      "https://hbvelocyclery.net/"
+    ]
+  },
+  {
+    "slug": "huntington-beach-ca-hb-velo-sunday-shop-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "hbvelocyclery.net returns 403 (bot wall since Oct 5, 2026). WebFetch also returns 403. The shop says current ride updates go on its Facebook page. Try facebook.com/HBVeloCyclery or call the shop at (714) 587-9043."
+  },
+  {
+    "slug": "hyannis-ma-sea-sports-wednesday-night-lights-mtb",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Sea Sports' group-rides page (fetched Nov 23, 2026) no longer lists the Wednesday Night Lights MTB — only the Saturday Coffee Cruise is listed under Group Rides. The shop directs people to its Strava club and Facebook for other ride notices. The ride was scheduled to start Oct 28, 2026, but is not on the website now. Check the Sea Sports Cycling Strava club (strava.com/clubs/sea-sports-cycling, login required) or Sea Sports Cyclery on Facebook for current status."
+  },
+  {
+    "slug": "knoxville-tn-two-bikes-bike-party",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-09-25",
+    "evidence": "Two Bikes' community page (fetched Nov 23, 2026) lists the Sep 25 Bike Party (Tanh's Shaved Ice Edition, 6:00 PM from Two Bikes, party pace) and an Oct 30 Halloween Bluff Ride described as 'in lieu of a Bike Party this week,' confirming the monthly last-Friday pattern continues.",
+    "sources": [
+      "https://twobikes.org/community"
+    ]
+  },
+  {
+    "slug": "knoxville-tn-two-bikes-coffee-outside",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-08",
+    "evidence": "Two Bikes' community page (fetched Nov 23, 2026) lists Coffee Outside for Sunday Nov 8, 2026 at 9:00 AM from Two Bikes, 118 S. Central St., with the same description: wheels down at 9:15 am, ride to Gay St. bridge.",
+    "sources": [
+      "https://twobikes.org/community"
+    ]
+  },
+  {
+    "slug": "lansing-mi-tcba-monday-night-b-ride-old-town-dewitt",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-10-26",
+    "evidence": "TCBA's ClubExpress calendar (fetched Nov 23, 2026) shows no Monday Night B Rides after Oct 26, 2026 — the last of four listed October dates. The calendar now shows only a Nov 24 mountain bike ride, the Dec 13 holiday party, board meetings, and 2027 touring events.",
+    "sources": [
+      "http://www.biketcba.org/content.aspx?page_id=4001&club_id=604795&action=cira&vm=Future&sif=0"
+    ],
+    "status_note": "Club calendar shows no Monday Night B Rides after Oct 26, 2026. The 2026 season ended in late October. No 2027 season dates are posted yet. Check biketcba.org in spring for the new season schedule."
+  },
+  {
+    "slug": "lisle-il-elmhurst-bicycle-club-lisle-early-bird",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-10-28",
+    "evidence": "Elmhurst Bicycle Club's ClubExpress calendar (fetched Nov 23, 2026) shows no Lisle Early Bird rides after Oct 28, 2026, the last date in the original listing. November and December show other club rides at 9–10 AM, not the 5:30 AM early bird.",
+    "sources": [
+      "https://elmhurstbc.clubexpress.com/content.aspx?page_id=4001&club_id=695056&action=cira&vm=Future&sif=0"
+    ],
+    "status_note": "The EBC calendar shows no Lisle Early Bird rides after Oct 28, 2026. The ride was listed only through that date. No 2027 season dates posted yet. Check elmhurstbc.clubexpress.com in spring."
+  },
+  {
+    "slug": "london-gb-ealing-cycling-campaign-womens-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-22",
+    "evidence": "Ealing Cycling Campaign's events page (ealingcycling.org.uk/p/events.html, fetched Nov 23, 2026 via WebFetch) lists Women of ECC rides for Sunday Nov 22, Sunday Nov 29, and Sunday Dec 13, 2026, from Ealing Town Hall with booking through the LCC website.",
+    "sources": [
+      "https://www.ealingcycling.org.uk/p/events.html"
+    ]
+  },
+  {
+    "slug": "london-gb-richmond-park-velo-saturday-new-members-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-21",
+    "evidence": "Richmond Park Velo's Meetup page (fetched Nov 23, 2026) shows 'Windsor - all levels' on Sat Nov 21 at 10:20 AM GMT (past) and 'New Members RP Park Laps & Cobham loop' listed for Sat Nov 28 at 9:20 AM GMT (upcoming), confirming Saturday rides at 9:20 AM are running.",
+    "sources": [
+      "https://www.meetup.com/richmond-park-velo-cycling-club/"
+    ]
+  },
+  {
+    "slug": "london-gb-richmond-park-velo-wednesday-evening-laps",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Richmond Park Velo's weekly-rides page lists 'Wednesdays 6:20pm – Meet the Members Laps – hosted by Nic and Marelise' with no seasonal caveat; the club Meetup now shows only morning midweek rides and a Saturday park laps, so the club page is the authoritative source (fetched Nov 23, 2026).",
+    "sources": [
+      "https://richmondparkvelo.com/weekly-rides/"
+    ],
+    "changes": {
+      "time_local": "6:20 pm",
+      "start_hhmm": "18:20",
+      "schedule": "Wednesdays at 6:20 pm: laps of Richmond Park in level groups with ride leaders, then coffee at Colicci's café or a local pub. Members sign up via Meetup; the meeting point within the park is shown to members.",
+      "refresh": {
+        "method": "static-page",
+        "watch_url": "https://richmondparkvelo.com/weekly-rides/",
+        "feed_url": null,
+        "notes": "The club's weekly-rides page is the authoritative schedule. The Meetup group (https://www.meetup.com/richmond-park-velo-cycling-club/) lists specific event dates but its iCal feed returns 403."
+      }
+    }
+  },
+  {
+    "slug": "london-gb-richmond-scenic-cycling-tuesday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-17",
+    "evidence": "Richmond Scenic Cycling's Meetup shows upcoming Tuesday rides on Nov 24 and Dec 1, 2026 at 10:00 AM GMT; past rides on Nov 10 and Nov 17 were also at 10:00 AM GMT, while October rides were at 9:30 AM BST — the ride shifts from 9:30 AM in summer (BST) to 10:00 AM in winter (GMT) when UK clocks change (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.meetup.com/richmond-scenic-cycling/"
+    ],
+    "changes": {
+      "time_local": "10:00 am",
+      "start_hhmm": "10:00",
+      "schedule": "Tuesdays, 10:00 am GMT in winter (from late October); 9:30 am BST in summer (from late March). Start shown to Meetup members. Usually about 50 miles with 2,500 ft of climbing; easier and off-road days too."
+    }
+  },
+  {
+    "slug": "longmont-co-svcg-spin-into-the-setting-sun",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-09-15",
+    "evidence": "St Vrain Chain Gang's Meetup group page states 'In the spring-summer season (March through September) we offer 2 rides per week (Tuesday and Saturday)', confirming the Tuesday ride runs March through September; the last 2026 instance was Sep 15 and the ride is on its expected winter break (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.meetup.com/st-vrain-chain-gang/"
+    ]
+  },
+  {
+    "slug": "los-altos-ca-alto-velo-coffee-and-cake-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-08",
+    "evidence": "Alto Velo's Coffee & Cake Ride page shows a post dated Nov 3, 2026 for 'Coffee & Cake Ride November 8 2026: Alice's', and an Oct 13 post for the Oct 18 Saratoga ride; the schedule (one Sunday per month, gather 9:00 am, roll 9:10 am) is unchanged (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.altovelo.org/coffee-cake-ride"
+    ]
+  },
+  {
+    "slug": "los-angeles-ca-ciclavia-heart-of-la",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-10-11",
+    "evidence": "CicLAvia's events page shows the organization is active (CicLAvia—Pasadena on Nov 15, 2026 is the next open-streets event); Heart of LA last ran Sun Oct 11, 2026 as the 68th edition; no next Heart of LA date is posted yet, consistent with its irregular schedule (fetched Nov 23, 2026).",
+    "sources": [
+      "https://ciclavia.org/events/"
+    ]
+  },
+  {
+    "slug": "los-angeles-ca-la-wheelmen-triple-dipper-thursday",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "LA Wheelmen's Upcoming Rides page still lists 'Triple Dipper South Bay Ride · Every Thursday, 8:30 a.m. (unless otherwise specified). Start Location: Ballona Creek Bridge.' alongside current Sunday rides dated Nov 22 and Nov 26, 2026 (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.lawheelmen.org/upcoming-rides/"
+    ]
+  },
+  {
+    "slug": "los-angeles-ca-los-angeles-critical-mass",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "LA Critical Mass homepage shows blog posts dated Nov 16, 19 and 23, 2026, an upcoming Nov 27 ride to North Hollywood, and the footer 'Ride every last Friday of Every Month · Corner of Western & Wilshire'; the directions page confirms 'We meet at 6:30 PM and ride out at 7:29 PM' (fetched Nov 23, 2026).",
+    "sources": [
+      "https://la-criticalmass.org/",
+      "https://la-criticalmass.org/directions-and-parking/"
+    ]
+  },
+  {
+    "slug": "manchester-nh-qc-bike-sunday-morning-over-easy",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-10-25",
+    "evidence": "QC Bike's group-rides page now reads 'Sunday Morning Over Easy rides leave from QC Bike, 803 Elm St.' (changed from 35 Elm St.); the last 2026 date listed is Oct 25; the season runs May through October as before (fetched Nov 23, 2026).",
+    "sources": [
+      "https://qcbike.org/group-rides/"
+    ],
+    "changes": {
+      "start_location": {
+        "name": "QC Bike Collective",
+        "address": "803 Elm St, Manchester, NH 03101"
+      }
+    }
+  },
+  {
+    "slug": "marshfield-ma-southeast-ma-nemba-manic-monday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Southeast MA NEMBA's chapter page lists the Manic Monday Ride for Mon Nov 23, 2026 at 5:30-7:30 pm, Eames Way School, Marshfield, MA (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.nemba.org/chapters/southeast-ma-nemba"
+    ]
+  },
+  {
+    "slug": "matteson-il-mtc3-monday-night-malarkey",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-10-05",
+    "evidence": "MTC3's events page shows no upcoming rides and labels the October 10, 2026 event 'SEASON FINALE'; the ICS calendar feed is empty (fetched Nov 23, 2026).",
+    "sources": [
+      "https://majortaylorchicago.com/events/"
+    ],
+    "status_note": "MTC3 ran the Season Finale on Oct 10, 2026; the events page now lists no upcoming rides. No 2027 season start date has been posted."
+  },
+  {
+    "slug": "mckinney-tx-bike-mart-saturday-abc-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Bike Mart's group rides page loads but all ride events are shown only via a JavaScript (Elfsight) widget; no specific McKinney Saturday ride schedule is visible in the static page. The McKinney store is confirmed open. Try calling the store at 469-625-1700 or checking @bikemartstores on Instagram."
+  },
+  {
+    "slug": "mechanicsburg-pa-hbc-ua-friendship-park-rides",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-09-29",
+    "evidence": "HBC's November 2026 calendar shows no Friendship Park rides; Carlisle Flex, Silver Spokes and Mechanicsburg Weekend rides fill the schedule with no Friendship Park events listed (fetched Nov 23, 2026).",
+    "sources": [
+      "https://harrisburgbicycleclub.org/content.aspx?page_id=4001&club_id=750678"
+    ],
+    "status_note": "No Friendship Park rides appear on the HBC November 2026 calendar. The last ride was Sept 29, 2026 (labeled 'earlier start final ride'). Return date has not been posted."
+  },
+  {
+    "slug": "mexico-city-mx-chirimixquics-bike-friday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "La Silla Rota (the only source) is behind a Cloudflare challenge and returns 403. No other page or social channel for Chirimixquic's Bike was found. No November 2026 listing found anywhere."
+  },
+  {
+    "slug": "mexico-city-mx-ciclopolis-saturday-rodada",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-21",
+    "evidence": "Ciclópolis's events page (titled Noviembre 2026) lists Saturday rides on Nov 21 and Nov 28, 2026, both meeting at 7:00 am and rolling at 7:10 am from Ciclópolis Coyoacán (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.ciclopolis.mx/pages/eventos"
+    ]
+  },
+  {
+    "slug": "mexico-city-mx-ciclopolis-tuesday-ajusco-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Ciclópolis's events page lists 'Rodada al Ajusco a la Y' for Tue Nov 24, 2026, meeting at 6:00 am and rolling at 6:10 am from Ciclópolis Coyoacán (fetched Nov 23, 2026).",
+    "sources": [
+      "https://www.ciclopolis.mx/pages/eventos"
+    ]
+  },
+  {
+    "slug": "mexico-city-mx-libertad-en-bici-wednesday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "La Silla Rota (the only source) is behind a Cloudflare challenge and returns 403. The collective was listed as active on a Sunday morning ride in August 2026 (nmas.com.mx, Aug 2). No November 2026 Wednesday evening listing found. No social channels for Libertad en Bici were found."
+  },
+  {
+    "slug": "mexico-city-mx-paseo-de-todos-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL lasillarota.com/temas/movilizaciones-cdmx-48751.html has returned 403 for 6 consecutive watcher runs since Oct 19, 2026. WebFetch retrieved only the site's navigation frame, no ride listings. nmas.com.mx and posta.com.mx daily agenda pages checked for November 2026 do not mention Paseo de Todos. No November 2026 evidence found. The group posts routes on X at @paseodetodos (login required). The last Thursday of November is Nov 26; a person can check x.com/paseodetodos or the chilango.com ride agenda pages for that date."
+  },
+  {
+    "slug": "mexico-city-mx-people-for-bikes-coyoacan-tuesday-los-dinamos",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL lasillarota.com/temas/movilizaciones-cdmx-48751.html has returned 403 for 6 consecutive watcher runs since Oct 19, 2026. nmas.com.mx daily agenda pages for November 2026 did not list this ride. People for Bikes posts rides on Twitter at @PFBMéxico (login required). The alternating-Tuesday pattern puts the next Coyoacán edition on Nov 24, 2026; a person can check the SSC CDMX daily agenda at nmas.com.mx or lasillarota.com for that date, or call the shop at Av. Miguel Ángel de Quevedo 217 (phone via chilango.com: 5264 1457)."
+  },
+  {
+    "slug": "mexico-city-mx-people-for-bikes-polanco-tuesday-la-venta",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL lasillarota.com/temas/movilizaciones-cdmx-48751.html has returned 403 for 6 consecutive watcher runs since Oct 19, 2026. nmas.com.mx daily agenda pages for November 2026 did not list this ride by name. People for Bikes posts rides on Twitter at @PFBMéxico (login required). The alternating-Tuesday pattern puts the next Polanco edition on Nov 10 and Nov 24, 2026; a person can check the SSC CDMX daily agenda at nmas.com.mx or lasillarota.com for those dates, or call the shop at Goldsmith 53, Polanco."
+  },
+  {
+    "slug": "mexico-city-mx-people-for-bikes-roma-wednesday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL lasillarota.com/temas/movilizaciones-cdmx-48751.html has returned 403 for 6 consecutive watcher runs since Oct 19, 2026. nmas.com.mx daily agendas for November 2026 Wednesdays did not list People for Bikes Roma. People for Bikes posts rides on Twitter at @PFBMéxico (login required). A person can check the SSC CDMX daily agenda at nmas.com.mx or lasillarota.com on any Wednesday morning, or call the Roma store at Zacatecas 55 (chilango.com lists 5264 1457)."
+  },
+  {
+    "slug": "mexico-city-mx-rueda-libre-thursday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL lasillarota.com/temas/movilizaciones-cdmx-48751.html has returned 403 for 6 consecutive watcher runs since Oct 19, 2026. A September 10, 2026 nmas.com.mx article confirmed the ride from Casa Rueda Libre, but no October or November 2026 evidence is accessible. The collective has no website in the record; their channels (not found in search) would be the alternative. A person can check the SSC CDMX daily agenda at nmas.com.mx or lasillarota.com on any Thursday morning, or search 'Rueda Libre Iztapalapa' on Instagram or Facebook."
+  },
+  {
+    "slug": "middleton-wi-capital-brewery-bike-club-rides",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "capitalbikeclub.org returned a security block (IP-blocked) on Nov 23, 2026. The watcher raised a schedule-text-changed flag today (the page loaded for the watcher at status 200 but its content differs from the Oct–Nov base text). The ride is on seasonal break (May–September season) and no spring 2027 start date has been announced in search results. A person can visit capitalbikeclub.org directly in a browser to see what changed and confirm the 2027 season start."
+  }
+]

@@ -1,0 +1,76 @@
+[
+  {
+    "slug": "huntington-beach-ca-hb-velo-sunday-shop-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "hbvelocyclery.net returns 403 (bot wall since Oct 5, 2026). WebFetch also returns 403. The shop says current ride updates go on its Facebook page. Try facebook.com/HBVeloCyclery or call the shop at (714) 587-9043."
+  },
+  {
+    "slug": "hyannis-ma-sea-sports-wednesday-night-lights-mtb",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Sea Sports' group-rides page (fetched Nov 23, 2026) no longer lists the Wednesday Night Lights MTB \u2014 only the Saturday Coffee Cruise is listed under Group Rides. The shop directs people to its Strava club and Facebook for other ride notices. The ride was scheduled to start Oct 28, 2026, but is not on the website now. Check the Sea Sports Cycling Strava club (strava.com/clubs/sea-sports-cycling, login required) or Sea Sports Cyclery on Facebook for current status."
+  },
+  {
+    "slug": "knoxville-tn-two-bikes-bike-party",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-09-25",
+    "evidence": "Two Bikes' community page (fetched Nov 23, 2026) lists the Sep 25 Bike Party (Tanh's Shaved Ice Edition, 6:00 PM from Two Bikes, party pace) and an Oct 30 Halloween Bluff Ride described as 'in lieu of a Bike Party this week,' confirming the monthly last-Friday pattern continues.",
+    "sources": [
+      "https://twobikes.org/community"
+    ]
+  },
+  {
+    "slug": "knoxville-tn-two-bikes-coffee-outside",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-08",
+    "evidence": "Two Bikes' community page (fetched Nov 23, 2026) lists Coffee Outside for Sunday Nov 8, 2026 at 9:00 AM from Two Bikes, 118 S. Central St., with the same description: wheels down at 9:15 am, ride to Gay St. bridge.",
+    "sources": [
+      "https://twobikes.org/community"
+    ]
+  },
+  {
+    "slug": "lansing-mi-tcba-monday-night-b-ride-old-town-dewitt",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-10-26",
+    "evidence": "TCBA's ClubExpress calendar (fetched Nov 23, 2026) shows no Monday Night B Rides after Oct 26, 2026 \u2014 the last of four listed October dates. The calendar now shows only a Nov 24 mountain bike ride, the Dec 13 holiday party, board meetings, and 2027 touring events.",
+    "sources": [
+      "http://www.biketcba.org/content.aspx?page_id=4001&club_id=604795&action=cira&vm=Future&sif=0"
+    ],
+    "status_note": "Club calendar shows no Monday Night B Rides after Oct 26, 2026. The 2026 season ended in late October. No 2027 season dates are posted yet. Check biketcba.org in spring for the new season schedule."
+  },
+  {
+    "slug": "lisle-il-elmhurst-bicycle-club-lisle-early-bird",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-10-28",
+    "evidence": "Elmhurst Bicycle Club's ClubExpress calendar (fetched Nov 23, 2026) shows no Lisle Early Bird rides after Oct 28, 2026, the last date in the original listing. November and December show other club rides at 9\u201310 AM, not the 5:30 AM early bird.",
+    "sources": [
+      "https://elmhurstbc.clubexpress.com/content.aspx?page_id=4001&club_id=695056&action=cira&vm=Future&sif=0"
+    ],
+    "status_note": "The EBC calendar shows no Lisle Early Bird rides after Oct 28, 2026. The ride was listed only through that date. No 2027 season dates posted yet. Check elmhurstbc.clubexpress.com in spring."
+  },
+  {
+    "slug": "london-gb-ealing-cycling-campaign-womens-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-22",
+    "evidence": "Ealing Cycling Campaign's events page (ealingcycling.org.uk/p/events.html, fetched Nov 23, 2026 via WebFetch) lists Women of ECC rides for Sunday Nov 22, Sunday Nov 29, and Sunday Dec 13, 2026, from Ealing Town Hall with booking through the LCC website.",
+    "sources": [
+      "https://www.ealingcycling.org.uk/p/events.html"
+    ]
+  },
+  {
+    "slug": "london-gb-richmond-park-velo-saturday-new-members-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-21",
+    "evidence": "Richmond Park Velo's Meetup page (fetched Nov 23, 2026) shows 'Windsor - all levels' on Sat Nov 21 at 10:20 AM GMT (past) and 'New Members RP Park Laps & Cobham loop' listed for Sat Nov 28 at 9:20 AM GMT (upcoming), confirming Saturday rides at 9:20 AM are running.",
+    "sources": [
+      "https://www.meetup.com/richmond-park-velo-cycling-club/"
+    ]
+  }
+]

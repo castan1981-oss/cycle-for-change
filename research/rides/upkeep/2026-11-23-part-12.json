@@ -1,0 +1,88 @@
+[
+  {
+    "slug": "london-gb-richmond-park-velo-wednesday-evening-laps",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Richmond Park Velo's weekly-rides page lists 'Wednesdays 6:20pm – Meet the Members Laps – hosted by Nic and Marelise' with no seasonal caveat; the club Meetup now shows only morning midweek rides and a Saturday park laps, so the club page is the authoritative source (fetched Nov 23, 2026).",
+    "sources": ["https://richmondparkvelo.com/weekly-rides/"],
+    "changes": {
+      "time_local": "6:20 pm",
+      "start_hhmm": "18:20",
+      "schedule": "Wednesdays at 6:20 pm: laps of Richmond Park in level groups with ride leaders, then coffee at Colicci's café or a local pub. Members sign up via Meetup; the meeting point within the park is shown to members.",
+      "refresh": {
+        "method": "static-page",
+        "watch_url": "https://richmondparkvelo.com/weekly-rides/",
+        "feed_url": null,
+        "notes": "The club's weekly-rides page is the authoritative schedule. The Meetup group (https://www.meetup.com/richmond-park-velo-cycling-club/) lists specific event dates but its iCal feed returns 403."
+      }
+    }
+  },
+  {
+    "slug": "london-gb-richmond-scenic-cycling-tuesday-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-17",
+    "evidence": "Richmond Scenic Cycling's Meetup shows upcoming Tuesday rides on Nov 24 and Dec 1, 2026 at 10:00 AM GMT; past rides on Nov 10 and Nov 17 were also at 10:00 AM GMT, while October rides were at 9:30 AM BST — the ride shifts from 9:30 AM in summer (BST) to 10:00 AM in winter (GMT) when UK clocks change (fetched Nov 23, 2026).",
+    "sources": ["https://www.meetup.com/richmond-scenic-cycling/"],
+    "changes": {
+      "time_local": "10:00 am",
+      "start_hhmm": "10:00",
+      "schedule": "Tuesdays, 10:00 am GMT in winter (from late October); 9:30 am BST in summer (from late March). Start shown to Meetup members. Usually about 50 miles with 2,500 ft of climbing; easier and off-road days too."
+    }
+  },
+  {
+    "slug": "longmont-co-svcg-spin-into-the-setting-sun",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-09-15",
+    "evidence": "St Vrain Chain Gang's Meetup group page states 'In the spring-summer season (March through September) we offer 2 rides per week (Tuesday and Saturday)', confirming the Tuesday ride runs March through September; the last 2026 instance was Sep 15 and the ride is on its expected winter break (fetched Nov 23, 2026).",
+    "sources": ["https://www.meetup.com/st-vrain-chain-gang/"]
+  },
+  {
+    "slug": "los-altos-ca-alto-velo-coffee-and-cake-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-08",
+    "evidence": "Alto Velo's Coffee & Cake Ride page shows a post dated Nov 3, 2026 for 'Coffee & Cake Ride November 8 2026: Alice's', and an Oct 13 post for the Oct 18 Saratoga ride; the schedule (one Sunday per month, gather 9:00 am, roll 9:10 am) is unchanged (fetched Nov 23, 2026).",
+    "sources": ["https://www.altovelo.org/coffee-cake-ride"]
+  },
+  {
+    "slug": "los-angeles-ca-ciclavia-heart-of-la",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-10-11",
+    "evidence": "CicLAvia's events page shows the organization is active (CicLAvia—Pasadena on Nov 15, 2026 is the next open-streets event); Heart of LA last ran Sun Oct 11, 2026 as the 68th edition; no next Heart of LA date is posted yet, consistent with its irregular schedule (fetched Nov 23, 2026).",
+    "sources": ["https://ciclavia.org/events/"]
+  },
+  {
+    "slug": "los-angeles-ca-la-wheelmen-triple-dipper-thursday",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "LA Wheelmen's Upcoming Rides page still lists 'Triple Dipper South Bay Ride · Every Thursday, 8:30 a.m. (unless otherwise specified). Start Location: Ballona Creek Bridge.' alongside current Sunday rides dated Nov 22 and Nov 26, 2026 (fetched Nov 23, 2026).",
+    "sources": ["https://www.lawheelmen.org/upcoming-rides/"]
+  },
+  {
+    "slug": "los-angeles-ca-los-angeles-critical-mass",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "LA Critical Mass homepage shows blog posts dated Nov 16, 19 and 23, 2026, an upcoming Nov 27 ride to North Hollywood, and the footer 'Ride every last Friday of Every Month · Corner of Western & Wilshire'; the directions page confirms 'We meet at 6:30 PM and ride out at 7:29 PM' (fetched Nov 23, 2026).",
+    "sources": ["https://la-criticalmass.org/", "https://la-criticalmass.org/directions-and-parking/"]
+  },
+  {
+    "slug": "manchester-nh-qc-bike-sunday-morning-over-easy",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-10-25",
+    "evidence": "QC Bike's group-rides page now reads 'Sunday Morning Over Easy rides leave from QC Bike, 803 Elm St.' (changed from 35 Elm St.); the last 2026 date listed is Oct 25; the season runs May through October as before (fetched Nov 23, 2026).",
+    "sources": ["https://qcbike.org/group-rides/"],
+    "changes": {
+      "start_location": {
+        "name": "QC Bike Collective",
+        "address": "803 Elm St, Manchester, NH 03101"
+      }
+    }
+  }
+]

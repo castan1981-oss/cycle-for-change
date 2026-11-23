@@ -1,0 +1,61 @@
+[
+  {
+    "slug": "albuquerque-nm-nmts-start-the-week-rite-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "NMTS's weekly rides page lists the Start the Week Rite Ride for Mon Nov 23, 2026 (4th Monday) at 10:00 AM, 13 mph, 11 miles average; the 'last ride till next spring' note on the same page belongs to the Thursday East Mountain Ride, not this one (fetched Nov 23, 2026).",
+    "sources": ["https://www.nmts.org/displayWeekly.php"],
+    "changes": {
+      "distance_miles": 11,
+      "visitor_notes": "Start location changes each month; check nmts.org the week before for the current route and start. Start time is 10:00 am year-round.",
+      "description": "A monthly easy-pace ride of about 11 miles on roads and trails in the Albuquerque area, led by Tom Sullivan. It began as a birthday ride for the club treasurer in 2013. The route and start location vary each month; check nmts.org for the current week's details."
+    }
+  },
+  {
+    "slug": "albuquerque-nm-nmts-sunday-bosque-trail-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "NMTS's weekly rides page lists the Sunday Bosque Trail at 9:00 AM from the Open Space Shining River Parking Area, same day, time and start as before; the 'last ride till next spring' note on the page belongs to the Thursday East Mountain Ride, not this one (fetched Nov 23, 2026).",
+    "sources": ["https://www.nmts.org/displayWeekly.php"]
+  },
+  {
+    "slug": "fairfax-ca-marin-cyclists-fairfax-to-point-reyes-station",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-21",
+    "evidence": "Marin Cyclists' calendar shows Fairfax to Pt Reyes Station Recurring Ride (38/any pace) on Nov 21, Nov 28 and Dec 5, 2026; the 'CANCELED' on Nov 21 belongs to the Morgan Territory Loop (a different ride), not the Fairfax ride (fetched Nov 23, 2026).",
+    "sources": ["https://marincyclists.com/content.aspx?page_id=4001&club_id=525458"]
+  },
+  {
+    "slug": "queen-creek-az-santan-shredders-wednesday-night-roll",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Meetup group shows 0 upcoming events; the previous series ran through Oct 28, 2026 and no new series has been posted. The Santan Shredders website still says 'weekly events on Wednesday evenings' but points to Meetup for details."
+  },
+  {
+    "slug": "arlington-va-nova-cbg-tuesday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "NoVA CBG's Meetup ICS feed has 20 upcoming events (Nov 26–Mar 2027) but none are Tuesday Night Rides; all visible upcoming rides are special holiday events (Thanksgiving Trek, Holiday Boat Parade, O' Christmas Tree Ride). No regular Tuesday schedule is posted for November–December."
+  },
+  {
+    "slug": "bowie-md-jafe-cycling-fridays-at-jafes",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Jafe Cycling's Meetup ICS feed shows no Friday rides in upcoming events; all upcoming rides are Thursday and Sunday. The last confirmed Friday ride was Oct 1, 2026. The Friday ride may have shifted to Thursday or ended for the season."
+  },
+  {
+    "slug": "calgary-ca-slow-and-steady-hikers-friday-evening-bike-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Slow and Steady Hikers Meetup group shows 0 upcoming events, and the ICS feed's 10 upcoming events are all hiking events with no bike rides. The watch page (the Oct 2 event) is still accessible but shows no future dates."
+  },
+  {
+    "slug": "cold-spring-ky-cincinnati-cycle-club-aterhamtning-thursday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Cincinnati Cycle Club's future events calendar lists November and December Thursday rides but none at East Alexandria Pike and Route 27, Cold Spring, KY; Återhämtning's last listed date was Oct 29, 2026 and the ride's start time went missing from the calendar on Nov 2."
+  }
+]

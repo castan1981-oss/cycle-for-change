@@ -1,0 +1,71 @@
+[
+  {
+    "slug": "costa-mesa-ca-the-unlikely-cyclist-wednesday-womens-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "The shop's events page for November 2026 lists Saturday Women's Group Rides (Nov 7, 14, 21, 28) at 7:45–8:00 am from the shop and TUC ZWIFT Meetups on Wednesdays (Nov 4, 11, 18) at 5:45 pm; no outdoor Wednesday group rides are listed (fetched Nov 23, 2026).",
+    "sources": ["https://www.theunlikelycyclist.com/new-events"],
+    "changes": {
+      "name": "The Unlikely Cyclist Women's Group Ride",
+      "schedule": "Saturdays, most weeks, outdoor Women's Group Ride at 7:45–8:00 am from the shop. Wednesday evenings (5:45 pm) are ZWIFT virtual meetups at the shop.",
+      "days": ["sat"],
+      "time_local": "8:00 am",
+      "start_hhmm": "08:00",
+      "frequency": "weekly",
+      "refresh": {
+        "notes": "Shop posts each Saturday ride a week ahead on the events page. Wednesday slots are now ZWIFT meetups, not outdoor rides."
+      }
+    }
+  },
+  {
+    "slug": "dallas-tx-dbc-second-saturday-coffee-social-and-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-14",
+    "evidence": "The Dallas Bicycle Coalition social rides calendar lists 'DBC Second Saturday Coffee Social and Ride' on November 14, 2026 (the second Saturday) at 9:00 am CST; event data shows monthly recurrence starting January 10, 2026 (fetched Nov 23, 2026).",
+    "sources": ["https://dallasbicyclecoalition.org/social-rides/"]
+  },
+  {
+    "slug": "dallas-tx-the-meteor-womens-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-11",
+    "evidence": "The Dallas Bicycle Coalition social rides calendar lists 'The Meteor Womens Ride' on November 11, 2026 at 6:00 pm CST; event data shows second-Wednesday monthly recurrence (RRULE BYDAY=+2WE) through December 2026 (fetched Nov 23, 2026).",
+    "sources": ["https://dallasbicyclecoalition.org/social-rides/"]
+  },
+  {
+    "slug": "eastcote-gb-breeze-hillingdon-sunday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-22",
+    "evidence": "The Breeze Hillingdon group page on Let's Ride (British Cycling) lists 'Chiswick House and Gardens' as a future ride on Sunday 29th November 2026 at 9:00am from HA5 1RL; past rides show Sunday morning rides from HA5 1RL in Oct and Nov 2026 (fetched Nov 23, 2026).",
+    "sources": ["https://www.letsride.co.uk/groups/breeze-hillingdon"]
+  },
+  {
+    "slug": "eugene-or-gears-wtnb-wednesday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The GEARs November schedule page shows no WTNB Wednesday evening ride; the October schedule had it on Oct 14 at 6:00 pm but the November schedule replaced detailed ride listings with Gatherist registration instructions. No Wednesday evening rides appear in November. Check eugenegears.org for the December+ Gatherist schedule and the club's Instagram @eugeneGEARs."
+  },
+  {
+    "slug": "grand-ledge-mi-tcba-saturday-z-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The TCBA upcoming calendar shows the last Grand Ledge Z Ride was Oct 31, 2026; no future Grand Ledge Z Ride dates appear through 2027. Other TCBA Z rides at different locations (West Saginaw Meijer, DeWitt Meijer) continue in November. Check biketcba.org in spring for the 2027 season schedule."
+  },
+  {
+    "slug": "harrisburg-pa-hbc-owens-sunday-sociable",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Owen's Sunday Sociable last appeared on the HBC calendar in October 2026 (Oct 4, 11, 18; Oct 25 canceled); the HBC upcoming events calendar through 2027 shows no future dates for this ride. Check the HBC calendar at harrisburgbicycleclub.org in spring."
+  },
+  {
+    "slug": "huntington-beach-ca-hb-velo-coffee-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-07-28",
+    "evidence": "The shop's website states 'Wednesday & Friday Morning Coffee Ride · Meet at the Shop · Roll-Out @ 8:30 am SHARP · ~25 miles · 15mph average pace'; note that the page directs to the shop's Facebook for the most current updates (fetched Nov 23, 2026).",
+    "sources": ["https://hbvelocyclery.net/"]
+  }
+]

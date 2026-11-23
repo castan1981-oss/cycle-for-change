@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "la-crosse-wi-smiths-bike-shop-tnwc-tuesday-night-world-champs",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-10-27",
+    "evidence": "Smith's Bike Shop's group rides page (smithsbikes.com/group-bike-rides/) lists TNWC at Tuesday 5:30 pm with no seasonal caveat; shop calendar had entries through Oct 27, 2026 (fetched Nov 23, 2026).",
+    "sources": ["https://smithsbikes.com/group-bike-rides/"]
+  },
+  {
+    "slug": "lancaster-pa-lbc-tuesday-training-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "LBC Meetup shows 27 upcoming events but no Tuesday Training Rides; ICS feed has 10 events, none are Tuesday Training Rides. Last listed date was Oct 27, 2026 at 5:30 PM EDT. Check the LBC Meetup group (meetup.com/lancaster-bicycle-club) for spring 2027 listings."
+  },
+  {
+    "slug": "lancaster-pa-lbc-wednesday-breakfast-ride",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "LBC Meetup ICS feed lists 'Wednesday Late Mornings Brunch Rides' on Wed Nov 25 and Dec 2, 2026 at 11:00 AM from 2883 Weaver Rd; the event description says 'As the mornings grow colder it is time to ride later in the mornings' (fetched Nov 23, 2026).",
+    "sources": ["https://www.meetup.com/lancaster-bicycle-club/", "https://www.meetup.com/lancaster-bicycle-club/events/ical/"],
+    "changes": {
+      "time_local": "11:00 am",
+      "start_hhmm": "11:00",
+      "schedule": "Every Wednesday; 11:00 am in late fall and winter, 9:00 am in warmer months; from Manheim Township Athletic Complex. Casual pace, variable distance, food stop.",
+      "refresh": {
+        "watch_url": "https://www.meetup.com/lancaster-bicycle-club/",
+        "feed_url": "https://www.meetup.com/lancaster-bicycle-club/events/ical/"
+      }
+    }
+  },
+  {
+    "slug": "lihue-hi-kauai-path-bikes-on-rice",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Kauai Path's event page (the Sept 12 watch URL) no longer lists future dates; the Nov 14 ride has passed and no Dec 2026 date has been posted. The kauaipath.org homepage shows no upcoming events. Check kauaipath.org for the December event (expected second Saturday, Dec 12). The watch URL should be updated to a stable series page when one is posted."
+  },
+  {
+    "slug": "long-beach-ca-sundazies-ftwnb-sunday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Strava event page shows only the past Sept 27, 2026 event; the Strava club page (strava.com/clubs/1090056) requires login. No public website or calendar found. Try logging into the Strava club page or searching Instagram for the FTWNB Cycling Collective."
+  },
+  {
+    "slug": "macungie-pa-lvcc-a-sunday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "LVCC Meetup events page shows 0 upcoming events; ICS feed has 10 club events but no A Sunday Ride. Last listed A Sunday Ride was Nov 15, 2026. The schedule notes rides are posted 'while the weather holds.' Check the LVCC Meetup (meetup.com/lehigh-valley-cycling-club) for spring 2027 postings."
+  },
+  {
+    "slug": "milford-oh-bishops-thursday-casual-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Cincinnati Cycle Club's Casual and Beginner Rides page lists the Thursday Bishop's Casual Ride at Thursdays 6:15 PM from Bishop's Bicycles, 313 Main St, Milford with no end date or seasonal caveat (fetched Nov 23, 2026).",
+    "sources": ["https://www.cincinnaticycleclub.org/content.aspx?page_id=22&club_id=772752&module_id=337793"]
+  },
+  {
+    "slug": "monument-co-mmb-tuesday-ride",
+    "outcome": "seasonal-break",
+    "checked_on": "2026-11-23",
+    "evidence": "Monument Mountain Bikers' Meetup page (fetched Nov 23, 2026) says the regular ride series runs 'May thru October'; November through April rides are weather-permitting and posted ad hoc.",
+    "sources": ["https://www.meetup.com/monument-mountain-bikers/"],
+    "status_note": "Regular Tuesday series runs May through October. The Meetup page says November through April rides are weather-permitting with some fat bike rides posted as conditions allow. Back in May."
+  }
+]

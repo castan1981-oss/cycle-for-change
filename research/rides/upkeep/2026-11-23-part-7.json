@@ -1,0 +1,61 @@
+[
+  {
+    "slug": "san-diego-ca-moment-bicycles-saturday-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Moment Bicycles rides page states 'We are currently riding from the shop on Tuesday mornings, Thursday mornings, Saturday mornings and Sunday mornings' with 'Point Loma Saturdays 8:30am' (fetched Nov 23, 2026).",
+    "sources": ["https://www.momentbikes.com/events/moment-san-diego-bike-rides-pg369.htm"]
+  },
+  {
+    "slug": "san-diego-ca-shewolves-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL (SD Magazine article) now returns 403; host's own channel is Instagram only. The article confirmed Thursday 7:15 pm from Bea Evenson Fountain in its last OK load (Nov 9, 2026) but no dated 2026 event from the host's own page. Check @sd_shewolves on Instagram."
+  },
+  {
+    "slug": "birmingham-al-le-tour-de-ham",
+    "outcome": "changed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "Le Tour de Ham's Strava club page (strava.com/clubs/332778, 459 members) states 'Every Tuesday evening at 6:00 - Roll at 6:15 (Check Facebook Group for current starting location)' (fetched Nov 23, 2026).",
+    "sources": ["https://www.strava.com/clubs/332778"],
+    "changes": {
+      "refresh": {
+        "watch_url": "https://www.strava.com/clubs/332778",
+        "method": "strava-club",
+        "notes": "Club description lists the Tuesday 6:00/6:15 schedule. Start point varies; check the Facebook group at facebook.com/groups/309449166066745."
+      }
+    }
+  },
+  {
+    "slug": "brooklyn-ny-dawn-patrol-prospect-park",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL (Leg Day Substack article) has returned 403 for 8 consecutive runs since Oct 5. Instagram @dawnpatrol.pp exists but requires a login. No 2026 search results found. Check @dawnpatrol.pp on Instagram or the Continental Ostroy team's channels."
+  },
+  {
+    "slug": "brooklyn-ny-nightcap-monday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL (Queer on the Street Substack) has returned 403 for 8 consecutive runs since Oct 5. Season is April–October; November is off-season, but no source confirms the 2026 season ran or that the ride resumes in 2027. Check @nightcap_brooklyn on Instagram."
+  },
+  {
+    "slug": "columbia-sc-cola-wtfnb-cyclists-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Cola Town Bikes homepage (schedule-text-changed flag) now shows only shop news; no ride schedule is visible. The city of Columbia's calendar showed a matching ride on May 6, 2026 (passed, labeled as a National Bike Month event). No post-May 2026 event found. Check @Cola_WTFNB_Cyclist on Instagram or call Cola Town Bike Collective at 803-216-5106."
+  },
+  {
+    "slug": "emporia-ks-babes-on-bikes-wednesday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL (visitemporia.com) returned 403 for 8 runs; loaded with curl today and still mentions 'follow the Babes on Bikes Facebook page for updates on their weekly ride' but gives no specific day or time. Check the Babes on Bikes Emporia Facebook page at facebook.com/BabesOnBikesEmporia."
+  },
+  {
+    "slug": "nashville-tn-music-city-dope-pedalers-friday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL (Nashville Scene article) returns 429 since Nov 9; the article text that loaded did not contain the ride schedule. Group confirmed active in spring 2026 (Tour de Nash training series at Frankie Pierce Park, Apr–May 2026) but no current dated source for the weekly Friday 6 pm ride. Check @musiccitydopepedalers on Instagram."
+  }
+]

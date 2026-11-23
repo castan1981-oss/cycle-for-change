@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "indianapolis-in-bike-line-tuesday-thursday-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL (thebikeline.com/about/group-rides-pg439.htm) has returned 404 since Sept 30, 2026. The shop's new /pages/local-rides page lists only self-guided RideWithGPS routes, no group ride schedule. No other public non-login source found. Check @bikelineindiana on Instagram or call the Broad Ripple shop at (317) 253-2611 to ask if Tuesday and Thursday rides still run."
+  },
+  {
+    "slug": "kailua-kona-hi-saturday-recreational-north-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL (hawaiicyclingclub.com/weekly-rides.html) returned 404 as of Nov 16, 2026; it was last OK Nov 9. The main site (hawaiicyclingclub.com) loads but has no weekly-rides page at any alternate path tried. No other public non-login source found for this specific ride. Check @hawaiicyclingclub on Instagram or the HCC Facebook group."
+  },
+  {
+    "slug": "washington-dc-dc-bike-party",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Watch URL's domain (touchgrassdc.com) has failed DNS resolution since Oct 26, 2026 (5 consecutive runs). dcbikeparty.com returned no content (SSL certificate expired). No other accessible non-login source found. Check @dcbikeparty on Instagram or the DC Bike Party Facebook page (facebook.com/DCBikeParty)."
+  },
+  {
+    "slug": "albuquerque-nm-nmts-saturday-easy-group-ride",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "evidence": "NMTS's weekly rides page still lists the Saturday Easy Group Ride as \"RESUMES March 6, 2027\" at 9:00 am from the Alameda Open Space Parking Lot (fetched Nov 23, 2026). The end-words flag was triggered by the separate East Mountain Ride (Thursday) saying \"last ride till next spring\", not by the Saturday Easy Group Ride.",
+    "sources": ["https://www.nmts.org/displayWeekly.php"]
+  },
+  {
+    "slug": "tucker-ga-atlptn-tucker",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Host domain atlptn.com has failed DNS resolution since Nov 9, 2026 (3 consecutive runs). sadlebred.com (a secondary source, updated Nov 22, 2026) still lists the Tucker ride on Saturdays at 9:00 am DST / 10:00 am standard time from downtown Tucker, with no note of cancellation. The host's page cannot be confirmed from a primary source. Check the Atlanta Peloton Facebook page (facebook.com/ATLPTN) or Instagram (@theatlantapeloton)."
+  },
+  {
+    "slug": "vinings-ga-atlptn-beyond-six-flags",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "Host domain atlptn.com has failed DNS resolution since Nov 9, 2026 (3 consecutive runs). sadlebred.com (a secondary source, updated Nov 22, 2026) still lists Beyond Six Flags on Saturdays at 9:00 am (8:30 am June through August) from Atlanta Cycling Vinings, with no note of cancellation. The host's page cannot be confirmed from a primary source. Check the Atlanta Peloton Facebook page (facebook.com/ATLPTN) or Instagram (@theatlantapeloton)."
+  },
+  {
+    "slug": "woodbury-mn-freewheel-bike-monday-night-ride",
+    "outcome": "unreachable",
+    "checked_on": "2026-11-23",
+    "note": "The Strava club event (3480957573192654492) was deleted as of Oct 5, 2026 and now redirects to the club page. freewheelbike.com/events/group-rides-pg1040.htm says only \"Find our rides on Strava\" with a 2025 waiver reference, no specific ride schedule. No other non-login source found. Call the Freewheel Woodbury shop or check the Freewheel Bike Strava club (strava.com/clubs/470025) for a current event listing."
+  },
+  {
+    "slug": "bethpage-ny-massapequa-park-bicycle-club-rides",
+    "outcome": "confirmed",
+    "checked_on": "2026-11-23",
+    "last_seen": "2026-11-22",
+    "evidence": "MPBC's ride calendar lists rides through Nov 22, 2026, with Tue/Thu/Sat/Sun rides still running from Bethpage Library and Borella Field; individual route cancellations (\"Sea Cliff Canceled\", \"TBD Canceled\") are for specific outings, not the club schedule (fetched Nov 23, 2026).",
+    "sources": ["https://www.massparkbikeclub.org/ride-calendar/"]
+  }
+]
