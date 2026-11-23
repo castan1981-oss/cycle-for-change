@@ -1219,6 +1219,13 @@ in at first is him and John; it links his TrainingPeaks plan, his rides off his 
   one Strava number on the page is the site's own count from `/api/strava`.
 - Storage: Netlify Blobs, store `training` (previews: `training-preview`); the keys are listed at the top of the lib.
   `/privacy/#training` says what's kept; keep the two in step. Tests: `tools/test/training.test.js`.
+- **The training team** (Nov 23, 2026; Robert: "Create a team of specialists, writers, trainers, all of it … We need to
+  design the best. I think this could be an app in the future"): eleven agents in `.claude/agents/` (`training-lead`,
+  `coach-desk`, `athlete-experience`, `coach-experience`, `data-integrations`, `metrics-analyst`, `training-writer`,
+  `privacy-security`, `app-architect`, `training-critic`, `training-lab`; roster in `.claude/agents/README.md`). The bar,
+  the core tasks, the ten-line score and the build order are `research/training/TRAINING.md`; `/training` runs a pass.
+  The product carries a coach's plan; it never makes one, never gives health advice (§4), never borrows another
+  product's named score. The team has no name yet; that's Robert's to give.
 - **Not built:** other riders' accounts, a rider's numbers on a ride page ("Add your ride" on the Nov 23 canvas),
   sending a workout to a bike computer, anything public. Each waits for Robert's word.
 
@@ -1536,3 +1543,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-11-19 — Instagram is @cyclefor_ (Robert renamed the account; it was @cycl_eforchange): every link and mention on the site, the JSON-LD `sameAs`, llms.txt, the function's default, the kit and Fruit Loop tools, the Fruit Loop's spring poster (`spring-2`, the handle repainted on the same ground); the `/cyclefor/` release is `cyclefor-v2` (the DM handle is in its wording). Posts already on Instagram keep the old handle in their pixels. The Netlify env var `INSTAGRAM_HANDLE` is Robert's to change.
 - 2026-11-23 — Ride pages get doors (The route, Who rode it, You run this ride?) and the host's section: fix something, send the route, or take it down ("Take it off the site", kind `remove`, filed like a host update).
 - 2026-11-23 — `/training/`: a private page with its own sign-in for Robert and his coach (two invite links, no sign-up): the day's workout and the week from his TrainingPeaks calendar link, rides dropped from the Garmin file, the coach's note, the next ride on the calendar; `/api/training`, `/privacy/#training`.
+- 2026-11-23 — The training team: eleven specialist agents, the bar (`research/training/TRAINING.md`) and the `/training` command, for the product at `/training/`.

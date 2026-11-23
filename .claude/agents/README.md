@@ -25,6 +25,32 @@ The guide for a rider coming to a town with a bike. One town at a time;
 
 Shared rules: `research/towns/SCOUT-RULES.md`. Field shapes: `data/SCHEMA.md`.
 
+## The training team (Nov 23, 2026)
+
+Robert: "Create a team of specialists, writers, trainers, all of it … built from the ground up … user friendly,
+detail orientated, and links to everything. We need to design the best. I think this could be an app in the future."
+The team owns `cycleforchange.org/training` (CLAUDE.md §8, "Training"). The bar, the core tasks, the score and the
+build order are `research/training/TRAINING.md`; `/training pass | <screen> | check | teardown` runs it
+(`.claude/commands/training.md`). Notes go in `research/training/<date>-<pass>/`. It has no name yet; that's Robert's.
+
+| agent | owns | writes |
+|---|---|---|
+| `training-lead` | the product as one thing: the ranked pass brief, the "not now" list, "For Robert" decisions, the sign-off | `brief.md` |
+| `coach-desk` | that a workout, a week and a block read the way a coach means them; every training claim sourced; the product never prescribes | `coach.md`, `research/training/glossary.md` |
+| `athlete-experience` | the rider's path: today in one look, the week, done to counted, empty and broken states | `athlete.md` + the page |
+| `coach-experience` | the coach's one look, the note, the roster later, the three-minute demo | `coach-view.md`, `coach-demo.md` + the page |
+| `data-integrations` | every pipe and the map of what links to what: the TrainingPeaks feed, ride files, Garmin, workout files out; the Strava rule | `data.md`, `research/training/links.md` |
+| `metrics-analyst` | every number: its rule, unit, source and test; no borrowed scores; the one count stays the site's | `numbers.md`, `research/training/numbers.md` |
+| `training-writer` | every word that isn't the coach's or Robert's: labels, errors, empty states, help, the privacy section | `words.md`, `research/training/words.md` |
+| `privacy-security` | accounts, sessions, stored data, what a coach may see, the outbound allow list, secrets hygiene. Pass or block | `security.md` |
+| `app-architect` | the road to an app: installable web first, the data model, where data lives, costs, decision records | `architecture.md`, `research/training/architecture.md` |
+| `training-critic` | the cold score from screenshots; the honest teardown of the tools riders use now | `critic-before.md`, `critic-after.md`, `research/training/teardown.md` |
+| `training-lab` | the core tasks as scripted tests against a stand-in server; real ride files through the reader; the tests | `lab-before.md`, `lab-after.md` |
+
+The gates it borrows: `brand-ambassador`, `access-speed`, `consent-legal`, `editor`. The rule it keeps above the
+others: the product carries a coach's plan and a rider's own files. It never makes a plan, never gives health
+advice, and never reads Strava beyond the site's one count.
+
 ## The group-ride upkeep (Sept 30, 2026)
 
 `/rides` runs it (`.claude/commands/rides.md`); `tools/RIDES-UPKEEP.md` explains it in plain words.
