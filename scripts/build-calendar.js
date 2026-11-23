@@ -800,4 +800,5 @@ ${pages.map(([u]) => `  <url><loc>${SITE}${u}</loc><lastmod>${data.updated}</las
 </urlset>
 `);
 require("./sitemap-index.js").run();
+require("./build-training.js").run();   // /training/ carries the rides he's doing (Nov 23, 2026)
 console.log(`Built /events/2027/ (+ ${pages.length - 1} short pages): ${events.length} events (${nConf} confirmed, ${nProj} projected, ${nTba} tba), ${retired.length} retired. Data updated ${data.updated}.`);

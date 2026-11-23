@@ -85,6 +85,12 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 [[headers]]
+  for = "/training/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Referrer-Policy = "same-origin"
+
+[[headers]]
   for = "/fruitloop/tally/*"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
@@ -235,6 +241,12 @@
 [[redirects]]
   from = "/api/rsvp"
   to = "/.netlify/functions/rsvp"
+  status = 200
+
+# Nov 23, 2026: /training/, Robert's and his coach's private page (its own sign-in; netlify/functions/training.js).
+[[redirects]]
+  from = "/api/training"
+  to = "/.netlify/functions/training"
   status = 200
 
 # —— Live since 2026-09-18 ——
