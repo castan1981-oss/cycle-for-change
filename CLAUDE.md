@@ -840,6 +840,21 @@ bottom line links all three (`.foot-trust` in chrome.js). When a form, a pull sc
 or a policy changes, change the page the same day and bump its "Updated" date. `/about/` waits for
 Robert's words (the guides' Person bylines point there once it exists).
 
+### Turkey Day ride (`/turkeyday/`, Nov 23, 2026)
+Robert's Thanksgiving ride, Thu, Nov 26, 2026 (his words, Nov 23: "a page that I can share, even if you don't do this
+ride, share what you did do and what you're grateful for"; "meet at the beginning, meet in the middle, come say hi";
+"meet at LUX on central at 6:15 roll out 6:30"). A hand page on apply-chrome.py's list (`index.html`, `turkeyday.css`,
+`turkeyday.js`), noindex, not in a sitemap, nothing links to it: he shares the address himself.
+- The sign (cycle for + "pie." on the plate), 95 miles before pie, the two meet-ups (Lux on Central 6:15, roll 6:30;
+  Tempe Beach Park about 9:00, an estimate and labelled one), his nap line, the route **in his own words only**.
+- **No route line, no GPX, no mile marks, no climbing figure.** The route was stitched in chat from his Strava rides,
+  and Strava data never reaches a public page (§6 Routes, §10). A route goes up only from his own Garmin file.
+- The card maker: what I did, what I'm grateful for, an optional picture and name, drawn on a canvas in the browser
+  (the mark read from the header's own paths). Nothing is sent or stored; there is no form. Without script the form
+  stays hidden and the page says to post it and tag @cyclefor_.
+- After Nov 26: leave it up (the link is on social), and never rewrite it into something it wasn't. Take it off
+  apply-chrome.py's list only if the page goes.
+
 ### Mile-updates email — retired (Oct 9, 2026)
 Robert isn't emailing from the site. The footer signup is gone and `submission-created.js` no longer
 sends a welcome. `email/mile-updates.html` stays as a template only. Old `waitlist` submissions are
@@ -1544,3 +1559,4 @@ two exits; the shapes are on the plan canvas.
 - 2026-11-23 — Ride pages get doors (The route, Who rode it, You run this ride?) and the host's section: fix something, send the route, or take it down ("Take it off the site", kind `remove`, filed like a host update).
 - 2026-11-23 — `/training/`: a private page with its own sign-in for Robert and his coach (two invite links, no sign-up): the day's workout and the week from his TrainingPeaks calendar link, rides dropped from the Garmin file, the coach's note, the next ride on the calendar; `/api/training`, `/privacy/#training`.
 - 2026-11-23 — The training team: eleven specialist agents, the bar (`research/training/TRAINING.md`) and the `/training` command, for the product at `/training/`.
+- 2026-11-23 — `/turkeyday/`: the Thanksgiving ride page (meet at Lux 6:15, roll 6:30, meet in the middle at Tempe Beach Park) with a make-your-card tool that stays in the browser; noindex; no Strava-derived route on it.
