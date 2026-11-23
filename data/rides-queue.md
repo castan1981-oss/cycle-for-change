@@ -1,11 +1,11 @@
-# Rides to re-check — 2026-11-16
+# Rides to re-check — 2026-11-23
 
-Written by `tools/rides-watch.js` from 1430 rides (1430 checked this run, 1110 pages and feeds, 6 min).
+Written by `tools/rides-watch.js` from 1430 rides (1430 checked this run, 1113 pages and feeds, 7 min).
 
-- **Where the rides stand:** fresh 1003 · flagged 427
-- **Pages:** ok 1001 · bot-wall 56 · social 36 · gone 9 · error 8
-- **Proof of life from the hosts' own feeds this week:** 143 rides (ics 119 · candidate 10 · json-ld 9 · strava 5) · new feed candidates: 0
-- **Open flags:** schedule-text-changed 322 · time-missing 112 · unreachable 53 · event-date-past 20 · page-gone 14 · end-words 10 · moved 2 · new this run: schedule-text-changed 39 · page-gone 10 · end-words 9 · time-missing 7 · unreachable 2 · event-date-past 2 · moved 1
+- **Where the rides stand:** fresh 1064 · flagged 366
+- **Pages:** ok 1008 · bot-wall 55 · social 36 · gone 10 · error 4
+- **Proof of life from the hosts' own feeds this week:** 153 rides (ics 128 · json-ld 10 · candidate 10 · strava 5) · new feed candidates: 1
+- **Open flags:** schedule-text-changed 282 · time-missing 92 · unreachable 52 · event-date-past 15 · page-gone 6 · end-words 5 · moved 1 · new this run: schedule-text-changed 40 · time-missing 16 · end-words 5 · event-date-past 5 · unreachable 1
 - **Rider reports waiting:** 0
 
 Work it with `/rides refresh 40` (or the Monday re-check PR). A ride comes off this list when a person re-checks it at its source; see `tools/RIDES-UPKEEP.md`.
@@ -19,254 +19,255 @@ Work it with `/rides refresh 40` (or the Monday re-check PR). A ride comes off t
    - `page-gone` since 2026-11-16: http://www.hawaiicyclingclub.com/weekly-rides.html answers 404
    - watch: http://www.hawaiicyclingclub.com/weekly-rides.html
 3. **red flag** — [DC Bike Party](https://cycleforchange.org/rides/washington-dc-dc-bike-party/) · Washington, DC · [DC Bike Party](https://touchgrassdc.com/groups/DC%20Bike%20Party) · checked 2026-09-15
-   - `page-gone` since 2026-11-02: the host's domain (touchgrassdc.com) hasn't resolved for 4 runs
+   - `page-gone` since 2026-11-02: the host's domain (touchgrassdc.com) hasn't resolved for 5 runs
    - watch: https://touchgrassdc.com/groups/DC%20Bike%20Party
-4. **red flag** — [Thursday Social Ride to Marina del Rey (Beach Cities Cycling Club)](https://cycleforchange.org/rides/manhattan-beach-ca-beach-cities-cycling-club-thursday-social-ride-marina-del-rey/) · Manhattan Beach, CA · [Beach Cities Cycling Club, South Bay](https://www.bcccsb.org/) · checked 2026-10-01
-   - `end-words` since 2026-11-16: "cancelled" near the ride's name: 2026, 7 PM Board Meeting - Members Welcome! · Monthly Ride Leader meeting · Thursday Gravel: CANCELLED · Niteriderz · 15 · 16 · 17 · 18 · 19 · 20 · 21 · Sunday FunDay Ride Up to "Whale Watch" (PV Interpret…
-   - `schedule-text-changed` since 2026-11-16: the schedule text on https://www.bcccsb.org/Ride-Calendar changed
-     - was: "… Coffee, Manhattan Beach · L1, L2, L3, L4 Rides · Monthly Ride Leader meeting · Thursday Gravel: Pedaler's Fork Short Version · Niteriderz · 15 · 16 · 17 · 18 · 19 · 20 · 21 · Sunday FunDay Ride Up to "Whale Watch" (PV Interpretive Center) · Wednesday Running Group · Thursday Gravel: PV Gravel Sho…"
-     - now: "… Coffee, Manhattan Beach · L1, L2, L3, L4 Rides · Nov.10, 2026, 7 PM Board Meeting - Members Welcome! · Monthly Ride Leader meeting · Thursday Gravel: CANCELLED · Niteriderz · 15 · 16 · 17 · 18 · 19 · 20 · 21 · Sunday FunDay Ride Up to "Whale Watch" (PV Interpretive Center) · LA Explorer: White Po…"
-   - watch: https://www.bcccsb.org/Ride-Calendar
-5. **red flag** — [Sunday FunDay Whale Watch Ride (Beach Cities Cycling Club)](https://cycleforchange.org/rides/redondo-beach-ca-beach-cities-cycling-club-sunday-funday-whale-watch/) · Redondo Beach, CA · [Beach Cities Cycling Club, South Bay](https://www.bcccsb.org/) · checked 2026-10-01
-   - `end-words` since 2026-11-16: "cancelled" near the ride's name: 2026, 7 PM Board Meeting - Members Welcome! · Monthly Ride Leader meeting · Thursday Gravel: CANCELLED · Niteriderz · 15 · 16 · 17 · 18 · 19 · 20 · 21 · Sunday FunDay Ride Up to "Whale Watch" (PV Interpret…
-   - `schedule-text-changed` since 2026-11-16: the schedule text on https://www.bcccsb.org/Ride-Calendar changed
-     - was: "e Coffee, Manhattan Beach · L1, L2, L3, L4 Rides · Monthly Ride Leader meeting · Thursday Gravel: Pedaler's Fork Short Version · Niteriderz · 15 · 16 · 17 · 18 · 19 · 20 · 21 · Sunday FunDay Ride Up to "Whale Watch" (PV Interpretive Center) · Wednesday Running Group · Thursday Gravel: PV Gravel Sho…"
-     - now: "Beach Cities Cycling Club South Bay - Ride Calendar · Menu · Log in · Home · About Us · President's Welcome Letter · FAQ · Membership Benefits · Ride Levels Description · Membership Sign Up · 10 Benefits of Joining … · General Info · Getting Ready to Ride · Operating Rules & Policies · Ride Routes …"
-   - watch: https://www.bcccsb.org/Ride-Calendar
-6. **red flag** — [Marin Cyclists Easy Like Sunday Morning](https://cycleforchange.org/rides/san-rafael-ca-marin-cyclists-easy-like-sunday-morning/) · San Rafael, CA · [Marin Cyclists](https://marincyclists.com/) · checked 2026-10-01
-   - `end-words` since 2026-11-16: "cancelled" near the ride's name: ' *Very Hilly (9AM Start) · 13 · Fridays on Paradise (23 miles/1200 feet/Margie/All paces) -- CANCELED · 14 · Big, Little, littlest and Pie-less Pie Rides *Multi levels (DJ, Juan) · 15 · Easy Like Sun
-   - watch: https://marincyclists.com/content.aspx?page_id=4001&club_id=525458
-7. **red flag** — [Tucker (TUK)](https://cycleforchange.org/rides/tucker-ga-atlptn-tucker/) · Tucker, GA · [Atlanta Peloton (ATLPTN)](https://atlptn.com/rides/tucker) · checked 2026-10-01
-   - `page-gone` since 2026-11-16: the host's domain (atlptn.com) hasn't resolved for 2 runs
+4. **red flag** — [NMTS Saturday Easy Group Ride](https://cycleforchange.org/rides/albuquerque-nm-nmts-saturday-easy-group-ride/) · Albuquerque, NM · [New Mexico Touring Society](https://www.nmts.org/displayWeekly.php) · checked 2026-10-01
+   - `end-words` since 2026-11-23: "last ride" near the ride's name: 11/19: [East Side Side Roads](https://ridewithgps.com/routes/54971112) . This will be the last ride till next spring. · This ride will vary from week to week. We start at Tramway & Central (s
+   - watch: https://www.nmts.org/displayWeekly.php
+5. **red flag** — [Tucker (TUK)](https://cycleforchange.org/rides/tucker-ga-atlptn-tucker/) · Tucker, GA · [Atlanta Peloton (ATLPTN)](https://atlptn.com/rides/tucker) · checked 2026-10-01
+   - `page-gone` since 2026-11-16: the host's domain (atlptn.com) hasn't resolved for 3 runs
    - watch: https://atlptn.com/rides/tucker
-8. **red flag** — [Beyond Six Flags (BSF)](https://cycleforchange.org/rides/vinings-ga-atlptn-beyond-six-flags/) · Vinings, GA · [Atlanta Peloton (ATLPTN)](https://atlptn.com/rides/six-flags) · checked 2026-10-01
-   - `page-gone` since 2026-11-16: the host's domain (atlptn.com) hasn't resolved for 2 runs
+6. **red flag** — [Beyond Six Flags (BSF)](https://cycleforchange.org/rides/vinings-ga-atlptn-beyond-six-flags/) · Vinings, GA · [Atlanta Peloton (ATLPTN)](https://atlptn.com/rides/six-flags) · checked 2026-10-01
+   - `page-gone` since 2026-11-16: the host's domain (atlptn.com) hasn't resolved for 3 runs
    - watch: https://atlptn.com/rides/six-flags
-9. **red flag** — [Freewheel Woodbury Monday Night Ride](https://cycleforchange.org/rides/woodbury-mn-freewheel-bike-monday-night-ride/) · Woodbury, MN · [Freewheel Bike (Strava club)](https://www.freewheelbike.com/events/group-rides-pg1040.htm) · checked 2026-10-01
+7. **red flag** — [Freewheel Woodbury Monday Night Ride](https://cycleforchange.org/rides/woodbury-mn-freewheel-bike-monday-night-ride/) · Woodbury, MN · [Freewheel Bike (Strava club)](https://www.freewheelbike.com/events/group-rides-pg1040.htm) · checked 2026-10-01
    - `page-gone` since 2026-10-05: the Strava event https://www.strava.com/clubs/470025/group_events/3480957573192654492 is gone (it now opens the club page)
    - watch: https://www.strava.com/clubs/470025/group_events/3480957573192654492
-10. **red flag** — [East Hawaii Riders](https://cycleforchange.org/rides/hilo-hi-east-hawaii-riders/) · Hilo, HI · [East Hawaii Riders (listed by Hawaii Cycling Club)](http://www.hawaiicyclingclub.com/weekly-rides.html) · checked 2026-10-02
-   - `page-gone` since 2026-11-16: http://www.hawaiicyclingclub.com/weekly-rides.html answers 404
-   - watch: http://www.hawaiicyclingclub.com/weekly-rides.html
-11. **red flag** — [First Saturday Mauna Loa Access Road Ride](https://cycleforchange.org/rides/hilo-hi-first-saturday-mauna-loa-access-road-ride/) · Hilo, HI · [Hilo riders (listed by Hawaii Cycling Club)](http://www.hawaiicyclingclub.com/weekly-rides.html) · checked 2026-10-02
-   - `page-gone` since 2026-11-16: http://www.hawaiicyclingclub.com/weekly-rides.html answers 404
-   - watch: http://www.hawaiicyclingclub.com/weekly-rides.html
-12. **red flag** — [Friday MTB at Kulani Forest](https://cycleforchange.org/rides/hilo-hi-friday-mtb-kulani-forest/) · Hilo, HI · [Hilo mountain bikers (listed by Hawaii Cycling Club)](http://www.hawaiicyclingclub.com/weekly-rides.html) · checked 2026-10-02
-   - `page-gone` since 2026-11-16: http://www.hawaiicyclingclub.com/weekly-rides.html answers 404
-   - watch: http://www.hawaiicyclingclub.com/weekly-rides.html
-13. **red flag** — [Kona Recreational Ride North from Patricio's](https://cycleforchange.org/rides/kailua-kona-hi-kona-recreational-ride-north-patricios/) · Kailua-Kona, HI · [Big Island riders (listed by Hawaii Cycling Club)](http://www.hawaiicyclingclub.com/weekly-rides.html) · checked 2026-10-02
-   - `page-gone` since 2026-11-16: http://www.hawaiicyclingclub.com/weekly-rides.html answers 404
-   - watch: http://www.hawaiicyclingclub.com/weekly-rides.html
-14. **red flag** — [Kona Thursday Recreational Ride South](https://cycleforchange.org/rides/kailua-kona-hi-kona-thursday-recreational-ride-south/) · Kailua-Kona, HI · [Big Island riders (listed by Hawaii Cycling Club)](http://www.hawaiicyclingclub.com/weekly-rides.html) · checked 2026-10-02
-   - `page-gone` since 2026-11-16: http://www.hawaiicyclingclub.com/weekly-rides.html answers 404
-   - watch: http://www.hawaiicyclingclub.com/weekly-rides.html
-15. **red flag** — [Kona Tuesday A/B Ride from Keauhou](https://cycleforchange.org/rides/kailua-kona-hi-kona-tuesday-a-b-ride-keauhou/) · Kailua-Kona, HI · [Big Island riders (listed by Hawaii Cycling Club)](http://www.hawaiicyclingclub.com/weekly-rides.html) · checked 2026-10-02
-   - `page-gone` since 2026-11-16: http://www.hawaiicyclingclub.com/weekly-rides.html answers 404
-   - watch: http://www.hawaiicyclingclub.com/weekly-rides.html
-16. **red flag** — [Waikoloa Queens' Marketplace Ride](https://cycleforchange.org/rides/waikoloa-hi-queens-marketplace-ride/) · Waikoloa, HI · [Waikoloa riders (listed by Hawaii Cycling Club)](http://www.hawaiicyclingclub.com/weekly-rides.html) · checked 2026-10-02
-   - `page-gone` since 2026-11-16: http://www.hawaiicyclingclub.com/weekly-rides.html answers 404
-   - watch: http://www.hawaiicyclingclub.com/weekly-rides.html
-17. **red flag** — [Thursday Night Lights Ride (Keizer)](https://cycleforchange.org/rides/keizer-or-keizer-family-ride/) · Keizer, OR · [Salem Bicycle Club](https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926) · checked 2026-10-21
-   - `schedule-text-changed` since 2026-11-02: the schedule text on https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926 changed
-     - was: "Only 2 weeks left · 6 · Board Member Nominations Now Open Only 2 weeks left · 10:00 am Keizer Morning Ride · 7 · Board Member Nominations Now Open Only 2 weeks left · East Salem Morning Ride George Schopfer 503-419-8305 · CANCELED> 6:30pm Rides Committee Meeting via Zoom - Terry Robbins · 8 · Board…"
-     - now: "am Keizer Morning Ride · 4 · East Salem Morning Ride George Schopfer 503-419-8305 · 6:30pm Rides Committee Meeting via Zoom - Terry Robbins · 5 · 6:00 pm Thursday Night Lights Ride (17 miles CCW)(Registration encouraged) · 6 · 7 · 10:00am Polar Bear (34mi) Michael Karnosh 971-237-7200 (Online Regis…"
-   - `end-words` since 2026-11-16: "cancelled" near the ride's name: efevre 503-881-4933 (Online Registration Encouraged) · 9 · 10 · 10:00 am Keizer Morning Ride -- CANCELED · 11 · 10:00am East Salem Morning Ride George Schopfer 503-419-8305 · 12 · 6:00 pm Thursday Night
-   - watch: https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926
-18. **red flag** — [Keizer Morning Ride](https://cycleforchange.org/rides/keizer-or-salem-bicycle-club-keizer-morning-ride/) · Keizer, OR · [Salem Bicycle Club](https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926) · checked 2026-10-21
-   - `schedule-text-changed` since 2026-11-02: the schedule text on https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926 changed
-     - was: ":30 pm Keizer Family Ride (Registration Encouraged) · 2 · Board Member Nominations Now Open Only 2 weeks left · 3 · Board Member Nominations Now Open Only 2 weeks left · 10:00am Waldo Hills (31mi) Debbie Miller 503-931-8414 (Online Registration Encouraged) · 10:00am Waldo Hills, the Hard Way (49mi)…"
-     - now: "w events with available capacity · Dates · From · To · Search · Reset · chevron_left · November 2026 · chevron_right · Sunday · Monday · Tuesday · Wednesday · Thursday · Friday · Saturday · 1 · 10:00am Stayton/Pioneer Park (44mi) Michael Karnosh 971-237-7200 (Online Registration Encouraged ) · 1:30…"
-   - `end-words` since 2026-11-16: "cancelled" near the ride's name: efevre 503-881-4933 (Online Registration Encouraged) · 9 · 10 · 10:00 am Keizer Morning Ride -- CANCELED · 11 · 10:00am East Salem Morning Ride George Schopfer 503-419-8305 · 12 · 6:00 pm Thursday Night
-   - watch: https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926
-19. **red flag** — [Wednesday Wheelers (Charles River Wheelers)](https://cycleforchange.org/rides/cambridge-ma-crw-wednesday-wheelers/) · Cambridge, MA · [Charles River Wheelers](https://crw.org/events) · checked 2026-10-26
-   - `end-words` since 2026-11-16: "cancelled", "last ride" near the ride's name: · 14 · Waltham Artists' Ride (41, 27) · Speedy Croissant Women/NB Ride (24) · Wednesday Wheelers · CANCELED - Praline Croissant WNB (20) · The Norwellian Cruiser Fall Ride (last ride) · CANCEL…
-   - watch: https://crw.org/events
-20. **red flag** — [JSTS Weeknight Rides (Jersey Shore Touring Society)](https://cycleforchange.org/rides/red-bank-nj-jsts-weeknight-rides/) · Red Bank, NJ · [Jersey Shore Touring Society](https://www.jsts.us/) · checked 2026-10-26
-   - `end-words` since 2026-11-16: "cancelled" near the ride's name: 7.1) · MTB/*All* @ APTH · MTB/*All* @ APTH · *All* @ MJT (21.5) · B @ MR (41.2) · C/C+ @ BW (30.3) *CANCELLED* · A/B+ @ MJT (41.1) · A/B+ @ BCC (40.3) · B @ MJT (37.5) *CANCELLED* · B @ BCC (34.8) · C @ MJ…
-   - watch: https://www.jsts.us/Ride-Calendar
-21. **red flag** — [East Salem Morning Ride](https://cycleforchange.org/rides/salem-or-salem-bicycle-club-east-salem-morning-ride/) · Salem, OR · [Salem Bicycle Club](https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926) · checked 2026-10-26
-   - `schedule-text-changed` since 2026-11-09: the schedule text on https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926 changed
-     - was: "… · 9 · 10 · 10:00 am Keizer Morning Ride · 11 · 10:00am East Salem Morning Ride George Schopf"
-     - now: "… · 9 · 10 · 10:00 am Keizer Morning Ride -- CANCELED · 11 · 10:00am East Salem Morning Ride G"
-   - `end-words` since 2026-11-16: "cancelled" near the ride's name: efevre 503-881-4933 (Online Registration Encouraged) · 9 · 10 · 10:00 am Keizer Morning Ride -- CANCELED · 11 · 10:00am East Salem Morning Ride George Schopfer 503-419-8305 · 12 · 6:00 pm Thursday Night
-   - watch: https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926
-22. **red flag** — [North Park Loops (Premier Bicycle Club)](https://cycleforchange.org/rides/wexford-pa-premier-bicycle-club-north-park-loops/) · Wexford, PA · [Premier Bicycle Club](https://www.premierbicycleclub.org/) · checked 2026-10-26
-   - `end-words` since 2026-11-09: "cancelled" near the ride's name: oderate/30 · 5 · 6 · City Park Coffee Grinds 10/Hilly/20 · 7 · Moraine and Beyond 14/Moderate/30 -- CANCELED · 8 · 9 · 10 · 11 · Harmony Lake Ride 14+/Moderate/30 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · Harmo…
-   - watch: https://www.premierbicycleclub.org/content.aspx?page_id=4001&club_id=400812
-23. **red flag** — [Marin Cyclists China Camp Loop](https://cycleforchange.org/rides/corte-madera-ca-marin-cyclists-china-camp-loop/) · Corte Madera, CA · [Marin Cyclists](https://marincyclists.com/) · checked 2026-11-09
-   - `end-words` since 2026-11-16: "cancelled" near the ride's name: ' *Very Hilly (9AM Start) · 13 · Fridays on Paradise (23 miles/1200 feet/Margie/All paces) -- CANCELED · 14 · Big, Little, littlest and Pie-less Pie Rides *Multi levels (DJ, Juan) · 15 · Easy Like Sun
+8. **red flag** — [Massapequa Park Bicycle Club Rides](https://cycleforchange.org/rides/bethpage-ny-massapequa-park-bicycle-club-rides/) · Bethpage, NY · [Massapequa Park Bicycle Club](https://www.massparkbikeclub.org/) · checked 2026-10-19
+   - `schedule-text-changed` since 2026-11-02: the schedule text on https://www.massparkbikeclub.org/ride-calendar/ changed
+     - was: "day · Fri Friday · Sat Saturday · 27 · 28 · 29 · A+ 45m Bor – Huntington Mall 2 · Borilla Field @9:00 AM · A 42m Huntington Paris Baguette · Borella Field @9:00 AM · AA 45m King’s Park Bluff · Borella Field @9:00 AM · C+ 37m St. Rocco’s – GC · Bethpage Library @9:30 AM · 30 · A 33m Laurel hollow/sa…"
+     - now: "yville · Borella Field @9:00 AM · Open m MPBC In-person Club meeting – all Welcome! · Plainview-Old Bethpage Library @7:00 PM · 4 · 5 · A+ 42m Breezy to Short Beach · Breezy Park Huntington @9:30 AM · 6 · 7 · C+ 38m Coffee or Gelato in Bayville · Bethpage Library @9:00 AM · A 35m Rocco’s · Bethpage…"
+   - `end-words` since 2026-11-23: "cancelled" near the ride's name: Sweets to the sweet-with some unusual beginnings · Borella Fields @9:15 AM · A+ 40m Sea Cliff Canceled · Borella Field @9:30 AM · AA 45m crab meadow · Borella Field @9:30 AM · 20 · 21 · AA 54m LRonk 53 Pa
+   - watch: https://www.massparkbikeclub.org/ride-calendar/
+9. **red flag** — [NMTS Start the Week Rite Ride (4th Monday)](https://cycleforchange.org/rides/albuquerque-nm-nmts-start-the-week-rite-ride/) · Albuquerque, NM · [New Mexico Touring Society](https://www.nmts.org/) · checked 2026-10-26
+   - `end-words` since 2026-11-23: "last ride" near the ride's name: 11/19: [East Side Side Roads](https://ridewithgps.com/routes/54971112) . This will be the last ride till next spring. · This ride will vary from week to week. We start at Tramway & Central (s
+   - `schedule-text-changed` since 2026-11-23: the schedule text on https://www.nmts.org/displayWeekly.php changed
+     - was: "… · Click here to view the route plan for November 16 · Flexible Monday Ride plan for November 16 · Print Route · 🚲 · Start the Week Rite Ride · Distance (avg.) · 12 miles · Pace · 13 mph (&plusmn;1) · Terrain · Minor hills · Time · 10:00 AM · Location · O'Bean's · Leader · Tom Sullivan · Phone · …"
+     - now: "… · Click here to view the route plan for November 23 · Flexible Monday Ride plan for November 23 · Print Route · 🚲 · Start the Week Rite Ride · Distance (avg.) · 11 miles · Pace · 13 mph (&plusmn;1) · Terrain · Moderate hills · Time · 10:00 AM · Location · North end of Winter Haven · Leader · Tom…"
+   - watch: https://www.nmts.org/displayWeekly.php
+10. **red flag** — [NMTS Sunday Bosque Trail Ride](https://cycleforchange.org/rides/albuquerque-nm-nmts-sunday-bosque-trail-ride/) · Albuquerque, NM · [New Mexico Touring Society](https://www.nmts.org/displayWeekly.php) · checked 2026-10-26
+   - `end-words` since 2026-11-23: "last ride" near the ride's name: 11/19: [East Side Side Roads](https://ridewithgps.com/routes/54971112) . This will be the last ride till next spring. · This ride will vary from week to week. We start at Tramway & Central (s
+   - `schedule-text-changed` since 2026-11-23: the schedule text on https://www.nmts.org/displayWeekly.php changed
+     - was: "… Terrain · Flat · Time · 9:00 AM · Locat"
+     - now: "… Terrain · Flat · Time · 9:00 AM · Locat"
+   - watch: https://www.nmts.org/displayWeekly.php
+11. **red flag** — [Marin Cyclists Fairfax to Point Reyes Station](https://cycleforchange.org/rides/fairfax-ca-marin-cyclists-fairfax-to-point-reyes-station/) · Fairfax, CA · [Marin Cyclists](https://marincyclists.com/) · checked 2026-11-09
+   - `end-words` since 2026-11-23: "cancelled" near the ride's name: 5 mi/+4,712' Moderate (Ben) · T3: Morgan Territory Loop 54.6 mi/+3,450' (Lorraine, Herb) -- CANCELED · Fairfax to Pt Reyes Station Recurring Ride (38/any pace) · 22 · WSS November: Crispy Cheesy L
    - watch: https://marincyclists.com/content.aspx?page_id=4001&club_id=525458
-24. **red flag** — [Saturday Off-Road Ride](https://cycleforchange.org/rides/leeds-gb-leeds-cycling-saturday-off-road-ride/) · Leeds, United Kingdom · [Leeds Cycling](https://www.meetup.com/leeds-cycling/) · checked 2026-11-16
-   - `page-gone` since 2026-11-02: https://www.meetup.com/leeds-cycling/ says "page not found" ("Meetup | Group not found")
-   - watch: https://www.meetup.com/leeds-cycling/
-25. **amber flag** — [Tuesday Night Rubber Mallet](https://cycleforchange.org/rides/bend-or-tuesday-night-rubber-mallet/) · Bend, OR · [Rubber Mallet (informal group ride)](https://bendbikerides.com/group/tuesday-night-rubber-mallet/event/rubber-mallet) · checked 2026-09-15
-   - `unreachable` since 2026-10-12: no page for this ride has loaded for 8 runs (403)
-   - watch: https://bendbikerides.com/group/tuesday-night-rubber-mallet/event/rubber-mallet
-26. **amber flag** — [Saturday Light Ride](https://cycleforchange.org/rides/corpus-christi-tx-cc-led-saturday-light-ride/) · Corpus Christi, TX · [CC LED](https://www.thebendmag.com/cc-led-lights-up-the-local-biking-community/) · checked 2026-09-15
-   - `unreachable` since 2026-10-12: no page for this ride has loaded for 8 runs (403)
-   - watch: https://www.thebendmag.com/cc-led-lights-up-the-local-biking-community/
-27. **amber flag** — [PEDAL Tuesday Queer Ride](https://cycleforchange.org/rides/kalamazoo-mi-pedal-tuesday-queer-ride/) · Portage, MI · [PEDAL Bicycle](https://www.pedalbicycle.com/articles/events.-sweet-sweet-events-pg213.htm) · checked 2026-09-15
-   - `time-missing` since 2026-10-05: 6:00 pm no longer appears on https://www.pedalbicycle.com/articles/events.-sweet-sweet-events-pg213.htm
-   - `schedule-text-changed` since 2026-10-05: the schedule text on https://www.pedalbicycle.com/articles/events.-sweet-sweet-events-pg213.htm changed
-     - was: "lp you learn about bikes and help you participate in the fun! · Lady Parts Rides · Date: April through September · In addition to Monday night mountain bike rides at 6pm at Ft. Custer, Lady Parts will host multiple weekend rides throughout the summer! · LEARN MORE! · Road Trip! MTB + Camping + Fun!…"
-     - now: ""
-   - watch: https://www.pedalbicycle.com/articles/events.-sweet-sweet-events-pg213.htm
-28. **amber flag** — [Madison Queer Bike Ride](https://cycleforchange.org/rides/madison-wi-madison-queer-bike-ride/) · Madison, WI · [Madison Queer Bike Ride](https://ourliveswisconsin.com/article/madison-queer-bike-ride/) · checked 2026-09-15
-   - `unreachable` since 2026-10-19: no page for this ride has loaded for 7 runs (403)
-   - watch: https://ourliveswisconsin.com/article/madison-queer-bike-ride/
-29. **amber flag** — [Thursday Night Mountain Bike Group](https://cycleforchange.org/rides/missoula-mt-thursday-night-mountain-bike-group/) · Missoula, MT · [Missoula Thursday Night Mountain Bike Group](https://thursdaynightmtbr.org/) · checked 2026-09-15
-   - `unreachable` since 2026-10-12: no page for this ride has loaded for 8 runs (ERR_TLS_CERT_ALTNAME_INVALID)
-   - watch: https://thursdaynightmtbr.org/
-30. **amber flag** — [Sunny Sunday D Ride (Bicycle Club of Philadelphia)](https://cycleforchange.org/rides/philadelphia-pa-bcp-sunny-sunday-d-ride/) · Philadelphia, PA · [Bicycle Club of Philadelphia](https://phillybikeclub.org/bcpdo/ride/calendarweekly) · checked 2026-09-15
-   - `unreachable` since 2026-10-12: no page for this ride has loaded for 8 runs (403)
-   - watch: https://phillybikeclub.org/bcpdo/ride/calendarweekly
-31. **amber flag** — [Portland Gear Hub Thursday Group Ride](https://cycleforchange.org/rides/portland-me-gear-hub-thursday-group-ride/) · Portland, ME · [Portland Gear Hub](https://www.portlandgearhub.org/events) · checked 2026-09-15
-   - `schedule-text-changed` since 2026-10-05: the schedule text on https://www.portlandgearhub.org/events changed
-     - was: "Events — Portland Gear Hub · 0 · Skip to Content · Programs · Bikes For All Mainers · Discount Bikes · Open Bench Time · Classes and Workshops · Shop · Service Department · Rentals · Bike Rentals · Events · Volunteer · About · Portland Gear Hub · Ketcha Outdoors · Staff · Board · Donate · Open Menu…"
-     - now: "Events — Portland Gear Hub · 0 · We are hiring for a full-time mechanic · Skip to Content · Programs · Bikes For All Mainers · Discount Bikes · Open Bench Time · Classes and Workshops · Shop · Service Department · Rentals · Bike Rentals · Events · Volunteer · About · Portland Gear Hub · Ketcha Outd…"
-   - watch: https://www.portlandgearhub.org/events
-32. **amber flag** — [SATX Social Ride](https://cycleforchange.org/rides/san-antonio-tx-satx-social-ride/) · San Antonio, TX · [SATX Social Ride](https://www.bike-san-antonio.org/sa-bike-groups/) · checked 2026-09-15
-   - `schedule-text-changed` since 2026-11-16: the schedule text on https://www.bike-san-antonio.org/sa-bike-groups/ changed
-     - was: "an Antonio B-Cycle · The Best Way To Get Around San Antonio. Rent, Ride, Return, Repeat! Bike share is designed for short trips and quick adventures around town. · SATX Social Ride Public G … tonio Gear Shifters (SAGS) · Level 2 · Meets Twice per week · Meets at Tito's Southtown (955 S Alamo St) ev…"
-     - now: "book group · 210 Cycle Riderz · Mujeres Cycling · Street Ratz of San Antonio Bicycle Club · Wild Daw … olunteer with different causes, or have fun/family time. · Upcoming rides and events are posted on Facebook . · Mujeres Cycling · Amateur WTF cycling club that hosts Tuesday training rides. Check …"
-   - watch: https://www.bike-san-antonio.org/sa-bike-groups/
-33. **amber flag** — [SheWolves Ride](https://cycleforchange.org/rides/san-diego-ca-shewolves-ride/) · San Diego, CA · [SheWolves](https://sandiegomagazine.com/everything-sd/health-fitness/10-local-group-rides-for-every-type-of-cyclist/) · checked 2026-09-15
-   - `schedule-text-changed` since 2026-10-12: the schedule text on https://sandiegomagazine.com/everything-sd/health-fitness/10-local-group-rides-for-every-type-of-cyclist/ changed
-     - was: "… Brewing Social Ride · North Park · Given its connectio"
-     - now: "… Brewing Social Ride · North Park · Given its connectio"
-   - watch: https://sandiegomagazine.com/everything-sd/health-fitness/10-local-group-rides-for-every-type-of-cyclist/
-34. **amber flag** — [Fastrack Saturday Lake Ride](https://cycleforchange.org/rides/santa-barbara-ca-fastrack-saturday-lake-ride/) · Santa Barbara, CA · [Fastrack Bicycles](http://www.fastrackbicycles.com/rides) · checked 2026-09-15
-   - `moved` since 2026-11-16: http://www.fastrackbicycles.com/rides now sends you to https://fastrackbicycles.com/#ride
-   - `schedule-text-changed` since 2026-11-16: the schedule text on http://www.fastrackbicycles.com/rides changed
-     - was: "Ride Local — Best Bike Shop in Santa Barbara | Fastrack Bicycles | Est. 1997 · Home · Specials · Service · Custom · Clothing · Ride Local · Events · Brands · About Us · Contact · Home · Specials · Service · Custom · Clothing · Rid … et locals and cyclists from around the world! · Recent events may …"
-     - now: "t stunning and challenging riding in the world. Recent events may have closed parts of these roads, so check with the locals, or call the shop for particulars. · Saturday 8:00 am · Saturday lake ride · Meet at the Dolphin Fountain in front of Stearns Wharf. · Through Summerland, onto Route 192 towa…"
-   - watch: http://www.fastrackbicycles.com/rides
-35. **amber flag** — [Le Tour de Ham](https://cycleforchange.org/rides/birmingham-al-le-tour-de-ham/) · Birmingham, AL · [Le Tour de Ham](https://bhamnow.com/2018/05/29/experiencebirminghamontwowheelswiththesetenlocalcyclinggroupsincludingletourdeham/) · checked 2026-09-18
-   - `schedule-text-changed` since 2026-11-16: the schedule text on https://bhamnow.com/2018/05/29/experiencebirminghamontwowheelswiththesetenlocalcyclinggroupsincludingletourdeham/ changed
-     - was: "… more information, follow Cycling Talk on Facebook and look fo"
-     - now: "… more information, follow Cycling Talk on Facebook and look fo"
-   - watch: https://bhamnow.com/2018/05/29/experiencebirminghamontwowheelswiththesetenlocalcyclinggroupsincludingletourdeham/
-36. **amber flag** — [Dawn Patrol](https://cycleforchange.org/rides/brooklyn-ny-dawn-patrol-prospect-park/) · Brooklyn, NY · [Dawn Patrol](https://legday.substack.com/p/a-thursday-morning-prospect-park) · checked 2026-09-18
-   - `unreachable` since 2026-10-19: no page for this ride has loaded for 7 runs (403)
-   - watch: https://legday.substack.com/p/a-thursday-morning-prospect-park
-37. **amber flag** — [NightCAP Ride (Cyclists Against Patriarchy)](https://cycleforchange.org/rides/brooklyn-ny-nightcap-monday-ride/) · Brooklyn, NY · [NightCAP Brooklyn](https://queeronthestreet.substack.com/p/no-straight-plans-tues-april-7-tues) · checked 2026-09-18
-   - `unreachable` since 2026-10-19: no page for this ride has loaded for 7 runs (403)
-   - watch: https://queeronthestreet.substack.com/p/no-straight-plans-tues-april-7-tues
-38. **amber flag** — [Cola Women/Trans/Femme/Non-binary Cyclists Ride](https://cycleforchange.org/rides/columbia-sc-cola-wtfnb-cyclists-ride/) · Columbia, SC · [Cola Town Bike Collective](https://colatownbikes.com/) · checked 2026-09-18
-   - `schedule-text-changed` since 2026-11-02: the schedule text on https://colatownbikes.com/ changed
-     - was: "… Columbia and the Midlands. · We are a f … tion to connect the Midlands by building a modular, scalable network of safe routes specifically for cyclists. · Learn More · Become a Member of the Collective · The Cola Town Bike Collective now offer"
-     - now: "… Columbia and the Midlands. · We are a f … ve a new sweeper! On Friday morning, October 30, the City of Columbia officially handed South Carolina's first bike-powered bike lane sweeper over to us at the Cola Town Bike Collective. The hand"
-   - watch: https://colatownbikes.com/
-39. **amber flag** — [Babes on Bikes Weekly Ride](https://cycleforchange.org/rides/emporia-ks-babes-on-bikes-wednesday-ride/) · Emporia, KS · [Babes on Bikes Emporia](https://visitemporia.com/place/community-group-rides/) · checked 2026-09-18
-   - `unreachable` since 2026-10-19: no page for this ride has loaded for 7 runs (403)
-   - watch: https://visitemporia.com/place/community-group-rides/
-40. **amber flag** — [Weekly Near Eastside Ride](https://cycleforchange.org/rides/indianapolis-in-near-eastside-ride/) · Indianapolis, IN · [Central Indiana Cycling](https://centralincycling.org/rides/neighborhood-rides/) · checked 2026-09-18
-   - `time-missing` since 2026-11-16: 6:00 pm no longer appears on https://centralincycling.org/
-   - watch: https://centralincycling.org/
-41. **amber flag** — [Music City Dope Pedalers Friday Ride](https://cycleforchange.org/rides/nashville-tn-music-city-dope-pedalers-friday-ride/) · Nashville, TN · [Music City Dope Pedalers](https://www.nashvillescene.com/bon/2025/health-beauty-and-fitness/writers-choice/music-city-dope-pedalers/article_42c680e4-3dfe-496a-be7a-9a80a1a22a04.html) · checked 2026-09-18
-   - `schedule-text-changed` since 2026-10-12: the schedule text on https://www.nashvillescene.com/bon/2025/health-beauty-and-fitness/writers-choice/music-city-dope-pedalers/article_42c680e4-3dfe-496a-be7a-9a80a1a22a04.html changed
-     - was: "Best Group to Ride With: Music City Dope Pedalers | Writers' Choice | nashvillescene.com · Skip to main content · You have permission to edit this article. · Edit · Close · Sign Up · Log In · Dashboard · Logout · My Account · Das … Arts · Theater · Visual Art · Vodka Yonic · Food & Drink · Bites · …"
-     - now: "Best Group to Ride With: Music City Dope Pedalers | Best of Nashville 2025 Health, Beauty & Fitness Writers' Choice | nashvillescene.com · Skip to main content · You have permission to edit this article. · Edit · Clos … edy · Cover Story · Film/TV · In the Club · Performing Arts · Theater · Visual …"
-   - watch: https://www.nashvillescene.com/bon/2025/health-beauty-and-fitness/writers-choice/music-city-dope-pedalers/article_42c680e4-3dfe-496a-be7a-9a80a1a22a04.html
-42. **amber flag** — [Sylvan Park Tuesday Night Ride](https://cycleforchange.org/rides/nashville-tn-ride615-sylvan-park-tuesday-night-ride/) · Nashville, TN · [Ride615 Bicycle Shop](https://www.ride615.com/articles/local-rides-pg195.htm) · checked 2026-09-18
-   - `time-missing` since 2026-11-09: 6:15 pm no longer appears on https://www.ride615.com/articles/local-rides-pg195.htm
-   - `schedule-text-changed` since 2026-11-09: the schedule text on https://www.ride615.com/articles/local-rides-pg195.htm changed
-     - was: "njoy some post-ride beer and food! One ride is toward the Ravenwood Cyclocross course and the other ride is toward downtown Nashville . All riders are welcome! · Ride615 Bicycle Shop Sylvan Park 61.5k Ride · This ride was created for the celebration of 615 Day (06/15) · Sylvan Park Tuesday Night Ri…"
-     - now: "onditions can be found here: · Nashville Area MTB Trails from MTB Project · Current Trail Conditions from SORBA · Bike Rides & Events · (Click here for more rides from · Ride615 Bicycles & Brews) · 11 Smiles Per Hour · Start: 6:00pm · Place: Ride615 Bicycle Shop Sylvan Park, 4511 Charlotte Ave · Da…"
-   - watch: https://www.ride615.com/articles/local-rides-pg195.htm
-43. **amber flag** — [Shelby Ave Tuesday Night Ride](https://cycleforchange.org/rides/nashville-tn-shelby-ave-bicycle-tuesday-night-ride/) · Nashville, TN · [Shelby Ave Bicycle Co.](https://greenfleetbikes.com/pages/shelby-ave-bicycle-co) · checked 2026-09-18
-   - `schedule-text-changed` since 2026-11-02: the schedule text on https://ma.to/venue/shelbybicycle changed
-     - was: "ryone on a bike, whether you are commuting or cruising local greenways. · No upcoming events scheduled · Check out past events below · Past Events · Tuesday Night Ride · Shelby Ave Bicycle Co · …"
-     - now: "g or cruising local greenways. · No upcoming events scheduled · Check out past events below · Past Events · Listings updated 18 May 2026 · 19 May 2026 · Tuesday Night Ride · Shelby Ave Bicycle Co · …"
-   - watch: https://ma.to/venue/shelbybicycle
-44. **amber flag** — [FAB Moon & Stars Ride](https://cycleforchange.org/rides/sioux-falls-sd-fab-moon-and-stars-ride/) · Sioux Falls, SD · [Falls Area Bicyclists](https://www.fallsareabicyclists.org/) · checked 2026-09-18
-   - `schedule-text-changed` since 2026-10-12: the schedule text on https://www.fallsareabicyclists.org/events changed
-     - was: "oogle · Log in with Microsoft · Log in with Apple · Remember me · Forgot password · Home · About Us · board · mission · Bylaws · Ride Waiver · Join us · Events · Bicycle Benefits · Donate · FAB Store · News · Upcoming events · Switch to Calendar View · Falls Area Classic · When · October 10, 2026 ·…"
-     - now: "Falls Area Bicyclists - Events · Log in · Log in with Google · Log in with Microsoft · Log in with Apple · Remember me · Forgot password · Home · About Us · board · mission · Bylaws · Ride Waiver · Join us · Events · Bicycle Benefits · Donate · News · Upcoming events · Switch to Calendar View · No …"
-   - watch: https://www.fallsareabicyclists.org/events
-45. **amber flag** — [TrainYAS Ladies](https://cycleforchange.org/rides/abu-dhabi-ae-yas-marina-circuit-trainyas-ladies/) · Abu Dhabi, United Arab Emirates · [Yas Marina Circuit, presented by Abu Dhabi Sports Council](https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-ladies) · checked 2026-09-30
-   - `time-missing` since 2026-10-05: 6:00 pm no longer appears on https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-ladies
-   - `schedule-text-changed` since 2026-10-05: the schedule text on https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-ladies changed
-     - was: "عربية السعودية · YOUR TRACK TO WELLNESS · Yas Marina Circuit is more than a racetrack - it’s your space to move, train, and feel your best. From weekly events like TrainYAS and TrainAM to the annual TriYAS, we offer a safe, welcoming environment for all fitness levels. Walk, run, or cycle under the…"
-     - now: "is TrainAM session is for cycling only. · Please bring your own bicycle, as complimentary bicycles are not provided during this session. · REGISTER NOW · ALL · TRAINAM · TRAINYAS · TRAINYAS LADIES · FREE WEEKLY · FITNESS SESSIONS · WALK, JOG · OR CYCLE · WELCOME · ALL FITNESS LEVELS · TRAIN · ON F1…"
-   - watch: https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-ladies
-46. **amber flag** — [Stadium Ride](https://cycleforchange.org/rides/peoria-az-west-valley-casual-bike-rides-stadium-ride/) · Peoria, AZ · [West Valley Casual Bike Rides (Meetup group)](https://www.meetup.com/west-valley-casual-bike-rides/events/) · checked 2026-09-30
-   - `schedule-text-changed` since 2026-11-16: The host's calendar shows Sun Nov 22, 2026 7:30 am ("Stadium Ride"); we list Sunday 6:30 am
-     - was: "Sunday 6:30 am"
-     - now: "Sun Nov 22, 2026 7:30 am ("Stadium Ride")"
-   - watch: https://www.meetup.com/west-valley-casual-bike-rides/events/
-47. **amber flag** — [MHCC Sunday Morning Wake Up Ride](https://cycleforchange.org/rides/albany-ny-mhcc-sunday-morning-wake-up-ride/) · Albany, NY · [Mohawk Hudson Cycling Club](https://www.mohawkhudsoncyclingclub.org/rides/public) · checked 2026-10-01
-   - `schedule-text-changed` since 2026-11-02: the schedule text on https://www.mohawkhudsoncyclingclub.org/rides/public changed
-     - was: "… Upcoming Club Events · Contact Us · Ride Schedule · Monday, October 26, 2026 · 11A · Sport/14 · 31 30.5 30.50 · Applebuds 2 · Charle … r gear for the ride! We will do a repeat ride to Spier Falls and Moreau State Park. · Contact Leader · Sunday, November 1, 2026 · 9A · Multi-pace/11 · 56 56.0 56.…"
-     - now: "… Upcoming Club Events · Contact Us · Ride Schedule · Tuesday, November 17, 2026 · 11A · Casual/12 · 27 26.9 26.90 · Tuesday Morning … 12 mph, but a bit slower or faster is fine. Routes are flat to rolling. · Leader rides at the back, no one left behind. Rain cancels ride, cancellation posted by 8 …"
-   - watch: https://www.mohawkhudsoncyclingclub.org/rides/public
-48. **amber flag** — [MHCC Women on Wheels (WOW) Rides](https://cycleforchange.org/rides/albany-ny-mhcc-women-on-wheels-ride/) · Albany, NY · [Mohawk Hudson Cycling Club](https://www.mohawkhudsoncyclingclub.org/rides/public) · checked 2026-10-01
-   - `time-missing` since 2026-11-02: 9:30 am no longer appears on https://www.mohawkhudsoncyclingclub.org/rides/public
-   - `schedule-text-changed` since 2026-11-02: the schedule text on https://www.mohawkhudsoncyclingclub.org/rides/public changed
-     - was: "… · Website Terms of Use · Upcoming Club Events · Co … discounted price. And remember, early birds get the free cookies. · *Unaffiliated Ride · Start: S&S Farm Brewery · RWGPS · Dir To Start · Cue Sheet · Stats · Contact Leader · 9:30A · Multi-pace/11 · 41 40.8 40.80 · 2026 MHCC GRAVEL GOBLIN - 41 …"
-     - now: "… · Website Terms of Use · Upcoming Club Events · Contact Us · Ride Schedule · Tuesday, November 17, 2026 · 11A · Casual/12 · 27 26.9 26.90 · Tuesday Morning … t to Hennessey and Ostrander in Reverse. Ride leader will lead from the middle and back of the group. The ride is 25.7 miles long. · See yo…"
-   - watch: https://www.mohawkhudsoncyclingclub.org/rides/public
-49. **amber flag** — [Super Sunday Ride (CAMP)](https://cycleforchange.org/rides/auburn-al-camp-super-sunday-ride/) · Auburn, AL · [Central Alabama Mountain Pedalers (CAMP)](https://www.trekbicycleauburn.com/events) · checked 2026-10-01
-   - `time-missing` since 2026-11-09: 4:00 pm no longer appears on https://www.trekbicycleauburn.com/events
-   - `schedule-text-changed` since 2026-11-09: the schedule text on https://www.trekbicycleauburn.com/events changed
-     - was: "page. · AOCC: Auburn Opelika Cycling Community; ACA: Alabama Cycling Association; ABC: Auburn Bicycle Committee · OCTOBER · Click Here for Second Sunday Ride Details · CAMP Website · OCTOBER 1 · Thursday Night Dirtbags · Waverly Local · 7:00 p.m. CST · OCTOBER 3 · Coosa River Challenge · OCTOBER 3 …"
-     - now: "age. · AOCC: Auburn Opelika Cycling Community; ACA: Alabama Cycling Association; ABC: Auburn Bicycle Committee · NOVEMBER · Click Here for Second Sunday Ride Details · CAMP Website · NOVEMBER 3 · Tuesday Night Ride and Grill · (CAMP) · Chewacla State Park · 5:30 p.m. CST · NOVEMBER 5 · Thursday Nig…"
-   - watch: https://www.trekbicycleauburn.com/events
-50. **amber flag** — [Women's Monthly Social Ride at Coler](https://cycleforchange.org/rides/bentonville-ar-peel-compton-womens-monthly-social-mtb-ride/) · Bentonville, AR · [Peel Compton Foundation (Coler Mountain Bike Preserve)](https://peelcompton.org/event/womens-monthly-social-mountain-bike-ride/2026-10-13/) · checked 2026-10-01
-   - `unreachable` since 2026-10-19: no page for this ride has loaded for 7 runs (403)
-   - watch: https://peelcompton.org/event/womens-monthly-social-mountain-bike-ride/2026-10-13/
-51. **amber flag** — [Non Binary Bike Club Wednesday Ride](https://cycleforchange.org/rides/brooklyn-ny-non-binary-bike-club-wednesday/) · Brooklyn, NY · [Non Binary Bike Club](https://nb.bike/) · checked 2026-10-01
-   - `schedule-text-changed` since 2026-11-16: the schedule text on https://nb.bike/ changed
-     - was: "non binary bike club · home · ride archive · Welcome to non binary bike club! · We're a regular(ish), year round(ish) bike ride based in Brooklyn, New York. · Next ride is 2026-11-04 : close to home · Howdy y’all, xena here. This we … how far into December we’ll get. If you have a destination in mi…"
-     - now: "non binary bike club · home · ride archive · Pick color scheme · follow operating system · always light · always dark · 2026-11-10 site update: We have a dark mode/light mode now! · Let us know if you love it or hate it. · … ong or air hockey. The route features our favorite Squibb Park Bridge , an…"
-   - watch: https://nb.bike/
-52. **amber flag** — [Friday Evening Bike Ride](https://cycleforchange.org/rides/calgary-ca-slow-and-steady-hikers-friday-evening-bike-ride/) · Calgary, Canada · [Slow and Steady Hikers (Meetup group)](https://www.meetup.com/slow-and-steady-hikers/) · checked 2026-10-01
+12. **fresh** — [Wednesday Night Roll: No Drop](https://cycleforchange.org/rides/queen-creek-az-santan-shredders-wednesday-night-roll/) · Queen Creek, AZ · [Santan Shredders Biking Club](https://santanshredders.com/) · checked 2026-09-30
+   - undated: feed-stopped
+   - watch: https://www.meetup.com/santan-shredders/events/
+13. **amber flag** — [Tuesday Night Ride (NoVA Casual Bicycling Group)](https://cycleforchange.org/rides/arlington-va-nova-cbg-tuesday-night-ride/) · Arlington, VA · [Northern Virginia Casual Bicycling Group](https://www.meetup.com/novacbg/) · checked 2026-10-01
+   - `schedule-text-changed` since 2026-11-02: the schedule text on https://www.meetup.com/novacbg/ changed
+     - was: "… Northern Virginia Casual Bicycling Group (NoVA CBG) · 4.9 • 12681 ratings · Alexandria, VA, US · 613 members · Share …"
+     - now: "… Northern Virginia Casual Bicycling Group (NoVA CBG) · 4.9 • 12723 ratings · Alexandria, VA, US · 613 members · Share …"
+   - watch: https://www.meetup.com/novacbg/
+14. **amber flag** — [Fridays at Jafe's](https://cycleforchange.org/rides/bowie-md-jafe-cycling-fridays-at-jafes/) · Bowie, MD · [Jafe Cycling Bike Shop](https://www.meetup.com/jafe-cycling-bike-shop/) · checked 2026-10-01
+   - `schedule-text-changed` since 2026-11-02: the schedule text on https://www.meetup.com/jafe-cycling-bike-shop/ changed
+     - was: "… · Homepage · Jafe Cycling Bike Shop · 5.0 • 8 ratings · Bowie, MD, US · 80 members · Share · About · Events · Members · Photos · Discussions · About us · Jafe Cycling is the cycling hub for the DMV—a welcoming community where riders of all levels come together to ride, learn, and grow. Our shop s…"
+     - now: "… · Homepage · Jafe Cycling Bike Shop · 5.0 • 10 ratings · Bowie, MD, US · 98 members · Share · About · Events · Members · Photos · Discussions · About us · Jafe Cycling is the cycling hub for the DMV—a welcoming community where riders of all levels come together to ride, learn, and grow. Our shop …"
+   - watch: https://www.meetup.com/jafe-cycling-bike-shop/
+15. **amber flag** — [Friday Evening Bike Ride](https://cycleforchange.org/rides/calgary-ca-slow-and-steady-hikers-friday-evening-bike-ride/) · Calgary, Canada · [Slow and Steady Hikers (Meetup group)](https://www.meetup.com/slow-and-steady-hikers/) · checked 2026-10-01
    - `event-date-past` since 2026-10-26: the host's page dates this ride Fri Oct 2, 2026, which has passed; it may not be running now
    - watch: https://www.meetup.com/slow-and-steady-hikers/events/315946587/
-53. **amber flag** — [BFF Bikes Beginner/Intermediate Ride](https://cycleforchange.org/rides/chicago-il-bff-bikes-beginner-intermediate-ride/) · Chicago, IL · [BFF Bikes](https://www.bffbikes.com/events) · checked 2026-10-01
-   - `schedule-text-changed` since 2026-10-19: the schedule text on https://www.bffbikes.com/events changed
-     - was: "BFF Bikes— Events · Cart · 0 · About · CALENDAR · Gift Certificate · Used Bikes · E-Bike Service and Policies · BIKE FIT · Services - Tunes, one-on-one, rentals · Clinic … commodate other times for a small fee. · Visit the Shop · 2056 N Damen Ave, Chicago, IL 60647 · Give us a Call · 773-666-5153 ·…"
-     - now: "re you show up! · Read more → · November 23, 2026 · Nov · 29 · November 29, 2026 · Indoor Ride + Movie Club DEMO RIDE - try before you commit! · November 29, 2026 · Join us on Sunday mornings for a casual ride with your bike on a trainer for a fun weekend workout! Spin at your own pace while we put…"
-   - watch: https://www.bffbikes.com/events
-54. **amber flag** — [BFF Bikes Thursday WTF Social Ride](https://cycleforchange.org/rides/chicago-il-bff-bikes-thursday-wtf-social-ride/) · Chicago, IL · [BFF Bikes](https://www.bffbikes.com/events) · checked 2026-10-01
-   - `schedule-text-changed` since 2026-10-19: the schedule text on https://www.bffbikes.com/events changed
-     - was: "… Services Brands Clinics Calendar of Events · ©2021 BFF Bikes"
-     - now: "… Services Brands Clinics Calendar of Events · ©2021 BFF Bikes"
-   - watch: https://www.bffbikes.com/events
-55. **amber flag** — [Windy City Cycling Club Casual Saturday](https://cycleforchange.org/rides/chicago-il-windy-city-cycling-club-casual-saturday/) · Chicago, IL · [Windy City Cycling Club](https://windycitycyclingclub.com/) · checked 2026-10-01
-   - `time-missing` since 2026-10-26: 9:00 am no longer appears on https://www.meetup.com/windy-city-cycling-club/
-   - `schedule-text-changed` since 2026-10-26: the schedule text on https://www.meetup.com/windy-city-cycling-club/ changed
-     - was: "… · Homepage · Windy City Cycling Club · 4.8 • 723 ratings · Chicago, IL, US · 1,568 members · Share · About · Events · Members · Photos · Discussions · About us · Check out our rides and event … L, US · Welcome to Casual Saturday , our weekly lakefront ride to Hyde Park. Looking forward to seeing …"
-     - now: "… · Homepage · Windy City Cycling Club · 4.8 • 729 ratings · Chicago, IL, US · 1,573 members · Share · About · Events · Members · Photos · Discussions · About us · Check out our rides and events at www.windycitycyclingclub.com . · About Us · Windy City Cycling Club (WCCC) is Chicago's LGBTQA+ (lesb…"
-   - watch: https://www.meetup.com/windy-city-cycling-club/
-56. **amber flag** — [Windy City Cycling Club Sunday Morning Ride](https://cycleforchange.org/rides/chicago-il-windy-city-cycling-club-sunday-morning/) · Chicago, IL · [Windy City Cycling Club](https://windycitycyclingclub.com/) · checked 2026-10-01
-   - `schedule-text-changed` since 2026-11-02: the schedule text on https://www.meetup.com/windy-city-cycling-club/ changed
-     - was: "e & Lakefront Trail, Chicago, IL, US · Welcome to WCCC Sunday Morning . Looking forward to riding with you! · WAIVER & MEMBERSHIP · Anyone who’s not a paid member of Windy City Cycling Club must complete and submit a Liability Waiver before riding. Joining WCCC gives you access to member events and…"
-     - now: "Windy City Cycling Club | Meetup · Skip to content · Homepage · Windy City Cycling Club · 4.8 • 729 ratings · Chicago, IL, US · 1,573 members · Share · About · Events · Members · Photos · Discussions · About us · Check out our rides and events at www.windycitycyclingclub.com . · About Us · Windy Ci…"
-   - watch: https://www.meetup.com/windy-city-cycling-club/
-57. **amber flag** — [Återhämtning's Thursday Ride](https://cycleforchange.org/rides/cold-spring-ky-cincinnati-cycle-club-aterhamtning-thursday-ride/) · Cold Spring, KY · [Cincinnati Cycle Club](https://www.cincinnaticycleclub.org/content.aspx?page_id=4001&club_id=772752&action=cira&vm=Future&sif=0) · checked 2026-10-01
+16. **amber flag** — [Återhämtning's Thursday Ride](https://cycleforchange.org/rides/cold-spring-ky-cincinnati-cycle-club-aterhamtning-thursday-ride/) · Cold Spring, KY · [Cincinnati Cycle Club](https://www.cincinnaticycleclub.org/content.aspx?page_id=4001&club_id=772752&action=cira&vm=Future&sif=0) · checked 2026-10-01
    - `time-missing` since 2026-11-02: 5:45 pm no longer appears on https://www.cincinnaticycleclub.org/content.aspx?page_id=4001&club_id=772752&action=cira&vm=Future&sif=0
    - `schedule-text-changed` since 2026-11-02: the schedule text on https://www.cincinnaticycleclub.org/content.aspx?page_id=4001&club_id=772752&action=cira&vm=Future&sif=0 changed
      - was: "… Check All · No Metro Area Specified · Cincinnati · … ort stop about halfway (around mile 12) at the Marathon Park. The route is 27 miles with 600 feet of climbing. · add_circle_outline Add To Device · visibility View · Thursday · 29 · Återhämtning's ride 5:45PM · Parking lot at corner of East Ale…"
      - now: "… Check All · No Metro Area Specified · Cincinnati · Dayton · Indianapolis · Lexington · Other · Excluded Metro Areas · select · Check All · No Metro Area Specified · Cincinnati · Dayton · Indianapolis · Lexington · Other · Title · Description · Only show events with available capacity · Dates · Fr…"
    - watch: https://www.cincinnaticycleclub.org/content.aspx?page_id=4001&club_id=772752&action=cira&vm=Future&sif=0
-58. **amber flag** — [Thursday Night Central Columbus & Metro Parks Ride](https://cycleforchange.org/rides/columbus-oh-thursday-night-central-columbus-metro-parks-ride/) · Columbus, OH · [Outdoor Pursuits](https://outdoor-pursuits.org/mc-events/thursday-night-central-ohio-metro-parks-ride/?mc_id=5453) · checked 2026-10-01
+17. **amber flag** — [MMB Thursday Ride](https://cycleforchange.org/rides/colorado-springs-co-mmb-thursday-ride/) · Colorado Springs, CO · [Monument Mountain Bikers](https://www.meetup.com/monument-mountain-bikers/events/) · checked 2026-10-01
+   - `schedule-text-changed` since 2026-11-23: The host's calendar shows Fri Nov 27, 2026 5:30 pm ("MMB Black Friday Happy Hour!"); we list Thursday 5:30 pm
+     - was: "Thursday 5:30 pm"
+     - now: "Fri Nov 27, 2026 5:30 pm ("MMB Black Friday Happy Hour!")"
+   - watch: https://www.meetup.com/monument-mountain-bikers/events/
+18. **amber flag** — [Thursday Night Central Columbus & Metro Parks Ride](https://cycleforchange.org/rides/columbus-oh-thursday-night-central-columbus-metro-parks-ride/) · Columbus, OH · [Outdoor Pursuits](https://outdoor-pursuits.org/mc-events/thursday-night-central-ohio-metro-parks-ride/?mc_id=5453) · checked 2026-10-01
    - `event-date-past` since 2026-11-09: the host's page dates this ride Thu Sep 17, 2026, which has passed; it may not be running now
    - watch: https://outdoor-pursuits.org/mc-events/thursday-night-central-ohio-metro-parks-ride/?mc_id=5453
-59. **amber flag** — [Thursday Night Ride (Race Ready Repair)](https://cycleforchange.org/rides/conroe-tx-race-ready-repair-thursday-night-ride/) · Conroe, TX · [Race Ready Repair](https://racereadyrepair.com/shop-rides) · checked 2026-10-01
-   - `time-missing` since 2026-10-26: 6:00 pm no longer appears on https://racereadyrepair.com/shop-rides
-   - `schedule-text-changed` since 2026-10-26: the schedule text on https://racereadyrepair.com/shop-rides changed
-     - was: "… Contact Us · Shop · Menu · Shop Rides · Thursday Night Ride · Come join us Thursday nights at 6:00 for a fun 23 mile ride at 16-18 MPH. The first Thursday of the month is a 10 mile fat tire ride. Helmets are required and lights are recommended. Starting times change throughout the seasons. · Satu…"
-     - now: "… Contact Us · Shop · Menu · Shop Rides · Saturday Morning Ride · Looking for a longer ride"
-   - watch: https://racereadyrepair.com/shop-rides
-60. **amber flag** — [The Unlikely Cyclist Wednesday Women's Group Ride](https://cycleforchange.org/rides/costa-mesa-ca-the-unlikely-cyclist-wednesday-womens-ride/) · Costa Mesa, CA · [The Unlikely Cyclist](https://www.theunlikelycyclist.com/new-events) · checked 2026-10-01
-   - `schedule-text-changed` since 2026-10-12: the schedule text on https://www.theunlikelycyclist.com/new-events changed
-     - was: "… waiver here · Join Our Strava Club Here ! · Oct · 10 · 7:45 AM 07:45 · Saturday Women's Group Ride - Huskins Coffee · Saturday, October 10, 2026 · 7:45 AM · 11:00 AM · 07:45 · 11:00 · The Unlikely Cyclist · (map) · Google C"
-     - now: "… waiver here · Join Our Strava Club Here ! · Nov · 18 · 5:45 PM 17:45 · TUC ZWIFT Meetup! · Wednesday, November 18, 2026 · 5:45 PM · 6:45 PM · 17:45 · 18:45 · The Unlikely Cyclist · (map) · Google Calendar · ICS · Team TUC has a"
-   - watch: https://www.theunlikelycyclist.com/new-events
+19. **amber flag** — [Thursday Lake Laps (Trek Dallas Park Cities)](https://cycleforchange.org/rides/dallas-tx-trek-park-cities-thursday-lake-laps/) · Dallas, TX · [Trek Bicycle Dallas Park Cities](https://www.eventbrite.com/e/trek-dallas-road-rides-tickets-1997717165820) · checked 2026-10-01
+   - `time-missing` since 2026-11-02: 6:30 pm no longer appears on https://www.eventbrite.com/e/trek-dallas-road-rides-tickets-1997717165820
+   - `schedule-text-changed` since 2026-11-02: the schedule text on https://www.eventbrite.com/e/trek-dallas-road-rides-tickets-1997717165820 changed
+     - was: "· Organizer Resource Hub · Create Events · Contact Sales · Get Started · Help Center · Help Center · Find your tickets · Contact your event organizer · Updates · Share this event · Trek Dallas Road Rides · By Trek Bicycle Dallas Park Cities · Follow · Trek Bicycle Dallas Park Cities Dallas, TX · Mu…"
+     - now: "Trek Dallas Road Rides Tickets, Multiple dates | Eventbrite · Eventbrite Eventbrite · Search events · Search events · autocomplete · Find my tickets · Sign in · Find Events · Creat … esource Hub · Create Events · Contact Sales · Get Started · Help Center · Help Center · Find your tickets · Contact …"
+   - `event-date-past` since 2026-11-23: the host's page dates this ride Thu Aug 13, 2026, which has passed; it may not be running now
+   - watch: https://www.eventbrite.com/e/trek-dallas-road-rides-tickets-1997717165820
+20. **amber flag** — [Tuesday Lake Laps (Trek Dallas Park Cities)](https://cycleforchange.org/rides/dallas-tx-trek-park-cities-tuesday-lake-laps/) · Dallas, TX · [Trek Bicycle Dallas Park Cities](https://www.eventbrite.com/e/trek-dallas-road-rides-tickets-1997717165820) · checked 2026-10-01
+   - `time-missing` since 2026-11-02: 6:30 pm no longer appears on https://www.eventbrite.com/e/trek-dallas-road-rides-tickets-1997717165820
+   - `schedule-text-changed` since 2026-11-02: the schedule text on https://www.eventbrite.com/e/trek-dallas-road-rides-tickets-1997717165820 changed
+     - was: "· Organizer Resource Hub · Create Events · Contact Sales · Get Started · Help Center · Help Center · Find your tickets · Contact your event organizer · Updates · Share this event · Trek Dallas Road Rides · By Trek Bicycle Dallas Park Cities · Follow · Trek Bicycle Dallas Park Cities Dallas, TX · Mu…"
+     - now: "Trek Dallas Road Rides Tickets, Multiple dates | Eventbrite · Eventbrite Eventbrite · Search events · Search events · autocomplete · Find my tickets · Sign in · Find Events · Creat … esource Hub · Create Events · Contact Sales · Get Started · Help Center · Help Center · Find your tickets · Contact …"
+   - watch: https://www.eventbrite.com/e/trek-dallas-road-rides-tickets-1997717165820
+21. **fresh** — [Westside Wednesday Ride](https://cycleforchange.org/rides/detroit-mi-lane-bangerz-westside-wednesday-ride/) · Detroit, MI · [Detroit Lane Bangerz](https://detroitgreenways.org/events-calendar/) · checked 2026-10-01
+   - undated: ran-out
+   - watch: https://detroitgreenways.org/events-calendar/
+22. **amber flag** — [Ride Club Thursday Night Gravel Ride](https://cycleforchange.org/rides/fort-worth-tx-trek-fort-worth-south-thursday-night-gravel-ride/) · Fort Worth, TX · [Trek Bicycle Fort Worth South (Ride Club)](https://www.eventbrite.com/e/ride-club-thursday-night-gravel-ride-tickets-1983077361772) · checked 2026-10-01
+   - `time-missing` since 2026-11-23: 6:00 pm no longer appears on https://www.eventbrite.com/e/ride-club-thursday-night-gravel-ride-tickets-1983077361772
+   - `schedule-text-changed` since 2026-11-23: the schedule text on https://www.eventbrite.com/e/ride-club-thursday-night-gravel-ride-tickets-1983077361772 changed
+     - was: "roup, you can easily hook up with the chill group (and pretend you were there the whole time 😏). This is a no-drop ride since the back group will sweep. · Time- 6pm rollout · Check Trek Ride Club DFW instagram for weekly updates on start location! · Read more · Good to know · Highlights · In perso…"
+     - now: "Ride Club Thursday Night Gravel Ride Tickets, Multiple dates | Eventbrite · Eventbrite Eventbrite · Search events · Search events · autocomplete · Find my tickets · Sign in · Find Events · Creat … b · Create Events · Contact Sales · Get Started · Help Center · Help Center · Find your tickets · Cont…"
+   - watch: https://www.eventbrite.com/e/ride-club-thursday-night-gravel-ride-tickets-1983077361772
+23. **amber flag** — [Bike Hayward Wednesday Rides](https://cycleforchange.org/rides/hayward-ca-bike-east-bay-bike-hayward-wednesday-rides/) · Hayward, CA · [Bike East Bay](https://bikeeastbay.org/event/bike-hayward-rides-3/) · checked 2026-10-01
+   - `event-date-past` since 2026-11-09: the host's page dates this ride Wed Oct 14, 2026, which has passed; it may not be running now
+   - watch: https://bikeeastbay.org/event/bike-hayward-rides-3/
+24. **fresh** — [Tuesday Evening Ride (Suburban Cyclists Unlimited)](https://cycleforchange.org/rides/horsham-pa-scu-tuesday-evening-ride/) · Horsham, PA · [Suburban Cyclists Unlimited (SCU)](https://www.meetup.com/suburban-cyclists-unlimited-meetup/events/) · checked 2026-10-01
+   - undated: ran-out
+   - watch: https://www.meetup.com/suburban-cyclists-unlimited-meetup/events/
+25. **amber flag** — [TNWC (Tuesday Night World Champs)](https://cycleforchange.org/rides/la-crosse-wi-smiths-bike-shop-tnwc-tuesday-night-world-champs/) · La Crosse, WI · [Smith's Bike Shop](https://smithsbikes.com/group-bike-rides/) · checked 2026-10-01
+   - `time-missing` since 2026-11-02: 5:30 pm no longer appears on https://smithsbikes.com/calendar/
+   - `schedule-text-changed` since 2026-11-02: the schedule text on https://smithsbikes.com/calendar/ changed
+     - was: "olen Bikes · Group Rides · Trails & Routes · Bikes · Services · Calendar · Visiting LaCrosse · Summer Series · 0 · was successfully added to your cart. · Cart · October 2026 · Sun · Mon · Tue · Wed · Thu · Fri · Sat · 1 · 2 · 3 · Old Fashioned Gravel · Old Fashioned Gravel · October 3, 2026 · See m…"
+     - now: "len Bikes · Group Rides · Trails & Routes · Bikes · Services · Calendar · Visiting LaCrosse · Summer Series · 0 · was successfully added to your cart. · Cart · November 2026 · Sun · Mon · Tue · Wed · Thu · Fri · Sat · 1 · Pedaling Up the Kickapoo Epic (P.U.K.E.) · Pedaling Up the Kickapoo Epic (P.U…"
+   - watch: https://smithsbikes.com/calendar/
+26. **amber flag** — [Tuesday Training Ride (Lancaster Bicycle Club)](https://cycleforchange.org/rides/lancaster-pa-lbc-tuesday-training-ride/) · Lancaster, PA · [Lancaster Bicycle Club](https://lancasterbikeclub.net/) · checked 2026-10-01
+   - `schedule-text-changed` since 2026-10-05: the schedule text on https://www.meetup.com/lancaster-bicycle-club/ changed
+     - was: "is your agreement to abide by the club's Code of Conduct , · Rules of the Road , and Ride Waiver · In case of accident, consult the Ride Leader Guide . · 5 attendees · Tuesday Training Ride 25R (A) (20-22 mph) · Tue, Oct 27 · 5:30 PM EDT · Calvary Church, 1051 Landis Valley Rd, Lancaster, PA, US · …"
+     - now: "order for your request to join be approved. · Thank You. · Upcoming events · 27 · See all · CoffeeTue- REVISED LR Mill 72 and Trolley Line Coffee (30R) -- RSVP required · Tue, Nov 24 · 9:00 AM EST · Lititz recCenter, 301 Maple St, Lititz, PA 17543, USA, Lititz, PA, US · Ride Leader: Bruce Black · R…"
+   - watch: https://www.meetup.com/lancaster-bicycle-club/
+27. **fresh** — [Wednesday Morning Breakfast Ride (Lancaster Bicycle Club)](https://cycleforchange.org/rides/lancaster-pa-lbc-wednesday-breakfast-ride/) · Lancaster, PA · [Lancaster Bicycle Club](https://www.lancasterbikeclub.net/) · checked 2026-10-01
+   - undated: feed-stopped
+   - watch: https://www.meetup.com/lancaster-bicycle-club/events/
+28. **amber flag** — [Bikes on Rice Slow Roll](https://cycleforchange.org/rides/lihue-hi-kauai-path-bikes-on-rice/) · Lihue, HI · [Kauai Path](https://www.kauaipath.org/event-details/bikes-on-rice-slow-roll-bicycle-ride-2026-09-12-16-30) · checked 2026-10-01
+   - `event-date-past` since 2026-10-05: the host's page dates this ride Sat Sep 12, 2026, which has passed; it may not be running now
+   - `schedule-text-changed` since 2026-11-16: the schedule text on https://www.kauaipath.org/event-details/bikes-on-rice-slow-roll-bicycle-ride-2026-09-12-16-30 changed
+     - was: "… · Lihue, 4210 Malama St, Lihue, HI 96766, USA · Other dates · Sat, Nov 14, 4:30 PM · About the event · Show More · Share this event · © 2024 by Kauai Path Inc. All Rights Reserved. Privacy Policy. Created on Editor X . · 501(c)(3) Nonprofit · P. O. Box 81 :: Lihue, Kauai, HI 96766 · Subscribe · C…"
+     - now: "… · Lihue, 4210 Malama St, Lihue, HI 96766, USA · About the event · Show More · Share this event · © 2024 by Kauai Path Inc. All Rights Reserved. Privacy Policy. Created on Editor X . · 501(c)(3) Nonprofit · P. O. Box 81 :: Lihue, Kauai, HI 96766 · Subscribe · Contact · Home · About · Map · East Si…"
+   - watch: https://www.kauaipath.org/event-details/bikes-on-rice-slow-roll-bicycle-ride-2026-09-12-16-30
+29. **amber flag** — [SunDazies Sunday Ride (FTWNB Cycling Collective)](https://cycleforchange.org/rides/long-beach-ca-sundazies-ftwnb-sunday-ride/) · Long Beach, CA · [SunDazies (FTWNB Cycling Collective)](https://www.strava.com/clubs/1090056) · checked 2026-10-01
+   - `event-date-past` since 2026-10-05: the Strava event's date is Sun Sep 27, 2026, which has passed; the ride may have ended
+   - watch: https://www.strava.com/clubs/1090056
+30. **fresh** — [A Sunday Ride (Lehigh Valley Cycling Club)](https://cycleforchange.org/rides/macungie-pa-lvcc-a-sunday-ride/) · Macungie, PA · [Lehigh Valley Cycling Club (LVCC)](https://www.lvcycling.club/rides) · checked 2026-10-01
+   - undated: feed-stopped
+   - watch: https://www.meetup.com/lehigh-valley-cycling-club/events/
+31. **fresh** — [Thursday Bishop's Casual Ride](https://cycleforchange.org/rides/milford-oh-bishops-thursday-casual-ride/) · Milford, OH · [Cincinnati Cycle Club](https://www.cincinnaticycleclub.org/content.aspx?page_id=22&club_id=772752&module_id=337793) · checked 2026-10-01
+   - undated: ran-out
+   - watch: https://www.cincinnaticycleclub.org/content.aspx?page_id=22&club_id=772752&module_id=337793
+32. **amber flag** — [MMB Tuesday Ride at Monument Preserve](https://cycleforchange.org/rides/monument-co-mmb-tuesday-ride/) · Monument, CO · [Monument Mountain Bikers](https://www.meetup.com/monument-mountain-bikers/) · checked 2026-10-01
+   - `schedule-text-changed` since 2026-11-02: the schedule text on https://www.meetup.com/monument-mountain-bikers/ changed
+     - was: "Monument Mountain Bikers! | Meetup · Skip to content · Homepage · Monument Mountain Bikers! · 5.0 • 541 ratings · Monument, CO, US · 52 members · Share · About · Events · Members · Photos · Discussions · About us · We are a group of intermediate to advanced mountain bikers that enjoy riding all of …"
+     - now: "il rides are weather permitting with some fat bike rides that we will post if the snow falls! Our rides include the following locations: Mount Herman, Monument Preserve, Spruce Mtn./Spruce Meadows, Greenland Open Space, Lincoln Mtn., Sandstone Ranch, Falcon Trail, Ute Valley, Palmer Park, Rampart R…"
+   - watch: https://www.meetup.com/monument-mountain-bikers/
+33. **amber flag** — [Waffles n Wheels Hills n Sips](https://cycleforchange.org/rides/oakland-ca-waffles-n-wheels-hills-n-sips/) · Oakland, CA · [Waffles n Wheels](https://www.strava.com/clubs/1000022/group_events/3540447259659379556) · checked 2026-10-01
+   - `event-date-past` since 2026-10-05: the Strava event's date is Thu Oct 1, 2026, which has passed; the ride may have ended
+   - watch: https://www.strava.com/clubs/1000022/group_events/3540447259659379556
+34. **fresh** — [King Farmer's Market Ride](https://cycleforchange.org/rides/portland-or-team-apuggalypse-king-farmers-market-ride/) · Portland, OR · [Team Apuggalypse](https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20) · checked 2026-10-01
+   - undated: ran-out
+   - watch: https://www.shift2bikes.org/api/events.php?startdate=2026-10-01&enddate=2026-12-20
+35. **amber flag** — [Prospect Park Moon & Magic Hour Ride](https://cycleforchange.org/rides/brooklyn-ny-times-up-prospect-park-moon-and-magic-hour-ride/) · Brooklyn, NY · [Time's Up!](https://times-up.org/calendar/prospect-park-moon-magic-hour-ride-8/) · checked 2026-10-02
+   - `time-missing` since 2026-11-02: 7:15 pm no longer appears on https://times-up.org/calendar/
+   - `schedule-text-changed` since 2026-11-02: the schedule text on https://times-up.org/calendar/ changed
+     - was: "welcoming multi-level yoga class open to everyone…. · More Info · THURSDAY NIGHT SOCIAL BIKERIDE · 10/29/2026 – 10/30/2026 · 7:00 pm – 8:00 pm · Columbus Circle Central Park · Every Thursday 7pm meet at Columbus Circle entrance of Central Park. Hosted by Social Cycling NYC. · More Info · PROSPECT P…"
+     - now: "alendar · Calendar – list view · Hover over an item to see the details! · (Click the date for the listing) · Today · Sun · Mon · Tue · Wed · Thu · Fri · Sat · S · M · T · W · T · F · S · 1 · FREE ONE HOUR OUTDOOR YOGA CLASSES · 2 · 3 · 4 · WEDNESDAY NIGHT SKATE NYC · 5 · FREE ONE HOUR OUTDOOR YOGA …"
+   - watch: https://times-up.org/calendar/
+36. **amber flag** — [Bluegrass Cycling Club Horse Park Tuesday](https://cycleforchange.org/rides/lexington-ky-bluegrass-cycling-club-horse-park-tuesday/) · Lexington, KY · [Bluegrass Cycling Club](https://bgcycling.net/) · checked 2026-10-02
+   - `schedule-text-changed` since 2026-10-12: the schedule text on https://bgcycling.net/content.aspx?page_id=4001&club_id=740127&action=cira&vm=Future&sif=0 changed
+     - was: "Events · October, 2026 · Monday · 5 · Monday Legacy · Trailhead at the North YMCA · Mon, Oct 5, 2026 at 10:00 AM · visibility View · Monday · 5 · Monday Mileage Builder · Deer Haven Park · Mon, Oct 5, 2026 at 10:00 AM · visibility View · Monday · 5 · Masterson Mondays · Masterson Station · Mon, Oct…"
+     - now: "Rides & Events - Bluegrass Cycling Club, Inc. · Skip to main content ·  ·  Print This Page ·  Text Size ·  Scroll To Top · Share This Page · Share this page on Facebook · Share this page on Linkedin"
+   - `time-missing` since 2026-11-02: 5:30 pm no longer appears on https://bgcycling.net/content.aspx?page_id=4001&club_id=740127&action=cira&vm=Future&sif=0
+   - watch: https://bgcycling.net/content.aspx?page_id=4001&club_id=740127&action=cira&vm=Future&sif=0
+37. **amber flag** — [Bluegrass Cycling Club Masterson Mondays](https://cycleforchange.org/rides/lexington-ky-bluegrass-cycling-club-masterson-mondays/) · Lexington, KY · [Bluegrass Cycling Club](https://bgcycling.net/) · checked 2026-10-02
+   - `time-missing` since 2026-11-02: 5:30 pm no longer appears on https://bgcycling.net/content.aspx?page_id=4001&club_id=740127&action=cira&vm=Future&sif=0
+   - `schedule-text-changed` since 2026-11-02: the schedule text on https://bgcycling.net/content.aspx?page_id=4001&club_id=740127&action=cira&vm=Future&sif=0 changed
+     - was: "… Page ·  Text Size ·  Scroll To Top … rth YMCA · Mon, Oct 26, 2026 at 10:00 AM · visibility View · Monday · 26 · Monday Mileage Builder · Deer Haven Park · Mon, Oct 26, 2026 at 10:00 AM · visibility View · Monday · 26 · Masterson Mondays · Masterson Station · Mon, Oct 26, 2026 at 5:30 PM · visib…"
+     - now: "… Page ·  Text Size ·  Scroll To Top · Share This Page · Share this page on Facebook · Share this page on Linkedin"
+   - watch: https://bgcycling.net/content.aspx?page_id=4001&club_id=740127&action=cira&vm=Future&sif=0
+38. **amber flag** — [Bluegrass Cycling Club Midway Wednesday](https://cycleforchange.org/rides/midway-ky-bluegrass-cycling-club-midway-wednesday/) · Midway, KY · [Bluegrass Cycling Club](https://bgcycling.net/) · checked 2026-10-02
+   - `time-missing` since 2026-11-02: 5:30 pm no longer appears on https://bgcycling.net/content.aspx?page_id=4001&club_id=740127&action=cira&vm=Future&sif=0
+   - watch: https://bgcycling.net/content.aspx?page_id=4001&club_id=740127&action=cira&vm=Future&sif=0
+39. **amber flag** — [AIR cc WXMNS Ride (women, non-binary, trans, femme)](https://cycleforchange.org/rides/oakland-ca-air-cc-wxmns-ride/) · Oakland, CA · [AIR cc](https://www.aircc.org/group-rides) · checked 2026-10-02
+   - `event-date-past` since 2026-10-05: the Strava event's date is Thu Apr 9, 2026, which has passed; the ride may have ended
+   - watch: https://www.aircc.org/group-rides
+40. **amber flag** — [Critical Mass Pittsburgh](https://cycleforchange.org/rides/pittsburgh-pa-pittsburgh-critical-mass-second-friday/) · Pittsburgh, PA · [Pittsburgh Critical Mass](https://www.ike.bike/event/pgh-critical-mass-2/) · checked 2026-10-02
+   - `event-date-past` since 2026-10-05: the host's page dates this ride Fri Jan 9, 2026, which has passed; it may not be running now
+   - watch: https://www.ike.bike/event/pgh-critical-mass-2/
+41. **amber flag** — [Hummingbird All Watts Welcome (intervals)](https://cycleforchange.org/rides/san-francisco-ca-hummingbird-fuels-all-watts-welcome-intervals/) · San Francisco, CA · [Hummingbird Fuels](https://www.strava.com/clubs/1384021/group_events/3539467867329820304) · checked 2026-10-02
+   - `event-date-past` since 2026-10-12: the Strava event's date is Tue Oct 6, 2026, which has passed; the ride may have ended
+   - watch: https://www.strava.com/clubs/1384021/group_events/3539467867329820304
+42. **amber flag** — [UBBC Tuesday Night Ride](https://cycleforchange.org/rides/cincinnati-oh-ubbc-tuesday-night-ride/) · Cincinnati, OH · [Urban Basin Bicycle Club](https://events.queencity.bike/) · checked 2026-10-19
+   - `schedule-text-changed` since 2026-11-02: the schedule text on https://events.queencity.bike/ changed
+     - was: "Mountain Biking · Read more → · Today · 10:00 PM · Mon, Oct 26th · Neighborhood Ride · 2009 Madison Road, Cincinnati, OH, United States, Ohio 45208 · → · Tomorrow · 10:00 PM · Tue, Oct 27th · Tuesday Night Worlds (TNW) · 16 E 7th St, Newport, KY (Parking Lot at Orchard & 7th close to Reser Bicycle …"
+     - now: "v 27th · CANS Bike Bus - Fall 2026 · 3711 Clifton Avenue, Cincinnati 45220 · Community Building Road (paved) · → · The full month · November 2026 · « · ‹ · November 2026 · › · » · Mon · Tue · Wed · Thu · Fri · Sat · Sun · 26 · 27 · 28 · 29 · 30 · 31 · 1 · 2 · 3 · 4 · 5 · 6 · 7 · 8 · 9 · 10 · 11 · 1…"
+   - watch: https://events.queencity.bike/
+43. **fresh** — [Taco Tuesday Social Ride (Allen)](https://cycleforchange.org/rides/allen-tx-dctr-taco-tuesday-social-ride/) · Allen, TX · [Dallas Cycling Trail Riders and Weekend Pub Crawlers](https://www.meetup.com/dallas-cycling-trail-riders-and-weekend-pub-crawlers/events/) · checked 2026-11-02
+   - undated: feed-stopped
+   - watch: https://www.meetup.com/dallas-cycling-trail-riders-and-weekend-pub-crawlers/events/
+44. **amber flag** — [Saturday Light Ride](https://cycleforchange.org/rides/corpus-christi-tx-cc-led-saturday-light-ride/) · Corpus Christi, TX · [CC LED](https://www.thebendmag.com/cc-led-lights-up-the-local-biking-community/) · checked 2026-09-15
+   - `unreachable` since 2026-10-12: no page for this ride has loaded for 9 runs (403)
+   - watch: https://www.thebendmag.com/cc-led-lights-up-the-local-biking-community/
+45. **amber flag** — [Madison Queer Bike Ride](https://cycleforchange.org/rides/madison-wi-madison-queer-bike-ride/) · Madison, WI · [Madison Queer Bike Ride](https://ourliveswisconsin.com/article/madison-queer-bike-ride/) · checked 2026-09-15
+   - `unreachable` since 2026-10-19: no page for this ride has loaded for 8 runs (403)
+   - watch: https://ourliveswisconsin.com/article/madison-queer-bike-ride/
+46. **amber flag** — [Thursday Night Mountain Bike Group](https://cycleforchange.org/rides/missoula-mt-thursday-night-mountain-bike-group/) · Missoula, MT · [Missoula Thursday Night Mountain Bike Group](https://thursdaynightmtbr.org/) · checked 2026-09-15
+   - `unreachable` since 2026-10-12: no page for this ride has loaded for 9 runs (ERR_TLS_CERT_ALTNAME_INVALID)
+   - watch: https://thursdaynightmtbr.org/
+47. **amber flag** — [Sunny Sunday D Ride (Bicycle Club of Philadelphia)](https://cycleforchange.org/rides/philadelphia-pa-bcp-sunny-sunday-d-ride/) · Philadelphia, PA · [Bicycle Club of Philadelphia](https://phillybikeclub.org/bcpdo/ride/calendarweekly) · checked 2026-09-15
+   - `unreachable` since 2026-10-12: no page for this ride has loaded for 9 runs (403)
+   - watch: https://phillybikeclub.org/bcpdo/ride/calendarweekly
+48. **amber flag** — [Portland Gear Hub Thursday Group Ride](https://cycleforchange.org/rides/portland-me-gear-hub-thursday-group-ride/) · Portland, ME · [Portland Gear Hub](https://www.portlandgearhub.org/events) · checked 2026-09-15
+   - `schedule-text-changed` since 2026-10-05: the schedule text on https://www.portlandgearhub.org/events changed
+     - was: "Events — Portland Gear Hub · 0 · Skip to Content · Programs · Bikes For All Mainers · Discount Bikes · Open Bench Time · Classes and Workshops · Shop · Service Department · Rentals · Bike Rentals · Events · Volunteer · About · Portland Gear Hub · Ketcha Outdoors · Staff · Board · Donate · Open Menu…"
+     - now: "Events — Portland Gear Hub · 0 · We will be closed Thursday 11-26, Friday 11-27, and Saturday 11-28 for the November Holidays · Skip to Content · Programs · Bikes For All Mainers · Discount Bikes · Open Bench Time · Classes and Workshops · Shop · Service Department · Rentals · Bike Rentals · Events…"
+   - watch: https://www.portlandgearhub.org/events
+49. **amber flag** — [Moment Bicycles Saturday Point Loma Ride](https://cycleforchange.org/rides/san-diego-ca-moment-bicycles-saturday-ride/) · San Diego, CA · [Moment Bicycles](https://www.momentbikes.com/events/moment-san-diego-bike-rides-pg369.htm) · checked 2026-09-15
+   - `schedule-text-changed` since 2026-11-23: the schedule text on https://www.momentbikes.com/events/moment-san-diego-bike-rides-pg369.htm changed
+     - was: "… will be announced well in advance with a different route"
+     - now: "… will be announced well in advance with a different route"
+   - watch: https://www.momentbikes.com/events/moment-san-diego-bike-rides-pg369.htm
+50. **amber flag** — [SheWolves Ride](https://cycleforchange.org/rides/san-diego-ca-shewolves-ride/) · San Diego, CA · [SheWolves](https://sandiegomagazine.com/everything-sd/health-fitness/10-local-group-rides-for-every-type-of-cyclist/) · checked 2026-09-15
+   - `schedule-text-changed` since 2026-10-12: the schedule text on https://sandiegomagazine.com/everything-sd/health-fitness/10-local-group-rides-for-every-type-of-cyclist/ changed
+     - was: "… Brewing Social Ride · North Park · Given its connectio"
+     - now: "… Brewing Social Ride · North Park · Given its connectio"
+   - watch: https://sandiegomagazine.com/everything-sd/health-fitness/10-local-group-rides-for-every-type-of-cyclist/
+51. **amber flag** — [Le Tour de Ham](https://cycleforchange.org/rides/birmingham-al-le-tour-de-ham/) · Birmingham, AL · [Le Tour de Ham](https://bhamnow.com/2018/05/29/experiencebirminghamontwowheelswiththesetenlocalcyclinggroupsincludingletourdeham/) · checked 2026-09-18
+   - `schedule-text-changed` since 2026-11-16: the schedule text on https://bhamnow.com/2018/05/29/experiencebirminghamontwowheelswiththesetenlocalcyclinggroupsincludingletourdeham/ changed
+     - was: "… more information, follow Cycling Talk on Facebook and look fo"
+     - now: "… more information, follow Cycling Talk on Facebook and look fo"
+   - watch: https://bhamnow.com/2018/05/29/experiencebirminghamontwowheelswiththesetenlocalcyclinggroupsincludingletourdeham/
+52. **amber flag** — [Dawn Patrol](https://cycleforchange.org/rides/brooklyn-ny-dawn-patrol-prospect-park/) · Brooklyn, NY · [Dawn Patrol](https://legday.substack.com/p/a-thursday-morning-prospect-park) · checked 2026-09-18
+   - `unreachable` since 2026-10-19: no page for this ride has loaded for 8 runs (403)
+   - watch: https://legday.substack.com/p/a-thursday-morning-prospect-park
+53. **amber flag** — [NightCAP Ride (Cyclists Against Patriarchy)](https://cycleforchange.org/rides/brooklyn-ny-nightcap-monday-ride/) · Brooklyn, NY · [NightCAP Brooklyn](https://queeronthestreet.substack.com/p/no-straight-plans-tues-april-7-tues) · checked 2026-09-18
+   - `unreachable` since 2026-10-19: no page for this ride has loaded for 8 runs (403)
+   - watch: https://queeronthestreet.substack.com/p/no-straight-plans-tues-april-7-tues
+54. **amber flag** — [Cola Women/Trans/Femme/Non-binary Cyclists Ride](https://cycleforchange.org/rides/columbia-sc-cola-wtfnb-cyclists-ride/) · Columbia, SC · [Cola Town Bike Collective](https://colatownbikes.com/) · checked 2026-09-18
+   - `schedule-text-changed` since 2026-11-02: the schedule text on https://colatownbikes.com/ changed
+     - was: "… Columbia and the Midlands. · We are a f … tion to connect the Midlands by building a modular, scalable network of safe routes specifically for cyclists. · Learn More · Become a Member of the Collective · The Cola Town Bike Collective now offer"
+     - now: "… Columbia and the Midlands. · We are a f … ve a new sweeper! On Friday morning, October 30, the City of Columbia officially handed South Carolina's first bike-powered bike lane sweeper over to us at the Cola Town Bike Collective. The hand"
+   - watch: https://colatownbikes.com/
+55. **amber flag** — [Babes on Bikes Weekly Ride](https://cycleforchange.org/rides/emporia-ks-babes-on-bikes-wednesday-ride/) · Emporia, KS · [Babes on Bikes Emporia](https://visitemporia.com/place/community-group-rides/) · checked 2026-09-18
+   - `unreachable` since 2026-10-19: no page for this ride has loaded for 8 runs (403)
+   - watch: https://visitemporia.com/place/community-group-rides/
+56. **amber flag** — [Music City Dope Pedalers Friday Ride](https://cycleforchange.org/rides/nashville-tn-music-city-dope-pedalers-friday-ride/) · Nashville, TN · [Music City Dope Pedalers](https://www.nashvillescene.com/bon/2025/health-beauty-and-fitness/writers-choice/music-city-dope-pedalers/article_42c680e4-3dfe-496a-be7a-9a80a1a22a04.html) · checked 2026-09-18
+   - `schedule-text-changed` since 2026-10-12: the schedule text on https://www.nashvillescene.com/bon/2025/health-beauty-and-fitness/writers-choice/music-city-dope-pedalers/article_42c680e4-3dfe-496a-be7a-9a80a1a22a04.html changed
+     - was: "Best Group to Ride With: Music City Dope Pedalers | Writers' Choice | nashvillescene.com · Skip to main content · You have permission to edit this article. · Edit · Close · Sign Up · Log In · Dashboard · Logout · My Account · Das … Arts · Theater · Visual Art · Vodka Yonic · Food & Drink · Bites · …"
+     - now: "Best Group to Ride With: Music City Dope Pedalers | Best of Nashville 2025 Health, Beauty & Fitness Writers' Choice | nashvillescene.com · Skip to main content · You have permission to edit this article. · Edit · Clos … edy · Cover Story · Film/TV · In the Club · Performing Arts · Theater · Visual …"
+   - `unreachable` since 2026-11-23: no page for this ride has loaded for 3 runs (429)
+   - watch: https://www.nashvillescene.com/bon/2025/health-beauty-and-fitness/writers-choice/music-city-dope-pedalers/article_42c680e4-3dfe-496a-be7a-9a80a1a22a04.html
+57. **amber flag** — [Shelby Ave Tuesday Night Ride](https://cycleforchange.org/rides/nashville-tn-shelby-ave-bicycle-tuesday-night-ride/) · Nashville, TN · [Shelby Ave Bicycle Co.](https://greenfleetbikes.com/pages/shelby-ave-bicycle-co) · checked 2026-09-18
+   - `schedule-text-changed` since 2026-11-02: the schedule text on https://ma.to/venue/shelbybicycle changed
+     - was: "ryone on a bike, whether you are commuting or cruising local greenways. · No upcoming events scheduled · Check out past events below · Past Events · Tuesday Night Ride · Shelby Ave Bicycle Co · A 25-mile loop from the shop with A and B groups for different paces. · Frequently Asked Questions · What…"
+     - now: "Shelby Ave. Bicycle Co., Nashville: past events and… | MATO · Skip to main content · manifesto · Search events, organisers, artists · get the app get the app · Sign up · Nashville / Shelby Ave. Bicycle Co. · Shelby Ave. Bicycle Co. · Venue in Nashville · 1629 Shelby Ave · @ shelbybicycle · Nashvill…"
+   - watch: https://ma.to/venue/shelbybicycle
+58. **amber flag** — [TrainYAS Ladies](https://cycleforchange.org/rides/abu-dhabi-ae-yas-marina-circuit-trainyas-ladies/) · Abu Dhabi, United Arab Emirates · [Yas Marina Circuit, presented by Abu Dhabi Sports Council](https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-ladies) · checked 2026-09-30
+   - `time-missing` since 2026-10-05: 6:00 pm no longer appears on https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-ladies
+   - `schedule-text-changed` since 2026-10-05: the schedule text on https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-ladies changed
+     - was: "عربية السعودية · YOUR TRACK TO WELLNESS · Yas Marina Circuit is more than a racetrack - it’s your space to move, train, and feel your best. From weekly events like TrainYAS and TrainAM to the annual TriYAS, we offer a safe, welcoming environment for all fitness levels. Walk, run, or cycle under the…"
+     - now: "is TrainAM session is for cycling only. · Please bring your own bicycle, as complimentary bicycles are not provided during this session. · REGISTER NOW · ALL · TRAINAM · TRAINYAS · TRAINYAS LADIES · FREE WEEKLY · FITNESS SESSIONS · WALK, JOG · OR CYCLE · WELCOME · ALL FITNESS LEVELS · TRAIN · ON F1…"
+   - watch: https://www.yasmarinacircuit.com/en/healthandfitness/trainyas-ladies
+59. **amber flag** — [DFMBA Saturday Group Rides](https://cycleforchange.org/rides/cave-creek-az-dfmba-saturday-group-rides/) · Cave Creek, AZ · [Desert Foothills Mountain Bike Association (DFMBA)](https://www.dfmba.org/events) · checked 2026-09-30
+   - `schedule-text-changed` since 2026-11-23: the schedule text on https://www.dfmba.org/events changed
+     - was: "C4 Race Registration, Pricing & Details | DFMBA · Skip to content · DFMBA Flagship Race · Cave Creek Cactus Classic · This is the main page for C4 race registration, pricing, parking, course details, volunteer signups, and race-day FAQs. Community rides and trail days are listed lower on the page. …"
+     - now: "C4 Race Details & 2027 Save the Date | DFMBA · Skip to content · DFMBA Flagship Race · Cave Creek Cactus Classic · The 2026 race is complete. This is the main page for C4 details, parking, course information, and race-day FAQs, and where we will post 2027 registration. Community rides and trail day…"
+   - watch: https://www.dfmba.org/events
+60. **amber flag** — [MHCC Sunday Morning Wake Up Ride](https://cycleforchange.org/rides/albany-ny-mhcc-sunday-morning-wake-up-ride/) · Albany, NY · [Mohawk Hudson Cycling Club](https://www.mohawkhudsoncyclingclub.org/rides/public) · checked 2026-10-01
+   - `schedule-text-changed` since 2026-11-02: the schedule text on https://www.mohawkhudsoncyclingclub.org/rides/public changed
+     - was: "… Club Events · Contact Us · Ride Schedule · Monday, October 26, 2026 · 11A · Sport/14 · 31 30.5 30.50 · Applebuds 2 · Charle … r gear for the ride! We will do a repeat ride to Spier Falls and Moreau State Park. · Contact Leader · Sunday, November 1, 2026 · 9A · Multi-pace/11 · 56 56.0 56.00 · 2026…"
+     - now: "… Club Events · Contact Us · Ride Schedule · Monday, November 23, 2026 · 11A · Sport/14 · 32 31.9 31.90 · To Altamont · Charl … d route with the exception of my driveway. · Also, CVC has once again been invited to join us. · Hope to see a few of you despite my late posting. · Good ride with 3 MHCC …"
+   - `time-missing` since 2026-11-23: 8:00 am no longer appears on https://www.mohawkhudsoncyclingclub.org/rides/public
+   - watch: https://www.mohawkhudsoncyclingclub.org/rides/public
 
 ## Feeds that stopped working
 
+- phoenix-az-cycle-for-change-fruit-loop: https://cycleforchange.org/rides/phoenix-az-cycle-for-change-fruit-loop/ride.ics (404)
 - durham-nc-ponysaurus-pony-ride: https://www.bikethetriangle.com/events/?ical=1 (403)
 - durham-nc-rescue-racing-daily-beer-bar-ride: https://www.bikethetriangle.com/events/?ical=1 (403)
 - durham-nc-scrappy-tuesday-ride: https://www.bikethetriangle.com/events/?ical=1 (403)
@@ -282,12 +283,17 @@ Work it with `/rides refresh 40` (or the Monday re-check PR). A ride comes off t
 
 Not flagged: they were there the first time the watcher read the page (often "cancelled if it rains"). Worth one look on the next re-check.
 
+- [The Bike Lane AZ Bike-Path Rides](https://cycleforchange.org/rides/scottsdale-az-the-bike-lane-greenbelt-and-canal-rides/): "cancelled" on https://www.meetup.com/the-bike-lane/
 - [Women's Shootout Tucson](https://cycleforchange.org/rides/tucson-az-womens-shootout/): "no longer" on https://www.fairwheelbikes.com/blogs/posts/womens-rides/
 - [Swami's Monthly Sunday Social Ride](https://cycleforchange.org/rides/carlsbad-ca-swamis-monthly-social-ride/): "no longer" on https://swamis.org/rides-events/weekly-group-rides-t/
+- [Marin Cyclists China Camp Loop](https://cycleforchange.org/rides/corte-madera-ca-marin-cyclists-china-camp-loop/): "cancelled" on https://marincyclists.com/content.aspx?page_id=4001&club_id=525458
 - [Sacramento Bike Hikers Tuesday Evening Ride](https://cycleforchange.org/rides/gold-river-ca-bike-hikers-tuesday-evening-ride/): "cancelled" on https://bikehikers.clubexpress.com/content.aspx?page_id=4001&club_id=216251
 - [Tuesday Morning EZ Rider](https://cycleforchange.org/rides/gold-river-ca-bike-hikers-tuesday-morning-ez-rider/): "cancelled" on https://bikehikers.clubexpress.com/content.aspx?page_id=4001&club_id=216251
 - [Different Spokes Sunday Ride](https://cycleforchange.org/rides/los-angeles-ca-different-spokes-sunday-ride/): "suspended" on https://www.differentspokes.com/
+- [Thursday Social Ride to Marina del Rey (Beach Cities Cycling Club)](https://cycleforchange.org/rides/manhattan-beach-ca-beach-cities-cycling-club-thursday-social-ride-marina-del-rey/): "cancelled" on https://www.bcccsb.org/Ride-Calendar
+- [Sunday FunDay Whale Watch Ride (Beach Cities Cycling Club)](https://cycleforchange.org/rides/redondo-beach-ca-beach-cities-cycling-club-sunday-funday-whale-watch/): "cancelled" on https://www.bcccsb.org/Ride-Calendar
 - [SDBC Sunday Funday Ride](https://cycleforchange.org/rides/san-diego-ca-sdbc-sunday-funday-ride/): "suspended" on https://sdbc.org/sunday
+- [Marin Cyclists Easy Like Sunday Morning](https://cycleforchange.org/rides/san-rafael-ca-marin-cyclists-easy-like-sunday-morning/): "cancelled" on https://marincyclists.com/content.aspx?page_id=4001&club_id=525458
 - [Castle Trail Night Rides (White Clay Bicycle Club)](https://cycleforchange.org/rides/delaware-city-de-wcbc-castle-trail-night-rides/): "cancelled" on https://www.huntcal.com/cal/view/WCBC/WCBC?vm=r
 - [Estero Bicycle Cafe Sunday Ride](https://cycleforchange.org/rides/estero-fl-estero-bicycle-cafe-sunday-ride/): "cancelled" on https://crbc.clubexpress.com/content.aspx?page_id=4001&club_id=787276
 - [Monday Minions (Caloosa Riders)](https://cycleforchange.org/rides/fort-myers-fl-caloosa-riders-monday-minions/): "cancelled" on https://crbc.clubexpress.com/content.aspx?page_id=4001&club_id=787276
@@ -296,29 +302,24 @@ Not flagged: they were there the first time the watcher read the page (often "ca
 - [Love the Loop (SMBC multi-speed Saturday)](https://cycleforchange.org/rides/sarasota-fl-smbc-love-the-loop-saturday/): "cancelled" on https://www.huntcal.com/cal/view/SMBC/SMBC?vm=r
 - [St. Petersburg Bicycle Club Saturday Ride](https://cycleforchange.org/rides/st-petersburg-fl-spbc-saturday-club-ride/): "on hiatus" on https://stpetebicycleclub.com/rides
 - [Maui Bicycling League Monthly Group Ride](https://cycleforchange.org/rides/maui-hi-maui-bicycling-league-monthly-group-ride/): "cancelled" on https://www.mauibike.org/events/
-- [BIC 2sday 2wheelers Tuesday Morning Ride](https://cycleforchange.org/rides/iowa-city-ia-bic-2sday-2wheelers-tuesday-morning-ride/): "cancelled" on https://bic.clubexpress.com/content.aspx?page_id=4001&club_id=74108
-- [BIC Saturday Rides](https://cycleforchange.org/rides/iowa-city-ia-bic-saturday-weekend-rides/): "cancelled" on https://bic.clubexpress.com/content.aspx?page_id=4001&club_id=74108
 - [Friday Coffee Ride](https://cycleforchange.org/rides/coeur-dalene-id-cdacc-friday-coffee-ride/): "last ride" on https://cdacycling.club/rides
 - [Saturday Fondo (Grandeur)](https://cycleforchange.org/rides/coeur-dalene-id-cdacc-saturday-fondo/): "last ride" on https://cdacycling.club/rides
 - [Cycle Brookfield First Friday Slow Roll](https://cycleforchange.org/rides/brookfield-il-cycle-brookfield-first-friday-slow-roll/): "last ride" on http://cyclebrookfield.com/events/
 - [Praline Croissant Women's/NB Ride](https://cycleforchange.org/rides/cambridge-ma-crw-praline-croissant-women-nb-ride/): "cancelled", "last ride" on https://crw.org/events
 - [Speedy Croissant Women/NB Ride](https://cycleforchange.org/rides/cambridge-ma-crw-speedy-croissant-women-nb-ride/): "cancelled", "last ride" on https://crw.org/events
+- [Wednesday Wheelers (Charles River Wheelers)](https://cycleforchange.org/rides/cambridge-ma-crw-wednesday-wheelers/): "cancelled", "last ride" on https://crw.org/events
 - [Glen Echo Loops (C pace)](https://cycleforchange.org/rides/glen-echo-md-potomac-pedalers-glen-echo-loops-thursday/): "cancelled" on https://www.potomacpedalers.org/calendar
 - [The Usual Monday Ride from Glen Echo](https://cycleforchange.org/rides/glen-echo-md-potomac-pedalers-usual-monday-ride/): "cancelled" on https://www.potomacpedalers.org/calendar
 - [Friday Evening Spin](https://cycleforchange.org/rides/manchester-nh-qc-bike-friday-evening-spin/): "cancelled" on https://qcbike.org/group-rides/
 - [Sunday Morning Over Easy](https://cycleforchange.org/rides/manchester-nh-qc-bike-sunday-morning-over-easy/): "cancelled" on https://qcbike.org/group-rides/
 - [Marty's Monday Women's Ride](https://cycleforchange.org/rides/morristown-nj-martys-monday-womens-ride/): "last ride" on https://www.martysreliable.com/about/weekly-rides-pg944.htm
 - [Marty's Tuesday Evening Road Ride](https://cycleforchange.org/rides/morristown-nj-martys-tuesday-evening-road-ride/): "last ride" on https://www.martysreliable.com/about/weekly-rides-pg944.htm
-- [NMTS Start the Week Rite Ride (4th Monday)](https://cycleforchange.org/rides/albuquerque-nm-nmts-start-the-week-rite-ride/): "cancelled" on https://www.nmts.org/displayWeekly.php
-- [NMTS Sunday Bosque Trail Ride](https://cycleforchange.org/rides/albuquerque-nm-nmts-sunday-bosque-trail-ride/): "cancelled" on https://www.nmts.org/displayWeekly.php
+- [JSTS Weeknight Rides (Jersey Shore Touring Society)](https://cycleforchange.org/rides/red-bank-nj-jsts-weeknight-rides/): "cancelled" on https://www.jsts.us/Ride-Calendar
 - [Suffolk Bicycle Riders Association Club Rides](https://cycleforchange.org/rides/centereach-ny-suffolk-bicycle-riders-association-club-rides/): "cancelled" on https://www.sbraweb.org/upcoming_rides
+- [Keizer Morning Ride](https://cycleforchange.org/rides/keizer-or-salem-bicycle-club-keizer-morning-ride/): "cancelled" on https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926
+- [Thursday Night Lights Ride (Keizer)](https://cycleforchange.org/rides/keizer-or-keizer-family-ride/): "cancelled" on https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926
+- [East Salem Morning Ride](https://cycleforchange.org/rides/salem-or-salem-bicycle-club-east-salem-morning-ride/): "cancelled" on https://www.salembicycleclub.org/content.aspx?page_id=4001&club_id=189926
 - [Harmony Lake Ride (Premier Bicycle Club)](https://cycleforchange.org/rides/harmony-pa-premier-bicycle-club-harmony-lake-ride/): "cancelled" on https://www.premierbicycleclub.org/content.aspx?page_id=4001&club_id=400812
 - [Mountain Espresso (PAPERtrail Bike Cafe)](https://cycleforchange.org/rides/philadelphia-pa-papertrail-mountain-espresso/): "suspended" on https://papertrailbikecafe.com/espresso-rides/
 - [Hump Day Ride (NWCC)](https://cycleforchange.org/rides/hockley-tx-nwcc-hump-day-ride/): "cancelled" on https://nwcc.bike/nwcc-cycling-club-events-list/
 - [NWCC Saturday Zube Park Ride](https://cycleforchange.org/rides/houston-tx-nwcc-saturday-zube-park-ride/): "cancelled" on https://nwcc.bike/
-- [Sunday Starbucks Ride (NWCC, No Drop)](https://cycleforchange.org/rides/houston-tx-nwcc-sunday-starbucks-ride/): "cancelled" on https://nwcc.bike/nwcc-cycling-club-events-list/
-- [NWCC Saturday Coffee Ride](https://cycleforchange.org/rides/tomball-tx-nwcc-saturday-coffee-ride/): "cancelled" on https://nwcc.bike/
-- [Vermont Bicycle Shop Pizza Ride](https://cycleforchange.org/rides/barre-vt-vermont-bicycle-shop-pizza-ride/): "cancelled" on https://vermontbicycleclub.com/
-- [CORP CamRock Thursday Group Ride](https://cycleforchange.org/rides/cambridge-wi-corp-trails-thursday-camrock-group-ride/): "cancelled" on https://corptrails.org/events
-- [Cream City Cycle Club WOW Women-Only Monday Ride](https://cycleforchange.org/rides/milwaukee-wi-cream-city-cycle-club-wow-womens-monday-ride/): "cancelled" on https://www.creamcitycycleclub.com/content.aspx?page_id=4001&club_id=119379
-- [South Milwaukee Critical Mass](https://cycleforchange.org/rides/south-milwaukee-wi-south-milwaukee-critical-mass/): "discontinued" on https://www.milwaukeebikerides.com/
