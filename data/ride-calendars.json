@@ -1,5 +1,5 @@
 {
- "note": "Community calendars that carry rides we list (tools/lib/ride-calendars.js). A ride here links its own page on the calendar by name and gets no ride.ics from us. event is null only when the calendar has no page for the ride. checked is the day that link was opened: for the Nov 20, 2026 rows, the ride’s own last check, when a scout read that source.",
+ "note": "Community calendars that carry rides we list (tools/lib/ride-calendars.js). A ride here links its own page on the calendar by name and gets no ride.ics from us. event is null only when the calendar has no page for the ride. checked is the day that link was opened: for the Nov 20, 2026 rows, the ride’s own last check, when a scout read that source. The Nov 23, 2026 rows: each site and each event link was opened that day.",
  "calendars": {
   "msp.bike": {
    "name": "msp.bike",
@@ -140,6 +140,129 @@
    "home": "https://austinbikegroups.com/",
    "hosts": [
     "austinbikegroups.com"
+   ]
+  },
+  "nolasocialride.org": {
+   "name": "nolasocialride.org",
+   "what": "a crowdsourced calendar of social rides in and around New Orleans",
+   "home": "https://nolasocialride.org/",
+   "hosts": [
+    "nolasocialride.org"
+   ],
+   "feeds": [
+    "https://nolasocialride.org/events/?ical=1"
+   ],
+   "adds": true,
+   "own_hosts": [
+    "NOLA Social Ride"
+   ]
+  },
+  "bikedurham.org": {
+   "name": "bikedurham.org",
+   "what": "Bike Durham’s calendar, which also carries community-organized group rides",
+   "home": "https://bikedurham.org/events",
+   "hosts": [
+    "bikedurham.org"
+   ],
+   "own_hosts": [
+    "Bike Durham"
+   ]
+  },
+  "bikethewoodlands.org": {
+   "name": "bikethewoodlands.org",
+   "what": "the Bike The Woodlands Coalition’s weekly schedule of local rides",
+   "home": "https://www.bikethewoodlands.org/rides",
+   "hosts": [
+    "bikethewoodlands.org"
+   ]
+  },
+  "milwaukeebikerides.com": {
+   "name": "milwaukeebikerides.com",
+   "what": "a directory of Milwaukee-area rides and cycling groups, curated by Nicholas Sideras",
+   "home": "https://www.milwaukeebikerides.com/",
+   "hosts": [
+    "milwaukeebikerides.com"
+   ]
+  },
+  "reconnectrochester.org": {
+   "name": "reconnectrochester.org",
+   "what": "Reconnect Rochester’s public calendar of group rides in the Greater Rochester region",
+   "home": "https://reconnectrochester.org/cyclingcalendar/",
+   "hosts": [
+    "reconnectrochester.org"
+   ],
+   "own_hosts": [
+    "Reconnect Rochester, with the City of Rochester Recreation Department and EE Pathways"
+   ]
+  },
+  "bikeeastbay.org": {
+   "name": "bikeeastbay.org",
+   "what": "Bike East Bay’s events calendar, which also carries rides other groups run",
+   "home": "https://bikeeastbay.org/events/category/group-rides/",
+   "hosts": [
+    "bikeeastbay.org"
+   ],
+   "feeds": [
+    "https://bikeeastbay.org/events/category/group-rides/?ical=1"
+   ],
+   "adds": true,
+   "own_hosts": [
+    "Bike East Bay"
+   ]
+  },
+  "thetrellisphilly.com": {
+   "name": "thetrellisphilly.com",
+   "what": "a calendar of bike events in Philadelphia",
+   "home": "https://www.thetrellisphilly.com/calendar/",
+   "hosts": [
+    "thetrellisphilly.com"
+   ]
+  },
+  "orca.bike": {
+   "name": "orca.bike",
+   "what": "the Alaska Off-Road Cycling Alliance’s events calendar",
+   "home": "https://orca.bike/events/",
+   "hosts": [
+    "orca.bike"
+   ],
+   "feeds": [
+    "https://orca.bike/calendar/?ical=1"
+   ],
+   "adds": true
+  },
+  "bikeiowacity.com": {
+   "name": "bikeiowacity.com",
+   "what": "a calendar of cycling events in Johnson County, Iowa, that anyone can submit to",
+   "home": "https://bikeiowacity.com/event-calendar/",
+   "hosts": [
+    "bikeiowacity.com"
+   ]
+  },
+  "renowheelmen.org": {
+   "name": "renowheelmen.org",
+   "what": "the Reno Wheelmen’s calendar of group rides and events around Reno",
+   "home": "https://renowheelmen.org/",
+   "hosts": [
+    "renowheelmen.org"
+   ],
+   "feeds": [
+    "https://renowheelmen.org/events/?ical=1"
+   ],
+   "adds": true,
+   "own_hosts": [
+    "Reno Wheelmen",
+    "Reno Wheelmen (Pedal Sports ride series)"
+   ]
+  },
+  "fallsareabicyclists.org": {
+   "name": "fallsareabicyclists.org",
+   "what": "Falls Area Bicyclists’ calendar, which also carries Sioux Falls community events",
+   "home": "https://www.fallsareabicyclists.org/events",
+   "hosts": [
+    "fallsareabicyclists.org"
+   ],
+   "own_hosts": [
+    "Falls Area Bicyclists"
    ]
   }
  },
@@ -903,6 +1026,266 @@
    "calendar": "austinbikegroups.com",
    "event": null,
    "checked": "2026-09-15"
+  },
+  "new-orleans-la-gretna-social-riders-friday": {
+   "calendar": "nolasocialride.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "new-orleans-la-critical-mass-nola-last-friday": {
+   "calendar": "nolasocialride.org",
+   "event": "https://nolasocialride.org/ride/critical-mass-2/2026-11-28/",
+   "checked": "2026-11-23"
+  },
+  "new-orleans-la-getupnride-tuesday-ride": {
+   "calendar": "nolasocialride.org",
+   "event": "https://nolasocialride.org/ride/get-up-n-ride-tuesday-social-ride/2026-11-24/",
+   "checked": "2026-11-23"
+  },
+  "new-orleans-la-heat-index-wednesday-ride": {
+   "calendar": "nolasocialride.org",
+   "event": "https://nolasocialride.org/ride/heat-index-wednesday-ride/2026-11-25/",
+   "checked": "2026-11-23"
+  },
+  "new-orleans-la-nola-fixed-wednesday-night-ride": {
+   "calendar": "nolasocialride.org",
+   "event": "https://nolasocialride.org/ride/nola-fixed/2026-11-25/",
+   "checked": "2026-11-23"
+  },
+  "new-orleans-la-sistahs-on-wheels-first-friday": {
+   "calendar": "nolasocialride.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "new-orleans-la-friday-sugar-rush": {
+   "calendar": "nolasocialride.org",
+   "event": "https://nolasocialride.org/ride/the-friday-sugar-rush/2026-11-27/",
+   "checked": "2026-11-23"
+  },
+  "durham-nc-black-spoke-society-fourth-sunday-social-ride": {
+   "calendar": "bikedurham.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "durham-nc-first-friday-ride": {
+   "calendar": "bikedurham.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "durham-nc-ponysaurus-pony-ride": {
+   "calendar": "bikedurham.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "durham-nc-rescue-racing-daily-beer-bar-ride": {
+   "calendar": "bikedurham.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "durham-nc-ride-around-durham": {
+   "calendar": "bikedurham.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "durham-nc-scrappy-tuesday-ride": {
+   "calendar": "bikedurham.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "durham-nc-the-daily-womens-plus-ride": {
+   "calendar": "bikedurham.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "durham-nc-twig-cruiser-ride": {
+   "calendar": "bikedurham.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "conroe-tx-race-ready-repair-saturday-morning-ride": {
+   "calendar": "bikethewoodlands.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "conroe-tx-race-ready-repair-thursday-night-ride": {
+   "calendar": "bikethewoodlands.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "magnolia-tx-love-and-coffee-friday-ride": {
+   "calendar": "bikethewoodlands.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "spring-tx-sun-and-ski-sunday-shop-ride": {
+   "calendar": "bikethewoodlands.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "the-woodlands-tx-woodlands-mtb-dirt-church": {
+   "calendar": "bikethewoodlands.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "the-woodlands-tx-bikeland-saturday-tour-de-woodlands": {
+   "calendar": "bikethewoodlands.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "the-woodlands-tx-trek-woodlands-tuesday-shop-ride": {
+   "calendar": "bikethewoodlands.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "the-woodlands-tx-woodlands-tuesday-night-ride": {
+   "calendar": "bikethewoodlands.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "milwaukee-wi-cream-city-cycle-club-wednesday-morning-ride": {
+   "calendar": "milwaukeebikerides.com",
+   "event": "https://www.milwaukeebikerides.com/riding-group/cream-city-cycle-club/",
+   "checked": "2026-11-23"
+  },
+  "milwaukee-wi-critical-mass-milwaukee-last-friday": {
+   "calendar": "milwaukeebikerides.com",
+   "event": "https://www.milwaukeebikerides.com/riding-group/critical-mass-milwaukee/",
+   "checked": "2026-11-23"
+  },
+  "south-milwaukee-wi-south-milwaukee-critical-mass": {
+   "calendar": "milwaukeebikerides.com",
+   "event": "https://www.milwaukeebikerides.com/riding-group/south-milwaukee-critical-mass/",
+   "checked": "2026-11-23"
+  },
+  "wauwatosa-wi-tosa-full-moon-bicycle-ride": {
+   "calendar": "milwaukeebikerides.com",
+   "event": "https://www.milwaukeebikerides.com/riding-group/tosa-full-moon-bicycle-rides/",
+   "checked": "2026-11-23"
+  },
+  "rochester-ny-just-for-giggles-monday-night-brewery-ride": {
+   "calendar": "reconnectrochester.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "rochester-ny-rochester-bicycling-club-weekend-supported-rides": {
+   "calendar": "reconnectrochester.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "rochester-ny-rochester-bike-gang-thursday-ride": {
+   "calendar": "reconnectrochester.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "el-cerrito-ca-bikes-burgers-brews-tuesday-night-ride": {
+   "calendar": "bikeeastbay.org",
+   "event": "https://bikeeastbay.org/event/bike-burgers-brews/2026-11-24/",
+   "checked": "2026-11-23"
+  },
+  "oakland-ca-red-bike-and-green-community-rides": {
+   "calendar": "bikeeastbay.org",
+   "event": "https://bikeeastbay.org/series/red-bike-and-green-oakland-second-saturdays-rides-2026/",
+   "checked": "2026-11-23"
+  },
+  "pleasant-hill-ca-concord-thursday-night-rides": {
+   "calendar": "bikeeastbay.org",
+   "event": "https://bikeeastbay.org/event/concord-thursday-night-rides-17/2026-11-26/",
+   "checked": "2026-11-23"
+  },
+  "philadelphia-pa-philly-gravel-club-apres-gravel": {
+   "calendar": "thetrellisphilly.com",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "philadelphia-pa-papertrail-gravel-espresso": {
+   "calendar": "thetrellisphilly.com",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "philadelphia-pa-laurel-hill-fridays": {
+   "calendar": "thetrellisphilly.com",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "philadelphia-pa-papertrail-mountain-espresso": {
+   "calendar": "thetrellisphilly.com",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "philadelphia-pa-vino-velo-saturday-ride": {
+   "calendar": "thetrellisphilly.com",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "philadelphia-pa-wednesday-night-rides": {
+   "calendar": "thetrellisphilly.com",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "anchorage-ak-trek-store-coed-cheese-and-crackers-ride": {
+   "calendar": "orca.bike",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "anchorage-ak-tuesday-night-social-road-ride": {
+   "calendar": "orca.bike",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "anchorage-ak-trek-store-womens-hot-chocolate-ride": {
+   "calendar": "orca.bike",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "palmer-ak-backcountry-bike-casual-road-friday": {
+   "calendar": "orca.bike",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "palmer-ak-backcountry-bike-spicy-sunday-road-ride": {
+   "calendar": "orca.bike",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "iowa-city-ia-bic-wednesday-night-social-ride": {
+   "calendar": "bikeiowacity.com",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "iowa-city-ia-gatos-en-ronda-friday-night-ride": {
+   "calendar": "bikeiowacity.com",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "north-liberty-ia-sugar-bottom-bikes-wednesday-night-gravel": {
+   "calendar": "bikeiowacity.com",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "reno-nv-bike-night-reno": {
+   "calendar": "renowheelmen.org",
+   "event": "https://renowheelmen.org/event/bike-night-reno/2026-11-25/",
+   "checked": "2026-11-23"
+  },
+  "reno-nv-mwf-ride-dolce-caffe": {
+   "calendar": "renowheelmen.org",
+   "event": "https://renowheelmen.org/event/mwf-ride/2026-11-25/",
+   "checked": "2026-11-23"
+  },
+  "sioux-falls-sd-sfbc-first-friday-mtb-ride": {
+   "calendar": "fallsareabicyclists.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "sioux-falls-sd-spoke-n-sport-donut-ride": {
+   "calendar": "fallsareabicyclists.org",
+   "event": null,
+   "checked": "2026-11-23"
+  },
+  "sioux-falls-sd-sfbc-wednesday-joy-ride": {
+   "calendar": "fallsareabicyclists.org",
+   "event": null,
+   "checked": "2026-11-23"
   }
  }
 }
