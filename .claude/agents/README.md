@@ -25,13 +25,13 @@ The guide for a rider coming to a town with a bike. One town at a time;
 
 Shared rules: `research/towns/SCOUT-RULES.md`. Field shapes: `data/SCHEMA.md`.
 
-## The training team (Nov 23, 2026)
+## The Rollers — the training team (Nov 23, 2026)
 
 Robert: "Create a team of specialists, writers, trainers, all of it … built from the ground up … user friendly,
 detail orientated, and links to everything. We need to design the best. I think this could be an app in the future."
 The team owns `cycleforchange.org/training` (CLAUDE.md §8, "Training"). The bar, the core tasks, the score and the
 build order are `research/training/TRAINING.md`; `/training pass | <screen> | check | teardown` runs it
-(`.claude/commands/training.md`). Notes go in `research/training/<date>-<pass>/`. It has no name yet; that's Robert's.
+(`.claude/commands/training.md`). Notes go in `research/training/<date>-<pass>/`. The team is **The Rollers** (Robert, Nov 23, 2026: "I trust the team to choose"; the lead's pick).
 
 | agent | owns | writes |
 |---|---|---|

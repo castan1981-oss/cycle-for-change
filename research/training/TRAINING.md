@@ -69,7 +69,8 @@ trademarked score as its own. Reads Strava beyond the site's one count. Puts any
 page. Uses streaks, badges, leaderboards or guilt. Adds a script or a byte to the public site's pages.
 
 ## Open, for Robert
-- The team's name (the design studio is "The Wrenches"; this one is "the training team" until he names it).
 - Whether other riders ever get accounts, and whether that's free.
 - Whether he applies to the Garmin Connect Developer Program (pushed rides, and it settles the counter's source).
 - Whether a workout should go to his head unit from here, or stay TrainingPeaks' job.
+
+The team is **The Rollers** (Nov 23, 2026). Robert left the name to the team; it was the lead's pick.
