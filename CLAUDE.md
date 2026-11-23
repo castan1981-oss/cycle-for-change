@@ -1195,6 +1195,33 @@ says so** — this note is here so rides/towns work doesn't contradict the plan.
 - Open: apply to the Garmin Connect Developer Program under Cycle for Change LLC when he's ready.
   Moving the live counter to Garmin settles §2.3 for it too.
 
+### Training (`/training/`, Nov 23, 2026) — the first built piece of this section
+Robert, Nov 23, 2026: "a complete separate login for this, cycleforchange.org/training … after we get it done, present it
+to Benson and see if he would like to use that". For him first, then maybe others (his answers the same day: who signs
+in at first is him and John; it links his TrainingPeaks plan, his rides off his Garmin and his 2027 events).
+- **A private tool, not a page of the site**: `node scripts/build-training.js` → `cfc-site/training/index.html` (its own
+  `training.css` / `training.js`, no site chrome, like `/ride/`; `V` in the build script). noindex by meta and header,
+  never in a sitemap, the nav or llms.txt. build-calendar.js runs it at its end, because the page carries the rides he's
+  doing (chrome.js `RIDING`) for its "Next on the calendar" row.
+- **Two invited people, no sign-up.** `netlify/functions/training.js` (behind `/api/training`) and
+  `netlify/functions/lib/training.js`: Robert (athlete) and John Benson (coach: sees Robert's week, writes the week's
+  note, changes nothing else). An invite is a private link, `/training/#invite=<key>`; only each key's SHA-256 is in the
+  lib (the repo is public). The links are in Robert's hands and the claude.ai project doc "training-login" — never in the
+  repo, a PR, an issue or a log. Opening one sets that person's password (scrypt, salted) and signs them in; a new
+  link is a new key and a new hash in `USERS`. Sessions are a cookie (HttpOnly, Secure, SameSite=Lax, 30 days) whose
+  hash is what the store keeps. Eight wrong passwords in fifteen minutes and that name waits.
+- **The plan comes from TrainingPeaks' own calendar feed** (their Settings → Account → Calendar link, a premium
+  feature: 5 days back, 14 ahead). Robert pastes it on the page; the server keeps it, reads it at most every 15
+  minutes, and never sends it back to a browser. Only `https://…trainingpeaks.com/…` is taken (`feedUrl()`), so the
+  function can't be pointed anywhere else. A workout's words are shown as written, never rewritten or summarised.
+- **Rides come from files, never Strava** (§10 and the rule above): the file off his Garmin is read in the browser by
+  `/brief/engine.js` (`parseAny`) and only the day, miles, moving time, climbing and the file's name are saved. The
+  one Strava number on the page is the site's own count from `/api/strava`.
+- Storage: Netlify Blobs, store `training` (previews: `training-preview`); the keys are listed at the top of the lib.
+  `/privacy/#training` says what's kept; keep the two in step. Tests: `tools/test/training.test.js`.
+- **Not built:** other riders' accounts, a rider's numbers on a ride page ("Add your ride" on the Nov 23 canvas),
+  sending a workout to a bike computer, anything public. Each waits for Robert's word.
+
 ## 9. Kit
 
 **Locked Oct 19, 2026 (Colorway A):** `kit-handoff/KIT-LOCK.md` is the kit spec and wins on kit. The kit follows Lane Paint (After Hours palette, Overpass, the stencil family).
@@ -1508,3 +1535,4 @@ two exits; the shapes are on the plan canvas.
   the re-check job run by hand on 125 of them.
 - 2026-11-19 — Instagram is @cyclefor_ (Robert renamed the account; it was @cycl_eforchange): every link and mention on the site, the JSON-LD `sameAs`, llms.txt, the function's default, the kit and Fruit Loop tools, the Fruit Loop's spring poster (`spring-2`, the handle repainted on the same ground); the `/cyclefor/` release is `cyclefor-v2` (the DM handle is in its wording). Posts already on Instagram keep the old handle in their pixels. The Netlify env var `INSTAGRAM_HANDLE` is Robert's to change.
 - 2026-11-23 — Ride pages get doors (The route, Who rode it, You run this ride?) and the host's section: fix something, send the route, or take it down ("Take it off the site", kind `remove`, filed like a host update).
+- 2026-11-23 — `/training/`: a private page with its own sign-in for Robert and his coach (two invite links, no sign-up): the day's workout and the week from his TrainingPeaks calendar link, rides dropped from the Garmin file, the coach's note, the next ride on the calendar; `/api/training`, `/privacy/#training`.
