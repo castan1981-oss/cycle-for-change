@@ -55,6 +55,8 @@ journey, "$800", Prescott, sober-time, 7,500-mile framing, …).
 | terrain | string | one line |
 | elevation_gain_ft | int or null | longest route |
 | participants, cost | string | |
+| offers | [{name, price, currency, availability, valid_from, valid_through}] or absent | The organizer's own published entry prices for the edition on the page, one per tier (`price` a number, `currency` like `USD`, `availability` `in-stock` · `sold-out` · `pre-order`; `valid_from`/`valid_through` ISO dates for dated tiers). Becomes the Event's `Offer` list; a tier drops out after its `valid_through`. Leave it out when this edition's price isn't published or you can't say whether entries are on sale: never last year's price, never a guess. Must match `cost`. |
+| offers_checked | ISO date | required with `offers`: the day the prices were read on the organizer's page |
 | summary | string | the quotable answer |
 | history | [string] | how it started, 2–3 paragraphs |
 | what_to_expect | [string] | 2–3 paragraphs |

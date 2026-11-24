@@ -1152,7 +1152,7 @@ for the pace. Every ride page now answers that, or says where the answer lives.
 - **AI search is welcome** (Oct 18, 2026): `robots.txt` names the AI crawlers (GPTBot, OAI-SearchBot, ClaudeBot,
   PerplexityBot, Google-Extended, Applebot-Extended…) with an explicit Allow — the competitors block them, and the
   directory is meant to be the cited answer. `/llms.txt` and `/feed.xml` come from `scripts/build-signals.js`; every
-  page's `<head>` links the feed. A free ride's Event carries an `Offer` at 0 (`offersLd()` in build-rides.js); the
+  page's `<head>` links the feed. A free ride's Event carries an `Offer` at 0 (`offersLd()` in build-rides.js); an event page's Event carries Offers only from `offers` in its data (the organizer's published price, currency and on-sale status for that edition, `offersLd()` in build-events.js; Nov 24, 2026, after Search Console flagged bare Offers for missing price, priceCurrency and availability) and none when the price isn't known; the
   hubs (`/towns/`, `/field-notes/`, `/tonight/`) carry CollectionPage / WebPage markup. `/tonight/` gets a crawlable
   "Evening rides, by city and day" block (the directory's six cities, rides from 5 pm) written by build-rides.js between
   the `evenings` markers in `cfc-site/tonight/index.html`.

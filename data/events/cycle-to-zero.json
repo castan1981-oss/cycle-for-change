@@ -47,6 +47,11 @@
   "elevation_gain_ft": null,
   "participants": "Hundreds of cyclists and volunteers on the first ride in 2026",
   "cost": "$95 registration for 3-day cyclists, $225 for 1-day cyclists, plus the 3-day fundraising minimum.",
+  "offers": [
+    {"name": "3-day cyclist registration", "price": 95, "currency": "USD", "availability": "in-stock"},
+    {"name": "1-day cyclist registration", "price": 225, "currency": "USD", "availability": "in-stock"}
+  ],
+  "offers_checked": "2026-11-24",
   "summary": "Cycle to Zero is San Francisco AIDS Foundation's three-day ride from San Francisco to the Russian River and back. In 2027 it runs May 21–23: about 85 miles north through Marin to Guerneville, a day of riding from camp or a day off, then about 85 miles home down the Sonoma coast. Registration is $95 and the fundraising minimum is $2,500 for 3-day cyclists. Riders camp both nights in Guerneville.",
   "history": [
     "AIDS/LifeCycle ran from San Francisco to Los Angeles for seven days every June and ended in 2025. San Francisco AIDS Foundation, one of its two producers, announced Cycle to Zero in September 2025 as a three-day ride that builds on that history.",
