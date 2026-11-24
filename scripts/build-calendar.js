@@ -571,8 +571,12 @@ for (const c of CATS) {
   } else if (c !== "Hill climb") picks = farPicks(type, list);
   shortPage({ url: `${URL}${CAT_SLUG[c]}/`, crumb: CAT_DOOR[c], list, byMonth: true, lead, picks,
     narrow: narrowLine({ type }, "Narrow by month, region, cause, distance"),
-    h1: `2027 ${CAT_H1[c]} in the US`, title: `2027 ${CAT_H1[c]} in the US`,
-    description: fitNames(`${list.length} ${CAT_H1[c]} in the US in 2027, ${nConfOf(list)} with the organizer's date, by month: `, list.map((e) => e.name)) });
+    // Tune-up, Nov 24, 2026: the gravel page sat at position 7.9 with 115 impressions and 1 click. Its title and description
+    // lead with the words people type ("gravel races 2027") and the count; the h1 and every other type stay as they were.
+    h1: `2027 ${CAT_H1[c]} in the US`, title: c === "Gravel" ? `Gravel races 2027: ${list.length} US gravel rides and races` : `2027 ${CAT_H1[c]} in the US`,
+    description: c === "Gravel"
+      ? fitNames(`Gravel races in 2027: ${list.length} US gravel rides and races by month, ${nConfOf(list)} with the organizer's date. `, list.map((e) => e.name))
+      : fitNames(`${list.length} ${CAT_H1[c]} in the US in 2027, ${nConfOf(list)} with the organizer's date, by month: `, list.map((e) => e.name)) });
 }
 // Oct 15, 2026: the fall ride that used to sit on top of this page (Cycling 4 one·n·ten, Nov 7) was canceled
 // and is off the site. If another ride before 2027 comes up, it goes back here as `before`.
