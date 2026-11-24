@@ -840,6 +840,23 @@ bottom line links all three (`.foot-trust` in chrome.js). When a form, a pull sc
 or a policy changes, change the page the same day and bump its "Updated" date. `/about/` waits for
 Robert's words (the guides' Person bylines point there once it exists).
 
+### The fundraising toolkit (`/toolkit/`, Nov 24, 2026)
+Robert, Nov 24, 2026: a toolkit any charity rider can use to raise their minimum, built from the tools he already
+uses, no accounts ("Go for it"; staged as a draft PR, not live until he says so). A hand page on apply-chrome.py's list
+(`cfc-site/toolkit/index.html`, `toolkit.css`, `toolkit.js`), linked from Guides stage 03 and in `sitemap-pages.xml`.
+- **Make your ask**: cycle for + a plate carrying who they ride for, their ride, when and their own giving link, under
+  their photo (a photo and a solid field one above the other, nothing on the photo). **Show the miles**: every ride
+  file they pick drawn as its outline, the miles added up as a whole number. A post (1080 × 1350) and a Story
+  (1080 × 1920, top 200 / bottom 330 clear) of each; a phone gets the share sheet, a desktop a download.
+- **Nothing is uploaded, stored or sent**: no form, no fetch, no storage (`tools/test/toolkit.test.js` fails on any of
+  them). The page, its closing note and `/privacy/` all say so; keep the three in step. Ride files go through
+  `BRIEF.parseAny` (export-and-drop, never an API, §10); the mark's paths are `BW.MARK` from `/brief/bw.js`, never a
+  third copy. The mark still only spells cycle for; the rider's word is a type plate.
+- The page raises no money and takes none: a rider's link is their own page on their ride's site.
+- "How to ask" is the three stage-03 guides. Robert's own words on asking go there or here when he writes them; never
+  written for him (§4).
+- Not built: anything for the orgs (wait until riders use it), a QR, saved drafts.
+
 ### Mile-updates email — retired (Oct 9, 2026)
 Robert isn't emailing from the site. The footer signup is gone and `submission-created.js` no longer
 sends a welcome. `email/mile-updates.html` stays as a template only. Old `waitlist` submissions are
@@ -1551,3 +1568,4 @@ two exits; the shapes are on the plan canvas.
   roundup on a club's, shop's, city's or paper's site does not. Every call is in
   `research/rides/audit/2026-11-23-shared-sites.md`. The 36 rides whose date had come down were re-checked
   (`research/rides/upkeep/2026-11-23-undated.json`): 26 on a seasonal break, 6 still unconfirmed.
+- 2026-11-24 — `/toolkit/`, the charity ride fundraising toolkit (Robert: "Go for it"): make your ask (cycle for + who you ride for, your ride, your giving link, your photo) and show the miles (every ride file drawn, the miles added up), as a post and a Story, drawn in the browser with no account and nothing uploaded; linked from Guides stage 03; staged as a draft PR.
