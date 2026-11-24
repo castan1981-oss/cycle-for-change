@@ -1,0 +1,30 @@
+/* /toolkit/ — the fundraising toolkit (Nov 24, 2026). Fields are chrome.css's .field; this sheet is the two makers'
+   layout: the fields, then the picture, side by side from 760. The pictures are canvases the page draws. */
+@layer section{
+.tk{margin:var(--s4) 0 0}
+.tk-tool{margin:var(--s5) 0 0;padding:var(--s4) 0 0;border-top:1px solid var(--line-s)}
+.tk-tool h2{margin:0}
+.tk-tool>p{margin:var(--s2) 0 0;max-width:var(--measure);font-size:1.08rem;line-height:1.6;color:var(--asphalt)}
+.tk-grid{display:grid;gap:var(--s4);margin:var(--s3) 0 0}
+.tk-fields{display:grid;gap:var(--s3);align-content:start;max-width:var(--measure)}
+.tk-field>label{display:block;margin:0 0 8px;font:800 .9375rem/1.3 var(--display);color:var(--asphalt)}
+.tk-field>label span{font-weight:500;color:var(--mute)}
+.tk-file{display:block;width:100%;min-height:48px;padding:10px 0;font:500 1rem/1.4 var(--body);color:var(--asphalt)}
+.tk-file::file-selector-button{min-height:44px;margin:0 12px 0 0;padding:0 16px;border:1px solid var(--asphalt);background:transparent;color:var(--asphalt);font:800 13px/1 var(--display);letter-spacing:.04em;text-transform:uppercase;cursor:pointer}
+.tk-file:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+.tk-pic{margin:0}
+.tk-pic canvas{display:block;width:100%;max-width:420px;height:auto;aspect-ratio:4/5;background:var(--tar)}
+.tk-save{display:flex;flex-wrap:wrap;gap:12px;margin:var(--s2) 0 0}
+.tk-save .btn[disabled]{opacity:.45;cursor:not-allowed}
+.tk-say,.tk-small{margin:var(--s2) 0 0;font-size:var(--fs-small);line-height:1.5;color:var(--mute)}
+.tk-say{color:var(--asphalt);font-weight:700;min-height:1.5em}
+.tk-miles:not(.has-rides) .tk-pic canvas{display:none}
+.tk-off{margin:var(--s3) 0 0;padding:var(--s2) var(--s3);max-width:var(--measure);background:var(--bone-2);color:var(--asphalt);font-weight:700}
+.tk.is-on .tk-off{display:none}
+.tk:not(.is-on) .tk-grid{display:none}
+.tk-read{margin:var(--s3) 0 0;padding:0;list-style:none;display:grid;gap:12px;max-width:var(--measure)}
+.tk-read a{color:var(--asphalt);font-weight:700}
+@media (min-width:760px){
+  .tk-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s4);align-items:start}
+}
+}
