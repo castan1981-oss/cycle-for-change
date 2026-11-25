@@ -502,6 +502,21 @@ ${items}
     </section>`;
 }
 
+function answerFirst(e, yr, span, at) {
+  const firstSentence = (s) => { const m = String(s || "").trim().match(/^.*?[.!?](?=\s|$)/); return m ? m[0] : ""; };
+  // a label with no number in it ("Double Bypass") gets its miles
+  const labels = (e.distances || []).filter((d) => d.label).map((d) => (/\d/.test(d.label) || !d.miles ? d.label : `${d.label} (${d.miles} miles)`));
+  let out = `${e.name} ${yr}: ${span} in ${at}.`;
+  // the sign-up line goes first: it is the part with a deadline
+  const reg = firstSentence(e.registration_note);
+  if (reg && (out + " " + reg).length <= 155) out += " " + reg;
+  for (let k = Math.min(4, labels.length); k > 0; k--) {
+    const part = labels.slice(0, k), d = `${part.join(part.some((l) => l.includes(",")) ? "; " : ", ")}${labels.length > k ? " and more" : ""}.`;
+    if ((out + " " + d).length <= 155) { out += " " + d; break; }
+  }
+  return out.length <= 155 ? out : truncate(e.summary, 155);
+}
+
 function eventPage(e) {
   const t = e.townRef;
   const when = e.next_date ? fmtRange(e.next_date, e.end_date) : null;
@@ -514,7 +529,10 @@ function eventPage(e) {
   const title = (upcoming ? [`${e.name} ${yr}: ${span}, ${at}`, `${e.name} ${yr}: ${span}`, `${short} ${yr}: ${span}, ${at}`, `${short} ${yr}: ${span}`]
     : e.status === "on-hold" ? [`${e.name}, ${at}: on hold`, `${short}, ${at}: on hold`, `${short}: on hold`]
     : [`${e.name}, ${at}: dates and routes`, `${e.name}, ${at}`, `${short}, ${at}`, short]).find((s) => s.length <= 60) || short;
-  const description = truncate(e.summary, 155);
+  // Tune-up, Nov 24, 2026: answer first, like the ride pages (#206). An edition with a date ahead leads its description
+  // with name + year + date + town, then the first line of the sign-up note and the distances, whole sentences only;
+  // anything else keeps the summary.
+  const description = upcoming ? answerFirst(e, yr, span, at) : truncate(e.summary, 155);
   const crumbs = breadcrumb([{ name: "Events", url: "/events/" }, { name: t.state, url: `/events/state/${t.state_slug}/` }, { name: e.name, url: e.url }]);
 
   const ld = {

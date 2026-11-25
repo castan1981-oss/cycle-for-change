@@ -1,27 +1,7 @@
 {
-  "generated": "2026-11-24",
+  "generated": "2026-11-25",
   "source": "https://cycleforchange.org/events/",
   "events": [
-    {
-      "name": "El Tour de Tucson",
-      "url": "https://cycleforchange.org/events/el-tour-de-tucson/",
-      "type": "charity",
-      "town": "Tucson",
-      "state": "AZ",
-      "next_date": "2026-11-21",
-      "end_date": "2026-11-21",
-      "distances": [
-        "102 miles (Century)",
-        "62 miles (Metric Century)",
-        "32 miles (Half Metric Century)",
-        "Fun Rides, 1 and 3 miles",
-        "5K run/walk"
-      ],
-      "website": "https://eltourdetucson.org/",
-      "register_url": "https://www.bikesignup.com/Race/AZ/Tucson/ElTourdeTucson",
-      "lat": 32.2226,
-      "lon": -110.9747
-    },
     {
       "name": "Center Ride Out",
       "url": "https://cycleforchange.org/events/center-ride-out/",
@@ -149,6 +129,23 @@
       "lon": -122.3
     },
     {
+      "name": "Triple Bypass",
+      "url": "https://cycleforchange.org/events/triple-bypass/",
+      "type": "road",
+      "town": "Evergreen",
+      "state": "CO",
+      "next_date": "2027-07-10",
+      "end_date": "2027-07-10",
+      "distances": [
+        "Triple Bypass",
+        "Double Bypass"
+      ],
+      "website": "https://www.triplebypass.org/",
+      "register_url": "https://www.bikesignup.com/Race/CO/Evergreen/TripleBypass",
+      "lat": 39.61,
+      "lon": -105.35
+    },
+    {
       "name": "Leadville Trail 100 MTB",
       "url": "https://cycleforchange.org/events/leadville-trail-100-mtb/",
       "type": "mtb",
@@ -181,6 +178,26 @@
       "register_url": "https://www.cheqmtb.com/registration/",
       "lat": 46.01,
       "lon": -91.4806
+    },
+    {
+      "name": "El Tour de Tucson",
+      "url": "https://cycleforchange.org/events/el-tour-de-tucson/",
+      "type": "charity",
+      "town": "Tucson",
+      "state": "AZ",
+      "next_date": null,
+      "end_date": null,
+      "distances": [
+        "102 miles (Century)",
+        "62 miles (Metric Century)",
+        "32 miles (Half Metric Century)",
+        "Fun Rides, 1 and 3 miles",
+        "5K run/walk"
+      ],
+      "website": "https://eltourdetucson.org/",
+      "register_url": "https://www.bikesignup.com/Race/AZ/Tucson/ElTourdeTucson",
+      "lat": 32.2226,
+      "lon": -110.9747
     },
     {
       "name": "Hotter'N Hell Hundred",
@@ -237,23 +254,6 @@
       "register_url": "http://www.bikereg.com/theassaults0",
       "lat": 34.9494,
       "lon": -81.925
-    },
-    {
-      "name": "Triple Bypass",
-      "url": "https://cycleforchange.org/events/triple-bypass/",
-      "type": "road",
-      "town": "Evergreen",
-      "state": "CO",
-      "next_date": null,
-      "end_date": null,
-      "distances": [
-        "Triple Bypass",
-        "Double Bypass"
-      ],
-      "website": "https://www.triplebypass.org/",
-      "register_url": "https://www.bikesignup.com/Race/CO/Evergreen/TripleBypass",
-      "lat": 39.61,
-      "lon": -105.35
     }
   ]
 }
