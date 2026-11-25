@@ -66,6 +66,44 @@ function lintDeep(where, v) {
   else if (v && typeof v === "object") Object.keys(v).forEach((k) => lintDeep(`${where}.${k}`, v[k]));
 }
 
+// ——— offers (Nov 24, 2026) ———————————————————————————————————————————————
+// Search Console flagged the event pages' Offer (a bare link to the sign-up) for missing price, priceCurrency and
+// availability. An event now carries an Offer only when its data holds `offers`: the organizer's own published
+// entry prices for the edition on the page, each with a currency and whether entries are on sale. No offers in the
+// data, no Offer in the markup: a price is never guessed, and last year's price is never this year's. `valid_through`
+// drops a dated price tier once it ends. Shape in data/SCHEMA.md ("offers").
+const AVAILABILITY = { "in-stock": "InStock", "sold-out": "SoldOut", "pre-order": "PreOrder" };
+const ISO_DAY = /^\d{4}-\d{2}-\d{2}/;
+function checkOffers(e) {
+  if (e.offers == null) return;
+  const where = `events/${e.slug}.offers`;
+  if (!Array.isArray(e.offers) || !e.offers.length) throw new Error(`${where} must be a non-empty list`);
+  if (!e.offers_checked || !ISO_DAY.test(e.offers_checked)) throw new Error(`${where}: offers_checked (the day the prices were read) is required`);
+  e.offers.forEach((o, i) => {
+    const at = `${where}[${i}]`;
+    if (!o.name) throw new Error(`${at} has no name`);
+    if (typeof o.price !== "number" || !(o.price >= 0)) throw new Error(`${at}: price must be a number, 0 or more`);
+    if (!/^[A-Z]{3}$/.test(o.currency || "")) throw new Error(`${at}: currency must be a 3-letter code like USD`);
+    if (!AVAILABILITY[o.availability]) throw new Error(`${at}: availability must be one of ${Object.keys(AVAILABILITY).join(", ")}`);
+    for (const k of ["valid_from", "valid_through"]) if (o[k] != null && !ISO_DAY.test(o[k])) throw new Error(`${at}: bad ${k} ${o[k]}`);
+  });
+}
+function offersLd(e) {
+  if (!e.offers || !e.register_url || e.status === "on-hold") return undefined;
+  const live = e.offers.filter((o) => !o.valid_through || o.valid_through.slice(0, 10) >= TODAY);
+  if (!live.length) return undefined;
+  return live.map((o) => ({
+    "@type": "Offer",
+    name: o.name,
+    price: o.price,
+    priceCurrency: o.currency,
+    availability: "https://schema.org/" + AVAILABILITY[o.availability],
+    validFrom: o.valid_from || undefined,
+    validThrough: o.valid_through || undefined,
+    url: e.register_url,
+  }));
+}
+
 // ——— helpers —————————————————————————————————————————————————————————————
 const esc = (s) => String(s == null ? "" : s)
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
@@ -282,6 +320,7 @@ for (const e of events) {
     if (e[k] == null) throw new Error(`Event ${e.slug || "?"} missing ${k}`);
   }
   lintDeep(`events/${e.slug}`, e); // before refs are wired (they are circular)
+  checkOffers(e);
   const t = townById[e.town];
   if (!t) throw new Error(`Event ${e.slug} references unknown town ${e.town}`);
   e.townRef = t;
@@ -517,7 +556,7 @@ function eventPage(e) {
       geo: { "@type": "GeoCoordinates", latitude: e.lat, longitude: e.lon },
     },
     organizer: e.organizer && e.organizer.name ? { "@type": "Organization", name: e.organizer.name, url: e.organizer.url || undefined } : undefined,
-    offers: e.register_url && upcoming && e.status !== "on-hold" ? { "@type": "Offer", url: e.register_url } : undefined,
+    offers: upcoming ? offersLd(e) : undefined,
     image: CHROME.OG_IMAGE,
   };
   const faqLd = e.faq && e.faq.length ? {
